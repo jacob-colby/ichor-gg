@@ -103,9 +103,227 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Chiron",
       "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-god",
+      "name": "Hou Yi",
+      "pantheon": "Chinese",
+      "role": "Carry",
+      "specializations": [
+        "Constant Damage"
+      ],
+      "damage_type": "physical",
+      "release_date": "July 29, 2025",
+      "base_stats": {
+        "health": {
+          "base": 577.0,
+          "per_level": 94.0
+        },
+        "mana": {
+          "base": 296.0,
+          "per_level": 42.0
+        },
+        "physical_prot": {
+          "base": 20.04,
+          "per_level": 2.76
+        },
+        "magical_prot": {
+          "base": 25.3,
+          "per_level": 1.38
+        },
+        "attack_speed": {
+          "base": 0.98,
+          "per_level": 1.51
+        },
+        "move_speed": {
+          "base": 370.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Hou Yi Basic Attack"
+        },
+        {
+          "slot": "Passive",
+          "name": "Suntouched"
+        },
+        {
+          "slot": "1st Ability",
+          "name": "Ricochet",
+          "cooldown": [
+            10.0,
+            9.5,
+            9.0,
+            8.5,
+            8.0
+          ],
+          "cost": [
+            60.0,
+            65.0,
+            70.0,
+            75.0,
+            80.0
+          ]
+        },
+        {
+          "slot": "2nd Ability",
+          "name": "Mark of the Golden Crow",
+          "cooldown": [
+            14.0
+          ],
+          "cost": [
+            50.0
+          ]
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Divebomb",
+          "cooldown": [
+            17.0,
+            16.5,
+            16.0,
+            15.5,
+            15.0
+          ],
+          "cost": [
+            70.0
+          ]
+        },
+        {
+          "slot": "Ultimate",
+          "name": "Sunbreaker",
+          "cooldown": [
+            90.0
+          ],
+          "cost": [
+            60.0,
+            65.0,
+            70.0,
+            75.0,
+            80.0
+          ]
+        }
+      ],
+      "aspects": [
+        {
+          "name": "Aspect of the Mark",
+          "kit_changes": "Basic Attacks now ricochet, dealing bonus damage to gods per bounce. Bounced Basic Attacks cannot damage structures. Ricochet no longer bounces or stuns; it applies Mark of the Golden Crow on its first hit. If already marked, the mark spreads. Basic Attacks hitting marked targets bounce to a nearby enemy."
+        }
+      ],
+      "source_url": "https://wiki.smite2.com/w/Hou_Yi",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-god",
+      "name": "Ullr",
+      "pantheon": "Norse",
+      "role": "Carry",
+      "specializations": [
+        "Lockdown",
+        "Burst Damage",
+        "Pressure"
+      ],
+      "damage_type": "physical",
+      "release_date": "January 7, 2025",
+      "base_stats": {
+        "health": {
+          "base": 619.0,
+          "per_level": 94.0
+        },
+        "mana": {
+          "base": 312.96,
+          "per_level": 38.64
+        },
+        "physical_prot": {
+          "base": 20.04,
+          "per_level": 2.76
+        },
+        "magical_prot": {
+          "base": 25.3,
+          "per_level": 1.38
+        },
+        "attack_speed": {
+          "base": 0.98,
+          "per_level": 1.4
+        },
+        "move_speed": {
+          "base": 375.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Ullr Basic Attack"
+        },
+        {
+          "slot": "Passive",
+          "name": "Weapon Master"
+        }
+      ],
+      "aspects": [],
+      "source_url": "https://wiki.smite2.com/w/Ullr",
+      "last_verified": "2026-07-16"
     }
   ],
   "items": [
+    {
+      "type": "smite-item",
+      "name": "Bloodforge",
+      "tier": 3,
+      "cost": 2550,
+      "stats": {
+        "Strength": "45",
+        "Lifesteal": "7.5%"
+      },
+      "passive": null,
+      "builds_from": [
+        "Skeggox",
+        "Adamantine Sickle"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Bloodforge",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Book of Thoth",
+      "tier": 3,
+      "cost": 2300,
+      "stats": {
+        "Intelligence": "30",
+        "Max Mana": "350",
+        "Mana Regen": "4"
+      },
+      "passive": "+Intelligence equal to 5% of Mana from Items. Deal 900 Damage to Minions or Jungle Monsters: +1 Evolve Stack +1 Mana Infusion Stack (Max 50 Stacks) Damage dealt to Gods counts double Per Mana Infusion Stack: +10 Mana. At 50 Evolve Stacks, Item evolves and gains: Additional +Intelligence equal to 2% of Mana from Items +5 Penetration +100 Mana",
+      "builds_from": [
+        "Oracle Staff",
+        "Mana Tome"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Book_of_Thoth",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Chronos' Pendant",
+      "tier": 3,
+      "cost": 2400,
+      "stats": {
+        "Intelligence": "55",
+        "Cooldown Rate": "25"
+      },
+      "passive": "Every 10s: -1s Ability Cooldowns.",
+      "builds_from": [
+        "Ring of Dispel",
+        "Adroit Ring"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Chronos'_Pendant",
+      "last_verified": "2026-07-16"
+    },
     {
       "type": "smite-item",
       "name": "Deathbringer",
@@ -122,6 +340,232 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Deathbringer",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Devourer's Gauntlet",
+      "tier": 3,
+      "cost": 2500,
+      "stats": {
+        "Strength": "35",
+        "Lifesteal": "5%"
+      },
+      "passive": "Kill Minion or Jungle Monsters: +1 Stack. Each Stack grants: +.4 Strength +0.05% Lifesteal At 75 Stacks, gain: +10 Strength +3% Lifesteal Continue to stack more Slowly; 10 Minion Kills: +1 Stack, Jungle Boss Kill or Assist: +4 Stacks",
+      "builds_from": [
+        "Skeggox",
+        "Adamantine Sickle"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Devourer's_Gauntlet",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Gem of Isolation",
+      "tier": 3,
+      "cost": 2500,
+      "stats": {
+        "Intelligence": "50",
+        "Max Health": "250"
+      },
+      "passive": "Damaging Ability Hit: 15% Slow. The Slow lasts for 2s.",
+      "builds_from": [
+        "Flaming Pearl",
+        "Veve Charm"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Gem_of_Isolation",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Hastened Fatalis",
+      "tier": 3,
+      "cost": 2650,
+      "stats": {
+        "Attack Damage": "25",
+        "Attack Speed": "25%"
+      },
+      "passive": "Attack Hits a God: -12.5% Attack Movement Penalty. Melee hits grants 2 Stacks. Stacks up to 4 times. Buff lasts 2s.",
+      "builds_from": [
+        "Manchu Bow",
+        "Hunter's Bow"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Hastened_Fatalis",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Jotunn's Revenge",
+      "tier": 3,
+      "cost": 2400,
+      "stats": {
+        "Strength": "35",
+        "Max Mana": "250",
+        "Penetration": "5",
+        "Cooldown Rate": "25"
+      },
+      "passive": "God Kill or Assist: -1s Cooldown for Non-Ultimate Abilities -5s Cooldown for Ultimate Abilities",
+      "builds_from": [
+        "Skeggox",
+        "Caestus"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Jotunn's_Revenge",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Odysseus' Bow",
+      "tier": 3,
+      "cost": 2450,
+      "stats": {
+        "Attack Speed": "45%"
+      },
+      "passive": "Every fourth Attack Hit: Trigger Chain Lightning. Damage = 15 (+60% Attack Damage) Physical Damage Hits target and up to 4 nearby enemies Bounce Range: 4.8m Can hit the same target more than once",
+      "builds_from": [
+        "Hunter's Bow",
+        "Hunter's Bow"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Odysseus'_Bow",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Rage",
+      "tier": 3,
+      "cost": 2450,
+      "stats": {
+        "Strength": "30",
+        "Critical Chance": "20%"
+      },
+      "passive": "God Kill or Assist: +4% Critical Strike Chance (Max 20%) After 5 God Kills or Assists: +10% additional Critical Strike Chance",
+      "builds_from": [
+        "Kopesh",
+        "Hooked Sword"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Rage",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Rod of Tahuti",
+      "tier": 3,
+      "cost": 3000,
+      "stats": {
+        "Intelligence": "80",
+        "Max Mana": "250",
+        "Mana Regen": "2",
+        "Penetration": "5%"
+      },
+      "passive": "+Intelligence equal to 25% of your Intelligence from items.",
+      "builds_from": [
+        "Evil Eye",
+        "Evil Eye"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Rod_of_Tahuti",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Skeggox",
+      "tier": 2,
+      "cost": 1000,
+      "stats": {
+        "Strength": "15"
+      },
+      "passive": null,
+      "builds_from": [
+        "Axe"
+      ],
+      "builds_into": [
+        "Bloodforge",
+        "Deathbringer",
+        "Devourer's Gauntlet",
+        "Jotunn's Revenge"
+      ],
+      "source_url": "https://wiki.smite2.com/w/Skeggox",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Soul Gem",
+      "tier": 3,
+      "cost": 2500,
+      "stats": {
+        "Intelligence": "60",
+        "Lifesteal": "7.5%",
+        "Penetration": "5",
+        "Cooldown Rate": "10"
+      },
+      "passive": "Ability Hit: +1 Stack. Three Stacks: Next Ability Hit: Deals Bonus Damage (40% Intelligence) +20(+6 per Level) Heal you and allies within 3.2m Removes the Stacks",
+      "builds_from": [
+        "Ring of Dispel",
+        "Cursed Sickle"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Soul_Gem",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "The Crusher",
+      "tier": 3,
+      "cost": 2800,
+      "stats": {
+        "Strength": "45",
+        "Penetration": "10",
+        "Echo": "25"
+      },
+      "passive": "Ability Hit: +Physical Damage. Damage = 35% of your Strength Damage is dealt over 1s Subsequent hits on the same target deal 33% bonus Damage, over 3s.",
+      "builds_from": [
+        "Lucerne Hammer",
+        "Bowl Drum"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/The_Crusher",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Titan's Bane",
+      "tier": 3,
+      "cost": 3100,
+      "stats": {
+        "Strength": "60",
+        "Penetration": "20%"
+      },
+      "passive": null,
+      "builds_from": [
+        "Lucerne Hammer",
+        "Void Shard"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Titan's_Bane",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Transcendence",
+      "tier": 3,
+      "cost": 2400,
+      "stats": {
+        "Strength": "35",
+        "Max Mana": "250",
+        "Mana Regen": "4"
+      },
+      "passive": "+Strength equal to 3% of Mana from Items. Deal 700 Damage to Minions or Jungle Monsters: +1 Evolve Stack +1 Mana Infusion Stack (Max 50 Stacks) Damage dealt to Gods counts double Per Mana Infusion Stack: +10 Mana. At 50 Evolve Stacks, item evolves and gains: +10 Penetration +100 Mana",
+      "builds_from": [
+        "Infused Axe",
+        "Mana Tome"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Transcendence",
       "last_verified": "2026-07-16"
     }
   ],
@@ -219,6 +663,46 @@
       "mode": "Conquest",
       "builds": [
         {
+          "source": "community",
+          "aspect": "Aspect of the Mark",
+          "aspect_pick_rate": 0.17,
+          "aspect_win_rate": 0.56,
+          "slot_order": [
+            {
+              "name": "Devourer's Gauntlet",
+              "pick_rate": 0.55,
+              "win_rate": 0.55
+            },
+            {
+              "name": "Dagger of Frenzy",
+              "pick_rate": 0.37,
+              "win_rate": 0.53
+            },
+            {
+              "name": "Musashi's Dual Swords",
+              "pick_rate": 0.18,
+              "win_rate": 0.59
+            },
+            {
+              "name": "Titan's Bane",
+              "pick_rate": 0.23,
+              "win_rate": 0.51
+            },
+            {
+              "name": "Titan's Bane",
+              "pick_rate": 0.27,
+              "win_rate": 0.56
+            },
+            {
+              "name": "Hunter's Bow",
+              "pick_rate": 0.1,
+              "win_rate": 0.48
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/hou-yi/",
+          "last_verified": "2026-07-16"
+        },
+        {
           "source": "mine",
           "slot_order": [
             "Transcendence",
@@ -259,6 +743,46 @@
       "god": "Ullr",
       "mode": "Conquest",
       "builds": [
+        {
+          "source": "community",
+          "aspect": null,
+          "aspect_pick_rate": null,
+          "aspect_win_rate": null,
+          "slot_order": [
+            {
+              "name": "Transcendence",
+              "pick_rate": 0.92,
+              "win_rate": 0.59
+            },
+            {
+              "name": "Jotunn's Revenge",
+              "pick_rate": 0.5,
+              "win_rate": 0.56
+            },
+            {
+              "name": "Hydra's Lament",
+              "pick_rate": 0.4,
+              "win_rate": 0.55
+            },
+            {
+              "name": "Heartseeker",
+              "pick_rate": 0.45,
+              "win_rate": 0.59
+            },
+            {
+              "name": "Heartseeker",
+              "pick_rate": 0.36,
+              "win_rate": 0.64
+            },
+            {
+              "name": "Blinking Abyss",
+              "pick_rate": 0.23,
+              "win_rate": 0.6
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/ullr/",
+          "last_verified": "2026-07-16"
+        },
         {
           "source": "mine",
           "slot_order": [
