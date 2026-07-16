@@ -24,7 +24,10 @@ def build_index(vault_root: Path) -> dict:
 def write_index(vault_root: Path, out_path: Path) -> None:
     index = build_index(vault_root)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(index, indent=2), encoding="utf-8")
+    # Frontmatter fields like `last_verified: 2026-07-16` round-trip through
+    # yaml.safe_load as datetime.date objects, which json.dumps can't
+    # serialize on its own — stringify anything json doesn't natively support.
+    out_path.write_text(json.dumps(index, indent=2, default=str), encoding="utf-8")
 
 
 if __name__ == "__main__":

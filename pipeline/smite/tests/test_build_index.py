@@ -43,3 +43,18 @@ def test_write_index_creates_json_file(tmp_path):
     assert out_path.exists()
     data = json.loads(out_path.read_text(encoding="utf-8"))
     assert data["gods"][0]["name"] == "Chiron"
+
+
+def test_write_index_serializes_bare_yaml_dates(tmp_path):
+    # yaml.safe_load parses an unquoted `last_verified: 2026-07-16` frontmatter
+    # value into a datetime.date object, which json.dumps rejects unless it's
+    # given a fallback serializer. Regression test for that crash.
+    vault = _make_vault(tmp_path)
+    notes.write_note(vault / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds" / "Chiron-Conquest.md",
+                      {"type": "smite-build", "god": "Chiron", "last_verified": "2026-07-16"}, "")
+
+    out_path = tmp_path / "viewer" / "public" / "index.json"
+    build_index.write_index(vault, out_path)
+
+    data = json.loads(out_path.read_text(encoding="utf-8"))
+    assert data["builds"][0]["last_verified"] == "2026-07-16"
