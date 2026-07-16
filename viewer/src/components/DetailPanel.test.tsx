@@ -80,4 +80,91 @@ describe("DetailPanel", () => {
     render(<DetailPanel god="SomeNewGod" builds={[]} />);
     expect(screen.getByText(/no build data yet/i)).toBeInTheDocument();
   });
+
+  // Regression coverage for a real bug: Chiron's actual build note has two
+  // "mine" entries, and the "Reload data" button re-fetches index.json,
+  // producing a brand-new object graph for the *same* god. If activeIndex
+  // isn't reset on that change, two silent-bug modes are possible:
+  //   1. entries shrink -> activeIndex points past the end -> no tab shows
+  //      aria-selected, but content silently falls back to entries[0].
+  //   2. entries reorder (same count) -> activeIndex is still "valid" but
+  //      now names a different entry -> the tab bar looks unchanged while
+  //      the displayed build silently switches to something else.
+  // Both must instead land cleanly back on tab 0 with matching content.
+  function makeThreeEntryBuild(): BuildNote {
+    return {
+      type: "smite-build",
+      god: "Chiron",
+      mode: "Conquest",
+      builds: [
+        {
+          source: "community",
+          aspect: "Aspect of the Heroic Tutor",
+          aspect_pick_rate: 0.09,
+          aspect_win_rate: 0.45,
+          slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.49 }],
+          source_url: "https://smitebrain.com/gods/chiron/",
+        },
+        {
+          source: "mine",
+          slot_order: ["Crit Path Item"],
+          situational_swaps: [{ vs_tag: "heavy_cc", swap: "Crit path swap" }],
+          notes: "Crit path",
+        },
+        {
+          source: "mine",
+          slot_order: ["Ability Path Item"],
+          situational_swaps: [{ vs_tag: "heavy_cc", swap: "Ability path swap" }],
+          notes: "Ability path",
+        },
+      ],
+    };
+  }
+
+  it("resets to tab 0 (no stale/inconsistent selection) when the current god's entries shrink on reload", () => {
+    const { rerender } = render(<DetailPanel god="Chiron" builds={[makeThreeEntryBuild()]} />);
+
+    // Select the second "mine" tab (index 2 — the "ability path" entry).
+    fireEvent.click(screen.getAllByRole("tab")[2]);
+    expect(screen.getByText("Ability Path Item")).toBeInTheDocument();
+
+    // Simulate "Reload data": same god, but the ability-path entry is gone
+    // and every object is a fresh reference (as a real re-fetch produces).
+    const reloaded = makeThreeEntryBuild();
+    reloaded.builds = reloaded.builds.slice(0, 2); // community + crit path only
+    rerender(<DetailPanel god="Chiron" builds={[reloaded]} />);
+
+    const tabsAfter = screen.getAllByRole("tab");
+    expect(tabsAfter).toHaveLength(2);
+    expect(tabsAfter[0]).toHaveAttribute("aria-selected", "true");
+    expect(tabsAfter[1]).toHaveAttribute("aria-selected", "false");
+    expect(screen.getByText("Transcendence")).toBeInTheDocument();
+    expect(screen.queryByText("Ability Path Item")).not.toBeInTheDocument();
+  });
+
+  it("resets to tab 0 (not a stale index pointing at a different entry) when entries reorder on reload", () => {
+    const { rerender } = render(<DetailPanel god="Chiron" builds={[makeThreeEntryBuild()]} />);
+
+    // Select the second "mine" tab (index 2 — the "ability path" entry).
+    fireEvent.click(screen.getAllByRole("tab")[2]);
+    expect(screen.getByText("Ability Path Item")).toBeInTheDocument();
+
+    // Simulate "Reload data": same god, same entry count, but the two
+    // "mine" entries have swapped position — index 2 is now the crit path,
+    // not the ability path the user had selected.
+    const reordered = makeThreeEntryBuild();
+    const [community, mineA, mineB] = reordered.builds;
+    reordered.builds = [community, mineB, mineA];
+    rerender(<DetailPanel god="Chiron" builds={[reordered]} />);
+
+    const tabsAfter = screen.getAllByRole("tab");
+    expect(tabsAfter).toHaveLength(3);
+    expect(tabsAfter[0]).toHaveAttribute("aria-selected", "true");
+    expect(tabsAfter[2]).toHaveAttribute("aria-selected", "false");
+    // Must show the community entry (post-reset), never silently the
+    // crit-path entry that now happens to sit at the old index.
+    expect(screen.getByText("Transcendence")).toBeInTheDocument();
+    expect(screen.queryByText("Crit Path Item")).not.toBeInTheDocument();
+    expect(screen.queryByText("Ability Path Item")).not.toBeInTheDocument();
+  });
 });

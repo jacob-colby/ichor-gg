@@ -26,13 +26,19 @@ export function DetailPanel({ god, builds }: DetailPanelProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-  // Reset the active tab whenever the selected god (and thus its build
-  // note) changes, so a stale index from a previous god's longer build
-  // list doesn't leave the wrong tab looking selected.
+  // Reset the active tab whenever the selected god changes, OR when the
+  // build note object for the currently-selected god changes identity
+  // (e.g. the "Reload data" button re-fetches index.json and produces a
+  // brand-new object graph). Depending on `god` alone missed the reload
+  // case: if the current god's entries shrink or get reordered on reload,
+  // `activeIndex` would silently point at the wrong entry (or none),
+  // showing stale/mismatched content with no tab marked selected. Every
+  // reload lands back on tab 0 — losing the tab selection across a reload
+  // is an acceptable tradeoff for never showing an inconsistent state.
   useEffect(() => {
     setActiveIndex(0);
     setSelectedTag(null);
-  }, [god]);
+  }, [god, note]);
 
   if (!note || note.builds.length === 0) {
     return <p className="text-neutral-500">No build data yet for {god}.</p>;
