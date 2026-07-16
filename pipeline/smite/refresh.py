@@ -78,10 +78,10 @@ def refresh_builds_into() -> None:
         notes.write_note(path, frontmatter, body)
 
 
-def refresh_god_builds(god: str, mode: str, community_fetcher) -> None:
+def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = False) -> None:
     slug = god.lower().replace(" ", "-").replace("'", "")
     url = f"{SMITEBRAIN_BASE}{slug}/"
-    parsed = smitebrain_parser.parse_build_page(community_fetcher.fetch(url))
+    parsed = smitebrain_parser.parse_build_page(community_fetcher.fetch(url, force=force))
 
     aspect = parsed["aspects"][0] if parsed["aspects"] else None
     community_entry = {
@@ -100,25 +100,51 @@ def refresh_all(force: bool = False) -> None:
     Discovering brand-new gods/items that don't have a note yet is still a
     manual first `--refresh <name> --kind ...` — this only refreshes what's
     already tracked, matching a deliberate on-demand/weekly full pass rather
-    than continuous roster discovery."""
+    than continuous roster discovery.
+
+    A failure on one god/item/build (changed wiki layout, malformed note,
+    wrong SmiteBrain slug, ...) is isolated and logged rather than aborting
+    the whole run — an unattended weekly pass should get through everything
+    it can and report what it couldn't, not silently stop partway."""
     wiki_fetcher = BrowserFetcher(DATA_ROOT / "_cache" / "wiki")
     community_fetcher = CachedFetcher(DATA_ROOT / "_cache" / "smitebrain")
+    failures = []
 
     god_names = [notes.read_note(p)[0].get("name") for p in (DATA_ROOT / "Gods").glob("*.md")]
     for name in filter(None, god_names):
-        refresh_god(name, wiki_fetcher, force=force)
+        try:
+            refresh_god(name, wiki_fetcher, force=force)
+        except Exception as exc:
+            print(f"  [FAILED] god '{name}': {exc}")
+            failures.append(f"god '{name}': {exc}")
 
     item_names = [notes.read_note(p)[0].get("name") for p in (DATA_ROOT / "Items").glob("*.md")]
     for name in filter(None, item_names):
-        refresh_item(name, wiki_fetcher, force=force)
+        try:
+            refresh_item(name, wiki_fetcher, force=force)
+        except Exception as exc:
+            print(f"  [FAILED] item '{name}': {exc}")
+            failures.append(f"item '{name}': {exc}")
     if item_names:
         refresh_builds_into()
 
-    for build_path in BUILDS_ROOT.glob("*.md"):
+    build_paths = list(BUILDS_ROOT.glob("*.md"))
+    for build_path in build_paths:
         build_frontmatter, _ = notes.read_note(build_path)
         god, mode = build_frontmatter.get("god"), build_frontmatter.get("mode")
         if god and mode:
-            refresh_god_builds(god, mode, community_fetcher)
+            try:
+                refresh_god_builds(god, mode, community_fetcher, force=force)
+            except Exception as exc:
+                print(f"  [FAILED] build '{god}-{mode}': {exc}")
+                failures.append(f"build '{god}-{mode}': {exc}")
+
+    total = len(god_names) + len(item_names) + len(build_paths)
+    print(f"Refresh complete: {total - len(failures)}/{total} succeeded")
+    if failures:
+        print(f"{len(failures)} failed:")
+        for f in failures:
+            print(f"  - {f}")
 
 
 def main(argv=None) -> int:
@@ -151,7 +177,7 @@ def main(argv=None) -> int:
 
     if args.refresh_builds:
         community_fetcher = CachedFetcher(DATA_ROOT / "_cache" / "smitebrain")
-        refresh_god_builds(args.refresh_builds, args.mode, community_fetcher)
+        refresh_god_builds(args.refresh_builds, args.mode, community_fetcher, force=args.force)
         print(f"Refreshed community build for '{args.refresh_builds}' ({args.mode})")
         return 0
 

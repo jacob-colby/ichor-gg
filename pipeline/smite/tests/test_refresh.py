@@ -89,3 +89,52 @@ def test_refresh_all_reruns_every_tracked_god_item_and_build(tmp_path, monkeypat
     assert god_frontmatter["pantheon"] == "Greek"
     assert item_frontmatter["cost"] == 2900
     assert any(b["source"] == "community" for b in build_frontmatter["builds"])
+
+
+def test_refresh_all_isolates_a_single_god_failure_and_still_refreshes_the_rest(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(refresh, "BUILDS_ROOT", tmp_path / "Builds")
+    (tmp_path / "Gods").mkdir()
+    (tmp_path / "Items").mkdir()
+    (tmp_path / "Builds").mkdir()
+    notes.write_note(tmp_path / "Gods" / "Chiron.md", {"name": "Chiron"}, "")
+    notes.write_note(tmp_path / "Gods" / "BrokenGod.md", {"name": "BrokenGod"}, "")
+
+    chiron_html = (FIXTURES / "chiron_wiki.html").read_text(encoding="utf-8")
+
+    def fetch(url, force=False):
+        if "BrokenGod" in url:
+            raise ValueError("simulated wiki layout change")
+        return chiron_html
+
+    with mock.patch("smite.refresh.BrowserFetcher") as MockBrowser, \
+         mock.patch("smite.refresh.CachedFetcher") as MockCached:
+        MockBrowser.return_value.fetch.side_effect = fetch
+        MockCached.return_value.fetch.return_value = ""
+
+        refresh.refresh_all()  # must not raise
+
+    chiron_frontmatter, _ = notes.read_note(tmp_path / "Gods" / "Chiron.md")
+    assert chiron_frontmatter["pantheon"] == "Greek"
+    broken_frontmatter, _ = notes.read_note(tmp_path / "Gods" / "BrokenGod.md")
+    assert broken_frontmatter == {"name": "BrokenGod"}  # untouched by the failed refresh
+
+
+def test_main_refresh_without_kind_returns_1(tmp_path, monkeypatch):
+    assert refresh.main(["--refresh", "Chiron"]) == 1
+
+
+def test_main_all_takes_precedence_over_refresh(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(refresh, "BUILDS_ROOT", tmp_path / "Builds")
+    (tmp_path / "Gods").mkdir()
+    (tmp_path / "Items").mkdir()
+    (tmp_path / "Builds").mkdir()
+
+    with mock.patch("smite.refresh.refresh_all") as mock_refresh_all, \
+         mock.patch("smite.refresh.refresh_god") as mock_refresh_god:
+        result = refresh.main(["--all", "--refresh", "Chiron", "--kind", "god"])
+
+    assert result == 0
+    mock_refresh_all.assert_called_once()
+    mock_refresh_god.assert_not_called()
