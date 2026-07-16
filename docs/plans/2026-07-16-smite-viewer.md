@@ -770,19 +770,26 @@ describe("DetailPanel", () => {
     expect(screen.getByText("Devourer's Gauntlet")).toBeInTheDocument();
     expect(screen.queryByText(/%.*%/)).not.toBeInTheDocument();
     expect(screen.getByText(/situational/i)).toBeInTheDocument();
-    expect(screen.getByText("Qin's Sais over Deathbringer's crit slot")).toBeInTheDocument();
+    expect(screen.getByText(/Qin's Sais over Deathbringer's crit slot/)).toBeInTheDocument();
   });
 
   it("clicking an archetype chip highlights the matching swap row", () => {
     render(<DetailPanel god="Chiron" builds={[chironBuild]} />);
     fireEvent.click(screen.getByRole("tab", { name: /mine/i }));
     fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
-    expect(screen.getByText("Magi's Cloak").closest("[data-highlighted]")).toHaveAttribute(
+    // Note: the swap text ("Magi's Cloak", "Qin's Sais over...") sits as a
+    // trailing text node after a <span> tag label inside the row div, not in
+    // its own element — a regex match lands on the row div itself (the only
+    // element whose full text content contains the substring), so
+    // `.closest("[data-highlighted]")` matches the element itself. An exact
+    // string match here would find nothing, since no single element's full
+    // text content equals just the swap text.
+    expect(screen.getByText(/Magi's Cloak/).closest("[data-highlighted]")).toHaveAttribute(
       "data-highlighted",
       "true",
     );
     expect(
-      screen.getByText("Qin's Sais over Deathbringer's crit slot").closest("[data-highlighted]"),
+      screen.getByText(/Qin's Sais over Deathbringer's crit slot/).closest("[data-highlighted]"),
     ).toHaveAttribute("data-highlighted", "false");
   });
 
@@ -864,7 +871,7 @@ export function DetailPanel({ god, builds }: DetailPanelProps) {
         <div>
           <div className="mb-1 text-xs text-neutral-500">SLOT ORDER</div>
           <div className="flex flex-col gap-1">
-            {(community ? active.slot_order : active.slot_order).map((slotEntry, i) => {
+            {active.slot_order.map((slotEntry, i) => {
               const name = slotItemName(slotEntry);
               const rates = typeof slotEntry !== "string" ? slotEntry : null;
               return (
@@ -891,6 +898,7 @@ export function DetailPanel({ god, builds }: DetailPanelProps) {
 
         {swaps && swaps.length > 0 && (
           <div className="flex-1 border-l border-neutral-800 pl-4">
+            <div className="mb-1 text-xs text-neutral-500">SITUATIONAL SWAPS</div>
             <div className="mb-1 flex flex-wrap gap-1">
               {ARCHETYPE_TAGS.map((tag) => (
                 <button
