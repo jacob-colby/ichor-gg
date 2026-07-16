@@ -67,3 +67,26 @@ def test_write_index_serializes_bare_yaml_dates(tmp_path):
 
     data = json.loads(out_path.read_text(encoding="utf-8"))
     assert data["gods"][0]["last_verified"] == "2026-07-16"
+
+
+def test_write_index_copies_icon_files(tmp_path):
+    vault = _make_vault(tmp_path)
+    icons_dir = vault / "04. System" / "Data" / "SMITE" / "_assets" / "icons"
+    icons_dir.mkdir(parents=True)
+    (icons_dir / "chiron.png").write_bytes(b"\x89PNG\r\n\x1a\nfakeicondata")
+
+    out_path = tmp_path / "viewer" / "public" / "index.json"
+    build_index.write_index(vault, out_path)
+
+    copied_icon = out_path.parent / "icons" / "chiron.png"
+    assert copied_icon.exists()
+    assert copied_icon.read_bytes() == b"\x89PNG\r\n\x1a\nfakeicondata"
+
+
+def test_write_index_handles_no_icons_dir_gracefully(tmp_path):
+    vault = _make_vault(tmp_path)
+    out_path = tmp_path / "viewer" / "public" / "index.json"
+
+    build_index.write_index(vault, out_path)  # must not raise, even with no _assets/icons/ at all
+
+    assert out_path.exists()
