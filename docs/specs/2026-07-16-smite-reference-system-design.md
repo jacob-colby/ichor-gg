@@ -258,11 +258,24 @@ explorer so the vault still *feels* clean day-to-day.
 
 **Layout** (confirmed via mockup): a narrow vertical rail of god portraits on
 the left. Clicking a god opens its build(s) in a detail panel: slot order
-(icon + item name, stacked) on the left, situational swap rows (each with its
-own item icon) in a right-hand column. Archetype/damage-type chips (heavy CC /
-magic-heavy / physical-heavy / sustain / poke) sit above the swap column —
-clicking one highlights the matching row rather than filtering the rail.
-Source badge (`pro`/`community`/`mine`) and mode shown in the panel header.
+(icon + item name, stacked) on the left. Source badge (`pro`/`community`/
+`mine`) and mode shown in the panel header; when a god+mode has more than one
+source, tabs above the slot order switch between them (only sources that
+actually exist appear as tabs).
+
+**Corrected against real data (2026-07-16):** the community source's
+`slot_order` entries carry `pick_rate`/`win_rate` (SmiteBrain data) — shown as
+a small badge next to the item, only when present; `pro`/`mine` entries are
+plain item names with no badge. `situational_swaps` only exists on `pro`/
+`mine` entries (SmiteBrain has no matchup data) — when the active tab's build
+has none, the swap column is omitted entirely, slot order goes full-width.
+The `swap` field itself is free-text ("Qin's Sais over Deathbringer's crit
+slot"), not a clean single item name — the original mockup assumed an icon
+per swap row; real data doesn't support that reliably, so swap rows are
+text-only (vs_tag chip label + the swap text as-is), no icon. Archetype/
+damage-type chips (heavy CC / magic-heavy / physical-heavy / sustain / poke)
+sit above the swap column when it's present — clicking one highlights the
+matching row rather than filtering the rail.
 
 **Data flow:** a Python script walks `04. System/Data/SMITE/` and
 `03. Workspaces/Gaming/SMITE 2/Builds/` frontmatter and writes one
