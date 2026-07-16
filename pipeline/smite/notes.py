@@ -28,6 +28,14 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?\n)---\n?", re.DOTALL)
 # a marker line and will trip the ValueError below. That's intentional: failing
 # loudly on anything ambiguous is safer than trying to parse markdown fencing
 # to guess intent. See test_merge_god_note_raises_on_marker_inside_code_fence.
+#
+# Conversely, if the *only* marker-shaped content in a not-yet-pipeline-touched
+# file happens to form one well-formed pair (e.g. a fenced documentation
+# example on its own, with no real block anywhere else in the file), it is
+# indistinguishable from a real block and will be silently treated as one —
+# accepted because this scanner never parses markdown fencing, and God/Item
+# notes are always created by the pipeline's own first write before any
+# hand-editing occurs, so this never arises in practice.
 MARKER_LINE_RE = re.compile(r"^<!-- WIKI:(START|END) -->$", re.MULTILINE)
 
 
