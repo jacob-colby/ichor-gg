@@ -54,6 +54,23 @@ def _parse_stats(td) -> dict:
     return stats
 
 
+def _extract_image_url(infobox):
+    """The infobox's first centered <td colspan="2"> row (right after the
+    title row) holds the portrait/icon image on both god and item pages —
+    confirmed identical structure on both page types during planning."""
+    for row in infobox.find_all("tr"):
+        td = row.find("td", attrs={"colspan": "2"})
+        if td is None:
+            continue
+        style = td.get("style", "")
+        if "text-align: center" not in style:
+            continue
+        img = td.find("img")
+        if img is not None and img.get("src"):
+            return img["src"]
+    return None
+
+
 def parse_god_page(html: str) -> dict:
     soup = BeautifulSoup(html, "html.parser")
     infobox = soup.find("table", class_="infobox")
@@ -81,6 +98,7 @@ def parse_god_page(html: str) -> dict:
             if stat:
                 result["base_stats"][STAT_LABELS[label]] = stat
 
+    result["image_url"] = _extract_image_url(infobox)
     result["abilities"] = _parse_abilities(soup)
     result["aspects"] = _parse_aspects(soup)
     return result
@@ -157,6 +175,8 @@ def parse_item_page(html: str) -> dict:
             stats = _parse_stats(td)
             if stats:
                 result["stats"] = stats
+
+    result["image_url"] = _extract_image_url(infobox)
 
     recipe = soup.find("table", class_="recipe-table")
     result["builds_from"] = _direct_recipe_children(recipe) if recipe else []

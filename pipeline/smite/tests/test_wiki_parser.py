@@ -80,3 +80,13 @@ def test_parse_item_page_extracts_stats():
     result = wiki_parser.parse_item_page(_deathbringer_html())
 
     assert result["stats"] == {"Strength": "45", "Critical Chance": "20%"}
+
+
+def test_parse_god_page_extracts_image_url():
+    result = wiki_parser.parse_god_page(_chiron_html())
+    assert result["image_url"] == "/images/thumb/T_Chiron%28S2%29_Default.png/280px-T_Chiron%28S2%29_Default.png?157c1"
+
+
+def test_parse_item_page_extracts_image_url():
+    result = wiki_parser.parse_item_page(_deathbringer_html())
+    assert result["image_url"] == "/images/T3_Deathbringer.png?6d7a6"
