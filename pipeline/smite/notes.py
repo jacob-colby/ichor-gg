@@ -17,7 +17,11 @@ from pathlib import Path
 import yaml
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?\n)---\n?", re.DOTALL)
-WIKI_BLOCK_RE = re.compile(r"<!-- WIKI:START -->.*?<!-- WIKI:END -->", re.DOTALL)
+# Markers must be the entirety of their own line. This deliberately excludes a
+# marker mentioned inline as part of hand-written prose (e.g. a note *about*
+# this pipeline that quotes "<!-- WIKI:START -->" mid-sentence) — only a real,
+# intentionally-placed block (START begins a line, END ends a line) matches.
+WIKI_BLOCK_RE = re.compile(r"^<!-- WIKI:START -->\n.*?\n<!-- WIKI:END -->$", re.DOTALL | re.MULTILINE)
 
 
 def read_note(path: Path) -> tuple:
@@ -46,8 +50,16 @@ def merge_god_note(path: Path, scraped_frontmatter: dict, wiki_block_content: st
                           existing_frontmatter, scraped_frontmatter)
 
     new_block = f"<!-- WIKI:START -->\n{wiki_block_content}\n<!-- WIKI:END -->"
-    if WIKI_BLOCK_RE.search(existing_body):
-        new_body = WIKI_BLOCK_RE.sub(new_block, existing_body, count=1)
+    matches = WIKI_BLOCK_RE.findall(existing_body)
+    if len(matches) > 1:
+        raise ValueError(
+            f"multiple WIKI blocks found in {path}, refusing to guess which one to replace"
+        )
+    if matches:
+        # Use a replacement function, not a replacement string, so that any
+        # backslash sequences in scraped wiki prose (e.g. "\1") are inserted
+        # literally instead of being interpreted as regex backreferences.
+        new_body = WIKI_BLOCK_RE.sub(lambda m: new_block, existing_body, count=1)
     elif existing_body.strip():
         new_body = f"{new_block}\n\n{existing_body}"
     else:

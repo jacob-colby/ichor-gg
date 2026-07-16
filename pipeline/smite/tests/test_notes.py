@@ -1,3 +1,5 @@
+import pytest
+
 from smite import notes
 
 
@@ -47,6 +49,43 @@ def test_merge_god_note_preserves_content_outside_wiki_block(tmp_path):
     assert "Old ability text." not in new_body
     assert "## My notes" in new_body
     assert "Great into poke comps." in new_body
+
+
+def test_merge_god_note_ignores_marker_text_mentioned_inline(tmp_path):
+    path = tmp_path / "Chiron.md"
+    notes.merge_god_note(path, {"name": "Chiron"}, "Old ability text.")
+
+    frontmatter, body = notes.read_note(path)
+    # A hand-written sentence that quotes the marker syntax inline (not on
+    # its own line) sits above the real WIKI block.
+    hand_written = (
+        "The pipeline writes content between `<!-- WIKI:START -->` and "
+        "`<!-- WIKI:END -->` markers.\n\n" + body
+    )
+    notes.write_note(path, frontmatter, hand_written)
+
+    notes.merge_god_note(path, {"name": "Chiron"}, "New ability text.")
+
+    _, new_body = notes.read_note(path)
+    assert (
+        "The pipeline writes content between `<!-- WIKI:START -->` and "
+        "`<!-- WIKI:END -->` markers."
+    ) in new_body
+    assert "New ability text." in new_body
+    assert "Old ability text." not in new_body
+
+
+def test_merge_god_note_raises_on_multiple_wiki_blocks(tmp_path):
+    path = tmp_path / "Chiron.md"
+    frontmatter = {"name": "Chiron"}
+    body = (
+        "<!-- WIKI:START -->\nFirst block.\n<!-- WIKI:END -->\n\n"
+        "<!-- WIKI:START -->\nSecond block.\n<!-- WIKI:END -->\n"
+    )
+    notes.write_note(path, frontmatter, body)
+
+    with pytest.raises(ValueError):
+        notes.merge_god_note(path, {"name": "Chiron"}, "New ability text.")
 
 
 def test_merge_build_note_first_write_creates_community_entry(tmp_path):
