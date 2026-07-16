@@ -54,3 +54,23 @@ def test_parse_god_page_raises_without_infobox():
         assert False, "expected ValueError"
     except ValueError:
         pass
+
+
+def _deathbringer_html():
+    return (FIXTURES / "deathbringer_wiki.html").read_text(encoding="utf-8")
+
+
+def test_parse_item_page_extracts_infobox_fields():
+    result = wiki_parser.parse_item_page(_deathbringer_html())
+
+    assert result["tier"] == 3
+    assert result["cost"] == 2900
+    assert result["passive"] == "+35% Critical Strike Damage."
+
+
+def test_parse_item_page_extracts_direct_builds_from_only():
+    result = wiki_parser.parse_item_page(_deathbringer_html())
+
+    assert result["builds_from"] == ["Skeggox", "Kopesh"]
+    assert "Axe" not in result["builds_from"]
+    assert "Sabre" not in result["builds_from"]

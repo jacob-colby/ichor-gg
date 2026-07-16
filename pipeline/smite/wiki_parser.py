@@ -106,3 +106,49 @@ def _parse_aspects(soup) -> list:
     if len(dds) < 2:
         return []
     return [{"name": _clean(dds[0].get_text()), "kit_changes": _clean(dds[1].get_text())}]
+
+
+def parse_item_page(html: str) -> dict:
+    soup = BeautifulSoup(html, "html.parser")
+    infobox = soup.find("table", class_="infobox")
+    if infobox is None:
+        raise ValueError("no infobox found on item page")
+
+    result = {}
+    for row in infobox.find_all("tr"):
+        th, td = row.find("th"), row.find("td")
+        if th is None or td is None:
+            continue
+        label = _clean(th.get_text()).rstrip(":")
+        if label == "Item Type":
+            m = re.search(r"Tier (\d)", td.get_text())
+            result["tier"] = int(m.group(1)) if m else None
+        elif label == "Total Cost":
+            digits = re.sub(r"\D", "", td.get_text())
+            result["cost"] = int(digits) if digits else None
+        elif label == "Passive Effect":
+            text = _clean(td.get_text())
+            if text:
+                result["passive"] = text
+
+    recipe = soup.find("table", class_="recipe-table")
+    result["builds_from"] = _direct_recipe_children(recipe) if recipe else []
+    return result
+
+
+def _direct_recipe_children(root_table) -> list:
+    """The recipe tree is nested tables; a *direct* component is a
+    table.recipe-table that is an immediate child of one of the root
+    table's own <td> cells — not a table nested any deeper (that would be
+    a component's own sub-component, not this item's direct build_from)."""
+    root_tbody = root_table.find("tbody", recursive=False) or root_table
+    children = []
+    for row in root_tbody.find_all("tr", recursive=False):
+        for cell in row.find_all("td", recursive=False):
+            nested = cell.find("table", class_="recipe-table", recursive=False)
+            if nested is None:
+                continue
+            name_cell = nested.find("td", attrs={"data-name": True})
+            if name_cell is not None:
+                children.append(name_cell["data-name"])
+    return children
