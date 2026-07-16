@@ -31,6 +31,29 @@ def _parse_number_list(text: str) -> list:
     return [float(n) for n in re.findall(r"[\d.]+", text)]
 
 
+def _parse_stats(td) -> dict:
+    """The infobox Stats cell is a flat run of `<b>value</b> StatName <br>`
+    pairs (e.g. `<b>45</b> Strength <br><b>20%</b> Critical Chance`) — not a
+    table, so there's no row/column structure to key off. For each <b> take
+    its own text as the value, then walk forward through its next siblings
+    (stopping at the following <br>, which marks the end of that pair) to
+    collect the stat-name text that follows it. Values are kept as strings
+    (not coerced to a single numeric type) since some are flat numbers and
+    some are percentages."""
+    stats = {}
+    for b in td.find_all("b"):
+        value = _clean(b.get_text())
+        name_parts = []
+        for sibling in b.next_siblings:
+            if getattr(sibling, "name", None) == "br":
+                break
+            name_parts.append(sibling if isinstance(sibling, str) else sibling.get_text())
+        name = _clean("".join(name_parts))
+        if name:
+            stats[name] = value
+    return stats
+
+
 def parse_god_page(html: str) -> dict:
     soup = BeautifulSoup(html, "html.parser")
     infobox = soup.find("table", class_="infobox")
@@ -130,6 +153,10 @@ def parse_item_page(html: str) -> dict:
             text = _clean(td.get_text())
             if text:
                 result["passive"] = text
+        elif label == "Stats":
+            stats = _parse_stats(td)
+            if stats:
+                result["stats"] = stats
 
     recipe = soup.find("table", class_="recipe-table")
     result["builds_from"] = _direct_recipe_children(recipe) if recipe else []

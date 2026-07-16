@@ -74,3 +74,9 @@ def test_parse_item_page_extracts_direct_builds_from_only():
     assert result["builds_from"] == ["Skeggox", "Kopesh"]
     assert "Axe" not in result["builds_from"]
     assert "Sabre" not in result["builds_from"]
+
+
+def test_parse_item_page_extracts_stats():
+    result = wiki_parser.parse_item_page(_deathbringer_html())
+
+    assert result["stats"] == {"Strength": "45", "Critical Chance": "20%"}
