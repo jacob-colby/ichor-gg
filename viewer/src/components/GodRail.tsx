@@ -16,7 +16,7 @@ export function GodRail({ gods, selectedGod, onSelect }: GodRailProps) {
           type="button"
           aria-pressed={god.name === selectedGod}
           onClick={() => onSelect(god.name)}
-          title={god.name}
+          title={god.name} // also the accessible-name fallback once onError hides the <img> — alt text stops counting toward the name once its element is hidden, don't remove this thinking it's redundant with alt
           className={`flex h-12 w-12 items-center justify-center overflow-hidden rounded ${
             god.name === selectedGod
               ? "ring-2 ring-sky-400"
