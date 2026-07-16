@@ -90,8 +90,11 @@ def main():
             time.sleep(SLEEP)
             continue
 
+        if len(data) > MAX_BYTES:
+            failures.append(f"{slug} — oversized {len(data)//1024}KB (>{MAX_BYTES // 1024}KB) — {url}")
+
         out.write_bytes(data)
-        print(f"  [ OK ] {slug}.png ({len(data)//1024}KB)")
+        print(f"  [ OK ] {slug}.png ({len(data)//1024}KB)" + (" ⚠ oversized" if len(data) > MAX_BYTES else ""))
         ok.append(slug)
         time.sleep(SLEEP)
 

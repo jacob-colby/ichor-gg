@@ -14,7 +14,7 @@ over any full splash-art images.
 
 ### Step 1 — generate placeholder stubs (any machine, no internet)
 ```bash
-cd "03. Workspaces/Gaming/_assets/smite2/icons/"
+cd "04. System/Data/SMITE/_assets/icons/"
 python3 generate-placeholders.py
 ```
 Creates 31 solid-color PNG stubs (~150 bytes each, well within 50 KB spec).
@@ -24,10 +24,10 @@ Skips files that already exist and are >200 bytes — real icons are never overw
 
 ### Step 2 — replace with real icons (internet-connected machine)
 ```bash
-cd "03. Workspaces/Gaming/_assets/smite2/icons/"
-python3 fetch-icons.py
+cd "04. System/Data/SMITE/_assets/icons/"
+python3 fetch-gods.py
 # or with Hi-Rez API credentials:
-SMITE_DEV_ID=<id> SMITE_AUTH_KEY=<key> python3 fetch-icons.py
+SMITE_DEV_ID=<id> SMITE_AUTH_KEY=<key> python3 fetch-gods.py
 ```
 Expected: 31 PNG files, each 10–40 KB, all within the 50 KB spec.
 Priority pool gods (★) are processed first.
@@ -65,9 +65,10 @@ https://www.smitesource.com/images/gods/<GodName>_icon.png
 Not guaranteed stable — verify before scripting.
 
 ### Download script
-See `../_download.py` → `run_batch("SMITE 2 god icons …")` which targets this
-directory using the smitesource.com icon URL pattern (or Hi-Rez API if you have
-credentials). Run it on the mini PC where those domains are reachable.
+See `03. Workspaces/Gaming/_assets/_download.py` → `run_batch("SMITE 2 god
+icons …")` which targets this directory using the smitesource.com icon URL
+pattern (or Hi-Rez API if you have credentials). Run it on the mini PC where
+those domains are reachable.
 
 ---
 
