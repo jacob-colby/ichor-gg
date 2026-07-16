@@ -15,6 +15,13 @@ viewer for build lookup mid-game. Two things need to exist:
 2. A small local Vite + React + TS + Tailwind app that reads that base and
    renders a glanceable, filterable build list for a second monitor.
 
+## Housekeeping (do this regardless of implementation timing)
+
+Add `docs/` to `.obsidian/app.json` → `userIgnoreFilters`, alongside the
+existing `tools/` and `events/` entries — it currently holds only
+`docs/superpowers/{specs,plans}`, the same machine/skill-surface category.
+`viewer/` gets the same entry once it exists.
+
 ## Relationship to existing SMITE 2 content
 
 `03. Workspaces/Gaming/SMITE 2/` already exists — a personal practice journal
@@ -35,7 +42,6 @@ raw data in a separate, pipeline-owned location:
 
 03. Workspaces/Gaming/SMITE 2/            ← existing journal, extended
   Builds/<god>-<mode>.md
-  Matchups/
   Reference/                              game-mode differences, economy cheat sheet
   00-Overview.md                          (existing, untouched)
   01-god-notes/{Chiron,Ullr,Hou Yi}.md    (existing, trimmed — see Migration)
@@ -221,7 +227,10 @@ like god kits or item costs, so it's outside the automated refresh loop.
 ## Viewer
 
 Vite + React + TypeScript + Tailwind SPA at vault-root `viewer/` (sibling to
-`tools/` — it's tooling, not vault content).
+`tools/` — it's tooling, not vault content). Added to `.obsidian/app.json`
+`userIgnoreFilters` alongside `docs/`, matching the existing treatment of
+`tools/` and `events/`: physically at root, hidden from Obsidian's file
+explorer so the vault still *feels* clean day-to-day.
 
 **Layout** (confirmed via mockup): a narrow vertical rail of god portraits on
 the left. Clicking a god opens its build(s) in a detail panel: slot order
@@ -232,7 +241,7 @@ clicking one highlights the matching row rather than filtering the rail.
 Source badge (`pro`/`community`/`mine`) and mode shown in the panel header.
 
 **Data flow:** a Python script walks `04. System/Data/SMITE/` and
-`03. Workspaces/Gaming/SMITE 2/Builds|Matchups/` frontmatter and writes one
+`03. Workspaces/Gaming/SMITE 2/Builds/` frontmatter and writes one
 `index.json`. The app fetches that JSON on load and on a manual "reload data"
 button — no file-watcher, no backend server, since content only changes on
 patch days.
