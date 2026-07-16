@@ -71,3 +71,46 @@ def test_parse_build_page_survives_extra_flex_wrapper_around_icon():
     assert {"name": "Aspect of the Heroic Tutor", "pick_rate": 0.91, "win_rate": 0.53} in result["aspects"]
     assert len(result["aspects"]) == 1
     assert result["items"] == []
+
+
+def test_parse_build_page_stops_scanning_core_slots_at_the_next_heading():
+    """Regression test for the <h2> boundary stop in
+    _parse_core_recommended_build. On the real page Core is currently the
+    last section, so nothing else exercises this line — without this test,
+    a later page layout change (e.g. a "Matchups" section added after Core)
+    with its own digit-labeled, font-semibold div could be silently mistaken
+    for a 4th Core slot, exactly the "scans too much of the page" bug class
+    this whole fix round exists to prevent."""
+    html = """
+    <div class="border-neutral bg-base-300 flex w-full min-w-0 flex-col gap-3 border p-3">
+      <div class="flex items-center justify-between">
+        <h2 class="border-accent border-l-2 pl-2 text-xl font-semibold text-white">Core</h2>
+        <label class="label cursor-pointer gap-2 text-sm text-gray-400">Split by Slot</label>
+      </div>
+      <div class="flex items-start gap-2">
+        <div class="mt-5 flex min-h-4 min-w-4 shrink-0 items-center justify-center font-semibold">1</div>
+        <div class="flex gap-1 overflow-x-auto overscroll-x-contain pb-2">
+          <div class="flex shrink-0 flex-col items-center gap-2 font-medium">
+            <a href="/items/transcendence"><img alt="Transcendence" src="x"/></a>
+            <div class="text-xs text-gray-400">61% pick<br/> 49% win</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="border-accent border-l-2 pl-2 text-xl font-semibold text-white">Matchups</h2>
+    <div class="flex items-start gap-2">
+      <div class="mt-5 flex min-h-4 min-w-4 shrink-0 items-center justify-center font-semibold">1</div>
+      <div class="flex gap-1 overflow-x-auto overscroll-x-contain pb-2">
+        <div class="flex shrink-0 flex-col items-center gap-2 font-medium">
+          <a href="/items/decoy-item"><img alt="Decoy Item" src="x"/></a>
+          <div class="text-xs text-gray-400">99% pick<br/> 99% win</div>
+        </div>
+      </div>
+    </div>
+    """
+
+    result = smitebrain_parser.parse_build_page(html)
+
+    assert result["items"] == [{"name": "Transcendence", "pick_rate": 0.61, "win_rate": 0.49}]
+    assert "Decoy Item" not in [item["name"] for item in result["items"]]
