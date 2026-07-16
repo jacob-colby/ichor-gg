@@ -221,11 +221,23 @@ touched by any automated process.
 
 ## Assets
 
-Extends the existing `_download.py` pattern (currently pulls SMITE 2 god
-icons from SmiteSource/Fandom into `Gaming/_assets/smite2/`): moved to
-`04. System/Data/SMITE/_assets/`, extended to also pull item icons. No skins,
-base portraits/icons only, capped at ~50-300KB per image, referenced by
-relative path in frontmatter — never hotlinked.
+**Superseded (2026-07-16):** the original plan extended the existing
+`_download.py`/SmiteSource pattern. Confirmed dead during viewer prep —
+SmiteSource redesigned its site and the direct `_icon.png` URLs now 404;
+Fandom is Cloudflare-blocked (403), matching that script's own README caveat.
+
+**Current approach:** `wiki.smite2.com`'s HTML pages are Cloudflare-gated
+(hence Playwright), but its static image files under `/images/...` are not —
+confirmed with a plain `requests` fetch. Since `refresh_god`/`refresh_item`
+already load the god/item page via Playwright to scrape data, they now also
+extract the portrait/icon image URL from that same page and download the
+image via plain `requests` (no second Playwright load needed) to
+`04. System/Data/SMITE/_assets/icons/<slug>.png`. One source of truth — the
+icon always matches the exact god/item just scraped, no separate script, no
+third-party slug-matching guesswork. No skins, base portraits/icons only,
+referenced by relative path in frontmatter — never hotlinked. The old
+`fetch-gods.py`/`fetch-items.py`/SmiteSource-based scripts are removed as
+part of this fix.
 
 ## Reference notes
 
