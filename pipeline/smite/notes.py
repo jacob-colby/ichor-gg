@@ -20,8 +20,38 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?\n)---\n?", re.DOTALL)
 # Markers must be the entirety of their own line. This deliberately excludes a
 # marker mentioned inline as part of hand-written prose (e.g. a note *about*
 # this pipeline that quotes "<!-- WIKI:START -->" mid-sentence) — only a real,
-# intentionally-placed block (START begins a line, END ends a line) matches.
-WIKI_BLOCK_RE = re.compile(r"^<!-- WIKI:START -->\n.*?\n<!-- WIKI:END -->$", re.DOTALL | re.MULTILINE)
+# intentionally-placed marker line matches.
+#
+# Known, accepted limitation: this can't distinguish a real marker line from
+# one that's inside a fenced code block (e.g. hand-written docs demonstrating
+# the marker syntax inside triple-backticks) — a fenced example still reads as
+# a marker line and will trip the ValueError below. That's intentional: failing
+# loudly on anything ambiguous is safer than trying to parse markdown fencing
+# to guess intent. See test_merge_god_note_raises_on_marker_inside_code_fence.
+MARKER_LINE_RE = re.compile(r"^<!-- WIKI:(START|END) -->$", re.MULTILINE)
+
+
+def _find_wiki_block_span(body: str):
+    """Returns (start_match, end_match) for the single START/END marker-line
+    pair, or None if there are no markers at all. Raises ValueError for
+    anything else (missing END, extra markers, wrong order, nesting) —
+    refusing to guess is safer than silently picking a spanning match.
+
+    Counting *matched pairs* after the fact (the previous approach) can never
+    catch an unpaired marker, because a regex only sees complete pairs — a
+    stray unpaired START followed later by a real block still forms exactly
+    one "pair" match, silently spanning (and swallowing) everything in
+    between. Scanning the raw marker lines themselves closes that hole.
+    """
+    markers = list(MARKER_LINE_RE.finditer(body))
+    if not markers:
+        return None
+    if len(markers) != 2 or markers[0].group(1) != "START" or markers[1].group(1) != "END":
+        raise ValueError(
+            "malformed or ambiguous WIKI markers — expected exactly one "
+            "START/END pair, each alone on its own line"
+        )
+    return markers[0], markers[1]
 
 
 def read_note(path: Path) -> tuple:
@@ -50,20 +80,15 @@ def merge_god_note(path: Path, scraped_frontmatter: dict, wiki_block_content: st
                           existing_frontmatter, scraped_frontmatter)
 
     new_block = f"<!-- WIKI:START -->\n{wiki_block_content}\n<!-- WIKI:END -->"
-    matches = WIKI_BLOCK_RE.findall(existing_body)
-    if len(matches) > 1:
-        raise ValueError(
-            f"multiple WIKI blocks found in {path}, refusing to guess which one to replace"
-        )
-    if matches:
-        # Use a replacement function, not a replacement string, so that any
-        # backslash sequences in scraped wiki prose (e.g. "\1") are inserted
-        # literally instead of being interpreted as regex backreferences.
-        new_body = WIKI_BLOCK_RE.sub(lambda m: new_block, existing_body, count=1)
-    elif existing_body.strip():
-        new_body = f"{new_block}\n\n{existing_body}"
+    span = _find_wiki_block_span(existing_body)
+    if span is None:
+        new_body = f"{new_block}\n\n{existing_body}" if existing_body.strip() else f"{new_block}\n"
     else:
-        new_body = f"{new_block}\n"
+        # Exact string-position splice, not re.sub — so nothing in
+        # wiki_block_content (backslashes included) is ever interpreted as a
+        # regex replacement pattern.
+        start_match, end_match = span
+        new_body = existing_body[:start_match.start()] + new_block + existing_body[end_match.end():]
 
     write_note(path, scraped_frontmatter, new_body)
 

@@ -88,6 +88,51 @@ def test_merge_god_note_raises_on_multiple_wiki_blocks(tmp_path):
         notes.merge_god_note(path, {"name": "Chiron"}, "New ability text.")
 
 
+def test_merge_god_note_raises_on_unpaired_stray_start_marker(tmp_path):
+    path = tmp_path / "Chiron.md"
+    notes.merge_god_note(path, {"name": "Chiron"}, "Old ability text.")
+
+    frontmatter, body = notes.read_note(path)
+    # A stray, unpaired START marker on its own line (e.g. hand-written docs
+    # demonstrating the syntax, with no matching END nearby), followed later
+    # by the real complete block.
+    hand_written = (
+        "Example marker syntax:\n<!-- WIKI:START -->\n"
+        "This line is just documentation, no matching END nearby.\n\n" + body
+    )
+    notes.write_note(path, frontmatter, hand_written)
+
+    with pytest.raises(ValueError):
+        notes.merge_god_note(path, {"name": "Chiron"}, "New ability text.")
+
+    # The failed attempt must not have touched the file at all.
+    _, unchanged_body = notes.read_note(path)
+    assert unchanged_body == hand_written
+
+
+def test_merge_god_note_raises_on_marker_inside_code_fence(tmp_path):
+    path = tmp_path / "Chiron.md"
+    notes.merge_god_note(path, {"name": "Chiron"}, "Old ability text.")
+    frontmatter, body = notes.read_note(path)
+
+    # Known, accepted limitation: a properly fenced code block that quotes
+    # the marker syntax as a documentation example (e.g. explaining the
+    # pipeline convention to a future reader) still reads as real marker
+    # lines to MARKER_LINE_RE — it can't tell "inside a code fence" from "a
+    # real marker". Combined with the real block already in the file, that's
+    # 4 marker lines total, which correctly raises rather than silently
+    # guessing which pair is real. This test locks that behavior in rather
+    # than letting it silently regress.
+    hand_written = body + (
+        "\n## Note format\nHere's how the pipeline marks its block:\n\n"
+        "```\n<!-- WIKI:START -->\n...\n<!-- WIKI:END -->\n```\n"
+    )
+    notes.write_note(path, frontmatter, hand_written)
+
+    with pytest.raises(ValueError):
+        notes.merge_god_note(path, {"name": "Chiron"}, "New ability text.")
+
+
 def test_merge_build_note_first_write_creates_community_entry(tmp_path):
     path = tmp_path / "Chiron-Conquest.md"
     notes.merge_build_note(
