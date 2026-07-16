@@ -35,8 +35,15 @@ def _download_icon(image_url: str, slug: str) -> None:
         return
 
     full_url = "https://wiki.smite2.com" + image_url
-    response = requests.get(full_url, timeout=20)
-    response.raise_for_status()
+    try:
+        response = requests.get(full_url, timeout=20)
+        response.raise_for_status()
+    except Exception as exc:
+        # A broken/expired icon URL is cosmetic, not a data failure — the
+        # god/item note itself was already written by the caller before
+        # this runs. Never let an icon miss look like a refresh failure.
+        print(f"  [icon skip] {slug}: {exc}")
+        return
 
     icons_dir.mkdir(parents=True, exist_ok=True)
     out_path.write_bytes(response.content)
