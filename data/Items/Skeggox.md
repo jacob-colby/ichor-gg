@@ -10,6 +10,7 @@ builds_from:
 - Axe
 builds_into:
 - Bloodforge
+- Dagger of Frenzy
 - Deathbringer
 - Devourer's Gauntlet
 - Jotunn's Revenge

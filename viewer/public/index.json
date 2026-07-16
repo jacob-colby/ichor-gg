@@ -2,6 +2,222 @@
   "gods": [
     {
       "type": "smite-god",
+      "name": "Agni",
+      "pantheon": "Hindu",
+      "role": "Mid",
+      "specializations": [
+        "Nuker",
+        "Burst Damage",
+        "Sniper"
+      ],
+      "damage_type": "magical",
+      "release_date": "January 7, 2025",
+      "base_stats": {
+        "health": {
+          "base": 569.48,
+          "per_level": 86.48
+        },
+        "mana": {
+          "base": 334.1,
+          "per_level": 42.0
+        },
+        "physical_prot": {
+          "base": 17.48,
+          "per_level": 2.76
+        },
+        "magical_prot": {
+          "base": 27.38,
+          "per_level": 1.38
+        },
+        "attack_speed": {
+          "base": 1.0,
+          "per_level": 1.51
+        },
+        "move_speed": {
+          "base": 370.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Agni Basic Attack"
+        },
+        {
+          "slot": "Passive",
+          "name": "Combustion"
+        },
+        {
+          "slot": "1st Ability",
+          "name": "Noxious Fumes",
+          "cooldown": [
+            13.0
+          ],
+          "cost": [
+            60.0,
+            65.0,
+            70.0,
+            75.0,
+            80.0
+          ]
+        },
+        {
+          "slot": "2nd Ability",
+          "name": "Flame Wave",
+          "cooldown": [
+            15.0,
+            14.5,
+            14.0,
+            13.5,
+            13.0
+          ],
+          "cost": [
+            60.0,
+            65.0,
+            70.0,
+            75.0,
+            80.0
+          ]
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Path of Flames",
+          "cooldown": [
+            16.0
+          ],
+          "cost": [
+            70.0,
+            75.0,
+            80.0,
+            85.0,
+            90.0
+          ]
+        },
+        {
+          "slot": "Ultimate",
+          "name": "Rain Fire",
+          "cooldown": [
+            18.0
+          ],
+          "cost": [
+            10.0
+          ]
+        }
+      ],
+      "aspects": [
+        {
+          "name": "Aspect of Combustion",
+          "kit_changes": "Your Basic Attacks now ignite enemies dealing damage over time and stacking 5 times. Flame Wave and Rain of Fire consume ignites dealing a burst of damage. Rain of Fire deals reduced damage."
+        }
+      ],
+      "source_url": "https://wiki.smite2.com/w/Agni",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-god",
+      "name": "Cernunnos",
+      "pantheon": "Celtic",
+      "role": "Carry Jungle",
+      "specializations": [
+        "Nuker",
+        "Sharpshooter",
+        "Lockdown"
+      ],
+      "damage_type": "physical",
+      "release_date": "May 2, 2024",
+      "base_stats": {
+        "health": {
+          "base": 569.48,
+          "per_level": 86.48
+        },
+        "mana": {
+          "base": 296.0,
+          "per_level": 42.0
+        },
+        "physical_prot": {
+          "base": 18.76,
+          "per_level": 2.76
+        },
+        "magical_prot": {
+          "base": 25.3,
+          "per_level": 1.38
+        },
+        "attack_speed": {
+          "base": 1.0,
+          "per_level": 1.4
+        },
+        "move_speed": {
+          "base": 375.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Cernunnos Basic Attack"
+        },
+        {
+          "slot": "Passive",
+          "name": "Heavy Glaive"
+        },
+        {
+          "slot": "1st Ability",
+          "name": "Shifter Of Seasons"
+        },
+        {
+          "slot": "2nd Ability",
+          "name": "Bramble Blast",
+          "cooldown": [
+            15.0
+          ],
+          "cost": [
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0
+          ]
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Horn Charge",
+          "cooldown": [
+            15.0,
+            14.5,
+            14.0,
+            13.5,
+            13.0
+          ],
+          "cost": [
+            70.0,
+            75.0,
+            80.0,
+            85.0,
+            90.0
+          ]
+        },
+        {
+          "slot": "Ultimate",
+          "name": "The Wild Hunt",
+          "cooldown": [
+            90.0
+          ],
+          "cost": [
+            100.0
+          ]
+        }
+      ],
+      "aspects": [
+        {
+          "name": "Aspect of Strife",
+          "kit_changes": "Your Basic Attacks are now melee and deal increased damage, cleave, and apply stronger Shifter of Seasons effects to all enemies hit. In addition, Horn Charge's cooldown is reduced when hitting a god or Jungle Monster and applies Shifter of Seasons."
+        }
+      ],
+      "source_url": "https://wiki.smite2.com/w/Cernunnos",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-god",
       "name": "Chiron",
       "pantheon": "Greek",
       "role": "Carry",
@@ -106,17 +322,134 @@
     },
     {
       "type": "smite-god",
-      "name": "Hou Yi",
-      "pantheon": "Chinese",
-      "role": "Carry",
+      "name": "Chronos",
+      "pantheon": "Greek",
+      "role": "Mid Carry",
       "specializations": [
         "Constant Damage"
       ],
-      "damage_type": "physical",
-      "release_date": "July 29, 2025",
+      "damage_type": "magical",
+      "release_date": "June 30, 2026",
       "base_stats": {
         "health": {
           "base": 577.0,
+          "per_level": 94.0
+        },
+        "mana": {
+          "base": 316.0,
+          "per_level": 42.0
+        },
+        "physical_prot": {
+          "base": 17.5,
+          "per_level": 2.76
+        },
+        "magical_prot": {
+          "base": 27.4,
+          "per_level": 1.38
+        },
+        "attack_speed": {
+          "base": 0.98,
+          "per_level": 1.51
+        },
+        "move_speed": {
+          "base": 375.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Chronos Basic Attack"
+        },
+        {
+          "slot": "Passive",
+          "name": "Time Lord"
+        },
+        {
+          "slot": "1st Ability",
+          "name": "Time Rift",
+          "cooldown": [
+            5.0
+          ],
+          "cost": [
+            50.0,
+            55.0,
+            60.0,
+            65.0,
+            70.0
+          ]
+        },
+        {
+          "slot": "2nd Ability",
+          "name": "Accelerate",
+          "cooldown": [
+            12.0
+          ],
+          "cost": [
+            60.0
+          ]
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Stop Time",
+          "cooldown": [
+            16.0,
+            15.5,
+            15.0,
+            14.5,
+            14.0
+          ],
+          "cost": [
+            65.0,
+            70.0,
+            75.0,
+            80.0,
+            85.0
+          ]
+        },
+        {
+          "slot": "Ultimate",
+          "name": "Rewind",
+          "cooldown": [
+            100.0,
+            95.0,
+            90.0,
+            85.0,
+            80.0
+          ],
+          "cost": [
+            50.0,
+            55.0,
+            60.0,
+            65.0,
+            70.0
+          ]
+        }
+      ],
+      "aspects": [
+        {
+          "name": "Aspect of Relativity",
+          "kit_changes": "Time Lord no longer grants Intelligence but instead creates a persistent Time Field arond you. Allies in your Time Field gain bonuses when you use your other abilities."
+        }
+      ],
+      "source_url": "https://wiki.smite2.com/w/Chronos",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-god",
+      "name": "Hercules",
+      "pantheon": "Roman",
+      "role": "Solo",
+      "specializations": [
+        "Tank",
+        "Brawler",
+        "Lockdown"
+      ],
+      "damage_type": "physical",
+      "release_date": "October 17, 2024",
+      "base_stats": {
+        "health": {
+          "base": 619.0,
           "per_level": 94.0
         },
         "mana": {
@@ -124,16 +457,16 @@
           "per_level": 42.0
         },
         "physical_prot": {
-          "base": 20.04,
-          "per_level": 2.76
+          "base": 19.0,
+          "per_level": 3.0
         },
         "magical_prot": {
-          "base": 25.3,
-          "per_level": 1.38
+          "base": 26.5,
+          "per_level": 1.5
         },
         "attack_speed": {
-          "base": 0.98,
-          "per_level": 1.51
+          "base": 0.96,
+          "per_level": 1.4
         },
         "move_speed": {
           "base": 370.0,
@@ -143,21 +476,318 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Hou Yi Basic Attack"
+          "name": "Hercules Basic Attack"
         },
         {
           "slot": "Passive",
-          "name": "Suntouched"
+          "name": "Apotheosis"
         },
         {
           "slot": "1st Ability",
-          "name": "Ricochet",
+          "name": "Driving Strike",
           "cooldown": [
-            10.0,
-            9.5,
-            9.0,
-            8.5,
-            8.0
+            13.0
+          ],
+          "cost": [
+            50.0,
+            55.0,
+            60.0,
+            65.0,
+            70.0
+          ]
+        },
+        {
+          "slot": "2nd Ability",
+          "name": "Earthbreaker",
+          "cooldown": [
+            13.0
+          ],
+          "cost": [
+            50.0,
+            55.0,
+            60.0,
+            65.0,
+            70.0
+          ]
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Mitigate Wounds",
+          "cooldown": [
+            15.0
+          ],
+          "cost": [
+            50.0
+          ]
+        },
+        {
+          "slot": "Ultimate",
+          "name": "Excavate",
+          "cooldown": [
+            90.0,
+            85.0,
+            80.0,
+            75.0,
+            70.0
+          ],
+          "cost": [
+            100.0
+          ]
+        }
+      ],
+      "aspects": [
+        {
+          "name": "Aspect of Preservation",
+          "kit_changes": "Mitigate Wounds no longer Heals based on damage or provides Attack Speed. Instead Hercules gains a Stack when he or nearby allied gods take damage from Basic Attacks and when the ability ends, stacks are expended to Heal nearby allied gods."
+        }
+      ],
+      "source_url": "https://wiki.smite2.com/w/Hercules",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-god",
+      "name": "Morgan Le Fay",
+      "pantheon": "Arthurian",
+      "role": "Mid",
+      "specializations": [
+        "Nuker",
+        "Burst Damage"
+      ],
+      "damage_type": "magical",
+      "release_date": "February 24, 2026",
+      "base_stats": {
+        "health": {
+          "base": 577.0,
+          "per_level": 94.0
+        },
+        "mana": {
+          "base": 316.32,
+          "per_level": 42.0
+        },
+        "physical_prot": {
+          "base": 17.48,
+          "per_level": 2.76
+        },
+        "magical_prot": {
+          "base": 27.38,
+          "per_level": 1.38
+        },
+        "attack_speed": {
+          "base": 0.98,
+          "per_level": 1.51
+        },
+        "move_speed": {
+          "base": 375.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Morgan Le Fay Basic Attack"
+        },
+        {
+          "slot": "Passive",
+          "name": "Empowered Blade"
+        },
+        {
+          "slot": "1st Ability",
+          "name": "Sigil Mastery",
+          "cooldown": [
+            11.0
+          ],
+          "cost": [
+            50.0,
+            55.0,
+            60.0,
+            65.0,
+            70.0
+          ]
+        },
+        {
+          "slot": "2nd Ability",
+          "name": "Dragonflight",
+          "cooldown": [
+            14.0,
+            13.5,
+            13.0,
+            12.5,
+            12.0
+          ],
+          "cost": [
+            70.0,
+            75.0,
+            80.0,
+            85.0,
+            90.0
+          ]
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Shroud of Wildfire",
+          "cooldown": [
+            13.0
+          ],
+          "cost": [
+            60.0
+          ]
+        },
+        {
+          "slot": "Ultimate",
+          "name": "Consuming Power",
+          "cooldown": [
+            90.0
+          ],
+          "cost": [
+            80.0,
+            85.0,
+            90.0,
+            95.0,
+            100.0
+          ]
+        }
+      ],
+      "aspects": [
+        {
+          "name": "Aspect of the Cursed Crown",
+          "kit_changes": "Your Attacks are now melee. You gain Wrath over time and when you deal damage. Consuming Power has two levels that can be used at 40 and 80 Wrath. Sigil Mastery fires all 3 Sigils simultaneously. Shroud of Wildfire Attack explosions deal a percentage of your Max Health as damage."
+        }
+      ],
+      "source_url": "https://wiki.smite2.com/w/Morgan_Le_Fay",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-god",
+      "name": "Princess Bari",
+      "pantheon": "Korean",
+      "role": "Carry Mid",
+      "specializations": [
+        "Sharpshooter",
+        "Mobile",
+        "Constant Damage"
+      ],
+      "damage_type": "magical",
+      "release_date": "March 10, 2025",
+      "base_stats": {
+        "health": {
+          "base": 577.0,
+          "per_level": 94.0
+        },
+        "physical_prot": {
+          "base": 18.8,
+          "per_level": 2.76
+        },
+        "magical_prot": {
+          "base": 25.6,
+          "per_level": 1.73
+        },
+        "attack_speed": {
+          "base": 1.0,
+          "per_level": 1.4
+        },
+        "move_speed": {
+          "base": 370.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Princess Bari Basic Attack"
+        },
+        {
+          "slot": "Passive",
+          "name": "Mystic Surge"
+        },
+        {
+          "slot": "1st Ability",
+          "name": "Sacred Bell",
+          "cooldown": [
+            13.0
+          ]
+        },
+        {
+          "slot": "2nd Ability",
+          "name": "Warding Gust",
+          "cooldown": [
+            14.0
+          ]
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Reverent Steps",
+          "cooldown": [
+            17.0,
+            16.5,
+            16.0,
+            15.5,
+            15.0
+          ]
+        },
+        {
+          "slot": "Ultimate",
+          "name": "Spirit's Cadence",
+          "cooldown": [
+            110.0
+          ]
+        }
+      ],
+      "aspects": [],
+      "source_url": "https://wiki.smite2.com/w/Princess_Bari",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-god",
+      "name": "Ra",
+      "pantheon": "Egyptian",
+      "role": "Mid",
+      "specializations": [
+        "Sniper",
+        "Healing",
+        "Buffs"
+      ],
+      "damage_type": "magical",
+      "release_date": "October 29, 2024",
+      "base_stats": {
+        "health": {
+          "base": 569.48,
+          "per_level": 86.48
+        },
+        "mana": {
+          "base": 322.62,
+          "per_level": 48.3
+        },
+        "physical_prot": {
+          "base": 17.48,
+          "per_level": 2.76
+        },
+        "magical_prot": {
+          "base": 27.38,
+          "per_level": 1.38
+        },
+        "attack_speed": {
+          "base": 0.96,
+          "per_level": 1.4
+        },
+        "move_speed": {
+          "base": 375.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Ra Basic Attack"
+        },
+        {
+          "slot": "Passive",
+          "name": "Speed of Light"
+        },
+        {
+          "slot": "1st Ability",
+          "name": "Celestial Beam",
+          "cooldown": [
+            10.0
           ],
           "cost": [
             60.0,
@@ -169,33 +799,13 @@
         },
         {
           "slot": "2nd Ability",
-          "name": "Mark of the Golden Crow",
+          "name": "Divine Light",
           "cooldown": [
-            14.0
-          ],
-          "cost": [
-            50.0
-          ]
-        },
-        {
-          "slot": "3rd Ability",
-          "name": "Divebomb",
-          "cooldown": [
-            17.0,
-            16.5,
-            16.0,
-            15.5,
-            15.0
-          ],
-          "cost": [
-            70.0
-          ]
-        },
-        {
-          "slot": "Ultimate",
-          "name": "Sunbreaker",
-          "cooldown": [
-            90.0
+            14.0,
+            13.5,
+            13.0,
+            12.5,
+            12.0
           ],
           "cost": [
             60.0,
@@ -204,15 +814,159 @@
             75.0,
             80.0
           ]
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Solar Blessing",
+          "cooldown": [
+            15.0,
+            14.5,
+            14.0,
+            13.5,
+            13.0
+          ],
+          "cost": [
+            65.0,
+            75.0,
+            85.0,
+            95.0,
+            105.0
+          ]
+        },
+        {
+          "slot": "Ultimate",
+          "name": "Searing Pain",
+          "cooldown": [
+            80.0,
+            75.0,
+            70.0,
+            65.0,
+            60.0
+          ],
+          "cost": [
+            90.0
+          ]
         }
       ],
       "aspects": [
         {
-          "name": "Aspect of the Mark",
-          "kit_changes": "Basic Attacks now ricochet, dealing bonus damage to gods per bounce. Bounced Basic Attacks cannot damage structures. Ricochet no longer bounces or stuns; it applies Mark of the Golden Crow on its first hit. If already marked, the mark spreads. Basic Attacks hitting marked targets bounce to a nearby enemy."
+          "name": "Aspect of Thermotherapy",
+          "kit_changes": "Solar Blessing and Searing Pain only deal base damage with no scaling. In return, Solar Blessing can be placed on allied gods, attaching to them and Searing Pain Heals allied hits."
         }
       ],
-      "source_url": "https://wiki.smite2.com/w/Hou_Yi",
+      "source_url": "https://wiki.smite2.com/w/Ra",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-god",
+      "name": "Susano",
+      "pantheon": "Japanese",
+      "role": "Jungle",
+      "specializations": [
+        "Slayer",
+        "Lockdown",
+        "Mobile"
+      ],
+      "damage_type": "physical",
+      "release_date": "July 18, 2024",
+      "base_stats": {
+        "health": {
+          "base": 619.0,
+          "per_level": 94.0
+        },
+        "mana": {
+          "base": 296.0,
+          "per_level": 42.0
+        },
+        "physical_prot": {
+          "base": 18.76,
+          "per_level": 2.76
+        },
+        "magical_prot": {
+          "base": 27.5,
+          "per_level": 1.5
+        },
+        "attack_speed": {
+          "base": 1.0,
+          "per_level": 1.4
+        },
+        "move_speed": {
+          "base": 380.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Susano Basic Attack"
+        },
+        {
+          "slot": "Passive",
+          "name": "Storm's Edge"
+        },
+        {
+          "slot": "1st Ability",
+          "name": "Storm Kata",
+          "cooldown": [
+            12.0,
+            11.5,
+            11.0,
+            10.5,
+            10.0
+          ],
+          "cost": [
+            50.0,
+            55.0,
+            60.0,
+            65.0,
+            70.0
+          ]
+        },
+        {
+          "slot": "2nd Ability",
+          "name": "Wind Siphon",
+          "cooldown": [
+            15.0
+          ],
+          "cost": [
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0
+          ]
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Jet Stream",
+          "cooldown": [
+            15.0
+          ],
+          "cost": [
+            45.0,
+            50.0,
+            55.0,
+            60.0,
+            65.0
+          ]
+        },
+        {
+          "slot": "Ultimate",
+          "name": "Typhoon",
+          "cooldown": [
+            90.0
+          ],
+          "cost": [
+            80.0,
+            85.0,
+            90.0,
+            95.0,
+            100.0
+          ]
+        }
+      ],
+      "aspects": [],
+      "source_url": "https://wiki.smite2.com/w/Susano",
       "last_verified": "2026-07-16"
     },
     {
@@ -271,6 +1025,21 @@
   "items": [
     {
       "type": "smite-item",
+      "name": "Blinking Abyss",
+      "tier": null,
+      "cost": 2600,
+      "stats": {},
+      "passive": "Adaptive Stat: +20 Strength or +35 Intelligence (based on highest item stat). +5% of all Stats from Items. On Use: Teleport up to 5.6m. Can be used in combat, but not while firing an ability. 1s after Teleport: Deal 25 (+10% Strength & Intelligence) Magical Damage in a 3.2m radius. If this damages a god, reduce cooldown by -65s. Cooldown: 200s",
+      "builds_from": [
+        "Blink Rune",
+        "Mote of Chaos"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Blinking_Abyss",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
       "name": "Bloodforge",
       "tier": 3,
       "cost": 2550,
@@ -326,6 +1095,24 @@
     },
     {
       "type": "smite-item",
+      "name": "Dagger of Frenzy",
+      "tier": 3,
+      "cost": 2500,
+      "stats": {
+        "Attack Damage": "25",
+        "Attack Speed": "25%"
+      },
+      "passive": null,
+      "builds_from": [
+        "Manchu Bow",
+        "Skeggox"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Dagger_of_Frenzy",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
       "name": "Deathbringer",
       "tier": 3,
       "cost": 2900,
@@ -362,6 +1149,65 @@
     },
     {
       "type": "smite-item",
+      "name": "Dwarven Plate",
+      "tier": 3,
+      "cost": 2800,
+      "stats": {
+        "Physical Protection": "40",
+        "Magical Protection": "40"
+      },
+      "passive": "+15 Physical Protections +45 Magical Protections",
+      "builds_from": [
+        "Engraved Guard",
+        "Stalwart Sigil"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Dwarven_Plate",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Engraved Guard",
+      "tier": 2,
+      "cost": 800,
+      "stats": {
+        "Physical Protection": "10",
+        "Magical Protection": "10"
+      },
+      "passive": null,
+      "builds_from": [
+        "Shield",
+        "Rune"
+      ],
+      "builds_into": [
+        "Dwarven Plate",
+        "Magi's Cloak",
+        "Shifter's Shield"
+      ],
+      "source_url": "https://wiki.smite2.com/w/Engraved_Guard",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Evil Eye",
+      "tier": 2,
+      "cost": null,
+      "stats": {
+        "Intelligence": "45"
+      },
+      "passive": null,
+      "builds_from": [],
+      "builds_into": [
+        "Obsidian Shard",
+        "Rod of Tahuti",
+        "Rod of Tahuti",
+        "Spear of Desolation"
+      ],
+      "source_url": "https://wiki.smite2.com/w/Evil_Eye",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
       "name": "Gem of Isolation",
       "tier": 3,
       "cost": 2500,
@@ -376,6 +1222,26 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Gem_of_Isolation",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Genji's Guard",
+      "tier": 3,
+      "cost": 2350,
+      "stats": {
+        "Magical Protection": "60",
+        "Max Mana": "200",
+        "Mana Regen": "5",
+        "Cooldown Rate": "15"
+      },
+      "passive": "Hit by Magical Ability Damage: -3s Cooldowns. Cooldown: 15s",
+      "builds_from": [
+        "Sage's Ring",
+        "Mana Tome"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Genji's_Guard",
       "last_verified": "2026-07-16"
     },
     {
@@ -398,6 +1264,67 @@
     },
     {
       "type": "smite-item",
+      "name": "Heartseeker",
+      "tier": 3,
+      "cost": 3000,
+      "stats": {
+        "Strength": "45",
+        "Max Mana": "250",
+        "Mana Regen": "2",
+        "Penetration": "10%"
+      },
+      "passive": "Ability Hit: +%Health Physical Damage. Damage = 2% of your Strength, as a % of the target's Max Health.",
+      "builds_from": [
+        "Lucerne Hammer",
+        "Infused Axe"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Heartseeker",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Hunter's Bow",
+      "tier": 2,
+      "cost": 750,
+      "stats": {
+        "Attack Speed": "15%"
+      },
+      "passive": null,
+      "builds_from": [
+        "Bow"
+      ],
+      "builds_into": [
+        "Hastened Fatalis",
+        "Odysseus' Bow",
+        "Odysseus' Bow",
+        "Riptalon"
+      ],
+      "source_url": "https://wiki.smite2.com/w/Hunter's_Bow",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Hydra's Lament",
+      "tier": 3,
+      "cost": 2450,
+      "stats": {
+        "Strength": "45",
+        "Max Mana": "200",
+        "Mana Regen": "4",
+        "Cooldown Rate": "10"
+      },
+      "passive": "Ability Used: Bonus Damage on your next successful Attack. +30% for Melee or +20% for Ranged Buff lasts 8s.",
+      "builds_from": [
+        "Infused Axe",
+        "Adroit Ring"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Hydra's_Lament",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
       "name": "Jotunn's Revenge",
       "tier": 3,
       "cost": 2400,
@@ -414,6 +1341,61 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Jotunn's_Revenge",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Magi's Cloak",
+      "tier": 3,
+      "cost": 2400,
+      "stats": {
+        "Physical Protection": "35",
+        "Magical Protection": "35"
+      },
+      "passive": "Every 90s: Gain a Hard Crowd Control protective bubble. When triggered, gain Crowd Control Immunity for 1.5s.",
+      "builds_from": [
+        "Engraved Guard",
+        "Circle of Protection"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Magi's_Cloak",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Nimble Ring",
+      "tier": 3,
+      "cost": 2500,
+      "stats": {
+        "Intelligence": "35",
+        "Attack Speed": "20%",
+        "Lifesteal": "7.5%"
+      },
+      "passive": "For every 10 Intelligence: +1 Attack Damage +1% Attack Speed",
+      "builds_from": [
+        "Enchanted Bracelet",
+        "Cursed Sickle"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Nimble_Ring",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "Obsidian Shard",
+      "tier": 3,
+      "cost": 3050,
+      "stats": {
+        "Intelligence": "90",
+        "Penetration": "20%"
+      },
+      "passive": null,
+      "builds_from": [
+        "Evil Eye",
+        "Void Shard"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Obsidian_Shard",
       "last_verified": "2026-07-16"
     },
     {
@@ -453,6 +1435,26 @@
     },
     {
       "type": "smite-item",
+      "name": "Riptalon",
+      "tier": 3,
+      "cost": 2700,
+      "stats": {
+        "Attack Damage": "20",
+        "Attack Speed": "20%",
+        "Lifesteal": "7.5%",
+        "Penetration": "10%"
+      },
+      "passive": "While Above 50% Health: +10% Attack Damage While Below 50% Health: +25% Attack Damage +7.5% Lifesteal",
+      "builds_from": [
+        "Hunter's Bow",
+        "Cursed Sickle"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Riptalon",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
       "name": "Rod of Tahuti",
       "tier": 3,
       "cost": 3000,
@@ -473,6 +1475,26 @@
     },
     {
       "type": "smite-item",
+      "name": "Shifter's Shield",
+      "tier": 3,
+      "cost": 2650,
+      "stats": {
+        "Physical Protection": "25",
+        "Magical Protection": "25",
+        "Max Health": "300",
+        "Health Regen": "4"
+      },
+      "passive": "Over 75% Health:+45 Strength or +55 Intelligence (whichever is higher). Under 75% Health: +20 Physical and Magical Protection.",
+      "builds_from": [
+        "Survivor's Sash",
+        "Engraved Guard"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Shifter's_Shield",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
       "name": "Skeggox",
       "tier": 2,
       "cost": 1000,
@@ -485,6 +1507,7 @@
       ],
       "builds_into": [
         "Bloodforge",
+        "Dagger of Frenzy",
         "Deathbringer",
         "Devourer's Gauntlet",
         "Jotunn's Revenge"
@@ -514,6 +1537,25 @@
     },
     {
       "type": "smite-item",
+      "name": "Spear of Desolation",
+      "tier": 3,
+      "cost": 2650,
+      "stats": {
+        "Intelligence": "75",
+        "Penetration": "10",
+        "Cooldown Rate": "10"
+      },
+      "passive": "God Kill: -3s Non Ultimate Cooldowns -10s Ultimate Cooldowns God Assist: -1.5s Non Ultimate Cooldowns -5s Ultimate Cooldowns",
+      "builds_from": [
+        "Evil Eye",
+        "Ring of Dispel"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Spear_of_Desolation",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
       "name": "The Crusher",
       "tier": 3,
       "cost": 2800,
@@ -529,6 +1571,45 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/The_Crusher",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "The Reaper",
+      "tier": 3,
+      "cost": 2600,
+      "stats": {
+        "Strength": "45",
+        "Lifesteal": "7.5%",
+        "Penetration": "10"
+      },
+      "passive": "Kill a God: Heal +15% of Slain God's Max Health Assist a God: Heal +7.5% of Slain God's Max Health During Moonlight Phase: Heal +15% of Slain God's Max Health, on Kill or Assist",
+      "builds_from": [
+        "Adamantine Sickle",
+        "Cursed Sickle"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/The_Reaper",
+      "last_verified": "2026-07-16"
+    },
+    {
+      "type": "smite-item",
+      "name": "The World Stone",
+      "tier": 3,
+      "cost": 2800,
+      "stats": {
+        "Intelligence": "70",
+        "Max Mana": "250",
+        "Mana Regen": "3",
+        "Penetration": "10"
+      },
+      "passive": "-30% Cooldown for your Ultimate Ability.",
+      "builds_from": [
+        "Oracle Staff",
+        "Oracle Staff"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/The_World_Stone",
       "last_verified": "2026-07-16"
     },
     {
@@ -570,6 +1651,100 @@
     }
   ],
   "builds": [
+    {
+      "type": "smite-build",
+      "god": "Agni",
+      "mode": "Conquest",
+      "builds": [
+        {
+          "source": "community",
+          "aspect": "Aspect of Combustion",
+          "aspect_pick_rate": 0.03,
+          "aspect_win_rate": 0.29,
+          "slot_order": [
+            {
+              "name": "Spear of Desolation",
+              "pick_rate": 0.6,
+              "win_rate": 0.5
+            },
+            {
+              "name": "Book of Thoth",
+              "pick_rate": 0.25,
+              "win_rate": 0.46
+            },
+            {
+              "name": "Soul Gem",
+              "pick_rate": 0.3,
+              "win_rate": 0.53
+            },
+            {
+              "name": "Rod of Tahuti",
+              "pick_rate": 0.33,
+              "win_rate": 0.55
+            },
+            {
+              "name": "Obsidian Shard",
+              "pick_rate": 0.23,
+              "win_rate": 0.57
+            },
+            {
+              "name": "Evil Eye",
+              "pick_rate": 0.13,
+              "win_rate": 0.47
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/agni/",
+          "last_verified": "2026-07-16"
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Cernunnos",
+      "mode": "Conquest",
+      "builds": [
+        {
+          "source": "community",
+          "aspect": "Aspect of Strife",
+          "aspect_pick_rate": 0.34,
+          "aspect_win_rate": 0.44,
+          "slot_order": [
+            {
+              "name": "Devourer's Gauntlet",
+              "pick_rate": 0.68,
+              "win_rate": 0.51
+            },
+            {
+              "name": "Dagger of Frenzy",
+              "pick_rate": 0.32,
+              "win_rate": 0.48
+            },
+            {
+              "name": "Odysseus' Bow",
+              "pick_rate": 0.16,
+              "win_rate": 0.5
+            },
+            {
+              "name": "Riptalon",
+              "pick_rate": 0.28,
+              "win_rate": 0.69
+            },
+            {
+              "name": "Titan's Bane",
+              "pick_rate": 0.15,
+              "win_rate": 0.47
+            },
+            {
+              "name": "Hunter's Bow",
+              "pick_rate": 0.08,
+              "win_rate": 0.67
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/cernunnos/",
+          "last_verified": "2026-07-16"
+        }
+      ]
+    },
     {
       "type": "smite-build",
       "god": "Chiron",
@@ -614,129 +1789,290 @@
           ],
           "source_url": "https://smitebrain.com/gods/chiron/",
           "last_verified": "2026-07-16"
-        },
-        {
-          "source": "mine",
-          "slot_order": [
-            "Transcendence",
-            "Devourer's Gauntlet",
-            "Wind Demon",
-            "Deathbringer",
-            "Qin's Sais",
-            "Executioner's Blade"
-          ],
-          "situational_swaps": [
-            {
-              "vs_tag": "physical_heavy",
-              "swap": "Qin's Sais over Deathbringer's crit slot"
-            },
-            {
-              "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak"
-            }
-          ],
-          "notes": "Default crit path \u2014 mana scaling (Transcendence) into sustain/crit ramp (Devourer's), then crit multiplier core."
-        },
-        {
-          "source": "mine",
-          "slot_order": [
-            "Transcendence",
-            "Hastened Fatalis",
-            "Odysseus' Bow",
-            "Silverbranch Bow",
-            "Rage"
-          ],
-          "situational_swaps": [
-            {
-              "vs_tag": "heavy_cc",
-              "swap": "Cyclopean Ring over Purification if heavy peel"
-            }
-          ],
-          "notes": "Ability-weighted path \u2014 use if team has heavy burst and Chiron needs mobility/chain-lightning teamfight presence over raw crit."
         }
-      ],
-      "last_verified": "2026-07-16"
+      ]
     },
     {
       "type": "smite-build",
-      "god": "Hou Yi",
+      "god": "Chronos",
       "mode": "Conquest",
       "builds": [
         {
           "source": "community",
-          "aspect": "Aspect of the Mark",
-          "aspect_pick_rate": 0.17,
-          "aspect_win_rate": 0.56,
+          "aspect": "Aspect of Relativity",
+          "aspect_pick_rate": 0.06,
+          "aspect_win_rate": 0.48,
           "slot_order": [
             {
-              "name": "Devourer's Gauntlet",
-              "pick_rate": 0.55,
-              "win_rate": 0.55
+              "name": "Book of Thoth",
+              "pick_rate": 0.39,
+              "win_rate": 0.45
             },
             {
-              "name": "Dagger of Frenzy",
+              "name": "Spear of Desolation",
+              "pick_rate": 0.29,
+              "win_rate": 0.47
+            },
+            {
+              "name": "Nimble Ring",
+              "pick_rate": 0.2,
+              "win_rate": 0.41
+            },
+            {
+              "name": "Rod of Tahuti",
+              "pick_rate": 0.31,
+              "win_rate": 0.46
+            },
+            {
+              "name": "Obsidian Shard",
+              "pick_rate": 0.19,
+              "win_rate": 0.51
+            },
+            {
+              "name": "Obsidian Shard",
+              "pick_rate": 0.1,
+              "win_rate": 0.56
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/chronos/",
+          "last_verified": "2026-07-16"
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Hercules",
+      "mode": "Conquest",
+      "builds": [
+        {
+          "source": "community",
+          "aspect": "Aspect of Preservation",
+          "aspect_pick_rate": 0.06,
+          "aspect_win_rate": 0.0,
+          "slot_order": [
+            {
+              "name": "Shifter's Shield",
+              "pick_rate": 0.33,
+              "win_rate": 0.5
+            },
+            {
+              "name": "Genji's Guard",
+              "pick_rate": 0.29,
+              "win_rate": 0.52
+            },
+            {
+              "name": "Genji's Guard",
+              "pick_rate": 0.27,
+              "win_rate": 0.49
+            },
+            {
+              "name": "Dwarven Plate",
+              "pick_rate": 0.23,
+              "win_rate": 0.59
+            },
+            {
+              "name": "Dwarven Plate",
+              "pick_rate": 0.14,
+              "win_rate": 0.5
+            },
+            {
+              "name": "Engraved Guard",
+              "pick_rate": 0.07,
+              "win_rate": 0.5
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/hercules/",
+          "last_verified": "2026-07-16"
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Morgan Le Fay",
+      "mode": "Conquest",
+      "builds": [
+        {
+          "source": "community",
+          "aspect": "Aspect of the Cursed Crown",
+          "aspect_pick_rate": 0.33,
+          "aspect_win_rate": 0.51,
+          "slot_order": [
+            {
+              "name": "Spear of Desolation",
+              "pick_rate": 0.43,
+              "win_rate": 0.5
+            },
+            {
+              "name": "Soul Gem",
+              "pick_rate": 0.14,
+              "win_rate": 0.57
+            },
+            {
+              "name": "Soul Gem",
+              "pick_rate": 0.2,
+              "win_rate": 0.5
+            },
+            {
+              "name": "Rod of Tahuti",
+              "pick_rate": 0.23,
+              "win_rate": 0.58
+            },
+            {
+              "name": "Obsidian Shard",
+              "pick_rate": 0.17,
+              "win_rate": 0.57
+            },
+            {
+              "name": "Obsidian Shard",
+              "pick_rate": 0.14,
+              "win_rate": 0.7
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/morgan-le-fay/",
+          "last_verified": "2026-07-16"
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Princess Bari",
+      "mode": "Conquest",
+      "builds": [
+        {
+          "source": "community",
+          "aspect": null,
+          "aspect_pick_rate": null,
+          "aspect_win_rate": null,
+          "slot_order": [
+            {
+              "name": "Spear of Desolation",
+              "pick_rate": 0.61,
+              "win_rate": 0.48
+            },
+            {
+              "name": "Spear of Desolation",
+              "pick_rate": 0.24,
+              "win_rate": 0.56
+            },
+            {
+              "name": "The World Stone",
+              "pick_rate": 0.26,
+              "win_rate": 0.4
+            },
+            {
+              "name": "Rod of Tahuti",
+              "pick_rate": 0.4,
+              "win_rate": 0.5
+            },
+            {
+              "name": "Obsidian Shard",
+              "pick_rate": 0.18,
+              "win_rate": 0.83
+            },
+            {
+              "name": "The World Stone",
+              "pick_rate": 0.19,
+              "win_rate": 1.0
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/princess-bari/",
+          "last_verified": "2026-07-16"
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Ra",
+      "mode": "Conquest",
+      "builds": [
+        {
+          "source": "community",
+          "aspect": "Aspect of Thermotherapy",
+          "aspect_pick_rate": 0.06,
+          "aspect_win_rate": 0.4,
+          "slot_order": [
+            {
+              "name": "Spear of Desolation",
+              "pick_rate": 0.43,
+              "win_rate": 0.57
+            },
+            {
+              "name": "Spear of Desolation",
               "pick_rate": 0.37,
               "win_rate": 0.53
             },
             {
-              "name": "Musashi's Dual Swords",
-              "pick_rate": 0.18,
+              "name": "Soul Gem",
+              "pick_rate": 0.25,
+              "win_rate": 0.57
+            },
+            {
+              "name": "Rod of Tahuti",
+              "pick_rate": 0.3,
+              "win_rate": 0.6
+            },
+            {
+              "name": "Obsidian Shard",
+              "pick_rate": 0.23,
+              "win_rate": 0.68
+            },
+            {
+              "name": "Evil Eye",
+              "pick_rate": 0.14,
+              "win_rate": 0.48
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/ra/",
+          "last_verified": "2026-07-16"
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Susano",
+      "mode": "Conquest",
+      "builds": [
+        {
+          "source": "community",
+          "aspect": null,
+          "aspect_pick_rate": null,
+          "aspect_win_rate": null,
+          "slot_order": [
+            {
+              "name": "Jotunn's Revenge",
+              "pick_rate": 0.34,
+              "win_rate": 0.5
+            },
+            {
+              "name": "The Reaper",
+              "pick_rate": 0.24,
+              "win_rate": 0.54
+            },
+            {
+              "name": "Heartseeker",
+              "pick_rate": 0.15,
+              "win_rate": 0.61
+            },
+            {
+              "name": "Heartseeker",
+              "pick_rate": 0.31,
               "win_rate": 0.59
             },
             {
               "name": "Titan's Bane",
               "pick_rate": 0.23,
-              "win_rate": 0.51
+              "win_rate": 0.57
             },
             {
-              "name": "Titan's Bane",
-              "pick_rate": 0.27,
-              "win_rate": 0.56
-            },
-            {
-              "name": "Hunter's Bow",
-              "pick_rate": 0.1,
-              "win_rate": 0.48
+              "name": "Magi's Cloak",
+              "pick_rate": 0.11,
+              "win_rate": 0.64
             }
           ],
-          "source_url": "https://smitebrain.com/gods/hou-yi/",
+          "source_url": "https://smitebrain.com/gods/susano/",
           "last_verified": "2026-07-16"
-        },
-        {
-          "source": "mine",
-          "slot_order": [
-            "Transcendence",
-            "Devourer's Gauntlet",
-            "Ninja Tabi",
-            "Wind Demon",
-            "Deathbringer",
-            "Qin's Sais"
-          ],
-          "situational_swaps": [
-            {
-              "vs_tag": "physical_heavy",
-              "swap": "Qin's Sais"
-            },
-            {
-              "vs_tag": "mixed",
-              "swap": "Executioner"
-            }
-          ],
-          "notes": "Default basic-attack crit path \u2014 Hou Yi's standard build; only deviate to ability-burst if team has heavy peel and enemy is squishy."
-        },
-        {
-          "source": "mine",
-          "slot_order": [
-            "Book of Thoth",
-            "Gem of Isolation",
-            "Chronos Pendant",
-            "Rod of Tahuti",
-            "Soul Gem"
-          ],
-          "notes": "Ability-burst path \u2014 off-meta, situational only vs. squishy enemies with heavy peel on your team."
         }
-      ],
-      "last_verified": "2026-07-16"
+      ]
     },
     {
       "type": "smite-build",
@@ -782,43 +2118,8 @@
           ],
           "source_url": "https://smitebrain.com/gods/ullr/",
           "last_verified": "2026-07-16"
-        },
-        {
-          "source": "mine",
-          "slot_order": [
-            "Transcendence",
-            "Devourer's Gauntlet",
-            "Ninja Tabi",
-            "Wind Demon",
-            "Deathbringer",
-            "Qin's Sais"
-          ],
-          "situational_swaps": [
-            {
-              "vs_tag": "physical_heavy",
-              "swap": "Qin's Sais"
-            },
-            {
-              "vs_tag": "mixed",
-              "swap": "Executioner"
-            }
-          ],
-          "notes": "Default crit / sustained-DPS path."
-        },
-        {
-          "source": "mine",
-          "slot_order": [
-            "Transcendence",
-            "Asi",
-            "Ichaival",
-            "Hastened Fatalis",
-            "Bloodforge",
-            "Titan's Bane"
-          ],
-          "notes": "Hybrid burst path vs. squishy comps \u2014 lifesteal/pen for axe-stance burst, Bloodforge for shield + burst, Titan's Bane for late-game pen."
         }
-      ],
-      "last_verified": "2026-07-16"
+      ]
     }
   ]
 }
