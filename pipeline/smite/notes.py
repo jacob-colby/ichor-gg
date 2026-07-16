@@ -120,7 +120,7 @@ def merge_build_note(path: Path, god: str, mode: str, community_entry: dict) -> 
 def log_refresh_diff(log_dir: Path, name: str, old_frontmatter: dict, new_frontmatter: dict) -> None:
     changes = []
     for key in sorted(set(old_frontmatter) | set(new_frontmatter)):
-        if key == "source_url":
+        if key in ("source_url", "last_verified"):
             continue
         if old_frontmatter.get(key) != new_frontmatter.get(key):
             changes.append(f"- **{key}**: `{old_frontmatter.get(key)}` -> `{new_frontmatter.get(key)}`")

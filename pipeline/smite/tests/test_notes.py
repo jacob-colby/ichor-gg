@@ -198,3 +198,28 @@ def test_log_refresh_diff_skips_when_no_changes(tmp_path):
     log_dir = tmp_path / "_logs"
     notes.log_refresh_diff(log_dir, "Chiron", {"cost": 100}, {"cost": 100})
     assert not log_dir.exists()
+
+
+def test_log_refresh_diff_ignores_source_url_changes(tmp_path):
+    log_dir = tmp_path / "_logs"
+    notes.log_refresh_diff(
+        log_dir, "Chiron",
+        {"cost": 100, "source_url": "https://wiki.smite2.com/w/Chiron"},
+        {"cost": 100, "source_url": "https://wiki.smite2.com/w/Chiron?v=2"},
+    )
+    assert not log_dir.exists()
+
+
+def test_log_refresh_diff_ignores_last_verified_changes(tmp_path):
+    """last_verified is set fresh on every single refresh (that's the whole
+    point of staleness tracking) — it will differ on every run even when
+    nothing else changed, so it must not itself count as a "change" or every
+    diff-log entry would claim something changed when it didn't, drowning
+    out genuinely useful diff signal."""
+    log_dir = tmp_path / "_logs"
+    notes.log_refresh_diff(
+        log_dir, "Chiron",
+        {"cost": 100, "last_verified": "2026-07-01"},
+        {"cost": 100, "last_verified": "2026-07-16"},
+    )
+    assert not log_dir.exists()

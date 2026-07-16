@@ -1,3 +1,4 @@
+from datetime import date
 from pathlib import Path
 from unittest import mock
 from unittest.mock import Mock
@@ -17,6 +18,7 @@ def test_refresh_god_writes_a_note(tmp_path, monkeypatch):
     frontmatter, body = notes.read_note(tmp_path / "Gods" / "Chiron.md")
     assert frontmatter["pantheon"] == "Greek"
     assert frontmatter["source_url"] == "https://wiki.smite2.com/w/Chiron"
+    assert frontmatter["last_verified"] == date.today().isoformat()
     assert "<!-- WIKI:START -->" in body
 
 
@@ -31,6 +33,8 @@ def test_refresh_item_writes_a_note(tmp_path, monkeypatch):
     assert frontmatter["cost"] == 2900
     assert frontmatter["builds_from"] == ["Skeggox", "Kopesh"]
     assert frontmatter["builds_into"] == []
+    assert frontmatter["stats"] == {"Strength": "45", "Critical Chance": "20%"}
+    assert frontmatter["last_verified"] == date.today().isoformat()
 
 
 def test_refresh_builds_into_inverts_builds_from_across_items(tmp_path, monkeypatch):
@@ -57,6 +61,8 @@ def test_refresh_god_builds_writes_community_entry(tmp_path, monkeypatch):
     community = next(b for b in frontmatter["builds"] if b["source"] == "community")
     assert community["aspect"] == "Aspect of the Heroic Tutor"
     assert {"name": "Transcendence", "pick_rate": 0.61, "win_rate": 0.49} in community["slot_order"]
+    assert len(community["slot_order"]) == 3  # top pick per Core slot in the fixture, not every tile
+    assert community["last_verified"] == date.today().isoformat()
 
 
 def test_refresh_all_reruns_every_tracked_god_item_and_build(tmp_path, monkeypatch):

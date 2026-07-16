@@ -3,6 +3,7 @@ smitebrain.com. Run as: python -m smite.refresh --refresh Chiron --kind god
 """
 import argparse
 import sys
+from datetime import date
 from pathlib import Path
 
 from smite import notes, smitebrain_parser, wiki_parser
@@ -33,6 +34,7 @@ def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
         "abilities": parsed["abilities"],
         "aspects": parsed["aspects"],
         "source_url": url,
+        "last_verified": date.today().isoformat(),
     }
     wiki_block = "\n".join(f"- {a['name']}" for a in parsed["abilities"])
     notes.merge_god_note(DATA_ROOT / "Gods" / f"{name}.md", frontmatter, wiki_block,
@@ -48,10 +50,12 @@ def refresh_item(name: str, wiki_fetcher, force: bool = False) -> None:
         "name": name,
         "tier": parsed.get("tier"),
         "cost": parsed.get("cost"),
+        "stats": parsed.get("stats", {}),
         "passive": parsed.get("passive"),
         "builds_from": parsed.get("builds_from", []),
         "builds_into": [],
         "source_url": url,
+        "last_verified": date.today().isoformat(),
     }
     notes.merge_item_note(DATA_ROOT / "Items" / f"{name}.md", frontmatter,
                            parsed.get("passive", ""), log_dir=DATA_ROOT / "_logs")
@@ -90,6 +94,7 @@ def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = Fal
         "aspect_win_rate": aspect["win_rate"] if aspect else None,
         "slot_order": parsed["items"],
         "source_url": url,
+        "last_verified": date.today().isoformat(),
     }
     notes.merge_build_note(BUILDS_ROOT / f"{god}-{mode}.md", god, mode, community_entry)
 
