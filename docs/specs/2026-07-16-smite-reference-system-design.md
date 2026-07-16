@@ -108,7 +108,8 @@ is the one place the tech stack needs an addition beyond `requests` +
 type: smite-god
 name: Chiron
 pantheon: Greek
-role: Hunter                 # Hunter | Mage | Warrior | Guardian | Assassin
+role: Carry                  # the wiki's own lane-role taxonomy (Carry/Solo/Support/Mid/Jungle) — not the SMITE 1-style Hunter/Mage/Warrior/Guardian/Assassin class names originally sketched, corrected against the live infobox
+specializations: [Sharpshooter, Nuker]   # playstyle archetype tags, also straight from the infobox
 damage_type: physical
 release_date: 2026-01-27
 base_stats:
@@ -120,9 +121,9 @@ base_stats:
 abilities:
   - slot: passive
     name: Herbal Medicine
-  - slot: "1"
+  - slot: "1st Ability"
     name: Training Exercise
-    cooldown: [13, 13, 13, 13, 13]
+    cooldown: [13]            # not every ability's cooldown scales per rank — cost often does, cooldown often doesn't; array length varies per ability, not a fixed 5
     cost: [55, 60, 65, 70, 75]
   # ...2, 3, ultimate
 aspects:
