@@ -144,3 +144,51 @@ def test_main_all_takes_precedence_over_refresh(tmp_path, monkeypatch):
     assert result == 0
     mock_refresh_all.assert_called_once()
     mock_refresh_god.assert_not_called()
+
+
+def test_refresh_god_downloads_icon(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    fetcher = Mock()
+    fetcher.fetch.return_value = (FIXTURES / "chiron_wiki.html").read_text(encoding="utf-8")
+
+    with mock.patch("smite.refresh.requests.get") as mock_get:
+        mock_get.return_value = Mock(content=b"\x89PNG\r\n\x1a\nfakepngdata", status_code=200)
+        mock_get.return_value.raise_for_status = Mock()
+        refresh.refresh_god("Chiron", fetcher)
+
+    icon_path = tmp_path / "_assets" / "icons" / "chiron.png"
+    assert icon_path.exists()
+    assert icon_path.read_bytes() == b"\x89PNG\r\n\x1a\nfakepngdata"
+    mock_get.assert_called_once_with(
+        "https://wiki.smite2.com/images/thumb/T_Chiron%28S2%29_Default.png/280px-T_Chiron%28S2%29_Default.png?157c1",
+        timeout=20,
+    )
+
+
+def test_refresh_god_skips_icon_download_if_already_present(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    icon_path = tmp_path / "_assets" / "icons" / "chiron.png"
+    icon_path.parent.mkdir(parents=True)
+    icon_path.write_bytes(b"\x89PNG\r\n\x1a\n" + b"x" * 2000)
+
+    fetcher = Mock()
+    fetcher.fetch.return_value = (FIXTURES / "chiron_wiki.html").read_text(encoding="utf-8")
+
+    with mock.patch("smite.refresh.requests.get") as mock_get:
+        refresh.refresh_god("Chiron", fetcher)
+
+    mock_get.assert_not_called()
+
+
+def test_refresh_item_downloads_icon(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    fetcher = Mock()
+    fetcher.fetch.return_value = (FIXTURES / "deathbringer_wiki.html").read_text(encoding="utf-8")
+
+    with mock.patch("smite.refresh.requests.get") as mock_get:
+        mock_get.return_value = Mock(content=b"\x89PNG\r\n\x1a\nfakepngdata", status_code=200)
+        mock_get.return_value.raise_for_status = Mock()
+        refresh.refresh_item("Deathbringer", fetcher)
+
+    icon_path = tmp_path / "_assets" / "icons" / "deathbringer.png"
+    assert icon_path.exists()

@@ -6,6 +6,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import requests
+
 from smite import notes, smitebrain_parser, wiki_parser
 from smite.browser_fetch import BrowserFetcher
 from smite.cache import CachedFetcher
@@ -16,6 +18,28 @@ BUILDS_ROOT = VAULT_ROOT / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds"
 
 WIKI_BASE = "https://wiki.smite2.com/w/"
 SMITEBRAIN_BASE = "https://smitebrain.com/gods/"
+
+
+def _download_icon(image_url: str, slug: str) -> None:
+    """Download a god/item portrait/icon from wiki.smite2.com. The HTML
+    pages are Cloudflare-gated (hence Playwright elsewhere in this module)
+    but the static image files are not — confirmed with a plain requests
+    fetch during planning — so this uses requests directly, no browser
+    needed. Skips if already downloaded (>1000 bytes), same convention as
+    the vault's other Gaming asset-download scripts."""
+    if not image_url:
+        return
+    icons_dir = DATA_ROOT / "_assets" / "icons"
+    out_path = icons_dir / f"{slug}.png"
+    if out_path.exists() and out_path.stat().st_size > 1000:
+        return
+
+    full_url = "https://wiki.smite2.com" + image_url
+    response = requests.get(full_url, timeout=20)
+    response.raise_for_status()
+
+    icons_dir.mkdir(parents=True, exist_ok=True)
+    out_path.write_bytes(response.content)
 
 
 def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
@@ -39,6 +63,7 @@ def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
     wiki_block = "\n".join(f"- {a['name']}" for a in parsed["abilities"])
     notes.merge_god_note(DATA_ROOT / "Gods" / f"{name}.md", frontmatter, wiki_block,
                           log_dir=DATA_ROOT / "_logs")
+    _download_icon(parsed.get("image_url"), name.lower().replace(" ", "-").replace("'", ""))
 
 
 def refresh_item(name: str, wiki_fetcher, force: bool = False) -> None:
@@ -59,6 +84,7 @@ def refresh_item(name: str, wiki_fetcher, force: bool = False) -> None:
     }
     notes.merge_item_note(DATA_ROOT / "Items" / f"{name}.md", frontmatter,
                            parsed.get("passive", ""), log_dir=DATA_ROOT / "_logs")
+    _download_icon(parsed.get("image_url"), name.lower().replace(" ", "-").replace("'", ""))
 
 
 def refresh_builds_into() -> None:
