@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useIndexData } from "./hooks/useIndexData";
 import { GodRail } from "./components/GodRail";
+import { DetailPanel } from "./components/DetailPanel";
 
 function App() {
   const { data, error, reload } = useIndexData();
@@ -26,7 +27,7 @@ function App() {
           Reload data
         </button>
         {selectedGod ? (
-          <p>Selected: {selectedGod} — detail panel comes in Task 6</p>
+          <DetailPanel god={selectedGod} builds={data.builds} />
         ) : (
           <p className="text-neutral-500">Select a god from the rail.</p>
         )}
