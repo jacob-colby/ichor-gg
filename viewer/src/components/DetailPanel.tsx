@@ -83,11 +83,21 @@ export function DetailPanel({ god, builds }: DetailPanelProps) {
               const name = slotItemName(slotEntry);
               const rates = typeof slotEntry !== "string" ? slotEntry : null;
               return (
-                <div key={i} className="flex items-center gap-2">
+                <div key={`${name}-${i}`} className="flex items-center gap-2">
                   <img
                     src={`/icons/${iconSlug(name)}.png`}
                     alt=""
                     className="h-6 w-6 flex-none rounded bg-neutral-800"
+                    // Key includes the item name (not just index `i`) so that
+                    // switching tabs — which can put a *different* item at the
+                    // same slot position — unmounts/remounts this <img> rather
+                    // than reusing the DOM node. Reuse would carry over the
+                    // `visibility: hidden` this onError sets imperatively:
+                    // found in manual verification, an item with a real icon
+                    // (Deathbringer) landed at a slot index previously
+                    // occupied by a broken-icon item and stayed invisible
+                    // even though its own image loaded fine, because nothing
+                    // ever reset the leftover inline style on the reused node.
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.visibility = "hidden";
                     }}

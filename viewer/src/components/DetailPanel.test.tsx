@@ -81,6 +81,59 @@ describe("DetailPanel", () => {
     expect(screen.getByText(/no build data yet/i)).toBeInTheDocument();
   });
 
+  // Regression coverage for a real bug found in manual browser verification
+  // (Task 7): the slot-order row was keyed by index alone (`key={i}`), so
+  // switching tabs — which can put a *different* item at the same slot
+  // position — let React reuse the same <img> DOM node across tabs. The
+  // onError handler sets `visibility: hidden` imperatively on that node with
+  // nothing to undo it, so if the item that used to sit at that index had a
+  // broken icon, a *working* icon that later lands at the same index stayed
+  // invisible even though it loaded fine. Keying by `${name}-${i}` forces a
+  // fresh <img> node whenever the item at that position changes.
+  it("does not carry a stale hidden icon over to a different item that lands at the same slot index on tab switch", () => {
+    const build: BuildNote = {
+      type: "smite-build",
+      god: "Chiron",
+      mode: "Conquest",
+      builds: [
+        {
+          source: "community",
+          aspect: "Aspect of the Heroic Tutor",
+          aspect_pick_rate: 0.09,
+          aspect_win_rate: 0.45,
+          slot_order: [
+            { name: "Transcendence", pick_rate: 0.6, win_rate: 0.49 },
+            { name: "BrokenIcon", pick_rate: 0.1, win_rate: 0.2 },
+          ],
+          source_url: "https://smitebrain.com/gods/chiron/",
+        },
+        {
+          source: "mine",
+          slot_order: ["Transcendence", "Deathbringer"],
+          notes: "Default crit path",
+        },
+      ],
+    };
+
+    const { container } = render(<DetailPanel god="Chiron" builds={[build]} />);
+
+    // Simulate the second slot's icon (BrokenIcon) failing to load on the
+    // community tab.
+    const communityImages = container.querySelectorAll("img");
+    fireEvent.error(communityImages[1]);
+    expect(communityImages[1]).toHaveStyle({ visibility: "hidden" });
+
+    // Switch to the "mine" tab, where the same slot index (1) now holds
+    // Deathbringer instead.
+    fireEvent.click(screen.getByRole("tab", { name: /mine/i }));
+
+    const mineImages = container.querySelectorAll("img");
+    expect(mineImages[1]).toHaveAttribute("src", expect.stringContaining("deathbringer"));
+    // Must be a fresh node with no leftover inline visibility — not the
+    // reused, still-hidden node from the community tab.
+    expect(mineImages[1].style.visibility).not.toBe("hidden");
+  });
+
   // Regression coverage for a real bug: Chiron's actual build note has two
   // "mine" entries, and the "Reload data" button re-fetches index.json,
   // producing a brand-new object graph for the *same* god. If activeIndex
