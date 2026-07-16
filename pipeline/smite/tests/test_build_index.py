@@ -46,15 +46,24 @@ def test_write_index_creates_json_file(tmp_path):
 
 
 def test_write_index_serializes_bare_yaml_dates(tmp_path):
-    # yaml.safe_load parses an unquoted `last_verified: 2026-07-16` frontmatter
-    # value into a datetime.date object, which json.dumps rejects unless it's
-    # given a fallback serializer. Regression test for that crash.
+    # An unquoted YAML date literal parses via yaml.safe_load as a real
+    # datetime.date object, not a string — this is what crashed json.dumps
+    # before the `default=str` fix (confirmed against the real
+    # Chiron-Conquest.md note, which has an unquoted last_verified: date).
+    # Passing a plain Python string into write_note doesn't reproduce this:
+    # yaml.safe_dump auto-quotes date-shaped strings on write, so read_note
+    # reads it back as a str, never a date object. Writing raw YAML text
+    # with an unquoted date and reading it back via notes.read_note is what
+    # actually reconstructs the date object that broke json.dumps.
     vault = _make_vault(tmp_path)
-    notes.write_note(vault / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds" / "Chiron-Conquest.md",
-                      {"type": "smite-build", "god": "Chiron", "last_verified": "2026-07-16"}, "")
+    god_path = vault / "04. System" / "Data" / "SMITE" / "Gods" / "Chiron.md"
+    god_path.write_text(
+        "---\nname: Chiron\nlast_verified: 2026-07-16\n---\n",
+        encoding="utf-8",
+    )
 
     out_path = tmp_path / "viewer" / "public" / "index.json"
-    build_index.write_index(vault, out_path)
+    build_index.write_index(vault, out_path)  # must not raise
 
     data = json.loads(out_path.read_text(encoding="utf-8"))
-    assert data["builds"][0]["last_verified"] == "2026-07-16"
+    assert data["gods"][0]["last_verified"] == "2026-07-16"
