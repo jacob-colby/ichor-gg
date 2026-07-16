@@ -1,5 +1,38 @@
+import { useState } from "react";
+import { useIndexData } from "./hooks/useIndexData";
+import { GodRail } from "./components/GodRail";
+
 function App() {
-  return <div className="bg-neutral-900 text-white p-4">SMITE Viewer</div>;
+  const { data, error, reload } = useIndexData();
+  const [selectedGod, setSelectedGod] = useState<string | null>(null);
+
+  if (error) {
+    return (
+      <div className="flex h-screen items-center justify-center bg-neutral-900 text-red-400">
+        {error} — <button onClick={reload} className="ml-2 underline">retry</button>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return <div className="flex h-screen items-center justify-center bg-neutral-900 text-neutral-400">Loading…</div>;
+  }
+
+  return (
+    <div className="flex h-screen bg-neutral-900 text-neutral-100">
+      <GodRail gods={data.gods} selectedGod={selectedGod} onSelect={setSelectedGod} />
+      <div className="flex-1 p-4">
+        <button onClick={reload} className="mb-4 rounded bg-neutral-800 px-3 py-1 text-sm hover:bg-neutral-700">
+          Reload data
+        </button>
+        {selectedGod ? (
+          <p>Selected: {selectedGod} — detail panel comes in Task 6</p>
+        ) : (
+          <p className="text-neutral-500">Select a god from the rail.</p>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default App;
