@@ -50,3 +50,24 @@ def test_fetch_respects_rate_limit(tmp_path):
         fetcher.fetch("https://smitebrain.com/gods/hou-yi/")
 
     assert mock_sleep.called
+
+
+def test_fetch_updates_rate_limit_timestamp_even_on_failure(tmp_path):
+    fetcher = CachedFetcher(tmp_path, min_interval=5)
+    failing_response = Mock()
+    failing_response.raise_for_status = Mock(side_effect=Exception("500"))
+
+    with patch("smite.cache.requests.get", return_value=failing_response):
+        try:
+            fetcher.fetch("https://smitebrain.com/gods/chiron/")
+        except Exception:
+            pass
+
+    with patch("smite.cache.requests.get", return_value=failing_response), \
+         patch("smite.cache.time.sleep") as mock_sleep:
+        try:
+            fetcher.fetch("https://smitebrain.com/gods/hou-yi/")
+        except Exception:
+            pass
+
+    assert mock_sleep.called

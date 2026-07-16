@@ -42,9 +42,11 @@ class CachedFetcher:
         if elapsed < self.min_interval:
             time.sleep(self.min_interval - elapsed)
 
-        response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=20)
-        response.raise_for_status()
-        self._last_request_time = time.time()
+        try:
+            response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=20)
+            response.raise_for_status()
+        finally:
+            self._last_request_time = time.time()
 
         path.write_text(response.text, encoding="utf-8")
         return response.text
