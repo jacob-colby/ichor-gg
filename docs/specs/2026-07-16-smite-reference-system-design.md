@@ -88,6 +88,17 @@ own conservative rate limit (~1 request every 2-3 seconds per run). A full
 refresh across the roster is a deliberate on-demand or weekly action, not
 continuous polling.
 
+**Fetch mechanics (confirmed against the live sites):** `smitebrain.com` is
+plain server-rendered HTML (SvelteKit SSR) — a normal `requests` call already
+returns full build/pick-rate/win-rate data, no bot protection encountered.
+`wiki.smite2.com` sits behind a genuine Cloudflare JS challenge
+(`Cf-Mitigated: challenge` header) — a plain HTTP client gets a 403.
+Reaching it requires a headless browser: the wiki-fetch path uses
+**Playwright** (one-time Chromium download) to load pages like a real
+browser, while the SmiteBrain-fetch path stays a plain `requests` call. This
+is the one place the tech stack needs an addition beyond `requests` +
+`beautifulsoup4`.
+
 ## Frontmatter schemas
 
 **God note** (`Gods/<god>.md`) — pipeline-owned entirely:
