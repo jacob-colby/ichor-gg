@@ -70,3 +70,39 @@ def fit_gold_values(items):
     gold = {name: float(coef[i]) for i, name in enumerate(stat_names)}
     gold[INTERCEPT_KEY] = float(coef[-1])
     return gold, stat_names
+
+
+def predicted_cost(item, gold_values):
+    total = gold_values.get(INTERCEPT_KEY, 0.0)
+    for stat, raw in (item.get("stats") or {}).items():
+        val = parse_stat_value(raw)
+        if val is not None:
+            total += val * gold_values.get(stat, 0.0)
+    return total
+
+
+def efficiency_scores(items):
+    """Returns (scores, gold_values). scores maps item name → dict with:
+      residual  actual_cost - predicted_cost (negative => undervalued)
+      z         residual z-score across the set
+      score     min-max normalized -residual in [0,1] (higher => better value)
+      tier      'undervalued' | 'fair' | 'premium' by z threshold
+    Only items with a numeric cost are scored (a residual needs a real cost);
+    null-cost component items are excluded. The continuous `score` is what the
+    aggregator consumes; `tier` is the report label."""
+    gold, _ = fit_gold_values(items)
+    scored_items = numeric_cost_items(items)
+    residuals = {it["name"]: it["cost"] - predicted_cost(it, gold) for it in scored_items}
+    vals = np.array(list(residuals.values()), dtype=float)
+    mean = float(vals.mean())
+    std = float(vals.std()) or 1.0
+    lo, hi = float(vals.min()), float(vals.max())
+    span = (hi - lo) or 1.0
+
+    scores = {}
+    for name, resid in residuals.items():
+        z = (resid - mean) / std
+        score = (hi - resid) / span  # cheapest-relative → 1.0, most-premium → 0.0
+        tier = "undervalued" if z <= -0.5 else "premium" if z >= 0.5 else "fair"
+        scores[name] = {"residual": resid, "z": z, "score": score, "tier": tier}
+    return scores, gold

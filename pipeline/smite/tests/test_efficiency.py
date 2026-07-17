@@ -63,3 +63,49 @@ def test_fit_gold_values_ignores_items_with_missing_cost():
     ]
     gold, stat_names = efficiency.fit_gold_values(items)
     assert gold["Strength"] == pytest.approx(20.0, abs=1.0)
+
+
+def test_efficiency_scores_flags_underpriced_as_undervalued():
+    items = [
+        _item("A", 2000, Strength=100),
+        _item("B", 2000, Strength=100),
+        _item("C", 2000, Strength=100),
+        _item("Fair", 2000, Strength=100),
+        _item("Underpriced", 1000, Strength=100),
+    ]
+    scores, _gold = efficiency.efficiency_scores(items)
+    assert scores["Underpriced"]["tier"] == "undervalued"
+    assert scores["Underpriced"]["score"] > scores["Fair"]["score"]
+
+
+def test_efficiency_scores_flags_passive_heavy_as_premium():
+    items = [
+        _item("A", 2000, Strength=100),
+        _item("B", 2000, Strength=100),
+        _item("C", 2000, Strength=100),
+        _item("D", 2000, Strength=100),
+        _item("PassiveHeavy", 3000, Strength=5),
+    ]
+    scores, _ = efficiency.efficiency_scores(items)
+    assert scores["PassiveHeavy"]["tier"] == "premium"
+    assert scores["PassiveHeavy"]["score"] < 0.5
+
+
+def test_efficiency_scores_returns_score_in_unit_range():
+    items = [_item("A", 2000, Strength=100), _item("B", 1000, Strength=100)]
+    scores, _ = efficiency.efficiency_scores(items)
+    for s in scores.values():
+        assert 0.0 <= s["score"] <= 1.0
+
+
+def test_efficiency_scores_skips_null_cost_items():
+    # Component items with cost: null cannot get a residual; they must be absent
+    # from the result, not crash it.
+    items = [
+        _item("A", 2000, Strength=100),
+        _item("B", 1000, Strength=50),
+        {"name": "NoCost", "cost": None, "stats": {"Strength": "40"}},
+    ]
+    scores, _ = efficiency.efficiency_scores(items)
+    assert "NoCost" not in scores
+    assert "A" in scores and "B" in scores
