@@ -45,3 +45,26 @@ def test_god_report_marks_underrated_items():
     assert "Chiron" in report
     assert "Sleeper" in report
     assert "UNDERRATED" in report.upper()
+
+
+def test_build_suggested_entries_shape():
+    god = {"name": "Chiron", "damage_type": "physical", "role": "Carry",
+           "specializations": ["Sharpshooter"]}
+    items = [
+        {"name": "A", "tier": 3, "cost": 2000, "stats": {"Strength": "40", "Critical Chance": "20%"}},
+        {"name": "Boots", "tier": 3, "cost": 1200, "stats": {"Movement Speed": "18"}},
+        {"name": "C", "tier": 3, "cost": 2500, "stats": {"Strength": "55"}},
+        {"name": "D", "tier": 3, "cost": 2500, "stats": {"Strength": "55"}},
+        {"name": "E", "tier": 3, "cost": 2500, "stats": {"Strength": "55"}},
+        {"name": "F", "tier": 3, "cost": 2500, "stats": {"Strength": "55"}},
+        {"name": "G", "tier": 3, "cost": 2500, "stats": {"Strength": "55"}},
+    ]
+    build = {"builds": [{"source": "community", "slot_order": []}]}
+    weights = scoring.load_weights_default()
+    entries = recommend.build_suggested_entries(god, items, build, weights, tags_map={})
+    assert entries and entries[0]["source"] == "suggested"
+    assert entries[0]["archetype"] == "core"
+    assert isinstance(entries[0]["slot_order"], list) and entries[0]["slot_order"]
+    assert "rationale" in entries[0]
+    tags = {s["vs_tag"] for s in entries[0]["situational_swaps"]}
+    assert {"heavy_cc", "magic_heavy", "physical_heavy", "sustain"} <= tags

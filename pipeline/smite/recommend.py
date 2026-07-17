@@ -8,7 +8,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from smite import efficiency, notes, scoring
+from smite import assemble, efficiency, notes, scoring
 
 VAULT_ROOT = Path(__file__).resolve().parents[2]
 DATA_ROOT = VAULT_ROOT / "04. System" / "Data" / "SMITE"
@@ -67,12 +67,33 @@ def god_report(god, items, god_build, weights, tags_map):
     return "\n".join(lines) + "\n"
 
 
+def build_suggested_entries(god, items, god_build, weights, tags_map):
+    eff_scores, _ = efficiency.efficiency_scores(items)
+    rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map)
+    items_by_name = {it["name"]: it for it in items}
+    core = assemble.assemble_core(rows, items_by_name, n=6)
+    swaps = assemble.situational_swaps(rows, items_by_name, tags_map)
+    underrated = [r["item"] for r in rows if r.get("underrated")]
+    rationale = "Top weighted-score core (efficiency + win/pick + fit)."
+    if underrated:
+        rationale += " Underrated for this god: " + ", ".join(underrated) + "."
+    return [{
+        "source": "suggested",
+        "archetype": "core",
+        "slot_order": core,
+        "situational_swaps": swaps,
+        "rationale": rationale,
+    }]
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Score SMITE 2 items and build suggestions")
     parser.add_argument("--efficiency-report", action="store_true",
                         help="write the god-agnostic item efficiency table")
     parser.add_argument("--all", action="store_true",
                         help="write a per-god scoring report for every god")
+    parser.add_argument("--report-only", action="store_true",
+                        help="write reports but do not modify Build notes")
     args = parser.parse_args(argv)
 
     if args.all:
@@ -88,6 +109,10 @@ def main(argv=None):
             build = load_build_note(god["name"])
             (out_dir / f"{god['name']}.md").write_text(
                 god_report(god, items, build, weights, tags_map), encoding="utf-8")
+            if not args.report_only:
+                entries = build_suggested_entries(god, items, build, weights, tags_map)
+                notes.merge_suggested_entries(
+                    BUILDS_ROOT / f"{god['name']}-Conquest.md", god["name"], "Conquest", entries)
         print("Wrote per-god scoring reports")
         return 0
 

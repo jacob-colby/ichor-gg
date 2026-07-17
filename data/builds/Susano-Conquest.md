@@ -28,4 +28,24 @@ builds:
     win_rate: 0.64
   source_url: https://smitebrain.com/gods/susano/
   last_verified: '2026-07-16'
+- source: suggested
+  archetype: core
+  slot_order:
+  - Jotunn's Revenge
+  - The Reaper
+  - Magi's Cloak
+  - Heartseeker
+  - Hydra's Lament
+  - Titan's Bane
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Magi's Cloak — CC-immunity / cleanse
+  - vs_tag: magic_heavy
+    swap: Magi's Cloak — magical protection
+  - vs_tag: physical_heavy
+    swap: Magi's Cloak — physical protection
+  - vs_tag: sustain
+    swap: (no anti-heal available in pool)
+  rationale: 'Top weighted-score core (efficiency + win/pick + fit). Underrated for
+    this god: Hydra''s Lament, The Crusher, Dagger of Frenzy, Rage.'
 ---

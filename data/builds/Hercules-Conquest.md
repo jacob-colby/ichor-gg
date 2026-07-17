@@ -28,4 +28,25 @@ builds:
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/hercules/
   last_verified: '2026-07-16'
+- source: suggested
+  archetype: core
+  slot_order:
+  - Genji's Guard
+  - Shifter's Shield
+  - Hydra's Lament
+  - Dwarven Plate
+  - The Crusher
+  - Jotunn's Revenge
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Magi's Cloak — CC-immunity / cleanse
+  - vs_tag: magic_heavy
+    swap: Genji's Guard — magical protection
+  - vs_tag: physical_heavy
+    swap: Shifter's Shield — physical protection
+  - vs_tag: sustain
+    swap: (no anti-heal available in pool)
+  rationale: 'Top weighted-score core (efficiency + win/pick + fit). Underrated for
+    this god: Hydra''s Lament, The Crusher, Jotunn''s Revenge, The Reaper, Dagger
+    of Frenzy, Rage.'
 ---
