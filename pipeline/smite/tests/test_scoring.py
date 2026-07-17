@@ -26,3 +26,32 @@ def test_load_tags_reads_mapping(tmp_path):
     p = tmp_path / "_tags.yaml"
     p.write_text("Brawler's Ruin:\n  - anti-heal\n", encoding="utf-8")
     assert scoring.load_tags(p) == {"Brawler's Ruin": ["anti-heal"]}
+
+
+def _god(name, damage_type, role, specs):
+    return {"name": name, "damage_type": damage_type, "role": role, "specializations": specs}
+
+
+def test_item_damage_type_from_primary_stat():
+    assert scoring.item_damage_type({"stats": {"Strength": "40"}}) == "physical"
+    assert scoring.item_damage_type({"stats": {"Intelligence": "70"}}) == "magical"
+    assert scoring.item_damage_type({"stats": {"Physical Protection": "50"}}) == "neutral"
+
+
+def test_passes_damage_filter_excludes_mismatched_offense():
+    phys_god = _god("Ullr", "physical", "Hunter", ["Hunter"])
+    int_item = {"stats": {"Intelligence": "70"}}
+    str_item = {"stats": {"Strength": "40"}}
+    neutral_item = {"stats": {"Physical Protection": "50"}}
+    assert scoring.passes_damage_filter(str_item, phys_god)
+    assert not scoring.passes_damage_filter(int_item, phys_god)
+    assert scoring.passes_damage_filter(neutral_item, phys_god)  # neutral always passes
+
+
+def test_god_fit_rewards_role_relevant_stats():
+    weights = scoring.load_weights_default()
+    sharpshooter = _god("Chiron", "physical", "Carry", ["Sharpshooter"])
+    crit_item = {"stats": {"Critical Chance": "20%", "Attack Speed": "15"}}
+    off_stat_item = {"stats": {"Magical Protection": "50"}}
+    assert scoring.god_fit_score(crit_item, sharpshooter, weights, []) > \
+        scoring.god_fit_score(off_stat_item, sharpshooter, weights, [])

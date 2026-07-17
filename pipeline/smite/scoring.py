@@ -46,3 +46,52 @@ def load_tags(path):
     if not path.exists():
         return {}
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+
+
+def load_weights_default():
+    return copy.deepcopy(DEFAULT_WEIGHTS)
+
+
+def item_damage_type(item):
+    stats = item.get("stats") or {}
+    has_str = "Strength" in stats
+    has_int = "Intelligence" in stats
+    if has_str and not has_int:
+        return "physical"
+    if has_int and not has_str:
+        return "magical"
+    return "neutral"
+
+
+def passes_damage_filter(item, god):
+    dt = item_damage_type(item)
+    return dt == "neutral" or dt == god.get("damage_type")
+
+
+def _role_stat_map(god, weights):
+    merged = {}
+    roles = list(god.get("specializations") or [])
+    if god.get("role"):
+        roles.append(god["role"])
+    for role in roles:
+        for stat, w in weights["role_stats"].get(role, {}).items():
+            merged[stat] = max(merged.get(stat, 0.0), w)
+    return merged
+
+
+def god_fit_score(item, god, weights, item_tags):
+    """Archetype fit in [0,1]: weighted presence of role-relevant stats, plus a
+    small bonus for archetype-relevant tags. NOT damage simulation — see spec."""
+    stats = item.get("stats") or {}
+    role_map = _role_stat_map(god, weights)
+    denom = sum(role_map.values()) or 1.0
+    stat_fit = 0.0
+    for stat, w in role_map.items():
+        if parse_stat_value(stats.get(stat)) is not None:
+            stat_fit += w
+    stat_fit = min(stat_fit / denom, 1.0)
+
+    # Small tag bonus for offense-oriented tags on damage roles. Conservative.
+    offense_tags = {"burst", "execute", "protection-shred"}
+    tag_bonus = 0.1 if any(t in offense_tags for t in (item_tags or [])) else 0.0
+    return min(stat_fit + tag_bonus, 1.0)
