@@ -223,3 +223,38 @@ def test_log_refresh_diff_ignores_last_verified_changes(tmp_path):
         {"cost": 100, "last_verified": "2026-07-16"},
     )
     assert not log_dir.exists()
+
+
+def test_merge_suggested_entries_replaces_only_suggested(tmp_path):
+    path = tmp_path / "Chiron-Conquest.md"
+    notes.write_note(path, {
+        "type": "smite-build", "god": "Chiron", "mode": "Conquest",
+        "builds": [
+            {"source": "community", "slot_order": [{"name": "Trans", "pick_rate": 0.9, "win_rate": 0.5}]},
+            {"source": "mine", "slot_order": ["Deathbringer"]},
+            {"source": "suggested", "archetype": "core", "slot_order": ["OLD"]},
+        ],
+    }, "")
+
+    notes.merge_suggested_entries(path, "Chiron", "Conquest", [
+        {"source": "suggested", "archetype": "core", "slot_order": ["NEW"]},
+    ])
+
+    fm, _ = notes.read_note(path)
+    sources = [b["source"] for b in fm["builds"]]
+    assert sources.count("community") == 1
+    assert sources.count("mine") == 1
+    assert sources.count("suggested") == 1
+    suggested = next(b for b in fm["builds"] if b["source"] == "suggested")
+    assert suggested["slot_order"] == ["NEW"]      # regenerated in place
+    mine = next(b for b in fm["builds"] if b["source"] == "mine")
+    assert mine["slot_order"] == ["Deathbringer"]  # untouched
+
+
+def test_merge_suggested_entries_creates_note_when_missing(tmp_path):
+    path = tmp_path / "New-Conquest.md"
+    notes.merge_suggested_entries(path, "New", "Conquest",
+                                  [{"source": "suggested", "slot_order": ["X"]}])
+    fm, _ = notes.read_note(path)
+    assert fm["god"] == "New"
+    assert [b["source"] for b in fm["builds"]] == ["suggested"]

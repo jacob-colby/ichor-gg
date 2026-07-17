@@ -130,3 +130,16 @@ def log_refresh_diff(log_dir: Path, name: str, old_frontmatter: dict, new_frontm
     log_path = log_dir / f"refresh-{date.today().isoformat()}.md"
     with log_path.open("a", encoding="utf-8") as f:
         f.write(f"## {name}\n" + "\n".join(changes) + "\n\n")
+
+
+def merge_suggested_entries(path: Path, god: str, mode: str, suggested_entries: list) -> None:
+    """Replace all `source: suggested` entries in a Build note with the supplied
+    list, preserving community/mine/pro entries verbatim. Mirrors
+    merge_build_note's community replacement — only the recommender's own
+    entries are regenerated, everything hand-owned survives."""
+    frontmatter, body = read_note(path)
+    if not frontmatter:
+        frontmatter = {"type": "smite-build", "god": god, "mode": mode, "builds": []}
+    kept = [b for b in frontmatter.get("builds", []) if b.get("source") != "suggested"]
+    frontmatter["builds"] = kept + list(suggested_entries)
+    write_note(path, frontmatter, body)
