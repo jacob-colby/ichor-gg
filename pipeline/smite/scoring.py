@@ -95,3 +95,55 @@ def god_fit_score(item, god, weights, item_tags):
     offense_tags = {"burst", "execute", "protection-shred"}
     tag_bonus = 0.1 if any(t in offense_tags for t in (item_tags or [])) else 0.0
     return min(stat_fit + tag_bonus, 1.0)
+
+
+def lookup_rates(god_build, item_name):
+    """(pick_rate, win_rate) for item_name from the god's community build entry,
+    or (0.0, None) if the item isn't in that build."""
+    for entry in god_build.get("builds", []):
+        if entry.get("source") == "community":
+            for slot in entry.get("slot_order", []):
+                if isinstance(slot, dict) and slot.get("name") == item_name:
+                    return slot.get("pick_rate", 0.0), slot.get("win_rate")
+    return 0.0, None
+
+
+def signal_score(item, god, god_build, eff_score, weights, item_tags):
+    w = weights["signals"]
+    pick, win = lookup_rates(god_build, item["name"])
+    win_norm = win if win is not None else 0.5   # neutral when unknown
+    fit = god_fit_score(item, god, weights, item_tags)
+    total = (w["efficiency"] * eff_score + w["win"] * win_norm
+             + w["pick"] * pick + w["fit"] * fit)
+    return {"item": item["name"], "efficiency": eff_score, "win": win_norm,
+            "pick": pick, "fit": fit, "total": total, "tags": list(item_tags or [])}
+
+
+def is_underrated(row, weights):
+    u = weights["underrated"]
+    return row["total"] >= u["min_score"] and row["pick"] <= u["max_pick"]
+
+
+def is_buildable(item):
+    """A final item you'd actually build: tier 3, or a tier-None active/relic.
+    Excludes tier 1/2 component items (they're purchase-path steps, not final
+    build slots)."""
+    tier = item.get("tier")
+    return tier is None or tier >= 3
+
+
+def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_map):
+    """Score every buildable, damage-filter-passing item for one god, ranked by
+    total descending."""
+    rows = []
+    for item in items:
+        if not is_buildable(item):
+            continue
+        if not passes_damage_filter(item, god):
+            continue
+        eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
+        row = signal_score(item, god, god_build, eff, weights, tags_map.get(item["name"], []))
+        row["underrated"] = is_underrated(row, weights)
+        row["tier"] = efficiency_scores_map.get(item["name"], {}).get("tier", "fair")
+        rows.append(row)
+    return sorted(rows, key=lambda r: -r["total"])
