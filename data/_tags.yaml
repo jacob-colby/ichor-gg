@@ -1,0 +1,56 @@
+# Effect-tags for the build recommender. Seeded 2026-07-16 by reading each
+# item's scraped `passive` text and assigning from the FIXED vocabulary:
+#   burst · execute · anti-heal · protection-shred · peel · wave-clear ·
+#   mobility · sustain · cc-immunity · aura · anti-crit
+# Sidecar so item refresh never clobbers it. Hand-correctable — edit freely.
+#
+# An item with a purely-statistical passive (crit damage, +power, penetration,
+# cooldown reduction) correctly gets NO tag: its value is raw stats, already
+# captured by the efficiency + god-fit layers. Tags exist only for effects the
+# stat math can't see.
+#
+# NEEDS MANUAL REVIEW — these items had an EMPTY passive field in the scrape,
+# so they were tagged [] without text to judge. Verify on patch days:
+#   Bloodforge, Dagger of Frenzy, Engraved Guard, Evil Eye, Hunter's Bow,
+#   Obsidian Shard, Skeggox, Titan's Bane
+# (Titan's Bane / Obsidian Shard are % penetration — a stat, so [] is right
+#  even once their text returns. Bloodforge is a shield/lifesteal item and may
+#  warrant [sustain] once its passive text is scraped.)
+#
+# NOTE: no item currently in the pool carries an anti-heal passive, so the
+# "vs sustain" situational row will report none available — an accurate gap,
+# not a bug.
+
+Blinking Abyss: [mobility]
+Bloodforge: []
+Book of Thoth: []
+Chronos' Pendant: []
+Dagger of Frenzy: []
+Deathbringer: []
+Devourer's Gauntlet: [sustain]
+Dwarven Plate: []
+Engraved Guard: []
+Evil Eye: []
+Gem of Isolation: [peel]
+Genji's Guard: []
+Hastened Fatalis: [mobility]
+Heartseeker: [burst]
+Hunter's Bow: []
+Hydra's Lament: [burst]
+Jotunn's Revenge: []
+Magi's Cloak: [cc-immunity]
+Nimble Ring: []
+Obsidian Shard: []
+Odysseus' Bow: [burst, wave-clear]
+Rage: []
+Riptalon: [sustain]
+Rod of Tahuti: []
+Shifter's Shield: []
+Skeggox: []
+Soul Gem: [burst, sustain]
+Spear of Desolation: []
+The Crusher: [burst]
+The Reaper: [sustain]
+The World Stone: []
+Titan's Bane: []
+Transcendence: []
