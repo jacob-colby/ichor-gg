@@ -152,6 +152,10 @@ export function DetailPanel({ god, builds }: DetailPanelProps) {
           </div>
         )}
       </div>
+
+      {!community && active.rationale && (
+        <p className="mt-2 text-xs italic text-neutral-400">{active.rationale}</p>
+      )}
     </div>
   );
 }

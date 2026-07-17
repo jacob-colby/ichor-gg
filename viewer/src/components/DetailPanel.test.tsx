@@ -81,6 +81,26 @@ describe("DetailPanel", () => {
     expect(screen.getByText(/no build data yet/i)).toBeInTheDocument();
   });
 
+  it("renders the rationale for a suggested build entry", () => {
+    const suggestedBuild: BuildNote = {
+      type: "smite-build",
+      god: "Chiron",
+      mode: "Conquest",
+      builds: [
+        {
+          source: "suggested",
+          archetype: "core",
+          slot_order: ["Deathbringer"],
+          situational_swaps: [{ vs_tag: "sustain", swap: "none — anti-heal" }],
+          rationale: "Top weighted-score core.",
+        },
+      ],
+    };
+    render(<DetailPanel god="Chiron" builds={[suggestedBuild]} />);
+    expect(screen.getByRole("tab", { name: /suggested/i })).toBeInTheDocument();
+    expect(screen.getByText(/Top weighted-score core/)).toBeInTheDocument();
+  });
+
   // Regression coverage for a real bug found in manual browser verification
   // (Task 7): the slot-order row was keyed by index alone (`key={i}`), so
   // switching tabs — which can put a *different* item at the same slot

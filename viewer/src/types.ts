@@ -67,8 +67,10 @@ export interface CommunityBuildEntry {
 }
 
 export interface CuratedBuildEntry {
-  source: "pro" | "mine";
+  source: "pro" | "mine" | "suggested";
   aspect?: string;
+  archetype?: string;
+  rationale?: string;
   slot_order: string[];
   situational_swaps?: SituationalSwap[];
   notes?: string;
