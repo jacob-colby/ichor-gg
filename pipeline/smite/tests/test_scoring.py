@@ -40,6 +40,17 @@ def test_item_damage_type_from_primary_stat():
     assert scoring.item_damage_type({"stats": {"Physical Protection": "50"}}) == "neutral"
 
 
+def test_item_damage_type_basic_attack_stats_are_physical():
+    # Basic-attack items (attack speed / crit / raw attack damage) are physical
+    # even without a literal Strength stat — a mage never builds them.
+    assert scoring.item_damage_type({"stats": {"Attack Speed": "15", "Attack Damage": "20"}}) == "physical"
+    assert scoring.item_damage_type({"stats": {"Critical Chance": "20%"}}) == "physical"
+    # A hybrid converter that also carries Intelligence stays magical.
+    assert scoring.item_damage_type({"stats": {"Intelligence": "30", "Attack Speed": "10"}}) == "magical"
+    # Pure utility/protection stays neutral (buildable by anyone).
+    assert scoring.item_damage_type({"stats": {"Cooldown Rate": "10"}}) == "neutral"
+
+
 def test_passes_damage_filter_excludes_mismatched_offense():
     phys_god = _god("Ullr", "physical", "Hunter", ["Hunter"])
     int_item = {"stats": {"Intelligence": "70"}}

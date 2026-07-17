@@ -36,7 +36,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   - The World Stone
-  - Dagger of Frenzy
+  - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -47,5 +47,5 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
   rationale: 'Top weighted-score core (efficiency + win/pick + fit). Underrated for
-    this god: The World Stone, Dagger of Frenzy, Magi''s Cloak.'
+    this god: The World Stone, Magi''s Cloak.'
 ---

@@ -1695,6 +1695,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/agni/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Spear of Desolation",
+            "Soul Gem",
+            "Rod of Tahuti",
+            "Obsidian Shard",
+            "The World Stone",
+            "Book of Thoth"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Magi's Cloak \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: The World Stone."
         }
       ]
     },
@@ -1742,6 +1773,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/cernunnos/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Riptalon",
+            "Jotunn's Revenge",
+            "Dagger of Frenzy",
+            "Hydra's Lament",
+            "The Crusher",
+            "Rage"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Magi's Cloak \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Jotunn's Revenge, Hydra's Lament, The Crusher, The Reaper, Rage."
         }
       ]
     },
@@ -1789,6 +1851,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/chiron/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Titan's Bane",
+            "Transcendence",
+            "Hydra's Lament",
+            "The Reaper"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Magi's Cloak \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Hydra's Lament, The Reaper, Riptalon, Rage."
         }
       ]
     },
@@ -1836,6 +1929,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/chronos/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Spear of Desolation",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Soul Gem",
+            "Book of Thoth",
+            "The World Stone"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Magi's Cloak \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Magi's Cloak \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Soul Gem, The World Stone, Magi's Cloak."
         }
       ]
     },
@@ -1883,6 +2007,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/hercules/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Genji's Guard",
+            "Shifter's Shield",
+            "Hydra's Lament",
+            "Dwarven Plate",
+            "The Crusher",
+            "Jotunn's Revenge"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Hydra's Lament, The Crusher, Jotunn's Revenge, The Reaper, Dagger of Frenzy, Rage."
         }
       ]
     },
@@ -1930,6 +2085,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/morgan-le-fay/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Spear of Desolation",
+            "Soul Gem",
+            "Rod of Tahuti",
+            "Obsidian Shard",
+            "The World Stone",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Magi's Cloak \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Soul Gem, The World Stone."
         }
       ]
     },
@@ -1977,6 +2163,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/princess-bari/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Obsidian Shard",
+            "Spear of Desolation",
+            "Nimble Ring",
+            "Rod of Tahuti",
+            "The World Stone",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Magi's Cloak \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Magi's Cloak \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Nimble Ring, Soul Gem, Magi's Cloak."
         }
       ]
     },
@@ -2024,6 +2241,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/ra/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Obsidian Shard",
+            "Soul Gem",
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "The World Stone",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Magi's Cloak \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Magi's Cloak \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: The World Stone, Magi's Cloak."
         }
       ]
     },
@@ -2071,6 +2319,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/susano/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Reaper",
+            "Magi's Cloak",
+            "Heartseeker",
+            "Hydra's Lament",
+            "Titan's Bane"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Magi's Cloak \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Magi's Cloak \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Hydra's Lament, The Crusher, Dagger of Frenzy, Rage."
         }
       ]
     },
@@ -2118,6 +2397,37 @@
           ],
           "source_url": "https://smitebrain.com/gods/ullr/",
           "last_verified": "2026-07-16"
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Transcendence",
+            "Hydra's Lament",
+            "Jotunn's Revenge",
+            "Heartseeker",
+            "Rage",
+            "Deathbringer"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Magi's Cloak \u2014 magical protection"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Magi's Cloak \u2014 physical protection"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Rage, Deathbringer, The Crusher, The Reaper."
         }
       ]
     }

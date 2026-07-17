@@ -47,5 +47,5 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
   rationale: 'Top weighted-score core (efficiency + win/pick + fit). Underrated for
-    this god: Soul Gem, The World Stone, Dagger of Frenzy, Magi''s Cloak.'
+    this god: Soul Gem, The World Stone, Magi''s Cloak.'
 ---

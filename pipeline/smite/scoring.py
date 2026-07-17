@@ -59,14 +59,26 @@ def load_weights_default():
     return copy.deepcopy(DEFAULT_WEIGHTS)
 
 
+# Basic-attack stats mark an item as physical even without a literal Strength
+# stat — a mage never builds attack speed / crit / raw Attack Damage, so these
+# belong to the physical class, not the "neutral, everyone" class. Without this,
+# an attack-speed item (e.g. Dagger of Frenzy) reads as neutral and can leak
+# into a mage's suggested build. Intelligence still wins if present (hybrid
+# converters like Nimble Ring carry Intelligence and are legitimately magical).
+_PHYSICAL_SIGNAL_STATS = ("Strength", "Attack Damage", "Attack Speed", "Critical Chance")
+
+
 def item_damage_type(item):
     stats = item.get("stats") or {}
-    has_str = "Strength" in stats
-    has_int = "Intelligence" in stats
-    if has_str and not has_int:
-        return "physical"
-    if has_int and not has_str:
+    # Intelligence wins outright: it is useless to physical gods, so any item
+    # carrying it is a mage item — including hybrids that also grant attack
+    # speed (e.g. Nimble Ring). Only when there's no Intelligence do basic-attack
+    # signals mark the item physical; everything else is neutral (buildable by
+    # anyone — protections, cooldown, mana, movement).
+    if "Intelligence" in stats:
         return "magical"
+    if any(s in stats for s in _PHYSICAL_SIGNAL_STATS):
+        return "physical"
     return "neutral"
 
 

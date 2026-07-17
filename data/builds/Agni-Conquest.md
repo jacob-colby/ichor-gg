@@ -47,5 +47,5 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
   rationale: 'Top weighted-score core (efficiency + win/pick + fit). Underrated for
-    this god: The World Stone, Chronos'' Pendant.'
+    this god: The World Stone.'
 ---
