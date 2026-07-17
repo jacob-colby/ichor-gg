@@ -72,7 +72,7 @@ def build_suggested_entries(god, items, god_build, weights, tags_map):
     rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map)
     items_by_name = {it["name"]: it for it in items}
     core = assemble.assemble_core(rows, items_by_name, n=6)
-    swaps = assemble.situational_swaps(rows, items_by_name, tags_map)
+    swaps = assemble.situational_swaps(rows, items_by_name, tags_map, core=core)
     underrated = [r["item"] for r in rows if r.get("underrated")]
     rationale = "Top weighted-score core (efficiency + win/pick + fit)."
     if underrated:

@@ -57,3 +57,26 @@ def test_situational_table_uses_only_viewer_vs_tags():
     ibn = _items_by_name({"name": "A", "stats": {"Strength": "40"}})
     table = assemble.situational_swaps(rows, ibn, tags_map={})
     assert {r["vs_tag"] for r in table} == {"heavy_cc", "magic_heavy", "physical_heavy", "sustain"}
+
+
+def test_situational_table_skips_items_already_in_core():
+    # A qualifying item that's already in the core is not offered as a swap-in;
+    # the row reports the core already covers it.
+    rows = [_row("Cloak", 0.9, tags=["cc-immunity"])]
+    ibn = _items_by_name({"name": "Cloak", "stats": {"Strength": "40"}})
+    table = assemble.situational_swaps(rows, ibn, tags_map={"Cloak": ["cc-immunity"]}, core=["Cloak"])
+    cc_row = next(r for r in table if r["vs_tag"] == "heavy_cc")
+    assert "Cloak" in cc_row["swap"]
+    assert "already covers" in cc_row["swap"]
+
+
+def test_situational_table_does_not_repeat_same_item_across_rows():
+    # One item qualifies for both magic and physical protection; it must not be
+    # offered for both — the second row falls through to covered/none.
+    rows = [_row("HybridDef", 0.9)]
+    ibn = _items_by_name(
+        {"name": "HybridDef", "stats": {"Magical Protection": "40", "Physical Protection": "40"}},
+    )
+    table = assemble.situational_swaps(rows, ibn, tags_map={})
+    swaps_with_item = [r for r in table if "HybridDef" in r["swap"] and "already covers" not in r["swap"]]
+    assert len(swaps_with_item) == 1   # claimed by exactly one situation, not both

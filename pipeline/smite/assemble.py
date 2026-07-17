@@ -15,7 +15,7 @@ def _is_lifesteal(item, tags):
 
 
 def assemble_core(rows, items_by_name, n=6, bruiser=False):
-    """Highest-total items filling n slots: exactly one boots, at most one
+    """Highest-total items filling n slots: at most one boots, at most one
     lifesteal (unless bruiser), no duplicates. rows must be pre-sorted by
     -total (score_god_items already does)."""
     core, used = [], set()
@@ -51,21 +51,44 @@ _SITUATIONS = [
 ]
 
 
-def situational_swaps(rows, items_by_name, tags_map):
+def _item_qualifies(name, items_by_name, tags_map, needed_tag, prot_stat, row_tags=None):
+    item = items_by_name.get(name, {})
+    item_tags = tags_map.get(name) or row_tags or []
+    if needed_tag and needed_tag in item_tags:
+        return True
+    if prot_stat and parse_stat_value((item.get("stats") or {}).get(prot_stat)) is not None:
+        return True
+    return False
+
+
+def situational_swaps(rows, items_by_name, tags_map, core=None):
+    """For each matchup situation, the best item to bring IN that isn't already
+    in the core (and isn't already claimed by an earlier situation, so the four
+    rows don't all collapse to the same item). A swap you already build isn't a
+    swap — if the core already contains a qualifying item, the row says so
+    instead of telling you to add what you have; if the pool has none at all,
+    the row says that. vs_tag values match the viewer's archetype taxonomy."""
+    core = list(core or [])
+    core_set = set(core)
+    chosen = set()
     table = []
     for vs_tag, needed_tag, prot_stat, label in _SITUATIONS:
         pick = None
         for r in rows:
-            item = items_by_name.get(r["item"], {})
-            item_tags = tags_map.get(r["item"], r.get("tags") or [])
-            if needed_tag and needed_tag in item_tags:
-                pick = r["item"]
-                break
-            if prot_stat and parse_stat_value((item.get("stats") or {}).get(prot_stat)) is not None:
-                pick = r["item"]
+            name = r["item"]
+            if name in core_set or name in chosen:
+                continue
+            if _item_qualifies(name, items_by_name, tags_map, needed_tag, prot_stat, r.get("tags")):
+                pick = name
                 break
         if pick:
+            chosen.add(pick)
             table.append({"vs_tag": vs_tag, "swap": f"{pick} — {label}"})
+            continue
+        covered = next((n for n in core
+                        if _item_qualifies(n, items_by_name, tags_map, needed_tag, prot_stat)), None)
+        if covered:
+            table.append({"vs_tag": vs_tag, "swap": f"core already covers {label} ({covered})"})
         else:
             table.append({"vs_tag": vs_tag, "swap": f"(no {label} available in pool)"})
     return table

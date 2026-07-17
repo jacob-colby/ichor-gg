@@ -41,9 +41,9 @@ builds:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
   - vs_tag: magic_heavy
-    swap: Magi's Cloak — magical protection
+    swap: Genji's Guard — magical protection
   - vs_tag: physical_heavy
-    swap: Magi's Cloak — physical protection
+    swap: Shifter's Shield — physical protection
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
   rationale: 'Top weighted-score core (efficiency + win/pick + fit). Underrated for
