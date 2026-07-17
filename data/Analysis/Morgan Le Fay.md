@@ -1,0 +1,22 @@
+# Morgan Le Fay — item scoring
+
+| Item | Total | Eff | Win | Pick | Fit | Tier | Tags | Flag |
+|---|---|---|---|---|---|---|---|---|
+| Spear of Desolation | 0.64 | 0.65 | 0.50 | 0.43 | 1.00 | fair |  |  |
+| Soul Gem | 0.63 | 0.67 | 0.57 | 0.14 | 1.00 | fair | burst, sustain | **UNDERRATED** |
+| Rod of Tahuti | 0.59 | 0.64 | 0.58 | 0.23 | 0.80 | fair |  |  |
+| Obsidian Shard | 0.58 | 0.65 | 0.57 | 0.17 | 0.80 | fair |  |  |
+| The World Stone | 0.55 | 0.69 | 0.50 | 0.00 | 0.80 | fair |  |  |
+| Chronos' Pendant | 0.46 | 0.54 | 0.50 | 0.00 | 0.60 | premium |  |  |
+| Riptalon | 0.45 | 0.64 | 0.50 | 0.00 | 0.40 | fair | sustain |  |
+| Gem of Isolation | 0.45 | 0.64 | 0.50 | 0.00 | 0.40 | fair | peel |  |
+| Nimble Ring | 0.45 | 0.63 | 0.50 | 0.00 | 0.40 | fair |  |  |
+| Book of Thoth | 0.44 | 0.59 | 0.50 | 0.00 | 0.40 | fair |  |  |
+| Genji's Guard | 0.41 | 0.64 | 0.50 | 0.00 | 0.20 | fair |  |  |
+| Dagger of Frenzy | 0.39 | 0.67 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Magi's Cloak | 0.38 | 0.65 | 0.50 | 0.00 | 0.00 | fair | cc-immunity |  |
+| Shifter's Shield | 0.37 | 0.64 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Hastened Fatalis | 0.36 | 0.60 | 0.50 | 0.00 | 0.00 | fair | mobility |  |
+| Odysseus' Bow | 0.35 | 0.52 | 0.50 | 0.00 | 0.10 | premium | burst, wave-clear |  |
+| Dwarven Plate | 0.34 | 0.54 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Blinking Abyss | 0.15 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
