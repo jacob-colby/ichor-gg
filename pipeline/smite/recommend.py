@@ -56,12 +56,12 @@ def god_report(god, items, god_build, weights, tags_map):
     eff_scores, _ = efficiency.efficiency_scores(items)
     rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map)
     lines = [f"# {god['name']} — item scoring\n",
-             "| Item | Total | Eff | Win | Pick | Fit | Tier | Tags | Flag |",
-             "|---|---|---|---|---|---|---|---|---|"]
+             "| Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |",
+             "|---|---|---|---|---|---|---|---|---|---|"]
     for r in rows:
         flag = "**UNDERRATED**" if r["underrated"] else ""
         tags = ", ".join(r["tags"])
-        lines.append(f"| {r['item']} | {r['total']:.2f} | {r['efficiency']:.2f} | "
+        lines.append(f"| {r['item']} | {r['total']:.2f} | {r['quality']:.2f} | {r['efficiency']:.2f} | "
                      f"{r['win']:.2f} | {r['pick']:.2f} | {r['fit']:.2f} | {r['tier']} | "
                      f"{tags} | {flag} |")
     return "\n".join(lines) + "\n"

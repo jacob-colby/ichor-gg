@@ -85,11 +85,24 @@ def test_signal_score_combines_all_four_signals():
     assert row["pick"] == 0.5 and row["win"] == 0.6
 
 
-def test_underrated_flag_fires_only_high_score_low_pick():
-    weights = scoring.load_weights_default()  # min_score 0.6, max_pick 0.15
-    assert scoring.is_underrated({"total": 0.7, "pick": 0.1}, weights)
-    assert not scoring.is_underrated({"total": 0.7, "pick": 0.5}, weights)   # popular
-    assert not scoring.is_underrated({"total": 0.3, "pick": 0.1}, weights)   # weak
+def test_mark_underrated_flags_top_quality_low_pick():
+    weights = scoring.load_weights_default()  # top_quality_frac 0.30, max_pick 0.15
+    rows = [
+        {"quality": 0.90, "pick": 0.05},  # top-quality + unpicked -> underrated
+        {"quality": 0.85, "pick": 0.50},  # top-quality but popular -> no
+        {"quality": 0.40, "pick": 0.02},  # unpicked but not top-quality -> no
+        {"quality": 0.30, "pick": 0.01},
+        {"quality": 0.20, "pick": 0.01},
+    ]
+    scoring.mark_underrated(rows, weights)
+    flags = {r["quality"]: r["underrated"] for r in rows}
+    assert flags[0.90] is True
+    assert flags[0.85] is False   # popular despite high quality
+    assert flags[0.40] is False   # low pick but not top-quality
+
+
+def test_mark_underrated_empty_is_safe():
+    assert scoring.mark_underrated([], scoring.load_weights_default()) == []
 
 
 def test_score_god_items_excludes_components_and_wrong_damage_type():

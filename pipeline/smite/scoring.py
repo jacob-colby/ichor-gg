@@ -2,6 +2,7 @@
 + win rate + pick rate + archetype god-fit. Transparent, tunable weights in
 _weights.yaml; effect-tags in _tags.yaml. See the design spec."""
 import copy
+import math
 
 import yaml
 
@@ -21,7 +22,13 @@ DEFAULT_WEIGHTS = {
         "Warrior": {"Strength": 0.8, "Physical Protection": 0.5, "Health": 0.5},
         "Guardian": {"Physical Protection": 1.0, "Magical Protection": 1.0, "Health": 0.8},
     },
-    "underrated": {"min_score": 0.6, "max_pick": 0.15},
+    # "Underrated" = intrinsically good for this god (high quality = efficiency
+    # + fit, independent of the meta) yet rarely picked. It deliberately does
+    # NOT gate on the blended `total`: an unpicked item carries a neutral win
+    # rate (0.5) and zero pick, which drag `total` down precisely for the items
+    # we most want to surface. `top_quality_frac` auto-calibrates per god (flag
+    # only the top fraction by quality), so no fragile absolute score cutoff.
+    "underrated": {"max_pick": 0.15, "top_quality_frac": 0.30},
 }
 
 
@@ -115,13 +122,33 @@ def signal_score(item, god, god_build, eff_score, weights, item_tags):
     fit = god_fit_score(item, god, weights, item_tags)
     total = (w["efficiency"] * eff_score + w["win"] * win_norm
              + w["pick"] * pick + w["fit"] * fit)
+    # Intrinsic merit for this god — efficiency + fit only, renormalized so it
+    # sits in the same [0,1] range as its inputs. Meta signals (win/pick) are
+    # deliberately excluded: quality answers "is this good for the god?", not
+    # "is this already popular?", which is what the underrated check needs.
+    quality = (w["efficiency"] * eff_score + w["fit"] * fit) / ((w["efficiency"] + w["fit"]) or 1.0)
     return {"item": item["name"], "efficiency": eff_score, "win": win_norm,
-            "pick": pick, "fit": fit, "total": total, "tags": list(item_tags or [])}
+            "pick": pick, "fit": fit, "quality": quality, "total": total,
+            "tags": list(item_tags or [])}
 
 
-def is_underrated(row, weights):
+def mark_underrated(rows, weights):
+    """Set each row's `underrated` flag: intrinsically high-quality for this god
+    (top `top_quality_frac` by quality) yet with pick rate at or below
+    `max_pick`. Operates on the whole row set at once because the quality cutoff
+    is relative to this god's own item distribution — a deliberately
+    self-calibrating replacement for a fixed absolute score threshold, which
+    never fired against real data (unpicked items can't reach a high blended
+    total). Mutates rows in place and returns them."""
     u = weights["underrated"]
-    return row["total"] >= u["min_score"] and row["pick"] <= u["max_pick"]
+    if not rows:
+        return rows
+    frac = u.get("top_quality_frac", 0.30)
+    cutoff_count = max(1, math.ceil(frac * len(rows)))
+    quality_threshold = sorted((r["quality"] for r in rows), reverse=True)[cutoff_count - 1]
+    for r in rows:
+        r["underrated"] = r["pick"] <= u["max_pick"] and r["quality"] >= quality_threshold
+    return rows
 
 
 def is_buildable(item):
@@ -143,7 +170,7 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
             continue
         eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
         row = signal_score(item, god, god_build, eff, weights, tags_map.get(item["name"], []))
-        row["underrated"] = is_underrated(row, weights)
         row["tier"] = efficiency_scores_map.get(item["name"], {}).get("tier", "fair")
         rows.append(row)
+    mark_underrated(rows, weights)
     return sorted(rows, key=lambda r: -r["total"])
