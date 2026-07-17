@@ -19,3 +19,47 @@ def test_parse_stat_value_none_returns_none():
 
 def test_parse_stat_value_non_numeric_returns_none():
     assert efficiency.parse_stat_value("Aura") is None
+
+
+import pytest
+
+
+def _item(name, cost, **stats):
+    return {"name": name, "cost": cost, "stats": {k: str(v) for k, v in stats.items()}}
+
+
+def test_fit_gold_values_recovers_planted_coefficients():
+    # cost = 20*Strength + 30*Intelligence exactly, no intercept.
+    items = [
+        _item("A", 2000, Strength=100),
+        _item("B", 3000, Intelligence=100),
+        _item("C", 2600, Strength=40, Intelligence=60),
+        _item("D", 1000, Strength=50),
+        _item("E", 1500, Intelligence=50),
+    ]
+    gold, stat_names = efficiency.fit_gold_values(items)
+    assert gold["Strength"] == pytest.approx(20.0, abs=0.5)
+    assert gold["Intelligence"] == pytest.approx(30.0, abs=0.5)
+    assert set(stat_names) == {"Strength", "Intelligence"}
+
+
+def test_fit_gold_values_coefficients_never_negative():
+    items = [
+        _item("A", 100, Strength=50, Intelligence=50),
+        _item("B", 100, Strength=50, Intelligence=10),
+        _item("C", 100, Strength=10, Intelligence=50),
+    ]
+    gold, _ = efficiency.fit_gold_values(items)
+    assert all(v >= 0 for v in gold.values())
+
+
+def test_fit_gold_values_ignores_items_with_missing_cost():
+    # Real data has component items with cost: null (e.g. Evil Eye). They carry
+    # no cost signal and must be excluded from the fit, not crash it.
+    items = [
+        _item("A", 2000, Strength=100),
+        _item("B", 1000, Strength=50),
+        {"name": "NoCost", "cost": None, "stats": {"Strength": "40"}},
+    ]
+    gold, stat_names = efficiency.fit_gold_values(items)
+    assert gold["Strength"] == pytest.approx(20.0, abs=1.0)
