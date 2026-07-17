@@ -1,0 +1,11 @@
+# Tuning surface for the build recommender. Edit and re-run
+# `python -m smite.recommend --all`. Anything omitted falls back to the
+# built-in defaults in tools/smite/scoring.py.
+signals:
+  efficiency: 0.35   # gold-value residual (hard math)
+  win: 0.30          # SmiteBrain high-elo win rate (performance)
+  pick: 0.15         # SmiteBrain pick rate (popularity)
+  fit: 0.20          # archetype god-fit
+underrated:
+  min_score: 0.6     # flag items scoring at least this...
+  max_pick: 0.15     # ...whose pick rate is at most this
