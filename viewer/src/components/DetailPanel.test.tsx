@@ -271,6 +271,18 @@ describe("DetailPanel", () => {
     expect(screen.getByText("Sharpshooter's Arrow")).toBeInTheDocument();
   });
 
+  it("shows the starter line on a community build too", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u",
+        starter: { base: "Gilded Arrow", upgrade: "Sharpshooter's Arrow" } },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    expect(screen.getByText(/STARTER/i)).toBeInTheDocument();
+    expect(screen.getByText("Gilded Arrow")).toBeInTheDocument();
+  });
+
   it("labels suggested tabs by archetype", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "suggested", archetype: "core", slot_order: ["X"], situational_swaps: [], rationale: "" },

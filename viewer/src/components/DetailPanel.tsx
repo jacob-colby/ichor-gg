@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { BuildEntry, BuildNote, God, Item } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
 import { Tooltip } from "./Tooltip";
+import { BuildEditor, type MineDraft } from "./BuildEditor";
 
 const VS_LABELS: Record<string, string> = {
   heavy_cc: "vs heavy CC",
@@ -17,6 +18,8 @@ interface DetailPanelProps {
   builds: BuildNote[];
   mode: string;
   onModeChange: (mode: string) => void;
+  starters?: { base: string; upgrade: string }[];
+  onReload?: () => void;
 }
 
 function ItemTooltipBody({ item, name }: { item?: Item; name: string }) {
@@ -50,12 +53,13 @@ function ItemTooltipBody({ item, name }: { item?: Item; name: string }) {
   );
 }
 
-export function DetailPanel({ god, godData, items, builds, mode, onModeChange }: DetailPanelProps) {
+export function DetailPanel({ god, godData, items, builds, mode, onModeChange, starters = [], onReload }: DetailPanelProps) {
   const godNotes = builds.filter((b) => b.god === god);
   const note = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
   const modes = godNotes.map((n) => n.mode);
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [editing, setEditing] = useState<MineDraft | "new" | null>(null);
   const itemsByName = useMemo(() => {
     const m = new Map<string, Item>();
     for (const it of items) m.set(it.name, it);
@@ -65,6 +69,7 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange }:
   useEffect(() => {
     setActiveIndex(0);
     setSelectedTag(null);
+    setEditing(null);
   }, [god, note]);
 
   if (!note || note.builds.length === 0) {
@@ -79,6 +84,24 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange }:
   const selectedSwap = swaps?.find((s) => s.vs_tag === selectedTag) ?? null;
   const baseNames = active.slot_order.map(slotItemName);
   const preview = applySwap(baseNames, selectedSwap?.swap_item ?? null);
+
+  if (editing) {
+    const recStarter = entries
+      .map((e) => (e as { starter?: { base: string; upgrade: string } }).starter)
+      .find(Boolean);
+    return (
+      <BuildEditor
+        god={god}
+        mode={note.mode}
+        items={items}
+        starters={starters}
+        initial={editing === "new" ? null : editing}
+        defaultStarter={recStarter}
+        onClose={() => setEditing(null)}
+        onSaved={() => onReload?.()}
+      />
+    );
+  }
 
   return (
     <div>
@@ -136,7 +159,33 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange }:
         ))}
       </div>
 
-      {!community && active.starter && (
+      <div className="mb-3 flex gap-2">
+        <button
+          type="button"
+          onClick={() => setEditing("new")}
+          className="rounded bg-bg2 px-3 py-1 text-xs text-blue hover:bg-line"
+        >
+          + New build
+        </button>
+        {active.source === "mine" && (
+          <button
+            type="button"
+            onClick={() =>
+              setEditing({
+                name: active.name ?? "",
+                slot_order: active.slot_order,
+                starter: active.starter,
+                notes: active.notes,
+              })
+            }
+            className="rounded bg-bg2 px-3 py-1 text-xs text-muted hover:bg-line"
+          >
+            Edit this build
+          </button>
+        )}
+      </div>
+
+      {active.starter && (
         <div className="mb-4">
           <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">STARTER</div>
           <div className="flex items-center gap-2">

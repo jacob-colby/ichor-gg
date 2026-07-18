@@ -35,6 +35,8 @@ function App() {
             builds={data.builds}
             mode={mode}
             onModeChange={setMode}
+            starters={data.starters ?? []}
+            onReload={reload}
           />
         ) : (
           <p className="text-muted">Select a god from the rail.</p>
