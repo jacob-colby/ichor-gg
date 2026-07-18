@@ -92,6 +92,7 @@ def god_report(god, items, god_build, weights, tags_map):
 def build_suggested_entries(god, items, god_build, weights, tags_map, mode="Conquest"):
     eff_scores, _ = efficiency.efficiency_scores(items)
     items_by_name = {it["name"]: it for it in items}
+    starter = scoring.pick_starter(god, weights)
     entries = []
     for flavor in [None] + scoring.eligible_flavors(god, weights):
         profile = scoring.resolve_profile(weights, mode, flavor)
@@ -105,6 +106,7 @@ def build_suggested_entries(god, items, god_build, weights, tags_map, mode="Conq
             "slot_order": core,
             "situational_swaps": swaps,
             "rationale": _rationale(archetype, rows, profile),
+            **({"starter": starter} if starter else {}),
         })
     return entries
 

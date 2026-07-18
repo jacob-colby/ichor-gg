@@ -99,3 +99,14 @@ def test_build_suggested_entries_joust_omits_underrated_and_labels():
     assert "Underrated" not in core["rationale"]
     assert "no meta" in core["rationale"].lower()
     assert "crit" not in [e["archetype"] for e in entries]
+
+
+def test_build_suggested_entries_stamps_starter():
+    god = {"name": "Chiron", "damage_type": "physical", "role": "Carry",
+           "specializations": ["Sharpshooter"]}
+    items = [{"name": f"I{i}", "tier": 3, "cost": 2500, "stats": {"Strength": "50"}} for i in range(7)]
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    entries = recommend.build_suggested_entries(god, items, {"builds": []}, weights, {}, "Conquest")
+    assert entries[0]["starter"]["base"] == "Gilded Arrow"
+    assert entries[0]["starter"]["upgrade"] == "Sharpshooter's Arrow"
+    assert all("starter" in e for e in entries)
