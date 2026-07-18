@@ -135,9 +135,11 @@ describe("DetailPanel", () => {
 
     // Simulate the second slot's icon (BrokenIcon) failing to load on the
     // community tab. Scope to slot icons (alt="") so the god headshot in the
-    // header (alt={god}) doesn't offset the indices.
+    // header (alt={god}) doesn't offset the indices. The first error retries
+    // once (cache-bust); the retry also failing is what hides the icon.
     const communityImages = container.querySelectorAll('img[alt=""]');
-    fireEvent.error(communityImages[1]);
+    fireEvent.error(communityImages[1]); // retry
+    fireEvent.error(communityImages[1]); // retry failed -> hide
     expect(communityImages[1]).toHaveStyle({ visibility: "hidden" });
 
     // Switch to the "mine" tab, where the same slot index (1) now holds

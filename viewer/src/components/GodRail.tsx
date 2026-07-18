@@ -39,8 +39,18 @@ export function GodRail({ gods, selectedGod, onSelect }: GodRailProps) {
               src={`/icons/${iconSlug(god.name)}-head.png`}
               alt={god.name}
               className="h-full w-full object-cover"
+              // Retry once with a cache-bust before giving up — a transient
+              // miss (e.g. the dev server still optimizing deps when the tab
+              // first opens, or a stale cached 404) otherwise leaves the icon
+              // permanently hidden until a full reload.
               onError={(e) => {
-                (e.target as HTMLImageElement).style.display = "none";
+                const img = e.currentTarget;
+                if (img.dataset.retried) {
+                  img.style.display = "none";
+                  return;
+                }
+                img.dataset.retried = "1";
+                img.src = `/icons/${iconSlug(god.name)}-head.png?r=${Date.now()}`;
               }}
             />
           </button>

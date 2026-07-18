@@ -83,7 +83,15 @@ export function DetailPanel({ god, godData, items, builds }: DetailPanelProps) {
           src={`/icons/${iconSlug(god)}-head.png`}
           alt={god}
           className="h-12 w-12 rounded-lg object-cover ring-1 ring-line"
-          onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
+          onError={(e) => {
+            const img = e.currentTarget;
+            if (img.dataset.retried) {
+              img.style.display = "none";
+              return;
+            }
+            img.dataset.retried = "1";
+            img.src = `/icons/${iconSlug(god)}-head.png?r=${Date.now()}`;
+          }}
         />
         <div>
           <h2 className="font-display text-2xl font-bold leading-none text-ink">{god}</h2>
@@ -127,7 +135,15 @@ export function DetailPanel({ god, godData, items, builds }: DetailPanelProps) {
                       src={`/icons/${iconSlug(slot.name)}.png`}
                       alt=""
                       className={`h-7 w-7 flex-none rounded bg-bg2 ${slot.status === "removed" ? "opacity-30" : ""}`}
-                      onError={(e) => ((e.target as HTMLImageElement).style.visibility = "hidden")}
+                      onError={(e) => {
+                        const img = e.currentTarget;
+                        if (img.dataset.retried) {
+                          img.style.visibility = "hidden";
+                          return;
+                        }
+                        img.dataset.retried = "1";
+                        img.src = `/icons/${iconSlug(slot.name)}.png?r=${Date.now()}`;
+                      }}
                     />
                     <span className={`text-sm ${
                       slot.status === "removed" ? "text-muted line-through"

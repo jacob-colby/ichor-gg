@@ -19,3 +19,4 @@
 
 :root { color-scheme: dark; }
 body { background: var(--color-bg0); font-family: var(--font-sans); }
+button:not(:disabled) { cursor: pointer; }
