@@ -148,3 +148,44 @@ def test_eligible_flavors_gates_by_damage_type_and_tokens():
     assert set(scoring.eligible_flavors(chiron, weights)) == {"crit", "burst", "bruiser", "anti-tank"}
     assert set(scoring.eligible_flavors(ra, weights)) == {"burst", "bruiser", "anti-tank"}
     assert set(scoring.eligible_flavors(herc, weights)) == {"bruiser", "anti-tank"}
+
+
+def test_god_fit_stat_overlay_and_tag_bonus():
+    weights = scoring.load_weights_default()
+    god = {"name": "Chiron", "damage_type": "physical", "role": "Carry",
+           "specializations": ["Sharpshooter"]}
+    crit_item = {"stats": {"Critical Chance": "20%"}}
+    base = scoring.god_fit_score(crit_item, god, weights, [])
+    boosted = scoring.god_fit_score(crit_item, god, weights, [],
+                                    stat_overlay={"Critical Chance": 3.0})
+    assert boosted >= base
+    penalized = scoring.god_fit_score({"stats": {"Strength": "40"}}, god, weights,
+                                      ["wave-clear"], tag_bonus={"wave-clear": -0.15})
+    assert penalized >= 0.0
+
+
+def test_resolve_profile_composes_mode_and_flavor():
+    weights = scoring.load_weights_default()
+    weights["modes"] = {"joust": {"signals": {"win": 0.0, "pick": 0.0},
+                                  "tag_bonus": {"sustain": 0.25}, "label": "Joust profile"}}
+    weights["flavors"] = {"bruiser": {"stats": {"Health": 1.0}, "tag_bonus": {"sustain": 0.3},
+                                      "max_lifesteal": 2}}
+    p = scoring.resolve_profile(weights, "Joust", "bruiser")
+    assert p["signals"]["win"] == 0.0 and p["signals"]["pick"] == 0.0
+    assert p["signals"]["efficiency"] == weights["signals"]["efficiency"]
+    assert p["stat_overlay"] == {"Health": 1.0}
+    assert p["tag_bonus"]["sustain"] == 0.3
+    assert p["max_lifesteal"] == 2
+    assert p["suppress_underrated"] is True
+    assert p["label"] == "Joust profile"
+
+
+def test_score_god_items_profile_suppresses_underrated():
+    god = {"name": "Chiron", "damage_type": "physical", "role": "Carry", "specializations": ["Sharpshooter"]}
+    items = [{"name": "A", "tier": 3, "stats": {"Strength": "40"}},
+             {"name": "B", "tier": 3, "stats": {"Strength": "40"}}]
+    eff = {n: {"score": 0.5, "tier": "fair"} for n in ["A", "B"]}
+    weights = scoring.load_weights_default()
+    profile = {"signals": {**weights["signals"], "win": 0.0, "pick": 0.0}, "suppress_underrated": True}
+    rows = scoring.score_god_items(god, items, {"builds": []}, eff, weights, {}, profile=profile)
+    assert all(r["underrated"] is False for r in rows)

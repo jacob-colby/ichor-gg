@@ -98,11 +98,15 @@ def _role_stat_map(god, weights):
     return merged
 
 
-def god_fit_score(item, god, weights, item_tags):
+def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=None):
     """Archetype fit in [0,1]: weighted presence of role-relevant stats, plus a
-    small bonus for archetype-relevant tags. NOT damage simulation — see spec."""
+    small bonus for archetype-relevant tags. An optional stat_overlay (flavor
+    weights, which win over the god's role map) and tag_bonus (per-tag deltas,
+    may be negative) skew the fit. NOT damage simulation — see spec."""
     stats = item.get("stats") or {}
     role_map = _role_stat_map(god, weights)
+    if stat_overlay:
+        role_map = {**role_map, **stat_overlay}
     denom = sum(role_map.values()) or 1.0
     stat_fit = 0.0
     for stat, w in role_map.items():
@@ -110,10 +114,12 @@ def god_fit_score(item, god, weights, item_tags):
             stat_fit += w
     stat_fit = min(stat_fit / denom, 1.0)
 
-    # Small tag bonus for offense-oriented tags on damage roles. Conservative.
     offense_tags = {"burst", "execute", "protection-shred"}
-    tag_bonus = 0.1 if any(t in offense_tags for t in (item_tags or [])) else 0.0
-    return min(stat_fit + tag_bonus, 1.0)
+    bonus = 0.1 if any(t in offense_tags for t in (item_tags or [])) else 0.0
+    if tag_bonus:
+        for t in (item_tags or []):
+            bonus += tag_bonus.get(t, 0.0)
+    return max(0.0, min(stat_fit + bonus, 1.0))
 
 
 def lookup_rates(god_build, item_name):
@@ -127,11 +133,12 @@ def lookup_rates(god_build, item_name):
     return 0.0, None
 
 
-def signal_score(item, god, god_build, eff_score, weights, item_tags):
+def signal_score(item, god, god_build, eff_score, weights, item_tags,
+                 stat_overlay=None, tag_bonus=None):
     w = weights["signals"]
     pick, win = lookup_rates(god_build, item["name"])
     win_norm = win if win is not None else 0.5   # neutral when unknown
-    fit = god_fit_score(item, god, weights, item_tags)
+    fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus)
     total = (w["efficiency"] * eff_score + w["win"] * win_norm
              + w["pick"] * pick + w["fit"] * fit)
     # Intrinsic merit for this god — efficiency + fit only, renormalized so it
@@ -171,9 +178,37 @@ def is_buildable(item):
     return tier is None or tier >= 3
 
 
-def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_map):
+def resolve_profile(weights, mode="Conquest", flavor=None):
+    """Compose a mode profile ⊕ flavor into an effective scoring overlay. Mode
+    sets signal-weight overrides + tag bonuses; flavor adds stat weights + tag
+    bonuses (flavor wins on a shared tag) + a lifesteal cap. suppress_underrated
+    is true when the mode zeroes the pick signal (underrated needs pick data)."""
+    mode_prof = (weights.get("modes") or {}).get(mode.lower(), {}) or {}
+    fl = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
+    signals = {**weights["signals"], **(mode_prof.get("signals") or {})}
+    tag_bonus = {**(mode_prof.get("tag_bonus") or {}), **(fl.get("tag_bonus") or {})}
+    return {
+        "signals": signals,
+        "stat_overlay": fl.get("stats") or {},
+        "tag_bonus": tag_bonus,
+        "max_lifesteal": fl.get("max_lifesteal", 1),
+        "suppress_underrated": signals.get("pick", 1) == 0,
+        "label": mode_prof.get("label"),
+        "flavor": flavor,
+    }
+
+
+def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_map, profile=None):
     """Score every buildable, damage-filter-passing item for one god, ranked by
-    total descending."""
+    total descending. An optional profile (from resolve_profile) applies mode
+    signal overrides + stat/tag overlays and can suppress the underrated flag."""
+    profile = profile or {}
+    eff_weights = weights
+    if profile.get("signals"):
+        eff_weights = _deep_merge(weights, {"signals": profile["signals"]})
+    stat_overlay = profile.get("stat_overlay")
+    tag_bonus = profile.get("tag_bonus")
+
     rows = []
     for item in items:
         if not is_buildable(item):
@@ -181,10 +216,16 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         if not passes_damage_filter(item, god):
             continue
         eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
-        row = signal_score(item, god, god_build, eff, weights, tags_map.get(item["name"], []))
+        row = signal_score(item, god, god_build, eff, eff_weights,
+                           tags_map.get(item["name"], []), stat_overlay, tag_bonus)
         row["tier"] = efficiency_scores_map.get(item["name"], {}).get("tier", "fair")
         rows.append(row)
-    mark_underrated(rows, weights)
+
+    if profile.get("suppress_underrated"):
+        for r in rows:
+            r["underrated"] = False
+    else:
+        mark_underrated(rows, weights)
     return sorted(rows, key=lambda r: -r["total"])
 
 
