@@ -83,12 +83,12 @@ def situational_swaps(rows, items_by_name, tags_map, core=None):
                 break
         if pick:
             chosen.add(pick)
-            table.append({"vs_tag": vs_tag, "swap": f"{pick} — {label}"})
+            table.append({"vs_tag": vs_tag, "swap": f"{pick} — {label}", "swap_item": pick})
             continue
         covered = next((n for n in core
                         if _item_qualifies(n, items_by_name, tags_map, needed_tag, prot_stat)), None)
         if covered:
-            table.append({"vs_tag": vs_tag, "swap": f"core already covers {label} ({covered})"})
+            table.append({"vs_tag": vs_tag, "swap": f"core already covers {label} ({covered})", "swap_item": None})
         else:
-            table.append({"vs_tag": vs_tag, "swap": f"(no {label} available in pool)"})
+            table.append({"vs_tag": vs_tag, "swap": f"(no {label} available in pool)", "swap_item": None})
     return table

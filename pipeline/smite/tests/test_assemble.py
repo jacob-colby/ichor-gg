@@ -80,3 +80,16 @@ def test_situational_table_does_not_repeat_same_item_across_rows():
     table = assemble.situational_swaps(rows, ibn, tags_map={})
     swaps_with_item = [r for r in table if "HybridDef" in r["swap"] and "already covers" not in r["swap"]]
     assert len(swaps_with_item) == 1   # claimed by exactly one situation, not both
+
+
+def test_situational_swaps_include_swap_item_name():
+    rows = [_row("A", 0.9), _row("Antiheal", 0.5, tags=["anti-heal"])]
+    ibn = _items_by_name(
+        {"name": "A", "stats": {"Strength": "40"}},
+        {"name": "Antiheal", "stats": {"Strength": "30"}},
+    )
+    table = assemble.situational_swaps(rows, ibn, tags_map={"Antiheal": ["anti-heal"]})
+    sustain = next(r for r in table if r["vs_tag"] == "sustain")
+    assert sustain["swap_item"] == "Antiheal"
+    cc = next(r for r in table if r["vs_tag"] == "heavy_cc")
+    assert cc["swap_item"] is None
