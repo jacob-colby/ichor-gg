@@ -51,3 +51,15 @@ modes:
     signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}
     tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2, wave-clear: -0.15, mobility: -0.1}
     label: "Joust — math + mode profile (no meta win/pick data)"
+
+# ── Starters ──────────────────────────────────────────────────────────────
+# The recommender stamps one starter per god: the highest-priority entry whose
+# damage_types (null = any) include the god's damage type AND whose match_any
+# (null = any) intersects the god's tokenized role+specs. Base -> level-20
+# upgrade pairs verified from the wiki. Death's Toll is the priority-1 default.
+starters:
+  - {base: Gilded Arrow,          upgrade: Sharpshooter's Arrow, damage_types: [physical], match_any: [Carry, Sharpshooter, Hunter], priority: 10}
+  - {base: Conduit Gem,           upgrade: Archmage's Gem,       damage_types: [magical],  match_any: [Mid, Nuker, Mage, Sniper, Carry, Burst], priority: 10}
+  - {base: Bumba's Golden Dagger, upgrade: Bumba's Spear,        damage_types: null,       match_any: [Jungle, Slayer, Assassin], priority: 9}
+  - {base: Warrior's Axe,         upgrade: Sundering Axe,        damage_types: null,       match_any: [Solo, Warrior, Brawler, Tank, Lockdown], priority: 8}
+  - {base: Death's Toll,          upgrade: Death's Embrace,      damage_types: null,       match_any: null, priority: 1}

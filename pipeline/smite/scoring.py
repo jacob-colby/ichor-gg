@@ -252,3 +252,25 @@ def eligible_flavors(god, weights):
             continue
         out.append(name)
     return out
+
+
+def pick_starter(god, weights):
+    """The role-appropriate starter for a god: highest-priority entry in the
+    `starters` config whose damage_types (or null=any) include the god's damage
+    type and whose match_any (or null=any) intersects the god's tokens. Returns
+    {base, upgrade} or None if no starters are configured."""
+    tokens = _god_tokens(god)
+    dt = god.get("damage_type")
+    best = None
+    for s in (weights.get("starters") or []):
+        dts = s.get("damage_types")
+        if dts and dt not in dts:
+            continue
+        match_any = s.get("match_any")
+        if match_any and not (tokens & set(match_any)):
+            continue
+        if best is None or s.get("priority", 0) > best.get("priority", 0):
+            best = s
+    if best is None:
+        return None
+    return {"base": best["base"], "upgrade": best["upgrade"]}

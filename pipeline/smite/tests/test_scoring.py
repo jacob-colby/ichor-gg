@@ -189,3 +189,25 @@ def test_score_god_items_profile_suppresses_underrated():
     profile = {"signals": {**weights["signals"], "win": 0.0, "pick": 0.0}, "suppress_underrated": True}
     rows = scoring.score_god_items(god, items, {"builds": []}, eff, weights, {}, profile=profile)
     assert all(r["underrated"] is False for r in rows)
+
+
+def test_pick_starter_matches_role_and_damage_type():
+    weights = scoring.load_weights_default()
+    weights["starters"] = [
+        {"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow",
+         "damage_types": ["physical"], "match_any": ["Carry", "Sharpshooter", "Hunter"], "priority": 10},
+        {"base": "Conduit Gem", "upgrade": "Archmage's Gem",
+         "damage_types": ["magical"], "match_any": ["Mid", "Nuker", "Mage", "Sniper", "Carry"], "priority": 10},
+        {"base": "Bumba's Golden Dagger", "upgrade": "Bumba's Spear",
+         "damage_types": None, "match_any": ["Jungle", "Slayer", "Assassin"], "priority": 9},
+        {"base": "Death's Toll", "upgrade": "Death's Embrace",
+         "damage_types": None, "match_any": None, "priority": 1},
+    ]
+    phys_carry = {"damage_type": "physical", "role": "Carry", "specializations": ["Sharpshooter"]}
+    mag_carry = {"damage_type": "magical", "role": "Carry Mid", "specializations": ["Sharpshooter"]}
+    jungler = {"damage_type": "physical", "role": "Jungle", "specializations": ["Slayer"]}
+    oddball = {"damage_type": "physical", "role": "Support", "specializations": ["Guardian"]}
+    assert scoring.pick_starter(phys_carry, weights)["base"] == "Gilded Arrow"
+    assert scoring.pick_starter(mag_carry, weights)["base"] == "Conduit Gem"
+    assert scoring.pick_starter(jungler, weights)["base"] == "Bumba's Golden Dagger"
+    assert scoring.pick_starter(oddball, weights)["base"] == "Death's Toll"
