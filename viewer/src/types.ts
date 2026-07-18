@@ -77,6 +77,7 @@ export interface CuratedBuildEntry {
   slot_order: string[];
   situational_swaps?: SituationalSwap[];
   notes?: string;
+  starter?: { base: string; upgrade: string };
 }
 
 export type BuildEntry = CommunityBuildEntry | CuratedBuildEntry;

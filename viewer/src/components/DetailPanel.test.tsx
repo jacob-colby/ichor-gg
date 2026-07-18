@@ -259,6 +259,18 @@ describe("DetailPanel", () => {
     expect(screen.getByText("JoustItem")).toBeInTheDocument();
   });
 
+  it("renders the starter line for a build that has one", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
+        rationale: "", starter: { base: "Gilded Arrow", upgrade: "Sharpshooter's Arrow" } },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    expect(screen.getByText(/STARTER/i)).toBeInTheDocument();
+    expect(screen.getByText("Gilded Arrow")).toBeInTheDocument();
+    expect(screen.getByText("Sharpshooter's Arrow")).toBeInTheDocument();
+  });
+
   it("labels suggested tabs by archetype", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "suggested", archetype: "core", slot_order: ["X"], situational_swaps: [], rationale: "" },

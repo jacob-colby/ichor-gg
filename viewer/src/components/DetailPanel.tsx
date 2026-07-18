@@ -136,6 +136,35 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange }:
         ))}
       </div>
 
+      {!community && active.starter && (
+        <div className="mb-4">
+          <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">STARTER</div>
+          <div className="flex items-center gap-2">
+            {[active.starter.base, active.starter.upgrade].map((name, i) => (
+              <div key={name} className="flex items-center gap-2">
+                {i === 1 && <span className="text-muted">→</span>}
+                <Tooltip content={<ItemTooltipBody item={itemsByName.get(name)} name={name} />}>
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={`/icons/${iconSlug(name)}.png`}
+                      alt=""
+                      className="h-6 w-6 flex-none rounded bg-bg2"
+                      onError={(e) => {
+                        const img = e.currentTarget;
+                        if (img.dataset.retried) { img.style.visibility = "hidden"; return; }
+                        img.dataset.retried = "1";
+                        img.src = `/icons/${iconSlug(name)}.png?r=${Date.now()}`;
+                      }}
+                    />
+                    <span className="text-sm text-ink">{name}</span>
+                  </div>
+                </Tooltip>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="flex gap-6">
         <div className="min-w-[220px]">
           <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">SLOT ORDER</div>
