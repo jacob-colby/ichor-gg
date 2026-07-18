@@ -11,3 +11,43 @@ underrated:
   # rarely picked. Quality is judged relative to the god's own item pool.
   top_quality_frac: 0.30   # consider only the top 30% by quality...
   max_pick: 0.15           # ...and flag those whose pick rate is at most this
+
+# ── Build flavors ─────────────────────────────────────────────────────────
+# Each flavor is a scoring overlay producing an extra "suggested" build. It's
+# emitted only for gods whose damage type is in `damage_types` (null = any) and
+# whose tokenized role+specs intersect `match_any` (null = any). `stats` skews
+# god-fit; `tag_bonus` rewards tagged items; `max_lifesteal` caps sustain items.
+flavors:
+  crit:
+    damage_types: [physical]
+    match_any: [Carry, Sharpshooter]
+    stats: {Critical Chance: 1.5, Attack Speed: 1.2, Strength: 0.8}
+    max_lifesteal: 1
+  burst:
+    damage_types: null
+    match_any: [Nuker, Burst, Slayer, Sniper, Mid]
+    stats: {Strength: 1.0, Intelligence: 1.0, Penetration: 1.5, Cooldown Rate: 1.0}
+    max_lifesteal: 1
+  bruiser:
+    damage_types: null
+    match_any: null
+    stats: {Health: 1.0, Physical Protection: 0.8, Magical Protection: 0.8}
+    tag_bonus: {sustain: 0.3}
+    max_lifesteal: 2
+  anti-tank:
+    damage_types: null
+    match_any: null
+    stats: {Penetration: 2.0}
+    tag_bonus: {protection-shred: 0.3}
+    max_lifesteal: 1
+
+# ── Game modes ────────────────────────────────────────────────────────────
+# `conquest` is the default (empty = no overlay, meta-backed). `joust` drops the
+# win/pick signals (SmiteBrain has no Joust data) and reweights toward what wins
+# on a single lane: sustain / anti-heal / aura up, wave-clear / mobility down.
+modes:
+  conquest: {}
+  joust:
+    signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}
+    tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2, wave-clear: -0.15, mobility: -0.1}
+    label: "Joust — math + mode profile (no meta win/pick data)"
