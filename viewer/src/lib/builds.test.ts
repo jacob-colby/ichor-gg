@@ -4,6 +4,7 @@ import {
   slotItemName,
   iconSlug,
   applySwap,
+  tabLabel,
 } from "./builds";
 import type { CommunityBuildEntry, CuratedBuildEntry } from "../types";
 
@@ -74,5 +75,18 @@ describe("applySwap", () => {
   });
   it("adds to an empty build", () => {
     expect(applySwap([], "X")).toEqual([{ name: "X", status: "added" }]);
+  });
+});
+
+describe("tabLabel", () => {
+  it("labels a suggested entry by its archetype", () => {
+    expect(tabLabel({ source: "suggested", archetype: "crit", slot_order: [] } as any)).toBe("crit");
+  });
+  it("falls back to source for community/mine", () => {
+    expect(tabLabel({ source: "community", slot_order: [] } as any)).toBe("community");
+    expect(tabLabel({ source: "mine", slot_order: [] } as any)).toBe("mine");
+  });
+  it("falls back to 'suggested' when a suggested entry has no archetype", () => {
+    expect(tabLabel({ source: "suggested", slot_order: [] } as any)).toBe("suggested");
   });
 });
