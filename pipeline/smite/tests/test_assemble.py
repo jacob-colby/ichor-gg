@@ -30,6 +30,21 @@ def test_assemble_core_respects_constraints():
     assert core[0] == "A"                            # highest score first
 
 
+def test_assemble_core_respects_max_lifesteal():
+    rows = [_row("LS1", 0.9, tags=["sustain"]), _row("LS2", 0.85, tags=["sustain"]),
+            _row("A", 0.8), _row("B", 0.7), _row("C", 0.6), _row("D", 0.5), _row("E", 0.4)]
+    ibn = _items_by_name(
+        {"name": "LS1", "stats": {"Strength": "30"}}, {"name": "LS2", "stats": {"Strength": "30"}},
+        {"name": "A", "stats": {"Strength": "40"}}, {"name": "B", "stats": {"Strength": "40"}},
+        {"name": "C", "stats": {"Strength": "40"}}, {"name": "D", "stats": {"Strength": "40"}},
+        {"name": "E", "stats": {"Strength": "40"}},
+    )
+    one = assemble.assemble_core(rows, ibn, n=6, max_lifesteal=1)
+    assert sum(1 for x in one if x in {"LS1", "LS2"}) == 1
+    two = assemble.assemble_core(rows, ibn, n=6, max_lifesteal=2)
+    assert sum(1 for x in two if x in {"LS1", "LS2"}) == 2
+
+
 def test_situational_table_reports_missing_tag():
     rows = [_row("A", 0.9), _row("B", 0.8)]
     ibn = _items_by_name(
