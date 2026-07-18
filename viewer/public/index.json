@@ -1821,7 +1821,259 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: The World Stone."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: The World Stone."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Spear of Desolation",
+            "Soul Gem",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "The World Stone",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: The World Stone."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "The World Stone",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Shifter's Shield \u2014 magical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: The World Stone."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Spear of Desolation",
+            "Soul Gem",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "The World Stone",
+            "Book of Thoth"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The World Stone."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Agni",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Shifter's Shield \u2014 magical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     },
@@ -1903,7 +2155,329 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Jotunn's Revenge, Hydra's Lament, The Crusher, The Reaper, Rage."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, Hydra's Lament, The Crusher, The Reaper, Rage."
+        },
+        {
+          "source": "suggested",
+          "archetype": "crit",
+          "slot_order": [
+            "Riptalon",
+            "Jotunn's Revenge",
+            "Dagger of Frenzy",
+            "Hydra's Lament",
+            "Rage",
+            "The Crusher"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, Hydra's Lament, Rage, The Crusher, The Reaper."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Riptalon",
+            "Jotunn's Revenge",
+            "Hydra's Lament",
+            "The Crusher",
+            "Dagger of Frenzy",
+            "Rage"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, Hydra's Lament, The Crusher, The Reaper, Rage."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Riptalon",
+            "Devourer's Gauntlet",
+            "Dagger of Frenzy",
+            "Jotunn's Revenge",
+            "Hydra's Lament",
+            "The Crusher"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Shifter's Shield \u2014 magical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: The Reaper, Jotunn's Revenge, Hydra's Lament, The Crusher, Rage."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Riptalon",
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Dagger of Frenzy",
+            "Hydra's Lament",
+            "Heartseeker"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Crusher, The Reaper, Hydra's Lament, Heartseeker."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Cernunnos",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Riptalon",
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Hydra's Lament",
+            "Rage",
+            "Heartseeker"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "crit",
+          "slot_order": [
+            "Riptalon",
+            "Jotunn's Revenge",
+            "Rage",
+            "The Crusher",
+            "Hydra's Lament",
+            "Deathbringer"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "The Reaper",
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Hydra's Lament",
+            "Heartseeker",
+            "Titan's Bane"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Riptalon",
+            "The Reaper",
+            "Jotunn's Revenge",
+            "Hydra's Lament",
+            "The Crusher",
+            "Rage"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Shifter's Shield \u2014 magical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Riptalon",
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Heartseeker",
+            "Titan's Bane",
+            "Hydra's Lament"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     },
@@ -1985,7 +2559,329 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Hydra's Lament, The Reaper, Riptalon, Rage."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Hydra's Lament, The Reaper, Riptalon, Rage."
+        },
+        {
+          "source": "suggested",
+          "archetype": "crit",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Titan's Bane",
+            "Transcendence",
+            "Hydra's Lament",
+            "Rage"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for this god: Hydra's Lament, Rage, The Reaper, Riptalon."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Titan's Bane",
+            "Transcendence",
+            "Hydra's Lament",
+            "Heartseeker"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Hydra's Lament, The Reaper, Riptalon, Rage."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Crusher",
+            "The Reaper",
+            "Transcendence",
+            "Titan's Bane",
+            "Riptalon"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Shifter's Shield \u2014 magical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: The Reaper, Riptalon, Hydra's Lament, Rage."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Titan's Bane",
+            "Transcendence",
+            "Heartseeker",
+            "The Reaper"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Heartseeker, The Reaper, Riptalon, Hydra's Lament."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Chiron",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "The Reaper",
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Hydra's Lament",
+            "Rage",
+            "Heartseeker"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "crit",
+          "slot_order": [
+            "Riptalon",
+            "Jotunn's Revenge",
+            "Rage",
+            "The Crusher",
+            "Hydra's Lament",
+            "Deathbringer"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "The Reaper",
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Hydra's Lament",
+            "Heartseeker",
+            "Titan's Bane"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "The Reaper",
+            "Riptalon",
+            "Jotunn's Revenge",
+            "Hydra's Lament",
+            "The Crusher",
+            "Rage"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Shifter's Shield \u2014 magical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "The Reaper",
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Heartseeker",
+            "Titan's Bane",
+            "Hydra's Lament"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     },
@@ -2067,7 +2963,259 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Soul Gem, The World Stone, Magi's Cloak."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Soul Gem, The World Stone, Magi's Cloak."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Spear of Desolation",
+            "Soul Gem",
+            "Rod of Tahuti",
+            "Obsidian Shard",
+            "The World Stone",
+            "Book of Thoth"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Soul Gem, The World Stone."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "Soul Gem",
+            "Dwarven Plate",
+            "Genji's Guard",
+            "Spear of Desolation"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "core already covers magical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Magi's Cloak, Shifter's Shield, Soul Gem, Dwarven Plate, Genji's Guard."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "Obsidian Shard",
+            "The World Stone",
+            "Soul Gem",
+            "Book of Thoth"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The World Stone, Soul Gem."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Chronos",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Soul Gem",
+            "The World Stone",
+            "Obsidian Shard",
+            "Magi's Cloak",
+            "Spear of Desolation",
+            "Gem of Isolation"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "Dwarven Plate",
+            "Soul Gem",
+            "Genji's Guard",
+            "The World Stone"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "core already covers magical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "The World Stone",
+            "Soul Gem",
+            "Obsidian Shard",
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     },
@@ -2149,7 +3297,189 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Hydra's Lament, The Crusher, Jotunn's Revenge, The Reaper, Dagger of Frenzy, Rage."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Hydra's Lament, The Crusher, Jotunn's Revenge, The Reaper, Dagger of Frenzy, Rage."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Shifter's Shield",
+            "Dwarven Plate",
+            "Magi's Cloak",
+            "Genji's Guard",
+            "The Reaper",
+            "Riptalon"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "core already covers magical protection (Shifter's Shield)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Shifter's Shield)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Magi's Cloak, The Reaper, Riptalon."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Reaper",
+            "The Crusher",
+            "Titan's Bane",
+            "Heartseeker",
+            "Shifter's Shield"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Reaper, Riptalon, The Crusher, Titan's Bane, Heartseeker."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Hercules",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "The Reaper",
+            "Hydra's Lament",
+            "The Crusher",
+            "Jotunn's Revenge",
+            "Dagger of Frenzy",
+            "Rage"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "Dwarven Plate",
+            "The Reaper",
+            "Genji's Guard",
+            "Riptalon"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "core already covers magical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Reaper",
+            "The Crusher",
+            "Titan's Bane",
+            "Heartseeker",
+            "Hydra's Lament"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     },
@@ -2231,7 +3561,259 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Obsidian Shard, The World Stone."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, The World Stone."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Spear of Desolation",
+            "Soul Gem",
+            "Rod of Tahuti",
+            "Obsidian Shard",
+            "The World Stone",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, The World Stone."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "Obsidian Shard",
+            "The World Stone",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Shifter's Shield \u2014 magical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, The World Stone."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "Soul Gem",
+            "Obsidian Shard",
+            "The World Stone",
+            "Book of Thoth"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, The World Stone."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Morgan Le Fay",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Shifter's Shield \u2014 magical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     },
@@ -2313,7 +3895,259 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Obsidian Shard, Nimble Ring, Magi's Cloak."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Nimble Ring, Magi's Cloak."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Spear of Desolation",
+            "Obsidian Shard",
+            "Soul Gem",
+            "Rod of Tahuti",
+            "The World Stone",
+            "Gem of Isolation"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Obsidian Shard",
+            "Soul Gem",
+            "Spear of Desolation",
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "Rod of Tahuti"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Magi's Cloak, Shifter's Shield, Nimble Ring, Genji's Guard."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Obsidian Shard",
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "Soul Gem",
+            "The World Stone",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Princess Bari",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Soul Gem",
+            "The World Stone",
+            "Obsidian Shard",
+            "Magi's Cloak",
+            "Spear of Desolation",
+            "Gem of Isolation"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Soul Gem",
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "Dwarven Plate",
+            "Nimble Ring",
+            "Genji's Guard"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "core already covers magical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Soul Gem",
+            "The World Stone",
+            "Obsidian Shard",
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     },
@@ -2395,7 +4229,259 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: The World Stone, Magi's Cloak."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: The World Stone, Magi's Cloak."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Spear of Desolation",
+            "Soul Gem",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "The World Stone",
+            "Book of Thoth"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: The World Stone."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Soul Gem",
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "Obsidian Shard",
+            "Spear of Desolation",
+            "Dwarven Plate"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Magi's Cloak, Shifter's Shield, Dwarven Plate, Genji's Guard."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Obsidian Shard",
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "Soul Gem",
+            "The World Stone",
+            "Book of Thoth"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The World Stone."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Ra",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Soul Gem",
+            "The World Stone",
+            "Obsidian Shard",
+            "Magi's Cloak",
+            "Spear of Desolation",
+            "Gem of Isolation"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Soul Gem",
+            "Spear of Desolation",
+            "The World Stone",
+            "Obsidian Shard",
+            "Rod of Tahuti",
+            "Chronos' Pendant"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "Dwarven Plate",
+            "Soul Gem",
+            "Genji's Guard",
+            "The World Stone"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "core already covers magical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "The World Stone",
+            "Soul Gem",
+            "Obsidian Shard",
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "Magi's Cloak"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     },
@@ -2477,7 +4563,259 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: The Reaper, The Crusher, Dagger of Frenzy, Rage."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: The Reaper, The Crusher, Dagger of Frenzy, Rage."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "Heartseeker",
+            "The Reaper",
+            "Hydra's Lament",
+            "Titan's Bane",
+            "The Crusher"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: The Reaper, The Crusher."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "The Reaper",
+            "Dwarven Plate",
+            "Hydra's Lament",
+            "Heartseeker"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Magi's Cloak, Shifter's Shield, The Reaper, Dwarven Plate, Genji's Guard, Riptalon."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Reaper",
+            "Heartseeker",
+            "Titan's Bane",
+            "The Crusher",
+            "Hydra's Lament"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Reaper, Riptalon, The Crusher."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Susano",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "The Reaper",
+            "Hydra's Lament",
+            "The Crusher",
+            "Jotunn's Revenge",
+            "Dagger of Frenzy",
+            "Rage"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "The Reaper",
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Hydra's Lament",
+            "Heartseeker",
+            "Titan's Bane"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "Dwarven Plate",
+            "The Reaper",
+            "Genji's Guard",
+            "Riptalon"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "core already covers magical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "The Reaper",
+            "The Crusher",
+            "Titan's Bane",
+            "Heartseeker",
+            "Hydra's Lament"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     },
@@ -2559,7 +4897,329 @@
               "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Rage, Deathbringer, The Crusher, The Reaper."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Rage, Deathbringer, The Crusher, The Reaper."
+        },
+        {
+          "source": "suggested",
+          "archetype": "crit",
+          "slot_order": [
+            "Transcendence",
+            "Hydra's Lament",
+            "Jotunn's Revenge",
+            "Rage",
+            "Deathbringer",
+            "Heartseeker"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for this god: Rage, Deathbringer, Dagger of Frenzy, Riptalon, The Crusher."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "Hydra's Lament",
+            "Transcendence",
+            "Heartseeker",
+            "Titan's Bane",
+            "The Crusher"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: The Crusher, The Reaper, Riptalon."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Transcendence",
+            "Hydra's Lament",
+            "Jotunn's Revenge",
+            "The Reaper",
+            "Heartseeker",
+            "Riptalon"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Shifter's Shield \u2014 magical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Dwarven Plate \u2014 physical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: The Reaper, Riptalon, Magi's Cloak, Shifter's Shield, Rage."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Jotunn's Revenge",
+            "Heartseeker",
+            "Transcendence",
+            "Titan's Bane",
+            "The Crusher",
+            "Hydra's Lament"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Crusher, The Reaper, Riptalon."
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Ullr",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Rage",
+            "The Reaper",
+            "Deathbringer",
+            "Hydra's Lament",
+            "The Crusher",
+            "Jotunn's Revenge"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "crit",
+          "slot_order": [
+            "Rage",
+            "Deathbringer",
+            "Riptalon",
+            "Hydra's Lament",
+            "Dagger of Frenzy",
+            "The Crusher"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "burst",
+          "slot_order": [
+            "The Reaper",
+            "Jotunn's Revenge",
+            "The Crusher",
+            "Hydra's Lament",
+            "Heartseeker",
+            "Titan's Bane"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "The Reaper",
+            "Riptalon",
+            "Magi's Cloak",
+            "Shifter's Shield",
+            "Hydra's Lament",
+            "Rage"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Dwarven Plate \u2014 magical protection",
+              "swap_item": "Dwarven Plate"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "core already covers physical protection (Magi's Cloak)",
+              "swap_item": null
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "The Reaper",
+            "The Crusher",
+            "Jotunn's Revenge",
+            "Heartseeker",
+            "Titan's Bane",
+            "Rage"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
         }
       ]
     }
