@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import type { BuildEntry, BuildNote, God, Item } from "../types";
-import { isCommunityEntry, slotItemName, iconSlug, applySwap } from "../lib/builds";
+import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
 import { Tooltip } from "./Tooltip";
 
 const VS_LABELS: Record<string, string> = {
@@ -15,6 +15,8 @@ interface DetailPanelProps {
   godData?: God;
   items: Item[];
   builds: BuildNote[];
+  mode: string;
+  onModeChange: (mode: string) => void;
 }
 
 function ItemTooltipBody({ item, name }: { item?: Item; name: string }) {
@@ -48,8 +50,10 @@ function ItemTooltipBody({ item, name }: { item?: Item; name: string }) {
   );
 }
 
-export function DetailPanel({ god, godData, items, builds }: DetailPanelProps) {
-  const note = builds.find((b) => b.god === god);
+export function DetailPanel({ god, godData, items, builds, mode, onModeChange }: DetailPanelProps) {
+  const godNotes = builds.filter((b) => b.god === god);
+  const note = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
+  const modes = godNotes.map((n) => n.mode);
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const itemsByName = useMemo(() => {
@@ -99,7 +103,20 @@ export function DetailPanel({ god, godData, items, builds }: DetailPanelProps) {
             {godData ? `${godData.pantheon} · ${godData.role} · ${godData.damage_type}` : note.mode}
           </div>
         </div>
-        <span className="ml-auto rounded bg-bg2 px-2 py-0.5 text-xs text-muted">{note.mode}</span>
+        <div className="ml-auto flex overflow-hidden rounded-md border border-line">
+          {modes.map((m) => (
+            <button
+              key={m}
+              type="button"
+              onClick={() => onModeChange(m)}
+              className={`px-3 py-1 font-display text-xs font-semibold tracking-wide ${
+                m === note.mode ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"
+              }`}
+            >
+              {m}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div role="tablist" className="mb-4 flex gap-1">
@@ -114,7 +131,7 @@ export function DetailPanel({ god, godData, items, builds }: DetailPanelProps) {
               i === activeIndex ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"
             }`}
           >
-            {entry.source}
+            {tabLabel(entry)}
           </button>
         ))}
       </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import { describe, it, expect } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { DetailPanel } from "./DetailPanel";
@@ -30,25 +31,25 @@ const chironBuild: BuildNote = {
 
 describe("DetailPanel", () => {
   it("renders one tab per available source", () => {
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} />);
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
     expect(screen.getByRole("tab", { name: /community/i })).toBeInTheDocument();
     expect(screen.getByRole("tab", { name: /mine/i })).toBeInTheDocument();
     expect(screen.queryByRole("tab", { name: /^pro$/i })).not.toBeInTheDocument();
   });
 
   it("shows the community tab's slot order with pick/win badges by default", () => {
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} />);
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
     expect(screen.getByText("Transcendence")).toBeInTheDocument();
     expect(screen.getByText(/60%.*49%/)).toBeInTheDocument();
   });
 
   it("hides the swap column for the community tab (no situational_swaps)", () => {
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} />);
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
     expect(screen.queryByText(/situational/i)).not.toBeInTheDocument();
   });
 
   it("switching to the mine tab shows plain item names with no pick/win badge, plus the swap column", () => {
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} />);
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
     fireEvent.click(screen.getByRole("tab", { name: /mine/i }));
     expect(screen.getByText("Devourer's Gauntlet")).toBeInTheDocument();
     expect(screen.queryByText(/%.*%/)).not.toBeInTheDocument();
@@ -57,7 +58,7 @@ describe("DetailPanel", () => {
   });
 
   it("shows a fallback message when the god has no build note for this mode yet", () => {
-    render(<DetailPanel god="SomeNewGod" godData={undefined} items={[]} builds={[]} />);
+    render(<DetailPanel god="SomeNewGod" godData={undefined} items={[]} builds={[]} mode="Conquest" onModeChange={() => {}} />);
     expect(screen.getByText(/no build data yet/i)).toBeInTheDocument();
   });
 
@@ -71,7 +72,7 @@ describe("DetailPanel", () => {
         rationale: "x",
       }],
     }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any} />);
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any} mode="Conquest" onModeChange={() => {}} />);
     fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
     expect(screen.getByText("Cloak")).toBeInTheDocument();      // added item shows
     expect(screen.getByText("C")).toHaveClass("line-through");  // removed slot struck
@@ -92,8 +93,8 @@ describe("DetailPanel", () => {
         },
       ],
     };
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[suggestedBuild]} />);
-    expect(screen.getByRole("tab", { name: /suggested/i })).toBeInTheDocument();
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[suggestedBuild]} mode="Conquest" onModeChange={() => {}} />);
+    expect(screen.getByRole("tab", { name: /core/i })).toBeInTheDocument();
     expect(screen.getByText(/Top weighted-score core/)).toBeInTheDocument();
   });
 
@@ -131,7 +132,7 @@ describe("DetailPanel", () => {
       ],
     };
 
-    const { container } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[build]} />);
+    const { container } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[build]} mode="Conquest" onModeChange={() => {}} />);
 
     // Simulate the second slot's icon (BrokenIcon) failing to load on the
     // community tab. Scope to slot icons (alt="") so the god headshot in the
@@ -194,7 +195,7 @@ describe("DetailPanel", () => {
   }
 
   it("resets to tab 0 (no stale/inconsistent selection) when the current god's entries shrink on reload", () => {
-    const { rerender } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[makeThreeEntryBuild()]} />);
+    const { rerender } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[makeThreeEntryBuild()]} mode="Conquest" onModeChange={() => {}} />);
 
     // Select the second "mine" tab (index 2 — the "ability path" entry).
     fireEvent.click(screen.getAllByRole("tab")[2]);
@@ -204,7 +205,7 @@ describe("DetailPanel", () => {
     // and every object is a fresh reference (as a real re-fetch produces).
     const reloaded = makeThreeEntryBuild();
     reloaded.builds = reloaded.builds.slice(0, 2); // community + crit path only
-    rerender(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[reloaded]} />);
+    rerender(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[reloaded]} mode="Conquest" onModeChange={() => {}} />);
 
     const tabsAfter = screen.getAllByRole("tab");
     expect(tabsAfter).toHaveLength(2);
@@ -215,7 +216,7 @@ describe("DetailPanel", () => {
   });
 
   it("resets to tab 0 (not a stale index pointing at a different entry) when entries reorder on reload", () => {
-    const { rerender } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[makeThreeEntryBuild()]} />);
+    const { rerender } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[makeThreeEntryBuild()]} mode="Conquest" onModeChange={() => {}} />);
 
     // Select the second "mine" tab (index 2 — the "ability path" entry).
     fireEvent.click(screen.getAllByRole("tab")[2]);
@@ -227,7 +228,7 @@ describe("DetailPanel", () => {
     const reordered = makeThreeEntryBuild();
     const [community, mineA, mineB] = reordered.builds;
     reordered.builds = [community, mineB, mineA];
-    rerender(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[reordered]} />);
+    rerender(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[reordered]} mode="Conquest" onModeChange={() => {}} />);
 
     const tabsAfter = screen.getAllByRole("tab");
     expect(tabsAfter).toHaveLength(3);
@@ -238,5 +239,33 @@ describe("DetailPanel", () => {
     expect(screen.getByText("Transcendence")).toBeInTheDocument();
     expect(screen.queryByText("Crit Path Item")).not.toBeInTheDocument();
     expect(screen.queryByText("Ability Path Item")).not.toBeInTheDocument();
+  });
+
+  it("switches build set when the mode toggle changes", () => {
+    const builds = [
+      { type: "smite-build", god: "Chiron", mode: "Conquest",
+        builds: [{ source: "suggested", archetype: "core", slot_order: ["ConItem"], situational_swaps: [], rationale: "c" }] },
+      { type: "smite-build", god: "Chiron", mode: "Joust",
+        builds: [{ source: "suggested", archetype: "core", slot_order: ["JoustItem"], situational_swaps: [], rationale: "j" }] },
+    ];
+    function Harness() {
+      const [mode, setMode] = React.useState("Conquest");
+      return <DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                          mode={mode} onModeChange={setMode} />;
+    }
+    render(<Harness />);
+    expect(screen.getByText("ConItem")).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /joust/i }));
+    expect(screen.getByText("JoustItem")).toBeInTheDocument();
+  });
+
+  it("labels suggested tabs by archetype", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["X"], situational_swaps: [], rationale: "" },
+      { source: "suggested", archetype: "crit", slot_order: ["Y"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    expect(screen.getByRole("tab", { name: /crit/i })).toBeInTheDocument();
   });
 });

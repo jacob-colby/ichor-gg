@@ -6,6 +6,7 @@ import { DetailPanel } from "./components/DetailPanel";
 function App() {
   const { data, error, reload } = useIndexData();
   const [selectedGod, setSelectedGod] = useState<string | null>(null);
+  const [mode, setMode] = useState("Conquest");
 
   if (error) {
     return (
@@ -32,6 +33,8 @@ function App() {
             godData={data.gods.find((g) => g.name === selectedGod)}
             items={data.items}
             builds={data.builds}
+            mode={mode}
+            onModeChange={setMode}
           />
         ) : (
           <p className="text-muted">Select a god from the rail.</p>
