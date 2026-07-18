@@ -32,37 +32,50 @@ existing per-god scoring, producing a distinct `suggested` build. Flavors are
 defined in `_weights.yaml` (user-tunable) so the roster and weights aren't
 hardcoded:
 
+The real god data uses lane/spec vocabulary, not class names: `role` is a lane
+string like `"Mid"`, `"Carry Jungle"`, `"Solo"`; `specializations` are tags like
+`Nuker`, `Sharpshooter`, `Burst Damage`, `Brawler`, `Slayer`, `Sniper`,
+`Lockdown`. Eligibility matches against the **tokenized** `role` + `specs` (split
+on spaces into a token set), so `damage_types` (list, `null` = any) AND
+`match_any` (token list, `null` = any):
+
 ```yaml
 flavors:
   crit:
-    damage_type: physical            # only physical gods
-    roles: [Hunter, Carry, Sharpshooter]   # and a basic-attack role
+    damage_types: [physical]
+    match_any: [Carry, Sharpshooter]     # basic-attack carries
     stats: {Critical Chance: 1.5, Attack Speed: 1.2, Strength: 0.8}
     max_lifesteal: 1
   burst:
-    roles: [Mage, Nuker, Assassin, Warrior]   # any damage type
+    damage_types: null                   # any
+    match_any: [Nuker, Burst, Slayer, Sniper, Mid]   # ability/nuke gods
     stats: {Strength: 1.0, Intelligence: 1.0, Penetration: 1.5, Cooldown Rate: 1.0}
     max_lifesteal: 1
   bruiser:
-    roles: null                      # all damage gods
+    damage_types: null
+    match_any: null                      # all damage gods
     stats: {Health: 1.0, Physical Protection: 0.8, Magical Protection: 0.8}
     tag_bonus: {sustain: 0.3}
     max_lifesteal: 2
   anti-tank:
-    roles: null
+    damage_types: null
+    match_any: null
     stats: {Penetration: 2.0}
     tag_bonus: {protection-shred: 0.3}
     max_lifesteal: 1
 ```
 
-**Eligibility** — `eligible_flavors(god)` returns the flavors where:
-- the flavor's `damage_type` (if set) equals the god's, **and**
-- the flavor's `roles` is `null`, **or** the god's `role`/`specializations`
-  intersect the flavor's `roles`.
+**Eligibility** — `eligible_flavors(god)` returns the flavors where the god's
+`damage_type` is in `damage_types` (or it's `null`) **and** `match_any` is
+`null` **or** intersects the god's token set (`role` split on spaces + each
+`specializations` entry split on spaces).
 
-So Chiron (Carry/Sharpshooter/Nuker, physical) → crit, burst, bruiser,
-anti-tank; Ra (Mage, magical) → burst, bruiser, anti-tank (no crit); Hercules
-(Warrior, physical) → burst, bruiser, anti-tank (no crit).
+Verified against the real 10-god pool: crit → Chiron, Cernunnos, Ullr (physical
+carries); burst → everyone except Hercules (all have an ability/nuke token or a
+Mid lane); bruiser + anti-tank → all. So Chiron → crit/burst/bruiser/anti-tank;
+Ra (Mid, magical) → burst/bruiser/anti-tank; Hercules (Solo, Brawler/Tank) →
+bruiser/anti-tank only (fits a tanky brawler). Every god gets ≥2 flavors + core,
+so a build set is never empty.
 
 **How a flavor scores** — the flavor's `stats` map is merged over the god's
 `role_stats` (flavor weights win) when computing god-fit, and its `tag_bonus`
@@ -100,6 +113,13 @@ Joust builds are `suggested` only (core + eligible flavors) — no community/min
 (those are Conquest concepts). Each Joust build's rationale carries the profile
 `label` so the "no meta data" caveat is visible in the viewer.
 
+**Underrated suppression:** the "underrated for this god" callout depends on
+pick-rate data to mean anything (good-but-*unpopular*). Under the Joust profile
+every item has pick = 0, so the flag would fire indiscriminately. Any mode whose
+profile zeroes the pick signal omits the underrated line from its rationale —
+Joust rationales describe the build + carry the profile label, without the
+underrated claim.
+
 ### Composition
 
 A build is `(mode, flavor)`: the mode profile sets signal weights + mode
@@ -129,7 +149,9 @@ community entry (written by `refresh`, untouched) and any `mine` entries.
 ### Viewer
 
 - **Mode toggle** (segmented Conquest | Joust, top-right of the detail header).
-  Defaults to Conquest. Persists per session, resets sensibly on god change.
+  Defaults to Conquest and **persists across god changes** (if you're browsing
+  Joust builds, clicking another god keeps you in Joust). The active build tab
+  resets to the first (Core) whenever the god or mode changes.
 - **Build tabs** show the selected mode's entries. Suggested entries are
   labeled by `archetype` (Core / Crit / Burst / Bruiser / Anti-tank); community
   and mine keep their source labels. Tabs wrap to a second row if needed.
