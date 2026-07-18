@@ -52,10 +52,13 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of the
-    Magus, Doom Orb, The World Stone, Chronos'' Pendant, Death Metal, Rod of Asclepius,
-    Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Helm of Radiance,
-    Bancroft''s Talon, Divine Ruin, Polynomicon, Jade Scepter, Bragi''s Harp, Lifebinder,
-    Dreamer''s Idol, Bracer of The Abyss, Genji''s Guard.'
+    Magus, Doom Orb, The World Stone, Chronos'' Pendant, Rod of Asclepius, Blood-Bound
+    Book, Ancient Signet, Ethereal Staff, Gem of Focus, Divine Ruin, Death Metal,
+    Bancroft''s Talon, Polynomicon, Bragi''s Harp, Helm of Radiance, Lifebinder, Alchemist
+    Coat, Jade Scepter, Dreamer''s Idol, Gem of Isolation.'
+  starter: &id001
+    base: Conduit Gem
+    upgrade: Archmage's Gem
 - source: suggested
   archetype: burst
   slot_order:
@@ -73,17 +76,18 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus,
-    Death Metal, Doom Orb, The World Stone, Bragi''s Harp, Chronos'' Pendant, Genji''s
-    Guard, Triton''s Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal
-    Staff, Gem of Focus, Breastplate of Valor, Helm of Radiance, Bancroft''s Talon,
-    Divine Ruin, Polynomicon, Screeching Gargoyle, Jade Scepter, Shield of the Phoenix.'
+    Doom Orb, Death Metal, The World Stone, Bragi''s Harp, Chronos'' Pendant, Triton''s
+    Conch, Gem of Focus, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal
+    Staff, Divine Ruin, Genji''s Guard, Bancroft''s Talon, Polynomicon, Chandra''s
+    Grace, Helm of Radiance, Breastplate of Valor, Lifebinder, Screeching Gargoyle.'
+  starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -91,12 +95,12 @@ builds:
   - Spear of Desolation
   - Amanita Charm
   - Obsidian Shard
-  - Kinetic Cuirass
-  - Eye of Providence
+  - The Cosmic Horror
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
@@ -107,12 +111,13 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Obsidian Shard, Rod of Asclepius, Blood-Bound Book, Shield
-    of the Phoenix, Gluttonous Grimoire, Bancroft''s Talon, Kinetic Cuirass, Eye of
-    Providence, The Cosmic Horror, Lifebinder, Spirit Robe, Spear of the Magus, Phoenix
-    Feather, Sphere of Negation, Helm of Radiance, Glorious Pridwen, Chandra''s Grace,
-    Genji''s Guard, Doom Orb, Erosion, Death Metal, Breastplate of Valor, The World
-    Stone, Spectral Armor.'
+    this god: Amanita Charm, Obsidian Shard, Rod of Asclepius, Blood-Bound Book, Bancroft''s
+    Talon, Shield of the Phoenix, Gluttonous Grimoire, The Cosmic Horror, Lifebinder,
+    Spirit Robe, Kinetic Cuirass, Spear of the Magus, Chandra''s Grace, Eye of Providence,
+    Glorious Pridwen, Phoenix Feather, Sphere of Negation, Doom Orb, Helm of Radiance,
+    The World Stone, Genji''s Guard, Ancient Signet, Ethereal Staff, Chronos'' Pendant,
+    Spectral Armor.'
+  starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -137,8 +142,9 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of
-    the Magus, Doom Orb, The World Stone, Screeching Gargoyle, Dreamer''s Idol, Death
-    Metal, Rod of Asclepius, Chronos'' Pendant, Blood-Bound Book, Ancient Signet,
-    Ethereal Staff, Helm of Radiance, Bancroft''s Talon, Divine Ruin, Polynomicon,
-    Gem of Focus, Jade Scepter, Void Stone, Bragi''s Harp, Genji''s Guard, Void Shield.'
+    the Magus, Doom Orb, The World Stone, Screeching Gargoyle, Chronos'' Pendant,
+    Dreamer''s Idol, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal
+    Staff, Divine Ruin, Death Metal, Bancroft''s Talon, Polynomicon, Gem of Focus,
+    Bragi''s Harp, Helm of Radiance, Lifebinder, Alchemist Coat, Jade Scepter.'
+  starter: *id001
 ---

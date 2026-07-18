@@ -35,15 +35,15 @@ builds:
   - Obsidian Shard
   - Soul Gem
   - Book of Thoth
+  - Rod of Tahuti
   - Kinetic Cuirass
-  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
@@ -51,12 +51,15 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Eye of Providence, Gluttonous Grimoire, Spectral Armor,
-    Genji''s Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book,
-    Ancient Signet, The Cosmic Horror, Ethereal Staff, Breastplate of Valor, Helm
-    of Radiance, Bancroft''s Talon, Midgardian Mail, Spear of the Magus, Erosion,
-    Divine Ruin, Polynomicon, Ancile, Screeching Gargoyle, Jade Scepter, Shield of
-    the Phoenix, Yogi''s Necklace.'
+    this god: Kinetic Cuirass, Gluttonous Grimoire, Spectral Armor, Rod of Asclepius,
+    Blood-Bound Book, Ancient Signet, Ethereal Staff, Eye of Providence, The Cosmic
+    Horror, Divine Ruin, Death Metal, Genji''s Guard, Amanita Charm, Bancroft''s Talon,
+    Spear of the Magus, Polynomicon, Yogi''s Necklace, Chandra''s Grace, Bragi''s
+    Harp, Helm of Radiance, Doom Orb, Chronos'' Pendant, Breastplate of Valor, Lifebinder,
+    Screeching Gargoyle.'
+  starter: &id001
+    base: Conduit Gem
+    upgrade: Archmage's Gem
 - source: suggested
   archetype: burst
   slot_order:
@@ -74,26 +77,27 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal,
-    Doom Orb, The World Stone, Bragi''s Harp, Chronos'' Pendant, Genji''s Guard, Triton''s
-    Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem
-    of Focus, Breastplate of Valor, Helm of Radiance, Bancroft''s Talon, Divine Ruin,
-    Polynomicon, Screeching Gargoyle, Jade Scepter, Shield of the Phoenix.'
+    god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom Orb, Death
+    Metal, The World Stone, Bragi''s Harp, Chronos'' Pendant, Triton''s Conch, Gem
+    of Focus, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff,
+    Divine Ruin, Genji''s Guard, Bancroft''s Talon, Polynomicon, Chandra''s Grace,
+    Helm of Radiance, Breastplate of Valor, Lifebinder, Screeching Gargoyle.'
+  starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Amanita Charm
+  - Spirit Robe
   - Kinetic Cuirass
   - Eye of Providence
-  - Spirit Robe
   - Erosion
-  - Magi's Cloak
+  - Shroud of Vengeance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -108,12 +112,13 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Spirit Robe, Erosion,
-    Shield of the Phoenix, Glorious Pridwen, Magi''s Cloak, Mantle Of Discord, Phoenix
-    Feather, Stone of Binding, Shroud of Vengeance, Draconic Scale, Freya''s Tears,
-    Shifter''s Shield, Prophetic Cloak, Spectral Armor, Genji''s Guard, Stygian Anchor,
-    Rod of Asclepius, Blood-Bound Book, Helm of Darkness, Sphere of Negation, Breastplate
-    of Valor, Xibalban Effigy, Helm of Radiance.'
+    this god: Amanita Charm, Spirit Robe, Kinetic Cuirass, Eye of Providence, Glorious
+    Pridwen, Shield of the Phoenix, Erosion, Shroud of Vengeance, Phoenix Feather,
+    Mantle Of Discord, Magi''s Cloak, Stone of Binding, Prophetic Cloak, Spectral
+    Armor, Freya''s Tears, Rod of Asclepius, Shifter''s Shield, Blood-Bound Book,
+    Draconic Scale, Stygian Anchor, Helm of Darkness, Genji''s Guard, Bancroft''s
+    Talon, Sphere of Negation, Umbral Link, Helm of Radiance.'
+  starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -137,9 +142,10 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Cosmic Horror, Gluttonous Grimoire, Spear of the Magus, Doom
+    for this god: The Cosmic Horror, Spear of the Magus, Gluttonous Grimoire, Doom
     Orb, The World Stone, Dreamer''s Idol, Screeching Gargoyle, Void Stone, Void Shield,
-    Stone of Binding, Kinetic Cuirass, Eye of Providence, Spectral Armor, Genji''s
-    Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient
-    Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft''s Talon.'
+    Stone of Binding, Kinetic Cuirass, Spectral Armor, Rod of Asclepius, Blood-Bound
+    Book, Ancient Signet, Ethereal Staff, Eye of Providence, Divine Ruin, Death Metal,
+    Genji''s Guard, Amanita Charm, Bancroft''s Talon, Polynomicon.'
+  starter: *id001
 ---

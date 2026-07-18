@@ -34,16 +34,16 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   - Heartseeker
-  - The Crusher
+  - Titan's Bane
   - The Reaper
-  - Kinetic Cuirass
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
@@ -51,53 +51,57 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, The Reaper, Kinetic Cuirass, Tyrfing, Eye of Providence,
-    Runeforged Hammer, Spectral Armor, Genji''s Guard, Golden Blade, Berserker''s
-    Shield, Amanita Charm, Avenging Blade, Shield Splitter, Breastplate of Valor,
-    Lernaean Bow, Midgardian Mail, Eye of the Storm, Erosion, Ancile, Screeching Gargoyle,
-    Damaru, Shield of the Phoenix, Pharaoh''s Curse, Yogi''s Necklace, Chandra''s
-    Grace, Leviathan''s Hide.'
+    this god: The Reaper, The Crusher, Runeforged Hammer, Kinetic Cuirass, Spectral
+    Armor, Avenging Blade, Eye of Providence, Tyrfing, Shield Splitter, Genji''s Guard,
+    Amanita Charm, Yogi''s Necklace, Chandra''s Grace, Lernaean Bow, Berserker''s
+    Shield, Eye of the Storm, Breastplate of Valor, Screeching Gargoyle, Transcendence,
+    Oath-Sworn Spear, Shield of the Phoenix, Erosion, Midgardian Mail, Barbed Carver,
+    Contagion, Golden Blade.'
+  starter: &id001
+    base: Bumba's Golden Dagger
+    upgrade: Bumba's Spear
 - source: suggested
   archetype: burst
   slot_order:
   - Jotunn's Revenge
   - Heartseeker
-  - The Crusher
-  - The Reaper
   - Titan's Bane
+  - The Reaper
+  - The Crusher
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, The Reaper, Pendulum Blade, Tekko-Kagi, Tyrfing, Runeforged
-    Hammer, Genji''s Guard, Golden Blade, Avenging Blade, Arondight, Shield Splitter,
-    Breastplate of Valor, Lernaean Bow, Eye of the Storm, Screeching Gargoyle, Damaru,
-    Shield of the Phoenix, Chandra''s Grace, Riptalon, Kinetic Cuirass, Eye of Providence,
-    Rage, Transcendence, Gladiator''s Shield.'
+    god: The Reaper, The Crusher, Pendulum Blade, Tekko-Kagi, Runeforged Hammer, Arondight,
+    Avenging Blade, Tyrfing, Shield Splitter, Genji''s Guard, Chandra''s Grace, Lernaean
+    Bow, Eye of the Storm, Breastplate of Valor, Screeching Gargoyle, Transcendence,
+    Oath-Sworn Spear, Shield of the Phoenix, Barbed Carver, Golden Blade, Damaru,
+    Rage, Gladiator''s Shield, Kinetic Cuirass.'
+  starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Amanita Charm
+  - Spirit Robe
   - Kinetic Cuirass
   - Eye of Providence
-  - Spirit Robe
   - Shield Splitter
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -108,18 +112,19 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Spirit Robe, Shield
-    Splitter, Erosion, Shield of the Phoenix, Glorious Pridwen, Magi''s Cloak, Mantle
-    Of Discord, Phoenix Feather, Stone of Binding, Shroud of Vengeance, The Reaper,
-    Draconic Scale, Freya''s Tears, Shifter''s Shield, Prophetic Cloak, Spectral Armor,
-    Genji''s Guard, Berserker''s Shield, Stygian Anchor, Breastplate of Valor, Xibalban
-    Effigy, Umbral Link, Midgardian Mail, Eye of the Storm, Ancile.'
+    this god: Amanita Charm, Spirit Robe, Kinetic Cuirass, Eye of Providence, Shield
+    Splitter, Glorious Pridwen, Shield of the Phoenix, Erosion, Shroud of Vengeance,
+    Phoenix Feather, Mantle Of Discord, Magi''s Cloak, The Reaper, Stone of Binding,
+    Prophetic Cloak, Spectral Armor, Freya''s Tears, Shifter''s Shield, Draconic Scale,
+    Stygian Anchor, Genji''s Guard, Umbral Link, Chandra''s Grace, Xibalban Effigy,
+    Berserker''s Shield, Eye of the Storm, Breastplate of Valor, Screeching Gargoyle.'
+  starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
-  - The Reaper
   - Titan's Bane
+  - The Reaper
   - Heartseeker
   - The Crusher
   - Tekko-Kagi
@@ -137,9 +142,10 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Reaper, The Crusher, Tekko-Kagi, Riptalon, Pendulum Blade, Avatar''s
-    Parashu, Avenging Blade, Screeching Gargoyle, Void Stone, Void Shield, Stone of
-    Binding, Oath-Sworn Spear, Kinetic Cuirass, Tyrfing, Eye of Providence, Runeforged
-    Hammer, Spectral Armor, Genji''s Guard, Golden Blade, Berserker''s Shield, Amanita
-    Charm, Shield Splitter, Breastplate of Valor, Lernaean Bow.'
+    for this god: The Reaper, The Crusher, Tekko-Kagi, Pendulum Blade, Riptalon, Avatar''s
+    Parashu, Avenging Blade, Screeching Gargoyle, Oath-Sworn Spear, Void Stone, Void
+    Shield, Stone of Binding, Runeforged Hammer, Kinetic Cuirass, Spectral Armor,
+    Eye of Providence, Tyrfing, Shield Splitter, Genji''s Guard, Amanita Charm, Yogi''s
+    Necklace, Chandra''s Grace, Lernaean Bow, Berserker''s Shield.'
+  starter: *id001
 ---

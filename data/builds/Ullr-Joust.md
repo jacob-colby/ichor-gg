@@ -6,12 +6,12 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Tyrfing
   - Demon Blade
+  - Tyrfing
+  - The Reaper
   - Damaru
   - Rage
-  - The Reaper
-  - Golden Blade
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -27,6 +27,9 @@ builds:
     swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: &id001
+    base: Gilded Arrow
+    upgrade: Sharpshooter's Arrow
 - source: suggested
   archetype: crit
   slot_order:
@@ -51,15 +54,16 @@ builds:
     swap_item: Contagion
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Jotunn's Revenge
   - The Reaper
   - The Crusher
-  - Hydra's Lament
   - Pendulum Blade
-  - Tyrfing
+  - Hydra's Lament
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -75,22 +79,23 @@ builds:
     swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Amanita Charm
-  - Erosion
-  - Shield Splitter
   - Spirit Robe
+  - Shield Splitter
+  - Erosion
   - Stygian Anchor
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -99,6 +104,7 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -123,4 +129,5 @@ builds:
     swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
+  starter: *id001
 ---

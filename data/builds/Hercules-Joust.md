@@ -10,8 +10,8 @@ builds:
   - Contagion
   - Spectral Armor
   - Void Stone
-  - Erosion
   - Void Shield
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -27,30 +27,34 @@ builds:
     swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: &id001
+    base: Warrior's Axe
+    upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
   - Amanita Charm
-  - Erosion
   - Spirit Robe
+  - Erosion
   - Stygian Anchor
   - Kinetic Cuirass
-  - Eye of Providence
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -58,8 +62,8 @@ builds:
   - The Crusher
   - The Reaper
   - Titan's Bane
-  - Heartseeker
   - Pendulum Blade
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -75,4 +79,5 @@ builds:
     swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
+  starter: *id001
 ---

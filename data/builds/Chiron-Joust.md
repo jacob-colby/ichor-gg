@@ -10,8 +10,8 @@ builds:
   - Jotunn's Revenge
   - The Crusher
   - Tyrfing
-  - Pharaoh's Curse
-  - Eros' Bow
+  - Hydra's Lament
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -27,13 +27,16 @@ builds:
     swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: &id001
+    base: Gilded Arrow
+    upgrade: Sharpshooter's Arrow
 - source: suggested
   archetype: crit
   slot_order:
   - The Reaper
   - Jotunn's Revenge
-  - Tyrfing
   - The Crusher
+  - Tyrfing
   - Demon Blade
   - Pharaoh's Curse
   situational_swaps:
@@ -51,15 +54,16 @@ builds:
     swap_item: Contagion
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Jotunn's Revenge
   - The Reaper
   - The Crusher
-  - Tyrfing
   - Hydra's Lament
   - Pendulum Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -75,19 +79,20 @@ builds:
     swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Amanita Charm
   - The Reaper
-  - Pharaoh's Curse
-  - Erosion
   - Jotunn's Revenge
   - The Crusher
+  - Pharaoh's Curse
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
@@ -99,14 +104,15 @@ builds:
     swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - The Reaper
   - Jotunn's Revenge
   - The Crusher
-  - Void Stone
   - Avenging Blade
+  - Void Stone
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -123,4 +129,5 @@ builds:
     swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
+  starter: *id001
 ---

@@ -6,9 +6,9 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Death Metal
   - Bragi's Harp
-  - Amanita Charm
+  - Death Metal
+  - Rod of Asclepius
   - Triton's Conch
   - Divine Ruin
   - Bracer of The Abyss
@@ -17,8 +17,8 @@ builds:
     swap: Resolute Mantle — CC-immunity / cleanse
     swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
@@ -27,14 +27,17 @@ builds:
     swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: &id001
+    base: Conduit Gem
+    upgrade: Archmage's Gem
 - source: suggested
   archetype: burst
   slot_order:
   - Soul Gem
   - Spear of Desolation
-  - Death Metal
   - Divine Ruin
   - Bragi's Harp
+  - Death Metal
   - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
@@ -51,6 +54,7 @@ builds:
     swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -62,8 +66,8 @@ builds:
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
@@ -71,17 +75,18 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Soul Gem
   - Void Stone
-  - Void Shield
   - The Cosmic Horror
+  - Void Shield
   - Spear of the Magus
   - Spear of Desolation
   situational_swaps:
@@ -99,4 +104,5 @@ builds:
     swap_item: Divine Ruin
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
+  starter: *id001
 ---
