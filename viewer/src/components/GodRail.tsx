@@ -1,5 +1,6 @@
 import type { God } from "../types";
 import { iconSlug } from "../lib/builds";
+import { Tooltip } from "./Tooltip";
 
 interface GodRailProps {
   gods: God[];
@@ -9,29 +10,41 @@ interface GodRailProps {
 
 export function GodRail({ gods, selectedGod, onSelect }: GodRailProps) {
   return (
-    <div className="flex w-16 flex-col gap-2 overflow-y-auto border-r border-neutral-800 bg-neutral-950 p-2">
+    <div className="flex w-[72px] flex-col gap-2 overflow-y-auto border-r border-line bg-bg0 p-2">
       {gods.map((god) => (
-        <button
+        <Tooltip
           key={god.name}
-          type="button"
-          aria-pressed={god.name === selectedGod}
-          onClick={() => onSelect(god.name)}
-          title={god.name} // also the accessible-name fallback once onError hides the <img> — alt text stops counting toward the name once its element is hidden, don't remove this thinking it's redundant with alt
-          className={`flex h-12 w-12 items-center justify-center overflow-hidden rounded ${
-            god.name === selectedGod
-              ? "ring-2 ring-sky-400"
-              : "ring-1 ring-neutral-800 hover:ring-neutral-600"
-          }`}
+          content={
+            <div>
+              <div className="font-display text-sm font-semibold text-ink">{god.name}</div>
+              <div className="text-muted">{god.pantheon} · {god.role} · {god.damage_type}</div>
+              <div className="mt-1 text-muted">
+                {god.abilities?.map((a) => a.name).filter(Boolean).join(" · ")}
+              </div>
+            </div>
+          }
         >
-          <img
-            src={`/icons/${iconSlug(god.name)}.png`}
-            alt={god.name}
-            className="h-full w-full object-cover"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
-            }}
-          />
-        </button>
+          <button
+            type="button"
+            aria-pressed={god.name === selectedGod}
+            onClick={() => onSelect(god.name)}
+            title={god.name}
+            className={`flex h-14 w-14 items-center justify-center overflow-hidden rounded-lg transition-all duration-150 ${
+              god.name === selectedGod
+                ? "ring-2 ring-gold"
+                : "ring-1 ring-line hover:ring-blue"
+            }`}
+          >
+            <img
+              src={`/icons/${iconSlug(god.name)}-head.png`}
+              alt={god.name}
+              className="h-full w-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = "none";
+              }}
+            />
+          </button>
+        </Tooltip>
       ))}
     </div>
   );

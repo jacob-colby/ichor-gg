@@ -3,8 +3,16 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { GodRail } from "./GodRail";
 import type { God } from "../types";
 
+const chiron = {
+  name: "Chiron",
+  pantheon: "Greek",
+  role: "Hunter",
+  damage_type: "Physical",
+  abilities: [{ slot: 1, name: "Training Exercise" }],
+} as God;
+
 const gods: God[] = [
-  { name: "Chiron" } as God,
+  chiron,
   { name: "Ullr" } as God,
 ];
 
@@ -20,6 +28,12 @@ describe("GodRail", () => {
     render(<GodRail gods={gods} selectedGod={null} onSelect={onSelect} />);
     fireEvent.click(screen.getByRole("button", { name: /Ullr/i }));
     expect(onSelect).toHaveBeenCalledWith("Ullr");
+  });
+
+  it("uses the headshot icon variant", () => {
+    render(<GodRail gods={[chiron]} selectedGod={null} onSelect={() => {}} />);
+    const img = screen.getByRole("img", { name: "Chiron" });
+    expect(img).toHaveAttribute("src", "/icons/chiron-head.png");
   });
 
   it("marks the selected god's button distinctly (aria-pressed)", () => {
