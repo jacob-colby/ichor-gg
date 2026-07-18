@@ -15,7 +15,7 @@ builds_from:
 - Engraved Guard
 builds_into: []
 source_url: https://wiki.smite2.com/w/Shifter's_Shield
-last_verified: '2026-07-16'
+last_verified: '2026-07-17'
 ---
 <!-- WIKI:START -->
 Over 75% Health:+45 Strength or +55 Intelligence (whichever is higher). Under 75% Health: +20 Physical and Magical Protection.

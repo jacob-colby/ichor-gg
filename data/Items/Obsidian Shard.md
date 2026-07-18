@@ -12,7 +12,7 @@ builds_from:
 - Void Shard
 builds_into: []
 source_url: https://wiki.smite2.com/w/Obsidian_Shard
-last_verified: '2026-07-16'
+last_verified: '2026-07-17'
 ---
 <!-- WIKI:START -->
 

@@ -15,7 +15,7 @@ builds_into:
 - Magi's Cloak
 - Shifter's Shield
 source_url: https://wiki.smite2.com/w/Engraved_Guard
-last_verified: '2026-07-16'
+last_verified: '2026-07-17'
 ---
 <!-- WIKI:START -->
 

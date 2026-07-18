@@ -111,7 +111,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Agni",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     },
     {
       "type": "smite-god",
@@ -214,7 +214,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Cernunnos",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     },
     {
       "type": "smite-god",
@@ -318,7 +318,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Chiron",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     },
     {
       "type": "smite-god",
@@ -433,7 +433,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Chronos",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     },
     {
       "type": "smite-god",
@@ -542,7 +542,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Hercules",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     },
     {
       "type": "smite-god",
@@ -654,7 +654,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Morgan_Le_Fay",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     },
     {
       "type": "smite-god",
@@ -734,7 +734,7 @@
       ],
       "aspects": [],
       "source_url": "https://wiki.smite2.com/w/Princess_Bari",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     },
     {
       "type": "smite-god",
@@ -855,7 +855,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Ra",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     },
     {
       "type": "smite-god",
@@ -967,7 +967,7 @@
       ],
       "aspects": [],
       "source_url": "https://wiki.smite2.com/w/Susano",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     },
     {
       "type": "smite-god",
@@ -1019,7 +1019,7 @@
       ],
       "aspects": [],
       "source_url": "https://wiki.smite2.com/w/Ullr",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17"
     }
   ],
   "items": [
@@ -1036,7 +1036,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Blinking_Abyss",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "mobility"
+      ],
+      "efficiency_tier": "premium"
     },
     {
       "type": "smite-item",
@@ -1054,7 +1058,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Bloodforge",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1073,7 +1079,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Book_of_Thoth",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1091,7 +1099,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Chronos'_Pendant",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "premium"
     },
     {
       "type": "smite-item",
@@ -1109,7 +1119,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Dagger_of_Frenzy",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1127,7 +1139,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Deathbringer",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1145,7 +1159,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Devourer's_Gauntlet",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "sustain"
+      ],
+      "efficiency_tier": "premium"
     },
     {
       "type": "smite-item",
@@ -1163,7 +1181,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Dwarven_Plate",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "premium"
     },
     {
       "type": "smite-item",
@@ -1185,7 +1205,9 @@
         "Shifter's Shield"
       ],
       "source_url": "https://wiki.smite2.com/w/Engraved_Guard",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "undervalued"
     },
     {
       "type": "smite-item",
@@ -1204,7 +1226,9 @@
         "Spear of Desolation"
       ],
       "source_url": "https://wiki.smite2.com/w/Evil_Eye",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": null
     },
     {
       "type": "smite-item",
@@ -1222,7 +1246,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Gem_of_Isolation",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "peel"
+      ],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1242,7 +1270,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Genji's_Guard",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1260,7 +1290,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Hastened_Fatalis",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "mobility"
+      ],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1280,7 +1314,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Heartseeker",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "burst"
+      ],
+      "efficiency_tier": "premium"
     },
     {
       "type": "smite-item",
@@ -1301,7 +1339,9 @@
         "Riptalon"
       ],
       "source_url": "https://wiki.smite2.com/w/Hunter's_Bow",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "undervalued"
     },
     {
       "type": "smite-item",
@@ -1321,7 +1361,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Hydra's_Lament",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "burst"
+      ],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1341,7 +1385,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Jotunn's_Revenge",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1359,7 +1405,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Magi's_Cloak",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "cc-immunity"
+      ],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1378,7 +1428,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Nimble_Ring",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1396,7 +1448,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Obsidian_Shard",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1413,7 +1467,12 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Odysseus'_Bow",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "burst",
+        "wave-clear"
+      ],
+      "efficiency_tier": "premium"
     },
     {
       "type": "smite-item",
@@ -1431,7 +1490,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Rage",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1451,7 +1512,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Riptalon",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "sustain"
+      ],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1471,7 +1536,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Rod_of_Tahuti",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1491,7 +1558,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Shifter's_Shield",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1513,7 +1582,9 @@
         "Jotunn's Revenge"
       ],
       "source_url": "https://wiki.smite2.com/w/Skeggox",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "undervalued"
     },
     {
       "type": "smite-item",
@@ -1533,7 +1604,12 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Soul_Gem",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "burst",
+        "sustain"
+      ],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1552,7 +1628,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Spear_of_Desolation",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1571,7 +1649,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/The_Crusher",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "burst"
+      ],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1590,7 +1672,11 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/The_Reaper",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [
+        "sustain"
+      ],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1610,7 +1696,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/The_World_Stone",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1628,7 +1716,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Titan's_Bane",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     },
     {
       "type": "smite-item",
@@ -1647,7 +1737,9 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Transcendence",
-      "last_verified": "2026-07-16"
+      "last_verified": "2026-07-17",
+      "effect_tags": [],
+      "efficiency_tier": "fair"
     }
   ],
   "builds": [
@@ -1660,41 +1752,41 @@
           "source": "community",
           "aspect": "Aspect of Combustion",
           "aspect_pick_rate": 0.03,
-          "aspect_win_rate": 0.29,
+          "aspect_win_rate": 0.3,
           "slot_order": [
             {
               "name": "Spear of Desolation",
-              "pick_rate": 0.6,
-              "win_rate": 0.5
+              "pick_rate": 0.59,
+              "win_rate": 0.51
             },
             {
               "name": "Book of Thoth",
-              "pick_rate": 0.25,
+              "pick_rate": 0.26,
               "win_rate": 0.46
             },
             {
               "name": "Soul Gem",
               "pick_rate": 0.3,
-              "win_rate": 0.53
+              "win_rate": 0.52
             },
             {
               "name": "Rod of Tahuti",
               "pick_rate": 0.33,
-              "win_rate": 0.55
+              "win_rate": 0.53
             },
             {
               "name": "Obsidian Shard",
-              "pick_rate": 0.23,
-              "win_rate": 0.57
+              "pick_rate": 0.25,
+              "win_rate": 0.58
             },
             {
               "name": "Evil Eye",
-              "pick_rate": 0.13,
-              "win_rate": 0.47
+              "pick_rate": 0.12,
+              "win_rate": 0.4
             }
           ],
           "source_url": "https://smitebrain.com/gods/agni/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
@@ -1702,27 +1794,31 @@
           "slot_order": [
             "Spear of Desolation",
             "Soul Gem",
-            "Rod of Tahuti",
             "Obsidian Shard",
+            "Rod of Tahuti",
             "The World Stone",
             "Book of Thoth"
           ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection"
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shifter's Shield \u2014 physical protection"
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
           "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: The World Stone."
@@ -1737,42 +1833,42 @@
         {
           "source": "community",
           "aspect": "Aspect of Strife",
-          "aspect_pick_rate": 0.34,
-          "aspect_win_rate": 0.44,
+          "aspect_pick_rate": 0.41,
+          "aspect_win_rate": 0.47,
           "slot_order": [
             {
               "name": "Devourer's Gauntlet",
-              "pick_rate": 0.68,
-              "win_rate": 0.51
-            },
-            {
-              "name": "Dagger of Frenzy",
-              "pick_rate": 0.32,
+              "pick_rate": 0.63,
               "win_rate": 0.48
             },
             {
-              "name": "Odysseus' Bow",
+              "name": "Dagger of Frenzy",
+              "pick_rate": 0.36,
+              "win_rate": 0.46
+            },
+            {
+              "name": "Bracer of The Abyss",
               "pick_rate": 0.16,
-              "win_rate": 0.5
+              "win_rate": 0.57
             },
             {
               "name": "Riptalon",
-              "pick_rate": 0.28,
-              "win_rate": 0.69
+              "pick_rate": 0.24,
+              "win_rate": 0.64
             },
             {
               "name": "Titan's Bane",
               "pick_rate": 0.15,
-              "win_rate": 0.47
+              "win_rate": 0.44
             },
             {
               "name": "Hunter's Bow",
-              "pick_rate": 0.08,
-              "win_rate": 0.67
+              "pick_rate": 0.07,
+              "win_rate": 0.63
             }
           ],
           "source_url": "https://smitebrain.com/gods/cernunnos/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
@@ -1788,19 +1884,23 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection"
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shifter's Shield \u2014 physical protection"
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
           "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Jotunn's Revenge, Hydra's Lament, The Crusher, The Reaper, Rage."
@@ -1815,42 +1915,42 @@
         {
           "source": "community",
           "aspect": "Aspect of the Heroic Tutor",
-          "aspect_pick_rate": 0.09,
-          "aspect_win_rate": 0.45,
+          "aspect_pick_rate": 0.07,
+          "aspect_win_rate": 0.43,
           "slot_order": [
             {
               "name": "Transcendence",
-              "pick_rate": 0.6,
-              "win_rate": 0.49
+              "pick_rate": 0.58,
+              "win_rate": 0.53
             },
             {
               "name": "Jotunn's Revenge",
-              "pick_rate": 0.48,
-              "win_rate": 0.52
+              "pick_rate": 0.46,
+              "win_rate": 0.54
             },
             {
               "name": "The Crusher",
-              "pick_rate": 0.26,
-              "win_rate": 0.67
+              "pick_rate": 0.24,
+              "win_rate": 0.68
             },
             {
               "name": "Titan's Bane",
-              "pick_rate": 0.4,
-              "win_rate": 0.58
+              "pick_rate": 0.43,
+              "win_rate": 0.56
             },
             {
-              "name": "Titan's Bane",
-              "pick_rate": 0.27,
-              "win_rate": 0.52
+              "name": "Heartseeker",
+              "pick_rate": 0.12,
+              "win_rate": 0.55
             },
             {
               "name": "Skeggox",
-              "pick_rate": 0.06,
+              "pick_rate": 0.08,
               "win_rate": 0.6
             }
           ],
           "source_url": "https://smitebrain.com/gods/chiron/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
@@ -1861,24 +1961,28 @@
             "Titan's Bane",
             "Transcendence",
             "Hydra's Lament",
-            "The Reaper"
+            "Heartseeker"
           ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection"
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shifter's Shield \u2014 physical protection"
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
           "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Hydra's Lament, The Reaper, Riptalon, Rage."
@@ -1894,49 +1998,49 @@
           "source": "community",
           "aspect": "Aspect of Relativity",
           "aspect_pick_rate": 0.06,
-          "aspect_win_rate": 0.48,
+          "aspect_win_rate": 0.47,
           "slot_order": [
             {
               "name": "Book of Thoth",
-              "pick_rate": 0.39,
-              "win_rate": 0.45
+              "pick_rate": 0.42,
+              "win_rate": 0.44
             },
             {
               "name": "Spear of Desolation",
-              "pick_rate": 0.29,
+              "pick_rate": 0.3,
               "win_rate": 0.47
             },
             {
               "name": "Nimble Ring",
-              "pick_rate": 0.2,
-              "win_rate": 0.41
+              "pick_rate": 0.19,
+              "win_rate": 0.44
             },
             {
               "name": "Rod of Tahuti",
-              "pick_rate": 0.31,
+              "pick_rate": 0.32,
               "win_rate": 0.46
             },
             {
               "name": "Obsidian Shard",
-              "pick_rate": 0.19,
-              "win_rate": 0.51
+              "pick_rate": 0.22,
+              "win_rate": 0.49
             },
             {
-              "name": "Obsidian Shard",
-              "pick_rate": 0.1,
-              "win_rate": 0.56
+              "name": "Evil Eye",
+              "pick_rate": 0.09,
+              "win_rate": 0.42
             }
           ],
           "source_url": "https://smitebrain.com/gods/chronos/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
             "Spear of Desolation",
-            "Obsidian Shard",
             "Rod of Tahuti",
+            "Obsidian Shard",
             "Soul Gem",
             "Book of Thoth",
             "The World Stone"
@@ -1944,19 +2048,23 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection"
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shifter's Shield \u2014 physical protection"
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
           "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Soul Gem, The World Stone, Magi's Cloak."
@@ -1971,49 +2079,49 @@
         {
           "source": "community",
           "aspect": "Aspect of Preservation",
-          "aspect_pick_rate": 0.06,
+          "aspect_pick_rate": 0.04,
           "aspect_win_rate": 0.0,
           "slot_order": [
             {
               "name": "Shifter's Shield",
-              "pick_rate": 0.33,
-              "win_rate": 0.5
+              "pick_rate": 0.34,
+              "win_rate": 0.52
             },
             {
-              "name": "Genji's Guard",
+              "name": "Breastplate of Valor",
               "pick_rate": 0.29,
               "win_rate": 0.52
             },
             {
               "name": "Genji's Guard",
-              "pick_rate": 0.27,
-              "win_rate": 0.49
+              "pick_rate": 0.26,
+              "win_rate": 0.52
             },
             {
               "name": "Dwarven Plate",
-              "pick_rate": 0.23,
-              "win_rate": 0.59
-            },
-            {
-              "name": "Dwarven Plate",
-              "pick_rate": 0.14,
-              "win_rate": 0.5
+              "pick_rate": 0.22,
+              "win_rate": 0.58
             },
             {
               "name": "Engraved Guard",
-              "pick_rate": 0.07,
-              "win_rate": 0.5
+              "pick_rate": 0.06,
+              "win_rate": 0.36
+            },
+            {
+              "name": "Spirit Robe",
+              "pick_rate": 0.06,
+              "win_rate": 0.56
             }
           ],
           "source_url": "https://smitebrain.com/gods/hercules/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Genji's Guard",
             "Shifter's Shield",
+            "Genji's Guard",
             "Hydra's Lament",
             "Dwarven Plate",
             "The Crusher",
@@ -2022,19 +2130,23 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "core already covers magical protection (Genji's Guard)"
+              "swap": "core already covers magical protection (Shifter's Shield)",
+              "swap_item": null
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "core already covers physical protection (Shifter's Shield)"
+              "swap": "core already covers physical protection (Shifter's Shield)",
+              "swap_item": null
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
           "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Hydra's Lament, The Crusher, Jotunn's Revenge, The Reaper, Dagger of Frenzy, Rage."
@@ -2050,41 +2162,41 @@
           "source": "community",
           "aspect": "Aspect of the Cursed Crown",
           "aspect_pick_rate": 0.33,
-          "aspect_win_rate": 0.51,
+          "aspect_win_rate": 0.52,
           "slot_order": [
             {
               "name": "Spear of Desolation",
-              "pick_rate": 0.43,
-              "win_rate": 0.5
+              "pick_rate": 0.44,
+              "win_rate": 0.53
+            },
+            {
+              "name": "Book of Thoth",
+              "pick_rate": 0.16,
+              "win_rate": 0.51
             },
             {
               "name": "Soul Gem",
-              "pick_rate": 0.14,
-              "win_rate": 0.57
-            },
-            {
-              "name": "Soul Gem",
-              "pick_rate": 0.2,
-              "win_rate": 0.5
+              "pick_rate": 0.17,
+              "win_rate": 0.51
             },
             {
               "name": "Rod of Tahuti",
               "pick_rate": 0.23,
-              "win_rate": 0.58
+              "win_rate": 0.62
             },
             {
               "name": "Obsidian Shard",
-              "pick_rate": 0.17,
-              "win_rate": 0.57
+              "pick_rate": 0.15,
+              "win_rate": 0.64
             },
             {
-              "name": "Obsidian Shard",
-              "pick_rate": 0.14,
-              "win_rate": 0.7
+              "name": "Evil Eye",
+              "pick_rate": 0.07,
+              "win_rate": 0.38
             }
           ],
           "source_url": "https://smitebrain.com/gods/morgan-le-fay/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
@@ -2095,27 +2207,31 @@
             "Rod of Tahuti",
             "Obsidian Shard",
             "The World Stone",
-            "Chronos' Pendant"
+            "Book of Thoth"
           ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection"
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shifter's Shield \u2014 physical protection"
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Soul Gem, The World Stone."
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Obsidian Shard, The World Stone."
         }
       ]
     },
@@ -2132,68 +2248,72 @@
           "slot_order": [
             {
               "name": "Spear of Desolation",
-              "pick_rate": 0.61,
-              "win_rate": 0.48
+              "pick_rate": 0.59,
+              "win_rate": 0.43
             },
             {
-              "name": "Spear of Desolation",
-              "pick_rate": 0.24,
-              "win_rate": 0.56
-            },
-            {
-              "name": "The World Stone",
-              "pick_rate": 0.26,
+              "name": "Soul Gem",
+              "pick_rate": 0.22,
               "win_rate": 0.4
-            },
-            {
-              "name": "Rod of Tahuti",
-              "pick_rate": 0.4,
-              "win_rate": 0.5
-            },
-            {
-              "name": "Obsidian Shard",
-              "pick_rate": 0.18,
-              "win_rate": 0.83
             },
             {
               "name": "The World Stone",
               "pick_rate": 0.19,
-              "win_rate": 1.0
+              "win_rate": 0.31
+            },
+            {
+              "name": "Rod of Tahuti",
+              "pick_rate": 0.31,
+              "win_rate": 0.5
+            },
+            {
+              "name": "Obsidian Shard",
+              "pick_rate": 0.14,
+              "win_rate": 0.75
+            },
+            {
+              "name": "Void Shard",
+              "pick_rate": 0.08,
+              "win_rate": 0.33
             }
           ],
           "source_url": "https://smitebrain.com/gods/princess-bari/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
             "Obsidian Shard",
-            "Spear of Desolation",
             "Nimble Ring",
+            "Spear of Desolation",
             "Rod of Tahuti",
-            "The World Stone",
-            "Magi's Cloak"
+            "Magi's Cloak",
+            "Gem of Isolation"
           ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)"
+              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)",
+              "swap_item": null
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection"
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shifter's Shield \u2014 physical protection"
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Nimble Ring, Soul Gem, Magi's Cloak."
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Obsidian Shard, Nimble Ring, Magi's Cloak."
         }
       ]
     },
@@ -2205,70 +2325,74 @@
         {
           "source": "community",
           "aspect": "Aspect of Thermotherapy",
-          "aspect_pick_rate": 0.06,
-          "aspect_win_rate": 0.4,
+          "aspect_pick_rate": 0.07,
+          "aspect_win_rate": 0.42,
           "slot_order": [
             {
               "name": "Spear of Desolation",
-              "pick_rate": 0.43,
-              "win_rate": 0.57
-            },
-            {
-              "name": "Spear of Desolation",
-              "pick_rate": 0.37,
-              "win_rate": 0.53
-            },
-            {
-              "name": "Soul Gem",
-              "pick_rate": 0.25,
-              "win_rate": 0.57
-            },
-            {
-              "name": "Rod of Tahuti",
-              "pick_rate": 0.3,
+              "pick_rate": 0.45,
               "win_rate": 0.6
             },
             {
+              "name": "Book of Thoth",
+              "pick_rate": 0.22,
+              "win_rate": 0.59
+            },
+            {
+              "name": "Soul Gem",
+              "pick_rate": 0.24,
+              "win_rate": 0.58
+            },
+            {
+              "name": "Rod of Tahuti",
+              "pick_rate": 0.32,
+              "win_rate": 0.63
+            },
+            {
               "name": "Obsidian Shard",
-              "pick_rate": 0.23,
-              "win_rate": 0.68
+              "pick_rate": 0.24,
+              "win_rate": 0.72
             },
             {
               "name": "Evil Eye",
-              "pick_rate": 0.14,
+              "pick_rate": 0.13,
               "win_rate": 0.48
             }
           ],
           "source_url": "https://smitebrain.com/gods/ra/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
             "Obsidian Shard",
-            "Soul Gem",
             "Spear of Desolation",
+            "Soul Gem",
             "Rod of Tahuti",
-            "The World Stone",
-            "Magi's Cloak"
+            "Book of Thoth",
+            "The World Stone"
           ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)"
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection"
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shifter's Shield \u2014 physical protection"
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
           "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: The World Stone, Magi's Cloak."
@@ -2288,68 +2412,72 @@
           "slot_order": [
             {
               "name": "Jotunn's Revenge",
-              "pick_rate": 0.34,
-              "win_rate": 0.5
+              "pick_rate": 0.33,
+              "win_rate": 0.47
+            },
+            {
+              "name": "Hydra's Lament",
+              "pick_rate": 0.27,
+              "win_rate": 0.47
             },
             {
               "name": "The Reaper",
-              "pick_rate": 0.24,
-              "win_rate": 0.54
+              "pick_rate": 0.14,
+              "win_rate": 0.56
             },
             {
               "name": "Heartseeker",
-              "pick_rate": 0.15,
-              "win_rate": 0.61
-            },
-            {
-              "name": "Heartseeker",
-              "pick_rate": 0.31,
-              "win_rate": 0.59
+              "pick_rate": 0.32,
+              "win_rate": 0.6
             },
             {
               "name": "Titan's Bane",
-              "pick_rate": 0.23,
-              "win_rate": 0.57
+              "pick_rate": 0.25,
+              "win_rate": 0.58
             },
             {
-              "name": "Magi's Cloak",
-              "pick_rate": 0.11,
-              "win_rate": 0.64
+              "name": "Lucerne Hammer",
+              "pick_rate": 0.09,
+              "win_rate": 0.4
             }
           ],
           "source_url": "https://smitebrain.com/gods/susano/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Hydra's Lament",
+            "Heartseeker",
             "Jotunn's Revenge",
             "The Reaper",
-            "Magi's Cloak",
-            "Heartseeker",
-            "Hydra's Lament",
-            "Titan's Bane"
+            "Titan's Bane",
+            "The Crusher"
           ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "core already covers CC-immunity / cleanse (Magi's Cloak)"
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection"
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shifter's Shield \u2014 physical protection"
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Hydra's Lament, The Crusher, Dagger of Frenzy, Rage."
+          "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: The Reaper, The Crusher, Dagger of Frenzy, Rage."
         }
       ]
     },
@@ -2366,37 +2494,37 @@
           "slot_order": [
             {
               "name": "Transcendence",
-              "pick_rate": 0.92,
-              "win_rate": 0.59
-            },
-            {
-              "name": "Jotunn's Revenge",
-              "pick_rate": 0.5,
+              "pick_rate": 0.88,
               "win_rate": 0.56
             },
             {
+              "name": "Jotunn's Revenge",
+              "pick_rate": 0.49,
+              "win_rate": 0.54
+            },
+            {
               "name": "Hydra's Lament",
-              "pick_rate": 0.4,
+              "pick_rate": 0.41,
               "win_rate": 0.55
             },
             {
               "name": "Heartseeker",
-              "pick_rate": 0.45,
-              "win_rate": 0.59
+              "pick_rate": 0.41,
+              "win_rate": 0.52
             },
             {
-              "name": "Heartseeker",
-              "pick_rate": 0.36,
-              "win_rate": 0.64
+              "name": "Titan's Bane",
+              "pick_rate": 0.28,
+              "win_rate": 0.48
             },
             {
               "name": "Blinking Abyss",
-              "pick_rate": 0.23,
-              "win_rate": 0.6
+              "pick_rate": 0.16,
+              "win_rate": 0.62
             }
           ],
           "source_url": "https://smitebrain.com/gods/ullr/",
-          "last_verified": "2026-07-16"
+          "last_verified": "2026-07-17"
         },
         {
           "source": "suggested",
@@ -2405,26 +2533,30 @@
             "Transcendence",
             "Hydra's Lament",
             "Jotunn's Revenge",
-            "Heartseeker",
             "Rage",
+            "Heartseeker",
             "Deathbringer"
           ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse"
+              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
+              "swap_item": "Magi's Cloak"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection"
+              "swap": "Genji's Guard \u2014 magical protection",
+              "swap_item": "Genji's Guard"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shifter's Shield \u2014 physical protection"
+              "swap": "Shifter's Shield \u2014 physical protection",
+              "swap_item": "Shifter's Shield"
             },
             {
               "vs_tag": "sustain",
-              "swap": "(no anti-heal available in pool)"
+              "swap": "(no anti-heal available in pool)",
+              "swap_item": null
             }
           ],
           "rationale": "Top weighted-score core (efficiency + win/pick + fit). Underrated for this god: Rage, Deathbringer, The Crusher, The Reaper."

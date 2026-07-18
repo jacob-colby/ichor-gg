@@ -13,7 +13,7 @@ builds_into:
 - Rod of Tahuti
 - Spear of Desolation
 source_url: https://wiki.smite2.com/w/Evil_Eye
-last_verified: '2026-07-16'
+last_verified: '2026-07-17'
 ---
 <!-- WIKI:START -->
 

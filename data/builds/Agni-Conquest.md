@@ -6,46 +6,50 @@ builds:
 - source: community
   aspect: Aspect of Combustion
   aspect_pick_rate: 0.03
-  aspect_win_rate: 0.29
+  aspect_win_rate: 0.3
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.6
-    win_rate: 0.5
+    pick_rate: 0.59
+    win_rate: 0.51
   - name: Book of Thoth
-    pick_rate: 0.25
+    pick_rate: 0.26
     win_rate: 0.46
   - name: Soul Gem
     pick_rate: 0.3
-    win_rate: 0.53
+    win_rate: 0.52
   - name: Rod of Tahuti
     pick_rate: 0.33
-    win_rate: 0.55
+    win_rate: 0.53
   - name: Obsidian Shard
-    pick_rate: 0.23
-    win_rate: 0.57
+    pick_rate: 0.25
+    win_rate: 0.58
   - name: Evil Eye
-    pick_rate: 0.13
-    win_rate: 0.47
+    pick_rate: 0.12
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/agni/
-  last_verified: '2026-07-16'
+  last_verified: '2026-07-17'
 - source: suggested
   archetype: core
   slot_order:
   - Spear of Desolation
   - Soul Gem
-  - Rod of Tahuti
   - Obsidian Shard
+  - Rod of Tahuti
   - The World Stone
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
+    swap_item: null
   rationale: 'Top weighted-score core (efficiency + win/pick + fit). Underrated for
     this god: The World Stone.'
 ---

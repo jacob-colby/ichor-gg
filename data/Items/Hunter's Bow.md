@@ -14,7 +14,7 @@ builds_into:
 - Odysseus' Bow
 - Riptalon
 source_url: https://wiki.smite2.com/w/Hunter's_Bow
-last_verified: '2026-07-16'
+last_verified: '2026-07-17'
 ---
 <!-- WIKI:START -->
 

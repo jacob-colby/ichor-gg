@@ -16,7 +16,7 @@ builds_from:
 - Mana Tome
 builds_into: []
 source_url: https://wiki.smite2.com/w/Transcendence
-last_verified: '2026-07-16'
+last_verified: '2026-07-17'
 ---
 <!-- WIKI:START -->
 +Strength equal to 3% of Mana from Items. Deal 700 Damage to Minions or Jungle Monsters: +1 Evolve Stack +1 Mana Infusion Stack (Max 50 Stacks) Damage dealt to Gods counts double Per Mana Infusion Stack: +10 Mana. At 50 Evolve Stacks, item evolves and gains: +10 Penetration +100 Mana

@@ -52,7 +52,7 @@ abilities:
   - 110.0
 aspects: []
 source_url: https://wiki.smite2.com/w/Princess_Bari
-last_verified: '2026-07-16'
+last_verified: '2026-07-17'
 ---
 <!-- WIKI:START -->
 - Princess Bari Basic Attack

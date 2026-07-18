@@ -171,12 +171,19 @@ def test_refresh_god_downloads_icon(tmp_path, monkeypatch):
         refresh.refresh_god("Chiron", fetcher)
 
     icon_path = tmp_path / "_assets" / "icons" / "chiron.png"
+    head_path = tmp_path / "_assets" / "icons" / "chiron-head.png"
     assert icon_path.exists()
+    assert head_path.exists()  # portrait + square headshot both downloaded
     assert icon_path.read_bytes() == b"\x89PNG\r\n\x1a\nfakepngdata"
-    mock_get.assert_called_once_with(
+    mock_get.assert_any_call(
         "https://wiki.smite2.com/images/thumb/T_Chiron%28S2%29_Default.png/280px-T_Chiron%28S2%29_Default.png?157c1",
         timeout=20,
     )
+    mock_get.assert_any_call(
+        "https://wiki.smite2.com/images/T_Chiron%28S2%29_Default_Icon.png",
+        timeout=20,
+    )
+    assert mock_get.call_count == 2
 
 
 def test_refresh_god_skips_icon_download_if_already_present(tmp_path, monkeypatch):
@@ -184,6 +191,9 @@ def test_refresh_god_skips_icon_download_if_already_present(tmp_path, monkeypatc
     icon_path = tmp_path / "_assets" / "icons" / "chiron.png"
     icon_path.parent.mkdir(parents=True)
     icon_path.write_bytes(b"\x89PNG\r\n\x1a\n" + b"x" * 2000)
+    # Both the portrait and the headshot are already present, so neither
+    # downloads.
+    (icon_path.parent / "chiron-head.png").write_bytes(b"\x89PNG\r\n\x1a\n" + b"x" * 2000)
 
     fetcher = Mock()
     fetcher.fetch.return_value = (FIXTURES / "chiron_wiki.html").read_text(encoding="utf-8")

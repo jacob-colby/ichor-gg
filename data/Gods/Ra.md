@@ -87,7 +87,7 @@ aspects:
     In return, Solar Blessing can be placed on allied gods, attaching to them and
     Searing Pain Heals allied hits.
 source_url: https://wiki.smite2.com/w/Ra
-last_verified: '2026-07-16'
+last_verified: '2026-07-17'
 ---
 <!-- WIKI:START -->
 - Ra Basic Attack

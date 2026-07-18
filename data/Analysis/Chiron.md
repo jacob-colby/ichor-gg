@@ -2,16 +2,16 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.56 | 0.60 | 0.69 | 0.52 | 0.48 | 0.43 | fair |  |  |
-| The Crusher | 0.55 | 0.57 | 0.64 | 0.67 | 0.26 | 0.44 | fair | burst |  |
-| Titan's Bane | 0.51 | 0.50 | 0.59 | 0.58 | 0.40 | 0.34 | fair |  |  |
-| Transcendence | 0.49 | 0.46 | 0.64 | 0.49 | 0.60 | 0.15 | fair |  |  |
+| Jotunn's Revenge | 0.56 | 0.60 | 0.69 | 0.54 | 0.46 | 0.43 | fair |  |  |
+| The Crusher | 0.55 | 0.57 | 0.64 | 0.68 | 0.24 | 0.44 | fair | burst |  |
+| Titan's Bane | 0.51 | 0.50 | 0.59 | 0.56 | 0.43 | 0.34 | fair |  |  |
+| Transcendence | 0.50 | 0.46 | 0.64 | 0.53 | 0.58 | 0.15 | fair |  |  |
 | Hydra's Lament | 0.47 | 0.57 | 0.70 | 0.50 | 0.00 | 0.35 | fair | burst | **UNDERRATED** |
+| Heartseeker | 0.46 | 0.51 | 0.55 | 0.55 | 0.12 | 0.44 | premium | burst |  |
 | The Reaper | 0.46 | 0.56 | 0.69 | 0.50 | 0.00 | 0.34 | fair | sustain | **UNDERRATED** |
 | Riptalon | 0.45 | 0.54 | 0.64 | 0.50 | 0.00 | 0.38 | fair | sustain | **UNDERRATED** |
 | Rage | 0.45 | 0.54 | 0.66 | 0.50 | 0.00 | 0.34 | fair |  | **UNDERRATED** |
 | Deathbringer | 0.43 | 0.52 | 0.62 | 0.50 | 0.00 | 0.34 | fair |  |  |
-| Heartseeker | 0.43 | 0.51 | 0.55 | 0.50 | 0.00 | 0.44 | premium | burst |  |
 | Dagger of Frenzy | 0.42 | 0.50 | 0.67 | 0.50 | 0.00 | 0.19 | fair |  |  |
 | Bloodforge | 0.40 | 0.46 | 0.64 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Hastened Fatalis | 0.40 | 0.45 | 0.60 | 0.50 | 0.00 | 0.19 | fair | mobility |  |

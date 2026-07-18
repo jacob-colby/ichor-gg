@@ -2,10 +2,10 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Genji's Guard | 0.42 | 0.41 | 0.64 | 0.52 | 0.29 | 0.00 | fair |  |  |
-| Shifter's Shield | 0.42 | 0.41 | 0.64 | 0.50 | 0.33 | 0.00 | fair |  |  |
+| Shifter's Shield | 0.43 | 0.41 | 0.64 | 0.52 | 0.34 | 0.00 | fair |  |  |
+| Genji's Guard | 0.42 | 0.41 | 0.64 | 0.52 | 0.26 | 0.00 | fair |  |  |
 | Hydra's Lament | 0.42 | 0.48 | 0.70 | 0.50 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
-| Dwarven Plate | 0.40 | 0.35 | 0.54 | 0.59 | 0.23 | 0.00 | premium |  |  |
+| Dwarven Plate | 0.40 | 0.35 | 0.54 | 0.58 | 0.22 | 0.00 | premium |  |  |
 | The Crusher | 0.39 | 0.44 | 0.64 | 0.50 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
 | Jotunn's Revenge | 0.39 | 0.44 | 0.69 | 0.50 | 0.00 | 0.00 | fair |  | **UNDERRATED** |
 | The Reaper | 0.39 | 0.44 | 0.69 | 0.50 | 0.00 | 0.00 | fair | sustain | **UNDERRATED** |
