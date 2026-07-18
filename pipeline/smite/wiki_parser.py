@@ -183,6 +183,19 @@ def parse_item_page(html: str) -> dict:
     return result
 
 
+def derive_headshot_url(portrait_url):
+    """From a god portrait URL, derive the square scoreboard-icon asset URL
+    (the wiki serves it as the same asset name with _Default_Icon.png). Returns
+    the full-res (non-thumb) /images path, or None if the portrait URL doesn't
+    match the expected _Default.png asset shape."""
+    if not portrait_url:
+        return None
+    m = re.search(r"([^/]+)_Default\.png", portrait_url)
+    if not m:
+        return None
+    return f"/images/{m.group(1)}_Default_Icon.png"
+
+
 def _direct_recipe_children(root_table) -> list:
     """The recipe tree is nested tables; a *direct* component is a
     table.recipe-table that is an immediate child of one of the root

@@ -70,7 +70,9 @@ def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
     wiki_block = "\n".join(f"- {a['name']}" for a in parsed["abilities"])
     notes.merge_god_note(DATA_ROOT / "Gods" / f"{name}.md", frontmatter, wiki_block,
                           log_dir=DATA_ROOT / "_logs")
-    _download_icon(parsed.get("image_url"), name.lower().replace(" ", "-").replace("'", ""))
+    slug = name.lower().replace(" ", "-").replace("'", "")
+    _download_icon(parsed.get("image_url"), slug)
+    _download_icon(wiki_parser.derive_headshot_url(parsed.get("image_url")), slug + "-head")
 
 
 def refresh_item(name: str, wiki_fetcher, force: bool = False) -> None:

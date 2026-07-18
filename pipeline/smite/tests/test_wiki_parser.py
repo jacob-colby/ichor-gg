@@ -90,3 +90,15 @@ def test_parse_god_page_extracts_image_url():
 def test_parse_item_page_extracts_image_url():
     result = wiki_parser.parse_item_page(_deathbringer_html())
     assert result["image_url"] == "/images/T3_Deathbringer.png?6d7a6"
+
+
+def test_derive_headshot_url_from_portrait_thumb():
+    from smite import wiki_parser
+    portrait = "/images/thumb/T_Ullr%28S2%29_Default.png/280px-T_Ullr%28S2%29_Default.png?1914c"
+    assert wiki_parser.derive_headshot_url(portrait) == "/images/T_Ullr%28S2%29_Default_Icon.png"
+
+
+def test_derive_headshot_url_handles_missing():
+    from smite import wiki_parser
+    assert wiki_parser.derive_headshot_url(None) is None
+    assert wiki_parser.derive_headshot_url("/images/no_match_here.png") is None
