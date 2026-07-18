@@ -114,3 +114,25 @@ def test_parse_build_page_stops_scanning_core_slots_at_the_next_heading():
 
     assert result["items"] == [{"name": "Transcendence", "pick_rate": 0.61, "win_rate": 0.49}]
     assert "Decoy Item" not in [item["name"] for item in result["items"]]
+
+
+def test_core_build_dedups_via_next_best_alternative():
+    # Slot 1 and slot 2 both top-pick Titan's Bane; slot 2 must fall to its
+    # next-best alternative so the build has no duplicate item.
+    html = """
+    <h2>Core</h2>
+    <div class="font-semibold">1</div>
+    <div>
+      <div class="flex"><img alt="Titan's Bane"><div class="text-xs">40% pick 58% win</div></div>
+      <div class="flex"><img alt="Deathbringer"><div class="text-xs">30% pick 55% win</div></div>
+    </div>
+    <div class="font-semibold">2</div>
+    <div>
+      <div class="flex"><img alt="Titan's Bane"><div class="text-xs">27% pick 52% win</div></div>
+      <div class="flex"><img alt="The Crusher"><div class="text-xs">26% pick 67% win</div></div>
+    </div>
+    """
+    from smite import smitebrain_parser
+    result = smitebrain_parser.parse_build_page(html)
+    names = [e["name"] for e in result["items"]]
+    assert names == ["Titan's Bane", "The Crusher"]   # no duplicate

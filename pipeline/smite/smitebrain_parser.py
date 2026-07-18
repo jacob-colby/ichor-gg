@@ -55,11 +55,8 @@ def _parse_core_recommended_build(soup) -> list:
     if heading is None:
         return []
 
-    # Scan forward from the Core heading, but stop at the next <h2> (if any).
-    # The real page may have further sections after Core (matchups, counters,
-    # etc.); without this boundary, any unrelated "font-semibold" div with
-    # digit text further down the page could be mistaken for a slot label.
-    slots = {}
+    # First pass: collect each numbered slot's alternatives in rank order.
+    slot_alternatives = {}
     for el in heading.find_all_next():
         if el.name == "h2":
             break
@@ -73,14 +70,25 @@ def _parse_core_recommended_build(soup) -> list:
         tile_list = el.find_next_sibling("div")
         if tile_list is None:
             continue
-        first_tile = tile_list.find("div", class_="flex")
-        if first_tile is None:
-            continue
-        entry = _tile_entry(first_tile)
-        if entry is not None:
-            slots[int(text)] = entry
+        entries = []
+        for tile in tile_list.find_all("div", class_="flex"):
+            entry = _tile_entry(tile)
+            if entry is not None:
+                entries.append(entry)
+        if entries:
+            slot_alternatives[int(text)] = entries
 
-    return [slots[n] for n in sorted(slots)]
+    # Second pass: per slot in order, take the first item not already chosen.
+    # If every alternative in a slot is already used, drop the slot (a rare,
+    # correct fallback — a real build never lists the same item twice).
+    chosen, used = [], set()
+    for n in sorted(slot_alternatives):
+        for entry in slot_alternatives[n]:
+            if entry["name"] not in used:
+                chosen.append(entry)
+                used.add(entry["name"])
+                break
+    return chosen
 
 
 def _parse_aspects(soup) -> list:
