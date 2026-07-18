@@ -129,3 +129,22 @@ def test_score_god_items_excludes_components_and_wrong_damage_type():
     rows = scoring.score_god_items(god, items, build, eff, scoring.load_weights_default(), {})
     names = {r["item"] for r in rows}
     assert names == {"Final", "Active"}   # component + wrong-damage excluded
+
+
+def test_eligible_flavors_gates_by_damage_type_and_tokens():
+    weights = scoring.load_weights_default()
+    weights["flavors"] = {
+        "crit": {"damage_types": ["physical"], "match_any": ["Carry", "Sharpshooter"]},
+        "burst": {"damage_types": None, "match_any": ["Nuker", "Burst", "Slayer", "Sniper", "Mid"]},
+        "bruiser": {"damage_types": None, "match_any": None},
+        "anti-tank": {"damage_types": None, "match_any": None},
+    }
+    chiron = {"name": "Chiron", "damage_type": "physical", "role": "Carry",
+              "specializations": ["Sharpshooter", "Nuker"]}
+    ra = {"name": "Ra", "damage_type": "magical", "role": "Mid",
+          "specializations": ["Sniper", "Healing"]}
+    herc = {"name": "Hercules", "damage_type": "physical", "role": "Solo",
+            "specializations": ["Tank", "Brawler", "Lockdown"]}
+    assert set(scoring.eligible_flavors(chiron, weights)) == {"crit", "burst", "bruiser", "anti-tank"}
+    assert set(scoring.eligible_flavors(ra, weights)) == {"burst", "bruiser", "anti-tank"}
+    assert set(scoring.eligible_flavors(herc, weights)) == {"bruiser", "anti-tank"}

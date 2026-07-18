@@ -186,3 +186,28 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         rows.append(row)
     mark_underrated(rows, weights)
     return sorted(rows, key=lambda r: -r["total"])
+
+
+def _god_tokens(god):
+    """Every whitespace-separated token across the god's role + specializations,
+    for matching flavor eligibility against the real lane/spec vocabulary."""
+    toks = set()
+    for spec in (god.get("specializations") or []):
+        toks.update(str(spec).split())
+    toks.update(str(god.get("role") or "").split())
+    return toks
+
+
+def eligible_flavors(god, weights):
+    """Flavor names whose damage_types (or null=any) include the god's damage
+    type, and whose match_any (or null=any) intersects the god's token set."""
+    out = []
+    for name, f in (weights.get("flavors") or {}).items():
+        dts = f.get("damage_types")
+        if dts and god.get("damage_type") not in dts:
+            continue
+        match_any = f.get("match_any")
+        if match_any and not (_god_tokens(god) & set(match_any)):
+            continue
+        out.append(name)
+    return out
