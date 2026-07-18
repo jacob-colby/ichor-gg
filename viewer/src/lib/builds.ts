@@ -2,7 +2,6 @@ import type {
   BuildEntry,
   CommunityBuildEntry,
   SlotEntry,
-  SituationalSwap,
 } from "../types";
 
 export function isCommunityEntry(entry: BuildEntry): entry is CommunityBuildEntry {
@@ -21,17 +20,6 @@ export function slotItemName(entry: SlotEntry): string {
  * that codebase) — must stay in sync so icon filenames resolve. */
 export function iconSlug(name: string): string {
   return name.toLowerCase().replace(/ /g, "-").replace(/'/g, "");
-}
-
-/** Returns the index of the situational_swaps entry whose vs_tag matches
- * the currently-selected archetype chip, or -1 if none matches / nothing
- * is selected. */
-export function matchingSwapIndex(
-  swaps: SituationalSwap[] | undefined,
-  selectedTag: string | null,
-): number {
-  if (!swaps || !selectedTag) return -1;
-  return swaps.findIndex((s) => s.vs_tag === selectedTag);
 }
 
 export type SlotStatus = "kept" | "removed" | "added";

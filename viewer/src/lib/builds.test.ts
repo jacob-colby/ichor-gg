@@ -3,7 +3,6 @@ import {
   isCommunityEntry,
   slotItemName,
   iconSlug,
-  matchingSwapIndex,
   applySwap,
 } from "./builds";
 import type { CommunityBuildEntry, CuratedBuildEntry } from "../types";
@@ -54,20 +53,6 @@ describe("iconSlug", () => {
     expect(iconSlug("Hou Yi")).toBe("hou-yi");
     expect(iconSlug("Jotunn's Revenge")).toBe("jotunns-revenge");
     expect(iconSlug("Transcendence")).toBe("transcendence");
-  });
-});
-
-describe("matchingSwapIndex", () => {
-  it("returns the index of the swap whose vs_tag matches the selected chip", () => {
-    expect(matchingSwapIndex(mineEntry.situational_swaps!, "heavy_cc")).toBe(1);
-  });
-
-  it("returns -1 when no swap matches the selected chip", () => {
-    expect(matchingSwapIndex(mineEntry.situational_swaps!, "poke")).toBe(-1);
-  });
-
-  it("returns -1 when no chip is selected", () => {
-    expect(matchingSwapIndex(mineEntry.situational_swaps!, null)).toBe(-1);
   });
 });
 
