@@ -41,6 +41,8 @@ export interface Item {
   builds_into: string[];
   source_url: string;
   last_verified: string;
+  effect_tags?: string[];
+  efficiency_tier?: string | null;
 }
 
 export interface CommunitySlotEntry {
@@ -54,6 +56,7 @@ export type SlotEntry = string | CommunitySlotEntry;
 export interface SituationalSwap {
   vs_tag: string;
   swap: string;
+  swap_item?: string | null;
 }
 
 export interface CommunityBuildEntry {
