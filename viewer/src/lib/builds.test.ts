@@ -4,6 +4,7 @@ import {
   slotItemName,
   iconSlug,
   matchingSwapIndex,
+  applySwap,
 } from "./builds";
 import type { CommunityBuildEntry, CuratedBuildEntry } from "../types";
 
@@ -67,5 +68,26 @@ describe("matchingSwapIndex", () => {
 
   it("returns -1 when no chip is selected", () => {
     expect(matchingSwapIndex(mineEntry.situational_swaps!, null)).toBe(-1);
+  });
+});
+
+describe("applySwap", () => {
+  it("replaces the last (lowest-scored) slot and marks the diff", () => {
+    const out = applySwap(["A", "B", "C"], "X");
+    expect(out).toEqual([
+      { name: "A", status: "kept" },
+      { name: "B", status: "kept" },
+      { name: "C", status: "removed" },
+      { name: "X", status: "added" },
+    ]);
+  });
+  it("is a no-op when swapItem is null", () => {
+    expect(applySwap(["A", "B"], null)).toEqual([
+      { name: "A", status: "kept" },
+      { name: "B", status: "kept" },
+    ]);
+  });
+  it("adds to an empty build", () => {
+    expect(applySwap([], "X")).toEqual([{ name: "X", status: "added" }]);
   });
 });
