@@ -1,42 +1,17 @@
 ---
 type: smite-build
-god: Chronos
-mode: Conquest
+god: Morgan Le Fay
+mode: Joust
 builds:
-- source: community
-  aspect: Aspect of Relativity
-  aspect_pick_rate: 0.06
-  aspect_win_rate: 0.47
-  slot_order:
-  - name: Book of Thoth
-    pick_rate: 0.42
-    win_rate: 0.44
-  - name: Spear of Desolation
-    pick_rate: 0.3
-    win_rate: 0.47
-  - name: Nimble Ring
-    pick_rate: 0.19
-    win_rate: 0.44
-  - name: Rod of Tahuti
-    pick_rate: 0.32
-    win_rate: 0.46
-  - name: Obsidian Shard
-    pick_rate: 0.22
-    win_rate: 0.49
-  - name: Evil Eye
-    pick_rate: 0.09
-    win_rate: 0.42
-  source_url: https://smitebrain.com/gods/chronos/
-  last_verified: '2026-07-17'
 - source: suggested
   archetype: core
   slot_order:
-  - Spear of Desolation
-  - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
-  - Book of Thoth
+  - Spear of Desolation
   - The World Stone
+  - Obsidian Shard
+  - Rod of Tahuti
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -50,17 +25,17 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
     swap_item: null
-  rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, The World Stone, Magi''s Cloak.'
+  rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
 - source: suggested
   archetype: burst
   slot_order:
-  - Spear of Desolation
   - Soul Gem
-  - Rod of Tahuti
-  - Obsidian Shard
+  - Spear of Desolation
   - The World Stone
-  - Book of Thoth
+  - Obsidian Shard
+  - Rod of Tahuti
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -74,42 +49,41 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
     swap_item: null
-  rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Soul Gem, The World Stone.'
+  rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Magi's Cloak
-  - Shifter's Shield
   - Soul Gem
-  - Dwarven Plate
-  - Genji's Guard
   - Spear of Desolation
+  - The World Stone
+  - Obsidian Shard
+  - Rod of Tahuti
+  - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
     swap: core already covers CC-immunity / cleanse (Magi's Cloak)
     swap_item: null
   - vs_tag: magic_heavy
-    swap: core already covers magical protection (Magi's Cloak)
-    swap_item: null
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: core already covers physical protection (Magi's Cloak)
-    swap_item: null
+    swap: Dwarven Plate — physical protection
+    swap_item: Dwarven Plate
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
     swap_item: null
-  rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Magi''s Cloak, Shifter''s Shield, Soul Gem, Dwarven Plate, Genji''s
-    Guard.'
+  rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Spear of Desolation
-  - Rod of Tahuti
-  - Obsidian Shard
-  - The World Stone
   - Soul Gem
-  - Book of Thoth
+  - Spear of Desolation
+  - The World Stone
+  - Obsidian Shard
+  - Rod of Tahuti
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -123,6 +97,6 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
     swap_item: null
-  rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The World Stone, Soul Gem.'
+  rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
+    profile (no meta win/pick data).
 ---

@@ -8,6 +8,13 @@ export function isCommunityEntry(entry: BuildEntry): entry is CommunityBuildEntr
   return entry.source === "community";
 }
 
+/** Tab label for a build entry: suggested builds show their archetype
+ * (Core / Crit / Burst / …); community and mine show their source. */
+export function tabLabel(entry: BuildEntry): string {
+  if (entry.source === "suggested") return entry.archetype ?? "suggested";
+  return entry.source;
+}
+
 /** slot_order entries are plain strings for pro/mine, {name, pick_rate,
  * win_rate} objects for community — this normalizes either shape down to
  * just the item name. */

@@ -16,6 +16,28 @@ WEIGHTS_PATH = DATA_ROOT / "_weights.yaml"
 TAGS_PATH = DATA_ROOT / "_tags.yaml"
 BUILDS_ROOT = VAULT_ROOT / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds"
 
+MODES = ["Conquest", "Joust"]
+
+_FLAVOR_BLURB = {
+    "core": "Top weighted-score core",
+    "crit": "Crit / auto-attack skew",
+    "burst": "Ability / burst skew",
+    "bruiser": "Lifesteal bruiser skew",
+    "anti-tank": "Full-penetration anti-tank skew",
+}
+
+
+def _rationale(archetype, rows, profile):
+    meta = "" if profile.get("suppress_underrated") else " + win/pick"
+    text = f"{_FLAVOR_BLURB.get(archetype, archetype)} (efficiency + fit{meta})."
+    if profile.get("label"):
+        text += f" {profile['label']}."
+    if not profile.get("suppress_underrated"):
+        underrated = [r["item"] for r in rows if r.get("underrated")]
+        if underrated:
+            text += " Underrated for this god: " + ", ".join(underrated) + "."
+    return text
+
 
 def load_items():
     items_dir = DATA_ROOT / "Items"
@@ -67,23 +89,24 @@ def god_report(god, items, god_build, weights, tags_map):
     return "\n".join(lines) + "\n"
 
 
-def build_suggested_entries(god, items, god_build, weights, tags_map):
+def build_suggested_entries(god, items, god_build, weights, tags_map, mode="Conquest"):
     eff_scores, _ = efficiency.efficiency_scores(items)
-    rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map)
     items_by_name = {it["name"]: it for it in items}
-    core = assemble.assemble_core(rows, items_by_name, n=6)
-    swaps = assemble.situational_swaps(rows, items_by_name, tags_map, core=core)
-    underrated = [r["item"] for r in rows if r.get("underrated")]
-    rationale = "Top weighted-score core (efficiency + win/pick + fit)."
-    if underrated:
-        rationale += " Underrated for this god: " + ", ".join(underrated) + "."
-    return [{
-        "source": "suggested",
-        "archetype": "core",
-        "slot_order": core,
-        "situational_swaps": swaps,
-        "rationale": rationale,
-    }]
+    entries = []
+    for flavor in [None] + scoring.eligible_flavors(god, weights):
+        profile = scoring.resolve_profile(weights, mode, flavor)
+        rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map, profile)
+        core = assemble.assemble_core(rows, items_by_name, n=6, max_lifesteal=profile["max_lifesteal"])
+        swaps = assemble.situational_swaps(rows, items_by_name, tags_map, core=core)
+        archetype = flavor or "core"
+        entries.append({
+            "source": "suggested",
+            "archetype": archetype,
+            "slot_order": core,
+            "situational_swaps": swaps,
+            "rationale": _rationale(archetype, rows, profile),
+        })
+    return entries
 
 
 def main(argv=None):
@@ -110,9 +133,13 @@ def main(argv=None):
             (out_dir / f"{god['name']}.md").write_text(
                 god_report(god, items, build, weights, tags_map), encoding="utf-8")
             if not args.report_only:
-                entries = build_suggested_entries(god, items, build, weights, tags_map)
-                notes.merge_suggested_entries(
-                    BUILDS_ROOT / f"{god['name']}-Conquest.md", god["name"], "Conquest", entries)
+                for mode in MODES:
+                    # Conquest uses the community build note for win/pick lookups;
+                    # Joust has no community data (SmiteBrain is Conquest-only).
+                    mode_build = build if mode == "Conquest" else {"builds": []}
+                    entries = build_suggested_entries(god, items, mode_build, weights, tags_map, mode)
+                    notes.merge_suggested_entries(
+                        BUILDS_ROOT / f"{god['name']}-{mode}.md", god["name"], mode, entries)
         print("Wrote per-god scoring reports")
         return 0
 

@@ -14,12 +14,13 @@ def _is_lifesteal(item, tags):
     return "sustain" in (tags or []) or any("Lifesteal" in s for s in stats)
 
 
-def assemble_core(rows, items_by_name, n=6, bruiser=False):
-    """Highest-total items filling n slots: at most one boots, at most one
-    lifesteal (unless bruiser), no duplicates. rows must be pre-sorted by
-    -total (score_god_items already does)."""
+def assemble_core(rows, items_by_name, n=6, max_lifesteal=1):
+    """Highest-total items filling n slots: at most one boots, at most
+    `max_lifesteal` lifesteal/sustain items, no duplicates. rows must be
+    pre-sorted by -total (score_god_items already does)."""
     core, used = [], set()
-    have_boots = have_lifesteal = False
+    have_boots = False
+    lifesteal_count = 0
     for r in rows:
         if len(core) >= n:
             break
@@ -31,10 +32,11 @@ def assemble_core(rows, items_by_name, n=6, bruiser=False):
             if have_boots:
                 continue
             have_boots = True
-        if _is_lifesteal(item, r.get("tags")) and have_lifesteal and not bruiser:
+        is_ls = _is_lifesteal(item, r.get("tags"))
+        if is_ls and lifesteal_count >= max_lifesteal:
             continue
-        if _is_lifesteal(item, r.get("tags")):
-            have_lifesteal = True
+        if is_ls:
+            lifesteal_count += 1
         core.append(name)
         used.add(name)
     return core

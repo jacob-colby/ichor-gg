@@ -1,42 +1,17 @@
 ---
 type: smite-build
-god: Ullr
-mode: Conquest
+god: Cernunnos
+mode: Joust
 builds:
-- source: community
-  aspect: null
-  aspect_pick_rate: null
-  aspect_win_rate: null
-  slot_order:
-  - name: Transcendence
-    pick_rate: 0.88
-    win_rate: 0.56
-  - name: Jotunn's Revenge
-    pick_rate: 0.49
-    win_rate: 0.54
-  - name: Hydra's Lament
-    pick_rate: 0.41
-    win_rate: 0.55
-  - name: Heartseeker
-    pick_rate: 0.41
-    win_rate: 0.52
-  - name: Titan's Bane
-    pick_rate: 0.28
-    win_rate: 0.48
-  - name: Blinking Abyss
-    pick_rate: 0.16
-    win_rate: 0.62
-  source_url: https://smitebrain.com/gods/ullr/
-  last_verified: '2026-07-17'
 - source: suggested
   archetype: core
   slot_order:
-  - Transcendence
-  - Hydra's Lament
+  - Riptalon
   - Jotunn's Revenge
+  - The Crusher
+  - Hydra's Lament
   - Rage
   - Heartseeker
-  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -50,17 +25,17 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
     swap_item: null
-  rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Rage, Deathbringer, The Crusher, The Reaper.'
+  rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
 - source: suggested
   archetype: crit
   slot_order:
-  - Transcendence
-  - Hydra's Lament
+  - Riptalon
   - Jotunn's Revenge
   - Rage
+  - The Crusher
+  - Hydra's Lament
   - Deathbringer
-  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -74,17 +49,17 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
     swap_item: null
-  rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: Rage, Deathbringer, Dagger of Frenzy, Riptalon, The Crusher.'
+  rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
 - source: suggested
   archetype: burst
   slot_order:
+  - The Reaper
   - Jotunn's Revenge
+  - The Crusher
   - Hydra's Lament
-  - Transcendence
   - Heartseeker
   - Titan's Bane
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -98,17 +73,17 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
     swap_item: null
-  rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, The Reaper, Riptalon.'
+  rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Transcendence
-  - Hydra's Lament
-  - Jotunn's Revenge
-  - The Reaper
-  - Heartseeker
   - Riptalon
+  - The Reaper
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Crusher
+  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -122,16 +97,16 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
     swap_item: null
-  rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Riptalon, Magi''s Cloak, Shifter''s Shield, Rage.'
+  rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Riptalon
   - Jotunn's Revenge
-  - Heartseeker
-  - Transcendence
-  - Titan's Bane
   - The Crusher
+  - Heartseeker
+  - Titan's Bane
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -146,6 +121,6 @@ builds:
   - vs_tag: sustain
     swap: (no anti-heal available in pool)
     swap_item: null
-  rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, The Reaper, Riptalon.'
+  rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
+    profile (no meta win/pick data).
 ---
