@@ -84,36 +84,36 @@ builds:
     Harp, Spear of the Magus, Doom Orb, Genji''s Guard, Chronos'' Pendant, Rod of
     Asclepius, Blood-Bound Book, Ancient Signet, Bracer of The Abyss, Ethereal Staff,
     Triton''s Conch, Breastplate of Valor, Kinetic Cuirass, Helm of Radiance, Bancroft''s
-    Talon, Eye of Providence, Gem of Focus, Divine Ruin, Polynomicon, Jade Scepter.'
+    Talon, Eye of Providence, Gem of Focus, Divine Ruin, Polynomicon, Screeching Gargoyle.'
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Amanita Charm
   - Kinetic Cuirass
   - Eye of Providence
   - Shield of the Phoenix
-  - Spirit Robe
   - Death Metal
-  - Amanita Charm
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Spirit Robe — magical protection
+    swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Eye of Providence, Shield of the Phoenix, Spirit Robe,
-    Death Metal, Amanita Charm, Bancroft''s Talon, Erosion, Bragi''s Harp, Chandra''s
-    Grace, Spectral Armor, Genji''s Guard, Magi''s Cloak, Mantle Of Discord, Stone
-    of Binding, Shroud of Vengeance, Sphere of Negation, Breastplate of Valor, Helm
-    of Radiance, Umbral Link, Midgardian Mail, Draconic Scale, Freya''s Tears, Ancile,
-    Shifter''s Shield, Gluttonous Grimoire.'
+    this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Shield of the Phoenix,
+    Spirit Robe, Death Metal, Phoenix Feather, Rod of Asclepius, Blood-Bound Book,
+    Bancroft''s Talon, Erosion, Bragi''s Harp, Chandra''s Grace, Glorious Pridwen,
+    Spectral Armor, Genji''s Guard, Magi''s Cloak, Mantle Of Discord, Lifebinder,
+    Stone of Binding, Shroud of Vengeance, Sphere of Negation, Breastplate of Valor,
+    Helm of Radiance, Umbral Link, Midgardian Mail.'
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -125,11 +125,11 @@ builds:
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -138,8 +138,8 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of
-    the Magus, Death Metal, Doom Orb, Bragi''s Harp, Void Stone, Void Shield, Stone
-    of Binding, Kinetic Cuirass, Eye of Providence, Bracer of The Abyss, Spectral
-    Armor, Genji''s Guard, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient
-    Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft''s Talon.'
+    the Magus, Death Metal, Doom Orb, Bragi''s Harp, Screeching Gargoyle, Void Stone,
+    Void Shield, Stone of Binding, Kinetic Cuirass, Eye of Providence, Bracer of The
+    Abyss, Spectral Armor, Genji''s Guard, Amanita Charm, Rod of Asclepius, Blood-Bound
+    Book, Ancient Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance.'
 ---

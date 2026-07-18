@@ -1056,7 +1056,7 @@
         "Max Health": "300",
         "Health Regen": "4"
       },
-      "passive": null,
+      "passive": "On Use: Create a Healing Mushroom (6.4m radius) for 4.5s. +3% Health Heal every 1.5s +1 Stack of Damage Reduction per Heal 10% Attack and Ability Damage Reduction per Stack 5% Ultimate Damage Reduction per Stack All Stacks removed after triggering Cooldown: 60s You can own up to 3 active items at once",
       "builds_from": [
         "Engraved Guard",
         "Olmec Blue"
@@ -1064,7 +1064,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Amanita_Charm",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "sustain",
+        "aura"
+      ],
       "efficiency_tier": "undervalued"
     },
     {
@@ -1098,7 +1101,7 @@
         "Magical Protection": "55",
         "Max Health": "300"
       },
-      "passive": null,
+      "passive": "On Use: Your next Ability that damages a god Silences them for 1.5s Cooldown: 70s You can own up to 3 active items at once",
       "builds_from": [
         "Circle of Protection",
         "Veve Charm"
@@ -1118,7 +1121,7 @@
         "Strength": "55",
         "Cooldown Rate": "15"
       },
-      "passive": null,
+      "passive": "On Use: Reveal enemy Gods within 17.6m for 6s. Reveal persists through Stealth If any God is revealed, +25% Movement Speed for 6s First time you damage a revealed God: +50 (+50% Strength) Physical Damage Cooldown: 60s You can own up to 3 active items at once",
       "builds_from": [
         "Skeggox",
         "Adroit Ring"
@@ -1126,7 +1129,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Arondight",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "mobility"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -1138,7 +1143,7 @@
         "Strength": "90",
         "Penetration": "10%"
       },
-      "passive": null,
+      "passive": "On Use: +25% Strength and Immune to Displacement for 10s. Cooldown: 120s You can own up to 3 active items at once",
       "builds_from": [
         "Skeggox",
         "Skeggox"
@@ -1146,7 +1151,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Avatar's_Parashu",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "cc-immunity"
+      ],
       "efficiency_tier": "premium"
     },
     {
@@ -1267,7 +1274,7 @@
         "Intelligence": "70",
         "Lifesteal": "7.5%"
       },
-      "passive": null,
+      "passive": "On Use: + Health Shield for 6s. Shield = 7.5% Max Health & 75% Intelligence from items While Shielded: +10% Lifesteal Kill a God: -25% Cooldown. Cooldown: 80s You can own up to 3 active items at once",
       "builds_from": [
         "Killing Stone",
         "Cursed Sickle"
@@ -1275,7 +1282,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Blood-Bound_Book",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "sustain"
+      ],
       "efficiency_tier": "undervalued"
     },
     {
@@ -1287,15 +1296,17 @@
         "Strength": "45",
         "Lifesteal": "7.5%"
       },
-      "passive": null,
+      "passive": "On Use: + Health Shield for 6s. Shield = 10% Max Health & 150% Strength from Items While Shielded: +10% Lifesteal Kill a God: -25% Cooldown. Cooldown: 80s You can own up to 3 active items at once",
       "builds_from": [
         "Skeggox",
         "Adamantine Sickle"
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Bloodforge",
-      "last_verified": "2026-07-17",
-      "effect_tags": [],
+      "last_verified": "2026-07-18",
+      "effect_tags": [
+        "sustain"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -1459,7 +1470,7 @@
         "Health Regen": "4",
         "Cooldown Rate": "10"
       },
-      "passive": null,
+      "passive": "On Use: Become Polymorphed Dash Forward, dealing 50 Physical Damage +CC Immune +60 Physical and Magical Protection On Enemy God Hit: Knock Up Bonus Damage equal to 10% of Current Health -40s Cooldown Cooldown: 120s You can own up to 3 active items at once",
       "builds_from": [
         "Olmec Blue",
         "Adroit Ring"
@@ -1467,7 +1478,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Circe's_Hexstone",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "mobility",
+        "cc-immunity"
+      ],
       "efficiency_tier": "premium"
     },
     {
@@ -1502,14 +1516,14 @@
         "Attack Damage": "25",
         "Attack Speed": "25%"
       },
-      "passive": null,
+      "passive": "On Use: +10 (+4 per Level) Attack Damage +20% (+1% per Level) Attack Speed Buff lasts 6 Attacks. Killing a God refreshes Cooldown. Cooldown: 15s You can own up to 3 active items at once",
       "builds_from": [
         "Manchu Bow",
         "Skeggox"
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Dagger_of_Frenzy",
-      "last_verified": "2026-07-17",
+      "last_verified": "2026-07-18",
       "effect_tags": [],
       "efficiency_tier": "fair"
     },
@@ -1563,7 +1577,7 @@
         "Intelligence": "40",
         "Critical Chance": "20%"
       },
-      "passive": null,
+      "passive": "On Use: Lose all Intelligence. Gain 66% of it as Strength. +25% Crit Chance Buff lasts 6s. Cooldown: 45s You can own up to 3 active items at once",
       "builds_from": [
         "Zither",
         "Hooked Sword"
@@ -1691,7 +1705,7 @@
         "Dampening": "5",
         "Max Health": "400"
       },
-      "passive": null,
+      "passive": "On Use: Gain Protective Link to a target. Protective Link redirects 20% of Damage they take, up to 600 Health. This Damage is mitigated by your Dampening. Cooldown: 45s You can own up to 3 active items at once",
       "builds_from": [
         "Veve Charm",
         "Circle of Protection"
@@ -1699,7 +1713,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Doublet_of_Binding",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "aura"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -1732,7 +1748,7 @@
         "Intelligence": "130",
         "Penetration": "10%"
       },
-      "passive": null,
+      "passive": "On Use: +25% Intelligence Become Immune to Displacement Buff lasts 10s. Cooldown: 120s You can own up to 3 active items at once",
       "builds_from": [
         "Killing Stone",
         "Killing Stone"
@@ -1740,7 +1756,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Dreamer's_Idol",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "cc-immunity"
+      ],
       "efficiency_tier": "premium"
     },
     {
@@ -1777,27 +1795,9 @@
         "Shield",
         "Rune"
       ],
-      "builds_into": [
-        "Amanita Charm",
-        "Brawler\u2019s Beat Stick",
-        "Dwarven Plate",
-        "Erosion",
-        "Eye of Providence",
-        "Glorious Pridwen",
-        "Helm of Darkness",
-        "Kinetic Cuirass",
-        "Magi's Cloak",
-        "Mantle Of Discord",
-        "Radiant Bulwark",
-        "Shield Splitter",
-        "Shifter's Shield",
-        "Shroud of Vengeance",
-        "Stone of Binding",
-        "Stygian Anchor",
-        "Stygian Anchor"
-      ],
+      "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Engraved_Guard",
-      "last_verified": "2026-07-17",
+      "last_verified": "2026-07-18",
       "effect_tags": [],
       "efficiency_tier": "undervalued"
     },
@@ -1810,7 +1810,7 @@
         "Max Health": "300",
         "Attack Speed": "30%"
       },
-      "passive": null,
+      "passive": "On Use: Mark an ally god Only one ally may be Marked at a time Mark breaks if ally is more than 20m away On Attack Hit: Heal the Marked ally for +2% of your Max Health Cooldown: 1s You can own up to 3 active items at once",
       "builds_from": [
         "Hunter's Bow",
         "Veve Charm"
@@ -1818,7 +1818,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Eros'_Bow",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "aura"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -1875,18 +1877,9 @@
       },
       "passive": null,
       "builds_from": [],
-      "builds_into": [
-        "Divine Ruin",
-        "Doom Orb",
-        "Necronomicon",
-        "Obsidian Shard",
-        "Rod of Tahuti",
-        "Rod of Tahuti",
-        "Spear of Desolation",
-        "Spear of the Magus"
-      ],
+      "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Evil_Eye",
-      "last_verified": "2026-07-17",
+      "last_verified": "2026-07-18",
       "effect_tags": [],
       "efficiency_tier": null
     },
@@ -1941,7 +1934,7 @@
         "Magical Protection": "35",
         "Max Health": "200"
       },
-      "passive": null,
+      "passive": "On Use: Toggle Vortex around you. Pulls enemies toward you Deals 6% of your Max Health to yourself as Magical Damage Automatically deactivates at 200 Health You can own up to 3 active items at once",
       "builds_from": [
         "Battle Axe",
         "Circle of Protection"
@@ -1949,7 +1942,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Eye_of_the_Storm",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "peel"
+      ],
       "efficiency_tier": "undervalued"
     },
     {
@@ -2091,7 +2086,7 @@
         "Magical Protection": "20",
         "Cooldown Rate": "12"
       },
-      "passive": null,
+      "passive": "On Use: Explode (4.8m radius): Deal Magical Damage (40% of Protections) Gain a Shield (125% of Protections) for 5s. When the Shield expires or breaks: Explode again: Deal Magic Damage (70% of your Protections). Cooldown: 45s You can own up to 3 active items at once",
       "builds_from": [
         "Engraved Guard",
         "Adroit Ring"
@@ -2099,7 +2094,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Glorious_Pridwen",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "sustain"
+      ],
       "efficiency_tier": "premium"
     },
     {
@@ -2227,7 +2224,7 @@
         "Physical Protection": "20",
         "Magical Protection": "25"
       },
-      "passive": null,
+      "passive": "On Use: Become Stealthed and pass through players and walls for 6s. Cannot use while Casting Cooldown: 90s. During Moonlight Phase: While Stealthed: +15% Movement Speed Pass through an enemy god: Physical Damage equal to 15% of your Max Health You can own up to 3 active items at once",
       "builds_from": [
         "Engraved Guard",
         "Killing Stone"
@@ -2235,7 +2232,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Helm_of_Darkness",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "mobility"
+      ],
       "efficiency_tier": "premium"
     },
     {
@@ -2268,7 +2267,7 @@
         "Max Health": "350",
         "Health Regen": "4"
       },
-      "passive": null,
+      "passive": "On Use: Reflect: 40% of pre-mitigated Attack Damage 20% of pre-mitigated Ability Damage Damage is Reflected as Physical Damage Buff lasts 4s. Cooldown: 60s You can own up to 3 active items at once",
       "builds_from": [
         "Medal of Defense",
         "Olmec Blue"
@@ -2291,23 +2290,9 @@
       "builds_from": [
         "Bow"
       ],
-      "builds_into": [
-        "Berserker's Shield",
-        "Demon Blade",
-        "Eros' Bow",
-        "Hastened Fatalis",
-        "Lernaean Bow",
-        "Odysseus' Bow",
-        "Odysseus' Bow",
-        "Pharaoh's Curse",
-        "Qin's Blade",
-        "Riptalon",
-        "Shogun's Ofuda",
-        "Tekko-Kagi",
-        "The Executioner"
-      ],
+      "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Hunter's_Bow",
-      "last_verified": "2026-07-17",
+      "last_verified": "2026-07-18",
       "effect_tags": [],
       "efficiency_tier": "undervalued"
     },
@@ -2367,7 +2352,7 @@
         "Intelligence": "100",
         "Max Health": "250"
       },
-      "passive": null,
+      "passive": "On Use: Place a jade current at a target location. After 1s it erupts, knocking away all gods. Enemies are knocked towards the caster. Cooldown: 60s You can own up to 3 active items at once",
       "builds_from": [
         "Flaming Pearl",
         "Killing Stone"
@@ -2375,7 +2360,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Jade_Scepter",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "peel"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -2433,7 +2420,7 @@
         "Strength": "40",
         "Attack Speed": "30%"
       },
-      "passive": null,
+      "passive": "On Use: Fire 3 arrows that pierce enemies in a 10.5m line. Deals 40% of your Attack Damage as Physical Damage -50% Shield Can Critically Strike Cooldown: 30s You can own up to 3 active items at once",
       "builds_from": [
         "Skeggox",
         "Hunter's Bow"
@@ -2441,7 +2428,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Lernaean_Bow",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "wave-clear",
+        "burst"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -2475,7 +2465,7 @@
         "Max Health": "300",
         "Health Regen": "3"
       },
-      "passive": null,
+      "passive": "On Use: Fire a Projectile that deals 60 (+8 per Level) Magical Damage. Marks enemy Gods for 6s First ally to damage a Marked target: +60 (+8 per Level) Heal +60 (+8 per Level) Shield Consumes the Mark Cooldown: 20s You can own up to 3 active items at once",
       "builds_from": [
         "Flaming Pearl",
         "Olmec Blue"
@@ -2483,7 +2473,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Lifebinder",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "sustain",
+        "aura"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -2695,7 +2688,7 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Obsidian_Shard",
-      "last_verified": "2026-07-17",
+      "last_verified": "2026-07-18",
       "effect_tags": [],
       "efficiency_tier": "fair"
     },
@@ -2772,7 +2765,7 @@
         "Penetration": "10%",
         "Cooldown Rate": "10"
       },
-      "passive": null,
+      "passive": "On Use: -4s Ability Cooldowns. Cooldown: 40s You can own up to 3 active items at once",
       "builds_from": [
         "Skeggox",
         "Caestus"
@@ -2794,7 +2787,7 @@
         "Max Health": "250",
         "Attack Speed": "20%"
       },
-      "passive": null,
+      "passive": "On Use: Enemies within 5.6m: -50% Shields -20% Movement Speed -40% Attack Speed Debuff lasts 4s. Cooldown: 45s You can own up to 3 active items at once",
       "builds_from": [
         "Medal of Disruption",
         "Hunter's Bow"
@@ -2802,7 +2795,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Pharaoh's_Curse",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "aura"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -2815,7 +2810,7 @@
         "Dampening": "5",
         "Max Health": "300"
       },
-      "passive": null,
+      "passive": "On Use: Fire 3 Pulses that Heal you and True Damage enemies within 3.2m. Heal = +75 Health +7.5 Missing Health True Damage = +3% Max Health from Items Cooldown: 120s You can own up to 3 active items at once",
       "builds_from": [
         "Circle of Protection",
         "Medal of Disruption"
@@ -2823,7 +2818,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Phoenix_Feather",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "sustain"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -2902,7 +2899,7 @@
         "Magical Protection": "20",
         "Plating": "15"
       },
-      "passive": null,
+      "passive": "On Use: Create a wall of light that protects allies behind you for 6s. Grants them all your Plating, Dampening, and half of your Protections from enemies on the other side and yourself 20% Damage Mitigation. You are Silenced, Disarmed, and cannot turn while channeling Cooldown: 100s You can own up to 3 active items at once",
       "builds_from": [
         "Engraved Guard",
         "Plated Metal"
@@ -2910,7 +2907,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Radiant_Bulwark",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "aura"
+      ],
       "efficiency_tier": "premium"
     },
     {
@@ -2942,7 +2941,7 @@
         "Physical Protection": "45",
         "Max Health": "250"
       },
-      "passive": null,
+      "passive": "On Use: Buildup for 2s before flying for 2.5s to your target location as a meteor of Ragnarok. Can travel up to 30m. Enemies near where you land take 600 Magical Damage and are knocked straight up. Cooldown: 140s You can own up to 3 active items at once",
       "builds_from": [
         "Medal of Defense",
         "Medal of Defense"
@@ -2950,7 +2949,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Ragnarok's_Wake",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "mobility",
+        "burst"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -3034,7 +3036,7 @@
         "Max Health": "225",
         "Health Regen": "3"
       },
-      "passive": null,
+      "passive": "On Use: Heal all allies within 8.8m. +10% Health Heal over 10s Counts as Ability healing If target has 6 debuffs: +10% Health Heal instantly Grants all non-damage immunities for 1s Costs 15% Mana. Cooldown: 90s You can own up to 3 active items at once",
       "builds_from": [
         "Killing Stone",
         "Olmec Blue"
@@ -3042,7 +3044,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Rod_of_Asclepius",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "sustain",
+        "aura"
+      ],
       "efficiency_tier": "undervalued"
     },
     {
@@ -3124,7 +3129,7 @@
         "Max Mana": "200",
         "Mana Regen": "3"
       },
-      "passive": null,
+      "passive": "On Use: Create a zone that puts gods into Stasis. The Zone appears after 1s The Stasis lasts 2s Cooldown: 90s You can own up to 3 active items at once",
       "builds_from": [
         "Flaming Pearl",
         "Mana Tome"
@@ -3132,7 +3137,9 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Scepter_of_Dominion",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "peel"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -3144,7 +3151,7 @@
         "Magical Protection": "50",
         "Cooldown Rate": "15"
       },
-      "passive": null,
+      "passive": "On Use: Enemies in front of you: Silenced for 1s -10% Protections for 4s Cooldown: 90s During Moonlight Phase: Hits enemies around you Silence lasts 1.5s -15% Protections You can own up to 3 active items at once",
       "builds_from": [
         "Sage's Ring",
         "Circle of Protection"
@@ -3152,7 +3159,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Screeching_Gargoyle",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "protection-shred",
+        "peel"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -3189,7 +3199,7 @@
         "Physical Protection": "15",
         "Magical Protection": "15"
       },
-      "passive": null,
+      "passive": "On Use: Fire a projectile 11.2m forward. +40 (+5 per Level) True Damage If an enemy is Shielded: -70% Shield You gain a Shield equal to the amount of Shield reduced Cooldown: 15s You can own up to 3 active items at once",
       "builds_from": [
         "Skeggox",
         "Engraved Guard"
@@ -3281,26 +3291,9 @@
       "builds_from": [
         "Axe"
       ],
-      "builds_into": [
-        "Arondight",
-        "Avatar's Parashu",
-        "Avatar's Parashu",
-        "Avenging Blade",
-        "Barbed Carver",
-        "Bloodforge",
-        "Dagger of Frenzy",
-        "Deathbringer",
-        "Devourer's Gauntlet",
-        "Jotunn's Revenge",
-        "Lernaean Bow",
-        "Oath-Sworn Spear",
-        "Pendulum Blade",
-        "Shield Splitter",
-        "Tekko-Kagi",
-        "Tyrfing"
-      ],
+      "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Skeggox",
-      "last_verified": "2026-07-17",
+      "last_verified": "2026-07-18",
       "effect_tags": [],
       "efficiency_tier": "undervalued"
     },
@@ -3471,7 +3464,7 @@
         "Intelligence": "75",
         "Cooldown Rate": "10"
       },
-      "passive": null,
+      "passive": "On Use: Next non-Ultimate Ability used will have no cooldown. Cooldown: 80s You can own up to 3 active items at once",
       "builds_from": [
         "Killing Stone",
         "Ring of Dispel"
@@ -3492,7 +3485,7 @@
         "Max Health": "250",
         "Health Regen": "5"
       },
-      "passive": null,
+      "passive": "On Use: You and allies within 6.4m gain: Slow Immunity +60% Movement Speed that decays to +20% over 4s Cooldown: 90s You can own up to 3 active items at once",
       "builds_from": [
         "Olmec Blue",
         "Legionnaire Armor"
@@ -3500,7 +3493,11 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Stampede",
       "last_verified": "2026-07-18",
-      "effect_tags": [],
+      "effect_tags": [
+        "mobility",
+        "aura",
+        "cc-immunity"
+      ],
       "efficiency_tier": "fair"
     },
     {
@@ -3717,7 +3714,7 @@
       ],
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Titan's_Bane",
-      "last_verified": "2026-07-17",
+      "last_verified": "2026-07-18",
       "effect_tags": [],
       "efficiency_tier": "fair"
     },
@@ -4045,8 +4042,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -4080,8 +4077,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -4099,7 +4096,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, The World Stone, Bragi's Harp, Chronos' Pendant, Genji's Guard, Triton's Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Jade Scepter, Shield of the Phoenix, Chandra's Grace."
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, The World Stone, Bragi's Harp, Chronos' Pendant, Genji's Guard, Triton's Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Screeching Gargoyle, Jade Scepter, Shield of the Phoenix."
         },
         {
           "source": "suggested",
@@ -4107,8 +4104,8 @@
           "slot_order": [
             "Soul Gem",
             "Spear of Desolation",
+            "Amanita Charm",
             "Obsidian Shard",
-            "Shield of the Phoenix",
             "Kinetic Cuirass",
             "Eye of Providence"
           ],
@@ -4125,8 +4122,8 @@
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Amanita Charm \u2014 physical protection",
-              "swap_item": "Amanita Charm"
+              "swap": "Shield of the Phoenix \u2014 physical protection",
+              "swap_item": "Shield of the Phoenix"
             },
             {
               "vs_tag": "sustain",
@@ -4134,7 +4131,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Shield of the Phoenix, Gluttonous Grimoire, Bancroft's Talon, Kinetic Cuirass, Eye of Providence, The Cosmic Horror, Spirit Robe, Amanita Charm, Spear of the Magus, Sphere of Negation, Helm of Radiance, Chandra's Grace, Genji's Guard, Doom Orb, Erosion, Death Metal, Breastplate of Valor, The World Stone, Rod of Asclepius, Blood-Bound Book, Spectral Armor, Ancient Signet, Ethereal Staff, Freya's Tears."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, Rod of Asclepius, Blood-Bound Book, Shield of the Phoenix, Gluttonous Grimoire, Bancroft's Talon, Kinetic Cuirass, Eye of Providence, The Cosmic Horror, Lifebinder, Spirit Robe, Spear of the Magus, Phoenix Feather, Sphere of Negation, Helm of Radiance, Glorious Pridwen, Chandra's Grace, Genji's Guard, Doom Orb, Erosion, Death Metal, Breastplate of Valor, The World Stone, Spectral Armor."
         },
         {
           "source": "suggested",
@@ -4150,13 +4147,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4169,7 +4166,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom Orb, The World Stone, Dreamer's Idol, Death Metal, Rod of Asclepius, Chronos' Pendant, Blood-Bound Book, Ancient Signet, Ethereal Staff, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Gem of Focus, Jade Scepter, Void Stone, Bragi's Harp, Genji's Guard, Void Shield, Lifebinder."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom Orb, The World Stone, Screeching Gargoyle, Dreamer's Idol, Death Metal, Rod of Asclepius, Chronos' Pendant, Blood-Bound Book, Ancient Signet, Ethereal Staff, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Gem of Focus, Jade Scepter, Void Stone, Bragi's Harp, Genji's Guard, Void Shield."
         }
       ]
     },
@@ -4192,13 +4189,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Sphere of Negation \u2014 magical protection",
-              "swap_item": "Sphere of Negation"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4227,13 +4224,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Sphere of Negation \u2014 magical protection",
-              "swap_item": "Sphere of Negation"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4253,7 +4250,7 @@
           "archetype": "bruiser",
           "slot_order": [
             "Soul Gem",
-            "Shield of the Phoenix",
+            "Amanita Charm",
             "Divine Ruin",
             "Erosion",
             "Stygian Anchor",
@@ -4267,13 +4264,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Sphere of Negation \u2014 magical protection",
-              "swap_item": "Sphere of Negation"
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Spirit Robe \u2014 physical protection",
-              "swap_item": "Spirit Robe"
+              "swap": "Shield of the Phoenix \u2014 physical protection",
+              "swap_item": "Shield of the Phoenix"
             },
             {
               "vs_tag": "sustain",
@@ -4297,8 +4294,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -4398,7 +4395,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Crusher, Tyrfing, Golden Blade, Tekko-Kagi, Hydra's Lament, The Reaper, Berserker's Shield, Damaru, Runeforged Hammer, Lernaean Bow, Rage, Genji's Guard, Titan's Bane, Demon Blade, Avenging Blade, Kinetic Cuirass, Musashi's Dual Swords, Eye of Providence, Pharaoh's Curse, Shield Splitter, Eros' Bow, Breastplate of Valor, Eye of the Storm, Heartseeker, Pendulum Blade, Spectral Armor."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Crusher, Tyrfing, Golden Blade, Tekko-Kagi, Lernaean Bow, Hydra's Lament, The Reaper, Berserker's Shield, Damaru, Runeforged Hammer, Rage, Genji's Guard, Titan's Bane, Demon Blade, Avenging Blade, Kinetic Cuirass, Musashi's Dual Swords, Eye of Providence, Pharaoh's Curse, Shield Splitter, Eros' Bow, Breastplate of Valor, Eye of the Storm, Heartseeker, Pendulum Blade, Spectral Armor."
         },
         {
           "source": "suggested",
@@ -4433,7 +4430,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, Tyrfing, The Crusher, Golden Blade, Tekko-Kagi, Damaru, Hydra's Lament, Rage, Berserker's Shield, The Reaper, Runeforged Hammer, Demon Blade, Lernaean Bow, Musashi's Dual Swords, Avenging Blade, Genji's Guard, Titan's Bane, Kinetic Cuirass, Shield Splitter, Pharaoh's Curse, Eye of Providence, Eros' Bow, Eye of the Storm, Breastplate of Valor, Spectral Armor, Qin's Blade, Heartseeker."
+          "rationale": "Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, Tyrfing, The Crusher, Golden Blade, Tekko-Kagi, Damaru, Lernaean Bow, Hydra's Lament, Rage, Berserker's Shield, The Reaper, Runeforged Hammer, Demon Blade, Musashi's Dual Swords, Avenging Blade, Genji's Guard, Titan's Bane, Kinetic Cuirass, Shield Splitter, Pharaoh's Curse, Eye of Providence, Eros' Bow, Eye of the Storm, Breastplate of Valor, Spectral Armor, Qin's Blade, Heartseeker."
         },
         {
           "source": "suggested",
@@ -4468,14 +4465,14 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Crusher, Tyrfing, Hydra's Lament, Golden Blade, Tekko-Kagi, The Reaper, Runeforged Hammer, Damaru, Titan's Bane, Genji's Guard, Berserker's Shield, Pendulum Blade, Lernaean Bow, Avenging Blade, Rage, Shield Splitter, Heartseeker, Breastplate of Valor, Kinetic Cuirass, Eye of Providence, Musashi's Dual Swords, Eye of the Storm, Arondight, Demon Blade, Shield of the Phoenix, Pharaoh's Curse."
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Crusher, Tyrfing, Hydra's Lament, Golden Blade, Tekko-Kagi, The Reaper, Lernaean Bow, Runeforged Hammer, Damaru, Titan's Bane, Genji's Guard, Berserker's Shield, Pendulum Blade, Avenging Blade, Rage, Shield Splitter, Heartseeker, Breastplate of Valor, Kinetic Cuirass, Eye of Providence, Musashi's Dual Swords, Eye of the Storm, Arondight, Demon Blade, Screeching Gargoyle, Shield of the Phoenix."
         },
         {
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
             "Riptalon",
-            "Devourer's Gauntlet",
+            "Amanita Charm",
             "Jotunn's Revenge",
             "The Crusher",
             "Kinetic Cuirass",
@@ -4503,7 +4500,7 @@
               "swap_item": "Stygian Anchor"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: The Reaper, Jotunn's Revenge, Shield of the Phoenix, The Crusher, Kinetic Cuirass, Tyrfing, Eye of Providence, Chandra's Grace, Shield Splitter, Berserker's Shield, Spirit Robe, Golden Blade, Amanita Charm, Genji's Guard, Hydra's Lament, Spectral Armor, Erosion, Runeforged Hammer, Pharaoh's Curse, Breastplate of Valor, Tekko-Kagi, Eye of the Storm, Damaru, Magi's Cloak, Avenging Blade, Mantle Of Discord, Lernaean Bow."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, The Reaper, Jotunn's Revenge, Shield of the Phoenix, The Crusher, Kinetic Cuirass, Tyrfing, Eye of Providence, Phoenix Feather, Chandra's Grace, Shield Splitter, Berserker's Shield, Spirit Robe, Golden Blade, Genji's Guard, Hydra's Lament, Glorious Pridwen, Lernaean Bow, Spectral Armor, Erosion, Runeforged Hammer, Pharaoh's Curse, Breastplate of Valor, Tekko-Kagi, Eye of the Storm, Damaru, Bloodforge."
         },
         {
           "source": "suggested",
@@ -4524,8 +4521,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4538,7 +4535,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Crusher, Avenging Blade, Tekko-Kagi, Tyrfing, The Reaper, Golden Blade, Titan's Bane, Oath-Sworn Spear, Hydra's Lament, Berserker's Shield, Void Stone, Damaru, Runeforged Hammer, Heartseeker, Void Shield, Pendulum Blade, Stone of Binding, Genji's Guard, Lernaean Bow, Kinetic Cuirass, Rage, Eye of Providence, Shield Splitter, Pharaoh's Curse, Musashi's Dual Swords, Eros' Bow."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Crusher, Avenging Blade, Tekko-Kagi, Tyrfing, The Reaper, Screeching Gargoyle, Golden Blade, Titan's Bane, Oath-Sworn Spear, Lernaean Bow, Hydra's Lament, Berserker's Shield, Void Stone, Damaru, Runeforged Hammer, Heartseeker, Void Shield, Pendulum Blade, Stone of Binding, Genji's Guard, Kinetic Cuirass, Rage, Eye of Providence, Shield Splitter, Pharaoh's Curse, Musashi's Dual Swords."
         }
       ]
     },
@@ -4555,8 +4552,8 @@
             "Jotunn's Revenge",
             "The Crusher",
             "Tyrfing",
-            "Shogun's Ofuda",
-            "Tekko-Kagi"
+            "Pharaoh's Curse",
+            "Eros' Bow"
           ],
           "situational_swaps": [
             {
@@ -4566,8 +4563,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4591,7 +4588,7 @@
             "Tyrfing",
             "The Crusher",
             "Demon Blade",
-            "Damaru"
+            "Pharaoh's Curse"
           ],
           "situational_swaps": [
             {
@@ -4601,8 +4598,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4636,8 +4633,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4656,12 +4653,12 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "The Reaper",
-            "Riptalon",
+            "Pharaoh's Curse",
             "Erosion",
             "Stygian Anchor",
-            "Jotunn's Revenge",
-            "Shogun's Ofuda"
+            "Jotunn's Revenge"
           ],
           "situational_swaps": [
             {
@@ -4701,13 +4698,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4802,7 +4799,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Golden Blade, Tekko-Kagi, Hydra's Lament, The Reaper, Damaru, Heartseeker, Runeforged Hammer, Berserker's Shield, Lernaean Bow, Rage, Riptalon, Avenging Blade, Demon Blade, Genji's Guard, Musashi's Dual Swords, Shield Splitter, Kinetic Cuirass, Eye of Providence, Eye of the Storm, Pharaoh's Curse, Eros' Bow, Pendulum Blade, Breastplate of Valor, Spectral Armor."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Golden Blade, Tekko-Kagi, Lernaean Bow, Hydra's Lament, The Reaper, Damaru, Heartseeker, Runeforged Hammer, Berserker's Shield, Rage, Riptalon, Avenging Blade, Demon Blade, Genji's Guard, Musashi's Dual Swords, Shield Splitter, Kinetic Cuirass, Eye of Providence, Eye of the Storm, Pharaoh's Curse, Eros' Bow, Pendulum Blade, Breastplate of Valor, Spectral Armor."
         },
         {
           "source": "suggested",
@@ -4837,7 +4834,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Golden Blade, Tekko-Kagi, Damaru, Hydra's Lament, Rage, Berserker's Shield, The Reaper, Heartseeker, Runeforged Hammer, Demon Blade, Lernaean Bow, Musashi's Dual Swords, Riptalon, Avenging Blade, Genji's Guard, Kinetic Cuirass, Shield Splitter, Pharaoh's Curse, Eye of Providence, Eros' Bow, Eye of the Storm, Breastplate of Valor, Spectral Armor, Qin's Blade."
+          "rationale": "Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Golden Blade, Tekko-Kagi, Damaru, Lernaean Bow, Hydra's Lament, Rage, Berserker's Shield, The Reaper, Heartseeker, Runeforged Hammer, Demon Blade, Musashi's Dual Swords, Riptalon, Avenging Blade, Genji's Guard, Kinetic Cuirass, Shield Splitter, Pharaoh's Curse, Eye of Providence, Eros' Bow, Eye of the Storm, Breastplate of Valor, Spectral Armor, Qin's Blade."
         },
         {
           "source": "suggested",
@@ -4872,7 +4869,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Hydra's Lament, Golden Blade, Tekko-Kagi, The Reaper, Heartseeker, Runeforged Hammer, Damaru, Genji's Guard, Berserker's Shield, Pendulum Blade, Riptalon, Lernaean Bow, Avenging Blade, Rage, Shield Splitter, Breastplate of Valor, Kinetic Cuirass, Eye of Providence, Musashi's Dual Swords, Eye of the Storm, Arondight, Demon Blade, Shield of the Phoenix, Pharaoh's Curse."
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Hydra's Lament, Golden Blade, Tekko-Kagi, The Reaper, Heartseeker, Lernaean Bow, Runeforged Hammer, Damaru, Genji's Guard, Berserker's Shield, Pendulum Blade, Riptalon, Avenging Blade, Rage, Shield Splitter, Breastplate of Valor, Kinetic Cuirass, Eye of Providence, Musashi's Dual Swords, Eye of the Storm, Arondight, Demon Blade, Screeching Gargoyle, Shield of the Phoenix."
         },
         {
           "source": "suggested",
@@ -4880,10 +4877,10 @@
           "slot_order": [
             "Jotunn's Revenge",
             "The Crusher",
+            "Amanita Charm",
             "The Reaper",
             "Titan's Bane",
-            "Transcendence",
-            "Shield of the Phoenix"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -4898,8 +4895,8 @@
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Eye of Providence \u2014 physical protection",
-              "swap_item": "Eye of Providence"
+              "swap": "Shield of the Phoenix \u2014 physical protection",
+              "swap_item": "Shield of the Phoenix"
             },
             {
               "vs_tag": "sustain",
@@ -4907,7 +4904,7 @@
               "swap_item": "Stygian Anchor"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: The Reaper, Shield of the Phoenix, Tyrfing, Riptalon, Kinetic Cuirass, Eye of Providence, Shield Splitter, Chandra's Grace, Golden Blade, Berserker's Shield, Spirit Robe, Amanita Charm, Genji's Guard, Hydra's Lament, Runeforged Hammer, Tekko-Kagi, Spectral Armor, Eye of the Storm, Erosion, Damaru, Breastplate of Valor, Pharaoh's Curse, Avenging Blade, Lernaean Bow, Magi's Cloak, Rage."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, The Reaper, Shield of the Phoenix, Tyrfing, Riptalon, Kinetic Cuirass, Eye of Providence, Shield Splitter, Phoenix Feather, Chandra's Grace, Golden Blade, Berserker's Shield, Spirit Robe, Genji's Guard, Hydra's Lament, Lernaean Bow, Runeforged Hammer, Glorious Pridwen, Tekko-Kagi, Spectral Armor, Eye of the Storm, Erosion, Bloodforge, Damaru, Breastplate of Valor, Pharaoh's Curse."
         },
         {
           "source": "suggested",
@@ -4928,8 +4925,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4942,7 +4939,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Avenging Blade, Tekko-Kagi, Tyrfing, The Reaper, Heartseeker, Golden Blade, Riptalon, Oath-Sworn Spear, Hydra's Lament, Runeforged Hammer, Damaru, Berserker's Shield, Void Stone, Void Shield, Pendulum Blade, Stone of Binding, Lernaean Bow, Rage, Genji's Guard, Kinetic Cuirass, Shield Splitter, Eye of Providence, Musashi's Dual Swords, Eye of the Storm, Pharaoh's Curse."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Avenging Blade, Tekko-Kagi, Tyrfing, The Reaper, Heartseeker, Golden Blade, Screeching Gargoyle, Riptalon, Oath-Sworn Spear, Lernaean Bow, Hydra's Lament, Runeforged Hammer, Damaru, Berserker's Shield, Void Stone, Void Shield, Pendulum Blade, Stone of Binding, Rage, Genji's Guard, Kinetic Cuirass, Shield Splitter, Eye of Providence, Musashi's Dual Swords, Eye of the Storm."
         }
       ]
     },
@@ -4959,8 +4956,8 @@
             "Jotunn's Revenge",
             "The Crusher",
             "Tyrfing",
-            "Tekko-Kagi",
-            "Demon Blade"
+            "Pharaoh's Curse",
+            "Eros' Bow"
           ],
           "situational_swaps": [
             {
@@ -4970,8 +4967,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -4995,7 +4992,7 @@
             "Tyrfing",
             "The Crusher",
             "Demon Blade",
-            "Damaru"
+            "Pharaoh's Curse"
           ],
           "situational_swaps": [
             {
@@ -5005,8 +5002,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5040,8 +5037,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5060,12 +5057,12 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "The Reaper",
-            "Riptalon",
+            "Pharaoh's Curse",
             "Erosion",
             "Jotunn's Revenge",
-            "The Crusher",
-            "Tyrfing"
+            "The Crusher"
           ],
           "situational_swaps": [
             {
@@ -5105,13 +5102,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5206,7 +5203,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Kinetic Cuirass, Eye of Providence, Gluttonous Grimoire, Spectral Armor, Genji's Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, The Cosmic Horror, Soul Gem, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Midgardian Mail, Spear of the Magus, Erosion, Divine Ruin, Polynomicon, Ancile, Jade Scepter, Shield of the Phoenix, Yogi's Necklace, Chandra's Grace."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Kinetic Cuirass, Eye of Providence, Gluttonous Grimoire, Spectral Armor, Genji's Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, The Cosmic Horror, Soul Gem, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Midgardian Mail, Spear of the Magus, Erosion, Divine Ruin, Polynomicon, Ancile, Screeching Gargoyle, Jade Scepter, Shield of the Phoenix, Yogi's Necklace."
         },
         {
           "source": "suggested",
@@ -5222,8 +5219,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -5241,34 +5238,34 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, The World Stone, Bragi's Harp, Chronos' Pendant, Genji's Guard, Triton's Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Jade Scepter, Shield of the Phoenix, Chandra's Grace."
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, The World Stone, Bragi's Harp, Chronos' Pendant, Genji's Guard, Triton's Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Screeching Gargoyle, Jade Scepter, Shield of the Phoenix."
         },
         {
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Kinetic Cuirass",
             "Eye of Providence",
             "Spirit Robe",
-            "Amanita Charm",
             "Erosion",
-            "Shield of the Phoenix"
+            "Magi's Cloak"
           ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
-            },
-            {
-              "vs_tag": "magic_heavy",
-              "swap": "Mantle Of Discord \u2014 magical protection",
+              "swap": "Mantle Of Discord \u2014 CC-immunity / cleanse",
               "swap_item": "Mantle Of Discord"
             },
             {
+              "vs_tag": "magic_heavy",
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
+            },
+            {
               "vs_tag": "physical_heavy",
-              "swap": "Stone of Binding \u2014 physical protection",
-              "swap_item": "Stone of Binding"
+              "swap": "Shield of the Phoenix \u2014 physical protection",
+              "swap_item": "Shield of the Phoenix"
             },
             {
               "vs_tag": "sustain",
@@ -5276,7 +5273,7 @@
               "swap_item": "Stygian Anchor"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Kinetic Cuirass, Eye of Providence, Spirit Robe, Amanita Charm, Erosion, Shield of the Phoenix, Magi's Cloak, Mantle Of Discord, Stone of Binding, Shroud of Vengeance, Draconic Scale, Freya's Tears, Shifter's Shield, Prophetic Cloak, Spectral Armor, Genji's Guard, Stygian Anchor, Soul Gem, Helm of Darkness, Sphere of Negation, Breastplate of Valor, Xibalban Effigy, Helm of Radiance, Umbral Link, Midgardian Mail, Bancroft's Talon, Ancile."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Spirit Robe, Erosion, Shield of the Phoenix, Glorious Pridwen, Magi's Cloak, Mantle Of Discord, Phoenix Feather, Stone of Binding, Shroud of Vengeance, Draconic Scale, Freya's Tears, Shifter's Shield, Prophetic Cloak, Spectral Armor, Genji's Guard, Stygian Anchor, Rod of Asclepius, Blood-Bound Book, Soul Gem, Helm of Darkness, Sphere of Negation, Breastplate of Valor, Xibalban Effigy, Helm of Radiance."
         },
         {
           "source": "suggested",
@@ -5292,13 +5289,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5311,7 +5308,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Cosmic Horror, Gluttonous Grimoire, Spear of the Magus, Soul Gem, Doom Orb, The World Stone, Dreamer's Idol, Void Stone, Void Shield, Stone of Binding, Kinetic Cuirass, Eye of Providence, Spectral Armor, Genji's Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Midgardian Mail."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Cosmic Horror, Gluttonous Grimoire, Spear of the Magus, Soul Gem, Doom Orb, The World Stone, Dreamer's Idol, Screeching Gargoyle, Void Stone, Void Shield, Stone of Binding, Kinetic Cuirass, Eye of Providence, Spectral Armor, Genji's Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft's Talon."
         }
       ]
     },
@@ -5324,8 +5321,8 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Amanita Charm",
             "Divine Ruin",
-            "Soul Gem",
             "Contagion",
             "Spectral Armor",
             "Void Stone",
@@ -5339,8 +5336,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Stygian Anchor \u2014 magical protection",
-              "swap_item": "Stygian Anchor"
+              "swap": "Phoenix Feather \u2014 magical protection",
+              "swap_item": "Phoenix Feather"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5349,8 +5346,8 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Brawler\u2019s Beat Stick \u2014 anti-heal",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Stygian Anchor \u2014 anti-heal",
+              "swap_item": "Stygian Anchor"
             }
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
@@ -5369,13 +5366,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Sphere of Negation \u2014 magical protection",
-              "swap_item": "Sphere of Negation"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5394,12 +5391,12 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Erosion",
             "Spirit Robe",
             "Stygian Anchor",
             "Kinetic Cuirass",
-            "Eye of Providence",
-            "Amanita Charm"
+            "Eye of Providence"
           ],
           "situational_swaps": [
             {
@@ -5409,13 +5406,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Brawler\u2019s Beat Stick \u2014 magical protection",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Stone of Binding \u2014 physical protection",
-              "swap_item": "Stone of Binding"
+              "swap": "Brawler\u2019s Beat Stick \u2014 physical protection",
+              "swap_item": "Brawler\u2019s Beat Stick"
             },
             {
               "vs_tag": "sustain",
@@ -5439,8 +5436,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -5540,17 +5537,17 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: The Crusher, Kinetic Cuirass, Jotunn's Revenge, Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor, Hydra's Lament, Golden Blade, Berserker's Shield, Amanita Charm, Avenging Blade, Shield Splitter, Midgardian Mail, Eye of the Storm, Erosion, The Reaper, Ancile, Damaru, Shield of the Phoenix, Pharaoh's Curse, Yogi's Necklace, Chandra's Grace, Leviathan's Hide, Eros' Bow, Void Stone."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: The Crusher, Kinetic Cuirass, Jotunn's Revenge, Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor, Hydra's Lament, Golden Blade, Berserker's Shield, Amanita Charm, Avenging Blade, Shield Splitter, Lernaean Bow, Midgardian Mail, Eye of the Storm, Erosion, The Reaper, Ancile, Screeching Gargoyle, Damaru, Shield of the Phoenix, Pharaoh's Curse, Yogi's Necklace, Chandra's Grace, Leviathan's Hide."
         },
         {
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Spirit Robe",
             "Kinetic Cuirass",
             "Eye of Providence",
             "Shifter's Shield",
-            "Amanita Charm",
             "Shield Splitter"
           ],
           "situational_swaps": [
@@ -5575,7 +5572,7 @@
               "swap_item": "Stygian Anchor"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Spirit Robe, Kinetic Cuirass, Eye of Providence, Amanita Charm, Shield Splitter, Erosion, Shield of the Phoenix, Magi's Cloak, Mantle Of Discord, Stone of Binding, Shroud of Vengeance, Draconic Scale, Freya's Tears, Prophetic Cloak, Spectral Armor, Berserker's Shield, Stygian Anchor, Xibalban Effigy, Umbral Link, Midgardian Mail, Eye of the Storm, Ancile, The Reaper, Pharaoh's Curse, Glorious Pridwen."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, Spirit Robe, Kinetic Cuirass, Eye of Providence, Shield Splitter, Erosion, Shield of the Phoenix, Glorious Pridwen, Magi's Cloak, Mantle Of Discord, Phoenix Feather, Stone of Binding, Shroud of Vengeance, Draconic Scale, Freya's Tears, Prophetic Cloak, Spectral Armor, Berserker's Shield, Stygian Anchor, Xibalban Effigy, Umbral Link, Midgardian Mail, Eye of the Storm, Ancile, The Reaper."
         },
         {
           "source": "suggested",
@@ -5591,8 +5588,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
@@ -5610,7 +5607,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Crusher, The Reaper, Tekko-Kagi, Titan's Bane, Riptalon, Heartseeker, Pendulum Blade, Avatar's Parashu, Avenging Blade, Void Stone, Void Shield, Stone of Binding, Oath-Sworn Spear, Kinetic Cuirass, Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor, Hydra's Lament, Golden Blade, Berserker's Shield, Amanita Charm, Shield Splitter, Midgardian Mail, Eye of the Storm."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Jotunn's Revenge, The Crusher, The Reaper, Tekko-Kagi, Titan's Bane, Riptalon, Heartseeker, Pendulum Blade, Avatar's Parashu, Avenging Blade, Screeching Gargoyle, Void Stone, Void Shield, Stone of Binding, Oath-Sworn Spear, Kinetic Cuirass, Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor, Hydra's Lament, Golden Blade, Berserker's Shield, Amanita Charm, Shield Splitter, Lernaean Bow."
         }
       ]
     },
@@ -5623,9 +5620,9 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Amanita Charm",
             "Contagion",
             "Spectral Armor",
-            "The Reaper",
             "Void Stone",
             "Erosion",
             "Void Shield"
@@ -5638,8 +5635,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Stygian Anchor \u2014 magical protection",
-              "swap_item": "Stygian Anchor"
+              "swap": "Phoenix Feather \u2014 magical protection",
+              "swap_item": "Phoenix Feather"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5648,8 +5645,8 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Brawler\u2019s Beat Stick \u2014 anti-heal",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Stygian Anchor \u2014 anti-heal",
+              "swap_item": "Stygian Anchor"
             }
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
@@ -5658,12 +5655,12 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Erosion",
             "Spirit Robe",
             "Stygian Anchor",
             "Kinetic Cuirass",
-            "Eye of Providence",
-            "Amanita Charm"
+            "Eye of Providence"
           ],
           "situational_swaps": [
             {
@@ -5673,18 +5670,18 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shield Splitter \u2014 magical protection",
-              "swap_item": "Shield Splitter"
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Brawler\u2019s Beat Stick \u2014 physical protection",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Shield Splitter \u2014 physical protection",
+              "swap_item": "Shield Splitter"
             },
             {
               "vs_tag": "sustain",
-              "swap": "Contagion \u2014 anti-heal",
-              "swap_item": "Contagion"
+              "swap": "Brawler\u2019s Beat Stick \u2014 anti-heal",
+              "swap_item": "Brawler\u2019s Beat Stick"
             }
           ],
           "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
@@ -5703,8 +5700,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
@@ -5785,8 +5782,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -5820,8 +5817,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -5839,7 +5836,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, The World Stone, Bragi's Harp, Chronos' Pendant, Genji's Guard, Triton's Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Jade Scepter, Shield of the Phoenix, Chandra's Grace."
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, The World Stone, Bragi's Harp, Chronos' Pendant, Genji's Guard, Triton's Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Screeching Gargoyle, Jade Scepter, Shield of the Phoenix."
         },
         {
           "source": "suggested",
@@ -5847,8 +5844,8 @@
           "slot_order": [
             "Soul Gem",
             "Spear of Desolation",
+            "Amanita Charm",
             "Obsidian Shard",
-            "Shield of the Phoenix",
             "Kinetic Cuirass",
             "Eye of Providence"
           ],
@@ -5865,8 +5862,8 @@
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Amanita Charm \u2014 physical protection",
-              "swap_item": "Amanita Charm"
+              "swap": "Shield of the Phoenix \u2014 physical protection",
+              "swap_item": "Shield of the Phoenix"
             },
             {
               "vs_tag": "sustain",
@@ -5874,7 +5871,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Shield of the Phoenix, Gluttonous Grimoire, Bancroft's Talon, Kinetic Cuirass, Eye of Providence, The Cosmic Horror, Spirit Robe, Amanita Charm, Spear of the Magus, Sphere of Negation, Helm of Radiance, Chandra's Grace, Genji's Guard, Doom Orb, Erosion, Death Metal, Breastplate of Valor, The World Stone, Rod of Asclepius, Blood-Bound Book, Spectral Armor, Ancient Signet, Ethereal Staff, Freya's Tears."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, Obsidian Shard, Rod of Asclepius, Blood-Bound Book, Shield of the Phoenix, Gluttonous Grimoire, Bancroft's Talon, Kinetic Cuirass, Eye of Providence, The Cosmic Horror, Lifebinder, Spirit Robe, Spear of the Magus, Phoenix Feather, Sphere of Negation, Helm of Radiance, Glorious Pridwen, Chandra's Grace, Genji's Guard, Doom Orb, Erosion, Death Metal, Breastplate of Valor, The World Stone, Spectral Armor."
         },
         {
           "source": "suggested",
@@ -5890,13 +5887,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5909,7 +5906,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom Orb, The World Stone, Dreamer's Idol, Death Metal, Rod of Asclepius, Chronos' Pendant, Blood-Bound Book, Ancient Signet, Ethereal Staff, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Gem of Focus, Jade Scepter, Void Stone, Bragi's Harp, Genji's Guard, Void Shield, Lifebinder."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom Orb, The World Stone, Screeching Gargoyle, Dreamer's Idol, Death Metal, Rod of Asclepius, Chronos' Pendant, Blood-Bound Book, Ancient Signet, Ethereal Staff, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Gem of Focus, Jade Scepter, Void Stone, Bragi's Harp, Genji's Guard, Void Shield."
         }
       ]
     },
@@ -5932,13 +5929,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Sphere of Negation \u2014 magical protection",
-              "swap_item": "Sphere of Negation"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5967,13 +5964,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Sphere of Negation \u2014 magical protection",
-              "swap_item": "Sphere of Negation"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -5993,7 +5990,7 @@
           "archetype": "bruiser",
           "slot_order": [
             "Soul Gem",
-            "Shield of the Phoenix",
+            "Amanita Charm",
             "Divine Ruin",
             "Erosion",
             "Stygian Anchor",
@@ -6007,13 +6004,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Sphere of Negation \u2014 magical protection",
-              "swap_item": "Sphere of Negation"
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Spirit Robe \u2014 physical protection",
-              "swap_item": "Spirit Robe"
+              "swap": "Shield of the Phoenix \u2014 physical protection",
+              "swap_item": "Shield of the Phoenix"
             },
             {
               "vs_tag": "sustain",
@@ -6037,8 +6034,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -6173,18 +6170,18 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Death Metal, Gluttonous Grimoire, The Cosmic Horror, Bragi's Harp, Spear of the Magus, Doom Orb, Genji's Guard, Chronos' Pendant, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Bracer of The Abyss, Ethereal Staff, Triton's Conch, Breastplate of Valor, Kinetic Cuirass, Helm of Radiance, Bancroft's Talon, Eye of Providence, Gem of Focus, Divine Ruin, Polynomicon, Jade Scepter."
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Death Metal, Gluttonous Grimoire, The Cosmic Horror, Bragi's Harp, Spear of the Magus, Doom Orb, Genji's Guard, Chronos' Pendant, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Bracer of The Abyss, Ethereal Staff, Triton's Conch, Breastplate of Valor, Kinetic Cuirass, Helm of Radiance, Bancroft's Talon, Eye of Providence, Gem of Focus, Divine Ruin, Polynomicon, Screeching Gargoyle."
         },
         {
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Kinetic Cuirass",
             "Eye of Providence",
             "Shield of the Phoenix",
-            "Spirit Robe",
             "Death Metal",
-            "Amanita Charm"
+            "Obsidian Shard"
           ],
           "situational_swaps": [
             {
@@ -6194,13 +6191,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Erosion \u2014 magical protection",
-              "swap_item": "Erosion"
+              "swap": "Spirit Robe \u2014 magical protection",
+              "swap_item": "Spirit Robe"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Spectral Armor \u2014 physical protection",
-              "swap_item": "Spectral Armor"
+              "swap": "Erosion \u2014 physical protection",
+              "swap_item": "Erosion"
             },
             {
               "vs_tag": "sustain",
@@ -6208,7 +6205,7 @@
               "swap_item": "Stygian Anchor"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Kinetic Cuirass, Eye of Providence, Shield of the Phoenix, Spirit Robe, Death Metal, Amanita Charm, Bancroft's Talon, Erosion, Bragi's Harp, Chandra's Grace, Spectral Armor, Genji's Guard, Magi's Cloak, Mantle Of Discord, Stone of Binding, Shroud of Vengeance, Sphere of Negation, Breastplate of Valor, Helm of Radiance, Umbral Link, Midgardian Mail, Draconic Scale, Freya's Tears, Ancile, Shifter's Shield, Gluttonous Grimoire."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Shield of the Phoenix, Spirit Robe, Death Metal, Phoenix Feather, Rod of Asclepius, Blood-Bound Book, Bancroft's Talon, Erosion, Bragi's Harp, Chandra's Grace, Glorious Pridwen, Spectral Armor, Genji's Guard, Magi's Cloak, Mantle Of Discord, Lifebinder, Stone of Binding, Shroud of Vengeance, Sphere of Negation, Breastplate of Valor, Helm of Radiance, Umbral Link, Midgardian Mail."
         },
         {
           "source": "suggested",
@@ -6224,13 +6221,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6243,7 +6240,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, Bragi's Harp, Void Stone, Void Shield, Stone of Binding, Kinetic Cuirass, Eye of Providence, Bracer of The Abyss, Spectral Armor, Genji's Guard, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft's Talon."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, Bragi's Harp, Screeching Gargoyle, Void Stone, Void Shield, Stone of Binding, Kinetic Cuirass, Eye of Providence, Bracer of The Abyss, Spectral Armor, Genji's Guard, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance."
         }
       ]
     },
@@ -6258,10 +6255,10 @@
           "slot_order": [
             "Death Metal",
             "Bragi's Harp",
+            "Amanita Charm",
             "Triton's Conch",
             "Divine Ruin",
-            "Bracer of The Abyss",
-            "Soul Gem"
+            "Bracer of The Abyss"
           ],
           "situational_swaps": [
             {
@@ -6301,13 +6298,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Sphere of Negation \u2014 magical protection",
-              "swap_item": "Sphere of Negation"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6326,11 +6323,11 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
+            "Rod of Asclepius",
             "Erosion",
-            "Spirit Robe",
             "Stygian Anchor",
             "Kinetic Cuirass",
-            "Shield of the Phoenix",
             "Spectral Armor"
           ],
           "situational_swaps": [
@@ -6341,13 +6338,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Eye of Providence \u2014 magical protection",
-              "swap_item": "Eye of Providence"
+              "swap": "Spirit Robe \u2014 magical protection",
+              "swap_item": "Spirit Robe"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Amanita Charm \u2014 physical protection",
-              "swap_item": "Amanita Charm"
+              "swap": "Shield of the Phoenix \u2014 physical protection",
+              "swap_item": "Shield of the Phoenix"
             },
             {
               "vs_tag": "sustain",
@@ -6371,18 +6368,18 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Stone of Binding \u2014 magical protection",
-              "swap_item": "Stone of Binding"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Spectral Armor \u2014 physical protection",
-              "swap_item": "Spectral Armor"
+              "swap": "Stone of Binding \u2014 physical protection",
+              "swap_item": "Stone of Binding"
             },
             {
               "vs_tag": "sustain",
@@ -6472,7 +6469,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Kinetic Cuirass, Eye of Providence, Gluttonous Grimoire, Spectral Armor, Genji's Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, The Cosmic Horror, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Midgardian Mail, Spear of the Magus, Erosion, Divine Ruin, Polynomicon, Ancile, Jade Scepter, Shield of the Phoenix, Yogi's Necklace, Chandra's Grace."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Kinetic Cuirass, Eye of Providence, Gluttonous Grimoire, Spectral Armor, Genji's Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, The Cosmic Horror, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Midgardian Mail, Spear of the Magus, Erosion, Divine Ruin, Polynomicon, Ancile, Screeching Gargoyle, Jade Scepter, Shield of the Phoenix, Yogi's Necklace."
         },
         {
           "source": "suggested",
@@ -6488,8 +6485,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -6507,29 +6504,29 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, The World Stone, Bragi's Harp, Chronos' Pendant, Genji's Guard, Triton's Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Jade Scepter, Shield of the Phoenix, Chandra's Grace."
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Death Metal, Doom Orb, The World Stone, Bragi's Harp, Chronos' Pendant, Genji's Guard, Triton's Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Divine Ruin, Polynomicon, Screeching Gargoyle, Jade Scepter, Shield of the Phoenix."
         },
         {
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Kinetic Cuirass",
             "Eye of Providence",
             "Spirit Robe",
-            "Amanita Charm",
-            "Soul Gem",
-            "Erosion"
+            "Erosion",
+            "Magi's Cloak"
           ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Mantle Of Discord \u2014 CC-immunity / cleanse",
+              "swap_item": "Mantle Of Discord"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Mantle Of Discord \u2014 magical protection",
-              "swap_item": "Mantle Of Discord"
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6542,7 +6539,7 @@
               "swap_item": "Stygian Anchor"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Kinetic Cuirass, Eye of Providence, Spirit Robe, Amanita Charm, Erosion, Shield of the Phoenix, Magi's Cloak, Mantle Of Discord, Stone of Binding, Shroud of Vengeance, Draconic Scale, Freya's Tears, Shifter's Shield, Prophetic Cloak, Spectral Armor, Genji's Guard, Stygian Anchor, Helm of Darkness, Sphere of Negation, Breastplate of Valor, Xibalban Effigy, Helm of Radiance, Umbral Link, Midgardian Mail, Bancroft's Talon, Ancile."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Spirit Robe, Erosion, Shield of the Phoenix, Glorious Pridwen, Magi's Cloak, Mantle Of Discord, Phoenix Feather, Stone of Binding, Shroud of Vengeance, Draconic Scale, Freya's Tears, Shifter's Shield, Prophetic Cloak, Spectral Armor, Genji's Guard, Stygian Anchor, Rod of Asclepius, Blood-Bound Book, Helm of Darkness, Sphere of Negation, Breastplate of Valor, Xibalban Effigy, Helm of Radiance."
         },
         {
           "source": "suggested",
@@ -6558,13 +6555,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6577,7 +6574,7 @@
               "swap_item": "Divine Ruin"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Cosmic Horror, Gluttonous Grimoire, Spear of the Magus, Doom Orb, The World Stone, Dreamer's Idol, Void Stone, Void Shield, Stone of Binding, Kinetic Cuirass, Eye of Providence, Spectral Armor, Genji's Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft's Talon, Midgardian Mail."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Cosmic Horror, Gluttonous Grimoire, Spear of the Magus, Doom Orb, The World Stone, Dreamer's Idol, Screeching Gargoyle, Void Stone, Void Shield, Stone of Binding, Kinetic Cuirass, Eye of Providence, Spectral Armor, Genji's Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft's Talon."
         }
       ]
     },
@@ -6590,8 +6587,8 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Amanita Charm",
             "Divine Ruin",
-            "Soul Gem",
             "Contagion",
             "Spectral Armor",
             "Void Stone",
@@ -6605,8 +6602,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Stygian Anchor \u2014 magical protection",
-              "swap_item": "Stygian Anchor"
+              "swap": "Phoenix Feather \u2014 magical protection",
+              "swap_item": "Phoenix Feather"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6615,8 +6612,8 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Brawler\u2019s Beat Stick \u2014 anti-heal",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Stygian Anchor \u2014 anti-heal",
+              "swap_item": "Stygian Anchor"
             }
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
@@ -6635,13 +6632,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Sphere of Negation \u2014 magical protection",
-              "swap_item": "Sphere of Negation"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6660,12 +6657,12 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Erosion",
             "Spirit Robe",
             "Stygian Anchor",
             "Kinetic Cuirass",
-            "Eye of Providence",
-            "Amanita Charm"
+            "Eye of Providence"
           ],
           "situational_swaps": [
             {
@@ -6675,13 +6672,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Brawler\u2019s Beat Stick \u2014 magical protection",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Stone of Binding \u2014 physical protection",
-              "swap_item": "Stone of Binding"
+              "swap": "Brawler\u2019s Beat Stick \u2014 physical protection",
+              "swap_item": "Brawler\u2019s Beat Stick"
             },
             {
               "vs_tag": "sustain",
@@ -6705,8 +6702,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
             },
             {
               "vs_tag": "magic_heavy",
@@ -6806,7 +6803,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: The Crusher, The Reaper, Kinetic Cuirass, Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor, Genji's Guard, Golden Blade, Berserker's Shield, Amanita Charm, Avenging Blade, Shield Splitter, Breastplate of Valor, Midgardian Mail, Eye of the Storm, Erosion, Ancile, Damaru, Shield of the Phoenix, Pharaoh's Curse, Yogi's Necklace, Chandra's Grace, Leviathan's Hide, Eros' Bow, Void Stone."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: The Crusher, The Reaper, Kinetic Cuirass, Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor, Genji's Guard, Golden Blade, Berserker's Shield, Amanita Charm, Avenging Blade, Shield Splitter, Breastplate of Valor, Lernaean Bow, Midgardian Mail, Eye of the Storm, Erosion, Ancile, Screeching Gargoyle, Damaru, Shield of the Phoenix, Pharaoh's Curse, Yogi's Necklace, Chandra's Grace, Leviathan's Hide."
         },
         {
           "source": "suggested",
@@ -6822,8 +6819,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
@@ -6841,16 +6838,16 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: The Crusher, The Reaper, Pendulum Blade, Tekko-Kagi, Tyrfing, Runeforged Hammer, Genji's Guard, Golden Blade, Avenging Blade, Arondight, Shield Splitter, Breastplate of Valor, Eye of the Storm, Damaru, Shield of the Phoenix, Chandra's Grace, Riptalon, Kinetic Cuirass, Eye of Providence, Lernaean Bow, Rage, Transcendence, Gladiator's Shield, Barbed Carver."
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: The Crusher, The Reaper, Pendulum Blade, Tekko-Kagi, Tyrfing, Runeforged Hammer, Genji's Guard, Golden Blade, Avenging Blade, Arondight, Shield Splitter, Breastplate of Valor, Lernaean Bow, Eye of the Storm, Screeching Gargoyle, Damaru, Shield of the Phoenix, Chandra's Grace, Riptalon, Kinetic Cuirass, Eye of Providence, Rage, Transcendence, Gladiator's Shield."
         },
         {
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Kinetic Cuirass",
             "Eye of Providence",
             "Spirit Robe",
-            "Amanita Charm",
             "Shield Splitter",
             "Erosion"
           ],
@@ -6862,8 +6859,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Mantle Of Discord \u2014 magical protection",
-              "swap_item": "Mantle Of Discord"
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6876,7 +6873,7 @@
               "swap_item": "Stygian Anchor"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Kinetic Cuirass, Eye of Providence, Spirit Robe, Amanita Charm, Shield Splitter, Erosion, Shield of the Phoenix, Magi's Cloak, Mantle Of Discord, Stone of Binding, Shroud of Vengeance, The Reaper, Draconic Scale, Freya's Tears, Shifter's Shield, Prophetic Cloak, Spectral Armor, Genji's Guard, Berserker's Shield, Stygian Anchor, Breastplate of Valor, Xibalban Effigy, Umbral Link, Midgardian Mail, Eye of the Storm, Ancile, Pharaoh's Curse, Glorious Pridwen."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Spirit Robe, Shield Splitter, Erosion, Shield of the Phoenix, Glorious Pridwen, Magi's Cloak, Mantle Of Discord, Phoenix Feather, Stone of Binding, Shroud of Vengeance, The Reaper, Draconic Scale, Freya's Tears, Shifter's Shield, Prophetic Cloak, Spectral Armor, Genji's Guard, Berserker's Shield, Stygian Anchor, Breastplate of Valor, Xibalban Effigy, Umbral Link, Midgardian Mail, Eye of the Storm, Ancile."
         },
         {
           "source": "suggested",
@@ -6892,13 +6889,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6911,7 +6908,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Reaper, The Crusher, Tekko-Kagi, Riptalon, Pendulum Blade, Avatar's Parashu, Avenging Blade, Void Stone, Void Shield, Stone of Binding, Oath-Sworn Spear, Kinetic Cuirass, Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor, Genji's Guard, Golden Blade, Berserker's Shield, Amanita Charm, Shield Splitter, Breastplate of Valor, Midgardian Mail, Eye of the Storm."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Reaper, The Crusher, Tekko-Kagi, Riptalon, Pendulum Blade, Avatar's Parashu, Avenging Blade, Screeching Gargoyle, Void Stone, Void Shield, Stone of Binding, Oath-Sworn Spear, Kinetic Cuirass, Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor, Genji's Guard, Golden Blade, Berserker's Shield, Amanita Charm, Shield Splitter, Breastplate of Valor, Lernaean Bow."
         }
       ]
     },
@@ -6924,9 +6921,9 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Amanita Charm",
             "Contagion",
             "Spectral Armor",
-            "The Reaper",
             "Void Stone",
             "Erosion",
             "Void Shield"
@@ -6939,8 +6936,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Stygian Anchor \u2014 magical protection",
-              "swap_item": "Stygian Anchor"
+              "swap": "Phoenix Feather \u2014 magical protection",
+              "swap_item": "Phoenix Feather"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6949,8 +6946,8 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Brawler\u2019s Beat Stick \u2014 anti-heal",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Stygian Anchor \u2014 anti-heal",
+              "swap_item": "Stygian Anchor"
             }
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
@@ -6969,13 +6966,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection",
-              "swap_item": "Genji's Guard"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -6994,12 +6991,12 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Erosion",
             "Spirit Robe",
             "Stygian Anchor",
             "Kinetic Cuirass",
-            "Eye of Providence",
-            "Amanita Charm"
+            "Eye of Providence"
           ],
           "situational_swaps": [
             {
@@ -7009,18 +7006,18 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shield Splitter \u2014 magical protection",
-              "swap_item": "Shield Splitter"
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Brawler\u2019s Beat Stick \u2014 physical protection",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Shield Splitter \u2014 physical protection",
+              "swap_item": "Shield Splitter"
             },
             {
               "vs_tag": "sustain",
-              "swap": "Contagion \u2014 anti-heal",
-              "swap_item": "Contagion"
+              "swap": "Brawler\u2019s Beat Stick \u2014 anti-heal",
+              "swap_item": "Brawler\u2019s Beat Stick"
             }
           ],
           "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data)."
@@ -7039,8 +7036,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
@@ -7116,7 +7113,7 @@
             "Hydra's Lament",
             "Tyrfing",
             "Golden Blade",
-            "Demon Blade"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -7140,7 +7137,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Golden Blade, Demon Blade, Damaru, Lernaean Bow, Rage, The Crusher, Tekko-Kagi, Musashi's Dual Swords, Runeforged Hammer, Avenging Blade, Shield Splitter, Eye of the Storm, Berserker's Shield, The Reaper, Deathbringer, Barbed Carver, Oath-Sworn Spear, Pharaoh's Curse, Eros' Bow, Arondight, Qin's Blade, Wyrmskin Hide."
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Golden Blade, Lernaean Bow, Demon Blade, Damaru, Rage, The Crusher, Tekko-Kagi, Musashi's Dual Swords, Runeforged Hammer, Avenging Blade, Shield Splitter, Eye of the Storm, Berserker's Shield, The Reaper, Deathbringer, Barbed Carver, Oath-Sworn Spear, Pharaoh's Curse, Eros' Bow, Arondight, Qin's Blade, Wyrmskin Hide."
         },
         {
           "source": "suggested",
@@ -7175,7 +7172,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Demon Blade, Golden Blade, Damaru, Rage, Musashi's Dual Swords, Lernaean Bow, Berserker's Shield, Tekko-Kagi, The Crusher, Runeforged Hammer, Deathbringer, Pharaoh's Curse, Eros' Bow, Avenging Blade, Shield Splitter, Qin's Blade, Eye of the Storm, Shogun's Ofuda, The Reaper, Riptalon, Kinetic Cuirass, Dagger of Frenzy, Eye of Providence, Barbed Carver."
+          "rationale": "Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for this god: Tyrfing, Demon Blade, Golden Blade, Damaru, Lernaean Bow, Rage, Musashi's Dual Swords, Berserker's Shield, Tekko-Kagi, The Crusher, Runeforged Hammer, Deathbringer, Pharaoh's Curse, Eros' Bow, Avenging Blade, Shield Splitter, Qin's Blade, Eye of the Storm, Shogun's Ofuda, The Reaper, Riptalon, Kinetic Cuirass, Dagger of Frenzy, Eye of Providence, Barbed Carver."
         },
         {
           "source": "suggested",
@@ -7210,7 +7207,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: The Crusher, Tyrfing, The Reaper, Tekko-Kagi, Golden Blade, Pendulum Blade, Runeforged Hammer, Genji's Guard, Damaru, Avenging Blade, Shield Splitter, Riptalon, Breastplate of Valor, Lernaean Bow, Berserker's Shield, Rage, Arondight, Eye of the Storm, Kinetic Cuirass, Eye of Providence, Shield of the Phoenix, Chandra's Grace, Musashi's Dual Swords, Spectral Armor."
+          "rationale": "Ability / burst skew (efficiency + fit + win/pick). Underrated for this god: The Crusher, Tyrfing, The Reaper, Tekko-Kagi, Golden Blade, Pendulum Blade, Runeforged Hammer, Lernaean Bow, Genji's Guard, Damaru, Avenging Blade, Shield Splitter, Riptalon, Breastplate of Valor, Berserker's Shield, Rage, Arondight, Eye of the Storm, Kinetic Cuirass, Eye of Providence, Screeching Gargoyle, Shield of the Phoenix, Chandra's Grace, Musashi's Dual Swords."
         },
         {
           "source": "suggested",
@@ -7218,10 +7215,10 @@
           "slot_order": [
             "Transcendence",
             "Jotunn's Revenge",
+            "Amanita Charm",
             "Hydra's Lament",
             "Shield Splitter",
-            "Kinetic Cuirass",
-            "Eye of Providence"
+            "Kinetic Cuirass"
           ],
           "situational_swaps": [
             {
@@ -7231,13 +7228,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Spirit Robe \u2014 magical protection",
-              "swap_item": "Spirit Robe"
+              "swap": "Eye of Providence \u2014 magical protection",
+              "swap_item": "Eye of Providence"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Shield of the Phoenix \u2014 physical protection",
-              "swap_item": "Shield of the Phoenix"
+              "swap": "Spirit Robe \u2014 physical protection",
+              "swap_item": "Spirit Robe"
             },
             {
               "vs_tag": "sustain",
@@ -7245,7 +7242,7 @@
               "swap_item": "Stygian Anchor"
             }
           ],
-          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Shield Splitter, Kinetic Cuirass, Eye of Providence, Tyrfing, The Reaper, Spirit Robe, Shield of the Phoenix, Amanita Charm, Golden Blade, Berserker's Shield, The Crusher, Eye of the Storm, Erosion, Runeforged Hammer, Magi's Cloak, Spectral Armor, Mantle Of Discord, Riptalon, Genji's Guard, Damaru, Pharaoh's Curse, Chandra's Grace, Stone of Binding, Shroud of Vengeance, Avenging Blade, Lernaean Bow."
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, Shield Splitter, Kinetic Cuirass, Eye of Providence, Tyrfing, The Reaper, Spirit Robe, Shield of the Phoenix, Phoenix Feather, Golden Blade, Berserker's Shield, The Crusher, Eye of the Storm, Erosion, Lernaean Bow, Runeforged Hammer, Glorious Pridwen, Magi's Cloak, Spectral Armor, Mantle Of Discord, Riptalon, Genji's Guard, Damaru, Bloodforge, Pharaoh's Curse, Chandra's Grace."
         },
         {
           "source": "suggested",
@@ -7261,13 +7258,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Magi's Cloak \u2014 CC-immunity / cleanse",
-              "swap_item": "Magi's Cloak"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Void Stone \u2014 magical protection",
-              "swap_item": "Void Stone"
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
             },
             {
               "vs_tag": "physical_heavy",
@@ -7280,7 +7277,7 @@
               "swap_item": "Contagion"
             }
           ],
-          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Crusher, Tekko-Kagi, The Reaper, Avenging Blade, Tyrfing, Riptalon, Golden Blade, Pendulum Blade, Oath-Sworn Spear, Runeforged Hammer, Damaru, Lernaean Bow, Rage, Void Stone, Berserker's Shield, Shield Splitter, Void Shield, Stone of Binding, Musashi's Dual Swords, Eye of the Storm, Demon Blade, Kinetic Cuirass, Eye of Providence, Pharaoh's Curse."
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Crusher, Tekko-Kagi, The Reaper, Avenging Blade, Tyrfing, Riptalon, Golden Blade, Pendulum Blade, Oath-Sworn Spear, Lernaean Bow, Runeforged Hammer, Damaru, Screeching Gargoyle, Rage, Void Stone, Berserker's Shield, Shield Splitter, Void Shield, Stone of Binding, Musashi's Dual Swords, Eye of the Storm, Demon Blade, Kinetic Cuirass, Eye of Providence."
         }
       ]
     },
@@ -7296,9 +7293,9 @@
             "Tyrfing",
             "Demon Blade",
             "Damaru",
-            "Lernaean Bow",
             "Rage",
-            "The Reaper"
+            "The Reaper",
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -7308,8 +7305,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -7332,8 +7329,8 @@
             "Tyrfing",
             "Damaru",
             "Rage",
-            "Lernaean Bow",
-            "Riptalon"
+            "Pharaoh's Curse",
+            "Eros' Bow"
           ],
           "situational_swaps": [
             {
@@ -7343,8 +7340,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -7373,13 +7370,13 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Shogun's Ofuda \u2014 magical protection",
-              "swap_item": "Shogun's Ofuda"
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
             },
             {
               "vs_tag": "physical_heavy",
@@ -7398,12 +7395,12 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Amanita Charm",
             "Erosion",
             "Shield Splitter",
             "Spirit Robe",
             "Stygian Anchor",
-            "Kinetic Cuirass",
-            "The Reaper"
+            "Kinetic Cuirass"
           ],
           "situational_swaps": [
             {
@@ -7413,8 +7410,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Eye of Providence \u2014 magical protection",
-              "swap_item": "Eye of Providence"
+              "swap": "Pharaoh's Curse \u2014 magical protection",
+              "swap_item": "Pharaoh's Curse"
             },
             {
               "vs_tag": "physical_heavy",
@@ -7443,8 +7440,8 @@
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
-              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
-              "swap_item": "Resolute Mantle"
+              "swap": "Avatar's Parashu \u2014 CC-immunity / cleanse",
+              "swap_item": "Avatar's Parashu"
             },
             {
               "vs_tag": "magic_heavy",

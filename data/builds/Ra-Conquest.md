@@ -55,8 +55,8 @@ builds:
     Genji''s Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book,
     Ancient Signet, The Cosmic Horror, Ethereal Staff, Breastplate of Valor, Helm
     of Radiance, Bancroft''s Talon, Midgardian Mail, Spear of the Magus, Erosion,
-    Divine Ruin, Polynomicon, Ancile, Jade Scepter, Shield of the Phoenix, Yogi''s
-    Necklace, Chandra''s Grace.'
+    Divine Ruin, Polynomicon, Ancile, Screeching Gargoyle, Jade Scepter, Shield of
+    the Phoenix, Yogi''s Necklace.'
 - source: suggested
   archetype: burst
   slot_order:
@@ -68,8 +68,8 @@ builds:
   - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -84,23 +84,23 @@ builds:
     Doom Orb, The World Stone, Bragi''s Harp, Chronos'' Pendant, Genji''s Guard, Triton''s
     Conch, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem
     of Focus, Breastplate of Valor, Helm of Radiance, Bancroft''s Talon, Divine Ruin,
-    Polynomicon, Jade Scepter, Shield of the Phoenix, Chandra''s Grace.'
+    Polynomicon, Screeching Gargoyle, Jade Scepter, Shield of the Phoenix.'
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Amanita Charm
   - Kinetic Cuirass
   - Eye of Providence
   - Spirit Robe
-  - Amanita Charm
-  - Soul Gem
   - Erosion
+  - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
-  - vs_tag: magic_heavy
-    swap: Mantle Of Discord — magical protection
+    swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -108,12 +108,12 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Eye of Providence, Spirit Robe, Amanita Charm, Erosion,
-    Shield of the Phoenix, Magi''s Cloak, Mantle Of Discord, Stone of Binding, Shroud
-    of Vengeance, Draconic Scale, Freya''s Tears, Shifter''s Shield, Prophetic Cloak,
-    Spectral Armor, Genji''s Guard, Stygian Anchor, Helm of Darkness, Sphere of Negation,
-    Breastplate of Valor, Xibalban Effigy, Helm of Radiance, Umbral Link, Midgardian
-    Mail, Bancroft''s Talon, Ancile.'
+    this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Spirit Robe, Erosion,
+    Shield of the Phoenix, Glorious Pridwen, Magi''s Cloak, Mantle Of Discord, Phoenix
+    Feather, Stone of Binding, Shroud of Vengeance, Draconic Scale, Freya''s Tears,
+    Shifter''s Shield, Prophetic Cloak, Spectral Armor, Genji''s Guard, Stygian Anchor,
+    Rod of Asclepius, Blood-Bound Book, Helm of Darkness, Sphere of Negation, Breastplate
+    of Valor, Xibalban Effigy, Helm of Radiance.'
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -125,11 +125,11 @@ builds:
   - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -138,8 +138,8 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Cosmic Horror, Gluttonous Grimoire, Spear of the Magus, Doom
-    Orb, The World Stone, Dreamer''s Idol, Void Stone, Void Shield, Stone of Binding,
-    Kinetic Cuirass, Eye of Providence, Spectral Armor, Genji''s Guard, Death Metal,
-    Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff,
-    Breastplate of Valor, Helm of Radiance, Bancroft''s Talon, Midgardian Mail.'
+    Orb, The World Stone, Dreamer''s Idol, Screeching Gargoyle, Void Stone, Void Shield,
+    Stone of Binding, Kinetic Cuirass, Eye of Providence, Spectral Armor, Genji''s
+    Guard, Death Metal, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient
+    Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft''s Talon.'
 ---

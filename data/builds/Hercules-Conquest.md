@@ -53,18 +53,18 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, Kinetic Cuirass, Jotunn''s Revenge, Tyrfing, Eye of Providence,
     Runeforged Hammer, Spectral Armor, Hydra''s Lament, Golden Blade, Berserker''s
-    Shield, Amanita Charm, Avenging Blade, Shield Splitter, Midgardian Mail, Eye of
-    the Storm, Erosion, The Reaper, Ancile, Damaru, Shield of the Phoenix, Pharaoh''s
-    Curse, Yogi''s Necklace, Chandra''s Grace, Leviathan''s Hide, Eros'' Bow, Void
-    Stone.'
+    Shield, Amanita Charm, Avenging Blade, Shield Splitter, Lernaean Bow, Midgardian
+    Mail, Eye of the Storm, Erosion, The Reaper, Ancile, Screeching Gargoyle, Damaru,
+    Shield of the Phoenix, Pharaoh''s Curse, Yogi''s Necklace, Chandra''s Grace, Leviathan''s
+    Hide.'
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Amanita Charm
   - Spirit Robe
   - Kinetic Cuirass
   - Eye of Providence
   - Shifter's Shield
-  - Amanita Charm
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
@@ -80,12 +80,12 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Spirit Robe, Kinetic Cuirass, Eye of Providence, Amanita Charm, Shield
-    Splitter, Erosion, Shield of the Phoenix, Magi''s Cloak, Mantle Of Discord, Stone
-    of Binding, Shroud of Vengeance, Draconic Scale, Freya''s Tears, Prophetic Cloak,
-    Spectral Armor, Berserker''s Shield, Stygian Anchor, Xibalban Effigy, Umbral Link,
-    Midgardian Mail, Eye of the Storm, Ancile, The Reaper, Pharaoh''s Curse, Glorious
-    Pridwen.'
+    this god: Amanita Charm, Spirit Robe, Kinetic Cuirass, Eye of Providence, Shield
+    Splitter, Erosion, Shield of the Phoenix, Glorious Pridwen, Magi''s Cloak, Mantle
+    Of Discord, Phoenix Feather, Stone of Binding, Shroud of Vengeance, Draconic Scale,
+    Freya''s Tears, Prophetic Cloak, Spectral Armor, Berserker''s Shield, Stygian
+    Anchor, Xibalban Effigy, Umbral Link, Midgardian Mail, Eye of the Storm, Ancile,
+    The Reaper.'
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -97,8 +97,8 @@ builds:
   - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -111,8 +111,8 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, The Reaper, Tekko-Kagi, Titan''s
     Bane, Riptalon, Heartseeker, Pendulum Blade, Avatar''s Parashu, Avenging Blade,
-    Void Stone, Void Shield, Stone of Binding, Oath-Sworn Spear, Kinetic Cuirass,
-    Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor, Hydra''s Lament,
-    Golden Blade, Berserker''s Shield, Amanita Charm, Shield Splitter, Midgardian
-    Mail, Eye of the Storm.'
+    Screeching Gargoyle, Void Stone, Void Shield, Stone of Binding, Oath-Sworn Spear,
+    Kinetic Cuirass, Tyrfing, Eye of Providence, Runeforged Hammer, Spectral Armor,
+    Hydra''s Lament, Golden Blade, Berserker''s Shield, Amanita Charm, Shield Splitter,
+    Lernaean Bow.'
 ---
