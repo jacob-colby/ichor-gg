@@ -82,6 +82,48 @@ def test_parse_item_page_extracts_stats():
     assert result["stats"] == {"Strength": "45", "Critical Chance": "20%"}
 
 
+def test_parse_item_page_captures_active_effect_when_passive_empty():
+    # Items like Bloodforge carry their effect under "Active Effect" with an
+    # empty "Passive Effect" — the parser must still capture it.
+    html = """
+    <table class="infobox">
+      <tr><th>Item Type</th><td>Tier 3</td></tr>
+      <tr><th>Total Cost</th><td>2550</td></tr>
+      <tr><th>Passive Effect</th><td></td></tr>
+      <tr><th>Active Effect</th><td>On Use: + Health Shield for 6s.</td></tr>
+    </table>
+    """
+    result = wiki_parser.parse_item_page(html)
+    assert "On Use: + Health Shield for 6s." in result["passive"]
+
+
+def test_parse_item_page_combines_passive_and_active_effects():
+    html = """
+    <table class="infobox">
+      <tr><th>Item Type</th><td>Tier 3</td></tr>
+      <tr><th>Passive Effect</th><td>Ability Hit: bonus damage.</td></tr>
+      <tr><th>Active Effect</th><td>On Use: dash forward.</td></tr>
+    </table>
+    """
+    result = wiki_parser.parse_item_page(html)
+    assert "Ability Hit: bonus damage." in result["passive"]
+    assert "dash forward" in result["passive"]
+
+
+def test_parse_item_page_stat_only_item_has_no_passive():
+    # Both effect rows empty (e.g. Titan's Bane / Obsidian Shard — the item is
+    # its stats) → no passive key, correctly blank.
+    html = """
+    <table class="infobox">
+      <tr><th>Item Type</th><td>Tier 3</td></tr>
+      <tr><th>Passive Effect</th><td></td></tr>
+      <tr><th>Active Effect</th><td></td></tr>
+    </table>
+    """
+    result = wiki_parser.parse_item_page(html)
+    assert not result.get("passive")
+
+
 def test_parse_god_page_extracts_image_url():
     result = wiki_parser.parse_god_page(_chiron_html())
     assert result["image_url"] == "/images/thumb/T_Chiron%28S2%29_Default.png/280px-T_Chiron%28S2%29_Default.png?157c1"

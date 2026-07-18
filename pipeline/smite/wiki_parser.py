@@ -156,6 +156,8 @@ def parse_item_page(html: str) -> dict:
         raise ValueError("no infobox found on item page")
 
     result = {}
+    passive_text = ""
+    active_text = ""
     for row in infobox.find_all("tr"):
         th, td = row.find("th"), row.find("td")
         if th is None or td is None:
@@ -168,13 +170,22 @@ def parse_item_page(html: str) -> dict:
             digits = re.sub(r"\D", "", td.get_text())
             result["cost"] = int(digits) if digits else None
         elif label == "Passive Effect":
-            text = _clean(td.get_text())
-            if text:
-                result["passive"] = text
+            passive_text = _clean(td.get_text())
+        elif label == "Active Effect":
+            active_text = _clean(td.get_text())
         elif label == "Stats":
             stats = _parse_stats(td)
             if stats:
                 result["stats"] = stats
+
+    # Many items (e.g. Bloodforge) carry their whole effect under "Active
+    # Effect" with an empty "Passive Effect" row — capture both. Stat-only
+    # items (Titan's Bane, Obsidian Shard) leave both empty, so `passive`
+    # stays unset. When both exist, join them into the single passive field
+    # the recommender tags on and the viewer displays.
+    effect_parts = [t for t in (passive_text, active_text) if t]
+    if effect_parts:
+        result["passive"] = " ".join(effect_parts)
 
     result["image_url"] = _extract_image_url(infobox)
 
