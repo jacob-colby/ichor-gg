@@ -67,12 +67,14 @@ export interface CommunityBuildEntry {
   slot_order: CommunitySlotEntry[];
   source_url: string;
   last_verified?: string;
+  starter?: { base: string; upgrade: string };
 }
 
 export interface CuratedBuildEntry {
   source: "pro" | "mine" | "suggested";
   aspect?: string;
   archetype?: string;
+  name?: string;
   rationale?: string;
   slot_order: string[];
   situational_swaps?: SituationalSwap[];
@@ -94,4 +96,5 @@ export interface IndexData {
   gods: God[];
   items: Item[];
   builds: BuildNote[];
+  starters?: { base: string; upgrade: string }[];
 }

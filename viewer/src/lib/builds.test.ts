@@ -89,4 +89,8 @@ describe("tabLabel", () => {
   it("falls back to 'suggested' when a suggested entry has no archetype", () => {
     expect(tabLabel({ source: "suggested", slot_order: [] } as any)).toBe("suggested");
   });
+  it("labels a mine entry by its name (falling back to 'mine')", () => {
+    expect(tabLabel({ source: "mine", name: "My Crit", slot_order: [] } as any)).toBe("My Crit");
+    expect(tabLabel({ source: "mine", slot_order: [] } as any)).toBe("mine");
+  });
 });
