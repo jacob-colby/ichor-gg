@@ -22,7 +22,11 @@ def test_build_index_collects_gods_items_builds(tmp_path):
     index = build_index.build_index(vault)
 
     assert index["gods"] == [{"type": "smite-god", "name": "Chiron"}]
-    assert index["items"] == [{"type": "smite-item", "name": "Deathbringer"}]
+    # Items are enriched with god-agnostic effect_tags + efficiency_tier; this
+    # note has no cost so it can't be scored (tier None) and no tags entry ([]).
+    assert index["items"] == [
+        {"type": "smite-item", "name": "Deathbringer", "effect_tags": [], "efficiency_tier": None}
+    ]
     assert index["builds"] == [{"type": "smite-build", "god": "Chiron"}]
 
 
@@ -90,3 +94,17 @@ def test_write_index_handles_no_icons_dir_gracefully(tmp_path):
     build_index.write_index(vault, out_path)  # must not raise, even with no _assets/icons/ at all
 
     assert out_path.exists()
+
+
+def test_enrich_items_adds_tags_and_tier():
+    from smite import build_index
+    items = [
+        {"name": "Deathbringer", "cost": 2900, "stats": {"Strength": "45"}},
+        {"name": "Cheapo", "cost": 900, "stats": {"Strength": "45"}},
+    ]
+    tags = {"Deathbringer": ["burst"], "Cheapo": []}
+    enriched = build_index._enrich_items(items, tags)
+    by = {it["name"]: it for it in enriched}
+    assert by["Deathbringer"]["effect_tags"] == ["burst"]
+    assert by["Cheapo"]["effect_tags"] == []
+    assert by["Cheapo"]["efficiency_tier"] in {"undervalued", "fair", "premium"}

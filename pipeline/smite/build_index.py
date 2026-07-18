@@ -6,12 +6,25 @@ import json
 import shutil
 from pathlib import Path
 
-from smite import notes
+from smite import efficiency, notes, scoring
+
+
+def _enrich_items(items, tags):
+    """Attach god-agnostic effect_tags + efficiency_tier to each item so the
+    viewer's tooltips can explain an item without recomputing anything."""
+    eff = {}
+    if efficiency.numeric_cost_items(items):
+        eff, _ = efficiency.efficiency_scores(items)
+    for it in items:
+        it["effect_tags"] = tags.get(it["name"], [])
+        it["efficiency_tier"] = eff.get(it["name"], {}).get("tier")
+    return items
 
 
 def build_index(vault_root: Path) -> dict:
-    gods_dir = vault_root / "04. System" / "Data" / "SMITE" / "Gods"
-    items_dir = vault_root / "04. System" / "Data" / "SMITE" / "Items"
+    data_root = vault_root / "04. System" / "Data" / "SMITE"
+    gods_dir = data_root / "Gods"
+    items_dir = data_root / "Items"
     builds_dir = vault_root / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds"
 
     def _all(dir_path: Path) -> list:
@@ -19,7 +32,8 @@ def build_index(vault_root: Path) -> dict:
             return []
         return [notes.read_note(p)[0] for p in sorted(dir_path.glob("*.md"))]
 
-    return {"gods": _all(gods_dir), "items": _all(items_dir), "builds": _all(builds_dir)}
+    items = _enrich_items(_all(items_dir), scoring.load_tags(data_root / "_tags.yaml"))
+    return {"gods": _all(gods_dir), "items": items, "builds": _all(builds_dir)}
 
 
 def _copy_icons(vault_root: Path, out_path: Path) -> None:
