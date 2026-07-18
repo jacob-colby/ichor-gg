@@ -258,3 +258,33 @@ def test_merge_suggested_entries_creates_note_when_missing(tmp_path):
     fm, _ = notes.read_note(path)
     assert fm["god"] == "New"
     assert [b["source"] for b in fm["builds"]] == ["suggested"]
+
+
+def test_upsert_mine_entry_adds_and_replaces_by_name(tmp_path):
+    path = tmp_path / "Chiron-Conquest.md"
+    notes.write_note(path, {"type": "smite-build", "god": "Chiron", "mode": "Conquest",
+        "builds": [{"source": "community", "slot_order": []},
+                   {"source": "suggested", "archetype": "core", "slot_order": ["A"]}]}, "")
+    notes.upsert_mine_entry(path, "Chiron", "Conquest",
+        {"name": "My Crit", "slot_order": ["Deathbringer"]})
+    fm, _ = notes.read_note(path)
+    mine = [b for b in fm["builds"] if b["source"] == "mine"]
+    assert len(mine) == 1 and mine[0]["name"] == "My Crit" and mine[0]["source"] == "mine"
+    assert [b["source"] for b in fm["builds"]].count("community") == 1  # preserved
+    notes.upsert_mine_entry(path, "Chiron", "Conquest", {"name": "My Crit", "slot_order": ["Rage"]})
+    fm, _ = notes.read_note(path)
+    mine = [b for b in fm["builds"] if b["source"] == "mine"]
+    assert len(mine) == 1 and mine[0]["slot_order"] == ["Rage"]
+
+
+def test_delete_mine_entry_removes_only_that_one(tmp_path):
+    path = tmp_path / "Chiron-Conquest.md"
+    notes.write_note(path, {"type": "smite-build", "god": "Chiron", "mode": "Conquest",
+        "builds": [{"source": "community", "slot_order": []},
+                   {"source": "mine", "name": "A", "slot_order": []},
+                   {"source": "mine", "name": "B", "slot_order": []}]}, "")
+    notes.delete_mine_entry(path, "A")
+    fm, _ = notes.read_note(path)
+    names = [b.get("name") for b in fm["builds"] if b["source"] == "mine"]
+    assert names == ["B"]
+    assert any(b["source"] == "community" for b in fm["builds"])

@@ -143,3 +143,27 @@ def merge_suggested_entries(path: Path, god: str, mode: str, suggested_entries: 
     kept = [b for b in frontmatter.get("builds", []) if b.get("source") != "suggested"]
     frontmatter["builds"] = kept + list(suggested_entries)
     write_note(path, frontmatter, body)
+
+
+def upsert_mine_entry(path: Path, god: str, mode: str, entry: dict) -> None:
+    """Add or replace (matched by name) a single source:mine build entry,
+    preserving community/suggested/other-mine entries. Creates the note if
+    missing."""
+    frontmatter, body = read_note(path)
+    if not frontmatter:
+        frontmatter = {"type": "smite-build", "god": god, "mode": mode, "builds": []}
+    name = entry.get("name")
+    kept = [b for b in frontmatter.get("builds", [])
+            if not (b.get("source") == "mine" and b.get("name") == name)]
+    frontmatter["builds"] = kept + [{**entry, "source": "mine"}]
+    write_note(path, frontmatter, body)
+
+
+def delete_mine_entry(path: Path, name: str) -> None:
+    """Remove the source:mine entry with the given name; leave all else intact."""
+    frontmatter, body = read_note(path)
+    if not frontmatter:
+        return
+    frontmatter["builds"] = [b for b in frontmatter.get("builds", [])
+                             if not (b.get("source") == "mine" and b.get("name") == name)]
+    write_note(path, frontmatter, body)
