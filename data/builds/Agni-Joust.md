@@ -6,25 +6,25 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Soul Gem
   - Spear of Desolation
-  - The World Stone
+  - Soul Gem
+  - The Cosmic Horror
+  - Spear of the Magus
+  - Doom Orb
   - Obsidian Shard
-  - Rod of Tahuti
-  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
 - source: suggested
@@ -32,71 +32,71 @@ builds:
   slot_order:
   - Soul Gem
   - Spear of Desolation
-  - The World Stone
-  - Obsidian Shard
-  - Rod of Tahuti
-  - Chronos' Pendant
+  - The Cosmic Horror
+  - Triton's Conch
+  - Spear of the Magus
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
 - source: suggested
   archetype: bruiser
   slot_order:
   - Soul Gem
+  - Shield of the Phoenix
+  - Divine Ruin
+  - Erosion
+  - Stygian Anchor
   - Spear of Desolation
-  - The World Stone
-  - Obsidian Shard
-  - Rod of Tahuti
-  - Magi's Cloak
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: core already covers CC-immunity / cleanse (Magi's Cloak)
-    swap_item: null
-  - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
-  - vs_tag: physical_heavy
-    swap: Dwarven Plate — physical protection
-    swap_item: Dwarven Plate
-  - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
-  rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
-    (no meta win/pick data).
-- source: suggested
-  archetype: anti-tank
-  slot_order:
-  - Soul Gem
-  - Spear of Desolation
-  - The World Stone
-  - Obsidian Shard
-  - Rod of Tahuti
-  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Spirit Robe — physical protection
+    swap_item: Spirit Robe
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
+- source: suggested
+  archetype: anti-tank
+  slot_order:
+  - Spear of Desolation
+  - Soul Gem
+  - The Cosmic Horror
+  - Spear of the Magus
+  - Doom Orb
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
 ---

@@ -6,97 +6,97 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Tyrfing
+  - Demon Blade
+  - Damaru
+  - Lernaean Bow
   - Rage
   - The Reaper
-  - Deathbringer
-  - Hydra's Lament
-  - The Crusher
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
 - source: suggested
   archetype: crit
   slot_order:
+  - Demon Blade
+  - Tyrfing
+  - Damaru
   - Rage
-  - Deathbringer
+  - Lernaean Bow
   - Riptalon
-  - Hydra's Lament
-  - Dagger of Frenzy
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
 - source: suggested
   archetype: burst
   slot_order:
-  - The Reaper
   - Jotunn's Revenge
+  - The Reaper
   - The Crusher
   - Hydra's Lament
-  - Heartseeker
-  - Titan's Bane
+  - Pendulum Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Erosion
+  - Shield Splitter
+  - Spirit Robe
+  - Stygian Anchor
+  - Kinetic Cuirass
   - The Reaper
-  - Riptalon
-  - Magi's Cloak
-  - Shifter's Shield
-  - Hydra's Lament
-  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: core already covers CC-immunity / cleanse (Magi's Cloak)
-    swap_item: null
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Dwarven Plate — magical protection
-    swap_item: Dwarven Plate
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
-    swap: core already covers physical protection (Magi's Cloak)
-    swap_item: null
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
 - source: suggested
@@ -105,22 +105,22 @@ builds:
   - The Reaper
   - The Crusher
   - Jotunn's Revenge
+  - Tekko-Kagi
   - Heartseeker
   - Titan's Bane
-  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
 ---

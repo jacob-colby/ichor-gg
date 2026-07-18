@@ -33,10 +33,10 @@ builds:
   slot_order:
   - Riptalon
   - Jotunn's Revenge
-  - Dagger of Frenzy
-  - Hydra's Lament
   - The Crusher
-  - Rage
+  - Tyrfing
+  - Golden Blade
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -45,22 +45,27 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, Hydra''s Lament, The Crusher, The Reaper, Rage.'
+    this god: Jotunn''s Revenge, The Crusher, Tyrfing, Golden Blade, Tekko-Kagi, Hydra''s
+    Lament, The Reaper, Berserker''s Shield, Damaru, Runeforged Hammer, Lernaean Bow,
+    Rage, Genji''s Guard, Titan''s Bane, Demon Blade, Avenging Blade, Kinetic Cuirass,
+    Musashi''s Dual Swords, Eye of Providence, Pharaoh''s Curse, Shield Splitter,
+    Eros'' Bow, Breastplate of Valor, Eye of the Storm, Heartseeker, Pendulum Blade,
+    Spectral Armor.'
 - source: suggested
   archetype: crit
   slot_order:
   - Riptalon
   - Jotunn's Revenge
-  - Dagger of Frenzy
-  - Hydra's Lament
-  - Rage
+  - Tyrfing
   - The Crusher
+  - Golden Blade
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -69,22 +74,26 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, Hydra''s Lament, Rage, The Crusher, The Reaper.'
+    this god: Jotunn''s Revenge, Tyrfing, The Crusher, Golden Blade, Tekko-Kagi, Damaru,
+    Hydra''s Lament, Rage, Berserker''s Shield, The Reaper, Runeforged Hammer, Demon
+    Blade, Lernaean Bow, Musashi''s Dual Swords, Avenging Blade, Genji''s Guard, Titan''s
+    Bane, Kinetic Cuirass, Shield Splitter, Pharaoh''s Curse, Eye of Providence, Eros''
+    Bow, Eye of the Storm, Breastplate of Valor, Spectral Armor, Qin''s Blade, Heartseeker.'
 - source: suggested
   archetype: burst
   slot_order:
-  - Riptalon
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Riptalon
   - The Crusher
-  - Dagger of Frenzy
-  - Rage
+  - Tyrfing
+  - Hydra's Lament
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -93,59 +102,73 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Jotunn''s Revenge, Hydra''s Lament, The Crusher, The Reaper, Rage.'
+    god: Jotunn''s Revenge, The Crusher, Tyrfing, Hydra''s Lament, Golden Blade, Tekko-Kagi,
+    The Reaper, Runeforged Hammer, Damaru, Titan''s Bane, Genji''s Guard, Berserker''s
+    Shield, Pendulum Blade, Lernaean Bow, Avenging Blade, Rage, Shield Splitter, Heartseeker,
+    Breastplate of Valor, Kinetic Cuirass, Eye of Providence, Musashi''s Dual Swords,
+    Eye of the Storm, Arondight, Demon Blade, Shield of the Phoenix, Pharaoh''s Curse.'
 - source: suggested
   archetype: bruiser
   slot_order:
   - Riptalon
   - Devourer's Gauntlet
-  - Dagger of Frenzy
   - Jotunn's Revenge
-  - Hydra's Lament
   - The Crusher
+  - Kinetic Cuirass
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
-    swap: Dwarven Plate — physical protection
-    swap_item: Dwarven Plate
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Jotunn''s Revenge, Hydra''s Lament, The Crusher, Rage.'
+    this god: The Reaper, Jotunn''s Revenge, Shield of the Phoenix, The Crusher, Kinetic
+    Cuirass, Tyrfing, Eye of Providence, Chandra''s Grace, Shield Splitter, Berserker''s
+    Shield, Spirit Robe, Golden Blade, Amanita Charm, Genji''s Guard, Hydra''s Lament,
+    Spectral Armor, Erosion, Runeforged Hammer, Pharaoh''s Curse, Breastplate of Valor,
+    Tekko-Kagi, Eye of the Storm, Damaru, Magi''s Cloak, Avenging Blade, Mantle Of
+    Discord, Lernaean Bow.'
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Riptalon
   - Jotunn's Revenge
   - The Crusher
-  - Dagger of Frenzy
-  - Hydra's Lament
-  - Heartseeker
+  - Avenging Blade
+  - Tekko-Kagi
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, The Crusher, The Reaper, Hydra''s Lament, Heartseeker.'
+    for this god: Jotunn''s Revenge, The Crusher, Avenging Blade, Tekko-Kagi, Tyrfing,
+    The Reaper, Golden Blade, Titan''s Bane, Oath-Sworn Spear, Hydra''s Lament, Berserker''s
+    Shield, Void Stone, Damaru, Runeforged Hammer, Heartseeker, Void Shield, Pendulum
+    Blade, Stone of Binding, Genji''s Guard, Lernaean Bow, Kinetic Cuirass, Rage,
+    Eye of Providence, Shield Splitter, Pharaoh''s Curse, Musashi''s Dual Swords,
+    Eros'' Bow.'
 ---

@@ -31,36 +31,41 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Death Metal
+  - Bragi's Harp
   - Obsidian Shard
-  - Nimble Ring
   - Spear of Desolation
-  - Rod of Tahuti
-  - Magi's Cloak
-  - Gem of Isolation
+  - Bracer of The Abyss
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: core already covers CC-immunity / cleanse (Magi's Cloak)
-    swap_item: null
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Obsidian Shard, Nimble Ring, Magi''s Cloak.'
+    this god: Death Metal, Bragi''s Harp, Bracer of The Abyss, Kinetic Cuirass, Eye
+    of Providence, Nimble Ring, Gluttonous Grimoire, Spectral Armor, Triton''s Conch,
+    Genji''s Guard, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient Signet,
+    The Cosmic Horror, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft''s
+    Talon, Midgardian Mail, Spear of the Magus, Erosion, Divine Ruin, Polynomicon,
+    Ancile.'
 - source: suggested
   archetype: burst
   slot_order:
   - Spear of Desolation
   - Obsidian Shard
   - Soul Gem
-  - Rod of Tahuti
-  - The World Stone
-  - Gem of Isolation
+  - Death Metal
+  - The Cosmic Horror
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -69,59 +74,72 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Obsidian Shard.'
+    god: Obsidian Shard, Death Metal, Gluttonous Grimoire, The Cosmic Horror, Bragi''s
+    Harp, Spear of the Magus, Doom Orb, Genji''s Guard, Chronos'' Pendant, Rod of
+    Asclepius, Blood-Bound Book, Ancient Signet, Bracer of The Abyss, Ethereal Staff,
+    Triton''s Conch, Breastplate of Valor, Kinetic Cuirass, Helm of Radiance, Bancroft''s
+    Talon, Eye of Providence, Gem of Focus, Divine Ruin, Polynomicon, Jade Scepter.'
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Obsidian Shard
-  - Soul Gem
-  - Spear of Desolation
-  - Magi's Cloak
-  - Shifter's Shield
-  - Rod of Tahuti
+  - Kinetic Cuirass
+  - Eye of Providence
+  - Shield of the Phoenix
+  - Spirit Robe
+  - Death Metal
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: core already covers CC-immunity / cleanse (Magi's Cloak)
-    swap_item: null
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Dwarven Plate — physical protection
-    swap_item: Dwarven Plate
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Magi''s Cloak, Shifter''s Shield, Nimble Ring, Genji''s Guard.'
+    this god: Kinetic Cuirass, Eye of Providence, Shield of the Phoenix, Spirit Robe,
+    Death Metal, Amanita Charm, Bancroft''s Talon, Erosion, Bragi''s Harp, Chandra''s
+    Grace, Spectral Armor, Genji''s Guard, Magi''s Cloak, Mantle Of Discord, Stone
+    of Binding, Shroud of Vengeance, Sphere of Negation, Breastplate of Valor, Helm
+    of Radiance, Umbral Link, Midgardian Mail, Draconic Scale, Freya''s Tears, Ancile,
+    Shifter''s Shield, Gluttonous Grimoire.'
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Obsidian Shard
   - Spear of Desolation
-  - Rod of Tahuti
-  - Soul Gem
-  - The World Stone
-  - Magi's Cloak
+  - Gluttonous Grimoire
+  - The Cosmic Horror
+  - Spear of the Magus
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: core already covers CC-immunity / cleanse (Magi's Cloak)
-    swap_item: null
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
-    swap: (no anti-heal available in pool)
-    swap_item: null
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Obsidian Shard.'
+    for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of
+    the Magus, Death Metal, Doom Orb, Bragi''s Harp, Void Stone, Void Shield, Stone
+    of Binding, Kinetic Cuirass, Eye of Providence, Bracer of The Abyss, Spectral
+    Armor, Genji''s Guard, Amanita Charm, Rod of Asclepius, Blood-Bound Book, Ancient
+    Signet, Ethereal Staff, Breastplate of Valor, Helm of Radiance, Bancroft''s Talon.'
 ---
