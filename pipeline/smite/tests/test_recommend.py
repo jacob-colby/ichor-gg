@@ -110,3 +110,14 @@ def test_build_suggested_entries_stamps_starter():
     assert entries[0]["starter"]["base"] == "Gilded Arrow"
     assert entries[0]["starter"]["upgrade"] == "Sharpshooter's Arrow"
     assert all("starter" in e for e in entries)
+
+
+def test_stamp_community_starter_sets_starter_on_community(tmp_path):
+    from smite import recommend, notes
+    path = tmp_path / "Chiron-Conquest.md"
+    notes.write_note(path, {"type": "smite-build", "god": "Chiron", "mode": "Conquest",
+        "builds": [{"source": "community", "slot_order": [{"name": "X", "pick_rate": 0.5, "win_rate": 0.5}]}]}, "")
+    recommend._stamp_community_starter(path, {"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow"})
+    fm, _ = notes.read_note(path)
+    comm = next(b for b in fm["builds"] if b["source"] == "community")
+    assert comm["starter"] == {"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow"}

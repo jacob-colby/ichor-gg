@@ -33,7 +33,9 @@ def build_index(vault_root: Path) -> dict:
         return [notes.read_note(p)[0] for p in sorted(dir_path.glob("*.md"))]
 
     items = _enrich_items(_all(items_dir), scoring.load_tags(data_root / "_tags.yaml"))
-    return {"gods": _all(gods_dir), "items": items, "builds": _all(builds_dir)}
+    weights = scoring.load_weights(data_root / "_weights.yaml")
+    return {"gods": _all(gods_dir), "items": items, "builds": _all(builds_dir),
+            "starters": weights.get("starters", [])}
 
 
 def _copy_icons(vault_root: Path, out_path: Path) -> None:

@@ -74,6 +74,23 @@ def load_build_note(god_name, mode="Conquest"):
     return fm or {"builds": []}
 
 
+def _stamp_community_starter(path, starter):
+    """Set `starter` on the community entry of a Build note (role-based, so the
+    community build shows the same recommended starter as the suggested ones)."""
+    if not starter:
+        return
+    fm, body = notes.read_note(path)
+    if not fm:
+        return
+    changed = False
+    for b in fm.get("builds", []):
+        if b.get("source") == "community":
+            b["starter"] = starter
+            changed = True
+    if changed:
+        notes.write_note(path, fm, body)
+
+
 def god_report(god, items, god_build, weights, tags_map):
     eff_scores, _ = efficiency.efficiency_scores(items)
     rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map)
@@ -142,6 +159,10 @@ def main(argv=None):
                     entries = build_suggested_entries(god, items, mode_build, weights, tags_map, mode)
                     notes.merge_suggested_entries(
                         BUILDS_ROOT / f"{god['name']}-{mode}.md", god["name"], mode, entries)
+                # Conquest has the community build note; stamp the same
+                # role-based starter onto its community entry.
+                _stamp_community_starter(BUILDS_ROOT / f"{god['name']}-Conquest.md",
+                                         scoring.pick_starter(god, weights))
         print("Wrote per-god scoring reports")
         return 0
 

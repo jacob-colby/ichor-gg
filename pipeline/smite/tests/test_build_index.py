@@ -33,7 +33,7 @@ def test_build_index_collects_gods_items_builds(tmp_path):
 def test_build_index_empty_folders_return_empty_lists(tmp_path):
     vault = _make_vault(tmp_path)
     index = build_index.build_index(vault)
-    assert index == {"gods": [], "items": [], "builds": []}
+    assert index == {"gods": [], "items": [], "builds": [], "starters": []}
 
 
 def test_write_index_creates_json_file(tmp_path):
@@ -108,3 +108,11 @@ def test_enrich_items_adds_tags_and_tier():
     assert by["Deathbringer"]["effect_tags"] == ["burst"]
     assert by["Cheapo"]["effect_tags"] == []
     assert by["Cheapo"]["efficiency_tier"] in {"undervalued", "fair", "premium"}
+
+
+def test_build_index_exports_starters(tmp_path, monkeypatch):
+    from smite import build_index
+    from pathlib import Path
+    result = build_index.build_index(Path(__file__).resolve().parents[3])
+    assert "starters" in result
+    assert isinstance(result["starters"], list)
