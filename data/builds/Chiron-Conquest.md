@@ -28,6 +28,9 @@ builds:
     win_rate: 0.6
   source_url: https://smitebrain.com/gods/chiron/
   last_verified: '2026-07-17'
+  starter:
+    base: Gilded Arrow
+    upgrade: Sharpshooter's Arrow
 - source: suggested
   archetype: core
   slot_order:

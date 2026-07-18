@@ -4546,7 +4546,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/agni/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Conduit Gem",
+            "upgrade": "Archmage's Gem"
+          }
         },
         {
           "source": "suggested",
@@ -4912,7 +4916,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/cernunnos/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Gilded Arrow",
+            "upgrade": "Sharpshooter's Arrow"
+          }
         },
         {
           "source": "suggested",
@@ -5356,7 +5364,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/chiron/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Gilded Arrow",
+            "upgrade": "Sharpshooter's Arrow"
+          }
         },
         {
           "source": "suggested",
@@ -5800,7 +5812,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/chronos/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Conduit Gem",
+            "upgrade": "Archmage's Gem"
+          }
         },
         {
           "source": "suggested",
@@ -6166,7 +6182,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/hercules/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Warrior's Axe",
+            "upgrade": "Sundering Axe"
+          }
         },
         {
           "source": "suggested",
@@ -6454,7 +6474,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/morgan-le-fay/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Conduit Gem",
+            "upgrade": "Archmage's Gem"
+          }
         },
         {
           "source": "suggested",
@@ -6820,7 +6844,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/princess-bari/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Conduit Gem",
+            "upgrade": "Archmage's Gem"
+          }
         },
         {
           "source": "suggested",
@@ -7186,7 +7214,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/ra/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Conduit Gem",
+            "upgrade": "Archmage's Gem"
+          }
         },
         {
           "source": "suggested",
@@ -7552,7 +7584,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/susano/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Bumba's Golden Dagger",
+            "upgrade": "Bumba's Spear"
+          }
         },
         {
           "source": "suggested",
@@ -7918,7 +7954,11 @@
             }
           ],
           "source_url": "https://smitebrain.com/gods/ullr/",
-          "last_verified": "2026-07-17"
+          "last_verified": "2026-07-17",
+          "starter": {
+            "base": "Gilded Arrow",
+            "upgrade": "Sharpshooter's Arrow"
+          }
         },
         {
           "source": "suggested",
@@ -8318,6 +8358,68 @@
           }
         }
       ]
+    }
+  ],
+  "starters": [
+    {
+      "base": "Gilded Arrow",
+      "upgrade": "Sharpshooter's Arrow",
+      "damage_types": [
+        "physical"
+      ],
+      "match_any": [
+        "Carry",
+        "Sharpshooter",
+        "Hunter"
+      ],
+      "priority": 10
+    },
+    {
+      "base": "Conduit Gem",
+      "upgrade": "Archmage's Gem",
+      "damage_types": [
+        "magical"
+      ],
+      "match_any": [
+        "Mid",
+        "Nuker",
+        "Mage",
+        "Sniper",
+        "Carry",
+        "Burst"
+      ],
+      "priority": 10
+    },
+    {
+      "base": "Bumba's Golden Dagger",
+      "upgrade": "Bumba's Spear",
+      "damage_types": null,
+      "match_any": [
+        "Jungle",
+        "Slayer",
+        "Assassin"
+      ],
+      "priority": 9
+    },
+    {
+      "base": "Warrior's Axe",
+      "upgrade": "Sundering Axe",
+      "damage_types": null,
+      "match_any": [
+        "Solo",
+        "Warrior",
+        "Brawler",
+        "Tank",
+        "Lockdown"
+      ],
+      "priority": 8
+    },
+    {
+      "base": "Death's Toll",
+      "upgrade": "Death's Embrace",
+      "damage_types": null,
+      "match_any": null,
+      "priority": 1
     }
   ]
 }

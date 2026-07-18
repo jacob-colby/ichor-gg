@@ -28,6 +28,9 @@ builds:
     win_rate: 0.4
   source_url: https://smitebrain.com/gods/susano/
   last_verified: '2026-07-17'
+  starter:
+    base: Bumba's Golden Dagger
+    upgrade: Bumba's Spear
 - source: suggested
   archetype: core
   slot_order:

@@ -28,6 +28,9 @@ builds:
     win_rate: 0.56
   source_url: https://smitebrain.com/gods/hercules/
   last_verified: '2026-07-17'
+  starter:
+    base: Warrior's Axe
+    upgrade: Sundering Axe
 - source: suggested
   archetype: core
   slot_order:

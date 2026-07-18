@@ -28,6 +28,9 @@ builds:
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/princess-bari/
   last_verified: '2026-07-17'
+  starter:
+    base: Conduit Gem
+    upgrade: Archmage's Gem
 - source: suggested
   archetype: core
   slot_order:
