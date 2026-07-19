@@ -9,11 +9,11 @@ const chiron = {
   role: "Hunter",
   damage_type: "Physical",
   abilities: [{ slot: 1, name: "Training Exercise" }],
-} as God;
+} as unknown as God;
 
 const gods: God[] = [
   chiron,
-  { name: "Ullr" } as God,
+  { name: "Ullr" } as unknown as God,
 ];
 
 describe("GodRail", () => {
