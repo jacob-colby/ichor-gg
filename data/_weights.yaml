@@ -42,6 +42,37 @@ flavors:
     tag_bonus: {protection-shred: 0.3}
     max_lifesteal: 1
 
+# ── God aspects ─────────────────────────────────────────────────────────────
+# Per-god scoring overlay (same shape as a flavor) applied when the viewer's
+# Aspect toggle is on. Keyed by god name. Hand-tuned from each aspect's kit text;
+# light where the aspect barely changes the build. Stat keys match item stats
+# (Strength / Intelligence / Attack Speed / Max Health / Cooldown Rate /
+# Lifesteal / Physical Protection / Magical Protection / …).
+aspects:
+  Cernunnos:      # Strife — basics become melee cleave autos
+    stats: {Strength: 1.0, Attack Speed: 0.8, Lifesteal: 0.8, Max Health: 0.6}
+    tag_bonus: {sustain: 0.2}
+    max_lifesteal: 2
+  Hercules:       # Preservation — ally-heal bruiser/tank
+    stats: {Max Health: 1.2, Physical Protection: 0.9, Magical Protection: 0.9}
+    tag_bonus: {aura: 0.3, sustain: 0.2}
+    max_lifesteal: 2
+  Ra:             # Thermotherapy — heals allies, abilities lose scaling -> support
+    stats: {Cooldown Rate: 0.8, Magical Protection: 0.5, Max Health: 0.6, Intelligence: 0.4}
+    tag_bonus: {aura: 0.3, sustain: 0.2}
+  Chronos:        # Relativity — team time-field, loses Time Lord Int -> support mage
+    stats: {Cooldown Rate: 0.8, Intelligence: 0.6, Magical Protection: 0.4, Max Health: 0.4}
+    tag_bonus: {aura: 0.3}
+  Morgan Le Fay:  # Cursed Crown — melee, %max-HP damage
+    stats: {Max Health: 1.0, Intelligence: 0.8, Magical Protection: 0.4}
+    tag_bonus: {sustain: 0.2}
+    max_lifesteal: 2
+  Agni:           # Combustion — ignite via basics; still a burst mage
+    stats: {Attack Speed: 0.4}
+  Chiron:         # Heroic Tutor — damage copy + ally buffs; still a carry
+    stats: {Attack Speed: 0.3}
+    tag_bonus: {aura: 0.1}
+
 # ── Game modes ────────────────────────────────────────────────────────────
 # `conquest` is the default (empty = no overlay, meta-backed). `joust` drops the
 # win/pick signals (SmiteBrain has no Joust data) and reweights toward what wins
