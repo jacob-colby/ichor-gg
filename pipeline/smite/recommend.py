@@ -110,17 +110,23 @@ def build_suggested_entries(god, items, god_build, weights, tags_map, mode="Conq
     eff_scores, _ = efficiency.efficiency_scores(items)
     items_by_name = {it["name"]: it for it in items}
     starter = scoring.pick_starter(god, weights)
+    flex_count = (weights.get("build_order") or {}).get("flex_count", 2)
     entries = []
     for flavor in [None] + scoring.eligible_flavors(god, weights):
         profile = scoring.resolve_profile(weights, mode, flavor)
         rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map, profile)
-        core = assemble.assemble_core(rows, items_by_name, n=6, max_lifesteal=profile["max_lifesteal"])
+        require = ((weights.get("flavors") or {}).get(flavor) or {}).get("require") if flavor else None
+        core = assemble.assemble_core(rows, items_by_name, n=6,
+                                      max_lifesteal=profile["max_lifesteal"], require=require)
+        flex = assemble.flex_slots(core, rows, count=flex_count)
+        ordered = assemble.build_order(core, items_by_name, tags_map, weights)
         swaps = assemble.situational_swaps(rows, items_by_name, tags_map, core=core)
         archetype = flavor or "core"
         entries.append({
             "source": "suggested",
             "archetype": archetype,
-            "slot_order": core,
+            "slot_order": ordered,
+            "flex_slots": flex,
             "situational_swaps": swaps,
             "rationale": _rationale(archetype, rows, profile),
             **({"starter": starter} if starter else {}),

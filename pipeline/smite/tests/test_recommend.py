@@ -121,3 +121,22 @@ def test_stamp_community_starter_sets_starter_on_community(tmp_path):
     fm, _ = notes.read_note(path)
     comm = next(b for b in fm["builds"] if b["source"] == "community")
     assert comm["starter"] == {"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow"}
+
+
+def test_suggested_entries_have_buy_order_flex_and_crit_core():
+    from smite import recommend, scoring
+    items = recommend.load_items()
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    tags = scoring.load_tags(recommend.TAGS_PATH)
+    items_by_name = {it["name"]: it for it in items}
+    god = next(g for g in recommend.load_gods() if g["name"] == "Chiron")  # physical carry
+    build = recommend.load_build_note("Chiron")
+    entries = recommend.build_suggested_entries(god, items, build, weights, tags, "Conquest")
+    crit = next((e for e in entries if e["archetype"] == "crit"), None)
+    assert crit is not None
+    ncrit = sum(1 for n in crit["slot_order"]
+                if "Critical Chance" in (items_by_name.get(n, {}).get("stats") or {}))
+    assert ncrit >= 3
+    for e in entries:
+        assert e.get("flex_slots"), f"{e['archetype']} missing flex_slots"
+        assert set(e["flex_slots"]) <= set(e["slot_order"])
