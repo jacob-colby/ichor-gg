@@ -77,6 +77,7 @@ export interface CuratedBuildEntry {
   name?: string;
   rationale?: string;
   slot_order: string[];
+  flex_slots?: string[];
   situational_swaps?: SituationalSwap[];
   notes?: string;
   starter?: { base: string; upgrade: string };

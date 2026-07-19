@@ -94,3 +94,22 @@ describe("tabLabel", () => {
     expect(tabLabel({ source: "mine", slot_order: [] } as any)).toBe("mine");
   });
 });
+
+describe("applySwap flex targeting", () => {
+  it("removes the flex slot, not the last, when flexSlots is given", () => {
+    const out = applySwap(["A", "B", "C", "D"], "SwapIn", ["B"]);
+    const removed = out.find((s) => s.status === "removed");
+    const added = out.find((s) => s.status === "added");
+    expect(removed?.name).toBe("B");
+    expect(added?.name).toBe("SwapIn");
+    expect(out.filter((s) => s.status === "kept").map((s) => s.name)).toEqual(["A", "C", "D"]);
+  });
+  it("falls back to the last slot when no flexSlots supplied", () => {
+    const out = applySwap(["A", "B", "C"], "SwapIn");
+    expect(out.find((s) => s.status === "removed")?.name).toBe("C");
+  });
+  it("falls back to last when flex slot is not in the build", () => {
+    const out = applySwap(["A", "B", "C"], "SwapIn", ["Z"]);
+    expect(out.find((s) => s.status === "removed")?.name).toBe("C");
+  });
+});

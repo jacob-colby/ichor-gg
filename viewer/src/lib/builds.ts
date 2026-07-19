@@ -37,14 +37,16 @@ export interface PreviewSlot {
   status: SlotStatus;
 }
 
-/** Derive the effective build shown when a matchup is selected: the
- * lowest-scored core slot (the last one — slot_order is score-sorted) is
- * removed and the swap item is added. A null swapItem is a no-op (all kept). */
-export function applySwap(slotOrder: string[], swapItem: string | null): PreviewSlot[] {
+/** Derive the effective build shown when a matchup is selected: a flex slot (or
+ * the lowest-scored core slot if none is marked / present) is removed and the
+ * swap item is added. A null swapItem is a no-op (all kept). */
+export function applySwap(slotOrder: string[], swapItem: string | null, flexSlots?: string[]): PreviewSlot[] {
   const base: PreviewSlot[] = slotOrder.map((name) => ({ name, status: "kept" }));
   if (!swapItem) return base;
   if (base.length === 0) return [{ name: swapItem, status: "added" }];
-  base[base.length - 1] = { name: base[base.length - 1].name, status: "removed" };
+  const flex = (flexSlots ?? []).find((f) => slotOrder.includes(f));
+  const idx = flex ? slotOrder.indexOf(flex) : base.length - 1;
+  base[idx] = { name: base[idx].name, status: "removed" };
   base.push({ name: swapItem, status: "added" });
   return base;
 }
