@@ -61,6 +61,7 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [editing, setEditing] = useState<MineDraft | "new" | null>(null);
   const [pendingSelect, setPendingSelect] = useState<string | null>(null);
+  const [aspectOn, setAspectOn] = useState(false);
   const itemsByName = useMemo(() => {
     const m = new Map<string, Item>();
     for (const it of items) m.set(it.name, it);
@@ -79,6 +80,7 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
     }
     setSelectedTag(null);
     setEditing(null);
+    setAspectOn(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [god, note]);
 
@@ -86,7 +88,29 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
     return <p className="text-muted">No build data yet for {god}.</p>;
   }
 
-  const entries = note.builds;
+  const aspectMeta = godData?.aspects?.[0];
+  const hasAspect = note.builds.some((b) => (b as { aspect?: string }).aspect);
+  const entries = note.builds.filter((b) => {
+    if (b.source !== "suggested") return true;
+    const a = (b as { aspect?: string }).aspect;
+    return aspectOn ? !!a : !a;
+  });
+  const toggleAspect = () => {
+    const next = !aspectOn;
+    const cur = entries[activeIndex] ?? entries[0];
+    const curArch = cur && cur.source === "suggested" ? (cur as { archetype?: string }).archetype : undefined;
+    const nextEntries = note.builds.filter((b) => {
+      if (b.source !== "suggested") return true;
+      const a = (b as { aspect?: string }).aspect;
+      return next ? !!a : !a;
+    });
+    const i = curArch
+      ? nextEntries.findIndex((e) => e.source === "suggested" && (e as { archetype?: string }).archetype === curArch)
+      : -1;
+    setAspectOn(next);
+    setActiveIndex(i >= 0 ? i : 0);
+    setSelectedTag(null);
+  };
   const active: BuildEntry = entries[activeIndex] ?? entries[0];
   const community = isCommunityEntry(active);
   const swaps = !community ? active.situational_swaps : undefined;
@@ -139,20 +163,42 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
         </div>
       </div>
 
-      {modes.length > 1 && (
-        <div className="mb-3 flex w-fit overflow-hidden rounded-md border border-line">
-          {modes.map((m) => (
+      {(modes.length > 1 || hasAspect) && (
+        <div className="mb-3 flex items-center gap-3">
+          {modes.length > 1 && (
+            <div className="flex w-fit overflow-hidden rounded-md border border-line">
+              {modes.map((m) => (
+                <button
+                  key={m}
+                  type="button"
+                  onClick={() => onModeChange(m)}
+                  className={`px-3 py-1 font-display text-xs font-semibold tracking-wide ${
+                    m === note.mode ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"
+                  }`}
+                >
+                  {m}
+                </button>
+              ))}
+            </div>
+          )}
+          {hasAspect && (
             <button
-              key={m}
               type="button"
-              onClick={() => onModeChange(m)}
-              className={`px-3 py-1 font-display text-xs font-semibold tracking-wide ${
-                m === note.mode ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"
+              onClick={toggleAspect}
+              className={`rounded-md border border-line px-3 py-1 font-display text-xs font-semibold tracking-wide ${
+                aspectOn ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"
               }`}
             >
-              {m}
+              {aspectMeta ? `Aspect: ${aspectMeta.name.replace(/^Aspect of (the )?/i, "")}` : "Aspect"}
             </button>
-          ))}
+          )}
+        </div>
+      )}
+
+      {aspectOn && aspectMeta && (
+        <div className="mb-3 rounded border border-gold/40 bg-bg1 p-2 text-xs">
+          <span className="font-display font-semibold text-gold">{aspectMeta.name}</span>
+          <span className="text-muted"> — {aspectMeta.kit_changes}</span>
         </div>
       )}
 

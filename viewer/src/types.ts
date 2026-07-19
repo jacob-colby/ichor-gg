@@ -75,6 +75,7 @@ export interface CuratedBuildEntry {
   aspect?: string;
   archetype?: string;
   name?: string;
+  aspect?: string;
   rationale?: string;
   slot_order: string[];
   flex_slots?: string[];

@@ -306,6 +306,47 @@ describe("DetailPanel", () => {
     expect(screen.getByText(/BUILD ORDER/i)).toBeInTheDocument();  // suggested tab active
   });
 
+  const godWithAspect = {
+    type: "god", name: "Hercules", pantheon: "Roman", role: "Solo", specializations: [],
+    damage_type: "physical", release_date: "", base_stats: {}, abilities: [],
+    aspects: [{ name: "Aspect of Preservation", kit_changes: "Becomes an ally-heal tank." }],
+    source_url: "", last_verified: "",
+  } as any;
+
+  function aspectBuild(): BuildNote {
+    return { type: "smite-build", god: "Hercules", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u" } as any,
+      { source: "suggested", archetype: "core", slot_order: ["BaseItem"], situational_swaps: [], rationale: "" } as any,
+      { source: "suggested", archetype: "core", slot_order: ["AspectItem"], situational_swaps: [], rationale: "",
+        aspect: "Aspect of Preservation" } as any,
+    ] };
+  }
+
+  it("shows the Aspect toggle and swaps to the aspect build + kit banner when on", () => {
+    render(<DetailPanel god="Hercules" godData={godWithAspect} items={[]} builds={[aspectBuild()]}
+                        mode="Conquest" onModeChange={() => {}} />);
+    // select the core tab; base build shows, aspect build hidden
+    fireEvent.click(screen.getByRole("tab", { name: /core/i }));
+    expect(screen.getByText("BaseItem")).toBeInTheDocument();
+    expect(screen.queryByText("AspectItem")).not.toBeInTheDocument();
+    // turn the aspect on — same core tab, now the aspect build + kit banner
+    fireEvent.click(screen.getByRole("button", { name: /aspect/i }));
+    expect(screen.getByText("AspectItem")).toBeInTheDocument();
+    expect(screen.queryByText("BaseItem")).not.toBeInTheDocument();
+    expect(screen.getByText(/ally-heal tank/i)).toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: /community/i })).toBeInTheDocument();
+  });
+
+  it("shows no Aspect toggle for a god with no aspect builds", () => {
+    const builds = [{ type: "smite-build", god: "Susano", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(<DetailPanel god="Susano" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    expect(screen.queryByRole("button", { name: /^aspect/i })).not.toBeInTheDocument();
+  });
+
   it("labels suggested tabs by archetype", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "suggested", archetype: "core", slot_order: ["X"], situational_swaps: [], rationale: "" },
