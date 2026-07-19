@@ -72,7 +72,6 @@ export interface CommunityBuildEntry {
 
 export interface CuratedBuildEntry {
   source: "pro" | "mine" | "suggested";
-  aspect?: string;
   archetype?: string;
   name?: string;
   aspect?: string;

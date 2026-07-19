@@ -141,7 +141,7 @@ describe("DetailPanel", () => {
     expect(mineImages[1]).toHaveAttribute("src", expect.stringContaining("deathbringer"));
     // Must be a fresh node with no leftover inline visibility — not the
     // reused, still-hidden node from the community tab.
-    expect(mineImages[1].style.visibility).not.toBe("hidden");
+    expect((mineImages[1] as HTMLElement).style.visibility).not.toBe("hidden");
   });
 
   // Regression coverage for a real bug: the "Reload data" button re-fetches
