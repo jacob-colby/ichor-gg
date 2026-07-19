@@ -117,4 +117,120 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   starter: *id001
+- source: suggested
+  archetype: core
+  slot_order:
+  - Void Stone
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Doublet of Binding
+  - Triton's Conch
+  flex_slots:
+  - Doublet of Binding
+  - Spectral Armor
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: burst
+  slot_order:
+  - Divine Ruin
+  - Soul Gem
+  - Void Stone
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Triton's Conch
+  flex_slots:
+  - The Cosmic Horror
+  - Void Stone
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: bruiser
+  slot_order:
+  - Kinetic Cuirass
+  - Void Stone
+  - Spectral Armor
+  - Amanita Charm
+  - Rod of Asclepius
+  - Erosion
+  flex_slots:
+  - Kinetic Cuirass
+  - Void Stone
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: anti-tank
+  slot_order:
+  - Screeching Gargoyle
+  - Soul Gem
+  - Void Shield
+  - Void Stone
+  - Spear of Desolation
+  - The Cosmic Horror
+  flex_slots:
+  - Screeching Gargoyle
+  - The Cosmic Horror
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Erosion — physical protection
+    swap_item: Erosion
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
+    profile (no meta win/pick data).
+  starter: *id001
+  aspect: Aspect of Thermotherapy
 ---

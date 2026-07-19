@@ -163,4 +163,139 @@ builds:
     Book, Ancient Signet, Ethereal Staff, Eye of Providence, Divine Ruin, Death Metal,
     Genji''s Guard, Amanita Charm, Bancroft''s Talon, Polynomicon.'
   starter: *id001
+- source: suggested
+  archetype: core
+  slot_order:
+  - Soul Gem
+  - Void Stone
+  - Spear of Desolation
+  - Spectral Armor
+  - Erosion
+  - Triton's Conch
+  flex_slots:
+  - Spectral Armor
+  - Triton's Conch
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
+    this god: Rod of Asclepius, Amanita Charm, Lifebinder, Chandra''s Grace, Shield
+    of the Phoenix, Erosion, Void Stone, Spectral Armor, Triton''s Conch, Kinetic
+    Cuirass, Genji''s Guard, Phoenix Feather, Doublet of Binding, Eye of Providence,
+    Gluttonous Grimoire, Screeching Gargoyle, Ethereal Staff, Gladiator''s Shield,
+    Chronos'' Pendant, Blood-Bound Book, Glorious Pridwen, Void Shield, Stampede,
+    Bancroft''s Talon, Gem of Focus.'
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: burst
+  slot_order:
+  - Soul Gem
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Triton's Conch
+  flex_slots:
+  - Rod of Tahuti
+  - The Cosmic Horror
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
+    god: Rod of Asclepius, Lifebinder, Amanita Charm, Gluttonous Grimoire, Triton''s
+    Conch, The Cosmic Horror, Spectral Armor, Chandra''s Grace, Spear of the Magus,
+    Blood-Bound Book, Erosion, Shield of the Phoenix, Doom Orb, Bancroft''s Talon,
+    Void Stone, Death Metal, Ethereal Staff, The World Stone, Bragi''s Harp, Chronos''
+    Pendant, Kinetic Cuirass, Phoenix Feather, Genji''s Guard, Doublet of Binding.'
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: bruiser
+  slot_order:
+  - Kinetic Cuirass
+  - Soul Gem
+  - Spear of Desolation
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Spectral Armor
+  - Kinetic Cuirass
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
+    this god: Amanita Charm, Rod of Asclepius, Lifebinder, Shield of the Phoenix,
+    Erosion, Spectral Armor, Kinetic Cuirass, Chandra''s Grace, Eye of Providence,
+    Phoenix Feather, Void Stone, Glorious Pridwen, Void Shield, Spirit Robe, Stampede,
+    Blood-Bound Book, Mystical Mail, Bancroft''s Talon, Doublet of Binding, Triton''s
+    Conch, Gladiator''s Shield, Genji''s Guard, Prophetic Cloak, Gluttonous Grimoire,
+    Freya''s Tears, Breastplate of Valor.'
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: anti-tank
+  slot_order:
+  - Soul Gem
+  - Void Stone
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Rod of Tahuti
+  - Obsidian Shard
+  flex_slots:
+  - Rod of Tahuti
+  - The Cosmic Horror
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
+    for this god: Rod of Asclepius, Gluttonous Grimoire, Amanita Charm, Void Stone,
+    Lifebinder, The Cosmic Horror, Void Shield, Spear of the Magus, Screeching Gargoyle,
+    Spectral Armor, Doom Orb, Chandra''s Grace, Erosion, Shield of the Phoenix, The
+    World Stone, Triton''s Conch, Blood-Bound Book, Kinetic Cuirass, Phoenix Feather,
+    Doublet of Binding, Genji''s Guard, Eye of Providence, Bancroft''s Talon, Ethereal
+    Staff.'
+  starter: *id001
+  aspect: Aspect of Thermotherapy
 ---

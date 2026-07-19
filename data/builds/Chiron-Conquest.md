@@ -194,4 +194,169 @@ builds:
     Stone of Binding, Shield Splitter, Berserker''s Shield, Kinetic Cuirass, Genji''s
     Guard, Spectral Armor, Demon Blade, Eye of the Storm.'
   starter: *id001
+- source: suggested
+  archetype: core
+  slot_order:
+  - Jotunn's Revenge
+  - Transcendence
+  - Hydra's Lament
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
+  flex_slots:
+  - Hydra's Lament
+  - Heartseeker
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
+    this god: Hydra''s Lament, Heartseeker, The Reaper, Tekko-Kagi, Runeforged Hammer,
+    Damaru, Rage, Tyrfing, Pendulum Blade, Avenging Blade, Lernaean Bow, Shield Splitter,
+    Spectral Armor, Musashi''s Dual Swords, Golden Blade, Arondight, Eye of the Storm,
+    Genji''s Guard, Oath-Sworn Spear, Amanita Charm, Kinetic Cuirass, Barbed Carver,
+    Demon Blade, Chandra''s Grace.'
+  starter: *id001
+  aspect: Aspect of the Heroic Tutor
+- source: suggested
+  archetype: crit
+  slot_order:
+  - Jotunn's Revenge
+  - Rage
+  - Damaru
+  - Demon Blade
+  - The Crusher
+  - Titan's Bane
+  flex_slots:
+  - Rage
+  - Demon Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
+    this god: Tyrfing, Tekko-Kagi, Hydra''s Lament, Lernaean Bow, Heartseeker, The
+    Reaper, Damaru, Rage, Runeforged Hammer, Golden Blade, Demon Blade, Avenging Blade,
+    Pharaoh''s Curse, Spectral Armor, Eros'' Bow, Musashi''s Dual Swords, Berserker''s
+    Shield, Shield Splitter, Pendulum Blade, Shogun''s Ofuda, Amanita Charm, Kinetic
+    Cuirass, Genji''s Guard, Eye of the Storm, Arondight.'
+  starter: *id001
+  aspect: Aspect of the Heroic Tutor
+- source: suggested
+  archetype: burst
+  slot_order:
+  - Jotunn's Revenge
+  - Transcendence
+  - Hydra's Lament
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
+  flex_slots:
+  - Hydra's Lament
+  - Heartseeker
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
+    god: Hydra''s Lament, Heartseeker, The Reaper, Pendulum Blade, Tekko-Kagi, Runeforged
+    Hammer, Tyrfing, Damaru, Avenging Blade, Rage, Arondight, Lernaean Bow, Shield
+    Splitter, Genji''s Guard, Spectral Armor, Chandra''s Grace, Golden Blade, Musashi''s
+    Dual Swords, Eye of the Storm, Breastplate of Valor, Screeching Gargoyle, Oath-Sworn
+    Spear, Amanita Charm, Shield of the Phoenix.'
+  starter: *id001
+  aspect: Aspect of the Heroic Tutor
+- source: suggested
+  archetype: bruiser
+  slot_order:
+  - Jotunn's Revenge
+  - Transcendence
+  - The Reaper
+  - The Crusher
+  - Titan's Bane
+  - Amanita Charm
+  flex_slots:
+  - The Reaper
+  - Transcendence
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
+    this god: Amanita Charm, The Reaper, Shield of the Phoenix, Shield Splitter, Chandra''s
+    Grace, Spirit Robe, Kinetic Cuirass, Phoenix Feather, Spectral Armor, Hydra''s
+    Lament, Eye of Providence, Glorious Pridwen, Erosion, Bloodforge, Runeforged Hammer,
+    Genji''s Guard, Devourer''s Gauntlet, Tyrfing, Eye of the Storm, Avenging Blade,
+    Riptalon, Damaru, Pharaoh''s Curse, Shroud of Vengeance, Rage, Tekko-Kagi.'
+  starter: *id001
+  aspect: Aspect of the Heroic Tutor
+- source: suggested
+  archetype: anti-tank
+  slot_order:
+  - Avenging Blade
+  - Jotunn's Revenge
+  - Transcendence
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
+  flex_slots:
+  - Avenging Blade
+  - Heartseeker
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
+    for this god: Avenging Blade, Heartseeker, The Reaper, Tekko-Kagi, Oath-Sworn
+    Spear, Pendulum Blade, Hydra''s Lament, Screeching Gargoyle, Void Stone, Void
+    Shield, Runeforged Hammer, Tyrfing, Damaru, Rage, Spectral Armor, Lernaean Bow,
+    Shield Splitter, Stone of Binding, Golden Blade, Amanita Charm, Genji''s Guard,
+    Kinetic Cuirass, Musashi''s Dual Swords, Arondight, Riptalon.'
+  starter: *id001
+  aspect: Aspect of the Heroic Tutor
 ---

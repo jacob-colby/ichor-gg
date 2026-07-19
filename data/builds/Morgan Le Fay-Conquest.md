@@ -162,4 +162,140 @@ builds:
     Staff, Divine Ruin, Death Metal, Bancroft''s Talon, Polynomicon, Gem of Focus,
     Bragi''s Harp, Helm of Radiance, Lifebinder, Alchemist Coat, Jade Scepter.'
   starter: *id001
+- source: suggested
+  archetype: core
+  slot_order:
+  - Soul Gem
+  - Ethereal Staff
+  - Gluttonous Grimoire
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Obsidian Shard
+  flex_slots:
+  - Ethereal Staff
+  - The Cosmic Horror
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
+    this god: Gluttonous Grimoire, Rod of Asclepius, Obsidian Shard, Lifebinder, Amanita
+    Charm, Chandra''s Grace, Ethereal Staff, The Cosmic Horror, Shield of the Phoenix,
+    Spear of the Magus, Blood-Bound Book, Kinetic Cuirass, Phoenix Feather, Doom Orb,
+    Eye of Providence, Alchemist Coat, Bancroft''s Talon, Jade Scepter, The World
+    Stone, Gem of Isolation, Scepter of Dominion, Spectral Armor, Triton''s Conch,
+    Chronos'' Pendant, Erosion.'
+  starter: *id001
+  aspect: Aspect of the Cursed Crown
+- source: suggested
+  archetype: burst
+  slot_order:
+  - Soul Gem
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
+  flex_slots:
+  - Rod of Tahuti
+  - Spear of the Magus
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
+    god: Gluttonous Grimoire, Obsidian Shard, Rod of Asclepius, Chandra''s Grace,
+    Lifebinder, The Cosmic Horror, Shield of the Phoenix, Amanita Charm, Blood-Bound
+    Book, Spear of the Magus, Ethereal Staff, Doom Orb, Bancroft''s Talon, Triton''s
+    Conch, Death Metal, Kinetic Cuirass, Phoenix Feather, The World Stone, Bragi''s
+    Harp, Eye of Providence, Chronos'' Pendant, Alchemist Coat, Jade Scepter, Spectral
+    Armor, Genji''s Guard.'
+  starter: *id001
+  aspect: Aspect of the Cursed Crown
+- source: suggested
+  archetype: bruiser
+  slot_order:
+  - Eye of Providence
+  - Kinetic Cuirass
+  - Soul Gem
+  - Spear of Desolation
+  - Obsidian Shard
+  - Amanita Charm
+  flex_slots:
+  - Obsidian Shard
+  - Eye of Providence
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
+    this god: Amanita Charm, Rod of Asclepius, Shield of the Phoenix, Gluttonous Grimoire,
+    Lifebinder, Kinetic Cuirass, Chandra''s Grace, Phoenix Feather, Blood-Bound Book,
+    Eye of Providence, Bancroft''s Talon, Spectral Armor, Spirit Robe, Erosion, Ethereal
+    Staff, The Cosmic Horror, Glorious Pridwen, Spear of the Magus, Gladiator''s Shield,
+    Sphere of Negation, Doom Orb, Alchemist Coat, Helm of Radiance, Jade Scepter,
+    Genji''s Guard.'
+  starter: *id001
+  aspect: Aspect of the Cursed Crown
+- source: suggested
+  archetype: anti-tank
+  slot_order:
+  - Soul Gem
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
+  flex_slots:
+  - Rod of Tahuti
+  - Spear of the Magus
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
+    for this god: Gluttonous Grimoire, Obsidian Shard, Rod of Asclepius, The Cosmic
+    Horror, Spear of the Magus, Doom Orb, Lifebinder, Amanita Charm, Chandra''s Grace,
+    The World Stone, Void Stone, Shield of the Phoenix, Ethereal Staff, Blood-Bound
+    Book, Screeching Gargoyle, Kinetic Cuirass, Phoenix Feather, Bancroft''s Talon,
+    Void Shield, Eye of Providence, Alchemist Coat, Jade Scepter, Spectral Armor,
+    Gem of Isolation.'
+  starter: *id001
+  aspect: Aspect of the Cursed Crown
 ---
