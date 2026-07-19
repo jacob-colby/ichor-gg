@@ -34,10 +34,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Transcendence
+  - Lernaean Bow
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - Tyrfing
+  - Hydra's Lament
+  - Demon Blade
+  flex_slots:
   - Lernaean Bow
   - Demon Blade
   situational_swaps:
@@ -65,12 +68,15 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Transcendence
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Demon Blade
-  - Tyrfing
+  - Rage
   - Damaru
+  - Demon Blade
+  flex_slots:
+  - Damaru
+  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -100,6 +106,9 @@ builds:
   - The Crusher
   - Heartseeker
   - Titan's Bane
+  flex_slots:
+  - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -123,10 +132,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Transcendence
   - Jotunn's Revenge
+  - Shield Splitter
+  - Transcendence
   - Hydra's Lament
+  - Spirit Robe
   - Amanita Charm
+  flex_slots:
   - Shield Splitter
   - Spirit Robe
   situational_swaps:
@@ -155,8 +167,11 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
+  - Hydra's Lament
   - The Crusher
   - Heartseeker
+  - Titan's Bane
+  flex_slots:
   - Titan's Bane
   - Hydra's Lament
   situational_swaps:

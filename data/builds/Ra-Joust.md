@@ -6,10 +6,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Rod of Asclepius
-  - Divine Ruin
   - Contagion
+  - Divine Ruin
+  - Void Shield
+  - Void Stone
   - Spectral Armor
+  - Rod of Asclepius
+  flex_slots:
   - Void Stone
   - Void Shield
   situational_swaps:
@@ -33,10 +36,13 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Divine Ruin
   - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
-  - Divine Ruin
+  - Spear of the Magus
+  - Triton's Conch
+  flex_slots:
   - Triton's Conch
   - Spear of the Magus
   situational_swaps:
@@ -58,10 +64,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Amanita Charm
-  - Spirit Robe
-  - Erosion
+  - Brawler’s Beat Stick
   - Stygian Anchor
+  - Kinetic Cuirass
+  - Spirit Robe
+  - Amanita Charm
+  - Erosion
+  flex_slots:
   - Kinetic Cuirass
   - Brawler’s Beat Stick
   situational_swaps:
@@ -83,10 +92,13 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - The Cosmic Horror
-  - Spear of the Magus
   - Gluttonous Grimoire
   - Spear of Desolation
+  - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
+  - Obsidian Shard
+  flex_slots:
   - Doom Orb
   - Obsidian Shard
   situational_swaps:

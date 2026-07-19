@@ -36,8 +36,11 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Hydra's Lament
+  - The Reaper
+  - The Crusher
   - Heartseeker
   - Titan's Bane
+  flex_slots:
   - The Reaper
   - The Crusher
   situational_swaps:
@@ -67,9 +70,12 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - The Crusher
   - Heartseeker
   - Titan's Bane
-  - The Reaper
+  flex_slots:
   - The Crusher
   - Hydra's Lament
   situational_swaps:
@@ -95,10 +101,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Amanita Charm
-  - Spirit Robe
-  - Kinetic Cuirass
   - Eye of Providence
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Spirit Robe
+  - Amanita Charm
+  - Erosion
+  flex_slots:
   - Shield Splitter
   - Erosion
   situational_swaps:
@@ -126,9 +135,12 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
-  - Titan's Bane
   - The Reaper
+  - Tekko-Kagi
+  - The Crusher
   - Heartseeker
+  - Titan's Bane
+  flex_slots:
   - The Crusher
   - Tekko-Kagi
   situational_swaps:

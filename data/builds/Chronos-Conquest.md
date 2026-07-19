@@ -34,10 +34,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Spear of Desolation
   - Book of Thoth
   - Kinetic Cuirass
+  - Ancient Signet
   - Gluttonous Grimoire
+  - Spear of Desolation
+  - Spectral Armor
+  flex_slots:
   - Spectral Armor
   - Ancient Signet
   situational_swaps:
@@ -66,10 +69,13 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Spear of Desolation
   - Soul Gem
+  - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
   - Obsidian Shard
+  flex_slots:
   - Spear of the Magus
   - Doom Orb
   situational_swaps:
@@ -95,10 +101,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Amanita Charm
-  - Spirit Robe
-  - Kinetic Cuirass
   - Eye of Providence
+  - Kinetic Cuirass
+  - Shroud of Vengeance
+  - Spirit Robe
+  - Amanita Charm
+  - Erosion
+  flex_slots:
   - Erosion
   - Shroud of Vengeance
   situational_swaps:
@@ -125,10 +134,13 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Obsidian Shard
+  - Doom Orb
   - Spear of the Magus
+  - Obsidian Shard
+  flex_slots:
   - Gluttonous Grimoire
   - Doom Orb
   situational_swaps:

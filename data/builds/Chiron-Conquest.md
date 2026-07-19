@@ -35,9 +35,12 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
+  - Tyrfing
+  - Tekko-Kagi
   - The Crusher
   - Titan's Bane
-  - Transcendence
+  flex_slots:
   - Tekko-Kagi
   - Tyrfing
   situational_swaps:
@@ -66,11 +69,14 @@ builds:
   archetype: crit
   slot_order:
   - Jotunn's Revenge
+  - Rage
+  - Damaru
+  - Demon Blade
   - The Crusher
   - Titan's Bane
-  - Transcendence
-  - Tyrfing
-  - Tekko-Kagi
+  flex_slots:
+  - Rage
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -95,9 +101,12 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
+  - Hydra's Lament
+  - Tekko-Kagi
   - The Crusher
   - Titan's Bane
-  - Transcendence
+  flex_slots:
   - Hydra's Lament
   - Tekko-Kagi
   situational_swaps:
@@ -124,9 +133,12 @@ builds:
   archetype: bruiser
   slot_order:
   - Jotunn's Revenge
-  - The Crusher
   - Transcendence
+  - The Reaper
+  - The Crusher
+  - Titan's Bane
   - Amanita Charm
+  flex_slots:
   - Titan's Bane
   - The Reaper
   situational_swaps:
@@ -153,10 +165,13 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Avenging Blade
   - Jotunn's Revenge
+  - Transcendence
+  - Tekko-Kagi
   - The Crusher
   - Titan's Bane
-  - Transcendence
+  flex_slots:
   - Avenging Blade
   - Tekko-Kagi
   situational_swaps:

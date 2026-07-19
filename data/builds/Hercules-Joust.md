@@ -6,10 +6,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Amanita Charm
   - Contagion
-  - Spectral Armor
+  - Void Shield
   - Void Stone
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  flex_slots:
   - Void Shield
   - Erosion
   situational_swaps:
@@ -33,10 +36,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Amanita Charm
-  - Spirit Robe
-  - Erosion
+  - Brawler’s Beat Stick
   - Stygian Anchor
+  - Kinetic Cuirass
+  - Spirit Robe
+  - Amanita Charm
+  - Erosion
+  flex_slots:
   - Kinetic Cuirass
   - Brawler’s Beat Stick
   situational_swaps:
@@ -59,9 +65,12 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
-  - The Crusher
   - The Reaper
+  - Pendulum Blade
+  - The Crusher
+  - Heartseeker
   - Titan's Bane
+  flex_slots:
   - Pendulum Blade
   - Heartseeker
   situational_swaps:

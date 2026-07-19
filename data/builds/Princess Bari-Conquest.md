@@ -34,10 +34,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Death Metal
+  - Bracer of The Abyss
+  - Nimble Ring
   - Bragi's Harp
-  - Obsidian Shard
+  - Death Metal
   - Spear of Desolation
+  - Obsidian Shard
+  flex_slots:
   - Bracer of The Abyss
   - Nimble Ring
   situational_swaps:
@@ -66,10 +69,13 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Spear of Desolation
-  - Obsidian Shard
   - Soul Gem
+  - Bragi's Harp
   - Death Metal
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Obsidian Shard
+  flex_slots:
   - The Cosmic Horror
   - Bragi's Harp
   situational_swaps:
@@ -95,10 +101,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Amanita Charm
-  - Spirit Robe
+  - Eye of Providence
   - Kinetic Cuirass
+  - Spirit Robe
+  - Spear of Desolation
   - Obsidian Shard
+  - Amanita Charm
+  flex_slots:
   - Eye of Providence
   - Spear of Desolation
   situational_swaps:
@@ -125,10 +134,13 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Obsidian Shard
-  - Spear of Desolation
   - Gluttonous Grimoire
+  - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
+  - Obsidian Shard
+  flex_slots:
   - Spear of the Magus
   - Doom Orb
   situational_swaps:

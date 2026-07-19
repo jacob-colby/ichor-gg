@@ -6,10 +6,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Divine Ruin
+  - Bracer of The Abyss
   - Bragi's Harp
   - Death Metal
   - Rod of Asclepius
   - Triton's Conch
+  flex_slots:
   - Divine Ruin
   - Bracer of The Abyss
   situational_swaps:
@@ -33,10 +36,13 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Soul Gem
-  - Spear of Desolation
   - Divine Ruin
+  - Soul Gem
   - Bragi's Harp
+  - Death Metal
+  - Spear of Desolation
+  - Triton's Conch
+  flex_slots:
   - Death Metal
   - Triton's Conch
   situational_swaps:
@@ -58,10 +64,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Stygian Anchor
+  - Kinetic Cuirass
+  - Spectral Armor
   - Amanita Charm
   - Rod of Asclepius
   - Erosion
-  - Stygian Anchor
+  flex_slots:
   - Kinetic Cuirass
   - Spectral Armor
   situational_swaps:
@@ -84,9 +93,12 @@ builds:
   archetype: anti-tank
   slot_order:
   - Soul Gem
-  - Void Stone
-  - The Cosmic Horror
   - Void Shield
+  - Void Stone
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Spear of the Magus
+  flex_slots:
   - Spear of the Magus
   - Spear of Desolation
   situational_swaps:

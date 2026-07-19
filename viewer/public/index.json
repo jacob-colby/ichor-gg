@@ -4556,10 +4556,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
-            "Obsidian Shard",
+            "Spear of Desolation",
             "The Cosmic Horror",
+            "Spear of the Magus",
+            "Rod of Tahuti",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Spear of the Magus",
             "Rod of Tahuti"
           ],
@@ -4595,10 +4599,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
-            "Obsidian Shard",
+            "Spear of Desolation",
             "The Cosmic Horror",
+            "Spear of the Magus",
+            "Rod of Tahuti",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Spear of the Magus",
             "Rod of Tahuti"
           ],
@@ -4634,10 +4642,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Kinetic Cuirass",
             "Soul Gem",
             "Spear of Desolation",
-            "Amanita Charm",
+            "The Cosmic Horror",
             "Obsidian Shard",
+            "Amanita Charm"
+          ],
+          "flex_slots": [
             "The Cosmic Horror",
             "Kinetic Cuirass"
           ],
@@ -4673,10 +4685,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
-            "Obsidian Shard",
+            "Spear of Desolation",
             "The Cosmic Horror",
+            "Spear of the Magus",
+            "Rod of Tahuti",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Spear of the Magus",
             "Rod of Tahuti"
           ],
@@ -4719,10 +4735,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Spear of Desolation",
+            "Divine Ruin",
             "Soul Gem",
+            "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
+            "Spear of the Magus"
+          ],
+          "flex_slots": [
             "Doom Orb",
             "Divine Ruin"
           ],
@@ -4758,10 +4778,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
+            "Divine Ruin",
             "Soul Gem",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Divine Ruin",
+            "Spear of the Magus",
+            "Triton's Conch"
+          ],
+          "flex_slots": [
             "Triton's Conch",
             "Spear of the Magus"
           ],
@@ -4797,10 +4821,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Soul Gem",
-            "Amanita Charm",
             "Divine Ruin",
+            "Stygian Anchor",
+            "Soul Gem",
             "Spear of Desolation",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Erosion",
             "Stygian Anchor"
           ],
@@ -4836,10 +4864,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
+            "Spear of Desolation",
             "The Cosmic Horror",
+            "Doom Orb",
             "Spear of the Magus",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Doom Orb",
             "Obsidian Shard"
           ],
@@ -4927,9 +4959,13 @@
           "archetype": "core",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Crusher",
+            "Tyrfing",
+            "Hydra's Lament",
             "Riptalon",
             "Tekko-Kagi",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Tyrfing",
             "Hydra's Lament"
           ],
@@ -4966,11 +5002,15 @@
           "archetype": "crit",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Crusher",
+            "Rage",
             "Riptalon",
-            "Tyrfing",
-            "Tekko-Kagi",
-            "Hydra's Lament"
+            "Damaru",
+            "Demon Blade",
+            "The Crusher"
+          ],
+          "flex_slots": [
+            "Rage",
+            "Demon Blade"
           ],
           "situational_swaps": [
             {
@@ -5005,9 +5045,13 @@
           "archetype": "burst",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Crusher",
-            "Riptalon",
+            "Tyrfing",
             "Hydra's Lament",
+            "Riptalon",
+            "Tekko-Kagi",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Tekko-Kagi",
             "Tyrfing"
           ],
@@ -5043,10 +5087,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Riptalon",
-            "Devourer's Gauntlet",
             "Jotunn's Revenge",
-            "The Crusher",
+            "Kinetic Cuirass",
+            "Shield Splitter",
+            "Devourer's Gauntlet",
+            "Riptalon",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Kinetic Cuirass",
             "Shield Splitter"
           ],
@@ -5082,10 +5130,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "Jotunn's Revenge",
-            "The Crusher",
-            "Riptalon",
+            "Oath-Sworn Spear",
             "Avenging Blade",
+            "Jotunn's Revenge",
+            "Riptalon",
+            "Tekko-Kagi",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Tekko-Kagi",
             "Oath-Sworn Spear"
           ],
@@ -5128,10 +5180,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "The Reaper",
             "Jotunn's Revenge",
-            "The Crusher",
             "Tyrfing",
+            "The Reaper",
+            "The Crusher",
+            "Eros' Bow",
+            "Pharaoh's Curse"
+          ],
+          "flex_slots": [
             "Pharaoh's Curse",
             "Eros' Bow"
           ],
@@ -5167,12 +5223,16 @@
           "source": "suggested",
           "archetype": "crit",
           "slot_order": [
-            "The Reaper",
             "Jotunn's Revenge",
-            "The Crusher",
-            "Tyrfing",
+            "Rage",
+            "The Reaper",
+            "Damaru",
             "Demon Blade",
-            "Pharaoh's Curse"
+            "The Crusher"
+          ],
+          "flex_slots": [
+            "Damaru",
+            "Rage"
           ],
           "situational_swaps": [
             {
@@ -5207,9 +5267,13 @@
           "archetype": "burst",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Reaper",
-            "The Crusher",
+            "Tyrfing",
             "Hydra's Lament",
+            "The Reaper",
+            "Pendulum Blade",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Pendulum Blade",
             "Tyrfing"
           ],
@@ -5245,10 +5309,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
+            "Jotunn's Revenge",
             "The Reaper",
-            "Pharaoh's Curse",
+            "Spectral Armor",
+            "Amanita Charm",
             "Erosion",
+            "Pharaoh's Curse"
+          ],
+          "flex_slots": [
             "Jotunn's Revenge",
             "Spectral Armor"
           ],
@@ -5284,10 +5352,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "The Reaper",
+            "Avenging Blade",
             "Jotunn's Revenge",
-            "The Crusher",
+            "Void Shield",
             "Void Stone",
+            "The Reaper",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Avenging Blade",
             "Void Shield"
           ],
@@ -5375,9 +5447,13 @@
           "archetype": "core",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Crusher",
-            "Titan's Bane",
             "Transcendence",
+            "Tyrfing",
+            "Tekko-Kagi",
+            "The Crusher",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "Tekko-Kagi",
             "Tyrfing"
           ],
@@ -5414,11 +5490,15 @@
           "archetype": "crit",
           "slot_order": [
             "Jotunn's Revenge",
+            "Rage",
+            "Damaru",
+            "Demon Blade",
             "The Crusher",
-            "Titan's Bane",
-            "Transcendence",
-            "Tyrfing",
-            "Tekko-Kagi"
+            "Titan's Bane"
+          ],
+          "flex_slots": [
+            "Rage",
+            "Demon Blade"
           ],
           "situational_swaps": [
             {
@@ -5453,9 +5533,13 @@
           "archetype": "burst",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Crusher",
-            "Titan's Bane",
             "Transcendence",
+            "Hydra's Lament",
+            "Tekko-Kagi",
+            "The Crusher",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "Hydra's Lament",
             "Tekko-Kagi"
           ],
@@ -5492,9 +5576,13 @@
           "archetype": "bruiser",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Crusher",
             "Transcendence",
-            "Amanita Charm",
+            "The Reaper",
+            "The Crusher",
+            "Titan's Bane",
+            "Amanita Charm"
+          ],
+          "flex_slots": [
             "Titan's Bane",
             "The Reaper"
           ],
@@ -5530,10 +5618,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
+            "Avenging Blade",
             "Jotunn's Revenge",
-            "The Crusher",
-            "Titan's Bane",
             "Transcendence",
+            "Tekko-Kagi",
+            "The Crusher",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "Avenging Blade",
             "Tekko-Kagi"
           ],
@@ -5576,10 +5668,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "The Reaper",
             "Jotunn's Revenge",
-            "The Crusher",
             "Tyrfing",
+            "Hydra's Lament",
+            "The Reaper",
+            "Tekko-Kagi",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Hydra's Lament",
             "Tekko-Kagi"
           ],
@@ -5615,12 +5711,16 @@
           "source": "suggested",
           "archetype": "crit",
           "slot_order": [
-            "The Reaper",
             "Jotunn's Revenge",
-            "The Crusher",
-            "Tyrfing",
+            "Rage",
+            "The Reaper",
+            "Damaru",
             "Demon Blade",
-            "Pharaoh's Curse"
+            "The Crusher"
+          ],
+          "flex_slots": [
+            "Damaru",
+            "Rage"
           ],
           "situational_swaps": [
             {
@@ -5655,9 +5755,13 @@
           "archetype": "burst",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Reaper",
-            "The Crusher",
+            "Tyrfing",
             "Hydra's Lament",
+            "The Reaper",
+            "Pendulum Blade",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Pendulum Blade",
             "Tyrfing"
           ],
@@ -5693,10 +5797,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "The Reaper",
             "Jotunn's Revenge",
+            "The Reaper",
             "The Crusher",
+            "Amanita Charm",
+            "Erosion",
+            "Pharaoh's Curse"
+          ],
+          "flex_slots": [
             "Pharaoh's Curse",
             "Erosion"
           ],
@@ -5732,10 +5840,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "The Reaper",
-            "Jotunn's Revenge",
-            "The Crusher",
             "Avenging Blade",
+            "Jotunn's Revenge",
+            "Void Shield",
+            "Void Stone",
+            "The Reaper",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Void Stone",
             "Void Shield"
           ],
@@ -5822,10 +5934,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Spear of Desolation",
             "Book of Thoth",
             "Kinetic Cuirass",
+            "Ancient Signet",
             "Gluttonous Grimoire",
+            "Spear of Desolation",
+            "Spectral Armor"
+          ],
+          "flex_slots": [
             "Spectral Armor",
             "Ancient Signet"
           ],
@@ -5861,10 +5977,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
+            "Spear of Desolation",
             "The Cosmic Horror",
-            "Obsidian Shard",
+            "Doom Orb",
+            "Spear of the Magus",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Spear of the Magus",
             "Doom Orb"
           ],
@@ -5900,10 +6020,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
-            "Kinetic Cuirass",
             "Eye of Providence",
+            "Kinetic Cuirass",
+            "Shroud of Vengeance",
+            "Spirit Robe",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Erosion",
             "Shroud of Vengeance"
           ],
@@ -5939,10 +6063,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
+            "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Obsidian Shard",
+            "Doom Orb",
             "Spear of the Magus",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Gluttonous Grimoire",
             "Doom Orb"
           ],
@@ -5985,10 +6113,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Rod of Asclepius",
-            "Divine Ruin",
             "Contagion",
+            "Divine Ruin",
+            "Void Shield",
+            "Void Stone",
             "Spectral Armor",
+            "Rod of Asclepius"
+          ],
+          "flex_slots": [
             "Void Stone",
             "Void Shield"
           ],
@@ -6024,10 +6156,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
+            "Divine Ruin",
             "Soul Gem",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Divine Ruin",
+            "Spear of the Magus",
+            "Triton's Conch"
+          ],
+          "flex_slots": [
             "Triton's Conch",
             "Spear of the Magus"
           ],
@@ -6063,10 +6199,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
-            "Erosion",
+            "Brawler\u2019s Beat Stick",
             "Stygian Anchor",
+            "Kinetic Cuirass",
+            "Spirit Robe",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Kinetic Cuirass",
             "Brawler\u2019s Beat Stick"
           ],
@@ -6102,10 +6242,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "The Cosmic Horror",
-            "Spear of the Magus",
             "Gluttonous Grimoire",
             "Spear of Desolation",
+            "The Cosmic Horror",
+            "Doom Orb",
+            "Spear of the Magus",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Doom Orb",
             "Obsidian Shard"
           ],
@@ -6194,8 +6338,12 @@
           "slot_order": [
             "Genji's Guard",
             "Breastplate of Valor",
-            "The Crusher",
             "Jotunn's Revenge",
+            "Hydra's Lament",
+            "Runeforged Hammer",
+            "The Crusher"
+          ],
+          "flex_slots": [
             "Runeforged Hammer",
             "Hydra's Lament"
           ],
@@ -6231,10 +6379,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
-            "Kinetic Cuirass",
             "Eye of Providence",
+            "Kinetic Cuirass",
+            "Shield Splitter",
+            "Spirit Robe",
+            "Shifter's Shield",
+            "Amanita Charm"
+          ],
+          "flex_slots": [
             "Shifter's Shield",
             "Shield Splitter"
           ],
@@ -6271,9 +6423,13 @@
           "archetype": "anti-tank",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Crusher",
             "The Reaper",
-            "Titan's Bane",
+            "Tekko-Kagi",
+            "Pendulum Blade",
+            "The Crusher",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "Tekko-Kagi",
             "Pendulum Blade"
           ],
@@ -6316,10 +6472,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Amanita Charm",
             "Contagion",
-            "Spectral Armor",
+            "Void Shield",
             "Void Stone",
+            "Spectral Armor",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Void Shield",
             "Erosion"
           ],
@@ -6355,10 +6515,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
-            "Erosion",
+            "Brawler\u2019s Beat Stick",
             "Stygian Anchor",
+            "Kinetic Cuirass",
+            "Spirit Robe",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Kinetic Cuirass",
             "Brawler\u2019s Beat Stick"
           ],
@@ -6395,9 +6559,13 @@
           "archetype": "anti-tank",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Crusher",
             "The Reaper",
-            "Titan's Bane",
+            "Pendulum Blade",
+            "The Crusher",
+            "Heartseeker",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "Pendulum Blade",
             "Heartseeker"
           ],
@@ -6484,10 +6652,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
-            "Obsidian Shard",
+            "Spear of Desolation",
             "The Cosmic Horror",
+            "Spear of the Magus",
+            "Rod of Tahuti",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Rod of Tahuti",
             "Spear of the Magus"
           ],
@@ -6523,10 +6695,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
-            "Obsidian Shard",
+            "Spear of Desolation",
             "The Cosmic Horror",
+            "Spear of the Magus",
+            "Rod of Tahuti",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Rod of Tahuti",
             "Spear of the Magus"
           ],
@@ -6564,8 +6740,12 @@
           "slot_order": [
             "Soul Gem",
             "Spear of Desolation",
-            "Amanita Charm",
+            "The Cosmic Horror",
+            "Rod of Tahuti",
             "Obsidian Shard",
+            "Amanita Charm"
+          ],
+          "flex_slots": [
             "The Cosmic Horror",
             "Rod of Tahuti"
           ],
@@ -6601,10 +6781,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
-            "Obsidian Shard",
+            "Spear of Desolation",
             "The Cosmic Horror",
+            "Spear of the Magus",
+            "Rod of Tahuti",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Rod of Tahuti",
             "Spear of the Magus"
           ],
@@ -6647,10 +6831,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Spear of Desolation",
+            "Divine Ruin",
             "Soul Gem",
+            "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
+            "Spear of the Magus"
+          ],
+          "flex_slots": [
             "Doom Orb",
             "Divine Ruin"
           ],
@@ -6686,10 +6874,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
+            "Divine Ruin",
             "Soul Gem",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Divine Ruin",
+            "Spear of the Magus",
+            "Triton's Conch"
+          ],
+          "flex_slots": [
             "Triton's Conch",
             "Spear of the Magus"
           ],
@@ -6725,10 +6917,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Soul Gem",
-            "Amanita Charm",
             "Divine Ruin",
+            "Stygian Anchor",
+            "Soul Gem",
             "Spear of Desolation",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Erosion",
             "Stygian Anchor"
           ],
@@ -6764,10 +6960,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
+            "Spear of Desolation",
             "The Cosmic Horror",
+            "Doom Orb",
             "Spear of the Magus",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Doom Orb",
             "Obsidian Shard"
           ],
@@ -6854,10 +7054,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Death Metal",
+            "Bracer of The Abyss",
+            "Nimble Ring",
             "Bragi's Harp",
-            "Obsidian Shard",
+            "Death Metal",
             "Spear of Desolation",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Bracer of The Abyss",
             "Nimble Ring"
           ],
@@ -6893,10 +7097,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
-            "Spear of Desolation",
-            "Obsidian Shard",
             "Soul Gem",
+            "Bragi's Harp",
             "Death Metal",
+            "Spear of Desolation",
+            "The Cosmic Horror",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "The Cosmic Horror",
             "Bragi's Harp"
           ],
@@ -6932,10 +7140,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
+            "Eye of Providence",
             "Kinetic Cuirass",
+            "Spirit Robe",
+            "Spear of Desolation",
             "Obsidian Shard",
+            "Amanita Charm"
+          ],
+          "flex_slots": [
             "Eye of Providence",
             "Spear of Desolation"
           ],
@@ -6971,10 +7183,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "Obsidian Shard",
-            "Spear of Desolation",
             "Gluttonous Grimoire",
+            "Spear of Desolation",
             "The Cosmic Horror",
+            "Doom Orb",
+            "Spear of the Magus",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Spear of the Magus",
             "Doom Orb"
           ],
@@ -7017,10 +7233,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Divine Ruin",
+            "Bracer of The Abyss",
             "Bragi's Harp",
             "Death Metal",
             "Rod of Asclepius",
-            "Triton's Conch",
+            "Triton's Conch"
+          ],
+          "flex_slots": [
             "Divine Ruin",
             "Bracer of The Abyss"
           ],
@@ -7056,10 +7276,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
-            "Soul Gem",
-            "Spear of Desolation",
             "Divine Ruin",
+            "Soul Gem",
             "Bragi's Harp",
+            "Death Metal",
+            "Spear of Desolation",
+            "Triton's Conch"
+          ],
+          "flex_slots": [
             "Death Metal",
             "Triton's Conch"
           ],
@@ -7095,10 +7319,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
+            "Stygian Anchor",
+            "Kinetic Cuirass",
+            "Spectral Armor",
             "Amanita Charm",
             "Rod of Asclepius",
-            "Erosion",
-            "Stygian Anchor",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Kinetic Cuirass",
             "Spectral Armor"
           ],
@@ -7135,9 +7363,13 @@
           "archetype": "anti-tank",
           "slot_order": [
             "Soul Gem",
-            "Void Stone",
-            "The Cosmic Horror",
             "Void Shield",
+            "Void Stone",
+            "Spear of Desolation",
+            "The Cosmic Horror",
+            "Spear of the Magus"
+          ],
+          "flex_slots": [
             "Spear of the Magus",
             "Spear of Desolation"
           ],
@@ -7224,10 +7456,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Spear of Desolation",
-            "Obsidian Shard",
-            "Soul Gem",
             "Book of Thoth",
+            "Kinetic Cuirass",
+            "Soul Gem",
+            "Spear of Desolation",
+            "Rod of Tahuti",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Rod of Tahuti",
             "Kinetic Cuirass"
           ],
@@ -7263,10 +7499,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
-            "Spear of Desolation",
             "Soul Gem",
-            "Obsidian Shard",
+            "Spear of Desolation",
+            "The Cosmic Horror",
+            "Spear of the Magus",
             "Rod of Tahuti",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "The Cosmic Horror",
             "Spear of the Magus"
           ],
@@ -7302,10 +7542,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
-            "Kinetic Cuirass",
             "Eye of Providence",
+            "Kinetic Cuirass",
+            "Shroud of Vengeance",
+            "Spirit Robe",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Erosion",
             "Shroud of Vengeance"
           ],
@@ -7341,10 +7585,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "Spear of Desolation",
-            "Obsidian Shard",
             "Soul Gem",
+            "Spear of Desolation",
+            "The Cosmic Horror",
+            "Spear of the Magus",
             "Rod of Tahuti",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "The Cosmic Horror",
             "Spear of the Magus"
           ],
@@ -7387,10 +7635,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Rod of Asclepius",
-            "Divine Ruin",
             "Contagion",
+            "Divine Ruin",
+            "Void Shield",
+            "Void Stone",
             "Spectral Armor",
+            "Rod of Asclepius"
+          ],
+          "flex_slots": [
             "Void Stone",
             "Void Shield"
           ],
@@ -7426,10 +7678,14 @@
           "source": "suggested",
           "archetype": "burst",
           "slot_order": [
+            "Divine Ruin",
             "Soul Gem",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Divine Ruin",
+            "Spear of the Magus",
+            "Triton's Conch"
+          ],
+          "flex_slots": [
             "Triton's Conch",
             "Spear of the Magus"
           ],
@@ -7465,10 +7721,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
-            "Erosion",
+            "Brawler\u2019s Beat Stick",
             "Stygian Anchor",
+            "Kinetic Cuirass",
+            "Spirit Robe",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Kinetic Cuirass",
             "Brawler\u2019s Beat Stick"
           ],
@@ -7504,10 +7764,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "The Cosmic Horror",
-            "Spear of the Magus",
             "Gluttonous Grimoire",
             "Spear of Desolation",
+            "The Cosmic Horror",
+            "Doom Orb",
+            "Spear of the Magus",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
             "Doom Orb",
             "Obsidian Shard"
           ],
@@ -7596,8 +7860,12 @@
           "slot_order": [
             "Jotunn's Revenge",
             "Hydra's Lament",
+            "The Reaper",
+            "The Crusher",
             "Heartseeker",
-            "Titan's Bane",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "The Reaper",
             "The Crusher"
           ],
@@ -7634,9 +7902,13 @@
           "archetype": "burst",
           "slot_order": [
             "Jotunn's Revenge",
-            "Heartseeker",
-            "Titan's Bane",
+            "Hydra's Lament",
             "The Reaper",
+            "The Crusher",
+            "Heartseeker",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "The Crusher",
             "Hydra's Lament"
           ],
@@ -7672,10 +7944,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
-            "Kinetic Cuirass",
             "Eye of Providence",
+            "Kinetic Cuirass",
+            "Shield Splitter",
+            "Spirit Robe",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Shield Splitter",
             "Erosion"
           ],
@@ -7712,9 +7988,13 @@
           "archetype": "anti-tank",
           "slot_order": [
             "Jotunn's Revenge",
-            "Titan's Bane",
             "The Reaper",
+            "Tekko-Kagi",
+            "The Crusher",
             "Heartseeker",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "The Crusher",
             "Tekko-Kagi"
           ],
@@ -7757,10 +8037,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Amanita Charm",
             "Contagion",
-            "Spectral Armor",
+            "Void Shield",
             "Void Stone",
+            "Spectral Armor",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Void Shield",
             "Erosion"
           ],
@@ -7797,9 +8081,13 @@
           "archetype": "burst",
           "slot_order": [
             "Jotunn's Revenge",
+            "Hydra's Lament",
             "The Reaper",
-            "The Crusher",
             "Pendulum Blade",
+            "The Crusher",
+            "Heartseeker"
+          ],
+          "flex_slots": [
             "Hydra's Lament",
             "Heartseeker"
           ],
@@ -7835,10 +8123,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
-            "Erosion",
+            "Brawler\u2019s Beat Stick",
             "Stygian Anchor",
+            "Kinetic Cuirass",
+            "Spirit Robe",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Kinetic Cuirass",
             "Brawler\u2019s Beat Stick"
           ],
@@ -7875,9 +8167,13 @@
           "archetype": "anti-tank",
           "slot_order": [
             "Jotunn's Revenge",
-            "The Crusher",
             "The Reaper",
-            "Titan's Bane",
+            "Pendulum Blade",
+            "The Crusher",
+            "Heartseeker",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "Pendulum Blade",
             "Heartseeker"
           ],
@@ -7964,10 +8260,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Transcendence",
+            "Lernaean Bow",
             "Jotunn's Revenge",
-            "Hydra's Lament",
+            "Transcendence",
             "Tyrfing",
+            "Hydra's Lament",
+            "Demon Blade"
+          ],
+          "flex_slots": [
             "Lernaean Bow",
             "Demon Blade"
           ],
@@ -8003,12 +8303,16 @@
           "source": "suggested",
           "archetype": "crit",
           "slot_order": [
-            "Transcendence",
             "Jotunn's Revenge",
+            "Transcendence",
             "Hydra's Lament",
-            "Demon Blade",
-            "Tyrfing",
-            "Damaru"
+            "Rage",
+            "Damaru",
+            "Demon Blade"
+          ],
+          "flex_slots": [
+            "Damaru",
+            "Rage"
           ],
           "situational_swaps": [
             {
@@ -8049,6 +8353,10 @@
             "Heartseeker",
             "Titan's Bane"
           ],
+          "flex_slots": [
+            "Heartseeker",
+            "Titan's Bane"
+          ],
           "situational_swaps": [
             {
               "vs_tag": "heavy_cc",
@@ -8081,10 +8389,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Transcendence",
             "Jotunn's Revenge",
+            "Shield Splitter",
+            "Transcendence",
             "Hydra's Lament",
-            "Amanita Charm",
+            "Spirit Robe",
+            "Amanita Charm"
+          ],
+          "flex_slots": [
             "Shield Splitter",
             "Spirit Robe"
           ],
@@ -8122,8 +8434,12 @@
           "slot_order": [
             "Jotunn's Revenge",
             "Transcendence",
+            "Hydra's Lament",
             "The Crusher",
             "Heartseeker",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "Titan's Bane",
             "Hydra's Lament"
           ],
@@ -8166,10 +8482,14 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Demon Blade",
+            "Lernaean Bow",
             "Tyrfing",
+            "Rage",
             "The Reaper",
             "Damaru",
+            "Demon Blade"
+          ],
+          "flex_slots": [
             "Rage",
             "Lernaean Bow"
           ],
@@ -8205,10 +8525,14 @@
           "source": "suggested",
           "archetype": "crit",
           "slot_order": [
-            "Demon Blade",
             "Tyrfing",
-            "Damaru",
             "Rage",
+            "Damaru",
+            "Demon Blade",
+            "Eros' Bow",
+            "Pharaoh's Curse"
+          ],
+          "flex_slots": [
             "Pharaoh's Curse",
             "Eros' Bow"
           ],
@@ -8245,9 +8569,13 @@
           "archetype": "burst",
           "slot_order": [
             "Jotunn's Revenge",
+            "Hydra's Lament",
             "The Reaper",
-            "The Crusher",
             "Pendulum Blade",
+            "The Crusher",
+            "Heartseeker"
+          ],
+          "flex_slots": [
             "Hydra's Lament",
             "Heartseeker"
           ],
@@ -8283,10 +8611,14 @@
           "source": "suggested",
           "archetype": "bruiser",
           "slot_order": [
-            "Amanita Charm",
-            "Spirit Robe",
+            "Stygian Anchor",
+            "Kinetic Cuirass",
             "Shield Splitter",
-            "Erosion",
+            "Spirit Robe",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
             "Stygian Anchor",
             "Kinetic Cuirass"
           ],
@@ -8322,10 +8654,14 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
-            "The Reaper",
-            "The Crusher",
             "Jotunn's Revenge",
+            "The Reaper",
             "Tekko-Kagi",
+            "The Crusher",
+            "Heartseeker",
+            "Titan's Bane"
+          ],
+          "flex_slots": [
             "Heartseeker",
             "Titan's Bane"
           ],

@@ -36,8 +36,11 @@ builds:
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
-  - The Crusher
   - Jotunn's Revenge
+  - Hydra's Lament
+  - Runeforged Hammer
+  - The Crusher
+  flex_slots:
   - Runeforged Hammer
   - Hydra's Lament
   situational_swaps:
@@ -66,10 +69,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Amanita Charm
-  - Spirit Robe
-  - Kinetic Cuirass
   - Eye of Providence
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Spirit Robe
+  - Shifter's Shield
+  - Amanita Charm
+  flex_slots:
   - Shifter's Shield
   - Shield Splitter
   situational_swaps:
@@ -97,9 +103,12 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
-  - The Crusher
   - The Reaper
+  - Tekko-Kagi
+  - Pendulum Blade
+  - The Crusher
   - Titan's Bane
+  flex_slots:
   - Tekko-Kagi
   - Pendulum Blade
   situational_swaps:

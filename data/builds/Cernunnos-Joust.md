@@ -6,10 +6,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - The Reaper
   - Jotunn's Revenge
-  - The Crusher
   - Tyrfing
+  - The Reaper
+  - The Crusher
+  - Eros' Bow
+  - Pharaoh's Curse
+  flex_slots:
   - Pharaoh's Curse
   - Eros' Bow
   situational_swaps:
@@ -33,12 +36,15 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - The Reaper
   - Jotunn's Revenge
-  - The Crusher
-  - Tyrfing
+  - Rage
+  - The Reaper
+  - Damaru
   - Demon Blade
-  - Pharaoh's Curse
+  - The Crusher
+  flex_slots:
+  - Damaru
+  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -59,9 +65,12 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
-  - The Reaper
-  - The Crusher
+  - Tyrfing
   - Hydra's Lament
+  - The Reaper
+  - Pendulum Blade
+  - The Crusher
+  flex_slots:
   - Pendulum Blade
   - Tyrfing
   situational_swaps:
@@ -83,10 +92,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Amanita Charm
+  - Jotunn's Revenge
   - The Reaper
-  - Pharaoh's Curse
+  - Spectral Armor
+  - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
+  flex_slots:
   - Jotunn's Revenge
   - Spectral Armor
   situational_swaps:
@@ -108,10 +120,13 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - The Reaper
+  - Avenging Blade
   - Jotunn's Revenge
-  - The Crusher
+  - Void Shield
   - Void Stone
+  - The Reaper
+  - The Crusher
+  flex_slots:
   - Avenging Blade
   - Void Shield
   situational_swaps:

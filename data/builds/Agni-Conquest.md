@@ -34,10 +34,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Spear of Desolation
   - Soul Gem
-  - Obsidian Shard
+  - Spear of Desolation
   - The Cosmic Horror
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
+  flex_slots:
   - Spear of the Magus
   - Rod of Tahuti
   situational_swaps:
@@ -65,10 +68,13 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Spear of Desolation
   - Soul Gem
-  - Obsidian Shard
+  - Spear of Desolation
   - The Cosmic Horror
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
+  flex_slots:
   - Spear of the Magus
   - Rod of Tahuti
   situational_swaps:
@@ -94,10 +100,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Kinetic Cuirass
   - Soul Gem
   - Spear of Desolation
-  - Amanita Charm
+  - The Cosmic Horror
   - Obsidian Shard
+  - Amanita Charm
+  flex_slots:
   - The Cosmic Horror
   - Kinetic Cuirass
   situational_swaps:
@@ -124,10 +133,13 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Spear of Desolation
   - Soul Gem
-  - Obsidian Shard
+  - Spear of Desolation
   - The Cosmic Horror
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
+  flex_slots:
   - Spear of the Magus
   - Rod of Tahuti
   situational_swaps:

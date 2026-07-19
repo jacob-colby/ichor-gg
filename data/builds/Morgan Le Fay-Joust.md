@@ -6,10 +6,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Spear of Desolation
+  - Divine Ruin
   - Soul Gem
+  - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
+  flex_slots:
   - Doom Orb
   - Divine Ruin
   situational_swaps:
@@ -33,10 +36,13 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Divine Ruin
   - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
-  - Divine Ruin
+  - Spear of the Magus
+  - Triton's Conch
+  flex_slots:
   - Triton's Conch
   - Spear of the Magus
   situational_swaps:
@@ -58,10 +64,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Soul Gem
-  - Amanita Charm
   - Divine Ruin
+  - Stygian Anchor
+  - Soul Gem
   - Spear of Desolation
+  - Amanita Charm
+  - Erosion
+  flex_slots:
   - Erosion
   - Stygian Anchor
   situational_swaps:
@@ -83,10 +92,13 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Spear of Desolation
   - Soul Gem
+  - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
+  - Obsidian Shard
+  flex_slots:
   - Doom Orb
   - Obsidian Shard
   situational_swaps:

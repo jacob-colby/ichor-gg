@@ -35,9 +35,12 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - The Crusher
+  - Tyrfing
+  - Hydra's Lament
   - Riptalon
   - Tekko-Kagi
+  - The Crusher
+  flex_slots:
   - Tyrfing
   - Hydra's Lament
   situational_swaps:
@@ -67,11 +70,14 @@ builds:
   archetype: crit
   slot_order:
   - Jotunn's Revenge
-  - The Crusher
+  - Rage
   - Riptalon
-  - Tyrfing
-  - Tekko-Kagi
-  - Hydra's Lament
+  - Damaru
+  - Demon Blade
+  - The Crusher
+  flex_slots:
+  - Rage
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -97,9 +103,12 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
-  - The Crusher
-  - Riptalon
+  - Tyrfing
   - Hydra's Lament
+  - Riptalon
+  - Tekko-Kagi
+  - The Crusher
+  flex_slots:
   - Tekko-Kagi
   - Tyrfing
   situational_swaps:
@@ -126,10 +135,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Riptalon
-  - Devourer's Gauntlet
   - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Devourer's Gauntlet
+  - Riptalon
   - The Crusher
+  flex_slots:
   - Kinetic Cuirass
   - Shield Splitter
   situational_swaps:
@@ -156,10 +168,13 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Jotunn's Revenge
-  - The Crusher
-  - Riptalon
+  - Oath-Sworn Spear
   - Avenging Blade
+  - Jotunn's Revenge
+  - Riptalon
+  - Tekko-Kagi
+  - The Crusher
+  flex_slots:
   - Tekko-Kagi
   - Oath-Sworn Spear
   situational_swaps:

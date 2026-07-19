@@ -6,10 +6,13 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Demon Blade
+  - Lernaean Bow
   - Tyrfing
+  - Rage
   - The Reaper
   - Damaru
+  - Demon Blade
+  flex_slots:
   - Rage
   - Lernaean Bow
   situational_swaps:
@@ -33,10 +36,13 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Demon Blade
   - Tyrfing
-  - Damaru
   - Rage
+  - Damaru
+  - Demon Blade
+  - Eros' Bow
+  - Pharaoh's Curse
+  flex_slots:
   - Pharaoh's Curse
   - Eros' Bow
   situational_swaps:
@@ -59,9 +65,12 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Hydra's Lament
   - The Reaper
-  - The Crusher
   - Pendulum Blade
+  - The Crusher
+  - Heartseeker
+  flex_slots:
   - Hydra's Lament
   - Heartseeker
   situational_swaps:
@@ -83,10 +92,13 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Amanita Charm
-  - Spirit Robe
+  - Stygian Anchor
+  - Kinetic Cuirass
   - Shield Splitter
+  - Spirit Robe
+  - Amanita Charm
   - Erosion
+  flex_slots:
   - Stygian Anchor
   - Kinetic Cuirass
   situational_swaps:
@@ -108,10 +120,13 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - The Reaper
-  - The Crusher
   - Jotunn's Revenge
+  - The Reaper
   - Tekko-Kagi
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
+  flex_slots:
   - Heartseeker
   - Titan's Bane
   situational_swaps:
