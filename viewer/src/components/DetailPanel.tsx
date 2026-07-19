@@ -60,6 +60,7 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [editing, setEditing] = useState<MineDraft | "new" | null>(null);
+  const [pendingSelect, setPendingSelect] = useState<string | null>(null);
   const itemsByName = useMemo(() => {
     const m = new Map<string, Item>();
     for (const it of items) m.set(it.name, it);
@@ -67,9 +68,18 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
   }, [items]);
 
   useEffect(() => {
-    setActiveIndex(0);
+    if (pendingSelect) {
+      const i = note?.builds.findIndex(
+        (b) => (b as { name?: string }).name === pendingSelect,
+      );
+      setActiveIndex(i != null && i >= 0 ? i : 0);
+      setPendingSelect(null);
+    } else {
+      setActiveIndex(0);
+    }
     setSelectedTag(null);
     setEditing(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [god, note]);
 
   if (!note || note.builds.length === 0) {
@@ -83,7 +93,8 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
 
   const selectedSwap = swaps?.find((s) => s.vs_tag === selectedTag) ?? null;
   const baseNames = active.slot_order.map(slotItemName);
-  const preview = applySwap(baseNames, selectedSwap?.swap_item ?? null);
+  const flexList = !community ? active.flex_slots : undefined;
+  const preview = applySwap(baseNames, selectedSwap?.swap_item ?? null, flexList);
 
   if (editing) {
     const recStarter = entries
@@ -98,7 +109,7 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
         initial={editing === "new" ? null : editing}
         defaultStarter={recStarter}
         onClose={() => setEditing(null)}
-        onSaved={() => onReload?.()}
+        onSaved={(name) => { if (name) setPendingSelect(name); onReload?.(); }}
       />
     );
   }
@@ -126,7 +137,10 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
             {godData ? `${godData.pantheon} · ${godData.role} · ${godData.damage_type}` : note.mode}
           </div>
         </div>
-        <div className="ml-auto flex overflow-hidden rounded-md border border-line">
+      </div>
+
+      {modes.length > 1 && (
+        <div className="mb-3 flex w-fit overflow-hidden rounded-md border border-line">
           {modes.map((m) => (
             <button
               key={m}
@@ -140,7 +154,7 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
             </button>
           ))}
         </div>
-      </div>
+      )}
 
       <div role="tablist" className="mb-4 flex gap-1">
         {entries.map((entry, i) => (
@@ -216,7 +230,9 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
 
       <div className="flex gap-6">
         <div className="min-w-[220px]">
-          <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">SLOT ORDER</div>
+          <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">
+            {!community && active.source === "suggested" ? "BUILD ORDER" : "SLOT ORDER"}
+          </div>
           <div className="flex flex-col gap-1.5">
             {preview.map((slot, i) => {
               const item = itemsByName.get(slot.name);
@@ -246,6 +262,9 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
                       {slot.name}
                     </span>
                     {slot.status === "added" && <span className="text-[10px] text-muted">swap in</span>}
+                    {flexList?.includes(slot.name) && slot.status === "kept" && (
+                      <span className="text-[10px] text-muted">flex</span>
+                    )}
                     {rates && (
                       <span className="ml-auto font-mono text-xs text-muted">
                         {Math.round(rates.pick_rate * 100)}% / {Math.round(rates.win_rate * 100)}%

@@ -283,6 +283,29 @@ describe("DetailPanel", () => {
     expect(screen.getByText("Gilded Arrow")).toBeInTheDocument();
   });
 
+  it("passes flex_slots so a swap removes the flex slot, not the last", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A", "B", "C"], flex_slots: ["A"],
+        situational_swaps: [{ vs_tag: "heavy_cc", swap: "Cloak — cc", swap_item: "Cloak" }], rationale: "x" },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
+    expect(screen.getByText("A")).toHaveClass("line-through");   // flex slot removed
+    expect(screen.getByText("C")).not.toHaveClass("line-through");
+  });
+
+  it("makes the just-saved mine build selectable by name (buy-order header for suggested)", () => {
+    const withNew: BuildNote = { type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [], rationale: "" } as any,
+      { source: "mine", name: "My New", slot_order: ["Rage"] } as any,
+    ] };
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[withNew]}
+                        mode="Conquest" onModeChange={() => {}} />);
+    expect(screen.getByRole("tab", { name: /My New/i })).toBeInTheDocument();
+    expect(screen.getByText(/BUILD ORDER/i)).toBeInTheDocument();  // suggested tab active
+  });
+
   it("labels suggested tabs by archetype", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "suggested", archetype: "core", slot_order: ["X"], situational_swaps: [], rationale: "" },
