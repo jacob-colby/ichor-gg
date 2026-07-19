@@ -140,3 +140,29 @@ def test_suggested_entries_have_buy_order_flex_and_crit_core():
     for e in entries:
         assert e.get("flex_slots"), f"{e['archetype']} missing flex_slots"
         assert set(e["flex_slots"]) <= set(e["slot_order"])
+
+
+def test_aspect_god_emits_base_and_aspect_sets():
+    from smite import recommend, scoring
+    items = recommend.load_items()
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    tags = scoring.load_tags(recommend.TAGS_PATH)
+    herc = next(g for g in recommend.load_gods() if g["name"] == "Hercules")
+    build = recommend.load_build_note("Hercules")
+    entries = recommend.build_suggested_entries(herc, items, build, weights, tags, "Conquest")
+    base_cores = [e for e in entries if e["archetype"] == "core" and not e.get("aspect")]
+    aspect_cores = [e for e in entries if e["archetype"] == "core" and e.get("aspect")]
+    assert len(base_cores) == 1 and len(aspect_cores) == 1
+    assert aspect_cores[0]["aspect"] == herc["aspects"][0]["name"]
+    assert aspect_cores[0].get("flex_slots") and aspect_cores[0]["slot_order"]
+
+
+def test_non_aspect_god_emits_only_base():
+    from smite import recommend, scoring
+    items = recommend.load_items()
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    tags = scoring.load_tags(recommend.TAGS_PATH)
+    susano = next(g for g in recommend.load_gods() if g["name"] == "Susano")
+    entries = recommend.build_suggested_entries(susano, items, recommend.load_build_note("Susano"),
+                                                weights, tags, "Conquest")
+    assert all(not e.get("aspect") for e in entries)
