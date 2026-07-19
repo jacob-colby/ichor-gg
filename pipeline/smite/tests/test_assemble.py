@@ -108,3 +108,58 @@ def test_situational_swaps_include_swap_item_name():
     assert sustain["swap_item"] == "Antiheal"
     cc = next(r for r in table if r["vs_tag"] == "heavy_cc")
     assert cc["swap_item"] is None
+
+
+def test_assemble_core_require_seeds_minimum_stat_items():
+    from smite.assemble import assemble_core
+    items = {
+        "Crit A": {"name": "Crit A", "stats": {"Critical Chance": "20%"}},
+        "Crit B": {"name": "Crit B", "stats": {"Critical Chance": "20%"}},
+        "Crit C": {"name": "Crit C", "stats": {"Critical Chance": "20%"}},
+        "Pen X": {"name": "Pen X", "stats": {"Penetration": "15"}},
+        "Pen Y": {"name": "Pen Y", "stats": {"Penetration": "15"}},
+        "Pen Z": {"name": "Pen Z", "stats": {"Penetration": "15"}},
+        "Pen W": {"name": "Pen W", "stats": {"Penetration": "15"}},
+    }
+    # Non-crit items score higher, so without `require` the core would be all pen.
+    rows = [{"item": n, "tags": []} for n in
+            ["Pen X", "Pen Y", "Pen Z", "Pen W", "Crit A", "Crit B", "Crit C"]]
+    core = assemble_core(rows, items, n=6, require={"stat": "Critical Chance", "min": 3})
+    crit_in_core = [n for n in core if "Critical Chance" in items[n]["stats"]]
+    assert len(crit_in_core) >= 3
+    assert len(core) == 6
+    assert len(set(core)) == 6  # no dups
+
+
+def test_assemble_core_require_handles_thin_pool():
+    from smite.assemble import assemble_core
+    items = {"Crit A": {"name": "Crit A", "stats": {"Critical Chance": "20%"}},
+             "Pen X": {"name": "Pen X", "stats": {"Penetration": "15"}},
+             "Pen Y": {"name": "Pen Y", "stats": {"Penetration": "15"}}}
+    rows = [{"item": n, "tags": []} for n in ["Pen X", "Pen Y", "Crit A"]]
+    core = assemble_core(rows, items, n=3, require={"stat": "Critical Chance", "min": 3})
+    assert "Crit A" in core and len(core) == 3  # seeds the 1 available, fills rest
+
+
+def test_build_order_sorts_cheap_early_aura_late():
+    from smite.assemble import build_order
+    items = {
+        "Anti": {"name": "Anti", "cost": 2500, "stats": {}},
+        "Aura": {"name": "Aura", "cost": 2500, "stats": {}},
+        "Cheap": {"name": "Cheap", "cost": 1000, "stats": {}},
+    }
+    tags = {"Anti": ["anti-heal"], "Aura": ["aura"], "Cheap": []}
+    weights = {"build_order": {"default_stage": 0, "cost_weight": 0.0004,
+                               "tag_stage": {"anti-heal": -1, "aura": 1}}}
+    order = build_order(["Aura", "Cheap", "Anti"], items, tags, weights)
+    # Anti (stage -1+1.0) < Cheap (0.4) < Aura (1+1.0)
+    assert order == ["Anti", "Cheap", "Aura"]
+
+
+def test_flex_slots_are_lowest_scored_core():
+    from smite.assemble import flex_slots
+    core = ["A", "B", "C", "D", "E", "F"]  # rows are score-desc, so core is too
+    rows = [{"item": n} for n in ["A", "B", "C", "D", "E", "F"]]
+    assert flex_slots(core, rows, count=2) == ["E", "F"]
+    assert set(flex_slots(core, rows, count=2)) <= set(core)
+    assert flex_slots(["A"], [{"item": "A"}], count=2) == ["A"]

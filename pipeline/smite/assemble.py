@@ -14,32 +14,77 @@ def _is_lifesteal(item, tags):
     return "sustain" in (tags or []) or any("Lifesteal" in s for s in stats)
 
 
-def assemble_core(rows, items_by_name, n=6, max_lifesteal=1):
+def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None):
     """Highest-total items filling n slots: at most one boots, at most
     `max_lifesteal` lifesteal/sustain items, no duplicates. rows must be
-    pre-sorted by -total (score_god_items already does)."""
+    pre-sorted by -total (score_god_items already does). When `require`
+    {stat, min} is given, the core is seeded with the top-scored items carrying
+    that stat (up to `min`, honoring the same rules) before filling by score."""
     core, used = [], set()
-    have_boots = False
-    lifesteal_count = 0
+    have_boots = [False]
+    lifesteal_count = [0]
+    _row_tags = {r["item"]: r.get("tags") for r in rows}
+
+    def _try_add(name):
+        if name in used or len(core) >= n:
+            return False
+        item = items_by_name.get(name, {})
+        if _is_boots(item):
+            if have_boots[0]:
+                return False
+            have_boots[0] = True
+        is_ls = _is_lifesteal(item, _row_tags.get(name))
+        if is_ls and lifesteal_count[0] >= max_lifesteal:
+            return False
+        if is_ls:
+            lifesteal_count[0] += 1
+        core.append(name)
+        used.add(name)
+        return True
+
+    if require:
+        stat, need = require.get("stat"), require.get("min", 0)
+        seeded = 0
+        for r in rows:
+            if seeded >= need:
+                break
+            item = items_by_name.get(r["item"], {})
+            if stat in (item.get("stats") or {}) and _try_add(r["item"]):
+                seeded += 1
+
     for r in rows:
         if len(core) >= n:
             break
-        name = r["item"]
-        if name in used:
-            continue
-        item = items_by_name.get(name, {})
-        if _is_boots(item):
-            if have_boots:
-                continue
-            have_boots = True
-        is_ls = _is_lifesteal(item, r.get("tags"))
-        if is_ls and lifesteal_count >= max_lifesteal:
-            continue
-        if is_ls:
-            lifesteal_count += 1
-        core.append(name)
-        used.add(name)
+        _try_add(r["item"])
     return core
+
+
+def build_order(core, items_by_name, tags_map, weights):
+    """Recommended purchase order for a core (heuristic — we have no real
+    build-path data). stage = default + sum(tag_stage for the item's tags) +
+    cost*cost_weight; sorted ascending (ties: cost, then name)."""
+    cfg = (weights or {}).get("build_order") or {}
+    default_stage = cfg.get("default_stage", 0)
+    cost_weight = cfg.get("cost_weight", 0)
+    tag_stage = cfg.get("tag_stage") or {}
+
+    def stage(name):
+        item = items_by_name.get(name, {})
+        tags = tags_map.get(name) or []
+        s = default_stage + sum(tag_stage.get(t, 0) for t in tags)
+        cost = item.get("cost") or 0
+        return (s + cost * cost_weight, cost, name)
+
+    return sorted(core, key=stage)
+
+
+def flex_slots(core, rows, count=2):
+    """The `count` least-essential core items — the lowest-scored ones (rows are
+    score-descending, so the core's score order is its order in `rows`). Returns
+    a subset of `core`."""
+    order = [r["item"] for r in rows if r["item"] in set(core)]
+    n = min(count, len(order))
+    return order[-n:] if n else []
 
 
 # (vs_tag, needed_tag, protection_stat, human label). protection_stat is used
