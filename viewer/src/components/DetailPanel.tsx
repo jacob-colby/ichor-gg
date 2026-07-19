@@ -3,6 +3,7 @@ import type { BuildEntry, BuildNote, God, Item } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
 import { Tooltip } from "./Tooltip";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
+import { getMine } from "../lib/mineStore";
 
 const VS_LABELS: Record<string, string> = {
   heavy_cc: "vs heavy CC",
@@ -53,35 +54,30 @@ function ItemTooltipBody({ item, name }: { item?: Item; name: string }) {
   );
 }
 
-export function DetailPanel({ god, godData, items, builds, mode, onModeChange, starters = [], onReload }: DetailPanelProps) {
+export function DetailPanel({ god, godData, items, builds, mode, onModeChange, starters = [] }: DetailPanelProps) {
   const godNotes = builds.filter((b) => b.god === god);
   const note = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
   const modes = godNotes.map((n) => n.mode);
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [editing, setEditing] = useState<MineDraft | "new" | null>(null);
-  const [pendingSelect, setPendingSelect] = useState<string | null>(null);
   const [aspectOn, setAspectOn] = useState(false);
+  const [mineVersion, setMineVersion] = useState(0);
   const itemsByName = useMemo(() => {
     const m = new Map<string, Item>();
     for (const it of items) m.set(it.name, it);
     return m;
   }, [items]);
+  const mineEntries = useMemo(
+    () => getMine(god, note?.mode ?? mode).map((b) => ({ source: "mine" as const, ...b })),
+    [god, note?.mode, mode, mineVersion],
+  );
 
   useEffect(() => {
-    if (pendingSelect) {
-      const i = note?.builds.findIndex(
-        (b) => (b as { name?: string }).name === pendingSelect,
-      );
-      setActiveIndex(i != null && i >= 0 ? i : 0);
-      setPendingSelect(null);
-    } else {
-      setActiveIndex(0);
-    }
+    setActiveIndex(0);
     setSelectedTag(null);
     setEditing(null);
     setAspectOn(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [god, note]);
 
   if (!note || note.builds.length === 0) {
@@ -90,11 +86,15 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
 
   const aspectMeta = godData?.aspects?.[0];
   const hasAspect = note.builds.some((b) => (b as { aspect?: string }).aspect);
-  const entries = note.builds.filter((b) => {
-    if (b.source !== "suggested") return true;
-    const a = (b as { aspect?: string }).aspect;
-    return aspectOn ? !!a : !a;
-  });
+  const entries = [
+    ...note.builds.filter((b) => {
+      if (b.source === "mine") return false; // mine builds live in localStorage now
+      if (b.source !== "suggested") return true;
+      const a = (b as { aspect?: string }).aspect;
+      return aspectOn ? !!a : !a;
+    }),
+    ...mineEntries,
+  ];
   const toggleAspect = () => {
     const next = !aspectOn;
     const cur = entries[activeIndex] ?? entries[0];
@@ -133,7 +133,17 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
         initial={editing === "new" ? null : editing}
         defaultStarter={recStarter}
         onClose={() => setEditing(null)}
-        onSaved={(name) => { if (name) setPendingSelect(name); onReload?.(); }}
+        onSaved={(name) => {
+          setMineVersion((v) => v + 1);
+          const nonMineCount = note.builds.filter((b) => {
+            if (b.source === "mine") return false;
+            if (b.source !== "suggested") return true;
+            const a = (b as { aspect?: string }).aspect;
+            return aspectOn ? !!a : !a;
+          }).length;
+          const idx = name ? getMine(god, note.mode).findIndex((b) => b.name === name) : -1;
+          setActiveIndex(idx >= 0 ? nonMineCount + idx : 0);
+        }}
       />
     );
   }

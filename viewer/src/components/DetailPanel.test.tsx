@@ -1,7 +1,8 @@
 import React from "react";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { DetailPanel } from "./DetailPanel";
+import { saveMine } from "../lib/mineStore";
 import type { BuildNote } from "../types";
 
 const chironBuild: BuildNote = {
@@ -17,20 +18,14 @@ const chironBuild: BuildNote = {
       slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.49 }],
       source_url: "https://smitebrain.com/gods/chiron/",
     },
-    {
-      source: "mine",
-      slot_order: ["Transcendence", "Devourer's Gauntlet"],
-      situational_swaps: [
-        { vs_tag: "physical_heavy", swap: "Qin's Sais over Deathbringer's crit slot" },
-        { vs_tag: "heavy_cc", swap: "Magi's Cloak" },
-      ],
-      notes: "Default crit path",
-    },
   ],
 };
 
 describe("DetailPanel", () => {
-  it("renders one tab per available source", () => {
+  beforeEach(() => localStorage.clear());
+
+  it("renders one tab per available source (community from note, mine from store)", () => {
+    saveMine("Chiron", "Conquest", { name: "mine", slot_order: ["Transcendence"] });
     render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
     expect(screen.getByRole("tab", { name: /community/i })).toBeInTheDocument();
     expect(screen.getByRole("tab", { name: /mine/i })).toBeInTheDocument();
@@ -48,13 +43,12 @@ describe("DetailPanel", () => {
     expect(screen.queryByText(/situational/i)).not.toBeInTheDocument();
   });
 
-  it("switching to the mine tab shows plain item names with no pick/win badge, plus the swap column", () => {
+  it("switching to a stored mine tab shows plain item names with no pick/win badge", () => {
+    saveMine("Chiron", "Conquest", { name: "mine", slot_order: ["Transcendence", "Devourer's Gauntlet"] });
     render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
     fireEvent.click(screen.getByRole("tab", { name: /mine/i }));
     expect(screen.getByText("Devourer's Gauntlet")).toBeInTheDocument();
     expect(screen.queryByText(/%.*%/)).not.toBeInTheDocument();
-    expect(screen.getByText(/situational/i)).toBeInTheDocument();
-    expect(screen.getByText(/Qin's Sais over Deathbringer's crit slot/)).toBeInTheDocument();
   });
 
   it("shows a fallback message when the god has no build note for this mode yet", () => {
@@ -124,13 +118,9 @@ describe("DetailPanel", () => {
           ],
           source_url: "https://smitebrain.com/gods/chiron/",
         },
-        {
-          source: "mine",
-          slot_order: ["Transcendence", "Deathbringer"],
-          notes: "Default crit path",
-        },
       ],
     };
+    saveMine("Chiron", "Conquest", { name: "mine", slot_order: ["Transcendence", "Deathbringer"] });
 
     const { container } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[build]} mode="Conquest" onModeChange={() => {}} />);
 
@@ -154,10 +144,9 @@ describe("DetailPanel", () => {
     expect(mineImages[1].style.visibility).not.toBe("hidden");
   });
 
-  // Regression coverage for a real bug: Chiron's actual build note has two
-  // "mine" entries, and the "Reload data" button re-fetches index.json,
-  // producing a brand-new object graph for the *same* god. If activeIndex
-  // isn't reset on that change, two silent-bug modes are possible:
+  // Regression coverage for a real bug: the "Reload data" button re-fetches
+  // index.json, producing a brand-new object graph for the *same* god. If
+  // activeIndex isn't reset on that change, two silent-bug modes are possible:
   //   1. entries shrink -> activeIndex points past the end -> no tab shows
   //      aria-selected, but content silently falls back to entries[0].
   //   2. entries reorder (same count) -> activeIndex is still "valid" but
@@ -178,19 +167,9 @@ describe("DetailPanel", () => {
           slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.49 }],
           source_url: "https://smitebrain.com/gods/chiron/",
         },
-        {
-          source: "mine",
-          slot_order: ["Crit Path Item"],
-          situational_swaps: [{ vs_tag: "heavy_cc", swap: "Crit path swap" }],
-          notes: "Crit path",
-        },
-        {
-          source: "mine",
-          slot_order: ["Ability Path Item"],
-          situational_swaps: [{ vs_tag: "heavy_cc", swap: "Ability path swap" }],
-          notes: "Ability path",
-        },
-      ],
+        { source: "suggested", archetype: "crit", slot_order: ["Crit Path Item"], situational_swaps: [], rationale: "crit" },
+        { source: "suggested", archetype: "burst", slot_order: ["Ability Path Item"], situational_swaps: [], rationale: "burst" },
+      ] as any,
     };
   }
 
@@ -295,12 +274,12 @@ describe("DetailPanel", () => {
     expect(screen.getByText("C")).not.toHaveClass("line-through");
   });
 
-  it("makes the just-saved mine build selectable by name (buy-order header for suggested)", () => {
-    const withNew: BuildNote = { type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+  it("shows a stored mine build as a tab (suggested still active by default)", () => {
+    saveMine("Chiron", "Conquest", { name: "My New", slot_order: ["Rage"] });
+    const note: BuildNote = { type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [], rationale: "" } as any,
-      { source: "mine", name: "My New", slot_order: ["Rage"] } as any,
     ] };
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[withNew]}
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[note]}
                         mode="Conquest" onModeChange={() => {}} />);
     expect(screen.getByRole("tab", { name: /My New/i })).toBeInTheDocument();
     expect(screen.getByText(/BUILD ORDER/i)).toBeInTheDocument();  // suggested tab active

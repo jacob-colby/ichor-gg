@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Item } from "../types";
 import { iconSlug } from "../lib/builds";
+import { saveMine, deleteMine } from "../lib/mineStore";
 
 interface StarterPair { base: string; upgrade: string }
 export interface MineDraft { name: string; slot_order: string[]; starter?: StarterPair; notes?: string }
@@ -27,41 +28,28 @@ export function BuildEditor({ god, mode, items, starters, initial, defaultStarte
   const [notes, setNotes] = useState(initial?.notes ?? "");
   const [query, setQuery] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const [busy, setBusy] = useState(false);
 
   const results = query.trim()
     ? items.filter((it) => it.name.toLowerCase().includes(query.toLowerCase()) && !slots.includes(it.name)).slice(0, 8)
     : [];
 
-  const post = async (payload: object, savedName?: string) => {
-    setBusy(true);
-    setError(null);
-    const res = await fetch("/api/build", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then((r) => r.json()).catch((e) => ({ ok: false, error: String(e) }));
-    setBusy(false);
-    if (res.ok) {
-      onSaved(savedName ?? "");
-      onClose();
-    } else {
-      setError(res.error || "Request failed");
-    }
-  };
-
   const save = () => {
     if (!name.trim()) return setError("Name required");
     if (slots.length === 0) return setError("Add at least one item");
-    post({
-      action: "save",
-      god,
-      mode,
+    saveMine(god, mode, {
       name: name.trim(),
       slot_order: slots,
-      starter: starterIdx >= 0 ? starters[starterIdx] : undefined,
-      notes: notes.trim() || undefined,
-    }, name.trim());
+      ...(starterIdx >= 0 ? { starter: starters[starterIdx] } : {}),
+      ...(notes.trim() ? { notes: notes.trim() } : {}),
+    });
+    onSaved(name.trim());
+    onClose();
+  };
+
+  const remove = () => {
+    if (initial) deleteMine(god, mode, initial.name);
+    onSaved("");
+    onClose();
   };
 
   const move = (i: number, d: number) => {
@@ -166,10 +154,10 @@ export function BuildEditor({ god, mode, items, starters, initial, defaultStarte
 
       {error && <div className="mb-2 text-xs text-red-400">{error}</div>}
       <div className="flex gap-2">
-        <button type="button" disabled={busy} onClick={save}
-          className="rounded bg-gold px-3 py-1 text-sm font-medium text-bg0 disabled:opacity-50">Save</button>
+        <button type="button" onClick={save}
+          className="rounded bg-gold px-3 py-1 text-sm font-medium text-bg0">Save</button>
         {initial && (
-          <button type="button" disabled={busy} onClick={() => post({ action: "delete", god, mode, name: initial.name })}
+          <button type="button" onClick={remove}
             className="rounded bg-bg2 px-3 py-1 text-sm text-red-400 hover:bg-line">Delete</button>
         )}
         <button type="button" onClick={onClose} className="rounded bg-bg2 px-3 py-1 text-sm text-muted hover:bg-line">Cancel</button>
