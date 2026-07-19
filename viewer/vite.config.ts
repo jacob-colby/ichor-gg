@@ -54,4 +54,11 @@ function saveBuildApi(): Plugin {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), saveBuildApi()],
+  // The write endpoint rewrites public/index.json + re-copies public/icons on
+  // every save. Left watched, Vite full-reloads the page and drops React state
+  // (the selected god). Ignore public/ — the app refreshes data via its own
+  // fetch in reload(), so it never needs an HMR reload from these files.
+  server: {
+    watch: { ignored: ['**/public/index.json', '**/public/icons/**'] },
+  },
 })
