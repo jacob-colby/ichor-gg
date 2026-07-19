@@ -1,6 +1,6 @@
 # SMITE 2 viewer: manage gods + share-ready (localStorage builds + hosting)
 
-Status: draft — awaiting user approval
+Status: approved, ready for implementation plan
 Date: 2026-07-19
 
 ## Problem
