@@ -17,11 +17,22 @@ describe("BuildEditor", () => {
     fireEvent.change(screen.getByPlaceholderText(/search items/i), { target: { value: "Death" } });
     fireEvent.click(screen.getByText("Deathbringer"));
     fireEvent.click(screen.getByRole("button", { name: /^save$/i }));
-    await waitFor(() => expect(onSaved).toHaveBeenCalled());
+    await waitFor(() => expect(onSaved).toHaveBeenCalledWith("My Build"));
     const body = JSON.parse(fetchMock.mock.calls[0][1].body);
     expect(body).toMatchObject({ action: "save", god: "Chiron", mode: "Conquest",
       name: "My Build", slot_order: ["Deathbringer"] });
     vi.unstubAllGlobals();
+  });
+
+  it("shows an item icon in the search results and chosen slots", () => {
+    const { container } = render(<BuildEditor god="Chiron" mode="Conquest" items={items} starters={[]}
+                        onClose={() => {}} onSaved={() => {}} />);
+    fireEvent.change(screen.getByPlaceholderText(/search items/i), { target: { value: "Death" } });
+    const hasDeathbringerIcon = () =>
+      Array.from(container.querySelectorAll("img")).some((i) => i.getAttribute("src")?.includes("deathbringer"));
+    expect(hasDeathbringerIcon()).toBe(true);            // in results
+    fireEvent.click(screen.getByText("Deathbringer"));
+    expect(hasDeathbringerIcon()).toBe(true);            // still, as a chosen slot
   });
 
   it("blocks saving with no name and surfaces an inline error", () => {

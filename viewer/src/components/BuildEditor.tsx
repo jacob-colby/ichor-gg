@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Item } from "../types";
+import { iconSlug } from "../lib/builds";
 
 interface StarterPair { base: string; upgrade: string }
 export interface MineDraft { name: string; slot_order: string[]; starter?: StarterPair; notes?: string }
@@ -12,7 +13,7 @@ interface BuildEditorProps {
   initial?: MineDraft | null;
   defaultStarter?: StarterPair;
   onClose: () => void;
-  onSaved: () => void;
+  onSaved: (name: string) => void;
 }
 
 export function BuildEditor({ god, mode, items, starters, initial, defaultStarter, onClose, onSaved }: BuildEditorProps) {
@@ -32,7 +33,7 @@ export function BuildEditor({ god, mode, items, starters, initial, defaultStarte
     ? items.filter((it) => it.name.toLowerCase().includes(query.toLowerCase()) && !slots.includes(it.name)).slice(0, 8)
     : [];
 
-  const post = async (payload: object) => {
+  const post = async (payload: object, savedName?: string) => {
     setBusy(true);
     setError(null);
     const res = await fetch("/api/build", {
@@ -42,7 +43,7 @@ export function BuildEditor({ god, mode, items, starters, initial, defaultStarte
     }).then((r) => r.json()).catch((e) => ({ ok: false, error: String(e) }));
     setBusy(false);
     if (res.ok) {
-      onSaved();
+      onSaved(savedName ?? "");
       onClose();
     } else {
       setError(res.error || "Request failed");
@@ -60,7 +61,7 @@ export function BuildEditor({ god, mode, items, starters, initial, defaultStarte
       slot_order: slots,
       starter: starterIdx >= 0 ? starters[starterIdx] : undefined,
       notes: notes.trim() || undefined,
-    });
+    }, name.trim());
   };
 
   const move = (i: number, d: number) => {
@@ -99,8 +100,19 @@ export function BuildEditor({ god, mode, items, starters, initial, defaultStarte
                 if (slots.length < 6) setSlots([...slots, it.name]);
                 setQuery("");
               }}
-              className="block w-full px-2 py-1 text-left text-sm text-ink hover:bg-line"
+              className="flex w-full items-center gap-2 px-2 py-1 text-left text-sm text-ink hover:bg-line"
             >
+              <img
+                src={`/icons/${iconSlug(it.name)}.png`}
+                alt=""
+                className="h-5 w-5 flex-none rounded bg-bg2"
+                onError={(e) => {
+                  const i = e.currentTarget;
+                  if (i.dataset.r) { i.style.visibility = "hidden"; return; }
+                  i.dataset.r = "1";
+                  i.src = `/icons/${iconSlug(it.name)}.png?r=1`;
+                }}
+              />
               {it.name}
             </button>
           ))}
@@ -111,6 +123,17 @@ export function BuildEditor({ god, mode, items, starters, initial, defaultStarte
         {slots.map((n, i) => (
           <div key={`${n}-${i}`} className="flex items-center gap-2 text-sm text-ink">
             <span className="w-4 text-muted">{i + 1}</span>
+            <img
+              src={`/icons/${iconSlug(n)}.png`}
+              alt=""
+              className="h-5 w-5 flex-none rounded bg-bg2"
+              onError={(e) => {
+                const im = e.currentTarget;
+                if (im.dataset.r) { im.style.visibility = "hidden"; return; }
+                im.dataset.r = "1";
+                im.src = `/icons/${iconSlug(n)}.png?r=1`;
+              }}
+            />
             <span className="flex-1">{n}</span>
             <button type="button" onClick={() => move(i, -1)} className="px-1 text-muted hover:text-ink">↑</button>
             <button type="button" onClick={() => move(i, 1)} className="px-1 text-muted hover:text-ink">↓</button>
