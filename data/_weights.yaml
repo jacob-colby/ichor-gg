@@ -23,6 +23,7 @@ flavors:
     match_any: [Carry, Sharpshooter]
     stats: {Critical Chance: 1.5, Attack Speed: 1.2, Strength: 0.8}
     max_lifesteal: 1
+    require: {stat: "Critical Chance", min: 3}
   burst:
     damage_types: null
     match_any: [Nuker, Burst, Slayer, Sniper, Mid]
@@ -51,6 +52,23 @@ modes:
     signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}
     tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2, wave-clear: -0.15, mobility: -0.1}
     label: "Joust — math + mode profile (no meta win/pick data)"
+
+# ── Build order (recommended purchase sequence) ─────────────────────────────
+# Heuristic buy-order for suggested cores (we have no real build-path data).
+# stage = default_stage + sum(tag_stage for the item's effect_tags) +
+# cost * cost_weight. Core is sorted ascending by stage (ties: cost, then name).
+# flex_count = how many lowest-scored core items situational swaps may replace.
+build_order:
+  default_stage: 0
+  cost_weight: 0.0004
+  flex_count: 2
+  tag_stage:
+    anti-heal: -1
+    protection-shred: -1
+    wave-clear: -1
+    sustain: 0
+    aura: 1
+    mobility: 0
 
 # ── Starters ──────────────────────────────────────────────────────────────
 # The recommender stamps one starter per god: the highest-priority entry whose
