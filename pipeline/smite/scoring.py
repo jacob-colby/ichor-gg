@@ -178,20 +178,31 @@ def is_buildable(item):
     return tier is None or tier >= 3
 
 
-def resolve_profile(weights, mode="Conquest", flavor=None):
-    """Compose a mode profile ⊕ flavor into an effective scoring overlay. Mode
-    sets signal-weight overrides + tag bonuses; flavor adds stat weights + tag
-    bonuses (flavor wins on a shared tag) + a lifesteal cap. suppress_underrated
-    is true when the mode zeroes the pick signal (underrated needs pick data)."""
+def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
+    """Compose a mode profile ⊕ aspect ⊕ flavor into an effective scoring overlay.
+    Mode sets signal overrides + tag bonuses; the aspect overlay and flavor each
+    add stat weights + tag bonuses (flavor wins on a shared key) + a lifesteal cap
+    (flavor's explicit cap wins, else the aspect's, else 1). suppress_underrated is
+    true when the mode zeroes the pick signal (underrated needs pick data)."""
     mode_prof = (weights.get("modes") or {}).get(mode.lower(), {}) or {}
     fl = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
+    asp = aspect_overlay or {}
     signals = {**weights["signals"], **(mode_prof.get("signals") or {})}
-    tag_bonus = {**(mode_prof.get("tag_bonus") or {}), **(fl.get("tag_bonus") or {})}
+    tag_bonus = {**(mode_prof.get("tag_bonus") or {}),
+                 **(asp.get("tag_bonus") or {}),
+                 **(fl.get("tag_bonus") or {})}
+    stat_overlay = {**(asp.get("stats") or {}), **(fl.get("stats") or {})}
+    if "max_lifesteal" in fl:
+        max_ls = fl["max_lifesteal"]
+    elif "max_lifesteal" in asp:
+        max_ls = asp["max_lifesteal"]
+    else:
+        max_ls = 1
     return {
         "signals": signals,
-        "stat_overlay": fl.get("stats") or {},
+        "stat_overlay": stat_overlay,
         "tag_bonus": tag_bonus,
-        "max_lifesteal": fl.get("max_lifesteal", 1),
+        "max_lifesteal": max_ls,
         "suppress_underrated": signals.get("pick", 1) == 0,
         "label": mode_prof.get("label"),
         "flavor": flavor,

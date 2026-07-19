@@ -211,3 +211,27 @@ def test_pick_starter_matches_role_and_damage_type():
     assert scoring.pick_starter(mag_carry, weights)["base"] == "Conduit Gem"
     assert scoring.pick_starter(jungler, weights)["base"] == "Bumba's Golden Dagger"
     assert scoring.pick_starter(oddball, weights)["base"] == "Death's Toll"
+
+
+def test_resolve_profile_composes_aspect_overlay():
+    weights = {"signals": {"efficiency": 0.35, "win": 0.30, "pick": 0.15, "fit": 0.20},
+               "flavors": {"crit": {"stats": {"Critical Chance": 1.5}, "tag_bonus": {"x": 0.1}}},
+               "modes": {"conquest": {}}}
+    aspect = {"stats": {"Max Health": 1.0, "Critical Chance": 0.5}, "tag_bonus": {"aura": 0.3}, "max_lifesteal": 2}
+    p = scoring.resolve_profile(weights, "Conquest", "crit", aspect_overlay=aspect)
+    assert p["stat_overlay"]["Critical Chance"] == 1.5  # flavor wins shared key
+    assert p["stat_overlay"]["Max Health"] == 1.0        # aspect contributes
+    assert p["tag_bonus"]["aura"] == 0.3 and p["tag_bonus"]["x"] == 0.1
+    assert p["max_lifesteal"] == 2                        # flavor has none -> aspect's
+
+
+def test_resolve_profile_flavor_max_lifesteal_beats_aspect():
+    weights = {"signals": {"efficiency": 1}, "flavors": {"f": {"max_lifesteal": 1}}, "modes": {"conquest": {}}}
+    p = scoring.resolve_profile(weights, "Conquest", "f", aspect_overlay={"max_lifesteal": 2})
+    assert p["max_lifesteal"] == 1
+
+
+def test_resolve_profile_no_aspect_unchanged():
+    weights = {"signals": {"efficiency": 1}, "flavors": {}, "modes": {"conquest": {}}}
+    p = scoring.resolve_profile(weights, "Conquest", None)
+    assert p["stat_overlay"] == {} and p["max_lifesteal"] == 1
