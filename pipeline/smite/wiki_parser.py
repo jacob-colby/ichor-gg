@@ -148,7 +148,7 @@ def _parse_abilities(soup) -> list:
         prose = _clean(table.get_text(" "))
         for chunk in [ability["slot"], ability["name"], *details]:
             prose = prose.replace(chunk, " ")
-        description = _clean(prose)
+        description = re.sub(r"^[\s\-|•]+", "", _clean(prose))  # drop leading cell-separator junk
         if description:
             ability["description"] = description
 
