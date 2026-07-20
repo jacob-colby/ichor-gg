@@ -116,3 +116,13 @@ def test_build_index_exports_starters(tmp_path, monkeypatch):
     result = build_index.build_index(Path(__file__).resolve().parents[3])
     assert "starters" in result
     assert isinstance(result["starters"], list)
+
+
+def test_build_index_adds_per_item_meta():
+    from smite import build_index
+    from pathlib import Path
+    result = build_index.build_index(Path(__file__).resolve().parents[3])
+    metaed = [i for i in result["items"] if i.get("meta")]
+    assert metaed, "expected some items to carry community meta"
+    m = metaed[0]["meta"]
+    assert 0.0 <= m["win_avg"] <= 1.0 and m["gods"] >= 1

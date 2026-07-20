@@ -184,6 +184,11 @@ def main(argv=None):
                 _stamp_community_starter(BUILDS_ROOT / f"{god['name']}-Conquest.md",
                                          scoring.pick_starter(god, weights))
         print("Wrote per-god scoring reports")
+        from smite import validate
+        per_god, agg = validate.compute(items=items, weights=weights, tags_map=tags_map)
+        validate.write_report(per_god, agg, out_dir / "_validation.md")
+        print(f"Validation: coverage {agg['mean_coverage']:.0%}, "
+              f"win-weighted {agg['mean_win_weighted']:.0%}")
         return 0
 
     if args.efficiency_report:

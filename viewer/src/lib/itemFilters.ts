@@ -42,9 +42,9 @@ export interface EfficiencyMeta {
   cls: string;
 }
 export const EFFICIENCY: EfficiencyMeta[] = [
-  { key: "undervalued", text: "Underrated", cls: "bg-under/20 text-under" },
+  { key: "undervalued", text: "Efficient", cls: "bg-under/20 text-under" },
   { key: "fair", text: "Fair", cls: "bg-line text-muted" },
-  { key: "premium", text: "Overrated", cls: "bg-premium/20 text-premium" },
+  { key: "premium", text: "Premium", cls: "bg-premium/20 text-premium" },
   { key: "untiered", text: "—", cls: "bg-line text-muted" },
 ];
 

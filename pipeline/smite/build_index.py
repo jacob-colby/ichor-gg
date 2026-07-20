@@ -34,8 +34,32 @@ def build_index(vault_root: Path) -> dict:
 
     items = _enrich_items(_all(items_dir), scoring.load_tags(data_root / "_tags.yaml"))
     weights = scoring.load_weights(data_root / "_weights.yaml")
-    return {"gods": _all(gods_dir), "items": items, "builds": _all(builds_dir),
+    builds = _all(builds_dir)
+    _attach_item_meta(items, builds)
+    return {"gods": _all(gods_dir), "items": items, "builds": builds,
             "starters": weights.get("starters", [])}
+
+
+def _attach_item_meta(items, builds):
+    """Per-item community meta: average per-item win rate + how many gods run it,
+    aggregated over Conquest community builds (win rate is per-god, so an average
+    is the honest global signal for the items page)."""
+    from collections import defaultdict
+    wins = defaultdict(list)
+    for note in builds:
+        if note.get("mode") != "Conquest":
+            continue
+        for b in note.get("builds", []):
+            if b.get("source") != "community":
+                continue
+            for slot in b.get("slot_order", []):
+                wr = slot.get("win_rate") if isinstance(slot, dict) else None
+                if wr is not None:
+                    wins[slot["name"]].append(wr)
+    for it in items:
+        vals = wins.get(it["name"])
+        if vals:
+            it["meta"] = {"win_avg": round(sum(vals) / len(vals), 3), "gods": len(vals)}
 
 
 def _copy_icons(vault_root: Path, out_path: Path) -> None:

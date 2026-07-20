@@ -30,9 +30,9 @@ describe("sortItems", () => {
 });
 
 describe("efficiencyLabel", () => {
-  it("maps tiers to friendly labels", () => {
-    expect(efficiencyLabel("undervalued").text).toBe("Underrated");
-    expect(efficiencyLabel("premium").text).toBe("Overrated");
+  it("maps tiers to stat-value labels", () => {
+    expect(efficiencyLabel("undervalued").text).toBe("Efficient");
+    expect(efficiencyLabel("premium").text).toBe("Premium");
     expect(efficiencyLabel("fair").text).toBe("Fair");
     expect(efficiencyLabel(null).text).toBe("—");
     expect(EFFICIENCY.length).toBe(4);

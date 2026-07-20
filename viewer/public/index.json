@@ -1968,7 +1968,11 @@
       "effect_tags": [
         "mobility"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "meta": {
+        "win_avg": 0.62,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -2091,7 +2095,11 @@
       "source_url": "https://wiki.smite2.com/w/Book_of_Thoth",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.5,
+        "gods": 4
+      }
     },
     {
       "type": "smite-item",
@@ -2111,7 +2119,11 @@
       "source_url": "https://wiki.smite2.com/w/Bracer_of_The_Abyss",
       "last_verified": "2026-07-18",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.57,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -2178,7 +2190,11 @@
       "source_url": "https://wiki.smite2.com/w/Breastplate_of_Valor",
       "last_verified": "2026-07-18",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.52,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -2383,7 +2399,11 @@
       "source_url": "https://wiki.smite2.com/w/Dagger_of_Frenzy",
       "last_verified": "2026-07-18",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "meta": {
+        "win_avg": 0.46,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -2544,7 +2564,11 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.48,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -2674,7 +2698,11 @@
       "source_url": "https://wiki.smite2.com/w/Dwarven_Plate",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "meta": {
+        "win_avg": 0.58,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -2712,7 +2740,11 @@
       "source_url": "https://wiki.smite2.com/w/Engraved_Guard",
       "last_verified": "2026-07-18",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "meta": {
+        "win_avg": 0.36,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -2803,7 +2835,11 @@
       "source_url": "https://wiki.smite2.com/w/Evil_Eye",
       "last_verified": "2026-07-18",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "meta": {
+        "win_avg": 0.42,
+        "gods": 4
+      }
     },
     {
       "type": "smite-item",
@@ -2973,7 +3009,11 @@
       "source_url": "https://wiki.smite2.com/w/Genji's_Guard",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "meta": {
+        "win_avg": 0.52,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -3132,7 +3172,11 @@
       "effect_tags": [
         "burst"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "meta": {
+        "win_avg": 0.557,
+        "gods": 3
+      }
     },
     {
       "type": "smite-item",
@@ -3269,7 +3313,11 @@
       "source_url": "https://wiki.smite2.com/w/Hunter's_Bow",
       "last_verified": "2026-07-18",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "meta": {
+        "win_avg": 0.63,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -3335,7 +3383,11 @@
       "effect_tags": [
         "burst"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "meta": {
+        "win_avg": 0.51,
+        "gods": 2
+      }
     },
     {
       "type": "smite-item",
@@ -3379,7 +3431,11 @@
       "source_url": "https://wiki.smite2.com/w/Jotunn's_Revenge",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "meta": {
+        "win_avg": 0.517,
+        "gods": 3
+      }
     },
     {
       "type": "smite-item",
@@ -3662,7 +3718,11 @@
       "source_url": "https://wiki.smite2.com/w/Nimble_Ring",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "meta": {
+        "win_avg": 0.44,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -3703,7 +3763,11 @@
       "source_url": "https://wiki.smite2.com/w/Obsidian_Shard",
       "last_verified": "2026-07-18",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.636,
+        "gods": 5
+      }
     },
     {
       "type": "smite-item",
@@ -4056,7 +4120,11 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "meta": {
+        "win_avg": 0.64,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -4102,7 +4170,11 @@
       "source_url": "https://wiki.smite2.com/w/Rod_of_Tahuti",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "meta": {
+        "win_avg": 0.548,
+        "gods": 5
+      }
     },
     {
       "type": "smite-item",
@@ -4321,7 +4393,11 @@
       "source_url": "https://wiki.smite2.com/w/Shifter's_Shield",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.52,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -4403,7 +4479,11 @@
       "source_url": "https://wiki.smite2.com/w/Skeggox",
       "last_verified": "2026-07-18",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "meta": {
+        "win_avg": 0.6,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -4428,7 +4508,11 @@
         "burst",
         "sustain"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.503,
+        "gods": 4
+      }
     },
     {
       "type": "smite-item",
@@ -4472,7 +4556,11 @@
       "source_url": "https://wiki.smite2.com/w/Spear_of_Desolation",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "meta": {
+        "win_avg": 0.508,
+        "gods": 5
+      }
     },
     {
       "type": "smite-item",
@@ -4561,7 +4649,11 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.56,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -4757,7 +4849,11 @@
       "effect_tags": [
         "burst"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "meta": {
+        "win_avg": 0.68,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -4801,7 +4897,11 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "meta": {
+        "win_avg": 0.56,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -4823,7 +4923,11 @@
       "source_url": "https://wiki.smite2.com/w/The_World_Stone",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.31,
+        "gods": 1
+      }
     },
     {
       "type": "smite-item",
@@ -4843,7 +4947,11 @@
       "source_url": "https://wiki.smite2.com/w/Titan's_Bane",
       "last_verified": "2026-07-18",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.515,
+        "gods": 4
+      }
     },
     {
       "type": "smite-item",
@@ -4864,7 +4972,11 @@
       "source_url": "https://wiki.smite2.com/w/Transcendence",
       "last_verified": "2026-07-17",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "meta": {
+        "win_avg": 0.545,
+        "gods": 2
+      }
     },
     {
       "type": "smite-item",
