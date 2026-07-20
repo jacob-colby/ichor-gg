@@ -33,6 +33,21 @@ python -m smite.build_index        # rewrite viewer/public/index.json
 
 Commit + push → the host redeploys. Friends see the new data on reload.
 
+## Keeping data fresh automatically (optional)
+
+`python -m smite.refresh_and_deploy` (run from the vault, in `tools/`) does the
+whole patch update: re-scrape → recompute → rebuild `index.json` → write the
+validation + tag-audit reports → commit the generated data → push (which
+redeploys the host). Add `--no-push` to stage a commit without pushing.
+
+To run it weekly, add a cron entry **on your canonical git device only** (the one
+that owns vault auto-commits — see Vault Hygiene). Example (Mondays 06:00):
+
+    0 6 * * 1  cd /path/to/obsidian-vault/tools && python -m smite.refresh_and_deploy >> /path/to/refresh.log 2>&1
+
+Scraping needs Python + Playwright working on that device. Not installed by
+default — enable it when you're confident the scrape runs headless there.
+
 ## Notes
 
 - **My builds** are per-browser (localStorage). They aren't synced across devices
