@@ -8,6 +8,8 @@ export interface Ability {
   name: string;
   cooldown?: number[];
   cost?: number[];
+  description?: string;
+  details?: string[];
 }
 
 export interface Aspect {
