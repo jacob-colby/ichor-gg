@@ -129,12 +129,29 @@ def _parse_abilities(soup) -> list:
             continue
         ability = {"slot": _clean(spans[0].get_text()), "name": _clean(spans[1].get_text())}
 
+        details = []
         for li in table.find_all("li"):
             text = _clean(li.get_text())
-            if text.lower().startswith("cooldown:"):
+            if not text:
+                continue
+            details.append(text)
+            low = text.lower()
+            if low.startswith("cooldown:"):
                 ability["cooldown"] = _parse_number_list(text.split(":", 1)[1])
-            elif text.lower().startswith("cost:"):
+            elif low.startswith("cost:"):
                 ability["cost"] = _parse_number_list(text.split(":", 1)[1])
+        if details:
+            ability["details"] = details
+
+        # Description = the table's prose minus the header (slot+name) and the
+        # detail lines. Robust to per-ability layout variation.
+        prose = _clean(table.get_text(" "))
+        for chunk in [ability["slot"], ability["name"], *details]:
+            prose = prose.replace(chunk, " ")
+        description = _clean(prose)
+        if description:
+            ability["description"] = description
+
         abilities.append(ability)
     return abilities
 

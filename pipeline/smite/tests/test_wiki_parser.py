@@ -144,3 +144,26 @@ def test_derive_headshot_url_handles_missing():
     from smite import wiki_parser
     assert wiki_parser.derive_headshot_url(None) is None
     assert wiki_parser.derive_headshot_url("/images/no_match_here.png") is None
+
+
+def test_parse_abilities_captures_description_and_details():
+    from bs4 import BeautifulSoup
+    html = """
+    <h2><span id="Abilities">Abilities</span></h2>
+    <table class="wikitable">
+      <tr><th><span>1st Ability</span> <span>Training Exercise</span></th></tr>
+      <tr><td>Chiron fires a volley that boosts allies and damages enemies.</td></tr>
+      <tr><td><ul>
+        <li>Cooldown: 14/13/12/11/10</li>
+        <li>Cost: 60/65/70/75/80</li>
+        <li>Damage: 90/140/190</li>
+      </ul></td></tr>
+    </table>
+    """
+    abilities = wiki_parser._parse_abilities(BeautifulSoup(html, "html.parser"))
+    a = next(x for x in abilities if x["name"] == "Training Exercise")
+    assert a["cooldown"] == [14, 13, 12, 11, 10]
+    assert a["cost"] == [60, 65, 70, 75, 80]
+    assert "Damage: 90/140/190" in a["details"]
+    assert "volley" in a["description"].lower()
+    assert "Cooldown: 14" not in a["description"]
