@@ -27,3 +27,17 @@ def test_aggregate_summarizes_per_god():
     assert abs(agg["mean_coverage"] - 0.75) < 1e-9
     assert abs(agg["mean_win_weighted"] - 0.75) < 1e-9
     assert agg["pooled_spearman"] is not None
+
+
+def test_tag_audit_flags_mismatches():
+    items = [
+        {"name": "Divine Ruin", "passive": "Reduces enemy Healing by 40%.", "effect_tags": []},
+        {"name": "Mystery", "passive": "Grants Attack Speed.", "effect_tags": ["anti-heal"]},
+        {"name": "Clean", "passive": "Reduces enemy Healing by 40%.", "effect_tags": ["anti-heal"]},
+    ]
+    tags_map = {it["name"]: it["effect_tags"] for it in items}
+    issues = validate.tag_audit(items, tags_map)
+    kinds = {(i["item"], i["kind"], i["tag"]) for i in issues}
+    assert ("Divine Ruin", "possible-missing", "anti-heal") in kinds
+    assert ("Mystery", "tag-without-evidence", "anti-heal") in kinds
+    assert not any(i["item"] == "Clean" for i in issues)

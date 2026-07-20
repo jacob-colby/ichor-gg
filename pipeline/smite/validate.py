@@ -127,13 +127,62 @@ def write_report(per_god, agg, out_path):
     out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+# Precise keywords only (avoid false positives on terse passives).
+TAG_KEYWORDS = {
+    "anti-heal": ["healing reduc", "reduce healing", "reduced healing",
+                  "reduces enemy healing", "anti-heal", "less healing"],
+    "sustain": ["lifesteal", "life steal"],
+    "aura": ["aura", "nearby allies", "allied gods within", "allies within"],
+    "cc-immunity": ["crowd control immun", "cc immun", "unstoppable", "cleanse", "immune to crowd"],
+    "mobility": ["dash", "leap", "teleport", "blink", "charge toward"],
+    "protection-shred": ["reduce protection", "protection reduc", "reduced protections", "protection shred"],
+    "wave-clear": ["wave clear", "wave-clear"],
+    "anti-crit": ["critical strike reduc", "reduce critical", "against critical", "block critical"],
+}
+
+
+def tag_audit(items, tags_map):
+    issues = []
+    for it in items:
+        passive = (it.get("passive") or "").lower()
+        tags = set(tags_map.get(it["name"]) or it.get("effect_tags") or [])
+        for tag, kws in TAG_KEYWORDS.items():
+            has_kw = any(k in passive for k in kws)
+            has_tag = tag in tags
+            if has_tag and not has_kw:
+                issues.append({"item": it["name"], "kind": "tag-without-evidence", "tag": tag})
+            elif has_kw and not has_tag:
+                issues.append({"item": it["name"], "kind": "possible-missing", "tag": tag})
+    return issues
+
+
+def write_tag_audit(items, tags_map, out_path):
+    issues = tag_audit(items, tags_map)
+    missing = sum(1 for i in issues if i["kind"] == "possible-missing")
+    lines = ["# Effect-tag audit (keyword heuristic — review, don't auto-apply)", "",
+             f"{len(issues)} candidate(s), {missing} `possible-missing`. Keyword scan of item "
+             "passives vs `_tags.yaml`.", "",
+             "- **possible-missing** = a keyword is in the passive but the tag isn't set — the "
+             "actionable direction (a likely gap).",
+             "- **tag-without-evidence** = tagged but the (often terse) passive lacks the keyword — "
+             "usually fine, since tags are curated from game knowledge.", "",
+             "| Item | Issue | Tag |", "|---|---|---|"]
+    for i in sorted(issues, key=lambda x: (x["kind"], x["item"])):
+        lines.append(f"| {i['item']} | {i['kind']} | {i['tag']} |")
+    out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return issues
+
+
 def main(argv=None):
     per_god, agg = compute()
-    out = recommend.DATA_ROOT / "Analysis" / "_validation.md"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    write_report(per_god, agg, out)
-    print(f"Wrote {out}  (coverage {agg['mean_coverage']:.0%}, "
-          f"win-weighted {agg['mean_win_weighted']:.0%})")
+    out_dir = recommend.DATA_ROOT / "Analysis"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    write_report(per_god, agg, out_dir / "_validation.md")
+    items = recommend.load_items()
+    tags_map = scoring.load_tags(recommend.TAGS_PATH)
+    n = len(write_tag_audit(items, tags_map, out_dir / "_tag_audit.md"))
+    print(f"Wrote _validation.md (coverage {agg['mean_coverage']:.0%}) "
+          f"and _tag_audit.md ({n} candidates)")
     return 0
 
 
