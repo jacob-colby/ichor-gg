@@ -32,6 +32,11 @@ function EffBadge({ tier }: { tier: string | null | undefined }) {
   return <span className={`rounded px-1.5 py-0.5 text-[10px] ${e.cls}`}>{e.text}</span>;
 }
 
+function MetaBadge({ meta }: { meta?: { win_avg: number; gods: number } }) {
+  if (!meta) return null;
+  return <span className="text-[10px] text-muted">{Math.round(meta.win_avg * 100)}% avg · {meta.gods}</span>;
+}
+
 function ItemDetail({ item, byName }: { item: Item; byName: Map<string, Item> }) {
   const links = (names: string[]) =>
     names.filter((n) => byName.has(n)).map((n) => (
@@ -53,7 +58,7 @@ function ItemDetail({ item, byName }: { item: Item; byName: Map<string, Item> })
           <div className="font-display text-lg font-semibold text-ink">{item.name}</div>
           <div className="font-mono text-xs text-muted">{item.cost}g · T{item.tier}</div>
         </div>
-        <div className="ml-auto"><EffBadge tier={item.efficiency_tier} /></div>
+        <div className="ml-auto flex items-center gap-2"><MetaBadge meta={item.meta} /><EffBadge tier={item.efficiency_tier} /></div>
       </div>
       {Object.entries(item.stats || {}).map(([k, v]) => (
         <div key={k} className="flex justify-between text-sm text-muted">
@@ -94,6 +99,9 @@ export function ItemsShop({ items, openItem }: { items: Item[]; openItem?: strin
   return (
     <div className="p-4">
       {open && <ItemDetail item={open} byName={byName} />}
+      <div className="mb-2 text-[11px] text-muted">
+        Rating = stats-per-gold (not power). <b className="text-ink">Premium</b> items are often worth overpaying for their passive. Avg = community win rate where used.
+      </div>
       <div className="mb-3 flex flex-wrap items-center gap-2">
         <input placeholder="Search items…" value={filter.q ?? ""} onChange={(e) => set({ q: e.target.value })} className={selCls} />
         <select value={filter.tier ?? ""} onChange={(e) => set({ tier: e.target.value ? Number(e.target.value) : undefined })} className={selCls}>
@@ -137,8 +145,8 @@ export function ItemsShop({ items, openItem }: { items: Item[]; openItem?: strin
                 <div className="font-mono text-[10px] text-muted">{it.cost}g · T{it.tier}</div>
               </div>
             </div>
-            <div className="flex items-center justify-between">
-              <EffBadge tier={it.efficiency_tier} />
+            <div className="flex items-center justify-between gap-1">
+              <div className="flex items-center gap-1"><EffBadge tier={it.efficiency_tier} /><MetaBadge meta={it.meta} /></div>
               {(it.effect_tags?.length ?? 0) > 0 && (
                 <span className="truncate text-[10px] text-blue">{it.effect_tags!.join(" · ")}</span>
               )}
