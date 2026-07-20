@@ -49,3 +49,94 @@ def spearman(xs, ys):
         sum((rx[i] - mx) ** 2 for i in range(n)) * sum((ry[i] - my) ** 2 for i in range(n))
     )
     return cov / denom if denom else None
+
+
+def _community_slots(build_note):
+    for b in build_note.get("builds", []):
+        if b.get("source") == "community":
+            return b.get("slot_order", [])
+    return []
+
+
+def god_metrics(god, items, build_note, weights, tags_map, eff_scores, items_by_name):
+    profile = scoring.resolve_profile(weights, "Conquest", None)
+    rows = scoring.score_god_items(god, items, build_note, eff_scores, weights, tags_map, profile)
+    score = {r["item"]: r["total"] for r in rows}
+    core = assemble.assemble_core(rows, items_by_name, n=6, max_lifesteal=profile["max_lifesteal"])
+    community = [c for c in _community_slots(build_note)
+                 if c.get("name") in score and c.get("win_rate") is not None]
+    names = [c["name"] for c in community]
+    return {
+        "coverage": coverage(core, names),
+        "win_weighted": win_weighted_coverage(core, community),
+        "pairs": [(score[c["name"]], c["win_rate"]) for c in community],
+        "n": len(community),
+    }
+
+
+def aggregate(per_god):
+    vals = list(per_god.values())
+    cov = [v["coverage"] for v in vals] or [0.0]
+    www = [v["win_weighted"] for v in vals] or [0.0]
+    pooled = [p for v in vals for p in v["pairs"]]
+    xs = [p[0] for p in pooled]
+    ys = [p[1] for p in pooled]
+    return {
+        "mean_coverage": sum(cov) / len(cov),
+        "mean_win_weighted": sum(www) / len(www),
+        "pooled_spearman": spearman(xs, ys),
+        "pooled_n": len(pooled),
+    }
+
+
+def compute(items=None, weights=None, tags_map=None):
+    items = items if items is not None else recommend.load_items()
+    weights = weights if weights is not None else scoring.load_weights(recommend.WEIGHTS_PATH)
+    tags_map = tags_map if tags_map is not None else scoring.load_tags(recommend.TAGS_PATH)
+    eff_scores, _ = efficiency.efficiency_scores(items)
+    items_by_name = {it["name"]: it for it in items}
+    per_god = {}
+    for god in recommend.load_gods():
+        build = recommend.load_build_note(god["name"])
+        if not _community_slots(build):
+            continue  # no community data (e.g., not yet scraped)
+        per_god[god["name"]] = god_metrics(god, items, build, weights, tags_map, eff_scores, items_by_name)
+    return per_god, aggregate(per_god)
+
+
+def write_report(per_god, agg, out_path):
+    header = (
+        f"**Mean coverage:** {agg['mean_coverage']:.0%}  ·  "
+        f"**Win-weighted coverage:** {agg['mean_win_weighted']:.0%}"
+    )
+    if agg["pooled_spearman"] is not None:
+        header += f"  ·  **Pooled rank corr:** {agg['pooled_spearman']:.2f} (n={agg['pooled_n']})"
+    lines = [
+        "# Recommender validation (vs SmiteBrain community win rates)",
+        "",
+        "Agreement is a proxy — win rate is popularity-biased and Conquest-only.",
+        "",
+        header,
+        "",
+        "| God | Coverage | Win-weighted | Community items |",
+        "|---|---|---|---|",
+    ]
+    for name in sorted(per_god):
+        m = per_god[name]
+        lines.append(f"| {name} | {m['coverage']:.0%} | {m['win_weighted']:.0%} | {m['n']} |")
+    out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def main(argv=None):
+    per_god, agg = compute()
+    out = recommend.DATA_ROOT / "Analysis" / "_validation.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    write_report(per_god, agg, out)
+    print(f"Wrote {out}  (coverage {agg['mean_coverage']:.0%}, "
+          f"win-weighted {agg['mean_win_weighted']:.0%})")
+    return 0
+
+
+if __name__ == "__main__":
+    import sys
+    sys.exit(main())
