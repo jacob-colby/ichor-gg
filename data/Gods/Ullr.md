@@ -31,11 +31,31 @@ base_stats:
 abilities:
 - slot: Basic Attack
   name: Ullr Basic Attack
+  details:
+  - 'Bow: Fire a projectile that deals Physical Damage to the first enemy hit'
+  - 'Bow: Projectile stops on first target hit, and does not pass through walls'
+  - 'Axe: Deal Physical Damage to an enemy in front of you'
+  - 'Axe: If multiple enemies are in the area, the enemy closest to the center of
+    the area will be hit'
+  - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
+  - 'Bow Range: 8.8 meters'
+  - 'Bow Radius: 0.48 meters'
+  - 'Axe Range: 1.92 meters'
+  - 'Axe Cone Angle: 120 degrees'
+  description: 'Ullr Notes: Ullr''s s change depending on his current stance Damage
+    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Bow Range : 8.8
+    meters Bow Radius : 0.48 meters Axe Range : 1.92 meters Axe Cone Angle : 120 degrees
+    Expand Ability Video'
 - slot: Passive
   name: Weapon Master
+  details:
+  - 'Cooldown Reduction: -1 second'
+  description: 'ABILITIES REDUCE OTHER COOLDOWNS When you use an ability in either
+    stance your Cooldowns in the opposite stance are reduced Cooldown Reduction :
+    -1 second Expand Ability Video'
 aspects: []
 source_url: https://wiki.smite2.com/w/Ullr
-last_verified: '2026-07-17'
+last_verified: '2026-07-19'
 ---
 <!-- WIKI:START -->
 - Ullr Basic Attack

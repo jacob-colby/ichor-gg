@@ -29,8 +29,25 @@ base_stats:
 abilities:
 - slot: Basic Attack
   name: Chronos Basic Attack
+  details:
+  - Projectile stops on first target hit, and does not pass through walls
+  - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
+  - 'Range: 8.8 meters'
+  - 'Radius: 0.48 meters'
+  description: 'Chronos Notes: Fire a projectile that deals Magical Damage to the
+    first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
+    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
 - slot: Passive
   name: Time Lord
+  details:
+  - You gain 1 stack every 1.5 minutes
+  - Grants up to 125 Intelligence after 37.5 minutes.
+  - 'Intelligence: 5 Per Stack'
+  - 'Max Stacks: 25'
+  description: 'Timed Intelligence Stacks Notes: You become empowered as time flows
+    around you. Over time you gain stacks that grant Intelligence . Stacks have a
+    maximum and are permanent Intelligence : 5 Per Stack Max Stacks : 25 Expand Ability
+    Video'
 - slot: 1st Ability
   name: Time Rift
   cooldown:
@@ -41,12 +58,54 @@ abilities:
   - 60.0
   - 65.0
   - 70.0
+  details:
+  - Hitting a god permanently increases Time Rift damage by 1
+  - 'Damage: 80 | 125 | 170 | 215 | 260'
+  - 'Damage Scaling: 80% Intelligence'
+  - 'Range: 8.8 meters'
+  - 'Radius: 1.6 meters'
+  - 'Cooldown: 5 seconds'
+  - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
+  description: 'Damage and Stack Notes: Hitting a god permanently increases damage
+    by 1 Create a rift in time that deals Magical Damage to all enemies in the area
+    Damage : 80 | 125 | 170 | 215 | 260 Damage Scaling : 80% Intelligence Range :
+    8.8 meters Radius : 1.6 meters Cooldown : 5 seconds Cost : 50 | 55 | 60 | 65 |
+    70 mana Expand Ability Video'
 - slot: 2nd Ability
   name: Accelerate
   cooldown:
   - 12.0
   cost:
   - 60.0
+  details:
+  - 'Section 1: Heal based on your max Health per second'
+  - 'Section 2: Abilities cost no Mana'
+  - 'Section 3: Increased Intelligence'
+  - 'Section 4: Increased Intelligence contribution to your Attacks'
+  - You gain bonus Movement Speed every 1 second while Accelerate is active
+  - Every 4 uses of Accelerate permanently grants Chronos Intelligence and Attack
+    Speed
+  - 'Initial Movement Speed: 10%'
+  - 'Additional Movement Speed Over Time: 12 | 14 | 16 | 18 | 20%'
+  - 'Attack Speed: 25 | 27.5 | 30 | 32.5 | 35%'
+  - 'Heal: 1% Max Health'
+  - 'Intelligence: 30%'
+  - 'Intelligence Attack Contribution: +35%'
+  - 'Buff Duration: 7 seconds'
+  - 'Permanent Intelligence Per Stack: 2'
+  - 'Permanent Attack Speed Per Stack: 0.5%'
+  - 'Cooldown: 12 seconds'
+  - 'Cost: 60 mana'
+  description: 'Select a Buff Notes: You gain bonus Movement Speed every 1 second
+    while is active Every 4 uses of permanently grants Chronos Intelligence and Attack
+    Speed yourself for a duration. You gain Movement Speed (initial plus increasing
+    over time) and Attack Speed . While is active, the Wheel of Time stops; the quadrant
+    it stopped on determines which bonus you receive Initial Movement Speed : 10%
+    Additional Movement Speed Over Time : 12 | 14 | 16 | 18 | 20% Attack Speed : 25
+    | 27.5 | 30 | 32.5 | 35% Heal : 1% Max Health Intelligence : 30% Intelligence
+    Attack Contribution : +35% Buff Duration : 7 seconds Permanent Intelligence Per
+    Stack : 2 Permanent Attack Speed Per Stack : 0.5% Cooldown : 12 seconds Cost :
+    60 mana Expand Ability Video'
 - slot: 3rd Ability
   name: Stop Time
   cooldown:
@@ -61,6 +120,23 @@ abilities:
   - 75.0
   - 80.0
   - 85.0
+  details:
+  - There is a 1 second delay between the initial hit and being Stunned
+  - This ability passes through and damages all enemies, and passes through walls
+  - 'Damage: 50 | 75 | 100 | 125 | 150'
+  - 'Damage Scaling: 45% Intelligence'
+  - 'Attack Speed Slow: 20%'
+  - 'Stun Duration: 1 second'
+  - 'Range: 11.2 meters'
+  - 'Radius: 1.2 meters'
+  - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
+  - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
+  description: 'Damage and Slow to Stun Notes: Fire spinning gears of time forward.
+    Enemies hit have their Attack Speed reduced , ramping into a Stun . They take
+    Magical Damage on impact and Magical Damage when Stunned Damage : 50 | 75 | 100
+    | 125 | 150 Damage Scaling : 45% Intelligence Attack Speed Slow : 20% Stun Duration
+    : 1 second Range : 11.2 meters Radius : 1.2 meters Cooldown : 16 | 15.5 | 15 |
+    14.5 | 14 seconds Cost : 65 | 70 | 75 | 80 | 85 mana Expand Ability Video'
 - slot: Ultimate
   name: Rewind
   cooldown:
@@ -75,13 +151,23 @@ abilities:
   - 60.0
   - 65.0
   - 70.0
+  details:
+  - You are CC Immune for the duration of this ability
+  - The Heal is not affected by Healing Reduction
+  - 'Time Rewound: 8 seconds'
+  - 'Cooldown: 100 | 95 | 90 | 85 | 80 seconds'
+  - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
+  description: 'Restore Health, Mana, Cooldowns Notes: Teleport through time to a
+    recent position, restoring your Health and Mana to their earlier values. All of
+    your Cooldowns are reset instantly Time Rewound : 8 seconds Cooldown : 100 | 95
+    | 90 | 85 | 80 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
 aspects:
 - name: Aspect of Relativity
   kit_changes: Time Lord no longer grants Intelligence but instead creates a persistent
     Time Field arond you. Allies in your Time Field gain bonuses when you use your
     other abilities.
 source_url: https://wiki.smite2.com/w/Chronos
-last_verified: '2026-07-17'
+last_verified: '2026-07-19'
 ---
 <!-- WIKI:START -->
 - Chronos Basic Attack

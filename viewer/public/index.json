@@ -41,11 +41,25 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Agni Basic Attack"
+          "name": "Agni Basic Attack",
+          "details": [
+            "Projectile stops on first target hit, and does not pass through walls",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 8.8 meters",
+            "Radius: 0.48 meters"
+          ],
+          "description": "Agni Notes: Fire a projectile that deals Magical Damage to the first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Combustion"
+          "name": "Combustion",
+          "details": [
+            "Damage: 5",
+            "Damage Scaling: 6% Intelligence",
+            "Debuff Duration: 3 seconds",
+            "Hot Streak Duration: 10 seconds"
+          ],
+          "description": "ATTACK TO BURN Hitting an enemy with a Basic Attack provides 1 stack of . Hitting an enemy god provides 2. At 4 stacks Agni's next Flame Wave or Rain Fire will ignite all enemies hit, dealing Magical Damage every 0.5 seconds for 3 seconds. When Agni kills an enemy god, he goes on a Hot Streak. When on a Hot Streak, is fully charged and using Flame Wave or Rain Fire does not consume Damage : 5 Damage Scaling : 6% Intelligence Debuff Duration : 3 seconds Hot Streak Duration : 10 seconds Expand Ability Video"
         },
         {
           "slot": "1st Ability",
@@ -59,7 +73,23 @@
             70.0,
             75.0,
             80.0
-          ]
+          ],
+          "details": [
+            "Reduces enemy Healing",
+            "Fumes last for 10 seconds",
+            "Damage: 10 | 20 | 30 | 40 | 50",
+            "Damage Scaling: 5% Intelligence",
+            "Explode Damage: 20 | 40 | 60 | 80 | 100",
+            "Explode Damage Scaling: 20% Intelligence",
+            "Stun Duration: 0.8 seconds",
+            "Healing Reduction: -25%",
+            "Healing Reduction Duration: 5 seconds",
+            "Range: 8.8 meters",
+            "Radius: 3.2 meters",
+            "Cooldown: 13 seconds",
+            "Cost: 60 | 65 | 70 | 75 | 80 mana"
+          ],
+          "description": "IGNITE CLOUD TO STUN Notes: Summon a cloud of noxious fumes which deals Magical Damage every second. Hitting the fumes with any of your other abilities detonates the gas, Stunning and dealing Magical Damage to enemies in the area Damage : 10 | 20 | 30 | 40 | 50 Damage Scaling : 5% Intelligence Explode Damage : 20 | 40 | 60 | 80 | 100 Explode Damage Scaling : 20% Intelligence Stun Duration : 0.8 seconds Healing Reduction : -25% Healing Reduction Duration : 5 seconds Range : 8.8 meters Radius : 3.2 meters Cooldown : 13 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video"
         },
         {
           "slot": "2nd Ability",
@@ -77,7 +107,19 @@
             70.0,
             75.0,
             80.0
-          ]
+          ],
+          "details": [
+            "Ignites Noxious Fumes",
+            "Persists for 1 second after reaching max distance",
+            "This ability passes through and damages all enemies, and passes through walls",
+            "Damage: 100 | 155 | 210 | 265 | 320",
+            "Damage Scaling: 65% Intelligence",
+            "Range: 8 meters",
+            "Radius: 2.59 meters",
+            "Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds",
+            "Cost: 60 | 65 | 70 | 75 | 80 mana"
+          ],
+          "description": "WAVE OF FIRE Notes: Summon a wave of fire, dealing Magical Damage Damage : 100 | 155 | 210 | 265 | 320 Damage Scaling : 65% Intelligence Range : 8 meters Radius : 2.59 meters Cooldown : 15 | 14.5 | 14 | 13.5 | 13 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video"
         },
         {
           "slot": "3rd Ability",
@@ -91,7 +133,20 @@
             80.0,
             85.0,
             90.0
-          ]
+          ],
+          "details": [
+            "Ignites Noxious Fumes",
+            "You are Displacement Immune while Dashing",
+            "Flame trail lasts for 3 seconds",
+            "Enemies that are being damaged and touch the area again have their damage duration refreshed",
+            "Damage 20 | 30 | 40 | 50 | 60",
+            "Damage Scaling: 15% Intelligence",
+            "Range: 9.6 meters",
+            "Radius: 0.8 meters",
+            "Cooldown: 16 seconds",
+            "Cost: 70 | 75 | 80 | 85 | 90 mana"
+          ],
+          "description": "DASH, LEAVING FLAMES Notes: Dash forward and leave a trail of fire behind you. Enemies that enter the area take Magical Damage every 0.5 seconds for 2 seconds Damage Scaling : 15% Intelligence Range : 9.6 meters Radius : 0.8 meters Cooldown : 16 seconds Cost : 70 | 75 | 80 | 85 | 90 mana Expand Ability Video"
         },
         {
           "slot": "Ultimate",
@@ -101,7 +156,19 @@
           ],
           "cost": [
             10.0
-          ]
+          ],
+          "details": [
+            "Ignites Noxious Fumes",
+            "You are Slowed while summoning a meteor",
+            "Damage: 115 | 160 | 205 | 250 | 295",
+            "Damage Scaling: 60% Intelligence",
+            "Self Slow: 50%",
+            "Range: 10.4 meters",
+            "Radius: 3.2 meters",
+            "Cooldown: 18 seconds",
+            "Cost: 10 mana"
+          ],
+          "description": "RAIN DOWN METEORS Notes: Summon a meteor, dealing Magical Damage . You can have up to 3 charges of this ability Damage : 115 | 160 | 205 | 250 | 295 Damage Scaling : 60% Intelligence Self Slow : 50% Range : 10.4 meters Radius : 3.2 meters Cooldown : 18 seconds Cost : 10 mana Expand Ability Video"
         }
       ],
       "aspects": [
@@ -111,7 +178,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Agni",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     },
     {
       "type": "smite-god",
@@ -154,15 +221,48 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Cernunnos Basic Attack"
+          "name": "Cernunnos Basic Attack",
+          "details": [
+            "Projectile stops on first target hit, and does not pass through walls",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 8.8 meters",
+            "Radius: 0.48 meters"
+          ],
+          "description": "Cernunnos Notes: Fire a projectile that deals Physical Damage to the first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Heavy Glaive"
+          "name": "Heavy Glaive",
+          "details": [
+            "Damage Scaling: 30% Strength + 5% Intelligence",
+            "Range: 1.92 meters",
+            "Cone Angle: 120 degrees"
+          ],
+          "description": "MELEE ATTACKS CLEAVE Basic Attacks deal bonus Physical Damage to enemies in melee range Damage Scaling : 30% Strength + 5% Intelligence Range : 1.92 meters Cone Angle : 120 degrees Expand Ability Video"
         },
         {
           "slot": "1st Ability",
-          "name": "Shifter Of Seasons"
+          "name": "Shifter Of Seasons",
+          "details": [
+            "Spring: Self Healing",
+            "Summer: Bonus Damage",
+            "Fall: Protection Reduction",
+            "Winter: Slow",
+            "This effect is always active once ranked",
+            "Summer Season Basic Attacks deal Physical Damage if you have more Strength, or Magical Damage if you have more Intelligence",
+            "Spring Lifesteal: 3 | 3.5 | 4 | 4.5 | 5%",
+            "Spring Heal Scaling: 10% Intelligence",
+            "Summer Damage: 5 | 10 | 15 | 20 | 25",
+            "Summer Damage Scaling: 12 | 15 | 18 | 21 | 24% Strength or Intelligence (whichever is higher)",
+            "Fall Physical Protection Reduced: 5 | 10 | 15 | 20 | 25",
+            "Fall Magical Protection Reduced: 5 | 10 | 15 | 20 | 25",
+            "Debuff Scaling: 5% Intelligence",
+            "Fall Debuff Duration: 10 seconds",
+            "Winter Slow: 10 | 11 | 12 | 13 | 14%",
+            "Winter Slow Scaling: 2.5% Intelligence",
+            "Winter Slow Duration: 2 seconds"
+          ],
+          "description": "TOGGLE SEASONAL EFFECTS Notes: Activate to toggle between Spring, Summer, Fall, or Winter Basic Attack bonus effects Spring Lifesteal : 3 | 3.5 | 4 | 4.5 | 5% Spring Heal Scaling : 10% Intelligence Summer Damage : 5 | 10 | 15 | 20 | 25 Summer Damage Scaling : 12 | 15 | 18 | 21 | 24% Strength or Intelligence (whichever is higher) Fall Physical Protection Reduced : 5 | 10 | 15 | 20 | 25 Fall Magical Protection Reduced : 5 | 10 | 15 | 20 | 25 Debuff Scaling : 5% Intelligence Fall Debuff Duration : 10 seconds Winter Slow : 10 | 11 | 12 | 13 | 14% Winter Slow Scaling : 2.5% Intelligence Winter Slow Duration : 2 seconds Expand Ability Video"
         },
         {
           "slot": "2nd Ability",
@@ -176,7 +276,23 @@
             70.0,
             80.0,
             90.0
-          ]
+          ],
+          "details": [
+            "This Roots and Cripples a directly hit target",
+            "The explosion leaves a bramble area that repeatedly deals Physical Damage",
+            "Bramble area hits 10 times over 5 seconds",
+            "This ability stops and explodes on first enemy hit, on walls, or at max range",
+            "Initial Damage: 65 | 110 | 155 | 200 | 245",
+            "Initial Damage Scaling: 75% Strength + 50% Intelligence",
+            "Damage Per Tick: 8 | 12 | 16 | 20 | 24",
+            "Damage Scaling Per Tick: 6% Strength + 12% Intelligence",
+            "Root Duration: 1 second",
+            "Range: 8.8 meters",
+            "Radius: 3.2 meters",
+            "Cooldown: 15 seconds",
+            "Cost: 50 | 60 | 70 | 80 | 90 mana"
+          ],
+          "description": "AREA DAMAGE + ROOT Notes: Fire a bramble that explodes on hit or upon reaching max range, dealing Physical Damage in an area Initial Damage : 65 | 110 | 155 | 200 | 245 Initial Damage Scaling : 75% Strength + 50% Intelligence Damage Per Tick : 8 | 12 | 16 | 20 | 24 Damage Scaling Per Tick : 6% Strength + 12% Intelligence Root Duration : 1 second Range : 8.8 meters Radius : 3.2 meters Cooldown : 15 seconds Cost : 50 | 60 | 70 | 80 | 90 mana Expand Ability Video"
         },
         {
           "slot": "3rd Ability",
@@ -194,7 +310,19 @@
             80.0,
             85.0,
             90.0
-          ]
+          ],
+          "details": [
+            "Deals Physical Damage to all enemies hit",
+            "Dash passes through all enemies",
+            "You can cancel this ability at any time",
+            "Damage: 90 | 140 | 190 | 240 | 290",
+            "Damage Scaling: 85% Strength",
+            "Range: 8.8 meters",
+            "Radius: 1.6 meters",
+            "Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds",
+            "Cost: 70 | 75 | 80 | 85 | 90 mana"
+          ],
+          "description": "DASH THROUGH ENEMIES Notes: Dash forward, passing through all types of enemies Damage : 90 | 140 | 190 | 240 | 290 Damage Scaling : 85% Strength Range : 8.8 meters Radius : 1.6 meters Cooldown : 15 | 14.5 | 14 | 13.5 | 13 seconds Cost : 70 | 75 | 80 | 85 | 90 mana Expand Ability Video"
         },
         {
           "slot": "Ultimate",
@@ -204,7 +332,22 @@
           ],
           "cost": [
             100.0
-          ]
+          ],
+          "details": [
+            "Deals Physical Damage to all enemies in the area",
+            "Applies Shifter of Season effects",
+            "Polymorphed Enemies are Silenced, Disarmed, Slowed, and transformed to look like harmless animals",
+            "Damage: 240 | 320 | 400 | 480 | 540",
+            "Damage Scaling: 80% Strength + 100% Intelligence",
+            "Polymorph Duration: 1.5 seconds",
+            "Slow: 20%",
+            "Slow Duration: 1.5 seconds",
+            "Range: 8.8 meters",
+            "Radius: 4 meters",
+            "Cooldown: 90 seconds",
+            "Cost: 100 mana"
+          ],
+          "description": "AREA POLYMORPH Notes: Polymorphed Enemies are Silenced , Disarmed , Slowed , and transformed to look like harmless animals Polymorph enemy gods into wild boars and start Damage : 240 | 320 | 400 | 480 | 540 Damage Scaling : 80% Strength + 100% Intelligence Polymorph Duration : 1.5 seconds Slow : 20% Slow Duration : 1.5 seconds Range : 8.8 meters Radius : 4 meters Cooldown : 90 seconds Cost : 100 mana Expand Ability Video"
         }
       ],
       "aspects": [
@@ -214,7 +357,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Cernunnos",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     },
     {
       "type": "smite-god",
@@ -256,11 +399,29 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Chiron Basic Attack"
+          "name": "Chiron Basic Attack",
+          "details": [
+            "Projectile stops on first target hit, and does not pass through walls",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 8.8 meters",
+            "Radius: 0.48 meters"
+          ],
+          "description": "Chiron Notes: Fire a projectile that deals Physical Damage to the first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Herbal Medicine"
+          "name": "Herbal Medicine",
+          "details": [
+            "Healed allies also gain Strength and Intelligence for a duration",
+            "Heal applies 5 times over 5 seconds",
+            "Poultices prioritize the allied god with the lowest Health in range",
+            "If no injured allied gods are nearby, a charge will not be consumed",
+            "Heal: 20 + 4 Per Level",
+            "Strength: 5 + 1 Per Level",
+            "Intelligence: 10 + 1.5 Per Level",
+            "Buff Duration: 5 seconds"
+          ],
+          "description": "Heal and Empower Allies Notes: Gain a charge every 12 seconds. Using an ability consumes a charge to throw a poultice to an injured allied god, applying a Heal over time Heal : 20 + 4 Per Level Strength : 5 + 1 Per Level Intelligence : 10 + 1.5 Per Level Buff Duration : 5 seconds Expand Ability Video"
         },
         {
           "slot": "1st Ability",
@@ -274,7 +435,17 @@
             65.0,
             70.0,
             75.0
-          ]
+          ],
+          "details": [
+            "Damage: 100 | 150 | 200 | 250 | 300",
+            "Damage Scaling: 80% Strength",
+            "CC Immunity Duration: 0.5 seconds",
+            "Range: 8.8 meters",
+            "Radius: 2.8 meters",
+            "Cooldown: 13 seconds",
+            "Cost: 55 | 60 | 65 | 70 | 75 mana"
+          ],
+          "description": "Area Damage and Cleanse Deploy a constellation that grants CC Immunity to allies in the area. After a 1 second delay, it explodes dealing Physical Damage to all enemies in the area Damage : 100 | 150 | 200 | 250 | 300 Damage Scaling : 80% Strength CC Immunity Duration : 0.5 seconds Range : 8.8 meters Radius : 2.8 meters Cooldown : 13 seconds Cost : 55 | 60 | 65 | 70 | 75 mana Expand Ability Video"
         },
         {
           "slot": "2nd Ability",
@@ -284,7 +455,28 @@
           ],
           "cost": [
             65.0
-          ]
+          ],
+          "details": [
+            "If you have at least 250 Strength, after hitting an enemy god with Mastery Shot, you can fire a second larger arrow in a targeted area, dealing Physical Damage, plus bonus damage per god initially hit, up to 4 targets (Note: Despite the tooltip, hitting more than 4 targets continues scaling the damage)",
+            "If you have at least 2.5 Attack Speed, Masterful Shot becomes Masterful Flurry, quickly firing 3 arrows with reduced scaling at each Marked enemy god. Each arrow procs Basic Attack item effects and increases Chiron's Attack Damage",
+            "Both ability modifiers can be active at once",
+            "This ability cannot be activated unless an enemy has a mark",
+            "Damage: 55 | 100 | 145 | 195 | 240",
+            "Damage Scaling: 70% Strength",
+            "Refire Damage: 55 | 100 | 145 | 195 | 240",
+            "Refire Damage Scaling: 70% Strength + 15% Per Masterful Shot Target Hit",
+            "Flurry Damage: 27.5% Strength + 45% Attack Damage",
+            "Physical Protection Reduction: 10%",
+            "Debuff Duration: 3.5 seconds",
+            "Slow: 25 | 27.5 | 30 | 32.5 | 35%",
+            "Slow Duration: 2 seconds",
+            "Attack Damage Buff: 8 | 11 | 14 | 17 | 20",
+            "Max Buff Stacks: 5",
+            "Buff Duration: 5 seconds",
+            "Cooldown: 15 seconds",
+            "Cost: 65 mana"
+          ],
+          "description": "Mark and Fire Arrows Notes: If you have at least 250 Strength, after hitting an enemy god with Mastery Shot, you can fire a second larger arrow in a targeted area, dealing Physical Damage , plus bonus damage per god initially hit, up to 4 targets (Note: Despite the tooltip, hitting more than 4 targets continues scaling the damage) If you have at least 2.5 Attack Speed, becomes Masterful Flurry, quickly firing 3 arrows with reduced scaling at each Marked enemy god. Each arrow procs Basic Attack item effects and increases Chiron's Attack Damage Apply Target Mark when you damage enemies with your Basic Attacks or abilities, reducing their Physical Protections . Activating this ability fires seeking arrows toward all marked targets, dealing Physical Damage and Slowing them Damage : 55 | 100 | 145 | 195 | 240 Damage Scaling : 70% Strength Refire Damage : 55 | 100 | 145 | 195 | 240 Refire Damage Scaling : 70% Strength + 15% Per Target Hit Flurry Damage : 27.5% Strength + 45% Attack Damage Physical Protection Reduction : 10% Debuff Duration : 3.5 seconds Slow : 25 | 27.5 | 30 | 32.5 | 35% Slow Duration : 2 seconds Attack Damage Buff : 8 | 11 | 14 | 17 | 20 Max Buff Stacks : 5 Buff Duration : 5 seconds Cooldown : 15 seconds Cost : 65 mana Expand Ability Video"
         },
         {
           "slot": "3rd Ability",
@@ -294,7 +486,18 @@
           ],
           "cost": [
             70.0
-          ]
+          ],
+          "details": [
+            "You are displacement Immune while Dashing",
+            "You gain Strength for the duration of the Dash",
+            "You can fire Basic Attacks and Masterful Shot while Dashing",
+            "Damage: 75 | 105 | 135 | 165 | 195",
+            "Damage Scaling: 50% Strength",
+            "Strength: 10 | 20 | 30 | 40 | 50",
+            "Cooldown: 16 seconds",
+            "Cost: 70 mana"
+          ],
+          "description": "Charge Forward Knockback Notes: Dash forward, dealing Physical Damage to enemies, Knocking Up non-god enemies, and Knocking Back enemy gods Damage : 75 | 105 | 135 | 165 | 195 Damage Scaling : 50% Strength Strength : 10 | 20 | 30 | 40 | 50 Cooldown : 16 seconds Cost : 70 mana Expand Ability Video"
         },
         {
           "slot": "Ultimate",
@@ -308,7 +511,20 @@
             65.0,
             70.0,
             75.0
-          ]
+          ],
+          "details": [
+            "If you would be killed while channeling this ability, you do not die until you run out of time or shots",
+            "If you would have died but killed an enemy with this ability, you are Healed for health equal to the damage dealt instead",
+            "You can fire Masterful Shot while channeling this ability",
+            "This ability passes through and damages all enemies, and passes through walls",
+            "Damage: 130 | 175 | 220 | 265 | 310",
+            "Damage Scaling: 65% Strength",
+            "Self Slow: 40%",
+            "Range: 19.2 meters",
+            "Cooldown: 90 seconds",
+            "Cost: 55 | 60 | 65 | 70 | 75 mana"
+          ],
+          "description": "Long Range Arrows Notes: Transform into a constellation, reducing Movement Speed , but gaining the ability to fire three long distance arrows, dealing Physical Damage to all enemies hit Damage : 130 | 175 | 220 | 265 | 310 Damage Scaling : 65% Strength Self Slow : 40% Range : 19.2 meters Cooldown : 90 seconds Cost : 55 | 60 | 65 | 70 | 75 mana Expand Ability Video"
         }
       ],
       "aspects": [
@@ -318,7 +534,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Chiron",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     },
     {
       "type": "smite-god",
@@ -359,11 +575,25 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Chronos Basic Attack"
+          "name": "Chronos Basic Attack",
+          "details": [
+            "Projectile stops on first target hit, and does not pass through walls",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 8.8 meters",
+            "Radius: 0.48 meters"
+          ],
+          "description": "Chronos Notes: Fire a projectile that deals Magical Damage to the first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Time Lord"
+          "name": "Time Lord",
+          "details": [
+            "You gain 1 stack every 1.5 minutes",
+            "Grants up to 125 Intelligence after 37.5 minutes.",
+            "Intelligence: 5 Per Stack",
+            "Max Stacks: 25"
+          ],
+          "description": "Timed Intelligence Stacks Notes: You become empowered as time flows around you. Over time you gain stacks that grant Intelligence . Stacks have a maximum and are permanent Intelligence : 5 Per Stack Max Stacks : 25 Expand Ability Video"
         },
         {
           "slot": "1st Ability",
@@ -377,7 +607,17 @@
             60.0,
             65.0,
             70.0
-          ]
+          ],
+          "details": [
+            "Hitting a god permanently increases Time Rift damage by 1",
+            "Damage: 80 | 125 | 170 | 215 | 260",
+            "Damage Scaling: 80% Intelligence",
+            "Range: 8.8 meters",
+            "Radius: 1.6 meters",
+            "Cooldown: 5 seconds",
+            "Cost: 50 | 55 | 60 | 65 | 70 mana"
+          ],
+          "description": "Damage and Stack Notes: Hitting a god permanently increases damage by 1 Create a rift in time that deals Magical Damage to all enemies in the area Damage : 80 | 125 | 170 | 215 | 260 Damage Scaling : 80% Intelligence Range : 8.8 meters Radius : 1.6 meters Cooldown : 5 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video"
         },
         {
           "slot": "2nd Ability",
@@ -387,7 +627,27 @@
           ],
           "cost": [
             60.0
-          ]
+          ],
+          "details": [
+            "Section 1: Heal based on your max Health per second",
+            "Section 2: Abilities cost no Mana",
+            "Section 3: Increased Intelligence",
+            "Section 4: Increased Intelligence contribution to your Attacks",
+            "You gain bonus Movement Speed every 1 second while Accelerate is active",
+            "Every 4 uses of Accelerate permanently grants Chronos Intelligence and Attack Speed",
+            "Initial Movement Speed: 10%",
+            "Additional Movement Speed Over Time: 12 | 14 | 16 | 18 | 20%",
+            "Attack Speed: 25 | 27.5 | 30 | 32.5 | 35%",
+            "Heal: 1% Max Health",
+            "Intelligence: 30%",
+            "Intelligence Attack Contribution: +35%",
+            "Buff Duration: 7 seconds",
+            "Permanent Intelligence Per Stack: 2",
+            "Permanent Attack Speed Per Stack: 0.5%",
+            "Cooldown: 12 seconds",
+            "Cost: 60 mana"
+          ],
+          "description": "Select a Buff Notes: You gain bonus Movement Speed every 1 second while is active Every 4 uses of permanently grants Chronos Intelligence and Attack Speed yourself for a duration. You gain Movement Speed (initial plus increasing over time) and Attack Speed . While is active, the Wheel of Time stops; the quadrant it stopped on determines which bonus you receive Initial Movement Speed : 10% Additional Movement Speed Over Time : 12 | 14 | 16 | 18 | 20% Attack Speed : 25 | 27.5 | 30 | 32.5 | 35% Heal : 1% Max Health Intelligence : 30% Intelligence Attack Contribution : +35% Buff Duration : 7 seconds Permanent Intelligence Per Stack : 2 Permanent Attack Speed Per Stack : 0.5% Cooldown : 12 seconds Cost : 60 mana Expand Ability Video"
         },
         {
           "slot": "3rd Ability",
@@ -405,7 +665,20 @@
             75.0,
             80.0,
             85.0
-          ]
+          ],
+          "details": [
+            "There is a 1 second delay between the initial hit and being Stunned",
+            "This ability passes through and damages all enemies, and passes through walls",
+            "Damage: 50 | 75 | 100 | 125 | 150",
+            "Damage Scaling: 45% Intelligence",
+            "Attack Speed Slow: 20%",
+            "Stun Duration: 1 second",
+            "Range: 11.2 meters",
+            "Radius: 1.2 meters",
+            "Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds",
+            "Cost: 65 | 70 | 75 | 80 | 85 mana"
+          ],
+          "description": "Damage and Slow to Stun Notes: Fire spinning gears of time forward. Enemies hit have their Attack Speed reduced , ramping into a Stun . They take Magical Damage on impact and Magical Damage when Stunned Damage : 50 | 75 | 100 | 125 | 150 Damage Scaling : 45% Intelligence Attack Speed Slow : 20% Stun Duration : 1 second Range : 11.2 meters Radius : 1.2 meters Cooldown : 16 | 15.5 | 15 | 14.5 | 14 seconds Cost : 65 | 70 | 75 | 80 | 85 mana Expand Ability Video"
         },
         {
           "slot": "Ultimate",
@@ -423,7 +696,15 @@
             60.0,
             65.0,
             70.0
-          ]
+          ],
+          "details": [
+            "You are CC Immune for the duration of this ability",
+            "The Heal is not affected by Healing Reduction",
+            "Time Rewound: 8 seconds",
+            "Cooldown: 100 | 95 | 90 | 85 | 80 seconds",
+            "Cost: 50 | 55 | 60 | 65 | 70 mana"
+          ],
+          "description": "Restore Health, Mana, Cooldowns Notes: Teleport through time to a recent position, restoring your Health and Mana to their earlier values. All of your Cooldowns are reset instantly Time Rewound : 8 seconds Cooldown : 100 | 95 | 90 | 85 | 80 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video"
         }
       ],
       "aspects": [
@@ -433,7 +714,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Chronos",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     },
     {
       "type": "smite-god",
@@ -476,11 +757,31 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Hercules Basic Attack"
+          "name": "Hercules Basic Attack",
+          "details": [
+            "If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+            "Has a 3 hit chain. Attacks in order of 1, 1, 1.5x damage and swing time",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 1.92 meters",
+            "Cone Angle: 120 degrees"
+          ],
+          "description": "Hercules Notes: Deal Physical Damage to an enemy in front of you Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters Cone Angle : 120 degrees Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Apotheosis"
+          "name": "Apotheosis",
+          "details": [
+            "At 4 stacks, enter an empowered state that immediately subtracts 2 seconds from active cooldowns and provides an additional Strength, Protections, and Cleaving Attacks buff for the duration",
+            "Each activation of an ability can only grant 1 stack",
+            "Strength from Apotheosis is equal to 1 stack of Strength from taking damage from gods",
+            "Strength: 4 Per Stack",
+            "Strength Scaling: 0.5 Per Level",
+            "Apotheosis Protections: 10",
+            "Apotheosis Protections Scaling: 2 Per Level",
+            "Apotheosis Buff Duration: 10 seconds",
+            "Apotheosis Buff Duration Scaling: 1 second Per Level"
+          ],
+          "description": "HIT ABILITIES, BECOME EMPOWERED Notes: At 4 stacks, enter an empowered state that immediately subtracts 2 seconds from active cooldowns and provides an additional Strength , Protections , and Cleaving Attacks buff for the duration Strength from is equal to 1 stack of Strength from taking damage from gods Hercules gains Strength when enemy gods damage him. This stacks up to 3 times and lasts 5 seconds. Additionally, hit a target with an ability to gain a stack towards achieving , or 2 stacks from his Ultimate Strength : 4 Per Stack Strength Scaling : 0.5 Per Level Protections : 10 Protections Scaling : 2 Per Level Buff Duration : 10 seconds Buff Duration Scaling : 1 second Per Level Expand Ability Video"
         },
         {
           "slot": "1st Ability",
@@ -494,7 +795,17 @@
             60.0,
             65.0,
             70.0
-          ]
+          ],
+          "details": [
+            "Damage: 80 | 150 | 220 | 290 | 360",
+            "Damage Scaling: 85% Strength",
+            "Stun: 0.6 | 0.7 | 0.8 | 0.9 | 1 second",
+            "Range: 5.6 meters",
+            "Radius: 0.8 meters",
+            "Cooldown: 13 seconds",
+            "Cost: 50 | 55 | 60 | 65 | 70 mana"
+          ],
+          "description": "DASH, PUSHING ENEMIES Dash forward, dealing Physical Damage , Stunning , and Pushing enemies hit Damage : 80 | 150 | 220 | 290 | 360 Damage Scaling : 85% Strength Stun : 0.6 | 0.7 | 0.8 | 0.9 | 1 second Range : 5.6 meters Radius : 0.8 meters Cooldown : 13 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video"
         },
         {
           "slot": "2nd Ability",
@@ -508,7 +819,16 @@
             60.0,
             65.0,
             70.0
-          ]
+          ],
+          "details": [
+            "Damage: 75 | 130 | 185 | 240 | 295",
+            "Damage Scaling: 65% Strength",
+            "Range: 7.2 meters",
+            "Radius: 1.12 meters",
+            "Cooldown: 13 seconds",
+            "Cost: 50 | 55 | 60 | 65 | 70 mana"
+          ],
+          "description": "LINE, PULLS ENEMIES AT END Create a rift that deals Physical Damage to enemies in front of you. Enemies hit by the end area are Pulled to you Damage : 75 | 130 | 185 | 240 | 295 Damage Scaling : 65% Strength Range : 7.2 meters Radius : 1.12 meters Cooldown : 13 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video"
         },
         {
           "slot": "3rd Ability",
@@ -518,7 +838,18 @@
           ],
           "cost": [
             50.0
-          ]
+          ],
+          "details": [
+            "Initial Heal: 60 | 75 | 90 | 105 | 120",
+            "Delayed Heal: 25 | 26.25 | 27.5 | 28.75 | 30% of Recent Damage Taken",
+            "Attack Speed: 15 | 17.5 | 20 | 22.5 | 25%",
+            "Protections: 10 | 15 | 20 | 25 | 30",
+            "Protections Scaling: 30% of Protections from Items",
+            "Buff Duration: 4 seconds",
+            "Cooldown: 15 seconds",
+            "Cost: 50 mana"
+          ],
+          "description": "HEAL, PROTECT Immediately Heal yourself and gain Attack Speed and Protections . At the end of the duration Heal yourself again for a percentage of damage taken during the effect Initial Heal : 60 | 75 | 90 | 105 | 120 Delayed Heal : 25 | 26.25 | 27.5 | 28.75 | 30% of Recent Damage Taken Attack Speed : 15 | 17.5 | 20 | 22.5 | 25% Protections : 10 | 15 | 20 | 25 | 30 Protections Scaling : 30% of Protections from Items Buff Duration : 4 seconds Cooldown : 15 seconds Cost : 50 mana Expand Ability Video"
         },
         {
           "slot": "Ultimate",
@@ -532,7 +863,21 @@
           ],
           "cost": [
             100.0
-          ]
+          ],
+          "details": [
+            "This ability can hit multiple times",
+            "Subsequent hits on the same enemy deal 50% less damage",
+            "The boulder lasts for 2.2 seconds after landing",
+            "This ability passes through and damages all enemies, but bounces off walls",
+            "Damage: 320 | 430 | 540 | 650 | 760",
+            "Damage Scaling: 100% Strength",
+            "Throw Range: 7.2 meters",
+            "Roll Range: 7.2 meters",
+            "Radius: 2.4 meters",
+            "Cooldown: 90 | 85 | 80 | 75 | 70 seconds",
+            "Cost: 100 mana"
+          ],
+          "description": "AREA KNOCKUP, ROLLING BOULDER Notes: Hurl a boulder at a location, Knocking Up enemies at the landing spot. The boulder then rolls and bounces off walls, dealing Physical Damage to enemies hit Damage : 320 | 430 | 540 | 650 | 760 Damage Scaling : 100% Strength Throw Range : 7.2 meters Roll Range : 7.2 meters Radius : 2.4 meters Cooldown : 90 | 85 | 80 | 75 | 70 seconds Cost : 100 mana Expand Ability Video"
         }
       ],
       "aspects": [
@@ -542,7 +887,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Hercules",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     },
     {
       "type": "smite-god",
@@ -584,11 +929,27 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Morgan Le Fay Basic Attack"
+          "name": "Morgan Le Fay Basic Attack",
+          "details": [
+            "Projectile stops on first target hit, and does not pass through walls",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 8.8 meters",
+            "Radius: 0.48 meters"
+          ],
+          "description": "Morgan Le Fay Notes: Fire a projectile that deals Magical Damage to the first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Empowered Blade"
+          "name": "Empowered Blade",
+          "details": [
+            "Mana Regen 1",
+            "Cooldown Reduction -2.5 seconds",
+            "Bonus Intelligence 20",
+            "Bonus Mana Regen 5",
+            "Buff Duration 10 seconds",
+            "Permanent Intelligence 2"
+          ],
+          "description": "Mark Enemies with Abilities to Become Stronger Damaging enemy gods with abilities Marks them and activates a shared Symbol on your sword, providing Mana Regen . After gaining all 5 symbols you become empowered temporarily, causing your Cooldowns to be decreased and providing Intelligence and Mana Regen . Additionally you gain 1 stack of permanent Intelligence and bonus healing towards Consuming Power Expand Ability Video"
         },
         {
           "slot": "1st Ability",
@@ -602,7 +963,26 @@
             60.0,
             65.0,
             70.0
-          ]
+          ],
+          "details": [
+            "Mark of Mind: Fear enemy gods away from the center of the sigil",
+            "Mark of Body: Create a Slowing field that persists for 4 seconds",
+            "Mark of Soul: Spawn a clone at the enemy god location",
+            "During the targeting of this ability, you can chose which sigil to imbue",
+            "Clones last 4 seconds, inherit 30% of your Health and 60% of your Basic Attack damage",
+            "Damage: 65 | 95 | 125 | 155 | 185",
+            "Damage Scaling: 55% Intelligence",
+            "Area Damage: 50 | 65 | 80 | 95 | 110",
+            "Area Damage Scaling: 40% Intelligence",
+            "Fear Duration: 0.6 | 0.7 | 0.8 | 0.9 | 1 second",
+            "Slow: 35%",
+            "Range: 8.8 meters",
+            "Radius: 2 meters",
+            "Outer Radius: 3.2 meters",
+            "Cooldown: 11 seconds",
+            "Cost: 50 | 55 | 60 | 65 | 70 mana"
+          ],
+          "description": "Double Area Damage Notes: Summon a crashing sword, imbued by your chosen sigil, dealing Magical Damage before exploding dealing Magical Damage Damage : 65 | 95 | 125 | 155 | 185 Damage Scaling : 55% Intelligence Area Damage : 50 | 65 | 80 | 95 | 110 Area Damage Scaling : 40% Intelligence Fear Duration : 0.6 | 0.7 | 0.8 | 0.9 | 1 second Slow : 35% Range : 8.8 meters Radius : 2 meters Outer Radius : 3.2 meters Cooldown : 11 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video"
         },
         {
           "slot": "2nd Ability",
@@ -620,7 +1000,21 @@
             80.0,
             85.0,
             90.0
-          ]
+          ],
+          "details": [
+            "Applies Mark of Spirit to enemy gods hit",
+            "This ability passes through and damages all enemies, and passes through walls",
+            "Damage: 50 | 70 | 90 | 110 | 130",
+            "Damage Scaling: 35% Intelligence",
+            "Dash Damage: 75 | 100 | 125 | 150 | 175",
+            "Dash Damage Scaling: 50% Intelligence",
+            "Range: 9.6 meters",
+            "Radius: 3.2 meters",
+            "Dash Radius: 1.28 meters",
+            "Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds",
+            "Cost: 70 | 75 | 80 | 85 | 90 mana"
+          ],
+          "description": "Damage, Knockup and Knockback Notes: Summon a dragon that deals Magical Damage and Knocks Up enemies. The dragon then flies forward, dealing Magical Damage and Knocking Back enemies hit Damage : 50 | 70 | 90 | 110 | 130 Damage Scaling : 35% Intelligence Dash Damage : 75 | 100 | 125 | 150 | 175 Dash Damage Scaling : 50% Intelligence Range : 9.6 meters Radius : 3.2 meters Dash Radius : 1.28 meters Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 70 | 75 | 80 | 85 | 90 mana Expand Ability Video"
         },
         {
           "slot": "3rd Ability",
@@ -630,7 +1024,31 @@
           ],
           "cost": [
             60.0
-          ]
+          ],
+          "details": [
+            "Applies Mark of Matter to enemy gods hit",
+            "Using this ability increases your Movement Speed for a short duration",
+            "The Debuff does damage every 1 second for 4 seconds and can be extended by 1 second per Attack, up to an additional 4 seconds",
+            "This ability passes through and damages non-god enemies, but stops on walls and enemy gods",
+            "Damage: 80 | 100 | 120 | 140 | 160",
+            "Damage Scaling: 35% Intelligence",
+            "Damage Per Tick: 5 | 10 | 15 | 20 | 25",
+            "Damage Scaling Per Tick: 5% Intelligence",
+            "Area Damage: 20 | 25 | 30 | 35 | 40",
+            "Area Damage Scaling: 10% Intelligence",
+            "Bonus Damage: 60 | 90 | 120 | 150 | 180",
+            "Bonus Damage Scaling: 20% Intelligence",
+            "Movement Speed: 16 | 18 | 20 | 22 | 24%",
+            "Buff Duration: 4 seconds",
+            "Debuff Duration: 4 seconds",
+            "Range: 9.6 meters",
+            "Radius: 0.64 meters",
+            "Explode Radius: 1.92 meters",
+            "Pulse Radius: 3.2 meters",
+            "Cooldown: 13 seconds",
+            "Cost: 60 mana"
+          ],
+          "description": "Projectile Damage with Debuff Notes: Send out Wildfire that explodes at max range or when it hits an enemy god, dealing Magical Damage in a small area and afflicting enemies with a Debuff. Debuffed enemies take Magical Damage repeatedly. Debuffed enemy gods and Jungle Bosses explode for Magical Damage when hit by your Attacks. If an enemy uses a Movement ability while Debuffed, they take Magical Damage and the Debuff is removed Damage : 80 | 100 | 120 | 140 | 160 Damage Scaling : 35% Intelligence Damage Per Tick : 5 | 10 | 15 | 20 | 25 Damage Scaling Per Tick : 5% Intelligence Area Damage : 20 | 25 | 30 | 35 | 40 Area Damage Scaling : 10% Intelligence Bonus Damage : 60 | 90 | 120 | 150 | 180 Bonus Damage Scaling : 20% Intelligence Movement Speed : 16 | 18 | 20 | 22 | 24% Buff Duration : 4 seconds Debuff Duration : 4 seconds Range : 9.6 meters Radius : 0.64 meters Explode Radius : 1.92 meters Pulse Radius : 3.2 meters Cooldown : 13 seconds Cost : 60 mana Expand Ability Video"
         },
         {
           "slot": "Ultimate",
@@ -644,7 +1062,30 @@
             90.0,
             95.0,
             100.0
-          ]
+          ],
+          "details": [
+            "The center of the final strike deals bonus Magical Damage based on the enemy's Max Health",
+            "You are CC Immune during this ability",
+            "Unique Marks consumed increase the width of the energy projectiles",
+            "Stacks of Empowered Blade provide bonus Healing",
+            "You ignore all movement penalties for the duration",
+            "This ability passes through and damages all enemies, and passes through walls",
+            "Damage: 25 | 40 | 55 | 70 | 85",
+            "Damage Scaling: 10% Intelligence",
+            "Projectile Damage: 90 | 130 | 170 | 210 | 250",
+            "Projectile Damage Scaling: 40% Intelligence",
+            "Damage: 5% of enemy's Max Health",
+            "Heal: 30 | 35 | 40 | 45 | 50 + 4% Missing Health",
+            "Bonus Heal: 4 Per Stack",
+            "Range: 11.2 meters",
+            "Cone Angle: 75 degrees",
+            "Projectile Range: 14.4 meters",
+            "Projectile Radius: 1 meter",
+            "Final Radius: 1.5 meters",
+            "Cooldown: 90 seconds",
+            "Cost: 80 | 85 | 90 | 95 | 100 mana"
+          ],
+          "description": "Draw in Marks and Fire Damaging Projectiles Notes: Consume Marks from enemy gods dealing Magical Damage and empowering you. For a short duration, fire out 3 strikes of dark energy dealing Magical Damage and Healing you Damage : 25 | 40 | 55 | 70 | 85 Damage Scaling : 10% Intelligence Projectile Damage : 90 | 130 | 170 | 210 | 250 Projectile Damage Scaling : 40% Intelligence Damage : 5% of enemy's Max Health Heal : 30 | 35 | 40 | 45 | 50 + 4% Missing Health Bonus Heal : 4 Per Stack Range : 11.2 meters Cone Angle : 75 degrees Projectile Range : 14.4 meters Projectile Radius : 1 meter Final Radius : 1.5 meters Cooldown : 90 seconds Cost : 80 | 85 | 90 | 95 | 100 mana Expand Ability Video"
         }
       ],
       "aspects": [
@@ -654,7 +1095,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Morgan_Le_Fay",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     },
     {
       "type": "smite-god",
@@ -693,25 +1134,70 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Princess Bari Basic Attack"
+          "name": "Princess Bari Basic Attack",
+          "details": [
+            "Mystic Surge: Deals 50% Damage to enemies within 2.4 meters of where the projectile hits",
+            "Projectile stops on first target hit, and does not pass through walls",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 8.8 meters",
+            "Radius: 0.48 meters"
+          ],
+          "description": "Princess Bari Notes: Mystic Surge : Deals 50% Damage to enemies within 2.4 meters of where the projectile hits Fire a projectile that deals Magical Damage to the first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Mystic Surge"
+          "name": "Mystic Surge",
+          "details": [
+            "Gain bonus Strength, Intelligence, and Attack Speed while in your Mystic Surge based on the rank of Spirit's Cadence",
+            "Additionally, Princess Bari's abilities cost no resources to cast",
+            "Strength: 10 | 18 | 26 | 34 | 42 | 60",
+            "Intelligence: 15 | 30 | 45 | 60 | 75 | 105",
+            "Attack Speed: 10 | 14 | 18 | 22 | 26 | 30%",
+            "Minion Hit: 2 Spirit",
+            "God Hit: 5 Spirit"
+          ],
+          "description": "DAMAGE = FREE ABILITIES, BUFF Notes: Gain bonus Strength , Intelligence , and Attack Speed while in your based on the rank of Spirit's Cadence Accumulate Spirit by dealing damage to enemies. Upon reaching 100 Spirit you enter for 5 seconds and can use any of your first 3 abilities with no cooldown. Abilities used this way have a bonus effect Strength : 10 | 18 | 26 | 34 | 42 | 60 Intelligence : 15 | 30 | 45 | 60 | 75 | 105 Attack Speed : 10 | 14 | 18 | 22 | 26 | 30% Minion Hit : 2 Spirit God Hit : 5 Spirit Expand Ability Video"
         },
         {
           "slot": "1st Ability",
           "name": "Sacred Bell",
           "cooldown": [
             13.0
-          ]
+          ],
+          "details": [
+            "Mystic Surge: +20% Lob Damage and now applies a Slow. +20% Rolling Damage and now applies a Stun. The Bell itself is 1.67x the size",
+            "Warding Gusts will pull the Bell towards you if it is within Basic Attack range and has landed before casting Warding Gusts",
+            "You can only have 3 Bells deployed at once",
+            "Pushed Bells pass through and damage all enemies, but bounce off walls",
+            "Lob Damage: 70 | 115 | 160 | 205 | 250",
+            "Lob Damage Scaling: 75% Intelligence + 60% Strength",
+            "Roll Damage: 45 | 75 | 105 | 135 | 165",
+            "Roll Damage Scaling: 75% Intelligence + 60% Strength",
+            "Slow: 20%",
+            "Slow Duration: 1.5 seconds",
+            "Range: 8.8 meters",
+            "Radius: 2.4 meters",
+            "Cooldown: 13 seconds"
+          ],
+          "description": "AREA DAMAGE SLOW, CREATE BELL Notes: Mystic Surge : +20% Lob Damage and now applies a Slow . +20% Rolling Damage and now applies a Stun . The Bell itself is 1.67x the size Lob a Bell, dealing Magical Damage to enemies where it lands. Warding Gusts or Reverent Steps push the Bell, dealing Magical Damage and Slowing enemies hit Lob Damage : 70 | 115 | 160 | 205 | 250 Lob Damage Scaling : 75% Intelligence + 60% Strength Roll Damage : 45 | 75 | 105 | 135 | 165 Roll Damage Scaling : 75% Intelligence + 60% Strength Slow : 20% Slow Duration : 1.5 seconds Range : 8.8 meters Radius : 2.4 meters Cooldown : 13 seconds Expand Ability Video"
         },
         {
           "slot": "2nd Ability",
           "name": "Warding Gust",
           "cooldown": [
             14.0
-          ]
+          ],
+          "details": [
+            "-30% Damage to enemies further away",
+            "Mystic Surge: +20% Damage and stronger Knockback. Bells pushed are treated as Mystic Surge Bells",
+            "Damage: 65 | 110 | 155 | 200 | 245",
+            "Damage Scaling: 80% Intelligence + 50% Strength",
+            "Inner Cone Range: 4.4 meters",
+            "Outer Cone Range: 8.8 meters",
+            "Cone Angle: 70 degrees",
+            "Cooldown: 14 seconds"
+          ],
+          "description": "CONE DAMAGE KNOCKBACK Notes: Mystic Surge : +20% Damage and stronger Knockback . Bells pushed are treated as Mystic Surge Bells Swipe your fan dealing Magical Damage to enemies and Knocking Back enemies who are close Damage : 65 | 110 | 155 | 200 | 245 Damage Scaling : 80% Intelligence + 50% Strength Inner Cone Range : 4.4 meters Outer Cone Range : 8.8 meters Cone Angle : 70 degrees Cooldown : 14 seconds Expand Ability Video"
         },
         {
           "slot": "3rd Ability",
@@ -722,19 +1208,46 @@
             16.0,
             15.5,
             15.0
-          ]
+          ],
+          "details": [
+            "Hitting a God grants 50 Spirit and reduces this ability's Cooldown by 25%",
+            "Mystic Surge: +20% Damage, dealt instantly in a line. Bells pushed are treated as Mystic Surge Bells. Gain an additional 50 Spirit and 10% Attack Speed on god hit.",
+            "You have no strafing or backpedal penalty while firing",
+            "This ability passes through and damages all enemies, and passes through walls",
+            "Damage: 10 | 45 | 80 | 115 | 150",
+            "Damage Scaling: 70% Intelligence + 45% Strength + 100% Attack Damage",
+            "Attack Speed: 15 | 17.5 | 20 | 22.5 | 25%",
+            "Buff Duration: 5 seconds",
+            "Range: 8.8 meters",
+            "Radius: 0.64 meters",
+            "Cooldown: 17 | 16.5 | 16 | 15.5 | 15 seconds"
+          ],
+          "description": "DASH, THEN SHOOT Notes: Mystic Surge : +20% Damage , dealt instantly in a line. Bells pushed are treated as Mystic Surge Bells . Gain an additional 50 Spirit and 10% Attack Speed on god hit. Dance for a short burst of speed in any direction, then fire a projectile dealing Magical Damage when it ends. Hitting a god grants Attack Speed to Bari. Damage : 10 | 45 | 80 | 115 | 150 Damage Scaling : 70% Intelligence + 45% Strength + 100% Attack Damage Attack Speed : 15 | 17.5 | 20 | 22.5 | 25% Buff Duration : 5 seconds Range : 8.8 meters Radius : 0.64 meters Cooldown : 17 | 16.5 | 16 | 15.5 | 15 seconds Expand Ability Video"
         },
         {
           "slot": "Ultimate",
           "name": "Spirit's Cadence",
           "cooldown": [
             110.0
-          ]
+          ],
+          "details": [
+            "You and allies in the area gain Guardian Spirits for 4 seconds. When taking lethal damage become Damage Immune, Silenced, and Disarmed for 1.5 seconds",
+            "Casting this ability immediately places you in Mystic Surge for 7 seconds",
+            "Gods can receive Guardian Spirits only once per Spirit Cadence use",
+            "Pulse Damage: 50 | 70 | 90 | 110 | 130",
+            "Pulse Damage Scaling: 25% Intelligence + 20% Strength",
+            "Final Pulse Damage: 100 | 140 | 180 | 220 | 260",
+            "Final Pulse Damage Scaling: 70% Intelligence + 40% Strength",
+            "Range: 8.8 meters",
+            "Radius: 5.6 meters",
+            "Cooldown: 110 seconds"
+          ],
+          "description": "AREA DAMAGE, DEATH IMMUNITY Notes: You and allies in the area gain Guardian Spirits for 4 seconds. When taking lethal damage become Damage Immune , Silenced , and Disarmed for 1.5 seconds Conjure a spiritual dance that pulses 3 times. The first two pulses deal Magical Damage . The last pulse deals bonus Magical Damage Pulse Damage : 50 | 70 | 90 | 110 | 130 Pulse Damage Scaling : 25% Intelligence + 20% Strength Final Pulse Damage : 100 | 140 | 180 | 220 | 260 Final Pulse Damage Scaling : 70% Intelligence + 40% Strength Range : 8.8 meters Radius : 5.6 meters Cooldown : 110 seconds Expand Ability Video"
         }
       ],
       "aspects": [],
       "source_url": "https://wiki.smite2.com/w/Princess_Bari",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     },
     {
       "type": "smite-god",
@@ -777,11 +1290,24 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Ra Basic Attack"
+          "name": "Ra Basic Attack",
+          "details": [
+            "Projectile stops on first target hit, and does not pass through walls",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 8.8 meters",
+            "Radius: 0.48 meters"
+          ],
+          "description": "Ra Notes: Fire a projectile that deals Magical Damage to the first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Speed of Light"
+          "name": "Speed of Light",
+          "details": [
+            "Movement Speed: 5% Per Stack",
+            "Buff Duration: 15 seconds",
+            "Max Buff Stacks: 3"
+          ],
+          "description": "USE ABILITY, MOVE FASTER After using an ability gain Movement Speed Movement Speed : 5% Per Stack Buff Duration : 15 seconds Max Buff Stacks : 3 Expand Ability Video"
         },
         {
           "slot": "1st Ability",
@@ -795,7 +1321,17 @@
             70.0,
             75.0,
             80.0
-          ]
+          ],
+          "details": [
+            "This ability passes through and damages all enemies, and passes through walls",
+            "Damage: 95 | 155 | 215 | 275 | 335",
+            "Damage Scaling: 105% Intelligence",
+            "Range: 12.8 meters",
+            "Radius: 0.72 meters",
+            "Cooldown: 10 seconds",
+            "Cost: 60 | 65 | 70 | 75 | 80"
+          ],
+          "description": "LINE DAMAGE Notes: Summon a moving beam of intense light, dealing Magical Damage to enemies Damage : 95 | 155 | 215 | 275 | 335 Damage Scaling : 105% Intelligence Range : 12.8 meters Radius : 0.72 meters Cooldown : 10 seconds Cost : 60 | 65 | 70 | 75 | 80 Expand Ability Video"
         },
         {
           "slot": "2nd Ability",
@@ -813,7 +1349,27 @@
             70.0,
             75.0,
             80.0
-          ]
+          ],
+          "details": [
+            "For a period after activation, Basic Attacks fire solar rays, dealing Magical Damage",
+            "The solar rays count as abilities, trigger ability effects at 50% effectiveness, and pierce targets",
+            "Enemies looking at you gain additional Slow stacks and are Blinded by the explosion",
+            "A Slow stack is applied every 0.5 seconds",
+            "The explosion occurs after 2 seconds",
+            "The explosion passes through and damages all enemies, but stops on walls",
+            "The solar rays pass through and damage all enemies, and pass through walls",
+            "Damage: 85 | 135 | 185 | 235 | 285",
+            "Damage Scaling: 70% Intelligence",
+            "Solar Ray Damage: 10 | 20 | 30 | 40 | 50",
+            "Solar Ray Damage Scaling: 85% Intelligence",
+            "Solar Ray Duration: 2 | 2.5 | 3 | 3.5 | 4 seconds",
+            "Slow: 5%",
+            "Slow Duration: 3 seconds",
+            "Radius: 4.8 meters",
+            "Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds",
+            "Cost: 60 | 65 | 70 | 75 | 80 mana"
+          ],
+          "description": "AREA SLOW, CONDITIONAL BLIND Notes: For a period after activation, Basic Attacks fire solar rays , dealing Magical Damage Emanate light in the area around you that repeatedly Slows enemies before exploding dealing Magical Damage Damage : 85 | 135 | 185 | 235 | 285 Damage Scaling : 70% Intelligence Solar Ray Damage : 10 | 20 | 30 | 40 | 50 Solar Ray Damage Scaling : 85% Intelligence Solar Ray Duration : 2 | 2.5 | 3 | 3.5 | 4 seconds Slow : 5% Slow Duration : 3 seconds Radius : 4.8 meters Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video"
         },
         {
           "slot": "3rd Ability",
@@ -831,7 +1387,23 @@
             85.0,
             95.0,
             105.0
-          ]
+          ],
+          "details": [
+            "The light empowers you and allied Gods in the area, granting Strength, Intelligence, Physical Protection, and Magical Protection",
+            "The pillar of light ticks 6 times over 6 seconds",
+            "Damage Per Tick: 20 | 32 | 44 | 56 | 68",
+            "Damage Scaling Per Tick: 35% Intelligence",
+            "Heal Per Tick: 10 | 17 | 24 | 31 | 38",
+            "Strength: 10 | 15 | 20 | 25 | 30",
+            "Intelligence: 20 | 25 | 30 | 35 | 40",
+            "Physical Protection: 15 | 20 | 25 | 30 | 35",
+            "Magical Protection: 15 | 20 | 25 | 30 | 35",
+            "Range: 8.8 meters",
+            "Radius: 3.2 meters",
+            "Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds",
+            "Cost: 65 | 75 | 85 | 95 | 105 mana"
+          ],
+          "description": "AREA HEAL BUFF DAMAGE Notes: The light empowers you and allied Gods in the area, granting Strength , Intelligence , Physical Protection , and Magical Protection Summon a pillar of blessed light repeatedly dealing Magical Damage and Healing allies Damage Per Tick : 20 | 32 | 44 | 56 | 68 Damage Scaling Per Tick : 35% Intelligence Heal Per Tick : 10 | 17 | 24 | 31 | 38 Strength : 10 | 15 | 20 | 25 | 30 Intelligence : 20 | 25 | 30 | 35 | 40 Physical Protection : 15 | 20 | 25 | 30 | 35 Magical Protection : 15 | 20 | 25 | 30 | 35 Range : 8.8 meters Radius : 3.2 meters Cooldown : 15 | 14.5 | 14 | 13.5 | 13 seconds Cost : 65 | 75 | 85 | 95 | 105 mana Expand Ability Video"
         },
         {
           "slot": "Ultimate",
@@ -845,7 +1417,19 @@
           ],
           "cost": [
             90.0
-          ]
+          ],
+          "details": [
+            "Deals bonus damage to Gods based on their Max HP",
+            "This ability passes through and damages all enemies, and passes through walls",
+            "Damage: 375 | 450 | 525 | 600 | 675",
+            "Damage Scaling: 125% Intelligence",
+            "True Damage: 8% Target's Max HP",
+            "Range: 19.2 meters",
+            "Radius: 1.6 meters",
+            "Cooldown: 80 | 75 | 70 | 65 | 60 seconds",
+            "Cost: 90 mana"
+          ],
+          "description": "LONG RANGE DAMAGE BEAM Notes: Blast enemies in front of you with a wave of extreme heat, dealing Magical Damage Damage : 375 | 450 | 525 | 600 | 675 Damage Scaling : 125% Intelligence True Damage : 8% Target's Max HP Range : 19.2 meters Radius : 1.6 meters Cooldown : 80 | 75 | 70 | 65 | 60 seconds Cost : 90 mana Expand Ability Video"
         }
       ],
       "aspects": [
@@ -855,7 +1439,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Ra",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     },
     {
       "type": "smite-god",
@@ -898,11 +1482,30 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Susano Basic Attack"
+          "name": "Susano Basic Attack",
+          "details": [
+            "If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+            "Has a 3 hit chain. Attacks in order of 1x, 1x, 1.25x damage and swing time",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 1.92 meters",
+            "Cone Angle: 120 degrees"
+          ],
+          "description": "Susano Notes: Deal Physical Damage to an enemy in front of you Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters Cone Angle : 120 degrees Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Storm's Edge"
+          "name": "Storm's Edge",
+          "details": [
+            "At 1 stack, enemies have reduced Strength",
+            "At 2 stacks, enemies are also Slowed",
+            "At 3 stacks, enemies also take increased damage",
+            "Strength Reduction: 10%",
+            "Slow: 15%",
+            "Increased Damage Taken: 10%",
+            "Debuff Duration: 5 seconds",
+            "Buff Duration: 5 seconds"
+          ],
+          "description": "ATTACK AFTER ABILITY DEBUFFS Notes: After using an ability, your next Basic Attack will add a debuff stack to an enemy Strength Reduction : 10% Slow : 15% Increased Damage Taken : 10% Debuff Duration : 5 seconds Buff Duration : 5 seconds Expand Ability Video"
         },
         {
           "slot": "1st Ability",
@@ -920,7 +1523,29 @@
             60.0,
             65.0,
             70.0
-          ]
+          ],
+          "details": [
+            "The first attack deals Physical Damage to enemies in front of you",
+            "The second attack spins, dealing Physical Damage to enemies around you",
+            "The third attack Dashes forward dealing Physical Damage",
+            "This ability Cooldown is increased by 1 second for each additional attack used",
+            "Each attack of Storm Kata can trigger ability item effects",
+            "The Dash passes through and damages all enemies",
+            "Strike Damage: 50 | 75 | 100 | 125 | 150",
+            "Strike Damage Scaling: 55% Strength",
+            "Spin Damage: 50 | 75 | 100 | 125 | 150",
+            "Spin Damage Scaling: 55% Strength",
+            "Dash Damage: 20 | 32.5 | 45 | 57.5 | 70",
+            "Dash Damage Scaling: 25% Strength",
+            "Strike Range: 4.8 meters",
+            "Strike Cone Angle: 60 degrees",
+            "Spin Radius: 4.8 meters",
+            "Dash Range: 7 meters",
+            "Dash Radius: 0.5 meters",
+            "Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds",
+            "Cost: 50 | 55 | 60 | 65 | 70 mana"
+          ],
+          "description": "THREE RECAST COMBO Notes: Each attack of can trigger ability item effects Strike 3 times in quick succession Strike Damage : 50 | 75 | 100 | 125 | 150 Strike Damage Scaling : 55% Strength Spin Damage : 50 | 75 | 100 | 125 | 150 Spin Damage Scaling : 55% Strength Dash Damage : 20 | 32.5 | 45 | 57.5 | 70 Dash Damage Scaling : 25% Strength Strike Range : 4.8 meters Strike Cone Angle : 60 degrees Spin Radius : 4.8 meters Dash Range : 7 meters Dash Radius : 0.5 meters Cooldown : 12 | 11.5 | 11 | 10.5 | 10 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video"
         },
         {
           "slot": "2nd Ability",
@@ -934,7 +1559,19 @@
             60.0,
             70.0,
             80.0
-          ]
+          ],
+          "details": [
+            "Enemies in the inner area are also Pulled towards you",
+            "Enemies are Pulled to the location in front of you at the start of the attack",
+            "Damage: 90 | 130 | 170 | 210 | 250",
+            "Damage Scaling: 70% Strength",
+            "Range: 5.6 meters",
+            "Cone Angle: 105 degrees",
+            "Inner Cone Angle: 40 degrees",
+            "Cooldown: 15 seconds",
+            "Cost: 40 | 50 | 60 | 70 | 80 mana"
+          ],
+          "description": "PULL ENEMIES IN Notes: Command the winds to blow, dealing Physical Damage to enemies in front of you Damage : 90 | 130 | 170 | 210 | 250 Damage Scaling : 70% Strength Range : 5.6 meters Cone Angle : 105 degrees Inner Cone Angle : 40 degrees Cooldown : 15 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video"
         },
         {
           "slot": "3rd Ability",
@@ -948,7 +1585,22 @@
             55.0,
             60.0,
             65.0
-          ]
+          ],
+          "details": [
+            "The whirlwind deals Physical Damage repeatedly",
+            "You can reactive this ability to Teleport to the whirlwind",
+            "The whirlwind will travel with the enemy hit",
+            "This ability Cooldown is reduced by 4 seconds when Teleporting to an enemy",
+            "Ability hits 6 times, over 3 seconds",
+            "This ability stops on first target hit, and does not pass through walls",
+            "Damage: 20 | 30 | 40 | 50 | 60",
+            "Damage Scaling: 25% Strength",
+            "Range: 7.2 meters",
+            "Radius: 0.64 meters",
+            "Cooldown: 15 seconds",
+            "Cost: 45 | 50 | 55 | 60 | 65 mana"
+          ],
+          "description": "THROW PROJECTILE, RECAST TO TELEPORT Notes: Throw a gust of wind projectile that stops on walls or the first enemy hit, creating a whirlwind Damage : 20 | 30 | 40 | 50 | 60 Damage Scaling : 25% Strength Range : 7.2 meters Radius : 0.64 meters Cooldown : 15 seconds Cost : 45 | 50 | 55 | 60 | 65 mana Expand Ability Video"
         },
         {
           "slot": "Ultimate",
@@ -962,12 +1614,30 @@
             90.0,
             95.0,
             100.0
-          ]
+          ],
+          "details": [
+            "After reaching full size, the typhoon is launched in the direction you are facing, dealing Physical Damage and Knocking Up enemies",
+            "Reactivate this ability to fire the typhoon at its current size, dealing reduced damage",
+            "This ability automatically refires after 2 seconds",
+            "This ability starts at 50% Size and 80% damage and increases over the duration",
+            "The typhoon will travel in the direction Susano is facing on refire",
+            "This ability passes through and damages all enemies, and passes through walls",
+            "Damage Per Tick: 15 | 20 | 25 | 30 | 35",
+            "Damage Scaling Per Tick: 12% Strength",
+            "Max Damage: 250 | 310 | 370 | 430 | 490",
+            "Damage Scaling: 115% Strength",
+            "Range: 11.2 meters",
+            "Start Radius: 4 meters",
+            "Max Radius: 8 meters",
+            "Cooldown: 90 seconds",
+            "Cost: 80 | 85 | 90 | 95 | 100 mana"
+          ],
+          "description": "CHARGE TORNADO, RECAST TO FIRE Notes: Summon a typhoon which repeatedly deals Physical Damage as it grows in size Damage Per Tick : 15 | 20 | 25 | 30 | 35 Damage Scaling Per Tick : 12% Strength Max Damage : 250 | 310 | 370 | 430 | 490 Damage Scaling : 115% Strength Range : 11.2 meters Start Radius : 4 meters Max Radius : 8 meters Cooldown : 90 seconds Cost : 80 | 85 | 90 | 95 | 100 mana Expand Ability Video"
         }
       ],
       "aspects": [],
       "source_url": "https://wiki.smite2.com/w/Susano",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     },
     {
       "type": "smite-god",
@@ -1010,16 +1680,32 @@
       "abilities": [
         {
           "slot": "Basic Attack",
-          "name": "Ullr Basic Attack"
+          "name": "Ullr Basic Attack",
+          "details": [
+            "Bow: Fire a projectile that deals Physical Damage to the first enemy hit",
+            "Bow: Projectile stops on first target hit, and does not pass through walls",
+            "Axe: Deal Physical Damage to an enemy in front of you",
+            "Axe: If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Bow Range: 8.8 meters",
+            "Bow Radius: 0.48 meters",
+            "Axe Range: 1.92 meters",
+            "Axe Cone Angle: 120 degrees"
+          ],
+          "description": "Ullr Notes: Ullr's s change depending on his current stance Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Bow Range : 8.8 meters Bow Radius : 0.48 meters Axe Range : 1.92 meters Axe Cone Angle : 120 degrees Expand Ability Video"
         },
         {
           "slot": "Passive",
-          "name": "Weapon Master"
+          "name": "Weapon Master",
+          "details": [
+            "Cooldown Reduction: -1 second"
+          ],
+          "description": "ABILITIES REDUCE OTHER COOLDOWNS When you use an ability in either stance your Cooldowns in the opposite stance are reduced Cooldown Reduction : -1 second Expand Ability Video"
         }
       ],
       "aspects": [],
       "source_url": "https://wiki.smite2.com/w/Ullr",
-      "last_verified": "2026-07-17"
+      "last_verified": "2026-07-19"
     }
   ],
   "items": [
