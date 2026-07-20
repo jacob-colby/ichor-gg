@@ -45,6 +45,7 @@ export interface Item {
   last_verified: string;
   effect_tags?: string[];
   efficiency_tier?: string | null;
+  meta?: { win_avg: number; gods: number };
 }
 
 export interface CommunitySlotEntry {
