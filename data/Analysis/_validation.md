@@ -2,7 +2,7 @@
 
 Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 
-**Mean coverage:** 64%  ·  **Win-weighted coverage:** 65%  ·  **Pooled rank corr:** 0.30 (n=50)
+**Mean coverage:** 60%  ·  **Win-weighted coverage:** 62%  ·  **Pooled rank corr:** 0.26 (n=54)
 
 | God | Coverage | Win-weighted | Community items |
 |---|---|---|---|
@@ -16,3 +16,4 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Ra | 100% | 100% | 5 |
 | Susano | 100% | 100% | 5 |
 | Ullr | 50% | 50% | 6 |
+| Ymir | 25% | 25% | 4 |

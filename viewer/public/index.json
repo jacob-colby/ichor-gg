@@ -1706,6 +1706,189 @@
       "aspects": [],
       "source_url": "https://wiki.smite2.com/w/Ullr",
       "last_verified": "2026-07-19"
+    },
+    {
+      "type": "smite-god",
+      "name": "Ymir",
+      "pantheon": "Norse",
+      "role": "Support",
+      "specializations": [
+        "Brawler",
+        "Tank",
+        "Lockdown"
+      ],
+      "damage_type": "magical",
+      "release_date": "May 2, 2024",
+      "base_stats": {
+        "health": {
+          "base": 675.1,
+          "per_level": 108.1
+        },
+        "mana": {
+          "base": 296.0,
+          "per_level": 42.0
+        },
+        "physical_prot": {
+          "base": 20.52,
+          "per_level": 3.24
+        },
+        "magical_prot": {
+          "base": 29.7,
+          "per_level": 1.62
+        },
+        "attack_speed": {
+          "base": 0.98,
+          "per_level": 1.51
+        },
+        "move_speed": {
+          "base": 370.0,
+          "per_level": 0.0
+        }
+      },
+      "abilities": [
+        {
+          "slot": "Basic Attack",
+          "name": "Ymir Basic Attack",
+          "details": [
+            "If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+            "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+            "Range: 1.92 meters",
+            "Cone Angle: 120 degrees"
+          ],
+          "description": "Ymir Notes: Deal Magical Damage to an enemy in front of you Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters Cone Angle : 120 degrees Expand Ability Video"
+        },
+        {
+          "slot": "Passive",
+          "name": "Frostbite",
+          "details": [
+            "Frostbitten enemies take more Attack damage from you, deal less damage to you, and have decreased Attack Speed",
+            "Frostbite's effect stacks with Critical Strikes",
+            "Damage Scaling: 175% Basic Attack Damage",
+            "Reduced Damage Dealt: 15%",
+            "Attack Speed Slow: 10%"
+          ],
+          "description": "ABILITIES WEAKEN ENEMIES Notes: Frostbitten enemies take more Attack damage from you, deal less damage to you , and have decreased Attack Speed 's effect stacks with Critical Strikes Your abilities apply when they damage or CC enemies Damage Scaling : 175% Basic Attack Damage Reduced Damage Dealt : 15% Attack Speed Slow : 10% Expand Ability Video"
+        },
+        {
+          "slot": "1st Ability",
+          "name": "Ice Wall",
+          "cooldown": [
+            15.0,
+            14.5,
+            14.0,
+            13.5,
+            13.0
+          ],
+          "cost": [
+            50.0,
+            55.0,
+            60.0,
+            65.0,
+            70.0
+          ],
+          "details": [
+            "Reactivate to destroy the Wall early",
+            "The Wall impedes all characters",
+            "Create the Wall at your feet to Displace yourself up and forward",
+            "Displaces enemies up and away from the Wall",
+            "Wall Duration: 2.5 | 3 | 3.5 | 4 | 4.5 seconds",
+            "Range: 11.2 meters",
+            "Radius: 3.25 meters",
+            "Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds",
+            "Cost: 50 | 55 | 60 | 65 | 70 mana"
+          ],
+          "description": "WALL; KNOCKBACK ON DEPLOY Notes: Create a Wall that Knocks Back enemies on creation Wall Duration : 2.5 | 3 | 3.5 | 4 | 4.5 seconds Range : 11.2 meters Radius : 3.25 meters Cooldown : 15 | 14.5 | 14 | 13.5 | 13 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video"
+        },
+        {
+          "slot": "2nd Ability",
+          "name": "Glacial Strike",
+          "cooldown": [
+            8.0,
+            7.5,
+            7.0,
+            6.5,
+            6.0
+          ],
+          "cost": [
+            45.0,
+            50.0,
+            55.0,
+            60.0,
+            65.0
+          ],
+          "details": [
+            "Damaging area starts at Ymir and moves away over time",
+            "You are Slowed during activation",
+            "Damage: 90 | 150 | 210 | 270 | 330",
+            "Damage Scaling: 70% Intelligence + 45% Strength",
+            "Slow: 25%",
+            "Slow Duration: 2 seconds",
+            "Self Slow: 42.5%",
+            "Range: 6 meters",
+            "Radius: 3.6 meters",
+            "Cooldown: 8 | 7.5 | 7 | 6.5 | 6 seconds",
+            "Cost: 45 | 50 | 55 | 60 | 65 mana"
+          ],
+          "description": "AREA DAMAGE SLOW Notes: Smash your club into the ground, creating a field of ice that deals Magical Damage and Slows Damage : 90 | 150 | 210 | 270 | 330 Damage Scaling : 70% Intelligence + 45% Strength Slow : 25% Slow Duration : 2 seconds Self Slow : 42.5% Range : 6 meters Radius : 3.6 meters Cooldown : 8 | 7.5 | 7 | 6.5 | 6 seconds Cost : 45 | 50 | 55 | 60 | 65 mana Expand Ability Video"
+        },
+        {
+          "slot": "3rd Ability",
+          "name": "Frost Breath",
+          "cooldown": [
+            14.0
+          ],
+          "cost": [
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0
+          ],
+          "details": [
+            "You are Rooted during activation",
+            "Damage: 65 | 100 | 135 | 170 | 205",
+            "Damage Scaling: 55% Intelligence",
+            "Stun Duration: 1 | 1.1 | 1.2 | 1.3 | 1.4 seconds",
+            "Stun Duration Scaling: 0.2 seconds per 100 Item Protections, stacking up to 2 times",
+            "Range: 5.6 meters",
+            "Cone Angle: 90 degrees",
+            "Cooldown: 14 seconds",
+            "Cost: 40 | 50 | 60 | 70 | 80 mana"
+          ],
+          "description": "CONE STUN Notes: Unleash your freezing breath, Stunning enemies in front of you and dealing Magical Damage Damage : 65 | 100 | 135 | 170 | 205 Damage Scaling : 55% Intelligence Stun Duration : 1 | 1.1 | 1.2 | 1.3 | 1.4 seconds Stun Duration Scaling : 0.2 seconds per 100 Item Protections, stacking up to 2 times Range : 5.6 meters Cone Angle : 90 degrees Cooldown : 14 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video"
+        },
+        {
+          "slot": "Ultimate",
+          "name": "Shards of Ice",
+          "cooldown": [
+            70.0
+          ],
+          "cost": [
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0
+          ],
+          "details": [
+            "You may cancel this ability early, dealing less damage",
+            "You are CC Immune while using this ability",
+            "Damage scales linearly from 50% to 100% based on Channel time",
+            "Max Channel time of 3 seconds",
+            "You are Rooted while Channeling",
+            "Damage: 550 | 750 | 950 | 1,150 | 1,350",
+            "Damage Scaling: 160% Intelligence + 45% Protections",
+            "Slow: 40%",
+            "Radius: 5.6 meters",
+            "Cooldown: 70 seconds",
+            "Cost: 80 | 90 | 100 | 110 | 120 mana"
+          ],
+          "description": "CHANNEL SLOW, EXPLODE DAMAGE Notes: Freeze the air around you, Slowing enemies as you Channel. After 3 seconds, erupt with a burst of Magical Damage to all enemies in range Damage : 550 | 750 | 950 | 1,150 | 1,350 Damage Scaling : 160% Intelligence + 45% Protections Slow : 40% Radius : 5.6 meters Cooldown : 70 seconds Cost : 80 | 90 | 100 | 110 | 120 mana Expand Ability Video"
+        }
+      ],
+      "aspects": [],
+      "source_url": "https://wiki.smite2.com/w/Ymir",
+      "last_verified": "2026-07-21"
     }
   ],
   "items": [
@@ -2700,8 +2883,8 @@
       "effect_tags": [],
       "efficiency_tier": "premium",
       "meta": {
-        "win_avg": 0.58,
-        "gods": 1
+        "win_avg": 0.605,
+        "gods": 2
       }
     },
     {
@@ -2742,8 +2925,8 @@
       "effect_tags": [],
       "efficiency_tier": "undervalued",
       "meta": {
-        "win_avg": 0.36,
-        "gods": 1
+        "win_avg": 0.445,
+        "gods": 2
       }
     },
     {
@@ -3011,8 +3194,8 @@
       "effect_tags": [],
       "efficiency_tier": "undervalued",
       "meta": {
-        "win_avg": 0.52,
-        "gods": 1
+        "win_avg": 0.53,
+        "gods": 2
       }
     },
     {
@@ -4395,8 +4578,8 @@
       "effect_tags": [],
       "efficiency_tier": "fair",
       "meta": {
-        "win_avg": 0.52,
-        "gods": 1
+        "win_avg": 0.525,
+        "gods": 2
       }
     },
     {
@@ -4651,8 +4834,8 @@
       ],
       "efficiency_tier": "fair",
       "meta": {
-        "win_avg": 0.56,
-        "gods": 1
+        "win_avg": 0.51,
+        "gods": 2
       }
     },
     {
@@ -12041,6 +12224,322 @@
           "starter": {
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
+          }
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Ymir",
+      "mode": "Conquest",
+      "builds": [
+        {
+          "source": "community",
+          "aspect": null,
+          "aspect_pick_rate": null,
+          "aspect_win_rate": null,
+          "slot_order": [
+            {
+              "name": "Shifter's Shield",
+              "pick_rate": 0.23,
+              "win_rate": 0.53
+            },
+            {
+              "name": "Genji's Guard",
+              "pick_rate": 0.15,
+              "win_rate": 0.54
+            },
+            {
+              "name": "Spirit Robe",
+              "pick_rate": 0.09,
+              "win_rate": 0.46
+            },
+            {
+              "name": "Shell of Rebuke",
+              "pick_rate": 0.07,
+              "win_rate": 0.44
+            },
+            {
+              "name": "Dwarven Plate",
+              "pick_rate": 0.1,
+              "win_rate": 0.63
+            },
+            {
+              "name": "Engraved Guard",
+              "pick_rate": 0.09,
+              "win_rate": 0.53
+            }
+          ],
+          "source_url": "https://smitebrain.com/gods/ymir/",
+          "last_verified": "2026-07-21",
+          "starter": {
+            "base": "Warrior's Axe",
+            "upgrade": "Sundering Axe"
+          }
+        },
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Genji's Guard",
+            "Kinetic Cuirass",
+            "Ethereal Staff",
+            "Ancient Signet",
+            "Gluttonous Grimoire",
+            "Spectral Armor"
+          ],
+          "flex_slots": [
+            "Ancient Signet",
+            "Ethereal Staff"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Mantle Of Discord \u2014 CC-immunity / cleanse",
+              "swap_item": "Mantle Of Discord"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Eye of Providence \u2014 magical protection",
+              "swap_item": "Eye of Providence"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Amanita Charm \u2014 physical protection",
+              "swap_item": "Amanita Charm"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "Divine Ruin \u2014 anti-heal",
+              "swap_item": "Divine Ruin"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Genji's Guard, Kinetic Cuirass, Gluttonous Grimoire, Spectral Armor, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Eye of Providence, The Cosmic Horror, Soul Gem, Divine Ruin, Death Metal, Amanita Charm, Bancroft's Talon, Spear of the Magus, Polynomicon, Spear of Desolation, Yogi's Necklace, Chandra's Grace, Bragi's Harp, Helm of Radiance, Doom Orb, Chronos' Pendant, Breastplate of Valor, Lifebinder, Screeching Gargoyle.",
+          "starter": {
+            "base": "Warrior's Axe",
+            "upgrade": "Sundering Axe"
+          }
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Eye of Providence",
+            "Kinetic Cuirass",
+            "Spirit Robe",
+            "Shifter's Shield",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
+            "Shifter's Shield",
+            "Erosion"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Mantle Of Discord \u2014 CC-immunity / cleanse",
+              "swap_item": "Mantle Of Discord"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shield of the Phoenix \u2014 physical protection",
+              "swap_item": "Shield of the Phoenix"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "Stygian Anchor \u2014 anti-heal",
+              "swap_item": "Stygian Anchor"
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for this god: Amanita Charm, Spirit Robe, Kinetic Cuirass, Eye of Providence, Glorious Pridwen, Shield of the Phoenix, Erosion, Shroud of Vengeance, Phoenix Feather, Genji's Guard, Mantle Of Discord, Magi's Cloak, Stone of Binding, Prophetic Cloak, Spectral Armor, Freya's Tears, Rod of Asclepius, Blood-Bound Book, Draconic Scale, Soul Gem, Stygian Anchor, Helm of Darkness, Bancroft's Talon, Sphere of Negation, Umbral Link, Helm of Radiance.",
+          "starter": {
+            "base": "Warrior's Axe",
+            "upgrade": "Sundering Axe"
+          }
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Gluttonous Grimoire",
+            "Spear of Desolation",
+            "The Cosmic Horror",
+            "Doom Orb",
+            "Spear of the Magus",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
+            "Doom Orb",
+            "Obsidian Shard"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Screeching Gargoyle \u2014 magical protection",
+              "swap_item": "Screeching Gargoyle"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Void Shield \u2014 physical protection",
+              "swap_item": "Void Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "Divine Ruin \u2014 anti-heal",
+              "swap_item": "Divine Ruin"
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: The Cosmic Horror, Spear of the Magus, Gluttonous Grimoire, Spear of Desolation, Doom Orb, Soul Gem, Obsidian Shard, The World Stone, Rod of Tahuti, Dreamer's Idol, Screeching Gargoyle, Genji's Guard, Void Stone, Void Shield, Stone of Binding, Kinetic Cuirass, Spectral Armor, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Eye of Providence, Divine Ruin, Death Metal, Amanita Charm, Bancroft's Talon, Polynomicon.",
+          "starter": {
+            "base": "Warrior's Axe",
+            "upgrade": "Sundering Axe"
+          }
+        }
+      ]
+    },
+    {
+      "type": "smite-build",
+      "god": "Ymir",
+      "mode": "Joust",
+      "builds": [
+        {
+          "source": "suggested",
+          "archetype": "core",
+          "slot_order": [
+            "Contagion",
+            "Divine Ruin",
+            "Void Shield",
+            "Void Stone",
+            "Spectral Armor",
+            "Rod of Asclepius"
+          ],
+          "flex_slots": [
+            "Void Stone",
+            "Void Shield"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Resolute Mantle \u2014 CC-immunity / cleanse",
+              "swap_item": "Resolute Mantle"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Amanita Charm \u2014 magical protection",
+              "swap_item": "Amanita Charm"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Shield of the Phoenix \u2014 physical protection",
+              "swap_item": "Shield of the Phoenix"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "Stygian Anchor \u2014 anti-heal",
+              "swap_item": "Stygian Anchor"
+            }
+          ],
+          "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
+          "starter": {
+            "base": "Warrior's Axe",
+            "upgrade": "Sundering Axe"
+          }
+        },
+        {
+          "source": "suggested",
+          "archetype": "bruiser",
+          "slot_order": [
+            "Brawler\u2019s Beat Stick",
+            "Stygian Anchor",
+            "Kinetic Cuirass",
+            "Spirit Robe",
+            "Amanita Charm",
+            "Erosion"
+          ],
+          "flex_slots": [
+            "Kinetic Cuirass",
+            "Brawler\u2019s Beat Stick"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Mantle Of Discord \u2014 CC-immunity / cleanse",
+              "swap_item": "Mantle Of Discord"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Glorious Pridwen \u2014 magical protection",
+              "swap_item": "Glorious Pridwen"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Eye of Providence \u2014 physical protection",
+              "swap_item": "Eye of Providence"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "Divine Ruin \u2014 anti-heal",
+              "swap_item": "Divine Ruin"
+            }
+          ],
+          "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
+          "starter": {
+            "base": "Warrior's Axe",
+            "upgrade": "Sundering Axe"
+          }
+        },
+        {
+          "source": "suggested",
+          "archetype": "anti-tank",
+          "slot_order": [
+            "Gluttonous Grimoire",
+            "Spear of Desolation",
+            "The Cosmic Horror",
+            "Doom Orb",
+            "Spear of the Magus",
+            "Obsidian Shard"
+          ],
+          "flex_slots": [
+            "Doom Orb",
+            "Obsidian Shard"
+          ],
+          "situational_swaps": [
+            {
+              "vs_tag": "heavy_cc",
+              "swap": "Dreamer's Idol \u2014 CC-immunity / cleanse",
+              "swap_item": "Dreamer's Idol"
+            },
+            {
+              "vs_tag": "magic_heavy",
+              "swap": "Void Stone \u2014 magical protection",
+              "swap_item": "Void Stone"
+            },
+            {
+              "vs_tag": "physical_heavy",
+              "swap": "Void Shield \u2014 physical protection",
+              "swap_item": "Void Shield"
+            },
+            {
+              "vs_tag": "sustain",
+              "swap": "Divine Ruin \u2014 anti-heal",
+              "swap_item": "Divine Ruin"
+            }
+          ],
+          "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
+          "starter": {
+            "base": "Warrior's Axe",
+            "upgrade": "Sundering Axe"
           }
         }
       ]
