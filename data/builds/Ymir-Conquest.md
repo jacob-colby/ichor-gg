@@ -77,24 +77,24 @@ builds:
   archetype: core
   slot_order:
   - Eye of Providence
-  - Genji's Guard
   - Kinetic Cuirass
   - Shifter's Shield
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Genji's Guard
   - Erosion
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Draconic Scale — magical protection
-    swap_item: Draconic Scale
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -107,37 +107,37 @@ builds:
     Garb, Stone of Binding, Helm of Radiance.'
   slot_scores:
     Eye of Providence:
-      total: 0.45
+      total: 0.5
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Genji's Guard:
-      total: 0.42
-      efficiency: 0.46
-      win: 0.51
-      pick: 0.16
-      fit: 0.39
     Kinetic Cuirass:
-      total: 0.45
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.82
     Shifter's Shield:
-      total: 0.44
+      total: 0.47
       efficiency: 0.3
       win: 0.55
       pick: 0.24
       fit: 0.72
+    Spectral Armor:
+      total: 0.47
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Amanita Charm:
-      total: 0.44
+      total: 0.49
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.72
     Erosion:
-      total: 0.42
+      total: 0.47
       efficiency: 0.39
       win: 0.5
       pick: 0.0
@@ -149,14 +149,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Eye of Providence
-  - Genji's Guard
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Shifter's Shield
+  - Spectral Armor
   - Amanita Charm
   flex_slots:
+  - Spectral Armor
   - Shifter's Shield
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -165,51 +165,51 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Rod of Asclepius,
     Eye of Providence, Chandra''s Grace, Soul Gem, Phoenix Feather, Spectral Armor,
-    Lifebinder, Blood-Bound Book, Spirit Robe, Erosion, Bancroft''s Talon, Gluttonous
+    Lifebinder, Blood-Bound Book, Erosion, Bancroft''s Talon, Spirit Robe, Gluttonous
     Grimoire, Ethereal Staff, Glorious Pridwen, Gladiator''s Shield, Breastplate of
     Valor, Midgardian Mail, Leviathan''s Hide, Ancile, Oni Hunter''s Garb, Shroud
     of Vengeance, Draconic Scale.'
   slot_scores:
     Eye of Providence:
-      total: 0.42
+      total: 0.47
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Genji's Guard:
-      total: 0.41
-      efficiency: 0.46
-      win: 0.51
-      pick: 0.16
-      fit: 0.29
     Kinetic Cuirass:
-      total: 0.42
+      total: 0.47
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
     Shield of the Phoenix:
-      total: 0.43
+      total: 0.48
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.77
     Shifter's Shield:
-      total: 0.41
+      total: 0.44
       efficiency: 0.3
       win: 0.55
       pick: 0.24
       fit: 0.53
+    Spectral Armor:
+      total: 0.45
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Amanita Charm:
-      total: 0.46
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -219,14 +219,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Eye of Providence
-  - Genji's Guard
   - Kinetic Cuirass
   - Gluttonous Grimoire
-  - Shifter's Shield
+  - Spear of Desolation
   - The Cosmic Horror
+  - Spectral Armor
   flex_slots:
-  - Genji's Guard
-  - The Cosmic Horror
+  - Spear of Desolation
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -235,8 +235,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -249,41 +249,41 @@ builds:
     Shield, Shroud of Vengeance, Mantle Of Discord.'
   slot_scores:
     Eye of Providence:
-      total: 0.41
+      total: 0.46
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Genji's Guard:
-      total: 0.4
-      efficiency: 0.46
-      win: 0.51
-      pick: 0.16
-      fit: 0.25
     Kinetic Cuirass:
-      total: 0.42
+      total: 0.47
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.58
     Gluttonous Grimoire:
-      total: 0.42
+      total: 0.47
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Shifter's Shield:
-      total: 0.4
-      efficiency: 0.3
-      win: 0.55
-      pick: 0.24
+    Spear of Desolation:
+      total: 0.44
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
       fit: 0.48
     The Cosmic Horror:
-      total: 0.4
+      total: 0.45
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Spectral Armor:
+      total: 0.44
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
   starter: *id001
 - source: suggested
   archetype: fun-crit

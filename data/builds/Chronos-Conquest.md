@@ -76,15 +76,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Book of Thoth
+  - Bragi's Harp
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Book of Thoth
   - Spear of the Magus
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -99,55 +99,55 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Blood-Bound Book,
-    Spear of the Magus, Doom Orb, Bancroft''s Talon, Rod of Asclepius, The World Stone,
-    Ethereal Staff, Bragi''s Harp, Chronos'' Pendant, Ancient Signet, Death Metal,
-    Bracer of The Abyss, Polynomicon, Gem of Focus, Helm of Radiance, Divine Ruin,
-    Alchemist Coat, Genji''s Guard, Lifebinder, Typhon’s Heart.'
+    this god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Bragi''s Harp, Blood-Bound
+    Book, Spear of the Magus, Bancroft''s Talon, Doom Orb, Bracer of The Abyss, Rod
+    of Asclepius, Ethereal Staff, Chronos'' Pendant, The World Stone, Ancient Signet,
+    Death Metal, Genji''s Guard, Polynomicon, Helm of Radiance, Divine Ruin, Alchemist
+    Coat, Lifebinder, Gem of Focus, Spectral Armor.'
   slot_scores:
-    Book of Thoth:
-      total: 0.4
-      efficiency: 0.39
-      win: 0.47
-      pick: 0.39
-      fit: 0.29
+    Bragi's Harp:
+      total: 0.45
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Spear of Desolation:
       total: 0.45
       efficiency: 0.42
       win: 0.46
       pick: 0.29
-      fit: 0.68
+      fit: 0.56
     The Cosmic Horror:
-      total: 0.42
+      total: 0.45
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.44
     Spear of the Magus:
-      total: 0.4
+      total: 0.44
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.44
     Obsidian Shard:
-      total: 0.42
+      total: 0.44
       efficiency: 0.36
       win: 0.51
       pick: 0.26
-      fit: 0.53
+      fit: 0.44
     Soul Gem:
-      total: 0.46
+      total: 0.49
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.78
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: burst
   slot_order:
-  - Book of Thoth
+  - Bragi's Harp
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
@@ -155,7 +155,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - Book of Thoth
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -164,68 +164,68 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom
-    Orb, Death Metal, Bragi''s Harp, Blood-Bound Book, The World Stone, Chronos''
-    Pendant, Bancroft''s Talon, Rod of Asclepius, Ethereal Staff, Genji''s Guard,
-    Ancient Signet, Chandra''s Grace, Triton''s Conch, Breastplate of Valor, Gem of
-    Focus, Spectral Armor, Polynomicon, Kinetic Cuirass, Helm of Radiance, Divine
-    Ruin, Alchemist Coat.'
+    god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Bragi''s Harp, Spear of
+    the Magus, Death Metal, Doom Orb, Blood-Bound Book, Bancroft''s Talon, The World
+    Stone, Rod of Asclepius, Chronos'' Pendant, Ethereal Staff, Genji''s Guard, Ancient
+    Signet, Bracer of The Abyss, Chandra''s Grace, Spectral Armor, Breastplate of
+    Valor, Triton''s Conch, Kinetic Cuirass, Gem of Focus, Polynomicon, Helm of Radiance,
+    Divine Ruin.'
   slot_scores:
-    Book of Thoth:
-      total: 0.39
-      efficiency: 0.39
-      win: 0.47
-      pick: 0.39
-      fit: 0.18
+    Bragi's Harp:
+      total: 0.44
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Spear of Desolation:
       total: 0.45
       efficiency: 0.42
       win: 0.46
       pick: 0.29
-      fit: 0.62
+      fit: 0.56
     The Cosmic Horror:
-      total: 0.4
+      total: 0.45
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.4
     Spear of the Magus:
-      total: 0.39
+      total: 0.43
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.4
     Obsidian Shard:
-      total: 0.41
+      total: 0.43
       efficiency: 0.36
       win: 0.51
       pick: 0.26
-      fit: 0.45
+      fit: 0.4
     Soul Gem:
-      total: 0.44
+      total: 0.48
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.73
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Blood-Bound Book
-  - Book of Thoth
+  - Eye of Providence
   - Kinetic Cuirass
   - Spear of Desolation
-  - Obsidian Shard
+  - The Cosmic Horror
   - Soul Gem
   flex_slots:
-  - Book of Thoth
-  - Kinetic Cuirass
+  - Eye of Providence
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -241,48 +241,48 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Soul Gem, Blood-Bound Book, Amanita Charm, Bancroft''s Talon, Rod of
-    Asclepius, Gluttonous Grimoire, Shield of the Phoenix, Kinetic Cuirass, Lifebinder,
-    Chandra''s Grace, The Cosmic Horror, Eye of Providence, Spirit Robe, Phoenix Feather,
-    Genji''s Guard, Spear of the Magus, Spectral Armor, Ethereal Staff, Helm of Radiance,
-    Doom Orb, Breastplate of Valor, Ancient Signet, Death Metal, Chronos'' Pendant,
-    Bragi''s Harp, Glorious Pridwen.'
+    Asclepius, Gluttonous Grimoire, Shield of the Phoenix, Chandra''s Grace, Lifebinder,
+    Kinetic Cuirass, The Cosmic Horror, Eye of Providence, Phoenix Feather, Spirit
+    Robe, Genji''s Guard, Spectral Armor, Bragi''s Harp, Spear of the Magus, Ethereal
+    Staff, Helm of Radiance, Doom Orb, Ancient Signet, Death Metal, Breastplate of
+    Valor, Chronos'' Pendant, Erosion.'
   slot_scores:
     Blood-Bound Book:
-      total: 0.42
+      total: 0.47
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.55
-    Book of Thoth:
-      total: 0.38
-      efficiency: 0.39
-      win: 0.47
-      pick: 0.39
-      fit: 0.17
+      fit: 0.52
+    Eye of Providence:
+      total: 0.43
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Kinetic Cuirass:
-      total: 0.38
+      total: 0.43
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.34
     Spear of Desolation:
-      total: 0.41
+      total: 0.42
       efficiency: 0.42
       win: 0.46
       pick: 0.29
-      fit: 0.38
-    Obsidian Shard:
-      total: 0.39
-      efficiency: 0.36
-      win: 0.51
-      pick: 0.26
-      fit: 0.3
+      fit: 0.34
+    The Cosmic Horror:
+      total: 0.43
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.27
     Soul Gem:
-      total: 0.45
+      total: 0.49
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.82
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -294,7 +294,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
+  - Obsidian Shard
   - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
@@ -304,54 +304,54 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus,
-    Doom Orb, The World Stone, Blood-Bound Book, Bancroft''s Talon, Rod of Asclepius,
-    Ethereal Staff, Screeching Gargoyle, Chronos'' Pendant, Bragi''s Harp, Ancient
-    Signet, Death Metal, Genji''s Guard, Polynomicon, Helm of Radiance, Divine Ruin,
-    Alchemist Coat, Bracer of The Abyss, Spectral Armor, Lifebinder, Kinetic Cuirass.'
+    Doom Orb, The World Stone, Blood-Bound Book, Bragi''s Harp, Bancroft''s Talon,
+    Screeching Gargoyle, Rod of Asclepius, Ethereal Staff, Bracer of The Abyss, Chronos''
+    Pendant, Ancient Signet, Death Metal, Genji''s Guard, Spectral Armor, Polynomicon,
+    Helm of Radiance, Divine Ruin, Kinetic Cuirass, Alchemist Coat.'
   slot_scores:
     Spear of Desolation:
       total: 0.47
       efficiency: 0.42
       win: 0.46
       pick: 0.29
-      fit: 0.76
+      fit: 0.66
     The Cosmic Horror:
-      total: 0.44
+      total: 0.47
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.57
     Doom Orb:
-      total: 0.41
+      total: 0.45
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.57
     Spear of the Magus:
-      total: 0.42
+      total: 0.46
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.57
     Obsidian Shard:
-      total: 0.44
+      total: 0.45
       efficiency: 0.36
       win: 0.51
       pick: 0.26
-      fit: 0.65
+      fit: 0.57
     Soul Gem:
-      total: 0.46
+      total: 0.5
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -422,15 +422,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Genji's Guard
   - Spear of Desolation
   - The Cosmic Horror
-  - Obsidian Shard
   - Spectral Armor
   - Erosion
   - Soul Gem
   flex_slots:
   - The Cosmic Horror
-  - Erosion
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -445,62 +445,63 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Gluttonous Grimoire, Rod of Asclepius, Spectral Armor, Amanita
-    Charm, Lifebinder, The Cosmic Horror, Erosion, Genji''s Guard, Blood-Bound Book,
-    Triton''s Conch, Ethereal Staff, Spear of the Magus, Kinetic Cuirass, Void Stone,
-    Bancroft''s Talon, Chandra''s Grace, Eye of Providence, Doom Orb, Chronos'' Pendant,
-    Shield of the Phoenix, Doublet of Binding, Bragi''s Harp, The World Stone, Stampede.'
+    this god: Soul Gem, Rod of Asclepius, Gluttonous Grimoire, Spectral Armor, Amanita
+    Charm, Lifebinder, Erosion, The Cosmic Horror, Genji''s Guard, Blood-Bound Book,
+    Triton''s Conch, Bragi''s Harp, Ethereal Staff, Kinetic Cuirass, Spear of the
+    Magus, Void Stone, Eye of Providence, Bancroft''s Talon, Chandra''s Grace, Doom
+    Orb, Chronos'' Pendant, Bracer of The Abyss, Doublet of Binding, Stampede, Shield
+    of the Phoenix, Void Shield.'
   slot_scores:
-    Spear of Desolation:
-      total: 0.43
-      efficiency: 0.42
-      win: 0.46
-      pick: 0.29
-      fit: 0.54
-    The Cosmic Horror:
-      total: 0.39
+    Genji's Guard:
+      total: 0.42
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.34
-    Obsidian Shard:
-      total: 0.4
-      efficiency: 0.36
-      win: 0.51
-      pick: 0.26
-      fit: 0.34
+      fit: 0.25
+    Spear of Desolation:
+      total: 0.44
+      efficiency: 0.42
+      win: 0.46
+      pick: 0.29
+      fit: 0.46
+    The Cosmic Horror:
+      total: 0.43
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
     Spectral Armor:
-      total: 0.41
+      total: 0.45
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.38
     Erosion:
-      total: 0.39
+      total: 0.43
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.47
     Soul Gem:
-      total: 0.47
+      total: 0.51
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.96
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
   archetype: burst
   slot_order:
+  - Bragi's Harp
   - Spear of Desolation
   - The Cosmic Horror
-  - Obsidian Shard
   - Spectral Armor
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
   - The Cosmic Horror
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -515,69 +516,69 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Soul Gem, Gluttonous Grimoire, Rod of Asclepius, Spectral Armor, Triton''s
-    Conch, The Cosmic Horror, Amanita Charm, Lifebinder, Spear of the Magus, Death
-    Metal, Erosion, Doom Orb, Blood-Bound Book, Bragi''s Harp, Ethereal Staff, Genji''s
-    Guard, Bancroft''s Talon, Kinetic Cuirass, The World Stone, Chronos'' Pendant,
-    Void Stone, Eye of Providence, Chandra''s Grace, Ancient Signet, Stampede.'
+    god: Soul Gem, Rod of Asclepius, Gluttonous Grimoire, Spectral Armor, Amanita
+    Charm, Triton''s Conch, The Cosmic Horror, Lifebinder, Bragi''s Harp, Spear of
+    the Magus, Erosion, Death Metal, Blood-Bound Book, Doom Orb, Ethereal Staff, Genji''s
+    Guard, Kinetic Cuirass, Bancroft''s Talon, Void Stone, Chronos'' Pendant, The
+    World Stone, Eye of Providence, Chandra''s Grace, Ancient Signet, Stampede.'
   slot_scores:
-    Spear of Desolation:
+    Bragi's Harp:
       total: 0.43
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Spear of Desolation:
+      total: 0.44
       efficiency: 0.42
       win: 0.46
       pick: 0.29
-      fit: 0.55
+      fit: 0.49
     The Cosmic Horror:
-      total: 0.4
+      total: 0.44
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.39
-    Obsidian Shard:
-      total: 0.4
-      efficiency: 0.36
-      win: 0.51
-      pick: 0.26
-      fit: 0.39
+      fit: 0.35
     Spectral Armor:
-      total: 0.4
+      total: 0.45
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.36
     Soul Gem:
-      total: 0.47
+      total: 0.51
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.96
     Triton's Conch:
-      total: 0.4
+      total: 0.44
       efficiency: 0.35
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.64
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Eye of Providence
   - Kinetic Cuirass
-  - Spear of Desolation
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
   - Kinetic Cuirass
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -585,45 +586,45 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Soul Gem, Rod of Asclepius, Lifebinder, Spectral Armor,
+    this god: Soul Gem, Amanita Charm, Rod of Asclepius, Lifebinder, Spectral Armor,
     Blood-Bound Book, Shield of the Phoenix, Erosion, Bancroft''s Talon, Chandra''s
     Grace, Gluttonous Grimoire, Kinetic Cuirass, Eye of Providence, Umbral Link, Phoenix
     Feather, Genji''s Guard, Spirit Robe, The Cosmic Horror, Void Stone, Stampede,
     Triton''s Conch, Void Shield, Ethereal Staff, Breastplate of Valor, Doublet of
     Binding, Spear of the Magus.'
   slot_scores:
+    Eye of Providence:
+      total: 0.43
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
     Kinetic Cuirass:
-      total: 0.39
+      total: 0.44
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.42
-    Spear of Desolation:
-      total: 0.4
-      efficiency: 0.42
-      win: 0.46
-      pick: 0.29
-      fit: 0.35
+      fit: 0.39
     Spectral Armor:
-      total: 0.42
+      total: 0.47
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.47
     Amanita Charm:
-      total: 0.47
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.89
     Erosion:
-      total: 0.4
+      total: 0.45
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.59
     Soul Gem:
-      total: 0.47
+      total: 0.52
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -633,15 +634,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Void Shield
   - Void Stone
   - Spear of Desolation
   - The Cosmic Horror
-  - Obsidian Shard
   - Spectral Armor
   - Soul Gem
   flex_slots:
-  - Void Stone
   - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -650,50 +651,51 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Soul Gem, Gluttonous Grimoire, Rod of Asclepius, The Cosmic Horror,
-    Void Stone, Spectral Armor, Amanita Charm, Spear of the Magus, Void Shield, Doom
-    Orb, Screeching Gargoyle, Lifebinder, Erosion, The World Stone, Genji''s Guard,
-    Triton''s Conch, Blood-Bound Book, Ethereal Staff, Kinetic Cuirass, Eye of Providence,
-    Bancroft''s Talon, Chandra''s Grace, Chronos'' Pendant, Stampede, Doublet of Binding.'
+    for this god: Soul Gem, Gluttonous Grimoire, Rod of Asclepius, Void Stone, The
+    Cosmic Horror, Spectral Armor, Amanita Charm, Void Shield, Spear of the Magus,
+    Screeching Gargoyle, Lifebinder, Doom Orb, Erosion, The World Stone, Triton''s
+    Conch, Genji''s Guard, Blood-Bound Book, Ethereal Staff, Kinetic Cuirass, Bragi''s
+    Harp, Eye of Providence, Bancroft''s Talon, Chandra''s Grace, Chronos'' Pendant,
+    Stampede.'
   slot_scores:
+    Void Shield:
+      total: 0.44
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Void Stone:
-      total: 0.41
+      total: 0.46
       efficiency: 0.3
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.83
     Spear of Desolation:
       total: 0.45
       efficiency: 0.42
       win: 0.46
       pick: 0.29
-      fit: 0.64
+      fit: 0.57
     The Cosmic Horror:
-      total: 0.41
+      total: 0.45
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.49
-    Obsidian Shard:
-      total: 0.42
-      efficiency: 0.36
-      win: 0.51
-      pick: 0.26
-      fit: 0.49
+      fit: 0.43
     Spectral Armor:
-      total: 0.4
+      total: 0.45
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.37
     Soul Gem:
-      total: 0.47
+      total: 0.52
       efficiency: 0.41
       win: 0.5
       pick: 0.0

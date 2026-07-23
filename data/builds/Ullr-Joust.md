@@ -75,17 +75,17 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Hydra's Lament
   - The Reaper
   - Riptalon
+  - Demon Blade
   - The Crusher
   flex_slots:
-  - Hydra's Lament
   - Tyrfing
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.48
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.4
     Tyrfing:
-      total: 0.43
+      total: 0.44
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.47
-    Hydra's Lament:
-      total: 0.45
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
+      fit: 0.5
     The Reaper:
-      total: 0.62
+      total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.65
     Riptalon:
       total: 0.51
       efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Demon Blade:
+      total: 0.44
+      efficiency: 0.22
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     The Crusher:
-      total: 0.5
+      total: 0.45
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.41
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -206,14 +206,14 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Tyrfing
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Heartseeker
   flex_slots:
+  - Tyrfing
   - Pendulum Blade
-  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -231,54 +231,54 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.5
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.46
+    Tyrfing:
+      total: 0.39
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Hydra's Lament:
-      total: 0.44
+      total: 0.41
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.36
     The Reaper:
-      total: 0.59
+      total: 0.54
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.64
     Pendulum Blade:
-      total: 0.43
+      total: 0.37
       efficiency: 0.29
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.46
     The Crusher:
-      total: 0.5
+      total: 0.46
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.5
-    Heartseeker:
-      total: 0.39
-      efficiency: 0.28
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
+      fit: 0.43
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Jotunn's Revenge
   - The Reaper
-  - The Crusher
-  - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
-  - The Crusher
-  - Spectral Armor
+  - Shogun's Ofuda
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -296,64 +296,64 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.44
+      total: 0.41
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.33
+      fit: 0.27
     The Reaper:
-      total: 0.53
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.63
-    The Crusher:
-      total: 0.42
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
-    Spectral Armor:
-      total: 0.41
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
+      fit: 0.57
     Amanita Charm:
-      total: 0.6
+      total: 0.58
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.71
     Erosion:
-      total: 0.42
+      total: 0.4
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.41
+    Pharaoh's Curse:
+      total: 0.42
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Shogun's Ofuda:
+      total: 0.4
+      efficiency: 0.33
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Avenging Blade
   - Jotunn's Revenge
+  - Void Shield
+  - Void Stone
   - The Reaper
-  - Pendulum Blade
   - The Crusher
-  - Heartseeker
   flex_slots:
-  - Pendulum Blade
-  - Heartseeker
+  - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -361,40 +361,40 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.49
+      total: 0.47
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.53
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.53
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    The Reaper:
-      total: 0.67
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.91
-    Pendulum Blade:
-      total: 0.47
+      fit: 0.52
+    Void Shield:
+      total: 0.45
       efficiency: 0.29
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.6
+    Void Stone:
+      total: 0.45
+      efficiency: 0.3
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    The Reaper:
+      total: 0.6
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     The Crusher:
-      total: 0.57
+      total: 0.51
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Heartseeker:
-      total: 0.47
-      efficiency: 0.28
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
+      fit: 0.54
   starter: *id001
 ---

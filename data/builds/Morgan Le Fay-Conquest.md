@@ -106,37 +106,37 @@ builds:
     Harp, Book of Thoth, Jade Scepter, Genji''s Guard, Scepter of Dominion.'
   slot_scores:
     Spear of Desolation:
-      total: 0.52
+      total: 0.54
       efficiency: 0.42
       win: 0.5
       pick: 0.35
       fit: 1.0
     The Cosmic Horror:
-      total: 0.46
+      total: 0.51
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.79
     Doom Orb:
-      total: 0.44
+      total: 0.49
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.79
     Spear of the Magus:
-      total: 0.44
+      total: 0.49
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.79
     Obsidian Shard:
-      total: 0.47
+      total: 0.51
       efficiency: 0.36
       win: 0.57
       pick: 0.16
       fit: 0.79
     Soul Gem:
-      total: 0.51
+      total: 0.54
       efficiency: 0.41
       win: 0.54
       pick: 0.15
@@ -178,37 +178,37 @@ builds:
     Armor.'
   slot_scores:
     Spear of Desolation:
-      total: 0.49
+      total: 0.51
       efficiency: 0.42
       win: 0.5
       pick: 0.35
       fit: 0.78
     The Cosmic Horror:
-      total: 0.42
+      total: 0.47
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.56
     Doom Orb:
-      total: 0.4
+      total: 0.45
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.56
     Spear of the Magus:
-      total: 0.41
+      total: 0.46
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.56
     Obsidian Shard:
-      total: 0.43
+      total: 0.48
       efficiency: 0.36
       win: 0.57
       pick: 0.16
       fit: 0.56
     Soul Gem:
-      total: 0.49
+      total: 0.53
       efficiency: 0.41
       win: 0.54
       pick: 0.15
@@ -248,37 +248,37 @@ builds:
     Glorious Pridwen, Ancient Signet.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.39
+      total: 0.44
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.41
     Spear of Desolation:
-      total: 0.45
+      total: 0.46
       efficiency: 0.42
       win: 0.5
       pick: 0.35
       fit: 0.49
     The Cosmic Horror:
-      total: 0.4
+      total: 0.45
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.39
     Obsidian Shard:
-      total: 0.41
+      total: 0.45
       efficiency: 0.36
       win: 0.57
       pick: 0.16
       fit: 0.39
     Amanita Charm:
-      total: 0.42
+      total: 0.47
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.49
+      total: 0.53
       efficiency: 0.41
       win: 0.54
       pick: 0.15
@@ -317,37 +317,37 @@ builds:
     Genji''s Guard, Lifebinder, Bragi''s Harp, Book of Thoth, Jade Scepter.'
   slot_scores:
     Spear of Desolation:
-      total: 0.52
+      total: 0.54
       efficiency: 0.42
       win: 0.5
       pick: 0.35
       fit: 1.0
     The Cosmic Horror:
-      total: 0.47
+      total: 0.52
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.85
     Doom Orb:
-      total: 0.44
+      total: 0.49
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.85
     Spear of the Magus:
-      total: 0.45
+      total: 0.5
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.85
     Obsidian Shard:
-      total: 0.48
+      total: 0.52
       efficiency: 0.36
       win: 0.57
       pick: 0.16
       fit: 0.85
     Soul Gem:
-      total: 0.51
+      total: 0.54
       efficiency: 0.41
       win: 0.54
       pick: 0.15
@@ -429,7 +429,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Ethereal Staff
+  - Obsidian Shard
   - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
@@ -453,37 +453,37 @@ builds:
     Chronos'' Pendant.'
   slot_scores:
     Ethereal Staff:
-      total: 0.41
+      total: 0.46
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.49
     Gluttonous Grimoire:
-      total: 0.45
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.85
     Spear of Desolation:
-      total: 0.47
+      total: 0.48
       efficiency: 0.42
       win: 0.5
       pick: 0.35
       fit: 0.62
     The Cosmic Horror:
-      total: 0.41
+      total: 0.46
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.47
     Obsidian Shard:
-      total: 0.42
+      total: 0.46
       efficiency: 0.36
       win: 0.57
       pick: 0.16
       fit: 0.47
     Soul Gem:
-      total: 0.49
+      total: 0.53
       efficiency: 0.41
       win: 0.54
       pick: 0.15
@@ -524,37 +524,37 @@ builds:
     Scepter.'
   slot_scores:
     Ethereal Staff:
-      total: 0.39
+      total: 0.44
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.34
     Spear of Desolation:
-      total: 0.46
+      total: 0.48
       efficiency: 0.42
       win: 0.5
       pick: 0.35
       fit: 0.59
     The Cosmic Horror:
-      total: 0.4
+      total: 0.45
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.42
     Spear of the Magus:
-      total: 0.39
+      total: 0.44
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.42
     Obsidian Shard:
-      total: 0.41
+      total: 0.46
       efficiency: 0.36
       win: 0.57
       pick: 0.16
       fit: 0.42
     Soul Gem:
-      total: 0.49
+      total: 0.53
       efficiency: 0.41
       win: 0.54
       pick: 0.15
@@ -567,12 +567,12 @@ builds:
   - Eye of Providence
   - Kinetic Cuirass
   - Spear of Desolation
-  - Obsidian Shard
+  - Spectral Armor
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Eye of Providence
-  - Obsidian Shard
+  - Spear of Desolation
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -595,37 +595,37 @@ builds:
     Shield, Jade Scepter.'
   slot_scores:
     Eye of Providence:
-      total: 0.41
+      total: 0.46
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.41
+      total: 0.46
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.54
     Spear of Desolation:
-      total: 0.43
+      total: 0.45
       efficiency: 0.42
       win: 0.5
       pick: 0.35
       fit: 0.39
-    Obsidian Shard:
-      total: 0.4
-      efficiency: 0.36
-      win: 0.57
-      pick: 0.16
-      fit: 0.3
-    Amanita Charm:
+    Spectral Armor:
       total: 0.44
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Amanita Charm:
+      total: 0.49
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.74
     Soul Gem:
-      total: 0.47
+      total: 0.51
       efficiency: 0.41
       win: 0.54
       pick: 0.15
@@ -666,37 +666,37 @@ builds:
     Yogi''s Necklace.'
   slot_scores:
     Spear of Desolation:
-      total: 0.48
+      total: 0.5
       efficiency: 0.42
       win: 0.5
       pick: 0.35
       fit: 0.7
     The Cosmic Horror:
-      total: 0.43
+      total: 0.48
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.59
     Doom Orb:
-      total: 0.41
+      total: 0.46
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.59
     Spear of the Magus:
-      total: 0.41
+      total: 0.46
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.59
     Obsidian Shard:
-      total: 0.44
+      total: 0.48
       efficiency: 0.36
       win: 0.57
       pick: 0.16
       fit: 0.59
     Soul Gem:
-      total: 0.51
+      total: 0.54
       efficiency: 0.41
       win: 0.54
       pick: 0.15

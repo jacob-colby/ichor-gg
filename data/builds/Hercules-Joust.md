@@ -81,14 +81,14 @@ builds:
   - Erosion
   flex_slots:
   - Spectral Armor
-  - Shield Splitter
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -99,29 +99,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.57
+      total: 0.53
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.6
     Kinetic Cuirass:
-      total: 0.6
+      total: 0.57
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.7
     Shield Splitter:
-      total: 0.53
+      total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.67
     Spectral Armor:
-      total: 0.56
+      total: 0.54
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.58
     Amanita Charm:
       total: 0.72
       efficiency: 0.45
@@ -129,26 +129,26 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.63
+      total: 0.59
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.8
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Shield Splitter
   - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Spectral Armor
-  - Eye of Providence
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -160,47 +160,47 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.48
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Kinetic Cuirass:
-      total: 0.52
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.55
+    Shield Splitter:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Shield of the Phoenix:
-      total: 0.57
+      total: 0.55
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.7
     Spectral Armor:
-      total: 0.51
+      total: 0.5
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.5
     Amanita Charm:
-      total: 0.72
+      total: 0.7
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.95
     Erosion:
-      total: 0.54
+      total: 0.52
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -209,18 +209,18 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
+  - The Crusher
   - Amanita Charm
-  - Erosion
   flex_slots:
-  - Erosion
   - Avenging Blade
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -231,41 +231,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.53
+      total: 0.55
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.7
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.56
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.57
     Void Shield:
-      total: 0.6
+      total: 0.59
       efficiency: 0.29
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 0.88
     Void Stone:
-      total: 0.6
+      total: 0.59
       efficiency: 0.3
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 0.88
+    The Crusher:
+      total: 0.54
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Amanita Charm:
-      total: 0.68
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.92
-    Erosion:
-      total: 0.53
-      efficiency: 0.39
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
+      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -362,29 +362,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.61
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.71
     Shield of the Phoenix:
-      total: 0.6
+      total: 0.57
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.74
     Void Stone:
-      total: 0.59
+      total: 0.57
       efficiency: 0.3
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.83
     Spectral Armor:
-      total: 0.63
+      total: 0.61
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.73
     Amanita Charm:
       total: 0.72
       efficiency: 0.45
@@ -392,65 +392,65 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.69
+      total: 0.65
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 0.91
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
   - Shield of the Phoenix
+  - Void Shield
   - Void Stone
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Void Stone
-  - Kinetic Cuirass
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Shield of the Phoenix:
-      total: 0.59
+      total: 0.57
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.74
+    Void Shield:
+      total: 0.52
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Void Stone:
-      total: 0.54
+      total: 0.53
       efficiency: 0.3
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.75
     Spectral Armor:
-      total: 0.59
+      total: 0.57
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.65
     Amanita Charm:
       total: 0.72
       efficiency: 0.45
@@ -458,11 +458,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.61
+      total: 0.59
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.79
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -475,15 +475,15 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Erosion
   - Spectral Armor
-  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -494,11 +494,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.55
+      total: 0.58
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.75
     Void Shield:
       total: 0.65
       efficiency: 0.29
@@ -512,23 +512,23 @@ builds:
       pick: 0.0
       fit: 1.0
     Spectral Armor:
-      total: 0.57
+      total: 0.55
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.62
     Amanita Charm:
-      total: 0.72
+      total: 0.7
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.95
     Erosion:
-      total: 0.59
+      total: 0.57
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.75
   starter: *id001
   aspect: Aspect of Preservation
 ---

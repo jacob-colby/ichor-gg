@@ -106,37 +106,37 @@ builds:
     Armor, Avatar''s Parashu.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
       win: 0.46
       pick: 0.31
       fit: 1.0
     Hydra's Lament:
-      total: 0.47
+      total: 0.49
       efficiency: 0.45
       win: 0.48
       pick: 0.26
       fit: 0.71
     The Reaper:
-      total: 0.51
+      total: 0.55
       efficiency: 0.44
       win: 0.57
       pick: 0.14
       fit: 0.91
     The Crusher:
-      total: 0.5
+      total: 0.55
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.49
+      total: 0.52
       efficiency: 0.28
       win: 0.56
       pick: 0.32
       fit: 1.0
     Titan's Bane:
-      total: 0.5
+      total: 0.54
       efficiency: 0.37
       win: 0.57
       pick: 0.26
@@ -154,7 +154,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - The Crusher
+  - Hydra's Lament
   - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
@@ -177,37 +177,37 @@ builds:
     of Providence, Barbed Carver, Oath-Sworn Spear.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
       win: 0.46
       pick: 0.31
       fit: 0.78
     Hydra's Lament:
-      total: 0.45
+      total: 0.47
       efficiency: 0.45
       win: 0.48
       pick: 0.26
       fit: 0.54
     The Reaper:
-      total: 0.46
+      total: 0.5
       efficiency: 0.44
       win: 0.57
       pick: 0.14
       fit: 0.56
     The Crusher:
-      total: 0.44
+      total: 0.49
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.44
+      total: 0.47
       efficiency: 0.28
       win: 0.56
       pick: 0.32
       fit: 0.66
     Titan's Bane:
-      total: 0.45
+      total: 0.48
       efficiency: 0.37
       win: 0.57
       pick: 0.26
@@ -217,24 +217,24 @@ builds:
   archetype: bruiser
   slot_order:
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Shield Splitter
   - The Reaper
   - The Crusher
   - Titan's Bane
   - Amanita Charm
   flex_slots:
-  - The Crusher
-  - Hydra's Lament
+  - Shield Splitter
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -247,37 +247,37 @@ builds:
     Bow.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.47
+      total: 0.48
       efficiency: 0.55
       win: 0.46
       pick: 0.31
       fit: 0.44
-    Hydra's Lament:
-      total: 0.42
-      efficiency: 0.45
-      win: 0.48
-      pick: 0.26
-      fit: 0.37
+    Shield Splitter:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     The Reaper:
-      total: 0.48
+      total: 0.52
       efficiency: 0.44
       win: 0.57
       pick: 0.14
       fit: 0.7
     The Crusher:
-      total: 0.42
+      total: 0.47
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.5
     Titan's Bane:
-      total: 0.43
+      total: 0.46
       efficiency: 0.37
       win: 0.57
       pick: 0.26
       fit: 0.4
     Amanita Charm:
-      total: 0.43
+      total: 0.48
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -316,37 +316,37 @@ builds:
     Kinetic Cuirass, Void Stone.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
       win: 0.46
       pick: 0.31
       fit: 1.0
     The Reaper:
-      total: 0.52
+      total: 0.56
       efficiency: 0.44
       win: 0.57
       pick: 0.14
       fit: 0.94
     Tekko-Kagi:
-      total: 0.44
+      total: 0.49
       efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.94
     The Crusher:
-      total: 0.5
+      total: 0.55
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.49
+      total: 0.52
       efficiency: 0.28
       win: 0.56
       pick: 0.32
       fit: 1.0
     Titan's Bane:
-      total: 0.51
+      total: 0.54
       efficiency: 0.37
       win: 0.57
       pick: 0.26
