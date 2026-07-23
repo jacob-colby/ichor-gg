@@ -215,6 +215,41 @@ def refresh_roster(wiki_fetcher, force: bool = False) -> list:
     return roster
 
 
+def refresh_roster_add_all(force: bool = False) -> dict:
+    """Scrape every roster god not yet tracked so the pool can grow toward
+    the full roster in one run. A single god's scrape failure (Cloudflare,
+    parse error, wrong slug, ...) is caught and recorded rather than
+    aborting the batch — an unattended bulk-add should get through
+    everything it can and report what it couldn't. Does NOT reindex; that's
+    a separate step after the operator reviews the failures."""
+    import json
+
+    roster_path = DATA_ROOT / "_roster.json"
+    if not roster_path.exists():
+        return {"added": [], "failed": [], "skipped": 0,
+                "note": f"{roster_path} not found; run --roster first"}
+
+    roster = json.loads(roster_path.read_text(encoding="utf-8"))
+    roster_names = [g["name"] for g in roster]
+    tracked = {p.stem for p in (DATA_ROOT / "Gods").glob("*.md")}
+    untracked = [name for name in roster_names if name not in tracked]
+
+    wiki = BrowserFetcher(DATA_ROOT / "_cache" / "wiki")
+    community = CachedFetcher(DATA_ROOT / "_cache" / "smitebrain")
+
+    added = []
+    failed = []
+    for name in untracked:
+        try:
+            refresh_god(name, wiki, force=force)
+            refresh_god_builds(name, "Conquest", community, force=force)
+            added.append(name)
+        except Exception as exc:
+            failed.append((name, str(exc)))
+
+    return {"added": added, "failed": failed, "skipped": len(roster_names) - len(untracked)}
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="Refresh SMITE 2 reference data")
     parser.add_argument("--refresh", metavar="NAME", help="re-pull one god or item by name")
@@ -223,12 +258,24 @@ def main(argv=None) -> int:
     parser.add_argument("--mode", default="Conquest", help="game mode for --refresh-builds")
     parser.add_argument("--all", action="store_true", help="re-pull everything already tracked")
     parser.add_argument("--roster", action="store_true", help="refresh the full god roster (_roster.json)")
+    parser.add_argument("--roster-add-all", action="store_true",
+                         help="scrape every roster god not yet tracked (no reindex)")
     parser.add_argument("--force", action="store_true", help="bypass the local cache")
     args = parser.parse_args(argv)
 
     if args.roster:
         roster = refresh_roster(BrowserFetcher(DATA_ROOT / "_cache" / "wiki"), force=args.force)
         print(f"Refreshed roster: {len(roster)} gods")
+        return 0
+
+    if args.roster_add_all:
+        summary = refresh_roster_add_all(force=args.force)
+        if summary.get("note"):
+            print(summary["note"])
+        print(f"Added {len(summary['added'])}, failed {len(summary['failed'])}, "
+              f"skipped {summary['skipped']} (already tracked)")
+        for name, err in summary["failed"]:
+            print(f"  FAILED {name}: {err}")
         return 0
 
     if args.all:

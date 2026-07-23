@@ -1,3 +1,4 @@
+import json
 from datetime import date
 from pathlib import Path
 from unittest import mock
@@ -8,6 +9,11 @@ import requests
 from smite import notes, refresh
 
 FIXTURES = Path(__file__).parent / "fixtures"
+
+
+def _write_roster(data_root, names):
+    (data_root / "_roster.json").write_text(
+        json.dumps([{"name": n, "thumb": ""} for n in names]), encoding="utf-8")
 
 
 def test_refresh_god_writes_a_note(tmp_path, monkeypatch):
@@ -259,3 +265,96 @@ def test_download_icon_is_a_noop_when_image_url_is_missing(tmp_path, monkeypatch
 
     mock_get.assert_not_called()
     assert not (tmp_path / "_assets" / "icons" / "chiron.png").exists()
+
+
+def test_refresh_roster_add_all_returns_empty_summary_when_roster_missing(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+
+    summary = refresh.refresh_roster_add_all()
+
+    assert summary["added"] == []
+    assert summary["failed"] == []
+    assert summary["skipped"] == 0
+    assert summary.get("note")  # explanatory, not a crash
+
+
+def test_refresh_roster_add_all_skips_tracked_and_scrapes_untracked_gods(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    (tmp_path / "Gods").mkdir()
+    notes.write_note(tmp_path / "Gods" / "Chiron.md", {"name": "Chiron"}, "")
+    _write_roster(tmp_path, ["Chiron", "NewGod", "AnotherGod"])
+
+    with mock.patch("smite.refresh.BrowserFetcher") as MockBrowser, \
+         mock.patch("smite.refresh.CachedFetcher") as MockCached, \
+         mock.patch("smite.refresh.refresh_god") as mock_refresh_god, \
+         mock.patch("smite.refresh.refresh_god_builds") as mock_refresh_builds:
+        summary = refresh.refresh_roster_add_all()
+
+    assert summary["skipped"] == 1
+    assert set(summary["added"]) == {"NewGod", "AnotherGod"}
+    assert summary["failed"] == []
+    assert mock_refresh_god.call_count == 2
+    assert mock_refresh_builds.call_count == 2
+    called_names = [c.args[0] for c in mock_refresh_god.call_args_list]
+    assert "Chiron" not in called_names
+    # fetchers are constructed once and reused across the whole batch
+    MockBrowser.assert_called_once()
+    MockCached.assert_called_once()
+
+
+def test_refresh_roster_add_all_ignores_removed_gods_subdir(tmp_path, monkeypatch):
+    # _removed/ is where manage_gods.remove() parks retired god notes — it
+    # must not count as "tracked" (top-level glob only).
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    (tmp_path / "Gods").mkdir()
+    (tmp_path / "Gods" / "_removed").mkdir()
+    notes.write_note(tmp_path / "Gods" / "_removed" / "OldGod.md", {"name": "OldGod"}, "")
+    _write_roster(tmp_path, ["OldGod"])
+
+    with mock.patch("smite.refresh.BrowserFetcher"), \
+         mock.patch("smite.refresh.CachedFetcher"), \
+         mock.patch("smite.refresh.refresh_god") as mock_refresh_god, \
+         mock.patch("smite.refresh.refresh_god_builds"):
+        summary = refresh.refresh_roster_add_all()
+
+    assert summary["skipped"] == 0
+    assert summary["added"] == ["OldGod"]
+    mock_refresh_god.assert_called_once()
+
+
+def test_refresh_roster_add_all_continues_after_a_god_failure(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    (tmp_path / "Gods").mkdir()
+    _write_roster(tmp_path, ["BrokenGod", "GoodGod"])
+
+    def fake_refresh_god(name, fetcher, force=False):
+        if name == "BrokenGod":
+            raise ValueError("simulated wiki layout change")
+
+    with mock.patch("smite.refresh.BrowserFetcher"), \
+         mock.patch("smite.refresh.CachedFetcher"), \
+         mock.patch("smite.refresh.refresh_god", side_effect=fake_refresh_god) as mock_refresh_god, \
+         mock.patch("smite.refresh.refresh_god_builds") as mock_refresh_builds:
+        summary = refresh.refresh_roster_add_all()  # must not raise
+
+    assert summary["added"] == ["GoodGod"]
+    assert len(summary["failed"]) == 1
+    failed_name, failed_err = summary["failed"][0]
+    assert failed_name == "BrokenGod"
+    assert "simulated wiki layout change" in failed_err
+    assert mock_refresh_god.call_count == 2  # both attempted despite the failure
+    assert mock_refresh_builds.call_count == 1  # only for the god that didn't raise
+
+
+def test_main_roster_add_all_calls_refresh_roster_add_all_and_prints_summary(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+
+    with mock.patch("smite.refresh.refresh_roster_add_all") as mock_fn:
+        mock_fn.return_value = {"added": ["A", "B"], "failed": [("C", "boom")], "skipped": 5}
+        result = refresh.main(["--roster-add-all"])
+
+    assert result == 0
+    mock_fn.assert_called_once()
+    captured = capsys.readouterr()
+    assert "Added 2, failed 1, skipped 5" in captured.out
+    assert "FAILED C: boom" in captured.out
