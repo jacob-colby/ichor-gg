@@ -5,6 +5,7 @@ import { DetailPanel } from "./components/DetailPanel";
 import { ManageGods } from "./components/ManageGods";
 import { Footer } from "./components/Footer";
 import { ItemsShop } from "./components/ItemsShop";
+import { GodsIndex } from "./components/GodsIndex";
 import { GodInfo } from "./components/GodInfo";
 import { Legend } from "./components/Legend";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
@@ -61,6 +62,7 @@ function App() {
       <div className="flex items-center gap-2 border-b border-line px-3 py-2">
         <span className="mr-2 font-display text-sm font-bold text-gold">SMITE 2 Builds</span>
         <button type="button" onClick={() => navigate(route.god ? toHash.god(route.god) : toHash.home())} className={navBtn(route.view === "builds")}>Builds</button>
+        <button type="button" onClick={() => navigate(toHash.gods())} className={navBtn(route.view === "gods")}>Gods</button>
         <button type="button" onClick={() => navigate(toHash.items())} className={navBtn(route.view === "items")}>Items</button>
         {data.data_updated && (
           <span className="ml-auto text-[10px] text-muted">Data from {data.data_updated}</span>
@@ -78,6 +80,8 @@ function App() {
       <div className="flex flex-1 overflow-hidden">
         {route.view === "items" ? (
           <div className="flex-1 overflow-y-auto"><ItemsShop items={data.items} openItem={route.item} /></div>
+        ) : route.view === "gods" ? (
+          <div className="flex-1 overflow-y-auto"><GodsIndex gods={data.gods} /></div>
         ) : (
           <>
             <div className="flex flex-col overflow-y-auto">

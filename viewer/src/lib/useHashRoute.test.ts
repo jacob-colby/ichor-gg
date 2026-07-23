@@ -14,6 +14,9 @@ describe("parseHash", () => {
     expect(parseHash("#/items")).toEqual({ view: "items", tab: "builds" });
     expect(parseHash("#/items/Deathbringer")).toEqual({ view: "items", tab: "builds", item: "Deathbringer" });
   });
+  it("parses the gods index", () => {
+    expect(parseHash("#/gods")).toEqual({ view: "gods", tab: "builds" });
+  });
 });
 
 describe("toHash", () => {

@@ -33,6 +33,13 @@ describe("App routing", () => {
     await waitFor(() => expect(screen.getByPlaceholderText(/search items/i)).toBeInTheDocument());
   });
 
+  it("navigates to the gods index via the nav", async () => {
+    render(<App />);
+    await screen.findByRole("button", { name: /^gods$/i });
+    fireEvent.click(screen.getByRole("button", { name: /^gods$/i }));
+    await waitFor(() => expect(screen.getByPlaceholderText(/search gods/i)).toBeInTheDocument());
+  });
+
   it("shows the data-freshness stamp", async () => {
     render(<App />);
     await waitFor(() => expect(screen.getByText(/Data from 2026-07-19/i)).toBeInTheDocument());
