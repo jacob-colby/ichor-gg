@@ -331,3 +331,38 @@ def test_explicit_flavor_cap_wins_over_lifesteal_caps_rule():
     p = scoring.resolve_profile(w, "Conquest", "crit")
     carry = _god("C", "physical", "Carry", [])
     assert scoring.god_max_lifesteal(carry, w, p) == 1
+
+
+def test_fun_profile_zeroes_meta_signals_and_sets_bypass_flags():
+    w = scoring.load_weights_default()
+    w["flavors"] = {"fun-crit": {"fun": True, "bypass": ["damage_filter", "archetype_fit"],
+                                 "stats": {"Critical Chance": 1.5}}}
+    p = scoring.resolve_profile(w, "Conquest", "fun-crit")
+    assert p["signals"]["win"] == 0.0 and p["signals"]["pick"] == 0.0
+    assert p["bypass_damage_filter"] is True
+    assert p["archetype_bypass"] is True
+    assert p["fun"] is True
+    assert p["suppress_underrated"] is True
+
+
+def test_serious_profile_has_no_bypass():
+    p = scoring.resolve_profile(scoring.load_weights_default(), "Conquest", None)
+    assert p["bypass_damage_filter"] is False
+    assert p["archetype_bypass"] is False
+    assert p["fun"] is False
+
+
+def test_bypass_damage_filter_lets_crit_items_reach_a_magical_god():
+    w = scoring.load_weights_default()
+    w["flavors"] = {"fun-crit": {"fun": True, "bypass": ["damage_filter", "archetype_fit"],
+                                 "stats": {"Critical Chance": 1.5, "Attack Speed": 1.2}}}
+    ymir = _god("Ymir", "magical", "Support", ["Tank"])
+    crit_item = {"name": "Deathbringer", "tier": 3, "stats": {"Critical Chance": "25%"}}
+    eff = {"Deathbringer": {"score": 0.5, "tier": "fair"}}
+    fun = scoring.resolve_profile(w, "Conquest", "fun-crit")
+    serious = scoring.resolve_profile(w, "Conquest", None)
+    fun_rows = scoring.score_god_items(ymir, [crit_item], {"builds": []}, eff, w, {}, fun)
+    serious_rows = scoring.score_god_items(ymir, [crit_item], {"builds": []}, eff, w, {}, serious)
+    assert [r["item"] for r in fun_rows] == ["Deathbringer"]
+    assert serious_rows == []                       # damage filter still guards serious builds
+    assert fun_rows[0]["fit"] > 0                   # flavor stats drive fit despite empty role map

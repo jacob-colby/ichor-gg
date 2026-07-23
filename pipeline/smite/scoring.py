@@ -233,11 +233,19 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
     Mode sets signal overrides + tag bonuses; the aspect overlay and flavor each
     add stat weights + tag bonuses (flavor wins on a shared key) + a lifesteal cap
     (flavor's explicit cap wins, else the aspect's, else 1). suppress_underrated is
-    true when the mode zeroes the pick signal (underrated needs pick data)."""
+    true when the mode zeroes the pick signal (underrated needs pick data).
+    Fun flavors (`fun: true`) zero the win/pick meta signals and may declare
+    `bypass` entries ("damage_filter", "archetype_fit") to escape class guards."""
     mode_prof = (weights.get("modes") or {}).get(mode.lower(), {}) or {}
     fl = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
     asp = aspect_overlay or {}
+    bypass = set(fl.get("bypass") or [])
+    fun = bool(fl.get("fun"))
     signals = {**weights["signals"], **(mode_prof.get("signals") or {})}
+    if fun:
+        # Off-class items have no meta data; a neutral 0.5 win rate would only
+        # add noise, so fun builds are scored on efficiency + flavor fit alone.
+        signals = {**signals, "win": 0.0, "pick": 0.0}
     tag_bonus = {**(mode_prof.get("tag_bonus") or {}),
                  **(asp.get("tag_bonus") or {}),
                  **(fl.get("tag_bonus") or {})}
@@ -257,6 +265,9 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
         "suppress_underrated": signals.get("pick", 1) == 0,
         "label": mode_prof.get("label"),
         "flavor": flavor,
+        "bypass_damage_filter": "damage_filter" in bypass,
+        "archetype_bypass": "archetype_fit" in bypass,
+        "fun": fun,
     }
 
 
@@ -305,7 +316,7 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     for item in items:
         if not is_buildable(item):
             continue
-        if not passes_damage_filter(item, god):
+        if not profile.get("bypass_damage_filter") and not passes_damage_filter(item, god):
             continue
         eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
         row = signal_score(item, god, god_build, eff, eff_weights,
