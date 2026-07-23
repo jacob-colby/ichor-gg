@@ -10,17 +10,32 @@ from smite.efficiency import parse_stat_value
 
 DEFAULT_WEIGHTS = {
     "signals": {"efficiency": 0.35, "win": 0.30, "pick": 0.15, "fit": 0.20},
-    # role/specialization → {stat: weight}. Extend as new roles enter the pool;
-    # unknown roles simply contribute nothing to fit (graceful).
+    # role/spec label → {stat: weight}. Labels match exactly first, then by
+    # whitespace token ("Carry Jungle" → Carry + Jungle), so the scraped
+    # vocabulary (Mid, Solo, Support, Slayer, "Burst Damage", …) always lands.
+    # Stat keys must be real item stat keys ("Max Health", not "Health").
     "role_stats": {
-        "Sharpshooter": {"Attack Speed": 1.0, "Critical Chance": 1.0, "Strength": 0.6},
-        "Nuker": {"Intelligence": 1.0, "Penetration": 1.0, "Cooldown Rate": 0.5},
+        "Sharpshooter": {"Attack Speed": 1.0, "Critical Chance": 1.0, "Strength": 0.6, "Lifesteal": 0.5},
+        "Nuker": {"Intelligence": 1.0, "Strength": 0.6, "Penetration": 1.0, "Cooldown Rate": 0.5},
         "Mage": {"Intelligence": 1.0, "Penetration": 0.8, "Cooldown Rate": 0.5},
-        "Hunter": {"Strength": 1.0, "Attack Speed": 0.8, "Critical Chance": 0.6},
-        "Carry": {"Strength": 0.8, "Attack Speed": 0.6, "Critical Chance": 0.6},
+        "Hunter": {"Strength": 1.0, "Attack Speed": 0.8, "Critical Chance": 0.6, "Lifesteal": 0.5},
+        "Carry": {"Strength": 0.8, "Attack Speed": 0.6, "Critical Chance": 0.6, "Lifesteal": 0.5},
         "Assassin": {"Strength": 1.0, "Penetration": 0.8},
-        "Warrior": {"Strength": 0.8, "Physical Protection": 0.5, "Health": 0.5},
-        "Guardian": {"Physical Protection": 1.0, "Magical Protection": 1.0, "Health": 0.8},
+        "Warrior": {"Strength": 0.8, "Physical Protection": 0.5, "Max Health": 0.5},
+        "Guardian": {"Physical Protection": 1.0, "Magical Protection": 1.0, "Max Health": 0.8},
+        "Tank": {"Physical Protection": 1.0, "Magical Protection": 1.0, "Max Health": 0.8},
+        "Support": {"Physical Protection": 0.9, "Magical Protection": 0.9, "Max Health": 0.8},
+        "Brawler": {"Max Health": 0.8, "Physical Protection": 0.5, "Magical Protection": 0.5, "Strength": 0.4},
+        "Solo": {"Max Health": 0.7, "Physical Protection": 0.5, "Magical Protection": 0.5, "Strength": 0.4},
+        "Jungle": {"Strength": 1.0, "Penetration": 0.8},
+        "Slayer": {"Strength": 1.0, "Penetration": 0.8},
+        "Mid": {"Intelligence": 1.0, "Penetration": 0.8, "Cooldown Rate": 0.5},
+        "Sniper": {"Intelligence": 1.0, "Penetration": 0.8},
+        "Burst": {"Penetration": 0.8, "Cooldown Rate": 0.5},
+        "Healing": {"Cooldown Rate": 0.8, "Intelligence": 0.4},
+        "Buffs": {"Cooldown Rate": 0.6},
+        "Constant": {"Attack Speed": 0.6},
+        "Pressure": {"Attack Speed": 0.5},
     },
     # "Underrated" = intrinsically good for this god (high quality = efficiency
     # + fit, independent of the meta) yet rarely picked. It deliberately does
@@ -87,14 +102,35 @@ def passes_damage_filter(item, god):
     return dt == "neutral" or dt == god.get("damage_type")
 
 
+# Offensive stats that are dead weight for the opposite damage type: an
+# Intelligence entry on a physical god (Cernunnos's "Nuker" spec) would skew
+# fit toward items the damage filter already forbids — drop them up front.
+# Attack Speed stays for magical gods (hybrid Int+AS items are real).
+_OPPOSITE_OFFENSE = {
+    "physical": ("Intelligence",),
+    "magical": ("Strength", "Critical Chance"),
+}
+
+
 def _role_stat_map(god, weights):
-    merged = {}
-    roles = list(god.get("specializations") or [])
+    """Merged {stat: weight} fit map for a god's role + specializations. Each
+    label matches `role_stats` exactly first, then falls back to whitespace
+    tokens ("Carry Jungle" → Carry + Jungle), so the scraped multi-word
+    vocabulary always lands. Overlapping stats keep the max weight. Offensive
+    stats of the opposite damage type are dropped (the damage filter already
+    forbids those items, so they'd only skew fit)."""
+    role_stats = weights["role_stats"]
+    labels = [str(s) for s in (god.get("specializations") or [])]
     if god.get("role"):
-        roles.append(god["role"])
-    for role in roles:
-        for stat, w in weights["role_stats"].get(role, {}).items():
-            merged[stat] = max(merged.get(stat, 0.0), w)
+        labels.append(str(god["role"]))
+    merged = {}
+    for label in labels:
+        keys = [label] if label in role_stats else [t for t in label.split() if t in role_stats]
+        for key in keys:
+            for stat, w in role_stats[key].items():
+                merged[stat] = max(merged.get(stat, 0.0), w)
+    for stat in _OPPOSITE_OFFENSE.get(god.get("damage_type"), ()):
+        merged.pop(stat, None)
     return merged
 
 

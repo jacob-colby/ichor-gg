@@ -235,3 +235,49 @@ def test_resolve_profile_no_aspect_unchanged():
     weights = {"signals": {"efficiency": 1}, "flavors": {}, "modes": {"conquest": {}}}
     p = scoring.resolve_profile(weights, "Conquest", None)
     assert p["stat_overlay"] == {} and p["max_lifesteal"] == 1
+
+
+def test_role_map_matches_tokens_in_multiword_roles():
+    w = scoring.load_weights_default()
+    cern = _god("Cernunnos", "physical", "Carry Jungle", ["Sharpshooter"])
+    m = scoring._role_stat_map(cern, w)
+    assert m["Attack Speed"] == 1.0          # Sharpshooter, exact match
+    assert m["Penetration"] >= 0.8           # Jungle, token match
+
+
+def test_role_map_drops_opposite_damage_type_offense():
+    w = scoring.load_weights_default()
+    cern = _god("Cernunnos", "physical", "Carry Jungle", ["Nuker", "Sharpshooter"])
+    assert "Intelligence" not in scoring._role_stat_map(cern, w)
+    ymir = _god("Ymir", "magical", "Support", ["Brawler", "Tank", "Lockdown"])
+    m = scoring._role_stat_map(ymir, w)
+    assert "Strength" not in m
+    assert m["Physical Protection"] == 1.0
+    assert m["Max Health"] == 0.8
+
+
+def test_every_pool_role_vocabulary_produces_a_nonempty_map():
+    w = scoring.load_weights_default()
+    pool = [  # the real scraped vocabulary of all 11 gods
+        ("magical", "Mid", ["Nuker", "Burst Damage", "Sniper"]),
+        ("physical", "Carry Jungle", ["Nuker", "Sharpshooter", "Lockdown"]),
+        ("physical", "Carry", ["Sharpshooter", "Nuker"]),
+        ("magical", "Mid Carry", ["Constant Damage"]),
+        ("physical", "Solo", ["Tank", "Brawler", "Lockdown"]),
+        ("magical", "Mid", ["Nuker", "Burst Damage"]),
+        ("magical", "Carry Mid", ["Sharpshooter", "Mobile", "Constant Damage"]),
+        ("magical", "Mid", ["Sniper", "Healing", "Buffs"]),
+        ("physical", "Jungle", ["Slayer", "Lockdown", "Mobile"]),
+        ("physical", "Carry", ["Lockdown", "Burst Damage", "Pressure"]),
+        ("magical", "Support", ["Brawler", "Tank", "Lockdown"]),
+    ]
+    for dt, role, specs in pool:
+        m = scoring._role_stat_map(_god("X", dt, role, specs), w)
+        assert m, f"empty fit map for role={role} specs={specs}"
+
+
+def test_role_map_uses_max_health_not_health():
+    # Items carry 'Max Health' (63 of them); no item has a 'Health' stat key.
+    w = scoring.load_weights_default()
+    for entry in w["role_stats"].values():
+        assert "Health" not in entry, "use 'Max Health' — 'Health' matches no item"
