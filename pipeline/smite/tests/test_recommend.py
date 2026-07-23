@@ -166,3 +166,52 @@ def test_non_aspect_god_emits_only_base():
     entries = recommend.build_suggested_entries(susano, items, recommend.load_build_note("Susano"),
                                                 weights, tags, "Conquest")
     assert all(not e.get("aspect") for e in entries)
+
+
+import pytest
+
+
+@pytest.fixture
+def tmp_items():
+    return [
+        {"name": "Crit1", "tier": 3, "cost": 2500, "stats": {"Critical Chance": "25%", "Attack Speed": "15"}},
+        {"name": "Crit2", "tier": 3, "cost": 2600, "stats": {"Critical Chance": "20%", "Strength": "40"}},
+        {"name": "Crit3", "tier": 3, "cost": 2400, "stats": {"Critical Chance": "25%", "Attack Speed": "20"}},
+        {"name": "Blade", "tier": 3, "cost": 2500, "stats": {"Strength": "55", "Attack Speed": "10"}},
+        {"name": "Fists", "tier": 3, "cost": 2500, "stats": {"Strength": "60"}},
+        {"name": "Tome", "tier": 3, "cost": 2500, "stats": {"Intelligence": "80"}},
+        {"name": "Wall", "tier": 3, "cost": 2300, "stats": {"Physical Protection": "60", "Health": "200"}},
+        {"name": "Bulwark", "tier": 3, "cost": 2300, "stats": {"Magical Protection": "60", "Health": "200"}},
+    ]
+
+
+def _fun_weights():
+    w = scoring.load_weights_default()
+    w["flavors"] = {
+        "crit": {"damage_types": ["physical"], "match_any": ["Carry", "Sharpshooter"],
+                 "stats": {"Critical Chance": 1.5}, "require": {"stat": "Critical Chance", "min": 3}},
+        "fun-crit": {"fun": True, "bypass": ["damage_filter", "archetype_fit"],
+                     "redundant_with": "crit", "damage_types": None, "match_any": None,
+                     "stats": {"Critical Chance": 1.5, "Attack Speed": 1.2, "Strength": 0.8},
+                     "require": {"stat": "Critical Chance", "min": 3}},
+    }
+    return w
+
+
+def test_fun_entry_emitted_for_offclass_god_with_flag_and_honest_rationale(tmp_items):
+    ymir = {"name": "Ymir", "damage_type": "magical", "role": "Support",
+            "specializations": ["Tank"], "abilities": []}
+    entries = recommend.build_suggested_entries(ymir, tmp_items, {"builds": []},
+                                                _fun_weights(), {})
+    fun = [e for e in entries if e.get("fun")]
+    assert len(fun) == 1 and fun[0]["archetype"] == "fun-crit"
+    assert "fun" in fun[0]["rationale"].lower()
+
+
+def test_fun_crit_skipped_when_serious_crit_applies(tmp_items):
+    chiron = {"name": "Chiron", "damage_type": "physical", "role": "Carry",
+              "specializations": ["Sharpshooter"], "abilities": []}
+    entries = recommend.build_suggested_entries(chiron, tmp_items, {"builds": []},
+                                                _fun_weights(), {})
+    assert not [e for e in entries if e.get("fun")]          # redundant_with: crit
+    assert [e for e in entries if e["archetype"] == "crit"]  # serious crit still there

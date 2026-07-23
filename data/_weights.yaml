@@ -62,6 +62,19 @@ flavors:
     stats: {Penetration: 2.0}
     tag_bonus: {protection-shred: 0.3}
     max_lifesteal: 1
+  fun-crit:
+    # For-fun off-class build: crit for anyone, including guardians and mages.
+    # Bypasses the damage filter and archetype fit ON PURPOSE; win/pick zeroed
+    # by the engine (fun: true). Skipped for gods that already get the serious
+    # crit flavor (redundant_with).
+    fun: true
+    bypass: [damage_filter, archetype_fit]
+    redundant_with: crit
+    damage_types: null
+    match_any: null
+    stats: {Critical Chance: 1.5, Attack Speed: 1.2, Strength: 0.8}
+    max_lifesteal: 1
+    require: {stat: "Critical Chance", min: 3}
 
 # ── God aspects ─────────────────────────────────────────────────────────────
 # Per-god scoring overlay (same shape as a flavor) applied when the viewer's

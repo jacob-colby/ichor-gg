@@ -162,4 +162,33 @@ builds:
     of The Abyss, Nimble Ring, Divine Ruin, Death Metal, Polynomicon, Void Stone,
     Helm of Radiance, Void Shield, Gem of Focus, Stone of Binding.'
   starter: *id001
+- source: suggested
+  archetype: fun-crit
+  slot_order:
+  - Lernaean Bow
+  - Tyrfing
+  - Bragi's Harp
+  - Death Metal
+  - Damaru
+  - Demon Blade
+  flex_slots:
+  - Bragi's Harp
+  - Lernaean Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
+    build). Scored on gold-value + flavor fit only; not meta-checked.
+  fun: true
+  starter: *id001
 ---

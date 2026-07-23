@@ -24,10 +24,15 @@ _FLAVOR_BLURB = {
     "burst": "Ability / burst skew",
     "bruiser": "Lifesteal bruiser skew",
     "anti-tank": "Full-penetration anti-tank skew",
+    "fun-crit": "Crit / attack-speed party build",
 }
 
 
 def _rationale(archetype, rows, profile):
+    if profile.get("fun"):
+        return (f"For fun — deliberately fights this god's kit "
+                f"({_FLAVOR_BLURB.get(archetype, archetype)}). "
+                "Scored on gold-value + flavor fit only; not meta-checked.")
     meta = "" if profile.get("suppress_underrated") else " + win/pick"
     text = f"{_FLAVOR_BLURB.get(archetype, archetype)} (efficiency + fit{meta})."
     if profile.get("label"):
@@ -109,10 +114,15 @@ def god_report(god, items, god_build, weights, tags_map):
 def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                      items_by_name, starter, flex_count, aspect_overlay, aspect_name):
     entries = []
-    for flavor in [None] + scoring.eligible_flavors(god, weights):
+    eligible = scoring.eligible_flavors(god, weights)
+    for flavor in [None] + eligible:
+        cfg = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
+        if cfg.get("fun") and (aspect_overlay is not None
+                               or cfg.get("redundant_with") in eligible):
+            continue  # fun builds: base kit only, and never beside a serious twin
         profile = scoring.resolve_profile(weights, mode, flavor, aspect_overlay=aspect_overlay)
         rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map, profile)
-        require = ((weights.get("flavors") or {}).get(flavor) or {}).get("require") if flavor else None
+        require = cfg.get("require") if flavor else None
         core = assemble.assemble_core(rows, items_by_name, n=6,
                                       max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
                                       require=require)
@@ -127,6 +137,7 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
             "flex_slots": flex,
             "situational_swaps": swaps,
             "rationale": _rationale(archetype, rows, profile),
+            **({"fun": True} if cfg.get("fun") else {}),
             **({"starter": starter} if starter else {}),
             **({"aspect": aspect_name} if aspect_name else {}),
         })
