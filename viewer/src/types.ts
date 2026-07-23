@@ -109,9 +109,16 @@ export interface BuildNote {
   last_verified?: string;
 }
 
+export interface RosterGod {
+  name: string;
+  thumb?: string;
+}
+
 export interface IndexData {
   gods: God[];
   items: Item[];
   builds: BuildNote[];
   starters?: { base: string; upgrade: string }[];
+  roster?: RosterGod[];
+  data_updated?: string;
 }

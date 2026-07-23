@@ -14,6 +14,8 @@ const data = {
   ],
   builds: [],
   starters: [],
+  roster: [],
+  data_updated: "2026-07-19",
 };
 
 beforeEach(() => {
@@ -29,6 +31,11 @@ describe("App routing", () => {
     await screen.findByRole("button", { name: /^items$/i });
     fireEvent.click(screen.getByRole("button", { name: /^items$/i }));
     await waitFor(() => expect(screen.getByPlaceholderText(/search items/i)).toBeInTheDocument());
+  });
+
+  it("shows the data-freshness stamp", async () => {
+    render(<App />);
+    await waitFor(() => expect(screen.getByText(/Data from 2026-07-19/i)).toBeInTheDocument());
   });
 
   it("shows the legend on first run", async () => {

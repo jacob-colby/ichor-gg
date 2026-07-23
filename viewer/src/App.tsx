@@ -14,6 +14,7 @@ function App() {
   const route = useHashRoute();
   const [mode, setMode] = useState("Conquest");
   const [legendOpen, setLegendOpen] = useState(false);
+  const [scraping, setScraping] = useState(false);
   const isDev = import.meta.env.DEV;
 
   useEffect(() => {
@@ -24,15 +25,19 @@ function App() {
     setLegendOpen(false);
   };
 
-  const removeGod = async (name: string) => {
-    await fetch("/api/gods", {
+  const godsApi = async (action: "add" | "remove", name: string) => {
+    setScraping(true);
+    const res = await fetch("/api/gods", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "remove", name }),
+      body: JSON.stringify({ action, name }),
     }).then((r) => r.json()).catch(() => ({ ok: false }));
-    if (name === route.god) navigate(toHash.home());
+    setScraping(false);
+    if (action === "remove" && name === route.god) navigate(toHash.home());
     reload();
+    return res;
   };
+  const removeGod = (name: string) => godsApi("remove", name);
 
   if (error) {
     return (
@@ -57,9 +62,18 @@ function App() {
         <span className="mr-2 font-display text-sm font-bold text-gold">SMITE 2 Builds</span>
         <button type="button" onClick={() => navigate(route.god ? toHash.god(route.god) : toHash.home())} className={navBtn(route.view === "builds")}>Builds</button>
         <button type="button" onClick={() => navigate(toHash.items())} className={navBtn(route.view === "items")}>Items</button>
-        <button type="button" onClick={reload} className="ml-auto rounded bg-bg2 px-3 py-1 text-sm hover:bg-line">Reload</button>
+        {data.data_updated && (
+          <span className="ml-auto text-[10px] text-muted">Data from {data.data_updated}</span>
+        )}
+        <button type="button" onClick={reload} className={`${data.data_updated ? "" : "ml-auto"} rounded bg-bg2 px-3 py-1 text-sm hover:bg-line`}>Reload</button>
         <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help" className="rounded bg-bg2 px-3 py-1 text-sm hover:bg-line">?</button>
       </div>
+
+      {isDev && scraping && (
+        <div className="border-b border-gold/40 bg-gold/10 px-3 py-1 text-center text-xs text-gold">
+          Scraping new data… this can take a minute.
+        </div>
+      )}
 
       <div className="flex flex-1 overflow-hidden">
         {route.view === "items" ? (
