@@ -73,6 +73,16 @@ export interface CommunityBuildEntry {
   starter?: { base: string; upgrade: string };
 }
 
+/** Per-item score breakdown stamped by the Python pipeline (2dp). win 0.5
+ * means "no data" neutral; pick 0 means unpicked. */
+export interface SlotScore {
+  total: number;
+  efficiency: number;
+  win: number;
+  pick: number;
+  fit: number;
+}
+
 export interface CuratedBuildEntry {
   source: "pro" | "mine" | "suggested";
   archetype?: string;
@@ -84,6 +94,9 @@ export interface CuratedBuildEntry {
   situational_swaps?: SituationalSwap[];
   notes?: string;
   starter?: { base: string; upgrade: string };
+  /** Off-class for-fun build — win/pick signals zeroed, not meta-scored. */
+  fun?: boolean;
+  slot_scores?: Record<string, SlotScore>;
 }
 
 export type BuildEntry = CommunityBuildEntry | CuratedBuildEntry;

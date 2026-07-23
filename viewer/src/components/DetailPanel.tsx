@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import type { BuildEntry, BuildNote, God, Item } from "../types";
+import type { BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
 import { Tooltip } from "./Tooltip";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
@@ -23,8 +23,36 @@ interface DetailPanelProps {
   onReload?: () => void;
 }
 
-function ItemTooltipBody({ item, name }: { item?: Item; name: string }) {
-  if (!item) return <span className="font-display font-semibold">{name}</span>;
+function ScoreBar({ label, value }: { label: string; value: number }) {
+  return (
+    <div className="flex items-center gap-2">
+      <span className="w-14 text-[10px] text-muted">{label}</span>
+      <div className="h-1.5 flex-1 rounded bg-line">
+        <div className="h-1.5 rounded bg-gold" style={{ width: `${Math.round(Math.min(value, 1) * 100)}%` }} />
+      </div>
+      <span className="w-8 text-right font-mono text-[10px] text-ink">{value.toFixed(2)}</span>
+    </div>
+  );
+}
+
+function ItemTooltipBody({ item, name, score }: { item?: Item; name: string; score?: SlotScore }) {
+  const scoreBlock = score && (
+    <div className="mt-2 border-t border-line pt-2">
+      <div className="mb-1 text-[10px] font-semibold tracking-widest text-muted">WHY THIS ITEM</div>
+      <ScoreBar label="value" value={score.efficiency} />
+      <ScoreBar label="win" value={score.win} />
+      <ScoreBar label="pick" value={score.pick} />
+      <ScoreBar label="fit" value={score.fit} />
+    </div>
+  );
+  if (!item) {
+    return (
+      <div>
+        <span className="font-display font-semibold">{name}</span>
+        {scoreBlock}
+      </div>
+    );
+  }
   return (
     <div>
       <div className="mb-1 flex items-baseline justify-between">
@@ -50,6 +78,7 @@ function ItemTooltipBody({ item, name }: { item?: Item; name: string }) {
           ))}
         </div>
       )}
+      {scoreBlock}
     </div>
   );
 }
@@ -117,6 +146,8 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
 
   const selectedSwap = swaps?.find((s) => s.vs_tag === selectedTag) ?? null;
   const baseNames = active.slot_order.map(slotItemName);
+  const communityNames = new Set(
+    note.builds.filter(isCommunityEntry).flatMap((b) => b.slot_order.map((s) => s.name)));
   const flexList = !community ? active.flex_slots : undefined;
   const preview = applySwap(baseNames, selectedSwap?.swap_item ?? null, flexList);
 
@@ -212,6 +243,13 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
         </div>
       )}
 
+      {!community && (active as CuratedBuildEntry).fun && (
+        <div className="mb-3 rounded border border-premium/40 bg-bg1 p-2 text-xs">
+          <span className="font-display font-semibold text-premium">For fun 🎲</span>
+          <span className="text-muted"> — deliberately off-class; not scored against the meta.</span>
+        </div>
+      )}
+
       <div role="tablist" className="mb-4 flex gap-1">
         {entries.map((entry, i) => (
           <button
@@ -224,7 +262,7 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
               i === activeIndex ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"
             }`}
           >
-            {tabLabel(entry)}
+            {tabLabel(entry)}{(entry as { fun?: boolean }).fun ? " 🎲" : ""}
           </button>
         ))}
       </div>
@@ -295,7 +333,16 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
               const rates = !community ? null
                 : (active.slot_order[i] as { pick_rate: number; win_rate: number } | undefined);
               return (
-                <Tooltip key={`${slot.name}-${i}`} content={<ItemTooltipBody item={item} name={slot.name} />}>
+                <Tooltip
+                  key={`${slot.name}-${i}`}
+                  content={
+                    <ItemTooltipBody
+                      item={item}
+                      name={slot.name}
+                      score={!community ? (active as CuratedBuildEntry).slot_scores?.[slot.name] : undefined}
+                    />
+                  }
+                >
                   <div className={`flex items-center gap-2 rounded px-1 py-0.5 transition-colors duration-150 ${
                     slot.status === "added" ? "bg-blue/10" : ""}`}>
                     <img
@@ -320,6 +367,10 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
                     {slot.status === "added" && <span className="text-[10px] text-muted">swap in</span>}
                     {flexList?.includes(slot.name) && slot.status === "kept" && (
                       <span className="text-[10px] text-muted">flex</span>
+                    )}
+                    {!community && active.source === "suggested" && !(active as CuratedBuildEntry).fun &&
+                      communityNames.size > 0 && slot.status !== "added" && !communityNames.has(slot.name) && (
+                      <span className="text-[10px] text-muted/70" title="Not in this god's top community items">off-meta</span>
                     )}
                     {rates && (
                       <span className="ml-auto font-mono text-xs text-muted">
