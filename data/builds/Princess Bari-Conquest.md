@@ -34,35 +34,34 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Bracer of The Abyss
-  - Nimble Ring
   - Bragi's Harp
-  - Death Metal
   - Spear of Desolation
+  - The Cosmic Horror
+  - Spear of the Magus
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
-  - Bracer of The Abyss
-  - Nimble Ring
+  - Bragi's Harp
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Death Metal, Bragi''s Harp, Bracer of The Abyss, Nimble Ring, Kinetic
-    Cuirass, Triton''s Conch, Gluttonous Grimoire, Spectral Armor, Rod of Asclepius,
-    Blood-Bound Book, Ancient Signet, Ethereal Staff, Eye of Providence, The Cosmic
-    Horror, Divine Ruin, Genji''s Guard, Amanita Charm, Bancroft''s Talon, Spear of
-    the Magus, Polynomicon, Yogi''s Necklace, Chandra''s Grace, Helm of Radiance,
-    Doom Orb, Chronos'' Pendant.'
+    this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Bragi''s Harp,
+    Spear of the Magus, Blood-Bound Book, Doom Orb, Bancroft''s Talon, Bracer of The
+    Abyss, Nimble Ring, Chronos'' Pendant, Rod of Asclepius, Ancient Signet, Ethereal
+    Staff, Divine Ruin, Death Metal, Polynomicon, Gem of Focus, Helm of Radiance,
+    Typhon’s Heart, Lifebinder, Alchemist Coat, Jade Scepter, Book of Thoth.'
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -70,14 +69,14 @@ builds:
   archetype: burst
   slot_order:
   - Bragi's Harp
-  - Death Metal
   - Spear of Desolation
   - The Cosmic Horror
+  - Spear of the Magus
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - The Cosmic Horror
-  - Bragi's Harp
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -92,54 +91,54 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Obsidian Shard, Death Metal, Gluttonous Grimoire, The Cosmic Horror, Bragi''s
-    Harp, Spear of the Magus, Doom Orb, Chronos'' Pendant, Rod of Asclepius, Blood-Bound
-    Book, Ancient Signet, Ethereal Staff, Triton''s Conch, Divine Ruin, Genji''s Guard,
-    Gem of Focus, Bracer of The Abyss, Bancroft''s Talon, Polynomicon, Chandra''s
-    Grace, Helm of Radiance, Kinetic Cuirass, Breastplate of Valor, Lifebinder.'
+    god: Obsidian Shard, Gluttonous Grimoire, Bragi''s Harp, The Cosmic Horror, Spear
+    of the Magus, Doom Orb, Death Metal, Blood-Bound Book, Chronos'' Pendant, Bancroft''s
+    Talon, Rod of Asclepius, Ancient Signet, Ethereal Staff, Triton''s Conch, Gem
+    of Focus, Bracer of The Abyss, Divine Ruin, Genji''s Guard, Polynomicon, Chandra''s
+    Grace, Helm of Radiance, Nimble Ring, Breastplate of Valor, Lifebinder.'
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
+  - Blood-Bound Book
   - Kinetic Cuirass
-  - Spirit Robe
   - Spear of Desolation
+  - The Cosmic Horror
   - Obsidian Shard
-  - Amanita Charm
+  - Soul Gem
   flex_slots:
-  - Eye of Providence
-  - Spear of Desolation
+  - Kinetic Cuirass
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Spirit Robe, Kinetic Cuirass, Shield of the Phoenix,
-    Rod of Asclepius, Blood-Bound Book, Eye of Providence, Phoenix Feather, Death
-    Metal, Bancroft''s Talon, Bragi''s Harp, Chandra''s Grace, Glorious Pridwen, Lifebinder,
-    Spectral Armor, Erosion, Shroud of Vengeance, Mantle Of Discord, Magi''s Cloak,
-    Genji''s Guard, Stone of Binding, Sphere of Negation, Umbral Link, Helm of Radiance,
-    Breastplate of Valor, Prophetic Cloak.'
+    this god: Blood-Bound Book, Amanita Charm, Bancroft''s Talon, Rod of Asclepius,
+    Gluttonous Grimoire, Shield of the Phoenix, Lifebinder, Spirit Robe, Chandra''s
+    Grace, Kinetic Cuirass, The Cosmic Horror, Phoenix Feather, Eye of Providence,
+    Spear of the Magus, Glorious Pridwen, Bragi''s Harp, Sphere of Negation, Helm
+    of Radiance, Doom Orb, Genji''s Guard, Ancient Signet, Ethereal Staff, Spectral
+    Armor, Chronos'' Pendant, Umbral Link.'
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
   - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Doom Orb
@@ -151,16 +150,16 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of
-    the Magus, Doom Orb, Death Metal, Bragi''s Harp, Screeching Gargoyle, Void Stone,
-    Void Shield, Stone of Binding, Kinetic Cuirass, Spectral Armor, Rod of Asclepius,
-    Bracer of The Abyss, Blood-Bound Book, Ancient Signet, Ethereal Staff, Eye of
-    Providence, Divine Ruin, Genji''s Guard, Amanita Charm, Bancroft''s Talon.'
+    the Magus, Doom Orb, Bragi''s Harp, Blood-Bound Book, Screeching Gargoyle, Bancroft''s
+    Talon, Rod of Asclepius, Ancient Signet, Ethereal Staff, Bracer of The Abyss,
+    Chronos'' Pendant, Nimble Ring, Divine Ruin, Death Metal, Polynomicon, Void Stone,
+    Helm of Radiance, Void Shield, Gem of Focus, Stone of Binding.'
   starter: *id001
 ---

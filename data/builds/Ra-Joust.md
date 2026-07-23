@@ -6,28 +6,28 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Contagion
   - Divine Ruin
-  - Void Shield
-  - Void Stone
-  - Spectral Armor
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
   - Soul Gem
   flex_slots:
-  - Void Stone
-  - Void Shield
+  - Spear of the Magus
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: &id001
@@ -64,15 +64,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Brawler’s Beat Stick
+  - Divine Ruin
   - Stygian Anchor
-  - Kinetic Cuirass
-  - Spirit Robe
+  - Spear of Desolation
   - Amanita Charm
   - Erosion
+  - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
-  - Brawler’s Beat Stick
+  - Erosion
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -81,23 +81,23 @@ builds:
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
   - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Doom Orb
   - Obsidian Shard
@@ -106,8 +106,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -121,21 +121,21 @@ builds:
   archetype: core
   slot_order:
   - Void Stone
+  - Spear of Desolation
   - Spectral Armor
-  - Amanita Charm
   - Erosion
-  - Doublet of Binding
+  - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Doublet of Binding
+  - Triton's Conch
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -178,15 +178,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
+  - Void Shield
   - Void Stone
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse

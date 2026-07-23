@@ -34,35 +34,34 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Book of Thoth
-  - Kinetic Cuirass
   - Spear of Desolation
+  - The Cosmic Horror
+  - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
-  - Kinetic Cuirass
+  - The Cosmic Horror
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Gluttonous Grimoire, Spectral Armor, Rod of Asclepius,
-    Blood-Bound Book, Ancient Signet, Ethereal Staff, Eye of Providence, The Cosmic
-    Horror, Divine Ruin, Death Metal, Genji''s Guard, Amanita Charm, Bancroft''s Talon,
-    Spear of the Magus, Polynomicon, Yogi''s Necklace, Chandra''s Grace, Bragi''s
-    Harp, Helm of Radiance, Doom Orb, Chronos'' Pendant, Breastplate of Valor, Lifebinder,
-    Screeching Gargoyle.'
+    this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom Orb,
+    Chronos'' Pendant, The World Stone, Gem of Focus, Rod of Asclepius, Blood-Bound
+    Book, Ancient Signet, Ethereal Staff, Divine Ruin, Death Metal, Bancroft''s Talon,
+    Polynomicon, Bragi''s Harp, Helm of Radiance, Lifebinder, Alchemist Coat, Genji''s
+    Guard, Jade Scepter, Chandra''s Grace.'
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -101,35 +100,35 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
-  - Kinetic Cuirass
-  - Shroud of Vengeance
-  - Spirit Robe
+  - Book of Thoth
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   - Amanita Charm
-  - Erosion
+  - Soul Gem
   flex_slots:
-  - Erosion
-  - Shroud of Vengeance
+  - Rod of Tahuti
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Spirit Robe — magical protection
+    swap_item: Spirit Robe
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Spirit Robe, Kinetic Cuirass, Eye of Providence, Glorious
-    Pridwen, Shield of the Phoenix, Erosion, Shroud of Vengeance, Phoenix Feather,
-    Mantle Of Discord, Magi''s Cloak, Stone of Binding, Prophetic Cloak, Spectral
-    Armor, Freya''s Tears, Rod of Asclepius, Shifter''s Shield, Blood-Bound Book,
-    Draconic Scale, Stygian Anchor, Helm of Darkness, Genji''s Guard, Bancroft''s
-    Talon, Sphere of Negation, Umbral Link, Helm of Radiance.'
+    this god: Amanita Charm, Rod of Asclepius, Blood-Bound Book, Shield of the Phoenix,
+    Bancroft''s Talon, Lifebinder, Gluttonous Grimoire, Chandra''s Grace, Spirit Robe,
+    Glorious Pridwen, Kinetic Cuirass, The Cosmic Horror, Eye of Providence, Phoenix
+    Feather, Spear of the Magus, Sphere of Negation, Genji''s Guard, Helm of Radiance,
+    Doom Orb, Chronos'' Pendant, Breastplate of Valor, Prophetic Cloak, Ancient Signet,
+    Screeching Gargoyle, Ethereal Staff.'
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -151,30 +150,30 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Cosmic Horror, Spear of the Magus, Gluttonous Grimoire, Doom
-    Orb, The World Stone, Dreamer''s Idol, Screeching Gargoyle, Void Stone, Void Shield,
-    Stone of Binding, Kinetic Cuirass, Spectral Armor, Rod of Asclepius, Blood-Bound
-    Book, Ancient Signet, Ethereal Staff, Eye of Providence, Divine Ruin, Death Metal,
-    Genji''s Guard, Amanita Charm, Bancroft''s Talon, Polynomicon.'
+    for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom
+    Orb, The World Stone, Screeching Gargoyle, Chronos'' Pendant, Rod of Asclepius,
+    Blood-Bound Book, Gem of Focus, Ancient Signet, Ethereal Staff, Dreamer''s Idol,
+    Divine Ruin, Death Metal, Bancroft''s Talon, Polynomicon, Bragi''s Harp, Helm
+    of Radiance, Genji''s Guard, Lifebinder, Alchemist Coat, Jade Scepter.'
   starter: *id001
 - source: suggested
   archetype: core
   slot_order:
   - Void Stone
   - Spear of Desolation
+  - Obsidian Shard
   - Spectral Armor
   - Erosion
   - Soul Gem
-  - Triton's Conch
   flex_slots:
   - Spectral Armor
-  - Triton's Conch
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -189,12 +188,12 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Asclepius, Amanita Charm, Lifebinder, Chandra''s Grace, Shield
-    of the Phoenix, Erosion, Void Stone, Spectral Armor, Triton''s Conch, Kinetic
-    Cuirass, Genji''s Guard, Phoenix Feather, Doublet of Binding, Eye of Providence,
-    Gluttonous Grimoire, Screeching Gargoyle, Ethereal Staff, Gladiator''s Shield,
-    Chronos'' Pendant, Blood-Bound Book, Glorious Pridwen, Void Shield, Stampede,
-    Bancroft''s Talon, Gem of Focus.'
+    this god: Rod of Asclepius, Amanita Charm, Lifebinder, Gluttonous Grimoire, Chandra''s
+    Grace, Shield of the Phoenix, Erosion, Spectral Armor, Void Stone, Triton''s Conch,
+    Kinetic Cuirass, Phoenix Feather, The Cosmic Horror, Genji''s Guard, Doublet of
+    Binding, Eye of Providence, Blood-Bound Book, Spear of the Magus, Ethereal Staff,
+    Screeching Gargoyle, Void Shield, Doom Orb, Chronos'' Pendant, Stampede, Bancroft''s
+    Talon.'
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested
@@ -233,22 +232,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
   - Spear of Desolation
+  - Obsidian Shard
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Spectral Armor
-  - Kinetic Cuirass
+  - Erosion
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -257,11 +256,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Rod of Asclepius, Lifebinder, Shield of the Phoenix,
-    Erosion, Spectral Armor, Kinetic Cuirass, Chandra''s Grace, Eye of Providence,
-    Phoenix Feather, Void Stone, Glorious Pridwen, Void Shield, Spirit Robe, Stampede,
-    Blood-Bound Book, Umbral Link, Mystical Mail, Bancroft''s Talon, Doublet of Binding,
-    Triton''s Conch, Gladiator''s Shield, Genji''s Guard, Prophetic Cloak, Gluttonous
-    Grimoire, Freya''s Tears.'
+    Spectral Armor, Erosion, Chandra''s Grace, Kinetic Cuirass, Eye of Providence,
+    Phoenix Feather, Void Stone, Blood-Bound Book, Gluttonous Grimoire, Void Shield,
+    Umbral Link, Spirit Robe, Glorious Pridwen, Stampede, Bancroft''s Talon, Triton''s
+    Conch, Mystical Mail, Doublet of Binding, Genji''s Guard, Gladiator''s Shield,
+    The Cosmic Horror.'
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested

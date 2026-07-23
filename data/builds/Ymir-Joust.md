@@ -6,25 +6,25 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Contagion
-  - Divine Ruin
-  - Void Shield
-  - Void Stone
+  - Eye of Providence
+  - Kinetic Cuirass
+  - Shifter's Shield
   - Spectral Armor
-  - Soul Gem
+  - Amanita Charm
+  - Erosion
   flex_slots:
-  - Void Stone
-  - Void Shield
+  - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Spirit Robe — magical protection
+    swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Draconic Scale — physical protection
+    swap_item: Draconic Scale
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -36,56 +36,56 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Brawler’s Beat Stick
-  - Stygian Anchor
+  - Eye of Providence
   - Kinetic Cuirass
-  - Spirit Robe
+  - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
-  - Brawler’s Beat Stick
+  - Eye of Providence
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Gluttonous Grimoire
-  - Spear of Desolation
-  - The Cosmic Horror
-  - Doom Orb
-  - Spear of the Magus
-  - Obsidian Shard
+  - Stone of Binding
+  - Kinetic Cuirass
+  - Void Shield
+  - Void Stone
+  - Amanita Charm
+  - Erosion
   flex_slots:
-  - Doom Orb
-  - Obsidian Shard
+  - Kinetic Cuirass
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   starter: *id001

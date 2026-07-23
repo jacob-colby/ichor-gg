@@ -7,18 +7,18 @@ builds:
   archetype: core
   slot_order:
   - Divine Ruin
-  - Bracer of The Abyss
   - Bragi's Harp
-  - Death Metal
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Spear of the Magus
   - Soul Gem
-  - Triton's Conch
   flex_slots:
-  - Divine Ruin
-  - Bracer of The Abyss
+  - The Cosmic Horror
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -38,13 +38,13 @@ builds:
   slot_order:
   - Divine Ruin
   - Bragi's Harp
-  - Death Metal
   - Spear of Desolation
+  - The Cosmic Horror
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Death Metal
   - Triton's Conch
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -64,14 +64,14 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Divine Ruin
   - Stygian Anchor
-  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
+  - Stygian Anchor
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -92,28 +92,28 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Void Shield
-  - Void Stone
+  - Divine Ruin
   - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
-  - Spear of Desolation
+  - Doom Orb
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   starter: *id001

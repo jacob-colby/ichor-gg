@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
+  - Hydra's Lament
   - The Reaper
+  - Tekko-Kagi
   - The Crusher
-  - Eros' Bow
-  - Pharaoh's Curse
   flex_slots:
-  - Pharaoh's Curse
-  - Eros' Bow
+  - Tekko-Kagi
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -23,8 +23,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -53,8 +53,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -94,13 +94,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - The Reaper
-  - Spectral Armor
+  - The Crusher
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Jotunn's Revenge
-  - Spectral Armor
+  - Pharaoh's Curse
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -109,8 +109,8 @@ builds:
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -122,13 +122,13 @@ builds:
   slot_order:
   - Avenging Blade
   - Jotunn's Revenge
-  - Void Shield
   - Void Stone
   - The Reaper
+  - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Avenging Blade
-  - Void Shield
+  - Void Stone
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -137,8 +137,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -165,8 +165,8 @@ builds:
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -235,7 +235,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Contagion
+  - Jotunn's Revenge
   - The Reaper
   - Spectral Armor
   - Amanita Charm
@@ -243,7 +243,7 @@ builds:
   - Pharaoh's Curse
   flex_slots:
   - Pharaoh's Curse
-  - Contagion
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -255,8 +255,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: *id001
@@ -271,8 +271,8 @@ builds:
   - The Reaper
   - The Crusher
   flex_slots:
+  - Void Stone
   - Void Shield
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse

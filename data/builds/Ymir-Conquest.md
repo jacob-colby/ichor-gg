@@ -34,35 +34,35 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
+  - Eye of Providence
   - Kinetic Cuirass
-  - Ethereal Staff
-  - Ancient Signet
-  - Gluttonous Grimoire
-  - Spectral Armor
+  - Shifter's Shield
+  - Draconic Scale
+  - Amanita Charm
+  - Erosion
   flex_slots:
-  - Ancient Signet
-  - Ethereal Staff
+  - Erosion
+  - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Shroud of Vengeance — magical protection
+    swap_item: Shroud of Vengeance
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Genji''s Guard, Kinetic Cuirass, Gluttonous Grimoire, Spectral Armor,
-    Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Eye of Providence,
-    The Cosmic Horror, Soul Gem, Divine Ruin, Death Metal, Amanita Charm, Bancroft''s
-    Talon, Spear of the Magus, Polynomicon, Spear of Desolation, Yogi''s Necklace,
-    Chandra''s Grace, Bragi''s Harp, Helm of Radiance, Doom Orb, Chronos'' Pendant,
-    Breastplate of Valor, Lifebinder, Screeching Gargoyle.'
+    this god: Eye of Providence, Amanita Charm, Kinetic Cuirass, Erosion, Draconic
+    Scale, Spectral Armor, Shroud of Vengeance, Mantle Of Discord, Magi''s Cloak,
+    Shield of the Phoenix, Stone of Binding, Midgardian Mail, Phoenix Feather, Leviathan''s
+    Hide, Ancile, Spirit Robe, Void Stone, Gladiator''s Shield, Prophetic Cloak, Oni
+    Hunter''s Garb, Void Shield, Stampede, Freya''s Tears, Ragnarok''s Wake, Hide
+    of the Nemean Lion, Stygian Anchor.'
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -71,7 +71,7 @@ builds:
   slot_order:
   - Eye of Providence
   - Kinetic Cuirass
-  - Spirit Robe
+  - Shield of the Phoenix
   - Shifter's Shield
   - Amanita Charm
   - Erosion
@@ -83,53 +83,53 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Spirit Robe — physical protection
+    swap_item: Spirit Robe
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Spirit Robe, Kinetic Cuirass, Eye of Providence, Glorious
-    Pridwen, Shield of the Phoenix, Erosion, Shroud of Vengeance, Phoenix Feather,
-    Genji''s Guard, Mantle Of Discord, Magi''s Cloak, Stone of Binding, Prophetic
-    Cloak, Spectral Armor, Freya''s Tears, Rod of Asclepius, Blood-Bound Book, Draconic
-    Scale, Soul Gem, Stygian Anchor, Helm of Darkness, Bancroft''s Talon, Sphere of
-    Negation, Umbral Link, Helm of Radiance.'
+    this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Shield of the Phoenix,
+    Phoenix Feather, Erosion, Rod of Asclepius, Spirit Robe, Spectral Armor, Chandra''s
+    Grace, Lifebinder, Draconic Scale, Glorious Pridwen, Midgardian Mail, Shroud of
+    Vengeance, Blood-Bound Book, Leviathan''s Hide, Ancile, Void Stone, Gladiator''s
+    Shield, Soul Gem, Mantle Of Discord, Magi''s Cloak, Oni Hunter''s Garb, Void Shield,
+    Stone of Binding.'
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
+  - Eye of Providence
+  - Kinetic Cuirass
+  - Void Stone
   - Gluttonous Grimoire
-  - Spear of Desolation
-  - The Cosmic Horror
-  - Doom Orb
-  - Spear of the Magus
-  - Obsidian Shard
+  - Shifter's Shield
   flex_slots:
-  - Doom Orb
-  - Obsidian Shard
+  - Void Stone
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Cosmic Horror, Spear of the Magus, Gluttonous Grimoire, Spear
-    of Desolation, Doom Orb, Soul Gem, Obsidian Shard, The World Stone, Rod of Tahuti,
-    Dreamer''s Idol, Screeching Gargoyle, Genji''s Guard, Void Stone, Void Shield,
-    Stone of Binding, Kinetic Cuirass, Spectral Armor, Rod of Asclepius, Blood-Bound
-    Book, Ancient Signet, Ethereal Staff, Eye of Providence, Divine Ruin, Death Metal,
-    Amanita Charm, Bancroft''s Talon, Polynomicon.'
+    for this god: Kinetic Cuirass, Gluttonous Grimoire, Eye of Providence, Amanita
+    Charm, Stone of Binding, Void Stone, Void Shield, Erosion, The Cosmic Horror,
+    Soul Gem, Spectral Armor, Screeching Gargoyle, Spear of the Magus, Spear of Desolation,
+    Doom Orb, Draconic Scale, Shroud of Vengeance, Shield of the Phoenix, Obsidian
+    Shard, The World Stone, Midgardian Mail, Mantle Of Discord, Magi''s Cloak, Phoenix
+    Feather, Leviathan''s Hide, Ancile.'
   starter: *id001
 ---

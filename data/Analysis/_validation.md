@@ -2,18 +2,18 @@
 
 Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 
-**Mean coverage:** 60%  ·  **Win-weighted coverage:** 62%  ·  **Pooled rank corr:** 0.26 (n=54)
+**Mean coverage:** 58%  ·  **Win-weighted coverage:** 60%  ·  **Pooled rank corr:** 0.38 (n=54)
 
 | God | Coverage | Win-weighted | Community items |
 |---|---|---|---|
 | Agni | 80% | 82% | 5 |
 | Cernunnos | 25% | 32% | 4 |
 | Chiron | 80% | 81% | 5 |
-| Chronos | 40% | 40% | 5 |
-| Hercules | 40% | 39% | 5 |
+| Chronos | 40% | 42% | 5 |
+| Hercules | 20% | 19% | 5 |
 | Morgan Le Fay | 80% | 82% | 5 |
-| Princess Bari | 40% | 49% | 5 |
-| Ra | 100% | 100% | 5 |
-| Susano | 100% | 100% | 5 |
-| Ullr | 50% | 50% | 6 |
+| Princess Bari | 60% | 66% | 5 |
+| Ra | 80% | 81% | 5 |
+| Susano | 80% | 82% | 5 |
+| Ullr | 67% | 66% | 6 |
 | Ymir | 25% | 25% | 4 |

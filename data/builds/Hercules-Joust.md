@@ -6,28 +6,28 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Contagion
-  - Void Shield
-  - Void Stone
+  - Stygian Anchor
+  - Eye of Providence
+  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Void Shield
-  - Erosion
+  - Spectral Armor
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Spirit Robe — magical protection
+    swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: &id001
@@ -36,56 +36,56 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Brawler’s Beat Stick
-  - Stygian Anchor
+  - Eye of Providence
   - Kinetic Cuirass
-  - Spirit Robe
+  - Shield of the Phoenix
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
-  - Brawler’s Beat Stick
+  - Spectral Armor
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Spirit Robe — physical protection
+    swap_item: Spirit Robe
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Jotunn's Revenge
-  - The Reaper
-  - Pendulum Blade
-  - The Crusher
-  - Heartseeker
-  - Titan's Bane
+  - Stone of Binding
+  - Kinetic Cuirass
+  - Void Shield
+  - Void Stone
+  - Amanita Charm
+  - Erosion
   flex_slots:
-  - Pendulum Blade
-  - Heartseeker
+  - Stone of Binding
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   starter: *id001
@@ -94,20 +94,20 @@ builds:
   slot_order:
   - Eye of Providence
   - Kinetic Cuirass
+  - Void Stone
   - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Pharaoh's Curse
   flex_slots:
-  - Erosion
-  - Pharaoh's Curse
+  - Eye of Providence
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -150,7 +150,7 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Kinetic Cuirass
+  - Avenging Blade
   - Void Shield
   - Void Stone
   - Spectral Armor
@@ -158,17 +158,17 @@ builds:
   - Erosion
   flex_slots:
   - Spectral Armor
-  - Kinetic Cuirass
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion

@@ -6,25 +6,25 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Lernaean Bow
+  - Jotunn's Revenge
   - Tyrfing
-  - Rage
+  - Hydra's Lament
   - The Reaper
-  - Damaru
-  - Demon Blade
+  - Pendulum Blade
+  - The Crusher
   flex_slots:
-  - Rage
-  - Lernaean Bow
+  - Tyrfing
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -36,15 +36,15 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Tyrfing
+  - Jotunn's Revenge
   - Rage
+  - The Reaper
   - Damaru
   - Demon Blade
-  - Eros' Bow
-  - Pharaoh's Curse
+  - The Crusher
   flex_slots:
-  - Pharaoh's Curse
-  - Eros' Bow
+  - Damaru
+  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -53,8 +53,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -71,12 +71,12 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Hydra's Lament
+  - Pendulum Blade
   - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -93,21 +93,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Stygian Anchor
-  - Kinetic Cuirass
-  - Shield Splitter
-  - Spirit Robe
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
   - Amanita Charm
   - Erosion
   flex_slots:
   - Stygian Anchor
-  - Kinetic Cuirass
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Spirit Robe — magical protection
+    swap_item: Spirit Robe
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -120,15 +120,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Avenging Blade
   - Jotunn's Revenge
   - The Reaper
-  - Tekko-Kagi
+  - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
+  - Pendulum Blade
   - Heartseeker
-  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse

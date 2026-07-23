@@ -6,28 +6,28 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Contagion
-  - Void Shield
-  - Void Stone
-  - Spectral Armor
-  - Amanita Charm
-  - Erosion
+  - Jotunn's Revenge
+  - The Reaper
+  - Pendulum Blade
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   flex_slots:
-  - Void Shield
-  - Erosion
+  - Pendulum Blade
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: &id001
@@ -64,28 +64,28 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Brawler’s Beat Stick
   - Stygian Anchor
-  - Kinetic Cuirass
-  - Spirit Robe
+  - Shield Splitter
+  - The Reaper
+  - The Crusher
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
-  - Brawler’s Beat Stick
+  - Erosion
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Spirit Robe — magical protection
+    swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: *id001
