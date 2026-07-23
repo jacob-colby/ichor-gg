@@ -34,7 +34,7 @@ abilities:
   details:
   - If multiple enemies are in the area, the enemy closest to the center of the area
     will be hit
-  - Has a 3 hit chain. Attacks in order of 1x, 1x, 1.25x damage and swing time
+  - Has a 3 hit chain. Attacks in order of 1, 1, 1.25x damage and swing time
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
@@ -53,9 +53,9 @@ abilities:
   - 'Debuff Duration: 5 seconds'
   - 'Buff Duration: 5 seconds'
   description: 'ATTACK AFTER ABILITY DEBUFFS Notes: After using an ability, your next
-    Basic Attack will add a debuff stack to an enemy Strength Reduction : 10% Slow
-    : 15% Increased Damage Taken : 10% Debuff Duration : 5 seconds Buff Duration :
-    5 seconds Expand Ability Video'
+    Attack will add a debuff stack to an enemy Strength Reduction : 10% Slow : 15%
+    Increased Damage Taken : 10% Debuff Duration : 5 seconds Buff Duration : 5 seconds
+    Expand Ability Video'
 - slot: 1st Ability
   name: Storm Kata
   cooldown:
@@ -187,7 +187,7 @@ abilities:
     Expand Ability Video'
 aspects: []
 source_url: https://wiki.smite2.com/w/Susano
-last_verified: '2026-07-19'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 - Susano Basic Attack

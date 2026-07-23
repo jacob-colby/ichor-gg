@@ -13,7 +13,7 @@ builds_from:
 - Hunter's Bow
 builds_into: []
 source_url: https://wiki.smite2.com/w/Demon_Blade
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Critically Strike: +30% Attack Speed for 3s.

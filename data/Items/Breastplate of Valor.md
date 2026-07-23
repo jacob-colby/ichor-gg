@@ -14,7 +14,7 @@ builds_from:
 - Mana Tome
 builds_into: []
 source_url: https://wiki.smite2.com/w/Breastplate_of_Valor
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 On 500 (+25 per Level) Health lost: -1s Ability Cooldowns.

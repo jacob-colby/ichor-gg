@@ -11,7 +11,7 @@ builds_from:
 - Skeggox
 builds_into: []
 source_url: https://wiki.smite2.com/w/Oath-Sworn_Spear
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Ability Hit: Target is -1 Physical Protection per your Level for 4s.

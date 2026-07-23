@@ -14,7 +14,7 @@ builds_from:
 - Bowl Drum
 builds_into: []
 source_url: https://wiki.smite2.com/w/The_Cosmic_Horror
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Echo > Cooldown Rate: +20% Echo Damage Echo < Cooldown Rate: +35 Intelligence Echo = Cooldown Rate: +20% Echo Damage & +35 Intelligence

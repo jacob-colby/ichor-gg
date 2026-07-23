@@ -15,7 +15,7 @@ builds_from:
 - Adroit Ring
 builds_into: []
 source_url: https://wiki.smite2.com/w/Shield_of_the_Phoenix
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Ability Hit a God: +1.5% Health Heal +2% Mana Restore Triggers once per Ability, per god.

@@ -26,7 +26,7 @@ builds_into:
 - Tekko-Kagi
 - Tyrfing
 source_url: https://wiki.smite2.com/w/Skeggox
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 

@@ -85,8 +85,7 @@ abilities:
   - 75.0
   - 80.0
   details:
-  - For a period after activation, Basic Attacks fire solar rays, dealing Magical
-    Damage
+  - For a period after activation, Attacks fire solar rays, dealing Magical Damage
   - The solar rays count as abilities, trigger ability effects at 50% effectiveness,
     and pierce targets
   - Enemies looking at you gain additional Slow stacks and are Blinded by the explosion
@@ -98,20 +97,20 @@ abilities:
   - 'Damage Scaling: 70% Intelligence'
   - 'Solar Ray Damage: 10 | 20 | 30 | 40 | 50'
   - 'Solar Ray Damage Scaling: 85% Intelligence'
-  - 'Solar Ray Duration: 2 | 2.5 | 3 | 3.5 | 4 seconds'
+  - 'Solar Ray Duration: 4 seconds'
   - 'Slow: 5%'
   - 'Slow Duration: 3 seconds'
   - 'Radius: 4.8 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: 'AREA SLOW, CONDITIONAL BLIND Notes: For a period after activation,
-    Basic Attacks fire solar rays , dealing Magical Damage Emanate light in the area
-    around you that repeatedly Slows enemies before exploding dealing Magical Damage
-    Damage : 85 | 135 | 185 | 235 | 285 Damage Scaling : 70% Intelligence Solar Ray
-    Damage : 10 | 20 | 30 | 40 | 50 Solar Ray Damage Scaling : 85% Intelligence Solar
-    Ray Duration : 2 | 2.5 | 3 | 3.5 | 4 seconds Slow : 5% Slow Duration : 3 seconds
-    Radius : 4.8 meters Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 60 |
-    65 | 70 | 75 | 80 mana Expand Ability Video'
+    Attacks fire solar rays , dealing Magical Damage Emanate light in the area around
+    you that repeatedly Slows enemies before exploding dealing Magical Damage Damage
+    : 85 | 135 | 185 | 235 | 285 Damage Scaling : 70% Intelligence Solar Ray Damage
+    : 10 | 20 | 30 | 40 | 50 Solar Ray Damage Scaling : 85% Intelligence Solar Ray
+    Duration : 4 seconds Slow : 5% Slow Duration : 3 seconds Radius : 4.8 meters Cooldown
+    : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand
+    Ability Video'
 - slot: 3rd Ability
   name: Solar Blessing
   cooldown:
@@ -127,29 +126,27 @@ abilities:
   - 95.0
   - 105.0
   details:
-  - The light empowers you and allied Gods in the area, granting Strength, Intelligence,
-    Physical Protection, and Magical Protection
+  - The light empowers you and allied gods in the area, granting Strength, Intelligence,
+    and Protections
   - The pillar of light ticks 6 times over 6 seconds
   - 'Damage Per Tick: 20 | 32 | 44 | 56 | 68'
   - 'Damage Scaling Per Tick: 35% Intelligence'
-  - 'Heal Per Tick: 10 | 17 | 24 | 31 | 38'
+  - 'Heal Per Tick: 16 | 22 | 28 | 34 | 40'
   - 'Strength: 10 | 15 | 20 | 25 | 30'
   - 'Intelligence: 20 | 25 | 30 | 35 | 40'
-  - 'Physical Protection: 15 | 20 | 25 | 30 | 35'
-  - 'Magical Protection: 15 | 20 | 25 | 30 | 35'
+  - 'Protections: 15 | 20 | 25 | 30 | 35'
   - 'Range: 8.8 meters'
   - 'Radius: 3.2 meters'
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 65 | 75 | 85 | 95 | 105 mana'
-  description: 'AREA HEAL BUFF DAMAGE Notes: The light empowers you and allied Gods
-    in the area, granting Strength , Intelligence , Physical Protection , and Magical
-    Protection Summon a pillar of blessed light repeatedly dealing Magical Damage
-    and Healing allies Damage Per Tick : 20 | 32 | 44 | 56 | 68 Damage Scaling Per
-    Tick : 35% Intelligence Heal Per Tick : 10 | 17 | 24 | 31 | 38 Strength : 10 |
-    15 | 20 | 25 | 30 Intelligence : 20 | 25 | 30 | 35 | 40 Physical Protection :
-    15 | 20 | 25 | 30 | 35 Magical Protection : 15 | 20 | 25 | 30 | 35 Range : 8.8
-    meters Radius : 3.2 meters Cooldown : 15 | 14.5 | 14 | 13.5 | 13 seconds Cost
-    : 65 | 75 | 85 | 95 | 105 mana Expand Ability Video'
+  description: 'AREA HEAL BUFF DAMAGE Notes: The light empowers you and allied gods
+    in the area, granting Strength , Intelligence , and Protections Summon a pillar
+    of blessed light repeatedly dealing Magical Damage and Healing allies Damage Per
+    Tick : 20 | 32 | 44 | 56 | 68 Damage Scaling Per Tick : 35% Intelligence Heal
+    Per Tick : 16 | 22 | 28 | 34 | 40 Strength : 10 | 15 | 20 | 25 | 30 Intelligence
+    : 20 | 25 | 30 | 35 | 40 Protections : 15 | 20 | 25 | 30 | 35 Range : 8.8 meters
+    Radius : 3.2 meters Cooldown : 15 | 14.5 | 14 | 13.5 | 13 seconds Cost : 65 |
+    75 | 85 | 95 | 105 mana Expand Ability Video'
 - slot: Ultimate
   name: Searing Pain
   cooldown:
@@ -161,27 +158,27 @@ abilities:
   cost:
   - 90.0
   details:
-  - Deals bonus damage to Gods based on their Max HP
+  - Deals bonus damage to gods based on their Max Health
   - This ability passes through and damages all enemies, and passes through walls
   - 'Damage: 375 | 450 | 525 | 600 | 675'
   - 'Damage Scaling: 125% Intelligence'
-  - 'True Damage: 8% Target''s Max HP'
+  - 'True Damage: 8% of Enemy''s Max Health'
   - 'Range: 19.2 meters'
   - 'Radius: 1.6 meters'
   - 'Cooldown: 80 | 75 | 70 | 65 | 60 seconds'
   - 'Cost: 90 mana'
   description: 'LONG RANGE DAMAGE BEAM Notes: Blast enemies in front of you with a
     wave of extreme heat, dealing Magical Damage Damage : 375 | 450 | 525 | 600 |
-    675 Damage Scaling : 125% Intelligence True Damage : 8% Target''s Max HP Range
-    : 19.2 meters Radius : 1.6 meters Cooldown : 80 | 75 | 70 | 65 | 60 seconds Cost
-    : 90 mana Expand Ability Video'
+    675 Damage Scaling : 125% Intelligence True Damage : 8% of Enemy''s Max Health
+    Range : 19.2 meters Radius : 1.6 meters Cooldown : 80 | 75 | 70 | 65 | 60 seconds
+    Cost : 90 mana Expand Ability Video'
 aspects:
 - name: Aspect of Thermotherapy
   kit_changes: Solar Blessing and Searing Pain only deal base damage with no scaling.
     In return, Solar Blessing can be placed on allied gods, attaching to them and
     Searing Pain Heals allied hits.
 source_url: https://wiki.smite2.com/w/Ra
-last_verified: '2026-07-19'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 - Ra Basic Attack

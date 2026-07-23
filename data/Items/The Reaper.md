@@ -15,7 +15,7 @@ builds_from:
 - Cursed Sickle
 builds_into: []
 source_url: https://wiki.smite2.com/w/The_Reaper
-last_verified: '2026-07-17'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Kill a God: Heal +15% of Slain God's Max Health Assist a God: Heal +7.5% of Slain God's Max Health During Moonlight Phase: Heal +15% of Slain God's Max Health, on Kill or Assist

@@ -15,7 +15,7 @@ builds_from:
 - Adroit Ring
 builds_into: []
 source_url: https://wiki.smite2.com/w/Hydra's_Lament
-last_verified: '2026-07-17'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Ability Used: Bonus Damage on your next successful Attack. +30% for Melee or +20% for Ranged Buff lasts 8s.

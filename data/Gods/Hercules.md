@@ -164,10 +164,10 @@ aspects:
 - name: Aspect of Preservation
   kit_changes: Mitigate Wounds no longer Heals based on damage or provides Attack
     Speed. Instead Hercules gains a Stack when he or nearby allied gods take damage
-    from Basic Attacks and when the ability ends, stacks are expended to Heal nearby
-    allied gods.
+    from Attacks and when the ability ends, stacks are expended to Heal nearby allied
+    gods.
 source_url: https://wiki.smite2.com/w/Hercules
-last_verified: '2026-07-19'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 - Hercules Basic Attack

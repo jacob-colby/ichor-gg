@@ -12,7 +12,7 @@ builds_from:
 - Legionnaire Armor
 builds_into: []
 source_url: https://wiki.smite2.com/w/Helm_of_Radiance
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Take Physical Damage: +7 Physical Protection for 6s. Stacks up to 4 times.

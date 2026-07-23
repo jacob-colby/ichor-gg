@@ -14,7 +14,7 @@ builds_from:
 - Oracle Staff
 builds_into: []
 source_url: https://wiki.smite2.com/w/The_World_Stone
-last_verified: '2026-07-17'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 -30% Cooldown for your Ultimate Ability.

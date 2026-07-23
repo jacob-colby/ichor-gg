@@ -14,7 +14,7 @@ builds_from:
 - Cleric's Cloak
 builds_into: []
 source_url: https://wiki.smite2.com/w/Shroud_of_Vengeance
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 When Hard Crowd Controlled: Release a shockwave around yourself, dealing 50 (+40% of your Protections, up to 650) Physical Damage.

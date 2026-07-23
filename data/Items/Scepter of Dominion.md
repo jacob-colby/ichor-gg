@@ -15,7 +15,7 @@ builds_from:
 - Mana Tome
 builds_into: []
 source_url: https://wiki.smite2.com/w/Scepter_of_Dominion
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 On Use: Create a zone that puts gods into Stasis. The Zone appears after 1s The Stasis lasts 2s Cooldown: 90s You can own up to 3 active items at once

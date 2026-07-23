@@ -13,7 +13,7 @@ builds_from:
 - Adroit Ring
 builds_into: []
 source_url: https://wiki.smite2.com/w/Gem_of_Focus
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Ability Used: Gain a stack of Momentum. Momentum grants +7% Pathfinding for 8s. Stacks up to 3 times.

@@ -13,7 +13,7 @@ builds_from:
 - Cursed Sickle
 builds_into: []
 source_url: https://wiki.smite2.com/w/Umbral_Link
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Above 50% Health: Split your Lifesteal Healing with allies within 11.2m. +10 Physical and Magical Protections for 8s per unique ally Healed

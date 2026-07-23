@@ -12,7 +12,7 @@ builds_from:
 - Hooked Sword
 builds_into: []
 source_url: https://wiki.smite2.com/w/Musashi's_Dual_Swords
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Critically Strike: +15% Movement Speed for 5s.

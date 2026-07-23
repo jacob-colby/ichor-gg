@@ -15,7 +15,7 @@ builds_from:
 - Medal of Disruption
 builds_into: []
 source_url: https://wiki.smite2.com/w/Phoenix_Feather
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 On Use: Fire 3 Pulses that Heal you and True Damage enemies within 3.2m. Heal = +75 Health +7.5 Missing Health True Damage = +3% Max Health from Items Cooldown: 120s You can own up to 3 active items at once

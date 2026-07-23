@@ -15,7 +15,7 @@ builds_from:
 - Caestus
 builds_into: []
 source_url: https://wiki.smite2.com/w/Jotunn's_Revenge
-last_verified: '2026-07-17'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 God Kill or Assist: -1s Cooldown for Non-Ultimate Abilities -5s Cooldown for Ultimate Abilities

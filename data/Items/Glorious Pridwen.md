@@ -16,7 +16,7 @@ builds_from:
 - Adroit Ring
 builds_into: []
 source_url: https://wiki.smite2.com/w/Glorious_Pridwen
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 On Use: Explode (4.8m radius): Deal Magical Damage (40% of Protections) Gain a Shield (125% of Protections) for 5s. When the Shield expires or breaks: Explode again: Deal Magic Damage (70% of your Protections). Cooldown: 45s You can own up to 3 active items at once

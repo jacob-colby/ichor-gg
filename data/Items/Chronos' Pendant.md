@@ -12,7 +12,7 @@ builds_from:
 - Adroit Ring
 builds_into: []
 source_url: https://wiki.smite2.com/w/Chronos'_Pendant
-last_verified: '2026-07-17'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Every 10s: -1s Ability Cooldowns.

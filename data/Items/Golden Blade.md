@@ -15,7 +15,7 @@ builds_from:
 - Manchu Bow
 builds_into: []
 source_url: https://wiki.smite2.com/w/Golden_Blade
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Attacks deal bonus Physical Damage. Damage = +10 + 20% of your Item Protections Damages all Enemies within 2.5m

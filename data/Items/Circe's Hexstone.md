@@ -16,7 +16,7 @@ builds_from:
 - Adroit Ring
 builds_into: []
 source_url: https://wiki.smite2.com/w/Circe's_Hexstone
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 On Use: Become Polymorphed Dash Forward, dealing 50 Physical Damage +CC Immune +60 Physical and Magical Protection On Enemy God Hit: Knock Up Bonus Damage equal to 10% of Current Health -40s Cooldown Cooldown: 120s You can own up to 3 active items at once

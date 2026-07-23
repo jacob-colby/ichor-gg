@@ -166,7 +166,7 @@ aspects:
     stacking 5 times. Flame Wave and Rain of Fire consume ignites dealing a burst
     of damage. Rain of Fire deals reduced damage.
 source_url: https://wiki.smite2.com/w/Agni
-last_verified: '2026-07-19'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 - Agni Basic Attack

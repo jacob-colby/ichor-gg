@@ -16,7 +16,7 @@ builds_from:
 - Olmec Blue
 builds_into: []
 source_url: https://wiki.smite2.com/w/Lifebinder
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 On Use: Fire a Projectile that deals 60 (+8 per Level) Magical Damage. Marks enemy Gods for 6s First ally to damage a Marked target: +60 (+8 per Level) Heal +60 (+8 per Level) Shield Consumes the Mark Cooldown: 20s You can own up to 3 active items at once

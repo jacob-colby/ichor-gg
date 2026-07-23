@@ -14,7 +14,7 @@ builds_from:
 - Bowl Drum
 builds_into: []
 source_url: https://wiki.smite2.com/w/Damaru
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Critically Strike: +8% Ability Damage for 5s. Max 3 stacks Echo: +8% Attack Damage for 5s. Max 3 stacks.

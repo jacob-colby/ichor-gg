@@ -90,7 +90,7 @@ abilities:
     hitting more than 4 targets continues scaling the damage)'
   - If you have at least 2.5 Attack Speed, Masterful Shot becomes Masterful Flurry,
     quickly firing 3 arrows with reduced scaling at each Marked enemy god. Each arrow
-    procs Basic Attack item effects and increases Chiron's Attack Damage
+    procs Attack Item Effects and increases Chiron's Attack Damage
   - Both ability modifiers can be active at once
   - This ability cannot be activated unless an enemy has a mark
   - 'Damage: 55 | 100 | 145 | 195 | 240'
@@ -113,16 +113,16 @@ abilities:
     hit, up to 4 targets (Note: Despite the tooltip, hitting more than 4 targets continues
     scaling the damage) If you have at least 2.5 Attack Speed, becomes Masterful Flurry,
     quickly firing 3 arrows with reduced scaling at each Marked enemy god. Each arrow
-    procs Basic Attack item effects and increases Chiron''s Attack Damage Apply Target
-    Mark when you damage enemies with your Basic Attacks or abilities, reducing their
-    Physical Protections . Activating this ability fires seeking arrows toward all
-    marked targets, dealing Physical Damage and Slowing them Damage : 55 | 100 | 145
-    | 195 | 240 Damage Scaling : 70% Strength Refire Damage : 55 | 100 | 145 | 195
-    | 240 Refire Damage Scaling : 70% Strength + 15% Per Target Hit Flurry Damage
-    : 27.5% Strength + 45% Attack Damage Physical Protection Reduction : 10% Debuff
-    Duration : 3.5 seconds Slow : 25 | 27.5 | 30 | 32.5 | 35% Slow Duration : 2 seconds
-    Attack Damage Buff : 8 | 11 | 14 | 17 | 20 Max Buff Stacks : 5 Buff Duration :
-    5 seconds Cooldown : 15 seconds Cost : 65 mana Expand Ability Video'
+    procs Attack Item Effects and increases Chiron''s Attack Damage Apply Target Mark
+    when you damage enemies with your Attacks or abilities, reducing their Physical
+    Protections . Activating this ability fires seeking arrows toward all marked targets,
+    dealing Physical Damage and Slowing them Damage : 55 | 100 | 145 | 195 | 240 Damage
+    Scaling : 70% Strength Refire Damage : 55 | 100 | 145 | 195 | 240 Refire Damage
+    Scaling : 70% Strength + 15% Per Target Hit Flurry Damage : 27.5% Strength + 45%
+    Attack Damage Physical Protection Reduction : 10% Debuff Duration : 3.5 seconds
+    Slow : 25 | 27.5 | 30 | 32.5 | 35% Slow Duration : 2 seconds Attack Damage Buff
+    : 8 | 11 | 14 | 17 | 20 Max Buff Stacks : 5 Buff Duration : 5 seconds Cooldown
+    : 15 seconds Cost : 65 mana Expand Ability Video'
 - slot: 3rd Ability
   name: Giddyup!
   cooldown:
@@ -132,7 +132,7 @@ abilities:
   details:
   - You are displacement Immune while Dashing
   - You gain Strength for the duration of the Dash
-  - You can fire Basic Attacks and Masterful Shot while Dashing
+  - You can fire Attacks and Masterful Shot while Dashing
   - 'Damage: 75 | 105 | 135 | 165 | 195'
   - 'Damage Scaling: 50% Strength'
   - 'Strength: 10 | 20 | 30 | 40 | 50'
@@ -179,7 +179,7 @@ aspects:
     slows enemies, and when it hits allies, grants them Attack Speed, Shield and applies
     Herbal Medicine's buff.
 source_url: https://wiki.smite2.com/w/Chiron
-last_verified: '2026-07-19'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 - Chiron Basic Attack

@@ -16,7 +16,7 @@ builds_from:
 - Cursed Sickle
 builds_into: []
 source_url: https://wiki.smite2.com/w/Soul_Gem
-last_verified: '2026-07-17'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Ability Hit: +1 Stack. Three Stacks: Next Ability Hit: Deals Bonus Damage (40% Intelligence) +20(+6 per Level) Heal you and allies within 3.2m Removes the Stacks

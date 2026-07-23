@@ -15,7 +15,7 @@ builds_from:
 - Runic Hide
 builds_into: []
 source_url: https://wiki.smite2.com/w/Alchemist_Coat
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Use a Consumable: Gain 10 Dampening for 8s. Open inventory slot: Gain a Multi Potion once every 60s

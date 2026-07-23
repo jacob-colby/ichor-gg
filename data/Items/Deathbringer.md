@@ -12,7 +12,7 @@ builds_from:
 - Kopesh
 builds_into: []
 source_url: https://wiki.smite2.com/w/Deathbringer
-last_verified: '2026-07-17'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 +35% Critical Strike Damage.

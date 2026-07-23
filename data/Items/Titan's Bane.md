@@ -12,7 +12,7 @@ builds_from:
 - Void Shard
 builds_into: []
 source_url: https://wiki.smite2.com/w/Titan's_Bane
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 

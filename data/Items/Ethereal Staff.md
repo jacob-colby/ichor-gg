@@ -14,7 +14,7 @@ builds_from:
 - Cleric's Cloak
 builds_into: []
 source_url: https://wiki.smite2.com/w/Ethereal_Staff
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Ability Hit a God: Steal 6% Max Health and Mana from a single target. Triggers once per Ability Stacks last 60s Stacks decay 1 at a time

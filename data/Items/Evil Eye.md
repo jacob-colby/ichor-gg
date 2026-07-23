@@ -2,7 +2,7 @@
 type: smite-item
 name: Evil Eye
 tier: 2
-cost: null
+cost: 1200
 stats:
   Intelligence: '45'
 passive: null
@@ -17,7 +17,7 @@ builds_into:
 - Spear of Desolation
 - Spear of the Magus
 source_url: https://wiki.smite2.com/w/Evil_Eye
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 

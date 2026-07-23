@@ -15,7 +15,7 @@ builds_from:
 - Adroit Ring
 builds_into: []
 source_url: https://wiki.smite2.com/w/Arondight
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 On Use: Reveal enemy Gods within 17.6m for 6s. Reveal persists through Stealth If any God is revealed, +25% Movement Speed for 6s First time you damage a revealed God: +50 (+50% Strength) Physical Damage Cooldown: 60s You can own up to 3 active items at once

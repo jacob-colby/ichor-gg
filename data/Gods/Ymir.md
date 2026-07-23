@@ -170,7 +170,7 @@ abilities:
     : 70 seconds Cost : 80 | 90 | 100 | 110 | 120 mana Expand Ability Video'
 aspects: []
 source_url: https://wiki.smite2.com/w/Ymir
-last_verified: '2026-07-21'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 - Ymir Basic Attack

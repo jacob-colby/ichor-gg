@@ -13,7 +13,7 @@ builds_from:
 - Circle of Protection
 builds_into: []
 source_url: https://wiki.smite2.com/w/Void_Stone
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Enemies Within 8.8m: -10% Magical Protection. Range Scaling Debuff: +50% at Close Range -50% at Maximum Range

@@ -13,7 +13,7 @@ builds_from:
 - Circle of Protection
 builds_into: []
 source_url: https://wiki.smite2.com/w/Magi's_Cloak
-last_verified: '2026-07-17'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Every 90s: Gain a Hard Crowd Control protective bubble. When triggered, gain Crowd Control Immunity for 1.5s.

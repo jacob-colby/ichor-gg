@@ -64,8 +64,8 @@ abilities:
   details:
   - 'Mystic Surge: +20% Lob Damage and now applies a Slow. +20% Rolling Damage and
     now applies a Stun. The Bell itself is 1.67x the size'
-  - Warding Gusts will pull the Bell towards you if it is within Basic Attack range
-    and has landed before casting Warding Gusts
+  - Warding Gusts will pull the Bell towards you if it is within Attack range and
+    has landed before casting Warding Gusts
   - You can only have 3 Bells deployed at once
   - Pushed Bells pass through and damage all enemies, but bounce off walls
   - 'Lob Damage: 70 | 115 | 160 | 205 | 250'
@@ -115,7 +115,7 @@ abilities:
   - 15.5
   - 15.0
   details:
-  - Hitting a God grants 50 Spirit and reduces this ability's Cooldown by 25%
+  - Hitting a god grants 50 Spirit and reduces this ability's Cooldown by 25%
   - 'Mystic Surge: +20% Damage, dealt instantly in a line. Bells pushed are treated
     as Mystic Surge Bells. Gain an additional 50 Spirit and 10% Attack Speed on god
     hit.'
@@ -162,7 +162,7 @@ abilities:
     Radius : 5.6 meters Cooldown : 110 seconds Expand Ability Video'
 aspects: []
 source_url: https://wiki.smite2.com/w/Princess_Bari
-last_verified: '2026-07-19'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 - Princess Bari Basic Attack

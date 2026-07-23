@@ -14,7 +14,7 @@ builds_from:
 - Selflessness
 builds_into: []
 source_url: https://wiki.smite2.com/w/Heroism
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 +1 Gold per second. When an ally within 8.8m is hit by Hard Crowd Control: Give them a Shield equal to 50 +10% of your Max Health Cooldown: 15s Requires Level 20

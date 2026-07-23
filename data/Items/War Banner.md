@@ -15,7 +15,7 @@ builds_from:
 - War Flag
 builds_into: []
 source_url: https://wiki.smite2.com/w/War_Banner
-last_verified: '2026-07-18'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 Kill or Assist Minion or Jungle Monster: You and allies within 8.8m gain: +1% Health Heal +1.25% Mana Restore +3.5% Movement Speed +6.5% Attack Speed Movement and Attack Speed Buff lasts 10s, Stacks up to 6 times Requires Level 20 to upgrade.

@@ -13,7 +13,7 @@ builds_from:
 - Hooked Sword
 builds_into: []
 source_url: https://wiki.smite2.com/w/Rage
-last_verified: '2026-07-17'
+last_verified: '2026-07-23'
 ---
 <!-- WIKI:START -->
 God Kill or Assist: +4% Critical Strike Chance (Max 20%) After 5 God Kills or Assists: +10% additional Critical Strike Chance
