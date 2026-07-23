@@ -25,6 +25,7 @@
 | Task 4 (role vocab) | 58% | 60% | 0.38 (n=54) | Spearman +0.12 (the deeper signal). Coverage −2pts is within-class churn: Hercules/Ymir/Ra/Susano cores are now correctly tanky/appropriate, but community favors single-prot CDR tanks (Breastplate/Genji's, our ranks 11–15) over our dual-prot all-rounders. Hypothesis for Task 9: tank maps lack Cooldown Rate. Bari 40→60, Ullr 50→67. |
 | Task 7 (kit blend 0.3) | 60% | 61% | 0.33 (n=54) | Swept blend {0, 0.3, 0.5, 0.7}: blend=0 reproduces Task 4 exactly (no bug). Kit overlay lifts Susano 80→100% (pure-Str kit), no god worse; costs ~0.04 Spearman (diffuse ranking noise). Kept 0.3 — smallest blend capturing the full gain. |
 | Task 9 (disagreement fixes) | 66% | 68% | 0.32 (n=54) | KEPT: (1) CDR 0.5 on Tank/Guardian/Support maps — Hercules 20→40%, Ymir 25→50%, plateau beyond 0.5. (2) `lifesteal_caps` rule: cap 2 for physical carries — Cernunnos 25→50% (Devourer's+Riptalon pair), no Agni regression (mode-wide cap cost Agni 80→60, rejected). REJECTED: kit-share hybrid damage-filter relaxation (Bracer of The Abyss case) — cov −0.5, Spearman −0.03, floodgate cost exceeds gain. Evil Eye "missed meta" is a tier-2 component in mid-game inventories — justified exclusion for a final-build recommender. |
+| Task 11 (fun-crit) | 66% | 68% | 0.32 (n=54) | Unchanged, as designed — fun builds are isolated from validation (core profile only). fun-crit emitted for the 8 non-crit-eligible gods, base kit only; crit Ymir is real (3 crit items via require seed). |
 
 ---
 
