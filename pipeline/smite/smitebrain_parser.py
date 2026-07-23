@@ -83,11 +83,13 @@ def _parse_core_recommended_build(soup) -> list:
     # correct fallback — a real build never lists the same item twice).
     chosen, used = [], set()
     for n in sorted(slot_alternatives):
-        for entry in slot_alternatives[n]:
-            if entry["name"] not in used:
-                chosen.append(entry)
-                used.add(entry["name"])
-                break
+        alts = slot_alternatives[n]
+        picked = next((e for e in alts if e["name"] not in used), None)
+        if picked is None:
+            continue
+        used.add(picked["name"])
+        others = [e for e in alts if e["name"] != picked["name"]][:2]
+        chosen.append({**picked, "alternates": others} if others else picked)
     return chosen
 
 

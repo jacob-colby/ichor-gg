@@ -12,7 +12,8 @@ def _chiron_build_html():
 def test_parse_build_page_extracts_top_pick_per_core_slot_in_order():
     result = smitebrain_parser.parse_build_page(_chiron_build_html())
 
-    assert result["items"] == [
+    top = [{"name": i["name"], "pick_rate": i["pick_rate"], "win_rate": i["win_rate"]} for i in result["items"]]
+    assert top == [
         {"name": "Transcendence", "pick_rate": 0.61, "win_rate": 0.49},
         {"name": "Ninja Tabi", "pick_rate": 0.58, "win_rate": 0.50},
         {"name": "Devourer's Gauntlet", "pick_rate": 0.55, "win_rate": 0.52},
@@ -136,3 +137,12 @@ def test_core_build_dedups_via_next_best_alternative():
     result = smitebrain_parser.parse_build_page(html)
     names = [e["name"] for e in result["items"]]
     assert names == ["Titan's Bane", "The Crusher"]   # no duplicate
+
+
+def test_parse_build_page_captures_per_slot_alternates():
+    result = smitebrain_parser.parse_build_page(_chiron_build_html())
+    # at least one slot should carry alternates (the lower-pick tiles we used to drop)
+    with_alts = [it for it in result["items"] if it.get("alternates")]
+    assert with_alts, "expected some slots to have alternates"
+    alt = with_alts[0]["alternates"][0]
+    assert "name" in alt and "pick_rate" in alt and "win_rate" in alt

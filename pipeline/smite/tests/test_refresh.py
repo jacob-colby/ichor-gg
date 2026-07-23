@@ -68,7 +68,8 @@ def test_refresh_god_builds_writes_community_entry(tmp_path, monkeypatch):
     frontmatter, _ = notes.read_note(tmp_path / "Chiron-Conquest.md")
     community = next(b for b in frontmatter["builds"] if b["source"] == "community")
     assert community["aspect"] == "Aspect of the Heroic Tutor"
-    assert {"name": "Transcendence", "pick_rate": 0.61, "win_rate": 0.49} in community["slot_order"]
+    top = community["slot_order"][0]
+    assert top["name"] == "Transcendence" and top["pick_rate"] == 0.61 and top["win_rate"] == 0.49
     assert len(community["slot_order"]) == 3  # top pick per Core slot in the fixture, not every tile
     assert community["last_verified"] == date.today().isoformat()
 
