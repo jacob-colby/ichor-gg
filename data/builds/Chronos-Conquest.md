@@ -69,12 +69,12 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Doom Orb
@@ -169,8 +169,8 @@ builds:
   - Chronos' Pendant
   - Spear of Desolation
   - Spectral Armor
-  - Rod of Asclepius
   - Erosion
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Erosion
@@ -189,7 +189,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Asclepius, Lifebinder, Soul Gem, Amanita Charm, Triton''s Conch,
+    this god: Soul Gem, Rod of Asclepius, Lifebinder, Amanita Charm, Triton''s Conch,
     Chronos'' Pendant, Erosion, Spectral Armor, Genji''s Guard, Void Stone, Gluttonous
     Grimoire, Chandra''s Grace, Ethereal Staff, Gem of Focus, Screeching Gargoyle,
     Shield of the Phoenix, Kinetic Cuirass, Doublet of Binding, Gladiator''s Shield,
@@ -200,11 +200,11 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Obsidian Shard
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Obsidian Shard
@@ -237,8 +237,8 @@ builds:
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
-  - Rod of Asclepius
   - Erosion
+  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
   - Eye of Providence
@@ -256,23 +256,23 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Rod of Asclepius, Lifebinder, Shield of the Phoenix,
-    Erosion, Soul Gem, Spectral Armor, Kinetic Cuirass, Chandra''s Grace, Eye of Providence,
+    this god: Amanita Charm, Soul Gem, Rod of Asclepius, Lifebinder, Shield of the
+    Phoenix, Erosion, Spectral Armor, Kinetic Cuirass, Chandra''s Grace, Eye of Providence,
     Blood-Bound Book, Glorious Pridwen, Spirit Robe, Phoenix Feather, Void Stone,
-    Bancroft''s Talon, Void Shield, Stampede, Triton''s Conch, Genji''s Guard, Mystical
-    Mail, Doublet of Binding, Prophetic Cloak, Gladiator''s Shield, Gluttonous Grimoire,
-    Sphere of Negation, Freya''s Tears.'
+    Umbral Link, Bancroft''s Talon, Void Shield, Stampede, Triton''s Conch, Genji''s
+    Guard, Mystical Mail, Doublet of Binding, Prophetic Cloak, Gladiator''s Shield,
+    Gluttonous Grimoire, Sphere of Negation.'
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Soul Gem
   - Void Stone
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Obsidian Shard
   - Spear of the Magus

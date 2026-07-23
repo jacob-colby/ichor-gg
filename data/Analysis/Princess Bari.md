@@ -14,7 +14,7 @@
 | Spectral Armor | 0.32 | 0.31 | 0.48 | 0.50 | 0.00 | 0.00 | undervalued | anti-crit, aura | **UNDERRATED** |
 | Rod of Asclepius | 0.32 | 0.31 | 0.48 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Blood-Bound Book | 0.32 | 0.30 | 0.48 | 0.50 | 0.00 | 0.00 | undervalued | sustain | **UNDERRATED** |
-| Soul Gem | 0.32 | 0.30 | 0.41 | 0.40 | 0.22 | 0.10 | fair | burst, sustain |  |
+| Soul Gem | 0.32 | 0.30 | 0.41 | 0.40 | 0.22 | 0.10 | fair | burst, sustain, aura |  |
 | Ancient Signet | 0.31 | 0.30 | 0.41 | 0.50 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
 | Ethereal Staff | 0.31 | 0.30 | 0.47 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.31 | 0.30 | 0.47 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
@@ -76,7 +76,7 @@
 | Helm of Darkness | 0.25 | 0.17 | 0.27 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
 | Sphere of Negation | 0.24 | 0.17 | 0.26 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Resolute Mantle | 0.24 | 0.16 | 0.26 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
-| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
+| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain, aura |  |
 | Glorious Pridwen | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Eye of Erebus | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Xibalban Effigy | 0.23 | 0.15 | 0.23 | 0.50 | 0.00 | 0.00 | premium |  |  |

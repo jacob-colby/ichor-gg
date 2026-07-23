@@ -10,7 +10,7 @@ builds:
   - Bracer of The Abyss
   - Bragi's Harp
   - Death Metal
-  - Rod of Asclepius
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Divine Ruin
@@ -23,8 +23,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -37,10 +37,10 @@ builds:
   archetype: burst
   slot_order:
   - Divine Ruin
-  - Soul Gem
   - Bragi's Harp
   - Death Metal
   - Spear of Desolation
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Death Metal
@@ -68,8 +68,8 @@ builds:
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
-  - Rod of Asclepius
   - Erosion
+  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
   - Spectral Armor
@@ -81,8 +81,8 @@ builds:
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -92,12 +92,12 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Soul Gem
   - Void Shield
   - Void Stone
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Spear of Desolation
@@ -109,8 +109,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin

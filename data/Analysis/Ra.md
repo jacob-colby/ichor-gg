@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Spear of Desolation | 0.40 | 0.27 | 0.43 | 0.60 | 0.45 | 0.00 | undervalued |  |  |
 | Obsidian Shard | 0.38 | 0.24 | 0.37 | 0.72 | 0.24 | 0.00 | fair |  |  |
-| Soul Gem | 0.37 | 0.30 | 0.41 | 0.58 | 0.24 | 0.10 | fair | burst, sustain |  |
+| Soul Gem | 0.37 | 0.30 | 0.41 | 0.58 | 0.24 | 0.10 | fair | burst, sustain, aura |  |
 | Book of Thoth | 0.35 | 0.25 | 0.40 | 0.59 | 0.22 | 0.00 | fair |  |  |
 | Rod of Tahuti | 0.32 | 0.16 | 0.25 | 0.63 | 0.32 | 0.00 | premium |  |  |
 | Kinetic Cuirass | 0.32 | 0.31 | 0.44 | 0.50 | 0.00 | 0.10 | undervalued | burst | **UNDERRATED** |
@@ -76,7 +76,7 @@
 | Helm of Darkness | 0.25 | 0.17 | 0.27 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
 | Sphere of Negation | 0.24 | 0.17 | 0.26 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Resolute Mantle | 0.24 | 0.16 | 0.26 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
-| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
+| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain, aura |  |
 | Glorious Pridwen | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Eye of Erebus | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Xibalban Effigy | 0.23 | 0.15 | 0.23 | 0.50 | 0.00 | 0.00 | premium |  |  |

@@ -195,9 +195,9 @@ builds:
     this god: Amanita Charm, Erosion, Spectral Armor, Kinetic Cuirass, Eye of Providence,
     Shield of the Phoenix, Phoenix Feather, Pharaoh''s Curse, Void Stone, Void Shield,
     Stampede, Spirit Robe, Shogun''s Ofuda, Mystical Mail, Doublet of Binding, Chandra''s
-    Grace, Eros'' Bow, Draconic Scale, Berserker''s Shield, Eye of the Storm, Midgardian
-    Mail, Shield Splitter, Runeforged Hammer, Leviathan''s Hide, Ancile, Gladiator''s
-    Shield, Oni Hunter''s Garb.'
+    Grace, Eros'' Bow, Umbral Link, Draconic Scale, Berserker''s Shield, Eye of the
+    Storm, Midgardian Mail, Shield Splitter, Runeforged Hammer, Leviathan''s Hide,
+    Ancile, Gladiator''s Shield.'
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested

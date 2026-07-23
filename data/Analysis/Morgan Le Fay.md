@@ -3,7 +3,7 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Spear of Desolation | 0.57 | 0.64 | 0.43 | 0.53 | 0.44 | 1.00 | undervalued |  |  |
-| Soul Gem | 0.52 | 0.62 | 0.41 | 0.51 | 0.17 | 1.00 | fair | burst, sustain |  |
+| Soul Gem | 0.52 | 0.62 | 0.41 | 0.51 | 0.17 | 1.00 | fair | burst, sustain, aura |  |
 | Obsidian Shard | 0.50 | 0.53 | 0.37 | 0.64 | 0.15 | 0.80 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.48 | 0.60 | 0.43 | 0.50 | 0.00 | 0.90 | undervalued | burst | **UNDERRATED** |
 | The Cosmic Horror | 0.47 | 0.59 | 0.47 | 0.50 | 0.00 | 0.80 | undervalued |  | **UNDERRATED** |
@@ -82,7 +82,7 @@
 | Draconic Scale | 0.25 | 0.19 | 0.29 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Stygian Anchor | 0.25 | 0.17 | 0.27 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
 | Resolute Mantle | 0.24 | 0.16 | 0.26 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
-| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
+| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain, aura |  |
 | Circe's Hexstone | 0.23 | 0.15 | 0.12 | 0.50 | 0.00 | 0.20 | premium | mobility, cc-immunity |  |
 | Xibalban Effigy | 0.23 | 0.15 | 0.23 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.23 | 0.15 | 0.23 | 0.50 | 0.00 | 0.00 | premium |  |  |

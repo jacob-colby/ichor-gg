@@ -69,12 +69,12 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Soul Gem
   - Bragi's Harp
   - Death Metal
   - Spear of Desolation
   - The Cosmic Horror
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Bragi's Harp

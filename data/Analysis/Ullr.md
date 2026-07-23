@@ -83,7 +83,7 @@
 | Stygian Anchor | 0.25 | 0.17 | 0.27 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
 | Resolute Mantle | 0.24 | 0.16 | 0.26 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Blinking Abyss | 0.24 | 0.05 | 0.08 | 0.62 | 0.16 | 0.00 | premium | mobility |  |
-| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
+| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain, aura |  |
 | Glorious Pridwen | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Eye of Erebus | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Xibalban Effigy | 0.23 | 0.15 | 0.23 | 0.50 | 0.00 | 0.00 | premium |  |  |

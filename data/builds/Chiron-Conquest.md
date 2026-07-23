@@ -322,8 +322,8 @@ builds:
     this god: Amanita Charm, The Reaper, Shield of the Phoenix, Shield Splitter, Chandra''s
     Grace, Spirit Robe, Kinetic Cuirass, Phoenix Feather, Spectral Armor, Hydra''s
     Lament, Eye of Providence, Glorious Pridwen, Erosion, Bloodforge, Runeforged Hammer,
-    Genji''s Guard, Devourer''s Gauntlet, Tyrfing, Eye of the Storm, Avenging Blade,
-    Riptalon, Damaru, Pharaoh''s Curse, Shroud of Vengeance, Rage, Tekko-Kagi.'
+    Genji''s Guard, Umbral Link, Devourer''s Gauntlet, Tyrfing, Eye of the Storm,
+    Avenging Blade, Riptalon, Damaru, Pharaoh''s Curse, Shroud of Vengeance, Rage.'
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested

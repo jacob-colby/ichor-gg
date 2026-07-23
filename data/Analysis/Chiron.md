@@ -85,7 +85,7 @@
 | Regrowth Striders | 0.25 | 0.18 | 0.22 | 0.50 | 0.00 | 0.09 | premium | mobility, sustain |  |
 | Stygian Anchor | 0.25 | 0.17 | 0.27 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
 | Resolute Mantle | 0.24 | 0.16 | 0.26 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
-| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
+| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain, aura |  |
 | Xibalban Effigy | 0.23 | 0.15 | 0.23 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.23 | 0.15 | 0.23 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Radiant Bulwark | 0.22 | 0.12 | 0.19 | 0.50 | 0.00 | 0.00 | premium | aura |  |

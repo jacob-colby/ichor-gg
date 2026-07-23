@@ -11,7 +11,7 @@ builds:
   - Void Shield
   - Void Stone
   - Spectral Armor
-  - Rod of Asclepius
+  - Soul Gem
   flex_slots:
   - Void Stone
   - Void Shield
@@ -23,8 +23,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -37,10 +37,10 @@ builds:
   archetype: burst
   slot_order:
   - Divine Ruin
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
@@ -150,10 +150,10 @@ builds:
   archetype: burst
   slot_order:
   - Divine Ruin
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - The Cosmic Horror
@@ -182,8 +182,8 @@ builds:
   - Void Stone
   - Spectral Armor
   - Amanita Charm
-  - Rod of Asclepius
   - Erosion
+  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
   - Void Stone
@@ -207,12 +207,12 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Soul Gem
   - Void Shield
   - Void Stone
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
+  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus

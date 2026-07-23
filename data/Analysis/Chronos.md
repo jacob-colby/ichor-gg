@@ -13,7 +13,7 @@
 | Ethereal Staff | 0.31 | 0.30 | 0.47 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.31 | 0.30 | 0.47 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | The Cosmic Horror | 0.31 | 0.30 | 0.47 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
-| Soul Gem | 0.31 | 0.30 | 0.41 | 0.50 | 0.00 | 0.10 | fair | burst, sustain | **UNDERRATED** |
+| Soul Gem | 0.31 | 0.30 | 0.41 | 0.50 | 0.00 | 0.10 | fair | burst, sustain, aura | **UNDERRATED** |
 | Obsidian Shard | 0.31 | 0.24 | 0.37 | 0.49 | 0.22 | 0.00 | fair |  |  |
 | Divine Ruin | 0.31 | 0.28 | 0.39 | 0.50 | 0.00 | 0.10 | fair | anti-heal, burst | **UNDERRATED** |
 | Death Metal | 0.31 | 0.28 | 0.44 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
@@ -76,7 +76,7 @@
 | Helm of Darkness | 0.25 | 0.17 | 0.27 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
 | Sphere of Negation | 0.24 | 0.17 | 0.26 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Resolute Mantle | 0.24 | 0.16 | 0.26 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
-| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
+| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain, aura |  |
 | Glorious Pridwen | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Eye of Erebus | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Xibalban Effigy | 0.23 | 0.15 | 0.23 | 0.50 | 0.00 | 0.00 | premium |  |  |

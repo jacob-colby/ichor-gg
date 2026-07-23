@@ -21,6 +21,7 @@
 | After task | Coverage | Win-weighted | Spearman | Notes |
 |---|---|---|---|---|
 | baseline | 60% | 62% | 0.26 (n=54) | Ymir in pool since 2026-07-21 |
+| Task 2 (tags) | 60% | 62% | 0.26 (n=54) | Added sustain (Hunter's Cowl) + aura (Soul Gem, Umbral Link, War Banner, War Flag); rejected 5 possible-missing candidates as unsupported by passive text — no measurable shift |
 
 ---
 

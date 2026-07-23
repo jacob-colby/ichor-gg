@@ -36,10 +36,10 @@ builds:
   slot_order:
   - Book of Thoth
   - Kinetic Cuirass
-  - Soul Gem
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Rod of Tahuti
   - Kinetic Cuirass
@@ -69,12 +69,12 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus
@@ -134,12 +134,12 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus
@@ -166,11 +166,11 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Soul Gem
   - Void Stone
   - Spear of Desolation
   - Spectral Armor
   - Erosion
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Spectral Armor
@@ -200,11 +200,11 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Rod of Tahuti
@@ -234,11 +234,11 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Soul Gem
   - Spear of Desolation
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Soul Gem
   flex_slots:
   - Spectral Armor
   - Kinetic Cuirass
@@ -259,20 +259,20 @@ builds:
     this god: Amanita Charm, Rod of Asclepius, Lifebinder, Shield of the Phoenix,
     Erosion, Spectral Armor, Kinetic Cuirass, Chandra''s Grace, Eye of Providence,
     Phoenix Feather, Void Stone, Glorious Pridwen, Void Shield, Spirit Robe, Stampede,
-    Blood-Bound Book, Mystical Mail, Bancroft''s Talon, Doublet of Binding, Triton''s
-    Conch, Gladiator''s Shield, Genji''s Guard, Prophetic Cloak, Gluttonous Grimoire,
-    Freya''s Tears, Breastplate of Valor.'
+    Blood-Bound Book, Umbral Link, Mystical Mail, Bancroft''s Talon, Doublet of Binding,
+    Triton''s Conch, Gladiator''s Shield, Genji''s Guard, Prophetic Cloak, Gluttonous
+    Grimoire, Freya''s Tears.'
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Soul Gem
   - Void Stone
   - Spear of Desolation
   - The Cosmic Horror
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Rod of Tahuti
   - The Cosmic Horror

@@ -7,11 +7,11 @@ builds:
   archetype: core
   slot_order:
   - Divine Ruin
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Doom Orb
   - Spear of the Magus
+  - Soul Gem
   flex_slots:
   - Doom Orb
   - Divine Ruin
@@ -37,10 +37,10 @@ builds:
   archetype: burst
   slot_order:
   - Divine Ruin
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
@@ -66,10 +66,10 @@ builds:
   slot_order:
   - Divine Ruin
   - Stygian Anchor
-  - Soul Gem
   - Spear of Desolation
   - Amanita Charm
   - Erosion
+  - Soul Gem
   flex_slots:
   - Erosion
   - Stygian Anchor
@@ -92,12 +92,12 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Doom Orb
   - Obsidian Shard
@@ -122,9 +122,9 @@ builds:
   slot_order:
   - Contagion
   - Divine Ruin
-  - Soul Gem
   - Spear of Desolation
   - Rod of Asclepius
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Divine Ruin
@@ -151,9 +151,9 @@ builds:
   slot_order:
   - Contagion
   - Divine Ruin
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Contagion
@@ -182,8 +182,8 @@ builds:
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
-  - Rod of Asclepius
   - Erosion
+  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
   - Divine Ruin
@@ -207,12 +207,12 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Soul Gem
   - Void Shield
   - Void Stone
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
+  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus

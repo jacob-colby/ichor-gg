@@ -34,12 +34,12 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Rod of Tahuti
@@ -68,12 +68,12 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Rod of Tahuti
@@ -101,11 +101,11 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Obsidian Shard
   - Amanita Charm
+  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Kinetic Cuirass
@@ -133,12 +133,12 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Rod of Tahuti
@@ -165,12 +165,12 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Rod of Tahuti
@@ -198,12 +198,12 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Rod of Tahuti
@@ -232,11 +232,11 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Obsidian Shard
   - Amanita Charm
+  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Kinetic Cuirass
@@ -265,12 +265,12 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Soul Gem
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Rod of Tahuti

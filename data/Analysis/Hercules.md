@@ -76,7 +76,7 @@
 | Resolute Mantle | 0.24 | 0.16 | 0.26 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Sun Beam Bow | 0.24 | 0.16 | 0.26 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Riptalon | 0.24 | 0.16 | 0.26 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
-| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
+| Umbral Link | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain, aura |  |
 | Dagger of Frenzy | 0.24 | 0.16 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Glorious Pridwen | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Eye of Erebus | 0.23 | 0.15 | 0.24 | 0.50 | 0.00 | 0.00 | premium |  |  |
