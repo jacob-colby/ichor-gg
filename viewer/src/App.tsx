@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useIndexData } from "./hooks/useIndexData";
 import { GodRail } from "./components/GodRail";
 import { DetailPanel } from "./components/DetailPanel";
-import { ManageGods } from "./components/ManageGods";
+import { AddGodModal } from "./components/AddGodModal";
 import { Footer } from "./components/Footer";
 import { ItemsShop } from "./components/ItemsShop";
 import { GodsIndex } from "./components/GodsIndex";
@@ -16,6 +16,7 @@ function App() {
   const [mode, setMode] = useState("Conquest");
   const [legendOpen, setLegendOpen] = useState(false);
   const [scraping, setScraping] = useState(false);
+  const [addOpen, setAddOpen] = useState(false);
   const isDev = import.meta.env.DEV;
 
   useEffect(() => {
@@ -39,6 +40,10 @@ function App() {
     return res;
   };
   const removeGod = (name: string) => godsApi("remove", name);
+  const addGod = async (name: string) => {
+    setAddOpen(false);
+    await godsApi("add", name);
+  };
 
   if (error) {
     return (
@@ -91,7 +96,10 @@ function App() {
                 onSelect={(n) => navigate(toHash.god(n))}
                 onRemove={isDev ? removeGod : undefined}
               />
-              {isDev && <ManageGods onChanged={reload} />}
+              {isDev && (
+                <button type="button" onClick={() => setAddOpen(true)}
+                  className="m-2 rounded bg-bg2 px-2 py-1 text-xs text-blue hover:bg-line">＋ Add god</button>
+              )}
             </div>
             <div className="flex-1 overflow-y-auto p-4">
               {god ? (
@@ -123,6 +131,14 @@ function App() {
       </div>
       <Footer />
       {legendOpen && <Legend onClose={closeLegend} />}
+      {isDev && addOpen && (
+        <AddGodModal
+          roster={data.roster ?? []}
+          tracked={data.gods.map((g) => g.name)}
+          onAdd={addGod}
+          onClose={() => setAddOpen(false)}
+        />
+      )}
     </div>
   );
 }
