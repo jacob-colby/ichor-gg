@@ -243,20 +243,42 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
                  **(fl.get("tag_bonus") or {})}
     stat_overlay = {**(asp.get("stats") or {}), **(fl.get("stats") or {})}
     if "max_lifesteal" in fl:
-        max_ls = fl["max_lifesteal"]
+        max_ls, ls_explicit = fl["max_lifesteal"], True
     elif "max_lifesteal" in asp:
-        max_ls = asp["max_lifesteal"]
+        max_ls, ls_explicit = asp["max_lifesteal"], True
     else:
-        max_ls = 1
+        max_ls, ls_explicit = 1, False
     return {
         "signals": signals,
         "stat_overlay": stat_overlay,
         "tag_bonus": tag_bonus,
         "max_lifesteal": max_ls,
+        "max_lifesteal_explicit": ls_explicit,
         "suppress_underrated": signals.get("pick", 1) == 0,
         "label": mode_prof.get("label"),
         "flavor": flavor,
     }
+
+
+def god_max_lifesteal(god, weights, profile):
+    """Effective lifesteal cap for assembling this god's core. An explicit
+    flavor/aspect cap always wins; otherwise the first matching `lifesteal_caps`
+    rule (starter-style damage_types/match_any gating) may raise the default.
+    Exists because the community meta double-stacks sustain on basic-attack
+    carries (Devourer's + Riptalon on Cernunnos) — see _disagreements.md."""
+    if profile.get("max_lifesteal_explicit"):
+        return profile["max_lifesteal"]
+    tokens = _god_tokens(god)
+    dt = god.get("damage_type")
+    for rule in (weights.get("lifesteal_caps") or []):
+        dts = rule.get("damage_types")
+        if dts and dt not in dts:
+            continue
+        match_any = rule.get("match_any")
+        if match_any and not (tokens & set(match_any)):
+            continue
+        return rule.get("max_lifesteal", profile["max_lifesteal"])
+    return profile["max_lifesteal"]
 
 
 def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_map, profile=None):

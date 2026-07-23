@@ -62,7 +62,8 @@ def god_metrics(god, items, build_note, weights, tags_map, eff_scores, items_by_
     profile = scoring.resolve_profile(weights, "Conquest", None)
     rows = scoring.score_god_items(god, items, build_note, eff_scores, weights, tags_map, profile)
     score = {r["item"]: r["total"] for r in rows}
-    core = assemble.assemble_core(rows, items_by_name, n=6, max_lifesteal=profile["max_lifesteal"])
+    core = assemble.assemble_core(rows, items_by_name, n=6,
+                                  max_lifesteal=scoring.god_max_lifesteal(god, weights, profile))
     community = [c for c in _community_slots(build_note)
                  if c.get("name") in score and c.get("win_rate") is not None]
     names = [c["name"] for c in community]

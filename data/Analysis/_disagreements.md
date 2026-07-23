@@ -26,8 +26,6 @@ Hypothesis generator, not a verdict. `missed meta` = community runs it, we rank 
 - off-meta pick: The Crusher (our rank 3, community pick 0%)
 - off-meta pick: Tekko-Kagi (our rank 6, community pick 0%)
 - off-meta pick: Tyrfing (our rank 7, community pick 0%)
-- off-meta pick: Hydra's Lament (our rank 8, community pick 0%)
-- **constraint conflict:** Devourer's Gauntlet — top-6 by score, meta-picked, excluded by assembly rules
 
 ## Chiron
 - off-meta pick: The Reaper (our rank 5, community pick 0%)
@@ -46,14 +44,13 @@ Hypothesis generator, not a verdict. `missed meta` = community runs it, we rank 
 - off-meta pick: Doom Orb (our rank 8, community pick 0%)
 
 ## Hercules
-- **missed meta:** Dwarven Plate — community pick 22%, win 58%, our rank 25
-  - total 0.38 · eff 0.19 · win 0.58 · pick 0.22 · fit 0.52 · tags: —
+- **missed meta:** Dwarven Plate — community pick 22%, win 58%, our rank 28
+  - total 0.37 · eff 0.19 · win 0.58 · pick 0.22 · fit 0.48 · tags: —
   - passive: +15 Physical Protections +45 Magical Protections
 - off-meta pick: Kinetic Cuirass (our rank 1, community pick 0%)
 - off-meta pick: Eye of Providence (our rank 2, community pick 0%)
 - off-meta pick: Amanita Charm (our rank 4, community pick 0%)
 - off-meta pick: Shield Splitter (our rank 5, community pick 0%)
-- off-meta pick: Erosion (our rank 6, community pick 0%)
 
 ## Morgan Le Fay
 - **missed meta:** Book of Thoth — community pick 16%, win 51%, our rank 14
@@ -91,14 +88,13 @@ Hypothesis generator, not a verdict. `missed meta` = community runs it, we rank 
 - off-meta pick: The Reaper (our rank 6, community pick 0%)
 
 ## Ymir
-- **missed meta:** Dwarven Plate — community pick 10%, win 63%, our rank 15
-  - total 0.39 · eff 0.19 · win 0.63 · pick 0.10 · fit 0.59 · tags: —
+- **missed meta:** Dwarven Plate — community pick 10%, win 63%, our rank 21
+  - total 0.37 · eff 0.19 · win 0.63 · pick 0.10 · fit 0.51 · tags: —
   - passive: +15 Physical Protections +45 Magical Protections
 - off-meta pick: Kinetic Cuirass (our rank 1, community pick 0%)
 - off-meta pick: Eye of Providence (our rank 2, community pick 0%)
 - off-meta pick: Amanita Charm (our rank 3, community pick 0%)
 - off-meta pick: Erosion (our rank 5, community pick 0%)
-- off-meta pick: Spectral Armor (our rank 6, community pick 0%)
 
 ## Cross-god rollup (items we repeatedly miss)
 

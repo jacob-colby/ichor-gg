@@ -310,3 +310,24 @@ def test_kit_overlay_blends_into_fit_via_score_god_items():
     # A kit that is pure Intelligence scaling should shift fit relative to the
     # role map alone (the blended map differs from the plain role map).
     assert rows_kit["Staff"]["fit"] != rows_plain["Staff"]["fit"]
+
+
+def test_lifesteal_caps_rule_raises_default_for_matching_god():
+    w = scoring.load_weights_default()
+    w["lifesteal_caps"] = [{"damage_types": ["physical"], "match_any": ["Carry"],
+                            "max_lifesteal": 2}]
+    p = scoring.resolve_profile(w, "Conquest", None)
+    carry = _god("C", "physical", "Carry", ["Sharpshooter"])
+    mage = _god("M", "magical", "Mid", [])
+    assert scoring.god_max_lifesteal(carry, w, p) == 2
+    assert scoring.god_max_lifesteal(mage, w, p) == 1
+
+
+def test_explicit_flavor_cap_wins_over_lifesteal_caps_rule():
+    w = scoring.load_weights_default()
+    w["flavors"] = {"crit": {"stats": {}, "max_lifesteal": 1}}
+    w["lifesteal_caps"] = [{"damage_types": ["physical"], "match_any": ["Carry"],
+                            "max_lifesteal": 2}]
+    p = scoring.resolve_profile(w, "Conquest", "crit")
+    carry = _god("C", "physical", "Carry", [])
+    assert scoring.god_max_lifesteal(carry, w, p) == 1

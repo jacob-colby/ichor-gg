@@ -36,13 +36,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Hydra's Lament
+  - Devourer's Gauntlet
   - Riptalon
   - Tekko-Kagi
   - The Crusher
   flex_slots:
+  - Tekko-Kagi
   - Tyrfing
-  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse

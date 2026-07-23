@@ -15,6 +15,24 @@ kit_blend: 0.3       # how much the parsed ability-scaling profile skews god-fit
                      # Swept 2026-07-22: 0.3 captures the full coverage gain (Susano 80->100%)
                      # with the smallest Spearman cost (0.375->0.331); 0.5+ costs more, adds nothing.
 
+# ── Disagreement-report findings (2026-07-22, see Analysis/_disagreements.md) ──
+# Tank archetypes undervalued CDR items the community actually runs
+# (Breastplate of Valor / Genji's Guard / Pharaoh's Curse): adding Cooldown
+# Rate to the tank maps doubled Hercules (20->40%) and Ymir (25->50%)
+# coverage; effect plateaus at 0.5. Merged on top of the code defaults.
+role_stats:
+  Tank:     {Cooldown Rate: 0.5}
+  Guardian: {Cooldown Rate: 0.5}
+  Support:  {Cooldown Rate: 0.5}
+
+# The community double-stacks sustain on physical basic-attack carries
+# (Devourer's Gauntlet + Riptalon on Cernunnos, 63%/24% pick) — the flat
+# lifesteal cap of 1 forbade the pair (a "constraint conflict" in the report).
+# First matching rule wins; explicit flavor/aspect caps always beat these.
+# Scoped to physical carries: a mode-wide cap of 2 cost Agni 80->60%.
+lifesteal_caps:
+  - {damage_types: [physical], match_any: [Carry, Hunter, Sharpshooter], max_lifesteal: 2}
+
 # ── Build flavors ─────────────────────────────────────────────────────────
 # Each flavor is a scoring overlay producing an extra "suggested" build. It's
 # emitted only for gods whose damage type is in `damage_types` (null = any) and

@@ -10,11 +10,11 @@ builds:
   - Tyrfing
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
+  - Riptalon
   - The Crusher
   flex_slots:
+  - Hydra's Lament
   - Tyrfing
-  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse

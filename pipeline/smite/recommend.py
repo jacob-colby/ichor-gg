@@ -114,7 +114,8 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map, profile)
         require = ((weights.get("flavors") or {}).get(flavor) or {}).get("require") if flavor else None
         core = assemble.assemble_core(rows, items_by_name, n=6,
-                                      max_lifesteal=profile["max_lifesteal"], require=require)
+                                      max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
+                                      require=require)
         flex = assemble.flex_slots(core, rows, count=flex_count)
         ordered = assemble.build_order(core, items_by_name, tags_map, weights)
         swaps = assemble.situational_swaps(rows, items_by_name, tags_map, core=core)

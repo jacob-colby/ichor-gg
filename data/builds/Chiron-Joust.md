@@ -10,11 +10,11 @@ builds:
   - Tyrfing
   - Hydra's Lament
   - The Reaper
-  - Tekko-Kagi
+  - Riptalon
   - The Crusher
   flex_slots:
+  - Tyrfing
   - Hydra's Lament
-  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -150,13 +150,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Hydra's Lament
+  - Bloodforge
   - The Reaper
-  - Damaru
   - Pendulum Blade
   - The Crusher
   flex_slots:
+  - Hydra's Lament
   - Pendulum Blade
-  - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse

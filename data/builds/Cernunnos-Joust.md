@@ -10,11 +10,11 @@ builds:
   - Tyrfing
   - Hydra's Lament
   - The Reaper
-  - Tekko-Kagi
+  - Riptalon
   - The Crusher
   flex_slots:
+  - Tyrfing
   - Hydra's Lament
-  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
