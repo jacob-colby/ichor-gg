@@ -243,13 +243,6 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
         </div>
       )}
 
-      {!community && (active as CuratedBuildEntry).fun && (
-        <div className="mb-3 rounded border border-premium/40 bg-bg1 p-2 text-xs">
-          <span className="font-display font-semibold text-premium">For fun 🎲</span>
-          <span className="text-muted"> — deliberately off-class; not scored against the meta.</span>
-        </div>
-      )}
-
       <div role="tablist" className="mb-4 flex gap-1">
         {entries.map((entry, i) => (
           <button
@@ -266,6 +259,13 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
           </button>
         ))}
       </div>
+
+      {!community && (active as CuratedBuildEntry).fun && (
+        <div className="mb-3 rounded border border-premium/40 bg-bg1 p-2 text-xs">
+          <span className="font-display font-semibold text-premium">For fun 🎲</span>
+          <span className="text-muted"> — deliberately off-class; not scored against the meta.</span>
+        </div>
+      )}
 
       <div className="mb-3 flex gap-2">
         <button
