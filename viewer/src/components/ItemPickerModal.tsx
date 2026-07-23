@@ -34,8 +34,15 @@ export function ItemPickerModal({
         </div>
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <input placeholder="Search items…" value={filter.q ?? ""} onChange={(e) => set({ q: e.target.value })} className={selCls} />
-          <select value={filter.tier ?? ""} onChange={(e) => set({ tier: e.target.value ? Number(e.target.value) : undefined })} className={selCls}>
-            <option value="">All tiers</option><option value="3">Tier 3</option><option value="2">Tier 2</option><option value="1">Tier 1</option>
+          <select
+            value={filter.tier ?? ""}
+            onChange={(e) => {
+              const v = e.target.value;
+              set({ tier: v ? (/^\d+$/.test(v) ? Number(v) : v) : undefined });
+            }}
+            className={selCls}
+          >
+            <option value="">All tiers</option><option value="3">Tier 3</option><option value="2">Tier 2</option><option value="1">Tier 1</option><option value="Glyph">Glyph</option>
           </select>
           <select value={filter.efficiency ?? ""} onChange={(e) => set({ efficiency: e.target.value || undefined })} className={selCls}>
             <option value="">All ratings</option>{EFFICIENCY.map((e) => <option key={e.key} value={e.key}>{e.text}</option>)}

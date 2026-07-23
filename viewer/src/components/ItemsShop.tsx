@@ -4,6 +4,7 @@ import {
   filterItems,
   sortItems,
   efficiencyLabel,
+  tierLabel,
   EFFICIENCY,
   type SortKey,
   type ItemFilter,
@@ -56,7 +57,7 @@ function ItemDetail({ item, byName }: { item: Item; byName: Map<string, Item> })
         <ItemIcon name={item.name} size="h-10 w-10" />
         <div>
           <div className="font-display text-lg font-semibold text-ink">{item.name}</div>
-          <div className="font-mono text-xs text-muted">{item.cost}g · T{item.tier}</div>
+          <div className="font-mono text-xs text-muted">{item.cost}g · {tierLabel(item.tier)}</div>
         </div>
         <div className="ml-auto flex items-center gap-2"><MetaBadge meta={item.meta} /><EffBadge tier={item.efficiency_tier} /></div>
       </div>
@@ -104,11 +105,19 @@ export function ItemsShop({ items, openItem }: { items: Item[]; openItem?: strin
       </div>
       <div className="mb-3 flex flex-wrap items-center gap-2">
         <input placeholder="Search items…" value={filter.q ?? ""} onChange={(e) => set({ q: e.target.value })} className={selCls} />
-        <select value={filter.tier ?? ""} onChange={(e) => set({ tier: e.target.value ? Number(e.target.value) : undefined })} className={selCls}>
+        <select
+          value={filter.tier ?? ""}
+          onChange={(e) => {
+            const v = e.target.value;
+            set({ tier: v ? (/^\d+$/.test(v) ? Number(v) : v) : undefined });
+          }}
+          className={selCls}
+        >
           <option value="">All tiers</option>
           <option value="3">Tier 3</option>
           <option value="2">Tier 2</option>
           <option value="1">Tier 1</option>
+          <option value="Glyph">Glyph</option>
         </select>
         <select value={filter.efficiency ?? ""} onChange={(e) => set({ efficiency: e.target.value || undefined })} className={selCls}>
           <option value="">All ratings</option>
@@ -142,7 +151,7 @@ export function ItemsShop({ items, openItem }: { items: Item[]; openItem?: strin
               <ItemIcon name={it.name} />
               <div className="min-w-0">
                 <div className="truncate text-sm text-ink">{it.name}</div>
-                <div className="font-mono text-[10px] text-muted">{it.cost}g · T{it.tier}</div>
+                <div className="font-mono text-[10px] text-muted">{it.cost}g · {tierLabel(it.tier)}</div>
               </div>
             </div>
             <div className="flex items-center justify-between gap-1">

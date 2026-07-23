@@ -156,6 +156,42 @@ def test_parse_item_page_prefers_total_cost_over_cost():
     assert result["cost"] == 2600
 
 
+def test_parse_item_page_captures_glyph_tier_as_string_label():
+    # Glyphs (e.g. Blinking Abyss) have an "Item Type" row that just says
+    # "Glyph" with no "Tier N" — the parser must capture the label itself
+    # rather than leaving tier null.
+    html = """
+    <table class="infobox">
+      <tr><th>Item Type</th><td>Glyph</td></tr>
+      <tr><th>Total Cost</th><td>0</td></tr>
+    </table>
+    """
+    result = wiki_parser.parse_item_page(html)
+    assert result["tier"] == "Glyph"
+
+
+def test_parse_item_page_keeps_numeric_tier_for_regular_items():
+    html = """
+    <table class="infobox">
+      <tr><th>Item Type</th><td>Tier 3</td></tr>
+      <tr><th>Total Cost</th><td>2600</td></tr>
+    </table>
+    """
+    result = wiki_parser.parse_item_page(html)
+    assert result["tier"] == 3
+
+
+def test_parse_item_page_keeps_numeric_tier_for_starters():
+    html = """
+    <table class="infobox">
+      <tr><th>Item Type</th><td>Tier 1 Starter</td></tr>
+      <tr><th>Cost</th><td>600</td></tr>
+    </table>
+    """
+    result = wiki_parser.parse_item_page(html)
+    assert result["tier"] == 1
+
+
 def test_parse_god_page_extracts_image_url():
     result = wiki_parser.parse_god_page(_chiron_html())
     assert result["image_url"] == "/images/thumb/T_Chiron%28S2%29_Default.png/280px-T_Chiron%28S2%29_Default.png?157c1"

@@ -35,7 +35,7 @@ export interface God {
 export interface Item {
   type: string;
   name: string;
-  tier: number;
+  tier: number | string;
   cost: number;
   stats: Record<string, string>;
   passive: string;

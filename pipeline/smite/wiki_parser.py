@@ -184,7 +184,7 @@ def parse_item_page(html: str) -> dict:
         label = _clean(th.get_text()).rstrip(":")
         if label == "Item Type":
             m = re.search(r"Tier (\d)", td.get_text())
-            result["tier"] = int(m.group(1)) if m else None
+            result["tier"] = int(m.group(1)) if m else (_clean(td.get_text()) or None)
         elif label == "Cost":
             digits = re.sub(r"\D", "", td.get_text())
             base_cost = int(digits) if digits else None

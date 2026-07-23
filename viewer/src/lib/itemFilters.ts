@@ -2,10 +2,16 @@ import type { Item } from "../types";
 
 export interface ItemFilter {
   q?: string;
-  tier?: number;
+  tier?: number | string;
   efficiency?: string; // "undervalued" | "fair" | "premium" | "untiered"
   tag?: string;
   stat?: string;
+}
+
+/** Numeric tiers render as "T3"; non-numeric labels (e.g. Glyphs, whose wiki
+ * "Item Type" row is just "Glyph" with no tier number) render bare. */
+export function tierLabel(tier: number | string): string {
+  return typeof tier === "number" ? `T${tier}` : tier;
 }
 
 export function filterItems(items: Item[], f: ItemFilter): Item[] {

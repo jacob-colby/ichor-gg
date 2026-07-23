@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
+import { tierLabel } from "../lib/itemFilters";
 import { Tooltip } from "./Tooltip";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
 import { getMine } from "../lib/mineStore";
@@ -64,7 +65,7 @@ function ItemTooltipBody({ item, name, score }: { item?: Item; name: string; sco
     <div>
       <div className="mb-1 flex items-baseline justify-between">
         <span className="font-display text-sm font-semibold text-ink">{item.name}</span>
-        <span className="font-mono text-muted">{item.cost}g · T{item.tier}</span>
+        <span className="font-mono text-muted">{item.cost}g · {tierLabel(item.tier)}</span>
       </div>
       {Object.entries(item.stats || {}).map(([k, v]) => (
         <div key={k} className="flex justify-between text-muted">
