@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { Item } from "../types";
 import { iconSlug } from "../lib/builds";
 import { saveMine, deleteMine } from "../lib/mineStore";
+import { ItemPickerModal } from "./ItemPickerModal";
 
 interface StarterPair { base: string; upgrade: string }
 export interface MineDraft { name: string; slot_order: string[]; starter?: StarterPair; notes?: string }
@@ -26,12 +27,13 @@ export function BuildEditor({ god, mode, items, starters, initial, defaultStarte
     return i >= 0 ? i : -1;
   });
   const [notes, setNotes] = useState(initial?.notes ?? "");
-  const [query, setQuery] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [picking, setPicking] = useState(false);
 
-  const results = query.trim()
-    ? items.filter((it) => it.name.toLowerCase().includes(query.toLowerCase()) && !slots.includes(it.name)).slice(0, 8)
-    : [];
+  const addItem = (n: string) => {
+    if (slots.length < 6 && !slots.includes(n)) setSlots([...slots, n]);
+    setPicking(false);
+  };
 
   const save = () => {
     if (!name.trim()) return setError("Name required");
@@ -72,39 +74,16 @@ export function BuildEditor({ god, mode, items, starters, initial, defaultStarte
         className="mb-3 w-full rounded border border-line bg-bg2 px-2 py-1 text-sm text-ink"
       />
 
-      <input
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search items…"
-        className="w-full rounded border border-line bg-bg2 px-2 py-1 text-sm text-ink"
-      />
-      {results.length > 0 && (
-        <div className="mt-1 rounded border border-line bg-bg2">
-          {results.map((it) => (
-            <button
-              key={it.name}
-              type="button"
-              onClick={() => {
-                if (slots.length < 6) setSlots([...slots, it.name]);
-                setQuery("");
-              }}
-              className="flex w-full items-center gap-2 px-2 py-1 text-left text-sm text-ink hover:bg-line"
-            >
-              <img
-                src={`/icons/${iconSlug(it.name)}.png`}
-                alt=""
-                className="h-5 w-5 flex-none rounded bg-bg2"
-                onError={(e) => {
-                  const i = e.currentTarget;
-                  if (i.dataset.r) { i.style.visibility = "hidden"; return; }
-                  i.dataset.r = "1";
-                  i.src = `/icons/${iconSlug(it.name)}.png?r=1`;
-                }}
-              />
-              {it.name}
-            </button>
-          ))}
-        </div>
+      <button
+        type="button"
+        onClick={() => setPicking(true)}
+        disabled={slots.length >= 6}
+        className="w-full rounded border border-line bg-bg2 px-2 py-1 text-sm text-blue hover:bg-line disabled:opacity-50"
+      >
+        + Add item{slots.length >= 6 ? " (max 6)" : ""}
+      </button>
+      {picking && (
+        <ItemPickerModal items={items} exclude={slots} onPick={addItem} onClose={() => setPicking(false)} />
       )}
 
       <div className="my-3 flex flex-col gap-1">
