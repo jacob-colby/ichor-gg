@@ -146,18 +146,95 @@ def test_findings_are_sorted_by_item_then_issue():
     assert keys == sorted(keys)
 
 
-def test_main_returns_nonzero_when_findings_exist(monkeypatch):
+# --- audit_gods -----------------------------------------------------------
+
+def _mag_god(name="Mage"):
+    return {"name": name, "damage_type": "magical"}
+
+
+_GODS_ITEMS = [
+    {"name": "Staff", "tier": 3, "cost": 3000, "stats": {"Intelligence": "70"}},
+    {"name": "Boots", "tier": 3, "cost": 2000, "stats": {"Max Health": "100"}},
+    {"name": "Sword", "tier": 3, "cost": 2400, "stats": {"Strength": "40"}},
+]
+
+
+def _core_build(god="Mage", slots=None, starter="Conduit Gem", mode="Conquest"):
+    if slots is None:
+        slots = ["Staff", "Boots", "Staff", "Boots", "Staff"]
+    entry = {"source": "suggested", "archetype": "core", "slot_order": slots}
+    if starter is not None:
+        entry["starter"] = {"base": starter}
+    return {"god": god, "mode": mode, "builds": [entry]}
+
+
+def test_audit_gods_clean_build_has_no_findings():
+    findings = data_audit.audit_gods([_mag_god()], [_core_build()], _GODS_ITEMS)
+    assert findings == []
+
+
+def test_audit_gods_flags_missing_build():
+    findings = data_audit.audit_gods([_mag_god()], [], _GODS_ITEMS)
+    assert [f["issue"] for f in findings] == ["no-build"]
+
+
+def test_audit_gods_flags_short_build():
+    build = _core_build(slots=["Staff", "Boots", "Staff", "Boots"])  # 4 < 5
+    findings = data_audit.audit_gods([_mag_god()], [build], _GODS_ITEMS)
+    assert any(f["issue"] == "short-build" for f in findings)
+
+
+def test_audit_gods_flags_missing_starter():
+    build = _core_build(starter=None)
+    findings = data_audit.audit_gods([_mag_god()], [build], _GODS_ITEMS)
+    assert any(f["issue"] == "no-starter" for f in findings)
+
+
+def test_audit_gods_flags_wrong_damage_item():
+    # Sword (Strength -> physical) has no place in a magical god's core build.
+    build = _core_build(slots=["Staff", "Boots", "Sword", "Boots", "Staff"])
+    findings = data_audit.audit_gods([_mag_god()], [build], _GODS_ITEMS)
+    wrong = [f for f in findings if f["issue"] == "wrong-damage-item"]
+    assert wrong and wrong[0]["detail"].startswith("Sword")
+
+
+def test_audit_gods_only_considers_conquest_core():
+    # A non-Conquest build must not satisfy the coverage check.
+    joust = _core_build(mode="Joust")
+    findings = data_audit.audit_gods([_mag_god()], [joust], _GODS_ITEMS)
+    assert [f["issue"] for f in findings] == ["no-build"]
+
+
+# --- main -----------------------------------------------------------------
+
+def _index(items=None, gods=None, builds=None):
+    return {"items": items or [], "gods": gods or [], "builds": builds or []}
+
+
+def test_main_returns_nonzero_when_item_findings_exist(monkeypatch):
     monkeypatch.setattr(
-        data_audit, "load_items",
-        lambda: [dict(_clean_item("Broken Item"), cost=None)],
+        data_audit, "_load_index",
+        lambda: _index(items=[dict(_clean_item("Broken Item"), cost=None)]),
     )
     assert data_audit.main([]) == 1
 
 
+def test_main_returns_nonzero_when_god_findings_exist(monkeypatch):
+    monkeypatch.setattr(
+        data_audit, "_load_index",
+        lambda: _index(gods=[_mag_god()], builds=[], items=_GODS_ITEMS),
+    )
+    assert data_audit.main([]) == 1  # no-build for the god
+
+
 def test_main_returns_zero_when_clean(monkeypatch):
     monkeypatch.setattr(
-        data_audit, "load_items",
-        lambda: [_clean_item("Clean Item Two", tier=1, cost=650)],
+        data_audit, "_load_index",
+        lambda: _index(
+            items=[_clean_item("Clean Item Two", tier=1, cost=650)] + _GODS_ITEMS,
+            gods=[_mag_god()],
+            builds=[_core_build()],
+        ),
     )
     assert data_audit.main([]) == 0
 
@@ -166,7 +243,7 @@ def test_main_returns_one_when_index_missing(monkeypatch):
     def _raise():
         raise FileNotFoundError("index.json not found")
 
-    monkeypatch.setattr(data_audit, "load_items", _raise)
+    monkeypatch.setattr(data_audit, "_load_index", _raise)
     assert data_audit.main([]) == 1
 
 
@@ -174,5 +251,5 @@ def test_main_returns_one_when_index_corrupt(monkeypatch):
     def _raise():
         raise json.JSONDecodeError("bad json", "", 0)
 
-    monkeypatch.setattr(data_audit, "load_items", _raise)
+    monkeypatch.setattr(data_audit, "_load_index", _raise)
     assert data_audit.main([]) == 1

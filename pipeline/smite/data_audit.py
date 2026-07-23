@@ -1,11 +1,13 @@
-"""Data-integrity guard for scraped item data. Run after every regenerate as a
-CI-style gate: non-zero exit + a readable finding list if anything is wrong.
-Items only for now — a god/build audit is a later phase."""
+"""Data-integrity guard for scraped item + build data. Run after every
+regenerate as a CI-style gate: non-zero exit + a readable finding list if
+anything is wrong."""
 import json
 import re
 import sys
 from collections import Counter
 from pathlib import Path
+
+from smite import scoring
 
 VAULT_ROOT = Path(__file__).resolve().parents[2]
 INDEX_PATH = VAULT_ROOT / "viewer" / "public" / "index.json"
@@ -84,9 +86,60 @@ def audit_items(items: list) -> list:
     return findings
 
 
+MIN_CORE_ITEMS = 5
+
+
+def _suggested_core(build_group):
+    for b in (build_group or {}).get("builds", []):
+        if b.get("source") == "suggested" and b.get("archetype") == "core":
+            return b
+    return None
+
+
+def audit_gods(gods: list, builds: list, items: list) -> list:
+    """Every tracked god must produce a usable Conquest core build: present,
+    at least MIN_CORE_ITEMS items, a stamped starter, and no off-damage-type
+    item leaking in (reuses the same damage filter the recommender scores
+    with). This is the coverage/correctness gate for the full roster."""
+    items_by_name = {it["name"]: it for it in items}
+    conquest_by_god = {}
+    for bg in builds:
+        if bg.get("mode") == "Conquest":
+            conquest_by_god.setdefault(bg.get("god"), bg)
+
+    findings = []
+    for god in gods:
+        name = god.get("name")
+        core = _suggested_core(conquest_by_god.get(name))
+        if core is None:
+            findings.append({"god": name, "issue": "no-build",
+                             "detail": "no suggested Conquest core build"})
+            continue
+        slots = core.get("slot_order") or []
+        if len(slots) < MIN_CORE_ITEMS:
+            findings.append({"god": name, "issue": "short-build",
+                             "detail": f"{len(slots)} items (< {MIN_CORE_ITEMS})"})
+        if not core.get("starter"):
+            findings.append({"god": name, "issue": "no-starter",
+                             "detail": "no starter stamped"})
+        for item_name in slots:
+            it = items_by_name.get(item_name)
+            if it and not scoring.passes_damage_filter(it, god):
+                findings.append({
+                    "god": name, "issue": "wrong-damage-item",
+                    "detail": f"{item_name} ({scoring.item_damage_type(it)}) "
+                              f"in a {god.get('damage_type')} build",
+                })
+    findings.sort(key=lambda f: (f["god"] or "", f["issue"]))
+    return findings
+
+
+def _load_index() -> dict:
+    return json.loads(INDEX_PATH.read_text(encoding="utf-8"))
+
+
 def load_items() -> list:
-    data = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
-    return data.get("items", [])
+    return _load_index().get("items", [])
 
 
 def main(argv=None) -> int:
@@ -99,18 +152,28 @@ def main(argv=None) -> int:
         pass
 
     try:
-        items = load_items()
+        index = _load_index()
     except (FileNotFoundError, json.JSONDecodeError) as exc:
-        print(f"Item audit: could not load index.json ({exc})")
+        print(f"Audit: could not load index.json ({exc})")
         return 1
 
-    findings = audit_items(items)
-    print(f"Item audit: {len(items)} items, {len(findings)} finding(s)")
-    if not findings:
-        print("no item issues found")
-        return 0
-    for f in findings:
+    items = index.get("items", [])
+    gods = index.get("gods", [])
+    builds = index.get("builds", [])
+
+    item_findings = audit_items(items)
+    god_findings = audit_gods(gods, builds, items)
+
+    print(f"Item audit: {len(items)} items, {len(item_findings)} finding(s)")
+    for f in item_findings:
         print(f"{f['item']}: {f['issue']} - {f['detail']}")
+    print(f"God audit: {len(gods)} gods, {len(god_findings)} finding(s)")
+    for f in god_findings:
+        print(f"{f['god']}: {f['issue']} - {f['detail']}")
+
+    if not item_findings and not god_findings:
+        print("no issues found")
+        return 0
     return 1
 
 
