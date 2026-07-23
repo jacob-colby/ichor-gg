@@ -26,6 +26,7 @@
 | Task 7 (kit blend 0.3) | 60% | 61% | 0.33 (n=54) | Swept blend {0, 0.3, 0.5, 0.7}: blend=0 reproduces Task 4 exactly (no bug). Kit overlay lifts Susano 80→100% (pure-Str kit), no god worse; costs ~0.04 Spearman (diffuse ranking noise). Kept 0.3 — smallest blend capturing the full gain. |
 | Task 9 (disagreement fixes) | 66% | 68% | 0.32 (n=54) | KEPT: (1) CDR 0.5 on Tank/Guardian/Support maps — Hercules 20→40%, Ymir 25→50%, plateau beyond 0.5. (2) `lifesteal_caps` rule: cap 2 for physical carries — Cernunnos 25→50% (Devourer's+Riptalon pair), no Agni regression (mode-wide cap cost Agni 80→60, rejected). REJECTED: kit-share hybrid damage-filter relaxation (Bracer of The Abyss case) — cov −0.5, Spearman −0.03, floodgate cost exceeds gain. Evil Eye "missed meta" is a tier-2 component in mid-game inventories — justified exclusion for a final-build recommender. |
 | Task 11 (fun-crit) | 66% | 68% | 0.32 (n=54) | Unchanged, as designed — fun builds are isolated from validation (core profile only). fun-crit emitted for the 8 non-crit-eligible gods, base kit only; crit Ymir is real (3 crit items via require seed). |
+| Task 12 (calibrated weights) | 70% | 71% | 0.38 (n=54) | Applied grid winner eff .35 / win .35 / pick .15 / fit .15 (was .35/.30/.15/.20, rank 7 of 582). LOGO stable: 2 fold-winners across 11 folds, both = frontier ranks 1–2. Guardrails held (eff+fit = 0.50 floor exactly, pick capped .15). Calibration runtime 13s thanks to preloaded compute(). |
 
 ---
 

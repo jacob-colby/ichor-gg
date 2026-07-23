@@ -36,12 +36,12 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
+  - Hydra's Lament
   - Devourer's Gauntlet
   - Riptalon
-  - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Tekko-Kagi
+  - Hydra's Lament
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -57,11 +57,12 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, The Crusher, The Reaper, Tekko-Kagi, Tyrfing, Hydra''s
-    Lament, Lernaean Bow, Golden Blade, Runeforged Hammer, Damaru, Rage, Titan''s
-    Bane, Avenging Blade, Pendulum Blade, Demon Blade, Shield Splitter, Barbed Carver,
-    Heartseeker, Musashi''s Dual Swords, Arondight, Berserker''s Shield, Eye of the
-    Storm, Transcendence, Oath-Sworn Spear, Genji''s Guard, Bloodforge, Kinetic Cuirass.'
+    this god: Jotunn''s Revenge, The Crusher, The Reaper, Hydra''s Lament, Tyrfing,
+    Tekko-Kagi, Lernaean Bow, Runeforged Hammer, Golden Blade, Damaru, Rage, Avenging
+    Blade, Shield Splitter, Titan''s Bane, Pendulum Blade, Barbed Carver, Berserker''s
+    Shield, Eye of the Storm, Arondight, Genji''s Guard, Heartseeker, Transcendence,
+    Demon Blade, Spectral Armor, Musashi''s Dual Swords, Kinetic Cuirass, Oath-Sworn
+    Spear, Chandra''s Grace.'
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -91,11 +92,12 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, The Crusher, Tyrfing, The Reaper, Tekko-Kagi, Hydra''s
-    Lament, Lernaean Bow, Damaru, Rage, Golden Blade, Demon Blade, Runeforged Hammer,
-    Titan''s Bane, Avenging Blade, Musashi''s Dual Swords, Berserker''s Shield, Pendulum
-    Blade, Shield Splitter, Barbed Carver, Heartseeker, Genji''s Guard, Arondight,
-    Pharaoh''s Curse, Kinetic Cuirass, Eros'' Bow, Eye of the Storm, Transcendence.'
+    this god: Jotunn''s Revenge, The Crusher, The Reaper, Tyrfing, Hydra''s Lament,
+    Tekko-Kagi, Lernaean Bow, Damaru, Rage, Runeforged Hammer, Golden Blade, Avenging
+    Blade, Shield Splitter, Berserker''s Shield, Titan''s Bane, Demon Blade, Musashi''s
+    Dual Swords, Genji''s Guard, Spectral Armor, Kinetic Cuirass, Barbed Carver, Pendulum
+    Blade, Eye of the Storm, Eye of Providence, Pharaoh''s Curse, Transcendence, Chandra''s
+    Grace, Arondight.'
   starter: *id001
 - source: suggested
   archetype: burst
@@ -107,8 +109,8 @@ builds:
   - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Tekko-Kagi
   - Tyrfing
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -117,17 +119,18 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Jotunn''s Revenge, The Crusher, The Reaper, Hydra''s Lament, Tekko-Kagi,
-    Tyrfing, Runeforged Hammer, Lernaean Bow, Pendulum Blade, Titan''s Bane, Avenging
-    Blade, Golden Blade, Heartseeker, Damaru, Rage, Shield Splitter, Genji''s Guard,
-    Arondight, Barbed Carver, Chandra''s Grace, Kinetic Cuirass, Berserker''s Shield,
-    Eye of the Storm, Breastplate of Valor, Screeching Gargoyle, Spectral Armor, Transcendence.'
+    god: Jotunn''s Revenge, The Crusher, The Reaper, Hydra''s Lament, Tyrfing, Tekko-Kagi,
+    Runeforged Hammer, Lernaean Bow, Titan''s Bane, Avenging Blade, Golden Blade,
+    Shield Splitter, Pendulum Blade, Genji''s Guard, Damaru, Rage, Spectral Armor,
+    Chandra''s Grace, Arondight, Kinetic Cuirass, Heartseeker, Berserker''s Shield,
+    Eye of the Storm, Eye of Providence, Barbed Carver, Breastplate of Valor, Transcendence,
+    Shield of the Phoenix.'
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -152,32 +155,31 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Amanita Charm, Jotunn''s Revenge, The Crusher, Shield of
-    the Phoenix, Shield Splitter, Chandra''s Grace, Spirit Robe, Bloodforge, Kinetic
-    Cuirass, Hydra''s Lament, Phoenix Feather, Tyrfing, Eye of Providence, Runeforged
-    Hammer, Glorious Pridwen, Lernaean Bow, Tekko-Kagi, Berserker''s Shield, Spectral
-    Armor, Avenging Blade, Genji''s Guard, Eye of the Storm, Golden Blade, Damaru,
-    Rage.'
+    this god: The Reaper, Jotunn''s Revenge, Amanita Charm, The Crusher, Shield of
+    the Phoenix, Shield Splitter, Chandra''s Grace, Kinetic Cuirass, Hydra''s Lament,
+    Eye of Providence, Phoenix Feather, Tyrfing, Spirit Robe, Bloodforge, Runeforged
+    Hammer, Spectral Armor, Genji''s Guard, Lernaean Bow, Berserker''s Shield, Avenging
+    Blade, Tekko-Kagi, Eye of the Storm, Golden Blade, Glorious Pridwen, Damaru, Erosion.'
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Oath-Sworn Spear
   - Avenging Blade
   - Jotunn's Revenge
+  - Hydra's Lament
   - Riptalon
   - Tekko-Kagi
   - The Crusher
   flex_slots:
   - Tekko-Kagi
-  - Oath-Sworn Spear
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
@@ -189,11 +191,11 @@ builds:
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, The Reaper, Avenging Blade, Tekko-Kagi,
-    Oath-Sworn Spear, Titan''s Bane, Hydra''s Lament, Tyrfing, Pendulum Blade, Screeching
-    Gargoyle, Heartseeker, Lernaean Bow, Runeforged Hammer, Golden Blade, Damaru,
-    Rage, Shield Splitter, Void Stone, Barbed Carver, Void Shield, Stone of Binding,
-    Demon Blade, Berserker''s Shield, Arondight, Eye of the Storm, Musashi''s Dual
-    Swords.'
+    Hydra''s Lament, Oath-Sworn Spear, Titan''s Bane, Tyrfing, Runeforged Hammer,
+    Screeching Gargoyle, Lernaean Bow, Pendulum Blade, Heartseeker, Golden Blade,
+    Shield Splitter, Damaru, Rage, Spectral Armor, Void Stone, Barbed Carver, Genji''s
+    Guard, Berserker''s Shield, Kinetic Cuirass, Eye of the Storm, Transcendence,
+    Void Shield.'
   starter: *id001
 - source: suggested
   archetype: core
@@ -209,8 +211,8 @@ builds:
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -222,10 +224,10 @@ builds:
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Reaper, Jotunn''s Revenge, The Crusher, Runeforged Hammer, Hydra''s
-    Lament, Chandra''s Grace, Tyrfing, Avenging Blade, Golden Blade, Bloodforge, Shield
-    of the Phoenix, Tekko-Kagi, Amanita Charm, Lernaean Bow, Damaru, Rage, Barbed
-    Carver, Titan''s Bane, Eye of the Storm, Kinetic Cuirass, Phoenix Feather, Berserker''s
-    Shield, Shield Splitter, Spectral Armor, Pendulum Blade, Heartseeker.'
+    Lament, Chandra''s Grace, Avenging Blade, Tyrfing, Amanita Charm, Shield of the
+    Phoenix, Golden Blade, Bloodforge, Tekko-Kagi, Lernaean Bow, Spectral Armor, Eye
+    of the Storm, Damaru, Kinetic Cuirass, Shield Splitter, Rage, Berserker''s Shield,
+    Eye of Providence, Titan''s Bane, Barbed Carver, Phoenix Feather, Genji''s Guard.'
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -233,17 +235,17 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Rage
+  - Musashi's Dual Swords
   - Riptalon
   - Damaru
-  - Demon Blade
   - The Crusher
   flex_slots:
   - Rage
-  - Demon Blade
+  - Musashi's Dual Swords
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -254,29 +256,29 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Jotunn''s Revenge, The Crusher, Chandra''s Grace, Tyrfing,
-    Runeforged Hammer, Golden Blade, Hydra''s Lament, Shield of the Phoenix, Amanita
-    Charm, Tekko-Kagi, Lernaean Bow, Avenging Blade, Bloodforge, Damaru, Rage, Berserker''s
-    Shield, Kinetic Cuirass, Phoenix Feather, Demon Blade, Spectral Armor, Eye of
-    the Storm, Barbed Carver, Pharaoh''s Curse, Eros'' Bow, Eye of Providence.'
+    this god: The Reaper, Jotunn''s Revenge, The Crusher, Chandra''s Grace, Runeforged
+    Hammer, Hydra''s Lament, Tyrfing, Amanita Charm, Golden Blade, Shield of the Phoenix,
+    Avenging Blade, Tekko-Kagi, Lernaean Bow, Berserker''s Shield, Damaru, Bloodforge,
+    Spectral Armor, Rage, Kinetic Cuirass, Eye of Providence, Phoenix Feather, Eye
+    of the Storm, Shield Splitter, Pharaoh''s Curse, Eros'' Bow, Barbed Carver.'
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
   archetype: burst
   slot_order:
+  - Avenging Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - Runeforged Hammer
   - Riptalon
-  - Tekko-Kagi
   - The Crusher
   flex_slots:
   - Runeforged Hammer
-  - Tekko-Kagi
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -288,10 +290,10 @@ builds:
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Jotunn''s Revenge, The Reaper, The Crusher, Chandra''s Grace, Hydra''s Lament,
-    Shield of the Phoenix, Runeforged Hammer, Amanita Charm, Tekko-Kagi, Avenging
-    Blade, Tyrfing, Bloodforge, Golden Blade, Titan''s Bane, Pendulum Blade, Lernaean
-    Bow, Kinetic Cuirass, Phoenix Feather, Spectral Armor, Eye of the Storm, Barbed
-    Carver, Damaru, Shield Splitter, Heartseeker, Rage, Genji''s Guard.'
+    Runeforged Hammer, Shield of the Phoenix, Amanita Charm, Avenging Blade, Tyrfing,
+    Tekko-Kagi, Golden Blade, Bloodforge, Spectral Armor, Kinetic Cuirass, Titan''s
+    Bane, Lernaean Bow, Shield Splitter, Eye of Providence, Genji''s Guard, Phoenix
+    Feather, Eye of the Storm, Pendulum Blade, Berserker''s Shield, Damaru, Rage.'
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -320,33 +322,33 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Amanita Charm, Shield of the Phoenix, Jotunn''s Revenge,
-    Chandra''s Grace, The Crusher, Phoenix Feather, Kinetic Cuirass, Bloodforge, Shield
-    Splitter, Eye of Providence, Runeforged Hammer, Spirit Robe, Hydra''s Lament,
-    Spectral Armor, Avenging Blade, Tyrfing, Eye of the Storm, Berserker''s Shield,
-    Glorious Pridwen, Golden Blade, Erosion, Lernaean Bow, Genji''s Guard, Tekko-Kagi,
-    Umbral Link.'
+    this god: The Reaper, Amanita Charm, Jotunn''s Revenge, Shield of the Phoenix,
+    The Crusher, Chandra''s Grace, Kinetic Cuirass, Shield Splitter, Eye of Providence,
+    Phoenix Feather, Runeforged Hammer, Hydra''s Lament, Spectral Armor, Bloodforge,
+    Spirit Robe, Avenging Blade, Eye of the Storm, Tyrfing, Berserker''s Shield, Genji''s
+    Guard, Golden Blade, Erosion, Lernaean Bow, Tekko-Kagi, Pharaoh''s Curse, Glorious
+    Pridwen.'
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Oath-Sworn Spear
   - Avenging Blade
   - Jotunn's Revenge
+  - Runeforged Hammer
   - Riptalon
   - Tekko-Kagi
   - The Crusher
   flex_slots:
+  - Runeforged Hammer
   - Tekko-Kagi
-  - Oath-Sworn Spear
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -354,11 +356,11 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Reaper, Jotunn''s Revenge, The Crusher, Avenging Blade, Tekko-Kagi,
-    Oath-Sworn Spear, Runeforged Hammer, Chandra''s Grace, Titan''s Bane, Hydra''s
-    Lament, Screeching Gargoyle, Shield of the Phoenix, Amanita Charm, Tyrfing, Bloodforge,
-    Pendulum Blade, Void Stone, Golden Blade, Heartseeker, Void Shield, Lernaean Bow,
-    Kinetic Cuirass, Damaru, Eye of the Storm, Phoenix Feather, Barbed Carver.'
+    for this god: The Reaper, Jotunn''s Revenge, The Crusher, Avenging Blade, Runeforged
+    Hammer, Tekko-Kagi, Hydra''s Lament, Chandra''s Grace, Oath-Sworn Spear, Amanita
+    Charm, Titan''s Bane, Shield of the Phoenix, Screeching Gargoyle, Tyrfing, Golden
+    Blade, Bloodforge, Spectral Armor, Void Stone, Pendulum Blade, Lernaean Bow, Kinetic
+    Cuirass, Heartseeker, Shield Splitter, Eye of the Storm, Void Shield, Eye of Providence.'
   starter: *id001
   aspect: Aspect of Strife
 ---

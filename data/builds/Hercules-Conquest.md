@@ -41,8 +41,8 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
+  - Amanita Charm
   - Shield Splitter
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -58,11 +58,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Eye of Providence, Amanita Charm, Shield Splitter,
-    Erosion, Eye of the Storm, Spectral Armor, Jotunn''s Revenge, Shield of the Phoenix,
-    Runeforged Hammer, Gladiator''s Shield, Draconic Scale, Avenging Blade, Prophetic
-    Cloak, Shroud of Vengeance, Wyrmskin Hide, Hydra''s Lament, Berserker''s Shield,
-    The Crusher, Freya''s Tears, Midgardian Mail, Mantle Of Discord, Magi''s Cloak,
-    Stone of Binding, Phoenix Feather, Leviathan''s Hide.'
+    Erosion, Jotunn''s Revenge, Spectral Armor, Eye of the Storm, Shield of the Phoenix,
+    Runeforged Hammer, The Crusher, Hydra''s Lament, Avenging Blade, Berserker''s
+    Shield, Gladiator''s Shield, Draconic Scale, Shroud of Vengeance, Midgardian Mail,
+    Prophetic Cloak, Wyrmskin Hide, Mantle Of Discord, Magi''s Cloak, Phoenix Feather,
+    Freya''s Tears, Leviathan''s Hide.'
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -76,8 +76,8 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
+  - Eye of Providence
   - Shifter's Shield
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -86,64 +86,64 @@ builds:
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Spirit Robe,
-    Eye of Providence, Chandra''s Grace, Phoenix Feather, Shield Splitter, The Reaper,
-    Jotunn''s Revenge, Erosion, Spectral Armor, Eye of the Storm, Runeforged Hammer,
-    Glorious Pridwen, Avenging Blade, Hydra''s Lament, The Crusher, Gladiator''s Shield,
-    Berserker''s Shield, Wyrmskin Hide, Midgardian Mail, Bloodforge, Shroud of Vengeance,
-    Draconic Scale, Prophetic Cloak.'
+    Eye of Providence, Chandra''s Grace, Jotunn''s Revenge, Phoenix Feather, Shield
+    Splitter, The Reaper, Spectral Armor, Runeforged Hammer, Eye of the Storm, Erosion,
+    The Crusher, Hydra''s Lament, Avenging Blade, Glorious Pridwen, Berserker''s Shield,
+    Gladiator''s Shield, Midgardian Mail, Wyrmskin Hide, Bloodforge, Leviathan''s
+    Hide, Ancile, Golden Blade.'
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Avenging Blade
   - Eye of Providence
+  - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shifter's Shield
   - The Crusher
   flex_slots:
+  - Kinetic Cuirass
   - Eye of Providence
-  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, Avenging Blade, Kinetic Cuirass,
-    Eye of Providence, Screeching Gargoyle, Stone of Binding, Void Stone, Amanita
-    Charm, Shield Splitter, Void Shield, The Reaper, Erosion, Spectral Armor, Eye
-    of the Storm, Runeforged Hammer, Oath-Sworn Spear, Shield of the Phoenix, Titan''s
-    Bane, Hydra''s Lament, Pendulum Blade, Tekko-Kagi, Gladiator''s Shield, Heartseeker,
-    Berserker''s Shield, Shroud of Vengeance, Midgardian Mail.'
+    Eye of Providence, Amanita Charm, Shield Splitter, Screeching Gargoyle, The Reaper,
+    Spectral Armor, Void Stone, Stone of Binding, Void Shield, Erosion, Runeforged
+    Hammer, Eye of the Storm, Hydra''s Lament, Shield of the Phoenix, Oath-Sworn Spear,
+    Titan''s Bane, Berserker''s Shield, Tekko-Kagi, Pendulum Blade, Midgardian Mail,
+    Gladiator''s Shield, Chandra''s Grace, Shroud of Vengeance.'
   starter: *id001
 - source: suggested
   archetype: fun-crit
   slot_order:
-  - Lernaean Bow
   - Tyrfing
+  - Rage
   - Bragi's Harp
   - Death Metal
   - Damaru
   - Demon Blade
   flex_slots:
+  - Rage
   - Bragi's Harp
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -166,33 +166,33 @@ builds:
   slot_order:
   - Eye of Providence
   - Kinetic Cuirass
-  - Shield of the Phoenix
+  - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Eye of Providence
-  - Shield of the Phoenix
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Erosion, Spectral Armor, Kinetic Cuirass, Eye of Providence,
-    Shield of the Phoenix, Pharaoh''s Curse, Void Stone, Void Shield, Stampede, Shogun''s
-    Ofuda, Phoenix Feather, Shield Splitter, Eye of the Storm, Chandra''s Grace, Mystical
-    Mail, Spirit Robe, Doublet of Binding, Runeforged Hammer, Gladiator''s Shield,
-    Jotunn''s Revenge, Avenging Blade, Eros'' Bow, Berserker''s Shield, Wyrmskin Hide,
-    Draconic Scale, Midgardian Mail.'
+    this god: Amanita Charm, Spectral Armor, Erosion, Kinetic Cuirass, Eye of Providence,
+    Shield of the Phoenix, Pharaoh''s Curse, Void Stone, Shield Splitter, Stampede,
+    Chandra''s Grace, Eye of the Storm, Void Shield, Phoenix Feather, Runeforged Hammer,
+    Shogun''s Ofuda, Jotunn''s Revenge, Mystical Mail, Doublet of Binding, Avenging
+    Blade, Berserker''s Shield, Eros'' Bow, Gladiator''s Shield, The Crusher, Hydra''s
+    Lament, The Reaper, Midgardian Mail, Wyrmskin Hide.'
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -212,21 +212,21 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Spirit Robe — physical protection
+    swap_item: Spirit Robe
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Spectral Armor, Erosion, Shield of the Phoenix, Kinetic
-    Cuirass, Chandra''s Grace, Eye of Providence, Phoenix Feather, Pharaoh''s Curse,
-    Void Stone, Spirit Robe, Void Shield, Stampede, Shogun''s Ofuda, Runeforged Hammer,
-    Mystical Mail, Doublet of Binding, Eye of the Storm, The Reaper, Shield Splitter,
-    Jotunn''s Revenge, Umbral Link, Avenging Blade, Eros'' Bow, Gladiator''s Shield,
-    Glorious Pridwen, Berserker''s Shield, The Crusher.'
+    Cuirass, Eye of Providence, Chandra''s Grace, Spirit Robe, Phoenix Feather, Pharaoh''s
+    Curse, Void Stone, Jotunn''s Revenge, Stampede, Runeforged Hammer, Void Shield,
+    Shield Splitter, The Reaper, Eye of the Storm, Shogun''s Ofuda, Avenging Blade,
+    Mystical Mail, Doublet of Binding, Eros'' Bow, The Crusher, Hydra''s Lament, Berserker''s
+    Shield, Umbral Link, Gladiator''s Shield.'
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -240,7 +240,7 @@ builds:
   - Erosion
   flex_slots:
   - Erosion
-  - Jotunn's Revenge
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -249,18 +249,18 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Amanita Charm, Void Stone, Void Shield, Spectral Armor, Erosion,
-    Jotunn''s Revenge, Avenging Blade, The Reaper, The Crusher, Kinetic Cuirass, Shield
-    of the Phoenix, Eye of Providence, Pharaoh''s Curse, Stampede, Screeching Gargoyle,
-    Chandra''s Grace, Shogun''s Ofuda, Stone of Binding, Phoenix Feather, Mystical
-    Mail, Doublet of Binding, Shield Splitter, Runeforged Hammer, Eye of the Storm,
-    Eros'' Bow, Oath-Sworn Spear, Umbral Link, Gladiator''s Shield.'
+    for this god: Amanita Charm, Spectral Armor, Jotunn''s Revenge, Void Stone, Erosion,
+    Void Shield, Avenging Blade, The Crusher, The Reaper, Kinetic Cuirass, Eye of
+    Providence, Shield of the Phoenix, Pharaoh''s Curse, Chandra''s Grace, Stampede,
+    Screeching Gargoyle, Shield Splitter, Runeforged Hammer, Phoenix Feather, Shogun''s
+    Ofuda, Eye of the Storm, Stone of Binding, Mystical Mail, Doublet of Binding,
+    Eros'' Bow, Hydra''s Lament, Oath-Sworn Spear, Berserker''s Shield.'
   starter: *id001
   aspect: Aspect of Preservation
 ---
