@@ -60,8 +60,8 @@ builds:
     this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom Orb,
     Chronos'' Pendant, The World Stone, Gem of Focus, Rod of Asclepius, Blood-Bound
     Book, Ancient Signet, Ethereal Staff, Divine Ruin, Death Metal, Bancroft''s Talon,
-    Polynomicon, Bragi''s Harp, Helm of Radiance, Lifebinder, Alchemist Coat, Genji''s
-    Guard, Jade Scepter, Chandra''s Grace.'
+    Polynomicon, Bragi''s Harp, Helm of Radiance, Lifebinder, Alchemist Coat, Jade
+    Scepter, Genji''s Guard, Gem of Isolation.'
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -124,11 +124,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Rod of Asclepius, Blood-Bound Book, Shield of the Phoenix,
-    Bancroft''s Talon, Lifebinder, Gluttonous Grimoire, Chandra''s Grace, Spirit Robe,
-    Glorious Pridwen, Kinetic Cuirass, The Cosmic Horror, Eye of Providence, Phoenix
-    Feather, Spear of the Magus, Sphere of Negation, Genji''s Guard, Helm of Radiance,
-    Doom Orb, Chronos'' Pendant, Breastplate of Valor, Prophetic Cloak, Ancient Signet,
-    Screeching Gargoyle, Ethereal Staff.'
+    Bancroft''s Talon, Lifebinder, Gluttonous Grimoire, Spirit Robe, Chandra''s Grace,
+    The Cosmic Horror, Kinetic Cuirass, Glorious Pridwen, Spear of the Magus, Eye
+    of Providence, Phoenix Feather, Sphere of Negation, Helm of Radiance, Doom Orb,
+    Genji''s Guard, Chronos'' Pendant, Ancient Signet, Ethereal Staff, The World Stone,
+    Breastplate of Valor.'
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -158,9 +158,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom
     Orb, The World Stone, Screeching Gargoyle, Chronos'' Pendant, Rod of Asclepius,
-    Blood-Bound Book, Gem of Focus, Ancient Signet, Ethereal Staff, Dreamer''s Idol,
+    Blood-Bound Book, Ancient Signet, Ethereal Staff, Gem of Focus, Dreamer''s Idol,
     Divine Ruin, Death Metal, Bancroft''s Talon, Polynomicon, Bragi''s Harp, Helm
-    of Radiance, Genji''s Guard, Lifebinder, Alchemist Coat, Jade Scepter.'
+    of Radiance, Lifebinder, Alchemist Coat, Jade Scepter.'
   starter: *id001
 - source: suggested
   archetype: core

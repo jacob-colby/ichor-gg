@@ -13,8 +13,8 @@ builds:
   - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Tekko-Kagi
   - Hydra's Lament
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -120,15 +120,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Oath-Sworn Spear
   - Avenging Blade
   - Jotunn's Revenge
   - Void Stone
   - The Reaper
-  - Tekko-Kagi
   - The Crusher
   flex_slots:
   - Void Stone
-  - Tekko-Kagi
+  - Oath-Sworn Spear
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -182,7 +182,7 @@ builds:
   - The Reaper
   - Damaru
   - Demon Blade
-  - The Crusher
+  - Pharaoh's Curse
   flex_slots:
   - Damaru
   - Rage

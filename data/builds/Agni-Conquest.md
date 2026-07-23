@@ -58,8 +58,8 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom Orb,
-    The World Stone, Chronos'' Pendant, Rod of Asclepius, Blood-Bound Book, Ancient
-    Signet, Ethereal Staff, Gem of Focus, Divine Ruin, Death Metal, Bancroft''s Talon,
+    The World Stone, Chronos'' Pendant, Rod of Asclepius, Blood-Bound Book, Gem of
+    Focus, Ancient Signet, Ethereal Staff, Divine Ruin, Death Metal, Bancroft''s Talon,
     Polynomicon, Bragi''s Harp, Helm of Radiance, Lifebinder, Alchemist Coat, Jade
     Scepter, Dreamer''s Idol, Gem of Isolation.'
   starter: &id001
@@ -124,9 +124,9 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Rod of Asclepius, Blood-Bound Book, Bancroft''s Talon,
-    Shield of the Phoenix, Gluttonous Grimoire, The Cosmic Horror, Lifebinder, Spirit
-    Robe, Kinetic Cuirass, Spear of the Magus, Chandra''s Grace, Eye of Providence,
-    Glorious Pridwen, Phoenix Feather, Sphere of Negation, Doom Orb, Helm of Radiance,
+    Shield of the Phoenix, Gluttonous Grimoire, Lifebinder, The Cosmic Horror, Spirit
+    Robe, Kinetic Cuirass, Spear of the Magus, Chandra''s Grace, Glorious Pridwen,
+    Eye of Providence, Sphere of Negation, Phoenix Feather, Doom Orb, Helm of Radiance,
     The World Stone, Genji''s Guard, Ancient Signet, Ethereal Staff, Chronos'' Pendant,
     Spectral Armor.'
   starter: *id001
@@ -157,9 +157,9 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the Magus, Doom
-    Orb, The World Stone, Screeching Gargoyle, Chronos'' Pendant, Dreamer''s Idol,
-    Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Divine Ruin,
-    Death Metal, Bancroft''s Talon, Polynomicon, Gem of Focus, Bragi''s Harp, Helm
+    Orb, The World Stone, Chronos'' Pendant, Screeching Gargoyle, Rod of Asclepius,
+    Dreamer''s Idol, Blood-Bound Book, Ancient Signet, Ethereal Staff, Divine Ruin,
+    Death Metal, Bancroft''s Talon, Gem of Focus, Polynomicon, Bragi''s Harp, Helm
     of Radiance, Lifebinder, Alchemist Coat, Jade Scepter.'
   starter: *id001
 - source: suggested
@@ -256,9 +256,9 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Rod of Asclepius, Blood-Bound Book, Bancroft''s Talon,
     Shield of the Phoenix, Gluttonous Grimoire, Lifebinder, The Cosmic Horror, Spirit
-    Robe, Kinetic Cuirass, Spear of the Magus, Chandra''s Grace, Eye of Providence,
-    Phoenix Feather, Glorious Pridwen, Sphere of Negation, Doom Orb, Helm of Radiance,
-    The World Stone, Genji''s Guard, Ancient Signet, Ethereal Staff, Spectral Armor,
+    Robe, Kinetic Cuirass, Chandra''s Grace, Spear of the Magus, Phoenix Feather,
+    Eye of Providence, Glorious Pridwen, Sphere of Negation, Doom Orb, Helm of Radiance,
+    Genji''s Guard, Ancient Signet, The World Stone, Ethereal Staff, Chronos'' Pendant,
     Bragi''s Harp.'
   starter: *id001
   aspect: Aspect of Combustion

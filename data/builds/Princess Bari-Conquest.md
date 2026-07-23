@@ -126,7 +126,7 @@ builds:
     this god: Blood-Bound Book, Amanita Charm, Bancroft''s Talon, Rod of Asclepius,
     Gluttonous Grimoire, Shield of the Phoenix, Lifebinder, Spirit Robe, Chandra''s
     Grace, Kinetic Cuirass, The Cosmic Horror, Phoenix Feather, Eye of Providence,
-    Spear of the Magus, Glorious Pridwen, Bragi''s Harp, Sphere of Negation, Helm
+    Glorious Pridwen, Spear of the Magus, Bragi''s Harp, Sphere of Negation, Helm
     of Radiance, Doom Orb, Genji''s Guard, Ancient Signet, Ethereal Staff, Spectral
     Armor, Chronos'' Pendant, Umbral Link.'
   starter: *id001
@@ -158,8 +158,8 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of
     the Magus, Doom Orb, Bragi''s Harp, Blood-Bound Book, Screeching Gargoyle, Bancroft''s
-    Talon, Rod of Asclepius, Ancient Signet, Ethereal Staff, Bracer of The Abyss,
-    Chronos'' Pendant, Nimble Ring, Divine Ruin, Death Metal, Polynomicon, Void Stone,
+    Talon, Rod of Asclepius, Ancient Signet, Chronos'' Pendant, Ethereal Staff, Bracer
+    of The Abyss, Nimble Ring, Divine Ruin, Death Metal, Polynomicon, Void Stone,
     Helm of Radiance, Void Shield, Gem of Focus, Stone of Binding.'
   starter: *id001
 ---

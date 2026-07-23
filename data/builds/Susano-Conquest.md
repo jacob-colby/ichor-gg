@@ -35,14 +35,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Hydra's Lament
   - The Reaper
-  - Tekko-Kagi
   - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
   - The Crusher
-  - Tekko-Kagi
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -57,11 +57,11 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, The Crusher, Tekko-Kagi, Pendulum Blade, Runeforged Hammer,
-    Avenging Blade, Tyrfing, Shield Splitter, Lernaean Bow, Eye of the Storm, Transcendence,
-    Oath-Sworn Spear, Barbed Carver, Golden Blade, Damaru, Rage, Arondight, Avatar''s
-    Parashu, Bloodforge, Wyrmskin Hide, Musashi''s Dual Swords, Devourer''s Gauntlet,
-    Sanguine Lash, Demon Blade.'
+    this god: The Reaper, The Crusher, Pendulum Blade, Tekko-Kagi, Runeforged Hammer,
+    Avenging Blade, Tyrfing, Shield Splitter, Lernaean Bow, Arondight, Eye of the
+    Storm, Transcendence, Oath-Sworn Spear, Barbed Carver, Golden Blade, Damaru, Rage,
+    Bloodforge, Wyrmskin Hide, Avatar''s Parashu, Musashi''s Dual Swords, Devourer''s
+    Gauntlet, Sanguine Lash, Demon Blade.'
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -124,10 +124,10 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: The Reaper, Amanita Charm, Shield Splitter, The Crusher, Spirit Robe,
-    Kinetic Cuirass, Eye of Providence, Shield of the Phoenix, Phoenix Feather, Eye
-    of the Storm, Bloodforge, Runeforged Hammer, Glorious Pridwen, Devourer''s Gauntlet,
-    Erosion, Avenging Blade, Shroud of Vengeance, Chandra''s Grace, Spectral Armor,
-    Tyrfing, Tekko-Kagi, Mantle Of Discord, Magi''s Cloak, Stone of Binding.'
+    Kinetic Cuirass, Shield of the Phoenix, Eye of Providence, Phoenix Feather, Eye
+    of the Storm, Bloodforge, Runeforged Hammer, Glorious Pridwen, Chandra''s Grace,
+    Devourer''s Gauntlet, Avenging Blade, Erosion, Shroud of Vengeance, Spectral Armor,
+    Tyrfing, Tekko-Kagi, Genji''s Guard, Mantle Of Discord, Magi''s Cloak.'
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -157,8 +157,8 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Reaper, The Crusher, Tekko-Kagi, Pendulum Blade, Avenging Blade,
     Oath-Sworn Spear, Runeforged Hammer, Avatar''s Parashu, Tyrfing, Shield Splitter,
-    Riptalon, Lernaean Bow, Eye of the Storm, Transcendence, Barbed Carver, Golden
-    Blade, Screeching Gargoyle, Damaru, Rage, Arondight, Void Stone, Void Shield,
+    Riptalon, Screeching Gargoyle, Lernaean Bow, Eye of the Storm, Transcendence,
+    Arondight, Barbed Carver, Golden Blade, Damaru, Rage, Void Stone, Void Shield,
     Stone of Binding, Bloodforge.'
   starter: *id001
 ---

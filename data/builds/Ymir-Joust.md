@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Stygian Anchor
   - Eye of Providence
   - Kinetic Cuirass
-  - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Spectral Armor
-  - Shifter's Shield
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -23,11 +23,11 @@ builds:
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Draconic Scale — physical protection
-    swap_item: Draconic Scale
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: &id001
@@ -43,8 +43,8 @@ builds:
   - Rod of Asclepius
   - Erosion
   flex_slots:
-  - Eye of Providence
   - Spectral Armor
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -71,8 +71,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
   - Stone of Binding
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse

@@ -13,8 +13,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Pendulum Blade
   - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -64,15 +64,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Stygian Anchor
+  - Jotunn's Revenge
   - Shield Splitter
   - The Reaper
   - The Crusher
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Jotunn's Revenge
   - Erosion
-  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -81,11 +81,11 @@ builds:
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   starter: *id001

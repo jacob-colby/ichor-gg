@@ -59,7 +59,7 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of the
     Magus, Doom Orb, The World Stone, Chronos'' Pendant, Rod of Asclepius, Blood-Bound
-    Book, Ancient Signet, Ethereal Staff, Gem of Focus, Divine Ruin, Death Metal,
+    Book, Gem of Focus, Ancient Signet, Ethereal Staff, Divine Ruin, Death Metal,
     Bancroft''s Talon, Polynomicon, Bragi''s Harp, Helm of Radiance, Lifebinder, Alchemist
     Coat, Jade Scepter, Dreamer''s Idol, Gem of Isolation.'
   starter: &id001
@@ -100,15 +100,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Kinetic Cuirass
   - Spear of Desolation
   - The Cosmic Horror
-  - Rod of Tahuti
   - Obsidian Shard
   - Amanita Charm
   - Soul Gem
   flex_slots:
   - The Cosmic Horror
-  - Rod of Tahuti
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -124,9 +124,9 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Obsidian Shard, Rod of Asclepius, Blood-Bound Book, Bancroft''s
-    Talon, Shield of the Phoenix, Gluttonous Grimoire, The Cosmic Horror, Lifebinder,
-    Spirit Robe, Kinetic Cuirass, Spear of the Magus, Chandra''s Grace, Eye of Providence,
-    Glorious Pridwen, Phoenix Feather, Sphere of Negation, Doom Orb, Helm of Radiance,
+    Talon, Shield of the Phoenix, Gluttonous Grimoire, Lifebinder, The Cosmic Horror,
+    Spirit Robe, Kinetic Cuirass, Spear of the Magus, Chandra''s Grace, Glorious Pridwen,
+    Eye of Providence, Sphere of Negation, Phoenix Feather, Doom Orb, Helm of Radiance,
     The World Stone, Genji''s Guard, Ancient Signet, Ethereal Staff, Chronos'' Pendant,
     Spectral Armor.'
   starter: *id001
@@ -157,9 +157,9 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Obsidian Shard, Gluttonous Grimoire, The Cosmic Horror, Spear of
-    the Magus, Doom Orb, The World Stone, Screeching Gargoyle, Chronos'' Pendant,
-    Dreamer''s Idol, Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal
-    Staff, Divine Ruin, Death Metal, Bancroft''s Talon, Polynomicon, Gem of Focus,
+    the Magus, Doom Orb, The World Stone, Chronos'' Pendant, Screeching Gargoyle,
+    Rod of Asclepius, Dreamer''s Idol, Blood-Bound Book, Ancient Signet, Ethereal
+    Staff, Divine Ruin, Death Metal, Bancroft''s Talon, Gem of Focus, Polynomicon,
     Bragi''s Harp, Helm of Radiance, Lifebinder, Alchemist Coat, Jade Scepter.'
   starter: *id001
 - source: suggested
@@ -188,11 +188,11 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Rod of Asclepius, Obsidian Shard, Lifebinder, Amanita
-    Charm, Chandra''s Grace, Ethereal Staff, The Cosmic Horror, Shield of the Phoenix,
-    Spear of the Magus, Blood-Bound Book, Kinetic Cuirass, Phoenix Feather, Doom Orb,
-    Eye of Providence, Alchemist Coat, Bancroft''s Talon, Jade Scepter, The World
-    Stone, Gem of Isolation, Scepter of Dominion, Spectral Armor, Triton''s Conch,
+    this god: Gluttonous Grimoire, Rod of Asclepius, Obsidian Shard, Lifebinder, Chandra''s
+    Grace, Amanita Charm, Shield of the Phoenix, Ethereal Staff, The Cosmic Horror,
+    Blood-Bound Book, Kinetic Cuirass, Phoenix Feather, Spear of the Magus, Eye of
+    Providence, Alchemist Coat, Doom Orb, Jade Scepter, Bancroft''s Talon, Gem of
+    Isolation, Scepter of Dominion, The World Stone, Spectral Armor, Triton''s Conch,
     Chronos'' Pendant, Erosion.'
   starter: *id001
   aspect: Aspect of the Cursed Crown
@@ -292,8 +292,8 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Obsidian Shard, Rod of Asclepius, The Cosmic
     Horror, Spear of the Magus, Doom Orb, Lifebinder, Amanita Charm, Chandra''s Grace,
-    The World Stone, Void Stone, Shield of the Phoenix, Ethereal Staff, Blood-Bound
-    Book, Screeching Gargoyle, Kinetic Cuirass, Phoenix Feather, Bancroft''s Talon,
+    The World Stone, Void Stone, Shield of the Phoenix, Screeching Gargoyle, Ethereal
+    Staff, Blood-Bound Book, Kinetic Cuirass, Phoenix Feather, Bancroft''s Talon,
     Void Shield, Eye of Providence, Alchemist Coat, Jade Scepter, Spectral Armor,
     Gem of Isolation.'
   starter: *id001

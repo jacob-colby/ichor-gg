@@ -13,8 +13,8 @@ builds:
   - Spear of the Magus
   - Soul Gem
   flex_slots:
-  - Doom Orb
   - Divine Ruin
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse

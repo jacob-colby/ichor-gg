@@ -13,8 +13,8 @@ builds:
   - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Tekko-Kagi
   - Hydra's Lament
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -151,12 +151,12 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
+  - Damaru
   - Pendulum Blade
   - The Crusher
-  - Heartseeker
   flex_slots:
   - Pendulum Blade
-  - Heartseeker
+  - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -242,8 +242,8 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Stygian Anchor
   - Shield Splitter
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse

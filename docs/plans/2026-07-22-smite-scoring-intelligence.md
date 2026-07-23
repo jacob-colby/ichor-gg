@@ -23,6 +23,7 @@
 | baseline | 60% | 62% | 0.26 (n=54) | Ymir in pool since 2026-07-21 |
 | Task 2 (tags) | 60% | 62% | 0.26 (n=54) | Added sustain (Hunter's Cowl) + aura (Soul Gem, Umbral Link, War Banner, War Flag); rejected 5 possible-missing candidates as unsupported by passive text — no measurable shift |
 | Task 4 (role vocab) | 58% | 60% | 0.38 (n=54) | Spearman +0.12 (the deeper signal). Coverage −2pts is within-class churn: Hercules/Ymir/Ra/Susano cores are now correctly tanky/appropriate, but community favors single-prot CDR tanks (Breastplate/Genji's, our ranks 11–15) over our dual-prot all-rounders. Hypothesis for Task 9: tank maps lack Cooldown Rate. Bari 40→60, Ullr 50→67. |
+| Task 7 (kit blend 0.3) | 60% | 61% | 0.33 (n=54) | Swept blend {0, 0.3, 0.5, 0.7}: blend=0 reproduces Task 4 exactly (no bug). Kit overlay lifts Susano 80→100% (pure-Str kit), no god worse; costs ~0.04 Spearman (diffuse ranking noise). Kept 0.3 — smallest blend capturing the full gain. |
 
 ---
 
