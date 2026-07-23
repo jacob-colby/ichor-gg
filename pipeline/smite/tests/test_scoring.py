@@ -235,3 +235,134 @@ def test_resolve_profile_no_aspect_unchanged():
     weights = {"signals": {"efficiency": 1}, "flavors": {}, "modes": {"conquest": {}}}
     p = scoring.resolve_profile(weights, "Conquest", None)
     assert p["stat_overlay"] == {} and p["max_lifesteal"] == 1
+
+
+def test_role_map_matches_tokens_in_multiword_roles():
+    w = scoring.load_weights_default()
+    cern = _god("Cernunnos", "physical", "Carry Jungle", ["Sharpshooter"])
+    m = scoring._role_stat_map(cern, w)
+    assert m["Attack Speed"] == 1.0          # Sharpshooter, exact match
+    assert m["Penetration"] >= 0.8           # Jungle, token match
+
+
+def test_role_map_drops_opposite_damage_type_offense():
+    w = scoring.load_weights_default()
+    cern = _god("Cernunnos", "physical", "Carry Jungle", ["Nuker", "Sharpshooter"])
+    assert "Intelligence" not in scoring._role_stat_map(cern, w)
+    ymir = _god("Ymir", "magical", "Support", ["Brawler", "Tank", "Lockdown"])
+    m = scoring._role_stat_map(ymir, w)
+    assert "Strength" not in m
+    assert m["Physical Protection"] == 1.0
+    assert m["Max Health"] == 0.8
+
+
+def test_every_pool_role_vocabulary_produces_a_nonempty_map():
+    w = scoring.load_weights_default()
+    pool = [  # the real scraped vocabulary of all 11 gods
+        ("magical", "Mid", ["Nuker", "Burst Damage", "Sniper"]),
+        ("physical", "Carry Jungle", ["Nuker", "Sharpshooter", "Lockdown"]),
+        ("physical", "Carry", ["Sharpshooter", "Nuker"]),
+        ("magical", "Mid Carry", ["Constant Damage"]),
+        ("physical", "Solo", ["Tank", "Brawler", "Lockdown"]),
+        ("magical", "Mid", ["Nuker", "Burst Damage"]),
+        ("magical", "Carry Mid", ["Sharpshooter", "Mobile", "Constant Damage"]),
+        ("magical", "Mid", ["Sniper", "Healing", "Buffs"]),
+        ("physical", "Jungle", ["Slayer", "Lockdown", "Mobile"]),
+        ("physical", "Carry", ["Lockdown", "Burst Damage", "Pressure"]),
+        ("magical", "Support", ["Brawler", "Tank", "Lockdown"]),
+    ]
+    for dt, role, specs in pool:
+        m = scoring._role_stat_map(_god("X", dt, role, specs), w)
+        assert m, f"empty fit map for role={role} specs={specs}"
+
+
+def test_role_map_missing_role_and_specs_is_empty_and_fit_survives():
+    w = scoring.load_weights_default()
+    assert scoring._role_stat_map({"damage_type": "physical"}, w) == {}
+    # fit degrades to tag-bonus-only, never raises
+    assert scoring.god_fit_score({"stats": {"Strength": "40"}}, {"damage_type": "physical"}, w, []) == 0.0
+
+
+def test_role_map_uses_max_health_not_health():
+    # Items carry 'Max Health' (63 of them); no item has a 'Health' stat key.
+    w = scoring.load_weights_default()
+    for entry in w["role_stats"].values():
+        assert "Health" not in entry, "use 'Max Health' — 'Health' matches no item"
+
+
+def test_kit_overlay_blends_into_fit_via_score_god_items():
+    weights = scoring.load_weights_default()
+    int_item = {"name": "Staff", "tier": 3, "stats": {"Intelligence": "70"}}
+    cdr_item = {"name": "Pendant", "tier": 3, "stats": {"Cooldown Rate": "10"}}
+    eff = {"Staff": {"score": 0.5, "tier": "fair"}, "Pendant": {"score": 0.5, "tier": "fair"}}
+    build = {"builds": []}
+    kit_god = {"name": "K", "damage_type": "magical", "role": "Mid", "specializations": [],
+               "abilities": [
+                   {"slot": "1st Ability", "details": ["Damage Scaling: 80% Intelligence"]},
+                   {"slot": "2nd Ability", "details": ["Damage Scaling: 70% Intelligence"]},
+                   {"slot": "Ultimate", "details": ["Damage Scaling: 120% Intelligence"]},
+               ]}
+    no_kit_god = {**kit_god, "abilities": []}
+    rows_kit = {r["item"]: r for r in scoring.score_god_items(
+        kit_god, [int_item, cdr_item], build, eff, weights, {})}
+    rows_plain = {r["item"]: r for r in scoring.score_god_items(
+        no_kit_god, [int_item, cdr_item], build, eff, weights, {})}
+    # A kit that is pure Intelligence scaling should shift fit relative to the
+    # role map alone (the blended map differs from the plain role map).
+    assert rows_kit["Staff"]["fit"] != rows_plain["Staff"]["fit"]
+
+
+def test_lifesteal_caps_rule_raises_default_for_matching_god():
+    w = scoring.load_weights_default()
+    w["lifesteal_caps"] = [{"damage_types": ["physical"], "match_any": ["Carry"],
+                            "max_lifesteal": 2}]
+    p = scoring.resolve_profile(w, "Conquest", None)
+    carry = _god("C", "physical", "Carry", ["Sharpshooter"])
+    mage = _god("M", "magical", "Mid", [])
+    assert scoring.god_max_lifesteal(carry, w, p) == 2
+    assert scoring.god_max_lifesteal(mage, w, p) == 1
+
+
+def test_explicit_flavor_cap_wins_over_lifesteal_caps_rule():
+    w = scoring.load_weights_default()
+    w["flavors"] = {"crit": {"stats": {}, "max_lifesteal": 1}}
+    w["lifesteal_caps"] = [{"damage_types": ["physical"], "match_any": ["Carry"],
+                            "max_lifesteal": 2}]
+    p = scoring.resolve_profile(w, "Conquest", "crit")
+    carry = _god("C", "physical", "Carry", [])
+    assert scoring.god_max_lifesteal(carry, w, p) == 1
+
+
+def test_fun_profile_zeroes_meta_signals_and_sets_bypass_flags():
+    w = scoring.load_weights_default()
+    w["flavors"] = {"fun-crit": {"fun": True, "bypass": ["damage_filter", "archetype_fit"],
+                                 "stats": {"Critical Chance": 1.5}}}
+    p = scoring.resolve_profile(w, "Conquest", "fun-crit")
+    assert p["signals"]["win"] == 0.0 and p["signals"]["pick"] == 0.0
+    assert p["bypass_damage_filter"] is True
+    assert p["archetype_bypass"] is True
+    assert p["fun"] is True
+    assert p["suppress_underrated"] is True
+
+
+def test_serious_profile_has_no_bypass():
+    p = scoring.resolve_profile(scoring.load_weights_default(), "Conquest", None)
+    assert p["bypass_damage_filter"] is False
+    assert p["archetype_bypass"] is False
+    assert p["fun"] is False
+
+
+def test_bypass_damage_filter_lets_crit_items_reach_a_magical_god():
+    w = scoring.load_weights_default()
+    w["flavors"] = {"fun-crit": {"fun": True, "bypass": ["damage_filter", "archetype_fit"],
+                                 "stats": {"Critical Chance": 1.5, "Attack Speed": 1.2}}}
+    ymir = _god("Ymir", "magical", "Support", ["Tank"])
+    crit_item = {"name": "Deathbringer", "tier": 3, "stats": {"Critical Chance": "25%"}}
+    eff = {"Deathbringer": {"score": 0.5, "tier": "fair"}}
+    fun = scoring.resolve_profile(w, "Conquest", "fun-crit")
+    serious = scoring.resolve_profile(w, "Conquest", None)
+    fun_rows = scoring.score_god_items(ymir, [crit_item], {"builds": []}, eff, w, {}, fun)
+    serious_rows = scoring.score_god_items(ymir, [crit_item], {"builds": []}, eff, w, {}, serious)
+    assert [r["item"] for r in fun_rows] == ["Deathbringer"]
+    assert serious_rows == []                       # damage filter still guards serious builds
+    assert fun_rows[0]["fit"] > 0                   # flavor stats drive fit despite empty role map

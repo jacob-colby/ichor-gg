@@ -34,35 +34,72 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Eye of Providence
   - Genji's Guard
   - Kinetic Cuirass
-  - Ethereal Staff
-  - Ancient Signet
-  - Gluttonous Grimoire
-  - Spectral Armor
+  - Shifter's Shield
+  - Amanita Charm
+  - Erosion
   flex_slots:
-  - Ancient Signet
-  - Ethereal Staff
+  - Genji's Guard
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Draconic Scale — magical protection
+    swap_item: Draconic Scale
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Genji''s Guard, Kinetic Cuirass, Gluttonous Grimoire, Spectral Armor,
-    Rod of Asclepius, Blood-Bound Book, Ancient Signet, Ethereal Staff, Eye of Providence,
-    The Cosmic Horror, Soul Gem, Divine Ruin, Death Metal, Amanita Charm, Bancroft''s
-    Talon, Spear of the Magus, Polynomicon, Spear of Desolation, Yogi''s Necklace,
-    Chandra''s Grace, Bragi''s Harp, Helm of Radiance, Doom Orb, Chronos'' Pendant,
-    Breastplate of Valor, Lifebinder, Screeching Gargoyle.'
+    this god: Kinetic Cuirass, Eye of Providence, Amanita Charm, Genji''s Guard, Erosion,
+    Spectral Armor, Shield of the Phoenix, Gladiator''s Shield, Rod of Asclepius,
+    Draconic Scale, Gluttonous Grimoire, Ethereal Staff, Prophetic Cloak, Shroud of
+    Vengeance, Midgardian Mail, Mantle Of Discord, Magi''s Cloak, Freya''s Tears,
+    Phoenix Feather, Leviathan''s Hide, Ancile, Breastplate of Valor, Helm of Radiance,
+    Chandra''s Grace, Stone of Binding, Oni Hunter''s Garb.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.45
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Genji's Guard:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.54
+      pick: 0.15
+      fit: 0.39
+    Kinetic Cuirass:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Shifter's Shield:
+      total: 0.43
+      efficiency: 0.3
+      win: 0.53
+      pick: 0.23
+      fit: 0.72
+    Amanita Charm:
+      total: 0.44
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Erosion:
+      total: 0.42
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -70,66 +107,206 @@ builds:
   archetype: bruiser
   slot_order:
   - Eye of Providence
+  - Genji's Guard
   - Kinetic Cuirass
-  - Spirit Robe
+  - Shield of the Phoenix
   - Shifter's Shield
   - Amanita Charm
-  - Erosion
   flex_slots:
+  - Genji's Guard
   - Shifter's Shield
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Spirit Robe, Kinetic Cuirass, Eye of Providence, Glorious
-    Pridwen, Shield of the Phoenix, Erosion, Shroud of Vengeance, Phoenix Feather,
-    Genji''s Guard, Mantle Of Discord, Magi''s Cloak, Stone of Binding, Prophetic
-    Cloak, Spectral Armor, Freya''s Tears, Rod of Asclepius, Blood-Bound Book, Draconic
-    Scale, Soul Gem, Stygian Anchor, Helm of Darkness, Bancroft''s Talon, Sphere of
-    Negation, Umbral Link, Helm of Radiance.'
+    this god: Amanita Charm, Shield of the Phoenix, Rod of Asclepius, Kinetic Cuirass,
+    Eye of Providence, Chandra''s Grace, Genji''s Guard, Phoenix Feather, Soul Gem,
+    Lifebinder, Spectral Armor, Blood-Bound Book, Erosion, Spirit Robe, Bancroft''s
+    Talon, Gluttonous Grimoire, Ethereal Staff, Glorious Pridwen, Gladiator''s Shield,
+    Midgardian Mail, Breastplate of Valor, Leviathan''s Hide, Ancile, Helm of Radiance,
+    Shroud of Vengeance, Draconic Scale.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Genji's Guard:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.54
+      pick: 0.15
+      fit: 0.29
+    Kinetic Cuirass:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Shield of the Phoenix:
+      total: 0.43
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Shifter's Shield:
+      total: 0.4
+      efficiency: 0.3
+      win: 0.53
+      pick: 0.23
+      fit: 0.53
+    Amanita Charm:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Eye of Providence
+  - Genji's Guard
+  - Kinetic Cuirass
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
-  - Spear of the Magus
-  - Obsidian Shard
   flex_slots:
-  - Doom Orb
-  - Obsidian Shard
+  - The Cosmic Horror
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Cosmic Horror, Spear of the Magus, Gluttonous Grimoire, Spear
-    of Desolation, Doom Orb, Soul Gem, Obsidian Shard, The World Stone, Rod of Tahuti,
-    Dreamer''s Idol, Screeching Gargoyle, Genji''s Guard, Void Stone, Void Shield,
-    Stone of Binding, Kinetic Cuirass, Spectral Armor, Rod of Asclepius, Blood-Bound
-    Book, Ancient Signet, Ethereal Staff, Eye of Providence, Divine Ruin, Death Metal,
-    Amanita Charm, Bancroft''s Talon, Polynomicon.'
+    for this god: Gluttonous Grimoire, Kinetic Cuirass, Eye of Providence, Soul Gem,
+    Genji''s Guard, Amanita Charm, The Cosmic Horror, Spear of Desolation, Screeching
+    Gargoyle, Spectral Armor, Void Stone, Stone of Binding, Spear of the Magus, Void
+    Shield, Erosion, Doom Orb, Shield of the Phoenix, Rod of Asclepius, Ethereal Staff,
+    Obsidian Shard, The World Stone, Midgardian Mail, Gladiator''s Shield, Shroud
+    of Vengeance, Chandra''s Grace, Helm of Radiance, Breastplate of Valor.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Genji's Guard:
+      total: 0.4
+      efficiency: 0.44
+      win: 0.54
+      pick: 0.15
+      fit: 0.25
+    Kinetic Cuirass:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Gluttonous Grimoire:
+      total: 0.42
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Spear of Desolation:
+      total: 0.4
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    The Cosmic Horror:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
+  starter: *id001
+- source: suggested
+  archetype: fun-crit
+  slot_order:
+  - Tyrfing
+  - Rage
+  - Bragi's Harp
+  - Death Metal
+  - Damaru
+  - Demon Blade
+  flex_slots:
+  - Rage
+  - Bragi's Harp
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
+    build). Scored on gold-value + flavor fit only; not meta-checked.
+  slot_scores:
+    Tyrfing:
+      total: 0.24
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Rage:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Bragi's Harp:
+      total: 0.23
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Death Metal:
+      total: 0.25
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Damaru:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Demon Blade:
+      total: 0.23
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  fun: true
   starter: *id001
 ---

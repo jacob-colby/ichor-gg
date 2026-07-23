@@ -335,4 +335,85 @@ describe("DetailPanel", () => {
                         mode="Conquest" onModeChange={() => {}} />);
     expect(screen.getByRole("tab", { name: /crit/i })).toBeInTheDocument();
   });
+
+  it("shows the fun badge (and a dice tab marker) when a fun build's tab is active", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["X"], situational_swaps: [], rationale: "" },
+      { source: "suggested", archetype: "fun-crit", fun: true, slot_order: ["Y"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    // core tab active by default — no badge
+    expect(screen.queryByText(/for fun/i)).not.toBeInTheDocument();
+    const funTab = screen.getByRole("tab", { name: /fun-crit/i });
+    expect(funTab).toHaveTextContent("🎲");
+    fireEvent.click(funTab);
+    expect(screen.getByText(/for fun/i)).toBeInTheDocument();
+    expect(screen.getByText(/off-class/i)).toBeInTheDocument();
+  });
+
+  it("shows the why-this-item score breakdown in the tooltip for an item with slot_scores", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [],
+        rationale: "",
+        slot_scores: { Deathbringer: { total: 0.81, efficiency: 0.9, win: 0.55, pick: 0.4, fit: 0.7 } } },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    const trigger = screen.getByText("Deathbringer").closest('[tabindex="0"]')!;
+    fireEvent.focus(trigger);
+    expect(screen.getByText(/WHY THIS ITEM/i)).toBeInTheDocument();
+    expect(screen.getByText("fit")).toBeInTheDocument();
+    expect(screen.getByText("0.70")).toBeInTheDocument();
+  });
+
+  it("does not render a why-this-item section when the entry has no slot_scores", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    const trigger = screen.getByText("Deathbringer").closest('[tabindex="0"]')!;
+    fireEvent.focus(trigger);
+    expect(screen.queryByText(/WHY THIS ITEM/i)).not.toBeInTheDocument();
+  });
+
+  it("marks suggested items missing from the community list as off-meta", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [
+          { name: "A", pick_rate: 0.6, win_rate: 0.5 },
+          { name: "B", pick_rate: 0.4, win_rate: 0.5 },
+        ], source_url: "u" },
+      { source: "suggested", archetype: "core", slot_order: ["B", "C"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    fireEvent.click(screen.getByRole("tab", { name: /core/i }));
+    const markers = screen.getAllByText("off-meta");
+    expect(markers).toHaveLength(1);
+    expect(screen.getByText("C").closest("div")).toHaveTextContent("off-meta");
+    expect(screen.getByText("B").closest("div")).not.toHaveTextContent("off-meta");
+  });
+
+  it("does not mark fun builds or gods without community data as off-meta", () => {
+    // fun build: off-class by design, marker would be noise
+    const withCommunity = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [{ name: "A", pick_rate: 0.6, win_rate: 0.5 }], source_url: "u" },
+      { source: "suggested", archetype: "fun-crit", fun: true, slot_order: ["Z"], situational_swaps: [], rationale: "" },
+    ] }];
+    const { unmount } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={withCommunity as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    fireEvent.click(screen.getByRole("tab", { name: /fun-crit/i }));
+    expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
+    unmount();
+    // no community entry at all: nothing to compare against, no marker
+    const noCommunity = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["Z"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={noCommunity as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
+  });
 });

@@ -62,7 +62,8 @@ def god_metrics(god, items, build_note, weights, tags_map, eff_scores, items_by_
     profile = scoring.resolve_profile(weights, "Conquest", None)
     rows = scoring.score_god_items(god, items, build_note, eff_scores, weights, tags_map, profile)
     score = {r["item"]: r["total"] for r in rows}
-    core = assemble.assemble_core(rows, items_by_name, n=6, max_lifesteal=profile["max_lifesteal"])
+    core = assemble.assemble_core(rows, items_by_name, n=6,
+                                  max_lifesteal=scoring.god_max_lifesteal(god, weights, profile))
     community = [c for c in _community_slots(build_note)
                  if c.get("name") in score and c.get("win_rate") is not None]
     names = [c["name"] for c in community]
@@ -89,17 +90,20 @@ def aggregate(per_god):
     }
 
 
-def compute(items=None, weights=None, tags_map=None):
+def compute(items=None, weights=None, tags_map=None, gods=None, builds_by_god=None):
     items = items if items is not None else recommend.load_items()
     weights = weights if weights is not None else scoring.load_weights(recommend.WEIGHTS_PATH)
     tags_map = tags_map if tags_map is not None else scoring.load_tags(recommend.TAGS_PATH)
+    gods = gods if gods is not None else recommend.load_gods()
+    if builds_by_god is None:
+        builds_by_god = {g["name"]: recommend.load_build_note(g["name"]) for g in gods}
     eff_scores, _ = efficiency.efficiency_scores(items)
     items_by_name = {it["name"]: it for it in items}
     per_god = {}
-    for god in recommend.load_gods():
-        build = recommend.load_build_note(god["name"])
+    for god in gods:
+        build = builds_by_god[god["name"]]
         if not _community_slots(build):
-            continue  # no community data (e.g., not yet scraped)
+            continue
         per_god[god["name"]] = god_metrics(god, items, build, weights, tags_map, eff_scores, items_by_name)
     return per_god, aggregate(per_god)
 

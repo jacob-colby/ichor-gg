@@ -6,21 +6,37 @@ import math
 
 import yaml
 
+from smite import kit
 from smite.efficiency import parse_stat_value
 
 DEFAULT_WEIGHTS = {
     "signals": {"efficiency": 0.35, "win": 0.30, "pick": 0.15, "fit": 0.20},
-    # role/specialization → {stat: weight}. Extend as new roles enter the pool;
-    # unknown roles simply contribute nothing to fit (graceful).
+    # role/spec label → {stat: weight}. Labels match exactly first, then by
+    # whitespace token ("Carry Jungle" → Carry + Jungle), so the scraped
+    # vocabulary (Mid, Solo, Support, Slayer, "Burst Damage", …) always lands.
+    # Stat keys must be real item stat keys ("Max Health", not "Health").
     "role_stats": {
-        "Sharpshooter": {"Attack Speed": 1.0, "Critical Chance": 1.0, "Strength": 0.6},
-        "Nuker": {"Intelligence": 1.0, "Penetration": 1.0, "Cooldown Rate": 0.5},
+        "Sharpshooter": {"Attack Speed": 1.0, "Critical Chance": 1.0, "Strength": 0.6, "Lifesteal": 0.5},
+        "Nuker": {"Intelligence": 1.0, "Strength": 0.6, "Penetration": 1.0, "Cooldown Rate": 0.5},
         "Mage": {"Intelligence": 1.0, "Penetration": 0.8, "Cooldown Rate": 0.5},
-        "Hunter": {"Strength": 1.0, "Attack Speed": 0.8, "Critical Chance": 0.6},
-        "Carry": {"Strength": 0.8, "Attack Speed": 0.6, "Critical Chance": 0.6},
+        "Hunter": {"Strength": 1.0, "Attack Speed": 0.8, "Critical Chance": 0.6, "Lifesteal": 0.5},
+        "Carry": {"Strength": 0.8, "Attack Speed": 0.6, "Critical Chance": 0.6, "Lifesteal": 0.5},
         "Assassin": {"Strength": 1.0, "Penetration": 0.8},
-        "Warrior": {"Strength": 0.8, "Physical Protection": 0.5, "Health": 0.5},
-        "Guardian": {"Physical Protection": 1.0, "Magical Protection": 1.0, "Health": 0.8},
+        "Warrior": {"Strength": 0.8, "Physical Protection": 0.5, "Max Health": 0.5},
+        "Guardian": {"Physical Protection": 1.0, "Magical Protection": 1.0, "Max Health": 0.8},
+        "Tank": {"Physical Protection": 1.0, "Magical Protection": 1.0, "Max Health": 0.8},
+        "Support": {"Physical Protection": 0.9, "Magical Protection": 0.9, "Max Health": 0.8},
+        "Brawler": {"Max Health": 0.8, "Physical Protection": 0.5, "Magical Protection": 0.5, "Strength": 0.4},
+        "Solo": {"Max Health": 0.7, "Physical Protection": 0.5, "Magical Protection": 0.5, "Strength": 0.4},
+        "Jungle": {"Strength": 1.0, "Penetration": 0.8},
+        "Slayer": {"Strength": 1.0, "Penetration": 0.8},
+        "Mid": {"Intelligence": 1.0, "Penetration": 0.8, "Cooldown Rate": 0.5},
+        "Sniper": {"Intelligence": 1.0, "Penetration": 0.8},
+        "Burst": {"Penetration": 0.8, "Cooldown Rate": 0.5},
+        "Healing": {"Cooldown Rate": 0.8, "Intelligence": 0.4},
+        "Buffs": {"Cooldown Rate": 0.6},
+        "Constant": {"Attack Speed": 0.6},
+        "Pressure": {"Attack Speed": 0.5},
     },
     # "Underrated" = intrinsically good for this god (high quality = efficiency
     # + fit, independent of the meta) yet rarely picked. It deliberately does
@@ -29,6 +45,8 @@ DEFAULT_WEIGHTS = {
     # we most want to surface. `top_quality_frac` auto-calibrates per god (flag
     # only the top fraction by quality), so no fragile absolute score cutoff.
     "underrated": {"max_pick": 0.15, "top_quality_frac": 0.30},
+    # How much the kit-scaling overlay skews god-fit (0 = role map only).
+    "kit_blend": 0.5,
 }
 
 
@@ -87,24 +105,55 @@ def passes_damage_filter(item, god):
     return dt == "neutral" or dt == god.get("damage_type")
 
 
+# Offensive stats that are dead weight for the opposite damage type: an
+# Intelligence entry on a physical god (Cernunnos's "Nuker" spec) would skew
+# fit toward items the damage filter already forbids — drop them up front.
+# Attack Speed stays for magical gods (hybrid Int+AS items are real). Magical
+# drops Critical Chance too: a crit-carrying item without Intelligence is
+# classified physical by item_damage_type and never reaches a magical god's
+# pool anyway, so the entry only removes dead denominator weight, not real
+# fit credit — the one exception would be a hybrid Int+Crit item, which
+# would lose fit credit here, an accepted trade since none exist in the pool.
+_OPPOSITE_OFFENSE = {
+    "physical": ("Intelligence",),
+    "magical": ("Strength", "Critical Chance"),
+}
+
+
 def _role_stat_map(god, weights):
-    merged = {}
-    roles = list(god.get("specializations") or [])
+    """Merged {stat: weight} fit map for a god's role + specializations. Each
+    label matches `role_stats` exactly first, then falls back to whitespace
+    tokens ("Carry Jungle" → Carry + Jungle), so the scraped multi-word
+    vocabulary always lands. Overlapping stats keep the max weight. Offensive
+    stats of the opposite damage type are dropped (the damage filter already
+    forbids those items, so they'd only skew fit). Unknown labels (no exact
+    or token match in role_stats) contribute nothing — a god with unseen
+    vocabulary just gets an empty map, handled gracefully downstream."""
+    role_stats = weights["role_stats"]
+    labels = [str(s) for s in (god.get("specializations") or [])]
     if god.get("role"):
-        roles.append(god["role"])
-    for role in roles:
-        for stat, w in weights["role_stats"].get(role, {}).items():
-            merged[stat] = max(merged.get(stat, 0.0), w)
+        labels.append(str(god["role"]))
+    merged = {}
+    for label in labels:
+        keys = [label] if label in role_stats else [t for t in label.split() if t in role_stats]
+        for key in keys:
+            for stat, w in role_stats[key].items():
+                merged[stat] = max(merged.get(stat, 0.0), w)
+    for stat in _OPPOSITE_OFFENSE.get(god.get("damage_type"), ()):
+        merged.pop(stat, None)
     return merged
 
 
-def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=None):
+def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=None,
+                  base_map=None):
     """Archetype fit in [0,1]: weighted presence of role-relevant stats, plus a
     small bonus for archetype-relevant tags. An optional stat_overlay (flavor
     weights, which win over the god's role map) and tag_bonus (per-tag deltas,
-    may be negative) skew the fit. NOT damage simulation — see spec."""
+    may be negative) skew the fit. base_map, when given, replaces the role-map
+    lookup (score_god_items passes the kit-blended map); flavor stat_overlay
+    still wins on shared keys. NOT damage simulation — see spec."""
     stats = item.get("stats") or {}
-    role_map = _role_stat_map(god, weights)
+    role_map = dict(base_map) if base_map is not None else _role_stat_map(god, weights)
     if stat_overlay:
         role_map = {**role_map, **stat_overlay}
     denom = sum(role_map.values()) or 1.0
@@ -134,11 +183,12 @@ def lookup_rates(god_build, item_name):
 
 
 def signal_score(item, god, god_build, eff_score, weights, item_tags,
-                 stat_overlay=None, tag_bonus=None):
+                 stat_overlay=None, tag_bonus=None, base_map=None):
     w = weights["signals"]
     pick, win = lookup_rates(god_build, item["name"])
     win_norm = win if win is not None else 0.5   # neutral when unknown
-    fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus)
+    fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus,
+                        base_map=base_map)
     total = (w["efficiency"] * eff_score + w["win"] * win_norm
              + w["pick"] * pick + w["fit"] * fit)
     # Intrinsic merit for this god — efficiency + fit only, renormalized so it
@@ -183,30 +233,63 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
     Mode sets signal overrides + tag bonuses; the aspect overlay and flavor each
     add stat weights + tag bonuses (flavor wins on a shared key) + a lifesteal cap
     (flavor's explicit cap wins, else the aspect's, else 1). suppress_underrated is
-    true when the mode zeroes the pick signal (underrated needs pick data)."""
+    true when the mode zeroes the pick signal (underrated needs pick data).
+    Fun flavors (`fun: true`) zero the win/pick meta signals and may declare
+    `bypass` entries ("damage_filter", "archetype_fit") to escape class guards."""
     mode_prof = (weights.get("modes") or {}).get(mode.lower(), {}) or {}
     fl = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
     asp = aspect_overlay or {}
+    bypass = set(fl.get("bypass") or [])
+    fun = bool(fl.get("fun"))
     signals = {**weights["signals"], **(mode_prof.get("signals") or {})}
+    if fun:
+        # Off-class items have no meta data; a neutral 0.5 win rate would only
+        # add noise, so fun builds are scored on efficiency + flavor fit alone.
+        signals = {**signals, "win": 0.0, "pick": 0.0}
     tag_bonus = {**(mode_prof.get("tag_bonus") or {}),
                  **(asp.get("tag_bonus") or {}),
                  **(fl.get("tag_bonus") or {})}
     stat_overlay = {**(asp.get("stats") or {}), **(fl.get("stats") or {})}
     if "max_lifesteal" in fl:
-        max_ls = fl["max_lifesteal"]
+        max_ls, ls_explicit = fl["max_lifesteal"], True
     elif "max_lifesteal" in asp:
-        max_ls = asp["max_lifesteal"]
+        max_ls, ls_explicit = asp["max_lifesteal"], True
     else:
-        max_ls = 1
+        max_ls, ls_explicit = 1, False
     return {
         "signals": signals,
         "stat_overlay": stat_overlay,
         "tag_bonus": tag_bonus,
         "max_lifesteal": max_ls,
+        "max_lifesteal_explicit": ls_explicit,
         "suppress_underrated": signals.get("pick", 1) == 0,
         "label": mode_prof.get("label"),
         "flavor": flavor,
+        "bypass_damage_filter": "damage_filter" in bypass,
+        "archetype_bypass": "archetype_fit" in bypass,
+        "fun": fun,
     }
+
+
+def god_max_lifesteal(god, weights, profile):
+    """Effective lifesteal cap for assembling this god's core. An explicit
+    flavor/aspect cap always wins; otherwise the first matching `lifesteal_caps`
+    rule (starter-style damage_types/match_any gating) may raise the default.
+    Exists because the community meta double-stacks sustain on basic-attack
+    carries (Devourer's + Riptalon on Cernunnos) — see _disagreements.md."""
+    if profile.get("max_lifesteal_explicit"):
+        return profile["max_lifesteal"]
+    tokens = _god_tokens(god)
+    dt = god.get("damage_type")
+    for rule in (weights.get("lifesteal_caps") or []):
+        dts = rule.get("damage_types")
+        if dts and dt not in dts:
+            continue
+        match_any = rule.get("match_any")
+        if match_any and not (tokens & set(match_any)):
+            continue
+        return rule.get("max_lifesteal", profile["max_lifesteal"])
+    return profile["max_lifesteal"]
 
 
 def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_map, profile=None):
@@ -220,15 +303,25 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     stat_overlay = profile.get("stat_overlay")
     tag_bonus = profile.get("tag_bonus")
 
+    # Fun flavors set archetype_bypass to ignore the god's archetype entirely.
+    if profile.get("archetype_bypass"):
+        base_map = {}
+    else:
+        base_map = _role_stat_map(god, weights)
+        blend = eff_weights.get("kit_blend", 0.5)
+        for stat, w in kit.kit_stat_overlay(kit.scaling_profile(god), god).items():
+            base_map[stat] = (1 - blend) * base_map.get(stat, 0.0) + blend * w
+
     rows = []
     for item in items:
         if not is_buildable(item):
             continue
-        if not passes_damage_filter(item, god):
+        if not profile.get("bypass_damage_filter") and not passes_damage_filter(item, god):
             continue
         eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
         row = signal_score(item, god, god_build, eff, eff_weights,
-                           tags_map.get(item["name"], []), stat_overlay, tag_bonus)
+                           tags_map.get(item["name"], []), stat_overlay, tag_bonus,
+                           base_map=base_map)
         row["tier"] = efficiency_scores_map.get(item["name"], {}).get("tier", "fair")
         rows.append(row)
 

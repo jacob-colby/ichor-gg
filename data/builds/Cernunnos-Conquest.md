@@ -37,12 +37,12 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Hydra's Lament
+  - Devourer's Gauntlet
   - Riptalon
-  - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Tyrfing
   - Hydra's Lament
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -57,12 +57,49 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, The Crusher, Tekko-Kagi, Tyrfing, Hydra''s Lament,
-    The Reaper, Lernaean Bow, Runeforged Hammer, Golden Blade, Damaru, Titan''s Bane,
-    Rage, Avenging Blade, Pendulum Blade, Berserker''s Shield, Demon Blade, Shield
-    Splitter, Heartseeker, Genji''s Guard, Kinetic Cuirass, Musashi''s Dual Swords,
-    Spectral Armor, Pharaoh''s Curse, Arondight, Eros'' Bow, Chandra''s Grace, Eye
-    of the Storm.'
+    this god: Jotunn''s Revenge, The Crusher, The Reaper, Hydra''s Lament, Tyrfing,
+    Tekko-Kagi, Lernaean Bow, Runeforged Hammer, Golden Blade, Damaru, Rage, Avenging
+    Blade, Shield Splitter, Titan''s Bane, Pendulum Blade, Barbed Carver, Berserker''s
+    Shield, Eye of the Storm, Arondight, Genji''s Guard, Heartseeker, Transcendence,
+    Demon Blade, Spectral Armor, Musashi''s Dual Swords, Kinetic Cuirass, Oath-Sworn
+    Spear, Chandra''s Grace.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.43
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Tyrfing:
+      total: 0.39
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Hydra's Lament:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Devourer's Gauntlet:
+      total: 0.41
+      efficiency: 0.3
+      win: 0.48
+      pick: 0.63
+      fit: 0.3
+    Riptalon:
+      total: 0.42
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.49
+    The Crusher:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -92,12 +129,49 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, The Crusher, Tyrfing, Tekko-Kagi, Hydra''s Lament,
-    Lernaean Bow, The Reaper, Damaru, Rage, Runeforged Hammer, Golden Blade, Demon
-    Blade, Titan''s Bane, Avenging Blade, Musashi''s Dual Swords, Berserker''s Shield,
-    Shield Splitter, Pendulum Blade, Heartseeker, Kinetic Cuirass, Genji''s Guard,
-    Pharaoh''s Curse, Spectral Armor, Eye of the Storm, Arondight, Eros'' Bow, Transcendence,
-    Oath-Sworn Spear.'
+    this god: Jotunn''s Revenge, The Crusher, The Reaper, Tyrfing, Hydra''s Lament,
+    Tekko-Kagi, Lernaean Bow, Damaru, Rage, Runeforged Hammer, Golden Blade, Avenging
+    Blade, Shield Splitter, Berserker''s Shield, Titan''s Bane, Demon Blade, Musashi''s
+    Dual Swords, Genji''s Guard, Spectral Armor, Kinetic Cuirass, Barbed Carver, Pendulum
+    Blade, Eye of the Storm, Eye of Providence, Pharaoh''s Curse, Transcendence, Chandra''s
+    Grace, Arondight.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.42
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Rage:
+      total: 0.37
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Riptalon:
+      total: 0.42
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.48
+    Damaru:
+      total: 0.37
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Demon Blade:
+      total: 0.35
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    The Crusher:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
 - source: suggested
   archetype: burst
@@ -109,8 +183,8 @@ builds:
   - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Tekko-Kagi
   - Tyrfing
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -119,18 +193,55 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Jotunn''s Revenge, The Crusher, Hydra''s Lament, Tekko-Kagi, The Reaper,
-    Tyrfing, Pendulum Blade, Lernaean Bow, Titan''s Bane, Runeforged Hammer, Golden
-    Blade, Avenging Blade, Heartseeker, Damaru, Rage, Shield Splitter, Arondight,
-    Genji''s Guard, Chandra''s Grace, Berserker''s Shield, Eye of the Storm, Kinetic
-    Cuirass, Breastplate of Valor, Screeching Gargoyle, Demon Blade, Transcendence,
-    Oath-Sworn Spear, Musashi''s Dual Swords.'
+    god: Jotunn''s Revenge, The Crusher, The Reaper, Hydra''s Lament, Tyrfing, Tekko-Kagi,
+    Runeforged Hammer, Lernaean Bow, Titan''s Bane, Avenging Blade, Golden Blade,
+    Shield Splitter, Pendulum Blade, Genji''s Guard, Damaru, Rage, Spectral Armor,
+    Chandra''s Grace, Arondight, Kinetic Cuirass, Heartseeker, Berserker''s Shield,
+    Eye of the Storm, Eye of Providence, Barbed Carver, Breastplate of Valor, Transcendence,
+    Shield of the Phoenix.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.43
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Tyrfing:
+      total: 0.37
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Hydra's Lament:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Riptalon:
+      total: 0.41
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.43
+    Tekko-Kagi:
+      total: 0.37
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    The Crusher:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -142,8 +253,8 @@ builds:
   - Riptalon
   - The Crusher
   flex_slots:
-  - Kinetic Cuirass
   - Shield Splitter
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -155,28 +266,64 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, The Reaper, Jotunn''s Revenge, Shield of the Phoenix,
-    The Crusher, Chandra''s Grace, Spirit Robe, Kinetic Cuirass, Shield Splitter,
-    Phoenix Feather, Eye of Providence, Hydra''s Lament, Tyrfing, Glorious Pridwen,
-    Bloodforge, Runeforged Hammer, Spectral Armor, Berserker''s Shield, Genji''s Guard,
-    Lernaean Bow, Tekko-Kagi, Avenging Blade, Eye of the Storm, Erosion, Golden Blade,
-    Shroud of Vengeance.'
+    this god: The Reaper, Jotunn''s Revenge, Amanita Charm, The Crusher, Shield of
+    the Phoenix, Shield Splitter, Chandra''s Grace, Kinetic Cuirass, Hydra''s Lament,
+    Eye of Providence, Phoenix Feather, Tyrfing, Spirit Robe, Bloodforge, Runeforged
+    Hammer, Spectral Armor, Genji''s Guard, Lernaean Bow, Berserker''s Shield, Avenging
+    Blade, Tekko-Kagi, Eye of the Storm, Golden Blade, Glorious Pridwen, Damaru, Erosion.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
+    Kinetic Cuirass:
+      total: 0.37
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Shield Splitter:
+      total: 0.38
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Devourer's Gauntlet:
+      total: 0.44
+      efficiency: 0.3
+      win: 0.48
+      pick: 0.63
+      fit: 0.5
+    Riptalon:
+      total: 0.44
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.62
+    The Crusher:
+      total: 0.39
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Oath-Sworn Spear
   - Avenging Blade
   - Jotunn's Revenge
+  - Hydra's Lament
   - Riptalon
   - Tekko-Kagi
   - The Crusher
   flex_slots:
   - Tekko-Kagi
-  - Oath-Sworn Spear
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -185,18 +332,55 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, The Crusher, Avenging Blade, Tekko-Kagi, The
-    Reaper, Oath-Sworn Spear, Screeching Gargoyle, Titan''s Bane, Tyrfing, Hydra''s
-    Lament, Pendulum Blade, Heartseeker, Lernaean Bow, Runeforged Hammer, Void Stone,
-    Golden Blade, Void Shield, Stone of Binding, Damaru, Rage, Shield Splitter, Berserker''s
-    Shield, Kinetic Cuirass, Genji''s Guard, Spectral Armor, Demon Blade, Chandra''s
-    Grace.'
+    for this god: Jotunn''s Revenge, The Crusher, The Reaper, Avenging Blade, Tekko-Kagi,
+    Hydra''s Lament, Oath-Sworn Spear, Titan''s Bane, Tyrfing, Runeforged Hammer,
+    Screeching Gargoyle, Lernaean Bow, Pendulum Blade, Heartseeker, Golden Blade,
+    Shield Splitter, Damaru, Rage, Spectral Armor, Void Stone, Barbed Carver, Genji''s
+    Guard, Berserker''s Shield, Kinetic Cuirass, Eye of the Storm, Transcendence,
+    Void Shield.'
+  slot_scores:
+    Avenging Blade:
+      total: 0.4
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Jotunn's Revenge:
+      total: 0.45
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Hydra's Lament:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Riptalon:
+      total: 0.44
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.58
+    Tekko-Kagi:
+      total: 0.39
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    The Crusher:
+      total: 0.43
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
   starter: *id001
 - source: suggested
   archetype: core
@@ -212,8 +396,8 @@ builds:
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -224,12 +408,48 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Jotunn''s Revenge, The Crusher, Runeforged Hammer, Chandra''s
-    Grace, Hydra''s Lament, Amanita Charm, Shield of the Phoenix, Avenging Blade,
-    Tyrfing, Bloodforge, Golden Blade, Tekko-Kagi, Lernaean Bow, Kinetic Cuirass,
-    Damaru, Titan''s Bane, Eye of the Storm, Phoenix Feather, Barbed Carver, Rage,
-    Spectral Armor, Shield Splitter, Berserker''s Shield, Eye of Providence, Pendulum
-    Blade.'
+    this god: The Reaper, Jotunn''s Revenge, The Crusher, Runeforged Hammer, Hydra''s
+    Lament, Chandra''s Grace, Avenging Blade, Tyrfing, Amanita Charm, Shield of the
+    Phoenix, Golden Blade, Bloodforge, Tekko-Kagi, Lernaean Bow, Spectral Armor, Eye
+    of the Storm, Damaru, Kinetic Cuirass, Shield Splitter, Rage, Berserker''s Shield,
+    Eye of Providence, Titan''s Bane, Barbed Carver, Phoenix Feather, Genji''s Guard.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.42
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Hydra's Lament:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Devourer's Gauntlet:
+      total: 0.45
+      efficiency: 0.3
+      win: 0.48
+      pick: 0.63
+      fit: 0.52
+    Runeforged Hammer:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    Riptalon:
+      total: 0.45
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.65
+    The Crusher:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -237,17 +457,17 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Rage
+  - Musashi's Dual Swords
   - Riptalon
   - Damaru
-  - Demon Blade
   - The Crusher
   flex_slots:
   - Rage
-  - Demon Blade
+  - Musashi's Dual Swords
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -259,28 +479,65 @@ builds:
     swap_item: Contagion
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
     this god: The Reaper, Jotunn''s Revenge, The Crusher, Chandra''s Grace, Runeforged
-    Hammer, Tyrfing, Amanita Charm, Hydra''s Lament, Shield of the Phoenix, Golden
-    Blade, Avenging Blade, Tekko-Kagi, Lernaean Bow, Bloodforge, Damaru, Berserker''s
-    Shield, Rage, Kinetic Cuirass, Phoenix Feather, Spectral Armor, Eye of the Storm,
-    Eye of Providence, Barbed Carver, Pharaoh''s Curse, Shield Splitter, Eros'' Bow.'
+    Hammer, Hydra''s Lament, Tyrfing, Amanita Charm, Golden Blade, Shield of the Phoenix,
+    Avenging Blade, Tekko-Kagi, Lernaean Bow, Berserker''s Shield, Damaru, Bloodforge,
+    Spectral Armor, Rage, Kinetic Cuirass, Eye of Providence, Phoenix Feather, Eye
+    of the Storm, Shield Splitter, Pharaoh''s Curse, Eros'' Bow, Barbed Carver.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Rage:
+      total: 0.36
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Musashi's Dual Swords:
+      total: 0.34
+      efficiency: 0.31
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Riptalon:
+      total: 0.45
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.66
+    Damaru:
+      total: 0.36
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    The Crusher:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
   archetype: burst
   slot_order:
+  - Avenging Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - Runeforged Hammer
   - Riptalon
-  - Tekko-Kagi
   - The Crusher
   flex_slots:
   - Runeforged Hammer
-  - Tekko-Kagi
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -292,10 +549,47 @@ builds:
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Jotunn''s Revenge, The Reaper, The Crusher, Chandra''s Grace, Hydra''s Lament,
-    Shield of the Phoenix, Runeforged Hammer, Amanita Charm, Tekko-Kagi, Avenging
-    Blade, Tyrfing, Bloodforge, Golden Blade, Titan''s Bane, Pendulum Blade, Lernaean
-    Bow, Kinetic Cuirass, Phoenix Feather, Spectral Armor, Eye of the Storm, Barbed
-    Carver, Damaru, Shield Splitter, Heartseeker, Rage, Genji''s Guard.'
+    Runeforged Hammer, Shield of the Phoenix, Amanita Charm, Avenging Blade, Tyrfing,
+    Tekko-Kagi, Golden Blade, Bloodforge, Spectral Armor, Kinetic Cuirass, Titan''s
+    Bane, Lernaean Bow, Shield Splitter, Eye of Providence, Genji''s Guard, Phoenix
+    Feather, Eye of the Storm, Pendulum Blade, Berserker''s Shield, Damaru, Rage.'
+  slot_scores:
+    Avenging Blade:
+      total: 0.37
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Jotunn's Revenge:
+      total: 0.43
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Hydra's Lament:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Runeforged Hammer:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Riptalon:
+      total: 0.44
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.6
+    The Crusher:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -312,8 +606,8 @@ builds:
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -324,45 +618,119 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Amanita Charm, Shield of the Phoenix, Jotunn''s Revenge,
-    Chandra''s Grace, The Crusher, Phoenix Feather, Kinetic Cuirass, Bloodforge, Shield
-    Splitter, Eye of Providence, Runeforged Hammer, Spirit Robe, Hydra''s Lament,
-    Spectral Armor, Avenging Blade, Tyrfing, Eye of the Storm, Berserker''s Shield,
-    Glorious Pridwen, Golden Blade, Lernaean Bow, Erosion, Genji''s Guard, Umbral
-    Link, Tekko-Kagi.'
+    this god: The Reaper, Amanita Charm, Jotunn''s Revenge, Shield of the Phoenix,
+    The Crusher, Chandra''s Grace, Kinetic Cuirass, Shield Splitter, Eye of Providence,
+    Phoenix Feather, Runeforged Hammer, Hydra''s Lament, Spectral Armor, Bloodforge,
+    Spirit Robe, Avenging Blade, Eye of the Storm, Tyrfing, Berserker''s Shield, Genji''s
+    Guard, Golden Blade, Erosion, Lernaean Bow, Tekko-Kagi, Pharaoh''s Curse, Glorious
+    Pridwen.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.4
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Kinetic Cuirass:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Shield Splitter:
+      total: 0.38
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Devourer's Gauntlet:
+      total: 0.45
+      efficiency: 0.3
+      win: 0.48
+      pick: 0.63
+      fit: 0.52
+    Riptalon:
+      total: 0.44
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.61
+    The Crusher:
+      total: 0.39
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Oath-Sworn Spear
   - Avenging Blade
   - Jotunn's Revenge
+  - Runeforged Hammer
   - Riptalon
   - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Oath-Sworn Spear
+  - Runeforged Hammer
   - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Reaper, Jotunn''s Revenge, Avenging Blade, The Crusher, Oath-Sworn
-    Spear, Tekko-Kagi, Runeforged Hammer, Chandra''s Grace, Screeching Gargoyle, Hydra''s
-    Lament, Amanita Charm, Titan''s Bane, Shield of the Phoenix, Void Stone, Tyrfing,
-    Bloodforge, Void Shield, Golden Blade, Heartseeker, Pendulum Blade, Lernaean Bow,
-    Kinetic Cuirass, Phoenix Feather, Spectral Armor, Eye of the Storm, Stone of Binding.'
+    for this god: The Reaper, Jotunn''s Revenge, The Crusher, Avenging Blade, Runeforged
+    Hammer, Tekko-Kagi, Hydra''s Lament, Chandra''s Grace, Oath-Sworn Spear, Amanita
+    Charm, Titan''s Bane, Shield of the Phoenix, Screeching Gargoyle, Tyrfing, Golden
+    Blade, Bloodforge, Spectral Armor, Void Stone, Pendulum Blade, Lernaean Bow, Kinetic
+    Cuirass, Heartseeker, Shield Splitter, Eye of the Storm, Void Shield, Eye of Providence.'
+  slot_scores:
+    Avenging Blade:
+      total: 0.41
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Jotunn's Revenge:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Runeforged Hammer:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Riptalon:
+      total: 0.46
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.73
+    Tekko-Kagi:
+      total: 0.38
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    The Crusher:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: *id001
   aspect: Aspect of Strife
 ---
