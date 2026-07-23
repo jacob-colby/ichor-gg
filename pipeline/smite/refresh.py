@@ -187,6 +187,34 @@ def refresh_all(force: bool = False) -> None:
             print(f"  - {f}")
 
 
+# Pantheon/section labels that appear alongside gods in the wiki's Gods grid.
+_ROSTER_NON_GODS = {
+    "Arthurian", "Babylonian", "Celtic", "Chinese", "Egyptian", "Greek", "Hindu",
+    "Japanese", "Korean", "Maya", "Norse", "Polynesian", "Roman", "Voodoo",
+    "Yoruba", "Tales of Arabia", "Gems",
+}
+
+
+def refresh_roster(wiki_fetcher, force: bool = False) -> list:
+    """Scrape the full SMITE 2 god roster (names) from the wiki's Gods page so the
+    dev add-god modal can list every god, tracked or not. Thumbnails on that page
+    are JS-loaded placeholders, so the roster is names-only; the modal shows local
+    head icons for tracked gods and initials for the rest."""
+    import json
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(wiki_fetcher.fetch(WIKI_BASE + "Gods", force=force), "html.parser")
+    names = []
+    for a in soup.select('span[typeof="mw:File"] a[href^="/w/"][title]'):
+        t = a.get("title")
+        if t and t not in _ROSTER_NON_GODS and t not in names:
+            names.append(t)
+    roster = [{"name": n, "thumb": ""} for n in sorted(names)]
+    (DATA_ROOT / "_roster.json").write_text(
+        json.dumps(roster, indent=2, ensure_ascii=False), encoding="utf-8")
+    return roster
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="Refresh SMITE 2 reference data")
     parser.add_argument("--refresh", metavar="NAME", help="re-pull one god or item by name")
@@ -194,8 +222,14 @@ def main(argv=None) -> int:
     parser.add_argument("--refresh-builds", metavar="GOD", help="re-pull SmiteBrain build stats for one god")
     parser.add_argument("--mode", default="Conquest", help="game mode for --refresh-builds")
     parser.add_argument("--all", action="store_true", help="re-pull everything already tracked")
+    parser.add_argument("--roster", action="store_true", help="refresh the full god roster (_roster.json)")
     parser.add_argument("--force", action="store_true", help="bypass the local cache")
     args = parser.parse_args(argv)
+
+    if args.roster:
+        roster = refresh_roster(BrowserFetcher(DATA_ROOT / "_cache" / "wiki"), force=args.force)
+        print(f"Refreshed roster: {len(roster)} gods")
+        return 0
 
     if args.all:
         refresh_all(force=args.force)
