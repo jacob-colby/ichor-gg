@@ -41,7 +41,14 @@ function ItemTooltipBody({ item, name, score }: { item?: Item; name: string; sco
       <div className="mb-1 text-[10px] font-semibold tracking-widest text-muted">WHY THIS ITEM</div>
       <ScoreBar label="value" value={score.efficiency} />
       <ScoreBar label="win" value={score.win} />
-      <ScoreBar label="pick" value={score.pick} />
+      {score.pick > 0 ? (
+        <ScoreBar label="pick" value={score.pick} />
+      ) : (
+        <div className="flex items-center gap-2">
+          <span className="w-14 text-[10px] text-muted">pick</span>
+          <span className="text-[10px] text-muted/70">off-meta — not in community build</span>
+        </div>
+      )}
       <ScoreBar label="fit" value={score.fit} />
     </div>
   );

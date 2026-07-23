@@ -367,6 +367,19 @@ describe("DetailPanel", () => {
     expect(screen.getByText("0.70")).toBeInTheDocument();
   });
 
+  it("shows 'off-meta' instead of a 0 pick bar when the pick signal is 0", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [],
+        rationale: "",
+        slot_scores: { Deathbringer: { total: 0.5, efficiency: 0.6, win: 0.5, pick: 0, fit: 0.7 } } },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    const trigger = screen.getByText("Deathbringer").closest('[tabindex="0"]')!;
+    fireEvent.focus(trigger);
+    expect(screen.getByText(/off-meta/i)).toBeInTheDocument();
+  });
+
   it("does not render a why-this-item section when the entry has no slot_scores", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [], rationale: "" },
