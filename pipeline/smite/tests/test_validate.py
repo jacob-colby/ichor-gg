@@ -29,6 +29,40 @@ def test_aggregate_summarizes_per_god():
     assert agg["pooled_spearman"] is not None
 
 
+def test_check_thresholds_passes_above_both_floors():
+    agg = {"mean_win_weighted": 0.70, "pooled_spearman": 0.40, "pooled_n": 10}
+    passed, failures = validate.check_thresholds(agg)
+    assert (passed, failures) == (True, [])
+
+
+def test_check_thresholds_fails_low_win_weighted():
+    agg = {"mean_win_weighted": 0.50, "pooled_spearman": 0.40, "pooled_n": 10}
+    passed, failures = validate.check_thresholds(agg)
+    assert passed is False
+    assert any("win-weighted" in f for f in failures)
+
+
+def test_check_thresholds_fails_low_spearman():
+    agg = {"mean_win_weighted": 0.70, "pooled_spearman": 0.20, "pooled_n": 10}
+    passed, failures = validate.check_thresholds(agg)
+    assert passed is False
+    assert any("spearman" in f for f in failures)
+
+
+def test_check_thresholds_fails_none_spearman():
+    agg = {"mean_win_weighted": 0.70, "pooled_spearman": None, "pooled_n": 10}
+    passed, failures = validate.check_thresholds(agg)
+    assert passed is False
+    assert any("spearman" in f and "n/a" in f for f in failures)
+
+
+def test_check_thresholds_fails_both():
+    agg = {"mean_win_weighted": 0.50, "pooled_spearman": 0.20, "pooled_n": 10}
+    passed, failures = validate.check_thresholds(agg)
+    assert passed is False
+    assert len(failures) == 2
+
+
 def test_tag_audit_flags_mismatches():
     items = [
         {"name": "Divine Ruin", "passive": "Reduces enemy Healing by 40%.", "effect_tags": []},

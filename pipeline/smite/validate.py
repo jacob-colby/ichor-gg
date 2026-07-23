@@ -177,7 +177,39 @@ def write_tag_audit(items, tags_map, out_path):
     return issues
 
 
+def check_thresholds(agg, min_win_weighted=0.65, min_spearman=0.35):
+    failures = []
+    if agg["mean_win_weighted"] < min_win_weighted:
+        failures.append(
+            f"win-weighted {agg['mean_win_weighted']:.2f} < {min_win_weighted}"
+        )
+    spearman_val = agg["pooled_spearman"]
+    if spearman_val is None or spearman_val < min_spearman:
+        spearman_display = "n/a" if spearman_val is None else f"{spearman_val:.2f}"
+        failures.append(f"spearman {spearman_display} < {min_spearman}")
+    return not failures, failures
+
+
 def main(argv=None):
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true",
+                         help="check aggregate metrics against quality floors and exit nonzero on failure")
+    args = parser.parse_args(argv)
+
+    if args.check:
+        per_god, agg = compute()
+        passed, failures = check_thresholds(agg)
+        spearman_val = agg["pooled_spearman"]
+        spearman_display = "n/a" if spearman_val is None else f"{spearman_val:.2f}"
+        if passed:
+            print(f"PASS — win-weighted {agg['mean_win_weighted']:.2f}, "
+                  f"spearman {spearman_display}, n={agg['pooled_n']}")
+        else:
+            print("FAIL — " + "; ".join(failures))
+        return 0 if passed else 1
+
     per_god, agg = compute()
     out_dir = recommend.DATA_ROOT / "Analysis"
     out_dir.mkdir(parents=True, exist_ok=True)
