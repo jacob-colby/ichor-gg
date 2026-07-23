@@ -367,6 +367,17 @@ describe("DetailPanel", () => {
     expect(screen.getByText("0.70")).toBeInTheDocument();
   });
 
+  it("shows the community per-slot alternate item", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
+        slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.5,
+          alternates: [{ name: "Jotunn's Revenge", pick_rate: 0.11, win_rate: 0.71 }] }] },
+    ] }];
+    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
+                        mode="Conquest" onModeChange={() => {}} />);
+    expect(screen.getByText(/or Jotunn's Revenge/i)).toBeInTheDocument();
+  });
+
   it("shows 'off-meta' instead of a 0 pick bar when the pick signal is 0", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [],

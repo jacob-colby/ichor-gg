@@ -338,7 +338,10 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
             {preview.map((slot, i) => {
               const item = itemsByName.get(slot.name);
               const rates = !community ? null
-                : (active.slot_order[i] as { pick_rate: number; win_rate: number } | undefined);
+                : (active.slot_order[i] as {
+                    pick_rate: number; win_rate: number;
+                    alternates?: { name: string; pick_rate: number; win_rate: number }[];
+                  } | undefined);
               return (
                 <Tooltip
                   key={`${slot.name}-${i}`}
@@ -375,6 +378,12 @@ export function DetailPanel({ god, godData, items, builds, mode, onModeChange, s
                     {flexList?.includes(slot.name) && slot.status === "kept" && (
                       <span className="text-[10px] text-muted">flex</span>
                     )}
+                    {rates?.alternates?.length ? (
+                      <span className="truncate text-[10px] text-muted/70"
+                        title={rates.alternates.map((a) => `${a.name} (${Math.round(a.pick_rate * 100)}% pick)`).join(", ")}>
+                        or {rates.alternates[0].name}
+                      </span>
+                    ) : null}
                     {!community && active.source === "suggested" && !(active as CuratedBuildEntry).fun &&
                       communityNames.size > 0 && slot.status !== "added" && !communityNames.has(slot.name) && (
                       <span className="text-[10px] text-muted/70" title="Not in this god's top community items">off-meta</span>

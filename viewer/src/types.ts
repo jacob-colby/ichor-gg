@@ -52,6 +52,7 @@ export interface CommunitySlotEntry {
   name: string;
   pick_rate: number;
   win_rate: number;
+  alternates?: { name: string; pick_rate: number; win_rate: number }[];
 }
 
 export type SlotEntry = string | CommunitySlotEntry;
