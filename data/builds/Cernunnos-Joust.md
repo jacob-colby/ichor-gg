@@ -3,6 +3,73 @@ type: smite-build
 god: Cernunnos
 mode: Joust
 builds:
+- source: community
+  aspect: Aspect of Strife
+  aspect_pick_rate: 0.43
+  aspect_win_rate: 0.58
+  slot_order:
+  - name: Devourer's Gauntlet
+    pick_rate: 0.54
+    win_rate: 0.55
+    alternates:
+    - name: Tyrfing
+      pick_rate: 0.09
+      win_rate: 0.69
+    - name: Avenging Blade
+      pick_rate: 0.08
+      win_rate: 0.55
+  - name: Dagger of Frenzy
+    pick_rate: 0.36
+    win_rate: 0.57
+    alternates:
+    - name: Shifter's Shield
+      pick_rate: 0.09
+      win_rate: 0.61
+    - name: Tyrfing
+      pick_rate: 0.08
+      win_rate: 0.51
+  - name: Bracer of The Abyss
+    pick_rate: 0.16
+    win_rate: 0.59
+    alternates:
+    - name: Riptalon
+      pick_rate: 0.14
+      win_rate: 0.59
+    - name: Berserker's Shield
+      pick_rate: 0.09
+      win_rate: 0.6
+  - name: Riptalon
+    pick_rate: 0.22
+    win_rate: 0.59
+    alternates:
+    - name: Titan's Bane
+      pick_rate: 0.15
+      win_rate: 0.52
+    - name: The Executioner
+      pick_rate: 0.07
+      win_rate: 0.56
+  - name: Titan's Bane
+    pick_rate: 0.14
+    win_rate: 0.48
+    alternates:
+    - name: Riptalon
+      pick_rate: 0.09
+      win_rate: 0.58
+    - name: Qin's Blade
+      pick_rate: 0.07
+      win_rate: 0.62
+  - name: Hunter's Bow
+    pick_rate: 0.07
+    win_rate: 0.59
+    alternates:
+    - name: Titan's Bane
+      pick_rate: 0.08
+      win_rate: 0.69
+    - name: Deathbringer
+      pick_rate: 0.05
+      win_rate: 0.55
+  source_url: https://smitebrain.com/gods/cernunnos/
+  last_verified: '2026-07-23'
 - source: suggested
   archetype: core
   slot_order:
@@ -32,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.53
+      total: 0.52
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.5
     Tyrfing:
-      total: 0.45
+      total: 0.44
       efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.5
     Hydra's Lament:
-      total: 0.42
-      efficiency: 0.44
+      total: 0.43
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.41
     The Reaper:
-      total: 0.58
-      efficiency: 0.43
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.74
     Riptalon:
       total: 0.5
-      efficiency: 0.26
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.74
     The Crusher:
-      total: 0.48
-      efficiency: 0.47
+      total: 0.49
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -99,38 +166,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.47
-      efficiency: 0.53
+      total: 0.48
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.41
     Rage:
-      total: 0.4
-      efficiency: 0.37
+      total: 0.39
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.42
     The Reaper:
-      total: 0.54
-      efficiency: 0.43
+      total: 0.55
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
       total: 0.4
-      efficiency: 0.37
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.42
     Demon Blade:
       total: 0.43
-      efficiency: 0.23
+      efficiency: 0.22
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Crusher:
       total: 0.45
-      efficiency: 0.47
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -164,8 +231,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.53
+      total: 0.52
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -176,26 +243,26 @@ builds:
       pick: 0.0
       fit: 0.39
     Hydra's Lament:
-      total: 0.41
-      efficiency: 0.44
+      total: 0.42
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.39
     The Reaper:
-      total: 0.55
-      efficiency: 0.43
+      total: 0.56
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.68
     Pendulum Blade:
-      total: 0.4
+      total: 0.39
       efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.5
     The Crusher:
       total: 0.47
-      efficiency: 0.47
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -229,26 +296,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.43
-      efficiency: 0.53
+      total: 0.44
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.33
     The Reaper:
-      total: 0.52
-      efficiency: 0.43
+      total: 0.53
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.62
     The Crusher:
-      total: 0.41
-      efficiency: 0.47
+      total: 0.42
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.36
     Amanita Charm:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -259,8 +326,8 @@ builds:
       pick: 0.0
       fit: 0.41
     Pharaoh's Curse:
-      total: 0.4
-      efficiency: 0.37
+      total: 0.41
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -268,15 +335,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Oath-Sworn Spear
   - Avenging Blade
   - Jotunn's Revenge
   - Void Stone
   - The Reaper
+  - Tekko-Kagi
   - The Crusher
   flex_slots:
+  - Tekko-Kagi
   - Void Stone
-  - Oath-Sworn Spear
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -293,12 +360,6 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Oath-Sworn Spear:
-      total: 0.45
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Avenging Blade:
       total: 0.49
       efficiency: 0.41
@@ -306,26 +367,32 @@ builds:
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.58
     Void Stone:
-      total: 0.46
-      efficiency: 0.31
+      total: 0.45
+      efficiency: 0.3
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
       total: 0.63
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.83
+    Tekko-Kagi:
+      total: 0.45
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     The Crusher:
       total: 0.54
-      efficiency: 0.47
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -340,8 +407,8 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Contagion
   - Runeforged Hammer
+  - Contagion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -365,32 +432,32 @@ builds:
       pick: 0.0
       fit: 0.51
     Jotunn's Revenge:
-      total: 0.48
-      efficiency: 0.53
+      total: 0.49
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.44
     Runeforged Hammer:
-      total: 0.41
-      efficiency: 0.44
+      total: 0.42
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.38
     The Reaper:
-      total: 0.55
-      efficiency: 0.43
+      total: 0.56
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.68
     The Crusher:
       total: 0.46
-      efficiency: 0.47
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.44
     Amanita Charm:
-      total: 0.47
-      efficiency: 0.44
+      total: 0.48
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -404,7 +471,7 @@ builds:
   - The Reaper
   - Damaru
   - Demon Blade
-  - Pharaoh's Curse
+  - The Crusher
   flex_slots:
   - Damaru
   - Rage
@@ -425,41 +492,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.44
-      efficiency: 0.53
+      total: 0.45
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.36
     Rage:
-      total: 0.37
-      efficiency: 0.37
+      total: 0.36
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.36
     The Reaper:
-      total: 0.51
-      efficiency: 0.43
+      total: 0.52
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
     Damaru:
       total: 0.37
-      efficiency: 0.37
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.36
     Demon Blade:
-      total: 0.39
-      efficiency: 0.23
+      total: 0.38
+      efficiency: 0.22
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Pharaoh's Curse:
+    The Crusher:
       total: 0.43
-      efficiency: 0.37
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.37
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -472,7 +539,7 @@ builds:
   - The Crusher
   - Spectral Armor
   flex_slots:
-  - Hydra's Lament
+  - Contagion
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -497,32 +564,32 @@ builds:
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.49
-      efficiency: 0.53
+      total: 0.5
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.45
     Hydra's Lament:
       total: 0.4
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.36
     The Reaper:
       total: 0.53
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
     The Crusher:
-      total: 0.45
-      efficiency: 0.47
+      total: 0.46
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.42
     Spectral Armor:
-      total: 0.38
-      efficiency: 0.48
+      total: 0.39
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.28
@@ -538,8 +605,8 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Pharaoh's Curse
   - Jotunn's Revenge
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -557,26 +624,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.41
-      efficiency: 0.53
+      total: 0.42
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.3
     The Reaper:
       total: 0.53
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
     Spectral Armor:
       total: 0.43
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.37
     Amanita Charm:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.61
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -588,7 +655,7 @@ builds:
       fit: 0.47
     Pharaoh's Curse:
       total: 0.42
-      efficiency: 0.37
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -623,38 +690,38 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.64
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.53
+      total: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.52
     Void Shield:
       total: 0.49
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.69
     Void Stone:
       total: 0.5
-      efficiency: 0.31
+      efficiency: 0.3
       win: 0.5
       pick: 0.0
       fit: 0.69
     The Reaper:
       total: 0.6
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.76
     The Crusher:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.52
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.55

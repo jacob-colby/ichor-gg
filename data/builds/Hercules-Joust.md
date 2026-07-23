@@ -3,6 +3,73 @@ type: smite-build
 god: Hercules
 mode: Joust
 builds:
+- source: community
+  aspect: Aspect of Preservation
+  aspect_pick_rate: 0.01
+  aspect_win_rate: 0.43
+  slot_order:
+  - name: Shifter's Shield
+    pick_rate: 0.41
+    win_rate: 0.53
+    alternates:
+    - name: Runeforged Hammer
+      pick_rate: 0.17
+      win_rate: 0.54
+    - name: Jotunn's Revenge
+      pick_rate: 0.1
+      win_rate: 0.42
+  - name: Genji's Guard
+    pick_rate: 0.31
+    win_rate: 0.56
+    alternates:
+    - name: Breastplate of Valor
+      pick_rate: 0.26
+      win_rate: 0.47
+    - name: Shifter's Shield
+      pick_rate: 0.14
+      win_rate: 0.47
+  - name: Breastplate of Valor
+    pick_rate: 0.25
+    win_rate: 0.56
+    alternates:
+    - name: Genji's Guard
+      pick_rate: 0.26
+      win_rate: 0.46
+    - name: Dwarven Plate
+      pick_rate: 0.07
+      win_rate: 0.58
+  - name: Dwarven Plate
+    pick_rate: 0.24
+    win_rate: 0.56
+    alternates:
+    - name: Genji's Guard
+      pick_rate: 0.16
+      win_rate: 0.51
+    - name: Breastplate of Valor
+      pick_rate: 0.09
+      win_rate: 0.53
+  - name: Glorious Pridwen
+    pick_rate: 0.06
+    win_rate: 0.58
+    alternates:
+    - name: Dwarven Plate
+      pick_rate: 0.12
+      win_rate: 0.55
+    - name: Engraved Guard
+      pick_rate: 0.06
+      win_rate: 0.45
+  - name: Engraved Guard
+    pick_rate: 0.08
+    win_rate: 0.52
+    alternates:
+    - name: Dwarven Plate
+      pick_rate: 0.06
+      win_rate: 0.57
+    - name: Shell of Rebuke
+      pick_rate: 0.04
+      win_rate: 0.67
+  source_url: https://smitebrain.com/gods/hercules/
+  last_verified: '2026-07-23'
 - source: suggested
   archetype: core
   slot_order:
@@ -44,20 +111,20 @@ builds:
       pick: 0.0
       fit: 0.77
     Shield Splitter:
-      total: 0.54
-      efficiency: 0.45
+      total: 0.53
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
     Spectral Armor:
       total: 0.56
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -118,18 +185,18 @@ builds:
       fit: 0.74
     Spectral Armor:
       total: 0.51
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.53
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.55
+      total: 0.54
       efficiency: 0.39
       win: 0.5
       pick: 0.0
@@ -145,7 +212,7 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Jotunn's Revenge
+  - Erosion
   - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,26 +237,26 @@ builds:
       pick: 0.0
       fit: 0.64
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.53
+      total: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.53
     Void Shield:
       total: 0.6
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.9
     Void Stone:
-      total: 0.61
-      efficiency: 0.31
+      total: 0.6
+      efficiency: 0.3
       win: 0.5
       pick: 0.0
       fit: 0.9
     Amanita Charm:
       total: 0.68
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -210,7 +277,7 @@ builds:
   - Damaru
   - Demon Blade
   flex_slots:
-  - Damaru
+  - Bragi's Harp
   - Rage
   situational_swaps:
   - vs_tag: heavy_cc
@@ -236,13 +303,13 @@ builds:
       fit: 0.67
     Rage:
       total: 0.51
-      efficiency: 0.37
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.52
-      efficiency: 0.36
+      total: 0.51
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -254,13 +321,13 @@ builds:
       fit: 0.66
     Damaru:
       total: 0.52
-      efficiency: 0.37
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.23
+      efficiency: 0.22
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -283,8 +350,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -308,19 +375,19 @@ builds:
       fit: 0.8
     Void Stone:
       total: 0.59
-      efficiency: 0.31
+      efficiency: 0.3
       win: 0.5
       pick: 0.0
       fit: 0.88
     Spectral Armor:
       total: 0.63
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.78
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -335,58 +402,58 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Kinetic Cuirass
   - Shield of the Phoenix
-  - Void Shield
   - Void Stone
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Void Stone
-  - Void Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Shield of the Phoenix:
       total: 0.59
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Void Shield:
+    Void Stone:
       total: 0.54
       efficiency: 0.3
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Void Stone:
-      total: 0.55
-      efficiency: 0.31
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
     Spectral Armor:
-      total: 0.58
-      efficiency: 0.48
+      total: 0.59
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.68
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -427,32 +494,32 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.7
     Void Shield:
       total: 0.65
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 1.0
     Void Stone:
-      total: 0.66
-      efficiency: 0.31
+      total: 0.65
+      efficiency: 0.3
       win: 0.5
       pick: 0.0
       fit: 1.0
     Spectral Armor:
-      total: 0.56
-      efficiency: 0.48
+      total: 0.57
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.71
-      efficiency: 0.44
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.99
