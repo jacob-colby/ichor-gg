@@ -62,6 +62,43 @@ builds:
     Barbed Carver, Arondight, Genji''s Guard, Eye of the Storm, Spectral Armor, Kinetic
     Cuirass, Bloodforge, Chandra''s Grace, Berserker''s Shield, Oath-Sworn Spear,
     Riptalon.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.54
+      pick: 0.49
+      fit: 0.55
+    Transcendence:
+      total: 0.5
+      efficiency: 0.4
+      win: 0.56
+      pick: 0.88
+      fit: 0.21
+    Hydra's Lament:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.55
+      pick: 0.41
+      fit: 0.44
+    The Reaper:
+      total: 0.41
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    The Crusher:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Heartseeker:
+      total: 0.42
+      efficiency: 0.28
+      win: 0.52
+      pick: 0.41
+      fit: 0.52
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -96,6 +133,43 @@ builds:
     Blade, Berserker''s Shield, Musashi''s Dual Swords, Spectral Armor, Genji''s Guard,
     Barbed Carver, Kinetic Cuirass, Eye of the Storm, Pharaoh''s Curse, Eye of Providence,
     Eros'' Bow, Pendulum Blade, Arondight.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.54
+      pick: 0.49
+      fit: 0.4
+    Transcendence:
+      total: 0.49
+      efficiency: 0.4
+      win: 0.56
+      pick: 0.88
+      fit: 0.15
+    Hydra's Lament:
+      total: 0.46
+      efficiency: 0.44
+      win: 0.55
+      pick: 0.41
+      fit: 0.35
+    Rage:
+      total: 0.37
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Damaru:
+      total: 0.37
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Demon Blade:
+      total: 0.35
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: burst
@@ -128,6 +202,43 @@ builds:
     Arondight, Chandra''s Grace, Damaru, Spectral Armor, Rage, Kinetic Cuirass, Barbed
     Carver, Eye of the Storm, Breastplate of Valor, Eye of Providence, Shield of the
     Phoenix, Screeching Gargoyle.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.54
+      pick: 0.49
+      fit: 0.56
+    Transcendence:
+      total: 0.49
+      efficiency: 0.4
+      win: 0.56
+      pick: 0.88
+      fit: 0.16
+    Hydra's Lament:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.55
+      pick: 0.41
+      fit: 0.42
+    The Crusher:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Heartseeker:
+      total: 0.42
+      efficiency: 0.28
+      win: 0.52
+      pick: 0.41
+      fit: 0.5
+    Titan's Bane:
+      total: 0.4
+      efficiency: 0.36
+      win: 0.48
+      pick: 0.28
+      fit: 0.4
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -161,6 +272,43 @@ builds:
     Devourer''s Gauntlet, Eye of the Storm, Riptalon, Glorious Pridwen, Avenging Blade,
     Berserker''s Shield, Erosion, Lernaean Bow, Breastplate of Valor, Tekko-Kagi,
     Golden Blade.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.53
+      win: 0.54
+      pick: 0.49
+      fit: 0.33
+    Transcendence:
+      total: 0.49
+      efficiency: 0.4
+      win: 0.56
+      pick: 0.88
+      fit: 0.12
+    Hydra's Lament:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.55
+      pick: 0.41
+      fit: 0.3
+    The Reaper:
+      total: 0.42
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Heartseeker:
+      total: 0.39
+      efficiency: 0.28
+      win: 0.52
+      pick: 0.41
+      fit: 0.35
+    Amanita Charm:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -193,5 +341,42 @@ builds:
     Bow, Riptalon, Shield Splitter, Golden Blade, Damaru, Rage, Barbed Carver, Genji''s
     Guard, Spectral Armor, Void Stone, Kinetic Cuirass, Eye of the Storm, Void Shield,
     Arondight.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.54
+      pick: 0.49
+      fit: 0.66
+    Transcendence:
+      total: 0.49
+      efficiency: 0.4
+      win: 0.56
+      pick: 0.88
+      fit: 0.16
+    Hydra's Lament:
+      total: 0.46
+      efficiency: 0.44
+      win: 0.55
+      pick: 0.41
+      fit: 0.36
+    The Reaper:
+      total: 0.42
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    The Crusher:
+      total: 0.44
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Heartseeker:
+      total: 0.44
+      efficiency: 0.28
+      win: 0.52
+      pick: 0.41
+      fit: 0.66
   starter: *id001
 ---

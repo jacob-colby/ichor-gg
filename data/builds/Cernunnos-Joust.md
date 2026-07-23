@@ -30,6 +30,43 @@ builds:
     swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Tyrfing:
+      total: 0.45
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Hydra's Lament:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    The Reaper:
+      total: 0.58
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Riptalon:
+      total: 0.5
+      efficiency: 0.26
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    The Crusher:
+      total: 0.48
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -60,6 +97,43 @@ builds:
     swap_item: Contagion
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Rage:
+      total: 0.4
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    The Reaper:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Damaru:
+      total: 0.4
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Demon Blade:
+      total: 0.43
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    The Crusher:
+      total: 0.45
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
 - source: suggested
   archetype: burst
@@ -88,6 +162,43 @@ builds:
     swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Tyrfing:
+      total: 0.39
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Hydra's Lament:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    The Reaper:
+      total: 0.55
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Pendulum Blade:
+      total: 0.4
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    The Crusher:
+      total: 0.47
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -116,6 +227,43 @@ builds:
     swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.43
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
+    The Reaper:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    The Crusher:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Amanita Charm:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Erosion:
+      total: 0.4
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Pharaoh's Curse:
+      total: 0.4
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -144,6 +292,43 @@ builds:
     swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
+  slot_scores:
+    Oath-Sworn Spear:
+      total: 0.45
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Avenging Blade:
+      total: 0.49
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Jotunn's Revenge:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Void Stone:
+      total: 0.46
+      efficiency: 0.31
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    The Reaper:
+      total: 0.63
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+    The Crusher:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
   starter: *id001
 - source: suggested
   archetype: core
@@ -172,6 +357,43 @@ builds:
     swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Contagion:
+      total: 0.42
+      efficiency: 0.33
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Jotunn's Revenge:
+      total: 0.48
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Runeforged Hammer:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    The Reaper:
+      total: 0.55
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    The Crusher:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Amanita Charm:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -201,6 +423,43 @@ builds:
     swap_item: Contagion
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Rage:
+      total: 0.37
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    The Reaper:
+      total: 0.51
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Damaru:
+      total: 0.37
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Demon Blade:
+      total: 0.39
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Pharaoh's Curse:
+      total: 0.43
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -230,6 +489,43 @@ builds:
     swap_item: Stygian Anchor
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Contagion:
+      total: 0.4
+      efficiency: 0.33
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Jotunn's Revenge:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Hydra's Lament:
+      total: 0.4
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    The Reaper:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    The Crusher:
+      total: 0.45
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Spectral Armor:
+      total: 0.38
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -259,6 +555,43 @@ builds:
     swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    The Reaper:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Spectral Armor:
+      total: 0.43
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Amanita Charm:
+      total: 0.6
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Erosion:
+      total: 0.43
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Pharaoh's Curse:
+      total: 0.42
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -288,6 +621,43 @@ builds:
     swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
+  slot_scores:
+    Avenging Blade:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Void Shield:
+      total: 0.49
+      efficiency: 0.3
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Void Stone:
+      total: 0.5
+      efficiency: 0.31
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    The Reaper:
+      total: 0.6
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    The Crusher:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: *id001
   aspect: Aspect of Strife
 ---

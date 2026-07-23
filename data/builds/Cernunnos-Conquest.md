@@ -63,6 +63,43 @@ builds:
     Shield, Eye of the Storm, Arondight, Genji''s Guard, Heartseeker, Transcendence,
     Demon Blade, Spectral Armor, Musashi''s Dual Swords, Kinetic Cuirass, Oath-Sworn
     Spear, Chandra''s Grace.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.43
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Tyrfing:
+      total: 0.39
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Hydra's Lament:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Devourer's Gauntlet:
+      total: 0.41
+      efficiency: 0.3
+      win: 0.48
+      pick: 0.63
+      fit: 0.3
+    Riptalon:
+      total: 0.42
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.49
+    The Crusher:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -98,6 +135,43 @@ builds:
     Dual Swords, Genji''s Guard, Spectral Armor, Kinetic Cuirass, Barbed Carver, Pendulum
     Blade, Eye of the Storm, Eye of Providence, Pharaoh''s Curse, Transcendence, Chandra''s
     Grace, Arondight.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.42
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Rage:
+      total: 0.37
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Riptalon:
+      total: 0.42
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.48
+    Damaru:
+      total: 0.37
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Demon Blade:
+      total: 0.35
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    The Crusher:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
 - source: suggested
   archetype: burst
@@ -131,6 +205,43 @@ builds:
     Chandra''s Grace, Arondight, Kinetic Cuirass, Heartseeker, Berserker''s Shield,
     Eye of the Storm, Eye of Providence, Barbed Carver, Breastplate of Valor, Transcendence,
     Shield of the Phoenix.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.43
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Tyrfing:
+      total: 0.37
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Hydra's Lament:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Riptalon:
+      total: 0.41
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.43
+    Tekko-Kagi:
+      total: 0.37
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    The Crusher:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -163,6 +274,43 @@ builds:
     Eye of Providence, Phoenix Feather, Tyrfing, Spirit Robe, Bloodforge, Runeforged
     Hammer, Spectral Armor, Genji''s Guard, Lernaean Bow, Berserker''s Shield, Avenging
     Blade, Tekko-Kagi, Eye of the Storm, Golden Blade, Glorious Pridwen, Damaru, Erosion.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
+    Kinetic Cuirass:
+      total: 0.37
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Shield Splitter:
+      total: 0.38
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Devourer's Gauntlet:
+      total: 0.44
+      efficiency: 0.3
+      win: 0.48
+      pick: 0.63
+      fit: 0.5
+    Riptalon:
+      total: 0.44
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.62
+    The Crusher:
+      total: 0.39
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -196,6 +344,43 @@ builds:
     Shield Splitter, Damaru, Rage, Spectral Armor, Void Stone, Barbed Carver, Genji''s
     Guard, Berserker''s Shield, Kinetic Cuirass, Eye of the Storm, Transcendence,
     Void Shield.'
+  slot_scores:
+    Avenging Blade:
+      total: 0.4
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Jotunn's Revenge:
+      total: 0.45
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Hydra's Lament:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Riptalon:
+      total: 0.44
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.58
+    Tekko-Kagi:
+      total: 0.39
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    The Crusher:
+      total: 0.43
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
   starter: *id001
 - source: suggested
   archetype: core
@@ -228,6 +413,43 @@ builds:
     Phoenix, Golden Blade, Bloodforge, Tekko-Kagi, Lernaean Bow, Spectral Armor, Eye
     of the Storm, Damaru, Kinetic Cuirass, Shield Splitter, Rage, Berserker''s Shield,
     Eye of Providence, Titan''s Bane, Barbed Carver, Phoenix Feather, Genji''s Guard.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.42
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Hydra's Lament:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Devourer's Gauntlet:
+      total: 0.45
+      efficiency: 0.3
+      win: 0.48
+      pick: 0.63
+      fit: 0.52
+    Runeforged Hammer:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    Riptalon:
+      total: 0.45
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.65
+    The Crusher:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -261,6 +483,43 @@ builds:
     Avenging Blade, Tekko-Kagi, Lernaean Bow, Berserker''s Shield, Damaru, Bloodforge,
     Spectral Armor, Rage, Kinetic Cuirass, Eye of Providence, Phoenix Feather, Eye
     of the Storm, Shield Splitter, Pharaoh''s Curse, Eros'' Bow, Barbed Carver.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Rage:
+      total: 0.36
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Musashi's Dual Swords:
+      total: 0.34
+      efficiency: 0.31
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Riptalon:
+      total: 0.45
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.66
+    Damaru:
+      total: 0.36
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    The Crusher:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -294,6 +553,43 @@ builds:
     Tekko-Kagi, Golden Blade, Bloodforge, Spectral Armor, Kinetic Cuirass, Titan''s
     Bane, Lernaean Bow, Shield Splitter, Eye of Providence, Genji''s Guard, Phoenix
     Feather, Eye of the Storm, Pendulum Blade, Berserker''s Shield, Damaru, Rage.'
+  slot_scores:
+    Avenging Blade:
+      total: 0.37
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Jotunn's Revenge:
+      total: 0.43
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Hydra's Lament:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Runeforged Hammer:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Riptalon:
+      total: 0.44
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.6
+    The Crusher:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -328,6 +624,43 @@ builds:
     Spirit Robe, Avenging Blade, Eye of the Storm, Tyrfing, Berserker''s Shield, Genji''s
     Guard, Golden Blade, Erosion, Lernaean Bow, Tekko-Kagi, Pharaoh''s Curse, Glorious
     Pridwen.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.4
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Kinetic Cuirass:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Shield Splitter:
+      total: 0.38
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Devourer's Gauntlet:
+      total: 0.45
+      efficiency: 0.3
+      win: 0.48
+      pick: 0.63
+      fit: 0.52
+    Riptalon:
+      total: 0.44
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.61
+    The Crusher:
+      total: 0.39
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -361,6 +694,43 @@ builds:
     Charm, Titan''s Bane, Shield of the Phoenix, Screeching Gargoyle, Tyrfing, Golden
     Blade, Bloodforge, Spectral Armor, Void Stone, Pendulum Blade, Lernaean Bow, Kinetic
     Cuirass, Heartseeker, Shield Splitter, Eye of the Storm, Void Shield, Eye of Providence.'
+  slot_scores:
+    Avenging Blade:
+      total: 0.41
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Jotunn's Revenge:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Runeforged Hammer:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Riptalon:
+      total: 0.46
+      efficiency: 0.26
+      win: 0.64
+      pick: 0.24
+      fit: 0.73
+    Tekko-Kagi:
+      total: 0.38
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    The Crusher:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: *id001
   aspect: Aspect of Strife
 ---

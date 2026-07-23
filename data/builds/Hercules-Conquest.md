@@ -63,6 +63,43 @@ builds:
     Shield, Gladiator''s Shield, Draconic Scale, Shroud of Vengeance, Midgardian Mail,
     Prophetic Cloak, Wyrmskin Hide, Mantle Of Discord, Magi''s Cloak, Phoenix Feather,
     Freya''s Tears, Leviathan''s Hide.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.44
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Genji's Guard:
+      total: 0.43
+      efficiency: 0.44
+      win: 0.52
+      pick: 0.26
+      fit: 0.36
+    Kinetic Cuirass:
+      total: 0.44
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Shield Splitter:
+      total: 0.43
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Shifter's Shield:
+      total: 0.44
+      efficiency: 0.3
+      win: 0.52
+      pick: 0.34
+      fit: 0.67
+    Amanita Charm:
+      total: 0.43
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -98,6 +135,43 @@ builds:
     The Crusher, Hydra''s Lament, Avenging Blade, Glorious Pridwen, Berserker''s Shield,
     Gladiator''s Shield, Midgardian Mail, Wyrmskin Hide, Bloodforge, Leviathan''s
     Hide, Ancile, Golden Blade.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Genji's Guard:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.52
+      pick: 0.26
+      fit: 0.28
+    Kinetic Cuirass:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Shield of the Phoenix:
+      total: 0.43
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Shifter's Shield:
+      total: 0.41
+      efficiency: 0.3
+      win: 0.52
+      pick: 0.34
+      fit: 0.5
+    Amanita Charm:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -131,6 +205,43 @@ builds:
     Hammer, Eye of the Storm, Hydra''s Lament, Shield of the Phoenix, Oath-Sworn Spear,
     Titan''s Bane, Berserker''s Shield, Tekko-Kagi, Pendulum Blade, Midgardian Mail,
     Gladiator''s Shield, Chandra''s Grace, Shroud of Vengeance.'
+  slot_scores:
+    Avenging Blade:
+      total: 0.42
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Eye of Providence:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Genji's Guard:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.52
+      pick: 0.26
+      fit: 0.26
+    Jotunn's Revenge:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Kinetic Cuirass:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    The Crusher:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -159,6 +270,43 @@ builds:
     swap_item: Divine Ruin
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
+  slot_scores:
+    Tyrfing:
+      total: 0.24
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Rage:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Bragi's Harp:
+      total: 0.23
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Death Metal:
+      total: 0.25
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Damaru:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Demon Blade:
+      total: 0.23
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -193,6 +341,43 @@ builds:
     Shogun''s Ofuda, Jotunn''s Revenge, Mystical Mail, Doublet of Binding, Avenging
     Blade, Berserker''s Shield, Eros'' Bow, Gladiator''s Shield, The Crusher, Hydra''s
     Lament, The Reaper, Midgardian Mail, Wyrmskin Hide.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.44
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Kinetic Cuirass:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Shifter's Shield:
+      total: 0.44
+      efficiency: 0.3
+      win: 0.52
+      pick: 0.34
+      fit: 0.68
+    Spectral Armor:
+      total: 0.46
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Amanita Charm:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.46
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.98
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -227,6 +412,43 @@ builds:
     Shield Splitter, The Reaper, Eye of the Storm, Shogun''s Ofuda, Avenging Blade,
     Mystical Mail, Doublet of Binding, Eros'' Bow, The Crusher, Hydra''s Lament, Berserker''s
     Shield, Umbral Link, Gladiator''s Shield.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Kinetic Cuirass:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Shield of the Phoenix:
+      total: 0.43
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Spectral Armor:
+      total: 0.45
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Amanita Charm:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.44
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -261,6 +483,43 @@ builds:
     Screeching Gargoyle, Shield Splitter, Runeforged Hammer, Phoenix Feather, Shogun''s
     Ofuda, Eye of the Storm, Stone of Binding, Mystical Mail, Doublet of Binding,
     Eros'' Bow, Hydra''s Lament, Oath-Sworn Spear, Berserker''s Shield.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Void Shield:
+      total: 0.43
+      efficiency: 0.3
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Void Stone:
+      total: 0.43
+      efficiency: 0.31
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Spectral Armor:
+      total: 0.44
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Amanita Charm:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.99
+    Erosion:
+      total: 0.43
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
   starter: *id001
   aspect: Aspect of Preservation
 ---

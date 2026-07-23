@@ -30,6 +30,43 @@ builds:
     swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.6
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Spear of Desolation:
+      total: 0.71
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.63
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Doom Orb:
+      total: 0.6
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Spear of the Magus:
+      total: 0.62
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -60,6 +97,43 @@ builds:
     swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.51
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Spear of Desolation:
+      total: 0.6
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    The Cosmic Horror:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Spear of the Magus:
+      total: 0.5
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Triton's Conch:
+      total: 0.5
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -88,6 +162,43 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.5
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Stygian Anchor:
+      total: 0.44
+      efficiency: 0.27
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Spear of Desolation:
+      total: 0.46
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Amanita Charm:
+      total: 0.63
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Erosion:
+      total: 0.45
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -116,6 +227,43 @@ builds:
     swap_item: Divine Ruin
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
+  slot_scores:
+    Spear of Desolation:
+      total: 0.71
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.66
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Doom Orb:
+      total: 0.63
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Spear of the Magus:
+      total: 0.65
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Obsidian Shard:
+      total: 0.61
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -144,6 +292,43 @@ builds:
     swap_item: Divine Ruin
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
+  slot_scores:
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Rage:
+      total: 0.51
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Death Metal:
+      total: 0.55
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Damaru:
+      total: 0.52
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -173,6 +358,43 @@ builds:
     swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.57
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    Spear of Desolation:
+      total: 0.65
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+    The Cosmic Horror:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Doom Orb:
+      total: 0.55
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Spear of the Magus:
+      total: 0.56
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
   aspect: Aspect of Combustion
 - source: suggested
@@ -202,6 +424,43 @@ builds:
     swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.5
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Bragi's Harp:
+      total: 0.48
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Spear of Desolation:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    The Cosmic Horror:
+      total: 0.49
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Triton's Conch:
+      total: 0.48
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
   starter: *id001
   aspect: Aspect of Combustion
 - source: suggested
@@ -231,6 +490,43 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.49
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Stygian Anchor:
+      total: 0.43
+      efficiency: 0.27
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Spear of Desolation:
+      total: 0.44
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Amanita Charm:
+      total: 0.61
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Erosion:
+      total: 0.44
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
   aspect: Aspect of Combustion
 - source: suggested
@@ -260,6 +556,43 @@ builds:
     swap_item: Divine Ruin
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
+  slot_scores:
+    Spear of Desolation:
+      total: 0.66
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+    The Cosmic Horror:
+      total: 0.62
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Doom Orb:
+      total: 0.59
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Spear of the Magus:
+      total: 0.6
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Obsidian Shard:
+      total: 0.57
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
   aspect: Aspect of Combustion
 ---

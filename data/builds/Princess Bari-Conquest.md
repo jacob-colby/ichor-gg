@@ -62,6 +62,43 @@ builds:
     Ethereal Staff, Chronos'' Pendant, Bracer of The Abyss, Ancient Signet, Death
     Metal, Nimble Ring, Divine Ruin, Polynomicon, Helm of Radiance, Gem of Focus,
     Lifebinder, Alchemist Coat, Jade Scepter, Book of Thoth, Typhon’s Heart.'
+  slot_scores:
+    Bragi's Harp:
+      total: 0.39
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Spear of Desolation:
+      total: 0.48
+      efficiency: 0.43
+      win: 0.43
+      pick: 0.59
+      fit: 0.61
+    The Cosmic Horror:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Spear of the Magus:
+      total: 0.4
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Obsidian Shard:
+      total: 0.48
+      efficiency: 0.37
+      win: 0.75
+      pick: 0.14
+      fit: 0.47
+    Soul Gem:
+      total: 0.44
+      efficiency: 0.41
+      win: 0.4
+      pick: 0.22
+      fit: 0.84
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -96,6 +133,43 @@ builds:
     Pendant, Bancroft''s Talon, Ethereal Staff, Ancient Signet, Genji''s Guard, Divine
     Ruin, Triton''s Conch, Gem of Focus, Bracer of The Abyss, Polynomicon, Chandra''s
     Grace, Helm of Radiance, Spectral Armor, Kinetic Cuirass, Breastplate of Valor.'
+  slot_scores:
+    Bragi's Harp:
+      total: 0.39
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Spear of Desolation:
+      total: 0.48
+      efficiency: 0.43
+      win: 0.43
+      pick: 0.59
+      fit: 0.58
+    The Cosmic Horror:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Spear of the Magus:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Obsidian Shard:
+      total: 0.48
+      efficiency: 0.37
+      win: 0.75
+      pick: 0.14
+      fit: 0.42
+    Soul Gem:
+      total: 0.43
+      efficiency: 0.41
+      win: 0.4
+      pick: 0.22
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -129,6 +203,43 @@ builds:
     of the Magus, Helm of Radiance, Spectral Armor, Bragi''s Harp, Ethereal Staff,
     Genji''s Guard, Doom Orb, Ancient Signet, Glorious Pridwen, Chronos'' Pendant,
     Death Metal, Sphere of Negation.'
+  slot_scores:
+    Blood-Bound Book:
+      total: 0.42
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Kinetic Cuirass:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Spear of Desolation:
+      total: 0.44
+      efficiency: 0.43
+      win: 0.43
+      pick: 0.59
+      fit: 0.36
+    The Cosmic Horror:
+      total: 0.38
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
+    Obsidian Shard:
+      total: 0.46
+      efficiency: 0.37
+      win: 0.75
+      pick: 0.14
+      fit: 0.28
+    Soul Gem:
+      total: 0.44
+      efficiency: 0.41
+      win: 0.4
+      pick: 0.22
+      fit: 0.84
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -161,6 +272,43 @@ builds:
     Asclepius, Screeching Gargoyle, Ethereal Staff, Ancient Signet, Chronos'' Pendant,
     Death Metal, Bracer of The Abyss, Divine Ruin, Polynomicon, Helm of Radiance,
     Lifebinder, Genji''s Guard, Nimble Ring, Alchemist Coat, Spectral Armor.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.49
+      efficiency: 0.43
+      win: 0.43
+      pick: 0.59
+      fit: 0.7
+    The Cosmic Horror:
+      total: 0.43
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Doom Orb:
+      total: 0.41
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Spear of the Magus:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Obsidian Shard:
+      total: 0.5
+      efficiency: 0.37
+      win: 0.75
+      pick: 0.14
+      fit: 0.6
+    Soul Gem:
+      total: 0.45
+      efficiency: 0.41
+      win: 0.4
+      pick: 0.22
+      fit: 0.9
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -189,6 +337,43 @@ builds:
     swap_item: Divine Ruin
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
+  slot_scores:
+    Tyrfing:
+      total: 0.24
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Rage:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Bragi's Harp:
+      total: 0.23
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Death Metal:
+      total: 0.25
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Damaru:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Demon Blade:
+      total: 0.23
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 ---

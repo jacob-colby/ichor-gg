@@ -62,6 +62,43 @@ builds:
     Book, Ethereal Staff, Ancient Signet, Death Metal, Gem of Focus, Bancroft''s Talon,
     Divine Ruin, Polynomicon, Helm of Radiance, Lifebinder, Bragi''s Harp, Alchemist
     Coat, Jade Scepter, Gem of Isolation, Scepter of Dominion.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.55
+      efficiency: 0.43
+      win: 0.53
+      pick: 0.44
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Spear of the Magus:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Rod of Tahuti:
+      total: 0.46
+      efficiency: 0.25
+      win: 0.62
+      pick: 0.23
+      fit: 0.79
+    Obsidian Shard:
+      total: 0.5
+      efficiency: 0.37
+      win: 0.64
+      pick: 0.15
+      fit: 0.79
+    Soul Gem:
+      total: 0.5
+      efficiency: 0.41
+      win: 0.51
+      pick: 0.17
+      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -97,6 +134,43 @@ builds:
     Gem of Focus, Genji''s Guard, Bancroft''s Talon, Divine Ruin, Polynomicon, Chandra''s
     Grace, Helm of Radiance, Breastplate of Valor, Lifebinder, Alchemist Coat, Jade
     Scepter.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.53
+      pick: 0.44
+      fit: 0.78
+    The Cosmic Horror:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Spear of the Magus:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Rod of Tahuti:
+      total: 0.42
+      efficiency: 0.25
+      win: 0.62
+      pick: 0.23
+      fit: 0.56
+    Obsidian Shard:
+      total: 0.46
+      efficiency: 0.37
+      win: 0.64
+      pick: 0.15
+      fit: 0.56
+    Soul Gem:
+      total: 0.48
+      efficiency: 0.41
+      win: 0.51
+      pick: 0.17
+      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -130,6 +204,43 @@ builds:
     Robe, Doom Orb, Helm of Radiance, Phoenix Feather, Ethereal Staff, Genji''s Guard,
     Spectral Armor, Glorious Pridwen, Sphere of Negation, Ancient Signet, Chronos''
     Pendant, The World Stone.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.48
+      efficiency: 0.43
+      win: 0.53
+      pick: 0.44
+      fit: 0.49
+    The Cosmic Horror:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Rod of Tahuti:
+      total: 0.4
+      efficiency: 0.25
+      win: 0.62
+      pick: 0.23
+      fit: 0.39
+    Obsidian Shard:
+      total: 0.44
+      efficiency: 0.37
+      win: 0.64
+      pick: 0.15
+      fit: 0.39
+    Amanita Charm:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Soul Gem:
+      total: 0.48
+      efficiency: 0.41
+      win: 0.51
+      pick: 0.17
+      fit: 0.89
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -162,6 +273,43 @@ builds:
     Pendant, Ethereal Staff, Ancient Signet, Screeching Gargoyle, Death Metal, Bancroft''s
     Talon, Divine Ruin, Polynomicon, Helm of Radiance, Gem of Focus, Lifebinder, Bragi''s
     Harp, Alchemist Coat, Dreamer''s Idol, Jade Scepter.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.55
+      efficiency: 0.43
+      win: 0.53
+      pick: 0.44
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.47
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Spear of the Magus:
+      total: 0.46
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Rod of Tahuti:
+      total: 0.47
+      efficiency: 0.25
+      win: 0.62
+      pick: 0.23
+      fit: 0.85
+    Obsidian Shard:
+      total: 0.5
+      efficiency: 0.37
+      win: 0.64
+      pick: 0.15
+      fit: 0.85
+    Soul Gem:
+      total: 0.5
+      efficiency: 0.41
+      win: 0.51
+      pick: 0.17
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -190,6 +338,43 @@ builds:
     swap_item: Divine Ruin
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
+  slot_scores:
+    Tyrfing:
+      total: 0.24
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Rage:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Bragi's Harp:
+      total: 0.23
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Death Metal:
+      total: 0.25
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Damaru:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Demon Blade:
+      total: 0.23
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -224,6 +409,43 @@ builds:
     Feather, Bancroft''s Talon, Alchemist Coat, Doom Orb, Jade Scepter, Spectral Armor,
     Gem of Isolation, The World Stone, Scepter of Dominion, Triton''s Conch, Chronos''
     Pendant, Erosion.'
+  slot_scores:
+    Ethereal Staff:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Gluttonous Grimoire:
+      total: 0.45
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Spear of Desolation:
+      total: 0.49
+      efficiency: 0.43
+      win: 0.53
+      pick: 0.44
+      fit: 0.62
+    Rod of Tahuti:
+      total: 0.41
+      efficiency: 0.25
+      win: 0.62
+      pick: 0.23
+      fit: 0.47
+    Obsidian Shard:
+      total: 0.45
+      efficiency: 0.37
+      win: 0.64
+      pick: 0.15
+      fit: 0.47
+    Soul Gem:
+      total: 0.48
+      efficiency: 0.41
+      win: 0.51
+      pick: 0.17
+      fit: 0.92
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -258,6 +480,43 @@ builds:
     Metal, Kinetic Cuirass, Triton''s Conch, Eye of Providence, Phoenix Feather, Spectral
     Armor, Chronos'' Pendant, The World Stone, Bragi''s Harp, Alchemist Coat, Genji''s
     Guard, Jade Scepter.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.49
+      efficiency: 0.43
+      win: 0.53
+      pick: 0.44
+      fit: 0.59
+    The Cosmic Horror:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Spear of the Magus:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Rod of Tahuti:
+      total: 0.4
+      efficiency: 0.25
+      win: 0.62
+      pick: 0.23
+      fit: 0.42
+    Obsidian Shard:
+      total: 0.44
+      efficiency: 0.37
+      win: 0.64
+      pick: 0.15
+      fit: 0.42
+    Soul Gem:
+      total: 0.48
+      efficiency: 0.41
+      win: 0.51
+      pick: 0.17
+      fit: 0.89
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -292,6 +551,43 @@ builds:
     Horror, Erosion, Spirit Robe, Spear of the Magus, Genji''s Guard, Doom Orb, Helm
     of Radiance, Alchemist Coat, Jade Scepter, Gladiator''s Shield, Glorious Pridwen,
     Midgardian Mail.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Kinetic Cuirass:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Spear of Desolation:
+      total: 0.46
+      efficiency: 0.43
+      win: 0.53
+      pick: 0.44
+      fit: 0.39
+    Obsidian Shard:
+      total: 0.42
+      efficiency: 0.37
+      win: 0.64
+      pick: 0.15
+      fit: 0.3
+    Amanita Charm:
+      total: 0.44
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Soul Gem:
+      total: 0.46
+      efficiency: 0.41
+      win: 0.51
+      pick: 0.17
+      fit: 0.79
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -326,6 +622,43 @@ builds:
     Stone, Kinetic Cuirass, Screeching Gargoyle, Bancroft''s Talon, Eye of Providence,
     Phoenix Feather, Spectral Armor, Alchemist Coat, Jade Scepter, Void Shield, Chronos''
     Pendant, Gem of Isolation.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.51
+      efficiency: 0.43
+      win: 0.53
+      pick: 0.44
+      fit: 0.7
+    The Cosmic Horror:
+      total: 0.43
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Spear of the Magus:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Rod of Tahuti:
+      total: 0.43
+      efficiency: 0.25
+      win: 0.62
+      pick: 0.23
+      fit: 0.59
+    Obsidian Shard:
+      total: 0.47
+      efficiency: 0.37
+      win: 0.64
+      pick: 0.15
+      fit: 0.59
+    Soul Gem:
+      total: 0.5
+      efficiency: 0.41
+      win: 0.51
+      pick: 0.17
+      fit: 1.0
   starter: *id001
   aspect: Aspect of the Cursed Crown
 ---

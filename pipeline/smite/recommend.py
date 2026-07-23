@@ -130,6 +130,12 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         ordered = assemble.build_order(core, items_by_name, tags_map, weights)
         swaps = assemble.situational_swaps(rows, items_by_name, tags_map, core=core)
         archetype = flavor or "core"
+        by_name = {r["item"]: r for r in rows}
+        slot_scores = {
+            name: {k: round(by_name[name][k], 2)
+                   for k in ("total", "efficiency", "win", "pick", "fit")}
+            for name in ordered if name in by_name
+        }
         entries.append({
             "source": "suggested",
             "archetype": archetype,
@@ -137,6 +143,7 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
             "flex_slots": flex,
             "situational_swaps": swaps,
             "rationale": _rationale(archetype, rows, profile),
+            "slot_scores": slot_scores,
             **({"fun": True} if cfg.get("fun") else {}),
             **({"starter": starter} if starter else {}),
             **({"aspect": aspect_name} if aspect_name else {}),

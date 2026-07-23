@@ -62,6 +62,43 @@ builds:
     Book, Ethereal Staff, Ancient Signet, Death Metal, Bancroft''s Talon, Divine Ruin,
     Polynomicon, Helm of Radiance, Lifebinder, Bragi''s Harp, Alchemist Coat, Jade
     Scepter, Genji''s Guard, Chandra''s Grace.'
+  slot_scores:
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.4
+      win: 0.59
+      pick: 0.22
+      fit: 0.41
+    Spear of Desolation:
+      total: 0.58
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.45
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.45
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Rod of Tahuti:
+      total: 0.46
+      efficiency: 0.25
+      win: 0.63
+      pick: 0.32
+      fit: 0.72
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.37
+      win: 0.72
+      pick: 0.24
+      fit: 0.72
+    Soul Gem:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.58
+      pick: 0.24
+      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -96,6 +133,43 @@ builds:
     Book, Ethereal Staff, Ancient Signet, Triton''s Conch, Gem of Focus, Genji''s
     Guard, Bancroft''s Talon, Divine Ruin, Polynomicon, Chandra''s Grace, Helm of
     Radiance, Breastplate of Valor, Lifebinder, Alchemist Coat, Jade Scepter.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.45
+      fit: 0.78
+    The Cosmic Horror:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Spear of the Magus:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Rod of Tahuti:
+      total: 0.44
+      efficiency: 0.25
+      win: 0.63
+      pick: 0.32
+      fit: 0.56
+    Obsidian Shard:
+      total: 0.5
+      efficiency: 0.37
+      win: 0.72
+      pick: 0.24
+      fit: 0.56
+    Soul Gem:
+      total: 0.51
+      efficiency: 0.41
+      win: 0.58
+      pick: 0.24
+      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -129,6 +203,43 @@ builds:
     Phoenix Feather, Helm of Radiance, Genji''s Guard, Doom Orb, Glorious Pridwen,
     Chronos'' Pendant, Ethereal Staff, Spectral Armor, Sphere of Negation, Ancient
     Signet, Breastplate of Valor, Death Metal.'
+  slot_scores:
+    Book of Thoth:
+      total: 0.41
+      efficiency: 0.4
+      win: 0.59
+      pick: 0.22
+      fit: 0.2
+    Spear of Desolation:
+      total: 0.5
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.45
+      fit: 0.5
+    Rod of Tahuti:
+      total: 0.41
+      efficiency: 0.25
+      win: 0.63
+      pick: 0.32
+      fit: 0.36
+    Obsidian Shard:
+      total: 0.47
+      efficiency: 0.37
+      win: 0.72
+      pick: 0.24
+      fit: 0.36
+    Amanita Charm:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Soul Gem:
+      total: 0.52
+      efficiency: 0.41
+      win: 0.58
+      pick: 0.24
+      fit: 0.9
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -161,6 +272,43 @@ builds:
     Blood-Bound Book, Ethereal Staff, Ancient Signet, Death Metal, Bancroft''s Talon,
     Gem of Focus, Divine Ruin, Polynomicon, Helm of Radiance, Genji''s Guard, Lifebinder,
     Bragi''s Harp, Alchemist Coat, Jade Scepter.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.58
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.45
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Spear of the Magus:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Rod of Tahuti:
+      total: 0.48
+      efficiency: 0.25
+      win: 0.63
+      pick: 0.32
+      fit: 0.81
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.37
+      win: 0.72
+      pick: 0.24
+      fit: 0.81
+    Soul Gem:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.58
+      pick: 0.24
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -189,6 +337,43 @@ builds:
     swap_item: Divine Ruin
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
+  slot_scores:
+    Tyrfing:
+      total: 0.24
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Rage:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Bragi's Harp:
+      total: 0.23
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Death Metal:
+      total: 0.25
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Damaru:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Demon Blade:
+      total: 0.23
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -223,6 +408,43 @@ builds:
     Feather, Blood-Bound Book, Ethereal Staff, Spear of the Magus, Doublet of Binding,
     Bancroft''s Talon, Doom Orb, Chronos'' Pendant, Screeching Gargoyle, Stampede,
     Void Shield.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.45
+      fit: 0.65
+    Rod of Tahuti:
+      total: 0.41
+      efficiency: 0.25
+      win: 0.63
+      pick: 0.32
+      fit: 0.39
+    Obsidian Shard:
+      total: 0.48
+      efficiency: 0.37
+      win: 0.72
+      pick: 0.24
+      fit: 0.39
+    Spectral Armor:
+      total: 0.42
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Erosion:
+      total: 0.41
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Soul Gem:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.58
+      pick: 0.24
+      fit: 1.0
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested
@@ -256,6 +478,43 @@ builds:
     Chandra''s Grace, Shield of the Phoenix, Erosion, Bancroft''s Talon, Doom Orb,
     Death Metal, Ethereal Staff, Void Stone, Kinetic Cuirass, The World Stone, Chronos''
     Pendant, Genji''s Guard, Bragi''s Harp, Eye of Providence, Phoenix Feather.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.45
+      fit: 0.62
+    Rod of Tahuti:
+      total: 0.42
+      efficiency: 0.25
+      win: 0.63
+      pick: 0.32
+      fit: 0.45
+    Obsidian Shard:
+      total: 0.49
+      efficiency: 0.37
+      win: 0.72
+      pick: 0.24
+      fit: 0.45
+    Spectral Armor:
+      total: 0.41
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Soul Gem:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.58
+      pick: 0.24
+      fit: 1.0
+    Triton's Conch:
+      total: 0.42
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested
@@ -290,6 +549,43 @@ builds:
     Stone, Stampede, Spirit Robe, Void Shield, Genji''s Guard, Umbral Link, Triton''s
     Conch, Glorious Pridwen, The Cosmic Horror, Mystical Mail, Doublet of Binding,
     Ethereal Staff.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.49
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.45
+      fit: 0.38
+    Obsidian Shard:
+      total: 0.45
+      efficiency: 0.37
+      win: 0.72
+      pick: 0.24
+      fit: 0.23
+    Spectral Armor:
+      total: 0.43
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Amanita Charm:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.42
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Soul Gem:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.58
+      pick: 0.24
+      fit: 1.0
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested
@@ -324,6 +620,43 @@ builds:
     The World Stone, Blood-Bound Book, Kinetic Cuirass, Triton''s Conch, Eye of Providence,
     Phoenix Feather, Genji''s Guard, Ethereal Staff, Bancroft''s Talon, Doublet of
     Binding.'
+  slot_scores:
+    Void Stone:
+      total: 0.43
+      efficiency: 0.31
+      win: 0.5
+      pick: 0.0
+      fit: 0.96
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.45
+      fit: 0.74
+    The Cosmic Horror:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Rod of Tahuti:
+      total: 0.44
+      efficiency: 0.25
+      win: 0.63
+      pick: 0.32
+      fit: 0.56
+    Obsidian Shard:
+      total: 0.5
+      efficiency: 0.37
+      win: 0.72
+      pick: 0.24
+      fit: 0.56
+    Soul Gem:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.58
+      pick: 0.24
+      fit: 1.0
   starter: *id001
   aspect: Aspect of Thermotherapy
 ---

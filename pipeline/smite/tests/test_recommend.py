@@ -215,3 +215,16 @@ def test_fun_crit_skipped_when_serious_crit_applies(tmp_items):
                                                 _fun_weights(), {})
     assert not [e for e in entries if e.get("fun")]          # redundant_with: crit
     assert [e for e in entries if e["archetype"] == "crit"]  # serious crit still there
+
+
+def test_suggested_entries_carry_slot_scores(tmp_items):
+    god = {"name": "Chiron", "damage_type": "physical", "role": "Carry",
+           "specializations": ["Sharpshooter"], "abilities": []}
+    entries = recommend.build_suggested_entries(god, tmp_items, {"builds": []},
+                                                scoring.load_weights_default(), {})
+    core = entries[0]
+    assert core["archetype"] == "core"
+    for name in core["slot_order"]:
+        s = core["slot_scores"][name]
+        assert set(s) == {"total", "efficiency", "win", "pick", "fit"}
+        assert 0.0 <= s["total"] <= 1.0

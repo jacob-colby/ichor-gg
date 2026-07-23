@@ -62,6 +62,43 @@ builds:
     The World Stone, Chronos'' Pendant, Ethereal Staff, Ancient Signet, Death Metal,
     Divine Ruin, Bracer of The Abyss, Polynomicon, Helm of Radiance, Gem of Focus,
     Lifebinder, Alchemist Coat, Typhon’s Heart, Jade Scepter.'
+  slot_scores:
+    Book of Thoth:
+      total: 0.4
+      efficiency: 0.4
+      win: 0.44
+      pick: 0.42
+      fit: 0.29
+    Spear of Desolation:
+      total: 0.46
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.3
+      fit: 0.68
+    The Cosmic Horror:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Spear of the Magus:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Obsidian Shard:
+      total: 0.41
+      efficiency: 0.37
+      win: 0.49
+      pick: 0.22
+      fit: 0.53
+    Soul Gem:
+      total: 0.46
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -96,6 +133,43 @@ builds:
     Rod of Asclepius, Bancroft''s Talon, Ethereal Staff, Ancient Signet, Genji''s
     Guard, Triton''s Conch, Gem of Focus, Divine Ruin, Polynomicon, Chandra''s Grace,
     Helm of Radiance, Spectral Armor, Breastplate of Valor, Lifebinder, Kinetic Cuirass.'
+  slot_scores:
+    Bragi's Harp:
+      total: 0.39
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Spear of Desolation:
+      total: 0.45
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.3
+      fit: 0.62
+    The Cosmic Horror:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Spear of the Magus:
+      total: 0.4
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Obsidian Shard:
+      total: 0.4
+      efficiency: 0.37
+      win: 0.49
+      pick: 0.22
+      fit: 0.45
+    Soul Gem:
+      total: 0.44
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -129,6 +203,43 @@ builds:
     Magus, Phoenix Feather, Helm of Radiance, Spectral Armor, Ethereal Staff, Doom
     Orb, Genji''s Guard, Ancient Signet, Bragi''s Harp, Sphere of Negation, Glorious
     Pridwen, Chronos'' Pendant, Death Metal.'
+  slot_scores:
+    Blood-Bound Book:
+      total: 0.42
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Book of Thoth:
+      total: 0.38
+      efficiency: 0.4
+      win: 0.44
+      pick: 0.42
+      fit: 0.17
+    Kinetic Cuirass:
+      total: 0.38
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Spear of Desolation:
+      total: 0.42
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.3
+      fit: 0.38
+    The Cosmic Horror:
+      total: 0.38
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Soul Gem:
+      total: 0.45
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -161,6 +272,43 @@ builds:
     Screeching Gargoyle, Ethereal Staff, Bragi''s Harp, Ancient Signet, Chronos''
     Pendant, Death Metal, Divine Ruin, Polynomicon, Helm of Radiance, Bracer of The
     Abyss, Lifebinder, Alchemist Coat, Gem of Focus, Jade Scepter, Genji''s Guard.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.47
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.3
+      fit: 0.76
+    The Cosmic Horror:
+      total: 0.44
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Doom Orb:
+      total: 0.42
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Spear of the Magus:
+      total: 0.43
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Obsidian Shard:
+      total: 0.43
+      efficiency: 0.37
+      win: 0.49
+      pick: 0.22
+      fit: 0.65
+    Soul Gem:
+      total: 0.46
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -189,6 +337,43 @@ builds:
     swap_item: Divine Ruin
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
+  slot_scores:
+    Tyrfing:
+      total: 0.24
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Rage:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Bragi's Harp:
+      total: 0.23
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Death Metal:
+      total: 0.25
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Damaru:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Demon Blade:
+      total: 0.23
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -223,6 +408,43 @@ builds:
     Doom Orb, Chronos'' Pendant, Bancroft''s Talon, Eye of Providence, Chandra''s
     Grace, Bragi''s Harp, Shield of the Phoenix, Doublet of Binding, The World Stone,
     Ancient Signet.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.44
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.3
+      fit: 0.54
+    The Cosmic Horror:
+      total: 0.39
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Obsidian Shard:
+      total: 0.39
+      efficiency: 0.37
+      win: 0.49
+      pick: 0.22
+      fit: 0.34
+    Spectral Armor:
+      total: 0.4
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
+    Erosion:
+      total: 0.39
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Soul Gem:
+      total: 0.47
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -256,6 +478,43 @@ builds:
     Harp, Death Metal, Doom Orb, Blood-Bound Book, Erosion, Ethereal Staff, Chronos''
     Pendant, Bancroft''s Talon, The World Stone, Void Stone, Genji''s Guard, Kinetic
     Cuirass, Ancient Signet, Eye of Providence, Chandra''s Grace, Stampede.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.44
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.3
+      fit: 0.55
+    The Cosmic Horror:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Obsidian Shard:
+      total: 0.39
+      efficiency: 0.37
+      win: 0.49
+      pick: 0.22
+      fit: 0.39
+    Spectral Armor:
+      total: 0.4
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Soul Gem:
+      total: 0.47
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Triton's Conch:
+      total: 0.4
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -290,6 +549,43 @@ builds:
     Feather, Spirit Robe, Void Stone, The Cosmic Horror, Stampede, Triton''s Conch,
     Genji''s Guard, Void Shield, Ethereal Staff, Spear of the Magus, Glorious Pridwen,
     Mystical Mail.'
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Spear of Desolation:
+      total: 0.41
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.3
+      fit: 0.35
+    Spectral Armor:
+      total: 0.42
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Amanita Charm:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
+    Erosion:
+      total: 0.41
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Soul Gem:
+      total: 0.47
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -324,6 +620,43 @@ builds:
     Conch, Blood-Bound Book, Ethereal Staff, Kinetic Cuirass, Genji''s Guard, Eye
     of Providence, Bancroft''s Talon, Chronos'' Pendant, Chandra''s Grace, Stampede,
     Ancient Signet.'
+  slot_scores:
+    Void Stone:
+      total: 0.41
+      efficiency: 0.31
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Spear of Desolation:
+      total: 0.46
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.3
+      fit: 0.64
+    The Cosmic Horror:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Spear of the Magus:
+      total: 0.4
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Obsidian Shard:
+      total: 0.41
+      efficiency: 0.37
+      win: 0.49
+      pick: 0.22
+      fit: 0.49
+    Soul Gem:
+      total: 0.47
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
   aspect: Aspect of Relativity
 ---

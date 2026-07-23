@@ -63,6 +63,43 @@ builds:
     Vengeance, Midgardian Mail, Mantle Of Discord, Magi''s Cloak, Freya''s Tears,
     Phoenix Feather, Leviathan''s Hide, Ancile, Breastplate of Valor, Helm of Radiance,
     Chandra''s Grace, Stone of Binding, Oni Hunter''s Garb.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.45
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Genji's Guard:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.54
+      pick: 0.15
+      fit: 0.39
+    Kinetic Cuirass:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Shifter's Shield:
+      total: 0.43
+      efficiency: 0.3
+      win: 0.53
+      pick: 0.23
+      fit: 0.72
+    Amanita Charm:
+      total: 0.44
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Erosion:
+      total: 0.42
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -98,6 +135,43 @@ builds:
     Talon, Gluttonous Grimoire, Ethereal Staff, Glorious Pridwen, Gladiator''s Shield,
     Midgardian Mail, Breastplate of Valor, Leviathan''s Hide, Ancile, Helm of Radiance,
     Shroud of Vengeance, Draconic Scale.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Genji's Guard:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.54
+      pick: 0.15
+      fit: 0.29
+    Kinetic Cuirass:
+      total: 0.42
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Shield of the Phoenix:
+      total: 0.43
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Shifter's Shield:
+      total: 0.4
+      efficiency: 0.3
+      win: 0.53
+      pick: 0.23
+      fit: 0.53
+    Amanita Charm:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -131,6 +205,43 @@ builds:
     Shield, Erosion, Doom Orb, Shield of the Phoenix, Rod of Asclepius, Ethereal Staff,
     Obsidian Shard, The World Stone, Midgardian Mail, Gladiator''s Shield, Shroud
     of Vengeance, Chandra''s Grace, Helm of Radiance, Breastplate of Valor.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.41
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Genji's Guard:
+      total: 0.4
+      efficiency: 0.44
+      win: 0.54
+      pick: 0.15
+      fit: 0.25
+    Kinetic Cuirass:
+      total: 0.41
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Gluttonous Grimoire:
+      total: 0.42
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Spear of Desolation:
+      total: 0.4
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    The Cosmic Horror:
+      total: 0.4
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -159,6 +270,43 @@ builds:
     swap_item: Divine Ruin
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
+  slot_scores:
+    Tyrfing:
+      total: 0.24
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Rage:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Bragi's Harp:
+      total: 0.23
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Death Metal:
+      total: 0.25
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Damaru:
+      total: 0.23
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Demon Blade:
+      total: 0.23
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 ---
