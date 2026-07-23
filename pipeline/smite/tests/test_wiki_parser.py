@@ -124,6 +124,38 @@ def test_parse_item_page_stat_only_item_has_no_passive():
     assert not result.get("passive")
 
 
+def test_parse_item_page_falls_back_to_cost_when_total_cost_blank():
+    # Starter/base items (e.g. Bluestone Pendant, Vampiric Shroud) populate
+    # "Cost" but leave "Total Cost" blank since they don't build up from
+    # components — the parser must fall back to "Cost" in that case.
+    html = """
+    <table class="infobox">
+      <tr><th>Item Type</th><td>Tier 1</td></tr>
+      <tr><th>Cost</th><td>600</td></tr>
+      <tr><th>Total Cost</th><td></td></tr>
+      <tr><th>Stats</th><td><b>10</b> Strength <br></td></tr>
+    </table>
+    """
+    result = wiki_parser.parse_item_page(html)
+    assert result["cost"] == 600
+
+
+def test_parse_item_page_prefers_total_cost_over_cost():
+    # Regular items have both rows populated: "Cost" is the smaller
+    # component-only figure, "Total Cost" is the full build cost — Total
+    # Cost must win when present.
+    html = """
+    <table class="infobox">
+      <tr><th>Item Type</th><td>Tier 3</td></tr>
+      <tr><th>Cost</th><td>800</td></tr>
+      <tr><th>Total Cost</th><td>2600</td></tr>
+      <tr><th>Stats</th><td><b>10</b> Strength <br></td></tr>
+    </table>
+    """
+    result = wiki_parser.parse_item_page(html)
+    assert result["cost"] == 2600
+
+
 def test_parse_god_page_extracts_image_url():
     result = wiki_parser.parse_god_page(_chiron_html())
     assert result["image_url"] == "/images/thumb/T_Chiron%28S2%29_Default.png/280px-T_Chiron%28S2%29_Default.png?157c1"

@@ -175,6 +175,8 @@ def parse_item_page(html: str) -> dict:
     result = {}
     passive_text = ""
     active_text = ""
+    base_cost = None
+    total_cost = None
     for row in infobox.find_all("tr"):
         th, td = row.find("th"), row.find("td")
         if th is None or td is None:
@@ -183,9 +185,12 @@ def parse_item_page(html: str) -> dict:
         if label == "Item Type":
             m = re.search(r"Tier (\d)", td.get_text())
             result["tier"] = int(m.group(1)) if m else None
+        elif label == "Cost":
+            digits = re.sub(r"\D", "", td.get_text())
+            base_cost = int(digits) if digits else None
         elif label == "Total Cost":
             digits = re.sub(r"\D", "", td.get_text())
-            result["cost"] = int(digits) if digits else None
+            total_cost = int(digits) if digits else None
         elif label == "Passive Effect":
             passive_text = _clean(td.get_text())
         elif label == "Active Effect":
@@ -194,6 +199,12 @@ def parse_item_page(html: str) -> dict:
             stats = _parse_stats(td)
             if stats:
                 result["stats"] = stats
+
+    # Starter/base items (e.g. Bluestone Pendant, Vampiric Shroud) don't build
+    # up from components, so they populate "Cost" and leave "Total Cost"
+    # blank. Regular items have both, with "Cost" as the smaller
+    # component-only figure — "Total Cost" must win whenever it's present.
+    result["cost"] = total_cost if total_cost is not None else base_cost
 
     # Many items (e.g. Bloodforge) carry their whole effect under "Active
     # Effect" with an empty "Passive Effect" row — capture both. Stat-only
