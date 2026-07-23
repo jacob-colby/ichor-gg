@@ -33,7 +33,8 @@ def test_build_index_collects_gods_items_builds(tmp_path):
 def test_build_index_empty_folders_return_empty_lists(tmp_path):
     vault = _make_vault(tmp_path)
     index = build_index.build_index(vault)
-    assert index == {"gods": [], "items": [], "builds": [], "starters": []}
+    assert index == {"gods": [], "items": [], "builds": [], "starters": [],
+                     "roster": [], "data_updated": ""}
 
 
 def test_write_index_creates_json_file(tmp_path):
@@ -126,3 +127,11 @@ def test_build_index_adds_per_item_meta():
     assert metaed, "expected some items to carry community meta"
     m = metaed[0]["meta"]
     assert 0.0 <= m["win_avg"] <= 1.0 and m["gods"] >= 1
+
+
+def test_build_index_emits_data_updated_and_roster():
+    from smite import build_index
+    from pathlib import Path
+    r = build_index.build_index(Path(__file__).resolve().parents[3])
+    assert "data_updated" in r and isinstance(r["data_updated"], str) and r["data_updated"]
+    assert "roster" in r and isinstance(r["roster"], list)

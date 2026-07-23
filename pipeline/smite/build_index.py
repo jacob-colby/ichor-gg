@@ -35,9 +35,37 @@ def build_index(vault_root: Path) -> dict:
     items = _enrich_items(_all(items_dir), scoring.load_tags(data_root / "_tags.yaml"))
     weights = scoring.load_weights(data_root / "_weights.yaml")
     builds = _all(builds_dir)
+    gods = _all(gods_dir)
     _attach_item_meta(items, builds)
-    return {"gods": _all(gods_dir), "items": items, "builds": builds,
-            "starters": weights.get("starters", [])}
+    return {"gods": gods, "items": items, "builds": builds,
+            "starters": weights.get("starters", []),
+            "roster": _load_roster(data_root),
+            "data_updated": _data_updated(gods, builds)}
+
+
+def _data_updated(gods, builds) -> str:
+    """The most recent last_verified across gods + community builds — the real
+    'data scraped on' date, so a rebuild alone doesn't churn the timestamp."""
+    dates = [str(g.get("last_verified")) for g in gods if g.get("last_verified")]
+    for note in builds:
+        for b in note.get("builds", []):
+            if b.get("source") == "community" and b.get("last_verified"):
+                dates.append(str(b["last_verified"]))
+    return max(dates) if dates else ""
+
+
+def _load_roster(data_root: Path) -> list:
+    """Full SMITE 2 god roster (name + optional thumb) for the dev add-god
+    modal — includes gods not yet tracked. Optional; empty if not fetched."""
+    import json
+    path = data_root / "_roster.json"
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return data if isinstance(data, list) else []
+    except Exception:
+        return []
 
 
 def _attach_item_meta(items, builds):
