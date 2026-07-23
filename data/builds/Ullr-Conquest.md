@@ -9,25 +9,67 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Transcendence
-    pick_rate: 0.88
-    win_rate: 0.56
-  - name: Jotunn's Revenge
-    pick_rate: 0.49
-    win_rate: 0.54
-  - name: Hydra's Lament
-    pick_rate: 0.41
+    pick_rate: 0.86
     win_rate: 0.55
+    alternates:
+    - name: Jotunn's Revenge
+      pick_rate: 0.06
+      win_rate: 0.54
+    - name: Hydra's Lament
+      pick_rate: 0.05
+      win_rate: 0.71
+  - name: Jotunn's Revenge
+    pick_rate: 0.45
+    win_rate: 0.53
+    alternates:
+    - name: Hydra's Lament
+      pick_rate: 0.38
+      win_rate: 0.58
+    - name: Transcendence
+      pick_rate: 0.1
+      win_rate: 0.6
+  - name: Hydra's Lament
+    pick_rate: 0.39
+    win_rate: 0.54
+    alternates:
+    - name: Jotunn's Revenge
+      pick_rate: 0.29
+      win_rate: 0.6
+    - name: Heartseeker
+      pick_rate: 0.07
+      win_rate: 0.51
   - name: Heartseeker
-    pick_rate: 0.41
-    win_rate: 0.52
+    pick_rate: 0.39
+    win_rate: 0.53
+    alternates:
+    - name: Titan's Bane
+      pick_rate: 0.39
+      win_rate: 0.59
+    - name: The Crusher
+      pick_rate: 0.04
+      win_rate: 0.53
   - name: Titan's Bane
     pick_rate: 0.28
-    win_rate: 0.48
+    win_rate: 0.55
+    alternates:
+    - name: Heartseeker
+      pick_rate: 0.3
+      win_rate: 0.62
+    - name: Lucerne Hammer
+      pick_rate: 0.1
+      win_rate: 0.57
   - name: Blinking Abyss
-    pick_rate: 0.16
-    win_rate: 0.62
+    pick_rate: 0.15
+    win_rate: 0.6
+    alternates:
+    - name: Lucerne Hammer
+      pick_rate: 0.11
+      win_rate: 0.57
+    - name: Titan's Bane
+      pick_rate: 0.08
+      win_rate: 0.72
   source_url: https://smitebrain.com/gods/ullr/
-  last_verified: '2026-07-17'
+  last_verified: '2026-07-22'
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -37,12 +79,12 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - The Reaper
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
+  - Heartseeker
   - The Crusher
-  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -64,29 +106,23 @@ builds:
     Riptalon.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.53
-      win: 0.54
-      pick: 0.49
+      win: 0.53
+      pick: 0.45
       fit: 0.55
     Transcendence:
-      total: 0.5
+      total: 0.49
       efficiency: 0.4
-      win: 0.56
-      pick: 0.88
+      win: 0.55
+      pick: 0.86
       fit: 0.21
     Hydra's Lament:
       total: 0.47
       efficiency: 0.44
-      win: 0.55
-      pick: 0.41
+      win: 0.54
+      pick: 0.39
       fit: 0.44
-    The Reaper:
-      total: 0.41
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     The Crusher:
       total: 0.42
       efficiency: 0.47
@@ -96,9 +132,15 @@ builds:
     Heartseeker:
       total: 0.42
       efficiency: 0.28
-      win: 0.52
-      pick: 0.41
+      win: 0.53
+      pick: 0.39
       fit: 0.52
+    Titan's Bane:
+      total: 0.42
+      efficiency: 0.36
+      win: 0.55
+      pick: 0.28
+      fit: 0.42
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -135,22 +177,22 @@ builds:
     Eros'' Bow, Pendulum Blade, Arondight.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
-      win: 0.54
-      pick: 0.49
+      win: 0.53
+      pick: 0.45
       fit: 0.4
     Transcendence:
-      total: 0.49
+      total: 0.48
       efficiency: 0.4
-      win: 0.56
-      pick: 0.88
+      win: 0.55
+      pick: 0.86
       fit: 0.15
     Hydra's Lament:
-      total: 0.46
+      total: 0.45
       efficiency: 0.44
-      win: 0.55
-      pick: 0.41
+      win: 0.54
+      pick: 0.39
       fit: 0.35
     Rage:
       total: 0.37
@@ -181,8 +223,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
+  - Heartseeker
   - The Crusher
-  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -204,22 +246,22 @@ builds:
     Phoenix, Screeching Gargoyle.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.53
-      win: 0.54
-      pick: 0.49
+      win: 0.53
+      pick: 0.45
       fit: 0.56
     Transcendence:
       total: 0.49
       efficiency: 0.4
-      win: 0.56
-      pick: 0.88
+      win: 0.55
+      pick: 0.86
       fit: 0.16
     Hydra's Lament:
       total: 0.47
       efficiency: 0.44
-      win: 0.55
-      pick: 0.41
+      win: 0.54
+      pick: 0.39
       fit: 0.42
     The Crusher:
       total: 0.42
@@ -230,13 +272,13 @@ builds:
     Heartseeker:
       total: 0.42
       efficiency: 0.28
-      win: 0.52
-      pick: 0.41
+      win: 0.53
+      pick: 0.39
       fit: 0.5
     Titan's Bane:
-      total: 0.4
+      total: 0.42
       efficiency: 0.36
-      win: 0.48
+      win: 0.55
       pick: 0.28
       fit: 0.4
   starter: *id001
@@ -247,11 +289,11 @@ builds:
   - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Heartseeker
+  - Titan's Bane
   - Amanita Charm
   flex_slots:
   - Amanita Charm
-  - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -274,22 +316,22 @@ builds:
     Golden Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.5
+      total: 0.49
       efficiency: 0.53
-      win: 0.54
-      pick: 0.49
+      win: 0.53
+      pick: 0.45
       fit: 0.33
     Transcendence:
-      total: 0.49
+      total: 0.48
       efficiency: 0.4
-      win: 0.56
-      pick: 0.88
+      win: 0.55
+      pick: 0.86
       fit: 0.12
     Hydra's Lament:
       total: 0.45
       efficiency: 0.44
-      win: 0.55
-      pick: 0.41
+      win: 0.54
+      pick: 0.39
       fit: 0.3
     The Reaper:
       total: 0.42
@@ -297,12 +339,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Heartseeker:
-      total: 0.39
-      efficiency: 0.28
-      win: 0.52
-      pick: 0.41
-      fit: 0.35
+    Titan's Bane:
+      total: 0.4
+      efficiency: 0.36
+      win: 0.55
+      pick: 0.28
+      fit: 0.25
     Amanita Charm:
       total: 0.41
       efficiency: 0.44
@@ -316,12 +358,12 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - The Reaper
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
+  - Heartseeker
   - The Crusher
-  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -343,29 +385,23 @@ builds:
     Arondight.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.53
-      win: 0.54
-      pick: 0.49
+      win: 0.53
+      pick: 0.45
       fit: 0.66
     Transcendence:
       total: 0.49
       efficiency: 0.4
-      win: 0.56
-      pick: 0.88
+      win: 0.55
+      pick: 0.86
       fit: 0.16
     Hydra's Lament:
       total: 0.46
       efficiency: 0.44
-      win: 0.55
-      pick: 0.41
+      win: 0.54
+      pick: 0.39
       fit: 0.36
-    The Reaper:
-      total: 0.42
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     The Crusher:
       total: 0.44
       efficiency: 0.47
@@ -375,8 +411,14 @@ builds:
     Heartseeker:
       total: 0.44
       efficiency: 0.28
-      win: 0.52
-      pick: 0.41
+      win: 0.53
+      pick: 0.39
       fit: 0.66
+    Titan's Bane:
+      total: 0.45
+      efficiency: 0.36
+      win: 0.55
+      pick: 0.28
+      fit: 0.56
   starter: *id001
 ---

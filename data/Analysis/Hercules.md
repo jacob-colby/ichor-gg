@@ -2,20 +2,20 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
+| Genji's Guard | 0.45 | 0.42 | 0.44 | 0.56 | 0.31 | 0.36 | undervalued |  |  |
+| Shifter's Shield | 0.45 | 0.41 | 0.30 | 0.53 | 0.41 | 0.67 | fair |  |  |
 | Kinetic Cuirass | 0.44 | 0.54 | 0.44 | 0.50 | 0.00 | 0.77 | undervalued | burst | **UNDERRATED** |
 | Eye of Providence | 0.44 | 0.53 | 0.47 | 0.50 | 0.00 | 0.67 | undervalued |  | **UNDERRATED** |
-| Shifter's Shield | 0.44 | 0.41 | 0.30 | 0.52 | 0.34 | 0.67 | fair |  |  |
-| Genji's Guard | 0.43 | 0.42 | 0.44 | 0.52 | 0.26 | 0.36 | undervalued |  |  |
 | Amanita Charm | 0.43 | 0.51 | 0.44 | 0.50 | 0.00 | 0.67 | undervalued | sustain, aura | **UNDERRATED** |
+| Breastplate of Valor | 0.43 | 0.39 | 0.41 | 0.55 | 0.26 | 0.36 | fair |  |  |
 | Shield Splitter | 0.43 | 0.50 | 0.45 | 0.50 | 0.00 | 0.63 | undervalued |  | **UNDERRATED** |
-| Breastplate of Valor | 0.42 | 0.39 | 0.41 | 0.52 | 0.29 | 0.36 | fair |  |  |
 | Erosion | 0.41 | 0.47 | 0.39 | 0.50 | 0.00 | 0.67 | fair | aura | **UNDERRATED** |
 | Jotunn's Revenge | 0.41 | 0.47 | 0.53 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
 | Spectral Armor | 0.41 | 0.47 | 0.48 | 0.50 | 0.00 | 0.43 | undervalued | anti-crit, aura | **UNDERRATED** |
 | Eye of the Storm | 0.40 | 0.46 | 0.41 | 0.50 | 0.00 | 0.58 | fair | peel | **UNDERRATED** |
+| Glorious Pridwen | 0.40 | 0.35 | 0.24 | 0.62 | 0.06 | 0.60 | premium | sustain |  |
 | Shield of the Phoenix | 0.40 | 0.44 | 0.40 | 0.50 | 0.00 | 0.55 | fair | sustain | **UNDERRATED** |
 | Runeforged Hammer | 0.40 | 0.44 | 0.44 | 0.50 | 0.00 | 0.44 | undervalued | burst | **UNDERRATED** |
-| Spirit Robe | 0.39 | 0.37 | 0.33 | 0.56 | 0.06 | 0.48 | fair | sustain |  |
 | The Crusher | 0.39 | 0.42 | 0.47 | 0.50 | 0.00 | 0.31 | undervalued | burst | **UNDERRATED** |
 | Hydra's Lament | 0.39 | 0.42 | 0.44 | 0.50 | 0.00 | 0.38 | undervalued | burst | **UNDERRATED** |
 | Avenging Blade | 0.39 | 0.42 | 0.41 | 0.50 | 0.00 | 0.44 | fair | protection-shred | **UNDERRATED** |
@@ -26,7 +26,6 @@
 | Midgardian Mail | 0.38 | 0.40 | 0.39 | 0.50 | 0.00 | 0.43 | fair |  | **UNDERRATED** |
 | Prophetic Cloak | 0.38 | 0.40 | 0.32 | 0.50 | 0.00 | 0.60 | fair |  | **UNDERRATED** |
 | Wyrmskin Hide | 0.38 | 0.40 | 0.33 | 0.50 | 0.00 | 0.58 | fair |  | **UNDERRATED** |
-| Dwarven Plate | 0.38 | 0.28 | 0.19 | 0.58 | 0.22 | 0.48 | premium |  |  |
 | Mantle Of Discord | 0.37 | 0.39 | 0.36 | 0.50 | 0.00 | 0.48 | fair | peel, cc-immunity | **UNDERRATED** |
 | Magi's Cloak | 0.37 | 0.39 | 0.36 | 0.50 | 0.00 | 0.48 | fair | cc-immunity | **UNDERRATED** |
 | Phoenix Feather | 0.37 | 0.39 | 0.38 | 0.50 | 0.00 | 0.43 | fair | sustain | **UNDERRATED** |
@@ -35,11 +34,13 @@
 | Ancile | 0.37 | 0.39 | 0.37 | 0.50 | 0.00 | 0.43 | fair |  |  |
 | Chandra's Grace | 0.37 | 0.39 | 0.42 | 0.50 | 0.00 | 0.32 | fair | sustain |  |
 | Pharaoh's Curse | 0.37 | 0.39 | 0.37 | 0.50 | 0.00 | 0.43 | fair | aura |  |
+| Dwarven Plate | 0.37 | 0.28 | 0.19 | 0.55 | 0.24 | 0.48 | premium |  |  |
 | Screeching Gargoyle | 0.37 | 0.38 | 0.35 | 0.50 | 0.00 | 0.46 | fair | protection-shred, peel |  |
 | Stone of Binding | 0.37 | 0.38 | 0.30 | 0.50 | 0.00 | 0.58 | fair | protection-shred |  |
 | Oni Hunter's Garb | 0.36 | 0.38 | 0.36 | 0.50 | 0.00 | 0.43 | fair |  |  |
 | Void Stone | 0.36 | 0.38 | 0.31 | 0.50 | 0.00 | 0.53 | fair | protection-shred, aura |  |
 | Golden Blade | 0.36 | 0.37 | 0.39 | 0.50 | 0.00 | 0.34 | fair | wave-clear |  |
+| Spirit Robe | 0.36 | 0.37 | 0.33 | 0.50 | 0.00 | 0.48 | fair | sustain |  |
 | Stampede | 0.36 | 0.37 | 0.35 | 0.50 | 0.00 | 0.43 | fair | mobility, aura, cc-immunity |  |
 | Void Shield | 0.36 | 0.37 | 0.30 | 0.50 | 0.00 | 0.53 | fair | protection-shred, aura |  |
 | The Reaper | 0.36 | 0.36 | 0.43 | 0.50 | 0.00 | 0.21 | undervalued | sustain |  |
@@ -48,7 +49,6 @@
 | Yogi's Necklace | 0.35 | 0.36 | 0.43 | 0.50 | 0.00 | 0.19 | undervalued |  |  |
 | Hide of the Nemean Lion | 0.35 | 0.35 | 0.32 | 0.50 | 0.00 | 0.43 | fair |  |  |
 | Tyrfing | 0.35 | 0.35 | 0.39 | 0.50 | 0.00 | 0.25 | fair | burst |  |
-| Glorious Pridwen | 0.35 | 0.35 | 0.24 | 0.50 | 0.00 | 0.60 | premium | sustain |  |
 | Mystical Mail | 0.35 | 0.35 | 0.31 | 0.50 | 0.00 | 0.43 | fair | aura, wave-clear |  |
 | Doublet of Binding | 0.35 | 0.34 | 0.31 | 0.50 | 0.00 | 0.43 | fair | aura |  |
 | Stygian Anchor | 0.34 | 0.33 | 0.27 | 0.50 | 0.00 | 0.48 | premium | anti-heal |  |

@@ -2,13 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.53 | 0.53 | 0.53 | 0.54 | 0.49 | 0.55 | undervalued |  |  |
-| Transcendence | 0.50 | 0.34 | 0.40 | 0.56 | 0.88 | 0.21 | fair |  |  |
-| Hydra's Lament | 0.47 | 0.44 | 0.44 | 0.55 | 0.41 | 0.44 | undervalued | burst |  |
-| Heartseeker | 0.42 | 0.35 | 0.28 | 0.52 | 0.41 | 0.52 | premium | burst |  |
+| Jotunn's Revenge | 0.52 | 0.53 | 0.53 | 0.53 | 0.45 | 0.55 | undervalued |  |  |
+| Transcendence | 0.49 | 0.34 | 0.40 | 0.55 | 0.86 | 0.21 | fair |  |  |
+| Hydra's Lament | 0.47 | 0.44 | 0.44 | 0.54 | 0.39 | 0.44 | undervalued | burst |  |
+| Titan's Bane | 0.42 | 0.38 | 0.36 | 0.55 | 0.28 | 0.42 | fair |  |  |
+| Heartseeker | 0.42 | 0.35 | 0.28 | 0.53 | 0.39 | 0.52 | premium | burst |  |
 | The Crusher | 0.42 | 0.49 | 0.47 | 0.50 | 0.00 | 0.52 | undervalued | burst | **UNDERRATED** |
 | The Reaper | 0.41 | 0.46 | 0.43 | 0.50 | 0.00 | 0.55 | undervalued | sustain | **UNDERRATED** |
-| Titan's Bane | 0.40 | 0.38 | 0.36 | 0.48 | 0.28 | 0.42 | fair |  |  |
 | Tyrfing | 0.38 | 0.42 | 0.39 | 0.50 | 0.00 | 0.47 | fair | burst | **UNDERRATED** |
 | Tekko-Kagi | 0.38 | 0.41 | 0.34 | 0.50 | 0.00 | 0.58 | fair | mobility | **UNDERRATED** |
 | Runeforged Hammer | 0.38 | 0.40 | 0.44 | 0.50 | 0.00 | 0.31 | undervalued | burst | **UNDERRATED** |
@@ -83,8 +83,8 @@
 | Avatar's Parashu | 0.27 | 0.20 | 0.10 | 0.50 | 0.00 | 0.42 | premium | cc-immunity |  |
 | Regrowth Striders | 0.27 | 0.19 | 0.22 | 0.50 | 0.00 | 0.13 | premium | mobility, sustain |  |
 | Stygian Anchor | 0.27 | 0.19 | 0.27 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.27 | 0.06 | 0.08 | 0.62 | 0.16 | 0.00 | premium | mobility |  |
 | Resolute Mantle | 0.27 | 0.18 | 0.26 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
+| Blinking Abyss | 0.26 | 0.06 | 0.08 | 0.60 | 0.15 | 0.00 | premium | mobility |  |
 | Hastened Fatalis | 0.26 | 0.17 | 0.17 | 0.50 | 0.00 | 0.16 | premium | mobility |  |
 | The Executioner | 0.26 | 0.17 | 0.13 | 0.50 | 0.00 | 0.26 | premium | protection-shred |  |
 | Xibalban Effigy | 0.26 | 0.16 | 0.23 | 0.50 | 0.00 | 0.00 | premium |  |  |

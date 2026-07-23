@@ -2,20 +2,20 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Spear of Desolation | 0.57 | 0.60 | 0.43 | 0.51 | 0.59 | 1.00 | undervalued |  |  |
-| Soul Gem | 0.52 | 0.59 | 0.41 | 0.52 | 0.30 | 1.00 | fair | burst, sustain, aura |  |
-| Obsidian Shard | 0.49 | 0.50 | 0.37 | 0.58 | 0.25 | 0.79 | fair |  |  |
+| Spear of Desolation | 0.57 | 0.60 | 0.43 | 0.52 | 0.56 | 1.00 | undervalued |  |  |
+| Soul Gem | 0.53 | 0.59 | 0.41 | 0.55 | 0.32 | 1.00 | fair | burst, sustain, aura |  |
+| Obsidian Shard | 0.50 | 0.50 | 0.37 | 0.61 | 0.26 | 0.79 | fair |  |  |
 | Gluttonous Grimoire | 0.46 | 0.57 | 0.43 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
+| Rod of Tahuti | 0.46 | 0.41 | 0.25 | 0.59 | 0.30 | 0.79 | premium |  |  |
 | The Cosmic Horror | 0.46 | 0.56 | 0.47 | 0.50 | 0.00 | 0.79 | undervalued |  | **UNDERRATED** |
 | Spear of the Magus | 0.45 | 0.54 | 0.44 | 0.50 | 0.00 | 0.79 | undervalued |  | **UNDERRATED** |
-| Rod of Tahuti | 0.44 | 0.41 | 0.25 | 0.53 | 0.33 | 0.79 | premium |  |  |
 | Doom Orb | 0.44 | 0.52 | 0.41 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | The World Stone | 0.42 | 0.50 | 0.37 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.41 | 0.47 | 0.41 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.41 | 0.46 | 0.48 | 0.50 | 0.00 | 0.42 | undervalued | sustain, aura | **UNDERRATED** |
 | Blood-Bound Book | 0.40 | 0.46 | 0.48 | 0.50 | 0.00 | 0.42 | undervalued | sustain | **UNDERRATED** |
 | Ethereal Staff | 0.40 | 0.45 | 0.47 | 0.50 | 0.00 | 0.42 | undervalued |  | **UNDERRATED** |
-| Book of Thoth | 0.40 | 0.40 | 0.40 | 0.46 | 0.26 | 0.42 | fair |  |  |
+| Book of Thoth | 0.40 | 0.40 | 0.40 | 0.48 | 0.21 | 0.42 | fair |  |  |
 | Ancient Signet | 0.40 | 0.44 | 0.41 | 0.50 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |
 | Death Metal | 0.39 | 0.44 | 0.44 | 0.50 | 0.00 | 0.42 | undervalued |  | **UNDERRATED** |
 | Gem of Focus | 0.39 | 0.44 | 0.35 | 0.50 | 0.00 | 0.63 | fair | mobility | **UNDERRATED** |

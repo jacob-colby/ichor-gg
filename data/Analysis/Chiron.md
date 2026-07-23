@@ -2,15 +2,15 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.52 | 0.51 | 0.53 | 0.54 | 0.46 | 0.49 | undervalued |  |  |
-| The Crusher | 0.51 | 0.48 | 0.47 | 0.68 | 0.24 | 0.48 | undervalued | burst |  |
-| Titan's Bane | 0.44 | 0.37 | 0.36 | 0.56 | 0.43 | 0.38 | fair |  |  |
-| Transcendence | 0.44 | 0.34 | 0.40 | 0.53 | 0.58 | 0.19 | fair |  |  |
+| Jotunn's Revenge | 0.51 | 0.51 | 0.53 | 0.54 | 0.45 | 0.49 | undervalued |  |  |
+| The Crusher | 0.44 | 0.48 | 0.47 | 0.53 | 0.08 | 0.48 | undervalued | burst | **UNDERRATED** |
+| Transcendence | 0.43 | 0.34 | 0.40 | 0.52 | 0.54 | 0.19 | fair |  |  |
+| Titan's Bane | 0.43 | 0.37 | 0.36 | 0.53 | 0.40 | 0.38 | fair |  |  |
 | The Reaper | 0.40 | 0.44 | 0.43 | 0.50 | 0.00 | 0.48 | undervalued | sustain | **UNDERRATED** |
 | Hydra's Lament | 0.39 | 0.43 | 0.44 | 0.50 | 0.00 | 0.40 | undervalued | burst | **UNDERRATED** |
 | Tyrfing | 0.39 | 0.42 | 0.39 | 0.50 | 0.00 | 0.49 | fair | burst | **UNDERRATED** |
+| Heartseeker | 0.39 | 0.34 | 0.28 | 0.52 | 0.23 | 0.48 | premium | burst |  |
 | Tekko-Kagi | 0.38 | 0.42 | 0.34 | 0.50 | 0.00 | 0.58 | fair | mobility | **UNDERRATED** |
-| Heartseeker | 0.38 | 0.34 | 0.28 | 0.55 | 0.12 | 0.48 | premium | burst | **UNDERRATED** |
 | Lernaean Bow | 0.38 | 0.40 | 0.36 | 0.50 | 0.00 | 0.49 | fair | wave-clear, burst | **UNDERRATED** |
 | Runeforged Hammer | 0.37 | 0.40 | 0.44 | 0.50 | 0.00 | 0.29 | undervalued | burst | **UNDERRATED** |
 | Golden Blade | 0.37 | 0.39 | 0.39 | 0.50 | 0.00 | 0.39 | fair | wave-clear | **UNDERRATED** |

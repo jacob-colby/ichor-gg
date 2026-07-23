@@ -2,18 +2,17 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Spear of Desolation | 0.55 | 0.60 | 0.43 | 0.53 | 0.44 | 1.00 | undervalued |  |  |
-| Soul Gem | 0.50 | 0.59 | 0.41 | 0.51 | 0.17 | 1.00 | fair | burst, sustain, aura |  |
-| Obsidian Shard | 0.50 | 0.50 | 0.37 | 0.64 | 0.15 | 0.79 | fair |  | **UNDERRATED** |
+| Spear of Desolation | 0.53 | 0.60 | 0.43 | 0.51 | 0.36 | 1.00 | undervalued |  |  |
+| Soul Gem | 0.51 | 0.59 | 0.41 | 0.55 | 0.16 | 1.00 | fair | burst, sustain, aura |  |
 | Gluttonous Grimoire | 0.46 | 0.57 | 0.43 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
-| Rod of Tahuti | 0.46 | 0.41 | 0.25 | 0.62 | 0.23 | 0.79 | premium |  |  |
 | The Cosmic Horror | 0.46 | 0.56 | 0.47 | 0.50 | 0.00 | 0.79 | undervalued |  | **UNDERRATED** |
 | Spear of the Magus | 0.45 | 0.54 | 0.44 | 0.50 | 0.00 | 0.79 | undervalued |  | **UNDERRATED** |
+| Rod of Tahuti | 0.44 | 0.41 | 0.25 | 0.63 | 0.10 | 0.79 | premium |  | **UNDERRATED** |
 | Doom Orb | 0.44 | 0.52 | 0.41 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.44 | 0.50 | 0.37 | 0.45 | 0.19 | 0.79 | fair |  |  |
 | The World Stone | 0.42 | 0.50 | 0.37 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.41 | 0.47 | 0.41 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.41 | 0.46 | 0.48 | 0.50 | 0.00 | 0.42 | undervalued | sustain, aura | **UNDERRATED** |
-| Book of Thoth | 0.40 | 0.40 | 0.40 | 0.51 | 0.16 | 0.42 | fair |  |  |
 | Blood-Bound Book | 0.40 | 0.46 | 0.48 | 0.50 | 0.00 | 0.42 | undervalued | sustain | **UNDERRATED** |
 | Ethereal Staff | 0.40 | 0.45 | 0.47 | 0.50 | 0.00 | 0.42 | undervalued |  | **UNDERRATED** |
 | Ancient Signet | 0.40 | 0.44 | 0.41 | 0.50 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |
@@ -27,10 +26,12 @@
 | Bragi's Harp | 0.38 | 0.41 | 0.36 | 0.50 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |
 | Alchemist Coat | 0.38 | 0.41 | 0.40 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Jade Scepter | 0.38 | 0.40 | 0.40 | 0.50 | 0.00 | 0.42 | fair | peel | **UNDERRATED** |
+| Book of Thoth | 0.38 | 0.40 | 0.40 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Gem of Isolation | 0.37 | 0.38 | 0.37 | 0.50 | 0.00 | 0.42 | fair | peel | **UNDERRATED** |
 | Scepter of Dominion | 0.37 | 0.38 | 0.36 | 0.50 | 0.00 | 0.42 | fair | peel | **UNDERRATED** |
 | Triton's Conch | 0.36 | 0.38 | 0.36 | 0.50 | 0.00 | 0.42 | fair | aura |  |
 | Genji's Guard | 0.36 | 0.37 | 0.44 | 0.50 | 0.00 | 0.21 | undervalued |  |  |
+| Soul Reaver | 0.36 | 0.32 | 0.23 | 0.53 | 0.12 | 0.52 | premium | burst |  |
 | Bracer of The Abyss | 0.36 | 0.37 | 0.35 | 0.50 | 0.00 | 0.42 | fair |  |  |
 | Typhon’s Heart | 0.36 | 0.36 | 0.34 | 0.50 | 0.00 | 0.42 | fair |  |  |
 | Chandra's Grace | 0.35 | 0.36 | 0.42 | 0.50 | 0.00 | 0.21 | fair | sustain |  |
@@ -45,7 +46,6 @@
 | Staff of Myrddin | 0.34 | 0.32 | 0.19 | 0.50 | 0.00 | 0.63 | premium |  |  |
 | Nimble Ring | 0.33 | 0.32 | 0.27 | 0.50 | 0.00 | 0.42 | premium |  |  |
 | Helm of Darkness | 0.33 | 0.32 | 0.27 | 0.50 | 0.00 | 0.42 | premium | mobility |  |
-| Soul Reaver | 0.33 | 0.32 | 0.23 | 0.50 | 0.00 | 0.52 | premium | burst |  |
 | Gladiator's Shield | 0.33 | 0.31 | 0.31 | 0.50 | 0.00 | 0.31 | fair | burst |  |
 | Sphere of Negation | 0.33 | 0.31 | 0.26 | 0.50 | 0.00 | 0.42 | premium | sustain |  |
 | Amanita Charm | 0.33 | 0.31 | 0.44 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura |  |

@@ -2,21 +2,22 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Obsidian Shard | 0.48 | 0.40 | 0.37 | 0.75 | 0.14 | 0.47 | fair |  | **UNDERRATED** |
-| Spear of Desolation | 0.48 | 0.48 | 0.43 | 0.43 | 0.59 | 0.61 | undervalued |  |  |
-| Soul Gem | 0.44 | 0.54 | 0.41 | 0.40 | 0.22 | 0.84 | fair | burst, sustain, aura |  |
+| Spear of Desolation | 0.50 | 0.48 | 0.43 | 0.48 | 0.58 | 0.61 | undervalued |  |  |
+| Soul Gem | 0.46 | 0.54 | 0.41 | 0.46 | 0.19 | 0.84 | fair | burst, sustain, aura |  |
 | Gluttonous Grimoire | 0.43 | 0.51 | 0.43 | 0.50 | 0.00 | 0.70 | undervalued | burst | **UNDERRATED** |
 | The Cosmic Horror | 0.41 | 0.47 | 0.47 | 0.50 | 0.00 | 0.47 | undervalued |  | **UNDERRATED** |
 | Blood-Bound Book | 0.40 | 0.45 | 0.48 | 0.50 | 0.00 | 0.39 | undervalued | sustain | **UNDERRATED** |
 | Spear of the Magus | 0.40 | 0.45 | 0.44 | 0.50 | 0.00 | 0.47 | undervalued |  | **UNDERRATED** |
+| Obsidian Shard | 0.40 | 0.40 | 0.37 | 0.48 | 0.20 | 0.47 | fair |  |  |
 | Bragi's Harp | 0.39 | 0.44 | 0.36 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Doom Orb | 0.39 | 0.43 | 0.41 | 0.50 | 0.00 | 0.47 | fair |  | **UNDERRATED** |
 | Bancroft's Talon | 0.39 | 0.42 | 0.44 | 0.50 | 0.00 | 0.39 | undervalued | sustain | **UNDERRATED** |
+| Rod of Tahuti | 0.39 | 0.31 | 0.25 | 0.59 | 0.15 | 0.47 | premium |  |  |
 | Rod of Asclepius | 0.38 | 0.41 | 0.48 | 0.50 | 0.00 | 0.26 | undervalued | sustain, aura | **UNDERRATED** |
-| Rod of Tahuti | 0.38 | 0.31 | 0.25 | 0.50 | 0.31 | 0.47 | premium |  |  |
 | Ethereal Staff | 0.38 | 0.41 | 0.47 | 0.50 | 0.00 | 0.26 | undervalued |  | **UNDERRATED** |
 | Chronos' Pendant | 0.38 | 0.41 | 0.41 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.38 | 0.40 | 0.35 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
+| The World Stone | 0.38 | 0.40 | 0.37 | 0.50 | 0.00 | 0.47 | fair |  | **UNDERRATED** |
 | Ancient Signet | 0.37 | 0.40 | 0.41 | 0.50 | 0.00 | 0.36 | fair | burst | **UNDERRATED** |
 | Death Metal | 0.37 | 0.39 | 0.44 | 0.50 | 0.00 | 0.26 | undervalued |  | **UNDERRATED** |
 | Nimble Ring | 0.37 | 0.39 | 0.27 | 0.50 | 0.00 | 0.65 | premium |  | **UNDERRATED** |
@@ -38,7 +39,6 @@
 | Triton's Conch | 0.34 | 0.33 | 0.36 | 0.50 | 0.00 | 0.26 | fair | aura |  |
 | Eye of Providence | 0.34 | 0.33 | 0.47 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Breastplate of Valor | 0.34 | 0.33 | 0.41 | 0.50 | 0.00 | 0.14 | fair |  |  |
-| The World Stone | 0.34 | 0.40 | 0.37 | 0.31 | 0.19 | 0.47 | fair |  |  |
 | Shield of the Phoenix | 0.34 | 0.32 | 0.40 | 0.50 | 0.00 | 0.14 | fair | sustain |  |
 | Screeching Gargoyle | 0.33 | 0.31 | 0.35 | 0.50 | 0.00 | 0.24 | fair | protection-shred, peel |  |
 | Amanita Charm | 0.33 | 0.31 | 0.44 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura |  |
@@ -90,5 +90,5 @@
 | Circe's Hexstone | 0.24 | 0.13 | 0.12 | 0.50 | 0.00 | 0.14 | premium | mobility, cc-immunity |  |
 | Brawler’s Beat Stick | 0.24 | 0.13 | 0.18 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
 | Omen Drum | 0.23 | 0.12 | 0.17 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Blinking Abyss | 0.20 | 0.06 | 0.08 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
+| Blinking Abyss | 0.22 | 0.06 | 0.08 | 0.50 | 0.09 | 0.00 | premium | mobility |  |
 | Hussar's Wings | 0.17 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |

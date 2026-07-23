@@ -9,25 +9,67 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.23
-    win_rate: 0.53
+    pick_rate: 0.24
+    win_rate: 0.55
+    alternates:
+    - name: Gauntlet of Thebes
+      pick_rate: 0.12
+      win_rate: 0.52
+    - name: Stampede
+      pick_rate: 0.09
+      win_rate: 0.48
   - name: Genji's Guard
     pick_rate: 0.15
-    win_rate: 0.54
+    win_rate: 0.5
+    alternates:
+    - name: Shifter's Shield
+      pick_rate: 0.12
+      win_rate: 0.57
+    - name: Stampede
+      pick_rate: 0.11
+      win_rate: 0.52
   - name: Spirit Robe
     pick_rate: 0.09
-    win_rate: 0.46
-  - name: Shell of Rebuke
-    pick_rate: 0.07
-    win_rate: 0.44
+    win_rate: 0.48
+    alternates:
+    - name: Genji's Guard
+      pick_rate: 0.12
+      win_rate: 0.55
+    - name: Dwarven Plate
+      pick_rate: 0.08
+      win_rate: 0.43
   - name: Dwarven Plate
-    pick_rate: 0.1
-    win_rate: 0.63
+    pick_rate: 0.08
+    win_rate: 0.65
+    alternates:
+    - name: Spirit Robe
+      pick_rate: 0.1
+      win_rate: 0.57
+    - name: Shell of Rebuke
+      pick_rate: 0.07
+      win_rate: 0.45
   - name: Engraved Guard
-    pick_rate: 0.09
-    win_rate: 0.53
+    pick_rate: 0.06
+    win_rate: 0.36
+    alternates:
+    - name: Dwarven Plate
+      pick_rate: 0.09
+      win_rate: 0.61
+    - name: Spirit Robe
+      pick_rate: 0.06
+      win_rate: 0.71
+  - name: Circle of Protection
+    pick_rate: 0.07
+    win_rate: 0.43
+    alternates:
+    - name: Engraved Guard
+      pick_rate: 0.08
+      win_rate: 0.56
+    - name: Spirit Robe
+      pick_rate: 0.05
+      win_rate: 0.6
   source_url: https://smitebrain.com/gods/ymir/
-  last_verified: '2026-07-21'
+  last_verified: '2026-07-22'
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -35,30 +77,30 @@ builds:
   archetype: core
   slot_order:
   - Eye of Providence
-  - Genji's Guard
   - Kinetic Cuirass
   - Shifter's Shield
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Genji's Guard
   - Erosion
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Draconic Scale — magical protection
-    swap_item: Draconic Scale
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Eye of Providence, Amanita Charm, Genji''s Guard, Erosion,
-    Spectral Armor, Shield of the Phoenix, Gladiator''s Shield, Rod of Asclepius,
+    this god: Kinetic Cuirass, Eye of Providence, Amanita Charm, Erosion, Spectral
+    Armor, Genji''s Guard, Shield of the Phoenix, Gladiator''s Shield, Rod of Asclepius,
     Draconic Scale, Gluttonous Grimoire, Ethereal Staff, Prophetic Cloak, Shroud of
     Vengeance, Midgardian Mail, Mantle Of Discord, Magi''s Cloak, Freya''s Tears,
     Phoenix Feather, Leviathan''s Hide, Ancile, Breastplate of Valor, Helm of Radiance,
@@ -70,12 +112,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Genji's Guard:
-      total: 0.42
-      efficiency: 0.44
-      win: 0.54
-      pick: 0.15
-      fit: 0.39
     Kinetic Cuirass:
       total: 0.45
       efficiency: 0.44
@@ -83,11 +119,17 @@ builds:
       pick: 0.0
       fit: 0.82
     Shifter's Shield:
-      total: 0.43
+      total: 0.44
       efficiency: 0.3
-      win: 0.53
-      pick: 0.23
+      win: 0.55
+      pick: 0.24
       fit: 0.72
+    Spectral Armor:
+      total: 0.41
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Amanita Charm:
       total: 0.44
       efficiency: 0.44
@@ -107,14 +149,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Eye of Providence
-  - Genji's Guard
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Shifter's Shield
+  - Spectral Armor
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
   - Shifter's Shield
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -123,18 +165,18 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Spirit Robe — physical protection
+    swap_item: Spirit Robe
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Rod of Asclepius, Kinetic Cuirass,
-    Eye of Providence, Chandra''s Grace, Genji''s Guard, Phoenix Feather, Soul Gem,
-    Lifebinder, Spectral Armor, Blood-Bound Book, Erosion, Spirit Robe, Bancroft''s
-    Talon, Gluttonous Grimoire, Ethereal Staff, Glorious Pridwen, Gladiator''s Shield,
-    Midgardian Mail, Breastplate of Valor, Leviathan''s Hide, Ancile, Helm of Radiance,
-    Shroud of Vengeance, Draconic Scale.'
+    Eye of Providence, Chandra''s Grace, Phoenix Feather, Soul Gem, Lifebinder, Spectral
+    Armor, Blood-Bound Book, Genji''s Guard, Spirit Robe, Erosion, Bancroft''s Talon,
+    Gluttonous Grimoire, Ethereal Staff, Glorious Pridwen, Gladiator''s Shield, Midgardian
+    Mail, Breastplate of Valor, Leviathan''s Hide, Ancile, Helm of Radiance, Shroud
+    of Vengeance, Draconic Scale.'
   slot_scores:
     Eye of Providence:
       total: 0.42
@@ -142,12 +184,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Genji's Guard:
-      total: 0.41
-      efficiency: 0.44
-      win: 0.54
-      pick: 0.15
-      fit: 0.29
     Kinetic Cuirass:
       total: 0.42
       efficiency: 0.44
@@ -161,11 +197,17 @@ builds:
       pick: 0.0
       fit: 0.77
     Shifter's Shield:
-      total: 0.4
+      total: 0.41
       efficiency: 0.3
-      win: 0.53
-      pick: 0.23
+      win: 0.55
+      pick: 0.24
       fit: 0.53
+    Spectral Armor:
+      total: 0.4
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Amanita Charm:
       total: 0.45
       efficiency: 0.44
@@ -177,9 +219,9 @@ builds:
   archetype: anti-tank
   slot_order:
   - Eye of Providence
-  - Genji's Guard
   - Kinetic Cuirass
   - Gluttonous Grimoire
+  - Shifter's Shield
   - Spear of Desolation
   - The Cosmic Horror
   flex_slots:
@@ -193,15 +235,15 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Kinetic Cuirass, Eye of Providence, Soul Gem,
-    Genji''s Guard, Amanita Charm, The Cosmic Horror, Spear of Desolation, Screeching
-    Gargoyle, Spectral Armor, Void Stone, Stone of Binding, Spear of the Magus, Void
+    Amanita Charm, The Cosmic Horror, Spear of Desolation, Screeching Gargoyle, Genji''s
+    Guard, Spectral Armor, Void Stone, Stone of Binding, Spear of the Magus, Void
     Shield, Erosion, Doom Orb, Shield of the Phoenix, Rod of Asclepius, Ethereal Staff,
     Obsidian Shard, The World Stone, Midgardian Mail, Gladiator''s Shield, Shroud
     of Vengeance, Chandra''s Grace, Helm of Radiance, Breastplate of Valor.'
@@ -212,12 +254,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Genji's Guard:
-      total: 0.4
-      efficiency: 0.44
-      win: 0.54
-      pick: 0.15
-      fit: 0.25
     Kinetic Cuirass:
       total: 0.41
       efficiency: 0.44
@@ -230,6 +266,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Shifter's Shield:
+      total: 0.4
+      efficiency: 0.3
+      win: 0.55
+      pick: 0.24
+      fit: 0.48
     Spear of Desolation:
       total: 0.4
       efficiency: 0.43

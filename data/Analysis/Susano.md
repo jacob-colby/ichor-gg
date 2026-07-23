@@ -2,12 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.55 | 0.67 | 0.53 | 0.47 | 0.33 | 1.00 | undervalued |  |  |
-| Heartseeker | 0.51 | 0.49 | 0.28 | 0.60 | 0.32 | 1.00 | premium | burst |  |
-| Titan's Bane | 0.50 | 0.53 | 0.36 | 0.58 | 0.25 | 0.91 | fair |  |  |
+| Jotunn's Revenge | 0.51 | 0.67 | 0.53 | 0.50 | 0.00 | 1.00 | undervalued |  | **UNDERRATED** |
+| Titan's Bane | 0.51 | 0.53 | 0.36 | 0.59 | 0.26 | 0.91 | fair |  |  |
 | The Reaper | 0.50 | 0.57 | 0.43 | 0.56 | 0.14 | 0.91 | undervalued | sustain | **UNDERRATED** |
+| Heartseeker | 0.49 | 0.49 | 0.28 | 0.56 | 0.32 | 1.00 | premium | burst |  |
 | The Crusher | 0.49 | 0.63 | 0.47 | 0.50 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
-| Hydra's Lament | 0.47 | 0.52 | 0.44 | 0.47 | 0.27 | 0.71 | undervalued | burst |  |
+| Hydra's Lament | 0.46 | 0.52 | 0.44 | 0.47 | 0.26 | 0.71 | undervalued | burst |  |
+| Barbed Carver | 0.46 | 0.42 | 0.33 | 0.59 | 0.32 | 0.62 | fair | burst |  |
 | Tekko-Kagi | 0.43 | 0.51 | 0.34 | 0.50 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
 | Pendulum Blade | 0.43 | 0.51 | 0.29 | 0.50 | 0.00 | 1.00 | fair |  | **UNDERRATED** |
 | Runeforged Hammer | 0.42 | 0.50 | 0.44 | 0.50 | 0.00 | 0.62 | undervalued | burst | **UNDERRATED** |
@@ -20,7 +21,6 @@
 | Arondight | 0.39 | 0.43 | 0.36 | 0.50 | 0.00 | 0.61 | fair | mobility | **UNDERRATED** |
 | Oath-Sworn Spear | 0.39 | 0.43 | 0.34 | 0.50 | 0.00 | 0.62 | fair | protection-shred | **UNDERRATED** |
 | Golden Blade | 0.39 | 0.43 | 0.39 | 0.50 | 0.00 | 0.52 | fair | wave-clear | **UNDERRATED** |
-| Barbed Carver | 0.38 | 0.42 | 0.33 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Damaru | 0.38 | 0.42 | 0.37 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Rage | 0.38 | 0.41 | 0.37 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Bloodforge | 0.37 | 0.39 | 0.33 | 0.50 | 0.00 | 0.52 | fair | sustain | **UNDERRATED** |
@@ -93,5 +93,5 @@
 | The Executioner | 0.24 | 0.12 | 0.13 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
 | Omen Drum | 0.23 | 0.12 | 0.17 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.23 | 0.11 | 0.12 | 0.50 | 0.00 | 0.09 | premium | mobility, cc-immunity |  |
-| Blinking Abyss | 0.20 | 0.06 | 0.08 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
+| Blinking Abyss | 0.20 | 0.06 | 0.08 | 0.46 | 0.10 | 0.00 | premium | mobility |  |
 | Hussar's Wings | 0.17 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |

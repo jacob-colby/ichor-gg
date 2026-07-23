@@ -3,21 +3,22 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Jotunn's Revenge | 0.43 | 0.52 | 0.53 | 0.50 | 0.00 | 0.50 | undervalued |  | **UNDERRATED** |
-| Riptalon | 0.42 | 0.33 | 0.26 | 0.64 | 0.24 | 0.49 | premium | sustain |  |
+| Devourer's Gauntlet | 0.43 | 0.30 | 0.30 | 0.55 | 0.54 | 0.30 | fair | sustain |  |
 | The Crusher | 0.41 | 0.48 | 0.47 | 0.50 | 0.00 | 0.49 | undervalued | burst | **UNDERRATED** |
-| Devourer's Gauntlet | 0.41 | 0.30 | 0.30 | 0.48 | 0.63 | 0.30 | fair | sustain |  |
+| Riptalon | 0.41 | 0.33 | 0.26 | 0.61 | 0.22 | 0.49 | premium | sustain |  |
 | The Reaper | 0.40 | 0.45 | 0.43 | 0.50 | 0.00 | 0.49 | undervalued | sustain | **UNDERRATED** |
 | Hydra's Lament | 0.39 | 0.43 | 0.44 | 0.50 | 0.00 | 0.41 | undervalued | burst | **UNDERRATED** |
 | Tyrfing | 0.39 | 0.43 | 0.39 | 0.50 | 0.00 | 0.50 | fair | burst | **UNDERRATED** |
 | Tekko-Kagi | 0.38 | 0.42 | 0.34 | 0.50 | 0.00 | 0.59 | fair | mobility | **UNDERRATED** |
 | Lernaean Bow | 0.38 | 0.40 | 0.36 | 0.50 | 0.00 | 0.50 | fair | wave-clear, burst | **UNDERRATED** |
 | Runeforged Hammer | 0.38 | 0.40 | 0.44 | 0.50 | 0.00 | 0.30 | undervalued | burst | **UNDERRATED** |
+| Dagger of Frenzy | 0.37 | 0.23 | 0.25 | 0.58 | 0.36 | 0.20 | premium |  |  |
+| Titan's Bane | 0.37 | 0.37 | 0.36 | 0.47 | 0.15 | 0.39 | fair |  | **UNDERRATED** |
 | Golden Blade | 0.37 | 0.39 | 0.39 | 0.50 | 0.00 | 0.40 | fair | wave-clear | **UNDERRATED** |
 | Damaru | 0.37 | 0.38 | 0.37 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
 | Rage | 0.36 | 0.38 | 0.37 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
 | Avenging Blade | 0.36 | 0.38 | 0.41 | 0.50 | 0.00 | 0.30 | fair | protection-shred | **UNDERRATED** |
 | Shield Splitter | 0.36 | 0.37 | 0.45 | 0.50 | 0.00 | 0.20 | undervalued |  | **UNDERRATED** |
-| Titan's Bane | 0.36 | 0.37 | 0.36 | 0.44 | 0.15 | 0.39 | fair |  | **UNDERRATED** |
 | Pendulum Blade | 0.35 | 0.35 | 0.29 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
 | Barbed Carver | 0.35 | 0.35 | 0.33 | 0.50 | 0.00 | 0.40 | fair | burst | **UNDERRATED** |
 | Berserker's Shield | 0.35 | 0.35 | 0.41 | 0.50 | 0.00 | 0.20 | fair |  | **UNDERRATED** |
@@ -37,7 +38,6 @@
 | Pharaoh's Curse | 0.34 | 0.32 | 0.37 | 0.50 | 0.00 | 0.20 | fair | aura |  |
 | Eros' Bow | 0.33 | 0.32 | 0.37 | 0.50 | 0.00 | 0.20 | fair | aura |  |
 | Breastplate of Valor | 0.33 | 0.32 | 0.41 | 0.50 | 0.00 | 0.11 | fair |  |  |
-| Dagger of Frenzy | 0.33 | 0.23 | 0.25 | 0.46 | 0.36 | 0.20 | premium |  |  |
 | Shield of the Phoenix | 0.33 | 0.31 | 0.40 | 0.50 | 0.00 | 0.11 | fair | sustain |  |
 | Amanita Charm | 0.33 | 0.31 | 0.44 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Screeching Gargoyle | 0.33 | 0.30 | 0.35 | 0.50 | 0.00 | 0.21 | fair | protection-shred, peel |  |

@@ -6,28 +6,70 @@ builds:
 - source: community
   aspect: Aspect of Relativity
   aspect_pick_rate: 0.06
-  aspect_win_rate: 0.47
+  aspect_win_rate: 0.52
   slot_order:
   - name: Book of Thoth
-    pick_rate: 0.42
-    win_rate: 0.44
+    pick_rate: 0.4
+    win_rate: 0.46
+    alternates:
+    - name: Spear of Desolation
+      pick_rate: 0.28
+      win_rate: 0.39
+    - name: Chronos' Pendant
+      pick_rate: 0.07
+      win_rate: 0.41
   - name: Spear of Desolation
-    pick_rate: 0.3
-    win_rate: 0.47
+    pick_rate: 0.29
+    win_rate: 0.46
+    alternates:
+    - name: Book of Thoth
+      pick_rate: 0.2
+      win_rate: 0.42
+    - name: Nimble Ring
+      pick_rate: 0.05
+      win_rate: 0.5
   - name: Nimble Ring
     pick_rate: 0.19
-    win_rate: 0.44
+    win_rate: 0.47
+    alternates:
+    - name: Polynomicon
+      pick_rate: 0.18
+      win_rate: 0.45
+    - name: Rod of Tahuti
+      pick_rate: 0.14
+      win_rate: 0.45
   - name: Rod of Tahuti
     pick_rate: 0.32
-    win_rate: 0.46
+    win_rate: 0.47
+    alternates:
+    - name: Nimble Ring
+      pick_rate: 0.14
+      win_rate: 0.47
+    - name: Obsidian Shard
+      pick_rate: 0.13
+      win_rate: 0.41
   - name: Obsidian Shard
-    pick_rate: 0.22
-    win_rate: 0.49
+    pick_rate: 0.26
+    win_rate: 0.5
+    alternates:
+    - name: Nimble Ring
+      pick_rate: 0.12
+      win_rate: 0.5
+    - name: Rod of Tahuti
+      pick_rate: 0.11
+      win_rate: 0.56
   - name: Evil Eye
-    pick_rate: 0.09
-    win_rate: 0.42
+    pick_rate: 0.11
+    win_rate: 0.36
+    alternates:
+    - name: Obsidian Shard
+      pick_rate: 0.08
+      win_rate: 0.51
+    - name: Rod of Tahuti
+      pick_rate: 0.08
+      win_rate: 0.63
   source_url: https://smitebrain.com/gods/chronos/
-  last_verified: '2026-07-17'
+  last_verified: '2026-07-22'
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -66,14 +108,14 @@ builds:
     Book of Thoth:
       total: 0.4
       efficiency: 0.4
-      win: 0.44
-      pick: 0.42
+      win: 0.46
+      pick: 0.4
       fit: 0.29
     Spear of Desolation:
       total: 0.46
       efficiency: 0.43
-      win: 0.47
-      pick: 0.3
+      win: 0.46
+      pick: 0.29
       fit: 0.68
     The Cosmic Horror:
       total: 0.42
@@ -88,10 +130,10 @@ builds:
       pick: 0.0
       fit: 0.53
     Obsidian Shard:
-      total: 0.41
+      total: 0.42
       efficiency: 0.37
-      win: 0.49
-      pick: 0.22
+      win: 0.5
+      pick: 0.26
       fit: 0.53
     Soul Gem:
       total: 0.46
@@ -105,7 +147,7 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Bragi's Harp
+  - Book of Thoth
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
@@ -113,7 +155,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - Bragi's Harp
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -134,17 +176,17 @@ builds:
     Guard, Triton''s Conch, Gem of Focus, Divine Ruin, Polynomicon, Chandra''s Grace,
     Helm of Radiance, Spectral Armor, Breastplate of Valor, Lifebinder, Kinetic Cuirass.'
   slot_scores:
-    Bragi's Harp:
+    Book of Thoth:
       total: 0.39
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
+      efficiency: 0.4
+      win: 0.46
+      pick: 0.4
+      fit: 0.18
     Spear of Desolation:
       total: 0.45
       efficiency: 0.43
-      win: 0.47
-      pick: 0.3
+      win: 0.46
+      pick: 0.29
       fit: 0.62
     The Cosmic Horror:
       total: 0.41
@@ -159,10 +201,10 @@ builds:
       pick: 0.0
       fit: 0.45
     Obsidian Shard:
-      total: 0.4
+      total: 0.41
       efficiency: 0.37
-      win: 0.49
-      pick: 0.22
+      win: 0.5
+      pick: 0.26
       fit: 0.45
     Soul Gem:
       total: 0.44
@@ -176,13 +218,13 @@ builds:
   slot_order:
   - Blood-Bound Book
   - Book of Thoth
-  - Kinetic Cuirass
   - Spear of Desolation
   - The Cosmic Horror
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Book of Thoth
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -213,26 +255,26 @@ builds:
     Book of Thoth:
       total: 0.38
       efficiency: 0.4
-      win: 0.44
-      pick: 0.42
+      win: 0.46
+      pick: 0.4
       fit: 0.17
-    Kinetic Cuirass:
-      total: 0.38
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Spear of Desolation:
-      total: 0.42
+      total: 0.41
       efficiency: 0.43
-      win: 0.47
-      pick: 0.3
+      win: 0.46
+      pick: 0.29
       fit: 0.38
     The Cosmic Horror:
       total: 0.38
       efficiency: 0.47
       win: 0.5
       pick: 0.0
+      fit: 0.3
+    Obsidian Shard:
+      total: 0.39
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.26
       fit: 0.3
     Soul Gem:
       total: 0.45
@@ -276,8 +318,8 @@ builds:
     Spear of Desolation:
       total: 0.47
       efficiency: 0.43
-      win: 0.47
-      pick: 0.3
+      win: 0.46
+      pick: 0.29
       fit: 0.76
     The Cosmic Horror:
       total: 0.44
@@ -298,10 +340,10 @@ builds:
       pick: 0.0
       fit: 0.65
     Obsidian Shard:
-      total: 0.43
+      total: 0.44
       efficiency: 0.37
-      win: 0.49
-      pick: 0.22
+      win: 0.5
+      pick: 0.26
       fit: 0.65
     Soul Gem:
       total: 0.46
@@ -386,8 +428,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
+  - The Cosmic Horror
   - Erosion
-  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -410,10 +452,10 @@ builds:
     Ancient Signet.'
   slot_scores:
     Spear of Desolation:
-      total: 0.44
+      total: 0.43
       efficiency: 0.43
-      win: 0.47
-      pick: 0.3
+      win: 0.46
+      pick: 0.29
       fit: 0.54
     The Cosmic Horror:
       total: 0.39
@@ -422,10 +464,10 @@ builds:
       pick: 0.0
       fit: 0.34
     Obsidian Shard:
-      total: 0.39
+      total: 0.4
       efficiency: 0.37
-      win: 0.49
-      pick: 0.22
+      win: 0.5
+      pick: 0.26
       fit: 0.34
     Spectral Armor:
       total: 0.4
@@ -457,8 +499,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Spectral Armor
   - The Cosmic Horror
-  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -482,8 +524,8 @@ builds:
     Spear of Desolation:
       total: 0.44
       efficiency: 0.43
-      win: 0.47
-      pick: 0.3
+      win: 0.46
+      pick: 0.29
       fit: 0.55
     The Cosmic Horror:
       total: 0.4
@@ -492,10 +534,10 @@ builds:
       pick: 0.0
       fit: 0.39
     Obsidian Shard:
-      total: 0.39
+      total: 0.4
       efficiency: 0.37
-      win: 0.49
-      pick: 0.22
+      win: 0.5
+      pick: 0.26
       fit: 0.39
     Spectral Armor:
       total: 0.4
@@ -559,8 +601,8 @@ builds:
     Spear of Desolation:
       total: 0.41
       efficiency: 0.43
-      win: 0.47
-      pick: 0.3
+      win: 0.46
+      pick: 0.29
       fit: 0.35
     Spectral Armor:
       total: 0.42
@@ -598,7 +640,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
+  - The Cosmic Horror
   - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
@@ -628,10 +670,10 @@ builds:
       pick: 0.0
       fit: 0.85
     Spear of Desolation:
-      total: 0.46
+      total: 0.45
       efficiency: 0.43
-      win: 0.47
-      pick: 0.3
+      win: 0.46
+      pick: 0.29
       fit: 0.64
     The Cosmic Horror:
       total: 0.41
@@ -646,10 +688,10 @@ builds:
       pick: 0.0
       fit: 0.49
     Obsidian Shard:
-      total: 0.41
+      total: 0.42
       efficiency: 0.37
-      win: 0.49
-      pick: 0.22
+      win: 0.5
+      pick: 0.26
       fit: 0.49
     Soul Gem:
       total: 0.47

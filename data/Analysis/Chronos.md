@@ -2,14 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Spear of Desolation | 0.46 | 0.50 | 0.43 | 0.47 | 0.30 | 0.68 | undervalued |  |  |
 | Soul Gem | 0.46 | 0.56 | 0.41 | 0.50 | 0.00 | 0.92 | fair | burst, sustain, aura | **UNDERRATED** |
+| Spear of Desolation | 0.46 | 0.50 | 0.43 | 0.46 | 0.29 | 0.68 | undervalued |  |  |
 | Gluttonous Grimoire | 0.44 | 0.53 | 0.43 | 0.50 | 0.00 | 0.78 | undervalued | burst | **UNDERRATED** |
+| Obsidian Shard | 0.42 | 0.42 | 0.37 | 0.50 | 0.26 | 0.53 | fair |  |  |
 | The Cosmic Horror | 0.42 | 0.49 | 0.47 | 0.50 | 0.00 | 0.53 | undervalued |  | **UNDERRATED** |
-| Obsidian Shard | 0.41 | 0.42 | 0.37 | 0.49 | 0.22 | 0.53 | fair |  |  |
 | Spear of the Magus | 0.41 | 0.47 | 0.44 | 0.50 | 0.00 | 0.53 | undervalued |  | **UNDERRATED** |
 | Blood-Bound Book | 0.41 | 0.47 | 0.48 | 0.50 | 0.00 | 0.44 | undervalued | sustain | **UNDERRATED** |
-| Book of Thoth | 0.40 | 0.37 | 0.40 | 0.44 | 0.42 | 0.29 | fair |  |  |
+| Book of Thoth | 0.40 | 0.37 | 0.40 | 0.46 | 0.40 | 0.29 | fair |  |  |
 | Doom Orb | 0.40 | 0.45 | 0.41 | 0.50 | 0.00 | 0.53 | fair |  | **UNDERRATED** |
 | Bancroft's Talon | 0.40 | 0.44 | 0.44 | 0.50 | 0.00 | 0.44 | undervalued | sustain | **UNDERRATED** |
 | Bragi's Harp | 0.39 | 0.42 | 0.36 | 0.50 | 0.00 | 0.57 | fair | burst | **UNDERRATED** |
@@ -17,10 +17,10 @@
 | The World Stone | 0.38 | 0.42 | 0.37 | 0.50 | 0.00 | 0.53 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.38 | 0.42 | 0.41 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Ethereal Staff | 0.38 | 0.42 | 0.47 | 0.50 | 0.00 | 0.29 | undervalued |  | **UNDERRATED** |
+| Nimble Ring | 0.38 | 0.38 | 0.27 | 0.47 | 0.19 | 0.62 | premium |  |  |
+| Rod of Tahuti | 0.38 | 0.33 | 0.25 | 0.47 | 0.32 | 0.53 | premium |  |  |
 | Ancient Signet | 0.38 | 0.41 | 0.41 | 0.50 | 0.00 | 0.39 | fair | burst | **UNDERRATED** |
-| Rod of Tahuti | 0.38 | 0.33 | 0.25 | 0.46 | 0.32 | 0.53 | premium |  |  |
 | Death Metal | 0.37 | 0.40 | 0.44 | 0.50 | 0.00 | 0.29 | undervalued |  | **UNDERRATED** |
-| Nimble Ring | 0.37 | 0.38 | 0.27 | 0.44 | 0.19 | 0.62 | premium |  |  |
 | Divine Ruin | 0.37 | 0.39 | 0.39 | 0.50 | 0.00 | 0.39 | fair | anti-heal, burst | **UNDERRATED** |
 | Bracer of The Abyss | 0.37 | 0.39 | 0.35 | 0.50 | 0.00 | 0.47 | fair |  | **UNDERRATED** |
 | Polynomicon | 0.37 | 0.38 | 0.38 | 0.50 | 0.00 | 0.39 | fair | burst | **UNDERRATED** |
