@@ -29,38 +29,51 @@ def test_aggregate_summarizes_per_god():
     assert agg["pooled_spearman"] is not None
 
 
+# Explicit floors keep these logic tests independent of the production defaults
+# (which shift as the roster/meta changes); test_check_thresholds_default_floors
+# pins the current production values separately.
+
 def test_check_thresholds_passes_above_both_floors():
     agg = {"mean_win_weighted": 0.70, "pooled_spearman": 0.40, "pooled_n": 10}
-    passed, failures = validate.check_thresholds(agg)
+    passed, failures = validate.check_thresholds(agg, 0.44, 0.30)
     assert (passed, failures) == (True, [])
 
 
 def test_check_thresholds_fails_low_win_weighted():
-    agg = {"mean_win_weighted": 0.50, "pooled_spearman": 0.40, "pooled_n": 10}
-    passed, failures = validate.check_thresholds(agg)
+    agg = {"mean_win_weighted": 0.30, "pooled_spearman": 0.40, "pooled_n": 10}
+    passed, failures = validate.check_thresholds(agg, 0.44, 0.30)
     assert passed is False
     assert any("win-weighted" in f for f in failures)
 
 
 def test_check_thresholds_fails_low_spearman():
     agg = {"mean_win_weighted": 0.70, "pooled_spearman": 0.20, "pooled_n": 10}
-    passed, failures = validate.check_thresholds(agg)
+    passed, failures = validate.check_thresholds(agg, 0.44, 0.30)
     assert passed is False
     assert any("spearman" in f for f in failures)
 
 
 def test_check_thresholds_fails_none_spearman():
     agg = {"mean_win_weighted": 0.70, "pooled_spearman": None, "pooled_n": 10}
-    passed, failures = validate.check_thresholds(agg)
+    passed, failures = validate.check_thresholds(agg, 0.44, 0.30)
     assert passed is False
     assert any("spearman" in f and "n/a" in f for f in failures)
 
 
 def test_check_thresholds_fails_both():
-    agg = {"mean_win_weighted": 0.50, "pooled_spearman": 0.20, "pooled_n": 10}
-    passed, failures = validate.check_thresholds(agg)
+    agg = {"mean_win_weighted": 0.30, "pooled_spearman": 0.20, "pooled_n": 10}
+    passed, failures = validate.check_thresholds(agg, 0.44, 0.30)
     assert passed is False
     assert len(failures) == 2
+
+
+def test_check_thresholds_default_floors():
+    # Pin the production defaults (full-roster, rank-favoring): 0.44 / 0.30.
+    at_floor = {"mean_win_weighted": 0.44, "pooled_spearman": 0.30, "pooled_n": 10}
+    assert validate.check_thresholds(at_floor) == (True, [])
+    below = {"mean_win_weighted": 0.43, "pooled_spearman": 0.29, "pooled_n": 10}
+    passed, failures = validate.check_thresholds(below)
+    assert passed is False and len(failures) == 2
 
 
 def test_tag_audit_flags_mismatches():
