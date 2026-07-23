@@ -11,6 +11,7 @@ underrated:
   # rarely picked. Quality is judged relative to the god's own item pool.
   top_quality_frac: 0.30   # consider only the top 30% by quality...
   max_pick: 0.15           # ...and flag those whose pick rate is at most this
+kit_blend: 0.5       # how much the parsed ability-scaling profile skews god-fit (0 = role map only)
 
 # ── Build flavors ─────────────────────────────────────────────────────────
 # Each flavor is a scoring overlay producing an extra "suggested" build. It's

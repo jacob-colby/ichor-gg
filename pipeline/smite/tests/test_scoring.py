@@ -288,3 +288,25 @@ def test_role_map_uses_max_health_not_health():
     w = scoring.load_weights_default()
     for entry in w["role_stats"].values():
         assert "Health" not in entry, "use 'Max Health' — 'Health' matches no item"
+
+
+def test_kit_overlay_blends_into_fit_via_score_god_items():
+    weights = scoring.load_weights_default()
+    int_item = {"name": "Staff", "tier": 3, "stats": {"Intelligence": "70"}}
+    cdr_item = {"name": "Pendant", "tier": 3, "stats": {"Cooldown Rate": "10"}}
+    eff = {"Staff": {"score": 0.5, "tier": "fair"}, "Pendant": {"score": 0.5, "tier": "fair"}}
+    build = {"builds": []}
+    kit_god = {"name": "K", "damage_type": "magical", "role": "Mid", "specializations": [],
+               "abilities": [
+                   {"slot": "1st Ability", "details": ["Damage Scaling: 80% Intelligence"]},
+                   {"slot": "2nd Ability", "details": ["Damage Scaling: 70% Intelligence"]},
+                   {"slot": "Ultimate", "details": ["Damage Scaling: 120% Intelligence"]},
+               ]}
+    no_kit_god = {**kit_god, "abilities": []}
+    rows_kit = {r["item"]: r for r in scoring.score_god_items(
+        kit_god, [int_item, cdr_item], build, eff, weights, {})}
+    rows_plain = {r["item"]: r for r in scoring.score_god_items(
+        no_kit_god, [int_item, cdr_item], build, eff, weights, {})}
+    # A kit that is pure Intelligence scaling should shift fit relative to the
+    # role map alone (the blended map differs from the plain role map).
+    assert rows_kit["Staff"]["fit"] != rows_plain["Staff"]["fit"]

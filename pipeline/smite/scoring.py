@@ -6,6 +6,7 @@ import math
 
 import yaml
 
+from smite import kit
 from smite.efficiency import parse_stat_value
 
 DEFAULT_WEIGHTS = {
@@ -44,6 +45,8 @@ DEFAULT_WEIGHTS = {
     # we most want to surface. `top_quality_frac` auto-calibrates per god (flag
     # only the top fraction by quality), so no fragile absolute score cutoff.
     "underrated": {"max_pick": 0.15, "top_quality_frac": 0.30},
+    # How much the kit-scaling overlay skews god-fit (0 = role map only).
+    "kit_blend": 0.5,
 }
 
 
@@ -141,13 +144,16 @@ def _role_stat_map(god, weights):
     return merged
 
 
-def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=None):
+def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=None,
+                  base_map=None):
     """Archetype fit in [0,1]: weighted presence of role-relevant stats, plus a
     small bonus for archetype-relevant tags. An optional stat_overlay (flavor
     weights, which win over the god's role map) and tag_bonus (per-tag deltas,
-    may be negative) skew the fit. NOT damage simulation — see spec."""
+    may be negative) skew the fit. base_map, when given, replaces the role-map
+    lookup (score_god_items passes the kit-blended map); flavor stat_overlay
+    still wins on shared keys. NOT damage simulation — see spec."""
     stats = item.get("stats") or {}
-    role_map = _role_stat_map(god, weights)
+    role_map = dict(base_map) if base_map is not None else _role_stat_map(god, weights)
     if stat_overlay:
         role_map = {**role_map, **stat_overlay}
     denom = sum(role_map.values()) or 1.0
@@ -177,11 +183,12 @@ def lookup_rates(god_build, item_name):
 
 
 def signal_score(item, god, god_build, eff_score, weights, item_tags,
-                 stat_overlay=None, tag_bonus=None):
+                 stat_overlay=None, tag_bonus=None, base_map=None):
     w = weights["signals"]
     pick, win = lookup_rates(god_build, item["name"])
     win_norm = win if win is not None else 0.5   # neutral when unknown
-    fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus)
+    fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus,
+                        base_map=base_map)
     total = (w["efficiency"] * eff_score + w["win"] * win_norm
              + w["pick"] * pick + w["fit"] * fit)
     # Intrinsic merit for this god — efficiency + fit only, renormalized so it
@@ -263,6 +270,15 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     stat_overlay = profile.get("stat_overlay")
     tag_bonus = profile.get("tag_bonus")
 
+    # Fun flavors set archetype_bypass to ignore the god's archetype entirely.
+    if profile.get("archetype_bypass"):
+        base_map = {}
+    else:
+        base_map = _role_stat_map(god, weights)
+        blend = eff_weights.get("kit_blend", 0.5)
+        for stat, w in kit.kit_stat_overlay(kit.scaling_profile(god), god).items():
+            base_map[stat] = (1 - blend) * base_map.get(stat, 0.0) + blend * w
+
     rows = []
     for item in items:
         if not is_buildable(item):
@@ -271,7 +287,8 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
             continue
         eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
         row = signal_score(item, god, god_build, eff, eff_weights,
-                           tags_map.get(item["name"], []), stat_overlay, tag_bonus)
+                           tags_map.get(item["name"], []), stat_overlay, tag_bonus,
+                           base_map=base_map)
         row["tier"] = efficiency_scores_map.get(item["name"], {}).get("tier", "fair")
         rows.append(row)
 
