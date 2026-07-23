@@ -111,19 +111,19 @@ def test_stat_value_boundary_1000_clean_1001_flagged():
     assert any(f["item"] == "Boundary Stat Flagged" and f["issue"] == "bad-stat-value" for f in findings)
 
 
-def test_tier3_cost_boundary_1800_and_3600_clean():
+def test_tier3_cost_boundary_1800_and_4000_clean():
     items = [
         dict(_clean_item("Tier3 Min Boundary", tier=3), cost=1800),
-        dict(_clean_item("Tier3 Max Boundary", tier=3), cost=3600),
+        dict(_clean_item("Tier3 Max Boundary", tier=3), cost=4000),
     ]
     findings = data_audit.audit_items(items)
     assert not any(f["issue"] == "tier3-cost-outlier" for f in findings)
 
 
-def test_tier3_cost_boundary_1799_and_3601_flagged():
+def test_tier3_cost_boundary_1799_and_4001_flagged():
     items = [
         dict(_clean_item("Tier3 Below Min", tier=3), cost=1799),
-        dict(_clean_item("Tier3 Above Max", tier=3), cost=3601),
+        dict(_clean_item("Tier3 Above Max", tier=3), cost=4001),
     ]
     findings = data_audit.audit_items(items)
     outliers = {f["item"] for f in findings if f["issue"] == "tier3-cost-outlier"}

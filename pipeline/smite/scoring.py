@@ -221,11 +221,13 @@ def mark_underrated(rows, weights):
 
 
 def is_buildable(item):
-    """A final item you'd actually build: tier 3, or a tier-None active/relic.
-    Excludes tier 1/2 component items (they're purchase-path steps, not final
-    build slots)."""
+    """A final item you'd actually build: tier 3, or a tier-None/non-numeric
+    active/relic (e.g. a "Relic"/"Glyph" tier label). Excludes tier 1/2
+    component items (they're purchase-path steps, not final build slots)."""
     tier = item.get("tier")
-    return tier is None or tier >= 3
+    if tier is None or not isinstance(tier, int):
+        return True
+    return tier >= 3
 
 
 def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):

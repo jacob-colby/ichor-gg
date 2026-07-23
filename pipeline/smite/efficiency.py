@@ -58,12 +58,22 @@ def numeric_cost_items(items):
     return [it for it in items if isinstance(it.get("cost"), (int, float))]
 
 
+def efficiency_pool(items):
+    """The items eligible for gold-value modeling: numeric-cost, non-starter.
+    Tier-1 starters are passive-priced — their gold buys an ability/adaptive
+    passive, not their token stats — so regressing cost onto their tiny stats
+    poisons the gold-per-stat fit and skews every item's residual. They keep
+    their cost in the data (display/audit) but sit out both the fit and the
+    scored set."""
+    return [it for it in numeric_cost_items(items) if it.get("tier") != 1]
+
+
 def fit_gold_values(items):
     """NNLS fit of cost onto stats. Returns (gold_values, stat_names) where
     gold_values maps each stat name (plus INTERCEPT_KEY) to its non-negative
     marginal gold value. Non-negative because a stat cannot rationally have a
     negative gold price; NNLS also tames collinear-stat coefficient blowups."""
-    items = numeric_cost_items(items)
+    items = efficiency_pool(items)
     stat_names = collect_stat_names(items)
     A, b = _stat_matrix(items, stat_names)
     coef, _ = nnls(A, b)
@@ -87,11 +97,12 @@ def efficiency_scores(items):
       z         residual z-score across the set
       score     min-max normalized -residual in [0,1] (higher => better value)
       tier      'undervalued' | 'fair' | 'premium' by z threshold
-    Only items with a numeric cost are scored (a residual needs a real cost);
-    null-cost component items are excluded. The continuous `score` is what the
-    aggregator consumes; `tier` is the report label."""
+    Only numeric-cost, non-starter items are scored (a residual needs a real
+    cost; tier-1 starters are passive-priced and sit out the model). The
+    continuous `score` is what the aggregator consumes; `tier` is the report
+    label."""
     gold, _ = fit_gold_values(items)
-    scored_items = numeric_cost_items(items)
+    scored_items = efficiency_pool(items)
     residuals = {it["name"]: it["cost"] - predicted_cost(it, gold) for it in scored_items}
     vals = np.array(list(residuals.values()), dtype=float)
     mean = float(vals.mean())

@@ -3,6 +3,17 @@ import pytest
 from smite import scoring
 
 
+def test_is_buildable_handles_numeric_and_string_tiers():
+    # tier 3 and final actives/relics (tier None, or a non-numeric label like
+    # "Relic"/"Glyph") are buildable; tier 1/2 components are not.
+    assert scoring.is_buildable({"tier": 3}) is True
+    assert scoring.is_buildable({"tier": None}) is True
+    assert scoring.is_buildable({"tier": "Relic"}) is True
+    assert scoring.is_buildable({"tier": "Glyph"}) is True
+    assert scoring.is_buildable({"tier": 2}) is False
+    assert scoring.is_buildable({"tier": 1}) is False
+
+
 def test_load_weights_missing_file_returns_defaults(tmp_path):
     w = scoring.load_weights(tmp_path / "nope.yaml")
     assert w["signals"]["efficiency"] == 0.35

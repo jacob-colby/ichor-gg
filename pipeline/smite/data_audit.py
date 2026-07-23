@@ -12,7 +12,7 @@ INDEX_PATH = VAULT_ROOT / "viewer" / "public" / "index.json"
 
 STAT_VALUE_RE = re.compile(r"-?\d+\.?\d*")
 TIER3_COST_MIN = 1800
-TIER3_COST_MAX = 3600
+TIER3_COST_MAX = 4000  # legit tier-3 totals reach ~3700 (e.g. Avatar's Parashu)
 STAT_VALUE_MAX = 1000
 
 

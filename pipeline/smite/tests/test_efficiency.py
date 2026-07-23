@@ -65,6 +65,25 @@ def test_fit_gold_values_ignores_items_with_missing_cost():
     assert gold["Strength"] == pytest.approx(20.0, abs=1.0)
 
 
+def test_tier1_starters_excluded_from_gold_fit_and_scoring():
+    # Starters (tier 1) are passive-priced: their gold buys an ability/adaptive
+    # passive, not their token stats. Regressing 600g onto "1 Health Regen"
+    # would poison the gold-per-stat fit, so tier-1 items must sit out both the
+    # fit and the scored set (they keep their cost for display/audit).
+    core = [
+        {"name": "A", "tier": 3, "cost": 3000, "stats": {"Strength": "60"}},
+        {"name": "B", "tier": 3, "cost": 2000, "stats": {"Strength": "40"}},
+        {"name": "C", "tier": 2, "cost": 1200, "stats": {"Intelligence": "45"}},
+    ]
+    starter = {"name": "S", "tier": 1, "cost": 600, "stats": {"Health Regen": "1"}}
+    gold_without, _ = efficiency.fit_gold_values(core)
+    gold_with, _ = efficiency.fit_gold_values(core + [starter])
+    assert gold_with == gold_without  # the starter did not perturb the fit
+    scores, _ = efficiency.efficiency_scores(core + [starter])
+    assert "S" not in scores  # tier-1 starter is not scored
+    assert {"A", "B", "C"} <= set(scores)  # real items still scored
+
+
 def test_efficiency_scores_flags_underpriced_as_undervalued():
     items = [
         _item("A", 2000, Strength=100),
