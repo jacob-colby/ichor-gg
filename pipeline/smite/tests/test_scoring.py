@@ -276,6 +276,13 @@ def test_every_pool_role_vocabulary_produces_a_nonempty_map():
         assert m, f"empty fit map for role={role} specs={specs}"
 
 
+def test_role_map_missing_role_and_specs_is_empty_and_fit_survives():
+    w = scoring.load_weights_default()
+    assert scoring._role_stat_map({"damage_type": "physical"}, w) == {}
+    # fit degrades to tag-bonus-only, never raises
+    assert scoring.god_fit_score({"stats": {"Strength": "40"}}, {"damage_type": "physical"}, w, []) == 0.0
+
+
 def test_role_map_uses_max_health_not_health():
     # Items carry 'Max Health' (63 of them); no item has a 'Health' stat key.
     w = scoring.load_weights_default()

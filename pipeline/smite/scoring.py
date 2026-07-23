@@ -105,7 +105,12 @@ def passes_damage_filter(item, god):
 # Offensive stats that are dead weight for the opposite damage type: an
 # Intelligence entry on a physical god (Cernunnos's "Nuker" spec) would skew
 # fit toward items the damage filter already forbids — drop them up front.
-# Attack Speed stays for magical gods (hybrid Int+AS items are real).
+# Attack Speed stays for magical gods (hybrid Int+AS items are real). Magical
+# drops Critical Chance too: a crit-carrying item without Intelligence is
+# classified physical by item_damage_type and never reaches a magical god's
+# pool anyway, so the entry only removes dead denominator weight, not real
+# fit credit — the one exception would be a hybrid Int+Crit item, which
+# would lose fit credit here, an accepted trade since none exist in the pool.
 _OPPOSITE_OFFENSE = {
     "physical": ("Intelligence",),
     "magical": ("Strength", "Critical Chance"),
@@ -118,7 +123,9 @@ def _role_stat_map(god, weights):
     tokens ("Carry Jungle" → Carry + Jungle), so the scraped multi-word
     vocabulary always lands. Overlapping stats keep the max weight. Offensive
     stats of the opposite damage type are dropped (the damage filter already
-    forbids those items, so they'd only skew fit)."""
+    forbids those items, so they'd only skew fit). Unknown labels (no exact
+    or token match in role_stats) contribute nothing — a god with unseen
+    vocabulary just gets an empty map, handled gracefully downstream."""
     role_stats = weights["role_stats"]
     labels = [str(s) for s in (god.get("specializations") or [])]
     if god.get("role"):
