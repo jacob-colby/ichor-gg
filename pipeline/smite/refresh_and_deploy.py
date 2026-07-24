@@ -8,8 +8,9 @@ redeploy). Run from the vault on the canonical git device.
 import argparse
 import subprocess
 import sys
+from datetime import date
 
-from smite import refresh, recommend, build_index, validate
+from smite import refresh, recommend, build_index, validate, snapshots
 
 
 def _run_git(args, cwd):
@@ -28,6 +29,9 @@ def main(argv=None):
         recommend.VAULT_ROOT / "viewer" / "public" / "index.json",
     )
     validate.main()
+
+    snapshot_path = snapshots.write_snapshot(recommend.load_items(), date.today().isoformat())
+    print(f"refresh_and_deploy: wrote item-stat snapshot to {snapshot_path}")
 
     root = recommend.VAULT_ROOT
     paths = [
