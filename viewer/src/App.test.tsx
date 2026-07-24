@@ -26,17 +26,19 @@ beforeEach(() => {
 });
 
 describe("App routing", () => {
+  // The shell renders two nav controls (desktop icon rail + mobile bottom bar),
+  // so each label matches twice; clicking either navigates identically.
   it("navigates to the items shop via the nav", async () => {
     render(<App />);
-    await screen.findByRole("button", { name: /^items$/i });
-    fireEvent.click(screen.getByRole("button", { name: /^items$/i }));
+    const [items] = await screen.findAllByRole("button", { name: /^items$/i });
+    fireEvent.click(items);
     await waitFor(() => expect(screen.getByPlaceholderText(/search items/i)).toBeInTheDocument());
   });
 
   it("navigates to the gods index via the nav", async () => {
     render(<App />);
-    await screen.findByRole("button", { name: /^gods$/i });
-    fireEvent.click(screen.getByRole("button", { name: /^gods$/i }));
+    const [gods] = await screen.findAllByRole("button", { name: /^gods$/i });
+    fireEvent.click(gods);
     await waitFor(() => expect(screen.getByPlaceholderText(/search gods/i)).toBeInTheDocument());
   });
 

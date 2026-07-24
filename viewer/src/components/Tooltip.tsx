@@ -55,7 +55,7 @@ export function Tooltip({ content, children }: TooltipProps) {
         <div
           role="tooltip"
           style={{ position: "fixed", left: pos.left, top: pos.top, width: 260 }}
-          className={`z-50 rounded-lg border border-line bg-bg2 p-3 text-xs text-ink shadow-xl ${
+          className={`z-50 rounded-md border border-line bg-bg2 p-3 text-xs text-ink-soft shadow-card ${
             pos.above ? "-translate-y-full" : ""
           }`}
         >

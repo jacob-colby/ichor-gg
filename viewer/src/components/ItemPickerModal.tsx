@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import type { Item } from "../types";
-import { filterItems, sortItems, efficiencyLabel, EFFICIENCY, type ItemFilter, type SortKey } from "../lib/itemFilters";
-import { iconSlug } from "../lib/builds";
+import { filterItems, sortItems, EFFICIENCY, type ItemFilter, type SortKey } from "../lib/itemFilters";
+import { ItemCard } from "./ItemsShop";
 
 /** Filterable item grid in a modal for the build editor. `exclude` hides items
  * already in the build. `onPick` adds an item; the parent decides when to close. */
@@ -23,17 +23,24 @@ export function ItemPickerModal({
     [items, filter, sort, excl],
   );
   const set = (patch: Partial<ItemFilter>) => setFilter((f) => ({ ...f, ...patch }));
-  const selCls = "rounded border border-line bg-bg2 px-2 py-1 text-xs text-ink";
+  const selCls = "rounded-md border border-line bg-bg2 px-2 py-1 text-xs text-muted focus:border-blue focus:outline-none";
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" onClick={onClose}>
-      <div className="flex max-h-[85vh] w-full max-w-2xl flex-col rounded-lg border border-line bg-bg1 p-4" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="flex max-h-[85vh] w-full max-w-2xl flex-col rounded-lg border border-line bg-bg1 p-4 shadow-raised"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="mb-2 flex items-center">
           <div className="font-display text-lg font-semibold text-ink">Add item</div>
-          <button type="button" onClick={onClose} className="ml-auto rounded bg-bg2 px-2 py-1 text-xs text-muted hover:bg-line">Close</button>
+          <button type="button" onClick={onClose} className="press ml-auto rounded-md bg-bg2 px-2 py-1 text-xs text-muted hover:text-ink">Close</button>
         </div>
         <div className="mb-3 flex flex-wrap items-center gap-2">
-          <input placeholder="Search items…" value={filter.q ?? ""} onChange={(e) => set({ q: e.target.value })} className={selCls} />
+          <div className="flex items-center gap-2 rounded-md border border-line bg-bg2 px-2.5 py-1.5 focus-within:border-blue">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" className="text-muted"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
+            <input placeholder="Search items…" value={filter.q ?? ""} onChange={(e) => set({ q: e.target.value })}
+              className="w-32 bg-transparent text-xs text-ink placeholder:text-muted focus:outline-none" />
+          </div>
           <select
             value={filter.tier ?? ""}
             onChange={(e) => {
@@ -56,27 +63,12 @@ export function ItemPickerModal({
           <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} className={selCls}>
             <option value="name">Name</option><option value="cost-asc">Cost ↑</option><option value="cost-desc">Cost ↓</option><option value="efficiency">Rating</option>
           </select>
-          <span className="text-xs text-muted">{shown.length}</span>
+          <span className="ml-auto font-mono text-[11px] text-faint">{shown.length}</span>
         </div>
-        <div className="grid flex-1 grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-2 overflow-y-auto">
-          {shown.map((it) => {
-            const e = efficiencyLabel(it.efficiency_tier);
-            return (
-              <button
-                key={it.name}
-                type="button"
-                onClick={() => onPick(it.name)}
-                className="flex items-center gap-2 rounded-lg border border-line bg-bg2 p-2 text-left hover:border-blue"
-              >
-                <img src={`/icons/${iconSlug(it.name)}.png`} alt="" className="h-7 w-7 flex-none rounded bg-bg1"
-                  onError={(ev) => { const i = ev.currentTarget; if (i.dataset.r) { i.style.visibility = "hidden"; return; } i.dataset.r = "1"; i.src = `/icons/${iconSlug(it.name)}.png?r=1`; }} />
-                <div className="min-w-0">
-                  <div className="truncate text-xs text-ink">{it.name}</div>
-                  <div className="font-mono text-[10px] text-muted">{it.cost}g · <span className={e.cls.replace(/bg-\S+/, "")}>{e.text}</span></div>
-                </div>
-              </button>
-            );
-          })}
+        <div className="grid flex-1 grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-2 overflow-y-auto sm:grid-cols-[repeat(auto-fill,minmax(160px,1fr))]">
+          {shown.map((it) => (
+            <ItemCard key={it.name} item={it} onClick={() => onPick(it.name)} />
+          ))}
         </div>
       </div>
     </div>

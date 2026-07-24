@@ -1,22 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
+  /* Surfaces — evolved "Arena Night" (rail is the darkest frame) */
+  --color-rail: #05070a;
   --color-bg0: #0b0e13;
   --color-bg1: #0e1116;
   --color-bg2: #12161d;
+  --color-bg3: #171c24;
   --color-line: #1e2530;
+  --color-line-strong: #2a3342;
+
+  /* Text tiers */
+  --color-ink: #e8edf4;
+  --color-ink-soft: #c3cad6;
+  --color-muted: #8b95a5;
+  --color-faint: #5b6472;
+
+  /* Accent + semantic */
   --color-gold: #e3b23c;
   --color-blue: #4ea3ff;
-  --color-ink: #e8edf4;
-  --color-muted: #8b95a5;
   --color-under: #63c088;
   --color-premium: #c58b8b;
+
+  /* Role + damage accents */
+  --color-role-guardian: #7f9e97;
+  --color-role-warrior: #b98a6d;
+  --color-role-mid: #9d8bb3;
+  --color-role-hunter: #b6a571;
+  --color-role-assassin: #ab7a8c;
+  --color-dmg-physical: #b98a6d;
+  --color-dmg-magical: #8891b3;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Elevation */
+  --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.35);
+  --shadow-raised: 0 10px 28px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 0 1px rgba(227, 178, 60, 0.4), 0 4px 14px rgba(227, 178, 60, 0.15);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+
   --font-display: "Rajdhani", sans-serif;
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
 
 :root { color-scheme: dark; }
-body { background: var(--color-bg0); font-family: var(--font-sans); }
+body { background: var(--color-bg0); font-family: var(--font-sans); color: var(--color-ink); }
 button:not(:disabled) { cursor: pointer; }
+
+/* Tappable affordance — press feedback for cards, pills, tabs (120ms fast) */
+.press { transition: transform 120ms var(--ease-standard); }
+.press:active { transform: scale(0.97); }
+
+/* Thin, theme-matched scrollbars so panels feel native */
+* { scrollbar-width: thin; scrollbar-color: var(--color-line-strong) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--color-line-strong); border-radius: 999px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  .press, .press:active { transition: none; transform: none; }
+}
