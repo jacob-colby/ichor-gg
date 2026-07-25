@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { DetailPanel } from "./DetailPanel";
 import { saveMine } from "../lib/mineStore";
-import type { BuildNote } from "../types";
+import type { BuildNote, God, Item, DraftConfig } from "../types";
 
 const chironBuild: BuildNote = {
   type: "smite-build",
@@ -439,5 +439,136 @@ describe("DetailPanel", () => {
     render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={noCommunity as any}
                         mode="Conquest" onModeChange={() => {}} />);
     expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
+  });
+});
+
+describe("DetailPanel — Draft tab", () => {
+  beforeEach(() => localStorage.clear());
+
+  const item = (name: string, tags: string[] = []): Item =>
+    ({ name, tier: 3, cost: 2500, stats: {}, passive: "", builds_from: [], builds_into: [],
+       effect_tags: tags, efficiency_tier: null } as unknown as Item);
+
+  const ITEMS = [
+    item("Alpha"), item("Beta"), item("Gamma"), item("Delta"), item("Epsilon"), item("Zeta"),
+    item("AntiHeal", ["anti-heal"]),
+  ];
+
+  const SCORES: Record<string, number> = {
+    Alpha: 0.6, Beta: 0.59, Gamma: 0.58, Delta: 0.57, Epsilon: 0.56, Zeta: 0.55, AntiHeal: 0.4,
+  };
+  // EnemyHealer needs its own god_item_scores entry too — the DraftBar's god
+  // picker is limited to gods present in god_item_scores (the ones with a
+  // derivable core), same as production.
+  const GOD_ITEM_SCORES = { TestGod: SCORES, EnemyHealer: { Alpha: 0.5 } };
+
+  // Exaggerated weights vs. production _weights.yaml — the point of this
+  // fixture is a deterministic, clearly-visible promotion, not realism.
+  const DRAFT_CFG: DraftConfig = {
+    max_bonus: 0.5,
+    per_enemy: 0.5,
+    tag_bonus: { healers: { "anti-heal": 1 } },
+    stat_bonus: {},
+    ally_covered: -0.5,
+    ally_gap: 0.5,
+  };
+
+  const testGod: God = {
+    type: "god", name: "TestGod", pantheon: "Test", role: "Carry", specializations: [],
+    damage_type: "physical", release_date: "", base_stats: {}, abilities: [], aspects: [],
+    source_url: "", last_verified: "",
+  } as unknown as God;
+
+  const healerGod: God = {
+    type: "god", name: "EnemyHealer", pantheon: "Test", role: "Support", specializations: ["Healing"],
+    damage_type: "magical", release_date: "", base_stats: {}, abilities: [], aspects: [],
+    source_url: "", last_verified: "",
+  } as unknown as God;
+
+  const testGodBuild: BuildNote = {
+    type: "smite-build", god: "TestGod", mode: "Conquest",
+    builds: [
+      { source: "suggested", archetype: "core",
+        slot_order: ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"],
+        situational_swaps: [], rationale: "test core" } as any,
+    ],
+  };
+
+  function renderDraftPanel() {
+    return render(
+      <DetailPanel
+        god="TestGod"
+        godData={testGod}
+        items={ITEMS}
+        builds={[testGodBuild]}
+        mode="Conquest"
+        onModeChange={() => {}}
+        allGods={[testGod, healerGod]}
+        godItemScores={GOD_ITEM_SCORES}
+        draftConfig={DRAFT_CFG}
+      />,
+    );
+  }
+
+  it("shows a Draft tab when god_item_scores + draft config are present", () => {
+    renderDraftPanel();
+    expect(screen.getByRole("tab", { name: /draft/i })).toBeInTheDocument();
+  });
+
+  it("shows a friendly hint instead of a bogus build when the draft is empty", () => {
+    renderDraftPanel();
+    fireEvent.click(screen.getByRole("tab", { name: /draft/i }));
+    expect(screen.getByText(/enter.*draft/i)).toBeInTheDocument();
+    expect(screen.queryByText("AntiHeal")).not.toBeInTheDocument();
+  });
+
+  it("renders the comp-adapted 6-item core with a promoted item's reason once a threat is entered", () => {
+    renderDraftPanel();
+    fireEvent.click(screen.getByRole("tab", { name: /draft/i }));
+
+    // Enter one enemy healer via the DraftBar mounted above the tabs.
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+
+    // AntiHeal (base 0.40) should now outscore the lowest base item (Zeta,
+    // 0.55) once the healer bonus (clamped to max_bonus 0.5) is applied.
+    expect(screen.getByText("AntiHeal")).toBeInTheDocument();
+    expect(screen.getByText(/anti-heal/i)).toBeInTheDocument();
+    // Still exactly a 6-item core.
+    expect(screen.getAllByText(/^(Alpha|Beta|Gamma|Delta|Epsilon|Zeta|AntiHeal)$/)).toHaveLength(6);
+  });
+
+  it("does not reset the Draft tab selection when the mode toggle changes (composes on top of it)", () => {
+    const joustBuild: BuildNote = {
+      type: "smite-build", god: "TestGod", mode: "Joust",
+      builds: [
+        { source: "suggested", archetype: "core",
+          slot_order: ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"],
+          situational_swaps: [], rationale: "test core" } as any,
+      ],
+    };
+    function Harness() {
+      const [mode, setMode] = React.useState("Conquest");
+      return (
+        <DetailPanel
+          god="TestGod" godData={testGod} items={ITEMS} builds={[testGodBuild, joustBuild]}
+          mode={mode} onModeChange={setMode}
+          allGods={[testGod, healerGod]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG}
+        />
+      );
+    }
+    render(<Harness />);
+    fireEvent.click(screen.getByRole("tab", { name: /draft/i }));
+    expect(screen.getByRole("tab", { name: /draft/i })).toHaveAttribute("aria-selected", "true");
+    fireEvent.click(screen.getByRole("button", { name: /joust/i }));
+    expect(screen.getByRole("tab", { name: /draft/i })).toHaveAttribute("aria-selected", "true");
+  });
+
+  it("hides the Draft tab when god_item_scores/draft are absent (older index)", () => {
+    render(
+      <DetailPanel god="TestGod" godData={testGod} items={ITEMS} builds={[testGodBuild]}
+                   mode="Conquest" onModeChange={() => {}} />,
+    );
+    expect(screen.queryByRole("tab", { name: /draft/i })).not.toBeInTheDocument();
   });
 });

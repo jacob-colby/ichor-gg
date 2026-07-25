@@ -183,6 +183,9 @@ function App() {
                         mode={mode}
                         onModeChange={setMode}
                         starters={data.starters ?? []}
+                        allGods={data.gods}
+                        godItemScores={data.god_item_scores}
+                        draftConfig={data.draft}
                       />
                     )}
                   </>
