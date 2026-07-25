@@ -21,6 +21,26 @@ def _enrich_items(items, tags):
     return items
 
 
+def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
+    """Per-god base item scores for the viewer's draft-aware re-rank.
+
+    The viewer is static, so it can't re-run scoring when a comp is entered; it
+    instead applies a threat overlay to these shipped totals. Capped at the top
+    `draft.score_cap` items per god — a bounded bonus can't promote a god's #60
+    item, so shipping the whole matrix would just bloat the index."""
+    cap = int((weights.get("draft") or {}).get("score_cap", 40))
+    by_god = {}
+    for b in builds:
+        if b.get("mode") == "Conquest" and b.get("god") not in by_god:
+            by_god[b["god"]] = b
+    out = {}
+    for god in gods:
+        rows = scoring.score_god_items(
+            god, items, by_god.get(god["name"], {}), eff, weights, tags_map)
+        out[god["name"]] = {r["item"]: round(float(r["total"]), 4) for r in rows[:cap]}
+    return out
+
+
 def build_index(vault_root: Path) -> dict:
     data_root = vault_root / "04. System" / "Data" / "SMITE"
     gods_dir = data_root / "Gods"
@@ -32,7 +52,8 @@ def build_index(vault_root: Path) -> dict:
             return []
         return [notes.read_note(p)[0] for p in sorted(dir_path.glob("*.md"))]
 
-    items = _enrich_items(_all(items_dir), scoring.load_tags(data_root / "_tags.yaml"))
+    tags_map = scoring.load_tags(data_root / "_tags.yaml")
+    items = _enrich_items(_all(items_dir), tags_map)
     weights = scoring.load_weights(data_root / "_weights.yaml")
     builds = _all(builds_dir)
     gods = _all(gods_dir)
@@ -44,6 +65,8 @@ def build_index(vault_root: Path) -> dict:
     if efficiency.numeric_cost_items(items):
         eff, _ = efficiency.efficiency_scores(items)
     return {"gods": gods, "items": items, "builds": builds,
+            "god_item_scores": _god_item_scores(gods, builds, items, eff, weights, tags_map),
+            "draft": weights.get("draft", {}),
             "starters": weights.get("starters", []),
             "roster": _load_roster(data_root),
             "data_updated": _data_updated(gods, builds),

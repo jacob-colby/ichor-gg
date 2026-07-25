@@ -36,6 +36,7 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
     assert index == {"gods": [], "items": [], "builds": [], "starters": [],
                      "roster": [], "data_updated": "",
                      "tierlist": {"gods": [], "items": []},
+                     "god_item_scores": {}, "draft": {},
                      "patch_notes": []}
 
 
@@ -179,3 +180,14 @@ def test_build_index_reads_snapshots_under_the_given_vault_root(tmp_path):
     assert [p["to"] for p in report] == ["2026-01-08"]
     assert report[0]["changed"][0]["name"] == "Rage"
     assert report[0]["changed"][0]["verdict"] == "buff"
+
+
+def test_build_index_emits_capped_god_item_scores():
+    from smite import build_index
+    from pathlib import Path
+    r = build_index.build_index(Path(__file__).resolve().parents[3])
+    scores = r["god_item_scores"]
+    assert set(scores) == {g["name"] for g in r["gods"]}
+    for god, table in scores.items():
+        assert 0 < len(table) <= 40, f"{god} has {len(table)} entries"
+        assert all(isinstance(v, float) for v in table.values())

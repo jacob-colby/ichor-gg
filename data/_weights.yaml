@@ -22,6 +22,28 @@ kit_blend: 0.3       # how much the parsed ability-scaling profile skews god-fit
                      # Swept 2026-07-22: 0.3 captures the full coverage gain (Susano 80->100%)
                      # with the smallest Spearman cost (0.375->0.331); 0.5+ costs more, adds nothing.
 
+# ── Draft-aware builds (2026-07-23) ──
+# How an entered enemy/ally comp skews item scores. The viewer is static, so the
+# browser applies these as a tag/stat overlay on the per-god base scores shipped
+# in index.json (`god_item_scores`). Bonuses are per matching enemy god, so 4
+# magical enemies count double 2. `max_bonus` clamps an item's TOTAL bonus so a
+# scary comp shifts a slot or three, never rewrites the build into full defense.
+draft:
+  score_cap: 40          # items shipped per god (a god's #60 item can't win a slot)
+  max_bonus: 0.12        # clamp on the total bonus any one item can receive
+  per_enemy: 0.02        # weight per matching enemy god (multiplied by count)
+  tag_bonus:             # threat -> item effect_tag
+    healers: {anti-heal: 1.0}
+    lockdown: {cc-immunity: 1.0, peel: 0.4}
+    crit: {anti-crit: 1.0}
+    tanks: {protection-shred: 1.0}
+  stat_bonus:            # threat -> item stat
+    magical: {Magical Protection: 1.0}
+    physical: {Physical Protection: 1.0}
+    tanks: {Penetration: 0.6}
+  ally_covered: -0.5     # multiplier delta when an ally already covers that job
+  ally_gap: 0.5          # multiplier delta when NOBODY covers it
+
 # ── Disagreement-report findings (2026-07-22, see Analysis/_disagreements.md) ──
 # Tank archetypes undervalued CDR items the community actually runs
 # (Breastplate of Valor / Genji's Guard / Pharaoh's Curse): adding Cooldown
