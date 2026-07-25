@@ -162,3 +162,20 @@ def test_build_index_emits_patch_notes_as_list():
     r = build_index.build_index(Path(__file__).resolve().parents[3])
     assert "patch_notes" in r
     assert isinstance(r["patch_notes"], list)
+
+
+def test_build_index_reads_snapshots_under_the_given_vault_root(tmp_path):
+    # patch_notes must come from the vault being indexed, not the module-level
+    # default store — otherwise tests silently depend on real accumulated data.
+    from smite import build_index, snapshots
+    snaps = tmp_path / "04. System" / "Data" / "SMITE" / "Analysis" / "snapshots"
+    snaps.mkdir(parents=True)
+    old = [{"name": "Rage", "cost": 2500, "tier": 3, "stats": {"Critical Chance": "20%"}}]
+    new = [{"name": "Rage", "cost": 2500, "tier": 3, "stats": {"Critical Chance": "25%"}}]
+    snapshots.write_snapshot(old, "2026-01-01", snaps)
+    snapshots.write_snapshot(new, "2026-01-08", snaps)
+
+    report = build_index.build_index(tmp_path)["patch_notes"]
+    assert [p["to"] for p in report] == ["2026-01-08"]
+    assert report[0]["changed"][0]["name"] == "Rage"
+    assert report[0]["changed"][0]["verdict"] == "buff"

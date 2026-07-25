@@ -48,7 +48,10 @@ def build_index(vault_root: Path) -> dict:
             "roster": _load_roster(data_root),
             "data_updated": _data_updated(gods, builds),
             "tierlist": tierlist.build_tierlist(gods, builds, items, eff),
-            "patch_notes": snapshots.report_from_dir()}
+            # Read snapshots under the vault being indexed, not the module-level
+            # default — otherwise a tmp-vault caller (tests) would pick up the
+            # real store once snapshots start accumulating.
+            "patch_notes": snapshots.report_from_dir(data_root / "Analysis" / "snapshots")}
 
 
 def _data_updated(gods, builds) -> str:
