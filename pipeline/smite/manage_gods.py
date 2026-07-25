@@ -20,8 +20,8 @@ BUILDS_ROOT = recommend.BUILDS_ROOT
 def _reindex():
     recommend.main(["--all"])
     build_index.write_index(
-        recommend.VAULT_ROOT,
-        recommend.VAULT_ROOT / "viewer" / "public" / "index.json",
+        recommend.REPO_ROOT,
+        recommend.REPO_ROOT / "viewer" / "public" / "index.json",
     )
 
 

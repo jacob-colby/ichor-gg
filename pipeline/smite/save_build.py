@@ -12,9 +12,9 @@ from pathlib import Path
 
 from smite import notes
 
-VAULT_ROOT = Path(__file__).resolve().parents[2]
-DATA_ROOT = VAULT_ROOT / "04. System" / "Data" / "SMITE"
-BUILDS_ROOT = VAULT_ROOT / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DATA_ROOT = REPO_ROOT / "data"
+BUILDS_ROOT = REPO_ROOT / "data" / "builds"
 MODES = {"Conquest", "Joust"}
 
 

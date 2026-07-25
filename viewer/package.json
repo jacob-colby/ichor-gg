@@ -8,7 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "copy-icons": "node scripts/copy-icons.mjs",
+    "predev": "npm run copy-icons",
+    "prebuild": "npm run copy-icons"
   },
   "dependencies": {
     "react": "^19.2.7",

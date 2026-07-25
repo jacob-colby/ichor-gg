@@ -7,8 +7,8 @@ from pathlib import Path
 
 from smite.data_audit import STAT_VALUE_RE
 
-VAULT_ROOT = Path(__file__).resolve().parents[2]
-DATA_ROOT = VAULT_ROOT / "04. System" / "Data" / "SMITE"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DATA_ROOT = REPO_ROOT / "data"
 SNAPSHOTS_DIR = DATA_ROOT / "Analysis" / "snapshots"
 
 

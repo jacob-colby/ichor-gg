@@ -12,9 +12,9 @@ from smite import notes, smitebrain_parser, wiki_parser
 from smite.browser_fetch import BrowserFetcher
 from smite.cache import CachedFetcher
 
-VAULT_ROOT = Path(__file__).resolve().parents[2]
-DATA_ROOT = VAULT_ROOT / "04. System" / "Data" / "SMITE"
-BUILDS_ROOT = VAULT_ROOT / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DATA_ROOT = REPO_ROOT / "data"
+BUILDS_ROOT = REPO_ROOT / "data" / "builds"
 
 WIKI_BASE = "https://wiki.smite2.com/w/"
 SMITEBRAIN_BASE = "https://smitebrain.com/gods/"

@@ -10,11 +10,11 @@ from pathlib import Path
 
 from smite import assemble, efficiency, notes, scoring
 
-VAULT_ROOT = Path(__file__).resolve().parents[2]
-DATA_ROOT = VAULT_ROOT / "04. System" / "Data" / "SMITE"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DATA_ROOT = REPO_ROOT / "data"
 WEIGHTS_PATH = DATA_ROOT / "_weights.yaml"
 TAGS_PATH = DATA_ROOT / "_tags.yaml"
-BUILDS_ROOT = VAULT_ROOT / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds"
+BUILDS_ROOT = REPO_ROOT / "data" / "builds"
 
 MODES = ["Conquest", "Joust"]
 

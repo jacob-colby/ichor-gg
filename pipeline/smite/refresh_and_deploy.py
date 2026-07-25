@@ -25,20 +25,20 @@ def main(argv=None):
     refresh.refresh_all()
     recommend.main(["--all"])
     build_index.write_index(
-        recommend.VAULT_ROOT,
-        recommend.VAULT_ROOT / "viewer" / "public" / "index.json",
+        recommend.REPO_ROOT,
+        recommend.REPO_ROOT / "viewer" / "public" / "index.json",
     )
     validate.main()
 
     snapshot_path = snapshots.write_snapshot(recommend.load_items(), date.today().isoformat())
     print(f"refresh_and_deploy: wrote item-stat snapshot to {snapshot_path}")
 
-    root = recommend.VAULT_ROOT
+    root = recommend.REPO_ROOT
     paths = [
-        "03. Workspaces/Gaming/SMITE 2/Builds",
-        "04. System/Data/SMITE/Gods",
-        "04. System/Data/SMITE/Items",
-        "04. System/Data/SMITE/Analysis",
+        "data/builds",
+        "data/Gods",
+        "data/Items",
+        "data/Analysis",
         "viewer/public/index.json",
     ]
     _run_git(["add", "--", *paths], root)

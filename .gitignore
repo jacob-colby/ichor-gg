@@ -1,0 +1,29 @@
+# Node / Vite
+node_modules/
+viewer/dist/
+*.tsbuildinfo
+
+# Icons live once in data/_assets/icons and are mirrored into the viewer at
+# build time by viewer/scripts/copy-icons.mjs (wired to predev/prebuild).
+viewer/public/icons/
+
+# Scraper HTTP cache — large, regenerable, never worth committing
+data/_cache/
+data/_logs/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets — never commit
+.env
+.env.*

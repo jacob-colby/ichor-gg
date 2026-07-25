@@ -41,11 +41,11 @@ def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
     return out
 
 
-def build_index(vault_root: Path) -> dict:
-    data_root = vault_root / "04. System" / "Data" / "SMITE"
+def build_index(repo_root: Path) -> dict:
+    data_root = repo_root / "data"
     gods_dir = data_root / "Gods"
     items_dir = data_root / "Items"
-    builds_dir = vault_root / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds"
+    builds_dir = repo_root / "data" / "builds"
 
     def _all(dir_path: Path) -> list:
         if not dir_path.exists():
@@ -124,12 +124,12 @@ def _attach_item_meta(items, builds):
             it["meta"] = {"win_avg": round(sum(vals) / len(vals), 3), "gods": len(vals)}
 
 
-def _copy_icons(vault_root: Path, out_path: Path) -> None:
+def _copy_icons(repo_root: Path, out_path: Path) -> None:
     """Copy every icon file next to the generated index.json so the viewer
     never has to reach outside its own public/ folder — a symlink would be
     fragile on Windows, and Vite's dev server doesn't serve arbitrary
     filesystem paths outside the project by default."""
-    src_dir = vault_root / "04. System" / "Data" / "SMITE" / "_assets" / "icons"
+    src_dir = repo_root / "data" / "_assets" / "icons"
     if not src_dir.exists():
         return
     dest_dir = out_path.parent / "icons"
@@ -138,17 +138,17 @@ def _copy_icons(vault_root: Path, out_path: Path) -> None:
         shutil.copy2(icon_path, dest_dir / icon_path.name)
 
 
-def write_index(vault_root: Path, out_path: Path) -> None:
-    index = build_index(vault_root)
+def write_index(repo_root: Path, out_path: Path) -> None:
+    index = build_index(repo_root)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     # Frontmatter fields like `last_verified: 2026-07-16` round-trip through
     # yaml.safe_load as datetime.date objects, which json.dumps can't
     # serialize on its own — stringify anything json doesn't natively support.
     out_path.write_text(json.dumps(index, indent=2, default=str), encoding="utf-8")
-    _copy_icons(vault_root, out_path)
+    _copy_icons(repo_root, out_path)
 
 
 if __name__ == "__main__":
-    vault_root = Path(__file__).resolve().parents[2]
-    write_index(vault_root, vault_root / "viewer" / "public" / "index.json")
+    repo_root = Path(__file__).resolve().parents[2]
+    write_index(repo_root, repo_root / "viewer" / "public" / "index.json")
     print("Wrote viewer/public/index.json")

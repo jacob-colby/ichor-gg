@@ -3,23 +3,23 @@ import json
 from smite import build_index, notes
 
 
-def _make_vault(tmp_path):
-    (tmp_path / "04. System" / "Data" / "SMITE" / "Gods").mkdir(parents=True)
-    (tmp_path / "04. System" / "Data" / "SMITE" / "Items").mkdir(parents=True)
-    (tmp_path / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds").mkdir(parents=True)
+def _make_repo(tmp_path):
+    (tmp_path / "data" / "Gods").mkdir(parents=True)
+    (tmp_path / "data" / "Items").mkdir(parents=True)
+    (tmp_path / "data" / "builds").mkdir(parents=True)
     return tmp_path
 
 
 def test_build_index_collects_gods_items_builds(tmp_path):
-    vault = _make_vault(tmp_path)
-    notes.write_note(vault / "04. System" / "Data" / "SMITE" / "Gods" / "Chiron.md",
+    repo = _make_repo(tmp_path)
+    notes.write_note(repo / "data" / "Gods" / "Chiron.md",
                       {"type": "smite-god", "name": "Chiron"}, "")
-    notes.write_note(vault / "04. System" / "Data" / "SMITE" / "Items" / "Deathbringer.md",
+    notes.write_note(repo / "data" / "Items" / "Deathbringer.md",
                       {"type": "smite-item", "name": "Deathbringer"}, "")
-    notes.write_note(vault / "03. Workspaces" / "Gaming" / "SMITE 2" / "Builds" / "Chiron-Conquest.md",
+    notes.write_note(repo / "data" / "builds" / "Chiron-Conquest.md",
                       {"type": "smite-build", "god": "Chiron"}, "")
 
-    index = build_index.build_index(vault)
+    index = build_index.build_index(repo)
 
     assert index["gods"] == [{"type": "smite-god", "name": "Chiron"}]
     # Items are enriched with god-agnostic effect_tags + efficiency_tier; this
@@ -31,8 +31,8 @@ def test_build_index_collects_gods_items_builds(tmp_path):
 
 
 def test_build_index_empty_folders_return_empty_lists(tmp_path):
-    vault = _make_vault(tmp_path)
-    index = build_index.build_index(vault)
+    repo = _make_repo(tmp_path)
+    index = build_index.build_index(repo)
     assert index == {"gods": [], "items": [], "builds": [], "starters": [],
                      "roster": [], "data_updated": "",
                      "tierlist": {"gods": [], "items": []},
@@ -41,12 +41,12 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
 
 
 def test_write_index_creates_json_file(tmp_path):
-    vault = _make_vault(tmp_path)
-    notes.write_note(vault / "04. System" / "Data" / "SMITE" / "Gods" / "Chiron.md",
+    repo = _make_repo(tmp_path)
+    notes.write_note(repo / "data" / "Gods" / "Chiron.md",
                       {"type": "smite-god", "name": "Chiron"}, "")
 
     out_path = tmp_path / "viewer" / "public" / "index.json"
-    build_index.write_index(vault, out_path)
+    build_index.write_index(repo, out_path)
 
     assert out_path.exists()
     data = json.loads(out_path.read_text(encoding="utf-8"))
@@ -63,28 +63,28 @@ def test_write_index_serializes_bare_yaml_dates(tmp_path):
     # reads it back as a str, never a date object. Writing raw YAML text
     # with an unquoted date and reading it back via notes.read_note is what
     # actually reconstructs the date object that broke json.dumps.
-    vault = _make_vault(tmp_path)
-    god_path = vault / "04. System" / "Data" / "SMITE" / "Gods" / "Chiron.md"
+    repo = _make_repo(tmp_path)
+    god_path = repo / "data" / "Gods" / "Chiron.md"
     god_path.write_text(
         "---\nname: Chiron\nlast_verified: 2026-07-16\n---\n",
         encoding="utf-8",
     )
 
     out_path = tmp_path / "viewer" / "public" / "index.json"
-    build_index.write_index(vault, out_path)  # must not raise
+    build_index.write_index(repo, out_path)  # must not raise
 
     data = json.loads(out_path.read_text(encoding="utf-8"))
     assert data["gods"][0]["last_verified"] == "2026-07-16"
 
 
 def test_write_index_copies_icon_files(tmp_path):
-    vault = _make_vault(tmp_path)
-    icons_dir = vault / "04. System" / "Data" / "SMITE" / "_assets" / "icons"
+    repo = _make_repo(tmp_path)
+    icons_dir = repo / "data" / "_assets" / "icons"
     icons_dir.mkdir(parents=True)
     (icons_dir / "chiron.png").write_bytes(b"\x89PNG\r\n\x1a\nfakeicondata")
 
     out_path = tmp_path / "viewer" / "public" / "index.json"
-    build_index.write_index(vault, out_path)
+    build_index.write_index(repo, out_path)
 
     copied_icon = out_path.parent / "icons" / "chiron.png"
     assert copied_icon.exists()
@@ -92,10 +92,10 @@ def test_write_index_copies_icon_files(tmp_path):
 
 
 def test_write_index_handles_no_icons_dir_gracefully(tmp_path):
-    vault = _make_vault(tmp_path)
+    repo = _make_repo(tmp_path)
     out_path = tmp_path / "viewer" / "public" / "index.json"
 
-    build_index.write_index(vault, out_path)  # must not raise, even with no _assets/icons/ at all
+    build_index.write_index(repo, out_path)  # must not raise, even with no _assets/icons/ at all
 
     assert out_path.exists()
 
@@ -165,11 +165,11 @@ def test_build_index_emits_patch_notes_as_list():
     assert isinstance(r["patch_notes"], list)
 
 
-def test_build_index_reads_snapshots_under_the_given_vault_root(tmp_path):
-    # patch_notes must come from the vault being indexed, not the module-level
+def test_build_index_reads_snapshots_under_the_given_repo_root(tmp_path):
+    # patch_notes must come from the repo being indexed, not the module-level
     # default store — otherwise tests silently depend on real accumulated data.
     from smite import build_index, snapshots
-    snaps = tmp_path / "04. System" / "Data" / "SMITE" / "Analysis" / "snapshots"
+    snaps = tmp_path / "data" / "Analysis" / "snapshots"
     snaps.mkdir(parents=True)
     old = [{"name": "Rage", "cost": 2500, "tier": 3, "stats": {"Critical Chance": "20%"}}]
     new = [{"name": "Rage", "cost": 2500, "tier": 3, "stats": {"Critical Chance": "25%"}}]

@@ -9,8 +9,8 @@ from pathlib import Path
 
 from smite import scoring
 
-VAULT_ROOT = Path(__file__).resolve().parents[2]
-INDEX_PATH = VAULT_ROOT / "viewer" / "public" / "index.json"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+INDEX_PATH = REPO_ROOT / "viewer" / "public" / "index.json"
 
 STAT_VALUE_RE = re.compile(r"-?\d+\.?\d*")
 TIER3_COST_MIN = 1800
