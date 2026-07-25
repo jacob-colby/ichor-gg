@@ -28,7 +28,9 @@ def main(argv=None):
         recommend.REPO_ROOT,
         recommend.REPO_ROOT / "viewer" / "public" / "index.json",
     )
-    validate.main()
+    # Explicit argv: this runs with refresh_and_deploy's own flags still on
+    # sys.argv, and validate.main(None) would let argparse re-parse them.
+    validate.main([])
 
     snapshot_path = snapshots.write_snapshot(recommend.load_items(), date.today().isoformat())
     print(f"refresh_and_deploy: wrote item-stat snapshot to {snapshot_path}")
