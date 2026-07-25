@@ -8,9 +8,10 @@ import { ItemsShop } from "./components/ItemsShop";
 import { GodsIndex } from "./components/GodsIndex";
 import { GodInfo } from "./components/GodInfo";
 import { Legend } from "./components/Legend";
+import { TierList } from "./components/TierList";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
 
-type View = "builds" | "gods" | "items";
+type View = "builds" | "gods" | "items" | "tiers";
 
 const NAV: { view: View; label: string; icon: ReactNode }[] = [
   { view: "builds", label: "Builds", icon: (
@@ -21,6 +22,9 @@ const NAV: { view: View; label: string; icon: ReactNode }[] = [
   ) },
   { view: "items", label: "Items", icon: (
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" /></svg>
+  ) },
+  { view: "tiers", label: "Tiers", icon: (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V10" /><path d="M12 20V4" /><path d="M20 20v-6" /></svg>
   ) },
 ];
 
@@ -74,13 +78,15 @@ function App() {
   const goTo = (view: View) => {
     if (view === "builds") navigate(route.god ? toHash.god(route.god) : toHash.home());
     else if (view === "gods") navigate(toHash.gods());
-    else navigate(toHash.items());
+    else if (view === "items") navigate(toHash.items());
+    else navigate(toHash.tiers());
   };
 
-  const title = route.view === "gods" ? "Gods" : route.view === "items" ? "Items" : "Builds";
+  const title = route.view === "gods" ? "Gods" : route.view === "items" ? "Items" : route.view === "tiers" ? "Tiers" : "Builds";
   const count =
     route.view === "gods" ? `${data.gods.length} tracked`
     : route.view === "items" ? `${data.items.length} items`
+    : route.view === "tiers" ? `${data.tierlist?.gods.length ?? 0} gods · ${data.tierlist?.items.length ?? 0} items`
     : god ? god.pantheon ?? "" : `${data.gods.length} gods`;
 
   return (
@@ -127,6 +133,8 @@ function App() {
             <div className="flex-1 overflow-y-auto"><ItemsShop items={data.items} openItem={route.item} /></div>
           ) : route.view === "gods" ? (
             <div className="flex-1 overflow-y-auto"><GodsIndex gods={data.gods} /></div>
+          ) : route.view === "tiers" ? (
+            <div className="flex-1 overflow-y-auto"><TierList gods={data.tierlist?.gods ?? []} items={data.tierlist?.items ?? []} /></div>
           ) : (
             <div className="flex min-w-0 flex-1 flex-col overflow-hidden md:flex-row">
               <div className="flex shrink-0 flex-col overflow-hidden">

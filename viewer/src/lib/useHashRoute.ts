@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export interface Route {
-  view: "builds" | "items" | "gods";
+  view: "builds" | "items" | "gods" | "tiers";
   god?: string;
   tab: "builds" | "info";
   item?: string;
@@ -14,6 +14,9 @@ export function parseHash(hash: string): Route {
   }
   if (parts[0] === "gods") {
     return { view: "gods", tab: "builds" };
+  }
+  if (parts[0] === "tiers") {
+    return { view: "tiers", tab: "builds" };
   }
   if (parts[0] === "god" && parts[1]) {
     return { view: "builds", god: parts[1], tab: parts[2] === "info" ? "info" : "builds" };
@@ -28,6 +31,7 @@ export const toHash = {
   items: () => "#/items",
   item: (n: string) => `#/items/${encodeURIComponent(n)}`,
   gods: () => "#/gods",
+  tiers: () => "#/tiers",
 };
 
 export function navigate(hash: string): void {

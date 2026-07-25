@@ -115,6 +115,24 @@ export interface RosterGod {
   thumb?: string;
 }
 
+export interface TierEntry {
+  name: string;
+  ours: number | null;
+  community: number | null;
+  tier_ours: "S" | "A" | "B" | "C" | null;
+  tier_community: "S" | "A" | "B" | "C" | null;
+}
+
+export interface GodTierEntry extends TierEntry {
+  role?: string;
+  damage_type?: string;
+}
+
+export interface ItemTierEntry extends TierEntry {
+  tier?: number | string;
+  efficiency_tier?: string | null;
+}
+
 export interface IndexData {
   gods: God[];
   items: Item[];
@@ -122,4 +140,5 @@ export interface IndexData {
   starters?: { base: string; upgrade: string }[];
   roster?: RosterGod[];
   data_updated?: string;
+  tierlist?: { gods: GodTierEntry[]; items: ItemTierEntry[] };
 }

@@ -17,6 +17,9 @@ describe("parseHash", () => {
   it("parses the gods index", () => {
     expect(parseHash("#/gods")).toEqual({ view: "gods", tab: "builds" });
   });
+  it("parses the tier list", () => {
+    expect(parseHash("#/tiers")).toEqual({ view: "tiers", tab: "builds" });
+  });
 });
 
 describe("toHash", () => {
@@ -25,5 +28,6 @@ describe("toHash", () => {
     expect(toHash.godInfo("Chiron")).toBe("#/god/Chiron/info");
     expect(toHash.item("Death's Toll")).toBe("#/items/Death's%20Toll"); // encodeURIComponent keeps '
     expect(toHash.items()).toBe("#/items");
+    expect(toHash.tiers()).toBe("#/tiers");
   });
 });
