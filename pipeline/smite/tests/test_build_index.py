@@ -35,7 +35,8 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
     index = build_index.build_index(vault)
     assert index == {"gods": [], "items": [], "builds": [], "starters": [],
                      "roster": [], "data_updated": "",
-                     "tierlist": {"gods": [], "items": []}}
+                     "tierlist": {"gods": [], "items": []},
+                     "patch_notes": []}
 
 
 def test_write_index_creates_json_file(tmp_path):
@@ -153,3 +154,11 @@ def test_build_index_emits_tierlist_with_gods_and_items():
     # community coverage is partial by design — some tier_community entries
     # must be None, never silently zero-filled.
     assert any(g["tier_community"] is None for g in tl["gods"])
+
+
+def test_build_index_emits_patch_notes_as_list():
+    from smite import build_index
+    from pathlib import Path
+    r = build_index.build_index(Path(__file__).resolve().parents[3])
+    assert "patch_notes" in r
+    assert isinstance(r["patch_notes"], list)

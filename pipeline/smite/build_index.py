@@ -6,7 +6,7 @@ import json
 import shutil
 from pathlib import Path
 
-from smite import efficiency, notes, scoring, tierlist
+from smite import efficiency, notes, scoring, snapshots, tierlist
 
 
 def _enrich_items(items, tags):
@@ -47,7 +47,8 @@ def build_index(vault_root: Path) -> dict:
             "starters": weights.get("starters", []),
             "roster": _load_roster(data_root),
             "data_updated": _data_updated(gods, builds),
-            "tierlist": tierlist.build_tierlist(gods, builds, items, eff)}
+            "tierlist": tierlist.build_tierlist(gods, builds, items, eff),
+            "patch_notes": snapshots.report_from_dir()}
 
 
 def _data_updated(gods, builds) -> str:

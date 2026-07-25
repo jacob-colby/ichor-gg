@@ -5,6 +5,8 @@ item stats across patches.
 import json
 from pathlib import Path
 
+from smite.data_audit import STAT_VALUE_RE
+
 VAULT_ROOT = Path(__file__).resolve().parents[2]
 DATA_ROOT = VAULT_ROOT / "04. System" / "Data" / "SMITE"
 SNAPSHOTS_DIR = DATA_ROOT / "Analysis" / "snapshots"
@@ -74,3 +76,91 @@ def diff_snapshots(old: dict, new: dict) -> dict:
             changed.append(entry)
 
     return {"added": added, "removed": removed, "changed": changed}
+
+
+def _parse_leading_number(value):
+    """Parse the leading number out of a stat/cost value ('20%' -> 20.0).
+    None or unparseable input yields None (no directional signal)."""
+    if value is None:
+        return None
+    match = STAT_VALUE_RE.search(str(value))
+    if match is None:
+        return None
+    return float(match.group())
+
+
+def classify_verdict(entry: dict) -> str:
+    """Classify a diff_snapshots "changed" entry as buff/nerf/mixed/adjusted
+    from the direction of its numeric deltas. Cost is inverted (paying more
+    is worse). Signals that can't be parsed (None side, non-numeric string)
+    contribute nothing."""
+    has_buff = False
+    has_nerf = False
+
+    for stat, (old_val, new_val) in (entry.get("stats") or {}).items():
+        old_num = _parse_leading_number(old_val)
+        new_num = _parse_leading_number(new_val)
+        if old_num is None or new_num is None:
+            continue
+        if new_num > old_num:
+            has_buff = True
+        elif new_num < old_num:
+            has_nerf = True
+
+    cost = entry.get("cost")
+    if cost is not None:
+        old_cost, new_cost = cost
+        old_num = _parse_leading_number(old_cost)
+        new_num = _parse_leading_number(new_cost)
+        if old_num is not None and new_num is not None:
+            if new_num > old_num:
+                has_nerf = True  # cost up = worse
+            elif new_num < old_num:
+                has_buff = True  # cost down = better
+
+    if has_buff and has_nerf:
+        return "mixed"
+    if has_buff:
+        return "buff"
+    if has_nerf:
+        return "nerf"
+    return "adjusted"
+
+
+def build_patch_report(snapshot_paths, limit: int = 5) -> list:
+    """Diff each consecutive pair of snapshots (sorted by filename-stem
+    date), newest period first, capped at `limit` periods. Fewer than 2
+    snapshots -> []."""
+    paths = sorted(snapshot_paths, key=lambda p: Path(p).stem)
+    if len(paths) < 2:
+        return []
+
+    periods = []
+    for old_path, new_path in zip(paths, paths[1:]):
+        old = load_snapshot(old_path)
+        new = load_snapshot(new_path)
+        diff = diff_snapshots(old, new)
+        changed = sorted(
+            (dict(e, verdict=classify_verdict(e)) for e in diff["changed"]),
+            key=lambda e: e["name"],
+        )
+        periods.append({
+            "from": Path(old_path).stem,
+            "to": Path(new_path).stem,
+            "added": diff["added"],
+            "removed": diff["removed"],
+            "changed": changed,
+        })
+
+    periods.reverse()  # newest first
+    return periods[:limit]
+
+
+def report_from_dir(snapshots_dir: Path = SNAPSHOTS_DIR, limit: int = 5) -> list:
+    """Convenience wrapper: glob *.json in snapshots_dir and build the
+    report. Missing directory or <2 snapshots -> []."""
+    snapshots_dir = Path(snapshots_dir)
+    if not snapshots_dir.exists():
+        return []
+    paths = sorted(snapshots_dir.glob("*.json"))
+    return build_patch_report(paths, limit=limit)
