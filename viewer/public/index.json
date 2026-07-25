@@ -110395,7 +110395,7 @@
     "per_enemy": 0.02,
     "tag_bonus": {
       "healers": {
-        "anti-heal": 1.0
+        "anti-heal": 2.0
       },
       "lockdown": {
         "cc-immunity": 1.0,

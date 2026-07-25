@@ -33,7 +33,13 @@ draft:
   max_bonus: 0.12        # clamp on the total bonus any one item can receive
   per_enemy: 0.02        # weight per matching enemy god (multiplied by count)
   tag_bonus:             # threat -> item effect_tag
-    healers: {anti-heal: 1.0}
+    # anti-heal is weighted 2x because it is the highest-leverage counter-buy in
+    # the game AND it starts far down the base ranking (Divine Ruin is Agni's
+    # #20, sitting 0.063 below his 6th slot). Measured 2026-07-23 across 40 gods
+    # vs a 2-healer comp: weight 1.0 promoted anti-heal for only 3/40 gods (i.e.
+    # effectively never), 2.0 promotes it for 11/40 — a meaningful minority,
+    # which matches how anti-heal is actually bought.
+    healers: {anti-heal: 2.0}
     lockdown: {cc-immunity: 1.0, peel: 0.4}
     crit: {anti-crit: 1.0}
     tanks: {protection-shred: 1.0}
