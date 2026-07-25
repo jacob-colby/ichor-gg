@@ -107153,5 +107153,2225 @@
       "thumb": ""
     }
   ],
-  "data_updated": "2026-07-23"
+  "data_updated": "2026-07-23",
+  "tierlist": {
+    "gods": [
+      {
+        "name": "Eset",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5283333333333332,
+        "community": 0.63,
+        "tier_ours": "A",
+        "tier_community": "S"
+      },
+      {
+        "name": "Guan Yu",
+        "role": "Solo Support",
+        "damage_type": "physical",
+        "ours": 0.47333333333333333,
+        "community": 0.63,
+        "tier_ours": "B",
+        "tier_community": "S"
+      },
+      {
+        "name": "Cupid",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4466666666666666,
+        "community": 0.61,
+        "tier_ours": "C",
+        "tier_community": "S"
+      },
+      {
+        "name": "Ares",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48,
+        "community": 0.6,
+        "tier_ours": "B",
+        "tier_community": "S"
+      },
+      {
+        "name": "Ra",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.525,
+        "community": 0.6,
+        "tier_ours": "A",
+        "tier_community": "S"
+      },
+      {
+        "name": "Artio",
+        "role": "Solo Support",
+        "damage_type": "magical",
+        "ours": 0.5066666666666667,
+        "community": 0.59,
+        "tier_ours": "A",
+        "tier_community": "S"
+      },
+      {
+        "name": "Atlas",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48500000000000004,
+        "community": 0.58,
+        "tier_ours": "B",
+        "tier_community": "S"
+      },
+      {
+        "name": "Cernunnos",
+        "role": "Carry Jungle",
+        "damage_type": "physical",
+        "ours": 0.44999999999999996,
+        "community": 0.58,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Ishtar",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.45,
+        "community": 0.58,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Thor",
+        "role": "Jungle Solo",
+        "damage_type": "physical",
+        "ours": 0.4833333333333334,
+        "community": 0.56,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Jormungandr",
+        "role": "Solo Support",
+        "damage_type": "magical",
+        "ours": 0.465,
+        "community": 0.55,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Khepri",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48500000000000004,
+        "community": 0.55,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Mordred",
+        "role": "Solo Jungle",
+        "damage_type": "physical",
+        "ours": 0.4783333333333333,
+        "community": 0.55,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Pele",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5383333333333333,
+        "community": 0.55,
+        "tier_ours": "S",
+        "tier_community": "A"
+      },
+      {
+        "name": "Sol",
+        "role": "Mid Carry",
+        "damage_type": "magical",
+        "ours": 0.48333333333333334,
+        "community": 0.55,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Thanatos",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5466666666666667,
+        "community": 0.55,
+        "tier_ours": "S",
+        "tier_community": "A"
+      },
+      {
+        "name": "Apollo",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.44500000000000006,
+        "community": 0.54,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Fenrir",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5316666666666667,
+        "community": 0.54,
+        "tier_ours": "S",
+        "tier_community": "A"
+      },
+      {
+        "name": "Hecate",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5283333333333333,
+        "community": 0.54,
+        "tier_ours": "S",
+        "tier_community": "A"
+      },
+      {
+        "name": "Hou Yi",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4466666666666667,
+        "community": 0.54,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Hun Batz",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5283333333333333,
+        "community": 0.54,
+        "tier_ours": "A",
+        "tier_community": "A"
+      },
+      {
+        "name": "Kali",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.465,
+        "community": 0.54,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Loki",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.54,
+        "community": 0.54,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Morgan Le Fay",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5133333333333333,
+        "community": 0.54,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Anhur",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.44500000000000006,
+        "community": 0.53,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Bacchus",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48666666666666664,
+        "community": 0.53,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Kukulkan",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5116666666666666,
+        "community": 0.53,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Scylla",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5133333333333333,
+        "community": 0.53,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Agni",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5233333333333333,
+        "community": 0.52,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Chronos",
+        "role": "Mid Carry",
+        "damage_type": "magical",
+        "ours": 0.4533333333333333,
+        "community": 0.52,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Neith",
+        "role": "Carry Mid",
+        "damage_type": "physical",
+        "ours": 0.4466666666666666,
+        "community": 0.52,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Athena",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48999999999999994,
+        "community": 0.51,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Chiron",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.45833333333333326,
+        "community": 0.51,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Ganesha",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.4749999999999999,
+        "community": 0.51,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Vulcan",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.4966666666666666,
+        "community": 0.51,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Artemis",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.45166666666666666,
+        "community": 0.5,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Gilgamesh",
+        "role": "Solo Jungle",
+        "damage_type": "physical",
+        "ours": 0.465,
+        "community": 0.5,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Ne Zha",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.52,
+        "community": 0.5,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Rama",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4466666666666666,
+        "community": 0.5,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Sylvanus",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.4766666666666666,
+        "community": 0.5,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Xbalanque",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4583333333333333,
+        "community": 0.5,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Achilles",
+        "role": "Solo Jungle",
+        "damage_type": "physical",
+        "ours": 0.47333333333333333,
+        "community": 0.49,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Ah Puch",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5066666666666667,
+        "community": 0.49,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Baron Samedi",
+        "role": "Mid Support",
+        "damage_type": "magical",
+        "ours": 0.455,
+        "community": 0.48,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Bastet",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5566666666666666,
+        "community": 0.48,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Merlin",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5133333333333333,
+        "community": 0.48,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "The Morrigan",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.51,
+        "community": 0.48,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Bellona",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.4749999999999999,
+        "community": 0.47,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Nu Wa",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5266666666666667,
+        "community": 0.47,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Ratatoskr",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5116666666666667,
+        "community": 0.47,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Sun Wukong",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.46833333333333327,
+        "community": 0.47,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Discordia",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5183333333333332,
+        "community": 0.46,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Chaac",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.48,
+        "community": 0.44,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Danzaburou",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4549999999999999,
+        "community": 0.44,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Hercules",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.47833333333333333,
+        "community": 0.43,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Nemesis",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.49333333333333335,
+        "community": 0.43,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Da Ji",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5333333333333333,
+        "community": 0.42,
+        "tier_ours": "S",
+        "tier_community": "C"
+      },
+      {
+        "name": "Xing Tian",
+        "role": "Support Solo",
+        "damage_type": "magical",
+        "ours": 0.49833333333333335,
+        "community": 0.42,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Yemoja",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.46833333333333327,
+        "community": 0.42,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Nut",
+        "role": "Carry Mid",
+        "damage_type": "magical",
+        "ours": 0.4633333333333334,
+        "community": 0.4,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Sobek",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48500000000000004,
+        "community": 0.4,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Osiris",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.45,
+        "community": 0.39,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Charon",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48666666666666664,
+        "community": 0.38,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Tsukuyomi",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.49000000000000005,
+        "community": 0.38,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Cabrakan",
+        "role": "Solo Support",
+        "damage_type": "magical",
+        "ours": 0.48999999999999994,
+        "community": 0.37,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Geb",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.505,
+        "community": 0.36,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Cerberus",
+        "role": "Solo Support",
+        "damage_type": "magical",
+        "ours": 0.48833333333333334,
+        "community": 0.35,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Poseidon",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.515,
+        "community": 0.35,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Horus",
+        "role": "Support",
+        "damage_type": "physical",
+        "ours": 0.49333333333333335,
+        "community": 0.2,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Aladdin",
+        "role": "Jungle",
+        "damage_type": "magical",
+        "ours": 0.5033333333333333,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Amaterasu",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.4833333333333332,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Anubis",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5066666666666666,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Aphrodite",
+        "role": "Mid Support",
+        "damage_type": "magical",
+        "ours": 0.4883333333333333,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Awilix",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5316666666666666,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "Hades",
+        "role": "Solo",
+        "damage_type": "magical",
+        "ours": 0.4883333333333333,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Hua Mulan",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.46833333333333327,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Izanami",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4716666666666667,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Janus",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5116666666666666,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Jing Wei",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.455,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Medusa",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4483333333333333,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Mercury",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.4916666666666667,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Odin",
+        "role": "Solo Jungle",
+        "damage_type": "physical",
+        "ours": 0.48500000000000004,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Princess Bari",
+        "role": "Carry Mid",
+        "damage_type": "magical",
+        "ours": 0.4533333333333333,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Susano",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.535,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "Ullr",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4633333333333333,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Ymir",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.4833333333333332,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Zeus",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.49166666666666664,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      }
+    ],
+    "items": [
+      {
+        "name": "Kinetic Cuirass",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.441802992262487,
+        "community": 0.7,
+        "tier_ours": "A",
+        "tier_community": "S"
+      },
+      {
+        "name": "Hastened Fatalis",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.15913675285170528,
+        "community": 0.67,
+        "tier_ours": "C",
+        "tier_community": "S"
+      },
+      {
+        "name": "Soul Reaver",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.21519749256525575,
+        "community": 0.653,
+        "tier_ours": "C",
+        "tier_community": "S"
+      },
+      {
+        "name": "Qin's Blade",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.20306630655529243,
+        "community": 0.635,
+        "tier_ours": "C",
+        "tier_community": "S"
+      },
+      {
+        "name": "Glorious Pridwen",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2269829108416048,
+        "community": 0.625,
+        "tier_ours": "C",
+        "tier_community": "S"
+      },
+      {
+        "name": "Gladiator's Shield",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.30447905173822604,
+        "community": 0.62,
+        "tier_ours": "B",
+        "tier_community": "S"
+      },
+      {
+        "name": "Bragi's Harp",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3500917719267237,
+        "community": 0.61,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Musashi's Dual Swords",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3078786801235632,
+        "community": 0.605,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Deathbringer",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2159897425131497,
+        "community": 0.6,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Prophetic Cloak",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3072995121782156,
+        "community": 0.6,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Tyrfing",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.38575795465987145,
+        "community": 0.6,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Bracer of The Abyss",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.34406712166225895,
+        "community": 0.59,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Odysseus' Bow",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.20700701971458754,
+        "community": 0.59,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Heartseeker",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.2820584900469934,
+        "community": 0.587,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Riptalon",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2661472094702869,
+        "community": 0.587,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Contagion",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.32582048864809976,
+        "community": 0.57,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Ethereal Staff",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.4703826570639155,
+        "community": 0.57,
+        "tier_ours": "S",
+        "tier_community": "A"
+      },
+      {
+        "name": "Rod of Tahuti",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.23542155944965545,
+        "community": 0.57,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Blinking Abyss",
+        "tier": "Relic",
+        "efficiency_tier": "premium",
+        "ours": 0.037134350264690794,
+        "community": 0.569,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Breastplate of Valor",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4226155673995533,
+        "community": 0.564,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "The Crusher",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.48773231800940003,
+        "community": 0.563,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Obsidian Shard",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.36439659836137644,
+        "community": 0.562,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Spirit Robe",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.32443858331947645,
+        "community": 0.559,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Soul Gem",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4121567010237062,
+        "community": 0.557,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Shifter's Shield",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.2974322680696807,
+        "community": 0.556,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Transcendence",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4010988146940725,
+        "community": 0.55,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Titan's Bane",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3679512571989621,
+        "community": 0.548,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Barbed Carver",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3303690598209945,
+        "community": 0.547,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Dwarven Plate",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.18179400988837172,
+        "community": 0.545,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Shogun's Ofuda",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3334262712762306,
+        "community": 0.545,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "The Reaper",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.43794578058579553,
+        "community": 0.544,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Dagger of Frenzy",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2342746502703044,
+        "community": 0.541,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "The World Stone",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.37023772168838964,
+        "community": 0.54,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Genji's Guard",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.462122273161792,
+        "community": 0.539,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Berserker's Shield",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.426063172556665,
+        "community": 0.536,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Gauntlet of Thebes",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.36055635278836345,
+        "community": 0.535,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Engraved Guard",
+        "tier": 2,
+        "efficiency_tier": "undervalued",
+        "ours": 1.0,
+        "community": 0.534,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Book of Thoth",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.39072362360083734,
+        "community": 0.533,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Jotunn's Revenge",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.5494269539275947,
+        "community": 0.532,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Devourer's Gauntlet",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.2936446772133377,
+        "community": 0.531,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Nimble Ring",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2727045177261434,
+        "community": 0.53,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Spear of Desolation",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.42058587830561306,
+        "community": 0.527,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Hydra's Lament",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.4501339636008808,
+        "community": 0.526,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Polynomicon",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3661090863337503,
+        "community": 0.52,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Avenging Blade",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4109974774505255,
+        "community": 0.51,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Hunter's Bow",
+        "tier": 2,
+        "efficiency_tier": "undervalued",
+        "ours": 0.9954133424378456,
+        "community": 0.505,
+        "tier_ours": "S",
+        "tier_community": "C"
+      },
+      {
+        "name": "Bancroft's Talon",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.44136908827148474,
+        "community": 0.5,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Freya's Tears",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3065856625550184,
+        "community": 0.5,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "The Executioner",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.10428465919591168,
+        "community": 0.5,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "The Cosmic Horror",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.46499649180338976,
+        "community": 0.49,
+        "tier_ours": "S",
+        "tier_community": "C"
+      },
+      {
+        "name": "Evil Eye",
+        "tier": 2,
+        "efficiency_tier": "undervalued",
+        "ours": 0.8836846366615102,
+        "community": 0.475,
+        "tier_ours": "S",
+        "tier_community": "C"
+      },
+      {
+        "name": "Rage",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3616216566963868,
+        "community": 0.47,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Draconic Scale",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.29034803184134167,
+        "community": 0.455,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Mercury's Talaria",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3551511601674253,
+        "community": 0.45,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Stampede",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.34537928251677724,
+        "community": 0.44,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Alchemist Coat",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.402477463663827,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Amanita Charm",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.44770806290687887,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Ancient Signet",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.39978133019828205,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Ancile",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.37392267993806294,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Archmage's Gem",
+        "tier": 2,
+        "efficiency_tier": "fair",
+        "ours": 0.31132296464090936,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Arondight",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.35759761240763827,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Avatar's Parashu",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.0958884973166724,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Blood-Bound Book",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.46881252660574224,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "Blood-soaked Shroud",
+        "tier": 2,
+        "efficiency_tier": "undervalued",
+        "ours": 0.45962993562193105,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Bloodforge",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.33191702003898144,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Bluestone Brooch",
+        "tier": 2,
+        "efficiency_tier": "fair",
+        "ours": 0.383458841524268,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Bluestone Pendant",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Brawler\u2019s Beat Stick",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.1539966371390706,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Bumba's Cudgel",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Bumba's Golden Dagger",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Bumba's Hammer",
+        "tier": 2,
+        "efficiency_tier": "fair",
+        "ours": 0.37764738434434353,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Bumba's Spear",
+        "tier": 2,
+        "efficiency_tier": "fair",
+        "ours": 0.4054865379098134,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Chandra's Grace",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4294479395141587,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Chronos' Pendant",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.40315558096747833,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Circe's Hexstone",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.10968500062359485,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Conduit Gem",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Damaru",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.38222920420242656,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Daybreak Gavel",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.20689925292978048,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Death Metal",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.4422005687003993,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Death's Embrace",
+        "tier": 2,
+        "efficiency_tier": "fair",
+        "ours": 0.34264544121377355,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Death's Toll",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Demon Blade",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.22047765598596022,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Divine Ruin",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3616124090987425,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Doom Orb",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4045298981563269,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Doublet of Binding",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.31181402722914725,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Dreamer's Idol",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.13703106315099015,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Eros' Bow",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.37023963084211114,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Erosion",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.39031043568340384,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Eye of Erebus",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.22972885817592262,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Eye of Providence",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.4707702631154908,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "Eye of the Storm",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4062655280687244,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Gem of Focus",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3426397238374544,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Gem of Isolation",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3483573620023628,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Gilded Arrow",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Gluttonous Grimoire",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.43598089656729383,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Golden Blade",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.38947470117221533,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Heartwood Charm",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.279090199271276,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Helm of Darkness",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.25377101138479985,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Helm of Radiance",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4050014145230432,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Heroism",
+        "tier": 2,
+        "efficiency_tier": "undervalued",
+        "ours": 0.8130462422456678,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "Hide of the Nemean Lion",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.32239294020074133,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Hunter's Cowl",
+        "tier": 2,
+        "efficiency_tier": "fair",
+        "ours": 0.3112940632112154,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Hussar's Wings",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.0,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Jade Scepter",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.384531137219395,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Leather Cowl",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Lernaean Bow",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3631342047581159,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Leviathan's Hide",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.37747729088573284,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Lifebinder",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.39559685102425396,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Magi's Cloak",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3515562959819094,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Mantle Of Discord",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.36616297277525683,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Midgardian Mail",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.39126061382889277,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Mystical Mail",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.30522522669330987,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Necronomicon",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.31700679449865876,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Oath-Sworn Spear",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.32811957631275795,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Omen Drum",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.15338461151846844,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Oni Hunter's Garb",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3676038938278621,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Pendulum Blade",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.2879520964662877,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Pendulum of the Ages",
+        "tier": 2,
+        "efficiency_tier": "fair",
+        "ours": 0.3386853915127519,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Pharaoh's Curse",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3769923600846233,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Phoenix Feather",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.376646987985917,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Radiant Bulwark",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.1797720320903526,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Ragnarok's Wake",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2756552581578779,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Regrowth Striders",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.20957509437757024,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Resolute Mantle",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2579239264547884,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Rod of Asclepius",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.4714263761912965,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "Runeforged Hammer",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.45062689960035907,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Sands Of Time",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Sanguine Lash",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2564226152054283,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Scepter of Dominion",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3558202254554666,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Screeching Gargoyle",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3421337342710213,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Selflessness",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Sharpshooter's Arrow",
+        "tier": 2,
+        "efficiency_tier": "undervalued",
+        "ours": 0.6091209158463973,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "Shield Splitter",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.4418859427511635,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Shield of the Phoenix",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4021253559645893,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Shroud of Vengeance",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.32443858331947645,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Skeggox",
+        "tier": 2,
+        "efficiency_tier": "undervalued",
+        "ours": 0.9183870341356416,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "Spear of the Magus",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.4247839930765637,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Spectral Armor",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.4921747833458029,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "Sphere of Negation",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.24295881534295488,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Staff of Myrddin",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.1642813229216008,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Stone of Binding",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.2897865666381403,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Stygian Anchor",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2612344506534667,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Sun Beam Bow",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.2339047366415502,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Sundering Axe",
+        "tier": 2,
+        "efficiency_tier": "undervalued",
+        "ours": 0.446180684656848,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      },
+      {
+        "name": "Tekko-Kagi",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3463789702996337,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Triton's Conch",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3488624080488915,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Typhon\u2019s Heart",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3257714868119506,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Umbral Link",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.25112004778069963,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Vampiric Shroud",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Vital Amplifier",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.19754321722504353,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Void Shield",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.2916532185056129,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Void Stone",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.304224176515362,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "War Banner",
+        "tier": 2,
+        "efficiency_tier": "undervalued",
+        "ours": 0.7393949748833717,
+        "community": null,
+        "tier_ours": "S",
+        "tier_community": null
+      },
+      {
+        "name": "War Flag",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Warrior's Axe",
+        "tier": 1,
+        "efficiency_tier": null,
+        "ours": null,
+        "community": null,
+        "tier_ours": null,
+        "tier_community": null
+      },
+      {
+        "name": "Wish-Granting Pearl",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.17586275296319023,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Wyrmskin Hide",
+        "tier": 3,
+        "efficiency_tier": "fair",
+        "ours": 0.3221030372184898,
+        "community": null,
+        "tier_ours": "B",
+        "tier_community": null
+      },
+      {
+        "name": "Xibalban Effigy",
+        "tier": 3,
+        "efficiency_tier": "premium",
+        "ours": 0.23767631247515425,
+        "community": null,
+        "tier_ours": "C",
+        "tier_community": null
+      },
+      {
+        "name": "Yogi's Necklace",
+        "tier": 3,
+        "efficiency_tier": "undervalued",
+        "ours": 0.44144182812514776,
+        "community": null,
+        "tier_ours": "A",
+        "tier_community": null
+      }
+    ]
+  }
 }

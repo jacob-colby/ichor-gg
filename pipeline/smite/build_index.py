@@ -6,7 +6,7 @@ import json
 import shutil
 from pathlib import Path
 
-from smite import efficiency, notes, scoring
+from smite import efficiency, notes, scoring, tierlist
 
 
 def _enrich_items(items, tags):
@@ -37,10 +37,17 @@ def build_index(vault_root: Path) -> dict:
     builds = _all(builds_dir)
     gods = _all(gods_dir)
     _attach_item_meta(items, builds)
+    # Reuses the same efficiency model _enrich_items already ran (to tag
+    # efficiency_tier) so the tier list's "ours" item score is the identical
+    # continuous signal, not a second independent fit.
+    eff = {}
+    if efficiency.numeric_cost_items(items):
+        eff, _ = efficiency.efficiency_scores(items)
     return {"gods": gods, "items": items, "builds": builds,
             "starters": weights.get("starters", []),
             "roster": _load_roster(data_root),
-            "data_updated": _data_updated(gods, builds)}
+            "data_updated": _data_updated(gods, builds),
+            "tierlist": tierlist.build_tierlist(gods, builds, items, eff)}
 
 
 def _data_updated(gods, builds) -> str:
