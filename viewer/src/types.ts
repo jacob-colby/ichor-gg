@@ -148,6 +148,31 @@ export interface PatchPeriod {
   changed: PatchDelta[];
 }
 
+export interface DraftComp {
+  allies: string[];
+  enemies: string[];
+}
+
+export interface ThreatModel {
+  magical: number;
+  physical: number; // enemy damage-type counts
+  healers: number;
+  lockdown: number;
+  crit: number;
+  tanks: number;
+  allyCovers: Record<string, boolean>; // effect_tag -> covered by an ally
+  allyAllPhysical: boolean;
+}
+
+export interface DraftConfig {
+  max_bonus: number;
+  per_enemy: number;
+  tag_bonus: Record<string, Record<string, number>>;
+  stat_bonus: Record<string, Record<string, number>>;
+  ally_covered: number;
+  ally_gap: number;
+}
+
 export interface IndexData {
   gods: God[];
   items: Item[];
@@ -157,4 +182,6 @@ export interface IndexData {
   data_updated?: string;
   tierlist?: { gods: GodTierEntry[]; items: ItemTierEntry[] };
   patch_notes?: PatchPeriod[];
+  god_item_scores?: Record<string, Record<string, number>>;
+  draft?: DraftConfig;
 }
