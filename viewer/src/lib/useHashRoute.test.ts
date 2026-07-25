@@ -20,6 +20,9 @@ describe("parseHash", () => {
   it("parses the tier list", () => {
     expect(parseHash("#/tiers")).toEqual({ view: "tiers", tab: "builds" });
   });
+  it("parses patch notes", () => {
+    expect(parseHash("#/patch")).toEqual({ view: "patch", tab: "builds" });
+  });
 });
 
 describe("toHash", () => {
@@ -29,5 +32,6 @@ describe("toHash", () => {
     expect(toHash.item("Death's Toll")).toBe("#/items/Death's%20Toll"); // encodeURIComponent keeps '
     expect(toHash.items()).toBe("#/items");
     expect(toHash.tiers()).toBe("#/tiers");
+    expect(toHash.patch()).toBe("#/patch");
   });
 });

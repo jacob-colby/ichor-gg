@@ -9,9 +9,10 @@ import { GodsIndex } from "./components/GodsIndex";
 import { GodInfo } from "./components/GodInfo";
 import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
+import { PatchNotes } from "./components/PatchNotes";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
 
-type View = "builds" | "gods" | "items" | "tiers";
+type View = "builds" | "gods" | "items" | "tiers" | "patch";
 
 const NAV: { view: View; label: string; icon: ReactNode }[] = [
   { view: "builds", label: "Builds", icon: (
@@ -25,6 +26,9 @@ const NAV: { view: View; label: string; icon: ReactNode }[] = [
   ) },
   { view: "tiers", label: "Tiers", icon: (
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V10" /><path d="M12 20V4" /><path d="M20 20v-6" /></svg>
+  ) },
+  { view: "patch", label: "Patch", icon: (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h6" /><path d="M9 16h6" /><path d="M13 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M13 3v5h5" /></svg>
   ) },
 ];
 
@@ -79,14 +83,22 @@ function App() {
     if (view === "builds") navigate(route.god ? toHash.god(route.god) : toHash.home());
     else if (view === "gods") navigate(toHash.gods());
     else if (view === "items") navigate(toHash.items());
-    else navigate(toHash.tiers());
+    else if (view === "tiers") navigate(toHash.tiers());
+    else navigate(toHash.patch());
   };
 
-  const title = route.view === "gods" ? "Gods" : route.view === "items" ? "Items" : route.view === "tiers" ? "Tiers" : "Builds";
+  const patchNotes = data.patch_notes ?? [];
+  const title =
+    route.view === "gods" ? "Gods"
+    : route.view === "items" ? "Items"
+    : route.view === "tiers" ? "Tiers"
+    : route.view === "patch" ? "Patch"
+    : "Builds";
   const count =
     route.view === "gods" ? `${data.gods.length} tracked`
     : route.view === "items" ? `${data.items.length} items`
     : route.view === "tiers" ? `${data.tierlist?.gods.length ?? 0} gods · ${data.tierlist?.items.length ?? 0} items`
+    : route.view === "patch" ? (patchNotes.length > 0 ? `${patchNotes.length} patches` : "")
     : god ? god.pantheon ?? "" : `${data.gods.length} gods`;
 
   return (
@@ -135,6 +147,8 @@ function App() {
             <div className="flex-1 overflow-y-auto"><GodsIndex gods={data.gods} /></div>
           ) : route.view === "tiers" ? (
             <div className="flex-1 overflow-y-auto"><TierList gods={data.tierlist?.gods ?? []} items={data.tierlist?.items ?? []} /></div>
+          ) : route.view === "patch" ? (
+            <div className="flex-1 overflow-y-auto"><PatchNotes periods={patchNotes} /></div>
           ) : (
             <div className="flex min-w-0 flex-1 flex-col overflow-hidden md:flex-row">
               <div className="flex shrink-0 flex-col overflow-hidden">

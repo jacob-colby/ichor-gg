@@ -133,6 +133,21 @@ export interface ItemTierEntry extends TierEntry {
   efficiency_tier?: string | null;
 }
 
+export interface PatchDelta {
+  name: string;
+  cost?: [number | null, number | null];
+  stats: Record<string, [string | null, string | null]>;
+  verdict: "buff" | "nerf" | "mixed" | "adjusted";
+}
+
+export interface PatchPeriod {
+  from: string;
+  to: string;
+  added: string[];
+  removed: string[];
+  changed: PatchDelta[];
+}
+
 export interface IndexData {
   gods: God[];
   items: Item[];
@@ -141,4 +156,5 @@ export interface IndexData {
   roster?: RosterGod[];
   data_updated?: string;
   tierlist?: { gods: GodTierEntry[]; items: ItemTierEntry[] };
+  patch_notes?: PatchPeriod[];
 }
