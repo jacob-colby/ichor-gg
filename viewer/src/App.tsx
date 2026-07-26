@@ -167,7 +167,7 @@ function App() {
                 title={data.data_updated}
                 className="hidden font-mono text-[10.5px] text-faint sm:inline"
               >
-                Updated {relativeDate(data.data_updated)}
+                Updated {relativeDate(data.data_updated)}{data.data_patch ? ` · ${data.data_patch}` : ""}
               </span>
             )}
             {isDev && (
@@ -206,7 +206,7 @@ function App() {
           ) : route.view === "items" ? (
             <div className="flex-1 overflow-y-auto"><ItemsShop items={data.items} openItem={route.item} /></div>
           ) : route.view === "tiers" ? (
-            <div className="flex-1 overflow-y-auto"><TierList gods={data.tierlist?.gods ?? []} items={data.tierlist?.items ?? []} /></div>
+            <div className="flex-1 overflow-y-auto"><TierList tierlist={data.tierlist} /></div>
           ) : route.view === "patch" ? (
             <div className="flex-1 overflow-y-auto"><PatchNotes periods={patchNotes} /></div>
           ) : (

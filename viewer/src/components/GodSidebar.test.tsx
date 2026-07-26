@@ -70,6 +70,19 @@ describe("GodSidebar", () => {
     expect(screen.getByRole("button", { name: "Select Ymir" })).toBeInTheDocument();
   });
 
+  it("keeps the pin control visible at rest (not opacity-0) with a >=32px hit target, gold only when pinned", () => {
+    render(<GodSidebar gods={gods} selectedGod={null} onSelect={() => {}} />);
+    const unpinned = screen.getByRole("button", { name: "Pin Ymir" });
+    expect(unpinned.className).not.toMatch(/opacity-0/);
+    expect(unpinned.className).toMatch(/h-8 w-8/);
+    expect(unpinned.className).not.toMatch(/text-gold/);
+
+    localStorage.setItem("smite:pinnedGods", JSON.stringify(["Ymir"]));
+    render(<GodSidebar gods={gods} selectedGod={null} onSelect={() => {}} />);
+    const pinnedButtons = screen.getAllByRole("button", { name: "Unpin Ymir" });
+    expect(pinnedButtons[0].className).toMatch(/text-gold/);
+  });
+
   it("opens and closes the mobile god picker", () => {
     const onSelect = vi.fn();
     render(<GodSidebar gods={gods} selectedGod={null} onSelect={onSelect} />);

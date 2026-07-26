@@ -195,6 +195,19 @@ export interface DraftConfig {
   ally_gap: number;
 }
 
+export interface TierListModeData {
+  gods: GodTierEntry[];
+  items: ItemTierEntry[];
+}
+
+/** Per-mode tier lists (Task R2). `gods`/`items` at the top level mirror
+ * Conquest for older consumers; `conquest`/`joust` carry the per-mode slices.
+ * Either per-mode key may be absent on an index built before R2. */
+export interface TierListData extends TierListModeData {
+  conquest?: TierListModeData;
+  joust?: TierListModeData;
+}
+
 export interface IndexData {
   gods: God[];
   items: Item[];
@@ -202,7 +215,10 @@ export interface IndexData {
   starters?: { base: string; upgrade: string }[];
   roster?: RosterGod[];
   data_updated?: string;
-  tierlist?: { gods: GodTierEntry[]; items: ItemTierEntry[] };
+  /** Current game patch label (e.g. "Open Beta 39"), Task R1. Absent on an
+   * older index. */
+  data_patch?: string;
+  tierlist?: TierListData;
   patch_notes?: PatchPeriod[];
   god_item_scores?: Record<string, Record<string, number>>;
   draft?: DraftConfig;

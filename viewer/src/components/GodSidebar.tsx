@@ -7,7 +7,7 @@ import { LANES, godLane, laneTextClass, type Lane } from "../lib/roleAccent";
 
 function PinIcon({ filled }: { filled: boolean }) {
   return (
-    <svg viewBox="0 0 24 24" width="12" height="12" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg viewBox="0 0 24 24" width="13" height="13" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 17v5" /><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2h1z" />
     </svg>
   );
@@ -67,8 +67,8 @@ function GodCard({ god, selected, pinned, onSelect, onTogglePin, onRemove }: God
         type="button"
         onClick={(e) => { e.stopPropagation(); onTogglePin(); }}
         aria-label={pinned ? `Unpin ${god.name}` : `Pin ${god.name}`}
-        className={`absolute right-0.5 top-0.5 flex h-6 w-6 items-center justify-center rounded transition-opacity ${
-          pinned ? "text-gold opacity-100" : "text-faint opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"
+        className={`absolute right-0 top-0 flex h-8 w-8 items-center justify-center rounded transition-colors ${
+          pinned ? "text-gold" : "text-muted hover:text-ink-soft focus-visible:text-ink-soft"
         }`}
       >
         <PinIcon filled={pinned} />

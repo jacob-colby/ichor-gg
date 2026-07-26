@@ -115,26 +115,42 @@ type SlotKind = "you" | "ally" | "enemy";
 
 /** A single ally/enemy slot. The "you" kind (ally slot 1) carries a gold
  * ring + a "You" caption so it reads as visually distinct from the rest of
- * the row in every state, filled or empty (see spec R6). */
+ * the row in every state, filled or empty (see spec R6).
+ *
+ * The caption row is *reserved* on every ally slot, not just rendered for
+ * "you" — an invisible-but-present placeholder of the same text/classes so
+ * every slot in the row gets the same label-row height. Without this, the
+ * "you" slot's icon sat one line lower than its neighbors (the label pushed
+ * it down) even though every slot uses the same fixed h-14 button. The enemy
+ * row never had a caption at all, so it doesn't need the reservation. */
 function Slot({
-  kind, position, name, onOpen,
+  kind, position, name, onOpen, onRemove,
 }: {
   kind: SlotKind;
   /** 1-based position within its own row, used for the aria-label/caption. */
   position: number;
   name: string;
   onOpen: () => void;
+  /** Clears just this slot. Omitted entirely (no X control) when empty. */
+  onRemove?: () => void;
 }) {
   const row = kind === "enemy" ? "enemy" : "ally";
+  const rowPlural = row === "enemy" ? "enemies" : "allies";
   const ariaLabel = kind === "you"
     ? (name ? `Change you (${name})` : "Add you")
     : (name ? `Change ${row} ${position} (${name})` : `Add ${row} ${position}`);
   const isYou = kind === "you";
+  const reservesLabelRow = kind !== "enemy";
 
   return (
     <div className="flex flex-col items-center gap-1">
-      {isYou && (
-        <span className="font-display text-[9px] font-bold uppercase tracking-wider text-gold">You</span>
+      {reservesLabelRow && (
+        <span
+          aria-hidden={!isYou}
+          className={`font-display text-[9px] font-bold uppercase tracking-wider text-gold ${isYou ? "" : "invisible"}`}
+        >
+          You
+        </span>
       )}
       {!name ? (
         <button
@@ -148,22 +164,38 @@ function Slot({
           +
         </button>
       ) : (
-        <button
-          type="button"
-          onClick={onOpen}
-          aria-label={ariaLabel}
-          className={`press flex h-14 w-14 flex-none flex-col items-center justify-center gap-1 rounded-md bg-bg2 p-1 ${
-            isYou ? "border-2 border-gold shadow-glow" : "border border-line hover:border-line-strong"
-          }`}
-        >
-          <img
-            src={`/icons/${iconSlug(name)}-head.png`}
-            alt=""
-            className="h-7 w-7 rounded-sm object-cover"
-            onError={(e) => { e.currentTarget.style.visibility = "hidden"; }}
-          />
-          <span className="w-full truncate text-center font-display text-[9px] text-ink">{name}</span>
-        </button>
+        <div className="relative">
+          <button
+            type="button"
+            onClick={onOpen}
+            aria-label={ariaLabel}
+            className={`press flex h-14 w-14 flex-none flex-col items-center justify-center gap-1 rounded-md bg-bg2 p-1 ${
+              isYou ? "border-2 border-gold shadow-glow" : "border border-line hover:border-line-strong"
+            }`}
+          >
+            <img
+              src={`/icons/${iconSlug(name)}-head.png`}
+              alt=""
+              className="h-7 w-7 rounded-sm object-cover"
+              onError={(e) => { e.currentTarget.style.visibility = "hidden"; }}
+            />
+            <span className="w-full truncate text-center font-display text-[9px] text-ink">{name}</span>
+          </button>
+          {/* Clears just this slot — a sibling control, not nested in the
+              button above, so activating it can never also trigger onOpen
+              (the god picker). stopPropagation is extra insurance against a
+              future ancestor click handler. */}
+          {onRemove && (
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); onRemove(); }}
+              aria-label={`Remove ${name} from ${rowPlural}`}
+              className="press absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full border border-line bg-bg1 text-[10px] leading-none text-faint hover:border-line-strong hover:text-muted"
+            >
+              ×
+            </button>
+          )}
+        </div>
       )}
     </div>
   );
@@ -276,42 +308,49 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
         </div>
       </div>
 
-      <div>
-        <div className="mb-2 flex items-center justify-between">
-          <span className="font-mono text-[10px] uppercase tracking-wider text-faint">Allies</span>
-          <button
-            type="button"
-            onClick={copyLink}
-            className="press rounded-md bg-bg2 px-2.5 py-1 text-[11px] text-faint hover:text-ink"
-          >
-            {copied ? "Copied!" : "Copy link"}
-          </button>
+      {/* Allies + Enemies as a horizontally-centered pair once there's room
+          side by side; stacked on narrow/mobile widths where two rows of
+          slots wouldn't fit (spec: unusable at 375px side by side). */}
+      <div data-testid="draft-teams" className="flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-center md:gap-10">
+        <div>
+          <div className="mb-2 flex items-center justify-between">
+            <span className="font-mono text-[10px] uppercase tracking-wider text-faint">Allies</span>
+            <button
+              type="button"
+              onClick={copyLink}
+              className="press rounded-md bg-bg2 px-2.5 py-1 text-[11px] text-faint hover:text-ink"
+            >
+              {copied ? "Copied!" : "Copy link"}
+            </button>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {draft.allies.map((name, i) => (
+              <Slot
+                key={i}
+                kind={i === 0 ? "you" : "ally"}
+                position={i + 1}
+                name={name}
+                onOpen={() => setPickSlot({ kind: "ally", index: i })}
+                onRemove={name ? () => setAlly(i, "") : undefined}
+              />
+            ))}
+          </div>
         </div>
-        <div className="flex flex-wrap gap-3">
-          {draft.allies.map((name, i) => (
-            <Slot
-              key={i}
-              kind={i === 0 ? "you" : "ally"}
-              position={i + 1}
-              name={name}
-              onOpen={() => setPickSlot({ kind: "ally", index: i })}
-            />
-          ))}
-        </div>
-      </div>
 
-      <div>
-        <div className="mb-2 font-mono text-[10px] uppercase tracking-wider text-faint">Enemies</div>
-        <div className="flex flex-wrap gap-3">
-          {draft.enemies.map((name, i) => (
-            <Slot
-              key={i}
-              kind="enemy"
-              position={i + 1}
-              name={name}
-              onOpen={() => setPickSlot({ kind: "enemy", index: i })}
-            />
-          ))}
+        <div>
+          <div className="mb-2 font-mono text-[10px] uppercase tracking-wider text-faint">Enemies</div>
+          <div className="flex flex-wrap gap-3">
+            {draft.enemies.map((name, i) => (
+              <Slot
+                key={i}
+                kind="enemy"
+                position={i + 1}
+                name={name}
+                onOpen={() => setPickSlot({ kind: "enemy", index: i })}
+                onRemove={name ? () => setEnemy(i, "") : undefined}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
@@ -350,7 +389,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
                       />
                       <span className={`text-sm ${isAdded ? "font-medium text-blue" : "text-ink"}`}>{name}</span>
                       {isAdded && <span className="text-[10px] text-muted">swap in</span>}
-                      {it && <span className="ml-auto font-mono text-[11px] text-faint">{it.cost}g</span>}
+                      {it && <span className="ml-auto font-mono text-[11px] text-gold">{it.cost}g</span>}
                     </div>
                     {isAdded && reason && (
                       <div className="ml-9 mb-1 text-[10px] text-faint">↑ {reason}</div>

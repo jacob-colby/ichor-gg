@@ -50,7 +50,7 @@ export function ItemCard({ item, onClick }: { item: Item; onClick: () => void })
         <ItemIcon name={item.name} />
         <div className="min-w-0 flex-1">
           <div className="truncate text-sm text-ink">{item.name}</div>
-          <div className="font-mono text-[10px] text-faint">{item.cost}g · {tierLabel(item.tier)}</div>
+          <div className="font-mono text-[10px] text-faint"><span className="text-gold">{item.cost}g</span> · {tierLabel(item.tier)}</div>
         </div>
       </div>
       <div className="flex items-center justify-between gap-1">
@@ -82,7 +82,7 @@ function ItemDetail({ item, byName }: { item: Item; byName: Map<string, Item> })
         <ItemIcon name={item.name} size="h-10 w-10" />
         <div>
           <div className="font-display text-lg font-semibold text-ink">{item.name}</div>
-          <div className="font-mono text-xs text-faint">{item.cost}g · {tierLabel(item.tier)}</div>
+          <div className="font-mono text-xs text-faint"><span className="text-gold">{item.cost}g</span> · {tierLabel(item.tier)}</div>
         </div>
         <div className="ml-auto flex items-center gap-2"><MetaBadge meta={item.meta} /><EffBadge tier={item.efficiency_tier} /></div>
       </div>

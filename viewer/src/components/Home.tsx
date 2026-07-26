@@ -213,13 +213,15 @@ function LatestPatch({ periods }: { periods: PatchPeriod[] | undefined }) {
   );
 }
 
-/** Relative freshness with the absolute date on hover. Omitted entirely
- * when the index predates the `data_updated` field. */
-function Freshness({ dataUpdated }: { dataUpdated?: string }) {
+/** Relative freshness with the absolute date on hover, plus the current game
+ * patch label when the index carries one (Task R1) — "Updated yesterday ·
+ * Open Beta 39". Omitted entirely when the index predates `data_updated`;
+ * the patch clause is simply skipped when `data_patch` is absent. */
+function Freshness({ dataUpdated, dataPatch }: { dataUpdated?: string; dataPatch?: string }) {
   if (!dataUpdated) return null;
   return (
     <p data-testid="home-freshness" title={dataUpdated} className="text-center font-mono text-[11px] text-faint">
-      Updated {relativeDate(dataUpdated)}
+      Updated {relativeDate(dataUpdated)}{dataPatch ? ` · ${dataPatch}` : ""}
     </p>
   );
 }
@@ -231,7 +233,7 @@ export function Home({ data }: { data: IndexData }) {
       <PinnedSection gods={data.gods} />
       <TierSlice tierlist={data.tierlist} />
       <LatestPatch periods={data.patch_notes} />
-      <Freshness dataUpdated={data.data_updated} />
+      <Freshness dataUpdated={data.data_updated} dataPatch={data.data_patch} />
     </div>
   );
 }

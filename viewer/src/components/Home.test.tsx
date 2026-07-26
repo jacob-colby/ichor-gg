@@ -92,4 +92,16 @@ describe("Home", () => {
     render(<Home data={baseData()} />);
     expect(screen.queryByTestId("home-freshness")).not.toBeInTheDocument();
   });
+
+  it("appends the current game patch to the freshness line when data_patch is present", () => {
+    render(<Home data={baseData({ data_updated: "2026-07-23", data_patch: "Open Beta 39" })} />);
+    const freshness = screen.getByTestId("home-freshness");
+    expect(freshness.textContent).toMatch(/^Updated .+ · Open Beta 39$/);
+  });
+
+  it("omits the patch clause cleanly when data_patch is absent", () => {
+    render(<Home data={baseData({ data_updated: "2026-07-23" })} />);
+    const freshness = screen.getByTestId("home-freshness");
+    expect(freshness.textContent).not.toContain("·");
+  });
 });

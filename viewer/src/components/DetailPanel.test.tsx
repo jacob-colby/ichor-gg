@@ -532,7 +532,10 @@ describe("DetailPanel — hover/WHY-card fix (spec E)", () => {
     const trigger = screen.getByText("Deathbringer").closest('[tabindex="0"]')!;
     fireEvent.focus(trigger);
     // item identity
-    expect(screen.getByText(/3100g/)).toBeInTheDocument();
+    const cost = screen.getByText("3100g");
+    expect(cost).toBeInTheDocument();
+    expect(cost).toHaveClass("text-gold"); // cost number is gold; the "· T4" part stays muted
+    expect(cost.parentElement).not.toHaveClass("text-gold");
     expect(screen.getByText(/Deals bonus damage on crit\./)).toBeInTheDocument();
     expect(screen.getByText("Physical Power")).toBeInTheDocument();
     // the four score bars (one hover, one panel — spec E)

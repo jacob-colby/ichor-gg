@@ -33,4 +33,18 @@ describe("ItemsShop", () => {
     render(<ItemsShop items={withMeta} openItem={undefined} />);
     expect(screen.getByText(/55% avg · 4/)).toBeInTheDocument();
   });
+
+  it("renders the cost number in the gold token, tier label left in the muted color", () => {
+    render(<ItemsShop items={items} openItem={undefined} />);
+    const cost = screen.getByText("2500g");
+    expect(cost).toHaveClass("text-gold");
+    expect(cost.parentElement).toHaveClass("text-faint");
+    expect(cost.parentElement).not.toHaveClass("text-gold");
+  });
+
+  it("renders the cost in gold on the item detail view too", () => {
+    render(<ItemsShop items={items} openItem={"Rage"} />);
+    const costs = screen.getAllByText("2500g");
+    expect(costs.some((c) => c.className.includes("text-gold"))).toBe(true);
+  });
 });

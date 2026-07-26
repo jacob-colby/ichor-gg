@@ -1,5 +1,5 @@
 import { useMemo, useState, type ReactNode } from "react";
-import type { GodTierEntry, ItemTierEntry } from "../types";
+import type { GodTierEntry, ItemTierEntry, TierListData } from "../types";
 import { iconSlug } from "../lib/builds";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { LANES, godLane, godInLane, laneTextClass, type Lane } from "../lib/roleAccent";
@@ -7,8 +7,14 @@ import { efficiencyLabel } from "../lib/itemFilters";
 
 type Subject = "gods" | "items";
 type Source = "ours" | "community";
+type GameMode = "conquest" | "joust";
 const TIERS = ["S", "A", "B", "C"] as const;
 type TierLetter = (typeof TIERS)[number];
+
+const GAME_MODES: { key: GameMode; label: string }[] = [
+  { key: "conquest", label: "Conquest" },
+  { key: "joust", label: "Joust" },
+];
 
 const TIER_TEXT: Record<TierLetter, string> = {
   S: "text-gold",
@@ -112,10 +118,24 @@ function TierBand({ tier, count, children }: { tier: TierLetter; count: number; 
   );
 }
 
-export function TierList({ gods, items }: { gods: GodTierEntry[]; items: ItemTierEntry[] }) {
+export function TierList({ tierlist }: { tierlist?: TierListData }) {
+  const [gameMode, setGameMode] = useState<GameMode>("conquest");
   const [subject, setSubject] = useState<Subject>("gods");
   const [source, setSource] = useState<Source>("ours");
   const [filter, setFilter] = useState<Filter>({});
+
+  // Per-mode slice (Task R2), falling back to the legacy flat top-level
+  // shape when the per-mode key is absent — either because this index
+  // predates R2, or (Conquest specifically) because it's the same data
+  // mirrored at the top level anyway. Memoized so the `?? []` fallback
+  // doesn't hand the filters below a fresh array identity every render.
+  const modeSlice = useMemo(() => tierlist?.[gameMode] ?? tierlist, [tierlist, gameMode]);
+  const gods = useMemo(() => modeSlice?.gods ?? [], [modeSlice]);
+  const items = useMemo(() => modeSlice?.items ?? [], [modeSlice]);
+  // Joust has no community source at all — SmiteBrain doesn't track it — so
+  // every god is 0/87 covered there. Community `tier_ours` is unaffected;
+  // this is specifically about the Community toggle being uniformly empty.
+  const isJoustCommunityGap = gameMode === "joust" && source === "community";
 
   const set = (patch: Partial<Filter>) => setFilter((f) => ({ ...f, ...patch }));
   const clear = () => setFilter({});
@@ -158,6 +178,11 @@ export function TierList({ gods, items }: { gods: GodTierEntry[]; items: ItemTie
       <div className="sticky top-0 z-10 -mx-4 mb-4 bg-bg0/95 px-4 pb-3 pt-1 backdrop-blur">
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <div className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
+            {GAME_MODES.map((m) => (
+              <button key={m.key} type="button" onClick={() => setGameMode(m.key)} className={segBtn(gameMode === m.key)}>{m.label}</button>
+            ))}
+          </div>
+          <div className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
             <button type="button" onClick={() => setSubject("gods")} className={segBtn(subject === "gods")}>Gods</button>
             <button type="button" onClick={() => setSubject("items")} className={segBtn(subject === "items")}>Items</button>
           </div>
@@ -176,6 +201,11 @@ export function TierList({ gods, items }: { gods: GodTierEntry[]; items: ItemTie
           </div>
           <span className="ml-auto font-mono text-[11px] text-faint">{filtered.length} {subject}</span>
         </div>
+        {isJoustCommunityGap && (
+          <p className="mb-3 text-[11px] text-faint">
+            Joust has no community build source — SmiteBrain doesn't track Joust. Showing our calculated tiers only.
+          </p>
+        )}
         {subject === "gods" ? (
           <div className="flex flex-wrap items-center gap-2 overflow-x-auto">
             <button type="button" onClick={() => set({ lane: undefined })}

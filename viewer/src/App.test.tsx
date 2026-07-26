@@ -49,7 +49,9 @@ describe("App routing", () => {
     fireEvent.click(draft);
     // The draft page's ally slot 1 is always labeled "You", filled or not —
     // a stable signal that the real page (not the old placeholder) rendered.
-    await waitFor(() => expect(screen.getByText("You")).toBeInTheDocument());
+    // Every ally slot reserves the label's height, so "You" appears once per
+    // ally slot; only the first is visible.
+    await waitFor(() => expect(screen.getAllByText("You")[0]).toBeInTheDocument());
   });
 
   it("navigates to the builds view via the nav, showing the god sidebar", async () => {
@@ -82,6 +84,21 @@ describe("App routing", () => {
     render(<App />);
     await waitFor(() => expect(screen.getByPlaceholderText(/search gods/i)).toBeInTheDocument());
     expect(screen.queryByTestId("header-freshness")).not.toBeInTheDocument();
+  });
+
+  it("appends the current patch label to the header freshness stamp when data_patch is present", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({
+      ok: true, json: () => Promise.resolve({ ...data, data_patch: "Open Beta 39" }),
+    }));
+    render(<App />);
+    const freshness = await screen.findByTestId("header-freshness");
+    expect(freshness.textContent).toMatch(/^Updated .+ · Open Beta 39$/);
+  });
+
+  it("omits the patch clause from the header stamp cleanly when data_patch is absent", async () => {
+    render(<App />);
+    const freshness = await screen.findByTestId("header-freshness");
+    expect(freshness.textContent).not.toContain("·");
   });
 
   it("shows a layout-shaped skeleton (not a bare Loading… string) before data arrives", () => {

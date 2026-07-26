@@ -84,7 +84,7 @@ function ItemDetailCard({ item, name, score }: { item?: Item; name: string; scor
     <div>
       <div className="mb-1 flex items-baseline justify-between gap-2">
         <span className="font-display text-sm font-semibold text-ink">{item.name}</span>
-        <span className="shrink-0 font-mono text-[11px] text-faint">{item.cost}g · {tierLabel(item.tier)}</span>
+        <span className="shrink-0 font-mono text-[11px] text-faint"><span className="text-gold">{item.cost}g</span> · {tierLabel(item.tier)}</span>
       </div>
       {Object.entries(item.stats || {}).map(([k, v]) => (
         <div key={k} className="flex justify-between text-xs text-muted">
