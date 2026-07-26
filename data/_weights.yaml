@@ -28,16 +28,21 @@ abilities:
   early_points: 1              # one point in each non-ult ability first
   max_levels: 20
 
-# ── Draft-aware builds (2026-07-23) ──
+# ── Draft-aware builds (2026-07-23, proportional scaling 2026-07-25) ──
 # How an entered enemy/ally comp skews item scores. The viewer is static, so the
 # browser applies these as a tag/stat overlay on the per-god base scores shipped
-# in index.json (`god_item_scores`). Bonuses are per matching enemy god, so 4
-# magical enemies count double 2. `max_bonus` clamps an item's TOTAL bonus so a
-# scary comp shifts a slot or three, never rewrites the build into full defense.
+# in index.json (`god_item_scores`). Bonuses scale by SHARE of the enemy team
+# (matching count / enemy-team size), not raw count — this makes team size
+# mode-agnostic: 2 healers out of 3 in Joust is a bigger threat than 2 out of 5
+# in Conquest, and both are captured correctly with no per-mode retuning.
+# `per_share` is calibrated so a full 5-god Conquest comp lands where the old
+# per-enemy formula did (per_share ~= old per_enemy * 5, i.e. 0.02 * 5 = 0.1).
+# `max_bonus` clamps an item's TOTAL bonus so a scary comp shifts a slot or
+# three, never rewrites the build into full defense.
 draft:
   score_cap: 40          # items shipped per god (a god's #60 item can't win a slot)
   max_bonus: 0.12        # clamp on the total bonus any one item can receive
-  per_enemy: 0.02        # weight per matching enemy god (multiplied by count)
+  per_share: 0.1         # weight per matching share of the enemy team (count / enemyCount)
   tag_bonus:             # threat -> item effect_tag
     # anti-heal is weighted 2x because it is the highest-leverage counter-buy in
     # the game AND it starts far down the base ranking (Divine Ruin is Agni's

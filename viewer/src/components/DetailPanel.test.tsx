@@ -466,7 +466,7 @@ describe("DetailPanel — Draft tab", () => {
   // fixture is a deterministic, clearly-visible promotion, not realism.
   const DRAFT_CFG: DraftConfig = {
     max_bonus: 0.5,
-    per_enemy: 0.5,
+    per_share: 0.5,
     tag_bonus: { healers: { "anti-heal": 1 } },
     stat_bonus: {},
     ally_covered: -0.5,

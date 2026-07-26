@@ -28,6 +28,7 @@ export function deriveThreats(
     lockdown: enemies.filter((g) => hasSpec(g, LOCK)).length,
     crit: enemies.filter((g) => hasSpec(g, CRIT)).length,
     tanks: enemies.filter((g) => hasSpec(g, TANK)).length,
+    enemyCount: enemies.length,
     allyCovers,
     allyAllPhysical: allies.length > 0 && allies.every((g) => g.damage_type === "physical"),
   };
@@ -43,6 +44,11 @@ export function threatOverlay(t: ThreatModel, cfg: DraftConfig) {
     magical: t.magical, physical: t.physical,
   };
 
+  // Share of the enemy team, not raw count — 2 of 3 (Joust) is a bigger
+  // threat than 2 of 5 (Conquest). Guarded against div-by-zero: an empty (or
+  // pathological) comp yields a zero share rather than NaN/Infinity.
+  const share = t.enemyCount > 0 ? (n: number) => n / t.enemyCount : () => 0;
+
   for (const [threat, map] of Object.entries(cfg.tag_bonus ?? {})) {
     const n = counts[threat] ?? 0;
     if (!n) continue;
@@ -50,18 +56,18 @@ export function threatOverlay(t: ThreatModel, cfg: DraftConfig) {
       let mult = 1;
       if (t.allyCovers[tag]) mult += cfg.ally_covered; // covered -> damped
       else mult += cfg.ally_gap; // nobody covers -> raised
-      tags[tag] = (tags[tag] ?? 0) + n * cfg.per_enemy * w * mult;
+      tags[tag] = (tags[tag] ?? 0) + share(n) * cfg.per_share * w * mult;
     }
   }
   for (const [threat, map] of Object.entries(cfg.stat_bonus ?? {})) {
     const n = counts[threat] ?? 0;
     if (!n) continue;
     for (const [stat, w] of Object.entries(map)) {
-      stats[stat] = (stats[stat] ?? 0) + n * cfg.per_enemy * w;
+      stats[stat] = (stats[stat] ?? 0) + share(n) * cfg.per_share * w;
     }
   }
   if (t.allyAllPhysical) {
-    stats["Penetration"] = (stats["Penetration"] ?? 0) + cfg.per_enemy;
+    stats["Penetration"] = (stats["Penetration"] ?? 0) + cfg.per_share;
   }
   return { tags, stats };
 }

@@ -160,13 +160,14 @@ export interface ThreatModel {
   lockdown: number;
   crit: number;
   tanks: number;
+  enemyCount: number; // recognised enemy-team size (Conquest 5, Joust 3, ...)
   allyCovers: Record<string, boolean>; // effect_tag -> covered by an ally
   allyAllPhysical: boolean;
 }
 
 export interface DraftConfig {
   max_bonus: number;
-  per_enemy: number;
+  per_share: number;
   tag_bonus: Record<string, Record<string, number>>;
   stat_bonus: Record<string, Record<string, number>>;
   ally_covered: number;

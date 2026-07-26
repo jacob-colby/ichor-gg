@@ -11,7 +11,7 @@ const GODS = [god("Ymir"), god("Agni", "magical")];
 const EMPTY_DRAFT: DraftComp = { allies: ["", "", "", ""], enemies: ["", "", "", "", ""] };
 const EMPTY_THREATS: ThreatModel = {
   magical: 0, physical: 0, healers: 0, lockdown: 0, crit: 0, tanks: 0,
-  allyCovers: {}, allyAllPhysical: false,
+  enemyCount: 0, allyCovers: {}, allyAllPhysical: false,
 };
 
 describe("DraftBar", () => {
