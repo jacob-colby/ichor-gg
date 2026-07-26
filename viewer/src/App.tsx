@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { useIndexData } from "./hooks/useIndexData";
 import { GodSidebar } from "./components/GodSidebar";
 import { Home } from "./components/Home";
+import { DraftPage } from "./components/DraftPage";
 import { DetailPanel } from "./components/DetailPanel";
 import { AddGodModal } from "./components/AddGodModal";
 import { Footer } from "./components/Footer";
@@ -156,8 +157,15 @@ function App() {
           {route.view === "home" ? (
             <div className="flex-1 overflow-y-auto"><Home data={data} /></div>
           ) : route.view === "draft" ? (
-            // Placeholder — Task V4 replaces this with the real draft page.
-            <div className="flex-1 overflow-y-auto p-6"><p className="text-muted">Draft — coming next.</p></div>
+            <div className="flex-1 overflow-y-auto">
+              <DraftPage
+                gods={data.gods}
+                items={data.items}
+                builds={data.builds}
+                godItemScores={data.god_item_scores}
+                draftConfig={data.draft}
+              />
+            </div>
           ) : route.view === "items" ? (
             <div className="flex-1 overflow-y-auto"><ItemsShop items={data.items} openItem={route.item} /></div>
           ) : route.view === "tiers" ? (

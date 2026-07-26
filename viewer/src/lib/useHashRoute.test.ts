@@ -9,6 +9,9 @@ describe("parseHash", () => {
   it("parses the draft page", () => {
     expect(parseHash("#/draft")).toEqual({ view: "draft", tab: "builds" });
   });
+  it("parses the draft page with a shareable query string, ignoring it for routing", () => {
+    expect(parseHash("#/draft?m=joust&me=Agni&e=Loki,Thor")).toEqual({ view: "draft", tab: "builds" });
+  });
   it("parses the bare builds index (nav landing with no god picked)", () => {
     expect(parseHash("#/builds")).toEqual({ view: "builds", tab: "builds" });
   });

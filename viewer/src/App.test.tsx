@@ -43,11 +43,13 @@ describe("App routing", () => {
     expect(home).toHaveAttribute("aria-current", "true");
   });
 
-  it("navigates to the draft placeholder via the nav", async () => {
+  it("navigates to the standalone draft page via the nav", async () => {
     render(<App />);
     const [draft] = await screen.findAllByRole("button", { name: /^draft$/i });
     fireEvent.click(draft);
-    await waitFor(() => expect(screen.getByText(/draft.*coming next/i)).toBeInTheDocument());
+    // The draft page's ally slot 1 is always labeled "You", filled or not —
+    // a stable signal that the real page (not the old placeholder) rendered.
+    await waitFor(() => expect(screen.getByText("You")).toBeInTheDocument());
   });
 
   it("navigates to the builds view via the nav, showing the god sidebar", async () => {

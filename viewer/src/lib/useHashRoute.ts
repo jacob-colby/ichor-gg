@@ -8,7 +8,12 @@ export interface Route {
 }
 
 export function parseHash(hash: string): Route {
-  const parts = hash.replace(/^#\/?/, "").split("/").filter(Boolean).map(decodeURIComponent);
+  // Strip a query string before matching path segments — the draft page's
+  // shareable URL (#/draft?m=...&me=...) carries one, and routing itself
+  // must stay query-string-agnostic; the draft page reads the raw hash
+  // itself to decode those params.
+  const [path] = hash.split("?");
+  const parts = path.replace(/^#\/?/, "").split("/").filter(Boolean).map(decodeURIComponent);
   if (parts[0] === "items") {
     return { view: "items", tab: "builds", ...(parts[1] ? { item: parts[1] } : {}) };
   }
