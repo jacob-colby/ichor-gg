@@ -32,7 +32,7 @@ describe("App routing", () => {
     render(<App />);
     const [items] = await screen.findAllByRole("button", { name: /^items$/i });
     fireEvent.click(items);
-    await waitFor(() => expect(screen.getByPlaceholderText(/search items/i)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: /cost less than their stats are worth/i })).toBeInTheDocument());
   });
 
   it("defaults to the home view with no god rail", async () => {

@@ -19113,7 +19113,12 @@
       "source_url": "https://wiki.smite2.com/w/Alchemist_Coat",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2437,
+        "residual": -87,
+        "score": 0.3914
+      }
     },
     {
       "type": "smite-item",
@@ -19138,7 +19143,12 @@
         "sustain",
         "aura"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2538,
+        "residual": -188,
+        "score": 0.4434
+      }
     },
     {
       "type": "smite-item",
@@ -19160,7 +19170,12 @@
       "effect_tags": [
         "burst"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2678,
+        "residual": -78,
+        "score": 0.3864
+      }
     },
     {
       "type": "smite-item",
@@ -19180,7 +19195,12 @@
       "source_url": "https://wiki.smite2.com/w/Ancile",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2551,
+        "residual": -51,
+        "score": 0.3728
+      }
     },
     {
       "type": "smite-item",
@@ -19199,7 +19219,12 @@
       "source_url": "https://wiki.smite2.com/w/Archmage's_Gem",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2050,
+        "residual": 100,
+        "score": 0.295
+      }
     },
     {
       "type": "smite-item",
@@ -19221,7 +19246,12 @@
       "effect_tags": [
         "mobility"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2652,
+        "residual": -2,
+        "score": 0.3475
+      }
     },
     {
       "type": "smite-item",
@@ -19243,7 +19273,12 @@
       "effect_tags": [
         "cc-immunity"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 3185,
+        "residual": 515,
+        "score": 0.0817
+      }
     },
     {
       "type": "smite-item",
@@ -19266,6 +19301,11 @@
         "protection-shred"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2770,
+        "residual": -120,
+        "score": 0.4083
+      },
       "meta": {
         "win_avg": 0.53,
         "gods": 1
@@ -19294,6 +19334,11 @@
         "sustain"
       ],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2470,
+        "residual": -170,
+        "score": 0.4339
+      },
       "meta": {
         "win_avg": 0.51,
         "gods": 1
@@ -19320,6 +19365,11 @@
         "burst"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2445,
+        "residual": 55,
+        "score": 0.3184
+      },
       "meta": {
         "win_avg": 0.545,
         "gods": 4
@@ -19346,6 +19396,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2557,
+        "residual": -157,
+        "score": 0.4271
+      },
       "meta": {
         "win_avg": 0.532,
         "gods": 5
@@ -19369,6 +19424,11 @@
         "mobility"
       ],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 1942,
+        "residual": 658,
+        "score": 0.008
+      },
       "meta": {
         "win_avg": 0.588,
         "gods": 12
@@ -19394,7 +19454,12 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2472,
+        "residual": -222,
+        "score": 0.461
+      }
     },
     {
       "type": "smite-item",
@@ -19413,7 +19478,12 @@
       "source_url": "https://wiki.smite2.com/w/Blood-soaked_Shroud",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2323,
+        "residual": -223,
+        "score": 0.4615
+      }
     },
     {
       "type": "smite-item",
@@ -19435,7 +19505,12 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2500,
+        "residual": 50,
+        "score": 0.3206
+      }
     },
     {
       "type": "smite-item",
@@ -19455,7 +19530,12 @@
       "source_url": "https://wiki.smite2.com/w/Bluestone_Brooch",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2147,
+        "residual": -47,
+        "score": 0.3706
+      }
     },
     {
       "type": "smite-item",
@@ -19474,7 +19554,8 @@
       "source_url": "https://wiki.smite2.com/w/Bluestone_Pendant",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -19496,6 +19577,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2361,
+        "residual": -61,
+        "score": 0.378
+      },
       "meta": {
         "win_avg": 0.538,
         "gods": 19
@@ -19520,6 +19606,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2491,
+        "residual": 9,
+        "score": 0.342
+      },
       "meta": {
         "win_avg": 0.58,
         "gods": 1
@@ -19547,6 +19638,11 @@
         "burst"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2538,
+        "residual": 12,
+        "score": 0.3406
+      },
       "meta": {
         "win_avg": 0.635,
         "gods": 2
@@ -19572,7 +19668,12 @@
       "effect_tags": [
         "anti-heal"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2133,
+        "residual": 417,
+        "score": 0.1318
+      }
     },
     {
       "type": "smite-item",
@@ -19595,6 +19696,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2538,
+        "residual": -138,
+        "score": 0.4178
+      },
       "meta": {
         "win_avg": 0.561,
         "gods": 17
@@ -19617,7 +19723,8 @@
       "source_url": "https://wiki.smite2.com/w/Bumba's_Cudgel",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -19636,7 +19743,8 @@
       "source_url": "https://wiki.smite2.com/w/Bumba's_Golden_Dagger",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -19655,7 +19763,12 @@
       "source_url": "https://wiki.smite2.com/w/Bumba's_Hammer",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2193,
+        "residual": -43,
+        "score": 0.3688
+      }
     },
     {
       "type": "smite-item",
@@ -19674,7 +19787,12 @@
       "source_url": "https://wiki.smite2.com/w/Bumba's_Spear",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2272,
+        "residual": -122,
+        "score": 0.4091
+      }
     },
     {
       "type": "smite-item",
@@ -19697,7 +19815,12 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2459,
+        "residual": -159,
+        "score": 0.4284
+      }
     },
     {
       "type": "smite-item",
@@ -19717,7 +19840,12 @@
       "source_url": "https://wiki.smite2.com/w/Chronos'_Pendant",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2492,
+        "residual": -92,
+        "score": 0.394
+      }
     },
     {
       "type": "smite-item",
@@ -19741,7 +19869,12 @@
         "mobility",
         "cc-immunity"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2252,
+        "residual": 498,
+        "score": 0.0899
+      }
     },
     {
       "type": "smite-item",
@@ -19760,7 +19893,8 @@
       "source_url": "https://wiki.smite2.com/w/Conduit_Gem",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -19784,6 +19918,11 @@
         "burst"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2338,
+        "residual": 62,
+        "score": 0.3145
+      },
       "meta": {
         "win_avg": 0.5,
         "gods": 1
@@ -19808,6 +19947,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2257,
+        "residual": 243,
+        "score": 0.2216
+      },
       "meta": {
         "win_avg": 0.549,
         "gods": 10
@@ -19832,7 +19976,12 @@
       "source_url": "https://wiki.smite2.com/w/Damaru",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2809,
+        "residual": -59,
+        "score": 0.3768
+      }
     },
     {
       "type": "smite-item",
@@ -19851,7 +20000,12 @@
       "source_url": "https://wiki.smite2.com/w/Daybreak_Gavel",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2206,
+        "residual": 294,
+        "score": 0.1954
+      }
     },
     {
       "type": "smite-item",
@@ -19872,7 +20026,12 @@
       "source_url": "https://wiki.smite2.com/w/Death_Metal",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2774,
+        "residual": -174,
+        "score": 0.4362
+      }
     },
     {
       "type": "smite-item",
@@ -19891,7 +20050,12 @@
       "source_url": "https://wiki.smite2.com/w/Death's_Embrace",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2120,
+        "residual": 30,
+        "score": 0.3311
+      }
     },
     {
       "type": "smite-item",
@@ -19909,7 +20073,8 @@
       "source_url": "https://wiki.smite2.com/w/Death's_Toll",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -19930,6 +20095,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2619,
+        "residual": 281,
+        "score": 0.2019
+      },
       "meta": {
         "win_avg": 0.588,
         "gods": 5
@@ -19954,7 +20124,12 @@
       "source_url": "https://wiki.smite2.com/w/Demon_Blade",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2486,
+        "residual": 264,
+        "score": 0.2105
+      }
     },
     {
       "type": "smite-item",
@@ -19977,6 +20152,11 @@
         "sustain"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2368,
+        "residual": 132,
+        "score": 0.2787
+      },
       "meta": {
         "win_avg": 0.539,
         "gods": 10
@@ -20002,7 +20182,12 @@
         "anti-heal",
         "burst"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2503,
+        "residual": -3,
+        "score": 0.348
+      }
     },
     {
       "type": "smite-item",
@@ -20024,7 +20209,12 @@
       "source_url": "https://wiki.smite2.com/w/Doom_Orb",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2794,
+        "residual": -94,
+        "score": 0.395
+      }
     },
     {
       "type": "smite-item",
@@ -20047,7 +20237,12 @@
       "effect_tags": [
         "aura"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2629,
+        "residual": 71,
+        "score": 0.3098
+      }
     },
     {
       "type": "smite-item",
@@ -20069,6 +20264,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2587,
+        "residual": 113,
+        "score": 0.2886
+      },
       "meta": {
         "win_avg": 0.43,
         "gods": 1
@@ -20094,7 +20294,12 @@
       "effect_tags": [
         "cc-immunity"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 3065,
+        "residual": 435,
+        "score": 0.1227
+      }
     },
     {
       "type": "smite-item",
@@ -20115,6 +20320,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2450,
+        "residual": 350,
+        "score": 0.1666
+      },
       "meta": {
         "win_avg": 0.546,
         "gods": 32
@@ -20157,6 +20367,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2069,
+        "residual": -1269,
+        "score": 1.0
+      },
       "meta": {
         "win_avg": 0.53,
         "gods": 29
@@ -20182,7 +20397,12 @@
       "effect_tags": [
         "aura"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2360,
+        "residual": -60,
+        "score": 0.3772
+      }
     },
     {
       "type": "smite-item",
@@ -20205,7 +20425,12 @@
       "effect_tags": [
         "aura"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2481,
+        "residual": -81,
+        "score": 0.3881
+      }
     },
     {
       "type": "smite-item",
@@ -20227,6 +20452,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2789,
+        "residual": -239,
+        "score": 0.4697
+      },
       "meta": {
         "win_avg": 0.6,
         "gods": 2
@@ -20256,6 +20486,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2239,
+        "residual": -1039,
+        "score": 0.8814
+      },
       "meta": {
         "win_avg": 0.461,
         "gods": 20
@@ -20279,7 +20514,12 @@
       "source_url": "https://wiki.smite2.com/w/Eye_of_Erebus",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2363,
+        "residual": 237,
+        "score": 0.2243
+      }
     },
     {
       "type": "smite-item",
@@ -20300,7 +20540,12 @@
       "source_url": "https://wiki.smite2.com/w/Eye_of_Providence",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2543,
+        "residual": -243,
+        "score": 0.4718
+      }
     },
     {
       "type": "smite-item",
@@ -20323,7 +20568,12 @@
       "effect_tags": [
         "peel"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2609,
+        "residual": -109,
+        "score": 0.4027
+      }
     },
     {
       "type": "smite-item",
@@ -20345,6 +20595,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2504,
+        "residual": 96,
+        "score": 0.2973
+      },
       "meta": {
         "win_avg": 0.67,
         "gods": 1
@@ -20368,6 +20623,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2203,
+        "residual": -3,
+        "score": 0.3483
+      },
       "meta": {
         "win_avg": 0.508,
         "gods": 4
@@ -20393,7 +20653,12 @@
       "effect_tags": [
         "mobility"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2521,
+        "residual": 29,
+        "score": 0.3314
+      }
     },
     {
       "type": "smite-item",
@@ -20415,7 +20680,12 @@
       "effect_tags": [
         "peel"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2492,
+        "residual": 8,
+        "score": 0.3424
+      }
     },
     {
       "type": "smite-item",
@@ -20438,6 +20708,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2572,
+        "residual": -222,
+        "score": 0.4608
+      },
       "meta": {
         "win_avg": 0.541,
         "gods": 29
@@ -20460,7 +20735,8 @@
       "source_url": "https://wiki.smite2.com/w/Gilded_Arrow",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -20484,6 +20760,11 @@
         "burst"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2354,
+        "residual": 96,
+        "score": 0.2972
+      },
       "meta": {
         "win_avg": 0.627,
         "gods": 4
@@ -20511,6 +20792,11 @@
         "sustain"
       ],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2286,
+        "residual": 264,
+        "score": 0.2108
+      },
       "meta": {
         "win_avg": 0.68,
         "gods": 1
@@ -20538,7 +20824,12 @@
       "effect_tags": [
         "burst"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2771,
+        "residual": -171,
+        "score": 0.4347
+      }
     },
     {
       "type": "smite-item",
@@ -20562,7 +20853,12 @@
       "effect_tags": [
         "wave-clear"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2533,
+        "residual": -83,
+        "score": 0.3894
+      }
     },
     {
       "type": "smite-item",
@@ -20585,6 +20881,11 @@
         "mobility"
       ],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2257,
+        "residual": 393,
+        "score": 0.1444
+      },
       "meta": {
         "win_avg": 0.65,
         "gods": 1
@@ -20613,6 +20914,11 @@
         "burst"
       ],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2850,
+        "residual": 150,
+        "score": 0.2692
+      },
       "meta": {
         "win_avg": 0.595,
         "gods": 15
@@ -20637,7 +20943,12 @@
       "source_url": "https://wiki.smite2.com/w/Heartwood_Charm",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2511,
+        "residual": 139,
+        "score": 0.2749
+      }
     },
     {
       "type": "smite-item",
@@ -20660,7 +20971,12 @@
       "effect_tags": [
         "mobility"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2491,
+        "residual": 209,
+        "score": 0.2392
+      }
     },
     {
       "type": "smite-item",
@@ -20680,7 +20996,12 @@
       "source_url": "https://wiki.smite2.com/w/Helm_of_Radiance",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2596,
+        "residual": -96,
+        "score": 0.396
+      }
     },
     {
       "type": "smite-item",
@@ -20700,7 +21021,12 @@
       "source_url": "https://wiki.smite2.com/w/Heroism",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2734,
+        "residual": -934,
+        "score": 0.8273
+      }
     },
     {
       "type": "smite-item",
@@ -20721,7 +21047,12 @@
       "source_url": "https://wiki.smite2.com/w/Hide_of_the_Nemean_Lion",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2490,
+        "residual": 60,
+        "score": 0.3156
+      }
     },
     {
       "type": "smite-item",
@@ -20754,6 +21085,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2019,
+        "residual": -1269,
+        "score": 0.9998
+      },
       "meta": {
         "win_avg": 0.528,
         "gods": 12
@@ -20778,7 +21114,12 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2002,
+        "residual": 98,
+        "score": 0.2961
+      }
     },
     {
       "type": "smite-item",
@@ -20801,7 +21142,12 @@
       "effect_tags": [
         "cc-immunity"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2827,
+        "residual": 673,
+        "score": 0.0
+      }
     },
     {
       "type": "smite-item",
@@ -20826,6 +21172,11 @@
         "burst"
       ],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2642,
+        "residual": -192,
+        "score": 0.4453
+      },
       "meta": {
         "win_avg": 0.54,
         "gods": 9
@@ -20851,7 +21202,12 @@
       "effect_tags": [
         "peel"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2822,
+        "residual": -72,
+        "score": 0.3834
+      }
     },
     {
       "type": "smite-item",
@@ -20874,6 +21230,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2784,
+        "residual": -384,
+        "score": 0.5443
+      },
       "meta": {
         "win_avg": 0.541,
         "gods": 15
@@ -20902,6 +21263,11 @@
         "burst"
       ],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2583,
+        "residual": -183,
+        "score": 0.4407
+      },
       "meta": {
         "win_avg": 0.645,
         "gods": 2
@@ -20924,7 +21290,8 @@
       "source_url": "https://wiki.smite2.com/w/Leather_Cowl",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -20947,7 +21314,12 @@
         "wave-clear",
         "burst"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2530,
+        "residual": -30,
+        "score": 0.362
+      }
     },
     {
       "type": "smite-item",
@@ -20968,7 +21340,12 @@
       "source_url": "https://wiki.smite2.com/w/Leviathan's_Hide",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2555,
+        "residual": -55,
+        "score": 0.3749
+      }
     },
     {
       "type": "smite-item",
@@ -20992,7 +21369,12 @@
         "sustain",
         "aura"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2481,
+        "residual": -81,
+        "score": 0.3881
+      }
     },
     {
       "type": "smite-item",
@@ -21014,7 +21396,12 @@
       "effect_tags": [
         "cc-immunity"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2387,
+        "residual": 13,
+        "score": 0.3398
+      }
     },
     {
       "type": "smite-item",
@@ -21038,7 +21425,12 @@
         "peel",
         "cc-immunity"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2618,
+        "residual": -18,
+        "score": 0.3559
+      }
     },
     {
       "type": "smite-item",
@@ -21058,6 +21450,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2500,
+        "residual": 0,
+        "score": 0.3465
+      },
       "meta": {
         "win_avg": 0.5,
         "gods": 1
@@ -21081,7 +21478,12 @@
       "source_url": "https://wiki.smite2.com/w/Midgardian_Mail",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2484,
+        "residual": -84,
+        "score": 0.3898
+      }
     },
     {
       "type": "smite-item",
@@ -21104,6 +21506,11 @@
         "mobility"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2605,
+        "residual": 95,
+        "score": 0.2974
+      },
       "meta": {
         "win_avg": 0.605,
         "gods": 2
@@ -21130,7 +21537,12 @@
         "aura",
         "wave-clear"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2464,
+        "residual": 86,
+        "score": 0.3021
+      }
     },
     {
       "type": "smite-item",
@@ -21151,7 +21563,12 @@
       "source_url": "https://wiki.smite2.com/w/Necronomicon",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2470,
+        "residual": 80,
+        "score": 0.3055
+      }
     },
     {
       "type": "smite-item",
@@ -21173,6 +21590,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2344,
+        "residual": 156,
+        "score": 0.2661
+      },
       "meta": {
         "win_avg": 0.535,
         "gods": 2
@@ -21197,7 +21619,12 @@
       "effect_tags": [
         "protection-shred"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2485,
+        "residual": 65,
+        "score": 0.3133
+      }
     },
     {
       "type": "smite-item",
@@ -21218,6 +21645,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 3067,
+        "residual": -17,
+        "score": 0.3554
+      },
       "meta": {
         "win_avg": 0.557,
         "gods": 29
@@ -21244,6 +21676,11 @@
         "wave-clear"
       ],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2172,
+        "residual": 278,
+        "score": 0.2035
+      },
       "meta": {
         "win_avg": 0.588,
         "gods": 8
@@ -21266,7 +21703,12 @@
       "source_url": "https://wiki.smite2.com/w/Omen_Drum",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2390,
+        "residual": 410,
+        "score": 0.1354
+      }
     },
     {
       "type": "smite-item",
@@ -21288,7 +21730,12 @@
       "source_url": "https://wiki.smite2.com/w/Oni_Hunter's_Garb",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2546,
+        "residual": -46,
+        "score": 0.3702
+      }
     },
     {
       "type": "smite-item",
@@ -21309,7 +21756,12 @@
       "source_url": "https://wiki.smite2.com/w/Pendulum_Blade",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2609,
+        "residual": 141,
+        "score": 0.2738
+      }
     },
     {
       "type": "smite-item",
@@ -21328,7 +21780,12 @@
       "source_url": "https://wiki.smite2.com/w/Pendulum_of_the_Ages",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2115,
+        "residual": 35,
+        "score": 0.3283
+      }
     },
     {
       "type": "smite-item",
@@ -21352,7 +21809,12 @@
       "effect_tags": [
         "aura"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2512,
+        "residual": -62,
+        "score": 0.3782
+      }
     },
     {
       "type": "smite-item",
@@ -21375,7 +21837,12 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2447,
+        "residual": -47,
+        "score": 0.3705
+      }
     },
     {
       "type": "smite-item",
@@ -21399,6 +21866,11 @@
         "burst"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2567,
+        "residual": -17,
+        "score": 0.3553
+      },
       "meta": {
         "win_avg": 0.542,
         "gods": 5
@@ -21424,6 +21896,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2297,
+        "residual": 103,
+        "score": 0.2933
+      },
       "meta": {
         "win_avg": 0.573,
         "gods": 3
@@ -21450,6 +21927,11 @@
         "burst"
       ],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2295,
+        "residual": 305,
+        "score": 0.1894
+      },
       "meta": {
         "win_avg": 0.61,
         "gods": 3
@@ -21476,7 +21958,12 @@
       "effect_tags": [
         "aura"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2374,
+        "residual": 376,
+        "score": 0.1528
+      }
     },
     {
       "type": "smite-item",
@@ -21497,6 +21984,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2456,
+        "residual": -6,
+        "score": 0.3497
+      },
       "meta": {
         "win_avg": 0.44,
         "gods": 1
@@ -21523,7 +22015,12 @@
         "mobility",
         "burst"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2452,
+        "residual": 148,
+        "score": 0.2703
+      }
     },
     {
       "type": "smite-item",
@@ -21547,7 +22044,12 @@
         "mobility",
         "sustain"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2259,
+        "residual": 291,
+        "score": 0.1969
+      }
     },
     {
       "type": "smite-item",
@@ -21570,7 +22072,12 @@
         "cc-immunity",
         "sustain"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2581,
+        "residual": 169,
+        "score": 0.2593
+      }
     },
     {
       "type": "smite-item",
@@ -21595,6 +22102,11 @@
         "sustain"
       ],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2529,
+        "residual": 171,
+        "score": 0.2583
+      },
       "meta": {
         "win_avg": 0.617,
         "gods": 8
@@ -21622,7 +22134,12 @@
         "sustain",
         "aura"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2580,
+        "residual": -230,
+        "score": 0.4647
+      }
     },
     {
       "type": "smite-item",
@@ -21645,6 +22162,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2756,
+        "residual": 244,
+        "score": 0.2208
+      },
       "meta": {
         "win_avg": 0.562,
         "gods": 29
@@ -21671,7 +22193,12 @@
       "effect_tags": [
         "burst"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2750,
+        "residual": -200,
+        "score": 0.4494
+      }
     },
     {
       "type": "smite-item",
@@ -21690,7 +22217,8 @@
       "source_url": "https://wiki.smite2.com/w/Sands_Of_Time",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -21713,7 +22241,12 @@
       "effect_tags": [
         "aura"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2448,
+        "residual": 202,
+        "score": 0.2423
+      }
     },
     {
       "type": "smite-item",
@@ -21737,7 +22270,12 @@
       "effect_tags": [
         "peel"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2402,
+        "residual": -2,
+        "score": 0.3478
+      }
     },
     {
       "type": "smite-item",
@@ -21760,7 +22298,12 @@
         "protection-shred",
         "peel"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2368,
+        "residual": 32,
+        "score": 0.33
+      }
     },
     {
       "type": "smite-item",
@@ -21780,7 +22323,8 @@
       "source_url": "https://wiki.smite2.com/w/Selflessness",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -21800,7 +22344,12 @@
       "source_url": "https://wiki.smite2.com/w/Sharpshooter's_Arrow",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2661,
+        "residual": -511,
+        "score": 0.6093
+      }
     },
     {
       "type": "smite-item",
@@ -21824,7 +22373,12 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2500,
+        "residual": -100,
+        "score": 0.3978
+      }
     },
     {
       "type": "smite-item",
@@ -21845,7 +22399,12 @@
       "source_url": "https://wiki.smite2.com/w/Shield_Splitter",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2567,
+        "residual": -167,
+        "score": 0.4327
+      }
     },
     {
       "type": "smite-item",
@@ -21868,6 +22427,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2538,
+        "residual": 112,
+        "score": 0.289
+      },
       "meta": {
         "win_avg": 0.551,
         "gods": 30
@@ -21896,6 +22460,11 @@
         "aura"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2467,
+        "residual": 33,
+        "score": 0.3293
+      },
       "meta": {
         "win_avg": 0.553,
         "gods": 3
@@ -21922,7 +22491,12 @@
       "effect_tags": [
         "burst"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2428,
+        "residual": 72,
+        "score": 0.3093
+      }
     },
     {
       "type": "smite-item",
@@ -21957,7 +22531,12 @@
       "source_url": "https://wiki.smite2.com/w/Skeggox",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2105,
+        "residual": -1105,
+        "score": 0.9155
+      }
     },
     {
       "type": "smite-item",
@@ -21984,6 +22563,11 @@
         "aura"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2614,
+        "residual": -114,
+        "score": 0.4053
+      },
       "meta": {
         "win_avg": 0.554,
         "gods": 12
@@ -22011,6 +22595,11 @@
         "burst"
       ],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2673,
+        "residual": 277,
+        "score": 0.2037
+      },
       "meta": {
         "win_avg": 0.627,
         "gods": 3
@@ -22036,6 +22625,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2777,
+        "residual": -127,
+        "score": 0.4121
+      },
       "meta": {
         "win_avg": 0.529,
         "gods": 28
@@ -22059,7 +22653,12 @@
       "source_url": "https://wiki.smite2.com/w/Spear_of_the_Magus",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2834,
+        "residual": -134,
+        "score": 0.4157
+      }
     },
     {
       "type": "smite-item",
@@ -22083,7 +22682,12 @@
         "anti-crit",
         "aura"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2585,
+        "residual": -285,
+        "score": 0.4934
+      }
     },
     {
       "type": "smite-item",
@@ -22105,7 +22709,12 @@
       "effect_tags": [
         "sustain"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2519,
+        "residual": 231,
+        "score": 0.2278
+      }
     },
     {
       "type": "smite-item",
@@ -22129,6 +22738,11 @@
         "sustain"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2428,
+        "residual": 72,
+        "score": 0.3093
+      },
       "meta": {
         "win_avg": 0.556,
         "gods": 5
@@ -22152,7 +22766,12 @@
       "source_url": "https://wiki.smite2.com/w/Staff_of_Myrddin",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2512,
+        "residual": 388,
+        "score": 0.1467
+      }
     },
     {
       "type": "smite-item",
@@ -22177,7 +22796,12 @@
         "aura",
         "cc-immunity"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2373,
+        "residual": 27,
+        "score": 0.3328
+      }
     },
     {
       "type": "smite-item",
@@ -22200,7 +22824,12 @@
       "effect_tags": [
         "protection-shred"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2408,
+        "residual": 142,
+        "score": 0.2734
+      }
     },
     {
       "type": "smite-item",
@@ -22222,7 +22851,12 @@
       "effect_tags": [
         "anti-heal"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2356,
+        "residual": 194,
+        "score": 0.2465
+      }
     },
     {
       "type": "smite-item",
@@ -22242,7 +22876,12 @@
       "source_url": "https://wiki.smite2.com/w/Sun_Beam_Bow",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2143,
+        "residual": 257,
+        "score": 0.2144
+      }
     },
     {
       "type": "smite-item",
@@ -22261,7 +22900,12 @@
       "source_url": "https://wiki.smite2.com/w/Sundering_Axe",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2323,
+        "residual": -173,
+        "score": 0.4358
+      }
     },
     {
       "type": "smite-item",
@@ -22284,7 +22928,12 @@
       "effect_tags": [
         "mobility"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2690,
+        "residual": 10,
+        "score": 0.3416
+      }
     },
     {
       "type": "smite-item",
@@ -22305,7 +22954,12 @@
       "source_url": "https://wiki.smite2.com/w/The_Cosmic_Horror",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2869,
+        "residual": -219,
+        "score": 0.4593
+      }
     },
     {
       "type": "smite-item",
@@ -22329,6 +22983,11 @@
         "burst"
       ],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 3070,
+        "residual": -270,
+        "score": 0.4854
+      },
       "meta": {
         "win_avg": 0.62,
         "gods": 2
@@ -22354,6 +23013,11 @@
         "protection-shred"
       ],
       "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2045,
+        "residual": 505,
+        "score": 0.0863
+      },
       "meta": {
         "win_avg": 0.547,
         "gods": 3
@@ -22381,6 +23045,11 @@
         "sustain"
       ],
       "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2765,
+        "residual": -165,
+        "score": 0.4316
+      },
       "meta": {
         "win_avg": 0.556,
         "gods": 5
@@ -22407,6 +23076,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2828,
+        "residual": -28,
+        "score": 0.3611
+      },
       "meta": {
         "win_avg": 0.645,
         "gods": 2
@@ -22431,6 +23105,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 3125,
+        "residual": -25,
+        "score": 0.3596
+      },
       "meta": {
         "win_avg": 0.55,
         "gods": 29
@@ -22456,6 +23135,11 @@
       "last_verified": "2026-07-25",
       "effect_tags": [],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2487,
+        "residual": -87,
+        "score": 0.3912
+      },
       "meta": {
         "win_avg": 0.566,
         "gods": 7
@@ -22482,7 +23166,12 @@
       "effect_tags": [
         "aura"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2698,
+        "residual": 2,
+        "score": 0.3453
+      }
     },
     {
       "type": "smite-item",
@@ -22502,7 +23191,12 @@
       "source_url": "https://wiki.smite2.com/w/Typhon\u2019s_Heart",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2538,
+        "residual": 62,
+        "score": 0.3148
+      }
     },
     {
       "type": "smite-item",
@@ -22526,6 +23220,11 @@
         "burst"
       ],
       "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2452,
+        "residual": -52,
+        "score": 0.3734
+      },
       "meta": {
         "win_avg": 0.61,
         "gods": 3
@@ -22552,7 +23251,12 @@
         "sustain",
         "aura"
       ],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2291,
+        "residual": 209,
+        "score": 0.239
+      }
     },
     {
       "type": "smite-item",
@@ -22571,7 +23275,8 @@
       "source_url": "https://wiki.smite2.com/w/Vampiric_Shroud",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -22592,7 +23297,12 @@
       "source_url": "https://wiki.smite2.com/w/Vital_Amplifier",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2180,
+        "residual": 320,
+        "score": 0.1819
+      }
     },
     {
       "type": "smite-item",
@@ -22615,7 +23325,12 @@
         "protection-shred",
         "aura"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2428,
+        "residual": 122,
+        "score": 0.2839
+      }
     },
     {
       "type": "smite-item",
@@ -22638,7 +23353,12 @@
         "protection-shred",
         "aura"
       ],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2450,
+        "residual": 100,
+        "score": 0.2952
+      }
     },
     {
       "type": "smite-item",
@@ -22660,7 +23380,12 @@
       "effect_tags": [
         "aura"
       ],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2477,
+        "residual": -627,
+        "score": 0.6691
+      }
     },
     {
       "type": "smite-item",
@@ -22682,7 +23407,8 @@
       "effect_tags": [
         "aura"
       ],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -22701,7 +23427,8 @@
       "source_url": "https://wiki.smite2.com/w/Warrior's_Axe",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": null
+      "efficiency_tier": null,
+      "efficiency": null
     },
     {
       "type": "smite-item",
@@ -22722,7 +23449,12 @@
       "source_url": "https://wiki.smite2.com/w/Wish-Granting_Pearl",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 3221,
+        "residual": 329,
+        "score": 0.1771
+      }
     },
     {
       "type": "smite-item",
@@ -22744,7 +23476,12 @@
       "source_url": "https://wiki.smite2.com/w/Wyrmskin_Hide",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "fair"
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2539,
+        "residual": 61,
+        "score": 0.3149
+      }
     },
     {
       "type": "smite-item",
@@ -22766,7 +23503,12 @@
       "source_url": "https://wiki.smite2.com/w/Xibalban_Effigy",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "premium"
+      "efficiency_tier": "premium",
+      "efficiency": {
+        "predicted_cost": 2516,
+        "residual": 234,
+        "score": 0.2261
+      }
     },
     {
       "type": "smite-item",
@@ -22788,7 +23530,12 @@
       "source_url": "https://wiki.smite2.com/w/Yogi's_Necklace",
       "last_verified": "2026-07-25",
       "effect_tags": [],
-      "efficiency_tier": "undervalued"
+      "efficiency_tier": "undervalued",
+      "efficiency": {
+        "predicted_cost": 2425,
+        "residual": -175,
+        "score": 0.4367
+      }
     }
   ],
   "builds": [
@@ -113110,6 +113857,28 @@
       ]
     }
   ],
+  "item_gold_values": {
+    "Attack Damage": 7.49,
+    "Attack Speed": 5.11,
+    "Cooldown Rate": 7.48,
+    "Critical Chance": 9.4,
+    "Dampening": 4.2,
+    "Echo": 14.92,
+    "Health Regen": 3.58,
+    "Intelligence": 6.59,
+    "Lifesteal": 9.13,
+    "Magical Protection": 6.27,
+    "Mana Regen": 5.61,
+    "Max Health": 0.88,
+    "Max Mana": 0.57,
+    "Pathfinding": 46.46,
+    "Penetration": 26.57,
+    "Physical Protection": 6.43,
+    "Plating": 11.82,
+    "Strength": 10.86,
+    "Tenacity": 15.42,
+    "_intercept": 1942.43
+  },
   "god_item_scores": {
     "Achilles": {
       "Jotunn's Revenge": 0.4965,

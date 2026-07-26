@@ -225,7 +225,12 @@ function App() {
               />
             </div>
           ) : route.view === "items" ? (
-            <div className="flex-1 overflow-y-auto"><ItemsShop items={data.items} openItem={route.item} /></div>
+            <div className="flex-1 overflow-y-auto"><ItemsShop
+                items={data.items}
+                openItem={route.item}
+                tierItems={data.tierlist?.items ?? []}
+                goldValues={data.item_gold_values ?? {}}
+              /></div>
           ) : route.view === "tiers" ? (
             <div className="flex-1 overflow-y-auto"><TierList tierlist={data.tierlist} /></div>
           ) : route.view === "patch" ? (

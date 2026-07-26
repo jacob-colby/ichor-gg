@@ -54,6 +54,18 @@ export interface Item {
   last_verified: string;
   effect_tags?: string[];
   efficiency_tier?: string | null;
+  /** The gold-value model's working, not just its verdict. Null for items
+   * outside the scored pool: non-numeric cost, and tier-1 starters, which are
+   * passive-priced and deliberately sit out the regression.
+   * `cost - predicted_cost === residual` holds exactly. */
+  efficiency?: {
+    /** What the item's stats are worth at the fitted per-stat gold prices. */
+    predicted_cost: number;
+    /** actual - predicted. Negative = underpriced. */
+    residual: number;
+    /** Min-max normalised value across the scored set, 1 = best value. */
+    score: number;
+  } | null;
   meta?: { win_avg: number; gods: number };
 }
 
@@ -230,5 +242,8 @@ export interface IndexData {
   tierlist?: TierListData;
   patch_notes?: PatchPeriod[];
   god_item_scores?: Record<string, Record<string, number>>;
+  /** Fitted marginal gold price per stat — what makes a predicted cost
+   * auditable rather than asserted. */
+  item_gold_values?: Record<string, number>;
   draft?: DraftConfig;
 }

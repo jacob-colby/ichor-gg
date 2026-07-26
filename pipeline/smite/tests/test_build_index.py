@@ -1,6 +1,6 @@
 import json
 
-from smite import build_index, notes
+from smite import build_index, efficiency, notes
 
 
 def _make_repo(tmp_path):
@@ -25,10 +25,12 @@ def test_build_index_collects_gods_items_builds(tmp_path):
     # has levelable abilities. This note has no `abilities` key at all, so the
     # key is absent rather than a fabricated order of empty slots.
     assert index["gods"] == [{"type": "smite-god", "name": "Chiron"}]
-    # Items are enriched with god-agnostic effect_tags + efficiency_tier; this
-    # note has no cost so it can't be scored (tier None) and no tags entry ([]).
+    # Items are enriched with god-agnostic effect_tags + the efficiency verdict;
+    # this note has no cost so it can't be scored (tier None, efficiency None —
+    # never a fabricated zero) and has no tags entry ([]).
     assert index["items"] == [
-        {"type": "smite-item", "name": "Deathbringer", "effect_tags": [], "efficiency_tier": None}
+        {"type": "smite-item", "name": "Deathbringer", "effect_tags": [],
+         "efficiency_tier": None, "efficiency": None}
     ]
     assert index["builds"] == [{"type": "smite-build", "god": "Chiron"}]
 
@@ -44,6 +46,9 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                                   "conquest": {"gods": [], "items": []},
                                   "joust": {"gods": [], "items": []}},
                      "god_item_scores": {}, "draft": {},
+                     # Fitted marginal gold per stat — empty with no scorable
+                     # items, never absent.
+                     "item_gold_values": {},
                      "patch_notes": []}
 
 
@@ -366,3 +371,102 @@ def test_build_index_community_build_with_no_slots_gets_empty_popular_items(tmp_
     index = build_index.build_index(repo)
     b = index["builds"][0]["builds"][0]
     assert b["popular_items"] == []
+
+
+def test_enrich_items_ships_the_models_working_not_just_its_label(tmp_path):
+    """The regression's residual used to be computed and dropped, leaving the
+    viewer able to say "Premium" but not by how much."""
+    items = [
+        {"name": "Cheap", "cost": 1000, "tier": 3, "stats": {"Strength": "60"}},
+        {"name": "Dear", "cost": 4000, "tier": 3, "stats": {"Strength": "60"}},
+        {"name": "Mid", "cost": 2500, "tier": 3, "stats": {"Strength": "60"}},
+    ]
+    out = build_index._enrich_items(items, {})
+    for it in out:
+        eff = it["efficiency"]
+        assert eff is not None, it["name"]
+        # The arithmetic a player reads has to close exactly.
+        assert it["cost"] - eff["predicted_cost"] == eff["residual"]
+        assert isinstance(eff["residual"], int)
+        assert 0.0 <= eff["score"] <= 1.0
+    by = {it["name"]: it["efficiency"] for it in out}
+    # Cheaper than its stats predict => negative residual, and vice versa.
+    assert by["Cheap"]["residual"] < 0 < by["Dear"]["residual"]
+
+
+def test_enrich_items_leaves_unscored_items_null_rather_than_zero(tmp_path):
+    """Tier-1 starters are passive-priced and sit out the fit; items with no
+    numeric cost can't be scored at all. Neither may be given a fake verdict."""
+    items = [
+        {"name": "Starter", "cost": 700, "tier": 1, "stats": {"Strength": "10"}},
+        {"name": "NoCost", "cost": None, "tier": 3, "stats": {"Strength": "10"}},
+        {"name": "Real", "cost": 2500, "tier": 3, "stats": {"Strength": "60"}},
+        {"name": "Real2", "cost": 2600, "tier": 3, "stats": {"Strength": "62"}},
+    ]
+    out = {it["name"]: it for it in build_index._enrich_items(items, {})}
+    assert out["Starter"]["efficiency"] is None
+    assert out["Starter"]["efficiency_tier"] is None
+    assert out["NoCost"]["efficiency"] is None
+    assert out["Real"]["efficiency"] is not None
+
+
+def test_build_index_ships_the_fitted_gold_price_of_each_stat(tmp_path):
+    """Without the per-stat prices a predicted cost is asserted, not auditable."""
+    repo = _make_repo(tmp_path)
+    (repo / "data" / "Items").mkdir(parents=True, exist_ok=True)
+    for name, cost, stat in [("A", 1000, "30"), ("B", 2000, "60"), ("C", 3000, "90")]:
+        (repo / "data" / "Items" / f"{name}.md").write_text(
+            f"---\ntype: smite-item\nname: {name}\ncost: {cost}\ntier: 3\n"
+            f"stats:\n  Strength: '{stat}'\n---\n", encoding="utf-8")
+    index = build_index.build_index(repo)
+    gold = index["item_gold_values"]
+    assert "Strength" in gold
+    assert gold["Strength"] > 0
+    assert all(round(v, 2) == v for v in gold.values())
+
+
+def test_receipt_rows_reconcile_to_predicted_cost(tmp_path):
+    """The shop shows a per-stat receipt summing to `predicted_cost`. That only
+    closes if the fit's intercept is shipped alongside the stat prices — without
+    it every item's rows fall short by exactly the intercept."""
+    repo = _make_repo(tmp_path)
+    (repo / "data" / "Items").mkdir(parents=True, exist_ok=True)
+    for name, cost, stat in [("A", 1200, "30"), ("B", 2400, "60"), ("C", 3300, "95")]:
+        (repo / "data" / "Items" / f"{name}.md").write_text(
+            f"---\ntype: smite-item\nname: {name}\ncost: {cost}\ntier: 3\n"
+            f"stats:\n  Strength: '{stat}'\n---\n", encoding="utf-8")
+    index = build_index.build_index(repo)
+    gold = index["item_gold_values"]
+    assert efficiency.INTERCEPT_KEY in gold, "the intercept must ship or no receipt adds up"
+
+    for it in index["items"]:
+        eff = it["efficiency"]
+        if not eff:
+            continue
+        rows = gold[efficiency.INTERCEPT_KEY]
+        for stat, raw in (it.get("stats") or {}).items():
+            rows += float(raw) * gold.get(stat, 0.0)
+        assert abs(rows - eff["predicted_cost"]) <= 1.5, (
+            f"{it['name']}: receipt rows {rows:.1f} vs predicted {eff['predicted_cost']}")
+
+
+def test_build_index_fits_the_regression_once(tmp_path, monkeypatch):
+    """The tier list's item score and the per-item verdict have to come from the
+    same fit; the module used to run it twice under a comment saying it didn't."""
+    repo = _make_repo(tmp_path)
+    (repo / "data" / "Items").mkdir(parents=True, exist_ok=True)
+    for name, cost in [("A", 1000), ("B", 2000)]:
+        (repo / "data" / "Items" / f"{name}.md").write_text(
+            f"---\ntype: smite-item\nname: {name}\ncost: {cost}\ntier: 3\n"
+            f"stats:\n  Strength: '30'\n---\n", encoding="utf-8")
+
+    calls = {"n": 0}
+    real = efficiency.efficiency_scores
+
+    def counting(items):
+        calls["n"] += 1
+        return real(items)
+
+    monkeypatch.setattr(efficiency, "efficiency_scores", counting)
+    build_index.build_index(repo)
+    assert calls["n"] == 1, f"regression fit {calls['n']} times, expected 1"

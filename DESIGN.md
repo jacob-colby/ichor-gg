@@ -194,6 +194,13 @@ Components should feel **tactile and confident**: presses register physically (a
 - A running total is `null`, not approximate, when any item's cost is unknown — a total with a hole in it misstates the build.
 - The four axes are shown as **contributions, never a sum**: the weights that produce the composite aren't published, so nothing in the UI may imply they add up.
 
+### Value receipt (items shop)
+- An efficiency verdict is shown **decomposed, never as a bucket alone**: `3000g · fair 2756g · +244g`. The three-value label on its own could say "Premium" but not by how much, which is the number that decides a purchase.
+- The detail is a **receipt**: each stat at its fitted gold price, subtotalled, against the actual cost. The pipeline ships `item_gold_values` so this is auditable rather than asserted, and `cost - predicted_cost === residual` holds exactly so the arithmetic on screen always closes.
+- Sort on the **continuous residual**, never the bucket — bucketed sorting tied 30 items for first alphabetically and made the most underpriced item unfindable.
+- Filter options are **derived from the data**. A hardcoded list shipped a `Glyph` option matching nothing while the one Relic was unreachable.
+- Where the model declines to score something, **say why**: tier-1 starters buy an ability rather than stats and sit out the fit on purpose. That is a finding, not a blank — never an em dash.
+
 ### Draft diff (draft board)
 - A re-rank is shown as a **displacement**, never as a lone arrival: `Divine Ruin · replaces Rod of Tahuti · +0.12 · answers anti-heal`. Keep both builds — the un-adapted one reduced to a membership set is why rows could say "swap in" with nothing to swap in for.
 - The magnitude is the model's own bonus, drawn as an `under` bar scaled to the configured clamp. Direction colour is `under` (the model promoting something), never focus-blue.
