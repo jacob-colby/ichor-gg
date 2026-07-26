@@ -49,12 +49,12 @@ describe("App routing", () => {
     await waitFor(() => expect(screen.getByText(/draft.*coming next/i)).toBeInTheDocument());
   });
 
-  it("navigates to the builds view via the nav, showing the god rail", async () => {
+  it("navigates to the builds view via the nav, showing the god sidebar", async () => {
     render(<App />);
     const [builds] = await screen.findAllByRole("button", { name: /^builds$/i });
     fireEvent.click(builds);
-    await waitFor(() => expect(screen.getByText(/select a god/i)).toBeInTheDocument());
-    expect(screen.getByRole("button", { name: "Chiron" })).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText(/select a god from the sidebar/i)).toBeInTheDocument());
+    expect(screen.getByRole("button", { name: "Select Chiron" })).toBeInTheDocument();
   });
 
   it("no longer has a gods nav entry, and #/gods redirects to home", async () => {

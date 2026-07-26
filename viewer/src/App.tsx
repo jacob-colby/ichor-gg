@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { useIndexData } from "./hooks/useIndexData";
-import { GodRail } from "./components/GodRail";
+import { GodSidebar } from "./components/GodSidebar";
 import { DetailPanel } from "./components/DetailPanel";
 import { AddGodModal } from "./components/AddGodModal";
 import { Footer } from "./components/Footer";
@@ -131,6 +131,12 @@ function App() {
           {count && <span className="font-mono text-[11px] text-faint">{count}</span>}
           <div className="ml-auto flex items-center gap-3">
             {data.data_updated && <span className="hidden font-mono text-[10.5px] text-faint sm:inline">Data from {data.data_updated}</span>}
+            {isDev && (
+              <button type="button" onClick={() => setAddOpen(true)}
+                className="press hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-xs text-faint hover:text-muted md:flex">
+                <span className="rounded border border-line-strong px-1 py-px font-mono text-[8px] uppercase tracking-wider">Dev</span>+ Add god
+              </button>
+            )}
             <button type="button" onClick={reload} className="press rounded-md bg-bg2 px-3 py-1.5 text-xs text-muted hover:text-ink">Reload</button>
             <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help" className="press rounded-md bg-bg2 px-2.5 py-1.5 text-xs text-muted hover:text-ink md:hidden">?</button>
           </div>
@@ -161,20 +167,12 @@ function App() {
             <div className="flex-1 overflow-y-auto"><PatchNotes periods={patchNotes} /></div>
           ) : (
             <div className="flex min-w-0 flex-1 flex-col overflow-hidden md:flex-row">
-              <div className="flex shrink-0 flex-col overflow-hidden">
-                <GodRail
-                  gods={data.gods}
-                  selectedGod={route.god ?? null}
-                  onSelect={(n) => navigate(toHash.god(n))}
-                  onRemove={isDev ? removeGod : undefined}
-                />
-                {isDev && (
-                  <button type="button" onClick={() => setAddOpen(true)}
-                    className="press m-2 hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2 py-1.5 text-xs text-faint hover:text-muted md:flex">
-                    <span className="rounded border border-line-strong px-1 py-px font-mono text-[8px] uppercase tracking-wider">Dev</span>+ Add god
-                  </button>
-                )}
-              </div>
+              <GodSidebar
+                gods={data.gods}
+                selectedGod={route.god ?? null}
+                onSelect={(n) => navigate(toHash.god(n))}
+                onRemove={isDev ? removeGod : undefined}
+              />
               <div className="min-w-0 flex-1 overflow-y-auto p-4">
                 {god ? (
                   <>
@@ -200,7 +198,7 @@ function App() {
                     )}
                   </>
                 ) : (
-                  <p className="text-muted">Select a god from the rail.</p>
+                  <p className="text-muted">Select a god from the sidebar.</p>
                 )}
               </div>
             </div>
