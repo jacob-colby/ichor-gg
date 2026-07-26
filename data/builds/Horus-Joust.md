@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Void Stone:
-      total: 0.52
+      total: 0.51
       efficiency: 0.3
       win: 0.5
       pick: 0.0
@@ -57,12 +57,12 @@ builds:
       fit: 0.63
     Amanita Charm:
       total: 0.72
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.63
+      total: 0.62
       efficiency: 0.39
       win: 0.5
       pick: 0.0
@@ -87,11 +87,11 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Spirit Robe — physical protection
-    swap_item: Spirit Robe
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -117,14 +117,14 @@ builds:
       pick: 0.0
       fit: 0.79
     Spectral Armor:
-      total: 0.51
+      total: 0.52
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.54
     Amanita Charm:
       total: 0.72
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -152,8 +152,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -165,19 +165,19 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.51
-      efficiency: 0.34
+      efficiency: 0.33
       win: 0.5
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.54
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.54
     Void Shield:
       total: 0.59
-      efficiency: 0.29
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -188,8 +188,8 @@ builds:
       pick: 0.0
       fit: 0.9
     Amanita Charm:
-      total: 0.68
-      efficiency: 0.45
+      total: 0.67
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.91
@@ -229,20 +229,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -260,7 +260,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

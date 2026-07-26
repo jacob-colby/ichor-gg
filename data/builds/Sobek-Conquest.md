@@ -6,40 +6,40 @@ builds:
 - source: community
   aspect: Aspect of Prey
   aspect_pick_rate: 0.02
-  aspect_win_rate: 0.4
+  aspect_win_rate: 0.36
   slot_order:
-  - name: Gauntlet of Thebes
+  - name: Shifter's Shield
     pick_rate: 0.24
-    win_rate: 0.55
+    win_rate: 0.52
     alternates:
-    - name: Shifter's Shield
+    - name: Gauntlet of Thebes
       pick_rate: 0.23
-      win_rate: 0.5
+      win_rate: 0.56
     - name: Prophetic Cloak
       pick_rate: 0.1
-      win_rate: 0.55
+      win_rate: 0.57
   - name: Genji's Guard
-    pick_rate: 0.18
-    win_rate: 0.55
+    pick_rate: 0.19
+    win_rate: 0.56
     alternates:
     - name: Prophetic Cloak
-      pick_rate: 0.17
-      win_rate: 0.51
-    - name: Shifter's Shield
-      pick_rate: 0.1
+      pick_rate: 0.16
       win_rate: 0.52
+    - name: Shifter's Shield
+      pick_rate: 0.11
+      win_rate: 0.54
   - name: Breastplate of Valor
     pick_rate: 0.1
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.25
-      win_rate: 0.5
+      pick_rate: 0.26
+      win_rate: 0.51
     - name: Dwarven Plate
-      pick_rate: 0.08
-      win_rate: 0.48
+      pick_rate: 0.09
+      win_rate: 0.46
   - name: Dwarven Plate
-    pick_rate: 0.13
+    pick_rate: 0.14
     win_rate: 0.59
     alternates:
     - name: Genji's Guard
@@ -48,28 +48,28 @@ builds:
     - name: Shell of Rebuke
       pick_rate: 0.08
       win_rate: 0.54
-  - name: Shell of Rebuke
+  - name: Spirit Robe
     pick_rate: 0.07
-    win_rate: 0.58
+    win_rate: 0.56
     alternates:
     - name: Dwarven Plate
       pick_rate: 0.11
-      win_rate: 0.54
-    - name: Spirit Robe
-      pick_rate: 0.06
-      win_rate: 0.56
-  - name: Engraved Guard
-    pick_rate: 0.07
-    win_rate: 0.55
-    alternates:
+      win_rate: 0.53
     - name: Shell of Rebuke
-      pick_rate: 0.06
-      win_rate: 0.47
+      pick_rate: 0.07
+      win_rate: 0.55
+  - name: Engraved Guard
+    pick_rate: 0.08
+    win_rate: 0.61
+    alternates:
     - name: Dwarven Plate
-      pick_rate: 0.06
-      win_rate: 0.5
+      pick_rate: 0.05
+      win_rate: 0.56
+    - name: Shell of Rebuke
+      pick_rate: 0.05
+      win_rate: 0.51
   source_url: https://smitebrain.com/gods/sobek/
-  last_verified: '2026-07-23'
+  last_verified: '2026-07-25'
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -93,18 +93,18 @@ builds:
     swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Eye of Providence, Amanita Charm, Erosion, Spectral
-    Armor, Breastplate of Valor, Shield of the Phoenix, Gluttonous Grimoire, Shifter''s
-    Shield, Gladiator''s Shield, Rod of Asclepius, Ethereal Staff, Draconic Scale,
-    Midgardian Mail, Shroud of Vengeance, Mantle Of Discord, Prophetic Cloak, Freya''s
-    Tears, Soul Gem, Chandra''s Grace, Leviathan''s Hide, Phoenix Feather, Ancile,
-    Magi''s Cloak, Oni Hunter''s Garb, Helm of Radiance.'
+    Armor, Shield of the Phoenix, Breastplate of Valor, Gluttonous Grimoire, Ethereal
+    Staff, Gladiator''s Shield, Draconic Scale, Rod of Asclepius, Midgardian Mail,
+    Mantle Of Discord, Chandra''s Grace, Freya''s Tears, Soul Gem, Leviathan''s Hide,
+    Shroud of Vengeance, Prophetic Cloak, Ancile, Phoenix Feather, Oni Hunter''s Garb,
+    Magi''s Cloak, Helm of Radiance.'
   slot_scores:
     Eye of Providence:
       total: 0.5
@@ -115,8 +115,8 @@ builds:
     Genji's Guard:
       total: 0.48
       efficiency: 0.46
-      win: 0.55
-      pick: 0.18
+      win: 0.56
+      pick: 0.19
       fit: 0.39
     Kinetic Cuirass:
       total: 0.5
@@ -132,7 +132,7 @@ builds:
       fit: 0.46
     Amanita Charm:
       total: 0.49
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -162,21 +162,21 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Spirit Robe — magical protection
+    swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Rod of Asclepius,
-    Eye of Providence, Soul Gem, Chandra''s Grace, Phoenix Feather, Spectral Armor,
-    Lifebinder, Blood-Bound Book, Breastplate of Valor, Erosion, Gluttonous Grimoire,
-    Spirit Robe, Bancroft''s Talon, Ethereal Staff, Glorious Pridwen, Gladiator''s
-    Shield, Midgardian Mail, Leviathan''s Hide, Spear of Desolation, Ancile, Shifter''s
-    Shield, The Cosmic Horror, Oni Hunter''s Garb.'
+    Eye of Providence, Soul Gem, Chandra''s Grace, Spirit Robe, Phoenix Feather, Spectral
+    Armor, Lifebinder, Blood-Bound Book, Erosion, Gluttonous Grimoire, Breastplate
+    of Valor, Bancroft''s Talon, Ethereal Staff, Gladiator''s Shield, Midgardian Mail,
+    Glorious Pridwen, Leviathan''s Hide, Ancile, Oni Hunter''s Garb, Spear of Desolation,
+    The Cosmic Horror.'
   slot_scores:
     Eye of Providence:
       total: 0.47
@@ -185,10 +185,10 @@ builds:
       pick: 0.0
       fit: 0.53
     Genji's Guard:
-      total: 0.46
+      total: 0.47
       efficiency: 0.46
-      win: 0.55
-      pick: 0.18
+      win: 0.56
+      pick: 0.19
       fit: 0.29
     Kinetic Cuirass:
       total: 0.47
@@ -209,8 +209,8 @@ builds:
       pick: 0.0
       fit: 0.35
     Amanita Charm:
-      total: 0.51
-      efficiency: 0.45
+      total: 0.5
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -242,11 +242,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Kinetic Cuirass, Eye of Providence, Soul Gem,
-    Amanita Charm, The Cosmic Horror, Spear of Desolation, Screeching Gargoyle, Spectral
-    Armor, Breastplate of Valor, Stone of Binding, Void Stone, Spear of the Magus,
-    Erosion, Void Shield, Doom Orb, Shield of the Phoenix, Rod of Asclepius, Ethereal
-    Staff, The World Stone, Obsidian Shard, Chandra''s Grace, Midgardian Mail, Gladiator''s
-    Shield, Shroud of Vengeance, Mantle Of Discord.'
+    Amanita Charm, The Cosmic Horror, Spear of Desolation, Spectral Armor, Screeching
+    Gargoyle, Void Stone, Erosion, Breastplate of Valor, Stone of Binding, Spear of
+    the Magus, Void Shield, Shield of the Phoenix, Doom Orb, Ethereal Staff, Rod of
+    Asclepius, The World Stone, Obsidian Shard, Chandra''s Grace, Midgardian Mail,
+    Gladiator''s Shield, Leviathan''s Hide, Ancile.'
   slot_scores:
     Eye of Providence:
       total: 0.46
@@ -257,8 +257,8 @@ builds:
     Genji's Guard:
       total: 0.46
       efficiency: 0.46
-      win: 0.55
-      pick: 0.18
+      win: 0.56
+      pick: 0.19
       fit: 0.27
     Kinetic Cuirass:
       total: 0.47
@@ -268,13 +268,13 @@ builds:
       fit: 0.59
     Gluttonous Grimoire:
       total: 0.48
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Spear of Desolation:
       total: 0.45
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -295,8 +295,8 @@ builds:
   - Damaru
   - Demon Blade
   flex_slots:
-  - Demon Blade
   - Jotunn's Revenge
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -320,14 +320,14 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.23
-      efficiency: 0.55
+      total: 0.22
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.23
     Tyrfing:
-      total: 0.24
-      efficiency: 0.39
+      total: 0.23
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -344,8 +344,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.23
-      efficiency: 0.22
+      total: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

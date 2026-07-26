@@ -464,3 +464,24 @@ def test_main_patch_flag_prints_a_message_even_on_failure(tmp_path, monkeypatch,
     assert result == 0
     captured = capsys.readouterr()
     assert captured.out.strip()
+
+
+def test_refresh_god_builds_skips_community_for_modes_smitebrain_lacks(tmp_path, monkeypatch):
+    """SmiteBrain serves one page per god with no mode dimension, so scraping it
+    for Joust stored Conquest numbers under a Joust label — the tier list then
+    presented them as Joust community data. Non-covered modes must write no
+    community entry at all rather than a mislabeled copy."""
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(refresh, "BUILDS_ROOT", tmp_path / "builds")
+    (tmp_path / "builds").mkdir(parents=True, exist_ok=True)
+    calls = []
+
+    class _F:
+        def fetch(self, url, force=False):
+            calls.append(url)
+            return "<html></html>"
+
+    monkeypatch.setattr(refresh.smitebrain_parser, "parse_build_page",
+                        lambda html: {"aspects": [], "items": [{"name": "X", "pick_rate": 0.5}]})
+    refresh.refresh_god_builds("Agni", "Joust", _F())
+    assert calls == [], "must not even fetch SmiteBrain for a mode it doesn't cover"

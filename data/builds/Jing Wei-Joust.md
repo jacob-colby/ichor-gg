@@ -33,19 +33,19 @@ builds:
   slot_scores:
     Tyrfing:
       total: 0.51
-      efficiency: 0.39
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Reaper:
       total: 0.51
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.58
     Riptalon:
-      total: 0.49
-      efficiency: 0.27
+      total: 0.48
+      efficiency: 0.26
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -56,8 +56,8 @@ builds:
       pick: 0.0
       fit: 0.54
     Demon Blade:
-      total: 0.55
-      efficiency: 0.22
+      total: 0.54
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -100,19 +100,19 @@ builds:
   slot_scores:
     Tyrfing:
       total: 0.49
-      efficiency: 0.39
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.6
     Rage:
-      total: 0.47
-      efficiency: 0.36
+      total: 0.46
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.57
     The Reaper:
-      total: 0.51
-      efficiency: 0.44
+      total: 0.5
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -123,8 +123,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Demon Blade:
-      total: 0.55
-      efficiency: 0.22
+      total: 0.54
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.32
     Amanita Charm:
-      total: 0.6
-      efficiency: 0.45
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.52
     Umbral Link:
-      total: 0.48
-      efficiency: 0.25
+      total: 0.47
+      efficiency: 0.24
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -236,7 +236,7 @@ builds:
       fit: 0.54
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -248,13 +248,13 @@ builds:
       fit: 0.6
     The Reaper:
       total: 0.62
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.81
     Tekko-Kagi:
       total: 0.47
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.59

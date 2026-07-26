@@ -5,71 +5,71 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Vindication
-  aspect_pick_rate: 0.25
+  aspect_pick_rate: 0.23
   aspect_win_rate: 0.47
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.5
-    win_rate: 0.49
-    alternates:
-    - name: Golden Blade
-      pick_rate: 0.2
-      win_rate: 0.56
-    - name: Berserker's Shield
-      pick_rate: 0.1
-      win_rate: 0.5
-  - name: Berserker's Shield
-    pick_rate: 0.34
+    pick_rate: 0.51
     win_rate: 0.48
     alternates:
-    - name: Shogun's Ofuda
-      pick_rate: 0.17
+    - name: Golden Blade
+      pick_rate: 0.22
+      win_rate: 0.56
+    - name: Berserker's Shield
+      pick_rate: 0.09
       win_rate: 0.51
+  - name: Berserker's Shield
+    pick_rate: 0.35
+    win_rate: 0.46
+    alternates:
+    - name: Shogun's Ofuda
+      pick_rate: 0.16
+      win_rate: 0.53
     - name: Golden Blade
       pick_rate: 0.14
-      win_rate: 0.53
+      win_rate: 0.51
   - name: Shogun's Ofuda
-    pick_rate: 0.18
+    pick_rate: 0.17
     win_rate: 0.57
     alternates:
     - name: Berserker's Shield
       pick_rate: 0.28
-      win_rate: 0.5
+      win_rate: 0.52
     - name: Kinetic Cuirass
       pick_rate: 0.13
-      win_rate: 0.43
+      win_rate: 0.41
   - name: Dwarven Plate
-    pick_rate: 0.19
-    win_rate: 0.58
+    pick_rate: 0.2
+    win_rate: 0.56
     alternates:
     - name: Shogun's Ofuda
-      pick_rate: 0.14
-      win_rate: 0.58
+      pick_rate: 0.16
+      win_rate: 0.56
     - name: Kinetic Cuirass
       pick_rate: 0.11
-      win_rate: 0.51
+      win_rate: 0.52
   - name: Engraved Guard
-    pick_rate: 0.06
-    win_rate: 0.46
+    pick_rate: 0.07
+    win_rate: 0.47
     alternates:
     - name: Dwarven Plate
-      pick_rate: 0.18
-      win_rate: 0.44
-    - name: Eros' Bow
+      pick_rate: 0.19
+      win_rate: 0.45
+    - name: Kinetic Cuirass
       pick_rate: 0.06
-      win_rate: 0.46
+      win_rate: 0.58
   - name: Hunter's Bow
-    pick_rate: 0.06
-    win_rate: 0.56
+    pick_rate: 0.05
+    win_rate: 0.53
     alternates:
     - name: Engraved Guard
       pick_rate: 0.11
-      win_rate: 0.52
+      win_rate: 0.46
     - name: Dwarven Plate
       pick_rate: 0.07
-      win_rate: 0.62
+      win_rate: 0.63
   source_url: https://smitebrain.com/gods/bellona/
-  last_verified: '2026-07-23'
+  last_verified: '2026-07-25'
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -96,15 +96,15 @@ builds:
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Shield Splitter, Eye of Providence, Jotunn''s Revenge,
+    this god: Kinetic Cuirass, Eye of Providence, Shield Splitter, Jotunn''s Revenge,
     Amanita Charm, Eye of the Storm, Runeforged Hammer, Spectral Armor, The Crusher,
     Erosion, Hydra''s Lament, Avenging Blade, Shield of the Phoenix, Genji''s Guard,
-    Wyrmskin Hide, Golden Blade, The Reaper, Breastplate of Valor, Gladiator''s Shield,
-    Midgardian Mail, Chandra''s Grace, Shroud of Vengeance, Mantle Of Discord, Draconic
-    Scale, Leviathan''s Hide, Pharaoh''s Curse.'
+    Wyrmskin Hide, Golden Blade, Breastplate of Valor, The Reaper, Midgardian Mail,
+    Gladiator''s Shield, Chandra''s Grace, Draconic Scale, Pharaoh''s Curse, Leviathan''s
+    Hide, Mantle Of Discord, Ancile.'
   slot_scores:
     Eye of Providence:
       total: 0.48
@@ -114,7 +114,7 @@ builds:
       fit: 0.6
     Jotunn's Revenge:
       total: 0.48
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -126,19 +126,19 @@ builds:
       fit: 0.7
     Shield Splitter:
       total: 0.48
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.67
     Eye of the Storm:
       total: 0.46
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.62
     Amanita Charm:
       total: 0.47
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -171,12 +171,12 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Jotunn''s Revenge, Shield of the Phoenix, Kinetic Cuirass,
-    The Reaper, Chandra''s Grace, Eye of Providence, Shield Splitter, Runeforged Hammer,
-    The Crusher, Phoenix Feather, Hydra''s Lament, Eye of the Storm, Spectral Armor,
-    Avenging Blade, Erosion, Spirit Robe, Genji''s Guard, Bloodforge, Golden Blade,
-    Wyrmskin Hide, Breastplate of Valor, Glorious Pridwen, Midgardian Mail, Tyrfing,
-    Gladiator''s Shield, Devourer''s Gauntlet.'
+    this god: Amanita Charm, Shield of the Phoenix, Jotunn''s Revenge, Kinetic Cuirass,
+    The Reaper, Eye of Providence, Chandra''s Grace, Shield Splitter, Runeforged Hammer,
+    The Crusher, Phoenix Feather, Eye of the Storm, Spectral Armor, Hydra''s Lament,
+    Avenging Blade, Erosion, Genji''s Guard, Spirit Robe, Golden Blade, Bloodforge,
+    Wyrmskin Hide, Breastplate of Valor, Midgardian Mail, Gladiator''s Shield, Glorious
+    Pridwen, Tyrfing, Pharaoh''s Curse.'
   slot_scores:
     Eye of Providence:
       total: 0.46
@@ -186,7 +186,7 @@ builds:
       fit: 0.45
     Jotunn's Revenge:
       total: 0.47
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -197,8 +197,8 @@ builds:
       pick: 0.0
       fit: 0.55
     Shield Splitter:
-      total: 0.46
-      efficiency: 0.44
+      total: 0.45
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -210,7 +210,7 @@ builds:
       fit: 0.7
     Amanita Charm:
       total: 0.49
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -243,10 +243,10 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, Avenging Blade, Kinetic Cuirass,
     Eye of Providence, Shield Splitter, The Reaper, Amanita Charm, Runeforged Hammer,
-    Screeching Gargoyle, Spectral Armor, Hydra''s Lament, Eye of the Storm, Void Stone,
-    Stone of Binding, Void Shield, Erosion, Titan''s Bane, Oath-Sworn Spear, Genji''s
-    Guard, Shield of the Phoenix, Tekko-Kagi, Heartseeker, Pendulum Blade, Breastplate
-    of Valor, Chandra''s Grace, Golden Blade.'
+    Spectral Armor, Screeching Gargoyle, Hydra''s Lament, Eye of the Storm, Void Stone,
+    Stone of Binding, Void Shield, Erosion, Titan''s Bane, Genji''s Guard, Oath-Sworn
+    Spear, Shield of the Phoenix, Tekko-Kagi, Heartseeker, Breastplate of Valor, Golden
+    Blade, Chandra''s Grace, Pendulum Blade.'
   slot_scores:
     Avenging Blade:
       total: 0.47
@@ -255,14 +255,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Eye of Providence:
-      total: 0.45
+      total: 0.46
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
       total: 0.5
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -274,7 +274,7 @@ builds:
       fit: 0.53
     Shield Splitter:
       total: 0.45
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -295,8 +295,8 @@ builds:
   - Damaru
   - Demon Blade
   flex_slots:
-  - Demon Blade
   - Jotunn's Revenge
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -320,14 +320,14 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.23
-      efficiency: 0.55
+      total: 0.22
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.23
     Tyrfing:
-      total: 0.24
-      efficiency: 0.39
+      total: 0.23
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -344,8 +344,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.23
-      efficiency: 0.22
+      total: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

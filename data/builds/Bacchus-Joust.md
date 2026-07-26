@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.54
-      efficiency: 0.26
+      total: 0.53
+      efficiency: 0.25
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Kinetic Cuirass:
-      total: 0.64
+      total: 0.63
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -57,7 +57,7 @@ builds:
       fit: 0.67
     Amanita Charm:
       total: 0.72
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -118,12 +118,12 @@ builds:
       fit: 0.56
     Amanita Charm:
       total: 0.72
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.57
+      total: 0.56
       efficiency: 0.39
       win: 0.5
       pick: 0.0
@@ -145,8 +145,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Stone of Binding
   - Kinetic Cuirass
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.52
-      efficiency: 0.29
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Void Shield:
-      total: 0.61
-      efficiency: 0.29
+      total: 0.6
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -229,20 +229,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -260,7 +260,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

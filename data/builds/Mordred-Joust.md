@@ -44,8 +44,8 @@ builds:
       pick: 0.0
       fit: 0.64
     Shield Splitter:
-      total: 0.52
-      efficiency: 0.44
+      total: 0.51
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -57,12 +57,12 @@ builds:
       fit: 0.55
     Amanita Charm:
       total: 0.72
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.57
+      total: 0.56
       efficiency: 0.39
       win: 0.5
       pick: 0.0
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.48
     The Crusher:
-      total: 0.47
+      total: 0.46
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -124,7 +124,7 @@ builds:
       fit: 0.45
     Amanita Charm:
       total: 0.64
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -155,8 +155,8 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Spirit Robe — physical protection
-    swap_item: Spirit Robe
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.48
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.51
     Shield of the Phoenix:
-      total: 0.54
+      total: 0.53
       efficiency: 0.4
       win: 0.5
       pick: 0.0
@@ -189,7 +189,7 @@ builds:
       fit: 0.48
     Amanita Charm:
       total: 0.68
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.91
@@ -235,14 +235,14 @@ builds:
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.55
+      total: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.56
     Void Shield:
-      total: 0.59
-      efficiency: 0.29
+      total: 0.58
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -260,7 +260,7 @@ builds:
       fit: 0.58
     Amanita Charm:
       total: 0.67
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -294,20 +294,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -325,7 +325,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

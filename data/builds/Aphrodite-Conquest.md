@@ -9,67 +9,67 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Book of Thoth
-    pick_rate: 0.28
-    win_rate: 0.66
+    pick_rate: 0.29
+    win_rate: 0.64
     alternates:
     - name: Chronos' Pendant
-      pick_rate: 0.23
+      pick_rate: 0.22
       win_rate: 0.57
     - name: Spear of Desolation
       pick_rate: 0.14
       win_rate: 0.53
   - name: Genji's Guard
     pick_rate: 0.19
-    win_rate: 0.58
+    win_rate: 0.61
     alternates:
     - name: Breastplate of Valor
-      pick_rate: 0.17
+      pick_rate: 0.18
       win_rate: 0.56
     - name: Book of Thoth
-      pick_rate: 0.16
-      win_rate: 0.54
+      pick_rate: 0.15
+      win_rate: 0.53
   - name: Spear of Desolation
-    pick_rate: 0.14
-    win_rate: 0.68
+    pick_rate: 0.13
+    win_rate: 0.66
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.16
+      pick_rate: 0.18
       win_rate: 0.54
     - name: Breastplate of Valor
-      pick_rate: 0.14
-      win_rate: 0.53
+      pick_rate: 0.13
+      win_rate: 0.58
   - name: Rod of Tahuti
-    pick_rate: 0.17
-    win_rate: 0.72
+    pick_rate: 0.16
+    win_rate: 0.68
     alternates:
     - name: The World Stone
       pick_rate: 0.11
-      win_rate: 0.62
+      win_rate: 0.65
     - name: Obsidian Shard
       pick_rate: 0.07
-      win_rate: 0.52
+      win_rate: 0.55
   - name: Obsidian Shard
-    pick_rate: 0.11
-    win_rate: 0.68
+    pick_rate: 0.1
+    win_rate: 0.66
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.09
-      win_rate: 0.67
+      win_rate: 0.69
     - name: The World Stone
       pick_rate: 0.08
       win_rate: 0.73
   - name: Oracle Staff
     pick_rate: 0.06
-    win_rate: 0.52
+    win_rate: 0.5
     alternates:
-    - name: Rod of Tahuti
+    - name: Evil Eye
       pick_rate: 0.06
-      win_rate: 0.63
+      win_rate: 0.58
     - name: Void Shard
       pick_rate: 0.06
-      win_rate: 0.68
+      win_rate: 0.7
   source_url: https://smitebrain.com/gods/aphrodite/
-  last_verified: '2026-07-23'
+  last_verified: '2026-07-25'
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -83,8 +83,8 @@ builds:
   - Spear of Desolation
   - Obsidian Shard
   flex_slots:
-  - Kinetic Cuirass
   - Gluttonous Grimoire
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -100,22 +100,22 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Spear of Desolation, Kinetic Cuirass, Gluttonous Grimoire, Eye of Providence,
-    Soul Gem, Amanita Charm, Spectral Armor, Rod of Asclepius, Ethereal Staff, The
+    Soul Gem, Amanita Charm, Spectral Armor, Ethereal Staff, Rod of Asclepius, The
     Cosmic Horror, Erosion, Shield of the Phoenix, Spear of the Magus, Helm of Radiance,
-    Doom Orb, Breastplate of Valor, Chandra''s Grace, Blood-Bound Book, Alchemist
+    Chandra''s Grace, Breastplate of Valor, Blood-Bound Book, Doom Orb, Alchemist
     Coat, Chronos'' Pendant, Lifebinder, Gladiator''s Shield, Jade Scepter, Midgardian
-    Mail, Ancient Signet, Death Metal.'
+    Mail, Death Metal, Bancroft''s Talon.'
   slot_scores:
     Book of Thoth:
-      total: 0.48
-      efficiency: 0.39
-      win: 0.66
-      pick: 0.28
+      total: 0.47
+      efficiency: 0.38
+      win: 0.64
+      pick: 0.29
       fit: 0.2
     Genji's Guard:
-      total: 0.48
+      total: 0.49
       efficiency: 0.46
-      win: 0.58
+      win: 0.61
       pick: 0.19
       fit: 0.32
     Kinetic Cuirass:
@@ -126,21 +126,21 @@ builds:
       fit: 0.6
     Gluttonous Grimoire:
       total: 0.47
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.61
     Spear of Desolation:
-      total: 0.54
-      efficiency: 0.42
-      win: 0.68
-      pick: 0.14
+      total: 0.52
+      efficiency: 0.41
+      win: 0.66
+      pick: 0.13
       fit: 0.5
     Obsidian Shard:
-      total: 0.49
+      total: 0.48
       efficiency: 0.36
-      win: 0.68
-      pick: 0.11
+      win: 0.66
+      pick: 0.1
       fit: 0.36
   starter: &id001
     base: Conduit Gem
@@ -150,69 +150,69 @@ builds:
   slot_order:
   - Book of Thoth
   - Genji's Guard
+  - Kinetic Cuirass
   - Gluttonous Grimoire
   - Spear of Desolation
-  - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Rod of Tahuti
-  - Gluttonous Grimoire
+  - Book of Thoth
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
+    swap: Eye of Providence — magical protection
     swap_item: Eye of Providence
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Spear of Desolation, Obsidian Shard, Gluttonous Grimoire, Soul Gem, Kinetic
     Cuirass, Eye of Providence, The Cosmic Horror, Amanita Charm, Spectral Armor,
-    Rod of Asclepius, Ethereal Staff, Spear of the Magus, Shield of the Phoenix, Death
+    Ethereal Staff, Rod of Asclepius, Spear of the Magus, Shield of the Phoenix, Death
     Metal, Doom Orb, Erosion, Chandra''s Grace, Breastplate of Valor, Blood-Bound
-    Book, Chronos'' Pendant, The World Stone, Helm of Radiance, Triton''s Conch, Bragi''s
-    Harp, Alchemist Coat, Gladiator''s Shield.'
+    Book, Chronos'' Pendant, Triton''s Conch, The World Stone, Helm of Radiance, Bragi''s
+    Harp, Gladiator''s Shield, Alchemist Coat.'
   slot_scores:
     Book of Thoth:
-      total: 0.47
-      efficiency: 0.39
-      win: 0.66
-      pick: 0.28
+      total: 0.46
+      efficiency: 0.38
+      win: 0.64
+      pick: 0.29
       fit: 0.14
     Genji's Guard:
-      total: 0.47
+      total: 0.49
       efficiency: 0.46
-      win: 0.58
+      win: 0.61
       pick: 0.19
       fit: 0.27
+    Kinetic Cuirass:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Gluttonous Grimoire:
       total: 0.46
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
     Spear of Desolation:
-      total: 0.53
-      efficiency: 0.42
-      win: 0.68
-      pick: 0.14
+      total: 0.52
+      efficiency: 0.41
+      win: 0.66
+      pick: 0.13
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.47
-      efficiency: 0.24
-      win: 0.72
-      pick: 0.17
-      fit: 0.35
     Obsidian Shard:
-      total: 0.49
+      total: 0.48
       efficiency: 0.36
-      win: 0.68
-      pick: 0.11
+      win: 0.66
+      pick: 0.1
       fit: 0.35
   starter: *id001
 - source: suggested
@@ -225,8 +225,8 @@ builds:
   - Amanita Charm
   - Soul Gem
   flex_slots:
+  - Obsidian Shard
   - Book of Thoth
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -242,39 +242,39 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Spear of Desolation, Soul Gem, Amanita Charm, Rod of Asclepius, Shield
-    of the Phoenix, Blood-Bound Book, Gluttonous Grimoire, Chandra''s Grace, Lifebinder,
-    Kinetic Cuirass, Bancroft''s Talon, Eye of Providence, Phoenix Feather, Spectral
-    Armor, Ethereal Staff, The Cosmic Horror, Spirit Robe, Erosion, Spear of the Magus,
-    Helm of Radiance, Doom Orb, Alchemist Coat, Breastplate of Valor, Chronos'' Pendant,
-    Glorious Pridwen, Ancient Signet.'
+    of the Phoenix, Gluttonous Grimoire, Chandra''s Grace, Blood-Bound Book, Kinetic
+    Cuirass, Lifebinder, Eye of Providence, Bancroft''s Talon, Phoenix Feather, Spectral
+    Armor, Ethereal Staff, The Cosmic Horror, Erosion, Spirit Robe, Spear of the Magus,
+    Helm of Radiance, Doom Orb, Breastplate of Valor, Alchemist Coat, Chronos'' Pendant,
+    Jade Scepter, Death Metal.'
   slot_scores:
     Book of Thoth:
-      total: 0.47
-      efficiency: 0.39
-      win: 0.66
-      pick: 0.28
+      total: 0.46
+      efficiency: 0.38
+      win: 0.64
+      pick: 0.29
       fit: 0.18
     Genji's Guard:
-      total: 0.47
+      total: 0.48
       efficiency: 0.46
-      win: 0.58
+      win: 0.61
       pick: 0.19
       fit: 0.26
     Spear of Desolation:
-      total: 0.53
-      efficiency: 0.42
-      win: 0.68
-      pick: 0.14
+      total: 0.51
+      efficiency: 0.41
+      win: 0.66
+      pick: 0.13
       fit: 0.43
     Obsidian Shard:
-      total: 0.49
+      total: 0.47
       efficiency: 0.36
-      win: 0.68
-      pick: 0.11
+      win: 0.66
+      pick: 0.1
       fit: 0.31
     Amanita Charm:
       total: 0.49
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -295,8 +295,8 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
+  - Rod of Tahuti
   - Book of Thoth
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -312,47 +312,47 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Spear of Desolation, Obsidian Shard, Gluttonous Grimoire, Soul Gem,
-    The Cosmic Horror, Kinetic Cuirass, Eye of Providence, Spear of the Magus, Screeching
-    Gargoyle, Amanita Charm, Doom Orb, Spectral Armor, Rod of Asclepius, Ethereal
-    Staff, Void Stone, Stone of Binding, Void Shield, The World Stone, Shield of the
-    Phoenix, Erosion, Blood-Bound Book, Helm of Radiance, Chandra''s Grace, Breastplate
-    of Valor, Alchemist Coat, Chronos'' Pendant.'
+    The Cosmic Horror, Kinetic Cuirass, Eye of Providence, Spear of the Magus, Amanita
+    Charm, Screeching Gargoyle, Spectral Armor, Doom Orb, Ethereal Staff, Rod of Asclepius,
+    Void Stone, Void Shield, The World Stone, Stone of Binding, Erosion, Shield of
+    the Phoenix, Blood-Bound Book, Chandra''s Grace, Breastplate of Valor, Helm of
+    Radiance, Alchemist Coat, Chronos'' Pendant.'
   slot_scores:
     Book of Thoth:
-      total: 0.47
-      efficiency: 0.39
-      win: 0.66
-      pick: 0.28
+      total: 0.46
+      efficiency: 0.38
+      win: 0.64
+      pick: 0.29
       fit: 0.17
     Genji's Guard:
-      total: 0.47
+      total: 0.48
       efficiency: 0.46
-      win: 0.58
+      win: 0.61
       pick: 0.19
       fit: 0.26
     Gluttonous Grimoire:
       total: 0.48
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.7
     Spear of Desolation:
-      total: 0.55
-      efficiency: 0.42
-      win: 0.68
-      pick: 0.14
+      total: 0.54
+      efficiency: 0.41
+      win: 0.66
+      pick: 0.13
       fit: 0.59
     Rod of Tahuti:
-      total: 0.49
-      efficiency: 0.24
-      win: 0.72
-      pick: 0.17
+      total: 0.46
+      efficiency: 0.22
+      win: 0.68
+      pick: 0.16
       fit: 0.48
     Obsidian Shard:
-      total: 0.51
+      total: 0.5
       efficiency: 0.36
-      win: 0.68
-      pick: 0.11
+      win: 0.66
+      pick: 0.1
       fit: 0.48
   starter: *id001
 - source: suggested
@@ -365,8 +365,8 @@ builds:
   - Damaru
   - Demon Blade
   flex_slots:
-  - Demon Blade
   - Jotunn's Revenge
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -390,14 +390,14 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.23
-      efficiency: 0.55
+      total: 0.22
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.23
     Tyrfing:
-      total: 0.24
-      efficiency: 0.39
+      total: 0.23
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -414,8 +414,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.23
-      efficiency: 0.22
+      total: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

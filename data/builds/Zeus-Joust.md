@@ -33,19 +33,19 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.51
-      efficiency: 0.36
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.48
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.61
     Spear of Desolation:
       total: 0.52
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.5
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -100,19 +100,19 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.46
-      efficiency: 0.36
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.57
     Bragi's Harp:
-      total: 0.48
-      efficiency: 0.35
+      total: 0.47
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.6
     Spear of Desolation:
       total: 0.5
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -123,7 +123,7 @@ builds:
       pick: 0.0
       fit: 0.42
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -139,14 +139,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Divine Ruin
-  - Stygian Anchor
+  - Spear of Desolation
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Stygian Anchor
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -158,23 +158,23 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.46
-      efficiency: 0.36
+      total: 0.45
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Stygian Anchor:
+    Spear of Desolation:
       total: 0.4
-      efficiency: 0.26
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.38
     Spectral Armor:
       total: 0.41
       efficiency: 0.49
@@ -183,18 +183,18 @@ builds:
       fit: 0.32
     Amanita Charm:
       total: 0.59
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.74
     Erosion:
-      total: 0.42
+      total: 0.41
       efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.44
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.56
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -253,13 +253,13 @@ builds:
       pick: 0.0
       fit: 0.6
     The World Stone:
-      total: 0.49
-      efficiency: 0.37
+      total: 0.48
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.6
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -294,20 +294,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -325,7 +325,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

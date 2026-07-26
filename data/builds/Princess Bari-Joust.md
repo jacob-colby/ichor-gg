@@ -3,73 +3,6 @@ type: smite-build
 god: Princess Bari
 mode: Joust
 builds:
-- source: community
-  aspect: null
-  aspect_pick_rate: null
-  aspect_win_rate: null
-  slot_order:
-  - name: Spear of Desolation
-    pick_rate: 0.57
-    win_rate: 0.47
-    alternates:
-    - name: Chronos' Pendant
-      pick_rate: 0.1
-      win_rate: 0.42
-    - name: Book of Thoth
-      pick_rate: 0.1
-      win_rate: 0.61
-  - name: Soul Gem
-    pick_rate: 0.19
-    win_rate: 0.44
-    alternates:
-    - name: Spear of Desolation
-      pick_rate: 0.18
-      win_rate: 0.61
-    - name: The World Stone
-      pick_rate: 0.14
-      win_rate: 0.44
-  - name: Rod of Tahuti
-    pick_rate: 0.15
-    win_rate: 0.59
-    alternates:
-    - name: Soul Gem
-      pick_rate: 0.19
-      win_rate: 0.59
-    - name: The World Stone
-      pick_rate: 0.13
-      win_rate: 0.42
-  - name: Obsidian Shard
-    pick_rate: 0.2
-    win_rate: 0.47
-    alternates:
-    - name: Rod of Tahuti
-      pick_rate: 0.28
-      win_rate: 0.48
-    - name: Soul Gem
-      pick_rate: 0.05
-      win_rate: 0.63
-  - name: Blinking Abyss
-    pick_rate: 0.09
-    win_rate: 0.5
-    alternates:
-    - name: Obsidian Shard
-      pick_rate: 0.2
-      win_rate: 0.69
-    - name: Rod of Tahuti
-      pick_rate: 0.16
-      win_rate: 0.58
-  - name: Evil Eye
-    pick_rate: 0.1
-    win_rate: 0.82
-    alternates:
-    - name: Obsidian Shard
-      pick_rate: 0.09
-      win_rate: 0.7
-    - name: Void Shard
-      pick_rate: 0.08
-      win_rate: 0.44
-  source_url: https://smitebrain.com/gods/princess-bari/
-  last_verified: '2026-07-23'
 - source: suggested
   archetype: core
   slot_order:
@@ -99,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.5
-      efficiency: 0.36
+      total: 0.49
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -112,13 +45,13 @@ builds:
       fit: 0.56
     Bragi's Harp:
       total: 0.5
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.66
     Spear of Desolation:
       total: 0.49
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -129,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -166,20 +99,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.46
-      efficiency: 0.36
+      total: 0.45
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.56
     Bragi's Harp:
-      total: 0.49
-      efficiency: 0.35
+      total: 0.48
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.62
     Spear of Desolation:
-      total: 0.49
-      efficiency: 0.42
+      total: 0.48
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -190,7 +123,7 @@ builds:
       pick: 0.0
       fit: 0.4
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -232,13 +165,13 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.45
-      efficiency: 0.36
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.55
     Stygian Anchor:
-      total: 0.4
-      efficiency: 0.26
+      total: 0.39
+      efficiency: 0.25
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -250,7 +183,7 @@ builds:
       fit: 0.32
     Amanita Charm:
       total: 0.59
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -261,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.44
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -297,13 +230,13 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.47
-      efficiency: 0.36
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.59
     Spear of Desolation:
       total: 0.54
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -326,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -361,20 +294,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -392,7 +325,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

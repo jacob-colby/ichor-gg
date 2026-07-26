@@ -3,73 +3,6 @@ type: smite-build
 god: Ymir
 mode: Joust
 builds:
-- source: community
-  aspect: null
-  aspect_pick_rate: null
-  aspect_win_rate: null
-  slot_order:
-  - name: Shifter's Shield
-    pick_rate: 0.24
-    win_rate: 0.55
-    alternates:
-    - name: Gauntlet of Thebes
-      pick_rate: 0.12
-      win_rate: 0.52
-    - name: Stampede
-      pick_rate: 0.1
-      win_rate: 0.47
-  - name: Genji's Guard
-    pick_rate: 0.16
-    win_rate: 0.51
-    alternates:
-    - name: Shifter's Shield
-      pick_rate: 0.12
-      win_rate: 0.56
-    - name: Stampede
-      pick_rate: 0.11
-      win_rate: 0.53
-  - name: Spirit Robe
-    pick_rate: 0.09
-    win_rate: 0.48
-    alternates:
-    - name: Genji's Guard
-      pick_rate: 0.11
-      win_rate: 0.54
-    - name: Dwarven Plate
-      pick_rate: 0.08
-      win_rate: 0.43
-  - name: Dwarven Plate
-    pick_rate: 0.09
-    win_rate: 0.63
-    alternates:
-    - name: Spirit Robe
-      pick_rate: 0.1
-      win_rate: 0.58
-    - name: Shell of Rebuke
-      pick_rate: 0.07
-      win_rate: 0.45
-  - name: Engraved Guard
-    pick_rate: 0.06
-    win_rate: 0.35
-    alternates:
-    - name: Dwarven Plate
-      pick_rate: 0.09
-      win_rate: 0.61
-    - name: Spirit Robe
-      pick_rate: 0.06
-      win_rate: 0.71
-  - name: Circle of Protection
-    pick_rate: 0.07
-    win_rate: 0.43
-    alternates:
-    - name: Engraved Guard
-      pick_rate: 0.08
-      win_rate: 0.56
-    - name: Medal of Defense
-      pick_rate: 0.05
-      win_rate: 0.3
-  source_url: https://smitebrain.com/gods/ymir/
-  last_verified: '2026-07-23'
 - source: suggested
   archetype: core
   slot_order:
@@ -99,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.54
-      efficiency: 0.26
+      total: 0.53
+      efficiency: 0.25
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -124,12 +57,12 @@ builds:
       fit: 0.66
     Amanita Charm:
       total: 0.72
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.66
+      total: 0.65
       efficiency: 0.39
       win: 0.5
       pick: 0.0
@@ -185,13 +118,13 @@ builds:
       fit: 0.56
     Amanita Charm:
       total: 0.72
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
     Rod of Asclepius:
       total: 0.61
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -212,8 +145,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Stone of Binding
   - Kinetic Cuirass
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -232,7 +165,7 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.51
-      efficiency: 0.29
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -243,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.58
     Void Shield:
-      total: 0.6
-      efficiency: 0.29
+      total: 0.59
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.91
@@ -261,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -296,20 +229,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -327,7 +260,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

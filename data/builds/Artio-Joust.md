@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.65
+      total: 0.66
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.94
     Void Stone:
-      total: 0.58
+      total: 0.57
       efficiency: 0.3
       win: 0.5
       pick: 0.0
@@ -57,12 +57,12 @@ builds:
       fit: 0.75
     Amanita Charm:
       total: 0.72
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.7
+      total: 0.69
       efficiency: 0.39
       win: 0.5
       pick: 0.0
@@ -124,7 +124,7 @@ builds:
       fit: 0.61
     Amanita Charm:
       total: 0.72
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Stone of Binding
   - Kinetic Cuirass
   - Void Shield
   - Void Stone
+  - Spectral Armor
   - Erosion
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Stone of Binding
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -163,12 +163,6 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Stone of Binding:
-      total: 0.52
-      efficiency: 0.29
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.44
@@ -177,16 +171,22 @@ builds:
       fit: 0.61
     Void Shield:
       total: 0.61
-      efficiency: 0.29
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.93
     Void Stone:
-      total: 0.62
+      total: 0.61
       efficiency: 0.3
       win: 0.5
       pick: 0.0
       fit: 0.93
+    Spectral Armor:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Erosion:
       total: 0.55
       efficiency: 0.39
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.71
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -229,20 +229,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -260,7 +260,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

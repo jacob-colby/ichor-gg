@@ -33,18 +33,18 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.55
     Eye of the Storm:
       total: 0.51
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.61
     Runeforged Hammer:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -57,7 +57,7 @@ builds:
       fit: 0.61
     Amanita Charm:
       total: 0.67
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -87,8 +87,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -99,19 +99,19 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.55
+      total: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.56
     Hydra's Lament:
-      total: 0.44
+      total: 0.43
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.42
     The Crusher:
-      total: 0.5
+      total: 0.49
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -123,8 +123,8 @@ builds:
       pick: 0.0
       fit: 0.39
     Amanita Charm:
-      total: 0.59
-      efficiency: 0.45
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -139,14 +139,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Shield Splitter
   - The Reaper
+  - The Crusher
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Kinetic Cuirass
-  - Shield Splitter
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -158,8 +158,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -169,27 +169,27 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Shield Splitter:
-      total: 0.47
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     The Reaper:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
+    The Crusher:
+      total: 0.47
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Spectral Armor:
-      total: 0.48
+      total: 0.49
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.48
     Amanita Charm:
-      total: 0.69
-      efficiency: 0.45
+      total: 0.68
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -235,14 +235,14 @@ builds:
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.6
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.66
     Void Shield:
-      total: 0.57
-      efficiency: 0.29
+      total: 0.56
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -253,8 +253,8 @@ builds:
       pick: 0.0
       fit: 0.84
     The Reaper:
-      total: 0.66
-      efficiency: 0.44
+      total: 0.65
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -294,20 +294,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -325,7 +325,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

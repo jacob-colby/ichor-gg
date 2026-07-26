@@ -23,8 +23,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -32,32 +32,32 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.55
+      total: 0.53
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.52
     Tyrfing:
-      total: 0.51
-      efficiency: 0.39
+      total: 0.5
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.63
     The Reaper:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.72
     Tekko-Kagi:
       total: 0.49
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.64
     Demon Blade:
       total: 0.48
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -74,14 +74,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Jotunn's Revenge
-  - Shield Splitter
   - The Reaper
   - The Crusher
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   flex_slots:
   - Jotunn's Revenge
-  - Shield Splitter
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -100,19 +100,13 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.43
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.31
-    Shield Splitter:
-      total: 0.42
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
     The Reaper:
       total: 0.51
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -124,10 +118,16 @@ builds:
       fit: 0.38
     Amanita Charm:
       total: 0.6
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Erosion:
+      total: 0.42
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Pharaoh's Curse:
       total: 0.43
       efficiency: 0.38
@@ -164,26 +164,26 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Reaper:
       total: 0.64
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.85
     Tekko-Kagi:
       total: 0.52
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -195,7 +195,7 @@ builds:
       fit: 0.7
     Heartseeker:
       total: 0.49
-      efficiency: 0.28
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -229,20 +229,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -260,7 +260,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

@@ -33,31 +33,31 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.48
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.41
     Tyrfing:
-      total: 0.45
-      efficiency: 0.39
+      total: 0.44
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.51
     The Reaper:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Riptalon:
       total: 0.5
-      efficiency: 0.27
+      efficiency: 0.26
       win: 0.5
       pick: 0.0
       fit: 0.74
     Demon Blade:
-      total: 0.44
-      efficiency: 0.22
+      total: 0.43
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -100,31 +100,31 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.47
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.4
     Rage:
-      total: 0.4
-      efficiency: 0.36
+      total: 0.39
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.43
     The Reaper:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.64
     Damaru:
-      total: 0.41
+      total: 0.4
       efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.43
     Demon Blade:
-      total: 0.44
-      efficiency: 0.22
+      total: 0.43
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -142,11 +142,11 @@ builds:
   - Tyrfing
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
+  - Pharaoh's Curse
   flex_slots:
   - Tyrfing
-  - Pendulum Blade
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -165,57 +165,57 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.5
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.46
     Tyrfing:
       total: 0.39
-      efficiency: 0.39
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.4
     Hydra's Lament:
-      total: 0.41
+      total: 0.4
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.36
     The Reaper:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Pendulum Blade:
-      total: 0.37
-      efficiency: 0.29
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     The Crusher:
       total: 0.46
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Pharaoh's Curse:
+      total: 0.37
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Jotunn's Revenge
   - The Reaper
-  - The Crusher
+  - Spectral Armor
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - The Crusher
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
@@ -230,25 +230,25 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.41
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.28
     The Reaper:
-      total: 0.51
-      efficiency: 0.44
+      total: 0.5
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.57
-    The Crusher:
+    Spectral Armor:
       total: 0.4
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.31
+      fit: 0.3
     Amanita Charm:
-      total: 0.58
-      efficiency: 0.45
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.53
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.55
+      total: 0.53
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.52
     Void Shield:
-      total: 0.45
-      efficiency: 0.29
+      total: 0.44
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -319,7 +319,7 @@ builds:
       fit: 0.6
     The Reaper:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77

@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.7
-      efficiency: 0.55
+      total: 0.69
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -44,14 +44,14 @@ builds:
       pick: 0.0
       fit: 0.66
     The Reaper:
-      total: 0.68
-      efficiency: 0.44
+      total: 0.67
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.92
     Pendulum Blade:
-      total: 0.57
-      efficiency: 0.29
+      total: 0.56
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -63,7 +63,7 @@ builds:
       fit: 0.77
     Heartseeker:
       total: 0.52
-      efficiency: 0.28
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -111,14 +111,14 @@ builds:
       pick: 0.0
       fit: 0.51
     The Reaper:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.76
     Pendulum Blade:
-      total: 0.5
-      efficiency: 0.29
+      total: 0.49
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -130,7 +130,7 @@ builds:
       fit: 0.61
     Heartseeker:
       total: 0.44
-      efficiency: 0.28
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -145,7 +145,7 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - The Crusher
+  - Shield Splitter
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
@@ -165,19 +165,19 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.49
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.44
     Shield Splitter:
-      total: 0.47
-      efficiency: 0.44
+      total: 0.46
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.49
     The Reaper:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -189,7 +189,7 @@ builds:
       fit: 0.44
     Amanita Charm:
       total: 0.62
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -230,19 +230,19 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.72
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.89
     The Reaper:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
     Pendulum Blade:
-      total: 0.59
-      efficiency: 0.29
+      total: 0.58
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -254,13 +254,13 @@ builds:
       fit: 0.87
     Heartseeker:
       total: 0.57
-      efficiency: 0.28
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.87
     Titan's Bane:
-      total: 0.57
-      efficiency: 0.37
+      total: 0.56
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -294,20 +294,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -325,7 +325,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0

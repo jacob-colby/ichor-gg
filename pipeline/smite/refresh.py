@@ -157,7 +157,16 @@ def refresh_builds_into() -> None:
         notes.write_note(path, frontmatter, body)
 
 
+# SmiteBrain publishes ONE page per god with no mode dimension, so its numbers
+# are Conquest. Scraping it for other modes stored Conquest pick/win rates under
+# a Joust label, which the tier list then presented as Joust community data.
+# Only scrape community stats for modes the source actually covers.
+COMMUNITY_MODES = {"conquest"}
+
+
 def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = False) -> None:
+    if mode.lower() not in COMMUNITY_MODES:
+        return
     slug = god.lower().replace(" ", "-").replace("'", "")
     url = f"{SMITEBRAIN_BASE}{slug}/"
     parsed = smitebrain_parser.parse_build_page(community_fetcher.fetch(url, force=force))

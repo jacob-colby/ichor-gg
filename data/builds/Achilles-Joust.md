@@ -7,21 +7,21 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Eye of the Storm
   - Runeforged Hammer
   - The Crusher
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Runeforged Hammer
-  - Eye of the Storm
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -33,16 +33,10 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Eye of the Storm:
-      total: 0.51
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Runeforged Hammer:
       total: 0.52
       efficiency: 0.45
@@ -55,14 +49,20 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Spectral Armor:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Amanita Charm:
       total: 0.68
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.91
     Erosion:
-      total: 0.53
+      total: 0.52
       efficiency: 0.39
       win: 0.5
       pick: 0.0
@@ -106,7 +106,7 @@ builds:
       fit: 0.54
     The Reaper:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -124,7 +124,7 @@ builds:
       fit: 0.49
     Amanita Charm:
       total: 0.69
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -171,25 +171,25 @@ builds:
       fit: 0.78
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.65
     Void Shield:
       total: 0.57
-      efficiency: 0.29
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.85
     Void Stone:
-      total: 0.58
+      total: 0.57
       efficiency: 0.3
       win: 0.5
       pick: 0.0
       fit: 0.85
     The Reaper:
       total: 0.65
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -229,20 +229,20 @@ builds:
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.53
-      efficiency: 0.39
+      total: 0.52
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
     Rage:
-      total: 0.51
-      efficiency: 0.36
+      total: 0.5
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -260,7 +260,7 @@ builds:
       fit: 0.66
     Demon Blade:
       total: 0.61
-      efficiency: 0.22
+      efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 1.0
