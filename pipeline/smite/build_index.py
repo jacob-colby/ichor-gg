@@ -6,7 +6,18 @@ import json
 import shutil
 from pathlib import Path
 
-from smite import efficiency, notes, scoring, snapshots, tierlist
+from smite import abilities, efficiency, notes, scoring, snapshots, tierlist
+
+
+def _enrich_gods(gods, weights):
+    """Attach the derived ability-leveling order to each god so the viewer's
+    Info tab doesn't need the kit-scaling parser client-side. Shape:
+    {"order": [20 slot names, one per level], "summary": {"max_order": [...],
+    "ult_levels": [...]}} — see abilities.py. Heuristic, not scraped data."""
+    for god in gods:
+        order = abilities.ability_order(god, weights)
+        god["ability_order"] = {"order": order, "summary": abilities.summary(order, weights)}
+    return gods
 
 
 def _enrich_items(items, tags):
@@ -57,6 +68,7 @@ def build_index(repo_root: Path) -> dict:
     weights = scoring.load_weights(data_root / "_weights.yaml")
     builds = _all(builds_dir)
     gods = _all(gods_dir)
+    _enrich_gods(gods, weights)
     _attach_item_meta(items, builds)
     # Reuses the same efficiency model _enrich_items already ran (to tag
     # efficiency_tier) so the tier list's "ours" item score is the identical

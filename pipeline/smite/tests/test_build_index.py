@@ -21,7 +21,12 @@ def test_build_index_collects_gods_items_builds(tmp_path):
 
     index = build_index.build_index(repo)
 
-    assert index["gods"] == [{"type": "smite-god", "name": "Chiron"}]
+    # Gods are enriched with a derived ability_order (see abilities.py); this
+    # note has no `abilities` key so it falls back to an empty 20-level order.
+    assert index["gods"] == [{
+        "type": "smite-god", "name": "Chiron",
+        "ability_order": {"order": [""] * 20, "summary": {"max_order": [], "ult_levels": [5, 9, 13, 17]}},
+    }]
     # Items are enriched with god-agnostic effect_tags + efficiency_tier; this
     # note has no cost so it can't be scored (tier None) and no tags entry ([]).
     assert index["items"] == [
@@ -180,6 +185,18 @@ def test_build_index_reads_snapshots_under_the_given_repo_root(tmp_path):
     assert [p["to"] for p in report] == ["2026-01-08"]
     assert report[0]["changed"][0]["name"] == "Rage"
     assert report[0]["changed"][0]["verdict"] == "buff"
+
+
+def test_build_index_emits_ability_order_for_every_god():
+    from smite import build_index
+    from pathlib import Path
+    r = build_index.build_index(Path(__file__).resolve().parents[3])
+    for god in r["gods"]:
+        ao = god.get("ability_order")
+        assert ao is not None, f"{god.get('name')} missing ability_order"
+        assert len(ao["order"]) == 20
+        assert set(ao["summary"]) == {"max_order", "ult_levels"}
+        assert ao["summary"]["ult_levels"] == [5, 9, 13, 17]
 
 
 def test_build_index_emits_capped_god_item_scores():

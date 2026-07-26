@@ -22,6 +22,12 @@ kit_blend: 0.3       # how much the parsed ability-scaling profile skews god-fit
                      # Swept 2026-07-22: 0.3 captures the full coverage gain (Susano 80->100%)
                      # with the smallest Spearman cost (0.375->0.331); 0.5+ costs more, adds nothing.
 
+# Ability upgrade order is DERIVED (no source scrapes it) — see abilities.py.
+abilities:
+  ult_levels: [5, 9, 13, 17]   # SMITE 2: ult unlocks at 5, then every 4
+  early_points: 1              # one point in each non-ult ability first
+  max_levels: 20
+
 # ── Draft-aware builds (2026-07-23) ──
 # How an entered enemy/ally comp skews item scores. The viewer is static, so the
 # browser applies these as a tag/stat overlay on the per-god base scores shipped
