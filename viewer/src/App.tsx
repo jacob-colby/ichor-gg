@@ -14,6 +14,7 @@ import { PatchNotes } from "./components/PatchNotes";
 import { AppSkeleton } from "./components/Skeleton";
 import { relativeDate } from "./lib/relativeDate";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
+import { documentTitle } from "./lib/documentTitle";
 
 type View = "home" | "builds" | "draft" | "items" | "tiers" | "patch";
 
@@ -46,6 +47,12 @@ function App() {
   const [scraping, setScraping] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
   const isDev = import.meta.env.DEV;
+
+  // Per-route tab/history title — these links get pasted into Discord, and a
+  // history full of identical "ichor" entries is useless.
+  useEffect(() => {
+    document.title = documentTitle(route);
+  }, [route]);
 
   useEffect(() => {
     if (!localStorage.getItem("smite:legend-seen")) setLegendOpen(true);
