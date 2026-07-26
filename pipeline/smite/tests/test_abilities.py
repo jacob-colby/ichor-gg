@@ -86,8 +86,9 @@ def test_no_parseable_scaling_still_returns_20_valid_levels():
 
 
 def test_god_with_no_abilities_key_never_raises():
-    order = abilities.ability_order({"name": "NoKit"}, _WEIGHTS)
-    assert len(order) == 20
+    # Intent unchanged (must not raise); contract now returns None rather than
+    # a fabricated order, since there is nothing to derive an order from.
+    assert abilities.ability_order({"name": "NoKit"}, _WEIGHTS) is None
 
 
 def test_defaults_used_when_weights_omit_abilities_block():
@@ -104,3 +105,11 @@ def test_summary_reports_max_order_and_ult_levels():
     assert s["ult_levels"] == [5, 9, 13, 17]
     assert s["max_order"][0] == "1st Ability"
     assert set(s["max_order"]) == {"1st Ability", "2nd Ability", "3rd Ability"}
+
+
+def test_god_with_only_basic_attack_and_passive_gets_no_order():
+    # Stance/transform gods (Artio, Merlin, Ullr) scrape with no numbered
+    # abilities at all. Cycling Basic Attack/Passive across 20 levels is
+    # fabricated nonsense — emit nothing so the UI can hide the section.
+    god = _god([_ability("Basic Attack"), _ability("Passive")])
+    assert abilities.ability_order(god, _WEIGHTS) is None

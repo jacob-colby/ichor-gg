@@ -16,7 +16,12 @@ def _enrich_gods(gods, weights):
     "ult_levels": [...]}} — see abilities.py. Heuristic, not scraped data."""
     for god in gods:
         order = abilities.ability_order(god, weights)
-        god["ability_order"] = {"order": order, "summary": abilities.summary(order, weights)}
+        # Gods whose kit didn't scrape any levelable abilities (stance gods:
+        # Artio, Merlin, Ullr) get no key at all rather than a fabricated
+        # order — the viewer hides the section instead of showing nonsense.
+        if order:
+            god["ability_order"] = {"order": order,
+                                    "summary": abilities.summary(order, weights)}
     return gods
 
 

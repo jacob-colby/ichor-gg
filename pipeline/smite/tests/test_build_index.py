@@ -21,12 +21,10 @@ def test_build_index_collects_gods_items_builds(tmp_path):
 
     index = build_index.build_index(repo)
 
-    # Gods are enriched with a derived ability_order (see abilities.py); this
-    # note has no `abilities` key so it falls back to an empty 20-level order.
-    assert index["gods"] == [{
-        "type": "smite-god", "name": "Chiron",
-        "ability_order": {"order": [""] * 20, "summary": {"max_order": [], "ult_levels": [5, 9, 13, 17]}},
-    }]
+    # Gods gain a derived ability_order (see abilities.py) only when their kit
+    # has levelable abilities. This note has no `abilities` key at all, so the
+    # key is absent rather than a fabricated order of empty slots.
+    assert index["gods"] == [{"type": "smite-god", "name": "Chiron"}]
     # Items are enriched with god-agnostic effect_tags + efficiency_tier; this
     # note has no cost so it can't be scored (tier None) and no tags entry ([]).
     assert index["items"] == [
@@ -191,12 +189,17 @@ def test_build_index_emits_ability_order_for_every_god():
     from smite import build_index
     from pathlib import Path
     r = build_index.build_index(Path(__file__).resolve().parents[3])
-    for god in r["gods"]:
-        ao = god.get("ability_order")
-        assert ao is not None, f"{god.get('name')} missing ability_order"
+    # Gods whose kit scraped no levelable abilities (stance gods) legitimately
+    # carry no key — better than a fabricated Basic-Attack/Passive order. Every
+    # god that DOES have one must be well-formed, and most of the roster must.
+    with_order = [g for g in r["gods"] if g.get("ability_order")]
+    assert len(with_order) >= len(r["gods"]) - 5, "too many gods missing an order"
+    for god in with_order:
+        ao = god["ability_order"]
         assert len(ao["order"]) == 20
         assert set(ao["summary"]) == {"max_order", "ult_levels"}
         assert ao["summary"]["ult_levels"] == [5, 9, 13, 17]
+        assert not any(s in ("Basic Attack", "Passive") for s in ao["order"])
 
 
 def test_build_index_emits_capped_god_item_scores():

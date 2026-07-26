@@ -59,14 +59,16 @@ def _ability_scaling_total(ability):
 
 
 def _fallback_order(god, max_levels):
-    """Last-resort, never-raise order: cycle through whatever slots the god's
-    kit has, in kit order. Only reached when there isn't even a single
-    levelable (non-ult, non-passive, non-basic) ability to build an order
-    from — real scrapes with no scaling data still go through the normal
-    path, which degrades gracefully to plain slot order on its own."""
-    slots = [ab.get("slot") for ab in (god.get("abilities") or []) if ab.get("slot")]
+    """Order built from whatever levelable slots exist, in kit order — used
+    when scaling can't be parsed but real abilities are present. Returns None
+    when the kit has NO levelable abilities at all (stance/transform gods like
+    Artio, Merlin and Ullr scrape with only Basic Attack + Passive): cycling
+    those across 20 levels would be fabricated nonsense, so callers emit
+    nothing and the UI hides the section."""
+    slots = [ab.get("slot") for ab in (god.get("abilities") or [])
+             if ab.get("slot") and _slot_kind(ab.get("slot")) in ("ability", "ultimate")]
     if not slots:
-        return [""] * max_levels
+        return None
     return [slots[i % len(slots)] for i in range(max_levels)]
 
 

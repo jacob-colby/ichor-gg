@@ -2529,42 +2529,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Artio",
-      "last_verified": "2026-07-25",
-      "ability_order": {
-        "order": [
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive"
-        ],
-        "summary": {
-          "max_order": [
-            "Passive"
-          ],
-          "ult_levels": [
-            5,
-            9,
-            13,
-            17
-          ]
-        }
-      }
+      "last_verified": "2026-07-25"
     },
     {
       "type": "smite-god",
@@ -12103,42 +12068,7 @@
         }
       ],
       "source_url": "https://wiki.smite2.com/w/Merlin",
-      "last_verified": "2026-07-25",
-      "ability_order": {
-        "order": [
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive"
-        ],
-        "summary": {
-          "max_order": [
-            "Passive"
-          ],
-          "ult_levels": [
-            5,
-            9,
-            13,
-            17
-          ]
-        }
-      }
+      "last_verified": "2026-07-25"
     },
     {
       "type": "smite-god",
@@ -17832,42 +17762,7 @@
       ],
       "aspects": [],
       "source_url": "https://wiki.smite2.com/w/Ullr",
-      "last_verified": "2026-07-25",
-      "ability_order": {
-        "order": [
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive",
-          "Basic Attack",
-          "Passive"
-        ],
-        "summary": {
-          "max_order": [
-            "Passive"
-          ],
-          "ult_levels": [
-            5,
-            9,
-            13,
-            17
-          ]
-        }
-      }
+      "last_verified": "2026-07-25"
     },
     {
       "type": "smite-god",
