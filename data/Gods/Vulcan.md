@@ -36,20 +36,17 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Vulcan Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Master Craftsman
   details:
   - 'Movement Speed: 15%'
   - 'Mana Regen: 3'
   - 'Buff Duration: 5 seconds'
-  description: 'BUY MODS IN SHOP Vulcan has access to a variety of Mods in the item
+  description: BUY MODS IN SHOP Vulcan has access to a variety of Mods in the item
     shop that affect his abilities. There are 3 sets of Mods available at different
     levels. You can only have 1 Mod from each set. Additionally, Hitting an enemy
-    god with an ability grants you increased Movement Speed and Mana Regen Movement
-    Speed : 15% Mana Regen : 3 Buff Duration : 5 seconds Expand Ability Video'
+    god with an ability grants you increased Movement Speed and Mana Regen
 - slot: 1st Ability
   name: Backfire
   cooldown:
@@ -74,11 +71,8 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 9 | 8.5 | 8 | 7.5 | 7 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
-  description: 'FIRE PROJECTILE, DASH BACKWARDS Notes: Fire a projectile that causes
-    you to Dash back and deal Magical Damage to all enemies it hits, marking the first
-    god that is hit Damage : 90 | 135 | 180 | 225 | 270 Damage Scaling : 80% Intelligence
-    Range : 8.8 meters Radius : 0.48 meters Cooldown : 9 | 8.5 | 8 | 7.5 | 7 seconds
-    Cost : 40 | 45 | 50 | 55 | 60 mana Expand Ability Video'
+  description: Fire a projectile that causes you to Dash back and deal Magical Damage
+    to all enemies it hits, marking the first god that is hit
 - slot: 2nd Ability
   name: Inferno Cannon
   cooldown:
@@ -102,11 +96,8 @@ abilities:
   - 'Turret Cone Angle: 110 degrees'
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'DEPLOY TURRET Notes: Create an that shoots projectiles every 1 second
-    at an enemy in front of it, dealing Magical Damage Damage : 45 | 70 | 95 | 120
-    | 145 Damage Scaling : 35% Intelligence Turret HP : 220 | 300 | 380 | 460 | 540
-    Turret Range : 9.6 meters Turret Cone Angle : 110 degrees Cooldown : 12 seconds
-    Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Create an that shoots projectiles every 1 second at an enemy in front
+    of it, dealing Magical Damage
 - slot: 3rd Ability
   name: Magma Bomb
   cooldown:
@@ -125,11 +116,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'AREA DAMAGE KNOCKBACK Notes: Lob a projectile that explodes on impact
-    with the ground, dealing Magical Damage and Knocking Up enemies in the area Damage
-    : 80 | 130 | 180 | 230 | 280 Damage Scaling : 90% Intelligence Range : 9.6 meters
-    Radius : 2.4 meters Cooldown : 10 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand
-    Ability Video'
+  description: Lob a projectile that explodes on impact with the ground, dealing Magical
+    Damage and Knocking Up enemies in the area
 - slot: Ultimate
   name: Earthshaker
   cooldown:
@@ -153,18 +141,15 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 | 85 | 80 | 75 | 70 seconds'
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
-  description: 'LONG-RANGE AREA DAMAGE Notes: Launch a projectile that explodes on
-    impact with the ground, dealing Magical Damage to enemies in the area Damage :
-    285 | 375 | 465 | 555 | 645 Damage Scaling : 110% Intelligence Range : 19.2 meters
-    Radius : 4.8 meters Cooldown : 90 | 85 | 80 | 75 | 70 seconds Cost : 80 | 90 |
-    100 | 110 | 120 mana Expand Ability Video'
+  description: Launch a projectile that explodes on impact with the ground, dealing
+    Magical Damage to enemies in the area
 aspects:
 - name: Aspect of Fortification
   kit_changes: Being near one of Vulcan's turrets grants Vulcan and the turret increased
     Protections and Health Regeneration. Backfire and Magma Bomb have lower Damage
     Scaling.
 source_url: https://wiki.smite2.com/w/Vulcan
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Vulcan Basic Attack

@@ -7,7 +7,7 @@
  */
 
 function Bar({ className = "" }: { className?: string }) {
-  return <div className={`rounded bg-bg2 motion-safe:animate-pulse ${className}`} />;
+  return <div className={`rounded-sm bg-bg2 motion-safe:animate-pulse ${className}`} />;
 }
 
 /** Sidebar: a 4-column grid of god-card placeholders. */

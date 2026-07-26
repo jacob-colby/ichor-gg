@@ -37,9 +37,7 @@ abilities:
   - 'Heat Generated: 5'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Sol Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Heat Generated : 5 Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Unstable Manifestation
   details:
@@ -52,10 +50,8 @@ abilities:
   - 'Intelligence: 0.25%'
   - 'Attack Speed: 0.3%'
   - 'Attack Damage: 15%'
-  description: 'HIT ENEMIES, GET STRONGER Notes: Heat grants increased Strength ,
-    Intelligence , and Attack Speed from items Hit enemies with Attacks or use abilities
-    to gain Heat Strength : 0.15% Intelligence : 0.25% Attack Speed : 0.3% Attack
-    Damage : 15% Expand Ability Video'
+  description: Heat grants increased Strength , Intelligence , and Attack Speed from
+    items Hit enemies with Attacks or use abilities to gain Heat
 - slot: 1st Ability
   name: Radiance
   cooldown:
@@ -80,12 +76,8 @@ abilities:
   - 'Radius: 2.08 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'HEAL, AREA DAMAGE Notes: Create a pool of flames and Heal yourself
-    over time for a percentage of your missing Health Damage Per Tick : 45 | 70 |
-    95 | 120 | 145 Damage Scaling Per Tick : 30% Intelligence + 15% Strength Heal
-    Per Tick : 2.5% Missing Health Heal Scaling Per Tick : 2% Intelligence Heat Generated
-    : 30 | 40 | 50 | 60 | 70 Radius : 2.08 meters Cooldown : 10 seconds Cost : 50
-    | 60 | 70 | 80 | 90 mana Expand Ability Video'
+  description: Create a pool of flames and Heal yourself over time for a percentage
+    of your missing Health
 - slot: 2nd Ability
   name: Stellar Burst
   cooldown:
@@ -109,12 +101,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'NEXT ATTACK EXPLODES, SLOWING Notes: Your next Attack fires a projectile
-    that explodes on hit or upon reaching max range, then retracts, and generates
-    Heat Damage : 45 | 70 | 95 | 120 | 145 Damage Scaling : 45% Intelligence + 25%
-    Strength Slow : 25 | 27.5 | 30 | 32.5 | 35% Slow Duration : 1.5 seconds Heat Generated
-    : 10 Range : 8.8 meters Radius : 3.2 meters Cooldown : 10 seconds Cost : 50 |
-    60 | 70 | 80 | 90 mana Expand Ability Video'
+  description: Your next Attack fires a projectile that explodes on hit or upon reaching
+    max range, then retracts, and generates Heat
 - slot: 3rd Ability
   name: Disapparate
   cooldown:
@@ -143,15 +131,10 @@ abilities:
   - 'Radius: 1 meter'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 60 mana'
-  description: 'SPEED UP, THEN BECOME IMMUNE Notes: This Immune state makes you Damage
-    Immune , Healing Immune , CC Immune , Untargetable , and lets you pass through
-    allies, enemies, and Impediments Gain Movement Speed and Slow Immunity , gaining
-    Heat and leaving a trail of fire behind you Damage Per Tick : 10 | 20 | 30 | 40
-    | 50 Damage Scaling Per Tick : 15% Intelligence Explosion Damage : 60 | 120 |
-    180 | 240 | 300 Explosion Damage Scaling : 75% Intelligence + 40% Strength Movement
-    Speed : 20 | 22.5 | 25 | 27.5 | 30% Buff Duration : 3 seconds Immunity Duration
-    : 3 seconds Heat Generated : 10 Radius : 1 meter Cooldown : 16 | 15.5 | 15 | 14.5
-    | 14 seconds Cost : 60 mana Expand Ability Video'
+  description: This Immune state makes you Damage Immune , Healing Immune , CC Immune
+    , Untargetable , and lets you pass through allies, enemies, and Impediments Gain
+    Movement Speed and Slow Immunity , gaining Heat and leaving a trail of fire behind
+    you
 - slot: Ultimate
   name: Supernova
   cooldown:
@@ -176,19 +159,16 @@ abilities:
   - 'Radius: 1.92 meters'
   - 'Cooldown: 90 | 85 | 80 | 75 | 70 seconds'
   - 'Cost: 100 mana'
-  description: 'MULTIPLE AREA DAMAGE KNOCKBACK Notes: Each strike deals Magical Damage
-    ; subsequent hits deal reduced Damage Unleash flame and fury, gaining Heat and
-    striking 8 times along a moveable ground target location Damage : 130 | 175 |
-    220 | 265 | 310 Damage Scaling : 40% Intelligence Subsequent Damage : 30% Heat
-    Generated : 40 Range : 8.8 meters Radius : 1.92 meters Cooldown : 90 | 85 | 80
-    | 75 | 70 seconds Cost : 100 mana Expand Ability Video'
+  description: Each strike deals Magical Damage ; subsequent hits deal reduced Damage
+    Unleash flame and fury, gaining Heat and striking 8 times along a moveable ground
+    target location
 aspects:
 - name: Aspect of Conflagration
   kit_changes: Sol's Heat provides Intelligence and Ability Damage, but no longer
     provides Strength, Attack Speed, and Attack Damage. Sol erupts and deals damage
     around her when becomes immune in Disapparate.
 source_url: https://wiki.smite2.com/w/Sol
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Sol Basic Attack

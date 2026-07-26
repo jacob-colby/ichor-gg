@@ -122,7 +122,7 @@ function PeriodSection({ period, defaultOpen }: { period: PatchPeriod; defaultOp
   ].filter(Boolean).join(" · ");
 
   return (
-    <div className="mb-3 overflow-hidden rounded-xl border border-line bg-bg1">
+    <section className="mb-3 overflow-hidden rounded-lg border border-line bg-bg1">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
@@ -130,7 +130,7 @@ function PeriodSection({ period, defaultOpen }: { period: PatchPeriod; defaultOp
         aria-expanded={open}
       >
         <ChevronIcon open={open} />
-        <span className="font-mono text-small text-faint">{period.from} → {period.to}</span>
+        <h2 className="font-mono text-small text-ink-soft">{period.from} → {period.to}</h2>
         <span className="ml-auto font-mono text-label text-faint">{counts}</span>
       </button>
       {open && (
@@ -159,27 +159,45 @@ function PeriodSection({ period, defaultOpen }: { period: PatchPeriod; defaultOp
           )}
         </div>
       )}
-    </div>
+    </section>
   );
 }
 
 export function PatchNotes({ periods }: { periods: PatchPeriod[] }) {
-  if (periods.length === 0) {
-    return (
-      <div className="flex flex-col items-center gap-2 px-4 py-20 text-center">
-        <p className="font-display text-body font-semibold text-ink">No patch history yet</p>
-        <p className="max-w-sm text-small text-muted">
-          Changes appear after the next data refresh — patch history starts accruing from the first snapshot.
-        </p>
-      </div>
-    );
-  }
+  const changed = periods.reduce((n, p) => n + p.changed.length, 0);
+  const added = periods.reduce((n, p) => n + p.added.length, 0);
+  const removed = periods.reduce((n, p) => n + p.removed.length, 0);
 
   return (
-    <div className="p-4">
-      {periods.map((p, i) => (
-        <PeriodSection key={`${p.from}-${p.to}`} period={p} defaultOpen={i === 0} />
-      ))}
+    <div className="mx-auto w-full max-w-3xl p-4 sm:p-6">
+      <header className="border-b border-line pb-4">
+        <h1 className="max-w-[26ch] text-balance font-display text-display font-bold leading-[1.12] tracking-[-0.01em] text-ink">
+          {periods.length === 0
+            ? "Nothing has changed yet."
+            : <>Items have moved <span className="text-gold">{changed + added + removed}</span> times
+                across {periods.length} refresh{periods.length === 1 ? "" : "es"}.</>}
+        </h1>
+        <p className="mt-2.5 max-w-[70ch] text-body leading-relaxed text-ink-soft">
+          {periods.length === 0
+            ? "Patch history is a diff between two data refreshes, so it starts empty and fills in from the first snapshot onward — this isn’t a loading state."
+            : "Every item whose cost or stats changed between two data refreshes, newest first. Cost is read inverted: cheaper is better."}
+        </p>
+        {periods.length > 0 && (
+          <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-label uppercase tracking-[0.09em] text-faint">
+            <span>{changed} changed</span>
+            {added > 0 && <span className="before:mr-3 before:content-['·']">{added} added</span>}
+            {removed > 0 && <span className="before:mr-3 before:content-['·']">{removed} removed</span>}
+          </p>
+        )}
+      </header>
+
+      {periods.length > 0 && (
+        <div className="mt-4">
+          {periods.map((p, i) => (
+            <PeriodSection key={`${p.from}-${p.to}`} period={p} defaultOpen={i === 0} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

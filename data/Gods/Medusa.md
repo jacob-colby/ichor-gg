@@ -36,13 +36,11 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Medusa Notes: Fire a projectile that deals Physical Damage to the
-    first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
-    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Sidewinder
   description: NO MOVEMENT PENALTY You suffer no movement penalty when strafing and
-    half the movement penalty when backpedaling Expand Ability Video
+    half the movement penalty when backpedaling
 - slot: 1st Ability
   name: Viper Shot
   cooldown:
@@ -64,13 +62,9 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
   - 'Cost: 50 mana'
-  description: 'ATTACKS BLEED Notes: Gain Increased Attack Speed and augment your
-    next 4 Attacks, shooting vipers that poison the target hit, dealing Physical Damage
-    every 0.5 seconds for 1.5 seconds Damage Per Tick : 10 | 15 | 20 | 25 | 30 Damage
-    Scaling Per Tick : 8% Strength + 8% Intelligence Attack Speed : 40 | 45 | 50 |
-    55 | 60% Attack Speed Scaling : 15% Strength Range : 8.8 meters Radius : 0.48
-    meters Cooldown : 12 | 11.5 | 11 | 10.5 | 10 seconds Cost : 50 mana Expand Ability
-    Video'
+  description: Gain Increased Attack Speed and augment your next 4 Attacks, shooting
+    vipers that poison the target hit, dealing Physical Damage every 0.5 seconds for
+    1.5 seconds
 - slot: 2nd Ability
   name: Acid Spray
   cooldown:
@@ -99,13 +93,8 @@ abilities:
   - 'Cone Angle: 70 degrees'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
-  description: 'LINE DAMAGE, CONE ON-HIT Notes: will explode on statues Medusa has
-    created Spit acid that deals Physical Damage to the first enemy hit, then spraying
-    out in a cone behind them Damage : 90 | 145 | 200 | 255 | 310 Damage Scaling :
-    65% Strength + 80% Intelligence Healing Reduction : -25% Healing Reduction Duration
-    : 5 seconds Range : 7.2 meters Radius : 0.64 meters Cone Range : 7.2 meters Cone
-    Angle : 70 degrees Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 40 | 45
-    | 50 | 55 | 60 mana Expand Ability Video'
+  description: will explode on statues Medusa has created Spit acid that deals Physical
+    Damage to the first enemy hit, then spraying out in a cone behind them Cone
 - slot: 3rd Ability
   name: Lacerate
   cooldown:
@@ -129,11 +118,7 @@ abilities:
   - 'Radius: 0.96 meters'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 70 mana'
-  description: 'NO MOVEMENT PENALTY Notes: Dash forward, dealing Physical Damage to
-    all enemies you pass through Damage : 80 | 130 | 180 | 230 | 280 Damage Scaling
-    : 75% Strength + 40% Intelligence Root Duration : 1 second Range : 8.8 meters
-    Radius : 0.96 meters Cooldown : 16 | 15.5 | 15 | 14.5 | 14 seconds Cost : 70 mana
-    Expand Ability Video'
+  description: Dash forward, dealing Physical Damage to all enemies you pass through
 - slot: Ultimate
   name: Petrify
   cooldown:
@@ -165,19 +150,13 @@ abilities:
   - 'Cone Angle: 40 degrees'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'CONE DAMAGE, CONDITIONAL STUN Notes: When a statue is destroyed, the
-    cooldown of Lacerate is reduced by 5 seconds, you gain a temporary Strength and
-    Intelligence buff , and you gain a permanent Strength and Intelligence buff Remove
-    your mask, revealing your true face to deliver a powerful blast from your horrifying
-    gorgon gaze Damage : 270 | 365 | 460 | 555 | 650 Damage Scaling : 80% Strength
-    + 95% Intelligence Not Looking Damage Reduction : -15% Slow : 20 | 25 | 30 | 35
-    | 40% Slow Duration : 3 seconds Stun Duration : 2 seconds Temporary Strength and
-    Intelligence Buff : 10% Buff Duration : 10 seconds Permanent Strength and Intelligence
-    Buff : 5 Range : 11.2 meters Cone Angle : 40 degrees Cooldown : 90 seconds Cost
-    : 100 mana Expand Ability Video'
+  description: When a statue is destroyed, the cooldown of Lacerate is reduced by
+    5 seconds, you gain a temporary Strength and Intelligence buff , and you gain
+    a permanent Strength and Intelligence buff Remove your mask, revealing your true
+    face to deliver a powerful blast from your horrifying gorgon gaze
 aspects: []
 source_url: https://wiki.smite2.com/w/Medusa
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Medusa Basic Attack

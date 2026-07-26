@@ -35,9 +35,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Anubis Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: The Scales
   details:
@@ -48,10 +46,8 @@ abilities:
   - 'Bonus Lifesteal: +0.5% per stack'
   - 'Bonus Protections: +2 per stack'
   - 'Max Stacks: 8'
-  description: 'NEAR-DEATH STRENGTH Notes: Gain Lifesteal and Protections . Gain bonus
-    Lifesteal and Protections scaled from missing Health Lifesteal : 2% Protections
-    : 5 + 0.5 per level Bonus Lifesteal : +0.5% per stack Bonus Protections : +2 per
-    stack Max Stacks : 8 Expand Ability Video'
+  description: Gain Lifesteal and Protections . Gain bonus Lifesteal and Protections
+    scaled from missing Health
 - slot: 1st Ability
   name: Plague of Locusts
   cooldown:
@@ -78,12 +74,8 @@ abilities:
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds'
   - 'Cost: 30 | 40 | 50 | 60 | 70 mana'
-  description: 'CHANNELED DAMAGE CONE Notes: Locusts fly from your mouth, repeatedly
-    dealing Magical Damage in an area in front of you Damage Per Tick : 15 | 22 |
-    29 | 36 | 43 Damage Scaling Per Tick : 16 | 17 | 18 | 19 | 20% Intelligence Self
-    Slow : 35 | 30 | 25 | 20 | 15% Radius : 5.6 meters Cone Angle : 110 degrees Cooldown
-    : 10 | 9.5 | 9 | 8.5 | 8 seconds Cost : 30 | 40 | 50 | 60 | 70 mana Expand Ability
-    Video'
+  description: Locusts fly from your mouth, repeatedly dealing Magical Damage in an
+    area in front of you
 - slot: 2nd Ability
   name: Mummify
   cooldown:
@@ -107,11 +99,8 @@ abilities:
   - 'Radius: 0.56 meters'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'SINGLE TARGET STUN Notes: Fire a bandage projectile, dealing Magical
-    Damage , mummifying, and Stunning the first god hit Damage : 60 | 85 | 110 | 135
-    | 160 Damage Scaling : 55% Intelligence Stun Duration : 0.85 | 0.9 | 0.95 | 1
-    | 1.05 seconds Range : 11.2 meters Radius : 0.56 meters Cooldown : 16 | 15.5 |
-    15 | 14.5 | 14 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Fire a bandage projectile, dealing Magical Damage , mummifying, and
+    Stunning the first god hit
 - slot: 3rd Ability
   name: Grasping Hands
   cooldown:
@@ -137,11 +126,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'AREA DAMAGE SLOW Notes: Summon allies from the underworld, Slowing
-    and dealing Magical Damage repeatedly to enemies in an area Damage : 25 | 45 |
-    65 | 85 | 105 Damage Scaling : 35% intelligence Slow : 25% Slow Duration : 2 seconds
-    Range : 8.8 meters Radius : 3.2 meters Cooldown : 14 | 13 | 12 | 11 | 10 seconds
-    Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Summon allies from the underworld, Slowing and dealing Magical Damage
+    repeatedly to enemies in an area
 - slot: Ultimate
   name: Death Gaze
   cooldown:
@@ -164,14 +150,11 @@ abilities:
   - 'Radius: 0.72 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 mana'
-  description: 'CHANNELED DAMAGE BEAM Notes: The Scales is always at full strength
-    during Your piercing gaze burns enemies in a line Initial Damage : 140 | 170 |
-    200 | 230 | 260 Initial Damage Scaling : 90% Intelligence Damage Per Tick : 27
-    | 32 | 37 | 42 | 47 Damage Scaling Per Tick : 18% Intelligence Range : 11.2 meters
-    Radius : 0.72 meters Cooldown : 90 seconds Cost : 90 mana Expand Ability Video'
+  description: The Scales is always at full strength during Your piercing gaze burns
+    enemies in a line
 aspects: []
 source_url: https://wiki.smite2.com/w/Anubis
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Anubis Basic Attack

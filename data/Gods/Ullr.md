@@ -42,20 +42,16 @@ abilities:
   - 'Bow Radius: 0.48 meters'
   - 'Axe Range: 1.92 meters'
   - 'Axe Cone Angle: 120 degrees'
-  description: 'Ullr Notes: Ullr''s Attacks change depending on his current stance
-    Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Bow Range
-    : 8.8 meters Bow Radius : 0.48 meters Axe Range : 1.92 meters Axe Cone Angle :
-    120 degrees Expand Ability Video'
+  description: Ullr's Attacks change depending on his current stance
 - slot: Passive
   name: Weapon Master
   details:
   - 'Cooldown Reduction: 1 second'
-  description: 'ABILITIES REDUCE OTHER COOLDOWNS When you use an ability in either
-    stance your Cooldowns in the opposite stance are reduced Cooldown Reduction :
-    1 second Expand Ability Video'
+  description: ABILITIES REDUCE OTHER COOLDOWNS When you use an ability in either
+    stance your Cooldowns in the opposite stance are reduced
 aspects: []
 source_url: https://wiki.smite2.com/w/Ullr
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Ullr Basic Attack

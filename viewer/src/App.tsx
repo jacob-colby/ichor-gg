@@ -191,7 +191,7 @@ function App() {
             {isDev && (
               <button type="button" onClick={() => setAddOpen(true)}
                 className="press hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-small text-faint hover:text-muted md:flex">
-                <span className="rounded border border-line-strong px-1 py-px font-mono text-micro uppercase tracking-wider">Dev</span>+ Add god
+                <span className="rounded-sm border border-line-strong px-1 py-px font-mono text-micro uppercase tracking-wider">Dev</span>+ Add god
               </button>
             )}
             <button type="button" onClick={reload} className="press rounded-md border border-line bg-bg2 px-3 py-1.5 text-small text-muted hover:text-ink">Reload</button>
@@ -203,7 +203,7 @@ function App() {
         {/* Dev-only scraping banner — quiet tier, flat fade */}
         {isDev && scraping && (
           <div className="flex items-center justify-center gap-2 border-b border-dashed border-line-strong bg-bg1 px-3 py-1.5 text-label text-faint">
-            <span className="rounded border border-line-strong px-1.5 py-px font-mono text-micro uppercase tracking-wider text-faint">Dev</span>
+            <span className="rounded-sm border border-line-strong px-1.5 py-px font-mono text-micro uppercase tracking-wider text-faint">Dev</span>
             Scraping new data… this can take a minute.
           </div>
         )}

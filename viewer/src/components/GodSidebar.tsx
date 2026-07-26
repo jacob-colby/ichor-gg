@@ -72,7 +72,7 @@ function GodCard({ god, selected, pinned, onSelect, onTogglePin, onRemove }: God
         type="button"
         onClick={(e) => { e.stopPropagation(); onTogglePin(); }}
         aria-label={pinned ? `Unpin ${god.name}` : `Pin ${god.name}`}
-        className={`absolute right-0 top-0 flex h-8 w-8 items-center justify-center rounded transition-colors ${
+        className={`absolute right-0 top-0 flex h-8 w-8 items-center justify-center rounded-sm transition-colors ${
           pinned ? "text-gold" : "text-muted hover:text-ink-soft focus-visible:text-ink-soft"
         }`}
       >
@@ -250,7 +250,7 @@ export function GodSidebar({ gods, selectedGod, onSelect, onRemove }: GodSidebar
         >
           <span className="flex min-w-0 items-center gap-2">
             {current && (
-              <img src={`/icons/${iconSlug(current.name)}-head.png`} alt="" className="h-6 w-6 shrink-0 rounded object-cover" />
+              <img src={`/icons/${iconSlug(current.name)}-head.png`} alt="" className="h-6 w-6 shrink-0 rounded-sm object-cover" />
             )}
             <span className={`truncate text-body ${current ? "text-ink" : "text-muted"}`}>{current ? current.name : "Select a god"}</span>
           </span>

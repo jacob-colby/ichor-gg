@@ -35,9 +35,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Jing Wei Notes: Fire a projectile that deals Physical Damage to the
-    first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
-    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Rapid Reincarnation
   details:
@@ -46,8 +44,7 @@ abilities:
   - You will not ascend if firing Attacks when leaving the fountain
   - Jing Wei is CC Immune during buildup, ascent, flight, and decent
   - 'Max Flight Duration: 5 seconds'
-  description: 'FLY OUT OF FOUNTAIN Notes: When exiting the fountain, Fly into the
-    sky and soar over obstacles Max Flight Duration : 5 seconds Expand Ability Video'
+  description: When exiting the fountain, Fly into the sky and soar over obstacles
 - slot: 1st Ability
   name: Persistent Gust
   cooldown:
@@ -75,12 +72,8 @@ abilities:
   - 'Outer Radius: 3.2 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'AREA KNOCKUP, DAMAGE Notes: Create a Gust of Wind that deals Physical
-    Damage and Knocks Up enemy gods and yourself Damage : 70 | 120 | 170 | 220 | 270
-    Damage Scaling : 85% Strength Damage Per Tick : 15 | 20 | 25 | 30 | 35 Damage
-    Scaling Per Tick : 5% Strength Attack Speed : 20 | 25 | 30 | 35 | 40% Buff Duration
-    : 6 seconds Range : 8.8 meters Radius : 1.6 meters Outer Radius : 3.2 meters Cooldown
-    : 13 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Create a Gust of Wind that deals Physical Damage and Knocks Up enemy
+    gods and yourself
 - slot: 2nd Ability
   name: Explosive Bolts
   cooldown:
@@ -99,11 +92,7 @@ abilities:
   - 'Explode Radius: 1.28 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 50 mana'
-  description: 'EXPLODING CRIT ATTACKS Notes: Your next 3 Attacks are wider and explode
-    on the first enemy hit Damage Scaling : 102 | 104 | 106 | 108 | 110% Crit Chance
-    : 3 | 6 | 9 | 12 | 15% Ability Charges : 1 | 1 | 2 | 2 | 3 Range : 8.8 meters
-    Radius : 0.96 meters Explode Radius : 1.28 meters Cooldown : 14 seconds Cost :
-    50 mana Expand Ability Video'
+  description: Your next 3 Attacks are wider and explode on the first enemy hit
 - slot: 3rd Ability
   name: Agility
   cooldown:
@@ -132,11 +121,7 @@ abilities:
   - 'Bonus Range: 8.62 meters'
   - 'Cooldown: 16 | 16 | 15 | 15 | 14 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'DASH; GO FARTHER IF AIRBORNE Notes: Dash forward and gain increased
-    Strength Strength : 10 | 15 | 20 | 25 | 30 Bonus Strength : 25 | 30 | 35 | 40
-    | 45 Movement Speed : 10% Bonus Movement Speed : 20% Buff Duration : 4 seconds
-    Dash Range : 5.6 meters Bonus Range : 8.62 meters Cooldown : 16 | 16 | 15 | 15
-    | 14 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Dash forward and gain increased Strength
 - slot: Ultimate
   name: Air Strike
   cooldown:
@@ -153,15 +138,12 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'FLY AND DAMAGE, TWICE Notes: Select a landing location, or wait to
-    Dash backwards , dealing Physical Damage to enemies again before landing Dash
-    forward and fly into the sky , dropping explosives and dealing Physical Damage
-    to enemies beneath you Damage : 220 | 310 | 400 | 490 | 580 Damage Scaling : 115%
-    Strength Range : 11.2 meters Radius : 2.4 meters Cooldown : 90 seconds Cost :
-    100 mana Expand Ability Video'
+  description: Select a landing location, or wait to Dash backwards , dealing Physical
+    Damage to enemies again before landing Dash forward and fly into the sky , dropping
+    explosives and dealing Physical Damage to enemies beneath you
 aspects: []
 source_url: https://wiki.smite2.com/w/Jing_Wei
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Jing Wei Basic Attack

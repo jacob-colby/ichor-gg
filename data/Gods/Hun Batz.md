@@ -38,9 +38,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Hun Batz Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Infused Strikes
   details:
@@ -48,10 +46,9 @@ abilities:
   - 'Strength Scaling: 0.2 Per Level'
   - 'Max Stacks: 4'
   - 'Buff Duration: 4 seconds'
-  description: 'ATTACK DAMAGE AFTER ABILITY After using an ability, Hun Batz''s next
+  description: ATTACK DAMAGE AFTER ABILITY After using an ability, Hun Batz's next
     Basic Attack will deal 1.2x damage and grants Hun Batz a stacking Strength Buff
-    on successful hits. Strength : 2 Per Stack Strength Scaling : 0.2 Per Level Max
-    Stacks : 4 Buff Duration : 4 seconds Expand Ability Video'
+    on successful hits.
 - slot: 1st Ability
   name: Somersault
   cooldown:
@@ -68,11 +65,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 mana'
-  description: 'LEAP, AREA DAMAGE Notes: Leap forward, dealing Physical Damage and
-    Slowing enemies in the area where you land Damage : 75 | 115 | 155 | 195 | 235
-    Damage Scaling : 60% Strength Slow : 30 | 32.5 | 35 | 37.5 | 40% Slow Duration
-    : 2 seconds Range : 8.8 meters Radius : 2.4 meters Cooldown : 13 seconds Cost
-    : 60 mana Expand Ability Video'
+  description: Leap forward, dealing Physical Damage and Slowing enemies in the area
+    where you land
 - slot: 2nd Ability
   name: Overhand Smash
   cooldown:
@@ -94,12 +88,8 @@ abilities:
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
   - 'Cost: 60 mana'
-  description: 'CHANNEL CONE DAMAGE Notes: Channel for a short duration. At the end
-    of the Channel, deal Physical Damage to enemies in front of you and apply a Physical
-    Protection Debuff Damage : 75 | 130 | 185 | 240 | 295 Damage Scaling : 75% Strength
-    Physical Protections Reduced : 8 | 10 | 12 | 14 | 16 Debuff Duration : 2 seconds
-    Range : 5.6 meters Cone Angle : 110 degrees Cooldown : 12 | 11.5 | 11 | 10.5 |
-    10 seconds Cost : 60 mana Expand Ability Video'
+  description: Channel for a short duration. At the end of the Channel, deal Physical
+    Damage to enemies in front of you and apply a Physical Protection Debuff
 - slot: 3rd Ability
   name: Sacred Monkey
   cooldown:
@@ -119,12 +109,9 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'THROW; RECAST TO TELEPORT Notes: Throw a projectile monkey that deals
-    Physical Damage to any enemies it hits. After hitting, it will bounce to nearby
-    enemies applying a Mark to only the most recently hit enemy. Reactive this ability
-    to Teleport to the Marked enemy Damage : 80 | 135 | 190 | 245 | 300 Damage Scaling
-    : 55% Strength Mark Duration : 2 seconds Range : 8.8 meters Radius : 0.48 meters
-    Cooldown : 13 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Throw a projectile monkey that deals Physical Damage to any enemies
+    it hits. After hitting, it will bounce to nearby enemies applying a Mark to only
+    the most recently hit enemy. Reactive this ability to Teleport to the Marked enemy
 - slot: Ultimate
   name: Fear No Evil
   cooldown:
@@ -146,18 +133,15 @@ abilities:
   - 'Radius: 5.6 meters'
   - 'Cooldown: 120 | 115 | 110 | 105 | 100 seconds'
   - 'Cost: 60 mana'
-  description: 'AREA FEAR Notes: Create a Totem that repeatedly Fears and deals Physical
-    Damage to all enemies around it Damage Per Tick : 35 Damage Scaling Per Tick :
-    10% Strength Feared Duration : 0.5 seconds Lifetime : 1 | 1.25 | 1.5 | 1.75 |
-    2 seconds Range : 7.2 meters Radius : 5.6 meters Cooldown : 120 | 115 | 110 |
-    105 | 100 seconds Cost : 60 mana Expand Ability Video'
+  description: Create a Totem that repeatedly Fears and deals Physical Damage to all
+    enemies around it
 aspects:
 - name: Aspect of Disruption
   kit_changes: infused Strikes Slow gods hit by them, but do not grant Hun Batz the
     stacking Strength buff. Overhand Smash Stuns gods hit by it, but deals reduced
     damage.
 source_url: https://wiki.smite2.com/w/Hun_Batz
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Hun Batz Basic Attack

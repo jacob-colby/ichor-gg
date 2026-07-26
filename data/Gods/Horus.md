@@ -36,9 +36,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Horus Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Resolute
   details:
@@ -47,11 +45,9 @@ abilities:
   - 'Heal: 4 Per Stack'
   - 'Buff Duration: 3 seconds'
   - 'Max Buff Stacks: 10'
-  description: 'Stack Protections, Heal Gain stacks when an enemy god damages you.
+  description: Stack Protections, Heal Gain stacks when an enemy god damages you.
     Each stack grants Protections and Crowd Control Reduction for a short duration.
-    When expires, Heal based on your stacks Protections : 2.5 Per Stack Crowd Control
-    Reduction : 1.5% Per Stack Heal : 4 Per Stack Buff Duration : 3 seconds Max Buff
-    Stacks : 10 Expand Ability Video'
+    When expires, Heal based on your stacks
 - slot: 1st Ability
   name: Updraft
   cooldown:
@@ -82,12 +78,9 @@ abilities:
   - 'Updraft Radius: 2.08 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'Area Knockup, Gust Slow Notes: Create an updraft around you, dealing
-    Physical Damage and Knocking Up nearby enemies Damage : 50 | 95 | 140 | 185 |
-    230 Damage Scaling : 75% Strength Gust Damage : 20 | 30 | 40 | 50 | 60 + 100%
-    Basic Attack Damage Knocked Up Gust Bonus Damage : 150% Slow : 25% Slow Duration
-    : 2.5 seconds Gust Range : 8.8 meters Radius : 2.08 meters Cooldown : 14 | 13.5
-    | 13 | 12.5 | 12 seconds Cost : 55 | 60 | 65 | 70 | 75 mana Expand Ability Video'
+  description: 'Create an updraft around you, dealing Physical Damage and Knocking
+    Up nearby enemies Damage: 50 | 95 | 140 | 185 | 230 Damage Scaling: 75% Strength
+    Radius: 2.08 meters'
 - slot: 2nd Ability
   name: Fracture
   cooldown:
@@ -117,15 +110,9 @@ abilities:
   - 'Cleave Cone Range: 3.84 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'Dash Stun, Protection Debuff Notes: Dash forward, dealing Physical
-    Damage . Hitting an enemy god stops the Dash and Stuns them, then you cleave enemies
-    in front of you, dealing Physical Damage and reducing their Protections Dash Damage
-    : 70 | 95 | 120 | 145 | 170 Dash Damage Scaling : 30% Strength Cleave Damage :
-    50 | 85 | 120 | 155 | 190 Cleave Damage Scaling : 40% Strength Stun Duration :
-    1.25 seconds Protections Reduction : 4 | 8 | 12 | 16 | 20 Debuff Duration : 3
-    seconds Self Slow : 50% Dash Range : 6.4 meters Cleave Cone Angle : 100 degrees
-    Cleave Cone Range : 3.84 meters Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds
-    Cost : 55 | 60 | 65 | 70 | 75 mana Expand Ability Video'
+  description: Dash forward, dealing Physical Damage . Hitting an enemy god stops
+    the Dash and Stuns them, then you cleave enemies in front of you, dealing Physical
+    Damage and reducing their Protections
 - slot: 3rd Ability
   name: Protector's Surge
   cooldown:
@@ -143,11 +130,8 @@ abilities:
   - 'Heal Radius: 3.2 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 45 mana'
-  description: 'Ally Flight, Heal Notes: Leap to a target ally and descend on their
-    location. When you land, Heal the target ally and nearby allies and grant them
-    Protections for a duration Heal : 30 | 60 | 90 | 120 | 150 Protections Buff :
-    8 | 13 | 18 | 23 | 28 Buff Duration : 5 seconds Range : 9.6 meters Heal Radius
-    : 3.2 meters Cooldown : 13 seconds Cost : 45 mana Expand Ability Video'
+  description: Leap to a target ally and descend on their location. When you land,
+    Heal the target ally and nearby allies and grant them Protections for a duration
 - slot: Ultimate
   name: To The Skies!
   cooldown:
@@ -171,13 +155,9 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 105 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'Team Teleport, Shield Notes: Send a mirror image into the sky to choose
-    a landing location. After selecting a location, channel briefly, then Teleport
-    to that location. On landing, deal Physical Damage , Knock Back enemies, and grant
-    yourself a Health Shield Damage : 150 | 230 | 310 | 390 | 470 Damage Scaling :
-    80% Strength Shield Health : 160 | 240 | 320 | 400 | 480 Shield Duration : 4 seconds
-    Channel Duration : 1 seconds Radius : 3.2 meters Cooldown : 105 seconds Cost :
-    55 | 60 | 65 | 70 | 75 mana Expand Ability Video'
+  description: Send a mirror image into the sky to choose a landing location. After
+    selecting a location, channel briefly, then Teleport to that location. On landing,
+    deal Physical Damage , Knock Back enemies, and grant yourself a Health Shield
 aspects:
 - name: Aspect of the Falcon
   kit_changes: Fracture no longer stuns but deals increased damage on the cleave.
@@ -185,7 +165,7 @@ aspects:
     sprite or targeting a enemy dealing damage and granting a gust attack. To The
     Skies! no longer teleports allies but deals bonus damage in the center.
 source_url: https://wiki.smite2.com/w/Horus
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Horus Basic Attack

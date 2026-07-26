@@ -36,9 +36,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Xbalanque Notes: Fire a projectile that deals Physical Damage to the
-    first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
-    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Dead of Night
   details:
@@ -52,12 +50,9 @@ abilities:
   - 'Intelligence: 10 Per Empowered Stack'
   - 'Damage for Initial Stack: 1,000'
   - 'Damage Increase for Subsequent Stacks: 1,000'
-  description: 'DAMAGE GODS FOR STACKS Notes: Deal damage to enemy gods to gain stacks.
-    Each stack provides Strength or Intelligence , whichever is higher. At 3 and 6
-    stacks you gain an additional buff of Strength and Intelligence Strength : 3 Per
-    Stack Intelligence : 5 Per Stack Strength : 7 Per Empowered Stack Intelligence
-    : 10 Per Empowered Stack Damage for Initial Stack : 1,000 Damage Increase for
-    Subsequent Stacks : 1,000 Expand Ability Video'
+  description: Deal damage to enemy gods to gain stacks. Each stack provides Strength
+    or Intelligence , whichever is higher. At 3 and 6 stacks you gain an additional
+    buff of Strength and Intelligence
 - slot: 1st Ability
   name: Branching Bola
   cooldown:
@@ -79,11 +74,8 @@ abilities:
   - 'Split Projectile Range: 3.5 meters'
   - 'Cooldown: 0.5 seconds'
   - 'Cost: 8 | 11 | 14 | 17 | 20 mana Per Shot'
-  description: 'PROJECTILE DAMAGE Notes: While active, your Attacks deal additional
-    damage . When the bola hits a target, it splits and deals reduced damage Increased
-    Damage : 10 | 20 | 30 | 40 | 50 Split Projectile Damage : 30 | 32.5 | 35 | 37.5
-    | 40% Split Projectile Range : 3.5 meters Cooldown : 0.5 seconds Cost : 8 | 11
-    | 14 | 17 | 20 mana Per Shot Expand Ability Video'
+  description: While active, your Attacks deal additional damage . When the bola hits
+    a target, it splits and deals reduced damage
 - slot: 2nd Ability
   name: Poison Darts
   cooldown:
@@ -112,14 +104,8 @@ abilities:
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'PROJECTILES DAMAGE SLOW Notes: Fire 15 dart projectiles in a cone,
-    dealing Physical Damage and poisoning enemies hit Damage : 20 | 30 | 40 | 50 |
-    60 Damage Scaling : 25% Strength + 35% Intelligence Damage Per Tick : 10 | 15
-    | 20 | 25 | 30 Damage Scaling Per Tick : 7.5% Strength + 15% Intelligence Subsequent
-    Dart Damage : 30% Reduced Poison Damage : 50% from Split Projectiles Slow : 20
-    | 22.5 | 25 | 27.5 | 30% Reduced Poison Slow : 50% from Split Projectiles Slow
-    Duration : 3s Range : 8.8 meters Cone Angle : 110 degrees Cooldown : 13 seconds
-    Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Fire 15 dart projectiles in a cone, dealing Physical Damage and poisoning
+    enemies hit
 - slot: 3rd Ability
   name: Rising Jaguar
   cooldown:
@@ -146,12 +132,8 @@ abilities:
   - 'Dart Radius: 4.8 meters'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'DASH, FIRE HOMING PROJECTILES Notes: Dash in the direction you are
-    currently traveling before rising in the air, becoming CC Immune Damage : 65 |
-    115 | 165 | 215 | 265 Damage Scaling : 50% Strength + 35% Intelligence Bonus Damage
-    : 30 | 35 | 40 | 45 | 50% Initial Dash Range : 4 meters Dart Radius : 4.8 meters
-    Cooldown : 16 | 15.5 | 15 | 14.5 | 14 seconds Cost : 60 | 65 | 70 | 75 | 80 mana
-    Expand Ability Video'
+  description: Dash in the direction you are currently traveling before rising in
+    the air, becoming CC Immune
 - slot: Ultimate
   name: Darkest of Nights
   cooldown:
@@ -172,20 +154,16 @@ abilities:
   - 'Darkness Radius: 7.5 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'BUFF; BLIND ENEMIES Notes: Shroud enemy gods in darkness, creating
-    an area they cannot see out of. During this time you have increased Attack range
-    , Attack projectile speed , Attack Speed , and Movement Speed Attack Range : 15.2
-    meters Attack Projectile Speed : +25% Attack Speed : 28 | 31 | 34 | 37 | 40% Movement
-    Speed : 28 | 31 | 34 | 37 | 40% Buff Duration : 3 seconds Debuff Duration : 3
-    seconds Initial Slow Amount : 60% Slow Duration : 2 seconds Darkness Radius :
-    7.5 meters Cooldown : 90 seconds Cost : 100 mana Expand Ability Video'
+  description: Shroud enemy gods in darkness, creating an area they cannot see out
+    of. During this time you have increased Attack range , Attack projectile speed
+    , Attack Speed , and Movement Speed
 aspects:
 - name: Aspect of the Nightstalker
   kit_changes: Branching Bola is no longer a toggle but provides 3 fires of ability-based
     projectiles. Poison Darts requires less hits to deal full damage. Darkest of Nights
     loses existing buffs but resets Poison darts and provides increased ability damage.
 source_url: https://wiki.smite2.com/w/Xbalanque
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Xbalanque Basic Attack

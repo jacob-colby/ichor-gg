@@ -36,17 +36,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Anhur Notes: Fire a projectile that deals Physical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Enfeeble
   details:
   - 'Physical Protections Reduced: 5 + 0.75 Per Level'
   - 'Debuff Duration: 4 seconds'
-  description: 'ATTACKS WEAKEN ENEMIES Dealing Damage to enemies reduces their Physical
-    Protection Physical Protections Reduced : 5 + 0.75 Per Level Debuff Duration :
-    4 seconds Expand Ability Video'
+  description: ATTACKS WEAKEN ENEMIES Dealing Damage to enemies reduces their Physical
+    Protection
 - slot: 1st Ability
   name: Shifting Sands
   cooldown:
@@ -74,11 +71,7 @@ abilities:
   - 'Radius: 9.6 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'OBELISK AND SANDS Notes: Summon an obelisk, surrounded by shifting
-    sands Slow : 15% Additional Slow : 15% Increased Damage Taken : 12 | 15 | 18 |
-    21 | 24% Lifetime : 7.5 seconds Range : 11.2 meters Radius : 9.6 meters Cooldown
-    : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand
-    Ability Video'
+  description: Summon an obelisk, surrounded by shifting sands Additional
 - slot: 2nd Ability
   name: Impale
   cooldown:
@@ -102,11 +95,7 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'KNOCKBACK TO STUN Notes: Throw a large spear, dealing Physical Damage
-    in a line Damage : 125 | 185 | 245 | 305 | 365 Damage Scaling : 90% Strength Stun
-    Duration : 0.9 | 0.95 | 1 | 1.05 | 1.1 seconds Range : 8.8 meters Radius : 0.48
-    meters Cooldown : 11 seconds Cost : 50 | 60 | 70 | 80 | 90 mana Expand Ability
-    Video'
+  description: Throw a large spear, dealing Physical Damage in a line
 - slot: 3rd Ability
   name: Disperse
   cooldown:
@@ -130,10 +119,7 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 15 | 14.4 | 14 | 13.5 | 13 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'LEAP AND KNOCK BACK Notes: Leap forward, dealing Physical Damage where
-    you land Damage : 90 | 130 | 170 | 210 | 250 Damage Scaling : 75% Strength Range
-    : 8.8 meters Radius : 2.4 meters Cooldown : 15 | 14.4 | 14 | 13.5 | 13 seconds
-    Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Leap forward, dealing Physical Damage where you land
 - slot: Ultimate
   name: Desert Fury
   cooldown:
@@ -163,18 +149,13 @@ abilities:
   - 'Final Radius: 0.72 meters'
   - 'Cooldown: 90 | 85 | 80 | 75 | 70 seconds'
   - 'Cost: 80 | 85 | 90 | 95 | 100 mana'
-  description: 'THROW MANY SPEARS Notes: Hurl a series of empowered spears, each dealing
-    Physical Damage Damage Per Tick : 80 | 110 | 140 | 170 | 200 Damage Scaling Per
-    Tick : 45% Strength Final Damage : 150 | 200 | 250 | 300 | 350 Final Damage Scaling
-    : 115% Strength Range : 12.8 meters Radius : 0.56 meters Final Radius : 0.72 meters
-    Cooldown : 90 | 85 | 80 | 75 | 70 seconds Cost : 80 | 85 | 90 | 95 | 100 mana
-    Expand Ability Video'
+  description: Hurl a series of empowered spears, each dealing Physical Damage
 aspects:
 - name: Aspect of Pride
   kit_changes: Enfeeble no longer Debuffs enemies but dealing damage to the same enemy
     god with Basic Attacks provides Anhur up to 100% bonus Attack Speed.
 source_url: https://wiki.smite2.com/w/Anhur
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Anhur Basic Attack

@@ -25,9 +25,12 @@ describe("GodInfo", () => {
     expect(screen.getByText(/Copies damage/)).toBeInTheDocument();
   });
 
-  it("hides the ability order section when ability_order is absent", () => {
+  it("states why a stance god has no ability order rather than dropping the section", () => {
+    // Artio, Merlin and Ullr have no levelable abilities. The section used to
+    // vanish, which reads as missing data rather than a fact about the kit.
     render(<GodInfo god={god} />);
-    expect(screen.queryByText(/ability order/i)).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /ability order/i })).toBeInTheDocument();
+    expect(screen.getByText(/no levelable ability order/i)).toBeInTheDocument();
   });
 
   it("renders the ability order grid with ult levels marked and the heuristic disclaimer", () => {
@@ -44,14 +47,14 @@ describe("GodInfo", () => {
       },
     } as unknown as God;
     render(<GodInfo god={godWithOrder} />);
-    expect(screen.getByText(/ability order/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /ability order/i })).toBeInTheDocument();
     // heuristic disclaimer, spelled out explicitly per spec D
     expect(screen.getByText(/derived from ability scaling/i)).toBeInTheDocument();
     expect(screen.getByText(/heuristic/i)).toBeInTheDocument();
     // the ult-level cells (5, 9, 13, 17) are visually marked gold
-    const level5 = screen.getByText("5").closest("div")!;
+    const level5 = screen.getByText("5").closest("li")!;
     expect(level5.className).toMatch(/gold/);
-    const level6 = screen.getByText("6").closest("div")!;
+    const level6 = screen.getByText("6").closest("li")!;
     expect(level6.className).not.toMatch(/gold/);
   });
 });

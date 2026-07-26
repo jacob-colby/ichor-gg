@@ -37,9 +37,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Pele Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Everlasting Flame
   cooldown:
@@ -50,10 +48,8 @@ abilities:
   - 'Lifesteal: 15%'
   - 'Buff Duration: 6 seconds'
   - 'Cooldown: 30 seconds'
-  description: 'LOW HEALTH = +STRENGTH AND +LIFESTEAL When you drop below 50% health,
-    gain increased Strength and Lifesteal . This effect has a cooldown Strength :
-    10 Strength Scaling : 2 Per Level Lifesteal : 15% Buff Duration : 6 seconds Cooldown
-    : 30 seconds Expand Ability Video'
+  description: LOW HEALTH = +STRENGTH AND +LIFESTEAL When you drop below 50% health,
+    gain increased Strength and Lifesteal . This effect has a cooldown
 - slot: 1st Ability
   name: Pyroclast
   cooldown:
@@ -77,13 +73,9 @@ abilities:
   - 'Range: 9.6 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
-  description: 'PROJECTILE DAMAGE, TWO CHARGES Notes: Fires a Magma projectile that
-    deals Physical Damage and grants fuel per enemy god hit. At max range the Magma
-    persists and fires additional shard projectiles back to you, dealing Physical
-    Damage to enemies Initial Damage : 70 | 110 | 150 | 190 | 230 Initial Damage Scaling
-    : 65% Strength Return Damage : 25 Return Damage Scaling : 15% Strength Return
-    Projectiles : 1 | 2 | 3 | 4 | 5 Fuel Regained : 10 Range : 9.6 meters Cooldown
-    : 13 seconds Cost : 40 | 45 | 50 | 55 | 60 mana Expand Ability Video'
+  description: Fires a Magma projectile that deals Physical Damage and grants fuel
+    per enemy god hit. At max range the Magma persists and fires additional shard
+    projectiles back to you, dealing Physical Damage to enemies
 - slot: 2nd Ability
   name: Eruption
   cooldown:
@@ -109,13 +101,8 @@ abilities:
   - 'Outer Ring Radius: 5.6 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'AREA KNOCKUP DAMAGE Notes: Gain a burst of speed before dealing Physical
-    Damage and Knocking Up enemies around you Inner Ring Damage : 85 | 130 | 175 |
-    220 | 265 Inner Ring Damage Scaling : 65% Strength Outer Rings Damage : 0 | 0
-    | 140 | 180 | 220 Outer Rings Damage Scaling : 45% Strength Areas : 1 | 1 | 2
-    | 2 | 3 Inner Ring Radius : 2.4 meters Middle Ring Radius : 4 meters Outer Ring
-    Radius : 5.6 meters Cooldown : 14 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand
-    Ability Video'
+  description: 'Gain a burst of speed before dealing Physical Damage and Knocking
+    Up enemies around you Areas: 1 | 1 | 2 | 2 | 3'
 - slot: 3rd Ability
   name: Magma Rush
   details:
@@ -133,12 +120,8 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Fuel Cost: 5 per 0.5 seconds'
   - 'Amped Fuel Cost: 10 per 0.5 seconds'
-  description: 'USE FUEL, MOVE FASTER Notes: Repeatedly deal Physical Damage to nearby
-    enemies and gain Movement Speed while this ability is active. uses Fuel for its
-    duration and has no cooldown Damage : 15 | 20 | 25 | 30 | 35 Damage Scaling :
-    5% Strength Amped Damage : 30 | 45 | 60 | 75 | 90 Amped Damage Scaling : 15% Strength
-    Movement Speed : 30% Amped Movement Speed : 60% Radius : 1.6 meters Fuel Cost
-    : 5 per 0.5 seconds Amped Fuel Cost : 10 per 0.5 seconds Expand Ability Video'
+  description: Repeatedly deal Physical Damage to nearby enemies and gain Movement
+    Speed while this ability is active. uses Fuel for its duration and has no cooldown
 - slot: Ultimate
   name: Volcanic Lightning
   cooldown:
@@ -164,14 +147,9 @@ abilities:
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'DASH, ATTACKS BECOME CONES Notes: Become CC Immune then Dash forward
-    dealing Physical Damage and Slowing the first enemy god hit, and firing a cone
-    attack that deals Physical Damage to other enemies Damage : 180 | 255 | 330 |
-    405 | 480 Damage Scaling : 60% Strength Cone Damage : 100 | 140 | 180 | 220 |
-    260 Cone Damage Scaling : 40% Strength Slow : 30 | 32.5 | 35 | 37.5 | 40% Slow
-    Duration : 3 seconds Basic Attack Damage Reduction : 50% Dash Range : 9.6 meters
-    Radius : 5.6 meters Cone Angle : 110 degrees Cooldown : 90 seconds Cost : 100
-    mana Expand Ability Video'
+  description: Become CC Immune then Dash forward dealing Physical Damage and Slowing
+    the first enemy god hit, and firing a cone attack that deals Physical Damage to
+    other enemies
 aspects:
 - name: Aspect of Obsidian
   kit_changes: You only gain Fuel from Pyroclast and when damaged by enemies instead
@@ -179,7 +157,7 @@ aspects:
     Everlasting Flame now provides Protections instead of Strength and Lifesteal,
     and Volcanic Lightning damage no longer has Strength Scaling.
 source_url: https://wiki.smite2.com/w/Pele
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Pele Basic Attack

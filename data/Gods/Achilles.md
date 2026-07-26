@@ -37,9 +37,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 2.56 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Achilles Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 2.56 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Gift of the Gods
   details:
@@ -50,12 +48,10 @@ abilities:
   - 'Protections: 5 + 2 Per Level'
   - 'Strength: 3 + 1.5 Per Level'
   - 'Movement Speed: 1% + 0.25% Per Level'
-  description: 'CHOOSE ARMOR Notes: Swap between armor states by using Basic Attacks
-    while the targeter is active inside the Fountain Choose to wear armor or forgo
-    it. Wearing armor grants bonus Health and Protections , while forgoing it grants
-    bonus Strength and Movement Speed Health : 25 + 10 Per Level Protections : 5 +
-    2 Per Level Strength : 3 + 1.5 Per Level Movement Speed : 1% + 0.25% Per Level
-    Expand Ability Video'
+  description: Swap between armor states by using Basic Attacks while the targeter
+    is active inside the Fountain Choose to wear armor or forgo it. Wearing armor
+    grants bonus Health and Protections , while forgoing it grants bonus Strength
+    and Movement Speed
 - slot: 1st Ability
   name: Shield of Achilles
   cooldown:
@@ -80,13 +76,9 @@ abilities:
   - 'Large Radius: 8 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'STUN WITH SHIELD Notes: Punch forward with your shield, dealing Physical
-    Damage and Stunning enemies in a short cone. The force of the shield radiates
-    further, dealing reduced damage Damage : 100 | 155 | 210 | 265 | 320 Damage Scaling
-    : 80% Strength Stun Duration : 0.8 seconds Bonus Stun Duration : 0.2 seconds Bonus
-    Damage Scaling : 15% Strength Cone Angle : 80 degrees Small Radius : 3.2 meters
-    Large Radius : 8 meters Cooldown : 14 seconds Cost : 60 | 65 | 70 | 75 | 80 mana
-    Expand Ability Video'
+  description: Punch forward with your shield, dealing Physical Damage and Stunning
+    enemies in a short cone. The force of the shield radiates further, dealing reduced
+    damage
 - slot: 2nd Ability
   name: Radiant Glory
   cooldown:
@@ -112,13 +104,9 @@ abilities:
   - 'Debuff Duration: 3 seconds'
   - 'Cooldown: 9 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
-  description: 'BECOME STRONGER, HEAL Notes: You are blessed by the gods, gaining
-    bonus Strength , Protections , and Crowd Control Reduction for a short duration.
-    Damaging enemies with abilities during this time Heals you Strength : 10% Protections
-    : 20% Crowd Control Reduction : 20 | 22.5 | 25 | 27.5 | 30% Buff Duration : 6.1
-    seconds Heal : 16 | 18 | 20 | 22 | 24 Physical Shield Health : 75 + 20 Per Level
-    Protections Reduced : 1 Per Level Debuff Duration : 3 seconds Cooldown : 9 seconds
-    Cost : 40 | 45 | 50 | 55 | 60 mana Expand Ability Video'
+  description: You are blessed by the gods, gaining bonus Strength , Protections ,
+    and Crowd Control Reduction for a short duration. Damaging enemies with abilities
+    during this time Heals you
 - slot: 3rd Ability
   name: Combat Dodge (Spear Strike)
   cooldown:
@@ -148,13 +136,9 @@ abilities:
   - 'Spear Strike Radius: 0.96 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 22 | 24 | 26 | 28 | 30 mana'
-  description: 'DASH, THEN STRIKE Notes: Dodge in your current direction and ready
-    your spear to strike enemies for Physical Damage . Hitting an enemy god with the
-    strike allows you to recast the ability once before it goes on cooldown Damage
-    : 65 | 105 | 145 | 185 | 225 Damage Scaling : 45% Strength Slow : 7.5% Per Stack
-    Slow Duration : 3 seconds Dodge Range : 3.2 meters Spear Strike Range : 5.6 meters
-    Spear Strike Radius : 0.96 meters Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds
-    Cost : 22 | 24 | 26 | 28 | 30 mana Expand Ability Video'
+  description: Dodge in your current direction and ready your spear to strike enemies
+    for Physical Damage . Hitting an enemy god with the strike allows you to recast
+    the ability once before it goes on cooldown
 - slot: Ultimate
   name: Fatal Strike
   cooldown:
@@ -181,19 +165,16 @@ abilities:
   - 'Dash Radius: 0.96 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'CHARGE, EXECUTE, RESET Notes: Prepare briefly, then Dash foward, dealing
-    Physical Damage to enemies and Executing gods that are low health. Killing a god
-    allows you to recast this ability up to 5 times Damage : 180 | 270 | 360 | 450
-    | 540 Damage Scaling : 100% Strength Execute Health % : 35% Increased Damage Taken
-    : 5% Debuff Duration : 10 seconds Dash Range : 5.6 meters Dash Radius : 0.96 meters
-    Cooldown : 90 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Prepare briefly, then Dash foward, dealing Physical Damage to enemies
+    and Executing gods that are low health. Killing a god allows you to recast this
+    ability up to 5 times
 aspects:
 - name: Aspect of Prowess
   kit_changes: Combat Dodge can now be recast after striking a Jungle Monster or Boss,
     with Spear Strike gaining increased Scaling when forgoing Achilles's Armor. Radiant
     Glory no longer grants increased Protections or Crowd Control Reduction.
 source_url: https://wiki.smite2.com/w/Achilles
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Achilles Basic Attack

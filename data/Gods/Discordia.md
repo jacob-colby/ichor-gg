@@ -35,9 +35,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Discordia Notes: Fire a projectile that deals Magical Damage to the
-    first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
-    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Contest of Gods
   details:
@@ -50,13 +48,9 @@ abilities:
   - 'Lifesteal Self Buff: 15%'
   - 'Heal: 0.5% Max Health'
   - 'Self Buff Duration: 6 seconds'
-  description: 'Gain Buffs on Levels, Kills, and Assists Notes: The god on your team
-    with the highest damage dealt to enemy gods gains a Strength and Intelligence
-    buff . Gaining a level, god kill, or god assist provides a random temporary self
-    buff of Intelligence , Lifesteal , or Healing Intelligence : 5 Intelligence Scaling
-    : 1 Per Level Strength : 2.5 Strength Scaling : 1 Per Level Intelligence Self
-    Buff : 10 + 10% Lifesteal Self Buff : 15% Heal : 0.5% Max Health Self Buff Duration
-    : 6 seconds Expand Ability Video'
+  description: The god on your team with the highest damage dealt to enemy gods gains
+    a Strength and Intelligence buff . Gaining a level, god kill, or god assist provides
+    a random temporary self buff of Intelligence , Lifesteal , or Healing
 - slot: 1st Ability
   name: Unruly Magic
   cooldown:
@@ -81,14 +75,9 @@ abilities:
   - 'Radius: 1.12 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'Projectile Damage Notes: Fire out an orb of unruly magic dealing Magical
-    Damage . After reaching the target location, the orb explodes in a small area
-    dealing Magical Damage before breaking into bouncing minor projectiles that each
-    deal Magical Damage Damage : 85 | 135 | 185 | 235 | 285 Damage Scaling : 75% Intelligence
-    Area Damage : 100 | 150 | 200 | 250 | 300 Area Damage Scaling : 60% Intelligence
-    Projectile Damage : 20 | 30 | 40 | 50 | 60 Projectile Damage Scaling : 10% Intelligence
-    Range : 10 meters Radius : 1.12 meters Cooldown : 12 seconds Cost : 50 | 55 |
-    60 | 65 | 70 mana Expand Ability Video'
+  description: Fire out an orb of unruly magic dealing Magical Damage . After reaching
+    the target location, the orb explodes in a small area dealing Magical Damage before
+    breaking into bouncing minor projectiles that each deal Magical Damage
 - slot: 2nd Ability
   name: Strife
   cooldown:
@@ -114,13 +103,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'Projectile Damage Notes: Create an area that deals Magical Damage
-    . Hitting 1 enemy causes them to be Rooted , hitting multiple applies Madness
-    instead Damage : 80 | 120 | 160 | 200 | 240 Damage Scaling : 60% Intelligence
-    Bonus Damage : 10 | 20 | 30 | 40 | 50 Bonus Damage Scaling : 10% Intelligence
-    Root Duration : 1 second Madness Duration : 1 second Range : 9.4 meters Radius
-    : 3.2 meters Cooldown : 13 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability
-    Video'
+  description: Create an area that deals Magical Damage . Hitting 1 enemy causes them
+    to be Rooted , hitting multiple applies Madness instead
 - slot: 3rd Ability
   name: Erratic Behavior
   cooldown:
@@ -143,12 +127,8 @@ abilities:
   - 'Field Radius: 2.4 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'Leap, Stealth Empowerment Field Notes: Leap and create a field in
-    an area. While within the field, you gain Stealth , Movement Speed , and ability
-    cooldown reduction Movement Speed : 20 | 25 | 30 | 35 | 40% Cooldown Reduction
-    : -0.2 | -0.4 | -0.6 | -0.8 | -1 second Ultimate Cooldown Reduction : -0.4 seconds
-    Range : 6.4 meters Field Radius : 2.4 meters Cooldown : 14 seconds Cost : 50 |
-    55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Leap and create a field in an area. While within the field, you gain
+    Stealth , Movement Speed , and ability cooldown reduction
 - slot: Ultimate
   name: Golden Apple of Discord
   cooldown:
@@ -176,15 +156,10 @@ abilities:
   - 'Explosion Radius: 5.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'Projectile Damage Notes: Enemies caught in the explosion take both
-    the initial Magical Damage and the delayed explosion Magical Damage , but do not
-    explode in an area Throw the which deals Magical Damage before exploding in an
-    area dealing additional Magical Damage and spreading the effects of the Apple
-    Initial Damage : 125 | 150 | 175 | 200 | 225 Initial Damage Scaling : 50% Intelligence
-    Explosion Damage : 200 | 250 | 300 | 350 | 400 Explosion Damage Scaling : 60%
-    Intelligence Cripple Duration : 2 seconds Tremble Duration : 2 seconds Range :
-    35 meters Radius : 1.12 meters Explosion Radius : 5.6 meters Cooldown : 90 seconds
-    Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Enemies caught in the explosion take both the initial Magical Damage
+    and the delayed explosion Magical Damage , but do not explode in an area Throw
+    the which deals Magical Damage before exploding in an area dealing additional
+    Magical Damage and spreading the effects of the Apple
 aspects:
 - name: Aspect of the Gilded Victor
   kit_changes: Contest of Gods only provides you extra Attack Damage from Intelligence.
@@ -193,7 +168,7 @@ aspects:
     a field of stealth but attack speed and attack damage. Golden Apple of Discord
     is faster and does not spread.
 source_url: https://wiki.smite2.com/w/Discordia
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Discordia Basic Attack

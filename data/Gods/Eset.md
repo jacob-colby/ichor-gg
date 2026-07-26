@@ -39,10 +39,7 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   - 'Explosion Radius: 0.96 meters'
-  description: 'Eset Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Explosion Radius : 0.96 meters Expand
-    Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Funeral Rites
   details:
@@ -53,12 +50,10 @@ abilities:
   - 'Bonus Damage: 7.5% Intelligence Per Stack'
   - 'Health Regen: 0.4 Per Stack'
   - 'Mana Regen: 0.4 Per Stack'
-  description: 'DEATHS GRANT REGENERATION Notes: Whenever a god dies within 12.8m
-    of Eset, she gains a stack of ; granting Health Regen and Mana Regen to her and
-    nearby allies. Additionally, every third Attack from Eset is empowered; allowing
-    it to hit in a wider radius and dealing Bonus Damage based on her stacks of Invocation
-    Bonus Damage : 7.5% Intelligence Per Stack Health Regen : 0.4 Per Stack Mana Regen
-    : 0.4 Per Stack Expand Ability Video'
+  description: Whenever a god dies within 12.8m of Eset, she gains a stack of ; granting
+    Health Regen and Mana Regen to her and nearby allies. Additionally, every third
+    Attack from Eset is empowered; allowing it to hit in a wider radius and dealing
+    Bonus Damage based on her stacks of Invocation
 - slot: 1st Ability
   name: Wing Gust
   cooldown:
@@ -86,12 +81,9 @@ abilities:
   - 'Radius: 0.96 meters'
   - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'CHANNELED PROJECTILE DAMAGE Notes: While channeling, Eset gains Movement
-    Speed , reduced backpedal and strafing penalties , and Knockback and Root immunity
-    Fire 4 projectiles in a line, each dealing Magical Damage to all targets in their
-    path Damage : 45 | 65 | 85 | 105 | 125 Damage Scaling : 40% Intelligence Movement
-    Speed : 20% Range : 8.8 meters Radius : 0.96 meters Cooldown : 12 | 11.5 | 11
-    | 10.5 | 10 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: While channeling, Eset gains Movement Speed , reduced backpedal and
+    strafing penalties , and Knockback and Root immunity Fire 4 projectiles in a line,
+    each dealing Magical Damage to all targets in their path
 - slot: 2nd Ability
   name: Spirit Ball
   cooldown:
@@ -121,13 +113,10 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'EXPLODING PROJECTILE, CAN BE DETONATED Notes: Deals 105/172.5/240/307.5/375
-    + 105% Intelligence Magical Damage , and Stuns for 1.5 seconds at max range Send
-    forth a ball of spirit energy. While it travels, Eset can re-activate this ability
-    to detonate the ball, dealing Magical Damage and Stunning enemies Damage : 70
-    | 115 | 160 | 205 | 250 Damage Scaling : 80% Intelligence Stun Duration : 1 second
-    Range : 12.8 meters Radius : 1.6 meters Cooldown : 14 | 13 | 12 | 11 | 10 seconds
-    Cost : 55 | 60 | 65 | 70 | 75 mana Expand Ability Video'
+  description: Deals 105/172.5/240/307.5/375 + 105% Intelligence Magical Damage ,
+    and Stuns for 1.5 seconds at max range Send forth a ball of spirit energy. While
+    it travels, Eset can re-activate this ability to detonate the ball, dealing Magical
+    Damage and Stunning enemies
 - slot: 3rd Ability
   name: Dispel Magic
   cooldown:
@@ -158,14 +147,9 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'SILENCE TARGETS, SHIELD ALLIES Notes: If Eset successfully hits an
-    enemy god, allies near the or Eset gain a Health Shield Eset Silences and Slows
-    enemy gods at her target location. Enemy gods hit also have reduced Magical Protections
-    Shield Health : 50 | 100 | 150 | 200 | 250 Shield Duration : 4 seconds Slow :
-    20% Magical Protections Reduced : 10% Debuff Duration : 1.5 | 1.75 | 2 | 2.25
-    | 2.5 seconds Silence Duration : 1 second Range : 8.8 meters Radius : 2.4 meters
-    Cooldown : 16 | 15.5 | 15 | 14.5 | 14 seconds Cost : 60 | 65 | 70 | 75 | 80 mana
-    Expand Ability Video'
+  description: If Eset successfully hits an enemy god, allies near the or Eset gain
+    a Health Shield Eset Silences and Slows enemy gods at her target location. Enemy
+    gods hit also have reduced Magical Protections
 - slot: Ultimate
   name: Circle of Protection
   cooldown:
@@ -194,14 +178,9 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'PROTECTION FIELD, DETONATE FOR DAMAGE Notes: Call down your staff
-    and create a Circle of Protective Magic for 5 seconds before it explodes, dealing
-    Magical Damage to all enemies and Healing all allies in the area Damage : 180
-    | 215 | 250 | 285 | 320 Damage Scaling : 50% Intelligence Heal : 75 | 110 | 145
-    | 180 | 215 Damage Taken Reduction : 30% Max Stored Damage : 700 | 1,400 | 2,100
-    | 2,800 | 3,500 Max Charge Damage/Heal Multiplier : 2 | 2.25 | 2.5 | 2.75 | 3x
-    Range : 6.4 meters Radius : 4.8 meters Cooldown : 90 seconds Cost : 60 | 65 |
-    70 | 75 | 80 mana Expand Ability Video'
+  description: Call down your staff and create a Circle of Protective Magic for 5
+    seconds before it explodes, dealing Magical Damage to all enemies and Healing
+    all allies in the area
 aspects:
 - name: Aspect of the Lifewarden
   kit_changes: Dispel Magic no longer requires an enemy god hit to shield allies and
@@ -209,7 +188,7 @@ aspects:
     scaling, but applies a movement speed aura to allies, and when its projectiles
     hit enemies, all allies with Transference are healed.
 source_url: https://wiki.smite2.com/w/Eset
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Eset Basic Attack

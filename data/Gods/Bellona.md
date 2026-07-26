@@ -52,12 +52,8 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Scourge Range: 2.56 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Bellona Notes: Bellona remains in her current s until she goes 7 seconds
-    without dealing or taking damage Deal Physical Damage to an enemy in front of
-    you Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Scourge
-    Heal Per Hit : 5 | 6 | 7 | 8 | 9 Scourge Heal Scaling Per Hit : 7% Physical Protection
-    Range : 1.92 meters Scourge Range : 2.56 meters Cone Angle : 120 degrees Expand
-    Ability Video'
+  description: Bellona remains in her current s until she goes 7 seconds without dealing
+    or taking damage Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Master Of War
   details:
@@ -72,10 +68,8 @@ abilities:
   - 'Attack Speed: 5% Per Stack'
   - 'Buff Duration: 7 seconds'
   - Max Buff Stacks 5
-  description: 'WEAPON-BASED BUFFS Notes: When you hit or are hit by Basic Attacks,
-    you gain stacks of Movement Speed Movement Speed : 1.5 Per Stack Physical Protection
-    : 4 Per Stack Magical Protection : 4 Per Stack Strength : 3% Per Stack Attack
-    Speed : 5% Per Stack Buff Duration : 7 seconds Expand Ability Video'
+  description: When you hit or are hit by Basic Attacks, you gain stacks of Movement
+    Speed
 - slot: 1st Ability
   name: Shield Bash
   cooldown:
@@ -104,14 +98,9 @@ abilities:
   - 'Bash Cone Angle: 120 degrees'
   - 'Cooldown: 14 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'DASH, SLOW, BLOCK Notes: Every third successful Basic Attack against
-    a god grants a Block Stack , reflecting damage Dash forward with your shield to
-    deal Physical Damage and Slow enemies in front of you Damage : 75 | 115 | 155
-    | 195 | 235 Damage Scaling : 50% Strength + 30% Physical and Magical Protection
-    Reflect Damage : 25% of the damage blocked Reflect Damage Scaling : 7% Physical
-    and Magical Protection Slow : 20% Slow Duration : 1.5 seconds Dash Range : 2.8
-    meters Bash Range : 4 meters Bash Cone Angle : 120 degrees Cooldown : 14 seconds
-    Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Every third successful Basic Attack against a god grants a Block Stack
+    , reflecting damage Dash forward with your shield to deal Physical Damage and
+    Slow enemies in front of you
 - slot: 2nd Ability
   name: Bludgeon
   cooldown:
@@ -139,13 +128,8 @@ abilities:
   - 'Slam Radius: 1.92 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'SPIN AND SLAM; AOE ATTACKS Notes: Spin your hammer to deal Physical
-    Damage to enemies around you, then slam to deal Physical Damage to enemies in
-    a line Spin Damage : 55 | 90 | 125 | 165 | 200 Spin Damage Scaling : 25% Strength
-    Slam Damage : 70 | 130 | 190 | 250 | 310 Slam Damage Scaling : 70% Strength Spin
-    Radius : 4 meters Slam Range : 4.8 meters Slam Radius : 1.92 meters Cooldown :
-    14 | 13 | 12 | 11 | 10 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability
-    Video'
+  description: Spin your hammer to deal Physical Damage to enemies around you, then
+    slam to deal Physical Damage to enemies in a line
 - slot: 3rd Ability
   name: Scourge
   cooldown:
@@ -172,12 +156,8 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 16 | 15 | 14 | 13 | 12 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'LINE DISARM; ATTACKS HEAL Notes: Change to Basic Attacks Lash out
-    with your to deal Physical Damage and Disarm enemies Damage : 80 | 120 | 160 |
-    200 | 240 Damage Scaling : 50% Strength Heal : 6 | 7 | 8 | 9 | 10 Heal Scaling
-    : 6% Physical Protection Disarmed Duration : 1.25 | 1.4 | 1.55 | 1.7 | 1.85 seconds
-    Range : 8.8 meters Radius : 1.6 meters Cooldown : 16 | 15 | 14 | 13 | 12 seconds
-    Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Change to Basic Attacks Lash out with your to deal Physical Damage
+    and Disarm enemies
 - slot: Ultimate
   name: Eagle's Rally
   cooldown:
@@ -198,21 +178,16 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'LEAP, STUN, AREA BUFF Notes: The flag empowers you and allied gods
-    in the area, granting Strength , Intelligence , and Physical and Magical Protection
-    Leap forward and plant your flag to deal Physical Damage and Stun enemies Damage
-    : 300 | 370 | 440 | 510 | 580 Damage Scaling : 60% Strength Stun Duration : 0.75
-    seconds Strength : 8 | 16 | 24 | 32 | 40 + 7.5% Protections Intelligence : 22
-    | 30 | 38 | 46 | 54 + 7.5% Protections Protection : 15 | 20 | 25 | 30 | 35 + 7.5%
-    Physical and Magical Protections Range : 8.8 meters Radius : 2.4 meters Cooldown
-    : 90 seconds Cost : 100 mana Expand Ability Video'
+  description: The flag empowers you and allied gods in the area, granting Strength
+    , Intelligence , and Physical and Magical Protection Leap forward and plant your
+    flag to deal Physical Damage and Stun enemies
 aspects:
 - name: Aspect of Vindication
   kit_changes: Bludgeon no longer deals bonus Final Slam Damage but whenever Bellona
     gains Block Stacks with Sword and Shield or gains Health from Scourge, nearby
     allied gods also gain those benefits.
 source_url: https://wiki.smite2.com/w/Bellona
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Bellona Basic Attack

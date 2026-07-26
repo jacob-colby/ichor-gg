@@ -38,9 +38,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Chaac Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Overflow
   details:
@@ -48,9 +46,8 @@ abilities:
   - 'Heal: 10'
   - 'Heal Scaling: 12.5% Intelligence'
   - 'Heal Amount Per Level: 1'
-  description: 'FREE CAST AFTER HITS After 5 successful Basic Attacks, the next ability
-    you use costs 0 mana, has Lower Cooldown , and Heals you Heal : 10 Heal Scaling
-    : 12.5% Intelligence Heal Amount Per Level : 1 Expand Ability Video'
+  description: FREE CAST AFTER HITS After 5 successful Basic Attacks, the next ability
+    you use costs 0 mana, has Lower Cooldown , and Heals you
 - slot: 1st Ability
   name: Thunder Strike
   cooldown:
@@ -71,11 +68,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
-  description: 'AXE THROW AOE Notes: Throw your Axe forward, dealing Physical Damage
-    to enemies in the area where it lands Damage : 100 | 160 | 220 | 280 | 340 Damage
-    Scaling : 75% Strength + 60% Intelligence Axe Duration : 5 seconds Range : 9.6
-    meters Radius : 3.2 meters Cooldown : 10 seconds Cost : 45 | 50 | 55 | 60 | 65
-    mana Expand Ability Video'
+  description: Throw your Axe forward, dealing Physical Damage to enemies in the area
+    where it lands
 - slot: 2nd Ability
   name: Torrent
   cooldown:
@@ -108,15 +102,9 @@ abilities:
   - 'Dash Radius: 1.28 meters'
   - 'Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'TELEPORT TO AXE, APIN + PROTECT Notes: If you Dash , you will still
-    do the area attack upon reaching the Axe Swing your Axe around you, dealing Physical
-    Damage to enemies and gaining Protections for each enemy hit Damage : 100 | 160
-    | 220 | 280 | 340 Damage Scaling : 70% Strength Dash Damage : 35 | 57.5 | 80 |
-    102.5 | 125 Dash Damage Scaling : 30% Strength Protections : 5 | 7 | 9 | 11 |
-    13 Per Stack Protection Buff Scaling : 6% Intelligence Buff Duration : 6 seconds
-    Max Buff Stacks : 4 Attack Radius : 3.2 meters Dash Radius : 1.28 meters Cooldown
-    : 10 | 9.5 | 9 | 8.5 | 8 seconds Cost : 50 | 60 | 70 | 80 | 90 mana Expand Ability
-    Video'
+  description: If you Dash , you will still do the area attack upon reaching the Axe
+    Swing your Axe around you, dealing Physical Damage to enemies and gaining Protections
+    for each enemy hit
 - slot: 3rd Ability
   name: Rain Dance
   cooldown:
@@ -142,12 +130,7 @@ abilities:
   - 'Axe Radius: 9.6 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 55 | 65 | 75 | 85 | 95 mana'
-  description: 'AREA HEAL, SLOW Notes: Create a rainstorm that Heals you over time
-    and provides Dampening Heal Per Tick : 8 | 11 | 14 | 17 | 20 Heal Scaling Per
-    Tick : 2.5% Intelligence Dampening : 9 | 10.5 | 12 | 13.5 | 15 Slow : 15 | 17.5
-    | 20 | 22.5 | 25% Attack Speed Slow : 10 | 12.5 | 15 | 17.5 | 20% Radius : 6.4
-    meters Axe Radius : 9.6 meters Cooldown : 13 seconds Cost : 55 | 65 | 75 | 85
-    | 95 mana Expand Ability Video'
+  description: Create a rainstorm that Heals you over time and provides Dampening
 - slot: Ultimate
   name: Storm Call
   cooldown:
@@ -168,17 +151,13 @@ abilities:
   - 'Radius: 5.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
-  description: 'AREA SILENCE AND KNOCKUP Notes: Charge up your Lightning Axe, then
-    unleash a blast dealing Physical Damage , Knocking Up , and Silencing in an area
-    around you Damage : 300 | 360 | 420 | 480 | 540 Damage Scaling : 120% Strength
-    + 100% Intelligence Damage Mitigation : 50 | 55 | 60 | 65 | 70% Silence Duration
-    : 1.5 seconds Radius : 5.6 meters Cooldown : 90 seconds Cost : 80 | 90 | 100 |
-    110 | 120 mana Expand Ability Video'
+  description: Charge up your Lightning Axe, then unleash a blast dealing Physical
+    Damage , Knocking Up , and Silencing in an area around you
 aspects:
 - name: Aspect of Fulmination
   kit_changes: Rain Dance no longer heals but damages enemies in the area instead.
 source_url: https://wiki.smite2.com/w/Chaac
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Chaac Basic Attack

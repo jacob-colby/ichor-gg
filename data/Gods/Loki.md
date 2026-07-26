@@ -38,17 +38,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Loki Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Behind You
   details:
   - The increased damage from this effect also triggers on enemies Blinded by Agonizing
     Visions
   - 'Damage: 115%'
-  description: 'BACKSTAB FOR BONUS DAMAGE Notes: Hitting enemies from behind deals
-    Bonus Damage Damage : 115% Expand Ability Video'
+  description: Hitting enemies from behind deals Bonus Damage
 - slot: 1st Ability
   name: Vanish
   cooldown:
@@ -74,10 +71,7 @@ abilities:
   - 'Buff Duration: 4 seconds'
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'STEALTH; NEXT ATTACK BLEEDS Notes: Disappear in a puff of smoke, become
-    Stealthed and gain Movement Speed Damage Per Tick : 30 | 45 | 60 | 75 | 90 Damage
-    Scaling Per Tick : 20% Strength Movement Speed : 35% Buff Duration : 4 seconds
-    Cooldown : 15 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Disappear in a puff of smoke, become Stealthed and gain Movement Speed
 - slot: 2nd Ability
   name: Agonizing Visions
   cooldown:
@@ -105,11 +99,8 @@ abilities:
   - 'Radius: 4 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'AREA DAMAGE BLIND Notes: Summon a vision of Loki that repeatedly deals
-    Physical Damage to nearby enemies Damage : 20 | 25 | 30 | 35 | 40 Damage Scaling
-    : 15% Strength Blind Duration : 3 seconds Damage Dealt Reduction : 5% Debuff Duration
-    : 2.5 seconds Max Debuff Stacks : 3 Range : 8.8 meters Radius : 4 meters Cooldown
-    : 13 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Summon a vision of Loki that repeatedly deals Physical Damage to nearby
+    enemies
 - slot: 3rd Ability
   name: Flurry Strike
   cooldown:
@@ -138,12 +129,8 @@ abilities:
   - 'Cone Angle: 90 degrees'
   - 'Cooldown: 9 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'CHANNEL DAMAGE CONE Notes: Unleash a flurry of dagger strikes, dealing
-    Physical Damage repeatedly and Slowing enemies in front of you Damage : 20 | 30
-    | 40 | 50 | 60 Damage Scaling : 25% Strength Final Hit Damage : 55 | 75 | 95 |
-    115 | 135 Final Hit Damage Scaling : 60% Strength Slow : 15% Final Hit Slow :
-    30% Slow Duration : 2.25 seconds Radius : 3.2 meters Cone Angle : 90 degrees Cooldown
-    : 9 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Unleash a flurry of dagger strikes, dealing Physical Damage repeatedly
+    and Slowing enemies in front of you
 - slot: Ultimate
   name: Assassinate
   cooldown:
@@ -166,13 +153,8 @@ abilities:
   - 'Second Strike Cone Angle: 105 degrees'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 mana'
-  description: 'TELEPORT, STUN, DAMAGE Notes: Teleport to the target location, then
-    strike twice to assassinate a foe First Strike Damage : 70 | 105 | 140 | 175 |
-    210 First Strike Damage Scaling : 35% Strength Second Strike Damage : 100 | 145
-    | 190 | 235 | 280 Second Strike Damage Scaling : 80% Strength Stun Duration :
-    0.75 seconds Teleport Range : 8.8 meters First Strike Radius : 1.6 meters Second
-    Strike Range : 4.8 meters Second Strike Cone Angle : 105 degrees Cooldown : 90
-    seconds Cost : 90 mana Expand Ability Video'
+  description: Teleport to the target location, then strike twice to assassinate a
+    foe
 aspects:
 - name: Aspect of Agony
   kit_changes: Vanish no longer grants Stealth, but it inflicts Blind instead of Bleed.
@@ -180,7 +162,7 @@ aspects:
     enemies. Behind you now deals bonus damage scaling with your Health and Protections
     rather than its percentage increase.
 source_url: https://wiki.smite2.com/w/Loki
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Loki Basic Attack

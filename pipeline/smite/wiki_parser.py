@@ -118,6 +118,36 @@ def _section_tables(soup, heading_id: str) -> list:
     return tables
 
 
+# Control text the wiki renders inside the ability table itself. It is UI, not
+# content, and shipped as body copy on every one of the 513 abilities.
+_ABILITY_CHROME = ("Expand Ability Video", "Expand Ability video", "Ability Video")
+
+
+def clean_ability_description(description: str, details, slot: str = "", name: str = "") -> str:
+    """Strip the wiki's UI chrome, the duplicated detail lines, and the leading
+    tagline from an ability's prose.
+
+    Shared by the parser and by the one-off migration over already-scraped
+    notes (`scripts/clean_ability_text.py`), so both do exactly the same thing.
+    """
+    prose = _normalize_colons(_clean(description or ""))
+    for chunk in [slot, name, *(details or [])]:
+        if chunk:
+            prose = prose.replace(_normalize_colons(_clean(chunk)), " ")
+    for junk in _ABILITY_CHROME:
+        prose = prose.replace(junk, " ")
+    prose = _clean(prose)
+    marker = prose.find("Notes:")
+    if 0 <= marker <= 60:
+        prose = prose[marker + len("Notes:"):]
+    return re.sub(r"^[\s\-|•]+", "", _clean(prose))
+
+
+def _normalize_colons(text: str) -> str:
+    """"Damage : 95" -> "Damage: 95" so inline prose and list items compare."""
+    return re.sub(r"\s*:\s*", ": ", text)
+
+
 def _parse_abilities(soup) -> list:
     abilities = []
     for table in _section_tables(soup, "Abilities"):
@@ -143,12 +173,13 @@ def _parse_abilities(soup) -> list:
         if details:
             ability["details"] = details
 
-        # Description = the table's prose minus the header (slot+name) and the
-        # detail lines. Robust to per-ability layout variation.
-        prose = _clean(table.get_text(" "))
-        for chunk in [ability["slot"], ability["name"], *details]:
-            prose = prose.replace(chunk, " ")
-        description = re.sub(r"^[\s\-|•]+", "", _clean(prose))  # drop leading cell-separator junk
+        # Description = the table's prose minus the header (slot+name), the
+        # detail lines, and the wiki's own UI chrome. Subtracting the detail
+        # lines used to miss almost all of them: the wiki spaces colons
+        # differently inline ("Damage : 95") than in the list items
+        # ("Damage: 95"), so every ability shipped its stat block twice.
+        description = clean_ability_description(
+            table.get_text(" "), details, ability["slot"], ability["name"])
         if description:
             ability["description"] = description
 

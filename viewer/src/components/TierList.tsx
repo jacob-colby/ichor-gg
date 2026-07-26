@@ -44,7 +44,7 @@ const TIER_TEXT: Record<TierLetter, string> = {
 };
 
 const segBtn = (active: boolean) =>
-  `press rounded px-3 py-1.5 font-display text-small font-semibold transition-colors duration-[150ms] ease-standard ${
+  `press rounded-sm px-3 py-1.5 font-display text-small font-semibold transition-colors duration-[150ms] ease-standard ${
     active ? "bg-gold text-bg0" : "text-muted hover:text-ink"
   }`;
 const chip = (active: boolean, extra = "") =>

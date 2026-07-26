@@ -36,9 +36,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Thanatos Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Harvester of Souls
   details:
@@ -51,9 +49,7 @@ abilities:
   - 'God Kill Heal: 15% of their Max Health'
   - 'NPC Kill Heal: 10% of their Max Health'
   - 'Cooldown Reduction: -5 seconds'
-  description: 'HEAL, COOLDOWN RESET ON KILL Notes: You revel in the deaths of your
-    foes God Kill Heal : 15% of their Max Health NPC Kill Heal : 10% of their Max
-    Health Cooldown Reduction : -5 seconds Expand Ability Video'
+  description: You revel in the deaths of your foes
 - slot: 1st Ability
   name: Death Scythe
   cooldown:
@@ -71,10 +67,8 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 4% Health'
-  description: 'LINE DAMAGE HEAL Notes: Fling a scythe projectile that deals Physical
-    Damage and Slows the first target hit Damage : 95 | 165 | 235 | 305 | 375 Damage
-    Scaling : 85% Strength Slow : 20% Range : 11.2 meters Radius : 0.48 meters Cooldown
-    : 11 seconds Cost : 4% Health Expand Ability Video'
+  description: Fling a scythe projectile that deals Physical Damage and Slows the
+    first target hit
 - slot: 2nd Ability
   name: Scent of Death
   cooldown:
@@ -93,11 +87,7 @@ abilities:
   - 'Buff Duration: 6 seconds'
   - 'Cooldown: 13 seconds'
   - 'Cost: 4% Health'
-  description: 'SPEED UP, HUNT DYING ENEMIES Notes: Sense death, becoming Slow Immune
-    and gaining Movement Speed and Penetration Bonus Damage : 15% Movement Speed :
-    8 | 12 | 16 | 20 | 24% Bonus Movement Speed : Up to 8 | 12 | 16 | 20 | 24% Penetration
-    : 8 | 12 | 16 | 20 | 24 Buff Duration : 6 seconds Cooldown : 13 seconds Cost :
-    4% Health Expand Ability Video'
+  description: Sense death, becoming Slow Immune and gaining Movement Speed and Penetration
 - slot: 3rd Ability
   name: Soul Reap
   cooldown:
@@ -116,11 +106,8 @@ abilities:
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 4% Health'
-  description: 'CONE SILENCE DAMAGE Swing your scythe, dealing Physical Damage and
-    Silencing enemies in front of you Damage : 100 | 150 | 200 | 250 | 300 Damage
-    Scaling : 80% Strength Silence Duration : 1 second Radius : 5.6 meters Cone Angle
-    : 110 degrees Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 4% Health Expand
-    Ability Video'
+  description: CONE SILENCE DAMAGE Swing your scythe, dealing Physical Damage and
+    Silencing enemies in front of you
 - slot: Ultimate
   name: Hovering Death
   cooldown:
@@ -142,18 +129,15 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 6% Health'
-  description: 'FLY, STUN AND EXECUTE Notes: Fly into the sky, then dive to a location
-    dealing Physical Damage and Stunning enemies hit Damage : 110 | 145 | 180 | 215
-    | 250 Damage Scaling : 80% Strength Execute Health % : 24 | 28 | 32 | 36 | 40%
-    Stun Duration : 1 second Radius : 2.4 meters Cooldown : 90 seconds Cost : 6% Health
-    Expand Ability Video'
+  description: Fly into the sky, then dive to a location dealing Physical Damage and
+    Stunning enemies hit
 aspects:
 - name: Aspect of Reaping
   kit_changes: Harvester of Souls no longer Heals Thanatos but provides permanent
     Max Health. Additionally Soul Reap deals bonus damage and Heals Thanatos based
     on his Max Health.
 source_url: https://wiki.smite2.com/w/Thanatos
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Thanatos Basic Attack

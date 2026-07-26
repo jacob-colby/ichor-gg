@@ -40,12 +40,9 @@ abilities:
   - 'Return Damage Scaling: 35% Strength + 7% Intelligence + 35% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Izanami Notes: Throw a piercing projectile that deals Physical Damage
-    to all enemies hit. The projectile returns to you after reaching tis max range
-    or hitting a wall, dealing Physical Damage to any enemies hit on its way back
-    Initial Damage Scaling : 75% Strength + 15% Intelligence + 75% Attack Damage Return
-    Damage Scaling : 35% Strength + 7% Intelligence + 35% Attack Damage Range : 8.8
-    meters Radius : 0.48 meters Expand Ability Video'
+  description: Throw a piercing projectile that deals Physical Damage to all enemies
+    hit. The projectile returns to you after reaching tis max range or hitting a wall,
+    dealing Physical Damage to any enemies hit on its way back
 - slot: Passive
   name: Death Draws Nigh
   details:
@@ -55,10 +52,8 @@ abilities:
   - 'Intelligence: 0.5 Per Stack'
   - 'Intelligence Per Level: 0.05 Per Stack'
   - 'Max Stacks: 50'
-  description: 'DAMAGE GRANTS POWER Notes: Gain Percent Penetration and Intelligence
-    for each 1% of your Max Health taken as damage Percent Penetration : 0.3% Per
-    Stack Intelligence : 0.5 Per Stack Intelligence Per Level : 0.05 Per Stack Max
-    Stacks : 50 Expand Ability Video'
+  description: Gain Percent Penetration and Intelligence for each 1% of your Max Health
+    taken as damage
 - slot: 1st Ability
   name: Sickle Storm
   cooldown:
@@ -87,13 +82,8 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'FAST, BLEEDING ATTACKS Notes: Significantly increases your Attack
-    Speed for 6 seconds, but your Attacks no longer pierce enemies or return to you
-    Attack Speed : 30 | 35 | 40 | 45 | 50% Damage Scaling : 100% Strength + 20% Intelligence
-    Bonus Structure Damage : 5 | 10 | 15 | 20 | 25 Bleed Damage : 5 | 10 | 15 | 20
-    | 25 + 30% Intelligence over 4 ticks Max Debuff Stacks : 3 Debuff Duration : 2
-    seconds Range : 8.8 meters Radius : 0.48 meters Cooldown : 11 seconds Cost : 60
-    | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Significantly increases your Attack Speed for 6 seconds, but your Attacks
+    no longer pierce enemies or return to you
 - slot: 2nd Ability
   name: Spectral Projection
   cooldown:
@@ -122,12 +112,8 @@ abilities:
   - 'Radius: 0.8 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'LINE DAMAGE SLOW Notes: Send forth a spectral projection of yourself,
-    dealing Physical Damage and Slowing all enemies in a line Damage : 50 | 90 | 130
-    | 170 | 210 Damage Scaling : 80% Strength + 75% Intelligence Slow : 20 | 22.5
-    | 25 | 27.5 | 30% Slow Duration : 2 seconds Healing Reduction : -25% Healing Reduction
-    Duration : 5 seconds Range : 11.2 meters Radius : 0.8 meters Cooldown : 14 | 13.5
-    | 13 | 12.5 | 12 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Send forth a spectral projection of yourself, dealing Physical Damage
+    and Slowing all enemies in a line
 - slot: 3rd Ability
   name: Fade Away
   cooldown:
@@ -150,11 +136,8 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Cooldown: 17 | 16.5 | 16 | 15.5 | 15 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'LEAP, THEN STEALTH Notes: Descend into the underworld, becoming Stealthed
-    , and Leap away from your current position Movement Speed : 15 | 20 | 25 | 30
-    | 35% Buff Duration : 3 | 3.5 | 4 | 4.5 | 5 seconds Range : 8.8 meters Cooldown
-    : 17 | 16.5 | 16 | 15.5 | 15 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand
-    Ability Video'
+  description: Descend into the underworld, becoming Stealthed , and Leap away from
+    your current position
 - slot: Ultimate
   name: Dark Portal
   cooldown:
@@ -175,16 +158,11 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'AREA DAMAGE SILENCE Notes: Summon a dark portal which deals instant
-    Physical Damage and Physical Damage over time Damage : 180 | 260 | 340 | 420 |
-    500 Damage Scaling : 100% Strength + 30% Intelligence Damage Over Time : 50 |
-    80 | 110 | 140 | 170 over 4 ticks Damage Over Time Scaling : 70% Intelligence
-    over 4 ticks Silence Duration : 2 seconds Initial Slow Amount : 60% Range : 9.6
-    meters Radius : 2.4 meters Cooldown : 90 seconds Cost : 100 mana Expand Ability
-    Video'
+  description: Summon a dark portal which deals instant Physical Damage and Physical
+    Damage over time
 aspects: []
 source_url: https://wiki.smite2.com/w/Izanami
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Izanami Basic Attack

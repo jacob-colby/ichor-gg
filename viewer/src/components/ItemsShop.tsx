@@ -356,7 +356,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
 
         {item.source_url && (
           <a href={item.source_url} target="_blank" rel="noreferrer"
-            className="press mt-4 inline-block rounded-sm py-1 font-mono text-micro uppercase tracking-[0.08em] text-blue hover:underline">
+            className="press mt-4 inline-block rounded-sm py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-blue hover:underline">
             Wiki page →
           </a>
         )}
@@ -366,7 +366,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
 }
 
 const segBtn = (active: boolean) =>
-  `press rounded px-2.5 py-1 font-display text-small font-semibold transition-colors duration-150 ease-standard ${
+  `press rounded-sm px-2.5 py-1 font-display text-small font-semibold transition-colors duration-150 ease-standard ${
     active ? "bg-gold text-bg0" : "text-muted hover:text-ink"}`;
 const selCls = "rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted focus:border-blue focus:outline-none";
 

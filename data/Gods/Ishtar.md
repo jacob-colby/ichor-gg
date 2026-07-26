@@ -35,9 +35,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Ishtar Notes: Fire a projectile that deals Physical Damage to the
-    first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
-    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Mark of Vengeance
   cooldown:
@@ -54,11 +52,8 @@ abilities:
   - 'Max Attack Speed Stacks: 6'
   - 'Max Strength Stacks: 5'
   - 'Cooldown: 20 seconds'
-  description: 'Mark; Attack Speed Stacks Notes: When you drop below 75% Health, apply
-    to the enemy god that most recently damaged you for 10 seconds Attack Speed :
-    5% per stack Movement Speed : 20% Strength : 5 per stack Attack Speed Duration
-    : 4 seconds Movement Speed Duration : 5 seconds Max Attack Speed Stacks : 6 Max
-    Strength Stacks : 5 Cooldown : 20 seconds Expand Ability Video'
+  description: When you drop below 75% Health, apply to the enemy god that most recently
+    damaged you for 10 seconds
 - slot: 1st Ability
   name: Imbue Arrows
   cooldown:
@@ -88,17 +83,11 @@ abilities:
   - 'Storm Shot Range: 12.8 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'Empower Attacks Three Ways Notes: Spread Shot: Fire 5 arrows in a
-    cone, side arrows deal reduced Physical Damage ; only the center arrow applies
-    on-hit item effects Storm Shot: Gain Attack Speed and fire faster, longer-ranged
-    shots that deal reduced Physical Damage . These Attacks cannot hit structures
-    Imbue your arrows with heavenly light, empowering your Attacks as Strike Shot,
-    Spread Shot, or Storm Shot Strike Shot Bonus Damage : 5 | 11 | 17 | 23 | 29 Spread
-    Shot Side Arrow Damage : 9% Storm Shot Attack Speed Bonus : 20 | 25 | 30 | 35
-    | 40% Storm Shot Projectile Speed : 120% Buff Duration : 6 seconds Storm Shot
-    Attack Damage : -20% Strike Shot Range : 7.52 meters Strike Shot Radius : 1.6
-    meters Storm Shot Range : 12.8 meters Cooldown : 12 seconds Cost : 60 | 65 | 70
-    | 75 | 80 mana Expand Ability Video'
+  description: 'Spread Shot: Fire 5 arrows in a cone, side arrows deal reduced Physical
+    Damage ; only the center arrow applies on-hit item effects Storm Shot: Gain Attack
+    Speed and fire faster, longer-ranged shots that deal reduced Physical Damage .
+    These Attacks cannot hit structures Imbue your arrows with heavenly light, empowering
+    your Attacks as Strike Shot, Spread Shot, or Storm Shot'
 - slot: 2nd Ability
   name: Rolling Thunder
   cooldown:
@@ -118,12 +107,9 @@ abilities:
   - 'Radius: 8.8 meters'
   - 'Cooldown: 13.5 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'Aimed Lightning Line Notes: Call down four lightning strikes in a
-    line, dealing Physical Damage per strike to enemies in each area. Ishtar may aim
-    which direction the strikes travel Damage : 60 | 85 | 110 | 135 | 160 Damage Scaling
-    : 40% Strength Mesmerize Duration : 0.75 seconds Range : 2.4 meters Radius : 8.8
-    meters Cooldown : 13.5 seconds Cost : 55 | 60 | 65 | 70 | 75 mana Expand Ability
-    Video'
+  description: Call down four lightning strikes in a line, dealing Physical Damage
+    per strike to enemies in each area. Ishtar may aim which direction the strikes
+    travel
 - slot: 3rd Ability
   name: Jolt
   cooldown:
@@ -146,11 +132,8 @@ abilities:
   - 'Arrow Radius: 1.6 meters'
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 60 mana'
-  description: 'Dash Root Backflip Notes: Dash forward with your blades, dealing Physical
-    Damage to enemies in your path Dash Damage : 80 | 120 | 160 | 200 | 240 Dash Damage
-    Scaling : 60% Strength Arrow Damage : 20 | 30 | 40 | 50 | 60 Arrow Damage Scaling
-    : 120% Basic Attack Damage Range : 2.4 meters Arrow Radius : 1.6 meters Cooldown
-    : 15 | 14.5 | 14 | 13.5 | 13 seconds Cost : 60 mana Expand Ability Video'
+  description: Dash forward with your blades, dealing Physical Damage to enemies in
+    your path
 - slot: Ultimate
   name: Blades of Retribution
   cooldown:
@@ -170,13 +153,10 @@ abilities:
   - 'Range: 12.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'Swords Out and Recall Notes: Each sword hit after the first on the
-    same target deals reduced Physical Damage ; the reduction resets before the recall
-    Become CC Immune and summon five swords of light, firing them out in a cone. Each
-    sword deals Physical Damage and Cripples enemies Damage : 90 | 115 | 140 | 165
-    | 190 Damage Scaling : 55% Strength Damage Reduction : -40% per sword, up to a
-    max of -80% Cripple Duration : 1.25 seconds Stun Duration : 1 second Range : 12.8
-    meters Cooldown : 90 seconds Cost : 100 mana Expand Ability Video'
+  description: Each sword hit after the first on the same target deals reduced Physical
+    Damage ; the reduction resets before the recall Become CC Immune and summon five
+    swords of light, firing them out in a cone. Each sword deals Physical Damage and
+    Cripples enemies
 aspects:
 - name: Aspect of the Passionate Storm
   kit_changes: Your Spread Shot cone is always active on your Attacks. Imbue Arrows
@@ -187,7 +167,7 @@ aspects:
     bonus damage, and at 15 or more stacks the Rooted target explodes for bonus Physical
     Damage over double the area when you land.
 source_url: https://wiki.smite2.com/w/Ishtar
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Ishtar Basic Attack

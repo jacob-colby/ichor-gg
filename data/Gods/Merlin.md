@@ -35,9 +35,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Merlin Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Overload
   details:
@@ -46,17 +44,15 @@ abilities:
   - 'Damage Scaling: 20% Intelligence'
   - 'Max Stacks: 3'
   - 'Buff Duration: 5 seconds'
-  description: 'ENHANCED ATTACKS AFTER ABILITY Notes: Using an ability provides 1
-    stack of . Firing a Attack consumes 1 stack of and deals Magical Damage to enemies
-    hit Damage : 20 Damage Scaling : 20% Intelligence Max Stacks : 3 Buff Duration
-    : 5 seconds Expand Ability Video'
+  description: Using an ability provides 1 stack of . Firing a Attack consumes 1 stack
+    of and deals Magical Damage to enemies hit
 aspects:
 - name: Aspect of Pandemonium
   kit_changes: Elemental Mastery has a reduced cooldown and each time it is used,
     a random Stance is selected with 2 random primary abilities, Flicker will always
     persist. Using Elemental Mastery provides an Intelligence buff for a short duration.
 source_url: https://wiki.smite2.com/w/Merlin
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Merlin Basic Attack

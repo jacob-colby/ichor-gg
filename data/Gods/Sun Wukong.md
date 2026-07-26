@@ -37,9 +37,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Sun Wukong Notes: Deal Physical Damage to an enemy in front of you
-    Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range :
-    1.92 meters Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Undefeated Body
   cooldown:
@@ -56,13 +54,10 @@ abilities:
   - 'Buff Duration: 8 seconds'
   - 'Clone Lifetime: 10 seconds'
   - 'Cooldown: 90 seconds'
-  description: 'LOW HEALTH BUFFS, SPAWNS CLONE Notes: When you drop below 60% Health,
-    gain increased Strength , Intelligence , and Protections . If you go above this
-    threshold, the buff persists for a short duration. When you drop below 30% Health,
-    you spawn a clone. This effect has a cooldown Strength & Intelligence : 10 Strength
-    & Intelligence Scaling : 1 Per Level Protections : 10 Protections Scaling : 1.5
-    Per Level Buff Duration : 8 seconds Clone Lifetime : 10 seconds Cooldown : 90
-    seconds Expand Ability Video'
+  description: When you drop below 60% Health, gain increased Strength , Intelligence
+    , and Protections . If you go above this threshold, the buff persists for a short
+    duration. When you drop below 30% Health, you spawn a clone. This effect has a
+    cooldown
 - slot: 1st Ability
   name: The Magic Cudgel
   cooldown:
@@ -88,11 +83,7 @@ abilities:
   - 'Radius: 0.96 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'LINE DAMAGE Notes: Slam down with your Cudgel, dealing Physical Damage
-    Damage : 115 | 155 | 195 | 235 | 275 Close Range Damage Scaling : 60% Strength
-    + 35% Intelligence Far Range Damage Scaling : 30% Strength + 70% Intelligence
-    Range : 8.8 meters Radius : 0.96 meters Cooldown : 12 seconds Cost : 50 | 55 |
-    60 | 65 | 70 mana Expand Ability Video'
+  description: Slam down with your Cudgel, dealing Physical Damage
 - slot: 2nd Ability
   name: Master's Will
   cooldown:
@@ -116,13 +107,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 60 mana'
-  description: 'SPIN DAMAGE SLOW Notes: Strike around you dealing Physical Damage
-    . Enemies hit are Slowed and have reduced Attack Speed Damage : 90 | 150 | 210
-    | 270 | 330 Close Range Damage Scaling : 65% Strength + 37.5% Intelligence Far
-    Range Damage Scaling : 32.5% Strength + 75% Intelligence Slow : 20 | 22.5 | 25
-    | 27.5 | 30% Attack Speed Reduction : 20 | 22.5 | 25 | 27.5 | 30% Debuff Duration
-    : 3 seconds Radius : 3.2 meters Cooldown : 11 seconds Cost : 60 mana Expand Ability
-    Video'
+  description: Strike around you dealing Physical Damage . Enemies hit are Slowed
+    and have reduced Attack Speed
 - slot: 3rd Ability
   name: 72 Transformations
   cooldown:
@@ -152,11 +138,7 @@ abilities:
   - 'Stun Duration: 1.4 seconds'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
-  description: 'DASH TRANSFORM; KNOCKUP | STUN | FAST Notes: Transform into an Ox,
-    Tiger, or Eagle, and Dash forward Ox Damage : 70 | 105 | 140 | 175 | 210 Ox Damage
-    Scaling : 60% Strength Tiger Damage : 100 | 170 | 240 | 310 | 380 Tiger Damage
-    Scaling : 80% Strength Stun Duration : 1.4 seconds Cooldown : 16 | 15.5 | 15 |
-    14.5 | 14 seconds Cost : 65 | 70 | 75 | 80 | 85 mana Expand Ability Video'
+  description: Transform into an Ox, Tiger, or Eagle, and Dash forward
 - slot: Ultimate
   name: Somersault Cloud
   cooldown:
@@ -178,11 +160,8 @@ abilities:
   - 'Radius: 4 meters'
   - 'Cooldown: 110 | 105 | 100 | 95 | 90 seconds'
   - 'Cost: 100 mana'
-  description: 'IMMUNE, HEAL Notes: Rise into a cloud leaving a clone to fight in
-    your stead. While in the cloud you are Stealthed and Heal every 0.5 seconds Damage
-    : 200 | 275 | 350 | 425 | 500 Damage Scaling : 100% Strength Heal Per Tick : 2%
-    Max Health + 5% Intelligence Range : 12 meters Radius : 4 meters Cooldown : 110
-    | 105 | 100 | 95 | 90 seconds Cost : 100 mana Expand Ability Video'
+  description: Rise into a cloud leaving a clone to fight in your stead. While in
+    the cloud you are Stealthed and Heal every 0.5 seconds
 aspects:
 - name: Aspect of Transformation
   kit_changes: 72 Transformations has a reduced Cooldown and locks your animal form
@@ -190,7 +169,7 @@ aspects:
     Tiger form provides stacking Attack Speed on hits of The Magic Cudgel and Eagle
     form causes your other two non-ultimate abilities to have a reduced Cooldown.
 source_url: https://wiki.smite2.com/w/Sun_Wukong
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Sun Wukong Basic Attack

@@ -39,9 +39,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Osiris Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Fragmented
   details:
@@ -50,11 +48,10 @@ abilities:
     penalty'
   - 'Damage Mitigation: 2% Per Missing Fragment'
   - Attack Speed 40%
-  description: 'Notes: After losing 8 fragments, become a spirit for 6 successful
-    Attacks: walk through enemies and enemy blockers , gain Attack Speed , and your
-    Attacks ignore movement penalty Lose a fragment of your body each time you use
-    an ability, gaining Damage Mitigation Damage Mitigation : 2% Per Missing Fragment
-    Expand Ability Video'
+  description: 'After losing 8 fragments, become a spirit for 6 successful Attacks:
+    walk through enemies and enemy blockers , gain Attack Speed , and your Attacks
+    ignore movement penalty Lose a fragment of your body each time you use an ability,
+    gaining Damage Mitigation'
 - slot: 1st Ability
   name: Sickle Strike
   cooldown:
@@ -74,11 +71,8 @@ abilities:
   - 'Radius: 0.56 meters'
   - 'Cooldown: 6 seconds'
   - 'Cost: 30 mana'
-  description: 'THROW SICKLE PROJECTILE Notes: Throw your Sickle, dealing Physical
-    Damage and Slowing the first god hit Damage : 80 | 130 | 180 | 230 | 280 Damage
-    Scaling : 45% Strength + 35% Protections from Items Slow : 15 | 16.25 | 17.5 |
-    18.75 | 20% Slow Duration : 3 seconds Range : 8.8 meters Radius : 0.56 meters
-    Cooldown : 6 seconds Cost : 30 mana Expand Ability Video'
+  description: Throw your Sickle, dealing Physical Damage and Slowing the first god
+    hit
 - slot: 2nd Ability
   name: Spirit Flail
   cooldown:
@@ -101,12 +95,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'DAMAGE AREA BURST Notes: Strike the target area with your flail, dealing
-    Physical Damage and granting Movement Speed Damage : 90 | 145 | 200 | 255 | 310
-    Damage Scaling : 75% Strength + 55% Protections from Items Movement Speed : 20%
-    Buff Duration : 3 seconds Additional Slow : 40% Slow Duration : 3 seconds Range
-    : 8.8 meters Radius : 2.4 meters Cooldown : 11 seconds Cost : 50 | 55 | 60 | 65
-    | 70 mana Expand Ability Video'
+  description: Strike the target area with your flail, dealing Physical Damage and
+    granting Movement Speed
 - slot: 3rd Ability
   name: Judgement Tether
   cooldown:
@@ -133,12 +123,8 @@ abilities:
   - 'Radius: 5.6 meters'
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'TETHER INTO STUN Notes: Tether yourself to nearby enemy gods. Tethered
-    enemies have reduced Attack Speed and reduced Damage for 4 seconds Attack Speed
-    Reduction : 15 | 17.5 | 20 | 22.5 | 25% Attack Speed Reduction Scaling : 4% Protections
-    from Items Damage Dealt Reduction : 10 | 12.5 | 15 | 17.5 | 20% Stun Duration
-    : 1.1 seconds Radius : 5.6 meters Cooldown : 15 | 14.5 | 14 | 13.5 | 13 seconds
-    Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Tether yourself to nearby enemy gods. Tethered enemies have reduced
+    Attack Speed and reduced Damage for 4 seconds
 - slot: Ultimate
   name: Lord of the Afterlife
   cooldown:
@@ -156,12 +142,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 70 seconds'
   - 'Cost: 30 mana'
-  description: 'LEAP INTO ROOT Notes: Leap to a target location, dealing Physical
-    Damage and Rooting enemies. Apply negative Cooldown Reduction and Healing Prevention
-    to enemy gods hit Damage : 250 | 345 | 440 | 535 | 630 Damage Scaling : 80% Strength
-    Root Duration : 0.8 seconds Negative Cooldown Rate : -30 Debuff Duration : 6 seconds
-    Range : 10.4 meters Radius : 2.4 meters Cooldown : 70 seconds Cost : 30 mana Expand
-    Ability Video'
+  description: Leap to a target location, dealing Physical Damage and Rooting enemies.
+    Apply negative Cooldown Reduction and Healing Prevention to enemy gods hit
 aspects:
 - name: Aspect of the Fragmented
   kit_changes: Osiris' abilities now scale with intelligence only. Fragments are lost
@@ -171,7 +153,7 @@ aspects:
     Afterlife summons a slowing, damage-dealing specter, but you can no longer leap
     to a location.
 source_url: https://wiki.smite2.com/w/Osiris
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Osiris Basic Attack

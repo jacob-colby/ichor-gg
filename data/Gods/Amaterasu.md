@@ -38,19 +38,16 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Amaterasu Notes: Deal Physical Damage to an enemy in front of you
-    Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range :
-    1.92 meters Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Illuminating Strike
   details:
   - 'Increased Damage Taken: 10%'
   - 'Debuff Duration: 6 seconds'
   - 'Radius: 4.8 meters'
-  description: 'ATTACKS WEAKEN ENEMIES Basic attack or Ult an enemy 3 times to illuminate
+  description: ATTACKS WEAKEN ENEMIES Basic attack or Ult an enemy 3 times to illuminate
     their weaknesses, causing them and other nearby enemies to take more damage from
-    all sources Increased Damage Taken : 10% Debuff Duration : 6 seconds Radius :
-    4.8 meters Expand Ability Video'
+    all sources
 - slot: 1st Ability
   name: Divine Presence
   cooldown:
@@ -74,13 +71,8 @@ abilities:
   - 'Radius: 5.6 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 30 mana'
-  description: 'SPEED OR STRENGTH AURA Notes: Heal yourself over 4 seconds, and alternante
-    between the Gold and Red buff effects Heal Per Tick : 15 | 21 | 27 | 33 | 39 Heal
-    Scaling Per Tick : 3.5% Intelligence Shield Health : 8% of your HP Movement Speed
-    : 7 | 9 | 11 | 13 | 15% Attack Speed : 12 | 14 | 16 | 18 | 20% Strength : 12 |
-    15 | 18 | 21 | 24 Strength Scaling : 5% Intelligence Intelligence : 18 | 22 |
-    26 | 30 | 34 Intelligence Scaling : 3% Intelligence Radius : 5.6 meters Cooldown
-    : 12 seconds Cost : 30 mana Expand Ability Video'
+  description: Heal yourself over 4 seconds, and alternante between the Gold and Red
+    buff effects
 - slot: 2nd Ability
   name: Heavenly Reflection
   cooldown:
@@ -104,13 +96,9 @@ abilities:
   - 'Radius: 0.8 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'DECREASE DAMAGE, THEN FIRE Notes: Charge your Mirror and decrease
-    all damage you take while charging. Reactive the ability to fire a projectile
-    that deals Physical Damage to enemies, increased by the mirror''s charge amount
-    Damage : 80 | 120 | 160 | 200 | 240 Damage Scaling : 60% Strength + 60% Intelligence
-    Damage Taken Reduction : 15% Damage Reduction Scaling : 5% Intelligence Buff Duration
-    : 5 seconds Range : 8.8 meters Radius : 0.8 meters Cooldown : 12 seconds Cost
-    : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Charge your Mirror and decrease all damage you take while charging.
+    Reactive the ability to fire a projectile that deals Physical Damage to enemies,
+    increased by the mirror's charge amount
 - slot: 3rd Ability
   name: Glorious Charge
   cooldown:
@@ -128,11 +116,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 mana'
-  description: 'DASH AND SILENCE Notes: Silence enemies in front of you for 1 second,
-    then Dash forward and deal Physical Damage Physical Damage : 80 | 135 | 190 |
-    245 | 300 Physical Damage : 60% Strength Silence Duration : 1 second Range : 8.8
-    meters Radius : 3.2 meters Cooldown : 15 seconds Cost : 60 mana Expand Ability
-    Video'
+  description: Silence enemies in front of you for 1 second, then Dash forward and
+    deal Physical Damage
 - slot: Ultimate
   name: Dazzling Offensive
   cooldown:
@@ -153,18 +138,15 @@ abilities:
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'MULTI-STRIKE STUN Notes: Become CC Immune and then attack 3 times
-    to deal Physical Damage to enemies in front of you each time Damage : 100 | 150
-    | 200 | 250 | 300 Damage Scaling : 45% Strength + 50% Intelligence Slow : 30%
-    Slow Duration : 2 seconds Stun Duration : 1.2 seconds Radius : 5.6 meters Cone
-    Angle : 110 degrees Cooldown : 90 seconds Cost : 100 mana Expand Ability Video'
+  description: Become CC Immune and then attack 3 times to deal Physical Damage to
+    enemies in front of you each time
 aspects:
 - name: Aspect of Valor
   kit_changes: Divine Presence now defaults to Red Buff, and when activated, you gain
     Movement Speed, Haste and Basic Attack Power in addition to the original effects.
     It no longer alternates to Gold Buff, or heals you when activated.
 source_url: https://wiki.smite2.com/w/Amaterasu
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Amaterasu Basic Attack

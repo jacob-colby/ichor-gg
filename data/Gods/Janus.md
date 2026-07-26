@@ -34,16 +34,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Janus Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit. Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit.
 - slot: Passive
   name: Passages
   details:
   - 'Bonus Damage Scaling: 20% Intelligence'
-  description: 'BONUS DAMAGE AFTER PORTAL When you pass through a Portal or Threshold,
-    your next ability deals bonus Magical Damage . Stacks up to 2 times. Bonus Damage
-    Scaling : 20% Intelligence Expand Ability Video'
+  description: BONUS DAMAGE AFTER PORTAL When you pass through a Portal or Threshold,
+    your next ability deals bonus Magical Damage . Stacks up to 2 times.
 - slot: 1st Ability
   name: Portal
   cooldown:
@@ -60,9 +57,7 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 70 mana'
-  description: 'PLACE GROUND OR WALL PORTAL Notes: Open a portal on a surface. Damage
-    : 80 | 135 | 190 | 245 | 300 Damage Scaling : 70% Intelligence Range : 8.8 meters
-    Radius : 1.6 meters Cooldown : 12 seconds Cost : 70 mana Expand Ability Video'
+  description: Open a portal on a surface.
 - slot: 2nd Ability
   name: Unstable Vortex
   cooldown:
@@ -83,12 +78,8 @@ abilities:
   - 'Range: 11.2 meters'
   - 'Cooldown: 9 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'TWIN HELIX PROJECTILES Notes: Hitting an enemy with both portals deals
-    bonus Magical Damage . Launch two linked portals, dealing Magical Damage to enemies
-    in their path. Damage : 100 | 165 | 230 | 295 | 360 Damage Scaling : 95% Intelligence
-    Secondary Damage : 20 | 33 | 46 | 59 | 72 Secondary Damage Scaling : 20% Intelligence
-    Range : 11.2 meters Cooldown : 9 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand
-    Ability Video'
+  description: Hitting an enemy with both portals deals bonus Magical Damage . Launch
+    two linked portals, dealing Magical Damage to enemies in their path.
 - slot: 3rd Ability
   name: Threshold
   cooldown:
@@ -115,14 +106,10 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'LINE; SPEEDS, SLOWS, AND DEBUFFS Notes: Slowed enemies are Phased,
-    causing your abilities to deal bonus Magical Damage . Magical damage you deal
-    to phased enemies ignores 15% of their Magical Protection from your abilities
-    Unleash a rift that Slows enemies and grants Movement Speed to allies who cross
-    it. Damage Scaling : 25 | 30 | 35 | 40 | 45% Intelligence Slow : 25% Slow Duration
-    : 3 seconds Movement Speed : 15% Movement Speed Max Stacks : 3 Buff Duration :
-    6 seconds Rift Duration : 3 | 3.5 | 4 | 4.5 | 5 seconds Range : 8.8 meters Cooldown
-    : 12 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Slowed enemies are Phased, causing your abilities to deal bonus Magical
+    Damage . Magical damage you deal to phased enemies ignores 15% of their Magical
+    Protection from your abilities Unleash a rift that Slows enemies and grants Movement
+    Speed to allies who cross it.
 - slot: Ultimate
   name: Through Space and Time
   cooldown:
@@ -144,15 +131,11 @@ abilities:
   - 'Projectile Radius: 0.8 meters'
   - 'Cooldown: 110 seconds'
   - 'Cost: 70 mana'
-  description: 'GLOBAL PORTAL PROJECTILE Notes: Fire a global projectile that deals
-    Magical Damage and opens portals for allies on any surface it passes. Enemies
-    hit are Phased if Threshold is ranked. Damage : 300 | 375 | 450 | 525 | 600 Damage
-    Scaling : 90% Intelligence Max Distance Scaling : 110% Intelligence Distance for
-    Max Scaling : 128 meters Portal Duration : 10 seconds Range : 320 meters Projectile
-    Radius : 0.8 meters Cooldown : 110 seconds Cost : 70 mana Expand Ability Video'
+  description: Fire a global projectile that deals Magical Damage and opens portals
+    for allies on any surface it passes. Enemies hit are Phased if Threshold is ranked.
 aspects: []
 source_url: https://wiki.smite2.com/w/Janus
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Janus Basic Attack
