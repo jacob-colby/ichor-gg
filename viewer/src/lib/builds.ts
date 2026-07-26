@@ -47,6 +47,10 @@ export function applySwap(slotOrder: string[], swapItem: string | null, flexSlot
   const flex = (flexSlots ?? []).find((f) => slotOrder.includes(f));
   const idx = flex ? slotOrder.indexOf(flex) : base.length - 1;
   base[idx] = { name: base[idx].name, status: "removed" };
-  base.push({ name: swapItem, status: "added" });
+  // Insert where the swap actually happens rather than appending. Since the
+  // ledger reads row position as purchase order, a swap for slot 2 pushed to
+  // the end would claim it's bought last — and its cumulative gold with it.
+  // Identical to appending in the common case, where the removed slot is last.
+  base.splice(idx + 1, 0, { name: swapItem, status: "added" });
   return base;
 }

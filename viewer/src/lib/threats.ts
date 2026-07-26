@@ -29,8 +29,37 @@ export function deriveThreats(
     crit: enemies.filter((g) => hasSpec(g, CRIT)).length,
     tanks: enemies.filter((g) => hasSpec(g, TANK)).length,
     enemyCount: enemies.length,
+    // The slot count for this mode, not how many are filled in — see the note
+    // on ThreatModel.rosterSize.
+    rosterSize: comp.enemies.length,
     allyCovers,
-    allyAllPhysical: allies.length > 0 && allies.every((g) => g.damage_type === "physical"),
+    // Two known allies minimum: "every ally is physical" is technically true
+    // of a lone entered god, but it isn't a team composition, and treating it
+    // as one had the board reporting moved items before any enemy existed.
+    allyAllPhysical: allies.length >= 2 && allies.every((g) => g.damage_type === "physical"),
+    allyCount: allies.length,
+    allyPhysical: allies.filter((g) => g.damage_type === "physical").length,
+  };
+}
+
+export type ThreatKey = "magical" | "physical" | "healers" | "lockdown" | "crit" | "tanks";
+
+/** Which enemies actually triggered each threat. A chip reading "2/5 healers"
+ * says nothing actionable; "healers 2/5 · Aphrodite, Hel" names the reason the
+ * build changed. */
+export function threatCulprits(
+  comp: DraftComp,
+  godsByName: Record<string, God>,
+): Record<ThreatKey, string[]> {
+  const enemies = comp.enemies.map((n) => godsByName[n]).filter(Boolean);
+  const named = (pred: (g: God) => boolean) => enemies.filter(pred).map((g) => g.name);
+  return {
+    magical: named((g) => g.damage_type === "magical"),
+    physical: named((g) => g.damage_type === "physical"),
+    healers: named((g) => hasSpec(g, HEAL)),
+    lockdown: named((g) => hasSpec(g, LOCK)),
+    crit: named((g) => hasSpec(g, CRIT)),
+    tanks: named((g) => hasSpec(g, TANK)),
   };
 }
 
@@ -44,10 +73,14 @@ export function threatOverlay(t: ThreatModel, cfg: DraftConfig) {
     magical: t.magical, physical: t.physical,
   };
 
-  // Share of the enemy team, not raw count — 2 of 3 (Joust) is a bigger
-  // threat than 2 of 5 (Conquest). Guarded against div-by-zero: an empty (or
-  // pathological) comp yields a zero share rather than NaN/Infinity.
-  const share = t.enemyCount > 0 ? (n: number) => n / t.enemyCount : () => 0;
+  // Share of the enemy *roster*, not of the enemies entered so far — 2 of 3
+  // (Joust) is a bigger threat than 2 of 5 (Conquest), and 1 known healer out
+  // of 5 slots is a 20% signal, not a 100% one. Dividing by the entered count
+  // made a one-enemy draft drive a maximal overlay, then grow *calmer* as more
+  // enemies were added, which reads as the model flip-flopping. Guarded
+  // against div-by-zero.
+  const denom = t.rosterSize > 0 ? t.rosterSize : t.enemyCount;
+  const share = denom > 0 ? (n: number) => n / denom : () => 0;
 
   for (const [threat, map] of Object.entries(cfg.tag_bonus ?? {})) {
     const n = counts[threat] ?? 0;
@@ -66,8 +99,12 @@ export function threatOverlay(t: ThreatModel, cfg: DraftConfig) {
       stats[stat] = (stats[stat] ?? 0) + share(n) * cfg.per_share * w;
     }
   }
-  if (t.allyAllPhysical) {
-    stats["Penetration"] = (stats["Penetration"] ?? 0) + cfg.per_share;
+  // An all-physical team wants penetration — but scaled by how much of the
+  // team we can actually see. Applied flat, this fired the moment a single
+  // physical god filled the "you" slot, so a board with no enemies at all
+  // reported four items "moved by your draft".
+  if (t.allyAllPhysical && t.allyCount > 0) {
+    stats["Penetration"] = (stats["Penetration"] ?? 0) + share(t.allyCount) * cfg.per_share;
   }
   return { tags, stats };
 }

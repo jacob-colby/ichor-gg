@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "title": "Design System: ichor",
+  "extensions": {
+    "colorMeta": {
+      "torchlight-gold": { "role": "primary", "displayName": "Torchlight Gold", "canonical": "#e3b23c", "tonalRamp": ["#f7eacb", "#eccb7c", "#dcac3a", "#b28b2f", "#886a24", "#614c1a", "#413311", "#271e0a"] },
+      "focus-blue": { "role": "secondary", "displayName": "Focus Blue", "canonical": "#4ea3ff", "tonalRamp": ["#ddedff", "#abd3ff", "#78b9ff", "#4a9af2", "#3876b8", "#285484", "#1b3858", "#102235"] },
+      "under": { "role": "semantic-positive", "displayName": "Under (Underrated)", "canonical": "#63c088", "tonalRamp": ["#def2e6", "#addec1", "#7cca9b", "#58ab79", "#43825c", "#305d42", "#203e2c", "#13251a"] },
+      "premium": { "role": "semantic-negative", "displayName": "Premium (Overrated)", "canonical": "#c58b8b", "tonalRamp": ["#f3e7e7", "#e1c3c3", "#cf9f9f", "#b17d7d", "#875f5f", "#604444", "#402d2d", "#271b1b"] },
+      "role-guardian": { "role": "lane-accent", "displayName": "Guardian", "canonical": "#7f9e97", "tonalRamp": ["#e7edeb", "#c2d1cd", "#9db5b0", "#78968f", "#5c726d", "#42524e", "#2c3634", "#1a211f"] },
+      "role-warrior": { "role": "lane-accent", "displayName": "Warrior", "canonical": "#b98a6d", "tonalRamp": ["#f2e9e3", "#ddc7b9", "#c9a58f", "#ae8267", "#85634e", "#5f4738", "#3f2f25", "#261c16"] },
+      "role-mid": { "role": "lane-accent", "displayName": "Mid", "canonical": "#9d8bb3", "tonalRamp": ["#ece9f0", "#d0c7da", "#b4a6c5", "#9483a9", "#716481", "#51475c", "#36303d", "#201d25"] },
+      "role-hunter": { "role": "lane-accent", "displayName": "Hunter", "canonical": "#b6a571", "tonalRamp": ["#efebdf", "#d6ccaf", "#bdae7f", "#9b8d61", "#776c4a", "#554d35", "#393323", "#221f15"] },
+      "role-assassin": { "role": "lane-accent", "displayName": "Assassin", "canonical": "#ab7a8c", "tonalRamp": ["#f0e8eb", "#dac5cd", "#c4a2ae", "#ac7c8e", "#845e6c", "#5e434d", "#3f2d33", "#261b1f"] },
+      "dmg-magical": { "role": "damage-type-accent", "displayName": "Magical Damage", "canonical": "#8891b3" },
+      "rail": { "role": "neutral-frame", "displayName": "Rail", "canonical": "#05070a" },
+      "bg0": { "role": "neutral-bg", "displayName": "Base", "canonical": "#0b0e13" },
+      "bg1": { "role": "neutral-bg", "displayName": "Panel", "canonical": "#0e1116" },
+      "bg2": { "role": "neutral-bg", "displayName": "Card Rest", "canonical": "#12161d" },
+      "bg3": { "role": "neutral-bg", "displayName": "Card Elevated", "canonical": "#171c24" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display (Rajdhani)", "purpose": "God names, dialog headings — condensed geometric caps for a console-display feel." },
+      "body": { "displayName": "Body (Inter)", "purpose": "Descriptions, list content, tooltip copy." },
+      "label": { "displayName": "Label (JetBrains Mono)", "purpose": "Section eyebrows, counts, status tags — small, uppercase, tracked." }
+    },
+    "shadows": [
+      { "name": "card", "value": "0 6px 16px rgba(0,0,0,0.35)", "purpose": "Floating surfaces resting just above the page (tooltips, popovers)." },
+      { "name": "raised", "value": "0 10px 28px rgba(0,0,0,0.45)", "purpose": "Modals and dialogs sitting fully above the page." },
+      { "name": "glow", "value": "0 0 0 1px rgba(227,178,60,0.4), 0 4px 14px rgba(227,178,60,0.15)", "purpose": "Selected-state halo on a god card; the one place shadow doubles as the accent color." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.2, 0.8, 0.2, 1)", "purpose": "Default easing for state transitions." },
+      { "name": "press", "value": "transform 120ms; scale(0.97) on :active", "purpose": "Tactile press feedback on tappable cards/pills/tabs; disabled under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single confirming action per view (e.g. a dialog's \"Got it\").",
+      "html": "<button class=\"ds-btn-primary\">Got it</button>",
+      "css": ".ds-btn-primary { background: #e3b23c; color: #0b0e13; padding: 6px 16px; border-radius: 10px; border: none; font-weight: 500; font-size: 14px; transition: transform 120ms cubic-bezier(0.2,0.8,0.2,1); } .ds-btn-primary:hover { filter: brightness(1.05); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid #4ea3ff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Filter Chip (active)",
+      "kind": "chip",
+      "refersTo": "chip-active",
+      "description": "Selected pill filter (e.g. active lane filter).",
+      "html": "<button class=\"ds-chip-active\">Jungle</button>",
+      "css": ".ds-chip-active { background: #e3b23c; color: #0b0e13; font-weight: 600; font-size: 11px; padding: 4px 10px; border-radius: 9999px; border: none; transition: transform 120ms cubic-bezier(0.2,0.8,0.2,1); } .ds-chip-active:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "Filter Chip (inactive)",
+      "kind": "chip",
+      "refersTo": "chip-inactive",
+      "description": "Unselected pill filter.",
+      "html": "<button class=\"ds-chip-inactive\">Support</button>",
+      "css": ".ds-chip-inactive { background: transparent; color: #8b95a5; font-size: 11px; padding: 4px 10px; border-radius: 9999px; border: 1px solid #1e2530; transition: transform 120ms cubic-bezier(0.2,0.8,0.2,1); } .ds-chip-inactive:hover { color: #c3cad6; } .ds-chip-inactive:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "God Card (selected)",
+      "kind": "card",
+      "refersTo": "card-selected",
+      "description": "The elevated, gold-bordered selection state for a god card.",
+      "html": "<div class=\"ds-card-selected\"><div class=\"ds-card-name\">Athena</div></div>",
+      "css": ".ds-card-selected { background: #171c24; border: 1px solid #e3b23c; border-radius: 14px; padding: 6px; box-shadow: 0 0 0 1px rgba(227,178,60,0.4), 0 4px 14px rgba(227,178,60,0.15); display: flex; flex-direction: column; align-items: center; gap: 4px; } .ds-card-name { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 10.5px; color: #e8edf4; }"
+    },
+    {
+      "name": "God Card (rest)",
+      "kind": "card",
+      "refersTo": "card-default",
+      "description": "The default, unselected god-card state.",
+      "html": "<div class=\"ds-card-rest\"><div class=\"ds-card-name\">Anubis</div></div>",
+      "css": ".ds-card-rest { background: #12161d; border: 1px solid #1e2530; border-radius: 14px; padding: 6px; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: border-color 180ms cubic-bezier(0.2,0.8,0.2,1), transform 120ms; } .ds-card-rest:hover { border-color: #2a3342; } .ds-card-rest:active { transform: scale(0.97); } .ds-card-name { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 10.5px; color: #e8edf4; }"
+    },
+    {
+      "name": "Search Input",
+      "kind": "input",
+      "description": "The god/item search field — focus is communicated by border color alone.",
+      "html": "<input class=\"ds-input\" placeholder=\"Search gods…\" />",
+      "css": ".ds-input { width: 100%; background: transparent; color: #e8edf4; font-size: 12px; border: none; outline: none; } .ds-input::placeholder { color: #8b95a5; } .ds-input-wrap { display: flex; align-items: center; gap: 8px; border-radius: 10px; border: 1px solid #1e2530; background: #12161d; padding: 8px 12px; } .ds-input-wrap:focus-within { border-color: #4ea3ff; }"
+    },
+    {
+      "name": "Tooltip",
+      "kind": "custom",
+      "description": "Hover/focus tooltip content surface.",
+      "html": "<div class=\"ds-tooltip\" role=\"tooltip\">Efficiency: undervalued by 240g</div>",
+      "css": ".ds-tooltip { border-radius: 10px; border: 1px solid #1e2530; background: #12161d; color: #c3cad6; font-size: 12px; padding: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.35); max-width: 260px; }"
+    },
+    {
+      "name": "Label / Eyebrow",
+      "kind": "custom",
+      "description": "The mono, uppercase, tracked label used for section headers and status tags (e.g. \"Pinned\").",
+      "html": "<span class=\"ds-label\">Pinned</span>",
+      "css": ".ds-label { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #e3b23c; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Arena Night",
+    "overview": "ichor reads like a battlefield after dark: a near-black field (rail / bg0) with one warm accent — torchlight gold — marking whatever matters right now, and role-tinted banners (guardian, warrior, mid, hunter, assassin) identifying the different lanes at a glance. Nothing about the surface competes with the data; the theme exists to make the model's output legible, not to decorate the app.\n\nThe philosophy is tactical and data-dense: small, precise labels; a lot of information per element (stats, signals, icons) held together by strict alignment; and a confident, instrumented feel closer to a mission console than a game skin. It deliberately avoids the cutesy rounded gradients and RGB-lightshow look common to \"gamer\" UI — that is the confirmed visual anti-reference. Gold is rare and load-bearing, not a brand color splashed everywhere.",
+    "keyCharacteristics": [
+      "Near-black surfaces stepped in four tiers (rail → bg0 → bg2 → bg3), each one step \"closer\" or more elevated.",
+      "One accent (torchlight gold) reserved for selection, primary action, and the model's own signal.",
+      "Role/lane colors are semantic, not decorative — they always mean \"this is a Solo/Jungle/Mid/Carry/Support thing.\"",
+      "Dense, mono-labeled data sits next to display headings and Inter body text without ever feeling cluttered.",
+      "Flat at rest; lift (shadow, glow) appears only when something is selected, active, or floating above the page."
+    ],
+    "rules": [
+      { "name": "The Torchlight Rule", "body": "Gold is load-bearing, not decorative: it appears only on the current selection, the primary action, or the model's own signal. If a design use of gold isn't one of those three, it's wrong.", "section": "colors" },
+      { "name": "The Semantic Color Rule", "body": "Role and damage colors always carry meaning (a specific lane or damage type); never repurpose them as arbitrary decoration elsewhere in the UI.", "section": "colors" },
+      { "name": "The Mono-Label Rule", "body": "Any piece of UI that names a category, state, or count rather than describing content sets in JetBrains Mono, uppercase, tracked — never Inter.", "section": "typography" },
+      { "name": "The Flat-Until-It-Matters Rule", "body": "Surfaces are flat at rest. Shadow only appears for a floating layer (tooltip, modal) or a selected state (glow) — never as ambient decoration on a resting card.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do reserve torchlight gold for selection, primary action, or the model's own signal (score/efficiency) — see the Torchlight Rule.",
+      "Do set any label, tag, or count in JetBrains Mono, uppercase and tracked, per the Mono-Label Rule.",
+      "Do keep loading states as layout-shaped skeletons (pulsing bg-bg2 bars), never a spinner or centered \"Loading…\".",
+      "Do use the shared .press scale-down for every tappable element, and respect prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't add shadow to a resting surface for decoration — shadow means \"floating\" (tooltip/modal) or \"selected\" (glow), per the Flat-Until-It-Matters Rule.",
+      "Don't repurpose a role/lane or damage-type color for anything other than that specific lane or damage type.",
+      "Don't introduce rounded gradients, neon glows, or angular esports-style slashes — the confirmed anti-reference for this system.",
+      "Don't add a second accent hue alongside torchlight gold; secondary interactive state is focus-blue's job, not a new color."
+    ]
+  }
+}

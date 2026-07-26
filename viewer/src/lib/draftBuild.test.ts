@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { adaptedCore } from "./draftBuild";
+import { adaptedCore, diffCore } from "./draftBuild";
 import type { Item } from "../types";
 
 const item = (name: string, stats: Record<string, string> = {}, tags: string[] = []): Item =>
@@ -64,5 +64,61 @@ describe("determinism", () => {
     const r = adaptedCore(tiedBase, tiedByName, { tags: {}, stats: {} },
       { maxBonus: 0.12, n: 3 });
     expect(r.core).toEqual(["Ana", "Mno", "Zed"]);
+  });
+});
+
+describe("diffCore", () => {
+  const core = (names: string[], bonuses: Record<string, number> = {}, reasons: Record<string, string> = {}) =>
+    ({ core: names, bonuses, reasons });
+
+  it("pairs each arrival with the departure it displaced", () => {
+    const d = diffCore(
+      core(["A", "B", "C"]),
+      core(["A", "X", "C"], { X: 0.07 }, { X: "anti-heal" }),
+    );
+    expect(d.changes).toEqual([{ added: "X", removed: "B", bonus: 0.07, reason: "anti-heal" }]);
+    expect(d.unchanged).toEqual(["A", "C"]);
+    expect(d.droppedOnly).toEqual([]);
+  });
+
+  it("carries the bonus that moved each item — the number the page used to discard", () => {
+    const d = diffCore(core(["A", "B"]), core(["X", "Y"], { X: 0.12, Y: 0.03 }));
+    expect(d.changes.map((c) => c.bonus)).toEqual([0.12, 0.03]);
+  });
+
+  it("reports no changes when the draft moved nothing", () => {
+    const d = diffCore(core(["A", "B", "C"]), core(["A", "B", "C"]));
+    expect(d.changes).toEqual([]);
+    expect(d.unchanged).toEqual(["A", "B", "C"]);
+  });
+
+  it("treats a pure reorder as unchanged — the same six items are the same build", () => {
+    const d = diffCore(core(["A", "B", "C"]), core(["C", "A", "B"]));
+    expect(d.changes).toEqual([]);
+    expect(d.unchanged).toEqual(["C", "A", "B"]);
+  });
+
+  it("pairs multiple swaps by rank within each list", () => {
+    const d = diffCore(core(["A", "B", "C"]), core(["X", "Y", "C"], { X: 0.1, Y: 0.05 }));
+    expect(d.changes).toEqual([
+      { added: "X", removed: "A", bonus: 0.1, reason: undefined },
+      { added: "Y", removed: "B", bonus: 0.05, reason: undefined },
+    ]);
+  });
+
+  it("records a departure with no matching arrival rather than dropping it silently", () => {
+    const d = diffCore(core(["A", "B", "C"]), core(["X", "C"], { X: 0.1 }));
+    expect(d.changes).toEqual([{ added: "X", removed: "A", bonus: 0.1, reason: undefined }]);
+    expect(d.droppedOnly).toEqual(["B"]);
+  });
+
+  it("defaults a missing bonus to zero rather than undefined", () => {
+    const d = diffCore(core(["A"]), core(["X"]));
+    expect(d.changes[0].bonus).toBe(0);
+  });
+
+  it("handles empty builds", () => {
+    const d = diffCore(core([]), core([]));
+    expect(d).toEqual({ changes: [], unchanged: [], droppedOnly: [] });
   });
 });

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, within } from "@testing-library/react";
 import { DraftPage } from "./DraftPage";
 import type { DraftConfig, God, Item } from "../types";
 
@@ -63,7 +63,7 @@ describe("DraftPage", () => {
 
   it("shows a teaching empty state and renders no build while the you-slot is empty", () => {
     render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
-    expect(screen.getByText(/your standalone draft board/i)).toBeInTheDocument();
+    expect(screen.getByText(/put your god in the gold slot/i)).toBeInTheDocument();
     expect(screen.queryByText("AntiHeal")).not.toBeInTheDocument();
     expect(screen.queryByText(/adapted core/i)).not.toBeInTheDocument();
   });
@@ -72,7 +72,8 @@ describe("DraftPage", () => {
     render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
-    expect(screen.getByText(/adapted core/i)).toBeInTheDocument();
+    // With no enemies entered nothing has adapted, so the list says so.
+    expect(screen.getByText(/the default core/i)).toBeInTheDocument();
     expect(screen.getAllByText(/^(Alpha|Beta|Gamma|Delta|Epsilon|Zeta|AntiHeal)$/)).toHaveLength(6);
   });
 
@@ -82,16 +83,99 @@ describe("DraftPage", () => {
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
     fireEvent.click(screen.getByText("EnemyHealer"));
-    expect(screen.getByText("AntiHeal")).toBeInTheDocument();
+    // Appears twice by design: once as a displacement in "What changed", once
+    // in the adapted core itself.
+    expect(screen.getAllByText("AntiHeal").length).toBeGreaterThan(0);
+    expect(within(screen.getByTestId("draft-core")).getAllByText("AntiHeal").length).toBe(2);
   });
 
-  it("shows threat chips expressed as a share of the entered enemies", () => {
+  it("names what a promoted item displaced, and by how much", () => {
     render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
     fireEvent.click(screen.getByText("EnemyHealer"));
-    fireEvent.click(screen.getByLabelText("Add enemy 2"));
-    fireEvent.click(screen.getByText("Buddy"));
-    expect(screen.getByText(/1\/2 healers?/)).toBeInTheDocument();
+    const core = within(screen.getByTestId("draft-core"));
+    // The displaced item and the magnitude both used to be computed and
+    // thrown away, leaving "swap in" with nothing to swap in for.
+    // Hedged: the pairing is by rank, not a swap the assembler made.
+    expect(core.getByText(/in place of/i)).toBeInTheDocument();
+    expect(core.getByText("Zeta")).toBeInTheDocument();
+    expect(core.getByText(/^\+0\.\d\d$/)).toBeInTheDocument();
+    expect(core.getByText(/answers anti-heal/i)).toBeInTheDocument();
+  });
+
+  it("states plainly when the draft has not moved the build", () => {
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/hasn.t moved this build yet/i);
+    expect(within(screen.getByTestId("draft-core")).getByText(/add an enemy and the model starts re-ranking/i)).toBeInTheDocument();
+  });
+
+  it("leads with the number of items the draft moved", () => {
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/moved\s*1 of 6\s*items/i);
+  });
+
+  it("denominates threats by the enemy roster, not by how many are entered", () => {
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    const threats = within(screen.getByTestId("draft-threats"));
+    // One healer of a five-slot roster is 1/5 — reading it as 1/1 let a
+    // barely-started draft drive a maximal overlay.
+    expect(threats.getAllByText("1/5").length).toBeGreaterThan(0);
+    expect(threats.getByText("healing").previousElementSibling).toHaveTextContent("1/5");
+    expect(threats.getByText(/1 of 5 enemies known/i)).toBeInTheDocument();
+  });
+
+  it("renders threats that measured zero, once anything has been scouted", () => {
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    const threats = within(screen.getByTestId("draft-threats"));
+    // A measured "0 of 5 crit" is a finding, so it is shown.
+    expect(threats.getByText("crit")).toBeInTheDocument();
+    expect(threats.getAllByText("0/5").length).toBeGreaterThan(0);
+  });
+
+  it("does not print measured zeros before anything has been scouted", () => {
+    // The opposite error to the one this redesign fixed: with no enemies in,
+    // "0/5 crit" is unmeasured, not measured.
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    const threats = within(screen.getByTestId("draft-threats"));
+    expect(threats.queryByText("0/5")).not.toBeInTheDocument();
+    expect(threats.getByText(/nothing scouted yet/i)).toBeInTheDocument();
+  });
+
+  it("does not claim the draft moved anything when only the you-slot is filled", () => {
+    // A physical god alone used to trigger the all-physical penetration bonus
+    // at full strength, so the page reported "moved 4 of 6 items" directly
+    // above copy saying nothing had adapted yet.
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/hasn.t moved this build yet/i);
+  });
+
+  it("names the enemies behind a threat", () => {
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    expect(within(screen.getByTestId("draft-threats")).getAllByText("EnemyHealer").length).toBeGreaterThan(0);
   });
 
   it("mode toggle switches Conquest(5v5) to Joust(3v3) and truncates rather than clears", () => {
@@ -112,7 +196,8 @@ describe("DraftPage", () => {
     Object.assign(navigator, { clipboard: { writeText } });
     render(<DraftPage gods={GODS} items={[]} builds={[]} />);
     fireEvent.click(screen.getByRole("button", { name: /copy link/i }));
-    expect(writeText).toHaveBeenCalledWith(window.location.href);
+    // Encoded from state, not read off the address bar — the two can disagree.
+    expect(writeText).toHaveBeenCalledWith(expect.stringContaining("#/draft"));
   });
 
   it("keeps the shareable URL in sync (via replaceState) as the draft is entered", () => {
@@ -158,12 +243,11 @@ describe("DraftPage", () => {
     expect(screen.getAllByText("You")).toHaveLength(5);
   });
 
-  it("lays out Allies and Enemies as a horizontally-centered pair, stacked below the md breakpoint", () => {
+  it("stacks Allies and Enemies until there is room for them side by side", () => {
     render(<DraftPage gods={GODS} items={[]} builds={[]} />);
     const teams = screen.getByTestId("draft-teams");
     expect(teams.className).toMatch(/flex-col/);
-    expect(teams.className).toMatch(/md:flex-row/);
-    expect(teams.className).toMatch(/md:justify-center/);
+    expect(teams.className).toMatch(/lg:flex-row/);
   });
 
   it("removes a filled ally slot via its X control without opening the god picker", () => {
@@ -198,12 +282,10 @@ describe("DraftPage", () => {
     expect(screen.queryByLabelText(/^Remove /)).not.toBeInTheDocument();
   });
 
-  it("shows the adapted core's item cost in the gold token", () => {
+  it("keeps gold off item cost — it is neither selection, primary action, nor the model's signal", () => {
     render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
-    const costs = screen.getAllByText("2500g");
-    expect(costs.length).toBeGreaterThan(0);
-    costs.forEach((c) => expect(c).toHaveClass("text-gold"));
+    screen.getAllByText("2500g").forEach((c) => expect(c).not.toHaveClass("text-gold"));
   });
 });

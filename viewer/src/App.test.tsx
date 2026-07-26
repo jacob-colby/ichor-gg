@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import App from "./App";
+import { toHash } from "./lib/useHashRoute";
 
 const data = {
   gods: [
@@ -21,7 +22,6 @@ const data = {
 beforeEach(() => {
   window.location.hash = "";
   localStorage.clear();
-  localStorage.setItem("smite:legend-seen", "1"); // suppress first-run legend by default
   vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: true, json: () => Promise.resolve(data) }));
 });
 
@@ -103,13 +103,29 @@ describe("App routing", () => {
 
   it("shows a layout-shaped skeleton (not a bare Loading… string) before data arrives", () => {
     render(<App />);
-    expect(screen.getByTestId("app-skeleton")).toBeInTheDocument();
+    // The default route is home, so the placeholder is shaped like home rather
+    // than like the sidebar/build shell.
+    expect(screen.getByTestId("home-skeleton")).toBeInTheDocument();
     expect(screen.queryByText(/^Loading…$/)).not.toBeInTheDocument();
   });
 
-  it("shows the legend on first run", async () => {
-    localStorage.removeItem("smite:legend-seen");
+  it("uses the build-shell skeleton on a build route", () => {
+    window.location.hash = toHash.builds();
     render(<App />);
-    await waitFor(() => expect(screen.getByText(/how this works/i)).toBeInTheDocument());
+    expect(screen.getByTestId("app-skeleton")).toBeInTheDocument();
+  });
+
+  it("does not ambush a first-time visitor with the legend", async () => {
+    localStorage.clear();
+    render(<App />);
+    await screen.findByTestId("header-freshness");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("opens the legend on demand from the help control", async () => {
+    render(<App />);
+    await screen.findByTestId("header-freshness");
+    fireEvent.click(screen.getAllByRole("button", { name: /help/i })[0]);
+    await waitFor(() => expect(screen.getByRole("dialog")).toHaveAccessibleName(/how this works/i));
   });
 });

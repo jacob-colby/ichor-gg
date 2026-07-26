@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { DraftComp } from "../types";
 
 export type DraftMode = "conquest" | "joust";
@@ -134,10 +134,55 @@ export function useDraft(options: UseDraftOptions = {}) {
     window.history.replaceState(null, "", window.location.pathname + window.location.search + hash);
   }, [syncUrl, state]);
 
+  /** Slots dropped by a shrinking mode switch, kept so switching back restores
+   * them. Conquest→Joust→Conquest used to be silently lossy. */
+  const overflow = useRef<{ allies: string[]; enemies: string[] }>({ allies: [], enemies: [] });
+
+  // Someone opening a shared draft link while the app is already loaded gets a
+  // `hashchange`, not a remount — without this the board silently kept showing
+  // the old draft (wrong mode and all) while the address bar showed the new
+  // one, and Copy link would then copy a draft that wasn't on screen.
+  useEffect(() => {
+    if (!syncUrl || typeof window === "undefined") return;
+    const onHashChange = () => {
+      const incoming = decodeDraftHash(window.location.hash, isKnownGod);
+      if (!incoming) return;
+      setState((prev) => {
+        const same = prev.mode === incoming.mode
+          && prev.allies.join() === incoming.allies.join()
+          && prev.enemies.join() === incoming.enemies.join();
+        // Bail on an identical decode so our own replaceState can't loop.
+        if (same) return prev;
+        // A draft arriving from a link brings no truncation history with it.
+        overflow.current = { allies: [], enemies: [] };
+        return incoming;
+      });
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, [syncUrl, isKnownGod]);
+
   const setMode = useCallback((mode: DraftMode) => {
     setState((prev) => {
       const n = MODE_TEAM_SIZE[mode];
-      return { mode, allies: resize(prev.allies, n), enemies: resize(prev.enemies, n) };
+      if (n < prev.allies.length) {
+        overflow.current = {
+          allies: prev.allies.slice(n),
+          enemies: prev.enemies.slice(n),
+        };
+        return { mode, allies: resize(prev.allies, n), enemies: resize(prev.enemies, n) };
+      }
+      // Growing back: refill the tail from whatever the last shrink stashed.
+      const restore = (cur: string[], stashed: string[]) => {
+        const out = resize(cur, n);
+        for (let i = cur.length; i < n; i += 1) out[i] = stashed[i - cur.length] ?? "";
+        return out;
+      };
+      return {
+        mode,
+        allies: restore(prev.allies, overflow.current.allies),
+        enemies: restore(prev.enemies, overflow.current.enemies),
+      };
     });
   }, []);
 
@@ -158,6 +203,9 @@ export function useDraft(options: UseDraftOptions = {}) {
   }, []);
 
   const clear = useCallback(() => {
+    // Drop the stash too, or a later mode round-trip resurrects gods into a
+    // board the visitor explicitly emptied.
+    overflow.current = { allies: [], enemies: [] };
     setState((prev) => emptyDraft(prev.mode));
   }, []);
 

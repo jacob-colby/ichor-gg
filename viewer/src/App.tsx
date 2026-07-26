@@ -11,7 +11,7 @@ import { GodInfo } from "./components/GodInfo";
 import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
 import { PatchNotes } from "./components/PatchNotes";
-import { AppSkeleton } from "./components/Skeleton";
+import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
 import { relativeDate } from "./lib/relativeDate";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
 import { documentTitle } from "./lib/documentTitle";
@@ -54,13 +54,10 @@ function App() {
     document.title = documentTitle(route);
   }, [route]);
 
-  useEffect(() => {
-    if (!localStorage.getItem("smite:legend-seen")) setLegendOpen(true);
-  }, []);
-  const closeLegend = () => {
-    localStorage.setItem("smite:legend-seen", "1");
-    setLegendOpen(false);
-  };
+  // The Legend used to open itself on first load, so a first-time visitor met
+  // 700 characters of body copy about a screen they weren't on before seeing
+  // anything. Home explains itself in place now; this stays on demand.
+  const closeLegend = () => setLegendOpen(false);
 
   const godsApi = async (action: "add" | "remove", name: string) => {
     setScraping(true);
@@ -82,8 +79,20 @@ function App() {
 
   if (error) {
     return (
-      <div className="flex h-screen items-center justify-center bg-bg0 text-premium">
-        {error} — <button onClick={reload} className="ml-2 underline">retry</button>
+      <div className="flex h-screen flex-col items-center justify-center gap-4 bg-bg0 px-6 text-center text-ink">
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold font-display text-base font-bold text-bg0">S2</div>
+        <div className="max-w-[46ch]">
+          <h1 className="font-display text-2xl font-bold text-ink">Couldn&rsquo;t load the build data</h1>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            ichor reads everything from a single data file, and that file didn&rsquo;t come back.
+            It&rsquo;s usually a refresh away — if it keeps failing, the site is probably mid-deploy.
+          </p>
+        </div>
+        <button type="button" onClick={reload} className="press rounded-md bg-gold px-4 py-1.5 text-sm font-medium text-bg0">
+          Try again
+        </button>
+        {/* The technical detail stays available without leading with it. */}
+        <p className="font-mono text-[10.5px] text-faint">{error}</p>
       </div>
     );
   }
@@ -103,8 +112,12 @@ function App() {
               <button type="button" onClick={reload} className="press rounded-md bg-bg2 px-3 py-1.5 text-xs text-muted hover:text-ink">Reload</button>
             </div>
           </header>
+          {/* Shaped like the route that's actually coming, so nothing jumps
+              when index.json lands. */}
           <div className="flex min-h-0 flex-1 overflow-hidden">
-            <AppSkeleton />
+            {route.view === "home"
+              ? <div className="flex-1 overflow-y-auto"><HomeSkeleton /></div>
+              : <AppSkeleton />}
           </div>
         </div>
       </div>
@@ -139,6 +152,14 @@ function App() {
 
   return (
     <div className="flex h-screen bg-bg0 text-ink">
+      {/* First focusable on the page — the icon rail is seven stops deep. */}
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-gold focus:px-3 focus:py-2 focus:font-display focus:text-sm focus:font-semibold focus:text-bg0"
+      >
+        Skip to content
+      </a>
+
       {/* Desktop icon rail */}
       <nav className="hidden w-16 shrink-0 flex-col items-center gap-3.5 border-r border-line bg-rail py-3.5 md:flex">
         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold font-display text-[15px] font-bold text-bg0">S2</div>
@@ -190,7 +211,7 @@ function App() {
         )}
 
         {/* Content */}
-        <div className="flex min-h-0 flex-1 overflow-hidden">
+        <main id="main" tabIndex={-1} className="flex min-h-0 flex-1 overflow-hidden focus:outline-none">
           {route.view === "home" ? (
             <div className="flex-1 overflow-y-auto"><Home data={data} /></div>
           ) : route.view === "draft" ? (
@@ -220,9 +241,9 @@ function App() {
               <div className="min-w-0 flex-1 overflow-y-auto p-4">
                 {god ? (
                   <>
-                    <div className="mb-4 flex w-fit gap-1.5">
-                      <button type="button" onClick={() => navigate(toHash.god(god.name))} className={tabBtn(route.tab === "builds")}>Builds</button>
-                      <button type="button" onClick={() => navigate(toHash.godInfo(god.name))} className={tabBtn(route.tab === "info")}>Info</button>
+                    <div role="group" aria-label="God detail section" className="mb-4 flex w-fit gap-1.5">
+                      <button type="button" aria-pressed={route.tab === "builds"} onClick={() => navigate(toHash.god(god.name))} className={tabBtn(route.tab === "builds")}>Builds</button>
+                      <button type="button" aria-pressed={route.tab === "info"} onClick={() => navigate(toHash.godInfo(god.name))} className={tabBtn(route.tab === "info")}>Info</button>
                     </div>
                     {route.tab === "info" ? (
                       <GodInfo god={god} />
@@ -235,6 +256,14 @@ function App() {
                         mode={mode}
                         onModeChange={setMode}
                         starters={data.starters ?? []}
+                        // Per-mode slice, never the Conquest-mirroring top
+                        // level: Joust has no community ratings at all, so
+                        // reading `tierlist.gods` there would assert a
+                        // community score that doesn't exist for that mode.
+                        tierEntry={(
+                          (mode === "Joust" ? data.tierlist?.joust : data.tierlist?.conquest)
+                          ?? data.tierlist
+                        )?.gods.find((g) => g.name === god.name)}
                       />
                     )}
                   </>
@@ -244,7 +273,7 @@ function App() {
               </div>
             </div>
           )}
-        </div>
+        </main>
 
         <Footer />
 
