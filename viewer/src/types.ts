@@ -17,6 +17,14 @@ export interface Aspect {
   kit_changes: string;
 }
 
+/** Emitted by pipeline/smite/abilities.py (Task P1) — a derived, not scraped,
+ * 20-level upgrade order. Absent for stance gods with no levelable abilities
+ * (Artio, Merlin, Ullr) — the UI must hide the section, not placeholder it. */
+export interface AbilityOrder {
+  order: string[];
+  summary: { max_order: string[]; ult_levels: number[] };
+}
+
 export interface God {
   type: string;
   name: string;
@@ -30,6 +38,7 @@ export interface God {
   aspects: Aspect[];
   source_url: string;
   last_verified: string;
+  ability_order?: AbilityOrder;
 }
 
 export interface Item {
@@ -63,6 +72,17 @@ export interface SituationalSwap {
   swap_item?: string | null;
 }
 
+/** Emitted by build_index (Task P2) on the community entry — every item this
+ * god's playerbase actually buys, deduped across slots (highest pick_rate
+ * wins) and sorted pick-rate descending. Distinct from slot_order, which is
+ * the ordered build; this is the "what do people buy" list. Absent/empty for
+ * gods with no community data. */
+export interface PopularItem {
+  name: string;
+  pick_rate: number;
+  win_rate: number;
+}
+
 export interface CommunityBuildEntry {
   source: "community";
   aspect: string | null;
@@ -72,6 +92,7 @@ export interface CommunityBuildEntry {
   source_url: string;
   last_verified?: string;
   starter?: { base: string; upgrade: string };
+  popular_items?: PopularItem[];
 }
 
 /** Per-item score breakdown stamped by the Python pipeline (2dp). win 0.5

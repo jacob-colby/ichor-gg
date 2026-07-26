@@ -3,7 +3,6 @@ import type { BuildEntry, BuildNote, CuratedBuildEntry, DraftConfig, God, Item, 
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
 import { tierLabel } from "../lib/itemFilters";
 import { godRoleTextClass, damageTextClass } from "../lib/roleAccent";
-import { Tooltip } from "./Tooltip";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
 import { getMine } from "../lib/mineStore";
 import { DraftBar } from "./DraftBar";
@@ -98,27 +97,14 @@ function WhyScoreBlock({ score }: { score: SlotScore }) {
   );
 }
 
-/** Plain item info (stats/passive/cost) — used for the mobile disclosure when
- * the row has no score data (e.g. community-source slots). */
-function ItemBasicInfo({ item, name }: { item?: Item; name: string }) {
-  if (!item) return <div className="font-display text-sm font-semibold text-ink">{name}</div>;
-  return (
-    <div>
-      <div className="mb-1 flex items-baseline justify-between gap-2">
-        <span className="font-display text-sm font-semibold text-ink">{item.name}</span>
-        <span className="shrink-0 font-mono text-[11px] text-faint">{item.cost}g · {tierLabel(item.tier)}</span>
-      </div>
-      {Object.entries(item.stats || {}).map(([k, v]) => (
-        <div key={k} className="flex justify-between text-xs text-muted">
-          <span>{k}</span><span className="font-mono text-ink">{v}</span>
-        </div>
-      ))}
-      {item.passive && <div className="mt-1 text-xs text-muted">{item.passive}</div>}
-    </div>
-  );
-}
-
-function ItemTooltipBody({ item, name, score }: { item?: Item; name: string; score?: SlotScore }) {
+/** Item identity + (when available) its WHY score breakdown, folded into one
+ * card — the regression fix for spec E. Previously this was split across a
+ * separate `<Tooltip>` on the starter row and a score-only panel on build-
+ * order rows, so slot rows never showed stats/passive/effect tags and two
+ * hover mechanisms competed for the same real estate. Now every consumer
+ * (desktop hover panel, mobile inline disclosure) renders through here:
+ * one hover/tap, one panel, full identity plus score bars when scored. */
+function ItemDetailCard({ item, name, score }: { item?: Item; name: string; score?: SlotScore }) {
   const scoreBlock = score && (
     <div className="mt-2 border-t border-line pt-2">
       <WhyScoreBlock score={score} />
@@ -134,16 +120,16 @@ function ItemTooltipBody({ item, name, score }: { item?: Item; name: string; sco
   }
   return (
     <div>
-      <div className="mb-1 flex items-baseline justify-between">
+      <div className="mb-1 flex items-baseline justify-between gap-2">
         <span className="font-display text-sm font-semibold text-ink">{item.name}</span>
-        <span className="font-mono text-muted">{item.cost}g · {tierLabel(item.tier)}</span>
+        <span className="shrink-0 font-mono text-[11px] text-faint">{item.cost}g · {tierLabel(item.tier)}</span>
       </div>
       {Object.entries(item.stats || {}).map(([k, v]) => (
-        <div key={k} className="flex justify-between text-muted">
+        <div key={k} className="flex justify-between text-xs text-muted">
           <span>{k}</span><span className="font-mono text-ink">{v}</span>
         </div>
       ))}
-      {item.passive && <div className="mt-1 text-muted">{item.passive}</div>}
+      {item.passive && <div className="mt-1 text-xs text-muted">{item.passive}</div>}
       {(item.effect_tags?.length || item.efficiency_tier) && (
         <div className="mt-2 flex flex-wrap gap-1">
           {item.efficiency_tier && (
@@ -160,6 +146,23 @@ function ItemTooltipBody({ item, name, score }: { item?: Item; name: string; sco
       {scoreBlock}
     </div>
   );
+}
+
+// Situational swaps (spec C): a swap only earns an order-shift note when its
+// cost differs meaningfully from the item it replaces — a few hundred gold
+// on a multi-thousand-gold item wouldn't actually move its purchase slot in
+// a real build order. 15% is "materially different" without flagging two
+// near-identical-cost components as a shift.
+const SWAP_ORDER_SHIFT_THRESHOLD = 0.15;
+
+/** null when the cost difference is inside the no-op band (spec C: "where
+ * nothing shifts, print nothing — no filler text"). */
+function swapOrderShiftNote(swapCost: number | undefined, replacedCost: number | undefined): string | null {
+  if (!swapCost || !replacedCost) return null;
+  const diff = (swapCost - replacedCost) / replacedCost;
+  if (diff <= -SWAP_ORDER_SHIFT_THRESHOLD) return "buy earlier";
+  if (diff >= SWAP_ORDER_SHIFT_THRESHOLD) return "buy later";
+  return null;
 }
 
 const segBtn = (active: boolean) =>
@@ -294,6 +297,18 @@ export function DetailPanel({
   const flexList = !community ? active.flex_slots : undefined;
   const preview = applySwap(baseNames, selectedSwap?.swap_item ?? null, flexList);
 
+  // Popular items (spec F): what this god's playerbase actually buys, as
+  // items rather than an ordered build — distinct from the community build
+  // tab above. Always read off the community entry for this mode (not
+  // whichever tab is active), and mark overlap against the suggested core
+  // specifically, matching "already in the suggested core" in the spec.
+  const communityEntry = note.builds.find(isCommunityEntry);
+  const popularItems = communityEntry?.popular_items ?? [];
+  const suggestedCore = note.builds.find(
+    (b) => b.source === "suggested" && (b as CuratedBuildEntry).archetype === "core" && !(b as CuratedBuildEntry).fun,
+  ) as CuratedBuildEntry | undefined;
+  const suggestedCoreNames = new Set(suggestedCore?.slot_order ?? []);
+
   if (editing) {
     const recStarter = entries
       .map((e) => (e as { starter?: { base: string; upgrade: string } }).starter)
@@ -325,7 +340,10 @@ export function DetailPanel({
   const whySlot = whyIndex !== null ? preview[whyIndex] : undefined;
   const whyScore = whySlot && !community ? (active as CuratedBuildEntry).slot_scores?.[whySlot.name] : undefined;
   const whyItemData = whySlot ? itemsByName.get(whySlot.name) : undefined;
-  const hasRightColumn = !!whyScore || (!!swaps && swaps.length > 0);
+  // Any hovered/focused row earns the panel now (spec E fold-in), not just
+  // scored ones — item identity (name/cost/stats/passive) is useful even
+  // for community-source rows that have no slot_scores.
+  const hasRightColumn = !!whySlot || (!!swaps && swaps.length > 0);
 
   return (
     <div>
@@ -464,22 +482,25 @@ export function DetailPanel({
             {[active.starter.base, active.starter.upgrade].map((name, i) => (
               <div key={name} className="flex items-center gap-2">
                 {i === 1 && <span className="text-muted">→</span>}
-                <Tooltip content={<ItemTooltipBody item={itemsByName.get(name)} name={name} />}>
-                  <div className="flex items-center gap-2 rounded-md px-1 py-0.5">
-                    <img
-                      src={`/icons/${iconSlug(name)}.png`}
-                      alt=""
-                      className="h-6 w-6 flex-none rounded-sm bg-bg2"
-                      onError={(e) => {
-                        const img = e.currentTarget;
-                        if (img.dataset.retried) { img.style.visibility = "hidden"; return; }
-                        img.dataset.retried = "1";
-                        img.src = `/icons/${iconSlug(name)}.png?r=${Date.now()}`;
-                      }}
-                    />
-                    <span className="text-sm text-ink">{name}</span>
-                  </div>
-                </Tooltip>
+                {/* No hover tooltip here (spec E) — starter items aren't part
+                    of the scored build order, and the fix for the hover
+                    regression is exactly one hover pattern for item info:
+                    the build-order rows' WHY card below. A second, competing
+                    mechanism on this row was the bug. */}
+                <div className="flex items-center gap-2 rounded-md px-1 py-0.5">
+                  <img
+                    src={`/icons/${iconSlug(name)}.png`}
+                    alt=""
+                    className="h-6 w-6 flex-none rounded-sm bg-bg2"
+                    onError={(e) => {
+                      const img = e.currentTarget;
+                      if (img.dataset.retried) { img.style.visibility = "hidden"; return; }
+                      img.dataset.retried = "1";
+                      img.src = `/icons/${iconSlug(name)}.png?r=${Date.now()}`;
+                    }}
+                  />
+                  <span className="text-sm text-ink">{name}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -604,7 +625,7 @@ export function DetailPanel({
                   </div>
                   {expanded && (
                     <div className="mb-1 ml-1 rounded-md border border-line bg-bg1 p-2.5 md:hidden">
-                      {rowScore ? <WhyScoreBlock score={rowScore} /> : <ItemBasicInfo item={item} name={slot.name} />}
+                      <ItemDetailCard item={item} name={slot.name} score={rowScore} />
                     </div>
                   )}
                 </div>
@@ -615,15 +636,9 @@ export function DetailPanel({
 
         {hasRightColumn && (
           <div className="flex flex-col gap-4 md:w-[260px] md:flex-none md:border-l md:border-line md:pl-6">
-            {whyScore && whySlot && (
+            {whySlot && (
               <div className="hidden rounded-md border border-line bg-bg2 p-3 md:block">
-                <div className="mb-2 flex items-baseline justify-between gap-2">
-                  <span className="truncate font-display text-sm font-semibold text-ink">{whySlot.name}</span>
-                  {whyItemData && (
-                    <span className="shrink-0 font-mono text-[11px] text-faint">{whyItemData.cost}g · {tierLabel(whyItemData.tier)}</span>
-                  )}
-                </div>
-                <WhyScoreBlock score={whyScore} />
+                <ItemDetailCard item={whyItemData} name={whySlot.name} score={whyScore} />
               </div>
             )}
             {swaps && swaps.length > 0 && (
@@ -633,6 +648,14 @@ export function DetailPanel({
                   {swaps.map((swap) => {
                     const clickable = !!swap.swap_item;
                     const selected = swap.vs_tag === selectedTag;
+                    // The replaced item is whatever applySwap itself targets
+                    // (flex slot, else the last core slot) — reuse it rather
+                    // than inventing a second rule (spec C).
+                    const swapPreview = swap.swap_item ? applySwap(baseNames, swap.swap_item, flexList) : null;
+                    const replacedName = swapPreview?.find((s) => s.status === "removed")?.name;
+                    const orderNote = swap.swap_item && replacedName
+                      ? swapOrderShiftNote(itemsByName.get(swap.swap_item)?.cost, itemsByName.get(replacedName)?.cost)
+                      : null;
                     return (
                       <button
                         key={swap.vs_tag}
@@ -644,8 +667,15 @@ export function DetailPanel({
                           : clickable ? "bg-bg2 text-ink-soft hover:bg-line"
                           : "bg-bg2 text-faint"}`}
                       >
-                        <span className="font-medium">{VS_LABELS[swap.vs_tag] ?? swap.vs_tag}</span>
-                        {" — "}{swap.swap_item ?? swap.swap.replace(/^.*—\s*/, "").replace(/[()]/g, "")}
+                        <div>
+                          <span className="font-medium">{VS_LABELS[swap.vs_tag] ?? swap.vs_tag}</span>
+                          {" — "}{swap.swap_item ?? swap.swap.replace(/^.*—\s*/, "").replace(/[()]/g, "")}
+                        </div>
+                        {replacedName && (
+                          <div className={`mt-0.5 text-[10px] ${selected ? "text-bg0/70" : "text-faint"}`}>
+                            in for {replacedName}{orderNote ? ` — ${orderNote}` : ""}
+                          </div>
+                        )}
                       </button>
                     );
                   })}
@@ -655,6 +685,41 @@ export function DetailPanel({
           </div>
         )}
       </div>
+      )}
+
+      {!draftActive && popularItems.length > 0 && (
+        <div className="mt-6">
+          <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">POPULAR ITEMS</div>
+          <p className="mb-2 text-[10px] text-faint">What this god's playerbase actually buys — not an ordered build.</p>
+          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
+            {popularItems.map((p) => {
+              const inCore = suggestedCoreNames.has(p.name);
+              return (
+                <div
+                  key={p.name}
+                  className={`flex flex-col items-center gap-1 rounded-md border p-2 text-center ${
+                    inCore ? "border-gold/40 bg-gold/5" : "border-line bg-bg2"}`}
+                >
+                  <img
+                    src={`/icons/${iconSlug(p.name)}.png`}
+                    alt=""
+                    className="h-8 w-8 flex-none rounded-sm bg-bg2"
+                    onError={(e) => {
+                      const img = e.currentTarget;
+                      if (img.dataset.retried) { img.style.visibility = "hidden"; return; }
+                      img.dataset.retried = "1";
+                      img.src = `/icons/${iconSlug(p.name)}.png?r=${Date.now()}`;
+                    }}
+                  />
+                  <span className="text-xs text-ink">{p.name}</span>
+                  <span className="font-mono text-[10px] text-muted">{Math.round(p.pick_rate * 100)}% pick</span>
+                  <span className="font-mono text-[10px] text-faint">{Math.round(p.win_rate * 100)}% win</span>
+                  {inCore && <span className="text-[9px] font-semibold text-gold">in core</span>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
       )}
 
       {!draftActive && !community && active.rationale && (

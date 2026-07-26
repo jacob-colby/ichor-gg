@@ -10,6 +10,16 @@ const STAT_LABELS: Record<string, string> = {
   move_speed: "Move Speed",
 };
 
+/** Compacts an ability slot name ("1st Ability", "Ultimate", ...) down to a
+ * single glyph for the 20-cell level grid. Falls back to the first letter for
+ * any slot name abilities.py might emit that isn't one of the four known
+ * SMITE 2 slots, so an unrecognized label still renders instead of blanking. */
+function abilityGlyph(slot: string): string {
+  if (slot === "Ultimate") return "U";
+  const m = /^(\d)/.exec(slot);
+  return m ? m[1] : slot.charAt(0);
+}
+
 export function GodInfo({ god }: { god: God }) {
   const stats = Object.entries(god.base_stats ?? {});
   return (
@@ -60,6 +70,38 @@ export function GodInfo({ god }: { god: God }) {
           ))}
         </div>
       </div>
+
+      {god.ability_order && (
+        <div className="mb-5">
+          <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">ABILITY ORDER</div>
+          <div className="rounded-md border border-line bg-bg2 p-3">
+            <div className="grid grid-cols-10 gap-1">
+              {god.ability_order.order.map((slot, i) => {
+                const level = i + 1;
+                const isUlt = god.ability_order!.summary.ult_levels.includes(level);
+                return (
+                  <div
+                    key={level}
+                    title={slot}
+                    className={`flex flex-col items-center rounded-sm py-1 ${
+                      isUlt ? "bg-gold/20 text-gold" : "bg-bg1 text-ink-soft"
+                    }`}
+                  >
+                    <span className="text-[9px] text-faint">{level}</span>
+                    <span className="font-mono text-[11px] font-semibold">{abilityGlyph(slot)}</span>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-2 text-xs text-muted">
+              max order: {god.ability_order.summary.max_order.join(" → ")}
+            </div>
+            <div className="mt-1 text-[10px] italic text-faint">
+              Derived from ability scaling — a heuristic, not community data.
+            </div>
+          </div>
+        </div>
+      )}
 
       {god.aspects?.[0] && (
         <div>

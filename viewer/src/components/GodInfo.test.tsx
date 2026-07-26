@@ -24,4 +24,34 @@ describe("GodInfo", () => {
     expect(screen.getByText(/Damage: 90/)).toBeInTheDocument();
     expect(screen.getByText(/Copies damage/)).toBeInTheDocument();
   });
+
+  it("hides the ability order section when ability_order is absent", () => {
+    render(<GodInfo god={god} />);
+    expect(screen.queryByText(/ability order/i)).not.toBeInTheDocument();
+  });
+
+  it("renders the ability order grid with ult levels marked and the heuristic disclaimer", () => {
+    const godWithOrder = {
+      ...god,
+      ability_order: {
+        order: [
+          "1st Ability", "2nd Ability", "3rd Ability", "1st Ability", "Ultimate",
+          "2nd Ability", "2nd Ability", "2nd Ability", "Ultimate", "1st Ability",
+          "1st Ability", "1st Ability", "Ultimate", "3rd Ability", "3rd Ability",
+          "3rd Ability", "Ultimate", "3rd Ability", "2nd Ability", "1st Ability",
+        ],
+        summary: { max_order: ["2nd Ability", "1st Ability", "3rd Ability"], ult_levels: [5, 9, 13, 17] },
+      },
+    } as unknown as God;
+    render(<GodInfo god={godWithOrder} />);
+    expect(screen.getByText(/ability order/i)).toBeInTheDocument();
+    // heuristic disclaimer, spelled out explicitly per spec D
+    expect(screen.getByText(/derived from ability scaling/i)).toBeInTheDocument();
+    expect(screen.getByText(/heuristic/i)).toBeInTheDocument();
+    // the ult-level cells (5, 9, 13, 17) are visually marked gold
+    const level5 = screen.getByText("5").closest("div")!;
+    expect(level5.className).toMatch(/gold/);
+    const level6 = screen.getByText("6").closest("div")!;
+    expect(level6.className).not.toMatch(/gold/);
+  });
 });
