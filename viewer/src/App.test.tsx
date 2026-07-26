@@ -37,7 +37,8 @@ describe("App routing", () => {
 
   it("defaults to the home view with no god rail", async () => {
     render(<App />);
-    await waitFor(() => expect(screen.getByText(/coming next/i)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByPlaceholderText(/search gods/i)).toBeInTheDocument());
+    expect(screen.queryByRole("button", { name: "Select Chiron" })).not.toBeInTheDocument();
     const [home] = await screen.findAllByRole("button", { name: /^home$/i });
     expect(home).toHaveAttribute("aria-current", "true");
   });
@@ -61,7 +62,7 @@ describe("App routing", () => {
     window.location.hash = "#/gods";
     render(<App />);
     expect(screen.queryAllByRole("button", { name: /^gods$/i })).toHaveLength(0);
-    await waitFor(() => expect(screen.getByText(/coming next/i)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByPlaceholderText(/search gods/i)).toBeInTheDocument());
     expect(window.location.hash).toBe("#/");
   });
 
