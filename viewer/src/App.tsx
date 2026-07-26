@@ -5,21 +5,23 @@ import { DetailPanel } from "./components/DetailPanel";
 import { AddGodModal } from "./components/AddGodModal";
 import { Footer } from "./components/Footer";
 import { ItemsShop } from "./components/ItemsShop";
-import { GodsIndex } from "./components/GodsIndex";
 import { GodInfo } from "./components/GodInfo";
 import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
 import { PatchNotes } from "./components/PatchNotes";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
 
-type View = "builds" | "gods" | "items" | "tiers" | "patch";
+type View = "home" | "builds" | "draft" | "items" | "tiers" | "patch";
 
 const NAV: { view: View; label: string; icon: ReactNode }[] = [
+  { view: "home", label: "Home", icon: (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 11.5 12 4l8 7.5" /><path d="M6 10v10a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1V10" /></svg>
+  ) },
   { view: "builds", label: "Builds", icon: (
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5" /><path d="M13 19l6-6" /><path d="M16 16l4 4" /><path d="M19 21l2-2" /></svg>
   ) },
-  { view: "gods", label: "Gods", icon: (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 4-6 8-6s8 2 8 6" /></svg>
+  { view: "draft", label: "Draft", icon: (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6l7 6-7 6" /><path d="M21 6l-7 6 7 6" /></svg>
   ) },
   { view: "items", label: "Items", icon: (
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" /></svg>
@@ -80,8 +82,9 @@ function App() {
 
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
   const goTo = (view: View) => {
-    if (view === "builds") navigate(route.god ? toHash.god(route.god) : toHash.home());
-    else if (view === "gods") navigate(toHash.gods());
+    if (view === "home") navigate(toHash.home());
+    else if (view === "builds") navigate(route.god ? toHash.god(route.god) : toHash.builds());
+    else if (view === "draft") navigate(toHash.draft());
     else if (view === "items") navigate(toHash.items());
     else if (view === "tiers") navigate(toHash.tiers());
     else navigate(toHash.patch());
@@ -89,13 +92,15 @@ function App() {
 
   const patchNotes = data.patch_notes ?? [];
   const title =
-    route.view === "gods" ? "Gods"
+    route.view === "home" ? "Home"
+    : route.view === "draft" ? "Draft"
     : route.view === "items" ? "Items"
     : route.view === "tiers" ? "Tiers"
     : route.view === "patch" ? "Patch"
     : "Builds";
   const count =
-    route.view === "gods" ? `${data.gods.length} tracked`
+    route.view === "home" ? `${data.gods.length} gods`
+    : route.view === "draft" ? ""
     : route.view === "items" ? `${data.items.length} items`
     : route.view === "tiers" ? `${data.tierlist?.gods.length ?? 0} gods · ${data.tierlist?.items.length ?? 0} items`
     : route.view === "patch" ? (patchNotes.length > 0 ? `${patchNotes.length} patches` : "")
@@ -141,10 +146,15 @@ function App() {
 
         {/* Content */}
         <div className="flex min-h-0 flex-1 overflow-hidden">
-          {route.view === "items" ? (
+          {route.view === "home" ? (
+            // Placeholder — Task V6 replaces this with the real home page
+            // (search, pinned gods, tier slice, patch slice, freshness).
+            <div className="flex-1 overflow-y-auto p-6"><p className="text-muted">Home — coming next.</p></div>
+          ) : route.view === "draft" ? (
+            // Placeholder — Task V4 replaces this with the real draft page.
+            <div className="flex-1 overflow-y-auto p-6"><p className="text-muted">Draft — coming next.</p></div>
+          ) : route.view === "items" ? (
             <div className="flex-1 overflow-y-auto"><ItemsShop items={data.items} openItem={route.item} /></div>
-          ) : route.view === "gods" ? (
-            <div className="flex-1 overflow-y-auto"><GodsIndex gods={data.gods} /></div>
           ) : route.view === "tiers" ? (
             <div className="flex-1 overflow-y-auto"><TierList gods={data.tierlist?.gods ?? []} items={data.tierlist?.items ?? []} /></div>
           ) : route.view === "patch" ? (

@@ -2,9 +2,15 @@ import { describe, it, expect } from "vitest";
 import { parseHash, toHash } from "./useHashRoute";
 
 describe("parseHash", () => {
-  it("defaults to the builds home", () => {
-    expect(parseHash("")).toEqual({ view: "builds", tab: "builds" });
-    expect(parseHash("#/")).toEqual({ view: "builds", tab: "builds" });
+  it("defaults to home", () => {
+    expect(parseHash("")).toEqual({ view: "home", tab: "builds" });
+    expect(parseHash("#/")).toEqual({ view: "home", tab: "builds" });
+  });
+  it("parses the draft page", () => {
+    expect(parseHash("#/draft")).toEqual({ view: "draft", tab: "builds" });
+  });
+  it("parses the bare builds index (nav landing with no god picked)", () => {
+    expect(parseHash("#/builds")).toEqual({ view: "builds", tab: "builds" });
   });
   it("parses a god builds + info route", () => {
     expect(parseHash("#/god/Chiron")).toEqual({ view: "builds", god: "Chiron", tab: "builds" });
@@ -14,8 +20,8 @@ describe("parseHash", () => {
     expect(parseHash("#/items")).toEqual({ view: "items", tab: "builds" });
     expect(parseHash("#/items/Deathbringer")).toEqual({ view: "items", tab: "builds", item: "Deathbringer" });
   });
-  it("parses the gods index", () => {
-    expect(parseHash("#/gods")).toEqual({ view: "gods", tab: "builds" });
+  it("redirects the retired #/gods route to home", () => {
+    expect(parseHash("#/gods")).toEqual({ view: "home", tab: "builds" });
   });
   it("parses the tier list", () => {
     expect(parseHash("#/tiers")).toEqual({ view: "tiers", tab: "builds" });
@@ -27,11 +33,28 @@ describe("parseHash", () => {
 
 describe("toHash", () => {
   it("builds encoded hashes", () => {
+    expect(toHash.home()).toBe("#/");
+    expect(toHash.builds()).toBe("#/builds");
+    expect(toHash.draft()).toBe("#/draft");
     expect(toHash.god("Morgan Le Fay")).toBe("#/god/Morgan%20Le%20Fay");
     expect(toHash.godInfo("Chiron")).toBe("#/god/Chiron/info");
     expect(toHash.item("Death's Toll")).toBe("#/items/Death's%20Toll"); // encodeURIComponent keeps '
     expect(toHash.items()).toBe("#/items");
     expect(toHash.tiers()).toBe("#/tiers");
     expect(toHash.patch()).toBe("#/patch");
+  });
+  it("no longer exposes a gods hash", () => {
+    expect((toHash as Record<string, unknown>).gods).toBeUndefined();
+  });
+});
+
+describe("useHashRoute redirect behavior", () => {
+  it("replaces a #/gods URL in place rather than leaving it in history", async () => {
+    const { useHashRoute } = await import("./useHashRoute");
+    const { renderHook } = await import("@testing-library/react");
+    window.location.hash = "#/gods";
+    const { result } = renderHook(() => useHashRoute());
+    expect(result.current).toEqual({ view: "home", tab: "builds" });
+    expect(window.location.hash).toBe("#/");
   });
 });

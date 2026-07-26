@@ -35,11 +35,34 @@ describe("App routing", () => {
     await waitFor(() => expect(screen.getByPlaceholderText(/search items/i)).toBeInTheDocument());
   });
 
-  it("navigates to the gods index via the nav", async () => {
+  it("defaults to the home view with no god rail", async () => {
     render(<App />);
-    const [gods] = await screen.findAllByRole("button", { name: /^gods$/i });
-    fireEvent.click(gods);
-    await waitFor(() => expect(screen.getByPlaceholderText(/search gods/i)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByText(/coming next/i)).toBeInTheDocument());
+    const [home] = await screen.findAllByRole("button", { name: /^home$/i });
+    expect(home).toHaveAttribute("aria-current", "true");
+  });
+
+  it("navigates to the draft placeholder via the nav", async () => {
+    render(<App />);
+    const [draft] = await screen.findAllByRole("button", { name: /^draft$/i });
+    fireEvent.click(draft);
+    await waitFor(() => expect(screen.getByText(/draft.*coming next/i)).toBeInTheDocument());
+  });
+
+  it("navigates to the builds view via the nav, showing the god rail", async () => {
+    render(<App />);
+    const [builds] = await screen.findAllByRole("button", { name: /^builds$/i });
+    fireEvent.click(builds);
+    await waitFor(() => expect(screen.getByText(/select a god/i)).toBeInTheDocument());
+    expect(screen.getByRole("button", { name: "Chiron" })).toBeInTheDocument();
+  });
+
+  it("no longer has a gods nav entry, and #/gods redirects to home", async () => {
+    window.location.hash = "#/gods";
+    render(<App />);
+    expect(screen.queryAllByRole("button", { name: /^gods$/i })).toHaveLength(0);
+    await waitFor(() => expect(screen.getByText(/coming next/i)).toBeInTheDocument());
+    expect(window.location.hash).toBe("#/");
   });
 
   it("shows the data-freshness stamp", async () => {
