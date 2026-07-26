@@ -11,6 +11,8 @@ import { GodInfo } from "./components/GodInfo";
 import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
 import { PatchNotes } from "./components/PatchNotes";
+import { AppSkeleton } from "./components/Skeleton";
+import { relativeDate } from "./lib/relativeDate";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
 
 type View = "home" | "builds" | "draft" | "items" | "tiers" | "patch";
@@ -79,7 +81,27 @@ function App() {
     );
   }
   if (!data) {
-    return <div className="flex h-screen items-center justify-center bg-bg0 text-muted">Loading…</div>;
+    return (
+      <div className="flex h-screen bg-bg0 text-ink">
+        {/* Same outer chrome as the loaded shell (icon rail + header bar) so
+            the page doesn't jump once index.json lands — only the content
+            area is a placeholder. */}
+        <nav className="hidden w-16 shrink-0 flex-col items-center gap-3.5 border-r border-line bg-rail py-3.5 md:flex">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold font-display text-[15px] font-bold text-bg0">S2</div>
+        </nav>
+        <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
+          <header className="flex items-center gap-3 border-b border-line px-4 py-2.5">
+            <span className="font-display text-base font-bold text-ink">ichor</span>
+            <div className="ml-auto flex items-center gap-3">
+              <button type="button" onClick={reload} className="press rounded-md bg-bg2 px-3 py-1.5 text-xs text-muted hover:text-ink">Reload</button>
+            </div>
+          </header>
+          <div className="flex min-h-0 flex-1 overflow-hidden">
+            <AppSkeleton />
+          </div>
+        </div>
+      </div>
+    );
   }
 
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
@@ -132,7 +154,15 @@ function App() {
           <span className="font-display text-base font-bold text-ink">{title}</span>
           {count && <span className="font-mono text-[11px] text-faint">{count}</span>}
           <div className="ml-auto flex items-center gap-3">
-            {data.data_updated && <span className="hidden font-mono text-[10.5px] text-faint sm:inline">Data from {data.data_updated}</span>}
+            {data.data_updated && (
+              <span
+                data-testid="header-freshness"
+                title={data.data_updated}
+                className="hidden font-mono text-[10.5px] text-faint sm:inline"
+              >
+                Updated {relativeDate(data.data_updated)}
+              </span>
+            )}
             {isDev && (
               <button type="button" onClick={() => setAddOpen(true)}
                 className="press hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-xs text-faint hover:text-muted md:flex">
@@ -198,9 +228,6 @@ function App() {
                         mode={mode}
                         onModeChange={setMode}
                         starters={data.starters ?? []}
-                        allGods={data.gods}
-                        godItemScores={data.god_item_scores}
-                        draftConfig={data.draft}
                       />
                     )}
                   </>

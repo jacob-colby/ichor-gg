@@ -1,14 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
-import type { BuildEntry, BuildNote, CuratedBuildEntry, DraftConfig, God, Item, SlotScore } from "../types";
+import type { BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
 import { tierLabel } from "../lib/itemFilters";
 import { godRoleTextClass, damageTextClass } from "../lib/roleAccent";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
 import { getMine } from "../lib/mineStore";
-import { DraftBar } from "./DraftBar";
-import { useDraft } from "../lib/draft";
-import { deriveThreats, threatOverlay } from "../lib/threats";
-import { adaptedCore } from "../lib/draftBuild";
 
 const VS_LABELS: Record<string, string> = {
   heavy_cc: "vs heavy CC",
@@ -26,40 +22,6 @@ interface DetailPanelProps {
   onModeChange: (mode: string) => void;
   starters?: { base: string; upgrade: string }[];
   onReload?: () => void;
-  /** The full tracked roster — used for the draft's ally/enemy picker and
-   * for looking up each entered god's damage_type/specializations. Absent
-   * on an older index (pre-draft-feature) just like the two props below. */
-  allGods?: God[];
-  godItemScores?: Record<string, Record<string, number>>;
-  draftConfig?: DraftConfig;
-}
-
-/** An ally's own suggested Conquest core, reduced to the effect_tags its
- * items bring — the "team responsibility" signal deriveThreats uses to tell
- * a covered job from a gap. Prefers Conquest; falls back to whatever mode
- * that god has notes for. */
-function allyEffectTags(allyName: string, builds: BuildNote[], itemsByName: Record<string, Item>): string[] {
-  const notes = builds.filter((b) => b.god === allyName);
-  const note = notes.find((n) => n.mode === "Conquest") ?? notes[0];
-  if (!note) return [];
-  const core = note.builds.find(
-    (b) => b.source === "suggested" && (b as CuratedBuildEntry).archetype === "core" && !(b as CuratedBuildEntry).fun,
-  ) as CuratedBuildEntry | undefined;
-  if (!core) return [];
-  const tags = new Set<string>();
-  for (const name of core.slot_order) {
-    for (const t of itemsByName[name]?.effect_tags ?? []) tags.add(t);
-  }
-  return [...tags];
-}
-
-/** Mirrors the `lifesteal_caps` rule in _weights.yaml (physical Carry/Hunter/
- * Sharpshooter get 2, everyone else 1) — not shipped per-god in the index,
- * so re-derived here from the god fields the client already has. */
-function draftMaxLifesteal(godData?: God): number {
-  if (!godData || godData.damage_type !== "physical") return 1;
-  const tokens = new Set([...(godData.role ?? "").split(/\s+/), ...(godData.specializations ?? [])]);
-  return ["Carry", "Hunter", "Sharpshooter"].some((t) => tokens.has(t)) ? 2 : 1;
 }
 
 function ScoreBar({ label, value }: { label: string; value: number }) {
@@ -172,7 +134,6 @@ const segBtn = (active: boolean) =>
 
 export function DetailPanel({
   god, godData, items, builds, mode, onModeChange, starters = [],
-  allGods = [], godItemScores, draftConfig,
 }: DetailPanelProps) {
   const godNotes = builds.filter((b) => b.god === god);
   const note = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
@@ -182,10 +143,6 @@ export function DetailPanel({
   const [editing, setEditing] = useState<MineDraft | "new" | null>(null);
   const [aspectOn, setAspectOn] = useState(false);
   const [mineVersion, setMineVersion] = useState(0);
-  // Independent of activeIndex/mode/aspectOn on purpose: the Draft tab is a
-  // layer over whichever mode/flavor entry is active, not a replacement for
-  // it, so switching mode/aspect must NOT drop the user out of the tab.
-  const [draftActive, setDraftActive] = useState(false);
   // Desktop: which slot row's score card is shown in the WHY THIS ITEM panel
   // (set on hover/focus). Mobile: which row has its inline disclosure open
   // (set on tap) — a separate piece of state since the two interactions are
@@ -197,47 +154,10 @@ export function DetailPanel({
     for (const it of items) m.set(it.name, it);
     return m;
   }, [items]);
-  const itemsByNameRecord = useMemo(() => {
-    const m: Record<string, Item> = {};
-    for (const it of items) m[it.name] = it;
-    return m;
-  }, [items]);
   const mineEntries = useMemo(
     () => getMine(god, note?.mode ?? mode).map((b) => ({ source: "mine" as const, ...b })),
     [god, note?.mode, mode, mineVersion],
   );
-
-  const { draft, setAlly, setEnemy, clear: clearDraft } = useDraft();
-  const godsByName = useMemo(() => {
-    const m: Record<string, God> = {};
-    for (const g of allGods) m[g.name] = g;
-    return m;
-  }, [allGods]);
-  const eligibleDraftGods = useMemo(
-    () => (godItemScores ? allGods.filter((g) => godItemScores[g.name]) : []),
-    [allGods, godItemScores],
-  );
-  const allyCores = useMemo(() => {
-    const out: Record<string, string[]> = {};
-    for (const name of draft.allies) {
-      if (name) out[name] = allyEffectTags(name, builds, itemsByNameRecord);
-    }
-    return out;
-  }, [draft.allies, builds, itemsByNameRecord]);
-  const threats = useMemo(
-    () => deriveThreats(draft, godsByName, allyCores),
-    [draft, godsByName, allyCores],
-  );
-  const draftHasEntries = draft.allies.some(Boolean) || draft.enemies.some(Boolean);
-  const draftEnabled = !!godItemScores?.[god] && !!draftConfig;
-  const draftResult = useMemo(() => {
-    if (!draftEnabled) return null;
-    const opts = { maxBonus: draftConfig!.max_bonus, maxLifesteal: draftMaxLifesteal(godData) };
-    const base = adaptedCore(godItemScores![god], itemsByNameRecord, { tags: {}, stats: {} }, opts);
-    const overlay = threatOverlay(threats, draftConfig!);
-    const adapted = adaptedCore(godItemScores![god], itemsByNameRecord, overlay, opts);
-    return { adapted, baseCore: new Set(base.core) };
-  }, [draftEnabled, draftConfig, godItemScores, god, itemsByNameRecord, threats, godData]);
 
   useEffect(() => {
     setActiveIndex(0);
@@ -245,10 +165,6 @@ export function DetailPanel({
     setEditing(null);
     setAspectOn(false);
   }, [god, note]);
-
-  useEffect(() => {
-    setDraftActive(false);
-  }, [god]);
 
   useEffect(() => {
     setWhyIndex(null);
@@ -403,43 +319,21 @@ export function DetailPanel({
         </div>
       )}
 
-      <DraftBar
-        gods={eligibleDraftGods}
-        draft={draft}
-        onSetAlly={setAlly}
-        onSetEnemy={setEnemy}
-        onClear={clearDraft}
-        threats={threats}
-      />
-
       <div role="tablist" className="mb-4 flex flex-wrap gap-1 rounded-md border border-line bg-bg1 p-1">
         {entries.map((entry, i) => (
           <button
             key={i}
             type="button"
             role="tab"
-            aria-selected={!draftActive && i === activeIndex}
-            onClick={() => { setActiveIndex(i); setDraftActive(false); }}
+            aria-selected={i === activeIndex}
+            onClick={() => setActiveIndex(i)}
             className={`press rounded px-3 py-1 font-display text-xs font-semibold capitalize transition-colors duration-150 ease-standard ${
-              !draftActive && i === activeIndex ? "bg-gold text-bg0" : "text-muted hover:text-ink"
+              i === activeIndex ? "bg-gold text-bg0" : "text-muted hover:text-ink"
             }`}
           >
             {tabLabel(entry)}{(entry as { fun?: boolean }).fun ? " 🎲" : ""}
           </button>
         ))}
-        {draftEnabled && (
-          <button
-            type="button"
-            role="tab"
-            aria-selected={draftActive}
-            onClick={() => setDraftActive(true)}
-            className={`press rounded px-3 py-1 font-display text-xs font-semibold transition-colors duration-150 ease-standard ${
-              draftActive ? "bg-gold text-bg0" : "text-muted hover:text-ink"
-            }`}
-          >
-            Draft
-          </button>
-        )}
       </div>
 
       {!community && (active as CuratedBuildEntry).fun && (
@@ -507,45 +401,6 @@ export function DetailPanel({
         </div>
       )}
 
-      {draftActive ? (
-        <div className="min-w-0 flex-1 md:max-w-[380px]">
-          <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">DRAFT-ADAPTED CORE</div>
-          {!draftHasEntries ? (
-            <p className="text-muted">Enter your draft above (allies + enemies) to see a comp-adapted 6-item core.</p>
-          ) : draftResult ? (
-            <div className="flex flex-col gap-1">
-              {draftResult.adapted.core.map((name) => {
-                const isAdded = !draftResult.baseCore.has(name);
-                const reason = draftResult.adapted.reasons[name];
-                const item = itemsByName.get(name);
-                return (
-                  <div key={name} className="flex flex-col">
-                    <div className={`flex min-h-11 items-center gap-2 rounded-md px-1.5 ${isAdded ? "bg-blue/10" : ""}`}>
-                      <img
-                        src={`/icons/${iconSlug(name)}.png`}
-                        alt=""
-                        className="h-8 w-8 flex-none rounded-sm bg-bg2"
-                        onError={(e) => {
-                          const img = e.currentTarget;
-                          if (img.dataset.retried) { img.style.visibility = "hidden"; return; }
-                          img.dataset.retried = "1";
-                          img.src = `/icons/${iconSlug(name)}.png?r=${Date.now()}`;
-                        }}
-                      />
-                      <span className={`text-sm ${isAdded ? "font-medium text-blue" : "text-ink"}`}>{name}</span>
-                      {isAdded && <span className="text-[10px] text-muted">swap in</span>}
-                      {item && <span className="ml-auto font-mono text-[11px] text-faint">{item.cost}g</span>}
-                    </div>
-                    {isAdded && reason && (
-                      <div className="ml-9 mb-1 text-[10px] text-faint">↑ {reason}</div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          ) : null}
-        </div>
-      ) : (
       <div className="flex flex-col gap-6 md:flex-row">
         <div className="min-w-0 flex-1 md:max-w-[380px]">
           <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">
@@ -685,9 +540,8 @@ export function DetailPanel({
           </div>
         )}
       </div>
-      )}
 
-      {!draftActive && popularItems.length > 0 && (
+      {popularItems.length > 0 && (
         <div className="mt-6">
           <div className="mb-2 font-display text-xs font-semibold tracking-widest text-muted">POPULAR ITEMS</div>
           <p className="mb-2 text-[10px] text-faint">What this god's playerbase actually buys — not an ordered build.</p>
@@ -722,7 +576,7 @@ export function DetailPanel({
         </div>
       )}
 
-      {!draftActive && !community && active.rationale && (
+      {!community && active.rationale && (
         <p className="mt-4 text-xs italic text-muted">{active.rationale}</p>
       )}
     </div>

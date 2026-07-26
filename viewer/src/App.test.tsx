@@ -68,9 +68,26 @@ describe("App routing", () => {
     expect(window.location.hash).toBe("#/");
   });
 
-  it("shows the data-freshness stamp", async () => {
+  it("shows the data-freshness stamp as relative text with the absolute date on hover", async () => {
     render(<App />);
-    await waitFor(() => expect(screen.getByText(/Data from 2026-07-19/i)).toBeInTheDocument());
+    const freshness = await screen.findByTestId("header-freshness");
+    expect(freshness.textContent).toMatch(/^Updated /i);
+    expect(freshness).toHaveAttribute("title", "2026-07-19");
+  });
+
+  it("omits the freshness stamp entirely when data_updated is missing", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({
+      ok: true, json: () => Promise.resolve({ ...data, data_updated: undefined }),
+    }));
+    render(<App />);
+    await waitFor(() => expect(screen.getByPlaceholderText(/search gods/i)).toBeInTheDocument());
+    expect(screen.queryByTestId("header-freshness")).not.toBeInTheDocument();
+  });
+
+  it("shows a layout-shaped skeleton (not a bare Loading… string) before data arrives", () => {
+    render(<App />);
+    expect(screen.getByTestId("app-skeleton")).toBeInTheDocument();
+    expect(screen.queryByText(/^Loading…$/)).not.toBeInTheDocument();
   });
 
   it("shows the legend on first run", async () => {

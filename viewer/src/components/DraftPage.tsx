@@ -53,7 +53,8 @@ function allyEffectTags(
   return [...tags];
 }
 
-/** Searchable grid of eligible gods — lifted from DraftBar's picker. */
+/** Searchable grid of eligible gods — the same god-picker idiom used
+ * elsewhere in the app (e.g. AddGodModal). */
 function GodPickerModal({
   gods, onPick, onClose,
 }: {
