@@ -39,9 +39,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Athena Notes: Deal Magical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Reach
   details:
@@ -52,10 +50,8 @@ abilities:
   - 'Damage Scaling: 70% Intelligence + 125% Strength'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'ATTACK AFTER ABILITY IS RANGED Notes: After using an ability, your
-    next Attack becomes a ranged projectile that deals Bonus Magical Damage Damage
-    Scaling : 70% Intelligence + 125% Strength Range : 8.8 meters Radius : 0.48 meters
-    Expand Ability Video'
+  description: After using an ability, your next Attack becomes a ranged projectile
+    that deals Bonus Magical Damage
 - slot: 1st Ability
   name: Preemptive Strike
   cooldown:
@@ -82,11 +78,7 @@ abilities:
   - 'Radius: 0.96 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'DASH, DAMAGE, PROTECT Notes: Charge up, then Dash forward Damage :
-    80 | 130 | 180 | 230 | 280 Damage Scaling : 55% Strength Slow : 20 | 22.5 | 25
-    | 27.5 | 30% Slow Duration : 2 seconds Protections : 15 | 20 | 25 | 30 | 35 +
-    10% Buff Duration : 4 seconds Range : 8.8 meters Radius : 0.96 meters Cooldown
-    : 14 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Charge up, then Dash forward
 - slot: 2nd Ability
   name: Confound
   cooldown:
@@ -113,12 +105,7 @@ abilities:
   - 'Cone Angle: 90 degrees'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 60 | 65 | 79 | 75 | 80 mana'
-  description: 'TAUNT CONE Notes: Taunt enemies in front of you Damage : 40 | 65 |
-    90 | 115 | 140 Damage Scaling : 20% Intelligence Taunt Duration : 0.75 | 0.9 |
-    1.05 | 1.2 | 1.35 seconds Taunt Duration Scaling : 0.2 seconds per 115 Item Protections,
-    stacking up to 2 times Range : 5.6 meters Cone Angle : 90 degrees Cooldown : 16
-    | 15.5 | 15 | 14.5 | 14 seconds Cost : 60 | 65 | 79 | 75 | 80 mana Expand Ability
-    Video'
+  description: Taunt enemies in front of you
 - slot: 3rd Ability
   name: Shield Wall
   cooldown:
@@ -143,11 +130,7 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'AREA DAMAGE, TWICE Notes: Create a Phalanx of Soldiers that strike
-    twice in an area Initial Damage : 60 | 100 | 140 | 180 | 220 Initial Damage Scaling
-    : 45% Intelligence Final Damage : 80 | 140 | 200 | 260 | 320 Final Damage Scaling
-    : 55% Intelligence Slow Duration : 2 seconds Radius : 3.2 meters Cooldown : 12
-    seconds Cost : 50 | 60 | 70 | 80 | 90 mana Expand Ability Video'
+  description: Create a Phalanx of Soldiers that strike twice in an area
 - slot: Ultimate
   name: Defender of Olympus
   cooldown:
@@ -175,19 +158,14 @@ abilities:
   - 'Movement Speed: 10 | 12.5 | 15 | 17.5 | 20%'
   - 'Cooldown: 120 | 115 | 110 | 105 | 100 seconds'
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
-  description: 'SHIELD, TELEPORT TO ALLY Notes: Teleport to the aid of the targeted
-    god, anywhere on the map Damage : 340 | 415 | 490 | 565 | 640 Damage Scaling :
-    90% Intelligence Shield Health : 200 | 225 | 250 | 275 | 300 Shield Health Scaling
-    : 15% Max Health Movement Speed : 10 | 12.5 | 15 | 17.5 | 20% Cooldown : 120 |
-    115 | 110 | 105 | 100 seconds Cost : 80 | 90 | 100 | 110 | 120 mana Expand Ability
-    Video'
+  description: Teleport to the aid of the targeted god, anywhere on the map
 aspects:
 - name: Aspect of War
   kit_changes: Defender of Olympus now targets visible enemy gods instead of allies,
     dealing no landing damage but causing the enemy to take increased damage while
     Athena is channeling.
 source_url: https://wiki.smite2.com/w/Athena
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Athena Basic Attack

@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { render, screen, fireEvent, within } from "@testing-library/react";
+import { render, screen, fireEvent, within, cleanup, waitFor } from "@testing-library/react";
 import { TierList } from "./TierList";
 import type { GodTierEntry, ItemTierEntry } from "../types";
 import { toHash } from "../lib/useHashRoute";
@@ -15,7 +15,13 @@ const items: ItemTierEntry[] = [
   { name: "Book of Thoth", ours: 0.1, community: null, tier_ours: "C", tier_community: null, tier: 3, efficiency_tier: "premium" },
 ];
 
-beforeEach(() => { window.location.hash = ""; });
+/** Load the page *at* a URL, rather than navigating to it: assigning
+ *  `window.location.hash` queues a `hashchange`, which lands mid-test and is
+ *  decoded by the URL-state hook as a filter reset. */
+const atUrl = (hash: string) => window.history.replaceState(null, "", `/${hash}`);
+
+beforeEach(() => { atUrl(""); });
+
 
 describe("TierList — bands and ghosts", () => {
   it("buckets into the model's bands", () => {
@@ -29,7 +35,9 @@ describe("TierList — bands and ghosts", () => {
   it("carries the community's placement on the card, with no source toggle to reach it", () => {
     render(<TierList tierlist={{ gods, items }} />);
     // Ymir: model S, community C — the disagreement is readable in place.
-    expect(within(screen.getByTestId("band-S")).getByText(/meta C/)).toBeInTheDocument();
+    // The letter is its own element: it's a code that reads down the grid, so
+    // it keeps the numeral face while the word "meta" beside it doesn't.
+    expect(screen.getByTestId("band-S")).toHaveTextContent(/meta\s*C/);
     // The old "Our calc / Community" toggle is gone.
     expect(screen.queryByRole("button", { name: "Community" })).not.toBeInTheDocument();
     expect(screen.queryByRole("button", { name: /our calc/i })).not.toBeInTheDocument();
@@ -234,5 +242,47 @@ describe("TierList — Conquest/Joust", () => {
     render(<TierList tierlist={{ gods, items }} />);
     fireEvent.click(screen.getByRole("button", { name: "Joust" }));
     expect(screen.getByText("Ymir")).toBeInTheDocument();
+  });
+});
+
+/* "The disputed Mid gods in Joust" is exactly what this list is for, and it
+ * was unlinkable. Defaults stay out of the query so a bare `#/tiers` keeps
+ * meaning what it always did. */
+describe("TierList — board state lives in the URL", () => {
+  it("opens on the mode, subject and filters the link names", () => {
+    atUrl("#/tiers?of=items&sort=score");
+    render(<TierList tierlist={{ gods, items }} />);
+    expect(screen.getByRole("button", { name: "Items" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("button", { name: /by score/i })).toHaveAttribute("aria-pressed", "true");
+    expect(within(screen.getByTestId("band-S")).getByText("Rage")).toBeInTheDocument();
+  });
+
+  it("restores a lane filter, ignoring a lane the app doesn't have", () => {
+    atUrl("#/tiers?lane=Mid");
+    render(<TierList tierlist={{ gods, items }} />);
+    expect(screen.getByRole("button", { name: "Mid" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.queryByText("Ymir")).not.toBeInTheDocument();
+
+    cleanup();
+    atUrl("#/tiers?lane=Botlane");
+    render(<TierList tierlist={{ gods, items }} />);
+    expect(screen.getByText("Ymir")).toBeInTheDocument();
+  });
+
+  it("writes only what differs from the default", async () => {
+    atUrl("#/tiers");
+    render(<TierList tierlist={{ gods, items }} />);
+    fireEvent.click(screen.getByRole("button", { name: "Joust" }));
+    await waitFor(() => expect(window.location.hash).toBe("#/tiers?mode=joust"));
+    fireEvent.click(screen.getByRole("button", { name: "Conquest" }));
+    await waitFor(() => expect(window.location.hash).toBe("#/tiers"));
+  });
+
+  it("carries the disputed-only toggle", () => {
+    atUrl("#/tiers?disputed=1");
+    render(<TierList tierlist={{ gods, items }} />);
+    expect(screen.getByRole("button", { name: /only disputed/i })).toHaveAttribute("aria-pressed", "true");
+    // Anubis has no community rating, so it is neither agreed nor disputed.
+    expect(screen.queryByText("Anubis")).not.toBeInTheDocument();
   });
 });

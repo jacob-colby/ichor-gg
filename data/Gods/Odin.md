@@ -38,9 +38,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Odin Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Path to Valhalla
   details:
@@ -49,10 +47,8 @@ abilities:
   - 'Intelligence: 10% Per Stack'
   - 'Buff Duration: 10 seconds'
   - 'Max Buff Stacks: 2'
-  description: 'GOD DEATHS GRANT POWER When a god dies, gain a brief increase to Movement
-    Speed , Strength , and Intelligence Movement Speed : 4% Per Stack Strength : 10%
-    Per Stack Intelligence : 10% Per Stack Buff Duration : 10 seconds Max Buff Stacks
-    : 2 Expand Ability Video'
+  description: GOD DEATHS GRANT POWER When a god dies, gain a brief increase to Movement
+    Speed , Strength , and Intelligence
 - slot: 1st Ability
   name: Lunge
   cooldown:
@@ -75,10 +71,7 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
-  description: 'LEAP, EXPLODE RAVEN SHIELD Notes: Leap forward, dealing Physical Damage
-    to nearby enemies as you land Damage : 120 | 170 | 220 | 270 | 320 Damage Scaling
-    : 75% Strength Range : 8.8 meters Radius : 3.2 meters Cooldown : 14 | 13.5 | 13
-    | 12.5 | 12 seconds Cost : 40 | 45 | 50 | 55 | 60 mana Expand Ability Video'
+  description: Leap forward, dealing Physical Damage to nearby enemies as you land
 - slot: 2nd Ability
   name: Raven Shout
   cooldown:
@@ -107,12 +100,7 @@ abilities:
   - 'Explosion Radius: 3.2 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
-  description: 'SHIELD, THEN EXPLODE Notes: Gain a Health Shield for a duration Pulse
-    Damage : 10 | 15.5 | 21 | 26.5 | 32 Pulse Damage Scaling : 4% Strength + 5% Intelligence
-    Shield Health : 100 | 155 | 210 | 265 | 320 Shield Health Scaling : 40% Strength
-    + 50% Intelligence Shield Duration : 4 seconds Bonus Physical Damage : 15% Explosion
-    Radius : 3.2 meters Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 45 |
-    50 | 55 | 60 | 65 mana Expand Ability Video'
+  description: Gain a Health Shield for a duration
 - slot: 3rd Ability
   name: Gungnir's Might
   cooldown:
@@ -146,14 +134,8 @@ abilities:
   - 'Projectile Radius: 0.48 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'PULSE TWICE, THROW TO STUN Notes: Charge up, pulsing Physical Damage
-    around you twice, then throw your spear Pulse Damage : 50 | 80 | 110 | 140 | 170
-    Pulse Damage Scaling : 60% Intelligence Projectile Damage : 60 | 115 | 170 | 225
-    | 280 Projectile Damage Scaling : 75% Strength Stun Duration : 0.9 seconds Attack
-    Speed : 30 | 32.5 | 35 | 37.5 | 40% Buff Duration : 4 seconds Pulse Radius : 3.2
-    meters Projectile Range : 8.8 meters Projectile Radius : 0.48 meters Cooldown
-    : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 50 | 60 | 70 | 80 | 90 mana Expand
-    Ability Video'
+  description: Charge up, pulsing Physical Damage around you twice, then throw your
+    spear
 - slot: Ultimate
   name: Ring of Spears
   cooldown:
@@ -184,20 +166,15 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 100 | 95 | 90 | 85 | 80 seconds'
   - 'Cost: 100 mana'
-  description: 'CAGE YOUR FOES Notes: Enemies in the area cannot Heal , and have reduced
-    Strength and Intelligence Enemies who leave the area take Physical Damage and
-    are Slowed , unless exiting through a segment of the ring destroyed by Attacks
-    does not block ally movement or projectiles, only enemy Attacks and enemy god
-    movement Create a spear ring of walls that impedes enemies. Enemy gods who die
-    in the ring grant Odin a permanent Strength and Intelligence buff . Gain a stack
-    of Path to Valhalla Damage : 120 | 190 | 260 | 330 | 400 Damage Scaling : 75%
-    Strength Strength and Intelligence Debuff : -15 | -17.5 | -20 | -22.5 | -25% Slow
-    : 25% Slow Duration : 5 seconds Permanent Strength Buff : 5 Per Stack Permanent
-    Intelligence Buff : 8 Per Stack Max Stacks : 10 Radius : 4.8 meters Cooldown :
-    100 | 95 | 90 | 85 | 80 seconds Cost : 100 mana Expand Ability Video'
+  description: Enemies in the area cannot Heal , and have reduced Strength and Intelligence
+    Enemies who leave the area take Physical Damage and are Slowed , unless exiting
+    through a segment of the ring destroyed by Attacks does not block ally movement
+    or projectiles, only enemy Attacks and enemy god movement Create a spear ring
+    of walls that impedes enemies. Enemy gods who die in the ring grant Odin a permanent
+    Strength and Intelligence buff . Gain a stack of Path to Valhalla
 aspects: []
 source_url: https://wiki.smite2.com/w/Odin
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Odin Basic Attack

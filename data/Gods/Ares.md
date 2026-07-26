@@ -38,9 +38,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Ares Notes: Deal Magical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Blessed Armaments
   details:
@@ -51,9 +49,7 @@ abilities:
   - 'Strength & Intelligence: 1 Per Level'
   - 'Strength: 8% of Protections from Items'
   - 'Intelligence: 80% of Cooldown Rate'
-  description: 'AURA OF POWER Notes: Provide Strength and Intelligence in an Aura
-    Strength & Intelligence : 1 Per Level Strength : 8% of Protections from Items
-    Intelligence : 80% of Cooldown Rate Expand Ability Video'
+  description: Provide Strength and Intelligence in an Aura
 - slot: 1st Ability
   name: Shackles
   cooldown:
@@ -86,13 +82,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: 'THREE CRIPPLING CHAINS Notes: Three may be out at one time Fire a
-    Shackle projectile that deals Magical Damage , Cripples , and Slows Initial Damage
-    : 40 | 65 | 90 | 115 | 140 Initial Damage Scaling : 25% Strength Damage Per Tick
-    : 20 | 40 | 60 | 80 | 100 Damage Scaling Per Tick : 15% Intelligence Slow : 15%
-    Slow Duration : 4 seconds Cripple Duration : 4 seconds Movement Speed : 15% Range
-    : 8.8 meters Radius : 2.4 meters Cooldown : 15 seconds Cost : 70 | 75 | 80 | 85
-    | 90 mana Expand Ability Video'
+  description: Three may be out at one time Fire a Shackle projectile that deals Magical
+    Damage , Cripples , and Slows
 - slot: 2nd Ability
   name: Call to Arms
   cooldown:
@@ -117,11 +108,8 @@ abilities:
   - 'Radius: 5.6 meters'
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
-  description: 'AURA OF PROTECTIONS Notes: You and nearby allied gods gain Protections
-    and Attack Damage . Ares gains bonus Health Regen Protections : 20 | 25 | 30 |
-    35 | 40 Attack Damage : 8 | 16 | 24 | 30 | 36 Health Regen : 6 | 8 | 10 | 12 |
-    14 Buff Duration : 6 seconds Radius : 5.6 meters Cooldown : 15 | 14.5 | 14 | 13.5
-    | 13 seconds Cost : 40 | 45 | 50 | 55 | 60 mana Expand Ability Video'
+  description: You and nearby allied gods gain Protections and Attack Damage . Ares
+    gains bonus Health Regen
 - slot: 3rd Ability
   name: Searing Flesh
   cooldown:
@@ -152,14 +140,8 @@ abilities:
   - 'Cone Angle: 45 degrees'
   - 'Cooldown: 12 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'CHANNELED DAMAGE CONE Notes: Flames pour from your shield, dealing
-    Magical Damage repeatedly to enemies in front of you Damage Per Tick : 20 | 25
-    | 30 | 35 | 40 Damage Scaling Per Tick : 7% Intelligence Bonus Damage Scaling
-    : 1 | 1 | 2 | 2 | 3% Enemy Max Health Minion Damage Per Tick : 20 | 25 | 30 |
-    35 | 40 Minion Damage Scaling Per Tick : 7% Intelligence Bonus Minion Damage Scaling
-    : 3.5% Minion Max Health Healing Reduction : -25% Healing Reduction Duration :
-    5 seconds Range : 5.6 meters Cone Angle : 45 degrees Cooldown : 12 seconds Cost
-    : 55 | 60 | 65 | 70 | 75 mana Expand Ability Video'
+  description: Flames pour from your shield, dealing Magical Damage repeatedly to
+    enemies in front of you Minion Minion
 - slot: Ultimate
   name: No Escape
   cooldown:
@@ -186,20 +168,15 @@ abilities:
   - 'Radius: 2.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 80 | 85 | 90 | 95 | 100 mana'
-  description: 'PULL ENEMIES IN Notes: Attach a chain to nearby gods, then Pull the
-    gods towards you, and finally Stun enemies around you. Initial Damage : 80 | 110
-    | 140 | 170 | 200 Initial Damage Scaling : 20% Intelligence + 30% Strength Final
-    Damage : 250 | 325 | 400 | 475 | 550 Final Damage Scaling : 50% Intelligence +
-    55% Strength Stun Duration : 0.75 seconds Damage Mitigation : 40 | 45 | 50 | 55
-    | 60% Range : 5.6 meters Radius : 2.8 meters Cooldown : 90 seconds Cost : 80 |
-    85 | 90 | 95 | 100 mana Expand Ability Video'
+  description: Attach a chain to nearby gods, then Pull the gods towards you, and
+    finally Stun enemies around you.
 aspects:
 - name: Aspect of Reverberation
   kit_changes: Call to Arms no longer grants Protections or affects allies. Instead,
     Ares empowers his Shield for his next Basic Attack stunning the target and spreading
     damage to nearby enemies.
 source_url: https://wiki.smite2.com/w/Ares
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Ares Basic Attack

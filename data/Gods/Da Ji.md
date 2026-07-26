@@ -37,9 +37,7 @@ abilities:
   - 'Base Attack Damage: 39'
   - 'Range: 1.92 meters'
   - 'Radius: 120 degrees'
-  description: 'Da Ji Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Base Attack Damage
-    : 39 Range : 1.92 meters Radius : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Torture Blades
   details:
@@ -47,9 +45,8 @@ abilities:
     times on the same target
   - 'Damage: 7'
   - 'Damage Scaling: 5% Strength'
-  description: 'Attacks Cause Enemies to Bleed Notes: Attacks and non-ultimate abilities
-    cause enemies to Bleed, dealing Physical Damage every 1 second for 2 seconds Damage
-    : 7 Damage Scaling : 5% Strength Expand Ability Video'
+  description: Attacks and non-ultimate abilities cause enemies to Bleed, dealing
+    Physical Damage every 1 second for 2 seconds
 - slot: 1st Ability
   name: Horrible Burns
   cooldown:
@@ -71,13 +68,8 @@ abilities:
   - 'Enemy Health Threshold: 30%'
   - 'Cooldown: 9 seconds'
   - 'Cost: 50 mana'
-  description: 'Empowered Attack Notes: While active, your next successful Attack
-    Slows , deals bonus Physical Damage , and Physical Damage every 1 second for 3
-    seconds Damage : 30 | 60 | 90 | 120 | 150 Damage Scaling : 20% Strength Damage
-    Per Tick : 20 | 25 | 30 | 35 | 40 Damage Scaling Per Tick : 10% Strength Bonus
-    Damage Scaling : 1% Strength Slow : 15 | 17.5 | 20 | 22.5 | 25% Slow Duration
-    : 3 seconds Enemy Health Threshold : 30% Cooldown : 9 seconds Cost : 50 mana Expand
-    Ability Video'
+  description: While active, your next successful Attack Slows , deals bonus Physical
+    Damage , and Physical Damage every 1 second for 3 seconds
 - slot: 2nd Ability
   name: One Thousand Cuts
   cooldown:
@@ -100,13 +92,9 @@ abilities:
   - 'Cone Angle: 180 degrees'
   - 'Cooldown: 11 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'Channeled Damage Cone Notes: While Channeling you gain Movement Speed
-    , Slow Immunity , immunity to Strafe and Backpedal movement penalties , and Mitigate
-    Damage dealt by enemies gods behind you Strike enemies ahead of you 4 times, dealing
-    Physical Damage Damage : 35 | 50 | 65 | 80 | 95 Damage Scaling : 35% Strength
-    Movement Speed : 30% Damage Mitigation : 20 | 25 | 30 | 35 | 40% Range : 3.2 meters
-    Cone Angle : 180 degrees Cooldown : 11 seconds Cost : 60 | 65 | 70 | 75 | 80 mana
-    Expand Ability Video'
+  description: While Channeling you gain Movement Speed , Slow Immunity , immunity
+    to Strafe and Backpedal movement penalties , and Mitigate Damage dealt by enemies
+    gods behind you Strike enemies ahead of you 4 times, dealing Physical Damage
 - slot: 3rd Ability
   name: Trickster Spirit
   cooldown:
@@ -126,11 +114,8 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'Teleport to Target, Damaging Enemies Notes: Teleport to a target character
-    or ward after a short delay, dealing Physical Damage in an area Damage : 60 |
-    95 | 130 | 165 | 200 Damage Scaling : 70% Strength Range : 8.8 meters Radius :
-    1.6 meters Cooldown : 15 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability
-    Video'
+  description: Teleport to a target character or ward after a short delay, dealing
+    Physical Damage in an area
 - slot: Ultimate
   name: Paolao
   cooldown:
@@ -153,14 +138,10 @@ abilities:
   - 'Pulse Radius: 3.2 meters'
   - 'Cooldown: 120 seconds'
   - 'Cost: 50 mana'
-  description: 'Vortex Chained Enemies Notes: If a chained god reaches the , they
-    are Stunned and take Physical Damage Enemies near the also take Physical Damage
-    every 0.25 seconds Rise onto your for up to 5 seconds and fire 3 ensnaring chains.
-    Chains deal Physical Damage , Cripple , and Vortex enemy gods towards the Damage
-    : 100 | 125 | 150 | 175 | 200 Damage Scaling : 60% Strength Damage Per Tick :
-    10 | 15 | 20 | 25 | 30 Damage Scaling Per Tick : 5% Strength Stun Duration : 0.5
-    seconds Range : 12.8 meters Radius : 1.6 meters Pulse Radius : 3.2 meters Cooldown
-    : 120 seconds Cost : 50 mana Expand Ability Video'
+  description: If a chained god reaches the , they are Stunned and take Physical Damage
+    Enemies near the also take Physical Damage every 0.25 seconds Rise onto your for
+    up to 5 seconds and fire 3 ensnaring chains. Chains deal Physical Damage , Cripple
+    , and Vortex enemy gods towards the
 aspects:
 - name: Aspect of Ferocity
   kit_changes: Horrible Burns no longer burns but provides Lifesteal and lasts for
@@ -168,7 +149,7 @@ aspects:
     thresholds and deals Attack damage. Trickster Sprit does less damage but provides
     an Attack Speed buff.
 source_url: https://wiki.smite2.com/w/Da_Ji
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Da Ji Basic Attack

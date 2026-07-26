@@ -37,9 +37,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Bastet Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Nightstalker
   details:
@@ -50,11 +48,8 @@ abilities:
   - 'Max Buff Stacks: 3'
   - 'Buff Duration: 10 seconds'
   - 'Reveal Duration: 6 seconds'
-  description: 'Lifesteal; Reveal Gods Notes: Hitting enemies grants Lifesteal . Hitting
-    enemy gods additionally grants stacks of Strength and Reveals them to you for
-    a duration God Lifesteal Buff : 6% + 0.6% Per Level Minion Lifesteal Buff : 6%
-    + 0.15% Per Level Strength Buff : 2 + 0.5 Per Level Max Buff Stacks : 3 Buff Duration
-    : 10 seconds Reveal Duration : 6 seconds Expand Ability Video'
+  description: Hitting enemies grants Lifesteal . Hitting enemy gods additionally
+    grants stacks of Strength and Reveals them to you for a duration
 - slot: 1st Ability
   name: Pounce
   cooldown:
@@ -74,12 +69,9 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'Leap; Return Leap Notes: Leap to a target location, dealing Physical
-    Damage to enemies in the area. For a short duration, reactivate to Leap back to
-    your initial location. You gain increased Movement Speed while you can return
-    Damage : 95 | 150 | 205 | 260 | 315 Damage Scaling : 90% Strength Movement Speed
-    : 25% Range : 8.8 meters Radius : 3.2 meters Cooldown : 14 seconds Cost : 60 |
-    65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Leap to a target location, dealing Physical Damage to enemies in the
+    area. For a short duration, reactivate to Leap back to your initial location.
+    You gain increased Movement Speed while you can return
 - slot: 2nd Ability
   name: Razor Whip
   cooldown:
@@ -98,11 +90,8 @@ abilities:
   - 'Cone Angle: 68 degrees'
   - 'Cooldown: 10 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
-  description: 'Cone Bleed Swipe at enemies in a cone, causing them to Bleed for Physical
-    Damage over time Damage Per Tick : 40 | 55 | 70 | 85 | 100 Damage Scaling Per
-    Tick : 30% Strength Bleed Duration : 2 seconds Range : 5.6 meters Cone Angle :
-    68 degrees Cooldown : 10 seconds Cost : 40 | 45 | 50 | 55 | 60 mana Expand Ability
-    Video'
+  description: Cone Bleed Swipe at enemies in a cone, causing them to Bleed for Physical
+    Damage over time
 - slot: 3rd Ability
   name: Ensnaring Claw
   cooldown:
@@ -128,15 +117,9 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 16 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'Line Cat Root Notes: Send a cat forward. If it hits an enemy, it Roots
-    them and nearby enemies briefly and deals Physical Damage . The cat persists for
-    a duration or until defeated, attacking nearby enemies for Physical Damage and
-    applying a Slow Damage : 55 | 90 | 125 | 160 | 195 Damage Scaling : 60% Strength
-    Cat Attack Damage : 20 | 25 | 30 | 35 | 40 Cat Attack Damage Scaling : 30% Strength
-    + 30% Intelligence + 30% Attack Damage Root Duration : 0.5 seconds Slow : 20%
-    Slow Duration : 2 seconds Cat Duration : 4 seconds Range : 11.2 meters Radius
-    : 1.6 meters Cooldown : 16 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability
-    Video'
+  description: Send a cat forward. If it hits an enemy, it Roots them and nearby enemies
+    briefly and deals Physical Damage . The cat persists for a duration or until defeated,
+    attacking nearby enemies for Physical Damage and applying a Slow
 - slot: Ultimate
   name: Cat Call
   cooldown:
@@ -164,13 +147,8 @@ abilities:
   - 'Cats Dash Range: 3.2 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 | 95 | 100 | 105 | 110'
-  description: 'Spirit Cats, Sync Notes: Summon 3 spirit cats that follow you and
-    attack nearby enemies for a duration. While they are active, you gain Strength
-    Cat Dash Damage : 40 | 65 | 90 | 115 | 140 Cat Dash Damage Scaling : 50% Strength
-    Cat Attack Damage : 5 | 10 | 15 | 20 | 25 Cat Attack Damage Scaling : 20% Strength
-    Slow : 12 | 14 | 16 | 18 | 20% Slow Duration : 2 seconds Strength Buff : 21 |
-    27 | 33 | 39 | 45 Buff Duration : 10 seconds Cats Dash Range : 3.2 meters Cooldown
-    : 90 seconds Cost : 90 | 95 | 100 | 105 | 110 Expand Ability Video'
+  description: Summon 3 spirit cats that follow you and attack nearby enemies for
+    a duration. While they are active, you gain Strength
 aspects:
 - name: Aspect of the Watchful Pride
   kit_changes: Pounce can no longer be activated again to return to you to your starting
@@ -178,7 +156,7 @@ aspects:
     Whip deals less damage but Disarms bleeding enemies. Ensnaring Claw Stuns instead
     of Rooting. Cat Call becomes Huntress of Bast.
 source_url: https://wiki.smite2.com/w/Bastet
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Bastet Basic Attack

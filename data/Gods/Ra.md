@@ -36,18 +36,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Ra Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Speed of Light
   details:
   - 'Movement Speed: 5% Per Stack'
   - 'Buff Duration: 15 seconds'
   - 'Max Buff Stacks: 3'
-  description: 'USE ABILITY, MOVE FASTER After using an ability gain Movement Speed
-    Movement Speed : 5% Per Stack Buff Duration : 15 seconds Max Buff Stacks : 3 Expand
-    Ability Video'
+  description: USE ABILITY, MOVE FASTER After using an ability gain Movement Speed
 - slot: 1st Ability
   name: Celestial Beam
   cooldown:
@@ -66,10 +62,7 @@ abilities:
   - 'Radius: 0.72 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80'
-  description: 'LINE DAMAGE Notes: Summon a moving beam of intense light, dealing
-    Magical Damage to enemies Damage : 95 | 155 | 215 | 275 | 335 Damage Scaling :
-    105% Intelligence Range : 12.8 meters Radius : 0.72 meters Cooldown : 10 seconds
-    Cost : 60 | 65 | 70 | 75 | 80 Expand Ability Video'
+  description: Summon a moving beam of intense light, dealing Magical Damage to enemies
 - slot: 2nd Ability
   name: Divine Light
   cooldown:
@@ -103,14 +96,9 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'AREA SLOW, CONDITIONAL BLIND Notes: For a period after activation,
-    Attacks fire solar rays , dealing Magical Damage Emanate light in the area around
-    you that repeatedly Slows enemies before exploding dealing Magical Damage Damage
-    : 85 | 135 | 185 | 235 | 285 Damage Scaling : 70% Intelligence Solar Ray Damage
-    : 10 | 20 | 30 | 40 | 50 Solar Ray Damage Scaling : 85% Intelligence Solar Ray
-    Duration : 4 seconds Slow : 5% Slow Duration : 3 seconds Radius : 4.8 meters Cooldown
-    : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand
-    Ability Video'
+  description: For a period after activation, Attacks fire solar rays , dealing Magical
+    Damage Emanate light in the area around you that repeatedly Slows enemies before
+    exploding dealing Magical Damage
 - slot: 3rd Ability
   name: Solar Blessing
   cooldown:
@@ -139,14 +127,9 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 65 | 75 | 85 | 95 | 105 mana'
-  description: 'AREA HEAL BUFF DAMAGE Notes: The light empowers you and allied gods
-    in the area, granting Strength , Intelligence , and Protections Summon a pillar
-    of blessed light repeatedly dealing Magical Damage and Healing allies Damage Per
-    Tick : 20 | 32 | 44 | 56 | 68 Damage Scaling Per Tick : 35% Intelligence Heal
-    Per Tick : 16 | 22 | 28 | 34 | 40 Strength : 10 | 15 | 20 | 25 | 30 Intelligence
-    : 20 | 25 | 30 | 35 | 40 Protections : 15 | 20 | 25 | 30 | 35 Range : 8.8 meters
-    Radius : 3.2 meters Cooldown : 15 | 14.5 | 14 | 13.5 | 13 seconds Cost : 65 |
-    75 | 85 | 95 | 105 mana Expand Ability Video'
+  description: The light empowers you and allied gods in the area, granting Strength
+    , Intelligence , and Protections Summon a pillar of blessed light repeatedly dealing
+    Magical Damage and Healing allies
 - slot: Ultimate
   name: Searing Pain
   cooldown:
@@ -167,18 +150,15 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 80 | 75 | 70 | 65 | 60 seconds'
   - 'Cost: 90 mana'
-  description: 'LONG RANGE DAMAGE BEAM Notes: Blast enemies in front of you with a
-    wave of extreme heat, dealing Magical Damage Damage : 375 | 450 | 525 | 600 |
-    675 Damage Scaling : 125% Intelligence True Damage : 8% of Enemy''s Max Health
-    Range : 19.2 meters Radius : 1.6 meters Cooldown : 80 | 75 | 70 | 65 | 60 seconds
-    Cost : 90 mana Expand Ability Video'
+  description: Blast enemies in front of you with a wave of extreme heat, dealing
+    Magical Damage
 aspects:
 - name: Aspect of Thermotherapy
   kit_changes: Solar Blessing and Searing Pain only deal base damage with no scaling.
     In return, Solar Blessing can be placed on allied gods, attaching to them and
     Searing Pain Heals allied hits.
 source_url: https://wiki.smite2.com/w/Ra
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Ra Basic Attack

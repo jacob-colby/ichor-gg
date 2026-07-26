@@ -36,9 +36,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Hades Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Blight
   details:
@@ -47,10 +45,8 @@ abilities:
   - 'Damage Reduction: 5%'
   - 'Enhanced Damage Reduction: 10%'
   - 'Debuff Duration: 8 seconds'
-  description: 'ATTACKS, ABILITIES APPLY BLIGHT Notes: ed enemies have reduced Strength
-    and Intelligence Your abilities have extra effects on ed enemies Your attacks
-    and abilities apply Damage Reduction : 5% Enhanced Damage Reduction : 10% Debuff
-    Duration : 8 seconds Expand Ability Video'
+  description: ed enemies have reduced Strength and Intelligence Your abilities have
+    extra effects on ed enemies Your attacks and abilities apply
 - slot: 1st Ability
   name: Death From Below
   cooldown:
@@ -75,11 +71,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'LEAP; SLOWS BLIGHTED Notes: Leap through the underworld, then emerge
-    and deal Magical Damage to enemies Damage : 70 | 115 | 160 | 205 | 250 Damage
-    Scaling : 85% Intelligence Slow : 20 | 25 | 30 | 35 | 40% Slow Duration : 2 seconds
-    Range : 8.8 meters Radius : 3.2 meters Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds
-    Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Leap through the underworld, then emerge and deal Magical Damage to
+    enemies
 - slot: 2nd Ability
   name: Shroud of Darkness
   cooldown:
@@ -101,11 +94,7 @@ abilities:
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 60 mana'
-  description: 'CONE SILENCE; FEARS BLIGHTED Notes: Silence enemies in front of you
-    Silence Duration : 0.75 | 0.85 | 0.95 | 1.05 | 1.15 seconds Silence Duration Scaling
-    : 0.2 seconds Per 100 Item Protections, Stacking up to 2 Times Range : 5.6 meters
-    Cone Angle : 110 degrees Cooldown : 14 | 13 | 12 | 11 | 10 seconds Cost : 60 mana
-    Expand Ability Video'
+  description: Silence enemies in front of you
 - slot: 3rd Ability
   name: Devour Souls
   cooldown:
@@ -138,13 +127,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'AREA DAMAGE; BLIGHTED EXPLODE Notes: Devour the souls of your enemies,
-    dealing Magical Damage to enemies around you Damage : 70 | 105 | 140 | 175 | 210
-    Damage Scaling : 75% Intelligence Detonation Damage : 10 | 25 | 40 | 55 | 70 Detonation
-    Damage Scaling : 45% Intelligence Heal : 10 | 19 | 28 | 37 | 46 Heal Scaling :
-    3.5% Physical Protection + 3.5% Magical Protection + 3.5% Intelligence Radius
-    : 3.2 meters Cooldown : 10 | 9.5 | 9 | 8.5 | 8 seconds Cost : 60 | 65 | 70 | 75
-    | 80 mana Expand Ability Video'
+  description: Devour the souls of your enemies, dealing Magical Damage to enemies
+    around you
 - slot: Ultimate
   name: Pillar of Agony
   cooldown:
@@ -169,16 +153,12 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'AREA DAMAGE VORTEX Notes: You are CC Immune , and gain increased Protections
-    while Channeling Channel a Vortex around you that drags foes to their death, and
-    repeatedly deals Magical Damage Damage Per Tick : 40 | 55 | 70 | 85 | 100 Damage
-    Scaling Per Tick : 25% Intelligence Protections : 30 | 50 | 70 | 90 | 110 + 10%
-    Protections From Items Protections Reduced : 10 | 13 | 16 | 19 | 22 + 10% Debuff
-    Duration : 4 seconds Radius : 4.8 meters Cooldown : 90 seconds Cost : 100 mana
-    Expand Ability Video'
+  description: You are CC Immune , and gain increased Protections while Channeling
+    Channel a Vortex around you that drags foes to their death, and repeatedly deals
+    Magical Damage
 aspects: []
 source_url: https://wiki.smite2.com/w/Hades
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Hades Basic Attack

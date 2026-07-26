@@ -3,27 +3,35 @@ import type { Route } from "./useHashRoute";
 export const SITE_NAME = "ichor";
 export const SITE_TITLE = "ichor — SMITE 2 build recommender";
 
-const VIEW_LABEL: Record<string, string> = {
-  builds: "Builds",
-  draft: "Draft",
-  items: "Items",
+const ROSTER_LABEL: Record<string, string> = {
   tiers: "Tier list",
+  items: "Items",
+  draft: "Draft",
   patch: "Patch notes",
+};
+
+/** What each lens is called once it's scoped to one god. The god's name leads,
+ *  because that is what the reader is looking at. */
+const GOD_LABEL: Record<string, string> = {
+  kit: "kit",
+  items: "items",
+  ranking: "ranking",
 };
 
 /** Tab/History title for a route.
  *
- * These get pasted into Discord and sit in browser history, so a page about
- * one god should say so — "Agni — ichor" beats six identical entries reading
- * "ichor". Home keeps the full tagline since that's the shareable landing.
+ * These get pasted into Discord and sit in browser history, so a page about one
+ * god should say so — "Ra — ichor" beats six identical entries reading "ichor",
+ * and now that a god has four lenses, "Ra’s items — ichor" beats four identical
+ * "Ra" entries. The roster board keeps the full tagline; it's the landing.
  */
 export function documentTitle(route: Route, godName?: string): string {
-  if (route.view === "home") return SITE_TITLE;
-  if (route.view === "builds") {
-    const god = godName ?? route.god;
-    return god ? `${god} — ${SITE_NAME}` : `Builds — ${SITE_NAME}`;
+  const god = godName ?? route.god;
+  if (god) {
+    const label = GOD_LABEL[route.lens];
+    return label ? `${god}’s ${label} — ${SITE_NAME}` : `${god} — ${SITE_NAME}`;
   }
-  if (route.view === "items" && route.item) return `${route.item} — ${SITE_NAME}`;
-  const label = VIEW_LABEL[route.view];
+  if (route.lens === "items" && route.item) return `${route.item} — ${SITE_NAME}`;
+  const label = ROSTER_LABEL[route.lens];
   return label ? `${label} — ${SITE_NAME}` : SITE_TITLE;
 }

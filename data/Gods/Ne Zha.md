@@ -39,9 +39,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Ne Zha Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Righteous Spirit
   details:
@@ -51,10 +49,8 @@ abilities:
   - 'Critical Damage Increase: 0.025% Per Stack'
   - 'Stacks Duration: 12 seconds'
   - 'Max Stacks: 20'
-  description: 'Stacking Buff Notes: Build stacks by hitting enemies to gain Movement
-    Speed . Stacks reset if you have not taken or dealt damage recently Movement Speed
-    : 0.5% Per Stack Critical Damage Increase : 0.025% Per Stack Stacks Duration :
-    12 seconds Max Stacks : 20 Expand Ability Video'
+  description: Build stacks by hitting enemies to gain Movement Speed . Stacks reset
+    if you have not taken or dealt damage recently
 - slot: 1st Ability
   name: Universe Ring Toss
   cooldown:
@@ -89,17 +85,10 @@ abilities:
   - 'Radius: 8.8 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'Bouncing Projectile Notes: Throw your ring to deal Physical Damage
-    , then bounce between enemies dealing Physical Damage , applying a Physical Protection
-    Debuff and Slowing . After the final hit, the ring bounces into the air, granting
-    Ne Zha an extra throw if he catches it Initial Damage : 90 | 120 | 150 | 180 |
-    210 Initial Damage Scaling : 60% Strength Bounce Damage : 75 | 100 | 125 | 150
-    | 175 Bounce Damage Scaling : 20% Strength Free Ring Damage : 80 | 110 | 140 |
-    170 | 200 Free Ring Damage Scaling : 80% Strength Physical Protection Reduced
-    : 5 | 7 | 9 | 11 | 13% Debuff Duration : 1 second Slow : 12.5% Slow Duration :
-    1 second Debuff Duration : 5% Movement Speed : 5% Buff Duration : 2 seconds Bounces
-    : 4 | 5 | 6 | 7 | 8 Range : 0.96 meters Radius : 8.8 meters Cooldown : 10 seconds
-    Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Throw your ring to deal Physical Damage , then bounce between enemies
+    dealing Physical Damage , applying a Physical Protection Debuff and Slowing .
+    After the final hit, the ring bounces into the air, granting Ne Zha an extra throw
+    if he catches it
 - slot: 2nd Ability
   name: Flaming Spear
   cooldown:
@@ -118,11 +107,7 @@ abilities:
   - 'Heal: 4 | 6 | 8 | 10 | 12 Per Stack'
   - 'Cooldown: 14 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'Attack Speed & Critical Strike Notes: Ignite your spear to gain Attack
-    Speed and Critical Strike Chance Attack Speed : 35 | 40 | 45 | 50 | 55% Critical
-    Strike Chance : 20% Buff Duration : 4 | 4.5 | 5 | 5.5 | 6 seconds Heal : 4 | 6
-    | 8 | 10 | 12 Per Stack Cooldown : 14 seconds Cost : 55 | 60 | 65 | 70 | 75 mana
-    Expand Ability Video'
+  description: Ignite your spear to gain Attack Speed and Critical Strike Chance
 - slot: 3rd Ability
   name: Armillary Sash
   cooldown:
@@ -142,10 +127,7 @@ abilities:
   - 'Radius: 0.96 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 75 mana'
-  description: 'Skillshot Stun into Leap Notes: Throw your , Stunning the first enemy
-    god hit and Leaping to them Damage : 90 | 125 | 160 | 195 | 230 Damage Scaling
-    : 80% Strength Stun Duration : 1 second Range : 11.2 meters Radius : 0.96 meters
-    Cooldown : 12 seconds Cost : 75 mana Expand Ability Video'
+  description: Throw your , Stunning the first enemy god hit and Leaping to them
 - slot: Ultimate
   name: Wind Fire Wheels
   cooldown:
@@ -172,17 +154,11 @@ abilities:
   - 'Radius: 0.96 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'Isolating Charge Notes: Dash forward, gaining protections and becoming
-    CC Immune . Hitting an enemy god deals Physical Damage and Launches them and yourself
-    into the sky, triggering a 3-hit combo that deals Physical Damage . Successful
-    timing can allow these to Critically Strike. After the combo, slam the target
-    down dealing Physical Damage and Knocking Up nearby enemies Initial Damage : 50
-    | 105 | 160 | 215 | 270 Initial Damage Scaling : 65% Strength Combo Damage : 23
-    | 40 | 57 | 74 | 91 Combo Damage Scaling : 45% Strength Landing Damage : 50 |
-    105 | 160 | 215 | 270 Landing Damage Scaling : 65% Strength Protections Buff :
-    30 | 35 | 40 | 45 | 50 Protections Buff Duration : 5 seconds Range : 8.8 meters
-    Radius : 0.96 meters Cooldown : 90 seconds Cost : 50 | 55 | 60 | 65 | 70 mana
-    Expand Ability Video'
+  description: Dash forward, gaining protections and becoming CC Immune . Hitting
+    an enemy god deals Physical Damage and Launches them and yourself into the sky,
+    triggering a 3-hit combo that deals Physical Damage . Successful timing can allow
+    these to Critically Strike. After the combo, slam the target down dealing Physical
+    Damage and Knocking Up nearby enemies
 aspects:
 - name: Aspect of the Righteous Flame
   kit_changes: Righteous Sprit no longer stacks on hitting enemies. Taking damage
@@ -191,7 +167,7 @@ aspects:
     AoE attack that buffs Ne Zha's Attacks and consumes Righteous Spirit to burst
     heal.
 source_url: https://wiki.smite2.com/w/Ne_Zha
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Ne Zha Basic Attack

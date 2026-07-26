@@ -235,3 +235,56 @@ def test_parse_abilities_captures_description_and_details():
     assert "Damage: 90/140/190" in a["details"]
     assert "volley" in a["description"].lower()
     assert "Cooldown: 14" not in a["description"]
+
+
+ABILITY_HTML = """
+<h2><span id="Abilities">Abilities</span></h2>
+<table class="wikitable">
+  <tr><th><span>1st Ability</span><span>Celestial Beam</span></th></tr>
+  <tr><td>
+    LINE DAMAGE Notes : Summon a moving beam of intense light, dealing Magical Damage to enemies
+    Damage : 95 | 155 Damage Scaling : 105% Intelligence Cooldown : 10 seconds
+    Expand Ability Video
+    <ul>
+      <li>Damage: 95 | 155</li>
+      <li>Damage Scaling: 105% Intelligence</li>
+      <li>Cooldown: 10 seconds</li>
+    </ul>
+  </td></tr>
+</table>
+"""
+
+
+def _first_ability(html):
+    from bs4 import BeautifulSoup
+    return wiki_parser._parse_abilities(BeautifulSoup(html, "html.parser"))[0]
+
+
+def test_ability_description_drops_the_wikis_own_ui_chrome():
+    """"Expand Ability Video" is a control on the wiki page, not ability text.
+    It shipped as body copy on all 513 abilities."""
+    a = _first_ability(ABILITY_HTML)
+    assert "Expand Ability Video" not in a["description"]
+
+
+def test_ability_description_does_not_repeat_the_detail_lines():
+    """The wiki spaces colons differently inline than in list items, so the
+    subtraction used to match nothing and every ability printed its stat block
+    twice — once as prose, once as parsed chips."""
+    a = _first_ability(ABILITY_HTML)
+    assert "105% Intelligence" not in a["description"]
+    assert "10 seconds" not in a["description"]
+    # ...while the parsed details keep them.
+    assert any("105% Intelligence" in d for d in a["details"])
+
+
+def test_ability_description_keeps_the_actual_prose():
+    a = _first_ability(ABILITY_HTML)
+    assert "Summon a moving beam of intense light" in a["description"]
+
+
+def test_ability_description_strips_the_tagline_up_to_notes():
+    """Everything before "Notes:" is a category tagline or the god's own name."""
+    a = _first_ability(ABILITY_HTML)
+    assert not a["description"].startswith("LINE DAMAGE")
+    assert "Notes:" not in a["description"]

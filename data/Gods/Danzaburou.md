@@ -36,9 +36,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Danzaburou Notes: Fire a projectile that deals Physical Damage to
-    the first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
-    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Dishonest Duplication
   details:
@@ -49,9 +47,8 @@ abilities:
   - 'Note: This feature is bugged, as clones are unable to spawn additional clones'
   - Clones target the enemy that was hit when they were created
   - 'Clone Spawn Chance: 5% + 0.5% Per Level + 0.05% Intelligence'
-  description: 'ATTACKS CREATE CLONES Notes: You have a chance of spawning a clone
-    of yourself with each Basic Attack hitting an enemy Clone Spawn Chance : 5% +
-    0.5% Per Level + 0.05% Intelligence Expand Ability Video'
+  description: You have a chance of spawning a clone of yourself with each Basic Attack
+    hitting an enemy
 - slot: 1st Ability
   name: Fool's Gold
   cooldown:
@@ -77,12 +74,8 @@ abilities:
   - 'Explode Radius: 1.92 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: 'THREE EXPLODING BAGS Notes: Roll out 3 money bags that deal Physical
-    Damage to enemies hit and then explode dealing Physical Damage Damage : 95 | 145
-    | 195 | 245 | 295 Damage Scaling : 90% Strength + 65% Intelligence Explode Damage
-    : 30 | 55 | 80 | 105 | 130 Explode Damage Scaling : 20% Strength + 40% Intelligence
-    Range : 11.2 meters Radius : 0.51 meters Explode Radius : 1.92 meters Cooldown
-    : 11 seconds Cost : 70 | 75 | 80 | 85 | 90 mana Expand Ability Video'
+  description: Roll out 3 money bags that deal Physical Damage to enemies hit and
+    then explode dealing Physical Damage
 - slot: 2nd Ability
   name: Alluring Spirits
   cooldown:
@@ -117,13 +110,8 @@ abilities:
   - 'Outer Radius: 2.8 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'HEAL, AREA TAUNT Notes: Drink some sake, Healing over time before
-    throwing the bottle, dealing Physical Damage to enemies hit Heal Per Tick : 20
-    | 25 | 30 | 35 | 40 Heal Scaling Per Tick : 3% Intelligence Damage : 90 | 140
-    | 190 | 240 | 290 Damage Scaling : 70% Strength + 40% Intelligence Slow : 10%
-    Per Stack Taunt Duration : 1 second Hits to Break : 2 | 2 | 3 | 3 | 4 Range :
-    7.2 meters Inner Radius : 2 meters Outer Radius : 2.8 meters Cooldown : 14 | 13.5
-    | 13 | 12.5 | 12 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Drink some sake, Healing over time before throwing the bottle, dealing
+    Physical Damage to enemies hit
 - slot: 3rd Ability
   name: Tanuki Trickery
   cooldown:
@@ -144,15 +132,11 @@ abilities:
   - 'Radius: 3.84 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 70 mana'
-  description: 'SPEED AREA, STEALTH EXIT Notes: As a leaf you gain increased Movement
-    Speed , Slow Immunity , and a buff that causes your next Basic Attack to deal
-    Physical Damage Create a field where you gain Movement Speed , Slow Immunity ,
-    your Attack Movement Penalty is removed , and your Dishonest Duplication chance
-    is doubled . When you leave the area, it disappears and you transform into a leaf
-    while decoys mimic your movement Damage : 35 | 45 | 55 | 65 | 75 Damage Scaling
-    : 55% Strength + 100% Intelligence Movement Speed : 20% Bonus Movement Speed :
-    30 | 32.5 | 35 | 37.5 | 40% Slow : 20% Radius : 3.84 meters Cooldown : 14 seconds
-    Cost : 70 mana Expand Ability Video'
+  description: As a leaf you gain increased Movement Speed , Slow Immunity , and a
+    buff that causes your next Basic Attack to deal Physical Damage Create a field
+    where you gain Movement Speed , Slow Immunity , your Attack Movement Penalty is
+    removed , and your Dishonest Duplication chance is doubled . When you leave the
+    area, it disappears and you transform into a leaf while decoys mimic your movement
 - slot: Ultimate
   name: Uproarious Rocket
   cooldown:
@@ -175,19 +159,15 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'FIRE OR RIDE STUNNING ROCKET Notes: Fire a rocket that locks onto
-    enemy gods or reactive this ability to become the rocket! The rocket deals Physical
-    Damage , Stuns the first enemy god hit, and explodes dealing Physical Damage Damage
-    : 400 | 450 | 500 | 550 | 600 Damage Scaling : 100% Strength + 100% Intelligence
-    Explode Damage : 225 | 270 | 315 | 360 | 405 Explode Damage Scaling : 50% Strength
-    + 80% Intelligence Stun Duration : 1 | 1.1 | 1.2 | 1.3 | 1.4 seconds Radius :
-    4.8 meters Cooldown : 90 seconds Cost : 100 mana Expand Ability Video'
+  description: Fire a rocket that locks onto enemy gods or reactive this ability to
+    become the rocket! The rocket deals Physical Damage , Stuns the first enemy god
+    hit, and explodes dealing Physical Damage
 aspects:
 - name: Aspect of Fellowship
   kit_changes: Alluring Spirits no longer throws out a sake bottle but instead spawns
     2 Clones. All of your Clones deal more damage and take less damage.
 source_url: https://wiki.smite2.com/w/Danzaburou
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Danzaburou Basic Attack

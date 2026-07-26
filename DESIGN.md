@@ -122,17 +122,48 @@ These two are a **direction pair, not a good/bad pair**. They always answer one 
 
 **Display Font:** Rajdhani (sans-serif fallback)
 **Body Font:** Inter (sans-serif fallback)
-**Label/Mono Font:** JetBrains Mono (monospace)
+**Measurement Font:** JetBrains Mono (monospace)
 
-**Character:** A tactical, slightly technical pairing — Rajdhani's condensed geometric caps read as "console display" for names and headings, Inter carries all reading-length text cleanly, and JetBrains Mono in small tracked uppercase marks anything that's a label, tag, or section eyebrow rather than content.
+**Character:** A tactical, slightly technical pairing — Rajdhani's condensed geometric caps read as "console display" for names and headings, Inter carries all reading-length text cleanly, and JetBrains Mono sets the numbers. The instrument feel comes from figures that line up in a column, not from a typeface applied to everything small.
 
-### Hierarchy
-- **Display** (Rajdhani, semibold/bold, ~text-xl, tight leading): god names on cards, dialog headings.
-- **Body** (Inter, regular/medium, text-xs–text-sm): descriptions, list content, tooltip copy.
-- **Label** (JetBrains Mono, medium, text-[10–11px], uppercase, tracked ~0.08–0.1em): section eyebrows ("Pinned", "Filters", god counts), status tags.
+### The scale
+
+Seven steps, defined once in `index.css` as `--text-*` theme tokens and used by name. **Never an arbitrary size.**
+
+| Step | px | Use |
+|---|---|---|
+| `text-micro` | 10 | dense mono numerals inside a grid cell — the floor |
+| `text-label` | 11 | section eyebrows, tags, secondary chrome |
+| `text-small` | 12 | secondary content, chips, captions |
+| `text-body` | 13 | default reading size |
+| `text-lead` | 15 | intro paragraphs, dialog body |
+| `text-title` | 20 | section titles, god/item names in a detail view |
+| `text-display` | 32 | the one page claim per surface |
+
+The app previously ran **sixteen** sizes with nine of them inside a 4px band (9 / 9.5 / 10 / 10.5 / 11 / 11.5 / 12 / 12.5 / 13), and 61–84% of every surface's text at or below 10.5px. That is why it read flat: with no ratio between steps there is no hierarchy to read, only small text. The scale is tight at the bottom because this is a dense data tool and open at the top so a page can make a claim.
+
+**10px is a hard floor.** Nothing below it ships — the god sidebar was running 7px.
 
 ### Named Rules
-**The Mono-Label Rule.** Any piece of UI that names a category, state, or count rather than describing content sets in JetBrains Mono, uppercase, tracked — never Inter.
+**The Measurement Rule.** JetBrains Mono sets **quantities and the codes that align beneath them** — numerals, a unit bound to a numeral (`2500g`, `47% win`), tier letters, `T1`/`T2`/`T3`, score pairs, cumulative gold. Nothing else. The test is: *would it be wrong if these characters didn't line up in a column?* If yes, mono; if no, Inter or Rajdhani.
+
+The one non-numeric exception is the **section eyebrow** — the `text-label` uppercase tracked line that titles a section or a table column. That is the brief's "small mono labels", and it is a *system*: one per section, never a general-purpose style for secondary text.
+
+Everything else sets in the reading faces, including the words *around* a number. `mean +0.03 · 4 below · 5 differ` is a mono run containing three English words; it splits, and only the figures stay mono.
+
+This replaces the Mono-Label Rule, which read "any piece of UI that names a category, state, or count sets in JetBrains Mono". In a data tool that is nearly every string: a lane is a category, `no community data` is a state, and the app followed the rule faithfully into **73% of the items shelf, 65% of the tier list and 51% of Home being set in the label face**. The measure of the failure is that mono had stopped meaning anything — when the body face *is* the mono face, a number no longer stands out from the sentence around it. Named, so it is not re-derived: navigation, actions, verdicts, names, states, effect tags, and prose are **never** mono, however small they are.
+
+**The Subject Rule.** The shell's top level is *who you're looking at* — the whole roster, or one god — and the tools are lenses on that subject, not places you go. A god carries its name, its lane and the model-vs-meta verdict in the header of every lens, so "where does Ra rank" and "what items does the model want for Ra" are one click apart instead of unreachable.
+
+It replaces six flat destinations that were never peers: `Builds` was really "a god", and a god could only be examined from that one route. The cost of that shape was measurable — the icon rail plus the 300px god picker took **38% of the first screen** on the busiest route, and it left `god_item_scores` (40 ranked items for each of 87 gods) readable by exactly one surface, the draft board.
+
+Two consequences worth naming. **The whole roster is a first-class subject**, not a lobby: it keeps the divergence board and the page's one claim, and it owns the `h1` there — the roster banner is deliberately not a heading, because the page below it makes the stronger argument. And **the draft board is a roster lens, not a god's**: a draft takes ten gods and only one is your subject, so filing it under one god would misdescribe it.
+
+**The Linkable-State Rule.** Anything the visitor chose that changes what a surface shows — filters, sort, mode, subject — lives in the hash query string, not in `useState`. "The disputed Mid gods in Joust" and "the undervalued tier-3 anti-heal" are the things this app exists to produce, and for a year none of them could be sent to anyone. Defaults stay out of the query, so a bare `#/tiers` keeps meaning what it always meant; navigating *within* a filtered view carries the query along (`keepQuery`), because clearing the filters that produced the card someone just clicked is never what they asked for. Writes are debounced `replaceState` — a search box bound straight to the address bar trips Safari's 100-writes-per-30s limit in about three seconds of held backspace, and a Back button that walks a query backwards one character at a time is worse than no history at all.
+
+**The Seam Rule.** Every surface names at least one other surface it hands off to, in the visitor's terms rather than as a route label. A destination reachable only from the nav rail is a destination most visitors never form an intent to reach — the draft board sat unlinked for a year. A seam carries state where state exists: "Draft with Chaac" keeps the comp already entered rather than replacing it, because a link that silently discards saved work is worse than no link.
+
+**The One-Claim Rule.** Every surface states its own claim in `text-display`, once, carrying live numbers. The app chrome never repeats it: the header used to print a per-route count that contradicted the surface's own ("159 items" over a shop reading "30 items"). Chrome carries navigation, freshness and actions — nothing the surface is already responsible for saying.
 
 ## Layout
 
@@ -194,6 +225,13 @@ Components should feel **tactile and confident**: presses register physically (a
 - A running total is `null`, not approximate, when any item's cost is unknown — a total with a hole in it misstates the build.
 - The four axes are shown as **contributions, never a sum**: the weights that produce the composite aren't published, so nothing in the UI may imply they add up.
 
+### Value receipt (items shop)
+- An efficiency verdict is shown **decomposed, never as a bucket alone**: `3000g · fair 2756g · +244g`. The three-value label on its own could say "Premium" but not by how much, which is the number that decides a purchase.
+- The detail is a **receipt**: each stat at its fitted gold price, subtotalled, against the actual cost. The pipeline ships `item_gold_values` so this is auditable rather than asserted, and `cost - predicted_cost === residual` holds exactly so the arithmetic on screen always closes.
+- Sort on the **continuous residual**, never the bucket — bucketed sorting tied 30 items for first alphabetically and made the most underpriced item unfindable.
+- Filter options are **derived from the data**. A hardcoded list shipped a `Glyph` option matching nothing while the one Relic was unreachable.
+- Where the model declines to score something, **say why**: tier-1 starters buy an ability rather than stats and sit out the fit on purpose. That is a finding, not a blank — never an em dash.
+
 ### Draft diff (draft board)
 - A re-rank is shown as a **displacement**, never as a lone arrival: `Divine Ruin · replaces Rod of Tahuti · +0.12 · answers anti-heal`. Keep both builds — the un-adapted one reduced to a membership set is why rows could say "swap in" with nothing to swap in for.
 - The magnitude is the model's own bonus, drawn as an `under` bar scaled to the configured clamp. Direction colour is `under` (the model promoting something), never focus-blue.
@@ -211,6 +249,12 @@ Components should feel **tactile and confident**: presses register physically (a
 
 ### Tooltip
 - `rounded-md`, `border-line`, `bg-bg2`, `shadow-card`, small (`text-xs`) copy. Flips above/below the trigger and shifts horizontally to avoid clipping; opens on a short hover delay but instantly on keyboard focus (`role="tooltip"`).
+
+### App chrome (rail + header)
+- Navigation is **two levels, never one**: a subject header naming the roster or the god, then a lens strip beneath it. There is no rail and no second column — the god picker is a dialog, because the subject is named on every screen and only has to be *changed* occasionally. Chrome fell from 38% of the first screen to 22%.
+- The **footer is gone**. Attribution and the "not affiliated with Hi-Rez" line live in Help, where someone looking for them will look; they were holding 43px of every screen forever for something you read once.
+- **One search field**, in the shell, reaching both nouns the product has. There were four "Search gods…" inputs with four different behaviours.
+- The header carries the brand anchor, freshness and actions. **No page title and no count** — see the One-Claim Rule.
 
 ### Navigation (god sidebar)
 - Desktop: fixed 300px column, `border-r border-line`, sticky blurred search/filter header above a scrolling 4-column grid.
@@ -233,7 +277,8 @@ Motion is rationed. A surface gets **one authored moment** — the thing it does
 
 ### Do:
 - **Do** reserve torchlight gold for selection, primary action, or the model's own signal (score/efficiency) — see the Torchlight Rule.
-- **Do** set any label, tag, or count in JetBrains Mono, uppercase and tracked, per the Mono-Label Rule.
+- **Do** set numbers, units bound to a number, and section eyebrows in JetBrains Mono — and nothing else, per the Measurement Rule. A word that happens to sit beside a figure is not a measurement.
+- **Do** put chosen state in the URL, and carry it across navigation within the same view, per the Linkable-State Rule.
 - **Do** keep loading states as layout-shaped skeletons (pulsing `bg-bg2` bars), never a spinner or centered "Loading…".
 - **Do** use the shared `.press` scale-down for every tappable element, and respect `prefers-reduced-motion`.
 - **Do** give a surface a real `<h1>` that states its claim, with `<main>`, a skip link, and a heading order that starts at level 1.

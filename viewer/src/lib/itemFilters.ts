@@ -8,16 +8,38 @@ export interface ItemFilter {
   stat?: string;
 }
 
-/** Numeric tiers render as "T3"; non-numeric labels (e.g. Glyphs, whose wiki
- * "Item Type" row is just "Glyph" with no tier number) render bare. */
+/** Numeric tiers render as "T3"; non-numeric labels (e.g. Relic, whose wiki
+ * "Item Type" row carries no tier number) render bare. */
 export function tierLabel(tier: number | string): string {
-  return typeof tier === "number" ? `T${tier}` : tier;
+  return typeof tier === "number" ? `T${tier}` : String(tier);
+}
+
+/** Every tier actually present, numerics descending then named ones.
+ *
+ * Derived rather than hardcoded: the filter used to offer a `Glyph` option
+ * matching zero items while the one Relic in the set was unreachable.
+ */
+export function tiersPresent(items: Item[]): (number | string)[] {
+  const seen = [...new Set(items.map((i) => i.tier))];
+  const nums = seen.filter((t): t is number => typeof t === "number").sort((a, b) => b - a);
+  const named = seen.filter((t): t is string => typeof t !== "number").sort();
+  return [...nums, ...named];
 }
 
 export function filterItems(items: Item[], f: ItemFilter): Item[] {
   const q = f.q?.trim().toLowerCase();
   return items.filter((it) => {
-    if (q && !it.name.toLowerCase().includes(q)) return false;
+    if (q) {
+      // Name, tags, stat names and the passive — searching "anti-heal" used to
+      // return nothing while a tag filter for it sat two controls away.
+      const haystack = [
+        it.name,
+        ...(it.effect_tags ?? []),
+        ...Object.keys(it.stats ?? {}),
+        it.passive ?? "",
+      ].join(" ").toLowerCase();
+      if (!haystack.includes(q)) return false;
+    }
     if (f.tier != null && it.tier !== f.tier) return false;
     if (f.efficiency) {
       const eff = it.efficiency_tier ?? "untiered";
@@ -29,16 +51,30 @@ export function filterItems(items: Item[], f: ItemFilter): Item[] {
   });
 }
 
-export type SortKey = "name" | "cost-asc" | "cost-desc" | "efficiency";
-const EFF_ORDER: Record<string, number> = { undervalued: 0, fair: 1, premium: 2 };
+export type SortKey = "value" | "name" | "cost-asc" | "cost-desc";
 
+/**
+ * `value` sorts by the continuous residual — most underpriced first.
+ *
+ * It used to sort by the three-bucket label, so 30 items tied for first in
+ * alphabetical order and the most underpriced item in the game was not
+ * findable. Unscored items sink rather than being treated as zero.
+ */
 export function sortItems(items: Item[], by: SortKey): Item[] {
   const arr = [...items];
-  if (by === "name") arr.sort((a, b) => a.name.localeCompare(b.name));
-  else if (by === "cost-asc") arr.sort((a, b) => (a.cost ?? 0) - (b.cost ?? 0));
-  else if (by === "cost-desc") arr.sort((a, b) => (b.cost ?? 0) - (a.cost ?? 0));
-  else if (by === "efficiency")
-    arr.sort((a, b) => (EFF_ORDER[a.efficiency_tier ?? ""] ?? 9) - (EFF_ORDER[b.efficiency_tier ?? ""] ?? 9));
+  const byName = (a: Item, b: Item) => a.name.localeCompare(b.name);
+  if (by === "name") arr.sort(byName);
+  else if (by === "cost-asc") arr.sort((a, b) => (a.cost ?? 0) - (b.cost ?? 0) || byName(a, b));
+  else if (by === "cost-desc") arr.sort((a, b) => (b.cost ?? 0) - (a.cost ?? 0) || byName(a, b));
+  else {
+    arr.sort((a, b) => {
+      const ra = a.efficiency?.residual, rb = b.efficiency?.residual;
+      if (ra == null && rb == null) return byName(a, b);
+      if (ra == null) return 1;
+      if (rb == null) return -1;
+      return ra - rb || byName(a, b);
+    });
+  }
   return arr;
 }
 
@@ -47,13 +83,63 @@ export interface EfficiencyMeta {
   text: string;
   cls: string;
 }
+
+/** "Undervalued / Fair / Premium" — the same words the Legend teaches. The
+ * shop used to say "Efficient", pairing a quality word with a price word, so
+ * one signal had two names in two places. */
 export const EFFICIENCY: EfficiencyMeta[] = [
-  { key: "undervalued", text: "Efficient", cls: "bg-under/20 text-under" },
-  { key: "fair", text: "Fair", cls: "bg-line text-muted" },
+  { key: "undervalued", text: "Undervalued", cls: "bg-under/20 text-under" },
+  { key: "fair", text: "Fair", cls: "bg-bg3 text-muted" },
   { key: "premium", text: "Premium", cls: "bg-premium/20 text-premium" },
-  { key: "untiered", text: "—", cls: "bg-line text-muted" },
+  { key: "untiered", text: "Not scored", cls: "bg-bg3 text-faint" },
 ];
 
 export function efficiencyLabel(tier: string | null | undefined): EfficiencyMeta {
   return EFFICIENCY.find((e) => e.key === (tier ?? "untiered")) ?? EFFICIENCY[3];
+}
+
+/** Signed gold, always carrying its sign: "+244g" / "-310g". */
+export function residualText(residual: number): string {
+  return `${residual > 0 ? "+" : residual < 0 ? "−" : ""}${Math.abs(residual).toLocaleString("en-US")}g`;
+}
+
+/** What each stat on this item is worth at the fitted per-stat gold prices —
+ * the line items behind a predicted cost. Stats the fit never priced (or
+ * couldn't parse) are returned with a null value rather than a silent zero. */
+export interface StatValueLine {
+  stat: string;
+  raw: string;
+  amount: number | null;
+  goldPerUnit: number | null;
+  subtotal: number | null;
+}
+
+/** The regression's intercept — what the fit charges every item before a
+ * single stat is counted. `predicted_cost` includes it, so a receipt that
+ * lists only the stat rows is short by exactly this much on every item. */
+export const INTERCEPT_KEY = "_intercept";
+
+export function basePrice(goldValues: Record<string, number>): number {
+  return goldValues[INTERCEPT_KEY] ?? 0;
+}
+
+export function statValueLines(item: Item, goldValues: Record<string, number>): StatValueLine[] {
+  return Object.entries(item.stats ?? {}).map(([stat, raw]) => {
+    const amount = parseStatAmount(raw);
+    // The intercept is not a stat and must never be matched as one.
+    const goldPerUnit = stat === INTERCEPT_KEY ? null : goldValues[stat] ?? null;
+    return {
+      stat,
+      raw,
+      amount,
+      goldPerUnit,
+      subtotal: amount != null && goldPerUnit != null ? amount * goldPerUnit : null,
+    };
+  });
+}
+
+/** Mirrors the pipeline's `parse_stat_value`: leading number, percent or not. */
+function parseStatAmount(raw: string): number | null {
+  const m = String(raw).match(/-?\d+(\.\d+)?/);
+  return m ? Number(m[0]) : null;
 }

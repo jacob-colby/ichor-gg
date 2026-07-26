@@ -36,18 +36,15 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Cernunnos Notes: Fire a projectile that deals Physical Damage to the
-    first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
-    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Heavy Glaive
   details:
   - 'Damage Scaling: 30% Strength + 5% Intelligence'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'MELEE ATTACKS CLEAVE Basic Attacks deal bonus Physical Damage to enemies
-    in melee range Damage Scaling : 30% Strength + 5% Intelligence Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: MELEE ATTACKS CLEAVE Basic Attacks deal bonus Physical Damage to enemies
+    in melee range
 - slot: 1st Ability
   name: Shifter Of Seasons
   details:
@@ -70,15 +67,8 @@ abilities:
   - 'Winter Slow: 10 | 11 | 12 | 13 | 14%'
   - 'Winter Slow Scaling: 2.5% Intelligence'
   - 'Winter Slow Duration: 2 seconds'
-  description: 'TOGGLE SEASONAL EFFECTS Notes: Activate to toggle between Spring,
-    Summer, Fall, or Winter Basic Attack bonus effects Spring Lifesteal : 3 | 3.5
-    | 4 | 4.5 | 5% Spring Heal Scaling : 10% Intelligence Summer Damage : 5 | 10 |
-    15 | 20 | 25 Summer Damage Scaling : 12 | 15 | 18 | 21 | 24% Strength or Intelligence
-    (whichever is higher) Fall Physical Protection Reduced : 5 | 10 | 15 | 20 | 25
-    Fall Magical Protection Reduced : 5 | 10 | 15 | 20 | 25 Debuff Scaling : 5% Intelligence
-    Fall Debuff Duration : 10 seconds Winter Slow : 10 | 11 | 12 | 13 | 14% Winter
-    Slow Scaling : 2.5% Intelligence Winter Slow Duration : 2 seconds Expand Ability
-    Video'
+  description: Activate to toggle between Spring, Summer, Fall, or Winter Basic Attack
+    bonus effects
 - slot: 2nd Ability
   name: Bramble Blast
   cooldown:
@@ -103,12 +93,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'AREA DAMAGE + ROOT Notes: Fire a bramble that explodes on hit or upon
-    reaching max range, dealing Physical Damage in an area Initial Damage : 65 | 110
-    | 155 | 200 | 245 Initial Damage Scaling : 75% Strength + 50% Intelligence Damage
-    Per Tick : 8 | 12 | 16 | 20 | 24 Damage Scaling Per Tick : 6% Strength + 12% Intelligence
-    Root Duration : 1 second Range : 8.8 meters Radius : 3.2 meters Cooldown : 15
-    seconds Cost : 50 | 60 | 70 | 80 | 90 mana Expand Ability Video'
+  description: Fire a bramble that explodes on hit or upon reaching max range, dealing
+    Physical Damage in an area
 - slot: 3rd Ability
   name: Horn Charge
   cooldown:
@@ -133,10 +119,7 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: 'DASH THROUGH ENEMIES Notes: Dash forward, passing through all types
-    of enemies Damage : 90 | 140 | 190 | 240 | 290 Damage Scaling : 85% Strength Range
-    : 8.8 meters Radius : 1.6 meters Cooldown : 15 | 14.5 | 14 | 13.5 | 13 seconds
-    Cost : 70 | 75 | 80 | 85 | 90 mana Expand Ability Video'
+  description: Dash forward, passing through all types of enemies
 - slot: Ultimate
   name: The Wild Hunt
   cooldown:
@@ -157,12 +140,8 @@ abilities:
   - 'Radius: 4 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'AREA POLYMORPH Notes: Polymorphed Enemies are Silenced , Disarmed
-    , Slowed , and transformed to look like harmless animals Polymorph enemy gods
-    into wild boars and start Damage : 240 | 320 | 400 | 480 | 540 Damage Scaling
-    : 80% Strength + 100% Intelligence Polymorph Duration : 1.5 seconds Slow : 20%
-    Slow Duration : 1.5 seconds Range : 8.8 meters Radius : 4 meters Cooldown : 90
-    seconds Cost : 100 mana Expand Ability Video'
+  description: Polymorphed Enemies are Silenced , Disarmed , Slowed , and transformed
+    to look like harmless animals Polymorph enemy gods into wild boars and start
 aspects:
 - name: Aspect of Strife
   kit_changes: Your Basic Attacks are now melee and deal increased damage, cleave,
@@ -170,7 +149,7 @@ aspects:
     Horn Charge's cooldown is reduced when hitting a god or Jungle Monster and applies
     Shifter of Seasons.
 source_url: https://wiki.smite2.com/w/Cernunnos
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Cernunnos Basic Attack

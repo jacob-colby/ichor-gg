@@ -37,9 +37,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Thor Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Warrior's Madness
   details:
@@ -53,10 +51,8 @@ abilities:
   - 'Max Stacks: 3'
   - 'Range: 3.2 meters'
   - 'Radius: 8.8 meters'
-  description: 'NEARBY GODS GRANT STRENGTH Notes: You gain Strength for each enemy
-    god near you. After using Berserker''s Barrage or Anvil of Dawn, you gain Thunderstruck
-    Damage : 4 Damage Scaling : 1.25 Per Level + 10% Strength Strength : 10 Max Stacks
-    : 3 Range : 3.2 meters Radius : 8.8 meters Expand Ability Video'
+  description: You gain Strength for each enemy god near you. After using Berserker's
+    Barrage or Anvil of Dawn, you gain Thunderstruck
 - slot: 1st Ability
   name: Mjolnir's Attunement
   cooldown:
@@ -80,11 +76,8 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'BOOMERANG PROJECTILE; RECAST TO TELEPORT Notes: Throw Mjolnir forward,
-    dealing Physical Damage to enemies as it travels. When it reaches max range it
-    flies back to you Damage : 50 | 95 | 140 | 185 | 230 Damage Scaling : 35% Strength
-    Range : 11.2 meters Radius : 0.48 meters Cooldown : 14 seconds Cost : 55 | 60
-    | 65 | 70 | 75 mana Expand Ability Video'
+  description: Throw Mjolnir forward, dealing Physical Damage to enemies as it travels.
+    When it reaches max range it flies back to you
 - slot: 2nd Ability
   name: Tectonic Rift
   cooldown:
@@ -102,11 +95,8 @@ abilities:
   - 'Range: 11.2 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 mana'
-  description: 'LINE STUN WALL Notes: Slam Mjolnir down creating a fissure, dealing
-    Physical Damage to enemies as it erupts. Enemies hit are also Stunned Damage :
-    30 | 50 | 70 | 90 | 110 Damage Scaling : 30% Strength Stun : 1.2 | 1.25 | 1.3
-    | 1.35 | 1.4 seconds Range : 11.2 meters Cooldown : 15 seconds Cost : 60 mana
-    Expand Ability Video'
+  description: Slam Mjolnir down creating a fissure, dealing Physical Damage to enemies
+    as it erupts. Enemies hit are also Stunned
 - slot: 3rd Ability
   name: Berserker Barrage
   cooldown:
@@ -132,13 +122,9 @@ abilities:
   - 'Radius: 180 degrees'
   - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'SPIN AREA DAMAGE Notes: Spin, dealing Physical Damage to enemies around
-    you. You spin twice before unleashing a final cone attack that deals Physical
-    Damage to enemies in front of you Spin Damage : 40 | 60 | 80 | 100 | 120 Spin
-    Damage Scaling : 40% Strength Cone Damage : 65 | 85 | 105 | 125 | 145 Cone Damage
-    Scaling : 85% Strength Range : 3.2 meters Radius : 180 degrees Cooldown : 12 |
-    11.5 | 11 | 10.5 | 10 seconds Cost : 55 | 60 | 65 | 70 | 75 mana Expand Ability
-    Video'
+  description: Spin, dealing Physical Damage to enemies around you. You spin twice
+    before unleashing a final cone attack that deals Physical Damage to enemies in
+    front of you
 - slot: Ultimate
   name: Anvil of Dawn
   cooldown:
@@ -163,11 +149,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 110 | 105 | 100 | 95 | 90 seconds'
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
-  description: 'FLY, AREA STUN Notes: Fly into the sky. Choose a location to land
-    dealing Physical Damage to enemies when landing. Enemies hit are Stunned Damage
-    : 100 | 165 | 230 | 295 | 360 Damage Scaling : 85% Strength Stun Duration : 1.5
-    seconds Range : 32 meters Radius : 3.2 meters Cooldown : 110 | 105 | 100 | 95
-    | 90 seconds Cost : 80 | 90 | 100 | 110 | 120 mana Expand Ability Video'
+  description: Fly into the sky. Choose a location to land dealing Physical Damage
+    to enemies when landing. Enemies hit are Stunned
 aspects:
 - name: Aspect of Thunderstruck
   kit_changes: Thunderstruck is always active but chains for less damage. Triggering
@@ -176,7 +159,7 @@ aspects:
     return damage, his abilities have reduced scaling, and Tectonic Rift has no damage
     scaling.
 source_url: https://wiki.smite2.com/w/Thor
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Thor Basic Attack

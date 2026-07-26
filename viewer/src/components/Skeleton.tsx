@@ -7,24 +7,7 @@
  */
 
 function Bar({ className = "" }: { className?: string }) {
-  return <div className={`rounded bg-bg2 motion-safe:animate-pulse ${className}`} />;
-}
-
-/** Sidebar: a 4-column grid of god-card placeholders. */
-export function GodSidebarSkeleton({ count = 12 }: { count?: number }) {
-  return (
-    <div aria-hidden="true" className="p-3">
-      <Bar className="mb-3 h-9 w-full" />
-      <div className="grid grid-cols-4 gap-2">
-        {Array.from({ length: count }, (_, i) => (
-          <div key={i} className="flex flex-col items-center gap-1.5 rounded-xl border border-line bg-bg2/40 p-2">
-            <Bar className="h-11 w-11 rounded-md" />
-            <Bar className="h-2 w-10" />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  return <div className={`rounded-sm bg-bg2 motion-safe:animate-pulse ${className}`} />;
 }
 
 /** Build page: header block plus a column of slot rows. */
@@ -82,8 +65,10 @@ export function HomeSkeleton({ lanes = 5, rows = 6 }: { lanes?: number; rows?: n
           <Bar className="mt-2 h-3 w-full max-w-[48ch]" />
           <Bar className="mt-2 h-3 w-full max-w-[38ch]" />
         </div>
+        {/* Just the counts line: Home's search moved into the shell, so a
+            field-shaped placeholder here would promise a control that never
+            arrives. */}
         <div className="flex shrink-0 flex-col gap-3 lg:items-end">
-          <Bar className="h-9 w-full rounded-md sm:w-80" />
           <Bar className="h-2.5 w-52" />
         </div>
       </div>
@@ -116,14 +101,27 @@ export function HomeSkeleton({ lanes = 5, rows = 6 }: { lanes?: number; rows?: n
   );
 }
 
-/** Whole-app first paint: sidebar beside a build. */
+/** First paint on a god URL: the subject header and its lens strip, then a
+ * build. Shaped like the Subject Frame — it used to promise a 300px god
+ * sidebar beside the build, which the shell no longer has, so the page
+ * visibly reflowed the moment index.json landed. */
 export function AppSkeleton() {
   return (
-    <div className="flex flex-1 overflow-hidden" data-testid="app-skeleton">
-      <div className="hidden w-64 shrink-0 border-r border-line md:block">
-        <GodSidebarSkeleton />
+    <div className="flex min-w-0 flex-1 flex-col overflow-hidden" data-testid="app-skeleton">
+      <div aria-hidden="true" className="flex items-center gap-3 border-b border-line bg-bg1 px-4 py-3 sm:px-6">
+        <Bar className="h-11 w-11 rounded-lg sm:h-13 sm:w-13" />
+        <div className="flex min-w-0 flex-1 flex-col gap-1.5">
+          <Bar className="h-5 w-32" />
+          <Bar className="h-2.5 w-48" />
+          <Bar className="h-2.5 w-56" />
+        </div>
+        <Bar className="hidden h-8 w-28 rounded-md sm:block" />
       </div>
-      <div className="min-w-0 flex-1">
+      <div aria-hidden="true" className="flex gap-4 border-b border-line px-4 py-3 sm:px-6">
+        <Bar className="h-3 w-12" /><Bar className="h-3 w-8" />
+        <Bar className="h-3 w-20" /><Bar className="h-3 w-24" />
+      </div>
+      <div className="min-w-0 flex-1 overflow-hidden">
         <BuildSkeleton />
       </div>
     </div>

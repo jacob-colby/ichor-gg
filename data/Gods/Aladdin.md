@@ -39,9 +39,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 30% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Aladdin Notes: Deal Magical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 30% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Three Wishes
   details:
@@ -51,8 +49,7 @@ abilities:
     Speed for 10 seconds when leaving the fountain'
   - 'Wish: Power. Reset ability and item cooldowns. Gain a charge of Genie''s Strength'
   description: ONE-TIME POWER UPS Make 3 wishes at any time. Gain a charge of Genie's
-    Strength every 10 seconds (-1 second per enemy slain, -5 seconds for gods) Expand
-    Ability Video
+    Strength every 10 seconds (-1 second per enemy slain, -5 seconds for gods)
 - slot: 1st Ability
   name: Kufic Invocation
   cooldown:
@@ -81,16 +78,9 @@ abilities:
   - 'Max Starting Angle: 90 degrees'
   - 'Cooldown: 13 seconds'
   - 'Cost: 85 mana'
-  description: 'DAMAGE BLAST Notes: Aladdin fires 5 Kufic symbols that deal Magical
-    Damage to enemies in a cone. Charge to narrow down the cone. When fully charged
-    the symbols merge dealing Magical Damage Sending Small Damage : 35 | 65 | 95 |
-    125 | 155 Sending Small Scaling : 33% Intelligence + 30% Strength Sending Large
-    Damage : 60 | 115 | 170 | 225 | 280 Sending Large Scaling : 60% Intelligence +
-    55% Strength Returning Small Damage : 20 | 40 | 60 | 80 | 100 Returning Small
-    Scaling : 20% Intelligence + 30% Strength Returning Large Damage : 35 | 70 | 105
-    | 140 | 175 Returning Large Scaling : 40% Intelligence + 48% Strength Range :
-    8.8/11.2 meters Radius : 0.8/1.6 meters Max Starting Angle : 90 degrees Cooldown
-    : 13 seconds Cost : 85 mana Expand Ability Video'
+  description: Aladdin fires 5 Kufic symbols that deal Magical Damage to enemies in
+    a cone. Charge to narrow down the cone. When fully charged the symbols merge dealing
+    Magical Damage
 - slot: 2nd Ability
   name: Sultan's Grace
   cooldown:
@@ -121,12 +111,7 @@ abilities:
   - 'Radius: 1.92 meters'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'DASH AND PUNCH Notes: Dash forward dealing Magical Damage to enemies
-    you pass through Dash Damage : 70 | 115 | 160 | 205 | 250 Dash Scaling: : 55%
-    Intelligence + 55% Strength Dash Missing HP Bonus Scaling: : 0.13% Intelligence
-    Punch Damage: : 20 | 30 | 40 | 50 | 60 Punch Scaling: : 15% Intelligence + 27%
-    Strength Range : 6.4 meters Radius : 1.92 meters Cooldown : 16 | 15.5 | 15 | 14.5
-    | 14 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Dash forward dealing Magical Damage to enemies you pass through
 - slot: 3rd Ability
   name: Agile Run
   cooldown:
@@ -160,14 +145,8 @@ abilities:
   - 'Leap Radius: 3.2 meters'
   - 'Cooldown: 18 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'RUN ON WALLS Notes: Dash forward. Dashing into a wall causes you to
-    run along it before Leaping to a location, dealing Magical Damage to enemies in
-    the landing area Landing Damage : 60 | 115 | 170 | 225 | 280 Landing Scaling :
-    70% Intelligence + 50% Strength Genie Damage : 35 | 50 | 5 | 80 | 95 Genie Scaling
-    : 20% Intelligence + 40% Strength Genie Knockback Duration : 0.5 seconds Cooldown
-    Reduction : -2 | -2.5 | -3 | -3.5 | -4 seconds Dash Range : 7.2 meters Leap Range
-    : 8.8 meters Leap Radius : 3.2 meters Cooldown : 18 seconds Cost : 50 | 55 | 60
-    | 65 | 70 mana Expand Ability Video'
+  description: Dash forward. Dashing into a wall causes you to run along it before
+    Leaping to a location, dealing Magical Damage to enemies in the landing area
 - slot: Ultimate
   name: Into The Lamp
   cooldown:
@@ -211,16 +190,12 @@ abilities:
   - 'Range: 13.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 70 | 80 | 90 | 00 | 110 mana'
-  description: 'CAGE YOUR FOES Notes: Throw the Lamp forward, dealing Magical Damage
-    and stopping on first enemy god hit. If successful, Aladdin and the enemy god
-    are pulled into the lamp to challenge each other Damage : 150 | 250 | 350 | 450
-    | 550 Damage Scaling : 70% Intelligence + 55% Strength Max Health Shield : 35%
-    Self CDR : 50 | 55 | 60 | 65 | 70 Enemy CDR : 50 Protections : 10 | 15 | 20 |
-    25 | 30 Lamp Interact Size : 4.5 meters Range : 13.6 meters Cooldown : 90 seconds
-    Cost : 70 | 80 | 90 | 00 | 110 mana Expand Ability Video'
+  description: Throw the Lamp forward, dealing Magical Damage and stopping on first
+    enemy god hit. If successful, Aladdin and the enemy god are pulled into the lamp
+    to challenge each other
 aspects: []
 source_url: https://wiki.smite2.com/w/Aladdin
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Aladdin Basic Attack

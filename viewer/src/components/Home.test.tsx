@@ -28,90 +28,6 @@ beforeEach(() => {
   localStorage.clear();
 });
 
-describe("Home search", () => {
-  it("narrows results and navigates to the selected god", () => {
-    render(<Home data={baseData()} />);
-    const search = within(screen.getByTestId("home-search"));
-    fireEvent.change(search.getByPlaceholderText(/search gods/i), { target: { value: "zeu" } });
-    expect(search.getByRole("option", { name: /zeus/i })).toBeInTheDocument();
-    expect(search.queryByRole("option", { name: /^agni/i })).not.toBeInTheDocument();
-
-    fireEvent.click(search.getByRole("option", { name: /zeus/i }));
-    expect(window.location.hash).toBe(toHash.god("Zeus"));
-  });
-
-  it("exposes combobox semantics so the list is reachable and announced", () => {
-    render(<Home data={baseData()} />);
-    const search = within(screen.getByTestId("home-search"));
-    const input = search.getByRole("combobox");
-    expect(input).toHaveAttribute("aria-expanded", "false");
-
-    fireEvent.change(input, { target: { value: "z" } });
-    expect(input).toHaveAttribute("aria-expanded", "true");
-    expect(search.getByRole("listbox")).toBeInTheDocument();
-    expect(screen.getByText(/1 god match/i)).toBeInTheDocument();
-  });
-
-  it("moves the active option with the arrow keys and submits the active one", () => {
-    render(<Home data={baseData()} />);
-    const search = within(screen.getByTestId("home-search"));
-    const input = search.getByRole("combobox");
-    fireEvent.change(input, { target: { value: "i" } }); // Agni, Ymir
-
-    const options = search.getAllByRole("option");
-    expect(options.length).toBeGreaterThan(1);
-    expect(options[0]).toHaveAttribute("aria-selected", "true");
-
-    fireEvent.keyDown(input, { key: "ArrowDown" });
-    expect(search.getAllByRole("option")[1]).toHaveAttribute("aria-selected", "true");
-
-    fireEvent.submit(input.closest("form")!);
-    expect(window.location.hash).toBe(toHash.god("Ymir"));
-  });
-
-  it("wraps the active option around both ends of the list", () => {
-    render(<Home data={baseData()} />);
-    const search = within(screen.getByTestId("home-search"));
-    const input = search.getByRole("combobox");
-    fireEvent.change(input, { target: { value: "i" } });
-
-    // Up from the first option lands on the last.
-    fireEvent.keyDown(input, { key: "ArrowUp" });
-    const options = search.getAllByRole("option");
-    expect(options[options.length - 1]).toHaveAttribute("aria-selected", "true");
-  });
-
-  it("says so when nothing matches instead of rendering an empty list", () => {
-    render(<Home data={baseData()} />);
-    const search = within(screen.getByTestId("home-search"));
-    fireEvent.change(search.getByRole("combobox"), { target: { value: "qqqq" } });
-    expect(search.getByText(/no god matches/i)).toBeInTheDocument();
-    expect(search.queryAllByRole("option")).toHaveLength(0);
-  });
-
-  it("dismisses the overlay when focus leaves the combobox", () => {
-    render(<Home data={baseData()} />);
-    const wrapper = screen.getByTestId("home-search");
-    const search = within(wrapper);
-    fireEvent.change(search.getByRole("combobox"), { target: { value: "zeu" } });
-    expect(search.getByRole("listbox")).toBeInTheDocument();
-
-    // Focus moves to something outside the combobox entirely.
-    fireEvent.blur(wrapper, { relatedTarget: document.body });
-    expect(search.queryByRole("listbox")).not.toBeInTheDocument();
-  });
-
-  it("clears the query on Escape", () => {
-    render(<Home data={baseData()} />);
-    const search = within(screen.getByTestId("home-search"));
-    const input = search.getByRole("combobox") as HTMLInputElement;
-    fireEvent.change(input, { target: { value: "zeu" } });
-    fireEvent.keyDown(input, { key: "Escape" });
-    expect(input.value).toBe("");
-    expect(search.queryByRole("listbox")).not.toBeInTheDocument();
-  });
-});
-
 describe("Home divergence board", () => {
   it("states the disagreement count against the ranked total", () => {
     render(<Home data={baseData({ tierlist })} />);
@@ -247,5 +163,66 @@ describe("Home patch + freshness", () => {
   it("omits the patch clause cleanly when data_patch is absent", () => {
     render(<Home data={baseData({ data_updated: "2026-07-23" })} />);
     expect(screen.getByTestId("home-freshness").textContent).not.toContain("·");
+  });
+});
+
+/* Nothing in the app pointed at the draft board — you met it by clicking an
+ * unlabelled rail icon and guessing. It also survives across sessions, so a
+ * half-entered comp is worth handing back rather than leaving parked. */
+describe("Home — the draft seam", () => {
+  it("invites you in when no draft is saved", () => {
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(within(seam).getByRole("heading", { level: 2 })).toHaveTextContent(/drafting a match/i);
+    expect(within(seam).getByRole("link", { name: /open the draft board/i }))
+      .toHaveAttribute("href", toHash.draft());
+  });
+
+  it("hands back a draft already in progress, named and countable", () => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["Agni", "", "", "", ""], enemies: ["Ymir", "Zeus", "", "", ""],
+    }));
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(within(seam).getByRole("heading", { level: 2 })).toHaveTextContent(/your draft in progress/i);
+    expect(seam).toHaveTextContent(/1 of 5\s*allies/i);
+    expect(seam).toHaveTextContent(/2 of 5\s*enemies/i);
+    expect(within(seam).getByRole("link", { name: /resume draft/i }))
+      .toHaveAttribute("href", "#/draft?m=conquest&me=Agni&e=Ymir%2CZeus");
+  });
+
+  // An ally-only draft adapts nothing yet; saying so is the difference between
+  // a resume link and a resume link that tells you what it still needs.
+  it("says what a draft still needs when only allies are entered", () => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "joust", allies: ["Agni", "", ""], enemies: ["", "", ""],
+    }));
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(seam).toHaveTextContent(/joust/i);
+    expect(seam).toHaveTextContent(/0 of 3\s*enemies/i);
+    expect(seam).toHaveTextContent(/add an enemy and it starts weighing Agni.s core/i);
+  });
+
+  /* Only the first ally slot has a build behind it. A draft carrying enemies
+   * but no god of your own adapts nothing, and claiming otherwise — "the build
+   * already answers those picks" — described a build that doesn't exist. */
+  it("does not claim a build is adapting when your own slot is empty", () => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["", "", "", "", ""], enemies: ["Ymir", "", "", "", ""],
+    }));
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(seam).toHaveTextContent(/your own slot is empty, so there.s no build to adapt yet/i);
+    expect(seam).not.toHaveTextContent(/already answers/i);
+  });
+
+  // The draft adapts one god's core, not the site. The invitation used to say
+  // "every build on the site re-sorts around them".
+  it("claims only what the draft board actually does", () => {
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(seam).toHaveTextContent(/re-sorts that god.s core around them/i);
+    expect(seam).not.toHaveTextContent(/every build on the site/i);
   });
 });

@@ -61,15 +61,40 @@ def _attach_popular_items(builds):
     return builds
 
 
-def _enrich_items(items, tags):
-    """Attach god-agnostic effect_tags + efficiency_tier to each item so the
-    viewer's tooltips can explain an item without recomputing anything."""
-    eff = {}
-    if efficiency.numeric_cost_items(items):
-        eff, _ = efficiency.efficiency_scores(items)
+def _enrich_items(items, tags, eff=None):
+    """Attach god-agnostic effect_tags + the efficiency verdict to each item.
+
+    Ships the model's working, not just its label. The regression already
+    computes a residual per item (`efficiency.efficiency_scores`); shipping
+    only the three-bucket `tier` left the viewer able to say "Premium" but not
+    *by how much*, which is the number a player actually needs to weigh an
+    item's passive against its price.
+
+    `residual` is rounded to whole gold and `predicted_cost` derived back from
+    it, so `cost - predicted_cost == residual` holds exactly on screen — a
+    surface that shows the arithmetic can't have it fail to add up.
+
+    Items outside the scored pool (non-numeric cost, and tier-1 starters, which
+    are passive-priced and deliberately sit out the fit) get `None` for both,
+    never a fabricated zero.
+    """
+    if eff is None:
+        eff = {}
+        if efficiency.numeric_cost_items(items):
+            eff, _ = efficiency.efficiency_scores(items)
     for it in items:
         it["effect_tags"] = tags.get(it["name"], [])
-        it["efficiency_tier"] = eff.get(it["name"], {}).get("tier")
+        scored = eff.get(it["name"])
+        it["efficiency_tier"] = scored.get("tier") if scored else None
+        if scored and isinstance(it.get("cost"), (int, float)):
+            residual = round(scored["residual"])
+            it["efficiency"] = {
+                "predicted_cost": it["cost"] - residual,
+                "residual": residual,
+                "score": round(scored["score"], 4),
+            }
+        else:
+            it["efficiency"] = None
     return items
 
 
@@ -105,20 +130,26 @@ def build_index(repo_root: Path) -> dict:
         return [notes.read_note(p)[0] for p in sorted(dir_path.glob("*.md"))]
 
     tags_map = scoring.load_tags(data_root / "_tags.yaml")
-    items = _enrich_items(_all(items_dir), tags_map)
+    # One fit, reused: the tier list's "ours" item score has to be the same
+    # continuous signal the item verdicts came from, not a second independent
+    # regression. This used to run twice under a comment claiming it didn't.
+    raw_items = _all(items_dir)
+    eff, gold_values = ({}, {})
+    if efficiency.numeric_cost_items(raw_items):
+        eff, gold_values = efficiency.efficiency_scores(raw_items)
+    items = _enrich_items(raw_items, tags_map, eff)
     weights = scoring.load_weights(data_root / "_weights.yaml")
     builds = _all(builds_dir)
     gods = _all(gods_dir)
     _enrich_gods(gods, weights)
     _attach_item_meta(items, builds)
     _attach_popular_items(builds)
-    # Reuses the same efficiency model _enrich_items already ran (to tag
-    # efficiency_tier) so the tier list's "ours" item score is the identical
-    # continuous signal, not a second independent fit.
-    eff = {}
-    if efficiency.numeric_cost_items(items):
-        eff, _ = efficiency.efficiency_scores(items)
     index = {"gods": gods, "items": items, "builds": builds,
+             # The fitted marginal gold price of each stat, plus the fit's
+             # `_intercept` — what every item costs before a single stat is
+             # counted. Both are needed for a receipt to add up to
+             # predicted_cost. Rounded to 2dp — these are prices, not weights.
+             "item_gold_values": {k: round(v, 2) for k, v in sorted(gold_values.items())},
              "god_item_scores": _god_item_scores(gods, builds, items, eff, weights, tags_map),
              "draft": weights.get("draft", {}),
              "starters": weights.get("starters", []),

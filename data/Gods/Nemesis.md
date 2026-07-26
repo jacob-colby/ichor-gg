@@ -38,9 +38,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Nemesis Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Scales of Fate
   details:
@@ -48,10 +46,8 @@ abilities:
   - 'Increase: 7% Per Stack'
   - 'Max Stacks: 3'
   - 'Duration: 5 seconds'
-  description: 'ATTACKS STEAL POWER Hitting enemies with Attacks reduces the target''s
-    Inhand Power, Strength, and Intelligence while increasing yours Reduction : 7%
-    Per Stack Increase : 7% Per Stack Max Stacks : 3 Duration : 5 seconds Expand Ability
-    Video'
+  description: ATTACKS STEAL POWER Hitting enemies with Attacks reduces the target's
+    Inhand Power, Strength, and Intelligence while increasing yours
 - slot: 1st Ability
   name: Swift Vengeance
   cooldown:
@@ -68,9 +64,7 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 50 mana'
-  description: 'DASH, THEN DASH AGAIN Notes: Dash in a line, passing through all enemies
-    Damage : 60 | 90 | 120 | 150 | 180 Damage Scaling : 45% Strength Range : 4.8 meters
-    Radius : 1.6 meters Cooldown : 11 seconds Cost : 50 mana Expand Ability Video'
+  description: Dash in a line, passing through all enemies
 - slot: 2nd Ability
   name: Slice and Dice
   cooldown:
@@ -94,12 +88,7 @@ abilities:
   - 'Center Cone Angle: 45 degrees'
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'CONE DAMAGE; MIDDLE SLOWS Notes: Slash in a cone, dealing Physical
-    Damage to all enemies hit Damage : 70 | 100 | 130 | 160 | 190 Damage Scaling :
-    40% Strength + 25% Intelligence Center Damage : 85 | 145 | 205 | 265 | 325 Center
-    Damage Scaling : 90% Strength + 75% Intelligence Slow : 30% Slow Duration : 2
-    seconds Range : 5.6 meters Cone Angle : 150 degrees Center Cone Angle : 45 degrees
-    Cooldown : 10 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Slash in a cone, dealing Physical Damage to all enemies hit
 - slot: 3rd Ability
   name: Retribution
   cooldown:
@@ -123,11 +112,7 @@ abilities:
   - 'Heal Scaling: 5% Intelligence'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'SHIELD, REFLECT DAMAGE + HEAL Notes: Gain a Health Shield for a duration
-    Shield Health : 100 | 150 | 200 | 250 | 300 Shield Health Scaling : 7.5% Max Health
-    Shield Duration : 2 seconds Reflect Damage : 40% of Damage Blocked Reflect Damage
-    Scaling : 20% Strength Heal : 40% of Damage Blocked Heal Scaling : 5% Intelligence
-    Cooldown : 14 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Gain a Health Shield for a duration
 - slot: Ultimate
   name: Divine Judgement
   cooldown:
@@ -153,19 +138,15 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 | 95 | 100 | 105 | 110 mana'
-  description: 'TARGET DAMAGE, PROTECTION STEAL Notes: Choose a single enemy god,
-    dealing Physical Damage to them and all enemies in an area around them Damage
-    : 15 | 17.5 | 20 | 22.5 | 25% of Enemy''s Current Health Damage Scaling : 45%
-    Strength + 65% Intelligence Movement Speed : 10 | 12.5 | 15 | 17.5 | 20% Protections
-    : 25% Duration : 5 seconds Range : 8.8 meters Radius : 1.6 meters Cooldown : 90
-    seconds Cost : 90 | 95 | 100 | 105 | 110 mana Expand Ability Video'
+  description: Choose a single enemy god, dealing Physical Damage to them and all
+    enemies in an area around them
 aspects:
 - name: Aspect of Justice
   kit_changes: Divine Judgement no longer does damage in an area but instead averages
     Nemesis's and the enemy god's current Health as long as Nemesis has less than
     the target.
 source_url: https://wiki.smite2.com/w/Nemesis
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Nemesis Basic Attack

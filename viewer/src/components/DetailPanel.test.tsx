@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen, fireEvent, within } from "@testing-library/react";
 import { DetailPanel } from "./DetailPanel";
 import { saveMine } from "../lib/mineStore";
-import type { BuildNote, GodTierEntry, Item } from "../types";
+import type { BuildNote, Item } from "../types";
 
 /** Full-shaped Item fixture — the ledger reads cost for its gold spine, and
  * the expanded card reads tier/stats/passive/effect_tags. */
@@ -85,49 +85,18 @@ describe("DetailPanel — what opens by default", () => {
 
   it("explains itself when the god has no build note for this mode yet", () => {
     render(panel({ god: "SomeNewGod", builds: [] }));
-    expect(screen.getByRole("heading", { level: 1, name: "SomeNewGod" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 2, name: "SomeNewGod" })).toBeInTheDocument();
     expect(screen.getByText(/no build data for SomeNewGod in this index yet/i)).toBeInTheDocument();
   });
 
-  it("gives the route a level-1 heading", () => {
+  // The shell's subject header owns the h1 now — it names the god on every
+  // lens, not just this one. The build view starts at level 2.
+  it("starts at level 2, under the subject header's heading", () => {
     render(panel({ builds: [chironCommunity] }));
-    expect(screen.getByRole("heading", { level: 1, name: "Chiron" })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { level: 1 })).not.toBeInTheDocument();
   });
 });
 
-describe("DetailPanel — the model's verdict", () => {
-  beforeEach(() => localStorage.clear());
-
-  const tierEntry: GodTierEntry = {
-    name: "Chiron", ours: 0.47, community: 0.58, tier_ours: "C", tier_community: "A",
-  };
-
-  it("states both scores, both tiers, and which way they disagree", () => {
-    render(panel({ builds: [chironCommunity], tierEntry }));
-    const verdict = within(screen.getByTestId("god-verdict"));
-    expect(verdict.getByText("0.47")).toBeInTheDocument();
-    expect(verdict.getByText("0.58")).toBeInTheDocument();
-    expect(verdict.getByText(/meta rates higher/i)).toBeInTheDocument();
-    expect(verdict.getByText(/-0\.11/)).toBeInTheDocument();
-  });
-
-  it("says so the other way when the model rates a god above the meta", () => {
-    render(panel({ builds: [chironCommunity], tierEntry: { ...tierEntry, ours: 0.62 } }));
-    expect(within(screen.getByTestId("god-verdict")).getByText(/model rates higher/i)).toBeInTheDocument();
-  });
-
-  it("names an unranked god as unranked rather than leaving a blank", () => {
-    render(panel({ builds: [chironCommunity], tierEntry: { ...tierEntry, community: null, tier_community: null } }));
-    const verdict = within(screen.getByTestId("god-verdict"));
-    expect(verdict.getByText(/unranked/i)).toBeInTheDocument();
-    expect(verdict.getByText(/no community rating for this god yet/i)).toBeInTheDocument();
-  });
-
-  it("omits the verdict entirely when there is no tier entry", () => {
-    render(panel({ builds: [chironCommunity] }));
-    expect(screen.queryByTestId("god-verdict")).not.toBeInTheDocument();
-  });
-});
 
 describe("DetailPanel — the buy ledger", () => {
   beforeEach(() => localStorage.clear());
@@ -145,10 +114,13 @@ describe("DetailPanel — the buy ledger", () => {
 
   it("puts cumulative gold on every row and sums the core", () => {
     render(panel({ items, builds: withMeta as never }));
+    // The spine carries the running figure on each row and the header sums it,
+    // so 5,000g legitimately appears twice — the header is asserted by testid
+    // rather than by a text query that can't tell the two apart.
     expect(screen.getByText("2,650g")).toBeInTheDocument();
-    expect(screen.getByText("5,000g")).toBeInTheDocument();   // 2650 + 2350
+    expect(screen.getAllByText("5,000g").length).toBe(2);      // spine row + header
     // "core", not "total" — the starter is bought first and isn't on this spine.
-    expect(screen.getByText(/5,000g core/)).toBeInTheDocument();
+    expect(screen.getByTestId("ledger-total")).toHaveTextContent(/5,000g core/);
   });
 
   it("reports how much of the build the meta agrees with", () => {
@@ -334,10 +306,10 @@ describe("DetailPanel — situational swaps", () => {
   it("keeps a swapped-out slot's gold out of the running total", () => {
     render(panel({ items: swapItems, builds: swapBuild("Cheap Swap") as never }));
     // Base A 2500 + Base B 2600 + Base C 3000 = 8100 before the swap.
-    expect(screen.getByText(/8,100g core/)).toBeInTheDocument();
+    expect(screen.getByTestId("ledger-total")).toHaveTextContent(/8,100g core/);
     fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
     // Base C's 3000 is never spent; Cheap Swap's 1800 is.
-    expect(screen.getByText(/6,900g core/)).toBeInTheDocument();
+    expect(screen.getByTestId("ledger-total")).toHaveTextContent(/6,900g core/);
   });
 
   it("names what a swap comes in for, using applySwap's own target", () => {
@@ -581,3 +553,4 @@ describe("DetailPanel — popular items", () => {
     expect(screen.getByText(/Top weighted-score core/)).toBeInTheDocument();
   });
 });
+

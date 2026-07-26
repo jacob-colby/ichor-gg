@@ -36,9 +36,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Neith Notes: Fire a projectile that deals Physical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Broken Weave
   details:
@@ -53,11 +51,7 @@ abilities:
   - 'Intelligence Scaling: 0.4 Per Level'
   - 'Buff Duration: 30 seconds'
   - 'Max Buff Stacks: 3'
-  description: 'DETONATE WEAVES TO ROOT Notes: Your abilities either create or detonate
-    Weaves Damage : 25 Damage Scaling : 5 Per Level + 15% Strength + 25% Intelligence
-    Root Duration : 1 second Attack Speed : 4% Per Stack Attack Speed Scaling : 3%
-    Strength Per Stack Intelligence : 8 Intelligence Scaling : 0.4 Per Level Buff
-    Duration : 30 seconds Max Buff Stacks : 3 Expand Ability Video'
+  description: Your abilities either create or detonate Weaves
 - slot: 1st Ability
   name: Spirit Arrow
   cooldown:
@@ -82,11 +76,7 @@ abilities:
   - 'Radius: 0.56 meters'
   - 'Cooldown: 13 | 12.5 | 12 | 11.5 | 11 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'LINE ROOT DAMAGE Notes: Fire a projectile that deals Physical Damage
-    and Roots enemies Damage : 80 | 145 | 210 | 275 | 340 Damage Scaling : 95% Strength
-    + 75% Intelligence Root Duration : 1 second Range : 10.4 meters Radius : 0.56
-    meters Cooldown : 13 | 12.5 | 12 | 11.5 | 11 seconds Cost : 40 | 50 | 60 | 70
-    | 80 mana Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage and Roots enemies
 - slot: 2nd Ability
   name: Unravel
   cooldown:
@@ -113,12 +103,7 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'AREA DAMAGE; HEAL YOU Notes: the world weaves, dealing Physical Damage
-    to enemies in an area Damage : 80 | 130 | 180 | 230 | 280 Damage Scaling : 55%
-    Strength + 80% Intelligence Heal : 11 | 15 | 19 | 23 | 27 Heal Scaling : 5% Intelligence
-    Increased Heal : 25 | 32 | 39 | 46 | 54 Increased Heal Scaling : 5% Intelligence
-    Range : 8.8 meters Radius : 3.2 meters Cooldown : 12 seconds Cost : 50 | 60 |
-    70 | 80 | 90 mana Expand Ability Video'
+  description: the world weaves, dealing Physical Damage to enemies in an area Increased
 - slot: 3rd Ability
   name: Back Flip
   cooldown:
@@ -145,12 +130,7 @@ abilities:
   - Cone Angle:110 degrees
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'LEAP BACKWARDS, SLOW CONE Notes: Deal Physical Damage and Slow enemies
-    in front of you, then Leap backwards Damage : 85 | 130 | 175 | 220 | 265 Damage
-    Scaling : 60% Intelligence Slow : 30% Slow Duration : 2 | 2.5 | 3 | 3.5 | 4 seconds
-    Range : 9.6 meters Cone Range : 5.6 meters Cone Angle :110 degrees Cooldown :
-    15 | 14.5 | 14 | 13.5 | 13 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability
-    Video'
+  description: Deal Physical Damage and Slow enemies in front of you, then Leap backwards
 - slot: Ultimate
   name: World Weaver
   cooldown:
@@ -178,18 +158,15 @@ abilities:
   - 'Stun Duration: 1 second'
   - 'Cooldown: 100 seconds'
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
-  description: 'GLOBAL TARGET STUN DAMAGE Notes: Charge up and fire an arrow across
-    the world, locked on to an enemy god and ignoring obstacles Damage : 200 | 250
-    | 300 | 350 | 400 Damage Scaling : 105% Strength + 90% Intelligence Stun Duration
-    : 1 second Cooldown : 100 seconds Cost : 80 | 90 | 100 | 110 | 120 mana Expand
-    Ability Video'
+  description: Charge up and fire an arrow across the world, locked on to an enemy
+    god and ignoring obstacles
 aspects:
 - name: Aspect of Wind
   kit_changes: Broken Weave explosions no longer Root enemies and the Buff has a reduced
     duration however the Attack Speed gained is much higher. Additionally using World
     Weaver provides stacks of Broken Weave.
 source_url: https://wiki.smite2.com/w/Neith
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Neith Basic Attack

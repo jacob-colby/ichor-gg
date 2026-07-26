@@ -34,17 +34,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Kukulkan Notes: Fire a projectile that deals Magical Damage to the
-    first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
-    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Power of the Wind Jewel
   details:
   - This effect does not scale off Base god Mana
   - 'Intelligence From Item Mana: 7%'
-  description: 'BONUS INTELLIGENCE FROM MAX MANA Notes: As you build items that provide
-    Mana, you gain Bonus Intelligence Intelligence From Item Mana : 7% Expand Ability
-    Video'
+  description: As you build items that provide Mana, you gain Bonus Intelligence
 - slot: 1st Ability
   name: Zephyr
   cooldown:
@@ -66,12 +62,8 @@ abilities:
   - 'Explosion Radius: 2.25 meters'
   - 'Cooldown: 7 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'PROJECTILE DAMAGE SLOW Notes: Fire a projectile that explodes on the
-    first enemy hit. The explosion deals Magical Damage and Slows enemies in the area
-    Damage : 85 | 135 | 185 | 235 | 285 Damage Scaling : 85% Intelligence Slow : 20
-    | 25 | 30 | 35 | 40% Slow Duration : 3 seconds Range : 11.2 meters Radius : 0.64
-    meters Explosion Radius : 2.25 meters Cooldown : 7 seconds Cost : 50 | 55 | 60
-    | 65 | 70 mana Expand Ability Video'
+  description: Fire a projectile that explodes on the first enemy hit. The explosion
+    deals Magical Damage and Slows enemies in the area
 - slot: 2nd Ability
   name: Slipstream
   cooldown:
@@ -101,14 +93,9 @@ abilities:
   - 'Dash Radius: 2 meters'
   - 'Cooldown: 13 | 12.5 | 12 | 11.5 | 11 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
-  description: 'SPEED UP; DASH FROM WHIRLWIND Notes: Activate this within a Whirlwind
-    to Dash , dealing Magical Damage and Slowing enemies hit Summon the wind to become
-    Slow Immune and gain Movement Speed that fades over time Movement Speed : 7 |
-    9 | 11 | 13 | 15% Per Stack Buff Duration : 4 seconds Dash Damage : 95 | 145 |
-    195 | 245 | 295 Dash Damage Scaling : 90% Intelligence Dash Slow : 20 | 25 | 30
-    | 35 | 40% Dash Slow Duration : 3 seconds Dash Range : 8.8 meters Dash Radius
-    : 2 meters Cooldown : 13 | 12.5 | 12 | 11.5 | 11 seconds Cost : 40 | 45 | 50 |
-    55 | 60 mana Expand Ability Video'
+  description: Activate this within a Whirlwind to Dash , dealing Magical Damage and
+    Slowing enemies hit Summon the wind to become Slow Immune and gain Movement Speed
+    that fades over time
 - slot: 3rd Ability
   name: Whirlwind
   cooldown:
@@ -135,11 +122,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 15 | 14 | 13 | 12 | 11 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'AREA DAMAGE OVER TIME Notes: The attempts to apply the effect every
-    0.35 seconds for 4 seconds Create a , which spreads onto all enemies that enter
-    its area Damage Per Tick : 12 | 19 | 26 | 33 | 40 Damage Scaling Per Tick : 20%
-    Intelligence Range : 8.8 meters Radius : 3.2 meters Cooldown : 15 | 14 | 13 |
-    12 | 11 seconds Cost : 50 | 60 | 70 | 80 | 90 mana Expand Ability Video'
+  description: The attempts to apply the effect every 0.35 seconds for 4 seconds Create
+    a , which spreads onto all enemies that enter its area
 - slot: Ultimate
   name: Spirit of the Nine Winds
   cooldown:
@@ -155,10 +139,8 @@ abilities:
   - 'Radius: 1.4 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 120 mana'
-  description: 'LINE DAMAGE, KNOCKBACK Notes: Summon the Sprit of the Nine Winds to
-    deal Magical Damage in a large path Damage : 400 | 500 | 600 | 700 | 800 Damage
-    Scaling : 115% Intelligence Range : 20.8 meters Radius : 1.4 meters Cooldown :
-    90 seconds Cost : 120 mana Expand Ability Video'
+  description: Summon the Sprit of the Nine Winds to deal Magical Damage in a large
+    path
 aspects:
 - name: Aspect of the Squall
   kit_changes: You gain Mana from Jungle monster kills and god kills and assists.
@@ -166,7 +148,7 @@ aspects:
     and steals protections. Whirlwind attaches to you and explodes in a blast that
     knocks back enemies.
 source_url: https://wiki.smite2.com/w/Kukulkan
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Kukulkan Basic Attack

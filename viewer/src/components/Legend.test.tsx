@@ -7,7 +7,7 @@ describe("Legend", () => {
     const onClose = vi.fn();
     render(<Legend onClose={onClose} />);
     expect(screen.getByText(/how this works/i)).toBeInTheDocument();
-    expect(screen.getByText(/suggested/i)).toBeInTheDocument();
+    expect(screen.getByText(/our scoring engine/i)).toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: "Got it" }));
     expect(onClose).toHaveBeenCalled();
   });
@@ -58,5 +58,14 @@ describe("Legend", () => {
     expect(document.activeElement).toBe(opener);
 
     opener.remove();
+  });
+
+  /* The footer used to carry this on every screen, forever — 43px of permanent
+   * chrome for something you read once. It has to actually be findable here. */
+  it("carries the attribution and the disclaimer the footer used to hold", () => {
+    render(<Legend onClose={vi.fn()} />);
+    expect(screen.getByRole("link", { name: /wiki\.smite2\.com/i })).toHaveAttribute("href", "https://wiki.smite2.com");
+    expect(screen.getByRole("link", { name: /smitebrain/i })).toHaveAttribute("href", "https://smitebrain.com");
+    expect(screen.getByText(/not affiliated with Hi-Rez/i)).toBeInTheDocument();
   });
 });

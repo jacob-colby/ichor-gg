@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { filterItems, sortItems, efficiencyLabel, EFFICIENCY } from "./itemFilters";
+import { filterItems, sortItems, efficiencyLabel, tiersPresent, residualText, statValueLines, EFFICIENCY } from "./itemFilters";
 import type { Item } from "../types";
 
 const items = [
@@ -36,10 +36,77 @@ describe("sortItems", () => {
 
 describe("efficiencyLabel", () => {
   it("maps tiers to stat-value labels", () => {
-    expect(efficiencyLabel("undervalued").text).toBe("Efficient");
+    expect(efficiencyLabel("undervalued").text).toBe("Undervalued");
     expect(efficiencyLabel("premium").text).toBe("Premium");
     expect(efficiencyLabel("fair").text).toBe("Fair");
-    expect(efficiencyLabel(null).text).toBe("—");
+    // Not an em dash: a filter option named after a punctuation mark, on a
+    // verdict that is null for a stateable reason.
+    expect(efficiencyLabel(null).text).toBe("Not scored");
     expect(EFFICIENCY.length).toBe(4);
+  });
+});
+
+describe("tiersPresent", () => {
+  it("derives the tier options from the data, numerics first", () => {
+    // The filter used to hardcode a Glyph option matching zero items while the
+    // one Relic in the set was unreachable.
+    expect(tiersPresent(items)).toEqual([3, 2, "Glyph"]);
+  });
+  it("returns nothing for an empty set rather than inventing tiers", () => {
+    expect(tiersPresent([])).toEqual([]);
+  });
+});
+
+describe("sortItems by value", () => {
+  const priced = [
+    { name: "Bargain", cost: 1000, efficiency: { predicted_cost: 1400, residual: -400, score: 1 } },
+    { name: "Fairish", cost: 2000, efficiency: { predicted_cost: 2010, residual: -10, score: 0.5 } },
+    { name: "Tax", cost: 3000, efficiency: { predicted_cost: 2100, residual: 900, score: 0 } },
+    { name: "Starter", cost: 700, efficiency: null },
+  ] as unknown as Parameters<typeof sortItems>[0];
+
+  it("orders by the continuous residual, most underpriced first", () => {
+    // Sorting by the three-value bucket tied 30 items for first alphabetically.
+    expect(sortItems(priced, "value").map((i) => i.name)).toEqual(["Bargain", "Fairish", "Tax", "Starter"]);
+  });
+
+  it("sinks unscored items rather than treating them as a zero residual", () => {
+    expect(sortItems(priced, "value").at(-1)!.name).toBe("Starter");
+  });
+});
+
+describe("filterItems search", () => {
+  it("matches tags, stat names and passive text, not just the name", () => {
+    expect(filterItems(items, { q: "burst" }).map((i) => i.name)).toEqual(["Rage"]);
+    expect(filterItems(items, { q: "max health" }).map((i) => i.name)).toEqual(["Aegis"]);
+  });
+});
+
+describe("residualText", () => {
+  it("always carries its sign and separates thousands", () => {
+    expect(residualText(244)).toBe("+244g");
+    expect(residualText(-1310)).toBe("−1,310g");
+    expect(residualText(0)).toBe("0g");
+  });
+});
+
+describe("statValueLines", () => {
+  const gold = { "Max Health": 0.88, Intelligence: 6.59 };
+  it("prices each stat at its fitted gold value", () => {
+    const item = { name: "X", stats: { "Max Health": "200" } } as never;
+    const [line] = statValueLines(item, gold);
+    expect(line.amount).toBe(200);
+    expect(line.goldPerUnit).toBe(0.88);
+    expect(line.subtotal).toBeCloseTo(176, 6);
+  });
+  it("parses a percent stat's leading number", () => {
+    const item = { name: "X", stats: { Intelligence: "30%" } } as never;
+    expect(statValueLines(item, gold)[0].amount).toBe(30);
+  });
+  it("returns null rather than a silent zero for a stat the fit never priced", () => {
+    const item = { name: "X", stats: { Unpriced: "10" } } as never;
+    const [line] = statValueLines(item, gold);
+    expect(line.goldPerUnit).toBeNull();
+    expect(line.subtotal).toBeNull();
   });
 });

@@ -35,18 +35,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Scylla Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Quick Learner
   details:
   - 'Intelligence: 20 Per Max Ability'
   - 'Mana Regen: 2 Per Max Ability'
-  description: 'MAX RANK ABILITIES ARE STRONGER Your abilities gain an additional
-    effect at max rank. In addition, gain Intelligence and Mana Regen for each max
-    rank ability Intelligence : 20 Per Max Ability Mana Regen : 2 Per Max Ability
-    Expand Ability Video'
+  description: MAX RANK ABILITIES ARE STRONGER Your abilities gain an additional effect
+    at max rank. In addition, gain Intelligence and Mana Regen for each max rank ability
 - slot: 1st Ability
   name: Sic 'Em
   cooldown:
@@ -69,11 +65,8 @@ abilities:
   - 'Explosion Radius: 2.4 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'PROJECTILE DAMAGE ROOT Notes: Send two hounds forward, Rooting , Crippling
-    , and dealing Magical Damage Damage : 85 | 130 | 175 | 220 | 265 Damage Scaling
-    : 75% Intelligence Root Duration : 1.75 seconds Cripple Duration : 1.75 seconds
-    Range : 10.4 meters Radius : 0.48 meters Explosion Radius : 2.4 meters Cooldown
-    : 10 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Send two hounds forward, Rooting , Crippling , and dealing Magical
+    Damage
 - slot: 2nd Ability
   name: Crush
   cooldown:
@@ -97,11 +90,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: 'AREA SLOW, RECAST DAMAGE Notes: Creates a magical field that Slows
-    enemies. After 5 seconds it detonates, dealing Magical Damage Damage : 100 | 155
-    | 210 | 265 | 320 Damage Scaling : 90% Intelligence Slow : 30% Magical Protection
-    Reduced : 10% Range : 8.8 meters Radius : 3.2 meters Cooldown : 10 seconds Cost
-    : 70 | 75 | 80 | 85 | 90 mana Expand Ability Video'
+  description: Creates a magical field that Slows enemies. After 5 seconds it detonates,
+    dealing Magical Damage
 - slot: 3rd Ability
   name: Sentinel
   cooldown:
@@ -124,14 +114,10 @@ abilities:
   - 'Range: 11.2 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: 'SUMMON VISION, RECAST LEAP Notes: vision is granted through line of
-    sight blockers Summon a sentinel at the target area, granting vision of enemies
-    for 5 seconds. Reactive the ability to Leap to the sentinel location and gain
-    a buff that causes your next Attack to deal Magical Damage Damage : 40 | 45 |
-    50 | 55 | 60 Damage Scaling : 50% Intelligence Buff Duration : 5 seconds Cooldown
-    Reduction : -3 seconds Vision Radius : 6.4 | 8 | 9.6 | 11.2 | 12.8 meters Range
-    : 11.2 meters Cooldown : 15 seconds Cost : 70 | 75 | 80 | 85 | 90 mana Expand
-    Ability Video'
+  description: vision is granted through line of sight blockers Summon a sentinel
+    at the target area, granting vision of enemies for 5 seconds. Reactive the ability
+    to Leap to the sentinel location and gain a buff that causes your next Attack
+    to deal Magical Damage
 - slot: Ultimate
   name: I'm a Monster
   cooldown:
@@ -152,12 +138,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: 'AREA DAMAGE, KILLS RESET Notes: Become CC Immune for the next 6 seconds,
-    and gain Movement Speed . Reactivate to deal Magical Damage at the target area
-    Damage : 400 | 500 | 600 | 700 | 800 Damage Scaling : 120% Intelligence Bonus
-    Damage : 5 Per Stack Bonus Damage Scaling : 2% Intelligence Per Stack Movement
-    Speed : 35% Range : 9.6 meters Radius : 2.4 meters Cooldown : 90 seconds Cost
-    : 100 mana Expand Ability Video'
+  description: Become CC Immune for the next 6 seconds, and gain Movement Speed .
+    Reactivate to deal Magical Damage at the target area
 aspects:
 - name: Aspect of the Devourer
   kit_changes: Your non-ultimate abilities now provide Mana when damaging enemies
@@ -167,7 +149,7 @@ aspects:
     provide max Mana and at max rank you gain bonus Mana. Sentinel's Empowered Attack
     also sclaes with Max Mana, but no longer Cooldown Reduces itself.
 source_url: https://wiki.smite2.com/w/Scylla
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Scylla Basic Attack

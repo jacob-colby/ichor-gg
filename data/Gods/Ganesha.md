@@ -40,18 +40,15 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Ganesha Notes: Deal Magical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Good Fortune
   details:
   - 'Bonus Gold: 50 Per Gifted God Kill'
-  description: 'GIFT KILLS TO ALLIES Any time you deal a killing blow, the nearest
+  description: GIFT KILLS TO ALLIES Any time you deal a killing blow, the nearest
     allied god receives the credit and you receive the rewards for an assist instead
     plus a bonus amount of gold. In addition, your assist range and the time before
-    you lose assist credit is increased Bonus Gold : 50 Per Gifted God Kill Expand
-    Ability Video'
+    you lose assist credit is increased
 - slot: 1st Ability
   name: Turn of Fate
   cooldown:
@@ -81,13 +78,8 @@ abilities:
   - 'Radius: 1.2 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
-  description: 'LINE DAMAGE, MARKS Notes: Send a curse forward dealing Magical Damage
-    to enemies it passes through. For each enemy hit, all nearby allied gods gain
-    Bonus Damage Damage : 90 | 150 | 210 | 270 | 330 Damage Scaling : 55% Intelligence
-    Mark Bonus Damage : 15 Mark Bonus Damage Scaling : 5 Per Enemy Level Bonus Damage
-    : 3% Per Stack Buff Duration : 4 seconds Range : 8.8 meters Radius : 1.2 meters
-    Cooldown : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 65 | 70 | 75 | 80 | 85 mana
-    Expand Ability Video'
+  description: Send a curse forward dealing Magical Damage to enemies it passes through.
+    For each enemy hit, all nearby allied gods gain Bonus Damage
 - slot: 2nd Ability
   name: Ohm
   cooldown:
@@ -113,11 +105,8 @@ abilities:
   - 'Cone Angle: 45 degrees'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: 'CHANNEL CONE SILENCE Notes: Rise into the lotus position Silencing
-    enemies in front of you and increasing Protections of nearby allied gods Protections
-    : 20 | 30 | 40 | 50 | 60 Self Slow : 15% Radius : 5.6 meters Cone Angle : 45 degrees
-    Cooldown : 14 | 13 | 12 | 11 | 10 seconds Cost : 55 | 60 | 65 | 70 | 75 mana Expand
-    Ability Video'
+  description: Rise into the lotus position Silencing enemies in front of you and
+    increasing Protections of nearby allied gods
 - slot: 3rd Ability
   name: Remove Obstacles
   cooldown:
@@ -143,12 +132,9 @@ abilities:
   - 'Radius: 0.64 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 70 mana'
-  description: 'DASH AND KNOCKUP Notes: You cannot cancel this ability while Dashing
-    , but you can on contact with an enemy god Dash forward dealing Magical Damage
-    to enemy minions you pass through and stopping on enemy gods, Stunning them before
-    Knocking them up Damage : 90 | 135 | 180 | 225 | 270 Damage Scaling : 45% Intelligence
-    Stun Duration : 0.75 seconds Range : 7.5 meters Radius : 0.64 meters Cooldown
-    : 14 | 13.5 | 13 | 12.5 | 12 seconds Cost : 70 mana Expand Ability Video'
+  description: You cannot cancel this ability while Dashing , but you can on contact
+    with an enemy god Dash forward dealing Magical Damage to enemy minions you pass
+    through and stopping on enemy gods, Stunning them before Knocking them up
 - slot: Ultimate
   name: Dharmic Pillars
   cooldown:
@@ -172,14 +158,9 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Cooldown: 75 seconds'
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
-  description: 'SLOWING, DAMAGING PRISON Notes: Summon 4 Great Pillars to imprison
-    your enemies. Enemies that pass the field between each pillar take an initial
-    hit of Magical Damage , are Slowed , and have their Protections Reduced Initial
-    Damage : 144 | 208 | 272 | 336 | 400 Initial Damage Scaling : 64% Intelligence
-    Damage Per Tick : 90 | 130 | 170 | 210 | 250 Damage Scaling Per Tick : 40% Intelligence
-    Slow : 30% Protections Reduced : 10 | 20 | 30 | 40 | 50 Debuff Duration : 3 seconds
-    Range : 8.8 meters Cooldown : 75 seconds Cost : 65 | 70 | 75 | 80 | 85 mana Expand
-    Ability Video'
+  description: Summon 4 Great Pillars to imprison your enemies. Enemies that pass
+    the field between each pillar take an initial hit of Magical Damage , are Slowed
+    , and have their Protections Reduced
 aspects:
 - name: Aspect of the Triumphant
   kit_changes: Ohm no longer silences but deals damage to enemies in front of you
@@ -188,7 +169,7 @@ aspects:
     no longer bestow kills to allies but each god kill provides permanent Cooldown
     Rate.
 source_url: https://wiki.smite2.com/w/Ganesha
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Ganesha Basic Attack

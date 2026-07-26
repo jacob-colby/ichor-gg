@@ -35,16 +35,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Artemis Notes: Fire a projectile that deals Physical Damage to the
-    first enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack
-    Damage Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Still Target
   details:
   - You are able to detect nearby enemy gods in stealth grass
-  description: 'MORE DAMAGE ON CC Notes: Artemis deals 15% Increased Attack Damage
-    to gods and 30% to minions that are afflicted by Crowd Control Expand Ability
-    Video'
+  description: Artemis deals 15% Increased Attack Damage to gods and 30% to minions
+    that are afflicted by Crowd Control
 - slot: 1st Ability
   name: Transgressor's Fate
   cooldown:
@@ -66,12 +63,9 @@ abilities:
   - 'Radius: 0.8 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 45 mana'
-  description: 'SET A TRAP Notes: Place a trap on the ground. Enemy gods that come
-    in contact with it activate it, Rooting , Crippling , and repeatedly dealing Physical
-    Damage over 3 seconds Damage Per Tick : 26 | 36 | 46 | 56 | 66 Damage Scaling
-    Per Tick : 30% Strength Root Duration : 1.75 seconds Cripple Duration : 1.75 seconds
-    Range : 6.4 meters Radius : 0.8 meters Cooldown : 14 | 13 | 12 | 11 | 10 seconds
-    Cost : 45 mana Expand Ability Video'
+  description: Place a trap on the ground. Enemy gods that come in contact with it
+    activate it, Rooting , Crippling , and repeatedly dealing Physical Damage over
+    3 seconds
 - slot: 2nd Ability
   name: Vengeful Assault
   cooldown:
@@ -93,10 +87,7 @@ abilities:
   - 'Buff Duration: 3 | 3.5 | 4 | 4.5 | 5 seconds'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'SHOOT AND MOVE FASTER Notes: Greatly increase your Movement Speed
-    and Attack Speed Movement Speed : 25% Attack Speed : 25 | 35 | 45 | 55 | 65% Buff
-    Duration : 3 | 3.5 | 4 | 4.5 | 5 seconds Cooldown : 14 seconds Cost : 60 | 65
-    | 70 | 75 | 80 mana Expand Ability Video'
+  description: Greatly increase your Movement Speed and Attack Speed
 - slot: 3rd Ability
   name: Suppress the Insolent
   cooldown:
@@ -116,10 +107,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 9 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'AREA DAMAGE SLOW Fire a volley at a target area dealing Physical Damage
-    and Slowing enemies Damage : 100 | 150 | 200 | 250 | 300 Damage Scaling : 65%
-    Strength Slow : 25% Slow : 2 seconds Range : 8.8 meters Radius : 2.4 meters Cooldown
-    : 9 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: AREA DAMAGE SLOW Fire a volley at a target area dealing Physical Damage
+    and Slowing enemies
 - slot: Ultimate
   name: Calydonian Boar
   cooldown:
@@ -139,18 +128,14 @@ abilities:
   - 'Radius: 9.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 45 mana'
-  description: 'SUMMON STUNNING BOAR Notes: Summon the great that charges the nearest
-    enemy god Dash Damage : 150 | 220 | 290 | 360 | 430 Dash Damage Scaling : 90%
-    Strength Stun : 0.9 | 1 | 1.1 | 1.2 | 1.3 seconds Boar Health : 350 | 450 | 550
-    | 650 | 750 Radius : 9.6 meters Cooldown : 90 seconds Cost : 45 mana Expand Ability
-    Video'
+  description: Summon the great that charges the nearest enemy god
 aspects:
 - name: Aspect of the Wild
   kit_changes: Transgressor's Fate no longer roots or cripples gods but can now target
     minions. Triggered traps now also heal Artemis and deal damage to enemies in a
     larger area.
 source_url: https://wiki.smite2.com/w/Artemis
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Artemis Basic Attack

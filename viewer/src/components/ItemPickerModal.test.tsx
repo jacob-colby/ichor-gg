@@ -12,7 +12,7 @@ describe("ItemPickerModal", () => {
   it("filters by search and picks an item", () => {
     const onPick = vi.fn();
     render(<ItemPickerModal items={items} onPick={onPick} onClose={() => {}} />);
-    fireEvent.change(screen.getByPlaceholderText(/search items/i), { target: { value: "death" } });
+    fireEvent.change(screen.getByLabelText(/search items by name/i), { target: { value: "death" } });
     expect(screen.queryByText("Rage")).not.toBeInTheDocument();
     fireEvent.click(screen.getByText("Deathbringer"));
     expect(onPick).toHaveBeenCalledWith("Deathbringer");

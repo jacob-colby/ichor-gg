@@ -36,9 +36,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Cupid Notes: Fire a projectile that deals Physical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Lovestruck
   details:
@@ -47,11 +45,9 @@ abilities:
   - 'Damage Increase: 2% Per Stack'
   - 'Heal Increase: 2% Per Stack'
   - 'Max Stacks: 16'
-  description: 'ATTACK FOR STACKS Notes: Heart Bomb, Share the Love, and Fields of
-    Love always consume up to 8 stacks on use, granting them additional Damage , Healing
-    , and bonus effects Hitting a Basic Attack grants a stack, or 2 stacks if the
-    target is an enemy god Damage Increase : 2% Per Stack Heal Increase : 2% Per Stack
-    Max Stacks : 16 Expand Ability Video'
+  description: Heart Bomb, Share the Love, and Fields of Love always consume up to
+    8 stacks on use, granting them additional Damage , Healing , and bonus effects
+    Hitting a Basic Attack grants a stack, or 2 stacks if the target is an enemy god
 - slot: 1st Ability
   name: Heart Bomb
   cooldown:
@@ -80,13 +76,8 @@ abilities:
   - 'Explosion Radius: 4 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'EXPLODING PROJECTILE, STACKS STUN Notes: Fire an Arrow of Love, dealing
-    Physical Damage to the first enemy hit and Slowing them Initial Damage : 50 |
-    80 | 110 | 140 | 170 Initial Damage Scaling : 80% Strength + 55% Intelligence
-    Explosion Damage : 60 | 90 | 120 | 150 | 180 Explosion Damage Scaling : 80% Strength
-    + 55% Intelligence Minion Bonus Damage : 60% Slow : 20% Stun Duration : 0.8 seconds
-    Range : 8.8 meters Radius : 0.48 meters Explosion Radius : 4 meters Cooldown :
-    12 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Fire an Arrow of Love, dealing Physical Damage to the first enemy hit
+    and Slowing them
 - slot: 2nd Ability
   name: Share the Love
   cooldown:
@@ -123,17 +114,10 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'CREATE HEALING HEARTS Notes: When the bomb explodes, 3 hearts spawn
-    around the detonation location, Healing , Restoring Mana , and granting Attack
-    Speed up to 3 stacks to any ally that picks them up Lob an explosive bomb at a
-    location that detonates after 0.75 seconds, dealing Physical Damage to all enemies
-    hit Damage : 65 | 115 | 165 | 215 | 265 Damage Scaling : 65% Strength + 35% Intelligence
-    Heal : 15 | 25 | 35 | 45 | 55 Heal Scaling : 3.5% Intelligence Mana Restore :
-    20 | 25 | 30 | 35 | 40 Mana Restore Scaling : 5% Intelligence Attack Speed : 10%
-    Per Stack Strength : 5 | 10 | 15 | 20 | 25 Strength Scaling : 10% Strength Intelligence
-    : 5 | 10 | 15 | 20 | 25 Intelligence Scaling : 5% Intelligence Buff Duration :
-    5 seconds Range : 8.8 meters Radius : 1.6 meters Cooldown : 13 seconds Cost :
-    50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: When the bomb explodes, 3 hearts spawn around the detonation location,
+    Healing , Restoring Mana , and granting Attack Speed up to 3 stacks to any ally
+    that picks them up Lob an explosive bomb at a location that detonates after 0.75
+    seconds, dealing Physical Damage to all enemies hit
 - slot: 3rd Ability
   name: Flutter
   cooldown:
@@ -154,11 +138,8 @@ abilities:
   - 'Radius: 2.59 meters'
   - 'Cooldown: 16 | 15 | 14 | 13 | 12 seconds'
   - 'Cost: 70 mana'
-  description: 'DASH, TRAIL INCREASES SPEED Notes: Dash forward quickly, leaving behind
-    a trail that increases all allies'' Attack Speed and Movement Speed Attack Speed
-    : 10 | 12.5 | 15 | 17.5 | 20% Movement Speed : 30% Lifetime : 6 seconds Range
-    : 8.8 meters Radius : 2.59 meters Cooldown : 16 | 15 | 14 | 13 | 12 seconds Cost
-    : 70 mana Expand Ability Video'
+  description: Dash forward quickly, leaving behind a trail that increases all allies'
+    Attack Speed and Movement Speed
 - slot: Ultimate
   name: Fields of Love
   cooldown:
@@ -184,19 +165,15 @@ abilities:
   - 'Radius: 5.6 meters'
   - 'Cooldown: 100 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'AREA MESMERIZE DAMAGE Notes: Fire a volley of arrows in an area, Slowing
-    and Crippling all enemies inside Damage : 200 | 280 | 360 | 440 | 520 Damage Scaling
-    : 100% Strength + 75% Intelligence Heal : 60 | 75 | 90 | 105 | 120 Heal Scaling
-    : 12.5% Intelligence Slow : 30% Mesmerize Duration : 1 second Stun Duration :
-    1 second Range : 8.8 meters Radius : 5.6 meters Cooldown : 100 seconds Cost :
-    60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Fire a volley of arrows in an area, Slowing and Crippling all enemies
+    inside
 aspects:
 - name: Aspect of Love
   kit_changes: Heart Bomb's damage is decreased but the enemy hit has reduced Attack
     Speed and the explosion area heals allies. At 8 stacks of Lovestruck, allies also
     gain a Health Shield.
 source_url: https://wiki.smite2.com/w/Cupid
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Cupid Basic Attack

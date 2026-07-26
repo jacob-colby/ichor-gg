@@ -37,9 +37,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Bacchus Notes: Deal Magical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Drunk-O-Meter
   details:
@@ -51,9 +49,7 @@ abilities:
   - 'Strength: 5'
   - 'Intelligence: 10'
   - 'Protections: 6%'
-  description: 'GAIN BUFFS WHEN DRUNK Notes: As you become more Drunk, gain Strength
-    , Intelligence , and Protections Strength : 5 Intelligence : 10 Protections :
-    6% Expand Ability Video'
+  description: As you become more Drunk, gain Strength , Intelligence , and Protections
 - slot: 1st Ability
   name: Chug
   cooldown:
@@ -74,12 +70,7 @@ abilities:
   - 'Drunkenness: 40 | 46 | 52 | 58 | 64 | 70%'
   - 'Cooldown: 10 seconds'
   - 'Cost: 20 mana'
-  description: 'GET DRUNK, HEAL, EMPOWER ATTACK Notes: Take a drink, Healing , and
-    becoming more Drunk Damage : 0 | 10 | 30 | 50 | 70 | 90 Damage Scaling : 0 | 50
-    | 50 | 50 | 50 | 50% Physical and Magical Protection Heal : 0 | 30 | 45 | 60 |
-    75 | 80 Strength : 0 | 8 | 13 | 18 | 23 | 28 Intelligence : 0 | 10 | 15 | 20 |
-    25 | 30 Buff Duration : 0 | 6 | 6 | 6 | 6 | 6 seconds Drunkenness : 40 | 46 |
-    52 | 58 | 64 | 70% Cooldown : 10 seconds Cost : 20 mana Expand Ability Video'
+  description: Take a drink, Healing , and becoming more Drunk
 - slot: 2nd Ability
   name: Belly Flop
   cooldown:
@@ -102,11 +93,7 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'LEAP AREA KNOCKUP Notes: Leap forward to and slam into the ground
-    belly first, Knocking Up enemies Damage : 80 | 135 | 190 | 245 | 300 Damage Scaling
-    : 75% Strength + 30% Physical and Magical Protection Slow : 20% Slow Duration
-    : 2 seconds Range : 8.8 meters Radius : 2.4 meters Cooldown : 14 seconds Cost
-    : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Leap forward to and slam into the ground belly first, Knocking Up enemies
 - slot: 3rd Ability
   name: Belch of the Gods
   cooldown:
@@ -135,12 +122,8 @@ abilities:
   - 'Cone Angle: 90 degrees'
   - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'CONE CHANNEL STUN Notes: Channel a big ol'' burp to deal Magical Damage
-    repeatedly to enemies in front of you Damage : 30 | 45 | 60 | 75 | 90 Damage Scaling
-    : 17.5% Intelligence Stun Duration : 0.9 | 0.95 | 1 | 1.05 | 1.1 seconds Healing
-    Reduction : -25% Healing Reduction Duration : 5 seconds Range : 5.6 meters Cone
-    Angle : 90 degrees Cooldown : 12 | 11.5 | 11 | 10.5 | 10 seconds Cost : 40 | 50
-    | 60 | 70 | 80 mana Expand Ability Video'
+  description: Channel a big ol' burp to deal Magical Damage repeatedly to enemies
+    in front of you
 - slot: Ultimate
   name: Intoxicate
   cooldown:
@@ -158,17 +141,14 @@ abilities:
   - 'Radius: 5.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 mana'
-  description: 'AREA DAMAGE INTOXICATE Notes: Smash your jug of wine, dealing Magical
-    Damage and Intoxicating enemies around you Damage : 230 | 300 | 370 | 440 | 510
-    Damage Scaling : 65% Intelligence Duration : 4 seconds Strength : 12 | 20 | 28
-    | 36 | 44 Intelligence : 20 | 30 | 40 | 50 | 60 Buff Duration : 6 seconds Radius
-    : 5.6 meters Cooldown : 90 seconds Cost : 90 mana Expand Ability Video'
+  description: 'Smash your jug of wine, dealing Magical Damage and Intoxicating enemies
+    around you Duration: 4 seconds'
 aspects:
 - name: Aspect of Revelry
   kit_changes: After using Chug, Bacchus's inhand attacks cleave and deal bonus damage
     scaling with Strength instead of Protections, for a short duration.
 source_url: https://wiki.smite2.com/w/Bacchus
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Bacchus Basic Attack

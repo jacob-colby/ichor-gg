@@ -36,9 +36,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Hecate Notes: Fire a projectile that deals Magical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Mythic Ritual
   details:
@@ -58,10 +56,7 @@ abilities:
   - 'Strength: 5 + 2 Per Level'
   - 'Intelligence: 8 + 3.2 Per Level'
   - 'Buff Duration: 300 seconds'
-  description: 'EMPOWER ALLIES, STRUCTURES Notes: You may interact with things to
-    empower them Health Regen : 2 + 0.25 Per Level Mana Regen : 2 + 0.25 Per Level
-    Strength : 5 + 2 Per Level Intelligence : 8 + 3.2 Per Level Buff Duration : 300
-    seconds Expand Ability Video'
+  description: You may interact with things to empower them
 - slot: 1st Ability
   name: Triplicate Form
   cooldown:
@@ -95,12 +90,8 @@ abilities:
   - 'Radius: 0.75 meters'
   - 'Cooldown: 9 | 8.5 | 8 | 7.5 | 7 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'ALTERNATE DAMAGE AND MESMERIZE Notes: Split yourself and fire a projectile,
-    alternating between Power Form and Hex Form Damage : 80 | 125 | 170 | 215 | 260
-    Damage Scaling : 75% Intelligence Bonus Damage : 10 | 13 | 16 | 19 | 22 Bonus
-    Damage Scaling : 2% Intelligence Mesmerize Duration : 1 second Mark Duration :
-    5 seconds Range : 11.2 meters Radius : 0.75 meters Cooldown : 9 | 8.5 | 8 | 7.5
-    | 7 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Split yourself and fire a projectile, alternating between Power Form
+    and Hex Form
 - slot: 2nd Ability
   name: Spell Eater
   cooldown:
@@ -127,11 +118,8 @@ abilities:
   - 'Attack Radius: 3.2 meters'
   - 'Cooldown: 9 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: 'ABILITY-CHARGED AREA DAMAGE Notes: Create a Sigil that charges up
-    when gods activate abilities in a large area Damage : 80 | 130 | 180 | 230 | 280
-    Damage Scaling : 50% Intelligence Range : 9 meters Charge Radius : 20 meters Attack
-    Radius : 3.2 meters Cooldown : 9 seconds Cost : 50 | 60 | 70 | 80 | 90 mana Expand
-    Ability Video'
+  description: Create a Sigil that charges up when gods activate abilities in a large
+    area
 - slot: 3rd Ability
   name: Repel Magic
   cooldown:
@@ -154,13 +142,9 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 30 | 35 | 40 | 45 | 50 mana'
-  description: 'MAGICAL SHIELD, AREA DAMAGE Notes: Activating this increases your
-    Movement Speed , and gives Spell Eater 3 charges Grant yourself or an allied god
-    a Magical Shield , absorbing Magical Damage Damage : 75 | 120 | 165 | 210 | 255
-    Damage Scaling : 70% Intelligence Magical Shield Health : 90 | 155 | 220 | 285
-    | 350 Movement Speed : 15% Buff Duration : 6 seconds Range : 8.8 meters Radius
-    : 3.2 meters Cooldown : 12 seconds Cost : 30 | 35 | 40 | 45 | 50 mana Expand Ability
-    Video'
+  description: Activating this increases your Movement Speed , and gives Spell Eater
+    3 charges Grant yourself or an allied god a Magical Shield , absorbing Magical
+    Damage
 - slot: Ultimate
   name: Open the Gates
   cooldown:
@@ -182,17 +166,15 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 mana'
-  description: 'PORTALS DAMAGE, TELEPORT Notes: Open two Portals between realms, Stunning
-    , then Teleporting enemy gods to the opposite Portal Damage : 320 | 370 | 420
-    | 470 | 520 Damage Scaling : 85% Intelligence Stun : 1 second Range : 14 meters
-    Radius : 4.8 meters Cooldown : 90 seconds Cost : 90 mana Expand Ability Video'
+  description: Open two Portals between realms, Stunning , then Teleporting enemy
+    gods to the opposite Portal
 aspects:
 - name: Aspect of Ruin
   kit_changes: Spell Eater can no longer be refired but instead reduces enemy ability
     damage in the area. Additionally, each time an enemy ability is cast a projectile
     lands and explodes at their location. Spell Eater's cooldown is increased.
 source_url: https://wiki.smite2.com/w/Hecate
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Hecate Basic Attack

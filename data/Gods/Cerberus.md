@@ -38,18 +38,15 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Cerberus Notes: Deal Magical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Spirit of Death
   details:
   - The amount stolen is based off of the base heal effect and does not include any
     increase or reduction applied
   - Severing an enemy's soul increases Healing stolen from them by 20% for 5 seconds
-  description: 'STEALS ENEMY HEALING Notes: Any time a nearby enemy god is Healed
-    , that Heal is reduced by 25% and you receive 60% + 1% per level of the Heal Expand
-    Ability Video'
+  description: Any time a nearby enemy god is Healed , that Heal is reduced by 25%
+    and you receive 60% + 1% per level of the Heal
 - slot: 1st Ability
   name: Paralyzing Spit
   cooldown:
@@ -79,11 +76,8 @@ abilities:
   - 'Radius: 0.56 meters'
   - 'Cooldown: 13 | 12.5 | 12 | 11.5 | 11 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'STUNS WHEN CHARGED Notes: Spit venom with your snake tail that passes
-    through enemies dealing Magical Damage Damage : 65 | 90 | 115 | 140 | 165 Damage
-    Scaling : 20% Intelligence Stun : 1.1 | 1.2 | 1.3 | 1.4 | 1.5 seconds Range :
-    8 meters Radius : 0.56 meters Cooldown : 13 | 12.5 | 12 | 11.5 | 11 seconds Cost
-    : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Spit venom with your snake tail that passes through enemies dealing
+    Magical Damage
 - slot: 2nd Ability
   name: Ghastly Breath
   cooldown:
@@ -112,13 +106,8 @@ abilities:
   - 'Slow Cone Angle: 30 degrees'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'CHANNEL CONE SLOW Notes: Your heads release a cone of noxious breath
-    dealing Magical Damage repeatedly to enemies in front of you Damage Per Tick :
-    20 | 30 | 40 | 50 | 60 Damage Scaling Per Tick : 12.5% Intelligence Slow : 7 |
-    7.5 | 8 | 8.5 | 9% Magical Protections Reduced : 3 | 4.5 | 6 | 7.5 | 9 Debuff
-    Duration : 2 seconds Range : 5.6 meters Cone Angle : 90 degrees Slow Cone Angle
-    : 30 degrees Cooldown : 14 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability
-    Video'
+  description: Your heads release a cone of noxious breath dealing Magical Damage
+    repeatedly to enemies in front of you
 - slot: 3rd Ability
   name: Soul Expulsion
   cooldown:
@@ -136,12 +125,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 55 mana'
-  description: 'LEAP, KILL SOULS TO HEAL Notes: Killing a soul Heals you and reduces
-    ''s cooldown by 2 seconds Leap forward dealing Magical Damage to enemies and severing
-    their souls when you land Damage : 80 | 120 | 160 | 200 | 240 Damage Scaling :
-    60% Intelligence Heal From Gods : 15 | 30 | 45 | 60 | 75 Heal From Minions : 10
-    | 15 | 20 | 25 | 30 Soul Health : 50 | 60 | 70 | 80 | 90 Range : 8.8 meters Radius
-    : 2.4 meters Cooldown : 14 seconds Cost : 55 mana Expand Ability Video'
+  description: Killing a soul Heals you and reduces 's cooldown by 2 seconds Leap
+    forward dealing Magical Damage to enemies and severing their souls when you land
 - slot: Ultimate
   name: Stygian Torment
   cooldown:
@@ -161,17 +146,14 @@ abilities:
   - 'Displacement Distance: 3.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'AREA LIFT, THEN THROW Notes: Raise all enemy Gods into the air, severing
-    their souls and dealing Magical Damage to them before pulling them in front of
-    you Damage : 180 | 255 | 330 | 405 | 480 Damage Scaling : 55% Intelligence Radius
-    : 4.8 meters Displacement Distance : 3.6 meters Cooldown : 90 seconds Cost : 60
-    | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Raise all enemy Gods into the air, severing their souls and dealing
+    Magical Damage to them before pulling them in front of you
 aspects:
 - name: Aspect of Souls
   kit_changes: Ghastly Breath ticks an additional time for every 3 god souls you have
     killed but souls no longer heal. Stygian Torment now only knocks up targets.
 source_url: https://wiki.smite2.com/w/Cerberus
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Cerberus Basic Attack

@@ -50,9 +50,52 @@
   --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
+  /* ── Faces ──────────────────────────────────────────────────────────────
+     `font-mono` sets measurements: numerals, a unit bound to a numeral
+     (2500g, 47% win), tier letters, T1/T2/T3 — anything that reads down a
+     column. Plus one non-numeric use: the section eyebrow (uppercase, tracked,
+     text-label) that titles a section or a table column.
+
+     Nothing else. Navigation, actions, verdicts, names, states, effect tags
+     and prose set in Inter or Rajdhani however small they are. The old rule
+     ("any label, tag, or count") caught nearly every string in a data tool and
+     put 73% of the items shelf in the label face, at which point mono had
+     stopped distinguishing anything. See DESIGN.md § The Measurement Rule.  */
   --font-display: "Rajdhani", sans-serif;
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+
+  /* ── Type scale ────────────────────────────────────────────────────────
+     Seven steps replacing sixteen ad-hoc sizes. The app had nine distinct
+     sizes inside a 4px band (9 / 9.5 / 10 / 10.5 / 11 / 11.5 / 12 / 12.5 / 13)
+     and 61–84% of every surface's text at or below 10.5px — which is why it
+     read flat: with no ratio between steps there is no hierarchy to read.
+
+     Tight at the bottom because this is a dense data tool, open at the top so
+     a page can actually make a claim. 10px is a hard floor; nothing below it
+     ships (the god sidebar was running 7px).
+
+     micro   dense mono numerals inside a grid cell
+     label   mono uppercase micro-labels, tags, counts
+     small   secondary content, chips, captions
+     body    default reading size
+     lead    intro paragraphs, dialog body copy
+     title   section titles, god/item names in a detail view
+     display the one page claim per surface                                */
+  --text-micro: 10px;
+  --text-micro--line-height: 1.4;
+  --text-label: 11px;
+  --text-label--line-height: 1.45;
+  --text-small: 12px;
+  --text-small--line-height: 1.5;
+  --text-body: 13px;
+  --text-body--line-height: 1.6;
+  --text-lead: 15px;
+  --text-lead--line-height: 1.55;
+  --text-title: 20px;
+  --text-title--line-height: 1.25;
+  --text-display: 32px;
+  --text-display--line-height: 1.12;
 }
 
 :root { color-scheme: dark; }

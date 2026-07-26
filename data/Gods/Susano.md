@@ -38,9 +38,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Susano Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Storm's Edge
   details:
@@ -52,10 +50,8 @@ abilities:
   - 'Increased Damage Taken: 10%'
   - 'Debuff Duration: 5 seconds'
   - 'Buff Duration: 5 seconds'
-  description: 'ATTACK AFTER ABILITY DEBUFFS Notes: After using an ability, your next
-    Attack will add a debuff stack to an enemy Strength Reduction : 10% Slow : 15%
-    Increased Damage Taken : 10% Debuff Duration : 5 seconds Buff Duration : 5 seconds
-    Expand Ability Video'
+  description: After using an ability, your next Attack will add a debuff stack to
+    an enemy
 - slot: 1st Ability
   name: Storm Kata
   cooldown:
@@ -90,14 +86,8 @@ abilities:
   - 'Dash Radius: 0.5 meters'
   - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'THREE RECAST COMBO Notes: Each attack of can trigger ability item
-    effects Strike 3 times in quick succession Strike Damage : 50 | 75 | 100 | 125
-    | 150 Strike Damage Scaling : 55% Strength Spin Damage : 50 | 75 | 100 | 125 |
-    150 Spin Damage Scaling : 55% Strength Dash Damage : 20 | 32.5 | 45 | 57.5 | 70
-    Dash Damage Scaling : 25% Strength Strike Range : 4.8 meters Strike Cone Angle
-    : 60 degrees Spin Radius : 4.8 meters Dash Range : 7 meters Dash Radius : 0.5
-    meters Cooldown : 12 | 11.5 | 11 | 10.5 | 10 seconds Cost : 50 | 55 | 60 | 65
-    | 70 mana Expand Ability Video'
+  description: Each attack of can trigger ability item effects Strike 3 times in quick
+    succession
 - slot: 2nd Ability
   name: Wind Siphon
   cooldown:
@@ -118,11 +108,8 @@ abilities:
   - 'Inner Cone Angle: 40 degrees'
   - 'Cooldown: 15 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'PULL ENEMIES IN Notes: Command the winds to blow, dealing Physical
-    Damage to enemies in front of you Damage : 90 | 130 | 170 | 210 | 250 Damage Scaling
-    : 70% Strength Range : 5.6 meters Cone Angle : 105 degrees Inner Cone Angle :
-    40 degrees Cooldown : 15 seconds Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability
-    Video'
+  description: Command the winds to blow, dealing Physical Damage to enemies in front
+    of you
 - slot: 3rd Ability
   name: Jet Stream
   cooldown:
@@ -146,11 +133,8 @@ abilities:
   - 'Radius: 0.64 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
-  description: 'THROW PROJECTILE, RECAST TO TELEPORT Notes: Throw a gust of wind projectile
-    that stops on walls or the first enemy hit, creating a whirlwind Damage : 20 |
-    30 | 40 | 50 | 60 Damage Scaling : 25% Strength Range : 7.2 meters Radius : 0.64
-    meters Cooldown : 15 seconds Cost : 45 | 50 | 55 | 60 | 65 mana Expand Ability
-    Video'
+  description: Throw a gust of wind projectile that stops on walls or the first enemy
+    hit, creating a whirlwind
 - slot: Ultimate
   name: Typhoon
   cooldown:
@@ -179,15 +163,11 @@ abilities:
   - 'Max Radius: 8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 80 | 85 | 90 | 95 | 100 mana'
-  description: 'CHARGE TORNADO, RECAST TO FIRE Notes: Summon a typhoon which repeatedly
-    deals Physical Damage as it grows in size Damage Per Tick : 15 | 20 | 25 | 30
-    | 35 Damage Scaling Per Tick : 12% Strength Max Damage : 250 | 310 | 370 | 430
-    | 490 Damage Scaling : 115% Strength Range : 11.2 meters Start Radius : 4 meters
-    Max Radius : 8 meters Cooldown : 90 seconds Cost : 80 | 85 | 90 | 95 | 100 mana
-    Expand Ability Video'
+  description: Summon a typhoon which repeatedly deals Physical Damage as it grows
+    in size
 aspects: []
 source_url: https://wiki.smite2.com/w/Susano
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Susano Basic Attack

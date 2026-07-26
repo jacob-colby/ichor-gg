@@ -16,18 +16,21 @@
  * systematic pattern is visible rather than asserted.
  * FORM: Lane Board, position 3 of the ordered list, seed key c96ae713.
  */
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import type { God, IndexData, PatchPeriod } from "../types";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { usePins } from "../lib/pins";
-import { filterGods } from "../lib/godFilters";
 import { iconSlug } from "../lib/builds";
 import { godLane, laneTextClass } from "../lib/roleAccent";
 import { relativeDate } from "../lib/relativeDate";
+import { useDraft, encodeDraftHash, MODE_TEAM_SIZE } from "../lib/draft";
 import {
   buildDivergenceBoard, barPercent, deltaText,
   type Divergence, type LaneColumn,
 } from "../lib/divergence";
+
+/** The one label style shared by the sections below the board. */
+const sectionLabel = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
 /** Direction of a disagreement, in the vocabulary the Legend already teaches:
  * `under` = we rate it above the meta, `premium` = the meta rates it above us.
@@ -65,130 +68,6 @@ function GodIcon({ name, className }: { name: string; className: string }) {
   );
 }
 
-/* ── Search ──────────────────────────────────────────────────────────────
- * A combobox, not a text field with a list under it. The results overlay the
- * page instead of displacing it, and the keyboard can reach every one of them.
- */
-function HomeSearch({ gods }: { gods: God[] }) {
-  const [q, setQ] = useState("");
-  const [active, setActive] = useState(0);
-  const [open, setOpen] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const results = useMemo(() => (q.trim() ? filterGods(gods, { q }).slice(0, 6) : []), [gods, q]);
-  const expanded = open && q.trim().length > 0;
-
-  // A shrinking result list must never leave the cursor past its end.
-  useEffect(() => { setActive(0); }, [q]);
-
-  const go = (name: string) => {
-    setQ("");
-    setOpen(false);
-    navigate(toHash.god(name));
-  };
-
-  // Home/End deliberately aren't bound: in an editable combobox those belong to
-  // the text caret, and stealing them makes the field feel broken.
-  const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") { setQ(""); setOpen(false); return; }
-    if (!expanded || results.length === 0) return;
-    if (e.key === "ArrowDown") { e.preventDefault(); setActive((i) => (i + 1) % results.length); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); setActive((i) => (i - 1 + results.length) % results.length); }
-  };
-
-  // Dismiss when focus leaves the whole combobox — otherwise the overlay stays
-  // parked over the board after a click elsewhere.
-  const onBlur = (e: React.FocusEvent<HTMLDivElement>) => {
-    if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen(false);
-  };
-
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (results[active]) go(results[active].name);
-  };
-
-  return (
-    <div data-testid="home-search" onBlur={onBlur} className="relative w-full sm:max-w-sm">
-      <form
-        onSubmit={submit}
-        role="search"
-        className="flex items-center gap-2.5 rounded-md border border-line bg-bg2 px-3 py-2 transition-colors duration-[180ms] ease-standard focus-within:border-blue"
-      >
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="shrink-0 text-muted">
-          <circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" />
-        </svg>
-        <input
-          ref={inputRef}
-          value={q}
-          onChange={(e) => { setQ(e.target.value); setOpen(true); }}
-          onFocus={() => setOpen(true)}
-          onKeyDown={onKeyDown}
-          placeholder="Search gods…"
-          aria-label="Search gods"
-          role="combobox"
-          aria-expanded={expanded}
-          aria-controls="home-search-results"
-          aria-autocomplete="list"
-          aria-activedescendant={expanded && results[active] ? `home-search-opt-${active}` : undefined}
-          autoComplete="off"
-          className="w-full bg-transparent text-sm text-ink placeholder:text-muted focus:outline-none"
-        />
-        {q && (
-          <button
-            type="button"
-            onClick={() => { setQ(""); inputRef.current?.focus(); }}
-            aria-label="Clear search"
-            className="press shrink-0 rounded-sm px-1 font-mono text-xs text-faint hover:text-ink"
-          >
-            ✕
-          </button>
-        )}
-      </form>
-
-      {/* Announced separately so a screen reader hears the count without the
-          list stealing focus. */}
-      <p aria-live="polite" className="sr-only">
-        {expanded ? `${results.length} god${results.length === 1 ? "" : "s"} match` : ""}
-      </p>
-
-      {expanded && (
-        <ul
-          id="home-search-results"
-          role="listbox"
-          aria-label="Matching gods"
-          className="absolute z-20 mt-1.5 flex w-full flex-col gap-0.5 rounded-md border border-line-strong bg-bg2 p-1.5 shadow-card"
-        >
-          {results.length === 0 ? (
-            <li className="px-2.5 py-2 text-xs text-muted">
-              No god matches “{q.trim()}”. Check the spelling, or browse the lanes below.
-            </li>
-          ) : results.map((g, i) => (
-            <li key={g.name} role="presentation">
-              <button
-                type="button"
-                id={`home-search-opt-${i}`}
-                role="option"
-                aria-selected={i === active}
-                onClick={() => go(g.name)}
-                onMouseEnter={() => setActive(i)}
-                tabIndex={-1}
-                className={`press flex w-full items-center gap-2.5 rounded-sm px-2.5 py-2 text-left transition-colors duration-[150ms] ease-standard ${i === active ? "bg-bg3" : ""}`}
-              >
-                <GodIcon name={g.name} className="h-7 w-7" />
-                <span className="truncate font-display text-[13px] font-semibold text-ink">{g.name}</span>
-                {g.role && (
-                  <span className={`ml-auto shrink-0 font-mono text-[10px] ${laneTextClass(godLane(g.role))}`}>
-                    {godLane(g.role) ?? g.role}
-                  </span>
-                )}
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
-
 /* ── The claim ───────────────────────────────────────────────────────────
  * The page's one argument, with every number in it computed from the index
  * rather than written down. When there's no tier list to compare against, the
@@ -202,7 +81,7 @@ function StateBlock({ data, disagreements, ranked, unranked }: {
     <header className="border-b border-line pb-6">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="min-w-0">
-          <h1 className="max-w-[19ch] text-balance font-display text-[30px] font-bold leading-[1.1] tracking-[-0.01em] text-ink sm:text-[38px]">
+          <h1 className="max-w-[19ch] text-balance font-display text-display font-bold leading-[1.1] tracking-[-0.01em] text-ink sm:text-display">
             {comparable ? (
               <>We disagree with the meta on{" "}
                 <span className="text-gold">{disagreements} of {ranked}</span>{" "}
@@ -212,7 +91,7 @@ function StateBlock({ data, disagreements, ranked, unranked }: {
               <>Builds scored by a model, not by what&rsquo;s popular.</>
             )}
           </h1>
-          <p className="mt-3 max-w-[64ch] text-sm leading-relaxed text-ink-soft">
+          <p className="mt-3 max-w-[64ch] text-body leading-relaxed text-ink-soft">
             ichor fits a gold-value model to item stats to find what&rsquo;s underpriced for a
             god&rsquo;s kit, then weighs that against the community&rsquo;s high-elo meta.
             {comparable
@@ -222,8 +101,9 @@ function StateBlock({ data, disagreements, ranked, unranked }: {
         </div>
 
         <div className="flex shrink-0 flex-col gap-3 lg:items-end">
-          <HomeSearch gods={data.gods} />
-          <ul className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10.5px] uppercase tracking-[0.09em] text-faint lg:justify-end">
+          {/* Search lives in the shell now — one field, reaching gods and
+              items, instead of four fields with four behaviours. */}
+          <ul className="flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint lg:justify-end">
             <li>{data.gods.length} gods</li>
             {comparable && <li className="before:mr-3 before:content-['·']">{ranked} ranked</li>}
             {unranked > 0 && <li className="before:mr-3 before:content-['·']">{unranked} unranked</li>}
@@ -241,7 +121,7 @@ function StateBlock({ data, disagreements, ranked, unranked }: {
  * remembered schema. */
 function BoardKey() {
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-[10px] uppercase tracking-[0.09em] text-faint">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-label text-faint">
       <span className="flex items-center gap-1.5">
         <span className="inline-block h-[3px] w-6 bg-premium" />
         Meta rates higher
@@ -269,11 +149,11 @@ function DivergenceRow({ row, scale }: { row: Divergence; scale: number }) {
         className="press grid w-full grid-cols-[20px_minmax(0,1fr)_auto] items-center gap-x-2 gap-y-1.5 rounded-md px-1.5 py-1.5 text-left transition-colors duration-[150ms] ease-standard hover:bg-bg2"
       >
         <GodIcon name={row.name} className="h-5 w-5" />
-        <span className="truncate font-display text-[12.5px] font-semibold text-ink">{row.name}</span>
+        <span className="truncate font-display text-small font-semibold text-ink">{row.name}</span>
         {/* Tier letters lift out of the quiet tier only when they actually
             differ, so the headline's disagreement count is countable here. */}
         <span
-          className={`font-mono text-[10px] tracking-[0.06em] ${row.tierDisagrees ? "text-ink-soft" : "text-faint"}`}
+          className={`font-mono text-micro tracking-[0.06em] ${row.tierDisagrees ? "text-ink-soft" : "text-faint"}`}
           aria-hidden="true"
         >
           {row.tierOurs ?? "–"}<span className="px-0.5">/</span>{row.tierCommunity ?? "–"}
@@ -282,7 +162,7 @@ function DivergenceRow({ row, scale }: { row: Divergence; scale: number }) {
         <span className="col-span-3 flex items-center gap-2">
           {/* Both operands, not just the gap: "+0.12" alone could be 0.85 vs
               0.73 or 0.20 vs 0.08, and the reader came here to interrogate. */}
-          <span aria-hidden="true" className="shrink-0 font-mono text-[10px] text-faint">
+          <span aria-hidden="true" className="shrink-0 font-mono text-micro text-faint">
             <span className="text-ink-soft">{row.ours.toFixed(2)}</span>
             <span className="px-0.5">·</span>
             {row.community.toFixed(2)}
@@ -294,7 +174,7 @@ function DivergenceRow({ row, scale }: { row: Divergence; scale: number }) {
               style={{ width: `${pct / 2}%` }}
             />
           </span>
-          <span aria-hidden="true" className={`w-[42px] shrink-0 text-right font-mono text-[10.5px] ${deltaTextClass(row.delta)}`}>
+          <span aria-hidden="true" className={`w-[42px] shrink-0 text-right font-mono text-label ${deltaTextClass(row.delta)}`}>
             {deltaText(row.delta)}
           </span>
         </span>
@@ -318,10 +198,10 @@ function LaneBoardColumn({ col, scale, index }: { col: LaneColumn; scale: number
       style={{ ["--bar-delay" as string]: `${index * 70}ms` }}
       className="min-w-0 xl:border-l xl:border-line xl:pl-4 xl:first:border-l-0 xl:first:pl-0"
     >
-      <h3 className={`font-display text-[13px] font-bold tracking-[0.02em] ${laneTextClass(col.lane)}`}>
+      <h3 className={`font-display text-body font-bold tracking-[0.02em] ${laneTextClass(col.lane)}`}>
         {col.lane}
       </h3>
-      <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.08em] text-faint">
+      <p className="mt-0.5 text-label text-faint">
         {col.rows.length > 0 ? (
           <>
             <span className={leanClass}>mean {deltaText(col.meanDelta)}</span>
@@ -340,7 +220,7 @@ function LaneBoardColumn({ col, scale, index }: { col: LaneColumn; scale: number
       </ul>
 
       {(rest > 0 || col.unranked > 0) && (
-        <p className="mt-1.5 px-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-faint">
+        <p className="mt-1.5 px-1.5 text-label text-faint">
           {rest > 0 && <>+{rest} more</>}
           {rest > 0 && col.unranked > 0 && <span className="px-1">·</span>}
           {col.unranked > 0 && <>{col.unranked} unranked</>}
@@ -361,12 +241,12 @@ function DivergenceBoard({ board }: { board: ReturnType<typeof buildDivergenceBo
   return (
     <section data-testid="home-divergence" aria-labelledby="home-divergence-h" className="pt-7">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
-        <h2 id="home-divergence-h" className="font-display text-base font-bold text-ink">
+        <h2 id="home-divergence-h" className="font-display text-lead font-bold text-ink">
           Where we disagree
         </h2>
         <a
           href={toHash.tiers()}
-          className="press -my-1 rounded-sm px-1 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.09em] text-blue hover:underline"
+          className="press -my-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
         >
           Full tier list →
         </a>
@@ -385,10 +265,83 @@ function DivergenceBoard({ board }: { board: ReturnType<typeof buildDivergenceBo
       </div>
 
       {board.unranked > 0 && (
-        <p className="mt-6 max-w-[72ch] border-t border-line pt-3 text-xs leading-relaxed text-muted">
+        <p className="mt-6 max-w-[72ch] border-t border-line pt-3 text-small leading-relaxed text-muted">
           <span className="text-ink-soft">{board.unranked} of {board.total} gods have no community data yet.</span>{" "}
           They&rsquo;re left unranked rather than given an invented tier, so they don&rsquo;t appear above —
           the model still scores them on their own.
+        </p>
+      )}
+    </section>
+  );
+}
+
+/* ── Draft ───────────────────────────────────────────────────────────────
+ * The draft board is the one surface that *changes* a build rather than
+ * reporting one, and nothing in the app pointed at it — you met it by clicking
+ * an icon in the rail and guessing. It also remembers a comp across sessions,
+ * so a half-entered draft is worth handing back rather than leaving parked in
+ * localStorage where only the rail icon can find it.
+ */
+function DraftSeam() {
+  const { draft, mode } = useDraft();
+  const allies = draft.allies.filter(Boolean);
+  const enemies = draft.enemies.filter(Boolean);
+  const started = allies.length + enemies.length > 0;
+  const size = MODE_TEAM_SIZE[mode];
+  const modeLabel = mode === "joust" ? "Joust" : "Conquest";
+  // Only the first ally slot has a build behind it — that god's core is the
+  // one thing the draft page adapts. With the slot empty there is nothing to
+  // adapt, however many enemies are entered, so the two cases read differently.
+  const you = draft.allies[0];
+
+  return (
+    <section data-testid="home-draft" aria-labelledby="home-draft-h" className="border-t border-line pt-6">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+        <h2 id="home-draft-h" className={sectionLabel}>
+          {started ? "Your draft in progress" : "Drafting a match"}
+        </h2>
+        <a
+          href={started ? encodeDraftHash(mode, draft) : toHash.draft()}
+          className="press -my-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
+        >
+          {started ? "Resume draft →" : "Open the draft board →"}
+        </a>
+      </div>
+
+      {started ? (
+        <>
+          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span className="flex flex-wrap items-center gap-1.5">
+              {allies.map((n) => <GodIcon key={n} name={n} className="h-7 w-7" />)}
+              {allies.length === 0 && <span className="text-small text-faint">no allies yet</span>}
+            </span>
+            <span aria-hidden="true" className="text-small text-faint">vs</span>
+            <span className="flex flex-wrap items-center gap-1.5">
+              {enemies.map((n) => <GodIcon key={n} name={n} className="h-7 w-7" />)}
+              {enemies.length === 0 && <span className="text-small text-faint">no enemies yet</span>}
+            </span>
+          </div>
+          {/* Named, because two rows of portraits don't say which side is
+              which — and the enemy count is what decides how much the build
+              can actually adapt. */}
+          <p className="mt-2 max-w-[68ch] text-small leading-relaxed text-muted">
+            {modeLabel} · <span className="text-ink-soft">{allies.length} of {size}</span> allies
+            {" · "}<span className="text-ink-soft">{enemies.length} of {size}</span> enemies.
+            {/* Never "the build already answers those picks" — whether any item
+                actually moved is what the board is for, and it may well
+                report that nothing did. */}
+            {!you
+              ? " Your own slot is empty, so there's no build to adapt yet."
+              : enemies.length === 0
+                ? ` Add an enemy and it starts weighing ${you}'s core against them.`
+                : ` It's weighing ${you}'s core against ${enemies.length === 1 ? "that pick" : "those picks"}.`}
+          </p>
+        </>
+      ) : (
+        <p className="mt-2 max-w-[68ch] text-body leading-relaxed text-muted">
+          Enter your god and the enemies you know, and the model re-sorts that god&rsquo;s core around
+          them — named items displacing named items, for stated reasons. It&rsquo;s the one place a
+          build answers a specific match instead of the average one.
         </p>
       )}
     </section>
@@ -407,11 +360,9 @@ function PinnedSection({ gods }: { gods: God[] }) {
 
   return (
     <section data-testid="home-pinned" aria-labelledby="home-pinned-h" className="border-t border-line pt-6">
-      <h2 id="home-pinned-h" className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-faint">
-        Your pinned gods
-      </h2>
+      <h2 id="home-pinned-h" className={sectionLabel}>Your pinned gods</h2>
       {pinnedGods.length === 0 ? (
-        <p className="mt-2 max-w-[68ch] text-sm text-muted">
+        <p className="mt-2 max-w-[68ch] text-body text-muted">
           Pin a god from its page and it&rsquo;ll show up here — a quick jump back to the ones you play most.
         </p>
       ) : (
@@ -427,14 +378,14 @@ function PinnedSection({ gods }: { gods: God[] }) {
                   className="press flex items-center gap-2 rounded-md border border-line bg-bg2 py-1.5 pl-1.5 pr-7 transition-colors duration-[180ms] ease-standard hover:border-line-strong"
                 >
                   <GodIcon name={g.name} className="h-7 w-7" />
-                  <span className="max-w-[110px] truncate font-display text-[12.5px] font-semibold text-ink">{g.name}</span>
-                  {lane && <span className={`font-mono text-[9.5px] ${laneTextClass(lane)}`}>{lane}</span>}
+                  <span className="max-w-[110px] truncate font-display text-small font-semibold text-ink">{g.name}</span>
+                  {lane && <span className={`text-label ${laneTextClass(lane)}`}>{lane}</span>}
                 </button>
                 <button
                   type="button"
                   onClick={() => toggle(g.name)}
                   aria-label={`Unpin ${g.name}`}
-                  className="press absolute right-0.5 top-1/2 -translate-y-1/2 rounded-sm px-1.5 py-1 font-mono text-[11px] leading-none text-faint opacity-0 transition-opacity duration-[150ms] hover:text-ink focus-visible:opacity-100 group-hover:opacity-100"
+                  className="press absolute right-0.5 top-1/2 -translate-y-1/2 rounded-sm px-1.5 py-1 text-label leading-none text-faint opacity-0 transition-opacity duration-[150ms] hover:text-ink focus-visible:opacity-100 group-hover:opacity-100"
                 >
                   ✕
                 </button>
@@ -461,26 +412,24 @@ function LatestPatch({ periods }: { periods: PatchPeriod[] | undefined }) {
   return (
     <section data-testid="home-patch" aria-labelledby="home-patch-h" className="border-t border-line pt-6">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
-        <h2 id="home-patch-h" className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-faint">
-          Latest patch changes
-        </h2>
-        <a href={toHash.patch()} className="press -my-1 rounded-sm px-1 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.09em] text-blue hover:underline">
+        <h2 id="home-patch-h" className={sectionLabel}>Latest patch changes</h2>
+        <a href={toHash.patch()} className="press -my-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline">
           All patch notes →
         </a>
       </div>
-      <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 font-mono text-[11px] text-faint">
-        <span>{latest.from} → {latest.to}</span>
+      <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-label text-faint">
+        <span className="font-mono">{latest.from} → {latest.to}</span>
         {counts && <span className="text-muted">{counts}</span>}
       </div>
       <div className="mt-2 flex flex-wrap gap-1.5">
         {latest.changed.map((d) => (
-          <span key={d.name} className="rounded-sm border border-line bg-bg2 px-2 py-1 text-[11px] text-ink-soft">{d.name}</span>
+          <span key={d.name} className="rounded-sm border border-line bg-bg2 px-2 py-1 text-label text-ink-soft">{d.name}</span>
         ))}
         {latest.added.map((n) => (
-          <span key={n} className="rounded-sm border border-blue/30 bg-blue/10 px-2 py-1 text-[11px] font-semibold text-blue">{n}</span>
+          <span key={n} className="rounded-sm border border-blue/30 bg-blue/10 px-2 py-1 text-label font-semibold text-blue">{n}</span>
         ))}
         {latest.removed.map((n) => (
-          <span key={n} className="rounded-sm border border-line px-2 py-1 text-[11px] text-muted line-through">{n}</span>
+          <span key={n} className="rounded-sm border border-line px-2 py-1 text-label text-muted line-through">{n}</span>
         ))}
       </div>
     </section>
@@ -493,7 +442,7 @@ function LatestPatch({ periods }: { periods: PatchPeriod[] | undefined }) {
 function Freshness({ dataUpdated, dataPatch }: { dataUpdated?: string; dataPatch?: string }) {
   if (!dataUpdated) return null;
   return (
-    <p data-testid="home-freshness" title={dataUpdated} className="border-t border-line pt-4 font-mono text-[10.5px] uppercase tracking-[0.09em] text-faint">
+    <p data-testid="home-freshness" title={dataUpdated} className="border-t border-line pt-4 text-label text-faint">
       Updated {relativeDate(dataUpdated)}{dataPatch ? ` · ${dataPatch}` : ""}
     </p>
   );
@@ -512,6 +461,7 @@ export function Home({ data }: { data: IndexData }) {
       />
       <DivergenceBoard board={board} />
       <div className="mt-7 flex flex-col gap-6">
+        <DraftSeam />
         <PinnedSection gods={data.gods} />
         <LatestPatch periods={data.patch_notes} />
         <Freshness dataUpdated={data.data_updated} dataPatch={data.data_patch} />

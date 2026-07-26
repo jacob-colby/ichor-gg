@@ -6,7 +6,8 @@ import type { PatchPeriod } from "../types";
 describe("PatchNotes", () => {
   it("shows a friendly empty state and no period rows when there is no history", () => {
     render(<PatchNotes periods={[]} />);
-    expect(screen.getByText(/no patch history yet/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/nothing has changed yet/i);
+    expect(screen.getByText(/starts empty and fills in/i)).toBeInTheDocument();
     expect(screen.queryByText(/→/)).not.toBeInTheDocument();
   });
 
@@ -123,7 +124,8 @@ describe("PatchNotes", () => {
     ];
     render(<PatchNotes periods={periods} />);
     expect(screen.getByText("Fresh Blade")).toBeInTheDocument();
-    expect(screen.getByText(/new/i)).toBeInTheDocument();
+    // Scoped: the headline also counts additions.
+    expect(screen.getByText("new", { selector: "span" })).toBeInTheDocument();
     const removed = screen.getByText("Stale Blade");
     expect(removed.className).toContain("line-through");
   });

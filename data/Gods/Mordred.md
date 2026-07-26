@@ -40,10 +40,7 @@ abilities:
   - 'Clarent Damage Scaling: 60% Strength + 100% Intelligence + 60% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Mordred Notes: Deal Physical Damage to an enemy in front of you Mourning
-    Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Clarent
-    Damage Scaling : 60% Strength + 100% Intelligence + 60% Attack Damage Range :
-    1.92 meters Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Wrath of the Forsaken
   details:
@@ -53,8 +50,8 @@ abilities:
   - Hitting enemy minions provides 1 Wrath
   - Passively gain 1 Wrath every 4 seconds
   - Wrath can only be gained once per ability per enemy hit
-  description: 'Notes: ly gain 1 Wrath every 4 seconds Hit enemies to gain Wrath.
-    Additionally, you have Shoulder Charge Expand Ability Video'
+  description: ly gain 1 Wrath every 4 seconds Hit enemies to gain Wrath. Additionally,
+    you have Shoulder Charge
 - slot: Passive
   name: Shoulder Charge
   cooldown:
@@ -68,9 +65,8 @@ abilities:
   - 'Range: 4 meters'
   - 'Radius: 1.5 meters'
   - 'Cooldown: 10 seconds'
-  description: 'INTERACT TO DASH Notes: After using an ability or attacking, your
-    Interact Key becomes a Dash forward Damage : 12 Damage Scaling : 3 Per Level Range
-    : 4 meters Radius : 1.5 meters Cooldown : 10 seconds Expand Ability Video'
+  description: After using an ability or attacking, your Interact Key becomes a Dash
+    forward
 - slot: 1st Ability
   name: Cruel Strikes
   cooldown:
@@ -105,14 +101,9 @@ abilities:
   - 'Slam Radius: 0.75 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
-  description: 'CONE SLASH, LINE SLAM Notes: Then Slam, dealing Physical Damage to
-    enemies in a line and either dealing Bonus Damage or Healing , based on your Attack
-    Chain Strike twice with your swords Slash Damage : 75 | 100 | 125 | 150 | 175
-    Slash Damage Scaling : 45% Strength Slam Damage : 85 | 120 | 155 | 190 | 225 Slam
-    Damage Scaling : 65% Strength Bonus Damage : 45% Protections Heal : 45% Protections
-    Minion Heal : 8 | 11 | 14 | 17 | 20 Slash Radius : 4 meters Slash Angle : 90 degrees
-    Slam Range : 4 meters Slam Radius : 0.75 meters Cooldown : 14 | 13 | 12 | 11 |
-    10 seconds Cost : 45 | 50 | 55 | 60 | 65 mana Expand Ability Video'
+  description: Then Slam, dealing Physical Damage to enemies in a line and either
+    dealing Bonus Damage or Healing , based on your Attack Chain Strike twice with
+    your swords
 - slot: 2nd Ability
   name: Bloodrage
   cooldown:
@@ -142,14 +133,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'AREA DAMAGE, SPEED BUFF Notes: Deal Physical Damage to enemies around
-    you, then gain increased Attack Speed and Movement Speed Damage : 70 | 115 | 160
-    | 205 | 250 Damage Scaling : 60% Strength + 40% Intelligence Attack Speed : 32
-    | 34 | 36 | 38 | 40% Bonus Attack Speed : 5% Per Stack Movement Speed : 12 | 14
-    | 16 | 18 | 20% Protections : 6 | 7 | 8 | 9 | 10 Per Stack Buff Duration : 4 |
-    4.5 | 5 | 5.5 | 6 seconds Protections Reduced : -4 | -5 | -6 | -7 | -8 Debuff
-    Duration : 4 | 4.5 | 5 | 5.5 | 6 seconds Radius : 3.2 meters Cooldown : 14 seconds
-    Cost : 50 | 55 | 60 | 65 | 70 mana Expand Ability Video'
+  description: Deal Physical Damage to enemies around you, then gain increased Attack
+    Speed and Movement Speed
 - slot: 3rd Ability
   name: Severing Slice
   cooldown:
@@ -179,14 +164,9 @@ abilities:
   - 'Inner Radius: 0.2 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: 'PROJECTILE BLEED, SLOW Notes: Direct hits with the center of the projectile
-    cause targets to Bleed , taking Bonus Physical Damage as they move Fire a projectile
-    that deals Physical Damage and Slows enemies Damage : 55 | 85 | 115 | 145 | 175
-    Damage Scaling : 70% Intelligence Bleed Damage : 25 | 30 | 35 | 40 | 45 Bleed
-    Damage Scaling : 12.5% Strength Minion Damage : 15 | 20 | 25 | 30 | 35 Minion
-    Damage Scaling : 5% Strength Slow : 30% Debuff Duration : 2.5 seconds Range :
-    9.6 meters Radius : 0.6 meters Inner Radius : 0.2 meters Cooldown : 12 seconds
-    Cost : 40 | 50 | 60 | 70 | 80 mana Expand Ability Video'
+  description: Direct hits with the center of the projectile cause targets to Bleed
+    , taking Bonus Physical Damage as they move Fire a projectile that deals Physical
+    Damage and Slows enemies
 - slot: Ultimate
   name: Heart Slash
   cooldown:
@@ -210,14 +190,10 @@ abilities:
   - 'Radius: 1 meter'
   - 'Cooldown: 20 seconds'
   - 'Cost: 40 Wrath'
-  description: 'ROOT, DRAIN Notes: If you hit an enemy god, they are Rooted . You
-    then Channel to siphon their lifeforce, gaining a Health Shield and Healing over
-    time while dealing Physical Damage repeatedly to that enemy Deal Physical Damage
-    to enemies in an area in front of you Damage : 100 | 155 | 210 | 265 | 320 Damage
-    Scaling : 75% Strength Damage Per Tick : 30 | 40 | 50 | 60 | 70 Damage Scaling
-    Per Tick : 25% Intelligence Heal : 10 | 20 | 30 | 40 | 50 Heal Scaling : 12.5%
-    Intelligence Shield Health : 160 | 200 | 240 | 280 | 320 Range : 6 meters Radius
-    : 1 meter Cooldown : 20 seconds Cost : 40 Wrath Expand Ability Video'
+  description: If you hit an enemy god, they are Rooted . You then Channel to siphon
+    their lifeforce, gaining a Health Shield and Healing over time while dealing Physical
+    Damage repeatedly to that enemy Deal Physical Damage to enemies in an area in
+    front of you
 - slot: Ultimate
   name: Pursue the Weak
   cost:
@@ -240,15 +216,10 @@ abilities:
   - 'Stun Duration: 0.5 seconds'
   - 'Radius: 3.2 meters'
   - 'Cost: 80 Wrath'
-  description: 'CHARGE THROUGH WALLS Notes: After a short delay, you Knock Up yourself
-    and Stunned enemies into the sky , repeatedly dealing Physical Damage If no enemy
-    gods are able to be Knocked Up , the follow-up attack will not start Become CC
-    Immune and Dash forward, traveling through walls, stopping on the first enemy
-    god hit Damage : 170 | 220 | 270 | 320 | 370 Damage Scaling : 80% Strength + 75%
-    Intelligence Damage Per Tick : 85 | 105 | 125 | 145 | 165 Damage Scaling Per Tick
-    : 20% Strength + 15% Intelligence Heal : 30 | 35 | 40 | 45 | 50 Heal Scaling :
-    25% Intelligence Stun Duration : 0.5 seconds Radius : 3.2 meters Cost : 80 Wrath
-    Expand Ability Video'
+  description: After a short delay, you Knock Up yourself and Stunned enemies into
+    the sky , repeatedly dealing Physical Damage If no enemy gods are able to be Knocked
+    Up , the follow-up attack will not start Become CC Immune and Dash forward, traveling
+    through walls, stopping on the first enemy god hit
 aspects:
 - name: Aspect of Rage
   kit_changes: Attacks while Bloodrage is active no longer provide bonus Protections
@@ -256,7 +227,7 @@ aspects:
     are lowered. Additionally Shoulder Charge deals more damage if it has hit an enemy
     god recently.
 source_url: https://wiki.smite2.com/w/Mordred
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Mordred Basic Attack

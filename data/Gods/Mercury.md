@@ -37,9 +37,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: 'Mercury Notes: Deal Physical Damage to an enemy in front of you Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Range : 1.92 meters
-    Cone Angle : 120 degrees Expand Ability Video'
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Fastest God Alive
   details:
@@ -49,9 +47,8 @@ abilities:
     Damage Bonus
   - 'Max Stacks: 500'
   - 'Max Damage Boost: 20%'
-  description: 'MOVE TO GAIN BONUS DAMAGE Notes: For every 1 centimeter traveled,
-    gain a 0.04% Damage Bonus on your next Attack Max Stacks : 500 Max Damage Boost
-    : 20% Expand Ability Video'
+  description: For every 1 centimeter traveled, gain a 0.04% Damage Bonus on your
+    next Attack
 - slot: 1st Ability
   name: Made You Look
   cooldown:
@@ -71,11 +68,8 @@ abilities:
   - 'Radius: 1.4 | 1.6 | 1.8 | 2 | 2.2 meters'
   - 'Cooldown: 11 | 10.5 | 10 | 9.5 | 9 seconds'
   - 'Cost: 50 mana'
-  description: 'AREA DAMAGE Notes: Move in the blink of an eye, dealing Physical Damage
-    to every enemy within a target area Damage : 80 | 115 | 150 | 185 | 220 Damage
-    Scaling : 70% Basic Attack Damage Range : 7.68 meters Radius : 1.4 | 1.6 | 1.8
-    | 2 | 2.2 meters Cooldown : 11 | 10.5 | 10 | 9.5 | 9 seconds Cost : 50 mana Expand
-    Ability Video'
+  description: Move in the blink of an eye, dealing Physical Damage to every enemy
+    within a target area
 - slot: 2nd Ability
   name: Maximum Velocity
   cooldown:
@@ -97,10 +91,7 @@ abilities:
   - 'Movement Speed: 2 | 4 | 6 | 8 | 10%'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'SPEED BUFF, SLOW IMMUNITY Notes: Gain increased Attack Speed and become
-    Slow Immune for the duration Attack Speed : 30 | 40 | 50 | 60 | 70% Buff Duration
-    : 5 seconds Movement Speed : 2 | 4 | 6 | 8 | 10% Cooldown : 14 | 13.5 | 13 | 12.5
-    | 12 seconds Cost : 60 | 65 | 70 | 75 | 80 mana Expand Ability Video'
+  description: Gain increased Attack Speed and become Slow Immune for the duration
 - slot: 3rd Ability
   name: Special Delivery
   cooldown:
@@ -124,14 +115,10 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: 'DASH, GRAB, THROW Notes: Dash forward, Knocking aside minions and
-    dealing Physical Damage to them. Grab the first enemy god encountered, Spinning
-    them. The enemy god takes Physical Damage every 0.25 seconds until the effect
-    ends. They are then Thrown in the direction you are facing Damage : 15 | 20 |
-    25 | 30 | 35 Damage Scaling : 20% Strength Minion Damage : 70 | 115 | 160 | 205
-    | 250 Minion Damage Scaling : 64% Strength Stun Duration : 1 second Range : 8.8
-    meters Radius : 0.48 meters Cooldown : 15 seconds Cost : 60 | 65 | 70 | 75 | 80
-    mana Expand Ability Video'
+  description: Dash forward, Knocking aside minions and dealing Physical Damage to
+    them. Grab the first enemy god encountered, Spinning them. The enemy god takes
+    Physical Damage every 0.25 seconds until the effect ends. They are then Thrown
+    in the direction you are facing
 - slot: Ultimate
   name: Sonic Boom
   cooldown:
@@ -160,17 +147,12 @@ abilities:
   - 'Radius: 2.59 meters'
   - 'Cooldown: 90 | 85 | 80 | 75 | 70 seconds'
   - 'Cost: 80 | 85 | 90 | 95 | 100 mana'
-  description: 'Global Charged Dash Notes: Gather energy for a powerful Dash . The
-    range increases as you charge. Dash forward, dealing Physical Damage and Spinning
-    enemies hit along the Dash . Gain Movement Speed after the Dash that scales based
-    on the energy gathered Damage : 200 | 275 | 350 | 425 | 500 Damage Scaling : 100%
-    Strength Stun Duration : 1.25 seconds Minimum Speed Buff : 15% Maximum Speed Buff
-    : 30% Buff Duration : 5 seconds Min Range : 0 meters Max Range : 48 meters Radius
-    : 2.59 meters Cooldown : 90 | 85 | 80 | 75 | 70 seconds Cost : 80 | 85 | 90 |
-    95 | 100 mana Expand Ability Video'
+  description: Gather energy for a powerful Dash . The range increases as you charge.
+    Dash forward, dealing Physical Damage and Spinning enemies hit along the Dash
+    . Gain Movement Speed after the Dash that scales based on the energy gathered
 aspects: []
 source_url: https://wiki.smite2.com/w/Mercury
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Mercury Basic Attack

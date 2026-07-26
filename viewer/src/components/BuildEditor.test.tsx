@@ -19,7 +19,7 @@ describe("BuildEditor", () => {
                         onClose={onClose} onSaved={onSaved} />);
     fireEvent.change(screen.getByPlaceholderText(/build name/i), { target: { value: "My Build" } });
     fireEvent.click(screen.getByRole("button", { name: /add item/i }));       // opens modal
-    fireEvent.change(screen.getByPlaceholderText(/search items/i), { target: { value: "Death" } });
+    fireEvent.change(screen.getByLabelText(/search items by name/i), { target: { value: "Death" } });
     fireEvent.click(screen.getByText("Deathbringer"));                        // picks + closes modal
     fireEvent.click(screen.getByRole("button", { name: /^save$/i }));
     expect(onSaved).toHaveBeenCalledWith("My Build");

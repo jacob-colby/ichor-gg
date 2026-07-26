@@ -36,9 +36,7 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: 'Rama Notes: Fire a projectile that deals Physical Damage to the first
-    enemy hit Damage Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage
-    Range : 8.8 meters Radius : 0.48 meters Expand Ability Video'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Astral Quiver
   details:
@@ -51,9 +49,8 @@ abilities:
   - You always respawn with a full Astral Quiver
   - 'Mana Restore: 10'
   - 'Drop Chance: 30% + 1% Per Level'
-  description: 'GENERATE ASTRAL ARROWS Notes: You always respawn with a full Your
-    generates an Astral Arrow every 12 seconds Mana Restore : 10 Drop Chance : 30%
-    + 1% Per Level Expand Ability Video'
+  description: You always respawn with a full Your generates an Astral Arrow every
+    12 seconds
 - slot: 1st Ability
   name: Astral Strike
   cost:
@@ -72,11 +69,8 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   - 'Cost: 15 mana + 1 Astral Arrow Per Shot'
-  description: 'FIRE ASTRAL ARROWS, PIERCING Notes: Switch to a more powerful arrow
-    that deals bonus Physical Damage , pierces, and Slows enemies Bonus Damage : 10
-    | 20 | 30 | 40 | 50 Bonus Damage Scaling : 20% Strength Slow : 10% Max Slow Stacks
-    : 3 Slow Duration : 1.5 seconds Range : 8.8 meters Radius : 0.48 meters Cost :
-    15 mana + 1 Astral Arrow Per Shot Expand Ability Video'
+  description: Switch to a more powerful arrow that deals bonus Physical Damage ,
+    pierces, and Slows enemies
 - slot: 2nd Ability
   name: Infinite Arrows
   cooldown:
@@ -100,10 +94,7 @@ abilities:
   - 'Buff Duration: 6 seconds'
   - 'Cooldown: 15 | 14 | 13 | 12 | 11 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
-  description: 'ATTACK FASTER Notes: Focus your mind and gain increased Attack Speed
-    Attack Speed : 40 | 45 | 50 | 55 | 60% Buff Duration : 6 seconds Cooldown : 15
-    | 14 | 13 | 12 | 11 seconds Cost : 40 | 45 | 50 | 55 | 60 mana Expand Ability
-    Video'
+  description: Focus your mind and gain increased Attack Speed
 - slot: 3rd Ability
   name: Rolling Assault
   cooldown:
@@ -124,13 +115,9 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: 'DASH, NEXT ATTACK CRIPPLES Notes: For the next 5 seconds after Rolling
-    , your next Attack will have Haste and consume an Astral Arrow, Crippling all
-    enemies hit and dealing bonus Physical Damage Roll in the direction you are currently
-    traveling Bonus Damage : 50 | 70 | 90 | 110 | 130 Bonus Damage Scaling : 55% Strength
-    Cripple Duration : 1 | 1.25 | 1.5 | 1.75 | 2 seconds Range : 7.2 meters Radius
-    : 0.48 meters Cooldown : 11 seconds Cost : 50 | 55 | 60 | 65 | 70 mana Expand
-    Ability Video'
+  description: For the next 5 seconds after Rolling , your next Attack will have Haste
+    and consume an Astral Arrow, Crippling all enemies hit and dealing bonus Physical
+    Damage Roll in the direction you are currently traveling
 - slot: Ultimate
   name: Astral Barrage
   cooldown:
@@ -147,19 +134,16 @@ abilities:
   - 'Radius: 2.4 | 1.6 | 1.2 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 80 mana'
-  description: 'FLY, FIRE THREE TIMES Notes: Launch yourself into the air for up to
-    5 seconds and shoot 3 powerful arrows at the ground, with each successive shot
-    dealing increasing Physical Damage while decreasing in size Damage : 250 | 330
-    | 410 | 490 | 570 Damage Scaling : 75% Strength Damage Per Shot : 70 | 85 | 100%
-    Range : 32 meters Radius : 2.4 | 1.6 | 1.2 meters Cooldown : 90 seconds Cost :
-    80 mana Expand Ability Video'
+  description: Launch yourself into the air for up to 5 seconds and shoot 3 powerful
+    arrows at the ground, with each successive shot dealing increasing Physical Damage
+    while decreasing in size
 aspects:
 - name: Aspect of Precision
   kit_changes: Astral Strike is always active, but Rama has severely decreased Attack
     Speed and no longer regen Astral Arrows. When out of Astral Arrows, reload. While
     Infinite Arrows is active, Astral Arrows are not consumed.
 source_url: https://wiki.smite2.com/w/Rama
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Rama Basic Attack

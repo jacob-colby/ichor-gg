@@ -42,26 +42,21 @@ abilities:
   - 'Druid Radius: 0.48 meters'
   - 'Bear Range: 1.92 meters'
   - 'Bear Cone Angle: 120 degrees'
-  description: 'Artio Notes: Artio''s s change depending on her current stance Damage
-    Scaling : 100% Strength + 20% Intelligence + 100% Attack Damage Druid Range :
-    8.8 meters Druid Radius : 0.48 meters Bear Range : 1.92 meters Bear Cone Angle
-    : 120 degrees Expand Ability Video'
+  description: Artio's s change depending on her current stance
 - slot: Passive
   name: Decompose
   details:
   - The Protection Debuff effect stacks up to 5 times
   - 'Protections Debuff: 2% Per Stack'
   - 'Debuff Duration: 6 seconds'
-  description: 'Reduce Enemy Protections on Hit Notes: When Artio hits enemy gods
-    with damaging abilities, the target will begin to decompose, reducing their Protections
-    . Protections Debuff : 2% Per Stack Debuff Duration : 6 seconds Expand Ability
-    Video'
+  description: When Artio hits enemy gods with damaging abilities, the target will
+    begin to decompose, reducing their Protections .
 aspects:
 - name: Aspect of the Denmother
   kit_changes: Artio can only change stances inside the fountain. Upon leaving the
     fountain, her abilities are enhanced and her ultimate changes based on her form.
 source_url: https://wiki.smite2.com/w/Artio
-last_verified: '2026-07-23'
+last_verified: '2026-07-25'
 ---
 <!-- WIKI:START -->
 - Artio Basic Attack

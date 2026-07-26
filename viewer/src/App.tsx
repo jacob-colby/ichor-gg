@@ -1,13 +1,16 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState } from "react";
 import { useIndexData } from "./hooks/useIndexData";
-import { GodSidebar } from "./components/GodSidebar";
 import { Home } from "./components/Home";
 import { DraftPage } from "./components/DraftPage";
 import { DetailPanel } from "./components/DetailPanel";
 import { AddGodModal } from "./components/AddGodModal";
-import { Footer } from "./components/Footer";
 import { ItemsShop } from "./components/ItemsShop";
 import { GodInfo } from "./components/GodInfo";
+import { GodItems } from "./components/GodItems";
+import { GodRanking } from "./components/GodRanking";
+import { GodPickerDialog } from "./components/GodPicker";
+import { SubjectFrame } from "./components/SubjectFrame";
+import { SubjectSearch } from "./components/SubjectSearch";
 import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
 import { PatchNotes } from "./components/PatchNotes";
@@ -15,29 +18,8 @@ import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
 import { relativeDate } from "./lib/relativeDate";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
 import { documentTitle } from "./lib/documentTitle";
-
-type View = "home" | "builds" | "draft" | "items" | "tiers" | "patch";
-
-const NAV: { view: View; label: string; icon: ReactNode }[] = [
-  { view: "home", label: "Home", icon: (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 11.5 12 4l8 7.5" /><path d="M6 10v10a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1V10" /></svg>
-  ) },
-  { view: "builds", label: "Builds", icon: (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5" /><path d="M13 19l6-6" /><path d="M16 16l4 4" /><path d="M19 21l2-2" /></svg>
-  ) },
-  { view: "draft", label: "Draft", icon: (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6l7 6-7 6" /><path d="M21 6l-7 6 7 6" /></svg>
-  ) },
-  { view: "items", label: "Items", icon: (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" /></svg>
-  ) },
-  { view: "tiers", label: "Tiers", icon: (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V10" /><path d="M12 20V4" /><path d="M20 20v-6" /></svg>
-  ) },
-  { view: "patch", label: "Patch", icon: (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h6" /><path d="M9 16h6" /><path d="M13 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M13 3v5h5" /></svg>
-  ) },
-];
+import { buildDivergenceBoard } from "./lib/divergence";
+import type { CuratedBuildEntry } from "./types";
 
 function App() {
   const { data, error, reload } = useIndexData();
@@ -46,6 +28,7 @@ function App() {
   const [legendOpen, setLegendOpen] = useState(false);
   const [scraping, setScraping] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
+  const [pickerOpen, setPickerOpen] = useState(false);
   const isDev = import.meta.env.DEV;
 
   // Per-route tab/history title — these links get pasted into Discord, and a
@@ -54,10 +37,8 @@ function App() {
     document.title = documentTitle(route);
   }, [route]);
 
-  // The Legend used to open itself on first load, so a first-time visitor met
-  // 700 characters of body copy about a screen they weren't on before seeing
-  // anything. Home explains itself in place now; this stays on demand.
-  const closeLegend = () => setLegendOpen(false);
+  // Changing subject closes the switcher; nothing else should.
+  useEffect(() => { setPickerOpen(false); }, [route.god]);
 
   const godsApi = async (action: "add" | "remove", name: string) => {
     setScraping(true);
@@ -80,218 +61,192 @@ function App() {
   if (error) {
     return (
       <div className="flex h-screen flex-col items-center justify-center gap-4 bg-bg0 px-6 text-center text-ink">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold font-display text-base font-bold text-bg0">S2</div>
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold font-display text-lead font-bold text-bg0">S2</div>
         <div className="max-w-[46ch]">
-          <h1 className="font-display text-2xl font-bold text-ink">Couldn&rsquo;t load the build data</h1>
-          <p className="mt-2 text-sm leading-relaxed text-muted">
+          <h1 className="font-display text-title font-bold text-ink">Couldn&rsquo;t load the build data</h1>
+          <p className="mt-2 text-body leading-relaxed text-muted">
             ichor reads everything from a single data file, and that file didn&rsquo;t come back.
             It&rsquo;s usually a refresh away — if it keeps failing, the site is probably mid-deploy.
           </p>
         </div>
-        <button type="button" onClick={reload} className="press rounded-md bg-gold px-4 py-1.5 text-sm font-medium text-bg0">
+        <button type="button" onClick={reload} className="press rounded-md bg-gold px-4 py-1.5 text-body font-medium text-bg0">
           Try again
         </button>
         {/* The technical detail stays available without leading with it. */}
-        <p className="font-mono text-[10.5px] text-faint">{error}</p>
+        <p className="font-mono text-label text-faint">{error}</p>
       </div>
     );
   }
+
   if (!data) {
     return (
-      <div className="flex h-screen bg-bg0 text-ink">
-        {/* Same outer chrome as the loaded shell (icon rail + header bar) so
-            the page doesn't jump once index.json lands — only the content
-            area is a placeholder. */}
-        <nav className="hidden w-16 shrink-0 flex-col items-center gap-3.5 border-r border-line bg-rail py-3.5 md:flex">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold font-display text-[15px] font-bold text-bg0">S2</div>
-        </nav>
-        <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
-          <header className="flex items-center gap-3 border-b border-line px-4 py-2.5">
-            <span className="font-display text-base font-bold text-ink">ichor</span>
-            <div className="ml-auto flex items-center gap-3">
-              <button type="button" onClick={reload} className="press rounded-md bg-bg2 px-3 py-1.5 text-xs text-muted hover:text-ink">Reload</button>
-            </div>
-          </header>
-          {/* Shaped like the route that's actually coming, so nothing jumps
-              when index.json lands. */}
-          <div className="flex min-h-0 flex-1 overflow-hidden">
-            {route.view === "home"
-              ? <div className="flex-1 overflow-y-auto"><HomeSkeleton /></div>
-              : <AppSkeleton />}
-          </div>
+      <div className="flex h-screen flex-col bg-bg0 text-ink">
+        {/* Same chrome as the loaded shell, so nothing jumps when index.json
+            lands — only the content area is a placeholder. */}
+        <header className="flex items-center gap-3 border-b border-line px-4 py-2.5 sm:px-6">
+          <span className="font-display text-lead font-bold tracking-tight text-ink">ichor</span>
+          <button type="button" onClick={reload} className="press ml-auto rounded-md bg-bg2 px-3 py-1.5 text-small text-muted hover:text-ink">Reload</button>
+        </header>
+        <div className="flex min-h-0 flex-1 overflow-hidden">
+          {route.god
+            ? <AppSkeleton />
+            : <div className="flex-1 overflow-y-auto"><HomeSkeleton /></div>}
         </div>
       </div>
     );
   }
 
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
-  const goTo = (view: View) => {
-    if (view === "home") navigate(toHash.home());
-    else if (view === "builds") navigate(route.god ? toHash.god(route.god) : toHash.builds());
-    else if (view === "draft") navigate(toHash.draft());
-    else if (view === "items") navigate(toHash.items());
-    else if (view === "tiers") navigate(toHash.tiers());
-    else navigate(toHash.patch());
+  const missingGod = !!route.god && !god;
+
+  // One computation of the roster's headline figures, shared by the frame and
+  // by Home, so the header and the page it sits above can never disagree.
+  const board = buildDivergenceBoard(data.tierlist?.gods);
+  const roster = {
+    total: data.gods.length,
+    disputed: board.tierDisagreements,
+    unranked: board.unranked,
+    agreed: Math.max(0, board.ranked - board.tierDisagreements),
+    ranked: board.ranked,
   };
 
+  // Per-mode slice, never the Conquest-mirroring top level: Joust has no
+  // community ratings at all, so reading `tierlist.gods` there would assert a
+  // community score that doesn't exist for that mode.
+  const modeSlice = (mode === "Joust" ? data.tierlist?.joust : data.tierlist?.conquest) ?? data.tierlist;
+  const tierEntry = route.god ? modeSlice?.gods.find((g) => g.name === route.god) : undefined;
+
+  // The god's own suggested core, so the items lens can be read against the
+  // build rather than as a free-floating ranking.
+  const godNotes = route.god ? data.builds.filter((b) => b.god === route.god) : [];
+  const godNote = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
+  const godCore = (godNote?.builds.find(
+    (b) => b.source === "suggested"
+      && (b as CuratedBuildEntry).archetype === "core"
+      && !(b as CuratedBuildEntry).fun,
+  ) as CuratedBuildEntry | undefined)?.slot_order as string[] | undefined;
+
   const patchNotes = data.patch_notes ?? [];
-  const title =
-    route.view === "home" ? "Home"
-    : route.view === "draft" ? "Draft"
-    : route.view === "items" ? "Items"
-    : route.view === "tiers" ? "Tiers"
-    : route.view === "patch" ? "Patch"
-    : "Builds";
-  const count =
-    route.view === "home" ? `${data.gods.length} gods`
-    : route.view === "draft" ? ""
-    : route.view === "items" ? `${data.items.length} items`
-    : route.view === "tiers" ? `${data.tierlist?.gods.length ?? 0} gods · ${data.tierlist?.items.length ?? 0} items`
-    : route.view === "patch" ? (patchNotes.length > 0 ? `${patchNotes.length} patches` : "")
-    : god ? god.pantheon ?? "" : `${data.gods.length} gods`;
+  const pickGod = (name: string) => { setPickerOpen(false); navigate(toHash.god(name)); };
 
   return (
-    <div className="flex h-screen bg-bg0 text-ink">
-      {/* First focusable on the page — the icon rail is seven stops deep. */}
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-gold focus:px-3 focus:py-2 focus:font-display focus:text-sm focus:font-semibold focus:text-bg0"
-      >
+    <div className="flex h-screen flex-col bg-bg0 text-ink">
+      {/* First focusable on the page. */}
+      <a href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-gold focus:px-3 focus:py-2 focus:font-display focus:text-body focus:font-semibold focus:text-bg0">
         Skip to content
       </a>
 
-      {/* Desktop icon rail */}
-      <nav className="hidden w-16 shrink-0 flex-col items-center gap-3.5 border-r border-line bg-rail py-3.5 md:flex">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold font-display text-[15px] font-bold text-bg0">S2</div>
-        {NAV.map((n) => {
-          const active = route.view === n.view;
-          return (
-            <button key={n.view} type="button" onClick={() => goTo(n.view)} aria-label={n.label} aria-current={active}
-              className={`press flex h-9 w-9 items-center justify-center rounded-[11px] transition-colors duration-[180ms] ease-standard ${active ? "border border-gold bg-bg2 text-gold" : "bg-bg2 text-muted hover:text-ink-soft"}`}>
-              {n.icon}
+      <header className="flex flex-none items-center gap-3 border-b border-line px-4 py-2 sm:px-6 sm:py-2.5">
+        <a href={toHash.home()} className="press shrink-0 py-1 font-display text-lead font-bold tracking-tight text-ink">
+          ichor
+        </a>
+        <div className="min-w-0 flex-1 sm:max-w-md">
+          <SubjectSearch gods={data.gods} items={data.items} />
+        </div>
+        <div className="ml-auto flex shrink-0 items-center gap-2">
+          {data.data_updated && (
+            <span data-testid="header-freshness" title={data.data_updated}
+              className="hidden text-label text-faint lg:inline">
+              Updated {relativeDate(data.data_updated)}{data.data_patch ? ` · ${data.data_patch}` : ""}
+            </span>
+          )}
+          {isDev && (
+            <button type="button" onClick={() => setAddOpen(true)}
+              className="press hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-small text-faint hover:text-muted md:flex">
+              <span className="rounded-sm border border-line-strong px-1 py-px text-micro font-semibold uppercase tracking-wider">Dev</span>+ Add god
             </button>
-          );
-        })}
-        <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help"
-          className="press mt-auto flex h-9 w-9 items-center justify-center rounded-[11px] bg-bg2 text-muted hover:text-ink-soft">?</button>
-      </nav>
+          )}
+          <button type="button" onClick={reload}
+            className="press hidden rounded-md border border-line bg-bg2 px-3 py-1.5 text-small text-muted hover:text-ink sm:block">
+            Reload
+          </button>
+          <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help and credits"
+            className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted hover:text-ink">?</button>
+        </div>
+      </header>
 
-      <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
-        {/* Header */}
-        <header className="flex items-center gap-3 border-b border-line px-4 py-2.5">
-          <span className="font-display text-base font-bold text-ink">{title}</span>
-          {count && <span className="font-mono text-[11px] text-faint">{count}</span>}
-          <div className="ml-auto flex items-center gap-3">
-            {data.data_updated && (
-              <span
-                data-testid="header-freshness"
-                title={data.data_updated}
-                className="hidden font-mono text-[10.5px] text-faint sm:inline"
-              >
-                Updated {relativeDate(data.data_updated)}{data.data_patch ? ` · ${data.data_patch}` : ""}
-              </span>
-            )}
-            {isDev && (
-              <button type="button" onClick={() => setAddOpen(true)}
-                className="press hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-xs text-faint hover:text-muted md:flex">
-                <span className="rounded border border-line-strong px-1 py-px font-mono text-[8px] uppercase tracking-wider">Dev</span>+ Add god
-              </button>
-            )}
-            <button type="button" onClick={reload} className="press rounded-md bg-bg2 px-3 py-1.5 text-xs text-muted hover:text-ink">Reload</button>
-            <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help" className="press rounded-md bg-bg2 px-2.5 py-1.5 text-xs text-muted hover:text-ink md:hidden">?</button>
+      {/* Dev-only scraping banner — quiet tier, flat fade */}
+      {isDev && scraping && (
+        <div className="flex flex-none items-center justify-center gap-2 border-b border-dashed border-line-strong bg-bg1 px-3 py-1.5 text-label text-faint">
+          <span className="rounded-sm border border-line-strong px-1.5 py-px text-micro font-semibold uppercase tracking-wider text-faint">Dev</span>
+          Scraping new data… this can take a minute.
+        </div>
+      )}
+
+      {/* `godName` is deliberately not passed: a name this index doesn't have
+          is not a subject. Asserting one gave the frame a portrait, an h1 and
+          four lens tabs leading nowhere, on top of content saying the god
+          doesn't exist — two h1s making opposite claims. */}
+      <SubjectFrame
+        god={god}
+        lens={route.lens}
+        tierEntry={tierEntry}
+        roster={roster}
+        modeLabel={route.god ? (godNote?.mode ?? mode) : "Conquest"}
+        onPickGod={() => setPickerOpen(true)}
+      />
+
+      <main id="main" tabIndex={-1} className="min-h-0 flex-1 overflow-y-auto focus:outline-none">
+        {missingGod ? (
+          <div className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">
+            <h1 className="font-display text-title font-bold text-ink">No god called “{route.god}”</h1>
+            <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
+              Nothing in this index goes by that name. It may have been renamed or dropped since
+              that link was made.
+            </p>
+            <button type="button" onClick={() => setPickerOpen(true)}
+              className="press mt-3 rounded-md border border-line bg-bg2 px-3 py-1.5 text-small text-ink-soft hover:border-line-strong">
+              Choose a god
+            </button>
           </div>
-        </header>
-
-        {/* Dev-only scraping banner — quiet tier, flat fade */}
-        {isDev && scraping && (
-          <div className="flex items-center justify-center gap-2 border-b border-dashed border-line-strong bg-bg1 px-3 py-1.5 text-[11.5px] text-faint">
-            <span className="rounded border border-line-strong px-1.5 py-px font-mono text-[9px] uppercase tracking-wider text-faint">Dev</span>
-            Scraping new data… this can take a minute.
-          </div>
-        )}
-
-        {/* Content */}
-        <main id="main" tabIndex={-1} className="flex min-h-0 flex-1 overflow-hidden focus:outline-none">
-          {route.view === "home" ? (
-            <div className="flex-1 overflow-y-auto"><Home data={data} /></div>
-          ) : route.view === "draft" ? (
-            <div className="flex-1 overflow-y-auto">
-              <DraftPage
-                gods={data.gods}
+        ) : god ? (
+          <div className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">
+            {route.lens === "kit" ? (
+              <GodInfo god={god} />
+            ) : route.lens === "items" ? (
+              <GodItems god={god.name} scores={data.god_item_scores?.[god.name]}
+                items={data.items} core={godCore ?? []} />
+            ) : route.lens === "ranking" ? (
+              <GodRanking god={god.name} role={god.role} entries={modeSlice?.gods}
+                modeLabel={godNote?.mode ?? mode} />
+            ) : (
+              <DetailPanel
+                god={god.name}
+                godData={god}
                 items={data.items}
                 builds={data.builds}
-                godItemScores={data.god_item_scores}
-                draftConfig={data.draft}
+                mode={mode}
+                onModeChange={setMode}
+                starters={data.starters ?? []}
               />
-            </div>
-          ) : route.view === "items" ? (
-            <div className="flex-1 overflow-y-auto"><ItemsShop items={data.items} openItem={route.item} /></div>
-          ) : route.view === "tiers" ? (
-            <div className="flex-1 overflow-y-auto"><TierList tierlist={data.tierlist} /></div>
-          ) : route.view === "patch" ? (
-            <div className="flex-1 overflow-y-auto"><PatchNotes periods={patchNotes} /></div>
-          ) : (
-            <div className="flex min-w-0 flex-1 flex-col overflow-hidden md:flex-row">
-              <GodSidebar
-                gods={data.gods}
-                selectedGod={route.god ?? null}
-                onSelect={(n) => navigate(toHash.god(n))}
-                onRemove={isDev ? removeGod : undefined}
-              />
-              <div className="min-w-0 flex-1 overflow-y-auto p-4">
-                {god ? (
-                  <>
-                    <div role="group" aria-label="God detail section" className="mb-4 flex w-fit gap-1.5">
-                      <button type="button" aria-pressed={route.tab === "builds"} onClick={() => navigate(toHash.god(god.name))} className={tabBtn(route.tab === "builds")}>Builds</button>
-                      <button type="button" aria-pressed={route.tab === "info"} onClick={() => navigate(toHash.godInfo(god.name))} className={tabBtn(route.tab === "info")}>Info</button>
-                    </div>
-                    {route.tab === "info" ? (
-                      <GodInfo god={god} />
-                    ) : (
-                      <DetailPanel
-                        god={god.name}
-                        godData={god}
-                        items={data.items}
-                        builds={data.builds}
-                        mode={mode}
-                        onModeChange={setMode}
-                        starters={data.starters ?? []}
-                        // Per-mode slice, never the Conquest-mirroring top
-                        // level: Joust has no community ratings at all, so
-                        // reading `tierlist.gods` there would assert a
-                        // community score that doesn't exist for that mode.
-                        tierEntry={(
-                          (mode === "Joust" ? data.tierlist?.joust : data.tierlist?.conquest)
-                          ?? data.tierlist
-                        )?.gods.find((g) => g.name === god.name)}
-                      />
-                    )}
-                  </>
-                ) : (
-                  <p className="text-muted">Select a god from the sidebar.</p>
-                )}
-              </div>
-            </div>
-          )}
-        </main>
+            )}
+          </div>
+        ) : route.lens === "draft" ? (
+          <DraftPage gods={data.gods} items={data.items} builds={data.builds}
+            godItemScores={data.god_item_scores} draftConfig={data.draft} />
+        ) : route.lens === "items" ? (
+          <ItemsShop items={data.items} openItem={route.item}
+            tierItems={data.tierlist?.items ?? []} goldValues={data.item_gold_values ?? {}} />
+        ) : route.lens === "tiers" ? (
+          <TierList tierlist={data.tierlist} />
+        ) : route.lens === "patch" ? (
+          <PatchNotes periods={patchNotes} />
+        ) : (
+          <Home data={data} />
+        )}
+      </main>
 
-        <Footer />
-
-        {/* Mobile bottom tab bar */}
-        <nav className="flex border-t border-line bg-rail md:hidden">
-          {NAV.map((n) => {
-            const active = route.view === n.view;
-            return (
-              <button key={n.view} type="button" onClick={() => goTo(n.view)} aria-current={active}
-                className={`press flex flex-1 flex-col items-center gap-1 py-2 font-display text-[11px] font-semibold ${active ? "border-t-2 border-gold text-gold" : "border-t-2 border-transparent text-muted"}`}>
-                {n.icon}{n.label}
-              </button>
-            );
-          })}
-        </nav>
-      </div>
-
-      {legendOpen && <Legend onClose={closeLegend} />}
+      {legendOpen && <Legend onClose={() => setLegendOpen(false)} />}
+      {pickerOpen && (
+        <GodPickerDialog
+          gods={data.gods}
+          selectedGod={route.god ?? null}
+          onPick={pickGod}
+          onClose={() => setPickerOpen(false)}
+          onRemove={isDev ? removeGod : undefined}
+        />
+      )}
       {isDev && addOpen && (
         <AddGodModal
           roster={data.roster ?? []}
@@ -303,8 +258,5 @@ function App() {
     </div>
   );
 }
-
-const tabBtn = (active: boolean) =>
-  `press rounded-md px-3.5 py-1.5 font-display text-xs font-semibold transition-colors duration-[150ms] ease-standard ${active ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"}`;
 
 export default App;
