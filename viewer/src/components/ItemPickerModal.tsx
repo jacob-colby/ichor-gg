@@ -65,7 +65,7 @@ export function ItemPickerModal({
           <h2 id="item-picker-title" ref={headingRef} tabIndex={-1}
             className="font-display text-title font-semibold text-ink focus:outline-none">Add item</h2>
           <button type="button" onClick={onClose} aria-label="Close"
-            className="press ml-auto rounded-md bg-bg2 px-2 py-1 font-mono text-small text-muted hover:text-ink">✕</button>
+            className="press ml-auto rounded-md bg-bg2 px-2 py-1 text-small text-muted hover:text-ink">✕</button>
         </div>
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <div className="flex items-center gap-2 rounded-md border border-line bg-bg2 px-2.5 py-1.5 focus-within:border-blue">

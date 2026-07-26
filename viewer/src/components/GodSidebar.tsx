@@ -1,9 +1,10 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { God } from "../types";
 import { filterGods, sortGods, type GodFilter } from "../lib/godFilters";
 import { iconSlug } from "../lib/builds";
 import { usePins } from "../lib/pins";
 import { LANES, godLane, laneTextClass, type Lane } from "../lib/roleAccent";
+import { useUrlState } from "../lib/urlState";
 
 function PinIcon({ filled }: { filled: boolean }) {
   return (
@@ -84,7 +85,7 @@ function GodCard({ god, selected, pinned, onSelect, onTogglePin, onRemove }: God
           onClick={(e) => { e.stopPropagation(); if (confirm(`Remove ${god.name} from the pool?`)) onRemove(); }}
           title={`Remove ${god.name}`}
           aria-label={`Remove ${god.name}`}
-          className="press absolute -left-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-dashed border-line-strong bg-bg0/90 font-mono text-micro text-faint hover:text-ink"
+          className="press absolute -left-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-dashed border-line-strong bg-bg0/90 text-micro text-faint hover:text-ink"
         >
           ✕
         </button>
@@ -145,7 +146,7 @@ function GodPickerBody({
           })}
         </div>
         <button type="button" onClick={() => setFiltersOpen(!filtersOpen)}
-          className="press flex items-center gap-1 rounded-sm py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-faint hover:text-muted">
+          className="press flex items-center gap-1 rounded-sm py-1.5 text-label font-medium text-faint hover:text-muted">
           <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" strokeWidth="3" className={`transition-transform ${filtersOpen ? "rotate-90" : ""}`}><path d="M9 6l6 6-6 6" /></svg>
           Filters
         </button>
@@ -161,7 +162,7 @@ function GodPickerBody({
             </select>
           </div>
         )}
-        <div className="mt-2 font-mono text-label text-faint">{shown.length} gods</div>
+        <div className="mt-2 text-label text-faint"><span className="text-muted">{shown.length}</span> gods</div>
       </div>
 
       <div className="px-3 pb-4">
@@ -174,7 +175,7 @@ function GodPickerBody({
           <>
             {pinned.length > 0 && (
               <>
-                <div className="mb-1.5 font-mono text-micro uppercase tracking-[0.1em] text-gold">Pinned</div>
+                <div className="mb-1.5 font-mono text-label uppercase tracking-[0.1em] text-gold">Pinned</div>
                 <div className={`${gridCls} mb-4`}>
                   {pinned.map((g) => (
                     <GodCard key={g.name} god={g} selected={g.name === selectedGod} pinned
@@ -209,9 +210,33 @@ export interface GodSidebarProps {
  * 4-column scrollable grid. Mobile: a header button showing the current god
  * that opens a full-screen picker (see spec section A). Absorbs GodsIndex's
  * search/filter/pin logic and GodRail's role as the builds-view chooser. */
+/* The picker's filters ride along in the god route's query string, so
+ * `#/god/Ra?lane=Mid` opens on Ra with the sidebar already narrowed — and
+ * picking another god keeps that narrowing (see `keepQuery` in App). */
+function decodeFilter(p: URLSearchParams): GodFilter {
+  const lane = p.get("lane");
+  return {
+    q: p.get("q") ?? undefined,
+    lane: LANES.includes(lane as Lane) ? (lane as Lane) : undefined,
+    pantheon: p.get("pantheon") ?? undefined,
+    damage_type: p.get("dmg") ?? undefined,
+  };
+}
+
+function encodeFilter(f: GodFilter): Record<string, string | undefined> {
+  return { q: f.q?.trim() || undefined, lane: f.lane, pantheon: f.pantheon, dmg: f.damage_type };
+}
+
 export function GodSidebar({ gods, selectedGod, onSelect, onRemove }: GodSidebarProps) {
-  const [filter, setFilterState] = useState<GodFilter>({});
+  const [filter, setFilterState] = useUrlState(decodeFilter, encodeFilter);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  // Open whenever one of the filters that lives behind the disclosure turns
+  // on — otherwise the list is narrowed by a control the visitor can't see.
+  // An effect rather than an initializer: a pasted link arriving while this is
+  // already mounted changes `filter` without remounting anything.
+  useEffect(() => {
+    if (filter.pantheon || filter.damage_type) setFiltersOpen(true);
+  }, [filter.pantheon, filter.damage_type]);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { toggle, isPinned } = usePins();
 
@@ -220,6 +245,7 @@ export function GodSidebar({ gods, selectedGod, onSelect, onRemove }: GodSidebar
 
   const setFilter = (patch: Partial<GodFilter>) => setFilterState((f) => ({ ...f, ...patch }));
   const clear = () => setFilterState({});
+
 
   const current = selectedGod ? gods.find((g) => g.name === selectedGod) : undefined;
 

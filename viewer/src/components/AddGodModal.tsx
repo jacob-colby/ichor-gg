@@ -19,7 +19,7 @@ export function AddGodModal({
     return roster.filter((g) => !ql || g.name.toLowerCase().includes(ql));
   }, [roster, q]);
 
-  const devTag = "rounded-sm border border-line-strong px-1.5 py-px font-mono text-micro uppercase tracking-wider text-faint";
+  const devTag = "rounded-sm border border-line-strong px-1.5 py-px text-micro font-semibold uppercase tracking-wider text-faint";
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" onClick={onClose}>

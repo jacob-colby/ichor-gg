@@ -23,6 +23,7 @@ import {
 } from "../lib/itemFilters";
 import { iconSlug } from "../lib/builds";
 import { toHash, navigate } from "../lib/useHashRoute";
+import { useUrlState, keepQuery } from "../lib/urlState";
 
 const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
@@ -48,7 +49,7 @@ export function ItemIcon({ name, size = "h-8 w-8" }: { name: string; size?: stri
 function EffBadge({ tier }: { tier: string | null | undefined }) {
   const e = efficiencyLabel(tier);
   return (
-    <span className={`rounded-sm px-1.5 py-0.5 font-mono text-micro uppercase tracking-[0.06em] ${e.cls}`}>
+    <span className={`rounded-sm px-1.5 py-0.5 text-micro font-semibold uppercase tracking-[0.06em] ${e.cls}`}>
       {e.text}
     </span>
   );
@@ -111,24 +112,24 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
       {eff ? (
         <span className="flex flex-col gap-1">
           <ResidualBar residual={eff.residual} scale={scale} />
-          <span className="flex items-baseline justify-between gap-2 font-mono text-micro">
-            <span className="text-faint">fair {eff.predicted_cost}g</span>
-            <span className={residualClass(eff.residual)}>{residualText(eff.residual)}</span>
+          <span className="flex items-baseline justify-between gap-2 text-label">
+            <span className="text-faint">fair <span className="font-mono">{eff.predicted_cost}g</span></span>
+            <span className={`font-mono ${residualClass(eff.residual)}`}>{residualText(eff.residual)}</span>
           </span>
         </span>
       ) : (
-        <span className="font-mono text-micro text-faint">not priced by the model</span>
+        <span className="text-label text-faint">not priced by the model</span>
       )}
 
       <span className="flex items-center justify-between gap-1">
         <EffBadge tier={item.efficiency_tier} />
         {item.meta
-          ? <span className="font-mono text-micro text-muted">{Math.round(item.meta.win_avg * 100)}% win · {item.meta.gods}</span>
-          : <span className="font-mono text-micro text-faint">no community data</span>}
+          ? <span className="font-mono text-label text-muted">{Math.round(item.meta.win_avg * 100)}% win · {item.meta.gods}</span>
+          : <span className="text-label text-faint">no community data</span>}
       </span>
 
       {(item.effect_tags?.length ?? 0) > 0 && (
-        <span className="truncate font-mono text-micro text-faint">{item.effect_tags!.join(" · ")}</span>
+        <span className="truncate text-label text-faint">{item.effect_tags!.join(" · ")}</span>
       )}
     </button>
   );
@@ -184,7 +185,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
   const into = links(item.builds_into ?? []);
 
   const chip = (n: string) => (
-    <a key={n} href={toHash.item(n)}
+    <a key={n} href={keepQuery(toHash.item(n))}
       className="press inline-flex items-center gap-1 rounded-sm border border-line bg-bg2 px-1.5 py-1 text-small text-ink-soft hover:border-line-strong">
       <ItemIcon name={n} size="h-4 w-4" />{n}
     </a>
@@ -207,13 +208,13 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
               className="font-display text-title font-bold leading-tight text-ink focus:outline-none">
               {item.name}
             </h2>
-            <p className="mt-0.5 font-mono text-label text-faint">
-              <span className="text-ink-soft">{item.cost}g</span> · {tierLabel(item.tier)}
-              {item.meta && <> · {Math.round(item.meta.win_avg * 100)}% win across {item.meta.gods} gods</>}
+            <p className="mt-0.5 text-label text-faint">
+              <span className="font-mono text-ink-soft">{item.cost}g</span> · <span className="font-mono">{tierLabel(item.tier)}</span>
+              {item.meta && <> · <span className="font-mono">{Math.round(item.meta.win_avg * 100)}% win</span> across {item.meta.gods} gods</>}
             </p>
           </div>
           <button type="button" onClick={onClose} aria-label="Close"
-            className="press -mr-1 -mt-1 rounded-sm px-2 py-1 font-mono text-body text-faint hover:text-ink">✕</button>
+            className="press -mr-1 -mt-1 rounded-sm px-2 py-1 text-body text-faint hover:text-ink">✕</button>
         </div>
 
         {/* ── The receipt ── */}
@@ -227,7 +228,9 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
             </p>
           ) : eff ? (
             <>
-              <table className="mt-2 w-full font-mono text-label">
+              {/* The figures are mono because they read down a column; the
+                  stat naming each row is not a figure and never was. */}
+              <table className="mt-2 w-full text-label">
                 <thead>
                   <tr className="text-faint">
                     <th scope="col" className="pb-1 text-left font-normal">Stat</th>
@@ -244,34 +247,34 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
                     <td className="py-1 pr-2 text-ink-soft">Base price</td>
                     <td className="py-1 text-right text-muted">every item</td>
                     <td className="py-1 text-right text-faint">—</td>
-                    <td className="py-1 text-right text-ink">{Math.round(base)}g</td>
+                    <td className="py-1 text-right font-mono text-ink">{Math.round(base)}g</td>
                   </tr>
                   {priced.map((l) => (
                     <tr key={l.stat} className="border-t border-line">
                       <td className="py-1 pr-2 text-ink-soft">{l.stat}</td>
-                      <td className="py-1 text-right text-muted">{l.raw}</td>
-                      <td className="py-1 text-right text-faint">{l.goldPerUnit!.toFixed(2)}g</td>
-                      <td className="py-1 text-right text-ink">{Math.round(l.subtotal!)}g</td>
+                      <td className="py-1 text-right font-mono text-muted">{l.raw}</td>
+                      <td className="py-1 text-right font-mono text-faint">{l.goldPerUnit!.toFixed(2)}g</td>
+                      <td className="py-1 text-right font-mono text-ink">{Math.round(l.subtotal!)}g</td>
                     </tr>
                   ))}
                   <tr className="border-t border-line-strong">
                     <td colSpan={3} className="py-1 pr-2 text-faint">Fair price</td>
-                    <td className="py-1 text-right text-ink-soft">{eff.predicted_cost}g</td>
+                    <td className="py-1 text-right font-mono text-ink-soft">{eff.predicted_cost}g</td>
                   </tr>
                   <tr>
                     <td colSpan={3} className="py-1 pr-2 text-faint">Actual price</td>
-                    <td className="py-1 text-right text-ink-soft">{item.cost}g</td>
+                    <td className="py-1 text-right font-mono text-ink-soft">{item.cost}g</td>
                   </tr>
                   <tr className="border-t border-line">
                     <td colSpan={3} className="py-1 pr-2 text-faint">
                       {eff.residual < 0 ? "Priced under its stats" : eff.residual > 0 ? "Priced over its stats" : "Priced exactly"}
                     </td>
-                    <td className={`py-1 text-right ${residualClass(eff.residual)}`}>{residualText(eff.residual)}</td>
+                    <td className={`py-1 text-right font-mono ${residualClass(eff.residual)}`}>{residualText(eff.residual)}</td>
                   </tr>
                 </tbody>
               </table>
               {unpriced.length > 0 && (
-                <p className="mt-1.5 font-mono text-micro text-faint">
+                <p className="mt-1.5 text-label text-faint">
                   {unpriced.map((l) => l.stat).join(", ")} — not priced by the fit, so
                   {" "}{unpriced.length === 1 ? "it isn't" : "they aren't"} counted above.
                 </p>
@@ -293,11 +296,11 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
         {community && (community.ours != null || community.community != null) && (
           <section aria-labelledby="item-tier-h" className="mt-4 border-t border-line pt-3">
             <h3 id="item-tier-h" className={eyebrow}>Where it lands</h3>
-            <p className="mt-1.5 flex flex-wrap items-baseline gap-x-4 gap-y-1 font-mono text-label">
-              <span className="text-faint">model <span className="text-gold">{community.ours?.toFixed(2) ?? "—"}</span>
+            <p className="mt-1.5 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-label">
+              <span className="text-faint">model <span className="font-mono text-gold">{community.ours?.toFixed(2) ?? "—"}</span>
                 {community.tier_ours && <span className="text-ink-soft"> {community.tier_ours}</span>}</span>
               <span className="text-faint">community {community.community != null
-                ? <><span className="text-ink-soft">{community.community.toFixed(2)}</span>
+                ? <><span className="font-mono text-ink-soft">{community.community.toFixed(2)}</span>
                     {community.tier_community && <span className="text-ink-soft"> {community.tier_community}</span>}</>
                 : <span className="text-muted">unranked</span>}</span>
             </p>
@@ -327,7 +330,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
         {(item.effect_tags?.length ?? 0) > 0 && (
           <div className="mt-3 flex flex-wrap gap-1">
             {item.effect_tags!.map((t) => (
-              <span key={t} className="rounded-sm bg-bg3 px-1.5 py-0.5 font-mono text-micro text-muted">{t}</span>
+              <span key={t} className="rounded-sm bg-bg3 px-1.5 py-0.5 text-label text-muted">{t}</span>
             ))}
           </div>
         )}
@@ -339,7 +342,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
                 <span className={eyebrow}>Builds from</span>
                 {from.known.map(chip)}
                 {from.missing > 0 && (
-                  <span className="font-mono text-micro text-faint">
+                  <span className="text-label text-faint">
                     {from.missing} component{from.missing === 1 ? "" : "s"} not in this index
                   </span>
                 )}
@@ -356,7 +359,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
 
         {item.source_url && (
           <a href={item.source_url} target="_blank" rel="noreferrer"
-            className="press mt-4 inline-block rounded-sm py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-blue hover:underline">
+            className="press mt-4 inline-block rounded-sm py-1.5 text-label font-medium text-blue hover:underline">
             Wiki page →
           </a>
         )}
@@ -370,6 +373,39 @@ const segBtn = (active: boolean) =>
     active ? "bg-gold text-bg0" : "text-muted hover:text-ink"}`;
 const selCls = "rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted focus:border-blue focus:outline-none";
 
+/* ── Shelf state in the URL ───────────────────────────────────────────────
+ * "The undervalued tier-3 anti-heal" is a real thing to send someone, and it
+ * used to be unsendable. A tier is a number in the data but a string in a URL;
+ * an all-digit param decodes back to a number so `filterItems` still matches.
+ */
+type ShelfState = ItemFilter & { sort: SortKey };
+const SORTS: SortKey[] = ["value", "name", "cost-asc", "cost-desc"];
+
+function decodeShelf(p: URLSearchParams): ShelfState {
+  const tier = p.get("tier");
+  const sort = p.get("sort") as SortKey | null;
+  return {
+    q: p.get("q") ?? undefined,
+    tier: tier == null ? undefined : /^\d+$/.test(tier) ? Number(tier) : tier,
+    efficiency: p.get("eff") ?? undefined,
+    tag: p.get("tag") ?? undefined,
+    stat: p.get("stat") ?? undefined,
+    sort: sort && SORTS.includes(sort) ? sort : "value",
+  };
+}
+
+function encodeShelf(s: ShelfState): Record<string, string | undefined> {
+  return {
+    q: s.q?.trim() || undefined,
+    tier: s.tier == null ? undefined : String(s.tier),
+    eff: s.efficiency,
+    tag: s.tag,
+    stat: s.stat,
+    // "value" is the default order, so it stays out of the URL.
+    sort: s.sort === "value" ? undefined : s.sort,
+  };
+}
+
 export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: {
   items: Item[];
   openItem?: string;
@@ -378,15 +414,15 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
   tierItems?: ItemTierEntry[];
   goldValues?: Record<string, number>;
 }) {
-  const [filter, setFilter] = useState<ItemFilter>({});
-  const [sort, setSort] = useState<SortKey>("value");
+  const [filter, setState] = useUrlState(decodeShelf, encodeShelf);
 
   const byName = useMemo(() => new Map(items.map((i) => [i.name, i])), [items]);
   const tierByName = useMemo(() => new Map(tierItems.map((i) => [i.name, i])), [tierItems]);
   const tiers = useMemo(() => tiersPresent(items), [items]);
   const tags = useMemo(() => Array.from(new Set(items.flatMap((i) => i.effect_tags ?? []))).sort(), [items]);
   const stats = useMemo(() => Array.from(new Set(items.flatMap((i) => Object.keys(i.stats ?? {})))).sort(), [items]);
-  const shown = useMemo(() => sortItems(filterItems(items, filter), sort), [items, filter, sort]);
+  // `filter` carries `sort` too; `filterItems` ignores keys it doesn't know.
+  const shown = useMemo(() => sortItems(filterItems(items, filter), filter.sort), [items, filter]);
 
   // Bars scale against the whole set, not the filtered view, so a filter never
   // silently rescales what a bar length means.
@@ -404,9 +440,10 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
 
   const open = openItem ? byName.get(openItem) : undefined;
   const notFound = !!openItem && !open;
-  const set = (patch: Partial<ItemFilter>) => setFilter((f) => ({ ...f, ...patch }));
+  const set = (patch: Partial<ShelfState>) => setState((s) => ({ ...s, ...patch }));
   const anyFilter = !!(filter.q || filter.tier != null || filter.efficiency || filter.tag || filter.stat);
-  const clear = () => setFilter({});
+  // Clearing filters leaves the chosen order alone — it isn't a filter.
+  const clear = () => setState((s) => ({ sort: s.sort }));
 
   return (
     <div className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">
@@ -418,7 +455,7 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
           A regression prices every stat in gold, then compares what an item should cost to what it
           does. Open one to see the arithmetic.
         </p>
-        <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-label uppercase tracking-[0.09em] text-faint">
+        <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint">
           <span>{withCommunity} of {items.length} have community data</span>
           {unscored > 0 && <span className="before:mr-3 before:content-['·']">{unscored} not priced (starters)</span>}
         </p>
@@ -469,7 +506,7 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
             <option value="">Any stat</option>
             {stats.map((s) => <option key={s} value={s}>{s}</option>)}
           </select>
-          <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)}
+          <select value={filter.sort} onChange={(e) => set({ sort: e.target.value as SortKey })}
             aria-label="Sort items" className={selCls}>
             <option value="value">Best value first</option>
             <option value="name">Name</option>
@@ -477,7 +514,7 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
             <option value="cost-desc">Cost ↓</option>
           </select>
 
-          <span data-testid="items-count" className="ml-auto font-mono text-label text-faint">
+          <span data-testid="items-count" className="ml-auto text-label text-faint">
             {shown.length === items.length ? `${items.length} items` : `${shown.length} of ${items.length}`}
           </span>
           {anyFilter && (
@@ -512,7 +549,9 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
         <ul className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(172px,1fr))]">
           {shown.map((it) => (
             <li key={it.name}>
-              <ItemCard item={it} scale={scale} onClick={() => navigate(toHash.item(it.name))} />
+              {/* Opening an item keeps the filters that produced this card,
+                  so closing the receipt returns to the shelf you were on. */}
+              <ItemCard item={it} scale={scale} onClick={() => navigate(keepQuery(toHash.item(it.name)))} />
             </li>
           ))}
         </ul>
@@ -524,7 +563,7 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
           byName={byName}
           goldValues={goldValues}
           community={tierByName.get(open.name)}
-          onClose={() => navigate(toHash.items())}
+          onClose={() => navigate(keepQuery(toHash.items()))}
         />
       )}
     </div>

@@ -122,9 +122,9 @@ These two are a **direction pair, not a good/bad pair**. They always answer one 
 
 **Display Font:** Rajdhani (sans-serif fallback)
 **Body Font:** Inter (sans-serif fallback)
-**Label/Mono Font:** JetBrains Mono (monospace)
+**Measurement Font:** JetBrains Mono (monospace)
 
-**Character:** A tactical, slightly technical pairing — Rajdhani's condensed geometric caps read as "console display" for names and headings, Inter carries all reading-length text cleanly, and JetBrains Mono in small tracked uppercase marks anything that's a label, tag, or section eyebrow rather than content.
+**Character:** A tactical, slightly technical pairing — Rajdhani's condensed geometric caps read as "console display" for names and headings, Inter carries all reading-length text cleanly, and JetBrains Mono sets the numbers. The instrument feel comes from figures that line up in a column, not from a typeface applied to everything small.
 
 ### The scale
 
@@ -133,7 +133,7 @@ Seven steps, defined once in `index.css` as `--text-*` theme tokens and used by 
 | Step | px | Use |
 |---|---|---|
 | `text-micro` | 10 | dense mono numerals inside a grid cell — the floor |
-| `text-label` | 11 | mono uppercase micro-labels, tags, counts |
+| `text-label` | 11 | section eyebrows, tags, secondary chrome |
 | `text-small` | 12 | secondary content, chips, captions |
 | `text-body` | 13 | default reading size |
 | `text-lead` | 15 | intro paragraphs, dialog body |
@@ -145,7 +145,17 @@ The app previously ran **sixteen** sizes with nine of them inside a 4px band (9 
 **10px is a hard floor.** Nothing below it ships — the god sidebar was running 7px.
 
 ### Named Rules
-**The Mono-Label Rule.** Any piece of UI that names a category, state, or count rather than describing content sets in JetBrains Mono, uppercase, tracked — never Inter.
+**The Measurement Rule.** JetBrains Mono sets **quantities and the codes that align beneath them** — numerals, a unit bound to a numeral (`2500g`, `47% win`), tier letters, `T1`/`T2`/`T3`, score pairs, cumulative gold. Nothing else. The test is: *would it be wrong if these characters didn't line up in a column?* If yes, mono; if no, Inter or Rajdhani.
+
+The one non-numeric exception is the **section eyebrow** — the `text-label` uppercase tracked line that titles a section or a table column. That is the brief's "small mono labels", and it is a *system*: one per section, never a general-purpose style for secondary text.
+
+Everything else sets in the reading faces, including the words *around* a number. `mean +0.03 · 4 below · 5 differ` is a mono run containing three English words; it splits, and only the figures stay mono.
+
+This replaces the Mono-Label Rule, which read "any piece of UI that names a category, state, or count sets in JetBrains Mono". In a data tool that is nearly every string: a lane is a category, `no community data` is a state, and the app followed the rule faithfully into **73% of the items shelf, 65% of the tier list and 51% of Home being set in the label face**. The measure of the failure is that mono had stopped meaning anything — when the body face *is* the mono face, a number no longer stands out from the sentence around it. Named, so it is not re-derived: navigation, actions, verdicts, names, states, effect tags, and prose are **never** mono, however small they are.
+
+**The Linkable-State Rule.** Anything the visitor chose that changes what a surface shows — filters, sort, mode, subject — lives in the hash query string, not in `useState`. "The disputed Mid gods in Joust" and "the undervalued tier-3 anti-heal" are the things this app exists to produce, and for a year none of them could be sent to anyone. Defaults stay out of the query, so a bare `#/tiers` keeps meaning what it always meant; navigating *within* a filtered view carries the query along (`keepQuery`), because clearing the filters that produced the card someone just clicked is never what they asked for. Writes are debounced `replaceState` — a search box bound straight to the address bar trips Safari's 100-writes-per-30s limit in about three seconds of held backspace, and a Back button that walks a query backwards one character at a time is worse than no history at all.
+
+**The Seam Rule.** Every surface names at least one other surface it hands off to, in the visitor's terms rather than as a route label. A destination reachable only from the nav rail is a destination most visitors never form an intent to reach — the draft board sat unlinked for a year. A seam carries state where state exists: "Draft with Chaac" keeps the comp already entered rather than replacing it, because a link that silently discards saved work is worse than no link.
 
 **The One-Claim Rule.** Every surface states its own claim in `text-display`, once, carrying live numbers. The app chrome never repeats it: the header used to print a per-route count that contradicted the surface's own ("159 items" over a shop reading "30 items"). Chrome carries navigation, freshness and actions — nothing the surface is already responsible for saying.
 
@@ -260,7 +270,8 @@ Motion is rationed. A surface gets **one authored moment** — the thing it does
 
 ### Do:
 - **Do** reserve torchlight gold for selection, primary action, or the model's own signal (score/efficiency) — see the Torchlight Rule.
-- **Do** set any label, tag, or count in JetBrains Mono, uppercase and tracked, per the Mono-Label Rule.
+- **Do** set numbers, units bound to a number, and section eyebrows in JetBrains Mono — and nothing else, per the Measurement Rule. A word that happens to sit beside a figure is not a measurement.
+- **Do** put chosen state in the URL, and carry it across navigation within the same view, per the Linkable-State Rule.
 - **Do** keep loading states as layout-shaped skeletons (pulsing `bg-bg2` bars), never a spinner or centered "Loading…".
 - **Do** use the shared `.press` scale-down for every tappable element, and respect `prefers-reduced-motion`.
 - **Do** give a surface a real `<h1>` that states its claim, with `<main>`, a skip link, and a heading order that starts at level 1.

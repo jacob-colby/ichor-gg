@@ -23,6 +23,7 @@ import { LANES, godLane, godInLane, laneTextClass, type Lane } from "../lib/role
 import { efficiencyLabel } from "../lib/itemFilters";
 import { buildBands, type BandEntry, type BandSort, type TierLetter } from "../lib/tierBands";
 import { deltaText } from "../lib/divergence";
+import { useUrlState } from "../lib/urlState";
 
 type Subject = "gods" | "items";
 type GameMode = "conquest" | "joust";
@@ -112,13 +113,13 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
   const ghost = unranked
     ? <span className="text-muted">unranked</span>
     : agrees
-      ? <span className="text-faint">meta agrees · {entry.tier_community}</span>
+      ? <span className="text-faint">meta agrees · <span className="font-mono">{entry.tier_community}</span></span>
       : (
         <>
-          <span className={divergenceClass(tierGap)}>meta {entry.tier_community}</span>
+          <span className={divergenceClass(tierGap)}>meta <span className="font-mono">{entry.tier_community}</span></span>
           {/* Neutral: the score gap can point the other way from the letters
               near a tier boundary, so only the letters carry direction. */}
-          <span className="text-faint">{deltaText(delta)}</span>
+          <span className="font-mono text-faint">{deltaText(delta)}</span>
         </>
       );
 
@@ -138,12 +139,12 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
         <span className="flex w-full min-w-0 flex-col items-center gap-0.5 sm:flex-1 sm:items-start">
           <span className="max-w-full truncate font-display text-small font-semibold leading-tight text-ink">{entry.name}</span>
           {isGod
-            ? lane && <span className={`font-mono text-micro ${laneTextClass(lane)}`}>{lane}</span>
-            : eff && <span className={`font-mono text-micro ${eff.cls.replace(/bg-\S+/g, "")}`}>{eff.text}</span>}
-          <span className="mt-0.5 flex flex-wrap items-baseline justify-center gap-x-1.5 font-mono text-micro leading-tight sm:justify-start">
+            ? lane && <span className={`text-label ${laneTextClass(lane)}`}>{lane}</span>
+            : eff && <span className={`text-label ${eff.cls.replace(/bg-\S+/g, "")}`}>{eff.text}</span>}
+          <span className="mt-0.5 flex flex-wrap items-baseline justify-center gap-x-1.5 text-label leading-tight sm:justify-start">
             {/* Not gold: 87 gilded scores would make the accent decorative.
                 The band letter already carries the model's verdict. */}
-            <span className="text-ink-soft">{scoreText(entry.ours)}</span>
+            <span className="font-mono text-ink-soft">{scoreText(entry.ours)}</span>
             {ghost}
           </span>
         </span>
@@ -170,11 +171,11 @@ function TierBand({ tier, entries, total, agreed, disagreed, unranked, subject }
           <span className={`flex h-7 w-7 items-center justify-center rounded-md bg-bg3 font-display text-body font-bold ${TIER_TEXT[tier]}`}>{tier}</span>
           {/* One basis: when a filter narrows the band, say so rather than
               printing a drawn count beside a whole-band tally. */}
-          <span className="font-mono text-label text-faint">
+          <span className="text-label text-faint">
             {entries.length === total ? total : `${entries.length} of ${total}`}
           </span>
         </h2>
-        <p className="font-mono text-micro uppercase tracking-[0.08em] text-faint">
+        <p className="text-label text-faint">
           {disagreed > 0 && <span className="text-ink-soft">{disagreed} disputed</span>}
           {disagreed > 0 && agreed > 0 && <span className="px-1">·</span>}
           {agreed > 0 && <>{agreed} agreed</>}
@@ -190,14 +191,50 @@ function TierBand({ tier, entries, total, agreed, disagreed, unranked, subject }
   );
 }
 
+/* ── Board state in the URL ───────────────────────────────────────────────
+ * "The disputed Mid gods in Joust" is the kind of thing this list exists to
+ * produce, and it was unlinkable. Defaults stay out of the query so the plain
+ * `#/tiers` link keeps working and keeps meaning the same thing.
+ */
+interface BoardState {
+  gameMode: GameMode;
+  subject: Subject;
+  sort: BandSort;
+  disputedOnly: boolean;
+  q: string;
+  lane?: Lane;
+  efficiency?: string;
+}
+
+function decodeBoard(p: URLSearchParams): BoardState {
+  const lane = p.get("lane");
+  return {
+    gameMode: p.get("mode") === "joust" ? "joust" : "conquest",
+    subject: p.get("of") === "items" ? "items" : "gods",
+    sort: p.get("sort") === "score" ? "score" : "disagreement",
+    disputedOnly: p.get("disputed") === "1",
+    q: p.get("q") ?? "",
+    lane: LANES.includes(lane as Lane) ? (lane as Lane) : undefined,
+    efficiency: p.get("eff") ?? undefined,
+  };
+}
+
+function encodeBoard(s: BoardState): Record<string, string | undefined> {
+  return {
+    mode: s.gameMode === "conquest" ? undefined : s.gameMode,
+    of: s.subject === "gods" ? undefined : s.subject,
+    sort: s.sort === "disagreement" ? undefined : s.sort,
+    disputed: s.disputedOnly ? "1" : undefined,
+    q: s.q.trim() || undefined,
+    lane: s.lane,
+    eff: s.efficiency,
+  };
+}
+
 export function TierList({ tierlist }: { tierlist?: TierListData }) {
-  const [gameMode, setGameMode] = useState<GameMode>("conquest");
-  const [subject, setSubject] = useState<Subject>("gods");
-  const [sort, setSort] = useState<BandSort>("disagreement");
-  const [disputedOnly, setDisputedOnly] = useState(false);
-  const [q, setQ] = useState("");
-  const [lane, setLane] = useState<Lane | undefined>();
-  const [efficiency, setEfficiency] = useState<string | undefined>();
+  const [board, setBoard] = useUrlState(decodeBoard, encodeBoard);
+  const { gameMode, subject, sort, disputedOnly, q, lane, efficiency } = board;
+  const patch = (next: Partial<BoardState>) => setBoard((s) => ({ ...s, ...next }));
 
   // Per-mode slice, falling back to the legacy flat shape when the per-mode
   // key is absent — either an index predating it, or Conquest, which is the
@@ -239,7 +276,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
   );
   const shown = bands.reduce((n, b) => n + b.entries.length, 0) + untiered.length;
   const anyFilter = !!query || !!lane || !!efficiency || disputedOnly;
-  const clear = () => { setQ(""); setLane(undefined); setEfficiency(undefined); setDisputedOnly(false); };
+  const clear = () => patch({ q: "", lane: undefined, efficiency: undefined, disputedOnly: false });
   const joustCommunityGap = gameMode === "joust" && result.ranked === 0 && result.total > 0;
 
   // Item scores aren't recomputed per mode in the pipeline, so the Joust slice
@@ -272,14 +309,14 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
           {entityLabel(subject)}, so the disagreement is readable without switching views.
         </p>
         {result.ranked > 0 ? (
-          <p data-testid="tier-summary" className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-label uppercase tracking-[0.09em] text-faint">
+          <p data-testid="tier-summary" className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint">
             <span><span className="text-ink-soft">{result.agreed} of {result.ranked}</span> agreed</span>
             <span className="text-under">{result.modelHigher} we rank higher</span>
             <span className="text-premium">{result.metaHigher} the meta ranks higher</span>
             {result.unranked > 0 && <span>{result.unranked} unranked</span>}
           </p>
         ) : !sourceHasCommunity ? (
-          <p data-testid="tier-summary" className="mt-2.5 font-mono text-label uppercase tracking-[0.09em] text-faint">
+          <p data-testid="tier-summary" className="mt-2.5 text-label text-faint">
             {source.length} {subject} · no community ratings to compare against
           </p>
         ) : null}
@@ -300,16 +337,16 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
           <div role="group" aria-label="Game mode" className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
             {GAME_MODES.map((m) => (
               <button key={m.key} type="button" aria-pressed={gameMode === m.key}
-                onClick={() => setGameMode(m.key)} className={segBtn(gameMode === m.key)}>{m.label}</button>
+                onClick={() => patch({ gameMode: m.key })} className={segBtn(gameMode === m.key)}>{m.label}</button>
             ))}
           </div>
           <div role="group" aria-label="Subject" className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
-            <button type="button" aria-pressed={subject === "gods"} onClick={() => setSubject("gods")} className={segBtn(subject === "gods")}>Gods</button>
-            <button type="button" aria-pressed={subject === "items"} onClick={() => setSubject("items")} className={segBtn(subject === "items")}>Items</button>
+            <button type="button" aria-pressed={subject === "gods"} onClick={() => patch({ subject: "gods" })} className={segBtn(subject === "gods")}>Gods</button>
+            <button type="button" aria-pressed={subject === "items"} onClick={() => patch({ subject: "items" })} className={segBtn(subject === "items")}>Items</button>
           </div>
           <div role="group" aria-label="Order within each band" className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
-            <button type="button" aria-pressed={sort === "disagreement"} onClick={() => setSort("disagreement")} className={segBtn(sort === "disagreement")}>Disputed first</button>
-            <button type="button" aria-pressed={sort === "score"} onClick={() => setSort("score")} className={segBtn(sort === "score")}>By score</button>
+            <button type="button" aria-pressed={sort === "disagreement"} onClick={() => patch({ sort: "disagreement" })} className={segBtn(sort === "disagreement")}>Disputed first</button>
+            <button type="button" aria-pressed={sort === "score"} onClick={() => patch({ sort: "score" })} className={segBtn(sort === "score")}>By score</button>
           </div>
           <label className="flex cursor-text items-center gap-2 rounded-md border border-line bg-bg2 px-3 py-2 focus-within:border-blue">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="text-muted">
@@ -319,11 +356,11 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
               placeholder={`Search ${subject}…`}
               aria-label={`Search ${subject}`}
               value={q}
-              onChange={(e) => setQ(e.target.value)}
+              onChange={(e) => patch({ q: e.target.value })}
               className="w-36 bg-transparent py-1 text-small text-ink placeholder:text-muted focus:outline-none"
             />
           </label>
-          <span className="ml-auto font-mono text-label text-faint">
+          <span className="ml-auto text-label text-faint">
             {shown === filtered.length
               ? <>{filtered.length} {subject}</>
               : <>showing {shown} of {filtered.length}</>}
@@ -335,18 +372,18 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
             <>
               {/* "All" is the absence of a filter, so it stays neutral —
                   gold marks a choice the reader made. */}
-              <button type="button" aria-pressed={!lane} onClick={() => setLane(undefined)}
+              <button type="button" aria-pressed={!lane} onClick={() => patch({ lane: undefined })}
                 className={`press rounded-full border px-3 py-1.5 text-small transition-colors duration-[150ms] ease-standard ${
                   !lane ? "border-line-strong text-ink" : "border-line text-muted hover:border-line-strong"}`}>
                 All
               </button>
               {LANES.map((l) => (
                 <button key={l} type="button" aria-pressed={lane === l}
-                  onClick={() => setLane(lane === l ? undefined : l)} className={chip(lane === l, laneTextClass(l))}>{l}</button>
+                  onClick={() => patch({ lane: lane === l ? undefined : l })} className={chip(lane === l, laneTextClass(l))}>{l}</button>
               ))}
             </>
           ) : (
-            <select value={efficiency ?? ""} onChange={(e) => setEfficiency(e.target.value || undefined)}
+            <select value={efficiency ?? ""} onChange={(e) => patch({ efficiency: e.target.value || undefined })}
               aria-label="Filter by efficiency rating" className={selCls}>
               <option value="">All ratings</option>
               <option value="undervalued">Efficient</option>
@@ -355,7 +392,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
             </select>
           )}
           {result.ranked > 0 && (
-            <button type="button" aria-pressed={disputedOnly} onClick={() => setDisputedOnly((v) => !v)}
+            <button type="button" aria-pressed={disputedOnly} onClick={() => patch({ disputedOnly: !disputedOnly })}
               className={`${chip(disputedOnly, "text-muted")} ml-auto`}>
               Only disputed
             </button>
@@ -399,7 +436,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
                 <h2 id="band-untiered-h" className="font-mono text-label uppercase tracking-[0.1em] text-faint">
                   Not tiered
                 </h2>
-                <p className="font-mono text-micro uppercase tracking-[0.08em] text-faint">{untiered.length}</p>
+                <p className="font-mono text-label text-faint">{untiered.length}</p>
               </div>
               <p className="mb-2.5 max-w-[70ch] text-small leading-relaxed text-muted">
                 Starters and components the model doesn&rsquo;t rank against full items — they&rsquo;re

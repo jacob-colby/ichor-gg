@@ -147,7 +147,7 @@ function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
             Pick a god
           </h2>
           <button type="button" onClick={onClose} aria-label="Close"
-            className="press ml-auto rounded-md bg-bg2 px-2 py-1 font-mono text-small text-faint hover:text-ink">✕</button>
+            className="press ml-auto rounded-md bg-bg2 px-2 py-1 text-small text-faint hover:text-ink">✕</button>
         </div>
 
         <form onSubmit={submit} role="search"
@@ -211,7 +211,7 @@ function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
                   >
                     <Icon name={g.name} className="h-9 w-9 rounded-md" />
                     <span className="max-w-full truncate text-center font-display text-micro text-ink">{g.name}</span>
-                    {lane2 && <span className={`font-mono text-micro ${laneTextClass(lane2)}`}>{lane2}</span>}
+                    {lane2 && <span className={`text-label ${laneTextClass(lane2)}`}>{lane2}</span>}
                   </button>
                 </li>
               );
@@ -242,7 +242,7 @@ function Slot({ kind, position, name, onOpen, onRemove }: {
     <div className="flex flex-col items-center gap-1">
       {kind !== "enemy" && (
         <span aria-hidden={!isYou}
-          className={`font-mono text-micro font-bold uppercase tracking-[0.1em] text-gold ${isYou ? "" : "invisible"}`}>
+          className={`text-micro font-bold uppercase tracking-[0.1em] text-gold ${isYou ? "" : "invisible"}`}>
           You
         </span>
       )}
@@ -265,7 +265,7 @@ function Slot({ kind, position, name, onOpen, onRemove }: {
           {onRemove && (
             <button type="button" onClick={(e) => { e.stopPropagation(); onRemove(); }}
               aria-label={`Remove ${name} from ${rowPlural}`}
-              className="press absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full border border-line bg-bg1 font-mono text-micro leading-none text-faint hover:border-line-strong hover:text-ink">
+              className="press absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full border border-line bg-bg1 text-micro leading-none text-faint hover:border-line-strong hover:text-ink">
               ✕
             </button>
           )}
@@ -294,7 +294,7 @@ function ChangeRow({ change, itemsByName, maxBonus }: {
           {change.added}
         </a>
         {change.removed && (
-          <span className="font-mono text-micro text-faint">
+          <span className="text-label text-faint">
             in place of <span className="text-muted line-through">{change.removed}</span>
           </span>
         )}
@@ -306,9 +306,9 @@ function ChangeRow({ change, itemsByName, maxBonus }: {
         <span className="w-10 text-right font-mono text-label text-under">+{change.bonus.toFixed(2)}</span>
       </span>
       {change.reason && (
-        <span className="col-start-2 col-span-2 font-mono text-micro text-faint">
+        <span className="col-start-2 col-span-2 text-label text-faint">
           answers {change.reason}
-          {cost != null && <span className="text-faint"> · {cost}g</span>}
+          {cost != null && <span className="font-mono text-faint"> · {cost}g</span>}
         </span>
       )}
     </li>
@@ -437,7 +437,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
               {MODES.map((m) => (
                 <button key={m} type="button" aria-pressed={mode === m} onClick={() => setMode(m)} className={segBtn(mode === m)}>
                   {MODE_LABEL[m]}
-                  <span className="font-mono text-micro font-normal opacity-70">{MODE_TEAM_SIZE[m]}v{MODE_TEAM_SIZE[m]}</span>
+                  <span className="text-micro font-normal opacity-70">{MODE_TEAM_SIZE[m]}v{MODE_TEAM_SIZE[m]}</span>
                 </button>
               ))}
             </div>
@@ -494,7 +494,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
             { n: 3, title: "Read what changed", body: "Every swap names the item it displaced and the threat it answers.", done: changeCount > 0 },
           ].map((step) => (
             <li key={step.n} className={`rounded-md border p-3 ${step.done ? "border-line bg-bg2/40" : "border-dashed border-line-strong"}`}>
-              <p className="flex items-center gap-2 font-mono text-micro uppercase tracking-[0.1em]">
+              <p className="flex items-center gap-2 text-label font-semibold uppercase tracking-[0.08em]">
                 <span className={step.done ? "text-under" : "text-faint"}>{step.done ? "✓" : step.n}</span>
                 <span className={step.done ? "text-muted" : "text-ink-soft"}>{step.title}</span>
               </p>
@@ -510,7 +510,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
         <section aria-labelledby="draft-threats-h" data-testid="draft-threats" className="border-t border-line pt-5 xl:w-[340px] xl:flex-none">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <h2 id="draft-threats-h" className={eyebrow}>What you&rsquo;re up against</h2>
-            <p className="font-mono text-micro uppercase tracking-[0.08em] text-faint">
+            <p className="text-label text-faint">
               {enemiesKnown} of {roster} enemies known
               {enemiesKnown < roster && <span className="text-muted"> · this build will keep moving</span>}
             </p>
@@ -529,8 +529,8 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
               const n = threats[t.key];
               const who = culprits[t.key];
               return (
-                <li key={t.key} className="flex flex-wrap items-baseline gap-x-2 border-b border-line py-1 font-mono text-label">
-                  <span className={n > 0 ? "text-ink-soft" : "text-faint"}>{n}/{roster}</span>
+                <li key={t.key} className="flex flex-wrap items-baseline gap-x-2 border-b border-line py-1 text-label">
+                  <span className={`font-mono ${n > 0 ? "text-ink-soft" : "text-faint"}`}>{n}/{roster}</span>
                   <span className={n > 0 ? "text-muted" : "text-faint"}>{t.label}</span>
                   {who.length > 0
                     ? <span className="min-w-0 truncate text-faint">{who.join(", ")}</span>
@@ -541,7 +541,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
           </ul>
           )}
           {threats.allyAllPhysical && threats.allyCount > 0 && (
-            <p className="mt-2 font-mono text-micro uppercase tracking-[0.08em] text-faint">
+            <p className="mt-2 text-label text-faint">
               your side · {threats.allyPhysical} of {roster} physical · penetration raised
             </p>
           )}
@@ -590,7 +590,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
                         <Icon name={name} item className="h-8 w-8" />
                         <span className="flex min-w-0 items-center gap-2">
                           <span className={`truncate text-body ${changed ? "font-medium text-under" : "text-ink"}`}>{name}</span>
-                          {changed && <span className="font-mono text-micro uppercase tracking-[0.06em] text-under">draft pick</span>}
+                          {changed && <span className="text-micro font-semibold uppercase tracking-[0.06em] text-under">draft pick</span>}
                         </span>
                         {it && <span aria-hidden="true" className="font-mono text-label text-faint">{it.cost}g</span>}
                       </a>

@@ -1,6 +1,6 @@
 import React from "react";
 import { describe, it, expect } from "vitest";
-import { render, screen, fireEvent, within } from "@testing-library/react";
+import { render, screen, fireEvent, within, waitFor } from "@testing-library/react";
 import { ItemsShop } from "./ItemsShop";
 import type { Item, ItemTierEntry } from "../types";
 
@@ -16,6 +16,12 @@ const items = [
 ] as unknown as Item[];
 
 const GOLD = { "Max Health": 0.88, "Critical Chance": 20 };
+
+/** Load the page *at* a URL, rather than navigating to it: assigning
+ *  `window.location.hash` queues a `hashchange`, which lands mid-test and is
+ *  decoded by the URL-state hook as a filter reset. */
+const atUrl = (hash: string) => window.history.replaceState(null, "", `/${hash}`);
+
 
 const shop = (props: Partial<React.ComponentProps<typeof ItemsShop>> = {}) => (
   <ItemsShop items={items} openItem={undefined} goldValues={GOLD} {...props} />
@@ -104,7 +110,7 @@ describe("ItemsShop — the receipt", () => {
   });
 
   it("closes on Escape by returning to the shop route", () => {
-    window.location.hash = "#/items/Rage";
+    atUrl("#/items/Rage");
     render(shop({ openItem: "Rage" }));
     fireEvent.keyDown(document, { key: "Escape" });
     expect(window.location.hash).toBe("#/items");
@@ -155,5 +161,61 @@ describe("ItemsShop — filters", () => {
     fireEvent.change(screen.getByLabelText(/search items by name/i), { target: { value: "rage" } });
     // Scoped: the headline claim also reads "1 of 3".
     expect(screen.getByTestId("items-count")).toHaveTextContent("1 of 3");
+  });
+});
+
+/* A filtered shelf is a thing worth sending someone. Before this it lived in
+ * `useState`, so "the undervalued tier-3s" survived exactly as long as the tab
+ * did — no link, no bookmark, no reload. */
+describe("ItemsShop — filters live in the URL", () => {
+  it("opens pre-filtered from a link", () => {
+    atUrl("#/items?eff=premium");
+    render(shop());
+    expect(screen.getByText("Aegis")).toBeInTheDocument();
+    expect(screen.queryByText("Rage")).not.toBeInTheDocument();
+    const rating = within(screen.getByRole("group", { name: /value rating/i }));
+    expect(rating.getByRole("button", { name: "Premium" })).toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("decodes a numeric tier back to a number so it still matches", () => {
+    atUrl("#/items?tier=1");
+    render(shop());
+    expect(screen.getByText("Pendant")).toBeInTheDocument();
+    expect(screen.queryByText("Rage")).not.toBeInTheDocument();
+  });
+
+  it("writes a search into the hash and clears it back out again", async () => {
+    atUrl("#/items");
+    render(shop());
+    fireEvent.change(screen.getByLabelText(/search items/i), { target: { value: "rage" } });
+    await waitFor(() => expect(window.location.hash).toBe("#/items?q=rage"));
+    fireEvent.click(screen.getByRole("button", { name: /^Clear$/ }));
+    await waitFor(() => expect(window.location.hash).toBe("#/items"));
+  });
+
+  it("keeps the default sort out of the URL, and names any other", async () => {
+    atUrl("#/items");
+    render(shop());
+    const sort = screen.getByLabelText(/sort items/i);
+    fireEvent.change(sort, { target: { value: "cost-desc" } });
+    await waitFor(() => expect(window.location.hash).toBe("#/items?sort=cost-desc"));
+    fireEvent.change(sort, { target: { value: "value" } });
+    await waitFor(() => expect(window.location.hash).toBe("#/items"));
+  });
+
+  // Clearing filters is not clearing the order — the order isn't a filter, and
+  // resetting it would silently reshuffle the shelf under the visitor.
+  it("leaves the chosen order alone when filters are cleared", async () => {
+    atUrl("#/items?q=rage&sort=name");
+    render(shop());
+    fireEvent.click(screen.getByRole("button", { name: /^Clear$/ }));
+    await waitFor(() => expect(window.location.hash).toBe("#/items?sort=name"));
+  });
+
+  it("carries the filters onto the item it opens, so closing comes back here", () => {
+    atUrl("#/items?eff=premium");
+    render(shop());
+    fireEvent.click(screen.getByRole("button", { name: /^Aegis,/ }));
+    expect(window.location.hash).toBe("#/items/Aegis?eff=premium");
   });
 });

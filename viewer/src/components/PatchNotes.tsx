@@ -47,11 +47,11 @@ function DeltaRow({
   const newCls = good == null ? "text-ink-soft" : good ? "text-under" : "text-premium";
 
   return (
-    <div className="flex items-baseline gap-1.5 font-mono text-label">
+    <div className="flex items-baseline gap-1.5 text-label">
       <span className="w-28 shrink-0 truncate text-faint">{label}</span>
-      <span className="text-ink-soft">{oldVal ?? "—"}</span>
+      <span className="font-mono text-ink-soft">{oldVal ?? "—"}</span>
       <span className="text-faint">→</span>
-      <span className={newCls} data-direction={direction ?? undefined}>
+      <span className={`font-mono ${newCls}`} data-direction={direction ?? undefined}>
         {newVal ?? "—"}
       </span>
     </div>
@@ -131,7 +131,7 @@ function PeriodSection({ period, defaultOpen }: { period: PatchPeriod; defaultOp
       >
         <ChevronIcon open={open} />
         <h2 className="font-mono text-small text-ink-soft">{period.from} → {period.to}</h2>
-        <span className="ml-auto font-mono text-label text-faint">{counts}</span>
+        <span className="ml-auto text-label text-faint">{counts}</span>
       </button>
       {open && (
         <div className="flex flex-col gap-3 border-t border-line px-4 py-3">
@@ -183,7 +183,7 @@ export function PatchNotes({ periods }: { periods: PatchPeriod[] }) {
             : "Every item whose cost or stats changed between two data refreshes, newest first. Cost is read inverted: cheaper is better."}
         </p>
         {periods.length > 0 && (
-          <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-label uppercase tracking-[0.09em] text-faint">
+          <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint">
             <span>{changed} changed</span>
             {added > 0 && <span className="before:mr-3 before:content-['·']">{added} added</span>}
             {removed > 0 && <span className="before:mr-3 before:content-['·']">{removed} removed</span>}

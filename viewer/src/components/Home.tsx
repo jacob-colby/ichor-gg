@@ -24,10 +24,14 @@ import { filterGods } from "../lib/godFilters";
 import { iconSlug } from "../lib/builds";
 import { godLane, laneTextClass } from "../lib/roleAccent";
 import { relativeDate } from "../lib/relativeDate";
+import { useDraft, encodeDraftHash, MODE_TEAM_SIZE } from "../lib/draft";
 import {
   buildDivergenceBoard, barPercent, deltaText,
   type Divergence, type LaneColumn,
 } from "../lib/divergence";
+
+/** The one label style shared by the sections below the board. */
+const sectionLabel = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
 /** Direction of a disagreement, in the vocabulary the Legend already teaches:
  * `under` = we rate it above the meta, `premium` = the meta rates it above us.
@@ -137,7 +141,7 @@ function HomeSearch({ gods }: { gods: God[] }) {
             type="button"
             onClick={() => { setQ(""); inputRef.current?.focus(); }}
             aria-label="Clear search"
-            className="press shrink-0 rounded-sm px-1 font-mono text-small text-faint hover:text-ink"
+            className="press shrink-0 rounded-sm px-1 text-small text-faint hover:text-ink"
           >
             ✕
           </button>
@@ -176,7 +180,7 @@ function HomeSearch({ gods }: { gods: God[] }) {
                 <GodIcon name={g.name} className="h-7 w-7" />
                 <span className="truncate font-display text-body font-semibold text-ink">{g.name}</span>
                 {g.role && (
-                  <span className={`ml-auto shrink-0 font-mono text-micro ${laneTextClass(godLane(g.role))}`}>
+                  <span className={`ml-auto shrink-0 text-label ${laneTextClass(godLane(g.role))}`}>
                     {godLane(g.role) ?? g.role}
                   </span>
                 )}
@@ -223,7 +227,7 @@ function StateBlock({ data, disagreements, ranked, unranked }: {
 
         <div className="flex shrink-0 flex-col gap-3 lg:items-end">
           <HomeSearch gods={data.gods} />
-          <ul className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-label uppercase tracking-[0.09em] text-faint lg:justify-end">
+          <ul className="flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint lg:justify-end">
             <li>{data.gods.length} gods</li>
             {comparable && <li className="before:mr-3 before:content-['·']">{ranked} ranked</li>}
             {unranked > 0 && <li className="before:mr-3 before:content-['·']">{unranked} unranked</li>}
@@ -241,7 +245,7 @@ function StateBlock({ data, disagreements, ranked, unranked }: {
  * remembered schema. */
 function BoardKey() {
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-micro uppercase tracking-[0.09em] text-faint">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-label text-faint">
       <span className="flex items-center gap-1.5">
         <span className="inline-block h-[3px] w-6 bg-premium" />
         Meta rates higher
@@ -321,7 +325,7 @@ function LaneBoardColumn({ col, scale, index }: { col: LaneColumn; scale: number
       <h3 className={`font-display text-body font-bold tracking-[0.02em] ${laneTextClass(col.lane)}`}>
         {col.lane}
       </h3>
-      <p className="mt-0.5 font-mono text-micro uppercase tracking-[0.08em] text-faint">
+      <p className="mt-0.5 text-label text-faint">
         {col.rows.length > 0 ? (
           <>
             <span className={leanClass}>mean {deltaText(col.meanDelta)}</span>
@@ -340,7 +344,7 @@ function LaneBoardColumn({ col, scale, index }: { col: LaneColumn; scale: number
       </ul>
 
       {(rest > 0 || col.unranked > 0) && (
-        <p className="mt-1.5 px-1.5 font-mono text-micro uppercase tracking-[0.08em] text-faint">
+        <p className="mt-1.5 px-1.5 text-label text-faint">
           {rest > 0 && <>+{rest} more</>}
           {rest > 0 && col.unranked > 0 && <span className="px-1">·</span>}
           {col.unranked > 0 && <>{col.unranked} unranked</>}
@@ -366,7 +370,7 @@ function DivergenceBoard({ board }: { board: ReturnType<typeof buildDivergenceBo
         </h2>
         <a
           href={toHash.tiers()}
-          className="press -my-1 rounded-sm px-1 py-1.5 font-mono text-label uppercase tracking-[0.09em] text-blue hover:underline"
+          className="press -my-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
         >
           Full tier list →
         </a>
@@ -395,6 +399,79 @@ function DivergenceBoard({ board }: { board: ReturnType<typeof buildDivergenceBo
   );
 }
 
+/* ── Draft ───────────────────────────────────────────────────────────────
+ * The draft board is the one surface that *changes* a build rather than
+ * reporting one, and nothing in the app pointed at it — you met it by clicking
+ * an icon in the rail and guessing. It also remembers a comp across sessions,
+ * so a half-entered draft is worth handing back rather than leaving parked in
+ * localStorage where only the rail icon can find it.
+ */
+function DraftSeam() {
+  const { draft, mode } = useDraft();
+  const allies = draft.allies.filter(Boolean);
+  const enemies = draft.enemies.filter(Boolean);
+  const started = allies.length + enemies.length > 0;
+  const size = MODE_TEAM_SIZE[mode];
+  const modeLabel = mode === "joust" ? "Joust" : "Conquest";
+  // Only the first ally slot has a build behind it — that god's core is the
+  // one thing the draft page adapts. With the slot empty there is nothing to
+  // adapt, however many enemies are entered, so the two cases read differently.
+  const you = draft.allies[0];
+
+  return (
+    <section data-testid="home-draft" aria-labelledby="home-draft-h" className="border-t border-line pt-6">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+        <h2 id="home-draft-h" className={sectionLabel}>
+          {started ? "Your draft in progress" : "Drafting a match"}
+        </h2>
+        <a
+          href={started ? encodeDraftHash(mode, draft) : toHash.draft()}
+          className="press -my-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
+        >
+          {started ? "Resume draft →" : "Open the draft board →"}
+        </a>
+      </div>
+
+      {started ? (
+        <>
+          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span className="flex flex-wrap items-center gap-1.5">
+              {allies.map((n) => <GodIcon key={n} name={n} className="h-7 w-7" />)}
+              {allies.length === 0 && <span className="text-small text-faint">no allies yet</span>}
+            </span>
+            <span aria-hidden="true" className="text-small text-faint">vs</span>
+            <span className="flex flex-wrap items-center gap-1.5">
+              {enemies.map((n) => <GodIcon key={n} name={n} className="h-7 w-7" />)}
+              {enemies.length === 0 && <span className="text-small text-faint">no enemies yet</span>}
+            </span>
+          </div>
+          {/* Named, because two rows of portraits don't say which side is
+              which — and the enemy count is what decides how much the build
+              can actually adapt. */}
+          <p className="mt-2 max-w-[68ch] text-small leading-relaxed text-muted">
+            {modeLabel} · <span className="text-ink-soft">{allies.length} of {size}</span> allies
+            {" · "}<span className="text-ink-soft">{enemies.length} of {size}</span> enemies.
+            {/* Never "the build already answers those picks" — whether any item
+                actually moved is what the board is for, and it may well
+                report that nothing did. */}
+            {!you
+              ? " Your own slot is empty, so there's no build to adapt yet."
+              : enemies.length === 0
+                ? ` Add an enemy and it starts weighing ${you}'s core against them.`
+                : ` It's weighing ${you}'s core against ${enemies.length === 1 ? "that pick" : "those picks"}.`}
+          </p>
+        </>
+      ) : (
+        <p className="mt-2 max-w-[68ch] text-body leading-relaxed text-muted">
+          Enter your god and the enemies you know, and the model re-sorts that god&rsquo;s core around
+          them — named items displacing named items, for stated reasons. It&rsquo;s the one place a
+          build answers a specific match instead of the average one.
+        </p>
+      )}
+    </section>
+  );
+}
+
 /* ── Pinned ──────────────────────────────────────────────────────────────
  * Your own shortlist. With nothing pinned this is an invitation rather than an
  * apology: pinning is a feature to try, not something you're missing out on.
@@ -407,9 +484,7 @@ function PinnedSection({ gods }: { gods: God[] }) {
 
   return (
     <section data-testid="home-pinned" aria-labelledby="home-pinned-h" className="border-t border-line pt-6">
-      <h2 id="home-pinned-h" className="font-mono text-label uppercase tracking-[0.1em] text-faint">
-        Your pinned gods
-      </h2>
+      <h2 id="home-pinned-h" className={sectionLabel}>Your pinned gods</h2>
       {pinnedGods.length === 0 ? (
         <p className="mt-2 max-w-[68ch] text-body text-muted">
           Pin a god from its page and it&rsquo;ll show up here — a quick jump back to the ones you play most.
@@ -428,13 +503,13 @@ function PinnedSection({ gods }: { gods: God[] }) {
                 >
                   <GodIcon name={g.name} className="h-7 w-7" />
                   <span className="max-w-[110px] truncate font-display text-small font-semibold text-ink">{g.name}</span>
-                  {lane && <span className={`font-mono text-micro ${laneTextClass(lane)}`}>{lane}</span>}
+                  {lane && <span className={`text-label ${laneTextClass(lane)}`}>{lane}</span>}
                 </button>
                 <button
                   type="button"
                   onClick={() => toggle(g.name)}
                   aria-label={`Unpin ${g.name}`}
-                  className="press absolute right-0.5 top-1/2 -translate-y-1/2 rounded-sm px-1.5 py-1 font-mono text-label leading-none text-faint opacity-0 transition-opacity duration-[150ms] hover:text-ink focus-visible:opacity-100 group-hover:opacity-100"
+                  className="press absolute right-0.5 top-1/2 -translate-y-1/2 rounded-sm px-1.5 py-1 text-label leading-none text-faint opacity-0 transition-opacity duration-[150ms] hover:text-ink focus-visible:opacity-100 group-hover:opacity-100"
                 >
                   ✕
                 </button>
@@ -461,15 +536,13 @@ function LatestPatch({ periods }: { periods: PatchPeriod[] | undefined }) {
   return (
     <section data-testid="home-patch" aria-labelledby="home-patch-h" className="border-t border-line pt-6">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
-        <h2 id="home-patch-h" className="font-mono text-label uppercase tracking-[0.1em] text-faint">
-          Latest patch changes
-        </h2>
-        <a href={toHash.patch()} className="press -my-1 rounded-sm px-1 py-1.5 font-mono text-label uppercase tracking-[0.09em] text-blue hover:underline">
+        <h2 id="home-patch-h" className={sectionLabel}>Latest patch changes</h2>
+        <a href={toHash.patch()} className="press -my-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline">
           All patch notes →
         </a>
       </div>
-      <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 font-mono text-label text-faint">
-        <span>{latest.from} → {latest.to}</span>
+      <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-label text-faint">
+        <span className="font-mono">{latest.from} → {latest.to}</span>
         {counts && <span className="text-muted">{counts}</span>}
       </div>
       <div className="mt-2 flex flex-wrap gap-1.5">
@@ -493,7 +566,7 @@ function LatestPatch({ periods }: { periods: PatchPeriod[] | undefined }) {
 function Freshness({ dataUpdated, dataPatch }: { dataUpdated?: string; dataPatch?: string }) {
   if (!dataUpdated) return null;
   return (
-    <p data-testid="home-freshness" title={dataUpdated} className="border-t border-line pt-4 font-mono text-label uppercase tracking-[0.09em] text-faint">
+    <p data-testid="home-freshness" title={dataUpdated} className="border-t border-line pt-4 text-label text-faint">
       Updated {relativeDate(dataUpdated)}{dataPatch ? ` · ${dataPatch}` : ""}
     </p>
   );
@@ -512,6 +585,7 @@ export function Home({ data }: { data: IndexData }) {
       />
       <DivergenceBoard board={board} />
       <div className="mt-7 flex flex-col gap-6">
+        <DraftSeam />
         <PinnedSection gods={data.gods} />
         <LatestPatch periods={data.patch_notes} />
         <Freshness dataUpdated={data.data_updated} dataPatch={data.data_patch} />

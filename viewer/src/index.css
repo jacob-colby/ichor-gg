@@ -50,6 +50,17 @@
   --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
+  /* ── Faces ──────────────────────────────────────────────────────────────
+     `font-mono` sets measurements: numerals, a unit bound to a numeral
+     (2500g, 47% win), tier letters, T1/T2/T3 — anything that reads down a
+     column. Plus one non-numeric use: the section eyebrow (uppercase, tracked,
+     text-label) that titles a section or a table column.
+
+     Nothing else. Navigation, actions, verdicts, names, states, effect tags
+     and prose set in Inter or Rajdhani however small they are. The old rule
+     ("any label, tag, or count") caught nearly every string in a data tool and
+     put 73% of the items shelf in the label face, at which point mono had
+     stopped distinguishing anything. See DESIGN.md § The Measurement Rule.  */
   --font-display: "Rajdhani", sans-serif;
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;

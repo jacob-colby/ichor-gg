@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent, within } from "@testing-library/react";
+import { render, screen, fireEvent, within, waitFor } from "@testing-library/react";
 import { GodSidebar } from "./GodSidebar";
 import type { God } from "../types";
 
@@ -12,6 +12,12 @@ const gods = [
 beforeEach(() => {
   localStorage.clear();
 });
+
+/** Load the page *at* a URL, rather than navigating to it: assigning
+ *  `window.location.hash` queues a `hashchange`, which lands mid-test and is
+ *  decoded by the URL-state hook as a filter reset. */
+const atUrl = (hash: string) => window.history.replaceState(null, "", `/${hash}`);
+
 
 describe("GodSidebar", () => {
   it("renders gods in a grid", () => {
@@ -95,5 +101,32 @@ describe("GodSidebar", () => {
     fireEvent.click(within(dialog).getByRole("button", { name: "Select Cupid" }));
     expect(onSelect).toHaveBeenCalledWith("Cupid");
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+});
+
+describe("GodSidebar — filters live in the god route's query", () => {
+  it("opens narrowed when the link says so", () => {
+    atUrl("#/god/Cupid?lane=Support");
+    render(<GodSidebar gods={gods} selectedGod="Cupid" onSelect={() => {}} />);
+    expect(screen.getByRole("button", { name: "Select Cupid" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Select Ra" })).not.toBeInTheDocument();
+  });
+
+  it("writes the search into the query without disturbing the god path", async () => {
+    atUrl("#/god/Ra");
+    render(<GodSidebar gods={gods} selectedGod="Ra" onSelect={() => {}} />);
+    fireEvent.change(screen.getByPlaceholderText(/search gods/i), { target: { value: "cup" } });
+    await waitFor(() => expect(window.location.hash).toBe("#/god/Ra?q=cup"));
+  });
+
+  // A pantheon filter lives behind the Filters disclosure. Arriving with one
+  // applied and the disclosure shut would narrow the list by a control the
+  // visitor cannot see.
+  it("opens the Filters disclosure when the link carries a filter hidden inside it", () => {
+    atUrl("#/god/Ra?pantheon=Egyptian");
+    render(<GodSidebar gods={gods} selectedGod="Ra" onSelect={() => {}} />);
+    expect(screen.getByDisplayValue("Egyptian")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Select Ra" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Select Ymir" })).not.toBeInTheDocument();
   });
 });

@@ -59,7 +59,7 @@ export function Legend({ onClose }: { onClose: () => void }) {
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="press -mr-1 -mt-1 rounded-sm px-2 py-1 font-mono text-body text-faint hover:text-ink"
+            className="press -mr-1 -mt-1 rounded-sm px-2 py-1 text-body text-faint hover:text-ink"
           >
             ✕
           </button>

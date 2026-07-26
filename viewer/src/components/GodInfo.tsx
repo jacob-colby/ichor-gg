@@ -46,7 +46,7 @@ export function GodInfo({ god }: { god: God }) {
         {(god.specializations?.length ?? 0) > 0 && (
           <ul className="mt-2 flex flex-wrap gap-1">
             {god.specializations!.map((s) => (
-              <li key={s} className="rounded-sm bg-bg3 px-1.5 py-0.5 font-mono text-micro text-muted">{s}</li>
+              <li key={s} className="rounded-sm bg-bg3 px-1.5 py-0.5 text-label text-muted">{s}</li>
             ))}
           </ul>
         )}
@@ -84,7 +84,7 @@ export function GodInfo({ god }: { god: God }) {
       <section aria-labelledby="info-abilities-h" className="mt-5 border-t border-line pt-4">
         <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
           <h2 id="info-abilities-h" className={eyebrow}>Abilities</h2>
-          <p className="font-mono text-micro uppercase tracking-[0.08em] text-faint">
+          <p className="text-label text-faint">
             {abilities.length} of {EXPECTED_SLOTS.length + 1} slots scraped
           </p>
         </div>
@@ -98,10 +98,10 @@ export function GodInfo({ god }: { god: God }) {
             {abilities.map((a, i) => (
               <li key={`${a.name}-${i}`} className="py-3">
                 <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                  <span className="font-mono text-micro uppercase tracking-[0.08em] text-faint">{a.slot}</span>
+                  <span className="font-mono text-label uppercase tracking-[0.08em] text-faint">{a.slot}</span>
                   <h3 className="font-display text-body font-semibold text-ink">{a.name}</h3>
                   {a.cooldown?.length ? (
-                    <span className="ml-auto font-mono text-micro text-faint">
+                    <span className="ml-auto font-mono text-label text-faint">
                       {a.cooldown.join(" / ")}s cooldown
                     </span>
                   ) : null}
@@ -112,7 +112,7 @@ export function GodInfo({ god }: { god: God }) {
                 {a.details?.length ? (
                   <ul className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5">
                     {a.details.map((d, j) => (
-                      <li key={j} className="font-mono text-micro text-faint">{d}</li>
+                      <li key={j} className="text-label text-faint">{d}</li>
                     ))}
                   </ul>
                 ) : null}
@@ -150,7 +150,7 @@ export function GodInfo({ god }: { god: God }) {
                 );
               })}
             </ol>
-            <p className="mt-2 font-mono text-micro uppercase tracking-[0.08em] text-faint">
+            <p className="mt-2 text-label text-faint">
               max order · {god.ability_order.summary.max_order.join(" → ")}
             </p>
             <p className="mt-1 max-w-[68ch] text-small leading-relaxed text-muted">
@@ -180,7 +180,7 @@ export function GodInfo({ god }: { god: God }) {
 
       {god.source_url && (
         <a href={god.source_url} target="_blank" rel="noreferrer"
-          className="press mt-5 inline-block rounded-sm py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-blue hover:underline">
+          className="press mt-5 inline-block rounded-sm py-1.5 text-label font-medium text-blue hover:underline">
           Wiki page →
         </a>
       )}

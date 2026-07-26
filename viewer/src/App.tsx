@@ -14,6 +14,7 @@ import { PatchNotes } from "./components/PatchNotes";
 import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
 import { relativeDate } from "./lib/relativeDate";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
+import { keepQuery } from "./lib/urlState";
 import { documentTitle } from "./lib/documentTitle";
 
 type View = "home" | "builds" | "draft" | "items" | "tiers" | "patch";
@@ -161,7 +162,7 @@ function App() {
               className={`press flex flex-col items-center gap-1 rounded-md px-1 py-2 transition-colors duration-[180ms] ease-standard ${
                 active ? "bg-bg2 text-gold" : "text-muted hover:bg-bg2/60 hover:text-ink-soft"}`}>
               {n.icon}
-              <span className="font-mono text-micro uppercase tracking-[0.08em]">{n.label}</span>
+              <span className="text-small font-medium">{n.label}</span>
             </button>
           );
         })}
@@ -170,7 +171,7 @@ function App() {
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
             <circle cx="12" cy="12" r="9" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3 2.45V14" /><path d="M12 17.5v.01" />
           </svg>
-          <span className="font-mono text-micro uppercase tracking-[0.08em]">Help</span>
+          <span className="text-small font-medium">Help</span>
         </button>
       </nav>
 
@@ -183,7 +184,7 @@ function App() {
               <span
                 data-testid="header-freshness"
                 title={data.data_updated}
-                className="hidden font-mono text-label text-faint sm:inline"
+                className="hidden text-label text-faint sm:inline"
               >
                 Updated {relativeDate(data.data_updated)}{data.data_patch ? ` · ${data.data_patch}` : ""}
               </span>
@@ -191,7 +192,7 @@ function App() {
             {isDev && (
               <button type="button" onClick={() => setAddOpen(true)}
                 className="press hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-small text-faint hover:text-muted md:flex">
-                <span className="rounded-sm border border-line-strong px-1 py-px font-mono text-micro uppercase tracking-wider">Dev</span>+ Add god
+                <span className="rounded-sm border border-line-strong px-1 py-px text-micro font-semibold uppercase tracking-wider">Dev</span>+ Add god
               </button>
             )}
             <button type="button" onClick={reload} className="press rounded-md border border-line bg-bg2 px-3 py-1.5 text-small text-muted hover:text-ink">Reload</button>
@@ -203,7 +204,7 @@ function App() {
         {/* Dev-only scraping banner — quiet tier, flat fade */}
         {isDev && scraping && (
           <div className="flex items-center justify-center gap-2 border-b border-dashed border-line-strong bg-bg1 px-3 py-1.5 text-label text-faint">
-            <span className="rounded-sm border border-line-strong px-1.5 py-px font-mono text-micro uppercase tracking-wider text-faint">Dev</span>
+            <span className="rounded-sm border border-line-strong px-1.5 py-px text-micro font-semibold uppercase tracking-wider text-faint">Dev</span>
             Scraping new data… this can take a minute.
           </div>
         )}
@@ -238,15 +239,17 @@ function App() {
               <GodSidebar
                 gods={data.gods}
                 selectedGod={route.god ?? null}
-                onSelect={(n) => navigate(toHash.god(n))}
+                // The sidebar keeps its filters in this route's query, so
+                // picking a god must carry them along rather than reset them.
+                onSelect={(n) => navigate(keepQuery(toHash.god(n)))}
                 onRemove={isDev ? removeGod : undefined}
               />
               <div className="min-w-0 flex-1 overflow-y-auto p-4">
                 {god ? (
                   <>
                     <div role="group" aria-label="God detail section" className="mb-4 flex w-fit gap-1.5">
-                      <button type="button" aria-pressed={route.tab === "builds"} onClick={() => navigate(toHash.god(god.name))} className={tabBtn(route.tab === "builds")}>Builds</button>
-                      <button type="button" aria-pressed={route.tab === "info"} onClick={() => navigate(toHash.godInfo(god.name))} className={tabBtn(route.tab === "info")}>Info</button>
+                      <button type="button" aria-pressed={route.tab === "builds"} onClick={() => navigate(keepQuery(toHash.god(god.name)))} className={tabBtn(route.tab === "builds")}>Builds</button>
+                      <button type="button" aria-pressed={route.tab === "info"} onClick={() => navigate(keepQuery(toHash.godInfo(god.name)))} className={tabBtn(route.tab === "info")}>Info</button>
                     </div>
                     {route.tab === "info" ? (
                       <GodInfo god={god} />
@@ -289,7 +292,7 @@ function App() {
                 className={`press flex flex-1 flex-col items-center gap-1 py-2 ${
                   active ? "border-t-2 border-gold text-gold" : "border-t-2 border-transparent text-muted"}`}>
                 {n.icon}
-                <span className="font-mono text-micro uppercase tracking-[0.08em]">{n.label}</span>
+                <span className="text-small font-medium">{n.label}</span>
               </button>
             );
           })}

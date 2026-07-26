@@ -16,7 +16,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import type {
-  BuildEntry, BuildNote, CuratedBuildEntry, God, GodTierEntry, Item, SlotScore,
+  BuildEntry, BuildNote, CuratedBuildEntry, DraftComp, God, GodTierEntry, Item, SlotScore,
 } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
@@ -24,6 +24,7 @@ import { tierLabel } from "../lib/itemFilters";
 import { godRoleTextClass, damageTextClass } from "../lib/roleAccent";
 import { buildLedger, goldText, goldGap, type LedgerRow } from "../lib/ledger";
 import { deltaText } from "../lib/divergence";
+import { encodeDraftHash, useDraft, MODE_TEAM_SIZE, type DraftMode } from "../lib/draft";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
 import { getMine } from "../lib/mineStore";
 
@@ -90,7 +91,7 @@ function ItemIcon({ name, className }: { name: string; className: string }) {
 function ScoreBar({ label, value, help }: { label: string; value: number; help?: string }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="w-12 shrink-0 font-mono text-micro text-muted" title={help}>{label}</span>
+      <span className="w-12 shrink-0 text-label text-muted" title={help}>{label}</span>
       <div className="h-1.5 min-w-0 flex-1 rounded-sm bg-bg3">
         <div className="h-1.5 rounded-sm bg-gold" style={{ width: `${Math.round(Math.min(Math.max(value, 0), 1) * 100)}%` }} />
       </div>
@@ -115,7 +116,7 @@ function WhyScoreBlock({ score, measured, meta }: {
   return (
     <div>
       <div className="mb-1.5 flex items-baseline justify-between gap-2">
-        <span className="font-mono text-micro uppercase tracking-[0.1em] text-faint">Why this item</span>
+        <span className="font-mono text-label uppercase tracking-[0.1em] text-faint">Why this item</span>
         <span className="font-mono text-label text-gold">{score.total.toFixed(2)}</span>
       </div>
       <div className="flex flex-col gap-1">
@@ -123,13 +124,13 @@ function WhyScoreBlock({ score, measured, meta }: {
           <ScoreBar key={a.key} label={a.label} value={score[a.key]} help={a.help} />
         ))}
       </div>
-      <p className="mt-1.5 font-mono text-micro leading-relaxed text-faint">
+      <p className="mt-1.5 text-label leading-relaxed text-faint">
         {measured
           ? "Four signals, weighted into one score. Higher is better on every axis."
           : "No community data in this mode, so win and pick aren’t measured here."}
       </p>
       {measured && (
-        <p className="mt-1.5 border-t border-line pt-1.5 font-mono text-micro leading-relaxed text-faint">
+        <p className="mt-1.5 border-t border-line pt-1.5 text-label leading-relaxed text-faint">
           {meta ? (
             <>
               Community buys it {meta.position}
@@ -184,13 +185,13 @@ function ItemDetailCard({ item, name, score, measured = true, meta }: {
       {(item.effect_tags?.length || item.efficiency_tier) && (
         <div className="mt-2 flex flex-wrap gap-1">
           {item.efficiency_tier && (
-            <span className={`rounded-sm px-1.5 py-0.5 font-mono text-micro uppercase tracking-[0.06em] ${
+            <span className={`rounded-sm px-1.5 py-0.5 text-micro font-semibold uppercase tracking-[0.06em] ${
               item.efficiency_tier === "undervalued" ? "bg-under/20 text-under"
               : item.efficiency_tier === "premium" ? "bg-premium/20 text-premium"
               : "bg-bg3 text-muted"}`}>{item.efficiency_tier}</span>
           )}
           {item.effect_tags?.map((t) => (
-            <span key={t} className="rounded-sm bg-bg3 px-1.5 py-0.5 font-mono text-micro text-muted">{t}</span>
+            <span key={t} className="rounded-sm bg-bg3 px-1.5 py-0.5 text-label text-muted">{t}</span>
           ))}
         </div>
       )}
@@ -228,16 +229,16 @@ function Verdict({ entry }: { entry?: GodTierEntry }) {
   const unranked = entry.community == null;
   const delta = unranked ? null : entry.ours - entry.community!;
   return (
-    <div data-testid="god-verdict" className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-label">
+    <div data-testid="god-verdict" className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-label">
       <span className="text-faint">
-        model <span className="text-gold">{entry.ours.toFixed(2)}</span>
-        {entry.tier_ours && <span className="text-ink-soft"> {entry.tier_ours}</span>}
+        model <span className="font-mono text-gold">{entry.ours.toFixed(2)}</span>
+        {entry.tier_ours && <span className="font-mono text-ink-soft"> {entry.tier_ours}</span>}
       </span>
       <span className="text-faint">
         community {unranked
           ? <span className="text-muted">unranked</span>
-          : <><span className="text-ink-soft">{entry.community!.toFixed(2)}</span>
-              {entry.tier_community && <span className="text-ink-soft"> {entry.tier_community}</span>}</>}
+          : <><span className="font-mono text-ink-soft">{entry.community!.toFixed(2)}</span>
+              {entry.tier_community && <span className="font-mono text-ink-soft"> {entry.tier_community}</span>}</>}
       </span>
       {delta !== null ? (
         <span className={divergenceClass(delta)}>
@@ -307,12 +308,12 @@ function LedgerRowView({
             removed ? "text-muted line-through" : added ? "font-medium text-under" : "text-ink"}`}>
             {row.name}
           </span>
-          {added && <span className="font-mono text-micro uppercase tracking-[0.06em] text-under">swap in</span>}
+          {added && <span className="text-micro font-semibold uppercase tracking-[0.06em] text-under">swap in</span>}
           {row.isFlex && row.status === "kept" && (
-            <span className="rounded-sm bg-bg3 px-1 py-px font-mono text-micro uppercase tracking-[0.06em] text-faint">flex</span>
+            <span className="rounded-sm bg-bg3 px-1 py-px text-micro font-semibold uppercase tracking-[0.06em] text-faint">flex</span>
           )}
           {showScores && !removed && !added && !row.inMeta && (
-            <span className="rounded-sm bg-under/15 px-1 py-px font-mono text-micro uppercase tracking-[0.06em] text-under"
+            <span className="rounded-sm bg-under/15 px-1 py-px text-micro font-semibold uppercase tracking-[0.06em] text-under"
               title="The model buys this; this god's community build doesn't">
               off-meta
             </span>
@@ -333,7 +334,7 @@ function LedgerRowView({
         ) : <span />}
 
         {/* Second line: the four axes, and what the meta does with this item. */}
-        <span aria-hidden="true" className="col-start-3 col-span-2 flex flex-wrap items-center gap-x-3 gap-y-0.5 font-mono text-micro text-faint">
+        <span aria-hidden="true" className="col-start-3 col-span-2 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-label text-faint">
           {row.score && !removed && (
             <span className="flex gap-x-2">
               {AXES.map((a) => (
@@ -342,7 +343,7 @@ function LedgerRowView({
                 // printing "win 0.50 · pick 0.00" would read as a finding.
                 measuredAxes || (a.key !== "win" && a.key !== "pick") ? (
                   <span key={a.key}>
-                    {a.label} <span className="text-muted">{row.score![a.key].toFixed(2)}</span>
+                    {a.label} <span className="font-mono text-muted">{row.score![a.key].toFixed(2)}</span>
                   </span>
                 ) : null
               ))}
@@ -352,11 +353,11 @@ function LedgerRowView({
           {showScores && !removed && (
             row.metaPosition != null ? (
               <span>
-                meta buys {row.metaPosition}
-                {row.metaPickRate != null && <> · {Math.round(row.metaPickRate * 100)}% pick</>}
+                meta buys <span className="font-mono">{row.metaPosition}</span>
+                {row.metaPickRate != null && <> · <span className="font-mono">{Math.round(row.metaPickRate * 100)}% pick</span></>}
                 {gap != null && Math.abs(gap) >= 500 && (
                   <span className={gap < 0 ? " text-under" : " text-premium"}>
-                    {" "}· {gap < 0 ? "model buys earlier" : "model buys later"} by {goldText(Math.abs(gap))}
+                    {" "}· {gap < 0 ? "model buys earlier" : "model buys later"} by <span className="font-mono">{goldText(Math.abs(gap))}</span>
                   </span>
                 )}
               </span>
@@ -387,6 +388,36 @@ function LedgerRowView({
   );
 }
 
+/** The build index labels modes "Conquest"/"Joust"; the draft page keys them
+ * lowercase. Anything unrecognized drafts as Conquest rather than producing a
+ * link to a mode that doesn't exist. */
+function draftMode(label: string): DraftMode {
+  return label.toLowerCase() === "joust" ? "joust" : "conquest";
+}
+
+/**
+ * Where "Draft with {god}" goes.
+ *
+ * It puts the god in the first ally slot and **keeps the comp already saved**.
+ * A link that carried only the god would have been a one-click way to wipe a
+ * draft from every god page in the app — the draft page adopts a URL draft
+ * over localStorage and persists it on mount, so there would have been no undo
+ * and no warning. Preserving the comp is also the more useful question: what
+ * does this god build into the enemies you already know?
+ *
+ * The saved comp's own mode wins when there is one, because switching mode
+ * resizes both rows — opening a Joust board would silently drop two of a
+ * five-god Conquest comp.
+ */
+function draftHref(god: string, viewedMode: DraftMode, saved: DraftComp, savedMode: DraftMode): string {
+  const started = saved.allies.some(Boolean) || saved.enemies.some(Boolean);
+  const mode = started ? savedMode : viewedMode;
+  // SMITE forbids duplicates, so the god vacates whatever slot it held.
+  const allies = saved.allies.filter((n) => n && n !== god).slice(0, MODE_TEAM_SIZE[mode] - 1);
+  const enemies = saved.enemies.filter((n) => n && n !== god);
+  return encodeDraftHash(mode, { allies: [god, ...allies], enemies });
+}
+
 export function DetailPanel({
   god, godData, items, builds, mode, onModeChange, starters = [], tierEntry,
 }: DetailPanelProps) {
@@ -399,6 +430,9 @@ export function DetailPanel({
   const [aspectOn, setAspectOn] = useState(false);
   const [mineVersion, setMineVersion] = useState(0);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  // Read-only: `syncUrl` is off, so this never touches the address bar. It is
+  // here so the draft link can preserve a comp instead of replacing it.
+  const { draft: savedDraft, mode: savedDraftMode } = useDraft();
 
   const itemsByName = useMemo(() => {
     const m = new Map<string, Item>();
@@ -539,8 +573,22 @@ export function DetailPanel({
             </div>
           </div>
 
-          {(modes.length > 1 || hasAspectBuild) && (
-            <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            {/* The draft page is where this build stops being a general answer
+                and starts being an answer to a match. Nothing pointed at it
+                from here, so a visitor met it only as an unexplained rail
+                icon — this arrives with the god already in the first slot. */}
+            <a
+              href={draftHref(god, draftMode(note.mode), savedDraft, savedDraftMode)}
+              title={savedDraft.allies.some(Boolean) || savedDraft.enemies.some(Boolean)
+                ? `Puts ${god} in your slot and keeps the comp you've already entered`
+                : `Opens the draft board with ${god} in your slot`}
+              className="press rounded-md border border-line bg-bg2 px-2.5 py-1 text-small text-blue transition-colors duration-[150ms] ease-standard hover:border-line-strong"
+            >
+              Draft with {god} →
+            </a>
+            {(modes.length > 1 || hasAspectBuild) && (
+              <>
               {modes.length > 1 && (
                 <div className="flex w-fit gap-0.5 rounded-md border border-line bg-bg1 p-0.5" role="group" aria-label="Game mode">
                   {modes.map((m) => (
@@ -556,8 +604,9 @@ export function DetailPanel({
                   {aspectMeta ? `Aspect: ${aspectMeta.name.replace(/^Aspect of (the )?/i, "")}` : "Aspect"}
                 </button>
               )}
-            </div>
-          )}
+              </>
+            )}
+          </div>
         </div>
         <Verdict entry={tierEntry} />
       </header>
@@ -613,10 +662,10 @@ export function DetailPanel({
         <div className="min-w-0 flex-1 lg:max-w-[720px]">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <h2 className={eyebrow}>{community ? "Slot order" : "Buy order"}</h2>
-            <p className="font-mono text-label text-faint">
+            <p data-testid="ledger-total" className="text-label text-faint">
               {/* "core", not "total": the starter is bought first and isn't on
                   this spine, so calling it a total would misstate the build. */}
-              {goldText(ledger.totalGold)} core
+              <span className="font-mono">{goldText(ledger.totalGold)}</span> core
               {compareToMeta && ledger.hasMeta && (
                 <>
                   <span className="px-1">·</span>
@@ -670,11 +719,11 @@ export function DetailPanel({
 
           {compareToMeta && ledger.hasMeta && (
             <div className="mt-3 border-t border-line pt-2.5">
-              <p className="font-mono text-micro uppercase tracking-[0.08em] text-faint">
+              <p className="text-label text-faint">
                 What the meta buys instead
                 <span className="px-1">·</span>
                 {ledger.metaTotalGold != null
-                  ? <>{goldText(ledger.metaTotalGold)} over {ledger.metaSlots} slots</>
+                  ? <><span className="font-mono">{goldText(ledger.metaTotalGold)}</span> over {ledger.metaSlots} slots</>
                   : <>{ledger.metaSlots} slots · core cost unavailable</>}
               </p>
               {ledger.metaOnly.length === 0 ? (
@@ -757,7 +806,7 @@ export function DetailPanel({
         <section className="mt-7 border-t border-line pt-5">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <h2 className={eyebrow}>Popular items</h2>
-            <p className="font-mono text-micro text-faint">what this god&rsquo;s players actually buy — not an ordered build</p>
+            <p className="text-label text-faint">what this god&rsquo;s players actually buy — not an ordered build</p>
           </div>
           <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
             {popularItems.map((p) => {
@@ -772,7 +821,7 @@ export function DetailPanel({
                     <span className="font-mono text-micro text-faint">
                       {Math.round(p.pick_rate * 100)}% pick · {Math.round(p.win_rate * 100)}% win
                     </span>
-                    {inCore && <span className="font-mono text-micro uppercase tracking-[0.06em] text-gold">in core</span>}
+                    {inCore && <span className="text-micro font-semibold uppercase tracking-[0.06em] text-gold">in core</span>}
                   </span>
                 </li>
               );

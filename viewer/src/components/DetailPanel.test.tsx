@@ -145,10 +145,13 @@ describe("DetailPanel — the buy ledger", () => {
 
   it("puts cumulative gold on every row and sums the core", () => {
     render(panel({ items, builds: withMeta as never }));
+    // The spine carries the running figure on each row and the header sums it,
+    // so 5,000g legitimately appears twice — the header is asserted by testid
+    // rather than by a text query that can't tell the two apart.
     expect(screen.getByText("2,650g")).toBeInTheDocument();
-    expect(screen.getByText("5,000g")).toBeInTheDocument();   // 2650 + 2350
+    expect(screen.getAllByText("5,000g").length).toBe(2);      // spine row + header
     // "core", not "total" — the starter is bought first and isn't on this spine.
-    expect(screen.getByText(/5,000g core/)).toBeInTheDocument();
+    expect(screen.getByTestId("ledger-total")).toHaveTextContent(/5,000g core/);
   });
 
   it("reports how much of the build the meta agrees with", () => {
@@ -334,10 +337,10 @@ describe("DetailPanel — situational swaps", () => {
   it("keeps a swapped-out slot's gold out of the running total", () => {
     render(panel({ items: swapItems, builds: swapBuild("Cheap Swap") as never }));
     // Base A 2500 + Base B 2600 + Base C 3000 = 8100 before the swap.
-    expect(screen.getByText(/8,100g core/)).toBeInTheDocument();
+    expect(screen.getByTestId("ledger-total")).toHaveTextContent(/8,100g core/);
     fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
     // Base C's 3000 is never spent; Cheap Swap's 1800 is.
-    expect(screen.getByText(/6,900g core/)).toBeInTheDocument();
+    expect(screen.getByTestId("ledger-total")).toHaveTextContent(/6,900g core/);
   });
 
   it("names what a swap comes in for, using applySwap's own target", () => {
@@ -579,5 +582,73 @@ describe("DetailPanel — popular items", () => {
     ] }];
     render(panel({ builds: builds as never }));
     expect(screen.getByText(/Top weighted-score core/)).toBeInTheDocument();
+  });
+});
+
+/* The draft board is where a build stops being a general answer and starts
+ * answering a match — and no surface pointed at it. */
+describe("DetailPanel — the draft seam", () => {
+  const note = (mode: string) => ({
+    type: "smite-build", god: "Chiron", mode, builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
+    ],
+  });
+
+  it("offers to draft with this god, already in the first slot", () => {
+    render(panel({ builds: [note("Conquest")] as never }));
+    expect(screen.getByRole("link", { name: /draft with Chiron/i }))
+      .toHaveAttribute("href", "#/draft?m=conquest&me=Chiron");
+  });
+
+  // The build index labels modes "Conquest"/"Joust"; the draft page keys them
+  // lowercase. A link to `m=Joust` would silently draft as Conquest.
+  it("carries the mode being viewed, in the draft page's own vocabulary", () => {
+    render(panel({ builds: [note("Joust")] as never, mode: "Joust" }));
+    expect(screen.getByRole("link", { name: /draft with Chiron/i }))
+      .toHaveAttribute("href", "#/draft?m=joust&me=Chiron");
+  });
+
+  // The flavor row it sits beside is hidden for a god with only a community
+  // build; the seam must not vanish with it.
+  it("is present on a god that has no model build at all", () => {
+    render(panel({ builds: [chironCommunity] }));
+    expect(screen.getByRole("link", { name: /draft with Chiron/i })).toBeInTheDocument();
+  });
+
+  /* The draft page adopts a URL draft over localStorage and persists it on
+   * mount. A link carrying only this god would therefore have been a one-click
+   * way to wipe a saved comp — from every god page in the app, with no undo,
+   * while Home advertised that same comp as worth resuming. */
+  it("keeps a comp already entered, rather than replacing it", () => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["Ymir", "Cupid", "", "", ""], enemies: ["Ra", "", "", "", ""],
+    }));
+    render(panel({ builds: [note("Conquest")] as never }));
+    expect(screen.getByRole("link", { name: /draft with Chiron/i }))
+      .toHaveAttribute("href", "#/draft?m=conquest&me=Chiron&a=Ymir%2CCupid&e=Ra");
+  });
+
+  // SMITE forbids duplicates, so a god already on the board vacates its slot.
+  it("moves the god out of whatever slot it already held", () => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["Ymir", "Chiron", "", "", ""], enemies: ["Chiron", "", "", "", ""],
+    }));
+    render(panel({ builds: [note("Conquest")] as never }));
+    expect(screen.getByRole("link", { name: /draft with Chiron/i }))
+      .toHaveAttribute("href", "#/draft?m=conquest&me=Chiron&a=Ymir");
+  });
+
+  /* Switching mode resizes both rows, so opening a Joust board from a Joust
+   * build page would silently drop two gods from a five-god Conquest comp.
+   * An existing comp keeps its own mode; only an empty board takes the
+   * viewed one. */
+  it("does not resize a saved comp to match the mode being viewed", () => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["Ymir", "Cupid", "Ra", "Agni", "Zeus"], enemies: ["", "", "", "", ""],
+    }));
+    render(panel({ builds: [note("Joust")] as never, mode: "Joust" }));
+    const href = screen.getByRole("link", { name: /draft with Chiron/i }).getAttribute("href")!;
+    expect(href).toContain("m=conquest");
+    expect(href).toContain("a=Ymir%2CCupid%2CRa%2CAgni");
   });
 });

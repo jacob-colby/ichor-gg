@@ -249,3 +249,64 @@ describe("Home patch + freshness", () => {
     expect(screen.getByTestId("home-freshness").textContent).not.toContain("·");
   });
 });
+
+/* Nothing in the app pointed at the draft board — you met it by clicking an
+ * unlabelled rail icon and guessing. It also survives across sessions, so a
+ * half-entered comp is worth handing back rather than leaving parked. */
+describe("Home — the draft seam", () => {
+  it("invites you in when no draft is saved", () => {
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(within(seam).getByRole("heading", { level: 2 })).toHaveTextContent(/drafting a match/i);
+    expect(within(seam).getByRole("link", { name: /open the draft board/i }))
+      .toHaveAttribute("href", toHash.draft());
+  });
+
+  it("hands back a draft already in progress, named and countable", () => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["Agni", "", "", "", ""], enemies: ["Ymir", "Zeus", "", "", ""],
+    }));
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(within(seam).getByRole("heading", { level: 2 })).toHaveTextContent(/your draft in progress/i);
+    expect(seam).toHaveTextContent(/1 of 5\s*allies/i);
+    expect(seam).toHaveTextContent(/2 of 5\s*enemies/i);
+    expect(within(seam).getByRole("link", { name: /resume draft/i }))
+      .toHaveAttribute("href", "#/draft?m=conquest&me=Agni&e=Ymir%2CZeus");
+  });
+
+  // An ally-only draft adapts nothing yet; saying so is the difference between
+  // a resume link and a resume link that tells you what it still needs.
+  it("says what a draft still needs when only allies are entered", () => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "joust", allies: ["Agni", "", ""], enemies: ["", "", ""],
+    }));
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(seam).toHaveTextContent(/joust/i);
+    expect(seam).toHaveTextContent(/0 of 3\s*enemies/i);
+    expect(seam).toHaveTextContent(/add an enemy and it starts weighing Agni.s core/i);
+  });
+
+  /* Only the first ally slot has a build behind it. A draft carrying enemies
+   * but no god of your own adapts nothing, and claiming otherwise — "the build
+   * already answers those picks" — described a build that doesn't exist. */
+  it("does not claim a build is adapting when your own slot is empty", () => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["", "", "", "", ""], enemies: ["Ymir", "", "", "", ""],
+    }));
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(seam).toHaveTextContent(/your own slot is empty, so there.s no build to adapt yet/i);
+    expect(seam).not.toHaveTextContent(/already answers/i);
+  });
+
+  // The draft adapts one god's core, not the site. The invitation used to say
+  // "every build on the site re-sorts around them".
+  it("claims only what the draft board actually does", () => {
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    expect(seam).toHaveTextContent(/re-sorts that god.s core around them/i);
+    expect(seam).not.toHaveTextContent(/every build on the site/i);
+  });
+});
