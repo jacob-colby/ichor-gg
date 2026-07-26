@@ -159,3 +159,29 @@ describe("SubjectFrame — the draft hand-off", () => {
     expect(link()).toHaveAttribute("href", "#/draft?m=joust&me=Ra");
   });
 });
+
+/* The subject header sat at 27% of a phone screen — worse than the picker bar,
+ * footer and tab bar it replaced. Tapping the portrait to change god costs no
+ * width, which is what lets the one remaining button share the identity row. */
+describe("SubjectFrame — changing god", () => {
+  it("makes the portrait a labelled control, not decoration", () => {
+    const onPickGod = vi.fn();
+    render(frame({ god: ra, godName: "Ra", onPickGod }));
+    const art = screen.getByRole("button", { name: /change god — currently Ra/i });
+    fireEvent.click(art);
+    expect(onPickGod).toHaveBeenCalled();
+  });
+
+  it("keeps an explicitly labelled control too, for where there's room", () => {
+    const onPickGod = vi.fn();
+    render(frame({ god: ra, godName: "Ra", onPickGod }));
+    fireEvent.click(screen.getByRole("button", { name: "Change god" }));
+    expect(onPickGod).toHaveBeenCalled();
+  });
+
+  it("names the roster control for what it does", () => {
+    render(frame());
+    expect(screen.getByRole("button", { name: /choose a god/i })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /change god/i })).not.toBeInTheDocument();
+  });
+});

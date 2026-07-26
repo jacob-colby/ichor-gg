@@ -84,7 +84,7 @@ export function SubjectSearch({ gods, items }: { gods: God[]; items: Item[] }) {
   return (
     <div data-testid="subject-search" onBlur={onBlur} className="relative w-full max-w-md">
       <form onSubmit={submit} role="search"
-        className="flex items-center gap-2 rounded-md border border-line bg-bg2 px-2.5 py-1.5 transition-colors duration-[180ms] ease-standard focus-within:border-blue">
+        className="flex items-center gap-2 rounded-md border border-line bg-bg2 px-2.5 py-1 transition-colors sm:py-1.5 duration-[180ms] ease-standard focus-within:border-blue">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="shrink-0 text-muted">
           <circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" />
         </svg>

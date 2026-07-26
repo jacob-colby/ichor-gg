@@ -74,7 +74,7 @@ function Verdict({ entry }: { entry?: GodTierEntry }) {
     <p data-testid="god-verdict" className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-label text-faint">
       <span>model <span className="font-mono text-gold">{entry.ours.toFixed(2)}</span>
         {entry.tier_ours && <span className="font-mono text-ink-soft"> {entry.tier_ours}</span>}</span>
-      <span>community {unranked
+      <span>meta {unranked
         ? <span className="text-muted">unranked</span>
         : <><span className="font-mono text-ink-soft">{entry.community!.toFixed(2)}</span>
             {entry.tier_community && <span className="font-mono text-ink-soft"> {entry.tier_community}</span>}</>}</span>
@@ -125,11 +125,15 @@ export function SubjectFrame({
 
   return (
     <>
-      <div data-testid="subject-header" className="border-b border-line bg-bg1 px-4 py-2.5 sm:px-6 sm:py-3">
+      <div data-testid="subject-header" className="border-b border-line bg-bg1 px-4 py-2 sm:px-6 sm:py-3">
         <div className="mx-auto flex w-full max-w-[1440px] flex-wrap items-center gap-x-4 gap-y-1.5">
           {name ? (
             <>
-              <GodArt name={name} />
+              <button type="button" onClick={onPickGod}
+                aria-label={`Change god — currently ${name}`}
+                className="press shrink-0 rounded-lg">
+                <GodArt name={name} />
+              </button>
               <div className="min-w-0 flex-1">
                 <h1 className="font-display text-title font-bold leading-none text-ink">{name}</h1>
                 {god && (
@@ -147,10 +151,7 @@ export function SubjectFrame({
                 )}
                 <Verdict entry={tierEntry} />
               </div>
-              {/* Its own row on a phone: sharing one with the identity block
-                  squeezed that block to 128px, wrapping the verdict onto three
-                  lines and making the header taller than the row it saved. */}
-              <div className="flex w-full shrink-0 flex-wrap items-center gap-2 sm:w-auto">
+              <div className="flex shrink-0 flex-wrap items-center gap-2">
                 <a href={draftHref(name)}
                   aria-label={`Draft with ${name}`}
                   title={draft.allies.some(Boolean) || draft.enemies.some(Boolean)
@@ -160,7 +161,7 @@ export function SubjectFrame({
                   Draft<span className="hidden sm:inline"> with {name}</span> →
                 </a>
                 <button type="button" onClick={onPickGod} aria-label="Change god"
-                  className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted hover:text-ink">
+                  className="press hidden rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted hover:text-ink sm:block">
                   Change<span className="hidden sm:inline"> god</span>
                 </button>
                 <a href={toHash.home()}
@@ -209,7 +210,7 @@ export function SubjectFrame({
             const active = t.lens === lens;
             return (
               <a key={t.lens} href={t.href} aria-current={active ? "page" : undefined}
-                className={`press shrink-0 whitespace-nowrap border-b-2 px-3 py-2.5 font-display text-small font-semibold transition-colors duration-[150ms] ease-standard ${
+                className={`press shrink-0 whitespace-nowrap border-b-2 px-3 py-2 font-display text-small font-semibold sm:py-2.5 transition-colors duration-[150ms] ease-standard ${
                   active ? "border-gold text-gold" : "border-transparent text-muted hover:text-ink"}`}>
                 {t.label}
               </a>
