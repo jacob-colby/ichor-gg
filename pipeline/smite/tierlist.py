@@ -1,4 +1,5 @@
-"""Rank gods and items for the viewer's tier-list page (Phase 4).
+"""Rank gods and items for the viewer's tier-list page (Phase 4), per game
+mode (Task R2: Conquest + Joust).
 
 Two independent signals per subject:
   ours       our continuous score (efficiency model for items, mean
@@ -18,10 +19,10 @@ distinct in the viewer.
 import math
 
 
-def _suggested_conquest_core(god_name, builds):
-    """The god's suggested Conquest 'core' archetype entry, or None."""
+def _suggested_core(god_name, builds, mode="Conquest"):
+    """The god's suggested `mode` 'core' archetype entry, or None."""
     for group in builds:
-        if group.get("god") != god_name or group.get("mode") != "Conquest":
+        if group.get("god") != god_name or group.get("mode") != mode:
             continue
         for entry in group.get("builds", []):
             if entry.get("source") == "suggested" and entry.get("archetype") == "core":
@@ -29,10 +30,10 @@ def _suggested_conquest_core(god_name, builds):
     return None
 
 
-def _community_conquest_entry(god_name, builds):
-    """The god's community Conquest build entry, or None."""
+def _community_entry(god_name, builds, mode="Conquest"):
+    """The god's community `mode` build entry, or None."""
     for group in builds:
-        if group.get("god") != god_name or group.get("mode") != "Conquest":
+        if group.get("god") != god_name or group.get("mode") != mode:
             continue
         for entry in group.get("builds", []):
             if entry.get("source") == "community":
@@ -40,22 +41,23 @@ def _community_conquest_entry(god_name, builds):
     return None
 
 
-def god_rankings(gods, builds):
+def god_rankings(gods, builds, mode="Conquest"):
     """One entry per god: {name, role, damage_type, ours, community}.
 
     ours = mean of slot_scores[item]["total"] over the god's suggested
-    Conquest core entry (None if there's no such entry, or it has no
-    slot_scores).
-    community = that god's community Conquest entry's aspect_win_rate
-    (None if there's no community entry, or it lacks the field).
-    Deterministic: sorted by name.
+    `mode` core entry (None if there's no such entry, or it has no
+    slot_scores — e.g. the god was never scraped for that mode at all).
+    community = that god's community `mode` entry's aspect_win_rate (None
+    if there's no community entry for that mode, or it lacks the field).
+    Conquest is the default mode for backwards compatibility with existing
+    callers. Deterministic: sorted by name.
     """
     results = []
     for god in gods:
         name = god.get("name")
 
         ours = None
-        core = _suggested_conquest_core(name, builds)
+        core = _suggested_core(name, builds, mode)
         if core:
             totals = [
                 v.get("total") for v in (core.get("slot_scores") or {}).values()
@@ -65,7 +67,7 @@ def god_rankings(gods, builds):
                 ours = sum(totals) / len(totals)
 
         community = None
-        comm_entry = _community_conquest_entry(name, builds)
+        comm_entry = _community_entry(name, builds, mode)
         if comm_entry:
             community = comm_entry.get("aspect_win_rate")
 
@@ -153,10 +155,41 @@ def assign_tiers(entries, key):
     return result
 
 
-def build_tierlist(gods, builds, items, eff_scores):
-    """{"gods": [...], "items": [...]}, each entry carrying both tier_ours
-    and tier_community so the viewer can switch source without recomputing."""
+def _tierlist_for_mode(gods, builds, items, eff_scores, mode):
+    """{"gods": [...], "items": [...]} for a single game mode, each entry
+    carrying both tier_ours and tier_community so the viewer can switch
+    source without recomputing.
+
+    Items are not mode-dependent in the current data model (efficiency is a
+    global stat/cost fit; community win-rate meta is aggregated once, over
+    Conquest builds only, in build_index._attach_item_meta) — so item
+    rankings are identical across modes today. `items`/`eff_scores` are
+    still threaded through per-mode so that changes without breaking this
+    function's shape."""
     return {
-        "gods": assign_tiers(assign_tiers(god_rankings(gods, builds), "ours"), "community"),
+        "gods": assign_tiers(assign_tiers(god_rankings(gods, builds, mode), "ours"), "community"),
         "items": assign_tiers(assign_tiers(item_rankings(items, eff_scores), "ours"), "community"),
+    }
+
+
+def build_tierlist(gods, builds, items, eff_scores):
+    """Per-mode tier lists: {"conquest": {...}, "joust": {...}}, each shaped
+    like {"gods": [...], "items": [...]} (see `_tierlist_for_mode`).
+
+    Backwards compatibility: the pre-per-mode shape — top-level "gods" and
+    "items" keys — is kept alongside the new per-mode map, equal to the
+    Conquest entry, so the existing viewer (which reads data.tierlist.gods /
+    .items directly) keeps working unmodified.
+
+    Joust's community signal is expected to be sparse: SmiteBrain has no
+    Joust win/pick data, so most (real-world, not necessarily all — see
+    R2 verification notes) Joust community entries carry no aspect_win_rate,
+    surfacing as tier_community: null (unranked), never a fabricated value."""
+    conquest = _tierlist_for_mode(gods, builds, items, eff_scores, "Conquest")
+    joust = _tierlist_for_mode(gods, builds, items, eff_scores, "Joust")
+    return {
+        "gods": conquest["gods"],
+        "items": conquest["items"],
+        "conquest": conquest,
+        "joust": joust,
     }

@@ -2,6 +2,7 @@
 smitebrain.com. Run as: python -m smite.refresh --refresh Chiron --kind god
 """
 import argparse
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -18,6 +19,11 @@ BUILDS_ROOT = REPO_ROOT / "data" / "builds"
 
 WIKI_BASE = "https://wiki.smite2.com/w/"
 SMITEBRAIN_BASE = "https://smitebrain.com/gods/"
+
+# Matches link text like "SMITE 2 Open Beta 39" on the wiki's Patch_notes
+# index. Deliberately loose on whitespace/case — the wiki is hand-authored,
+# not generated.
+_PATCH_VERSION_RE = re.compile(r"SMITE\s*2\s*Open\s*Beta\s*(\d+)", re.IGNORECASE)
 
 
 def _download_icon(image_url: str, slug: str) -> None:
@@ -47,6 +53,40 @@ def _download_icon(image_url: str, slug: str) -> None:
 
     icons_dir.mkdir(parents=True, exist_ok=True)
     out_path.write_bytes(response.content)
+
+
+def refresh_patch_version(wiki_fetcher, force: bool = False):
+    """Scrape the wiki's Patch_notes index for the current SMITE 2 patch
+    (e.g. "Open Beta 39") and persist it to data/_patch.json, so the viewer
+    can show which patch the shipped data reflects instead of just a vague
+    "Updated yesterday".
+
+    The page lists every patch link ("SMITE 2 Open Beta 39", "...Beta 38",
+    ...), newest first in practice — but this parses every match and takes
+    the highest N rather than trusting document order, since that ordering
+    is just editorial convention on a wiki page, not a guarantee.
+
+    Never raises: any fetch/parse failure (Cloudflare hiccup, wiki layout
+    change, no matches at all) returns None and leaves an existing
+    data/_patch.json untouched, exactly like a cosmetic icon-download miss
+    elsewhere in this module — a failed patch-version scrape must not look
+    like (or cause) a failed refresh."""
+    import json
+
+    try:
+        html = wiki_fetcher.fetch(WIKI_BASE + "Patch_notes", force=force)
+        numbers = [int(m.group(1)) for m in _PATCH_VERSION_RE.finditer(html)]
+        if not numbers:
+            return None
+        patch = {"patch": f"Open Beta {max(numbers)}", "captured": date.today().isoformat()}
+    except Exception as exc:
+        print(f"  [patch skip] {exc}")
+        return None
+
+    patch_path = DATA_ROOT / "_patch.json"
+    patch_path.parent.mkdir(parents=True, exist_ok=True)
+    patch_path.write_text(json.dumps(patch, indent=2), encoding="utf-8")
+    return patch
 
 
 def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
@@ -149,6 +189,8 @@ def refresh_all(force: bool = False) -> None:
     wiki_fetcher = BrowserFetcher(DATA_ROOT / "_cache" / "wiki")
     community_fetcher = CachedFetcher(DATA_ROOT / "_cache" / "smitebrain")
     failures = []
+
+    refresh_patch_version(wiki_fetcher, force=force)
 
     god_names = [notes.read_note(p)[0].get("name") for p in (DATA_ROOT / "Gods").glob("*.md")]
     for name in filter(None, god_names):
@@ -260,8 +302,18 @@ def main(argv=None) -> int:
     parser.add_argument("--roster", action="store_true", help="refresh the full god roster (_roster.json)")
     parser.add_argument("--roster-add-all", action="store_true",
                          help="scrape every roster god not yet tracked (no reindex)")
+    parser.add_argument("--patch", action="store_true",
+                         help="refresh the current SMITE 2 patch version (data/_patch.json)")
     parser.add_argument("--force", action="store_true", help="bypass the local cache")
     args = parser.parse_args(argv)
+
+    if args.patch:
+        result = refresh_patch_version(BrowserFetcher(DATA_ROOT / "_cache" / "wiki"), force=args.force)
+        if result:
+            print(f"Refreshed patch version: {result['patch']}")
+        else:
+            print("Could not determine the current patch version (fetch/parse failed)")
+        return 0
 
     if args.roster:
         roster = refresh_roster(BrowserFetcher(DATA_ROOT / "_cache" / "wiki"), force=args.force)

@@ -358,3 +358,109 @@ def test_main_roster_add_all_calls_refresh_roster_add_all_and_prints_summary(tmp
     captured = capsys.readouterr()
     assert "Added 2, failed 1, skipped 5" in captured.out
     assert "FAILED C: boom" in captured.out
+
+
+# --- refresh_patch_version (Task R1: scrape the current patch version) ----
+
+def test_refresh_patch_version_picks_highest_numbered_beta_regardless_of_order(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    fetcher = Mock()
+    # Fixture lists Open Beta 37/35/39/36/38 in that (shuffled, non-sorted)
+    # document order — 39 is neither first nor last, so a naive
+    # "first/last link wins" implementation would get this wrong.
+    fetcher.fetch.return_value = (FIXTURES / "patch_notes_wiki.html").read_text(encoding="utf-8")
+
+    result = refresh.refresh_patch_version(fetcher)
+
+    assert result == {"patch": "Open Beta 39", "captured": date.today().isoformat()}
+    fetcher.fetch.assert_called_once_with("https://wiki.smite2.com/w/Patch_notes", force=False)
+
+    saved = json.loads((tmp_path / "_patch.json").read_text(encoding="utf-8"))
+    assert saved == {"patch": "Open Beta 39", "captured": date.today().isoformat()}
+
+
+def test_refresh_patch_version_forwards_force_flag(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    fetcher = Mock()
+    fetcher.fetch.return_value = (FIXTURES / "patch_notes_wiki.html").read_text(encoding="utf-8")
+
+    refresh.refresh_patch_version(fetcher, force=True)
+
+    fetcher.fetch.assert_called_once_with("https://wiki.smite2.com/w/Patch_notes", force=True)
+
+
+def test_refresh_patch_version_garbage_page_returns_none_and_leaves_existing_file_intact(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    existing = {"patch": "Open Beta 38", "captured": "2026-06-15"}
+    (tmp_path / "_patch.json").write_text(json.dumps(existing), encoding="utf-8")
+    fetcher = Mock()
+    fetcher.fetch.return_value = (FIXTURES / "patch_notes_garbage.html").read_text(encoding="utf-8")
+
+    result = refresh.refresh_patch_version(fetcher)
+
+    assert result is None
+    assert json.loads((tmp_path / "_patch.json").read_text(encoding="utf-8")) == existing
+
+
+def test_refresh_patch_version_failed_fetch_returns_none_and_does_not_raise(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    fetcher = Mock()
+    fetcher.fetch.side_effect = RuntimeError("Cloudflare challenge")
+
+    result = refresh.refresh_patch_version(fetcher)  # must not raise
+
+    assert result is None
+    assert not (tmp_path / "_patch.json").exists()
+
+
+def test_refresh_patch_version_no_existing_file_and_garbage_page_writes_nothing(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    fetcher = Mock()
+    fetcher.fetch.return_value = "<html><body>nothing relevant here</body></html>"
+
+    result = refresh.refresh_patch_version(fetcher)
+
+    assert result is None
+    assert not (tmp_path / "_patch.json").exists()
+
+
+def test_refresh_all_also_refreshes_patch_version(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(refresh, "BUILDS_ROOT", tmp_path / "Builds")
+    (tmp_path / "Gods").mkdir()
+    (tmp_path / "Items").mkdir()
+    (tmp_path / "Builds").mkdir()
+
+    with mock.patch("smite.refresh.BrowserFetcher") as MockBrowser, \
+         mock.patch("smite.refresh.CachedFetcher"), \
+         mock.patch("smite.refresh.refresh_patch_version") as mock_patch:
+        refresh.refresh_all()
+
+    mock_patch.assert_called_once_with(MockBrowser.return_value, force=False)
+
+
+def test_main_patch_flag_calls_refresh_patch_version(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+
+    with mock.patch("smite.refresh.BrowserFetcher"), \
+         mock.patch("smite.refresh.refresh_patch_version") as mock_fn:
+        mock_fn.return_value = {"patch": "Open Beta 39", "captured": "2026-07-26"}
+        result = refresh.main(["--patch"])
+
+    assert result == 0
+    mock_fn.assert_called_once()
+    captured = capsys.readouterr()
+    assert "Open Beta 39" in captured.out
+
+
+def test_main_patch_flag_prints_a_message_even_on_failure(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+
+    with mock.patch("smite.refresh.BrowserFetcher"), \
+         mock.patch("smite.refresh.refresh_patch_version") as mock_fn:
+        mock_fn.return_value = None
+        result = refresh.main(["--patch"])
+
+    assert result == 0
+    captured = capsys.readouterr()
+    assert captured.out.strip()

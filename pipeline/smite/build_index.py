@@ -118,17 +118,21 @@ def build_index(repo_root: Path) -> dict:
     eff = {}
     if efficiency.numeric_cost_items(items):
         eff, _ = efficiency.efficiency_scores(items)
-    return {"gods": gods, "items": items, "builds": builds,
-            "god_item_scores": _god_item_scores(gods, builds, items, eff, weights, tags_map),
-            "draft": weights.get("draft", {}),
-            "starters": weights.get("starters", []),
-            "roster": _load_roster(data_root),
-            "data_updated": _data_updated(gods, builds),
-            "tierlist": tierlist.build_tierlist(gods, builds, items, eff),
-            # Read snapshots under the vault being indexed, not the module-level
-            # default — otherwise a tmp-vault caller (tests) would pick up the
-            # real store once snapshots start accumulating.
-            "patch_notes": snapshots.report_from_dir(data_root / "Analysis" / "snapshots")}
+    index = {"gods": gods, "items": items, "builds": builds,
+             "god_item_scores": _god_item_scores(gods, builds, items, eff, weights, tags_map),
+             "draft": weights.get("draft", {}),
+             "starters": weights.get("starters", []),
+             "roster": _load_roster(data_root),
+             "data_updated": _data_updated(gods, builds),
+             "tierlist": tierlist.build_tierlist(gods, builds, items, eff),
+             # Read snapshots under the vault being indexed, not the module-level
+             # default — otherwise a tmp-vault caller (tests) would pick up the
+             # real store once snapshots start accumulating.
+             "patch_notes": snapshots.report_from_dir(data_root / "Analysis" / "snapshots")}
+    data_patch = _load_data_patch(data_root)
+    if data_patch:
+        index["data_patch"] = data_patch
+    return index
 
 
 def _data_updated(gods, builds) -> str:
@@ -140,6 +144,23 @@ def _data_updated(gods, builds) -> str:
             if b.get("source") == "community" and b.get("last_verified"):
                 dates.append(str(b["last_verified"]))
     return max(dates) if dates else ""
+
+
+def _load_data_patch(data_root: Path):
+    """The scraped current SMITE 2 patch string (e.g. "Open Beta 39") from
+    data/_patch.json (written by refresh.refresh_patch_version), or None if
+    that file doesn't exist or is unreadable/malformed — the viewer omits
+    the `data_patch` key entirely rather than showing a fabricated patch."""
+    import json
+    path = data_root / "_patch.json"
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        patch = data.get("patch") if isinstance(data, dict) else None
+        return patch if isinstance(patch, str) else None
+    except Exception:
+        return None
 
 
 def _load_roster(data_root: Path) -> list:

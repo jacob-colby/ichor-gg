@@ -91,6 +91,74 @@ def test_god_rankings_ignores_non_conquest_builds():
 
 
 # ---------------------------------------------------------------------------
+# god_rankings — mode parameter (Task R2: per-mode tier list)
+# ---------------------------------------------------------------------------
+
+def test_god_rankings_mode_defaults_to_conquest():
+    # Calling with no mode arg must behave exactly like mode="Conquest" —
+    # existing callers (and the tests above) rely on this default.
+    gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
+    core = _core_entry({"A": {"total": 0.8}})
+    builds = [_build_group("Chiron", mode="Conquest", builds=[core])]
+
+    default_result = tierlist.god_rankings(gods, builds)
+    explicit_result = tierlist.god_rankings(gods, builds, mode="Conquest")
+
+    assert default_result == explicit_result == [{
+        "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
+        "ours": pytest.approx(0.8), "community": None,
+    }]
+
+
+def test_god_rankings_joust_mode_reads_joust_builds_not_conquest():
+    gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
+    conquest_core = _core_entry({"A": {"total": 0.2}})
+    joust_core = _core_entry({"B": {"total": 0.9}})
+    builds = [
+        _build_group("Chiron", mode="Conquest", builds=[conquest_core]),
+        _build_group("Chiron", mode="Joust", builds=[joust_core]),
+    ]
+
+    conquest_result = tierlist.god_rankings(gods, builds, mode="Conquest")
+    joust_result = tierlist.god_rankings(gods, builds, mode="Joust")
+
+    assert conquest_result[0]["ours"] == pytest.approx(0.2)
+    assert joust_result[0]["ours"] == pytest.approx(0.9)
+
+
+def test_god_rankings_joust_community_is_none_when_god_has_no_joust_community_entry():
+    # SmiteBrain has no Joust win/pick data, so the honest, non-fabricated
+    # behaviour for a god whose Joust build note carries only a "suggested"
+    # entry (no "community" entry at all) is an unranked (None) community
+    # signal for that mode — exactly like the pre-existing Conquest gap.
+    gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
+    joust_core = _core_entry({"A": {"total": 0.5}})
+    builds = [_build_group("Chiron", mode="Joust", builds=[joust_core])]  # no community entry
+
+    result = tierlist.god_rankings(gods, builds, mode="Joust")
+
+    assert result[0]["community"] is None
+    assert result[0]["ours"] == pytest.approx(0.5)
+
+
+def test_god_rankings_god_with_only_a_conquest_build_is_unranked_in_joust():
+    # A god that has never had its Joust data scraped at all (no Joust build
+    # group in the input whatsoever) must still appear in the Joust ranking
+    # — unranked (ours/community both None), not silently dropped from the
+    # list.
+    gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
+    conquest_core = _core_entry({"A": {"total": 0.7}})
+    builds = [_build_group("Chiron", mode="Conquest", builds=[conquest_core])]
+
+    result = tierlist.god_rankings(gods, builds, mode="Joust")
+
+    assert result == [{
+        "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
+        "ours": None, "community": None,
+    }]
+
+
+# ---------------------------------------------------------------------------
 # item_rankings
 # ---------------------------------------------------------------------------
 
@@ -237,7 +305,9 @@ def test_build_tierlist_shape_has_gods_and_items_with_both_tiers():
 
     result = tierlist.build_tierlist(gods, builds, items, eff)
 
-    assert set(result) == {"gods", "items"}
+    # Legacy top-level shape (Task 4.1) still resolves — the existing viewer
+    # reads data.tierlist.gods / .items directly and must not break.
+    assert {"gods", "items"} <= set(result)
     assert result["gods"][0]["name"] == "Chiron"
     assert result["gods"][0]["tier_ours"] == "S"
     assert result["gods"][0]["tier_community"] == "S"
@@ -248,4 +318,90 @@ def test_build_tierlist_shape_has_gods_and_items_with_both_tiers():
 
 def test_build_tierlist_empty_inputs():
     result = tierlist.build_tierlist([], [], [], {})
-    assert result == {"gods": [], "items": []}
+    assert result == {
+        "gods": [], "items": [],
+        "conquest": {"gods": [], "items": []},
+        "joust": {"gods": [], "items": []},
+    }
+
+
+# ---------------------------------------------------------------------------
+# build_tierlist — per-mode shape (Task R2: Conquest + Joust tier list)
+# ---------------------------------------------------------------------------
+
+def test_build_tierlist_emits_conquest_and_joust_keys():
+    gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
+    core = _core_entry({"A": {"total": 0.6}})
+    builds = [_build_group("Chiron", mode="Conquest", builds=[core])]
+    items = [{"name": "Deathbringer", "tier": 3, "efficiency_tier": "undervalued"}]
+    eff = {"Deathbringer": {"score": 0.81}}
+
+    result = tierlist.build_tierlist(gods, builds, items, eff)
+
+    assert {"gods", "items", "conquest", "joust"} <= set(result)
+    for mode_key in ("conquest", "joust"):
+        assert set(result[mode_key]) == {"gods", "items"}
+        assert [g["name"] for g in result[mode_key]["gods"]] == ["Chiron"]
+        assert [i["name"] for i in result[mode_key]["items"]] == ["Deathbringer"]
+
+
+def test_build_tierlist_legacy_top_level_matches_conquest():
+    gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
+    core = _core_entry({"A": {"total": 0.6}})
+    builds = [_build_group("Chiron", mode="Conquest", builds=[core])]
+    items = [{"name": "Deathbringer", "tier": 3, "efficiency_tier": "undervalued"}]
+    eff = {"Deathbringer": {"score": 0.81}}
+
+    result = tierlist.build_tierlist(gods, builds, items, eff)
+
+    assert result["gods"] == result["conquest"]["gods"]
+    assert result["items"] == result["conquest"]["items"]
+
+
+def test_build_tierlist_conquest_and_joust_computed_independently():
+    # Same god, deliberately different scores per mode, so a bug that
+    # accidentally shared state (or always read Conquest) would be caught.
+    gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
+    conquest_core = _core_entry({"A": {"total": 0.9}})
+    joust_core = _core_entry({"A": {"total": 0.1}})
+    builds = [
+        _build_group("Chiron", mode="Conquest", builds=[conquest_core]),
+        _build_group("Chiron", mode="Joust", builds=[joust_core]),
+    ]
+
+    result = tierlist.build_tierlist(gods, builds, [], {})
+
+    conquest_chiron = result["conquest"]["gods"][0]
+    joust_chiron = result["joust"]["gods"][0]
+    assert conquest_chiron["ours"] == pytest.approx(0.9)
+    assert joust_chiron["ours"] == pytest.approx(0.1)
+    assert conquest_chiron["tier_ours"] == "S"  # sole ranked entry per mode
+    assert joust_chiron["tier_ours"] == "S"
+
+
+def test_build_tierlist_god_with_only_conquest_build_is_unranked_not_absent_in_joust():
+    gods = [
+        {"name": "Chiron", "role": "Hunter", "damage_type": "Physical"},
+        {"name": "Zeus", "role": "Mid", "damage_type": "Magical"},
+    ]
+    chiron_core = _core_entry({"A": {"total": 0.9}})
+    zeus_conquest_core = _core_entry({"A": {"total": 0.5}})
+    zeus_joust_core = _core_entry({"A": {"total": 0.4}})
+    builds = [
+        # Chiron: Conquest only — never scraped for Joust.
+        _build_group("Chiron", mode="Conquest", builds=[chiron_core]),
+        _build_group("Zeus", mode="Conquest", builds=[zeus_conquest_core]),
+        _build_group("Zeus", mode="Joust", builds=[zeus_joust_core]),
+    ]
+
+    result = tierlist.build_tierlist(gods, builds, [], {})
+
+    joust_gods = {g["name"]: g for g in result["joust"]["gods"]}
+    # Honest behaviour: Chiron is present (not dropped from the list) but
+    # unranked, since he genuinely has no Joust data at all.
+    assert "Chiron" in joust_gods
+    assert joust_gods["Chiron"]["ours"] is None
+    assert joust_gods["Chiron"]["tier_ours"] is None
+    # Zeus genuinely has Joust data, so he IS ranked.
+    assert joust_gods["Zeus"]["ours"] == pytest.approx(0.4)
+    assert joust_gods["Zeus"]["tier_ours"] is not None

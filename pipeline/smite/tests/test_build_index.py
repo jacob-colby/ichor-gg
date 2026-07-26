@@ -38,7 +38,11 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
     index = build_index.build_index(repo)
     assert index == {"gods": [], "items": [], "builds": [], "starters": [],
                      "roster": [], "data_updated": "",
-                     "tierlist": {"gods": [], "items": []},
+                     # Per-mode tier list (Task R2) — legacy top-level
+                     # gods/items kept alongside the new conquest/joust map.
+                     "tierlist": {"gods": [], "items": [],
+                                  "conquest": {"gods": [], "items": []},
+                                  "joust": {"gods": [], "items": []}},
                      "god_item_scores": {}, "draft": {},
                      "patch_notes": []}
 
@@ -149,7 +153,8 @@ def test_build_index_emits_tierlist_with_gods_and_items():
     r = build_index.build_index(Path(__file__).resolve().parents[3])
     assert "tierlist" in r
     tl = r["tierlist"]
-    assert set(tl) == {"gods", "items"}
+    # Legacy top-level shape (pre-R2) plus the new per-mode map, additive.
+    assert set(tl) == {"gods", "items", "conquest", "joust"}
     assert tl["gods"] and tl["items"]
     god = tl["gods"][0]
     assert {"name", "role", "damage_type", "ours", "community", "tier_ours", "tier_community"} <= set(god)
@@ -158,6 +163,20 @@ def test_build_index_emits_tierlist_with_gods_and_items():
     # community coverage is partial by design — some tier_community entries
     # must be None, never silently zero-filled.
     assert any(g["tier_community"] is None for g in tl["gods"])
+    # Legacy top level mirrors Conquest exactly.
+    assert tl["gods"] == tl["conquest"]["gods"]
+    assert tl["items"] == tl["conquest"]["items"]
+
+
+def test_build_index_emits_joust_tierlist_shaped_like_conquest():
+    from smite import build_index
+    from pathlib import Path
+    r = build_index.build_index(Path(__file__).resolve().parents[3])
+    tl = r["tierlist"]
+    assert set(tl["joust"]) == {"gods", "items"}
+    assert tl["joust"]["gods"], "expected Joust gods ranking to be non-empty against real data"
+    god = tl["joust"]["gods"][0]
+    assert {"name", "role", "damage_type", "ours", "community", "tier_ours", "tier_community"} <= set(god)
 
 
 def test_build_index_emits_patch_notes_as_list():
@@ -304,6 +323,38 @@ def test_build_index_non_community_builds_get_no_popular_items(tmp_path):
     index = build_index.build_index(repo)
     b = index["builds"][0]["builds"][0]
     assert "popular_items" not in b
+
+
+# --- data_patch (Task R1: scraped patch version) ---------------------------
+
+def test_build_index_emits_data_patch_when_patch_file_exists(tmp_path):
+    from smite import build_index
+    repo = _make_repo(tmp_path)
+    (repo / "data" / "_patch.json").write_text(
+        json.dumps({"patch": "Open Beta 39", "captured": "2026-07-26"}), encoding="utf-8")
+
+    index = build_index.build_index(repo)
+
+    assert index["data_patch"] == "Open Beta 39"
+
+
+def test_build_index_omits_data_patch_when_patch_file_absent(tmp_path):
+    from smite import build_index
+    repo = _make_repo(tmp_path)
+
+    index = build_index.build_index(repo)
+
+    assert "data_patch" not in index
+
+
+def test_build_index_omits_data_patch_when_patch_file_is_malformed(tmp_path):
+    from smite import build_index
+    repo = _make_repo(tmp_path)
+    (repo / "data" / "_patch.json").write_text("not valid json{{{", encoding="utf-8")
+
+    index = build_index.build_index(repo)  # must not raise
+
+    assert "data_patch" not in index
 
 
 def test_build_index_community_build_with_no_slots_gets_empty_popular_items(tmp_path):
