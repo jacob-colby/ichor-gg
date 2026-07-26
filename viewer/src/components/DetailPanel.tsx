@@ -16,15 +16,12 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import type {
-  BuildEntry, BuildNote, CuratedBuildEntry, DraftComp, God, GodTierEntry, Item, SlotScore,
+  BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { tierLabel } from "../lib/itemFilters";
-import { godRoleTextClass, damageTextClass } from "../lib/roleAccent";
 import { buildLedger, goldText, goldGap, type LedgerRow } from "../lib/ledger";
-import { deltaText } from "../lib/divergence";
-import { encodeDraftHash, useDraft, MODE_TEAM_SIZE, type DraftMode } from "../lib/draft";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
 import { getMine } from "../lib/mineStore";
 
@@ -53,15 +50,7 @@ interface DetailPanelProps {
   mode: string;
   onModeChange: (mode: string) => void;
   starters?: { base: string; upgrade: string }[];
-  /** This god's row from the tier list, so the page can state the model's
-   * verdict instead of leaving the visitor to guess it. */
-  tierEntry?: GodTierEntry;
   onReload?: () => void;
-}
-
-function divergenceClass(delta: number): string {
-  if (Math.abs(delta) < 0.005) return "text-faint";
-  return delta > 0 ? "text-under" : "text-premium";
 }
 
 /** Item art with a real fallback — one cache-bust retry, then the item's
@@ -221,36 +210,6 @@ const segBtn = (active: boolean) =>
 
 const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
-/** The model's verdict on this god, in the same vocabulary Home uses — so
- * arriving from a divergence row lands on the continuation of that argument
- * rather than an unrelated screen. */
-function Verdict({ entry }: { entry?: GodTierEntry }) {
-  if (!entry || entry.ours == null) return null;
-  const unranked = entry.community == null;
-  const delta = unranked ? null : entry.ours - entry.community!;
-  return (
-    <div data-testid="god-verdict" className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-label">
-      <span className="text-faint">
-        model <span className="font-mono text-gold">{entry.ours.toFixed(2)}</span>
-        {entry.tier_ours && <span className="font-mono text-ink-soft"> {entry.tier_ours}</span>}
-      </span>
-      <span className="text-faint">
-        community {unranked
-          ? <span className="text-muted">unranked</span>
-          : <><span className="font-mono text-ink-soft">{entry.community!.toFixed(2)}</span>
-              {entry.tier_community && <span className="font-mono text-ink-soft"> {entry.tier_community}</span>}</>}
-      </span>
-      {delta !== null ? (
-        <span className={divergenceClass(delta)}>
-          {delta > 0 ? "model rates higher" : delta < 0 ? "meta rates higher" : "agreed"} {deltaText(delta)}
-        </span>
-      ) : (
-        <span className="text-muted">no community rating for this god yet</span>
-      )}
-    </div>
-  );
-}
-
 /** One purchase: where it lands on the gold spine, what the model scores it,
  * and what the community does with the same item. */
 function LedgerRowView({
@@ -388,38 +347,8 @@ function LedgerRowView({
   );
 }
 
-/** The build index labels modes "Conquest"/"Joust"; the draft page keys them
- * lowercase. Anything unrecognized drafts as Conquest rather than producing a
- * link to a mode that doesn't exist. */
-function draftMode(label: string): DraftMode {
-  return label.toLowerCase() === "joust" ? "joust" : "conquest";
-}
-
-/**
- * Where "Draft with {god}" goes.
- *
- * It puts the god in the first ally slot and **keeps the comp already saved**.
- * A link that carried only the god would have been a one-click way to wipe a
- * draft from every god page in the app — the draft page adopts a URL draft
- * over localStorage and persists it on mount, so there would have been no undo
- * and no warning. Preserving the comp is also the more useful question: what
- * does this god build into the enemies you already know?
- *
- * The saved comp's own mode wins when there is one, because switching mode
- * resizes both rows — opening a Joust board would silently drop two of a
- * five-god Conquest comp.
- */
-function draftHref(god: string, viewedMode: DraftMode, saved: DraftComp, savedMode: DraftMode): string {
-  const started = saved.allies.some(Boolean) || saved.enemies.some(Boolean);
-  const mode = started ? savedMode : viewedMode;
-  // SMITE forbids duplicates, so the god vacates whatever slot it held.
-  const allies = saved.allies.filter((n) => n && n !== god).slice(0, MODE_TEAM_SIZE[mode] - 1);
-  const enemies = saved.enemies.filter((n) => n && n !== god);
-  return encodeDraftHash(mode, { allies: [god, ...allies], enemies });
-}
-
 export function DetailPanel({
-  god, godData, items, builds, mode, onModeChange, starters = [], tierEntry,
+  god, godData, items, builds, mode, onModeChange, starters = [],
 }: DetailPanelProps) {
   const godNotes = builds.filter((b) => b.god === god);
   const note = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
@@ -430,9 +359,6 @@ export function DetailPanel({
   const [aspectOn, setAspectOn] = useState(false);
   const [mineVersion, setMineVersion] = useState(0);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  // Read-only: `syncUrl` is off, so this never touches the address bar. It is
-  // here so the draft link can preserve a comp instead of replacing it.
-  const { draft: savedDraft, mode: savedDraftMode } = useDraft();
 
   const itemsByName = useMemo(() => {
     const m = new Map<string, Item>();
@@ -456,7 +382,7 @@ export function DetailPanel({
   if (!note || note.builds.length === 0) {
     return (
       <div className="max-w-[52ch]">
-        <h1 className="font-display text-title font-bold text-ink">{god}</h1>
+        <h2 className="font-display text-title font-bold text-ink">{god}</h2>
         <p className="mt-2 text-body leading-relaxed text-muted">
           No build data for {god} in this index yet. The pipeline builds one per god per mode —
           this god either hasn&rsquo;t been scraped or has no items scored for {mode}.
@@ -555,61 +481,29 @@ export function DetailPanel({
 
   return (
     <article>
-      {/* ── Verdict header ─────────────────────────────────────────── */}
-      <header className="border-b border-line pb-4">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div className="flex min-w-0 items-center gap-3">
-            <ItemIcon name={god} className="h-[52px] w-[52px] rounded-lg" />
-            <div className="min-w-0">
-              <h1 className="font-display text-title font-bold leading-none text-ink">{god}</h1>
-              <div className="mt-1 text-small text-muted">
-                {godData ? (
-                  <>
-                    {godData.pantheon} · <span className={godRoleTextClass(godData)}>{godData.role}</span> ·{" "}
-                    <span className={damageTextClass(godData.damage_type)}>{godData.damage_type}</span>
-                  </>
-                ) : note.mode}
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-2">
-            {/* The draft page is where this build stops being a general answer
-                and starts being an answer to a match. Nothing pointed at it
-                from here, so a visitor met it only as an unexplained rail
-                icon — this arrives with the god already in the first slot. */}
-            <a
-              href={draftHref(god, draftMode(note.mode), savedDraft, savedDraftMode)}
-              title={savedDraft.allies.some(Boolean) || savedDraft.enemies.some(Boolean)
-                ? `Puts ${god} in your slot and keeps the comp you've already entered`
-                : `Opens the draft board with ${god} in your slot`}
-              className="press rounded-md border border-line bg-bg2 px-2.5 py-1 text-small text-blue transition-colors duration-[150ms] ease-standard hover:border-line-strong"
-            >
-              Draft with {god} →
-            </a>
-            {(modes.length > 1 || hasAspectBuild) && (
-              <>
-              {modes.length > 1 && (
-                <div className="flex w-fit gap-0.5 rounded-md border border-line bg-bg1 p-0.5" role="group" aria-label="Game mode">
-                  {modes.map((m) => (
-                    <button key={m} type="button" onClick={() => onModeChange(m)}
-                      aria-pressed={m === note.mode} className={segBtn(m === note.mode)}>
-                      {m}
-                    </button>
-                  ))}
-                </div>
-              )}
-              {hasAspectBuild && (
-                <button type="button" onClick={toggleAspect} aria-pressed={aspectOn} className={`${segBtn(aspectOn)} border border-line`}>
-                  {aspectMeta ? `Aspect: ${aspectMeta.name.replace(/^Aspect of (the )?/i, "")}` : "Aspect"}
+      {/* The god's identity, its verdict and the draft hand-off all moved up
+          into the shell's subject header, where they're true of every lens
+          rather than only of this one. What's left here is what actually
+          belongs to the build: which mode, and which kit. */}
+      {(modes.length > 1 || hasAspectBuild) && (
+        <div className="flex flex-wrap items-center gap-2 border-b border-line pb-4">
+          {modes.length > 1 && (
+            <div className="flex w-fit gap-0.5 rounded-md border border-line bg-bg1 p-0.5" role="group" aria-label="Game mode">
+              {modes.map((m) => (
+                <button key={m} type="button" onClick={() => onModeChange(m)}
+                  aria-pressed={m === note.mode} className={segBtn(m === note.mode)}>
+                  {m}
                 </button>
-              )}
-              </>
-            )}
-          </div>
+              ))}
+            </div>
+          )}
+          {hasAspectBuild && (
+            <button type="button" onClick={toggleAspect} aria-pressed={aspectOn} className={`${segBtn(aspectOn)} border border-line`}>
+              {aspectMeta ? `Aspect: ${aspectMeta.name.replace(/^Aspect of (the )?/i, "")}` : "Aspect"}
+            </button>
+          )}
         </div>
-        <Verdict entry={tierEntry} />
-      </header>
+      )}
 
       {aspectOn && aspectMeta && (
         <div className="mt-3 rounded-md border border-gold/40 bg-bg1 p-2.5 text-small">

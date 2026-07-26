@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen, fireEvent, within } from "@testing-library/react";
 import { DetailPanel } from "./DetailPanel";
 import { saveMine } from "../lib/mineStore";
-import type { BuildNote, GodTierEntry, Item } from "../types";
+import type { BuildNote, Item } from "../types";
 
 /** Full-shaped Item fixture — the ledger reads cost for its gold spine, and
  * the expanded card reads tier/stats/passive/effect_tags. */
@@ -85,49 +85,18 @@ describe("DetailPanel — what opens by default", () => {
 
   it("explains itself when the god has no build note for this mode yet", () => {
     render(panel({ god: "SomeNewGod", builds: [] }));
-    expect(screen.getByRole("heading", { level: 1, name: "SomeNewGod" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 2, name: "SomeNewGod" })).toBeInTheDocument();
     expect(screen.getByText(/no build data for SomeNewGod in this index yet/i)).toBeInTheDocument();
   });
 
-  it("gives the route a level-1 heading", () => {
+  // The shell's subject header owns the h1 now — it names the god on every
+  // lens, not just this one. The build view starts at level 2.
+  it("starts at level 2, under the subject header's heading", () => {
     render(panel({ builds: [chironCommunity] }));
-    expect(screen.getByRole("heading", { level: 1, name: "Chiron" })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { level: 1 })).not.toBeInTheDocument();
   });
 });
 
-describe("DetailPanel — the model's verdict", () => {
-  beforeEach(() => localStorage.clear());
-
-  const tierEntry: GodTierEntry = {
-    name: "Chiron", ours: 0.47, community: 0.58, tier_ours: "C", tier_community: "A",
-  };
-
-  it("states both scores, both tiers, and which way they disagree", () => {
-    render(panel({ builds: [chironCommunity], tierEntry }));
-    const verdict = within(screen.getByTestId("god-verdict"));
-    expect(verdict.getByText("0.47")).toBeInTheDocument();
-    expect(verdict.getByText("0.58")).toBeInTheDocument();
-    expect(verdict.getByText(/meta rates higher/i)).toBeInTheDocument();
-    expect(verdict.getByText(/-0\.11/)).toBeInTheDocument();
-  });
-
-  it("says so the other way when the model rates a god above the meta", () => {
-    render(panel({ builds: [chironCommunity], tierEntry: { ...tierEntry, ours: 0.62 } }));
-    expect(within(screen.getByTestId("god-verdict")).getByText(/model rates higher/i)).toBeInTheDocument();
-  });
-
-  it("names an unranked god as unranked rather than leaving a blank", () => {
-    render(panel({ builds: [chironCommunity], tierEntry: { ...tierEntry, community: null, tier_community: null } }));
-    const verdict = within(screen.getByTestId("god-verdict"));
-    expect(verdict.getByText(/unranked/i)).toBeInTheDocument();
-    expect(verdict.getByText(/no community rating for this god yet/i)).toBeInTheDocument();
-  });
-
-  it("omits the verdict entirely when there is no tier entry", () => {
-    render(panel({ builds: [chironCommunity] }));
-    expect(screen.queryByTestId("god-verdict")).not.toBeInTheDocument();
-  });
-});
 
 describe("DetailPanel — the buy ledger", () => {
   beforeEach(() => localStorage.clear());
@@ -585,70 +554,3 @@ describe("DetailPanel — popular items", () => {
   });
 });
 
-/* The draft board is where a build stops being a general answer and starts
- * answering a match — and no surface pointed at it. */
-describe("DetailPanel — the draft seam", () => {
-  const note = (mode: string) => ({
-    type: "smite-build", god: "Chiron", mode, builds: [
-      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
-    ],
-  });
-
-  it("offers to draft with this god, already in the first slot", () => {
-    render(panel({ builds: [note("Conquest")] as never }));
-    expect(screen.getByRole("link", { name: /draft with Chiron/i }))
-      .toHaveAttribute("href", "#/draft?m=conquest&me=Chiron");
-  });
-
-  // The build index labels modes "Conquest"/"Joust"; the draft page keys them
-  // lowercase. A link to `m=Joust` would silently draft as Conquest.
-  it("carries the mode being viewed, in the draft page's own vocabulary", () => {
-    render(panel({ builds: [note("Joust")] as never, mode: "Joust" }));
-    expect(screen.getByRole("link", { name: /draft with Chiron/i }))
-      .toHaveAttribute("href", "#/draft?m=joust&me=Chiron");
-  });
-
-  // The flavor row it sits beside is hidden for a god with only a community
-  // build; the seam must not vanish with it.
-  it("is present on a god that has no model build at all", () => {
-    render(panel({ builds: [chironCommunity] }));
-    expect(screen.getByRole("link", { name: /draft with Chiron/i })).toBeInTheDocument();
-  });
-
-  /* The draft page adopts a URL draft over localStorage and persists it on
-   * mount. A link carrying only this god would therefore have been a one-click
-   * way to wipe a saved comp — from every god page in the app, with no undo,
-   * while Home advertised that same comp as worth resuming. */
-  it("keeps a comp already entered, rather than replacing it", () => {
-    localStorage.setItem("smite:draft", JSON.stringify({
-      mode: "conquest", allies: ["Ymir", "Cupid", "", "", ""], enemies: ["Ra", "", "", "", ""],
-    }));
-    render(panel({ builds: [note("Conquest")] as never }));
-    expect(screen.getByRole("link", { name: /draft with Chiron/i }))
-      .toHaveAttribute("href", "#/draft?m=conquest&me=Chiron&a=Ymir%2CCupid&e=Ra");
-  });
-
-  // SMITE forbids duplicates, so a god already on the board vacates its slot.
-  it("moves the god out of whatever slot it already held", () => {
-    localStorage.setItem("smite:draft", JSON.stringify({
-      mode: "conquest", allies: ["Ymir", "Chiron", "", "", ""], enemies: ["Chiron", "", "", "", ""],
-    }));
-    render(panel({ builds: [note("Conquest")] as never }));
-    expect(screen.getByRole("link", { name: /draft with Chiron/i }))
-      .toHaveAttribute("href", "#/draft?m=conquest&me=Chiron&a=Ymir");
-  });
-
-  /* Switching mode resizes both rows, so opening a Joust board from a Joust
-   * build page would silently drop two gods from a five-god Conquest comp.
-   * An existing comp keeps its own mode; only an empty board takes the
-   * viewed one. */
-  it("does not resize a saved comp to match the mode being viewed", () => {
-    localStorage.setItem("smite:draft", JSON.stringify({
-      mode: "conquest", allies: ["Ymir", "Cupid", "Ra", "Agni", "Zeus"], enemies: ["", "", "", "", ""],
-    }));
-    render(panel({ builds: [note("Joust")] as never, mode: "Joust" }));
-    const href = screen.getByRole("link", { name: /draft with Chiron/i }).getAttribute("href")!;
-    expect(href).toContain("m=conquest");
-    expect(href).toContain("a=Ymir%2CCupid%2CRa%2CAgni");
-  });
-});

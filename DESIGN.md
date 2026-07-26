@@ -153,6 +153,12 @@ Everything else sets in the reading faces, including the words *around* a number
 
 This replaces the Mono-Label Rule, which read "any piece of UI that names a category, state, or count sets in JetBrains Mono". In a data tool that is nearly every string: a lane is a category, `no community data` is a state, and the app followed the rule faithfully into **73% of the items shelf, 65% of the tier list and 51% of Home being set in the label face**. The measure of the failure is that mono had stopped meaning anything — when the body face *is* the mono face, a number no longer stands out from the sentence around it. Named, so it is not re-derived: navigation, actions, verdicts, names, states, effect tags, and prose are **never** mono, however small they are.
 
+**The Subject Rule.** The shell's top level is *who you're looking at* — the whole roster, or one god — and the tools are lenses on that subject, not places you go. A god carries its name, its lane and the model-vs-meta verdict in the header of every lens, so "where does Ra rank" and "what items does the model want for Ra" are one click apart instead of unreachable.
+
+It replaces six flat destinations that were never peers: `Builds` was really "a god", and a god could only be examined from that one route. The cost of that shape was measurable — the icon rail plus the 300px god picker took **38% of the first screen** on the busiest route, and it left `god_item_scores` (40 ranked items for each of 87 gods) readable by exactly one surface, the draft board.
+
+Two consequences worth naming. **The whole roster is a first-class subject**, not a lobby: it keeps the divergence board and the page's one claim, and it owns the `h1` there — the roster banner is deliberately not a heading, because the page below it makes the stronger argument. And **the draft board is a roster lens, not a god's**: a draft takes ten gods and only one is your subject, so filing it under one god would misdescribe it.
+
 **The Linkable-State Rule.** Anything the visitor chose that changes what a surface shows — filters, sort, mode, subject — lives in the hash query string, not in `useState`. "The disputed Mid gods in Joust" and "the undervalued tier-3 anti-heal" are the things this app exists to produce, and for a year none of them could be sent to anyone. Defaults stay out of the query, so a bare `#/tiers` keeps meaning what it always meant; navigating *within* a filtered view carries the query along (`keepQuery`), because clearing the filters that produced the card someone just clicked is never what they asked for. Writes are debounced `replaceState` — a search box bound straight to the address bar trips Safari's 100-writes-per-30s limit in about three seconds of held backspace, and a Back button that walks a query backwards one character at a time is worse than no history at all.
 
 **The Seam Rule.** Every surface names at least one other surface it hands off to, in the visitor's terms rather than as a route label. A destination reachable only from the nav rail is a destination most visitors never form an intent to reach — the draft board sat unlinked for a year. A seam carries state where state exists: "Draft with Chaac" keeps the comp already entered rather than replacing it, because a link that silently discards saved work is worse than no link.
@@ -245,8 +251,9 @@ Components should feel **tactile and confident**: presses register physically (a
 - `rounded-md`, `border-line`, `bg-bg2`, `shadow-card`, small (`text-xs`) copy. Flips above/below the trigger and shifts horizontally to avoid clipping; opens on a short hover delay but instantly on keyboard focus (`role="tooltip"`).
 
 ### App chrome (rail + header)
-- The rail is **labelled**, not icon-only: each destination is an icon above a `text-micro` mono uppercase label, matching the mobile tab bar. Icon-only navigation made a first-timer hover-probe seven unlabelled squares while the mobile bar had carried labels all along.
-- Active state is `bg-bg2` + gold glyph, with `aria-current="page"` — never colour alone.
+- Navigation is **two levels, never one**: a subject header naming the roster or the god, then a lens strip beneath it. There is no rail and no second column — the god picker is a dialog, because the subject is named on every screen and only has to be *changed* occasionally. Chrome fell from 38% of the first screen to 22%.
+- The **footer is gone**. Attribution and the "not affiliated with Hi-Rez" line live in Help, where someone looking for them will look; they were holding 43px of every screen forever for something you read once.
+- **One search field**, in the shell, reaching both nouns the product has. There were four "Search gods…" inputs with four different behaviours.
 - The header carries the brand anchor, freshness and actions. **No page title and no count** — see the One-Claim Rule.
 
 ### Navigation (god sidebar)

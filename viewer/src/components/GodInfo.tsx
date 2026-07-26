@@ -1,5 +1,4 @@
 import type { God } from "../types";
-import { godRoleTextClass, damageTextClass } from "../lib/roleAccent";
 
 const STAT_LABELS: Record<string, string> = {
   health: "Health",
@@ -33,24 +32,23 @@ export function GodInfo({ god }: { god: God }) {
 
   return (
     <article className="max-w-3xl">
-      {/* The Info tab renders instead of DetailPanel, so without this the route
-          had no heading of any level at all. */}
-      <header className="border-b border-line pb-4">
-        <h1 className="font-display text-title font-bold leading-none text-ink">{god.name}</h1>
-        <p className="mt-1.5 text-small text-muted">
-          {god.pantheon}
-          {god.role && <> · <span className={godRoleTextClass(god)}>{god.role}</span></>}
-          {god.damage_type && <> · <span className={damageTextClass(god.damage_type)}>{god.damage_type}</span></>}
-          {god.release_date && <> · released {god.release_date}</>}
-        </p>
-        {(god.specializations?.length ?? 0) > 0 && (
-          <ul className="mt-2 flex flex-wrap gap-1">
-            {god.specializations!.map((s) => (
-              <li key={s} className="rounded-sm bg-bg3 px-1.5 py-0.5 text-label text-muted">{s}</li>
-            ))}
-          </ul>
-        )}
-      </header>
+      {/* Name, pantheon, lane and damage type are in the shell's subject
+          header, true of every lens. What's left here is what only the kit
+          cares about. */}
+      {(god.release_date || (god.specializations?.length ?? 0) > 0) && (
+        <header className="flex flex-wrap items-center gap-x-3 gap-y-1.5 border-b border-line pb-3">
+          {(god.specializations?.length ?? 0) > 0 && (
+            <ul className="flex flex-wrap gap-1">
+              {god.specializations!.map((s) => (
+                <li key={s} className="rounded-sm bg-bg3 px-1.5 py-0.5 text-label text-muted">{s}</li>
+              ))}
+            </ul>
+          )}
+          {god.release_date && (
+            <p className="text-label text-faint">Released {god.release_date}</p>
+          )}
+        </header>
+      )}
 
       {stats.length > 0 && (
         <section aria-labelledby="info-stats-h" className="mt-5 border-t border-line pt-4">

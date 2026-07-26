@@ -81,6 +81,19 @@ export function Legend({ onClose }: { onClose: () => void }) {
           <li>Your builds save in <b className="text-ink">your browser</b> (nothing is uploaded). Scores are heuristics — a fan project, not official.</li>
         </ul>
 
+        {/* The footer used to hold this on every screen, forever — 43px of
+            permanent chrome for a disclaimer you read once. It lives here now,
+            where someone actually looking for it will look. */}
+        <p className="mt-4 border-t border-line pt-3 text-small leading-relaxed text-faint">
+          Build data derived from{" "}
+          <a href="https://wiki.smite2.com" target="_blank" rel="noreferrer"
+            className="underline decoration-line-strong underline-offset-2 hover:text-muted">wiki.smite2.com</a>
+          {" "}and{" "}
+          <a href="https://smitebrain.com" target="_blank" rel="noreferrer"
+            className="underline decoration-line-strong underline-offset-2 hover:text-muted">SmiteBrain</a>.
+          Suggested builds are heuristic — not official. A fan project, not affiliated with Hi-Rez.
+        </p>
+
         <button type="button" onClick={onClose} className="press mt-4 rounded-md bg-gold px-4 py-1.5 text-body font-medium text-bg0">Got it</button>
       </div>
     </div>

@@ -16,11 +16,10 @@
  * systematic pattern is visible rather than asserted.
  * FORM: Lane Board, position 3 of the ordered list, seed key c96ae713.
  */
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import type { God, IndexData, PatchPeriod } from "../types";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { usePins } from "../lib/pins";
-import { filterGods } from "../lib/godFilters";
 import { iconSlug } from "../lib/builds";
 import { godLane, laneTextClass } from "../lib/roleAccent";
 import { relativeDate } from "../lib/relativeDate";
@@ -69,130 +68,6 @@ function GodIcon({ name, className }: { name: string; className: string }) {
   );
 }
 
-/* ── Search ──────────────────────────────────────────────────────────────
- * A combobox, not a text field with a list under it. The results overlay the
- * page instead of displacing it, and the keyboard can reach every one of them.
- */
-function HomeSearch({ gods }: { gods: God[] }) {
-  const [q, setQ] = useState("");
-  const [active, setActive] = useState(0);
-  const [open, setOpen] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const results = useMemo(() => (q.trim() ? filterGods(gods, { q }).slice(0, 6) : []), [gods, q]);
-  const expanded = open && q.trim().length > 0;
-
-  // A shrinking result list must never leave the cursor past its end.
-  useEffect(() => { setActive(0); }, [q]);
-
-  const go = (name: string) => {
-    setQ("");
-    setOpen(false);
-    navigate(toHash.god(name));
-  };
-
-  // Home/End deliberately aren't bound: in an editable combobox those belong to
-  // the text caret, and stealing them makes the field feel broken.
-  const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") { setQ(""); setOpen(false); return; }
-    if (!expanded || results.length === 0) return;
-    if (e.key === "ArrowDown") { e.preventDefault(); setActive((i) => (i + 1) % results.length); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); setActive((i) => (i - 1 + results.length) % results.length); }
-  };
-
-  // Dismiss when focus leaves the whole combobox — otherwise the overlay stays
-  // parked over the board after a click elsewhere.
-  const onBlur = (e: React.FocusEvent<HTMLDivElement>) => {
-    if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen(false);
-  };
-
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (results[active]) go(results[active].name);
-  };
-
-  return (
-    <div data-testid="home-search" onBlur={onBlur} className="relative w-full sm:max-w-sm">
-      <form
-        onSubmit={submit}
-        role="search"
-        className="flex items-center gap-2.5 rounded-md border border-line bg-bg2 px-3 py-2 transition-colors duration-[180ms] ease-standard focus-within:border-blue"
-      >
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="shrink-0 text-muted">
-          <circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" />
-        </svg>
-        <input
-          ref={inputRef}
-          value={q}
-          onChange={(e) => { setQ(e.target.value); setOpen(true); }}
-          onFocus={() => setOpen(true)}
-          onKeyDown={onKeyDown}
-          placeholder="Search gods…"
-          aria-label="Search gods"
-          role="combobox"
-          aria-expanded={expanded}
-          aria-controls="home-search-results"
-          aria-autocomplete="list"
-          aria-activedescendant={expanded && results[active] ? `home-search-opt-${active}` : undefined}
-          autoComplete="off"
-          className="w-full bg-transparent py-0.5 text-body text-ink placeholder:text-muted focus:outline-none"
-        />
-        {q && (
-          <button
-            type="button"
-            onClick={() => { setQ(""); inputRef.current?.focus(); }}
-            aria-label="Clear search"
-            className="press shrink-0 rounded-sm px-1 text-small text-faint hover:text-ink"
-          >
-            ✕
-          </button>
-        )}
-      </form>
-
-      {/* Announced separately so a screen reader hears the count without the
-          list stealing focus. */}
-      <p aria-live="polite" className="sr-only">
-        {expanded ? `${results.length} god${results.length === 1 ? "" : "s"} match` : ""}
-      </p>
-
-      {expanded && (
-        <ul
-          id="home-search-results"
-          role="listbox"
-          aria-label="Matching gods"
-          className="absolute z-20 mt-1.5 flex w-full flex-col gap-0.5 rounded-md border border-line-strong bg-bg2 p-1.5 shadow-card"
-        >
-          {results.length === 0 ? (
-            <li className="px-2.5 py-2 text-small text-muted">
-              No god matches “{q.trim()}”. Check the spelling, or browse the lanes below.
-            </li>
-          ) : results.map((g, i) => (
-            <li key={g.name} role="presentation">
-              <button
-                type="button"
-                id={`home-search-opt-${i}`}
-                role="option"
-                aria-selected={i === active}
-                onClick={() => go(g.name)}
-                onMouseEnter={() => setActive(i)}
-                tabIndex={-1}
-                className={`press flex w-full items-center gap-2.5 rounded-sm px-2.5 py-2 text-left transition-colors duration-[150ms] ease-standard ${i === active ? "bg-bg3" : ""}`}
-              >
-                <GodIcon name={g.name} className="h-7 w-7" />
-                <span className="truncate font-display text-body font-semibold text-ink">{g.name}</span>
-                {g.role && (
-                  <span className={`ml-auto shrink-0 text-label ${laneTextClass(godLane(g.role))}`}>
-                    {godLane(g.role) ?? g.role}
-                  </span>
-                )}
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
-
 /* ── The claim ───────────────────────────────────────────────────────────
  * The page's one argument, with every number in it computed from the index
  * rather than written down. When there's no tier list to compare against, the
@@ -226,7 +101,8 @@ function StateBlock({ data, disagreements, ranked, unranked }: {
         </div>
 
         <div className="flex shrink-0 flex-col gap-3 lg:items-end">
-          <HomeSearch gods={data.gods} />
+          {/* Search lives in the shell now — one field, reaching gods and
+              items, instead of four fields with four behaviours. */}
           <ul className="flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint lg:justify-end">
             <li>{data.gods.length} gods</li>
             {comparable && <li className="before:mr-3 before:content-['·']">{ranked} ranked</li>}
