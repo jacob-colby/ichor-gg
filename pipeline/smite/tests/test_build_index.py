@@ -211,3 +211,107 @@ def test_build_index_emits_capped_god_item_scores():
     for god, table in scores.items():
         assert 0 < len(table) <= 40, f"{god} has {len(table)} entries"
         assert all(isinstance(v, float) for v in table.values())
+
+
+# --- popular_items (Task P2: most-picked community items) -----------------
+
+def test_popular_items_aggregates_across_slots_and_alternates():
+    from smite import build_index
+    build_entry = {
+        "source": "community",
+        "slot_order": [
+            {"name": "A", "pick_rate": 0.5, "win_rate": 0.5,
+             "alternates": [{"name": "B", "pick_rate": 0.2, "win_rate": 0.4}]},
+            {"name": "C", "pick_rate": 0.3, "win_rate": 0.6},
+        ],
+    }
+    result = build_index.popular_items(build_entry)
+    assert {i["name"] for i in result} == {"A", "B", "C"}
+    by_name = {i["name"]: i for i in result}
+    assert by_name["B"] == {"name": "B", "pick_rate": 0.2, "win_rate": 0.4}
+
+
+def test_popular_items_dedupes_by_name_keeping_highest_pick_rate():
+    from smite import build_index
+    # "A" is picked outright in one slot at a low rate, but shows up as a
+    # higher-rate alternate in another slot — the alternate sighting wins.
+    build_entry = {
+        "source": "community",
+        "slot_order": [
+            {"name": "A", "pick_rate": 0.1, "win_rate": 0.50},
+            {"name": "C", "pick_rate": 0.3, "win_rate": 0.6,
+             "alternates": [{"name": "A", "pick_rate": 0.4, "win_rate": 0.55}]},
+        ],
+    }
+    result = build_index.popular_items(build_entry)
+    by_name = {i["name"]: i for i in result}
+    assert by_name["A"] == {"name": "A", "pick_rate": 0.4, "win_rate": 0.55}
+
+
+def test_popular_items_sorts_by_pick_rate_desc_then_name_asc():
+    from smite import build_index
+    build_entry = {
+        "source": "community",
+        "slot_order": [
+            {"name": "Zeta", "pick_rate": 0.3, "win_rate": 0.5},
+            {"name": "Alpha", "pick_rate": 0.3, "win_rate": 0.5},
+            {"name": "Highest", "pick_rate": 0.9, "win_rate": 0.5},
+        ],
+    }
+    result = build_index.popular_items(build_entry)
+    assert [i["name"] for i in result] == ["Highest", "Alpha", "Zeta"]
+
+
+def test_popular_items_is_deterministic_regardless_of_slot_order():
+    from smite import build_index
+    slots_a = [
+        {"name": "A", "pick_rate": 0.3, "win_rate": 0.5},
+        {"name": "B", "pick_rate": 0.3, "win_rate": 0.5},
+    ]
+    slots_b = list(reversed(slots_a))
+    result_a = build_index.popular_items({"source": "community", "slot_order": slots_a})
+    result_b = build_index.popular_items({"source": "community", "slot_order": slots_b})
+    assert result_a == result_b
+
+
+def test_popular_items_empty_when_no_slot_order():
+    from smite import build_index
+    assert build_index.popular_items({"source": "community"}) == []
+    assert build_index.popular_items({"source": "community", "slot_order": []}) == []
+    assert build_index.popular_items({}) == []
+
+
+def test_build_index_attaches_popular_items_to_community_builds():
+    from smite import build_index
+    from pathlib import Path
+    r = build_index.build_index(Path(__file__).resolve().parents[3])
+    agni = next(n for n in r["builds"] if n.get("god") == "Agni" and n.get("mode") == "Conquest")
+    community = next(b for b in agni["builds"] if b.get("source") == "community")
+    assert "popular_items" in community
+    items = community["popular_items"]
+    assert items, "expected Agni's community popular items to be non-empty"
+    rates = [i["pick_rate"] for i in items]
+    assert rates == sorted(rates, reverse=True)
+    assert {"name", "pick_rate", "win_rate"} <= set(items[0])
+
+
+def test_build_index_non_community_builds_get_no_popular_items(tmp_path):
+    from smite import build_index, notes
+    repo = _make_repo(tmp_path)
+    notes.write_note(repo / "data" / "builds" / "Chiron-Conquest.md",
+                      {"type": "smite-build", "god": "Chiron", "mode": "Conquest",
+                       "builds": [{"source": "ours", "slot_order": ["Item A"]}]}, "")
+    index = build_index.build_index(repo)
+    b = index["builds"][0]["builds"][0]
+    assert "popular_items" not in b
+
+
+def test_build_index_community_build_with_no_slots_gets_empty_popular_items(tmp_path):
+    from smite import build_index, notes
+    repo = _make_repo(tmp_path)
+    notes.write_note(repo / "data" / "builds" / "Chiron-Conquest.md",
+                      {"type": "smite-build", "god": "Chiron", "mode": "Conquest",
+                       "builds": [{"source": "community", "slot_order": []}]}, "")
+    index = build_index.build_index(repo)
+    b = index["builds"][0]["builds"][0]
+    assert b["popular_items"] == []

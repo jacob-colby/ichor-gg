@@ -25,6 +25,42 @@ def _enrich_gods(gods, weights):
     return gods
 
 
+def popular_items(build_entry: dict) -> list:
+    """Aggregate one community build entry's `slot_order` (and each slot's
+    `alternates`) into a flat "what does this god's playerbase actually buy"
+    list of `{name, pick_rate, win_rate}` — items, not an ordered build. An
+    item seen more than once (as a slot pick here, an alternate there) is
+    deduped, keeping the sighting with the highest pick_rate. Sorted by
+    pick_rate descending, then name ascending so ties are deterministic.
+    Pure function over a single dict — no disk access — so it's unit-testable
+    on its own; see test_build_index.py."""
+    best: dict = {}
+    for slot in build_entry.get("slot_order") or []:
+        if not isinstance(slot, dict):
+            continue
+        for candidate in [slot, *(slot.get("alternates") or [])]:
+            name = candidate.get("name")
+            rate = candidate.get("pick_rate")
+            if not name or rate is None:
+                continue
+            if name not in best or rate > best[name]["pick_rate"]:
+                best[name] = {"name": name, "pick_rate": rate,
+                              "win_rate": candidate.get("win_rate")}
+    return sorted(best.values(), key=lambda i: (-i["pick_rate"], i["name"]))
+
+
+def _attach_popular_items(builds):
+    """Attach `popular_items` (see above) to every community build entry so
+    the viewer's god page can show the playerbase's most-picked items without
+    re-aggregating `slot_order` client-side. Non-community entries (and gods
+    with no community data at all) get no key — never a fabricated list."""
+    for note in builds:
+        for b in note.get("builds", []):
+            if b.get("source") == "community":
+                b["popular_items"] = popular_items(b)
+    return builds
+
+
 def _enrich_items(items, tags):
     """Attach god-agnostic effect_tags + efficiency_tier to each item so the
     viewer's tooltips can explain an item without recomputing anything."""
@@ -75,6 +111,7 @@ def build_index(repo_root: Path) -> dict:
     gods = _all(gods_dir)
     _enrich_gods(gods, weights)
     _attach_item_meta(items, builds)
+    _attach_popular_items(builds)
     # Reuses the same efficiency model _enrich_items already ran (to tag
     # efficiency_tier) so the tier list's "ours" item score is the identical
     # continuous signal, not a second independent fit.
