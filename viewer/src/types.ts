@@ -181,9 +181,18 @@ export interface ThreatModel {
   lockdown: number;
   crit: number;
   tanks: number;
-  enemyCount: number; // recognised enemy-team size (Conquest 5, Joust 3, ...)
+  enemyCount: number; // enemies actually entered so far
+  /** Slots on the enemy team for this mode (Conquest 5, Joust 3) — the honest
+   * denominator. Dividing by `enemyCount` made one known healer a 100% threat
+   * and let a 20%-complete draft drive a maximal overlay. */
+  rosterSize: number;
   allyCovers: Record<string, boolean>; // effect_tag -> covered by an ally
   allyAllPhysical: boolean;
+  /** Allies entered so far, and how many of them are physical. Scaled against
+   * `rosterSize` for the same reason enemy threats are: one entered ally is
+   * not evidence that "my team is all physical". */
+  allyCount: number;
+  allyPhysical: number;
 }
 
 export interface DraftConfig {

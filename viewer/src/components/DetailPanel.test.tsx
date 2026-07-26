@@ -1,224 +1,383 @@
 import React from "react";
 import { describe, it, expect, beforeEach } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, within } from "@testing-library/react";
 import { DetailPanel } from "./DetailPanel";
 import { saveMine } from "../lib/mineStore";
-import type { BuildNote, Item } from "../types";
+import type { BuildNote, GodTierEntry, Item } from "../types";
 
-const chironBuild: BuildNote = {
-  type: "smite-build",
-  god: "Chiron",
-  mode: "Conquest",
-  builds: [
-    {
-      source: "community",
-      aspect: "Aspect of the Heroic Tutor",
-      aspect_pick_rate: 0.09,
-      aspect_win_rate: 0.45,
-      slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.49 }],
-      source_url: "https://smitebrain.com/gods/chiron/",
-    },
-  ],
+/** Full-shaped Item fixture — the ledger reads cost for its gold spine, and
+ * the expanded card reads tier/stats/passive/effect_tags. */
+function itemFx(name: string, cost: number, extra: Partial<Item> = {}): Item {
+  return {
+    type: "item", name, tier: 3, cost, stats: { "Physical Power": "40" }, passive: "",
+    builds_from: [], builds_into: [], source_url: "", last_verified: "",
+    effect_tags: [], efficiency_tier: null, ...extra,
+  } as Item;
+}
+
+const panel = (props: Partial<React.ComponentProps<typeof DetailPanel>> = {}) => (
+  <DetailPanel god="Chiron" godData={undefined} items={[]} builds={[]}
+    mode="Conquest" onModeChange={() => {}} {...props} />
+);
+
+/** The ledger row for an item, as a screen-reader would find it. */
+const row = (name: string) => screen.getByRole("button", { name: new RegExp(`^${name}[,.]`, "i") });
+
+const chironCommunity: BuildNote = {
+  type: "smite-build", god: "Chiron", mode: "Conquest",
+  builds: [{
+    source: "community", aspect: "Aspect of the Heroic Tutor",
+    aspect_pick_rate: 0.09, aspect_win_rate: 0.45,
+    slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.49 }],
+    source_url: "https://smitebrain.com/gods/chiron/",
+  }],
 };
 
-describe("DetailPanel", () => {
+describe("DetailPanel — what opens by default", () => {
   beforeEach(() => localStorage.clear());
 
-  it("renders one tab per available source (community from note, mine from store)", () => {
-    saveMine("Chiron", "Conquest", { name: "mine", slot_order: ["Transcendence"] });
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByRole("tab", { name: /community/i })).toBeInTheDocument();
-    expect(screen.getByRole("tab", { name: /mine/i })).toBeInTheDocument();
-    expect(screen.queryByRole("tab", { name: /^pro$/i })).not.toBeInTheDocument();
+  it("opens on the model's build, not the community's", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [{ name: "MetaItem", pick_rate: 0.6, win_rate: 0.5 }], source_url: "u" },
+      { source: "suggested", archetype: "core", slot_order: ["ModelItem"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(panel({ builds: builds as never }));
+    // The model's item is on the ledger; the community's is the comparison,
+    // not the default view.
+    expect(screen.getByText("ModelItem")).toBeInTheDocument();
+    expect(screen.getByText(/buy order/i)).toBeInTheDocument();
   });
 
-  it("shows the community tab's slot order with pick/win badges by default", () => {
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
+  it("offers the model's flavors as a pressed-state group, with community not among them", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u" },
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
+      { source: "suggested", archetype: "crit", slot_order: ["B"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(panel({ builds: builds as never }));
+    const group = within(screen.getByRole("group", { name: /build flavor/i }));
+    expect(group.getByRole("button", { name: /core/i })).toHaveAttribute("aria-pressed", "true");
+    expect(group.getByRole("button", { name: /crit/i })).toHaveAttribute("aria-pressed", "false");
+    expect(group.queryByRole("button", { name: /community/i })).not.toBeInTheDocument();
+    // No broken tablist left behind.
+    expect(screen.queryAllByRole("tab")).toHaveLength(0);
+  });
+
+  it("switches build when another flavor is pressed", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
+      { source: "suggested", archetype: "crit", slot_order: ["B"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(panel({ builds: builds as never }));
+    fireEvent.click(screen.getByRole("button", { name: /crit/i }));
+    expect(screen.getByText("B")).toBeInTheDocument();
+    expect(screen.queryByText("A")).not.toBeInTheDocument();
+  });
+
+  it("falls back to the community build when the god has no model build at all", () => {
+    render(panel({ builds: [chironCommunity] }));
     expect(screen.getByText("Transcendence")).toBeInTheDocument();
-    expect(screen.getByText(/60%.*49%/)).toBeInTheDocument();
+    expect(screen.getByText(/slot order/i)).toBeInTheDocument();
+    expect(screen.queryByRole("group", { name: /build flavor/i })).not.toBeInTheDocument();
   });
 
-  it("hides the swap column for the community tab (no situational_swaps)", () => {
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
+  it("explains itself when the god has no build note for this mode yet", () => {
+    render(panel({ god: "SomeNewGod", builds: [] }));
+    expect(screen.getByRole("heading", { level: 1, name: "SomeNewGod" })).toBeInTheDocument();
+    expect(screen.getByText(/no build data for SomeNewGod in this index yet/i)).toBeInTheDocument();
+  });
+
+  it("gives the route a level-1 heading", () => {
+    render(panel({ builds: [chironCommunity] }));
+    expect(screen.getByRole("heading", { level: 1, name: "Chiron" })).toBeInTheDocument();
+  });
+});
+
+describe("DetailPanel — the model's verdict", () => {
+  beforeEach(() => localStorage.clear());
+
+  const tierEntry: GodTierEntry = {
+    name: "Chiron", ours: 0.47, community: 0.58, tier_ours: "C", tier_community: "A",
+  };
+
+  it("states both scores, both tiers, and which way they disagree", () => {
+    render(panel({ builds: [chironCommunity], tierEntry }));
+    const verdict = within(screen.getByTestId("god-verdict"));
+    expect(verdict.getByText("0.47")).toBeInTheDocument();
+    expect(verdict.getByText("0.58")).toBeInTheDocument();
+    expect(verdict.getByText(/meta rates higher/i)).toBeInTheDocument();
+    expect(verdict.getByText(/-0\.11/)).toBeInTheDocument();
+  });
+
+  it("says so the other way when the model rates a god above the meta", () => {
+    render(panel({ builds: [chironCommunity], tierEntry: { ...tierEntry, ours: 0.62 } }));
+    expect(within(screen.getByTestId("god-verdict")).getByText(/model rates higher/i)).toBeInTheDocument();
+  });
+
+  it("names an unranked god as unranked rather than leaving a blank", () => {
+    render(panel({ builds: [chironCommunity], tierEntry: { ...tierEntry, community: null, tier_community: null } }));
+    const verdict = within(screen.getByTestId("god-verdict"));
+    expect(verdict.getByText(/unranked/i)).toBeInTheDocument();
+    expect(verdict.getByText(/no community rating for this god yet/i)).toBeInTheDocument();
+  });
+
+  it("omits the verdict entirely when there is no tier entry", () => {
+    render(panel({ builds: [chironCommunity] }));
+    expect(screen.queryByTestId("god-verdict")).not.toBeInTheDocument();
+  });
+});
+
+describe("DetailPanel — the buy ledger", () => {
+  beforeEach(() => localStorage.clear());
+
+  const items = [itemFx("A", 2650), itemFx("B", 2350), itemFx("C", 3000)];
+  const withMeta = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+    { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
+      slot_order: [{ name: "A", pick_rate: 0.5, win_rate: 0.6 }, { name: "C", pick_rate: 0.3, win_rate: 0.5 }] },
+    { source: "suggested", archetype: "core", slot_order: ["A", "B"], situational_swaps: [], rationale: "",
+      slot_scores: {
+        A: { total: 0.59, efficiency: 0.41, win: 0.6, pick: 0.51, fit: 1 },
+        B: { total: 0.48, efficiency: 0.5, win: 0.5, pick: 0, fit: 0.9 },
+      } },
+  ] }];
+
+  it("puts cumulative gold on every row and sums the core", () => {
+    render(panel({ items, builds: withMeta as never }));
+    expect(screen.getByText("2,650g")).toBeInTheDocument();
+    expect(screen.getByText("5,000g")).toBeInTheDocument();   // 2650 + 2350
+    // "core", not "total" — the starter is bought first and isn't on this spine.
+    expect(screen.getByText(/5,000g core/)).toBeInTheDocument();
+  });
+
+  it("reports how much of the build the meta agrees with", () => {
+    render(panel({ items, builds: withMeta as never }));
+    expect(screen.getByText(/shares 1 of 2/i)).toBeInTheDocument();
+  });
+
+  it("shows the composite score and all four axes on the row, without a hover", () => {
+    render(panel({ items, builds: withMeta as never }));
+    const ledgerRow = row("A");
+    expect(ledgerRow).toHaveTextContent("0.59");    // total
+    expect(ledgerRow).toHaveTextContent("value");
+    expect(ledgerRow).toHaveTextContent("win");
+    expect(ledgerRow).toHaveTextContent("pick");
+    expect(ledgerRow).toHaveTextContent("fit");
+  });
+
+  it("names both sources and the gap in the row's accessible name", () => {
+    render(panel({ items, builds: withMeta as never }));
+    expect(row("A")).toHaveAccessibleName(/model score 0\.59/i);
+    expect(row("A")).toHaveAccessibleName(/at 2,650g spent/i);
+    expect(row("A")).toHaveAccessibleName(/community buys it 1st/i);
+    expect(row("B")).toHaveAccessibleName(/community does not buy it/i);
+  });
+
+  it("marks an item the meta doesn't buy", () => {
+    render(panel({ items, builds: withMeta as never }));
+    expect(row("B")).toHaveTextContent(/meta doesn.t buy this/i);
+    expect(row("A")).not.toHaveTextContent(/meta doesn.t buy this/i);
+    expect(screen.getAllByText("off-meta")).toHaveLength(1);
+  });
+
+  it("expands a row into full item detail on click, on every breakpoint", () => {
+    const rich = [itemFx("A", 2650, { passive: "Deals bonus damage.", tier: 4 }), itemFx("B", 2350)];
+    render(panel({ items: rich, builds: withMeta as never }));
+    expect(screen.queryByText(/why this item/i)).not.toBeInTheDocument();
+
+    fireEvent.click(row("A"));
+    expect(screen.getByText(/why this item/i)).toBeInTheDocument();
+    expect(screen.getByText(/Deals bonus damage\./)).toBeInTheDocument();
+    expect(screen.getByText("Physical Power")).toBeInTheDocument();
+    const cost = screen.getByText("2650g");
+    expect(cost).toHaveClass("text-gold");
+
+    fireEvent.click(row("A"));
+    expect(screen.queryByText(/why this item/i)).not.toBeInTheDocument();
+  });
+
+  it("headlines the composite score inside the breakdown", () => {
+    render(panel({ items, builds: withMeta as never }));
+    fireEvent.click(row("A"));
+    const why = screen.getByText(/why this item/i).closest("div")!.parentElement!;
+    expect(why).toHaveTextContent("0.59");
+  });
+
+  it("says the community skips the item rather than implying a measured zero", () => {
+    render(panel({ items, builds: withMeta as never }));
+    fireEvent.click(row("B"));
+    expect(screen.getByText(/community build doesn.t include this item/i)).toBeInTheDocument();
+  });
+
+  it("shows what the community bought instead, in its own order", () => {
+    render(panel({ items, builds: withMeta as never }));
+    expect(screen.getByText(/what the meta buys instead/i)).toBeInTheDocument();
+    // C is in the community order but not the model's build.
+    const link = screen.getByRole("link", { name: /^C, bought 2 by the community/i });
+    expect(link).toHaveAttribute("href", expect.stringContaining("/items/C"));
+  });
+
+  it("says so plainly when the model buys everything the community does", () => {
+    const sameItems = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
+        slot_order: [{ name: "A", pick_rate: 0.5, win_rate: 0.6 }] },
+      { source: "suggested", archetype: "core", slot_order: ["A", "B"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(panel({ items, builds: sameItems as never }));
+    expect(screen.getByText(/nothing — the model buys every item the community does/i)).toBeInTheDocument();
+  });
+
+  it("does not narrate a player's own build as the model's", () => {
+    saveMine("Chiron", "Conquest", { name: "mine", slot_order: ["A", "C"] });
+    render(panel({ items, builds: withMeta as never }));
+    fireEvent.click(within(screen.getByRole("group", { name: /build flavor/i })).getByRole("button", { name: /mine/i }));
+    expect(screen.queryByText(/model buys/i)).not.toBeInTheDocument();
+    expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
+    expect(screen.queryByText(/what the meta buys instead/i)).not.toBeInTheDocument();
+  });
+
+  it("does not print win/pick as measurements when there is no community data", () => {
+    const noCommunity = [{ type: "smite-build", god: "Chiron", mode: "Joust", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "",
+        slot_scores: { A: { total: 0.6, efficiency: 0.5, win: 0.5, pick: 0, fit: 0.8 } } },
+    ] }];
+    render(panel({ items, builds: noCommunity as never, mode: "Joust" }));
+    expect(screen.getByText(/win\/pick not measured here/i)).toBeInTheDocument();
+    fireEvent.click(row("A"));
+    expect(screen.getByText(/win and pick aren.t measured here/i)).toBeInTheDocument();
+  });
+
+  it("omits the breakdown for a build with no slot_scores", () => {
+    const noScores = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(panel({ items, builds: noScores as never }));
+    fireEvent.click(row("A"));
+    expect(screen.queryByText(/why this item/i)).not.toBeInTheDocument();
+  });
+
+  it("says when there is no community build to compare against", () => {
+    const noCommunity = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(panel({ items, builds: noCommunity as never }));
+    expect(screen.getByText(/no community build for Chiron in Conquest/i)).toBeInTheDocument();
+    expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
+  });
+
+  it("does not compare a fun build against the meta", () => {
+    const funBuild = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [{ name: "A", pick_rate: 0.6, win_rate: 0.5 }], source_url: "u" },
+      { source: "suggested", archetype: "fun-crit", fun: true, slot_order: ["B"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(panel({ items, builds: funBuild as never }));
+    fireEvent.click(screen.getByRole("button", { name: /fun-crit/i }));
+    expect(screen.getByText(/for fun/i)).toBeInTheDocument();
+    expect(screen.getByText(/off-class/i)).toBeInTheDocument();
+    expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
+  });
+
+  it("shows the community's per-slot alternates when the community build is what's rendered", () => {
+    const alts = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
+        slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.5,
+          alternates: [{ name: "Jotunn's Revenge", pick_rate: 0.11, win_rate: 0.71 }] }] },
+    ] }];
+    render(panel({ builds: alts as never }));
+    expect(screen.getByText(/or Jotunn's Revenge/i)).toBeInTheDocument();
+  });
+
+  it("shows pick/win rates on a community-rendered row", () => {
+    render(panel({ builds: [chironCommunity] }));
+    expect(screen.getByText(/60%\s*\/\s*49%/)).toBeInTheDocument();
+  });
+
+  it("falls back to an initial when an item icon fails twice, never a hole", () => {
+    render(panel({ items, builds: withMeta as never }));
+    const img = row("A").querySelector('img[alt=""]')!;
+    fireEvent.error(img);                                       // retry
+    fireEvent.error(row("A").querySelector('img[alt=""]')!);     // retry failed
+    expect(row("A").querySelector('img[alt=""]')).toBeNull();
+    expect(row("A")).toHaveTextContent("A");
+  });
+});
+
+describe("DetailPanel — situational swaps", () => {
+  beforeEach(() => localStorage.clear());
+
+  const swapItems = [itemFx("Base A", 2500), itemFx("Base B", 2600), itemFx("Base C", 3000),
+    itemFx("Cheap Swap", 1800), itemFx("Pricey Swap", 4200), itemFx("Equal Swap", 2950)];
+  const swapBuild = (swap_item: string, flex_slots?: string[]) => ([{
+    type: "smite-build", god: "Chiron", mode: "Conquest", builds: [{
+      source: "suggested", archetype: "core", slot_order: ["Base A", "Base B", "Base C"],
+      ...(flex_slots ? { flex_slots } : {}),
+      situational_swaps: [{ vs_tag: "heavy_cc", swap: "x", swap_item }], rationale: "",
+    }],
+  }]);
+
+  it("reflows the build when a matchup is selected", () => {
+    render(panel({ items: swapItems, builds: swapBuild("Cheap Swap") as never }));
+    fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
+    expect(screen.getByText("Cheap Swap")).toBeInTheDocument();
+    expect(screen.getByText("Base C")).toHaveClass("line-through");
+  });
+
+  it("removes the flex slot rather than the last when one is marked", () => {
+    render(panel({ items: swapItems, builds: swapBuild("Cheap Swap", ["Base A"]) as never }));
+    fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
+    expect(screen.getByText("Base A")).toHaveClass("line-through");
+    expect(screen.getByText("Base C")).not.toHaveClass("line-through");
+  });
+
+  it("keeps a swapped-out slot's gold out of the running total", () => {
+    render(panel({ items: swapItems, builds: swapBuild("Cheap Swap") as never }));
+    // Base A 2500 + Base B 2600 + Base C 3000 = 8100 before the swap.
+    expect(screen.getByText(/8,100g core/)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
+    // Base C's 3000 is never spent; Cheap Swap's 1800 is.
+    expect(screen.getByText(/6,900g core/)).toBeInTheDocument();
+  });
+
+  it("names what a swap comes in for, using applySwap's own target", () => {
+    render(panel({ items: swapItems, builds: swapBuild("Cheap Swap") as never }));
+    expect(screen.getByText(/in for base c/i)).toBeInTheDocument();
+  });
+
+  it("notes an order shift when the swap is materially cheaper, and the other way when dearer", () => {
+    const { unmount } = render(panel({ items: swapItems, builds: swapBuild("Cheap Swap") as never }));
+    expect(screen.getByText(/earlier/i)).toBeInTheDocument();
+    unmount();
+    render(panel({ items: swapItems, builds: swapBuild("Pricey Swap") as never }));
+    expect(screen.getByText(/later/i)).toBeInTheDocument();
+  });
+
+  it("prints nothing where nothing shifts", () => {
+    render(panel({ items: swapItems, builds: swapBuild("Equal Swap") as never }));
+    expect(screen.getByText(/in for base c/i)).toBeInTheDocument();
+    expect(screen.queryByText(/earlier/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/later/i)).not.toBeInTheDocument();
+  });
+
+  it("explains a swap that has no single item to recommend", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [{
+      source: "suggested", archetype: "core", slot_order: ["Base A"],
+      situational_swaps: [{ vs_tag: "sustain", swap: "none — anti-heal" }], rationale: "",
+    }] }];
+    render(panel({ items: swapItems, builds: builds as never }));
+    expect(screen.getByText(/no single item covers this/i)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /sustain/i })).toBeDisabled();
+  });
+
+  it("hides the situational column for a community build", () => {
+    render(panel({ builds: [chironCommunity] }));
     expect(screen.queryByText(/situational/i)).not.toBeInTheDocument();
   });
+});
 
-  it("switching to a stored mine tab shows plain item names with no pick/win badge", () => {
-    saveMine("Chiron", "Conquest", { name: "mine", slot_order: ["Transcendence", "Devourer's Gauntlet"] });
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[chironBuild]} mode="Conquest" onModeChange={() => {}} />);
-    fireEvent.click(screen.getByRole("tab", { name: /mine/i }));
-    expect(screen.getByText("Devourer's Gauntlet")).toBeInTheDocument();
-    expect(screen.queryByText(/%.*%/)).not.toBeInTheDocument();
-  });
-
-  it("shows a fallback message when the god has no build note for this mode yet", () => {
-    render(<DetailPanel god="SomeNewGod" godData={undefined} items={[]} builds={[]} mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByText(/no build data yet/i)).toBeInTheDocument();
-  });
-
-  it("reflows the build when a matchup chip is clicked", () => {
-    const builds = [{
-      type: "smite-build", god: "Chiron", mode: "Conquest",
-      builds: [{
-        source: "suggested", archetype: "core",
-        slot_order: ["A", "B", "C"],
-        situational_swaps: [{ vs_tag: "heavy_cc", swap: "Cloak — cc", swap_item: "Cloak" }],
-        rationale: "x",
-      }],
-    }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any} mode="Conquest" onModeChange={() => {}} />);
-    fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
-    expect(screen.getByText("Cloak")).toBeInTheDocument();      // added item shows
-    expect(screen.getByText("C")).toHaveClass("line-through");  // removed slot struck
-  });
-
-  it("renders the rationale for a suggested build entry", () => {
-    const suggestedBuild: BuildNote = {
-      type: "smite-build",
-      god: "Chiron",
-      mode: "Conquest",
-      builds: [
-        {
-          source: "suggested",
-          archetype: "core",
-          slot_order: ["Deathbringer"],
-          situational_swaps: [{ vs_tag: "sustain", swap: "none — anti-heal" }],
-          rationale: "Top weighted-score core.",
-        },
-      ],
-    };
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[suggestedBuild]} mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByRole("tab", { name: /core/i })).toBeInTheDocument();
-    expect(screen.getByText(/Top weighted-score core/)).toBeInTheDocument();
-  });
-
-  // Regression coverage for a real bug found in manual browser verification
-  // (Task 7): the slot-order row was keyed by index alone (`key={i}`), so
-  // switching tabs — which can put a *different* item at the same slot
-  // position — let React reuse the same <img> DOM node across tabs. The
-  // onError handler sets `visibility: hidden` imperatively on that node with
-  // nothing to undo it, so if the item that used to sit at that index had a
-  // broken icon, a *working* icon that later lands at the same index stayed
-  // invisible even though it loaded fine. Keying by `${name}-${i}` forces a
-  // fresh <img> node whenever the item at that position changes.
-  it("does not carry a stale hidden icon over to a different item that lands at the same slot index on tab switch", () => {
-    const build: BuildNote = {
-      type: "smite-build",
-      god: "Chiron",
-      mode: "Conquest",
-      builds: [
-        {
-          source: "community",
-          aspect: "Aspect of the Heroic Tutor",
-          aspect_pick_rate: 0.09,
-          aspect_win_rate: 0.45,
-          slot_order: [
-            { name: "Transcendence", pick_rate: 0.6, win_rate: 0.49 },
-            { name: "BrokenIcon", pick_rate: 0.1, win_rate: 0.2 },
-          ],
-          source_url: "https://smitebrain.com/gods/chiron/",
-        },
-      ],
-    };
-    saveMine("Chiron", "Conquest", { name: "mine", slot_order: ["Transcendence", "Deathbringer"] });
-
-    const { container } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[build]} mode="Conquest" onModeChange={() => {}} />);
-
-    // Simulate the second slot's icon (BrokenIcon) failing to load on the
-    // community tab. Scope to slot icons (alt="") so the god headshot in the
-    // header (alt={god}) doesn't offset the indices. The first error retries
-    // once (cache-bust); the retry also failing is what hides the icon.
-    const communityImages = container.querySelectorAll('img[alt=""]');
-    fireEvent.error(communityImages[1]); // retry
-    fireEvent.error(communityImages[1]); // retry failed -> hide
-    expect(communityImages[1]).toHaveStyle({ visibility: "hidden" });
-
-    // Switch to the "mine" tab, where the same slot index (1) now holds
-    // Deathbringer instead.
-    fireEvent.click(screen.getByRole("tab", { name: /mine/i }));
-
-    const mineImages = container.querySelectorAll('img[alt=""]');
-    expect(mineImages[1]).toHaveAttribute("src", expect.stringContaining("deathbringer"));
-    // Must be a fresh node with no leftover inline visibility — not the
-    // reused, still-hidden node from the community tab.
-    expect((mineImages[1] as HTMLElement).style.visibility).not.toBe("hidden");
-  });
-
-  // Regression coverage for a real bug: the "Reload data" button re-fetches
-  // index.json, producing a brand-new object graph for the *same* god. If
-  // activeIndex isn't reset on that change, two silent-bug modes are possible:
-  //   1. entries shrink -> activeIndex points past the end -> no tab shows
-  //      aria-selected, but content silently falls back to entries[0].
-  //   2. entries reorder (same count) -> activeIndex is still "valid" but
-  //      now names a different entry -> the tab bar looks unchanged while
-  //      the displayed build silently switches to something else.
-  // Both must instead land cleanly back on tab 0 with matching content.
-  function makeThreeEntryBuild(): BuildNote {
-    return {
-      type: "smite-build",
-      god: "Chiron",
-      mode: "Conquest",
-      builds: [
-        {
-          source: "community",
-          aspect: "Aspect of the Heroic Tutor",
-          aspect_pick_rate: 0.09,
-          aspect_win_rate: 0.45,
-          slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.49 }],
-          source_url: "https://smitebrain.com/gods/chiron/",
-        },
-        { source: "suggested", archetype: "crit", slot_order: ["Crit Path Item"], situational_swaps: [], rationale: "crit" },
-        { source: "suggested", archetype: "burst", slot_order: ["Ability Path Item"], situational_swaps: [], rationale: "burst" },
-      ] as any,
-    };
-  }
-
-  it("resets to tab 0 (no stale/inconsistent selection) when the current god's entries shrink on reload", () => {
-    const { rerender } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[makeThreeEntryBuild()]} mode="Conquest" onModeChange={() => {}} />);
-
-    // Select the second "mine" tab (index 2 — the "ability path" entry).
-    fireEvent.click(screen.getAllByRole("tab")[2]);
-    expect(screen.getByText("Ability Path Item")).toBeInTheDocument();
-
-    // Simulate "Reload data": same god, but the ability-path entry is gone
-    // and every object is a fresh reference (as a real re-fetch produces).
-    const reloaded = makeThreeEntryBuild();
-    reloaded.builds = reloaded.builds.slice(0, 2); // community + crit path only
-    rerender(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[reloaded]} mode="Conquest" onModeChange={() => {}} />);
-
-    const tabsAfter = screen.getAllByRole("tab");
-    expect(tabsAfter).toHaveLength(2);
-    expect(tabsAfter[0]).toHaveAttribute("aria-selected", "true");
-    expect(tabsAfter[1]).toHaveAttribute("aria-selected", "false");
-    expect(screen.getByText("Transcendence")).toBeInTheDocument();
-    expect(screen.queryByText("Ability Path Item")).not.toBeInTheDocument();
-  });
-
-  it("resets to tab 0 (not a stale index pointing at a different entry) when entries reorder on reload", () => {
-    const { rerender } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[makeThreeEntryBuild()]} mode="Conquest" onModeChange={() => {}} />);
-
-    // Select the second "mine" tab (index 2 — the "ability path" entry).
-    fireEvent.click(screen.getAllByRole("tab")[2]);
-    expect(screen.getByText("Ability Path Item")).toBeInTheDocument();
-
-    // Simulate "Reload data": same god, same entry count, but the two
-    // "mine" entries have swapped position — index 2 is now the crit path,
-    // not the ability path the user had selected.
-    const reordered = makeThreeEntryBuild();
-    const [community, mineA, mineB] = reordered.builds;
-    reordered.builds = [community, mineB, mineA];
-    rerender(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[reordered]} mode="Conquest" onModeChange={() => {}} />);
-
-    const tabsAfter = screen.getAllByRole("tab");
-    expect(tabsAfter).toHaveLength(3);
-    expect(tabsAfter[0]).toHaveAttribute("aria-selected", "true");
-    expect(tabsAfter[2]).toHaveAttribute("aria-selected", "false");
-    // Must show the community entry (post-reset), never silently the
-    // crit-path entry that now happens to sit at the old index.
-    expect(screen.getByText("Transcendence")).toBeInTheDocument();
-    expect(screen.queryByText("Crit Path Item")).not.toBeInTheDocument();
-    expect(screen.queryByText("Ability Path Item")).not.toBeInTheDocument();
-  });
+describe("DetailPanel — modes, aspects, starters, mine", () => {
+  beforeEach(() => localStorage.clear());
 
   it("switches build set when the mode toggle changes", () => {
     const builds = [
@@ -229,8 +388,7 @@ describe("DetailPanel", () => {
     ];
     function Harness() {
       const [mode, setMode] = React.useState("Conquest");
-      return <DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                          mode={mode} onModeChange={setMode} />;
+      return panel({ builds: builds as never, mode, onModeChange: setMode });
     }
     render(<Harness />);
     expect(screen.getByText("ConItem")).toBeInTheDocument();
@@ -238,332 +396,143 @@ describe("DetailPanel", () => {
     expect(screen.getByText("JoustItem")).toBeInTheDocument();
   });
 
-  it("renders the starter line for a build that has one", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
-        rationale: "", starter: { base: "Gilded Arrow", upgrade: "Sharpshooter's Arrow" } },
-    ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByText(/STARTER/i)).toBeInTheDocument();
-    expect(screen.getByText("Gilded Arrow")).toBeInTheDocument();
-    expect(screen.getByText("Sharpshooter's Arrow")).toBeInTheDocument();
-  });
-
-  it("shows the starter line on a community build too", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
-        slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u",
-        starter: { base: "Gilded Arrow", upgrade: "Sharpshooter's Arrow" } },
-    ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByText(/STARTER/i)).toBeInTheDocument();
-    expect(screen.getByText("Gilded Arrow")).toBeInTheDocument();
-  });
-
-  it("passes flex_slots so a swap removes the flex slot, not the last", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["A", "B", "C"], flex_slots: ["A"],
-        situational_swaps: [{ vs_tag: "heavy_cc", swap: "Cloak — cc", swap_item: "Cloak" }], rationale: "x" },
-    ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
-    expect(screen.getByText("A")).toHaveClass("line-through");   // flex slot removed
-    expect(screen.getByText("C")).not.toHaveClass("line-through");
-  });
-
-  it("shows a stored mine build as a tab (suggested still active by default)", () => {
-    saveMine("Chiron", "Conquest", { name: "My New", slot_order: ["Rage"] });
-    const note: BuildNote = { type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [], rationale: "" } as any,
-    ] };
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={[note]}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByRole("tab", { name: /My New/i })).toBeInTheDocument();
-    expect(screen.getByText(/BUILD ORDER/i)).toBeInTheDocument();  // suggested tab active
-  });
-
   const godWithAspect = {
     type: "god", name: "Hercules", pantheon: "Roman", role: "Solo", specializations: [],
     damage_type: "physical", release_date: "", base_stats: {}, abilities: [],
     aspects: [{ name: "Aspect of Preservation", kit_changes: "Becomes an ally-heal tank." }],
     source_url: "", last_verified: "",
-  } as any;
+  } as never;
 
-  function aspectBuild(): BuildNote {
-    return { type: "smite-build", god: "Hercules", mode: "Conquest", builds: [
-      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
-        slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u" } as any,
-      { source: "suggested", archetype: "core", slot_order: ["BaseItem"], situational_swaps: [], rationale: "" } as any,
-      { source: "suggested", archetype: "core", slot_order: ["AspectItem"], situational_swaps: [], rationale: "",
-        aspect: "Aspect of Preservation" } as any,
-    ] };
-  }
+  const aspectBuild = () => ([{ type: "smite-build", god: "Hercules", mode: "Conquest", builds: [
+    { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+      slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u" },
+    { source: "suggested", archetype: "core", slot_order: ["BaseItem"], situational_swaps: [], rationale: "" },
+    { source: "suggested", archetype: "core", slot_order: ["AspectItem"], situational_swaps: [], rationale: "",
+      aspect: "Aspect of Preservation" },
+  ] }]);
 
-  it("shows the Aspect toggle and swaps to the aspect build + kit banner when on", () => {
-    render(<DetailPanel god="Hercules" godData={godWithAspect} items={[]} builds={[aspectBuild()]}
-                        mode="Conquest" onModeChange={() => {}} />);
-    // select the core tab; base build shows, aspect build hidden
-    fireEvent.click(screen.getByRole("tab", { name: /core/i }));
+  it("swaps to the aspect build and shows the kit banner when toggled on", () => {
+    render(panel({ god: "Hercules", godData: godWithAspect, builds: aspectBuild() as never }));
     expect(screen.getByText("BaseItem")).toBeInTheDocument();
-    expect(screen.queryByText("AspectItem")).not.toBeInTheDocument();
-    // turn the aspect on — same core tab, now the aspect build + kit banner
     fireEvent.click(screen.getByRole("button", { name: /aspect/i }));
     expect(screen.getByText("AspectItem")).toBeInTheDocument();
     expect(screen.queryByText("BaseItem")).not.toBeInTheDocument();
     expect(screen.getByText(/ally-heal tank/i)).toBeInTheDocument();
-    expect(screen.getByRole("tab", { name: /community/i })).toBeInTheDocument();
   });
 
-  it("shows no Aspect toggle for a god with no aspect builds", () => {
-    const builds = [{ type: "smite-build", god: "Susano", mode: "Conquest", builds: [
+  it("shows no aspect toggle when only the community entry carries an aspect", () => {
+    // Regression: the toggle used to appear for any build with an `aspect`
+    // field — including community — then emptied the surface when pressed,
+    // because only *suggested* aspect builds are selectable.
+    const communityAspectOnly = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: "Aspect of the Heroic Tutor", aspect_pick_rate: 0.09,
+        aspect_win_rate: 0.45, slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u" },
       { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
     ] }];
-    render(<DetailPanel god="Susano" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
+    render(panel({ builds: communityAspectOnly as never }));
     expect(screen.queryByRole("button", { name: /^aspect/i })).not.toBeInTheDocument();
   });
 
-  it("labels suggested tabs by archetype", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["X"], situational_swaps: [], rationale: "" },
-      { source: "suggested", archetype: "crit", slot_order: ["Y"], situational_swaps: [], rationale: "" },
+  it("shows no aspect toggle for a god with no aspect builds", () => {
+    const builds = [{ type: "smite-build", god: "Susano", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
     ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByRole("tab", { name: /crit/i })).toBeInTheDocument();
+    render(panel({ god: "Susano", builds: builds as never }));
+    expect(screen.queryByRole("button", { name: /^aspect/i })).not.toBeInTheDocument();
   });
 
-  it("shows the fun badge (and a dice tab marker) when a fun build's tab is active", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["X"], situational_swaps: [], rationale: "" },
-      { source: "suggested", archetype: "fun-crit", fun: true, slot_order: ["Y"], situational_swaps: [], rationale: "" },
+  it("renders the starter line for a suggested build and for a community one", () => {
+    const starter = { base: "Gilded Arrow", upgrade: "Sharpshooter's Arrow" };
+    const suggested = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "", starter },
     ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    // core tab active by default — no badge
-    expect(screen.queryByText(/for fun/i)).not.toBeInTheDocument();
-    const funTab = screen.getByRole("tab", { name: /fun-crit/i });
-    expect(funTab).toHaveTextContent("🎲");
-    fireEvent.click(funTab);
-    expect(screen.getByText(/for fun/i)).toBeInTheDocument();
-    expect(screen.getByText(/off-class/i)).toBeInTheDocument();
-  });
-
-  it("shows the why-this-item score breakdown in the tooltip for an item with slot_scores", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [],
-        rationale: "",
-        slot_scores: { Deathbringer: { total: 0.81, efficiency: 0.9, win: 0.55, pick: 0.4, fit: 0.7 } } },
-    ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    const trigger = screen.getByText("Deathbringer").closest('[tabindex="0"]')!;
-    fireEvent.focus(trigger);
-    expect(screen.getByText(/WHY THIS ITEM/i)).toBeInTheDocument();
-    expect(screen.getByText("fit")).toBeInTheDocument();
-    expect(screen.getByText("0.70")).toBeInTheDocument();
-  });
-
-  it("shows the community per-slot alternate item", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
-        slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.5,
-          alternates: [{ name: "Jotunn's Revenge", pick_rate: 0.11, win_rate: 0.71 }] }] },
-    ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByText(/or Jotunn's Revenge/i)).toBeInTheDocument();
-  });
-
-  it("shows 'off-meta' instead of a 0 pick bar when the pick signal is 0", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [],
-        rationale: "",
-        slot_scores: { Deathbringer: { total: 0.5, efficiency: 0.6, win: 0.5, pick: 0, fit: 0.7 } } },
-    ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    const trigger = screen.getByText("Deathbringer").closest('[tabindex="0"]')!;
-    fireEvent.focus(trigger);
-    expect(screen.getByText(/off-meta/i)).toBeInTheDocument();
-  });
-
-  it("does not render a why-this-item section when the entry has no slot_scores", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [], rationale: "" },
-    ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    const trigger = screen.getByText("Deathbringer").closest('[tabindex="0"]')!;
-    fireEvent.focus(trigger);
-    expect(screen.queryByText(/WHY THIS ITEM/i)).not.toBeInTheDocument();
-  });
-
-  it("marks suggested items missing from the community list as off-meta", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
-        slot_order: [
-          { name: "A", pick_rate: 0.6, win_rate: 0.5 },
-          { name: "B", pick_rate: 0.4, win_rate: 0.5 },
-        ], source_url: "u" },
-      { source: "suggested", archetype: "core", slot_order: ["B", "C"], situational_swaps: [], rationale: "" },
-    ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    fireEvent.click(screen.getByRole("tab", { name: /core/i }));
-    const markers = screen.getAllByText("off-meta");
-    expect(markers).toHaveLength(1);
-    expect(screen.getByText("C").closest("div")).toHaveTextContent("off-meta");
-    expect(screen.getByText("B").closest("div")).not.toHaveTextContent("off-meta");
-  });
-
-  it("does not mark fun builds or gods without community data as off-meta", () => {
-    // fun build: off-class by design, marker would be noise
-    const withCommunity = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
-        slot_order: [{ name: "A", pick_rate: 0.6, win_rate: 0.5 }], source_url: "u" },
-      { source: "suggested", archetype: "fun-crit", fun: true, slot_order: ["Z"], situational_swaps: [], rationale: "" },
-    ] }];
-    const { unmount } = render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={withCommunity as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    fireEvent.click(screen.getByRole("tab", { name: /fun-crit/i }));
-    expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
+    const { unmount } = render(panel({ builds: suggested as never }));
+    expect(screen.getByText(/starter/i)).toBeInTheDocument();
+    expect(screen.getByText("Gilded Arrow")).toBeInTheDocument();
+    expect(screen.getByText("Sharpshooter's Arrow")).toBeInTheDocument();
     unmount();
-    // no community entry at all: nothing to compare against, no marker
-    const noCommunity = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["Z"], situational_swaps: [], rationale: "" },
+
+    const community = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u", starter },
     ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={noCommunity as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
+    render(panel({ builds: community as never }));
+    expect(screen.getByText("Gilded Arrow")).toBeInTheDocument();
+  });
+
+  it("offers a stored mine build alongside the model's flavors", () => {
+    saveMine("Chiron", "Conquest", { name: "My New", slot_order: ["Rage"] });
+    const note: BuildNote = { type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [], rationale: "" } as never,
+    ] };
+    render(panel({ builds: [note] }));
+    const group = within(screen.getByRole("group", { name: /build flavor/i }));
+    expect(group.getByRole("button", { name: /My New/i })).toBeInTheDocument();
+    // The model's core is still what opens.
+    expect(group.getByRole("button", { name: /core/i })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText("Deathbringer")).toBeInTheDocument();
+  });
+
+  it("shows a mine build's items with no meta comparison attached", () => {
+    saveMine("Chiron", "Conquest", { name: "mine", slot_order: ["Transcendence", "Devourer's Gauntlet"] });
+    render(panel({ builds: [chironCommunity] }));
+    fireEvent.click(screen.getByRole("button", { name: /mine/i }));
+    expect(screen.getByText("Devourer's Gauntlet")).toBeInTheDocument();
   });
 });
 
-// Full-shaped Item fixture — situational swaps and the hover WHY card both
-// read cost/tier/stats/passive/effect_tags, so tests exercising them need
-// real values rather than the `items=[]` shorthand used above.
-function itemFx(name: string, cost: number, extra: Partial<Item> = {}): Item {
-  return {
-    type: "item", name, tier: 3, cost, stats: { "Physical Power": "40" }, passive: "",
-    builds_from: [], builds_into: [], source_url: "", last_verified: "",
-    effect_tags: [], efficiency_tier: null, ...extra,
-  } as Item;
-}
-
-describe("DetailPanel — situational swaps (spec C)", () => {
+describe("DetailPanel — reload resilience", () => {
   beforeEach(() => localStorage.clear());
 
-  it("shows what a swap comes in for, using applySwap's own replacement target", () => {
-    const items = [itemFx("Base A", 2500), itemFx("Base B", 2600), itemFx("Base C", 3000), itemFx("Cheap Swap", 1800)];
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [{
-      source: "suggested", archetype: "core", slot_order: ["Base A", "Base B", "Base C"],
-      situational_swaps: [{ vs_tag: "heavy_cc", swap: "x", swap_item: "Cheap Swap" }], rationale: "",
-    }] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={items} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    // "Base C" is the last slot (no flex_slots configured) — applySwap's own
-    // target — surfaced rather than a second invented rule.
-    expect(screen.getByText(/in for base c/i)).toBeInTheDocument();
+  function threeEntries(): BuildNote {
+    return { type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.49 }], source_url: "u" },
+      { source: "suggested", archetype: "crit", slot_order: ["Crit Path Item"], situational_swaps: [], rationale: "crit" },
+      { source: "suggested", archetype: "burst", slot_order: ["Burst Path Item"], situational_swaps: [], rationale: "burst" },
+    ] as never };
+  }
+
+  /** The flavor control, scoped so a build named "Crit Path Item" on the
+   * ledger can't be mistaken for the "crit" flavor button. */
+  const flavor = (name: RegExp) =>
+    within(screen.getByRole("group", { name: /build flavor/i })).getByRole("button", { name });
+
+  it("resets to the first build when entries shrink on reload", () => {
+    const { rerender } = render(panel({ builds: [threeEntries()] }));
+    fireEvent.click(flavor(/burst/i));
+    expect(screen.getByText("Burst Path Item")).toBeInTheDocument();
+
+    const reloaded = threeEntries();
+    reloaded.builds = reloaded.builds.slice(0, 2);
+    rerender(panel({ builds: [reloaded] }));
+
+    expect(screen.getByText("Crit Path Item")).toBeInTheDocument();
+    expect(screen.queryByText("Burst Path Item")).not.toBeInTheDocument();
+    expect(flavor(/crit/i)).toHaveAttribute("aria-pressed", "true");
   });
 
-  it("shows an order-shift note when the swap item is materially cheaper than what it replaces", () => {
-    const items = [itemFx("Base A", 2500), itemFx("Base B", 2600), itemFx("Base C", 3000), itemFx("Cheap Swap", 1800)];
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [{
-      source: "suggested", archetype: "core", slot_order: ["Base A", "Base B", "Base C"],
-      situational_swaps: [{ vs_tag: "heavy_cc", swap: "x", swap_item: "Cheap Swap" }], rationale: "",
-    }] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={items} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByText(/earlier/i)).toBeInTheDocument();
-  });
+  it("resets rather than pointing a stale index at a different entry when entries reorder", () => {
+    const { rerender } = render(panel({ builds: [threeEntries()] }));
+    fireEvent.click(flavor(/burst/i));
+    expect(screen.getByText("Burst Path Item")).toBeInTheDocument();
 
-  it("shows an order-shift note the other direction when the swap item is materially dearer", () => {
-    const items = [itemFx("Base A", 2500), itemFx("Base B", 2600), itemFx("Base C", 3000), itemFx("Pricey Swap", 4200)];
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [{
-      source: "suggested", archetype: "core", slot_order: ["Base A", "Base B", "Base C"],
-      situational_swaps: [{ vs_tag: "heavy_cc", swap: "x", swap_item: "Pricey Swap" }], rationale: "",
-    }] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={items} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByText(/later/i)).toBeInTheDocument();
-  });
+    const reordered = threeEntries();
+    const [community, a, b] = reordered.builds;
+    reordered.builds = [community, b, a];
+    rerender(panel({ builds: [reordered] }));
 
-  it("omits the order-shift note when the swap costs about the same as what it replaces (equal-cost case)", () => {
-    const items = [itemFx("Base A", 2500), itemFx("Base B", 2600), itemFx("Base C", 3000), itemFx("Equal Swap", 2950)];
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [{
-      source: "suggested", archetype: "core", slot_order: ["Base A", "Base B", "Base C"],
-      situational_swaps: [{ vs_tag: "heavy_cc", swap: "x", swap_item: "Equal Swap" }], rationale: "",
-    }] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={items} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByText(/in for base c/i)).toBeInTheDocument(); // "in for" still shows
-    expect(screen.queryByText(/earlier/i)).not.toBeInTheDocument();
-    expect(screen.queryByText(/later/i)).not.toBeInTheDocument();
-  });
-
-  it("still previews the swap with the existing diff styling on click", () => {
-    const items = [itemFx("Base A", 2500), itemFx("Base B", 2600), itemFx("Base C", 3000), itemFx("Cheap Swap", 1800)];
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [{
-      source: "suggested", archetype: "core", slot_order: ["Base A", "Base B", "Base C"],
-      situational_swaps: [{ vs_tag: "heavy_cc", swap: "x", swap_item: "Cheap Swap" }], rationale: "",
-    }] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={items} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    fireEvent.click(screen.getByRole("button", { name: /heavy cc/i }));
-    expect(screen.getByText("Cheap Swap")).toBeInTheDocument();
-    expect(screen.getByText("Base C")).toHaveClass("line-through");
+    // Post-reset the first selectable entry wins — never silently whatever
+    // now sits at the old index.
+    expect(screen.getByText("Burst Path Item")).toBeInTheDocument();
+    expect(flavor(/burst/i)).toHaveAttribute("aria-pressed", "true");
   });
 });
 
-describe("DetailPanel — hover/WHY-card fix (spec E)", () => {
+describe("DetailPanel — popular items", () => {
   beforeEach(() => localStorage.clear());
 
-  it("shows item identity (name, cost · tier, stats, passive) AND the four score bars in one hover", () => {
-    const items = [itemFx("Deathbringer", 3100, { passive: "Deals bonus damage on crit.", tier: 4 })];
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [{
-      source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [], rationale: "",
-      slot_scores: { Deathbringer: { total: 0.81, efficiency: 0.9, win: 0.55, pick: 0.4, fit: 0.7 } },
-    }] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={items} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    const trigger = screen.getByText("Deathbringer").closest('[tabindex="0"]')!;
-    fireEvent.focus(trigger);
-    // item identity
-    const cost = screen.getByText("3100g");
-    expect(cost).toBeInTheDocument();
-    expect(cost).toHaveClass("text-gold"); // cost number is gold; the "· T4" part stays muted
-    expect(cost.parentElement).not.toHaveClass("text-gold");
-    expect(screen.getByText(/Deals bonus damage on crit\./)).toBeInTheDocument();
-    expect(screen.getByText("Physical Power")).toBeInTheDocument();
-    // the four score bars (one hover, one panel — spec E)
-    expect(screen.getByText(/WHY THIS ITEM/i)).toBeInTheDocument();
-    expect(screen.getByText("value")).toBeInTheDocument();
-    expect(screen.getByText("win")).toBeInTheDocument();
-    expect(screen.getByText("pick")).toBeInTheDocument();
-    expect(screen.getByText("fit")).toBeInTheDocument();
-  });
-
-  it("does not attach a separate tooltip to the starter row (one hover pattern only)", () => {
-    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
-      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
-        rationale: "", starter: { base: "Gilded Arrow", upgrade: "Sharpshooter's Arrow" } },
-    ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    const starterItem = screen.getByText("Gilded Arrow");
-    fireEvent.focus(starterItem);
-    fireEvent.mouseEnter(starterItem);
-    expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
-  });
-});
-
-describe("DetailPanel — popular items (spec F)", () => {
-  beforeEach(() => localStorage.clear());
-
-  it("renders a popular items section with pick % from the community entry", () => {
+  it("renders what the playerbase buys, with pick rate", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
         slot_order: [{ name: "Transcendence", pick_rate: 0.6, win_rate: 0.5 }], source_url: "u",
@@ -572,14 +541,13 @@ describe("DetailPanel — popular items (spec F)", () => {
           { name: "Book of Thoth", pick_rate: 0.2, win_rate: 0.56 },
         ] },
     ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
+    render(panel({ builds: builds as never }));
     expect(screen.getByText(/popular items/i)).toBeInTheDocument();
     expect(screen.getByText("Rod of Tahuti")).toBeInTheDocument();
-    expect(screen.getByText(/42%/)).toBeInTheDocument();
+    expect(screen.getByText(/42% pick/)).toBeInTheDocument();
   });
 
-  it("marks popular items that are already in the suggested core", () => {
+  it("marks popular items already in the suggested core", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
         slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u",
@@ -589,18 +557,27 @@ describe("DetailPanel — popular items (spec F)", () => {
         ] },
       { source: "suggested", archetype: "core", slot_order: ["CoreItem"], situational_swaps: [], rationale: "" },
     ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
-    expect(screen.getByText("CoreItem").closest("div")).toHaveTextContent(/in core/i);
-    expect(screen.getByText("OffCoreItem").closest("div")).not.toHaveTextContent(/in core/i);
+    render(panel({ builds: builds as never }));
+    // Scoped to the popular-items list: "CoreItem" also appears on the ledger.
+    const popular = within(screen.getByText(/popular items/i).closest("section")!);
+    expect(popular.getByText("CoreItem").closest("li")).toHaveTextContent(/in core/i);
+    expect(popular.getByText("OffCoreItem").closest("li")).not.toHaveTextContent(/in core/i);
   });
 
   it("renders nothing for popular items when the god has no community data", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "suggested", archetype: "core", slot_order: ["Z"], situational_swaps: [], rationale: "" },
     ] }];
-    render(<DetailPanel god="Chiron" godData={undefined} items={[]} builds={builds as any}
-                        mode="Conquest" onModeChange={() => {}} />);
+    render(panel({ builds: builds as never }));
     expect(screen.queryByText(/popular items/i)).not.toBeInTheDocument();
+  });
+
+  it("renders the rationale for a suggested build", () => {
+    const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["Deathbringer"], situational_swaps: [],
+        rationale: "Top weighted-score core." },
+    ] }];
+    render(panel({ builds: builds as never }));
+    expect(screen.getByText(/Top weighted-score core/)).toBeInTheDocument();
   });
 });

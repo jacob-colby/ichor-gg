@@ -73,3 +73,53 @@ export function adaptedCore(
 
   return { core, reasons, bonuses };
 }
+
+/** One line of the draft's effect on a build. */
+export interface CoreChange {
+  /** The item the draft promoted into the core. */
+  added: string;
+  /** The item it pushed out, when the swap pairs one-for-one. */
+  removed?: string;
+  /** Clamped score bonus that moved it — the number that *is* the mechanism. */
+  bonus: number;
+  /** Tags/stats that earned the bonus, e.g. "anti-heal, Magical Protection". */
+  reason?: string;
+}
+
+export interface CoreDiff {
+  changes: CoreChange[];
+  /** Items in both builds — the part the draft didn't touch. */
+  unchanged: string[];
+  /** Pushed out with no matching arrival (rare; only on odd-sized diffs). */
+  droppedOnly: string[];
+}
+
+/**
+ * What the draft did to the build, as pairs.
+ *
+ * The page used to reduce the un-adapted core to a membership `Set`, so a row
+ * could say "swap in" but never *swap in for what* — the displaced item and
+ * the magnitude were both computed and then discarded. Both sides of the
+ * comparison are the product's whole claim, so both have to survive.
+ *
+ * Arrivals and departures are paired by rank within their own lists: the
+ * highest-scoring newcomer takes the place of the highest-scoring casualty.
+ * That's a presentational pairing, not a claim the assembler made it.
+ */
+export function diffCore(base: AdaptedCore, adapted: AdaptedCore): CoreDiff {
+  const baseSet = new Set(base.core);
+  const adaptedSet = new Set(adapted.core);
+  const added = adapted.core.filter((n) => !baseSet.has(n));
+  const removed = base.core.filter((n) => !adaptedSet.has(n));
+
+  return {
+    changes: added.map((name, i) => ({
+      added: name,
+      removed: removed[i],
+      bonus: adapted.bonuses[name] ?? 0,
+      reason: adapted.reasons[name],
+    })),
+    unchanged: adapted.core.filter((n) => baseSet.has(n)),
+    droppedOnly: removed.slice(added.length),
+  };
+}

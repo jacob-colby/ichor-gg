@@ -13,7 +13,8 @@ const CFG = { max_bonus: 0.12, per_share: 0.1,
 
 const EMPTY: import("../types").ThreatModel = {
   magical: 0, physical: 0, healers: 0, lockdown: 0, crit: 0, tanks: 0,
-  enemyCount: 0, allyCovers: {}, allyAllPhysical: false,
+  enemyCount: 0, rosterSize: 0, allyCovers: {}, allyAllPhysical: false,
+  allyCount: 0, allyPhysical: 0,
 };
 
 describe("deriveThreats", () => {
@@ -102,5 +103,57 @@ describe("threatOverlay", () => {
       expect(Number.isNaN(v)).toBe(false);
       expect(Number.isFinite(v)).toBe(true);
     }
+  });
+});
+
+describe("threat share uses the enemy roster, not the enemies entered so far", () => {
+  it("scales a single known healer by the mode's roster size", () => {
+    // One healer known out of five slots is a 20% signal. Reading it as 100%
+    // let a barely-started draft drive a maximal overlay.
+    const early = threatOverlay({ ...EMPTY, healers: 1, enemyCount: 1, rosterSize: 5 }, CFG);
+    const full = threatOverlay({ ...EMPTY, healers: 5, enemyCount: 5, rosterSize: 5 }, CFG);
+    expect(early.tags["anti-heal"]).toBeCloseTo(full.tags["anti-heal"] / 5, 6);
+  });
+
+  it("does not shrink a threat as more (non-threatening) enemies are entered", () => {
+    // The old denominator made the overlay *weaken* when you added information,
+    // which reads as the model changing its mind.
+    const oneOfOne = threatOverlay({ ...EMPTY, healers: 1, enemyCount: 1, rosterSize: 5 }, CFG);
+    const oneOfFour = threatOverlay({ ...EMPTY, healers: 1, enemyCount: 4, rosterSize: 5 }, CFG);
+    expect(oneOfFour.tags["anti-heal"]).toBeCloseTo(oneOfOne.tags["anti-heal"], 6);
+  });
+
+  it("still weighs a Joust threat heavier than the same count in Conquest", () => {
+    const joust = threatOverlay({ ...EMPTY, healers: 2, enemyCount: 2, rosterSize: 3 }, CFG);
+    const conquest = threatOverlay({ ...EMPTY, healers: 2, enemyCount: 2, rosterSize: 5 }, CFG);
+    expect(joust.tags["anti-heal"]).toBeGreaterThan(conquest.tags["anti-heal"]);
+  });
+
+  it("falls back to the entered count when no roster size is supplied", () => {
+    const withRoster = threatOverlay({ ...EMPTY, healers: 2, enemyCount: 2, rosterSize: 0 }, CFG);
+    const legacy = threatOverlay({ ...EMPTY, healers: 2, enemyCount: 2 } as never, CFG);
+    expect(withRoster.tags["anti-heal"]).toBeCloseTo(legacy.tags["anti-heal"], 6);
+  });
+});
+
+describe("all-physical ally read", () => {
+  const phys = (n: string) => god(n, "physical");
+  it("does not call a lone entered god an all-physical team", () => {
+    const t = deriveThreats({ allies: ["A"], enemies: [] }, { A: phys("A") }, {});
+    expect(t.allyAllPhysical).toBe(false);
+    expect(threatOverlay({ ...t, rosterSize: 5 }, CFG).stats["Penetration"]).toBeUndefined();
+  });
+
+  it("recognises it once two allies are known, scaled by roster share", () => {
+    const t = deriveThreats({ allies: ["A", "B"], enemies: [] }, { A: phys("A"), B: phys("B") }, {});
+    expect(t.allyAllPhysical).toBe(true);
+    expect(t.allyPhysical).toBe(2);
+    // 2 of 5 slots known -> 0.4 share of the full penetration nudge.
+    expect(threatOverlay({ ...t, rosterSize: 5 }, CFG).stats["Penetration"]).toBeCloseTo(0.4 * CFG.per_share, 6);
+  });
+
+  it("is false when the known allies are mixed damage types", () => {
+    const t = deriveThreats({ allies: ["A", "B"], enemies: [] }, { A: phys("A"), B: god("B", "magical") }, {});
+    expect(t.allyAllPhysical).toBe(false);
   });
 });

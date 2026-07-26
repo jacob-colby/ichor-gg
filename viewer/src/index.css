@@ -15,7 +15,11 @@
   --color-ink: #e8edf4;
   --color-ink-soft: #c3cad6;
   --color-muted: #8b95a5;
-  --color-faint: #5b6472;
+  /* The quietest tier still has to be readable: #5b6472 measured 2.86–3.37:1
+     across the surface stack and failed AA everywhere it was used. This clears
+     4.5:1 on every tier (bg3, the lightest, is 4.52) while staying clearly
+     below `muted` so the four-step hierarchy survives. */
+  --color-faint: #7a8494;
 
   /* Accent + semantic */
   --color-gold: #e3b23c;
@@ -44,6 +48,7 @@
 
   /* Motion */
   --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
   --font-display: "Rajdhani", sans-serif;
   --font-sans: "Inter", sans-serif;
@@ -54,9 +59,30 @@
 body { background: var(--color-bg0); font-family: var(--font-sans); color: var(--color-ink); }
 button:not(:disabled) { cursor: pointer; }
 
+/* Keyboard focus. DESIGN.md reserves focus-blue for exactly this, but nothing
+   was drawing it — every focusable fell back to the UA default. Elements that
+   opt out with `focus:outline-none` (search fields inside a bordered wrapper)
+   keep their own focus-within treatment; this covers everything else. */
+:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
 /* Tappable affordance — press feedback for cards, pills, tabs (120ms fast) */
 .press { transition: transform 120ms var(--ease-standard); }
 .press:active { transform: scale(0.97); }
+
+/* The one authored moment on Home: divergence bars draw outward from the
+   centre line, staggered a lane at a time. Everything else — names, tiers,
+   numbers — is already on screen; only the measurement animates. */
+@keyframes bar-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.bar-grow {
+  animation: bar-grow 440ms var(--ease-out-expo) both;
+  animation-delay: var(--bar-delay, 0ms);
+}
 
 /* Thin, theme-matched scrollbars so panels feel native */
 * { scrollbar-width: thin; scrollbar-color: var(--color-line-strong) transparent; }
@@ -66,4 +92,6 @@ button:not(:disabled) { cursor: pointer; }
 
 @media (prefers-reduced-motion: reduce) {
   .press, .press:active { transition: none; transform: none; }
+  /* Bars land at full length immediately rather than not rendering at all. */
+  .bar-grow { animation: none; }
 }

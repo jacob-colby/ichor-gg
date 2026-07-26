@@ -103,6 +103,9 @@ describe("applySwap flex targeting", () => {
     expect(removed?.name).toBe("B");
     expect(added?.name).toBe("SwapIn");
     expect(out.filter((s) => s.status === "kept").map((s) => s.name)).toEqual(["A", "C", "D"]);
+    // Position is load-bearing: the ledger reads row order as purchase order,
+    // so the swap sits where the slot it replaces sat, not at the end.
+    expect(out.map((s) => s.name)).toEqual(["A", "B", "SwapIn", "C", "D"]);
   });
   it("falls back to the last slot when no flexSlots supplied", () => {
     const out = applySwap(["A", "B", "C"], "SwapIn");
