@@ -33,21 +33,24 @@ interface GodCardProps {
 function GodCard({ god, selected, pinned, onSelect, onTogglePin, onRemove }: GodCardProps) {
   const lane = godLane(god.role);
   return (
-    <div
-      role="button"
-      tabIndex={0}
-      aria-label={`Select ${god.name}`}
-      aria-pressed={selected}
-      onClick={onSelect}
-      onKeyDown={(e) => { if (e.key === "Enter") onSelect(); }}
-      className={`press group relative flex cursor-pointer flex-col items-center gap-1 rounded-lg border p-1.5 pt-2 transition-colors duration-[180ms] ease-standard ${
-        selected
-          ? "border-gold shadow-glow bg-bg3"
-          : pinned
-          ? "border-gold/40 bg-gradient-to-b from-bg3 to-bg2"
-          : "border-line bg-bg2 hover:border-line-strong"
-      }`}
-    >
+    // The card used to be a div[role="button"] wrapping two focusable buttons —
+    // 87 nested-interactive violations, one per god. Select is now a real
+    // button and the pin/remove controls are siblings layered over it, so
+    // nothing is nested and every control keeps its own tab stop.
+    <div className="group relative">
+      <button
+        type="button"
+        aria-label={`Select ${god.name}`}
+        aria-pressed={selected}
+        onClick={onSelect}
+        className={`press flex w-full cursor-pointer flex-col items-center gap-1 rounded-lg border p-1.5 pt-2 transition-colors duration-[180ms] ease-standard ${
+          selected
+            ? "border-gold shadow-glow bg-bg3"
+            : pinned
+            ? "border-gold/40 bg-gradient-to-b from-bg3 to-bg2"
+            : "border-line bg-bg2 hover:border-line-strong"
+        }`}
+      >
       <img
         src={`/icons/${iconSlug(god.name)}-head.png`}
         alt=""
@@ -59,10 +62,12 @@ function GodCard({ god, selected, pinned, onSelect, onTogglePin, onRemove }: God
           i.src = `/icons/${iconSlug(god.name)}-head.png?r=1`;
         }}
       />
-      <div className="w-full truncate text-center font-display text-[10.5px] font-semibold leading-tight text-ink" title={god.name}>
+      <div className="w-full truncate text-center font-display text-label font-semibold leading-tight text-ink" title={god.name}>
         {god.name}
       </div>
       <div className={`h-[3px] w-5 rounded-full ${lane ? LANE_DOT[lane] : "bg-line-strong"}`} />
+      </button>
+
       <button
         type="button"
         onClick={(e) => { e.stopPropagation(); onTogglePin(); }}
@@ -79,9 +84,9 @@ function GodCard({ god, selected, pinned, onSelect, onTogglePin, onRemove }: God
           onClick={(e) => { e.stopPropagation(); if (confirm(`Remove ${god.name} from the pool?`)) onRemove(); }}
           title={`Remove ${god.name}`}
           aria-label={`Remove ${god.name}`}
-          className="press absolute -left-1 -top-1 flex items-center gap-0.5 rounded border border-dashed border-line-strong bg-bg0/90 px-1 py-px font-mono text-[7px] uppercase tracking-wider text-faint hover:text-muted"
+          className="press absolute -left-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-dashed border-line-strong bg-bg0/90 font-mono text-micro text-faint hover:text-ink"
         >
-          ×
+          ✕
         </button>
       )}
     </div>
@@ -113,7 +118,7 @@ function GodPickerBody({
   const shown = useMemo(() => sortGods(filterGods(gods, filter)), [gods, filter]);
   const pinned = shown.filter((g) => isPinned(g.name));
   const rest = shown.filter((g) => !isPinned(g.name));
-  const selCls = "w-full rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-xs text-muted focus:border-blue focus:outline-none";
+  const selCls = "w-full rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted focus:border-blue focus:outline-none";
   const gridCls = "grid grid-cols-4 gap-2";
 
   return (
@@ -125,22 +130,22 @@ function GodPickerBody({
             placeholder="Search gods…"
             value={filter.q ?? ""}
             onChange={(e) => setFilter({ q: e.target.value })}
-            className="w-full bg-transparent text-xs text-ink placeholder:text-muted focus:outline-none"
+            className="w-full bg-transparent py-1 text-small text-ink placeholder:text-muted focus:outline-none"
           />
         </div>
         <div className="mb-2 flex flex-wrap items-center gap-1.5">
           <button type="button" onClick={() => setFilter({ lane: undefined })}
-            className={`press rounded-full px-2.5 py-1 text-[11px] ${!filter.lane ? "bg-gold font-semibold text-bg0" : "border border-line text-muted"}`}>All</button>
+            className={`press rounded-full px-2.5 py-1 text-label ${!filter.lane ? "bg-gold font-semibold text-bg0" : "border border-line text-muted"}`}>All</button>
           {LANES.map((lane: Lane) => {
             const active = filter.lane === lane;
             return (
               <button key={lane} type="button" onClick={() => setFilter({ lane: active ? undefined : lane })}
-                className={`press rounded-full px-2.5 py-1 text-[11px] ${active ? "bg-gold font-semibold text-bg0" : `border border-line ${laneTextClass(lane)}`}`}>{lane}</button>
+                className={`press rounded-full px-2.5 py-1 text-label ${active ? "bg-gold font-semibold text-bg0" : `border border-line ${laneTextClass(lane)}`}`}>{lane}</button>
             );
           })}
         </div>
         <button type="button" onClick={() => setFiltersOpen(!filtersOpen)}
-          className="flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.08em] text-faint hover:text-muted">
+          className="press flex items-center gap-1 rounded-sm py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-faint hover:text-muted">
           <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" strokeWidth="3" className={`transition-transform ${filtersOpen ? "rotate-90" : ""}`}><path d="M9 6l6 6-6 6" /></svg>
           Filters
         </button>
@@ -156,20 +161,20 @@ function GodPickerBody({
             </select>
           </div>
         )}
-        <div className="mt-2 font-mono text-[10.5px] text-faint">{shown.length} gods</div>
+        <div className="mt-2 font-mono text-label text-faint">{shown.length} gods</div>
       </div>
 
       <div className="px-3 pb-4">
         {shown.length === 0 ? (
           <div className="flex flex-col items-center gap-2 py-14 text-center">
-            <p className="text-xs text-muted">No gods match those filters.</p>
-            <button type="button" onClick={clear} className="text-xs text-blue hover:underline">Clear filters</button>
+            <p className="text-small text-muted">No gods match those filters.</p>
+            <button type="button" onClick={clear} className="text-small text-blue hover:underline">Clear filters</button>
           </div>
         ) : (
           <>
             {pinned.length > 0 && (
               <>
-                <div className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.1em] text-gold">Pinned</div>
+                <div className="mb-1.5 font-mono text-micro uppercase tracking-[0.1em] text-gold">Pinned</div>
                 <div className={`${gridCls} mb-4`}>
                   {pinned.map((g) => (
                     <GodCard key={g.name} god={g} selected={g.name === selectedGod} pinned
@@ -247,7 +252,7 @@ export function GodSidebar({ gods, selectedGod, onSelect, onRemove }: GodSidebar
             {current && (
               <img src={`/icons/${iconSlug(current.name)}-head.png`} alt="" className="h-6 w-6 shrink-0 rounded object-cover" />
             )}
-            <span className={`truncate text-sm ${current ? "text-ink" : "text-muted"}`}>{current ? current.name : "Select a god"}</span>
+            <span className={`truncate text-body ${current ? "text-ink" : "text-muted"}`}>{current ? current.name : "Select a god"}</span>
           </span>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0 text-faint"><path d="M6 9l6 6 6-6" /></svg>
         </button>
@@ -256,7 +261,7 @@ export function GodSidebar({ gods, selectedGod, onSelect, onRemove }: GodSidebar
       {mobileOpen && (
         <div role="dialog" aria-modal="true" aria-label="Choose a god" className="fixed inset-0 z-50 flex flex-col overflow-hidden bg-bg0 md:hidden">
           <div className="flex items-center justify-between border-b border-line px-3 py-2.5">
-            <span className="font-display text-sm font-semibold text-ink">Choose a god</span>
+            <span className="font-display text-body font-semibold text-ink">Choose a god</span>
             <button type="button" onClick={() => setMobileOpen(false)} aria-label="Close" className="press flex h-8 w-8 items-center justify-center rounded-md bg-bg2 text-muted hover:text-ink">
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 6l12 12M18 6L6 18" /></svg>
             </button>

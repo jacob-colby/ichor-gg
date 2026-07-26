@@ -34,7 +34,7 @@ const THREAT_DEFS: { key: ThreatKey; label: string; answer: string }[] = [
 
 const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust" };
 const MODES: DraftMode[] = ["conquest", "joust"];
-const eyebrow = "font-mono text-[10.5px] uppercase tracking-[0.1em] text-faint";
+const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
 /** Mirrors the `lifesteal_caps` rule in _weights.yaml. */
 function draftMaxLifesteal(godData?: God): number {
@@ -67,7 +67,7 @@ function Icon({ name, className, item = false }: { name: string; className: stri
   const [tries, setTries] = useState(0);
   if (tries > 1) {
     return (
-      <span aria-hidden="true" className={`flex flex-none items-center justify-center rounded-sm bg-bg3 font-display text-[11px] font-bold text-faint ${className}`}>
+      <span aria-hidden="true" className={`flex flex-none items-center justify-center rounded-sm bg-bg3 font-display text-label font-bold text-faint ${className}`}>
         {name.slice(0, 1)}
       </span>
     );
@@ -143,11 +143,11 @@ function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-3 flex items-center gap-2">
-          <h2 id="god-picker-title" ref={headingRef} tabIndex={-1} className="font-display text-base font-semibold text-ink focus:outline-none">
+          <h2 id="god-picker-title" ref={headingRef} tabIndex={-1} className="font-display text-lead font-semibold text-ink focus:outline-none">
             Pick a god
           </h2>
           <button type="button" onClick={onClose} aria-label="Close"
-            className="press ml-auto rounded-md bg-bg2 px-2 py-1 font-mono text-xs text-faint hover:text-ink">✕</button>
+            className="press ml-auto rounded-md bg-bg2 px-2 py-1 font-mono text-small text-faint hover:text-ink">✕</button>
         </div>
 
         <form onSubmit={submit} role="search"
@@ -162,18 +162,18 @@ function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
             aria-label="Search gods"
             aria-controls="god-picker-results"
             autoComplete="off"
-            className="w-full bg-transparent text-xs text-ink placeholder:text-muted focus:outline-none"
+            className="w-full bg-transparent text-small text-ink placeholder:text-muted focus:outline-none"
           />
         </form>
 
         <div className="mb-2.5 flex flex-wrap items-center gap-1.5">
           <button type="button" aria-pressed={!lane} onClick={() => setLane(undefined)}
-            className={`press rounded-full border px-2.5 py-1 text-[11px] ${!lane ? "border-line-strong text-ink" : "border-line text-muted hover:border-line-strong"}`}>
+            className={`press rounded-full border px-2.5 py-1 text-label ${!lane ? "border-line-strong text-ink" : "border-line text-muted hover:border-line-strong"}`}>
             All lanes
           </button>
           {LANES.map((l) => (
             <button key={l} type="button" aria-pressed={lane === l} onClick={() => setLane(lane === l ? undefined : l)}
-              className={`press rounded-full px-2.5 py-1 text-[11px] ${
+              className={`press rounded-full px-2.5 py-1 text-label ${
                 lane === l ? "bg-gold font-semibold text-bg0" : `border border-line hover:border-line-strong ${laneTextClass(l)}`}`}>
               {l}
             </button>
@@ -184,12 +184,12 @@ function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
 
         {shown.length === 0 ? (
           <div className="flex flex-col items-center gap-2 py-8 text-center">
-            <p className="text-sm text-muted">
+            <p className="text-body text-muted">
               No {lane ? `${lane} ` : ""}god matches{q.trim() ? ` “${q.trim()}”` : " that filter"}.
             </p>
             {lane && (
               <button type="button" onClick={() => setLane(undefined)}
-                className="press rounded-sm px-1 py-1 text-xs text-blue hover:underline">
+                className="press rounded-sm px-1 py-1 text-small text-blue hover:underline">
                 Search all lanes
               </button>
             )}
@@ -210,8 +210,8 @@ function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
                       isTaken ? "cursor-not-allowed border-line bg-bg2/40 opacity-40" : "border-line bg-bg2 hover:border-line-strong"}`}
                   >
                     <Icon name={g.name} className="h-9 w-9 rounded-md" />
-                    <span className="max-w-full truncate text-center font-display text-[10px] text-ink">{g.name}</span>
-                    {lane2 && <span className={`font-mono text-[9px] ${laneTextClass(lane2)}`}>{lane2}</span>}
+                    <span className="max-w-full truncate text-center font-display text-micro text-ink">{g.name}</span>
+                    {lane2 && <span className={`font-mono text-micro ${laneTextClass(lane2)}`}>{lane2}</span>}
                   </button>
                 </li>
               );
@@ -242,13 +242,13 @@ function Slot({ kind, position, name, onOpen, onRemove }: {
     <div className="flex flex-col items-center gap-1">
       {kind !== "enemy" && (
         <span aria-hidden={!isYou}
-          className={`font-mono text-[9px] font-bold uppercase tracking-[0.1em] text-gold ${isYou ? "" : "invisible"}`}>
+          className={`font-mono text-micro font-bold uppercase tracking-[0.1em] text-gold ${isYou ? "" : "invisible"}`}>
           You
         </span>
       )}
       {!name ? (
         <button type="button" onClick={onOpen} aria-label={ariaLabel}
-          className={`press flex h-14 w-14 flex-none items-center justify-center rounded-md text-lg leading-none text-faint hover:border-line-strong hover:text-muted ${
+          className={`press flex h-14 w-14 flex-none items-center justify-center rounded-md text-title leading-none text-faint hover:border-line-strong hover:text-muted ${
             isYou ? "border-2 border-gold" : "border border-dashed border-line-strong"}`}>
           +
         </button>
@@ -258,14 +258,14 @@ function Slot({ kind, position, name, onOpen, onRemove }: {
             className={`press flex h-14 w-14 flex-none flex-col items-center justify-center gap-1 rounded-md bg-bg2 p-1 ${
               isYou ? "border-2 border-gold shadow-glow" : "border border-line hover:border-line-strong"}`}>
             <Icon name={name} className="h-7 w-7" />
-            <span className="w-full truncate text-center font-display text-[9px] text-ink">{name}</span>
+            <span className="w-full truncate text-center font-display text-micro text-ink">{name}</span>
           </button>
           {/* Sibling, never nested, so it can't also fire the picker. 24×24
               minimum per WCAG 2.5.8; it was 20×20. */}
           {onRemove && (
             <button type="button" onClick={(e) => { e.stopPropagation(); onRemove(); }}
               aria-label={`Remove ${name} from ${rowPlural}`}
-              className="press absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full border border-line bg-bg1 font-mono text-[10px] leading-none text-faint hover:border-line-strong hover:text-ink">
+              className="press absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full border border-line bg-bg1 font-mono text-micro leading-none text-faint hover:border-line-strong hover:text-ink">
               ✕
             </button>
           )}
@@ -276,7 +276,7 @@ function Slot({ kind, position, name, onOpen, onRemove }: {
 }
 
 const segBtn = (active: boolean) =>
-  `press flex flex-col items-center rounded-md px-3.5 py-1.5 font-display text-xs font-semibold transition-colors duration-150 ease-standard ${
+  `press flex flex-col items-center rounded-md px-3.5 py-1.5 font-display text-small font-semibold transition-colors duration-150 ease-standard ${
     active ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"}`;
 
 /** One displacement: what arrived, what it pushed out, and by how much. */
@@ -290,11 +290,11 @@ function ChangeRow({ change, itemsByName, maxBonus }: {
       <Icon name={change.added} item className="col-start-1 h-8 w-8" />
       <span className="col-start-2 flex min-w-0 flex-wrap items-baseline gap-x-2">
         <a href={toHash.item(change.added)}
-          className="press -my-1 truncate rounded-sm py-1 text-[13px] font-medium text-under hover:underline">
+          className="press -my-1 truncate rounded-sm py-1 text-body font-medium text-under hover:underline">
           {change.added}
         </a>
         {change.removed && (
-          <span className="font-mono text-[10px] text-faint">
+          <span className="font-mono text-micro text-faint">
             in place of <span className="text-muted line-through">{change.removed}</span>
           </span>
         )}
@@ -303,10 +303,10 @@ function ChangeRow({ change, itemsByName, maxBonus }: {
         <span aria-hidden="true" className="h-1 w-10 rounded-sm bg-bg3">
           <span className="bar-grow block h-1 origin-left rounded-sm bg-under" style={{ width: `${pct}%` }} />
         </span>
-        <span className="w-10 text-right font-mono text-[11px] text-under">+{change.bonus.toFixed(2)}</span>
+        <span className="w-10 text-right font-mono text-label text-under">+{change.bonus.toFixed(2)}</span>
       </span>
       {change.reason && (
-        <span className="col-start-2 col-span-2 font-mono text-[9.5px] text-faint">
+        <span className="col-start-2 col-span-2 font-mono text-micro text-faint">
           answers {change.reason}
           {cost != null && <span className="text-faint"> · {cost}g</span>}
         </span>
@@ -408,14 +408,14 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
   return (
     <article className="mx-auto flex w-full max-w-[1440px] flex-col gap-6 p-4 pb-12 pt-6 sm:p-6">
       <header className="border-b border-line pb-5">
-        <h1 className="max-w-[26ch] text-balance font-display text-[26px] font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-[32px]">
+        <h1 className="max-w-[26ch] text-balance font-display text-display font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-display">
           {!meName
             ? <>Build for the match you&rsquo;re actually in.</>
             : changeCount > 0
               ? <>Your draft moved <span className="text-gold">{changeCount} of {coreSize}</span> items.</>
               : <>Your draft hasn&rsquo;t moved this build yet.</>}
         </h1>
-        <p className="mt-2.5 max-w-[70ch] text-sm leading-relaxed text-ink-soft">
+        <p className="mt-2.5 max-w-[70ch] text-body leading-relaxed text-ink-soft">
           {!meName
             ? "Put your god in the gold slot, then add the enemies as they lock in. Every item that changes shows what it displaced and which threat it answers."
             : enemiesKnown === 0
@@ -437,17 +437,17 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
               {MODES.map((m) => (
                 <button key={m} type="button" aria-pressed={mode === m} onClick={() => setMode(m)} className={segBtn(mode === m)}>
                   {MODE_LABEL[m]}
-                  <span className="font-mono text-[9px] font-normal opacity-70">{MODE_TEAM_SIZE[m]}v{MODE_TEAM_SIZE[m]}</span>
+                  <span className="font-mono text-micro font-normal opacity-70">{MODE_TEAM_SIZE[m]}v{MODE_TEAM_SIZE[m]}</span>
                 </button>
               ))}
             </div>
             <button type="button" onClick={copyLink}
-              className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-[11px] text-muted hover:text-ink">
+              className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-label text-muted hover:text-ink">
               {copied ? "Copied!" : "Copy link"}
             </button>
             {taken.size > 0 && (
               <button type="button" onClick={clear}
-                className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-[11px] text-muted hover:text-ink">
+                className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-label text-muted hover:text-ink">
                 Clear board
               </button>
             )}
@@ -494,11 +494,11 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
             { n: 3, title: "Read what changed", body: "Every swap names the item it displaced and the threat it answers.", done: changeCount > 0 },
           ].map((step) => (
             <li key={step.n} className={`rounded-md border p-3 ${step.done ? "border-line bg-bg2/40" : "border-dashed border-line-strong"}`}>
-              <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.1em]">
+              <p className="flex items-center gap-2 font-mono text-micro uppercase tracking-[0.1em]">
                 <span className={step.done ? "text-under" : "text-faint"}>{step.done ? "✓" : step.n}</span>
                 <span className={step.done ? "text-muted" : "text-ink-soft"}>{step.title}</span>
               </p>
-              <p className="mt-1.5 text-xs leading-relaxed text-muted">{step.body}</p>
+              <p className="mt-1.5 text-small leading-relaxed text-muted">{step.body}</p>
             </li>
           ))}
         </ol>
@@ -510,7 +510,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
         <section aria-labelledby="draft-threats-h" data-testid="draft-threats" className="border-t border-line pt-5 xl:w-[340px] xl:flex-none">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <h2 id="draft-threats-h" className={eyebrow}>What you&rsquo;re up against</h2>
-            <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-faint">
+            <p className="font-mono text-micro uppercase tracking-[0.08em] text-faint">
               {enemiesKnown} of {roster} enemies known
               {enemiesKnown < roster && <span className="text-muted"> · this build will keep moving</span>}
             </p>
@@ -519,7 +519,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
               measured "0 of 5 crit" is a finding. With nothing entered they'd
               be the opposite error — unmeasured printed as measured. */}
           {enemiesKnown === 0 ? (
-            <p className="mt-2 max-w-[64ch] text-sm leading-relaxed text-muted">
+            <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
               Nothing scouted yet. Add an enemy and this fills in with what they threaten
               and which of your items answer it.
             </p>
@@ -529,7 +529,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
               const n = threats[t.key];
               const who = culprits[t.key];
               return (
-                <li key={t.key} className="flex flex-wrap items-baseline gap-x-2 border-b border-line py-1 font-mono text-[10.5px]">
+                <li key={t.key} className="flex flex-wrap items-baseline gap-x-2 border-b border-line py-1 font-mono text-label">
                   <span className={n > 0 ? "text-ink-soft" : "text-faint"}>{n}/{roster}</span>
                   <span className={n > 0 ? "text-muted" : "text-faint"}>{t.label}</span>
                   {who.length > 0
@@ -541,7 +541,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
           </ul>
           )}
           {threats.allyAllPhysical && threats.allyCount > 0 && (
-            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.08em] text-faint">
+            <p className="mt-2 font-mono text-micro uppercase tracking-[0.08em] text-faint">
               your side · {threats.allyPhysical} of {roster} physical · penetration raised
             </p>
           )}
@@ -553,13 +553,13 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
         <section aria-labelledby="draft-core-h" data-testid="draft-core" className="min-w-0 flex-1 border-t border-line pt-5">
           <h2 id="draft-core-h" className={eyebrow}>What changed</h2>
           {!draftEnabled || !result ? (
-            <p className="mt-2 max-w-[64ch] text-sm leading-relaxed text-muted">
+            <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
               {meName} has no scored items in this index yet, so there&rsquo;s nothing to adapt.
               Pick a different god, or check back after the next data refresh.
             </p>
           ) : result.diff.changes.length === 0 ? (
             <div className="mt-2 max-w-[64ch]">
-              <p className="text-sm leading-relaxed text-muted">
+              <p className="text-body leading-relaxed text-muted">
                 {enemiesKnown === 0
                   ? "Nothing yet — add an enemy and the model starts re-ranking against them."
                   : "Nothing so far. This draft doesn't threaten anything the default core wasn't already handling."}
@@ -586,13 +586,13 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
                       <a href={toHash.item(name)}
                         aria-label={`${name}${changed ? ", added by your draft" : ""}, ${it?.cost ?? "unknown"} gold`}
                         className="press grid grid-cols-[20px_32px_minmax(0,1fr)_auto] items-center gap-2.5 rounded-md py-1.5 pr-1.5 transition-colors duration-150 ease-standard hover:bg-bg1">
-                        <span aria-hidden="true" className="text-right font-mono text-[10px] text-faint">{i + 1}</span>
+                        <span aria-hidden="true" className="text-right font-mono text-micro text-faint">{i + 1}</span>
                         <Icon name={name} item className="h-8 w-8" />
                         <span className="flex min-w-0 items-center gap-2">
-                          <span className={`truncate text-[13px] ${changed ? "font-medium text-under" : "text-ink"}`}>{name}</span>
-                          {changed && <span className="font-mono text-[9.5px] uppercase tracking-[0.06em] text-under">draft pick</span>}
+                          <span className={`truncate text-body ${changed ? "font-medium text-under" : "text-ink"}`}>{name}</span>
+                          {changed && <span className="font-mono text-micro uppercase tracking-[0.06em] text-under">draft pick</span>}
                         </span>
-                        {it && <span aria-hidden="true" className="font-mono text-[11px] text-faint">{it.cost}g</span>}
+                        {it && <span aria-hidden="true" className="font-mono text-label text-faint">{it.cost}g</span>}
                       </a>
                     </li>
                   );

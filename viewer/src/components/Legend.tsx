@@ -52,26 +52,26 @@ export function Legend({ onClose }: { onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-3 flex items-start justify-between gap-4">
-          <h2 id="legend-title" ref={headingRef} tabIndex={-1} className="font-display text-xl font-bold text-ink focus:outline-none">
+          <h2 id="legend-title" ref={headingRef} tabIndex={-1} className="font-display text-title font-bold text-ink focus:outline-none">
             How this works
           </h2>
           <button
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="press -mr-1 -mt-1 rounded-sm px-2 py-1 font-mono text-sm text-faint hover:text-ink"
+            className="press -mr-1 -mt-1 rounded-sm px-2 py-1 font-mono text-body text-faint hover:text-ink"
           >
             ✕
           </button>
         </div>
 
-        <div className="mb-4 flex flex-wrap gap-3 text-[11px] text-muted">
+        <div className="mb-4 flex flex-wrap gap-3 text-label text-muted">
           <span className="inline-flex items-center gap-1.5"><Swatch className="bg-under" />Model rates above the meta</span>
           <span className="inline-flex items-center gap-1.5"><Swatch className="bg-premium" />Meta rates above the model</span>
           <span className="inline-flex items-center gap-1.5"><Swatch className="bg-gold" />The model&rsquo;s own signal</span>
         </div>
 
-        <ul className="flex flex-col gap-2 text-sm text-muted">
+        <ul className="flex flex-col gap-2 text-body text-muted">
           <li><b className="text-ink">Home</b> ranks every lane by how far our model and the community&rsquo;s meta disagree. <b className="text-ink">Pick a god</b> anywhere to see its builds.</li>
           <li><b className="text-ink">Suggested</b> tabs are our scoring engine&rsquo;s picks (a heuristic). <b className="text-ink">Community</b> is SmiteBrain&rsquo;s high-elo meta. <b className="text-ink">Your</b> saved builds are the named tabs.</li>
           <li><b className="text-ink">Flavors</b> (crit / burst / bruiser / anti-tank) re-weight the build; the <b className="text-ink">Aspect</b> toggle swaps to that god&rsquo;s aspect build; the <b className="text-ink">Conquest / Joust</b> toggle changes mode.</li>
@@ -81,7 +81,7 @@ export function Legend({ onClose }: { onClose: () => void }) {
           <li>Your builds save in <b className="text-ink">your browser</b> (nothing is uploaded). Scores are heuristics — a fan project, not official.</li>
         </ul>
 
-        <button type="button" onClick={onClose} className="press mt-4 rounded-md bg-gold px-4 py-1.5 text-sm font-medium text-bg0">Got it</button>
+        <button type="button" onClick={onClose} className="press mt-4 rounded-md bg-gold px-4 py-1.5 text-body font-medium text-bg0">Got it</button>
       </div>
     </div>
   );

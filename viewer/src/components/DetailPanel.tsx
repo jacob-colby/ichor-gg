@@ -71,7 +71,7 @@ function ItemIcon({ name, className }: { name: string; className: string }) {
   if (tries > 1) {
     return (
       <span aria-hidden="true"
-        className={`flex flex-none items-center justify-center rounded-sm bg-bg3 font-display text-[11px] font-bold text-faint ${className}`}>
+        className={`flex flex-none items-center justify-center rounded-sm bg-bg3 font-display text-label font-bold text-faint ${className}`}>
         {name.slice(0, 1)}
       </span>
     );
@@ -90,11 +90,11 @@ function ItemIcon({ name, className }: { name: string; className: string }) {
 function ScoreBar({ label, value, help }: { label: string; value: number; help?: string }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="w-12 shrink-0 font-mono text-[10px] text-muted" title={help}>{label}</span>
+      <span className="w-12 shrink-0 font-mono text-micro text-muted" title={help}>{label}</span>
       <div className="h-1.5 min-w-0 flex-1 rounded-sm bg-bg3">
         <div className="h-1.5 rounded-sm bg-gold" style={{ width: `${Math.round(Math.min(Math.max(value, 0), 1) * 100)}%` }} />
       </div>
-      <span className="w-8 shrink-0 text-right font-mono text-[10px] text-ink">{value.toFixed(2)}</span>
+      <span className="w-8 shrink-0 text-right font-mono text-micro text-ink">{value.toFixed(2)}</span>
     </div>
   );
 }
@@ -115,21 +115,21 @@ function WhyScoreBlock({ score, measured, meta }: {
   return (
     <div>
       <div className="mb-1.5 flex items-baseline justify-between gap-2">
-        <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-faint">Why this item</span>
-        <span className="font-mono text-[11px] text-gold">{score.total.toFixed(2)}</span>
+        <span className="font-mono text-micro uppercase tracking-[0.1em] text-faint">Why this item</span>
+        <span className="font-mono text-label text-gold">{score.total.toFixed(2)}</span>
       </div>
       <div className="flex flex-col gap-1">
         {axes.map((a) => (
           <ScoreBar key={a.key} label={a.label} value={score[a.key]} help={a.help} />
         ))}
       </div>
-      <p className="mt-1.5 font-mono text-[9.5px] leading-relaxed text-faint">
+      <p className="mt-1.5 font-mono text-micro leading-relaxed text-faint">
         {measured
           ? "Four signals, weighted into one score. Higher is better on every axis."
           : "No community data in this mode, so win and pick aren’t measured here."}
       </p>
       {measured && (
-        <p className="mt-1.5 border-t border-line pt-1.5 font-mono text-[9.5px] leading-relaxed text-faint">
+        <p className="mt-1.5 border-t border-line pt-1.5 font-mono text-micro leading-relaxed text-faint">
           {meta ? (
             <>
               Community buys it {meta.position}
@@ -170,27 +170,27 @@ function ItemDetailCard({ item, name, score, measured = true, meta }: {
   return (
     <div>
       <div className="mb-1 flex items-baseline justify-between gap-2">
-        <span className="font-display text-sm font-semibold text-ink">{item.name}</span>
-        <span className="shrink-0 font-mono text-[11px] text-faint">
+        <span className="font-display text-body font-semibold text-ink">{item.name}</span>
+        <span className="shrink-0 font-mono text-label text-faint">
           <span className="text-gold">{item.cost}g</span> · {tierLabel(item.tier)}
         </span>
       </div>
       {Object.entries(item.stats || {}).map(([k, v]) => (
-        <div key={k} className="flex justify-between text-xs text-muted">
+        <div key={k} className="flex justify-between text-small text-muted">
           <span>{k}</span><span className="font-mono text-ink">{v}</span>
         </div>
       ))}
-      {item.passive && <div className="mt-1 text-xs leading-relaxed text-muted">{item.passive}</div>}
+      {item.passive && <div className="mt-1 text-small leading-relaxed text-muted">{item.passive}</div>}
       {(item.effect_tags?.length || item.efficiency_tier) && (
         <div className="mt-2 flex flex-wrap gap-1">
           {item.efficiency_tier && (
-            <span className={`rounded-sm px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.06em] ${
+            <span className={`rounded-sm px-1.5 py-0.5 font-mono text-micro uppercase tracking-[0.06em] ${
               item.efficiency_tier === "undervalued" ? "bg-under/20 text-under"
               : item.efficiency_tier === "premium" ? "bg-premium/20 text-premium"
               : "bg-bg3 text-muted"}`}>{item.efficiency_tier}</span>
           )}
           {item.effect_tags?.map((t) => (
-            <span key={t} className="rounded-sm bg-bg3 px-1.5 py-0.5 font-mono text-[10px] text-muted">{t}</span>
+            <span key={t} className="rounded-sm bg-bg3 px-1.5 py-0.5 font-mono text-micro text-muted">{t}</span>
           ))}
         </div>
       )}
@@ -214,11 +214,11 @@ function swapOrderShiftNote(swapCost: number | undefined, replacedCost: number |
 }
 
 const segBtn = (active: boolean) =>
-  `press rounded-md px-2.5 py-1 font-display text-xs font-semibold capitalize transition-colors duration-150 ease-standard ${
+  `press rounded-md px-2.5 py-1 font-display text-small font-semibold capitalize transition-colors duration-150 ease-standard ${
     active ? "bg-gold text-bg0" : "text-muted hover:text-ink"
   }`;
 
-const eyebrow = "font-mono text-[10.5px] uppercase tracking-[0.1em] text-faint";
+const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
 /** The model's verdict on this god, in the same vocabulary Home uses — so
  * arriving from a divergence row lands on the continuation of that argument
@@ -228,7 +228,7 @@ function Verdict({ entry }: { entry?: GodTierEntry }) {
   const unranked = entry.community == null;
   const delta = unranked ? null : entry.ours - entry.community!;
   return (
-    <div data-testid="god-verdict" className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-[11px]">
+    <div data-testid="god-verdict" className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-label">
       <span className="text-faint">
         model <span className="text-gold">{entry.ours.toFixed(2)}</span>
         {entry.tier_ours && <span className="text-ink-soft"> {entry.tier_ours}</span>}
@@ -296,23 +296,23 @@ function LedgerRowView({
         className="press grid w-full grid-cols-[58px_28px_minmax(0,1fr)_auto] items-center gap-x-2.5 gap-y-1 rounded-md py-1.5 pr-1.5 text-left transition-colors duration-150 ease-standard hover:bg-bg1"
       >
         {/* The gold spine — a continuous hairline down the left of the ledger. */}
-        <span aria-hidden="true" className={`self-stretch border-r border-line pr-2.5 text-right font-mono text-[10px] leading-5 ${removed ? "text-line-strong line-through" : "text-faint"}`}>
+        <span aria-hidden="true" className={`self-stretch border-r border-line pr-2.5 text-right font-mono text-micro leading-5 ${removed ? "text-line-strong line-through" : "text-faint"}`}>
           {removed ? "—" : goldText(row.cumulative)}
         </span>
 
         <ItemIcon name={row.name} className={`h-7 w-7 ${removed ? "opacity-30" : ""}`} />
 
         <span className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-1">
-          <span className={`truncate text-[13px] ${
+          <span className={`truncate text-body ${
             removed ? "text-muted line-through" : added ? "font-medium text-under" : "text-ink"}`}>
             {row.name}
           </span>
-          {added && <span className="font-mono text-[9.5px] uppercase tracking-[0.06em] text-under">swap in</span>}
+          {added && <span className="font-mono text-micro uppercase tracking-[0.06em] text-under">swap in</span>}
           {row.isFlex && row.status === "kept" && (
-            <span className="rounded-sm bg-bg3 px-1 py-px font-mono text-[9.5px] uppercase tracking-[0.06em] text-faint">flex</span>
+            <span className="rounded-sm bg-bg3 px-1 py-px font-mono text-micro uppercase tracking-[0.06em] text-faint">flex</span>
           )}
           {showScores && !removed && !added && !row.inMeta && (
-            <span className="rounded-sm bg-under/15 px-1 py-px font-mono text-[9.5px] uppercase tracking-[0.06em] text-under"
+            <span className="rounded-sm bg-under/15 px-1 py-px font-mono text-micro uppercase tracking-[0.06em] text-under"
               title="The model buys this; this god's community build doesn't">
               off-meta
             </span>
@@ -324,16 +324,16 @@ function LedgerRowView({
             <span className="h-1 w-10 rounded-sm bg-bg3">
               <span className="bar-grow block h-1 origin-left rounded-sm bg-gold" style={{ width: `${Math.round(Math.min(Math.max(row.score.total, 0), 1) * 100)}%` }} />
             </span>
-            <span className="w-7 text-right font-mono text-[11px] text-ink">{row.score.total.toFixed(2)}</span>
+            <span className="w-7 text-right font-mono text-label text-ink">{row.score.total.toFixed(2)}</span>
           </span>
         ) : communityRates && ownRates ? (
-          <span aria-hidden="true" className="shrink-0 font-mono text-[11px] text-muted">
+          <span aria-hidden="true" className="shrink-0 font-mono text-label text-muted">
             {Math.round(ownRates.pick_rate * 100)}% / {Math.round(ownRates.win_rate * 100)}%
           </span>
         ) : <span />}
 
         {/* Second line: the four axes, and what the meta does with this item. */}
-        <span aria-hidden="true" className="col-start-3 col-span-2 flex flex-wrap items-center gap-x-3 gap-y-0.5 font-mono text-[9.5px] text-faint">
+        <span aria-hidden="true" className="col-start-3 col-span-2 flex flex-wrap items-center gap-x-3 gap-y-0.5 font-mono text-micro text-faint">
           {row.score && !removed && (
             <span className="flex gap-x-2">
               {AXES.map((a) => (
@@ -422,8 +422,8 @@ export function DetailPanel({
   if (!note || note.builds.length === 0) {
     return (
       <div className="max-w-[52ch]">
-        <h1 className="font-display text-xl font-bold text-ink">{god}</h1>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
+        <h1 className="font-display text-title font-bold text-ink">{god}</h1>
+        <p className="mt-2 text-body leading-relaxed text-muted">
           No build data for {god} in this index yet. The pipeline builds one per god per mode —
           this god either hasn&rsquo;t been scraped or has no items scored for {mode}.
         </p>
@@ -527,8 +527,8 @@ export function DetailPanel({
           <div className="flex min-w-0 items-center gap-3">
             <ItemIcon name={god} className="h-[52px] w-[52px] rounded-lg" />
             <div className="min-w-0">
-              <h1 className="font-display text-2xl font-bold leading-none text-ink">{god}</h1>
-              <div className="mt-1 text-xs text-muted">
+              <h1 className="font-display text-title font-bold leading-none text-ink">{god}</h1>
+              <div className="mt-1 text-small text-muted">
                 {godData ? (
                   <>
                     {godData.pantheon} · <span className={godRoleTextClass(godData)}>{godData.role}</span> ·{" "}
@@ -563,7 +563,7 @@ export function DetailPanel({
       </header>
 
       {aspectOn && aspectMeta && (
-        <div className="mt-3 rounded-md border border-gold/40 bg-bg1 p-2.5 text-xs">
+        <div className="mt-3 rounded-md border border-gold/40 bg-bg1 p-2.5 text-small">
           <span className="font-display font-semibold text-gold">{aspectMeta.name}</span>
           <span className="text-muted"> — {aspectMeta.kit_changes}</span>
         </div>
@@ -581,7 +581,7 @@ export function DetailPanel({
             ))}
           </div>
           <button type="button" onClick={() => setEditing("new")}
-            className="press rounded-md border border-line bg-bg2 px-2.5 py-1 text-xs text-blue hover:border-line-strong">
+            className="press rounded-md border border-line bg-bg2 px-2.5 py-1 text-small text-blue hover:border-line-strong">
             + New build
           </button>
           {active.source === "mine" && (
@@ -592,7 +592,7 @@ export function DetailPanel({
                 starter: (active as CuratedBuildEntry).starter,
                 notes: (active as CuratedBuildEntry).notes,
               })}
-              className="press rounded-md border border-line bg-bg2 px-2.5 py-1 text-xs text-muted hover:text-ink">
+              className="press rounded-md border border-line bg-bg2 px-2.5 py-1 text-small text-muted hover:text-ink">
               Edit this build
             </button>
           )}
@@ -600,7 +600,7 @@ export function DetailPanel({
       )}
 
       {isFun && (
-        <div className="mt-3 rounded-md border border-premium/40 bg-bg1 p-2.5 text-xs">
+        <div className="mt-3 rounded-md border border-premium/40 bg-bg1 p-2.5 text-small">
           <span className="font-display font-semibold text-premium">For fun 🎲</span>
           <span className="text-muted"> — deliberately off-class; not scored against the meta.</span>
         </div>
@@ -613,7 +613,7 @@ export function DetailPanel({
         <div className="min-w-0 flex-1 lg:max-w-[720px]">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <h2 className={eyebrow}>{community ? "Slot order" : "Buy order"}</h2>
-            <p className="font-mono text-[10.5px] text-faint">
+            <p className="font-mono text-label text-faint">
               {/* "core", not "total": the starter is bought first and isn't on
                   this spine, so calling it a total would misstate the build. */}
               {goldText(ledger.totalGold)} core
@@ -637,7 +637,7 @@ export function DetailPanel({
                   {i === 1 && <span aria-hidden="true" className="text-faint">→</span>}
                   <span className="flex items-center gap-1.5">
                     <ItemIcon name={name} className="h-5 w-5" />
-                    <span className="text-xs text-ink-soft">{name}</span>
+                    <span className="text-small text-ink-soft">{name}</span>
                   </span>
                 </span>
               ))}
@@ -670,7 +670,7 @@ export function DetailPanel({
 
           {compareToMeta && ledger.hasMeta && (
             <div className="mt-3 border-t border-line pt-2.5">
-              <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-faint">
+              <p className="font-mono text-micro uppercase tracking-[0.08em] text-faint">
                 What the meta buys instead
                 <span className="px-1">·</span>
                 {ledger.metaTotalGold != null
@@ -678,7 +678,7 @@ export function DetailPanel({
                   : <>{ledger.metaSlots} slots · core cost unavailable</>}
               </p>
               {ledger.metaOnly.length === 0 ? (
-                <p className="mt-1.5 text-xs text-muted">
+                <p className="mt-1.5 text-small text-muted">
                   Nothing — the model buys every item the community does, in a different order.
                 </p>
               ) : (
@@ -690,12 +690,12 @@ export function DetailPanel({
                         aria-label={`${m.name}, bought ${m.position} by the community at ${goldText(m.cumulative)} spent, not in this build`}
                         className="press grid w-full grid-cols-[58px_28px_minmax(0,1fr)_auto] items-center gap-x-2.5 rounded-md py-1.5 pr-1.5 text-left transition-colors duration-150 ease-standard hover:bg-bg1"
                       >
-                        <span aria-hidden="true" className="self-stretch border-r border-line pr-2.5 text-right font-mono text-[10px] leading-5 text-faint">
+                        <span aria-hidden="true" className="self-stretch border-r border-line pr-2.5 text-right font-mono text-micro leading-5 text-faint">
                           {goldText(m.cumulative)}
                         </span>
                         <ItemIcon name={m.name} className="h-7 w-7 opacity-60" />
-                        <span className="min-w-0 truncate text-[13px] text-ink-soft">{m.name}</span>
-                        <span aria-hidden="true" className="shrink-0 font-mono text-[10px] text-faint">
+                        <span className="min-w-0 truncate text-body text-ink-soft">{m.name}</span>
+                        <span aria-hidden="true" className="shrink-0 font-mono text-micro text-faint">
                           {m.pickRate != null && <>{Math.round(m.pickRate * 100)}% pick</>}
                           {m.winRate != null && <> · {Math.round(m.winRate * 100)}% win</>}
                         </span>
@@ -707,7 +707,7 @@ export function DetailPanel({
             </div>
           )}
           {!community && !compareToMeta && !isFun && (
-            <p className="mt-2 border-t border-line pt-2 text-xs text-muted">
+            <p className="mt-2 border-t border-line pt-2 text-small text-muted">
               No community build for {god} in {note.mode} — nothing to compare this against, so the
               rows show the model&rsquo;s score alone.
             </p>
@@ -730,19 +730,19 @@ export function DetailPanel({
                 return (
                   <button key={swap.vs_tag} type="button" disabled={!clickable} aria-pressed={selected}
                     onClick={() => clickable && setSelectedTag(selected ? null : swap.vs_tag)}
-                    className={`press rounded-md px-2 py-1.5 text-left text-xs transition-colors duration-150 ease-standard ${
+                    className={`press rounded-md px-2 py-1.5 text-left text-small transition-colors duration-150 ease-standard ${
                       selected ? "bg-gold font-medium text-bg0"
                       : clickable ? "bg-bg2 text-ink-soft hover:bg-bg3"
                       : "bg-bg2 text-faint"}`}>
                     <span className="font-medium">{VS_LABELS[swap.vs_tag] ?? swap.vs_tag}</span>
                     {" — "}{swap.swap_item ?? swap.swap.replace(/^.*—\s*/, "").replace(/[()]/g, "")}
                     {replacedName && (
-                      <span className={`mt-0.5 block text-[10px] ${selected ? "text-bg0/70" : "text-faint"}`}>
+                      <span className={`mt-0.5 block text-micro ${selected ? "text-bg0/70" : "text-faint"}`}>
                         in for {replacedName}{orderNote ? ` — ${orderNote}` : ""}
                       </span>
                     )}
                     {!clickable && (
-                      <span className="mt-0.5 block text-[10px] text-faint">no single item covers this — play around it</span>
+                      <span className="mt-0.5 block text-micro text-faint">no single item covers this — play around it</span>
                     )}
                   </button>
                 );
@@ -757,7 +757,7 @@ export function DetailPanel({
         <section className="mt-7 border-t border-line pt-5">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <h2 className={eyebrow}>Popular items</h2>
-            <p className="font-mono text-[10px] text-faint">what this god&rsquo;s players actually buy — not an ordered build</p>
+            <p className="font-mono text-micro text-faint">what this god&rsquo;s players actually buy — not an ordered build</p>
           </div>
           <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
             {popularItems.map((p) => {
@@ -768,11 +768,11 @@ export function DetailPanel({
                     inCore ? "border-gold/40 bg-gold/5" : "border-line bg-bg2"}`}>
                   <ItemIcon name={p.name} className="h-7 w-7" />
                   <span className="flex min-w-0 flex-col">
-                    <span className="truncate text-[11.5px] text-ink">{p.name}</span>
-                    <span className="font-mono text-[9.5px] text-faint">
+                    <span className="truncate text-label text-ink">{p.name}</span>
+                    <span className="font-mono text-micro text-faint">
                       {Math.round(p.pick_rate * 100)}% pick · {Math.round(p.win_rate * 100)}% win
                     </span>
-                    {inCore && <span className="font-mono text-[9.5px] uppercase tracking-[0.06em] text-gold">in core</span>}
+                    {inCore && <span className="font-mono text-micro uppercase tracking-[0.06em] text-gold">in core</span>}
                   </span>
                 </li>
               );
@@ -782,7 +782,7 @@ export function DetailPanel({
       )}
 
       {!community && (active as CuratedBuildEntry).rationale && (
-        <p className="mt-6 max-w-[74ch] border-t border-line pt-3 text-xs leading-relaxed text-muted">
+        <p className="mt-6 max-w-[74ch] border-t border-line pt-3 text-small leading-relaxed text-muted">
           {(active as CuratedBuildEntry).rationale}
         </p>
       )}

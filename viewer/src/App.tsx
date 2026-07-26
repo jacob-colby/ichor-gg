@@ -80,19 +80,19 @@ function App() {
   if (error) {
     return (
       <div className="flex h-screen flex-col items-center justify-center gap-4 bg-bg0 px-6 text-center text-ink">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold font-display text-base font-bold text-bg0">S2</div>
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold font-display text-lead font-bold text-bg0">S2</div>
         <div className="max-w-[46ch]">
-          <h1 className="font-display text-2xl font-bold text-ink">Couldn&rsquo;t load the build data</h1>
-          <p className="mt-2 text-sm leading-relaxed text-muted">
+          <h1 className="font-display text-title font-bold text-ink">Couldn&rsquo;t load the build data</h1>
+          <p className="mt-2 text-body leading-relaxed text-muted">
             ichor reads everything from a single data file, and that file didn&rsquo;t come back.
             It&rsquo;s usually a refresh away — if it keeps failing, the site is probably mid-deploy.
           </p>
         </div>
-        <button type="button" onClick={reload} className="press rounded-md bg-gold px-4 py-1.5 text-sm font-medium text-bg0">
+        <button type="button" onClick={reload} className="press rounded-md bg-gold px-4 py-1.5 text-body font-medium text-bg0">
           Try again
         </button>
         {/* The technical detail stays available without leading with it. */}
-        <p className="font-mono text-[10.5px] text-faint">{error}</p>
+        <p className="font-mono text-label text-faint">{error}</p>
       </div>
     );
   }
@@ -103,13 +103,13 @@ function App() {
             the page doesn't jump once index.json lands — only the content
             area is a placeholder. */}
         <nav className="hidden w-16 shrink-0 flex-col items-center gap-3.5 border-r border-line bg-rail py-3.5 md:flex">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold font-display text-[15px] font-bold text-bg0">S2</div>
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold font-display text-lead font-bold text-bg0">S2</div>
         </nav>
         <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
           <header className="flex items-center gap-3 border-b border-line px-4 py-2.5">
-            <span className="font-display text-base font-bold text-ink">ichor</span>
+            <span className="font-display text-lead font-bold text-ink">ichor</span>
             <div className="ml-auto flex items-center gap-3">
-              <button type="button" onClick={reload} className="press rounded-md bg-bg2 px-3 py-1.5 text-xs text-muted hover:text-ink">Reload</button>
+              <button type="button" onClick={reload} className="press rounded-md bg-bg2 px-3 py-1.5 text-small text-muted hover:text-ink">Reload</button>
             </div>
           </header>
           {/* Shaped like the route that's actually coming, so nothing jumps
@@ -135,77 +135,75 @@ function App() {
   };
 
   const patchNotes = data.patch_notes ?? [];
-  const title =
-    route.view === "home" ? "Home"
-    : route.view === "draft" ? "Draft"
-    : route.view === "items" ? "Items"
-    : route.view === "tiers" ? "Tiers"
-    : route.view === "patch" ? "Patch"
-    : "Builds";
-  const count =
-    route.view === "home" ? `${data.gods.length} gods`
-    : route.view === "draft" ? ""
-    : route.view === "items" ? `${data.items.length} items`
-    : route.view === "tiers" ? `${data.tierlist?.gods.length ?? 0} gods · ${data.tierlist?.items.length ?? 0} items`
-    : route.view === "patch" ? (patchNotes.length > 0 ? `${patchNotes.length} patches` : "")
-    : god ? god.pantheon ?? "" : `${data.gods.length} gods`;
 
   return (
     <div className="flex h-screen bg-bg0 text-ink">
       {/* First focusable on the page — the icon rail is seven stops deep. */}
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-gold focus:px-3 focus:py-2 focus:font-display focus:text-sm focus:font-semibold focus:text-bg0"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-gold focus:px-3 focus:py-2 focus:font-display focus:text-body focus:font-semibold focus:text-bg0"
       >
         Skip to content
       </a>
 
-      {/* Desktop icon rail */}
-      <nav className="hidden w-16 shrink-0 flex-col items-center gap-3.5 border-r border-line bg-rail py-3.5 md:flex">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold font-display text-[15px] font-bold text-bg0">S2</div>
+      {/* Desktop rail. Labelled, because the icon-only version was seven
+          unlabelled squares a first-timer had to hover-probe — while the mobile
+          tab bar had carried labels all along. */}
+      <nav aria-label="Main" className="hidden w-[92px] shrink-0 flex-col items-stretch gap-1 border-r border-line bg-rail px-2 py-3 md:flex">
+        <a href={toHash.home()} aria-label="ichor — home"
+          className="press mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-md bg-gold font-display text-lead font-bold text-bg0">
+          S2
+        </a>
         {NAV.map((n) => {
           const active = route.view === n.view;
           return (
-            <button key={n.view} type="button" onClick={() => goTo(n.view)} aria-label={n.label} aria-current={active}
-              className={`press flex h-9 w-9 items-center justify-center rounded-[11px] transition-colors duration-[180ms] ease-standard ${active ? "border border-gold bg-bg2 text-gold" : "bg-bg2 text-muted hover:text-ink-soft"}`}>
+            <button key={n.view} type="button" onClick={() => goTo(n.view)} aria-current={active ? "page" : undefined}
+              className={`press flex flex-col items-center gap-1 rounded-md px-1 py-2 transition-colors duration-[180ms] ease-standard ${
+                active ? "bg-bg2 text-gold" : "text-muted hover:bg-bg2/60 hover:text-ink-soft"}`}>
               {n.icon}
+              <span className="font-mono text-micro uppercase tracking-[0.08em]">{n.label}</span>
             </button>
           );
         })}
-        <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help"
-          className="press mt-auto flex h-9 w-9 items-center justify-center rounded-[11px] bg-bg2 text-muted hover:text-ink-soft">?</button>
+        <button type="button" onClick={() => setLegendOpen(true)}
+          className="press mt-auto flex flex-col items-center gap-1 rounded-md px-1 py-2 text-muted transition-colors duration-[180ms] ease-standard hover:bg-bg2/60 hover:text-ink-soft">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3 2.45V14" /><path d="M12 17.5v.01" />
+          </svg>
+          <span className="font-mono text-micro uppercase tracking-[0.08em]">Help</span>
+        </button>
       </nav>
 
       <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
         {/* Header */}
         <header className="flex items-center gap-3 border-b border-line px-4 py-2.5">
-          <span className="font-display text-base font-bold text-ink">{title}</span>
-          {count && <span className="font-mono text-[11px] text-faint">{count}</span>}
-          <div className="ml-auto flex items-center gap-3">
+          <a href={toHash.home()} className="press font-display text-lead font-bold tracking-tight text-ink md:hidden">ichor</a>
+          <div className="ml-auto flex items-center gap-2">
             {data.data_updated && (
               <span
                 data-testid="header-freshness"
                 title={data.data_updated}
-                className="hidden font-mono text-[10.5px] text-faint sm:inline"
+                className="hidden font-mono text-label text-faint sm:inline"
               >
                 Updated {relativeDate(data.data_updated)}{data.data_patch ? ` · ${data.data_patch}` : ""}
               </span>
             )}
             {isDev && (
               <button type="button" onClick={() => setAddOpen(true)}
-                className="press hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-xs text-faint hover:text-muted md:flex">
-                <span className="rounded border border-line-strong px-1 py-px font-mono text-[8px] uppercase tracking-wider">Dev</span>+ Add god
+                className="press hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-small text-faint hover:text-muted md:flex">
+                <span className="rounded border border-line-strong px-1 py-px font-mono text-micro uppercase tracking-wider">Dev</span>+ Add god
               </button>
             )}
-            <button type="button" onClick={reload} className="press rounded-md bg-bg2 px-3 py-1.5 text-xs text-muted hover:text-ink">Reload</button>
-            <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help" className="press rounded-md bg-bg2 px-2.5 py-1.5 text-xs text-muted hover:text-ink md:hidden">?</button>
+            <button type="button" onClick={reload} className="press rounded-md border border-line bg-bg2 px-3 py-1.5 text-small text-muted hover:text-ink">Reload</button>
+            <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help"
+              className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted hover:text-ink md:hidden">?</button>
           </div>
         </header>
 
         {/* Dev-only scraping banner — quiet tier, flat fade */}
         {isDev && scraping && (
-          <div className="flex items-center justify-center gap-2 border-b border-dashed border-line-strong bg-bg1 px-3 py-1.5 text-[11.5px] text-faint">
-            <span className="rounded border border-line-strong px-1.5 py-px font-mono text-[9px] uppercase tracking-wider text-faint">Dev</span>
+          <div className="flex items-center justify-center gap-2 border-b border-dashed border-line-strong bg-bg1 px-3 py-1.5 text-label text-faint">
+            <span className="rounded border border-line-strong px-1.5 py-px font-mono text-micro uppercase tracking-wider text-faint">Dev</span>
             Scraping new data… this can take a minute.
           </div>
         )}
@@ -287,9 +285,11 @@ function App() {
           {NAV.map((n) => {
             const active = route.view === n.view;
             return (
-              <button key={n.view} type="button" onClick={() => goTo(n.view)} aria-current={active}
-                className={`press flex flex-1 flex-col items-center gap-1 py-2 font-display text-[11px] font-semibold ${active ? "border-t-2 border-gold text-gold" : "border-t-2 border-transparent text-muted"}`}>
-                {n.icon}{n.label}
+              <button key={n.view} type="button" onClick={() => goTo(n.view)} aria-current={active ? "page" : undefined}
+                className={`press flex flex-1 flex-col items-center gap-1 py-2 ${
+                  active ? "border-t-2 border-gold text-gold" : "border-t-2 border-transparent text-muted"}`}>
+                {n.icon}
+                <span className="font-mono text-micro uppercase tracking-[0.08em]">{n.label}</span>
               </button>
             );
           })}
@@ -310,6 +310,6 @@ function App() {
 }
 
 const tabBtn = (active: boolean) =>
-  `press rounded-md px-3.5 py-1.5 font-display text-xs font-semibold transition-colors duration-[150ms] ease-standard ${active ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"}`;
+  `press rounded-md px-3.5 py-1.5 font-display text-small font-semibold transition-colors duration-[150ms] ease-standard ${active ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"}`;
 
 export default App;

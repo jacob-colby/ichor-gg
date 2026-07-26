@@ -49,7 +49,7 @@ export function ItemPickerModal({
     [items, filter, sort, excl],
   );
   const set = (patch: Partial<ItemFilter>) => setFilter((f) => ({ ...f, ...patch }));
-  const selCls = "rounded-md border border-line bg-bg2 px-2 py-1 text-xs text-muted focus:border-blue focus:outline-none";
+  const selCls = "rounded-md border border-line bg-bg2 px-2 py-1 text-small text-muted focus:border-blue focus:outline-none";
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" onClick={onClose}>
@@ -63,16 +63,16 @@ export function ItemPickerModal({
       >
         <div className="mb-2 flex items-center">
           <h2 id="item-picker-title" ref={headingRef} tabIndex={-1}
-            className="font-display text-lg font-semibold text-ink focus:outline-none">Add item</h2>
+            className="font-display text-title font-semibold text-ink focus:outline-none">Add item</h2>
           <button type="button" onClick={onClose} aria-label="Close"
-            className="press ml-auto rounded-md bg-bg2 px-2 py-1 font-mono text-xs text-muted hover:text-ink">✕</button>
+            className="press ml-auto rounded-md bg-bg2 px-2 py-1 font-mono text-small text-muted hover:text-ink">✕</button>
         </div>
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <div className="flex items-center gap-2 rounded-md border border-line bg-bg2 px-2.5 py-1.5 focus-within:border-blue">
             <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" className="text-muted"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
             <input placeholder="Name, tag, stat…" aria-label="Search items by name, tag, stat or passive"
               value={filter.q ?? ""} onChange={(e) => set({ q: e.target.value })}
-              className="w-32 bg-transparent py-1 text-xs text-ink placeholder:text-muted focus:outline-none" />
+              className="w-32 bg-transparent py-1 text-small text-ink placeholder:text-muted focus:outline-none" />
           </div>
           <select
             value={filter.tier ?? ""}
@@ -105,7 +105,7 @@ export function ItemPickerModal({
             <option value="cost-asc">Cost ↑</option>
             <option value="cost-desc">Cost ↓</option>
           </select>
-          <span className="ml-auto font-mono text-[11px] text-faint">{shown.length}</span>
+          <span className="ml-auto font-mono text-label text-faint">{shown.length}</span>
         </div>
         <div className="grid flex-1 grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-2 overflow-y-auto sm:grid-cols-[repeat(auto-fill,minmax(160px,1fr))]">
           {shown.map((it) => (

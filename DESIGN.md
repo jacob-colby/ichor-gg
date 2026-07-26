@@ -126,13 +126,28 @@ These two are a **direction pair, not a good/bad pair**. They always answer one 
 
 **Character:** A tactical, slightly technical pairing — Rajdhani's condensed geometric caps read as "console display" for names and headings, Inter carries all reading-length text cleanly, and JetBrains Mono in small tracked uppercase marks anything that's a label, tag, or section eyebrow rather than content.
 
-### Hierarchy
-- **Display** (Rajdhani, semibold/bold, ~text-xl, tight leading): god names on cards, dialog headings.
-- **Body** (Inter, regular/medium, text-xs–text-sm): descriptions, list content, tooltip copy.
-- **Label** (JetBrains Mono, medium, text-[10–11px], uppercase, tracked ~0.08–0.1em): section eyebrows ("Pinned", "Filters", god counts), status tags.
+### The scale
+
+Seven steps, defined once in `index.css` as `--text-*` theme tokens and used by name. **Never an arbitrary size.**
+
+| Step | px | Use |
+|---|---|---|
+| `text-micro` | 10 | dense mono numerals inside a grid cell — the floor |
+| `text-label` | 11 | mono uppercase micro-labels, tags, counts |
+| `text-small` | 12 | secondary content, chips, captions |
+| `text-body` | 13 | default reading size |
+| `text-lead` | 15 | intro paragraphs, dialog body |
+| `text-title` | 20 | section titles, god/item names in a detail view |
+| `text-display` | 32 | the one page claim per surface |
+
+The app previously ran **sixteen** sizes with nine of them inside a 4px band (9 / 9.5 / 10 / 10.5 / 11 / 11.5 / 12 / 12.5 / 13), and 61–84% of every surface's text at or below 10.5px. That is why it read flat: with no ratio between steps there is no hierarchy to read, only small text. The scale is tight at the bottom because this is a dense data tool and open at the top so a page can make a claim.
+
+**10px is a hard floor.** Nothing below it ships — the god sidebar was running 7px.
 
 ### Named Rules
 **The Mono-Label Rule.** Any piece of UI that names a category, state, or count rather than describing content sets in JetBrains Mono, uppercase, tracked — never Inter.
+
+**The One-Claim Rule.** Every surface states its own claim in `text-display`, once, carrying live numbers. The app chrome never repeats it: the header used to print a per-route count that contradicted the surface's own ("159 items" over a shop reading "30 items"). Chrome carries navigation, freshness and actions — nothing the surface is already responsible for saying.
 
 ## Layout
 
@@ -218,6 +233,11 @@ Components should feel **tactile and confident**: presses register physically (a
 
 ### Tooltip
 - `rounded-md`, `border-line`, `bg-bg2`, `shadow-card`, small (`text-xs`) copy. Flips above/below the trigger and shifts horizontally to avoid clipping; opens on a short hover delay but instantly on keyboard focus (`role="tooltip"`).
+
+### App chrome (rail + header)
+- The rail is **labelled**, not icon-only: each destination is an icon above a `text-micro` mono uppercase label, matching the mobile tab bar. Icon-only navigation made a first-timer hover-probe seven unlabelled squares while the mobile bar had carried labels all along.
+- Active state is `bg-bg2` + gold glyph, with `aria-current="page"` — never colour alone.
+- The header carries the brand anchor, freshness and actions. **No page title and no count** — see the One-Claim Rule.
 
 ### Navigation (god sidebar)
 - Desktop: fixed 300px column, `border-r border-line`, sticky blurred search/filter header above a scrolling 4-column grid.

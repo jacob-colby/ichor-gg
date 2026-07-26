@@ -19,7 +19,7 @@ export function AddGodModal({
     return roster.filter((g) => !ql || g.name.toLowerCase().includes(ql));
   }, [roster, q]);
 
-  const devTag = "rounded border border-line-strong px-1.5 py-px font-mono text-[9px] uppercase tracking-wider text-faint";
+  const devTag = "rounded border border-line-strong px-1.5 py-px font-mono text-micro uppercase tracking-wider text-faint";
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" onClick={onClose}>
@@ -29,17 +29,17 @@ export function AddGodModal({
       >
         <div className="mb-1 flex items-center gap-2">
           <span className={devTag}>Dev</span>
-          <div className="font-display text-base font-semibold text-ink-soft">Add a god</div>
-          <button type="button" onClick={onClose} className="press ml-auto rounded-md bg-bg2 px-2 py-1 text-xs text-faint hover:text-muted">Close</button>
+          <div className="font-display text-lead font-semibold text-ink-soft">Add a god</div>
+          <button type="button" onClick={onClose} className="press ml-auto rounded-md bg-bg2 px-2 py-1 text-small text-faint hover:text-muted">Close</button>
         </div>
-        <p className="mb-3 text-[11px] text-faint">Adding a new god scrapes fresh build data — this can take a minute.</p>
+        <p className="mb-3 text-label text-faint">Adding a new god scrapes fresh build data — this can take a minute.</p>
         <div className="mb-3 flex items-center gap-2 rounded-md border border-line bg-bg2 px-3 py-2 focus-within:border-blue">
           <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" className="text-muted"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
           <input
             placeholder="Search gods…"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            className="w-full bg-transparent text-xs text-ink placeholder:text-muted focus:outline-none"
+            className="w-full bg-transparent text-small text-ink placeholder:text-muted focus:outline-none"
           />
         </div>
         <div className="grid flex-1 grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 overflow-y-auto">
@@ -75,12 +75,12 @@ export function AddGodModal({
                 )}
                 <span
                   style={{ display: "none" }}
-                  className="h-10 w-10 items-center justify-center rounded-md bg-bg1 font-display text-lg text-muted ring-1 ring-line"
+                  className="h-10 w-10 items-center justify-center rounded-md bg-bg1 font-display text-title text-muted ring-1 ring-line"
                 >
                   {g.name[0]}
                 </span>
-                <span className="truncate text-center font-display text-[10.5px] text-ink">{g.name}</span>
-                {isTracked && <span className="text-[9px] text-under">✓ tracked</span>}
+                <span className="truncate text-center font-display text-label text-ink">{g.name}</span>
+                {isTracked && <span className="text-micro text-under">✓ tracked</span>}
               </button>
             );
           })}

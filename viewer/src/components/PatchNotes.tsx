@@ -47,7 +47,7 @@ function DeltaRow({
   const newCls = good == null ? "text-ink-soft" : good ? "text-under" : "text-premium";
 
   return (
-    <div className="flex items-baseline gap-1.5 font-mono text-[11px]">
+    <div className="flex items-baseline gap-1.5 font-mono text-label">
       <span className="w-28 shrink-0 truncate text-faint">{label}</span>
       <span className="text-ink-soft">{oldVal ?? "—"}</span>
       <span className="text-faint">→</span>
@@ -77,8 +77,8 @@ function ChangedItemRow({ delta }: { delta: PatchDelta }) {
       />
       <div className="min-w-0 flex-1">
         <div className="mb-1.5 flex flex-wrap items-center gap-2">
-          <span className="font-display text-[13px] font-semibold text-ink">{delta.name}</span>
-          <span className={`rounded-sm px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${VERDICT_CLS[delta.verdict]}`}>
+          <span className="font-display text-body font-semibold text-ink">{delta.name}</span>
+          <span className={`rounded-sm px-1.5 py-0.5 text-micro font-semibold uppercase tracking-wide ${VERDICT_CLS[delta.verdict]}`}>
             {delta.verdict}
           </span>
         </div>
@@ -130,8 +130,8 @@ function PeriodSection({ period, defaultOpen }: { period: PatchPeriod; defaultOp
         aria-expanded={open}
       >
         <ChevronIcon open={open} />
-        <span className="font-mono text-xs text-faint">{period.from} → {period.to}</span>
-        <span className="ml-auto font-mono text-[11px] text-faint">{counts}</span>
+        <span className="font-mono text-small text-faint">{period.from} → {period.to}</span>
+        <span className="ml-auto font-mono text-label text-faint">{counts}</span>
       </button>
       {open && (
         <div className="flex flex-col gap-3 border-t border-line px-4 py-3">
@@ -143,7 +143,7 @@ function PeriodSection({ period, defaultOpen }: { period: PatchPeriod; defaultOp
           {period.added.length > 0 && (
             <div className="flex flex-wrap gap-1.5">
               {period.added.map((n) => (
-                <span key={n} className="inline-flex items-center gap-1.5 rounded-sm bg-blue/10 px-1.5 py-0.5 text-[10px] font-semibold text-blue">
+                <span key={n} className="inline-flex items-center gap-1.5 rounded-sm bg-blue/10 px-1.5 py-0.5 text-micro font-semibold text-blue">
                   <span className="uppercase tracking-wide">new</span>
                   <span>{n}</span>
                 </span>
@@ -153,7 +153,7 @@ function PeriodSection({ period, defaultOpen }: { period: PatchPeriod; defaultOp
           {period.removed.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {period.removed.map((n) => (
-                <span key={n} className="text-[11px] text-muted line-through">{n}</span>
+                <span key={n} className="text-label text-muted line-through">{n}</span>
               ))}
             </div>
           )}
@@ -167,8 +167,8 @@ export function PatchNotes({ periods }: { periods: PatchPeriod[] }) {
   if (periods.length === 0) {
     return (
       <div className="flex flex-col items-center gap-2 px-4 py-20 text-center">
-        <p className="font-display text-sm font-semibold text-ink">No patch history yet</p>
-        <p className="max-w-sm text-xs text-muted">
+        <p className="font-display text-body font-semibold text-ink">No patch history yet</p>
+        <p className="max-w-sm text-small text-muted">
           Changes appear after the next data refresh — patch history starts accruing from the first snapshot.
         </p>
       </div>

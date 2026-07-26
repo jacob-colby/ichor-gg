@@ -24,14 +24,14 @@ import {
 import { iconSlug } from "../lib/builds";
 import { toHash, navigate } from "../lib/useHashRoute";
 
-const eyebrow = "font-mono text-[10.5px] uppercase tracking-[0.1em] text-faint";
+const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
 export function ItemIcon({ name, size = "h-8 w-8" }: { name: string; size?: string }) {
   const [tries, setTries] = useState(0);
   if (tries > 1) {
     return (
       <span aria-hidden="true"
-        className={`${size} flex flex-none items-center justify-center rounded-sm bg-bg3 font-display text-[11px] font-bold text-faint`}>
+        className={`${size} flex flex-none items-center justify-center rounded-sm bg-bg3 font-display text-label font-bold text-faint`}>
         {name.slice(0, 1)}
       </span>
     );
@@ -48,7 +48,7 @@ export function ItemIcon({ name, size = "h-8 w-8" }: { name: string; size?: stri
 function EffBadge({ tier }: { tier: string | null | undefined }) {
   const e = efficiencyLabel(tier);
   return (
-    <span className={`rounded-sm px-1.5 py-0.5 font-mono text-[9.5px] uppercase tracking-[0.06em] ${e.cls}`}>
+    <span className={`rounded-sm px-1.5 py-0.5 font-mono text-micro uppercase tracking-[0.06em] ${e.cls}`}>
       {e.text}
     </span>
   );
@@ -99,8 +99,8 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
       <span className="flex items-center gap-2">
         <ItemIcon name={item.name} />
         <span className="min-w-0 flex-1">
-          <span className="block truncate text-[13px] text-ink" title={item.name}>{item.name}</span>
-          <span className="block font-mono text-[10px] text-faint">
+          <span className="block truncate text-body text-ink" title={item.name}>{item.name}</span>
+          <span className="block font-mono text-micro text-faint">
             <span className="text-ink-soft">{item.cost}g</span> · {tierLabel(item.tier)}
           </span>
         </span>
@@ -111,24 +111,24 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
       {eff ? (
         <span className="flex flex-col gap-1">
           <ResidualBar residual={eff.residual} scale={scale} />
-          <span className="flex items-baseline justify-between gap-2 font-mono text-[9.5px]">
+          <span className="flex items-baseline justify-between gap-2 font-mono text-micro">
             <span className="text-faint">fair {eff.predicted_cost}g</span>
             <span className={residualClass(eff.residual)}>{residualText(eff.residual)}</span>
           </span>
         </span>
       ) : (
-        <span className="font-mono text-[9.5px] text-faint">not priced by the model</span>
+        <span className="font-mono text-micro text-faint">not priced by the model</span>
       )}
 
       <span className="flex items-center justify-between gap-1">
         <EffBadge tier={item.efficiency_tier} />
         {item.meta
-          ? <span className="font-mono text-[9.5px] text-muted">{Math.round(item.meta.win_avg * 100)}% win · {item.meta.gods}</span>
-          : <span className="font-mono text-[9.5px] text-faint">no community data</span>}
+          ? <span className="font-mono text-micro text-muted">{Math.round(item.meta.win_avg * 100)}% win · {item.meta.gods}</span>
+          : <span className="font-mono text-micro text-faint">no community data</span>}
       </span>
 
       {(item.effect_tags?.length ?? 0) > 0 && (
-        <span className="truncate font-mono text-[9.5px] text-faint">{item.effect_tags!.join(" · ")}</span>
+        <span className="truncate font-mono text-micro text-faint">{item.effect_tags!.join(" · ")}</span>
       )}
     </button>
   );
@@ -185,7 +185,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
 
   const chip = (n: string) => (
     <a key={n} href={toHash.item(n)}
-      className="press inline-flex items-center gap-1 rounded-sm border border-line bg-bg2 px-1.5 py-1 text-xs text-ink-soft hover:border-line-strong">
+      className="press inline-flex items-center gap-1 rounded-sm border border-line bg-bg2 px-1.5 py-1 text-small text-ink-soft hover:border-line-strong">
       <ItemIcon name={n} size="h-4 w-4" />{n}
     </a>
   );
@@ -204,30 +204,30 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
           <ItemIcon name={item.name} size="h-11 w-11" />
           <div className="min-w-0 flex-1">
             <h2 id="item-detail-title" ref={headingRef} tabIndex={-1}
-              className="font-display text-lg font-bold leading-tight text-ink focus:outline-none">
+              className="font-display text-title font-bold leading-tight text-ink focus:outline-none">
               {item.name}
             </h2>
-            <p className="mt-0.5 font-mono text-[11px] text-faint">
+            <p className="mt-0.5 font-mono text-label text-faint">
               <span className="text-ink-soft">{item.cost}g</span> · {tierLabel(item.tier)}
               {item.meta && <> · {Math.round(item.meta.win_avg * 100)}% win across {item.meta.gods} gods</>}
             </p>
           </div>
           <button type="button" onClick={onClose} aria-label="Close"
-            className="press -mr-1 -mt-1 rounded-sm px-2 py-1 font-mono text-sm text-faint hover:text-ink">✕</button>
+            className="press -mr-1 -mt-1 rounded-sm px-2 py-1 font-mono text-body text-faint hover:text-ink">✕</button>
         </div>
 
         {/* ── The receipt ── */}
         <section aria-labelledby="item-value-h" className="mt-4 border-t border-line pt-3">
           <h3 id="item-value-h" className={eyebrow}>What its stats are worth</h3>
           {eff && priced.length === 0 ? (
-            <p className="mt-2 max-w-[64ch] text-xs leading-relaxed text-muted">
+            <p className="mt-2 max-w-[64ch] text-small leading-relaxed text-muted">
               This item carries no stats the fit prices, so the model values it at the base rate
               every item starts from — {Math.round(base)}g — and reads the remaining{" "}
               {residualText(eff.residual)} as the price of its passive.
             </p>
           ) : eff ? (
             <>
-              <table className="mt-2 w-full font-mono text-[11px]">
+              <table className="mt-2 w-full font-mono text-label">
                 <thead>
                   <tr className="text-faint">
                     <th scope="col" className="pb-1 text-left font-normal">Stat</th>
@@ -271,18 +271,18 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
                 </tbody>
               </table>
               {unpriced.length > 0 && (
-                <p className="mt-1.5 font-mono text-[9.5px] text-faint">
+                <p className="mt-1.5 font-mono text-micro text-faint">
                   {unpriced.map((l) => l.stat).join(", ")} — not priced by the fit, so
                   {" "}{unpriced.length === 1 ? "it isn't" : "they aren't"} counted above.
                 </p>
               )}
-              <p className="mt-2 max-w-[64ch] text-xs leading-relaxed text-muted">
+              <p className="mt-2 max-w-[64ch] text-small leading-relaxed text-muted">
                 Stats only. A passive can be worth paying over the odds for — that judgement is
                 yours, and this is the number to make it against.
               </p>
             </>
           ) : (
-            <p className="mt-2 max-w-[64ch] text-xs leading-relaxed text-muted">
+            <p className="mt-2 max-w-[64ch] text-small leading-relaxed text-muted">
               Not priced by the model. {item.tier === 1
                 ? "Tier-1 starters buy an ability rather than stats, so they sit out the gold fit on purpose — pricing them against their token stats would skew every other item's verdict."
                 : "This item has no usable cost to regress against."}
@@ -293,7 +293,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
         {community && (community.ours != null || community.community != null) && (
           <section aria-labelledby="item-tier-h" className="mt-4 border-t border-line pt-3">
             <h3 id="item-tier-h" className={eyebrow}>Where it lands</h3>
-            <p className="mt-1.5 flex flex-wrap items-baseline gap-x-4 gap-y-1 font-mono text-[11px]">
+            <p className="mt-1.5 flex flex-wrap items-baseline gap-x-4 gap-y-1 font-mono text-label">
               <span className="text-faint">model <span className="text-gold">{community.ours?.toFixed(2) ?? "—"}</span>
                 {community.tier_ours && <span className="text-ink-soft"> {community.tier_ours}</span>}</span>
               <span className="text-faint">community {community.community != null
@@ -309,7 +309,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
             <h3 className={eyebrow}>Stats</h3>
             <ul className="mt-1.5 flex flex-col gap-0.5">
               {Object.entries(item.stats).map(([k, v]) => (
-                <li key={k} className="flex justify-between text-xs">
+                <li key={k} className="flex justify-between text-small">
                   <span className="text-muted">{k}</span><span className="font-mono text-ink">{v}</span>
                 </li>
               ))}
@@ -320,14 +320,14 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
         {item.passive && (
           <section className="mt-4 border-t border-line pt-3">
             <h3 className={eyebrow}>Passive</h3>
-            <p className="mt-1.5 max-w-[68ch] text-xs leading-relaxed text-ink-soft">{item.passive}</p>
+            <p className="mt-1.5 max-w-[68ch] text-small leading-relaxed text-ink-soft">{item.passive}</p>
           </section>
         )}
 
         {(item.effect_tags?.length ?? 0) > 0 && (
           <div className="mt-3 flex flex-wrap gap-1">
             {item.effect_tags!.map((t) => (
-              <span key={t} className="rounded-sm bg-bg3 px-1.5 py-0.5 font-mono text-[9.5px] text-muted">{t}</span>
+              <span key={t} className="rounded-sm bg-bg3 px-1.5 py-0.5 font-mono text-micro text-muted">{t}</span>
             ))}
           </div>
         )}
@@ -339,7 +339,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
                 <span className={eyebrow}>Builds from</span>
                 {from.known.map(chip)}
                 {from.missing > 0 && (
-                  <span className="font-mono text-[10px] text-faint">
+                  <span className="font-mono text-micro text-faint">
                     {from.missing} component{from.missing === 1 ? "" : "s"} not in this index
                   </span>
                 )}
@@ -356,7 +356,7 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
 
         {item.source_url && (
           <a href={item.source_url} target="_blank" rel="noreferrer"
-            className="press mt-4 inline-block rounded-sm py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-blue hover:underline">
+            className="press mt-4 inline-block rounded-sm py-1 font-mono text-micro uppercase tracking-[0.08em] text-blue hover:underline">
             Wiki page →
           </a>
         )}
@@ -366,9 +366,9 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
 }
 
 const segBtn = (active: boolean) =>
-  `press rounded px-2.5 py-1 font-display text-xs font-semibold transition-colors duration-150 ease-standard ${
+  `press rounded px-2.5 py-1 font-display text-small font-semibold transition-colors duration-150 ease-standard ${
     active ? "bg-gold text-bg0" : "text-muted hover:text-ink"}`;
-const selCls = "rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-xs text-muted focus:border-blue focus:outline-none";
+const selCls = "rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted focus:border-blue focus:outline-none";
 
 export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: {
   items: Item[];
@@ -411,14 +411,14 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
   return (
     <div className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">
       <header className="pb-4">
-        <h1 className="max-w-[26ch] text-balance font-display text-[26px] font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-[32px]">
+        <h1 className="max-w-[26ch] text-balance font-display text-display font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-display">
           <span className="text-gold">{underpriced} of {items.length}</span> items cost less than their stats are worth.
         </h1>
-        <p className="mt-2.5 max-w-[72ch] text-sm leading-relaxed text-ink-soft">
+        <p className="mt-2.5 max-w-[72ch] text-body leading-relaxed text-ink-soft">
           A regression prices every stat in gold, then compares what an item should cost to what it
           does. Open one to see the arithmetic.
         </p>
-        <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10.5px] uppercase tracking-[0.09em] text-faint">
+        <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-label uppercase tracking-[0.09em] text-faint">
           <span>{withCommunity} of {items.length} have community data</span>
           {unscored > 0 && <span className="before:mr-3 before:content-['·']">{unscored} not priced (starters)</span>}
         </p>
@@ -437,7 +437,7 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
               onChange={(e) => set({ q: e.target.value })}
               placeholder="Name, tag, stat…"
               aria-label="Search items by name, tag, stat or passive"
-              className="w-40 bg-transparent py-1 text-xs text-ink placeholder:text-muted focus:outline-none"
+              className="w-40 bg-transparent py-1 text-small text-ink placeholder:text-muted focus:outline-none"
             />
           </label>
 
@@ -477,12 +477,12 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
             <option value="cost-desc">Cost ↓</option>
           </select>
 
-          <span data-testid="items-count" className="ml-auto font-mono text-[10.5px] text-faint">
+          <span data-testid="items-count" className="ml-auto font-mono text-label text-faint">
             {shown.length === items.length ? `${items.length} items` : `${shown.length} of ${items.length}`}
           </span>
           {anyFilter && (
             <button type="button" onClick={clear}
-              className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-[11px] text-muted hover:text-ink">
+              className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-label text-muted hover:text-ink">
               Clear
             </button>
           )}
@@ -492,7 +492,7 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
       <p aria-live="polite" className="sr-only">{shown.length} items match</p>
 
       {notFound && (
-        <p className="mt-4 max-w-[64ch] text-sm leading-relaxed text-muted">
+        <p className="mt-4 max-w-[64ch] text-body leading-relaxed text-muted">
           No item called &ldquo;{openItem}&rdquo; in this index. It may have been renamed or removed
           since that link was made.
         </p>
@@ -500,11 +500,11 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
 
       {shown.length === 0 ? (
         <div className="flex flex-col items-start gap-2 py-16">
-          <p className="max-w-[64ch] text-sm leading-relaxed text-muted">
+          <p className="max-w-[64ch] text-body leading-relaxed text-muted">
             No item matches {filter.q?.trim() ? <>&ldquo;{filter.q.trim()}&rdquo;</> : "those filters"}
             {filter.efficiency || filter.tier != null || filter.tag || filter.stat ? " with the filters you have on" : ""}.
           </p>
-          <button type="button" onClick={clear} className="press rounded-sm px-1 py-1 text-xs text-blue hover:underline">
+          <button type="button" onClick={clear} className="press rounded-sm px-1 py-1 text-small text-blue hover:underline">
             Clear filters
           </button>
         </div>

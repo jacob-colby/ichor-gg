@@ -44,14 +44,14 @@ const TIER_TEXT: Record<TierLetter, string> = {
 };
 
 const segBtn = (active: boolean) =>
-  `press rounded px-3 py-1.5 font-display text-xs font-semibold transition-colors duration-[150ms] ease-standard ${
+  `press rounded px-3 py-1.5 font-display text-small font-semibold transition-colors duration-[150ms] ease-standard ${
     active ? "bg-gold text-bg0" : "text-muted hover:text-ink"
   }`;
 const chip = (active: boolean, extra = "") =>
-  `press rounded-full px-3 py-1.5 text-xs transition-colors duration-[150ms] ease-standard ${
+  `press rounded-full px-3 py-1.5 text-small transition-colors duration-[150ms] ease-standard ${
     active ? "bg-gold font-semibold text-bg0" : `border border-line hover:border-line-strong ${extra}`
   }`;
-const selCls = "rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-xs text-muted focus:border-blue focus:outline-none";
+const selCls = "rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted focus:border-blue focus:outline-none";
 function scoreText(v: number | null | undefined): string {
   return v == null ? "—" : v.toFixed(2);
 }
@@ -78,7 +78,7 @@ function EntryIcon({ name, item }: { name: string; item: boolean }) {
   const cls = "h-10 w-10 flex-none rounded-md object-cover sm:h-11 sm:w-11";
   if (tries > 1) {
     return (
-      <span aria-hidden="true" className={`${cls} flex items-center justify-center bg-bg3 font-display text-sm font-bold text-faint`}>
+      <span aria-hidden="true" className={`${cls} flex items-center justify-center bg-bg3 font-display text-body font-bold text-faint`}>
         {name.slice(0, 1)}
       </span>
     );
@@ -136,11 +136,11 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
       >
         <EntryIcon name={entry.name} item={!isGod} />
         <span className="flex w-full min-w-0 flex-col items-center gap-0.5 sm:flex-1 sm:items-start">
-          <span className="max-w-full truncate font-display text-[12.5px] font-semibold leading-tight text-ink">{entry.name}</span>
+          <span className="max-w-full truncate font-display text-small font-semibold leading-tight text-ink">{entry.name}</span>
           {isGod
-            ? lane && <span className={`font-mono text-[9.5px] ${laneTextClass(lane)}`}>{lane}</span>
-            : eff && <span className={`font-mono text-[9.5px] ${eff.cls.replace(/bg-\S+/g, "")}`}>{eff.text}</span>}
-          <span className="mt-0.5 flex flex-wrap items-baseline justify-center gap-x-1.5 font-mono text-[10px] leading-tight sm:justify-start">
+            ? lane && <span className={`font-mono text-micro ${laneTextClass(lane)}`}>{lane}</span>
+            : eff && <span className={`font-mono text-micro ${eff.cls.replace(/bg-\S+/g, "")}`}>{eff.text}</span>}
+          <span className="mt-0.5 flex flex-wrap items-baseline justify-center gap-x-1.5 font-mono text-micro leading-tight sm:justify-start">
             {/* Not gold: 87 gilded scores would make the accent decorative.
                 The band letter already carries the model's verdict. */}
             <span className="text-ink-soft">{scoreText(entry.ours)}</span>
@@ -167,14 +167,14 @@ function TierBand({ tier, entries, total, agreed, disagreed, unranked, subject }
     <section data-testid={`band-${tier}`} aria-labelledby={`band-${tier}-h`} className="border-t border-line pt-3">
       <div className="mb-2.5 flex flex-wrap items-center gap-x-3 gap-y-1">
         <h2 id={`band-${tier}-h`} className="flex items-center gap-2">
-          <span className={`flex h-7 w-7 items-center justify-center rounded-md bg-bg3 font-display text-sm font-bold ${TIER_TEXT[tier]}`}>{tier}</span>
+          <span className={`flex h-7 w-7 items-center justify-center rounded-md bg-bg3 font-display text-body font-bold ${TIER_TEXT[tier]}`}>{tier}</span>
           {/* One basis: when a filter narrows the band, say so rather than
               printing a drawn count beside a whole-band tally. */}
-          <span className="font-mono text-[10.5px] text-faint">
+          <span className="font-mono text-label text-faint">
             {entries.length === total ? total : `${entries.length} of ${total}`}
           </span>
         </h2>
-        <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-faint">
+        <p className="font-mono text-micro uppercase tracking-[0.08em] text-faint">
           {disagreed > 0 && <span className="text-ink-soft">{disagreed} disputed</span>}
           {disagreed > 0 && agreed > 0 && <span className="px-1">·</span>}
           {agreed > 0 && <>{agreed} agreed</>}
@@ -257,7 +257,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
     <div className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">
       <header className="pb-4">
         {/* A claim carrying its own numbers, like Home's — not a route label. */}
-        <h1 className="max-w-[24ch] text-balance font-display text-[26px] font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-[32px]">
+        <h1 className="max-w-[24ch] text-balance font-display text-display font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-display">
           {result.ranked > 0 ? (
             <>The meta agrees with{" "}
               <span className="text-gold">{result.agreed} of {result.ranked}</span>{" "}
@@ -267,25 +267,25 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
             <>Every {entityLabel(subject)}, ranked by the model.</>
           )}
         </h1>
-        <p className="mt-2.5 max-w-[70ch] text-sm leading-relaxed text-ink-soft">
+        <p className="mt-2.5 max-w-[70ch] text-body leading-relaxed text-ink-soft">
           Bands are the model&rsquo;s. Each card carries where the community places the same{" "}
           {entityLabel(subject)}, so the disagreement is readable without switching views.
         </p>
         {result.ranked > 0 ? (
-          <p data-testid="tier-summary" className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10.5px] uppercase tracking-[0.09em] text-faint">
+          <p data-testid="tier-summary" className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-label uppercase tracking-[0.09em] text-faint">
             <span><span className="text-ink-soft">{result.agreed} of {result.ranked}</span> agreed</span>
             <span className="text-under">{result.modelHigher} we rank higher</span>
             <span className="text-premium">{result.metaHigher} the meta ranks higher</span>
             {result.unranked > 0 && <span>{result.unranked} unranked</span>}
           </p>
         ) : !sourceHasCommunity ? (
-          <p data-testid="tier-summary" className="mt-2.5 font-mono text-[10.5px] uppercase tracking-[0.09em] text-faint">
+          <p data-testid="tier-summary" className="mt-2.5 font-mono text-label uppercase tracking-[0.09em] text-faint">
             {source.length} {subject} · no community ratings to compare against
           </p>
         ) : null}
         {/* Directly under the tally it qualifies — not below the control bar. */}
         {modeIsMirrored && (
-          <p className="mt-2 max-w-[74ch] text-xs leading-relaxed text-muted">
+          <p className="mt-2 max-w-[74ch] text-small leading-relaxed text-muted">
             Items aren&rsquo;t scored per mode, so these are the same figures as Conquest —
             the community column reflects Conquest play. Only god tiers differ between modes.
           </p>
@@ -311,7 +311,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
             <button type="button" aria-pressed={sort === "disagreement"} onClick={() => setSort("disagreement")} className={segBtn(sort === "disagreement")}>Disputed first</button>
             <button type="button" aria-pressed={sort === "score"} onClick={() => setSort("score")} className={segBtn(sort === "score")}>By score</button>
           </div>
-          <div className="flex items-center gap-2 rounded-md border border-line bg-bg2 px-3 py-2 focus-within:border-blue">
+          <label className="flex cursor-text items-center gap-2 rounded-md border border-line bg-bg2 px-3 py-2 focus-within:border-blue">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="text-muted">
               <circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" />
             </svg>
@@ -320,10 +320,10 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
               aria-label={`Search ${subject}`}
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              className="w-36 bg-transparent text-xs text-ink placeholder:text-muted focus:outline-none"
+              className="w-36 bg-transparent py-1 text-small text-ink placeholder:text-muted focus:outline-none"
             />
-          </div>
-          <span className="ml-auto font-mono text-[10.5px] text-faint">
+          </label>
+          <span className="ml-auto font-mono text-label text-faint">
             {shown === filtered.length
               ? <>{filtered.length} {subject}</>
               : <>showing {shown} of {filtered.length}</>}
@@ -336,7 +336,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
               {/* "All" is the absence of a filter, so it stays neutral —
                   gold marks a choice the reader made. */}
               <button type="button" aria-pressed={!lane} onClick={() => setLane(undefined)}
-                className={`press rounded-full border px-3 py-1.5 text-xs transition-colors duration-[150ms] ease-standard ${
+                className={`press rounded-full border px-3 py-1.5 text-small transition-colors duration-[150ms] ease-standard ${
                   !lane ? "border-line-strong text-ink" : "border-line text-muted hover:border-line-strong"}`}>
                 All
               </button>
@@ -364,7 +364,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
       </div>
 
       {joustCommunityGap && (
-        <p className="mt-4 max-w-[74ch] text-xs leading-relaxed text-muted">
+        <p className="mt-4 max-w-[74ch] text-small leading-relaxed text-muted">
           SmiteBrain doesn&rsquo;t track Joust, so there are no community ratings for this mode at all —
           every card below shows the model&rsquo;s placement alone. That&rsquo;s a real coverage gap, not a
           loading state.
@@ -373,7 +373,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
 
       {shown === 0 ? (
         <div className="flex flex-col items-start gap-2 py-16">
-          <p className="max-w-[64ch] text-sm leading-relaxed text-muted">
+          <p className="max-w-[64ch] text-body leading-relaxed text-muted">
             {disputedOnly && filtered.length > 0
               ? `Nothing disputed here — the model and the community agree on ${
                   filtered.length === 1 ? "the one" : `all ${filtered.length}`
@@ -381,7 +381,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
               : `No ${subject} match those filters.`}
           </p>
           {anyFilter && (
-            <button type="button" onClick={clear} className="press rounded-sm px-1 py-1 text-xs text-blue hover:underline">
+            <button type="button" onClick={clear} className="press rounded-sm px-1 py-1 text-small text-blue hover:underline">
               Clear filters
             </button>
           )}
@@ -396,12 +396,12 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
           {untiered.length > 0 && (
             <section data-testid="band-untiered" aria-labelledby="band-untiered-h" className="border-t border-line pt-3">
               <div className="mb-2.5 flex flex-wrap items-center gap-x-3 gap-y-1">
-                <h2 id="band-untiered-h" className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-faint">
+                <h2 id="band-untiered-h" className="font-mono text-label uppercase tracking-[0.1em] text-faint">
                   Not tiered
                 </h2>
-                <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-faint">{untiered.length}</p>
+                <p className="font-mono text-micro uppercase tracking-[0.08em] text-faint">{untiered.length}</p>
               </div>
-              <p className="mb-2.5 max-w-[70ch] text-xs leading-relaxed text-muted">
+              <p className="mb-2.5 max-w-[70ch] text-small leading-relaxed text-muted">
                 Starters and components the model doesn&rsquo;t rank against full items — they&rsquo;re
                 counted above, so they&rsquo;re shown here rather than dropped.
               </p>

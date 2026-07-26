@@ -40,7 +40,7 @@ describe("App routing", () => {
     await waitFor(() => expect(screen.getByPlaceholderText(/search gods/i)).toBeInTheDocument());
     expect(screen.queryByRole("button", { name: "Select Chiron" })).not.toBeInTheDocument();
     const [home] = await screen.findAllByRole("button", { name: /^home$/i });
-    expect(home).toHaveAttribute("aria-current", "true");
+    expect(home).toHaveAttribute("aria-current", "page");
   });
 
   it("navigates to the standalone draft page via the nav", async () => {
