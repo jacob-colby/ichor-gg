@@ -44,13 +44,14 @@ describe("Home divergence board", () => {
     expect(board.getByRole("button", { name: /ymir/i })).toBeInTheDocument();
   });
 
-  it("names both scores and the gap on each row so the numbers aren't bare decimals", () => {
+  it("speaks both placements and both scores, so the row is never a bare word", () => {
     render(<Home data={baseData({ tierlist })} />);
     const board = within(screen.getByTestId("home-divergence"));
     const row = board.getByRole("button", { name: /^ymir/i });
-    expect(row).toHaveAccessibleName(/model 0\.45 \(tier C\)/i);
-    expect(row).toHaveAccessibleName(/community 0\.68 \(tier S\)/i);
-    expect(row).toHaveAccessibleName(/gap -0\.23/i);
+    expect(row).toHaveAccessibleName(/we place it C, the community places it S/i);
+    // "Overrated" alone doesn't say who is doing the overrating.
+    expect(row).toHaveAccessibleName(/we rate it lower/i);
+    expect(row).toHaveAccessibleName(/model score 0\.45, community 0\.68/i);
   });
 
   it("navigates to the god when a row is clicked", () => {
@@ -89,12 +90,23 @@ describe("Home divergence board", () => {
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/scored by a model/i);
   });
 
-  it("shows both source scores on a row, not just the gap", () => {
+  /* The row leads with the verdict and keeps the arithmetic within reach
+   * rather than printing it. Three decimals per row, thirty rows to a screen,
+   * was the thing that read as a statistics table instead of a tier list. */
+  it("leads a row with the verdict, not with decimals", () => {
     render(<Home data={baseData({ tierlist })} />);
     const row = within(screen.getByTestId("home-divergence")).getByRole("button", { name: /^ymir/i });
-    expect(row).toHaveTextContent("0.45");
-    expect(row).toHaveTextContent("0.68");
-    expect(row).toHaveTextContent("-0.23");
+    expect(row).toHaveTextContent(/overrated/i);
+    expect(row).not.toHaveTextContent("0.45");
+    expect(row).not.toHaveTextContent("-0.23");
+  });
+
+  it("keeps the scores reachable on hover for anyone who wants them", () => {
+    render(<Home data={baseData({ tierlist })} />);
+    const row = within(screen.getByTestId("home-divergence")).getByRole("button", { name: /^ymir/i });
+    expect(row).toHaveAttribute("title", expect.stringContaining("0.45"));
+    expect(row).toHaveAttribute("title", expect.stringContaining("0.68"));
+    expect(row).toHaveAttribute("title", expect.stringContaining("-0.23"));
   });
 
   it("falls back to a claim it can support when nothing is comparable", () => {

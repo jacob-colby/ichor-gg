@@ -5,6 +5,18 @@ export type TierLetter = (typeof TIERS)[number];
 
 const TIER_INDEX: Record<TierLetter, number> = { S: 0, A: 1, B: 2, C: 3 };
 
+/** How many rungs the ladder has. */
+export const TIER_STEPS = TIERS.length;
+
+/** Position on the ladder read left-to-right, worst to best: C=0 … S=3.
+ *
+ * This is the *reading* order, the reverse of `TIER_INDEX`'s ranking order —
+ * a tier list is drawn with S at the top, but a horizontal axis that improves
+ * rightward is the one people already read off a scoreboard. */
+export function tierStep(t: TierLetter | null | undefined): number | null {
+  return t ? TIER_STEPS - 1 - TIER_INDEX[t] : null;
+}
+
 /**
  * One entry inside a band, carrying where the *other* source places it.
  *
@@ -43,6 +55,81 @@ export interface BandsResult<T extends TierEntry = TierEntry> {
   /** Entries both sources have placed — the only ones agreement is defined for. */
   ranked: number;
   total: number;
+}
+
+/** Which way a disagreement runs, in the words the audience already uses.
+ *  `underrated` = we place it above where the community does. */
+export type Verdict = "underrated" | "overrated" | "agreed";
+
+export function verdictOf(tierGap: number): Verdict {
+  if (tierGap > 0) return "underrated";
+  if (tierGap < 0) return "overrated";
+  return "agreed";
+}
+
+/** One argument worth naming: an entry, how far apart the two sources put it,
+ *  and which way. Never `agreed` — an agreement isn't an argument. */
+export interface Argument<T extends TierEntry = TierEntry> {
+  entry: T;
+  tierGap: number;
+  delta: number;
+  verdict: Exclude<Verdict, "agreed">;
+}
+
+export interface ArgumentSet<T extends TierEntry = TierEntry> {
+  top: Argument<T>[];
+  /** How many of the comparable entries the two sources place differently —
+   *  the scope the `top` few are drawn from, so the list can say what it's a
+   *  sample of instead of implying it's the whole story. */
+  disputed: number;
+  ranked: number;
+}
+
+/**
+ * The sharpest disagreements in a list, either direction, biggest first.
+ *
+ * Generic over `TierEntry` because gods and items are the same question asked
+ * twice — but they are ranked *separately*, never pooled. Item score gaps run
+ * several times larger than god score gaps (a disputed item is routinely 0.47
+ * apart, a disputed god 0.15), so a single merged ranking would be all items
+ * every time, not because the arguments are sharper but because the two scales
+ * aren't comparable.
+ */
+export function biggestArguments<T extends TierEntry>(
+  entries: T[] | undefined,
+  limit: number,
+): ArgumentSet<T> {
+  if (!entries || entries.length === 0) return { top: [], disputed: 0, ranked: 0 };
+  const described = entries.map(describe).filter((d) => !d.unranked && d.tierGap != null);
+  const disputes = described.filter((d) => d.tierGap !== 0).sort(byDisagreement);
+  const top = disputes.slice(0, limit);
+
+  // Both directions, whenever both exist. The extremes in this data skew one
+  // way — the three sharpest god arguments are all "the meta rates it too
+  // high" — and three red rows read as a systematic lean the full set doesn't
+  // have: gods split 28 the model rates higher to 25 the meta does. A reader
+  // generalises from the handful they're shown, so the last slot goes to the
+  // strongest argument the other way rather than to the next-biggest of the
+  // same one. Ordering within the list is still biggest-first.
+  if (top.length > 1) {
+    const dir = Math.sign(top[0].tierGap!);
+    if (top.every((d) => Math.sign(d.tierGap!) === dir)) {
+      const opposite = disputes.find((d) => Math.sign(d.tierGap!) !== dir);
+      if (opposite) top[top.length - 1] = opposite;
+    }
+  }
+
+  return {
+    top: top
+      .map((d) => ({
+        entry: d.entry,
+        tierGap: d.tierGap!,
+        delta: d.delta ?? 0,
+        verdict: verdictOf(d.tierGap!) as Exclude<Verdict, "agreed">,
+      })),
+    disputed: disputes.length,
+    ranked: described.length,
+  };
 }
 
 function describe<T extends TierEntry>(entry: T): BandEntry<T> {

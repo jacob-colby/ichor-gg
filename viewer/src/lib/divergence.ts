@@ -1,34 +1,45 @@
 import type { GodTierEntry } from "../types";
 import { LANES, godLane, type Lane } from "./roleAccent";
+import { tierStep, verdictOf, TIER_STEPS, type TierLetter, type Verdict } from "./tierBands";
 
-/** One god where we have both a model score and a community score, plus the
- * gap between them. `delta > 0` means our model rates the god above the
- * community; `delta < 0` means the community rates it above us. */
+/** One god both sources have placed, positioned on the tier ladder.
+ *
+ * **The tier letters own the verdict, not the score gap.** The two measures
+ * genuinely disagree near a band boundary — a god can sit 0.00 apart on raw
+ * score while the letters say we rank it a full tier higher — and the tier
+ * list already resolved that conflict in the letters' favour (see
+ * `TierList.divergenceClass`). Placing the bar by score while labelling it by
+ * letter would have drawn a green "underrated" row with its mark to the left
+ * of the community's. Everything here keys off the letters so the mark, the
+ * colour and the word can't contradict each other.
+ *
+ * The raw scores survive as `delta`, which still breaks ties in the ordering
+ * and still reaches the reader through the row's accessible name — demoted,
+ * not deleted. */
 export interface Divergence {
   name: string;
   lane: Lane | undefined;
   ours: number;
   community: number;
-  /** ours - community. The whole point of the page. */
+  /** ours - community, on raw scores. A tiebreak and a detail, no longer the
+   * thing the bar draws — the two sources' scores aren't on a shared scale. */
   delta: number;
-  tierOurs: GodTierEntry["tier_ours"];
-  tierCommunity: GodTierEntry["tier_community"];
-  /** The two tier letters differ — a disagreement you could argue about. */
+  tierOurs: TierLetter;
+  tierCommunity: TierLetter;
+  /** Rungs apart, signed: positive means we place it above the community. */
+  tierGap: number;
+  /** Ladder positions, C=0 … S=3. `ourStep` is the claim; `theirStep` is the
+   * baseline the reader already has in their head. */
+  ourStep: number;
+  theirStep: number;
+  verdict: Verdict;
   tierDisagrees: boolean;
 }
 
-/** One lane's slice of the board, ranked by how hard we disagree. */
+/** One lane's slice of the board. */
 export interface LaneColumn {
   lane: Lane;
   rows: Divergence[];
-  /** Mean signed delta across the lane — the systematic lean, if any. */
-  meanDelta: number;
-  /** Gods in this lane we rate above / below the community. */
-  higher: number;
-  lower: number;
-  /** Gods in this lane whose tier letter differs between the two sources —
-   * the per-lane share of the headline count. */
-  tierDiffer: number;
   /** Gods in this lane with no community score to compare against. */
   unranked: number;
 }
@@ -37,33 +48,42 @@ export interface DivergenceBoard {
   lanes: LaneColumn[];
   /** Every god in the tier list, whether or not the community has scored it. */
   total: number;
-  /** Gods with both scores — the only ones we can honestly compare. */
+  /** Gods with both placements — the only ones we can honestly compare. */
   ranked: number;
   unranked: number;
   /** Ranked gods whose model tier letter differs from the community's. */
   tierDisagreements: number;
-  /** Largest absolute delta present, used to scale the bars. Never 0. */
-  scale: number;
 }
 
-/** Rank a lane's rows by the size of the disagreement, biggest first. Ties
- * break on name so the order is stable across renders and refreshes. */
+/** Biggest argument first: how many rungs apart the two sources are, with the
+ * raw score gap only breaking ties between equal-sized arguments. Ties break
+ * on name so the order is stable across renders and refreshes.
+ *
+ * Ordering on the score gap alone contradicted the bars it ordered, once the
+ * bars became rungs — a row drawn one rung wide could sort above a row drawn
+ * three rungs wide. `tierBands.byDisagreement` sorts the tier list by this
+ * same rule, so "biggest gap first" now means one thing in both places. */
 function byDisagreement(a: Divergence, b: Divergence): number {
+  const t = Math.abs(b.tierGap) - Math.abs(a.tierGap);
+  if (t !== 0) return t;
   const d = Math.abs(b.delta) - Math.abs(a.delta);
-  return d !== 0 ? d : a.name.localeCompare(b.name);
+  if (d !== 0) return d;
+  return a.name.localeCompare(b.name);
 }
 
 /**
  * Split the tier list into per-lane columns ranked by model-vs-community
  * disagreement.
  *
- * Gods the community hasn't scored are counted (`unranked`) but never given an
- * invented delta — they're absent from every column's rows, which is why the
- * board reports the count separately rather than quietly dropping them.
+ * Gods the community hasn't placed are counted (`unranked`) but never given an
+ * invented position — they're absent from every column's rows, which is why
+ * the board reports the count separately rather than quietly dropping them.
+ * A god carrying a score but no tier letter is unranked for the same reason:
+ * there is no rung to stand it on.
  */
 export function buildDivergenceBoard(entries: GodTierEntry[] | undefined): DivergenceBoard {
   const empty: DivergenceBoard = {
-    lanes: [], total: 0, ranked: 0, unranked: 0, tierDisagreements: 0, scale: 1,
+    lanes: [], total: 0, ranked: 0, unranked: 0, tierDisagreements: 0,
   };
   if (!entries || entries.length === 0) return empty;
 
@@ -77,67 +97,50 @@ export function buildDivergenceBoard(entries: GodTierEntry[] | undefined): Diver
   let ranked = 0;
   let unranked = 0;
   let tierDisagreements = 0;
-  let scale = 0;
 
   for (const e of entries) {
     const lane = godLane(e.role);
-    if (e.ours == null || e.community == null) {
+    const ourStep = tierStep(e.tier_ours);
+    const theirStep = tierStep(e.tier_community);
+    if (e.ours == null || e.community == null || ourStep == null || theirStep == null) {
       unranked += 1;
       if (lane) unrankedByLane.set(lane, (unrankedByLane.get(lane) ?? 0) + 1);
       continue;
     }
     ranked += 1;
-    const delta = e.ours - e.community;
-    const tierDisagrees = e.tier_ours !== e.tier_community;
-    if (tierDisagrees) tierDisagreements += 1;
-    scale = Math.max(scale, Math.abs(delta));
+    const tierGap = ourStep - theirStep;
+    if (tierGap !== 0) tierDisagreements += 1;
     if (lane) {
       rowsByLane.get(lane)!.push({
         name: e.name,
         lane,
         ours: e.ours,
         community: e.community,
-        delta,
-        tierOurs: e.tier_ours,
-        tierCommunity: e.tier_community,
-        tierDisagrees,
+        delta: e.ours - e.community,
+        tierOurs: e.tier_ours!,
+        tierCommunity: e.tier_community!,
+        tierGap,
+        ourStep,
+        theirStep,
+        verdict: verdictOf(tierGap),
+        tierDisagrees: tierGap !== 0,
       });
     }
   }
 
-  const lanes: LaneColumn[] = LANES.map((lane) => {
-    const rows = rowsByLane.get(lane)!.sort(byDisagreement);
-    const meanDelta = rows.length
-      ? rows.reduce((sum, r) => sum + r.delta, 0) / rows.length
-      : 0;
-    return {
-      lane,
-      rows,
-      meanDelta,
-      higher: rows.filter((r) => r.delta > 0).length,
-      lower: rows.filter((r) => r.delta < 0).length,
-      tierDiffer: rows.filter((r) => r.tierDisagrees).length,
-      unranked: unrankedByLane.get(lane) ?? 0,
-    };
-  }).filter((c) => c.rows.length > 0 || c.unranked > 0);
+  const lanes: LaneColumn[] = LANES.map((lane) => ({
+    lane,
+    rows: rowsByLane.get(lane)!.sort(byDisagreement),
+    unranked: unrankedByLane.get(lane) ?? 0,
+  })).filter((c) => c.rows.length > 0 || c.unranked > 0);
 
-  return {
-    lanes,
-    total: entries.length,
-    ranked,
-    unranked,
-    tierDisagreements,
-    // Guard the divisor: an index where every god matches exactly would
-    // otherwise scale every bar by zero.
-    scale: scale || 1,
-  };
+  return { lanes, total: entries.length, ranked, unranked, tierDisagreements };
 }
 
-/** Bar width as a percentage of half the track, clamped so a record-setting
- * delta still fits inside its lane. */
-export function barPercent(delta: number, scale: number): number {
-  if (!scale) return 0;
-  return Math.min(100, Math.round((Math.abs(delta) / scale) * 100));
+/** Where a rung sits along the track, as a percentage — the centre of its
+ * cell, so a mark never straddles two tiers. */
+export function stepPercent(step: number): number {
+  return ((step + 0.5) / TIER_STEPS) * 100;
 }
 
 /** Signed score formatted the way the page talks: always two decimals, always

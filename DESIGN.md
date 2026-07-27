@@ -248,10 +248,24 @@ Components should feel **tactile and confident**: presses register physically (a
 - Tier letters use a neutral ramp (`gold` for S only, then `ink` → `ink-soft` → `muted`). Never borrow `under`/`premium` to mean a tier letter; they mean direction against the market everywhere else.
 - Each band states its own agreement tally (`6 disputed · 1 agreed · 2 unranked`), and the page-level summary describes the **whole filtered set**, not the narrowed view — otherwise "only disputed" would make the agreement count read as zero.
 
-### Data bars (divergence)
-- A hairline (`3px`) track on `bg-bg3`. A bright `ink` reference mark (`2px`, always painted on top of the fill) sits at centre, standing for **our own score** — early phrasing here read the mark as a neutral midpoint, which is why it used to be a near-invisible `line-strong` hairline; it's the anchor the fill is measured from, so it has to read as one. The fill grows outward from it — `under`/green to the right when we rate higher, `premium`/red to the left when the community does — scaled to the largest absolute value on the board. Direction and colour are unchanged from the original centre-tick version; only the mark's legibility changed.
-- The bar is the measurement, not decoration: the numeric value always sits beside it, and the row's `aria-label` states both source values and the gap in words.
-- `BoardKey` spells the mark and the two fill colours out in plain terms (`White mark is our score` / `Green — we rate it higher` / `Red — the community rates it higher`) rather than a compressed instruction like the old `Model · community, then the gap` — the numbers still read model-then-community, but the key no longer requires already knowing that to parse it.
+### The tier ladder (divergence)
+
+The board's bars are **positions on the tier ladder**, not a gap meter. Four rungs (`C B A S`, worst to best, left to right) drawn as discrete cells on `bg-bg3` — an axis that improves rightward is the one this audience reads off a scoreboard, even though a tier list itself is drawn S-first.
+
+- **White `ink` mark (2px) is where the meta puts them** — the baseline the reader already holds in their head. **Our mark (3px) is the claim**, coloured `under` when we'd rank the god higher and `premium` when we'd rank it lower. A translucent run of the same colour joins the two, growing from the community's rung toward ours.
+- **On agreement the marks coincide, so only the white one is drawn.** A single mark reads as one answer, which is what agreement is — and agreeing rows recede instead of lighting up, which is the point of a page about disagreement.
+- **The tier letters own the verdict — position, colour, word and sort order all key off them.** The raw scores are *not on a shared scale* (0.53 is S-tier for the model; the community's S starts near 0.64), so drawing both on one score axis compared two different distributions and called the difference a gap. The letters are also what the tier list already colours by, for the older reason that score and letter genuinely disagree near a band boundary.
+- **The row leads with a verdict, not a decimal.** `Underrated` / `Overrated` / `Agreed` — the words the audience argues in. Three decimals per row across thirty rows was the thing that read as a statistics table. The arithmetic is demoted, never deleted: it is spoken in full in the row's accessible name, shown on hover, and printed in full on the god's own page.
+- `BoardKey` teaches the axis once, in place, so no row needs a remembered schema.
+
+### Where we argue hardest (the header's evidence column)
+
+Six **named** arguments — three gods, three items — beside the page's claim. This block twice tried to be a chart of how far each lane leans; both times it was true and unactionable, because "Solo leans −0.05" names nobody. A reader wants to know *which god* and *which item*, so the block names them.
+
+- **No bar here at all.** The movement is the two tier letters and an arrow (`S → C`), with colour only on the destination — the community's placement is the neutral starting point. A second proportional bar competing with the ladders directly below it made `under`/`premium` read as two different encodings on one screen; the colours now mean exactly one thing everywhere on the page.
+- **Gods and items rank separately and are never pooled.** Item score gaps run several times larger than god gaps (a disputed item is routinely 0.47 apart, a disputed god 0.15), so one merged list would be all items every time — not because those arguments are sharper, but because the scales aren't comparable.
+- **Both directions appear whenever both exist**, even though the sharpest arguments in this data all run one way. Three red rows would assert a systematic lean the full set doesn't have (gods split 28 up / 25 down), and a reader generalises from the handful they're shown, so the last slot goes to the strongest argument the other way. Ordering within the list stays biggest-first.
+- Each group states **what its three are a sample of** (`53 of 69 placed differently`), so a short list can't read as the whole disagreement.
 
 ### Tooltip
 - `rounded-md`, `border-line`, `bg-bg2`, `shadow-card`, small (`text-xs`) copy. Flips above/below the trigger and shifts horizontally to avoid clipping; opens on a short hover delay but instantly on keyboard focus (`role="tooltip"`).
@@ -282,7 +296,7 @@ Components should feel **tactile and confident**: presses register physically (a
 Motion is rationed. A surface gets **one authored moment** — the thing it does in life — not a scattering of hover effects.
 
 - **Eases:** `--ease-standard` (`cubic-bezier(0.2, 0.8, 0.2, 1)`) for state and colour transitions, 120–180ms. `--ease-out-expo` (`cubic-bezier(0.16, 1, 0.3, 1)`) for the authored entrance.
-- **Home's moment:** the divergence bars draw outward from the centre line, 440ms, staggered 70ms per lane column (0 → 280ms). Every label, tier, and number is already on screen; only the measurement animates — the page never fades in from blank.
+- **Home's moment:** each ladder's coloured run grows from the community's rung toward ours, 440ms, staggered 70ms per lane column (0 → 280ms) — the animation traces the argument in the direction the argument runs. Every name, verdict and mark is already on screen; only the run animates, so the page never fades in from blank.
 - **The press:** the shared `.press` scale-down (0.97, 120ms) on every tappable element.
 - Everything respects `prefers-reduced-motion: reduce`, and reduced motion means *arriving at the final state instantly*, never rendering nothing.
 

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildBands } from "./tierBands";
+import { buildBands, biggestArguments } from "./tierBands";
 import type { GodTierEntry } from "../types";
 
 const g = (o: Partial<GodTierEntry> & { name: string }): GodTierEntry => ({
@@ -129,5 +129,85 @@ describe("buildBands", () => {
     expect(r.total).toBe(0);
     expect(r.ranked).toBe(0);
     expect(r.agreed).toBe(0);
+  });
+});
+
+/* Home names six real arguments — three gods, three items — instead of
+ * charting how far each lane leans. This is the pick. */
+describe("biggestArguments", () => {
+  it("ranks by rungs apart, in either direction, biggest first", () => {
+    const r = biggestArguments([
+      g({ name: "OneRung", tier_ours: "B", tier_community: "A" }),
+      g({ name: "ThreeUp", tier_ours: "S", tier_community: "C" }),
+      g({ name: "TwoDown", tier_ours: "C", tier_community: "A" }),
+    ], 3);
+    expect(r.top.map((a) => a.entry.name)).toEqual(["ThreeUp", "TwoDown", "OneRung"]);
+    expect(r.top.map((a) => a.verdict)).toEqual(["underrated", "overrated", "overrated"]);
+  });
+
+  it("never offers an agreement as an argument", () => {
+    const r = biggestArguments([
+      g({ name: "Agrees", tier_ours: "B", tier_community: "B", ours: 0.9, community: 0.1 }),
+      g({ name: "Argues", tier_ours: "A", tier_community: "B" }),
+    ], 3);
+    // A huge raw-score gap inside one tier is still not a disagreement about
+    // placement, which is what this list is about.
+    expect(r.top.map((a) => a.entry.name)).toEqual(["Argues"]);
+  });
+
+  it("reports what the shown few are a sample of", () => {
+    const r = biggestArguments([
+      g({ name: "A", tier_ours: "S", tier_community: "C" }),
+      g({ name: "B", tier_ours: "A", tier_community: "C" }),
+      g({ name: "C", tier_ours: "B", tier_community: "C" }),
+      g({ name: "Agrees", tier_ours: "B", tier_community: "B" }),
+      g({ name: "NoData", tier_ours: "B", tier_community: null, community: null }),
+    ], 2);
+    expect(r.top).toHaveLength(2);
+    // Disputed counts every disagreement, not just the two drawn; unranked
+    // entries are outside the comparison entirely.
+    expect(r.disputed).toBe(3);
+    expect(r.ranked).toBe(4);
+  });
+
+  it("handles an empty or absent list without inventing an argument", () => {
+    for (const input of [undefined, []]) {
+      const r = biggestArguments(input, 3);
+      expect(r).toEqual({ top: [], disputed: 0, ranked: 0 });
+    }
+  });
+});
+
+/* A reader generalises from the handful they're shown, so a list whose
+ * extremes all run one way would assert a lean the full set doesn't have. */
+describe("biggestArguments — showing both directions", () => {
+  it("gives the last slot to the other direction when the extremes all agree", () => {
+    const r = biggestArguments([
+      g({ name: "Over3", tier_ours: "C", tier_community: "S" }),
+      g({ name: "Over2", tier_ours: "C", tier_community: "A" }),
+      g({ name: "Over1", tier_ours: "B", tier_community: "A", ours: 0.5, community: 0.9 }),
+      g({ name: "Under1", tier_ours: "A", tier_community: "B" }),
+    ], 3);
+    // Over1 is the third-biggest, but it would have made the list uniformly
+    // one-directional, so the strongest argument the other way takes the slot.
+    expect(r.top.map((a) => a.entry.name)).toEqual(["Over3", "Over2", "Under1"]);
+  });
+
+  it("leaves a naturally mixed list alone", () => {
+    const r = biggestArguments([
+      g({ name: "Over3", tier_ours: "C", tier_community: "S" }),
+      g({ name: "Under2", tier_ours: "S", tier_community: "B" }),
+      g({ name: "Over1", tier_ours: "B", tier_community: "A" }),
+      g({ name: "Under1", tier_ours: "A", tier_community: "B" }),
+    ], 3);
+    expect(r.top.map((a) => a.entry.name)).toEqual(["Over3", "Under2", "Over1"]);
+  });
+
+  it("stays one-directional when the data genuinely only runs one way", () => {
+    const r = biggestArguments([
+      g({ name: "Over2", tier_ours: "C", tier_community: "A" }),
+      g({ name: "Over1", tier_ours: "B", tier_community: "A" }),
+    ], 3);
+    expect(r.top.map((a) => a.verdict)).toEqual(["overrated", "overrated"]);
   });
 });
