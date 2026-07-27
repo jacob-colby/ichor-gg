@@ -95,7 +95,7 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
         eff ? `, fair price ${eff.predicted_cost} gold, ${
           eff.residual < 0 ? `${Math.abs(eff.residual)} under` : eff.residual > 0 ? `${eff.residual} over` : "exactly fair"}`
         : ", not scored by the gold model"}`}
-      className="plane press flex flex-col gap-1.5 rounded-md border border-line-strong bg-bg2 p-2 text-left transition-colors duration-[180ms] ease-standard hover:border-blue/50"
+      className="plane press flex h-full flex-col gap-1.5 rounded-md border border-line-strong bg-bg2 p-2 text-left transition-colors duration-[180ms] ease-standard hover:border-blue/50"
     >
       <span className="flex items-center gap-2">
         <ItemIcon name={item.name} />
@@ -121,16 +121,20 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
         <span className="text-label text-faint">not priced by the model</span>
       )}
 
-      <span className="flex items-center justify-between gap-1">
+      {(item.effect_tags?.length ?? 0) > 0 && (
+        <span className="truncate text-label text-faint">{item.effect_tags!.join(" · ")}</span>
+      )}
+
+      {/* Pinned to the card's floor. Cards carry different amounts above it —
+          an item with no effect tags, one the gold model never priced — and a
+          footer that stopped wherever the content happened to end left the
+          efficiency badges scattered at a different height on every card. */}
+      <span className="mt-auto flex items-center justify-between gap-1 pt-0.5">
         <EffBadge tier={item.efficiency_tier} />
         {item.meta
           ? <span className="font-mono text-label text-muted">{Math.round(item.meta.win_avg * 100)}% win · {item.meta.gods}</span>
           : <span className="text-label text-faint">no community data</span>}
       </span>
-
-      {(item.effect_tags?.length ?? 0) > 0 && (
-        <span className="truncate text-label text-faint">{item.effect_tags!.join(" · ")}</span>
-      )}
     </button>
   );
 }
@@ -546,7 +550,10 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
           </button>
         </div>
       ) : (
-        <ul className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(172px,1fr))]">
+        // `auto-rows-fr` squares every row to the same height, and the card
+        // fills it — without both, each row sized to its own tallest card and
+        // the shelf came out ragged.
+        <ul className="mt-4 grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(172px,1fr))]">
           {shown.map((it) => (
             <li key={it.name}>
               {/* Opening an item keeps the filters that produced this card,

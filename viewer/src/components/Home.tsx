@@ -17,7 +17,7 @@
  * FORM: Lane Board, position 3 of the ordered list, seed key c96ae713.
  */
 import { useMemo, useState } from "react";
-import type { God, IndexData, PatchPeriod, TierEntry, TierListData } from "../types";
+import type { God, IndexData, ItemTierEntry, PatchPeriod, TierEntry, TierListData } from "../types";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { usePins } from "../lib/pins";
 import { iconSlug } from "../lib/builds";
@@ -158,7 +158,17 @@ function ArgumentGroup({ label, set, item }: {
 
 function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
   const gods = useMemo(() => biggestArguments(tierlist?.gods ?? [], ARGUMENTS_SHOWN), [tierlist]);
-  const items = useMemo(() => biggestArguments(tierlist?.items ?? [], ARGUMENTS_SHOWN), [tierlist]);
+  // Full items only. Tiers 1–2 are components and starters — things you pass
+  // through on the way to a build, not things you choose — so an argument
+  // about one isn't an argument anybody can act on. Unfiltered, two of the
+  // three loudest item disagreements were components.
+  const items = useMemo(
+    () => biggestArguments(
+      (tierlist?.items ?? []).filter((e) => (e as ItemTierEntry).tier === 3),
+      ARGUMENTS_SHOWN,
+    ),
+    [tierlist],
+  );
   if (gods.top.length === 0 && items.top.length === 0) return null;
 
   return (
