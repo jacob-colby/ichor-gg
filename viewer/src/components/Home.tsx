@@ -287,42 +287,44 @@ function Ladder({ row }: { row: Divergence }) {
       {/* The community's placement: a plain rule, the neutral baseline. */}
       <span className="absolute -top-0.5 h-[14px] w-[2px] -translate-x-1/2 rounded-[1px] bg-ink"
         style={{ left: `${stepPercent(row.theirStep)}%` }} />
-      {/* Ours: a gold diamond. Two marks distinguished only by colour left it
-          ambiguous which one was the model's verdict, and the answer has to be
-          readable without consulting the key. Gold is this product's mark for
-          the model's own signal, and shape carries it a second time so the two
-          never depend on colour alone. Drawn on agreement too — it lands on
-          the rule, which is what agreeing looks like. */}
+      {/* Ours: the gold kite — the same shape as the wordmark's tittle. Two
+          marks distinguished only by colour left it ambiguous which one was
+          the model's verdict, and that has to read without consulting a key,
+          so shape carries it a second time. Drawn on agreement too, where it
+          lands on the rule — which is what agreeing looks like. */}
       <span
-        className="absolute -top-[3px] h-[7px] w-[7px] -translate-x-1/2 rotate-45 rounded-[1px] bg-gold"
+        className="mark absolute -top-[3px] h-4 w-[9px] -translate-x-1/2 bg-gold"
         style={{ left: `${stepPercent(row.ourStep)}%` }}
       />
     </span>
   );
 }
 
-/** The encoding, decoded once, in place — so the rows below never need a
- * remembered schema. */
+/** The rungs, named under the bar they belong to. These used to be taught once
+ *  in a key above the whole board, which meant every row was only readable by
+ *  remembering something from somewhere else on the page. */
+function LadderAxis() {
+  return (
+    <span aria-hidden="true" className="mt-1 grid grid-cols-4 gap-[3px]">
+      {LADDER.map((t) => (
+        <span key={t} className="text-center font-mono text-micro leading-none text-faint">{t}</span>
+      ))}
+    </span>
+  );
+}
+
+/** What the two marks are. The rungs no longer need explaining here — each bar
+ * now names its own tiers underneath, so the only thing left to say is which
+ * mark belongs to whom. */
 function BoardKey() {
   return (
     <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-label text-faint">
-      <span className="flex items-center gap-2">
-        <span aria-hidden="true" className="relative block h-2.5 w-[88px]">
-          <LadderCells />
-          <span className="absolute inset-0 grid grid-cols-4 gap-[3px]">
-            {LADDER.map((t) => (
-              <span key={t} className="text-center font-mono text-micro leading-[10px] text-faint">{t}</span>
-            ))}
-          </span>
-        </span>
-        Tier ladder
-      </span>
       <span className="flex items-center gap-1.5">
         <span aria-hidden="true" className="inline-block h-3.5 w-[2px] rounded-[1px] bg-ink" />
         Meta
       </span>
       <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="inline-block h-[7px] w-[7px] rotate-45 rounded-[1px] bg-gold" />
+        <span aria-hidden="true" className="mark inline-block h-4 w-[9px] bg-gold" />
         Us
       </span>
       <span className="flex items-center gap-1.5">
@@ -356,8 +358,9 @@ function DivergenceRow({ row }: { row: Divergence }) {
         <span aria-hidden="true" className={`shrink-0 text-label ${VERDICT_TEXT[row.verdict]}`}>
           {VERDICT_WORD[row.verdict]}
         </span>
-        <span className="col-span-3">
+        <span className="col-span-3 block">
           <Ladder row={row} />
+          <LadderAxis />
         </span>
       </button>
     </li>

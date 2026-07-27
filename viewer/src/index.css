@@ -163,6 +163,15 @@ button:not(:disabled) { cursor: pointer; }
   animation-delay: var(--bar-delay, 0ms);
 }
 
+/* ── The mark ──────────────────────────────────────────────────────────────
+   A kite, not a lozenge: short shoulders high up, then a long taper to a
+   point. It stands for the model's own verdict and appears in exactly two
+   places — the tittle of the wordmark, and our placement on every tier
+   ladder — so the logo and the data carry literally the same shape.
+   Proportions are the drawn artwork's: 270 wide × 460 tall, shoulders at
+   34%. Always size it on that ratio (width = height × 0.587). */
+.mark { clip-path: polygon(50% 0%, 100% 34%, 50% 100%, 0% 34%); }
+
 /* Thin, theme-matched scrollbars so panels feel native */
 * { scrollbar-width: thin; scrollbar-color: var(--color-line-strong) transparent; }
 *::-webkit-scrollbar { width: 8px; height: 8px; }
