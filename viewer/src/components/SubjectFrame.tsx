@@ -20,17 +20,17 @@ import { useState } from "react";
 
 const ROSTER_TABS: { lens: RosterLens; label: string }[] = [
   { lens: "board", label: "Board" },
-  { lens: "tiers", label: "Tier list" },
+  { lens: "tiers", label: "Tier List" },
   { lens: "items", label: "Items" },
   { lens: "draft", label: "Draft" },
-  { lens: "patch", label: "Patch notes" },
+  { lens: "patch", label: "Patch Notes" },
 ];
 
 const GOD_TABS: { lens: GodLens; label: (g: string) => string }[] = [
   { lens: "builds", label: () => "Builds" },
   { lens: "kit", label: () => "Kit" },
-  { lens: "items", label: (g) => `Items for ${g}` },
-  { lens: "ranking", label: (g) => `Where ${g} ranks` },
+  { lens: "items", label: () => "Items" },
+  { lens: "ranking", label: () => "Ranking" },
 ];
 
 function divergenceClass(tierGap: number | null): string {
@@ -91,6 +91,36 @@ function Verdict({ entry }: { entry?: GodTierEntry }) {
   );
 }
 
+/** The lens strip on its own, so the shell can seat it in the navbar where
+ *  there is room and drop it to its own row where there isn't. */
+export function LensTabs({ god, lens, className = "", testId, compact = false }: {
+  god?: string; lens: Lens; className?: string; testId?: string;
+  /** Seated inside the navbar row, where it must not drive the row's height. */
+  compact?: boolean;
+}) {
+  const tabs: { lens: Lens; label: string; href: string }[] = god
+    ? GOD_TABS.map((t) => ({ lens: t.lens, label: t.label(god), href: lensHash(t.lens, god) }))
+    : ROSTER_TABS.map((t) => ({ lens: t.lens, label: t.label, href: lensHash(t.lens) }));
+
+  return (
+    <nav aria-label={god ? `${god} views` : "Roster views"} data-testid={testId} className={className}>
+      <div className="mx-auto flex w-full max-w-[1440px] items-center gap-1 overflow-x-auto">
+        {tabs.map((t) => {
+          const active = t.lens === lens;
+          return (
+            <a key={t.lens} href={t.href} aria-current={active ? "page" : undefined}
+              className={`press shrink-0 whitespace-nowrap border-b-2 font-display text-small font-semibold transition-colors duration-[150ms] ease-standard ${
+                compact ? "px-2.5 py-1.5" : "px-3 py-2 sm:py-2.5"} ${
+                active ? "border-gold text-gold" : "border-transparent text-muted hover:text-ink"}`}>
+              {t.label}
+            </a>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
+
 export interface SubjectFrameProps {
   /** The current subject. Absent means the whole roster. */
   god?: God;
@@ -118,10 +148,6 @@ export function SubjectFrame({
     const allies = draft.allies.filter((n) => n && n !== subject).slice(0, MODE_TEAM_SIZE[m] - 1);
     return encodeDraftHash(m, { allies: [subject, ...allies], enemies: draft.enemies.filter((n) => n && n !== subject) });
   };
-
-  const tabs: { lens: Lens; label: string; href: string }[] = name
-    ? GOD_TABS.map((t) => ({ lens: t.lens, label: t.label(name), href: lensHash(t.lens, name) }))
-    : ROSTER_TABS.map((t) => ({ lens: t.lens, label: t.label, href: lensHash(t.lens) }));
 
   return (
     <>
@@ -205,21 +231,10 @@ export function SubjectFrame({
         </div>
       </div>
 
-      <nav aria-label={name ? `${name} views` : "Roster views"}
-        className="border-b border-line px-4 sm:px-6">
-        <div className="mx-auto flex w-full max-w-[1440px] items-center gap-1 overflow-x-auto">
-          {tabs.map((t) => {
-            const active = t.lens === lens;
-            return (
-              <a key={t.lens} href={t.href} aria-current={active ? "page" : undefined}
-                className={`press shrink-0 whitespace-nowrap border-b-2 px-3 py-2 font-display text-small font-semibold sm:py-2.5 transition-colors duration-[150ms] ease-standard ${
-                  active ? "border-gold text-gold" : "border-transparent text-muted hover:text-ink"}`}>
-                {t.label}
-              </a>
-            );
-          })}
-        </div>
-      </nav>
+      {/* Below md the navbar has no room for these, so they keep their own
+          strip; above it the shell renders them inline and this is hidden. */}
+      <LensTabs god={name} lens={lens} testId="lens-tabs-strip"
+        className="border-b border-line px-4 sm:px-6 lg:hidden" />
     </>
   );
 }

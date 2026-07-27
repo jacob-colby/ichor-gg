@@ -9,7 +9,7 @@ import { GodInfo } from "./components/GodInfo";
 import { GodItems } from "./components/GodItems";
 import { GodRanking } from "./components/GodRanking";
 import { GodPickerDialog } from "./components/GodPicker";
-import { SubjectFrame } from "./components/SubjectFrame";
+import { SubjectFrame, LensTabs } from "./components/SubjectFrame";
 import { SubjectSearch } from "./components/SubjectSearch";
 import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
@@ -135,10 +135,14 @@ function App() {
         <a href={toHash.home()} className="press shrink-0 py-1 font-display text-lead font-bold tracking-tight text-ink">
           ichor
         </a>
-        <div className="min-w-0 flex-1 sm:max-w-md">
+        {/* Only one of these two is ever in the accessibility tree — the
+            other is display:none at its breakpoint. */}
+        <LensTabs god={route.god && god ? route.god : undefined} lens={route.lens} compact
+          testId="lens-tabs-bar" className="hidden min-w-0 shrink-0 lg:block" />
+        <div className="ml-auto min-w-0 max-w-xs shrink lg:max-w-md">
           <SubjectSearch gods={data.gods} items={data.items} />
         </div>
-        <div className="ml-auto flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           {data.data_updated && (
             <span data-testid="header-freshness" title={data.data_updated}
               className="hidden text-label text-faint lg:inline">

@@ -256,7 +256,7 @@ Components should feel **tactile and confident**: presses register physically (a
 - `rounded-md`, `border-line`, `bg-bg2`, `shadow-card`, small (`text-xs`) copy. Flips above/below the trigger and shifts horizontally to avoid clipping; opens on a short hover delay but instantly on keyboard focus (`role="tooltip"`).
 
 ### App chrome (rail + header)
-- Navigation is **two levels, never one**: a subject header naming the roster or the god, then a lens strip beneath it. There is no rail and no second column — the god picker is a dialog, because the subject is named on every screen and only has to be *changed* occasionally. Chrome fell from 38% of the first screen to 22%.
+- Navigation is **two levels, never one**: a subject header naming the roster or the god, and a lens strip. From `lg` up the strip sits inside the navbar row, which is where the room is; below that it keeps its own row, because five tabs plus a search field starve each other on a narrow screen. Only one of the two is ever in the accessibility tree. There is no rail and no second column — the god picker is a dialog, because the subject is named on every screen and only has to be *changed* occasionally. Chrome fell from 38% of the first screen to 22%.
 - The **footer is gone**. Attribution and the "not affiliated with Hi-Rez" line live in Help, where someone looking for them will look; they were holding 43px of every screen forever for something you read once.
 - **One search field**, in the shell, reaching both nouns the product has. There were four "Search gods…" inputs with four different behaviours.
 - The header carries the brand anchor, freshness and actions. **No page title and no count** — see the One-Claim Rule.

@@ -42,16 +42,16 @@ describe("SubjectFrame — the roster is a first-class subject", () => {
 
   it("offers the five roster lenses", () => {
     render(frame());
-    const nav = within(screen.getByRole("navigation", { name: /roster views/i }));
-    for (const label of ["Board", "Tier list", "Items", "Draft", "Patch notes"]) {
+    const nav = within(screen.getByTestId("lens-tabs-strip"));
+    for (const label of ["Board", "Tier List", "Items", "Draft", "Patch Notes"]) {
       expect(nav.getByRole("link", { name: label })).toBeInTheDocument();
     }
   });
 
   it("marks the lens in view as the current page", () => {
     render(frame({ lens: "tiers" }));
-    const nav = within(screen.getByRole("navigation", { name: /roster views/i }));
-    expect(nav.getByRole("link", { name: "Tier list" })).toHaveAttribute("aria-current", "page");
+    const nav = within(screen.getByTestId("lens-tabs-strip"));
+    expect(nav.getByRole("link", { name: "Tier List" })).toHaveAttribute("aria-current", "page");
     expect(nav.getByRole("link", { name: "Board" })).not.toHaveAttribute("aria-current");
   });
 
@@ -69,13 +69,15 @@ describe("SubjectFrame — a god is the subject", () => {
     expect(screen.getByRole("heading", { level: 1, name: "Ra" })).toBeInTheDocument();
   });
 
-  it("offers the four god lenses, named for the god", () => {
+  /* Short labels: the strip sits in the navbar with the god named directly
+   * beneath it, so "Items for Ra" was restating the next line. */
+  it("offers the four god lenses", () => {
     render(frame({ god: ra, godName: "Ra", lens: "builds" }));
-    const nav = within(screen.getByRole("navigation", { name: /Ra views/i }));
+    const nav = within(screen.getByTestId("lens-tabs-strip"));
     expect(nav.getByRole("link", { name: "Builds" })).toHaveAttribute("href", "#/god/Ra");
     expect(nav.getByRole("link", { name: "Kit" })).toHaveAttribute("href", "#/god/Ra/kit");
-    expect(nav.getByRole("link", { name: "Items for Ra" })).toHaveAttribute("href", "#/god/Ra/items");
-    expect(nav.getByRole("link", { name: "Where Ra ranks" })).toHaveAttribute("href", "#/god/Ra/ranking");
+    expect(nav.getByRole("link", { name: "Items" })).toHaveAttribute("href", "#/god/Ra/items");
+    expect(nav.getByRole("link", { name: "Ranking" })).toHaveAttribute("href", "#/god/Ra/ranking");
   });
 
   it("offers a way back to the whole roster", () => {
