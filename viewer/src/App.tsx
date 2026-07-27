@@ -16,6 +16,7 @@ import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
 import { PatchNotes } from "./components/PatchNotes";
 import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
+import { Wordmark } from "./components/Wordmark";
 import { relativeDate } from "./lib/relativeDate";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
 import { documentTitle } from "./lib/documentTitle";
@@ -79,7 +80,7 @@ function App() {
   if (error) {
     return (
       <div className="flex h-screen flex-col items-center justify-center gap-4 px-6 text-center text-ink">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold font-display text-lead font-bold text-bg0">S2</div>
+        <Wordmark px={30} />
         <div className="max-w-[46ch]">
           <h1 className="font-display text-title font-bold text-ink">Couldn&rsquo;t load the build data</h1>
           <p className="mt-2 text-body leading-relaxed text-muted">
@@ -105,7 +106,7 @@ function App() {
           {/* No controls while loading. A Reload button here silently
               refetched the same file and reported nothing — and the real
               failure path already has its own Try again. */}
-          <span className="font-display text-lead font-bold tracking-tight text-ink">ichor</span>
+          <Wordmark />
         </header>
         <div className="flex min-h-0 flex-1 overflow-hidden">
           {route.god
@@ -152,24 +153,10 @@ function App() {
       </a>
 
       <header className="flex flex-none items-center gap-3 border-b border-line px-4 py-2 sm:px-6 sm:py-2.5">
-        {/* The wordmark. The tittle of the i is the same gold kite that marks
-            our own placement on every tier ladder — the logo and the data are
-            one shape, so the mark means something before you learn it.
-            Geometry is measured from the face, not guessed: with
-            `leading-none` Rajdhani puts its baseline 0.79em below the box top
-            and its x-height 0.515em above the baseline, so the stem's top edge
-            sits 0.275em down. The kite hangs just clear of it. (Positioning
-            from the box *bottom* instead is 0.21em out — the descender — and
-            drives the mark straight through the stem.) */}
-        <a href={toHash.home()} aria-label="ichor — home"
-          className="press shrink-0 py-1 font-display text-[19px] font-bold leading-none tracking-tight text-ink">
-          <span className="relative inline-block" aria-hidden="true">
-            &#x131;
-            {/* Width is height × 0.587, the drawn artwork's own ratio. */}
-            <span className="mark absolute left-1/2 h-[0.36em] w-[0.211em] -translate-x-1/2 bg-gold"
-              style={{ top: "calc(0.275em - 0.04em - 0.36em)" }} />
-          </span>
-          <span aria-hidden="true">chor</span>
+        {/* The link supplies its own label, which wins over the wordmark's —
+            so "ichor" isn't announced twice. */}
+        <a href={toHash.home()} aria-label="ichor — home" className="press shrink-0 py-1">
+          <Wordmark />
         </a>
         {/* Only one of these two is ever in the accessibility tree — the
             other is display:none at its breakpoint. */}
