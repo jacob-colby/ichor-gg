@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useIndexData } from "./hooks/useIndexData";
 import { Home } from "./components/Home";
 import { DraftPage } from "./components/DraftPage";
@@ -31,6 +31,23 @@ function App() {
   const [addOpen, setAddOpen] = useState(false);
   const [pickerOpen, setPickerOpen] = useState(false);
   const isDev = import.meta.env.DEV;
+
+  /* Refetching index.json is a pipeline affordance, not a visitor's control:
+   * the file is static, so pressing it on a deployed site re-reads the same
+   * bytes and changes nothing on screen. It shipped in the public header
+   * anyway, where it read as a broken button — no result, no feedback. It is
+   * dev-only now, and it reports what it did, because a control that runs
+   * silently is indistinguishable from one that is broken. */
+  const [reloadState, setReloadState] = useState<"idle" | "busy" | "done">("idle");
+  const doneTimer = useRef<number | undefined>(undefined);
+  const runReload = useCallback(async () => {
+    window.clearTimeout(doneTimer.current);
+    setReloadState("busy");
+    await reload();
+    setReloadState("done");
+    doneTimer.current = window.setTimeout(() => setReloadState("idle"), 1600);
+  }, [reload]);
+  useEffect(() => () => window.clearTimeout(doneTimer.current), []);
 
   // Per-route tab/history title — these links get pasted into Discord, and a
   // history full of identical "ichor" entries is useless.
@@ -85,8 +102,10 @@ function App() {
         {/* Same chrome as the loaded shell, so nothing jumps when index.json
             lands — only the content area is a placeholder. */}
         <header className="flex items-center gap-3 border-b border-line px-4 py-2.5 sm:px-6">
+          {/* No controls while loading. A Reload button here silently
+              refetched the same file and reported nothing — and the real
+              failure path already has its own Try again. */}
           <span className="font-display text-lead font-bold tracking-tight text-ink">ichor</span>
-          <button type="button" onClick={reload} className="press ml-auto rounded-md bg-bg2 px-3 py-1.5 text-small text-muted hover:text-ink">Reload</button>
         </header>
         <div className="flex min-h-0 flex-1 overflow-hidden">
           {route.god
@@ -172,10 +191,15 @@ function App() {
               <span className="rounded-sm border border-line-strong px-1 py-px text-micro font-semibold uppercase tracking-wider">Dev</span>+ Add god
             </button>
           )}
-          <button type="button" onClick={reload}
-            className="press hidden rounded-md border border-line bg-bg2 px-3 py-1.5 text-small text-muted hover:text-ink sm:block">
-            Reload
-          </button>
+          {isDev && (
+            <button type="button" onClick={runReload} disabled={reloadState === "busy"}
+              className="press hidden items-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-small text-faint hover:text-muted disabled:opacity-60 sm:flex">
+              <span className="rounded-sm border border-line-strong px-1 py-px text-micro font-semibold uppercase tracking-wider">Dev</span>
+              <span aria-live="polite" className="min-w-[5.5ch] text-left">
+                {reloadState === "busy" ? "Reloading…" : reloadState === "done" ? "Reloaded" : "Reload"}
+              </span>
+            </button>
+          )}
           <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help and credits"
             className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted hover:text-ink">?</button>
         </div>

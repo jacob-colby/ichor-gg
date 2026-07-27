@@ -181,6 +181,31 @@ describe("App — chrome", () => {
     expect(screen.getByPlaceholderText(/search gods and items/i)).toBeInTheDocument();
   });
 
+  /* Refetching a static index.json does nothing a visitor can see, so the
+   * button read as broken: no result, no feedback. It is a pipeline tool. */
+  it("keeps the data-reload control out of the deployed header", async () => {
+    vi.stubEnv("DEV", false);
+    render(<App />);
+    await screen.findByTestId("subject-header");
+    expect(screen.queryByRole("button", { name: /reload/i })).not.toBeInTheDocument();
+    // The dev-only god editor goes with it.
+    expect(screen.queryByRole("button", { name: /add god/i })).not.toBeInTheDocument();
+    // What survives is the control a visitor actually needs.
+    expect(screen.getByRole("button", { name: /help and credits/i })).toBeInTheDocument();
+    vi.unstubAllEnvs();
+  });
+
+  it("reports what it did when the dev reload runs", async () => {
+    vi.stubEnv("DEV", true);
+    render(<App />);
+    await screen.findByTestId("subject-header");
+    const btn = screen.getByRole("button", { name: /reload/i });
+    fireEvent.click(btn);
+    // A control that runs silently is indistinguishable from a broken one.
+    await waitFor(() => expect(btn).toHaveTextContent(/reloaded/i));
+    vi.unstubAllEnvs();
+  });
+
   it("redirects a retired #/gods URL to the roster board", async () => {
     atUrl("#/gods");
     render(<App />);
