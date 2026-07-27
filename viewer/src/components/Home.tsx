@@ -25,46 +25,16 @@ import { godLane, laneTextClass } from "../lib/roleAccent";
 import { relativeDate } from "../lib/relativeDate";
 import { useDraft, encodeDraftHash, MODE_TEAM_SIZE } from "../lib/draft";
 import {
-  buildDivergenceBoard, stepPercent, deltaText,
+  buildDivergenceBoard, deltaText,
   type Divergence, type LaneColumn,
 } from "../lib/divergence";
-import {
-  biggestArguments, TIER_STEPS,
-  type Argument, type TierLetter, type Verdict,
-} from "../lib/tierBands";
+import { biggestArguments, type Argument } from "../lib/tierBands";
+import { TierLadder } from "./TierLadder";
+import { VERDICT_TEXT, VERDICT_WORD, VERDICT_SPOKEN } from "../lib/verdictWords";
 
 /** The one label style shared by the sections below the board. */
 const sectionLabel = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
-/** The ladder, left to right. A tier list is drawn S-first, but an axis that
- *  improves rightward is the one people read off a scoreboard. */
-const LADDER: TierLetter[] = ["C", "B", "A", "S"];
-
-/* The verdict, in the words this audience already argues in.
- *
- * The page used to state a disagreement as a signed number (`+0.15`) beside
- * two raw scores, which asks the reader to know what 0.15 is worth before it
- * says anything at all. `under`/`premium` still carry the direction — the same
- * pair, meaning the same thing they mean on items and in the tier list — but
- * the row now leads with the claim and keeps the arithmetic in its tooltip and
- * its accessible name. */
-const VERDICT_WORD: Record<Verdict, string> = {
-  underrated: "Underrated",
-  overrated: "Overrated",
-  agreed: "Agreed",
-};
-const VERDICT_TEXT: Record<Verdict, string> = {
-  underrated: "text-under",
-  overrated: "text-premium",
-  agreed: "text-faint",
-};
-/** Spoken form, for the row's accessible name — "Underrated" alone doesn't say
- *  who is doing the underrating. */
-const VERDICT_SPOKEN: Record<Verdict, string> = {
-  underrated: "we rate it higher",
-  overrated: "we rate it lower",
-  agreed: "both agree",
-};
 
 /** God portrait with a real fallback. The icon set is generated per god, so a
  * missing file should degrade to an initial rather than leave a hole in the
@@ -244,75 +214,6 @@ function StateBlock({ board, tierlist, ranked }: {
   );
 }
 
-/** The empty ladder — four rungs, worst to best. Shared by the legend and
- *  every row so the cell geometry can't drift between the two. */
-function LadderCells() {
-  return (
-    <span className="absolute inset-0 grid grid-cols-4 gap-[3px]">
-      {Array.from({ length: TIER_STEPS }, (_, i) => (
-        <span key={i} className="rounded-[1px] bg-bg3" />
-      ))}
-    </span>
-  );
-}
-
-/**
- * One god's placement on the tier ladder: where the community puts them, where
- * we put them, and the run between the two.
- *
- * The old bar drew the *raw score gap* outward from a centre tick, which asked
- * the reader to already know what 0.17 was worth — and quietly compared two
- * numbers that aren't on a shared scale (0.53 is S-tier for the model, but the
- * community's S starts near 0.64). Rungs are the comparison this audience
- * already reads, and they're the honest one: each source is placed by its own
- * tier letter, so the distance between the marks means exactly what it looks
- * like it means.
- */
-function Ladder({ row }: { row: Divergence }) {
-  const from = Math.min(row.ourStep, row.theirStep);
-  const to = Math.max(row.ourStep, row.theirStep);
-  const under = row.verdict === "underrated";
-  return (
-    <span aria-hidden="true" className="relative block h-2.5">
-      <LadderCells />
-      {row.verdict !== "agreed" && (
-        // Grows from the community's rung toward ours: the animation traces
-        // the argument in the direction the argument runs.
-        <span
-          className={`bar-grow absolute inset-y-0 rounded-[1px] ${
-            under ? "origin-left bg-under/45" : "origin-right bg-premium/45"}`}
-          style={{ left: `${stepPercent(from)}%`, width: `${stepPercent(to) - stepPercent(from)}%` }}
-        />
-      )}
-      {/* The community's placement: a plain rule, the neutral baseline. */}
-      <span className="absolute -top-0.5 h-[14px] w-[2px] -translate-x-1/2 rounded-[1px] bg-ink"
-        style={{ left: `${stepPercent(row.theirStep)}%` }} />
-      {/* Ours: the gold kite — the same shape as the wordmark's tittle. Two
-          marks distinguished only by colour left it ambiguous which one was
-          the model's verdict, and that has to read without consulting a key,
-          so shape carries it a second time. Drawn on agreement too, where it
-          lands on the rule — which is what agreeing looks like. */}
-      <span
-        className="mark absolute -top-[3px] h-4 w-[9px] -translate-x-1/2 bg-gold"
-        style={{ left: `${stepPercent(row.ourStep)}%` }}
-      />
-    </span>
-  );
-}
-
-/** The rungs, named under the bar they belong to. These used to be taught once
- *  in a key above the whole board, which meant every row was only readable by
- *  remembering something from somewhere else on the page. */
-function LadderAxis() {
-  return (
-    <span aria-hidden="true" className="mt-1 grid grid-cols-4 gap-[3px]">
-      {LADDER.map((t) => (
-        <span key={t} className="text-center font-mono text-micro leading-none text-faint">{t}</span>
-      ))}
-    </span>
-  );
-}
-
 /** What the two marks are. The rungs no longer need explaining here — each bar
  * now names its own tiers underneath, so the only thing left to say is which
  * mark belongs to whom. */
@@ -359,8 +260,7 @@ function DivergenceRow({ row }: { row: Divergence }) {
           {VERDICT_WORD[row.verdict]}
         </span>
         <span className="col-span-3 block">
-          <Ladder row={row} />
-          <LadderAxis />
+          <TierLadder ourStep={row.ourStep} theirStep={row.theirStep} verdict={row.verdict} />
         </span>
       </button>
     </li>
