@@ -509,51 +509,11 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
         </ol>
       )}
 
-      {/* ── Threats + diff, side by side once there's room ───────── */}
+      {/* ── The core, then why it moved — side by side once there's room ── */}
+      {/* The core leads: it is what this page produces. The threats explain
+          why it moved, so they follow. Reading input, then explanation, then
+          answer put the answer last — and below the fold under 1280px. */}
       <div className="flex flex-col gap-6 xl:flex-row xl:gap-8">
-      {meName && (
-        <section aria-labelledby="draft-threats-h" data-testid="draft-threats" className="border-t border-line pt-5 xl:w-[340px] xl:flex-none">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-            <h2 id="draft-threats-h" className={eyebrow}>What you&rsquo;re up against</h2>
-            <p className="text-label text-faint">
-              {enemiesKnown} of {roster} enemies known
-              {enemiesKnown < roster && <span className="text-muted"> · this build will keep moving</span>}
-            </p>
-          </div>
-          {/* Zeros are rendered once at least one enemy is in, because a
-              measured "0 of 5 crit" is a finding. With nothing entered they'd
-              be the opposite error — unmeasured printed as measured. */}
-          {enemiesKnown === 0 ? (
-            <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
-              Nothing scouted yet. Add an enemy and this fills in with what they threaten
-              and which of your items answer it.
-            </p>
-          ) : (
-          <ul className="mt-2.5 grid grid-cols-1 gap-x-5 gap-y-1.5 sm:grid-cols-2 xl:grid-cols-1">
-            {THREAT_DEFS.map((t) => {
-              const n = threats[t.key];
-              const who = culprits[t.key];
-              return (
-                <li key={t.key} className="flex flex-wrap items-baseline gap-x-2 border-b border-line py-1 text-label">
-                  <span className={`font-mono ${n > 0 ? "text-ink-soft" : "text-faint"}`}>{n}/{roster}</span>
-                  <span className={n > 0 ? "text-muted" : "text-faint"}>{t.label}</span>
-                  {who.length > 0
-                    ? <span className="min-w-0 truncate text-faint">{who.join(", ")}</span>
-                    : <span className="text-faint">—</span>}
-                </li>
-              );
-            })}
-          </ul>
-          )}
-          {threats.allyAllPhysical && threats.allyCount > 0 && (
-            <p className="mt-2 text-label text-faint">
-              your side · {threats.allyPhysical} of {roster} physical · penetration raised
-            </p>
-          )}
-        </section>
-      )}
-
-      {/* ── The diff ──────────────────────────────────────────────── */}
       {meName && (
         <section aria-labelledby="draft-core-h" data-testid="draft-core" className="min-w-0 flex-1 border-t border-line pt-5">
           <h2 id="draft-core-h" className={eyebrow}>What changed</h2>
@@ -604,6 +564,49 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
                 })}
               </ul>
             </div>
+          )}
+        </section>
+      )}
+
+
+      {meName && (
+        <section aria-labelledby="draft-threats-h" data-testid="draft-threats" className="border-t border-line pt-5 xl:w-[340px] xl:flex-none xl:border-l xl:border-t-0 xl:pl-8 xl:pt-0">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+            <h2 id="draft-threats-h" className={eyebrow}>What you&rsquo;re up against</h2>
+            <p className="text-label text-faint">
+              {enemiesKnown} of {roster} enemies known
+              {enemiesKnown < roster && <span className="text-muted"> · this build will keep moving</span>}
+            </p>
+          </div>
+          {/* Zeros are rendered once at least one enemy is in, because a
+              measured "0 of 5 crit" is a finding. With nothing entered they'd
+              be the opposite error — unmeasured printed as measured. */}
+          {enemiesKnown === 0 ? (
+            <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
+              Nothing scouted yet. Add an enemy and this fills in with what they threaten
+              and which of your items answer it.
+            </p>
+          ) : (
+          <ul className="mt-2.5 grid grid-cols-1 gap-x-5 gap-y-1.5 sm:grid-cols-2 xl:grid-cols-1">
+            {THREAT_DEFS.map((t) => {
+              const n = threats[t.key];
+              const who = culprits[t.key];
+              return (
+                <li key={t.key} className="flex flex-wrap items-baseline gap-x-2 border-b border-line py-1 text-label">
+                  <span className={`font-mono ${n > 0 ? "text-ink-soft" : "text-faint"}`}>{n}/{roster}</span>
+                  <span className={n > 0 ? "text-muted" : "text-faint"}>{t.label}</span>
+                  {who.length > 0
+                    ? <span className="min-w-0 truncate text-faint">{who.join(", ")}</span>
+                    : <span className="text-faint">—</span>}
+                </li>
+              );
+            })}
+          </ul>
+          )}
+          {threats.allyAllPhysical && threats.allyCount > 0 && (
+            <p className="mt-2 text-label text-faint">
+              your side · {threats.allyPhysical} of {roster} physical · penetration raised
+            </p>
           )}
         </section>
       )}
