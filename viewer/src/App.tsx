@@ -99,16 +99,10 @@ function App() {
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
   const missingGod = !!route.god && !god;
 
-  // One computation of the roster's headline figures, shared by the frame and
-  // by Home, so the header and the page it sits above can never disagree.
+  // The frame states what's in the index; Home's claim states what the model
+  // thinks of it. Both read the same board, so the two can't drift.
   const board = buildDivergenceBoard(data.tierlist?.gods);
-  const roster = {
-    total: data.gods.length,
-    disputed: board.tierDisagreements,
-    unranked: board.unranked,
-    agreed: Math.max(0, board.ranked - board.tierDisagreements),
-    ranked: board.ranked,
-  };
+  const roster = { total: data.gods.length, ranked: board.ranked, unranked: board.unranked };
 
   // Per-mode slice, never the Conquest-mirroring top level: Joust has no
   // community ratings at all, so reading `tierlist.gods` there would assert a

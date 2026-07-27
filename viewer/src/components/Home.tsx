@@ -68,19 +68,89 @@ function GodIcon({ name, className }: { name: string; className: string }) {
   );
 }
 
+/* ── The evidence ────────────────────────────────────────────────────────
+ * Which lanes the two sources argue about, compared side by side. The board
+ * below answers "who, within a lane"; it cannot answer "which lane is the
+ * argument" without reading five column headers and holding them in memory.
+ * So the comparison lives here and the board's columns stop repeating it.
+ */
+function LaneLeans({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
+  // Scaled to the largest lane mean, not to the board's per-god scale: an
+  // average sits an order of magnitude below an individual gap, and reusing
+  // that scale would draw five bars all but invisible.
+  const scale = Math.max(...board.lanes.map((l) => Math.abs(l.meanDelta)), 0.005);
+
+  return (
+    <section aria-labelledby="home-leans-h" className="w-full lg:max-w-[600px] lg:flex-1">
+      <div className="flex items-baseline justify-between gap-3">
+        <h2 id="home-leans-h" className={sectionLabel}>Which lanes we argue about</h2>
+        <span className="text-label text-faint">mean gap · disputed</span>
+      </div>
+      <ul className="mt-2 flex flex-col border-t border-line">
+        {board.lanes.map((col) => {
+          const pct = Math.min(100, Math.round((Math.abs(col.meanDelta) / scale) * 100));
+          const positive = col.meanDelta > 0;
+          const empty = col.rows.length === 0;
+          return (
+            <li key={col.lane}
+              className="grid grid-cols-[4.5rem_minmax(0,1fr)_3rem_3.5rem] items-center gap-x-2.5 border-b border-line py-1.5">
+              <span className={`truncate text-small font-semibold ${laneTextClass(col.lane)}`}>
+                {col.lane}
+              </span>
+              {empty ? (
+                <span className="col-span-3 text-label text-faint">no ranked gods</span>
+              ) : (
+                <>
+                  <span aria-hidden="true" className="relative block h-[3px] bg-bg3">
+                    <span className="absolute inset-y-[-2px] left-1/2 w-px -translate-x-1/2 bg-line-strong" />
+                    <span
+                      className={`bar-grow absolute top-0 h-full ${
+                        positive ? "left-1/2 origin-left bg-under" : "right-1/2 origin-right bg-premium"}`}
+                      style={{ width: `${pct / 2}%` }}
+                    />
+                  </span>
+                  <span className={`text-right font-mono text-label ${deltaTextClass(col.meanDelta)}`}>
+                    {deltaText(col.meanDelta)}
+                  </span>
+                  <span className="text-right text-label text-faint">
+                    <span className="font-mono text-muted">{col.tierDiffer}</span> of{" "}
+                    <span className="font-mono">{col.rows.length}</span>
+                  </span>
+                </>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+      <p className="mt-2 max-w-[46ch] text-label leading-relaxed text-faint">
+        A lane&rsquo;s mean is the average gap across the gods both sources rated — it says which
+        way a whole lane leans, which no single row can.
+      </p>
+    </section>
+  );
+}
+
 /* ── The claim ───────────────────────────────────────────────────────────
  * The page's one argument, with every number in it computed from the index
  * rather than written down. When there's no tier list to compare against, the
  * claim steps back to what the model does instead of inventing a statistic.
  */
-function StateBlock({ data, disagreements, ranked, unranked }: {
-  data: IndexData; disagreements: number; ranked: number; unranked: number;
+function StateBlock({ board, disagreements, ranked }: {
+  board: ReturnType<typeof buildDivergenceBoard>;
+  disagreements: number;
+  ranked: number;
 }) {
   const comparable = ranked > 0;
   return (
     <header className="border-b border-line pb-6">
-      <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-        <div className="min-w-0">
+      {/* Two columns that do different jobs: the argument, and the evidence
+          for it. This used to be the claim beside a search field; when search
+          moved into the shell the right column was left holding a single
+          16px line of counts, leaving a 645px hole across the middle of the
+          page's most important block — and those counts already appeared in
+          the subject header two rules above. */}
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:gap-12">
+        <div className="min-w-0 lg:max-w-[46ch]">
           <h1 className="max-w-[19ch] text-balance font-display text-display font-bold leading-[1.1] tracking-[-0.01em] text-ink sm:text-display">
             {comparable ? (
               <>We disagree with the meta on{" "}
@@ -100,18 +170,7 @@ function StateBlock({ data, disagreements, ranked, unranked }: {
           </p>
         </div>
 
-        <div className="flex shrink-0 flex-col gap-3 lg:items-end">
-          {/* Search lives in the shell now — one field, reaching gods and
-              items, instead of four fields with four behaviours. */}
-          <ul className="flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint lg:justify-end">
-            <li>{data.gods.length} gods</li>
-            {comparable && <li className="before:mr-3 before:content-['·']">{ranked} ranked</li>}
-            {unranked > 0 && <li className="before:mr-3 before:content-['·']">{unranked} unranked</li>}
-            {/* The patch label is deliberately absent here: the app header
-                carries it on every route, and `Freshness` repeats it at the
-                foot of this page. Three copies is two too many. */}
-          </ul>
-        </div>
+        {comparable && <LaneLeans board={board} />}
       </div>
     </header>
   );
@@ -191,7 +250,6 @@ const ROWS_PER_LANE = 6;
 function LaneBoardColumn({ col, scale, index }: { col: LaneColumn; scale: number; index: number }) {
   const shown = col.rows.slice(0, ROWS_PER_LANE);
   const rest = col.rows.length - shown.length;
-  const leanClass = deltaTextClass(col.meanDelta);
 
   return (
     <section
@@ -201,19 +259,11 @@ function LaneBoardColumn({ col, scale, index }: { col: LaneColumn; scale: number
       <h3 className={`font-display text-body font-bold tracking-[0.02em] ${laneTextClass(col.lane)}`}>
         {col.lane}
       </h3>
-      <p className="mt-0.5 text-label text-faint">
-        {col.rows.length > 0 ? (
-          <>
-            <span className={leanClass}>mean {deltaText(col.meanDelta)}</span>
-            <span className="px-1">·</span>
-            {col.lower} below
-            <span className="px-1">·</span>
-            {col.tierDiffer} differ
-          </>
-        ) : (
-          <>no ranked gods</>
-        )}
-      </p>
+      {/* The lane's lean moved up into `LaneLeans`, which compares all five
+          at once; repeating it here put the same figure 200px from itself. */}
+      {col.rows.length === 0 && (
+        <p className="mt-0.5 text-label text-faint">no ranked gods</p>
+      )}
 
       <ul className="mt-2.5 flex flex-col border-t border-line pt-1.5">
         {shown.map((row) => <DivergenceRow key={row.name} row={row} scale={scale} />)}
@@ -454,10 +504,9 @@ export function Home({ data }: { data: IndexData }) {
   return (
     <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 pt-7 sm:px-6 sm:pt-9">
       <StateBlock
-        data={data}
+        board={board}
         disagreements={board.tierDisagreements}
         ranked={board.ranked}
-        unranked={board.unranked}
       />
       <DivergenceBoard board={board} />
       <div className="mt-7 flex flex-col gap-6">

@@ -100,7 +100,7 @@ export interface SubjectFrameProps {
   tierEntry?: GodTierEntry;
   /** Roster headline figures, computed once by the caller from the same board
    *  Home draws, so the header and the page can't disagree. */
-  roster: { total: number; disputed: number; unranked: number; agreed: number; ranked: number };
+  roster: { total: number; ranked: number; unranked: number };
   modeLabel: string;
   onPickGod: () => void;
 }
@@ -182,12 +182,14 @@ export function SubjectFrame({
                     Conquest slice, but the tier list has its own mode control —
                     a label the header can't see change would assert Conquest
                     over a page showing Joust. */}
+                {/* Inventory, not argument. This used to carry the disputed
+                    and agreed counts — the same figures the page's own claim
+                    makes 60px below, which spent the headline's punchline
+                    before it landed. The header says what's in the index; the
+                    claim says what the model thinks of it. */}
                 <p className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-label text-faint">
                   {roster.ranked > 0 && (
-                    <>
-                      <span><span className="font-mono text-gold">{roster.disputed}</span> disputed</span>
-                      <span><span className="font-mono text-ink-soft">{roster.agreed}</span> agreed</span>
-                    </>
+                    <span><span className="font-mono text-ink-soft">{roster.ranked}</span> ranked against the meta</span>
                   )}
                   {roster.unranked > 0 && (
                     <span><span className="font-mono text-ink-soft">{roster.unranked}</span> unranked</span>
