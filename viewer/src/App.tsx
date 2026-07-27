@@ -9,7 +9,7 @@ import { GodInfo } from "./components/GodInfo";
 import { GodItems } from "./components/GodItems";
 import { GodRanking } from "./components/GodRanking";
 import { GodPickerDialog } from "./components/GodPicker";
-import { SubjectFrame } from "./components/SubjectFrame";
+import { SubjectFrame, LensTabs } from "./components/SubjectFrame";
 import { SubjectSearch } from "./components/SubjectSearch";
 import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
@@ -60,7 +60,7 @@ function App() {
 
   if (error) {
     return (
-      <div className="flex h-screen flex-col items-center justify-center gap-4 bg-bg0 px-6 text-center text-ink">
+      <div className="flex h-screen flex-col items-center justify-center gap-4 px-6 text-center text-ink">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold font-display text-lead font-bold text-bg0">S2</div>
         <div className="max-w-[46ch]">
           <h1 className="font-display text-title font-bold text-ink">Couldn&rsquo;t load the build data</h1>
@@ -80,7 +80,7 @@ function App() {
 
   if (!data) {
     return (
-      <div className="flex h-screen flex-col bg-bg0 text-ink">
+      <div className="flex h-screen flex-col text-ink">
         {/* Same chrome as the loaded shell, so nothing jumps when index.json
             lands — only the content area is a placeholder. */}
         <header className="flex items-center gap-3 border-b border-line px-4 py-2.5 sm:px-6">
@@ -99,16 +99,10 @@ function App() {
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
   const missingGod = !!route.god && !god;
 
-  // One computation of the roster's headline figures, shared by the frame and
-  // by Home, so the header and the page it sits above can never disagree.
+  // The frame states what's in the index; Home's claim states what the model
+  // thinks of it. Both read the same board, so the two can't drift.
   const board = buildDivergenceBoard(data.tierlist?.gods);
-  const roster = {
-    total: data.gods.length,
-    disputed: board.tierDisagreements,
-    unranked: board.unranked,
-    agreed: Math.max(0, board.ranked - board.tierDisagreements),
-    ranked: board.ranked,
-  };
+  const roster = { total: data.gods.length, ranked: board.ranked, unranked: board.unranked };
 
   // Per-mode slice, never the Conquest-mirroring top level: Joust has no
   // community ratings at all, so reading `tierlist.gods` there would assert a
@@ -130,7 +124,7 @@ function App() {
   const pickGod = (name: string) => { setPickerOpen(false); navigate(toHash.god(name)); };
 
   return (
-    <div className="flex h-screen flex-col bg-bg0 text-ink">
+    <div className="flex h-screen flex-col text-ink">
       {/* First focusable on the page. */}
       <a href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-gold focus:px-3 focus:py-2 focus:font-display focus:text-body focus:font-semibold focus:text-bg0">
@@ -141,10 +135,14 @@ function App() {
         <a href={toHash.home()} className="press shrink-0 py-1 font-display text-lead font-bold tracking-tight text-ink">
           ichor
         </a>
-        <div className="min-w-0 flex-1 sm:max-w-md">
+        {/* Only one of these two is ever in the accessibility tree — the
+            other is display:none at its breakpoint. */}
+        <LensTabs god={route.god && god ? route.god : undefined} lens={route.lens} compact
+          testId="lens-tabs-bar" className="hidden min-w-0 shrink-0 lg:block" />
+        <div className="ml-auto min-w-0 max-w-xs shrink lg:max-w-md">
           <SubjectSearch gods={data.gods} items={data.items} />
         </div>
-        <div className="ml-auto flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           {data.data_updated && (
             <span data-testid="header-freshness" title={data.data_updated}
               className="hidden text-label text-faint lg:inline">

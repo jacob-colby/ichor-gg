@@ -225,9 +225,15 @@ function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
 
 type SlotKind = "you" | "ally" | "enemy";
 
-/** A single ally/enemy slot. The caption row is reserved on every ally slot so
- * the gold-ringed "you" slot's icon doesn't sit a line lower than its
- * neighbours. */
+/** A single ally/enemy slot.
+ *
+ * The portrait is the slot. The name used to sit under it inside the button,
+ * which cost the icon half its height for a label the art already carries —
+ * the god is still named in the button's accessible name and its tooltip.
+ *
+ * "You" is a badge on the slot rather than a caption above it. As a caption it
+ * only existed on ally slots, so the entire ally row sat a line lower than the
+ * enemies it is meant to be read against. */
 function Slot({ kind, position, name, onOpen, onRemove }: {
   kind: SlotKind; position: number; name: string; onOpen: () => void; onRemove?: () => void;
 }) {
@@ -239,26 +245,19 @@ function Slot({ kind, position, name, onOpen, onRemove }: {
   const isYou = kind === "you";
 
   return (
-    <div className="flex flex-col items-center gap-1">
-      {kind !== "enemy" && (
-        <span aria-hidden={!isYou}
-          className={`text-micro font-bold uppercase tracking-[0.1em] text-gold ${isYou ? "" : "invisible"}`}>
-          You
-        </span>
-      )}
+    <div className="relative">
       {!name ? (
         <button type="button" onClick={onOpen} aria-label={ariaLabel}
-          className={`press flex h-14 w-14 flex-none items-center justify-center rounded-md text-title leading-none text-faint hover:border-line-strong hover:text-muted ${
+          className={`press flex h-16 w-16 flex-none items-center justify-center rounded-md text-title leading-none text-faint hover:border-line-strong hover:text-muted ${
             isYou ? "border-2 border-gold" : "border border-dashed border-line-strong"}`}>
           +
         </button>
       ) : (
-        <div className="relative">
-          <button type="button" onClick={onOpen} aria-label={ariaLabel}
-            className={`press flex h-14 w-14 flex-none flex-col items-center justify-center gap-1 rounded-md bg-bg2 p-1 ${
+        <>
+          <button type="button" onClick={onOpen} aria-label={ariaLabel} title={name}
+            className={`press flex h-16 w-16 flex-none items-center justify-center overflow-hidden rounded-md bg-bg2 p-0.5 ${
               isYou ? "border-2 border-gold shadow-glow" : "border border-line hover:border-line-strong"}`}>
-            <Icon name={name} className="h-7 w-7" />
-            <span className="w-full truncate text-center font-display text-micro text-ink">{name}</span>
+            <Icon name={name} className="h-full w-full rounded-sm" />
           </button>
           {/* Sibling, never nested, so it can't also fire the picker. 24×24
               minimum per WCAG 2.5.8; it was 20×20. */}
@@ -269,7 +268,13 @@ function Slot({ kind, position, name, onOpen, onRemove }: {
               ✕
             </button>
           )}
-        </div>
+        </>
+      )}
+      {isYou && (
+        <span aria-hidden="true"
+          className="pointer-events-none absolute bottom-0.5 left-1/2 -translate-x-1/2 rounded-sm bg-gold px-1 py-px text-micro font-bold uppercase leading-none tracking-[0.08em] text-bg0">
+          You
+        </span>
       )}
     </div>
   );

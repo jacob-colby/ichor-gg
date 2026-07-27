@@ -68,7 +68,7 @@ function ChangedItemRow({ delta }: { delta: PatchDelta }) {
   }
 
   return (
-    <div className="flex items-start gap-2.5 rounded-lg border border-line bg-bg2 p-2.5">
+    <div className="plane flex items-start gap-2.5 rounded-lg border border-line bg-bg2 p-2.5">
       <img
         src={`/icons/${iconSlug(delta.name)}.png`}
         alt=""

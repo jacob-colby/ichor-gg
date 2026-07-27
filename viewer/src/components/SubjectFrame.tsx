@@ -20,17 +20,17 @@ import { useState } from "react";
 
 const ROSTER_TABS: { lens: RosterLens; label: string }[] = [
   { lens: "board", label: "Board" },
-  { lens: "tiers", label: "Tier list" },
+  { lens: "tiers", label: "Tier List" },
   { lens: "items", label: "Items" },
   { lens: "draft", label: "Draft" },
-  { lens: "patch", label: "Patch notes" },
+  { lens: "patch", label: "Patch Notes" },
 ];
 
 const GOD_TABS: { lens: GodLens; label: (g: string) => string }[] = [
   { lens: "builds", label: () => "Builds" },
   { lens: "kit", label: () => "Kit" },
-  { lens: "items", label: (g) => `Items for ${g}` },
-  { lens: "ranking", label: (g) => `Where ${g} ranks` },
+  { lens: "items", label: () => "Items" },
+  { lens: "ranking", label: () => "Ranking" },
 ];
 
 function divergenceClass(tierGap: number | null): string {
@@ -91,6 +91,36 @@ function Verdict({ entry }: { entry?: GodTierEntry }) {
   );
 }
 
+/** The lens strip on its own, so the shell can seat it in the navbar where
+ *  there is room and drop it to its own row where there isn't. */
+export function LensTabs({ god, lens, className = "", testId, compact = false }: {
+  god?: string; lens: Lens; className?: string; testId?: string;
+  /** Seated inside the navbar row, where it must not drive the row's height. */
+  compact?: boolean;
+}) {
+  const tabs: { lens: Lens; label: string; href: string }[] = god
+    ? GOD_TABS.map((t) => ({ lens: t.lens, label: t.label(god), href: lensHash(t.lens, god) }))
+    : ROSTER_TABS.map((t) => ({ lens: t.lens, label: t.label, href: lensHash(t.lens) }));
+
+  return (
+    <nav aria-label={god ? `${god} views` : "Roster views"} data-testid={testId} className={className}>
+      <div className="mx-auto flex w-full max-w-[1440px] items-center gap-1 overflow-x-auto">
+        {tabs.map((t) => {
+          const active = t.lens === lens;
+          return (
+            <a key={t.lens} href={t.href} aria-current={active ? "page" : undefined}
+              className={`press shrink-0 whitespace-nowrap border-b-2 font-display text-small font-semibold transition-colors duration-[150ms] ease-standard ${
+                compact ? "px-2.5 py-1.5" : "px-3 py-2 sm:py-2.5"} ${
+                active ? "border-gold text-gold" : "border-transparent text-muted hover:text-ink"}`}>
+              {t.label}
+            </a>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
+
 export interface SubjectFrameProps {
   /** The current subject. Absent means the whole roster. */
   god?: God;
@@ -100,7 +130,7 @@ export interface SubjectFrameProps {
   tierEntry?: GodTierEntry;
   /** Roster headline figures, computed once by the caller from the same board
    *  Home draws, so the header and the page can't disagree. */
-  roster: { total: number; disputed: number; unranked: number; agreed: number; ranked: number };
+  roster: { total: number; ranked: number; unranked: number };
   modeLabel: string;
   onPickGod: () => void;
 }
@@ -119,13 +149,9 @@ export function SubjectFrame({
     return encodeDraftHash(m, { allies: [subject, ...allies], enemies: draft.enemies.filter((n) => n && n !== subject) });
   };
 
-  const tabs: { lens: Lens; label: string; href: string }[] = name
-    ? GOD_TABS.map((t) => ({ lens: t.lens, label: t.label(name), href: lensHash(t.lens, name) }))
-    : ROSTER_TABS.map((t) => ({ lens: t.lens, label: t.label, href: lensHash(t.lens) }));
-
   return (
     <>
-      <div data-testid="subject-header" className="border-b border-line bg-bg1 px-4 py-2 sm:px-6 sm:py-3">
+      <div data-testid="subject-header" className="plane border-b border-line bg-bg1 px-4 py-2 sm:px-6 sm:py-3">
         <div className="mx-auto flex w-full max-w-[1440px] flex-wrap items-center gap-x-4 gap-y-1.5">
           {name ? (
             <>
@@ -182,12 +208,14 @@ export function SubjectFrame({
                     Conquest slice, but the tier list has its own mode control —
                     a label the header can't see change would assert Conquest
                     over a page showing Joust. */}
+                {/* Inventory, not argument. This used to carry the disputed
+                    and agreed counts — the same figures the page's own claim
+                    makes 60px below, which spent the headline's punchline
+                    before it landed. The header says what's in the index; the
+                    claim says what the model thinks of it. */}
                 <p className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-label text-faint">
                   {roster.ranked > 0 && (
-                    <>
-                      <span><span className="font-mono text-gold">{roster.disputed}</span> disputed</span>
-                      <span><span className="font-mono text-ink-soft">{roster.agreed}</span> agreed</span>
-                    </>
+                    <span><span className="font-mono text-ink-soft">{roster.ranked}</span> ranked against the meta</span>
                   )}
                   {roster.unranked > 0 && (
                     <span><span className="font-mono text-ink-soft">{roster.unranked}</span> unranked</span>
@@ -203,21 +231,10 @@ export function SubjectFrame({
         </div>
       </div>
 
-      <nav aria-label={name ? `${name} views` : "Roster views"}
-        className="border-b border-line px-4 sm:px-6">
-        <div className="mx-auto flex w-full max-w-[1440px] items-center gap-1 overflow-x-auto">
-          {tabs.map((t) => {
-            const active = t.lens === lens;
-            return (
-              <a key={t.lens} href={t.href} aria-current={active ? "page" : undefined}
-                className={`press shrink-0 whitespace-nowrap border-b-2 px-3 py-2 font-display text-small font-semibold sm:py-2.5 transition-colors duration-[150ms] ease-standard ${
-                  active ? "border-gold text-gold" : "border-transparent text-muted hover:text-ink"}`}>
-                {t.label}
-              </a>
-            );
-          })}
-        </div>
-      </nav>
+      {/* Below md the navbar has no room for these, so they keep their own
+          strip; above it the shell renders them inline and this is hidden. */}
+      <LensTabs god={name} lens={lens} testId="lens-tabs-strip"
+        className="border-b border-line px-4 sm:px-6 lg:hidden" />
     </>
   );
 }

@@ -54,10 +54,7 @@ beforeEach(() => {
 describe("DraftPage", () => {
   it("labels ally slot 1 as yours, visually distinct from the rest of the row", () => {
     render(<DraftPage gods={GODS} items={[]} builds={[]} />);
-    // Every ally slot now reserves the "You" caption's height (see the
-    // alignment regression test below), so the text exists once per ally
-    // slot — only the first is actually visible.
-    expect(screen.getAllByText("You")[0]).toBeInTheDocument();
+    expect(screen.getByText("You")).toBeInTheDocument();
     expect(screen.getByLabelText("Add you")).toBeInTheDocument();
   });
 
@@ -221,26 +218,38 @@ describe("DraftPage", () => {
     expect(screen.getByLabelText("Add you")).toBeInTheDocument();
   });
 
-  // Regression coverage: the "You" caption above ally slot 1 used to be
-  // rendered only for that slot, so its icon sat one line lower than the
-  // other ally icons (the label pushed it down). Every ally slot now
-  // reserves the caption's height — visible only for "you" — so all ally
-  // icons land on the same baseline. Verified structurally in the DOM
-  // (matching placeholder + visible label), not just by eye.
-  it("reserves the YOU label's height on every ally slot so icons stay on one baseline", () => {
+  /* The "You" caption used to be a reserved row above every *ally* slot. That
+   * kept the ally icons level with each other and pushed the whole ally row a
+   * line below the enemy row it exists to be compared against. It is a badge on
+   * the slot now, so both rows share one structure and one baseline. */
+  it("gives ally and enemy slots identical structure, so the rows share a baseline", () => {
     render(<DraftPage gods={GODS} items={[]} builds={[]} />);
-    // Conquest default team size is 5 — one visible "You" plus 4 reserved
-    // (invisible) placeholders on the rest of the ally row.
+    const ally = screen.getByLabelText("Add ally 2");
+    const enemy = screen.getByLabelText("Add enemy 2");
+    expect(ally.className).toBe(enemy.className);
+    expect(ally.parentElement!.className).toBe(enemy.parentElement!.className);
+  });
+
+  it("marks your own slot once, without a caption row", () => {
+    render(<DraftPage gods={GODS} items={[]} builds={[]} />);
     const labels = screen.getAllByText("You");
-    expect(labels).toHaveLength(5);
+    expect(labels).toHaveLength(1);
+    // A badge on the slot, not a line above it.
+    expect(labels[0].className).toMatch(/absolute/);
     expect(labels[0].className).not.toMatch(/invisible/);
-    expect(labels[0]).toHaveAttribute("aria-hidden", "false");
-    labels.slice(1).forEach((l) => {
-      expect(l.className).toMatch(/invisible/);
-      expect(l).toHaveAttribute("aria-hidden", "true");
-    });
-    // The enemy row never had a caption — it shouldn't gain placeholders either.
-    expect(screen.getAllByText("You")).toHaveLength(5);
+  });
+
+  /* The portrait is the slot. The name used to sit inside the button under the
+   * icon, costing it half its height for a label the art already carries. */
+  it("gives the portrait the whole slot and keeps the name reachable", () => {
+    render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+    fireEvent.click(screen.getByLabelText("Add ally 2"));
+    fireEvent.click(screen.getByText("Buddy"));
+    const slot = screen.getByLabelText("Change ally 2 (Buddy)");
+    // The name is gone from the face of the slot but not from the machine:
+    // it is still the accessible name and the tooltip.
+    expect(slot).toHaveAttribute("title", "Buddy");
+    expect(slot.textContent).not.toContain("Buddy");
   });
 
   it("stacks Allies and Enemies until there is room for them side by side", () => {

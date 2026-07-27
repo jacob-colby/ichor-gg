@@ -41,9 +41,10 @@
   --radius-md: 10px;
   --radius-lg: 14px;
 
-  /* Elevation */
-  --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.35);
-  --shadow-raised: 0 10px 28px rgba(0, 0, 0, 0.45);
+  /* Elevation. Every raised surface catches light along its top edge, the way
+     a physical panel would — see `.plane` below and DESIGN.md § Ground Plane. */
+  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 6px 16px rgba(0, 0, 0, 0.35);
+  --shadow-raised: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 28px rgba(0, 0, 0, 0.45);
   --shadow-glow: 0 0 0 1px rgba(227, 178, 60, 0.4), 0 4px 14px rgba(227, 178, 60, 0.15);
 
   /* Motion */
@@ -99,8 +100,43 @@
 }
 
 :root { color-scheme: dark; }
-body { background: var(--color-bg0); font-family: var(--font-sans); color: var(--color-ink); }
+
+/* ── Ground plane ────────────────────────────────────────────────────────
+   The page ground is lit rather than painted: a barely-there falloff, lighter
+   at the top as if there were distance behind it, darker toward the foot. It
+   is attached to the viewport, not the document, because this is a lighting
+   condition of the screen and not a property of the content — scrolling should
+   not drag the light around.
+
+   The delta is deliberately small. `faint`, the quietest text tier, measures
+   4.99:1 against the lightest point here (it has 5.11 on the old flat ground),
+   so the whole four-step hierarchy still clears AA. Any more lift and it
+   wouldn't — and the falloff would start to band. */
+body {
+  background:
+    radial-gradient(140% 95% at 50% -8%, #0f1218 0%, #0c0f14 46%, #090b0f 100%)
+    fixed var(--color-bg0);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
 button:not(:disabled) { cursor: pointer; }
+
+/* A raised surface: the light catching its top edge.
+ *
+ * The sketch for this also washed the panel's whole face with 2.8% white. That
+ * came out on measurement: `faint` on `bg3` clears AA at 4.52:1 with no margin
+ * at all — the token was set to the exact minimum — so any lift to a panel
+ * face pushes the quietest tier under the floor (4.21:1 at 2.8%). The wash was
+ * also worth about seven levels spread over 25px, which is to say invisible.
+ * The edge is what actually reads, and a 1px line above the text costs the
+ * text nothing. Readable-Floor Rule beats atmosphere.
+ *
+ * Reserved for real planes — cards in a grid, dialogs, the subject header. Not
+ * for chips, pills or buttons: if everything is raised, nothing is. */
+.plane { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06); }
+/* Selection still wins: the gold ring would otherwise be overwritten by the
+   plane's own inset highlight. */
+.plane.is-selected { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), var(--shadow-glow); }
 
 /* Keyboard focus. DESIGN.md reserves focus-blue for exactly this, but nothing
    was drawing it — every focusable fell back to the UA default. Elements that

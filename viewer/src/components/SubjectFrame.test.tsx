@@ -6,7 +6,7 @@ import type { God, GodTierEntry } from "../types";
 
 const ra = { name: "Ra", pantheon: "Egyptian", role: "Mid", damage_type: "magical" } as unknown as God;
 
-const roster = { total: 87, disputed: 53, unranked: 18, agreed: 16, ranked: 69 };
+const roster = { total: 87, ranked: 69, unranked: 18 };
 
 const frame = (props: Partial<React.ComponentProps<typeof SubjectFrame>> = {}) => (
   <SubjectFrame lens="board" roster={roster} modeLabel="Conquest" onPickGod={() => {}} {...props} />
@@ -15,12 +15,22 @@ const frame = (props: Partial<React.ComponentProps<typeof SubjectFrame>> = {}) =
 beforeEach(() => { localStorage.clear(); window.location.hash = ""; });
 
 describe("SubjectFrame — the roster is a first-class subject", () => {
-  it("names the roster and its headline figures", () => {
+  it("states what is in the index", () => {
     render(frame());
     const header = screen.getByTestId("subject-header");
     expect(header).toHaveTextContent(/All 87 gods/);
-    expect(header).toHaveTextContent(/53\s*disputed/);
+    expect(header).toHaveTextContent(/69\s*ranked against the meta/);
     expect(header).toHaveTextContent(/18\s*unranked/);
+  });
+
+  /* Inventory, not argument. The header used to carry the disputed count —
+   * the same figure Home's claim makes 60px below, which spent the headline's
+   * punchline before it landed. */
+  it("leaves the argument to the page it sits above", () => {
+    render(frame());
+    const header = screen.getByTestId("subject-header");
+    expect(header).not.toHaveTextContent(/disputed/i);
+    expect(header).not.toHaveTextContent(/agreed/i);
   });
 
   /* The roster's page makes a stronger argument than a route label, so the
@@ -32,16 +42,16 @@ describe("SubjectFrame — the roster is a first-class subject", () => {
 
   it("offers the five roster lenses", () => {
     render(frame());
-    const nav = within(screen.getByRole("navigation", { name: /roster views/i }));
-    for (const label of ["Board", "Tier list", "Items", "Draft", "Patch notes"]) {
+    const nav = within(screen.getByTestId("lens-tabs-strip"));
+    for (const label of ["Board", "Tier List", "Items", "Draft", "Patch Notes"]) {
       expect(nav.getByRole("link", { name: label })).toBeInTheDocument();
     }
   });
 
   it("marks the lens in view as the current page", () => {
     render(frame({ lens: "tiers" }));
-    const nav = within(screen.getByRole("navigation", { name: /roster views/i }));
-    expect(nav.getByRole("link", { name: "Tier list" })).toHaveAttribute("aria-current", "page");
+    const nav = within(screen.getByTestId("lens-tabs-strip"));
+    expect(nav.getByRole("link", { name: "Tier List" })).toHaveAttribute("aria-current", "page");
     expect(nav.getByRole("link", { name: "Board" })).not.toHaveAttribute("aria-current");
   });
 
@@ -59,13 +69,15 @@ describe("SubjectFrame — a god is the subject", () => {
     expect(screen.getByRole("heading", { level: 1, name: "Ra" })).toBeInTheDocument();
   });
 
-  it("offers the four god lenses, named for the god", () => {
+  /* Short labels: the strip sits in the navbar with the god named directly
+   * beneath it, so "Items for Ra" was restating the next line. */
+  it("offers the four god lenses", () => {
     render(frame({ god: ra, godName: "Ra", lens: "builds" }));
-    const nav = within(screen.getByRole("navigation", { name: /Ra views/i }));
+    const nav = within(screen.getByTestId("lens-tabs-strip"));
     expect(nav.getByRole("link", { name: "Builds" })).toHaveAttribute("href", "#/god/Ra");
     expect(nav.getByRole("link", { name: "Kit" })).toHaveAttribute("href", "#/god/Ra/kit");
-    expect(nav.getByRole("link", { name: "Items for Ra" })).toHaveAttribute("href", "#/god/Ra/items");
-    expect(nav.getByRole("link", { name: "Where Ra ranks" })).toHaveAttribute("href", "#/god/Ra/ranking");
+    expect(nav.getByRole("link", { name: "Items" })).toHaveAttribute("href", "#/god/Ra/items");
+    expect(nav.getByRole("link", { name: "Ranking" })).toHaveAttribute("href", "#/god/Ra/ranking");
   });
 
   it("offers a way back to the whole roster", () => {

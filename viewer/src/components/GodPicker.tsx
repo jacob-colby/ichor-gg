@@ -49,8 +49,8 @@ function GodCard({ god, selected, pinned, onSelect, onTogglePin, onRemove }: {
         aria-label={`Select ${god.name}`}
         aria-pressed={selected}
         onClick={onSelect}
-        className={`press flex w-full cursor-pointer flex-col items-center gap-1 rounded-lg border p-1.5 pt-2 transition-colors duration-[180ms] ease-standard ${
-          selected ? "border-gold shadow-glow bg-bg3"
+        className={`plane press flex w-full cursor-pointer flex-col items-center gap-1 rounded-lg border p-1.5 pt-2 transition-colors duration-[180ms] ease-standard ${
+          selected ? "is-selected border-gold bg-bg3"
           : pinned ? "border-gold/40 bg-gradient-to-b from-bg3 to-bg2"
           : "border-line bg-bg2 hover:border-line-strong"}`}
       >

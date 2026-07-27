@@ -38,13 +38,15 @@ describe("App — roster lenses", () => {
   it("opens on the roster board", async () => {
     render(<App />);
     await waitFor(() => expect(screen.getByTestId("subject-header")).toHaveTextContent(/All 1 gods/));
-    const nav = within(screen.getByRole("navigation", { name: /roster views/i }));
+    // The strip lives in the navbar from md up; the same tabs keep their own
+    // row below it. Only one is ever in the accessibility tree.
+    const nav = within(screen.getByTestId("lens-tabs-bar"));
     expect(nav.getByRole("link", { name: "Board" })).toHaveAttribute("aria-current", "page");
   });
 
   it("moves between roster lenses", async () => {
     render(<App />);
-    const nav = within(await screen.findByRole("navigation", { name: /roster views/i }));
+    const nav = within(await screen.findByTestId("lens-tabs-bar"));
     fireEvent.click(nav.getByRole("link", { name: "Items" }));
     await waitFor(() => expect(
       screen.getByRole("heading", { level: 1, name: /cost less than their stats are worth/i })).toBeInTheDocument());
@@ -55,7 +57,7 @@ describe("App — roster lenses", () => {
     render(<App />);
     // The draft page's ally slot 1 is always labelled "You", filled or not.
     await waitFor(() => expect(screen.getAllByText("You")[0]).toBeInTheDocument());
-    const nav = within(screen.getByRole("navigation", { name: /roster views/i }));
+    const nav = within(screen.getByTestId("lens-tabs-bar"));
     expect(nav.getByRole("link", { name: "Draft" })).toHaveAttribute("aria-current", "page");
   });
 
