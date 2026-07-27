@@ -173,6 +173,32 @@ describe("App — a god and its lenses", () => {
   });
 });
 
+/* Three surfaces render the brand: the header, the loading skeleton and the
+ * data-load failure screen. The failure screen still carried an "S2" square
+ * from a previous identity — the one place the old mark survived, and the one
+ * nobody looks at until something is already wrong. */
+describe("App — the wordmark", () => {
+  it("shows the ichor wordmark on the data-load failure screen, not a legacy badge", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: false, status: 503 }));
+    render(<App />);
+    await screen.findByRole("heading", { name: /couldn.t load the build data/i });
+    expect(screen.getByRole("img", { name: "ichor" })).toBeInTheDocument();
+    expect(screen.queryByText("S2")).not.toBeInTheDocument();
+    // The recovery this screen exists for still works.
+    expect(screen.getByRole("button", { name: /try again/i })).toBeInTheDocument();
+  });
+
+  it("names the header wordmark once, not twice", async () => {
+    render(<App />);
+    await screen.findByTestId("subject-header");
+    // The link carries its own label; the wordmark's `role="img"` name must
+    // not leak into it and announce "ichor" a second time.
+    const home = screen.getByRole("link", { name: "ichor — home" });
+    expect(home).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /ichor ichor/i })).not.toBeInTheDocument();
+  });
+});
+
 describe("App — chrome", () => {
   it("offers one search field, reaching gods and items", async () => {
     render(<App />);
