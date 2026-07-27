@@ -146,8 +146,9 @@ function App() {
           className="press shrink-0 py-1 font-display text-[19px] font-bold leading-none tracking-tight text-ink">
           <span className="relative inline-block" aria-hidden="true">
             &#x131;
-            <span className="mark absolute left-1/2 h-[0.30em] w-[0.176em] -translate-x-1/2 bg-gold"
-              style={{ top: "calc(0.275em - 0.045em - 0.30em)" }} />
+            {/* Width is height × 0.587, the drawn artwork's own ratio. */}
+            <span className="mark absolute left-1/2 h-[0.36em] w-[0.211em] -translate-x-1/2 bg-gold"
+              style={{ top: "calc(0.275em - 0.04em - 0.36em)" }} />
           </span>
           <span aria-hidden="true">chor</span>
         </a>
