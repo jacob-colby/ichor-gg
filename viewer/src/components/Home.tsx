@@ -58,12 +58,6 @@ const VERDICT_TEXT: Record<Verdict, string> = {
   overrated: "text-premium",
   agreed: "text-faint",
 };
-/** Only the two directions get a mark of our own: on agreement the two
- *  placements coincide, and the ladder draws the single shared mark instead. */
-const VERDICT_MARK: Record<Exclude<Verdict, "agreed">, string> = {
-  underrated: "bg-under",
-  overrated: "bg-premium",
-};
 /** Spoken form, for the row's accessible name — "Underrated" alone doesn't say
  *  who is doing the underrating. */
 const VERDICT_SPOKEN: Record<Verdict, string> = {
@@ -184,9 +178,31 @@ function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
  * rather than written down. When there's no tier list to compare against, the
  * claim steps back to what the model does instead of inventing a statistic.
  */
-function StateBlock({ tierlist, disagreements, ranked }: {
+/* The claim, led by the half a player can act on.
+ *
+ * It used to read "We disagree with the meta on 53 of 69 ranked gods" — a
+ * sentence about the model's aggregate behaviour, true and inert. Nobody
+ * opens a build site to find out how often two rankings differ; they open it
+ * to find the god the meta is sleeping on. Same numbers, counted the same
+ * way, pointed at the reader instead of at the method. */
+function Claim({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
+  const { modelHigher, metaHigher, ranked } = board;
+  const gold = (n: number) => <span className="text-gold">{n} god{n === 1 ? "" : "s"}</span>;
+
+  if (modelHigher > 0) {
+    return <>The meta underrates {gold(modelHigher)}.</>;
+  }
+  // Degenerate but real: an index where the model never rates a god above the
+  // community still has to say something true rather than "underrates 0".
+  if (metaHigher > 0) {
+    return <>The meta overrates {gold(metaHigher)}.</>;
+  }
+  return <>The meta and this model agree on all {gold(ranked)}.</>;
+}
+
+function StateBlock({ board, tierlist, ranked }: {
+  board: ReturnType<typeof buildDivergenceBoard>;
   tierlist?: TierListData;
-  disagreements: number;
   ranked: number;
 }) {
   const comparable = ranked > 0;
@@ -201,20 +217,13 @@ function StateBlock({ tierlist, disagreements, ranked }: {
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:gap-12">
         <div className="min-w-0 lg:max-w-[46ch]">
           <h1 className="max-w-[19ch] text-balance font-display text-display font-bold leading-[1.1] tracking-[-0.01em] text-ink sm:text-display">
-            {comparable ? (
-              <>We disagree with the meta on{" "}
-                <span className="text-gold">{disagreements} of {ranked}</span>{" "}
-                ranked gods.
-              </>
-            ) : (
-              <>Builds scored by a model, not by what&rsquo;s popular.</>
-            )}
+            {comparable ? <Claim board={board} /> : <>Builds scored by a model, not by what&rsquo;s popular.</>}
           </h1>
           <p className="mt-3 max-w-[64ch] text-body leading-relaxed text-ink-soft">
             ichor fits a gold-value model to item stats to find what&rsquo;s underpriced for a
             god&rsquo;s kit, then weighs that against the community&rsquo;s high-elo meta.
             {comparable
-              ? " Where the two part ways, it says so — by lane, biggest argument first."
+              ? <> It&rsquo;d move {board.metaHigher} the other way, and it agrees with the meta on the rest.</>
               : " Community comparison isn't in this index yet, so nothing below is ranked against the meta."}
           </p>
         </div>
@@ -253,28 +262,31 @@ function Ladder({ row }: { row: Divergence }) {
   const from = Math.min(row.ourStep, row.theirStep);
   const to = Math.max(row.ourStep, row.theirStep);
   const under = row.verdict === "underrated";
-  const agreed = row.verdict === "agreed";
   return (
     <span aria-hidden="true" className="relative block h-2.5">
       <LadderCells />
-      {!agreed && (
+      {row.verdict !== "agreed" && (
         // Grows from the community's rung toward ours: the animation traces
         // the argument in the direction the argument runs.
         <span
           className={`bar-grow absolute inset-y-0 rounded-[1px] ${
-            under ? "origin-left bg-under/40" : "origin-right bg-premium/40"}`}
+            under ? "origin-left bg-under/45" : "origin-right bg-premium/45"}`}
           style={{ left: `${stepPercent(from)}%`, width: `${stepPercent(to) - stepPercent(from)}%` }}
         />
       )}
-      {/* The community's placement — the baseline the reader already holds.
-          When both agree the two marks coincide, so only this one is drawn:
-          a single mark reads as "one answer", which is what agreement is. */}
+      {/* The community's placement: a plain rule, the neutral baseline. */}
       <span className="absolute -top-0.5 h-[14px] w-[2px] -translate-x-1/2 rounded-[1px] bg-ink"
         style={{ left: `${stepPercent(row.theirStep)}%` }} />
-      {row.verdict !== "agreed" && (
-        <span className={`absolute -top-0.5 h-[14px] w-[3px] -translate-x-1/2 rounded-[1px] ${VERDICT_MARK[row.verdict]}`}
-          style={{ left: `${stepPercent(row.ourStep)}%` }} />
-      )}
+      {/* Ours: a gold diamond. Two marks distinguished only by colour left it
+          ambiguous which one was the model's verdict, and the answer has to be
+          readable without consulting the key. Gold is this product's mark for
+          the model's own signal, and shape carries it a second time so the two
+          never depend on colour alone. Drawn on agreement too — it lands on
+          the rule, which is what agreeing looks like. */}
+      <span
+        className="absolute -top-[3px] h-[7px] w-[7px] -translate-x-1/2 rotate-45 rounded-[1px] bg-gold"
+        style={{ left: `${stepPercent(row.ourStep)}%` }}
+      />
     </span>
   );
 }
@@ -297,14 +309,18 @@ function BoardKey() {
       </span>
       <span className="flex items-center gap-1.5">
         <span aria-hidden="true" className="inline-block h-3.5 w-[2px] rounded-[1px] bg-ink" />
-        Where the meta puts them
+        Meta
       </span>
       <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="inline-block h-3.5 w-[3px] rounded-[1px] bg-under" />
+        <span aria-hidden="true" className="inline-block h-[7px] w-[7px] rotate-45 rounded-[1px] bg-gold" />
+        Us
+      </span>
+      <span className="flex items-center gap-1.5">
+        <span aria-hidden="true" className="inline-block h-[3px] w-6 rounded-[1px] bg-under/45" />
         We&rsquo;d rank higher
       </span>
       <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="inline-block h-3.5 w-[3px] rounded-[1px] bg-premium" />
+        <span aria-hidden="true" className="inline-block h-[3px] w-6 rounded-[1px] bg-premium/45" />
         We&rsquo;d rank lower
       </span>
     </div>
@@ -599,11 +615,7 @@ export function Home({ data }: { data: IndexData }) {
 
   return (
     <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 pt-7 sm:px-6 sm:pt-9">
-      <StateBlock
-        tierlist={data.tierlist}
-        disagreements={board.tierDisagreements}
-        ranked={board.ranked}
-      />
+      <StateBlock board={board} tierlist={data.tierlist} ranked={board.ranked} />
       <DivergenceBoard board={board} />
       <div className="mt-7 flex flex-col gap-6">
         <DraftSeam />

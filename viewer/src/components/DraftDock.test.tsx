@@ -53,15 +53,28 @@ beforeEach(() => {
  * exercise elsewhere (App — "no second, redundant copy on /draft" per the
  * mount guard in App.tsx); this file only tests the component in isolation. */
 describe("DraftDock — nothing entered yet", () => {
-  it("shows a quiet invitation instead of ten empty rings", () => {
+  /* This used to be a link showing a *mock* of the board, which was a picture
+   * of a control sitting beside the real control it was a picture of. The
+   * board is small enough to just be here. */
+  it("is the working board, not an advertisement for one", () => {
     render(dock());
-    const invite = screen.getByTestId("draft-dock");
-    expect(invite).toHaveTextContent(/start a draft/i);
-    expect(invite.tagName).toBe("A");
-    expect(invite).toHaveAttribute("href", "#/draft");
-    // No chip cluster, no chevron — this is the minimal state, not the full
-    // dock with everything blank.
-    expect(screen.queryByRole("button", { name: /collapse/i })).not.toBeInTheDocument();
+    expect(screen.getByTestId("draft-dock")).toHaveTextContent(/start a draft/i);
+    fireEvent.click(screen.getByRole("button", { name: /start a draft/i }));
+    // Real slots, editable in place — no navigation to /draft required.
+    expect(screen.getByRole("button", { name: "Add you" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Add enemy 1" })).toBeInTheDocument();
+  });
+
+  it("drafts a whole comp without ever leaving the page", () => {
+    render(dock());
+    fireEvent.click(screen.getByRole("button", { name: /start a draft/i }));
+    fireEvent.click(screen.getByRole("button", { name: "Add you" }));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByRole("button", { name: "Add enemy 1" }));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    // The build answers the picks, in place.
+    expect(screen.getByTestId("draft-dock")).toHaveTextContent(/\d+ of \d+ items moved/i);
+    expect(window.location.hash).toBe("");
   });
 });
 
@@ -153,27 +166,45 @@ describe("DraftDock — expand and edit in place", () => {
 });
 
 /* The fuller `ChangeRow` on /draft — a bar, a bonus figure, the reason it
- * fired — doesn't fit a panel this narrow. The dock shows only enough to
- * identify the swap and points to /draft for the rest. */
-describe("DraftDock — what changed, condensed", () => {
-  it("names a displaced item without the full reasoning", () => {
-    localStorage.setItem("smite:draft", JSON.stringify({
-      mode: "conquest", allies: ["TestGod", "", "", "", ""], enemies: ["EnemyHealer", "", "", "", ""],
-    }));
+ * fired — doesn't fit a panel this narrow. The dock carries the build itself
+ * and enough to identify each swap, and points to /draft for the reasoning. */
+describe("DraftDock — the build, in place", () => {
+  const seed = (enemies: string[]) => localStorage.setItem("smite:draft", JSON.stringify({
+    mode: "conquest", allies: ["TestGod", "", "", "", ""], enemies,
+  }));
+
+  it("shows the whole core, so its own claim is checkable here", () => {
+    seed(["", "", "", "", ""]);
+    render(dock());
+    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    const core = screen.getByText("The default core").parentElement!;
+    // Six named items, not a count of them.
+    expect(within(core).getAllByRole("link")).toHaveLength(6);
+    expect(within(core).getByRole("link", { name: /^Alpha/ })).toHaveAttribute("href", "#/items/Alpha");
+  });
+
+  it("marks the items the draft brought in", () => {
+    seed(["EnemyHealer", "", "", "", ""]);
     render(dock());
     fireEvent.click(screen.getByRole("button", { name: /items moved/i }));
-    expect(screen.getByText("AntiHeal")).toBeInTheDocument();
+    const core = screen.getByText("Your adapted core").parentElement!;
+    expect(within(core).getByRole("link", { name: /AntiHeal, added by your draft/i })).toBeInTheDocument();
+    expect(within(core).queryByRole("link", { name: /^Zeta/ })).not.toBeInTheDocument();
+  });
+
+  it("names the displaced item without the full reasoning", () => {
+    seed(["EnemyHealer", "", "", "", ""]);
+    render(dock());
+    fireEvent.click(screen.getByRole("button", { name: /items moved/i }));
     expect(screen.getByText(/for Zeta/i)).toBeInTheDocument();
     // No bonus figure, no "answers" reason line — those stay on the full page.
     expect(screen.queryByText(/^\+0\.\d\d$/)).not.toBeInTheDocument();
   });
 
   it("links to the full board for the complete ledger", () => {
-    localStorage.setItem("smite:draft", JSON.stringify({
-      mode: "conquest", allies: ["TestGod", "", "", "", ""], enemies: ["", "", "", "", ""],
-    }));
+    seed(["", "", "", "", ""]);
     render(dock());
     fireEvent.click(screen.getByRole("button", { name: /default core/i }));
-    expect(screen.getByRole("link", { name: /open full draft board/i })).toHaveAttribute("href", "#/draft");
+    expect(screen.getByRole("link", { name: /full board/i })).toHaveAttribute("href", "#/draft");
   });
 });

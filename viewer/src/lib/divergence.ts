@@ -53,6 +53,11 @@ export interface DivergenceBoard {
   unranked: number;
   /** Ranked gods whose model tier letter differs from the community's. */
   tierDisagreements: number;
+  /** The split behind that count: gods we'd move up the tier list, and gods
+   * we'd move down. The page's headline claim is one of these, so it has to
+   * be counted rather than asserted. */
+  modelHigher: number;
+  metaHigher: number;
 }
 
 /** Biggest argument first: how many rungs apart the two sources are, with the
@@ -84,6 +89,7 @@ function byDisagreement(a: Divergence, b: Divergence): number {
 export function buildDivergenceBoard(entries: GodTierEntry[] | undefined): DivergenceBoard {
   const empty: DivergenceBoard = {
     lanes: [], total: 0, ranked: 0, unranked: 0, tierDisagreements: 0,
+    modelHigher: 0, metaHigher: 0,
   };
   if (!entries || entries.length === 0) return empty;
 
@@ -97,6 +103,8 @@ export function buildDivergenceBoard(entries: GodTierEntry[] | undefined): Diver
   let ranked = 0;
   let unranked = 0;
   let tierDisagreements = 0;
+  let modelHigher = 0;
+  let metaHigher = 0;
 
   for (const e of entries) {
     const lane = godLane(e.role);
@@ -110,6 +118,8 @@ export function buildDivergenceBoard(entries: GodTierEntry[] | undefined): Diver
     ranked += 1;
     const tierGap = ourStep - theirStep;
     if (tierGap !== 0) tierDisagreements += 1;
+    if (tierGap > 0) modelHigher += 1;
+    else if (tierGap < 0) metaHigher += 1;
     if (lane) {
       rowsByLane.get(lane)!.push({
         name: e.name,
@@ -134,7 +144,10 @@ export function buildDivergenceBoard(entries: GodTierEntry[] | undefined): Diver
     unranked: unrankedByLane.get(lane) ?? 0,
   })).filter((c) => c.rows.length > 0 || c.unranked > 0);
 
-  return { lanes, total: entries.length, ranked, unranked, tierDisagreements };
+  return {
+    lanes, total: entries.length, ranked, unranked,
+    tierDisagreements, modelHigher, metaHigher,
+  };
 }
 
 /** Where a rung sits along the track, as a percentage — the centre of its
