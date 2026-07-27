@@ -102,12 +102,15 @@ function LaneLeans({ board }: { board: ReturnType<typeof buildDivergenceBoard> }
               ) : (
                 <>
                   <span aria-hidden="true" className="relative block h-[3px] bg-bg3">
-                    <span className="absolute inset-y-[-2px] left-1/2 w-px -translate-x-1/2 bg-line-strong" />
                     <span
                       className={`bar-grow absolute top-0 h-full ${
                         positive ? "left-1/2 origin-left bg-under" : "right-1/2 origin-right bg-premium"}`}
                       style={{ width: `${pct / 2}%` }}
                     />
+                    {/* The reference mark: where our own score sits. Bright and on
+                        top of the fill always, so it reads as the anchor the fill
+                        is measured from rather than a third data point. */}
+                    <span className="absolute inset-y-[-2px] left-1/2 w-[2px] -translate-x-1/2 bg-ink" />
                   </span>
                   <span className={`text-right font-mono text-label ${deltaTextClass(col.meanDelta)}`}>
                     {deltaText(col.meanDelta)}
@@ -182,14 +185,19 @@ function BoardKey() {
   return (
     <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-label text-faint">
       <span className="flex items-center gap-1.5">
-        <span className="inline-block h-[3px] w-6 bg-premium" />
-        Meta rates higher
+        <span aria-hidden="true" className="relative inline-block h-[3px] w-6 bg-bg3">
+          <span className="absolute inset-y-[-2px] left-1/2 w-[2px] -translate-x-1/2 bg-ink" />
+        </span>
+        White mark is our score
       </span>
       <span className="flex items-center gap-1.5">
         <span className="inline-block h-[3px] w-6 bg-under" />
-        Model rates higher
+        Green — we rate it higher
       </span>
-      <span>Model · community, then the gap</span>
+      <span className="flex items-center gap-1.5">
+        <span className="inline-block h-[3px] w-6 bg-premium" />
+        Red — the community rates it higher
+      </span>
     </div>
   );
 }
@@ -227,11 +235,11 @@ function DivergenceRow({ row, scale }: { row: Divergence; scale: number }) {
             {row.community.toFixed(2)}
           </span>
           <span aria-hidden="true" className="relative h-[3px] min-w-0 flex-1 bg-bg3">
-            <span className="absolute inset-y-[-2px] left-1/2 w-px -translate-x-1/2 bg-line-strong" />
             <span
               className={`bar-grow absolute top-0 h-full ${positive ? "left-1/2 origin-left bg-under" : "right-1/2 origin-right bg-premium"}`}
               style={{ width: `${pct / 2}%` }}
             />
+            <span className="absolute inset-y-[-2px] left-1/2 w-[2px] -translate-x-1/2 bg-ink" />
           </span>
           <span aria-hidden="true" className={`w-[42px] shrink-0 text-right font-mono text-label ${deltaTextClass(row.delta)}`}>
             {deltaText(row.delta)}
