@@ -125,7 +125,7 @@ export function SubjectFrame({
 
   return (
     <>
-      <div data-testid="subject-header" className="border-b border-line bg-bg1 px-4 py-2 sm:px-6 sm:py-3">
+      <div data-testid="subject-header" className="plane border-b border-line bg-bg1 px-4 py-2 sm:px-6 sm:py-3">
         <div className="mx-auto flex w-full max-w-[1440px] flex-wrap items-center gap-x-4 gap-y-1.5">
           {name ? (
             <>

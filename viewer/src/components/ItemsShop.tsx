@@ -95,7 +95,7 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
         eff ? `, fair price ${eff.predicted_cost} gold, ${
           eff.residual < 0 ? `${Math.abs(eff.residual)} under` : eff.residual > 0 ? `${eff.residual} over` : "exactly fair"}`
         : ", not scored by the gold model"}`}
-      className="press flex flex-col gap-1.5 rounded-md border border-line-strong bg-bg2 p-2 text-left transition-colors duration-[180ms] ease-standard hover:border-blue/50"
+      className="plane press flex flex-col gap-1.5 rounded-md border border-line-strong bg-bg2 p-2 text-left transition-colors duration-[180ms] ease-standard hover:border-blue/50"
     >
       <span className="flex items-center gap-2">
         <ItemIcon name={item.name} />
@@ -461,7 +461,7 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
         </p>
       </header>
 
-      <div className="sticky top-0 z-10 -mx-4 border-b border-line bg-bg0/95 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6">
+      <div className="sticky top-0 z-10 -mx-4 border-b border-line bg-bg0/90 px-4 py-3 backdrop-blur-md sm:-mx-6 sm:px-6">
         <div className="flex items-center gap-2 overflow-x-auto pb-0.5 sm:flex-wrap sm:overflow-visible [&>*]:shrink-0">
           {/* A label, so the 34px bordered box is the hit area rather than
               just the 20px input inside it. */}

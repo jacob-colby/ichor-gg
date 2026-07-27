@@ -132,7 +132,7 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
           : `community tier ${entry.tier_community} at ${scoreText(entry.community)}`}`}
         // Stacked on a phone so the name gets the card's full width — laid
         // out beside the icon it truncated at "Thanatos".
-        className={`press flex h-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard hover:border-line-strong sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
+        className={`plane press flex h-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard hover:border-line-strong sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
           agrees || unranked ? "border-line" : "border-line-strong"}`}
       >
         <EntryIcon name={entry.name} item={!isGod} />
@@ -330,7 +330,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
       </header>
 
       {/* Controls */}
-      <div className="sticky top-0 z-10 -mx-4 border-b border-line bg-bg0/95 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6">
+      <div className="sticky top-0 z-10 -mx-4 border-b border-line bg-bg0/90 px-4 py-3 backdrop-blur-md sm:-mx-6 sm:px-6">
         {/* One scrolling line per row on a phone rather than three wrapped
             ones — the bar was 229px, 28% of a 812px viewport, permanently. */}
         <div className="flex items-center gap-2 overflow-x-auto pb-0.5 sm:flex-wrap sm:overflow-visible [&>*]:shrink-0">

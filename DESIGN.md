@@ -171,11 +171,16 @@ Two-pane shell: a fixed god-picker rail (300px on desktop, collapsing to a full-
 
 ## Elevation & Depth
 
-Flat at rest. Depth is used sparingly and only to mark state, not to decorate every surface.
+**The Ground Plane Rule.** The page ground is lit, not painted: a radial falloff attached to the *viewport*, lighter at the top as though there were distance behind it, darker toward the foot. It is a lighting condition of the screen rather than a property of the content, so scrolling never drags the light around. Every genuinely raised surface — a card in a grid, a dialog, the subject header — catches that light along its top edge as a 1px inset highlight. Nothing else does: chips, pills and buttons stay flat, because if everything is raised then nothing is.
+
+This replaces "flat at rest", which was true and was also why the world read as half-built. The brief asked for a near-black battlefield at night and what shipped was a spreadsheet in a dark room. Depth still never decorates and still never marks state on its own — selection is gold, and `.plane.is-selected` exists precisely so the highlight can't overwrite the gold ring.
+
+**What the measurement removed.** The sketch for this also washed each panel's face with 2.8% white. It did not survive contact with the Readable-Floor Rule: `faint` clears AA on `bg3` at 4.52:1 with *no margin at all* — the token was set to the exact minimum — so any lift to a panel face drops the quietest tier under the floor (4.21:1 at 2.8%). The wash was also worth about seven levels spread over 25px, which is to say invisible. The edge reads; the face doesn't; a 1px line above the text costs the text nothing. When atmosphere and the readable floor disagree, the floor wins.
 
 ### Shadow Vocabulary
-- **Card** (`0 6px 16px rgba(0,0,0,0.35)`): floating surfaces resting just above the page — tooltips, popovers.
-- **Raised** (`0 10px 28px rgba(0,0,0,0.45)`): modals and dialogs (Legend, pickers) that sit fully above the page.
+- **Plane** (`inset 0 1px 0 rgba(255,255,255,0.06)`): a raised surface catching the ground light. Cards in a grid, the subject header.
+- **Card** (`inset highlight + 0 6px 16px rgba(0,0,0,0.35)`): floating surfaces resting just above the page — tooltips, popovers.
+- **Raised** (`inset highlight + 0 10px 28px rgba(0,0,0,0.45)`): modals and dialogs (Legend, pickers) that sit fully above the page.
 - **Glow** (`0 0 0 1px rgba(227,178,60,0.4), 0 4px 14px rgba(227,178,60,0.15)`): the selected-state halo on a god card — the one place shadow doubles as the accent color.
 
 ### Named Rules

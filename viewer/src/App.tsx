@@ -60,7 +60,7 @@ function App() {
 
   if (error) {
     return (
-      <div className="flex h-screen flex-col items-center justify-center gap-4 bg-bg0 px-6 text-center text-ink">
+      <div className="flex h-screen flex-col items-center justify-center gap-4 px-6 text-center text-ink">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold font-display text-lead font-bold text-bg0">S2</div>
         <div className="max-w-[46ch]">
           <h1 className="font-display text-title font-bold text-ink">Couldn&rsquo;t load the build data</h1>
@@ -80,7 +80,7 @@ function App() {
 
   if (!data) {
     return (
-      <div className="flex h-screen flex-col bg-bg0 text-ink">
+      <div className="flex h-screen flex-col text-ink">
         {/* Same chrome as the loaded shell, so nothing jumps when index.json
             lands — only the content area is a placeholder. */}
         <header className="flex items-center gap-3 border-b border-line px-4 py-2.5 sm:px-6">
@@ -124,7 +124,7 @@ function App() {
   const pickGod = (name: string) => { setPickerOpen(false); navigate(toHash.god(name)); };
 
   return (
-    <div className="flex h-screen flex-col bg-bg0 text-ink">
+    <div className="flex h-screen flex-col text-ink">
       {/* First focusable on the page. */}
       <a href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-gold focus:px-3 focus:py-2 focus:font-display focus:text-body focus:font-semibold focus:text-bg0">
