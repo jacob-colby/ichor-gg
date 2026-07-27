@@ -66,7 +66,7 @@ export function Legend({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="mb-4 flex flex-wrap gap-3 text-label text-muted">
-          <span className="inline-flex items-center gap-1.5"><Swatch className="bg-under" />Model rates above the meta</span>
+          <span className="inline-flex items-center gap-1.5"><Swatch className="bg-under" />Model rates above the community</span>
           <span className="inline-flex items-center gap-1.5"><Swatch className="bg-premium" />Meta rates above the model</span>
           <span className="inline-flex items-center gap-1.5"><Swatch className="bg-gold" />The model&rsquo;s own signal</span>
         </div>

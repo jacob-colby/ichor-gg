@@ -145,7 +145,7 @@ function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
     <section aria-labelledby="home-args-h" className="w-full lg:max-w-[600px] lg:flex-1">
       <div className="flex items-baseline justify-between gap-3">
         <h2 id="home-args-h" className={sectionLabel}>Where we argue hardest</h2>
-        <span className="text-label text-faint">meta&rsquo;s tier → ours</span>
+        <span className="text-label text-faint">community tier → ours</span>
       </div>
       <ArgumentGroup label="Gods" set={gods} item={false} />
       <ArgumentGroup label="Items" set={items} item={true} />
@@ -170,14 +170,14 @@ function Claim({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
   const gold = (n: number) => <span className="text-gold">{n} god{n === 1 ? "" : "s"}</span>;
 
   if (modelHigher > 0) {
-    return <>The meta underrates {gold(modelHigher)}.</>;
+    return <>The community underrates {gold(modelHigher)}.</>;
   }
   // Degenerate but real: an index where the model never rates a god above the
   // community still has to say something true rather than "underrates 0".
   if (metaHigher > 0) {
-    return <>The meta overrates {gold(metaHigher)}.</>;
+    return <>The community overrates {gold(metaHigher)}.</>;
   }
-  return <>The meta and this model agree on all {gold(ranked)}.</>;
+  return <>The community and this model agree on all {gold(ranked)}.</>;
 }
 
 function StateBlock({ board, tierlist, ranked }: {
@@ -199,12 +199,19 @@ function StateBlock({ board, tierlist, ranked }: {
           <h1 className="max-w-[19ch] text-balance font-display text-display font-bold leading-[1.1] tracking-[-0.01em] text-ink sm:text-display">
             {comparable ? <Claim board={board} /> : <>Builds scored by a model, not by what&rsquo;s popular.</>}
           </h1>
+          {/* "the community's high-elo meta" overclaimed twice over: the
+              signal is win rates from top-ranked Conquest play, not a meta
+              anyone published, and "meta" implied a considered consensus
+              ranking. And "it'd move N the other way" collides with the
+              headline's own count whenever the two happen to match — as they
+              currently do, at 24 each — so it says "another". */}
           <p className="mt-3 max-w-[64ch] text-body leading-relaxed text-ink-soft">
             ichor fits a gold-value model to item stats to find what&rsquo;s underpriced for a
-            god&rsquo;s kit, then weighs that against the community&rsquo;s high-elo meta.
+            god&rsquo;s kit, then weighs that against community win rates from top-ranked
+            Conquest play.
             {comparable
-              ? <> It&rsquo;d move {board.metaHigher} the other way, and it agrees with the meta on the rest.</>
-              : " Community comparison isn't in this index yet, so nothing below is ranked against the meta."}
+              ? <> It&rsquo;d move another {board.metaHigher} the other way, and it agrees on the rest.</>
+              : " Community comparison isn't in this index yet, so nothing below is ranked against it."}
           </p>
         </div>
 
@@ -222,7 +229,7 @@ function BoardKey() {
     <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-label text-faint">
       <span className="flex items-center gap-1.5">
         <span aria-hidden="true" className="inline-block h-3.5 w-[2px] rounded-[1px] bg-ink" />
-        Meta
+        Community
       </span>
       <span className="flex items-center gap-1.5">
         <span aria-hidden="true" className="mark inline-block h-4 w-[9px] bg-gold" />

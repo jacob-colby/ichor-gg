@@ -81,7 +81,7 @@ function Verdict({ entry }: { entry?: GodTierEntry }) {
       {delta != null && (
         <span className={divergenceClass(tierGap)}>
           <span className="hidden sm:inline">
-            {tierGap === 0 ? "same tier" : tierGap! > 0 ? "we rank higher" : "the meta rates higher"}{" "}
+            {tierGap === 0 ? "same tier" : tierGap! > 0 ? "we rank higher" : "the community rates higher"}{" "}
           </span>
           <span className="font-mono">{deltaText(delta)}</span>
         </span>
@@ -215,7 +215,7 @@ export function SubjectFrame({
                     claim says what the model thinks of it. */}
                 <p className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-label text-faint">
                   {roster.ranked > 0 && (
-                    <span><span className="font-mono text-ink-soft">{roster.ranked}</span> ranked against the meta</span>
+                    <span><span className="font-mono text-ink-soft">{roster.ranked}</span> ranked against the community</span>
                   )}
                   {roster.unranked > 0 && (
                     <span><span className="font-mono text-ink-soft">{roster.unranked}</span> unranked</span>

@@ -35,7 +35,7 @@ describe("Home divergence board", () => {
   it("leads the claim with the direction the fixture actually supports", () => {
     render(<Home data={baseData({ tierlist })} />);
     const heading = screen.getByRole("heading", { level: 1 });
-    expect(heading).toHaveTextContent(/the meta overrates\s*1 god\./i);
+    expect(heading).toHaveTextContent(/the community overrates\s*1 god\./i);
     // Never "1 gods" — the count is interpolated, so the noun has to agree.
     expect(heading).not.toHaveTextContent(/1 gods/i);
   });
@@ -49,7 +49,7 @@ describe("Home divergence board", () => {
       items: [],
     };
     render(<Home data={baseData({ tierlist: flipped })} />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/the meta underrates\s*1 god\./i);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/the community underrates\s*1 god\./i);
   });
 
   it("groups gods into lane columns ranked by disagreement", () => {

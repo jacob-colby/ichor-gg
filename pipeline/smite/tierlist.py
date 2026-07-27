@@ -19,6 +19,58 @@ distinct in the viewer.
 import math
 
 
+# ── Confidence in a community win rate ──────────────────────────────────────
+#
+# Every community score we have is ONE ASPECT's win rate, and aspects vary
+# enormously in how much they are actually played. Taken raw, the signal is
+# worst exactly where the tier list leans hardest on it: win-rate spread across
+# aspects picked under 10% of the time measured sd 0.083, against 0.053 for
+# those picked 25%+. The extremes at the thin end are mostly sampling noise —
+# and because the viewer ranks "biggest disagreement first", that noise was
+# being promoted straight to the top of the page. Four of the six gods the home
+# page headlined rested on aspects picked 2–5% of the time.
+#
+# Two guards, both deliberately conservative:
+#
+#   FLOOR      Below this pick rate the number is a rumour, not a measurement.
+#              Such gods go UNRANKED — the same treatment as a god the source
+#              never covered — never bucketed low. "No usable data" and "bad"
+#              are different facts, which is the rule `assign_tiers` already
+#              follows for missing scores.
+#
+#   SHRINKAGE  What survives the floor is pulled toward 0.5 in proportion to
+#              how thin it is: adjusted = 0.5 + (raw - 0.5) * p / (p + K).
+#              A 65%-pick aspect keeps ~81% of its distance from even; a
+#              5%-pick one keeps ~25%. This is ordinary shrinkage toward the
+#              prior — we have no better prior than "a coin flip" — and it
+#              costs the confident aspects almost nothing.
+#
+# Pick rate is a PROXY for sample size, not sample size itself: SmiteBrain
+# publishes neither match counts nor an elo band. If a source that reports
+# either is ever wired up, this should be replaced by a real confidence
+# interval rather than tuned.
+MIN_PICK_RATE = 0.05
+SHRINKAGE_K = 0.15
+
+
+def confident_win_rate(win_rate, pick_rate):
+    """A win rate discounted by how much the aspect is actually played.
+
+    Returns None when there is no usable signal — no win rate, no pick rate,
+    or a pick rate under `MIN_PICK_RATE` — so the caller leaves the entry
+    unranked rather than ranking it badly.
+
+    A missing pick rate is treated as unusable rather than as confident: the
+    older notes predate pick-rate scraping, and assuming confidence for data
+    we can't check is the failure this function exists to prevent.
+    """
+    if not _is_numeric(win_rate) or not _is_numeric(pick_rate):
+        return None
+    if pick_rate < MIN_PICK_RATE:
+        return None
+    return 0.5 + (win_rate - 0.5) * (pick_rate / (pick_rate + SHRINKAGE_K))
+
+
 def _suggested_core(god_name, builds, mode="Conquest"):
     """The god's suggested `mode` 'core' archetype entry, or None."""
     for group in builds:
@@ -47,8 +99,10 @@ def god_rankings(gods, builds, mode="Conquest"):
     ours = mean of slot_scores[item]["total"] over the god's suggested
     `mode` core entry (None if there's no such entry, or it has no
     slot_scores — e.g. the god was never scraped for that mode at all).
-    community = that god's community `mode` entry's aspect_win_rate (None
-    if there's no community entry for that mode, or it lacks the field).
+    community = that god's community `mode` entry's aspect_win_rate, put
+    through `confident_win_rate` — so a barely-played aspect yields None
+    (unranked) rather than a confident-looking extreme. None also when there
+    is no community entry for that mode, or it lacks the fields.
     Conquest is the default mode for backwards compatibility with existing
     callers. Deterministic: sorted by name.
     """
@@ -69,7 +123,10 @@ def god_rankings(gods, builds, mode="Conquest"):
         community = None
         comm_entry = _community_entry(name, builds, mode)
         if comm_entry:
-            community = comm_entry.get("aspect_win_rate")
+            community = confident_win_rate(
+                comm_entry.get("aspect_win_rate"),
+                comm_entry.get("aspect_pick_rate"),
+            )
 
         results.append({
             "name": name,

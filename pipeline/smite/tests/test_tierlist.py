@@ -16,8 +16,15 @@ def _core_entry(slot_scores, archetype="core"):
     }
 
 
-def _community_entry(aspect_win_rate=None):
-    return {"source": "community", "aspect_win_rate": aspect_win_rate}
+def _community_entry(aspect_win_rate=None, aspect_pick_rate=0.45):
+    """The default pick rate is a confidently-played aspect: these fixtures
+    exist to test plumbing, and should not be silently filtered by the
+    confidence guard. Tests that care about the guard set it explicitly."""
+    return {
+        "source": "community",
+        "aspect_win_rate": aspect_win_rate,
+        "aspect_pick_rate": aspect_pick_rate,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -48,7 +55,9 @@ def test_god_rankings_community_reads_aspect_win_rate():
 
     result = tierlist.god_rankings(gods, builds)
 
-    assert result[0]["community"] == 0.51
+    # Discounted for how much the aspect is actually played, never raw.
+    assert result[0]["community"] == pytest.approx(
+        tierlist.confident_win_rate(0.51, 0.45))
     assert result[0]["ours"] == pytest.approx(0.6)
 
 
@@ -405,3 +414,63 @@ def test_build_tierlist_god_with_only_conquest_build_is_unranked_not_absent_in_j
     # Zeus genuinely has Joust data, so he IS ranked.
     assert joust_gods["Zeus"]["ours"] == pytest.approx(0.4)
     assert joust_gods["Zeus"]["tier_ours"] is not None
+
+
+# ---------------------------------------------------------------------------
+# confident_win_rate
+#
+# Every community score is one aspect's win rate, and aspects differ hugely in
+# how much they are played. Raw, the signal was least trustworthy exactly where
+# the viewer leaned hardest on it: it ranks "biggest disagreement first", and
+# the biggest gaps came from the thinnest samples.
+# ---------------------------------------------------------------------------
+
+def test_confident_win_rate_drops_a_barely_played_aspect():
+    # 2% pick: the number is a rumour. Unranked, never ranked badly — the same
+    # rule assign_tiers uses for a missing score.
+    assert tierlist.confident_win_rate(0.36, 0.02) is None
+    assert tierlist.confident_win_rate(0.68, 0.02) is None
+
+
+def test_confident_win_rate_keeps_a_widely_played_aspect_nearly_intact():
+    adjusted = tierlist.confident_win_rate(0.64, 0.65)
+    # 0.5 + 0.14 * (0.65/0.80) = 0.6138 — most of its distance from even.
+    assert adjusted == pytest.approx(0.6138, abs=1e-4)
+    assert adjusted > 0.60
+
+
+def test_confident_win_rate_pulls_a_thin_sample_toward_even():
+    # Cupid's real numbers: a 68% win rate on a 5%-pick aspect was the single
+    # loudest claim on the home page.
+    adjusted = tierlist.confident_win_rate(0.68, 0.05)
+    assert adjusted == pytest.approx(0.545, abs=1e-4)
+    # Still above even — the signal is discounted, not discarded or inverted.
+    assert 0.5 < adjusted < 0.68
+
+
+def test_confident_win_rate_preserves_direction_and_ordering():
+    """Shrinkage must not reorder two aspects of equal confidence."""
+    a = tierlist.confident_win_rate(0.60, 0.40)
+    b = tierlist.confident_win_rate(0.55, 0.40)
+    assert a > b > 0.5
+    assert tierlist.confident_win_rate(0.40, 0.40) < 0.5
+
+
+def test_confident_win_rate_treats_a_missing_pick_rate_as_unusable():
+    # Notes predating pick-rate scraping must not be assumed confident.
+    assert tierlist.confident_win_rate(0.62, None) is None
+    assert tierlist.confident_win_rate(None, 0.40) is None
+
+
+def test_god_rankings_leaves_a_thinly_played_god_unranked():
+    gods = [{"name": "Geb", "role": "Guardian", "damage_type": "Magical"}]
+    core = _core_entry({"Gauntlet of Thebes": {"total": 0.51}})
+    community = _community_entry(aspect_win_rate=0.36, aspect_pick_rate=0.02)
+    builds = [_build_group("Geb", builds=[community, core])]
+
+    result = tierlist.god_rankings(gods, builds)
+
+    assert result[0]["community"] is None
+    # Our own score survives: the god is still ranked by the model, it just
+    # has nothing trustworthy to be compared against.
+    assert result[0]["ours"] == pytest.approx(0.51)

@@ -19,7 +19,7 @@ describe("SubjectFrame — the roster is a first-class subject", () => {
     render(frame());
     const header = screen.getByTestId("subject-header");
     expect(header).toHaveTextContent(/All 87 gods/);
-    expect(header).toHaveTextContent(/69\s*ranked against the meta/);
+    expect(header).toHaveTextContent(/69\s*ranked against the community/);
     expect(header).toHaveTextContent(/18\s*unranked/);
   });
 
@@ -99,7 +99,7 @@ describe("SubjectFrame — the verdict", () => {
     const verdict = within(screen.getByTestId("god-verdict"));
     expect(verdict.getByText("0.47")).toBeInTheDocument();
     expect(verdict.getByText("0.58")).toBeInTheDocument();
-    expect(verdict.getByText(/meta rates higher/i)).toBeInTheDocument();
+    expect(verdict.getByText(/community rates higher/i)).toBeInTheDocument();
     expect(verdict.getByText(/-0\.11/)).toBeInTheDocument();
   });
 

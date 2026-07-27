@@ -302,7 +302,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
         {/* A claim carrying its own numbers, like Home's — not a route label. */}
         <h1 className="max-w-[24ch] text-balance font-display text-display font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-display">
           {result.ranked > 0 ? (
-            <>The meta agrees with{" "}
+            <>The community agrees with{" "}
               <span className="text-gold">{result.agreed} of {result.ranked}</span>{" "}
               {entityLabel(subject)} placements.
             </>
@@ -318,7 +318,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
           <p data-testid="tier-summary" className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint">
             <span><span className="text-ink-soft">{result.agreed} of {result.ranked}</span> agreed</span>
             <span className="text-under">{result.modelHigher} we rank higher</span>
-            <span className="text-premium">{result.metaHigher} the meta ranks higher</span>
+            <span className="text-premium">{result.metaHigher} the community ranks higher</span>
             {result.unranked > 0 && <span>{result.unranked} unranked</span>}
           </p>
         ) : !sourceHasCommunity ? (
