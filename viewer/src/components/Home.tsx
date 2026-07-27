@@ -25,21 +25,49 @@ import { godLane, laneTextClass } from "../lib/roleAccent";
 import { relativeDate } from "../lib/relativeDate";
 import { useDraft, encodeDraftHash, MODE_TEAM_SIZE } from "../lib/draft";
 import {
-  buildDivergenceBoard, barPercent, deltaText,
-  type Divergence, type LaneColumn,
+  buildDivergenceBoard, stepPercent, deltaText,
+  type Divergence, type LaneColumn, type Verdict,
 } from "../lib/divergence";
+import { TIER_STEPS, type TierLetter } from "../lib/tierBands";
 
 /** The one label style shared by the sections below the board. */
 const sectionLabel = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
-/** Direction of a disagreement, in the vocabulary the Legend already teaches:
- * `under` = we rate it above the meta, `premium` = the meta rates it above us.
- * A gap too small to survive rounding gets no direction colour — claiming one
- * would assert a lean the printed number doesn't show. */
-function deltaTextClass(delta: number): string {
-  if (Math.abs(delta) < 0.005) return "text-faint";
-  return delta > 0 ? "text-under" : "text-premium";
-}
+/** The ladder, left to right. A tier list is drawn S-first, but an axis that
+ *  improves rightward is the one people read off a scoreboard. */
+const LADDER: TierLetter[] = ["C", "B", "A", "S"];
+
+/* The verdict, in the words this audience already argues in.
+ *
+ * The page used to state a disagreement as a signed number (`+0.15`) beside
+ * two raw scores, which asks the reader to know what 0.15 is worth before it
+ * says anything at all. `under`/`premium` still carry the direction — the same
+ * pair, meaning the same thing they mean on items and in the tier list — but
+ * the row now leads with the claim and keeps the arithmetic in its tooltip and
+ * its accessible name. */
+const VERDICT_WORD: Record<Verdict, string> = {
+  underrated: "Underrated",
+  overrated: "Overrated",
+  agreed: "Agreed",
+};
+const VERDICT_TEXT: Record<Verdict, string> = {
+  underrated: "text-under",
+  overrated: "text-premium",
+  agreed: "text-faint",
+};
+/** Only the two directions get a mark of our own: on agreement the two
+ *  placements coincide, and the ladder draws the single shared mark instead. */
+const VERDICT_MARK: Record<Exclude<Verdict, "agreed">, string> = {
+  underrated: "bg-under",
+  overrated: "bg-premium",
+};
+/** Spoken form, for the row's accessible name — "Underrated" alone doesn't say
+ *  who is doing the underrating. */
+const VERDICT_SPOKEN: Record<Verdict, string> = {
+  underrated: "we rate it higher",
+  overrated: "we rate it lower",
+  agreed: "both agree",
+};
 
 /** God portrait with a real fallback. The icon set is generated per god, so a
  * missing file should degrade to an initial rather than leave a hole in the
@@ -75,49 +103,37 @@ function GodIcon({ name, className }: { name: string; className: string }) {
  * So the comparison lives here and the board's columns stop repeating it.
  */
 function LaneLeans({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
-  // Scaled to the largest lane mean, not to the board's per-god scale: an
-  // average sits an order of magnitude below an individual gap, and reusing
-  // that scale would draw five bars all but invisible.
-  const scale = Math.max(...board.lanes.map((l) => Math.abs(l.meanDelta)), 0.005);
-
   return (
     <section aria-labelledby="home-leans-h" className="w-full lg:max-w-[600px] lg:flex-1">
       <div className="flex items-baseline justify-between gap-3">
         <h2 id="home-leans-h" className={sectionLabel}>Which lanes we argue about</h2>
-        <span className="text-label text-faint">mean gap · disputed</span>
+        <span className="text-label text-faint">we&rsquo;d re-rank</span>
       </div>
       <ul className="mt-2 flex flex-col border-t border-line">
         {board.lanes.map((col) => {
-          const pct = Math.min(100, Math.round((Math.abs(col.meanDelta) / scale) * 100));
-          const positive = col.meanDelta > 0;
-          const empty = col.rows.length === 0;
+          const n = col.rows.length;
           return (
             <li key={col.lane}
-              className="grid grid-cols-[4.5rem_minmax(0,1fr)_3rem_3.5rem] items-center gap-x-2.5 border-b border-line py-1.5">
+              className="grid grid-cols-[4.5rem_minmax(0,1fr)_3.5rem] items-center gap-x-2.5 border-b border-line py-1.5">
               <span className={`truncate text-small font-semibold ${laneTextClass(col.lane)}`}>
                 {col.lane}
               </span>
-              {empty ? (
-                <span className="col-span-3 text-label text-faint">no ranked gods</span>
+              {n === 0 ? (
+                <span className="col-span-2 text-label text-faint">no ranked gods</span>
               ) : (
                 <>
-                  <span aria-hidden="true" className="relative block h-[3px] bg-bg3">
-                    <span
-                      className={`bar-grow absolute top-0 h-full ${
-                        positive ? "left-1/2 origin-left bg-under" : "right-1/2 origin-right bg-premium"}`}
-                      style={{ width: `${pct / 2}%` }}
-                    />
-                    {/* The reference mark: where our own score sits. Bright and on
-                        top of the fill always, so it reads as the anchor the fill
-                        is measured from rather than a third data point. */}
-                    <span className="absolute inset-y-[-2px] left-1/2 w-[2px] -translate-x-1/2 bg-ink" />
-                  </span>
-                  <span className={`text-right font-mono text-label ${deltaTextClass(col.meanDelta)}`}>
-                    {deltaText(col.meanDelta)}
+                  {/* Counts, not an average. "Mean gap −0.05" is a sentence
+                      about the model; "9 of 13 we'd move" is a sentence about
+                      the lane, and it's the one a player can act on. */}
+                  <span aria-hidden="true" className="flex h-[6px] overflow-hidden rounded-[1px] bg-bg3">
+                    <span className="bar-grow h-full origin-left bg-under"
+                      style={{ width: `${(col.underrated / n) * 100}%` }} />
+                    <span className="bar-grow h-full origin-left bg-premium"
+                      style={{ width: `${(col.overrated / n) * 100}%` }} />
                   </span>
                   <span className="text-right text-label text-faint">
                     <span className="font-mono text-muted">{col.tierDiffer}</span> of{" "}
-                    <span className="font-mono">{col.rows.length}</span>
+                    <span className="font-mono">{n}</span>
                   </span>
                 </>
               )}
@@ -126,8 +142,8 @@ function LaneLeans({ board }: { board: ReturnType<typeof buildDivergenceBoard> }
         })}
       </ul>
       <p className="mt-2 max-w-[46ch] text-label leading-relaxed text-faint">
-        A lane&rsquo;s mean is the average gap across the gods both sources rated — it says which
-        way a whole lane leans, which no single row can.
+        Green is gods we&rsquo;d move up from where the meta has them, red gods we&rsquo;d move down.
+        The longer the colour, the more of that lane we&rsquo;d argue about.
       </p>
     </section>
   );
@@ -179,71 +195,113 @@ function StateBlock({ board, disagreements, ranked }: {
   );
 }
 
-/** The encoding, decoded once, in place — so the bars below never need a
+/** The empty ladder — four rungs, worst to best. Shared by the legend and
+ *  every row so the cell geometry can't drift between the two. */
+function LadderCells() {
+  return (
+    <span className="absolute inset-0 grid grid-cols-4 gap-[3px]">
+      {Array.from({ length: TIER_STEPS }, (_, i) => (
+        <span key={i} className="rounded-[1px] bg-bg3" />
+      ))}
+    </span>
+  );
+}
+
+/**
+ * One god's placement on the tier ladder: where the community puts them, where
+ * we put them, and the run between the two.
+ *
+ * The old bar drew the *raw score gap* outward from a centre tick, which asked
+ * the reader to already know what 0.17 was worth — and quietly compared two
+ * numbers that aren't on a shared scale (0.53 is S-tier for the model, but the
+ * community's S starts near 0.64). Rungs are the comparison this audience
+ * already reads, and they're the honest one: each source is placed by its own
+ * tier letter, so the distance between the marks means exactly what it looks
+ * like it means.
+ */
+function Ladder({ row }: { row: Divergence }) {
+  const from = Math.min(row.ourStep, row.theirStep);
+  const to = Math.max(row.ourStep, row.theirStep);
+  const under = row.verdict === "underrated";
+  const agreed = row.verdict === "agreed";
+  return (
+    <span aria-hidden="true" className="relative block h-2.5">
+      <LadderCells />
+      {!agreed && (
+        // Grows from the community's rung toward ours: the animation traces
+        // the argument in the direction the argument runs.
+        <span
+          className={`bar-grow absolute inset-y-0 rounded-[1px] ${
+            under ? "origin-left bg-under/40" : "origin-right bg-premium/40"}`}
+          style={{ left: `${stepPercent(from)}%`, width: `${stepPercent(to) - stepPercent(from)}%` }}
+        />
+      )}
+      {/* The community's placement — the baseline the reader already holds.
+          When both agree the two marks coincide, so only this one is drawn:
+          a single mark reads as "one answer", which is what agreement is. */}
+      <span className="absolute -top-0.5 h-[14px] w-[2px] -translate-x-1/2 rounded-[1px] bg-ink"
+        style={{ left: `${stepPercent(row.theirStep)}%` }} />
+      {row.verdict !== "agreed" && (
+        <span className={`absolute -top-0.5 h-[14px] w-[3px] -translate-x-1/2 rounded-[1px] ${VERDICT_MARK[row.verdict]}`}
+          style={{ left: `${stepPercent(row.ourStep)}%` }} />
+      )}
+    </span>
+  );
+}
+
+/** The encoding, decoded once, in place — so the rows below never need a
  * remembered schema. */
 function BoardKey() {
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-label text-faint">
-      <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="relative inline-block h-[3px] w-6 bg-bg3">
-          <span className="absolute inset-y-[-2px] left-1/2 w-[2px] -translate-x-1/2 bg-ink" />
+    <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-label text-faint">
+      <span className="flex items-center gap-2">
+        <span aria-hidden="true" className="relative block h-2.5 w-[88px]">
+          <LadderCells />
+          <span className="absolute inset-0 grid grid-cols-4 gap-[3px]">
+            {LADDER.map((t) => (
+              <span key={t} className="text-center font-mono text-micro leading-[10px] text-faint">{t}</span>
+            ))}
+          </span>
         </span>
-        White mark is our score
+        Tier ladder
       </span>
       <span className="flex items-center gap-1.5">
-        <span className="inline-block h-[3px] w-6 bg-under" />
-        Green — we rate it higher
+        <span aria-hidden="true" className="inline-block h-3.5 w-[2px] rounded-[1px] bg-ink" />
+        Where the meta puts them
       </span>
       <span className="flex items-center gap-1.5">
-        <span className="inline-block h-[3px] w-6 bg-premium" />
-        Red — the community rates it higher
+        <span aria-hidden="true" className="inline-block h-3.5 w-[3px] rounded-[1px] bg-under" />
+        We&rsquo;d rank higher
+      </span>
+      <span className="flex items-center gap-1.5">
+        <span aria-hidden="true" className="inline-block h-3.5 w-[3px] rounded-[1px] bg-premium" />
+        We&rsquo;d rank lower
       </span>
     </div>
   );
 }
 
-/** A single god's disagreement: who it is, what each side called it, and how
- * far apart they are. */
-function DivergenceRow({ row, scale }: { row: Divergence; scale: number }) {
-  const pct = barPercent(row.delta, scale);
-  const positive = row.delta > 0;
+/** A single god's disagreement: who it is, our verdict on it, and the two
+ * placements that verdict comes from. */
+function DivergenceRow({ row }: { row: Divergence }) {
   return (
     <li>
       <button
         type="button"
         onClick={() => navigate(toHash.god(row.name))}
-        aria-label={`${row.name}: model ${row.ours.toFixed(2)} (tier ${row.tierOurs ?? "unrated"}), community ${row.community.toFixed(2)} (tier ${row.tierCommunity ?? "unrated"}), gap ${deltaText(row.delta)}`}
+        // The arithmetic isn't gone, it's demoted: spoken in full here, on
+        // hover in the tooltip, and in full on the god's own page.
+        aria-label={`${row.name}: we place it ${row.tierOurs}, the community places it ${row.tierCommunity} — ${VERDICT_SPOKEN[row.verdict]}. Model score ${row.ours.toFixed(2)}, community ${row.community.toFixed(2)}.`}
+        title={`${row.name} — model ${row.ours.toFixed(2)} · community ${row.community.toFixed(2)} (${deltaText(row.delta)})`}
         className="press grid w-full grid-cols-[20px_minmax(0,1fr)_auto] items-center gap-x-2 gap-y-1.5 rounded-md px-1.5 py-1.5 text-left transition-colors duration-[150ms] ease-standard hover:bg-bg2"
       >
         <GodIcon name={row.name} className="h-5 w-5" />
         <span className="truncate font-display text-small font-semibold text-ink">{row.name}</span>
-        {/* Tier letters lift out of the quiet tier only when they actually
-            differ, so the headline's disagreement count is countable here. */}
-        <span
-          className={`font-mono text-micro tracking-[0.06em] ${row.tierDisagrees ? "text-ink-soft" : "text-faint"}`}
-          aria-hidden="true"
-        >
-          {row.tierOurs ?? "–"}<span className="px-0.5">/</span>{row.tierCommunity ?? "–"}
+        <span aria-hidden="true" className={`shrink-0 text-label ${VERDICT_TEXT[row.verdict]}`}>
+          {VERDICT_WORD[row.verdict]}
         </span>
-
-        <span className="col-span-3 flex items-center gap-2">
-          {/* Both operands, not just the gap: "+0.12" alone could be 0.85 vs
-              0.73 or 0.20 vs 0.08, and the reader came here to interrogate. */}
-          <span aria-hidden="true" className="shrink-0 font-mono text-micro text-faint">
-            <span className="text-ink-soft">{row.ours.toFixed(2)}</span>
-            <span className="px-0.5">·</span>
-            {row.community.toFixed(2)}
-          </span>
-          <span aria-hidden="true" className="relative h-[3px] min-w-0 flex-1 bg-bg3">
-            <span
-              className={`bar-grow absolute top-0 h-full ${positive ? "left-1/2 origin-left bg-under" : "right-1/2 origin-right bg-premium"}`}
-              style={{ width: `${pct / 2}%` }}
-            />
-            <span className="absolute inset-y-[-2px] left-1/2 w-[2px] -translate-x-1/2 bg-ink" />
-          </span>
-          <span aria-hidden="true" className={`w-[42px] shrink-0 text-right font-mono text-label ${deltaTextClass(row.delta)}`}>
-            {deltaText(row.delta)}
-          </span>
+        <span className="col-span-3">
+          <Ladder row={row} />
         </span>
       </button>
     </li>
@@ -255,7 +313,7 @@ const ROWS_PER_LANE = 6;
 /** One lane, ranked by how hard the two sources disagree. The column header
  * carries the lane's overall lean, which is where a systematic pattern —
  * every Carry rated below the meta, say — becomes visible. */
-function LaneBoardColumn({ col, scale, index }: { col: LaneColumn; scale: number; index: number }) {
+function LaneBoardColumn({ col, index }: { col: LaneColumn; index: number }) {
   const shown = col.rows.slice(0, ROWS_PER_LANE);
   const rest = col.rows.length - shown.length;
 
@@ -274,7 +332,7 @@ function LaneBoardColumn({ col, scale, index }: { col: LaneColumn; scale: number
       )}
 
       <ul className="mt-2.5 flex flex-col border-t border-line pt-1.5">
-        {shown.map((row) => <DivergenceRow key={row.name} row={row} scale={scale} />)}
+        {shown.map((row) => <DivergenceRow key={row.name} row={row} />)}
       </ul>
 
       {(rest > 0 || col.unranked > 0) && (
@@ -318,7 +376,7 @@ function DivergenceBoard({ board }: { board: ReturnType<typeof buildDivergenceBo
           Each column carries its own rule above its rows instead. */}
       <div className="mt-4 grid grid-cols-1 gap-x-5 gap-y-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {board.lanes.map((col, i) => (
-          <LaneBoardColumn key={col.lane} col={col} scale={board.scale} index={i} />
+          <LaneBoardColumn key={col.lane} col={col} index={i} />
         ))}
       </div>
 

@@ -5,6 +5,18 @@ export type TierLetter = (typeof TIERS)[number];
 
 const TIER_INDEX: Record<TierLetter, number> = { S: 0, A: 1, B: 2, C: 3 };
 
+/** How many rungs the ladder has. */
+export const TIER_STEPS = TIERS.length;
+
+/** Position on the ladder read left-to-right, worst to best: C=0 … S=3.
+ *
+ * This is the *reading* order, the reverse of `TIER_INDEX`'s ranking order —
+ * a tier list is drawn with S at the top, but a horizontal axis that improves
+ * rightward is the one people already read off a scoreboard. */
+export function tierStep(t: TierLetter | null | undefined): number | null {
+  return t ? TIER_STEPS - 1 - TIER_INDEX[t] : null;
+}
+
 /**
  * One entry inside a band, carrying where the *other* source places it.
  *

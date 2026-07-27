@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildDivergenceBoard, barPercent, deltaText } from "./divergence";
+import { buildDivergenceBoard, stepPercent, deltaText } from "./divergence";
 import type { GodTierEntry } from "../types";
 
 const entry = (o: Partial<GodTierEntry> & { name: string }): GodTierEntry => ({
@@ -13,7 +13,6 @@ describe("buildDivergenceBoard", () => {
       expect(b.lanes).toEqual([]);
       expect(b.total).toBe(0);
       expect(b.ranked).toBe(0);
-      expect(b.scale).toBe(1);
     }
   });
 
@@ -41,7 +40,18 @@ describe("buildDivergenceBoard", () => {
     expect(b.ranked).toBe(0);
   });
 
-  it("ranks each lane by the size of the disagreement, not its direction", () => {
+  it("ranks each lane by how many rungs apart the two sources are", () => {
+    const b = buildDivergenceBoard([
+      entry({ name: "OneRung", tier_ours: "B", tier_community: "A", ours: 0.5, community: 0.51 }),
+      // A smaller score gap but a bigger argument — the bar is drawn in rungs,
+      // so the order has to be in rungs too or a short bar sorts above a long.
+      entry({ name: "ThreeRungs", tier_ours: "S", tier_community: "C", ours: 0.53, community: 0.52 }),
+      entry({ name: "Agrees", tier_ours: "B", tier_community: "B", ours: 0.4, community: 0.7 }),
+    ]);
+    expect(b.lanes[0].rows.map((r) => r.name)).toEqual(["ThreeRungs", "OneRung", "Agrees"]);
+  });
+
+  it("falls back to the raw score gap only between equal-sized arguments", () => {
     const b = buildDivergenceBoard([
       entry({ name: "Small", ours: 0.5, community: 0.48, role: "Mid" }),
       entry({ name: "BigNegative", ours: 0.4, community: 0.6, role: "Mid" }),
@@ -58,15 +68,54 @@ describe("buildDivergenceBoard", () => {
     expect(b.lanes[0].rows.map((r) => r.name)).toEqual(["Agni", "Zeus"]);
   });
 
-  it("reports the systematic lean of a lane as a mean signed delta", () => {
+  it("splits a lane into the counts a reader can act on", () => {
     const b = buildDivergenceBoard([
-      entry({ name: "A", ours: 0.4, community: 0.6, role: "Carry" }),
-      entry({ name: "B", ours: 0.45, community: 0.55, role: "Carry" }),
+      entry({ name: "Up", tier_ours: "A", tier_community: "C", role: "Carry" }),
+      entry({ name: "Down", tier_ours: "C", tier_community: "A", role: "Carry" }),
+      entry({ name: "Same", tier_ours: "B", tier_community: "B", role: "Carry" }),
     ]);
     const carry = b.lanes.find((l) => l.lane === "Carry")!;
-    expect(carry.meanDelta).toBeCloseTo(-0.15, 5);
-    expect(carry.lower).toBe(2);
-    expect(carry.higher).toBe(0);
+    expect(carry.underrated).toBe(1);
+    expect(carry.overrated).toBe(1);
+    expect(carry.agreed).toBe(1);
+    // The disputed count is exactly the two directions, never a third number
+    // that could drift from them.
+    expect(carry.tierDiffer).toBe(carry.underrated + carry.overrated);
+  });
+
+  it("places each source on its own rung and names the verdict from the letters", () => {
+    const b = buildDivergenceBoard([
+      entry({ name: "Geb", tier_ours: "A", tier_community: "C", role: "Support" }),
+    ]);
+    const row = b.lanes[0].rows[0];
+    // C=0 … S=3, read left to right.
+    expect(row.theirStep).toBe(0);
+    expect(row.ourStep).toBe(2);
+    expect(row.tierGap).toBe(2);
+    expect(row.verdict).toBe("underrated");
+  });
+
+  it("lets the tier letters own the verdict when the score gap disagrees", () => {
+    // The real boundary case: identical scores, but the letters put it a full
+    // tier apart. Colouring from the score would print a grey "agreed" beside
+    // a bar drawn one rung wide.
+    const b = buildDivergenceBoard([
+      entry({ name: "NeZha", ours: 0.51, community: 0.51, tier_ours: "A", tier_community: "B" }),
+    ]);
+    const row = b.lanes[0].rows[0];
+    expect(row.delta).toBeCloseTo(0, 5);
+    expect(row.verdict).toBe("underrated");
+    expect(row.tierDisagrees).toBe(true);
+  });
+
+  it("treats a god with a score but no tier letter as unranked", () => {
+    // There is no rung to stand it on, so it cannot be drawn — counted, not
+    // given an invented placement.
+    const b = buildDivergenceBoard([
+      entry({ name: "Untiered", ours: 0.5, community: 0.5, tier_ours: null }),
+    ]);
+    expect(b.unranked).toBe(1);
+    expect(b.ranked).toBe(0);
   });
 
   it("counts tier disagreements independently of score distance", () => {
@@ -81,20 +130,6 @@ describe("buildDivergenceBoard", () => {
     const rows = b.lanes[0].rows;
     expect(rows.find((r) => r.name === "Edge")!.tierDisagrees).toBe(true);
     expect(rows.find((r) => r.name === "Agree")!.tierDisagrees).toBe(false);
-  });
-
-  it("scales to the largest absolute delta on the board", () => {
-    const b = buildDivergenceBoard([
-      entry({ name: "A", ours: 0.45, community: 0.68, role: "Carry" }),
-      entry({ name: "B", ours: 0.5, community: 0.48, role: "Mid" }),
-    ]);
-    expect(b.scale).toBeCloseTo(0.23, 5);
-  });
-
-  it("never scales by zero when every god matches exactly", () => {
-    const b = buildDivergenceBoard([entry({ name: "Same", ours: 0.5, community: 0.5 })]);
-    expect(b.scale).toBe(1);
-    expect(barPercent(0, b.scale)).toBe(0);
   });
 
   it("uses the primary lane so multi-role gods land in exactly one column", () => {
@@ -119,12 +154,13 @@ describe("buildDivergenceBoard", () => {
   });
 });
 
-describe("barPercent", () => {
-  it("is proportional to the delta and clamps at the scale", () => {
-    expect(barPercent(0.1, 0.2)).toBe(50);
-    expect(barPercent(-0.1, 0.2)).toBe(50);
-    expect(barPercent(0.4, 0.2)).toBe(100);
-    expect(barPercent(0, 0.2)).toBe(0);
+describe("stepPercent", () => {
+  it("centres a mark in its own rung, never on a boundary", () => {
+    // Four rungs, so each is 25% wide and its centre sits 12.5% in.
+    expect(stepPercent(0)).toBeCloseTo(12.5, 5);
+    expect(stepPercent(1)).toBeCloseTo(37.5, 5);
+    expect(stepPercent(2)).toBeCloseTo(62.5, 5);
+    expect(stepPercent(3)).toBeCloseTo(87.5, 5);
   });
 });
 
