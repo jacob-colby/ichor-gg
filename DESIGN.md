@@ -258,8 +258,14 @@ The board's bars are **positions on the tier ladder**, not a gap meter. Four run
 - **The row leads with a verdict, not a decimal.** `Underrated` / `Overrated` / `Agreed` — the words the audience argues in. Three decimals per row across thirty rows was the thing that read as a statistics table. The arithmetic is demoted, never deleted: it is spoken in full in the row's accessible name, shown on hover, and printed in full on the god's own page.
 - `BoardKey` teaches the axis once, in place, so no row needs a remembered schema.
 
-### Lane leans
-- Lanes are compared by **counts, not an average**: a proportional `under`/`premium` split bar over the lane's ranked gods, with `9 of 13` beside it. "Mean gap −0.05" is a sentence about the model; "9 of 13 we'd move" is a sentence about the lane, and only one of them is actionable. It also surfaces systematic leans at a glance — every disputed Carry currently runs one way, which reads instantly as a solid red bar.
+### Where we argue hardest (the header's evidence column)
+
+Six **named** arguments — three gods, three items — beside the page's claim. This block twice tried to be a chart of how far each lane leans; both times it was true and unactionable, because "Solo leans −0.05" names nobody. A reader wants to know *which god* and *which item*, so the block names them.
+
+- **No bar here at all.** The movement is the two tier letters and an arrow (`S → C`), with colour only on the destination — the community's placement is the neutral starting point. A second proportional bar competing with the ladders directly below it made `under`/`premium` read as two different encodings on one screen; the colours now mean exactly one thing everywhere on the page.
+- **Gods and items rank separately and are never pooled.** Item score gaps run several times larger than god gaps (a disputed item is routinely 0.47 apart, a disputed god 0.15), so one merged list would be all items every time — not because those arguments are sharper, but because the scales aren't comparable.
+- **Both directions appear whenever both exist**, even though the sharpest arguments in this data all run one way. Three red rows would assert a systematic lean the full set doesn't have (gods split 28 up / 25 down), and a reader generalises from the handful they're shown, so the last slot goes to the strongest argument the other way. Ordering within the list stays biggest-first.
+- Each group states **what its three are a sample of** (`53 of 69 placed differently`), so a short list can't read as the whole disagreement.
 
 ### Tooltip
 - `rounded-md`, `border-line`, `bg-bg2`, `shadow-card`, small (`text-xs`) copy. Flips above/below the trigger and shifts horizontally to avoid clipping; opens on a short hover delay but instantly on keyboard focus (`role="tooltip"`).

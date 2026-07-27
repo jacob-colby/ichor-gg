@@ -1,10 +1,6 @@
 import type { GodTierEntry } from "../types";
 import { LANES, godLane, type Lane } from "./roleAccent";
-import { tierStep, TIER_STEPS, type TierLetter } from "./tierBands";
-
-/** Which way a disagreement runs, in the words the audience already uses.
- *  `underrated` = we place the god above where the community does. */
-export type Verdict = "underrated" | "overrated" | "agreed";
+import { tierStep, verdictOf, TIER_STEPS, type TierLetter, type Verdict } from "./tierBands";
 
 /** One god both sources have placed, positioned on the tier ladder.
  *
@@ -44,15 +40,6 @@ export interface Divergence {
 export interface LaneColumn {
   lane: Lane;
   rows: Divergence[];
-  /** How the lane splits — the counts that answer "which lane do we argue
-   * about" without asking anyone to read an average. */
-  underrated: number;
-  overrated: number;
-  agreed: number;
-  /** Gods whose tier letter differs between the two sources — the per-lane
-   * share of the headline count, and by construction
-   * `underrated + overrated`. */
-  tierDiffer: number;
   /** Gods in this lane with no community score to compare against. */
   unranked: number;
 }
@@ -82,12 +69,6 @@ function byDisagreement(a: Divergence, b: Divergence): number {
   const d = Math.abs(b.delta) - Math.abs(a.delta);
   if (d !== 0) return d;
   return a.name.localeCompare(b.name);
-}
-
-function verdictOf(tierGap: number): Verdict {
-  if (tierGap > 0) return "underrated";
-  if (tierGap < 0) return "overrated";
-  return "agreed";
 }
 
 /**
@@ -147,20 +128,11 @@ export function buildDivergenceBoard(entries: GodTierEntry[] | undefined): Diver
     }
   }
 
-  const lanes: LaneColumn[] = LANES.map((lane) => {
-    const rows = rowsByLane.get(lane)!.sort(byDisagreement);
-    const underrated = rows.filter((r) => r.verdict === "underrated").length;
-    const overrated = rows.filter((r) => r.verdict === "overrated").length;
-    return {
-      lane,
-      rows,
-      underrated,
-      overrated,
-      agreed: rows.filter((r) => r.verdict === "agreed").length,
-      tierDiffer: underrated + overrated,
-      unranked: unrankedByLane.get(lane) ?? 0,
-    };
-  }).filter((c) => c.rows.length > 0 || c.unranked > 0);
+  const lanes: LaneColumn[] = LANES.map((lane) => ({
+    lane,
+    rows: rowsByLane.get(lane)!.sort(byDisagreement),
+    unranked: unrankedByLane.get(lane) ?? 0,
+  })).filter((c) => c.rows.length > 0 || c.unranked > 0);
 
   return { lanes, total: entries.length, ranked, unranked, tierDisagreements };
 }

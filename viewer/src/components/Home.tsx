@@ -17,7 +17,7 @@
  * FORM: Lane Board, position 3 of the ordered list, seed key c96ae713.
  */
 import { useMemo, useState } from "react";
-import type { God, IndexData, PatchPeriod } from "../types";
+import type { God, IndexData, PatchPeriod, TierEntry, TierListData } from "../types";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { usePins } from "../lib/pins";
 import { iconSlug } from "../lib/builds";
@@ -26,9 +26,12 @@ import { relativeDate } from "../lib/relativeDate";
 import { useDraft, encodeDraftHash, MODE_TEAM_SIZE } from "../lib/draft";
 import {
   buildDivergenceBoard, stepPercent, deltaText,
-  type Divergence, type LaneColumn, type Verdict,
+  type Divergence, type LaneColumn,
 } from "../lib/divergence";
-import { TIER_STEPS, type TierLetter } from "../lib/tierBands";
+import {
+  biggestArguments, TIER_STEPS,
+  type Argument, type TierLetter, type Verdict,
+} from "../lib/tierBands";
 
 /** The one label style shared by the sections below the board. */
 const sectionLabel = "font-mono text-label uppercase tracking-[0.1em] text-faint";
@@ -73,7 +76,7 @@ const VERDICT_SPOKEN: Record<Verdict, string> = {
  * missing file should degrade to an initial rather than leave a hole in the
  * grid — one retry with a cache-bust first, since a stale 404 is the common
  * cause. */
-function GodIcon({ name, className }: { name: string; className: string }) {
+function GodIcon({ name, className, item = false }: { name: string; className: string; item?: boolean }) {
   const [tries, setTries] = useState(0);
   if (tries > 1) {
     return (
@@ -87,7 +90,7 @@ function GodIcon({ name, className }: { name: string; className: string }) {
   }
   return (
     <img
-      src={`/icons/${iconSlug(name)}-head.png${tries ? "?r=1" : ""}`}
+      src={`/icons/${iconSlug(name)}${item ? "" : "-head"}.png${tries ? "?r=1" : ""}`}
       alt=""
       loading="lazy"
       onError={() => setTries((t) => t + 1)}
@@ -97,54 +100,81 @@ function GodIcon({ name, className }: { name: string; className: string }) {
 }
 
 /* ── The evidence ────────────────────────────────────────────────────────
- * Which lanes the two sources argue about, compared side by side. The board
- * below answers "who, within a lane"; it cannot answer "which lane is the
- * argument" without reading five column headers and holding them in memory.
- * So the comparison lives here and the board's columns stop repeating it.
+ * The half-dozen arguments actually worth having, named.
+ *
+ * This block used to compare the five lanes by how much each one leans. That
+ * was a chart about the model's behaviour in aggregate: true, but it named
+ * nobody, and "Solo leans −0.05" is not a thing anyone can act on. Six real
+ * names — three gods, three items, furthest apart in either direction — is the
+ * same claim told as the thing a player came for.
+ *
+ * Gods and items are ranked separately and never pooled: see
+ * `biggestArguments` for why one merged list would be all items, every time.
  */
-function LaneLeans({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
+const ARGUMENTS_SHOWN = 3;
+
+function ArgumentRow({ arg, item }: { arg: Argument<TierEntry>; item: boolean }) {
+  const { entry, verdict } = arg;
+  const tone = VERDICT_TEXT[verdict];
   return (
-    <section aria-labelledby="home-leans-h" className="w-full lg:max-w-[600px] lg:flex-1">
-      <div className="flex items-baseline justify-between gap-3">
-        <h2 id="home-leans-h" className={sectionLabel}>Which lanes we argue about</h2>
-        <span className="text-label text-faint">we&rsquo;d re-rank</span>
-      </div>
-      <ul className="mt-2 flex flex-col border-t border-line">
-        {board.lanes.map((col) => {
-          const n = col.rows.length;
-          return (
-            <li key={col.lane}
-              className="grid grid-cols-[4.5rem_minmax(0,1fr)_3.5rem] items-center gap-x-2.5 border-b border-line py-1.5">
-              <span className={`truncate text-small font-semibold ${laneTextClass(col.lane)}`}>
-                {col.lane}
-              </span>
-              {n === 0 ? (
-                <span className="col-span-2 text-label text-faint">no ranked gods</span>
-              ) : (
-                <>
-                  {/* Counts, not an average. "Mean gap −0.05" is a sentence
-                      about the model; "9 of 13 we'd move" is a sentence about
-                      the lane, and it's the one a player can act on. */}
-                  <span aria-hidden="true" className="flex h-[6px] overflow-hidden rounded-[1px] bg-bg3">
-                    <span className="bar-grow h-full origin-left bg-under"
-                      style={{ width: `${(col.underrated / n) * 100}%` }} />
-                    <span className="bar-grow h-full origin-left bg-premium"
-                      style={{ width: `${(col.overrated / n) * 100}%` }} />
-                  </span>
-                  <span className="text-right text-label text-faint">
-                    <span className="font-mono text-muted">{col.tierDiffer}</span> of{" "}
-                    <span className="font-mono">{n}</span>
-                  </span>
-                </>
-              )}
-            </li>
-          );
-        })}
-      </ul>
-      <p className="mt-2 max-w-[46ch] text-label leading-relaxed text-faint">
-        Green is gods we&rsquo;d move up from where the meta has them, red gods we&rsquo;d move down.
-        The longer the colour, the more of that lane we&rsquo;d argue about.
+    <li>
+      <a
+        href={item ? toHash.item(entry.name) : toHash.god(entry.name)}
+        aria-label={`${entry.name}: the community places it ${entry.tier_community}, we place it ${entry.tier_ours} — ${VERDICT_SPOKEN[verdict]}`}
+        className="press grid grid-cols-[20px_minmax(0,1fr)_auto_4.75rem] items-center gap-x-2 rounded-md px-1.5 py-1 transition-colors duration-[150ms] ease-standard hover:bg-bg2"
+      >
+        <GodIcon name={entry.name} item={item} className="h-5 w-5" />
+        <span className="truncate font-display text-small font-semibold text-ink">{entry.name}</span>
+        {/* The movement, not a gap figure: the tier they'd be at, and the tier
+            we'd put them at. Only the destination takes the colour — the
+            community's placement is the neutral starting point. */}
+        <span aria-hidden="true" className="font-mono text-label text-faint">
+          {entry.tier_community}
+          <span className="px-1 text-muted">→</span>
+          <span className={tone}>{entry.tier_ours}</span>
+        </span>
+        <span aria-hidden="true" className={`text-right text-label ${tone}`}>
+          {VERDICT_WORD[verdict]}
+        </span>
+      </a>
+    </li>
+  );
+}
+
+function ArgumentGroup({ label, set, item }: {
+  label: string; set: ReturnType<typeof biggestArguments<TierEntry>>; item: boolean;
+}) {
+  if (set.top.length === 0) return null;
+  return (
+    <>
+      <p className="mt-2.5 border-t border-line pt-2 text-label text-faint">
+        <span className="text-ink-soft">{label}</span>
+        <span className="px-1">·</span>
+        {/* What the three are a sample of, so a short list can't read as the
+            whole disagreement. */}
+        <span className="font-mono">{set.disputed}</span> of{" "}
+        <span className="font-mono">{set.ranked}</span> placed differently
       </p>
+      <ul className="mt-0.5 flex flex-col">
+        {set.top.map((a) => <ArgumentRow key={a.entry.name} arg={a} item={item} />)}
+      </ul>
+    </>
+  );
+}
+
+function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
+  const gods = useMemo(() => biggestArguments(tierlist?.gods ?? [], ARGUMENTS_SHOWN), [tierlist]);
+  const items = useMemo(() => biggestArguments(tierlist?.items ?? [], ARGUMENTS_SHOWN), [tierlist]);
+  if (gods.top.length === 0 && items.top.length === 0) return null;
+
+  return (
+    <section aria-labelledby="home-args-h" className="w-full lg:max-w-[600px] lg:flex-1">
+      <div className="flex items-baseline justify-between gap-3">
+        <h2 id="home-args-h" className={sectionLabel}>Where we argue hardest</h2>
+        <span className="text-label text-faint">meta&rsquo;s tier → ours</span>
+      </div>
+      <ArgumentGroup label="Gods" set={gods} item={false} />
+      <ArgumentGroup label="Items" set={items} item={true} />
     </section>
   );
 }
@@ -154,8 +184,8 @@ function LaneLeans({ board }: { board: ReturnType<typeof buildDivergenceBoard> }
  * rather than written down. When there's no tier list to compare against, the
  * claim steps back to what the model does instead of inventing a statistic.
  */
-function StateBlock({ board, disagreements, ranked }: {
-  board: ReturnType<typeof buildDivergenceBoard>;
+function StateBlock({ tierlist, disagreements, ranked }: {
+  tierlist?: TierListData;
   disagreements: number;
   ranked: number;
 }) {
@@ -189,7 +219,7 @@ function StateBlock({ board, disagreements, ranked }: {
           </p>
         </div>
 
-        {comparable && <LaneLeans board={board} />}
+        {comparable && <BiggestArguments tierlist={tierlist} />}
       </div>
     </header>
   );
@@ -570,7 +600,7 @@ export function Home({ data }: { data: IndexData }) {
   return (
     <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 pt-7 sm:px-6 sm:pt-9">
       <StateBlock
-        board={board}
+        tierlist={data.tierlist}
         disagreements={board.tierDisagreements}
         ranked={board.ranked}
       />

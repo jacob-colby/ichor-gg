@@ -57,6 +57,81 @@ export interface BandsResult<T extends TierEntry = TierEntry> {
   total: number;
 }
 
+/** Which way a disagreement runs, in the words the audience already uses.
+ *  `underrated` = we place it above where the community does. */
+export type Verdict = "underrated" | "overrated" | "agreed";
+
+export function verdictOf(tierGap: number): Verdict {
+  if (tierGap > 0) return "underrated";
+  if (tierGap < 0) return "overrated";
+  return "agreed";
+}
+
+/** One argument worth naming: an entry, how far apart the two sources put it,
+ *  and which way. Never `agreed` — an agreement isn't an argument. */
+export interface Argument<T extends TierEntry = TierEntry> {
+  entry: T;
+  tierGap: number;
+  delta: number;
+  verdict: Exclude<Verdict, "agreed">;
+}
+
+export interface ArgumentSet<T extends TierEntry = TierEntry> {
+  top: Argument<T>[];
+  /** How many of the comparable entries the two sources place differently —
+   *  the scope the `top` few are drawn from, so the list can say what it's a
+   *  sample of instead of implying it's the whole story. */
+  disputed: number;
+  ranked: number;
+}
+
+/**
+ * The sharpest disagreements in a list, either direction, biggest first.
+ *
+ * Generic over `TierEntry` because gods and items are the same question asked
+ * twice — but they are ranked *separately*, never pooled. Item score gaps run
+ * several times larger than god score gaps (a disputed item is routinely 0.47
+ * apart, a disputed god 0.15), so a single merged ranking would be all items
+ * every time, not because the arguments are sharper but because the two scales
+ * aren't comparable.
+ */
+export function biggestArguments<T extends TierEntry>(
+  entries: T[] | undefined,
+  limit: number,
+): ArgumentSet<T> {
+  if (!entries || entries.length === 0) return { top: [], disputed: 0, ranked: 0 };
+  const described = entries.map(describe).filter((d) => !d.unranked && d.tierGap != null);
+  const disputes = described.filter((d) => d.tierGap !== 0).sort(byDisagreement);
+  const top = disputes.slice(0, limit);
+
+  // Both directions, whenever both exist. The extremes in this data skew one
+  // way — the three sharpest god arguments are all "the meta rates it too
+  // high" — and three red rows read as a systematic lean the full set doesn't
+  // have: gods split 28 the model rates higher to 25 the meta does. A reader
+  // generalises from the handful they're shown, so the last slot goes to the
+  // strongest argument the other way rather than to the next-biggest of the
+  // same one. Ordering within the list is still biggest-first.
+  if (top.length > 1) {
+    const dir = Math.sign(top[0].tierGap!);
+    if (top.every((d) => Math.sign(d.tierGap!) === dir)) {
+      const opposite = disputes.find((d) => Math.sign(d.tierGap!) !== dir);
+      if (opposite) top[top.length - 1] = opposite;
+    }
+  }
+
+  return {
+    top: top
+      .map((d) => ({
+        entry: d.entry,
+        tierGap: d.tierGap!,
+        delta: d.delta ?? 0,
+        verdict: verdictOf(d.tierGap!) as Exclude<Verdict, "agreed">,
+      })),
+    disputed: disputes.length,
+    ranked: described.length,
+  };
+}
+
 function describe<T extends TierEntry>(entry: T): BandEntry<T> {
   const unranked = entry.tier_community == null || entry.community == null;
   const oursIdx = entry.tier_ours ? TIER_INDEX[entry.tier_ours] : null;

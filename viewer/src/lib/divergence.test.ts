@@ -68,21 +68,6 @@ describe("buildDivergenceBoard", () => {
     expect(b.lanes[0].rows.map((r) => r.name)).toEqual(["Agni", "Zeus"]);
   });
 
-  it("splits a lane into the counts a reader can act on", () => {
-    const b = buildDivergenceBoard([
-      entry({ name: "Up", tier_ours: "A", tier_community: "C", role: "Carry" }),
-      entry({ name: "Down", tier_ours: "C", tier_community: "A", role: "Carry" }),
-      entry({ name: "Same", tier_ours: "B", tier_community: "B", role: "Carry" }),
-    ]);
-    const carry = b.lanes.find((l) => l.lane === "Carry")!;
-    expect(carry.underrated).toBe(1);
-    expect(carry.overrated).toBe(1);
-    expect(carry.agreed).toBe(1);
-    // The disputed count is exactly the two directions, never a third number
-    // that could drift from them.
-    expect(carry.tierDiffer).toBe(carry.underrated + carry.overrated);
-  });
-
   it("places each source on its own rung and names the verdict from the letters", () => {
     const b = buildDivergenceBoard([
       entry({ name: "Geb", tier_ours: "A", tier_community: "C", role: "Support" }),
@@ -125,9 +110,9 @@ describe("buildDivergenceBoard", () => {
       entry({ name: "Agree", ours: 0.5, community: 0.4, tier_ours: "B", tier_community: "B" }),
     ]);
     expect(b.tierDisagreements).toBe(1);
-    // The headline count has to decompose into the columns beneath it.
-    expect(b.lanes[0].tierDiffer).toBe(1);
+    // The headline count has to decompose into the rows beneath it.
     const rows = b.lanes[0].rows;
+    expect(rows.filter((r) => r.tierDisagrees)).toHaveLength(1);
     expect(rows.find((r) => r.name === "Edge")!.tierDisagrees).toBe(true);
     expect(rows.find((r) => r.name === "Agree")!.tierDisagrees).toBe(false);
   });
