@@ -17,7 +17,7 @@
  * FORM: Lane Board, position 3 of the ordered list, seed key c96ae713.
  */
 import { useMemo, useState } from "react";
-import type { God, IndexData, PatchPeriod, TierEntry, TierListData } from "../types";
+import type { God, IndexData, ItemTierEntry, PatchPeriod, TierEntry, TierListData } from "../types";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { usePins } from "../lib/pins";
 import { iconSlug } from "../lib/builds";
@@ -25,52 +25,16 @@ import { godLane, laneTextClass } from "../lib/roleAccent";
 import { relativeDate } from "../lib/relativeDate";
 import { useDraft, encodeDraftHash, MODE_TEAM_SIZE } from "../lib/draft";
 import {
-  buildDivergenceBoard, stepPercent, deltaText,
+  buildDivergenceBoard, deltaText,
   type Divergence, type LaneColumn,
 } from "../lib/divergence";
-import {
-  biggestArguments, TIER_STEPS,
-  type Argument, type TierLetter, type Verdict,
-} from "../lib/tierBands";
+import { biggestArguments, type Argument } from "../lib/tierBands";
+import { TierLadder } from "./TierLadder";
+import { VERDICT_TEXT, VERDICT_WORD, VERDICT_SPOKEN } from "../lib/verdictWords";
 
 /** The one label style shared by the sections below the board. */
 const sectionLabel = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
-/** The ladder, left to right. A tier list is drawn S-first, but an axis that
- *  improves rightward is the one people read off a scoreboard. */
-const LADDER: TierLetter[] = ["C", "B", "A", "S"];
-
-/* The verdict, in the words this audience already argues in.
- *
- * The page used to state a disagreement as a signed number (`+0.15`) beside
- * two raw scores, which asks the reader to know what 0.15 is worth before it
- * says anything at all. `under`/`premium` still carry the direction — the same
- * pair, meaning the same thing they mean on items and in the tier list — but
- * the row now leads with the claim and keeps the arithmetic in its tooltip and
- * its accessible name. */
-const VERDICT_WORD: Record<Verdict, string> = {
-  underrated: "Underrated",
-  overrated: "Overrated",
-  agreed: "Agreed",
-};
-const VERDICT_TEXT: Record<Verdict, string> = {
-  underrated: "text-under",
-  overrated: "text-premium",
-  agreed: "text-faint",
-};
-/** Only the two directions get a mark of our own: on agreement the two
- *  placements coincide, and the ladder draws the single shared mark instead. */
-const VERDICT_MARK: Record<Exclude<Verdict, "agreed">, string> = {
-  underrated: "bg-under",
-  overrated: "bg-premium",
-};
-/** Spoken form, for the row's accessible name — "Underrated" alone doesn't say
- *  who is doing the underrating. */
-const VERDICT_SPOKEN: Record<Verdict, string> = {
-  underrated: "we rate it higher",
-  overrated: "we rate it lower",
-  agreed: "both agree",
-};
 
 /** God portrait with a real fallback. The icon set is generated per god, so a
  * missing file should degrade to an initial rather than leave a hole in the
@@ -164,7 +128,17 @@ function ArgumentGroup({ label, set, item }: {
 
 function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
   const gods = useMemo(() => biggestArguments(tierlist?.gods ?? [], ARGUMENTS_SHOWN), [tierlist]);
-  const items = useMemo(() => biggestArguments(tierlist?.items ?? [], ARGUMENTS_SHOWN), [tierlist]);
+  // Full items only. Tiers 1–2 are components and starters — things you pass
+  // through on the way to a build, not things you choose — so an argument
+  // about one isn't an argument anybody can act on. Unfiltered, two of the
+  // three loudest item disagreements were components.
+  const items = useMemo(
+    () => biggestArguments(
+      (tierlist?.items ?? []).filter((e) => (e as ItemTierEntry).tier === 3),
+      ARGUMENTS_SHOWN,
+    ),
+    [tierlist],
+  );
   if (gods.top.length === 0 && items.top.length === 0) return null;
 
   return (
@@ -184,9 +158,31 @@ function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
  * rather than written down. When there's no tier list to compare against, the
  * claim steps back to what the model does instead of inventing a statistic.
  */
-function StateBlock({ tierlist, disagreements, ranked }: {
+/* The claim, led by the half a player can act on.
+ *
+ * It used to read "We disagree with the meta on 53 of 69 ranked gods" — a
+ * sentence about the model's aggregate behaviour, true and inert. Nobody
+ * opens a build site to find out how often two rankings differ; they open it
+ * to find the god the meta is sleeping on. Same numbers, counted the same
+ * way, pointed at the reader instead of at the method. */
+function Claim({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
+  const { modelHigher, metaHigher, ranked } = board;
+  const gold = (n: number) => <span className="text-gold">{n} god{n === 1 ? "" : "s"}</span>;
+
+  if (modelHigher > 0) {
+    return <>The meta underrates {gold(modelHigher)}.</>;
+  }
+  // Degenerate but real: an index where the model never rates a god above the
+  // community still has to say something true rather than "underrates 0".
+  if (metaHigher > 0) {
+    return <>The meta overrates {gold(metaHigher)}.</>;
+  }
+  return <>The meta and this model agree on all {gold(ranked)}.</>;
+}
+
+function StateBlock({ board, tierlist, ranked }: {
+  board: ReturnType<typeof buildDivergenceBoard>;
   tierlist?: TierListData;
-  disagreements: number;
   ranked: number;
 }) {
   const comparable = ranked > 0;
@@ -201,20 +197,13 @@ function StateBlock({ tierlist, disagreements, ranked }: {
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:gap-12">
         <div className="min-w-0 lg:max-w-[46ch]">
           <h1 className="max-w-[19ch] text-balance font-display text-display font-bold leading-[1.1] tracking-[-0.01em] text-ink sm:text-display">
-            {comparable ? (
-              <>We disagree with the meta on{" "}
-                <span className="text-gold">{disagreements} of {ranked}</span>{" "}
-                ranked gods.
-              </>
-            ) : (
-              <>Builds scored by a model, not by what&rsquo;s popular.</>
-            )}
+            {comparable ? <Claim board={board} /> : <>Builds scored by a model, not by what&rsquo;s popular.</>}
           </h1>
           <p className="mt-3 max-w-[64ch] text-body leading-relaxed text-ink-soft">
             ichor fits a gold-value model to item stats to find what&rsquo;s underpriced for a
             god&rsquo;s kit, then weighs that against the community&rsquo;s high-elo meta.
             {comparable
-              ? " Where the two part ways, it says so — by lane, biggest argument first."
+              ? <> It&rsquo;d move {board.metaHigher} the other way, and it agrees with the meta on the rest.</>
               : " Community comparison isn't in this index yet, so nothing below is ranked against the meta."}
           </p>
         </div>
@@ -225,86 +214,26 @@ function StateBlock({ tierlist, disagreements, ranked }: {
   );
 }
 
-/** The empty ladder — four rungs, worst to best. Shared by the legend and
- *  every row so the cell geometry can't drift between the two. */
-function LadderCells() {
-  return (
-    <span className="absolute inset-0 grid grid-cols-4 gap-[3px]">
-      {Array.from({ length: TIER_STEPS }, (_, i) => (
-        <span key={i} className="rounded-[1px] bg-bg3" />
-      ))}
-    </span>
-  );
-}
-
-/**
- * One god's placement on the tier ladder: where the community puts them, where
- * we put them, and the run between the two.
- *
- * The old bar drew the *raw score gap* outward from a centre tick, which asked
- * the reader to already know what 0.17 was worth — and quietly compared two
- * numbers that aren't on a shared scale (0.53 is S-tier for the model, but the
- * community's S starts near 0.64). Rungs are the comparison this audience
- * already reads, and they're the honest one: each source is placed by its own
- * tier letter, so the distance between the marks means exactly what it looks
- * like it means.
- */
-function Ladder({ row }: { row: Divergence }) {
-  const from = Math.min(row.ourStep, row.theirStep);
-  const to = Math.max(row.ourStep, row.theirStep);
-  const under = row.verdict === "underrated";
-  const agreed = row.verdict === "agreed";
-  return (
-    <span aria-hidden="true" className="relative block h-2.5">
-      <LadderCells />
-      {!agreed && (
-        // Grows from the community's rung toward ours: the animation traces
-        // the argument in the direction the argument runs.
-        <span
-          className={`bar-grow absolute inset-y-0 rounded-[1px] ${
-            under ? "origin-left bg-under/40" : "origin-right bg-premium/40"}`}
-          style={{ left: `${stepPercent(from)}%`, width: `${stepPercent(to) - stepPercent(from)}%` }}
-        />
-      )}
-      {/* The community's placement — the baseline the reader already holds.
-          When both agree the two marks coincide, so only this one is drawn:
-          a single mark reads as "one answer", which is what agreement is. */}
-      <span className="absolute -top-0.5 h-[14px] w-[2px] -translate-x-1/2 rounded-[1px] bg-ink"
-        style={{ left: `${stepPercent(row.theirStep)}%` }} />
-      {row.verdict !== "agreed" && (
-        <span className={`absolute -top-0.5 h-[14px] w-[3px] -translate-x-1/2 rounded-[1px] ${VERDICT_MARK[row.verdict]}`}
-          style={{ left: `${stepPercent(row.ourStep)}%` }} />
-      )}
-    </span>
-  );
-}
-
-/** The encoding, decoded once, in place — so the rows below never need a
- * remembered schema. */
+/** What the two marks are. The rungs no longer need explaining here — each bar
+ * now names its own tiers underneath, so the only thing left to say is which
+ * mark belongs to whom. */
 function BoardKey() {
   return (
     <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-label text-faint">
-      <span className="flex items-center gap-2">
-        <span aria-hidden="true" className="relative block h-2.5 w-[88px]">
-          <LadderCells />
-          <span className="absolute inset-0 grid grid-cols-4 gap-[3px]">
-            {LADDER.map((t) => (
-              <span key={t} className="text-center font-mono text-micro leading-[10px] text-faint">{t}</span>
-            ))}
-          </span>
-        </span>
-        Tier ladder
-      </span>
       <span className="flex items-center gap-1.5">
         <span aria-hidden="true" className="inline-block h-3.5 w-[2px] rounded-[1px] bg-ink" />
-        Where the meta puts them
+        Meta
       </span>
       <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="inline-block h-3.5 w-[3px] rounded-[1px] bg-under" />
+        <span aria-hidden="true" className="mark inline-block h-4 w-[9px] bg-gold" />
+        Us
+      </span>
+      <span className="flex items-center gap-1.5">
+        <span aria-hidden="true" className="inline-block h-[3px] w-6 rounded-[1px] bg-under/45" />
         We&rsquo;d rank higher
       </span>
       <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="inline-block h-3.5 w-[3px] rounded-[1px] bg-premium" />
+        <span aria-hidden="true" className="inline-block h-[3px] w-6 rounded-[1px] bg-premium/45" />
         We&rsquo;d rank lower
       </span>
     </div>
@@ -330,8 +259,8 @@ function DivergenceRow({ row }: { row: Divergence }) {
         <span aria-hidden="true" className={`shrink-0 text-label ${VERDICT_TEXT[row.verdict]}`}>
           {VERDICT_WORD[row.verdict]}
         </span>
-        <span className="col-span-3">
-          <Ladder row={row} />
+        <span className="col-span-3 block">
+          <TierLadder ourStep={row.ourStep} theirStep={row.theirStep} verdict={row.verdict} />
         </span>
       </button>
     </li>
@@ -599,11 +528,7 @@ export function Home({ data }: { data: IndexData }) {
 
   return (
     <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 pt-7 sm:px-6 sm:pt-9">
-      <StateBlock
-        tierlist={data.tierlist}
-        disagreements={board.tierDisagreements}
-        ranked={board.ranked}
-      />
+      <StateBlock board={board} tierlist={data.tierlist} ranked={board.ranked} />
       <DivergenceBoard board={board} />
       <div className="mt-7 flex flex-col gap-6">
         <DraftSeam />

@@ -106,47 +106,21 @@ export function DraftDock({ gods, items, builds, godItemScores, draftConfig }: D
     if (expanded) headingRef.current?.focus();
   }, [expanded]);
 
-  // Nothing entered anywhere: the full chip-and-status treatment would be ten
-  // dashed rings of chrome on every single page for a visitor who has never
-  // touched the feature. An invitation instead — but a legible one. A quiet
-  // text pill here undersold the one feature this whole session is about, so
-  // this is the same footprint and shadow tier the dock itself uses once
-  // started, with a literal miniature of the ten-slot board it opens onto
-  // rather than an invented decoration.
-  if (!started) {
-    return (
-      <a href={toHash.draft()} data-testid="draft-dock"
-        className="plane fixed bottom-3 right-3 z-30 block w-[min(92vw,300px)] overflow-hidden rounded-lg border border-line bg-bg1 shadow-raised transition-colors duration-150 ease-standard hover:border-line-strong sm:bottom-4 sm:right-4">
-        <div aria-hidden="true" className="flex items-center justify-center gap-1 border-b border-line bg-bg2/60 px-3 pb-3 pt-3.5">
-          <span className="flex items-center -space-x-1.5">
-            {Array.from({ length: 5 }, (_, i) => (
-              <span key={i} className={`h-5 w-5 rounded-sm bg-bg2 ring-2 ring-bg1 ${
-                i === 0 ? "border-2 border-gold" : "border border-dashed border-line-strong"}`} />
-            ))}
-          </span>
-          <span className="px-1 font-mono text-micro uppercase tracking-[0.08em] text-faint">vs</span>
-          <span className="flex items-center -space-x-1.5">
-            {Array.from({ length: 5 }, (_, i) => (
-              <span key={i} className="h-5 w-5 rounded-sm border border-dashed border-line-strong bg-bg2 ring-2 ring-bg1" />
-            ))}
-          </span>
-        </div>
-        <div className="px-3 py-2.5">
-          <span className="block font-display text-lead font-bold text-blue">Start a draft →</span>
-          <span className="block text-label text-faint">See your build adapt to who you&rsquo;re facing</span>
-        </div>
-      </a>
-    );
-  }
-
-  const statusTitle = !meName
-    ? "Add your god"
-    : changeCount > 0
-      ? `${changeCount} of ${coreSize} items moved`
-      : enemiesKnown === 0 ? "Default core" : "Nothing moved yet";
+  // One dock, in every state. There used to be a separate empty-state card
+  // showing a *mock* of the board that linked to /draft — a picture of a
+  // control beside the real control it was a picture of. The board is small
+  // enough to just be here, so the invitation is the working thing rather
+  // than an advertisement for it.
+  const statusTitle = !started
+    ? "Start a draft"
+    : !meName
+      ? "Add your god"
+      : changeCount > 0
+        ? `${changeCount} of ${coreSize} items moved`
+        : enemiesKnown === 0 ? "Default core" : "Nothing moved yet";
 
   return (
-    <div data-testid="draft-dock" className="fixed bottom-3 right-3 z-30 w-[min(92vw,380px)] sm:bottom-4 sm:right-4">
+    <div data-testid="draft-dock" className="fixed bottom-3 right-3 z-30 w-[min(94vw,420px)] sm:bottom-4 sm:right-4">
       <div role="region" aria-label="Your draft" className="plane overflow-hidden rounded-lg border border-line bg-bg1 shadow-raised">
         <button
           ref={toggleRef}
@@ -159,7 +133,9 @@ export function DraftDock({ gods, items, builds, godItemScores, draftConfig }: D
           <ChipRow names={draft.allies} />
           <span aria-hidden="true" className="shrink-0 text-label text-faint">vs</span>
           <ChipRow names={draft.enemies} />
-          <span className="min-w-0 flex-1 truncate text-small font-medium text-ink-soft">{statusTitle}</span>
+          <span className={`min-w-0 flex-1 truncate text-small font-medium ${started ? "text-ink-soft" : "text-blue"}`}>
+            {statusTitle}
+          </span>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2"
             aria-hidden="true" className={`shrink-0 text-faint transition-transform duration-150 ease-standard ${expanded ? "rotate-180" : ""}`}>
             <path d="M6 9l6 6 6-6" />
@@ -167,7 +143,8 @@ export function DraftDock({ gods, items, builds, godItemScores, draftConfig }: D
         </button>
 
         {expanded && (
-          <div id="draft-dock-panel" className="border-t border-line px-3 pb-3 pt-2.5">
+          <div id="draft-dock-panel"
+            className="max-h-[min(70vh,560px)] overflow-y-auto border-t border-line px-3 pb-3 pt-2.5">
             <div className="flex items-center justify-between gap-2">
               <h2 ref={headingRef} tabIndex={-1} className="font-display text-small font-semibold text-ink focus:outline-none">
                 Your draft
@@ -210,8 +187,37 @@ export function DraftDock({ gods, items, builds, godItemScores, draftConfig }: D
                 : "Put your god in the gold slot to start adapting"}
             </p>
 
+            {/* The build itself, not a teaser for it. Without this the dock
+                could report that six items moved but never say which, so the
+                claim it makes was unverifiable without leaving the page —
+                which is the one thing this dock exists to avoid. */}
+            {result && (
+              <div className="mt-2 border-t border-line pt-2">
+                <div className={label}>{changeCount > 0 ? "Your adapted core" : "The default core"}</div>
+                <ul className="mt-1 flex flex-col">
+                  {result.adapted.core.map((name, i) => {
+                    const changed = result.diff.changes.some((c) => c.added === name);
+                    return (
+                      <li key={name}>
+                        <a href={toHash.item(name)}
+                          aria-label={`${name}${changed ? ", added by your draft" : ""}`}
+                          className="press grid grid-cols-[14px_24px_minmax(0,1fr)_auto] items-center gap-2 rounded-sm py-0.5 pr-1 transition-colors duration-150 ease-standard hover:bg-bg2">
+                          <span aria-hidden="true" className="text-right font-mono text-micro text-faint">{i + 1}</span>
+                          <Icon name={name} item className="h-6 w-6" />
+                          <span className={`truncate text-small ${changed ? "font-medium text-under" : "text-ink"}`}>{name}</span>
+                          {changed && (
+                            <span className="text-micro font-semibold uppercase tracking-[0.06em] text-under">new</span>
+                          )}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
+
             {result && changeCount > 0 && (
-              <ul className="mt-1.5 flex flex-col divide-y divide-line border-t border-line">
+              <ul className="mt-2 flex flex-col divide-y divide-line border-t border-line pt-1">
                 {result.diff.changes.slice(0, 3).map((c) => (
                   <MiniChange key={c.added} added={c.added} removed={c.removed} />
                 ))}
@@ -220,7 +226,7 @@ export function DraftDock({ gods, items, builds, godItemScores, draftConfig }: D
 
             <div className="mt-2.5 flex items-center justify-between gap-2 border-t border-line pt-2">
               <a href={toHash.draft()} className="press flex min-h-6 items-center rounded-sm text-label font-medium text-blue hover:underline">
-                Open full draft board →
+                Full board &amp; reasons →
               </a>
               {taken.size > 0 && (
                 <button type="button" onClick={clear}

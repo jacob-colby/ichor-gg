@@ -34,10 +34,9 @@ describe("TierList — bands and ghosts", () => {
 
   it("carries the community's placement on the card, with no source toggle to reach it", () => {
     render(<TierList tierlist={{ gods, items }} />);
-    // Ymir: model S, community C — the disagreement is readable in place.
-    // The letter is its own element: it's a code that reads down the grid, so
-    // it keeps the numeral face while the word "meta" beside it doesn't.
-    expect(screen.getByTestId("band-S")).toHaveTextContent(/meta\s*C/);
+    // Ymir: model S, community C — the disagreement is readable in place, as
+    // a verdict rather than as three decimals.
+    expect(screen.getByTestId("band-S")).toHaveTextContent(/underrated/i);
     // The old "Our calc / Community" toggle is gone.
     expect(screen.queryByRole("button", { name: "Community" })).not.toBeInTheDocument();
     expect(screen.queryByRole("button", { name: /our calc/i })).not.toBeInTheDocument();
@@ -45,16 +44,19 @@ describe("TierList — bands and ghosts", () => {
 
   it("names both placements in each card's accessible name", () => {
     render(<TierList tierlist={{ gods, items }} />);
-    const ymir = screen.getByRole("link", { name: /^Ymir,/ });
-    expect(ymir).toHaveAccessibleName(/model tier S at 0\.90/);
-    expect(ymir).toHaveAccessibleName(/community tier C at 0\.30/);
+    const ymir = screen.getByRole("link", { name: /^Ymir:/ });
+    expect(ymir).toHaveAccessibleName(/we place it S, the community places it C/);
+    expect(ymir).toHaveAccessibleName(/we rate it higher/);
+    // The figures are demoted, not deleted.
+    expect(ymir).toHaveAttribute("title", expect.stringContaining("0.90"));
+    expect(ymir).toHaveAttribute("title", expect.stringContaining("0.30"));
   });
 
   it("marks an entry with no community rating as unranked rather than hiding it", () => {
     render(<TierList tierlist={{ gods, items }} />);
     const anubis = within(screen.getByTestId("band-C"));
-    expect(anubis.getByText("unranked")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /^Anubis,/ })).toHaveAccessibleName(/no community rating/);
+    expect(anubis.getByText(/no community rating/i)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /^Anubis:/ })).toHaveAccessibleName(/the community hasn't placed it/);
     // It stays in the model's own band — never bucketed into a separate group.
     expect(screen.queryByTestId("band-unranked")).not.toBeInTheDocument();
   });
@@ -65,7 +67,21 @@ describe("TierList — bands and ghosts", () => {
     ];
     render(<TierList tierlist={{ gods: agreeing, items: [] }} />);
     // Scoped to the card — the headline claim also contains "agrees with".
-    expect(within(screen.getByTestId("band-S")).getByText(/meta agrees/i)).toBeInTheDocument();
+    expect(within(screen.getByTestId("band-S")).getByText(/^Agreed$/)).toBeInTheDocument();
+  });
+
+  /* `tierGap` is null when the model never tiered an entry, and a null gap
+   * reads as zero — so a card could claim the two sources "Agreed" about a
+   * placement one of them never made. */
+  it("never calls an untiered entry an agreement", () => {
+    const untiered: ItemTierEntry[] = [
+      { name: "Ghost Starter", ours: null, community: 0.4, tier_ours: null, tier_community: "B" },
+    ];
+    render(<TierList tierlist={{ gods: [], items: untiered }} />);
+    fireEvent.click(screen.getByRole("button", { name: "Items" }));
+    const card = within(screen.getByTestId("band-untiered"));
+    expect(card.getByText(/not tiered by the model/i)).toBeInTheDocument();
+    expect(card.queryByText(/^Agreed$/)).not.toBeInTheDocument();
   });
 
   it("leads the headline with the agreement count", () => {
@@ -91,9 +107,9 @@ describe("TierList — bands and ghosts", () => {
 
   it("links each card to its own page", () => {
     render(<TierList tierlist={{ gods, items }} />);
-    expect(screen.getByRole("link", { name: /^Ra,/ })).toHaveAttribute("href", toHash.god("Ra"));
+    expect(screen.getByRole("link", { name: /^Ra:/ })).toHaveAttribute("href", toHash.god("Ra"));
     fireEvent.click(screen.getByRole("button", { name: "Items" }));
-    expect(screen.getByRole("link", { name: /^Rage,/ })).toHaveAttribute("href", toHash.item("Rage"));
+    expect(screen.getByRole("link", { name: /^Rage:/ })).toHaveAttribute("href", toHash.item("Rage"));
   });
 });
 

@@ -21,8 +21,10 @@ import { iconSlug } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { LANES, godLane, godInLane, laneTextClass, type Lane } from "../lib/roleAccent";
 import { efficiencyLabel } from "../lib/itemFilters";
-import { buildBands, type BandEntry, type BandSort, type TierLetter } from "../lib/tierBands";
+import { buildBands, tierStep, verdictOf, type BandEntry, type BandSort, type TierLetter } from "../lib/tierBands";
 import { deltaText } from "../lib/divergence";
+import { TierLadder } from "./TierLadder";
+import { VERDICT_TEXT, VERDICT_WORD, VERDICT_SPOKEN } from "../lib/verdictWords";
 import { useUrlState } from "../lib/urlState";
 
 type Subject = "gods" | "items";
@@ -59,19 +61,11 @@ function scoreText(v: number | null | undefined): string {
 
 const entityLabel = (s: Subject) => (s === "gods" ? "god" : "item");
 
-/**
- * Direction of a tier disagreement, from the tier letters — the same basis the
- * ghost text and the header tallies use.
- *
- * Colouring from the raw score gap instead put `premium` ("the meta rates it
- * higher") next to letters saying the model ranked it two tiers higher: the
- * two measures disagree near a tier boundary, and they were being shown four
- * characters apart. The letters are the verdict, so they own the colour.
- */
-function divergenceClass(tierGap: number | null): string {
-  if (tierGap == null || tierGap === 0) return "text-faint";
-  return tierGap > 0 ? "text-under" : "text-premium";
-}
+/* Direction of a tier disagreement comes from the tier letters, never the raw
+ * score gap: the two measures disagree near a band boundary, and colouring
+ * from the score put "the meta rates it higher" four characters from letters
+ * saying we ranked it two tiers up. `verdictOf` is that same rule, now shared
+ * with Home so both pages say it identically. */
 
 /** Entry art with a real fallback rather than a hidden hole in the grid. */
 function EntryIcon({ name, item }: { name: string; item: boolean }) {
@@ -109,27 +103,21 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
   const item = entry as ItemTierEntry;
   const eff = isGod ? null : efficiencyLabel(item.efficiency_tier);
   const lane = isGod ? godLane(god.role) : undefined;
-
-  const ghost = unranked
-    ? <span className="text-muted">unranked</span>
-    : agrees
-      ? <span className="text-faint">meta agrees · <span className="font-mono">{entry.tier_community}</span></span>
-      : (
-        <>
-          <span className={divergenceClass(tierGap)}>meta <span className="font-mono">{entry.tier_community}</span></span>
-          {/* Neutral: the score gap can point the other way from the letters
-              near a tier boundary, so only the letters carry direction. */}
-          <span className="font-mono text-faint">{deltaText(delta)}</span>
-        </>
-      );
+  const verdict = verdictOf(tierGap ?? 0);
+  const ourStep = tierStep(entry.tier_ours);
+  const theirStep = tierStep(entry.tier_community);
 
   return (
     <li>
       <a
         href={isGod ? toHash.god(entry.name) : toHash.item(entry.name)}
-        aria-label={`${entry.name}, model tier ${entry.tier_ours ?? "unrated"} at ${scoreText(entry.ours)}, ${
-          unranked ? "no community rating"
-          : `community tier ${entry.tier_community} at ${scoreText(entry.community)}`}`}
+        aria-label={`${entry.name}: we place it ${entry.tier_ours ?? "unrated"}, ${
+          unranked ? "the community hasn't placed it"
+          : `the community places it ${entry.tier_community} — ${VERDICT_SPOKEN[verdict]}`}`}
+        // The arithmetic is demoted, not deleted — on hover here, and in full
+        // on the entry's own page.
+        title={`${entry.name} — model ${scoreText(entry.ours)}${
+          unranked ? "" : ` · community ${scoreText(entry.community)} (${deltaText(delta)})`}`}
         // Stacked on a phone so the name gets the card's full width — laid
         // out beside the icon it truncated at "Thanatos".
         className={`plane press flex h-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard hover:border-line-strong sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
@@ -141,12 +129,30 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
           {isGod
             ? lane && <span className={`text-label ${laneTextClass(lane)}`}>{lane}</span>
             : eff && <span className={`text-label ${eff.cls.replace(/bg-\S+/g, "")}`}>{eff.text}</span>}
-          <span className="mt-0.5 flex flex-wrap items-baseline justify-center gap-x-1.5 text-label leading-tight sm:justify-start">
-            {/* Not gold: 87 gilded scores would make the accent decorative.
-                The band letter already carries the model's verdict. */}
-            <span className="font-mono text-ink-soft">{scoreText(entry.ours)}</span>
-            {ghost}
-          </span>
+          {/* The verdict in words, then the same ladder Home draws. A card
+              used to end in three figures — `0.53  meta B  +0.05` — which is
+              the reading the rest of this redesign moved away from. Within a
+              band our own kite sits at the same rung on every card, so what
+              varies down the column is exactly the thing worth seeing: how
+              far the meta is from us. */}
+          {ourStep == null ? (
+            // The model never tiered this one (the starters and components).
+            // `tierGap` is null here, and a null gap reads as zero — so
+            // without this branch the card would print "Agreed" about a
+            // placement we never made.
+            <span className="mt-0.5 text-label leading-tight text-muted">not tiered by the model</span>
+          ) : unranked || theirStep == null ? (
+            <span className="mt-0.5 text-label leading-tight text-muted">no community rating</span>
+          ) : (
+            <>
+              <span className={`mt-0.5 text-label leading-tight ${VERDICT_TEXT[verdict]}`}>
+                {VERDICT_WORD[verdict]}
+              </span>
+              <span className="mt-1 w-full max-w-[128px]">
+                <TierLadder ourStep={ourStep} theirStep={theirStep} verdict={verdict} />
+              </span>
+            </>
+          )}
         </span>
       </a>
     </li>
@@ -184,7 +190,7 @@ function TierBand({ tier, entries, total, agreed, disagreed, unranked, subject }
       </div>
       {/* Steps with viewport: a single 158px minimum gave 2 columns on a
           phone and inflated cards to 181px at 1440. */}
-      <ul className="grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
+      <ul className="grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
         {entries.map((b) => <EntryCard key={b.entry.name} band={b} subject={subject} />)}
       </ul>
     </section>
@@ -442,7 +448,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
                 Starters and components the model doesn&rsquo;t rank against full items — they&rsquo;re
                 counted above, so they&rsquo;re shown here rather than dropped.
               </p>
-              <ul className="grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
+              <ul className="grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
                 {untiered.map((b) => <EntryCard key={b.entry.name} band={b} subject={subject} />)}
               </ul>
             </section>

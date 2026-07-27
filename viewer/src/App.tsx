@@ -133,8 +133,24 @@ function App() {
       </a>
 
       <header className="flex flex-none items-center gap-3 border-b border-line px-4 py-2 sm:px-6 sm:py-2.5">
-        <a href={toHash.home()} className="press shrink-0 py-1 font-display text-lead font-bold tracking-tight text-ink">
-          ichor
+        {/* The wordmark. The tittle of the i is the same gold kite that marks
+            our own placement on every tier ladder — the logo and the data are
+            one shape, so the mark means something before you learn it.
+            Geometry is measured from the face, not guessed: with
+            `leading-none` Rajdhani puts its baseline 0.79em below the box top
+            and its x-height 0.515em above the baseline, so the stem's top edge
+            sits 0.275em down. The kite hangs just clear of it. (Positioning
+            from the box *bottom* instead is 0.21em out — the descender — and
+            drives the mark straight through the stem.) */}
+        <a href={toHash.home()} aria-label="ichor — home"
+          className="press shrink-0 py-1 font-display text-[19px] font-bold leading-none tracking-tight text-ink">
+          <span className="relative inline-block" aria-hidden="true">
+            &#x131;
+            {/* Width is height × 0.587, the drawn artwork's own ratio. */}
+            <span className="mark absolute left-1/2 h-[0.36em] w-[0.211em] -translate-x-1/2 bg-gold"
+              style={{ top: "calc(0.275em - 0.04em - 0.36em)" }} />
+          </span>
+          <span aria-hidden="true">chor</span>
         </a>
         {/* Only one of these two is ever in the accessibility tree — the
             other is display:none at its breakpoint. */}

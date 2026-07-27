@@ -17,13 +17,14 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Item, ItemTierEntry } from "../types";
 import {
-  filterItems, sortItems, efficiencyLabel, tierLabel, tiersPresent,
+  filterItems, sortItems, tierLabel, tiersPresent,
   residualText, statValueLines, basePrice, EFFICIENCY,
   type SortKey, type ItemFilter,
 } from "../lib/itemFilters";
 import { iconSlug } from "../lib/builds";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { useUrlState, keepQuery } from "../lib/urlState";
+import { priceVerdict, PRICE_WORD, PRICE_TEXT, PRICE_SPOKEN } from "../lib/verdictWords";
 
 const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
@@ -46,35 +47,43 @@ export function ItemIcon({ name, size = "h-8 w-8" }: { name: string; size?: stri
   );
 }
 
-function EffBadge({ tier }: { tier: string | null | undefined }) {
-  const e = efficiencyLabel(tier);
-  return (
-    <span className={`rounded-sm px-1.5 py-0.5 text-micro font-semibold uppercase tracking-[0.06em] ${e.cls}`}>
-      {e.text}
-    </span>
-  );
-}
-
 function residualClass(residual: number): string {
   if (residual < 0) return "text-under";
   if (residual > 0) return "text-premium";
   return "text-faint";
 }
 
-/** How far this item's price sits from what its stats are worth, drawn from a
- * centre line — the same vocabulary Home uses for model-vs-meta divergence. */
-function ResidualBar({ residual, scale }: { residual: number; scale: number }) {
+/**
+ * What it costs, against what the model says it's worth.
+ *
+ * The same grammar as the tier ladder, asked about a price: **the white rule
+ * is the number the game sets** — the baseline you already hold, sitting at
+ * centre — and **the gold kite is our verdict**, offset to where we'd price it
+ * instead. The axis is gold, rising rightward, so a kite to the right of the
+ * rule always means "worth more than it costs", which is the same "right is
+ * better" the ladders read by.
+ *
+ * No rungs here, deliberately: a price is continuous, and drawing a continuous
+ * quantity in four discrete steps would claim a precision the number doesn't
+ * have. Scaled to the largest residual on the board so cards stay comparable
+ * to each other.
+ */
+function PriceBar({ residual, scale }: { residual: number; scale: number }) {
   const pct = scale > 0 ? Math.min(100, Math.round((Math.abs(residual) / scale) * 100)) : 0;
   const under = residual < 0;
+  // Signed offset from centre, in percent of the whole track.
+  const offset = (under ? 1 : -1) * (pct / 2);
   return (
-    <span aria-hidden="true" className="relative block h-[3px] w-full bg-bg3">
-      <span className="absolute inset-y-[-2px] left-1/2 w-px -translate-x-1/2 bg-line-strong" />
-      {/* under to the right, premium to the left — the same direction Home
-          draws divergence. This ran backwards while claiming otherwise. */}
+    <span aria-hidden="true" className="relative block h-2.5 w-full">
+      <span className="absolute inset-x-0 top-1/2 h-[3px] -translate-y-1/2 rounded-[1px] bg-bg3" />
       <span
-        className={`bar-grow absolute top-0 h-full ${under ? "left-1/2 origin-left bg-under" : "right-1/2 origin-right bg-premium"}`}
-        style={{ width: `${pct / 2}%` }}
+        className={`bar-grow absolute top-1/2 h-[3px] -translate-y-1/2 rounded-[1px] ${
+          under ? "origin-left bg-under/45" : "origin-right bg-premium/45"}`}
+        style={{ left: `${50 + Math.min(offset, 0)}%`, width: `${Math.abs(offset)}%` }}
       />
+      <span className="absolute -top-0.5 left-1/2 h-[14px] w-[2px] -translate-x-1/2 rounded-[1px] bg-ink" />
+      <span className="mark absolute -top-[3px] h-4 w-[9px] -translate-x-1/2 bg-gold"
+        style={{ left: `${50 + offset}%` }} />
     </span>
   );
 }
@@ -92,10 +101,9 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
       type="button"
       onClick={onClick}
       aria-label={`${item.name}, ${item.cost} gold${
-        eff ? `, fair price ${eff.predicted_cost} gold, ${
-          eff.residual < 0 ? `${Math.abs(eff.residual)} under` : eff.residual > 0 ? `${eff.residual} over` : "exactly fair"}`
+        eff ? `, ${PRICE_SPOKEN[priceVerdict(item.efficiency_tier, eff.residual)]} — the model prices it at ${eff.predicted_cost} gold`
         : ", not scored by the gold model"}`}
-      className="plane press flex flex-col gap-1.5 rounded-md border border-line-strong bg-bg2 p-2 text-left transition-colors duration-[180ms] ease-standard hover:border-blue/50"
+      className="plane press flex h-full flex-col gap-1.5 rounded-md border border-line-strong bg-bg2 p-2 text-left transition-colors duration-[180ms] ease-standard hover:border-blue/50"
     >
       <span className="flex items-center gap-2">
         <ItemIcon name={item.name} />
@@ -107,13 +115,18 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
         </span>
       </span>
 
-      {/* The verdict, decomposed. A three-value chip could say "Premium" but
-          never by how much — which is the number that decides a purchase. */}
+      {/* The verdict in words, then by how much. The word used to be a chip
+          down in the footer saying "PREMIUM" — the shop's own jargon, in a
+          different register from every other surface. It's the same sentence
+          the tier list and the board now make, so it's said the same way. */}
       {eff ? (
         <span className="flex flex-col gap-1">
-          <ResidualBar residual={eff.residual} scale={scale} />
+          <span className={`text-label leading-tight ${PRICE_TEXT[priceVerdict(item.efficiency_tier, eff.residual)]}`}>
+            {PRICE_WORD[priceVerdict(item.efficiency_tier, eff.residual)]}
+          </span>
+          <PriceBar residual={eff.residual} scale={scale} />
           <span className="flex items-baseline justify-between gap-2 text-label">
-            <span className="text-faint">fair <span className="font-mono">{eff.predicted_cost}g</span></span>
+            <span className="text-faint">worth <span className="font-mono">{eff.predicted_cost}g</span></span>
             <span className={`font-mono ${residualClass(eff.residual)}`}>{residualText(eff.residual)}</span>
           </span>
         </span>
@@ -121,16 +134,19 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
         <span className="text-label text-faint">not priced by the model</span>
       )}
 
-      <span className="flex items-center justify-between gap-1">
-        <EffBadge tier={item.efficiency_tier} />
+      {(item.effect_tags?.length ?? 0) > 0 && (
+        <span className="truncate text-label text-faint">{item.effect_tags!.join(" · ")}</span>
+      )}
+
+      {/* Pinned to the card's floor. Cards carry different amounts above it —
+          an item with no effect tags, one the gold model never priced — and a
+          footer that stopped wherever the content happened to end left the
+          last line scattered at a different height on every card. */}
+      <span className="mt-auto flex items-center justify-between gap-1 pt-0.5">
         {item.meta
           ? <span className="font-mono text-label text-muted">{Math.round(item.meta.win_avg * 100)}% win · {item.meta.gods}</span>
           : <span className="text-label text-faint">no community data</span>}
       </span>
-
-      {(item.effect_tags?.length ?? 0) > 0 && (
-        <span className="truncate text-label text-faint">{item.effect_tags!.join(" · ")}</span>
-      )}
     </button>
   );
 }
@@ -546,7 +562,10 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
           </button>
         </div>
       ) : (
-        <ul className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(172px,1fr))]">
+        // `auto-rows-fr` squares every row to the same height, and the card
+        // fills it — without both, each row sized to its own tallest card and
+        // the shelf came out ragged.
+        <ul className="mt-4 grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(172px,1fr))]">
           {shown.map((it) => (
             <li key={it.name}>
               {/* Opening an item keeps the filters that produced this card,

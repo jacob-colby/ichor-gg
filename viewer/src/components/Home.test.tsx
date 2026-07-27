@@ -29,11 +29,27 @@ beforeEach(() => {
 });
 
 describe("Home divergence board", () => {
-  it("states the disagreement count against the ranked total", () => {
+  /* The claim leads with the half a reader can act on, and counts it rather
+   * than asserting it. Ymir is C to the meta's S — one god we rate lower;
+   * Zeus (A vs A) agrees; Agni is unranked. */
+  it("leads the claim with the direction the fixture actually supports", () => {
     render(<Home data={baseData({ tierlist })} />);
-    // Ymir (C vs S) disagrees; Zeus (A vs A) doesn't; Agni is unranked.
     const heading = screen.getByRole("heading", { level: 1 });
-    expect(heading).toHaveTextContent(/we disagree with the meta on\s*1 of 2\s*ranked gods/i);
+    expect(heading).toHaveTextContent(/the meta overrates\s*1 god\./i);
+    // Never "1 gods" — the count is interpolated, so the noun has to agree.
+    expect(heading).not.toHaveTextContent(/1 gods/i);
+  });
+
+  it("leads with the underrated count whenever there is one", () => {
+    const flipped = {
+      gods: [
+        { name: "Ymir", role: "Solo", ours: 0.68, community: 0.45, tier_ours: "S", tier_community: "C" },
+        { name: "Zeus", role: "Mid", ours: 0.5, community: 0.5, tier_ours: "A", tier_community: "A" },
+      ] as GodTierEntry[],
+      items: [],
+    };
+    render(<Home data={baseData({ tierlist: flipped })} />);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/the meta underrates\s*1 god\./i);
   });
 
   it("groups gods into lane columns ranked by disagreement", () => {
