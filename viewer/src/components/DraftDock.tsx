@@ -108,12 +108,33 @@ export function DraftDock({ gods, items, builds, godItemScores, draftConfig }: D
 
   // Nothing entered anywhere: the full chip-and-status treatment would be ten
   // dashed rings of chrome on every single page for a visitor who has never
-  // touched the feature. A quiet invitation instead.
+  // touched the feature. An invitation instead — but a legible one. A quiet
+  // text pill here undersold the one feature this whole session is about, so
+  // this is the same footprint and shadow tier the dock itself uses once
+  // started, with a literal miniature of the ten-slot board it opens onto
+  // rather than an invented decoration.
   if (!started) {
     return (
       <a href={toHash.draft()} data-testid="draft-dock"
-        className="press fixed bottom-3 right-3 z-30 rounded-md border border-line bg-bg1 px-3 py-2 text-small text-blue shadow-card transition-colors duration-150 ease-standard hover:border-line-strong sm:bottom-4 sm:right-4">
-        Start a draft →
+        className="plane fixed bottom-3 right-3 z-30 block w-[min(92vw,300px)] overflow-hidden rounded-lg border border-line bg-bg1 shadow-raised transition-colors duration-150 ease-standard hover:border-line-strong sm:bottom-4 sm:right-4">
+        <div aria-hidden="true" className="flex items-center justify-center gap-1 border-b border-line bg-bg2/60 px-3 pb-3 pt-3.5">
+          <span className="flex items-center -space-x-1.5">
+            {Array.from({ length: 5 }, (_, i) => (
+              <span key={i} className={`h-5 w-5 rounded-sm bg-bg2 ring-2 ring-bg1 ${
+                i === 0 ? "border-2 border-gold" : "border border-dashed border-line-strong"}`} />
+            ))}
+          </span>
+          <span className="px-1 font-mono text-micro uppercase tracking-[0.08em] text-faint">vs</span>
+          <span className="flex items-center -space-x-1.5">
+            {Array.from({ length: 5 }, (_, i) => (
+              <span key={i} className="h-5 w-5 rounded-sm border border-dashed border-line-strong bg-bg2 ring-2 ring-bg1" />
+            ))}
+          </span>
+        </div>
+        <div className="px-3 py-2.5">
+          <span className="block font-display text-lead font-bold text-blue">Start a draft →</span>
+          <span className="block text-label text-faint">See your build adapt to who you&rsquo;re facing</span>
+        </div>
       </a>
     );
   }

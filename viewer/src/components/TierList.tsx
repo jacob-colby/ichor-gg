@@ -345,7 +345,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
             <button type="button" aria-pressed={subject === "items"} onClick={() => patch({ subject: "items" })} className={segBtn(subject === "items")}>Items</button>
           </div>
           <div role="group" aria-label="Order within each band" className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
-            <button type="button" aria-pressed={sort === "disagreement"} onClick={() => patch({ sort: "disagreement" })} className={segBtn(sort === "disagreement")}>Disputed first</button>
+            <button type="button" aria-pressed={sort === "disagreement"} onClick={() => patch({ sort: "disagreement" })} className={segBtn(sort === "disagreement")}>Biggest gap first</button>
             <button type="button" aria-pressed={sort === "score"} onClick={() => patch({ sort: "score" })} className={segBtn(sort === "score")}>By score</button>
           </div>
           <label className="flex cursor-text items-center gap-2 rounded-md border border-line bg-bg2 px-3 py-2 focus-within:border-blue">
