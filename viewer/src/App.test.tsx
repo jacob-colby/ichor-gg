@@ -9,6 +9,12 @@ const data = {
       name: "Chiron", pantheon: "Greek", role: "Carry", damage_type: "physical",
       base_stats: { health: { base: 569, per_level: 86 } }, abilities: [], aspects: [],
     },
+    // A second god, so a draft-dock test can put one god in an enemy slot
+    // and still have another god left to pick for the ally slot.
+    {
+      name: "Ymir", pantheon: "Norse", role: "Solo", damage_type: "magical",
+      base_stats: {}, abilities: [], aspects: [],
+    },
   ],
   items: [
     { name: "Rage", tier: 3, cost: 2500, stats: {}, passive: "", builds_from: [], builds_into: [], effect_tags: [], efficiency_tier: "undervalued" },
@@ -21,7 +27,7 @@ const data = {
     gods: [{ name: "Chiron", ours: 0.47, community: 0.58, tier_ours: "C", tier_community: "A", role: "Carry" }],
     items: [],
   },
-  god_item_scores: { Chiron: { Rage: 0.49 } },
+  god_item_scores: { Chiron: { Rage: 0.49 }, Ymir: { Rage: 0.3 } },
 };
 
 const atUrl = (hash: string) => window.history.replaceState(null, "", `/${hash}`);
@@ -37,7 +43,7 @@ beforeEach(() => {
 describe("App — roster lenses", () => {
   it("opens on the roster board", async () => {
     render(<App />);
-    await waitFor(() => expect(screen.getByTestId("subject-header")).toHaveTextContent(/All 1 gods/));
+    await waitFor(() => expect(screen.getByTestId("subject-header")).toHaveTextContent(/All 2 gods/));
     // The strip lives in the navbar from md up; the same tabs keep their own
     // row below it. Only one is ever in the accessibility tree.
     const nav = within(screen.getByTestId("lens-tabs-bar"));
@@ -66,6 +72,61 @@ describe("App — roster lenses", () => {
     await screen.findByTestId("subject-header");
     expect(screen.queryByRole("button", { name: "Select Chiron" })).not.toBeInTheDocument();
     expect(screen.queryByRole("navigation", { name: "Main" })).not.toBeInTheDocument();
+  });
+});
+
+/* The dock is the one thing meant to be visible on nearly every route — the
+ * draft used to vanish the moment you left /draft, with no trace anywhere
+ * else in the shell. */
+describe("App — the draft dock", () => {
+  it("is present on the roster board", async () => {
+    render(<App />);
+    await waitFor(() => expect(screen.getByTestId("draft-dock")).toBeInTheDocument());
+  });
+
+  it("is present on a god page", async () => {
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    await waitFor(() => expect(screen.getByTestId("draft-dock")).toBeInTheDocument());
+  });
+
+  // Showing a shrunken copy of the board you're already looking at would be a
+  // second, redundant instance of the same controls.
+  it("is absent on the draft page itself", async () => {
+    atUrl(toHash.draft());
+    render(<App />);
+    await waitFor(() => expect(screen.getAllByText("You")[0]).toBeInTheDocument());
+    expect(screen.queryByTestId("draft-dock")).not.toBeInTheDocument();
+  });
+
+  /* This is the bug the dock's existence created: Home's own draft seam
+   * (`DraftSeam`) already calls `useDraft()` to show "your draft in
+   * progress" — read-only, until now nothing else on the same page ever
+   * wrote to the same draft while it was mounted. The dock is a second,
+   * concurrent writer on that exact page. Without the cross-instance sync
+   * added to `lib/draft.ts`, editing via the dock would leave the seam
+   * showing stale data until Home remounted. */
+  it("keeps Home's draft seam in sync when you edit from the dock", async () => {
+    // An enemy already entered, so the dock opens in its full (not empty-
+    // invitation) state and its toggle is reachable directly; a different
+    // god is left free to pick for the ally slot.
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["", "", "", "", ""], enemies: ["Ymir", "", "", "", ""],
+    }));
+    render(<App />);
+    // An enemy is already seeded, so the seam opens on its "in progress"
+    // copy, not the empty invitation.
+    await waitFor(() => expect(screen.getByTestId("home-draft")).toHaveTextContent(/your draft in progress/i));
+    expect(screen.getByTestId("home-draft")).toHaveTextContent(/0 of \d+ allies/);
+
+    const dockToggle = within(screen.getByTestId("draft-dock")).getByRole("button", { name: /add your god/i });
+    fireEvent.click(dockToggle);
+    fireEvent.click(within(screen.getByTestId("draft-dock")).getByRole("button", { name: "Add you" }));
+    fireEvent.click(screen.getByRole("button", { name: "Chiron" }));
+
+    // No remount of Home occurred — this is the same DraftSeam instance
+    // picking up a write made through a sibling component's own useDraft().
+    await waitFor(() => expect(screen.getByTestId("home-draft")).toHaveTextContent(/1 of \d+ allies/));
   });
 });
 

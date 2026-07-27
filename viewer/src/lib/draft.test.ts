@@ -198,6 +198,54 @@ describe("decodeDraftHash / encodeDraftHash", () => {
   });
 });
 
+/* Until the draft dock, only DraftPage's own instance ever wrote — every
+ * other mount (Home's draft seam, a god page's "Draft with X" link) was
+ * read-only, so two live instances never needed to agree. The dock is a
+ * second writer mounted alongside those read-only consumers, so an edit
+ * there has to reach them without either one remounting. */
+describe("useDraft — two mounted instances stay in sync", () => {
+  beforeEach(() => {
+    localStorage.clear();
+    window.location.hash = "";
+  });
+
+  it("a write in one instance appears in another, already-mounted instance", () => {
+    const a = renderHook(() => useDraft());
+    const b = renderHook(() => useDraft());
+    act(() => a.result.current.setAlly(0, "Ra"));
+    expect(b.result.current.draft.allies[0]).toBe("Ra");
+    // And the reverse direction, so this isn't just a.C() happening to read b.
+    act(() => b.result.current.setEnemy(0, "Ymir"));
+    expect(a.result.current.draft.enemies[0]).toBe("Ymir");
+  });
+
+  it("propagates a clear", () => {
+    const a = renderHook(() => useDraft());
+    const b = renderHook(() => useDraft());
+    act(() => a.result.current.setAlly(0, "Ra"));
+    act(() => a.result.current.clear());
+    expect(b.result.current.draft.allies[0]).toBe("");
+  });
+
+  it("propagates a mode switch, resizing the other instance's rows too", () => {
+    const a = renderHook(() => useDraft());
+    const b = renderHook(() => useDraft());
+    act(() => a.result.current.setMode("joust"));
+    expect(b.result.current.draft.allies).toHaveLength(3);
+  });
+
+  it("stops listening once unmounted, so a stale instance can't resurrect a value", () => {
+    const a = renderHook(() => useDraft());
+    const b = renderHook(() => useDraft());
+    b.unmount();
+    act(() => a.result.current.setAlly(0, "Ra"));
+    // b is gone; nothing to assert on it directly, but re-mounting fresh
+    // must read the real (updated) persisted state, not something b cached.
+    const c = renderHook(() => useDraft());
+    expect(c.result.current.draft.allies[0]).toBe("Ra");
+  });
+});
+
 describe("useDraft — shared links arriving without a remount", () => {
   beforeEach(() => { localStorage.clear(); window.location.hash = ""; });
 

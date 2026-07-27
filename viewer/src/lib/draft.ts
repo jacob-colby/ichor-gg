@@ -35,6 +35,25 @@ function emptyDraft(mode: DraftMode): StoredDraft {
   return { mode, allies: Array(n).fill(""), enemies: Array(n).fill("") };
 }
 
+function sameDraft(a: StoredDraft, b: StoredDraft): boolean {
+  return a.mode === b.mode && a.allies.join() === b.allies.join() && a.enemies.join() === b.enemies.join();
+}
+
+/** In-tab pub/sub so every mounted `useDraft()` instance sees every other
+ *  one's writes.
+ *
+ * Until the dock, only `DraftPage` ever called `setAlly`/`setEnemy`/`clear` —
+ * every other mount (Home's draft seam, a god page's "Draft with X" link) was
+ * read-only, so two instances never needed to agree while both were live. The
+ * dock is a second writer, mounted on the same page as those read-only
+ * consumers, so an edit there has to reach them without a remount. A `storage`
+ * event only fires in *other* tabs, never this one, so same-tab instances need
+ * their own channel. */
+const listeners = new Set<(d: StoredDraft) => void>();
+function broadcast(state: StoredDraft): void {
+  for (const l of listeners) l(state);
+}
+
 function loadLocal(): StoredDraft {
   try {
     const raw = localStorage.getItem(KEY);
@@ -126,7 +145,23 @@ export function useDraft(options: UseDraftOptions = {}) {
     } catch {
       /* ignore quota / private-mode failures */
     }
+    // Runs on mount too, with every other live instance's own state — each
+    // one bails via `sameDraft` below if it's already showing this, so the
+    // redundant round-trip is a no-op rather than a flicker.
+    broadcast(state);
   }, [state]);
+
+  // The other half of the channel: adopt a write another mounted instance
+  // just made, unless it's the one that made it (setState with an equal
+  // value still re-renders, so bail out rather than pay for that on every
+  // keystroke in every other mounted instance).
+  useEffect(() => {
+    const onUpdate = (incoming: StoredDraft) => {
+      setState((prev) => (sameDraft(prev, incoming) ? prev : incoming));
+    };
+    listeners.add(onUpdate);
+    return () => { listeners.delete(onUpdate); };
+  }, []);
 
   useEffect(() => {
     if (!syncUrl || typeof window === "undefined") return;
@@ -148,11 +183,8 @@ export function useDraft(options: UseDraftOptions = {}) {
       const incoming = decodeDraftHash(window.location.hash, isKnownGod);
       if (!incoming) return;
       setState((prev) => {
-        const same = prev.mode === incoming.mode
-          && prev.allies.join() === incoming.allies.join()
-          && prev.enemies.join() === incoming.enemies.join();
         // Bail on an identical decode so our own replaceState can't loop.
-        if (same) return prev;
+        if (sameDraft(prev, incoming)) return prev;
         // A draft arriving from a link brings no truncation history with it.
         overflow.current = { allies: [], enemies: [] };
         return incoming;

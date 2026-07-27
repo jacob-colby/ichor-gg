@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useIndexData } from "./hooks/useIndexData";
 import { Home } from "./components/Home";
 import { DraftPage } from "./components/DraftPage";
+import { DraftDock } from "./components/DraftDock";
 import { DetailPanel } from "./components/DetailPanel";
 import { AddGodModal } from "./components/AddGodModal";
 import { ItemsShop } from "./components/ItemsShop";
@@ -234,6 +235,15 @@ function App() {
           <Home data={data} />
         )}
       </main>
+
+      {/* Suppressed only on the draft page itself — showing a shrunken copy
+          of the board you're already looking at would be a second, redundant
+          instance of the exact same controls. Everywhere else, the comp you
+          built stays reachable and editable without navigating back to it. */}
+      {route.lens !== "draft" && (
+        <DraftDock gods={data.gods} items={data.items} builds={data.builds}
+          godItemScores={data.god_item_scores} draftConfig={data.draft} />
+      )}
 
       {legendOpen && <Legend onClose={() => setLegendOpen(false)} />}
       {pickerOpen && (
