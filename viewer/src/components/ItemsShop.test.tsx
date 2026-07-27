@@ -34,12 +34,17 @@ describe("ItemsShop — the verdict, decomposed", () => {
       .toHaveTextContent(/1 of 3\s*items cost less than their stats are worth/i);
   });
 
-  it("shows fair price and the gap on every scored card, not just a label", () => {
+  /* The card leads with the verdict in the same words the tier list and the
+   * board use, then backs it with the arithmetic. The old "PREMIUM" chip said
+   * the same thing in the shop's own private register. */
+  it("leads with the verdict, then backs it with the gold", () => {
     render(shop());
     const rage = screen.getByRole("button", { name: /^Rage,/ });
-    expect(rage).toHaveTextContent("fair 2900g");
+    expect(rage).toHaveTextContent(/underpriced/i);
+    expect(rage).toHaveTextContent("worth 2900g");
     expect(rage).toHaveTextContent("−400g");
-    expect(rage).toHaveAccessibleName(/2500 gold, fair price 2900 gold, 400 under/i);
+    expect(rage).toHaveAccessibleName(/worth more than it costs/i);
+    expect(rage).toHaveAccessibleName(/prices it at 2900 gold/i);
   });
 
   it("says an unscored item is unscored rather than showing a dash", () => {
