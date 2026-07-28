@@ -16,7 +16,7 @@
  * key f397d87a.
  */
 import { useMemo, useState } from "react";
-import type { GodTierEntry, ItemTierEntry, TierEntry, TierListData } from "../types";
+import type { CommunitySource as CommunitySourceData, GodTierEntry, ItemTierEntry, TierEntry, TierListData } from "../types";
 import { iconSlug } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { LANES, godLane, godInLane, laneTextClass, type Lane } from "../lib/roleAccent";
@@ -26,6 +26,7 @@ import { deltaText } from "../lib/divergence";
 import { TierLadder } from "./TierLadder";
 import { VERDICT_TEXT, VERDICT_WORD, VERDICT_SPOKEN } from "../lib/verdictWords";
 import { useUrlState } from "../lib/urlState";
+import { CommunitySource } from "./CommunitySource";
 
 type Subject = "gods" | "items";
 type GameMode = "conquest" | "joust";
@@ -237,7 +238,10 @@ function encodeBoard(s: BoardState): Record<string, string | undefined> {
   };
 }
 
-export function TierList({ tierlist }: { tierlist?: TierListData }) {
+export function TierList({ tierlist, communitySource }: {
+  tierlist?: TierListData;
+  communitySource?: CommunitySourceData;
+}) {
   const [board, setBoard] = useUrlState(decodeBoard, encodeBoard);
   const { gameMode, subject, sort, disputedOnly, q, lane, efficiency } = board;
   const patch = (next: Partial<BoardState>) => setBoard((s) => ({ ...s, ...next }));
@@ -326,6 +330,9 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
             {source.length} {subject} · no community ratings to compare against
           </p>
         ) : null}
+        {/* Beside the tally it qualifies: this page compares against the same
+            figures Home does, so it states the same provenance. */}
+        {result.ranked > 0 && <CommunitySource source={communitySource} className="mt-1.5" />}
         {/* Directly under the tally it qualifies — not below the control bar. */}
         {modeIsMirrored && (
           <p className="mt-2 max-w-[74ch] text-small leading-relaxed text-muted">

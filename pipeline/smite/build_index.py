@@ -156,6 +156,7 @@ def build_index(repo_root: Path) -> dict:
              "roster": _load_roster(data_root),
              "data_updated": _data_updated(gods, builds),
              "tierlist": tierlist.build_tierlist(gods, builds, items, eff),
+             "community_source": _community_source(builds),
              # Read snapshots under the vault being indexed, not the module-level
              # default — otherwise a tmp-vault caller (tests) would pick up the
              # real store once snapshots start accumulating.
@@ -242,6 +243,31 @@ def _copy_icons(repo_root: Path, out_path: Path) -> None:
     dest_dir.mkdir(parents=True, exist_ok=True)
     for icon_path in src_dir.glob("*.png"):
         shutil.copy2(icon_path, dest_dir / icon_path.name)
+
+
+def _community_source(builds):
+    """Provenance for the community comparison: which rank band, drawn from
+    how many matches, over what window.
+
+    A win rate without its rank band and dates is not a claim anyone can
+    check — "the community" means something different in Obsidian+ than in
+    Deity, and a fortnight-old window means something different the week a
+    patch lands. Every god carries identical values (they come from one index
+    fetch), so this belongs to the index rather than repeated 87 times.
+
+    None before the index scrape has ever run, so the viewer can omit the line
+    rather than print an empty one.
+    """
+    for group in builds:
+        for entry in group.get("builds", []):
+            if entry.get("source") == "community" and entry.get("god_division"):
+                return {
+                    "division": entry["god_division"],
+                    "window_start": entry.get("god_window_start"),
+                    "window_end": entry.get("god_window_end"),
+                    "matches_analyzed": entry.get("god_matches_analyzed"),
+                }
+    return None
 
 
 def write_index(repo_root: Path, out_path: Path) -> None:

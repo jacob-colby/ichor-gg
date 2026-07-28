@@ -229,6 +229,17 @@ export interface TierListData extends TierListModeData {
   joust?: TierListModeData;
 }
 
+/** Provenance for the community figures: which rank band, drawn from how
+ *  many matches, over what window. A win rate without these isn't checkable —
+ *  "the community" means something different per division, and a window means
+ *  something different the week a patch lands. */
+export interface CommunitySource {
+  division: string;
+  window_start?: string | null;
+  window_end?: string | null;
+  matches_analyzed?: number | null;
+}
+
 export interface IndexData {
   gods: God[];
   items: Item[];
@@ -239,6 +250,9 @@ export interface IndexData {
   /** Current game patch label (e.g. "Open Beta 39"), Task R1. Absent on an
    * older index. */
   data_patch?: string;
+  /** Where the community comparison came from. Absent on an index built
+   *  before the god-index scrape existed. */
+  community_source?: CommunitySource;
   tierlist?: TierListData;
   patch_notes?: PatchPeriod[];
   god_item_scores?: Record<string, Record<string, number>>;

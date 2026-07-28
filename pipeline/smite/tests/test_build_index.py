@@ -46,6 +46,9 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                                   "conquest": {"gods": [], "items": []},
                                   "joust": {"gods": [], "items": []}},
                      "god_item_scores": {}, "draft": {},
+                     # Provenance for the community figures — None until the
+                     # god-index scrape has run, never an empty dict.
+                     "community_source": None,
                      # Fitted marginal gold per stat — empty with no scorable
                      # items, never absent.
                      "item_gold_values": {},
@@ -165,9 +168,15 @@ def test_build_index_emits_tierlist_with_gods_and_items():
     assert {"name", "role", "damage_type", "ours", "community", "tier_ours", "tier_community"} <= set(god)
     item = tl["items"][0]
     assert {"name", "tier", "efficiency_tier", "ours", "community", "tier_ours", "tier_community"} <= set(item)
-    # community coverage is partial by design — some tier_community entries
-    # must be None, never silently zero-filled.
-    assert any(g["tier_community"] is None for g in tl["gods"])
+    # The invariant is that a missing score is left unranked, never bucketed.
+    # This used to assert "some god has no community tier", which held only
+    # while coverage was partial — the god index now covers every god, so
+    # that proxy started failing on a genuine improvement. Test the rule.
+    assert all((g["community"] is None) == (g["tier_community"] is None)
+               for g in tl["gods"])
+    # Joust is the stable case: the community source has no Joust data at all,
+    # so none of those entries may carry an invented tier.
+    assert all(g["tier_community"] is None for g in tl["joust"]["gods"])
     # Legacy top level mirrors Conquest exactly.
     assert tl["gods"] == tl["conquest"]["gods"]
     assert tl["items"] == tl["conquest"]["items"]

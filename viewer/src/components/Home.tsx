@@ -31,6 +31,7 @@ import {
 import { biggestArguments, type Argument } from "../lib/tierBands";
 import { TierLadder } from "./TierLadder";
 import { VERDICT_TEXT, VERDICT_WORD, VERDICT_SPOKEN } from "../lib/verdictWords";
+import { CommunitySource } from "./CommunitySource";
 
 /** The one label style shared by the sections below the board. */
 const sectionLabel = "font-mono text-label uppercase tracking-[0.1em] text-faint";
@@ -126,7 +127,7 @@ function ArgumentGroup({ label, set, item }: {
   );
 }
 
-function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
+function BiggestArguments({ tierlist, source }: { tierlist?: TierListData; source?: IndexData["community_source"] }) {
   const gods = useMemo(() => biggestArguments(tierlist?.gods ?? [], ARGUMENTS_SHOWN), [tierlist]);
   // Full items only. Tiers 1–2 are components and starters — things you pass
   // through on the way to a build, not things you choose — so an argument
@@ -149,6 +150,8 @@ function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
       </div>
       <ArgumentGroup label="Gods" set={gods} item={false} />
       <ArgumentGroup label="Items" set={items} item={true} />
+      {/* Stated where the comparison is, not buried in a help page. */}
+      <CommunitySource source={source} className="mt-2.5 border-t border-line pt-2" />
     </section>
   );
 }
@@ -180,9 +183,10 @@ function Claim({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
   return <>The community and this model agree on all {gold(ranked)}.</>;
 }
 
-function StateBlock({ board, tierlist, ranked }: {
+function StateBlock({ board, tierlist, source, ranked }: {
   board: ReturnType<typeof buildDivergenceBoard>;
   tierlist?: TierListData;
+  source?: IndexData["community_source"];
   ranked: number;
 }) {
   const comparable = ranked > 0;
@@ -215,7 +219,7 @@ function StateBlock({ board, tierlist, ranked }: {
           </p>
         </div>
 
-        {comparable && <BiggestArguments tierlist={tierlist} />}
+        {comparable && <BiggestArguments tierlist={tierlist} source={source} />}
       </div>
     </header>
   );
@@ -535,7 +539,7 @@ export function Home({ data }: { data: IndexData }) {
 
   return (
     <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 pt-7 sm:px-6 sm:pt-9">
-      <StateBlock board={board} tierlist={data.tierlist} ranked={board.ranked} />
+      <StateBlock board={board} tierlist={data.tierlist} source={data.community_source} ranked={board.ranked} />
       <DivergenceBoard board={board} />
       <div className="mt-7 flex flex-col gap-6">
         <DraftSeam />

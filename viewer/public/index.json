@@ -23659,6 +23659,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.4875124875124875,
+          "god_matches_won": 488,
+          "god_matches_played": 1001,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -24544,6 +24551,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5333333333333333,
+          "god_matches_won": 776,
+          "god_matches_played": 1455,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -26302,6 +26316,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.48214285714285715,
+          "god_matches_won": 189,
+          "god_matches_played": 392,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Book of Thoth",
@@ -27366,6 +27387,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5460440985732814,
+          "god_matches_won": 421,
+          "god_matches_played": 771,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Genie's Lamp",
@@ -28420,6 +28448,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5643939393939394,
+          "god_matches_won": 149,
+          "god_matches_played": 264,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -29300,6 +29335,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5124153498871332,
+          "god_matches_won": 681,
+          "god_matches_played": 1329,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -30178,6 +30220,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.4788732394366197,
+          "god_matches_won": 170,
+          "god_matches_played": 355,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Bancroft's Talon",
@@ -31222,6 +31271,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5873170731707317,
+          "god_matches_won": 602,
+          "god_matches_played": 1025,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Book of Thoth",
@@ -32281,6 +32337,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5353805073431241,
+          "god_matches_won": 802,
+          "god_matches_played": 1498,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -33159,6 +33222,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5,
+          "god_matches_won": 278,
+          "god_matches_played": 556,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Genji's Guard",
@@ -34049,6 +34119,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5559748427672956,
+          "god_matches_won": 442,
+          "god_matches_played": 795,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -34932,6 +35009,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5565789473684211,
+          "god_matches_won": 423,
+          "god_matches_played": 760,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -35812,6 +35896,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5555555555555556,
+          "god_matches_won": 530,
+          "god_matches_played": 954,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Genji's Guard",
@@ -36682,6 +36773,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5111464968152867,
+          "god_matches_won": 321,
+          "god_matches_played": 628,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -37567,6 +37665,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5442536327608983,
+          "god_matches_won": 412,
+          "god_matches_played": 757,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Hydra's Lament",
@@ -38621,6 +38726,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5104477611940299,
+          "god_matches_won": 342,
+          "god_matches_played": 670,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -39506,6 +39618,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5264847512038523,
+          "god_matches_won": 328,
+          "god_matches_played": 623,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -40565,6 +40684,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5618955512572534,
+          "god_matches_won": 581,
+          "god_matches_played": 1034,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -41614,6 +41740,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5,
+          "god_matches_won": 371,
+          "god_matches_played": 742,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -42484,6 +42617,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5229083665338645,
+          "god_matches_won": 525,
+          "god_matches_played": 1004,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -43359,6 +43499,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5885225885225885,
+          "god_matches_won": 482,
+          "god_matches_played": 819,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -44244,6 +44391,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5481400437636762,
+          "god_matches_won": 501,
+          "god_matches_played": 914,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -46181,6 +46335,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5085714285714286,
+          "god_matches_won": 89,
+          "god_matches_played": 175,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -47245,6 +47406,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5059625212947189,
+          "god_matches_won": 297,
+          "god_matches_played": 587,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -48125,6 +48293,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5599250936329588,
+          "god_matches_won": 598,
+          "god_matches_played": 1068,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Transcendence",
@@ -50057,6 +50232,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.4650124069478908,
+          "god_matches_won": 937,
+          "god_matches_played": 2015,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Book of Thoth",
@@ -51805,6 +51987,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5800636267232238,
+          "god_matches_won": 547,
+          "god_matches_played": 943,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -52862,6 +53051,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5408052230685527,
+          "god_matches_won": 497,
+          "god_matches_played": 919,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -53911,6 +54107,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5290909090909091,
+          "god_matches_won": 291,
+          "god_matches_played": 550,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -54973,6 +55176,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5405960945529291,
+          "god_matches_won": 526,
+          "god_matches_played": 973,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -56012,6 +56222,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5872395833333334,
+          "god_matches_won": 451,
+          "god_matches_played": 768,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -57071,6 +57288,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5379609544468547,
+          "god_matches_won": 248,
+          "god_matches_played": 461,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -58125,6 +58349,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.47876447876447875,
+          "god_matches_won": 248,
+          "god_matches_played": 518,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Gauntlet of Thebes",
@@ -59010,6 +59241,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5701438848920863,
+          "god_matches_won": 317,
+          "god_matches_played": 556,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Gauntlet of Thebes",
@@ -59890,6 +60128,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.569371727748691,
+          "god_matches_won": 435,
+          "god_matches_played": 764,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -60770,6 +61015,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5966386554621849,
+          "god_matches_won": 497,
+          "god_matches_played": 833,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -61640,6 +61892,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.6330014224751067,
+          "god_matches_won": 445,
+          "god_matches_played": 703,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Rod of Tahuti",
@@ -62704,6 +62963,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5674931129476584,
+          "god_matches_won": 412,
+          "god_matches_played": 726,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -63758,6 +64024,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.4891540130151844,
+          "god_matches_won": 451,
+          "god_matches_played": 922,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -65161,6 +65434,13 @@
             "base": "Death's Toll",
             "upgrade": "Death's Embrace"
           },
+          "god_win_rate": 0.5947540983606557,
+          "god_matches_won": 907,
+          "god_matches_played": 1525,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -66046,6 +66326,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5202968136185072,
+          "god_matches_won": 1192,
+          "god_matches_played": 2291,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -66924,6 +67211,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5245098039215687,
+          "god_matches_won": 321,
+          "god_matches_played": 612,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -67804,6 +68098,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5167037861915368,
+          "god_matches_won": 232,
+          "god_matches_played": 449,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -68848,6 +69149,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5499316005471956,
+          "god_matches_won": 402,
+          "god_matches_played": 731,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -69726,6 +70034,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.6079545454545454,
+          "god_matches_won": 749,
+          "god_matches_played": 1232,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Tyrfing",
@@ -70788,6 +71103,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.49847405900305186,
+          "god_matches_won": 980,
+          "god_matches_played": 1966,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -71832,6 +72154,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.49264705882352944,
+          "god_matches_won": 134,
+          "god_matches_played": 272,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -72710,6 +73039,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.48942598187311176,
+          "god_matches_won": 324,
+          "god_matches_played": 662,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -73595,6 +73931,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.4789272030651341,
+          "god_matches_won": 250,
+          "god_matches_played": 522,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -74480,6 +74823,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.575107296137339,
+          "god_matches_won": 268,
+          "god_matches_played": 466,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Gauntlet of Thebes",
@@ -75365,6 +75715,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.523709167544784,
+          "god_matches_won": 497,
+          "god_matches_played": 949,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Book of Thoth",
@@ -76419,6 +76776,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5307224848075625,
+          "god_matches_won": 786,
+          "god_matches_played": 1481,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -77478,6 +77842,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5344827586206896,
+          "god_matches_won": 372,
+          "god_matches_played": 696,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Titan's Bane",
@@ -78540,6 +78911,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.49099099099099097,
+          "god_matches_won": 109,
+          "god_matches_played": 222,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Rage",
@@ -79594,6 +79972,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5063694267515924,
+          "god_matches_won": 477,
+          "god_matches_played": 942,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -80638,6 +81023,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5879605604566684,
+          "god_matches_won": 1133,
+          "god_matches_played": 1927,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -81682,6 +82074,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5150136487716106,
+          "god_matches_won": 566,
+          "god_matches_played": 1099,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -83435,6 +83834,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5200517464424321,
+          "god_matches_won": 402,
+          "god_matches_played": 773,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -84499,6 +84905,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.48545176110260335,
+          "god_matches_won": 317,
+          "god_matches_played": 653,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -85546,6 +85959,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5533980582524272,
+          "god_matches_won": 342,
+          "god_matches_played": 618,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -86426,6 +86846,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5527859237536656,
+          "god_matches_won": 377,
+          "god_matches_played": 682,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Book of Thoth",
@@ -87470,6 +87897,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5346112886048988,
+          "god_matches_won": 502,
+          "god_matches_played": 939,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Tyrfing",
@@ -88534,6 +88968,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5651162790697675,
+          "god_matches_won": 243,
+          "god_matches_played": 430,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -89404,6 +89845,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.48909657320872274,
+          "god_matches_won": 314,
+          "god_matches_played": 642,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -90274,6 +90722,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5474452554744526,
+          "god_matches_won": 525,
+          "god_matches_played": 959,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "The Reaper",
@@ -91323,6 +91778,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5586734693877551,
+          "god_matches_won": 657,
+          "god_matches_played": 1176,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -92367,6 +92829,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.49508196721311476,
+          "god_matches_won": 151,
+          "god_matches_played": 305,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -93426,6 +93895,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5736015701668302,
+          "god_matches_won": 1169,
+          "god_matches_played": 2038,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -95179,6 +95655,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5594405594405595,
+          "god_matches_won": 480,
+          "god_matches_played": 858,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -96231,6 +96714,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.4604966139954853,
+          "god_matches_won": 204,
+          "god_matches_played": 443,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Briskberry Acorn",
@@ -97275,6 +97765,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5304295942720764,
+          "god_matches_won": 889,
+          "god_matches_played": 1676,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -98329,6 +98826,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5300751879699248,
+          "god_matches_won": 846,
+          "god_matches_played": 1596,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Genji's Guard",
@@ -99204,6 +99708,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.542203147353362,
+          "god_matches_won": 379,
+          "god_matches_played": 699,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Devourer's Gauntlet",
@@ -100253,6 +100764,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5101694915254237,
+          "god_matches_won": 301,
+          "god_matches_played": 590,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -101148,6 +101666,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5499181669394435,
+          "god_matches_won": 672,
+          "god_matches_played": 1222,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -102192,6 +102717,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5203488372093024,
+          "god_matches_won": 716,
+          "god_matches_played": 1376,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Genji's Guard",
@@ -103082,6 +103614,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5261845386533666,
+          "god_matches_won": 633,
+          "god_matches_played": 1203,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -104126,6 +104665,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5198776758409785,
+          "god_matches_won": 510,
+          "god_matches_played": 981,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -105175,6 +105721,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.534894191805493,
+          "god_matches_won": 1188,
+          "god_matches_played": 2221,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -106229,6 +106782,13 @@
             "base": "Bumba's Golden Dagger",
             "upgrade": "Bumba's Spear"
           },
+          "god_win_rate": 0.5534709193245778,
+          "god_matches_won": 590,
+          "god_matches_played": 1066,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Jotunn's Revenge",
@@ -107288,6 +107848,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.5804195804195804,
+          "god_matches_won": 581,
+          "god_matches_played": 1001,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Transcendence",
@@ -108330,6 +108897,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.547921967769296,
+          "god_matches_won": 646,
+          "god_matches_played": 1179,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -109394,6 +109968,13 @@
             "base": "Gilded Arrow",
             "upgrade": "Sharpshooter's Arrow"
           },
+          "god_win_rate": 0.530638852672751,
+          "god_matches_won": 407,
+          "god_matches_played": 767,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Tyrfing",
@@ -110277,6 +110858,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5752072641136992,
+          "god_matches_won": 1457,
+          "god_matches_played": 2533,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -111162,6 +111750,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.4222222222222222,
+          "god_matches_won": 152,
+          "god_matches_played": 360,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -112047,6 +112642,13 @@
             "base": "Warrior's Axe",
             "upgrade": "Sundering Axe"
           },
+          "god_win_rate": 0.5310880829015544,
+          "god_matches_won": 410,
+          "god_matches_played": 772,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Shifter's Shield",
@@ -112927,6 +113529,13 @@
             "base": "Conduit Gem",
             "upgrade": "Archmage's Gem"
           },
+          "god_win_rate": 0.5747368421052632,
+          "god_matches_won": 819,
+          "god_matches_played": 1425,
+          "god_division": "obsidian",
+          "god_window_start": "2026-07-14",
+          "god_window_end": "2026-07-27",
+          "god_matches_analyzed": 17172,
           "popular_items": [
             {
               "name": "Spear of Desolation",
@@ -117992,12 +118601,39 @@
   "tierlist": {
     "gods": [
       {
-        "name": "Cupid",
+        "name": "Hades",
+        "role": "Solo",
+        "damage_type": "magical",
+        "ours": 0.49499999999999994,
+        "community": 0.5967384138185635,
+        "tier_ours": "B",
+        "tier_community": "S"
+      },
+      {
+        "name": "Izanami",
         "role": "Carry",
         "damage_type": "physical",
-        "ours": 0.44999999999999996,
-        "community": 0.68,
+        "ours": 0.47,
+        "community": 0.5803975086487336,
         "tier_ours": "C",
+        "tier_community": "S"
+      },
+      {
+        "name": "Horus",
+        "role": "Support",
+        "damage_type": "physical",
+        "ours": 0.48666666666666664,
+        "community": 0.5699053489287655,
+        "tier_ours": "B",
+        "tier_community": "S"
+      },
+      {
+        "name": "Mordred",
+        "role": "Solo Jungle",
+        "damage_type": "physical",
+        "ours": 0.4783333333333333,
+        "community": 0.5658302208271567,
+        "tier_ours": "B",
         "tier_community": "S"
       },
       {
@@ -118005,7 +118641,34 @@
         "role": "Solo Support",
         "damage_type": "physical",
         "ours": 0.4716666666666667,
-        "community": 0.64,
+        "community": 0.5629538833819431,
+        "tier_ours": "B",
+        "tier_community": "S"
+      },
+      {
+        "name": "Aphrodite",
+        "role": "Mid Support",
+        "damage_type": "magical",
+        "ours": 0.48333333333333334,
+        "community": 0.5569059100475042,
+        "tier_ours": "B",
+        "tier_community": "S"
+      },
+      {
+        "name": "Xing Tian",
+        "role": "Support Solo",
+        "damage_type": "magical",
+        "ours": 0.49666666666666676,
+        "community": 0.5558572447991482,
+        "tier_ours": "B",
+        "tier_community": "S"
+      },
+      {
+        "name": "Cerberus",
+        "role": "Solo Support",
+        "damage_type": "magical",
+        "ours": 0.48500000000000004,
+        "community": 0.5544825200930616,
         "tier_ours": "B",
         "tier_community": "S"
       },
@@ -118014,34 +118677,7 @@
         "role": "Mid",
         "damage_type": "magical",
         "ours": 0.5133333333333333,
-        "community": 0.63,
-        "tier_ours": "A",
-        "tier_community": "S"
-      },
-      {
-        "name": "Ares",
-        "role": "Support",
-        "damage_type": "magical",
-        "ours": 0.4833333333333332,
-        "community": 0.61,
-        "tier_ours": "B",
-        "tier_community": "S"
-      },
-      {
-        "name": "Ishtar",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.4483333333333334,
-        "community": 0.6,
-        "tier_ours": "C",
-        "tier_community": "S"
-      },
-      {
-        "name": "Artio",
-        "role": "Solo Support",
-        "damage_type": "magical",
-        "ours": 0.5083333333333333,
-        "community": 0.59,
+        "community": 0.5520691525459129,
         "tier_ours": "A",
         "tier_community": "S"
       },
@@ -118050,125 +118686,53 @@
         "role": "Mid",
         "damage_type": "magical",
         "ours": 0.525,
-        "community": 0.59,
+        "community": 0.5520111292791388,
         "tier_ours": "S",
-        "tier_community": "S"
-      },
-      {
-        "name": "Cernunnos",
-        "role": "Carry Jungle",
-        "damage_type": "physical",
-        "ours": 0.4466666666666666,
-        "community": 0.58,
-        "tier_ours": "C",
         "tier_community": "A"
       },
       {
-        "name": "Chiron",
+        "name": "Ullr",
         "role": "Carry",
         "damage_type": "physical",
-        "ours": 0.465,
-        "community": 0.58,
-        "tier_ours": "C",
-        "tier_community": "A"
-      },
-      {
-        "name": "Mordred",
-        "role": "Solo Jungle",
-        "damage_type": "physical",
-        "ours": 0.4783333333333333,
-        "community": 0.58,
+        "ours": 0.4816666666666667,
+        "community": 0.5495975104361766,
         "tier_ours": "B",
         "tier_community": "A"
       },
       {
-        "name": "Jormungandr",
-        "role": "Solo Support",
-        "damage_type": "magical",
-        "ours": 0.4633333333333334,
-        "community": 0.57,
-        "tier_ours": "C",
-        "tier_community": "A"
-      },
-      {
-        "name": "Pele",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.5416666666666666,
-        "community": 0.56,
-        "tier_ours": "S",
-        "tier_community": "A"
-      },
-      {
-        "name": "Sol",
-        "role": "Mid Carry",
-        "damage_type": "magical",
-        "ours": 0.48666666666666664,
-        "community": 0.56,
-        "tier_ours": "B",
-        "tier_community": "A"
-      },
-      {
-        "name": "Thor",
-        "role": "Jungle Solo",
-        "damage_type": "physical",
-        "ours": 0.4833333333333334,
-        "community": 0.56,
-        "tier_ours": "B",
-        "tier_community": "A"
-      },
-      {
-        "name": "Atlas",
-        "role": "Support",
-        "damage_type": "magical",
-        "ours": 0.4833333333333332,
-        "community": 0.55,
-        "tier_ours": "B",
-        "tier_community": "A"
-      },
-      {
-        "name": "Hun Batz",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.5216666666666668,
-        "community": 0.55,
-        "tier_ours": "A",
-        "tier_community": "A"
-      },
-      {
-        "name": "Khepri",
-        "role": "Support",
-        "damage_type": "magical",
-        "ours": 0.48999999999999994,
-        "community": 0.55,
-        "tier_ours": "B",
-        "tier_community": "A"
-      },
-      {
-        "name": "Kukulkan",
+        "name": "Zeus",
         "role": "Mid",
         "damage_type": "magical",
-        "ours": 0.5083333333333334,
-        "community": 0.55,
-        "tier_ours": "A",
+        "ours": 0.4883333333333333,
+        "community": 0.5489004641985161,
+        "tier_ours": "B",
         "tier_community": "A"
       },
       {
-        "name": "Thanatos",
+        "name": "Cupid",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.44999999999999996,
+        "community": 0.5482996828412666,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Gilgamesh",
+        "role": "Solo Jungle",
+        "damage_type": "physical",
+        "ours": 0.47500000000000003,
+        "community": 0.5339986327812133,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Bastet",
         "role": "Jungle",
         "damage_type": "physical",
         "ours": 0.545,
-        "community": 0.55,
+        "community": 0.5314794628429236,
         "tier_ours": "S",
-        "tier_community": "A"
-      },
-      {
-        "name": "Chronos",
-        "role": "Mid Carry",
-        "damage_type": "magical",
-        "ours": 0.45166666666666666,
-        "community": 0.54,
-        "tier_ours": "C",
         "tier_community": "A"
       },
       {
@@ -118176,106 +118740,133 @@
         "role": "Mid",
         "damage_type": "magical",
         "ours": 0.5183333333333333,
-        "community": 0.54,
+        "community": 0.5311927480857401,
         "tier_ours": "A",
         "tier_community": "A"
       },
       {
-        "name": "Hou Yi",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.4416666666666667,
-        "community": 0.54,
-        "tier_ours": "C",
-        "tier_community": "B"
-      },
-      {
-        "name": "Loki",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.535,
-        "community": 0.54,
-        "tier_ours": "S",
-        "tier_community": "B"
-      },
-      {
-        "name": "Morgan Le Fay",
+        "name": "Poseidon",
         "role": "Mid",
         "damage_type": "magical",
-        "ours": 0.505,
-        "community": 0.54,
+        "ours": 0.51,
+        "community": 0.5301480847202966,
         "tier_ours": "A",
-        "tier_community": "B"
+        "tier_community": "A"
+      },
+      {
+        "name": "Chiron",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.465,
+        "community": 0.5299915764544672,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Khepri",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48999999999999994,
+        "community": 0.5297903218692698,
+        "tier_ours": "B",
+        "tier_community": "A"
+      },
+      {
+        "name": "Geb",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.505,
+        "community": 0.5286509166374382,
+        "tier_ours": "A",
+        "tier_community": "A"
+      },
+      {
+        "name": "Rama",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4466666666666666,
+        "community": 0.5260292771555822,
+        "tier_ours": "C",
+        "tier_community": "A"
       },
       {
         "name": "Athena",
         "role": "Support",
         "damage_type": "magical",
         "ours": 0.48666666666666664,
-        "community": 0.53,
+        "community": 0.5238630400990496,
         "tier_ours": "B",
-        "tier_community": "B"
+        "tier_community": "A"
       },
       {
-        "name": "Kali",
+        "name": "Tsukuyomi",
         "role": "Jungle",
         "damage_type": "physical",
-        "ours": 0.4633333333333333,
-        "community": 0.53,
-        "tier_ours": "C",
-        "tier_community": "B"
+        "ours": 0.48499999999999993,
+        "community": 0.5234884265352863,
+        "tier_ours": "B",
+        "tier_community": "A"
       },
       {
-        "name": "Scylla",
+        "name": "Susano",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5383333333333333,
+        "community": 0.5219107485685894,
+        "tier_ours": "S",
+        "tier_community": "A"
+      },
+      {
+        "name": "Artemis",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4483333333333334,
+        "community": 0.5212492263947067,
+        "tier_ours": "C",
+        "tier_community": "A"
+      },
+      {
+        "name": "Artio",
+        "role": "Solo Support",
+        "damage_type": "magical",
+        "ours": 0.5083333333333333,
+        "community": 0.5210621646515827,
+        "tier_ours": "A",
+        "tier_community": "A"
+      },
+      {
+        "name": "Vulcan",
         "role": "Mid",
         "damage_type": "magical",
-        "ours": 0.5066666666666667,
-        "community": 0.53,
-        "tier_ours": "A",
-        "tier_community": "B"
-      },
-      {
-        "name": "Anhur",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.44500000000000006,
-        "community": 0.52,
-        "tier_ours": "C",
-        "tier_community": "B"
-      },
-      {
-        "name": "Apollo",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.44500000000000006,
-        "community": 0.52,
-        "tier_ours": "C",
-        "tier_community": "B"
-      },
-      {
-        "name": "Bacchus",
-        "role": "Support",
-        "damage_type": "magical",
-        "ours": 0.48500000000000004,
-        "community": 0.52,
+        "ours": 0.4916666666666667,
+        "community": 0.5194024655225751,
         "tier_ours": "B",
-        "tier_community": "B"
+        "tier_community": "A"
       },
       {
-        "name": "Gilgamesh",
+        "name": "Odin",
         "role": "Solo Jungle",
         "damage_type": "physical",
-        "ours": 0.47500000000000003,
-        "community": 0.52,
+        "ours": 0.47833333333333333,
+        "community": 0.5178867323224409,
         "tier_ours": "B",
         "tier_community": "B"
       },
       {
-        "name": "Neith",
-        "role": "Carry Mid",
+        "name": "Pele",
+        "role": "Jungle",
         "damage_type": "physical",
-        "ours": 0.445,
-        "community": 0.52,
+        "ours": 0.5416666666666666,
+        "community": 0.5158152395680552,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Cernunnos",
+        "role": "Carry Jungle",
+        "damage_type": "physical",
+        "ours": 0.4466666666666666,
+        "community": 0.5157405918062185,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -118284,8 +118875,188 @@
         "role": "Mid",
         "damage_type": "magical",
         "ours": 0.5216666666666667,
-        "community": 0.52,
+        "community": 0.5152773052775856,
         "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Thor",
+        "role": "Jungle Solo",
+        "damage_type": "physical",
+        "ours": 0.4833333333333334,
+        "community": 0.514107812306237,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Nemesis",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.49166666666666664,
+        "community": 0.5139921157079175,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Ishtar",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4483333333333334,
+        "community": 0.5136985972155459,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Aladdin",
+        "role": "Jungle",
+        "damage_type": "magical",
+        "ours": 0.49666666666666665,
+        "community": 0.5107584317114856,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Apollo",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.44500000000000006,
+        "community": 0.5100652611744725,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Discordia",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.515,
+        "community": 0.5091840372726558,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Awilix",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5366666666666667,
+        "community": 0.50864024545937,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Da Ji",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5333333333333333,
+        "community": 0.508482658532276,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Agni",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5183333333333333,
+        "community": 0.5076445335603155,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Scylla",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5066666666666667,
+        "community": 0.5064935466407569,
+        "tier_ours": "A",
+        "tier_community": "B"
+      },
+      {
+        "name": "Sobek",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48500000000000004,
+        "community": 0.5055460145176357,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Loki",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.535,
+        "community": 0.5052586079109961,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Sol",
+        "role": "Mid Carry",
+        "damage_type": "magical",
+        "ours": 0.48666666666666664,
+        "community": 0.505138100299255,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Amaterasu",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.4833333333333332,
+        "community": 0.504081117997761,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Nut",
+        "role": "Carry Mid",
+        "damage_type": "magical",
+        "ours": 0.465,
+        "community": 0.5026306399182271,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Hou Yi",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4416666666666667,
+        "community": 0.4998223042438506,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Thanatos",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.545,
+        "community": 0.49792991415950366,
+        "tier_ours": "S",
+        "tier_community": "B"
+      },
+      {
+        "name": "Medusa",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.445,
+        "community": 0.49733648155247523,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Ymir",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48166666666666663,
+        "community": 0.49581834464989755,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Xbalanque",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.4566666666666667,
+        "community": 0.49525469724499993,
+        "tier_ours": "C",
         "tier_community": "B"
       },
       {
@@ -118293,26 +119064,8 @@
         "role": "Support",
         "damage_type": "magical",
         "ours": 0.47833333333333333,
-        "community": 0.52,
+        "community": 0.4939317535344585,
         "tier_ours": "B",
-        "tier_community": "B"
-      },
-      {
-        "name": "Artemis",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.4483333333333334,
-        "community": 0.51,
-        "tier_ours": "C",
-        "tier_community": "B"
-      },
-      {
-        "name": "Bastet",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.545,
-        "community": 0.51,
-        "tier_ours": "S",
         "tier_community": "B"
       },
       {
@@ -118320,34 +119073,43 @@
         "role": "Jungle",
         "damage_type": "physical",
         "ours": 0.5299999999999999,
-        "community": 0.51,
+        "community": 0.49232318416767784,
         "tier_ours": "S",
         "tier_community": "B"
       },
       {
-        "name": "Ne Zha",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.5133333333333333,
-        "community": 0.51,
+        "name": "Cabrakan",
+        "role": "Solo Support",
+        "damage_type": "magical",
+        "ours": 0.4883333333333333,
+        "community": 0.491983815922615,
+        "tier_ours": "B",
+        "tier_community": "B"
+      },
+      {
+        "name": "Kukulkan",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5083333333333334,
+        "community": 0.4919011947920664,
         "tier_ours": "A",
         "tier_community": "B"
       },
       {
-        "name": "Sun Wukong",
-        "role": "Solo",
-        "damage_type": "physical",
-        "ours": 0.4666666666666666,
-        "community": 0.51,
-        "tier_ours": "C",
+        "name": "The Morrigan",
+        "role": "Mid",
+        "damage_type": "magical",
+        "ours": 0.5083333333333334,
+        "community": 0.4885968220850668,
+        "tier_ours": "A",
         "tier_community": "B"
       },
       {
-        "name": "Achilles",
-        "role": "Solo Jungle",
+        "name": "Danzaburou",
+        "role": "Carry",
         "damage_type": "physical",
-        "ours": 0.4716666666666666,
-        "community": 0.5,
+        "ours": 0.44999999999999996,
+        "community": 0.48731701451453213,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -118356,97 +119118,106 @@
         "role": "Mid Support",
         "damage_type": "magical",
         "ours": 0.4566666666666667,
-        "community": 0.5,
+        "community": 0.4872346783985739,
         "tier_ours": "C",
         "tier_community": "B"
       },
       {
-        "name": "Rama",
+        "name": "Anhur",
         "role": "Carry",
         "damage_type": "physical",
-        "ours": 0.4466666666666666,
-        "community": 0.5,
+        "ours": 0.44500000000000006,
+        "community": 0.485544462630445,
         "tier_ours": "C",
         "tier_community": "B"
       },
       {
-        "name": "Vulcan",
+        "name": "Morgan Le Fay",
         "role": "Mid",
         "damage_type": "magical",
-        "ours": 0.4916666666666667,
-        "community": 0.5,
-        "tier_ours": "B",
-        "tier_community": "B"
-      },
-      {
-        "name": "Agni",
-        "role": "Mid",
-        "damage_type": "magical",
-        "ours": 0.5183333333333333,
-        "community": 0.49,
+        "ours": 0.505,
+        "community": 0.4854645909369755,
         "tier_ours": "A",
         "tier_community": "B"
       },
       {
-        "name": "Discordia",
+        "name": "Hua Mulan",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.47,
+        "community": 0.4849136880473812,
+        "tier_ours": "C",
+        "tier_community": "B"
+      },
+      {
+        "name": "Ne Zha",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.5133333333333333,
+        "community": 0.4848198450887678,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Janus",
         "role": "Mid",
         "damage_type": "magical",
-        "ours": 0.515,
-        "community": 0.49,
+        "ours": 0.5116666666666666,
+        "community": 0.47639656026529537,
         "tier_ours": "A",
-        "tier_community": "B"
+        "tier_community": "C"
       },
       {
-        "name": "Nemesis",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.49166666666666664,
-        "community": 0.49,
-        "tier_ours": "B",
-        "tier_community": "B"
-      },
-      {
-        "name": "Cerberus",
-        "role": "Solo Support",
-        "damage_type": "magical",
-        "ours": 0.48500000000000004,
-        "community": 0.48,
-        "tier_ours": "B",
-        "tier_community": "B"
-      },
-      {
-        "name": "Da Ji",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.5333333333333333,
-        "community": 0.48,
-        "tier_ours": "S",
-        "tier_community": "B"
-      },
-      {
-        "name": "The Morrigan",
+        "name": "Merlin",
         "role": "Mid",
         "damage_type": "magical",
         "ours": 0.5083333333333334,
-        "community": 0.48,
+        "community": 0.4744809157657363,
         "tier_ours": "A",
-        "tier_community": "B"
+        "tier_community": "C"
       },
       {
-        "name": "Xbalanque",
-        "role": "Carry",
+        "name": "Bacchus",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.48500000000000004,
+        "community": 0.47264376774241557,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Atlas",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.4833333333333332,
+        "community": 0.4721011632599568,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Hun Batz",
+        "role": "Jungle",
         "damage_type": "physical",
-        "ours": 0.4566666666666667,
-        "community": 0.48,
+        "ours": 0.5216666666666668,
+        "community": 0.47053510160899786,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Sun Wukong",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.4666666666666666,
+        "community": 0.4698967200239627,
         "tier_ours": "C",
         "tier_community": "C"
       },
       {
-        "name": "Ah Puch",
-        "role": "Mid",
+        "name": "Charon",
+        "role": "Support",
         "damage_type": "magical",
-        "ours": 0.4983333333333333,
-        "community": 0.47,
+        "ours": 0.4833333333333332,
+        "community": 0.4656093849583695,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -118455,61 +119226,16 @@
         "role": "Solo",
         "damage_type": "physical",
         "ours": 0.4749999999999999,
-        "community": 0.47,
+        "community": 0.4641158408412462,
         "tier_ours": "B",
         "tier_community": "C"
       },
       {
-        "name": "Ganesha",
+        "name": "Ares",
         "role": "Support",
         "damage_type": "magical",
-        "ours": 0.47666666666666657,
-        "community": 0.47,
-        "tier_ours": "B",
-        "tier_community": "C"
-      },
-      {
-        "name": "Ratatoskr",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.505,
-        "community": 0.47,
-        "tier_ours": "A",
-        "tier_community": "C"
-      },
-      {
-        "name": "Osiris",
-        "role": "Solo",
-        "damage_type": "physical",
-        "ours": 0.45500000000000007,
-        "community": 0.46,
-        "tier_ours": "C",
-        "tier_community": "C"
-      },
-      {
-        "name": "Danzaburou",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.44999999999999996,
-        "community": 0.45,
-        "tier_ours": "C",
-        "tier_community": "C"
-      },
-      {
-        "name": "Merlin",
-        "role": "Mid",
-        "damage_type": "magical",
-        "ours": 0.5083333333333334,
-        "community": 0.45,
-        "tier_ours": "A",
-        "tier_community": "C"
-      },
-      {
-        "name": "Xing Tian",
-        "role": "Support Solo",
-        "damage_type": "magical",
-        "ours": 0.49666666666666676,
-        "community": 0.44,
+        "ours": 0.4833333333333332,
+        "community": 0.45858158335652094,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -118518,7 +119244,79 @@
         "role": "Solo",
         "damage_type": "physical",
         "ours": 0.47666666666666657,
-        "community": 0.43,
+        "community": 0.4569990102567648,
+        "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Achilles",
+        "role": "Solo Jungle",
+        "damage_type": "physical",
+        "ours": 0.4716666666666666,
+        "community": 0.45665426382828106,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Jormungandr",
+        "role": "Solo Support",
+        "damage_type": "magical",
+        "ours": 0.4633333333333334,
+        "community": 0.451516688517158,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Osiris",
+        "role": "Solo",
+        "damage_type": "physical",
+        "ours": 0.45500000000000007,
+        "community": 0.4506082321879066,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Neith",
+        "role": "Carry Mid",
+        "damage_type": "physical",
+        "ours": 0.445,
+        "community": 0.44731489161857024,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Chronos",
+        "role": "Mid Carry",
+        "damage_type": "magical",
+        "ours": 0.45166666666666666,
+        "community": 0.44332137794093635,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Princess Bari",
+        "role": "Carry Mid",
+        "damage_type": "magical",
+        "ours": 0.4549999999999999,
+        "community": 0.4393812583752268,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Kali",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.4633333333333333,
+        "community": 0.4363823817307961,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Ganesha",
+        "role": "Support",
+        "damage_type": "magical",
+        "ours": 0.47666666666666657,
+        "community": 0.43605928604548333,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -118527,26 +119325,53 @@
         "role": "Solo",
         "damage_type": "physical",
         "ours": 0.47000000000000003,
-        "community": 0.42,
+        "community": 0.43511677755626416,
         "tier_ours": "C",
         "tier_community": "C"
       },
       {
-        "name": "Cabrakan",
-        "role": "Solo Support",
+        "name": "Jing Wei",
+        "role": "Carry",
+        "damage_type": "physical",
+        "ours": 0.45500000000000007,
+        "community": 0.4337497512941408,
+        "tier_ours": "C",
+        "tier_community": "C"
+      },
+      {
+        "name": "Ah Puch",
+        "role": "Mid",
         "damage_type": "magical",
-        "ours": 0.4883333333333333,
-        "community": 0.41,
+        "ours": 0.4983333333333333,
+        "community": 0.43309057219089464,
         "tier_ours": "B",
         "tier_community": "C"
       },
       {
-        "name": "Charon",
-        "role": "Support",
+        "name": "Anubis",
+        "role": "Mid",
         "damage_type": "magical",
-        "ours": 0.4833333333333332,
-        "community": 0.41,
+        "ours": 0.5016666666666667,
+        "community": 0.4274112845997827,
+        "tier_ours": "A",
+        "tier_community": "C"
+      },
+      {
+        "name": "Mercury",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.4916666666666667,
+        "community": 0.42594315460351667,
         "tier_ours": "B",
+        "tier_community": "C"
+      },
+      {
+        "name": "Ratatoskr",
+        "role": "Jungle",
+        "damage_type": "physical",
+        "ours": 0.505,
+        "community": 0.4146192810779099,
+        "tier_ours": "A",
         "tier_community": "C"
       },
       {
@@ -118554,225 +119379,9 @@
         "role": "Support",
         "damage_type": "magical",
         "ours": 0.48,
-        "community": 0.41,
+        "community": 0.3722850601601,
         "tier_ours": "B",
         "tier_community": "C"
-      },
-      {
-        "name": "Poseidon",
-        "role": "Mid",
-        "damage_type": "magical",
-        "ours": 0.51,
-        "community": 0.4,
-        "tier_ours": "A",
-        "tier_community": "C"
-      },
-      {
-        "name": "Tsukuyomi",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.48499999999999993,
-        "community": 0.4,
-        "tier_ours": "B",
-        "tier_community": "C"
-      },
-      {
-        "name": "Geb",
-        "role": "Support",
-        "damage_type": "magical",
-        "ours": 0.505,
-        "community": 0.36,
-        "tier_ours": "A",
-        "tier_community": "C"
-      },
-      {
-        "name": "Sobek",
-        "role": "Support",
-        "damage_type": "magical",
-        "ours": 0.48500000000000004,
-        "community": 0.36,
-        "tier_ours": "B",
-        "tier_community": "C"
-      },
-      {
-        "name": "Nut",
-        "role": "Carry Mid",
-        "damage_type": "magical",
-        "ours": 0.465,
-        "community": 0.35,
-        "tier_ours": "C",
-        "tier_community": "C"
-      },
-      {
-        "name": "Horus",
-        "role": "Support",
-        "damage_type": "physical",
-        "ours": 0.48666666666666664,
-        "community": 0.33,
-        "tier_ours": "B",
-        "tier_community": "C"
-      },
-      {
-        "name": "Aladdin",
-        "role": "Jungle",
-        "damage_type": "magical",
-        "ours": 0.49666666666666665,
-        "community": null,
-        "tier_ours": "B",
-        "tier_community": null
-      },
-      {
-        "name": "Amaterasu",
-        "role": "Solo",
-        "damage_type": "physical",
-        "ours": 0.4833333333333332,
-        "community": null,
-        "tier_ours": "B",
-        "tier_community": null
-      },
-      {
-        "name": "Anubis",
-        "role": "Mid",
-        "damage_type": "magical",
-        "ours": 0.5016666666666667,
-        "community": null,
-        "tier_ours": "A",
-        "tier_community": null
-      },
-      {
-        "name": "Aphrodite",
-        "role": "Mid Support",
-        "damage_type": "magical",
-        "ours": 0.48333333333333334,
-        "community": null,
-        "tier_ours": "B",
-        "tier_community": null
-      },
-      {
-        "name": "Awilix",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.5366666666666667,
-        "community": null,
-        "tier_ours": "S",
-        "tier_community": null
-      },
-      {
-        "name": "Hades",
-        "role": "Solo",
-        "damage_type": "magical",
-        "ours": 0.49499999999999994,
-        "community": null,
-        "tier_ours": "B",
-        "tier_community": null
-      },
-      {
-        "name": "Hua Mulan",
-        "role": "Solo",
-        "damage_type": "physical",
-        "ours": 0.47,
-        "community": null,
-        "tier_ours": "C",
-        "tier_community": null
-      },
-      {
-        "name": "Izanami",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.47,
-        "community": null,
-        "tier_ours": "C",
-        "tier_community": null
-      },
-      {
-        "name": "Janus",
-        "role": "Mid",
-        "damage_type": "magical",
-        "ours": 0.5116666666666666,
-        "community": null,
-        "tier_ours": "A",
-        "tier_community": null
-      },
-      {
-        "name": "Jing Wei",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.45500000000000007,
-        "community": null,
-        "tier_ours": "C",
-        "tier_community": null
-      },
-      {
-        "name": "Medusa",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.445,
-        "community": null,
-        "tier_ours": "C",
-        "tier_community": null
-      },
-      {
-        "name": "Mercury",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.4916666666666667,
-        "community": null,
-        "tier_ours": "B",
-        "tier_community": null
-      },
-      {
-        "name": "Odin",
-        "role": "Solo Jungle",
-        "damage_type": "physical",
-        "ours": 0.47833333333333333,
-        "community": null,
-        "tier_ours": "B",
-        "tier_community": null
-      },
-      {
-        "name": "Princess Bari",
-        "role": "Carry Mid",
-        "damage_type": "magical",
-        "ours": 0.4549999999999999,
-        "community": null,
-        "tier_ours": "C",
-        "tier_community": null
-      },
-      {
-        "name": "Susano",
-        "role": "Jungle",
-        "damage_type": "physical",
-        "ours": 0.5383333333333333,
-        "community": null,
-        "tier_ours": "S",
-        "tier_community": null
-      },
-      {
-        "name": "Ullr",
-        "role": "Carry",
-        "damage_type": "physical",
-        "ours": 0.4816666666666667,
-        "community": null,
-        "tier_ours": "B",
-        "tier_community": null
-      },
-      {
-        "name": "Ymir",
-        "role": "Support",
-        "damage_type": "magical",
-        "ours": 0.48166666666666663,
-        "community": null,
-        "tier_ours": "B",
-        "tier_community": null
-      },
-      {
-        "name": "Zeus",
-        "role": "Mid",
-        "damage_type": "magical",
-        "ours": 0.4883333333333333,
-        "community": null,
-        "tier_ours": "B",
-        "tier_community": null
       }
     ],
     "items": [
@@ -120211,12 +120820,39 @@
     "conquest": {
       "gods": [
         {
-          "name": "Cupid",
+          "name": "Hades",
+          "role": "Solo",
+          "damage_type": "magical",
+          "ours": 0.49499999999999994,
+          "community": 0.5967384138185635,
+          "tier_ours": "B",
+          "tier_community": "S"
+        },
+        {
+          "name": "Izanami",
           "role": "Carry",
           "damage_type": "physical",
-          "ours": 0.44999999999999996,
-          "community": 0.68,
+          "ours": 0.47,
+          "community": 0.5803975086487336,
           "tier_ours": "C",
+          "tier_community": "S"
+        },
+        {
+          "name": "Horus",
+          "role": "Support",
+          "damage_type": "physical",
+          "ours": 0.48666666666666664,
+          "community": 0.5699053489287655,
+          "tier_ours": "B",
+          "tier_community": "S"
+        },
+        {
+          "name": "Mordred",
+          "role": "Solo Jungle",
+          "damage_type": "physical",
+          "ours": 0.4783333333333333,
+          "community": 0.5658302208271567,
+          "tier_ours": "B",
           "tier_community": "S"
         },
         {
@@ -120224,7 +120860,34 @@
           "role": "Solo Support",
           "damage_type": "physical",
           "ours": 0.4716666666666667,
-          "community": 0.64,
+          "community": 0.5629538833819431,
+          "tier_ours": "B",
+          "tier_community": "S"
+        },
+        {
+          "name": "Aphrodite",
+          "role": "Mid Support",
+          "damage_type": "magical",
+          "ours": 0.48333333333333334,
+          "community": 0.5569059100475042,
+          "tier_ours": "B",
+          "tier_community": "S"
+        },
+        {
+          "name": "Xing Tian",
+          "role": "Support Solo",
+          "damage_type": "magical",
+          "ours": 0.49666666666666676,
+          "community": 0.5558572447991482,
+          "tier_ours": "B",
+          "tier_community": "S"
+        },
+        {
+          "name": "Cerberus",
+          "role": "Solo Support",
+          "damage_type": "magical",
+          "ours": 0.48500000000000004,
+          "community": 0.5544825200930616,
           "tier_ours": "B",
           "tier_community": "S"
         },
@@ -120233,34 +120896,7 @@
           "role": "Mid",
           "damage_type": "magical",
           "ours": 0.5133333333333333,
-          "community": 0.63,
-          "tier_ours": "A",
-          "tier_community": "S"
-        },
-        {
-          "name": "Ares",
-          "role": "Support",
-          "damage_type": "magical",
-          "ours": 0.4833333333333332,
-          "community": 0.61,
-          "tier_ours": "B",
-          "tier_community": "S"
-        },
-        {
-          "name": "Ishtar",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.4483333333333334,
-          "community": 0.6,
-          "tier_ours": "C",
-          "tier_community": "S"
-        },
-        {
-          "name": "Artio",
-          "role": "Solo Support",
-          "damage_type": "magical",
-          "ours": 0.5083333333333333,
-          "community": 0.59,
+          "community": 0.5520691525459129,
           "tier_ours": "A",
           "tier_community": "S"
         },
@@ -120269,125 +120905,53 @@
           "role": "Mid",
           "damage_type": "magical",
           "ours": 0.525,
-          "community": 0.59,
+          "community": 0.5520111292791388,
           "tier_ours": "S",
-          "tier_community": "S"
-        },
-        {
-          "name": "Cernunnos",
-          "role": "Carry Jungle",
-          "damage_type": "physical",
-          "ours": 0.4466666666666666,
-          "community": 0.58,
-          "tier_ours": "C",
           "tier_community": "A"
         },
         {
-          "name": "Chiron",
+          "name": "Ullr",
           "role": "Carry",
           "damage_type": "physical",
-          "ours": 0.465,
-          "community": 0.58,
-          "tier_ours": "C",
-          "tier_community": "A"
-        },
-        {
-          "name": "Mordred",
-          "role": "Solo Jungle",
-          "damage_type": "physical",
-          "ours": 0.4783333333333333,
-          "community": 0.58,
+          "ours": 0.4816666666666667,
+          "community": 0.5495975104361766,
           "tier_ours": "B",
           "tier_community": "A"
         },
         {
-          "name": "Jormungandr",
-          "role": "Solo Support",
-          "damage_type": "magical",
-          "ours": 0.4633333333333334,
-          "community": 0.57,
-          "tier_ours": "C",
-          "tier_community": "A"
-        },
-        {
-          "name": "Pele",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.5416666666666666,
-          "community": 0.56,
-          "tier_ours": "S",
-          "tier_community": "A"
-        },
-        {
-          "name": "Sol",
-          "role": "Mid Carry",
-          "damage_type": "magical",
-          "ours": 0.48666666666666664,
-          "community": 0.56,
-          "tier_ours": "B",
-          "tier_community": "A"
-        },
-        {
-          "name": "Thor",
-          "role": "Jungle Solo",
-          "damage_type": "physical",
-          "ours": 0.4833333333333334,
-          "community": 0.56,
-          "tier_ours": "B",
-          "tier_community": "A"
-        },
-        {
-          "name": "Atlas",
-          "role": "Support",
-          "damage_type": "magical",
-          "ours": 0.4833333333333332,
-          "community": 0.55,
-          "tier_ours": "B",
-          "tier_community": "A"
-        },
-        {
-          "name": "Hun Batz",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.5216666666666668,
-          "community": 0.55,
-          "tier_ours": "A",
-          "tier_community": "A"
-        },
-        {
-          "name": "Khepri",
-          "role": "Support",
-          "damage_type": "magical",
-          "ours": 0.48999999999999994,
-          "community": 0.55,
-          "tier_ours": "B",
-          "tier_community": "A"
-        },
-        {
-          "name": "Kukulkan",
+          "name": "Zeus",
           "role": "Mid",
           "damage_type": "magical",
-          "ours": 0.5083333333333334,
-          "community": 0.55,
-          "tier_ours": "A",
+          "ours": 0.4883333333333333,
+          "community": 0.5489004641985161,
+          "tier_ours": "B",
           "tier_community": "A"
         },
         {
-          "name": "Thanatos",
+          "name": "Cupid",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.44999999999999996,
+          "community": 0.5482996828412666,
+          "tier_ours": "C",
+          "tier_community": "A"
+        },
+        {
+          "name": "Gilgamesh",
+          "role": "Solo Jungle",
+          "damage_type": "physical",
+          "ours": 0.47500000000000003,
+          "community": 0.5339986327812133,
+          "tier_ours": "B",
+          "tier_community": "A"
+        },
+        {
+          "name": "Bastet",
           "role": "Jungle",
           "damage_type": "physical",
           "ours": 0.545,
-          "community": 0.55,
+          "community": 0.5314794628429236,
           "tier_ours": "S",
-          "tier_community": "A"
-        },
-        {
-          "name": "Chronos",
-          "role": "Mid Carry",
-          "damage_type": "magical",
-          "ours": 0.45166666666666666,
-          "community": 0.54,
-          "tier_ours": "C",
           "tier_community": "A"
         },
         {
@@ -120395,106 +120959,133 @@
           "role": "Mid",
           "damage_type": "magical",
           "ours": 0.5183333333333333,
-          "community": 0.54,
+          "community": 0.5311927480857401,
           "tier_ours": "A",
           "tier_community": "A"
         },
         {
-          "name": "Hou Yi",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.4416666666666667,
-          "community": 0.54,
-          "tier_ours": "C",
-          "tier_community": "B"
-        },
-        {
-          "name": "Loki",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.535,
-          "community": 0.54,
-          "tier_ours": "S",
-          "tier_community": "B"
-        },
-        {
-          "name": "Morgan Le Fay",
+          "name": "Poseidon",
           "role": "Mid",
           "damage_type": "magical",
-          "ours": 0.505,
-          "community": 0.54,
+          "ours": 0.51,
+          "community": 0.5301480847202966,
           "tier_ours": "A",
-          "tier_community": "B"
+          "tier_community": "A"
+        },
+        {
+          "name": "Chiron",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.465,
+          "community": 0.5299915764544672,
+          "tier_ours": "C",
+          "tier_community": "A"
+        },
+        {
+          "name": "Khepri",
+          "role": "Support",
+          "damage_type": "magical",
+          "ours": 0.48999999999999994,
+          "community": 0.5297903218692698,
+          "tier_ours": "B",
+          "tier_community": "A"
+        },
+        {
+          "name": "Geb",
+          "role": "Support",
+          "damage_type": "magical",
+          "ours": 0.505,
+          "community": 0.5286509166374382,
+          "tier_ours": "A",
+          "tier_community": "A"
+        },
+        {
+          "name": "Rama",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.4466666666666666,
+          "community": 0.5260292771555822,
+          "tier_ours": "C",
+          "tier_community": "A"
         },
         {
           "name": "Athena",
           "role": "Support",
           "damage_type": "magical",
           "ours": 0.48666666666666664,
-          "community": 0.53,
+          "community": 0.5238630400990496,
           "tier_ours": "B",
-          "tier_community": "B"
+          "tier_community": "A"
         },
         {
-          "name": "Kali",
+          "name": "Tsukuyomi",
           "role": "Jungle",
           "damage_type": "physical",
-          "ours": 0.4633333333333333,
-          "community": 0.53,
-          "tier_ours": "C",
-          "tier_community": "B"
+          "ours": 0.48499999999999993,
+          "community": 0.5234884265352863,
+          "tier_ours": "B",
+          "tier_community": "A"
         },
         {
-          "name": "Scylla",
+          "name": "Susano",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.5383333333333333,
+          "community": 0.5219107485685894,
+          "tier_ours": "S",
+          "tier_community": "A"
+        },
+        {
+          "name": "Artemis",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.4483333333333334,
+          "community": 0.5212492263947067,
+          "tier_ours": "C",
+          "tier_community": "A"
+        },
+        {
+          "name": "Artio",
+          "role": "Solo Support",
+          "damage_type": "magical",
+          "ours": 0.5083333333333333,
+          "community": 0.5210621646515827,
+          "tier_ours": "A",
+          "tier_community": "A"
+        },
+        {
+          "name": "Vulcan",
           "role": "Mid",
           "damage_type": "magical",
-          "ours": 0.5066666666666667,
-          "community": 0.53,
-          "tier_ours": "A",
-          "tier_community": "B"
-        },
-        {
-          "name": "Anhur",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.44500000000000006,
-          "community": 0.52,
-          "tier_ours": "C",
-          "tier_community": "B"
-        },
-        {
-          "name": "Apollo",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.44500000000000006,
-          "community": 0.52,
-          "tier_ours": "C",
-          "tier_community": "B"
-        },
-        {
-          "name": "Bacchus",
-          "role": "Support",
-          "damage_type": "magical",
-          "ours": 0.48500000000000004,
-          "community": 0.52,
+          "ours": 0.4916666666666667,
+          "community": 0.5194024655225751,
           "tier_ours": "B",
-          "tier_community": "B"
+          "tier_community": "A"
         },
         {
-          "name": "Gilgamesh",
+          "name": "Odin",
           "role": "Solo Jungle",
           "damage_type": "physical",
-          "ours": 0.47500000000000003,
-          "community": 0.52,
+          "ours": 0.47833333333333333,
+          "community": 0.5178867323224409,
           "tier_ours": "B",
           "tier_community": "B"
         },
         {
-          "name": "Neith",
-          "role": "Carry Mid",
+          "name": "Pele",
+          "role": "Jungle",
           "damage_type": "physical",
-          "ours": 0.445,
-          "community": 0.52,
+          "ours": 0.5416666666666666,
+          "community": 0.5158152395680552,
+          "tier_ours": "S",
+          "tier_community": "B"
+        },
+        {
+          "name": "Cernunnos",
+          "role": "Carry Jungle",
+          "damage_type": "physical",
+          "ours": 0.4466666666666666,
+          "community": 0.5157405918062185,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -120503,8 +121094,188 @@
           "role": "Mid",
           "damage_type": "magical",
           "ours": 0.5216666666666667,
-          "community": 0.52,
+          "community": 0.5152773052775856,
           "tier_ours": "A",
+          "tier_community": "B"
+        },
+        {
+          "name": "Thor",
+          "role": "Jungle Solo",
+          "damage_type": "physical",
+          "ours": 0.4833333333333334,
+          "community": 0.514107812306237,
+          "tier_ours": "B",
+          "tier_community": "B"
+        },
+        {
+          "name": "Nemesis",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.49166666666666664,
+          "community": 0.5139921157079175,
+          "tier_ours": "B",
+          "tier_community": "B"
+        },
+        {
+          "name": "Ishtar",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.4483333333333334,
+          "community": 0.5136985972155459,
+          "tier_ours": "C",
+          "tier_community": "B"
+        },
+        {
+          "name": "Aladdin",
+          "role": "Jungle",
+          "damage_type": "magical",
+          "ours": 0.49666666666666665,
+          "community": 0.5107584317114856,
+          "tier_ours": "B",
+          "tier_community": "B"
+        },
+        {
+          "name": "Apollo",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.44500000000000006,
+          "community": 0.5100652611744725,
+          "tier_ours": "C",
+          "tier_community": "B"
+        },
+        {
+          "name": "Discordia",
+          "role": "Mid",
+          "damage_type": "magical",
+          "ours": 0.515,
+          "community": 0.5091840372726558,
+          "tier_ours": "A",
+          "tier_community": "B"
+        },
+        {
+          "name": "Awilix",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.5366666666666667,
+          "community": 0.50864024545937,
+          "tier_ours": "S",
+          "tier_community": "B"
+        },
+        {
+          "name": "Da Ji",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.5333333333333333,
+          "community": 0.508482658532276,
+          "tier_ours": "S",
+          "tier_community": "B"
+        },
+        {
+          "name": "Agni",
+          "role": "Mid",
+          "damage_type": "magical",
+          "ours": 0.5183333333333333,
+          "community": 0.5076445335603155,
+          "tier_ours": "A",
+          "tier_community": "B"
+        },
+        {
+          "name": "Scylla",
+          "role": "Mid",
+          "damage_type": "magical",
+          "ours": 0.5066666666666667,
+          "community": 0.5064935466407569,
+          "tier_ours": "A",
+          "tier_community": "B"
+        },
+        {
+          "name": "Sobek",
+          "role": "Support",
+          "damage_type": "magical",
+          "ours": 0.48500000000000004,
+          "community": 0.5055460145176357,
+          "tier_ours": "B",
+          "tier_community": "B"
+        },
+        {
+          "name": "Loki",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.535,
+          "community": 0.5052586079109961,
+          "tier_ours": "S",
+          "tier_community": "B"
+        },
+        {
+          "name": "Sol",
+          "role": "Mid Carry",
+          "damage_type": "magical",
+          "ours": 0.48666666666666664,
+          "community": 0.505138100299255,
+          "tier_ours": "B",
+          "tier_community": "B"
+        },
+        {
+          "name": "Amaterasu",
+          "role": "Solo",
+          "damage_type": "physical",
+          "ours": 0.4833333333333332,
+          "community": 0.504081117997761,
+          "tier_ours": "B",
+          "tier_community": "B"
+        },
+        {
+          "name": "Nut",
+          "role": "Carry Mid",
+          "damage_type": "magical",
+          "ours": 0.465,
+          "community": 0.5026306399182271,
+          "tier_ours": "C",
+          "tier_community": "B"
+        },
+        {
+          "name": "Hou Yi",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.4416666666666667,
+          "community": 0.4998223042438506,
+          "tier_ours": "C",
+          "tier_community": "B"
+        },
+        {
+          "name": "Thanatos",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.545,
+          "community": 0.49792991415950366,
+          "tier_ours": "S",
+          "tier_community": "B"
+        },
+        {
+          "name": "Medusa",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.445,
+          "community": 0.49733648155247523,
+          "tier_ours": "C",
+          "tier_community": "B"
+        },
+        {
+          "name": "Ymir",
+          "role": "Support",
+          "damage_type": "magical",
+          "ours": 0.48166666666666663,
+          "community": 0.49581834464989755,
+          "tier_ours": "B",
+          "tier_community": "B"
+        },
+        {
+          "name": "Xbalanque",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.4566666666666667,
+          "community": 0.49525469724499993,
+          "tier_ours": "C",
           "tier_community": "B"
         },
         {
@@ -120512,26 +121283,8 @@
           "role": "Support",
           "damage_type": "magical",
           "ours": 0.47833333333333333,
-          "community": 0.52,
+          "community": 0.4939317535344585,
           "tier_ours": "B",
-          "tier_community": "B"
-        },
-        {
-          "name": "Artemis",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.4483333333333334,
-          "community": 0.51,
-          "tier_ours": "C",
-          "tier_community": "B"
-        },
-        {
-          "name": "Bastet",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.545,
-          "community": 0.51,
-          "tier_ours": "S",
           "tier_community": "B"
         },
         {
@@ -120539,34 +121292,43 @@
           "role": "Jungle",
           "damage_type": "physical",
           "ours": 0.5299999999999999,
-          "community": 0.51,
+          "community": 0.49232318416767784,
           "tier_ours": "S",
           "tier_community": "B"
         },
         {
-          "name": "Ne Zha",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.5133333333333333,
-          "community": 0.51,
+          "name": "Cabrakan",
+          "role": "Solo Support",
+          "damage_type": "magical",
+          "ours": 0.4883333333333333,
+          "community": 0.491983815922615,
+          "tier_ours": "B",
+          "tier_community": "B"
+        },
+        {
+          "name": "Kukulkan",
+          "role": "Mid",
+          "damage_type": "magical",
+          "ours": 0.5083333333333334,
+          "community": 0.4919011947920664,
           "tier_ours": "A",
           "tier_community": "B"
         },
         {
-          "name": "Sun Wukong",
-          "role": "Solo",
-          "damage_type": "physical",
-          "ours": 0.4666666666666666,
-          "community": 0.51,
-          "tier_ours": "C",
+          "name": "The Morrigan",
+          "role": "Mid",
+          "damage_type": "magical",
+          "ours": 0.5083333333333334,
+          "community": 0.4885968220850668,
+          "tier_ours": "A",
           "tier_community": "B"
         },
         {
-          "name": "Achilles",
-          "role": "Solo Jungle",
+          "name": "Danzaburou",
+          "role": "Carry",
           "damage_type": "physical",
-          "ours": 0.4716666666666666,
-          "community": 0.5,
+          "ours": 0.44999999999999996,
+          "community": 0.48731701451453213,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -120575,97 +121337,106 @@
           "role": "Mid Support",
           "damage_type": "magical",
           "ours": 0.4566666666666667,
-          "community": 0.5,
+          "community": 0.4872346783985739,
           "tier_ours": "C",
           "tier_community": "B"
         },
         {
-          "name": "Rama",
+          "name": "Anhur",
           "role": "Carry",
           "damage_type": "physical",
-          "ours": 0.4466666666666666,
-          "community": 0.5,
+          "ours": 0.44500000000000006,
+          "community": 0.485544462630445,
           "tier_ours": "C",
           "tier_community": "B"
         },
         {
-          "name": "Vulcan",
+          "name": "Morgan Le Fay",
           "role": "Mid",
           "damage_type": "magical",
-          "ours": 0.4916666666666667,
-          "community": 0.5,
-          "tier_ours": "B",
-          "tier_community": "B"
-        },
-        {
-          "name": "Agni",
-          "role": "Mid",
-          "damage_type": "magical",
-          "ours": 0.5183333333333333,
-          "community": 0.49,
+          "ours": 0.505,
+          "community": 0.4854645909369755,
           "tier_ours": "A",
           "tier_community": "B"
         },
         {
-          "name": "Discordia",
+          "name": "Hua Mulan",
+          "role": "Solo",
+          "damage_type": "physical",
+          "ours": 0.47,
+          "community": 0.4849136880473812,
+          "tier_ours": "C",
+          "tier_community": "B"
+        },
+        {
+          "name": "Ne Zha",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.5133333333333333,
+          "community": 0.4848198450887678,
+          "tier_ours": "A",
+          "tier_community": "C"
+        },
+        {
+          "name": "Janus",
           "role": "Mid",
           "damage_type": "magical",
-          "ours": 0.515,
-          "community": 0.49,
+          "ours": 0.5116666666666666,
+          "community": 0.47639656026529537,
           "tier_ours": "A",
-          "tier_community": "B"
+          "tier_community": "C"
         },
         {
-          "name": "Nemesis",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.49166666666666664,
-          "community": 0.49,
-          "tier_ours": "B",
-          "tier_community": "B"
-        },
-        {
-          "name": "Cerberus",
-          "role": "Solo Support",
-          "damage_type": "magical",
-          "ours": 0.48500000000000004,
-          "community": 0.48,
-          "tier_ours": "B",
-          "tier_community": "B"
-        },
-        {
-          "name": "Da Ji",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.5333333333333333,
-          "community": 0.48,
-          "tier_ours": "S",
-          "tier_community": "B"
-        },
-        {
-          "name": "The Morrigan",
+          "name": "Merlin",
           "role": "Mid",
           "damage_type": "magical",
           "ours": 0.5083333333333334,
-          "community": 0.48,
+          "community": 0.4744809157657363,
           "tier_ours": "A",
-          "tier_community": "B"
+          "tier_community": "C"
         },
         {
-          "name": "Xbalanque",
-          "role": "Carry",
+          "name": "Bacchus",
+          "role": "Support",
+          "damage_type": "magical",
+          "ours": 0.48500000000000004,
+          "community": 0.47264376774241557,
+          "tier_ours": "B",
+          "tier_community": "C"
+        },
+        {
+          "name": "Atlas",
+          "role": "Support",
+          "damage_type": "magical",
+          "ours": 0.4833333333333332,
+          "community": 0.4721011632599568,
+          "tier_ours": "B",
+          "tier_community": "C"
+        },
+        {
+          "name": "Hun Batz",
+          "role": "Jungle",
           "damage_type": "physical",
-          "ours": 0.4566666666666667,
-          "community": 0.48,
+          "ours": 0.5216666666666668,
+          "community": 0.47053510160899786,
+          "tier_ours": "A",
+          "tier_community": "C"
+        },
+        {
+          "name": "Sun Wukong",
+          "role": "Solo",
+          "damage_type": "physical",
+          "ours": 0.4666666666666666,
+          "community": 0.4698967200239627,
           "tier_ours": "C",
           "tier_community": "C"
         },
         {
-          "name": "Ah Puch",
-          "role": "Mid",
+          "name": "Charon",
+          "role": "Support",
           "damage_type": "magical",
-          "ours": 0.4983333333333333,
-          "community": 0.47,
+          "ours": 0.4833333333333332,
+          "community": 0.4656093849583695,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -120674,61 +121445,16 @@
           "role": "Solo",
           "damage_type": "physical",
           "ours": 0.4749999999999999,
-          "community": 0.47,
+          "community": 0.4641158408412462,
           "tier_ours": "B",
           "tier_community": "C"
         },
         {
-          "name": "Ganesha",
+          "name": "Ares",
           "role": "Support",
           "damage_type": "magical",
-          "ours": 0.47666666666666657,
-          "community": 0.47,
-          "tier_ours": "B",
-          "tier_community": "C"
-        },
-        {
-          "name": "Ratatoskr",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.505,
-          "community": 0.47,
-          "tier_ours": "A",
-          "tier_community": "C"
-        },
-        {
-          "name": "Osiris",
-          "role": "Solo",
-          "damage_type": "physical",
-          "ours": 0.45500000000000007,
-          "community": 0.46,
-          "tier_ours": "C",
-          "tier_community": "C"
-        },
-        {
-          "name": "Danzaburou",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.44999999999999996,
-          "community": 0.45,
-          "tier_ours": "C",
-          "tier_community": "C"
-        },
-        {
-          "name": "Merlin",
-          "role": "Mid",
-          "damage_type": "magical",
-          "ours": 0.5083333333333334,
-          "community": 0.45,
-          "tier_ours": "A",
-          "tier_community": "C"
-        },
-        {
-          "name": "Xing Tian",
-          "role": "Support Solo",
-          "damage_type": "magical",
-          "ours": 0.49666666666666676,
-          "community": 0.44,
+          "ours": 0.4833333333333332,
+          "community": 0.45858158335652094,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -120737,7 +121463,79 @@
           "role": "Solo",
           "damage_type": "physical",
           "ours": 0.47666666666666657,
-          "community": 0.43,
+          "community": 0.4569990102567648,
+          "tier_ours": "B",
+          "tier_community": "C"
+        },
+        {
+          "name": "Achilles",
+          "role": "Solo Jungle",
+          "damage_type": "physical",
+          "ours": 0.4716666666666666,
+          "community": 0.45665426382828106,
+          "tier_ours": "C",
+          "tier_community": "C"
+        },
+        {
+          "name": "Jormungandr",
+          "role": "Solo Support",
+          "damage_type": "magical",
+          "ours": 0.4633333333333334,
+          "community": 0.451516688517158,
+          "tier_ours": "C",
+          "tier_community": "C"
+        },
+        {
+          "name": "Osiris",
+          "role": "Solo",
+          "damage_type": "physical",
+          "ours": 0.45500000000000007,
+          "community": 0.4506082321879066,
+          "tier_ours": "C",
+          "tier_community": "C"
+        },
+        {
+          "name": "Neith",
+          "role": "Carry Mid",
+          "damage_type": "physical",
+          "ours": 0.445,
+          "community": 0.44731489161857024,
+          "tier_ours": "C",
+          "tier_community": "C"
+        },
+        {
+          "name": "Chronos",
+          "role": "Mid Carry",
+          "damage_type": "magical",
+          "ours": 0.45166666666666666,
+          "community": 0.44332137794093635,
+          "tier_ours": "C",
+          "tier_community": "C"
+        },
+        {
+          "name": "Princess Bari",
+          "role": "Carry Mid",
+          "damage_type": "magical",
+          "ours": 0.4549999999999999,
+          "community": 0.4393812583752268,
+          "tier_ours": "C",
+          "tier_community": "C"
+        },
+        {
+          "name": "Kali",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.4633333333333333,
+          "community": 0.4363823817307961,
+          "tier_ours": "C",
+          "tier_community": "C"
+        },
+        {
+          "name": "Ganesha",
+          "role": "Support",
+          "damage_type": "magical",
+          "ours": 0.47666666666666657,
+          "community": 0.43605928604548333,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -120746,26 +121544,53 @@
           "role": "Solo",
           "damage_type": "physical",
           "ours": 0.47000000000000003,
-          "community": 0.42,
+          "community": 0.43511677755626416,
           "tier_ours": "C",
           "tier_community": "C"
         },
         {
-          "name": "Cabrakan",
-          "role": "Solo Support",
+          "name": "Jing Wei",
+          "role": "Carry",
+          "damage_type": "physical",
+          "ours": 0.45500000000000007,
+          "community": 0.4337497512941408,
+          "tier_ours": "C",
+          "tier_community": "C"
+        },
+        {
+          "name": "Ah Puch",
+          "role": "Mid",
           "damage_type": "magical",
-          "ours": 0.4883333333333333,
-          "community": 0.41,
+          "ours": 0.4983333333333333,
+          "community": 0.43309057219089464,
           "tier_ours": "B",
           "tier_community": "C"
         },
         {
-          "name": "Charon",
-          "role": "Support",
+          "name": "Anubis",
+          "role": "Mid",
           "damage_type": "magical",
-          "ours": 0.4833333333333332,
-          "community": 0.41,
+          "ours": 0.5016666666666667,
+          "community": 0.4274112845997827,
+          "tier_ours": "A",
+          "tier_community": "C"
+        },
+        {
+          "name": "Mercury",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.4916666666666667,
+          "community": 0.42594315460351667,
           "tier_ours": "B",
+          "tier_community": "C"
+        },
+        {
+          "name": "Ratatoskr",
+          "role": "Jungle",
+          "damage_type": "physical",
+          "ours": 0.505,
+          "community": 0.4146192810779099,
+          "tier_ours": "A",
           "tier_community": "C"
         },
         {
@@ -120773,225 +121598,9 @@
           "role": "Support",
           "damage_type": "magical",
           "ours": 0.48,
-          "community": 0.41,
+          "community": 0.3722850601601,
           "tier_ours": "B",
           "tier_community": "C"
-        },
-        {
-          "name": "Poseidon",
-          "role": "Mid",
-          "damage_type": "magical",
-          "ours": 0.51,
-          "community": 0.4,
-          "tier_ours": "A",
-          "tier_community": "C"
-        },
-        {
-          "name": "Tsukuyomi",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.48499999999999993,
-          "community": 0.4,
-          "tier_ours": "B",
-          "tier_community": "C"
-        },
-        {
-          "name": "Geb",
-          "role": "Support",
-          "damage_type": "magical",
-          "ours": 0.505,
-          "community": 0.36,
-          "tier_ours": "A",
-          "tier_community": "C"
-        },
-        {
-          "name": "Sobek",
-          "role": "Support",
-          "damage_type": "magical",
-          "ours": 0.48500000000000004,
-          "community": 0.36,
-          "tier_ours": "B",
-          "tier_community": "C"
-        },
-        {
-          "name": "Nut",
-          "role": "Carry Mid",
-          "damage_type": "magical",
-          "ours": 0.465,
-          "community": 0.35,
-          "tier_ours": "C",
-          "tier_community": "C"
-        },
-        {
-          "name": "Horus",
-          "role": "Support",
-          "damage_type": "physical",
-          "ours": 0.48666666666666664,
-          "community": 0.33,
-          "tier_ours": "B",
-          "tier_community": "C"
-        },
-        {
-          "name": "Aladdin",
-          "role": "Jungle",
-          "damage_type": "magical",
-          "ours": 0.49666666666666665,
-          "community": null,
-          "tier_ours": "B",
-          "tier_community": null
-        },
-        {
-          "name": "Amaterasu",
-          "role": "Solo",
-          "damage_type": "physical",
-          "ours": 0.4833333333333332,
-          "community": null,
-          "tier_ours": "B",
-          "tier_community": null
-        },
-        {
-          "name": "Anubis",
-          "role": "Mid",
-          "damage_type": "magical",
-          "ours": 0.5016666666666667,
-          "community": null,
-          "tier_ours": "A",
-          "tier_community": null
-        },
-        {
-          "name": "Aphrodite",
-          "role": "Mid Support",
-          "damage_type": "magical",
-          "ours": 0.48333333333333334,
-          "community": null,
-          "tier_ours": "B",
-          "tier_community": null
-        },
-        {
-          "name": "Awilix",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.5366666666666667,
-          "community": null,
-          "tier_ours": "S",
-          "tier_community": null
-        },
-        {
-          "name": "Hades",
-          "role": "Solo",
-          "damage_type": "magical",
-          "ours": 0.49499999999999994,
-          "community": null,
-          "tier_ours": "B",
-          "tier_community": null
-        },
-        {
-          "name": "Hua Mulan",
-          "role": "Solo",
-          "damage_type": "physical",
-          "ours": 0.47,
-          "community": null,
-          "tier_ours": "C",
-          "tier_community": null
-        },
-        {
-          "name": "Izanami",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.47,
-          "community": null,
-          "tier_ours": "C",
-          "tier_community": null
-        },
-        {
-          "name": "Janus",
-          "role": "Mid",
-          "damage_type": "magical",
-          "ours": 0.5116666666666666,
-          "community": null,
-          "tier_ours": "A",
-          "tier_community": null
-        },
-        {
-          "name": "Jing Wei",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.45500000000000007,
-          "community": null,
-          "tier_ours": "C",
-          "tier_community": null
-        },
-        {
-          "name": "Medusa",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.445,
-          "community": null,
-          "tier_ours": "C",
-          "tier_community": null
-        },
-        {
-          "name": "Mercury",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.4916666666666667,
-          "community": null,
-          "tier_ours": "B",
-          "tier_community": null
-        },
-        {
-          "name": "Odin",
-          "role": "Solo Jungle",
-          "damage_type": "physical",
-          "ours": 0.47833333333333333,
-          "community": null,
-          "tier_ours": "B",
-          "tier_community": null
-        },
-        {
-          "name": "Princess Bari",
-          "role": "Carry Mid",
-          "damage_type": "magical",
-          "ours": 0.4549999999999999,
-          "community": null,
-          "tier_ours": "C",
-          "tier_community": null
-        },
-        {
-          "name": "Susano",
-          "role": "Jungle",
-          "damage_type": "physical",
-          "ours": 0.5383333333333333,
-          "community": null,
-          "tier_ours": "S",
-          "tier_community": null
-        },
-        {
-          "name": "Ullr",
-          "role": "Carry",
-          "damage_type": "physical",
-          "ours": 0.4816666666666667,
-          "community": null,
-          "tier_ours": "B",
-          "tier_community": null
-        },
-        {
-          "name": "Ymir",
-          "role": "Support",
-          "damage_type": "magical",
-          "ours": 0.48166666666666663,
-          "community": null,
-          "tier_ours": "B",
-          "tier_community": null
-        },
-        {
-          "name": "Zeus",
-          "role": "Mid",
-          "damage_type": "magical",
-          "ours": 0.4883333333333333,
-          "community": null,
-          "tier_ours": "B",
-          "tier_community": null
         }
       ],
       "items": [
@@ -124648,6 +125257,12 @@
         }
       ]
     }
+  },
+  "community_source": {
+    "division": "obsidian",
+    "window_start": "2026-07-14",
+    "window_end": "2026-07-27",
+    "matches_analyzed": 17172
   },
   "patch_notes": [],
   "data_patch": "Open Beta 39"
