@@ -474,3 +474,72 @@ def test_god_rankings_leaves_a_thinly_played_god_unranked():
     # Our own score survives: the god is still ranked by the model, it just
     # has nothing trustworthy to be compared against.
     assert result[0]["ours"] == pytest.approx(0.51)
+
+
+# ---------------------------------------------------------------------------
+# wilson_lower_bound / community_score
+#
+# The god index publishes wins and losses, so confidence stops being proxied
+# by pick rate and starts being measured.
+# ---------------------------------------------------------------------------
+
+def test_wilson_bound_ranks_a_big_sample_over_a_lucky_small_one():
+    """The whole point: 62% over 2,000 games is a stronger claim than 75%
+    over 40, and the raw rate said the opposite."""
+    big = tierlist.wilson_lower_bound(1240, 2000)     # 62.0%
+    lucky = tierlist.wilson_lower_bound(30, 40)       # 75.0%
+    assert big > lucky
+
+
+def test_wilson_bound_rises_toward_the_observed_rate_as_evidence_accumulates():
+    small = tierlist.wilson_lower_bound(62, 100)
+    large = tierlist.wilson_lower_bound(6200, 10000)
+    assert small < large < 0.62
+
+
+def test_wilson_bound_refuses_an_unusable_sample():
+    assert tierlist.wilson_lower_bound(5, 10) is None        # under MIN_MATCHES
+    assert tierlist.wilson_lower_bound(None, 500) is None
+    assert tierlist.wilson_lower_bound(500, None) is None
+    # Impossible records are dropped, never clamped into a plausible number.
+    assert tierlist.wilson_lower_bound(600, 500) is None
+    assert tierlist.wilson_lower_bound(-1, 500) is None
+
+
+def test_community_score_prefers_god_level_wins_over_the_aspect_proxy():
+    entry = {
+        "god_matches_won": 445, "god_matches_played": 703,
+        # A wildly different aspect figure, which must be ignored outright.
+        "aspect_win_rate": 0.95, "aspect_pick_rate": 0.90,
+    }
+    assert tierlist.community_score(entry) == pytest.approx(
+        tierlist.wilson_lower_bound(445, 703))
+
+
+def test_community_score_falls_back_when_the_index_never_ran():
+    """A note written before the index scrape still yields something."""
+    entry = {"aspect_win_rate": 0.64, "aspect_pick_rate": 0.65}
+    assert tierlist.community_score(entry) == pytest.approx(
+        tierlist.confident_win_rate(0.64, 0.65))
+
+
+def test_community_score_of_nothing_is_none():
+    assert tierlist.community_score(None) is None
+    assert tierlist.community_score({}) is None
+
+
+def test_god_rankings_uses_the_index_record_when_present():
+    gods = [{"name": "Hades", "role": "Mid", "damage_type": "Magical"}]
+    core = _core_entry({"Book of Thoth": {"total": 0.52}})
+    community = {
+        "source": "community",
+        "god_matches_won": 445, "god_matches_played": 703,
+        "aspect_win_rate": None, "aspect_pick_rate": None,
+    }
+    builds = [_build_group("Hades", builds=[community, core])]
+
+    result = tierlist.god_rankings(gods, builds)
+
+    # A god with no aspect at all is now ranked — the per-god scrape skipped
+    # 18 of these entirely.
+    assert result[0]["community"] == pytest.approx(tierlist.wilson_lower_bound(445, 703))

@@ -121,3 +121,71 @@ def _parse_aspects(soup) -> list:
             continue
         aspects.append({"name": name, "pick_rate": int(m.group(1)) / 100, "win_rate": int(m.group(2)) / 100})
     return aspects
+
+
+# ── The god index (`/gods/__data.json`) ─────────────────────────────────────
+#
+# The per-god pages give one aspect's win rate and nothing else. The index
+# gives, for every god: wins, losses, the exact match window, and the site's
+# own confidence width — so a rate can be weighed by how much play is behind
+# it instead of taken at face value. It also covers gods with no aspect at
+# all, which the per-god scrape silently skipped.
+#
+# The payload is SvelteKit's `devalue` encoding: one flat array where every
+# value inside an object or array is an INDEX into that array, not the value
+# itself. Negative indices are sentinels (-1 undefined, -2 a hole, -3 NaN,
+# and so on) — all of which we surface as None rather than pretending to a
+# number. Decoding by pattern-matching on key names happens to work today and
+# breaks the moment a real integer collides with a valid index, so this
+# dereferences properly.
+
+# Fields we require before trusting a row. `matches_played` is the point of
+# the exercise: without a denominator a win rate cannot be weighed.
+_INDEX_REQUIRED = ("god", "win_rate", "matches_played")
+
+
+def _devalue(flat, index, _seen=None):
+    """Resolve one devalue index into a plain Python value."""
+    if not isinstance(index, int) or index < 0 or index >= len(flat):
+        return None
+    # Cycles are legal in devalue; ours has none, but a malformed payload
+    # must not hang the refresh.
+    _seen = _seen or set()
+    if index in _seen:
+        return None
+    _seen = _seen | {index}
+
+    value = flat[index]
+    if isinstance(value, list):
+        # Type-tagged scalars arrive as ["Date", "2026-07-14T…"].
+        if len(value) == 2 and value[0] in ("Date", "BigInt") and isinstance(value[1], str):
+            return value[1]
+        return [_devalue(flat, i, _seen) for i in value]
+    if isinstance(value, dict):
+        return {k: _devalue(flat, i, _seen) for k, i in value.items()}
+    return value
+
+
+def parse_god_index(payload: dict) -> list:
+    """Every god row in a `/gods/__data.json` response.
+
+    Returns dicts carrying at least god/win_rate/matches_played; rows missing
+    any of those are dropped rather than half-trusted. Order is the source's
+    own (win rate, descending) — callers that need determinism should sort.
+    """
+    nodes = [n for n in (payload.get("nodes") or []) if isinstance(n, dict)]
+    flat = next((n["data"] for n in nodes if isinstance(n.get("data"), list)), None)
+    if not flat:
+        return []
+
+    rows = []
+    for slot, value in enumerate(flat):
+        if not isinstance(value, dict) or "win_rate" not in value:
+            continue
+        row = _devalue(flat, slot)
+        if not isinstance(row, dict):
+            continue
+        if any(row.get(k) is None for k in _INDEX_REQUIRED):
+            continue
+        rows.append(row)
+    return rows

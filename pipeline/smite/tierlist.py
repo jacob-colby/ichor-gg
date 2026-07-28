@@ -52,6 +52,62 @@ import math
 MIN_PICK_RATE = 0.05
 SHRINKAGE_K = 0.15
 
+# ── The real thing: wins and losses ─────────────────────────────────────────
+#
+# The god index publishes `matches_won` / `matches_played`, so where we have
+# it we can stop proxying confidence and measure it. `wilson_lower_bound` is
+# the standard interval for a binomial proportion: it asks "how good can we be
+# sure this god is?" rather than "what did the last few games happen to say".
+#
+# A 62% win rate over 133 matches and one over 2,000 are not the same claim,
+# and this is the difference the tier list was previously blind to. It also
+# subsumes the pick-rate guard above — that stays only as the fallback for
+# notes predating the index scrape.
+#
+# z = 1.96 is the conventional 95% bound. Raising it punishes small samples
+# harder; lowering it toward 1.0 is gentler. It is a knob on how much benefit
+# of the doubt a thinly-played god gets, not a correctness dial.
+WILSON_Z = 1.96
+# Below this many matches the interval is so wide the god is better described
+# as unmeasured. Nothing in the current index falls under it (the thinnest is
+# 133) — it is a guard against a future patch's fresh data, not a filter.
+MIN_MATCHES = 30
+
+
+def wilson_lower_bound(won, played, z=WILSON_Z):
+    """Lower bound of the Wilson score interval for `won` of `played`.
+
+    Returns None when there is no usable sample. Ranking on this rather than
+    the raw rate is what makes a big sample outrank a lucky small one — the
+    bound rises toward the observed rate as evidence accumulates.
+    """
+    if not _is_numeric(won) or not _is_numeric(played):
+        return None
+    if played < MIN_MATCHES or won < 0 or won > played:
+        return None
+    p = won / played
+    denominator = 1 + z * z / played
+    centre = p + z * z / (2 * played)
+    margin = z * math.sqrt(p * (1 - p) / played + z * z / (4 * played * played))
+    return (centre - margin) / denominator
+
+
+def community_score(entry):
+    """One god's community signal, best evidence first.
+
+    Prefers god-level wins/losses from the index — a real denominator, and the
+    whole god rather than one aspect of it. Falls back to the aspect win rate
+    behind its pick-rate guard, so a note written before the index scrape
+    still yields something rather than dropping the god off the comparison.
+    """
+    if not entry:
+        return None
+    played = entry.get("god_matches_played")
+    won = entry.get("god_matches_won")
+    if _is_numeric(played) and _is_numeric(won):
+        return wilson_lower_bound(won, played)
+    return confident_win_rate(entry.get("aspect_win_rate"), entry.get("aspect_pick_rate"))
+
 
 def confident_win_rate(win_rate, pick_rate):
     """A win rate discounted by how much the aspect is actually played.
@@ -99,10 +155,11 @@ def god_rankings(gods, builds, mode="Conquest"):
     ours = mean of slot_scores[item]["total"] over the god's suggested
     `mode` core entry (None if there's no such entry, or it has no
     slot_scores — e.g. the god was never scraped for that mode at all).
-    community = that god's community `mode` entry's aspect_win_rate, put
-    through `confident_win_rate` — so a barely-played aspect yields None
-    (unranked) rather than a confident-looking extreme. None also when there
-    is no community entry for that mode, or it lacks the fields.
+    community = that god's community `mode` entry scored by
+    `community_score` — the Wilson lower bound on god-level wins/losses where
+    the index scrape supplied them, else the pick-rate-guarded aspect rate.
+    None when there is no community entry for that mode, or no usable sample
+    in it: unranked, never ranked badly.
     Conquest is the default mode for backwards compatibility with existing
     callers. Deterministic: sorted by name.
     """
@@ -123,10 +180,7 @@ def god_rankings(gods, builds, mode="Conquest"):
         community = None
         comm_entry = _community_entry(name, builds, mode)
         if comm_entry:
-            community = confident_win_rate(
-                comm_entry.get("aspect_win_rate"),
-                comm_entry.get("aspect_pick_rate"),
-            )
+            community = community_score(comm_entry)
 
         results.append({
             "name": name,
