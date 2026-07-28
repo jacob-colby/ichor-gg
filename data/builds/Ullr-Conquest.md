@@ -73,6 +73,13 @@ builds:
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
+  god_win_rate: 0.5804195804195804
+  god_matches_won: 581
+  god_matches_played: 1001
+  god_division: obsidian
+  god_window_start: '2026-07-14'
+  god_window_end: '2026-07-27'
+  god_matches_analyzed: 17172
 - source: suggested
   archetype: core
   slot_order:

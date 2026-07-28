@@ -73,6 +73,13 @@ builds:
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
+  god_win_rate: 0.575107296137339
+  god_matches_won: 268
+  god_matches_played: 466
+  god_division: obsidian
+  god_window_start: '2026-07-14'
+  god_window_end: '2026-07-27'
+  god_matches_analyzed: 17172
 - source: suggested
   archetype: core
   slot_order:
