@@ -199,14 +199,15 @@ def item_rankings(items, eff_scores):
 
     ours = eff_scores.get(name, {}).get("score") (None if unscored — e.g.
     tier-1 starters are deliberately excluded from the efficiency model).
-    community = item["meta"]["win_avg"] (None if no meta).
+    community = the item's own win rate weighed by its match count where the
+    index supplied one, else the legacy per-god average at face value.
     Deterministic: sorted by name.
     """
     results = []
     for item in items:
         name = item.get("name")
         ours = (eff_scores.get(name) or {}).get("score")
-        community = (item.get("meta") or {}).get("win_avg")
+        community = _item_community(item.get("meta"))
         results.append({
             "name": name,
             "tier": item.get("tier"),
@@ -217,6 +218,26 @@ def item_rankings(items, eff_scores):
 
     results.sort(key=lambda e: e["name"] or "")
     return results
+
+
+def _item_community(meta):
+    """An item's community score, weighed by sample size when we have one.
+
+    With `matches` present this is the same Wilson bound the gods use, so a
+    62% item over 20,000 games outranks a 70% one over 40. Without it, the
+    legacy per-god average passes through unweighted — there is no denominator
+    to weigh it by, and dropping the item entirely would lose more than it
+    protects.
+    """
+    if not meta:
+        return None
+    rate, played = meta.get("win_avg"), meta.get("matches")
+    if _is_numeric(rate) and _is_numeric(played):
+        won = meta.get("matches_won")
+        if not _is_numeric(won):
+            won = round(rate * played)
+        return wilson_lower_bound(won, played)
+    return rate if _is_numeric(rate) else None
 
 
 def _is_numeric(value):

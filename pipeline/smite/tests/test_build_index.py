@@ -143,8 +143,16 @@ def test_build_index_adds_per_item_meta():
     result = build_index.build_index(Path(__file__).resolve().parents[3])
     metaed = [i for i in result["items"] if i.get("meta")]
     assert metaed, "expected some items to carry community meta"
-    m = metaed[0]["meta"]
-    assert 0.0 <= m["win_avg"] <= 1.0 and m["gods"] >= 1
+    for m in (i["meta"] for i in metaed):
+        assert 0.0 <= m["win_avg"] <= 1.0
+        # Exactly one denominator, and they mean different things: `matches`
+        # is the item's real sample size from the index, `gods` the legacy
+        # count of builds listing it — which is not a sample size at all.
+        # Carrying both would invite reading the weaker one as the stronger.
+        assert ("matches" in m) != ("gods" in m)
+        assert m.get("matches", 1) >= 1 and m.get("gods", 1) >= 1
+    # The index should be supplying most of them, not the legacy fallback.
+    assert sum(1 for i in metaed if "matches" in i["meta"]) > len(metaed) // 2
 
 
 def test_build_index_emits_data_updated_and_roster():

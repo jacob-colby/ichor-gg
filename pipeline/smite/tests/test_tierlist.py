@@ -543,3 +543,50 @@ def test_god_rankings_uses_the_index_record_when_present():
     # A god with no aspect at all is now ranked — the per-god scrape skipped
     # 18 of these entirely.
     assert result[0]["community"] == pytest.approx(tierlist.wilson_lower_bound(445, 703))
+
+
+# ---------------------------------------------------------------------------
+# _item_community
+#
+# The old item signal was the mean of per-god win rates over gods whose
+# community build happened to list the item: unweighted, so an item in two
+# builds counted as loudly as one in forty, and built on the same aspect
+# figures the god path moved away from.
+# ---------------------------------------------------------------------------
+
+def test_item_community_weighs_the_indexed_record_by_its_denominator():
+    big = tierlist._item_community({"win_avg": 0.62, "matches": 20000})
+    lucky = tierlist._item_community({"win_avg": 0.70, "matches": 40})
+    assert big > lucky
+
+
+def test_item_community_derives_wins_when_the_source_gives_only_a_rate():
+    """Items report win_rate and matches_played but no matches_won."""
+    derived = tierlist._item_community({"win_avg": 0.55, "matches": 1000})
+    assert derived == pytest.approx(tierlist.wilson_lower_bound(550, 1000))
+
+
+def test_item_community_prefers_an_explicit_win_count_over_the_rounded_rate():
+    meta = {"win_avg": 0.55, "matches": 1000, "matches_won": 553}
+    assert tierlist._item_community(meta) == pytest.approx(
+        tierlist.wilson_lower_bound(553, 1000))
+
+
+def test_item_community_passes_the_legacy_average_through_unweighted():
+    # No denominator exists to weigh it by, and dropping the item would lose
+    # more than it protects.
+    assert tierlist._item_community({"win_avg": 0.53, "gods": 29}) == 0.53
+
+
+def test_item_community_of_nothing_is_none():
+    assert tierlist._item_community(None) is None
+    assert tierlist._item_community({}) is None
+    assert tierlist._item_community({"gods": 4}) is None
+
+
+def test_item_rankings_uses_the_weighed_score():
+    items = [{"name": "Rage", "tier": 3, "efficiency_tier": "fair",
+              "meta": {"win_avg": 0.62, "matches": 20000}}]
+    result = tierlist.item_rankings(items, {"Rage": {"score": 0.8}})
+    assert result[0]["community"] == pytest.approx(
+        tierlist.wilson_lower_bound(round(0.62 * 20000), 20000))

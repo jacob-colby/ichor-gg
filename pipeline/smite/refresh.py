@@ -212,6 +212,47 @@ def god_index_entry(row: dict) -> dict:
     }
 
 
+ITEM_INDEX_URL = "https://smitebrain.com/items/__data.json"
+# Sits beside _roster.json / _patch.json: a small, versioned table the index
+# build reads. Items have no per-item build note the way gods do, so their
+# community record needs a home of its own rather than being derived at index
+# time from whatever happened to appear in a god's slot list.
+COMMUNITY_ITEMS_FILE = "_community_items.json"
+
+
+def refresh_item_index(community_fetcher, data_root: Path, force: bool = False) -> int:
+    """Pull every item's win rate and match count, and store the table.
+
+    The previous item signal was the *mean of per-god win rates* over the gods
+    whose community build happened to list the item — unweighted, so an item in
+    two builds counted as loudly as one in forty, and derived from the same
+    aspect figures the god path just moved away from. This is the item's own
+    record against a real denominator.
+    """
+    url = f"{ITEM_INDEX_URL}?division={GOD_INDEX_DIVISION}"
+    payload = json.loads(community_fetcher.fetch(url, force=force))
+    rows = smitebrain_parser.parse_item_index(payload)
+    table = {
+        r["display_name"]: {
+            "win_rate": r["win_rate"],
+            "matches_won": r["matches_won"],
+            "matches_played": r["matches_played"],
+            "use_rate": r.get("use_rate"),
+        }
+        for r in rows
+    }
+    out = {
+        "division": GOD_INDEX_DIVISION,
+        "window_start": (rows[0].get("start_time") or "")[:10] if rows else None,
+        "window_end": (rows[0].get("end_time") or "")[:10] if rows else None,
+        "matches_analyzed": rows[0].get("matches_analyzed") if rows else None,
+        "items": table,
+    }
+    (data_root / COMMUNITY_ITEMS_FILE).write_text(
+        json.dumps(out, indent=2, sort_keys=True), encoding="utf-8")
+    return len(table)
+
+
 def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = False,
                        index_row: dict | None = None) -> None:
     """`index_row` is this god's row from `refresh_god_index`, when the caller

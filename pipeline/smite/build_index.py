@@ -142,7 +142,7 @@ def build_index(repo_root: Path) -> dict:
     builds = _all(builds_dir)
     gods = _all(gods_dir)
     _enrich_gods(gods, weights)
-    _attach_item_meta(items, builds)
+    _attach_item_meta(items, builds, _load_community_items(data_root))
     _attach_popular_items(builds)
     index = {"gods": gods, "items": items, "builds": builds,
              # The fitted marginal gold price of each stat, plus the fit's
@@ -209,10 +209,28 @@ def _load_roster(data_root: Path) -> list:
         return []
 
 
-def _attach_item_meta(items, builds):
-    """Per-item community meta: average per-item win rate + how many gods run it,
-    aggregated over Conquest community builds (win rate is per-god, so an average
-    is the honest global signal for the items page)."""
+def _load_community_items(data_root):
+    """The item win/loss table written by `refresh.refresh_item_index`, or {}
+    before it has ever run."""
+    path = data_root / "_community_items.json"
+    if not path.exists():
+        return {}
+    try:
+        return (json.loads(path.read_text(encoding="utf-8")) or {}).get("items") or {}
+    except (ValueError, OSError):
+        return {}
+
+
+def _attach_item_meta(items, builds, community_items=None):
+    """Per-item community meta.
+
+    Prefers the item index: the item's own record against a real denominator.
+    The fallback — the mean of per-god win rates over gods whose community
+    build happens to list the item — is unweighted, so an item appearing in
+    two builds counted as loudly as one in forty, and it inherits the aspect
+    figures the god path already moved away from. `matches` is the tell: where
+    it is present the score can be weighed, where it is absent it cannot.
+    """
     from collections import defaultdict
     wins = defaultdict(list)
     for note in builds:
@@ -226,6 +244,14 @@ def _attach_item_meta(items, builds):
                 if wr is not None:
                     wins[slot["name"]].append(wr)
     for it in items:
+        indexed = (community_items or {}).get(it["name"])
+        if indexed and indexed.get("matches_played"):
+            it["meta"] = {
+                "win_avg": round(indexed["win_rate"], 3),
+                "matches": indexed["matches_played"],
+                "matches_won": indexed.get("matches_won"),
+            }
+            continue
         vals = wins.get(it["name"])
         if vals:
             it["meta"] = {"win_avg": round(sum(vals) / len(vals), 3), "gods": len(vals)}

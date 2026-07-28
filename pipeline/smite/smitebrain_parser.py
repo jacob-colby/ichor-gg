@@ -141,7 +141,10 @@ def _parse_aspects(soup) -> list:
 
 # Fields we require before trusting a row. `matches_played` is the point of
 # the exercise: without a denominator a win rate cannot be weighed.
-_INDEX_REQUIRED = ("god", "win_rate", "matches_played")
+_GOD_INDEX_REQUIRED = ("god", "win_rate", "matches_played")
+# Items name themselves `display_name` and report no `matches_won`, so wins
+# are derived from the rate — see `parse_item_index`.
+_ITEM_INDEX_REQUIRED = ("display_name", "win_rate", "matches_played")
 
 
 def _devalue(flat, index, _seen=None):
@@ -166,12 +169,12 @@ def _devalue(flat, index, _seen=None):
     return value
 
 
-def parse_god_index(payload: dict) -> list:
-    """Every god row in a `/gods/__data.json` response.
+def _parse_stat_index(payload: dict, required: tuple) -> list:
+    """Rows from any `__data.json` stats response carrying `required` fields.
 
-    Returns dicts carrying at least god/win_rate/matches_played; rows missing
-    any of those are dropped rather than half-trusted. Order is the source's
-    own (win rate, descending) — callers that need determinism should sort.
+    Rows missing any required field are dropped rather than half-trusted.
+    Order is the source's own (win rate, descending) — callers needing
+    determinism should sort.
     """
     nodes = [n for n in (payload.get("nodes") or []) if isinstance(n, dict)]
     flat = next((n["data"] for n in nodes if isinstance(n.get("data"), list)), None)
@@ -185,7 +188,26 @@ def parse_god_index(payload: dict) -> list:
         row = _devalue(flat, slot)
         if not isinstance(row, dict):
             continue
-        if any(row.get(k) is None for k in _INDEX_REQUIRED):
+        if any(row.get(k) is None for k in required):
             continue
         rows.append(row)
+    return rows
+
+
+def parse_god_index(payload: dict) -> list:
+    """Every god row in a `/gods/__data.json` response."""
+    return _parse_stat_index(payload, _GOD_INDEX_REQUIRED)
+
+
+def parse_item_index(payload: dict) -> list:
+    """Every item row in an `/items/__data.json` response.
+
+    Items report `win_rate` and `matches_played` but no `matches_won`, so the
+    win count is derived by rounding — a half-match either way is noise beside
+    denominators in the hundreds, and the alternative is discarding the only
+    sample size the source gives us for items.
+    """
+    rows = _parse_stat_index(payload, _ITEM_INDEX_REQUIRED)
+    for row in rows:
+        row["matches_won"] = round(row["win_rate"] * row["matches_played"])
     return rows

@@ -66,7 +66,10 @@ export interface Item {
     /** Min-max normalised value across the scored set, 1 = best value. */
     score: number;
   } | null;
-  meta?: { win_avg: number; gods: number };
+  /** Community record. `matches` is the item's own denominator from the god
+   *  index; `gods` is the legacy fallback (a count of builds listing it, not
+   *  a sample size). Exactly one of them is present. */
+  meta?: { win_avg: number; matches?: number; matches_won?: number; gods?: number };
 }
 
 export interface CommunitySlotEntry {

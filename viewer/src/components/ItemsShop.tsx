@@ -144,7 +144,14 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
           last line scattered at a different height on every card. */}
       <span className="mt-auto flex items-center justify-between gap-1 pt-0.5">
         {item.meta
-          ? <span className="font-mono text-label text-muted">{Math.round(item.meta.win_avg * 100)}% win · {item.meta.gods}</span>
+          ? <span className="font-mono text-label text-muted">
+              {Math.round(item.meta.win_avg * 100)}% win
+              {/* The denominator when we have one. The legacy figure counted
+                  builds listing the item, which is not a sample size. */}
+              {typeof item.meta.matches === "number"
+                ? <> · {item.meta.matches.toLocaleString("en-US")}</>
+                : typeof item.meta.gods === "number" ? <> · {item.meta.gods} gods</> : null}
+            </span>
           : <span className="text-label text-faint">no community data</span>}
       </span>
     </button>
@@ -226,7 +233,10 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
             </h2>
             <p className="mt-0.5 text-label text-faint">
               <span className="font-mono text-ink-soft">{item.cost}g</span> · <span className="font-mono">{tierLabel(item.tier)}</span>
-              {item.meta && <> · <span className="font-mono">{Math.round(item.meta.win_avg * 100)}% win</span> across {item.meta.gods} gods</>}
+              {item.meta && <> · <span className="font-mono">{Math.round(item.meta.win_avg * 100)}% win</span>{
+                typeof item.meta.matches === "number"
+                  ? <> over <span className="font-mono">{item.meta.matches.toLocaleString("en-US")}</span> matches</>
+                  : typeof item.meta.gods === "number" ? <> across {item.meta.gods} gods</> : null}</>}
             </p>
           </div>
           <button type="button" onClick={onClose} aria-label="Close"
