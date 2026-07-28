@@ -255,7 +255,7 @@ function App() {
           <ItemsShop items={data.items} openItem={route.item}
             tierItems={data.tierlist?.items ?? []} goldValues={data.item_gold_values ?? {}} />
         ) : route.lens === "tiers" ? (
-          <TierList tierlist={data.tierlist} />
+          <TierList tierlist={data.tierlist} communitySource={data.community_source} />
         ) : route.lens === "patch" ? (
           <PatchNotes periods={patchNotes} />
         ) : (

@@ -115,7 +115,7 @@ export function GodRanking({ god, role, entries, modeLabel }: {
           </span>
           {r.delta != null && (
             <span className={divergenceClass(r.tierGap)}>
-              {r.tierGap === 0 ? "same tier" : r.tierGap! > 0 ? "we rank higher" : "the meta ranks higher"}{" "}
+              {r.tierGap === 0 ? "same tier" : r.tierGap! > 0 ? "we rank higher" : "the community ranks higher"}{" "}
               <span className="font-mono">{deltaText(r.delta)}</span>
             </span>
           )}

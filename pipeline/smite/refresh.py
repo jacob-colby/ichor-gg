@@ -4,6 +4,7 @@ smitebrain.com. Run as: python -m smite.refresh --refresh Chiron --kind god
 import argparse
 import re
 import sys
+import json
 from datetime import date
 from pathlib import Path
 
@@ -164,7 +165,99 @@ def refresh_builds_into() -> None:
 COMMUNITY_MODES = {"conquest"}
 
 
-def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = False) -> None:
+# The god index: one request covering every god, with wins, losses and the
+# exact match window. `division` is the rank band the numbers describe —
+# Obsidian+ is the broadest of the three the source offers, so it carries the
+# largest sample; the narrower Master+/Deity bands trade sample size for skill.
+# Whatever is chosen has to be stated in the viewer, because "the community"
+# means something different in each.
+GOD_INDEX_URL = "https://smitebrain.com/gods/__data.json"
+GOD_INDEX_DIVISION = "obsidian"
+
+
+def refresh_god_index(community_fetcher, force: bool = False) -> dict:
+    """Pull every god's win/loss record from the index, keyed by god name.
+
+    One request for all of them, rather than a page each: the index is also
+    the only place the source publishes a denominator, and the only place it
+    covers gods that have no aspect at all — 18 of which the per-god scrape
+    was silently skipping.
+
+    Conquest only, like the rest of the community signal (see COMMUNITY_MODES).
+    """
+    url = f"{GOD_INDEX_URL}?division={GOD_INDEX_DIVISION}"
+    payload = json.loads(community_fetcher.fetch(url, force=force))
+    rows = smitebrain_parser.parse_god_index(payload)
+    # Aspect-split rows would collide on god name; the default response is
+    # already god-level, but guard rather than trust the query string.
+    return {r["god"]: r for r in rows if r.get("aspect") in (None, "None")}
+
+
+def god_index_entry(row: dict) -> dict:
+    """The community-entry fields carried by one index row.
+
+    Namespaced `god_*` so they never read as the aspect's numbers, which sit
+    in the same entry and mean something narrower. Provenance travels with
+    the figures — a win rate without its rank band and date window is not a
+    fact anyone can check.
+    """
+    return {
+        "god_win_rate": row.get("win_rate"),
+        "god_matches_won": row.get("matches_won"),
+        "god_matches_played": row.get("matches_played"),
+        "god_division": GOD_INDEX_DIVISION,
+        "god_window_start": (row.get("start_time") or "")[:10] or None,
+        "god_window_end": (row.get("end_time") or "")[:10] or None,
+        "god_matches_analyzed": row.get("matches_analyzed"),
+    }
+
+
+ITEM_INDEX_URL = "https://smitebrain.com/items/__data.json"
+# Sits beside _roster.json / _patch.json: a small, versioned table the index
+# build reads. Items have no per-item build note the way gods do, so their
+# community record needs a home of its own rather than being derived at index
+# time from whatever happened to appear in a god's slot list.
+COMMUNITY_ITEMS_FILE = "_community_items.json"
+
+
+def refresh_item_index(community_fetcher, data_root: Path, force: bool = False) -> int:
+    """Pull every item's win rate and match count, and store the table.
+
+    The previous item signal was the *mean of per-god win rates* over the gods
+    whose community build happened to list the item — unweighted, so an item in
+    two builds counted as loudly as one in forty, and derived from the same
+    aspect figures the god path just moved away from. This is the item's own
+    record against a real denominator.
+    """
+    url = f"{ITEM_INDEX_URL}?division={GOD_INDEX_DIVISION}"
+    payload = json.loads(community_fetcher.fetch(url, force=force))
+    rows = smitebrain_parser.parse_item_index(payload)
+    table = {
+        r["display_name"]: {
+            "win_rate": r["win_rate"],
+            "matches_won": r["matches_won"],
+            "matches_played": r["matches_played"],
+            "use_rate": r.get("use_rate"),
+        }
+        for r in rows
+    }
+    out = {
+        "division": GOD_INDEX_DIVISION,
+        "window_start": (rows[0].get("start_time") or "")[:10] if rows else None,
+        "window_end": (rows[0].get("end_time") or "")[:10] if rows else None,
+        "matches_analyzed": rows[0].get("matches_analyzed") if rows else None,
+        "items": table,
+    }
+    (data_root / COMMUNITY_ITEMS_FILE).write_text(
+        json.dumps(out, indent=2, sort_keys=True), encoding="utf-8")
+    return len(table)
+
+
+def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = False,
+                       index_row: dict | None = None) -> None:
+    """`index_row` is this god's row from `refresh_god_index`, when the caller
+    has already pulled it. Absent, the note keeps only the aspect figures and
+    the tier list falls back to scoring by those — degraded, not broken."""
     if mode.lower() not in COMMUNITY_MODES:
         return
     slug = god.lower().replace(" ", "-").replace("'", "")
@@ -180,6 +273,8 @@ def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = Fal
         "source_url": url,
         "last_verified": date.today().isoformat(),
     }
+    if index_row:
+        community_entry.update(god_index_entry(index_row))
     notes.merge_build_note(BUILDS_ROOT / f"{god}-{mode}.md", god, mode, community_entry)
 
 
@@ -219,13 +314,25 @@ def refresh_all(force: bool = False) -> None:
     if item_names:
         refresh_builds_into()
 
+    # One request for every god's win/loss record, before the per-god loop —
+    # a failure here degrades the run to aspect-only figures rather than
+    # aborting it, which is the same isolation the loop below uses.
+    god_index = {}
+    try:
+        god_index = refresh_god_index(community_fetcher, force=force)
+        print(f"  god index: {len(god_index)} gods with win/loss records")
+    except Exception as exc:
+        print(f"  [FAILED] god index: {exc} — falling back to aspect figures")
+        failures.append(f"god index: {exc}")
+
     build_paths = list(BUILDS_ROOT.glob("*.md"))
     for build_path in build_paths:
         build_frontmatter, _ = notes.read_note(build_path)
         god, mode = build_frontmatter.get("god"), build_frontmatter.get("mode")
         if god and mode:
             try:
-                refresh_god_builds(god, mode, community_fetcher, force=force)
+                refresh_god_builds(god, mode, community_fetcher, force=force,
+                                   index_row=god_index.get(god))
             except Exception as exc:
                 print(f"  [FAILED] build '{god}-{mode}': {exc}")
                 failures.append(f"build '{god}-{mode}': {exc}")

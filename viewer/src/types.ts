@@ -66,7 +66,10 @@ export interface Item {
     /** Min-max normalised value across the scored set, 1 = best value. */
     score: number;
   } | null;
-  meta?: { win_avg: number; gods: number };
+  /** Community record. `matches` is the item's own denominator from the god
+   *  index; `gods` is the legacy fallback (a count of builds listing it, not
+   *  a sample size). Exactly one of them is present. */
+  meta?: { win_avg: number; matches?: number; matches_won?: number; gods?: number };
 }
 
 export interface CommunitySlotEntry {
@@ -154,6 +157,9 @@ export interface TierEntry {
   community: number | null;
   tier_ours: "S" | "A" | "B" | "C" | null;
   tier_community: "S" | "A" | "B" | "C" | null;
+  /** Matches behind the community figure. Absent where the score came from
+   *  the aspect fallback, which has no denominator. */
+  community_matches?: number | null;
 }
 
 export interface GodTierEntry extends TierEntry {
@@ -229,6 +235,17 @@ export interface TierListData extends TierListModeData {
   joust?: TierListModeData;
 }
 
+/** Provenance for the community figures: which rank band, drawn from how
+ *  many matches, over what window. A win rate without these isn't checkable —
+ *  "the community" means something different per division, and a window means
+ *  something different the week a patch lands. */
+export interface CommunitySource {
+  division: string;
+  window_start?: string | null;
+  window_end?: string | null;
+  matches_analyzed?: number | null;
+}
+
 export interface IndexData {
   gods: God[];
   items: Item[];
@@ -239,6 +256,9 @@ export interface IndexData {
   /** Current game patch label (e.g. "Open Beta 39"), Task R1. Absent on an
    * older index. */
   data_patch?: string;
+  /** Where the community comparison came from. Absent on an index built
+   *  before the god-index scrape existed. */
+  community_source?: CommunitySource;
   tierlist?: TierListData;
   patch_notes?: PatchPeriod[];
   god_item_scores?: Record<string, Record<string, number>>;

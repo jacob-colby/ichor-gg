@@ -16,8 +16,15 @@ def _core_entry(slot_scores, archetype="core"):
     }
 
 
-def _community_entry(aspect_win_rate=None):
-    return {"source": "community", "aspect_win_rate": aspect_win_rate}
+def _community_entry(aspect_win_rate=None, aspect_pick_rate=0.45):
+    """The default pick rate is a confidently-played aspect: these fixtures
+    exist to test plumbing, and should not be silently filtered by the
+    confidence guard. Tests that care about the guard set it explicitly."""
+    return {
+        "source": "community",
+        "aspect_win_rate": aspect_win_rate,
+        "aspect_pick_rate": aspect_pick_rate,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -36,7 +43,7 @@ def test_god_rankings_ours_is_mean_of_core_slot_scores():
 
     assert result == [{
         "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
-        "ours": pytest.approx(0.5), "community": None,
+        "ours": pytest.approx(0.5), "community": None, "community_matches": None,
     }]
 
 
@@ -48,7 +55,9 @@ def test_god_rankings_community_reads_aspect_win_rate():
 
     result = tierlist.god_rankings(gods, builds)
 
-    assert result[0]["community"] == 0.51
+    # Discounted for how much the aspect is actually played, never raw.
+    assert result[0]["community"] == pytest.approx(
+        tierlist.confident_win_rate(0.51, 0.45))
     assert result[0]["ours"] == pytest.approx(0.6)
 
 
@@ -67,7 +76,7 @@ def test_god_rankings_god_with_no_builds_at_all_is_all_none():
     result = tierlist.god_rankings(gods, builds=[])
     assert result == [{
         "name": "Solo", "role": "Mid", "damage_type": "Magical",
-        "ours": None, "community": None,
+        "ours": None, "community": None, "community_matches": None,
     }]
 
 
@@ -106,7 +115,7 @@ def test_god_rankings_mode_defaults_to_conquest():
 
     assert default_result == explicit_result == [{
         "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
-        "ours": pytest.approx(0.8), "community": None,
+        "ours": pytest.approx(0.8), "community": None, "community_matches": None,
     }]
 
 
@@ -154,7 +163,7 @@ def test_god_rankings_god_with_only_a_conquest_build_is_unranked_in_joust():
 
     assert result == [{
         "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
-        "ours": None, "community": None,
+        "ours": None, "community": None, "community_matches": None,
     }]
 
 
@@ -405,3 +414,179 @@ def test_build_tierlist_god_with_only_conquest_build_is_unranked_not_absent_in_j
     # Zeus genuinely has Joust data, so he IS ranked.
     assert joust_gods["Zeus"]["ours"] == pytest.approx(0.4)
     assert joust_gods["Zeus"]["tier_ours"] is not None
+
+
+# ---------------------------------------------------------------------------
+# confident_win_rate
+#
+# Every community score is one aspect's win rate, and aspects differ hugely in
+# how much they are played. Raw, the signal was least trustworthy exactly where
+# the viewer leaned hardest on it: it ranks "biggest disagreement first", and
+# the biggest gaps came from the thinnest samples.
+# ---------------------------------------------------------------------------
+
+def test_confident_win_rate_drops_a_barely_played_aspect():
+    # 2% pick: the number is a rumour. Unranked, never ranked badly — the same
+    # rule assign_tiers uses for a missing score.
+    assert tierlist.confident_win_rate(0.36, 0.02) is None
+    assert tierlist.confident_win_rate(0.68, 0.02) is None
+
+
+def test_confident_win_rate_keeps_a_widely_played_aspect_nearly_intact():
+    adjusted = tierlist.confident_win_rate(0.64, 0.65)
+    # 0.5 + 0.14 * (0.65/0.80) = 0.6138 — most of its distance from even.
+    assert adjusted == pytest.approx(0.6138, abs=1e-4)
+    assert adjusted > 0.60
+
+
+def test_confident_win_rate_pulls_a_thin_sample_toward_even():
+    # Cupid's real numbers: a 68% win rate on a 5%-pick aspect was the single
+    # loudest claim on the home page.
+    adjusted = tierlist.confident_win_rate(0.68, 0.05)
+    assert adjusted == pytest.approx(0.545, abs=1e-4)
+    # Still above even — the signal is discounted, not discarded or inverted.
+    assert 0.5 < adjusted < 0.68
+
+
+def test_confident_win_rate_preserves_direction_and_ordering():
+    """Shrinkage must not reorder two aspects of equal confidence."""
+    a = tierlist.confident_win_rate(0.60, 0.40)
+    b = tierlist.confident_win_rate(0.55, 0.40)
+    assert a > b > 0.5
+    assert tierlist.confident_win_rate(0.40, 0.40) < 0.5
+
+
+def test_confident_win_rate_treats_a_missing_pick_rate_as_unusable():
+    # Notes predating pick-rate scraping must not be assumed confident.
+    assert tierlist.confident_win_rate(0.62, None) is None
+    assert tierlist.confident_win_rate(None, 0.40) is None
+
+
+def test_god_rankings_leaves_a_thinly_played_god_unranked():
+    gods = [{"name": "Geb", "role": "Guardian", "damage_type": "Magical"}]
+    core = _core_entry({"Gauntlet of Thebes": {"total": 0.51}})
+    community = _community_entry(aspect_win_rate=0.36, aspect_pick_rate=0.02)
+    builds = [_build_group("Geb", builds=[community, core])]
+
+    result = tierlist.god_rankings(gods, builds)
+
+    assert result[0]["community"] is None
+    # Our own score survives: the god is still ranked by the model, it just
+    # has nothing trustworthy to be compared against.
+    assert result[0]["ours"] == pytest.approx(0.51)
+
+
+# ---------------------------------------------------------------------------
+# wilson_lower_bound / community_score
+#
+# The god index publishes wins and losses, so confidence stops being proxied
+# by pick rate and starts being measured.
+# ---------------------------------------------------------------------------
+
+def test_wilson_bound_ranks_a_big_sample_over_a_lucky_small_one():
+    """The whole point: 62% over 2,000 games is a stronger claim than 75%
+    over 40, and the raw rate said the opposite."""
+    big = tierlist.wilson_lower_bound(1240, 2000)     # 62.0%
+    lucky = tierlist.wilson_lower_bound(30, 40)       # 75.0%
+    assert big > lucky
+
+
+def test_wilson_bound_rises_toward_the_observed_rate_as_evidence_accumulates():
+    small = tierlist.wilson_lower_bound(62, 100)
+    large = tierlist.wilson_lower_bound(6200, 10000)
+    assert small < large < 0.62
+
+
+def test_wilson_bound_refuses_an_unusable_sample():
+    assert tierlist.wilson_lower_bound(5, 10) is None        # under MIN_MATCHES
+    assert tierlist.wilson_lower_bound(None, 500) is None
+    assert tierlist.wilson_lower_bound(500, None) is None
+    # Impossible records are dropped, never clamped into a plausible number.
+    assert tierlist.wilson_lower_bound(600, 500) is None
+    assert tierlist.wilson_lower_bound(-1, 500) is None
+
+
+def test_community_score_prefers_god_level_wins_over_the_aspect_proxy():
+    entry = {
+        "god_matches_won": 445, "god_matches_played": 703,
+        # A wildly different aspect figure, which must be ignored outright.
+        "aspect_win_rate": 0.95, "aspect_pick_rate": 0.90,
+    }
+    assert tierlist.community_score(entry) == pytest.approx(
+        tierlist.wilson_lower_bound(445, 703))
+
+
+def test_community_score_falls_back_when_the_index_never_ran():
+    """A note written before the index scrape still yields something."""
+    entry = {"aspect_win_rate": 0.64, "aspect_pick_rate": 0.65}
+    assert tierlist.community_score(entry) == pytest.approx(
+        tierlist.confident_win_rate(0.64, 0.65))
+
+
+def test_community_score_of_nothing_is_none():
+    assert tierlist.community_score(None) is None
+    assert tierlist.community_score({}) is None
+
+
+def test_god_rankings_uses_the_index_record_when_present():
+    gods = [{"name": "Hades", "role": "Mid", "damage_type": "Magical"}]
+    core = _core_entry({"Book of Thoth": {"total": 0.52}})
+    community = {
+        "source": "community",
+        "god_matches_won": 445, "god_matches_played": 703,
+        "aspect_win_rate": None, "aspect_pick_rate": None,
+    }
+    builds = [_build_group("Hades", builds=[community, core])]
+
+    result = tierlist.god_rankings(gods, builds)
+
+    # A god with no aspect at all is now ranked — the per-god scrape skipped
+    # 18 of these entirely.
+    assert result[0]["community"] == pytest.approx(tierlist.wilson_lower_bound(445, 703))
+
+
+# ---------------------------------------------------------------------------
+# _item_community
+#
+# The old item signal was the mean of per-god win rates over gods whose
+# community build happened to list the item: unweighted, so an item in two
+# builds counted as loudly as one in forty, and built on the same aspect
+# figures the god path moved away from.
+# ---------------------------------------------------------------------------
+
+def test_item_community_weighs_the_indexed_record_by_its_denominator():
+    big = tierlist._item_community({"win_avg": 0.62, "matches": 20000})
+    lucky = tierlist._item_community({"win_avg": 0.70, "matches": 40})
+    assert big > lucky
+
+
+def test_item_community_derives_wins_when_the_source_gives_only_a_rate():
+    """Items report win_rate and matches_played but no matches_won."""
+    derived = tierlist._item_community({"win_avg": 0.55, "matches": 1000})
+    assert derived == pytest.approx(tierlist.wilson_lower_bound(550, 1000))
+
+
+def test_item_community_prefers_an_explicit_win_count_over_the_rounded_rate():
+    meta = {"win_avg": 0.55, "matches": 1000, "matches_won": 553}
+    assert tierlist._item_community(meta) == pytest.approx(
+        tierlist.wilson_lower_bound(553, 1000))
+
+
+def test_item_community_passes_the_legacy_average_through_unweighted():
+    # No denominator exists to weigh it by, and dropping the item would lose
+    # more than it protects.
+    assert tierlist._item_community({"win_avg": 0.53, "gods": 29}) == 0.53
+
+
+def test_item_community_of_nothing_is_none():
+    assert tierlist._item_community(None) is None
+    assert tierlist._item_community({}) is None
+    assert tierlist._item_community({"gods": 4}) is None
+
+
+def test_item_rankings_uses_the_weighed_score():
+    items = [{"name": "Rage", "tier": 3, "efficiency_tier": "fair",
+              "meta": {"win_avg": 0.62, "matches": 20000}}]
+    result = tierlist.item_rankings(items, {"Rage": {"score": 0.8}})
+    assert result[0]["community"] == pytest.approx(
+        tierlist.wilson_lower_bound(round(0.62 * 20000), 20000))

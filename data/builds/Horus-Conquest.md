@@ -73,6 +73,13 @@ builds:
   starter:
     base: Death's Toll
     upgrade: Death's Embrace
+  god_win_rate: 0.5947540983606557
+  god_matches_won: 907
+  god_matches_played: 1525
+  god_division: obsidian
+  god_window_start: '2026-07-14'
+  god_window_end: '2026-07-27'
+  god_matches_analyzed: 17172
 - source: suggested
   archetype: core
   slot_order:

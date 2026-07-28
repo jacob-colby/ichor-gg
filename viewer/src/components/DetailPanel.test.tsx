@@ -123,7 +123,7 @@ describe("DetailPanel — the buy ledger", () => {
     expect(screen.getByTestId("ledger-total")).toHaveTextContent(/5,000g core/);
   });
 
-  it("reports how much of the build the meta agrees with", () => {
+  it("reports how much of the build the community agrees with", () => {
     render(panel({ items, builds: withMeta as never }));
     expect(screen.getByText(/shares 1 of 2/i)).toBeInTheDocument();
   });
@@ -184,7 +184,7 @@ describe("DetailPanel — the buy ledger", () => {
 
   it("shows what the community bought instead, in its own order", () => {
     render(panel({ items, builds: withMeta as never }));
-    expect(screen.getByText(/what the meta buys instead/i)).toBeInTheDocument();
+    expect(screen.getByText(/what the community buys instead/i)).toBeInTheDocument();
     // C is in the community order but not the model's build.
     const link = screen.getByRole("link", { name: /^C, bought 2 by the community/i });
     expect(link).toHaveAttribute("href", expect.stringContaining("/items/C"));
@@ -206,7 +206,7 @@ describe("DetailPanel — the buy ledger", () => {
     fireEvent.click(within(screen.getByRole("group", { name: /build flavor/i })).getByRole("button", { name: /mine/i }));
     expect(screen.queryByText(/model buys/i)).not.toBeInTheDocument();
     expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
-    expect(screen.queryByText(/what the meta buys instead/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/what the community buys instead/i)).not.toBeInTheDocument();
   });
 
   it("does not print win/pick as measurements when there is no community data", () => {

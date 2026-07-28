@@ -73,6 +73,13 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+  god_win_rate: 0.5405960945529291
+  god_matches_won: 526
+  god_matches_played: 973
+  god_division: obsidian
+  god_window_start: '2026-07-14'
+  god_window_end: '2026-07-27'
+  god_matches_analyzed: 17172
 - source: suggested
   archetype: core
   slot_order:

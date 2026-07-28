@@ -19,6 +19,114 @@ distinct in the viewer.
 import math
 
 
+# ── Confidence in a community win rate ──────────────────────────────────────
+#
+# Every community score we have is ONE ASPECT's win rate, and aspects vary
+# enormously in how much they are actually played. Taken raw, the signal is
+# worst exactly where the tier list leans hardest on it: win-rate spread across
+# aspects picked under 10% of the time measured sd 0.083, against 0.053 for
+# those picked 25%+. The extremes at the thin end are mostly sampling noise —
+# and because the viewer ranks "biggest disagreement first", that noise was
+# being promoted straight to the top of the page. Four of the six gods the home
+# page headlined rested on aspects picked 2–5% of the time.
+#
+# Two guards, both deliberately conservative:
+#
+#   FLOOR      Below this pick rate the number is a rumour, not a measurement.
+#              Such gods go UNRANKED — the same treatment as a god the source
+#              never covered — never bucketed low. "No usable data" and "bad"
+#              are different facts, which is the rule `assign_tiers` already
+#              follows for missing scores.
+#
+#   SHRINKAGE  What survives the floor is pulled toward 0.5 in proportion to
+#              how thin it is: adjusted = 0.5 + (raw - 0.5) * p / (p + K).
+#              A 65%-pick aspect keeps ~81% of its distance from even; a
+#              5%-pick one keeps ~25%. This is ordinary shrinkage toward the
+#              prior — we have no better prior than "a coin flip" — and it
+#              costs the confident aspects almost nothing.
+#
+# Pick rate is a PROXY for sample size, not sample size itself: SmiteBrain
+# publishes neither match counts nor an elo band. If a source that reports
+# either is ever wired up, this should be replaced by a real confidence
+# interval rather than tuned.
+MIN_PICK_RATE = 0.05
+SHRINKAGE_K = 0.15
+
+# ── The real thing: wins and losses ─────────────────────────────────────────
+#
+# The god index publishes `matches_won` / `matches_played`, so where we have
+# it we can stop proxying confidence and measure it. `wilson_lower_bound` is
+# the standard interval for a binomial proportion: it asks "how good can we be
+# sure this god is?" rather than "what did the last few games happen to say".
+#
+# A 62% win rate over 133 matches and one over 2,000 are not the same claim,
+# and this is the difference the tier list was previously blind to. It also
+# subsumes the pick-rate guard above — that stays only as the fallback for
+# notes predating the index scrape.
+#
+# z = 1.96 is the conventional 95% bound. Raising it punishes small samples
+# harder; lowering it toward 1.0 is gentler. It is a knob on how much benefit
+# of the doubt a thinly-played god gets, not a correctness dial.
+WILSON_Z = 1.96
+# Below this many matches the interval is so wide the god is better described
+# as unmeasured. Nothing in the current index falls under it (the thinnest is
+# 133) — it is a guard against a future patch's fresh data, not a filter.
+MIN_MATCHES = 30
+
+
+def wilson_lower_bound(won, played, z=WILSON_Z):
+    """Lower bound of the Wilson score interval for `won` of `played`.
+
+    Returns None when there is no usable sample. Ranking on this rather than
+    the raw rate is what makes a big sample outrank a lucky small one — the
+    bound rises toward the observed rate as evidence accumulates.
+    """
+    if not _is_numeric(won) or not _is_numeric(played):
+        return None
+    if played < MIN_MATCHES or won < 0 or won > played:
+        return None
+    p = won / played
+    denominator = 1 + z * z / played
+    centre = p + z * z / (2 * played)
+    margin = z * math.sqrt(p * (1 - p) / played + z * z / (4 * played * played))
+    return (centre - margin) / denominator
+
+
+def community_score(entry):
+    """One god's community signal, best evidence first.
+
+    Prefers god-level wins/losses from the index — a real denominator, and the
+    whole god rather than one aspect of it. Falls back to the aspect win rate
+    behind its pick-rate guard, so a note written before the index scrape
+    still yields something rather than dropping the god off the comparison.
+    """
+    if not entry:
+        return None
+    played = entry.get("god_matches_played")
+    won = entry.get("god_matches_won")
+    if _is_numeric(played) and _is_numeric(won):
+        return wilson_lower_bound(won, played)
+    return confident_win_rate(entry.get("aspect_win_rate"), entry.get("aspect_pick_rate"))
+
+
+def confident_win_rate(win_rate, pick_rate):
+    """A win rate discounted by how much the aspect is actually played.
+
+    Returns None when there is no usable signal — no win rate, no pick rate,
+    or a pick rate under `MIN_PICK_RATE` — so the caller leaves the entry
+    unranked rather than ranking it badly.
+
+    A missing pick rate is treated as unusable rather than as confident: the
+    older notes predate pick-rate scraping, and assuming confidence for data
+    we can't check is the failure this function exists to prevent.
+    """
+    if not _is_numeric(win_rate) or not _is_numeric(pick_rate):
+        return None
+    if pick_rate < MIN_PICK_RATE:
+        return None
+    return 0.5 + (win_rate - 0.5) * (pick_rate / (pick_rate + SHRINKAGE_K))
+
+
 def _suggested_core(god_name, builds, mode="Conquest"):
     """The god's suggested `mode` 'core' archetype entry, or None."""
     for group in builds:
@@ -47,8 +155,11 @@ def god_rankings(gods, builds, mode="Conquest"):
     ours = mean of slot_scores[item]["total"] over the god's suggested
     `mode` core entry (None if there's no such entry, or it has no
     slot_scores — e.g. the god was never scraped for that mode at all).
-    community = that god's community `mode` entry's aspect_win_rate (None
-    if there's no community entry for that mode, or it lacks the field).
+    community = that god's community `mode` entry scored by
+    `community_score` — the Wilson lower bound on god-level wins/losses where
+    the index scrape supplied them, else the pick-rate-guarded aspect rate.
+    None when there is no community entry for that mode, or no usable sample
+    in it: unranked, never ranked badly.
     Conquest is the default mode for backwards compatibility with existing
     callers. Deterministic: sorted by name.
     """
@@ -69,7 +180,7 @@ def god_rankings(gods, builds, mode="Conquest"):
         community = None
         comm_entry = _community_entry(name, builds, mode)
         if comm_entry:
-            community = comm_entry.get("aspect_win_rate")
+            community = community_score(comm_entry)
 
         results.append({
             "name": name,
@@ -77,6 +188,13 @@ def god_rankings(gods, builds, mode="Conquest"):
             "damage_type": god.get("damage_type"),
             "ours": ours,
             "community": community,
+            # How much play the community figure rests on. Two rows that look
+            # equally confident can differ by an order of magnitude — 133
+            # matches against 2,026 — and the reader cannot see which is which
+            # from a tier letter. None where the score came from the aspect
+            # fallback, which has no denominator to report.
+            "community_matches": (comm_entry or {}).get("god_matches_played")
+                                 if community is not None else None,
         })
 
     results.sort(key=lambda e: e["name"] or "")
@@ -88,14 +206,15 @@ def item_rankings(items, eff_scores):
 
     ours = eff_scores.get(name, {}).get("score") (None if unscored — e.g.
     tier-1 starters are deliberately excluded from the efficiency model).
-    community = item["meta"]["win_avg"] (None if no meta).
+    community = the item's own win rate weighed by its match count where the
+    index supplied one, else the legacy per-god average at face value.
     Deterministic: sorted by name.
     """
     results = []
     for item in items:
         name = item.get("name")
         ours = (eff_scores.get(name) or {}).get("score")
-        community = (item.get("meta") or {}).get("win_avg")
+        community = _item_community(item.get("meta"))
         results.append({
             "name": name,
             "tier": item.get("tier"),
@@ -106,6 +225,26 @@ def item_rankings(items, eff_scores):
 
     results.sort(key=lambda e: e["name"] or "")
     return results
+
+
+def _item_community(meta):
+    """An item's community score, weighed by sample size when we have one.
+
+    With `matches` present this is the same Wilson bound the gods use, so a
+    62% item over 20,000 games outranks a 70% one over 40. Without it, the
+    legacy per-god average passes through unweighted — there is no denominator
+    to weigh it by, and dropping the item entirely would lose more than it
+    protects.
+    """
+    if not meta:
+        return None
+    rate, played = meta.get("win_avg"), meta.get("matches")
+    if _is_numeric(rate) and _is_numeric(played):
+        won = meta.get("matches_won")
+        if not _is_numeric(won):
+            won = round(rate * played)
+        return wilson_lower_bound(won, played)
+    return rate if _is_numeric(rate) else None
 
 
 def _is_numeric(value):

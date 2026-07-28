@@ -31,6 +31,7 @@ import {
 import { biggestArguments, type Argument } from "../lib/tierBands";
 import { TierLadder } from "./TierLadder";
 import { VERDICT_TEXT, VERDICT_WORD, VERDICT_SPOKEN } from "../lib/verdictWords";
+import { CommunitySource } from "./CommunitySource";
 
 /** The one label style shared by the sections below the board. */
 const sectionLabel = "font-mono text-label uppercase tracking-[0.1em] text-faint";
@@ -126,7 +127,7 @@ function ArgumentGroup({ label, set, item }: {
   );
 }
 
-function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
+function BiggestArguments({ tierlist, source }: { tierlist?: TierListData; source?: IndexData["community_source"] }) {
   const gods = useMemo(() => biggestArguments(tierlist?.gods ?? [], ARGUMENTS_SHOWN), [tierlist]);
   // Full items only. Tiers 1–2 are components and starters — things you pass
   // through on the way to a build, not things you choose — so an argument
@@ -145,10 +146,12 @@ function BiggestArguments({ tierlist }: { tierlist?: TierListData }) {
     <section aria-labelledby="home-args-h" className="w-full lg:max-w-[600px] lg:flex-1">
       <div className="flex items-baseline justify-between gap-3">
         <h2 id="home-args-h" className={sectionLabel}>Where we argue hardest</h2>
-        <span className="text-label text-faint">meta&rsquo;s tier → ours</span>
+        <span className="text-label text-faint">community tier → ours</span>
       </div>
       <ArgumentGroup label="Gods" set={gods} item={false} />
       <ArgumentGroup label="Items" set={items} item={true} />
+      {/* Stated where the comparison is, not buried in a help page. */}
+      <CommunitySource source={source} className="mt-2.5 border-t border-line pt-2" />
     </section>
   );
 }
@@ -170,19 +173,20 @@ function Claim({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
   const gold = (n: number) => <span className="text-gold">{n} god{n === 1 ? "" : "s"}</span>;
 
   if (modelHigher > 0) {
-    return <>The meta underrates {gold(modelHigher)}.</>;
+    return <>The community underrates {gold(modelHigher)}.</>;
   }
   // Degenerate but real: an index where the model never rates a god above the
   // community still has to say something true rather than "underrates 0".
   if (metaHigher > 0) {
-    return <>The meta overrates {gold(metaHigher)}.</>;
+    return <>The community overrates {gold(metaHigher)}.</>;
   }
-  return <>The meta and this model agree on all {gold(ranked)}.</>;
+  return <>The community and this model agree on all {gold(ranked)}.</>;
 }
 
-function StateBlock({ board, tierlist, ranked }: {
+function StateBlock({ board, tierlist, source, ranked }: {
   board: ReturnType<typeof buildDivergenceBoard>;
   tierlist?: TierListData;
+  source?: IndexData["community_source"];
   ranked: number;
 }) {
   const comparable = ranked > 0;
@@ -199,16 +203,23 @@ function StateBlock({ board, tierlist, ranked }: {
           <h1 className="max-w-[19ch] text-balance font-display text-display font-bold leading-[1.1] tracking-[-0.01em] text-ink sm:text-display">
             {comparable ? <Claim board={board} /> : <>Builds scored by a model, not by what&rsquo;s popular.</>}
           </h1>
+          {/* "the community's high-elo meta" overclaimed twice over: the
+              signal is win rates from top-ranked Conquest play, not a meta
+              anyone published, and "meta" implied a considered consensus
+              ranking. And "it'd move N the other way" collides with the
+              headline's own count whenever the two happen to match — as they
+              currently do, at 24 each — so it says "another". */}
           <p className="mt-3 max-w-[64ch] text-body leading-relaxed text-ink-soft">
             ichor fits a gold-value model to item stats to find what&rsquo;s underpriced for a
-            god&rsquo;s kit, then weighs that against the community&rsquo;s high-elo meta.
+            god&rsquo;s kit, then weighs that against community win rates from top-ranked
+            Conquest play.
             {comparable
-              ? <> It&rsquo;d move {board.metaHigher} the other way, and it agrees with the meta on the rest.</>
-              : " Community comparison isn't in this index yet, so nothing below is ranked against the meta."}
+              ? <> It&rsquo;d move another {board.metaHigher} the other way, and it agrees on the rest.</>
+              : " Community comparison isn't in this index yet, so nothing below is ranked against it."}
           </p>
         </div>
 
-        {comparable && <BiggestArguments tierlist={tierlist} />}
+        {comparable && <BiggestArguments tierlist={tierlist} source={source} />}
       </div>
     </header>
   );
@@ -222,7 +233,7 @@ function BoardKey() {
     <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-label text-faint">
       <span className="flex items-center gap-1.5">
         <span aria-hidden="true" className="inline-block h-3.5 w-[2px] rounded-[1px] bg-ink" />
-        Meta
+        Community
       </span>
       <span className="flex items-center gap-1.5">
         <span aria-hidden="true" className="mark inline-block h-4 w-[9px] bg-gold" />
@@ -250,16 +261,23 @@ function DivergenceRow({ row }: { row: Divergence }) {
         onClick={() => navigate(toHash.god(row.name))}
         // The arithmetic isn't gone, it's demoted: spoken in full here, on
         // hover in the tooltip, and in full on the god's own page.
-        aria-label={`${row.name}: we place it ${row.tierOurs}, the community places it ${row.tierCommunity} — ${VERDICT_SPOKEN[row.verdict]}. Model score ${row.ours.toFixed(2)}, community ${row.community.toFixed(2)}.`}
-        title={`${row.name} — model ${row.ours.toFixed(2)} · community ${row.community.toFixed(2)} (${deltaText(row.delta)})`}
-        className="press grid w-full grid-cols-[20px_minmax(0,1fr)_auto] items-center gap-x-2 gap-y-1.5 rounded-md px-1.5 py-1.5 text-left transition-colors duration-[150ms] ease-standard hover:bg-bg2"
+        aria-label={`${row.name}: we place it ${row.tierOurs}, the community places it ${row.tierCommunity} — ${VERDICT_SPOKEN[row.verdict]}. Model score ${row.ours.toFixed(2)}, community ${row.community.toFixed(2)}${
+          row.communityMatches ? ` over ${row.communityMatches.toLocaleString("en-US")} matches` : ""}.`}
+        title={`${row.name} — model ${row.ours.toFixed(2)} · community ${row.community.toFixed(2)} (${deltaText(row.delta)})${
+          row.communityMatches ? ` · ${row.communityMatches.toLocaleString("en-US")} community matches` : ""}`}
+        className="press grid w-full grid-cols-[20px_minmax(0,1fr)_auto_auto] items-center gap-x-2 gap-y-1.5 rounded-md px-1.5 py-1.5 text-left transition-colors duration-[150ms] ease-standard hover:bg-bg2"
       >
         <GodIcon name={row.name} className="h-5 w-5" />
         <span className="truncate font-display text-small font-semibold text-ink">{row.name}</span>
         <span aria-hidden="true" className={`shrink-0 text-label ${VERDICT_TEXT[row.verdict]}`}>
           {VERDICT_WORD[row.verdict]}
         </span>
-        <span className="col-span-3 block">
+        {/* How much play the verdict rests on. Two rows read as equally sure
+            without it, and the thinnest here is 175 matches against 2,533. */}
+        <span aria-hidden="true" className="shrink-0 font-mono text-micro text-faint">
+          {row.communityMatches ? row.communityMatches.toLocaleString("en-US") : ""}
+        </span>
+        <span className="col-span-4 block">
           <TierLadder ourStep={row.ourStep} theirStep={row.theirStep} verdict={row.verdict} />
         </span>
       </button>
@@ -528,7 +546,7 @@ export function Home({ data }: { data: IndexData }) {
 
   return (
     <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 pt-7 sm:px-6 sm:pt-9">
-      <StateBlock board={board} tierlist={data.tierlist} ranked={board.ranked} />
+      <StateBlock board={board} tierlist={data.tierlist} source={data.community_source} ranked={board.ranked} />
       <DivergenceBoard board={board} />
       <div className="mt-7 flex flex-col gap-6">
         <DraftSeam />

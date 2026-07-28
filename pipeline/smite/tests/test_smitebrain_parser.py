@@ -1,4 +1,7 @@
+import json
 from pathlib import Path
+
+import pytest
 
 from smite import smitebrain_parser
 
@@ -146,3 +149,47 @@ def test_parse_build_page_captures_per_slot_alternates():
     assert with_alts, "expected some slots to have alternates"
     alt = with_alts[0]["alternates"][0]
     assert "name" in alt and "pick_rate" in alt and "win_rate" in alt
+
+
+# ---------------------------------------------------------------------------
+# parse_god_index
+#
+# The index is a SvelteKit `devalue` payload: one flat array where every value
+# inside an object is an INDEX into that array. Decoding it by matching on key
+# names works until a real integer collides with a valid index, so the parser
+# dereferences properly and these tests pin that.
+# ---------------------------------------------------------------------------
+
+def _god_index_fixture():
+    path = Path(__file__).parent / "fixtures" / "smitebrain_god_index.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def test_parse_god_index_returns_every_god_with_a_denominator():
+    rows = smitebrain_parser.parse_god_index(_god_index_fixture())
+    assert len(rows) == 87
+    assert len({r["god"] for r in rows}) == 87
+    assert all(r["matches_played"] > 0 for r in rows)
+
+
+def test_parse_god_index_dereferences_values_rather_than_returning_pointers():
+    rows = smitebrain_parser.parse_god_index(_god_index_fixture())
+    hades = next(r for r in rows if r["god"] == "Hades")
+    # Wins and losses are the point; a pointer would surface as a small int
+    # that happens to look like a plausible count, so check the arithmetic.
+    assert hades["matches_won"] == 445
+    assert hades["matches_played"] == 703
+    assert hades["win_rate"] == pytest.approx(445 / 703, abs=1e-6)
+    # Type-tagged scalars are unwrapped, not left as ["Date", "..."].
+    assert hades["start_time"].startswith("2026-")
+
+
+def test_parse_god_index_rows_are_god_level_not_aspect_level():
+    rows = smitebrain_parser.parse_god_index(_god_index_fixture())
+    assert {r["aspect"] for r in rows} == {"None"}
+
+
+def test_parse_god_index_survives_a_payload_with_no_data():
+    assert smitebrain_parser.parse_god_index({}) == []
+    assert smitebrain_parser.parse_god_index({"nodes": [None]}) == []
+    assert smitebrain_parser.parse_god_index({"nodes": [{"data": "not-a-list"}]}) == []

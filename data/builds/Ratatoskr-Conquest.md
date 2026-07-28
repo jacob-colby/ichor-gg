@@ -73,6 +73,13 @@ builds:
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
+  god_win_rate: 0.4604966139954853
+  god_matches_won: 204
+  god_matches_played: 443
+  god_division: obsidian
+  god_window_start: '2026-07-14'
+  god_window_end: '2026-07-27'
+  god_matches_analyzed: 17172
 - source: suggested
   archetype: core
   slot_order:

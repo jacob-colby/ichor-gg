@@ -262,6 +262,12 @@ The board's bars are **positions on the tier ladder**, not a gap meter. Four run
 - **The row leads with a verdict, not a decimal.** `Underrated` / `Overrated` / `Agreed` — the words the audience argues in. Three decimals per row across thirty rows was the thing that read as a statistics table. The arithmetic is demoted, never deleted: it is spoken in full in the row's accessible name, shown on hover, and printed in full on the god's own page.
 - `BoardKey` teaches the axis once, in place, so no row needs a remembered schema.
 
+### Provenance (the community figures)
+- Anywhere the app compares against the community, it **says which community**: `Community figures: 17,172 Obsidian+ Conquest matches · 14 Jul–27 Jul`. Home carries it under the arguments block, the tier list under its tally — beside the claim it qualifies, never buried in a help page.
+- This exists because "the community" is not one thing. An Obsidian+ win rate and a Deity one describe different populations, and a fortnight's window means something different the week a patch lands. The numbers were being presented as settled fact with none of that attached.
+- **Rendered only when the data supplies it.** An index built before the god-index scrape has no provenance, and an empty provenance line is worse than none.
+- Dates are formatted from the ISO string's own parts, never through `Date` — parsing `2026-07-14` as a date shifts it a day backwards for any reader west of UTC, which would misreport the window.
+
 ### The claim (Home's h1)
 - Led by **the half a reader can act on**: `The meta underrates 28 gods.` It read `We disagree with the meta on 53 of 69 ranked gods` — a sentence about the model's aggregate behaviour, true and inert. Nobody opens a build site to learn how often two rankings differ; they open it to find the god the meta is sleeping on. Same numbers, counted the same way, pointed at the reader instead of at the method. The other direction and the agreements follow in the paragraph beneath.
 - The count is **interpolated, so the noun agrees with it** (`1 god`, not `1 gods`), and the claim falls back through overrated → full agreement rather than ever printing `underrates 0`.

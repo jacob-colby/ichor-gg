@@ -16,7 +16,7 @@
  * key f397d87a.
  */
 import { useMemo, useState } from "react";
-import type { GodTierEntry, ItemTierEntry, TierEntry, TierListData } from "../types";
+import type { CommunitySource as CommunitySourceData, GodTierEntry, ItemTierEntry, TierEntry, TierListData } from "../types";
 import { iconSlug } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { LANES, godLane, godInLane, laneTextClass, type Lane } from "../lib/roleAccent";
@@ -26,6 +26,7 @@ import { deltaText } from "../lib/divergence";
 import { TierLadder } from "./TierLadder";
 import { VERDICT_TEXT, VERDICT_WORD, VERDICT_SPOKEN } from "../lib/verdictWords";
 import { useUrlState } from "../lib/urlState";
+import { CommunitySource } from "./CommunitySource";
 
 type Subject = "gods" | "items";
 type GameMode = "conquest" | "joust";
@@ -106,6 +107,7 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
   const verdict = verdictOf(tierGap ?? 0);
   const ourStep = tierStep(entry.tier_ours);
   const theirStep = tierStep(entry.tier_community);
+  const matches = typeof entry.community_matches === "number" ? entry.community_matches : null;
 
   return (
     <li>
@@ -117,7 +119,8 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
         // The arithmetic is demoted, not deleted — on hover here, and in full
         // on the entry's own page.
         title={`${entry.name} — model ${scoreText(entry.ours)}${
-          unranked ? "" : ` · community ${scoreText(entry.community)} (${deltaText(delta)})`}`}
+          unranked ? "" : ` · community ${scoreText(entry.community)} (${deltaText(delta)})`}${
+          matches ? ` · ${matches.toLocaleString("en-US")} community matches` : ""}`}
         // Stacked on a phone so the name gets the card's full width — laid
         // out beside the icon it truncated at "Thanatos".
         className={`plane press flex h-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard hover:border-line-strong sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
@@ -145,8 +148,16 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
             <span className="mt-0.5 text-label leading-tight text-muted">no community rating</span>
           ) : (
             <>
+              {/* Stacked rather than wrapped: side by side these two fit on
+                  one line or two depending on the name beside them, which made
+                  a band's cards a different height from the band above it. */}
               <span className={`mt-0.5 text-label leading-tight ${VERDICT_TEXT[verdict]}`}>
                 {VERDICT_WORD[verdict]}
+              </span>
+              {/* What the verdict rests on — the samples run 175 to 2,533, and
+                  every card reads equally sure without it. */}
+              <span aria-hidden="true" className="font-mono text-micro leading-tight text-faint">
+                {matches ? `${matches.toLocaleString("en-US")} matches` : " "}
               </span>
               <span className="mt-1 w-full max-w-[128px]">
                 <TierLadder ourStep={ourStep} theirStep={theirStep} verdict={verdict} />
@@ -237,7 +248,10 @@ function encodeBoard(s: BoardState): Record<string, string | undefined> {
   };
 }
 
-export function TierList({ tierlist }: { tierlist?: TierListData }) {
+export function TierList({ tierlist, communitySource }: {
+  tierlist?: TierListData;
+  communitySource?: CommunitySourceData;
+}) {
   const [board, setBoard] = useUrlState(decodeBoard, encodeBoard);
   const { gameMode, subject, sort, disputedOnly, q, lane, efficiency } = board;
   const patch = (next: Partial<BoardState>) => setBoard((s) => ({ ...s, ...next }));
@@ -302,7 +316,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
         {/* A claim carrying its own numbers, like Home's — not a route label. */}
         <h1 className="max-w-[24ch] text-balance font-display text-display font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-display">
           {result.ranked > 0 ? (
-            <>The meta agrees with{" "}
+            <>The community agrees with{" "}
               <span className="text-gold">{result.agreed} of {result.ranked}</span>{" "}
               {entityLabel(subject)} placements.
             </>
@@ -318,7 +332,7 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
           <p data-testid="tier-summary" className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint">
             <span><span className="text-ink-soft">{result.agreed} of {result.ranked}</span> agreed</span>
             <span className="text-under">{result.modelHigher} we rank higher</span>
-            <span className="text-premium">{result.metaHigher} the meta ranks higher</span>
+            <span className="text-premium">{result.metaHigher} the community ranks higher</span>
             {result.unranked > 0 && <span>{result.unranked} unranked</span>}
           </p>
         ) : !sourceHasCommunity ? (
@@ -326,6 +340,9 @@ export function TierList({ tierlist }: { tierlist?: TierListData }) {
             {source.length} {subject} · no community ratings to compare against
           </p>
         ) : null}
+        {/* Beside the tally it qualifies: this page compares against the same
+            figures Home does, so it states the same provenance. */}
+        {result.ranked > 0 && <CommunitySource source={communitySource} className="mt-1.5" />}
         {/* Directly under the tally it qualifies — not below the control bar. */}
         {modeIsMirrored && (
           <p className="mt-2 max-w-[74ch] text-small leading-relaxed text-muted">

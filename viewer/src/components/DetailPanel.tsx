@@ -545,7 +545,7 @@ export function DetailPanel({
       {isFun && (
         <div className="mt-3 rounded-md border border-premium/40 bg-bg1 p-2.5 text-small">
           <span className="font-display font-semibold text-premium">For fun 🎲</span>
-          <span className="text-muted"> — deliberately off-class; not scored against the meta.</span>
+          <span className="text-muted"> — deliberately off-class; not scored against the community.</span>
         </div>
       )}
 
@@ -566,7 +566,7 @@ export function DetailPanel({
                   <span className={ledger.shared === ledger.slots ? "text-faint" : "text-ink-soft"}>
                     shares {ledger.shared} of {ledger.slots}
                   </span>{" "}
-                  with the meta
+                  with the community
                 </>
               )}
             </p>
@@ -614,7 +614,7 @@ export function DetailPanel({
           {compareToMeta && ledger.hasMeta && (
             <div className="mt-3 border-t border-line pt-2.5">
               <p className="text-label text-faint">
-                What the meta buys instead
+                What the community buys instead
                 <span className="px-1">·</span>
                 {ledger.metaTotalGold != null
                   ? <><span className="font-mono">{goldText(ledger.metaTotalGold)}</span> over {ledger.metaSlots} slots</>

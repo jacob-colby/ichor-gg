@@ -34,6 +34,10 @@ export interface Divergence {
   theirStep: number;
   verdict: Verdict;
   tierDisagrees: boolean;
+  /** Matches behind the community placement, when the source reported one.
+   *  A row resting on 175 and one resting on 2,533 read identically without
+   *  it. */
+  communityMatches: number | null;
 }
 
 /** One lane's slice of the board. */
@@ -134,6 +138,7 @@ export function buildDivergenceBoard(entries: GodTierEntry[] | undefined): Diver
         theirStep,
         verdict: verdictOf(tierGap),
         tierDisagrees: tierGap !== 0,
+        communityMatches: typeof e.community_matches === "number" ? e.community_matches : null,
       });
     }
   }

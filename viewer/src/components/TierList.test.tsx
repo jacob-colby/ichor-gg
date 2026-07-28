@@ -95,7 +95,7 @@ describe("TierList — bands and ghosts", () => {
     // Ymir + Ra are ranked by both; Anubis isn't. Neither pair agrees.
     expect(summary.getByText(/0 of 2/)).toBeInTheDocument();
     expect(summary.getByText(/1 we rank higher/)).toBeInTheDocument();   // Ymir S vs C
-    expect(summary.getByText(/1 the meta ranks higher/)).toBeInTheDocument(); // Ra B vs A
+    expect(summary.getByText(/1 the community ranks higher/)).toBeInTheDocument(); // Ra B vs A
     expect(summary.getByText(/1 unranked/)).toBeInTheDocument();
   });
 
