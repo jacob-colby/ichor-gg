@@ -188,6 +188,13 @@ def god_rankings(gods, builds, mode="Conquest"):
             "damage_type": god.get("damage_type"),
             "ours": ours,
             "community": community,
+            # How much play the community figure rests on. Two rows that look
+            # equally confident can differ by an order of magnitude — 133
+            # matches against 2,026 — and the reader cannot see which is which
+            # from a tier letter. None where the score came from the aspect
+            # fallback, which has no denominator to report.
+            "community_matches": (comm_entry or {}).get("god_matches_played")
+                                 if community is not None else None,
         })
 
     results.sort(key=lambda e: e["name"] or "")

@@ -157,6 +157,9 @@ export interface TierEntry {
   community: number | null;
   tier_ours: "S" | "A" | "B" | "C" | null;
   tier_community: "S" | "A" | "B" | "C" | null;
+  /** Matches behind the community figure. Absent where the score came from
+   *  the aspect fallback, which has no denominator. */
+  community_matches?: number | null;
 }
 
 export interface GodTierEntry extends TierEntry {

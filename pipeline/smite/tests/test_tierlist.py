@@ -43,7 +43,7 @@ def test_god_rankings_ours_is_mean_of_core_slot_scores():
 
     assert result == [{
         "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
-        "ours": pytest.approx(0.5), "community": None,
+        "ours": pytest.approx(0.5), "community": None, "community_matches": None,
     }]
 
 
@@ -76,7 +76,7 @@ def test_god_rankings_god_with_no_builds_at_all_is_all_none():
     result = tierlist.god_rankings(gods, builds=[])
     assert result == [{
         "name": "Solo", "role": "Mid", "damage_type": "Magical",
-        "ours": None, "community": None,
+        "ours": None, "community": None, "community_matches": None,
     }]
 
 
@@ -115,7 +115,7 @@ def test_god_rankings_mode_defaults_to_conquest():
 
     assert default_result == explicit_result == [{
         "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
-        "ours": pytest.approx(0.8), "community": None,
+        "ours": pytest.approx(0.8), "community": None, "community_matches": None,
     }]
 
 
@@ -163,7 +163,7 @@ def test_god_rankings_god_with_only_a_conquest_build_is_unranked_in_joust():
 
     assert result == [{
         "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
-        "ours": None, "community": None,
+        "ours": None, "community": None, "community_matches": None,
     }]
 
 

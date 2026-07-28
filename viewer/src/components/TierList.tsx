@@ -107,6 +107,7 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
   const verdict = verdictOf(tierGap ?? 0);
   const ourStep = tierStep(entry.tier_ours);
   const theirStep = tierStep(entry.tier_community);
+  const matches = typeof entry.community_matches === "number" ? entry.community_matches : null;
 
   return (
     <li>
@@ -118,7 +119,8 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
         // The arithmetic is demoted, not deleted — on hover here, and in full
         // on the entry's own page.
         title={`${entry.name} — model ${scoreText(entry.ours)}${
-          unranked ? "" : ` · community ${scoreText(entry.community)} (${deltaText(delta)})`}`}
+          unranked ? "" : ` · community ${scoreText(entry.community)} (${deltaText(delta)})`}${
+          matches ? ` · ${matches.toLocaleString("en-US")} community matches` : ""}`}
         // Stacked on a phone so the name gets the card's full width — laid
         // out beside the icon it truncated at "Thanatos".
         className={`plane press flex h-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard hover:border-line-strong sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
@@ -146,8 +148,16 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
             <span className="mt-0.5 text-label leading-tight text-muted">no community rating</span>
           ) : (
             <>
+              {/* Stacked rather than wrapped: side by side these two fit on
+                  one line or two depending on the name beside them, which made
+                  a band's cards a different height from the band above it. */}
               <span className={`mt-0.5 text-label leading-tight ${VERDICT_TEXT[verdict]}`}>
                 {VERDICT_WORD[verdict]}
+              </span>
+              {/* What the verdict rests on — the samples run 175 to 2,533, and
+                  every card reads equally sure without it. */}
+              <span aria-hidden="true" className="font-mono text-micro leading-tight text-faint">
+                {matches ? `${matches.toLocaleString("en-US")} matches` : " "}
               </span>
               <span className="mt-1 w-full max-w-[128px]">
                 <TierLadder ourStep={ourStep} theirStep={theirStep} verdict={verdict} />

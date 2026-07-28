@@ -261,16 +261,23 @@ function DivergenceRow({ row }: { row: Divergence }) {
         onClick={() => navigate(toHash.god(row.name))}
         // The arithmetic isn't gone, it's demoted: spoken in full here, on
         // hover in the tooltip, and in full on the god's own page.
-        aria-label={`${row.name}: we place it ${row.tierOurs}, the community places it ${row.tierCommunity} — ${VERDICT_SPOKEN[row.verdict]}. Model score ${row.ours.toFixed(2)}, community ${row.community.toFixed(2)}.`}
-        title={`${row.name} — model ${row.ours.toFixed(2)} · community ${row.community.toFixed(2)} (${deltaText(row.delta)})`}
-        className="press grid w-full grid-cols-[20px_minmax(0,1fr)_auto] items-center gap-x-2 gap-y-1.5 rounded-md px-1.5 py-1.5 text-left transition-colors duration-[150ms] ease-standard hover:bg-bg2"
+        aria-label={`${row.name}: we place it ${row.tierOurs}, the community places it ${row.tierCommunity} — ${VERDICT_SPOKEN[row.verdict]}. Model score ${row.ours.toFixed(2)}, community ${row.community.toFixed(2)}${
+          row.communityMatches ? ` over ${row.communityMatches.toLocaleString("en-US")} matches` : ""}.`}
+        title={`${row.name} — model ${row.ours.toFixed(2)} · community ${row.community.toFixed(2)} (${deltaText(row.delta)})${
+          row.communityMatches ? ` · ${row.communityMatches.toLocaleString("en-US")} community matches` : ""}`}
+        className="press grid w-full grid-cols-[20px_minmax(0,1fr)_auto_auto] items-center gap-x-2 gap-y-1.5 rounded-md px-1.5 py-1.5 text-left transition-colors duration-[150ms] ease-standard hover:bg-bg2"
       >
         <GodIcon name={row.name} className="h-5 w-5" />
         <span className="truncate font-display text-small font-semibold text-ink">{row.name}</span>
         <span aria-hidden="true" className={`shrink-0 text-label ${VERDICT_TEXT[row.verdict]}`}>
           {VERDICT_WORD[row.verdict]}
         </span>
-        <span className="col-span-3 block">
+        {/* How much play the verdict rests on. Two rows read as equally sure
+            without it, and the thinnest here is 175 matches against 2,533. */}
+        <span aria-hidden="true" className="shrink-0 font-mono text-micro text-faint">
+          {row.communityMatches ? row.communityMatches.toLocaleString("en-US") : ""}
+        </span>
+        <span className="col-span-4 block">
           <TierLadder ourStep={row.ourStep} theirStep={row.theirStep} verdict={row.verdict} />
         </span>
       </button>

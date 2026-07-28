@@ -119154,6 +119154,7 @@
         "damage_type": "magical",
         "ours": 0.49499999999999994,
         "community": 0.5967384138185635,
+        "community_matches": 703,
         "tier_ours": "B",
         "tier_community": "S"
       },
@@ -119163,6 +119164,7 @@
         "damage_type": "physical",
         "ours": 0.47,
         "community": 0.5803975086487336,
+        "community_matches": 1232,
         "tier_ours": "C",
         "tier_community": "S"
       },
@@ -119172,6 +119174,7 @@
         "damage_type": "physical",
         "ours": 0.48666666666666664,
         "community": 0.5699053489287655,
+        "community_matches": 1525,
         "tier_ours": "B",
         "tier_community": "S"
       },
@@ -119181,6 +119184,7 @@
         "damage_type": "physical",
         "ours": 0.4783333333333333,
         "community": 0.5658302208271567,
+        "community_matches": 1927,
         "tier_ours": "B",
         "tier_community": "S"
       },
@@ -119190,6 +119194,7 @@
         "damage_type": "physical",
         "ours": 0.4716666666666667,
         "community": 0.5629538833819431,
+        "community_matches": 833,
         "tier_ours": "B",
         "tier_community": "S"
       },
@@ -119199,6 +119204,7 @@
         "damage_type": "magical",
         "ours": 0.48333333333333334,
         "community": 0.5569059100475042,
+        "community_matches": 1025,
         "tier_ours": "B",
         "tier_community": "S"
       },
@@ -119208,6 +119214,7 @@
         "damage_type": "magical",
         "ours": 0.49666666666666676,
         "community": 0.5558572447991482,
+        "community_matches": 2533,
         "tier_ours": "B",
         "tier_community": "S"
       },
@@ -119217,6 +119224,7 @@
         "damage_type": "magical",
         "ours": 0.48500000000000004,
         "community": 0.5544825200930616,
+        "community_matches": 819,
         "tier_ours": "B",
         "tier_community": "S"
       },
@@ -119226,6 +119234,7 @@
         "damage_type": "magical",
         "ours": 0.5133333333333333,
         "community": 0.5520691525459129,
+        "community_matches": 768,
         "tier_ours": "A",
         "tier_community": "S"
       },
@@ -119235,6 +119244,7 @@
         "damage_type": "magical",
         "ours": 0.525,
         "community": 0.5520111292791388,
+        "community_matches": 2038,
         "tier_ours": "S",
         "tier_community": "A"
       },
@@ -119244,6 +119254,7 @@
         "damage_type": "physical",
         "ours": 0.4816666666666667,
         "community": 0.5495975104361766,
+        "community_matches": 1001,
         "tier_ours": "B",
         "tier_community": "A"
       },
@@ -119253,6 +119264,7 @@
         "damage_type": "magical",
         "ours": 0.4883333333333333,
         "community": 0.5489004641985161,
+        "community_matches": 1425,
         "tier_ours": "B",
         "tier_community": "A"
       },
@@ -119262,6 +119274,7 @@
         "damage_type": "physical",
         "ours": 0.44999999999999996,
         "community": 0.5482996828412666,
+        "community_matches": 943,
         "tier_ours": "C",
         "tier_community": "A"
       },
@@ -119271,6 +119284,7 @@
         "damage_type": "physical",
         "ours": 0.47500000000000003,
         "community": 0.5339986327812133,
+        "community_matches": 764,
         "tier_ours": "B",
         "tier_community": "A"
       },
@@ -119280,6 +119294,7 @@
         "damage_type": "physical",
         "ours": 0.545,
         "community": 0.5314794628429236,
+        "community_matches": 1034,
         "tier_ours": "S",
         "tier_community": "A"
       },
@@ -119289,6 +119304,7 @@
         "damage_type": "magical",
         "ours": 0.5183333333333333,
         "community": 0.5311927480857401,
+        "community_matches": 726,
         "tier_ours": "A",
         "tier_community": "A"
       },
@@ -119298,6 +119314,7 @@
         "damage_type": "magical",
         "ours": 0.51,
         "community": 0.5301480847202966,
+        "community_matches": 1176,
         "tier_ours": "A",
         "tier_community": "A"
       },
@@ -119307,6 +119324,7 @@
         "damage_type": "physical",
         "ours": 0.465,
         "community": 0.5299915764544672,
+        "community_matches": 1068,
         "tier_ours": "C",
         "tier_community": "A"
       },
@@ -119316,6 +119334,7 @@
         "damage_type": "magical",
         "ours": 0.48999999999999994,
         "community": 0.5297903218692698,
+        "community_matches": 466,
         "tier_ours": "B",
         "tier_community": "A"
       },
@@ -119325,6 +119344,7 @@
         "damage_type": "magical",
         "ours": 0.505,
         "community": 0.5286509166374382,
+        "community_matches": 556,
         "tier_ours": "A",
         "tier_community": "A"
       },
@@ -119334,6 +119354,7 @@
         "damage_type": "physical",
         "ours": 0.4466666666666666,
         "community": 0.5260292771555822,
+        "community_matches": 858,
         "tier_ours": "C",
         "tier_community": "A"
       },
@@ -119343,6 +119364,7 @@
         "damage_type": "magical",
         "ours": 0.48666666666666664,
         "community": 0.5238630400990496,
+        "community_matches": 954,
         "tier_ours": "B",
         "tier_community": "A"
       },
@@ -119352,6 +119374,7 @@
         "damage_type": "physical",
         "ours": 0.48499999999999993,
         "community": 0.5234884265352863,
+        "community_matches": 1066,
         "tier_ours": "B",
         "tier_community": "A"
       },
@@ -119361,6 +119384,7 @@
         "damage_type": "physical",
         "ours": 0.5383333333333333,
         "community": 0.5219107485685894,
+        "community_matches": 1222,
         "tier_ours": "S",
         "tier_community": "A"
       },
@@ -119370,6 +119394,7 @@
         "damage_type": "physical",
         "ours": 0.4483333333333334,
         "community": 0.5212492263947067,
+        "community_matches": 795,
         "tier_ours": "C",
         "tier_community": "A"
       },
@@ -119379,6 +119404,7 @@
         "damage_type": "magical",
         "ours": 0.5083333333333333,
         "community": 0.5210621646515827,
+        "community_matches": 760,
         "tier_ours": "A",
         "tier_community": "A"
       },
@@ -119388,6 +119414,7 @@
         "damage_type": "magical",
         "ours": 0.4916666666666667,
         "community": 0.5194024655225751,
+        "community_matches": 1179,
         "tier_ours": "B",
         "tier_community": "A"
       },
@@ -119397,6 +119424,7 @@
         "damage_type": "physical",
         "ours": 0.47833333333333333,
         "community": 0.5178867323224409,
+        "community_matches": 430,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119406,6 +119434,7 @@
         "damage_type": "physical",
         "ours": 0.5416666666666666,
         "community": 0.5158152395680552,
+        "community_matches": 959,
         "tier_ours": "S",
         "tier_community": "B"
       },
@@ -119415,6 +119444,7 @@
         "damage_type": "physical",
         "ours": 0.4466666666666666,
         "community": 0.5157405918062185,
+        "community_matches": 914,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119424,6 +119454,7 @@
         "damage_type": "magical",
         "ours": 0.5216666666666667,
         "community": 0.5152773052775856,
+        "community_matches": 682,
         "tier_ours": "A",
         "tier_community": "B"
       },
@@ -119433,6 +119464,7 @@
         "damage_type": "physical",
         "ours": 0.4833333333333334,
         "community": 0.514107812306237,
+        "community_matches": 2221,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119442,6 +119474,7 @@
         "damage_type": "physical",
         "ours": 0.49166666666666664,
         "community": 0.5139921157079175,
+        "community_matches": 618,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119451,6 +119484,7 @@
         "damage_type": "physical",
         "ours": 0.4483333333333334,
         "community": 0.5136985972155459,
+        "community_matches": 731,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119460,6 +119494,7 @@
         "damage_type": "magical",
         "ours": 0.49666666666666665,
         "community": 0.5107584317114856,
+        "community_matches": 771,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119469,6 +119504,7 @@
         "damage_type": "physical",
         "ours": 0.44500000000000006,
         "community": 0.5100652611744725,
+        "community_matches": 1498,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119478,6 +119514,7 @@
         "damage_type": "magical",
         "ours": 0.515,
         "community": 0.5091840372726558,
+        "community_matches": 973,
         "tier_ours": "A",
         "tier_community": "B"
       },
@@ -119487,6 +119524,7 @@
         "damage_type": "physical",
         "ours": 0.5366666666666667,
         "community": 0.50864024545937,
+        "community_matches": 757,
         "tier_ours": "S",
         "tier_community": "B"
       },
@@ -119496,6 +119534,7 @@
         "damage_type": "physical",
         "ours": 0.5333333333333333,
         "community": 0.508482658532276,
+        "community_matches": 919,
         "tier_ours": "S",
         "tier_community": "B"
       },
@@ -119505,6 +119544,7 @@
         "damage_type": "magical",
         "ours": 0.5183333333333333,
         "community": 0.5076445335603155,
+        "community_matches": 1455,
         "tier_ours": "A",
         "tier_community": "B"
       },
@@ -119514,6 +119554,7 @@
         "damage_type": "magical",
         "ours": 0.5066666666666667,
         "community": 0.5064935466407569,
+        "community_matches": 1676,
         "tier_ours": "A",
         "tier_community": "B"
       },
@@ -119523,6 +119564,7 @@
         "damage_type": "magical",
         "ours": 0.48500000000000004,
         "community": 0.5055460145176357,
+        "community_matches": 1596,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119532,6 +119574,7 @@
         "damage_type": "physical",
         "ours": 0.535,
         "community": 0.5052586079109961,
+        "community_matches": 1481,
         "tier_ours": "S",
         "tier_community": "B"
       },
@@ -119541,6 +119584,7 @@
         "damage_type": "magical",
         "ours": 0.48666666666666664,
         "community": 0.505138100299255,
+        "community_matches": 699,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119550,6 +119594,7 @@
         "damage_type": "physical",
         "ours": 0.4833333333333332,
         "community": 0.504081117997761,
+        "community_matches": 264,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119559,6 +119604,7 @@
         "damage_type": "magical",
         "ours": 0.465,
         "community": 0.5026306399182271,
+        "community_matches": 939,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119568,6 +119614,7 @@
         "damage_type": "physical",
         "ours": 0.4416666666666667,
         "community": 0.4998223042438506,
+        "community_matches": 2291,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119577,6 +119624,7 @@
         "damage_type": "physical",
         "ours": 0.545,
         "community": 0.49792991415950366,
+        "community_matches": 1203,
         "tier_ours": "S",
         "tier_community": "B"
       },
@@ -119586,6 +119634,7 @@
         "damage_type": "physical",
         "ours": 0.445,
         "community": 0.49733648155247523,
+        "community_matches": 696,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119595,6 +119644,7 @@
         "damage_type": "magical",
         "ours": 0.48166666666666663,
         "community": 0.49581834464989755,
+        "community_matches": 772,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119604,6 +119654,7 @@
         "damage_type": "physical",
         "ours": 0.4566666666666667,
         "community": 0.49525469724499993,
+        "community_matches": 767,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119613,6 +119664,7 @@
         "damage_type": "magical",
         "ours": 0.47833333333333333,
         "community": 0.4939317535344585,
+        "community_matches": 1376,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119622,6 +119674,7 @@
         "damage_type": "physical",
         "ours": 0.5299999999999999,
         "community": 0.49232318416767784,
+        "community_matches": 461,
         "tier_ours": "S",
         "tier_community": "B"
       },
@@ -119631,6 +119684,7 @@
         "damage_type": "magical",
         "ours": 0.4883333333333333,
         "community": 0.491983815922615,
+        "community_matches": 1004,
         "tier_ours": "B",
         "tier_community": "B"
       },
@@ -119640,6 +119694,7 @@
         "damage_type": "magical",
         "ours": 0.5083333333333334,
         "community": 0.4919011947920664,
+        "community_matches": 949,
         "tier_ours": "A",
         "tier_community": "B"
       },
@@ -119649,6 +119704,7 @@
         "damage_type": "magical",
         "ours": 0.5083333333333334,
         "community": 0.4885968220850668,
+        "community_matches": 981,
         "tier_ours": "A",
         "tier_community": "B"
       },
@@ -119658,6 +119714,7 @@
         "damage_type": "physical",
         "ours": 0.44999999999999996,
         "community": 0.48731701451453213,
+        "community_matches": 550,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119667,6 +119724,7 @@
         "damage_type": "magical",
         "ours": 0.4566666666666667,
         "community": 0.4872346783985739,
+        "community_matches": 623,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119676,6 +119734,7 @@
         "damage_type": "physical",
         "ours": 0.44500000000000006,
         "community": 0.485544462630445,
+        "community_matches": 1329,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119685,6 +119744,7 @@
         "damage_type": "magical",
         "ours": 0.505,
         "community": 0.4854645909369755,
+        "community_matches": 1099,
         "tier_ours": "A",
         "tier_community": "B"
       },
@@ -119694,6 +119754,7 @@
         "damage_type": "physical",
         "ours": 0.47,
         "community": 0.4849136880473812,
+        "community_matches": 612,
         "tier_ours": "C",
         "tier_community": "B"
       },
@@ -119703,6 +119764,7 @@
         "damage_type": "physical",
         "ours": 0.5133333333333333,
         "community": 0.4848198450887678,
+        "community_matches": 773,
         "tier_ours": "A",
         "tier_community": "C"
       },
@@ -119712,6 +119774,7 @@
         "damage_type": "magical",
         "ours": 0.5116666666666666,
         "community": 0.47639656026529537,
+        "community_matches": 1966,
         "tier_ours": "A",
         "tier_community": "C"
       },
@@ -119721,6 +119784,7 @@
         "damage_type": "magical",
         "ours": 0.5083333333333334,
         "community": 0.4744809157657363,
+        "community_matches": 942,
         "tier_ours": "A",
         "tier_community": "C"
       },
@@ -119730,6 +119794,7 @@
         "damage_type": "magical",
         "ours": 0.48500000000000004,
         "community": 0.47264376774241557,
+        "community_matches": 670,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -119739,6 +119804,7 @@
         "damage_type": "magical",
         "ours": 0.4833333333333332,
         "community": 0.4721011632599568,
+        "community_matches": 628,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -119748,6 +119814,7 @@
         "damage_type": "physical",
         "ours": 0.5216666666666668,
         "community": 0.47053510160899786,
+        "community_matches": 449,
         "tier_ours": "A",
         "tier_community": "C"
       },
@@ -119757,6 +119824,7 @@
         "damage_type": "physical",
         "ours": 0.4666666666666666,
         "community": 0.4698967200239627,
+        "community_matches": 590,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119766,6 +119834,7 @@
         "damage_type": "magical",
         "ours": 0.4833333333333332,
         "community": 0.4656093849583695,
+        "community_matches": 587,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -119775,6 +119844,7 @@
         "damage_type": "physical",
         "ours": 0.4749999999999999,
         "community": 0.4641158408412462,
+        "community_matches": 742,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -119784,6 +119854,7 @@
         "damage_type": "magical",
         "ours": 0.4833333333333332,
         "community": 0.45858158335652094,
+        "community_matches": 556,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -119793,6 +119864,7 @@
         "damage_type": "physical",
         "ours": 0.47666666666666657,
         "community": 0.4569990102567648,
+        "community_matches": 922,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -119802,6 +119874,7 @@
         "damage_type": "physical",
         "ours": 0.4716666666666666,
         "community": 0.45665426382828106,
+        "community_matches": 1001,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119811,6 +119884,7 @@
         "damage_type": "magical",
         "ours": 0.4633333333333334,
         "community": 0.451516688517158,
+        "community_matches": 662,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119820,6 +119894,7 @@
         "damage_type": "physical",
         "ours": 0.45500000000000007,
         "community": 0.4506082321879066,
+        "community_matches": 642,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119829,6 +119904,7 @@
         "damage_type": "physical",
         "ours": 0.445,
         "community": 0.44731489161857024,
+        "community_matches": 653,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119838,6 +119914,7 @@
         "damage_type": "magical",
         "ours": 0.45166666666666666,
         "community": 0.44332137794093635,
+        "community_matches": 2015,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119847,6 +119924,7 @@
         "damage_type": "magical",
         "ours": 0.4549999999999999,
         "community": 0.4393812583752268,
+        "community_matches": 305,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119856,6 +119934,7 @@
         "damage_type": "physical",
         "ours": 0.4633333333333333,
         "community": 0.4363823817307961,
+        "community_matches": 522,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119865,6 +119944,7 @@
         "damage_type": "magical",
         "ours": 0.47666666666666657,
         "community": 0.43605928604548333,
+        "community_matches": 518,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -119874,6 +119954,7 @@
         "damage_type": "physical",
         "ours": 0.47000000000000003,
         "community": 0.43511677755626416,
+        "community_matches": 175,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119883,6 +119964,7 @@
         "damage_type": "physical",
         "ours": 0.45500000000000007,
         "community": 0.4337497512941408,
+        "community_matches": 272,
         "tier_ours": "C",
         "tier_community": "C"
       },
@@ -119892,6 +119974,7 @@
         "damage_type": "magical",
         "ours": 0.4983333333333333,
         "community": 0.43309057219089464,
+        "community_matches": 392,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -119901,6 +119984,7 @@
         "damage_type": "magical",
         "ours": 0.5016666666666667,
         "community": 0.4274112845997827,
+        "community_matches": 355,
         "tier_ours": "A",
         "tier_community": "C"
       },
@@ -119910,6 +119994,7 @@
         "damage_type": "physical",
         "ours": 0.4916666666666667,
         "community": 0.42594315460351667,
+        "community_matches": 222,
         "tier_ours": "B",
         "tier_community": "C"
       },
@@ -119919,6 +120004,7 @@
         "damage_type": "physical",
         "ours": 0.505,
         "community": 0.4146192810779099,
+        "community_matches": 443,
         "tier_ours": "A",
         "tier_community": "C"
       },
@@ -119928,6 +120014,7 @@
         "damage_type": "magical",
         "ours": 0.48,
         "community": 0.3722850601601,
+        "community_matches": 360,
         "tier_ours": "B",
         "tier_community": "C"
       }
@@ -121373,6 +121460,7 @@
           "damage_type": "magical",
           "ours": 0.49499999999999994,
           "community": 0.5967384138185635,
+          "community_matches": 703,
           "tier_ours": "B",
           "tier_community": "S"
         },
@@ -121382,6 +121470,7 @@
           "damage_type": "physical",
           "ours": 0.47,
           "community": 0.5803975086487336,
+          "community_matches": 1232,
           "tier_ours": "C",
           "tier_community": "S"
         },
@@ -121391,6 +121480,7 @@
           "damage_type": "physical",
           "ours": 0.48666666666666664,
           "community": 0.5699053489287655,
+          "community_matches": 1525,
           "tier_ours": "B",
           "tier_community": "S"
         },
@@ -121400,6 +121490,7 @@
           "damage_type": "physical",
           "ours": 0.4783333333333333,
           "community": 0.5658302208271567,
+          "community_matches": 1927,
           "tier_ours": "B",
           "tier_community": "S"
         },
@@ -121409,6 +121500,7 @@
           "damage_type": "physical",
           "ours": 0.4716666666666667,
           "community": 0.5629538833819431,
+          "community_matches": 833,
           "tier_ours": "B",
           "tier_community": "S"
         },
@@ -121418,6 +121510,7 @@
           "damage_type": "magical",
           "ours": 0.48333333333333334,
           "community": 0.5569059100475042,
+          "community_matches": 1025,
           "tier_ours": "B",
           "tier_community": "S"
         },
@@ -121427,6 +121520,7 @@
           "damage_type": "magical",
           "ours": 0.49666666666666676,
           "community": 0.5558572447991482,
+          "community_matches": 2533,
           "tier_ours": "B",
           "tier_community": "S"
         },
@@ -121436,6 +121530,7 @@
           "damage_type": "magical",
           "ours": 0.48500000000000004,
           "community": 0.5544825200930616,
+          "community_matches": 819,
           "tier_ours": "B",
           "tier_community": "S"
         },
@@ -121445,6 +121540,7 @@
           "damage_type": "magical",
           "ours": 0.5133333333333333,
           "community": 0.5520691525459129,
+          "community_matches": 768,
           "tier_ours": "A",
           "tier_community": "S"
         },
@@ -121454,6 +121550,7 @@
           "damage_type": "magical",
           "ours": 0.525,
           "community": 0.5520111292791388,
+          "community_matches": 2038,
           "tier_ours": "S",
           "tier_community": "A"
         },
@@ -121463,6 +121560,7 @@
           "damage_type": "physical",
           "ours": 0.4816666666666667,
           "community": 0.5495975104361766,
+          "community_matches": 1001,
           "tier_ours": "B",
           "tier_community": "A"
         },
@@ -121472,6 +121570,7 @@
           "damage_type": "magical",
           "ours": 0.4883333333333333,
           "community": 0.5489004641985161,
+          "community_matches": 1425,
           "tier_ours": "B",
           "tier_community": "A"
         },
@@ -121481,6 +121580,7 @@
           "damage_type": "physical",
           "ours": 0.44999999999999996,
           "community": 0.5482996828412666,
+          "community_matches": 943,
           "tier_ours": "C",
           "tier_community": "A"
         },
@@ -121490,6 +121590,7 @@
           "damage_type": "physical",
           "ours": 0.47500000000000003,
           "community": 0.5339986327812133,
+          "community_matches": 764,
           "tier_ours": "B",
           "tier_community": "A"
         },
@@ -121499,6 +121600,7 @@
           "damage_type": "physical",
           "ours": 0.545,
           "community": 0.5314794628429236,
+          "community_matches": 1034,
           "tier_ours": "S",
           "tier_community": "A"
         },
@@ -121508,6 +121610,7 @@
           "damage_type": "magical",
           "ours": 0.5183333333333333,
           "community": 0.5311927480857401,
+          "community_matches": 726,
           "tier_ours": "A",
           "tier_community": "A"
         },
@@ -121517,6 +121620,7 @@
           "damage_type": "magical",
           "ours": 0.51,
           "community": 0.5301480847202966,
+          "community_matches": 1176,
           "tier_ours": "A",
           "tier_community": "A"
         },
@@ -121526,6 +121630,7 @@
           "damage_type": "physical",
           "ours": 0.465,
           "community": 0.5299915764544672,
+          "community_matches": 1068,
           "tier_ours": "C",
           "tier_community": "A"
         },
@@ -121535,6 +121640,7 @@
           "damage_type": "magical",
           "ours": 0.48999999999999994,
           "community": 0.5297903218692698,
+          "community_matches": 466,
           "tier_ours": "B",
           "tier_community": "A"
         },
@@ -121544,6 +121650,7 @@
           "damage_type": "magical",
           "ours": 0.505,
           "community": 0.5286509166374382,
+          "community_matches": 556,
           "tier_ours": "A",
           "tier_community": "A"
         },
@@ -121553,6 +121660,7 @@
           "damage_type": "physical",
           "ours": 0.4466666666666666,
           "community": 0.5260292771555822,
+          "community_matches": 858,
           "tier_ours": "C",
           "tier_community": "A"
         },
@@ -121562,6 +121670,7 @@
           "damage_type": "magical",
           "ours": 0.48666666666666664,
           "community": 0.5238630400990496,
+          "community_matches": 954,
           "tier_ours": "B",
           "tier_community": "A"
         },
@@ -121571,6 +121680,7 @@
           "damage_type": "physical",
           "ours": 0.48499999999999993,
           "community": 0.5234884265352863,
+          "community_matches": 1066,
           "tier_ours": "B",
           "tier_community": "A"
         },
@@ -121580,6 +121690,7 @@
           "damage_type": "physical",
           "ours": 0.5383333333333333,
           "community": 0.5219107485685894,
+          "community_matches": 1222,
           "tier_ours": "S",
           "tier_community": "A"
         },
@@ -121589,6 +121700,7 @@
           "damage_type": "physical",
           "ours": 0.4483333333333334,
           "community": 0.5212492263947067,
+          "community_matches": 795,
           "tier_ours": "C",
           "tier_community": "A"
         },
@@ -121598,6 +121710,7 @@
           "damage_type": "magical",
           "ours": 0.5083333333333333,
           "community": 0.5210621646515827,
+          "community_matches": 760,
           "tier_ours": "A",
           "tier_community": "A"
         },
@@ -121607,6 +121720,7 @@
           "damage_type": "magical",
           "ours": 0.4916666666666667,
           "community": 0.5194024655225751,
+          "community_matches": 1179,
           "tier_ours": "B",
           "tier_community": "A"
         },
@@ -121616,6 +121730,7 @@
           "damage_type": "physical",
           "ours": 0.47833333333333333,
           "community": 0.5178867323224409,
+          "community_matches": 430,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121625,6 +121740,7 @@
           "damage_type": "physical",
           "ours": 0.5416666666666666,
           "community": 0.5158152395680552,
+          "community_matches": 959,
           "tier_ours": "S",
           "tier_community": "B"
         },
@@ -121634,6 +121750,7 @@
           "damage_type": "physical",
           "ours": 0.4466666666666666,
           "community": 0.5157405918062185,
+          "community_matches": 914,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121643,6 +121760,7 @@
           "damage_type": "magical",
           "ours": 0.5216666666666667,
           "community": 0.5152773052775856,
+          "community_matches": 682,
           "tier_ours": "A",
           "tier_community": "B"
         },
@@ -121652,6 +121770,7 @@
           "damage_type": "physical",
           "ours": 0.4833333333333334,
           "community": 0.514107812306237,
+          "community_matches": 2221,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121661,6 +121780,7 @@
           "damage_type": "physical",
           "ours": 0.49166666666666664,
           "community": 0.5139921157079175,
+          "community_matches": 618,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121670,6 +121790,7 @@
           "damage_type": "physical",
           "ours": 0.4483333333333334,
           "community": 0.5136985972155459,
+          "community_matches": 731,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121679,6 +121800,7 @@
           "damage_type": "magical",
           "ours": 0.49666666666666665,
           "community": 0.5107584317114856,
+          "community_matches": 771,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121688,6 +121810,7 @@
           "damage_type": "physical",
           "ours": 0.44500000000000006,
           "community": 0.5100652611744725,
+          "community_matches": 1498,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121697,6 +121820,7 @@
           "damage_type": "magical",
           "ours": 0.515,
           "community": 0.5091840372726558,
+          "community_matches": 973,
           "tier_ours": "A",
           "tier_community": "B"
         },
@@ -121706,6 +121830,7 @@
           "damage_type": "physical",
           "ours": 0.5366666666666667,
           "community": 0.50864024545937,
+          "community_matches": 757,
           "tier_ours": "S",
           "tier_community": "B"
         },
@@ -121715,6 +121840,7 @@
           "damage_type": "physical",
           "ours": 0.5333333333333333,
           "community": 0.508482658532276,
+          "community_matches": 919,
           "tier_ours": "S",
           "tier_community": "B"
         },
@@ -121724,6 +121850,7 @@
           "damage_type": "magical",
           "ours": 0.5183333333333333,
           "community": 0.5076445335603155,
+          "community_matches": 1455,
           "tier_ours": "A",
           "tier_community": "B"
         },
@@ -121733,6 +121860,7 @@
           "damage_type": "magical",
           "ours": 0.5066666666666667,
           "community": 0.5064935466407569,
+          "community_matches": 1676,
           "tier_ours": "A",
           "tier_community": "B"
         },
@@ -121742,6 +121870,7 @@
           "damage_type": "magical",
           "ours": 0.48500000000000004,
           "community": 0.5055460145176357,
+          "community_matches": 1596,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121751,6 +121880,7 @@
           "damage_type": "physical",
           "ours": 0.535,
           "community": 0.5052586079109961,
+          "community_matches": 1481,
           "tier_ours": "S",
           "tier_community": "B"
         },
@@ -121760,6 +121890,7 @@
           "damage_type": "magical",
           "ours": 0.48666666666666664,
           "community": 0.505138100299255,
+          "community_matches": 699,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121769,6 +121900,7 @@
           "damage_type": "physical",
           "ours": 0.4833333333333332,
           "community": 0.504081117997761,
+          "community_matches": 264,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121778,6 +121910,7 @@
           "damage_type": "magical",
           "ours": 0.465,
           "community": 0.5026306399182271,
+          "community_matches": 939,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121787,6 +121920,7 @@
           "damage_type": "physical",
           "ours": 0.4416666666666667,
           "community": 0.4998223042438506,
+          "community_matches": 2291,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121796,6 +121930,7 @@
           "damage_type": "physical",
           "ours": 0.545,
           "community": 0.49792991415950366,
+          "community_matches": 1203,
           "tier_ours": "S",
           "tier_community": "B"
         },
@@ -121805,6 +121940,7 @@
           "damage_type": "physical",
           "ours": 0.445,
           "community": 0.49733648155247523,
+          "community_matches": 696,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121814,6 +121950,7 @@
           "damage_type": "magical",
           "ours": 0.48166666666666663,
           "community": 0.49581834464989755,
+          "community_matches": 772,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121823,6 +121960,7 @@
           "damage_type": "physical",
           "ours": 0.4566666666666667,
           "community": 0.49525469724499993,
+          "community_matches": 767,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121832,6 +121970,7 @@
           "damage_type": "magical",
           "ours": 0.47833333333333333,
           "community": 0.4939317535344585,
+          "community_matches": 1376,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121841,6 +121980,7 @@
           "damage_type": "physical",
           "ours": 0.5299999999999999,
           "community": 0.49232318416767784,
+          "community_matches": 461,
           "tier_ours": "S",
           "tier_community": "B"
         },
@@ -121850,6 +121990,7 @@
           "damage_type": "magical",
           "ours": 0.4883333333333333,
           "community": 0.491983815922615,
+          "community_matches": 1004,
           "tier_ours": "B",
           "tier_community": "B"
         },
@@ -121859,6 +122000,7 @@
           "damage_type": "magical",
           "ours": 0.5083333333333334,
           "community": 0.4919011947920664,
+          "community_matches": 949,
           "tier_ours": "A",
           "tier_community": "B"
         },
@@ -121868,6 +122010,7 @@
           "damage_type": "magical",
           "ours": 0.5083333333333334,
           "community": 0.4885968220850668,
+          "community_matches": 981,
           "tier_ours": "A",
           "tier_community": "B"
         },
@@ -121877,6 +122020,7 @@
           "damage_type": "physical",
           "ours": 0.44999999999999996,
           "community": 0.48731701451453213,
+          "community_matches": 550,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121886,6 +122030,7 @@
           "damage_type": "magical",
           "ours": 0.4566666666666667,
           "community": 0.4872346783985739,
+          "community_matches": 623,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121895,6 +122040,7 @@
           "damage_type": "physical",
           "ours": 0.44500000000000006,
           "community": 0.485544462630445,
+          "community_matches": 1329,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121904,6 +122050,7 @@
           "damage_type": "magical",
           "ours": 0.505,
           "community": 0.4854645909369755,
+          "community_matches": 1099,
           "tier_ours": "A",
           "tier_community": "B"
         },
@@ -121913,6 +122060,7 @@
           "damage_type": "physical",
           "ours": 0.47,
           "community": 0.4849136880473812,
+          "community_matches": 612,
           "tier_ours": "C",
           "tier_community": "B"
         },
@@ -121922,6 +122070,7 @@
           "damage_type": "physical",
           "ours": 0.5133333333333333,
           "community": 0.4848198450887678,
+          "community_matches": 773,
           "tier_ours": "A",
           "tier_community": "C"
         },
@@ -121931,6 +122080,7 @@
           "damage_type": "magical",
           "ours": 0.5116666666666666,
           "community": 0.47639656026529537,
+          "community_matches": 1966,
           "tier_ours": "A",
           "tier_community": "C"
         },
@@ -121940,6 +122090,7 @@
           "damage_type": "magical",
           "ours": 0.5083333333333334,
           "community": 0.4744809157657363,
+          "community_matches": 942,
           "tier_ours": "A",
           "tier_community": "C"
         },
@@ -121949,6 +122100,7 @@
           "damage_type": "magical",
           "ours": 0.48500000000000004,
           "community": 0.47264376774241557,
+          "community_matches": 670,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -121958,6 +122110,7 @@
           "damage_type": "magical",
           "ours": 0.4833333333333332,
           "community": 0.4721011632599568,
+          "community_matches": 628,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -121967,6 +122120,7 @@
           "damage_type": "physical",
           "ours": 0.5216666666666668,
           "community": 0.47053510160899786,
+          "community_matches": 449,
           "tier_ours": "A",
           "tier_community": "C"
         },
@@ -121976,6 +122130,7 @@
           "damage_type": "physical",
           "ours": 0.4666666666666666,
           "community": 0.4698967200239627,
+          "community_matches": 590,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -121985,6 +122140,7 @@
           "damage_type": "magical",
           "ours": 0.4833333333333332,
           "community": 0.4656093849583695,
+          "community_matches": 587,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -121994,6 +122150,7 @@
           "damage_type": "physical",
           "ours": 0.4749999999999999,
           "community": 0.4641158408412462,
+          "community_matches": 742,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -122003,6 +122160,7 @@
           "damage_type": "magical",
           "ours": 0.4833333333333332,
           "community": 0.45858158335652094,
+          "community_matches": 556,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -122012,6 +122170,7 @@
           "damage_type": "physical",
           "ours": 0.47666666666666657,
           "community": 0.4569990102567648,
+          "community_matches": 922,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -122021,6 +122180,7 @@
           "damage_type": "physical",
           "ours": 0.4716666666666666,
           "community": 0.45665426382828106,
+          "community_matches": 1001,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -122030,6 +122190,7 @@
           "damage_type": "magical",
           "ours": 0.4633333333333334,
           "community": 0.451516688517158,
+          "community_matches": 662,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -122039,6 +122200,7 @@
           "damage_type": "physical",
           "ours": 0.45500000000000007,
           "community": 0.4506082321879066,
+          "community_matches": 642,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -122048,6 +122210,7 @@
           "damage_type": "physical",
           "ours": 0.445,
           "community": 0.44731489161857024,
+          "community_matches": 653,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -122057,6 +122220,7 @@
           "damage_type": "magical",
           "ours": 0.45166666666666666,
           "community": 0.44332137794093635,
+          "community_matches": 2015,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -122066,6 +122230,7 @@
           "damage_type": "magical",
           "ours": 0.4549999999999999,
           "community": 0.4393812583752268,
+          "community_matches": 305,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -122075,6 +122240,7 @@
           "damage_type": "physical",
           "ours": 0.4633333333333333,
           "community": 0.4363823817307961,
+          "community_matches": 522,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -122084,6 +122250,7 @@
           "damage_type": "magical",
           "ours": 0.47666666666666657,
           "community": 0.43605928604548333,
+          "community_matches": 518,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -122093,6 +122260,7 @@
           "damage_type": "physical",
           "ours": 0.47000000000000003,
           "community": 0.43511677755626416,
+          "community_matches": 175,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -122102,6 +122270,7 @@
           "damage_type": "physical",
           "ours": 0.45500000000000007,
           "community": 0.4337497512941408,
+          "community_matches": 272,
           "tier_ours": "C",
           "tier_community": "C"
         },
@@ -122111,6 +122280,7 @@
           "damage_type": "magical",
           "ours": 0.4983333333333333,
           "community": 0.43309057219089464,
+          "community_matches": 392,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -122120,6 +122290,7 @@
           "damage_type": "magical",
           "ours": 0.5016666666666667,
           "community": 0.4274112845997827,
+          "community_matches": 355,
           "tier_ours": "A",
           "tier_community": "C"
         },
@@ -122129,6 +122300,7 @@
           "damage_type": "physical",
           "ours": 0.4916666666666667,
           "community": 0.42594315460351667,
+          "community_matches": 222,
           "tier_ours": "B",
           "tier_community": "C"
         },
@@ -122138,6 +122310,7 @@
           "damage_type": "physical",
           "ours": 0.505,
           "community": 0.4146192810779099,
+          "community_matches": 443,
           "tier_ours": "A",
           "tier_community": "C"
         },
@@ -122147,6 +122320,7 @@
           "damage_type": "magical",
           "ours": 0.48,
           "community": 0.3722850601601,
+          "community_matches": 360,
           "tier_ours": "B",
           "tier_community": "C"
         }
@@ -123593,6 +123767,7 @@
           "damage_type": "physical",
           "ours": 0.5516666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123602,6 +123777,7 @@
           "damage_type": "magical",
           "ours": 0.6333333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -123611,6 +123787,7 @@
           "damage_type": "magical",
           "ours": 0.6333333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -123620,6 +123797,7 @@
           "damage_type": "magical",
           "ours": 0.5916666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123629,6 +123807,7 @@
           "damage_type": "physical",
           "ours": 0.5833333333333334,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123638,6 +123817,7 @@
           "damage_type": "physical",
           "ours": 0.48,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123647,6 +123827,7 @@
           "damage_type": "magical",
           "ours": 0.6333333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -123656,6 +123837,7 @@
           "damage_type": "magical",
           "ours": 0.54,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123665,6 +123847,7 @@
           "damage_type": "physical",
           "ours": 0.48,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123674,6 +123857,7 @@
           "damage_type": "magical",
           "ours": 0.6166666666666666,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123683,6 +123867,7 @@
           "damage_type": "physical",
           "ours": 0.48,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123692,6 +123877,7 @@
           "damage_type": "magical",
           "ours": 0.6583333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -123701,6 +123887,7 @@
           "damage_type": "magical",
           "ours": 0.62,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123710,6 +123897,7 @@
           "damage_type": "magical",
           "ours": 0.6166666666666666,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123719,6 +123907,7 @@
           "damage_type": "physical",
           "ours": 0.69,
           "community": null,
+          "community_matches": null,
           "tier_ours": "S",
           "tier_community": null
         },
@@ -123728,6 +123917,7 @@
           "damage_type": "magical",
           "ours": 0.62,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123737,6 +123927,7 @@
           "damage_type": "magical",
           "ours": 0.535,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123746,6 +123937,7 @@
           "damage_type": "physical",
           "ours": 0.69,
           "community": null,
+          "community_matches": null,
           "tier_ours": "S",
           "tier_community": null
         },
@@ -123755,6 +123947,7 @@
           "damage_type": "physical",
           "ours": 0.5833333333333334,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123764,6 +123957,7 @@
           "damage_type": "magical",
           "ours": 0.6216666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123773,6 +123967,7 @@
           "damage_type": "magical",
           "ours": 0.5866666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123782,6 +123977,7 @@
           "damage_type": "physical",
           "ours": 0.48166666666666663,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123791,6 +123987,7 @@
           "damage_type": "physical",
           "ours": 0.555,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123800,6 +123997,7 @@
           "damage_type": "magical",
           "ours": 0.6166666666666666,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123809,6 +124007,7 @@
           "damage_type": "physical",
           "ours": 0.48,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123818,6 +124017,7 @@
           "damage_type": "magical",
           "ours": 0.515,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123827,6 +124027,7 @@
           "damage_type": "physical",
           "ours": 0.4716666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123836,6 +124037,7 @@
           "damage_type": "physical",
           "ours": 0.6649999999999999,
           "community": null,
+          "community_matches": null,
           "tier_ours": "S",
           "tier_community": null
         },
@@ -123845,6 +124047,7 @@
           "damage_type": "physical",
           "ours": 0.4883333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123854,6 +124057,7 @@
           "damage_type": "magical",
           "ours": 0.6333333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -123863,6 +124067,7 @@
           "damage_type": "magical",
           "ours": 0.6283333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -123872,6 +124077,7 @@
           "damage_type": "physical",
           "ours": 0.69,
           "community": null,
+          "community_matches": null,
           "tier_ours": "S",
           "tier_community": null
         },
@@ -123881,6 +124087,7 @@
           "damage_type": "magical",
           "ours": 0.61,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123890,6 +124097,7 @@
           "damage_type": "magical",
           "ours": 0.6599999999999999,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -123899,6 +124107,7 @@
           "damage_type": "physical",
           "ours": 0.48999999999999994,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123908,6 +124117,7 @@
           "damage_type": "physical",
           "ours": 0.5466666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123917,6 +124127,7 @@
           "damage_type": "magical",
           "ours": 0.5283333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123926,6 +124137,7 @@
           "damage_type": "magical",
           "ours": 0.6283333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -123935,6 +124147,7 @@
           "damage_type": "physical",
           "ours": 0.5833333333333334,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123944,6 +124157,7 @@
           "damage_type": "physical",
           "ours": 0.5966666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123953,6 +124167,7 @@
           "damage_type": "physical",
           "ours": 0.47833333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123962,6 +124177,7 @@
           "damage_type": "physical",
           "ours": 0.5616666666666666,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -123971,6 +124187,7 @@
           "damage_type": "physical",
           "ours": 0.69,
           "community": null,
+          "community_matches": null,
           "tier_ours": "S",
           "tier_community": null
         },
@@ -123980,6 +124197,7 @@
           "damage_type": "physical",
           "ours": 0.49666666666666665,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123989,6 +124207,7 @@
           "damage_type": "physical",
           "ours": 0.4733333333333334,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -123998,6 +124217,7 @@
           "damage_type": "magical",
           "ours": 0.6366666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124007,6 +124227,7 @@
           "damage_type": "physical",
           "ours": 0.49333333333333335,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124016,6 +124237,7 @@
           "damage_type": "magical",
           "ours": 0.5666666666666668,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124025,6 +124247,7 @@
           "damage_type": "physical",
           "ours": 0.5183333333333332,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124034,6 +124257,7 @@
           "damage_type": "magical",
           "ours": 0.61,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124043,6 +124267,7 @@
           "damage_type": "magical",
           "ours": 0.6333333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124052,6 +124277,7 @@
           "damage_type": "physical",
           "ours": 0.69,
           "community": null,
+          "community_matches": null,
           "tier_ours": "S",
           "tier_community": null
         },
@@ -124061,6 +124287,7 @@
           "damage_type": "physical",
           "ours": 0.4733333333333334,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124070,6 +124297,7 @@
           "damage_type": "physical",
           "ours": 0.6033333333333334,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124079,6 +124307,7 @@
           "damage_type": "magical",
           "ours": 0.6383333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124088,6 +124317,7 @@
           "damage_type": "physical",
           "ours": 0.5599999999999999,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124097,6 +124327,7 @@
           "damage_type": "magical",
           "ours": 0.6333333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124106,6 +124337,7 @@
           "damage_type": "physical",
           "ours": 0.6649999999999999,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124115,6 +124347,7 @@
           "damage_type": "physical",
           "ours": 0.47500000000000003,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124124,6 +124357,7 @@
           "damage_type": "physical",
           "ours": 0.5183333333333332,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124133,6 +124367,7 @@
           "damage_type": "magical",
           "ours": 0.6333333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124142,6 +124377,7 @@
           "damage_type": "magical",
           "ours": 0.5116666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124151,6 +124387,7 @@
           "damage_type": "physical",
           "ours": 0.5583333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124160,6 +124397,7 @@
           "damage_type": "physical",
           "ours": 0.5033333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124169,6 +124407,7 @@
           "damage_type": "physical",
           "ours": 0.6649999999999999,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124178,6 +124417,7 @@
           "damage_type": "magical",
           "ours": 0.6333333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124187,6 +124427,7 @@
           "damage_type": "magical",
           "ours": 0.5133333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124196,6 +124437,7 @@
           "damage_type": "magical",
           "ours": 0.6183333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124205,6 +124447,7 @@
           "damage_type": "physical",
           "ours": 0.48500000000000004,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124214,6 +124457,7 @@
           "damage_type": "physical",
           "ours": 0.69,
           "community": null,
+          "community_matches": null,
           "tier_ours": "S",
           "tier_community": null
         },
@@ -124223,6 +124467,7 @@
           "damage_type": "magical",
           "ours": 0.6333333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124232,6 +124477,7 @@
           "damage_type": "magical",
           "ours": 0.6166666666666666,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124241,6 +124487,7 @@
           "damage_type": "magical",
           "ours": 0.5133333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124250,6 +124497,7 @@
           "damage_type": "physical",
           "ours": 0.5483333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124259,6 +124507,7 @@
           "damage_type": "physical",
           "ours": 0.69,
           "community": null,
+          "community_matches": null,
           "tier_ours": "S",
           "tier_community": null
         },
@@ -124268,6 +124517,7 @@
           "damage_type": "magical",
           "ours": 0.5866666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124277,6 +124527,7 @@
           "damage_type": "physical",
           "ours": 0.69,
           "community": null,
+          "community_matches": null,
           "tier_ours": "S",
           "tier_community": null
         },
@@ -124286,6 +124537,7 @@
           "damage_type": "magical",
           "ours": 0.6383333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "A",
           "tier_community": null
         },
@@ -124295,6 +124547,7 @@
           "damage_type": "physical",
           "ours": 0.5516666666666666,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124304,6 +124557,7 @@
           "damage_type": "physical",
           "ours": 0.5166666666666666,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124313,6 +124567,7 @@
           "damage_type": "physical",
           "ours": 0.4716666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124322,6 +124577,7 @@
           "damage_type": "magical",
           "ours": 0.5833333333333334,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124331,6 +124587,7 @@
           "damage_type": "physical",
           "ours": 0.49333333333333335,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         },
@@ -124340,6 +124597,7 @@
           "damage_type": "magical",
           "ours": 0.6166666666666666,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124349,6 +124607,7 @@
           "damage_type": "magical",
           "ours": 0.5866666666666667,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124358,6 +124617,7 @@
           "damage_type": "magical",
           "ours": 0.6183333333333333,
           "community": null,
+          "community_matches": null,
           "tier_ours": "B",
           "tier_community": null
         },
@@ -124367,6 +124627,7 @@
           "damage_type": "magical",
           "ours": 0.525,
           "community": null,
+          "community_matches": null,
           "tier_ours": "C",
           "tier_community": null
         }
