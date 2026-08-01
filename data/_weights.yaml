@@ -13,6 +13,19 @@ signals:
   win: 0.45          # SmiteBrain high-elo win rate (performance)
   pick: 0.05         # SmiteBrain pick rate (popularity)
   fit: 0.15          # archetype + kit god-fit
+hybrid:
+  # The hybrid build is the model's core, corrected only where the model is
+  # near-indifferent AND the community's evidence is strong. Loosening either
+  # of the first two collapses it toward the community build, which already
+  # exists on its own; max_swaps is the backstop that keeps it a correction
+  # rather than a replacement.
+  indifference: 0.03   # model quality gap it will defer across
+  # The bar is the god's OWN win rate, not a constant: an item winning 56% on a
+  # 52% god is evidence; the same 56% on a 60% god is below par. min_edge is how
+  # far above that baseline the Wilson LOWER BOUND must sit — 0 means "beat the
+  # god's own average, with confidence".
+  min_edge: 0.0
+  max_swaps: 3         # at most half the core may be overridden
 underrated:
   # Flag items that are intrinsically good for the god (efficiency + fit) yet
   # rarely picked. Quality is judged relative to the god's own item pool.

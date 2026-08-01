@@ -8,7 +8,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from smite import assemble, efficiency, notes, scoring
+from smite import assemble, hybrid, efficiency, notes, scoring
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATA_ROOT = REPO_ROOT / "data"
@@ -21,6 +21,7 @@ MODES = ["Conquest", "Joust"]
 _FLAVOR_BLURB = {
     "core": "Top weighted-score core",
     "model": "The model's own answer — no meta signal",
+    "hybrid": "The model's core, corrected where the community is clearly right",
     "crit": "Crit / auto-attack skew",
     "burst": "Ability / burst skew",
     "bruiser": "Lifesteal bruiser skew",
@@ -176,13 +177,28 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
     # `core` stays exactly as it was: the tier list's per-god score, the draft's
     # baseline and the data audit all read it by name.
     if core_rows is not None:
+        max_ls = scoring.god_max_lifesteal(god, weights, core_profile)
         model_rows = sorted(core_rows, key=lambda r: (-r["quality"], r["item"]))
-        model_core = assemble.assemble_core(
-            model_rows, items_by_name, n=6,
-            max_lifesteal=scoring.god_max_lifesteal(god, weights, core_profile))
+        model_core = assemble.assemble_core(model_rows, items_by_name, n=6,
+                                            max_lifesteal=max_ls)
         entries.append(_entry("model", model_core, model_rows, items_by_name,
                               tags_map, weights, core_profile, flex_count,
                               starter, aspect_name))
+
+        # And the hybrid: that same core, corrected only where the model is
+        # near-indifferent and the community's record is strong enough to
+        # override it. No community entry (every Joust build) means nothing to
+        # correct with, and `hybrid_core` returns the model core unchanged —
+        # which would be a duplicate build, so it isn't emitted.
+        community_entry = next(
+            (b for b in (god_build or {}).get("builds", []) if b.get("source") == "community"),
+            None)
+        hy_core, swaps = hybrid.hybrid_core(model_core, model_rows, community_entry,
+                                            items_by_name, weights, max_lifesteal=max_ls)
+        if swaps:
+            entries.append(_entry("hybrid", hy_core, model_rows, items_by_name,
+                                  tags_map, weights, core_profile, flex_count,
+                                  starter, aspect_name, extra={"swaps": swaps}))
     return entries
 
 
