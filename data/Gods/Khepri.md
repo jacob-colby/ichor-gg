@@ -156,7 +156,7 @@ aspects:
     dealing constant Attack Damage for the duration. Khepri no longer gains Protections
     after Abduct ends.
 source_url: https://wiki.smite2.com/w/Khepri
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Khepri Basic Attack

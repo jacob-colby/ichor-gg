@@ -171,7 +171,7 @@ aspects:
     spawn a vision dealing damage and Slowing on the final hit. You teleport to a
     location before casting Tectonic Shift, each wall having less Health.
 source_url: https://wiki.smite2.com/w/Cabrakan
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Cabrakan Basic Attack

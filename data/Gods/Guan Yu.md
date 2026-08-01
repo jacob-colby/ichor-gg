@@ -160,7 +160,7 @@ aspects:
     Assault. However, Guan Yu loses all Strength scaling and reduced Intelligence
     damage scaling.
 source_url: https://wiki.smite2.com/w/Guan_Yu
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Guan Yu Basic Attack

@@ -72,12 +72,12 @@ abilities:
   - 'Storm Shot: Gain Attack Speed and fire faster, longer-ranged shots that deal
     reduced Physical Damage. These Attacks cannot hit structures'
   - Empowered Attacks do not damage player-made deployables or wards
-  - 'Strike Shot Bonus Damage: 5 | 11 | 17 | 23 | 29'
+  - 'Strike Shot Bonus Damage: 7 | 14 | 21 | 28 | 35'
   - 'Spread Shot Side Arrow Damage: 9%'
   - 'Storm Shot Attack Speed Bonus: 20 | 25 | 30 | 35 | 40%'
   - 'Storm Shot Projectile Speed: 120%'
   - 'Buff Duration: 6 seconds'
-  - 'Storm Shot Attack Damage: -20%'
+  - 'Storm Shot Attack Damage: -10%'
   - 'Strike Shot Range: 7.52 meters'
   - 'Strike Shot Radius: 1.6 meters'
   - 'Storm Shot Range: 12.8 meters'
@@ -167,7 +167,7 @@ aspects:
     bonus damage, and at 15 or more stacks the Rooted target explodes for bonus Physical
     Damage over double the area when you land.
 source_url: https://wiki.smite2.com/w/Ishtar
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Ishtar Basic Attack

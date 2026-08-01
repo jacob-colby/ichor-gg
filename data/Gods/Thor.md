@@ -159,7 +159,7 @@ aspects:
     return damage, his abilities have reduced scaling, and Tectonic Rift has no damage
     scaling.
 source_url: https://wiki.smite2.com/w/Thor
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Thor Basic Attack

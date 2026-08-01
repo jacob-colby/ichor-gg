@@ -173,7 +173,7 @@ aspects:
     Speed and the explosion area heals allies. At 8 stacks of Lovestruck, allies also
     gain a Health Shield.
 source_url: https://wiki.smite2.com/w/Cupid
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Cupid Basic Attack

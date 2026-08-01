@@ -156,7 +156,7 @@ abilities:
     face to deliver a powerful blast from your horrifying gorgon gaze
 aspects: []
 source_url: https://wiki.smite2.com/w/Medusa
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Medusa Basic Attack

@@ -188,7 +188,7 @@ aspects:
     scaling, but applies a movement speed aura to allies, and when its projectiles
     hit enemies, all allies with Transference are healed.
 source_url: https://wiki.smite2.com/w/Eset
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Eset Basic Attack

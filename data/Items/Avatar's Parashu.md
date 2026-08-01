@@ -13,7 +13,7 @@ builds_from:
 - Skeggox
 builds_into: []
 source_url: https://wiki.smite2.com/w/Avatar's_Parashu
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 On Use: +25% Strength and Immune to Displacement for 10s. Cooldown: 120s You can own up to 3 active items at once

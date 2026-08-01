@@ -176,7 +176,7 @@ aspects:
     Ares empowers his Shield for his next Basic Attack stunning the target and spreading
     damage to nearby enemies.
 source_url: https://wiki.smite2.com/w/Ares
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Ares Basic Attack

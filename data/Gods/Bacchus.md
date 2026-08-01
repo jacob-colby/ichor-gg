@@ -148,7 +148,7 @@ aspects:
   kit_changes: After using Chug, Bacchus's inhand attacks cleave and deal bonus damage
     scaling with Strength instead of Protections, for a short duration.
 source_url: https://wiki.smite2.com/w/Bacchus
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Bacchus Basic Attack

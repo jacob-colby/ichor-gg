@@ -168,7 +168,7 @@ aspects:
     each target only once for major damage in an AoE, before returning to his casting
     location.
 source_url: https://wiki.smite2.com/w/Tsukuyomi
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Tsukuyomi Basic Attack

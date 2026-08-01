@@ -52,7 +52,7 @@ aspects:
     a random Stance is selected with 2 random primary abilities, Flicker will always
     persist. Using Elemental Mastery provides an Intelligence buff for a short duration.
 source_url: https://wiki.smite2.com/w/Merlin
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Merlin Basic Attack

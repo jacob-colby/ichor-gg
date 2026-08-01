@@ -29,7 +29,7 @@ builds_into:
 - Stygian Anchor
 - Stygian Anchor
 source_url: https://wiki.smite2.com/w/Engraved_Guard
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 

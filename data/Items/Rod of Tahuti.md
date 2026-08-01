@@ -14,7 +14,7 @@ builds_from:
 - Evil Eye
 builds_into: []
 source_url: https://wiki.smite2.com/w/Rod_of_Tahuti
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 +Intelligence equal to 25% of your Intelligence from items.

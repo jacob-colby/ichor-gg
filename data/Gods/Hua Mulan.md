@@ -191,7 +191,7 @@ abilities:
     deal Physical Damage and Root enemies
 aspects: []
 source_url: https://wiki.smite2.com/w/Hua_Mulan
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Hua Mulan Basic Attack

@@ -14,7 +14,7 @@ builds_from:
 - Hunter's Bow
 builds_into: []
 source_url: https://wiki.smite2.com/w/Tekko-Kagi
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Ability Used: Gain a stack of Momentum. Momentum grants +7% Pathfinding for 8s. Stacks up to 3 times.

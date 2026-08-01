@@ -1,0 +1,1369 @@
+{
+  "Alchemist Coat": {
+    "cost": 2350,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "30",
+      "Dampening": "15",
+      "Max Health": "250",
+      "Mana Regen": "2.5"
+    }
+  },
+  "Amanita Charm": {
+    "cost": 2350,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "25",
+      "Magical Protection": "25",
+      "Max Health": "300",
+      "Health Regen": "4"
+    }
+  },
+  "Ancient Signet": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "90",
+      "Max Mana": "250"
+    }
+  },
+  "Ancile": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "55",
+      "Max Health": "300"
+    }
+  },
+  "Archmage's Gem": {
+    "cost": 2150,
+    "tier": 2,
+    "stats": {
+      "Max Mana": "150",
+      "Mana Regen": "4"
+    }
+  },
+  "Arondight": {
+    "cost": 2650,
+    "tier": 3,
+    "stats": {
+      "Strength": "55",
+      "Cooldown Rate": "15"
+    }
+  },
+  "Avatar's Parashu": {
+    "cost": 3700,
+    "tier": 3,
+    "stats": {
+      "Strength": "90",
+      "Penetration": "10%"
+    }
+  },
+  "Avenging Blade": {
+    "cost": 2650,
+    "tier": 3,
+    "stats": {
+      "Strength": "60",
+      "Max Health": "200"
+    }
+  },
+  "Bancroft's Talon": {
+    "cost": 2300,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "55",
+      "Max Mana": "150",
+      "Mana Regen": "2",
+      "Lifesteal": "7.5%"
+    }
+  },
+  "Barbed Carver": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Strength": "40",
+      "Lifesteal": "7.5%"
+    }
+  },
+  "Berserker's Shield": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "40",
+      "Attack Speed": "20%",
+      "Max Health": "200",
+      "Health Regen": "4"
+    }
+  },
+  "Blinking Abyss": {
+    "cost": 2600,
+    "tier": "Relic",
+    "stats": {}
+  },
+  "Blood-Bound Book": {
+    "cost": 2250,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "70",
+      "Lifesteal": "7.5%"
+    }
+  },
+  "Blood-soaked Shroud": {
+    "cost": 2100,
+    "tier": 2,
+    "stats": {
+      "Max Health": "350",
+      "Lifesteal": "8%"
+    }
+  },
+  "Bloodforge": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Strength": "45",
+      "Lifesteal": "7.5%"
+    }
+  },
+  "Bluestone Brooch": {
+    "cost": 2100,
+    "tier": 2,
+    "stats": {
+      "Max Health": "200",
+      "Health Regen": "4",
+      "Mana Regen": "2.5"
+    }
+  },
+  "Bluestone Pendant": {
+    "cost": 600,
+    "tier": 1,
+    "stats": {
+      "Health Regen": "1",
+      "Mana Regen": "1.5"
+    }
+  },
+  "Book of Thoth": {
+    "cost": 2300,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "30",
+      "Max Mana": "350",
+      "Mana Regen": "4"
+    }
+  },
+  "Bracer of The Abyss": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "60",
+      "Attack Speed": "30%"
+    }
+  },
+  "Bragi's Harp": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Strength": "35",
+      "Intelligence": "25",
+      "Attack Speed": "10%"
+    }
+  },
+  "Brawler’s Beat Stick": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "15",
+      "Magical Protection": "15"
+    }
+  },
+  "Breastplate of Valor": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "45",
+      "Max Mana": "200",
+      "Mana Regen": "2",
+      "Cooldown Rate": "20"
+    }
+  },
+  "Bumba's Cudgel": {
+    "cost": 650,
+    "tier": 1,
+    "stats": {
+      "Max Health": "75",
+      "Max Mana": "50"
+    }
+  },
+  "Bumba's Golden Dagger": {
+    "cost": 650,
+    "tier": 1,
+    "stats": {
+      "Max Health": "50",
+      "Attack Speed": "10%"
+    }
+  },
+  "Bumba's Hammer": {
+    "cost": 2150,
+    "tier": 2,
+    "stats": {
+      "Max Health": "200",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Bumba's Spear": {
+    "cost": 2150,
+    "tier": 2,
+    "stats": {
+      "Max Health": "200",
+      "Attack Speed": "30%"
+    }
+  },
+  "Chandra's Grace": {
+    "cost": 2300,
+    "tier": 3,
+    "stats": {
+      "Max Health": "350",
+      "Cooldown Rate": "20",
+      "Plating": "5"
+    }
+  },
+  "Chronos' Pendant": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "55",
+      "Cooldown Rate": "25"
+    }
+  },
+  "Circe's Hexstone": {
+    "cost": 2750,
+    "tier": 3,
+    "stats": {
+      "Max Health": "250",
+      "Health Regen": "4",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Conduit Gem": {
+    "cost": 650,
+    "tier": 1,
+    "stats": {
+      "Max Mana": "100",
+      "Mana Regen": "1"
+    }
+  },
+  "Contagion": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Max Health": "425",
+      "Health Regen": "6"
+    }
+  },
+  "Dagger of Frenzy": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Attack Damage": "25",
+      "Attack Speed": "25%"
+    }
+  },
+  "Damaru": {
+    "cost": 2750,
+    "tier": 3,
+    "stats": {
+      "Strength": "35",
+      "Critical Chance": "20%",
+      "Echo": "20"
+    }
+  },
+  "Daybreak Gavel": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Max Health": "300"
+    }
+  },
+  "Death Metal": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Strength": "35",
+      "Intelligence": "40",
+      "Critical Chance": "20%"
+    }
+  },
+  "Death's Embrace": {
+    "cost": 2150,
+    "tier": 2,
+    "stats": {
+      "Max Health": "150",
+      "Lifesteal": "5%"
+    }
+  },
+  "Death's Toll": {
+    "cost": 650,
+    "tier": 1,
+    "stats": {
+      "Max Health": "100"
+    }
+  },
+  "Deathbringer": {
+    "cost": 2900,
+    "tier": 3,
+    "stats": {
+      "Strength": "45",
+      "Critical Chance": "20%"
+    }
+  },
+  "Demon Blade": {
+    "cost": 2750,
+    "tier": 3,
+    "stats": {
+      "Strength": "30",
+      "Attack Speed": "15%",
+      "Critical Chance": "15%"
+    }
+  },
+  "Devourer's Gauntlet": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Strength": "35",
+      "Lifesteal": "5%"
+    }
+  },
+  "Divine Ruin": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "85"
+    }
+  },
+  "Doom Orb": {
+    "cost": 2700,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "70",
+      "Max Mana": "200",
+      "Mana Regen": "2",
+      "Penetration": "10"
+    }
+  },
+  "Doublet of Binding": {
+    "cost": 2700,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "50",
+      "Dampening": "5",
+      "Max Health": "400"
+    }
+  },
+  "Draconic Scale": {
+    "cost": 2700,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "30",
+      "Magical Protection": "30",
+      "Max Health": "300"
+    }
+  },
+  "Dreamer's Idol": {
+    "cost": 3500,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "130",
+      "Penetration": "10%"
+    }
+  },
+  "Dwarven Plate": {
+    "cost": 2800,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "35",
+      "Magical Protection": "35"
+    }
+  },
+  "Engraved Guard": {
+    "cost": 800,
+    "tier": 2,
+    "stats": {
+      "Physical Protection": "10",
+      "Magical Protection": "10"
+    }
+  },
+  "Eros' Bow": {
+    "cost": 2300,
+    "tier": 3,
+    "stats": {
+      "Max Health": "300",
+      "Attack Speed": "30%"
+    }
+  },
+  "Erosion": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "30",
+      "Magical Protection": "20",
+      "Max Health": "250"
+    }
+  },
+  "Ethereal Staff": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "60",
+      "Max Health": "250",
+      "Tenacity": "15"
+    }
+  },
+  "Evil Eye": {
+    "cost": 1200,
+    "tier": 2,
+    "stats": {
+      "Intelligence": "45"
+    }
+  },
+  "Eye of Erebus": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Max Health": "350",
+      "Cooldown Rate": "15"
+    }
+  },
+  "Eye of Providence": {
+    "cost": 2300,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "30",
+      "Magical Protection": "30",
+      "Max Health": "250"
+    }
+  },
+  "Eye of the Storm": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Strength": "25",
+      "Magical Protection": "35",
+      "Max Health": "200"
+    }
+  },
+  "Freya's Tears": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "30",
+      "Magical Protection": "35",
+      "Cooldown Rate": "20"
+    }
+  },
+  "Gauntlet of Thebes": {
+    "cost": 2200,
+    "tier": 3,
+    "stats": {
+      "Max Health": "200",
+      "Max Mana": "150"
+    }
+  },
+  "Gem of Focus": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "65",
+      "Cooldown Rate": "20"
+    }
+  },
+  "Gem of Isolation": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "50",
+      "Max Health": "250"
+    }
+  },
+  "Genji's Guard": {
+    "cost": 2350,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "55",
+      "Max Mana": "200",
+      "Mana Regen": "5",
+      "Cooldown Rate": "15"
+    }
+  },
+  "Gilded Arrow": {
+    "cost": 650,
+    "tier": 1,
+    "stats": {
+      "Attack Damage": "20",
+      "Attack Speed": "10%"
+    }
+  },
+  "Gladiator's Shield": {
+    "cost": 2450,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "25",
+      "Max Health": "200",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Glorious Pridwen": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "20",
+      "Magical Protection": "20",
+      "Cooldown Rate": "12"
+    }
+  },
+  "Gluttonous Grimoire": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "55",
+      "Max Health": "150",
+      "Lifesteal": "7.5%",
+      "Penetration": "10%"
+    }
+  },
+  "Golden Blade": {
+    "cost": 2450,
+    "tier": 3,
+    "stats": {
+      "Strength": "15",
+      "Attack Damage": "20",
+      "Max Health": "200",
+      "Attack Speed": "20%"
+    }
+  },
+  "Hastened Fatalis": {
+    "cost": 2650,
+    "tier": 3,
+    "stats": {
+      "Attack Damage": "25",
+      "Attack Speed": "25%"
+    }
+  },
+  "Heartseeker": {
+    "cost": 3000,
+    "tier": 3,
+    "stats": {
+      "Strength": "45",
+      "Max Mana": "250",
+      "Mana Regen": "2",
+      "Penetration": "10%"
+    }
+  },
+  "Heartwood Charm": {
+    "cost": 2650,
+    "tier": 3,
+    "stats": {
+      "Max Health": "400",
+      "Max Mana": "250",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Helm of Darkness": {
+    "cost": 2700,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "40",
+      "Physical Protection": "20",
+      "Magical Protection": "25"
+    }
+  },
+  "Helm of Radiance": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "65",
+      "Physical Protection": "35"
+    }
+  },
+  "Heroism": {
+    "cost": 1800,
+    "tier": 2,
+    "stats": {
+      "Physical Protection": "45",
+      "Magical Protection": "45",
+      "Max Health": "250"
+    }
+  },
+  "Hide of the Nemean Lion": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "35",
+      "Max Health": "350",
+      "Health Regen": "4"
+    }
+  },
+  "Hunter's Bow": {
+    "cost": 750,
+    "tier": 2,
+    "stats": {
+      "Attack Speed": "15%"
+    }
+  },
+  "Hunter's Cowl": {
+    "cost": 2100,
+    "tier": 2,
+    "stats": {
+      "Lifesteal": "5%",
+      "Mana Regen": "2.5"
+    }
+  },
+  "Hussar's Wings": {
+    "cost": 3500,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "35",
+      "Magical Protection": "35",
+      "Max Health": "500"
+    }
+  },
+  "Hydra's Lament": {
+    "cost": 2450,
+    "tier": 3,
+    "stats": {
+      "Strength": "45",
+      "Max Mana": "200",
+      "Mana Regen": "4",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Jade Scepter": {
+    "cost": 2750,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "100",
+      "Max Health": "250"
+    }
+  },
+  "Jotunn's Revenge": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Strength": "35",
+      "Max Mana": "250",
+      "Penetration": "5",
+      "Cooldown Rate": "25"
+    }
+  },
+  "Kinetic Cuirass": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "25",
+      "Magical Protection": "25",
+      "Plating": "5",
+      "Max Health": "300"
+    }
+  },
+  "Leather Cowl": {
+    "cost": 600,
+    "tier": 1,
+    "stats": {
+      "Lifesteal": "4%",
+      "Mana Regen": "1.5"
+    }
+  },
+  "Lernaean Bow": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Strength": "40",
+      "Attack Speed": "30%"
+    }
+  },
+  "Leviathan's Hide": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "45",
+      "Plating": "5",
+      "Max Health": "300"
+    }
+  },
+  "Lifebinder": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "40",
+      "Max Health": "300",
+      "Health Regen": "3"
+    }
+  },
+  "Magi's Cloak": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "35",
+      "Magical Protection": "35"
+    }
+  },
+  "Mantle Of Discord": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "35",
+      "Magical Protection": "35",
+      "Tenacity": "15"
+    }
+  },
+  "Mercury's Talaria": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Pathfinding": "12"
+    }
+  },
+  "Midgardian Mail": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "50",
+      "Max Health": "250"
+    }
+  },
+  "Musashi's Dual Swords": {
+    "cost": 2700,
+    "tier": 3,
+    "stats": {
+      "Strength": "35",
+      "Critical Chance": "30%"
+    }
+  },
+  "Mystical Mail": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "40",
+      "Max Health": "300"
+    }
+  },
+  "Necronomicon": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "50",
+      "Max Mana": "300",
+      "Mana Regen": "5"
+    }
+  },
+  "Nimble Ring": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "35",
+      "Attack Speed": "20%",
+      "Lifesteal": "7.5%"
+    }
+  },
+  "Oath-Sworn Spear": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Strength": "50"
+    }
+  },
+  "Obsidian Shard": {
+    "cost": 3050,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "70",
+      "Penetration": "20%"
+    }
+  },
+  "Odysseus' Bow": {
+    "cost": 2450,
+    "tier": 3,
+    "stats": {
+      "Attack Speed": "45%"
+    }
+  },
+  "Omen Drum": {
+    "cost": 2800,
+    "tier": 3,
+    "stats": {
+      "Echo": "30"
+    }
+  },
+  "Oni Hunter's Garb": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "50",
+      "Max Health": "150",
+      "Max Mana": "200",
+      "Mana Regen": "8"
+    }
+  },
+  "Pendulum Blade": {
+    "cost": 2750,
+    "tier": 3,
+    "stats": {
+      "Strength": "30",
+      "Penetration": "10%",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Pendulum of the Ages": {
+    "cost": 2150,
+    "tier": 2,
+    "stats": {
+      "Mana Regen": "4",
+      "Cooldown Rate": "20"
+    }
+  },
+  "Pharaoh's Curse": {
+    "cost": 2450,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "30",
+      "Plating": "5",
+      "Max Health": "250",
+      "Attack Speed": "20%"
+    }
+  },
+  "Phoenix Feather": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "35",
+      "Dampening": "5",
+      "Max Health": "300"
+    }
+  },
+  "Polynomicon": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "75",
+      "Max Mana": "200",
+      "Mana Regen": "3"
+    }
+  },
+  "Prophetic Cloak": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "22",
+      "Magical Protection": "22",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Qin's Blade": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Attack Damage": "30",
+      "Attack Speed": "25%"
+    }
+  },
+  "Radiant Bulwark": {
+    "cost": 2750,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "20",
+      "Magical Protection": "20",
+      "Plating": "15"
+    }
+  },
+  "Rage": {
+    "cost": 2450,
+    "tier": 3,
+    "stats": {
+      "Strength": "30",
+      "Critical Chance": "20%"
+    }
+  },
+  "Ragnarok's Wake": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "45",
+      "Max Health": "250"
+    }
+  },
+  "Regrowth Striders": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "35",
+      "Mana Regen": "3",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Resolute Mantle": {
+    "cost": 2750,
+    "tier": 3,
+    "stats": {
+      "Max Health": "550",
+      "Tenacity": "10"
+    }
+  },
+  "Riptalon": {
+    "cost": 2700,
+    "tier": 3,
+    "stats": {
+      "Attack Damage": "20",
+      "Attack Speed": "20%",
+      "Lifesteal": "7.5%",
+      "Penetration": "10%"
+    }
+  },
+  "Rod of Asclepius": {
+    "cost": 2350,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "65",
+      "Max Health": "225",
+      "Health Regen": "3"
+    }
+  },
+  "Rod of Tahuti": {
+    "cost": 3000,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "80",
+      "Max Mana": "250",
+      "Mana Regen": "2",
+      "Penetration": "5%"
+    }
+  },
+  "Runeforged Hammer": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Strength": "45",
+      "Max Health": "350",
+      "Health Regen": "3"
+    }
+  },
+  "Sands Of Time": {
+    "cost": 650,
+    "tier": 1,
+    "stats": {
+      "Mana Regen": "2",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Sanguine Lash": {
+    "cost": 2650,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "30",
+      "Strength": "25",
+      "Lifesteal": "5%"
+    }
+  },
+  "Scepter of Dominion": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "30",
+      "Max Health": "150",
+      "Max Mana": "200",
+      "Mana Regen": "3"
+    }
+  },
+  "Screeching Gargoyle": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "50",
+      "Cooldown Rate": "15"
+    }
+  },
+  "Selflessness": {
+    "cost": 550,
+    "tier": 1,
+    "stats": {
+      "Physical Protection": "10",
+      "Magical Protection": "10",
+      "Max Health": "100"
+    }
+  },
+  "Sharpshooter's Arrow": {
+    "cost": 2150,
+    "tier": 2,
+    "stats": {
+      "Attack Damage": "60",
+      "Attack Speed": "25%",
+      "Critical Chance": "15%"
+    }
+  },
+  "Shield of the Phoenix": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "35",
+      "Plating": "5",
+      "Max Health": "225",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Shield Splitter": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Strength": "40",
+      "Physical Protection": "15",
+      "Magical Protection": "15"
+    }
+  },
+  "Shifter's Shield": {
+    "cost": 2650,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "25",
+      "Magical Protection": "25",
+      "Max Health": "300",
+      "Health Regen": "4"
+    }
+  },
+  "Shogun's Ofuda": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "40",
+      "Dampening": "5",
+      "Max Health": "200",
+      "Attack Speed": "15%"
+    }
+  },
+  "Shroud of Vengeance": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "20",
+      "Magical Protection": "20",
+      "Tenacity": "15"
+    }
+  },
+  "Skeggox": {
+    "cost": 1000,
+    "tier": 2,
+    "stats": {
+      "Strength": "15"
+    }
+  },
+  "Soul Gem": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "60",
+      "Lifesteal": "7.5%",
+      "Penetration": "5",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Soul Reaver": {
+    "cost": 2950,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "85",
+      "Max Mana": "250",
+      "Mana Regen": "5"
+    }
+  },
+  "Spear of Desolation": {
+    "cost": 2650,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "75",
+      "Penetration": "10",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Spear of the Magus": {
+    "cost": 2700,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "95",
+      "Penetration": "10%"
+    }
+  },
+  "Spectral Armor": {
+    "cost": 2300,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "20",
+      "Plating": "10",
+      "Max Health": "450"
+    }
+  },
+  "Sphere of Negation": {
+    "cost": 2750,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "40",
+      "Magical Protection": "50"
+    }
+  },
+  "Spirit Robe": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "20",
+      "Magical Protection": "20",
+      "Tenacity": "15"
+    }
+  },
+  "Staff of Myrddin": {
+    "cost": 2900,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "75",
+      "Cooldown Rate": "10"
+    }
+  },
+  "Stampede": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "30",
+      "Max Health": "250",
+      "Health Regen": "5"
+    }
+  },
+  "Stone of Binding": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "35",
+      "Magical Protection": "35",
+      "Dampening": "5"
+    }
+  },
+  "Stygian Anchor": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "35",
+      "Magical Protection": "30"
+    }
+  },
+  "Sun Beam Bow": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Attack Damage": "20",
+      "Attack Speed": "10%"
+    }
+  },
+  "Sundering Axe": {
+    "cost": 2150,
+    "tier": 2,
+    "stats": {
+      "Physical Protection": "30",
+      "Magical Protection": "30"
+    }
+  },
+  "Tekko-Kagi": {
+    "cost": 2700,
+    "tier": 3,
+    "stats": {
+      "Strength": "35",
+      "Attack Speed": "20%",
+      "Penetration": "10"
+    }
+  },
+  "The Cosmic Horror": {
+    "cost": 2650,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "55",
+      "Penetration": "10",
+      "Echo": "20"
+    }
+  },
+  "The Crusher": {
+    "cost": 2800,
+    "tier": 3,
+    "stats": {
+      "Strength": "45",
+      "Penetration": "10",
+      "Echo": "25"
+    }
+  },
+  "The Executioner": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Attack Speed": "20%"
+    }
+  },
+  "The Reaper": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Strength": "45",
+      "Lifesteal": "7.5%",
+      "Penetration": "10"
+    }
+  },
+  "The World Stone": {
+    "cost": 2800,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "70",
+      "Max Mana": "250",
+      "Mana Regen": "3",
+      "Penetration": "10"
+    }
+  },
+  "Titan's Bane": {
+    "cost": 3100,
+    "tier": 3,
+    "stats": {
+      "Strength": "40",
+      "Penetration": "20%"
+    }
+  },
+  "Transcendence": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Strength": "35",
+      "Max Mana": "250",
+      "Mana Regen": "4"
+    }
+  },
+  "Triton's Conch": {
+    "cost": 2700,
+    "tier": 3,
+    "stats": {
+      "Strength": "25",
+      "Intelligence": "40",
+      "Max Health": "250"
+    }
+  },
+  "Typhon’s Heart": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "80",
+      "Lifesteal": "7.5%"
+    }
+  },
+  "Tyrfing": {
+    "cost": 2400,
+    "tier": 3,
+    "stats": {
+      "Strength": "25",
+      "Attack Damage": "25",
+      "Attack Speed": "10%"
+    }
+  },
+  "Umbral Link": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "40",
+      "Lifesteal": "10%"
+    }
+  },
+  "Vampiric Shroud": {
+    "cost": 600,
+    "tier": 1,
+    "stats": {
+      "Max Health": "100",
+      "Lifesteal": "4%"
+    }
+  },
+  "Vital Amplifier": {
+    "cost": 2500,
+    "tier": 3,
+    "stats": {
+      "Max Health": "200",
+      "Health Regen": "3",
+      "Attack Speed": "10%"
+    }
+  },
+  "Void Shield": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "55",
+      "Max Health": "150"
+    }
+  },
+  "Void Stone": {
+    "cost": 2550,
+    "tier": 3,
+    "stats": {
+      "Magical Protection": "60",
+      "Max Health": "150"
+    }
+  },
+  "War Banner": {
+    "cost": 1850,
+    "tier": 2,
+    "stats": {
+      "Physical Protection": "30",
+      "Magical Protection": "30",
+      "Attack Speed": "30%"
+    }
+  },
+  "War Flag": {
+    "cost": 600,
+    "tier": 1,
+    "stats": {
+      "Physical Protection": "10",
+      "Magical Protection": "10",
+      "Attack Speed": "10%"
+    }
+  },
+  "Warrior's Axe": {
+    "cost": 650,
+    "tier": 1,
+    "stats": {
+      "Physical Protection": "10",
+      "Magical Protection": "10"
+    }
+  },
+  "Wish-Granting Pearl": {
+    "cost": 3550,
+    "tier": 3,
+    "stats": {
+      "Intelligence": "120",
+      "Max Health": "425",
+      "Max Mana": "200"
+    }
+  },
+  "Wyrmskin Hide": {
+    "cost": 2600,
+    "tier": 3,
+    "stats": {
+      "Strength": "20",
+      "Magical Protection": "15",
+      "Dampening": "5",
+      "Max Health": "300"
+    }
+  },
+  "Xibalban Effigy": {
+    "cost": 2750,
+    "tier": 3,
+    "stats": {
+      "Physical Protection": "30",
+      "Magical Protection": "30",
+      "Max Mana": "300",
+      "Mana Regen": "4"
+    }
+  },
+  "Yogi's Necklace": {
+    "cost": 2250,
+    "tier": 3,
+    "stats": {
+      "Max Health": "325",
+      "Max Mana": "250",
+      "Health Regen": "6",
+      "Mana Regen": "6"
+    }
+  }
+}

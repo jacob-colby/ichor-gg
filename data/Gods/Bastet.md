@@ -156,7 +156,7 @@ aspects:
     Whip deals less damage but Disarms bleeding enemies. Ensnaring Claw Stuns instead
     of Rooting. Cat Call becomes Huntress of Bast.
 source_url: https://wiki.smite2.com/w/Bastet
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Bastet Basic Attack

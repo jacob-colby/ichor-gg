@@ -13,7 +13,7 @@ builds_from:
 - Legionnaire Armor
 builds_into: []
 source_url: https://wiki.smite2.com/w/Void_Shield
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Enemies within 8.8m: -10% Physical Protection. Range Scaling Debuff: +50% at Close Range -50% at Maximum Range

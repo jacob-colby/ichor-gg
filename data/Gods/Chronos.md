@@ -150,7 +150,7 @@ aspects:
     Time Field arond you. Allies in your Time Field gain bonuses when you use your
     other abilities.
 source_url: https://wiki.smite2.com/w/Chronos
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Chronos Basic Attack

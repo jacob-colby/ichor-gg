@@ -167,7 +167,7 @@ aspects:
     AoE attack that buffs Ne Zha's Attacks and consumes Righteous Spirit to burst
     heal.
 source_url: https://wiki.smite2.com/w/Ne_Zha
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Ne Zha Basic Attack

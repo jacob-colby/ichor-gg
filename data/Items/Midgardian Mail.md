@@ -13,7 +13,7 @@ builds_from:
 - Legionnaire Armor
 builds_into: []
 source_url: https://wiki.smite2.com/w/Midgardian_Mail
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Hit by a basic attack: the enemy has their Attack Speed reduced by 8% for 3s. Stacks up to 4 times.

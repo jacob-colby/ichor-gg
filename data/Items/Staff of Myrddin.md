@@ -13,7 +13,7 @@ builds_from:
 - Ring of Dispel
 builds_into: []
 source_url: https://wiki.smite2.com/w/Staff_of_Myrddin
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 On Use: Next non-Ultimate Ability used will have no cooldown. Cooldown: 80s You can own up to 3 active items at once

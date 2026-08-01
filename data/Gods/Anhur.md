@@ -155,7 +155,7 @@ aspects:
   kit_changes: Enfeeble no longer Debuffs enemies but dealing damage to the same enemy
     god with Basic Attacks provides Anhur up to 100% bonus Attack Speed.
 source_url: https://wiki.smite2.com/w/Anhur
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Anhur Basic Attack

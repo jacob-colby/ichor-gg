@@ -56,7 +56,7 @@ aspects:
   kit_changes: Artio can only change stances inside the fountain. Upon leaving the
     fountain, her abilities are enhanced and her ultimate changes based on her form.
 source_url: https://wiki.smite2.com/w/Artio
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Artio Basic Attack

@@ -168,7 +168,7 @@ aspects:
     gods hit that deals damage when you hit them. Once for attacks, three times for
     abilities. Spectral Surge refreshes the duration of the soul but does not silence.
 source_url: https://wiki.smite2.com/w/Charon
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Charon Basic Attack

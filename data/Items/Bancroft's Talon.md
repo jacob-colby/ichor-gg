@@ -15,7 +15,7 @@ builds_from:
 - Cursed Sickle
 builds_into: []
 source_url: https://wiki.smite2.com/w/Bancroft's_Talon
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Gain bonus Intelligence and Lifesteal scaled from missing Health. Caps at +60 Intelligence and +10% Lifesteal at 40% Health

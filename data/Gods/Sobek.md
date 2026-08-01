@@ -164,7 +164,7 @@ aspects:
     has bonus scaling. Sickening Strike deals increased damage against Jungle Monsters
     and the cooldown reduction now triggers off Jungle Monsters.
 source_url: https://wiki.smite2.com/w/Sobek
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Sobek Basic Attack

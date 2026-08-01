@@ -14,7 +14,7 @@ builds_from:
 - Veve Charm
 builds_into: []
 source_url: https://wiki.smite2.com/w/Spectral_Armor
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 You take -30% Damage from Critical Strikes. Ability Critical Strikes are mitigated by your Plating. Allies within 8.8m: Take -15% Damage from Critical Strikes.

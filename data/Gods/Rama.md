@@ -143,7 +143,7 @@ aspects:
     Speed and no longer regen Astral Arrows. When out of Astral Arrows, reload. While
     Infinite Arrows is active, Astral Arrows are not consumed.
 source_url: https://wiki.smite2.com/w/Rama
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Rama Basic Attack

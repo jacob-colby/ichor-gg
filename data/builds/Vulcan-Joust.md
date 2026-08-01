@@ -33,31 +33,31 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.55
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.75
     Spear of Desolation:
-      total: 0.62
-      efficiency: 0.41
+      total: 0.63
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.83
     The Cosmic Horror:
       total: 0.56
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.66
     Doom Orb:
       total: 0.53
-      efficiency: 0.4
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Spear of the Magus:
       total: 0.54
-      efficiency: 0.42
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.47
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -112,13 +112,13 @@ builds:
       fit: 0.6
     Spear of Desolation:
       total: 0.56
-      efficiency: 0.41
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.7
     The Cosmic Horror:
       total: 0.48
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -130,7 +130,7 @@ builds:
       fit: 1.0
     Triton's Conch:
       total: 0.47
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -145,7 +145,7 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Erosion
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.47
-      efficiency: 0.35
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.59
     Spear of Desolation:
-      total: 0.43
-      efficiency: 0.41
+      total: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -217,11 +217,11 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -229,32 +229,32 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.64
-      efficiency: 0.41
+      total: 0.65
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.88
     The Cosmic Horror:
-      total: 0.6
-      efficiency: 0.46
+      total: 0.61
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.75
     Doom Orb:
-      total: 0.57
-      efficiency: 0.4
+      total: 0.58
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.75
     Spear of the Magus:
-      total: 0.58
-      efficiency: 0.42
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.75
     The World Stone:
-      total: 0.55
-      efficiency: 0.36
+      total: 0.56
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -306,25 +306,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.51
+      total: 0.5
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.52
-      efficiency: 0.38
+      total: 0.51
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.21
       win: 0.5
       pick: 0.0

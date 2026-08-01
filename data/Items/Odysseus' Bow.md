@@ -13,7 +13,7 @@ builds_from:
 - Hunter's Bow
 builds_into: []
 source_url: https://wiki.smite2.com/w/Odysseus'_Bow
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Every fourth Attack Hit: Trigger Chain Lightning. Damage = 15 (+60% Attack Damage) Physical Damage Hits target and up to 4 nearby enemies Bounce Range: 4.8m Can hit the same target more than once

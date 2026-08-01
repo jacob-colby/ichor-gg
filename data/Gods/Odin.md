@@ -174,7 +174,7 @@ abilities:
     Strength and Intelligence buff . Gain a stack of Path to Valhalla
 aspects: []
 source_url: https://wiki.smite2.com/w/Odin
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Odin Basic Attack

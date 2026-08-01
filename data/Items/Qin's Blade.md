@@ -13,7 +13,7 @@ builds_from:
 - Hunter's Bow
 builds_into: []
 source_url: https://wiki.smite2.com/w/Qin's_Blade
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Attack Hit: +Bonus Physical Damage. Bonus Damage = +2% Target Base Health +5% Target Item Health

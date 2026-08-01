@@ -165,7 +165,7 @@ aspects:
     sprite or targeting a enemy dealing damage and granting a gust attack. To The
     Skies! no longer teleports allies but deals bonus damage in the center.
 source_url: https://wiki.smite2.com/w/Horus
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Horus Basic Attack

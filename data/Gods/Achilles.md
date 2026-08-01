@@ -174,7 +174,7 @@ aspects:
     with Spear Strike gaining increased Scaling when forgoing Achilles's Armor. Radiant
     Glory no longer grants increased Protections or Crowd Control Reduction.
 source_url: https://wiki.smite2.com/w/Achilles
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Achilles Basic Attack

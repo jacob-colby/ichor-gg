@@ -13,7 +13,7 @@ builds_from:
 - Enchanted Bracelet
 builds_into: []
 source_url: https://wiki.smite2.com/w/Bracer_of_The_Abyss
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Hit enemy Gods or Jungle Bosses: +8 Attack Damage for 10s. Stacks up to 8 times.

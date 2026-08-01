@@ -23,7 +23,7 @@ builds_into:
 - Tekko-Kagi
 - The Executioner
 source_url: https://wiki.smite2.com/w/Hunter's_Bow
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 

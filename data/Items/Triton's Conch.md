@@ -14,7 +14,7 @@ builds_from:
 - Veve Charm
 builds_into: []
 source_url: https://wiki.smite2.com/w/Triton's_Conch
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 You and allies within 8.8m: +5 (+0.5 per Level) Strength +5 (+1 per Level) Intelligence

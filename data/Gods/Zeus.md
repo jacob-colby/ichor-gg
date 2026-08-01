@@ -86,12 +86,12 @@ abilities:
   - 80.0
   details:
   - You also gain increased Attack Speed, Movement Speed, and Haste
-  - 'Damage: 80 | 130 | 180 | 230 | 280'
+  - 'Damage: 70 | 120 | 170 | 220 | 270'
   - 'Damage Scaling: 75% Intelligence'
   - 'Attack Speed: 30%'
   - 'Movement Speed: 20 | 22.5 | 25 | 27.5 | 30%'
   - 'Haste: 10 | 11.25 | 12.5 | 13.75 | 15%'
-  - 'Buff Duration: 5 seconds'
+  - 'Buff Duration: 4 seconds'
   - 'Radius: 3.2 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
@@ -144,7 +144,7 @@ abilities:
     area
 aspects: []
 source_url: https://wiki.smite2.com/w/Zeus
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Zeus Basic Attack

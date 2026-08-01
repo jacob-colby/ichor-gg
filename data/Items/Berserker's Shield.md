@@ -4,7 +4,7 @@ name: Berserker's Shield
 tier: 3
 cost: 2400
 stats:
-  Physical Protection: '50'
+  Physical Protection: '40'
   Attack Speed: 20%
   Max Health: '200'
   Health Regen: '4'
@@ -15,7 +15,7 @@ builds_from:
 - Hunter's Bow
 builds_into: []
 source_url: https://wiki.smite2.com/w/Berserker's_Shield
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 When falling below 60% Health: Become Berserk for 8s. While Berserk: +15 Physical Protection +15 Magical Protection +25% Attack Speed

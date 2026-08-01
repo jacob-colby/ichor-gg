@@ -1,6 +1,6 @@
 # Effect-tag audit (keyword heuristic — review, don't auto-apply)
 
-56 candidate(s), 5 `possible-missing`. Keyword scan of item passives vs `_tags.yaml`.
+57 candidate(s), 6 `possible-missing`. Keyword scan of item passives vs `_tags.yaml`.
 
 - **possible-missing** = a keyword is in the passive but the tag isn't set — the actionable direction (a likely gap).
 - **tag-without-evidence** = tagged but the (often terse) passive lacks the keyword — usually fine, since tags are curated from game knowledge.
@@ -10,6 +10,7 @@
 | Barbed Carver | possible-missing | sustain |
 | Contagion | possible-missing | sustain |
 | Gluttonous Grimoire | possible-missing | sustain |
+| Heartwood Charm | possible-missing | aura |
 | Sanguine Lash | possible-missing | sustain |
 | Typhon’s Heart | possible-missing | sustain |
 | Amanita Charm | tag-without-evidence | sustain |

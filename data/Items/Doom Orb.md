@@ -15,7 +15,7 @@ builds_from:
 - Oracle Staff
 builds_into: []
 source_url: https://wiki.smite2.com/w/Doom_Orb
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Kill or Assist a Minion: +1 Stack. Kill or Assist a God: +5 Stacks. Per Stack: +8 Intelligence Max 5 Stacks. Stacks last 10s. Stacks fall off one at a time

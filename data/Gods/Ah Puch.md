@@ -154,7 +154,7 @@ aspects:
     targets on ability hits. Empty The Crypts deals less damage per tick but Slows
     haunted enemy gods inside the field.
 source_url: https://wiki.smite2.com/w/Ah_Puch
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Ah Puch Basic Attack

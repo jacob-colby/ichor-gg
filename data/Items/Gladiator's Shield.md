@@ -14,7 +14,7 @@ builds_from:
 - Captain's Ring
 builds_into: []
 source_url: https://wiki.smite2.com/w/Gladiator's_Shield
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Abilities deal bonus Physical Damage. Damage = +10 + 40% of your Item Protections Triggers once per Ability Cast, per God

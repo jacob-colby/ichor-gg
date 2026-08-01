@@ -155,7 +155,7 @@ aspects:
     and healing. Thistlethorn causes Acorn Blast to fire 5 projectiles and debuffs
     enemies.
 source_url: https://wiki.smite2.com/w/Ratatoskr
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Ratatoskr Basic Attack

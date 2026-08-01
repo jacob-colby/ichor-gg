@@ -169,7 +169,7 @@ abilities:
     the Jealousy effect for a short duration
 aspects: []
 source_url: https://wiki.smite2.com/w/Aphrodite
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Aphrodite Basic Attack

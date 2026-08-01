@@ -14,7 +14,7 @@ builds_from:
 - Circle of Protection
 builds_into: []
 source_url: https://wiki.smite2.com/w/Spirit_Robe
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Hit by Hard Crowd Control: +40 Physical Protection +40 Magical Protection +4% Health Heal over time Buff lasts 6s.

@@ -149,7 +149,7 @@ aspects:
     thresholds and deals Attack damage. Trickster Sprit does less damage but provides
     an Attack Speed buff.
 source_url: https://wiki.smite2.com/w/Da_Ji
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Da Ji Basic Attack

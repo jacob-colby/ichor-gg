@@ -13,7 +13,7 @@ builds_from: []
 builds_into:
 - Archmage's Gem
 source_url: https://wiki.smite2.com/w/Conduit_Gem
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +15 Strength or +30 Intelligence (based on highest item stat). Every 0.5s: Gain 1 Stack (max 20). Damaging Abilities deals 3 True Damage per Stack (half vs Gods), then remove all Stacks. Requires Level 20 to upgrade.

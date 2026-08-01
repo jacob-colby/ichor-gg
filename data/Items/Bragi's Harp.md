@@ -14,7 +14,7 @@ builds_from:
 - Zither
 builds_into: []
 source_url: https://wiki.smite2.com/w/Bragi's_Harp
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Attack Hit: +10 (+3 per Level) bonus Magical Damage. Structures and Bosses take half damage from Bragi's Harp

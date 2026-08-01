@@ -157,7 +157,7 @@ aspects:
     Everlasting Flame now provides Protections instead of Strength and Lifesteal,
     and Volcanic Lightning damage no longer has Strength Scaling.
 source_url: https://wiki.smite2.com/w/Pele
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Pele Basic Attack

@@ -153,7 +153,7 @@ aspects:
     Afterlife summons a slowing, damage-dealing specter, but you can no longer leap
     to a location.
 source_url: https://wiki.smite2.com/w/Osiris
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Osiris Basic Attack

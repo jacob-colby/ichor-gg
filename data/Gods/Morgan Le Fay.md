@@ -186,7 +186,7 @@ aspects:
     Mastery fires all 3 Sigils simultaneously. Shroud of Wildfire Attack explosions
     deal a percentage of your Max Health as damage.
 source_url: https://wiki.smite2.com/w/Morgan_Le_Fay
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Morgan Le Fay Basic Attack

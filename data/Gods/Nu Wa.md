@@ -152,7 +152,7 @@ aspects:
     Attack Damage, and procs Attack Item Effects. Attacks reduce the Cooldown of Shining
     Metal. Additionally Strength of Fire also provides Attack Speed.
 source_url: https://wiki.smite2.com/w/Nu_Wa
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Nu Wa Basic Attack

@@ -187,7 +187,7 @@ aspects:
     gains Block Stacks with Sword and Shield or gains Health from Scourge, nearby
     allied gods also gain those benefits.
 source_url: https://wiki.smite2.com/w/Bellona
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Bellona Basic Attack

@@ -143,7 +143,7 @@ abilities:
     explosives and dealing Physical Damage to enemies beneath you
 aspects: []
 source_url: https://wiki.smite2.com/w/Jing_Wei
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Jing Wei Basic Attack

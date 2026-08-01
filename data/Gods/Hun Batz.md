@@ -42,7 +42,7 @@ abilities:
 - slot: Passive
   name: Infused Strikes
   details:
-  - 'Strength: 2 Per Stack'
+  - 'Strength: 4 Per Stack'
   - 'Strength Scaling: 0.2 Per Level'
   - 'Max Stacks: 4'
   - 'Buff Duration: 4 seconds'
@@ -80,7 +80,7 @@ abilities:
   details:
   - While Channeling you are Displacement Immune and Immune to Strafe and Backpedal
     Movement Penalties
-  - 'Damage: 75 | 130 | 185 | 240 | 295'
+  - 'Damage: 85 | 140 | 195 | 250 | 305'
   - 'Damage Scaling: 75% Strength'
   - 'Physical Protections Reduced: 8 | 10 | 12 | 14 | 16'
   - 'Debuff Duration: 2 seconds'
@@ -141,7 +141,7 @@ aspects:
     stacking Strength buff. Overhand Smash Stuns gods hit by it, but deals reduced
     damage.
 source_url: https://wiki.smite2.com/w/Hun_Batz
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Hun Batz Basic Attack

@@ -16,7 +16,7 @@ builds_from:
 - Mana Tome
 builds_into: []
 source_url: https://wiki.smite2.com/w/Xibalban_Effigy
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 On Use: Take 50% Damage for 4s. After: Take Physical Damage equal to mitigated Damage Cannot drop below 5% Health Cooldown: 90s During Moonlight Phase: Only 50% of the mitigated Damage is dealt back You can own up to 3 active items at once

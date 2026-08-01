@@ -188,7 +188,7 @@ aspects:
     Venomous Haze. Consuming Bellow does not deal bonus damage but allies gain INT
     and STR. Submerge Knockup height is increased.
 source_url: https://wiki.smite2.com/w/Jormungandr
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Jormungandr Basic Attack

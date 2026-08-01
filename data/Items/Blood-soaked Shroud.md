@@ -12,7 +12,7 @@ builds_from:
 - Vampiric Shroud
 builds_into: []
 source_url: https://wiki.smite2.com/w/Blood-soaked_Shroud
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +40 Strength or +70 Intelligence (based on highest item stat). Ability Hit: +1% Max Health Heal +1% Max Mana Recovery Requires Level 20.

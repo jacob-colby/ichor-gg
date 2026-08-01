@@ -168,7 +168,7 @@ aspects:
     provides Strength, Attack Speed, and Attack Damage. Sol erupts and deals damage
     around her when becomes immune in Disapparate.
 source_url: https://wiki.smite2.com/w/Sol
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Sol Basic Attack
