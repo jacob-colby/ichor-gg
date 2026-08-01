@@ -41,6 +41,10 @@ def main(argv=None):
         "data/Gods",
         "data/Items",
         "data/Analysis",
+        # The community item table. Written by refresh_all, and easy to miss
+        # here because it is a single file rather than a directory — left out,
+        # it is regenerated every run and committed by none of them.
+        "data/_community_items.json",
         "viewer/public/index.json",
     ]
     _run_git(["add", "--", *paths], root)
