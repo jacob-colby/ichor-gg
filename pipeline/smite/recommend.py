@@ -20,6 +20,7 @@ MODES = ["Conquest", "Joust"]
 
 _FLAVOR_BLURB = {
     "core": "Top weighted-score core",
+    "model": "The model's own answer — no meta signal",
     "crit": "Crit / auto-attack skew",
     "burst": "Ability / burst skew",
     "bruiser": "Lifesteal bruiser skew",
@@ -111,9 +112,42 @@ def god_report(god, items, god_build, weights, tags_map):
     return "\n".join(lines) + "\n"
 
 
+def _entry(archetype, core, rows, items_by_name, tags_map, weights, profile,
+           flex_count, starter, aspect_name, fun=False, extra=None):
+    """One suggested build entry from an already-assembled core.
+
+    Extracted so every archetype is packaged identically — `model` differs from
+    `core` only in how its rows were ranked, and that difference has to stay the
+    only difference between them.
+    """
+    flex = assemble.flex_slots(core, rows, count=flex_count)
+    ordered = assemble.build_order(core, items_by_name, tags_map, weights)
+    swaps = assemble.situational_swaps(rows, items_by_name, tags_map, core=core)
+    by_name = {r["item"]: r for r in rows}
+    slot_scores = {
+        name: {k: round(by_name[name][k], 2)
+               for k in ("total", "efficiency", "win", "pick", "fit")}
+        for name in ordered if name in by_name
+    }
+    return {
+        "source": "suggested",
+        "archetype": archetype,
+        "slot_order": ordered,
+        "flex_slots": flex,
+        "situational_swaps": swaps,
+        "rationale": _rationale(archetype, rows, profile),
+        "slot_scores": slot_scores,
+        **(extra or {}),
+        **({"fun": True} if fun else {}),
+        **({"starter": starter} if starter else {}),
+        **({"aspect": aspect_name} if aspect_name else {}),
+    }
+
+
 def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                      items_by_name, starter, flex_count, aspect_overlay, aspect_name):
     entries = []
+    core_rows = core_profile = None
     eligible = scoring.eligible_flavors(god, weights)
     for flavor in [None] + eligible:
         cfg = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
@@ -126,28 +160,29 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         core = assemble.assemble_core(rows, items_by_name, n=6,
                                       max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
                                       require=require)
-        flex = assemble.flex_slots(core, rows, count=flex_count)
-        ordered = assemble.build_order(core, items_by_name, tags_map, weights)
-        swaps = assemble.situational_swaps(rows, items_by_name, tags_map, core=core)
         archetype = flavor or "core"
-        by_name = {r["item"]: r for r in rows}
-        slot_scores = {
-            name: {k: round(by_name[name][k], 2)
-                   for k in ("total", "efficiency", "win", "pick", "fit")}
-            for name in ordered if name in by_name
-        }
-        entries.append({
-            "source": "suggested",
-            "archetype": archetype,
-            "slot_order": ordered,
-            "flex_slots": flex,
-            "situational_swaps": swaps,
-            "rationale": _rationale(archetype, rows, profile),
-            "slot_scores": slot_scores,
-            **({"fun": True} if cfg.get("fun") else {}),
-            **({"starter": starter} if starter else {}),
-            **({"aspect": aspect_name} if aspect_name else {}),
-        })
+        if flavor is None:
+            core_rows, core_profile = rows, profile
+        entries.append(_entry(archetype, core, rows, items_by_name, tags_map,
+                              weights, profile, flex_count, starter, aspect_name,
+                              fun=bool(cfg.get("fun"))))
+
+    # The model's own answer, with the meta switched off.
+    #
+    # `signal_score` already computes `quality` — efficiency and fit only,
+    # renormalized — and every caller until now discarded it. Ranking by it
+    # gives the build the model would pick if it had never seen a win rate,
+    # which is the honest counterpart to the community's own build. The blended
+    # `core` stays exactly as it was: the tier list's per-god score, the draft's
+    # baseline and the data audit all read it by name.
+    if core_rows is not None:
+        model_rows = sorted(core_rows, key=lambda r: (-r["quality"], r["item"]))
+        model_core = assemble.assemble_core(
+            model_rows, items_by_name, n=6,
+            max_lifesteal=scoring.god_max_lifesteal(god, weights, core_profile))
+        entries.append(_entry("model", model_core, model_rows, items_by_name,
+                              tags_map, weights, core_profile, flex_count,
+                              starter, aspect_name))
     return entries
 
 
