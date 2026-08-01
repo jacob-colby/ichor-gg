@@ -11,10 +11,48 @@ export function isCommunityEntry(entry: BuildEntry): entry is CommunityBuildEntr
 /** Tab label for a build entry: suggested builds show their archetype
  * (Core / Crit / Burst / …); mine builds show their user-given name; community
  * shows its source. */
+/** The three builds that answer the same question three ways, in the order a
+ *  reader should meet them: the model's own answer, that answer corrected where
+ *  the community has real evidence, then what people actually run. Flavors and
+ *  the player's own builds follow. */
+export const HEADLINE_ARCHETYPES = ["model", "hybrid"] as const;
+
+const ARCHETYPE_LABEL: Record<string, string> = {
+  model: "Model",
+  hybrid: "Hybrid",
+  core: "Balanced",
+  crit: "Crit",
+  burst: "Burst",
+  bruiser: "Bruiser",
+  "anti-tank": "Anti-tank",
+  "fun-crit": "Fun crit",
+};
+
 export function tabLabel(entry: BuildEntry): string {
-  if (entry.source === "suggested") return entry.archetype ?? "suggested";
+  if (entry.source === "community") return "Community";
+  if (entry.source === "suggested") {
+    const a = entry.archetype ?? "suggested";
+    return ARCHETYPE_LABEL[a] ?? a;
+  }
   if (entry.source === "mine") return entry.name ?? "mine";
   return entry.source;
+}
+
+/** Model, Hybrid, Community, then everything else in its existing order.
+ *  `core` stays available — three other systems read it by name — but it is no
+ *  longer the answer a visitor meets first. */
+export function orderBuilds(suggested: BuildEntry[], community?: BuildEntry): BuildEntry[] {
+  const rank = (e: BuildEntry) => {
+    if (e.source === "community") return 2;
+    const a = e.source === "suggested" ? e.archetype : undefined;
+    const i = HEADLINE_ARCHETYPES.indexOf(a as typeof HEADLINE_ARCHETYPES[number]);
+    return i >= 0 ? i : 3;
+  };
+  const all = community ? [...suggested, community] : [...suggested];
+  return all
+    .map((e, i) => ({ e, i }))
+    .sort((x, y) => rank(x.e) - rank(y.e) || x.i - y.i)
+    .map(({ e }) => e);
 }
 
 /** slot_order entries are plain strings for pro/mine, {name, pick_rate,

@@ -134,6 +134,16 @@ export interface CuratedBuildEntry {
   /** Off-class for-fun build — win/pick signals zeroed, not meta-scored. */
   fun?: boolean;
   slot_scores?: Record<string, SlotScore>;
+  /** Hybrid builds only: where the community's record overrode the model, and
+   *  the evidence that earned it. A correction that can't say why it fired is
+   *  just a third opinion. */
+  swaps?: HybridSwap[];
+}
+
+export interface HybridSwap {
+  added: string;
+  removed: string;
+  reason: string;
 }
 
 export type BuildEntry = CommunityBuildEntry | CuratedBuildEntry;

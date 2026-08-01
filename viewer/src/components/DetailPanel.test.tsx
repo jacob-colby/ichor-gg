@@ -49,7 +49,7 @@ describe("DetailPanel — what opens by default", () => {
     expect(screen.getByText(/buy order/i)).toBeInTheDocument();
   });
 
-  it("offers the model's flavors as a pressed-state group, with community not among them", () => {
+  it("offers the three builds and the flavors in one group, community among them", () => {
     const builds = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
         slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u" },
@@ -58,9 +58,11 @@ describe("DetailPanel — what opens by default", () => {
     ] }];
     render(panel({ builds: builds as never }));
     const group = within(screen.getByRole("group", { name: /build flavor/i }));
-    expect(group.getByRole("button", { name: /core/i })).toHaveAttribute("aria-pressed", "true");
+    expect(group.getByRole("button", { name: /balanced/i })).toHaveAttribute("aria-pressed", "true");
     expect(group.getByRole("button", { name: /crit/i })).toHaveAttribute("aria-pressed", "false");
-    expect(group.queryByRole("button", { name: /community/i })).not.toBeInTheDocument();
+    // Community is selectable now — a third answer the reader can hold whole,
+    // not only a comparison track drawn against someone else's build.
+    expect(group.getByRole("button", { name: /community/i })).toBeInTheDocument();
     // No broken tablist left behind.
     expect(screen.queryAllByRole("tab")).toHaveLength(0);
   });
@@ -80,7 +82,10 @@ describe("DetailPanel — what opens by default", () => {
     render(panel({ builds: [chironCommunity] }));
     expect(screen.getByText("Transcendence")).toBeInTheDocument();
     expect(screen.getByText(/slot order/i)).toBeInTheDocument();
-    expect(screen.queryByRole("group", { name: /build flavor/i })).not.toBeInTheDocument();
+    // The group renders whenever anything is selectable — with only a
+    // community entry, that is the one button in it.
+    const only = within(screen.getByRole("group", { name: /build flavor/i }));
+    expect(only.getByRole("button", { name: /community/i })).toBeInTheDocument();
   });
 
   it("explains itself when the god has no build note for this mode yet", () => {
@@ -245,7 +250,7 @@ describe("DetailPanel — the buy ledger", () => {
       { source: "suggested", archetype: "fun-crit", fun: true, slot_order: ["B"], situational_swaps: [], rationale: "" },
     ] }];
     render(panel({ items, builds: funBuild as never }));
-    fireEvent.click(screen.getByRole("button", { name: /fun-crit/i }));
+    fireEvent.click(screen.getByRole("button", { name: /fun crit/i }));
     expect(screen.getByText(/for fun/i)).toBeInTheDocument();
     expect(screen.getByText(/off-class/i)).toBeInTheDocument();
     expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
@@ -441,7 +446,7 @@ describe("DetailPanel — modes, aspects, starters, mine", () => {
     const group = within(screen.getByRole("group", { name: /build flavor/i }));
     expect(group.getByRole("button", { name: /My New/i })).toBeInTheDocument();
     // The model's core is still what opens.
-    expect(group.getByRole("button", { name: /core/i })).toHaveAttribute("aria-pressed", "true");
+    expect(group.getByRole("button", { name: /balanced/i })).toHaveAttribute("aria-pressed", "true");
     expect(screen.getByText("Deathbringer")).toBeInTheDocument();
   });
 

@@ -18,7 +18,7 @@ import { useEffect, useMemo, useState } from "react";
 import type {
   BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
-import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel } from "../lib/builds";
+import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel, orderBuilds } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { tierLabel } from "../lib/itemFilters";
 import { buildLedger, goldText, goldGap, type LedgerRow } from "../lib/ledger";
@@ -353,7 +353,7 @@ export function DetailPanel({
   const godNotes = builds.filter((b) => b.god === god);
   const note = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
   const modes = godNotes.map((n) => n.mode);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [editing, setEditing] = useState<MineDraft | "new" | null>(null);
   const [aspectOn, setAspectOn] = useState(false);
@@ -371,7 +371,10 @@ export function DetailPanel({
   );
 
   useEffect(() => {
-    setActiveIndex(0);
+    // null, not 0: index 0 is now whichever build sorts first, and the default
+    // has to be the first *model-side* one. Resetting to 0 would open a new god
+    // on the community's build.
+    setActiveIndex(null);
     setSelectedTag(null);
     setEditing(null);
     setAspectOn(false);
@@ -394,18 +397,31 @@ export function DetailPanel({
   const aspectMeta = godData?.aspects?.[0];
   const communityEntry = note.builds.find(isCommunityEntry);
 
-  // Community is no longer one option among many — it's the constant
-  // comparison track. Only the model's builds and the player's own are
-  // selectable, which is why this surface now opens on the model's answer.
+  // Three builds answer the same question three ways, and the reader should be
+  // able to hold each one whole: the model's own answer, that answer corrected
+  // where the community has real evidence, and what people actually run.
+  //
+  // Community used to be excluded from this list deliberately — it was only a
+  // comparison track drawn alongside a model build. That was right when there
+  // were two answers; with three it left one of them unreadable on its own
+  // terms. It is selectable now, and the comparison track still runs whenever a
+  // model-side build is the active one.
   const suggested = note.builds.filter((b) => {
     if (b.source !== "suggested") return false;
     const a = (b as { aspect?: string }).aspect;
     return aspectOn ? !!a : !a;
   });
-  const selectable: BuildEntry[] = [...suggested, ...mineEntries];
-  // A god with no suggested build at all still has to render something.
+  const selectable: BuildEntry[] = [
+    ...orderBuilds(suggested, communityEntry), ...mineEntries,
+  ];
+  // Nothing to select at all still has to render something.
   const primaryIsCommunity = selectable.length === 0;
-  const active: BuildEntry = selectable[activeIndex] ?? selectable[0] ?? (communityEntry as BuildEntry);
+  // Community is selectable, never the default: this surface opens on the
+  // model's answer, and the community's build is the thing that answer is
+  // being compared against. Only a god with no model build at all opens there.
+  const defaultIndex = Math.max(0, selectable.findIndex((b) => b.source === "suggested"));
+  const active: BuildEntry =
+    selectable[activeIndex ?? defaultIndex] ?? selectable[defaultIndex] ?? (communityEntry as BuildEntry);
 
   // The aspect toggle used to test *all* builds, including community, so a god
   // whose community entry carried an aspect showed the toggle with no aspect
@@ -413,16 +429,23 @@ export function DetailPanel({
   const hasAspectBuild = note.builds.some((b) => b.source === "suggested" && !!(b as { aspect?: string }).aspect);
   const toggleAspect = () => {
     const next = !aspectOn;
-    const cur = selectable[activeIndex];
+    const cur = selectable[activeIndex ?? defaultIndex];
     const curArch = cur && cur.source === "suggested" ? (cur as CuratedBuildEntry).archetype : undefined;
     const nextSuggested = note.builds.filter((b) => {
       if (b.source !== "suggested") return false;
       const a = (b as { aspect?: string }).aspect;
       return next ? !!a : !a;
     });
-    const i = curArch ? nextSuggested.findIndex((e) => (e as CuratedBuildEntry).archetype === curArch) : -1;
+    // Index into the ORDERED list, which is what the tab strip renders.
+    // Searching the raw filtered list silently pointed at a different build
+    // once community joined the strip and the order stopped matching.
+    const nextSelectable = [...orderBuilds(nextSuggested, communityEntry), ...mineEntries];
+    const i = curArch
+      ? nextSelectable.findIndex(
+          (e) => e.source === "suggested" && (e as CuratedBuildEntry).archetype === curArch)
+      : -1;
     setAspectOn(next);
-    setActiveIndex(i >= 0 ? i : 0);
+    setActiveIndex(i >= 0 ? i : null);
     setSelectedTag(null);
   };
 
@@ -472,8 +495,11 @@ export function DetailPanel({
         onClose={() => setEditing(null)}
         onSaved={(name) => {
           setMineVersion((v) => v + 1);
+          // Offset by the ordered suggested-plus-community group, not by
+          // `suggested.length` — community sits inside that group now.
           const idx = name ? getMine(god, note.mode).findIndex((b) => b.name === name) : -1;
-          setActiveIndex(idx >= 0 ? suggested.length + idx : 0);
+          const before = orderBuilds(suggested, communityEntry).length;
+          setActiveIndex(idx >= 0 ? before + idx : null);
         }}
       />
     );
@@ -517,8 +543,8 @@ export function DetailPanel({
         <div className="mt-4 flex flex-wrap items-center gap-2">
           <div role="group" aria-label="Build flavor" className="flex flex-wrap gap-0.5 rounded-md border border-line bg-bg1 p-1">
             {selectable.map((entry, i) => (
-              <button key={`${tabLabel(entry)}-${i}`} type="button" aria-pressed={i === activeIndex}
-                onClick={() => setActiveIndex(i)} className={segBtn(i === activeIndex)}>
+              <button key={`${tabLabel(entry)}-${i}`} type="button" aria-pressed={i === (activeIndex ?? defaultIndex)}
+                onClick={() => setActiveIndex(i)} className={segBtn(i === (activeIndex ?? defaultIndex))}>
                 {tabLabel(entry)}{(entry as { fun?: boolean }).fun ? " 🎲" : ""}
               </button>
             ))}
@@ -722,6 +748,25 @@ export function DetailPanel({
             })}
           </ul>
         </section>
+      )}
+
+      {/* What the community's record changed, and what earned it. This is the
+          hybrid's entire claim — without it the build is a third list of six
+          items with no account of where it came from. */}
+      {!community && !!(active as CuratedBuildEntry).swaps?.length && (
+        <div className="mt-4 rounded-md border border-line bg-bg1 p-3">
+          <h3 className={eyebrow}>Where the community overruled the model</h3>
+          <ul className="mt-2 flex flex-col gap-2">
+            {(active as CuratedBuildEntry).swaps!.map((s) => (
+              <li key={s.added} className="text-small leading-relaxed">
+                <span className="font-medium text-under">{s.added}</span>
+                <span className="px-1.5 text-faint">replaced</span>
+                <span className="text-ink-soft">{s.removed}</span>
+                <p className="mt-0.5 text-label leading-relaxed text-muted">{s.reason}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
 
       {!community && (active as CuratedBuildEntry).rationale && (
