@@ -358,4 +358,74 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Eye of Providence
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Spectral Armor
+  - Erosion
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Kinetic Cuirass, Eye of Providence, Amanita Charm, Jotunn''s
+    Revenge, Spectral Armor, Erosion, Shield Splitter, Shield of the Phoenix, Eye
+    of the Storm, Runeforged Hammer, Gladiator''s Shield, Hydra''s Lament, The Crusher,
+    Chandra''s Grace, Berserker''s Shield, Breastplate of Valor, Midgardian Mail,
+    Freya''s Tears, Avenging Blade, Draconic Scale, Prophetic Cloak, Pharaoh''s Curse,
+    Leviathan''s Hide, Ancile, Oni Hunter''s Garb, Phoenix Feather.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.49
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Jotunn's Revenge:
+      total: 0.47
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Kinetic Cuirass:
+      total: 0.49
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    Spectral Armor:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Amanita Charm:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Erosion:
+      total: 0.46
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+  starter: *id001
 ---

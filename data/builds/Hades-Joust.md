@@ -331,4 +331,69 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Divine Ruin
+  - Spear of Desolation
+  - Spectral Armor
+  - Erosion
+  - Soul Gem
+  - Triton's Conch
+  flex_slots:
+  - Spectral Armor
+  - Triton's Conch
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.5
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Spear of Desolation:
+      total: 0.51
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Spectral Armor:
+      total: 0.49
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Erosion:
+      total: 0.5
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Triton's Conch:
+      total: 0.48
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+  starter: *id001
 ---

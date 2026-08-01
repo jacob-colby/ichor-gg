@@ -433,6 +433,76 @@ builds:
       fit: 0.55
   starter: *id001
 - source: suggested
+  archetype: model
+  slot_order:
+  - Jotunn's Revenge
+  - Tyrfing
+  - Hydra's Lament
+  - The Reaper
+  - Tekko-Kagi
+  - The Crusher
+  flex_slots:
+  - Hydra's Lament
+  - Tyrfing
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Jotunn''s Revenge, The Crusher, The Reaper, Tekko-Kagi,
+    Hydra''s Lament, Tyrfing, Lernaean Bow, Runeforged Hammer, Golden Blade, Damaru,
+    Rage, Avenging Blade, Shield Splitter, Berserker''s Shield, Spectral Armor, Demon
+    Blade, Genji''s Guard, Kinetic Cuirass, Pendulum Blade, Eye of the Storm, Eros''
+    Bow, Pharaoh''s Curse, Heartseeker, Musashi''s Dual Swords, Eye of Providence,
+    Barbed Carver, Chandra''s Grace.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.48
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Tyrfing:
+      total: 0.43
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Hydra's Lament:
+      total: 0.44
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    The Reaper:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Tekko-Kagi:
+      total: 0.44
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    The Crusher:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Jotunn's Revenge
@@ -783,6 +853,77 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
+  starter: *id001
+  aspect: Aspect of Strife
+- source: suggested
+  archetype: model
+  slot_order:
+  - Chandra's Grace
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Runeforged Hammer
+  - The Reaper
+  - The Crusher
+  flex_slots:
+  - Hydra's Lament
+  - Chandra's Grace
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: The Reaper, Jotunn''s Revenge, The Crusher, Runeforged
+    Hammer, Hydra''s Lament, Chandra''s Grace, Amanita Charm, Shield of the Phoenix,
+    Avenging Blade, Golden Blade, Tekko-Kagi, Tyrfing, Damaru, Spectral Armor, Lernaean
+    Bow, Bloodforge, Kinetic Cuirass, Eye of Providence, Rage, Eye of the Storm, Shield
+    Splitter, Berserker''s Shield, Phoenix Feather, Barbed Carver, Genji''s Guard,
+    Yogi''s Necklace.'
+  slot_scores:
+    Chandra's Grace:
+      total: 0.43
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Jotunn's Revenge:
+      total: 0.48
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Hydra's Lament:
+      total: 0.43
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Runeforged Hammer:
+      total: 0.44
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    The Reaper:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    The Crusher:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
   aspect: Aspect of Strife
 ---

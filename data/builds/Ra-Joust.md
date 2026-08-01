@@ -332,6 +332,71 @@ builds:
   fun: true
   starter: *id001
 - source: suggested
+  archetype: model
+  slot_order:
+  - Divine Ruin
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
+  - Soul Gem
+  flex_slots:
+  - Spear of the Magus
+  - Doom Orb
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.58
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Spear of Desolation:
+      total: 0.71
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Doom Orb:
+      total: 0.56
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Spear of the Magus:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Void Stone
@@ -593,6 +658,72 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: model
+  slot_order:
+  - Void Stone
+  - Spear of Desolation
+  - Spectral Armor
+  - Erosion
+  - Soul Gem
+  - Triton's Conch
+  flex_slots:
+  - Spectral Armor
+  - Triton's Conch
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Void Stone:
+      total: 0.52
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Spectral Armor:
+      total: 0.49
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Erosion:
+      total: 0.52
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Triton's Conch:
+      total: 0.48
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
   starter: *id001
   aspect: Aspect of Thermotherapy
 ---

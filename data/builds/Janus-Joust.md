@@ -331,4 +331,69 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Divine Ruin
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
+  - Soul Gem
+  flex_slots:
+  - Doom Orb
+  - Divine Ruin
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.59
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Spear of Desolation:
+      total: 0.71
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.62
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Doom Orb:
+      total: 0.59
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Spear of the Magus:
+      total: 0.6
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  starter: *id001
 ---

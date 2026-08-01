@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import {
+  orderBuilds,
   isCommunityEntry,
   slotItemName,
   iconSlug,
@@ -79,11 +80,17 @@ describe("applySwap", () => {
 });
 
 describe("tabLabel", () => {
-  it("labels a suggested entry by its archetype", () => {
-    expect(tabLabel({ source: "suggested", archetype: "crit", slot_order: [] } as any)).toBe("crit");
+  it("labels a suggested entry with its display name", () => {
+    expect(tabLabel({ source: "suggested", archetype: "crit", slot_order: [] } as any)).toBe("Crit");
+    // The three headline builds read as answers, not as internal archetype keys.
+    expect(tabLabel({ source: "suggested", archetype: "model", slot_order: [] } as any)).toBe("Model");
+    expect(tabLabel({ source: "suggested", archetype: "hybrid", slot_order: [] } as any)).toBe("Hybrid");
+    // `core` keeps its name in the data — three systems read it — but the
+    // reader meets it as one option among several, not as "the" build.
+    expect(tabLabel({ source: "suggested", archetype: "core", slot_order: [] } as any)).toBe("Balanced");
   });
-  it("falls back to source for community/mine", () => {
-    expect(tabLabel({ source: "community", slot_order: [] } as any)).toBe("community");
+  it("names community plainly and a mine build by its own name", () => {
+    expect(tabLabel({ source: "community", slot_order: [] } as any)).toBe("Community");
     expect(tabLabel({ source: "mine", slot_order: [] } as any)).toBe("mine");
   });
   it("falls back to 'suggested' when a suggested entry has no archetype", () => {
@@ -114,5 +121,25 @@ describe("applySwap flex targeting", () => {
   it("falls back to last when flex slot is not in the build", () => {
     const out = applySwap(["A", "B", "C"], "SwapIn", ["Z"]);
     expect(out.find((s) => s.status === "removed")?.name).toBe("C");
+  });
+});
+
+describe("orderBuilds", () => {
+  const s = (archetype: string) => ({ source: "suggested", archetype, slot_order: [] }) as never;
+  const community = { source: "community", slot_order: [] } as never;
+
+  it("leads with the three builds that answer the same question", () => {
+    const got = orderBuilds([s("core"), s("crit"), s("model"), s("hybrid")], community);
+    expect(got.map(tabLabel)).toEqual(["Model", "Hybrid", "Community", "Balanced", "Crit"]);
+  });
+
+  it("keeps the incoming order among everything that isn't a headline", () => {
+    const got = orderBuilds([s("bruiser"), s("crit"), s("core")], undefined);
+    expect(got.map(tabLabel)).toEqual(["Bruiser", "Crit", "Balanced"]);
+  });
+
+  it("omits community when the god has none — every Joust build", () => {
+    const got = orderBuilds([s("model"), s("core")], undefined);
+    expect(got.map(tabLabel)).toEqual(["Model", "Balanced"]);
   });
 });

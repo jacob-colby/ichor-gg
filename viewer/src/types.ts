@@ -134,6 +134,16 @@ export interface CuratedBuildEntry {
   /** Off-class for-fun build — win/pick signals zeroed, not meta-scored. */
   fun?: boolean;
   slot_scores?: Record<string, SlotScore>;
+  /** Hybrid builds only: where the community's record overrode the model, and
+   *  the evidence that earned it. A correction that can't say why it fired is
+   *  just a third opinion. */
+  swaps?: HybridSwap[];
+}
+
+export interface HybridSwap {
+  added: string;
+  removed: string;
+  reason: string;
 }
 
 export type BuildEntry = CommunityBuildEntry | CuratedBuildEntry;
@@ -228,11 +238,12 @@ export interface TierListModeData {
 }
 
 /** Per-mode tier lists (Task R2). `gods`/`items` at the top level mirror
- * Conquest for older consumers; `conquest`/`joust` carry the per-mode slices.
- * Either per-mode key may be absent on an index built before R2. */
+ * Conquest for older consumers; the named keys carry the per-mode slices.
+ * Any per-mode key may be absent on an index built before that mode shipped. */
 export interface TierListData extends TierListModeData {
   conquest?: TierListModeData;
   joust?: TierListModeData;
+  arena?: TierListModeData;
 }
 
 /** Provenance for the community figures: which rank band, drawn from how

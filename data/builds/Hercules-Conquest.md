@@ -359,6 +359,76 @@ builds:
   fun: true
   starter: *id001
 - source: suggested
+  archetype: model
+  slot_order:
+  - Eye of Providence
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Eye of the Storm
+  - Amanita Charm
+  flex_slots:
+  - Amanita Charm
+  - Eye of the Storm
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Erosion — magical protection
+    swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Kinetic Cuirass, Eye of Providence, Jotunn''s Revenge,
+    Shield Splitter, Amanita Charm, Eye of the Storm, Runeforged Hammer, The Crusher,
+    Spectral Armor, Erosion, Hydra''s Lament, Avenging Blade, Shield of the Phoenix,
+    Wyrmskin Hide, The Reaper, Golden Blade, Berserker''s Shield, Midgardian Mail,
+    Gladiator''s Shield, Chandra''s Grace, Draconic Scale, Pharaoh''s Curse, Leviathan''s
+    Hide, Mantle Of Discord, Ancile.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.48
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Jotunn's Revenge:
+      total: 0.48
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
+    Kinetic Cuirass:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Shield Splitter:
+      total: 0.48
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Eye of the Storm:
+      total: 0.46
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Amanita Charm:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Eye of Providence
@@ -569,6 +639,77 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.95
+  starter: *id001
+  aspect: Aspect of Preservation
+- source: suggested
+  archetype: model
+  slot_order:
+  - Eye of Providence
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Eye of Providence
+  - Jotunn's Revenge
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Amanita Charm, Spectral Armor, Erosion, Kinetic Cuirass,
+    Eye of Providence, Jotunn''s Revenge, Shield of the Phoenix, Runeforged Hammer,
+    Pharaoh''s Curse, Shield Splitter, Eye of the Storm, Chandra''s Grace, The Crusher,
+    Avenging Blade, The Reaper, Void Stone, Stampede, Void Shield, Shogun''s Ofuda,
+    Phoenix Feather, Hydra''s Lament, Doublet of Binding, Mystical Mail, Eros'' Bow,
+    Wyrmskin Hide, Golden Blade, Berserker''s Shield, Midgardian Mail.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.48
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Jotunn's Revenge:
+      total: 0.47
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Kinetic Cuirass:
+      total: 0.49
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Spectral Armor:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Amanita Charm:
+      total: 0.53
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.5
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
   starter: *id001
   aspect: Aspect of Preservation
 ---

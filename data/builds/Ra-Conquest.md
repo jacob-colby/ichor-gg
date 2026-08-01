@@ -427,6 +427,75 @@ builds:
   fun: true
   starter: *id001
 - source: suggested
+  archetype: model
+  slot_order:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
+  - Soul Gem
+  flex_slots:
+  - Doom Orb
+  - Chronos' Pendant
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
+  - vs_tag: physical_heavy
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Gluttonous Grimoire, The Cosmic Horror, Spear of the
+    Magus, Doom Orb, Chronos'' Pendant, The World Stone, Ethereal Staff, Rod of Asclepius,
+    Blood-Bound Book, Gem of Focus, Death Metal, Bancroft''s Talon, Ancient Signet,
+    Helm of Radiance, Polynomicon, Genji''s Guard, Alchemist Coat, Divine Ruin, Lifebinder,
+    Bragi''s Harp, Jade Scepter, Chandra''s Grace.'
+  slot_scores:
+    Chronos' Pendant:
+      total: 0.47
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Spear of Desolation:
+      total: 0.6
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.58
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.5
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Doom Orb:
+      total: 0.48
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Spear of the Magus:
+      total: 0.48
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.41
+      win: 0.64
+      pick: 0.22
+      fit: 1.0
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Kinetic Cuirass
@@ -702,6 +771,77 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.41
+      win: 0.64
+      pick: 0.22
+      fit: 1.0
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: model
+  slot_order:
+  - Kinetic Cuirass
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Spectral Armor
+  - Erosion
+  - Soul Gem
+  flex_slots:
+  - Kinetic Cuirass
+  - The Cosmic Horror
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Rod of Asclepius, Amanita Charm, Lifebinder, Gluttonous
+    Grimoire, Chandra''s Grace, Spectral Armor, Shield of the Phoenix, Erosion, Kinetic
+    Cuirass, The Cosmic Horror, Eye of Providence, Genji''s Guard, Void Stone, Triton''s
+    Conch, Phoenix Feather, Ethereal Staff, Spear of the Magus, Blood-Bound Book,
+    Doublet of Binding, Doom Orb, Bancroft''s Talon, Chronos'' Pendant, Screeching
+    Gargoyle, Stampede, Void Shield.'
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.6
+      pick: 0.58
+      fit: 0.65
+    The Cosmic Horror:
+      total: 0.45
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Spectral Armor:
+      total: 0.47
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Erosion:
+      total: 0.46
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Soul Gem:
       total: 0.59
       efficiency: 0.41

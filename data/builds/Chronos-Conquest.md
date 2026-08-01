@@ -429,6 +429,76 @@ builds:
   fun: true
   starter: *id001
 - source: suggested
+  archetype: model
+  slot_order:
+  - Bragi's Harp
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
+  - Soul Gem
+  flex_slots:
+  - Spear of the Magus
+  - Doom Orb
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
+  - vs_tag: physical_heavy
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Bragi''s
+    Harp, Spear of the Magus, Blood-Bound Book, Doom Orb, Bancroft''s Talon, Bracer
+    of The Abyss, Ethereal Staff, Rod of Asclepius, The World Stone, Chronos'' Pendant,
+    Death Metal, Ancient Signet, Obsidian Shard, Helm of Radiance, Polynomicon, Genji''s
+    Guard, Alchemist Coat, Spectral Armor, Divine Ruin, Lifebinder, Gem of Focus,
+    Kinetic Cuirass.'
+  slot_scores:
+    Bragi's Harp:
+      total: 0.44
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Spear of Desolation:
+      total: 0.43
+      efficiency: 0.43
+      win: 0.42
+      pick: 0.25
+      fit: 0.56
+    The Cosmic Horror:
+      total: 0.45
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Doom Orb:
+      total: 0.43
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Spear of the Magus:
+      total: 0.44
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Soul Gem:
+      total: 0.48
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Spear of Desolation
@@ -710,6 +780,77 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+  starter: *id001
+  aspect: Aspect of Relativity
+- source: suggested
+  archetype: model
+  slot_order:
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Spectral Armor
+  - Erosion
+  - Soul Gem
+  - Triton's Conch
+  flex_slots:
+  - Erosion
+  - Triton's Conch
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Soul Gem, Gluttonous Grimoire, Rod of Asclepius, Spectral
+    Armor, Amanita Charm, Lifebinder, The Cosmic Horror, Erosion, Triton''s Conch,
+    Spear of the Magus, Kinetic Cuirass, Ethereal Staff, Blood-Bound Book, Genji''s
+    Guard, Bragi''s Harp, Eye of Providence, Void Stone, Doom Orb, Chandra''s Grace,
+    Bancroft''s Talon, Chronos'' Pendant, Bracer of The Abyss, Doublet of Binding,
+    Shield of the Phoenix, Stampede, The World Stone.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.42
+      efficiency: 0.43
+      win: 0.42
+      pick: 0.25
+      fit: 0.46
+    The Cosmic Horror:
+      total: 0.43
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Spectral Armor:
+      total: 0.45
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    Erosion:
+      total: 0.43
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Soul Gem:
+      total: 0.51
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.96
+    Triton's Conch:
+      total: 0.42
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
   starter: *id001
   aspect: Aspect of Relativity
 ---

@@ -266,4 +266,69 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Eye of the Storm
+  - Runeforged Hammer
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Pharaoh's Curse
+  flex_slots:
+  - Spectral Armor
+  - Eye of the Storm
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Eye of the Storm:
+      total: 0.51
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Runeforged Hammer:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Amanita Charm:
+      total: 0.68
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.93
+    Erosion:
+      total: 0.53
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Pharaoh's Curse:
+      total: 0.53
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+  starter: *id001
 ---

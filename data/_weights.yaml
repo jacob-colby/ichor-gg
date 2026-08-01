@@ -13,6 +13,24 @@ signals:
   win: 0.45          # SmiteBrain high-elo win rate (performance)
   pick: 0.05         # SmiteBrain pick rate (popularity)
   fit: 0.15          # archetype + kit god-fit
+hybrid:
+  # The hybrid build is the model's core, corrected only where the model is
+  # near-indifferent AND the community's evidence is strong. Loosening either
+  # of the first two collapses it toward the community build, which already
+  # exists on its own; max_swaps is the backstop that keeps it a correction
+  # rather than a replacement.
+  # The model's top picks are never overridden. Below that line it has no real
+  # preference — measured across 87 gods, its own 6th-vs-7th quality gap has a
+  # median of 0.000 and a negative mean, because the assembler's boots and
+  # lifesteal caps skip higher-quality items. Those slots are near-arbitrary,
+  # and are exactly where real evidence should win.
+  protected: 3         # untouchable model convictions (of a 6-item core)
+  # The bar is the god's OWN win rate, not a constant: an item winning 56% on a
+  # 52% god is evidence; the same 56% on a 60% god is below par. min_edge is how
+  # far above that baseline the Wilson LOWER BOUND must sit — 0 means "beat the
+  # god's own average, with confidence".
+  min_edge: 0.0
+  max_swaps: 3         # at most half the core may be overridden
 underrated:
   # Flag items that are intrinsically good for the god (efficiency + fit) yet
   # rarely picked. Quality is judged relative to the god's own item pool.
@@ -166,15 +184,55 @@ aspects:
     tag_bonus: {aura: 0.1}
 
 # ── Game modes ────────────────────────────────────────────────────────────
-# `conquest` is the default (empty = no overlay, meta-backed). `joust` drops the
-# win/pick signals (SmiteBrain has no Joust data) and reweights toward what wins
-# on a single lane: sustain / anti-heal / aura up, wave-clear / mobility down.
+# A mode is not a reskin of Conquest. It changes what the map rewards, and it
+# can change which items exist at all. Three levers, in order of bluntness:
+#
+#   excluded_items  the item is not in this mode's shop. Hard filter, applied
+#                   before scoring, and no flavor can bypass it — a build the
+#                   player cannot assemble is not a build.
+#   signals         which evidence counts. SmiteBrain publishes Conquest only,
+#                   so every other mode scores on math alone (efficiency + fit,
+#                   renormalized) rather than borrowing Conquest's win rates,
+#                   which describe a different game.
+#   tag_bonus       what the map rewards, per effect tag.
+#
+# `conquest` is the default and takes no overlay: three lanes, jungle camps,
+# towers and phoenixes, ~30min games, and the meta data we actually have.
 modes:
   conquest: {}
+
+  # One lane, no jungle to rotate through, and you fight the same three people
+  # all game: sustain and anti-heal decide who can stay on the lane, auras
+  # always have a body next to them, and there is nowhere for mobility or a
+  # second wave to matter.
   joust:
     signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}
     tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2, wave-clear: -0.15, mobility: -0.1}
     label: "Joust — math + mode profile (no meta win/pick data)"
+
+  # No towers, no phoenixes, no jungle camps, and no fog worth warding: one
+  # open box where ten players are in range of each other almost continuously.
+  # Minions still matter — escorting yours and killing theirs is how tickets
+  # move — so wave-clear keeps a small positive rather than Joust's penalty.
+  # Games are short, so the tag bonuses lean on effects that pay immediately.
+  arena:
+    signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}
+    tag_bonus:
+      aura: 0.3           # five allies permanently inside the radius
+      anti-heal: 0.3      # sustain is universal here, so its counter is too
+      sustain: 0.25       # continuous fighting, no lane phase to recover in
+      cc-immunity: 0.2    # perpetual 5v5; chain CC is the way people die
+      wave-clear: 0.1     # minion denial is the objective, not a lane chore
+      mobility: -0.1      # no camps or lanes to rotate between
+    # Arena has no ward game, so the vision items are absent from its shop.
+    # This is the list to correct first if a build recommends something the
+    # shop does not have — it cannot be derived: "forward" and "toward" both
+    # contain "ward", and Eye of Erebus spawns a Watchful Eye without ever
+    # using the word.
+    excluded_items:
+      - Eye of Providence   # grants a Sentry Ward; pays gold for killing wards
+      - Eye of Erebus       # spawns a Watchful Eye
+    label: "Arena — math + mode profile (no meta win/pick data)"
 
 # ── Build order (recommended purchase sequence) ─────────────────────────────
 # Heuristic buy-order for suggested cores (we have no real build-path data).

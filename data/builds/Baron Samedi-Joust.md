@@ -331,4 +331,69 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Divine Ruin
+  - Eye of Providence
+  - Kinetic Cuirass
+  - Spectral Armor
+  - Erosion
+  - Soul Gem
+  flex_slots:
+  - Eye of Providence
+  - Divine Ruin
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.47
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Eye of Providence:
+      total: 0.48
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Kinetic Cuirass:
+      total: 0.51
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Spectral Armor:
+      total: 0.5
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Erosion:
+      total: 0.54
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  starter: *id001
 ---

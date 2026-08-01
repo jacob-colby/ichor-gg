@@ -228,3 +228,109 @@ def test_suggested_entries_carry_slot_scores(tmp_items):
         s = core["slot_scores"][name]
         assert set(s) == {"total", "efficiency", "win", "pick", "fit"}
         assert 0.0 <= s["total"] <= 1.0
+
+
+# ---------------------------------------------------------------------------
+# The model build
+#
+# `signal_score` has always computed `quality` — efficiency and fit only,
+# renormalized — and every caller discarded it. The model archetype ranks by
+# it, giving the build the model would pick having never seen a win rate.
+# ---------------------------------------------------------------------------
+
+def _meta_god_and_items():
+    """A god plus items where the meta and the model disagree by construction:
+    Cheap is a bargain the model likes; Popular is overpriced but has a strong
+    community record attached to it below."""
+    god = {"name": "Ra", "damage_type": "magical", "role": "Mid",
+           "specializations": ["Nuker"]}
+    items = [
+        {"name": "Cheap", "tier": 3, "cost": 1000,
+         "stats": {"Intelligence": "70", "Penetration": "15", "Cooldown Rate": "10"}},
+        {"name": "Popular", "tier": 3, "cost": 3500, "stats": {"Intelligence": "20"}},
+    ] + [{"name": f"F{i}", "tier": 3, "cost": 2500, "stats": {"Intelligence": "60"}}
+         for i in range(6)]
+    return god, items
+
+
+def test_model_archetype_is_emitted_alongside_core():
+    god, items = _meta_god_and_items()
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    entries = recommend.build_suggested_entries(god, items, {"builds": []}, weights, {}, "Conquest")
+    archetypes = [e["archetype"] for e in entries]
+    assert "model" in archetypes
+    # `core` is load-bearing elsewhere — the tier list's per-god score, the
+    # draft's baseline and the data audit all read it by name — so the model
+    # build is additive, never a rename.
+    assert archetypes[0] == "core"
+
+
+def test_model_build_ignores_the_meta_where_core_follows_it():
+    """The whole point: a heavily-played but overpriced item can carry `core`
+    on win rate alone, and must not carry `model`."""
+    god, items = _meta_god_and_items()
+    god_build = {"builds": [{
+        "source": "community",
+        "slot_order": [{"name": "Popular", "pick_rate": 0.9, "win_rate": 0.95}],
+    }]}
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    entries = recommend.build_suggested_entries(god, items, god_build, weights, {}, "Conquest")
+    core = next(e for e in entries if e["archetype"] == "core")
+    model = next(e for e in entries if e["archetype"] == "model")
+
+    assert "Popular" in core["slot_order"], "fixture failed to make the meta matter"
+    assert "Popular" not in model["slot_order"]
+    assert "Cheap" in model["slot_order"]
+
+
+def test_model_build_is_packaged_exactly_like_every_other_archetype():
+    god, items = _meta_god_and_items()
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    entries = recommend.build_suggested_entries(god, items, {"builds": []}, weights, {}, "Conquest")
+    model = next(e for e in entries if e["archetype"] == "model")
+    core = next(e for e in entries if e["archetype"] == "core")
+    assert set(model) == set(core), "model entry has a different shape from core"
+    assert model["source"] == "suggested"
+    assert len(model["slot_order"]) == 6
+    assert model["slot_scores"] and model["rationale"]
+
+
+def test_model_build_obeys_the_same_assembly_constraints():
+    """One boots maximum — the constraint must survive the re-ranking."""
+    god = {"name": "Ra", "damage_type": "magical", "role": "Mid", "specializations": ["Nuker"]}
+    items = [{"name": f"Boots{i}", "tier": 3, "cost": 1200,
+              "stats": {"Intelligence": "70", "Movement Speed": "18"}} for i in range(4)]
+    items += [{"name": f"F{i}", "tier": 3, "cost": 2500, "stats": {"Intelligence": "40"}}
+              for i in range(6)]
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    entries = recommend.build_suggested_entries(god, items, {"builds": []}, weights, {}, "Conquest")
+    model = next(e for e in entries if e["archetype"] == "model")
+    assert sum(1 for n in model["slot_order"] if n.startswith("Boots")) <= 1
+
+
+def test_arena_entries_never_contain_an_item_arena_lacks():
+    """End-to-end: the exclusion has to hold across every archetype and every
+    slot list, not just the scoring rows. A build that names an item the shop
+    does not stock sends the player looking for something that isn't there —
+    which is exactly what happened with Eye of Providence on Hercules."""
+    god = {"name": "Hercules", "damage_type": "physical", "role": "Solo",
+           "specializations": ["Warrior"]}
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    banned = scoring.resolve_profile(weights, "Arena")["excluded_items"]
+    assert banned, "Arena declares no excluded items; this test proves nothing"
+
+    items = [{"name": n, "tier": 3, "cost": 2500, "stats": {"Strength": "50"}}
+             for n in sorted(banned)]
+    items += [{"name": f"I{i}", "tier": 3, "cost": 2500, "stats": {"Strength": "50"}}
+              for i in range(8)]
+
+    for mode, expect_banned in (("Arena", False), ("Conquest", True)):
+        seen = set()
+        for e in recommend.build_suggested_entries(god, items, {"builds": []},
+                                                   weights, {}, mode):
+            seen |= {s if isinstance(s, str) else s["name"] for s in e["slot_order"]}
+            seen |= set(e["flex_slots"] or [])
+            seen |= {s.get("swap_item") for s in (e["situational_swaps"] or [])}
+            seen |= set(e.get("slot_scores") or {})
+        overlap = banned & seen
+        assert bool(overlap) is expect_banned, f"{mode}: {overlap or 'none'}"

@@ -237,7 +237,8 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
     (flavor's explicit cap wins, else the aspect's, else 1). suppress_underrated is
     true when the mode zeroes the pick signal (underrated needs pick data).
     Fun flavors (`fun: true`) zero the win/pick meta signals and may declare
-    `bypass` entries ("damage_filter", "archetype_fit") to escape class guards."""
+    `bypass` entries ("damage_filter", "archetype_fit") to escape class guards.
+    A mode may also declare `excluded_items` — items that do not exist in it."""
     mode_prof = (weights.get("modes") or {}).get(mode.lower(), {}) or {}
     fl = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
     asp = aspect_overlay or {}
@@ -265,6 +266,10 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
         "max_lifesteal": max_ls,
         "max_lifesteal_explicit": ls_explicit,
         "suppress_underrated": signals.get("pick", 1) == 0,
+        # Items the mode does not offer at all. A flavor cannot bypass this the
+        # way it bypasses the damage filter: an item that isn't in the shop is
+        # not a daring pick, it's a build the player cannot actually assemble.
+        "excluded_items": frozenset(mode_prof.get("excluded_items") or ()),
         "label": mode_prof.get("label"),
         "flavor": flavor,
         "bypass_damage_filter": "damage_filter" in bypass,
@@ -314,8 +319,16 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         for stat, w in kit.kit_stat_overlay(kit.scaling_profile(god), god).items():
             base_map[stat] = (1 - blend) * base_map.get(stat, 0.0) + blend * w
 
+    # Filtering here, at the single point every archetype's rows come from,
+    # keeps an excluded item out of the core, the flex slots, the situational
+    # swaps and the underrated list at once — none of those can reintroduce a
+    # name that never entered `rows`.
+    excluded = profile.get("excluded_items") or frozenset()
+
     rows = []
     for item in items:
+        if item["name"] in excluded:
+            continue
         if not is_buildable(item):
             continue
         if not profile.get("bypass_damage_filter") and not passes_damage_filter(item, god):

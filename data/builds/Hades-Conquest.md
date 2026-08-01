@@ -428,4 +428,153 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Eye of Providence
+  - Kinetic Cuirass
+  - Ethereal Staff
+  - Gluttonous Grimoire
+  - Spear of Desolation
+  - The Cosmic Horror
+  flex_slots:
+  - Eye of Providence
+  - Ethereal Staff
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Gluttonous Grimoire, Soul Gem, The Cosmic Horror, Kinetic
+    Cuirass, Eye of Providence, Ethereal Staff, Rod of Asclepius, Spear of the Magus,
+    Amanita Charm, Spectral Armor, Doom Orb, Shield of the Phoenix, Alchemist Coat,
+    Lifebinder, Erosion, Blood-Bound Book, Jade Scepter, Helm of Radiance, Chronos''
+    Pendant, Chandra''s Grace, Genji''s Guard, Death Metal, Bancroft''s Talon, Ancient
+    Signet, Obsidian Shard.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.45
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
+    Kinetic Cuirass:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Ethereal Staff:
+      total: 0.45
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Gluttonous Grimoire:
+      total: 0.49
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Spear of Desolation:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.72
+      pick: 0.22
+      fit: 0.6
+    The Cosmic Horror:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+  starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Gluttonous Grimoire
+  - Spear of Desolation
+  - The Cosmic Horror
+  - The World Stone
+  - Rod of Tahuti
+  flex_slots:
+  - The World Stone
+  - Rod of Tahuti
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
+    + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Soul Gem, The
+    Cosmic Horror, Kinetic Cuirass, Eye of Providence, Ethereal Staff, Rod of Asclepius,
+    Spear of the Magus, Amanita Charm, Spectral Armor, Doom Orb, Shield of the Phoenix,
+    Alchemist Coat, Lifebinder, Erosion, Blood-Bound Book, Jade Scepter, Helm of Radiance,
+    Chronos'' Pendant, Chandra''s Grace, Genji''s Guard, Death Metal, Bancroft''s
+    Talon, Ancient Signet, Obsidian Shard.'
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Gluttonous Grimoire:
+      total: 0.49
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Spear of Desolation:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.72
+      pick: 0.22
+      fit: 0.6
+    The Cosmic Horror:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    The World Stone:
+      total: 0.57
+      efficiency: 0.37
+      win: 0.79
+      pick: 0.2
+      fit: 0.47
+    Rod of Tahuti:
+      total: 0.51
+      efficiency: 0.22
+      win: 0.77
+      pick: 0.25
+      fit: 0.47
+  swaps:
+  - added: The World Stone
+    removed: Ethereal Staff
+    reason: community 79% win over 48 matches (vs 62% on this god), taking the model's
+      weakest slot from Ethereal Staff
+  - added: Rod of Tahuti
+    removed: Eye of Providence
+    reason: community 77% win over 60 matches (vs 62% on this god), taking the model's
+      weakest slot from Eye of Providence
+  starter: *id001
 ---

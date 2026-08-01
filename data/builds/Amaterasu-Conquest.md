@@ -358,4 +358,74 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Eye of Providence
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Eye of the Storm
+  - Amanita Charm
+  flex_slots:
+  - Amanita Charm
+  - Eye of the Storm
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Erosion — magical protection
+    swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Kinetic Cuirass, Eye of Providence, Jotunn''s Revenge,
+    Shield Splitter, Amanita Charm, Eye of the Storm, Runeforged Hammer, Spectral
+    Armor, The Crusher, Erosion, Hydra''s Lament, Shield of the Phoenix, Avenging
+    Blade, Genji''s Guard, Wyrmskin Hide, Gladiator''s Shield, The Reaper, Midgardian
+    Mail, Golden Blade, Chandra''s Grace, Breastplate of Valor, Draconic Scale, Pharaoh''s
+    Curse, Leviathan''s Hide, Mantle Of Discord, Freya''s Tears.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.48
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Jotunn's Revenge:
+      total: 0.48
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
+    Kinetic Cuirass:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Shield Splitter:
+      total: 0.47
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Eye of the Storm:
+      total: 0.46
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Amanita Charm:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+  starter: *id001
 ---

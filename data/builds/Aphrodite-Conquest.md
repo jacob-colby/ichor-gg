@@ -428,4 +428,74 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Eye of Providence
+  - Kinetic Cuirass
+  - Gluttonous Grimoire
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Spectral Armor
+  flex_slots:
+  - Spectral Armor
+  - The Cosmic Horror
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Erosion — physical protection
+    swap_item: Erosion
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Gluttonous Grimoire, Kinetic Cuirass, Eye of Providence,
+    Soul Gem, Amanita Charm, Spectral Armor, The Cosmic Horror, Ethereal Staff, Rod
+    of Asclepius, Erosion, Shield of the Phoenix, Spear of the Magus, Genji''s Guard,
+    Doom Orb, Helm of Radiance, Chandra''s Grace, Alchemist Coat, Gladiator''s Shield,
+    Blood-Bound Book, Lifebinder, Chronos'' Pendant, Breastplate of Valor, Midgardian
+    Mail, Jade Scepter, The World Stone, Death Metal.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.47
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Kinetic Cuirass:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Gluttonous Grimoire:
+      total: 0.47
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.65
+      pick: 0.16
+      fit: 0.5
+    The Cosmic Horror:
+      total: 0.44
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Spectral Armor:
+      total: 0.45
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
+  starter: *id001
 ---

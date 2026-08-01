@@ -29,11 +29,12 @@ import { useUrlState } from "../lib/urlState";
 import { CommunitySource } from "./CommunitySource";
 
 type Subject = "gods" | "items";
-type GameMode = "conquest" | "joust";
+type GameMode = "conquest" | "joust" | "arena";
 
 const GAME_MODES: { key: GameMode; label: string }[] = [
   { key: "conquest", label: "Conquest" },
   { key: "joust", label: "Joust" },
+  { key: "arena", label: "Arena" },
 ];
 
 // A neutral ramp, not the signal palette. `under`/`premium` mean "which way
@@ -297,15 +298,18 @@ export function TierList({ tierlist, communitySource }: {
   const shown = bands.reduce((n, b) => n + b.entries.length, 0) + untiered.length;
   const anyFilter = !!query || !!lane || !!efficiency || disputedOnly;
   const clear = () => patch({ q: "", lane: undefined, efficiency: undefined, disputedOnly: false });
-  const joustCommunityGap = gameMode === "joust" && result.ranked === 0 && result.total > 0;
+  // The community source covers Conquest only, so every other mode can come
+  // back entirely unranked. Keyed off "not conquest" rather than a named mode,
+  // so adding one can't quietly present an empty column as a loading state.
+  const communityGap = gameMode !== "conquest" && result.ranked === 0 && result.total > 0;
 
-  // Item scores aren't recomputed per mode in the pipeline, so the Joust slice
-  // can be the very same figures as Conquest. Derived rather than assumed, so
-  // the note disappears by itself if that ever stops being true.
+  // Item scores aren't recomputed per mode in the pipeline, so a non-Conquest
+  // slice can be the very same figures as Conquest. Derived rather than
+  // assumed, so the note disappears by itself if that ever stops being true.
   const modeIsMirrored = useMemo(() => {
-    if (gameMode !== "joust" || subject !== "items") return false;
+    if (gameMode === "conquest" || subject !== "items") return false;
     const a = tierlist?.conquest?.items ?? tierlist?.items;
-    const b = tierlist?.joust?.items;
+    const b = tierlist?.[gameMode]?.items;
     if (!a || !b || a.length !== b.length) return false;
     return a.every((e, i) => e.name === b[i].name && e.ours === b[i].ours && e.community === b[i].community);
   }, [tierlist, gameMode, subject]);
@@ -423,11 +427,11 @@ export function TierList({ tierlist, communitySource }: {
         </div>
       </div>
 
-      {joustCommunityGap && (
+      {communityGap && (
         <p className="mt-4 max-w-[74ch] text-small leading-relaxed text-muted">
-          SmiteBrain doesn&rsquo;t track Joust, so there are no community ratings for this mode at all —
-          every card below shows the model&rsquo;s placement alone. That&rsquo;s a real coverage gap, not a
-          loading state.
+          SmiteBrain doesn&rsquo;t track {GAME_MODES.find((m) => m.key === gameMode)?.label ?? gameMode},
+          so there are no community ratings for this mode at all — every card below shows the
+          model&rsquo;s placement alone. That&rsquo;s a real coverage gap, not a loading state.
         </p>
       )}
 

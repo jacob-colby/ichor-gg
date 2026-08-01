@@ -1,6 +1,6 @@
 import json
 
-from smite import build_index, efficiency, notes
+from smite import build_index, efficiency, notes, recommend
 
 
 def _make_repo(tmp_path):
@@ -41,10 +41,10 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
     assert index == {"gods": [], "items": [], "builds": [], "starters": [],
                      "roster": [], "data_updated": "",
                      # Per-mode tier list (Task R2) — legacy top-level
-                     # gods/items kept alongside the new conquest/joust map.
+                     # gods/items kept alongside the per-mode map.
                      "tierlist": {"gods": [], "items": [],
-                                  "conquest": {"gods": [], "items": []},
-                                  "joust": {"gods": [], "items": []}},
+                                  **{m.lower(): {"gods": [], "items": []}
+                                     for m in recommend.MODES}},
                      "god_item_scores": {}, "draft": {},
                      # Provenance for the community figures — None until the
                      # god-index scrape has run, never an empty dict.
@@ -169,8 +169,9 @@ def test_build_index_emits_tierlist_with_gods_and_items():
     r = build_index.build_index(Path(__file__).resolve().parents[3])
     assert "tierlist" in r
     tl = r["tierlist"]
-    # Legacy top-level shape (pre-R2) plus the new per-mode map, additive.
-    assert set(tl) == {"gods", "items", "conquest", "joust"}
+    # Legacy top-level shape (pre-R2) plus one slice per shipped mode.
+    from smite import recommend
+    assert set(tl) == {"gods", "items"} | {m.lower() for m in recommend.MODES}
     assert tl["gods"] and tl["items"]
     god = tl["gods"][0]
     assert {"name", "role", "damage_type", "ours", "community", "tier_ours", "tier_community"} <= set(god)

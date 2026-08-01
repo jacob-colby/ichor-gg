@@ -74,7 +74,7 @@ export function Legend({ onClose }: { onClose: () => void }) {
         <ul className="flex flex-col gap-2 text-body text-muted">
           <li><b className="text-ink">Home</b> ranks every lane by how far our model and the community&rsquo;s meta disagree. <b className="text-ink">Pick a god</b> anywhere to see its builds.</li>
           <li><b className="text-ink">Suggested</b> tabs are our scoring engine&rsquo;s picks (a heuristic). <b className="text-ink">Community</b> is SmiteBrain&rsquo;s high-elo meta. <b className="text-ink">Your</b> saved builds are the named tabs.</li>
-          <li><b className="text-ink">Flavors</b> (crit / burst / bruiser / anti-tank) re-weight the build; the <b className="text-ink">Aspect</b> toggle swaps to that god&rsquo;s aspect build; the <b className="text-ink">Conquest / Joust</b> toggle changes mode.</li>
+          <li><b className="text-ink">Flavors</b> (crit / burst / bruiser / anti-tank) re-weight the build; the <b className="text-ink">Aspect</b> toggle swaps to that god&rsquo;s aspect build; the <b className="text-ink">Conquest / Joust / Arena</b> toggle changes mode, which re-weights the build and can drop items that mode&rsquo;s shop doesn&rsquo;t stock.</li>
           <li><b className="text-ink">BUILD ORDER</b> is a recommended buy order; <b className="text-ink">flex</b> slots are the ones situational swaps replace.</li>
           <li>The <b className="text-ink">Items</b> shop rates every item <b className="text-under">Undervalued</b> / <b className="text-ink">Fair</b> / <b className="text-premium">Premium</b> by gold efficiency, with filters.</li>
           <li>Gods and items the community hasn&rsquo;t scored are shown <b className="text-ink">unranked</b> — never given an invented tier.</li>
