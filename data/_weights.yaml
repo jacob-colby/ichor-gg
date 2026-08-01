@@ -19,7 +19,12 @@ hybrid:
   # of the first two collapses it toward the community build, which already
   # exists on its own; max_swaps is the backstop that keeps it a correction
   # rather than a replacement.
-  indifference: 0.03   # model quality gap it will defer across
+  # The model's top picks are never overridden. Below that line it has no real
+  # preference — measured across 87 gods, its own 6th-vs-7th quality gap has a
+  # median of 0.000 and a negative mean, because the assembler's boots and
+  # lifesteal caps skip higher-quality items. Those slots are near-arbitrary,
+  # and are exactly where real evidence should win.
+  protected: 3         # untouchable model convictions (of a 6-item core)
   # The bar is the god's OWN win rate, not a constant: an item winning 56% on a
   # 52% god is evidence; the same 56% on a 60% god is below par. min_edge is how
   # far above that baseline the Wilson LOWER BOUND must sit — 0 means "beat the

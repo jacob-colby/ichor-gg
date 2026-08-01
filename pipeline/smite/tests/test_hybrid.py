@@ -75,14 +75,34 @@ def test_swaps_in_a_confident_community_pick_the_model_was_indifferent_about():
     assert "62%" in swaps[0]["reason"] and "500" in swaps[0]["reason"]
 
 
-def test_refuses_when_the_model_is_not_indifferent():
-    """A community pick the model rates far below its own choice IS the
-    disagreement — overriding it would reproduce the community build."""
+def test_the_models_protected_picks_are_never_overridden():
+    """Evidence fills the model's uncertainty, it does not overrule its
+    convictions. With 6 slots and protected=3, only the bottom 3 are open — so
+    at most 3 swaps can ever land, however much evidence is on offer."""
     core = ["A", "B", "C", "D", "E", "F"]
-    rows = _rows(A=.9, B=.8, C=.7, D=.6, E=.5, F=.40, Community=.10)
+    rows = _rows(A=.9, B=.8, C=.7, D=.6, E=.5, F=.4,
+                 C1=.39, C2=.38, C3=.37, C4=.36, C5=.35)
+    items = {**ITEMS, **{n: {"name": n, "stats": {}} for n in ("C1", "C2", "C3", "C4", "C5")}}
+    entry = _community(god_win_rate=0.50, played=1000,
+                       C1=(0.62, 0.5), C2=(0.62, 0.5), C3=(0.62, 0.5),
+                       C4=(0.62, 0.5), C5=(0.62, 0.5))
+
+    got, swaps = hybrid.hybrid_core(core, rows, entry, items,
+                                    {"hybrid": {"protected": 3, "max_swaps": 99}})
+
+    assert len(swaps) == 3, "more than the open slots were taken"
+    # The model's three strongest picks survive untouched.
+    for conviction in ("A", "B", "C"):
+        assert conviction in got
+    assert {s["removed"] for s in swaps} == {"D", "E", "F"}
+
+
+def test_protecting_the_whole_core_forbids_every_swap():
+    core = ["A", "B", "C", "D", "E", "F"]
+    rows = _rows(A=.9, B=.8, C=.7, D=.6, E=.5, F=.4, Community=.39)
     entry = _community(god_win_rate=0.50, played=1000, Community=(0.62, 0.50))
 
-    got, swaps = hybrid.hybrid_core(core, rows, entry, ITEMS, WEIGHTS)
+    got, swaps = hybrid.hybrid_core(core, rows, entry, ITEMS, {"hybrid": {"protected": 6}})
     assert got == core and swaps == []
 
 

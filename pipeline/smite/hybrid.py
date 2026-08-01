@@ -6,18 +6,27 @@ having never seen a win rate. Neither is obviously right: the model can be
 confidently wrong about an item nobody plays, and the community can be
 confidently wrong about an item that is merely popular.
 
-The hybrid starts from the model and defers to the community in exactly one
-situation — where **the model is near-indifferent and the community's evidence is
-strong**. Both halves matter:
+**The model keeps its convictions; evidence fills its uncertainty.** The top
+`protected` slots of the model's core are untouchable. Below that line the model
+has no real preference — measured across all 87 gods, the gap between its 6th
+and 7th item by quality has a median of 0.000, and a *negative* mean, because
+the assembler's boots and lifesteal caps routinely skip higher-quality items.
+Those bottom slots are near-arbitrary, and they are exactly where a community
+record with real evidence behind it should win.
 
-  INDIFFERENCE  If the model rates a community pick far below its own choice,
-                that disagreement is the product; overriding it would just
-                reproduce the community build under a different name.
+  PROTECTED  The model's strongest picks are never overridden. Without this the
+             hybrid collapses into the community build, which already exists on
+             its own.
 
-  EVIDENCE      Popularity is not evidence. A win rate is, but only with a
-                denominator behind it — so a candidate is judged on the Wilson
-                lower bound of its record, the same statistic the tier list
-                uses, and not on the raw rate.
+  EVIDENCE   Popularity is not evidence. A win rate is, but only with a
+             denominator behind it — so a candidate is judged on the Wilson
+             lower bound of its record, the same statistic the tier list uses,
+             and against THIS GOD'S own win rate rather than a fixed bar.
+
+An earlier version also required the model to already rate the candidate within
+0.03 of its own pick. That sounded like caution and was actually incoherent: it
+only corrected the model where the model was already nearly right, which is
+where correction matters least. It fired for one god out of eighty-seven.
 
 Every swap carries the reason it fired. A hybrid that cannot say why it
 disagreed with the model is just a third opinion.
@@ -28,7 +37,7 @@ from smite import assemble, tierlist
 def _config(weights):
     cfg = (weights or {}).get("hybrid") or {}
     return (
-        cfg.get("indifference", 0.03),
+        cfg.get("protected", 3),
         cfg.get("min_edge", 0.0),
         cfg.get("max_swaps", 3),
     )
@@ -66,13 +75,12 @@ def community_records(community_entry):
     return out
 
 
-def _reason(name, record, displaced, quality, baseline):
+def _reason(name, record, displaced, baseline):
     """Why this swap fired, in the evidence's own terms."""
-    gap = abs(quality.get(name, 0.0) - quality.get(displaced, 0.0))
     return (
         f"community {record['win_rate']:.0%} win over {record['matches']:,} matches "
-        f"(vs {baseline:.0%} on this god); the model had it within "
-        f"{gap:.2f} of {displaced}"
+        f"(vs {baseline:.0%} on this god), taking the model's weakest slot "
+        f"from {displaced}"
     )
 
 
@@ -83,7 +91,7 @@ def hybrid_core(model_core, rows, community_entry, items_by_name, weights,
     Returns the model core unchanged (and no swaps) when there is no community
     record to correct it with, which is every Joust build.
     """
-    indifference, min_edge, max_swaps = _config(weights)
+    protected, min_edge, max_swaps = _config(weights)
     records = community_records(community_entry)
     if not records:
         return list(model_core), []
@@ -101,9 +109,11 @@ def hybrid_core(model_core, rows, community_entry, items_by_name, weights,
     quality = {r["item"]: r.get("quality", 0.0) for r in rows}
     scored = {r["item"]: r for r in rows}
 
-    # The model's own ranking of its core, worst first — the weakest slot is
-    # the one a correction should take.
+    # The model's own ranking of its core, worst first. Only the slots below
+    # the protected line are open — the model's top picks are its convictions
+    # and stay whatever the community says.
     ranked_core = sorted(model_core, key=lambda name: quality.get(name, 0.0))
+    open_slots = ranked_core[:max(0, len(ranked_core) - protected)]
 
     # Candidates: community picks the model didn't take, best evidence first.
     candidates = [
@@ -113,18 +123,14 @@ def hybrid_core(model_core, rows, community_entry, items_by_name, weights,
     candidates.sort(key=lambda kv: (-kv[1]["confidence"], kv[0]))
 
     accepted, displaced_names = [], []
-    remaining = list(ranked_core)
+    remaining = list(open_slots)
     for name, rec in candidates:
         if len(accepted) >= max_swaps or not remaining:
             break
         if rec["confidence"] < bar:
             continue                       # not confidently better than the god itself
-        weakest = remaining[0]
-        if quality.get(name, 0.0) < quality.get(weakest, 0.0) - indifference:
-            continue                       # the model is not indifferent here
-        accepted.append((name, rec, weakest))
-        displaced_names.append(weakest)
-        remaining.pop(0)
+        accepted.append((name, rec, remaining[0]))
+        displaced_names.append(remaining.pop(0))
 
     if not accepted:
         return list(model_core), []
@@ -139,7 +145,7 @@ def hybrid_core(model_core, rows, community_entry, items_by_name, weights,
 
     swaps = [
         {"added": name, "removed": weakest,
-         "reason": _reason(name, rec, weakest, quality, baseline)}
+         "reason": _reason(name, rec, weakest, baseline)}
         for name, rec, weakest in accepted
         if name in core          # a pick the constraints rejected is not a swap
     ]
