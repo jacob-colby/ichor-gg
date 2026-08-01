@@ -559,3 +559,34 @@ describe("DetailPanel — popular items", () => {
   });
 });
 
+
+/* The mode strip is derived from the notes the god actually has, so a new
+ * pipeline mode reaches the page with no viewer change. That's the behaviour
+ * worth pinning — it's also what would break if someone hardcoded the list. */
+describe("DetailPanel — modes come from the data", () => {
+  const modeItems = ["Conquest", "Joust", "Arena"].map((m) => itemFx(`${m} Item`, 2500));
+  const threeModes = ["Conquest", "Joust", "Arena"].map((mode) => ({
+    type: "smite-build", god: "Chiron", mode,
+    builds: [{ source: "suggested", archetype: "core", slot_order: [`${mode} Item`] }],
+  }));
+
+  it("offers every mode the god has a note for", () => {
+    render(panel({ items: modeItems, builds: threeModes as never, mode: "Conquest" }));
+    const group = screen.getByRole("group", { name: "Game mode" });
+    expect(within(group).getAllByRole("button").map((b) => b.textContent))
+      .toEqual(["Conquest", "Joust", "Arena"]);
+  });
+
+  it("renders the requested mode's own build", () => {
+    render(panel({ items: modeItems, builds: threeModes as never, mode: "Arena" }));
+    expect(screen.getByRole("group", { name: "Game mode" })
+      .querySelector('[aria-pressed="true"]')).toHaveTextContent("Arena");
+    expect(screen.getByText("Arena Item")).toBeInTheDocument();
+    expect(screen.queryByText("Conquest Item")).not.toBeInTheDocument();
+  });
+
+  it("hides the strip when the god has only one mode", () => {
+    render(panel({ items: modeItems, builds: [threeModes[0]] as never, mode: "Conquest" }));
+    expect(screen.queryByRole("group", { name: "Game mode" })).not.toBeInTheDocument();
+  });
+});

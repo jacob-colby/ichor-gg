@@ -266,4 +266,69 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Jotunn's Revenge
+  - The Crusher
+  - Spectral Armor
+  - Amanita Charm
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - Spectral Armor
+  - Jotunn's Revenge
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Erosion — magical protection
+    swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.46
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    The Crusher:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Spectral Armor:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Amanita Charm:
+      total: 0.61
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Pharaoh's Curse:
+      total: 0.49
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Shogun's Ofuda:
+      total: 0.47
+      efficiency: 0.33
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+  starter: *id001
 ---

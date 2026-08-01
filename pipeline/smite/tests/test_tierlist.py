@@ -326,12 +326,14 @@ def test_build_tierlist_shape_has_gods_and_items_with_both_tiers():
 
 
 def test_build_tierlist_empty_inputs():
+    from smite import recommend
     result = tierlist.build_tierlist([], [], [], {})
-    assert result == {
-        "gods": [], "items": [],
-        "conquest": {"gods": [], "items": []},
-        "joust": {"gods": [], "items": []},
-    }
+    # Legacy top level, plus one slice per shipped mode. Asserting the mode set
+    # against MODES rather than a literal keeps adding a mode from silently
+    # shipping a tier list that omits it.
+    assert set(result) == {"gods", "items"} | {m.lower() for m in recommend.MODES}
+    assert result["gods"] == [] and result["items"] == []
+    assert all(result[m.lower()] == {"gods": [], "items": []} for m in recommend.MODES)
 
 
 # ---------------------------------------------------------------------------

@@ -266,4 +266,69 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Stygian Anchor
+  - Eye of Providence
+  - Kinetic Cuirass
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Spectral Armor
+  - Stygian Anchor
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Stygian Anchor:
+      total: 0.53
+      efficiency: 0.25
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Eye of Providence:
+      total: 0.6
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Kinetic Cuirass:
+      total: 0.63
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Spectral Armor:
+      total: 0.58
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Amanita Charm:
+      total: 0.72
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.65
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
+  starter: *id001
 ---

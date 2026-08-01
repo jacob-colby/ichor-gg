@@ -377,3 +377,67 @@ def test_bypass_damage_filter_lets_crit_items_reach_a_magical_god():
     assert [r["item"] for r in fun_rows] == ["Deathbringer"]
     assert serious_rows == []                       # damage filter still guards serious builds
     assert fun_rows[0]["fit"] > 0                   # flavor stats drive fit despite empty role map
+
+
+# ── Mode item availability ────────────────────────────────────────────────
+# Some items are not in every mode's shop. Recommending one produces a build
+# the player cannot assemble, which is worse than a mediocre suggestion — they
+# go looking for an item that does not exist. Arena has no ward game, so the
+# vision items are absent from it.
+
+def _excl_fixture():
+    god = {"name": "Hercules", "damage_type": "physical", "role": "Solo"}
+    items = [{"name": "Eye of Providence", "tier": 3, "stats": {"Strength": "40"}},
+             {"name": "Ordinary Blade", "tier": 3, "stats": {"Strength": "40"}}]
+    eff = {n["name"]: {"score": 0.5, "tier": "fair"} for n in items}
+    return god, items, eff, scoring.load_weights_default()
+
+
+def test_resolve_profile_carries_mode_excluded_items():
+    weights = scoring.load_weights_default()
+    weights["modes"] = {"arena": {"excluded_items": ["Eye of Providence"]}, "conquest": {}}
+    assert scoring.resolve_profile(weights, "Arena")["excluded_items"] == {"Eye of Providence"}
+    # A mode that declares none gets an empty set, not None — callers iterate it.
+    assert scoring.resolve_profile(weights, "Conquest")["excluded_items"] == frozenset()
+
+
+def test_score_god_items_drops_items_the_mode_does_not_have():
+    god, items, eff, weights = _excl_fixture()
+    names = lambda p: {r["item"] for r in scoring.score_god_items(
+        god, items, {}, eff, weights, {}, p)}
+    # Present when the mode offers it...
+    assert names({}) == {"Eye of Providence", "Ordinary Blade"}
+    # ...and gone when it does not, without taking the rest of the pool with it.
+    assert names({"excluded_items": frozenset(["Eye of Providence"])}) == {"Ordinary Blade"}
+
+
+def test_excluded_items_survive_a_flavor_bypass():
+    """`bypass` lets a fun flavor ignore the damage filter and archetype fit.
+    It must not also let it buy an item the mode does not stock — those guards
+    say "unusual", this one says "absent"."""
+    god, items, eff, weights = _excl_fixture()
+    rows = scoring.score_god_items(god, items, {}, eff, weights, {}, {
+        "excluded_items": frozenset(["Eye of Providence"]),
+        "bypass_damage_filter": True, "archetype_bypass": True, "fun": True})
+    assert "Eye of Providence" not in {r["item"] for r in rows}
+
+
+def test_every_shipped_mode_resolves_a_profile():
+    """A mode in MODES with no `modes:` entry silently scores as Conquest —
+    including its meta win rates, which describe a different game."""
+    from smite import recommend
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    configured = set(weights.get("modes") or {})
+    assert {m.lower() for m in recommend.MODES} <= configured
+
+
+def test_shipped_arena_profile_excludes_the_vision_items():
+    """The real config, not a fixture — this is the list a build regression
+    would silently drop, and the user cannot buy either item in Arena."""
+    from smite import recommend
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    assert scoring.resolve_profile(weights, "Arena")["excluded_items"] == {
+        "Eye of Providence", "Eye of Erebus"}
+    # Conquest and Joust both keep them; the exclusion is Arena's alone.
+    for mode in ("Conquest", "Joust"):
+        assert scoring.resolve_profile(weights, mode)["excluded_items"] == frozenset()

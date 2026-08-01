@@ -425,4 +425,73 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
+  - The World Stone
+  - Soul Gem
+  flex_slots:
+  - Doom Orb
+  - The World Stone
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
+  - vs_tag: physical_heavy
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Spear
+    of the Magus, Doom Orb, The World Stone, Chronos'' Pendant, Ethereal Staff, Rod
+    of Asclepius, Blood-Bound Book, Death Metal, Bancroft''s Talon, Ancient Signet,
+    Gem of Focus, Helm of Radiance, Alchemist Coat, Divine Ruin, Lifebinder, Bragi''s
+    Harp, Jade Scepter, Genji''s Guard, Scepter of Dominion.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.54
+      pick: 0.56
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Doom Orb:
+      total: 0.49
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Spear of the Magus:
+      total: 0.49
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    The World Stone:
+      total: 0.47
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Soul Gem:
+      total: 0.52
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  starter: *id001
 ---

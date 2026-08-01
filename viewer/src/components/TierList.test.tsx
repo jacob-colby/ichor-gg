@@ -302,3 +302,44 @@ describe("TierList — board state lives in the URL", () => {
     expect(screen.queryByText("Anubis")).not.toBeInTheDocument();
   });
 });
+
+/* Arena ships builds and god tiers but, like Joust, no community data. The
+ * risk when adding a mode is that it silently reads Conquest's numbers — the
+ * exact failure the per-mode slices exist to prevent. */
+describe("TierList — Arena", () => {
+  const arenaGods: GodTierEntry[] = [
+    { name: "Hercules", ours: 0.88, community: null, tier_ours: "S", tier_community: null, role: "Solo", damage_type: "physical" },
+  ];
+  const full = {
+    gods, items,
+    conquest: { gods, items },
+    joust: { gods: [], items: [] },
+    arena: { gods: arenaGods, items: [] },
+  };
+
+  it("offers Arena beside the other modes", () => {
+    render(<TierList tierlist={full} />);
+    expect(screen.getByRole("button", { name: "Arena" })).toBeInTheDocument();
+  });
+
+  it("reads Arena's own slice rather than Conquest's", () => {
+    render(<TierList tierlist={full} />);
+    fireEvent.click(screen.getByRole("button", { name: "Arena" }));
+    expect(within(screen.getByTestId("band-S")).getByText("Hercules")).toBeInTheDocument();
+    expect(screen.queryByText("Ymir")).not.toBeInTheDocument();
+  });
+
+  it("names Arena in the coverage note, not whichever mode was hardcoded", () => {
+    render(<TierList tierlist={full} />);
+    fireEvent.click(screen.getByRole("button", { name: "Arena" }));
+    expect(screen.getByText(/doesn.t track Arena/i)).toBeInTheDocument();
+    expect(screen.queryByText(/doesn.t track Joust/i)).not.toBeInTheDocument();
+  });
+
+  it("is linkable", async () => {
+    atUrl("#/tiers");
+    render(<TierList tierlist={full} />);
+    fireEvent.click(screen.getByRole("button", { name: "Arena" }));
+    await waitFor(() => expect(window.location.hash).toBe("#/tiers?mode=arena"));
+  });
+});

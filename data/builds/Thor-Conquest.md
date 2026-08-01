@@ -425,4 +425,74 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Eye of Providence
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Runeforged Hammer
+  - The Crusher
+  flex_slots:
+  - Shield Splitter
+  - Eye of Providence
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: The Crusher, Runeforged Hammer, Kinetic Cuirass, Shield
+    Splitter, Eye of Providence, Eye of the Storm, The Reaper, Avenging Blade, Amanita
+    Charm, Spectral Armor, Golden Blade, Erosion, Tekko-Kagi, Wyrmskin Hide, Shield
+    of the Phoenix, Tyrfing, Berserker''s Shield, Lernaean Bow, Pendulum Blade, Midgardian
+    Mail, Chandra''s Grace, Genji''s Guard, Yogi''s Necklace, Transcendence, Pharaoh''s
+    Curse.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.55
+      pick: 0.55
+      fit: 0.55
+    Kinetic Cuirass:
+      total: 0.46
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Shield Splitter:
+      total: 0.46
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Runeforged Hammer:
+      total: 0.47
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    The Crusher:
+      total: 0.49
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+  starter: *id001
 ---

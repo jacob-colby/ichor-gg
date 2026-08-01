@@ -331,4 +331,69 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Divine Ruin
+  - Bragi's Harp
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Spear of the Magus
+  - Soul Gem
+  flex_slots:
+  - The Cosmic Horror
+  - Spear of the Magus
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.49
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Bragi's Harp:
+      total: 0.49
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Spear of Desolation:
+      total: 0.5
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    The Cosmic Horror:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Spear of the Magus:
+      total: 0.44
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  starter: *id001
 ---

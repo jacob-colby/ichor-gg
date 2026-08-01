@@ -15,7 +15,7 @@ from smite import notes
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATA_ROOT = REPO_ROOT / "data"
 BUILDS_ROOT = REPO_ROOT / "data" / "builds"
-MODES = {"Conquest", "Joust"}
+MODES = {"Conquest", "Joust", "Arena"}
 
 
 def _known(dir_name):

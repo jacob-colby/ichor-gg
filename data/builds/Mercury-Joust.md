@@ -331,4 +331,69 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Pendulum Blade
+  - The Crusher
+  - Heartseeker
+  flex_slots:
+  - Hydra's Lament
+  - Heartseeker
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.7
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Hydra's Lament:
+      total: 0.55
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    The Reaper:
+      total: 0.68
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
+    Pendulum Blade:
+      total: 0.57
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    The Crusher:
+      total: 0.63
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.28
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+  starter: *id001
 ---

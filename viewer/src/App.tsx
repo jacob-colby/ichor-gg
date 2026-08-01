@@ -125,10 +125,12 @@ function App() {
   const board = buildDivergenceBoard(data.tierlist?.gods);
   const roster = { total: data.gods.length, ranked: board.ranked, unranked: board.unranked };
 
-  // Per-mode slice, never the Conquest-mirroring top level: Joust has no
-  // community ratings at all, so reading `tierlist.gods` there would assert a
-  // community score that doesn't exist for that mode.
-  const modeSlice = (mode === "Joust" ? data.tierlist?.joust : data.tierlist?.conquest) ?? data.tierlist;
+  // Per-mode slice, never the Conquest-mirroring top level: only Conquest has
+  // community ratings, so reading `tierlist.gods` under any other mode would
+  // assert a community score that doesn't exist there. Keyed rather than
+  // branched so a new mode can't silently fall through to Conquest's numbers.
+  const modeSlice = data.tierlist?.[mode.toLowerCase() as "conquest" | "joust" | "arena"]
+    ?? data.tierlist?.conquest ?? data.tierlist;
   const tierEntry = route.god ? modeSlice?.gods.find((g) => g.name === route.god) : undefined;
 
   // The god's own suggested core, so the items lens can be read against the

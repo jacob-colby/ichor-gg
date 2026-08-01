@@ -425,4 +425,147 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Tekko-Kagi
+  - Pendulum Blade
+  - The Crusher
+  flex_slots:
+  - Hydra's Lament
+  - Pendulum Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: The Crusher, The Reaper, Tekko-Kagi, Hydra''s Lament,
+    Pendulum Blade, Runeforged Hammer, Avenging Blade, Shield Splitter, Tyrfing, Lernaean
+    Bow, Eye of the Storm, Golden Blade, Arondight, Damaru, Oath-Sworn Spear, Rage,
+    Bloodforge, Wyrmskin Hide, Musashi''s Dual Swords, Devourer''s Gauntlet, Spectral
+    Armor, Avatar''s Parashu, Kinetic Cuirass.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.55
+      win: 0.51
+      pick: 0.67
+      fit: 1.0
+    Hydra's Lament:
+      total: 0.49
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    The Reaper:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
+    Tekko-Kagi:
+      total: 0.49
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
+    Pendulum Blade:
+      total: 0.48
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Crusher:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Tekko-Kagi
+  - The Crusher
+  - Titan's Bane
+  flex_slots:
+  - Hydra's Lament
+  - Titan's Bane
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
+    + fit + win/pick). Underrated for this god: The Crusher, The Reaper, Tekko-Kagi,
+    Hydra''s Lament, Pendulum Blade, Runeforged Hammer, Avenging Blade, Shield Splitter,
+    Tyrfing, Lernaean Bow, Eye of the Storm, Golden Blade, Arondight, Damaru, Oath-Sworn
+    Spear, Rage, Bloodforge, Wyrmskin Hide, Musashi''s Dual Swords, Devourer''s Gauntlet,
+    Spectral Armor, Avatar''s Parashu, Kinetic Cuirass.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.55
+      win: 0.51
+      pick: 0.67
+      fit: 1.0
+    Hydra's Lament:
+      total: 0.49
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    The Reaper:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
+    Tekko-Kagi:
+      total: 0.49
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
+    The Crusher:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Titan's Bane:
+      total: 0.59
+      efficiency: 0.28
+      win: 0.76
+      pick: 0.18
+      fit: 0.91
+  swaps:
+  - added: Titan's Bane
+    removed: Pendulum Blade
+    reason: community 76% win over 51 matches (vs 52% on this god), taking the model's
+      weakest slot from Pendulum Blade
+  starter: *id001
 ---

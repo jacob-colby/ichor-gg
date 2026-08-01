@@ -306,3 +306,31 @@ def test_model_build_obeys_the_same_assembly_constraints():
     entries = recommend.build_suggested_entries(god, items, {"builds": []}, weights, {}, "Conquest")
     model = next(e for e in entries if e["archetype"] == "model")
     assert sum(1 for n in model["slot_order"] if n.startswith("Boots")) <= 1
+
+
+def test_arena_entries_never_contain_an_item_arena_lacks():
+    """End-to-end: the exclusion has to hold across every archetype and every
+    slot list, not just the scoring rows. A build that names an item the shop
+    does not stock sends the player looking for something that isn't there —
+    which is exactly what happened with Eye of Providence on Hercules."""
+    god = {"name": "Hercules", "damage_type": "physical", "role": "Solo",
+           "specializations": ["Warrior"]}
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    banned = scoring.resolve_profile(weights, "Arena")["excluded_items"]
+    assert banned, "Arena declares no excluded items; this test proves nothing"
+
+    items = [{"name": n, "tier": 3, "cost": 2500, "stats": {"Strength": "50"}}
+             for n in sorted(banned)]
+    items += [{"name": f"I{i}", "tier": 3, "cost": 2500, "stats": {"Strength": "50"}}
+              for i in range(8)]
+
+    for mode, expect_banned in (("Arena", False), ("Conquest", True)):
+        seen = set()
+        for e in recommend.build_suggested_entries(god, items, {"builds": []},
+                                                   weights, {}, mode):
+            seen |= {s if isinstance(s, str) else s["name"] for s in e["slot_order"]}
+            seen |= set(e["flex_slots"] or [])
+            seen |= {s.get("swap_item") for s in (e["situational_swaps"] or [])}
+            seen |= set(e.get("slot_scores") or {})
+        overlap = banned & seen
+        assert bool(overlap) is expect_banned, f"{mode}: {overlap or 'none'}"

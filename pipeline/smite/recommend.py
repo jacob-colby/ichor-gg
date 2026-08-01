@@ -16,7 +16,7 @@ WEIGHTS_PATH = DATA_ROOT / "_weights.yaml"
 TAGS_PATH = DATA_ROOT / "_tags.yaml"
 BUILDS_ROOT = REPO_ROOT / "data" / "builds"
 
-MODES = ["Conquest", "Joust"]
+MODES = ["Conquest", "Joust", "Arena"]
 
 _FLAVOR_BLURB = {
     "core": "Top weighted-score core",

@@ -330,4 +330,69 @@ builds:
       pick: 0.0
       fit: 0.54
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Jotunn's Revenge
+  - Tyrfing
+  - The Reaper
+  - Riptalon
+  - Demon Blade
+  - The Crusher
+  flex_slots:
+  - Tyrfing
+  - Demon Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.49
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Tyrfing:
+      total: 0.43
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    The Reaper:
+      total: 0.56
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Riptalon:
+      total: 0.51
+      efficiency: 0.27
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    Demon Blade:
+      total: 0.42
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    The Crusher:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+  starter: *id001
 ---

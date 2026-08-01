@@ -356,4 +356,74 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Lernaean Bow
+  - Jotunn's Revenge
+  - Tyrfing
+  - The Reaper
+  - Tekko-Kagi
+  - The Crusher
+  flex_slots:
+  - Tyrfing
+  - Lernaean Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Jotunn''s Revenge, The Crusher, Tekko-Kagi, The Reaper,
+    Tyrfing, Lernaean Bow, Golden Blade, Runeforged Hammer, Damaru, Avenging Blade,
+    Rage, Shield Splitter, Heartseeker, Demon Blade, Pendulum Blade, Eye of the Storm,
+    Berserker''s Shield, Musashi''s Dual Swords, Transcendence, Spectral Armor, Eros''
+    Bow, Pharaoh''s Curse, Titan''s Bane, Kinetic Cuirass, Arondight, Riptalon, Eye
+    of Providence.'
+  slot_scores:
+    Lernaean Bow:
+      total: 0.44
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Jotunn's Revenge:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.53
+      pick: 0.14
+      fit: 0.52
+    Tyrfing:
+      total: 0.45
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    The Reaper:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Tekko-Kagi:
+      total: 0.46
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    The Crusher:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+  starter: *id001
 ---

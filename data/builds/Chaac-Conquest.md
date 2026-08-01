@@ -428,4 +428,74 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Eye of Providence
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Shield Splitter
+  - The Crusher
+  - Amanita Charm
+  flex_slots:
+  - Shield Splitter
+  - Amanita Charm
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Jotunn''s Revenge, Kinetic Cuirass, Eye of Providence,
+    The Crusher, Shield Splitter, Amanita Charm, Runeforged Hammer, Spectral Armor,
+    Eye of the Storm, Erosion, Hydra''s Lament, The Reaper, Avenging Blade, Shield
+    of the Phoenix, Genji''s Guard, Wyrmskin Hide, Berserker''s Shield, Midgardian
+    Mail, Golden Blade, Chandra''s Grace, Gladiator''s Shield, Breastplate of Valor,
+    Pharaoh''s Curse, Leviathan''s Hide, Tekko-Kagi, Mantle Of Discord, Ancile.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.47
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Jotunn's Revenge:
+      total: 0.49
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Kinetic Cuirass:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Shield Splitter:
+      total: 0.46
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    The Crusher:
+      total: 0.47
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Amanita Charm:
+      total: 0.46
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+  starter: *id001
 ---

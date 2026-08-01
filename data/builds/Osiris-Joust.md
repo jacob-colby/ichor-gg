@@ -266,4 +266,69 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Eros' Bow
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - Erosion
+  - Eros' Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Eros' Bow:
+      total: 0.46
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Spectral Armor:
+      total: 0.47
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Amanita Charm:
+      total: 0.62
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Erosion:
+      total: 0.47
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Pharaoh's Curse:
+      total: 0.51
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Shogun's Ofuda:
+      total: 0.49
+      efficiency: 0.33
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+  starter: *id001
 ---

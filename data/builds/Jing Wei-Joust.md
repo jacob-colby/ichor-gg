@@ -265,4 +265,69 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Tyrfing
+  - The Reaper
+  - Riptalon
+  - Demon Blade
+  - Eros' Bow
+  - Pharaoh's Curse
+  flex_slots:
+  - Eros' Bow
+  - Pharaoh's Curse
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
+    + mode profile (no meta win/pick data).
+  slot_scores:
+    Tyrfing:
+      total: 0.5
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    The Reaper:
+      total: 0.51
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Riptalon:
+      total: 0.49
+      efficiency: 0.27
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Demon Blade:
+      total: 0.54
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    Eros' Bow:
+      total: 0.45
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Pharaoh's Curse:
+      total: 0.45
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+  starter: *id001
 ---

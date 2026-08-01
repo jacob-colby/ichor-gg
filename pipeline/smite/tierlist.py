@@ -320,15 +320,19 @@ def build_tierlist(gods, builds, items, eff_scores):
     Conquest entry, so the existing viewer (which reads data.tierlist.gods /
     .items directly) keeps working unmodified.
 
-    Joust's community signal is expected to be sparse: SmiteBrain has no
-    Joust win/pick data, so most (real-world, not necessarily all — see
-    R2 verification notes) Joust community entries carry no aspect_win_rate,
-    surfacing as tier_community: null (unranked), never a fabricated value."""
+    The community signal is expected to be sparse outside Conquest: SmiteBrain
+    has no Joust or Arena win/pick data, so most (real-world, not necessarily
+    all — see R2 verification notes) non-Conquest community entries carry no
+    aspect_win_rate, surfacing as tier_community: null (unranked), never a
+    fabricated value. Those modes are ranked on the model alone, which is the
+    honest reading of having no community to compare against."""
     conquest = _tierlist_for_mode(gods, builds, items, eff_scores, "Conquest")
     joust = _tierlist_for_mode(gods, builds, items, eff_scores, "Joust")
+    arena = _tierlist_for_mode(gods, builds, items, eff_scores, "Arena")
     return {
         "gods": conquest["gods"],
         "items": conquest["items"],
         "conquest": conquest,
         "joust": joust,
+        "arena": arena,
     }

@@ -238,11 +238,12 @@ export interface TierListModeData {
 }
 
 /** Per-mode tier lists (Task R2). `gods`/`items` at the top level mirror
- * Conquest for older consumers; `conquest`/`joust` carry the per-mode slices.
- * Either per-mode key may be absent on an index built before R2. */
+ * Conquest for older consumers; the named keys carry the per-mode slices.
+ * Any per-mode key may be absent on an index built before that mode shipped. */
 export interface TierListData extends TierListModeData {
   conquest?: TierListModeData;
   joust?: TierListModeData;
+  arena?: TierListModeData;
 }
 
 /** Provenance for the community figures: which rank band, drawn from how

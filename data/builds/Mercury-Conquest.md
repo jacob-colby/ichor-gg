@@ -428,4 +428,149 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Tekko-Kagi
+  - Pendulum Blade
+  - The Crusher
+  flex_slots:
+  - Tekko-Kagi
+  - Pendulum Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Jotunn''s Revenge, The Crusher, The Reaper, Hydra''s
+    Lament, Tekko-Kagi, Pendulum Blade, Runeforged Hammer, Heartseeker, Tyrfing, Avenging
+    Blade, Lernaean Bow, Shield Splitter, Golden Blade, Arondight, Titan''s Bane,
+    Eye of the Storm, Damaru, Transcendence, Genji''s Guard, Barbed Carver, Oath-Sworn
+    Spear, Chandra''s Grace, Musashi''s Dual Swords, Spectral Armor, Kinetic Cuirass,
+    Breastplate of Valor, Bloodforge.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Hydra's Lament:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    The Reaper:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Tekko-Kagi:
+      total: 0.46
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Pendulum Blade:
+      total: 0.45
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    The Crusher:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+  starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Runeforged Hammer
+  - Riptalon
+  - Tekko-Kagi
+  - The Crusher
+  flex_slots:
+  - Runeforged Hammer
+  - Riptalon
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
+    + fit + win/pick). Underrated for this god: Jotunn''s Revenge, The Crusher, The
+    Reaper, Hydra''s Lament, Tekko-Kagi, Pendulum Blade, Runeforged Hammer, Heartseeker,
+    Tyrfing, Avenging Blade, Lernaean Bow, Shield Splitter, Golden Blade, Arondight,
+    Titan''s Bane, Eye of the Storm, Damaru, Transcendence, Genji''s Guard, Barbed
+    Carver, Oath-Sworn Spear, Chandra''s Grace, Musashi''s Dual Swords, Spectral Armor,
+    Kinetic Cuirass, Breastplate of Valor, Bloodforge.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Hydra's Lament:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Runeforged Hammer:
+      total: 0.45
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Riptalon:
+      total: 0.5
+      efficiency: 0.27
+      win: 0.75
+      pick: 0.21
+      fit: 0.37
+    Tekko-Kagi:
+      total: 0.46
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    The Crusher:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+  swaps:
+  - added: Riptalon
+    removed: Pendulum Blade
+    reason: community 75% win over 35 matches (vs 52% on this god), taking the model's
+      weakest slot from Pendulum Blade
+  starter: *id001
 ---

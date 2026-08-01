@@ -427,4 +427,74 @@ builds:
       fit: 1.0
   fun: true
   starter: *id001
+- source: suggested
+  archetype: model
+  slot_order:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Tekko-Kagi
+  - Pendulum Blade
+  - The Crusher
+  flex_slots:
+  - Pendulum Blade
+  - Tekko-Kagi
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: The Crusher, The Reaper, Hydra''s Lament, Pendulum Blade,
+    Tekko-Kagi, Runeforged Hammer, Heartseeker, Avenging Blade, Arondight, Shield
+    Splitter, Titan''s Bane, Tyrfing, Lernaean Bow, Eye of the Storm, Transcendence,
+    Golden Blade, Damaru, Barbed Carver, Oath-Sworn Spear, Rage, Genji''s Guard, Chandra''s
+    Grace, Bloodforge, Wyrmskin Hide, Breastplate of Valor, Shield of the Phoenix,
+    Spectral Armor.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.55
+      win: 0.52
+      pick: 0.38
+      fit: 1.0
+    Hydra's Lament:
+      total: 0.49
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    The Reaper:
+      total: 0.5
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Tekko-Kagi:
+      total: 0.47
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Pendulum Blade:
+      total: 0.48
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Crusher:
+      total: 0.53
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+  starter: *id001
 ---

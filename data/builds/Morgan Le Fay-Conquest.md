@@ -428,6 +428,151 @@ builds:
   fun: true
   starter: *id001
 - source: suggested
+  archetype: model
+  slot_order:
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
+  - The World Stone
+  - Soul Gem
+  flex_slots:
+  - Doom Orb
+  - The World Stone
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
+  - vs_tag: physical_heavy
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Soul Gem, Gluttonous Grimoire, The Cosmic Horror, Spear
+    of the Magus, Doom Orb, The World Stone, Obsidian Shard, Chronos'' Pendant, Ethereal
+    Staff, Rod of Asclepius, Blood-Bound Book, Death Metal, Bancroft''s Talon, Ancient
+    Signet, Gem of Focus, Helm of Radiance, Polynomicon, Alchemist Coat, Divine Ruin,
+    Lifebinder, Bragi''s Harp, Jade Scepter, Book of Thoth, Genji''s Guard, Scepter
+    of Dominion.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.21
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Doom Orb:
+      total: 0.49
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Spear of the Magus:
+      total: 0.49
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    The World Stone:
+      total: 0.47
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Soul Gem:
+      total: 0.5
+      efficiency: 0.41
+      win: 0.45
+      pick: 0.14
+      fit: 1.0
+  starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Doom Orb
+  - Spear of the Magus
+  - Obsidian Shard
+  - Soul Gem
+  flex_slots:
+  - Doom Orb
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
+  - vs_tag: physical_heavy
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
+    + fit + win/pick). Underrated for this god: Soul Gem, Gluttonous Grimoire, The
+    Cosmic Horror, Spear of the Magus, Doom Orb, The World Stone, Obsidian Shard,
+    Chronos'' Pendant, Ethereal Staff, Rod of Asclepius, Blood-Bound Book, Death Metal,
+    Bancroft''s Talon, Ancient Signet, Gem of Focus, Helm of Radiance, Polynomicon,
+    Alchemist Coat, Divine Ruin, Lifebinder, Bragi''s Harp, Jade Scepter, Book of
+    Thoth, Genji''s Guard, Scepter of Dominion.'
+  slot_scores:
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.21
+      fit: 1.0
+    The Cosmic Horror:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Doom Orb:
+      total: 0.49
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Spear of the Magus:
+      total: 0.49
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.32
+      win: 0.67
+      pick: 0.13
+      fit: 0.79
+    Soul Gem:
+      total: 0.5
+      efficiency: 0.41
+      win: 0.45
+      pick: 0.14
+      fit: 1.0
+  swaps:
+  - added: Obsidian Shard
+    removed: The World Stone
+    reason: community 67% win over 46 matches (vs 51% on this god), taking the model's
+      weakest slot from The World Stone
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Ethereal Staff
@@ -709,6 +854,153 @@ builds:
       win: 0.67
       pick: 0.13
       fit: 0.59
+  starter: *id001
+  aspect: Aspect of the Cursed Crown
+- source: suggested
+  archetype: model
+  slot_order:
+  - Kinetic Cuirass
+  - Ethereal Staff
+  - Gluttonous Grimoire
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Soul Gem
+  flex_slots:
+  - The Cosmic Horror
+  - Kinetic Cuirass
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
+    Underrated for this god: Gluttonous Grimoire, Soul Gem, Rod of Asclepius, Amanita
+    Charm, Chandra''s Grace, Lifebinder, Ethereal Staff, The Cosmic Horror, Shield
+    of the Phoenix, Kinetic Cuirass, Eye of Providence, Spear of the Magus, Blood-Bound
+    Book, Phoenix Feather, Doom Orb, Spectral Armor, Bancroft''s Talon, Alchemist
+    Coat, Jade Scepter, The World Stone, Scepter of Dominion, Yogi''s Necklace, Erosion,
+    Genji''s Guard, Triton''s Conch, Gem of Isolation.'
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Ethereal Staff:
+      total: 0.46
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Gluttonous Grimoire:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Spear of Desolation:
+      total: 0.46
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.21
+      fit: 0.62
+    The Cosmic Horror:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Soul Gem:
+      total: 0.49
+      efficiency: 0.41
+      win: 0.45
+      pick: 0.14
+      fit: 0.92
+  starter: *id001
+  aspect: Aspect of the Cursed Crown
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Ethereal Staff
+  - Gluttonous Grimoire
+  - Spear of Desolation
+  - The Cosmic Horror
+  - Obsidian Shard
+  - Soul Gem
+  flex_slots:
+  - The Cosmic Horror
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
+    + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Soul Gem, Rod
+    of Asclepius, Amanita Charm, Chandra''s Grace, Lifebinder, Ethereal Staff, The
+    Cosmic Horror, Shield of the Phoenix, Kinetic Cuirass, Eye of Providence, Spear
+    of the Magus, Blood-Bound Book, Phoenix Feather, Doom Orb, Spectral Armor, Bancroft''s
+    Talon, Alchemist Coat, Jade Scepter, The World Stone, Scepter of Dominion, Yogi''s
+    Necklace, Erosion, Genji''s Guard, Triton''s Conch, Gem of Isolation.'
+  slot_scores:
+    Ethereal Staff:
+      total: 0.46
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Gluttonous Grimoire:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Spear of Desolation:
+      total: 0.46
+      efficiency: 0.43
+      win: 0.47
+      pick: 0.21
+      fit: 0.62
+    The Cosmic Horror:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Obsidian Shard:
+      total: 0.49
+      efficiency: 0.32
+      win: 0.67
+      pick: 0.13
+      fit: 0.47
+    Soul Gem:
+      total: 0.49
+      efficiency: 0.41
+      win: 0.45
+      pick: 0.14
+      fit: 0.92
+  swaps:
+  - added: Obsidian Shard
+    removed: Kinetic Cuirass
+    reason: community 67% win over 46 matches (vs 51% on this god), taking the model's
+      weakest slot from Kinetic Cuirass
   starter: *id001
   aspect: Aspect of the Cursed Crown
 ---
