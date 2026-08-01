@@ -325,6 +325,16 @@ def refresh_all(force: bool = False) -> None:
         print(f"  [FAILED] god index: {exc} — falling back to aspect figures")
         failures.append(f"god index: {exc}")
 
+    # Items get the same treatment, and must be pulled in the same run: their
+    # table is a stored artifact, so skipping it leaves item stats frozen at
+    # whenever it was last written while every other figure moves on.
+    try:
+        n_items = refresh_item_index(community_fetcher, DATA_ROOT, force=force)
+        print(f"  item index: {n_items} items with win/loss records")
+    except Exception as exc:
+        print(f"  [FAILED] item index: {exc} — item stats keep their last values")
+        failures.append(f"item index: {exc}")
+
     build_paths = list(BUILDS_ROOT.glob("*.md"))
     for build_path in build_paths:
         build_frontmatter, _ = notes.read_note(build_path)
