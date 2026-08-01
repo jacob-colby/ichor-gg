@@ -50,6 +50,7 @@ abilities:
   - Hitting enemy minions provides 1 Wrath
   - Passively gain 1 Wrath every 4 seconds
   - Wrath can only be gained once per ability per enemy hit
+  - You do not gain Wrath from item damage
   description: ly gain 1 Wrath every 4 seconds Hit enemies to gain Wrath. Additionally,
     you have Shoulder Charge
 - slot: Passive
@@ -227,7 +228,7 @@ aspects:
     are lowered. Additionally Shoulder Charge deals more damage if it has hit an enemy
     god recently.
 source_url: https://wiki.smite2.com/w/Mordred
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Mordred Basic Attack

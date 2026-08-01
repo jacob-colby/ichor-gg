@@ -149,7 +149,7 @@ aspects:
     Mark of the Golden Crow on its first hit. If already marked, the mark spreads.
     Attacks hitting marked targets bounce to a nearby enemy.
 source_url: https://wiki.smite2.com/w/Hou_Yi
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Hou Yi Basic Attack

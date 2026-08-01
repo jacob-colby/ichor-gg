@@ -14,7 +14,7 @@ builds_from:
 - Cursed Sickle
 builds_into: []
 source_url: https://wiki.smite2.com/w/Barbed_Carver
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Ability Hit: Target gains +1 Stack of Jagged Wounds for 5s (max 3) Triggers once per Ability, per target Each Stack: +8% (+1% per 10% Lifesteal) Attack and Ability Damage as Physical Damage.

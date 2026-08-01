@@ -162,7 +162,7 @@ aspects:
     slows enemies, and when it hits allies, grants them Attack Speed, Shield and applies
     Herbal Medicine's buff.
 source_url: https://wiki.smite2.com/w/Chiron
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Chiron Basic Attack

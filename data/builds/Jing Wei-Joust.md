@@ -9,11 +9,11 @@ builds:
   - Tyrfing
   - The Reaper
   - Riptalon
-  - Damaru
   - Demon Blade
+  - Eros' Bow
   - Pharaoh's Curse
   flex_slots:
-  - Damaru
+  - Eros' Bow
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -32,37 +32,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Tyrfing:
-      total: 0.51
+      total: 0.5
       efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Reaper:
       total: 0.51
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.58
     Riptalon:
-      total: 0.48
-      efficiency: 0.26
+      total: 0.49
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Damaru:
-      total: 0.46
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Demon Blade:
       total: 0.54
       efficiency: 0.21
       win: 0.5
       pick: 0.0
       fit: 0.87
+    Eros' Bow:
+      total: 0.45
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Pharaoh's Curse:
-      total: 0.46
+      total: 0.45
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -78,10 +78,10 @@ builds:
   - The Reaper
   - Damaru
   - Demon Blade
-  - Pharaoh's Curse
+  - Eros' Bow
   flex_slots:
   - Rage
-  - Pharaoh's Curse
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -99,7 +99,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Tyrfing:
-      total: 0.49
+      total: 0.48
       efficiency: 0.37
       win: 0.5
       pick: 0.0
@@ -111,14 +111,14 @@ builds:
       pick: 0.0
       fit: 0.57
     The Reaper:
-      total: 0.5
-      efficiency: 0.43
+      total: 0.51
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
     Damaru:
-      total: 0.48
-      efficiency: 0.38
+      total: 0.47
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -128,7 +128,7 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
-    Pharaoh's Curse:
+    Eros' Bow:
       total: 0.44
       efficiency: 0.38
       win: 0.5
@@ -138,12 +138,12 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - The Reaper
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
-  - Umbral Link
   flex_slots:
   - Erosion
   - Spectral Armor
@@ -155,14 +155,20 @@ builds:
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    The Reaper:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Spectral Armor:
       total: 0.41
       efficiency: 0.49
@@ -170,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.32
     Amanita Charm:
-      total: 0.59
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -193,12 +199,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Umbral Link:
-      total: 0.47
-      efficiency: 0.24
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -210,7 +210,7 @@ builds:
   - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Tekko-Kagi
+  - Avenging Blade
   - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -230,31 +230,31 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.47
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.54
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.47
     Void Stone:
       total: 0.45
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.62
-      efficiency: 0.43
+      total: 0.63
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.81
     Tekko-Kagi:
-      total: 0.47
-      efficiency: 0.34
+      total: 0.48
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.59

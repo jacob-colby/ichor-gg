@@ -169,7 +169,7 @@ aspects:
     Tiger form provides stacking Attack Speed on hits of The Magic Cudgel and Eagle
     form causes your other two non-ultimate abilities to have a reduced Cooldown.
 source_url: https://wiki.smite2.com/w/Sun_Wukong
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Sun Wukong Basic Attack

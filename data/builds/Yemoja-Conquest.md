@@ -5,87 +5,87 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Downpour
-  aspect_pick_rate: 0.13
-  aspect_win_rate: 0.41
+  aspect_pick_rate: 0.08
+  aspect_win_rate: 0.5
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.18
+    pick_rate: 0.12
     win_rate: 0.39
     alternates:
     - name: Gauntlet of Thebes
-      pick_rate: 0.13
-      win_rate: 0.49
-    - name: Shifter's Shield
+      pick_rate: 0.11
+      win_rate: 0.44
+    - name: Chandra's Grace
       pick_rate: 0.1
-      win_rate: 0.39
+      win_rate: 0.6
   - name: Genji's Guard
-    pick_rate: 0.14
-    win_rate: 0.4
+    pick_rate: 0.15
+    win_rate: 0.43
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.14
-      win_rate: 0.49
+      pick_rate: 0.23
+      win_rate: 0.59
     - name: Breastplate of Valor
-      pick_rate: 0.09
-      win_rate: 0.57
+      pick_rate: 0.07
+      win_rate: 0.7
   - name: Breastplate of Valor
-    pick_rate: 0.11
+    pick_rate: 0.14
+    win_rate: 0.62
+    alternates:
+    - name: Genji's Guard
+      pick_rate: 0.18
+      win_rate: 0.54
+    - name: Stampede
+      pick_rate: 0.06
+      win_rate: 0.78
+  - name: Shell of Rebuke
+    pick_rate: 0.09
     win_rate: 0.5
     alternates:
+    - name: Breastplate of Valor
+      pick_rate: 0.1
+      win_rate: 0.5
     - name: Genji's Guard
-      pick_rate: 0.12
-      win_rate: 0.41
-    - name: Shifter's Shield
       pick_rate: 0.07
-      win_rate: 0.45
-  - name: Dwarven Plate
-    pick_rate: 0.09
-    win_rate: 0.32
+      win_rate: 0.8
+  - name: Mote of Chaos
+    pick_rate: 0.07
+    win_rate: 0.5
     alternates:
-    - name: Genji's Guard
-      pick_rate: 0.11
-      win_rate: 0.39
     - name: Shell of Rebuke
-      pick_rate: 0.09
-      win_rate: 0.46
-  - name: Freya's Tears
-    pick_rate: 0.05
-    win_rate: 0.67
-    alternates:
+      pick_rate: 0.13
+      win_rate: 0.53
     - name: Dwarven Plate
-      pick_rate: 0.08
-      win_rate: 0.42
-    - name: Stampede
       pick_rate: 0.05
-      win_rate: 0.17
+      win_rate: 0.5
   - name: Engraved Guard
-    pick_rate: 0.06
-    win_rate: 0.38
+    pick_rate: 0.1
+    win_rate: 0.75
     alternates:
-    - name: Legionnaire Armor
-      pick_rate: 0.06
-      win_rate: 0.25
-    - name: Shell of Rebuke
+    - name: Captain's Ring
       pick_rate: 0.05
-      win_rate: 0.43
+      win_rate: 0.75
+    - name: Shield
+      pick_rate: 0.05
+      win_rate: 0.75
   source_url: https://smitebrain.com/gods/yemoja/
-  last_verified: '2026-07-25'
+  last_verified: '2026-08-01'
+  god_win_rate: 0.5167785234899329
+  god_matches_won: 77
+  god_matches_played: 149
+  god_division: obsidian
+  god_window_start: '2026-07-28'
+  god_window_end: '2026-08-01'
+  god_matches_analyzed: 4952
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
-  god_win_rate: 0.4222222222222222
-  god_matches_won: 152
-  god_matches_played: 360
-  god_division: obsidian
-  god_window_start: '2026-07-14'
-  god_window_end: '2026-07-27'
-  god_matches_analyzed: 17172
 - source: suggested
   archetype: core
   slot_order:
   - Eye of Providence
+  - Breastplate of Valor
   - Kinetic Cuirass
-  - Freya's Tears
   - Spectral Armor
   - Amanita Charm
   - Erosion
@@ -97,8 +97,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -106,12 +106,12 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Freya''s Tears, Kinetic Cuirass, Eye of Providence, Amanita Charm, Spectral
-    Armor, Erosion, Shield of the Phoenix, Gluttonous Grimoire, Ethereal Staff, Soul
-    Gem, Rod of Asclepius, Breastplate of Valor, Gladiator''s Shield, Chandra''s Grace,
-    Midgardian Mail, Shifter''s Shield, Draconic Scale, Prophetic Cloak, Helm of Radiance,
-    Mantle Of Discord, Leviathan''s Hide, Ancile, Shroud of Vengeance, Phoenix Feather,
-    Oni Hunter''s Garb, Genji''s Guard.'
+    this god: Kinetic Cuirass, Breastplate of Valor, Eye of Providence, Amanita Charm,
+    Spectral Armor, Erosion, Gluttonous Grimoire, Shield of the Phoenix, Soul Gem,
+    Ethereal Staff, Rod of Asclepius, Gladiator''s Shield, Chandra''s Grace, Midgardian
+    Mail, Freya''s Tears, Shifter''s Shield, Draconic Scale, Prophetic Cloak, Helm
+    of Radiance, The Cosmic Horror, Mantle Of Discord, Leviathan''s Hide, Shroud of
+    Vengeance, Ancile, Oni Hunter''s Garb, Genji''s Guard, Spear of Desolation.'
   slot_scores:
     Eye of Providence:
       total: 0.49
@@ -119,18 +119,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Breastplate of Valor:
+      total: 0.49
+      efficiency: 0.4
+      win: 0.62
+      pick: 0.14
+      fit: 0.39
     Kinetic Cuirass:
       total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Freya's Tears:
-      total: 0.5
-      efficiency: 0.3
-      win: 0.67
-      pick: 0.05
-      fit: 0.62
     Spectral Armor:
       total: 0.46
       efficiency: 0.49
@@ -156,9 +156,9 @@ builds:
   archetype: bruiser
   slot_order:
   - Eye of Providence
+  - Breastplate of Valor
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Freya's Tears
   - Spectral Armor
   - Amanita Charm
   flex_slots:
@@ -178,12 +178,12 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Rod of Asclepius, Soul Gem, Chandra''s
-    Grace, Kinetic Cuirass, Eye of Providence, Blood-Bound Book, Lifebinder, Phoenix
-    Feather, Spectral Armor, Gluttonous Grimoire, Bancroft''s Talon, Erosion, Ethereal
-    Staff, Spirit Robe, Breastplate of Valor, Gladiator''s Shield, Glorious Pridwen,
-    The Cosmic Horror, Midgardian Mail, Helm of Radiance, Alchemist Coat, Chronos''
-    Pendant, Leviathan''s Hide, Genji''s Guard.'
+    this god: Amanita Charm, Shield of the Phoenix, Soul Gem, Rod of Asclepius, Breastplate
+    of Valor, Kinetic Cuirass, Chandra''s Grace, Eye of Providence, Lifebinder, Blood-Bound
+    Book, Phoenix Feather, Gluttonous Grimoire, Spectral Armor, Bancroft''s Talon,
+    Erosion, Ethereal Staff, Spirit Robe, The Cosmic Horror, Gladiator''s Shield,
+    Glorious Pridwen, Midgardian Mail, Helm of Radiance, Leviathan''s Hide, Alchemist
+    Coat, Ancile, Genji''s Guard, Spear of Desolation.'
   slot_scores:
     Eye of Providence:
       total: 0.46
@@ -191,6 +191,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Breastplate of Valor:
+      total: 0.47
+      efficiency: 0.4
+      win: 0.62
+      pick: 0.14
+      fit: 0.31
     Kinetic Cuirass:
       total: 0.47
       efficiency: 0.44
@@ -203,14 +209,8 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Freya's Tears:
-      total: 0.48
-      efficiency: 0.3
-      win: 0.67
-      pick: 0.05
-      fit: 0.47
     Spectral Armor:
-      total: 0.45
+      total: 0.44
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -227,8 +227,8 @@ builds:
   slot_order:
   - Screeching Gargoyle
   - Eye of Providence
+  - Breastplate of Valor
   - Kinetic Cuirass
-  - Freya's Tears
   - Gluttonous Grimoire
   - The Cosmic Horror
   flex_slots:
@@ -248,12 +248,12 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Eye of Providence,
-    The Cosmic Horror, Amanita Charm, Screeching Gargoyle, Spectral Armor, Spear of
-    the Magus, Void Stone, Stone of Binding, Erosion, Void Shield, Doom Orb, Shield
-    of the Phoenix, Ethereal Staff, Rod of Asclepius, Breastplate of Valor, The World
-    Stone, Obsidian Shard, Chandra''s Grace, Gladiator''s Shield, Midgardian Mail,
-    Helm of Radiance, Blood-Bound Book, Genji''s Guard.'
+    for this god: Gluttonous Grimoire, Breastplate of Valor, Soul Gem, Kinetic Cuirass,
+    Eye of Providence, The Cosmic Horror, Amanita Charm, Screeching Gargoyle, Spectral
+    Armor, Spear of the Magus, Doom Orb, Void Stone, Stone of Binding, Void Shield,
+    Erosion, Shield of the Phoenix, Ethereal Staff, Rod of Asclepius, The World Stone,
+    Spear of Desolation, Chandra''s Grace, Midgardian Mail, Gladiator''s Shield, Helm
+    of Radiance, Obsidian Shard, Leviathan''s Hide, Genji''s Guard.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.44
@@ -267,27 +267,27 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Breastplate of Valor:
+      total: 0.47
+      efficiency: 0.4
+      win: 0.62
+      pick: 0.14
+      fit: 0.28
     Kinetic Cuirass:
       total: 0.46
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Freya's Tears:
-      total: 0.47
-      efficiency: 0.3
-      win: 0.67
-      pick: 0.05
-      fit: 0.44
     Gluttonous Grimoire:
       total: 0.48
-      efficiency: 0.43
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.66
     The Cosmic Horror:
       total: 0.45
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -327,8 +327,8 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.22
-      efficiency: 0.54
+      total: 0.23
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.23
@@ -340,13 +340,13 @@ builds:
       fit: 0.67
     Death Metal:
       total: 0.25
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
       total: 0.23
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.66

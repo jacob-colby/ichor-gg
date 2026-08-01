@@ -157,7 +157,7 @@ aspects:
 - name: Aspect of Fulmination
   kit_changes: Rain Dance no longer heals but damages enemies in the area instead.
 source_url: https://wiki.smite2.com/w/Chaac
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Chaac Basic Attack

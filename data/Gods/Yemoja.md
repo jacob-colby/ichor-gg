@@ -162,7 +162,7 @@ aspects:
     per hit. Additionally Moonstrike no longer stuns gods but has increased Intelligence
     scaling.
 source_url: https://wiki.smite2.com/w/Yemoja
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Yemoja Basic Attack

@@ -145,7 +145,7 @@ aspects:
     on god hit. Stone Shield is self-only and buffs attack damage. Cataclysm causes
     Knockback rather than a Stun. -7.5% Base Health, -5% Base Protections.
 source_url: https://wiki.smite2.com/w/Geb
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Geb Basic Attack

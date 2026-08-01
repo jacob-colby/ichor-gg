@@ -11,10 +11,10 @@ builds:
   - Riptalon
   - Damaru
   - Demon Blade
-  - Pharaoh's Curse
+  - Eros' Bow
   flex_slots:
   - Damaru
-  - Pharaoh's Curse
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -32,26 +32,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Tyrfing:
-      total: 0.49
+      total: 0.48
       efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
       total: 0.53
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.48
-      efficiency: 0.26
+      total: 0.49
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.71
     Damaru:
-      total: 0.44
-      efficiency: 0.38
+      total: 0.43
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -61,8 +61,8 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Pharaoh's Curse:
-      total: 0.44
+    Eros' Bow:
+      total: 0.43
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -78,10 +78,10 @@ builds:
   - The Reaper
   - Damaru
   - Demon Blade
-  - Pharaoh's Curse
+  - Eros' Bow
   flex_slots:
   - Rage
-  - Pharaoh's Curse
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -112,13 +112,13 @@ builds:
       fit: 0.52
     The Reaper:
       total: 0.52
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
     Damaru:
-      total: 0.45
-      efficiency: 0.38
+      total: 0.44
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -128,7 +128,7 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Pharaoh's Curse:
+    Eros' Bow:
       total: 0.42
       efficiency: 0.38
       win: 0.5
@@ -164,8 +164,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     The Reaper:
-      total: 0.48
-      efficiency: 0.43
+      total: 0.49
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -230,31 +230,31 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.48
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
       total: 0.52
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.5
     Void Stone:
       total: 0.45
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
       total: 0.62
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.8
     Tekko-Kagi:
-      total: 0.46
-      efficiency: 0.34
+      total: 0.47
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.58

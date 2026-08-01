@@ -151,7 +151,7 @@ aspects:
     Tidal Surge but can be activated to focus the side waves, causing them to pierce
     enemies, and both abilities deal extra Basic Attack damage.
 source_url: https://wiki.smite2.com/w/Poseidon
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Poseidon Basic Attack

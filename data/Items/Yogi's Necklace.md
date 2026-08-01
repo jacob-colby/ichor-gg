@@ -14,7 +14,7 @@ builds_from:
 - Mana Tome
 builds_into: []
 source_url: https://wiki.smite2.com/w/Yogi's_Necklace
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Heal +0.5% of your Max Health per second.

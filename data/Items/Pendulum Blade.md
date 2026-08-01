@@ -14,7 +14,7 @@ builds_from:
 - Caestus
 builds_into: []
 source_url: https://wiki.smite2.com/w/Pendulum_Blade
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 On Use: -4s Ability Cooldowns. Cooldown: 40s You can own up to 3 active items at once

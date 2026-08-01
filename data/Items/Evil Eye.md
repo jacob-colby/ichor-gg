@@ -17,7 +17,7 @@ builds_into:
 - Spear of Desolation
 - Spear of the Magus
 source_url: https://wiki.smite2.com/w/Evil_Eye
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 

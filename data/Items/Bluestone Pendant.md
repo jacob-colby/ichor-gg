@@ -13,7 +13,7 @@ builds_from: []
 builds_into:
 - Bluestone Brooch
 source_url: https://wiki.smite2.com/w/Bluestone_Pendant
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +15 Strength or +25 Intelligence (based on highest item stat). Ability Hit: +32 Physical Damage over 2s. Subsequent hits on the same target: 50% bonus damage for 3s Requires Level 20 to upgrade

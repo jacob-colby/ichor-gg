@@ -149,7 +149,7 @@ aspects:
     provide max Mana and at max rank you gain bonus Mana. Sentinel's Empowered Attack
     also sclaes with Max Mana, but no longer Cooldown Reduces itself.
 source_url: https://wiki.smite2.com/w/Scylla
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Scylla Basic Attack

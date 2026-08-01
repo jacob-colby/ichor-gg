@@ -11,22 +11,19 @@ damage_type: magical
 release_date: July 14, 2026
 base_stats:
   health:
-    base: 668.5
-    per_level: 101.52
-  mana:
-    base: 296.0
-    per_level: 42.0
+    base: 0.0
+    per_level: 0.0
   physical_prot:
-    base: 20.7
-    per_level: 3.45
+    base: 0.0
+    per_level: 0.0
   magical_prot:
-    base: 29.7
-    per_level: 1.62
+    base: 0.0
+    per_level: 0.0
   attack_speed:
-    base: 0.96
-    per_level: 1.4
+    base: 0.0
+    per_level: 0.0
   move_speed:
-    base: 370.0
+    base: 0.0
     per_level: 0.0
 abilities:
 - slot: Basic Attack
@@ -122,10 +119,6 @@ abilities:
   name: Whirlwind of Rage and Steel
   cooldown:
   - 90.0
-  - 85.0
-  - 80.0
-  - 75.0
-  - 70.0
   cost:
   - 55.0
   - 60.0
@@ -141,7 +134,7 @@ abilities:
   - 'Damage Scaling: 35% Intelligence'
   - 'Movement Speed: 25%'
   - 'Radius: 3.2 meters'
-  - 'Cooldown: 90 | 85 | 80 | 75 | 70 seconds'
+  - 'Cooldown: 90 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
   description: Grabbed enemies take Magical Damage on the Grab , repeatedly during
     the spin, and again on the Throw After a brief windup, spin with your axe, damaging
@@ -154,7 +147,7 @@ aspects:
     can be ranked up at level 1, has no Cooldown, and no longer grabs enemies, but
     can be channeled as long as you have Spite.
 source_url: https://wiki.smite2.com/w/Xing_Tian
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Xing Tian Basic Attack

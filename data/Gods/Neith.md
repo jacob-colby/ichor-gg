@@ -166,7 +166,7 @@ aspects:
     duration however the Attack Speed gained is much higher. Additionally using World
     Weaver provides stacks of Broken Weave.
 source_url: https://wiki.smite2.com/w/Neith
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Neith Basic Attack

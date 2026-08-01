@@ -146,7 +146,7 @@ aspects:
     Nemesis's and the enemy god's current Health as long as Nemesis has less than
     the target.
 source_url: https://wiki.smite2.com/w/Nemesis
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Nemesis Basic Attack

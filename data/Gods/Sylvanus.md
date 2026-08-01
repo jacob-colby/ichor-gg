@@ -157,7 +157,7 @@ aspects:
     Verdant Growth/Ally dies; +2 on Ultimate cast. At 4 stacks, Enrage: +Attack Speed
     and a free Wisps or Nature''s Grasp cast.'
 source_url: https://wiki.smite2.com/w/Sylvanus
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Sylvanus Basic Attack

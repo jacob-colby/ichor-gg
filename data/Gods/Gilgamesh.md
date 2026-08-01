@@ -173,7 +173,7 @@ aspects:
     from Drop Kick, or launches allies from Hero''s Advance. It can only transform
     once, granting you Attack Speed, Tenacity, or Pathfinding until its next transform.'
 source_url: https://wiki.smite2.com/w/Gilgamesh
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Gilgamesh Basic Attack

@@ -147,7 +147,7 @@ aspects:
   kit_changes: Confusion no longer Stealths you but on refire, you swap positions
     with your clone.
 source_url: https://wiki.smite2.com/w/The_Morrigan
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - The Morrigan Basic Attack

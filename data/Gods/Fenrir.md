@@ -149,7 +149,7 @@ aspects:
     Protections, and Protections persist afterwards. Seething Howl's Strength is decreased,
     but applies to all allies in an area around him and their Lifesteal heals Fenrir.
 source_url: https://wiki.smite2.com/w/Fenrir
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Fenrir Basic Attack

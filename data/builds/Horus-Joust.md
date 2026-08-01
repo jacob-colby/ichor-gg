@@ -45,7 +45,7 @@ builds:
       fit: 0.76
     Void Stone:
       total: 0.51
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Spectral Armor:
-      total: 0.52
+      total: 0.51
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -170,25 +170,25 @@ builds:
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.54
+      total: 0.55
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.54
     Void Shield:
       total: 0.59
-      efficiency: 0.28
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.9
     Void Stone:
       total: 0.6
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.9
     Amanita Charm:
-      total: 0.67
+      total: 0.68
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.51
+      total: 0.5
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.52
-      efficiency: 0.38
+      total: 0.51
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.21
       win: 0.5
       pick: 0.0

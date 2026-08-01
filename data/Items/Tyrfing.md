@@ -14,7 +14,7 @@ builds_from:
 - Skeggox
 builds_into: []
 source_url: https://wiki.smite2.com/w/Tyrfing
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Attacks deal +15 bonus Physical Damage. On God hit: Increase bonus Damage by +15 for 4s Stacks once, +1 Stack per 4 Levels (Max 6 Stacks)

@@ -141,7 +141,7 @@ abilities:
     . The target god takes Physical Damage and is Stunned when they land
 aspects: []
 source_url: https://wiki.smite2.com/w/Awilix
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Awilix Basic Attack

@@ -195,7 +195,7 @@ abilities:
     to challenge each other
 aspects: []
 source_url: https://wiki.smite2.com/w/Aladdin
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Aladdin Basic Attack

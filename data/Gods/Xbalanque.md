@@ -163,7 +163,7 @@ aspects:
     projectiles. Poison Darts requires less hits to deal full damage. Darkest of Nights
     loses existing buffs but resets Poison darts and provides increased ability damage.
 source_url: https://wiki.smite2.com/w/Xbalanque
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Xbalanque Basic Attack

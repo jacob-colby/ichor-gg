@@ -46,8 +46,8 @@ abilities:
   - The distance traveled during Special Delivery and Sonic Boom contribute to the
     Damage Bonus
   - 'Max Stacks: 500'
-  - 'Max Damage Boost: 20%'
-  description: For every 1 centimeter traveled, gain a 0.04% Damage Bonus on your
+  - 'Max Damage Boost: 25%'
+  description: For every 1 centimeter traveled, gain a 0.05% Damage Bonus on your
     next Attack
 - slot: 1st Ability
   name: Made You Look
@@ -152,7 +152,7 @@ abilities:
     . Gain Movement Speed after the Dash that scales based on the energy gathered
 aspects: []
 source_url: https://wiki.smite2.com/w/Mercury
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Mercury Basic Attack

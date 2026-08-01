@@ -168,7 +168,7 @@ aspects:
     a field of stealth but attack speed and attack damage. Golden Apple of Discord
     is faster and does not spread.
 source_url: https://wiki.smite2.com/w/Discordia
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Discordia Basic Attack

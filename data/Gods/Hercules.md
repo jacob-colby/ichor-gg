@@ -151,7 +151,7 @@ aspects:
     from Attacks and when the ability ends, stacks are expended to Heal nearby allied
     gods.
 source_url: https://wiki.smite2.com/w/Hercules
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Hercules Basic Attack

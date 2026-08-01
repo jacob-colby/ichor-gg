@@ -167,7 +167,7 @@ aspects:
   kit_changes: Alluring Spirits no longer throws out a sake bottle but instead spawns
     2 Clones. All of your Clones deal more damage and take less damage.
 source_url: https://wiki.smite2.com/w/Danzaburou
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Danzaburou Basic Attack

@@ -177,13 +177,13 @@ builds:
       fit: 0.59
     Void Shield:
       total: 0.6
-      efficiency: 0.28
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.92
     Void Stone:
       total: 0.61
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.51
+      total: 0.5
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.52
-      efficiency: 0.38
+      total: 0.51
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.21
       win: 0.5
       pick: 0.0

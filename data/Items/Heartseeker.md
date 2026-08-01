@@ -15,7 +15,7 @@ builds_from:
 - Infused Axe
 builds_into: []
 source_url: https://wiki.smite2.com/w/Heartseeker
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Ability Hit: +%Health Physical Damage. Damage = 2% of your Strength, as a % of the target's Max Health.

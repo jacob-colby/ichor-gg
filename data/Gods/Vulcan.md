@@ -149,7 +149,7 @@ aspects:
     Protections and Health Regeneration. Backfire and Magma Bomb have lower Damage
     Scaling.
 source_url: https://wiki.smite2.com/w/Vulcan
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Vulcan Basic Attack

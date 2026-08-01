@@ -196,7 +196,7 @@ aspects:
     over time, but no debuff. Wrap It Up explosion and DoT apply Bonus Hysteria, but
     the explosion no longer Mesmerizes. Your personal Brew can be thrown every 20s.
 source_url: https://wiki.smite2.com/w/Baron_Samedi
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Baron Samedi Basic Attack

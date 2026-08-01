@@ -194,7 +194,7 @@ aspects:
     Charge can be used to kick the astrolabe forward. Your passive now reduces the
     cooldown of Gamma-Ray Burst.
 source_url: https://wiki.smite2.com/w/Atlas
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Atlas Basic Attack

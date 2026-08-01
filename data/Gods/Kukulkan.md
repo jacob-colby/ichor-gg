@@ -148,7 +148,7 @@ aspects:
     and steals protections. Whirlwind attaches to you and explodes in a blast that
     knocks back enemies.
 source_url: https://wiki.smite2.com/w/Kukulkan
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Kukulkan Basic Attack

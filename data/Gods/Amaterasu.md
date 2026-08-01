@@ -146,7 +146,7 @@ aspects:
     Movement Speed, Haste and Basic Attack Power in addition to the original effects.
     It no longer alternates to Gold Buff, or heals you when activated.
 source_url: https://wiki.smite2.com/w/Amaterasu
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Amaterasu Basic Attack

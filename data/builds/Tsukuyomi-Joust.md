@@ -13,7 +13,7 @@ builds:
   - Demon Blade
   - The Crusher
   flex_slots:
-  - Tekko-Kagi
+  - Tyrfing
   - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -45,13 +45,13 @@ builds:
       fit: 0.63
     The Reaper:
       total: 0.58
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.72
     Tekko-Kagi:
-      total: 0.49
-      efficiency: 0.34
+      total: 0.5
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -100,31 +100,31 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.56
     Hydra's Lament:
       total: 0.43
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.42
     The Reaper:
-      total: 0.54
-      efficiency: 0.43
+      total: 0.55
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.65
     Tekko-Kagi:
-      total: 0.4
-      efficiency: 0.34
+      total: 0.41
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.46
     Pendulum Blade:
-      total: 0.41
-      efficiency: 0.27
+      total: 0.42
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -165,18 +165,18 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.43
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.31
     The Reaper:
       total: 0.51
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.58
     The Crusher:
-      total: 0.43
+      total: 0.44
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -217,11 +217,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -230,37 +230,37 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.5
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Reaper:
-      total: 0.64
-      efficiency: 0.43
+      total: 0.65
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.85
     Tekko-Kagi:
-      total: 0.52
-      efficiency: 0.34
+      total: 0.53
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.7
     Heartseeker:
-      total: 0.48
-      efficiency: 0.27
+      total: 0.49
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -306,25 +306,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.51
+      total: 0.5
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.52
-      efficiency: 0.38
+      total: 0.51
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.21
       win: 0.5
       pick: 0.0

@@ -130,7 +130,7 @@ aspects:
     now shields nearby allies and Protections while it holds. Buffing an ally grants
     an Audacity stack.
 source_url: https://wiki.smite2.com/w/Apollo
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Apollo Basic Attack

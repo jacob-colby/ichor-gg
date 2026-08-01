@@ -174,7 +174,7 @@ aspects:
     damage in the area. Additionally, each time an enemy ability is cast a projectile
     lands and explodes at their location. Spell Eater's cooldown is increased.
 source_url: https://wiki.smite2.com/w/Hecate
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Hecate Basic Attack

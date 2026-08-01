@@ -12,7 +12,7 @@ builds_from:
 - Veve Charm
 builds_into: []
 source_url: https://wiki.smite2.com/w/Gem_of_Isolation
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Damaging Ability Hit: 15% Slow. The Slow lasts for 2s.

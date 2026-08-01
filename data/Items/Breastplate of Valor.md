@@ -4,7 +4,7 @@ name: Breastplate of Valor
 tier: 3
 cost: 2400
 stats:
-  Physical Protection: '50'
+  Physical Protection: '45'
   Max Mana: '200'
   Mana Regen: '2'
   Cooldown Rate: '20'
@@ -14,7 +14,7 @@ builds_from:
 - Mana Tome
 builds_into: []
 source_url: https://wiki.smite2.com/w/Breastplate_of_Valor
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 On 500 (+25 per Level) Health lost: -1s Ability Cooldowns.

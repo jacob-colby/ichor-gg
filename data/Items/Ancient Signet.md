@@ -13,7 +13,7 @@ builds_from:
 - Soul Reliquary
 builds_into: []
 source_url: https://wiki.smite2.com/w/Ancient_Signet
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Ability Hit: +20 (+12 per Level) bonus Magical Damage Kill or Assist a Minion: -2s Cooldown Cooldown: 15s

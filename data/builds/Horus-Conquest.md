@@ -5,100 +5,100 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Falcon
-  aspect_pick_rate: 0.05
-  aspect_win_rate: 0.33
+  aspect_pick_rate: 0.08
+  aspect_win_rate: 0.0
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.31
-    win_rate: 0.55
+    pick_rate: 0.37
+    win_rate: 0.66
     alternates:
     - name: Runeforged Hammer
-      pick_rate: 0.23
-      win_rate: 0.59
+      pick_rate: 0.19
+      win_rate: 0.56
     - name: Gauntlet of Thebes
-      pick_rate: 0.12
+      pick_rate: 0.1
       win_rate: 0.63
   - name: Genji's Guard
-    pick_rate: 0.23
-    win_rate: 0.61
+    pick_rate: 0.19
+    win_rate: 0.63
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.16
-      win_rate: 0.6
+      pick_rate: 0.18
+      win_rate: 0.51
     - name: Breastplate of Valor
       pick_rate: 0.12
-      win_rate: 0.55
-  - name: Breastplate of Valor
-    pick_rate: 0.13
-    win_rate: 0.59
-    alternates:
-    - name: Genji's Guard
-      pick_rate: 0.24
-      win_rate: 0.59
-    - name: Shifter's Shield
-      pick_rate: 0.06
       win_rate: 0.6
-  - name: Dwarven Plate
-    pick_rate: 0.13
-    win_rate: 0.6
+  - name: Shell of Rebuke
+    pick_rate: 0.1
+    win_rate: 0.69
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.13
-      win_rate: 0.54
-    - name: Shell of Rebuke
-      pick_rate: 0.11
-      win_rate: 0.71
-  - name: Engraved Guard
+      pick_rate: 0.29
+      win_rate: 0.57
+    - name: Breastplate of Valor
+      pick_rate: 0.09
+      win_rate: 0.6
+  - name: Breastplate of Valor
     pick_rate: 0.07
-    win_rate: 0.38
+    win_rate: 0.71
     alternates:
-    - name: Dwarven Plate
-      pick_rate: 0.1
-      win_rate: 0.63
+    - name: Genji's Guard
+      pick_rate: 0.14
+      win_rate: 0.6
+    - name: Shell of Rebuke
+      pick_rate: 0.12
+      win_rate: 0.64
+  - name: Dwarven Plate
+    pick_rate: 0.08
+    win_rate: 0.74
+    alternates:
+    - name: Shell of Rebuke
+      pick_rate: 0.08
+      win_rate: 0.39
     - name: Spirit Robe
-      pick_rate: 0.07
-      win_rate: 0.71
-  - name: Veve Charm
-    pick_rate: 0.07
-    win_rate: 0.76
+      pick_rate: 0.06
+      win_rate: 0.72
+  - name: Shield
+    pick_rate: 0.06
+    win_rate: 0.8
     alternates:
     - name: Engraved Guard
-      pick_rate: 0.1
-      win_rate: 0.63
-    - name: Legionnaire Armor
+      pick_rate: 0.06
+      win_rate: 0.5
+    - name: Veve Charm
       pick_rate: 0.05
-      win_rate: 0.75
+      win_rate: 0.44
   source_url: https://smitebrain.com/gods/horus/
-  last_verified: '2026-07-25'
+  last_verified: '2026-08-01'
+  god_win_rate: 0.6051948051948052
+  god_matches_won: 233
+  god_matches_played: 385
+  god_division: obsidian
+  god_window_start: '2026-07-28'
+  god_window_end: '2026-08-01'
+  god_matches_analyzed: 4952
   starter:
     base: Death's Toll
     upgrade: Death's Embrace
-  god_win_rate: 0.5947540983606557
-  god_matches_won: 907
-  god_matches_played: 1525
-  god_division: obsidian
-  god_window_start: '2026-07-14'
-  god_window_end: '2026-07-27'
-  god_matches_analyzed: 17172
 - source: suggested
   archetype: core
   slot_order:
   - Eye of Providence
   - Genji's Guard
   - Breastplate of Valor
-  - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shifter's Shield
   - Amanita Charm
   flex_slots:
+  - Eye of Providence
   - Amanita Charm
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
@@ -106,12 +106,12 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Eye of Providence, Breastplate of Valor, Amanita Charm,
+    this god: Breastplate of Valor, Kinetic Cuirass, Eye of Providence, Amanita Charm,
     Jotunn''s Revenge, Spectral Armor, Erosion, Shield Splitter, Shield of the Phoenix,
-    Eye of the Storm, Runeforged Hammer, Berserker''s Shield, Hydra''s Lament, Gladiator''s
-    Shield, Chandra''s Grace, The Crusher, Avenging Blade, Midgardian Mail, Freya''s
-    Tears, Draconic Scale, Prophetic Cloak, Pharaoh''s Curse, Leviathan''s Hide, Ancile,
-    Phoenix Feather, Oni Hunter''s Garb.'
+    Eye of the Storm, Runeforged Hammer, Gladiator''s Shield, Hydra''s Lament, The
+    Crusher, Chandra''s Grace, Berserker''s Shield, Midgardian Mail, Freya''s Tears,
+    Avenging Blade, Draconic Scale, Prophetic Cloak, Pharaoh''s Curse, Leviathan''s
+    Hide, Ancile, Oni Hunter''s Garb, Phoenix Feather.'
   slot_scores:
     Eye of Providence:
       total: 0.49
@@ -121,28 +121,28 @@ builds:
       fit: 0.66
     Genji's Guard:
       total: 0.51
-      efficiency: 0.46
-      win: 0.61
-      pick: 0.23
+      efficiency: 0.44
+      win: 0.63
+      pick: 0.19
       fit: 0.42
     Breastplate of Valor:
-      total: 0.48
-      efficiency: 0.42
-      win: 0.59
-      pick: 0.13
+      total: 0.53
+      efficiency: 0.4
+      win: 0.71
+      pick: 0.07
       fit: 0.42
-    Jotunn's Revenge:
-      total: 0.47
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
     Kinetic Cuirass:
       total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Shifter's Shield:
+      total: 0.52
+      efficiency: 0.29
+      win: 0.66
+      pick: 0.37
+      fit: 0.66
     Amanita Charm:
       total: 0.48
       efficiency: 0.44
@@ -155,22 +155,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Breastplate of Valor
-  - Eye of Providence
+  - Shield of the Phoenix
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
@@ -178,30 +178,24 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Chandra''s Grace,
-    Breastplate of Valor, Eye of Providence, Jotunn''s Revenge, Phoenix Feather, Spectral
-    Armor, The Reaper, Shield Splitter, Erosion, Runeforged Hammer, Hydra''s Lament,
-    Spirit Robe, The Crusher, Eye of the Storm, Berserker''s Shield, Avenging Blade,
-    Gladiator''s Shield, Glorious Pridwen, Midgardian Mail, Pharaoh''s Curse, Leviathan''s
-    Hide, Ancile, Oni Hunter''s Garb, Screeching Gargoyle.'
+    this god: Breastplate of Valor, Amanita Charm, Shield of the Phoenix, Kinetic
+    Cuirass, Chandra''s Grace, Eye of Providence, Jotunn''s Revenge, Phoenix Feather,
+    Spectral Armor, The Reaper, Shield Splitter, Erosion, Runeforged Hammer, The Crusher,
+    Hydra''s Lament, Spirit Robe, Eye of the Storm, Gladiator''s Shield, Avenging
+    Blade, Glorious Pridwen, Berserker''s Shield, Midgardian Mail, Pharaoh''s Curse,
+    Leviathan''s Hide, Ancile, Oni Hunter''s Garb, Screeching Gargoyle.'
   slot_scores:
-    Eye of Providence:
-      total: 0.47
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Genji's Guard:
       total: 0.5
-      efficiency: 0.46
-      win: 0.61
-      pick: 0.23
+      efficiency: 0.44
+      win: 0.63
+      pick: 0.19
       fit: 0.32
     Breastplate of Valor:
-      total: 0.47
-      efficiency: 0.42
-      win: 0.59
-      pick: 0.13
+      total: 0.51
+      efficiency: 0.4
+      win: 0.71
+      pick: 0.07
       fit: 0.32
     Kinetic Cuirass:
       total: 0.47
@@ -215,6 +209,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Shifter's Shield:
+      total: 0.49
+      efficiency: 0.29
+      win: 0.66
+      pick: 0.37
+      fit: 0.51
     Amanita Charm:
       total: 0.5
       efficiency: 0.44
@@ -225,57 +225,51 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Eye of Providence
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shifter's Shield
   - The Crusher
   flex_slots:
-  - Breastplate of Valor
-  - Eye of Providence
+  - The Crusher
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, The Crusher, Kinetic Cuirass, Breastplate of
-    Valor, Eye of Providence, Avenging Blade, Amanita Charm, Screeching Gargoyle,
-    Spectral Armor, The Reaper, Shield Splitter, Void Stone, Erosion, Void Shield,
-    Shield of the Phoenix, Stone of Binding, Runeforged Hammer, Hydra''s Lament, Eye
-    of the Storm, Berserker''s Shield, Chandra''s Grace, Titan''s Bane, Gladiator''s
-    Shield, Tekko-Kagi, Midgardian Mail, Oath-Sworn Spear, Pendulum Blade.'
+    for this god: Breastplate of Valor, Jotunn''s Revenge, The Crusher, Kinetic Cuirass,
+    Eye of Providence, Avenging Blade, Amanita Charm, Screeching Gargoyle, The Reaper,
+    Spectral Armor, Shield Splitter, Void Stone, Void Shield, Erosion, Stone of Binding,
+    Shield of the Phoenix, Runeforged Hammer, Hydra''s Lament, Eye of the Storm, Chandra''s
+    Grace, Tekko-Kagi, Berserker''s Shield, Gladiator''s Shield, Pendulum Blade, Midgardian
+    Mail, Oath-Sworn Spear, Heartseeker.'
   slot_scores:
-    Eye of Providence:
-      total: 0.46
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Genji's Guard:
       total: 0.49
-      efficiency: 0.46
-      win: 0.61
-      pick: 0.23
+      efficiency: 0.44
+      win: 0.63
+      pick: 0.19
       fit: 0.29
     Breastplate of Valor:
-      total: 0.46
-      efficiency: 0.42
-      win: 0.59
-      pick: 0.13
+      total: 0.51
+      efficiency: 0.4
+      win: 0.71
+      pick: 0.07
       fit: 0.29
     Jotunn's Revenge:
       total: 0.5
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -285,6 +279,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Shifter's Shield:
+      total: 0.49
+      efficiency: 0.29
+      win: 0.66
+      pick: 0.37
+      fit: 0.46
     The Crusher:
       total: 0.47
       efficiency: 0.49
@@ -327,8 +327,8 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.22
-      efficiency: 0.54
+      total: 0.23
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.23
@@ -340,13 +340,13 @@ builds:
       fit: 0.67
     Death Metal:
       total: 0.25
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
       total: 0.23
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.66

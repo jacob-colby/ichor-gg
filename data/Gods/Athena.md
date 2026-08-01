@@ -165,7 +165,7 @@ aspects:
     dealing no landing damage but causing the enemy to take increased damage while
     Athena is channeling.
 source_url: https://wiki.smite2.com/w/Athena
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Athena Basic Attack

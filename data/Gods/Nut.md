@@ -163,7 +163,7 @@ aspects:
     of itself to allies on god hit. Crashing Comet Stuns and Slows. Warp grants CC
     immunity to self and 1 nearby ally. -12.5% Basic Attack Damage.
 source_url: https://wiki.smite2.com/w/Nut
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Nut Basic Attack

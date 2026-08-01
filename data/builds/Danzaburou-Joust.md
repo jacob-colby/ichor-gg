@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.46
-      efficiency: 0.54
+      total: 0.47
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -45,13 +45,13 @@ builds:
       fit: 0.55
     The Reaper:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
     Riptalon:
-      total: 0.51
-      efficiency: 0.26
+      total: 0.52
+      efficiency: 0.27
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.45
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -111,14 +111,14 @@ builds:
       pick: 0.0
       fit: 0.46
     The Reaper:
-      total: 0.55
-      efficiency: 0.43
+      total: 0.56
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.67
     Damaru:
       total: 0.42
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.45
+      total: 0.46
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -142,11 +142,11 @@ builds:
   - Tyrfing
   - Hydra's Lament
   - The Reaper
+  - Tekko-Kagi
   - The Crusher
-  - Pharaoh's Curse
   flex_slots:
   - Tyrfing
-  - Pharaoh's Curse
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.5
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -177,28 +177,28 @@ builds:
       fit: 0.4
     Hydra's Lament:
       total: 0.4
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.36
     The Reaper:
       total: 0.54
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Tekko-Kagi:
+      total: 0.38
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     The Crusher:
       total: 0.46
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Pharaoh's Curse:
-      total: 0.37
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -230,13 +230,13 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.4
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.25
     The Reaper:
-      total: 0.51
-      efficiency: 0.43
+      total: 0.52
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -295,31 +295,31 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.48
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.54
+      total: 0.53
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.5
     Void Stone:
       total: 0.45
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
       total: 0.62
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.8
     Tekko-Kagi:
-      total: 0.46
-      efficiency: 0.34
+      total: 0.47
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.58

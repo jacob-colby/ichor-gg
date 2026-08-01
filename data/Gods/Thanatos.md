@@ -137,7 +137,7 @@ aspects:
     Max Health. Additionally Soul Reap deals bonus damage and Heals Thanatos based
     on his Max Health.
 source_url: https://wiki.smite2.com/w/Thanatos
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Thanatos Basic Attack

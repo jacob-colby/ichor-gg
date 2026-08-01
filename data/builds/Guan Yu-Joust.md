@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Shield Splitter:
-      total: 0.5
+      total: 0.49
       efficiency: 0.43
       win: 0.5
       pick: 0.0
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Pharaoh's Curse:
-      total: 0.47
+      total: 0.46
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -165,25 +165,25 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.54
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.55
     Void Shield:
-      total: 0.56
-      efficiency: 0.28
+      total: 0.57
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.85
     Void Stone:
       total: 0.57
-      efficiency: 0.3
+      efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.54
     Amanita Charm:
-      total: 0.63
+      total: 0.64
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.51
+      total: 0.5
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.52
-      efficiency: 0.38
+      total: 0.51
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.21
       win: 0.5
       pick: 0.0

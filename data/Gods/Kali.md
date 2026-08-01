@@ -155,7 +155,7 @@ aspects:
     has a lower cooldown, resets cooldown on Mark kills, makes her Basics apply 2
     Rupture stacks & pierce.
 source_url: https://wiki.smite2.com/w/Kali
-last_verified: '2026-07-25'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Kali Basic Attack

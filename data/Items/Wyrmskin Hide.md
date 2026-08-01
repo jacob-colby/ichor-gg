@@ -14,7 +14,7 @@ builds_from:
 - Medal of Disruption
 builds_into: []
 source_url: https://wiki.smite2.com/w/Wyrmskin_Hide
-last_verified: '2026-07-23'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Hit a God (once every 8s): Gain 1 Dampening per level against them.
