@@ -295,5 +295,7 @@ export interface IndexData {
    * auditable rather than asserted. */
   item_gold_values?: Record<string, number>;
   method?: MethodData;
+  /** Mode display order from the pipeline. Absent on an older index. */
+  modes?: string[];
   draft?: DraftConfig;
 }

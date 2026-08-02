@@ -48,6 +48,9 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                                   **{m.lower(): {"gods": [], "items": []}
                                      for m in recommend.MODES}},
                      "god_item_scores": {},
+                     # Mode display order, so the viewer's strip leads with
+                     # Conquest rather than whatever the filenames sorted to.
+                     "modes": list(recommend.MODES),
                      # The method page reads the model's weights from here so
                      # it can't describe a blend the pipeline stopped using.
                      # A vault with no _weights.yaml still gets the built-in

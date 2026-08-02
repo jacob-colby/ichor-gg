@@ -247,6 +247,7 @@ function App() {
                 builds={data.builds}
                 mode={mode}
                 onModeChange={setMode}
+                modeOrder={data.modes}
                 starters={data.starters ?? []}
               />
             )}

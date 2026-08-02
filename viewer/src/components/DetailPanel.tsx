@@ -49,6 +49,9 @@ interface DetailPanelProps {
   builds: BuildNote[];
   mode: string;
   onModeChange: (mode: string) => void;
+  /** Mode display order from the pipeline, so the strip isn't ordered by
+   *  whatever the build filenames sorted to. */
+  modeOrder?: string[];
   starters?: { base: string; upgrade: string }[];
   onReload?: () => void;
 }
@@ -348,11 +351,21 @@ function LedgerRowView({
 }
 
 export function DetailPanel({
-  god, godData, items, builds, mode, onModeChange, starters = [],
+  god, godData, items, builds, mode, onModeChange, modeOrder, starters = [],
 }: DetailPanelProps) {
   const godNotes = builds.filter((b) => b.god === god);
   const note = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
-  const modes = godNotes.map((n) => n.mode);
+  // Ordered by the pipeline's own mode list, not by however the build
+  // filenames sorted — which put Arena at the head of the strip the moment it
+  // was added, ahead of Conquest. Anything the order doesn't name keeps its
+  // original position at the end rather than disappearing.
+  const modes = useMemo(() => {
+    const rank = (m: string) => {
+      const i = (modeOrder ?? []).indexOf(m);
+      return i === -1 ? Number.MAX_SAFE_INTEGER : i;
+    };
+    return godNotes.map((n) => n.mode).sort((a, b) => rank(a) - rank(b));
+  }, [godNotes, modeOrder]);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [editing, setEditing] = useState<MineDraft | "new" | null>(null);

@@ -6,22 +6,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Berserker's Shield
+  - Runeforged Hammer
   - Eros' Bow
-  - Spectral Armor
   - Amanita Charm
-  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Erosion
+  - Runeforged Hammer
   - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -31,39 +31,39 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eros' Bow:
-      total: 0.47
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Spectral Armor:
-      total: 0.47
-      efficiency: 0.49
+    Berserker's Shield:
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Amanita Charm:
-      total: 0.62
-      efficiency: 0.45
+    Runeforged Hammer:
+      total: 0.59
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 0.8
-    Erosion:
-      total: 0.47
-      efficiency: 0.39
+      fit: 0.47
+    Eros' Bow:
+      total: 0.57
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Amanita Charm:
+      total: 0.74
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
     Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.38
+      total: 0.64
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
-      total: 0.49
-      efficiency: 0.33
+      total: 0.61
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -73,64 +73,64 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Berserker's Shield
   - Shield of the Phoenix
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
-  - Spectral Armor
+  - Berserker's Shield
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Berserker's Shield:
+      total: 0.6
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Shield of the Phoenix:
-      total: 0.52
-      efficiency: 0.4
+      total: 0.62
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Spectral Armor:
-      total: 0.5
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Amanita Charm:
-      total: 0.69
-      efficiency: 0.45
+      total: 0.81
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.94
     Erosion:
-      total: 0.51
-      efficiency: 0.39
+      total: 0.6
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.64
     Pharaoh's Curse:
-      total: 0.53
-      efficiency: 0.38
+      total: 0.65
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.67
     Shogun's Ofuda:
-      total: 0.5
-      efficiency: 0.33
+      total: 0.62
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -145,18 +145,18 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
+  - Void Stone
   - Jotunn's Revenge
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -164,38 +164,38 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.54
-      efficiency: 0.4
+      total: 0.65
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
     Void Shield:
-      total: 0.54
-      efficiency: 0.29
+      total: 0.64
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.79
     Void Stone:
-      total: 0.54
-      efficiency: 0.29
+      total: 0.62
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.79
     The Crusher:
-      total: 0.5
-      efficiency: 0.44
+      total: 0.63
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.55
     Amanita Charm:
-      total: 0.58
-      efficiency: 0.45
+      total: 0.69
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -204,18 +204,18 @@ builds:
   archetype: fun-crit
   slot_order:
   - Tyrfing
-  - Rage
   - Bragi's Harp
   - Death Metal
+  - Riptalon
   - Damaru
   - Demon Blade
   flex_slots:
-  - Bragi's Harp
-  - Rage
+  - Riptalon
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -223,44 +223,44 @@ builds:
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Tyrfing:
-      total: 0.52
-      efficiency: 0.37
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Rage:
-      total: 0.5
-      efficiency: 0.35
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Bragi's Harp:
-      total: 0.51
-      efficiency: 0.34
+      total: 0.6
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.54
-      efficiency: 0.43
+      total: 0.65
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Riptalon:
+      total: 0.6
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Damaru:
-      total: 0.53
-      efficiency: 0.41
+      total: 0.66
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.61
-      efficiency: 0.21
+      total: 0.73
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -269,22 +269,22 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Berserker's Shield
+  - Runeforged Hammer
   - Eros' Bow
-  - Spectral Armor
   - Amanita Charm
-  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Erosion
+  - Runeforged Hammer
   - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -294,39 +294,39 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eros' Bow:
-      total: 0.47
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Spectral Armor:
-      total: 0.47
-      efficiency: 0.49
+    Berserker's Shield:
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Amanita Charm:
-      total: 0.62
-      efficiency: 0.45
+    Runeforged Hammer:
+      total: 0.59
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 0.8
-    Erosion:
-      total: 0.47
-      efficiency: 0.39
+      fit: 0.47
+    Eros' Bow:
+      total: 0.57
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Amanita Charm:
+      total: 0.74
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
     Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.38
+      total: 0.64
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
-      total: 0.49
-      efficiency: 0.33
+      total: 0.61
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.65

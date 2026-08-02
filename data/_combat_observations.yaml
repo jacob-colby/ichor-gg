@@ -1,0 +1,57 @@
+# Real in-game damage numbers, for checking pipeline/smite/combat.py.
+#
+# This file is the gate on workstream B. `combat.py` reproduces two published
+# worked examples exactly, but its penetration block — the order of operations
+# and the 40% / 50 caps — comes from community guides with visible SMITE 1
+# lineage, and no primary SMITE 2 source states it. B4 (magnitude-aware fit),
+# B5 (item scoring against a target) and B6 (team exchange) all inherit that
+# error if it is wrong, so nothing downstream ships until real numbers land
+# here.
+#
+# HOW TO TAKE AN OBSERVATION
+#
+#   1. Practice range. Note the ability's listed damage at its current rank and
+#      your Strength / Intelligence, or read `raw` straight off a hit against a
+#      0-protection dummy.
+#   2. Hit a target whose protections you know.
+#   3. Record the number the game showed.
+#
+# Run:  python -m smite.calibrate
+#
+# The cases that matter most, in order:
+#   - one with NO penetration        (confirms mitigation alone; likely fine)
+#   - one with FLAT penetration only (confirms the flat term and its cap)
+#   - one with PERCENT penetration   (confirms the percent term and ordering)
+#   - one with BOTH                  (the only case that tests the ORDER, which
+#                                     is the part no source could settle)
+#   - one crit                       (confirms 1.65x, contradicted by the
+#                                     wiki's own stats page)
+#
+# FIELDS
+#   label       what you were doing — shown in the report
+#   expected    the damage the game actually displayed  (required)
+#   raw         damage before mitigation                (required)
+#   protection  the target's protection in that school  (required)
+#   flat_pen / pct_pen / flat_reduction / pct_reduction   optional
+#   plating / dampening / true_damage / crit              optional
+#
+# pct_pen is a FRACTION: 20% penetration is 0.20, not 20.
+
+observations: []
+
+# Example of the shape — delete once real ones are in. These numbers are made
+# up and `calibrate` refuses to treat the file as evidence while `example: true`
+# is set on any entry.
+#
+# observations:
+#   - label: "Agni 2 vs 80 magical prot, no pen"
+#     example: true
+#     raw: 500
+#     protection: 80
+#     expected: 277.8
+#   - label: "same, with Obsidian Shard (20% pen)"
+#     example: true
+#     raw: 500
+#     protection: 80
+#     pct_pen: 0.20
+#     expected: 305.3

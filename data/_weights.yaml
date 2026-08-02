@@ -109,6 +109,19 @@ role_stats:
 lifesteal_caps:
   - {damage_types: [physical], match_any: [Carry, Hunter, Sharpshooter], max_lifesteal: 2}
 
+# ── Stat caps ──────────────────────────────────────────────────────────────
+# Stats the game stops paying for past a threshold. No single item comes close
+# to one — the biggest Tenacity item gives 15 against a cap of 50 — so this is
+# not a pricing rule; the gold model is right to price a point linearly. It is
+# an assembly rule: four Tenacity items give 60 and ten of that buys nothing.
+# The assembler refuses an item only when its whole contribution is already
+# capped out, never when part of it still fits.
+stat_caps:
+  Tenacity: 50
+  Plating: 35
+  Dampening: 35
+
+
 # ── Build flavors ─────────────────────────────────────────────────────────
 # Each flavor is a scoring overlay producing an extra "suggested" build. It's
 # emitted only for gods whose damage type is in `damage_types` (null = any) and

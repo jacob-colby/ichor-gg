@@ -2,96 +2,97 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.58 | 0.66 | 0.52 | 0.52 | 0.38 | 1.00 | undervalued |  |  |
-| The Crusher | 0.51 | 0.57 | 0.44 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
-| Hydra's Lament | 0.50 | 0.55 | 0.45 | 0.50 | 0.00 | 0.77 | undervalued | burst | **UNDERRATED** |
-| Pendulum Blade | 0.49 | 0.54 | 0.34 | 0.50 | 0.00 | 1.00 | fair |  | **UNDERRATED** |
-| Runeforged Hammer | 0.46 | 0.48 | 0.45 | 0.50 | 0.00 | 0.54 | undervalued | burst | **UNDERRATED** |
-| The Reaper | 0.46 | 0.47 | 0.34 | 0.50 | 0.00 | 0.78 | fair | sustain | **UNDERRATED** |
-| Heartseeker | 0.45 | 0.50 | 0.34 | 0.44 | 0.06 | 0.88 | fair | burst | **UNDERRATED** |
-| Arondight | 0.45 | 0.45 | 0.35 | 0.50 | 0.00 | 0.67 | fair | mobility | **UNDERRATED** |
-| Avenging Blade | 0.45 | 0.45 | 0.40 | 0.50 | 0.00 | 0.54 | fair | protection-shred | **UNDERRATED** |
-| Titan's Bane | 0.44 | 0.49 | 0.37 | 0.42 | 0.15 | 0.78 | fair |  | **UNDERRATED** |
-| Shield Splitter | 0.44 | 0.44 | 0.43 | 0.50 | 0.00 | 0.44 | undervalued |  | **UNDERRATED** |
-| Damaru | 0.44 | 0.42 | 0.41 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
-| Lernaean Bow | 0.44 | 0.42 | 0.37 | 0.50 | 0.00 | 0.54 | fair | wave-clear, burst | **UNDERRATED** |
-| Tyrfing | 0.44 | 0.42 | 0.37 | 0.50 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
-| Eye of the Storm | 0.43 | 0.41 | 0.40 | 0.50 | 0.00 | 0.44 | fair | peel | **UNDERRATED** |
-| Transcendence | 0.43 | 0.41 | 0.40 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
-| Tekko-Kagi | 0.43 | 0.41 | 0.25 | 0.50 | 0.00 | 0.78 | premium | mobility | **UNDERRATED** |
-| Golden Blade | 0.43 | 0.40 | 0.39 | 0.50 | 0.00 | 0.44 | fair | wave-clear | **UNDERRATED** |
-| Genji's Guard | 0.42 | 0.39 | 0.46 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
-| Barbed Carver | 0.42 | 0.39 | 0.32 | 0.50 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
-| Oath-Sworn Spear | 0.41 | 0.38 | 0.31 | 0.50 | 0.00 | 0.54 | fair | protection-shred | **UNDERRATED** |
-| Rage | 0.41 | 0.37 | 0.35 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
-| Chandra's Grace | 0.41 | 0.37 | 0.43 | 0.50 | 0.00 | 0.22 | undervalued | sustain | **UNDERRATED** |
-| Breastplate of Valor | 0.41 | 0.36 | 0.42 | 0.50 | 0.00 | 0.22 | fair |  | **UNDERRATED** |
-| Bloodforge | 0.40 | 0.36 | 0.32 | 0.50 | 0.00 | 0.44 | fair | sustain | **UNDERRATED** |
-| Wyrmskin Hide | 0.40 | 0.35 | 0.31 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
-| Shield of the Phoenix | 0.40 | 0.35 | 0.40 | 0.50 | 0.00 | 0.22 | fair | sustain | **UNDERRATED** |
-| Spectral Armor | 0.40 | 0.34 | 0.49 | 0.50 | 0.00 | 0.00 | undervalued | anti-crit, aura | **UNDERRATED** |
-| Kinetic Cuirass | 0.39 | 0.34 | 0.44 | 0.50 | 0.00 | 0.10 | undervalued | burst |  |
-| Musashi's Dual Swords | 0.39 | 0.34 | 0.29 | 0.50 | 0.00 | 0.44 | fair | mobility |  |
-| Avatar's Parashu | 0.39 | 0.33 | 0.14 | 0.50 | 0.00 | 0.78 | premium | cc-immunity |  |
-| Screeching Gargoyle | 0.39 | 0.33 | 0.34 | 0.50 | 0.00 | 0.32 | fair | protection-shred, peel |  |
-| Eye of Providence | 0.39 | 0.33 | 0.47 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
-| Devourer's Gauntlet | 0.39 | 0.33 | 0.28 | 0.50 | 0.00 | 0.44 | fair | sustain |  |
-| Riptalon | 0.39 | 0.33 | 0.32 | 0.50 | 0.00 | 0.33 | fair | sustain |  |
-| Deathbringer | 0.39 | 0.27 | 0.20 | 0.54 | 0.14 | 0.44 | premium |  |  |
-| Amanita Charm | 0.38 | 0.31 | 0.45 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura |  |
-| Yogi's Necklace | 0.38 | 0.31 | 0.45 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
-| Gladiator's Shield | 0.38 | 0.31 | 0.30 | 0.50 | 0.00 | 0.32 | fair | burst |  |
-| Sanguine Lash | 0.38 | 0.30 | 0.24 | 0.50 | 0.00 | 0.44 | premium | aura |  |
-| Berserker's Shield | 0.37 | 0.28 | 0.41 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Freya's Tears | 0.37 | 0.28 | 0.31 | 0.50 | 0.00 | 0.22 | fair |  |  |
-| Demon Blade | 0.37 | 0.28 | 0.21 | 0.50 | 0.00 | 0.44 | premium |  |  |
-| Prophetic Cloak | 0.36 | 0.28 | 0.30 | 0.50 | 0.00 | 0.22 | fair |  |  |
-| Midgardian Mail | 0.36 | 0.27 | 0.39 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Erosion | 0.36 | 0.27 | 0.39 | 0.50 | 0.00 | 0.00 | fair | aura |  |
-| Eros' Bow | 0.36 | 0.27 | 0.38 | 0.50 | 0.00 | 0.00 | fair | aura |  |
-| Pharaoh's Curse | 0.36 | 0.27 | 0.38 | 0.50 | 0.00 | 0.00 | fair | aura |  |
-| Heartwood Charm | 0.36 | 0.27 | 0.29 | 0.50 | 0.00 | 0.22 | fair |  |  |
-| Leviathan's Hide | 0.36 | 0.26 | 0.38 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Shifter's Shield | 0.36 | 0.20 | 0.29 | 0.54 | 0.20 | 0.00 | fair |  |  |
-| Oni Hunter's Garb | 0.35 | 0.26 | 0.37 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Ancile | 0.35 | 0.26 | 0.37 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Phoenix Feather | 0.35 | 0.26 | 0.37 | 0.50 | 0.00 | 0.00 | fair | sustain |  |
-| Mantle Of Discord | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | fair | peel, cc-immunity |  |
-| Contagion | 0.35 | 0.25 | 0.32 | 0.50 | 0.00 | 0.10 | fair | anti-heal, burst |  |
-| Shroud of Vengeance | 0.35 | 0.25 | 0.31 | 0.50 | 0.00 | 0.10 | fair | burst |  |
-| Gauntlet of Thebes | 0.35 | 0.25 | 0.35 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Mercury's Talaria | 0.35 | 0.24 | 0.35 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Magi's Cloak | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | fair | cc-immunity |  |
-| Stampede | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | fair | mobility, aura, cc-immunity |  |
-| Void Stone | 0.34 | 0.24 | 0.29 | 0.50 | 0.00 | 0.10 | fair | protection-shred, aura |  |
-| Shogun's Ofuda | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | fair | aura |  |
-| Void Shield | 0.34 | 0.23 | 0.29 | 0.50 | 0.00 | 0.10 | fair | protection-shred, aura |  |
-| Eye of Erebus | 0.34 | 0.23 | 0.23 | 0.50 | 0.00 | 0.22 | premium |  |  |
-| Stone of Binding | 0.34 | 0.22 | 0.28 | 0.50 | 0.00 | 0.10 | fair | protection-shred |  |
-| Hide of the Nemean Lion | 0.34 | 0.22 | 0.32 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Ragnarok's Wake | 0.33 | 0.22 | 0.27 | 0.50 | 0.00 | 0.10 | premium | mobility, burst |  |
-| Glorious Pridwen | 0.33 | 0.22 | 0.22 | 0.50 | 0.00 | 0.22 | premium | sustain |  |
-| Spirit Robe | 0.33 | 0.22 | 0.31 | 0.50 | 0.00 | 0.00 | fair | sustain |  |
-| Doublet of Binding | 0.33 | 0.22 | 0.31 | 0.50 | 0.00 | 0.00 | fair | aura |  |
-| Mystical Mail | 0.33 | 0.21 | 0.30 | 0.50 | 0.00 | 0.00 | fair | aura, wave-clear |  |
-| Regrowth Striders | 0.33 | 0.21 | 0.20 | 0.50 | 0.00 | 0.22 | premium | mobility, sustain |  |
-| Draconic Scale | 0.33 | 0.20 | 0.29 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Odysseus' Bow | 0.32 | 0.18 | 0.22 | 0.50 | 0.00 | 0.10 | premium | burst, wave-clear |  |
-| Resolute Mantle | 0.31 | 0.18 | 0.25 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
-| Stygian Anchor | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Umbral Link | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium | sustain, aura |  |
-| Xibalban Effigy | 0.31 | 0.17 | 0.24 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Qin's Blade | 0.31 | 0.16 | 0.19 | 0.50 | 0.00 | 0.10 | premium | burst |  |
-| Dagger of Frenzy | 0.30 | 0.15 | 0.22 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Sun Beam Bow | 0.30 | 0.15 | 0.21 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Omen Drum | 0.29 | 0.13 | 0.19 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Circe's Hexstone | 0.29 | 0.13 | 0.10 | 0.50 | 0.00 | 0.22 | premium | mobility, cc-immunity |  |
-| Daybreak Gavel | 0.29 | 0.13 | 0.19 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Vital Amplifier | 0.29 | 0.13 | 0.18 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Radiant Bulwark | 0.28 | 0.11 | 0.15 | 0.50 | 0.00 | 0.00 | premium | aura |  |
-| Hastened Fatalis | 0.28 | 0.10 | 0.14 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
-| Dwarven Plate | 0.27 | 0.10 | 0.14 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| The Executioner | 0.27 | 0.09 | 0.09 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
-| Brawler’s Beat Stick | 0.27 | 0.09 | 0.13 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
+| Jotunn's Revenge | 0.65 | 0.79 | 0.69 | 0.52 | 0.38 | 1.00 | undervalued |  |  |
+| The Crusher | 0.60 | 0.75 | 0.70 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
+| Hydra's Lament | 0.58 | 0.71 | 0.69 | 0.50 | 0.00 | 0.77 | undervalued | burst | **UNDERRATED** |
+| Runeforged Hammer | 0.55 | 0.65 | 0.70 | 0.50 | 0.00 | 0.54 | undervalued | burst | **UNDERRATED** |
+| The Reaper | 0.55 | 0.65 | 0.59 | 0.50 | 0.00 | 0.78 | fair | sustain | **UNDERRATED** |
+| Pendulum Blade | 0.54 | 0.63 | 0.47 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
+| Avatar's Parashu | 0.53 | 0.62 | 0.55 | 0.50 | 0.00 | 0.78 | fair | cc-immunity | **UNDERRATED** |
+| Lernaean Bow | 0.53 | 0.61 | 0.65 | 0.50 | 0.00 | 0.54 | undervalued | wave-clear, burst | **UNDERRATED** |
+| Arondight | 0.53 | 0.61 | 0.59 | 0.50 | 0.00 | 0.67 | fair | mobility | **UNDERRATED** |
+| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
+| Avenging Blade | 0.53 | 0.60 | 0.63 | 0.50 | 0.00 | 0.54 | fair | protection-shred | **UNDERRATED** |
+| Damaru | 0.52 | 0.59 | 0.66 | 0.50 | 0.00 | 0.44 | undervalued |  | **UNDERRATED** |
+| Tekko-Kagi | 0.52 | 0.59 | 0.50 | 0.50 | 0.00 | 0.78 | fair | mobility | **UNDERRATED** |
+| Heartseeker | 0.52 | 0.63 | 0.53 | 0.44 | 0.06 | 0.88 | fair | burst | **UNDERRATED** |
+| Genji's Guard | 0.52 | 0.58 | 0.74 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
+| Golden Blade | 0.51 | 0.57 | 0.62 | 0.50 | 0.00 | 0.44 | fair | wave-clear | **UNDERRATED** |
+| Shield Splitter | 0.50 | 0.54 | 0.58 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
+| Eye of the Storm | 0.49 | 0.54 | 0.58 | 0.50 | 0.00 | 0.44 | fair | peel | **UNDERRATED** |
+| Breastplate of Valor | 0.49 | 0.54 | 0.67 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
+| Titan's Bane | 0.49 | 0.59 | 0.51 | 0.42 | 0.15 | 0.78 | fair |  | **UNDERRATED** |
+| Barbed Carver | 0.49 | 0.53 | 0.52 | 0.50 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
+| Tyrfing | 0.49 | 0.53 | 0.52 | 0.50 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
+| Riptalon | 0.49 | 0.52 | 0.60 | 0.50 | 0.00 | 0.33 | fair | sustain | **UNDERRATED** |
+| Bloodforge | 0.48 | 0.52 | 0.55 | 0.50 | 0.00 | 0.44 | fair | sustain | **UNDERRATED** |
+| Berserker's Shield | 0.48 | 0.52 | 0.74 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
+| Transcendence | 0.48 | 0.51 | 0.54 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
+| Shield of the Phoenix | 0.47 | 0.50 | 0.61 | 0.50 | 0.00 | 0.22 | fair | sustain | **UNDERRATED** |
+| Oni Hunter's Garb | 0.47 | 0.49 | 0.70 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
+| Chandra's Grace | 0.47 | 0.49 | 0.60 | 0.50 | 0.00 | 0.22 | fair | sustain | **UNDERRATED** |
+| Yogi's Necklace | 0.47 | 0.49 | 0.70 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
+| Freya's Tears | 0.47 | 0.48 | 0.59 | 0.50 | 0.00 | 0.22 | fair |  |  |
+| Wyrmskin Hide | 0.47 | 0.48 | 0.50 | 0.50 | 0.00 | 0.44 | fair |  |  |
+| Deathbringer | 0.47 | 0.43 | 0.43 | 0.54 | 0.14 | 0.44 | premium |  |  |
+| Kinetic Cuirass | 0.47 | 0.48 | 0.64 | 0.50 | 0.00 | 0.10 | undervalued | burst |  |
+| Amanita Charm | 0.46 | 0.48 | 0.68 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura |  |
+| Musashi's Dual Swords | 0.46 | 0.47 | 0.49 | 0.50 | 0.00 | 0.44 | premium | mobility |  |
+| Oath-Sworn Spear | 0.46 | 0.47 | 0.43 | 0.50 | 0.00 | 0.54 | premium | protection-shred |  |
+| Spectral Armor | 0.46 | 0.47 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | anti-crit, aura |  |
+| Shifter's Shield | 0.46 | 0.41 | 0.58 | 0.54 | 0.20 | 0.00 | fair |  |  |
+| Sanguine Lash | 0.45 | 0.46 | 0.46 | 0.50 | 0.00 | 0.44 | premium | aura |  |
+| Eye of Providence | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
+| Demon Blade | 0.45 | 0.45 | 0.45 | 0.50 | 0.00 | 0.44 | premium |  |  |
+| Rage | 0.45 | 0.45 | 0.45 | 0.50 | 0.00 | 0.44 | premium |  |  |
+| Pharaoh's Curse | 0.45 | 0.45 | 0.64 | 0.50 | 0.00 | 0.00 | fair | aura |  |
+| Screeching Gargoyle | 0.45 | 0.44 | 0.50 | 0.50 | 0.00 | 0.32 | premium | protection-shred, peel |  |
+| Mantle Of Discord | 0.45 | 0.44 | 0.63 | 0.50 | 0.00 | 0.00 | fair | peel, cc-immunity |  |
+| Devourer's Gauntlet | 0.44 | 0.43 | 0.43 | 0.50 | 0.00 | 0.44 | premium | sustain |  |
+| Leviathan's Hide | 0.44 | 0.42 | 0.60 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Gladiator's Shield | 0.43 | 0.42 | 0.46 | 0.50 | 0.00 | 0.32 | premium | burst |  |
+| Eros' Bow | 0.43 | 0.42 | 0.60 | 0.50 | 0.00 | 0.00 | fair | aura |  |
+| Midgardian Mail | 0.43 | 0.41 | 0.58 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Hide of the Nemean Lion | 0.43 | 0.40 | 0.57 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Shogun's Ofuda | 0.43 | 0.40 | 0.57 | 0.50 | 0.00 | 0.00 | fair | aura |  |
+| Doublet of Binding | 0.42 | 0.40 | 0.57 | 0.50 | 0.00 | 0.00 | fair | aura |  |
+| Erosion | 0.42 | 0.39 | 0.56 | 0.50 | 0.00 | 0.00 | fair | aura |  |
+| Ancile | 0.42 | 0.39 | 0.56 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Draconic Scale | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Stampede | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair | mobility, aura, cc-immunity |  |
+| Void Shield | 0.41 | 0.37 | 0.49 | 0.50 | 0.00 | 0.10 | premium | protection-shred, aura |  |
+| Regrowth Striders | 0.41 | 0.37 | 0.44 | 0.50 | 0.00 | 0.22 | premium | mobility, sustain |  |
+| Prophetic Cloak | 0.41 | 0.37 | 0.44 | 0.50 | 0.00 | 0.22 | premium |  |  |
+| Shroud of Vengeance | 0.41 | 0.37 | 0.48 | 0.50 | 0.00 | 0.10 | premium | burst |  |
+| Contagion | 0.41 | 0.37 | 0.48 | 0.50 | 0.00 | 0.10 | premium | anti-heal, burst |  |
+| Heartwood Charm | 0.41 | 0.37 | 0.43 | 0.50 | 0.00 | 0.22 | premium |  |  |
+| Ragnarok's Wake | 0.41 | 0.37 | 0.48 | 0.50 | 0.00 | 0.10 | premium | mobility, burst |  |
+| Stone of Binding | 0.41 | 0.37 | 0.48 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
+| Odysseus' Bow | 0.40 | 0.36 | 0.47 | 0.50 | 0.00 | 0.10 | premium | burst, wave-clear |  |
+| Phoenix Feather | 0.40 | 0.36 | 0.51 | 0.50 | 0.00 | 0.00 | fair | sustain |  |
+| Umbral Link | 0.40 | 0.36 | 0.51 | 0.50 | 0.00 | 0.00 | fair | sustain, aura |  |
+| Xibalban Effigy | 0.40 | 0.36 | 0.51 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Void Stone | 0.40 | 0.35 | 0.46 | 0.50 | 0.00 | 0.10 | premium | protection-shred, aura |  |
+| Mystical Mail | 0.40 | 0.35 | 0.50 | 0.50 | 0.00 | 0.00 | fair | aura, wave-clear |  |
+| Magi's Cloak | 0.40 | 0.35 | 0.50 | 0.50 | 0.00 | 0.00 | fair | cc-immunity |  |
+| Eye of Erebus | 0.40 | 0.35 | 0.40 | 0.50 | 0.00 | 0.22 | premium |  |  |
+| Hussar's Wings | 0.40 | 0.34 | 0.49 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |
+| Spirit Robe | 0.39 | 0.34 | 0.48 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
+| Resolute Mantle | 0.39 | 0.34 | 0.48 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
+| Glorious Pridwen | 0.39 | 0.33 | 0.38 | 0.50 | 0.00 | 0.22 | premium | sustain |  |
+| Qin's Blade | 0.38 | 0.32 | 0.41 | 0.50 | 0.00 | 0.10 | premium | burst |  |
+| Stygian Anchor | 0.37 | 0.29 | 0.42 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
+| Dagger of Frenzy | 0.37 | 0.29 | 0.42 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Mercury's Talaria | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Circe's Hexstone | 0.36 | 0.28 | 0.30 | 0.50 | 0.00 | 0.22 | premium | mobility, cc-immunity |  |
+| Hastened Fatalis | 0.35 | 0.26 | 0.37 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
+| Dwarven Plate | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Radiant Bulwark | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium | aura |  |
+| Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Vital Amplifier | 0.34 | 0.23 | 0.32 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Gauntlet of Thebes | 0.33 | 0.22 | 0.31 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Sun Beam Bow | 0.32 | 0.20 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| The Executioner | 0.31 | 0.17 | 0.20 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
+| Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
 | Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
-| Hussar's Wings | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |

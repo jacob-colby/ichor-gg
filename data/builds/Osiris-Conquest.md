@@ -84,138 +84,140 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
-  - Eye of Providence
+  - Blink Rune
+  - Lernaean Bow
   - Berserker's Shield
-  - Jotunn's Revenge
-  - Kinetic Cuirass
   - Runeforged Hammer
+  - The Crusher
   flex_slots:
-  - Golden Blade
-  - Eye of Providence
+  - Lernaean Bow
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Runeforged Hammer, Jotunn''s Revenge, Golden Blade, Eye of Providence,
-    Shield Splitter, Avenging Blade, Hydra''s Lament, Eye of the Storm, Spectral Armor,
-    Amanita Charm, The Crusher, Lernaean Bow, Tyrfing, Pharaoh''s Curse, Damaru, Erosion,
-    Eros'' Bow, Shield of the Phoenix, Shogun''s Ofuda, Chandra''s Grace, Wyrmskin
-    Hide, Genji''s Guard, Yogi''s Necklace, Rage, Midgardian Mail, Heartseeker.'
+    this god: Runeforged Hammer, Blink Rune, Golden Blade, Lernaean Bow, The Crusher,
+    Hydra''s Lament, Pharaoh''s Curse, Amanita Charm, Avenging Blade, Jotunn''s Revenge,
+    Damaru, Oni Hunter''s Garb, Eye of Providence, Genji''s Guard, Eye of the Storm,
+    Spectral Armor, Shogun''s Ofuda, Yogi''s Necklace, Shield Splitter, Eros'' Bow,
+    Shield of the Phoenix, Tyrfing, Breastplate of Valor, Mantle Of Discord, Leviathan''s
+    Hide, Erosion.'
   slot_scores:
     Golden Blade:
-      total: 0.45
-      efficiency: 0.39
+      total: 0.53
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Eye of Providence:
-      total: 0.44
-      efficiency: 0.47
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.0
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Berserker's Shield:
-      total: 0.46
-      efficiency: 0.41
+      total: 0.58
+      efficiency: 0.74
       win: 0.52
       pick: 0.35
       fit: 0.45
-    Jotunn's Revenge:
-      total: 0.45
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
-    Kinetic Cuirass:
-      total: 0.45
-      efficiency: 0.44
-      win: 0.48
-      pick: 0.21
-      fit: 0.45
     Runeforged Hammer:
-      total: 0.45
-      efficiency: 0.45
+      total: 0.54
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.47
+    The Crusher:
+      total: 0.52
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
+  - Blink Rune
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Runeforged Hammer
   - Amanita Charm
   flex_slots:
-  - Eye of Providence
-  - Runeforged Hammer
+  - Kinetic Cuirass
+  - Blink Rune
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Eye of Providence, Chandra''s
-    Grace, Runeforged Hammer, Jotunn''s Revenge, Shield Splitter, Phoenix Feather,
-    Spectral Armor, Golden Blade, Eye of the Storm, Avenging Blade, Hydra''s Lament,
-    Pharaoh''s Curse, The Crusher, Erosion, The Reaper, Lernaean Bow, Tyrfing, Spirit
-    Robe, Damaru, Riptalon, Shogun''s Ofuda, Bloodforge, Genji''s Guard, Eros'' Bow.'
+    this god: Amanita Charm, Runeforged Hammer, Shield of the Phoenix, Blink Rune,
+    Golden Blade, Lernaean Bow, Pharaoh''s Curse, The Crusher, Eye of Providence,
+    Oni Hunter''s Garb, Hydra''s Lament, Avenging Blade, Riptalon, The Reaper, Chandra''s
+    Grace, Jotunn''s Revenge, Genji''s Guard, Damaru, Spectral Armor, Eye of the Storm,
+    Shield Splitter, Shogun''s Ofuda, Phoenix Feather, Yogi''s Necklace, Bloodforge,
+    Mantle Of Discord.'
   slot_scores:
-    Eye of Providence:
-      total: 0.46
-      efficiency: 0.47
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.0
     Berserker's Shield:
-      total: 0.46
-      efficiency: 0.41
+      total: 0.58
+      efficiency: 0.74
       win: 0.52
       pick: 0.35
       fit: 0.47
     Kinetic Cuirass:
-      total: 0.46
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.64
       win: 0.48
       pick: 0.21
       fit: 0.54
     Shield of the Phoenix:
-      total: 0.46
-      efficiency: 0.4
+      total: 0.54
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.63
     Runeforged Hammer:
-      total: 0.45
-      efficiency: 0.45
+      total: 0.54
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.46
     Amanita Charm:
-      total: 0.49
-      efficiency: 0.45
+      total: 0.57
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -223,68 +225,69 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Blink Rune
   - Avenging Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Runeforged Hammer
   - The Crusher
   flex_slots:
+  - Blink Rune
   - Runeforged Hammer
-  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, Avenging Blade, The Crusher, Runeforged Hammer,
-    Eye of Providence, Hydra''s Lament, Heartseeker, Spectral Armor, Golden Blade,
-    Titan''s Bane, Shield Splitter, Amanita Charm, Oath-Sworn Spear, Eye of the Storm,
-    Screeching Gargoyle, Void Stone, Pendulum Blade, Lernaean Bow, Tyrfing, Void Shield,
-    The Reaper, Damaru, Pharaoh''s Curse, Stone of Binding, Riptalon, Tekko-Kagi.'
+    for this god: The Crusher, Avenging Blade, Jotunn''s Revenge, Blink Rune, Runeforged
+    Hammer, Lernaean Bow, Hydra''s Lament, Golden Blade, Amanita Charm, Riptalon,
+    The Reaper, Oni Hunter''s Garb, Pharaoh''s Curse, Genji''s Guard, Damaru, Heartseeker,
+    Tekko-Kagi, Eye of Providence, Yogi''s Necklace, Avatar''s Parashu, Spectral Armor,
+    Void Shield, Eye of the Storm, Shogun''s Ofuda, Shield Splitter, Breastplate of
+    Valor, Void Stone.'
   slot_scores:
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.0
     Avenging Blade:
-      total: 0.47
-      efficiency: 0.4
+      total: 0.55
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.68
     Berserker's Shield:
-      total: 0.44
-      efficiency: 0.41
+      total: 0.56
+      efficiency: 0.74
       win: 0.52
       pick: 0.35
       fit: 0.33
     Jotunn's Revenge:
-      total: 0.48
-      efficiency: 0.52
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Kinetic Cuirass:
-      total: 0.43
-      efficiency: 0.44
-      win: 0.48
-      pick: 0.21
-      fit: 0.36
     Runeforged Hammer:
-      total: 0.44
-      efficiency: 0.45
+      total: 0.53
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.38
     The Crusher:
-      total: 0.46
-      efficiency: 0.44
+      total: 0.55
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -294,7 +297,7 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Tyrfing
+  - Berserker's Shield
   - Death Metal
   - Damaru
   - Demon Blade
@@ -303,53 +306,53 @@ builds:
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Golden Blade:
-      total: 0.22
-      efficiency: 0.39
+      total: 0.3
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.57
     Lernaean Bow:
-      total: 0.23
-      efficiency: 0.37
+      total: 0.33
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Tyrfing:
-      total: 0.23
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
+    Berserker's Shield:
+      total: 0.31
+      efficiency: 0.74
+      win: 0.52
+      pick: 0.35
+      fit: 0.34
     Death Metal:
-      total: 0.25
-      efficiency: 0.43
+      total: 0.32
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.24
-      efficiency: 0.41
+      total: 0.33
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.22
-      efficiency: 0.21
+      total: 0.31
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -359,70 +362,70 @@ builds:
   archetype: model
   slot_order:
   - Golden Blade
-  - Eye of Providence
-  - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Shield Splitter
+  - Blink Rune
+  - Lernaean Bow
+  - Berserker's Shield
   - Runeforged Hammer
+  - The Crusher
   flex_slots:
-  - Eye of Providence
-  - Shield Splitter
+  - Lernaean Bow
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Eye of the Storm — magical protection
-    swap_item: Eye of the Storm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Runeforged Hammer, Jotunn''s Revenge, Golden Blade, Eye
-    of Providence, Shield Splitter, Avenging Blade, Hydra''s Lament, Eye of the Storm,
-    Spectral Armor, Amanita Charm, The Crusher, Lernaean Bow, Tyrfing, Pharaoh''s
-    Curse, Damaru, Erosion, Eros'' Bow, Shield of the Phoenix, Shogun''s Ofuda, Chandra''s
-    Grace, Wyrmskin Hide, Genji''s Guard, Yogi''s Necklace, Rage, Midgardian Mail,
-    Heartseeker.'
+    Underrated for this god: Runeforged Hammer, Blink Rune, Golden Blade, Lernaean
+    Bow, The Crusher, Hydra''s Lament, Pharaoh''s Curse, Amanita Charm, Avenging Blade,
+    Jotunn''s Revenge, Damaru, Oni Hunter''s Garb, Eye of Providence, Genji''s Guard,
+    Eye of the Storm, Spectral Armor, Shogun''s Ofuda, Yogi''s Necklace, Shield Splitter,
+    Eros'' Bow, Shield of the Phoenix, Tyrfing, Breastplate of Valor, Mantle Of Discord,
+    Leviathan''s Hide, Erosion.'
   slot_scores:
     Golden Blade:
-      total: 0.45
-      efficiency: 0.39
+      total: 0.53
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Eye of Providence:
-      total: 0.44
-      efficiency: 0.47
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.35
-    Jotunn's Revenge:
-      total: 0.45
-      efficiency: 0.52
+      fit: 0.0
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.3
-    Kinetic Cuirass:
-      total: 0.45
-      efficiency: 0.44
-      win: 0.48
-      pick: 0.21
+      fit: 0.51
+    Berserker's Shield:
+      total: 0.58
+      efficiency: 0.74
+      win: 0.52
+      pick: 0.35
       fit: 0.45
-    Shield Splitter:
-      total: 0.44
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
     Runeforged Hammer:
-      total: 0.45
-      efficiency: 0.45
+      total: 0.54
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.47
+    The Crusher:
+      total: 0.52
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
   starter: *id001
 ---
