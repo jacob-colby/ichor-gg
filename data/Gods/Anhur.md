@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 48.12
+    per_level: 2.76
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Anhur Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Enfeeble
   details:
@@ -44,6 +59,9 @@ abilities:
   - 'Debuff Duration: 4 seconds'
   description: ATTACKS WEAKEN ENEMIES Dealing Damage to enemies reduces their Physical
     Protection
+  detail_kinds:
+  - debuff
+  - debuff
 - slot: 1st Ability
   name: Shifting Sands
   cooldown:
@@ -72,6 +90,19 @@ abilities:
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Summon an obelisk, surrounded by shifting sands Additional
+  detail_kinds:
+  - slow
+  - null
+  - slow
+  - null
+  - slow
+  - slow
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Impale
   cooldown:
@@ -96,6 +127,19 @@ abilities:
   - 'Cooldown: 11 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Throw a large spear, dealing Physical Damage in a line
+  damage_type: physical
+  detail_kinds:
+  - stun
+  - stun
+  - stun
+  - null
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Disperse
   cooldown:
@@ -120,6 +164,16 @@ abilities:
   - 'Cooldown: 15 | 14.4 | 14 | 13.5 | 13 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Leap forward, dealing Physical Damage where you land
+  damage_type: physical
+  detail_kinds:
+  - stun
+  - stun
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Desert Fury
   cooldown:
@@ -150,6 +204,22 @@ abilities:
   - 'Cooldown: 90 | 85 | 80 | 75 | 70 seconds'
   - 'Cost: 80 | 85 | 90 | 95 | 100 mana'
   description: Hurl a series of empowered spears, each dealing Physical Damage
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - mechanic
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Pride
   kit_changes: Enfeeble no longer Debuffs enemies but dealing damage to the same enemy

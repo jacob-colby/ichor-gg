@@ -29,6 +29,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.0
+    per_level: 2.42
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Ganesha Basic Attack
@@ -41,6 +50,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Good Fortune
   details:
@@ -49,6 +65,8 @@ abilities:
     allied god receives the credit and you receive the rewards for an assist instead
     plus a bonus amount of gold. In addition, your assist range and the time before
     you lose assist credit is increased
+  detail_kinds:
+  - mechanic
 - slot: 1st Ability
   name: Turn of Fate
   cooldown:
@@ -80,6 +98,21 @@ abilities:
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
   description: Send a curse forward dealing Magical Damage to enemies it passes through.
     For each enemy hit, all nearby allied gods gain Bonus Damage
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Ohm
   cooldown:
@@ -107,6 +140,17 @@ abilities:
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
   description: Rise into the lotus position Silencing enemies in front of you and
     increasing Protections of nearby allied gods
+  detail_kinds:
+  - buff
+  - mechanic
+  - slow
+  - null
+  - buff
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Remove Obstacles
   cooldown:
@@ -135,6 +179,20 @@ abilities:
   description: You cannot cancel this ability while Dashing , but you can on contact
     with an enemy god Dash forward dealing Magical Damage to enemy minions you pass
     through and stopping on enemy gods, Stunning them before Knocking them up
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - stun
+  - magical
+  - magical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Dharmic Pillars
   cooldown:
@@ -161,6 +219,20 @@ abilities:
   description: Summon 4 Great Pillars to imprison your enemies. Enemies that pass
     the field between each pillar take an initial hit of Magical Damage , are Slowed
     , and have their Protections Reduced
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Triumphant
   kit_changes: Ohm no longer silences but deals damage to enemies in front of you

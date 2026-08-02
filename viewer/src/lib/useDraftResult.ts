@@ -8,18 +8,31 @@
  * call it rather than each computing their own.
  */
 import { useMemo } from "react";
-import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, God, Item } from "../types";
+import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, God, Item, LifestealCap } from "../types";
 import { deriveThreats, threatOverlay, threatCulprits, type ThreatKey } from "./threats";
 import { adaptedCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftBuild";
 import type { DraftMode } from "./draft";
 
 const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust" };
 
-/** Mirrors the `lifesteal_caps` rule in _weights.yaml. */
-function draftMaxLifesteal(godData?: God): number {
-  if (!godData || godData.damage_type !== "physical") return 1;
+/** Applies the shipped `lifesteal_caps` rules — the same data `god_max_lifesteal`
+ *  reads, in the same first-match-wins order.
+ *
+ *  This used to hardcode the rule's conditions (physical, and one of
+ *  Carry/Hunter/Sharpshooter, cap 2). That is a copy of a YAML row living in
+ *  TypeScript, and nothing would have failed if someone edited the row: the
+ *  pipeline would assemble cores under the new cap and the draft would keep
+ *  re-ranking them under the old one, disagreeing quietly on the surface whose
+ *  whole claim is "here is what changed". */
+export function draftMaxLifesteal(godData: God | undefined, rules: LifestealCap[] | undefined): number {
+  if (!godData) return 1;
   const tokens = new Set([...(godData.role ?? "").split(/\s+/), ...(godData.specializations ?? [])]);
-  return ["Carry", "Hunter", "Sharpshooter"].some((t) => tokens.has(t)) ? 2 : 1;
+  for (const rule of rules ?? []) {
+    if (rule.damage_types?.length && !rule.damage_types.includes(godData.damage_type)) continue;
+    if (rule.match_any?.length && !rule.match_any.some((t) => tokens.has(t))) continue;
+    return rule.max_lifesteal ?? 1;
+  }
+  return 1;
 }
 
 /** An ally's own suggested core reduced to the effect_tags its items bring —
@@ -96,7 +109,7 @@ export function useDraftResult(
   const draftEnabled = !!meName && !!godItemScores?.[meName] && !!draftConfig;
   const result = useMemo(() => {
     if (!draftEnabled) return null;
-    const opts = { maxBonus: draftConfig!.max_bonus, maxLifesteal: draftMaxLifesteal(meGod) };
+    const opts = { maxBonus: draftConfig!.max_bonus, maxLifesteal: draftMaxLifesteal(meGod, draftConfig!.lifesteal_caps) };
     const base = adaptedCore(godItemScores![meName], itemsByName, { tags: {}, stats: {} }, opts);
     const adapted = adaptedCore(godItemScores![meName], itemsByName, threatOverlay(threats, draftConfig!), opts);
     // Both builds survive: the diff is the product's whole claim.

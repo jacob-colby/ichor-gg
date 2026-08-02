@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Vulcan Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Master Craftsman
   details:
@@ -47,6 +62,10 @@ abilities:
     shop that affect his abilities. There are 3 sets of Mods available at different
     levels. You can only have 1 Mod from each set. Additionally, Hitting an enemy
     god with an ability grants you increased Movement Speed and Mana Regen
+  detail_kinds:
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Backfire
   cooldown:
@@ -73,6 +92,16 @@ abilities:
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
   description: Fire a projectile that causes you to Dash back and deal Magical Damage
     to all enemies it hits, marking the first god that is hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Inferno Cannon
   cooldown:
@@ -98,6 +127,20 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Create an that shoots projectiles every 1 second at an enemy in front
     of it, dealing Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Magma Bomb
   cooldown:
@@ -118,6 +161,15 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Lob a projectile that explodes on impact with the ground, dealing Magical
     Damage and Knocking Up enemies in the area
+  damage_type: magical
+  detail_kinds:
+  - stun
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Earthshaker
   cooldown:
@@ -143,6 +195,16 @@ abilities:
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
   description: Launch a projectile that explodes on impact with the ground, dealing
     Magical Damage to enemies in the area
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Fortification
   kit_changes: Being near one of Vulcan's turrets grants Vulcan and the turret increased

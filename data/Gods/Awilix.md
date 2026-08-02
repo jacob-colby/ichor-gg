@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Awilix Basic Attack
@@ -38,6 +47,13 @@ abilities:
   - 'Range: 2.56 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Initiative
   details:
@@ -47,6 +63,11 @@ abilities:
   - 'Buff Duration: 4 seconds'
   description: If you have not taken or dealt damage in the last 5 seconds, gain increased
     Attack Power and Strength if you strike an enemy first
+  detail_kinds:
+  - null
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Summon Suku
   cooldown:
@@ -68,6 +89,16 @@ abilities:
   - 'Cost: 30 | 35 | 40 | 45 | 50 mana'
   description: Mount your Panther Suku, gaining Movement Speed but Decreased Strafe
     Speed . You may Leap off of Suku to deal Physical Damage in the target area
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Feather Step
   cooldown:
@@ -92,6 +123,17 @@ abilities:
   description: Flip over the last enemy you hit within 1.5 seconds, Rooting , Crippling
     , and dealing Physical Damage to them. The damage dealt is increased by 1.35x
     or 1.9x based on the next attack in your Basic Attack progression
+  damage_type: physical
+  detail_kinds:
+  - null
+  - mechanic
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Moonlight Charge
   cooldown:
@@ -113,6 +155,16 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Suku comes to Awilix's aid, rushing forward dealing Physical Damage
     to all enemies. If hit from the side or behind, enemies are also Knocked Up
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Gravity Surge
   cooldown:
@@ -139,6 +191,18 @@ abilities:
     Damage , and Strength , as well as protection against Roots , Slows , and Displacement
     for 6 seconds Pull the closest enemy god to you that is either Knocked Up or Leaping
     . The target god takes Physical Damage and is Stunned when they land
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - physical
+  - physical
+  - stun
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Awilix
 last_verified: '2026-08-01'

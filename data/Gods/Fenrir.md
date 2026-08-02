@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.93
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Fenrir Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Unbound Runes
   details:
@@ -67,6 +82,18 @@ abilities:
   - 'Cooldown: 15 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Savagely Leap forward, dealing Physical Damage when you land
+  damage_type: physical
+  detail_kinds:
+  - stun
+  - null
+  - null
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Seething Howl
   cooldown:
@@ -86,6 +113,14 @@ abilities:
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Unleash a howl, gaining increased Strength , Attack Speed , and Lifesteal
+  detail_kinds:
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Brutalize
   cooldown:
@@ -120,6 +155,28 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Gain Protections , Leap forward, and grab onto an enemy, dealing Physical
     Damage repeatedly to all nearby enemies
+  damage_type: physical
+  detail_kinds:
+  - mechanic
+  - debuff
+  - physical
+  - null
+  - null
+  - buff
+  - null
+  - null
+  - debuff
+  - null
+  - physical
+  - physical
+  - physical
+  - buff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Ragnarok
   cooldown:
@@ -143,6 +200,21 @@ abilities:
   description: Gain increased Movement Speed , Protections , and become CC Immune
     while massive Grow massive in size, and your next Basic Attack deals Physical
     Damage and can Pick Up an enemy god and carry them to any position
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - buff
+  - buff
+  - buff
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Loyalty
   kit_changes: Brutalize deals less damage but applies a stacking Slow, provides increased

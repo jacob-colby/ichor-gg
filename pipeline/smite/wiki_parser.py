@@ -12,6 +12,12 @@ STAT_LABELS = {
     "Physical Pro.": "physical_prot",
     "Magical Pro.": "magical_prot",
     "Move Speed": "move_speed",
+    # Basic-attack damage. Every god page carries it and the allowlist dropped
+    # it, which left no way to compute what an auto-attack actually hits for —
+    # the floor any damage model has to start from.
+    "Attack Power": "attack_power",
+    "Health Regen": "health_regen",
+    "Mana Regen": "mana_regen",
 }
 
 
@@ -123,6 +129,41 @@ def _section_tables(soup, heading_id: str) -> list:
 _ABILITY_CHROME = ("Expand Ability Video", "Expand Ability video", "Ability Video")
 
 
+# The wiki colour-codes every detail line by what it does, and `get_text()`
+# threw that away — leaving "Damage: 95 | 165 | 235" with no way to tell whether
+# it lands as physical or magical, which is the first thing a damage model has
+# to know. Recovered from the cached HTML, no refetch.
+#
+# The damage pair was checked against every god whose damage type we already
+# store: #ff5f5f appears on 290 damage lines and every one belongs to a
+# physical god, #2ca8fd on 271 and every one to a magical god. No overlap in
+# either direction, across the whole 247-page cache.
+_DETAIL_KINDS = {
+    "#ff5f5f": "physical",   # damage, physical
+    "#2ca8fd": "magical",    # damage, magical
+    "#fcc26a": "mechanic",   # range, radius, cone angle, cooldown, cost
+    "#c2a377": "buff",       # self/ally buffs — move speed, cooldown reduction
+    "#e156c0": "debuff",     # silence, protection reduction
+    "#b556ff": "slow",
+    "#ff61d8": "stun",
+    "#4fc253": "heal",
+    "#32cdd9": "shield",
+}
+
+_HEX = re.compile(r"#[0-9a-fA-F]{6}")
+
+
+def _detail_kind(li):
+    """What the wiki's colouring says this detail line is, or None when it is
+    uncoloured or uses one of the long tail of god-specific colours we don't
+    claim to recognise. Unknown is left unknown rather than guessed."""
+    span = li.find("span", style=_HEX)
+    if span is None:
+        return None
+    m = _HEX.search(span.get("style") or "")
+    return _DETAIL_KINDS.get(m.group(0).lower()) if m else None
+
+
 def clean_ability_description(description: str, details, slot: str = "", name: str = "") -> str:
     """Strip the wiki's UI chrome, the duplicated detail lines, and the leading
     tagline from an ability's prose.
@@ -159,12 +200,16 @@ def _parse_abilities(soup) -> list:
             continue
         ability = {"slot": _clean(spans[0].get_text()), "name": _clean(spans[1].get_text())}
 
-        details = []
+        details, kinds, dmg_types = [], [], []
         for li in table.find_all("li"):
             text = _clean(li.get_text())
             if not text:
                 continue
             details.append(text)
+            kind = _detail_kind(li)
+            kinds.append(kind)
+            if kind in ("physical", "magical") and text.lower().startswith("damage"):
+                dmg_types.append(kind)
             low = text.lower()
             if low.startswith("cooldown:"):
                 ability["cooldown"] = _parse_number_list(text.split(":", 1)[1])
@@ -172,6 +217,17 @@ def _parse_abilities(soup) -> list:
                 ability["cost"] = _parse_number_list(text.split(":", 1)[1])
         if details:
             ability["details"] = details
+            # Parallel to `details`, same length, None where the wiki used a
+            # colour we don't claim to recognise. Kept beside the raw lines
+            # rather than folded into them so nothing reading `details` today
+            # has to change.
+            if any(kinds):
+                ability["detail_kinds"] = kinds
+        # One damage type per ability where its damage lines agree. Recorded
+        # only on agreement — an ability that genuinely deals both should not
+        # be flattened to whichever colour came first.
+        if dmg_types and len(set(dmg_types)) == 1:
+            ability["damage_type"] = dmg_types[0]
 
         # Description = the table's prose minus the header (slot+name), the
         # detail lines, and the wiki's own UI chrome. Subtracting the detail

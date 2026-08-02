@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Danzaburou Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Dishonest Duplication
   details:
@@ -49,6 +64,12 @@ abilities:
   - 'Clone Spawn Chance: 5% + 0.5% Per Level + 0.05% Intelligence'
   description: You have a chance of spawning a clone of yourself with each Basic Attack
     hitting an enemy
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - mechanic
 - slot: 1st Ability
   name: Fool's Gold
   cooldown:
@@ -76,6 +97,21 @@ abilities:
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   description: Roll out 3 money bags that deal Physical Damage to enemies hit and
     then explode dealing Physical Damage
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Alluring Spirits
   cooldown:
@@ -112,6 +148,27 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Drink some sake, Healing over time before throwing the bottle, dealing
     Physical Damage to enemies hit
+  damage_type: physical
+  detail_kinds:
+  - slow
+  - debuff
+  - null
+  - null
+  - null
+  - debuff
+  - debuff
+  - heal
+  - heal
+  - physical
+  - physical
+  - slow
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Tanuki Trickery
   cooldown:
@@ -137,6 +194,19 @@ abilities:
     where you gain Movement Speed , Slow Immunity , your Attack Movement Penalty is
     removed , and your Dishonest Duplication chance is doubled . When you leave the
     area, it disappears and you transform into a leaf while decoys mimic your movement
+  damage_type: physical
+  detail_kinds:
+  - slow
+  - buff
+  - null
+  - physical
+  - physical
+  - buff
+  - buff
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Uproarious Rocket
   cooldown:
@@ -162,6 +232,21 @@ abilities:
   description: Fire a rocket that locks onto enemy gods or reactive this ability to
     become the rocket! The rocket deals Physical Damage , Stuns the first enemy god
     hit, and explodes dealing Physical Damage
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Fellowship
   kit_changes: Alluring Spirits no longer throws out a sake bottle but instead spawns

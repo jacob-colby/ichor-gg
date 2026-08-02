@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.85
+    per_level: 0.23
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Ne Zha Basic Attack
@@ -40,6 +49,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Righteous Spirit
   details:
@@ -51,6 +67,13 @@ abilities:
   - 'Max Stacks: 20'
   description: Build stacks by hitting enemies to gain Movement Speed . Stacks reset
     if you have not taken or dealt damage recently
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 1st Ability
   name: Universe Ring Toss
   cooldown:
@@ -89,6 +112,30 @@ abilities:
     dealing Physical Damage , applying a Physical Protection Debuff and Slowing .
     After the final hit, the ring bounces into the air, granting Ne Zha an extra throw
     if he catches it
+  detail_kinds:
+  - slow
+  - buff
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - slow
+  - slow
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Flaming Spear
   cooldown:
@@ -108,6 +155,14 @@ abilities:
   - 'Cooldown: 14 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
   description: Ignite your spear to gain Attack Speed and Critical Strike Chance
+  detail_kinds:
+  - heal
+  - buff
+  - buff
+  - buff
+  - heal
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Armillary Sash
   cooldown:
@@ -128,6 +183,20 @@ abilities:
   - 'Cooldown: 12 seconds'
   - 'Cost: 75 mana'
   description: Throw your , Stunning the first enemy god hit and Leaping to them
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - mechanic
+  - stun
+  - null
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Wind Fire Wheels
   cooldown:
@@ -159,6 +228,22 @@ abilities:
     triggering a 3-hit combo that deals Physical Damage . Successful timing can allow
     these to Critically Strike. After the combo, slam the target down dealing Physical
     Damage and Knocking Up nearby enemies
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Righteous Flame
   kit_changes: Righteous Sprit no longer stacks on hitting enemies. Taking damage

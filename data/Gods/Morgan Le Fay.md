@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 44.21
+    per_level: 2.21
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.57
+    per_level: 0.14
 abilities:
 - slot: Basic Attack
   name: Morgan Le Fay Basic Attack
@@ -36,6 +45,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Empowered Blade
   details:
@@ -51,6 +66,13 @@ abilities:
     your Cooldowns to be decreased and providing Intelligence and Mana Regen . Additionally
     you gain 1 stack of permanent Intelligence and bonus healing towards Consuming
     Power
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Sigil Mastery
   cooldown:
@@ -81,6 +103,24 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Summon a crashing sword, imbued by your chosen sigil, dealing Magical
     Damage before exploding dealing Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - slow
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - debuff
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Dragonflight
   cooldown:
@@ -109,6 +149,19 @@ abilities:
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   description: Summon a dragon that deals Magical Damage and Knocks Up enemies. The
     dragon then flies forward, dealing Magical Damage and Knocking Back enemies hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Shroud of Wildfire
   cooldown:
@@ -144,6 +197,29 @@ abilities:
     Debuffed enemies take Magical Damage repeatedly. Debuffed enemy gods and Jungle
     Bosses explode for Magical Damage when hit by your Attacks. If an enemy uses a
     Movement ability while Debuffed, they take Magical Damage and the Debuff is removed
+  damage_type: magical
+  detail_kinds:
+  - null
+  - buff
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - buff
+  - buff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Consuming Power
   cooldown:
@@ -179,6 +255,28 @@ abilities:
   description: Consume Marks from enemy gods dealing Magical Damage and empowering
     you. For a short duration, fire out 3 strikes of dark energy dealing Magical Damage
     and Healing you
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - mechanic
+  - null
+  - heal
+  - buff
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - heal
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Cursed Crown
   kit_changes: Your Attacks are now melee. You gain Wrath over time and when you deal

@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eros' Bow:
-      total: 0.46
+      total: 0.47
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -45,7 +45,7 @@ builds:
       fit: 0.45
     Amanita Charm:
       total: 0.62
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -80,18 +80,18 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Spectral Armor
   - Shogun's Ofuda
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Shield of the Phoenix:
-      total: 0.48
+      total: 0.52
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.63
     Spectral Armor:
-      total: 0.46
+      total: 0.5
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.5
     Amanita Charm:
-      total: 0.65
-      efficiency: 0.44
+      total: 0.69
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.94
     Erosion:
-      total: 0.47
+      total: 0.51
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.64
     Pharaoh's Curse:
-      total: 0.48
+      total: 0.53
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.67
     Shogun's Ofuda:
-      total: 0.46
+      total: 0.5
       efficiency: 0.33
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -145,8 +145,8 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - The Crusher
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.55
+      total: 0.5
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -188,14 +188,14 @@ builds:
       pick: 0.0
       fit: 0.79
     The Crusher:
-      total: 0.52
-      efficiency: 0.49
+      total: 0.5
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.55
     Amanita Charm:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -295,7 +295,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Eros' Bow:
-      total: 0.46
+      total: 0.47
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -308,7 +308,7 @@ builds:
       fit: 0.45
     Amanita Charm:
       total: 0.62
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.8

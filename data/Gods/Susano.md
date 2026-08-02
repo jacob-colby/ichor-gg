@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 50.7
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Susano Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Storm's Edge
   details:
@@ -52,6 +68,15 @@ abilities:
   - 'Buff Duration: 5 seconds'
   description: After using an ability, your next Attack will add a debuff stack to
     an enemy
+  detail_kinds:
+  - debuff
+  - slow
+  - debuff
+  - debuff
+  - slow
+  - debuff
+  - debuff
+  - buff
 - slot: 1st Ability
   name: Storm Kata
   cooldown:
@@ -88,6 +113,26 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Each attack of can trigger ability item effects Strike 3 times in quick
     succession
+  detail_kinds:
+  - physical
+  - physical
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Wind Siphon
   cooldown:
@@ -110,6 +155,17 @@ abilities:
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Command the winds to blow, dealing Physical Damage to enemies in front
     of you
+  damage_type: physical
+  detail_kinds:
+  - stun
+  - stun
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Jet Stream
   cooldown:
@@ -135,6 +191,20 @@ abilities:
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
   description: Throw a gust of wind projectile that stops on walls or the first enemy
     hit, creating a whirlwind
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Typhoon
   cooldown:
@@ -165,6 +235,23 @@ abilities:
   - 'Cost: 80 | 85 | 90 | 95 | 100 mana'
   description: Summon a typhoon which repeatedly deals Physical Damage as it grows
     in size
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Susano
 last_verified: '2026-08-01'

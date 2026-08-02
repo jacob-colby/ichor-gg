@@ -15,6 +15,7 @@ import { SubjectSearch } from "./components/SubjectSearch";
 import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
 import { PatchNotes } from "./components/PatchNotes";
+import { Method } from "./components/Method";
 import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
 import { Wordmark } from "./components/Wordmark";
 import { relativeDate } from "./lib/relativeDate";
@@ -260,6 +261,9 @@ function App() {
           <TierList tierlist={data.tierlist} communitySource={data.community_source} />
         ) : route.lens === "patch" ? (
           <PatchNotes periods={patchNotes} />
+        ) : route.lens === "method" ? (
+          <Method method={data.method} goldValues={data.item_gold_values ?? {}}
+            items={data.items} godCount={data.gods.length} />
         ) : (
           <Home data={data} />
         )}

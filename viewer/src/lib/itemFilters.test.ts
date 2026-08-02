@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { filterItems, sortItems, efficiencyLabel, tiersPresent, residualText, statValueLines, EFFICIENCY } from "./itemFilters";
+import { filterItems, sortItems, efficiencyLabel, tiersPresent, residualText, statValueLines, statKey, EFFICIENCY } from "./itemFilters";
 import type { Item } from "../types";
 
 const items = [
@@ -108,5 +108,30 @@ describe("statValueLines", () => {
     const [line] = statValueLines(item, gold);
     expect(line.goldPerUnit).toBeNull();
     expect(line.subtotal).toBeNull();
+  });
+});
+
+/* Flat and percent of the same stat are different goods — the pipeline prices
+ * them in separate columns, and a receipt that looked up the bare name would
+ * read the wrong price. Penetration ships both ways, ~4.5x apart per point. */
+describe("statKey / statValueLines — units are part of a stat's identity", () => {
+  const gold = { Penetration: 8.63, "Penetration %": 38.92, _intercept: 1900 };
+
+  it("keys a percentage separately from its flat namesake", () => {
+    expect(statKey("Penetration", "10")).toBe("Penetration");
+    expect(statKey("Penetration", "10%")).toBe("Penetration %");
+    expect(statKey("Strength", " 40 ")).toBe("Strength");
+  });
+
+  it("prices each item against its own column", () => {
+    const flat = { name: "F", stats: { Penetration: "10" } } as unknown as Item;
+    const pct = { name: "P", stats: { Penetration: "10%" } } as unknown as Item;
+    expect(statValueLines(flat, gold)[0].subtotal).toBeCloseTo(86.3);
+    expect(statValueLines(pct, gold)[0].subtotal).toBeCloseTo(389.2);
+  });
+
+  it("still labels the row with the stat's own name, not the column's", () => {
+    const pct = { name: "P", stats: { Penetration: "10%" } } as unknown as Item;
+    expect(statValueLines(pct, gold)[0].stat).toBe("Penetration");
   });
 });

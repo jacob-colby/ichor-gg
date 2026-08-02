@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Artemis Basic Attack
@@ -36,6 +45,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Still Target
   details:
@@ -66,6 +81,18 @@ abilities:
   description: Place a trap on the ground. Enemy gods that come in contact with it
     activate it, Rooting , Crippling , and repeatedly dealing Physical Damage over
     3 seconds
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Vengeful Assault
   cooldown:
@@ -88,6 +115,15 @@ abilities:
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Greatly increase your Movement Speed and Attack Speed
+  detail_kinds:
+  - slow
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Suppress the Insolent
   cooldown:
@@ -109,6 +145,16 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: AREA DAMAGE SLOW Fire a volley at a target area dealing Physical Damage
     and Slowing enemies
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Calydonian Boar
   cooldown:
@@ -129,6 +175,18 @@ abilities:
   - 'Cooldown: 90 seconds'
   - 'Cost: 45 mana'
   description: Summon the great that charges the nearest enemy god
+  detail_kinds:
+  - physical
+  - mechanic
+  - mechanic
+  - null
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Wild
   kit_changes: Transgressor's Fate no longer roots or cripples gods but can now target

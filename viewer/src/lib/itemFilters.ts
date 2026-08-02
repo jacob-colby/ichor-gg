@@ -123,11 +123,19 @@ export function basePrice(goldValues: Record<string, number>): number {
   return goldValues[INTERCEPT_KEY] ?? 0;
 }
 
+/** Mirrors the pipeline's `efficiency.stat_key`: the unit is part of a stat's
+ *  identity, so a percentage is priced in its own column. Penetration is the
+ *  reason — it ships both flat and percent, worth ~4.5x different per point.
+ *  A receipt that looked up the bare name would read the wrong price. */
+export function statKey(stat: string, raw: string): string {
+  return String(raw).trim().endsWith("%") ? `${stat} %` : stat;
+}
+
 export function statValueLines(item: Item, goldValues: Record<string, number>): StatValueLine[] {
   return Object.entries(item.stats ?? {}).map(([stat, raw]) => {
     const amount = parseStatAmount(raw);
     // The intercept is not a stat and must never be matched as one.
-    const goldPerUnit = stat === INTERCEPT_KEY ? null : goldValues[stat] ?? null;
+    const goldPerUnit = stat === INTERCEPT_KEY ? null : goldValues[statKey(stat, raw)] ?? null;
     return {
       stat,
       raw,

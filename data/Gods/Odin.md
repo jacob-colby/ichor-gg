@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.57
+    per_level: 2.21
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Odin Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Path to Valhalla
   details:
@@ -49,6 +65,12 @@ abilities:
   - 'Max Buff Stacks: 2'
   description: GOD DEATHS GRANT POWER When a god dies, gain a brief increase to Movement
     Speed , Strength , and Intelligence
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Lunge
   cooldown:
@@ -72,6 +94,15 @@ abilities:
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
   description: Leap forward, dealing Physical Damage to nearby enemies as you land
+  damage_type: physical
+  detail_kinds:
+  - shield
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Raven Shout
   cooldown:
@@ -101,6 +132,19 @@ abilities:
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
   description: Gain a Health Shield for a duration
+  detail_kinds:
+  - shield
+  - shield
+  - shield
+  - physical
+  - physical
+  - shield
+  - shield
+  - shield
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Gungnir's Might
   cooldown:
@@ -136,6 +180,23 @@ abilities:
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Charge up, pulsing Physical Damage around you twice, then throw your
     spear
+  detail_kinds:
+  - slow
+  - physical
+  - buff
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Ring of Spears
   cooldown:
@@ -172,6 +233,24 @@ abilities:
     or projectiles, only enemy Attacks and enemy god movement Create a spear ring
     of walls that impedes enemies. Enemy gods who die in the ring grant Odin a permanent
     Strength and Intelligence buff . Gain a stack of Path to Valhalla
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - physical
+  - null
+  - null
+  - mechanic
+  - physical
+  - physical
+  - debuff
+  - slow
+  - slow
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Odin
 last_verified: '2026-08-01'

@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Spear of Desolation
+  - Divine Ruin
   - Spectral Armor
   - Rod of Asclepius
   - Erosion
   - Stampede
   - Triton's Conch
   flex_slots:
-  - Spear of Desolation
   - Stampede
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -26,17 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Spear of Desolation:
-      total: 0.51
-      efficiency: 0.43
+    Divine Ruin:
+      total: 0.5
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.65
     Spectral Armor:
       total: 0.54
       efficiency: 0.49
@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.97
     Erosion:
-      total: 0.55
+      total: 0.54
       efficiency: 0.39
       win: 0.5
       pick: 0.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Spear of Desolation
+  - Divine Ruin
   - Spectral Armor
   - Erosion
   - Stampede
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Erosion
   - Stampede
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -93,14 +93,14 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Spear of Desolation:
-      total: 0.5
-      efficiency: 0.43
+    Divine Ruin:
+      total: 0.45
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -117,14 +117,14 @@ builds:
       pick: 0.0
       fit: 0.57
     Stampede:
-      total: 0.46
+      total: 0.47
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -141,9 +141,9 @@ builds:
   - Mystical Mail
   - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
   - Stampede
-  - Soul Gem
   flex_slots:
   - Stampede
   - Mystical Mail
@@ -152,8 +152,8 @@ builds:
     swap: Resolute Mantle — CC-immunity / cleanse
     swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -164,54 +164,54 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Mystical Mail:
-      total: 0.48
+      total: 0.53
       efficiency: 0.3
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.75
     Spectral Armor:
-      total: 0.52
+      total: 0.57
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.65
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.99
-    Erosion:
-      total: 0.54
-      efficiency: 0.39
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-    Stampede:
-      total: 0.5
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Rod of Asclepius:
+      total: 0.73
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.6
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Stampede:
+      total: 0.54
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Void Shield
   - Void Stone
-  - Spear of Desolation
-  - The Cosmic Horror
+  - Spear of the Magus
   - Spectral Armor
+  - Erosion
   - Soul Gem
   flex_slots:
-  - The Cosmic Horror
   - Spectral Armor
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -220,8 +220,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -240,15 +240,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.93
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
-    The Cosmic Horror:
-      total: 0.52
-      efficiency: 0.47
+    Spear of the Magus:
+      total: 0.53
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -258,9 +252,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
+    Erosion:
+      total: 0.5
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
-  - Soul Gem
   flex_slots:
-  - Soul Gem
-  - Damaru
+  - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -301,48 +301,48 @@ builds:
       fit: 0.67
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.6
-      efficiency: 0.21
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Soul Gem:
       total: 0.53
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Spear of Desolation
+  - Divine Ruin
   - Spectral Armor
   - Rod of Asclepius
   - Erosion
   - Stampede
   - Triton's Conch
   flex_slots:
-  - Spear of Desolation
   - Stampede
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -354,17 +354,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Spear of Desolation:
-      total: 0.51
-      efficiency: 0.43
+    Divine Ruin:
+      total: 0.5
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.65
     Spectral Armor:
       total: 0.54
       efficiency: 0.49
@@ -378,7 +378,7 @@ builds:
       pick: 0.0
       fit: 0.97
     Erosion:
-      total: 0.55
+      total: 0.54
       efficiency: 0.39
       win: 0.5
       pick: 0.0

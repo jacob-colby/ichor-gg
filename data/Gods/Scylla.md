@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Scylla Basic Attack
@@ -36,6 +45,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Quick Learner
   details:
@@ -43,6 +58,9 @@ abilities:
   - 'Mana Regen: 2 Per Max Ability'
   description: MAX RANK ABILITIES ARE STRONGER Your abilities gain an additional effect
     at max rank. In addition, gain Intelligence and Mana Regen for each max rank ability
+  detail_kinds:
+  - buff
+  - buff
 - slot: 1st Ability
   name: Sic 'Em
   cooldown:
@@ -67,6 +85,19 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Send two hounds forward, Rooting , Crippling , and dealing Magical
     Damage
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - null
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Crush
   cooldown:
@@ -92,6 +123,19 @@ abilities:
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   description: Creates a magical field that Slows enemies. After 5 seconds it detonates,
     dealing Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - magical
+  - magical
+  - slow
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Sentinel
   cooldown:
@@ -118,6 +162,18 @@ abilities:
     at the target area, granting vision of enemies for 5 seconds. Reactive the ability
     to Leap to the sentinel location and gain a buff that causes your next Attack
     to deal Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - null
+  - magical
+  - magical
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: I'm a Monster
   cooldown:
@@ -140,6 +196,19 @@ abilities:
   - 'Cost: 100 mana'
   description: Become CC Immune for the next 6 seconds, and gain Movement Speed .
     Reactivate to deal Magical Damage at the target area
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Devourer
   kit_changes: Your non-ultimate abilities now provide Mana when damaging enemies

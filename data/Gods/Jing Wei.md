@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 50.89
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Jing Wei Basic Attack
@@ -36,6 +45,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Rapid Reincarnation
   details:
@@ -45,6 +60,12 @@ abilities:
   - Jing Wei is CC Immune during buildup, ascent, flight, and decent
   - 'Max Flight Duration: 5 seconds'
   description: When exiting the fountain, Fly into the sky and soar over obstacles
+  detail_kinds:
+  - null
+  - null
+  - null
+  - mechanic
+  - null
 - slot: 1st Ability
   name: Persistent Gust
   cooldown:
@@ -74,6 +95,23 @@ abilities:
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Create a Gust of Wind that deals Physical Damage and Knocks Up enemy
     gods and yourself
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - buff
+  - buff
+  - physical
+  - physical
+  - physical
+  - physical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Explosive Bolts
   cooldown:
@@ -93,6 +131,19 @@ abilities:
   - 'Cooldown: 14 seconds'
   - 'Cost: 50 mana'
   description: Your next 3 Attacks are wider and explode on the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - null
+  - null
+  - physical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Agility
   cooldown:
@@ -122,6 +173,19 @@ abilities:
   - 'Cooldown: 16 | 16 | 15 | 15 | 14 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Dash forward and gain increased Strength
+  detail_kinds:
+  - stun
+  - stun
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Air Strike
   cooldown:
@@ -141,6 +205,16 @@ abilities:
   description: Select a landing location, or wait to Dash backwards , dealing Physical
     Damage to enemies again before landing Dash forward and fly into the sky , dropping
     explosives and dealing Physical Damage to enemies beneath you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - mechanic
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Jing_Wei
 last_verified: '2026-08-01'

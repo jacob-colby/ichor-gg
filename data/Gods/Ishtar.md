@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 48.0
+    per_level: 2.37
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Ishtar Basic Attack
@@ -36,6 +45,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Mark of Vengeance
   cooldown:
@@ -54,6 +69,17 @@ abilities:
   - 'Cooldown: 20 seconds'
   description: When you drop below 75% Health, apply to the enemy god that most recently
     damaged you for 10 seconds
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
 - slot: 1st Ability
   name: Imbue Arrows
   cooldown:
@@ -88,6 +114,22 @@ abilities:
     Speed and fire faster, longer-ranged shots that deal reduced Physical Damage .
     These Attacks cannot hit structures Imbue your arrows with heavenly light, empowering
     your Attacks as Strike Shot, Spread Shot, or Storm Shot'
+  detail_kinds:
+  - physical
+  - physical
+  - buff
+  - null
+  - physical
+  - physical
+  - buff
+  - buff
+  - buff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Rolling Thunder
   cooldown:
@@ -110,6 +152,16 @@ abilities:
   description: Call down four lightning strikes in a line, dealing Physical Damage
     per strike to enemies in each area. Ishtar may aim which direction the strikes
     travel
+  damage_type: physical
+  detail_kinds:
+  - stun
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Jolt
   cooldown:
@@ -134,6 +186,17 @@ abilities:
   - 'Cost: 60 mana'
   description: Dash forward with your blades, dealing Physical Damage to enemies in
     your path
+  detail_kinds:
+  - debuff
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Blades of Retribution
   cooldown:
@@ -157,6 +220,19 @@ abilities:
     Damage ; the reduction resets before the recall Become CC Immune and summon five
     swords of light, firing them out in a cone. Each sword deals Physical Damage and
     Cripples enemies
+  damage_type: physical
+  detail_kinds:
+  - null
+  - stun
+  - debuff
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Passionate Storm
   kit_changes: Your Spread Shot cone is always active on your Attacks. Imbue Arrows

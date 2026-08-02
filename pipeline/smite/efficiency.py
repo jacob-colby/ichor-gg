@@ -28,15 +28,42 @@ from scipy.optimize import nnls
 INTERCEPT_KEY = "_intercept"
 
 
+def stat_key(name, raw):
+    """The regression's column name for a stat, with its unit as part of its
+    identity.
+
+    A percentage and a flat amount of the "same" stat are different goods, and
+    `parse_stat_value` strips the sign that told them apart. Penetration is the
+    case that bites: nine items carry a flat amount and ten carry a percentage,
+    so a single column priced `Penetration: 10` and `Penetration: 10%` at the
+    same gold. Against a 300-protection target those are worth 10 and 30 — not
+    a rounding difference, and the error runs through every build that values
+    penetration.
+
+    Keying on the unit rather than special-casing this one stat means the next
+    stat to grow a percentage variant is separated on arrival instead of
+    silently averaging with its flat namesake for a patch or two."""
+    return f"{name} %" if str(raw).strip().endswith("%") else name
+
+
+def item_stat_values(item):
+    """`{column name: float}` for one item — the canonical read of its stats.
+
+    The single place raw stat dicts are turned into regression columns, so the
+    matrix, the prediction and the shipped gold table cannot disagree about
+    what a column means."""
+    out = {}
+    for name, raw in (item.get("stats") or {}).items():
+        val = parse_stat_value(raw)
+        if val is not None:
+            out[stat_key(name, raw)] = val
+    return out
+
+
 def collect_stat_names(items):
-    """Every distinct stat that parses to a number somewhere in the item set,
-    sorted for deterministic column order."""
-    names = set()
-    for item in items:
-        for stat, raw in (item.get("stats") or {}).items():
-            if parse_stat_value(raw) is not None:
-                names.add(stat)
-    return sorted(names)
+    """Every distinct stat column that parses to a number somewhere in the item
+    set, sorted for deterministic column order."""
+    return sorted({k for item in items for k in item_stat_values(item)})
 
 
 def _stat_matrix(items, stat_names):
@@ -44,8 +71,8 @@ def _stat_matrix(items, stat_names):
     column. Absent/non-numeric stats are 0."""
     rows, costs = [], []
     for item in items:
-        stats = item.get("stats") or {}
-        row = [parse_stat_value(stats.get(s)) or 0.0 for s in stat_names]
+        values = item_stat_values(item)
+        row = [values.get(s, 0.0) for s in stat_names]
         row.append(1.0)  # intercept
         rows.append(row)
         costs.append(float(item["cost"]))
@@ -84,10 +111,8 @@ def fit_gold_values(items):
 
 def predicted_cost(item, gold_values):
     total = gold_values.get(INTERCEPT_KEY, 0.0)
-    for stat, raw in (item.get("stats") or {}).items():
-        val = parse_stat_value(raw)
-        if val is not None:
-            total += val * gold_values.get(stat, 0.0)
+    for key, val in item_stat_values(item).items():
+        total += val * gold_values.get(key, 0.0)
     return total
 
 

@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.0
+    per_level: 2.42
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Atlas Basic Attack
@@ -40,6 +49,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: The Astrolabe
   cost:
@@ -65,6 +81,19 @@ abilities:
     or deal damage with your Attacks or Abilities (minions grant reduced Energy).
     At enough Energy, you may press your interact key to unleash an Empowered Astrolabe
     Strike, consuming Energy. This does not trigger automatically from your next Attack
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - null
+  - magical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 1st Ability
   name: Unburden
   cooldown:
@@ -98,6 +127,21 @@ abilities:
     Slowing enemies. While deployed, your Attacks cause explosions at the Astrolabe
     that deal Magical Damage to enemies and cost Mana per explosion. The Astrolabe
     returns after 5 seconds or on refire
+  detail_kinds:
+  - buff
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - slow
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Gravity Pull
   cooldown:
@@ -125,6 +169,18 @@ abilities:
     , and enemies pulled into the Astrolabe are held in front of you before being
     Launched in the direction you are facing. If your Astrolabe is deployed, held
     enemies are Launched toward you from its location
+  detail_kinds:
+  - stun
+  - stun
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Kinetic Charge
   cooldown:
@@ -156,6 +212,19 @@ abilities:
     Speed . While Dashing , you are Slow and Knock Up Immune . Hitting an enemy god
     stops the Dash and releases an explosion that Slows ; each Slow you cleanse from
     an ally during the Dash strengthens that explosion's Slow
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - buff
+  - slow
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Gamma-Ray Burst
   cooldown:
@@ -187,6 +256,23 @@ abilities:
     Damage over time and gain Radiation stacks that reduce their Protections and Power
     . After 5 seconds or when you refire, the burst focuses into a traveling beam
     that deals Magical Damage and applies 3 stacks of Radiation
+  detail_kinds:
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Unburdened
   kit_changes: Your Attack now throws your astrolabe. Unburden is used to reposition

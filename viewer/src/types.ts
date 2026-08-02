@@ -223,6 +223,14 @@ export interface ThreatModel {
   allyPhysical: number;
 }
 
+/** One `lifesteal_caps` rule from _weights.yaml, shipped rather than
+ *  reimplemented. A null/absent condition means "any". */
+export interface LifestealCap {
+  damage_types?: string[] | null;
+  match_any?: string[] | null;
+  max_lifesteal: number;
+}
+
 export interface DraftConfig {
   max_bonus: number;
   per_share: number;
@@ -230,6 +238,16 @@ export interface DraftConfig {
   stat_bonus: Record<string, Record<string, number>>;
   ally_covered: number;
   ally_gap: number;
+  /** Absent on an index built before the rule was shipped. */
+  lifesteal_caps?: LifestealCap[];
+}
+
+/** The model's own weights, shipped so the method page states what the
+ *  pipeline actually used rather than a restatement of it. */
+export interface MethodData {
+  signals: { efficiency: number; win: number; pick: number; fit: number };
+  kit_blend: number;
+  underrated: { max_pick?: number; top_quality_frac?: number };
 }
 
 export interface TierListModeData {
@@ -276,5 +294,6 @@ export interface IndexData {
   /** Fitted marginal gold price per stat — what makes a predicted cost
    * auditable rather than asserted. */
   item_gold_values?: Record<string, number>;
+  method?: MethodData;
   draft?: DraftConfig;
 }

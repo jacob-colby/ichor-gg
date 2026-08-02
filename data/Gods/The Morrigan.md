@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: The Morrigan Basic Attack
@@ -40,6 +49,14 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Explosion Radius: 1.6 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Doomsayer
   details:
@@ -48,6 +65,10 @@ abilities:
   - 'Reduced Damage: -80% damage'
   description: The third hit of your Attack Chain explodes, dealing Magical Damage
     over 3 seconds
+  detail_kinds:
+  - magical
+  - magical
+  - magical
 - slot: 1st Ability
   name: Deadly Aspects
   cooldown:
@@ -69,6 +90,16 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Summon the power from all 3 of your forms, then activate again to deal
     Magical Damage and Stun enemies in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Dark Omen
   cooldown:
@@ -94,6 +125,19 @@ abilities:
   - 'Cooldown: 7 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Fire a wave of dark magic, dealing Magical Damage and marking enemies
+  detail_kinds:
+  - magical
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Confusion
   cooldown:
@@ -117,6 +161,16 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Create a phantom clone of yourself and become Stealthed and gain Movement
     Speed
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Changeling
   cooldown:
@@ -142,6 +196,13 @@ abilities:
     use the transformed target's Cooldown instead Select a god in the current match
     to transform into an exact copy of. Gain access to their abilities and items for
     10 seconds
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Mischief
   kit_changes: Confusion no longer Stealths you but on refire, you swap positions

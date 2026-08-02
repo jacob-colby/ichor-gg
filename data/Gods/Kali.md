@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 44.59
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Kali Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Marked for Death
   details:
@@ -51,6 +67,13 @@ abilities:
   description: Mark a god. Gain Physical Penetration against that god. Killing that
     god restores Health . Assists restore less Health . You also gain bonus Gold Bounty
     . Additionally, Attacks and most abilities apply Rupture to enemies
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - heal
+  - heal
+  - buff
 - slot: 1st Ability
   name: Nimble Strike
   cooldown:
@@ -71,6 +94,19 @@ abilities:
   - 'Cost: 60 mana'
   description: Leap dealing Physical Damage to enemies when landing. Heal if this
     ability lands on an enemy
+  damage_type: physical
+  detail_kinds:
+  - heal
+  - heal
+  - debuff
+  - physical
+  - physical
+  - heal
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Lash
   cooldown:
@@ -98,6 +134,18 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Throw 3 blades forward, each dealing Physical Damage and applying a
     Bleed . The Bleed deals Physical Damage every 0.5 seconds for 3 seconds
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Incense
   cooldown:
@@ -125,6 +173,24 @@ abilities:
   description: Stun enemies with incense, gaining bonus Strength and Intelligence
     . Siphon targets, dealing Physical Damage and Healing per hit. Damage and Heal
     increases per Rupture stack, consuming them
+  damage_type: physical
+  detail_kinds:
+  - heal
+  - debuff
+  - physical
+  - physical
+  - physical
+  - physical
+  - heal
+  - heal
+  - heal
+  - stun
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Destruction
   cooldown:
@@ -147,6 +213,16 @@ abilities:
   - 'Cost: 60 | 70 | 80 | 90 | 100 mana'
   description: Become Death Immune , Displacement Immune , Slow Immune , and Root
     Immune . Deal Physical Damage to nearby enemies every 0.25 seconds for the duration
+  damage_type: physical
+  detail_kinds:
+  - null
+  - debuff
+  - physical
+  - physical
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Unbound Destruction
   kit_changes: Kali's Basics are ranged. Rupture procs at 5 stacks to deal damage

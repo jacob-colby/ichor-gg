@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 48.0
+    per_level: 2.37
+  health_regen:
+    base: 1.85
+    per_level: 0.23
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Hercules Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Apotheosis
   details:
@@ -62,6 +78,16 @@ abilities:
     target with an ability to gain a stack towards achieving , or 2 stacks from his
     Ultimate Protections: 10 Protections Scaling: 2 Per Level Buff Duration: 10 seconds
     Buff Duration Scaling: 1 second Per Level'
+  detail_kinds:
+  - buff
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Driving Strike
   cooldown:
@@ -82,6 +108,15 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: DASH, PUSHING ENEMIES Dash forward, dealing Physical Damage , Stunning
     , and Pushing enemies hit
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Earthbreaker
   cooldown:
@@ -101,6 +136,14 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: LINE, PULLS ENEMIES AT END Create a rift that deals Physical Damage
     to enemies in front of you. Enemies hit by the end area are Pulled to you
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Mitigate Wounds
   cooldown:
@@ -119,6 +162,15 @@ abilities:
   description: HEAL, PROTECT Immediately Heal yourself and gain Attack Speed and Protections
     . At the end of the duration Heal yourself again for a percentage of damage taken
     during the effect
+  detail_kinds:
+  - heal
+  - heal
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Excavate
   cooldown:
@@ -144,6 +196,19 @@ abilities:
   description: Hurl a boulder at a location, Knocking Up enemies at the landing spot.
     The boulder then rolls and bounces off walls, dealing Physical Damage to enemies
     hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Preservation
   kit_changes: Mitigate Wounds no longer Heals based on damage or provides Attack

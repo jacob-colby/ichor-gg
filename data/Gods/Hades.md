@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.21
+    per_level: 2.21
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Hades Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Blight
   details:
@@ -47,6 +62,12 @@ abilities:
   - 'Debuff Duration: 8 seconds'
   description: ed enemies have reduced Strength and Intelligence Your abilities have
     extra effects on ed enemies Your attacks and abilities apply
+  detail_kinds:
+  - debuff
+  - null
+  - debuff
+  - debuff
+  - debuff
 - slot: 1st Ability
   name: Death From Below
   cooldown:
@@ -73,6 +94,17 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Leap through the underworld, then emerge and deal Magical Damage to
     enemies
+  damage_type: magical
+  detail_kinds:
+  - slow
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Shroud of Darkness
   cooldown:
@@ -95,6 +127,16 @@ abilities:
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 60 mana'
   description: Silence enemies in front of you
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Devour Souls
   cooldown:
@@ -129,6 +171,22 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Devour the souls of your enemies, dealing Magical Damage to enemies
     around you
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - heal
+  - null
+  - heal
+  - heal
+  - magical
+  - magical
+  - magical
+  - magical
+  - heal
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Pillar of Agony
   cooldown:
@@ -156,6 +214,24 @@ abilities:
   description: You are CC Immune , and gain increased Protections while Channeling
     Channel a Vortex around you that drags foes to their death, and repeatedly deals
     Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - mechanic
+  - null
+  - debuff
+  - null
+  - null
+  - stun
+  - debuff
+  - null
+  - magical
+  - magical
+  - buff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Hades
 last_verified: '2026-08-01'

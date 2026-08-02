@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.76
+    per_level: 2.76
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Nu Wa Basic Attack
@@ -37,12 +46,20 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Strength of Wood
   details:
   - 'Root Duration: 1 second'
   description: ATTACKS ROOT PERIODICALLY Every 12 seconds your next Attack will Root
     all targets hit. Damaging an enemy with an Attack reduces this cooldown by 1 second
+  detail_kinds:
+  - debuff
 - slot: 1st Ability
   name: Mysterious Fog
   cooldown:
@@ -74,6 +91,22 @@ abilities:
     that deals Magical Damage when it touches an enemy. Enemies that remain in the
     fog take additional damage every second . You and Allied gods are Stealthed when
     inside the fog
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Clay Soldiers
   cooldown:
@@ -103,6 +136,21 @@ abilities:
   description: If you have not chosen a target, will attack the nearest enemy or an
     enemy god that damages Nu Wa Summon to attack the chosen target. will dash at
     enemies within 4.8 meters, dealing Magical Damage , then begin to Attack
+  detail_kinds:
+  - buff
+  - null
+  - magical
+  - magical
+  - magical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Shining Metal
   cooldown:
@@ -127,6 +175,22 @@ abilities:
   - 'Cooldown: 10 seconds'
   - 'Cost: 50 mana'
   description: Launch a projectile dealing Magical Damage to enemies it passes through
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - buff
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Fire Shards
   cooldown:
@@ -145,6 +209,17 @@ abilities:
   - 'Cost: 100 mana'
   description: Become CC Immune and ascend into the air. You and your team gain visibility
     on all enemy gods. Summon that deal Magical Damage to each enemy god
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - null
+  - null
+  - magical
+  - magical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Shining Mist
   kit_changes: Mysterious Fog travels slightly before stopping, allowing you to fire

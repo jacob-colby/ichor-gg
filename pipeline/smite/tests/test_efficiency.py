@@ -128,3 +128,41 @@ def test_efficiency_scores_skips_null_cost_items():
     scores, _ = efficiency.efficiency_scores(items)
     assert "NoCost" not in scores
     assert "A" in scores and "B" in scores
+
+
+# ── Units are part of a stat's identity ───────────────────────────────────
+
+def test_percent_and_flat_of_the_same_stat_are_priced_separately():
+    """Penetration ships both ways. Regressed into one column, `10` and `10%`
+    are charged the same gold — against a 300-protection target they're worth
+    10 and 30. The split is not cosmetic: it moves every build that values
+    penetration."""
+    flat = {"name": "Flat", "cost": 2000, "tier": 3, "stats": {"Penetration": "20"}}
+    pct = {"name": "Pct", "cost": 3000, "tier": 3, "stats": {"Penetration": "20%"}}
+    names = efficiency.collect_stat_names([flat, pct])
+    assert names == ["Penetration", "Penetration %"]
+    assert efficiency.item_stat_values(flat) == {"Penetration": 20.0}
+    assert efficiency.item_stat_values(pct) == {"Penetration %": 20.0}
+
+
+def test_stat_key_leaves_unambiguous_stats_alone():
+    assert efficiency.stat_key("Strength", "40") == "Strength"
+    assert efficiency.stat_key("Lifesteal", "7.5%") == "Lifesteal %"
+
+
+def test_predicted_cost_reads_the_same_columns_the_fit_wrote():
+    """A price looked up under the bare name would silently read the wrong
+    column — the failure mode the split exists to prevent."""
+    pct = {"name": "Pct", "cost": 3000, "tier": 3, "stats": {"Penetration": "10%"}}
+    gold = {"Penetration": 1.0, "Penetration %": 50.0, efficiency.INTERCEPT_KEY: 100.0}
+    assert efficiency.predicted_cost(pct, gold) == 100.0 + 10 * 50.0
+
+
+def test_shipped_penetration_columns_disagree_by_a_lot():
+    """Guards the real fit: if these ever converge, either the split broke or
+    the item data changed shape, and both are worth knowing about."""
+    from pathlib import Path
+    from smite import notes, recommend
+    items = [notes.read_note(p)[0] for p in (recommend.DATA_ROOT / "Items").glob("*.md")]
+    gold, _ = efficiency.fit_gold_values([i for i in items if i.get("name")])
+    assert gold["Penetration %"] > 2 * gold["Penetration"]

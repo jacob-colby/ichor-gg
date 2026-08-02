@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.93
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Nemesis Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Scales of Fate
   details:
@@ -48,6 +64,11 @@ abilities:
   - 'Duration: 5 seconds'
   description: ATTACKS STEAL POWER Hitting enemies with Attacks reduces the target's
     Inhand Power, Strength, and Intelligence while increasing yours
+  detail_kinds:
+  - debuff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Swift Vengeance
   cooldown:
@@ -65,6 +86,17 @@ abilities:
   - 'Cooldown: 11 seconds'
   - 'Cost: 50 mana'
   description: Dash in a line, passing through all enemies
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Slice and Dice
   cooldown:
@@ -89,6 +121,20 @@ abilities:
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Slash in a cone, dealing Physical Damage to all enemies hit
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Retribution
   cooldown:
@@ -113,6 +159,19 @@ abilities:
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Gain a Health Shield for a duration
+  detail_kinds:
+  - physical
+  - heal
+  - debuff
+  - shield
+  - shield
+  - shield
+  - physical
+  - physical
+  - heal
+  - heal
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Divine Judgement
   cooldown:
@@ -140,6 +199,21 @@ abilities:
   - 'Cost: 90 | 95 | 100 | 105 | 110 mana'
   description: Choose a single enemy god, dealing Physical Damage to them and all
     enemies in an area around them
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - debuff
+  - buff
+  - buff
+  - physical
+  - physical
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Justice
   kit_changes: Divine Judgement no longer does damage in an area but instead averages

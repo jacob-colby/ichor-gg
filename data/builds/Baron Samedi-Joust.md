@@ -10,8 +10,8 @@ builds:
   - Eye of Providence
   - Kinetic Cuirass
   - Spectral Armor
+  - Amanita Charm
   - Erosion
-  - Soul Gem
   flex_slots:
   - Eye of Providence
   - Divine Ruin
@@ -20,8 +20,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -55,33 +55,33 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Amanita Charm:
+      total: 0.69
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.94
     Erosion:
       total: 0.54
       efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: burst
   slot_order:
+  - Divine Ruin
   - Kinetic Cuirass
-  - Spear of Desolation
   - Spectral Armor
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Spear of Desolation
   - Kinetic Cuirass
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -93,23 +93,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.44
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Kinetic Cuirass:
       total: 0.45
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Spear of Desolation:
-      total: 0.46
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Spectral Armor:
       total: 0.46
       efficiency: 0.49
@@ -123,8 +123,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Divine Ruin
+  - Eye of Providence
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
@@ -146,7 +146,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Divine Ruin
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -158,44 +158,44 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.46
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
-    Kinetic Cuirass:
-      total: 0.47
-      efficiency: 0.44
+    Eye of Providence:
+      total: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Spectral Armor:
-      total: 0.48
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
-    Amanita Charm:
-      total: 0.67
+    Kinetic Cuirass:
+      total: 0.51
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.59
+    Spectral Armor:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Amanita Charm:
+      total: 0.72
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.99
     Erosion:
-      total: 0.49
+      total: 0.54
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.69
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -204,14 +204,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Screeching Gargoyle
+  - Stone of Binding
   - Void Shield
   - Void Stone
-  - Spear of Desolation
   - Erosion
   - Soul Gem
   flex_slots:
-  - Erosion
   - Screeching Gargoyle
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -229,11 +229,17 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.49
-      efficiency: 0.33
+      total: 0.5
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Stone of Binding:
+      total: 0.48
+      efficiency: 0.28
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Void Shield:
       total: 0.58
       efficiency: 0.29
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Spear of Desolation:
-      total: 0.51
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Erosion:
       total: 0.5
       efficiency: 0.39
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -306,25 +306,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -338,8 +338,8 @@ builds:
   - Eye of Providence
   - Kinetic Cuirass
   - Spectral Armor
+  - Amanita Charm
   - Erosion
-  - Soul Gem
   flex_slots:
   - Eye of Providence
   - Divine Ruin
@@ -348,8 +348,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -383,17 +383,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Amanita Charm:
+      total: 0.69
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.94
     Erosion:
       total: 0.54
       efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 ---

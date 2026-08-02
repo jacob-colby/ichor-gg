@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { renderHook } from "@testing-library/react";
-import { useDraftResult } from "./useDraftResult";
+import { useDraftResult, draftMaxLifesteal } from "./useDraftResult";
 import type { DraftComp, DraftConfig, God, Item } from "../types";
 
 const god = (name: string, overrides: Partial<God> = {}): God =>
@@ -104,5 +104,34 @@ describe("useDraftResult", () => {
   it("gives coreSize a sensible default (6) before anything is scored", () => {
     const r = run(["", "", "", "", ""], ["", "", "", "", ""]);
     expect(r.coreSize).toBe(6);
+  });
+});
+
+/* The cap rule used to live twice — a YAML row and a TypeScript copy of its
+ * conditions — and only the YAML side was under test. These pin the evaluator
+ * against the rule shape the index actually ships. */
+describe("draftMaxLifesteal — reads the shipped rule, not a copy of it", () => {
+  const carry = { name: "Cernunnos", damage_type: "physical", role: "Carry", specializations: ["Sharpshooter"] } as God;
+  const mage = { name: "Agni", damage_type: "magical", role: "Mid", specializations: ["Nuker"] } as God;
+  const rules = [{ damage_types: ["physical"], match_any: ["Carry", "Hunter", "Sharpshooter"], max_lifesteal: 2 }];
+
+  it("raises the cap for a god the rule matches", () => {
+    expect(draftMaxLifesteal(carry, rules)).toBe(2);
+  });
+
+  it("leaves a god the rule doesn't match at the default", () => {
+    expect(draftMaxLifesteal(mage, rules)).toBe(1);
+    // Right specialization, wrong damage type — both conditions must hold.
+    expect(draftMaxLifesteal({ ...mage, specializations: ["Sharpshooter"] } as God, rules)).toBe(1);
+  });
+
+  it("follows an edited rule instead of the old hardcoded one", () => {
+    // The whole point: change the data, the draft changes with it.
+    expect(draftMaxLifesteal(mage, [{ damage_types: null, match_any: null, max_lifesteal: 3 }])).toBe(3);
+  });
+
+  it("defaults safely when the index predates the shipped rule", () => {
+    expect(draftMaxLifesteal(carry, undefined)).toBe(1);
+    expect(draftMaxLifesteal(undefined, rules)).toBe(1);
   });
 });

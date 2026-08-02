@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Bacchus Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Drunk-O-Meter
   details:
@@ -50,6 +65,15 @@ abilities:
   - 'Intelligence: 10'
   - 'Protections: 6%'
   description: As you become more Drunk, gain Strength , Intelligence , and Protections
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - null
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Chug
   cooldown:
@@ -71,6 +95,20 @@ abilities:
   - 'Cooldown: 10 seconds'
   - 'Cost: 20 mana'
   description: Take a drink, Healing , and becoming more Drunk
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - magical
+  - null
+  - magical
+  - magical
+  - heal
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Belly Flop
   cooldown:
@@ -94,6 +132,19 @@ abilities:
   - 'Cooldown: 14 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Leap forward to and slam into the ground belly first, Knocking Up enemies
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - slow
+  - stun
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Belch of the Gods
   cooldown:
@@ -124,6 +175,21 @@ abilities:
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Channel a big ol' burp to deal Magical Damage repeatedly to enemies
     in front of you
+  damage_type: magical
+  detail_kinds:
+  - stun
+  - mechanic
+  - null
+  - debuff
+  - magical
+  - magical
+  - stun
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Intoxicate
   cooldown:
@@ -143,6 +209,18 @@ abilities:
   - 'Cost: 90 mana'
   description: 'Smash your jug of wine, dealing Magical Damage and Intoxicating enemies
     around you Duration: 4 seconds'
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - magical
+  - magical
+  - debuff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Revelry
   kit_changes: After using Chug, Bacchus's inhand attacks cleave and deal bonus damage

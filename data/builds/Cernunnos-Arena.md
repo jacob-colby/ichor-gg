@@ -10,11 +10,11 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   - Riptalon
-  - The Crusher
   - Eros' Bow
+  - Pharaoh's Curse
   flex_slots:
-  - The Crusher
   - Eros' Bow
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -33,36 +33,36 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.49
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.55
+      total: 0.48
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.44
     The Reaper:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.51
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.51
-      efficiency: 0.27
+      total: 0.53
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.74
-    The Crusher:
-      total: 0.47
-      efficiency: 0.49
+    Eros' Bow:
+      total: 0.46
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.45
-    Eros' Bow:
-      total: 0.45
+      fit: 0.53
+    Pharaoh's Curse:
+      total: 0.46
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -76,7 +76,7 @@ builds:
   - Lernaean Bow
   - Jotunn's Revenge
   - Rage
-  - The Reaper
+  - Riptalon
   - Damaru
   - Demon Blade
   flex_slots:
@@ -99,37 +99,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.46
-      efficiency: 0.36
+      total: 0.47
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.48
-      efficiency: 0.55
+      total: 0.47
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.41
     Rage:
-      total: 0.39
+      total: 0.38
       efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.42
-    The Reaper:
-      total: 0.55
-      efficiency: 0.44
+    Riptalon:
+      total: 0.53
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.73
     Damaru:
-      total: 0.39
-      efficiency: 0.37
+      total: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.42
     Demon Blade:
-      total: 0.42
+      total: 0.43
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -140,7 +140,7 @@ builds:
   slot_order:
   - Lernaean Bow
   - Jotunn's Revenge
-  - The Reaper
+  - Riptalon
   - The Crusher
   - Eros' Bow
   - Pharaoh's Curse
@@ -164,37 +164,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.43
-      efficiency: 0.36
+      total: 0.44
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.55
+      total: 0.49
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.46
-    The Reaper:
-      total: 0.54
-      efficiency: 0.44
+    Riptalon:
+      total: 0.5
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.68
     The Crusher:
-      total: 0.46
-      efficiency: 0.49
+      total: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.43
     Eros' Bow:
-      total: 0.42
+      total: 0.43
       efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.47
     Pharaoh's Curse:
-      total: 0.42
+      total: 0.43
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -203,67 +203,67 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - The Reaper
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
+  - Umbral Link
   flex_slots:
-  - Shogun's Ofuda
   - Erosion
+  - Umbral Link
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    The Reaper:
-      total: 0.52
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Spectral Armor:
-      total: 0.44
+      total: 0.51
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.52
     Amanita Charm:
-      total: 0.62
-      efficiency: 0.44
+      total: 0.68
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.92
     Erosion:
-      total: 0.44
+      total: 0.5
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.62
     Pharaoh's Curse:
-      total: 0.47
+      total: 0.53
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.68
     Shogun's Ofuda:
-      total: 0.44
+      total: 0.51
       efficiency: 0.33
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.68
+    Umbral Link:
+      total: 0.5
+      efficiency: 0.25
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -272,7 +272,7 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Reaper
+  - Riptalon
   - The Crusher
   flex_slots:
   - Void Shield
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.55
+      total: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -317,15 +317,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    The Reaper:
-      total: 0.61
-      efficiency: 0.44
+    Riptalon:
+      total: 0.57
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.82
     The Crusher:
-      total: 0.52
-      efficiency: 0.49
+      total: 0.5
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -337,11 +337,11 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   - Riptalon
-  - The Crusher
   - Eros' Bow
+  - Pharaoh's Curse
   flex_slots:
-  - The Crusher
   - Eros' Bow
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -360,36 +360,36 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.49
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.55
+      total: 0.48
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.44
     The Reaper:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.51
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.51
-      efficiency: 0.27
+      total: 0.53
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.74
-    The Crusher:
-      total: 0.47
-      efficiency: 0.49
+    Eros' Bow:
+      total: 0.46
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.45
-    Eros' Bow:
-      total: 0.45
+      fit: 0.53
+    Pharaoh's Curse:
+      total: 0.46
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -400,13 +400,79 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - The Reaper
-  - The Crusher
+  - Eros' Bow
+  - Spectral Armor
+  - Amanita Charm
+  - Pharaoh's Curse
+  flex_slots:
+  - Pharaoh's Curse
+  - Spectral Armor
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    The Reaper:
+      total: 0.5
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Eros' Bow:
+      total: 0.46
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Spectral Armor:
+      total: 0.45
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
+    Amanita Charm:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Pharaoh's Curse:
+      total: 0.46
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+  starter: *id001
+  aspect: Aspect of Strife
+- source: suggested
+  archetype: crit
+  slot_order:
+  - Rage
+  - Damaru
+  - Demon Blade
   - Eros' Bow
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
-  - Eros' Bow
-  - Pharaoh's Curse
+  - Demon Blade
+  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -420,90 +486,18 @@ builds:
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
-    (no meta win/pick data).
-  slot_scores:
-    Jotunn's Revenge:
-      total: 0.48
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
-    The Reaper:
-      total: 0.55
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    The Crusher:
-      total: 0.46
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
-    Eros' Bow:
-      total: 0.46
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
-    Amanita Charm:
-      total: 0.52
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Pharaoh's Curse:
-      total: 0.45
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
-  starter: *id001
-  aspect: Aspect of Strife
-- source: suggested
-  archetype: crit
-  slot_order:
-  - Rage
-  - The Reaper
-  - Damaru
-  - Demon Blade
-  - Eros' Bow
-  - Pharaoh's Curse
-  flex_slots:
-  - Damaru
-  - Rage
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
-  - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Rage:
-      total: 0.36
+      total: 0.35
       efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.36
-    The Reaper:
-      total: 0.52
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Damaru:
-      total: 0.36
-      efficiency: 0.37
+      total: 0.39
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -519,6 +513,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Amanita Charm:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Pharaoh's Curse:
       total: 0.48
       efficiency: 0.38
@@ -531,21 +531,21 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
-  - The Reaper
   - The Crusher
   - Eros' Bow
   - Spectral Armor
+  - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
-  - Eros' Bow
   - Pharaoh's Curse
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -556,20 +556,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.49
-      efficiency: 0.55
+      total: 0.48
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.44
-    The Reaper:
-      total: 0.53
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     The Crusher:
-      total: 0.45
-      efficiency: 0.49
+      total: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -585,6 +579,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.38
+    Amanita Charm:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Pharaoh's Curse:
       total: 0.43
       efficiency: 0.38
@@ -596,12 +596,12 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - The Reaper
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
+  - Umbral Link
   flex_slots:
   - Pharaoh's Curse
   - Stampede
@@ -613,50 +613,50 @@ builds:
     swap: Shogun's Ofuda — magical protection
     swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    The Reaper:
-      total: 0.53
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Spectral Armor:
-      total: 0.48
+      total: 0.51
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.53
     Amanita Charm:
-      total: 0.65
-      efficiency: 0.44
+      total: 0.69
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.93
     Erosion:
-      total: 0.47
+      total: 0.51
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.63
     Stampede:
-      total: 0.45
+      total: 0.48
       efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.63
     Pharaoh's Curse:
-      total: 0.47
+      total: 0.5
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.63
+    Umbral Link:
+      total: 0.52
+      efficiency: 0.25
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -669,7 +669,7 @@ builds:
   - The Reaper
   - The Crusher
   flex_slots:
-  - Avenging Blade
+  - Jotunn's Revenge
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -694,8 +694,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.55
+      total: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -712,14 +712,14 @@ builds:
       pick: 0.0
       fit: 0.79
     The Reaper:
-      total: 0.59
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.74
     The Crusher:
-      total: 0.51
-      efficiency: 0.49
+      total: 0.48
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -730,13 +730,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - The Reaper
-  - The Crusher
   - Eros' Bow
+  - Spectral Armor
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
-  - Eros' Bow
   - Pharaoh's Curse
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -745,8 +745,8 @@ builds:
     swap: Shogun's Ofuda — magical protection
     swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -754,37 +754,37 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.48
-      efficiency: 0.55
+      total: 0.47
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.41
     The Reaper:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.5
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.66
-    The Crusher:
-      total: 0.46
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Eros' Bow:
       total: 0.46
       efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.53
+    Spectral Armor:
+      total: 0.45
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Amanita Charm:
       total: 0.52
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
     Pharaoh's Curse:
-      total: 0.45
+      total: 0.46
       efficiency: 0.38
       win: 0.5
       pick: 0.0

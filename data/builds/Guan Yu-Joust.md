@@ -51,7 +51,7 @@ builds:
       fit: 0.53
     Amanita Charm:
       total: 0.7
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.95
@@ -80,7 +80,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Kinetic Cuirass
+  - Spectral Armor
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -90,8 +90,8 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Glorious Pridwen — physical protection
-    swap_item: Glorious Pridwen
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.47
+      total: 0.52
       efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
-    Shield of the Phoenix:
-      total: 0.55
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-    Spectral Armor:
-      total: 0.48
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
-    Amanita Charm:
-      total: 0.67
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.9
-    Erosion:
-      total: 0.5
-      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Pharaoh's Curse:
-      total: 0.46
-      efficiency: 0.38
+    Shield of the Phoenix:
+      total: 0.6
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Amanita Charm:
+      total: 0.72
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.55
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Pharaoh's Curse:
+      total: 0.51
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -145,7 +145,7 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Avenging Blade
+  - Jotunn's Revenge
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -188,14 +188,14 @@ builds:
       pick: 0.0
       fit: 0.85
     The Crusher:
-      total: 0.52
-      efficiency: 0.49
+      total: 0.49
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.54
     Amanita Charm:
       total: 0.64
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -314,7 +314,7 @@ builds:
       fit: 0.53
     Amanita Charm:
       total: 0.7
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.95

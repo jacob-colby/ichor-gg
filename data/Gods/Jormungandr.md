@@ -29,6 +29,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 20.0
+    per_level: 4.0
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Jormungandr Basic Attack
@@ -47,6 +56,20 @@ abilities:
   - 'Cone Angle: 45 degrees'
   description: Deal Magical Damage to all enemies in front of you. As you attack,
     your Overheat increases causing your firing rate to decrease
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Immovable
   details:
@@ -62,6 +85,15 @@ abilities:
     that Slows you and increases the damage you take . Additionally, hits from Attacks
     and Venomous Haze cause enemy gods to gain a Debuff stack. At max stacks, the
     next hit deals damage based on your Max Health or Strength , and resets the Debuff
+  damage_type: magical
+  detail_kinds:
+  - stun
+  - magical
+  - slow
+  - debuff
+  - debuff
+  - debuff
+  - debuff
 - slot: 1st Ability
   name: Venomous Haze
   cooldown:
@@ -99,6 +131,26 @@ abilities:
   description: The cloud deals Magical Damage , Slows , and reduces enemy Healing
     Fire noxious spit at an area dealing Magical Damage and creating a toxic cloud
     that persists for 20 seconds
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - buff
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - slow
+  - debuff
+  - debuff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Consuming Bellow
   cooldown:
@@ -124,6 +176,22 @@ abilities:
   description: Each cloud provides 2 seconds of Attack Empowerment , up to 6 seconds
     max Channel briefly, drawing power from nearby toxic clouds, then roar to deal
     Magical Damage , Slow , and Tremble enemies around you
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - buff
+  - null
+  - buff
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Submerge
   cooldown:
@@ -148,6 +216,19 @@ abilities:
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   description: 'into the ground, becoming Stealthed and gaining Movement Speed . Reactivate
     to emerge, Knocking Up and dealing Magical Damage to enemies Max Duration: 5 seconds'
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: The World Serpent
   cooldown:
@@ -181,6 +262,24 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Enter into the world before diving up to 3 times across the battlefield.
     Each time you Submerge you deal Magical Damage to enemies hit
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - stun
+  - buff
+  - mechanic
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Unyielding
   kit_changes: Toxic clouds do not deal tick damage but allied gods within them gain

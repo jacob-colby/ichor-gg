@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 48.0
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.57
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Sun Wukong Basic Attack
@@ -38,6 +47,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Undefeated Body
   cooldown:
@@ -58,6 +74,16 @@ abilities:
     , and Protections . If you go above this threshold, the buff persists for a short
     duration. When you drop below 30% Health, you spawn a clone. This effect has a
     cooldown
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
 - slot: 1st Ability
   name: The Magic Cudgel
   cooldown:
@@ -84,6 +110,19 @@ abilities:
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Slam down with your Cudgel, dealing Physical Damage
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Master's Will
   cooldown:
@@ -109,6 +148,21 @@ abilities:
   - 'Cost: 60 mana'
   description: Strike around you dealing Physical Damage . Enemies hit are Slowed
     and have reduced Attack Speed
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - slow
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: 72 Transformations
   cooldown:
@@ -139,6 +193,19 @@ abilities:
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
   description: Transform into an Ox, Tiger, or Eagle, and Dash forward
+  detail_kinds:
+  - stun
+  - physical
+  - null
+  - null
+  - mechanic
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Somersault Cloud
   cooldown:
@@ -162,6 +229,18 @@ abilities:
   - 'Cost: 100 mana'
   description: Rise into a cloud leaving a clone to fight in your stead. While in
     the cloud you are Stealthed and Heal every 0.5 seconds
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - mechanic
+  - buff
+  - physical
+  - physical
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Transformation
   kit_changes: 72 Transformations has a reduced Cooldown and locks your animal form

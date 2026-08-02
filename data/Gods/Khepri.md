@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Khepri Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Fortitude
   details:
@@ -48,6 +64,11 @@ abilities:
   - 'Max Shield Health: 10% Max Health'
   - 'Shield Duration: 15 seconds'
   description: Every 5 seconds apply a Health Shield to yourself and nearby allies
+  detail_kinds:
+  - null
+  - shield
+  - shield
+  - shield
 - slot: 1st Ability
   name: Abduct
   cooldown:
@@ -69,6 +90,20 @@ abilities:
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 mana'
   description: Dash forward, Grabbing , and Pulling the first enemy god hit
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - buff
+  - null
+  - debuff
+  - null
+  - magical
+  - magical
+  - debuff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Rising Dawn
   cooldown:
@@ -98,6 +133,25 @@ abilities:
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Roll the sun forward, setting ablaze all enemies it touches
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - debuff
+  - buff
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Solar Flare
   cooldown:
@@ -122,6 +176,15 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: AREA DAMAGE ROOT Call down the sun's ire, dealing Magical Damage and
     Rooting enemies in an area
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Scarab's Blessing
   cooldown:
@@ -150,6 +213,21 @@ abilities:
   description: Blessed allies receive Strength , Intelligence , and Movement Speed
     Bless an allied god for 5 seconds. If the blessed ally would die while blessed,
     they are instead revived at Khepri's location
+  detail_kinds:
+  - mechanic
+  - buff
+  - mechanic
+  - buff
+  - null
+  - buff
+  - buff
+  - buff
+  - heal
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Laceration
   kit_changes: Abduct no longer Pulls enemy gods but Roots them in place with Khepri,

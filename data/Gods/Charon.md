@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 41.04
+    per_level: 2.4
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Charon Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Ferryman of Souls
   details:
@@ -50,6 +65,10 @@ abilities:
     you 1 gold and a Soul Stack. You lose all soul stacks when returning to base and
     gain 2 max health per stack lost. Allies can pay you 1 gold to ferry with you.
     This grants you a Movement Speed buff while they ride
+  detail_kinds:
+  - null
+  - stun
+  - mechanic
 - slot: 1st Ability
   name: Spectral Surge
   cooldown:
@@ -77,6 +96,20 @@ abilities:
     all enemies, stopping on the first god hit. If the soul hits an enemy god, it
     explodes, dealing Magical Damage , and Silencing all enemies hit by the explosion,
     as well as causing all hit enemies to leave a trail behind them for 3 seconds
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - slow
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Damnation
   cooldown:
@@ -109,6 +142,20 @@ abilities:
     marked gods are Revealed and have reduced Attack Speed . Additionally, any time
     an allied god hits a marked god, the ally gains a Shield for 3 seconds. Subsequent
     hits grant 25% of the Shield value
+  damage_type: magical
+  detail_kinds:
+  - shield
+  - shield
+  - magical
+  - magical
+  - shield
+  - shield
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Swift Voyage
   cooldown:
@@ -136,6 +183,17 @@ abilities:
   description: Charge Forward Root Dash forward with increased Movement Speed and
     become Slow Immune and Displacement Immune while charging. Any enemy you collide
     with, or that hits the wake of your boat takes Magical Damage and is Rooted
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - buff
+  - buff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Summon Styx
   cooldown:
@@ -161,6 +219,18 @@ abilities:
     battlefield. Enemy gods hit by the wake take Magical Damage and are Feared . Allied
     gods gain Protections for 3 seconds. Additionally, all allies standing within
     the zone behind the wave are granted Movement Speed
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - debuff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Tollkeeper
   kit_changes: Passive coins are pulled to you while in assist range. Damnation no

@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Thor Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Warrior's Madness
   details:
@@ -53,6 +68,18 @@ abilities:
   - 'Radius: 8.8 meters'
   description: You gain Strength for each enemy god near you. After using Berserker's
     Barrage or Anvil of Dawn, you gain Thunderstruck
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 1st Ability
   name: Mjolnir's Attunement
   cooldown:
@@ -78,6 +105,19 @@ abilities:
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
   description: Throw Mjolnir forward, dealing Physical Damage to enemies as it travels.
     When it reaches max range it flies back to you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Tectonic Rift
   cooldown:
@@ -97,6 +137,18 @@ abilities:
   - 'Cost: 60 mana'
   description: Slam Mjolnir down creating a fissure, dealing Physical Damage to enemies
     as it erupts. Enemies hit are also Stunned
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - stun
+  - null
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Berserker Barrage
   cooldown:
@@ -125,6 +177,17 @@ abilities:
   description: Spin, dealing Physical Damage to enemies around you. You spin twice
     before unleashing a final cone attack that deals Physical Damage to enemies in
     front of you
+  detail_kinds:
+  - mechanic
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Anvil of Dawn
   cooldown:
@@ -151,6 +214,17 @@ abilities:
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
   description: Fly into the sky. Choose a location to land dealing Physical Damage
     to enemies when landing. Enemies hit are Stunned
+  damage_type: physical
+  detail_kinds:
+  - null
+  - mechanic
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Thunderstruck
   kit_changes: Thunderstruck is always active but chains for less damage. Triggering

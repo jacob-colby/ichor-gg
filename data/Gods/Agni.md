@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Agni Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Combustion
   details:
@@ -49,6 +64,12 @@ abilities:
     Fire will ignite all enemies hit, dealing Magical Damage every 0.5 seconds for
     3 seconds. When Agni kills an enemy god, he goes on a Hot Streak. When on a Hot
     Streak, is fully charged and using Flame Wave or Rain Fire does not consume
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - debuff
+  - mechanic
 - slot: 1st Ability
   name: Noxious Fumes
   cooldown:
@@ -76,6 +97,21 @@ abilities:
   description: Summon a cloud of noxious fumes which deals Magical Damage every second.
     Hitting the fumes with any of your other abilities detonates the gas, Stunning
     and dealing Magical Damage to enemies in the area
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - stun
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Flame Wave
   cooldown:
@@ -101,6 +137,17 @@ abilities:
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Summon a wave of fire, dealing Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Path of Flames
   cooldown:
@@ -125,6 +172,18 @@ abilities:
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   description: Dash forward and leave a trail of fire behind you. Enemies that enter
     the area take Magical Damage every 0.5 seconds for 2 seconds
+  damage_type: magical
+  detail_kinds:
+  - null
+  - mechanic
+  - null
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Rain Fire
   cooldown:
@@ -143,6 +202,17 @@ abilities:
   - 'Cost: 10 mana'
   description: Summon a meteor, dealing Magical Damage . You can have up to 3 charges
     of this ability
+  damage_type: magical
+  detail_kinds:
+  - null
+  - slow
+  - magical
+  - magical
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Combustion
   kit_changes: Your Basic Attacks now ignite enemies dealing damage over time and

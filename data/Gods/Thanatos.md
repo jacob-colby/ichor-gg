@@ -25,6 +25,12 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
 abilities:
 - slot: Basic Attack
   name: Thanatos Basic Attack
@@ -37,6 +43,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Harvester of Souls
   details:
@@ -50,6 +63,15 @@ abilities:
   - 'NPC Kill Heal: 10% of their Max Health'
   - 'Cooldown Reduction: -5 seconds'
   description: You revel in the deaths of your foes
+  detail_kinds:
+  - null
+  - heal
+  - buff
+  - null
+  - null
+  - heal
+  - heal
+  - buff
 - slot: 1st Ability
   name: Death Scythe
   cooldown:
@@ -69,6 +91,18 @@ abilities:
   - 'Cost: 4% Health'
   description: Fling a scythe projectile that deals Physical Damage and Slows the
     first target hit
+  damage_type: physical
+  detail_kinds:
+  - heal
+  - physical
+  - null
+  - physical
+  - physical
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Scent of Death
   cooldown:
@@ -88,6 +122,16 @@ abilities:
   - 'Cooldown: 13 seconds'
   - 'Cost: 4% Health'
   description: Sense death, becoming Slow Immune and gaining Movement Speed and Penetration
+  detail_kinds:
+  - physical
+  - null
+  - physical
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Soul Reap
   cooldown:
@@ -108,6 +152,15 @@ abilities:
   - 'Cost: 4% Health'
   description: CONE SILENCE DAMAGE Swing your scythe, dealing Physical Damage and
     Silencing enemies in front of you
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Hovering Death
   cooldown:
@@ -131,6 +184,20 @@ abilities:
   - 'Cost: 6% Health'
   description: Fly into the sky, then dive to a location dealing Physical Damage and
     Stunning enemies hit
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - buff
+  - physical
+  - null
+  - mechanic
+  - physical
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Reaping
   kit_changes: Harvester of Souls no longer Heals Thanatos but provides permanent

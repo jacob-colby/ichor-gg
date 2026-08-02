@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Poseidon Basic Attack
@@ -37,6 +46,13 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Changing Tides
   details:
@@ -47,6 +63,11 @@ abilities:
   description: Successfully hit Attacks to gain Tide. You have increased Movement
     Speed and your abilities do additional damage based on the amount of Tide you
     have.
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
 - slot: 1st Ability
   name: Tidal Surge
   cooldown:
@@ -70,6 +91,18 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80'
   description: Summon a wave, dealing Magical Damage and Knocking Back enemies. Activate
     while Trident is active to send out two additional waves
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Trident
   cooldown:
@@ -94,6 +127,19 @@ abilities:
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
   description: Activate your , gaining increased Attack Speed , Movement Speed , and
     Attack Damage . While activated Tidal Surge and Attacks fire two additional shots
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Whirlpool
   cooldown:
@@ -119,6 +165,16 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Summon a whirlpool, Crippling , Vortexing , and dealing Magical Damage
     repeatedly to enemies in an area
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Release the Kraken!
   cooldown:
@@ -145,6 +201,19 @@ abilities:
   description: AREA DAMAGE KNOCKUP Summon the Kraken, dealing Magical Damage and Slowing
     enemies in its area. Enemies in the center area when it spawns take increased
     Magical Damage and are Stunned and Knocked Up
+  detail_kinds:
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Trident
   kit_changes: Poseidon's Attacks always fire side waves. Trident no longer affects

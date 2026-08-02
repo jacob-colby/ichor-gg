@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 383.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Mercury Basic Attack
@@ -38,6 +47,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Fastest God Alive
   details:
@@ -49,6 +65,11 @@ abilities:
   - 'Max Damage Boost: 25%'
   description: For every 1 centimeter traveled, gain a 0.05% Damage Bonus on your
     next Attack
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
 - slot: 1st Ability
   name: Made You Look
   cooldown:
@@ -70,6 +91,15 @@ abilities:
   - 'Cost: 50 mana'
   description: Move in the blink of an eye, dealing Physical Damage to every enemy
     within a target area
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Maximum Velocity
   cooldown:
@@ -92,6 +122,13 @@ abilities:
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Gain increased Attack Speed and become Slow Immune for the duration
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Special Delivery
   cooldown:
@@ -119,6 +156,19 @@ abilities:
     them. Grab the first enemy god encountered, Spinning them. The enemy god takes
     Physical Damage every 0.25 seconds until the effect ends. They are then Thrown
     in the direction you are facing
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Sonic Boom
   cooldown:
@@ -150,6 +200,21 @@ abilities:
   description: Gather energy for a powerful Dash . The range increases as you charge.
     Dash forward, dealing Physical Damage and Spinning enemies hit along the Dash
     . Gain Movement Speed after the Dash that scales based on the energy gathered
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - mechanic
+  - physical
+  - physical
+  - stun
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Mercury
 last_verified: '2026-08-01'

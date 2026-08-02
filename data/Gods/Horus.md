@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 48.0
+    per_level: 2.37
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Horus Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Resolute
   details:
@@ -48,6 +63,12 @@ abilities:
   description: Stack Protections, Heal Gain stacks when an enemy god damages you.
     Each stack grants Protections and Crowd Control Reduction for a short duration.
     When expires, Heal based on your stacks
+  detail_kinds:
+  - buff
+  - buff
+  - heal
+  - buff
+  - buff
 - slot: 1st Ability
   name: Updraft
   cooldown:
@@ -81,6 +102,21 @@ abilities:
   description: 'Create an updraft around you, dealing Physical Damage and Knocking
     Up nearby enemies Damage: 50 | 95 | 140 | 185 | 230 Damage Scaling: 75% Strength
     Radius: 2.08 meters'
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Fracture
   cooldown:
@@ -113,6 +149,21 @@ abilities:
   description: Dash forward, dealing Physical Damage . Hitting an enemy god stops
     the Dash and Stuns them, then you cleave enemies in front of you, dealing Physical
     Damage and reducing their Protections
+  detail_kinds:
+  - slow
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - debuff
+  - debuff
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Protector's Surge
   cooldown:
@@ -132,6 +183,16 @@ abilities:
   - 'Cost: 45 mana'
   description: Leap to a target ally and descend on their location. When you land,
     Heal the target ally and nearby allies and grant them Protections for a duration
+  detail_kinds:
+  - heal
+  - null
+  - heal
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: To The Skies!
   cooldown:
@@ -158,6 +219,18 @@ abilities:
   description: Send a mirror image into the sky to choose a landing location. After
     selecting a location, channel briefly, then Teleport to that location. On landing,
     deal Physical Damage , Knock Back enemies, and grant yourself a Health Shield
+  damage_type: physical
+  detail_kinds:
+  - mechanic
+  - null
+  - physical
+  - physical
+  - shield
+  - shield
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Falcon
   kit_changes: Fracture no longer stuns but deals increased damage on the cleave.

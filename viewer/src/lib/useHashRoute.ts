@@ -16,14 +16,14 @@ import { useEffect, useState } from "react";
 /** Lenses on the whole roster. Draft belongs here rather than among a god's
  *  lenses: a draft takes ten gods and only one of them is your subject, so
  *  filing it under one god would misdescribe it. */
-export type RosterLens = "board" | "tiers" | "items" | "draft" | "patch";
+export type RosterLens = "board" | "tiers" | "items" | "draft" | "patch" | "method";
 
 /** Lenses on a single god. */
 export type GodLens = "builds" | "kit" | "items" | "ranking";
 
 export type Lens = RosterLens | GodLens;
 
-export const ROSTER_LENSES: RosterLens[] = ["board", "tiers", "items", "draft", "patch"];
+export const ROSTER_LENSES: RosterLens[] = ["board", "tiers", "items", "draft", "patch", "method"];
 export const GOD_LENSES: GodLens[] = ["builds", "kit", "items", "ranking"];
 
 export interface Route {
@@ -40,6 +40,7 @@ const ROSTER_PATHS: Record<string, RosterLens> = {
   items: "items",
   draft: "draft",
   patch: "patch",
+  method: "method",
 };
 
 /** Legacy god tabs. `info` was the old name for the kit lens. */
@@ -91,13 +92,15 @@ export const toHash = {
   item: (n: string) => `#/items/${encodeURIComponent(n)}`,
   tiers: () => "#/tiers",
   patch: () => "#/patch",
+  method: () => "#/method",
 };
 
 /** The hash for a lens, given the subject currently in view. */
 export function lensHash(lens: Lens, god?: string): string {
   if (!god) {
     return { board: toHash.home(), tiers: toHash.tiers(), items: toHash.items(),
-      draft: toHash.draft(), patch: toHash.patch() }[lens as RosterLens] ?? toHash.home();
+      draft: toHash.draft(), patch: toHash.patch(),
+      method: toHash.method() }[lens as RosterLens] ?? toHash.home();
   }
   return { builds: toHash.god(god), kit: toHash.godKit(god),
     items: toHash.godItems(god), ranking: toHash.godRanking(god) }[lens as GodLens]

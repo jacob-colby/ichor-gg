@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.93
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Ratatoskr Basic Attack
@@ -40,6 +49,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Acorn of Yggdrasil
   details:
@@ -47,6 +63,8 @@ abilities:
     0.7 seconds
   description: You spawn with a Magic Acorn in your inventory. This can be upgraded
     anywhere on the map to provide different bonuses
+  detail_kinds:
+  - debuff
 - slot: 1st Ability
   name: Dart
   cooldown:
@@ -75,6 +93,22 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Dash forward, dealing Physical Damage and Slowing enemies hit, stopping
     on enemy gods
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - null
+  - null
+  - physical
+  - physical
+  - slow
+  - slow
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Flurry
   cooldown:
@@ -100,6 +134,20 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Spin 4 times and deal Physical Damage to enemies around you, reducing
     their Physical Protections
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Acorn Blast
   cooldown:
@@ -128,6 +176,22 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Fire a blast of 3 Acorns that deal Physical Damage . Enemies hit by
     3 Acorns are Stunned
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Through the Cosmos
   cooldown:
@@ -148,6 +212,15 @@ abilities:
   - 'Cost: 100 mana'
   description: Fly into the sky. Choose and leap to a location, up to twice, before
     landing at a final location dealing Physical Damage and Knocking Up enemies
+  damage_type: physical
+  detail_kinds:
+  - mechanic
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Thickbark
   kit_changes: Your tier 3 Acorn effects change. Briskberry causes Dart to knockback

@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Aladdin Basic Attack
@@ -40,6 +49,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Three Wishes
   details:
@@ -81,6 +97,26 @@ abilities:
   description: Aladdin fires 5 Kufic symbols that deal Magical Damage to enemies in
     a cone. Charge to narrow down the cone. When fully charged the symbols merge dealing
     Magical Damage
+  detail_kinds:
+  - null
+  - magical
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Sultan's Grace
   cooldown:
@@ -112,6 +148,20 @@ abilities:
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Dash forward dealing Magical Damage to enemies you pass through
+  detail_kinds:
+  - null
+  - magical
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Agile Run
   cooldown:
@@ -147,6 +197,24 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Dash forward. Dashing into a wall causes you to run along it before
     Leaping to a location, dealing Magical Damage to enemies in the landing area
+  detail_kinds:
+  - magical
+  - null
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Into The Lamp
   cooldown:
@@ -193,6 +261,31 @@ abilities:
   description: Throw the Lamp forward, dealing Magical Damage and stopping on first
     enemy god hit. If successful, Aladdin and the enemy god are pulled into the lamp
     to challenge each other
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - debuff
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Aladdin
 last_verified: '2026-08-01'

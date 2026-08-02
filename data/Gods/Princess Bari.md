@@ -25,6 +25,12 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.0
+    per_level: 2.42
+  health_regen:
+    base: 1.7
+    per_level: 0.2
 abilities:
 - slot: Basic Attack
   name: Princess Bari Basic Attack
@@ -36,6 +42,13 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Mystic Surge
   details:
@@ -51,6 +64,14 @@ abilities:
     based on the rank of Spirit's Cadence Accumulate Spirit by dealing damage to enemies.
     Upon reaching 100 Spirit you enter for 5 seconds and can use any of your first
     3 abilities with no cooldown. Abilities used this way have a bonus effect
+  detail_kinds:
+  - buff
+  - null
+  - buff
+  - buff
+  - buff
+  - null
+  - null
 - slot: 1st Ability
   name: Sacred Bell
   cooldown:
@@ -75,6 +96,20 @@ abilities:
     Damage and now applies a Stun . The Bell itself is 1.67x the size Lob a Bell,
     dealing Magical Damage to enemies where it lands. Warding Gusts or Reverent Steps
     push the Bell, dealing Magical Damage and Slowing enemies hit'
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Warding Gust
   cooldown:
@@ -92,6 +127,16 @@ abilities:
   description: 'Mystic Surge: +20% Damage and stronger Knockback . Bells pushed are
     treated as Mystic Surge Bells Swipe your fan dealing Magical Damage to enemies
     and Knocking Back enemies who are close'
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Reverent Steps
   cooldown:
@@ -119,6 +164,19 @@ abilities:
     Speed on god hit. Dance for a short burst of speed in any direction, then fire
     a projectile dealing Magical Damage when it ends. Hitting a god grants Attack
     Speed to Bari.'
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Spirit's Cadence
   cooldown:
@@ -139,6 +197,17 @@ abilities:
     taking lethal damage become Damage Immune , Silenced , and Disarmed for 1.5 seconds
     Conjure a spiritual dance that pulses 3 times. The first two pulses deal Magical
     Damage . The last pulse deals bonus Magical Damage
+  detail_kinds:
+  - buff
+  - null
+  - buff
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Princess_Bari
 last_verified: '2026-08-01'

@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Hua Mulan Basic Attack
@@ -40,6 +49,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Training Arc
   details:
@@ -56,6 +72,15 @@ abilities:
     respective abilities. Additionally gain , reducing the cooldown of your next non-ultimate
     ability, and Training Grounds, a consumable which provides team-wide speed and
     grants Cooldown: 10 seconds'
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 1st Ability
   name: Cross Strike
   cooldown:
@@ -89,6 +114,23 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Strike twice with your sword, dealing Physical Damage to all enemies
     hit Adept Strike Adept Strike
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - physical
+  - buff
+  - physical
+  - physical
+  - physical
+  - physical
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Spear Thrust
   cooldown:
@@ -119,6 +161,24 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Thrust your spear forward, striking enemies in front of you, Slowing
     them and dealing Physical Damage
+  damage_type: physical
+  detail_kinds:
+  - heal
+  - physical
+  - buff
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - heal
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Grapple
   cooldown:
@@ -150,6 +210,25 @@ abilities:
   description: Fire an arrow with a rope attached. If it hits an enemy god, Stun them,
     deal Physical Damage , and Pull them towards you while Dashing at them and following
     up with a slash for Physical Damage
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - null
+  - buff
+  - stun
+  - mechanic
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Divine Mastery
   cooldown:
@@ -189,6 +268,31 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Unleash your entire arsenal, Dashing forward with sword slashes that
     deal Physical Damage and Root enemies
+  detail_kinds:
+  - stun
+  - physical
+  - null
+  - stun
+  - null
+  - null
+  - buff
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - buff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Hua_Mulan
 last_verified: '2026-08-01'

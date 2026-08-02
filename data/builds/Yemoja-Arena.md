@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Mystical Mail:
-      total: 0.56
+      total: 0.55
       efficiency: 0.3
       win: 0.5
       pick: 0.0
@@ -51,7 +51,7 @@ builds:
       fit: 0.71
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -73,22 +73,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Mystical Mail
+  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
   - Stampede
-  - Soul Gem
   flex_slots:
   - Stampede
-  - Mystical Mail
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
     swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -98,42 +98,42 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Mystical Mail:
-      total: 0.51
-      efficiency: 0.3
+    Kinetic Cuirass:
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.72
     Spectral Armor:
-      total: 0.55
+      total: 0.61
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.73
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Rod of Asclepius:
+      total: 0.73
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.99
     Erosion:
-      total: 0.58
+      total: 0.65
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.92
     Stampede:
-      total: 0.53
+      total: 0.58
       efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
+      fit: 0.83
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -183,7 +183,7 @@ builds:
       fit: 0.59
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
-  - Soul Gem
   flex_slots:
-  - Soul Gem
-  - Damaru
+  - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -236,34 +236,34 @@ builds:
       fit: 0.67
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.6
-      efficiency: 0.21
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Soul Gem:
       total: 0.53
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -301,7 +301,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Mystical Mail:
-      total: 0.56
+      total: 0.55
       efficiency: 0.3
       win: 0.5
       pick: 0.0
@@ -314,7 +314,7 @@ builds:
       fit: 0.71
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

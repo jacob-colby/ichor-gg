@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Rama Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Astral Quiver
   details:
@@ -51,6 +66,14 @@ abilities:
   - 'Drop Chance: 30% + 1% Per Level'
   description: You always respawn with a full Your generates an Astral Arrow every
     12 seconds
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - null
+  - null
+  - buff
+  - mechanic
 - slot: 1st Ability
   name: Astral Strike
   cost:
@@ -71,6 +94,19 @@ abilities:
   - 'Cost: 15 mana + 1 Astral Arrow Per Shot'
   description: Switch to a more powerful arrow that deals bonus Physical Damage ,
     pierces, and Slows enemies
+  detail_kinds:
+  - null
+  - debuff
+  - null
+  - null
+  - physical
+  - physical
+  - slow
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Infinite Arrows
   cooldown:
@@ -95,6 +131,13 @@ abilities:
   - 'Cooldown: 15 | 14 | 13 | 12 | 11 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
   description: Focus your mind and gain increased Attack Speed
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Rolling Assault
   cooldown:
@@ -118,6 +161,15 @@ abilities:
   description: For the next 5 seconds after Rolling , your next Attack will have Haste
     and consume an Astral Arrow, Crippling all enemies hit and dealing bonus Physical
     Damage Roll in the direction you are currently traveling
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Astral Barrage
   cooldown:
@@ -137,6 +189,16 @@ abilities:
   description: Launch yourself into the air for up to 5 seconds and shoot 3 powerful
     arrows at the ground, with each successive shot dealing increasing Physical Damage
     while decreasing in size
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Precision
   kit_changes: Astral Strike is always active, but Rama has severely decreased Attack

@@ -9,12 +9,12 @@ builds:
   - Golden Blade
   - Lernaean Bow
   - Jotunn's Revenge
+  - Tyrfing
   - The Reaper
-  - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Golden Blade
-  - Tekko-Kagi
+  - The Crusher
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -23,8 +23,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -38,32 +38,32 @@ builds:
       pick: 0.0
       fit: 0.63
     Lernaean Bow:
-      total: 0.54
-      efficiency: 0.36
+      total: 0.55
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.73
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.55
+      total: 0.52
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Tyrfing:
+      total: 0.5
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     The Reaper:
-      total: 0.58
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Tekko-Kagi:
-      total: 0.5
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     The Crusher:
-      total: 0.53
-      efficiency: 0.49
+      total: 0.51
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -76,19 +76,19 @@ builds:
   - Lernaean Bow
   - Jotunn's Revenge
   - Hydra's Lament
-  - The Reaper
   - Pendulum Blade
   - The Crusher
+  - Amanita Charm
   flex_slots:
+  - Lernaean Bow
   - Hydra's Lament
-  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -100,105 +100,105 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.44
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.52
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.56
     Hydra's Lament:
-      total: 0.43
-      efficiency: 0.44
+      total: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.42
-    The Reaper:
-      total: 0.55
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Pendulum Blade:
-      total: 0.42
-      efficiency: 0.29
+      total: 0.45
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.56
     The Crusher:
-      total: 0.49
-      efficiency: 0.49
+      total: 0.47
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Amanita Charm:
+      total: 0.5
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - The Reaper
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Spectral Armor
-  - Shogun's Ofuda
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    The Reaper:
-      total: 0.51
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Spectral Armor:
-      total: 0.46
+      total: 0.54
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.58
     Amanita Charm:
-      total: 0.65
-      efficiency: 0.44
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 1.0
     Erosion:
-      total: 0.47
+      total: 0.55
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.71
+    Stampede:
+      total: 0.51
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Pharaoh's Curse:
-      total: 0.48
+      total: 0.56
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.74
     Shogun's Ofuda:
-      total: 0.46
+      total: 0.54
       efficiency: 0.33
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.74
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -207,8 +207,8 @@ builds:
   - Jotunn's Revenge
   - Void Stone
   - The Reaper
-  - Tekko-Kagi
   - The Crusher
+  - Heartseeker
   flex_slots:
   - Avenging Blade
   - Void Stone
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -247,20 +247,20 @@ builds:
       pick: 0.0
       fit: 0.7
     The Reaper:
-      total: 0.65
-      efficiency: 0.44
+      total: 0.6
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.85
-    Tekko-Kagi:
-      total: 0.53
-      efficiency: 0.36
+    The Crusher:
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
-    The Crusher:
-      total: 0.6
-      efficiency: 0.49
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
-  - Soul Gem
   flex_slots:
-  - Soul Gem
-  - Damaru
+  - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -301,34 +301,34 @@ builds:
       fit: 0.67
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.6
-      efficiency: 0.21
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Soul Gem:
       total: 0.53
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -337,12 +337,12 @@ builds:
   - Golden Blade
   - Lernaean Bow
   - Jotunn's Revenge
+  - Tyrfing
   - The Reaper
-  - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Golden Blade
-  - Tekko-Kagi
+  - The Crusher
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -351,8 +351,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -366,32 +366,32 @@ builds:
       pick: 0.0
       fit: 0.63
     Lernaean Bow:
-      total: 0.54
-      efficiency: 0.36
+      total: 0.55
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.73
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.55
+      total: 0.52
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Tyrfing:
+      total: 0.5
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     The Reaper:
-      total: 0.58
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Tekko-Kagi:
-      total: 0.5
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     The Crusher:
-      total: 0.53
-      efficiency: 0.49
+      total: 0.51
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57

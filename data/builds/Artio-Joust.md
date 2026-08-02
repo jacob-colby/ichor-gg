@@ -57,7 +57,7 @@ builds:
       fit: 0.75
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -80,8 +80,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Spectral Armor
   - Eye of Providence
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.54
+      total: 0.66
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.84
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.69
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.94
     Shield of the Phoenix:
-      total: 0.62
+      total: 0.7
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 1.0
     Spectral Armor:
-      total: 0.55
+      total: 0.64
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.78
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.6
+      total: 0.69
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -142,8 +142,8 @@ builds:
   - Kinetic Cuirass
   - Void Shield
   - Void Stone
+  - Amanita Charm
   - Erosion
-  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
   - Stone of Binding
@@ -152,8 +152,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -164,8 +164,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.51
-      efficiency: 0.27
+      total: 0.52
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -187,18 +187,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.93
+    Amanita Charm:
+      total: 0.7
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.96
     Erosion:
       total: 0.55
       efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -320,7 +320,7 @@ builds:
       fit: 0.75
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

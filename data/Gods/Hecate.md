@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.57
+    per_level: 0.14
 abilities:
 - slot: Basic Attack
   name: Hecate Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Mythic Ritual
   details:
@@ -57,6 +72,18 @@ abilities:
   - 'Intelligence: 8 + 3.2 Per Level'
   - 'Buff Duration: 300 seconds'
   description: You may interact with things to empower them
+  detail_kinds:
+  - buff
+  - buff
+  - null
+  - null
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Triplicate Form
   cooldown:
@@ -92,6 +119,23 @@ abilities:
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Split yourself and fire a projectile, alternating between Power Form
     and Hex Form
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Spell Eater
   cooldown:
@@ -120,6 +164,21 @@ abilities:
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Create a Sigil that charges up when gods activate abilities in a large
     area
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Repel Magic
   cooldown:
@@ -145,6 +204,19 @@ abilities:
   description: Activating this increases your Movement Speed , and gives Spell Eater
     3 charges Grant yourself or an allied god a Magical Shield , absorbing Magical
     Damage
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - buff
+  - magical
+  - magical
+  - null
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Open the Gates
   cooldown:
@@ -168,6 +240,21 @@ abilities:
   - 'Cost: 90 mana'
   description: Open two Portals between realms, Stunning , then Teleporting enemy
     gods to the opposite Portal
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - null
+  - stun
+  - null
+  - null
+  - magical
+  - magical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Ruin
   kit_changes: Spell Eater can no longer be refired but instead reduces enemy ability

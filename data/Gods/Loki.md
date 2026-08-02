@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.73
+    per_level: 0.23
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Loki Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Behind You
   details:
@@ -46,6 +62,10 @@ abilities:
     Visions
   - 'Damage: 115%'
   description: Hitting enemies from behind deals Bonus Damage
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
 - slot: 1st Ability
   name: Vanish
   cooldown:
@@ -72,6 +92,21 @@ abilities:
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Disappear in a puff of smoke, become Stealthed and gain Movement Speed
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - mechanic
+  - buff
+  - buff
+  - buff
+  - physical
+  - physical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Agonizing Visions
   cooldown:
@@ -101,6 +136,24 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Summon a vision of Loki that repeatedly deals Physical Damage to nearby
     enemies
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - debuff
+  - null
+  - debuff
+  - null
+  - debuff
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Flurry Strike
   cooldown:
@@ -131,6 +184,25 @@ abilities:
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Unleash a flurry of dagger strikes, dealing Physical Damage repeatedly
     and Slowing enemies in front of you
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - mechanic
+  - null
+  - slow
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Assassinate
   cooldown:
@@ -155,6 +227,21 @@ abilities:
   - 'Cost: 90 mana'
   description: Teleport to the target location, then strike twice to assassinate a
     foe
+  detail_kinds:
+  - physical
+  - physical
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Agony
   kit_changes: Vanish no longer grants Stealth, but it inflicts Blind instead of Bleed.

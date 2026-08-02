@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.65
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Artio Basic Attack
@@ -43,6 +52,17 @@ abilities:
   - 'Bear Range: 1.92 meters'
   - 'Bear Cone Angle: 120 degrees'
   description: Artio's s change depending on her current stance
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - magical
+  - null
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Decompose
   details:
@@ -51,6 +71,10 @@ abilities:
   - 'Debuff Duration: 6 seconds'
   description: When Artio hits enemy gods with damaging abilities, the target will
     begin to decompose, reducing their Protections .
+  detail_kinds:
+  - debuff
+  - debuff
+  - debuff
 aspects:
 - name: Aspect of the Denmother
   kit_changes: Artio can only change stances inside the fountain. Upon leaving the

@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.0
+    per_level: 2.21
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Ah Puch Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Hollow Ground
   details:
@@ -49,6 +64,13 @@ abilities:
   description: Exhume decaying corpses at will. When you walk over a decaying corpse,
     reduce the Cooldown of Undead Surge and Corpse Explosion , and restore a portion
     of your max Health and Mana
+  detail_kinds:
+  - null
+  - null
+  - null
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Undead Surge
   cooldown:
@@ -77,6 +99,22 @@ abilities:
   description: Corpses explode on contact, at max range, or when reactivating Raise
     two decaying corpses from the underworld that surge forward, dealing Magical Damage
     . Enemies hit are Slowed and have Reduced Healing for a duration
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - slow
+  - slow
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Corpse Explosion
   cooldown:
@@ -94,6 +132,17 @@ abilities:
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 mana'
   description: Cause the target area to explode, dealing Magical Damage Corpse
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Fleeting Breath
   cooldown:
@@ -120,6 +169,19 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Throw a charm from the underworld that awakens a decaying corpse, applying
     miasma to enemies in an area, dealing Magical Damage over time
+  detail_kinds:
+  - heal
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - debuff
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Empty the Crypts
   cooldown:
@@ -146,6 +208,19 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Unleash a field of spirits at a target location for 6 seconds. Enemies
     inside the field take Magical Damage every 0.5 seconds
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - null
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Death March
   kit_changes: Each decaying corpse you walk over reduces the Cooldown of Fleeting

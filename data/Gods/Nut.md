@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 48.12
+    per_level: 2.76
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Nut Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Flux
   details:
@@ -50,6 +65,13 @@ abilities:
   description: Otherwise, Attacks grant Astral . Abilities consume this for bonus
     Magical Damage and effects. While Strength exceeds Intelligence, Ability hits
     grant Stellar which provides Attack Speed
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - magical
+  - mechanic
 - slot: 1st Ability
   name: Convergence
   cooldown:
@@ -80,6 +102,22 @@ abilities:
     . Nut always shoots at least once, but may fire up to an additional 4 shots by
     using stacks. Hitting an enemy with an Attack provides 1 stack, hitting an enemy
     god provides 2
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Crashing Comet
   cooldown:
@@ -105,6 +143,22 @@ abilities:
   - 'Cost: 65 mana'
   description: Call down a comet that deals Magical Damage where it lands and less
     Magical Damage in an area around it
+  detail_kinds:
+  - null
+  - debuff
+  - debuff
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Warp
   cooldown:
@@ -131,6 +185,19 @@ abilities:
   description: Teleport in the direction you are moving and fire homing projectiles
     at nearby enemies that deal Magical Damage and applies a stacking slow . Subsequent
     hits deal 33% damage
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Skyfall
   cooldown:
@@ -156,6 +223,18 @@ abilities:
   description: Become CC Immune and ascend into the sky. Fire a massive black hole
     that deals Magical Damage before detonating for additional Magical Damage and
     Pulling enemies towards the center
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Cosmos
   kit_changes: Flux becomes Cosmic Flux (Mitigation, decays). Decaying past 10 stacks

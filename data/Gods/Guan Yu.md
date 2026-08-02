@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Guan Yu Basic Attack
@@ -40,6 +49,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Battle Fervor
   details:
@@ -55,6 +71,18 @@ abilities:
   - 'Max Stacks Buff Duration: 5 seconds'
   - 'Max Stacks: 20'
   description: Gain stacks of Fervor when dealing or taking damage
+  detail_kinds:
+  - buff
+  - buff
+  - null
+  - null
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Conviction
   cooldown:
@@ -79,6 +107,19 @@ abilities:
   description: If Guan Yu would benefit from the Cooldown Reduction , but it was used
     during the cast of another ability, that ability will receive the Cooldown Reduction
     when it goes on cooldown Heal yourself and nearby allied gods
+  detail_kinds:
+  - heal
+  - buff
+  - null
+  - buff
+  - heal
+  - heal
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Warrior's Will
   cooldown:
@@ -100,6 +141,20 @@ abilities:
   - 'Cost: 50 mana'
   description: Dash forward, dealing Physical Damage to and Slowing enemies you pass
     through
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - physical
+  - physical
+  - slow
+  - slow
+  - slow
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Taolu Assault
   cooldown:
@@ -124,6 +179,19 @@ abilities:
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
   description: Swing your blade in a flurry, dealing Physical Damage repeatedly and
     stealing protections from enemies hit up to 3 times
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Cavalry Charge
   cooldown:
@@ -153,6 +221,21 @@ abilities:
   description: Mount a warhorse, gaining CC Immunity . Strike enemies while riding,
     dealing Physical Damage . Dismount with a final swing that also Stuns all enemies
     hit
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the General
   kit_changes: Battle Fervor now provides Intelligence instead of Attack Speed. Conviction

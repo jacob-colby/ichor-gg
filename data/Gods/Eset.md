@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 41.04
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.65
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Eset Basic Attack
@@ -40,6 +49,14 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Explosion Radius: 0.96 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Funeral Rites
   details:
@@ -54,6 +71,13 @@ abilities:
     Health Regen and Mana Regen to her and nearby allies. Additionally, every third
     Attack from Eset is empowered; allowing it to hit in a wider radius and dealing
     Bonus Damage based on her stacks of Invocation
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - magical
+  - buff
+  - buff
 - slot: 1st Ability
   name: Wing Gust
   cooldown:
@@ -84,6 +108,19 @@ abilities:
   description: While channeling, Eset gains Movement Speed , reduced backpedal and
     strafing penalties , and Knockback and Root immunity Fire 4 projectiles in a line,
     each dealing Magical Damage to all targets in their path
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - null
+  - buff
+  - null
+  - magical
+  - magical
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Spirit Ball
   cooldown:
@@ -117,6 +154,19 @@ abilities:
     and Stuns for 1.5 seconds at max range Send forth a ball of spirit energy. While
     it travels, Eset can re-activate this ability to detonate the ball, dealing Magical
     Damage and Stunning enemies
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - buff
+  - magical
+  - null
+  - magical
+  - magical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Dispel Magic
   cooldown:
@@ -150,6 +200,20 @@ abilities:
   description: If Eset successfully hits an enemy god, allies near the or Eset gain
     a Health Shield Eset Silences and Slows enemy gods at her target location. Enemy
     gods hit also have reduced Magical Protections
+  detail_kinds:
+  - shield
+  - shield
+  - shield
+  - shield
+  - shield
+  - slow
+  - debuff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Circle of Protection
   cooldown:
@@ -181,6 +245,22 @@ abilities:
   description: Call down your staff and create a Circle of Protective Magic for 5
     seconds before it explodes, dealing Magical Damage to all enemies and Healing
     all allies in the area
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - buff
+  - magical
+  - magical
+  - magical
+  - heal
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Lifewarden
   kit_changes: Dispel Magic no longer requires an enemy god hit to shield allies and

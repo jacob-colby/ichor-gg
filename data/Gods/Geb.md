@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Geb Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Hard as Rock
   details:
@@ -46,6 +61,9 @@ abilities:
   description: TAKE REDUCED DAMAGE Geb cannot take more than 20% of his max HP from
     a single attack. Additionally, Geb takes Reduced Damage from enemy god Attacks
     and Critical Strikes
+  detail_kinds:
+  - buff
+  - buff
 - slot: 1st Ability
   name: Roll Out
   cooldown:
@@ -80,6 +98,23 @@ abilities:
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Charge forward, stopping on the first enemy god hit
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - mechanic
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Shock Wave
   cooldown:
@@ -100,6 +135,15 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Create a shock wave in a cone, dealing Magical Damage and Knocking
     Up enemies hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Stone Shield
   cooldown:
@@ -117,6 +161,16 @@ abilities:
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 mana'
   description: Provide yourself or an allied god a Health Shield
+  detail_kinds:
+  - shield
+  - shield
+  - shield
+  - shield
+  - shield
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Cataclysm
   cooldown:
@@ -138,6 +192,16 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Pull apart the earth, dealing Magical Damage and Stunning enemy gods
     hit
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - mechanic
+  - magical
+  - magical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Calamity
   kit_changes: Geb's attacks are ranged, travel slowly, and pierce with damage falloff.

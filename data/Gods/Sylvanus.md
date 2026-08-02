@@ -29,6 +29,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 41.04
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Sylvanus Basic Attack
@@ -39,6 +48,12 @@ abilities:
   - 'Radius: 1.6 meters'
   description: Lob a projectile at a target location that explodes, dealing Magical
     Damage to all enemies
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Nature's Bounty
   details:
@@ -47,6 +62,9 @@ abilities:
   description: When your abilities hit or are deployed, a seed pod appears. Picking
     it up restores Mana and reduces your cooldowns . Picking up 8 spawns a pod near
     Sylvanus
+  detail_kinds:
+  - null
+  - buff
 - slot: 1st Ability
   name: Verdant Growth
   cooldown:
@@ -79,6 +97,21 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Throw a pod that deals Magical Damage , applies Protection Reduction
     , and Roots enemies hit
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - debuff
+  - null
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - debuff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Wisps
   cooldown:
@@ -107,6 +140,20 @@ abilities:
   description: can revive Wilted Flowers or cause Living Flowers to grant their Protections
     in an aura Release that restores Health to allies or deals Magical Damage to enemies
     repeatedly over time. Allies gain Protections while healed
+  damage_type: magical
+  detail_kinds:
+  - heal
+  - null
+  - heal
+  - heal
+  - heal
+  - magical
+  - magical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Nature's Grasp
   cooldown:
@@ -133,6 +180,15 @@ abilities:
   - 'Cost: 70 | 65 | 60 | 55 | 50 mana'
   description: Extend a vine that Stuns the first enemy god hit and Pulls them toward
     you
+  detail_kinds:
+  - buff
+  - null
+  - stun
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Wrath of Terra
   cooldown:
@@ -149,6 +205,15 @@ abilities:
   - 'Cost: 100 mana'
   description: Slam the ground, Knocking Up enemies in an area and dealing Magical
     Damage repeatedly over time
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Grover's Wrath
   kit_changes: 'Attacks: +15% damage to targets debuffed by Sylvanus. Wisp''s Heal,
