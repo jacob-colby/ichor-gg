@@ -51,7 +51,7 @@ builds:
       fit: 0.55
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -80,7 +80,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Kinetic Cuirass
+  - Spectral Armor
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -90,8 +90,8 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.48
+      total: 0.53
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.62
     Shield of the Phoenix:
-      total: 0.53
+      total: 0.58
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.77
     Spectral Armor:
-      total: 0.48
+      total: 0.53
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.56
     Amanita Charm:
-      total: 0.68
-      efficiency: 0.44
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 1.0
     Erosion:
-      total: 0.5
+      total: 0.55
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.72
     Pharaoh's Curse:
-      total: 0.47
+      total: 0.52
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -142,18 +142,18 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Crusher
   - Amanita Charm
+  - Erosion
   flex_slots:
   - Jotunn's Revenge
-  - The Crusher
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Stone of Binding — magical protection
+    swap_item: Stone of Binding
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.55
+      total: 0.52
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -187,18 +187,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
-    The Crusher:
-      total: 0.52
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Amanita Charm:
       total: 0.65
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.85
+    Erosion:
+      total: 0.49
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -314,7 +314,7 @@ builds:
       fit: 0.55
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.99

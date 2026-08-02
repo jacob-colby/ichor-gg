@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Mystical Mail:
-      total: 0.53
+      total: 0.52
       efficiency: 0.3
       win: 0.5
       pick: 0.0
@@ -51,7 +51,7 @@ builds:
       fit: 0.65
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -99,8 +99,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.55
+      total: 0.5
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -118,7 +118,7 @@ builds:
       fit: 0.55
     Amanita Charm:
       total: 0.69
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -152,11 +152,11 @@ builds:
     swap: Resolute Mantle — CC-immunity / cleanse
     swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -164,41 +164,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Shield of the Phoenix:
-      total: 0.53
+      total: 0.59
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.77
     Mystical Mail:
-      total: 0.49
+      total: 0.53
       efficiency: 0.3
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.76
     Spectral Armor:
-      total: 0.53
+      total: 0.58
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.66
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.55
+      total: 0.6
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.82
     Stampede:
-      total: 0.51
+      total: 0.55
       efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.76
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -210,8 +210,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Jotunn's Revenge
   - Avenging Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -254,7 +254,7 @@ builds:
       fit: 0.98
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
-  - Soul Gem
   flex_slots:
-  - Soul Gem
-  - Damaru
+  - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -301,34 +301,34 @@ builds:
       fit: 0.67
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.6
-      efficiency: 0.21
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Soul Gem:
       total: 0.53
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -366,7 +366,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Mystical Mail:
-      total: 0.53
+      total: 0.52
       efficiency: 0.3
       win: 0.5
       pick: 0.0
@@ -379,7 +379,7 @@ builds:
       fit: 0.65
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

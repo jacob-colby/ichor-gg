@@ -151,7 +151,12 @@ def build_index(repo_root: Path) -> dict:
              # predicted_cost. Rounded to 2dp — these are prices, not weights.
              "item_gold_values": {k: round(v, 2) for k, v in sorted(gold_values.items())},
              "god_item_scores": _god_item_scores(gods, builds, items, eff, weights, tags_map),
-             "draft": weights.get("draft", {}),
+             # The viewer re-ranks a core client-side and has to apply the same
+             # sustain cap the pipeline applied when it assembled one. It used
+             # to hand-copy this rule's conditions into TypeScript, where the
+             # two could drift silently; shipping the rule keeps one authority.
+             "draft": {**weights.get("draft", {}),
+                       "lifesteal_caps": weights.get("lifesteal_caps", [])},
              "starters": weights.get("starters", []),
              "roster": _load_roster(data_root),
              "data_updated": _data_updated(gods, builds),

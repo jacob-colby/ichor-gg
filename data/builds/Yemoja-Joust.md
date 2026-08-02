@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Stygian Anchor
   - Eye of Providence
   - Kinetic Cuirass
-  - Void Stone
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Spectral Armor
-  - Void Stone
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -26,11 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Stygian Anchor:
+      total: 0.5
+      efficiency: 0.25
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Eye of Providence:
       total: 0.55
       efficiency: 0.47
@@ -43,12 +49,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Void Stone:
-      total: 0.5
-      efficiency: 0.29
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     Spectral Armor:
       total: 0.55
       efficiency: 0.49
@@ -57,7 +57,7 @@ builds:
       fit: 0.61
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -77,8 +77,8 @@ builds:
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
-  - Soul Gem
   flex_slots:
   - Spectral Armor
   - Eye of Providence
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.48
+      total: 0.54
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.62
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.72
     Spectral Armor:
-      total: 0.5
+      total: 0.56
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.63
     Amanita Charm:
-      total: 0.71
-      efficiency: 0.44
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 1.0
+    Rod of Asclepius:
+      total: 0.68
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
     Erosion:
-      total: 0.53
+      total: 0.6
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.68
-    Soul Gem:
-      total: 0.66
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.92
+      fit: 0.82
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.51
-      efficiency: 0.33
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.68
     Stone of Binding:
       total: 0.5
-      efficiency: 0.27
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -269,15 +269,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Stygian Anchor
   - Eye of Providence
   - Kinetic Cuirass
-  - Void Stone
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Spectral Armor
-  - Void Stone
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -289,11 +289,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Stygian Anchor:
+      total: 0.5
+      efficiency: 0.25
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Eye of Providence:
       total: 0.55
       efficiency: 0.47
@@ -306,12 +312,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Void Stone:
-      total: 0.5
-      efficiency: 0.29
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     Spectral Armor:
       total: 0.55
       efficiency: 0.49
@@ -320,7 +320,7 @@ builds:
       fit: 0.61
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

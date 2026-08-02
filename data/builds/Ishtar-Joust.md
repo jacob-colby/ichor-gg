@@ -7,24 +7,24 @@ builds:
   archetype: core
   slot_order:
   - Tyrfing
-  - Rage
   - The Reaper
   - Riptalon
   - Damaru
   - Demon Blade
+  - Eros' Bow
   flex_slots:
   - Damaru
-  - Rage
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
     swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -37,27 +37,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Rage:
-      total: 0.45
-      efficiency: 0.35
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     The Reaper:
-      total: 0.54
-      efficiency: 0.44
+      total: 0.48
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.63
     Riptalon:
-      total: 0.48
-      efficiency: 0.27
+      total: 0.51
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.7
     Damaru:
-      total: 0.46
-      efficiency: 0.37
+      total: 0.48
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -67,6 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
+    Eros' Bow:
+      total: 0.45
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -75,7 +75,7 @@ builds:
   slot_order:
   - Tyrfing
   - Rage
-  - The Reaper
+  - Riptalon
   - Damaru
   - Demon Blade
   - Eros' Bow
@@ -110,15 +110,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    The Reaper:
-      total: 0.51
-      efficiency: 0.44
+    Riptalon:
+      total: 0.5
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.68
     Damaru:
-      total: 0.47
-      efficiency: 0.37
+      total: 0.49
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -138,67 +138,67 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Shield Splitter
-  - The Reaper
+  - Shield of the Phoenix
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Erosion
-  - Shield Splitter
+  - Shield of the Phoenix
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Shield Splitter:
-      total: 0.41
-      efficiency: 0.43
+    Shield of the Phoenix:
+      total: 0.49
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.4
-    The Reaper:
-      total: 0.48
-      efficiency: 0.44
+      fit: 0.58
+    Spectral Armor:
+      total: 0.49
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.48
     Amanita Charm:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.68
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.91
     Erosion:
-      total: 0.42
+      total: 0.5
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.61
     Pharaoh's Curse:
-      total: 0.44
+      total: 0.53
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.67
     Shogun's Ofuda:
-      total: 0.42
+      total: 0.5
       efficiency: 0.33
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -206,11 +206,11 @@ builds:
   - Avenging Blade
   - Jotunn's Revenge
   - Void Stone
-  - The Reaper
-  - Tekko-Kagi
+  - Riptalon
   - The Crusher
+  - Heartseeker
   flex_slots:
-  - Avenging Blade
+  - Heartseeker
   - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.55
+      total: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -246,21 +246,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    The Reaper:
-      total: 0.64
+    Riptalon:
+      total: 0.61
+      efficiency: 0.32
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
+    The Crusher:
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.84
-    Tekko-Kagi:
-      total: 0.49
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
       fit: 0.61
-    The Crusher:
-      total: 0.55
-      efficiency: 0.49
+    Heartseeker:
+      total: 0.47
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -269,24 +269,24 @@ builds:
   archetype: model
   slot_order:
   - Tyrfing
-  - Rage
   - The Reaper
   - Riptalon
   - Damaru
   - Demon Blade
+  - Eros' Bow
   flex_slots:
   - Damaru
-  - Rage
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
     swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -299,27 +299,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Rage:
-      total: 0.45
-      efficiency: 0.35
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     The Reaper:
-      total: 0.54
-      efficiency: 0.44
+      total: 0.48
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.63
     Riptalon:
-      total: 0.48
-      efficiency: 0.27
+      total: 0.51
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.7
     Damaru:
-      total: 0.46
-      efficiency: 0.37
+      total: 0.48
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -329,5 +323,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
+    Eros' Bow:
+      total: 0.45
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
   starter: *id001
 ---

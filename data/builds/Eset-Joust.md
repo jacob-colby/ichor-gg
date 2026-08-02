@@ -7,13 +7,13 @@ builds:
   archetype: core
   slot_order:
   - Divine Ruin
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
-  - Soul Gem
+  - Obsidian Shard
   flex_slots:
-  - Doom Orb
+  - The Cosmic Horror
   - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
@@ -37,36 +37,36 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
+    Gluttonous Grimoire:
+      total: 0.68
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.62
-      efficiency: 0.47
+      total: 0.59
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Doom Orb:
+    Spear of the Magus:
+      total: 0.62
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Obsidian Shard:
       total: 0.59
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Spear of the Magus:
-      total: 0.6
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Divine Ruin
   - Spear of Desolation
-  - The Cosmic Horror
   - Spear of the Magus
+  - Obsidian Shard
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Spear of the Magus
   - Divine Ruin
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -105,26 +105,26 @@ builds:
       pick: 0.0
       fit: 0.62
     Spear of Desolation:
-      total: 0.6
-      efficiency: 0.43
+      total: 0.55
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.78
-    The Cosmic Horror:
-      total: 0.51
-      efficiency: 0.47
+    Spear of the Magus:
+      total: 0.52
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Spear of the Magus:
-      total: 0.49
-      efficiency: 0.43
+    Obsidian Shard:
+      total: 0.48
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -138,64 +138,64 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Divine Ruin
-  - Stygian Anchor
-  - Spear of Desolation
+  - Eye of Providence
+  - Kinetic Cuirass
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Erosion
-  - Stygian Anchor
+  - Spectral Armor
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.47
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Stygian Anchor:
-      total: 0.43
-      efficiency: 0.25
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Spear of Desolation:
-      total: 0.46
-      efficiency: 0.43
+    Eye of Providence:
+      total: 0.49
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Amanita Charm:
-      total: 0.63
+    Kinetic Cuirass:
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.6
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Amanita Charm:
+      total: 0.72
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
     Erosion:
-      total: 0.45
+      total: 0.54
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.7
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -203,67 +203,67 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
   - Doom Orb
   - Spear of the Magus
-  - The World Stone
-  - Soul Gem
+  - Obsidian Shard
   flex_slots:
+  - The Cosmic Horror
   - Doom Orb
-  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Gluttonous Grimoire:
+      total: 0.72
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.94
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.65
-      efficiency: 0.47
+      total: 0.62
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.84
     Doom Orb:
+      total: 0.57
+      efficiency: 0.31
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Spear of the Magus:
+      total: 0.66
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Obsidian Shard:
       total: 0.62
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Spear of the Magus:
-      total: 0.63
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
-    The World Stone:
-      total: 0.61
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -306,25 +306,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -335,13 +335,13 @@ builds:
   archetype: model
   slot_order:
   - Divine Ruin
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
-  - Soul Gem
+  - Obsidian Shard
   flex_slots:
-  - Doom Orb
+  - The Cosmic Horror
   - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
@@ -365,35 +365,35 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
+    Gluttonous Grimoire:
+      total: 0.68
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.62
-      efficiency: 0.47
+      total: 0.59
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Doom Orb:
+    Spear of the Magus:
+      total: 0.62
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Obsidian Shard:
       total: 0.59
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Spear of the Magus:
-      total: 0.6
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 ---

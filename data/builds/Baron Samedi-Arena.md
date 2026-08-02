@@ -51,7 +51,7 @@ builds:
       fit: 0.62
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -123,8 +123,8 @@ builds:
       pick: 0.0
       fit: 0.64
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -141,9 +141,9 @@ builds:
   - Mystical Mail
   - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
   - Stampede
-  - Soul Gem
   flex_slots:
   - Stampede
   - Mystical Mail
@@ -164,61 +164,61 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Mystical Mail:
-      total: 0.48
+      total: 0.52
       efficiency: 0.3
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.74
     Spectral Armor:
-      total: 0.53
+      total: 0.56
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.64
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Rod of Asclepius:
+      total: 0.72
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.54
+      total: 0.59
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.79
     Stampede:
-      total: 0.5
+      total: 0.54
       efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
+      fit: 0.74
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Void Shield
   - Void Stone
-  - Spear of Desolation
   - Spectral Armor
+  - Amanita Charm
   - Erosion
-  - Soul Gem
+  - Stampede
   flex_slots:
   - Spectral Armor
-  - Spear of Desolation
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -240,43 +240,43 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.97
-    Spear of Desolation:
-      total: 0.51
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Spectral Armor:
       total: 0.53
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Amanita Charm:
+      total: 0.7
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.96
     Erosion:
       total: 0.55
       efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+    Stampede:
+      total: 0.5
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: fun-crit
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
-  - Soul Gem
   flex_slots:
-  - Soul Gem
-  - Damaru
+  - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -301,34 +301,34 @@ builds:
       fit: 0.67
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.6
-      efficiency: 0.21
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Soul Gem:
       total: 0.53
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -379,7 +379,7 @@ builds:
       fit: 0.62
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

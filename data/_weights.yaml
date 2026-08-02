@@ -129,7 +129,7 @@ flavors:
   bruiser:
     damage_types: null
     match_any: null
-    stats: {Health: 1.0, Physical Protection: 0.8, Magical Protection: 0.8}
+    stats: {Max Health: 1.0, Physical Protection: 0.8, Magical Protection: 0.8}
     tag_bonus: {sustain: 0.3}
     max_lifesteal: 2
   anti-tank:

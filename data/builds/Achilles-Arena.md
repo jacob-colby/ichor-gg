@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - The Crusher
+  - Runeforged Hammer
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - The Crusher
-  - Stampede
+  - Jotunn's Revenge
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -32,14 +32,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.55
+      total: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.54
-    The Crusher:
-      total: 0.54
-      efficiency: 0.49
+    Runeforged Hammer:
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -51,7 +51,7 @@ builds:
       fit: 0.63
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Mystical Mail
-  - The Reaper
+  - Kinetic Cuirass
+  - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
   - Stampede
-  - Mystical Mail
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -90,50 +90,50 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Mystical Mail — physical protection
+    swap_item: Mystical Mail
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Mystical Mail:
-      total: 0.5
-      efficiency: 0.3
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-    The Reaper:
+    Kinetic Cuirass:
       total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Shield of the Phoenix:
+      total: 0.56
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     Spectral Armor:
-      total: 0.54
+      total: 0.59
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.68
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.56
+      total: 0.62
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.85
     Stampede:
-      total: 0.51
+      total: 0.56
       efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.78
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -146,7 +146,7 @@ builds:
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
-  - Avenging Blade
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -188,14 +188,14 @@ builds:
       pick: 0.0
       fit: 0.95
     The Crusher:
-      total: 0.6
-      efficiency: 0.49
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.71
     Amanita Charm:
       total: 0.67
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
-  - Soul Gem
   flex_slots:
-  - Soul Gem
-  - Damaru
+  - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -236,48 +236,48 @@ builds:
       fit: 0.67
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.6
-      efficiency: 0.21
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Soul Gem:
       total: 0.53
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Jotunn's Revenge
-  - The Crusher
+  - Runeforged Hammer
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - The Crusher
-  - Stampede
+  - Jotunn's Revenge
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -295,14 +295,14 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.55
+      total: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.54
-    The Crusher:
-      total: 0.54
-      efficiency: 0.49
+    Runeforged Hammer:
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -314,7 +314,7 @@ builds:
       fit: 0.63
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

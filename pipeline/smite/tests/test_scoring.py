@@ -441,3 +441,31 @@ def test_shipped_arena_profile_excludes_the_vision_items():
     # Conquest and Joust both keep them; the exclusion is Arena's alone.
     for mode in ("Conquest", "Joust"):
         assert scoring.resolve_profile(weights, mode)["excluded_items"] == frozenset()
+
+
+def _weight_stat_keys(weights):
+    """Every stat name the config asks `god_fit_score` to look for, from all
+    three blocks that carry one."""
+    keys = set()
+    for m in (weights.get("role_stats") or {}).values():
+        keys |= set(m or {})
+    for block in ("flavors", "aspects"):
+        for cfg in (weights.get(block) or {}).values():
+            keys |= set((cfg or {}).get("stats") or {})
+    return keys
+
+
+def test_no_weight_names_a_stat_no_item_has():
+    """A misspelled stat key is invisible: `god_fit_score` looks it up in the
+    item's stats dict, misses, and contributes nothing — the flavor still
+    scores, just not the way it reads. The bruiser flavor asked for `Health`
+    for months; the real key is `Max Health`, so its headline stat was dead
+    weight in the denominator and nothing said so."""
+    from pathlib import Path
+    from smite import notes, recommend
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    real = set()
+    for p in (recommend.DATA_ROOT / "Items").glob("*.md"):
+        real |= set((notes.read_note(p)[0].get("stats") or {}))
+    unknown = sorted(_weight_stat_keys(weights) - real)
+    assert not unknown, f"_weights.yaml names stats no item carries: {unknown}"

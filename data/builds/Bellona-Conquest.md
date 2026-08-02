@@ -90,7 +90,7 @@ builds:
   - Eye of the Storm
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
+  - Jotunn's Revenge
   - Eye of the Storm
   situational_swaps:
   - vs_tag: heavy_cc
@@ -106,12 +106,12 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Eye of Providence, Jotunn''s Revenge, Shield Splitter, Amanita Charm,
-    Eye of the Storm, Runeforged Hammer, The Crusher, Spectral Armor, Erosion, Hydra''s
-    Lament, Avenging Blade, Shield of the Phoenix, Genji''s Guard, Wyrmskin Hide,
-    The Reaper, Golden Blade, Midgardian Mail, Gladiator''s Shield, Chandra''s Grace,
-    Draconic Scale, Breastplate of Valor, Pharaoh''s Curse, Leviathan''s Hide, Mantle
-    Of Discord, Ancile.'
+    this god: Eye of Providence, Shield Splitter, Amanita Charm, Jotunn''s Revenge,
+    Eye of the Storm, Runeforged Hammer, Spectral Armor, Hydra''s Lament, Erosion,
+    Avenging Blade, Shield of the Phoenix, The Crusher, Genji''s Guard, Wyrmskin Hide,
+    Golden Blade, Breastplate of Valor, Gladiator''s Shield, Chandra''s Grace, Midgardian
+    Mail, Pharaoh''s Curse, Draconic Scale, Mantle Of Discord, Freya''s Tears, Leviathan''s
+    Hide, Shroud of Vengeance.'
   slot_scores:
     Eye of Providence:
       total: 0.48
@@ -120,8 +120,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.48
-      efficiency: 0.55
+      total: 0.47
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -145,7 +145,7 @@ builds:
       fit: 0.62
     Amanita Charm:
       total: 0.47
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -158,82 +158,12 @@ builds:
   - Eye of Providence
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield Splitter
   - Shield of the Phoenix
+  - Runeforged Hammer
   - Amanita Charm
   flex_slots:
-  - Eye of Providence
-  - Shield Splitter
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
-  - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
-  - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
-  - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
-  rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Jotunn''s Revenge, Shield of the Phoenix, The Reaper,
-    Eye of Providence, Chandra''s Grace, Shield Splitter, The Crusher, Runeforged
-    Hammer, Phoenix Feather, Eye of the Storm, Spectral Armor, Hydra''s Lament, Avenging
-    Blade, Erosion, Spirit Robe, Genji''s Guard, Golden Blade, Bloodforge, Wyrmskin
-    Hide, Midgardian Mail, Gladiator''s Shield, Glorious Pridwen, Breastplate of Valor,
-    Pharaoh''s Curse, Leviathan''s Hide.'
-  slot_scores:
-    Eye of Providence:
-      total: 0.46
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
-    Jotunn's Revenge:
-      total: 0.47
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.44
-      win: 0.59
-      pick: 0.17
-      fit: 0.55
-    Shield Splitter:
-      total: 0.45
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
-    Shield of the Phoenix:
-      total: 0.47
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
-    Amanita Charm:
-      total: 0.49
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
-  starter: *id001
-- source: suggested
-  archetype: anti-tank
-  slot_order:
-  - Avenging Blade
-  - Eye of Providence
   - Jotunn's Revenge
-  - Kinetic Cuirass
-  - The Reaper
-  - The Crusher
-  flex_slots:
-  - Eye of Providence
-  - The Reaper
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -242,18 +172,88 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
+    this god: Amanita Charm, Shield of the Phoenix, Eye of Providence, Chandra''s
+    Grace, Jotunn''s Revenge, Runeforged Hammer, Shield Splitter, Eye of the Storm,
+    Phoenix Feather, Spectral Armor, Hydra''s Lament, Avenging Blade, Erosion, The
+    Crusher, The Reaper, Spirit Robe, Wyrmskin Hide, Golden Blade, Genji''s Guard,
+    Gladiator''s Shield, Midgardian Mail, Bloodforge, Pharaoh''s Curse, Breastplate
+    of Valor, Glorious Pridwen, Leviathan''s Hide.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.48
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Jotunn's Revenge:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.44
+      win: 0.59
+      pick: 0.17
+      fit: 0.68
+    Shield of the Phoenix:
+      total: 0.49
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Runeforged Hammer:
+      total: 0.47
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Amanita Charm:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+  starter: *id001
+- source: suggested
+  archetype: anti-tank
+  slot_order:
+  - Avenging Blade
+  - Eye of Providence
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Shield Splitter
+  - The Crusher
+  flex_slots:
+  - Eye of Providence
+  - Shield Splitter
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, The Crusher, Avenging Blade, Eye of Providence,
-    The Reaper, Shield Splitter, Amanita Charm, Runeforged Hammer, Spectral Armor,
-    Screeching Gargoyle, Eye of the Storm, Hydra''s Lament, Void Stone, Stone of Binding,
-    Void Shield, Erosion, Tekko-Kagi, Oath-Sworn Spear, Shield of the Phoenix, Genji''s
-    Guard, Heartseeker, Pendulum Blade, Golden Blade, Chandra''s Grace, Midgardian
-    Mail, Wyrmskin Hide.'
+    for this god: Jotunn''s Revenge, Avenging Blade, The Crusher, Eye of Providence,
+    Shield Splitter, Amanita Charm, Runeforged Hammer, Spectral Armor, Screeching
+    Gargoyle, Hydra''s Lament, Eye of the Storm, Heartseeker, Void Stone, Stone of
+    Binding, Pendulum Blade, Titan''s Bane, Void Shield, Erosion, Genji''s Guard,
+    Shield of the Phoenix, Oath-Sworn Spear, The Reaper, Breastplate of Valor, Chandra''s
+    Grace, Golden Blade, Midgardian Mail.'
   slot_scores:
     Avenging Blade:
       total: 0.47
@@ -268,8 +268,8 @@ builds:
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.55
+      total: 0.49
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -279,15 +279,15 @@ builds:
       win: 0.59
       pick: 0.17
       fit: 0.53
-    The Reaper:
+    Shield Splitter:
       total: 0.45
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.48
     The Crusher:
-      total: 0.48
-      efficiency: 0.49
+      total: 0.47
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -295,15 +295,15 @@ builds:
 - source: suggested
   archetype: fun-crit
   slot_order:
+  - Golden Blade
   - Lernaean Bow
-  - Jotunn's Revenge
   - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
   flex_slots:
-  - Jotunn's Revenge
   - Demon Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -320,18 +320,18 @@ builds:
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
+    Golden Blade:
+      total: 0.22
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Lernaean Bow:
       total: 0.23
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Jotunn's Revenge:
-      total: 0.23
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.23
     Tyrfing:
       total: 0.23
       efficiency: 0.37
@@ -345,8 +345,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.23
-      efficiency: 0.37
+      total: 0.24
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -368,7 +368,7 @@ builds:
   - Eye of the Storm
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
+  - Jotunn's Revenge
   - Eye of the Storm
   situational_swaps:
   - vs_tag: heavy_cc
@@ -384,12 +384,12 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Eye of Providence, Jotunn''s Revenge, Shield Splitter,
-    Amanita Charm, Eye of the Storm, Runeforged Hammer, The Crusher, Spectral Armor,
-    Erosion, Hydra''s Lament, Avenging Blade, Shield of the Phoenix, Genji''s Guard,
-    Wyrmskin Hide, The Reaper, Golden Blade, Midgardian Mail, Gladiator''s Shield,
-    Chandra''s Grace, Draconic Scale, Breastplate of Valor, Pharaoh''s Curse, Leviathan''s
-    Hide, Mantle Of Discord, Ancile.'
+    Underrated for this god: Eye of Providence, Shield Splitter, Amanita Charm, Jotunn''s
+    Revenge, Eye of the Storm, Runeforged Hammer, Spectral Armor, Hydra''s Lament,
+    Erosion, Avenging Blade, Shield of the Phoenix, The Crusher, Genji''s Guard, Wyrmskin
+    Hide, Golden Blade, Breastplate of Valor, Gladiator''s Shield, Chandra''s Grace,
+    Midgardian Mail, Pharaoh''s Curse, Draconic Scale, Mantle Of Discord, Freya''s
+    Tears, Leviathan''s Hide, Shroud of Vengeance.'
   slot_scores:
     Eye of Providence:
       total: 0.48
@@ -398,8 +398,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.48
-      efficiency: 0.55
+      total: 0.47
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -423,7 +423,7 @@ builds:
       fit: 0.62
     Amanita Charm:
       total: 0.47
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6

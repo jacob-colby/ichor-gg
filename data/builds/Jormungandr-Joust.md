@@ -57,7 +57,7 @@ builds:
       fit: 0.57
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -77,10 +77,10 @@ builds:
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
-  - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
+  - Spectral Armor
   - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,54 +99,54 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.46
+      total: 0.52
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.56
     Kinetic Cuirass:
-      total: 0.49
+      total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.66
     Spectral Armor:
-      total: 0.49
+      total: 0.54
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.59
     Amanita Charm:
-      total: 0.69
-      efficiency: 0.44
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 1.0
+    Rod of Asclepius:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Erosion:
-      total: 0.52
+      total: 0.57
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.64
-    Soul Gem:
-      total: 0.6
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
+      fit: 0.76
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Screeching Gargoyle
   - Stone of Binding
-  - Kinetic Cuirass
   - Void Shield
   - Void Stone
   - Erosion
   - Soul Gem
   flex_slots:
   - Stone of Binding
-  - Kinetic Cuirass
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -163,18 +163,18 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.48
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Stone of Binding:
       total: 0.49
-      efficiency: 0.27
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Kinetic Cuirass:
-      total: 0.48
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Void Shield:
       total: 0.58
       efficiency: 0.29
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.62
     Soul Gem:
-      total: 0.69
-      efficiency: 0.41
+      total: 0.67
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -320,7 +320,7 @@ builds:
       fit: 0.57
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

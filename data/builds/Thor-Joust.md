@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -50,14 +50,14 @@ builds:
       pick: 0.0
       fit: 0.58
     The Crusher:
-      total: 0.55
-      efficiency: 0.49
+      total: 0.52
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.61
     Amanita Charm:
       total: 0.67
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -75,20 +75,20 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Hydra's Lament
+  - Pendulum Blade
   - The Crusher
   - Spectral Armor
   - Amanita Charm
-  - Erosion
   flex_slots:
+  - Spectral Armor
   - Hydra's Lament
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -99,20 +99,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.55
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.56
     Hydra's Lament:
-      total: 0.43
-      efficiency: 0.44
+      total: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Pendulum Blade:
+      total: 0.45
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     The Crusher:
-      total: 0.5
-      efficiency: 0.49
+      total: 0.47
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -123,30 +129,24 @@ builds:
       pick: 0.0
       fit: 0.39
     Amanita Charm:
-      total: 0.58
-      efficiency: 0.44
+      total: 0.59
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Erosion:
-      total: 0.43
-      efficiency: 0.39
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Eye of Providence
   - Kinetic Cuirass
-  - The Reaper
-  - The Crusher
+  - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
-  - The Crusher
+  - Spectral Armor
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -155,50 +155,50 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.48
-      efficiency: 0.44
+    Eye of Providence:
+      total: 0.51
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.53
-    The Reaper:
+      fit: 0.55
+    Kinetic Cuirass:
       total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    The Crusher:
-      total: 0.47
-      efficiency: 0.49
+      fit: 0.65
+    Shield of the Phoenix:
+      total: 0.56
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.72
     Spectral Armor:
-      total: 0.48
+      total: 0.54
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.58
     Amanita Charm:
-      total: 0.68
-      efficiency: 0.44
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.93
+      fit: 1.0
     Erosion:
-      total: 0.51
+      total: 0.57
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.75
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -207,8 +207,8 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Reaper
   - The Crusher
+  - Amanita Charm
   flex_slots:
   - Void Stone
   - Void Shield
@@ -217,8 +217,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -252,18 +252,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.84
-    The Reaper:
-      total: 0.66
+    The Crusher:
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.87
-    The Crusher:
-      total: 0.61
-      efficiency: 0.49
+      fit: 0.72
+    Amanita Charm:
+      total: 0.62
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -306,25 +306,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -360,8 +360,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -378,14 +378,14 @@ builds:
       pick: 0.0
       fit: 0.58
     The Crusher:
-      total: 0.55
-      efficiency: 0.49
+      total: 0.52
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.61
     Amanita Charm:
       total: 0.67
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.9

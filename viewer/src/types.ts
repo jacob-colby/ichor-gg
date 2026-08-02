@@ -223,6 +223,14 @@ export interface ThreatModel {
   allyPhysical: number;
 }
 
+/** One `lifesteal_caps` rule from _weights.yaml, shipped rather than
+ *  reimplemented. A null/absent condition means "any". */
+export interface LifestealCap {
+  damage_types?: string[] | null;
+  match_any?: string[] | null;
+  max_lifesteal: number;
+}
+
 export interface DraftConfig {
   max_bonus: number;
   per_share: number;
@@ -230,6 +238,8 @@ export interface DraftConfig {
   stat_bonus: Record<string, Record<string, number>>;
   ally_covered: number;
   ally_gap: number;
+  /** Absent on an index built before the rule was shipped. */
+  lifesteal_caps?: LifestealCap[];
 }
 
 export interface TierListModeData {

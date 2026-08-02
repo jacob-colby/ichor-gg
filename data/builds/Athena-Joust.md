@@ -57,7 +57,7 @@ builds:
       fit: 0.67
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -75,10 +75,10 @@ builds:
   slot_order:
   - Eye of Providence
   - Kinetic Cuirass
+  - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Soul Gem
   flex_slots:
   - Spectral Armor
   - Eye of Providence
@@ -90,50 +90,50 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.51
+      total: 0.59
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.71
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.63
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.81
+    Shield of the Phoenix:
+      total: 0.67
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.94
     Spectral Armor:
-      total: 0.52
+      total: 0.59
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.69
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.56
+      total: 0.65
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.74
-    Soul Gem:
-      total: 0.62
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
+      fit: 0.91
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -142,8 +142,8 @@ builds:
   - Kinetic Cuirass
   - Void Shield
   - Void Stone
+  - Amanita Charm
   - Erosion
-  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
   - Stone of Binding
@@ -152,8 +152,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.52
-      efficiency: 0.27
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -187,18 +187,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.92
+    Amanita Charm:
+      total: 0.7
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
     Erosion:
       total: 0.54
       efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -320,7 +320,7 @@ builds:
       fit: 0.67
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

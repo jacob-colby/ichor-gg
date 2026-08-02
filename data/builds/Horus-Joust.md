@@ -57,7 +57,7 @@ builds:
       fit: 0.63
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -93,47 +93,47 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.49
+      total: 0.57
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.66
     Kinetic Cuirass:
-      total: 0.52
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.76
     Shield of the Phoenix:
-      total: 0.6
+      total: 0.67
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.94
     Spectral Armor:
-      total: 0.51
+      total: 0.57
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.66
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.55
+      total: 0.62
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.86
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.51
-      efficiency: 0.33
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -189,7 +189,7 @@ builds:
       fit: 0.9
     Amanita Charm:
       total: 0.68
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.91
@@ -241,25 +241,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -320,7 +320,7 @@ builds:
       fit: 0.63
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

@@ -45,7 +45,11 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                      "tierlist": {"gods": [], "items": [],
                                   **{m.lower(): {"gods": [], "items": []}
                                      for m in recommend.MODES}},
-                     "god_item_scores": {}, "draft": {},
+                     "god_item_scores": {},
+                     # The draft config carries the `lifesteal_caps` rule so
+                     # the viewer applies the pipeline's cap rather than a
+                     # hand-copy of it — empty here, never absent.
+                     "draft": {"lifesteal_caps": []},
                      # Provenance for the community figures — None until the
                      # god-index scrape has run, never an empty dict.
                      "community_source": None,
@@ -488,3 +492,15 @@ def test_build_index_fits_the_regression_once(tmp_path, monkeypatch):
     monkeypatch.setattr(efficiency, "efficiency_scores", counting)
     build_index.build_index(repo)
     assert calls["n"] == 1, f"regression fit {calls['n']} times, expected 1"
+
+
+def test_index_ships_the_lifesteal_rule_the_viewer_needs():
+    """The viewer re-ranks a core client-side and must cap sustain the way the
+    pipeline did. It used to hardcode this rule's conditions in TypeScript,
+    where editing the YAML row would have desynced the two silently."""
+    from pathlib import Path
+    from smite import recommend, scoring
+    r = build_index.build_index(Path(__file__).resolve().parents[3])
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    assert r["draft"]["lifesteal_caps"] == weights["lifesteal_caps"]
+    assert r["draft"]["lifesteal_caps"], "the rule is empty; the test proves nothing"

@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
   - Lernaean Bow
   - The Reaper
   - Riptalon
-  - The Crusher
   - Eros' Bow
   - Pharaoh's Curse
   flex_slots:
-  - Eros' Bow
   - Pharaoh's Curse
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -31,30 +31,30 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.47
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Lernaean Bow:
-      total: 0.5
-      efficiency: 0.36
+      total: 0.51
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Reaper:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.52
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.52
-      efficiency: 0.27
+      total: 0.55
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.77
-    The Crusher:
-      total: 0.47
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Eros' Bow:
       total: 0.47
       efficiency: 0.38
@@ -75,7 +75,7 @@ builds:
   slot_order:
   - Lernaean Bow
   - Rage
-  - The Reaper
+  - Riptalon
   - Damaru
   - Demon Blade
   - Eros' Bow
@@ -99,26 +99,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.48
-      efficiency: 0.36
+      total: 0.49
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.6
     Rage:
-      total: 0.41
+      total: 0.4
       efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.46
-    The Reaper:
-      total: 0.56
-      efficiency: 0.44
+    Riptalon:
+      total: 0.54
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.75
     Damaru:
-      total: 0.42
-      efficiency: 0.37
+      total: 0.44
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -140,7 +140,7 @@ builds:
   slot_order:
   - Lernaean Bow
   - Jotunn's Revenge
-  - The Reaper
+  - Riptalon
   - The Crusher
   - Eros' Bow
   - Pharaoh's Curse
@@ -164,37 +164,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.43
-      efficiency: 0.36
+      total: 0.44
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.55
+      total: 0.49
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.46
-    The Reaper:
-      total: 0.54
-      efficiency: 0.44
+    Riptalon:
+      total: 0.5
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.68
     The Crusher:
-      total: 0.46
-      efficiency: 0.49
+      total: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.43
     Eros' Bow:
-      total: 0.42
+      total: 0.43
       efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.47
     Pharaoh's Curse:
-      total: 0.42
+      total: 0.43
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -203,67 +203,67 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - The Reaper
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
+  - Umbral Link
   flex_slots:
-  - Erosion
   - Spectral Armor
+  - Umbral Link
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    The Reaper:
-      total: 0.52
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Spectral Armor:
-      total: 0.45
+      total: 0.51
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.54
     Amanita Charm:
-      total: 0.63
-      efficiency: 0.44
+      total: 0.69
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.94
     Erosion:
-      total: 0.45
+      total: 0.51
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.64
     Pharaoh's Curse:
-      total: 0.48
+      total: 0.54
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.71
     Shogun's Ofuda:
-      total: 0.45
+      total: 0.52
       efficiency: 0.33
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.71
+    Umbral Link:
+      total: 0.51
+      efficiency: 0.25
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -272,7 +272,7 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Reaper
+  - Riptalon
   - The Crusher
   flex_slots:
   - Void Shield
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.55
+      total: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -317,15 +317,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    The Reaper:
-      total: 0.62
-      efficiency: 0.44
+    Riptalon:
+      total: 0.59
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.86
     The Crusher:
-      total: 0.53
-      efficiency: 0.49
+      total: 0.51
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Golden Blade
   - Lernaean Bow
   - The Reaper
   - Riptalon
-  - The Crusher
   - Eros' Bow
   - Pharaoh's Curse
   flex_slots:
-  - Eros' Bow
   - Pharaoh's Curse
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -358,30 +358,30 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.47
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Lernaean Bow:
-      total: 0.5
-      efficiency: 0.36
+      total: 0.51
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Reaper:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.52
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.52
-      efficiency: 0.27
+      total: 0.55
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.77
-    The Crusher:
-      total: 0.47
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Eros' Bow:
       total: 0.47
       efficiency: 0.38

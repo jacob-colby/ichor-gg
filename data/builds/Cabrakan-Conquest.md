@@ -84,21 +84,21 @@ builds:
   archetype: core
   slot_order:
   - Eye of Providence
+  - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
   - Shifter's Shield
   - Amanita Charm
-  - Erosion
   flex_slots:
   - Breastplate of Valor
-  - Erosion
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
@@ -107,11 +107,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Eye of Providence, Amanita Charm, Erosion, Spectral
-    Armor, Shield of the Phoenix, Gluttonous Grimoire, Draconic Scale, Gladiator''s
-    Shield, Midgardian Mail, Ethereal Staff, Freya''s Tears, Mantle Of Discord, Rod
-    of Asclepius, Prophetic Cloak, Leviathan''s Hide, Shroud of Vengeance, Chandra''s
-    Grace, Ancile, Oni Hunter''s Garb, Phoenix Feather, Magi''s Cloak, Soul Gem, Screeching
-    Gargoyle.'
+    Armor, Gluttonous Grimoire, Shield of the Phoenix, Gladiator''s Shield, Draconic
+    Scale, Freya''s Tears, Midgardian Mail, Ethereal Staff, Mantle Of Discord, Chandra''s
+    Grace, Prophetic Cloak, Rod of Asclepius, Shroud of Vengeance, Leviathan''s Hide,
+    Oni Hunter''s Garb, Ancile, Phoenix Feather, Magi''s Cloak, Screeching Gargoyle,
+    Stone of Binding.'
   slot_scores:
     Eye of Providence:
       total: 0.5
@@ -119,9 +119,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Breastplate of Valor:
+    Genji's Guard:
       total: 0.47
-      efficiency: 0.4
+      efficiency: 0.46
+      win: 0.53
+      pick: 0.27
+      fit: 0.4
+    Breastplate of Valor:
+      total: 0.48
+      efficiency: 0.42
       win: 0.58
       pick: 0.19
       fit: 0.4
@@ -139,13 +145,7 @@ builds:
       fit: 0.73
     Amanita Charm:
       total: 0.49
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-    Erosion:
-      total: 0.47
-      efficiency: 0.39
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -166,8 +166,8 @@ builds:
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
@@ -179,60 +179,60 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Eye of Providence,
-    Rod of Asclepius, Chandra''s Grace, Soul Gem, Phoenix Feather, Spectral Armor,
-    Erosion, Lifebinder, Gluttonous Grimoire, Blood-Bound Book, Spirit Robe, Bancroft''s
-    Talon, Ethereal Staff, Midgardian Mail, Gladiator''s Shield, Glorious Pridwen,
-    Leviathan''s Hide, Ancile, Spear of Desolation, Oni Hunter''s Garb, Draconic Scale.'
+    Chandra''s Grace, Rod of Asclepius, Gluttonous Grimoire, Phoenix Feather, Spectral
+    Armor, Erosion, Lifebinder, Soul Gem, Spirit Robe, Blood-Bound Book, Gladiator''s
+    Shield, Ethereal Staff, Midgardian Mail, Bancroft''s Talon, Glorious Pridwen,
+    Draconic Scale, Leviathan''s Hide, Oni Hunter''s Garb, Ancile, Yogi''s Necklace.'
   slot_scores:
     Eye of Providence:
-      total: 0.47
+      total: 0.5
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.72
     Breastplate of Valor:
-      total: 0.46
-      efficiency: 0.4
+      total: 0.47
+      efficiency: 0.42
       win: 0.58
       pick: 0.19
-      fit: 0.3
+      fit: 0.37
     Kinetic Cuirass:
-      total: 0.48
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.82
     Shield of the Phoenix:
-      total: 0.48
+      total: 0.51
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.94
     Shifter's Shield:
-      total: 0.48
+      total: 0.51
       efficiency: 0.29
       win: 0.61
       pick: 0.49
-      fit: 0.54
+      fit: 0.72
     Amanita Charm:
-      total: 0.51
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Eye of Providence
+  - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
   - Gluttonous Grimoire
   - Shifter's Shield
-  - The Cosmic Horror
   flex_slots:
   - Breastplate of Valor
-  - The Cosmic Horror
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -247,12 +247,12 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Kinetic Cuirass, Eye of Providence, Soul Gem,
-    Amanita Charm, The Cosmic Horror, Spear of Desolation, Spectral Armor, Screeching
-    Gargoyle, Erosion, Void Stone, Spear of the Magus, Stone of Binding, Void Shield,
-    Doom Orb, Shield of the Phoenix, The World Stone, Ethereal Staff, Rod of Asclepius,
-    Midgardian Mail, Chandra''s Grace, Gladiator''s Shield, Leviathan''s Hide, Mantle
-    Of Discord, Ancile.'
+    for this god: Gluttonous Grimoire, Kinetic Cuirass, Eye of Providence, Amanita
+    Charm, Spear of the Magus, Spectral Armor, Screeching Gargoyle, Soul Gem, Stone
+    of Binding, Void Stone, Erosion, Void Shield, Obsidian Shard, Shield of the Phoenix,
+    The Cosmic Horror, Ethereal Staff, Rod of Asclepius, Chandra''s Grace, Spear of
+    Desolation, Midgardian Mail, Gladiator''s Shield, Mantle Of Discord, Leviathan''s
+    Hide, Oni Hunter''s Garb, Shroud of Vengeance.'
   slot_scores:
     Eye of Providence:
       total: 0.47
@@ -260,9 +260,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Breastplate of Valor:
+    Genji's Guard:
       total: 0.45
-      efficiency: 0.4
+      efficiency: 0.46
+      win: 0.53
+      pick: 0.27
+      fit: 0.27
+    Breastplate of Valor:
+      total: 0.46
+      efficiency: 0.42
       win: 0.58
       pick: 0.19
       fit: 0.27
@@ -273,8 +279,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Gluttonous Grimoire:
-      total: 0.48
-      efficiency: 0.45
+      total: 0.5
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -284,25 +290,19 @@ builds:
       win: 0.61
       pick: 0.49
       fit: 0.5
-    The Cosmic Horror:
-      total: 0.45
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
   starter: *id001
 - source: suggested
   archetype: fun-crit
   slot_order:
+  - Golden Blade
   - Lernaean Bow
-  - Jotunn's Revenge
   - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
   flex_slots:
-  - Jotunn's Revenge
   - Demon Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -319,18 +319,18 @@ builds:
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
+    Golden Blade:
+      total: 0.22
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Lernaean Bow:
       total: 0.23
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Jotunn's Revenge:
-      total: 0.23
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.23
     Tyrfing:
       total: 0.23
       efficiency: 0.37
@@ -344,8 +344,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.23
-      efficiency: 0.37
+      total: 0.24
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -384,11 +384,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Eye of Providence, Amanita Charm, Erosion,
-    Spectral Armor, Shield of the Phoenix, Gluttonous Grimoire, Draconic Scale, Gladiator''s
-    Shield, Midgardian Mail, Ethereal Staff, Freya''s Tears, Mantle Of Discord, Rod
-    of Asclepius, Prophetic Cloak, Leviathan''s Hide, Shroud of Vengeance, Chandra''s
-    Grace, Ancile, Oni Hunter''s Garb, Phoenix Feather, Magi''s Cloak, Soul Gem, Screeching
-    Gargoyle.'
+    Spectral Armor, Gluttonous Grimoire, Shield of the Phoenix, Gladiator''s Shield,
+    Draconic Scale, Freya''s Tears, Midgardian Mail, Ethereal Staff, Mantle Of Discord,
+    Chandra''s Grace, Prophetic Cloak, Rod of Asclepius, Shroud of Vengeance, Leviathan''s
+    Hide, Oni Hunter''s Garb, Ancile, Phoenix Feather, Magi''s Cloak, Screeching Gargoyle,
+    Stone of Binding.'
   slot_scores:
     Eye of Providence:
       total: 0.5
@@ -398,7 +398,7 @@ builds:
       fit: 0.73
     Genji's Guard:
       total: 0.47
-      efficiency: 0.44
+      efficiency: 0.46
       win: 0.53
       pick: 0.27
       fit: 0.4
@@ -416,7 +416,7 @@ builds:
       fit: 0.47
     Amanita Charm:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.73

@@ -9,12 +9,12 @@ builds:
   - Tyrfing
   - The Reaper
   - Riptalon
+  - Damaru
   - Demon Blade
   - Eros' Bow
-  - Pharaoh's Curse
   flex_slots:
+  - Damaru
   - Eros' Bow
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -38,17 +38,23 @@ builds:
       pick: 0.0
       fit: 0.59
     The Reaper:
-      total: 0.53
-      efficiency: 0.44
+      total: 0.48
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.61
     Riptalon:
-      total: 0.49
-      efficiency: 0.27
+      total: 0.52
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Damaru:
+      total: 0.45
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Demon Blade:
       total: 0.5
       efficiency: 0.21
@@ -56,12 +62,6 @@ builds:
       pick: 0.0
       fit: 0.79
     Eros' Bow:
-      total: 0.44
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
-    Pharaoh's Curse:
       total: 0.44
       efficiency: 0.38
       win: 0.5
@@ -75,7 +75,7 @@ builds:
   slot_order:
   - Tyrfing
   - Rage
-  - The Reaper
+  - Riptalon
   - Damaru
   - Demon Blade
   - Eros' Bow
@@ -105,20 +105,20 @@ builds:
       pick: 0.0
       fit: 0.55
     Rage:
-      total: 0.44
+      total: 0.43
       efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.52
-    The Reaper:
-      total: 0.52
-      efficiency: 0.44
+    Riptalon:
+      total: 0.51
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.69
     Damaru:
-      total: 0.44
-      efficiency: 0.37
+      total: 0.47
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Eros' Bow:
-      total: 0.42
+      total: 0.43
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - The Reaper
+  - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
@@ -149,56 +149,56 @@ builds:
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    The Reaper:
+    Shield of the Phoenix:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.58
     Spectral Armor:
-      total: 0.4
+      total: 0.47
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.31
+      fit: 0.46
     Amanita Charm:
-      total: 0.59
-      efficiency: 0.44
+      total: 0.66
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.87
     Erosion:
-      total: 0.41
+      total: 0.48
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.57
     Pharaoh's Curse:
-      total: 0.44
+      total: 0.51
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.65
     Shogun's Ofuda:
-      total: 0.41
+      total: 0.49
       efficiency: 0.33
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -206,11 +206,11 @@ builds:
   - Avenging Blade
   - Jotunn's Revenge
   - Void Stone
-  - The Reaper
-  - Tekko-Kagi
+  - Riptalon
   - The Crusher
+  - Heartseeker
   flex_slots:
-  - Tekko-Kagi
+  - Heartseeker
   - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.54
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.55
+      total: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -246,21 +246,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    The Reaper:
-      total: 0.62
+    Riptalon:
+      total: 0.6
+      efficiency: 0.32
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    The Crusher:
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.8
-    Tekko-Kagi:
-      total: 0.47
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
-    The Crusher:
-      total: 0.53
-      efficiency: 0.49
+      fit: 0.56
+    Heartseeker:
+      total: 0.45
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -271,12 +271,12 @@ builds:
   - Tyrfing
   - The Reaper
   - Riptalon
+  - Damaru
   - Demon Blade
   - Eros' Bow
-  - Pharaoh's Curse
   flex_slots:
+  - Damaru
   - Eros' Bow
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -300,17 +300,23 @@ builds:
       pick: 0.0
       fit: 0.59
     The Reaper:
-      total: 0.53
-      efficiency: 0.44
+      total: 0.48
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.61
     Riptalon:
-      total: 0.49
-      efficiency: 0.27
+      total: 0.52
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Damaru:
+      total: 0.45
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Demon Blade:
       total: 0.5
       efficiency: 0.21
@@ -318,12 +324,6 @@ builds:
       pick: 0.0
       fit: 0.79
     Eros' Bow:
-      total: 0.44
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
-    Pharaoh's Curse:
       total: 0.44
       efficiency: 0.38
       win: 0.5

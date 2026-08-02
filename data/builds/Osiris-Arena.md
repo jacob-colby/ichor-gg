@@ -45,7 +45,7 @@ builds:
       fit: 0.55
     Amanita Charm:
       total: 0.67
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -80,7 +80,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
+  - Spectral Armor
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.51
+      total: 0.55
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.6
     Amanita Charm:
-      total: 0.7
-      efficiency: 0.44
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.96
+      fit: 1.0
     Erosion:
-      total: 0.52
+      total: 0.56
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.74
     Stampede:
-      total: 0.49
+      total: 0.52
       efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.7
     Pharaoh's Curse:
-      total: 0.53
+      total: 0.58
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.77
     Shogun's Ofuda:
-      total: 0.51
+      total: 0.55
       efficiency: 0.33
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -142,18 +142,18 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Crusher
   - Amanita Charm
+  - Pharaoh's Curse
   flex_slots:
-  - The Crusher
+  - Pharaoh's Curse
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.55
+      total: 0.5
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -187,31 +187,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.89
-    The Crusher:
-      total: 0.52
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Amanita Charm:
       total: 0.63
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.81
+    Pharaoh's Curse:
+      total: 0.51
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: fun-crit
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
-  - Soul Gem
   flex_slots:
-  - Soul Gem
-  - Damaru
+  - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -236,34 +236,34 @@ builds:
       fit: 0.67
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.6
-      efficiency: 0.21
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Soul Gem:
       total: 0.53
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -308,7 +308,7 @@ builds:
       fit: 0.55
     Amanita Charm:
       total: 0.67
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.9

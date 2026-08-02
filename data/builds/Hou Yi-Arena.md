@@ -6,22 +6,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Golden Blade
   - Lernaean Bow
-  - The Reaper
+  - Riptalon
   - Demon Blade
   - Eros' Bow
   - Amanita Charm
+  - Pharaoh's Curse
   flex_slots:
-  - Golden Blade
   - Eros' Bow
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -31,24 +31,18 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.49
-      efficiency: 0.39
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Lernaean Bow:
       total: 0.53
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.69
-    The Reaper:
-      total: 0.53
-      efficiency: 0.44
+    Riptalon:
+      total: 0.52
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.72
     Demon Blade:
       total: 0.5
       efficiency: 0.21
@@ -63,10 +57,16 @@ builds:
       fit: 0.6
     Amanita Charm:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Pharaoh's Curse:
+      total: 0.49
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -75,7 +75,7 @@ builds:
   slot_order:
   - Lernaean Bow
   - Rage
-  - The Reaper
+  - Riptalon
   - Damaru
   - Demon Blade
   - Eros' Bow
@@ -100,25 +100,25 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.51
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.65
     Rage:
-      total: 0.44
+      total: 0.43
       efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.52
-    The Reaper:
-      total: 0.52
-      efficiency: 0.44
+    Riptalon:
+      total: 0.51
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.69
     Damaru:
-      total: 0.44
-      efficiency: 0.37
+      total: 0.47
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Eros' Bow:
-      total: 0.47
+      total: 0.48
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -145,57 +145,57 @@ builds:
   - Shogun's Ofuda
   - Umbral Link
   flex_slots:
-  - Erosion
   - Spectral Armor
+  - Umbral Link
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Spirit Robe — physical protection
-    swap_item: Spirit Robe
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.45
+      total: 0.52
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.56
     Amanita Charm:
-      total: 0.64
-      efficiency: 0.44
+      total: 0.71
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.97
     Erosion:
-      total: 0.46
+      total: 0.53
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.67
     Pharaoh's Curse:
-      total: 0.49
+      total: 0.56
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.75
     Shogun's Ofuda:
-      total: 0.46
+      total: 0.54
       efficiency: 0.33
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.75
     Umbral Link:
-      total: 0.51
-      efficiency: 0.24
+      total: 0.52
+      efficiency: 0.25
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -207,7 +207,7 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Reaper
+  - Riptalon
   - The Crusher
   flex_slots:
   - Void Shield
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.54
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.55
+      total: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -252,15 +252,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    The Reaper:
-      total: 0.62
-      efficiency: 0.44
+    Riptalon:
+      total: 0.6
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.87
     The Crusher:
-      total: 0.53
-      efficiency: 0.49
+      total: 0.5
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -268,22 +268,22 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Golden Blade
   - Lernaean Bow
-  - The Reaper
+  - Riptalon
   - Demon Blade
   - Eros' Bow
   - Amanita Charm
+  - Pharaoh's Curse
   flex_slots:
-  - Golden Blade
   - Eros' Bow
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -293,24 +293,18 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.49
-      efficiency: 0.39
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Lernaean Bow:
       total: 0.53
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.69
-    The Reaper:
-      total: 0.53
-      efficiency: 0.44
+    Riptalon:
+      total: 0.52
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.72
     Demon Blade:
       total: 0.5
       efficiency: 0.21
@@ -325,9 +319,15 @@ builds:
       fit: 0.6
     Amanita Charm:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Pharaoh's Curse:
+      total: 0.49
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
   starter: *id001
 ---

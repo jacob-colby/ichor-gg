@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Divine Ruin
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
-  - The World Stone
-  - Soul Gem
+  - Obsidian Shard
   flex_slots:
-  - Doom Orb
-  - The World Stone
+  - The Cosmic Horror
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -26,47 +26,47 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.58
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Gluttonous Grimoire:
+      total: 0.69
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.63
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Doom Orb:
+    Spear of the Magus:
+      total: 0.63
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Obsidian Shard:
       total: 0.6
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Spear of the Magus:
-      total: 0.61
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    The World Stone:
-      total: 0.58
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Divine Ruin
   - Spear of Desolation
-  - The Cosmic Horror
   - Spear of the Magus
+  - Obsidian Shard
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Spear of the Magus
   - Divine Ruin
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -105,26 +105,26 @@ builds:
       pick: 0.0
       fit: 0.62
     Spear of Desolation:
-      total: 0.6
-      efficiency: 0.43
+      total: 0.55
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.78
-    The Cosmic Horror:
-      total: 0.51
-      efficiency: 0.47
+    Spear of the Magus:
+      total: 0.52
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Spear of the Magus:
-      total: 0.49
-      efficiency: 0.43
+    Obsidian Shard:
+      total: 0.48
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -138,80 +138,80 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Divine Ruin
-  - Stygian Anchor
-  - Spear of Desolation
+  - Eye of Providence
+  - Kinetic Cuirass
+  - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
-  - Soul Gem
   flex_slots:
-  - Erosion
-  - Stygian Anchor
+  - Spectral Armor
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.47
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Stygian Anchor:
-      total: 0.43
-      efficiency: 0.25
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Spear of Desolation:
-      total: 0.46
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    Amanita Charm:
-      total: 0.63
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
-    Erosion:
-      total: 0.45
-      efficiency: 0.39
+    Eye of Providence:
+      total: 0.49
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.51
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Amanita Charm:
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Rod of Asclepius:
+      total: 0.68
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+    Erosion:
+      total: 0.55
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
   - Doom Orb
   - Spear of the Magus
-  - The World Stone
-  - Soul Gem
+  - Obsidian Shard
   flex_slots:
+  - The Cosmic Horror
   - Doom Orb
-  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -228,42 +228,42 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Gluttonous Grimoire:
+      total: 0.72
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.66
-      efficiency: 0.47
+      total: 0.63
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.85
     Doom Orb:
+      total: 0.58
+      efficiency: 0.31
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Spear of the Magus:
+      total: 0.66
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Obsidian Shard:
       total: 0.63
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.85
-    Spear of the Magus:
-      total: 0.64
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.85
-    The World Stone:
-      total: 0.61
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.85
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -306,25 +306,25 @@ builds:
       pick: 0.0
       fit: 0.66
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
+      total: 0.53
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.21
       win: 0.5
       pick: 0.0
@@ -334,15 +334,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Divine Ruin
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
-  - The World Stone
-  - Soul Gem
+  - Obsidian Shard
   flex_slots:
-  - Doom Orb
-  - The World Stone
+  - The Cosmic Horror
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -354,60 +354,60 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.58
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Gluttonous Grimoire:
+      total: 0.69
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.63
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Doom Orb:
+    Spear of the Magus:
+      total: 0.63
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Obsidian Shard:
       total: 0.6
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Spear of the Magus:
-      total: 0.61
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    The World Stone:
-      total: 0.58
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: core
   slot_order:
   - Contagion
   - Void Stone
-  - Spear of Desolation
   - Rod of Asclepius
+  - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Contagion
   - Void Stone
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -426,7 +426,7 @@ builds:
   slot_scores:
     Contagion:
       total: 0.49
-      efficiency: 0.31
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -436,21 +436,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Spear of Desolation:
-      total: 0.52
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Rod of Asclepius:
       total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.89
+    Erosion:
+      total: 0.48
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -468,11 +468,11 @@ builds:
   - Contagion
   - Divine Ruin
   - Spear of Desolation
-  - The Cosmic Horror
+  - Spear of the Magus
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - The Cosmic Horror
+  - Spear of the Magus
   - Contagion
   situational_swaps:
   - vs_tag: heavy_cc
@@ -492,7 +492,7 @@ builds:
   slot_scores:
     Contagion:
       total: 0.44
-      efficiency: 0.31
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -503,20 +503,20 @@ builds:
       pick: 0.0
       fit: 0.57
     Spear of Desolation:
-      total: 0.51
-      efficiency: 0.43
+      total: 0.46
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.59
-    The Cosmic Horror:
+    Spear of the Magus:
       total: 0.45
-      efficiency: 0.47
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.42
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -538,7 +538,7 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
+  - Spectral Armor
   - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -557,41 +557,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.46
+      total: 0.5
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.53
     Kinetic Cuirass:
-      total: 0.49
+      total: 0.54
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.63
     Spectral Armor:
-      total: 0.5
+      total: 0.53
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.57
     Amanita Charm:
-      total: 0.69
-      efficiency: 0.44
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 1.0
     Erosion:
-      total: 0.52
+      total: 0.56
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.73
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 1.0
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -599,13 +599,13 @@ builds:
   slot_order:
   - Void Shield
   - Void Stone
+  - Gluttonous Grimoire
   - Spear of Desolation
-  - The Cosmic Horror
   - Spear of the Magus
-  - Soul Gem
+  - Obsidian Shard
   flex_slots:
-  - The Cosmic Horror
-  - Spear of the Magus
+  - Spear of Desolation
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -634,30 +634,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
+    Gluttonous Grimoire:
+      total: 0.7
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
     Spear of Desolation:
-      total: 0.57
-      efficiency: 0.43
+      total: 0.51
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.7
-    The Cosmic Horror:
-      total: 0.53
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Spear of the Magus:
-      total: 0.51
-      efficiency: 0.43
+      total: 0.53
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Soul Gem:
-      total: 0.7
+    Obsidian Shard:
+      total: 0.5
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.59
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -665,13 +665,13 @@ builds:
   slot_order:
   - Contagion
   - Void Stone
-  - Spear of Desolation
   - Rod of Asclepius
+  - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Contagion
   - Void Stone
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -690,7 +690,7 @@ builds:
   slot_scores:
     Contagion:
       total: 0.49
-      efficiency: 0.31
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -700,21 +700,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Spear of Desolation:
-      total: 0.52
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Rod of Asclepius:
       total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.89
+    Erosion:
+      total: 0.48
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0

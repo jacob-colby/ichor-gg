@@ -15,7 +15,9 @@ const items = [
     builds_from: [], builds_into: [], effect_tags: [], efficiency_tier: null, efficiency: null },
 ] as unknown as Item[];
 
-const GOLD = { "Max Health": 0.88, "Critical Chance": 20 };
+// Keyed the way the index ships them: a percentage is priced in its own
+// column, because flat and percent of the same stat are different goods.
+const GOLD = { "Max Health": 0.88, "Critical Chance %": 20 };
 
 /** Load the page *at* a URL, rather than navigating to it: assigning
  *  `window.location.hash` queues a `hashchange`, which lands mid-test and is

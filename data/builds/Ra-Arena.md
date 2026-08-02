@@ -9,12 +9,12 @@ builds:
   - Divine Ruin
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
+  - Obsidian Shard
   - Rod of Asclepius
   flex_slots:
-  - Spear of the Magus
-  - Doom Orb
+  - Obsidian Shard
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -38,26 +38,26 @@ builds:
       pick: 0.0
       fit: 0.81
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.59
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
-    Doom Orb:
       total: 0.56
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.72
     Spear of the Magus:
-      total: 0.57
-      efficiency: 0.43
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Obsidian Shard:
+      total: 0.56
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Divine Ruin
   - Spear of Desolation
-  - The Cosmic Horror
   - Spear of the Magus
+  - Obsidian Shard
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Spear of the Magus
   - Divine Ruin
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -105,26 +105,26 @@ builds:
       pick: 0.0
       fit: 0.62
     Spear of Desolation:
-      total: 0.6
-      efficiency: 0.43
+      total: 0.55
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.78
-    The Cosmic Horror:
-      total: 0.51
-      efficiency: 0.47
+    Spear of the Magus:
+      total: 0.52
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Spear of the Magus:
-      total: 0.49
-      efficiency: 0.43
+    Obsidian Shard:
+      total: 0.48
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -138,84 +138,84 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Divine Ruin
-  - Spear of Desolation
+  - Mystical Mail
   - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
-  - Soul Gem
+  - Stampede
   flex_slots:
-  - Spectral Armor
-  - Spear of Desolation
+  - Stampede
+  - Mystical Mail
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.47
-      efficiency: 0.34
+    Mystical Mail:
+      total: 0.52
+      efficiency: 0.3
       win: 0.5
       pick: 0.0
-      fit: 0.6
-    Spear of Desolation:
-      total: 0.46
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
+      fit: 0.75
     Spectral Armor:
-      total: 0.47
+      total: 0.57
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.65
     Amanita Charm:
-      total: 0.68
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.91
-    Erosion:
-      total: 0.5
-      efficiency: 0.39
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Rod of Asclepius:
+      total: 0.73
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.59
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Stampede:
+      total: 0.54
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
-  - The World Stone
-  - Soul Gem
+  - Obsidian Shard
+  - Dreamer's Idol
   flex_slots:
-  - Doom Orb
-  - The World Stone
+  - The Cosmic Horror
+  - Dreamer's Idol
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -228,39 +228,39 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Gluttonous Grimoire:
+      total: 0.7
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.64
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Doom Orb:
+    Spear of the Magus:
+      total: 0.64
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Obsidian Shard:
       total: 0.61
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Spear of the Magus:
-      total: 0.62
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
-    The World Stone:
+    Dreamer's Idol:
       total: 0.59
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      efficiency: 0.18
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Tyrfing
   - Death Metal
   - Damaru
   - Demon Blade
-  - Soul Gem
   flex_slots:
-  - Soul Gem
-  - Damaru
+  - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -301,34 +301,34 @@ builds:
       fit: 0.67
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.36
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.6
-      efficiency: 0.21
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Soul Gem:
       total: 0.53
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.21
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   fun: true
   starter: *id001
 - source: suggested
@@ -337,12 +337,12 @@ builds:
   - Divine Ruin
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
+  - Obsidian Shard
   - Rod of Asclepius
   flex_slots:
-  - Spear of the Magus
-  - Doom Orb
+  - Obsidian Shard
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -366,26 +366,26 @@ builds:
       pick: 0.0
       fit: 0.81
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.59
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
-    Doom Orb:
       total: 0.56
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.72
     Spear of the Magus:
-      total: 0.57
-      efficiency: 0.43
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Obsidian Shard:
+      total: 0.56
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -404,10 +404,10 @@ builds:
   - Spectral Armor
   - Erosion
   - Soul Gem
-  - Triton's Conch
+  - Doublet of Binding
   flex_slots:
-  - Spectral Armor
-  - Triton's Conch
+  - Spear of Desolation
+  - Doublet of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -431,8 +431,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Spear of Desolation:
-      total: 0.54
-      efficiency: 0.43
+      total: 0.48
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -449,17 +449,17 @@ builds:
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
+    Doublet of Binding:
       total: 0.48
-      efficiency: 0.34
+      efficiency: 0.31
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.65
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested
@@ -467,12 +467,12 @@ builds:
   slot_order:
   - Divine Ruin
   - Spear of Desolation
-  - The Cosmic Horror
+  - Spear of the Magus
   - Spectral Armor
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - The Cosmic Horror
+  - Spear of the Magus
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -482,8 +482,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -497,14 +497,14 @@ builds:
       pick: 0.0
       fit: 0.58
     Spear of Desolation:
-      total: 0.53
-      efficiency: 0.43
+      total: 0.47
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.62
-    The Cosmic Horror:
+    Spear of the Magus:
       total: 0.46
-      efficiency: 0.47
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -515,8 +515,8 @@ builds:
       pick: 0.0
       fit: 0.41
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -531,67 +531,67 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Mystical Mail
+  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
   - Stampede
-  - Soul Gem
   flex_slots:
   - Stampede
-  - Mystical Mail
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
     swap_item: Resolute Mantle
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Mystical Mail:
-      total: 0.49
-      efficiency: 0.3
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.67
     Spectral Armor:
-      total: 0.53
+      total: 0.59
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.69
     Amanita Charm:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Rod of Asclepius:
+      total: 0.68
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
     Erosion:
-      total: 0.56
+      total: 0.63
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.87
     Stampede:
-      total: 0.5
+      total: 0.56
       efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
+      fit: 0.79
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested
@@ -601,11 +601,11 @@ builds:
   - Void Shield
   - Void Stone
   - Spear of Desolation
-  - The Cosmic Horror
+  - Spear of the Magus
   - Soul Gem
   flex_slots:
   - Screeching Gargoyle
-  - The Cosmic Horror
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -624,7 +624,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.52
-      efficiency: 0.33
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -641,20 +641,20 @@ builds:
       pick: 0.0
       fit: 0.96
     Spear of Desolation:
-      total: 0.59
-      efficiency: 0.43
+      total: 0.53
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.74
-    The Cosmic Horror:
-      total: 0.51
-      efficiency: 0.47
+    Spear of the Magus:
+      total: 0.52
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -668,10 +668,10 @@ builds:
   - Spectral Armor
   - Erosion
   - Soul Gem
-  - Triton's Conch
+  - Doublet of Binding
   flex_slots:
-  - Spectral Armor
-  - Triton's Conch
+  - Spear of Desolation
+  - Doublet of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -695,8 +695,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Spear of Desolation:
-      total: 0.54
-      efficiency: 0.43
+      total: 0.48
+      efficiency: 0.32
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -713,17 +713,17 @@ builds:
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.68
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
+    Doublet of Binding:
       total: 0.48
-      efficiency: 0.34
+      efficiency: 0.31
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.65
   starter: *id001
   aspect: Aspect of Thermotherapy
 ---
