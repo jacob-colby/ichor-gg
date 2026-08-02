@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 381.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.94
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Chiron Basic Attack
@@ -36,6 +45,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Herbal Medicine
   details:
@@ -49,6 +64,15 @@ abilities:
   - 'Buff Duration: 5 seconds'
   description: Gain a charge every 12 seconds. Using an ability consumes a charge
     to throw a poultice to an injured allied god, applying a Heal over time
+  detail_kinds:
+  - heal
+  - heal
+  - null
+  - null
+  - heal
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Training Exercise
   cooldown:
@@ -70,6 +94,15 @@ abilities:
   description: Area Damage and Cleanse Deploy a constellation that grants CC Immunity
     to allies in the area. After a 1 second delay, it explodes dealing Physical Damage
     to all enemies in the area
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Masterful Shot
   cooldown:
@@ -110,6 +143,26 @@ abilities:
     with your Attacks or abilities, reducing their Physical Protections . Activating
     this ability fires seeking arrows toward all marked targets, dealing Physical
     Damage and Slowing them Refire Refire + 15% Per Target Hit'
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - slow
+  - slow
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Giddyup!
   cooldown:
@@ -127,6 +180,16 @@ abilities:
   - 'Cost: 70 mana'
   description: Dash forward, dealing Physical Damage to enemies, Knocking Up non-god
     enemies, and Knocking Back enemy gods
+  damage_type: physical
+  detail_kinds:
+  - mechanic
+  - buff
+  - null
+  - physical
+  - physical
+  - buff
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Centaurus
   cooldown:
@@ -153,6 +216,18 @@ abilities:
   description: Transform into a constellation, reducing Movement Speed , but gaining
     the ability to fire three long distance arrows, dealing Physical Damage to all
     enemies hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - heal
+  - null
+  - null
+  - physical
+  - physical
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Heroic Tutor
   kit_changes: Target Mark now only applies to one target, and you passively copy

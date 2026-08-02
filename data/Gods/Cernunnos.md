@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 48.12
+    per_level: 2.76
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Cernunnos Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Heavy Glaive
   details:
@@ -45,6 +60,11 @@ abilities:
   - 'Cone Angle: 120 degrees'
   description: MELEE ATTACKS CLEAVE Basic Attacks deal bonus Physical Damage to enemies
     in melee range
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - mechanic
+  - mechanic
 - slot: 1st Ability
   name: Shifter Of Seasons
   details:
@@ -69,6 +89,24 @@ abilities:
   - 'Winter Slow Duration: 2 seconds'
   description: Activate to toggle between Spring, Summer, Fall, or Winter Basic Attack
     bonus effects
+  detail_kinds:
+  - heal
+  - physical
+  - debuff
+  - slow
+  - null
+  - physical
+  - heal
+  - heal
+  - physical
+  - physical
+  - buff
+  - buff
+  - buff
+  - buff
+  - slow
+  - slow
+  - slow
 - slot: 2nd Ability
   name: Bramble Blast
   cooldown:
@@ -95,6 +133,21 @@ abilities:
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Fire a bramble that explodes on hit or upon reaching max range, dealing
     Physical Damage in an area
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - physical
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Horn Charge
   cooldown:
@@ -120,6 +173,17 @@ abilities:
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   description: Dash forward, passing through all types of enemies
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: The Wild Hunt
   cooldown:
@@ -142,6 +206,20 @@ abilities:
   - 'Cost: 100 mana'
   description: Polymorphed Enemies are Silenced , Disarmed , Slowed , and transformed
     to look like harmless animals Polymorph enemy gods into wild boars and start
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - debuff
+  - physical
+  - physical
+  - debuff
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Strife
   kit_changes: Your Basic Attacks are now melee and deal increased damage, cleave,

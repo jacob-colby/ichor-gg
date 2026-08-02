@@ -288,3 +288,92 @@ def test_ability_description_strips_the_tagline_up_to_notes():
     a = _first_ability(ABILITY_HTML)
     assert not a["description"].startswith("LINE DAMAGE")
     assert "Notes:" not in a["description"]
+
+
+# ── Fields the parser used to discard (B1) ────────────────────────────────
+# All of this was already in the cached HTML; nothing here needed a refetch.
+
+def test_parse_god_page_recovers_attack_power():
+    """Basic-attack damage. Every god page carries it, the STAT_LABELS
+    allowlist dropped it, and without it there is no way to compute what an
+    auto-attack hits for."""
+    html = """<table class="infobox">
+      <tr><th>Attack Power:</th><td>47.57 (+2.21)</td></tr>
+      <tr><th>Health Regen:</th><td>1.7 (+0.2)</td></tr>
+      <tr><th>Mana Regen:</th><td>(+)</td></tr>
+    </table>"""
+    stats = wiki_parser.parse_god_page(html)["base_stats"]
+    assert stats["attack_power"] == {"base": 47.57, "per_level": 2.21}
+    assert stats["health_regen"] == {"base": 1.7, "per_level": 0.2}
+    # No-mana gods render an empty "(+)" — absent, never a fabricated zero.
+    assert "mana_regen" not in stats
+
+
+def test_detail_kinds_are_parallel_to_details():
+    """`detail_kinds[i]` describes `details[i]`. If the two ever drift, every
+    consumer reads the wrong line's meaning, so the invariant is the test."""
+    for ability in wiki_parser.parse_god_page(_chiron_html())["abilities"]:
+        if "detail_kinds" in ability:
+            assert len(ability["detail_kinds"]) == len(ability["details"])
+
+
+def test_ability_damage_type_comes_from_the_wiki_colour():
+    """The colour is the only place the page states physical vs magical per
+    ability — `get_text()` used to flatten it away."""
+    abilities = wiki_parser.parse_god_page(_chiron_html())["abilities"]
+    typed = [a for a in abilities if a.get("damage_type")]
+    assert typed, "the fixture carries coloured damage lines"
+    assert all(a["damage_type"] == "physical" for a in typed)
+
+
+def _ability_html(lines):
+    rows = "".join(f'<li><span style="color:{c};">{t}</span></li>' for c, t in lines)
+    return ('<table class="infobox"><tr><th>Health:</th><td>500 (+80)</td></tr></table>'
+            '<div class="mw-heading"><h2 id="Abilities">A</h2></div>'
+            '<table class="wikitable">'
+            '<tr><th><span>1st Ability</span><span>Test</span></th></tr>'
+            f'<tr><td><ul>{rows}</ul></td></tr></table>')
+
+
+def test_mixed_damage_colours_yield_no_damage_type():
+    """An ability that genuinely deals both must not be flattened to whichever
+    colour the parser happened to read first."""
+    a = wiki_parser.parse_god_page(_ability_html([
+        ("#ff5f5f", "Damage: 100"), ("#2ca8fd", "Damage: 50")]))["abilities"][0]
+    assert "damage_type" not in a
+    assert a["detail_kinds"] == ["physical", "magical"]
+
+
+def test_unrecognised_colour_is_left_unknown():
+    """The wiki has a long tail of god-specific colours. Unknown stays None
+    rather than being guessed into a category."""
+    a = wiki_parser.parse_god_page(_ability_html([
+        ("#123456", "Something bespoke"), ("#4fc253", "Heal: 20")]))["abilities"][0]
+    assert a["detail_kinds"] == [None, "heal"]
+
+
+def test_the_two_damage_colours_never_collide():
+    """These two carry the whole physical/magical distinction. Checked against
+    every god whose damage type we already store: 290 physical lines and 271
+    magical, no overlap in either direction across the 247-page cache."""
+    assert wiki_parser._DETAIL_KINDS["#ff5f5f"] == "physical"
+    assert wiki_parser._DETAIL_KINDS["#2ca8fd"] == "magical"
+
+
+def test_shipped_god_notes_carry_the_recovered_fields():
+    """Coverage counts, not just "it parses". These were absent for months
+    while the parser ran clean, so a silent drop is the failure worth catching:
+    87/87 gods have Attack Power and 353 abilities carry a damage type."""
+    from smite import notes, recommend
+    gods = [notes.read_note(p)[0] for p in (recommend.DATA_ROOT / "Gods").glob("*.md")]
+    gods = [g for g in gods if g.get("name")]
+    assert len(gods) >= 87
+    assert all((g.get("base_stats") or {}).get("attack_power") for g in gods)
+
+    abilities = [a for g in gods for a in (g.get("abilities") or [])]
+    typed = [a for a in abilities if a.get("damage_type")]
+    assert len(typed) >= 350, f"only {len(typed)} abilities carry a damage type"
+    assert {a["damage_type"] for a in typed} == {"physical", "magical"}
+    for a in abilities:
+        if "detail_kinds" in a:
+            assert len(a["detail_kinds"]) == len(a["details"])

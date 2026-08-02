@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Medusa Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Sidewinder
   description: NO MOVEMENT PENALTY You suffer no movement penalty when strafing and
@@ -65,6 +80,17 @@ abilities:
   description: Gain Increased Attack Speed and augment your next 4 Attacks, shooting
     vipers that poison the target hit, dealing Physical Damage every 0.5 seconds for
     1.5 seconds
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Acid Spray
   cooldown:
@@ -95,6 +121,21 @@ abilities:
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
   description: will explode on statues Medusa has created Spit acid that deals Physical
     Damage to the first enemy hit, then spraying out in a cone behind them Cone
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Lacerate
   cooldown:
@@ -119,6 +160,18 @@ abilities:
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 70 mana'
   description: Dash forward, dealing Physical Damage to all enemies you pass through
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - physical
+  - physical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Petrify
   cooldown:
@@ -154,6 +207,28 @@ abilities:
     5 seconds, you gain a temporary Strength and Intelligence buff , and you gain
     a permanent Strength and Intelligence buff Remove your mask, revealing your true
     face to deliver a powerful blast from your horrifying gorgon gaze
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - mechanic
+  - null
+  - null
+  - buff
+  - null
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - stun
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Medusa
 last_verified: '2026-08-01'

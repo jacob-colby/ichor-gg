@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.76
+    per_level: 2.76
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Sol Basic Attack
@@ -38,6 +47,14 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Unstable Manifestation
   details:
@@ -52,6 +69,16 @@ abilities:
   - 'Attack Damage: 15%'
   description: Heat grants increased Strength , Intelligence , and Attack Speed from
     items Hit enemies with Attacks or use abilities to gain Heat
+  detail_kinds:
+  - buff
+  - buff
+  - null
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Radiance
   cooldown:
@@ -78,6 +105,21 @@ abilities:
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Create a pool of flames and Heal yourself over time for a percentage
     of your missing Health
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - null
+  - null
+  - heal
+  - magical
+  - magical
+  - heal
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Stellar Burst
   cooldown:
@@ -103,6 +145,20 @@ abilities:
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Your next Attack fires a projectile that explodes on hit or upon reaching
     max range, then retracts, and generates Heat
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - null
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Disapparate
   cooldown:
@@ -135,6 +191,23 @@ abilities:
     , Untargetable , and lets you pass through allies, enemies, and Impediments Gain
     Movement Speed and Slow Immunity , gaining Heat and leaving a trail of fire behind
     you
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - magical
+  - magical
+  - magical
+  - magical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Supernova
   cooldown:
@@ -162,6 +235,20 @@ abilities:
   description: Each strike deals Magical Damage ; subsequent hits deal reduced Damage
     Unleash flame and fury, gaining Heat and striking 8 times along a moveable ground
     target location
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - stun
+  - mechanic
+  - null
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Conflagration
   kit_changes: Sol's Heat provides Intelligence and Ability Damage, but no longer

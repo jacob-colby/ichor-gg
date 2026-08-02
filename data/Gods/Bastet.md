@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.73
+    per_level: 0.23
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Bastet Basic Attack
@@ -38,6 +47,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Nightstalker
   details:
@@ -50,6 +66,14 @@ abilities:
   - 'Reveal Duration: 6 seconds'
   description: Hitting enemies grants Lifesteal . Hitting enemy gods additionally
     grants stacks of Strength and Reveals them to you for a duration
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Pounce
   cooldown:
@@ -72,6 +96,16 @@ abilities:
   description: Leap to a target location, dealing Physical Damage to enemies in the
     area. For a short duration, reactivate to Leap back to your initial location.
     You gain increased Movement Speed while you can return
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Razor Whip
   cooldown:
@@ -92,6 +126,15 @@ abilities:
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
   description: Cone Bleed Swipe at enemies in a cone, causing them to Bleed for Physical
     Damage over time
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Ensnaring Claw
   cooldown:
@@ -120,6 +163,22 @@ abilities:
   description: Send a cat forward. If it hits an enemy, it Roots them and nearby enemies
     briefly and deals Physical Damage . The cat persists for a duration or until defeated,
     attacking nearby enemies for Physical Damage and applying a Slow
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - debuff
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Cat Call
   cooldown:
@@ -149,6 +208,22 @@ abilities:
   - 'Cost: 90 | 95 | 100 | 105 | 110'
   description: Summon 3 spirit cats that follow you and attack nearby enemies for
     a duration. While they are active, you gain Strength
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - buff
+  - buff
+  - null
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Watchful Pride
   kit_changes: Pounce can no longer be activated again to return to you to your starting

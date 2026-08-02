@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.57
+    per_level: 2.21
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Achilles Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 2.56 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Gift of the Gods
   details:
@@ -52,6 +67,13 @@ abilities:
     is active inside the Fountain Choose to wear armor or forgo it. Wearing armor
     grants bonus Health and Protections , while forgoing it grants bonus Strength
     and Movement Speed
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Shield of Achilles
   cooldown:
@@ -79,6 +101,21 @@ abilities:
   description: Punch forward with your shield, dealing Physical Damage and Stunning
     enemies in a short cone. The force of the shield radiates further, dealing reduced
     damage
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - stun
+  - physical
+  - physical
+  - stun
+  - stun
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Radiant Glory
   cooldown:
@@ -107,6 +144,20 @@ abilities:
   description: You are blessed by the gods, gaining bonus Strength , Protections ,
     and Crowd Control Reduction for a short duration. Damaging enemies with abilities
     during this time Heals you
+  detail_kinds:
+  - null
+  - debuff
+  - heal
+  - buff
+  - buff
+  - buff
+  - buff
+  - heal
+  - null
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Combat Dodge (Spear Strike)
   cooldown:
@@ -139,6 +190,21 @@ abilities:
   description: Dodge in your current direction and ready your spear to strike enemies
     for Physical Damage . Hitting an enemy god with the strike allows you to recast
     the ability once before it goes on cooldown
+  damage_type: physical
+  detail_kinds:
+  - slow
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - slow
+  - slow
+  - null
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Fatal Strike
   cooldown:
@@ -168,6 +234,22 @@ abilities:
   description: Prepare briefly, then Dash foward, dealing Physical Damage to enemies
     and Executing gods that are low health. Killing a god allows you to recast this
     ability up to 5 times
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - mechanic
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - null
+  - null
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Prowess
   kit_changes: Combat Dodge can now be recast after striking a Jungle Monster or Boss,

@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Ares Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Blessed Armaments
   details:
@@ -50,6 +66,14 @@ abilities:
   - 'Strength: 8% of Protections from Items'
   - 'Intelligence: 80% of Cooldown Rate'
   description: Provide Strength and Intelligence in an Aura
+  detail_kinds:
+  - buff
+  - buff
+  - null
+  - null
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Shackles
   cooldown:
@@ -84,6 +108,27 @@ abilities:
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   description: Three may be out at one time Fire a Shackle projectile that deals Magical
     Damage , Cripples , and Slows
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - magical
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - slow
+  - debuff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Call to Arms
   cooldown:
@@ -110,6 +155,16 @@ abilities:
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
   description: You and nearby allied gods gain Protections and Attack Damage . Ares
     gains bonus Health Regen
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - null
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Searing Flesh
   cooldown:
@@ -142,6 +197,26 @@ abilities:
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
   description: Flames pour from your shield, dealing Magical Damage repeatedly to
     enemies in front of you Minion Minion
+  damage_type: magical
+  detail_kinds:
+  - null
+  - debuff
+  - null
+  - mechanic
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: No Escape
   cooldown:
@@ -170,6 +245,21 @@ abilities:
   - 'Cost: 80 | 85 | 90 | 95 | 100 mana'
   description: Attach a chain to nearby gods, then Pull the gods towards you, and
     finally Stun enemies around you.
+  detail_kinds:
+  - magical
+  - magical
+  - mechanic
+  - stun
+  - magical
+  - magical
+  - magical
+  - magical
+  - stun
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Reverberation
   kit_changes: Call to Arms no longer grants Protections or affects allies. Instead,

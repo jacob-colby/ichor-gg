@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Mordred Basic Attack
@@ -41,6 +50,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Wrath of the Forsaken
   details:
@@ -68,6 +84,16 @@ abilities:
   - 'Cooldown: 10 seconds'
   description: After using an ability or attacking, your Interact Key becomes a Dash
     forward
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 1st Ability
   name: Cruel Strikes
   cooldown:
@@ -105,6 +131,25 @@ abilities:
   description: Then Slam, dealing Physical Damage to enemies in a line and either
     dealing Bonus Damage or Healing , based on your Attack Chain Strike twice with
     your swords
+  detail_kinds:
+  - physical
+  - physical
+  - physical
+  - heal
+  - heal
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - heal
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Bloodrage
   cooldown:
@@ -136,6 +181,24 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Deal Physical Damage to enemies around you, then gain increased Attack
     Speed and Movement Speed
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - buff
+  - buff
+  - physical
+  - physical
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Severing Slice
   cooldown:
@@ -168,6 +231,25 @@ abilities:
   description: Direct hits with the center of the projectile cause targets to Bleed
     , taking Bonus Physical Damage as they move Fire a projectile that deals Physical
     Damage and Slows enemies
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Heart Slash
   cooldown:
@@ -195,6 +277,22 @@ abilities:
     their lifeforce, gaining a Health Shield and Healing over time while dealing Physical
     Damage repeatedly to that enemy Deal Physical Damage to enemies in an area in
     front of you
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - heal
+  - heal
+  - shield
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Pursue the Weak
   cost:
@@ -221,6 +319,23 @@ abilities:
     the sky , repeatedly dealing Physical Damage If no enemy gods are able to be Knocked
     Up , the follow-up attack will not start Become CC Immune and Dash forward, traveling
     through walls, stopping on the first enemy god hit
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - stun
+  - heal
+  - null
+  - null
+  - stun
+  - physical
+  - physical
+  - physical
+  - physical
+  - heal
+  - heal
+  - stun
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Rage
   kit_changes: Attacks while Bloodrage is active no longer provide bonus Protections

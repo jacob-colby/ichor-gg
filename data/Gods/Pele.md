@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Pele Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Everlasting Flame
   cooldown:
@@ -50,6 +65,12 @@ abilities:
   - 'Cooldown: 30 seconds'
   description: LOW HEALTH = +STRENGTH AND +LIFESTEAL When you drop below 50% health,
     gain increased Strength and Lifesteal . This effect has a cooldown
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
 - slot: 1st Ability
   name: Pyroclast
   cooldown:
@@ -76,6 +97,19 @@ abilities:
   description: Fires a Magma projectile that deals Physical Damage and grants fuel
     per enemy god hit. At max range the Magma persists and fires additional shard
     projectiles back to you, dealing Physical Damage to enemies
+  detail_kinds:
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Eruption
   cooldown:
@@ -103,6 +137,19 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: 'Gain a burst of speed before dealing Physical Damage and Knocking
     Up enemies around you Areas: 1 | 1 | 2 | 2 | 3'
+  detail_kinds:
+  - physical
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Magma Rush
   details:
@@ -122,6 +169,21 @@ abilities:
   - 'Amped Fuel Cost: 10 per 0.5 seconds'
   description: Repeatedly deal Physical Damage to nearby enemies and gain Movement
     Speed while this ability is active. uses Fuel for its duration and has no cooldown
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Volcanic Lightning
   cooldown:
@@ -150,6 +212,23 @@ abilities:
   description: Become CC Immune then Dash forward dealing Physical Damage and Slowing
     the first enemy god hit, and firing a cone attack that deals Physical Damage to
     other enemies
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Obsidian
   kit_changes: You only gain Fuel from Pyroclast and when damaged by enemies instead

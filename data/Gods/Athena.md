@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.59
+    per_level: 2.59
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Athena Basic Attack
@@ -40,6 +49,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Reach
   details:
@@ -52,6 +68,15 @@ abilities:
   - 'Radius: 0.48 meters'
   description: After using an ability, your next Attack becomes a ranged projectile
     that deals Bonus Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: 1st Ability
   name: Preemptive Strike
   cooldown:
@@ -79,6 +104,22 @@ abilities:
   - 'Cooldown: 14 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Charge up, then Dash forward
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - buff
+  - null
+  - null
+  - magical
+  - magical
+  - slow
+  - slow
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Confound
   cooldown:
@@ -106,6 +147,18 @@ abilities:
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 60 | 65 | 79 | 75 | 80 mana'
   description: Taunt enemies in front of you
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - slow
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Shield Wall
   cooldown:
@@ -131,6 +184,20 @@ abilities:
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Create a Phalanx of Soldiers that strike twice in an area
+  detail_kinds:
+  - magical
+  - magical
+  - slow
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Defender of Olympus
   cooldown:
@@ -159,6 +226,20 @@ abilities:
   - 'Cooldown: 120 | 115 | 110 | 105 | 100 seconds'
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
   description: Teleport to the aid of the targeted god, anywhere on the map
+  damage_type: magical
+  detail_kinds:
+  - shield
+  - magical
+  - mechanic
+  - null
+  - null
+  - magical
+  - magical
+  - shield
+  - shield
+  - buff
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of War
   kit_changes: Defender of Olympus now targets visible enemy gods instead of allies,

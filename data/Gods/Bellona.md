@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Bellona Basic Attack
@@ -54,6 +63,21 @@ abilities:
   - 'Cone Angle: 120 degrees'
   description: Bellona remains in her current s until she goes 7 seconds without dealing
     or taking damage Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - buff
+  - null
+  - heal
+  - physical
+  - heal
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Master Of War
   details:
@@ -70,6 +94,18 @@ abilities:
   - Max Buff Stacks 5
   description: When you hit or are hit by Basic Attacks, you gain stacks of Movement
     Speed
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Shield Bash
   cooldown:
@@ -101,6 +137,24 @@ abilities:
   description: Every third successful Basic Attack against a god grants a Block Stack
     , reflecting damage Dash forward with your shield to deal Physical Damage and
     Slow enemies in front of you
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - null
+  - buff
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Bludgeon
   cooldown:
@@ -130,6 +184,19 @@ abilities:
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Spin your hammer to deal Physical Damage to enemies around you, then
     slam to deal Physical Damage to enemies in a line
+  detail_kinds:
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Scourge
   cooldown:
@@ -158,6 +225,19 @@ abilities:
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Change to Basic Attacks Lash out with your to deal Physical Damage
     and Disarm enemies
+  damage_type: physical
+  detail_kinds:
+  - null
+  - heal
+  - physical
+  - physical
+  - heal
+  - heal
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Eagle's Rally
   cooldown:
@@ -181,6 +261,20 @@ abilities:
   description: The flag empowers you and allied gods in the area, granting Strength
     , Intelligence , and Physical and Magical Protection Leap forward and plant your
     flag to deal Physical Damage and Stun enemies
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - mechanic
+  - physical
+  - physical
+  - stun
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Vindication
   kit_changes: Bludgeon no longer deals bonus Final Slam Damage but whenever Bellona

@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Cupid Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Lovestruck
   details:
@@ -48,6 +63,12 @@ abilities:
   description: Heart Bomb, Share the Love, and Fields of Love always consume up to
     8 stacks on use, granting them additional Damage , Healing , and bonus effects
     Hitting a Basic Attack grants a stack, or 2 stacks if the target is an enemy god
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - heal
+  - mechanic
 - slot: 1st Ability
   name: Heart Bomb
   cooldown:
@@ -78,6 +99,23 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Fire an Arrow of Love, dealing Physical Damage to the first enemy hit
     and Slowing them
+  detail_kinds:
+  - physical
+  - stun
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Share the Love
   cooldown:
@@ -118,6 +156,29 @@ abilities:
     Healing , Restoring Mana , and granting Attack Speed up to 3 stacks to any ally
     that picks them up Lob an explosive bomb at a location that detonates after 0.75
     seconds, dealing Physical Damage to all enemies hit
+  damage_type: physical
+  detail_kinds:
+  - heal
+  - buff
+  - null
+  - null
+  - heal
+  - physical
+  - physical
+  - heal
+  - heal
+  - heal
+  - heal
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Flutter
   cooldown:
@@ -140,6 +201,15 @@ abilities:
   - 'Cost: 70 mana'
   description: Dash forward quickly, leaving behind a trail that increases all allies'
     Attack Speed and Movement Speed
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Fields of Love
   cooldown:
@@ -167,6 +237,21 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Fire a volley of arrows in an area, Slowing and Crippling all enemies
     inside
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - stun
+  - physical
+  - physical
+  - heal
+  - heal
+  - slow
+  - stun
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Love
   kit_changes: Heart Bomb's damage is decreased but the enemy hit has reduced Attack

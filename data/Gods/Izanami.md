@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Izanami Basic Attack
@@ -43,6 +52,14 @@ abilities:
   description: Throw a piercing projectile that deals Physical Damage to all enemies
     hit. The projectile returns to you after reaching tis max range or hitting a wall,
     dealing Physical Damage to any enemies hit on its way back
+  detail_kinds:
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Death Draws Nigh
   details:
@@ -54,6 +71,13 @@ abilities:
   - 'Max Stacks: 50'
   description: Gain Percent Penetration and Intelligence for each 1% of your Max Health
     taken as damage
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Sickle Storm
   cooldown:
@@ -84,6 +108,24 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Significantly increases your Attack Speed for 6 seconds, but your Attacks
     no longer pierce enemies or return to you
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - debuff
+  - null
+  - debuff
+  - null
+  - null
+  - buff
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Spectral Projection
   cooldown:
@@ -114,6 +156,21 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Send forth a spectral projection of yourself, dealing Physical Damage
     and Slowing all enemies in a line
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - null
+  - null
+  - physical
+  - physical
+  - slow
+  - slow
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Fade Away
   cooldown:
@@ -138,6 +195,14 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Descend into the underworld, becoming Stealthed , and Leap away from
     your current position
+  detail_kinds:
+  - buff
+  - null
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Dark Portal
   cooldown:
@@ -160,6 +225,21 @@ abilities:
   - 'Cost: 100 mana'
   description: Summon a dark portal which deals instant Physical Damage and Physical
     Damage over time
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - slow
+  - slow
+  - physical
+  - physical
+  - physical
+  - physical
+  - debuff
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Izanami
 last_verified: '2026-08-01'

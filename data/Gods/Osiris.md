@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 48.0
+    per_level: 2.58
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Osiris Basic Attack
@@ -40,6 +49,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Fragmented
   details:
@@ -52,6 +68,10 @@ abilities:
     walk through enemies and enemy blockers , gain Attack Speed , and your Attacks
     ignore movement penalty Lose a fragment of your body each time you use an ability,
     gaining Damage Mitigation'
+  detail_kinds:
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Sickle Strike
   cooldown:
@@ -73,6 +93,19 @@ abilities:
   - 'Cost: 30 mana'
   description: Throw your Sickle, dealing Physical Damage and Slowing the first god
     hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - null
+  - physical
+  - physical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Spirit Flail
   cooldown:
@@ -97,6 +130,19 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Strike the target area with your flail, dealing Physical Damage and
     granting Movement Speed
+  damage_type: physical
+  detail_kinds:
+  - slow
+  - physical
+  - physical
+  - buff
+  - buff
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Judgement Tether
   cooldown:
@@ -125,6 +171,17 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Tether yourself to nearby enemy gods. Tethered enemies have reduced
     Attack Speed and reduced Damage for 4 seconds
+  detail_kinds:
+  - null
+  - stun
+  - null
+  - debuff
+  - debuff
+  - debuff
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Lord of the Afterlife
   cooldown:
@@ -144,6 +201,18 @@ abilities:
   - 'Cost: 30 mana'
   description: Leap to a target location, dealing Physical Damage and Rooting enemies.
     Apply negative Cooldown Reduction and Healing Prevention to enemy gods hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Fragmented
   kit_changes: Osiris' abilities now scale with intelligence only. Fragments are lost

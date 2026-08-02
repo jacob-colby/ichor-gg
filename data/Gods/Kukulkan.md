@@ -26,6 +26,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.57
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Kukulkan Basic Attack
@@ -35,12 +44,21 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Power of the Wind Jewel
   details:
   - This effect does not scale off Base god Mana
   - 'Intelligence From Item Mana: 7%'
   description: As you build items that provide Mana, you gain Bonus Intelligence
+  detail_kinds:
+  - null
+  - buff
 - slot: 1st Ability
   name: Zephyr
   cooldown:
@@ -64,6 +82,18 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Fire a projectile that explodes on the first enemy hit. The explosion
     deals Magical Damage and Slows enemies in the area
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Slipstream
   cooldown:
@@ -96,6 +126,20 @@ abilities:
   description: Activate this within a Whirlwind to Dash , dealing Magical Damage and
     Slowing enemies hit Summon the wind to become Slow Immune and gain Movement Speed
     that fades over time
+  detail_kinds:
+  - null
+  - buff
+  - null
+  - buff
+  - buff
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Whirlwind
   cooldown:
@@ -124,6 +168,18 @@ abilities:
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: The attempts to apply the effect every 0.35 seconds for 4 seconds Create
     a , which spreads onto all enemies that enter its area
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Spirit of the Nine Winds
   cooldown:
@@ -141,6 +197,16 @@ abilities:
   - 'Cost: 120 mana'
   description: Summon the Sprit of the Nine Winds to deal Magical Damage in a large
     path
+  damage_type: magical
+  detail_kinds:
+  - stun
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Squall
   kit_changes: You gain Mana from Jungle monster kills and god kills and assists.

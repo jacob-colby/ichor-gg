@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 50.7
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Hun Batz Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Infused Strikes
   details:
@@ -49,6 +65,11 @@ abilities:
   description: ATTACK DAMAGE AFTER ABILITY After using an ability, Hun Batz's next
     Basic Attack will deal 1.2x damage and grants Hun Batz a stacking Strength Buff
     on successful hits.
+  detail_kinds:
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Somersault
   cooldown:
@@ -67,6 +88,17 @@ abilities:
   - 'Cost: 60 mana'
   description: Leap forward, dealing Physical Damage and Slowing enemies in the area
     where you land
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Overhand Smash
   cooldown:
@@ -90,6 +122,17 @@ abilities:
   - 'Cost: 60 mana'
   description: Channel for a short duration. At the end of the Channel, deal Physical
     Damage to enemies in front of you and apply a Physical Protection Debuff
+  damage_type: physical
+  detail_kinds:
+  - mechanic
+  - physical
+  - physical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Sacred Monkey
   cooldown:
@@ -112,6 +155,16 @@ abilities:
   description: Throw a projectile monkey that deals Physical Damage to any enemies
     it hits. After hitting, it will bounce to nearby enemies applying a Mark to only
     the most recently hit enemy. Reactive this ability to Teleport to the Marked enemy
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Fear No Evil
   cooldown:
@@ -135,6 +188,18 @@ abilities:
   - 'Cost: 60 mana'
   description: Create a Totem that repeatedly Fears and deals Physical Damage to all
     enemies around it
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - physical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Disruption
   kit_changes: infused Strikes Slow gods hit by them, but do not grant Hun Batz the

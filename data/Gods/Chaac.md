@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.47
+    per_level: 0.14
 abilities:
 - slot: Basic Attack
   name: Chaac Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Overflow
   details:
@@ -48,6 +64,11 @@ abilities:
   - 'Heal Amount Per Level: 1'
   description: FREE CAST AFTER HITS After 5 successful Basic Attacks, the next ability
     you use costs 0 mana, has Lower Cooldown , and Heals you
+  detail_kinds:
+  - buff
+  - heal
+  - heal
+  - heal
 - slot: 1st Ability
   name: Thunder Strike
   cooldown:
@@ -70,6 +91,17 @@ abilities:
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
   description: Throw your Axe forward, dealing Physical Damage to enemies in the area
     where it lands
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Torrent
   cooldown:
@@ -105,6 +137,24 @@ abilities:
   description: If you Dash , you will still do the area attack upon reaching the Axe
     Swing your Axe around you, dealing Physical Damage to enemies and gaining Protections
     for each enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Rain Dance
   cooldown:
@@ -131,6 +181,21 @@ abilities:
   - 'Cooldown: 13 seconds'
   - 'Cost: 55 | 65 | 75 | 85 | 95 mana'
   description: Create a rainstorm that Heals you over time and provides Dampening
+  detail_kinds:
+  - slow
+  - heal
+  - null
+  - slow
+  - null
+  - heal
+  - heal
+  - buff
+  - slow
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Storm Call
   cooldown:
@@ -153,6 +218,17 @@ abilities:
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
   description: Charge up your Lightning Axe, then unleash a blast dealing Physical
     Damage , Knocking Up , and Silencing in an area around you
+  damage_type: physical
+  detail_kinds:
+  - mechanic
+  - stun
+  - physical
+  - physical
+  - buff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Fulmination
   kit_changes: Rain Dance no longer heals but damages enemies in the area instead.

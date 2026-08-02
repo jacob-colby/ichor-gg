@@ -26,6 +26,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 44.0
+    per_level: 2.21
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.57
+    per_level: 0.14
 abilities:
 - slot: Basic Attack
   name: Chronos Basic Attack
@@ -35,6 +44,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Time Lord
   details:
@@ -44,6 +59,11 @@ abilities:
   - 'Max Stacks: 25'
   description: You become empowered as time flows around you. Over time you gain stacks
     that grant Intelligence . Stacks have a maximum and are permanent
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
 - slot: 1st Ability
   name: Time Rift
   cooldown:
@@ -64,6 +84,15 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Hitting a god permanently increases damage by 1 Create a rift in time
     that deals Magical Damage to all enemies in the area
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Accelerate
   cooldown:
@@ -94,6 +123,24 @@ abilities:
     a duration. You gain Movement Speed (initial plus increasing over time) and Attack
     Speed . While is active, the Wheel of Time stops; the quadrant it stopped on determines
     which bonus you receive
+  detail_kinds:
+  - heal
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - heal
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Stop Time
   cooldown:
@@ -122,6 +169,18 @@ abilities:
   description: Fire spinning gears of time forward. Enemies hit have their Attack
     Speed reduced , ramping into a Stun . They take Magical Damage on impact and Magical
     Damage when Stunned
+  damage_type: magical
+  detail_kinds:
+  - stun
+  - null
+  - magical
+  - magical
+  - debuff
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Rewind
   cooldown:
@@ -144,6 +203,12 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Teleport through time to a recent position, restoring your Health and
     Mana to their earlier values. All of your Cooldowns are reset instantly
+  detail_kinds:
+  - mechanic
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Relativity
   kit_changes: Time Lord no longer grants Intelligence but instead creates a persistent

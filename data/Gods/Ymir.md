@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.59
+    per_level: 2.59
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Ymir Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Frostbite
   details:
@@ -50,6 +65,13 @@ abilities:
   description: Frostbitten enemies take more Attack damage from you, deal less damage
     to you , and have decreased Attack Speed 's effect stacks with Critical Strikes
     Your abilities apply when they damage or CC enemies
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - magical
+  - debuff
+  - debuff
 - slot: 1st Ability
   name: Ice Wall
   cooldown:
@@ -75,6 +97,16 @@ abilities:
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Create a Wall that Knocks Back enemies on creation
+  detail_kinds:
+  - null
+  - null
+  - stun
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Glacial Strike
   cooldown:
@@ -103,6 +135,19 @@ abilities:
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
   description: Smash your club into the ground, creating a field of ice that deals
     Magical Damage and Slows
+  damage_type: magical
+  detail_kinds:
+  - null
+  - slow
+  - magical
+  - magical
+  - slow
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Frost Breath
   cooldown:
@@ -126,6 +171,17 @@ abilities:
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Unleash your freezing breath, Stunning enemies in front of you and
     dealing Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - magical
+  - magical
+  - stun
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Shards of Ice
   cooldown:
@@ -150,6 +206,19 @@ abilities:
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
   description: Freeze the air around you, Slowing enemies as you Channel. After 3
     seconds, erupt with a burst of Magical Damage to all enemies in range
+  damage_type: magical
+  detail_kinds:
+  - null
+  - mechanic
+  - null
+  - null
+  - debuff
+  - magical
+  - magical
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Ymir
 last_verified: '2026-08-01'

@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Xbalanque Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Dead of Night
   details:
@@ -53,6 +68,16 @@ abilities:
   description: Deal damage to enemy gods to gain stacks. Each stack provides Strength
     or Intelligence , whichever is higher. At 3 and 6 stacks you gain an additional
     buff of Strength and Intelligence
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
+  - physical
+  - physical
 - slot: 1st Ability
   name: Branching Bola
   cooldown:
@@ -76,6 +101,16 @@ abilities:
   - 'Cost: 8 | 11 | 14 | 17 | 20 mana Per Shot'
   description: While active, your Attacks deal additional damage . When the bola hits
     a target, it splits and deals reduced damage
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Poison Darts
   cooldown:
@@ -106,6 +141,25 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Fire 15 dart projectiles in a cone, dealing Physical Damage and poisoning
     enemies hit
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - physical
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Rising Jaguar
   cooldown:
@@ -134,6 +188,19 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Dash in the direction you are currently traveling before rising in
     the air, becoming CC Immune
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - physical
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Darkest of Nights
   cooldown:
@@ -157,6 +224,20 @@ abilities:
   description: Shroud enemy gods in darkness, creating an area they cannot see out
     of. During this time you have increased Attack range , Attack projectile speed
     , Attack Speed , and Movement Speed
+  detail_kinds:
+  - null
+  - slow
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - debuff
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Nightstalker
   kit_changes: Branching Bola is no longer a toggle but provides 3 fires of ability-based

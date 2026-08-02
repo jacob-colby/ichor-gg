@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 50.7
+    per_level: 2.4
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.44
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Cabrakan Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Shadow Zone
   details:
@@ -48,6 +63,12 @@ abilities:
   - 'Radius: 4.8 meters'
   description: DAMAGE REDUCTION AURA You and nearby allies gain Damage Mitigation
     . Deal Increased Damage to enemies that damage you or nearby allies
+  detail_kinds:
+  - buff
+  - buff
+  - debuff
+  - debuff
+  - mechanic
 - slot: 1st Ability
   name: Seismic Crush
   cooldown:
@@ -76,6 +97,18 @@ abilities:
   description: Gain Haste , Slow Immunity , and Root Immunity while this effect is
     active Become enraged, increasing your Movement Speed and Attack Speed . While
     active, your next successful Attack will Stun and deal bonus Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - stun
+  - magical
+  - magical
+  - stun
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Refraction Shield
   cooldown:
@@ -108,6 +141,27 @@ abilities:
     hit by , or Health per enemy hit by Enhanced Cannot gain access to Enhanced when
     it is on cooldown Clash your shields, unleashing a concussive blast that deals
     Magical Damage . Taking damage charges your shields, granting Protections Enhanced
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - buff
+  - null
+  - magical
+  - magical
+  - magical
+  - stun
+  - heal
+  - heal
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Tremors
   cooldown:
@@ -136,6 +190,22 @@ abilities:
   - 'Cost: 20 | 30 | 40 | 50 | 60 mana'
   description: Repeatedly slam the ground, Trembling and dealing Magical Damage to
     enemies every 0.5 seconds while pulling them toward you in a Vortex
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Tectonic Shift
   cooldown:
@@ -164,6 +234,18 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Stomp the ground to create a fissure that deals Magical Damage to enemies
     in its path. From the fissure, five pieces of earth erupt to form a wall
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Rotund Jotunn
   kit_changes: Seismic Crush Stealths you and Slows enemies instead of Stunning. Refraction

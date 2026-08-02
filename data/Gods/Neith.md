@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Neith Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Broken Weave
   details:
@@ -52,6 +67,19 @@ abilities:
   - 'Buff Duration: 30 seconds'
   - 'Max Buff Stacks: 3'
   description: Your abilities either create or detonate Weaves
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - buff
+  - physical
+  - physical
+  - debuff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Spirit Arrow
   cooldown:
@@ -77,6 +105,17 @@ abilities:
   - 'Cooldown: 13 | 12.5 | 12 | 11.5 | 11 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Fire a projectile that deals Physical Damage and Roots enemies
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - physical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Unravel
   cooldown:
@@ -104,6 +143,22 @@ abilities:
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: the world weaves, dealing Physical Damage to enemies in an area Increased
+  damage_type: physical
+  detail_kinds:
+  - null
+  - heal
+  - heal
+  - null
+  - physical
+  - physical
+  - heal
+  - heal
+  - heal
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Back Flip
   cooldown:
@@ -131,6 +186,19 @@ abilities:
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Deal Physical Damage and Slow enemies in front of you, then Leap backwards
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - physical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: World Weaver
   cooldown:
@@ -160,6 +228,20 @@ abilities:
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
   description: Charge up and fire an arrow across the world, locked on to an enemy
     god and ignoring obstacles
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Wind
   kit_changes: Broken Weave explosions no longer Root enemies and the Buff has a reduced

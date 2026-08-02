@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.44
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Apollo Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Audacity
   details:
@@ -46,6 +61,9 @@ abilities:
     Attack on any enemy and for each successful damaging ability on enemy gods. At
     10 stacks you gain increased Attack Speed and Basic Attack Projectile Speed for
     your next 5 Basic Attacks
+  detail_kinds:
+  - buff
+  - buff
 - slot: 1st Ability
   name: So Beautiful
   cooldown:
@@ -65,6 +83,15 @@ abilities:
   - 'Cooldown: 11 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Send a projectile forward that deals Physical Damage
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Serenade
   cooldown:
@@ -80,6 +107,13 @@ abilities:
   - 'Cost: 60 mana'
   description: MESMERIZE AND PROTECT Sing to Mesmerize all nearby enemies and gain
     additional protections
+  detail_kinds:
+  - stun
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: The Moves
   cooldown:
@@ -101,6 +135,19 @@ abilities:
   description: Dash forward dealing Physical Damage and Knocking Aside all enemies.
     At the end of the Dash all nearby allies gain a Speed Buff and all nearby enemies
     are Slowed
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - buff
+  - buff
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Across the Sky
   cooldown:
@@ -122,6 +169,18 @@ abilities:
   description: Ride your Chariot across the sky, choosing when to land. When descending
     you deal Physical Damage every 0.15 seconds for 0.6 seconds, Knocking Back enemies
     on the last tick
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - mechanic
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Harmony
   kit_changes: Audacity now grants free So Beautiful casts but no Attack Speed. So

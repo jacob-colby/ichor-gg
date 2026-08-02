@@ -26,6 +26,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 50.89
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Hou Yi Basic Attack
@@ -35,6 +44,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Suntouched
   details:
@@ -44,6 +59,9 @@ abilities:
     Health in a single blow, become , reducing active cooldowns and Marking the enemy
     who triggered this effect. While , you cannot be Critically Hit or send another
     Mark.
+  detail_kinds:
+  - buff
+  - buff
 - slot: 1st Ability
   name: Ricochet
   cooldown:
@@ -74,6 +92,19 @@ abilities:
     an arrow that ricochets off walls, dealing Physical Damage to enemies it passes
     through. Deals increasing Physical Damage with each ricochet Bonus Damage: +40%
     Per'
+  damage_type: physical
+  detail_kinds:
+  - stun
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Mark of the Golden Crow
   cooldown:
@@ -96,6 +127,18 @@ abilities:
     While Strength is higher than Intelligence, Marked enemies take bonus Physical
     Damage based on their missing health. While Intelligence is higher than Strength,
     Marked additional effects are amplified
+  detail_kinds:
+  - stun
+  - stun
+  - slow
+  - physical
+  - stun
+  - stun
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Divebomb
   cooldown:
@@ -118,6 +161,17 @@ abilities:
   - 'Cost: 70 mana'
   description: Leap into the air before selecting a location to dive onto, dealing
     Physical Damage to enemies where you land
+  damage_type: physical
+  detail_kinds:
+  - stun
+  - null
+  - slow
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Sunbreaker
   cooldown:
@@ -142,6 +196,18 @@ abilities:
   description: Shoot down 9 suns every 0.5 seconds onto a target area, dealing Physical
     Damage and Slowing enemies hit. The first sun stays, acting as a wall that Ricochet
     can bounce off of
+  damage_type: physical
+  detail_kinds:
+  - slow
+  - physical
+  - physical
+  - slow
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Mark
   kit_changes: Attacks now ricochet, dealing bonus damage to gods per bounce. Bounced

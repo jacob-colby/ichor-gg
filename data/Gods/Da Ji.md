@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 48.0
+    per_level: 2.58
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Da Ji Basic Attack
@@ -38,6 +47,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Radius: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Torture Blades
   details:
@@ -47,6 +63,11 @@ abilities:
   - 'Damage Scaling: 5% Strength'
   description: Attacks and non-ultimate abilities cause enemies to Bleed, dealing
     Physical Damage every 1 second for 2 seconds
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
 - slot: 1st Ability
   name: Horrible Burns
   cooldown:
@@ -70,6 +91,21 @@ abilities:
   - 'Cost: 50 mana'
   description: While active, your next successful Attack Slows , deals bonus Physical
     Damage , and Physical Damage every 1 second for 3 seconds
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: One Thousand Cuts
   cooldown:
@@ -95,6 +131,17 @@ abilities:
   description: While Channeling you gain Movement Speed , Slow Immunity , immunity
     to Strafe and Backpedal movement penalties , and Mitigate Damage dealt by enemies
     gods behind you Strike enemies ahead of you 4 times, dealing Physical Damage
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - physical
+  - physical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Trickster Spirit
   cooldown:
@@ -116,6 +163,15 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Teleport to a target character or ward after a short delay, dealing
     Physical Damage in an area
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Paolao
   cooldown:
@@ -142,6 +198,23 @@ abilities:
     Enemies near the also take Physical Damage every 0.25 seconds Rise onto your for
     up to 5 seconds and fire 3 ensnaring chains. Chains deal Physical Damage , Cripple
     , and Vortex enemy gods towards the
+  damage_type: physical
+  detail_kinds:
+  - null
+  - stun
+  - stun
+  - physical
+  - mechanic
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Ferocity
   kit_changes: Horrible Burns no longer burns but provides Lifesteal and lasts for

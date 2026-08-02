@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Cerberus Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Spirit of Death
   details:
@@ -47,6 +63,9 @@ abilities:
   - Severing an enemy's soul increases Healing stolen from them by 20% for 5 seconds
   description: Any time a nearby enemy god is Healed , that Heal is reduced by 25%
     and you receive 60% + 1% per level of the Heal
+  detail_kinds:
+  - null
+  - heal
 - slot: 1st Ability
   name: Paralyzing Spit
   cooldown:
@@ -78,6 +97,20 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Spit venom with your snake tail that passes through enemies dealing
     Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - stun
+  - null
+  - null
+  - magical
+  - magical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Ghastly Breath
   cooldown:
@@ -108,6 +141,23 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Your heads release a cone of noxious breath dealing Magical Damage
     repeatedly to enemies in front of you
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - slow
+  - null
+  - slow
+  - null
+  - magical
+  - magical
+  - slow
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Soul Expulsion
   cooldown:
@@ -127,6 +177,18 @@ abilities:
   - 'Cost: 55 mana'
   description: Killing a soul Heals you and reduces 's cooldown by 2 seconds Leap
     forward dealing Magical Damage to enemies and severing their souls when you land
+  damage_type: magical
+  detail_kinds:
+  - heal
+  - magical
+  - magical
+  - heal
+  - heal
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Stygian Torment
   cooldown:
@@ -148,6 +210,16 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Raise all enemy Gods into the air, severing their souls and dealing
     Magical Damage to them before pulling them in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Souls
   kit_changes: Ghastly Breath ticks an additional time for every 3 god souls you have

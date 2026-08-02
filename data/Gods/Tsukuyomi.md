@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 48.12
+    per_level: 2.76
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Tsukuyomi Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Shingetsu & Mangetsu
   details:
@@ -77,6 +92,20 @@ abilities:
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Throw a Shuriken that deals Physical Damage to enemies and sticks into
     the first god hit
+  damage_type: physical
+  detail_kinds:
+  - buff
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Kusarigama
   cooldown:
@@ -112,6 +141,25 @@ abilities:
   description: While Strength is higher than Intelligence, it is Shingetsu Infused
     . Otherwise, it is Mangetsu Infused Perform a 3-swing combo with a . The first
     2 swings deal Physical Damage and Disarm enemies. The final swing deals more Damage
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - mechanic
+  - physical
+  - physical
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Silver Moon Caltrops
   cooldown:
@@ -136,6 +184,19 @@ abilities:
   - 'Cooldown: 14 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
   description: Scatter Caltrops in an area, dealing Physical Damage and Slowing enemies
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - null
+  - physical
+  - physical
+  - slow
+  - slow
+  - null
+  - null
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Piercing Moonlight
   cooldown:
@@ -161,6 +222,17 @@ abilities:
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
   description: Fire 4 piercing beams of moonlight, marking and dealing Physical Damage
     to enemy gods. You are CC Immune and have Damage Reduction while firing
+  detail_kinds:
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - physical
+  - buff
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Mangetsu
   kit_changes: When gaining Shingetsu Ranged Attack, they become Mangetsu Ranged Attacks

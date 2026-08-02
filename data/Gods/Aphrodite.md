@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.65
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Aphrodite Basic Attack
@@ -37,6 +46,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Center of Attention
   details:
@@ -44,6 +59,9 @@ abilities:
   - 'Magical Protection: 3 Per Stack'
   description: NEARBY PLAYERS GRANT PROTECTIONS Gain Physical Protection and Magical
     Protection for each friendly or enemy god nearby
+  detail_kinds:
+  - buff
+  - buff
 - slot: 1st Ability
   name: Kiss
   cooldown:
@@ -83,6 +101,22 @@ abilities:
     allied god to link a Soul Mate, giving you both Increased Movement Speed , and
     reducing ' cooldown. If the hits an enemy god, they take Magical Damage , are
     Stunned , and your Soul Mate becomes Jealous, Increasing their damage dealt
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - null
+  - magical
+  - null
+  - magical
+  - magical
+  - stun
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Back Off!
   cooldown:
@@ -114,6 +148,20 @@ abilities:
   description: If you have a Soul Mate, deal Magical Damage , and Slow enemies hit.
     If an enemy is hit by both areas, they take reduced damage from the 2nd area Deal
     Magical Damage , Slow , and Push away enemies around you Soul Mate
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Love Birds
   cooldown:
@@ -145,6 +193,21 @@ abilities:
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   description: Fire a Doves projectile that deals Magical Damage repeatedly over time
     to enemies hit
+  damage_type: magical
+  detail_kinds:
+  - heal
+  - heal
+  - magical
+  - null
+  - magical
+  - magical
+  - heal
+  - heal
+  - heal
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Undying Love
   cooldown:
@@ -167,6 +230,12 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: You and your Soul Mate become Damage Immune , CC Immune , and gain
     the Jealousy effect for a short duration
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Aphrodite
 last_verified: '2026-08-01'

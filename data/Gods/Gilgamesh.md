@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Gilgamesh Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 2.56 meters'
   - 'Radius: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Epic of Gilgamesh
   details:
@@ -47,6 +62,12 @@ abilities:
   - 'Winds of Shamash: Knockback a target off the wall 5 times'
   - 'Each Quest: 100 gold + upgrade'
   description: You wield artifacts that demand quests to unlock their true potential
+  detail_kinds:
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 1st Ability
   name: Sun-forged Scimitar
   cooldown:
@@ -80,6 +101,23 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Ignite your sword for 3 seconds. Enemies around the ignition take Physical
     Damage and are Slowed
+  damage_type: physical
+  detail_kinds:
+  - null
+  - physical
+  - null
+  - mechanic
+  - null
+  - null
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - null
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Drop Kick
   cooldown:
@@ -112,6 +150,23 @@ abilities:
     a minion or burst Physical Damage and being Stunned when hitting a god or wall.
     Launched enemies hitting Winds of Shamash are Knocked Back towards the center
     of the ring
+  detail_kinds:
+  - stun
+  - mechanic
+  - stun
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - stun
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Hero's Advance
   cooldown:
@@ -135,6 +190,21 @@ abilities:
   description: Allies moving toward the beacon gain Movement Speed , halved once inside
     Leap to a target location, dealing Physical Damage on impact. Create a beacon
     for 5 seconds
+  damage_type: physical
+  detail_kinds:
+  - debuff
+  - buff
+  - buff
+  - mechanic
+  - physical
+  - physical
+  - buff
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Winds of Shamash
   cooldown:
@@ -166,6 +236,22 @@ abilities:
     Physical Damage every 0.5 seconds. Outer wall heavily Slows ; your damage Knocks
     Back enemies towards the center. At 6 seconds, wind becomes thread, dealing bonus
     Physical Damage and Rooting enemies inside
+  damage_type: physical
+  detail_kinds:
+  - mechanic
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - physical
+  - slow
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Shamash
   kit_changes: 'Winds of Shamash is no longer an ultimate. Place a wind wall that

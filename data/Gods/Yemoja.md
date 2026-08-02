@@ -25,6 +25,12 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 41.04
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
 abilities:
 - slot: Basic Attack
   name: Yemoja Basic Attack
@@ -36,6 +42,14 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Ally Radius: 0.8 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Omi
   details:
@@ -49,6 +63,12 @@ abilities:
     her non-ultimate abilities have no cooldown. Yemoja's water based attacks and
     abilities can hit allies, providing them a Heal every 0.5 seconds. Yemoja's Attack
     healing only affects gods and does not proc item effects.
+  detail_kinds:
+  - null
+  - null
+  - heal
+  - heal
+  - heal
 - slot: 1st Ability
   name: Bouncing Bubble
   cost:
@@ -70,6 +90,22 @@ abilities:
   - 'Cost: 2 Omi'
   description: Toss a bubble that bounces twice, dealing Magical Damage and Slowing
     enemies before exploding into smaller bubbles
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 1st Ability (Alt)
   name: Moonstrike
   cost:
@@ -93,6 +129,23 @@ abilities:
   - 'Cost: 2 Omi'
   description: The Moon strikes multiple times at a location dealing Magical Damage
     before a final strike dealing increased Magical Damage and Stunning enemies hit
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - stun
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - stun
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Mending Waters
   cost:
@@ -113,6 +166,20 @@ abilities:
   - 'Cost: 3 Omi'
   description: Fire a water wave, dealing Magical Damage to enemies. This wave stops
     and bounces between allied gods, Healing them and providing them a Health Shield
+  damage_type: magical
+  detail_kinds:
+  - shield
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - heal
+  - shield
+  - shield
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Riptide
   cost:
@@ -131,6 +198,19 @@ abilities:
   - 'Radius: 2.24 meters'
   - 'Cost: 3 Omi'
   description: Create a water ring that Knocks Back anyone entering it
+  detail_kinds:
+  - buff
+  - slow
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: River's Rebuke
   cooldown:
@@ -155,6 +235,22 @@ abilities:
   description: Conjure 2 large walls of water that block enemy movement and projectiles.
     After a delay they crash down dealing Magical Damage , Trembling , and applying
     a decaying Slow to enemies hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - debuff
+  - slow
+  - slow
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Downpour
   kit_changes: Mending Waters no longer affects allies but stops and bounces on enemy

@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.93
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Sobek Basic Attack
@@ -38,6 +47,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Blessing of the Nile
   details:
@@ -50,6 +65,14 @@ abilities:
   - 'Max Buff Stacks: 3'
   description: When Sobek deals damage he gains a stack of Protections and Cooldown
     Rate
+  detail_kinds:
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Charge Prey
   cooldown:
@@ -76,6 +99,19 @@ abilities:
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   description: Dash forward. The first enemy hit takes Magical Damage and stops the
     dash. Sobek Throws the enemy behind him
+  damage_type: magical
+  detail_kinds:
+  - stun
+  - mechanic
+  - mechanic
+  - null
+  - magical
+  - magical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Tail Whip
   cooldown:
@@ -96,6 +132,15 @@ abilities:
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Spin your tail, dealing Magical Damage in an area around Sobek
+  damage_type: magical
+  detail_kinds:
+  - stun
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Sickening Strike
   cooldown:
@@ -130,6 +175,25 @@ abilities:
     Healing , and can spread the Disease for 2.5 seconds Each enemy god hit by the
     cone reduces this ability's cooldown by 1 second , up to 4 seconds Strike in front
     of you. This strike deals Magical Damage in a cone and applies Disease
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - magical
+  - null
+  - heal
+  - buff
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - heal
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Lurking in the Waters
   cooldown:
@@ -158,6 +222,21 @@ abilities:
   description: deals 25% of its potential damage if emerging instantly Submerge, Slowing
     enemies nearby and granting you CC Immunity , Protections , and Mana Regen . After
     4 seconds, emerge dealing Magical Damage to enemies in range
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - physical
+  - null
+  - null
+  - magical
+  - magical
+  - buff
+  - buff
+  - heal
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Prey
   kit_changes: Charge Prey now passes through all targets, knocks them forward, and

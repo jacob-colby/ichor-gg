@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Discordia Basic Attack
@@ -36,6 +45,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Contest of Gods
   details:
@@ -51,6 +66,16 @@ abilities:
   description: The god on your team with the highest damage dealt to enemy gods gains
     a Strength and Intelligence buff . Gaining a level, god kill, or god assist provides
     a random temporary self buff of Intelligence , Lifesteal , or Healing
+  detail_kinds:
+  - heal
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - heal
+  - buff
 - slot: 1st Ability
   name: Unruly Magic
   cooldown:
@@ -78,6 +103,21 @@ abilities:
   description: Fire out an orb of unruly magic dealing Magical Damage . After reaching
     the target location, the orb explodes in a small area dealing Magical Damage before
     breaking into bouncing minor projectiles that each deal Magical Damage
+  damage_type: magical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Strife
   cooldown:
@@ -105,6 +145,20 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Create an area that deals Magical Damage . Hitting 1 enemy causes them
     to be Rooted , hitting multiple applies Madness instead
+  damage_type: magical
+  detail_kinds:
+  - debuff
+  - debuff
+  - magical
+  - magical
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Erratic Behavior
   cooldown:
@@ -129,6 +183,16 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Leap and create a field in an area. While within the field, you gain
     Stealth , Movement Speed , and ability cooldown reduction
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Golden Apple of Discord
   cooldown:
@@ -160,6 +224,21 @@ abilities:
     and the delayed explosion Magical Damage , but do not explode in an area Throw
     the which deals Magical Damage before exploding in an area dealing additional
     Magical Damage and spreading the effects of the Apple
+  detail_kinds:
+  - debuff
+  - magical
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of the Gilded Victor
   kit_changes: Contest of Gods only provides you extra Attack Damage from Intelligence.

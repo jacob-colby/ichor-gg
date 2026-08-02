@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Amaterasu Basic Attack
@@ -39,6 +48,13 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Illuminating Strike
   details:
@@ -48,6 +64,10 @@ abilities:
   description: ATTACKS WEAKEN ENEMIES Basic attack or Ult an enemy 3 times to illuminate
     their weaknesses, causing them and other nearby enemies to take more damage from
     all sources
+  detail_kinds:
+  - debuff
+  - debuff
+  - mechanic
 - slot: 1st Ability
   name: Divine Presence
   cooldown:
@@ -73,6 +93,21 @@ abilities:
   - 'Cost: 30 mana'
   description: Heal yourself over 4 seconds, and alternante between the Gold and Red
     buff effects
+  detail_kinds:
+  - shield
+  - buff
+  - heal
+  - heal
+  - shield
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Heavenly Reflection
   cooldown:
@@ -99,6 +134,20 @@ abilities:
   description: Charge your Mirror and decrease all damage you take while charging.
     Reactive the ability to fire a projectile that deals Physical Damage to enemies,
     increased by the mirror's charge amount
+  damage_type: physical
+  detail_kinds:
+  - null
+  - null
+  - null
+  - physical
+  - physical
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Glorious Charge
   cooldown:
@@ -118,6 +167,16 @@ abilities:
   - 'Cost: 60 mana'
   description: Silence enemies in front of you for 1 second, then Dash forward and
     deal Physical Damage
+  detail_kinds:
+  - null
+  - null
+  - physical
+  - physical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Dazzling Offensive
   cooldown:
@@ -140,6 +199,20 @@ abilities:
   - 'Cost: 100 mana'
   description: Become CC Immune and then attack 3 times to deal Physical Damage to
     enemies in front of you each time
+  damage_type: physical
+  detail_kinds:
+  - null
+  - slow
+  - stun
+  - physical
+  - physical
+  - slow
+  - slow
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Valor
   kit_changes: Divine Presence now defaults to Red Buff, and when activated, you gain

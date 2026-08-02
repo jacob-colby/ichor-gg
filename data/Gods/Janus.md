@@ -26,6 +26,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.66
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Janus Basic Attack
@@ -35,12 +44,20 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit.
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Passages
   details:
   - 'Bonus Damage Scaling: 20% Intelligence'
   description: BONUS DAMAGE AFTER PORTAL When you pass through a Portal or Threshold,
     your next ability deals bonus Magical Damage . Stacks up to 2 times.
+  detail_kinds:
+  - magical
 - slot: 1st Ability
   name: Portal
   cooldown:
@@ -58,6 +75,16 @@ abilities:
   - 'Cooldown: 12 seconds'
   - 'Cost: 70 mana'
   description: Open a portal on a surface.
+  damage_type: magical
+  detail_kinds:
+  - null
+  - debuff
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Unstable Vortex
   cooldown:
@@ -80,6 +107,17 @@ abilities:
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   description: Hitting an enemy with both portals deals bonus Magical Damage . Launch
     two linked portals, dealing Magical Damage to enemies in their path.
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Threshold
   cooldown:
@@ -110,6 +148,20 @@ abilities:
     Damage . Magical damage you deal to phased enemies ignores 15% of their Magical
     Protection from your abilities Unleash a rift that Slows enemies and grants Movement
     Speed to allies who cross it.
+  damage_type: magical
+  detail_kinds:
+  - slow
+  - buff
+  - magical
+  - slow
+  - slow
+  - buff
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Through Space and Time
   cooldown:
@@ -133,6 +185,22 @@ abilities:
   - 'Cost: 70 mana'
   description: Fire a global projectile that deals Magical Damage and opens portals
     for allies on any surface it passes. Enemies hit are Phased if Threshold is ranked.
+  damage_type: magical
+  detail_kinds:
+  - mechanic
+  - null
+  - null
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Janus
 last_verified: '2026-08-01'

@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Anubis Basic Attack
@@ -36,6 +45,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: The Scales
   details:
@@ -48,6 +63,14 @@ abilities:
   - 'Max Stacks: 8'
   description: Gain Lifesteal and Protections . Gain bonus Lifesteal and Protections
     scaled from missing Health
+  detail_kinds:
+  - null
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Plague of Locusts
   cooldown:
@@ -76,6 +99,19 @@ abilities:
   - 'Cost: 30 | 40 | 50 | 60 | 70 mana'
   description: Locusts fly from your mouth, repeatedly dealing Magical Damage in an
     area in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - mechanic
+  - null
+  - null
+  - magical
+  - magical
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Mummify
   cooldown:
@@ -101,6 +137,16 @@ abilities:
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   description: Fire a bandage projectile, dealing Magical Damage , mummifying, and
     Stunning the first god hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - stun
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Grasping Hands
   cooldown:
@@ -128,6 +174,18 @@ abilities:
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
   description: Summon allies from the underworld, Slowing and dealing Magical Damage
     repeatedly to enemies in an area
+  damage_type: magical
+  detail_kinds:
+  - null
+  - slow
+  - magical
+  - magical
+  - slow
+  - slow
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Death Gaze
   cooldown:
@@ -152,6 +210,23 @@ abilities:
   - 'Cost: 90 mana'
   description: The Scales is always at full strength during Your piercing gaze burns
     enemies in a line
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - mechanic
+  - null
+  - debuff
+  - null
+  - null
+  - magical
+  - magical
+  - magical
+  - magical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 aspects: []
 source_url: https://wiki.smite2.com/w/Anubis
 last_verified: '2026-08-01'

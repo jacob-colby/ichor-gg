@@ -28,6 +28,15 @@ base_stats:
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.85
+    per_level: 0.23
+  mana_regen:
+    base: 1.55
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Ullr Basic Attack
@@ -43,12 +52,25 @@ abilities:
   - 'Axe Range: 1.92 meters'
   - 'Axe Cone Angle: 120 degrees'
   description: Ullr's Attacks change depending on his current stance
+  damage_type: physical
+  detail_kinds:
+  - physical
+  - null
+  - physical
+  - null
+  - physical
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Weapon Master
   details:
   - 'Cooldown Reduction: 1 second'
   description: ABILITIES REDUCE OTHER COOLDOWNS When you use an ability in either
     stance your Cooldowns in the opposite stance are reduced
+  detail_kinds:
+  - buff
 aspects: []
 source_url: https://wiki.smite2.com/w/Ullr
 last_verified: '2026-08-01'

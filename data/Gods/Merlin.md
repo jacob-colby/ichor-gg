@@ -27,6 +27,15 @@ base_stats:
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Merlin Basic Attack
@@ -36,6 +45,12 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Overload
   details:
@@ -46,6 +61,13 @@ abilities:
   - 'Buff Duration: 5 seconds'
   description: Using an ability provides 1 stack of . Firing a Attack consumes 1 stack
     of and deals Magical Damage to enemies hit
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Pandemonium
   kit_changes: Elemental Mastery has a reduced cooldown and each time it is used,

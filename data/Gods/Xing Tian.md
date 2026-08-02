@@ -25,6 +25,15 @@ base_stats:
   move_speed:
     base: 0.0
     per_level: 0.0
+  attack_power:
+    base: 0.0
+    per_level: 0.0
+  health_regen:
+    base: 0.0
+    per_level: 0.0
+  mana_regen:
+    base: 0.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Xing Tian Basic Attack
@@ -35,6 +44,12 @@ abilities:
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
   description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - mechanic
+  - mechanic
 - slot: Passive
   name: Smouldering Rage
   details:
@@ -45,6 +60,12 @@ abilities:
   - 'Max Stacks: 12'
   description: Ability hits grant stacks. Each stack grants Health Regen and temporary
     Maximum Health for a duration
+  detail_kinds:
+  - null
+  - buff
+  - buff
+  - buff
+  - buff
 - slot: 1st Ability
   name: Furious Roar
   cooldown:
@@ -69,6 +90,18 @@ abilities:
   description: Shout from your chest in a line, dealing Magical Damage and reducing
     enemy Basic Attack Damage for a duration. Enemies also take Magical Damage over
     time based on their max Health
+  damage_type: magical
+  detail_kinds:
+  - null
+  - magical
+  - magical
+  - magical
+  - debuff
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 2nd Ability
   name: Hook Slam
   cooldown:
@@ -96,6 +129,16 @@ abilities:
   description: Knockup, Root, Slam Slam your axe upward, dealing Magical Damage and
     Knocking Up enemies hit, then slam them into the ground for Magical Damage and
     Rooting them for a duration
+  detail_kinds:
+  - magical
+  - magical
+  - magical
+  - magical
+  - debuff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: 3rd Ability
   name: Sky-Cutting Axe
   cooldown:
@@ -115,6 +158,18 @@ abilities:
   - 'Cost: 60 mana'
   description: Leap forward, dealing Magical Damage to enemies where you land. Within
     a short duration, Leap again
+  damage_type: magical
+  detail_kinds:
+  - buff
+  - null
+  - magical
+  - magical
+  - buff
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
+  - mechanic
 - slot: Ultimate
   name: Whirlwind of Rage and Steel
   cooldown:
@@ -139,6 +194,16 @@ abilities:
   description: Grabbed enemies take Magical Damage on the Grab , repeatedly during
     the spin, and again on the Throw After a brief windup, spin with your axe, damaging
     and Grabbing nearby enemies before Throwing them in the direction you are facing
+  damage_type: magical
+  detail_kinds:
+  - stun
+  - mechanic
+  - magical
+  - magical
+  - buff
+  - mechanic
+  - mechanic
+  - mechanic
 aspects:
 - name: Aspect of Relentless Spite
   kit_changes: Smouldering Rage no longer grants Health Regen or temporary Maximum
