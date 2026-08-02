@@ -103,3 +103,58 @@ def test_the_shipped_file_parses_and_holds_no_real_observations():
     real, examples = cc.load_observations(cc.DEFAULT_PATH)
     assert real == []
     assert examples == []
+
+
+# ── Planning a run ────────────────────────────────────────────────────────
+
+def test_plan_produces_a_fully_determined_baseline():
+    """The whole point: a level-1 observation needs nothing read off a screen.
+    No god has base power, so raw is the ability's flat rank-1 value, and the
+    target's protections are a number we already hold."""
+    data = cc.REPO_ROOT / "data"
+    cases, err = cc.plan_cases(data / "Gods", data / "Items", "Thanatos", "Ymir")
+    assert err is None and cases
+    base = cases[0]
+    assert base["kwargs"] == {}                      # no items, no penetration
+    assert base["raw"] == pytest.approx(95)          # Death Scythe rank 1
+    assert base["protection"] == pytest.approx(20.52, abs=0.01)   # Ymir base physical
+    assert base["predicted"] == pytest.approx(95 * 100 / 120.52, rel=1e-3)
+
+
+def test_plan_covers_both_kinds_of_penetration():
+    """Flat and percent are separate columns in the gold model and separate
+    terms in the damage model; a plan that only exercised one would leave the
+    other unverified."""
+    data = cc.REPO_ROOT / "data"
+    cases, _ = cc.plan_cases(data / "Gods", data / "Items", "Thanatos", "Ymir")
+    kinds = {k for c in cases for k in c["kwargs"]}
+    assert kinds == {"flat_pen", "pct_pen"}
+
+
+def test_plan_avoids_items_whose_passive_fires_on_the_cast():
+    """The Crusher adds 35% of Strength on every ability hit and Obsidian Shard
+    shreds protections on the first cast — the very quantity under test. An
+    observation taken with either would be quietly wrong."""
+    data = cc.REPO_ROOT / "data"
+    cases, _ = cc.plan_cases(data / "Gods", data / "Items", "Thanatos", "Ymir")
+    named = " ".join(c["label"] for c in cases)
+    for unsafe in ("The Crusher", "Obsidian Shard", "Heartseeker", "Titan's Bane"):
+        assert unsafe not in named
+
+
+def test_plan_adds_item_power_only_where_the_god_scales_on_it():
+    """Doom Orb gives Intelligence. Scylla scales on it and her raw damage
+    rises; Thanatos does not and his must not."""
+    data = cc.REPO_ROOT / "data"
+    phys, _ = cc.plan_cases(data / "Gods", data / "Items", "Thanatos", "Ymir")
+    mag, _ = cc.plan_cases(data / "Gods", data / "Items", "Scylla", "Hercules")
+    doom_phys = next(c for c in phys if "Doom Orb" in c["label"])
+    doom_mag = next(c for c in mag if "Doom Orb" in c["label"])
+    assert doom_phys["raw"] == phys[0]["raw"]        # no Strength on the item
+    assert doom_mag["raw"] > mag[0]["raw"]           # Intelligence does scale
+
+
+def test_plan_reports_an_unknown_god_rather_than_guessing():
+    data = cc.REPO_ROOT / "data"
+    cases, err = cc.plan_cases(data / "Gods", data / "Items", "Nobody", "Ymir")
+    assert cases is None and "Nobody" in err

@@ -19,9 +19,11 @@ import argparse
 import sys
 from pathlib import Path
 
+import re
+
 import yaml
 
-from smite import combat
+from smite import combat, notes
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_PATH = REPO_ROOT / "data" / "_combat_observations.yaml"
@@ -31,6 +33,131 @@ DEFAULT_PATH = REPO_ROOT / "data" / "_combat_observations.yaml"
 # published worked example moves protection from 85 to 75, which is a ~4%
 # swing in final damage.
 DEFAULT_TOLERANCE = 0.02
+
+
+# ── Planning a run ────────────────────────────────────────────────────────
+# The point of `--plan` is that a level-1 observation needs no guesswork about
+# the target's protections. Three facts make it fully determined:
+#
+#   * no god has base Strength or Intelligence — checked across all 87, every
+#     point of power comes from items. At level 1 with an empty inventory your
+#     power is exactly 0, so an ability's damage is its flat rank-1 value with
+#     no scaling term at all.
+#   * every god's base protections are scraped, so a level-1 target's
+#     protections are a number we already hold rather than something to read
+#     off a screen that does not show it.
+#   * item stats are scraped too, so buying exactly ONE item keeps the whole
+#     thing determined while introducing penetration.
+#
+# So each planned case names a setup and the damage this model expects. Play
+# it, write down what the game showed, and the gate does the rest.
+
+_RANK1 = re.compile(r"^Damage:\s*([\d.]+)")
+_SCALING = re.compile(r"([\d.]+)%\s+(Strength|Intelligence)")
+
+
+def _first_damaging_ability(god):
+    """The god's first ability with a flat rank-1 damage value and a known
+    damage type. Returns (name, damage, damage_type, scaling) or None."""
+    for a in god.get("abilities") or []:
+        if "Basic Attack" in (a.get("slot") or ""):
+            continue
+        if not a.get("damage_type"):
+            continue
+        base = scaling = None
+        for line in a.get("details") or []:
+            line = line.strip()
+            m = _RANK1.match(line)
+            if m and base is None:
+                base = float(m.group(1))
+            if line.startswith("Damage Scaling:"):
+                scaling = {stat: float(pct) / 100 for pct, stat in _SCALING.findall(line)}
+        if base is not None:
+            return a["name"], base, a["damage_type"], scaling or {}
+    return None
+
+
+def _prot(target, damage_type):
+    key = "physical_prot" if damage_type == "physical" else "magical_prot"
+    return ((target.get("base_stats") or {}).get(key) or {}).get("base")
+
+
+def plan_cases(gods_dir, items_dir, attacker, target):
+    """Ready-to-run observation setups with the damage this model predicts."""
+    def _load(d):
+        out = {}
+        for p in sorted(Path(d).glob("*.md")):
+            fm, _ = notes.read_note(p)
+            if fm.get("name"):
+                out[fm["name"]] = fm
+        return out
+
+    gods, items = _load(gods_dir), _load(items_dir)
+    if attacker not in gods or target not in gods:
+        return None, f"unknown god: {attacker if attacker not in gods else target}"
+    hit = _first_damaging_ability(gods[attacker])
+    if not hit:
+        return None, f"{attacker} has no ability with a parsed rank-1 damage value"
+    name, base, dtype, scaling = hit
+    prot = _prot(gods[target], dtype)
+    if prot is None:
+        return None, f"{target} has no scraped {dtype} protection"
+
+    cases = [{"label": f"no items - {name} rank 1 vs {target} lvl 1",
+              "setup": "Level 1. Buy NOTHING. Cast the ability once.",
+              "raw": base, "protection": prot, "kwargs": {}}]
+
+    # One item at a time, so raw damage stays computable: power comes only
+    # from that item, and penetration only from it too.
+    def add(item_name):
+        item = items.get(item_name)
+        if not item:
+            return
+        stats = item.get("stats") or {}
+        power = sum(ratio * float(str(stats.get(stat, "0")).rstrip("%") or 0)
+                    for stat, ratio in scaling.items())
+        pen = str(stats.get("Penetration", "") or "")
+        kw = {}
+        if pen.endswith("%"):
+            kw["pct_pen"] = float(pen.rstrip("%")) / 100
+        elif pen:
+            kw["flat_pen"] = float(pen)
+        if not kw:
+            return
+        cases.append({
+            "label": f"{item_name} only - {name} rank 1 vs {target} lvl 1",
+            "setup": f"Level 1. Buy ONLY {item_name} ({item.get('cost')}g). Cast the ability once.",
+            "raw": base + power, "protection": prot, "kwargs": kw})
+
+    # A passive that fires on the cast would silently change the number being
+    # recorded — The Crusher adds 35% of Strength on every ability hit, and
+    # Obsidian Shard shreds protections on the first cast, which is precisely
+    # the quantity under test. Rank candidates so the cleanest is offered
+    # first: no passive at all, then one that cannot trigger on a single cast
+    # in an empty practice range (kill/assist and on-use effects).
+    def _passive_risk(item):
+        passive = (item.get("passive") or "").lower()
+        if not passive.strip():
+            return 0
+        if "ability hit" in passive or "ability cast" in passive:
+            return 2
+        return 1
+
+    def _best(predicate):
+        pool = [n for n, i in items.items()
+                if predicate(str((i.get("stats") or {}).get("Penetration", "")))]
+        # Risk first, then name, so the choice is deterministic run to run.
+        return sorted(pool, key=lambda n: (_passive_risk(items[n]), n))
+
+    for pool in (_best(str.isdigit), _best(lambda p: p.endswith("%"))):
+        for n in pool:
+            if _passive_risk(items[n]) < 2:
+                add(n)
+                break
+
+    for c in cases:
+        c["predicted"] = combat.damage_dealt(c["raw"], c["protection"], **c["kwargs"])
+    return cases, None
 
 
 def load_observations(path):
@@ -65,7 +192,33 @@ def main(argv=None):
     ap.add_argument("--file", type=Path, default=DEFAULT_PATH)
     ap.add_argument("--tolerance", type=float, default=DEFAULT_TOLERANCE,
                     help=f"max acceptable relative error (default {DEFAULT_TOLERANCE:.0%})")
+    ap.add_argument("--plan", nargs=2, metavar=("ATTACKER", "TARGET"),
+                    help="print ready-to-run observation setups for a matchup")
     args = ap.parse_args(argv)
+
+    if args.plan:
+        data = REPO_ROOT / "data"
+        cases, err = plan_cases(data / "Gods", data / "Items", *args.plan)
+        if err:
+            print(err)
+            return 1
+        print(f"Observation plan: {args.plan[0]} -> {args.plan[1]}")
+        print()
+        print("Both at LEVEL 1. The target buys nothing, so its protections are")
+        print("its scraped base values. No god has base Strength or Intelligence,")
+        print("so your power is exactly what your items give and nothing else.")
+        print()
+        for c in cases:
+            print(f"  {c['label']}")
+            print(f"    {c['setup']}")
+            extra = "".join(f", {k}={v}" for k, v in c["kwargs"].items())
+            print(f"    raw {c['raw']:.0f} vs {c['protection']:.2f} protection{extra}")
+            print(f"    this model predicts {c['predicted']:.1f}"
+                  "  <- record what the game shows")
+            print()
+        print("Add each as an entry in data/_combat_observations.yaml with the real")
+        print("number as `expected`, then run this command with no arguments.")
+        return 0
 
     real, examples = load_observations(args.file)
     if not real:

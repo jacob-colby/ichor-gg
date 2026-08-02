@@ -10,13 +10,24 @@
 #
 # HOW TO TAKE AN OBSERVATION
 #
-#   1. Practice range. Note the ability's listed damage at its current rank and
-#      your Strength / Intelligence, or read `raw` straight off a hit against a
-#      0-protection dummy.
-#   2. Hit a target whose protections you know.
-#   3. Record the number the game showed.
+# You do not have to read the enemy's protections off a screen that does not
+# show them. Ask for a plan:
 #
-# Run:  python -m smite.calibrate
+#     python -m smite.calibrate_combat --plan Thanatos Ymir
+#
+# It prints setups that are fully determined, because three things are already
+# known: no god has base Strength or Intelligence (checked across all 87), so
+# at level 1 with an empty inventory your power is exactly zero and an
+# ability's damage is its flat rank-1 value; every god's base protections are
+# scraped; and so are item stats, so buying exactly ONE item keeps everything
+# computable while introducing penetration. It also avoids items whose passive
+# fires on an ability cast, which would change the number being measured.
+#
+#   1. Jungle Practice, level 1, buy only what the plan says.
+#   2. Cast the named ability once at the named target.
+#   3. Write the damage the game showed in as `expected`.
+#
+# Run:  python -m smite.calibrate_combat
 #
 # The cases that matter most, in order:
 #   - one with NO penetration        (confirms mitigation alone; likely fine)
