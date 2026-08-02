@@ -83,15 +83,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
+  - Blink Rune
   - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
   - Ethereal Staff
   - Gluttonous Grimoire
   flex_slots:
-  - Eye of Providence
   - Breastplate of Valor
+  - Blink Rune
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -100,52 +100,52 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Ethereal Staff, Kinetic Cuirass, Eye of Providence,
-    Amanita Charm, Spear of the Magus, Soul Gem, Spectral Armor, Rod of Asclepius,
-    Lifebinder, Shield of the Phoenix, Erosion, Obsidian Shard, The Cosmic Horror,
-    Chandra''s Grace, Helm of Radiance, Chronos'' Pendant, Blood-Bound Book, Alchemist
-    Coat, Spear of Desolation, Gladiator''s Shield, Jade Scepter, Midgardian Mail,
-    Bancroft''s Talon, Ancient Signet.'
+    this god: Ethereal Staff, Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm,
+    Soul Gem, Blink Rune, Eye of Providence, Oni Hunter''s Garb, Shield of the Phoenix,
+    Spectral Armor, Freya''s Tears, Wish-Granting Pearl, Shifter''s Shield, Jade Scepter,
+    Spear of the Magus, Rod of Asclepius, Mantle Of Discord, Erosion, Yogi''s Necklace,
+    Draconic Scale, Helm of Radiance, The Cosmic Horror, Spear of Desolation, Leviathan''s
+    Hide, Chronos'' Pendant, Alchemist Coat.'
   slot_scores:
-    Eye of Providence:
-      total: 0.46
-      efficiency: 0.47
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.0
     Genji's Guard:
-      total: 0.47
-      efficiency: 0.46
+      total: 0.57
+      efficiency: 0.74
       win: 0.56
       pick: 0.2
       fit: 0.31
     Breastplate of Valor:
-      total: 0.45
-      efficiency: 0.42
+      total: 0.54
+      efficiency: 0.67
       win: 0.55
       pick: 0.17
       fit: 0.31
     Kinetic Cuirass:
-      total: 0.47
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.59
     Ethereal Staff:
-      total: 0.49
-      efficiency: 0.47
+      total: 0.57
+      efficiency: 0.7
       win: 0.59
       pick: 0.11
       fit: 0.35
     Gluttonous Grimoire:
-      total: 0.49
-      efficiency: 0.5
+      total: 0.57
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -155,15 +155,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Eye of Providence
+  - Blink Rune
   - Genji's Guard
+  - Breastplate of Valor
   - Kinetic Cuirass
   - Ethereal Staff
   - Gluttonous Grimoire
-  - Spear of the Magus
   flex_slots:
-  - Eye of Providence
-  - Spear of the Magus
+  - Blink Rune
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -172,138 +172,138 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Gluttonous Grimoire, Ethereal Staff, Kinetic Cuirass, Eye of Providence,
-    Spear of the Magus, Soul Gem, Amanita Charm, Spectral Armor, Obsidian Shard, Rod
-    of Asclepius, Shield of the Phoenix, The Cosmic Horror, Death Metal, Erosion,
-    Chandra''s Grace, Spear of Desolation, Chronos'' Pendant, Blood-Bound Book, Helm
-    of Radiance, Triton''s Conch, Gladiator''s Shield, Bragi''s Harp, Alchemist Coat,
-    Bancroft''s Talon, Ancient Signet.'
+    god: Gluttonous Grimoire, Ethereal Staff, Soul Gem, Blink Rune, Kinetic Cuirass,
+    Amanita Charm, Oni Hunter''s Garb, Eye of Providence, Shield of the Phoenix, Spear
+    of the Magus, Spectral Armor, Death Metal, Freya''s Tears, Wish-Granting Pearl,
+    Yogi''s Necklace, Jade Scepter, Mantle Of Discord, Rod of Asclepius, The Cosmic
+    Horror, Shifter''s Shield, Spear of Desolation, Triton''s Conch, Erosion, Chronos''
+    Pendant, Chandra''s Grace, Helm of Radiance.'
   slot_scores:
-    Eye of Providence:
-      total: 0.44
-      efficiency: 0.47
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.0
     Genji's Guard:
-      total: 0.46
-      efficiency: 0.46
+      total: 0.56
+      efficiency: 0.74
       win: 0.56
       pick: 0.2
       fit: 0.27
+    Breastplate of Valor:
+      total: 0.53
+      efficiency: 0.67
+      win: 0.55
+      pick: 0.17
+      fit: 0.27
     Kinetic Cuirass:
-      total: 0.45
-      efficiency: 0.44
+      total: 0.52
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.47
     Ethereal Staff:
-      total: 0.47
-      efficiency: 0.47
+      total: 0.55
+      efficiency: 0.7
       win: 0.59
       pick: 0.11
       fit: 0.25
     Gluttonous Grimoire:
-      total: 0.48
-      efficiency: 0.5
+      total: 0.56
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Spear of the Magus:
-      total: 0.44
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Genji's Guard
+  - Breastplate of Valor
   - Kinetic Cuirass
   - Ethereal Staff
-  - Gluttonous Grimoire
   - Amanita Charm
+  - Soul Gem
   flex_slots:
-  - Genji's Guard
-  - Eye of Providence
+  - Kinetic Cuirass
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Gluttonous Grimoire, Ethereal Staff, Rod of Asclepius,
-    Soul Gem, Lifebinder, Shield of the Phoenix, Chandra''s Grace, Kinetic Cuirass,
-    Eye of Providence, Blood-Bound Book, Bancroft''s Talon, Phoenix Feather, Spear
-    of the Magus, Spectral Armor, Erosion, Obsidian Shard, Spirit Robe, The Cosmic
-    Horror, Alchemist Coat, Chronos'' Pendant, Gladiator''s Shield, Helm of Radiance,
-    Jade Scepter, Spear of Desolation.'
+    this god: Amanita Charm, Soul Gem, Ethereal Staff, Gluttonous Grimoire, Shield
+    of the Phoenix, Rod of Asclepius, Lifebinder, Kinetic Cuirass, Chandra''s Grace,
+    Blink Rune, Eye of Providence, Oni Hunter''s Garb, Bancroft''s Talon, Blood-Bound
+    Book, Spectral Armor, Wish-Granting Pearl, Jade Scepter, Shifter''s Shield, Phoenix
+    Feather, Freya''s Tears, Spear of the Magus, Yogi''s Necklace, Erosion, Mantle
+    Of Discord, Draconic Scale, Alchemist Coat.'
   slot_scores:
-    Eye of Providence:
-      total: 0.46
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Genji's Guard:
-      total: 0.47
-      efficiency: 0.46
+      total: 0.56
+      efficiency: 0.74
       win: 0.56
       pick: 0.2
       fit: 0.29
+    Breastplate of Valor:
+      total: 0.53
+      efficiency: 0.67
+      win: 0.55
+      pick: 0.17
+      fit: 0.29
     Kinetic Cuirass:
-      total: 0.47
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.59
     Ethereal Staff:
-      total: 0.49
-      efficiency: 0.47
+      total: 0.57
+      efficiency: 0.7
       win: 0.59
       pick: 0.11
       fit: 0.39
-    Gluttonous Grimoire:
-      total: 0.5
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Amanita Charm:
-      total: 0.5
-      efficiency: 0.45
+      total: 0.58
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Soul Gem:
+      total: 0.58
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Eye of Providence
+  - Blink Rune
   - Genji's Guard
+  - Breastplate of Valor
   - Kinetic Cuirass
   - Ethereal Staff
   - Gluttonous Grimoire
-  - Spear of the Magus
   flex_slots:
+  - Blink Rune
   - Kinetic Cuirass
-  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -312,62 +312,62 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Ethereal Staff, Spear of the Magus, Soul Gem,
-    Kinetic Cuirass, Eye of Providence, Obsidian Shard, Amanita Charm, Screeching
-    Gargoyle, The Cosmic Horror, Spectral Armor, Rod of Asclepius, Lifebinder, Void
-    Stone, Spear of Desolation, Void Shield, Stone of Binding, Shield of the Phoenix,
-    Erosion, Chandra''s Grace, Blood-Bound Book, Helm of Radiance, Chronos'' Pendant,
-    Alchemist Coat, Doom Orb.'
+    for this god: Gluttonous Grimoire, Ethereal Staff, Soul Gem, Blink Rune, Kinetic
+    Cuirass, Amanita Charm, Spear of the Magus, Eye of Providence, Oni Hunter''s Garb,
+    The Cosmic Horror, Spectral Armor, Shield of the Phoenix, Void Shield, Screeching
+    Gargoyle, Spear of Desolation, Stone of Binding, Wish-Granting Pearl, Freya''s
+    Tears, Obsidian Shard, Jade Scepter, Mantle Of Discord, Shifter''s Shield, Rod
+    of Asclepius, Yogi''s Necklace, Void Stone, Erosion.'
   slot_scores:
-    Eye of Providence:
-      total: 0.45
-      efficiency: 0.47
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.0
     Genji's Guard:
-      total: 0.46
-      efficiency: 0.46
+      total: 0.56
+      efficiency: 0.74
       win: 0.56
       pick: 0.2
       fit: 0.26
+    Breastplate of Valor:
+      total: 0.53
+      efficiency: 0.67
+      win: 0.55
+      pick: 0.17
+      fit: 0.26
     Kinetic Cuirass:
-      total: 0.45
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.51
     Ethereal Staff:
-      total: 0.48
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.7
       win: 0.59
       pick: 0.11
       fit: 0.29
     Gluttonous Grimoire:
-      total: 0.5
-      efficiency: 0.5
+      total: 0.58
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Spear of the Magus:
-      total: 0.46
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
   starter: *id001
 - source: suggested
   archetype: fun-crit
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Tyrfing
+  - Berserker's Shield
   - Death Metal
   - Damaru
   - Demon Blade
@@ -376,53 +376,53 @@ builds:
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Golden Blade:
-      total: 0.22
-      efficiency: 0.39
+      total: 0.3
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.57
     Lernaean Bow:
-      total: 0.23
-      efficiency: 0.37
+      total: 0.33
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Tyrfing:
-      total: 0.23
-      efficiency: 0.37
+    Berserker's Shield:
+      total: 0.31
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.34
     Death Metal:
-      total: 0.25
-      efficiency: 0.43
+      total: 0.32
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.24
-      efficiency: 0.41
+      total: 0.33
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.22
-      efficiency: 0.21
+      total: 0.31
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -431,14 +431,14 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Blink Rune
   - Eye of Providence
+  - Genji's Guard
   - Kinetic Cuirass
   - Ethereal Staff
   - Gluttonous Grimoire
-  - Spear of the Magus
-  - Spectral Armor
   flex_slots:
-  - Spectral Armor
+  - Eye of Providence
   - Ethereal Staff
   situational_swaps:
   - vs_tag: heavy_cc
@@ -454,48 +454,48 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Gluttonous Grimoire, Kinetic Cuirass, Eye of Providence,
-    Amanita Charm, Spear of the Magus, Soul Gem, Spectral Armor, Ethereal Staff, Rod
-    of Asclepius, Shield of the Phoenix, Erosion, Obsidian Shard, The Cosmic Horror,
-    Chandra''s Grace, Helm of Radiance, Chronos'' Pendant, Blood-Bound Book, Alchemist
-    Coat, Spear of Desolation, Gladiator''s Shield, Lifebinder, Jade Scepter, Midgardian
-    Mail, Bancroft''s Talon, Ancient Signet.'
+    Underrated for this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm,
+    Soul Gem, Blink Rune, Eye of Providence, Ethereal Staff, Oni Hunter''s Garb, Shield
+    of the Phoenix, Spectral Armor, Freya''s Tears, Wish-Granting Pearl, Shifter''s
+    Shield, Jade Scepter, Spear of the Magus, Rod of Asclepius, Mantle Of Discord,
+    Erosion, Yogi''s Necklace, Draconic Scale, Helm of Radiance, The Cosmic Horror,
+    Spear of Desolation, Leviathan''s Hide, Chronos'' Pendant, Alchemist Coat.'
   slot_scores:
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.0
     Eye of Providence:
-      total: 0.46
-      efficiency: 0.47
+      total: 0.52
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.74
+      win: 0.56
+      pick: 0.2
+      fit: 0.31
     Kinetic Cuirass:
-      total: 0.47
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.59
     Ethereal Staff:
-      total: 0.49
-      efficiency: 0.47
+      total: 0.57
+      efficiency: 0.7
       win: 0.59
       pick: 0.11
       fit: 0.35
     Gluttonous Grimoire:
-      total: 0.49
-      efficiency: 0.5
+      total: 0.57
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Spear of the Magus:
-      total: 0.45
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
-    Spectral Armor:
-      total: 0.44
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.32
   starter: *id001
 ---

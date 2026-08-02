@@ -1,0 +1,68 @@
+# Real in-game damage numbers, for checking pipeline/smite/combat.py.
+#
+# This file is the gate on workstream B. `combat.py` reproduces two published
+# worked examples exactly, but its penetration block — the order of operations
+# and the 40% / 50 caps — comes from community guides with visible SMITE 1
+# lineage, and no primary SMITE 2 source states it. B4 (magnitude-aware fit),
+# B5 (item scoring against a target) and B6 (team exchange) all inherit that
+# error if it is wrong, so nothing downstream ships until real numbers land
+# here.
+#
+# HOW TO TAKE AN OBSERVATION
+#
+# You do not have to read the enemy's protections off a screen that does not
+# show them. Ask for a plan:
+#
+#     python -m smite.calibrate_combat --plan Thanatos Ymir
+#
+# It prints setups that are fully determined, because three things are already
+# known: no god has base Strength or Intelligence (checked across all 87), so
+# at level 1 with an empty inventory your power is exactly zero and an
+# ability's damage is its flat rank-1 value; every god's base protections are
+# scraped; and so are item stats, so buying exactly ONE item keeps everything
+# computable while introducing penetration. It also avoids items whose passive
+# fires on an ability cast, which would change the number being measured.
+#
+#   1. Jungle Practice, level 1, buy only what the plan says.
+#   2. Cast the named ability once at the named target.
+#   3. Write the damage the game showed in as `expected`.
+#
+# Run:  python -m smite.calibrate_combat
+#
+# The cases that matter most, in order:
+#   - one with NO penetration        (confirms mitigation alone; likely fine)
+#   - one with FLAT penetration only (confirms the flat term and its cap)
+#   - one with PERCENT penetration   (confirms the percent term and ordering)
+#   - one with BOTH                  (the only case that tests the ORDER, which
+#                                     is the part no source could settle)
+#   - one crit                       (confirms 1.65x, contradicted by the
+#                                     wiki's own stats page)
+#
+# FIELDS
+#   label       what you were doing — shown in the report
+#   expected    the damage the game actually displayed  (required)
+#   raw         damage before mitigation                (required)
+#   protection  the target's protection in that school  (required)
+#   flat_pen / pct_pen / flat_reduction / pct_reduction   optional
+#   plating / dampening / true_damage / crit              optional
+#
+# pct_pen is a FRACTION: 20% penetration is 0.20, not 20.
+
+observations: []
+
+# Example of the shape — delete once real ones are in. These numbers are made
+# up and `calibrate` refuses to treat the file as evidence while `example: true`
+# is set on any entry.
+#
+# observations:
+#   - label: "Agni 2 vs 80 magical prot, no pen"
+#     example: true
+#     raw: 500
+#     protection: 80
+#     expected: 277.8
+#   - label: "same, with Obsidian Shard (20% pen)"
+#     example: true
+#     raw: 500
+#     protection: 80
+#     pct_pen: 0.20
+#     expected: 305.3

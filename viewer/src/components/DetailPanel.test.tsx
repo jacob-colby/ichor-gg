@@ -585,6 +585,35 @@ describe("DetailPanel — modes come from the data", () => {
     expect(screen.queryByText("Conquest Item")).not.toBeInTheDocument();
   });
 
+  it("orders the strip by the pipeline's list, not by filename", () => {
+    // The notes arrive sorted by filename, so Arena leads. Conquest is the
+    // primary mode and has to come first — this regressed the moment Arena
+    // was added and no test saw it.
+    render(panel({ items: modeItems, builds: threeModes as never, mode: "Conquest",
+                   modeOrder: ["Conquest", "Joust", "Arena"] }));
+    const group = screen.getByRole("group", { name: "Game mode" });
+    expect(within(group).getAllByRole("button").map((b) => b.textContent))
+      .toEqual(["Conquest", "Joust", "Arena"]);
+  });
+
+  it("keeps an unlisted mode rather than dropping it", () => {
+    // Only Conquest is ranked; the rest are unknown to the order and hold
+    // their original relative position, because the sort is stable. A mode
+    // the pipeline forgot to list must still be reachable.
+    render(panel({ items: modeItems, builds: threeModes as never, mode: "Conquest",
+                   modeOrder: ["Conquest"] }));
+    const group = screen.getByRole("group", { name: "Game mode" });
+    expect(within(group).getAllByRole("button").map((b) => b.textContent))
+      .toEqual(["Conquest", "Joust", "Arena"]);
+  });
+
+  it("falls back to the data's own order when the index ships none", () => {
+    render(panel({ items: modeItems, builds: threeModes as never, mode: "Conquest" }));
+    const group = screen.getByRole("group", { name: "Game mode" });
+    expect(within(group).getAllByRole("button").map((b) => b.textContent))
+      .toHaveLength(3);
+  });
+
   it("hides the strip when the god has only one mode", () => {
     render(panel({ items: modeItems, builds: [threeModes[0]] as never, mode: "Conquest" }));
     expect(screen.queryByRole("group", { name: "Game mode" })).not.toBeInTheDocument();

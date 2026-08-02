@@ -5,6 +5,12 @@ chip-highlighting works unchanged."""
 from smite.efficiency import parse_stat_value
 
 
+def _amount(raw):
+    """A stat's magnitude, percent sign or not. 0 when unparseable, so a
+    malformed value can't silently look like a cap-filling contribution."""
+    return parse_stat_value(raw) or 0.0
+
+
 def _is_boots(item):
     return "Movement Speed" in (item.get("stats") or {})
 
@@ -14,16 +20,51 @@ def _is_lifesteal(item, tags):
     return "sustain" in (tags or []) or any("Lifesteal" in s for s in stats)
 
 
-def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None):
+def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
+                  stat_caps=None):
     """Highest-total items filling n slots: at most one boots, at most
     `max_lifesteal` lifesteal/sustain items, no duplicates. rows must be
     pre-sorted by -total (score_god_items already does). When `require`
     {stat, min} is given, the core is seeded with the top-scored items carrying
-    that stat (up to `min`, honoring the same rules) before filling by score."""
+    that stat (up to `min`, honoring the same rules) before filling by score.
+
+    `stat_caps` {stat: cap} refuses an item whose only contribution is a stat
+    the core has already capped out. Tenacity caps at 50 and the four items
+    carrying it give 15 each, so a fourth was buying nothing; Plating and
+    Dampening cap at 35 with the same shape. The gold model can't see this —
+    no single item comes close to a cap, so pricing a point linearly is right
+    at the item level and only wrong once they stack.
+
+    Deliberately narrow: it fires only when the whole contribution is wasted.
+    An item that would take Tenacity from 45 to 60 still buys the 5 points
+    that fit, and refusing it would be a worse error than allowing the overflow.
+
+    It currently changes nothing — measured across all 261 build notes, zero
+    cores differ with it on. Four Tenacity items would have to out-score
+    everything else in the pool, and none do. It is kept as a guard rather than
+    deleted because the rule is real and cheap: a patch that buffs those items,
+    or a defensive flavor that weights them up, would start stacking dead
+    stats silently. Do not read it as load-bearing.
+    """
     core, used = [], set()
     have_boots = [False]
     lifesteal_count = [0]
+    capped_totals = {}
     _row_tags = {r["item"]: r.get("tags") for r in rows}
+
+    def _capped_out(item):
+        """True when the item has nothing left to offer: every stat it carries
+        is a capped one, and all of them are already maxed.
+
+        The "every stat" half matters. An item bringing maxed Tenacity *and*
+        40 Strength is not dead weight — the Tenacity is wasted but the item
+        is not, and rejecting it would lose the Strength to save nothing."""
+        stats = item.get("stats") or {}
+        if not stats or not stat_caps:
+            return False
+        if any(s not in stat_caps for s in stats):
+            return False                      # carries something uncapped
+        return all(capped_totals.get(s, 0.0) >= stat_caps[s] for s in stats)
 
     def _try_add(name):
         if name in used or len(core) >= n:
@@ -32,12 +73,21 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None):
         if _is_boots(item):
             if have_boots[0]:
                 return False
-            have_boots[0] = True
         is_ls = _is_lifesteal(item, _row_tags.get(name))
         if is_ls and lifesteal_count[0] >= max_lifesteal:
             return False
+        if _capped_out(item):
+            return False
+        # Every guard has passed — only now record the item's effects, so a
+        # rejected candidate can't leave the boots flag or a stat total set.
+        if _is_boots(item):
+            have_boots[0] = True
         if is_ls:
             lifesteal_count[0] += 1
+        for stat in (stat_caps or {}):
+            raw = (item.get("stats") or {}).get(stat)
+            if raw:
+                capped_totals[stat] = capped_totals.get(stat, 0.0) + _amount(raw)
         core.append(name)
         used.add(name)
         return True

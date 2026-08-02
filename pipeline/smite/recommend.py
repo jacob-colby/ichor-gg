@@ -160,7 +160,8 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         require = cfg.get("require") if flavor else None
         core = assemble.assemble_core(rows, items_by_name, n=6,
                                       max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
-                                      require=require)
+                                      require=require,
+                                      stat_caps=weights.get("stat_caps"))
         archetype = flavor or "core"
         if flavor is None:
             core_rows, core_profile = rows, profile
@@ -180,7 +181,8 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         max_ls = scoring.god_max_lifesteal(god, weights, core_profile)
         model_rows = sorted(core_rows, key=lambda r: (-r["quality"], r["item"]))
         model_core = assemble.assemble_core(model_rows, items_by_name, n=6,
-                                            max_lifesteal=max_ls)
+                                            max_lifesteal=max_ls,
+                                            stat_caps=weights.get("stat_caps"))
         entries.append(_entry("model", model_core, model_rows, items_by_name,
                               tags_map, weights, core_profile, flex_count,
                               starter, aspect_name))
@@ -232,7 +234,11 @@ def main(argv=None):
         items = load_items()
         weights = scoring.load_weights(WEIGHTS_PATH)
         tags_map = scoring.load_tags(TAGS_PATH)
-        untagged = [it["name"] for it in items if it["name"] not in tags_map]
+        # Only buildable items need effect tags — a component is never in a
+        # build, so listing all 49 of them turns a useful warning into noise
+        # nobody reads.
+        untagged = [it["name"] for it in items
+                    if scoring.is_buildable(it) and it["name"] not in tags_map]
         if untagged:
             print(f"[tags] {len(untagged)} untagged items: {', '.join(sorted(untagged))}")
         out_dir = DATA_ROOT / "Analysis"

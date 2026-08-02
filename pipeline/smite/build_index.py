@@ -6,7 +6,7 @@ import json
 import shutil
 from pathlib import Path
 
-from smite import abilities, efficiency, notes, scoring, snapshots, tierlist
+from smite import abilities, efficiency, notes, recommend, scoring, snapshots, tierlist
 
 
 def _enrich_gods(gods, weights):
@@ -163,6 +163,10 @@ def build_index(repo_root: Path) -> dict:
              "method": {"signals": weights.get("signals", {}),
                         "kit_blend": weights.get("kit_blend", 0.5),
                         "underrated": weights.get("underrated", {})},
+             # Mode order, so the viewer presents Conquest first rather than
+             # whatever order the build filenames happened to sort in — which
+             # put Arena at the head the moment it was added.
+             "modes": list(recommend.MODES),
              "starters": weights.get("starters", []),
              "roster": _load_roster(data_root),
              "data_updated": _data_updated(gods, builds),

@@ -163,3 +163,65 @@ def test_flex_slots_are_lowest_scored_core():
     assert flex_slots(core, rows, count=2) == ["E", "F"]
     assert set(flex_slots(core, rows, count=2)) <= set(core)
     assert flex_slots(["A"], [{"item": "A"}], count=2) == ["A"]
+
+
+# ── Stat caps ─────────────────────────────────────────────────────────────
+
+def _capped(name, tenacity):
+    return {"name": name, "tier": 3, "cost": 2500, "stats": {"Tenacity": str(tenacity)}}
+
+
+def test_refuses_an_item_whose_whole_contribution_is_capped_out():
+    """Tenacity caps at 50 and the real items give 15 each, so a fourth buys
+    nothing. Synthetic here because the rule does not currently fire on real
+    data — four Tenacity items never out-score the pool."""
+    items = [_capped(f"T{i}", 25) for i in range(4)]
+    rows = [{"item": it["name"], "total": 1.0 - i * 0.01, "tags": []}
+            for i, it in enumerate(items)]
+    by_name = {it["name"]: it for it in items}
+    core = assemble.assemble_core(rows, by_name, n=4, stat_caps={"Tenacity": 50})
+    # Two items reach the cap exactly; the third and fourth are pure waste.
+    assert core == ["T0", "T1"]
+
+
+def test_allows_an_item_that_only_partly_overflows():
+    """45 + 15 wastes 10 and buys 5. Refusing it would be the bigger error."""
+    items = [_capped("A", 45), _capped("B", 15)]
+    rows = [{"item": "A", "total": 1.0, "tags": []}, {"item": "B", "total": 0.9, "tags": []}]
+    core = assemble.assemble_core(rows, {i["name"]: i for i in items}, n=2,
+                                  stat_caps={"Tenacity": 50})
+    assert core == ["A", "B"]
+
+
+def test_an_item_carrying_an_uncapped_stat_too_is_still_taken():
+    """The guard asks whether EVERY capped stat is maxed. An item that also
+    brings Strength is not dead weight just because its Tenacity is."""
+    items = [_capped("A", 50),
+             {"name": "B", "tier": 3, "cost": 2500,
+              "stats": {"Tenacity": "15", "Strength": "40"}}]
+    rows = [{"item": "A", "total": 1.0, "tags": []}, {"item": "B", "total": 0.9, "tags": []}]
+    core = assemble.assemble_core(rows, {i["name"]: i for i in items}, n=2,
+                                  stat_caps={"Tenacity": 50})
+    assert core == ["A", "B"]
+
+
+def test_no_stat_caps_means_no_filtering():
+    items = [_capped(f"T{i}", 25) for i in range(3)]
+    rows = [{"item": it["name"], "total": 1.0, "tags": []} for it in items]
+    core = assemble.assemble_core(rows, {i["name"]: i for i in items}, n=3)
+    assert len(core) == 3
+
+
+def test_a_rejected_item_does_not_consume_the_boots_slot():
+    """Latent bug: `have_boots` was set before the lifesteal guard ran, so a
+    boots-and-lifesteal item rejected for sustain still burned the boots slot
+    and blocked every later boots item. No item is both today; the ordering is
+    the fix."""
+    both = {"name": "Sustaining Boots", "tier": 3, "cost": 2500,
+            "stats": {"Movement Speed": "18", "Lifesteal": "10%"}}
+    boots = {"name": "Plain Boots", "tier": 3, "cost": 2500, "stats": {"Movement Speed": "18"}}
+    rows = [{"item": "Sustaining Boots", "total": 1.0, "tags": []},
+            {"item": "Plain Boots", "total": 0.9, "tags": []}]
+    by_name = {i["name"]: i for i in (both, boots)}
+    core = assemble.assemble_core(rows, by_name, n=2, max_lifesteal=0)
+    assert core == ["Plain Boots"]

@@ -84,6 +84,21 @@ def test_tier1_starters_excluded_from_gold_fit_and_scoring():
     assert {"A", "B", "C"} <= set(scores)  # real items still scored
 
 
+def test_components_stay_in_the_fit_and_sharpen_it():
+    """A tier-2 component is scored and does move the fit — it is the evidence
+    that lets a stat's price be identified apart from the bundles it always
+    ships in. Narrowing this pool to finished items only cost the validation
+    gate 3.3 points of coverage; see `efficiency_pool`."""
+    finished = [
+        {"name": "A", "tier": 3, "cost": 3000, "stats": {"Strength": "60"}},
+        {"name": "B", "tier": 3, "cost": 2000, "stats": {"Strength": "40"}},
+    ]
+    component = {"name": "Sickle", "tier": 2, "cost": 1200, "stats": {"Strength": "10"}}
+    assert component in efficiency.efficiency_pool(finished + [component])
+    scores, _ = efficiency.efficiency_scores(finished + [component])
+    assert "Sickle" in scores
+
+
 def test_efficiency_scores_flags_underpriced_as_undervalued():
     items = [
         _item("A", 2000, Strength=100),

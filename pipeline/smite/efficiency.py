@@ -91,7 +91,36 @@ def efficiency_pool(items):
     passive, not their token stats — so regressing cost onto their tiny stats
     poisons the gold-per-stat fit and skews every item's residual. They keep
     their cost in the data (display/audit) but sit out both the fit and the
-    scored set."""
+    scored set.
+
+    Components stay IN, and that is deliberate. It looks wrong — a finished
+    item's cost includes its components', so one set of coefficients is being
+    asked to describe two pricing regimes — and it was changed to
+    finished-items-only on exactly that reasoning, supported by five-fold
+    cross-validation on held-out finished items:
+
+        no components   197g mean held-out cost error
+        16 components   357g
+        all 64          385g
+
+    The validation gate then said the opposite, and the validation gate wins:
+
+                        coverage   win-weighted
+        with components   48.4%       50.6%
+        finished only     45.1%       47.7%
+
+    The cross-validation measured the wrong objective. Nothing downstream needs
+    to predict an item's price; it needs the *residual* to rank items in a way
+    that tracks whether they are actually good. A model that predicts cost
+    perfectly has a residual of zero everywhere and says nothing. Components
+    are what let individual stat prices be identified apart from the bundles
+    they always appear in, and that identification is what makes the residuals
+    rank well — which is why scraping the missing 41 of them moved the gate
+    from 47%/49% to 48.4%/50.6% on its own.
+
+    If you are about to narrow this pool again: measure `validate.compute`, not
+    prediction error.
+    """
     return [it for it in numeric_cost_items(items) if it.get("tier") != 1]
 
 

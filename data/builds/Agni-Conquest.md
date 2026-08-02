@@ -90,8 +90,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - The Cosmic Horror
   - Rod of Tahuti
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -106,45 +106,46 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Chronos''
-    Pendant, Ethereal Staff, Doom Orb, Rod of Asclepius, Blood-Bound Book, Bancroft''s
-    Talon, Ancient Signet, The World Stone, Death Metal, Gem of Focus, Polynomicon,
-    Helm of Radiance, Alchemist Coat, Divine Ruin, Lifebinder, Bragi''s Harp, Jade
-    Scepter, Genji''s Guard, Scepter of Dominion.'
+    this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Ethereal
+    Staff, Blink Rune, Dreamer''s Idol, Chronos'' Pendant, The World Stone, Doom Orb,
+    Genji''s Guard, Death Metal, Wish-Granting Pearl, Jade Scepter, Gem of Focus,
+    Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, Bracer of The Abyss, Helm
+    of Radiance, Alchemist Coat, Breastplate of Valor, Polynomicon, Bragi''s Harp,
+    Soul Reaver.'
   slot_scores:
     Spear of Desolation:
-      total: 0.51
-      efficiency: 0.32
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.53
       fit: 1.0
     The Cosmic Horror:
-      total: 0.48
-      efficiency: 0.4
+      total: 0.55
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.79
     Spear of the Magus:
-      total: 0.51
-      efficiency: 0.48
+      total: 0.56
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.79
     Rod of Tahuti:
-      total: 0.47
-      efficiency: 0.26
+      total: 0.55
+      efficiency: 0.47
       win: 0.54
       pick: 0.36
       fit: 0.79
     Obsidian Shard:
-      total: 0.49
-      efficiency: 0.41
+      total: 0.54
+      efficiency: 0.55
       win: 0.49
       pick: 0.24
       fit: 0.79
     Soul Gem:
-      total: 0.55
-      efficiency: 0.36
+      total: 0.64
+      efficiency: 0.62
       win: 0.56
       pick: 0.33
       fit: 1.0
@@ -154,22 +155,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Blink Rune
+  - Genji's Guard
   - Death Metal
   - Spear of Desolation
-  - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - The Cosmic Horror
   - Death Metal
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -177,45 +178,46 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Death Metal,
-    Chronos'' Pendant, Bragi''s Harp, Ethereal Staff, Rod of Asclepius, Blood-Bound
-    Book, Genji''s Guard, Doom Orb, Bancroft''s Talon, Ancient Signet, Triton''s Conch,
-    Gem of Focus, Chandra''s Grace, Breastplate of Valor, The World Stone, Shield
-    of the Phoenix, Polynomicon, Helm of Radiance, Spectral Armor, Alchemist Coat.'
+    god: Gluttonous Grimoire, Blink Rune, Spear of the Magus, Death Metal, Genji''s
+    Guard, The Cosmic Horror, Ethereal Staff, Chronos'' Pendant, Breastplate of Valor,
+    Dreamer''s Idol, Bragi''s Harp, Triton''s Conch, Wish-Granting Pearl, The World
+    Stone, Gem of Focus, Jade Scepter, Doom Orb, Bancroft''s Talon, Rod of Asclepius,
+    Blood-Bound Book, Bracer of The Abyss, Shield of the Phoenix, Oni Hunter''s Garb,
+    Chandra''s Grace.'
   slot_scores:
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.0
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.22
     Death Metal:
-      total: 0.44
-      efficiency: 0.43
+      total: 0.52
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
     Spear of Desolation:
-      total: 0.48
-      efficiency: 0.32
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.53
       fit: 0.78
-    The Cosmic Horror:
-      total: 0.45
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Spear of the Magus:
-      total: 0.47
-      efficiency: 0.48
+      total: 0.52
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.56
-    Obsidian Shard:
-      total: 0.46
-      efficiency: 0.41
-      win: 0.49
-      pick: 0.24
       fit: 0.56
     Soul Gem:
-      total: 0.53
-      efficiency: 0.36
+      total: 0.62
+      efficiency: 0.62
       win: 0.56
       pick: 0.33
       fit: 0.88
@@ -223,69 +225,69 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Blink Rune
   - Eye of Providence
   - Kinetic Cuirass
-  - Spear of the Magus
-  - Spectral Armor
+  - Ethereal Staff
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
-  - Spectral Armor
+  - Blink Rune
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Gluttonous Grimoire, Rod of Asclepius, Shield of the
-    Phoenix, Kinetic Cuirass, Chandra''s Grace, Eye of Providence, Lifebinder, Blood-Bound
-    Book, Bancroft''s Talon, Phoenix Feather, Spear of the Magus, Spectral Armor,
-    Ethereal Staff, Erosion, Spirit Robe, The Cosmic Horror, Genji''s Guard, Alchemist
-    Coat, Helm of Radiance, Jade Scepter, Midgardian Mail, Gladiator''s Shield, Chronos''
-    Pendant.'
+    this god: Amanita Charm, Gluttonous Grimoire, Shield of the Phoenix, Rod of Asclepius,
+    Kinetic Cuirass, Ethereal Staff, Blink Rune, Eye of Providence, Chandra''s Grace,
+    Oni Hunter''s Garb, Bancroft''s Talon, Genji''s Guard, Blood-Bound Book, Lifebinder,
+    Spectral Armor, Wish-Granting Pearl, Jade Scepter, Shifter''s Shield, Phoenix
+    Feather, Spear of the Magus, Breastplate of Valor, Yogi''s Necklace, Erosion,
+    Freya''s Tears, Draconic Scale, Mantle Of Discord, Alchemist Coat.'
   slot_scores:
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.0
     Eye of Providence:
-      total: 0.47
-      efficiency: 0.47
+      total: 0.53
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.51
     Kinetic Cuirass:
-      total: 0.47
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Spear of the Magus:
-      total: 0.45
-      efficiency: 0.48
+    Ethereal Staff:
+      total: 0.53
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 0.39
-    Spectral Armor:
-      total: 0.45
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
+      fit: 0.4
     Amanita Charm:
-      total: 0.5
-      efficiency: 0.45
+      total: 0.58
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.81
     Soul Gem:
-      total: 0.53
-      efficiency: 0.36
+      total: 0.62
+      efficiency: 0.62
       win: 0.56
       pick: 0.33
       fit: 0.89
@@ -300,61 +302,62 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - The Cosmic Horror
   - Rod of Tahuti
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Doom
-    Orb, The World Stone, Ethereal Staff, Chronos'' Pendant, Rod of Asclepius, Blood-Bound
-    Book, Screeching Gargoyle, Bancroft''s Talon, Ancient Signet, Death Metal, Dreamer''s
-    Idol, Gem of Focus, Polynomicon, Helm of Radiance, Genji''s Guard, Alchemist Coat,
-    Divine Ruin, Lifebinder, Bragi''s Harp.'
+    for this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Dreamer''s
+    Idol, Blink Rune, The World Stone, Doom Orb, Ethereal Staff, Genji''s Guard, Chronos''
+    Pendant, Death Metal, Wish-Granting Pearl, Jade Scepter, Bancroft''s Talon, Rod
+    of Asclepius, Blood-Bound Book, Bracer of The Abyss, Breastplate of Valor, Gem
+    of Focus, Screeching Gargoyle, Helm of Radiance, Alchemist Coat, Oni Hunter''s
+    Garb, Polynomicon.'
   slot_scores:
     Spear of Desolation:
-      total: 0.51
-      efficiency: 0.32
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.53
       fit: 1.0
     The Cosmic Horror:
-      total: 0.49
-      efficiency: 0.4
+      total: 0.56
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.85
     Spear of the Magus:
-      total: 0.52
-      efficiency: 0.48
+      total: 0.57
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.85
     Rod of Tahuti:
-      total: 0.48
-      efficiency: 0.26
+      total: 0.55
+      efficiency: 0.47
       win: 0.54
       pick: 0.36
       fit: 0.85
     Obsidian Shard:
-      total: 0.5
-      efficiency: 0.41
+      total: 0.55
+      efficiency: 0.55
       win: 0.49
       pick: 0.24
       fit: 0.85
     Soul Gem:
-      total: 0.55
-      efficiency: 0.36
+      total: 0.64
+      efficiency: 0.62
       win: 0.56
       pick: 0.33
       fit: 1.0
@@ -364,7 +367,7 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Tyrfing
+  - Berserker's Shield
   - Death Metal
   - Damaru
   - Demon Blade
@@ -373,53 +376,53 @@ builds:
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
     build). Scored on gold-value + flavor fit only; not meta-checked.
   slot_scores:
     Golden Blade:
-      total: 0.22
-      efficiency: 0.39
+      total: 0.3
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.57
     Lernaean Bow:
-      total: 0.23
-      efficiency: 0.37
+      total: 0.33
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Tyrfing:
-      total: 0.23
-      efficiency: 0.37
+    Berserker's Shield:
+      total: 0.31
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.34
     Death Metal:
-      total: 0.25
-      efficiency: 0.43
+      total: 0.32
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.66
     Damaru:
-      total: 0.24
-      efficiency: 0.41
+      total: 0.33
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.66
     Demon Blade:
-      total: 0.22
-      efficiency: 0.21
+      total: 0.31
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -428,15 +431,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Chronos' Pendant
+  - Ethereal Staff
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Obsidian Shard
   flex_slots:
-  - The Cosmic Horror
-  - Chronos' Pendant
+  - Obsidian Shard
+  - Ethereal Staff
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -452,44 +455,45 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror,
-    Chronos'' Pendant, Ethereal Staff, Doom Orb, Rod of Asclepius, Blood-Bound Book,
-    Bancroft''s Talon, Ancient Signet, The World Stone, Death Metal, Gem of Focus,
-    Polynomicon, Helm of Radiance, Alchemist Coat, Divine Ruin, Lifebinder, Bragi''s
-    Harp, Jade Scepter, Genji''s Guard, Scepter of Dominion.'
+    Ethereal Staff, Blink Rune, Dreamer''s Idol, Chronos'' Pendant, The World Stone,
+    Doom Orb, Genji''s Guard, Death Metal, Wish-Granting Pearl, Jade Scepter, Gem
+    of Focus, Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, Bracer of The
+    Abyss, Helm of Radiance, Alchemist Coat, Breastplate of Valor, Polynomicon, Bragi''s
+    Harp, Soul Reaver.'
   slot_scores:
-    Chronos' Pendant:
-      total: 0.46
-      efficiency: 0.4
+    Ethereal Staff:
+      total: 0.53
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.42
     Gluttonous Grimoire:
-      total: 0.53
-      efficiency: 0.5
+      total: 0.61
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.89
     Spear of Desolation:
-      total: 0.51
-      efficiency: 0.32
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.53
       fit: 1.0
     The Cosmic Horror:
-      total: 0.48
-      efficiency: 0.4
+      total: 0.55
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.79
     Spear of the Magus:
-      total: 0.51
-      efficiency: 0.48
+      total: 0.56
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.79
     Obsidian Shard:
-      total: 0.49
-      efficiency: 0.41
+      total: 0.54
+      efficiency: 0.55
       win: 0.49
       pick: 0.24
       fit: 0.79
@@ -497,15 +501,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Blink Rune
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - The Cosmic Horror
   - Rod of Tahuti
+  - Blink Rune
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -520,45 +524,45 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Chronos''
-    Pendant, Ethereal Staff, Rod of Asclepius, Blood-Bound Book, Doom Orb, Bragi''s
-    Harp, Bancroft''s Talon, Ancient Signet, Death Metal, Gem of Focus, The World
-    Stone, Bracer of The Abyss, Polynomicon, Helm of Radiance, Alchemist Coat, Divine
-    Ruin, Lifebinder, Genji''s Guard, Jade Scepter.'
+    this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Blink Rune,
+    Ethereal Staff, Bracer of The Abyss, Chronos'' Pendant, Dreamer''s Idol, Genji''s
+    Guard, Death Metal, Wish-Granting Pearl, Jade Scepter, The World Stone, Bancroft''s
+    Talon, Bragi''s Harp, Rod of Asclepius, Blood-Bound Book, Doom Orb, Gem of Focus,
+    Nimble Ring, Helm of Radiance, Breastplate of Valor, Alchemist Coat, Polynomicon.'
   slot_scores:
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.0
     Spear of Desolation:
-      total: 0.49
-      efficiency: 0.32
+      total: 0.56
+      efficiency: 0.52
       win: 0.5
       pick: 0.53
       fit: 0.86
     The Cosmic Horror:
-      total: 0.47
-      efficiency: 0.4
+      total: 0.53
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.68
     Spear of the Magus:
-      total: 0.49
-      efficiency: 0.48
+      total: 0.54
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.68
     Rod of Tahuti:
-      total: 0.45
-      efficiency: 0.26
+      total: 0.53
+      efficiency: 0.47
       win: 0.54
       pick: 0.36
       fit: 0.68
-    Obsidian Shard:
-      total: 0.48
-      efficiency: 0.41
-      win: 0.49
-      pick: 0.24
-      fit: 0.68
     Soul Gem:
-      total: 0.54
-      efficiency: 0.36
+      total: 0.63
+      efficiency: 0.62
       win: 0.56
       pick: 0.33
       fit: 0.96
@@ -567,22 +571,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Blink Rune
+  - Genji's Guard
   - Death Metal
   - Spear of Desolation
-  - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - The Cosmic Horror
+  - Genji's Guard
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -590,46 +594,46 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Death Metal,
-    Bragi''s Harp, Chronos'' Pendant, Ethereal Staff, Rod of Asclepius, Blood-Bound
-    Book, Genji''s Guard, Bancroft''s Talon, Doom Orb, Ancient Signet, Chandra''s
-    Grace, Triton''s Conch, Gem of Focus, Breastplate of Valor, The World Stone, Shield
-    of the Phoenix, Spectral Armor, Polynomicon, Helm of Radiance, Kinetic Cuirass,
-    Alchemist Coat.'
+    god: Gluttonous Grimoire, Blink Rune, Spear of the Magus, Genji''s Guard, Death
+    Metal, The Cosmic Horror, Ethereal Staff, Bragi''s Harp, Chronos'' Pendant, Breastplate
+    of Valor, Dreamer''s Idol, Bracer of The Abyss, Triton''s Conch, Wish-Granting
+    Pearl, Jade Scepter, Gem of Focus, Bancroft''s Talon, Rod of Asclepius, Blood-Bound
+    Book, The World Stone, Doom Orb, Oni Hunter''s Garb, Shield of the Phoenix, Yogi''s
+    Necklace.'
   slot_scores:
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.0
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
     Death Metal:
-      total: 0.44
-      efficiency: 0.43
+      total: 0.51
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.41
     Spear of Desolation:
-      total: 0.47
-      efficiency: 0.32
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.53
       fit: 0.71
-    The Cosmic Horror:
-      total: 0.44
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Spear of the Magus:
-      total: 0.47
-      efficiency: 0.48
+      total: 0.52
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.51
-    Obsidian Shard:
-      total: 0.45
-      efficiency: 0.41
-      win: 0.49
-      pick: 0.24
       fit: 0.51
     Soul Gem:
-      total: 0.52
-      efficiency: 0.36
+      total: 0.61
+      efficiency: 0.62
       win: 0.56
       pick: 0.33
       fit: 0.81
@@ -638,69 +642,69 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Blink Rune
   - Eye of Providence
   - Kinetic Cuirass
-  - Spear of the Magus
-  - Spectral Armor
+  - Ethereal Staff
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
-  - Spectral Armor
+  - Ethereal Staff
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Gluttonous Grimoire, Rod of Asclepius, Shield of the
-    Phoenix, Kinetic Cuirass, Chandra''s Grace, Lifebinder, Eye of Providence, Blood-Bound
-    Book, Bancroft''s Talon, Phoenix Feather, Spear of the Magus, Spectral Armor,
-    Ethereal Staff, Erosion, Spirit Robe, Genji''s Guard, The Cosmic Horror, Alchemist
-    Coat, Helm of Radiance, Jade Scepter, Midgardian Mail, Chronos'' Pendant, Breastplate
-    of Valor, Gladiator''s Shield.'
+    this god: Amanita Charm, Gluttonous Grimoire, Shield of the Phoenix, Rod of Asclepius,
+    Kinetic Cuirass, Blink Rune, Ethereal Staff, Chandra''s Grace, Eye of Providence,
+    Oni Hunter''s Garb, Bancroft''s Talon, Genji''s Guard, Blood-Bound Book, Lifebinder,
+    Spectral Armor, Wish-Granting Pearl, Jade Scepter, Shifter''s Shield, Phoenix
+    Feather, Breastplate of Valor, Yogi''s Necklace, Spear of the Magus, Erosion,
+    Freya''s Tears, Mantle Of Discord, Draconic Scale, Alchemist Coat.'
   slot_scores:
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.0
     Eye of Providence:
-      total: 0.46
-      efficiency: 0.47
+      total: 0.52
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.47
     Kinetic Cuirass:
-      total: 0.46
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Spear of the Magus:
-      total: 0.45
-      efficiency: 0.48
+    Ethereal Staff:
+      total: 0.53
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 0.36
-    Spectral Armor:
-      total: 0.45
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
+      fit: 0.37
     Amanita Charm:
-      total: 0.5
-      efficiency: 0.45
+      total: 0.58
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.77
     Soul Gem:
-      total: 0.52
-      efficiency: 0.36
+      total: 0.62
+      efficiency: 0.62
       win: 0.56
       pick: 0.33
       fit: 0.86
@@ -716,61 +720,62 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - The Cosmic Horror
   - Rod of Tahuti
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Doom
-    Orb, The World Stone, Ethereal Staff, Rod of Asclepius, Blood-Bound Book, Chronos''
-    Pendant, Screeching Gargoyle, Bancroft''s Talon, Ancient Signet, Death Metal,
-    Bragi''s Harp, Polynomicon, Genji''s Guard, Dreamer''s Idol, Helm of Radiance,
-    Gem of Focus, Alchemist Coat, Bracer of The Abyss, Divine Ruin.'
+    for this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Blink
+    Rune, Dreamer''s Idol, The World Stone, Doom Orb, Ethereal Staff, Genji''s Guard,
+    Bracer of The Abyss, Chronos'' Pendant, Death Metal, Wish-Granting Pearl, Jade
+    Scepter, Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, Breastplate of
+    Valor, Bragi''s Harp, Screeching Gargoyle, Gem of Focus, Nimble Ring, Helm of
+    Radiance, Oni Hunter''s Garb.'
   slot_scores:
     Spear of Desolation:
-      total: 0.5
-      efficiency: 0.32
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.53
       fit: 0.9
     The Cosmic Horror:
-      total: 0.48
-      efficiency: 0.4
+      total: 0.54
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.77
     Spear of the Magus:
-      total: 0.51
-      efficiency: 0.48
+      total: 0.56
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.77
     Rod of Tahuti:
-      total: 0.47
-      efficiency: 0.26
+      total: 0.54
+      efficiency: 0.47
       win: 0.54
       pick: 0.36
       fit: 0.77
     Obsidian Shard:
-      total: 0.49
-      efficiency: 0.41
+      total: 0.54
+      efficiency: 0.55
       win: 0.49
       pick: 0.24
       fit: 0.77
     Soul Gem:
-      total: 0.55
-      efficiency: 0.36
+      total: 0.64
+      efficiency: 0.62
       win: 0.56
       pick: 0.33
       fit: 1.0
@@ -779,15 +784,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Chronos' Pendant
+  - Blink Rune
+  - Ethereal Staff
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   flex_slots:
-  - Spear of Desolation
-  - Chronos' Pendant
+  - Blink Rune
+  - Ethereal Staff
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -803,46 +808,47 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror,
-    Chronos'' Pendant, Ethereal Staff, Rod of Asclepius, Blood-Bound Book, Doom Orb,
-    Bragi''s Harp, Bancroft''s Talon, Ancient Signet, Death Metal, Gem of Focus, The
-    World Stone, Bracer of The Abyss, Polynomicon, Helm of Radiance, Alchemist Coat,
-    Divine Ruin, Lifebinder, Genji''s Guard, Jade Scepter.'
+    Blink Rune, Ethereal Staff, Bracer of The Abyss, Chronos'' Pendant, Dreamer''s
+    Idol, Genji''s Guard, Death Metal, Wish-Granting Pearl, Jade Scepter, The World
+    Stone, Bancroft''s Talon, Bragi''s Harp, Rod of Asclepius, Blood-Bound Book, Doom
+    Orb, Gem of Focus, Nimble Ring, Helm of Radiance, Breastplate of Valor, Alchemist
+    Coat, Polynomicon.'
   slot_scores:
-    Chronos' Pendant:
-      total: 0.45
-      efficiency: 0.4
+    Blink Rune:
+      total: 0.53
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.54
-    Gluttonous Grimoire:
+      fit: 0.0
+    Ethereal Staff:
       total: 0.52
-      efficiency: 0.5
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Gluttonous Grimoire:
+      total: 0.59
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.78
     Spear of Desolation:
-      total: 0.49
-      efficiency: 0.32
+      total: 0.56
+      efficiency: 0.52
       win: 0.5
       pick: 0.53
       fit: 0.86
     The Cosmic Horror:
-      total: 0.47
-      efficiency: 0.4
+      total: 0.53
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.68
     Spear of the Magus:
-      total: 0.49
-      efficiency: 0.48
+      total: 0.54
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.68
-    Obsidian Shard:
-      total: 0.48
-      efficiency: 0.41
-      win: 0.49
-      pick: 0.24
       fit: 0.68
   starter: *id001
   aspect: Aspect of Combustion
