@@ -81,6 +81,40 @@ TENACITY_CAP = 0.50
 PATHFINDING_COMBAT_SCALE = 0.33
 LIFESTEAL_MINION_SCALE = 0.33
 
+# ── Echo ──────────────────────────────────────────────────────────────────
+# The shares below are DOCUMENTED: "Echo as a stat gives 30% of your Ability's
+# damage as bonus damage on Abilities, and 15% ... on Ultimate Abilities."
+#
+# That the stat's magnitude is a CHANCE is INFERRED, because the wiki sentence
+# alone would make the number meaningless — our items grant Echo 20, 25 and
+# 30, and a flat "+30% ability damage" would be identical on all three. Three
+# item texts we scrape ourselves say otherwise:
+#
+#   The Cosmic Horror  "Echo > Cooldown Rate: +20% Echo Damage"  — Echo Damage
+#                      is its own damage instance, so something fires again
+#   Omen Drum          "...15% of all Ability Damage you dealt is echoed..."
+#   Damaru             "Echo: +8% Attack Damage for 5s"  — a trigger, so an
+#                      Echo is an event rather than a standing bonus
+#
+# So Echo is read as a percentage chance for a landed ability to repeat for a
+# fraction of its damage. Expected value is therefore linear in the stat,
+# which is all a build comparison needs — the variance only matters to a
+# single cast. One practice-range observation settles it: repeat an ability
+# with an Echo item and see whether the damage is bimodal or uniformly higher.
+ECHO_ABILITY_SHARE = 0.30
+ECHO_ULTIMATE_SHARE = 0.15
+
+# ── Cooldown rate ─────────────────────────────────────────────────────────
+# DOCUMENTED, and quotable: "Cooldown Rate reduces the duration of that
+# Cooldown, with every 1 Cooldown Rate allowing you to use abilities 1% more
+# often." That is the same shape as protections — 100 / (100 + x) — and it is
+# self-limiting, which is why no cap is needed and why the game can promise
+# you will never reach zero cooldown. 25 of our items carry the stat and
+# nothing in the model could see it before now.
+#
+# Note this is a RATE, not SMITE 1's flat cooldown reduction: 100 Cooldown
+# Rate is twice as many casts, not a 100% reduction.
+
 # MEASURED. Basic attacks scale off Strength, Intelligence and Attack Damage
 # together, and the ratios are per-god: 84 of 89 parsed basic attacks read
 # "100% Strength + 20% Intelligence + 100% Attack Damage", and the rest differ
@@ -145,10 +179,57 @@ def ability_damage(base, scaling, stats):
                       for stat, ratio in (scaling or {}).items())
 
 
+def echo_multiplier(echo, ultimate=False):
+    """Expected damage multiplier from Echo, for one ability.
+
+    `echo` is the stat's points, read as a percentage chance. A repeat is
+    worth `ECHO_ABILITY_SHARE` of the ability (half that on an ultimate), so
+    expectation is 1 + chance x share — linear, and linear is what a build
+    comparison wants. 30 Echo is about +9% ability damage, +4.5% on ultimates.
+    """
+    share = ECHO_ULTIMATE_SHARE if ultimate else ECHO_ABILITY_SHARE
+    return 1.0 + min(max(echo, 0.0), 100.0) / 100.0 * share
+
+
+def cooldown_multiplier(cooldown_rate):
+    """Cooldown duration multiplier. 100 / (100 + rate) — the same curve as
+    mitigation, and self-limiting for the same reason: it approaches zero
+    without reaching it."""
+    return 100.0 / (100.0 + max(cooldown_rate, -99.0))
+
+
+def casts_per_second(base_cooldown, cooldown_rate=0.0):
+    """How often an ability is actually available. The inverse of its real
+    cooldown, so an ability-damage comparison can weigh a long cooldown nuke
+    against a short one instead of pretending both land once."""
+    cd = base_cooldown * cooldown_multiplier(cooldown_rate)
+    return 1.0 / cd if cd > 0 else 0.0
+
+
+def attacks_per_second(base_attack_speed, pct_bonus=0.0):
+    """Basic attacks per second. Gods carry a base near 1.0 and items grant a
+    percentage on top.
+
+    No cap is applied. SMITE 1 capped attack speed at 2.5 and it would be easy
+    to carry that over, but no SMITE 2 source we found states a cap and
+    inventing one would silently flatten every attack-speed build. If a cap
+    turns up, it belongs here.
+    """
+    return max(0.0, base_attack_speed * (1.0 + pct_bonus / 100.0))
+
+
+def lifesteal_healing(damage_dealt_amount, lifesteal, vs_minion=False):
+    """Healing returned from damage. Against minions it is worth a third —
+    DOCUMENTED, and the reason lifesteal is worth less in a farming build than
+    its raw percentage suggests."""
+    scale = LIFESTEAL_MINION_SCALE if vs_minion else 1.0
+    return damage_dealt_amount * (lifesteal / 100.0) * scale
+
+
 def damage_dealt(raw, protection, *, flat_pen=0.0, pct_pen=0.0,
                  flat_reduction=0.0, pct_reduction=0.0,
                  plating=0.0, dampening=0.0, crit=False,
-                 crit_multiplier=CRIT_MULTIPLIER):
+                 crit_multiplier=CRIT_MULTIPLIER, true_damage=False):
     """Raw damage through a target's defences.
 
     Composition order — protections first, then the flat damage-type
@@ -161,10 +242,20 @@ def damage_dealt(raw, protection, *, flat_pen=0.0, pct_pen=0.0,
     `plating` and `dampening` are mutually exclusive in practice: an Attack is
     reduced by Plating, an Ability by Dampening. Passing both is allowed and
     both apply, so a caller modelling a hybrid hit does not have to pick.
+
+    `true_damage` skips protections entirely. Several real effects deal it
+    (Sundering Echo's active, among others) and running those through
+    mitigation would be plainly wrong. Whether true damage also ignores
+    Plating and Dampening is NOT something any source we found addresses, so
+    it is modelled as bypassing protections only — the narrower claim. Flagged
+    rather than assumed, and worth checking alongside penetration.
     """
-    prot = effective_protection(protection, flat_pen, pct_pen,
-                                flat_reduction, pct_reduction)
-    out = raw * mitigation(prot)
+    if true_damage:
+        out = float(raw)
+    else:
+        prot = effective_protection(protection, flat_pen, pct_pen,
+                                    flat_reduction, pct_reduction)
+        out = raw * mitigation(prot)
     out *= flat_reduction_multiplier(plating, PLATING_CAP)
     out *= flat_reduction_multiplier(dampening, DAMPENING_CAP)
     return out * (crit_multiplier if crit else 1.0)
@@ -177,6 +268,26 @@ def expected_attack_damage(raw, protection, crit_chance=0.0,
     p = min(max(crit_chance, 0.0), 1.0)
     normal = damage_dealt(raw, protection, crit=False, **kwargs)
     return normal * (1.0 - p) + normal * crit_multiplier * p
+
+
+def expected_ability_damage(raw, protection, echo=0.0, ultimate=False, **kwargs):
+    """One ability through the target's defences, including Echo's expected
+    repeat. The counterpart to `expected_attack_damage` — an ability build and
+    an auto-attack build have to be comparable on the same footing."""
+    return damage_dealt(raw, protection, **kwargs) * echo_multiplier(echo, ultimate)
+
+
+def attack_dps(raw, protection, base_attack_speed, attack_speed_bonus=0.0,
+               crit_chance=0.0, **kwargs):
+    """Sustained basic-attack damage per second.
+
+    This is the term that makes an attack-speed item comparable to a raw-power
+    one. Per-hit damage alone cannot do it: a build that swings twice as often
+    for two-thirds the damage is stronger, and a model that only sees the hit
+    would call it weaker.
+    """
+    per_hit = expected_attack_damage(raw, protection, crit_chance=crit_chance, **kwargs)
+    return per_hit * attacks_per_second(base_attack_speed, attack_speed_bonus)
 
 
 # ── Calibration ───────────────────────────────────────────────────────────

@@ -154,3 +154,93 @@ def test_no_calibration_observations_is_not_a_pass():
     """An empty run must not read as "0% error, model verified"."""
     report = combat.calibrate_report([])
     assert report["n"] == 0
+
+
+# ── Echo ──────────────────────────────────────────────────────────────────
+
+def test_echo_is_linear_in_the_stat():
+    """The wiki's one line ("30% of your Ability's damage as bonus damage")
+    would make the stat's magnitude meaningless — our items grant 20, 25 and
+    30, so the number has to do something. Read as a chance, expectation is
+    linear, which is what a build comparison needs."""
+    assert combat.echo_multiplier(0) == pytest.approx(1.0)
+    assert combat.echo_multiplier(30) == pytest.approx(1.09)     # Omen Drum
+    assert combat.echo_multiplier(20) == pytest.approx(1.06)     # Damaru
+    assert combat.echo_multiplier(25) == pytest.approx(1.075)    # The Crusher
+
+
+def test_echo_is_worth_half_as_much_on_an_ultimate():
+    assert combat.echo_multiplier(30, ultimate=True) == pytest.approx(1.045)
+    assert (combat.echo_multiplier(40, ultimate=True) - 1) == pytest.approx(
+        (combat.echo_multiplier(40) - 1) / 2)
+
+
+def test_echo_composes_with_mitigation_rather_than_bypassing_it():
+    # 1000 raw through 100 protection is 500; 30 Echo makes it 545.
+    assert combat.expected_ability_damage(1000, 100, echo=30) == pytest.approx(545)
+    assert combat.expected_ability_damage(1000, 100, echo=0) == pytest.approx(500)
+
+
+# ── Cooldown rate ─────────────────────────────────────────────────────────
+
+def test_cooldown_rate_is_a_rate_not_a_reduction():
+    """"every 1 Cooldown Rate allowing you to use abilities 1% more often" —
+    so 100 Cooldown Rate is twice as many casts, NOT a 100% reduction. Reading
+    it as SMITE 1 flat CDR would divide by zero at 100."""
+    assert combat.cooldown_multiplier(0) == pytest.approx(1.0)
+    assert combat.cooldown_multiplier(100) == pytest.approx(0.5)
+    # A 10s cooldown at 100 rate comes up every 5s — twice as often.
+    assert combat.casts_per_second(10, 100) == pytest.approx(2 * combat.casts_per_second(10, 0))
+
+
+def test_cooldown_rate_never_reaches_zero_cooldown():
+    """Self-limiting, which is why the stat needs no cap."""
+    assert combat.cooldown_multiplier(1000) > 0
+    assert combat.cooldown_multiplier(10_000) > 0
+
+
+def test_casts_per_second_handles_a_zero_cooldown_ability():
+    assert combat.casts_per_second(0, 50) == 0.0
+
+
+# ── Attack speed and DPS ──────────────────────────────────────────────────
+
+def test_attack_speed_scales_the_gods_own_base():
+    # Real bases sit near 1.0; items grant a percentage on top.
+    assert combat.attacks_per_second(0.96, 0) == pytest.approx(0.96)
+    assert combat.attacks_per_second(1.0, 50) == pytest.approx(1.5)
+
+
+def test_no_attack_speed_cap_is_invented():
+    """SMITE 1 capped at 2.5 and no SMITE 2 source we found states a cap.
+    Importing one would silently flatten every attack-speed build."""
+    assert combat.attacks_per_second(1.0, 300) == pytest.approx(4.0)
+
+
+def test_dps_can_prefer_more_swings_over_bigger_ones():
+    """The comparison the model could not make before: two-thirds the hit at
+    twice the rate is stronger, and a per-hit view calls it weaker."""
+    slow = combat.attack_dps(150, 0, 1.0, attack_speed_bonus=0)
+    fast = combat.attack_dps(100, 0, 1.0, attack_speed_bonus=100)
+    assert fast > slow
+    assert slow == pytest.approx(150) and fast == pytest.approx(200)
+
+
+# ── True damage ───────────────────────────────────────────────────────────
+
+def test_true_damage_ignores_protections_entirely():
+    assert combat.damage_dealt(1000, 300, true_damage=True) == pytest.approx(1000)
+    assert combat.damage_dealt(1000, 300) == pytest.approx(250)
+
+
+def test_true_damage_still_takes_the_flat_reductions():
+    """The narrower claim: no source says true damage ignores Plating or
+    Dampening, so it isn't assumed to."""
+    assert combat.damage_dealt(1000, 300, true_damage=True, plating=20) == pytest.approx(800)
+
+
+# ── Lifesteal ─────────────────────────────────────────────────────────────
+
+def test_lifesteal_is_worth_a_third_against_minions():
+    assert combat.lifesteal_healing(1000, 15) == pytest.approx(150)
+    assert combat.lifesteal_healing(1000, 15, vs_minion=True) == pytest.approx(49.5)
