@@ -242,6 +242,14 @@ export interface DraftConfig {
   lifesteal_caps?: LifestealCap[];
 }
 
+/** The model's own weights, shipped so the method page states what the
+ *  pipeline actually used rather than a restatement of it. */
+export interface MethodData {
+  signals: { efficiency: number; win: number; pick: number; fit: number };
+  kit_blend: number;
+  underrated: { max_pick?: number; top_quality_frac?: number };
+}
+
 export interface TierListModeData {
   gods: GodTierEntry[];
   items: ItemTierEntry[];
@@ -286,5 +294,6 @@ export interface IndexData {
   /** Fitted marginal gold price per stat — what makes a predicted cost
    * auditable rather than asserted. */
   item_gold_values?: Record<string, number>;
+  method?: MethodData;
   draft?: DraftConfig;
 }

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { parseHash, toHash, lensHash, isRetiredPath } from "./useHashRoute";
+import { parseHash, toHash, lensHash, isRetiredPath, ROSTER_LENSES } from "./useHashRoute";
 
 describe("parseHash — the roster is a subject too", () => {
   it("defaults to the roster board", () => {
@@ -119,5 +119,21 @@ describe("useHashRoute redirect behavior", () => {
     const { result } = renderHook(() => useHashRoute());
     expect(result.current).toEqual({ lens: "board" });
     expect(window.location.hash).toBe("#/");
+  });
+});
+
+/* The method route was added to three lists and missed a fourth — the reverse
+ * lens->hash map — which typechecked clean under --noEmit and only failed the
+ * project build. Pinning the round trip so the next lens can't half-land. */
+describe("every roster lens round-trips", () => {
+  it("parses its own hash back to itself", () => {
+    for (const lens of ROSTER_LENSES) {
+      expect(parseHash(lensHash(lens)).lens).toBe(lens);
+    }
+  });
+
+  it("routes #/method", () => {
+    expect(parseHash("#/method")).toEqual({ lens: "method" });
+    expect(toHash.method()).toBe("#/method");
   });
 });

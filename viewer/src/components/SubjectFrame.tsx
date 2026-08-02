@@ -24,6 +24,7 @@ const ROSTER_TABS: { lens: RosterLens; label: string }[] = [
   { lens: "items", label: "Items" },
   { lens: "draft", label: "Draft" },
   { lens: "patch", label: "Patch Notes" },
+  { lens: "method", label: "Method" },
 ];
 
 const GOD_TABS: { lens: GodLens; label: (g: string) => string }[] = [

@@ -189661,6 +189661,19 @@
       }
     ]
   },
+  "method": {
+    "signals": {
+      "efficiency": 0.35,
+      "win": 0.45,
+      "pick": 0.05,
+      "fit": 0.15
+    },
+    "kit_blend": 0.3,
+    "underrated": {
+      "max_pick": 0.15,
+      "top_quality_frac": 0.3
+    }
+  },
   "starters": [
     {
       "base": "Gilded Arrow",

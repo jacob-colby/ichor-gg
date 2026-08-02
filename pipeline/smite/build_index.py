@@ -157,6 +157,12 @@ def build_index(repo_root: Path) -> dict:
              # two could drift silently; shipping the rule keeps one authority.
              "draft": {**weights.get("draft", {}),
                        "lifesteal_caps": weights.get("lifesteal_caps", [])},
+             # The method page states the model's own weights. Shipping them
+             # rather than restating them in TSX means the page cannot describe
+             # a blend the pipeline stopped using.
+             "method": {"signals": weights.get("signals", {}),
+                        "kit_blend": weights.get("kit_blend", 0.5),
+                        "underrated": weights.get("underrated", {})},
              "starters": weights.get("starters", []),
              "roster": _load_roster(data_root),
              "data_updated": _data_updated(gods, builds),
