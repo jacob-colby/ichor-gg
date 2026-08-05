@@ -65,22 +65,39 @@ def test_penetration_is_capped_and_reductions_are_not():
 
 # ── Crit ──────────────────────────────────────────────────────────────────
 
-def test_deathbringers_passive_lands_exactly_on_double_damage():
-    """The corroboration that settled the base multiplier: the wiki says crits
-    go from 1.65x to 2x with Deathbringer, and our own scrape of the item reads
-    "+35% Critical Strike Damage". If the base constant is ever edited away
-    from 1.65 that arithmetic stops being exact, which is the tell."""
-    assert combat.CRIT_MULTIPLIER + 0.35 == pytest.approx(2.00)
+def test_crit_is_the_measured_value_not_the_documented_one():
+    """Two sources said 1.65 and the game says 1.5. Measured 2026-08-04:
+    Thanatos's chain read 58/43/87 normal and 87/65/131 crit, giving ratios of
+    1.500, 1.512 and 1.506 — the drift explained by the game truncating its
+    display, since the 0.75x hit is really 43.5 and shows 43."""
+    assert combat.CRIT_MULTIPLIER == pytest.approx(1.50)
+    assert 87 / 58 == pytest.approx(combat.CRIT_MULTIPLIER, rel=1e-3)
+    assert 65 / 43.5 == pytest.approx(combat.CRIT_MULTIPLIER, rel=5e-3)
+    assert 131 / 87 == pytest.approx(combat.CRIT_MULTIPLIER, rel=5e-3)
+
+
+def test_deathbringers_bonus_adds_and_the_wiki_is_wrong_twice():
+    """Measured: Rage + Deathbringer showed 96 normal, 179 crit. The true
+    96.770 x 1.85 is 179.03; x2.025 would be 195.96. So crit bonuses sum onto
+    the base, and the wiki is wrong in both directions — the item neither
+    starts from 1.65 nor arrives at 2.0. It arrives at 1.85."""
+    assert combat.CRIT_MULTIPLIER + combat.DEATHBRINGER_CRIT_BONUS == pytest.approx(1.85)
+    import math
+    raw = combat.attack_power_at(47.76) + 75
+    hit = combat.damage_dealt(raw, 17.48)
+    assert math.floor(hit) == 96
+    assert math.floor(hit * 1.85) == 179
+    assert math.floor(hit * 2.025) != 179
 
 
 def test_expected_damage_averages_over_crit_chance():
     raw, prot = 100.0, 0.0
     assert combat.expected_attack_damage(raw, prot, crit_chance=0.0) == pytest.approx(100)
-    assert combat.expected_attack_damage(raw, prot, crit_chance=1.0) == pytest.approx(165)
-    # 20% crit: 0.8*100 + 0.2*165
-    assert combat.expected_attack_damage(raw, prot, crit_chance=0.20) == pytest.approx(113)
+    assert combat.expected_attack_damage(raw, prot, crit_chance=1.0) == pytest.approx(150)
+    # 20% crit: 0.8*100 + 0.2*150
+    assert combat.expected_attack_damage(raw, prot, crit_chance=0.20) == pytest.approx(110)
     # Out-of-range chance is clamped, not extrapolated.
-    assert combat.expected_attack_damage(raw, prot, crit_chance=1.7) == pytest.approx(165)
+    assert combat.expected_attack_damage(raw, prot, crit_chance=1.7) == pytest.approx(150)
 
 
 # ── Plating / Dampening ───────────────────────────────────────────────────
@@ -108,11 +125,14 @@ def test_attack_damage_uses_the_gods_own_ratios():
     Damage, but the ratios are per-god and one god is 60/100/60. Passing the
     god's own scaling has to actually change the answer."""
     stats = {"Strength": 100.0, "Intelligence": 50.0, "Attack Damage": 20.0}
-    typical = combat.attack_damage(50, combat.DEFAULT_ATTACK_SCALING, stats)
-    assert typical == pytest.approx(50 + 100 + 10 + 20)
+    # The Attack Power base carries the measured 0.81 correction; item power
+    # does not — see ATTACK_POWER_SCALE.
+    ap = combat.attack_power_at(50)
+    typical = combat.attack_damage(ap, combat.DEFAULT_ATTACK_SCALING, stats)
+    assert typical == pytest.approx(ap + 100 + 10 + 20)
 
     mage_ratios = {"Strength": 0.60, "Intelligence": 1.00, "Attack Damage": 0.60}
-    assert combat.attack_damage(50, mage_ratios, stats) == pytest.approx(50 + 60 + 50 + 12)
+    assert combat.attack_damage(ap, mage_ratios, stats) == pytest.approx(ap + 60 + 50 + 12)
 
 
 def test_ability_damage_adds_each_scaling_to_its_own_stat():
@@ -244,3 +264,108 @@ def test_true_damage_still_takes_the_flat_reductions():
 def test_lifesteal_is_worth_a_third_against_minions():
     assert combat.lifesteal_healing(1000, 15) == pytest.approx(150)
     assert combat.lifesteal_healing(1000, 15, vs_minion=True) == pytest.approx(49.5)
+
+
+# ── Basic-attack chains ───────────────────────────────────────────────────
+
+def test_chain_multipliers_come_from_the_gods_own_detail_line():
+    """Discovered by measurement, then found already scraped. Thanatos read
+    58 / 43 / 87 — exactly 1 : 0.75 : 1.5 off a 58 base — and his detail line
+    says "Attacks in order of 1, 0.75, 1.5x damage and swing time"."""
+    from smite import notes, recommend
+    god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Thanatos.md")
+    assert combat.attack_chain_multipliers(god) == [1.0, 0.75, 1.5]
+
+
+def test_a_god_with_no_chain_gets_a_single_swing():
+    """[1.0], not a guess. Most of the roster has no chain line at all."""
+    assert combat.attack_chain_multipliers({}) == [1.0]
+    assert combat.attack_chain_multipliers({"abilities": []}) == [1.0]
+
+
+def test_the_chain_reproduces_the_observed_hits():
+    """The arithmetic that identified the chain in the first place: a 58 base
+    through the multipliers gives back what the game showed, with 43.5
+    truncating to the 43 that was displayed."""
+    hits = [58.0 * m for m in [1.0, 0.75, 1.5]]
+    assert [int(h) for h in hits] == [58, 43, 87]
+    # Within a point of the observed crits. Not exact equality: the game's
+    # display convention is itself unsettled - it truncated 43.5 to 43 but
+    # showed 131 for 130.5, so it is neither pure truncation nor Python's
+    # banker's rounding. Pinning a convention we have not established would be
+    # asserting something we do not know.
+    crits = [h * combat.CRIT_MULTIPLIER for h in hits]
+    for got, seen in zip(crits, [87, 65, 131]):
+        assert abs(got - seen) <= 1.0
+
+
+def test_chain_multiplier_scales_the_whole_hit():
+    scaling = {"Strength": 1.0}
+    ap = combat.attack_power_at(50)
+    expected = ap + 50
+    full = combat.attack_damage(ap, scaling, {"Strength": 50.0})
+    light = combat.attack_damage(ap, scaling, {"Strength": 50.0}, chain_multiplier=0.75)
+    assert full == pytest.approx(expected)
+    assert light == pytest.approx(expected * 0.75)
+
+
+def test_a_third_of_the_roster_actually_has_a_chain():
+    """Coverage, so a parser regression is visible: this is not a rare quirk,
+    and a DPS comparison that ignores it is wrong for 28 gods."""
+    from pathlib import Path
+    from smite import notes, recommend
+    gods = [notes.read_note(p)[0] for p in (recommend.DATA_ROOT / "Gods").glob("*.md")]
+    chained = [g for g in gods if g.get("name")
+               and len(combat.attack_chain_multipliers(g)) > 1]
+    assert len(chained) >= 25
+
+
+def test_the_correction_scales_the_base_but_not_per_level_growth():
+    """Measured at levels 10 and 20 exactly because level 1 cannot tell a
+    constant ratio from a wrong slope. Scaling the whole stat predicts 47 and
+    64; the game showed 51 and 71. So the scraped base is high and the scraped
+    per-level is exact."""
+    import math
+    for level, seen in ((1, 32), (10, 51), (20, 71)):
+        ap = combat.attack_power_at(47.76, 2.4, level)
+        assert math.floor(combat.damage_dealt(ap, 17.48)) == seen, level
+    # The wrong model, pinned so nobody reintroduces it.
+    whole_stat = (47.76 + 2.4 * 19) * combat.ATTACK_POWER_SCALE
+    assert math.floor(combat.damage_dealt(whole_stat, 17.48)) == 64 != 71
+
+
+def test_attack_power_correction_applies_to_the_base_not_item_power():
+    """Measured: Rage's 30 Strength accounted for 29.6-30.5 raw, so item power
+    is unscaled and the 0.81 correction belongs to the Attack Power base alone.
+    Scaling both would have fitted the no-item reading and missed the Rage one."""
+    scaling = {"Strength": 1.0}
+    ap = combat.attack_power_at(47.76)
+    bare = combat.attack_damage(ap, scaling, {})
+    with_str = combat.attack_damage(ap, scaling, {"Strength": 30.0})
+    assert bare == pytest.approx(47.76 * combat.ATTACK_POWER_SCALE)
+    assert with_str - bare == pytest.approx(30.0)
+
+
+def test_the_correction_reproduces_all_three_measured_gods():
+    """Thanatos 32, Neith 30, Ymir 28 — melee and ranged, physical and
+    magical, one constant. That spread is what rules out a per-god quirk."""
+    import math
+    from smite import notes, recommend
+    kuk, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Kukulkan.md")
+    phys = kuk["base_stats"]["physical_prot"]["base"]
+    mag = kuk["base_stats"]["magical_prot"]["base"]
+    for name, prot, seen in (("Thanatos", phys, 32), ("Neith", phys, 30), ("Ymir", mag, 28)):
+        god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / f"{name}.md")
+        hit = combat.attack_damage(combat.god_attack_power(god),
+                                   combat.DEFAULT_ATTACK_SCALING, {})
+        assert math.floor(combat.damage_dealt(hit, prot)) == seen, name
+
+
+def test_a_clean_0_80_would_not_have_fitted():
+    """The constant is 0.81 and not the rounder 0.80 because 0.80 misses
+    Thanatos — worth pinning so nobody 'tidies' it."""
+    import math
+    from smite import notes, recommend
+    god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Thanatos.md")
+    at_080 = god["base_stats"]["attack_power"]["base"] * 0.80
+    assert math.floor(combat.damage_dealt(at_080 * 1.5, 17.48)) != 49

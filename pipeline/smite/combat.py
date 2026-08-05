@@ -15,13 +15,35 @@ a wrong answer that looks authoritative.
 
   INFERRED   Community guides assert it and no primary SMITE 2 source we could
              find states it. Much of that material has visible SMITE 1
-             lineage. Treat as a working assumption, not a fact; these are the
-             constants an in-game check should target first.
+             lineage. Treat as a working assumption, not a fact.
 
-The `PENETRATION` block is entirely INFERRED and it is the load-bearing part
-of `effective_protection`. Nothing downstream should be shipped to the site
-until it has been checked against real numbers — see `calibrate_report`.
+  OBSERVED   Measured in the game. Outranks all three above, including when it
+             contradicts them — which it has.
+
+Calibrated 2026-08-04 (`data/_combat_observations.yaml`). Mitigation and both
+penetration terms reproduce reality EXACTLY — the game floors its displayed
+damage, so a floored prediction can be compared to the integer on screen with
+no tolerance at all, and all four readings match. The penetration block,
+previously the load-bearing guess here, is confirmed. The same session
+overturned the crit multiplier: two sources agreed on 1.65 and the game says
+1.5. That is the reason for the OBSERVED tier and the reason it wins.
+
+Nine readings, every one reproduced exactly: mitigation, both penetration
+terms, crit, and basic attacks across melee/ranged and physical/magical.
+
+Still unverified: the penetration CAPS (40% / 50), which need a build stacking
+five or six penetration items to exercise, and Deathbringer's crit bonus, which
+should reach 2.02x if it multiplies and 1.85x if it adds. And see
+`ATTACK_POWER_SCALE` — it is fitted rather than derived, and a level-1 reading
+cannot tell a constant ratio from a wrong per-level slope.
 """
+
+import math
+import re
+
+# Matches "Attacks in order of 1, 0.75, 1.5x damage and swing time".
+_CHAIN = re.compile(r"[Aa]ttacks in order of\s+([\d.,\s]+?)x\s+damage")
+
 
 # ── Protections ───────────────────────────────────────────────────────────
 # DOCUMENTED. The wiki states it as effective health rather than as a damage
@@ -53,17 +75,31 @@ PCT_PEN_CAP = 0.40
 FLAT_PEN_CAP = 50.0
 
 # ── Critical strikes ──────────────────────────────────────────────────────
-# DOCUMENTED, and corroborated MEASURED. The wiki's Deathbringer page states
-# "Critical Strikes deal 1.65 times the damage. With Deathbringer this is
-# increased to 2 times the damage." Our own scrape of that item independently
-# reads "+35% Critical Strike Damage", and 1.65 + 0.35 = 2.00 exactly, which
-# is the arithmetic the item was clearly designed around.
+# OBSERVED. Measured in game on 2026-08-04, and it overturned what the sources
+# said. Thanatos's three-hit chain gave 58 / 43 / 87 normal and 87 / 65 / 131
+# critical against the same target:
 #
-# The wiki's own Stats page instead says crits "increase your damage by 150%".
-# That contradicts the pair above and cannot be reconciled with the +35% item,
-# so it is treated as stale wording rather than a competing value. Worth an
-# in-game check anyway — it is one screenshot.
-CRIT_MULTIPLIER = 1.65
+#     87/58 = 1.500     65/43 = 1.512     131/87 = 1.506
+#
+# Three independent ratios on 1.5, with the drift explained by the game
+# truncating its displayed numbers — the 0.75x hit is really 43.5 and shows 43,
+# so 65/43 reads high while 65/43.5 = 1.494.
+#
+# This was 1.65 until that measurement. The wiki's Deathbringer page states
+# "Critical Strikes deal 1.65 times the damage. With Deathbringer this is
+# increased to 2 times", and our scrape of the item reads "+35% Critical Strike
+# Damage" — 1.65 + 0.35 = 2.00 exactly, which looked like decisive
+# corroboration and was not. The wiki's own Stats page said crits "increase
+# your damage by 150%" and that turns out to be the accurate one.
+#
+# Deathbringer's +35% ADDS rather than multiplies, measured the same way:
+# Rage + Deathbringer showed 96 normal and 179 crit, and the true 96.770 x 1.85
+# is 179.025 where x2.025 would be 195.96. So crit damage bonuses sum onto the
+# base multiplier, and the wiki's claim that the item reaches "2 times" is
+# simply wrong in both directions - it neither starts at 1.65 nor arrives at
+# 2.0. It arrives at 1.85.
+CRIT_MULTIPLIER = 1.50
+DEATHBRINGER_CRIT_BONUS = 0.35
 
 # ── Flat damage-type reductions (SMITE 2 only; no SMITE 1 equivalent) ─────
 # DOCUMENTED. Plating reduces damage from Attacks, Dampening from Abilities,
@@ -122,6 +158,44 @@ ECHO_ULTIMATE_SHARE = 0.15
 # god whose line failed to parse — prefer the god's own scraped ratios.
 DEFAULT_ATTACK_SCALING = {"Strength": 1.00, "Intelligence": 0.20, "Attack Damage": 1.00}
 
+# OBSERVED, and unexplained. A basic attack does about 0.81x the Attack Power
+# the wiki lists, and the mechanism behind that is not in any source we have.
+#
+# Measured 2026-08-04 across three gods against a level-1 Kukulkan, which is
+# what rules out the obvious explanations — it holds for melee and ranged, and
+# for physical and magical:
+#
+#   god        scraped AP   shown   implied ratio
+#   Thanatos        47.76      32   0.8035 - 0.8117
+#   Neith           44.40      30   0.7938 - 0.8202
+#   Ymir            44.59      28   0.7999 - 0.8284
+#
+# The intervals are wide because the game floors its display, but they
+# intersect at 0.8035 - 0.8117, which excludes a clean 0.80. Requiring all
+# eleven readings taken that session — three chain hits with no items, three
+# with Rage, three crits, and the two single-swing gods — narrows it to
+# 0.8076 - 0.8117. 0.81 is the round value inside that and reproduces every
+# one; it is a fitted constant, not a derived one.
+#
+# Item Strength is NOT scaled: Rage's 30 Strength added 29.6-30.5 raw, so the
+# scraped "100% Strength" is exact.
+#
+# NEITHER IS PER-LEVEL GROWTH. Measured at levels 10 and 20 precisely because a
+# level-1 reading cannot tell a constant ratio from a wrong per-level slope, and
+# it turned out to be neither of the two things a ratio would predict:
+#
+#   Thanatos, no items, 1x swing      level 10   level 20
+#     if 0.81 scaled the whole stat          47         64
+#     if it scales the BASE only             51         71
+#     observed                               51         71
+#
+# So the scraped base is ~19% too high and the scraped per-level is exact.
+# Effective Attack Power is `0.81 x base + per_level x (level - 1)` — see
+# `attack_power_at`, which is what callers should use. Scaling the whole stat
+# would have been right at level 1 and increasingly wrong from there, which is
+# the sort of error that hides until it reaches a real build.
+ATTACK_POWER_SCALE = 0.81
+
 
 def mitigation(protection):
     """Damage multiplier from a protection value. 0 -> 1.0, 100 -> 0.5.
@@ -162,14 +236,65 @@ def effective_health(health, protection):
     return health * (1.0 + protection / 100.0)
 
 
-def attack_damage(attack_power, scaling, stats):
+def attack_power_at(base, per_level=0.0, level=1):
+    """A god's effective Attack Power at a level.
+
+    The scraped BASE is ~19% high and the scraped per-level is exact, so only
+    the base takes the correction — see ATTACK_POWER_SCALE. Measured at levels
+    1, 10 and 20; scaling the whole stat matches level 1 and drifts 10% low by
+    level 20.
+    """
+    return base * ATTACK_POWER_SCALE + per_level * max(0, level - 1)
+
+
+def god_attack_power(god, level=1):
+    """`attack_power_at` for a scraped god note."""
+    ap = (god.get("base_stats") or {}).get("attack_power") or {}
+    return attack_power_at(ap.get("base", 0.0), ap.get("per_level", 0.0), level)
+
+
+def attack_chain_multipliers(god):
+    """A god's basic-attack chain, as per-swing damage multipliers.
+
+    OBSERVED, then found already scraped. Basic attacks are not one repeated
+    swing: Thanatos's detail line reads "Has a 3 hit chain. Attacks in order of
+    1, 0.75, 1.5x damage and swing time", and his measured hits were 58 / 43 /
+    87 — exactly 1 : 0.75 : 1.5 off a 58 base.
+
+    This matters for any comparison involving attack speed. A chain averaging
+    1.083x per swing is not the same as three 1x swings, and the multipliers
+    apply to swing TIME as well as damage, so a chain god's real DPS is not
+    `hit x rate` with either the first hit or the mean. Returns [1.0] for a god
+    with no parsed chain, which is the honest default rather than a guess.
+    """
+    for a in god.get("abilities") or []:
+        if "Basic Attack" not in (a.get("slot") or ""):
+            continue
+        for line in a.get("details") or []:
+            m = _CHAIN.search(line)
+            if m:
+                return [float(x) for x in re.findall(r"[\d.]+", m.group(1))]
+    return [1.0]
+
+
+def attack_damage(attack_power, scaling, stats, chain_multiplier=1.0):
     """One basic attack before mitigation.
 
-    `scaling` is the god's own ratios (see DEFAULT_ATTACK_SCALING) and `stats`
-    the god's current totals. Attack Power is the god's level-scaled base and
-    is added flat — it is not itself multiplied by a ratio."""
-    return attack_power + sum(ratio * stats.get(stat, 0.0)
-                              for stat, ratio in (scaling or {}).items())
+    `attack_power` is the EFFECTIVE value from `attack_power_at` — the
+    correction and the level term live there, because they compose differently
+    (the base is scaled, per-level growth is not) and folding that into this
+    function would make it wrong at every level but 1. `scaling` is the god's
+    own ratios (see DEFAULT_ATTACK_SCALING),
+    `stats` its current totals, and `chain_multiplier` the swing's place in the
+    god's chain if it has one.
+
+    Item power is added unscaled — measured, not assumed: Rage's 30 Strength
+    accounted for 29.6-30.5 raw damage, so the scraped 100% Strength scaling is
+    exact and the correction belongs to the base alone.
+    """
+    base = attack_power + sum(ratio * stats.get(stat, 0.0)
+                        for stat, ratio in (scaling or {}).items())
+    return base * chain_multiplier
 
 
 def ability_damage(base, scaling, stats):
@@ -292,6 +417,23 @@ def attack_dps(raw, protection, base_attack_speed, attack_speed_bonus=0.0,
 
 # ── Calibration ───────────────────────────────────────────────────────────
 
+def displayed(value):
+    """What the game prints for a damage value: the floor, not a rounding.
+
+    OBSERVED, 2026-08-04, and it is floor in both directions: a predicted 94.6
+    showed as 94 where rounding would have given 95, and Thanatos's 0.75x chain
+    hit of 43.5 showed 43. His crit of ~130.5 showing 131 looks like a
+    counter-example and is not — interval arithmetic on the chain puts the
+    underlying value above 131.
+
+    This makes the gate STRICTER, not looser. Comparing a floored prediction
+    against the integer on screen admits no slack, where comparing raw floats
+    had to tolerate a percent of display noise and would have accepted a model
+    genuinely off by that much.
+    """
+    return math.floor(value)
+
+
 def calibrate_report(observations):
     """Compare this model against real in-game numbers.
 
@@ -300,9 +442,9 @@ def calibrate_report(observations):
     and the worst absolute relative error, which is the figure the gate should
     be set on.
 
-    This exists because the penetration block is INFERRED and load-bearing.
-    Until someone runs real numbers through it, `combat.py` is a well-sourced
-    hypothesis, and nothing that consumes it should reach the site.
+    An integer `expected` is taken to be a number read off the screen, so the
+    model is floored before comparison — see `displayed`. A non-integer is
+    taken to be derived and compared directly.
     """
     rows = []
     for obs in observations:
@@ -310,8 +452,10 @@ def calibrate_report(observations):
         label = obs.pop("label", "")
         expected = obs.pop("expected")
         actual = damage_dealt(**obs)
-        error = (actual - expected) / expected if expected else float("inf")
-        rows.append({"label": label, "expected": expected,
-                     "actual": actual, "rel_error": error})
+        # Compare like with like: an integer reading is what the game printed.
+        shown = displayed(actual) if float(expected).is_integer() else actual
+        error = (shown - expected) / expected if expected else float("inf")
+        rows.append({"label": label, "expected": expected, "actual": actual,
+                     "shown": shown, "rel_error": error})
     worst = max((abs(r["rel_error"]) for r in rows), default=0.0)
     return {"cases": rows, "worst_rel_error": worst, "n": len(rows)}
