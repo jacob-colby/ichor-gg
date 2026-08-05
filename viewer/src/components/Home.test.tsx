@@ -155,16 +155,16 @@ describe("Home pinned", () => {
 
   it("shows an inviting prompt when there are no pinned gods", () => {
     render(<Home data={baseData()} />);
-    expect(within(screen.getByTestId("home-pinned")).getByText(/pin a god from its page/i)).toBeInTheDocument();
+    expect(within(screen.getByTestId("home-pinned")).getByText(/bookmark a god from its page/i)).toBeInTheDocument();
   });
 
-  it("can unpin from Home without a trip to the god page", () => {
+  it("can remove a bookmark from Home without a trip to the god page", () => {
     localStorage.setItem("smite:pinnedGods", JSON.stringify(["Ymir"]));
     render(<Home data={baseData()} />);
     const pinned = within(screen.getByTestId("home-pinned"));
-    fireEvent.click(pinned.getByRole("button", { name: /unpin ymir/i }));
+    fireEvent.click(pinned.getByRole("button", { name: /remove ymir from your bookmarks/i }));
     expect(pinned.queryByText("Ymir")).not.toBeInTheDocument();
-    expect(pinned.getByText(/pin a god from its page/i)).toBeInTheDocument();
+    expect(pinned.getByText(/bookmark a god from its page/i)).toBeInTheDocument();
   });
 });
 

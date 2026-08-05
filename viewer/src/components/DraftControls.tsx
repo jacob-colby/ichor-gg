@@ -6,6 +6,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { God } from "../types";
 import { iconSlug } from "../lib/builds";
 import { godLane, laneTextClass, LANES, godInLane, type Lane } from "../lib/roleAccent";
+import { usePins } from "../lib/pins";
+import { BookmarkIcon } from "./BookmarkIcon";
 
 /** Art with a real fallback — an initial, never a hole in the row. */
 export function Icon({ name, className, item = false }: { name: string; className: string; item?: boolean }) {
@@ -68,10 +70,16 @@ export function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
     return () => { document.removeEventListener("keydown", onKeyDown, true); opener?.focus?.(); };
   }, [onClose, opener]);
 
+  const { isPinned } = usePins();
   const shown = useMemo(() => {
     const ql = q.trim().toLowerCase();
-    return gods.filter((g) => (!ql || g.name.toLowerCase().includes(ql)) && (!lane || godInLane(g.role, lane)));
-  }, [gods, q, lane]);
+    const matches = gods.filter(
+      (g) => (!ql || g.name.toLowerCase().includes(ql)) && (!lane || godInLane(g.role, lane)));
+    // Bookmarked gods lead. Filling a draft slot is the one place a reader is
+    // reaching for a specific god they play rather than browsing 87 of them,
+    // and Enter still takes the first available match — which is now theirs.
+    return [...matches].sort((a, b) => Number(isPinned(b.name)) - Number(isPinned(a.name)));
+  }, [gods, q, lane, isPinned]);
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -145,6 +153,7 @@ export function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
           <ul id="god-picker-results" className="grid flex-1 grid-cols-[repeat(auto-fill,minmax(90px,1fr))] gap-2 overflow-y-auto">
             {shown.map((g) => {
               const isTaken = taken.has(g.name);
+              const saved = isPinned(g.name);
               const lane2 = godLane(g.role);
               return (
                 <li key={g.name}>
@@ -152,10 +161,20 @@ export function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
                     type="button"
                     disabled={isTaken}
                     onClick={() => onPick(g.name)}
-                    aria-label={isTaken ? `${g.name} — already in this draft` : g.name}
-                    className={`press flex w-full flex-col items-center gap-1.5 rounded-md border p-2 ${
-                      isTaken ? "cursor-not-allowed border-line bg-bg2/40 opacity-40" : "border-line bg-bg2 hover:border-line-strong"}`}
+                    aria-label={isTaken ? `${g.name} — already on this team` : saved ? `${g.name} — bookmarked` : g.name}
+                    className={`press relative flex w-full flex-col items-center gap-1.5 rounded-md border p-2 ${
+                      isTaken ? "cursor-not-allowed border-line bg-bg2/40 opacity-40"
+                        : saved ? "border-gold/40 bg-bg2 hover:border-gold/70"
+                        : "border-line bg-bg2 hover:border-line-strong"}`}
                   >
+                    {/* Corner-marked rather than inline: the tile is 90px and
+                        the name already truncates, so the mark takes space the
+                        art can spare instead of space the name cannot. */}
+                    {saved && (
+                      <span className="absolute right-1 top-1 text-gold">
+                        <BookmarkIcon filled size={10} />
+                      </span>
+                    )}
                     <Icon name={g.name} className="h-9 w-9 rounded-md" />
                     <span className="max-w-full truncate text-center font-display text-micro text-ink">{g.name}</span>
                     {lane2 && <span className={`text-label ${laneTextClass(lane2)}`}>{lane2}</span>}

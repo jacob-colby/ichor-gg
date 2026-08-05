@@ -24,6 +24,8 @@ import { LANES, godLane, godInLane, laneTextClass, type Lane } from "../lib/role
 import { efficiencyLabel } from "../lib/itemFilters";
 import { buildBands, type BandEntry, type BandSort, type TierLetter } from "../lib/tierBands";
 import { rateText, matchesText, findUnderplayed } from "../lib/standings";
+import { usePins } from "../lib/pins";
+import { BookmarkIcon } from "./BookmarkIcon";
 import { useUrlState } from "../lib/urlState";
 import { CommunitySource } from "./CommunitySource";
 
@@ -84,10 +86,11 @@ function EntryIcon({ name, item }: { name: string; item: boolean }) {
  * Both numbers, always. A card that shows only a rate reads equally sure at 44
  * matches and at 670, and the samples here span exactly that range.
  */
-function EntryCard({ band, subject, underplayed }: {
+function EntryCard({ band, subject, underplayed, bookmarked }: {
   band: BandEntry<TierEntry>;
   subject: Subject;
   underplayed?: boolean;
+  bookmarked?: boolean;
 }) {
   const { entry, unmeasured } = band;
   const isGod = subject === "gods";
@@ -105,7 +108,8 @@ function EntryCard({ band, subject, underplayed }: {
           ? `${entry.name}: not enough matches to place`
           : `${entry.name}: ${entry.tier_score} tier, ${rateText(entry.win_rate)} win rate over ${
               matches?.toLocaleString("en-US") ?? "an unreported number of"} matches${
-              underplayed ? " — wins well and is rarely played" : ""}`}
+              underplayed ? " — wins well and is rarely played" : ""}${
+              bookmarked ? " — bookmarked" : ""}`}
         title={unmeasured
           ? `${entry.name} — no usable sample`
           : `${entry.name} — ${rateText(entry.win_rate)} win over ${
@@ -114,12 +118,27 @@ function EntryCard({ band, subject, underplayed }: {
         // `w-full` for the same reason the shop's cards need it: a flex <a> is
         // shrink-to-fit and will size to its own text rather than to its grid
         // track.
-        className={`plane press flex h-full w-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard hover:border-line-strong sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
-          underplayed ? "border-line-strong" : "border-line"}`}
+        // The hover border is part of the same conditional, not a constant in
+        // the base string. As a constant, `hover:border-line-strong` won over
+        // `border-gold/40` on hover — hover utilities are emitted later, so a
+        // bookmarked card lost its gold the moment you pointed at it. A
+        // bookmarked card now hovers to MORE gold.
+        className={`plane press flex h-full w-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
+          // A bookmark outranks the rarely-played emphasis on the border: it is
+          // the reader's own mark, and "rarely played" still says itself in
+          // words below. Gold for a saved god is the Torchlight Rule's first
+          // permitted use — this is chosen — and the same treatment the god
+          // picker already gives one.
+          bookmarked ? "border-gold/40 hover:border-gold/70"
+            : underplayed ? "border-line-strong hover:border-line-strong"
+            : "border-line hover:border-line-strong"}`}
       >
         <EntryIcon name={entry.name} item={!isGod} />
         <span className="flex w-full min-w-0 flex-col items-center gap-0.5 sm:flex-1 sm:items-start">
-          <span className="max-w-full truncate font-display text-small font-semibold leading-tight text-ink">{entry.name}</span>
+          <span className="flex w-full min-w-0 items-center justify-center gap-1 sm:justify-start">
+            {bookmarked && <span className="shrink-0 text-gold"><BookmarkIcon filled size={10} /></span>}
+            <span className="min-w-0 truncate font-display text-small font-semibold leading-tight text-ink">{entry.name}</span>
+          </span>
           {isGod
             ? lane && <span className={`text-label ${laneTextClass(lane)}`}>{lane}</span>
             : eff && <span className={`text-label ${eff.cls.replace(/bg-\S+/g, "")}`}>{eff.text}</span>}
@@ -144,13 +163,14 @@ function EntryCard({ band, subject, underplayed }: {
   );
 }
 
-function TierBand({ tier, entries, total, subject, underplayedNames }: {
+function TierBand({ tier, entries, total, subject, underplayedNames, bookmarks }: {
   tier: TierLetter;
   entries: BandEntry<TierEntry>[];
   /** Whole-band size, which the count describes — `entries` may be narrowed. */
   total: number;
   subject: Subject;
   underplayedNames: Set<string>;
+  bookmarks: Set<string>;
 }) {
   // Appearances, not matches: ten gods play every match, so these sum to
   // several times the 4,952 the source line reports.
@@ -173,7 +193,8 @@ function TierBand({ tier, entries, total, subject, underplayedNames }: {
       <ul className="grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
         {entries.map((b) => (
           <EntryCard key={b.entry.name} band={b} subject={subject}
-            underplayed={underplayedNames.has(b.entry.name)} />
+            underplayed={underplayedNames.has(b.entry.name)}
+            bookmarked={bookmarks.has(b.entry.name)} />
         ))}
       </ul>
     </section>
@@ -233,6 +254,11 @@ export function TierList({ tierlist, communitySource }: {
   // Computed on the UNFILTERED set: "rarely played" is a fact about the whole
   // roster, and recomputing it inside a lane filter would make Solo's quietest
   // god look rare among five names.
+  // Gods only: an item cannot be bookmarked, so an item board never marks one.
+  const { pins } = usePins();
+  const bookmarks = useMemo(
+    () => new Set(subject === "gods" ? pins : []), [pins, subject]);
+
   const underplayedNames = useMemo(
     () => findUnderplayed(subject === "gods" ? (source as GodTierEntry[]) : []),
     [source, subject],
@@ -380,7 +406,8 @@ export function TierList({ tierlist, communitySource }: {
         <div className="mt-4 flex flex-col gap-5">
           {result.bands.map((b) => (
             <TierBand key={b.tier} tier={b.tier} entries={b.entries}
-              total={b.entries.length} subject={subject} underplayedNames={underplayedNames} />
+              total={b.entries.length} subject={subject}
+              underplayedNames={underplayedNames} bookmarks={bookmarks} />
           ))}
           {untiered.length > 0 && (
             <section data-testid="band-untiered" aria-labelledby="band-untiered-h" className="border-t border-line pt-3">
@@ -396,7 +423,10 @@ export function TierList({ tierlist, communitySource }: {
                   : "No tracked win rate of their own — mostly starters and components, which players buy as a step on the way to something else."}
               </p>
               <ul className="grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
-                {untiered.map((b) => <EntryCard key={b.entry.name} band={b} subject={subject} />)}
+                {untiered.map((b) => (
+                  <EntryCard key={b.entry.name} band={b} subject={subject}
+                    bookmarked={bookmarks.has(b.entry.name)} />
+                ))}
               </ul>
             </section>
           )}

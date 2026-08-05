@@ -529,10 +529,11 @@ function PinnedSection({ gods }: { gods: God[] }) {
 
   return (
     <section data-testid="home-pinned" aria-labelledby="home-pinned-h" className="border-t border-line pt-6">
-      <h2 id="home-pinned-h" className={sectionLabel}>Your pinned gods</h2>
+      <h2 id="home-pinned-h" className={sectionLabel}>Your bookmarked gods</h2>
       {pinnedGods.length === 0 ? (
         <p className="mt-2 max-w-[68ch] text-body text-muted">
-          Pin a god from its page and it&rsquo;ll show up here — a quick jump back to the ones you play most.
+          Bookmark a god from its page and it&rsquo;ll show up here — and in search, the draft picker and
+          the tier list, so the gods you play stay one glance away.
         </p>
       ) : (
         <ul className="mt-3 flex flex-wrap gap-2">
@@ -553,7 +554,7 @@ function PinnedSection({ gods }: { gods: God[] }) {
                 <button
                   type="button"
                   onClick={() => toggle(g.name)}
-                  aria-label={`Unpin ${g.name}`}
+                  aria-label={`Remove ${g.name} from your bookmarks`}
                   className="press absolute right-0.5 top-1/2 -translate-y-1/2 rounded-sm px-1.5 py-1 text-label leading-none text-faint opacity-0 transition-opacity duration-[150ms] hover:text-ink focus-visible:opacity-100 group-hover:opacity-100"
                 >
                   ✕
