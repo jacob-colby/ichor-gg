@@ -1,46 +1,63 @@
 # ichor
 
-A build recommender for **SMITE 2** that scores items with math instead of
-copying the meta — then adapts the build to the match you're actually in.
+A build recommender for **SMITE 2** that shows its working — what every item
+costs against what its stats are worth, what this god's players actually buy
+instead, and how the build changes for the match you're in.
 
-Most build sites tell you what's popular. This one fits a gold-value model to
-every item's stats, works out which items are *underpriced for a given god*, and
-blends that with win rate, pick rate, and how well an item fits the god's kit.
-When the two disagree, it says so.
+Most build sites hand you six icons. This one fits a gold-value model to every
+item's stats, works out which are underpriced for a given god's kit, blends that
+with community win and pick rates, and prints the reasoning next to the answer
+so you can disagree with it on the evidence.
 
 ## What it does
 
-- **Suggested builds** for all 87 tracked gods, per mode (Conquest / Joust) and
-  per flavor (core, burst, bruiser, anti-tank…), each with a starter, flex
-  slots, and situational swaps.
-- **Draft-aware builds** — enter the 4 allies and 5 enemies and the core
-  re-ranks live: enemy healers raise anti-heal, a magic-heavy comp raises magical
+- **Suggested builds** for all 87 tracked gods, per mode (Conquest / Joust /
+  Arena) and per flavor (core, burst, bruiser, anti-tank, attack-speed,
+  cooldown, strength, intelligence, hybrid…), each with a starter, flex slots
+  and situational swaps.
+- **Draft-aware builds** — enter the allies and enemies and the core re-ranks
+  live: enemy healers raise anti-heal, a magic-heavy comp raises magical
   protection, and a job a teammate already covers gets deprioritized.
 - **Why this item** — every suggestion breaks down into its four signals
-  (efficiency, win, pick, fit), so you can disagree with it on the evidence.
-- **Tier lists** for gods and items, rankable by *our* score or by community
-  win rate — deliberately shown side by side, because they often disagree.
+  (efficiency, win, pick, fit), with the community's own rate for the same item
+  beside it.
+- **A tier list built from real match outcomes** — the Wilson lower bound on
+  each god's wins over matches, so a 62% record over 133 games doesn't outrank a
+  58% one over 2,000. Nothing this site models enters the order.
+- **Items shop** with a value rating per item: what its stats are worth at the
+  fitted per-stat gold prices, against what it costs.
 - **Patch notes** — item stat/cost diffs between data refreshes, classified
   buff / nerf / mixed (cost direction inverted, since cheaper is better).
-- **Items shop** with an efficiency rating per item: undervalued / fair / premium.
 
 ## How the scoring works
 
 1. **Gold value** — a non-negative least-squares fit of item cost onto item
    stats gives a marginal gold price per stat. An item's *efficiency* is the
-   residual: what it costs minus what its stats should cost. Cheaper than the
-   model predicts → undervalued.
+   residual: what it costs minus what its stats should cost.
 2. **Fit** — role/lane stat maps blended with the god's parsed ability scaling,
-   so a stat that a god's kit actually scales with counts for more.
+   so a stat the god's kit actually scales with counts for more.
 3. **Meta** — high-elo win rate and pick rate from community data.
-4. **Blend** — weighted sum (currently efficiency .35 / win .45 / pick .05 /
-   fit .15), tuned by grid search against the community win-rate ranking.
+4. **Blend** — weighted sum (efficiency .35 / win .45 / pick .05 / fit .15).
 
-Starters sit out the gold-value regression: their price buys a passive, not
-their stats, so including them poisons the fit.
+Tier-1 starters and statless items sit out the regression: a starter's price
+buys a passive rather than its stats, and an item with no stats has no residual
+worth computing. Relics and god-specific items are priced but can't take one of
+the six core slots — the game doesn't work that way.
 
-All the tuning lives in [`data/_weights.yaml`](data/_weights.yaml) — signal
-weights, role stat maps, flavors, lifesteal caps, and the draft overlay.
+All tuning lives in [`data/_weights.yaml`](data/_weights.yaml).
+
+## What the model can and can't do
+
+Measured against a random-baseline control, not against its own inputs:
+
+- It **finds** community-worthy items about **4.9× better than chance**.
+- It does **not rank** within them — inside the community's own item set its
+  ordering skill is indistinguishable from zero.
+
+So "these builds contain sensible items" is supported; "these builds are in the
+right order" is not yet. See [`docs/STATE.md`](docs/STATE.md) §1–2 for the
+measurement, and why the obvious agreement metric can't be used to tune the
+model.
 
 ## Layout
 
@@ -48,8 +65,13 @@ weights, role stat maps, flavors, lifesteal caps, and the draft overlay.
 pipeline/smite/    Python: scrape -> parse -> score -> assemble -> index
 data/              Scraped god/item notes, generated builds, tuning config, icons
 viewer/            Vite + React + TypeScript viewer (the site)
-docs/              Design specs and implementation plans
+docs/STATE.md      Living doc: current state, design decisions, what's left
+docs/specs|plans/  Dated point-in-time design documents (never updated)
 ```
+
+**If you're about to change the model, read [`docs/STATE.md`](docs/STATE.md)
+first** — particularly §1 (the agreement metric grades its own input) and §4
+(six things that were tried, measured, and shipped off).
 
 ## Running it
 
@@ -66,11 +88,14 @@ cd pipeline && python -m smite.refresh_and_deploy
 Individual stages, from `pipeline/`:
 
 ```bash
-python -m smite.refresh --all        # re-scrape gods, items, community builds
-python -m smite.recommend --all      # recompute suggested builds
-python -m smite.build_index          # rewrite viewer/public/index.json
-python -m smite.data_audit           # integrity gate (exits non-zero on findings)
-python -m smite.validate --check     # quality gate vs community win rates
+python -m smite.refresh --all            # re-scrape gods, items, community builds
+python -m smite.refresh --discover-items # items referenced but not tracked
+python -m smite.recommend --all          # recompute suggested builds
+python -m smite.build_index              # rewrite viewer/public/index.json
+python -m smite.data_audit               # integrity gate (non-zero exit on findings)
+python -m smite.validate --check         # regression floor (not a tuning target)
+python -m smite.calibrate                # the leakage-free measure
+python -m smite.calibrate_combat         # combat model vs in-game readings
 ```
 
 Scraping needs Playwright (`python -m playwright install chromium`); the viewer
@@ -79,20 +104,24 @@ needs Node 20+.
 ## Tests
 
 ```bash
-cd pipeline && python -m pytest smite/tests -q -m "not live"   # 259
-cd viewer && npm test                                           # 133
+cd pipeline && python -m pytest smite/tests -q   # 489
+cd viewer && npm test -- --run                    # 559
 ```
+
+Use `npm run build` rather than `tsc --noEmit` — the latter misses errors the
+project reference build catches.
 
 ## Honest limitations
 
 - **87 of 89 gods.** Cu Chulainn and Ix Chel have empty wiki pages — there's
   nothing to scrape. They're in the roster and get picked up automatically if
   that changes.
-- **Community coverage is partial.** 18 gods and 104 items have no community
-  signal; they're shown as *unranked* rather than given an invented tier.
-- **Agreement with the meta is modest by design.** The recommender surfaces
-  underrated items, so it deliberately diverges from popularity. Current
-  validation: win-weighted 0.47, rank correlation 0.36 across 411 pairs.
+- **Joust and Arena have no outcome data at all.** Their gods are shown
+  unranked rather than given an invented tier — but their *builds* still ship,
+  resting on the model alone. That's two thirds of the shipped builds.
+- **The combat model is exact where it's been measured** (0.0% worst case over
+  twelve in-game readings) and the penetration caps are the one constant that
+  hasn't been.
 - **Patch notes need history.** Diffs only exist between data refreshes, so the
   page starts empty and fills in from the first snapshot onward.
 - **Threat detection uses wiki tags.** A god who is situationally a healer

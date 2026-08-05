@@ -12,21 +12,24 @@ Players of SMITE 2, across the skill spectrum, evenly: newer players who don't k
 
 ## Product Purpose
 
-ichor is a build recommender for SMITE 2 that scores items with a mathematical model instead of copying the community meta, then adapts the build to the actual match (draft) the player is in. It exists because most build sites only report what's popular; ichor also surfaces what's mathematically underpriced for a given god and is honest when the model and the meta disagree.
+ichor is a build recommender for SMITE 2 that shows its working: what every item costs against what its stats are worth, what a god's own players buy instead, and how the build changes for the match being drafted. It exists because most build sites hand over six icons with no reasoning attached. ichor's own honesty about what it can and cannot demonstrate is part of the product, not a caveat bolted on — see `docs/STATE.md`.
 
 ## Positioning
 
-Every other build site shows popularity. ichor fits a gold-value regression to item stats to find what's *underpriced* for a god's kit, blends that with community win/pick rate and kit fit, and explicitly flags disagreement between its model and the meta rather than hiding it. It is also draft-aware: builds re-rank live based on the actual 4 allies / 5 enemies in the match, not a static per-god page.
+Every other build site shows popularity. ichor fits a gold-value regression to item stats to find what's *underpriced* for a god's kit, blends that with community win/pick rate and kit fit, and prints the decomposition next to the answer. It is also draft-aware: builds re-rank live on the actual allies and enemies in the match, not a static per-god page.
+
+**The positioning changed on 2026-08-05 and the old version must not come back.** ichor used to sell the *disagreement* between its model and the meta — "the community underrates 26 gods" was the home page. That claim rested on a god ranking which measured −0.117 against real god strength, and its 59% disagreement rate was *below* the 75% two unrelated rankings produce. The tier list now ranks on real match outcomes only. What ichor claims is reasoning and honesty, never that it out-ranks the community.
 
 ## Operating Context
 
-Two halves: a Python pipeline (`pipeline/smite/`) that scrapes wiki.smite2.com and SmiteBrain, scores items/gods, and generates static data; and a Vite + React + TypeScript viewer (`viewer/`) that is the public-facing site. Core workflows: suggested builds per god/mode/flavor, draft-aware build re-ranking, per-item "why this item" signal breakdowns, tier lists (model score vs. community win rate shown side by side), patch-note diffs between data refreshes, and an items shop with an efficiency rating.
+Two halves: a Python pipeline (`pipeline/smite/`) that scrapes wiki.smite2.com and SmiteBrain, scores items/gods, and generates static data; and a Vite + React + TypeScript viewer (`viewer/`) that is the public-facing site. Core workflows: suggested builds per god/mode/flavor (Conquest / Joust / Arena), draft-aware build re-ranking, per-item "why this item" signal breakdowns, a tier list ranked on the Wilson lower bound of real match outcomes, patch-note diffs between data refreshes, and an items shop rating what an item's stats are worth against what it costs.
 
 ## Capabilities and Constraints
 
 - Covers 87 of 89 gods (Cu Chulainn and Ix Chel have no wiki content to scrape).
-- Community signal is partial: 18 gods and 104 items have no community data and are shown as *unranked* rather than given an invented tier.
-- Deliberately diverges from popularity by design (current validation: win-weighted 0.47, rank correlation 0.36 across 411 pairs) — low agreement with the meta is expected, not a bug to chase toward 1.0.
+- The model is a working **filter** and not a working **ranker**: measured against a random-baseline control it finds community-worthy items ~4.9x better than chance, while its ordering skill inside the community's own item set is indistinguishable from zero. "Sensible items" is supported; "right order" is not.
+- Joust and Arena have no outcome data whatsoever. Their gods ship *unranked* rather than given an invented tier — but their builds still ship, resting on the model alone. That is two thirds of the shipped builds.
+- The headline agreement metric cannot be used to tune the model: both its targets are also model inputs, so it is maximised by deleting the model. Use the leakage-free measure in `smite.calibrate`. Six correct-looking improvements were measured and shipped off because of this; see `docs/STATE.md` section 4 before re-attempting any of them.
 - Patch-notes diffs only exist between data refreshes, so that page starts empty and fills in over time.
 - Threat detection (e.g. flagging enemy healers) relies on wiki ability tags; a god who is situationally a healer without the `Healing` tag won't be counted.
 - All scoring weights, role stat maps, flavors, and the draft overlay are tunable via `data/_weights.yaml`.
@@ -40,13 +43,15 @@ Name: **ichor**. Explicitly a fan project — not affiliated with or endorsed by
 - Per-god scraped analysis notes: `data/Analysis/*.md`.
 - Tuning/config source of truth: `data/_weights.yaml`.
 - Design specs and implementation plans for prior viewer work: `docs/specs/`, `docs/plans/`.
-- Test suites back the pipeline and viewer: 259 Python tests (`pipeline/smite/tests`), 133 viewer tests.
+- Living engineering doc — current state, design decisions with their evidence, negative-results register, what's left: `docs/STATE.md`. The dated files in `docs/specs/` and `docs/plans/` are point-in-time and never updated.
+- The combat model is calibrated against twelve in-game readings at 0.0% worst-case error (`pipeline/smite/combat.py`, gated by `smite.calibrate_combat`).
+- Test suites back the pipeline and viewer: 489 Python tests (`pipeline/smite/tests`), 559 viewer tests.
 - No invented testimonials, customer logos, or pricing exist and none should be fabricated — this is a free fan tool, not a commercial product.
 
 ## Product Principles
 
 1. Show the math, not just the answer — every recommendation decomposes into its signals so a player can disagree with evidence.
 2. Default to one confident answer, but never hide the reasoning behind it.
-3. Say when the model and the community disagree instead of smoothing it over.
+3. Claim only what has been measured, and say plainly where it hasn't. "We didn't measure this" and "this is bad" are different facts and must never be rendered the same way.
 4. Serve both a newcomer wanting a fast correct build and a veteran wanting to interrogate it, without forcing either into the other's depth of detail.
-5. Be honest about coverage gaps (missing gods, unranked items, thin patch history) rather than papering over them.
+5. Be honest about coverage gaps (missing gods, unmeasured modes, thin patch history) rather than papering over them — an empty page beats a fabricated ranking.
