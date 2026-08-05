@@ -6,7 +6,7 @@ import math
 
 import yaml
 
-from smite import kit
+from smite import damage_value, kit
 from smite.efficiency import parse_stat_value
 
 DEFAULT_WEIGHTS = {
@@ -144,14 +144,42 @@ def _role_stat_map(god, weights):
     return merged
 
 
+def stat_reference(items):
+    """`{stat: reference magnitude}` for the magnitude-aware fit — the median
+    of the non-zero values each stat takes across buildable items.
+
+    Median rather than max: one outlier item would otherwise set the scale for
+    every other, and a stat carried by a single 200-point item would make every
+    ordinary roll of it look negligible."""
+    import statistics
+    seen = {}
+    for item in items:
+        if not is_buildable(item):
+            continue
+        for stat, raw in (item.get("stats") or {}).items():
+            value = parse_stat_value(raw)
+            if value:
+                seen.setdefault(stat, []).append(value)
+    return {stat: statistics.median(vals) for stat, vals in seen.items()}
+
+
 def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=None,
-                  base_map=None):
+                  base_map=None, stat_reference=None):
     """Archetype fit in [0,1]: weighted presence of role-relevant stats, plus a
     small bonus for archetype-relevant tags. An optional stat_overlay (flavor
     weights, which win over the god's role map) and tag_bonus (per-tag deltas,
     may be negative) skew the fit. base_map, when given, replaces the role-map
     lookup (score_god_items passes the kit-blended map); flavor stat_overlay
-    still wins on shared keys. NOT damage simulation — see spec."""
+    still wins on shared keys.
+
+    `stat_reference` {stat: typical magnitude} makes the stat term MAGNITUDE
+    aware (B4). Without it this counts presence — an item with 5 Strength and
+    one with 80 score identically, which was the single largest imprecision in
+    the per-god score. With it, each stat contributes its own share of a
+    reference magnitude, so a token amount is credited as a token amount.
+    Saturating at 1.0 keeps a freakishly large roll from dominating a weight
+    that is meant to say "this god wants this stat", not "more is always
+    better without limit"."""
     stats = item.get("stats") or {}
     role_map = dict(base_map) if base_map is not None else _role_stat_map(god, weights)
     if stat_overlay:
@@ -159,8 +187,16 @@ def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=No
     denom = sum(role_map.values()) or 1.0
     stat_fit = 0.0
     for stat, w in role_map.items():
-        if parse_stat_value(stats.get(stat)) is not None:
-            stat_fit += w
+        value = parse_stat_value(stats.get(stat))
+        if value is None:
+            continue
+        if stat_reference:
+            # Fraction of a reference magnitude, so 5 Strength is not 80.
+            ref = stat_reference.get(stat)
+            share = min(value / ref, 1.0) if ref else 1.0
+        else:
+            share = 1.0
+        stat_fit += w * share
     stat_fit = min(stat_fit / denom, 1.0)
 
     offense_tags = {"burst", "execute", "protection-shred"}
@@ -183,12 +219,13 @@ def lookup_rates(god_build, item_name):
 
 
 def signal_score(item, god, god_build, eff_score, weights, item_tags,
-                 stat_overlay=None, tag_bonus=None, base_map=None):
+                 stat_overlay=None, tag_bonus=None, base_map=None,
+                 stat_reference=None):
     w = weights["signals"]
     pick, win = lookup_rates(god_build, item["name"])
     win_norm = win if win is not None else 0.5   # neutral when unknown
     fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus,
-                        base_map=base_map)
+                        base_map=base_map, stat_reference=stat_reference)
     total = (w["efficiency"] * eff_score + w["win"] * win_norm
              + w["pick"] * pick + w["fit"] * fit)
     # Intrinsic merit for this god — efficiency + fit only, renormalized so it
@@ -318,6 +355,15 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         blend = eff_weights.get("kit_blend", 0.5)
         for stat, w in kit.kit_stat_overlay(kit.scaling_profile(god), god).items():
             base_map[stat] = (1 - blend) * base_map.get(stat, 0.0) + blend * w
+        # B4: move the offensive weights toward what this god's own scaling
+        # coefficients say. Defensive stats keep their role weight — nothing
+        # here can price a stat that adds no damage.
+        dmg_blend = eff_weights.get("damage_fit_blend", 0.0)
+        if dmg_blend:
+            base_map = damage_value.blend_stat_values(god, base_map, dmg_blend)
+
+    # Magnitude reference for the fit term, computed once over the whole pool.
+    reference = stat_reference(items) if eff_weights.get("magnitude_fit", False) else None
 
     # Filtering here, at the single point every archetype's rows come from,
     # keeps an excluded item out of the core, the flex slots, the situational
@@ -336,7 +382,7 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
         row = signal_score(item, god, god_build, eff, eff_weights,
                            tags_map.get(item["name"], []), stat_overlay, tag_bonus,
-                           base_map=base_map)
+                           base_map=base_map, stat_reference=reference)
         row["tier"] = efficiency_scores_map.get(item["name"], {}).get("tier", "fair")
         rows.append(row)
 
