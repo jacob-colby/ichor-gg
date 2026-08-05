@@ -199,3 +199,35 @@ describe("SubjectFrame — changing god", () => {
     expect(screen.queryByRole("button", { name: /change god/i })).not.toBeInTheDocument();
   });
 });
+
+/* Home has always told readers to "bookmark a god from its page", and there
+ * was no control here to do it with — saving a god was only possible from the
+ * roster grid. */
+describe("SubjectFrame — bookmarking a god from its own page", () => {
+  it("offers the bookmark beside the name", () => {
+    render(frame({ god: ra, godName: "Ra" }));
+    const btn = screen.getByRole("button", { name: /bookmark ra/i });
+    expect(btn).toHaveAttribute("aria-pressed", "false");
+    // Beside the name, not off in the action cluster: it marks the subject.
+    expect(screen.getByRole("heading", { level: 1 }).parentElement).toContainElement(btn);
+  });
+
+  it("saves and unsaves, and says which it just did", () => {
+    render(frame({ god: ra, godName: "Ra" }));
+    fireEvent.click(screen.getByRole("button", { name: /bookmark ra/i }));
+    const saved = screen.getByRole("button", { name: /remove ra from your bookmarks/i });
+    expect(saved).toHaveAttribute("aria-pressed", "true");
+    expect(JSON.parse(localStorage.getItem("smite:pinnedGods")!)).toContain("Ra");
+
+    fireEvent.click(saved);
+    expect(screen.getByRole("button", { name: /bookmark ra/i })).toHaveAttribute("aria-pressed", "false");
+    expect(JSON.parse(localStorage.getItem("smite:pinnedGods")!)).not.toContain("Ra");
+  });
+
+  it("reads an existing bookmark on arrival", () => {
+    localStorage.setItem("smite:pinnedGods", JSON.stringify(["Ra"]));
+    render(frame({ god: ra, godName: "Ra" }));
+    expect(screen.getByRole("button", { name: /remove ra from your bookmarks/i }))
+      .toHaveAttribute("aria-pressed", "true");
+  });
+});

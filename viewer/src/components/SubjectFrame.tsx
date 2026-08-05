@@ -12,6 +12,8 @@
  */
 import type { God, GodTierEntry } from "../types";
 import { godLane, laneTextClass, godRoleTextClass, damageTextClass } from "../lib/roleAccent";
+import { usePins } from "../lib/pins";
+import { BookmarkIcon } from "./BookmarkIcon";
 import { rateText, matchesText } from "../lib/standings";
 import { encodeDraftHash, useDraft, MODE_TEAM_SIZE, type DraftMode } from "../lib/draft";
 import { iconSlug } from "../lib/builds";
@@ -132,6 +134,8 @@ export function SubjectFrame({
 }: SubjectFrameProps) {
   const name = god?.name ?? godName;
   const lane = godLane(god?.role);
+  const { toggle: togglePin, isPinned } = usePins();
+  const saved = !!name && isPinned(name);
   const { draft, mode: savedMode } = useDraft();
 
   const draftHref = (subject: string) => {
@@ -153,7 +157,26 @@ export function SubjectFrame({
                 <GodArt name={name} />
               </button>
               <div className="min-w-0 flex-1">
-                <h1 className="font-display text-title font-bold leading-none text-ink">{name}</h1>
+                {/* The bookmark sits with the name because that is what it
+                    marks. Home has always told readers to "bookmark a god from
+                    its page" and there was no control here to do it with —
+                    saving a god was only possible from the roster grid. */}
+                <div className="flex min-w-0 items-center gap-1.5">
+                  <h1 className="min-w-0 truncate font-display text-title font-bold leading-none text-ink">{name}</h1>
+                  <button
+                    type="button"
+                    onClick={() => togglePin(name)}
+                    aria-pressed={saved}
+                    aria-label={saved ? `Remove ${name} from your bookmarks` : `Bookmark ${name}`}
+                    title={saved
+                      ? `Bookmarked — shows in search, the draft picker and the tier list`
+                      : `Bookmark ${name} to surface it in search, the draft picker and the tier list`}
+                    className={`press -my-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-md transition-colors duration-[150ms] ease-standard ${
+                      saved ? "text-gold hover:text-gold/80" : "text-faint hover:text-ink-soft"}`}
+                  >
+                    <BookmarkIcon filled={saved} size={16} />
+                  </button>
+                </div>
                 {god && (
                   <p className="mt-1 text-small text-muted">
                     {god.pantheon}
