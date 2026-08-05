@@ -92,10 +92,12 @@ FLAT_PEN_CAP = 50.0
 # corroboration and was not. The wiki's own Stats page said crits "increase
 # your damage by 150%" and that turns out to be the accurate one.
 #
-# The +35% item still reaches 2x, just multiplicatively: 1.5 x 1.35 = 2.025.
-# So the item text and the observed base are consistent and it is the 1.65
-# figure that is wrong. Untested, and the cheapest next reading: Rage plus
-# Deathbringer crits at 2.02x if the bonus multiplies, 1.85x if it adds.
+# Deathbringer's +35% ADDS rather than multiplies, measured the same way:
+# Rage + Deathbringer showed 96 normal and 179 crit, and the true 96.770 x 1.85
+# is 179.025 where x2.025 would be 195.96. So crit damage bonuses sum onto the
+# base multiplier, and the wiki's claim that the item reaches "2 times" is
+# simply wrong in both directions - it neither starts at 1.65 nor arrives at
+# 2.0. It arrives at 1.85.
 CRIT_MULTIPLIER = 1.50
 DEATHBRINGER_CRIT_BONUS = 0.35
 
@@ -176,10 +178,22 @@ DEFAULT_ATTACK_SCALING = {"Strength": 1.00, "Intelligence": 0.20, "Attack Damage
 # one; it is a fitted constant, not a derived one.
 #
 # Item Strength is NOT scaled: Rage's 30 Strength added 29.6-30.5 raw, so the
-# scraped "100% Strength" is exact. Whatever this is, it applies to the base
-# alone. Worth revisiting if a source ever explains it, and worth re-measuring
-# at a higher level — a constant ratio and a wrong per-level slope look
-# identical from level 1.
+# scraped "100% Strength" is exact.
+#
+# NEITHER IS PER-LEVEL GROWTH. Measured at levels 10 and 20 precisely because a
+# level-1 reading cannot tell a constant ratio from a wrong per-level slope, and
+# it turned out to be neither of the two things a ratio would predict:
+#
+#   Thanatos, no items, 1x swing      level 10   level 20
+#     if 0.81 scaled the whole stat          47         64
+#     if it scales the BASE only             51         71
+#     observed                               51         71
+#
+# So the scraped base is ~19% too high and the scraped per-level is exact.
+# Effective Attack Power is `0.81 x base + per_level x (level - 1)` — see
+# `attack_power_at`, which is what callers should use. Scaling the whole stat
+# would have been right at level 1 and increasingly wrong from there, which is
+# the sort of error that hides until it reaches a real build.
 ATTACK_POWER_SCALE = 0.81
 
 
@@ -222,6 +236,23 @@ def effective_health(health, protection):
     return health * (1.0 + protection / 100.0)
 
 
+def attack_power_at(base, per_level=0.0, level=1):
+    """A god's effective Attack Power at a level.
+
+    The scraped BASE is ~19% high and the scraped per-level is exact, so only
+    the base takes the correction — see ATTACK_POWER_SCALE. Measured at levels
+    1, 10 and 20; scaling the whole stat matches level 1 and drifts 10% low by
+    level 20.
+    """
+    return base * ATTACK_POWER_SCALE + per_level * max(0, level - 1)
+
+
+def god_attack_power(god, level=1):
+    """`attack_power_at` for a scraped god note."""
+    ap = (god.get("base_stats") or {}).get("attack_power") or {}
+    return attack_power_at(ap.get("base", 0.0), ap.get("per_level", 0.0), level)
+
+
 def attack_chain_multipliers(god):
     """A god's basic-attack chain, as per-swing damage multipliers.
 
@@ -249,9 +280,11 @@ def attack_chain_multipliers(god):
 def attack_damage(attack_power, scaling, stats, chain_multiplier=1.0):
     """One basic attack before mitigation.
 
-    `attack_power` is the god's SCRAPED value; `ATTACK_POWER_SCALE` is applied
-    here, so callers pass what the data holds and do not have to know about the
-    correction. `scaling` is the god's own ratios (see DEFAULT_ATTACK_SCALING),
+    `attack_power` is the EFFECTIVE value from `attack_power_at` — the
+    correction and the level term live there, because they compose differently
+    (the base is scaled, per-level growth is not) and folding that into this
+    function would make it wrong at every level but 1. `scaling` is the god's
+    own ratios (see DEFAULT_ATTACK_SCALING),
     `stats` its current totals, and `chain_multiplier` the swing's place in the
     god's chain if it has one.
 
@@ -259,9 +292,8 @@ def attack_damage(attack_power, scaling, stats, chain_multiplier=1.0):
     accounted for 29.6-30.5 raw damage, so the scraped 100% Strength scaling is
     exact and the correction belongs to the base alone.
     """
-    base = attack_power * ATTACK_POWER_SCALE
-    base += sum(ratio * stats.get(stat, 0.0)
-                for stat, ratio in (scaling or {}).items())
+    base = attack_power + sum(ratio * stats.get(stat, 0.0)
+                        for stat, ratio in (scaling or {}).items())
     return base * chain_multiplier
 
 

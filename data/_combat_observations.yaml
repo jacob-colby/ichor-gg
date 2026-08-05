@@ -119,3 +119,29 @@ observations:
     raw: 36.118
     protection: 27.38
     expected: 28
+
+  # ── Level scaling, and Deathbringer ─────────────────────────────────────
+  # Taken to settle two things a level-1 reading cannot.
+  #
+  # The 0.81 correction turned out to apply to the BASE only — scaling the
+  # whole stat predicts 47 and 64 at levels 10 and 20, and the game showed
+  # 51 and 71. So the scraped base is ~19% high and the scraped per-level of
+  # 2.4 is exact.
+  - label: "Thanatos 1x basic, level 10, no items"
+    raw: 60.286
+    protection: 17.48
+    expected: 51
+
+  - label: "Thanatos 1x basic, level 20, no items"
+    raw: 84.286
+    protection: 17.48
+    expected: 71
+
+  # Deathbringer's +35% ADDS to the 1.5x base rather than multiplying it.
+  # 96.770 x 1.85 = 179.03; x2.025 would have been 195.96.
+  - label: "Thanatos 1x basic CRIT, Rage + Deathbringer - additive 1.85x"
+    raw: 113.686
+    protection: 17.48
+    crit: true
+    crit_multiplier: 1.85
+    expected: 179

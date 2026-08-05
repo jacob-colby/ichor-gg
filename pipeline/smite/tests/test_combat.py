@@ -76,15 +76,18 @@ def test_crit_is_the_measured_value_not_the_documented_one():
     assert 131 / 87 == pytest.approx(combat.CRIT_MULTIPLIER, rel=5e-3)
 
 
-def test_deathbringer_reaches_2x_multiplicatively_not_additively():
-    """The +35% item is why 1.65 looked right: 1.65 + 0.35 = 2.00 exactly. With
-    the measured 1.5 base it still reaches the wiki's "2 times", just by
-    multiplying — 1.5 x 1.35 = 2.025. Untested; the additive reading would give
-    1.85, and one Rage+Deathbringer crit separates them."""
-    additive = combat.CRIT_MULTIPLIER + combat.DEATHBRINGER_CRIT_BONUS
-    multiplicative = combat.CRIT_MULTIPLIER * (1 + combat.DEATHBRINGER_CRIT_BONUS)
-    assert additive == pytest.approx(1.85)
-    assert multiplicative == pytest.approx(2.025)
+def test_deathbringers_bonus_adds_and_the_wiki_is_wrong_twice():
+    """Measured: Rage + Deathbringer showed 96 normal, 179 crit. The true
+    96.770 x 1.85 is 179.03; x2.025 would be 195.96. So crit bonuses sum onto
+    the base, and the wiki is wrong in both directions — the item neither
+    starts from 1.65 nor arrives at 2.0. It arrives at 1.85."""
+    assert combat.CRIT_MULTIPLIER + combat.DEATHBRINGER_CRIT_BONUS == pytest.approx(1.85)
+    import math
+    raw = combat.attack_power_at(47.76) + 75
+    hit = combat.damage_dealt(raw, 17.48)
+    assert math.floor(hit) == 96
+    assert math.floor(hit * 1.85) == 179
+    assert math.floor(hit * 2.025) != 179
 
 
 def test_expected_damage_averages_over_crit_chance():
@@ -124,12 +127,12 @@ def test_attack_damage_uses_the_gods_own_ratios():
     stats = {"Strength": 100.0, "Intelligence": 50.0, "Attack Damage": 20.0}
     # The Attack Power base carries the measured 0.81 correction; item power
     # does not — see ATTACK_POWER_SCALE.
-    ap = 50 * combat.ATTACK_POWER_SCALE
-    typical = combat.attack_damage(50, combat.DEFAULT_ATTACK_SCALING, stats)
+    ap = combat.attack_power_at(50)
+    typical = combat.attack_damage(ap, combat.DEFAULT_ATTACK_SCALING, stats)
     assert typical == pytest.approx(ap + 100 + 10 + 20)
 
     mage_ratios = {"Strength": 0.60, "Intelligence": 1.00, "Attack Damage": 0.60}
-    assert combat.attack_damage(50, mage_ratios, stats) == pytest.approx(ap + 60 + 50 + 12)
+    assert combat.attack_damage(ap, mage_ratios, stats) == pytest.approx(ap + 60 + 50 + 12)
 
 
 def test_ability_damage_adds_each_scaling_to_its_own_stat():
@@ -298,9 +301,10 @@ def test_the_chain_reproduces_the_observed_hits():
 
 def test_chain_multiplier_scales_the_whole_hit():
     scaling = {"Strength": 1.0}
-    expected = 50 * combat.ATTACK_POWER_SCALE + 50
-    full = combat.attack_damage(50, scaling, {"Strength": 50.0})
-    light = combat.attack_damage(50, scaling, {"Strength": 50.0}, chain_multiplier=0.75)
+    ap = combat.attack_power_at(50)
+    expected = ap + 50
+    full = combat.attack_damage(ap, scaling, {"Strength": 50.0})
+    light = combat.attack_damage(ap, scaling, {"Strength": 50.0}, chain_multiplier=0.75)
     assert full == pytest.approx(expected)
     assert light == pytest.approx(expected * 0.75)
 
@@ -316,13 +320,28 @@ def test_a_third_of_the_roster_actually_has_a_chain():
     assert len(chained) >= 25
 
 
+def test_the_correction_scales_the_base_but_not_per_level_growth():
+    """Measured at levels 10 and 20 exactly because level 1 cannot tell a
+    constant ratio from a wrong slope. Scaling the whole stat predicts 47 and
+    64; the game showed 51 and 71. So the scraped base is high and the scraped
+    per-level is exact."""
+    import math
+    for level, seen in ((1, 32), (10, 51), (20, 71)):
+        ap = combat.attack_power_at(47.76, 2.4, level)
+        assert math.floor(combat.damage_dealt(ap, 17.48)) == seen, level
+    # The wrong model, pinned so nobody reintroduces it.
+    whole_stat = (47.76 + 2.4 * 19) * combat.ATTACK_POWER_SCALE
+    assert math.floor(combat.damage_dealt(whole_stat, 17.48)) == 64 != 71
+
+
 def test_attack_power_correction_applies_to_the_base_not_item_power():
     """Measured: Rage's 30 Strength accounted for 29.6-30.5 raw, so item power
     is unscaled and the 0.81 correction belongs to the Attack Power base alone.
     Scaling both would have fitted the no-item reading and missed the Rage one."""
     scaling = {"Strength": 1.0}
-    bare = combat.attack_damage(47.76, scaling, {})
-    with_str = combat.attack_damage(47.76, scaling, {"Strength": 30.0})
+    ap = combat.attack_power_at(47.76)
+    bare = combat.attack_damage(ap, scaling, {})
+    with_str = combat.attack_damage(ap, scaling, {"Strength": 30.0})
     assert bare == pytest.approx(47.76 * combat.ATTACK_POWER_SCALE)
     assert with_str - bare == pytest.approx(30.0)
 
@@ -337,8 +356,8 @@ def test_the_correction_reproduces_all_three_measured_gods():
     mag = kuk["base_stats"]["magical_prot"]["base"]
     for name, prot, seen in (("Thanatos", phys, 32), ("Neith", phys, 30), ("Ymir", mag, 28)):
         god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / f"{name}.md")
-        ap = god["base_stats"]["attack_power"]["base"]
-        hit = combat.attack_damage(ap, combat.DEFAULT_ATTACK_SCALING, {})
+        hit = combat.attack_damage(combat.god_attack_power(god),
+                                   combat.DEFAULT_ATTACK_SCALING, {})
         assert math.floor(combat.damage_dealt(hit, prot)) == seen, name
 
 
@@ -348,6 +367,5 @@ def test_a_clean_0_80_would_not_have_fitted():
     import math
     from smite import notes, recommend
     god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Thanatos.md")
-    ap = god["base_stats"]["attack_power"]["base"]
-    at_080 = ap * 0.80 + 0.0
+    at_080 = god["base_stats"]["attack_power"]["base"] * 0.80
     assert math.floor(combat.damage_dealt(at_080 * 1.5, 17.48)) != 49
