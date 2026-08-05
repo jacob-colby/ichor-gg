@@ -65,22 +65,36 @@ def test_penetration_is_capped_and_reductions_are_not():
 
 # ── Crit ──────────────────────────────────────────────────────────────────
 
-def test_deathbringers_passive_lands_exactly_on_double_damage():
-    """The corroboration that settled the base multiplier: the wiki says crits
-    go from 1.65x to 2x with Deathbringer, and our own scrape of the item reads
-    "+35% Critical Strike Damage". If the base constant is ever edited away
-    from 1.65 that arithmetic stops being exact, which is the tell."""
-    assert combat.CRIT_MULTIPLIER + 0.35 == pytest.approx(2.00)
+def test_crit_is_the_measured_value_not_the_documented_one():
+    """Two sources said 1.65 and the game says 1.5. Measured 2026-08-04:
+    Thanatos's chain read 58/43/87 normal and 87/65/131 crit, giving ratios of
+    1.500, 1.512 and 1.506 — the drift explained by the game truncating its
+    display, since the 0.75x hit is really 43.5 and shows 43."""
+    assert combat.CRIT_MULTIPLIER == pytest.approx(1.50)
+    assert 87 / 58 == pytest.approx(combat.CRIT_MULTIPLIER, rel=1e-3)
+    assert 65 / 43.5 == pytest.approx(combat.CRIT_MULTIPLIER, rel=5e-3)
+    assert 131 / 87 == pytest.approx(combat.CRIT_MULTIPLIER, rel=5e-3)
+
+
+def test_deathbringer_reaches_2x_multiplicatively_not_additively():
+    """The +35% item is why 1.65 looked right: 1.65 + 0.35 = 2.00 exactly. With
+    the measured 1.5 base it still reaches the wiki's "2 times", just by
+    multiplying — 1.5 x 1.35 = 2.025. Untested; the additive reading would give
+    1.85, and one Rage+Deathbringer crit separates them."""
+    additive = combat.CRIT_MULTIPLIER + combat.DEATHBRINGER_CRIT_BONUS
+    multiplicative = combat.CRIT_MULTIPLIER * (1 + combat.DEATHBRINGER_CRIT_BONUS)
+    assert additive == pytest.approx(1.85)
+    assert multiplicative == pytest.approx(2.025)
 
 
 def test_expected_damage_averages_over_crit_chance():
     raw, prot = 100.0, 0.0
     assert combat.expected_attack_damage(raw, prot, crit_chance=0.0) == pytest.approx(100)
-    assert combat.expected_attack_damage(raw, prot, crit_chance=1.0) == pytest.approx(165)
-    # 20% crit: 0.8*100 + 0.2*165
-    assert combat.expected_attack_damage(raw, prot, crit_chance=0.20) == pytest.approx(113)
+    assert combat.expected_attack_damage(raw, prot, crit_chance=1.0) == pytest.approx(150)
+    # 20% crit: 0.8*100 + 0.2*150
+    assert combat.expected_attack_damage(raw, prot, crit_chance=0.20) == pytest.approx(110)
     # Out-of-range chance is clamped, not extrapolated.
-    assert combat.expected_attack_damage(raw, prot, crit_chance=1.7) == pytest.approx(165)
+    assert combat.expected_attack_damage(raw, prot, crit_chance=1.7) == pytest.approx(150)
 
 
 # ── Plating / Dampening ───────────────────────────────────────────────────
@@ -244,3 +258,55 @@ def test_true_damage_still_takes_the_flat_reductions():
 def test_lifesteal_is_worth_a_third_against_minions():
     assert combat.lifesteal_healing(1000, 15) == pytest.approx(150)
     assert combat.lifesteal_healing(1000, 15, vs_minion=True) == pytest.approx(49.5)
+
+
+# ── Basic-attack chains ───────────────────────────────────────────────────
+
+def test_chain_multipliers_come_from_the_gods_own_detail_line():
+    """Discovered by measurement, then found already scraped. Thanatos read
+    58 / 43 / 87 — exactly 1 : 0.75 : 1.5 off a 58 base — and his detail line
+    says "Attacks in order of 1, 0.75, 1.5x damage and swing time"."""
+    from smite import notes, recommend
+    god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Thanatos.md")
+    assert combat.attack_chain_multipliers(god) == [1.0, 0.75, 1.5]
+
+
+def test_a_god_with_no_chain_gets_a_single_swing():
+    """[1.0], not a guess. Most of the roster has no chain line at all."""
+    assert combat.attack_chain_multipliers({}) == [1.0]
+    assert combat.attack_chain_multipliers({"abilities": []}) == [1.0]
+
+
+def test_the_chain_reproduces_the_observed_hits():
+    """The arithmetic that identified the chain in the first place: a 58 base
+    through the multipliers gives back what the game showed, with 43.5
+    truncating to the 43 that was displayed."""
+    hits = [58.0 * m for m in [1.0, 0.75, 1.5]]
+    assert [int(h) for h in hits] == [58, 43, 87]
+    # Within a point of the observed crits. Not exact equality: the game's
+    # display convention is itself unsettled - it truncated 43.5 to 43 but
+    # showed 131 for 130.5, so it is neither pure truncation nor Python's
+    # banker's rounding. Pinning a convention we have not established would be
+    # asserting something we do not know.
+    crits = [h * combat.CRIT_MULTIPLIER for h in hits]
+    for got, seen in zip(crits, [87, 65, 131]):
+        assert abs(got - seen) <= 1.0
+
+
+def test_chain_multiplier_scales_the_whole_hit():
+    scaling = {"Strength": 1.0}
+    full = combat.attack_damage(50, scaling, {"Strength": 50.0})
+    light = combat.attack_damage(50, scaling, {"Strength": 50.0}, chain_multiplier=0.75)
+    assert full == pytest.approx(100)
+    assert light == pytest.approx(75)
+
+
+def test_a_third_of_the_roster_actually_has_a_chain():
+    """Coverage, so a parser regression is visible: this is not a rare quirk,
+    and a DPS comparison that ignores it is wrong for 28 gods."""
+    from pathlib import Path
+    from smite import notes, recommend
+    gods = [notes.read_note(p)[0] for p in (recommend.DATA_ROOT / "Gods").glob("*.md")]
+    chained = [g for g in gods if g.get("name")
+               and len(combat.attack_chain_multipliers(g)) > 1]
+    assert len(chained) >= 25

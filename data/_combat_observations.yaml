@@ -48,7 +48,39 @@
 #
 # pct_pen is a FRACTION: 20% penetration is 0.20, not 20.
 
-observations: []
+observations:
+  # Taken 2026-08-04, Jungle Practice. Thanatos, level 1, Soul Reap rank 1
+  # (raw 100 physical) against Kukulkan at level 1 (17.48 physical protection).
+  # Kukulkan chosen because his passive only grants himself Intelligence from
+  # Mana items and so cannot touch incoming damage.
+  #
+  # The game appears to TRUNCATE the displayed number rather than round it -
+  # every reading sits just below the model and Thanatos's 0.75x chain hit
+  # showed 43 where the arithmetic gives 43.5. That is why the errors here are
+  # uniformly small and negative.
+  - label: "no items - mitigation only"
+    raw: 100
+    protection: 17.48
+    expected: 85
+
+  - label: "Doom Orb only - 10 flat penetration"
+    raw: 100
+    protection: 17.48
+    flat_pen: 10
+    expected: 93
+
+  - label: "Void Shard only - 10% penetration"
+    raw: 100
+    protection: 17.48
+    pct_pen: 0.10
+    expected: 86
+
+  - label: "Doom Orb + Void Shard - both terms"
+    raw: 100
+    protection: 17.48
+    flat_pen: 10
+    pct_pen: 0.10
+    expected: 94
 
 # Example of the shape — delete once real ones are in. These numbers are made
 # up and `calibrate` refuses to treat the file as evidence while `example: true`

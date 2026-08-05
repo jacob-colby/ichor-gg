@@ -15,13 +15,28 @@ a wrong answer that looks authoritative.
 
   INFERRED   Community guides assert it and no primary SMITE 2 source we could
              find states it. Much of that material has visible SMITE 1
-             lineage. Treat as a working assumption, not a fact; these are the
-             constants an in-game check should target first.
+             lineage. Treat as a working assumption, not a fact.
 
-The `PENETRATION` block is entirely INFERRED and it is the load-bearing part
-of `effective_protection`. Nothing downstream should be shipped to the site
-until it has been checked against real numbers — see `calibrate_report`.
+  OBSERVED   Measured in the game. Outranks all three above, including when it
+             contradicts them — which it has.
+
+Calibrated 2026-08-04 (`data/_combat_observations.yaml`). Mitigation and both
+penetration terms reproduce reality to within 0.6%, so the penetration block —
+previously the load-bearing guess here — is confirmed. The same session
+overturned the crit multiplier: two sources agreed on 1.65 and the game says
+1.5. That is the reason for the OBSERVED tier and the reason it wins.
+
+Still unverified: the penetration CAPS (40% / 50), which need a build stacking
+five or six penetration items to exercise, and the basic-attack damage base —
+see `attack_damage`, where a measured hit came in 12% under what the scraped
+Attack Power predicts.
 """
+
+import re
+
+# Matches "Attacks in order of 1, 0.75, 1.5x damage and swing time".
+_CHAIN = re.compile(r"[Aa]ttacks in order of\s+([\d.,\s]+?)x\s+damage")
+
 
 # ── Protections ───────────────────────────────────────────────────────────
 # DOCUMENTED. The wiki states it as effective health rather than as a damage
@@ -53,17 +68,29 @@ PCT_PEN_CAP = 0.40
 FLAT_PEN_CAP = 50.0
 
 # ── Critical strikes ──────────────────────────────────────────────────────
-# DOCUMENTED, and corroborated MEASURED. The wiki's Deathbringer page states
-# "Critical Strikes deal 1.65 times the damage. With Deathbringer this is
-# increased to 2 times the damage." Our own scrape of that item independently
-# reads "+35% Critical Strike Damage", and 1.65 + 0.35 = 2.00 exactly, which
-# is the arithmetic the item was clearly designed around.
+# OBSERVED. Measured in game on 2026-08-04, and it overturned what the sources
+# said. Thanatos's three-hit chain gave 58 / 43 / 87 normal and 87 / 65 / 131
+# critical against the same target:
 #
-# The wiki's own Stats page instead says crits "increase your damage by 150%".
-# That contradicts the pair above and cannot be reconciled with the +35% item,
-# so it is treated as stale wording rather than a competing value. Worth an
-# in-game check anyway — it is one screenshot.
-CRIT_MULTIPLIER = 1.65
+#     87/58 = 1.500     65/43 = 1.512     131/87 = 1.506
+#
+# Three independent ratios on 1.5, with the drift explained by the game
+# truncating its displayed numbers — the 0.75x hit is really 43.5 and shows 43,
+# so 65/43 reads high while 65/43.5 = 1.494.
+#
+# This was 1.65 until that measurement. The wiki's Deathbringer page states
+# "Critical Strikes deal 1.65 times the damage. With Deathbringer this is
+# increased to 2 times", and our scrape of the item reads "+35% Critical Strike
+# Damage" — 1.65 + 0.35 = 2.00 exactly, which looked like decisive
+# corroboration and was not. The wiki's own Stats page said crits "increase
+# your damage by 150%" and that turns out to be the accurate one.
+#
+# The +35% item still reaches 2x, just multiplicatively: 1.5 x 1.35 = 2.025.
+# So the item text and the observed base are consistent and it is the 1.65
+# figure that is wrong. Untested, and the cheapest next reading: Rage plus
+# Deathbringer crits at 2.02x if the bonus multiplies, 1.85x if it adds.
+CRIT_MULTIPLIER = 1.50
+DEATHBRINGER_CRIT_BONUS = 0.35
 
 # ── Flat damage-type reductions (SMITE 2 only; no SMITE 1 equivalent) ─────
 # DOCUMENTED. Plating reduces damage from Attacks, Dampening from Abilities,
@@ -162,14 +189,55 @@ def effective_health(health, protection):
     return health * (1.0 + protection / 100.0)
 
 
-def attack_damage(attack_power, scaling, stats):
+def attack_chain_multipliers(god):
+    """A god's basic-attack chain, as per-swing damage multipliers.
+
+    OBSERVED, then found already scraped. Basic attacks are not one repeated
+    swing: Thanatos's detail line reads "Has a 3 hit chain. Attacks in order of
+    1, 0.75, 1.5x damage and swing time", and his measured hits were 58 / 43 /
+    87 — exactly 1 : 0.75 : 1.5 off a 58 base.
+
+    This matters for any comparison involving attack speed. A chain averaging
+    1.083x per swing is not the same as three 1x swings, and the multipliers
+    apply to swing TIME as well as damage, so a chain god's real DPS is not
+    `hit x rate` with either the first hit or the mean. Returns [1.0] for a god
+    with no parsed chain, which is the honest default rather than a guess.
+    """
+    for a in god.get("abilities") or []:
+        if "Basic Attack" not in (a.get("slot") or ""):
+            continue
+        for line in a.get("details") or []:
+            m = _CHAIN.search(line)
+            if m:
+                return [float(x) for x in re.findall(r"[\d.]+", m.group(1))]
+    return [1.0]
+
+
+def attack_damage(attack_power, scaling, stats, chain_multiplier=1.0):
     """One basic attack before mitigation.
 
     `scaling` is the god's own ratios (see DEFAULT_ATTACK_SCALING) and `stats`
     the god's current totals. Attack Power is the god's level-scaled base and
-    is added flat — it is not itself multiplied by a ratio."""
-    return attack_power + sum(ratio * stats.get(stat, 0.0)
+    is added flat — it is not itself multiplied by a ratio.
+    `chain_multiplier` is the swing's place in the god's chain, if it has one.
+
+    KNOWN WRONG, by about 12%, and deliberately left that way until measured
+    again. Thanatos with Rage only (30 Strength) against 17.48 protection
+    showed a 1x chain hit of 58, which back-solves to 68.14 raw. This function
+    predicts 77.76 — his scraped Attack Power of 47.76 plus 30. Something in
+    that sum is off and one reading separates the candidates:
+
+        if Attack Power 47.76 is right   Rage's 30 Strength contributed 20.38
+        if 100% Strength is right        real Attack Power is 38.14, not 47.76
+
+    A no-item basic attack against the same target answers it: 40.7 if the
+    scraped Attack Power is correct, ~35.6 if it is off by the same ratio.
+    Guessing a fudge factor now would bake the error in where nothing could
+    find it later.
+    """
+    base = attack_power + sum(ratio * stats.get(stat, 0.0)
                               for stat, ratio in (scaling or {}).items())
+    return base * chain_multiplier
 
 
 def ability_damage(base, scaling, stats):

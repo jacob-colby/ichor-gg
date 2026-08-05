@@ -8,6 +8,7 @@ import textwrap
 import pytest
 
 from smite import calibrate_combat as cc
+from smite import combat
 
 
 def _write(tmp_path, body):
@@ -97,12 +98,19 @@ def test_tolerance_is_configurable(tmp_path):
     assert cc.main(["--file", str(p), "--tolerance", "0.10"]) == 0
 
 
-def test_the_shipped_file_parses_and_holds_no_real_observations():
-    """It ships empty on purpose; this pins that it stays parseable and that
-    nobody has quietly added a row without running the gate."""
+def test_the_shipped_observations_still_pass_the_gate():
+    """Calibrated 2026-08-04 against Thanatos/Kukulkan. These four readings are
+    what confirmed mitigation and both penetration terms, so a change to
+    `combat.py` that breaks them has broken something real."""
     real, examples = cc.load_observations(cc.DEFAULT_PATH)
-    assert real == []
-    assert examples == []
+    assert len(real) >= 4 and examples == []
+    report = combat.calibrate_report(real)
+    assert report["worst_rel_error"] <= cc.DEFAULT_TOLERANCE
+
+    # Both penetration terms are exercised, not just mitigation - that is the
+    # part no source could settle.
+    exercised = {k for r in real for k in r if k.endswith("_pen")}
+    assert exercised == {"flat_pen", "pct_pen"}
 
 
 # ── Planning a run ────────────────────────────────────────────────────────
