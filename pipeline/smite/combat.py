@@ -28,10 +28,14 @@ previously the load-bearing guess here, is confirmed. The same session
 overturned the crit multiplier: two sources agreed on 1.65 and the game says
 1.5. That is the reason for the OBSERVED tier and the reason it wins.
 
+Nine readings, every one reproduced exactly: mitigation, both penetration
+terms, crit, and basic attacks across melee/ranged and physical/magical.
+
 Still unverified: the penetration CAPS (40% / 50), which need a build stacking
-five or six penetration items to exercise, and the basic-attack damage base —
-see `attack_damage`, where a measured hit came in 12% under what the scraped
-Attack Power predicts.
+five or six penetration items to exercise, and Deathbringer's crit bonus, which
+should reach 2.02x if it multiplies and 1.85x if it adds. And see
+`ATTACK_POWER_SCALE` — it is fitted rather than derived, and a level-1 reading
+cannot tell a constant ratio from a wrong per-level slope.
 """
 
 import math
@@ -152,6 +156,32 @@ ECHO_ULTIMATE_SHARE = 0.15
 # god whose line failed to parse — prefer the god's own scraped ratios.
 DEFAULT_ATTACK_SCALING = {"Strength": 1.00, "Intelligence": 0.20, "Attack Damage": 1.00}
 
+# OBSERVED, and unexplained. A basic attack does about 0.81x the Attack Power
+# the wiki lists, and the mechanism behind that is not in any source we have.
+#
+# Measured 2026-08-04 across three gods against a level-1 Kukulkan, which is
+# what rules out the obvious explanations — it holds for melee and ranged, and
+# for physical and magical:
+#
+#   god        scraped AP   shown   implied ratio
+#   Thanatos        47.76      32   0.8035 - 0.8117
+#   Neith           44.40      30   0.7938 - 0.8202
+#   Ymir            44.59      28   0.7999 - 0.8284
+#
+# The intervals are wide because the game floors its display, but they
+# intersect at 0.8035 - 0.8117, which excludes a clean 0.80. Requiring all
+# eleven readings taken that session — three chain hits with no items, three
+# with Rage, three crits, and the two single-swing gods — narrows it to
+# 0.8076 - 0.8117. 0.81 is the round value inside that and reproduces every
+# one; it is a fitted constant, not a derived one.
+#
+# Item Strength is NOT scaled: Rage's 30 Strength added 29.6-30.5 raw, so the
+# scraped "100% Strength" is exact. Whatever this is, it applies to the base
+# alone. Worth revisiting if a source ever explains it, and worth re-measuring
+# at a higher level — a constant ratio and a wrong per-level slope look
+# identical from level 1.
+ATTACK_POWER_SCALE = 0.81
+
 
 def mitigation(protection):
     """Damage multiplier from a protection value. 0 -> 1.0, 100 -> 0.5.
@@ -219,27 +249,19 @@ def attack_chain_multipliers(god):
 def attack_damage(attack_power, scaling, stats, chain_multiplier=1.0):
     """One basic attack before mitigation.
 
-    `scaling` is the god's own ratios (see DEFAULT_ATTACK_SCALING) and `stats`
-    the god's current totals. Attack Power is the god's level-scaled base and
-    is added flat — it is not itself multiplied by a ratio.
-    `chain_multiplier` is the swing's place in the god's chain, if it has one.
+    `attack_power` is the god's SCRAPED value; `ATTACK_POWER_SCALE` is applied
+    here, so callers pass what the data holds and do not have to know about the
+    correction. `scaling` is the god's own ratios (see DEFAULT_ATTACK_SCALING),
+    `stats` its current totals, and `chain_multiplier` the swing's place in the
+    god's chain if it has one.
 
-    KNOWN WRONG, by about 12%, and deliberately left that way until measured
-    again. Thanatos with Rage only (30 Strength) against 17.48 protection
-    showed a 1x chain hit of 58, which back-solves to 68.14 raw. This function
-    predicts 77.76 — his scraped Attack Power of 47.76 plus 30. Something in
-    that sum is off and one reading separates the candidates:
-
-        if Attack Power 47.76 is right   Rage's 30 Strength contributed 20.38
-        if 100% Strength is right        real Attack Power is 38.14, not 47.76
-
-    A no-item basic attack against the same target answers it: 40.7 if the
-    scraped Attack Power is correct, ~35.6 if it is off by the same ratio.
-    Guessing a fudge factor now would bake the error in where nothing could
-    find it later.
+    Item power is added unscaled — measured, not assumed: Rage's 30 Strength
+    accounted for 29.6-30.5 raw damage, so the scraped 100% Strength scaling is
+    exact and the correction belongs to the base alone.
     """
-    base = attack_power + sum(ratio * stats.get(stat, 0.0)
-                              for stat, ratio in (scaling or {}).items())
+    base = attack_power * ATTACK_POWER_SCALE
+    base += sum(ratio * stats.get(stat, 0.0)
+                for stat, ratio in (scaling or {}).items())
     return base * chain_multiplier
 
 

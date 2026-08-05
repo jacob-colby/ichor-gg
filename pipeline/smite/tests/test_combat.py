@@ -122,11 +122,14 @@ def test_attack_damage_uses_the_gods_own_ratios():
     Damage, but the ratios are per-god and one god is 60/100/60. Passing the
     god's own scaling has to actually change the answer."""
     stats = {"Strength": 100.0, "Intelligence": 50.0, "Attack Damage": 20.0}
+    # The Attack Power base carries the measured 0.81 correction; item power
+    # does not — see ATTACK_POWER_SCALE.
+    ap = 50 * combat.ATTACK_POWER_SCALE
     typical = combat.attack_damage(50, combat.DEFAULT_ATTACK_SCALING, stats)
-    assert typical == pytest.approx(50 + 100 + 10 + 20)
+    assert typical == pytest.approx(ap + 100 + 10 + 20)
 
     mage_ratios = {"Strength": 0.60, "Intelligence": 1.00, "Attack Damage": 0.60}
-    assert combat.attack_damage(50, mage_ratios, stats) == pytest.approx(50 + 60 + 50 + 12)
+    assert combat.attack_damage(50, mage_ratios, stats) == pytest.approx(ap + 60 + 50 + 12)
 
 
 def test_ability_damage_adds_each_scaling_to_its_own_stat():
@@ -295,10 +298,11 @@ def test_the_chain_reproduces_the_observed_hits():
 
 def test_chain_multiplier_scales_the_whole_hit():
     scaling = {"Strength": 1.0}
+    expected = 50 * combat.ATTACK_POWER_SCALE + 50
     full = combat.attack_damage(50, scaling, {"Strength": 50.0})
     light = combat.attack_damage(50, scaling, {"Strength": 50.0}, chain_multiplier=0.75)
-    assert full == pytest.approx(100)
-    assert light == pytest.approx(75)
+    assert full == pytest.approx(expected)
+    assert light == pytest.approx(expected * 0.75)
 
 
 def test_a_third_of_the_roster_actually_has_a_chain():
@@ -310,3 +314,40 @@ def test_a_third_of_the_roster_actually_has_a_chain():
     chained = [g for g in gods if g.get("name")
                and len(combat.attack_chain_multipliers(g)) > 1]
     assert len(chained) >= 25
+
+
+def test_attack_power_correction_applies_to_the_base_not_item_power():
+    """Measured: Rage's 30 Strength accounted for 29.6-30.5 raw, so item power
+    is unscaled and the 0.81 correction belongs to the Attack Power base alone.
+    Scaling both would have fitted the no-item reading and missed the Rage one."""
+    scaling = {"Strength": 1.0}
+    bare = combat.attack_damage(47.76, scaling, {})
+    with_str = combat.attack_damage(47.76, scaling, {"Strength": 30.0})
+    assert bare == pytest.approx(47.76 * combat.ATTACK_POWER_SCALE)
+    assert with_str - bare == pytest.approx(30.0)
+
+
+def test_the_correction_reproduces_all_three_measured_gods():
+    """Thanatos 32, Neith 30, Ymir 28 — melee and ranged, physical and
+    magical, one constant. That spread is what rules out a per-god quirk."""
+    import math
+    from smite import notes, recommend
+    kuk, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Kukulkan.md")
+    phys = kuk["base_stats"]["physical_prot"]["base"]
+    mag = kuk["base_stats"]["magical_prot"]["base"]
+    for name, prot, seen in (("Thanatos", phys, 32), ("Neith", phys, 30), ("Ymir", mag, 28)):
+        god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / f"{name}.md")
+        ap = god["base_stats"]["attack_power"]["base"]
+        hit = combat.attack_damage(ap, combat.DEFAULT_ATTACK_SCALING, {})
+        assert math.floor(combat.damage_dealt(hit, prot)) == seen, name
+
+
+def test_a_clean_0_80_would_not_have_fitted():
+    """The constant is 0.81 and not the rounder 0.80 because 0.80 misses
+    Thanatos — worth pinning so nobody 'tidies' it."""
+    import math
+    from smite import notes, recommend
+    god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Thanatos.md")
+    ap = god["base_stats"]["attack_power"]["base"]
+    at_080 = ap * 0.80 + 0.0
+    assert math.floor(combat.damage_dealt(at_080 * 1.5, 17.48)) != 49
