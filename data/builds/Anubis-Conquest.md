@@ -361,70 +361,144 @@ builds:
       fit: 0.85
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
-  - Golden Blade
-  - Lernaean Bow
-  - Berserker's Shield
-  - Death Metal
-  - Damaru
-  - Demon Blade
+  - Genji's Guard
+  - Bracer of The Abyss
+  - Nimble Ring
+  - Bragi's Harp
+  - Ethereal Staff
+  - Gluttonous Grimoire
   flex_slots:
-  - Demon Blade
-  - Golden Blade
+  - Genji's Guard
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
+    this god: Gluttonous Grimoire, Bragi''s Harp, Bracer of The Abyss, Ethereal Staff,
+    Genji''s Guard, Death Metal, Nimble Ring, Spear of the Magus, Blood-Bound Book,
+    The Cosmic Horror, Wish-Granting Pearl, Breastplate of Valor, Jade Scepter, Oni
+    Hunter''s Garb, Rod of Asclepius, Chronos'' Pendant, Yogi''s Necklace, Kinetic
+    Cuirass, Obsidian Shard, Triton''s Conch, Amanita Charm, Helm of Radiance, Typhon’s
+    Heart, Spectral Armor.'
   slot_scores:
-    Golden Blade:
-      total: 0.3
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
-    Lernaean Bow:
-      total: 0.33
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
-    Berserker's Shield:
-      total: 0.31
+    Genji's Guard:
+      total: 0.49
       efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.34
-    Death Metal:
-      total: 0.32
-      efficiency: 0.65
+      fit: 0.08
+    Bracer of The Abyss:
+      total: 0.5
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Damaru:
-      total: 0.33
-      efficiency: 0.66
+      fit: 0.4
+    Nimble Ring:
+      total: 0.49
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.31
-      efficiency: 0.45
+      fit: 0.48
+    Bragi's Harp:
+      total: 0.5
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 1.0
-  fun: true
+      fit: 0.63
+    Ethereal Staff:
+      total: 0.5
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.17
+    Gluttonous Grimoire:
+      total: 0.55
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Chronos' Pendant
+  - Gem of Focus
+  - Freya's Tears
+  - Soul Gem
+  flex_slots:
+  - Gem of Focus
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Genji''s Guard, Gluttonous Grimoire,
+    Breastplate of Valor, Chronos'' Pendant, Shield of the Phoenix, Gem of Focus,
+    Chandra''s Grace, Freya''s Tears, Spear of the Magus, Death Metal, Ethereal Staff,
+    Screeching Gargoyle, The Cosmic Horror, Gladiator''s Shield, Obsidian Shard, Oni
+    Hunter''s Garb, Wish-Granting Pearl, Jade Scepter, Yogi''s Necklace, Bragi''s
+    Harp, Rod of Asclepius, Blood-Bound Book, Dreamer''s Idol, Kinetic Cuirass.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Breastplate of Valor:
+      total: 0.53
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Chronos' Pendant:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Gem of Focus:
+      total: 0.51
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Freya's Tears:
+      total: 0.51
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Soul Gem:
+      total: 0.57
+      efficiency: 0.62
+      win: 0.44
+      pick: 0.18
+      fit: 0.96
   starter: *id001
 - source: suggested
   archetype: model

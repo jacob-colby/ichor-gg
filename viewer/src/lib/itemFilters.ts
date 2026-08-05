@@ -19,6 +19,18 @@ export function tierLabel(tier: number | string): string {
  * Derived rather than hardcoded: the filter used to offer a `Glyph` option
  * matching zero items while the one Relic in the set was unreachable.
  */
+/** A purchase-path step rather than something you set out to buy.
+ *
+ *  Tier 1 and 2, with one exception that matters: a tier-1 item carrying a
+ *  PASSIVE is a starter — Bumba's Cudgel, Gilded Arrow, Death's Toll — and
+ *  those are things a player shops for deliberately. The twelve tier-1 items
+ *  with no passive (Axe, Bow, Ring, Shield) are the actual path steps.
+ *  Non-numeric tiers (Relic/Glyph) are finished items. */
+export function isComponent(item: Item): boolean {
+  if (typeof item.tier !== "number" || item.tier >= 3) return false;
+  return !(item.tier === 1 && (item.passive ?? "").trim());
+}
+
 export function tiersPresent(items: Item[]): (number | string)[] {
   const seen = [...new Set(items.map((i) => i.tier))];
   const nums = seen.filter((t): t is number => typeof t === "number").sort((a, b) => b - a);

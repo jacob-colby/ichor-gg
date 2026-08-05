@@ -293,70 +293,289 @@ builds:
       fit: 0.49
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
-  - Golden Blade
-  - Lernaean Bow
-  - Berserker's Shield
-  - Death Metal
-  - Damaru
-  - Demon Blade
+  - Genji's Guard
+  - Breastplate of Valor
+  - Bracer of The Abyss
+  - Nimble Ring
+  - Bragi's Harp
+  - Ethereal Staff
   flex_slots:
-  - Demon Blade
-  - Golden Blade
+  - Bragi's Harp
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+  rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
+    this god: Breastplate of Valor, Ethereal Staff, Gluttonous Grimoire, Kinetic Cuirass,
+    Amanita Charm, Oni Hunter''s Garb, Eye of Providence, Spectral Armor, Soul Gem,
+    Shield of the Phoenix, Mantle Of Discord, Yogi''s Necklace, Freya''s Tears, Bracer
+    of The Abyss, Bragi''s Harp, Erosion, Death Metal, Draconic Scale, Wish-Granting
+    Pearl, Leviathan''s Hide, Jade Scepter, Rod of Asclepius, Nimble Ring, Midgardian
+    Mail, Bancroft''s Talon.'
   slot_scores:
-    Golden Blade:
-      total: 0.3
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.74
+      win: 0.56
+      pick: 0.17
+      fit: 0.2
+    Breastplate of Valor:
+      total: 0.64
+      efficiency: 0.67
+      win: 0.81
+      pick: 0.14
+      fit: 0.2
+    Bracer of The Abyss:
+      total: 0.48
       efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Lernaean Bow:
-      total: 0.33
-      efficiency: 0.65
+      fit: 0.24
+    Nimble Ring:
+      total: 0.46
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Berserker's Shield:
-      total: 0.31
+      fit: 0.31
+    Bragi's Harp:
+      total: 0.48
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Ethereal Staff:
+      total: 0.57
+      efficiency: 0.7
+      win: 0.67
+      pick: 0.1
+      fit: 0.15
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Kinetic Cuirass
+  - Shield of the Phoenix
+  - Ethereal Staff
+  - Shifter's Shield
+  flex_slots:
+  - Kinetic Cuirass
+  - Shield of the Phoenix
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Breastplate of Valor, Ethereal Staff,
+    Kinetic Cuirass, Shield of the Phoenix, Amanita Charm, Gluttonous Grimoire, Freya''s
+    Tears, Soul Gem, Eye of Providence, Oni Hunter''s Garb, Chandra''s Grace, Spectral
+    Armor, Chronos'' Pendant, Mantle Of Discord, Gladiator''s Shield, Erosion, Yogi''s
+    Necklace, Screeching Gargoyle, Draconic Scale, Wish-Granting Pearl, Jade Scepter,
+    Death Metal, Leviathan''s Hide, Rod of Asclepius, Gem of Focus.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.59
       efficiency: 0.74
+      win: 0.56
+      pick: 0.17
+      fit: 0.48
+    Breastplate of Valor:
+      total: 0.68
+      efficiency: 0.67
+      win: 0.81
+      pick: 0.14
+      fit: 0.48
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.34
-    Death Metal:
-      total: 0.32
-      efficiency: 0.65
+      fit: 0.55
+    Shield of the Phoenix:
+      total: 0.53
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Damaru:
-      total: 0.33
-      efficiency: 0.66
+      fit: 0.61
+    Ethereal Staff:
+      total: 0.59
+      efficiency: 0.7
+      win: 0.67
+      pick: 0.1
+      fit: 0.22
+    Shifter's Shield:
+      total: 0.54
+      efficiency: 0.58
+      win: 0.58
+      pick: 0.26
+      fit: 0.45
+  starter: *id001
+- source: suggested
+  archetype: strength
+  slot_order:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Ethereal Staff
+  - Gluttonous Grimoire
+  - Shifter's Shield
+  - The Crusher
+  flex_slots:
+  - Shifter's Shield
+  - Gluttonous Grimoire
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
+    win/pick). Underrated for this god: Breastplate of Valor, Ethereal Staff, The
+    Crusher, Gluttonous Grimoire, Berserker''s Shield, Jotunn''s Revenge, Runeforged
+    Hammer, Kinetic Cuirass, Hydra''s Lament, Amanita Charm, Eye of Providence, Lernaean
+    Bow, Oni Hunter''s Garb, Avenging Blade, Golden Blade, Shield Splitter, Pharaoh''s
+    Curse, Eye of the Storm, Soul Gem, Spectral Armor, Death Metal, Shield of the
+    Phoenix, Mantle Of Discord, Freya''s Tears, Damaru, The Reaper, Yogi''s Necklace,
+    Erosion, Heartseeker, Draconic Scale, Bragi''s Harp, Shogun''s Ofuda, Triton''s
+    Conch, Leviathan''s Hide, Arondight, Wish-Granting Pearl, Avatar''s Parashu.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.74
+      win: 0.56
+      pick: 0.17
+      fit: 0.23
+    Breastplate of Valor:
+      total: 0.64
+      efficiency: 0.67
+      win: 0.81
+      pick: 0.14
+      fit: 0.23
+    Ethereal Staff:
+      total: 0.58
+      efficiency: 0.7
+      win: 0.67
+      pick: 0.1
+      fit: 0.17
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.31
-      efficiency: 0.45
+      fit: 0.42
+    Shifter's Shield:
+      total: 0.54
+      efficiency: 0.58
+      win: 0.58
+      pick: 0.26
+      fit: 0.41
+    The Crusher:
+      total: 0.54
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 1.0
-  fun: true
+      fit: 0.47
+  starter: *id001
+- source: suggested
+  archetype: str-int
+  slot_order:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Ethereal Staff
+  - Gluttonous Grimoire
+  - Shifter's Shield
+  - The Crusher
+  flex_slots:
+  - Shifter's Shield
+  - The Crusher
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
+    + fit + win/pick). Underrated for this god: Breastplate of Valor, Ethereal Staff,
+    Gluttonous Grimoire, The Crusher, Jotunn''s Revenge, Runeforged Hammer, Kinetic
+    Cuirass, Amanita Charm, Berserker''s Shield, Hydra''s Lament, Soul Gem, Eye of
+    Providence, Oni Hunter''s Garb, Death Metal, Avenging Blade, Shield Splitter,
+    Spectral Armor, Eye of the Storm, Wish-Granting Pearl, Lernaean Bow, Shield of
+    the Phoenix, Jade Scepter, Mantle Of Discord, Triton''s Conch, Spear of the Magus,
+    Freya''s Tears, Rod of Asclepius, Pharaoh''s Curse, Golden Blade, Yogi''s Necklace,
+    Erosion, Helm of Radiance, Damaru, The Reaper, Draconic Scale, The Cosmic Horror,
+    Bragi''s Harp.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.74
+      win: 0.56
+      pick: 0.17
+      fit: 0.23
+    Breastplate of Valor:
+      total: 0.64
+      efficiency: 0.67
+      win: 0.81
+      pick: 0.14
+      fit: 0.23
+    Ethereal Staff:
+      total: 0.6
+      efficiency: 0.7
+      win: 0.67
+      pick: 0.1
+      fit: 0.3
+    Gluttonous Grimoire:
+      total: 0.56
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Shifter's Shield:
+      total: 0.54
+      efficiency: 0.58
+      win: 0.58
+      pick: 0.26
+      fit: 0.42
+    The Crusher:
+      total: 0.53
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
   starter: *id001
 - source: suggested
   archetype: model

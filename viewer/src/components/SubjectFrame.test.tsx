@@ -43,7 +43,7 @@ describe("SubjectFrame — the roster is a first-class subject", () => {
   it("offers the five roster lenses", () => {
     render(frame());
     const nav = within(screen.getByTestId("lens-tabs-strip"));
-    for (const label of ["Board", "Tier List", "Items", "Draft", "Patch Notes"]) {
+    for (const label of ["Board", "Gods", "Items", "Draft", "Patch Notes"]) {
       expect(nav.getByRole("link", { name: label })).toBeInTheDocument();
     }
   });
@@ -51,7 +51,7 @@ describe("SubjectFrame — the roster is a first-class subject", () => {
   it("marks the lens in view as the current page", () => {
     render(frame({ lens: "tiers" }));
     const nav = within(screen.getByTestId("lens-tabs-strip"));
-    expect(nav.getByRole("link", { name: "Tier List" })).toHaveAttribute("aria-current", "page");
+    expect(nav.getByRole("link", { name: "Gods" })).toHaveAttribute("aria-current", "page");
     expect(nav.getByRole("link", { name: "Board" })).not.toHaveAttribute("aria-current");
   });
 

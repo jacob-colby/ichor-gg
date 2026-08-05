@@ -6,6 +6,8 @@ import json
 import shutil
 from pathlib import Path
 
+import yaml
+
 from smite import (abilities, damage_value, efficiency, notes, recommend,
                    scoring, snapshots, tierlist)
 

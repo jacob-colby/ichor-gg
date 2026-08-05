@@ -293,70 +293,144 @@ builds:
       fit: 0.49
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
-  - Golden Blade
-  - Lernaean Bow
-  - Berserker's Shield
-  - Death Metal
-  - Damaru
-  - Demon Blade
+  - Kinetic Cuirass
+  - Bracer of The Abyss
+  - Nimble Ring
+  - Oni Hunter's Garb
+  - Bragi's Harp
+  - Gluttonous Grimoire
   flex_slots:
-  - Demon Blade
-  - Golden Blade
+  - Bragi's Harp
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+  rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
+    this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm, Oni Hunter''s Garb,
+    Eye of Providence, Spectral Armor, Ethereal Staff, Soul Gem, Shield of the Phoenix,
+    Mantle Of Discord, Yogi''s Necklace, Freya''s Tears, Erosion, Bracer of The Abyss,
+    Bragi''s Harp, Draconic Scale, Death Metal, Leviathan''s Hide, Wish-Granting Pearl,
+    Jade Scepter, Rod of Asclepius, Chandra''s Grace, Midgardian Mail, Nimble Ring,
+    Breastplate of Valor.'
   slot_scores:
-    Golden Blade:
-      total: 0.3
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Bracer of The Abyss:
+      total: 0.47
       efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Lernaean Bow:
-      total: 0.33
+      fit: 0.23
+    Nimble Ring:
+      total: 0.46
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Oni Hunter's Garb:
+      total: 0.51
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.23
+    Bragi's Harp:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Gluttonous Grimoire:
+      total: 0.53
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Eye of Providence
+  - Chronos' Pendant
+  - Kinetic Cuirass
+  - Shield of the Phoenix
+  - Oni Hunter's Garb
+  - Freya's Tears
+  flex_slots:
+  - Oni Hunter's Garb
+  - Chronos' Pendant
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Kinetic Cuirass, Shield of the Phoenix,
+    Amanita Charm, Gluttonous Grimoire, Freya''s Tears, Soul Gem, Eye of Providence,
+    Oni Hunter''s Garb, Ethereal Staff, Chandra''s Grace, Spectral Armor, Chronos''
+    Pendant, Mantle Of Discord, Gladiator''s Shield, Erosion, Yogi''s Necklace, Screeching
+    Gargoyle, Draconic Scale, Wish-Granting Pearl, Jade Scepter, Death Metal, Leviathan''s
+    Hide, Rod of Asclepius, Gem of Focus, Breastplate of Valor.'
+  slot_scores:
+    Eye of Providence:
+      total: 0.52
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Berserker's Shield:
-      total: 0.31
-      efficiency: 0.74
+      fit: 0.45
+    Chronos' Pendant:
+      total: 0.49
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.34
-    Death Metal:
-      total: 0.32
-      efficiency: 0.65
+      fit: 0.42
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Damaru:
-      total: 0.33
-      efficiency: 0.66
+      fit: 0.55
+    Shield of the Phoenix:
+      total: 0.53
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.31
-      efficiency: 0.45
+      fit: 0.61
+    Oni Hunter's Garb:
+      total: 0.51
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 1.0
-  fun: true
+      fit: 0.29
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
   starter: *id001
 - source: suggested
   archetype: model

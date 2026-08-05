@@ -243,6 +243,10 @@ describe("DetailPanel — the buy ledger", () => {
     expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
   });
 
+  /* No shipped flavor sets `fun` any more — `fun-crit` was retired for focused
+   * builds meant to be played. The mechanism stays tested because the entry
+   * shape still carries the flag, and a build that opts out of the meta
+   * comparison must not silently start being compared against it. */
   it("does not compare a fun build against the meta", () => {
     const funBuild = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
@@ -250,7 +254,7 @@ describe("DetailPanel — the buy ledger", () => {
       { source: "suggested", archetype: "fun-crit", fun: true, slot_order: ["B"], situational_swaps: [], rationale: "" },
     ] }];
     render(panel({ items, builds: funBuild as never }));
-    fireEvent.click(screen.getByRole("button", { name: /fun crit/i }));
+    fireEvent.click(screen.getByRole("button", { name: /fun-crit/i }));
     expect(screen.getByText(/for fun/i)).toBeInTheDocument();
     expect(screen.getByText(/off-class/i)).toBeInTheDocument();
     expect(screen.queryByText("off-meta")).not.toBeInTheDocument();

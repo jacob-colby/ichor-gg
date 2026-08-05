@@ -164,19 +164,57 @@ flavors:
     stats: {Penetration: 2.0}
     tag_bonus: {protection-shred: 0.3}
     max_lifesteal: 1
-  fun-crit:
-    # For-fun off-class build: crit for anyone, including guardians and mages.
-    # Bypasses the damage filter and archetype fit ON PURPOSE; win/pick zeroed
-    # by the engine (fun: true). Skipped for gods that already get the serious
-    # crit flavor (redundant_with).
-    fun: true
-    bypass: [damage_filter, archetype_fit]
-    redundant_with: crit
+  # ── Focused builds ──────────────────────────────────────────────────────
+  # These replace the old `fun-crit`, which was explicitly off-class and had
+  # its meta signals zeroed because nobody plays a crit Ymir. A build nobody
+  # should follow is not worth a tab; a build with a deliberate FOCUS is.
+  attack-speed:
     damage_types: null
     match_any: null
-    stats: {Critical Chance: 1.5, Attack Speed: 1.2, Strength: 0.8}
+    stats: {Attack Speed: 1.5, Strength: 0.8, Lifesteal: 0.5, Attack Damage: 1.0}
+    max_lifesteal: 2
+    require: {stat: "Attack Speed", min: 3}
+  cooldown:
+    # Cooldown Rate is a RATE on the same 100/(100+x) curve as protections —
+    # measured, see combat.py. 100 of it is twice the casts, which is why an
+    # ability-uptime build is a real archetype rather than a stat pile.
+    damage_types: null
+    match_any: null
+    stats: {Cooldown Rate: 2.0, Intelligence: 0.6, Strength: 0.6}
     max_lifesteal: 1
-    require: {stat: "Critical Chance", min: 3}
+    require: {stat: "Cooldown Rate", min: 3}
+
+  # ── Off-type power ──────────────────────────────────────────────────────
+  # For playing a god outside their usual lane. Each BYPASSES THE DAMAGE
+  # FILTER on purpose — that filter is what stops a physical god ever seeing
+  # an Intelligence item, and it is exactly what has to give for Sol carry or
+  # a full-Intelligence Neith to be expressible at all.
+  #
+  # `requires_scaling` gates them on the god's own measured coefficients, so
+  # the tab appears only where the kit supports it. Neith scales 1.00 Strength
+  # and 0.95 Intelligence and gets all three; Scylla scales 0.28 Strength and
+  # gets none. That gate is the difference between an alternative and a trap.
+  strength:
+    bypass: [damage_filter]
+    damage_types: [magical]          # off-type by construction
+    match_any: null
+    requires_scaling: {Strength: 0.5}
+    stats: {Strength: 1.5, Penetration: 1.0, Attack Speed: 0.6}
+    max_lifesteal: 1
+  intelligence:
+    bypass: [damage_filter]
+    damage_types: [physical]         # off-type by construction
+    match_any: null
+    requires_scaling: {Intelligence: 0.5}
+    stats: {Intelligence: 1.5, Penetration: 1.0, Cooldown Rate: 0.8}
+    max_lifesteal: 1
+  str-int:
+    bypass: [damage_filter]
+    damage_types: null
+    match_any: null
+    requires_scaling: {Strength: 0.5, Intelligence: 0.5}
+    stats: {Strength: 1.2, Intelligence: 1.2, Penetration: 1.0}
+    max_lifesteal: 1
 
 # ── God aspects ─────────────────────────────────────────────────────────────
 # Per-god scoring overlay (same shape as a flavor) applied when the viewer's

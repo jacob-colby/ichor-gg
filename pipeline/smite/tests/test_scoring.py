@@ -488,3 +488,50 @@ def test_no_weight_names_a_stat_no_item_has():
         real |= set((notes.read_note(p)[0].get("stats") or {}))
     unknown = sorted(_weight_stat_keys(weights) - real)
     assert not unknown, f"_weights.yaml names stats no item carries: {unknown}"
+
+
+# ── Off-type flavors, gated on the god's own scaling ──────────────────────
+
+def test_off_type_flavors_are_gated_on_measured_scaling():
+    """The gate is what makes an off-type build an alternative rather than a
+    trap. Sol scales 1.00 on Strength despite being magical, so a Strength
+    build is real for him; Scylla scales 0.28 and must not be offered one."""
+    from pathlib import Path
+    from smite import notes, recommend
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    god = lambda n: notes.read_note(recommend.DATA_ROOT / "Gods" / f"{n}.md")[0]
+
+    assert "strength" in scoring.eligible_flavors(god("Sol"), weights)
+    assert "strength" not in scoring.eligible_flavors(god("Scylla"), weights)
+    # Neith is one of the gods sharing nothing with the community build, and
+    # what the community actually runs on her is Intelligence.
+    assert "intelligence" in scoring.eligible_flavors(god("Neith"), weights)
+    assert "str-int" in scoring.eligible_flavors(god("Neith"), weights)
+
+
+def test_a_kit_that_does_not_scale_gets_no_off_type_tab():
+    """Chiron Mid is a thing people try; his kit scales 0.05 on Intelligence,
+    so offering the build would be the model lying to be accommodating."""
+    from smite import notes, recommend
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    chiron, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Chiron.md")
+    assert "intelligence" not in scoring.eligible_flavors(chiron, weights)
+
+
+def test_requires_scaling_is_skipped_when_the_kit_did_not_parse():
+    """14 gods have too few parsed abilities to value. They fall back to the
+    role table everywhere else, and here they simply get no off-type tab —
+    never one derived from an empty measurement."""
+    weights = scoring.load_weights_default()
+    weights["flavors"] = {"x": {"requires_scaling": {"Strength": 0.5}}}
+    assert scoring.eligible_flavors({"abilities": []}, weights) == []
+
+
+def test_the_for_fun_build_is_gone():
+    """It was explicitly off-class with its meta signals zeroed — a build
+    nobody should follow does not deserve a tab. Replaced by focused builds
+    that are meant to be played."""
+    from smite import recommend
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    assert "fun-crit" not in (weights.get("flavors") or {})
+    assert not any(f.get("fun") for f in (weights.get("flavors") or {}).values())

@@ -20,7 +20,7 @@ import { useState } from "react";
 
 const ROSTER_TABS: { lens: RosterLens; label: string }[] = [
   { lens: "board", label: "Board" },
-  { lens: "tiers", label: "Tier List" },
+  { lens: "tiers", label: "Gods" },
   { lens: "items", label: "Items" },
   { lens: "draft", label: "Draft" },
   { lens: "patch", label: "Patch Notes" },

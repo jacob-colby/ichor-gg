@@ -9,6 +9,7 @@ from datetime import date
 from pathlib import Path
 
 import requests
+import yaml
 
 from smite import notes, smitebrain_parser, wiki_parser
 from smite.browser_fetch import BrowserFetcher
@@ -41,7 +42,10 @@ def _download_icon(image_url: str, slug: str) -> None:
     if out_path.exists() and out_path.stat().st_size > 1000:
         return
 
-    full_url = "https://wiki.smite2.com" + image_url
+    # An override may supply an absolute URL from another CDN; the wiki's own
+    # `image_url` is always a site-relative /images path.
+    full_url = (image_url if image_url.startswith("http")
+                else "https://wiki.smite2.com" + image_url)
     try:
         response = requests.get(full_url, timeout=20)
         response.raise_for_status()
@@ -90,6 +94,17 @@ def refresh_patch_version(wiki_fetcher, force: bool = False):
     return patch
 
 
+def _head_icon_overrides():
+    """`{slug: url}` from _icon_sources.yaml — head icons the wiki frames as
+    portraits rather than faces. Read on every refresh so the override cannot
+    be silently undone by a re-scrape; see that file for why it exists."""
+    path = DATA_ROOT / "_icon_sources.yaml"
+    if not path.exists():
+        return {}
+    doc = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return doc.get("head_icons") or {}
+
+
 def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
     url = WIKI_BASE + name.replace(" ", "_")
     parsed = wiki_parser.parse_god_page(wiki_fetcher.fetch(url, force=force))
@@ -113,7 +128,11 @@ def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
                           log_dir=DATA_ROOT / "_logs")
     slug = name.lower().replace(" ", "-").replace("'", "")
     _download_icon(parsed.get("image_url"), slug)
-    _download_icon(wiki_parser.derive_headshot_url(parsed.get("image_url")), slug + "-head")
+    # The wiki's derived icon is a head crop for most gods and a half- or
+    # full-body portrait for a few; those few are pinned to a better source.
+    head_url = (_head_icon_overrides().get(slug)
+                or wiki_parser.derive_headshot_url(parsed.get("image_url")))
+    _download_icon(head_url, slug + "-head")
 
 
 def refresh_item(name: str, wiki_fetcher, force: bool = False) -> None:

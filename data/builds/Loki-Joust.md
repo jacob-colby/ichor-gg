@@ -266,70 +266,134 @@ builds:
       fit: 0.94
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Tyrfing
-  - Bragi's Harp
-  - Death Metal
+  - The Reaper
   - Riptalon
-  - Damaru
-  - Demon Blade
+  - The Crusher
+  - Pharaoh's Curse
   flex_slots:
-  - Riptalon
-  - Tyrfing
+  - Pharaoh's Curse
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.58
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Tyrfing:
+      total: 0.65
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    The Reaper:
+      total: 0.64
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Riptalon:
+      total: 0.8
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Crusher:
+      total: 0.57
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Jotunn's Revenge
+  - Shield of the Phoenix
+  - Hydra's Lament
+  - Pendulum Blade
+  flex_slots:
+  - Genji's Guard
+  - Breastplate of Valor
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+  rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Tyrfing:
+    Genji's Guard:
+      total: 0.62
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Breastplate of Valor:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Bragi's Harp:
-      total: 0.6
-      efficiency: 0.53
+      fit: 0.5
+    Jotunn's Revenge:
+      total: 0.77
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Death Metal:
-      total: 0.65
-      efficiency: 0.65
+      fit: 0.85
+    Shield of the Phoenix:
+      total: 0.68
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Riptalon:
-      total: 0.6
-      efficiency: 0.6
+      fit: 0.75
+    Hydra's Lament:
+      total: 0.72
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.59
-    Damaru:
+      fit: 0.75
+    Pendulum Blade:
       total: 0.66
-      efficiency: 0.66
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.73
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-  fun: true
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: model

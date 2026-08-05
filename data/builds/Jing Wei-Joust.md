@@ -266,6 +266,136 @@ builds:
       fit: 0.57
   starter: *id001
 - source: suggested
+  archetype: attack-speed
+  slot_order:
+  - Golden Blade
+  - Tyrfing
+  - Riptalon
+  - Demon Blade
+  - Amanita Charm
+  - Pharaoh's Curse
+  flex_slots:
+  - Amanita Charm
+  - Golden Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.56
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Tyrfing:
+      total: 0.63
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Riptalon:
+      total: 0.72
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Demon Blade:
+      total: 0.58
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Amanita Charm:
+      total: 0.56
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Pharaoh's Curse:
+      total: 0.57
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Jotunn's Revenge
+  - Shield of the Phoenix
+  - Hydra's Lament
+  - Eros' Bow
+  - Pharaoh's Curse
+  flex_slots:
+  - Pharaoh's Curse
+  - Eros' Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Shield of the Phoenix:
+      total: 0.59
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Hydra's Lament:
+      total: 0.6
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Eros' Bow:
+      total: 0.5
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Pharaoh's Curse:
+      total: 0.52
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+  starter: *id001
+- source: suggested
   archetype: model
   slot_order:
   - Tyrfing

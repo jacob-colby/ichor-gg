@@ -363,70 +363,144 @@ builds:
       fit: 0.48
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
-  - Golden Blade
-  - Lernaean Bow
-  - Berserker's Shield
-  - Death Metal
-  - Damaru
-  - Demon Blade
+  - Genji's Guard
+  - Bracer of The Abyss
+  - Nimble Ring
+  - Bragi's Harp
+  - Ethereal Staff
+  - Gluttonous Grimoire
   flex_slots:
-  - Demon Blade
-  - Golden Blade
+  - Bragi's Harp
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+  rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
+    this god: Ethereal Staff, Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita
+    Charm, Oni Hunter''s Garb, Eye of Providence, Spectral Armor, Bracer of The Abyss,
+    Yogi''s Necklace, Death Metal, Shield of the Phoenix, Wish-Granting Pearl, Bragi''s
+    Harp, Jade Scepter, Mantle Of Discord, Rod of Asclepius, Freya''s Tears, Spear
+    of the Magus, Bancroft''s Talon, Shifter''s Shield, Blood-Bound Book, Nimble Ring,
+    Helm of Radiance, Leviathan''s Hide.'
   slot_scores:
-    Golden Blade:
-      total: 0.3
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.74
+      win: 0.56
+      pick: 0.2
+      fit: 0.18
+    Bracer of The Abyss:
+      total: 0.48
       efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Lernaean Bow:
-      total: 0.33
-      efficiency: 0.65
+      fit: 0.28
+    Nimble Ring:
+      total: 0.47
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Berserker's Shield:
-      total: 0.31
+      fit: 0.33
+    Bragi's Harp:
+      total: 0.48
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Ethereal Staff:
+      total: 0.55
+      efficiency: 0.7
+      win: 0.59
+      pick: 0.11
+      fit: 0.2
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Kinetic Cuirass
+  - Ethereal Staff
+  - Freya's Tears
+  - Soul Gem
+  flex_slots:
+  - Kinetic Cuirass
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Ethereal Staff, Gluttonous Grimoire,
+    Soul Gem, Kinetic Cuirass, Shield of the Phoenix, Amanita Charm, Freya''s Tears,
+    Eye of Providence, Oni Hunter''s Garb, Chandra''s Grace, Spectral Armor, Chronos''
+    Pendant, Mantle Of Discord, Spear of Desolation, Yogi''s Necklace, Shifter''s
+    Shield, Gladiator''s Shield, Wish-Granting Pearl, Erosion, Jade Scepter, Screeching
+    Gargoyle, Death Metal, Rod of Asclepius, Draconic Scale, Spear of the Magus.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.58
       efficiency: 0.74
+      win: 0.56
+      pick: 0.2
+      fit: 0.43
+    Breastplate of Valor:
+      total: 0.56
+      efficiency: 0.67
+      win: 0.55
+      pick: 0.17
+      fit: 0.43
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.34
-    Death Metal:
-      total: 0.32
-      efficiency: 0.65
+      fit: 0.49
+    Ethereal Staff:
+      total: 0.55
+      efficiency: 0.7
+      win: 0.59
+      pick: 0.11
+      fit: 0.21
+    Freya's Tears:
+      total: 0.52
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Damaru:
-      total: 0.33
-      efficiency: 0.66
+      fit: 0.56
+    Soul Gem:
+      total: 0.54
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.31
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-  fun: true
+      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: model

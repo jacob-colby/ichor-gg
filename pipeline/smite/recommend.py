@@ -26,7 +26,11 @@ _FLAVOR_BLURB = {
     "burst": "Ability / burst skew",
     "bruiser": "Lifesteal bruiser skew",
     "anti-tank": "Full-penetration anti-tank skew",
-    "fun-crit": "Crit / attack-speed party build",
+    "attack-speed": "Basic-attack DPS skew",
+    "cooldown": "Ability-uptime skew — Cooldown Rate is a rate, not a reduction",
+    "strength": "Off-type Strength build — this kit scales on it",
+    "intelligence": "Off-type Intelligence build — this kit scales on it",
+    "str-int": "Hybrid Strength + Intelligence — this kit scales on both",
 }
 
 

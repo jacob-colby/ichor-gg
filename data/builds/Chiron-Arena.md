@@ -331,6 +331,136 @@ builds:
       fit: 0.65
   starter: *id001
 - source: suggested
+  archetype: attack-speed
+  slot_order:
+  - Golden Blade
+  - Lernaean Bow
+  - Riptalon
+  - Eros' Bow
+  - Amanita Charm
+  - Pharaoh's Curse
+  flex_slots:
+  - Pharaoh's Curse
+  - Eros' Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.61
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Lernaean Bow:
+      total: 0.6
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Riptalon:
+      total: 0.73
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Eros' Bow:
+      total: 0.56
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Amanita Charm:
+      total: 0.61
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Lernaean Bow
+  - Jotunn's Revenge
+  - Shield of the Phoenix
+  - Hydra's Lament
+  - Eros' Bow
+  - Pharaoh's Curse
+  flex_slots:
+  - Lernaean Bow
+  - Eros' Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Shield of the Phoenix:
+      total: 0.57
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Hydra's Lament:
+      total: 0.57
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Eros' Bow:
+      total: 0.54
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+  starter: *id001
+- source: suggested
   archetype: model
   slot_order:
   - Lernaean Bow
@@ -723,6 +853,138 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
+  starter: *id001
+  aspect: Aspect of the Heroic Tutor
+- source: suggested
+  archetype: attack-speed
+  slot_order:
+  - Golden Blade
+  - Lernaean Bow
+  - Tyrfing
+  - The Reaper
+  - Riptalon
+  - The Crusher
+  flex_slots:
+  - Tyrfing
+  - The Crusher
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.61
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Lernaean Bow:
+      total: 0.6
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Tyrfing:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    The Reaper:
+      total: 0.59
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Riptalon:
+      total: 0.73
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    The Crusher:
+      total: 0.53
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+  starter: *id001
+  aspect: Aspect of the Heroic Tutor
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Jotunn's Revenge
+  - Shield of the Phoenix
+  - Hydra's Lament
+  - Pendulum Blade
+  - The Crusher
+  flex_slots:
+  - The Crusher
+  - Pendulum Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
+    Jotunn's Revenge:
+      total: 0.63
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Shield of the Phoenix:
+      total: 0.59
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Hydra's Lament:
+      total: 0.6
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Pendulum Blade:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    The Crusher:
+      total: 0.52
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
