@@ -94,11 +94,46 @@ describe("useDraftResult", () => {
     expect(r.threatCulprits.tanks).toEqual([]);
   });
 
-  it("tracks taken names across both rows, for the picker's disabled state", () => {
+  it("tracks every name on the board, for the is-it-empty check", () => {
     const r = run(["TestGod", "", "", "", ""], ["EnemyHealer", "", "", "", ""]);
     expect(r.taken.has("TestGod")).toBe(true);
     expect(r.taken.has("EnemyHealer")).toBe(true);
     expect(r.taken.size).toBe(2);
+  });
+
+  /* The picker blocks a duplicate on the SAME team, never across the board.
+   * A team cannot field two Ymirs; the two teams mirroring each other is
+   * legal and routine — every non-draft queue allows it, and Joust and Arena
+   * are non-draft. Blocking it board-wide made a common comp unenterable. */
+  describe("takenFor — one team's duplicates, not the board's", () => {
+    const r = () => run(["TestGod", "Ally2", "", "", ""], ["EnemyHealer", "", "", "", ""]);
+
+    it("blocks a god already on the team being picked for", () => {
+      expect(r().takenFor("ally", 2).has("Ally2")).toBe(true);
+      expect(r().takenFor("enemy", 1).has("EnemyHealer")).toBe(true);
+    });
+
+    it("allows the same god on the other team", () => {
+      expect(r().takenFor("enemy", 1).has("TestGod")).toBe(false);
+      expect(r().takenFor("ally", 2).has("EnemyHealer")).toBe(false);
+    });
+
+    it("lets a mirror match be entered on both sides at once", () => {
+      const mirror = run(["Ymir", "", "", "", ""], ["Ymir", "", "", "", ""]);
+      expect(mirror.takenFor("ally", 0).has("Ymir")).toBe(false);
+      expect(mirror.takenFor("enemy", 0).has("Ymir")).toBe(false);
+      expect(mirror.taken.size).toBe(1);   // the board-empty check still counts names
+    });
+
+    it("does not grey out the god sitting in the slot being edited", () => {
+      // Re-opening a filled slot showed its own occupant disabled.
+      expect(r().takenFor("ally", 1).has("Ally2")).toBe(false);
+      expect(r().takenFor("ally", 1).has("TestGod")).toBe(true);
+    });
+
+    it("ignores empty slots", () => {
+      expect(r().takenFor("ally", 4).has("")).toBe(false);
+    });
   });
 
   it("gives coreSize a sensible default (6) before anything is scored", () => {

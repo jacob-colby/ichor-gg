@@ -107,7 +107,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
   const [copied, setCopied] = useState(false);
 
   const {
-    meName, itemsByName, taken, enemiesKnown, roster, threatCulprits: culprits,
+    meName, itemsByName, taken, takenFor, enemiesKnown, roster, threatCulprits: culprits,
     allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, coreSize,
   } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
@@ -335,7 +335,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
       </div>
 
       {pickSlot && (
-        <GodPickerModal gods={eligibleGods} taken={taken} onPick={pick}
+        <GodPickerModal gods={eligibleGods} taken={takenFor(pickSlot.kind, pickSlot.index)} onPick={pick}
           onClose={() => setPickSlot(null)} opener={openerRef.current} />
       )}
     </article>

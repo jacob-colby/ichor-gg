@@ -35,7 +35,9 @@ export function Icon({ name, className, item = false }: { name: string; classNam
  */
 export function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
   gods: God[];
-  /** Already on the board — SMITE forbids duplicates, so they're disabled. */
+  /** Gods this slot may not take — already on the SAME team, so they're
+   *  disabled. Not the whole board: the two teams may mirror each other, and
+   *  in every non-draft queue they routinely do. */
   taken: Set<string>;
   onPick: (name: string) => void;
   onClose: () => void;

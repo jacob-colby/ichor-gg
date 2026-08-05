@@ -69,7 +69,7 @@ interface DraftDockProps {
 
 export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, draftConfig }: DraftDockProps) {
   const { draft, mode, setMode, setAlly, setEnemy, clear } = useDraft();
-  const { meName, taken, enemiesKnown, roster, result, changeCount, coreSize } =
+  const { meName, taken, takenFor, enemiesKnown, roster, result, changeCount, coreSize } =
     useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
   const [expanded, setExpanded] = useState(false);
@@ -243,7 +243,7 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
       </div>
 
       {pickSlot && (
-        <GodPickerModal gods={eligibleGods} taken={taken} onPick={pick}
+        <GodPickerModal gods={eligibleGods} taken={takenFor(pickSlot.kind, pickSlot.index)} onPick={pick}
           onClose={() => setPickSlot(null)} opener={openerRef.current} />
       )}
     </div>
