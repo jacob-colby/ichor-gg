@@ -1,4 +1,5 @@
 import type { God, DraftComp, ThreatModel, DraftConfig } from "../types";
+import type { Overlay } from "./draftBuild";
 
 const HEAL = ["Healing", "Sustain"];
 const LOCK = ["Lockdown", "Crowd Control", "Area Control"];
@@ -65,7 +66,7 @@ export function threatCulprits(
 
 /** Threat model -> {tags, stats} bonus overlay (pre-clamp; the clamp is applied
  *  per item in draftBuild, since it bounds an item's TOTAL bonus). */
-export function threatOverlay(t: ThreatModel, cfg: DraftConfig) {
+export function threatOverlay(t: ThreatModel, cfg: DraftConfig): Overlay {
   const tags: Record<string, number> = {};
   const stats: Record<string, number> = {};
   const counts: Record<string, number> = {
@@ -107,4 +108,43 @@ export function threatOverlay(t: ThreatModel, cfg: DraftConfig) {
     stats["Penetration"] = (stats["Penetration"] ?? 0) + share(t.allyCount) * cfg.per_share;
   }
   return { tags, stats };
+}
+
+
+/** B6: per-item bonus from the damage model, given how tanky the enemy is.
+ *
+ * The tag and stat channels can only express "penetration is good against
+ * tanks", which is the hand-tuned rule this sits beside. The measurement is
+ * sharper than that and disagrees with it in a specific way: against a
+ * three-item tank, PERCENT penetration rises (Obsidian Shard, Titan's Bane)
+ * while FLAT penetration falls (Spear of Desolation), because a flat subtraction
+ * is worth proportionally less the more protection there is. A per-stat rule
+ * rewards both equally and is therefore wrong for half of them.
+ *
+ * `table` holds each item's normalised damage against a squishy and against a
+ * tank, on separate scales — so the difference between the two columns is the
+ * relative shift, which is exactly what a comp should move. Interpolating by
+ * the enemy's tank share and taking the delta from the neutral case gives a
+ * bonus that is zero for an unknown comp and grows only as real tanks appear.
+ */
+export function damageOverlay(
+  t: ThreatModel,
+  table: Record<string, [number, number]> | undefined,
+  cfg: DraftConfig,
+): Record<string, number> {
+  if (!table) return {};
+  const denom = t.rosterSize > 0 ? t.rosterSize : t.enemyCount;
+  if (denom <= 0) return {};
+  const tankShare = t.tanks / denom;
+  if (tankShare <= 0) return {};
+
+  const out: Record<string, number> = {};
+  for (const [name, pair] of Object.entries(table)) {
+    const [squishy, tank] = pair;
+    // How much this item's standing improves (or decays) as the enemy hardens,
+    // scaled by how much of their roster is actually tanky.
+    const shift = (tank - squishy) * tankShare * (cfg.per_share ?? 0.1) * 10;
+    if (Math.abs(shift) > 1e-4) out[name] = shift;
+  }
+  return out;
 }

@@ -7,7 +7,6 @@
 | Jotunn's Revenge | 0.55 | 0.64 | 0.69 | 0.50 | 0.00 | 0.52 | undervalued |  | **UNDERRATED** |
 | Lernaean Bow | 0.55 | 0.64 | 0.65 | 0.50 | 0.00 | 0.63 | undervalued | wave-clear, burst | **UNDERRATED** |
 | Odysseus' Bow | 0.54 | 0.44 | 0.47 | 0.70 | 0.18 | 0.37 | premium | burst, wave-clear |  |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.53 | 0.60 | 0.69 | 0.50 | 0.00 | 0.41 | undervalued | burst | **UNDERRATED** |
 | Damaru | 0.53 | 0.60 | 0.66 | 0.50 | 0.00 | 0.47 | undervalued |  | **UNDERRATED** |
 | Runeforged Hammer | 0.52 | 0.60 | 0.70 | 0.50 | 0.00 | 0.36 | undervalued | burst | **UNDERRATED** |
@@ -89,7 +88,6 @@
 | Sun Beam Bow | 0.36 | 0.28 | 0.28 | 0.50 | 0.00 | 0.27 | premium |  |  |
 | Dwarven Plate | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Radiant Bulwark | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium | aura |  |
-| Blinking Abyss | 0.34 | 0.00 | 0.00 | 0.75 | 0.13 | 0.00 | premium | mobility |  |
 | The Executioner | 0.34 | 0.25 | 0.20 | 0.47 | 0.10 | 0.37 | premium | protection-shred |  |
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.34 | 0.22 | 0.30 | 0.50 | 0.00 | 0.05 | premium | mobility, cc-immunity |  |

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { deriveThreats, threatOverlay } from "./threats";
-import type { God } from "../types";
+import { deriveThreats, threatOverlay, damageOverlay } from "./threats";
+import type { God, DraftConfig, ThreatModel } from "../types";
 
 const god = (name: string, damage_type: string, specs: string[] = []): God =>
   ({ name, damage_type, specializations: specs, pantheon: "", role: "",
@@ -155,5 +155,51 @@ describe("all-physical ally read", () => {
   it("is false when the known allies are mixed damage types", () => {
     const t = deriveThreats({ allies: ["A", "B"], enemies: [] }, { A: phys("A"), B: god("B", "magical") }, {});
     expect(t.allyAllPhysical).toBe(false);
+  });
+});
+
+/* B6: the damage model applied where a target is actually known. The tag and
+ * stat channels can only say "penetration is good against tanks"; this one
+ * knows percent penetration rises and flat penetration falls. */
+describe("damageOverlay", () => {
+  const cfg = { per_share: 0.1 } as DraftConfig;
+  const model = (tanks: number, rosterSize = 5) =>
+    ({ tanks, rosterSize, enemyCount: tanks } as ThreatModel);
+  // [vs squishy, vs tank], each column on its own scale.
+  const table: Record<string, [number, number]> = {
+    "Obsidian Shard": [0.648, 0.707],       // percent pen — rises
+    "Spear of Desolation": [0.636, 0.562],  // flat pen — falls
+    "Dreamer's Idol": [1.0, 1.0],           // best either way — no shift
+  };
+
+  it("does nothing until a tank is actually on the board", () => {
+    expect(damageOverlay(model(0), table, cfg)).toEqual({});
+  });
+
+  it("rewards percent penetration and penalises flat as the enemy hardens", () => {
+    const out = damageOverlay(model(3), table, cfg);
+    expect(out["Obsidian Shard"]).toBeGreaterThan(0);
+    expect(out["Spear of Desolation"]).toBeLessThan(0);
+  });
+
+  it("disagrees with the hand-tuned rule, which is the point", () => {
+    // `stat_bonus.tanks.Penetration` rewards both items identically. The
+    // measurement says they move in opposite directions.
+    const out = damageOverlay(model(3), table, cfg);
+    expect(Math.sign(out["Obsidian Shard"])).not.toBe(Math.sign(out["Spear of Desolation"]));
+  });
+
+  it("scales with how much of the roster is tanky", () => {
+    const one = damageOverlay(model(1), table, cfg)["Obsidian Shard"];
+    const three = damageOverlay(model(3), table, cfg)["Obsidian Shard"];
+    expect(three).toBeGreaterThan(one);
+  });
+
+  it("emits nothing for an item whose standing does not move", () => {
+    expect(damageOverlay(model(3), table, cfg)["Dreamer's Idol"]).toBeUndefined();
+  });
+
+  it("is inert for a god with no shipped table", () => {
+    expect(damageOverlay(model(3), undefined, cfg)).toEqual({});
   });
 });

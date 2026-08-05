@@ -4,7 +4,6 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Berserker's Shield | 0.58 | 0.65 | 0.74 | 0.52 | 0.35 | 0.45 | undervalued |  |  |
 | Runeforged Hammer | 0.54 | 0.63 | 0.70 | 0.50 | 0.00 | 0.47 | undervalued | burst | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Golden Blade | 0.53 | 0.61 | 0.62 | 0.50 | 0.00 | 0.57 | fair | wave-clear | **UNDERRATED** |
 | Lernaean Bow | 0.53 | 0.61 | 0.65 | 0.50 | 0.00 | 0.51 | undervalued | wave-clear, burst | **UNDERRATED** |
 | The Crusher | 0.52 | 0.60 | 0.70 | 0.50 | 0.00 | 0.37 | undervalued | burst | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.34 | 0.22 | 0.25 | 0.50 | 0.00 | 0.16 | premium |  |  |
 | Brawler’s Beat Stick | 0.32 | 0.20 | 0.20 | 0.50 | 0.00 | 0.19 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

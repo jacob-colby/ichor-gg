@@ -13,7 +13,6 @@
 | Shield of the Phoenix | 0.53 | 0.62 | 0.61 | 0.50 | 0.00 | 0.62 | fair | sustain | **UNDERRATED** |
 | Dwarven Plate | 0.53 | 0.39 | 0.36 | 0.74 | 0.08 | 0.46 | premium |  |  |
 | Freya's Tears | 0.53 | 0.61 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Runeforged Hammer | 0.53 | 0.61 | 0.70 | 0.50 | 0.00 | 0.39 | undervalued | burst | **UNDERRATED** |
 | Hydra's Lament | 0.52 | 0.60 | 0.69 | 0.50 | 0.00 | 0.38 | undervalued | burst | **UNDERRATED** |
 | Spectral Armor | 0.52 | 0.59 | 0.66 | 0.50 | 0.00 | 0.43 | undervalued | anti-crit, aura | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Sun Beam Bow | 0.32 | 0.20 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.31 | 0.17 | 0.20 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

@@ -10,7 +10,6 @@
 | Avenging Blade | 0.53 | 0.61 | 0.63 | 0.50 | 0.00 | 0.58 | fair | protection-shred | **UNDERRATED** |
 | Berserker's Shield | 0.53 | 0.61 | 0.74 | 0.50 | 0.00 | 0.31 | undervalued |  | **UNDERRATED** |
 | Amanita Charm | 0.53 | 0.61 | 0.68 | 0.50 | 0.00 | 0.45 | undervalued | sustain, aura | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Heartseeker | 0.53 | 0.55 | 0.53 | 0.53 | 0.22 | 0.61 | fair | burst |  |
 | Eye of the Storm | 0.52 | 0.59 | 0.58 | 0.50 | 0.00 | 0.61 | fair | peel | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.70 | 0.50 | 0.00 | 0.31 | undervalued |  | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Brawler’s Beat Stick | 0.33 | 0.22 | 0.20 | 0.50 | 0.00 | 0.26 | premium | anti-heal |  |
 | Sun Beam Bow | 0.32 | 0.20 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.31 | 0.17 | 0.20 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

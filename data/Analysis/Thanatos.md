@@ -15,7 +15,6 @@
 | Tekko-Kagi | 0.54 | 0.63 | 0.50 | 0.50 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
 | Avenging Blade | 0.54 | 0.62 | 0.63 | 0.50 | 0.00 | 0.62 | fair | protection-shred | **UNDERRATED** |
 | Damaru | 0.53 | 0.62 | 0.66 | 0.50 | 0.00 | 0.52 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Arondight | 0.52 | 0.59 | 0.59 | 0.50 | 0.00 | 0.61 | fair | mobility | **UNDERRATED** |
 | Golden Blade | 0.52 | 0.59 | 0.62 | 0.50 | 0.00 | 0.52 | fair | wave-clear | **UNDERRATED** |
 | Shield Splitter | 0.51 | 0.56 | 0.58 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
@@ -84,7 +83,6 @@
 | Stygian Anchor | 0.37 | 0.29 | 0.42 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
 | Dagger of Frenzy | 0.37 | 0.29 | 0.42 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Blinking Abyss | 0.36 | 0.00 | 0.00 | 0.80 | 0.08 | 0.00 | premium | mobility |  |
 | Hastened Fatalis | 0.35 | 0.26 | 0.37 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
 | Dwarven Plate | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Radiant Bulwark | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium | aura |  |

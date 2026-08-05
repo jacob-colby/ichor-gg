@@ -12,7 +12,6 @@
 | Amanita Charm | 0.53 | 0.62 | 0.68 | 0.50 | 0.00 | 0.48 | undervalued | sustain, aura | **UNDERRATED** |
 | Avenging Blade | 0.53 | 0.62 | 0.63 | 0.50 | 0.00 | 0.59 | fair | protection-shred | **UNDERRATED** |
 | Hydra's Lament | 0.53 | 0.61 | 0.69 | 0.50 | 0.00 | 0.43 | undervalued | burst | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Lernaean Bow | 0.53 | 0.61 | 0.65 | 0.50 | 0.00 | 0.51 | undervalued | wave-clear, burst | **UNDERRATED** |
 | Jotunn's Revenge | 0.53 | 0.60 | 0.69 | 0.50 | 0.00 | 0.39 | undervalued |  | **UNDERRATED** |
 | Genji's Guard | 0.53 | 0.57 | 0.74 | 0.52 | 0.15 | 0.18 | undervalued |  | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.33 | 0.22 | 0.20 | 0.50 | 0.00 | 0.26 | premium | anti-heal |  |
 | The Executioner | 0.33 | 0.21 | 0.20 | 0.50 | 0.00 | 0.23 | premium | protection-shred |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

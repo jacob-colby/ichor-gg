@@ -10,7 +10,6 @@
 | Oni Hunter's Garb | 0.54 | 0.63 | 0.70 | 0.50 | 0.00 | 0.46 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.53 | 0.62 | 0.71 | 0.50 | 0.00 | 0.39 | undervalued | burst | **UNDERRATED** |
 | Freya's Tears | 0.53 | 0.61 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.53 | 0.61 | 0.61 | 0.50 | 0.00 | 0.59 | fair | sustain | **UNDERRATED** |
 | Erosion | 0.53 | 0.61 | 0.56 | 0.50 | 0.00 | 0.72 | fair | aura | **UNDERRATED** |
 | Spectral Armor | 0.53 | 0.60 | 0.66 | 0.50 | 0.00 | 0.46 | undervalued | anti-crit, aura | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Gauntlet of Thebes | 0.37 | 0.28 | 0.31 | 0.50 | 0.00 | 0.21 | premium |  |  |
 | Daybreak Gavel | 0.34 | 0.24 | 0.25 | 0.50 | 0.00 | 0.21 | premium |  |  |
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

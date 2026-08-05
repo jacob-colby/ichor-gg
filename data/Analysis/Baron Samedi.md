@@ -9,7 +9,6 @@
 | Breastplate of Valor | 0.54 | 0.56 | 0.67 | 0.55 | 0.17 | 0.31 | undervalued |  |  |
 | Amanita Charm | 0.54 | 0.62 | 0.68 | 0.50 | 0.00 | 0.49 | undervalued | sustain, aura | **UNDERRATED** |
 | Soul Gem | 0.53 | 0.62 | 0.62 | 0.50 | 0.00 | 0.61 | fair | burst, sustain, aura | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.52 | 0.60 | 0.65 | 0.50 | 0.00 | 0.49 | undervalued |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.70 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.57 | 0.61 | 0.50 | 0.00 | 0.46 | fair | sustain | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.33 | 0.22 | 0.25 | 0.50 | 0.00 | 0.15 | premium |  |  |
 | Dwarven Plate | 0.29 | 0.36 | 0.36 | 0.25 | 0.05 | 0.34 | premium |  |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

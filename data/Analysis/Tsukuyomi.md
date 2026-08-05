@@ -6,7 +6,6 @@
 | The Crusher | 0.55 | 0.66 | 0.70 | 0.50 | 0.00 | 0.57 | undervalued | burst | **UNDERRATED** |
 | Lernaean Bow | 0.54 | 0.64 | 0.65 | 0.50 | 0.00 | 0.63 | undervalued | wave-clear, burst | **UNDERRATED** |
 | Hydra's Lament | 0.54 | 0.60 | 0.69 | 0.51 | 0.15 | 0.41 | undervalued | burst | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Titan's Bane | 0.53 | 0.50 | 0.51 | 0.60 | 0.18 | 0.47 | fair |  |  |
 | Damaru | 0.53 | 0.60 | 0.66 | 0.50 | 0.00 | 0.47 | undervalued |  | **UNDERRATED** |
 | Berserker's Shield | 0.52 | 0.60 | 0.74 | 0.50 | 0.00 | 0.27 | undervalued |  | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Gauntlet of Thebes | 0.33 | 0.22 | 0.31 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

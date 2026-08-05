@@ -81,10 +81,13 @@ interface DraftPageProps {
   items: Item[];
   builds: BuildNote[];
   godItemScores?: Record<string, Record<string, number>>;
+  /** B6: per-item damage against a squishy vs a tank. Optional — an older
+   *  index simply leaves the damage term out of the overlay. */
+  godItemDamage?: Record<string, Record<string, [number, number]>>;
   draftConfig?: DraftConfig;
 }
 
-export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: DraftPageProps) {
+export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, draftConfig }: DraftPageProps) {
   const eligibleGods = useMemo(
     () => (godItemScores ? gods.filter((g) => godItemScores[g.name]) : []),
     [gods, godItemScores],
@@ -106,7 +109,7 @@ export function DraftPage({ gods, items, builds, godItemScores, draftConfig }: D
   const {
     meName, itemsByName, taken, enemiesKnown, roster, threatCulprits: culprits,
     allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, coreSize,
-  } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig);
+  } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
   const copyLink = () => {
     if (!navigator.clipboard?.writeText) return;

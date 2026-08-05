@@ -9,7 +9,6 @@
 | Rod of Tahuti | 0.60 | 0.47 | 0.47 | 0.77 | 0.25 | 0.47 | premium |  |  |
 | Gluttonous Grimoire | 0.59 | 0.72 | 0.71 | 0.50 | 0.00 | 0.74 | undervalued | burst | **UNDERRATED** |
 | Ethereal Staff | 0.53 | 0.62 | 0.70 | 0.50 | 0.00 | 0.42 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.53 | 0.60 | 0.64 | 0.50 | 0.00 | 0.50 | undervalued | burst | **UNDERRATED** |
 | Amanita Charm | 0.52 | 0.60 | 0.68 | 0.50 | 0.00 | 0.40 | undervalued | sustain, aura | **UNDERRATED** |
 | Genji's Guard | 0.52 | 0.59 | 0.74 | 0.50 | 0.00 | 0.24 | undervalued |  | **UNDERRATED** |
@@ -84,7 +83,6 @@
 | Glorious Pridwen | 0.41 | 0.38 | 0.38 | 0.50 | 0.00 | 0.36 | premium | sustain |  |
 | Eye of Erebus | 0.41 | 0.37 | 0.40 | 0.50 | 0.00 | 0.29 | premium |  |  |
 | Stygian Anchor | 0.41 | 0.36 | 0.42 | 0.50 | 0.00 | 0.24 | premium | anti-heal |  |
-| Blinking Abyss | 0.40 | 0.00 | 0.00 | 0.88 | 0.06 | 0.00 | premium | mobility |  |
 | Dwarven Plate | 0.39 | 0.33 | 0.36 | 0.50 | 0.00 | 0.24 | premium |  |  |
 | Radiant Bulwark | 0.39 | 0.32 | 0.36 | 0.50 | 0.00 | 0.24 | premium | aura |  |
 | Circe's Hexstone | 0.37 | 0.30 | 0.30 | 0.50 | 0.00 | 0.29 | premium | mobility, cc-immunity |  |

@@ -5,13 +5,32 @@ from smite import scoring
 
 def test_is_buildable_handles_numeric_and_string_tiers():
     # tier 3 and final actives/relics (tier None, or a non-numeric label like
-    # "Relic"/"Glyph") are buildable; tier 1/2 components are not.
-    assert scoring.is_buildable({"tier": 3}) is True
-    assert scoring.is_buildable({"tier": None}) is True
-    assert scoring.is_buildable({"tier": "Relic"}) is True
-    assert scoring.is_buildable({"tier": "Glyph"}) is True
-    assert scoring.is_buildable({"tier": 2}) is False
-    assert scoring.is_buildable({"tier": 1}) is False
+    # "Relic"/"Glyph") are buildable; tier 1/2 components are not. Every
+    # fixture carries a stat, because a statless item is excluded outright.
+    st = {"stats": {"Strength": "40"}}
+    assert scoring.is_buildable({"tier": 3, **st}) is True
+    assert scoring.is_buildable({"tier": None, **st}) is True
+    assert scoring.is_buildable({"tier": "Relic", **st}) is True
+    assert scoring.is_buildable({"tier": "Glyph", **st}) is True
+    assert scoring.is_buildable({"tier": 2, **st}) is False
+    assert scoring.is_buildable({"tier": 1, **st}) is False
+
+
+def test_a_statless_item_is_not_buildable_at_any_price():
+    """Every signal is blind to it. Efficiency is cost minus a prediction summed
+    over stats, and fit is a weighted read of stats, so a statless item's
+    numbers are artefacts — and they were being compared against items where
+    they mean something.
+
+    Blink Rune found this: cost 0, no stats, and therefore maximally
+    "undervalued" by construction. It had reached 262 shipped build slots.
+    Blinking Abyss is the mirror at 2600 gold, reading as maximally premium."""
+    assert scoring.is_buildable({"tier": "Relic", "cost": 0, "stats": {}}) is False
+    assert scoring.is_buildable({"tier": "Relic", "cost": 2600, "stats": {}}) is False
+    assert scoring.is_buildable({"tier": 3, "cost": 3000}) is False
+    # A relic that actually carries stats still competes.
+    assert scoring.is_buildable({"tier": "Relic", "cost": 2600,
+                                 "stats": {"Strength": "40"}}) is True
 
 
 def test_load_weights_missing_file_returns_defaults(tmp_path):

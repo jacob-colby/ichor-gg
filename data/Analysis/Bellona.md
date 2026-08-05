@@ -9,7 +9,6 @@
 | Berserker's Shield | 0.54 | 0.63 | 0.74 | 0.46 | 0.31 | 0.38 | undervalued |  |  |
 | Hydra's Lament | 0.53 | 0.62 | 0.69 | 0.50 | 0.00 | 0.45 | undervalued | burst | **UNDERRATED** |
 | Genji's Guard | 0.53 | 0.61 | 0.74 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Shield Splitter | 0.53 | 0.61 | 0.58 | 0.50 | 0.00 | 0.67 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.53 | 0.61 | 0.70 | 0.50 | 0.00 | 0.38 | undervalued |  | **UNDERRATED** |
 | Jotunn's Revenge | 0.53 | 0.61 | 0.69 | 0.50 | 0.00 | 0.40 | undervalued |  | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Daybreak Gavel | 0.34 | 0.23 | 0.25 | 0.50 | 0.00 | 0.17 | premium |  |  |
 | Sun Beam Bow | 0.32 | 0.20 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.31 | 0.17 | 0.20 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

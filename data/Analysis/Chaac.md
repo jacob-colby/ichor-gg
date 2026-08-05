@@ -11,7 +11,6 @@
 | Runeforged Hammer | 0.54 | 0.62 | 0.70 | 0.50 | 0.00 | 0.45 | undervalued | burst | **UNDERRATED** |
 | Berserker's Shield | 0.53 | 0.62 | 0.74 | 0.50 | 0.00 | 0.34 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.53 | 0.61 | 0.65 | 0.50 | 0.00 | 0.53 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.53 | 0.60 | 0.69 | 0.50 | 0.00 | 0.40 | undervalued | burst | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.70 | 0.50 | 0.00 | 0.34 | undervalued |  | **UNDERRATED** |
 | Shield Splitter | 0.52 | 0.58 | 0.58 | 0.50 | 0.00 | 0.57 | fair |  | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Daybreak Gavel | 0.33 | 0.22 | 0.25 | 0.50 | 0.00 | 0.15 | premium |  |  |
 | Sun Beam Bow | 0.32 | 0.20 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.31 | 0.17 | 0.20 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

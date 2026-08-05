@@ -254,7 +254,8 @@ function App() {
           </div>
         ) : route.lens === "draft" ? (
           <DraftPage gods={data.gods} items={data.items} builds={data.builds}
-            godItemScores={data.god_item_scores} draftConfig={data.draft} />
+            godItemScores={data.god_item_scores} draftConfig={data.draft}
+            godItemDamage={data.god_item_damage} />
         ) : route.lens === "items" ? (
           <ItemsShop items={data.items} openItem={route.item}
             tierItems={data.tierlist?.items ?? []} goldValues={data.item_gold_values ?? {}} />
@@ -276,7 +277,8 @@ function App() {
           built stays reachable and editable without navigating back to it. */}
       {route.lens !== "draft" && (
         <DraftDock gods={data.gods} items={data.items} builds={data.builds}
-          godItemScores={data.god_item_scores} draftConfig={data.draft} />
+          godItemScores={data.god_item_scores} draftConfig={data.draft}
+            godItemDamage={data.god_item_damage} />
       )}
 
       {legendOpen && <Legend onClose={() => setLegendOpen(false)} />}

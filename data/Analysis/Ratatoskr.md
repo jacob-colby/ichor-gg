@@ -16,7 +16,6 @@
 | Avenging Blade | 0.54 | 0.62 | 0.63 | 0.50 | 0.00 | 0.62 | fair | protection-shred | **UNDERRATED** |
 | Shield of the Phoenix | 0.54 | 0.46 | 0.61 | 0.67 | 0.13 | 0.09 | fair | sustain |  |
 | Damaru | 0.53 | 0.62 | 0.66 | 0.50 | 0.00 | 0.52 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Arondight | 0.52 | 0.59 | 0.59 | 0.50 | 0.00 | 0.61 | fair | mobility | **UNDERRATED** |
 | Golden Blade | 0.52 | 0.59 | 0.62 | 0.50 | 0.00 | 0.52 | fair | wave-clear | **UNDERRATED** |
 | Shield Splitter | 0.51 | 0.56 | 0.58 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.31 | 0.17 | 0.20 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

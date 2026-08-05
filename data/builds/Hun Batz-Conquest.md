@@ -107,10 +107,10 @@ builds:
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, The Reaper, Runeforged Hammer, Avatar''s Parashu, Lernaean
-    Bow, Pendulum Blade, Tekko-Kagi, Avenging Blade, Damaru, Blink Rune, Arondight,
-    Golden Blade, Shield Splitter, Eye of the Storm, Barbed Carver, Tyrfing, Genji''s
-    Guard, Bloodforge, Riptalon, Transcendence, Berserker''s Shield, Wyrmskin Hide,
-    Breastplate of Valor, Musashi''s Dual Swords, Oni Hunter''s Garb.'
+    Bow, Pendulum Blade, Tekko-Kagi, Avenging Blade, Damaru, Arondight, Golden Blade,
+    Shield Splitter, Eye of the Storm, Barbed Carver, Tyrfing, Genji''s Guard, Bloodforge,
+    Riptalon, Transcendence, Berserker''s Shield, Wyrmskin Hide, Breastplate of Valor,
+    Musashi''s Dual Swords, Oni Hunter''s Garb.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.69
@@ -154,15 +154,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Blink Rune
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
   - The Reaper
-  - Blink Rune
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -177,18 +177,12 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, The Reaper, Blink Rune, Runeforged Hammer, Genji''s Guard, Pendulum
-    Blade, Avatar''s Parashu, Lernaean Bow, Arondight, Breastplate of Valor, Avenging
-    Blade, Damaru, Riptalon, Tekko-Kagi, Berserker''s Shield, Golden Blade, Shield
-    of the Phoenix, Oni Hunter''s Garb, Chandra''s Grace, Yogi''s Necklace, Freya''s
-    Tears, Kinetic Cuirass, Amanita Charm, Shield Splitter, Eye of the Storm.'
+    god: The Crusher, The Reaper, Runeforged Hammer, Genji''s Guard, Pendulum Blade,
+    Avatar''s Parashu, Lernaean Bow, Arondight, Breastplate of Valor, Avenging Blade,
+    Damaru, Riptalon, Tekko-Kagi, Berserker''s Shield, Golden Blade, Shield of the
+    Phoenix, Oni Hunter''s Garb, Chandra''s Grace, Yogi''s Necklace, Freya''s Tears,
+    Kinetic Cuirass, Amanita Charm, Shield Splitter, Eye of the Storm.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.69
@@ -219,6 +213,12 @@ builds:
       win: 0.63
       pick: 0.34
       fit: 0.66
+    Titan's Bane:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.17
+      fit: 0.56
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -248,10 +248,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, The Reaper, Runeforged Hammer, Shield of the Phoenix,
     Kinetic Cuirass, The Crusher, Berserker''s Shield, Eye of Providence, Oni Hunter''s
-    Garb, Blink Rune, Avenging Blade, Eye of the Storm, Chandra''s Grace, Spectral
-    Armor, Shield Splitter, Genji''s Guard, Shifter''s Shield, Golden Blade, Phoenix
-    Feather, Riptalon, Pharaoh''s Curse, Erosion, Draconic Scale, Yogi''s Necklace,
-    Lernaean Bow, Mantle Of Discord, Bloodforge.'
+    Garb, Avenging Blade, Eye of the Storm, Chandra''s Grace, Spectral Armor, Shield
+    Splitter, Genji''s Guard, Shifter''s Shield, Golden Blade, Phoenix Feather, Riptalon,
+    Pharaoh''s Curse, Erosion, Draconic Scale, Yogi''s Necklace, Lernaean Bow, Mantle
+    Of Discord, Bloodforge.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -317,10 +317,10 @@ builds:
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, The Reaper, Avatar''s Parashu, Avenging Blade, Tekko-Kagi,
-    Pendulum Blade, Runeforged Hammer, Blink Rune, Riptalon, Lernaean Bow, Damaru,
-    Golden Blade, Genji''s Guard, Arondight, Oath-Sworn Spear, Berserker''s Shield,
-    Shield Splitter, Eye of the Storm, Barbed Carver, Oni Hunter''s Garb, Tyrfing,
-    Yogi''s Necklace, Breastplate of Valor, Screeching Gargoyle, Bloodforge.'
+    Pendulum Blade, Runeforged Hammer, Riptalon, Lernaean Bow, Damaru, Golden Blade,
+    Genji''s Guard, Arondight, Oath-Sworn Spear, Berserker''s Shield, Shield Splitter,
+    Eye of the Storm, Barbed Carver, Oni Hunter''s Garb, Tyrfing, Yogi''s Necklace,
+    Breastplate of Valor, Screeching Gargoyle, Bloodforge.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.69
@@ -452,10 +452,10 @@ builds:
     swap_item: Contagion
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, The Reaper, Runeforged Hammer, Avatar''s
-    Parashu, Lernaean Bow, Pendulum Blade, Tekko-Kagi, Avenging Blade, Damaru, Blink
-    Rune, Arondight, Golden Blade, Shield Splitter, Eye of the Storm, Barbed Carver,
-    Tyrfing, Genji''s Guard, Bloodforge, Riptalon, Transcendence, Berserker''s Shield,
-    Wyrmskin Hide, Breastplate of Valor, Musashi''s Dual Swords, Oni Hunter''s Garb.'
+    Parashu, Lernaean Bow, Pendulum Blade, Tekko-Kagi, Avenging Blade, Damaru, Arondight,
+    Golden Blade, Shield Splitter, Eye of the Storm, Barbed Carver, Tyrfing, Genji''s
+    Guard, Bloodforge, Riptalon, Transcendence, Berserker''s Shield, Wyrmskin Hide,
+    Breastplate of Valor, Musashi''s Dual Swords, Oni Hunter''s Garb.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.69

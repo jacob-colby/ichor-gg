@@ -107,11 +107,11 @@ builds:
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Amanita Charm, The Crusher, Runeforged Hammer, Berserker''s
-    Shield, Eye of Providence, Blink Rune, Hydra''s Lament, Oni Hunter''s Garb, Shield
-    Splitter, Avenging Blade, Eye of the Storm, Spectral Armor, Shifter''s Shield,
-    Shield of the Phoenix, Freya''s Tears, Mantle Of Discord, Erosion, Pharaoh''s
-    Curse, Draconic Scale, Golden Blade, Lernaean Bow, Yogi''s Necklace, Leviathan''s
-    Hide, The Reaper, Damaru.'
+    Shield, Eye of Providence, Hydra''s Lament, Oni Hunter''s Garb, Shield Splitter,
+    Avenging Blade, Eye of the Storm, Spectral Armor, Shifter''s Shield, Shield of
+    the Phoenix, Freya''s Tears, Mantle Of Discord, Erosion, Pharaoh''s Curse, Draconic
+    Scale, Golden Blade, Lernaean Bow, Yogi''s Necklace, Leviathan''s Hide, The Reaper,
+    Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.61
@@ -179,11 +179,11 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Runeforged Hammer, Kinetic Cuirass,
-    The Crusher, Berserker''s Shield, The Reaper, Eye of Providence, Blink Rune, Hydra''s
-    Lament, Chandra''s Grace, Oni Hunter''s Garb, Avenging Blade, Eye of the Storm,
-    Spectral Armor, Shield Splitter, Golden Blade, Shifter''s Shield, Riptalon, Phoenix
-    Feather, Pharaoh''s Curse, Erosion, Yogi''s Necklace, Lernaean Bow, Freya''s Tears,
-    Draconic Scale.'
+    The Crusher, Berserker''s Shield, The Reaper, Eye of Providence, Hydra''s Lament,
+    Chandra''s Grace, Oni Hunter''s Garb, Avenging Blade, Eye of the Storm, Spectral
+    Armor, Shield Splitter, Golden Blade, Shifter''s Shield, Riptalon, Phoenix Feather,
+    Pharaoh''s Curse, Erosion, Yogi''s Necklace, Lernaean Bow, Freya''s Tears, Draconic
+    Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.61
@@ -248,12 +248,12 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Avenging Blade, Kinetic Cuirass, Blink Rune, Amanita
-    Charm, Runeforged Hammer, Berserker''s Shield, Hydra''s Lament, Eye of Providence,
-    Oni Hunter''s Garb, The Reaper, Shield Splitter, Spectral Armor, Stone of Binding,
-    Void Shield, Heartseeker, Eye of the Storm, Shield of the Phoenix, Screeching
-    Gargoyle, Mantle Of Discord, Shifter''s Shield, Freya''s Tears, Lernaean Bow,
-    Pharaoh''s Curse, Avatar''s Parashu, Void Stone.'
+    for this god: The Crusher, Avenging Blade, Kinetic Cuirass, Amanita Charm, Runeforged
+    Hammer, Berserker''s Shield, Hydra''s Lament, Eye of Providence, Oni Hunter''s
+    Garb, The Reaper, Shield Splitter, Spectral Armor, Stone of Binding, Void Shield,
+    Heartseeker, Eye of the Storm, Shield of the Phoenix, Screeching Gargoyle, Mantle
+    Of Discord, Shifter''s Shield, Freya''s Tears, Lernaean Bow, Pharaoh''s Curse,
+    Avatar''s Parashu, Void Stone.'
   slot_scores:
     Avenging Blade:
       total: 0.55
@@ -385,11 +385,11 @@ builds:
     swap_item: Contagion
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, The Crusher, Runeforged
-    Hammer, Berserker''s Shield, Eye of Providence, Blink Rune, Hydra''s Lament, Oni
-    Hunter''s Garb, Shield Splitter, Avenging Blade, Eye of the Storm, Spectral Armor,
-    Shifter''s Shield, Shield of the Phoenix, Freya''s Tears, Mantle Of Discord, Erosion,
-    Pharaoh''s Curse, Draconic Scale, Golden Blade, Lernaean Bow, Yogi''s Necklace,
-    Leviathan''s Hide, The Reaper, Damaru.'
+    Hammer, Berserker''s Shield, Eye of Providence, Hydra''s Lament, Oni Hunter''s
+    Garb, Shield Splitter, Avenging Blade, Eye of the Storm, Spectral Armor, Shifter''s
+    Shield, Shield of the Phoenix, Freya''s Tears, Mantle Of Discord, Erosion, Pharaoh''s
+    Curse, Draconic Scale, Golden Blade, Lernaean Bow, Yogi''s Necklace, Leviathan''s
+    Hide, The Reaper, Damaru.'
   slot_scores:
     Berserker's Shield:
       total: 0.53

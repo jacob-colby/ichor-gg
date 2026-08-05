@@ -9,7 +9,6 @@
 | Spear of the Magus | 0.56 | 0.67 | 0.62 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.65 | 0.59 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Ethereal Staff | 0.53 | 0.62 | 0.70 | 0.50 | 0.00 | 0.42 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Spear of Desolation | 0.53 | 0.67 | 0.52 | 0.41 | 0.23 | 1.00 | fair |  |  |
 | Dreamer's Idol | 0.53 | 0.61 | 0.53 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | Chronos' Pendant | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Gauntlet of Thebes | 0.33 | 0.22 | 0.31 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

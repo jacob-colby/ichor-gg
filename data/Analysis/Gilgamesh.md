@@ -7,7 +7,6 @@
 | Shogun's Ofuda | 0.55 | 0.52 | 0.57 | 0.62 | 0.12 | 0.40 | fair | aura | **UNDERRATED** |
 | The Crusher | 0.53 | 0.62 | 0.70 | 0.50 | 0.00 | 0.44 | undervalued | burst | **UNDERRATED** |
 | Runeforged Hammer | 0.53 | 0.62 | 0.70 | 0.50 | 0.00 | 0.44 | undervalued | burst | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Jotunn's Revenge | 0.52 | 0.60 | 0.69 | 0.50 | 0.00 | 0.37 | undervalued |  | **UNDERRATED** |
 | Lernaean Bow | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.47 | undervalued | wave-clear, burst | **UNDERRATED** |
 | Golden Blade | 0.52 | 0.59 | 0.62 | 0.50 | 0.00 | 0.51 | fair | wave-clear | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | The Executioner | 0.34 | 0.22 | 0.20 | 0.50 | 0.00 | 0.28 | premium | protection-shred |  |
 | Daybreak Gavel | 0.33 | 0.22 | 0.25 | 0.50 | 0.00 | 0.14 | premium |  |  |
 | Brawler’s Beat Stick | 0.32 | 0.19 | 0.20 | 0.50 | 0.00 | 0.18 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

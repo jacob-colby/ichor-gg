@@ -13,7 +13,6 @@
 | Freya's Tears | 0.53 | 0.61 | 0.59 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.53 | 0.61 | 0.61 | 0.50 | 0.00 | 0.61 | fair | sustain | **UNDERRATED** |
 | Erosion | 0.53 | 0.61 | 0.56 | 0.50 | 0.00 | 0.73 | fair | aura | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Spectral Armor | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.47 | undervalued | anti-crit, aura | **UNDERRATED** |
 | Draconic Scale | 0.53 | 0.60 | 0.55 | 0.50 | 0.00 | 0.73 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.52 | 0.60 | 0.63 | 0.50 | 0.00 | 0.52 | fair | peel, cc-immunity | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Gauntlet of Thebes | 0.37 | 0.28 | 0.31 | 0.50 | 0.00 | 0.21 | premium |  |  |
 | Daybreak Gavel | 0.34 | 0.24 | 0.25 | 0.50 | 0.00 | 0.21 | premium |  |  |
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

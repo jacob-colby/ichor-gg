@@ -107,11 +107,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Amanita Charm, Eye of Providence, Oni Hunter''s Garb,
-    Gluttonous Grimoire, Freya''s Tears, Blink Rune, Shield of the Phoenix, Erosion,
-    Spectral Armor, Draconic Scale, Mantle Of Discord, Breastplate of Valor, Ethereal
-    Staff, Leviathan''s Hide, Hussar''s Wings, Yogi''s Necklace, Midgardian Mail,
-    Hide of the Nemean Lion, Wish-Granting Pearl, Doublet of Binding, Jade Scepter,
-    Soul Gem, Gladiator''s Shield, Ancile, Rod of Asclepius.'
+    Gluttonous Grimoire, Freya''s Tears, Shield of the Phoenix, Erosion, Spectral
+    Armor, Draconic Scale, Mantle Of Discord, Breastplate of Valor, Ethereal Staff,
+    Leviathan''s Hide, Hussar''s Wings, Yogi''s Necklace, Midgardian Mail, Hide of
+    the Nemean Lion, Wish-Granting Pearl, Doublet of Binding, Jade Scepter, Soul Gem,
+    Gladiator''s Shield, Ancile, Rod of Asclepius.'
   slot_scores:
     Eye of Providence:
       total: 0.56
@@ -180,10 +180,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Eye of Providence,
     Oni Hunter''s Garb, Gluttonous Grimoire, Rod of Asclepius, Chandra''s Grace, Soul
-    Gem, Spectral Armor, Blink Rune, Erosion, Spirit Robe, Ethereal Staff, Draconic
-    Scale, Phoenix Feather, Freya''s Tears, Breastplate of Valor, Lifebinder, Mantle
-    Of Discord, Leviathan''s Hide, Yogi''s Necklace, Bancroft''s Talon, Wish-Granting
-    Pearl, Blood-Bound Book, Hussar''s Wings.'
+    Gem, Spectral Armor, Erosion, Spirit Robe, Ethereal Staff, Draconic Scale, Phoenix
+    Feather, Freya''s Tears, Breastplate of Valor, Lifebinder, Mantle Of Discord,
+    Leviathan''s Hide, Yogi''s Necklace, Bancroft''s Talon, Wish-Granting Pearl, Blood-Bound
+    Book, Hussar''s Wings.'
   slot_scores:
     Eye of Providence:
       total: 0.56
@@ -225,15 +225,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Blink Rune
   - Eye of Providence
   - Genji's Guard
   - Kinetic Cuirass
+  - Oni Hunter's Garb
   - Gluttonous Grimoire
   - Shifter's Shield
   flex_slots:
-  - Blink Rune
   - Eye of Providence
+  - Oni Hunter's Garb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -248,19 +248,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm, Soul Gem, Blink
-    Rune, Eye of Providence, Oni Hunter''s Garb, Stone of Binding, Spectral Armor,
-    Void Shield, Spear of the Magus, Ethereal Staff, Shield of the Phoenix, Breastplate
-    of Valor, Mantle Of Discord, Freya''s Tears, Screeching Gargoyle, Void Stone,
-    Erosion, The Cosmic Horror, Draconic Scale, Yogi''s Necklace, Leviathan''s Hide,
-    Spear of Desolation, Wish-Granting Pearl, Jade Scepter.'
+    for this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm, Soul Gem, Eye
+    of Providence, Oni Hunter''s Garb, Stone of Binding, Spectral Armor, Void Shield,
+    Spear of the Magus, Ethereal Staff, Shield of the Phoenix, Breastplate of Valor,
+    Mantle Of Discord, Freya''s Tears, Screeching Gargoyle, Void Stone, Erosion, The
+    Cosmic Horror, Draconic Scale, Yogi''s Necklace, Leviathan''s Hide, Spear of Desolation,
+    Wish-Granting Pearl, Jade Scepter.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Eye of Providence:
       total: 0.52
       efficiency: 0.65
@@ -279,6 +273,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Oni Hunter's Garb:
+      total: 0.52
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
     Gluttonous Grimoire:
       total: 0.57
       efficiency: 0.71
@@ -385,11 +385,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Eye of Providence, Oni
-    Hunter''s Garb, Gluttonous Grimoire, Freya''s Tears, Blink Rune, Shield of the
-    Phoenix, Erosion, Spectral Armor, Draconic Scale, Mantle Of Discord, Breastplate
-    of Valor, Ethereal Staff, Leviathan''s Hide, Hussar''s Wings, Yogi''s Necklace,
-    Midgardian Mail, Hide of the Nemean Lion, Wish-Granting Pearl, Doublet of Binding,
-    Jade Scepter, Soul Gem, Gladiator''s Shield, Ancile, Rod of Asclepius.'
+    Hunter''s Garb, Gluttonous Grimoire, Freya''s Tears, Shield of the Phoenix, Erosion,
+    Spectral Armor, Draconic Scale, Mantle Of Discord, Breastplate of Valor, Ethereal
+    Staff, Leviathan''s Hide, Hussar''s Wings, Yogi''s Necklace, Midgardian Mail,
+    Hide of the Nemean Lion, Wish-Granting Pearl, Doublet of Binding, Jade Scepter,
+    Soul Gem, Gladiator''s Shield, Ancile, Rod of Asclepius.'
   slot_scores:
     Eye of Providence:
       total: 0.56

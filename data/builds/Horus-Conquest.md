@@ -108,10 +108,10 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Breastplate of Valor, Kinetic Cuirass, Amanita Charm, Eye of Providence,
     Berserker''s Shield, Oni Hunter''s Garb, Shield of the Phoenix, Freya''s Tears,
-    Blink Rune, Runeforged Hammer, Hydra''s Lament, Spectral Armor, Erosion, Jotunn''s
-    Revenge, Draconic Scale, Mantle Of Discord, Pharaoh''s Curse, Shield Splitter,
-    The Crusher, Eye of the Storm, Avenging Blade, Leviathan''s Hide, Yogi''s Necklace,
-    Hussar''s Wings, Chandra''s Grace, Gladiator''s Shield, Midgardian Mail.'
+    Runeforged Hammer, Hydra''s Lament, Spectral Armor, Erosion, Jotunn''s Revenge,
+    Draconic Scale, Mantle Of Discord, Pharaoh''s Curse, Shield Splitter, The Crusher,
+    Eye of the Storm, Avenging Blade, Leviathan''s Hide, Yogi''s Necklace, Hussar''s
+    Wings, Chandra''s Grace, Gladiator''s Shield, Midgardian Mail.'
   slot_scores:
     Eye of Providence:
       total: 0.55
@@ -180,10 +180,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Breastplate of Valor, Amanita Charm, Shield of the Phoenix, Kinetic
     Cuirass, Berserker''s Shield, Eye of Providence, Chandra''s Grace, Oni Hunter''s
-    Garb, Runeforged Hammer, Blink Rune, Spectral Armor, Hydra''s Lament, Freya''s
-    Tears, Erosion, Jotunn''s Revenge, Phoenix Feather, Pharaoh''s Curse, Draconic
-    Scale, Avenging Blade, Eye of the Storm, Mantle Of Discord, The Crusher, Yogi''s
-    Necklace, Leviathan''s Hide, Shield Splitter, The Reaper, Spirit Robe.'
+    Garb, Runeforged Hammer, Spectral Armor, Hydra''s Lament, Freya''s Tears, Erosion,
+    Jotunn''s Revenge, Phoenix Feather, Pharaoh''s Curse, Draconic Scale, Avenging
+    Blade, Eye of the Storm, Mantle Of Discord, The Crusher, Yogi''s Necklace, Leviathan''s
+    Hide, Shield Splitter, The Reaper, Spirit Robe.'
   slot_scores:
     Genji's Guard:
       total: 0.61
@@ -249,11 +249,11 @@ builds:
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Breastplate of Valor, Jotunn''s Revenge, The Crusher, Avenging Blade,
-    Kinetic Cuirass, Amanita Charm, Blink Rune, Berserker''s Shield, Eye of Providence,
-    Oni Hunter''s Garb, Runeforged Hammer, Hydra''s Lament, Shield of the Phoenix,
-    Spectral Armor, Void Shield, Screeching Gargoyle, Stone of Binding, Freya''s Tears,
-    The Reaper, Mantle Of Discord, Pharaoh''s Curse, Void Stone, Yogi''s Necklace,
-    Erosion, Riptalon, Heartseeker, Draconic Scale.'
+    Kinetic Cuirass, Amanita Charm, Berserker''s Shield, Eye of Providence, Oni Hunter''s
+    Garb, Runeforged Hammer, Hydra''s Lament, Shield of the Phoenix, Spectral Armor,
+    Void Shield, Screeching Gargoyle, Stone of Binding, Freya''s Tears, The Reaper,
+    Mantle Of Discord, Pharaoh''s Curse, Void Stone, Yogi''s Necklace, Erosion, Riptalon,
+    Heartseeker, Draconic Scale.'
   slot_scores:
     Avenging Blade:
       total: 0.53
@@ -385,11 +385,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Eye of Providence, Berserker''s
-    Shield, Oni Hunter''s Garb, Shield of the Phoenix, Freya''s Tears, Blink Rune,
-    Runeforged Hammer, Hydra''s Lament, Breastplate of Valor, Spectral Armor, Erosion,
-    Jotunn''s Revenge, Draconic Scale, Mantle Of Discord, Pharaoh''s Curse, Shield
-    Splitter, The Crusher, Eye of the Storm, Avenging Blade, Leviathan''s Hide, Yogi''s
-    Necklace, Hussar''s Wings, Chandra''s Grace, Gladiator''s Shield, Midgardian Mail.'
+    Shield, Oni Hunter''s Garb, Shield of the Phoenix, Freya''s Tears, Runeforged
+    Hammer, Hydra''s Lament, Breastplate of Valor, Spectral Armor, Erosion, Jotunn''s
+    Revenge, Draconic Scale, Mantle Of Discord, Pharaoh''s Curse, Shield Splitter,
+    The Crusher, Eye of the Storm, Avenging Blade, Leviathan''s Hide, Yogi''s Necklace,
+    Hussar''s Wings, Chandra''s Grace, Gladiator''s Shield, Midgardian Mail.'
   slot_scores:
     Eye of Providence:
       total: 0.55

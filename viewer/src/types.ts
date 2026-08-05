@@ -295,6 +295,10 @@ export interface IndexData {
    * auditable rather than asserted. */
   item_gold_values?: Record<string, number>;
   method?: MethodData;
+  /** B6: per-god, per-item damage gained against a squishy and against a
+   *  tank, each column normalised on its own scale. Absent for gods whose
+   *  kit didn't parse — the damage overlay just doesn't fire for them. */
+  god_item_damage?: Record<string, Record<string, [number, number]>>;
   /** Mode display order from the pipeline. Absent on an older index. */
   modes?: string[];
   draft?: DraftConfig;
