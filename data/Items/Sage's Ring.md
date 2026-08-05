@@ -10,7 +10,11 @@ passive: null
 builds_from:
 - Ring
 - Rune
-builds_into: []
+builds_into:
+- Freya's Tears
+- Genji's Guard
+- Prophetic Cloak
+- Screeching Gargoyle
 source_url: https://wiki.smite2.com/w/Sage's_Ring
 last_verified: '2026-08-01'
 ---

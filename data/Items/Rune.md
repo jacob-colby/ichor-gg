@@ -7,7 +7,11 @@ stats:
   Magical Protection: '7'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Circle of Protection
+- Engraved Guard
+- Medal of Disruption
+- Sage's Ring
 source_url: https://wiki.smite2.com/w/Rune
 last_verified: '2026-08-01'
 ---

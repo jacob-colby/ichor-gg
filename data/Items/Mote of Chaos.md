@@ -6,7 +6,13 @@ cost: 1250
 stats: {}
 passive: +5% of all Stats from Items.
 builds_from: []
-builds_into: []
+builds_into:
+- Agility Greaves
+- Blinking Abyss
+- Shell of Rebuke
+- Sundering Echo
+- Talisman of Purification
+- Time-lock Aegis
 source_url: https://wiki.smite2.com/w/Mote_of_Chaos
 last_verified: '2026-08-01'
 ---

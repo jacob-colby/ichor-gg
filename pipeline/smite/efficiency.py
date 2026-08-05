@@ -69,10 +69,37 @@ def item_stat_values(item):
     return out
 
 
+# Fewest items that must carry a stat before it earns a regression column.
+#
+# A column carried by ONE item is exactly determined: NNLS can always choose
+# the coefficient that drives that item's residual to zero, so the column
+# explains nothing and the residual it produces is an artifact of the fit
+# rather than a measurement. It is the same defect the statless-item rule in
+# `scoring.is_buildable` closed — an arithmetic that cannot mean anything —
+# and it arrived the same way, through new data: Agility Greaves (2500 gold,
+# `Movement Speed: 5`) was the only carrier of Movement Speed, and NNLS priced
+# it at 299 gold per point, ~13x Strength, purely to land on 2500 exactly.
+#
+# The distortion is not confined to that item. Every coefficient is fit
+# jointly, so an unidentified column bends the intercept and its neighbours
+# too. Dropping it: coverage 52.6% -> 53.4%, win-weighted 54.8% -> 55.5%.
+#
+# Set at 2, not higher, deliberately. A dropped column also means every item
+# carrying that stat loses credit for it and reads as overpriced, so this
+# should only reach columns that are degenerate rather than merely thin.
+# Raising it to 4 (which additionally drops Pathfinding, 2 carriers) measured
+# identically, so there is no evidence for going further.
+MIN_STAT_CARRIERS = 2
+
+
 def collect_stat_names(items):
-    """Every distinct stat column that parses to a number somewhere in the item
-    set, sorted for deterministic column order."""
-    return sorted({k for item in items for k in item_stat_values(item)})
+    """Every distinct stat column that parses to a number on at least
+    MIN_STAT_CARRIERS items, sorted for deterministic column order."""
+    counts = {}
+    for item in items:
+        for key in item_stat_values(item):
+            counts[key] = counts.get(key, 0) + 1
+    return sorted(k for k, n in counts.items() if n >= MIN_STAT_CARRIERS)
 
 
 def _stat_matrix(items, stat_names):

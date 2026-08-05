@@ -303,10 +303,34 @@ def parse_item_page(html: str) -> dict:
         result["passive"] = " ".join(effect_parts)
 
     result["image_url"] = _extract_image_url(infobox)
+    owner = god_specific_owner(result["image_url"])
+    if owner:
+        result["god"] = owner
 
     recipe = soup.find("table", class_="recipe-table")
     result["builds_from"] = _direct_recipe_children(recipe) if recipe else []
     return result
+
+
+# A god-specific item's icon is generated as
+# `GodSpecific_<God_Name>_<Item_Name>.png`, e.g.
+# `GodSpecific_Aladdin_Genie%27s_Lamp.png`. Nothing else on the page names the
+# owner — the infobox says only "God Specific" — and the owner is what decides
+# whether the item may take one of a god's six slots. Ratatoskr's acorns and
+# Aladdin's lamp are real build slots (the lamp is in 77% of his community
+# builds), so they must be buildable for their god and invisible to everyone
+# else.
+_GOD_SPECIFIC_ICON_RE = re.compile(r"GodSpecific_([A-Za-z0-9_%'-]+?)_[A-Za-z0-9_%'-]+\.png")
+
+
+def god_specific_owner(image_url):
+    """The god a `God Specific` item belongs to, or None."""
+    if not image_url:
+        return None
+    m = _GOD_SPECIFIC_ICON_RE.search(image_url)
+    if not m:
+        return None
+    return m.group(1).replace("_", " ").replace("%27", "'").strip() or None
 
 
 def derive_headshot_url(portrait_url):

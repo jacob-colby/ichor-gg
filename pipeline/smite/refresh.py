@@ -148,12 +148,62 @@ def refresh_item(name: str, wiki_fetcher, force: bool = False) -> None:
         "passive": parsed.get("passive"),
         "builds_from": parsed.get("builds_from", []),
         "builds_into": [],
+        # Only set for `God Specific` items; see wiki_parser.god_specific_owner.
+        "god": parsed.get("god"),
         "source_url": url,
         "last_verified": date.today().isoformat(),
     }
     notes.merge_item_note(DATA_ROOT / "Items" / f"{name}.md", frontmatter,
                            parsed.get("passive", ""), log_dir=DATA_ROOT / "_logs")
     _download_icon(parsed.get("image_url"), name.lower().replace(" ", "-").replace("'", ""))
+
+
+# Wiki item icons are served as `T<tier>_<Item_Name>.png`. That filename is the
+# most reliable item marker in the cached HTML: it is generated, carries the
+# tier, and appears on every page that so much as links the item — including
+# the build-path boxes on its components' pages, which is how an item nobody
+# has scraped still leaves a trace.
+_ITEM_ICON_RE = re.compile(r"/T(\d)_([A-Za-z0-9_%'()-]+)\.png")
+# Icon art for an item's upgraded or damage-typed variant, which is the same
+# tracked item (`Book_of_Thoth_Evolved`, `Draconic_Scale_Magical`).
+_ICON_VARIANT_SUFFIX_RE = re.compile(r"(evolved|magical|physical|ob\d+)$")
+
+
+def _icon_key(name: str) -> str:
+    """Item names for comparison only. Icon filenames drop the spaces the note
+    keeps (`AlchemistCoat` for "Alchemist Coat") and percent-encode
+    apostrophes, so a raw comparison reports ~38 false gaps against 8 real
+    ones."""
+    return re.sub(r"[^a-z0-9]", "", name.lower())
+
+
+def discover_untracked_items(data_root: Path = None) -> dict:
+    """Items the cached wiki references that have no note under Items/.
+
+    `refresh_all` re-pulls only what is already tracked, by design — but that
+    leaves no way to learn an item exists. This reads the cache we already
+    have, so it costs no requests and can run on every pass.
+
+    Returns `{name: [tiers]}`. Names come from icon filenames, so they are
+    wiki page titles and can be handed straight to `--refresh ... --kind item`.
+    """
+    data_root = data_root or DATA_ROOT
+    tracked = set()
+    for path in (data_root / "Items").glob("*.md"):
+        name = notes.read_note(path)[0].get("name")
+        if name:
+            tracked.add(_icon_key(name))
+
+    found = {}
+    for path in (data_root / "_cache" / "wiki").glob("*.html"):
+        html = path.read_text(encoding="utf-8", errors="ignore")
+        for tier, raw in _ITEM_ICON_RE.findall(html):
+            name = raw.replace("_", " ").replace("%27", "'").strip()
+            key = _icon_key(name)
+            if key in tracked or _ICON_VARIANT_SUFFIX_RE.sub("", key) in tracked:
+                continue
+            found.setdefault(name, set()).add(int(tier))
+    return {name: sorted(tiers) for name, tiers in sorted(found.items())}
 
 
 def refresh_builds_into() -> None:
@@ -449,6 +499,8 @@ def main(argv=None) -> int:
                          help="scrape every roster god not yet tracked (no reindex)")
     parser.add_argument("--patch", action="store_true",
                          help="refresh the current SMITE 2 patch version (data/_patch.json)")
+    parser.add_argument("--discover-items", action="store_true",
+                         help="list items the cached wiki references but Items/ doesn't track")
     parser.add_argument("--force", action="store_true", help="bypass the local cache")
     args = parser.parse_args(argv)
 
@@ -458,6 +510,17 @@ def main(argv=None) -> int:
             print(f"Refreshed patch version: {result['patch']}")
         else:
             print("Could not determine the current patch version (fetch/parse failed)")
+        return 0
+
+    if args.discover_items:
+        untracked = discover_untracked_items()
+        if not untracked:
+            print("No untracked items referenced in the wiki cache.")
+            return 0
+        print(f"{len(untracked)} untracked item(s) referenced in the wiki cache:")
+        for name, tiers in untracked.items():
+            print(f"  T{'/'.join(str(t) for t in tiers)}  {name}")
+        print("\nAdd one with:  python -m smite.refresh --refresh '<name>' --kind item")
         return 0
 
     if args.roster:

@@ -7,7 +7,8 @@ stats:
   Health Regen: '2'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Olmec Blue
 source_url: https://wiki.smite2.com/w/Sash
 last_verified: '2026-08-01'
 ---

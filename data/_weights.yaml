@@ -2,13 +2,30 @@
 # `python -m smite.recommend --all`. Anything omitted falls back to the
 # built-in defaults in tools/smite/scoring.py.
 signals:
-  # Recalibrated 2026-07-23 against the FULL 87-god roster (up from 12) — see
-  # Analysis/_calibration.md. At full-roster scale coverage tops out ~57%, so
-  # the old 12-god blend (0.71/0.38) is unreachable; coverage and Spearman
-  # trade off. Chosen point is rank-favoring (win up, pick down): the tool's
-  # purpose is surfacing effective/underrated items, so tracking win rates
-  # (Spearman) is valued over echoing popularity (coverage). Guardrails hold:
-  # eff+fit = 0.50, pick <= 0.15, sum = 1. Yields ~coverage 46%, Spearman 0.34.
+  # Set 2026-07-23, re-examined 2026-08-05 and DELIBERATELY LEFT ALONE.
+  #
+  # The 2026-08-05 sweep proposed 0.35/0.40/0.10/0.15 (objective 0.655 against
+  # this point's 0.643). It was rejected, because the sweep cannot select
+  # weights: both of the validation metric's targets are also model inputs.
+  # `win` IS the Spearman target, so weighting it 1.0 scores a perfect 1.000;
+  # `pick` all but determines community membership, so weighting it 1.0 covers
+  # 98.1%. Both degenerate corners beat every honest blend, the proposed
+  # winner differs from this point only by moving 0.05 toward `pick`, and it
+  # sits pressed against the pick <= 0.15 guardrail — the constraint speaking,
+  # not the data. See the leakage probe in Analysis/_calibration.md.
+  #
+  # What IS measurable, with win and pick zeroed so no target enters the score:
+  # against a random 6-item core at 6.5% coverage, efficiency alone reaches
+  # 13.3%, fit alone 26.9%, and the two together 27.8% — the model finds
+  # community-worthy items ~4.3x better than chance. Every split from 0.15 to
+  # 0.65 efficiency lands inside one flat plateau (overlapping bootstrap CIs),
+  # so there is no evidence for moving this ratio; what the sweep separates
+  # clearly is that efficiency-DOMINANT blends collapse (13.3% at 1.00).
+  #
+  # The matching negative, recorded so it is not rediscovered as a surprise:
+  # within the community's own item set the model does not rank at all (mean
+  # within-god rank correlation -0.05, positive on 38 of 85 gods). It is a
+  # working filter and not a working ranker. The 51% headline conflates both.
   efficiency: 0.35   # gold-value residual (hard math)
   win: 0.45          # SmiteBrain high-elo win rate (performance)
   pick: 0.05         # SmiteBrain pick rate (popularity)
@@ -53,6 +70,29 @@ damage_fit_blend: 0.0
 # Adaptive Stat item stops reading "premium") and ranks them worse. See
 # pipeline/smite/passives.py for the numbers and the likeliest reason.
 price_passives: false
+
+# ── Hybrid scalers: when the god's damage_type label is not the whole story ──
+# A god carries ONE damage_type, and the recommender used it as a hard gate:
+# a physical god could not be shown a single Intelligence item. SMITE 2 kits
+# are not that clean. Measured from the per-ability coefficients already in
+# the scrape, 13 of 42 physical gods take >=35% of their ability damage off
+# Intelligence and 8 of 37 magical gods take >=35% off Strength. Neith is 55%
+# Intelligence, and the community builds her full Intelligence — a build the
+# model could not express, scoring her a structural 0% with none of her six
+# community items even visible.
+#
+# `min_off_share` is where the off-type stat stops being incidental. Swept
+# 2026-08-05 across 0.10-0.55: coverage is flat within noise everywhere, with
+# 0.30 the best point (53.4% -> 53.8%, rank correlation 0.552 -> 0.567), so
+# this is set on the reading that a third of a kit's damage is not a rounding
+# error rather than on a peak the data cannot really resolve.
+# `min_abilities` is the confidence floor kit.py already uses: under 3 parsed
+# scaling abilities the share is an artifact of a sparse scrape (Artio and
+# Ullr scrape 2 abilities each), and those gods keep the strict label.
+hybrid_scaling:
+  enabled: true
+  min_off_share: 0.30
+  min_abilities: 3
 
 kit_blend: 0.3       # how much the parsed ability-scaling profile skews god-fit (0 = role map only).
                      # Swept 2026-07-22: 0.3 captures the full coverage gain (Susano 80->100%)

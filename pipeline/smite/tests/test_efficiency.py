@@ -154,7 +154,11 @@ def test_percent_and_flat_of_the_same_stat_are_priced_separately():
     penetration."""
     flat = {"name": "Flat", "cost": 2000, "tier": 3, "stats": {"Penetration": "20"}}
     pct = {"name": "Pct", "cost": 3000, "tier": 3, "stats": {"Penetration": "20%"}}
-    names = efficiency.collect_stat_names([flat, pct])
+    # Two carriers each, so MIN_STAT_CARRIERS keeps both columns and this test
+    # measures the flat/percent split rather than the identifiability floor.
+    flat2 = {"name": "Flat2", "cost": 1000, "tier": 3, "stats": {"Penetration": "10"}}
+    pct2 = {"name": "Pct2", "cost": 1500, "tier": 3, "stats": {"Penetration": "10%"}}
+    names = efficiency.collect_stat_names([flat, pct, flat2, pct2])
     assert names == ["Penetration", "Penetration %"]
     assert efficiency.item_stat_values(flat) == {"Penetration": 20.0}
     assert efficiency.item_stat_values(pct) == {"Penetration %": 20.0}
@@ -175,9 +179,52 @@ def test_predicted_cost_reads_the_same_columns_the_fit_wrote():
 
 def test_shipped_penetration_columns_disagree_by_a_lot():
     """Guards the real fit: if these ever converge, either the split broke or
-    the item data changed shape, and both are worth knowing about."""
-    from pathlib import Path
+    the item data changed shape, and both are worth knowing about.
+
+    The RATIO is not stable and must not be asserted tightly — it is a property
+    of the current item set, not of the game. It read 4.5x when the split
+    landed (8.63 vs 38.92 gold), and 1.9x after the twelve items the item list
+    had never discovered joined the fit (27.1 vs 51.2). What the test defends
+    is that the two columns stay far apart, which is the whole reason the
+    split exists."""
     from smite import notes, recommend
     items = [notes.read_note(p)[0] for p in (recommend.DATA_ROOT / "Items").glob("*.md")]
     gold, _ = efficiency.fit_gold_values([i for i in items if i.get("name")])
-    assert gold["Penetration %"] > 2 * gold["Penetration"]
+    assert gold["Penetration %"] > 1.5 * gold["Penetration"]
+
+
+def test_single_carrier_stat_gets_no_column():
+    """A stat only one item carries is exactly determined — NNLS can always
+    zero that item's residual — so it explains nothing and must not earn a
+    column. Found via Agility Greaves, the lone Movement Speed carrier, priced
+    at 299 gold/point (~13x Strength) purely to hit its own 2500 cost."""
+    lonely = {"name": "Greaves", "cost": 2500, "tier": 3,
+              "stats": {"Movement Speed": "5"}}
+    shared = [{"name": f"S{i}", "cost": 2000, "tier": 3, "stats": {"Strength": "40"}}
+              for i in range(3)]
+    names = efficiency.collect_stat_names([lonely] + shared)
+    assert "Movement Speed" not in names
+    assert "Strength" in names
+
+
+def test_dropped_column_leaves_the_item_unpriced_rather_than_mispriced():
+    """The consequence of the rule, stated so it is a choice and not a
+    surprise: the lone carrier loses credit for its stat and reads as
+    premium. That is the honest outcome — we cannot price the stat — but it
+    is why the floor sits at 2 instead of higher."""
+    lonely = {"name": "Greaves", "cost": 2500, "tier": 3,
+              "stats": {"Movement Speed": "5"}}
+    shared = [{"name": f"S{i}", "cost": 1000 + 500 * i, "tier": 3,
+               "stats": {"Strength": str(20 + 20 * i)}} for i in range(4)]
+    gold, names = efficiency.fit_gold_values([lonely] + shared)
+    assert "Movement Speed" not in gold
+    # Predicted from the intercept alone, so it cannot look like a bargain.
+    assert efficiency.predicted_cost(lonely, gold) < lonely["cost"]
+
+
+def test_min_stat_carriers_keeps_thin_but_real_columns():
+    """Echo (5 carriers) and Tenacity (6) are thin and genuinely identified.
+    The floor must not reach them."""
+    items = [{"name": f"E{i}", "cost": 2000, "tier": 3, "stats": {"Echo": "10"}}
+             for i in range(efficiency.MIN_STAT_CARRIERS)]
+    assert "Echo" in efficiency.collect_stat_names(items)

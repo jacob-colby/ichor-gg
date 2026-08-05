@@ -274,7 +274,12 @@ function LedgerRowView({
           {row.isFlex && row.status === "kept" && (
             <span className="rounded-sm bg-bg3 px-1 py-px text-micro font-semibold uppercase tracking-[0.06em] text-faint">flex</span>
           )}
-          {showScores && !removed && !added && !row.inMeta && (
+          {/* Only for items the community genuinely never buys. An item they
+              buy as a slot alternate gets the rate printed on the line below
+              instead, which says more than the badge did and — unlike the
+              badge — is true. */}
+          {showScores && !removed && !added && !row.inMeta
+            && row.metaAlternatePickRate == null && (
             <span className="rounded-sm bg-under/15 px-1 py-px text-micro font-semibold uppercase tracking-[0.06em] text-under"
               title="The model buys this; this god's community build doesn't">
               off-meta
@@ -322,6 +327,13 @@ function LedgerRowView({
                     {" "}· {gap < 0 ? "model buys earlier" : "model buys later"} by <span className="font-mono">{goldText(Math.abs(gap))}</span>
                   </span>
                 )}
+              </span>
+            ) : row.metaAlternatePickRate != null ? (
+              // Bought, just never the headline pick in any one slot.
+              <span>
+                meta buys this <span className="font-mono">{Math.round(row.metaAlternatePickRate * 100)}%</span>
+                {row.metaAlternateWinRate != null && <> · <span className="font-mono">{Math.round(row.metaAlternateWinRate * 100)}% win</span></>}
+                {" "}· not in their order
               </span>
             ) : <span className="text-under">meta doesn&rsquo;t buy this</span>
           )}

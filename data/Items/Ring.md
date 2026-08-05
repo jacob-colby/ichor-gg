@@ -7,7 +7,12 @@ stats:
   Cooldown Rate: '5'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Adroit Ring
+- Caestus
+- Captain's Ring
+- Ring of Dispel
+- Sage's Ring
 source_url: https://wiki.smite2.com/w/Ring
 last_verified: '2026-08-01'
 ---

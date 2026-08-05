@@ -10,7 +10,14 @@ passive: null
 builds_from:
 - Medallion
 - Rune
-builds_into: []
+builds_into:
+- Hussar's Wings
+- Oni Hunter's Garb
+- Pharaoh's Curse
+- Phoenix Feather
+- Shogun's Ofuda
+- Void Stone
+- Wyrmskin Hide
 source_url: https://wiki.smite2.com/w/Medal_of_Disruption
 last_verified: '2026-08-01'
 ---

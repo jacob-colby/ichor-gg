@@ -11,7 +11,11 @@ passive: 'Kill or Assist a God: +25% Mana'
 builds_from:
 - Axe
 - Circlet
-builds_into: []
+builds_into:
+- Dominance
+- Heartseeker
+- Hydra's Lament
+- Transcendence
 source_url: https://wiki.smite2.com/w/Infused_Axe
 last_verified: '2026-08-01'
 ---

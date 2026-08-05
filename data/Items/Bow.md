@@ -7,7 +7,10 @@ stats:
   Attack Speed: 5%
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Enchanted Bracelet
+- Hunter's Bow
+- Manchu Bow
 source_url: https://wiki.smite2.com/w/Bow
 last_verified: '2026-08-01'
 ---

@@ -10,7 +10,11 @@ passive: null
 builds_from:
 - Ring
 - Shield
-builds_into: []
+builds_into:
+- Breastplate of Valor
+- Freya's Tears
+- Gladiator's Shield
+- Regrowth Striders
 source_url: https://wiki.smite2.com/w/Captain's_Ring
 last_verified: '2026-08-01'
 ---

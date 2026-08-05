@@ -10,7 +10,14 @@ passive: null
 builds_from:
 - Gem
 - Medallion
-builds_into: []
+builds_into:
+- Ethereal Staff
+- Gem of Isolation
+- Gluttonous Grimoire
+- Jade Scepter
+- Lifebinder
+- Scepter of Dominion
+- Wish-Granting Pearl
 source_url: https://wiki.smite2.com/w/Flaming_Pearl
 last_verified: '2026-08-01'
 ---

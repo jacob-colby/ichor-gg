@@ -134,6 +134,46 @@ def audit_gods(gods: list, builds: list, items: list) -> list:
     return findings
 
 
+def audit_item_coverage(items: list, builds: list) -> list:
+    """Items the community demonstrably builds that we do not have a note for.
+
+    `refresh_all` only re-pulls items that ALREADY have a note, so a new
+    patch's items are invisible until someone runs `--refresh <name>` by hand.
+    Nothing checked whether that had been done, and it had not: eight tier-3
+    items were missing on 2026-08-05, among them Dominance, which appears in
+    both Cernunnos's and Jing Wei's community builds. A missing item cannot be
+    recommended and silently caps those gods' coverage at whatever is left.
+
+    SmiteBrain's own build data is the right detector because it names items by
+    the only standard that matters — someone built them. Alternates count too:
+    they are the items that lost a slot, which is exactly the pool the
+    recommender is supposed to be choosing differently from.
+
+    `refresh.discover_untracked_items` is the companion check, scanning the
+    wiki cache for items no build has reached yet."""
+    have = {it.get("name") for it in items}
+    referenced = {}
+    for group in builds:
+        for build in group.get("builds") or []:
+            if build.get("source") != "community":
+                continue
+            for slot in build.get("slot_order") or []:
+                if not isinstance(slot, dict):
+                    continue
+                for entry in [slot] + list(slot.get("alternates") or []):
+                    name = entry.get("name")
+                    if name and name not in have:
+                        referenced.setdefault(name, set()).add(group.get("god"))
+    return sorted(
+        ({"item": name, "issue": "untracked-item",
+          "detail": f"built by {len(gods)} god(s) "
+                    f"({', '.join(sorted(g for g in gods if g)[:3])}"
+                    f"{'...' if len(gods) > 3 else ''}) but has no note — "
+                    f"run: python -m smite.refresh --refresh '{name}' --kind item"}
+         for name, gods in referenced.items()),
+        key=lambda f: f["item"])
+
+
 def _load_index() -> dict:
     return json.loads(INDEX_PATH.read_text(encoding="utf-8"))
 
@@ -161,7 +201,7 @@ def main(argv=None) -> int:
     gods = index.get("gods", [])
     builds = index.get("builds", [])
 
-    item_findings = audit_items(items)
+    item_findings = audit_items(items) + audit_item_coverage(items, builds)
     god_findings = audit_gods(gods, builds, items)
 
     print(f"Item audit: {len(items)} items, {len(item_findings)} finding(s)")

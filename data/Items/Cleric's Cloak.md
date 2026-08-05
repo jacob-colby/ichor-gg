@@ -7,7 +7,11 @@ stats:
   Tenacity: '5'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Ethereal Staff
+- Mantle Of Discord
+- Resolute Mantle
+- Shroud of Vengeance
 source_url: https://wiki.smite2.com/w/Cleric's_Cloak
 last_verified: '2026-08-01'
 ---

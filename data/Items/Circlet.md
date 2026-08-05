@@ -7,7 +7,11 @@ stats:
   Max Mana: '150'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Infused Axe
+- Mana Tome
+- Odigba
+- Oracle Staff
 source_url: https://wiki.smite2.com/w/Circlet
 last_verified: '2026-08-01'
 ---

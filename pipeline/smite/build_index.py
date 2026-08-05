@@ -161,7 +161,7 @@ def _god_item_damage(gods, items, weights) -> dict:
             continue
         pairs = {}
         for item in items:
-            if not scoring.is_buildable(item):
+            if not scoring.is_buildable(item, god):
                 continue
             low = damage_value.item_damage_gain(god, item, SQUISHY_PROTECTION)
             high = damage_value.item_damage_gain(god, item, TANK_PROTECTION)

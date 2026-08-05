@@ -6,22 +6,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
+  - Triton's Conch
   flex_slots:
-  - Stampede
-  - Kinetic Cuirass
+  - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -31,42 +31,42 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.63
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Spectral Armor:
-      total: 0.65
-      efficiency: 0.66
+      total: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.59
     Amanita Charm:
-      total: 0.84
-      efficiency: 0.68
+      total: 0.83
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.69
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.83
-    Stampede:
       total: 0.64
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.74
-    Pharaoh's Curse:
-      total: 0.64
-      efficiency: 0.64
+      fit: 0.75
+    Stampede:
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.69
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Triton's Conch:
+      total: 0.61
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -78,127 +78,127 @@ builds:
   - Amanita Charm
   - Erosion
   - Stampede
-  - Pharaoh's Curse
+  - Triton's Conch
   flex_slots:
-  - Stampede
+  - Spectral Armor
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.48
     Spectral Armor:
-      total: 0.61
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
     Amanita Charm:
-      total: 0.81
-      efficiency: 0.68
+      total: 0.8
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.93
     Erosion:
-      total: 0.62
-      efficiency: 0.56
+      total: 0.61
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.68
     Stampede:
       total: 0.59
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.64
+    Triton's Conch:
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.68
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
-  - Pharaoh's Curse
+  - Soul Gem
+  - Triton's Conch
   flex_slots:
-  - Pharaoh's Curse
   - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Shield of the Phoenix:
-      total: 0.68
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Spectral Armor:
-      total: 0.66
-      efficiency: 0.66
+      total: 0.6
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.6
     Amanita Charm:
-      total: 0.84
-      efficiency: 0.68
+      total: 0.83
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.68
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
-    Stampede:
-      total: 0.64
+      total: 0.63
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.75
-    Pharaoh's Curse:
-      total: 0.64
-      efficiency: 0.64
+      fit: 0.73
+    Stampede:
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.7
+    Soul Gem:
+      total: 0.8
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Triton's Conch:
+      total: 0.64
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -206,142 +206,77 @@ builds:
   - Avenging Blade
   - Void Shield
   - Void Stone
-  - The Crusher
   - Amanita Charm
   - Erosion
+  - Stampede
   flex_slots:
-  - Erosion
-  - The Crusher
+  - Avenging Blade
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
-  - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
-  - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
-  rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
-    profile (no meta win/pick data).
-  slot_scores:
-    Avenging Blade:
-      total: 0.66
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-    Void Shield:
-      total: 0.74
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.98
-    Void Stone:
-      total: 0.72
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.98
-    The Crusher:
-      total: 0.64
-      efficiency: 0.7
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
-    Amanita Charm:
-      total: 0.83
-      efficiency: 0.68
-      win: 0.5
-      pick: 0.0
-      fit: 0.99
-    Erosion:
-      total: 0.65
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
-  starter: *id001
-- source: suggested
-  archetype: attack-speed
-  slot_order:
-  - Golden Blade
-  - Riptalon
-  - Amanita Charm
-  - Erosion
-  - Pharaoh's Curse
-  - Shogun's Ofuda
-  flex_slots:
-  - Golden Blade
-  - Erosion
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
-  - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Stone of Binding — magical protection
+    swap_item: Stone of Binding
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
-  rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
-    (no meta win/pick data).
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
+    profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.62
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Riptalon:
-      total: 0.67
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
-    Amanita Charm:
-      total: 0.79
-      efficiency: 0.68
-      win: 0.5
-      pick: 0.0
-      fit: 0.9
-    Erosion:
-      total: 0.6
-      efficiency: 0.56
+    Avenging Blade:
+      total: 0.59
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Pharaoh's Curse:
-      total: 0.67
-      efficiency: 0.64
+    Void Shield:
+      total: 0.71
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.71
-    Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.57
+      fit: 0.95
+    Void Stone:
+      total: 0.7
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.95
+    Amanita Charm:
+      total: 0.8
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.93
+    Erosion:
+      total: 0.61
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Stampede:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
   starter: *id001
 - source: suggested
-  archetype: cooldown
+  archetype: attack-speed
   slot_order:
-  - Jotunn's Revenge
-  - Shield of the Phoenix
-  - Freya's Tears
-  - Spectral Armor
+  - Toxic Blade
+  - Riptalon
   - Erosion
   - Pharaoh's Curse
+  - Shogun's Ofuda
+  - Soul Gem
   flex_slots:
-  - Pharaoh's Curse
-  - Freya's Tears
+  - Shogun's Ofuda
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -350,8 +285,73 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Glorious Pridwen — physical protection
-    swap_item: Glorious Pridwen
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.6
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Riptalon:
+      total: 0.62
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Erosion:
+      total: 0.57
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Pharaoh's Curse:
+      total: 0.62
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Shogun's Ofuda:
+      total: 0.6
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.97
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Spectral Armor
+  - Erosion
+  - Stampede
+  - Soul Gem
+  flex_slots:
+  - Freya's Tears
+  - Spectral Armor
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -359,61 +359,61 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.51
-    Shield of the Phoenix:
-      total: 0.71
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.8
     Freya's Tears:
-      total: 0.59
+      total: 0.58
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.58
     Spectral Armor:
-      total: 0.61
-      efficiency: 0.66
+      total: 0.58
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.56
     Erosion:
-      total: 0.63
-      efficiency: 0.56
+      total: 0.62
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.64
+    Stampede:
+      total: 0.59
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.66
+    Soul Gem:
+      total: 0.8
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
+  - Triton's Conch
   flex_slots:
-  - Stampede
-  - Kinetic Cuirass
+  - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -423,41 +423,41 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.63
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Spectral Armor:
-      total: 0.65
-      efficiency: 0.66
+      total: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.59
     Amanita Charm:
-      total: 0.84
-      efficiency: 0.68
+      total: 0.83
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.69
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.83
-    Stampede:
       total: 0.64
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.74
-    Pharaoh's Curse:
-      total: 0.64
-      efficiency: 0.64
+      fit: 0.75
+    Stampede:
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.69
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Triton's Conch:
+      total: 0.61
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
   starter: *id001
 ---

@@ -10,7 +10,12 @@ passive: null
 builds_from:
 - Axe
 - Medallion
-builds_into: []
+builds_into:
+- Avenging Blade
+- Eye of the Storm
+- Golden Blade
+- Runeforged Hammer
+- Wyrmskin Hide
 source_url: https://wiki.smite2.com/w/Battle_Axe
 last_verified: '2026-08-01'
 ---

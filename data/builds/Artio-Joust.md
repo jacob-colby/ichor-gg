@@ -9,19 +9,19 @@ builds:
   - Eye of Providence
   - Kinetic Cuirass
   - Shifter's Shield
-  - Spectral Armor
+  - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
   - Shifter's Shield
-  - Spectral Armor
+  - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Draconic Scale — magical protection
-    swap_item: Draconic Scale
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.74
-      efficiency: 0.65
+      total: 0.73
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.84
     Kinetic Cuirass:
-      total: 0.79
-      efficiency: 0.64
+      total: 0.77
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.94
     Shifter's Shield:
-      total: 0.71
-      efficiency: 0.58
+      total: 0.7
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Spectral Armor:
-      total: 0.71
-      efficiency: 0.66
+    Draconic Scale:
+      total: 0.68
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.84
     Amanita Charm:
-      total: 0.84
-      efficiency: 0.68
+      total: 0.83
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.78
-      efficiency: 0.56
+      total: 0.77
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -76,22 +76,22 @@ builds:
   - Eye of Providence
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Spectral Armor
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Eye of Providence
-  - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Draconic Scale — physical protection
-    swap_item: Draconic Scale
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -99,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.74
-      efficiency: 0.65
+      total: 0.73
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.84
     Kinetic Cuirass:
-      total: 0.79
-      efficiency: 0.64
+      total: 0.77
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.94
     Shield of the Phoenix:
-      total: 0.81
-      efficiency: 0.61
+      total: 0.79
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Spectral Armor:
-      total: 0.72
-      efficiency: 0.66
+    Shifter's Shield:
+      total: 0.7
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.84
     Amanita Charm:
-      total: 0.84
-      efficiency: 0.68
+      total: 0.83
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.78
-      efficiency: 0.56
+      total: 0.77
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -145,12 +145,12 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
   - Stone of Binding
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
@@ -165,37 +165,37 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.62
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.75
     Kinetic Cuirass:
-      total: 0.63
-      efficiency: 0.64
+      total: 0.61
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.61
     Void Shield:
       total: 0.71
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.93
     Void Stone:
-      total: 0.7
-      efficiency: 0.46
+      total: 0.69
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.93
     Amanita Charm:
-      total: 0.82
-      efficiency: 0.68
+      total: 0.81
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.96
     Erosion:
-      total: 0.63
-      efficiency: 0.56
+      total: 0.62
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -210,12 +210,12 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Nimble Ring
   - Bracer of The Abyss
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Eye of Providence — magical protection
     swap_item: Eye of Providence
@@ -223,44 +223,44 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.64
+      total: 0.54
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bracer of The Abyss:
-      total: 0.42
-      efficiency: 0.62
+      total: 0.39
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.22
     Nimble Ring:
-      total: 0.42
-      efficiency: 0.55
+      total: 0.39
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.29
     Bragi's Harp:
-      total: 0.48
-      efficiency: 0.53
+      total: 0.45
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.43
     Amanita Charm:
       total: 0.75
-      efficiency: 0.68
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.83
     Erosion:
-      total: 0.57
-      efficiency: 0.56
+      total: 0.56
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -279,8 +279,8 @@ builds:
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -294,20 +294,20 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.62
-      efficiency: 0.74
+      total: 0.61
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.5
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.64
+      total: 0.58
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.55
     Gladiator's Shield:
-      total: 0.6
-      efficiency: 0.46
+      total: 0.58
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.66
     Erosion:
-      total: 0.6
-      efficiency: 0.56
+      total: 0.59
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.81
-      efficiency: 0.62
+      total: 0.8
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -336,19 +336,19 @@ builds:
   - Eye of Providence
   - Kinetic Cuirass
   - Shifter's Shield
-  - Spectral Armor
+  - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
   - Shifter's Shield
-  - Spectral Armor
+  - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Draconic Scale — magical protection
-    swap_item: Draconic Scale
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -359,38 +359,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.74
-      efficiency: 0.65
+      total: 0.73
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.84
     Kinetic Cuirass:
-      total: 0.79
-      efficiency: 0.64
+      total: 0.77
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.94
     Shifter's Shield:
-      total: 0.71
-      efficiency: 0.58
+      total: 0.7
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Spectral Armor:
-      total: 0.71
-      efficiency: 0.66
+    Draconic Scale:
+      total: 0.68
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.84
     Amanita Charm:
-      total: 0.84
-      efficiency: 0.68
+      total: 0.83
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.78
-      efficiency: 0.56
+      total: 0.77
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 1.0

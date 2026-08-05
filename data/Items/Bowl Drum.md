@@ -7,7 +7,11 @@ stats:
   Echo: '10'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Damaru
+- Omen Drum
+- The Cosmic Horror
+- The Crusher
 source_url: https://wiki.smite2.com/w/Bowl_Drum
 last_verified: '2026-08-01'
 ---
