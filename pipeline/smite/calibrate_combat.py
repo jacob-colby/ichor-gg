@@ -183,17 +183,33 @@ def plan_cases(gods_dir, items_dir, attacker, target):
 
 
 def load_observations(path):
-    """`(real, examples)`. Rows flagged `example: true` are separated out
-    rather than silently scored, so the placeholder file cannot pass."""
+    """`(real, examples, pending)`.
+
+    Three buckets, because a calibration file has three kinds of row and
+    conflating them lets the gate lie in one direction or the other:
+
+      real      scored, and the verdict is theirs
+      example   the shipped placeholders. Never scored - made-up numbers must
+                not be able to pass a gate.
+      pending   REAL measurements the model does not yet reproduce. Recorded
+                because they are evidence and deleting them would lose it,
+                reported so they stay visible, but kept out of the verdict so
+                one open question does not permanently red-light the terms
+                that ARE confirmed. Anything here is a claim on someone's
+                attention, not a result to be quietly carried.
+    """
     if not path.exists():
-        return [], []
+        return [], [], []
     doc = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     rows = doc.get("observations") or []
-    real = [r for r in rows if not r.get("example")]
     examples = [r for r in rows if r.get("example")]
-    for r in real:
+    pending = [r for r in rows if r.get("pending") and not r.get("example")]
+    real = [r for r in rows if not r.get("example") and not r.get("pending")]
+    for r in real + pending:
         r.pop("example", None)
-    return real, examples
+        r.pop("pending", None)
+        r.pop("note", None)
+    return real, examples, pending
 
 
 def report_lines(result, tolerance, examples=0):
@@ -202,8 +218,8 @@ def report_lines(result, tolerance, examples=0):
         ok = abs(case["rel_error"]) <= tolerance
         lines.append(
             f"  [{'ok ' if ok else 'OFF'}] {case['label'] or '(unlabelled)':44} "
-            f"expected {case['expected']:>9,.1f}   model {case['actual']:>9,.1f}   "
-            f"{case['rel_error']:+7.1%}")
+            f"expected {case['expected']:>7,.0f}   model {case['actual']:>8,.2f}"
+            f" -> shows {case['shown']:>6,.0f}   {case['rel_error']:+6.1%}")
     if examples:
         lines.append(f"  ({examples} example rows ignored - they are not evidence)")
     return lines
@@ -242,7 +258,7 @@ def main(argv=None):
         print("number as `expected`, then run this command with no arguments.")
         return 0
 
-    real, examples = load_observations(args.file)
+    real, examples, pending = load_observations(args.file)
     if not real:
         print(f"NO OBSERVATIONS in {args.file}")
         if examples:
@@ -258,9 +274,18 @@ def main(argv=None):
     print(f"{result['n']} observations, tolerance {args.tolerance:.0%}\n")
     print("\n".join(report_lines(result, args.tolerance, len(examples))))
 
+    if pending:
+        open_report = combat.calibrate_report(pending)
+        print(f"\n{len(pending)} PENDING - measured, not reproduced, not scored:")
+        print("\n".join(report_lines(open_report, args.tolerance)))
+        print("  These are the open questions. They do not gate anything, and")
+        print("  they are not allowed to disappear either.")
+
     worst = result["worst_rel_error"]
     passed = worst <= args.tolerance
-    print(f"\nworst case {worst:.1%} — {'PASS' if passed else 'FAIL'}")
+    print(f"\nworst case {worst:.1%} - {'PASS' if passed else 'FAIL'} "
+          f"({len(pending)} pending)" if pending else
+          f"\nworst case {worst:.1%} - {'PASS' if passed else 'FAIL'}")
     if not passed:
         print("\nThe model does not reproduce reality within tolerance. Per the plan,")
         print("stop here: B4-B6 inherit every error in this arithmetic. Compare the")

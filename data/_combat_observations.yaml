@@ -82,6 +82,31 @@ observations:
     pct_pen: 0.10
     expected: 94
 
+  # ── PENDING: measured, not yet reproduced, deliberately not scored ──────
+  # Basic attacks. Same session, same target. Thanatos's chain is 1 / 0.75 /
+  # 1.5x, so only the 1x hit is recorded here; the full readings were
+  # 32 / 24 / 49 with no items and 58 / 43 / 87 with Rage.
+  #
+  # These two agree with each other and disagree with the scraped Attack
+  # Power. Rage's 30 Strength added 29.76 raw, so 100% Strength scaling is
+  # right; but the no-item raw back-solves to ~38.4 where Thanatos's scraped
+  # Attack Power is 47.76 — a ratio of 0.80 that no source explains yet.
+  #
+  # `raw` below uses the SCRAPED Attack Power, so these rows fail by exactly
+  # the size of the discrepancy. That is the point: they are the open
+  # question, kept visible instead of deleted or papered over.
+  - label: "BASIC ATTACK 1x, no items - Attack Power alone"
+    pending: true
+    raw: 47.76
+    protection: 17.48
+    expected: 32
+
+  - label: "BASIC ATTACK 1x, Rage only - Attack Power + 30 Strength"
+    pending: true
+    raw: 77.76
+    protection: 17.48
+    expected: 58
+
 # Example of the shape — delete once real ones are in. These numbers are made
 # up and `calibrate` refuses to treat the file as evidence while `example: true`
 # is set on any entry.

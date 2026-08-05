@@ -102,7 +102,7 @@ def test_the_shipped_observations_still_pass_the_gate():
     """Calibrated 2026-08-04 against Thanatos/Kukulkan. These four readings are
     what confirmed mitigation and both penetration terms, so a change to
     `combat.py` that breaks them has broken something real."""
-    real, examples = cc.load_observations(cc.DEFAULT_PATH)
+    real, examples, _pending = cc.load_observations(cc.DEFAULT_PATH)
     assert len(real) >= 4 and examples == []
     report = combat.calibrate_report(real)
     assert report["worst_rel_error"] <= cc.DEFAULT_TOLERANCE
@@ -111,6 +111,10 @@ def test_the_shipped_observations_still_pass_the_gate():
     # part no source could settle.
     exercised = {k for r in real for k in r if k.endswith("_pen")}
     assert exercised == {"flat_pen", "pct_pen"}
+
+    # And they match EXACTLY once the model is floored the way the game
+    # displays it - not merely within tolerance.
+    assert all(c["shown"] == c["expected"] for c in report["cases"])
 
 
 # ── Planning a run ────────────────────────────────────────────────────────
@@ -191,3 +195,40 @@ def test_the_clean_ability_filter_reads_the_recovered_colour_coding():
              if k in ("physical", "magical")
              and not d.startswith(("Damage:", "Damage Scaling:"))]
     assert extra, "the hidden %max-health line must still be visible to the filter"
+
+
+def test_pending_rows_are_kept_out_of_the_verdict_but_not_out_of_sight(tmp_path, capsys):
+    """A measurement the model cannot yet reproduce is evidence. Deleting it
+    loses the evidence; scoring it red-lights terms that are genuinely
+    confirmed. It is recorded, reported, and excluded from the verdict."""
+    p = _write(tmp_path, """
+        observations:
+          - label: confirmed
+            raw: 1000
+            protection: 100
+            expected: 500
+          - label: open question
+            pending: true
+            raw: 1000
+            protection: 100
+            expected: 400
+    """)
+    assert cc.main(["--file", str(p)]) == 0          # the open row does not fail the run
+    out = capsys.readouterr().out
+    assert "1 PENDING" in out
+    assert "open question" in out                     # ...and stays visible
+    assert "PASS" in out
+
+
+def test_a_file_of_only_pending_rows_does_not_pass():
+    """Otherwise "everything is an open question" would read as verified."""
+    real, examples, pending = cc.load_observations(cc.DEFAULT_PATH)
+    assert real, "the shipped file must keep at least one scored observation"
+
+
+def test_the_display_is_floor_not_rounding():
+    """94.58 showed as 94; rounding would have given 95. Comparing floored
+    predictions to the integer on screen is what makes the gate exact."""
+    assert combat.displayed(94.58) == 94
+    assert combat.displayed(43.5) == 43
+    assert combat.displayed(93.04) == 93

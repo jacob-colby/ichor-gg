@@ -21,8 +21,10 @@ a wrong answer that looks authoritative.
              contradicts them — which it has.
 
 Calibrated 2026-08-04 (`data/_combat_observations.yaml`). Mitigation and both
-penetration terms reproduce reality to within 0.6%, so the penetration block —
-previously the load-bearing guess here — is confirmed. The same session
+penetration terms reproduce reality EXACTLY — the game floors its displayed
+damage, so a floored prediction can be compared to the integer on screen with
+no tolerance at all, and all four readings match. The penetration block,
+previously the load-bearing guess here, is confirmed. The same session
 overturned the crit multiplier: two sources agreed on 1.65 and the game says
 1.5. That is the reason for the OBSERVED tier and the reason it wins.
 
@@ -32,6 +34,7 @@ see `attack_damage`, where a measured hit came in 12% under what the scraped
 Attack Power predicts.
 """
 
+import math
 import re
 
 # Matches "Attacks in order of 1, 0.75, 1.5x damage and swing time".
@@ -360,6 +363,23 @@ def attack_dps(raw, protection, base_attack_speed, attack_speed_bonus=0.0,
 
 # ── Calibration ───────────────────────────────────────────────────────────
 
+def displayed(value):
+    """What the game prints for a damage value: the floor, not a rounding.
+
+    OBSERVED, 2026-08-04, and it is floor in both directions: a predicted 94.6
+    showed as 94 where rounding would have given 95, and Thanatos's 0.75x chain
+    hit of 43.5 showed 43. His crit of ~130.5 showing 131 looks like a
+    counter-example and is not — interval arithmetic on the chain puts the
+    underlying value above 131.
+
+    This makes the gate STRICTER, not looser. Comparing a floored prediction
+    against the integer on screen admits no slack, where comparing raw floats
+    had to tolerate a percent of display noise and would have accepted a model
+    genuinely off by that much.
+    """
+    return math.floor(value)
+
+
 def calibrate_report(observations):
     """Compare this model against real in-game numbers.
 
@@ -368,9 +388,9 @@ def calibrate_report(observations):
     and the worst absolute relative error, which is the figure the gate should
     be set on.
 
-    This exists because the penetration block is INFERRED and load-bearing.
-    Until someone runs real numbers through it, `combat.py` is a well-sourced
-    hypothesis, and nothing that consumes it should reach the site.
+    An integer `expected` is taken to be a number read off the screen, so the
+    model is floored before comparison — see `displayed`. A non-integer is
+    taken to be derived and compared directly.
     """
     rows = []
     for obs in observations:
@@ -378,8 +398,10 @@ def calibrate_report(observations):
         label = obs.pop("label", "")
         expected = obs.pop("expected")
         actual = damage_dealt(**obs)
-        error = (actual - expected) / expected if expected else float("inf")
-        rows.append({"label": label, "expected": expected,
-                     "actual": actual, "rel_error": error})
+        # Compare like with like: an integer reading is what the game printed.
+        shown = displayed(actual) if float(expected).is_integer() else actual
+        error = (shown - expected) / expected if expected else float("inf")
+        rows.append({"label": label, "expected": expected, "actual": actual,
+                     "shown": shown, "rel_error": error})
     worst = max((abs(r["rel_error"]) for r in rows), default=0.0)
     return {"cases": rows, "worst_rel_error": worst, "n": len(rows)}
