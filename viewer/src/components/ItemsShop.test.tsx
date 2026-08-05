@@ -14,6 +14,10 @@ const items = [
   { name: "Pendant", tier: 1, cost: 700, stats: { "Max Health": "50" },
     passive: "Gain 1 stack on minion kill.",
     builds_from: [], builds_into: [], effect_tags: [], efficiency_tier: null, efficiency: null },
+  { name: "Acorn", tier: "God Specific", cost: 2000, stats: { "Max Health": "400" },
+    passive: "Only one god can buy this.",
+    builds_from: [], builds_into: [], effect_tags: [], efficiency_tier: "undervalued",
+    efficiency: { predicted_cost: 3200, residual: -1200, score: 1, comparable: false } },
 ] as unknown as Item[];
 
 // Keyed the way the index ships them: a percentage is priced in its own
@@ -34,7 +38,18 @@ describe("ItemsShop — the verdict, decomposed", () => {
   it("leads with how many items are underpriced", () => {
     render(shop());
     expect(screen.getByRole("heading", { level: 1 }))
-      .toHaveTextContent(/1 of 3\s*items cost less than their stats are worth/i);
+      .toHaveTextContent(/1 of 2\s*items cost less than their stats are worth/i);
+  });
+
+  it("keeps an item only one god can buy out of the best-value lead", () => {
+    // Acorn is the most underpriced thing on the board at -1,200g, and 86 of
+    // 87 gods cannot buy it. Together with the statless items the pipeline
+    // stopped scoring, four of the real board's top six were unbuyable or
+    // meaningless. It still shows, and still shows its price.
+    render(shop());
+    const cards = screen.getAllByRole("button", { name: /,/ });
+    expect(cards[0]).toHaveAccessibleName(/^Rage,/);
+    expect(screen.getByRole("button", { name: /^Acorn,/ })).toBeInTheDocument();
   });
 
   /* The card leads with the verdict in the same words the tier list and the
@@ -55,13 +70,13 @@ describe("ItemsShop — the verdict, decomposed", () => {
     const pendant = screen.getByRole("button", { name: /^Pendant,/ });
     expect(pendant).toHaveTextContent(/not priced by the model/i);
     expect(pendant).toHaveAccessibleName(/not scored by the gold model/i);
-    expect(screen.getByText(/1 not priced \(starters\)/i)).toBeInTheDocument();
+    expect(screen.getByText(/1 not priced \(starters and statless items\)/i)).toBeInTheDocument();
   });
 
   it("states the community coverage gap instead of leaving a blank", () => {
     render(shop());
-    expect(screen.getByText(/0 of 3 have community data/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/no community data/i)).toHaveLength(3);
+    expect(screen.getByText(/0 of 4 have community data/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/no community data/i)).toHaveLength(4);
   });
 
   it("shows a community win rate where there is one", () => {
@@ -99,14 +114,18 @@ describe("ItemsShop — the receipt", () => {
       .toHaveTextContent("Mystery");
   });
 
-  it("shows where the community puts the item when the tier list has it", () => {
+  it("shows the item's own record when the tier list has it", () => {
+    // The price verdict and the record are different questions. They used to
+    // be ranked against each other; the residual correlates -0.267 with win
+    // rate, so the comparison was noise. Both show, neither arbitrates.
     const tierItems = [
-      { name: "Rage", ours: 0.72, community: 0.44, tier_ours: "S", tier_community: "C" },
+      { name: "Rage", score: 0.55, win_rate: 0.58, matches: 2000, tier_score: "S" },
     ] as unknown as ItemTierEntry[];
     render(shop({ openItem: "Rage", tierItems }));
     const dialog = within(screen.getByRole("dialog"));
-    expect(dialog.getByText("0.72")).toBeInTheDocument();
-    expect(dialog.getByText("0.44")).toBeInTheDocument();
+    expect(dialog.getByText("58%")).toBeInTheDocument();
+    expect(dialog.getByText("2.0k")).toBeInTheDocument();
+    expect(dialog.getByText("S")).toBeInTheDocument();
   });
 
   it("is a real dialog with a close control", () => {
@@ -167,8 +186,7 @@ describe("ItemsShop — filters", () => {
   it("reports the narrowed count against the whole set", () => {
     render(shop());
     fireEvent.change(screen.getByLabelText(/search items by name/i), { target: { value: "rage" } });
-    // Scoped: the headline claim also reads "1 of 3".
-    expect(screen.getByTestId("items-count")).toHaveTextContent("1 of 3");
+    expect(screen.getByTestId("items-count")).toHaveTextContent("1 of 4");
   });
 });
 

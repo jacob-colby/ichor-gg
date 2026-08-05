@@ -10,7 +10,10 @@ passive: null
 builds_from:
 - Reliquary
 - Gem
-builds_into: []
+builds_into:
+- Alchemist Coat
+- Ancient Signet
+- Soul Reaver
 source_url: https://wiki.smite2.com/w/Soul_Reliquary
 last_verified: '2026-08-01'
 ---

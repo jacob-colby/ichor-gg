@@ -7,7 +7,14 @@ stats:
   Max Health: '75'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Battle Axe
+- Flaming Pearl
+- Medal of Defense
+- Medal of Disruption
+- Odigba
+- Olmec Blue
+- Veve Charm
 source_url: https://wiki.smite2.com/w/Medallion
 last_verified: '2026-08-01'
 ---

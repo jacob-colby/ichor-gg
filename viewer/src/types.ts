@@ -55,8 +55,9 @@ export interface Item {
   effect_tags?: string[];
   efficiency_tier?: string | null;
   /** The gold-value model's working, not just its verdict. Null for items
-   * outside the scored pool: non-numeric cost, and tier-1 starters, which are
-   * passive-priced and deliberately sit out the regression.
+   * outside the scored pool: non-numeric cost, tier-1 starters (passive-priced,
+   * so they sit out the regression), and statless items, whose "residual" is
+   * just their cost against the intercept and means nothing at all.
    * `cost - predicted_cost === residual` holds exactly. */
   efficiency?: {
     /** What the item's stats are worth at the fitted per-stat gold prices. */
@@ -65,6 +66,10 @@ export interface Item {
     residual: number;
     /** Min-max normalised value across the scored set, 1 = best value. */
     score: number;
+    /** Whether this price belongs on a ranking against every other item.
+     *  False for god-specific items: the number is real, but only one god can
+     *  act on it, so it sorts with its own kind rather than heading the board. */
+    comparable?: boolean;
   } | null;
   /** Community record. `matches` is the item's own denominator from the god
    *  index; `gods` is the legacy fallback (a count of builds listing it, not
@@ -161,25 +166,43 @@ export interface RosterGod {
   thumb?: string;
 }
 
+/** One subject's standing, measured from real matches.
+ *
+ * This used to carry two scores — `ours` and `community` — and the site led
+ * with the disagreement between them. `ours` for a god was the mean blended
+ * score of the six items we picked for it, which measured nothing about the
+ * god; against real win rates it correlated +0.28, while the model's own half
+ * of it correlated −0.117. See `pipeline/smite/tierlist.py` for the numbers.
+ * There is one ranking now, and it comes from outcomes. */
 export interface TierEntry {
   name: string;
-  ours: number | null;
-  community: number | null;
-  tier_ours: "S" | "A" | "B" | "C" | null;
-  tier_community: "S" | "A" | "B" | "C" | null;
-  /** Matches behind the community figure. Absent where the score came from
-   *  the aspect fallback, which has no denominator. */
-  community_matches?: number | null;
+  /** Wilson lower bound on real wins/matches — the ranking. Null when the
+   *  sample is too thin to say anything, which is left unranked rather than
+   *  ranked badly. */
+  score: number | null;
+  /** The raw observed rate, shown next to the bound so a reader can see what
+   *  confidence cost. Never ranked on. */
+  win_rate?: number | null;
+  /** The denominator. 44 matches and 670 read identically without it. */
+  matches?: number | null;
+  tier_score: "S" | "A" | "B" | "C" | null;
 }
 
 export interface GodTierEntry extends TierEntry {
   role?: string;
   damage_type?: string;
+  /** This god's share of the analysed matches. Popularity, deliberately kept
+   *  apart from performance: they are different questions. */
+  play_share?: number | null;
 }
 
 export interface ItemTierEntry extends TierEntry {
   tier?: number | string;
   efficiency_tier?: string | null;
+  /** Normalised gold-efficiency residual — "does it cost less than its stats
+   *  are worth". A property of the item, not a competing ranking: ranking on
+   *  it put it against win rate, and it correlated −0.267. */
+  value?: number | null;
 }
 
 export interface PatchDelta {

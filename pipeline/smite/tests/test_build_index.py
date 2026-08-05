@@ -193,18 +193,19 @@ def test_build_index_emits_tierlist_with_gods_and_items():
     assert set(tl) == {"gods", "items"} | {m.lower() for m in recommend.MODES}
     assert tl["gods"] and tl["items"]
     god = tl["gods"][0]
-    assert {"name", "role", "damage_type", "ours", "community", "tier_ours", "tier_community"} <= set(god)
+    assert {"name", "role", "damage_type", "score", "win_rate", "matches",
+            "play_share", "tier_score"} <= set(god)
     item = tl["items"][0]
-    assert {"name", "tier", "efficiency_tier", "ours", "community", "tier_ours", "tier_community"} <= set(item)
+    assert {"name", "tier", "efficiency_tier", "score", "win_rate", "matches",
+            "value", "tier_score"} <= set(item)
+    # One ranking, and it comes from outcomes. The model's own placement used
+    # to ship beside it and lead the site; it measured -0.117 against real god
+    # strength, so it is gone rather than demoted.
+    assert not {"ours", "community", "tier_ours", "tier_community"} & set(god)
     # The invariant is that a missing score is left unranked, never bucketed.
-    # This used to assert "some god has no community tier", which held only
-    # while coverage was partial — the god index now covers every god, so
-    # that proxy started failing on a genuine improvement. Test the rule.
-    assert all((g["community"] is None) == (g["tier_community"] is None)
-               for g in tl["gods"])
-    # Joust is the stable case: the community source has no Joust data at all,
-    # so none of those entries may carry an invented tier.
-    assert all(g["tier_community"] is None for g in tl["joust"]["gods"])
+    assert all((g["score"] is None) == (g["tier_score"] is None) for g in tl["gods"])
+    # Joust has no outcome data at all, so nothing there may carry a tier.
+    assert all(g["tier_score"] is None for g in tl["joust"]["gods"])
     # Legacy top level mirrors Conquest exactly.
     assert tl["gods"] == tl["conquest"]["gods"]
     assert tl["items"] == tl["conquest"]["items"]
@@ -216,9 +217,13 @@ def test_build_index_emits_joust_tierlist_shaped_like_conquest():
     r = build_index.build_index(Path(__file__).resolve().parents[3])
     tl = r["tierlist"]
     assert set(tl["joust"]) == {"gods", "items"}
-    assert tl["joust"]["gods"], "expected Joust gods ranking to be non-empty against real data"
+    assert tl["joust"]["gods"], "expected every god to appear in Joust, unranked"
     god = tl["joust"]["gods"][0]
-    assert {"name", "role", "damage_type", "ours", "community", "tier_ours", "tier_community"} <= set(god)
+    assert {"name", "role", "damage_type", "score", "tier_score"} <= set(god)
+    # Present but unplaced. SmiteBrain publishes no Joust results, so ranking
+    # these on anything would mean inventing it — which is what the model's
+    # own score was doing here.
+    assert god["score"] is None
 
 
 def test_build_index_emits_patch_notes_as_list():

@@ -1,23 +1,23 @@
-/* THESIS: Home owns one idea — where this model disagrees with the meta, and
- * why that disagreement is the product. It refuses the category-default app
- * home (search box + recents + a row of stat tiles) and it refuses the flat
- * ranked list, because a flat list of 0.45–0.55 scores hides the fact that the
- * disagreement is systematic by lane rather than scattered.
+/* THESIS: Home owns one idea — this roster is measured, and some of what wins
+ * is not what gets played. It used to own a different one: "where this model
+ * disagrees with the meta, and why that disagreement is the product." That
+ * disagreement was the headline and it did not survive measurement. The god
+ * ranking behind it correlated -0.117 with real god strength, the item ranking
+ * -0.267 with item win rate, and "51 of 87 placed differently" was LESS
+ * disagreement than two unrelated rankings produce (75%). What replaced it is
+ * a claim about the community's own two numbers — how much a god wins, and how
+ * often anyone plays it — which is a gap we can actually evidence.
  * OWN-WORLD: Arena Night, unchanged. Near-black stepped surfaces, hairline
- * rules instead of cards, mono micro-labels, torchlight gold kept rare and
- * load-bearing. Divergence direction reuses the existing `under`/`premium`
- * signal pair — same meaning as on items, widened to gods.
- * STORY: a player sees that we disagree with the meta on most ranked gods,
- * finds their own lane as a column, and spots one name they'll argue with in
- * seconds. Then they click it.
- * FIRST VIEWPORT: a claim in display type with its numbers computed live, a
- * mono instrument line, search on the right; beneath it the lane board — five
- * columns ranked by disagreement, each headed by that lane's mean lean, so the
- * systematic pattern is visible rather than asserted.
+ * rules instead of cards, mono micro-labels, torchlight gold kept rare. `under`
+ * now marks one thing only: wins well, rarely played.
+ * STORY: a player sees the roster ranked on real results, finds their lane, and
+ * spots a god worth learning because nobody else has.
+ * FIRST VIEWPORT: a claim in display type with its numbers computed live, the
+ * sample it rests on, and the handful of names worth acting on.
  * FORM: Lane Board, position 3 of the ordered list, seed key c96ae713.
  */
 import { useMemo, useState } from "react";
-import type { God, IndexData, ItemTierEntry, PatchPeriod, TierEntry, TierListData } from "../types";
+import type { God, IndexData, ItemTierEntry, PatchPeriod, TierListData } from "../types";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { usePins } from "../lib/pins";
 import { iconSlug } from "../lib/builds";
@@ -25,12 +25,9 @@ import { godLane, laneTextClass } from "../lib/roleAccent";
 import { relativeDate } from "../lib/relativeDate";
 import { useDraft, encodeDraftHash, MODE_TEAM_SIZE } from "../lib/draft";
 import {
-  buildDivergenceBoard, deltaText,
-  type Divergence, type LaneColumn,
-} from "../lib/divergence";
-import { biggestArguments, type Argument } from "../lib/tierBands";
-import { TierLadder } from "./TierLadder";
-import { VERDICT_TEXT, VERDICT_WORD, VERDICT_SPOKEN } from "../lib/verdictWords";
+  buildStandingsBoard, rateText, matchesText,
+  type Standing, type LaneColumn,
+} from "../lib/standings";
 import { CommunitySource } from "./CommunitySource";
 
 /** The one label style shared by the sections below the board. */
@@ -64,221 +61,241 @@ function GodIcon({ name, className, item = false }: { name: string; className: s
   );
 }
 
-/* ── The evidence ────────────────────────────────────────────────────────
- * The half-dozen arguments actually worth having, named.
+/* ── Worth acting on ────────────────────────────────────────────────────
+ * The handful of names a player can do something with.
  *
- * This block used to compare the five lanes by how much each one leans. That
- * was a chart about the model's behaviour in aggregate: true, but it named
- * nobody, and "Solo leans −0.05" is not a thing anyone can act on. Six real
- * names — three gods, three items, furthest apart in either direction — is the
- * same claim told as the thing a player came for.
+ * This block used to name "where we argue hardest" — the gods and items our
+ * model placed furthest from the community. Those arguments turned out to be
+ * noise dressed as insight, so what is named here is measured instead:
  *
- * Gods and items are ranked separately and never pooled: see
- * `biggestArguments` for why one merged list would be all items, every time.
+ *   Gods   win well and are rarely played. Both figures are the community's
+ *          own, so this points at a gap inside their data rather than claiming
+ *          we know better than it. The usual objection — that rare gods look
+ *          strong because only specialists play them — runs the other way in
+ *          this data (play share against raw win rate is +0.25), and the
+ *          ranking is a lower bound, so a thin sample is penalised before it
+ *          can qualify.
+ *   Items  carry the most stats per gold. That is exactly what the gold model
+ *          measures and all it measures: it does NOT predict whether an item
+ *          wins (correlation -0.267), so the label says what was measured and
+ *          the item's own win rate is printed beside it.
  */
-const ARGUMENTS_SHOWN = 3;
+const NAMES_SHOWN = 3;
 
-function ArgumentRow({ arg, item }: { arg: Argument<TierEntry>; item: boolean }) {
-  const { entry, verdict } = arg;
-  const tone = VERDICT_TEXT[verdict];
+function NameRow({ name, item, figure, note, tone }: {
+  name: string; item: boolean; figure: string; note: string; tone: string;
+}) {
   return (
     <li>
       <a
-        href={item ? toHash.item(entry.name) : toHash.god(entry.name)}
-        aria-label={`${entry.name}: the community places it ${entry.tier_community}, we place it ${entry.tier_ours} — ${VERDICT_SPOKEN[verdict]}`}
-        className="press grid grid-cols-[20px_minmax(0,1fr)_auto_4.75rem] items-center gap-x-2 rounded-md px-1.5 py-1 transition-colors duration-[150ms] ease-standard hover:bg-bg2"
+        href={item ? toHash.item(name) : toHash.god(name)}
+        aria-label={name + ": " + note}
+        className="press grid grid-cols-[20px_minmax(0,1fr)_auto] items-center gap-x-2 rounded-md px-1.5 py-1.5 transition-colors duration-[150ms] ease-standard hover:bg-bg2"
       >
-        <GodIcon name={entry.name} item={item} className="h-5 w-5" />
-        <span className="truncate font-display text-small font-semibold text-ink">{entry.name}</span>
-        {/* The movement, not a gap figure: the tier they'd be at, and the tier
-            we'd put them at. Only the destination takes the colour — the
-            community's placement is the neutral starting point. */}
-        <span aria-hidden="true" className="font-mono text-label text-faint">
-          {entry.tier_community}
-          <span className="px-1 text-muted">→</span>
-          <span className={tone}>{entry.tier_ours}</span>
-        </span>
-        <span aria-hidden="true" className={`text-right text-label ${tone}`}>
-          {VERDICT_WORD[verdict]}
-        </span>
+        <GodIcon name={name} item={item} className="h-5 w-5" />
+        <span className="truncate font-display text-small font-semibold text-ink">{name}</span>
+        <span aria-hidden="true" className={"text-right font-mono text-label " + tone}>{figure}</span>
       </a>
     </li>
   );
 }
 
-function ArgumentGroup({ label, set, item }: {
-  label: string; set: ReturnType<typeof biggestArguments<TierEntry>>; item: boolean;
+function WorthActingOn({ board, tierlist, source }: {
+  board: ReturnType<typeof buildStandingsBoard>;
+  tierlist?: TierListData;
+  source?: IndexData["community_source"];
 }) {
-  if (set.top.length === 0) return null;
-  return (
-    <>
-      <p className="mt-2.5 border-t border-line pt-2 text-label text-faint">
-        <span className="text-ink-soft">{label}</span>
-        <span className="px-1">·</span>
-        {/* What the three are a sample of, so a short list can't read as the
-            whole disagreement. */}
-        <span className="font-mono">{set.disputed}</span> of{" "}
-        <span className="font-mono">{set.ranked}</span> placed differently
-      </p>
-      <ul className="mt-0.5 flex flex-col">
-        {set.top.map((a) => <ArgumentRow key={a.entry.name} arg={a} item={item} />)}
-      </ul>
-    </>
+  const hidden = useMemo(
+    () => board.lanes
+      .flatMap((c) => c.rows)
+      .filter((r) => r.underplayed)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, NAMES_SHOWN),
+    [board],
   );
-}
-
-function BiggestArguments({ tierlist, source }: { tierlist?: TierListData; source?: IndexData["community_source"] }) {
-  const gods = useMemo(() => biggestArguments(tierlist?.gods ?? [], ARGUMENTS_SHOWN), [tierlist]);
-  // Full items only. Tiers 1–2 are components and starters — things you pass
-  // through on the way to a build, not things you choose — so an argument
-  // about one isn't an argument anybody can act on. Unfiltered, two of the
-  // three loudest item disagreements were components.
-  const items = useMemo(
-    () => biggestArguments(
-      (tierlist?.items ?? []).filter((e) => (e as ItemTierEntry).tier === 3),
-      ARGUMENTS_SHOWN,
-    ),
+  // Full items only. Tiers 1-2 are components and starters — things you pass
+  // through, not things you choose — so "best value" among them is not a
+  // choice anybody makes.
+  const value = useMemo(
+    () => ((tierlist?.items ?? []) as ItemTierEntry[])
+      .filter((e) => e.tier === 3 && typeof e.value === "number")
+      .sort((a, b) => (b.value ?? 0) - (a.value ?? 0))
+      .slice(0, NAMES_SHOWN),
     [tierlist],
   );
-  if (gods.top.length === 0 && items.top.length === 0) return null;
+  if (hidden.length === 0 && value.length === 0) return null;
 
   return (
-    <section aria-labelledby="home-args-h" className="w-full lg:max-w-[600px] lg:flex-1">
-      <div className="flex items-baseline justify-between gap-3">
-        <h2 id="home-args-h" className={sectionLabel}>Where we argue hardest</h2>
-        <span className="text-label text-faint">community tier → ours</span>
-      </div>
-      <ArgumentGroup label="Gods" set={gods} item={false} />
-      <ArgumentGroup label="Items" set={items} item={true} />
-      {/* Stated where the comparison is, not buried in a help page. */}
+    <section aria-labelledby="home-names-h" className="w-full lg:max-w-[600px] lg:flex-1">
+      <h2 id="home-names-h" className={sectionLabel}>Worth a look</h2>
+
+      {hidden.length > 0 && (
+        <>
+          <p className="mt-2.5 border-t border-line pt-2 text-label text-faint">
+            <span className="text-ink-soft">Gods that win and nobody plays</span>
+            <span className="px-1">·</span>
+            <span className="font-mono">{board.underplayed}</span> of{" "}
+            <span className="font-mono">{board.ranked}</span> measured
+          </p>
+          <ul className="mt-0.5 flex flex-col">
+            {hidden.map((r) => (
+              <NameRow key={r.name} name={r.name} item={false} tone="text-under"
+                figure={rateText(r.winRate) + " · " + rateText(r.playShare) + " played"}
+                note={"wins " + rateText(r.winRate) + " over " + matchesText(r.matches)
+                      + " matches, played in " + rateText(r.playShare) + " of them"} />
+            ))}
+          </ul>
+        </>
+      )}
+
+      {value.length > 0 && (
+        <>
+          <p className="mt-2.5 border-t border-line pt-2 text-label text-faint">
+            <span className="text-ink-soft">Most stats per gold</span>
+            <span className="px-1">·</span>
+            what the item model measures, and all it measures
+          </p>
+          <ul className="mt-0.5 flex flex-col">
+            {value.map((e) => (
+              <NameRow key={e.name} name={e.name} item tone="text-ink-soft"
+                figure={rateText(e.win_rate) + " win"}
+                note={"cheap for its stats; wins " + rateText(e.win_rate)} />
+            ))}
+          </ul>
+        </>
+      )}
+
       <CommunitySource source={source} className="mt-2.5 border-t border-line pt-2" />
     </section>
   );
 }
 
-/* ── The claim ───────────────────────────────────────────────────────────
- * The page's one argument, with every number in it computed from the index
- * rather than written down. When there's no tier list to compare against, the
- * claim steps back to what the model does instead of inventing a statistic.
- */
-/* The claim, led by the half a player can act on.
+/* ── The claim ──────────────────────────────────────────────────────────
+ * The page's one argument, every number in it computed from the index rather
+ * than written down.
  *
- * It used to read "We disagree with the meta on 53 of 69 ranked gods" — a
- * sentence about the model's aggregate behaviour, true and inert. Nobody
- * opens a build site to find out how often two rankings differ; they open it
- * to find the god the meta is sleeping on. Same numbers, counted the same
- * way, pointed at the reader instead of at the method. */
-function Claim({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
-  const { modelHigher, metaHigher, ranked } = board;
+ * It used to read "The community underrates 26 gods" — which rested on our
+ * model out-ranking theirs, and measurement did not support that. What it says
+ * now needs no such claim: both halves are the community's own figures, and
+ * the sentence only points at the distance between them.
+ */
+function Claim({ board }: { board: ReturnType<typeof buildStandingsBoard> }) {
   const gold = (n: number) => <span className="text-gold">{n} god{n === 1 ? "" : "s"}</span>;
-
-  if (modelHigher > 0) {
-    return <>The community underrates {gold(modelHigher)}.</>;
+  if (board.underplayed > 0) {
+    return <>{gold(board.underplayed)} win more than anyone plays them.</>;
   }
-  // Degenerate but real: an index where the model never rates a god above the
-  // community still has to say something true rather than "underrates 0".
-  if (metaHigher > 0) {
-    return <>The community overrates {gold(metaHigher)}.</>;
-  }
-  return <>The community and this model agree on all {gold(ranked)}.</>;
+  return <>{gold(board.ranked)} ranked on results, not on guesswork.</>;
 }
 
 function StateBlock({ board, tierlist, source, ranked }: {
-  board: ReturnType<typeof buildDivergenceBoard>;
+  board: ReturnType<typeof buildStandingsBoard>;
   tierlist?: TierListData;
   source?: IndexData["community_source"];
   ranked: number;
 }) {
-  const comparable = ranked > 0;
+  const measured = ranked > 0;
   return (
     <header className="border-b border-line pb-6">
-      {/* Two columns that do different jobs: the argument, and the evidence
-          for it. This used to be the claim beside a search field; when search
-          moved into the shell the right column was left holding a single
-          16px line of counts, leaving a 645px hole across the middle of the
-          page's most important block — and those counts already appeared in
-          the subject header two rules above. */}
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:gap-12">
         <div className="min-w-0 lg:max-w-[46ch]">
           <h1 className="max-w-[19ch] text-balance font-display text-display font-bold leading-[1.1] tracking-[-0.01em] text-ink sm:text-display">
-            {comparable ? <Claim board={board} /> : <>Builds scored by a model, not by what&rsquo;s popular.</>}
+            {measured ? <Claim board={board} /> : <>Builds with the reasoning shown.</>}
           </h1>
-          {/* "the community's high-elo meta" overclaimed twice over: the
-              signal is win rates from top-ranked Conquest play, not a meta
-              anyone published, and "meta" implied a considered consensus
-              ranking. And "it'd move N the other way" collides with the
-              headline's own count whenever the two happen to match — as they
-              currently do, at 24 each — so it says "another". */}
           <p className="mt-3 max-w-[64ch] text-body leading-relaxed text-ink-soft">
-            ichor fits a gold-value model to item stats to find what&rsquo;s underpriced for a
-            god&rsquo;s kit, then weighs that against community win rates from top-ranked
-            Conquest play.
-            {comparable
-              ? <> It&rsquo;d move another {board.metaHigher} the other way, and it agrees on the rest.</>
-              : " Community comparison isn't in this index yet, so nothing below is ranked against it."}
+            ichor builds every god a six-item core and shows its working — what each item costs
+            against what its stats are worth, and what this god&rsquo;s players actually buy instead.
+            {measured
+              ? <> Gods are ranked on their own win rates in top-ranked Conquest play,
+                  never on anything this site models.</>
+              : " No community results in this index yet, so nothing below is ranked."}
           </p>
         </div>
 
-        {comparable && <BiggestArguments tierlist={tierlist} source={source} />}
+        {measured && <WorthActingOn board={board} tierlist={tierlist} source={source} />}
       </div>
     </header>
   );
 }
 
-/** What the two marks are. The rungs no longer need explaining here — each bar
- * now names its own tiers underneath, so the only thing left to say is which
- * mark belongs to whom. */
+/** What the marks mean. One ranking now, not two, so the only things left to
+ * explain are the direction of a bar and the one flag on the page. */
 function BoardKey() {
   return (
     <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-label text-faint">
       <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="inline-block h-3.5 w-[2px] rounded-[1px] bg-ink" />
-        Community
+        <span aria-hidden="true" className="inline-block h-[3px] w-6 rounded-[1px] bg-gold/70" />
+        Wins above even
       </span>
       <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="mark inline-block h-4 w-[9px] bg-gold" />
-        Us
+        <span aria-hidden="true" className="inline-block h-[3px] w-6 rounded-[1px] bg-line-strong" />
+        Below even
       </span>
       <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="inline-block h-[3px] w-6 rounded-[1px] bg-under/45" />
-        We&rsquo;d rank higher
-      </span>
-      <span className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="inline-block h-[3px] w-6 rounded-[1px] bg-premium/45" />
-        We&rsquo;d rank lower
+        <span aria-hidden="true" className="text-under">rare</span>
+        Wins well, rarely played
       </span>
     </div>
   );
 }
 
-/** A single god's disagreement: who it is, our verdict on it, and the two
- * placements that verdict comes from. */
-function DivergenceRow({ row }: { row: Divergence }) {
+/** A win rate drawn as its distance from even.
+ *
+ * The old bar drew two placements on a tier ladder, which only meant something
+ * while there were two rankings. This draws the one number the row is ranked
+ * on. Even sits at the centre so the eye reads direction before magnitude: the
+ * whole roster lives between about 36% and 58%, and a bar drawn from zero would
+ * make every god look identical. */
+const WIN_SPAN = 0.12;   // ±12 points covers the observed range with room.
+
+function WinBar({ rate }: { rate: number | null }) {
+  if (rate == null) return null;
+  const offset = Math.max(-1, Math.min(1, (rate - 0.5) / WIN_SPAN));
+  const pct = Math.abs(offset) * 50;
+  const above = offset >= 0;
+  return (
+    <span aria-hidden="true" className="relative block h-[3px] w-full rounded-[1px] bg-bg3">
+      <span
+        className={"absolute top-0 h-full rounded-[1px] " + (above ? "bg-gold/70" : "bg-line-strong")}
+        style={above ? { left: "50%", width: pct + "%" } : { right: "50%", width: pct + "%" }}
+      />
+      <span className="absolute left-1/2 top-[-2px] h-[7px] w-px -translate-x-1/2 bg-line" />
+    </span>
+  );
+}
+
+/** One god: who it is, what it wins, and how much play that rests on. */
+function StandingRow({ row }: { row: Standing }) {
   return (
     <li>
       <button
         type="button"
         onClick={() => navigate(toHash.god(row.name))}
-        // The arithmetic isn't gone, it's demoted: spoken in full here, on
-        // hover in the tooltip, and in full on the god's own page.
-        aria-label={`${row.name}: we place it ${row.tierOurs}, the community places it ${row.tierCommunity} — ${VERDICT_SPOKEN[row.verdict]}. Model score ${row.ours.toFixed(2)}, community ${row.community.toFixed(2)}${
-          row.communityMatches ? ` over ${row.communityMatches.toLocaleString("en-US")} matches` : ""}.`}
-        title={`${row.name} — model ${row.ours.toFixed(2)} · community ${row.community.toFixed(2)} (${deltaText(row.delta)})${
-          row.communityMatches ? ` · ${row.communityMatches.toLocaleString("en-US")} community matches` : ""}`}
+        aria-label={row.name + ": " + row.band + " tier, wins " + rateText(row.winRate)
+          + " over " + (row.matches?.toLocaleString("en-US") ?? "an unreported number of")
+          + " matches, played in " + rateText(row.playShare) + " of them"
+          + (row.underplayed ? " — wins well and is rarely played" : "") + "."}
+        title={row.name + " — " + rateText(row.winRate) + " win over "
+          + (row.matches?.toLocaleString("en-US") ?? "?") + " matches · "
+          + rateText(row.playShare) + " play share"}
         className="press grid w-full grid-cols-[20px_minmax(0,1fr)_auto_auto] items-center gap-x-2 gap-y-1.5 rounded-md px-1.5 py-1.5 text-left transition-colors duration-[150ms] ease-standard hover:bg-bg2"
       >
         <GodIcon name={row.name} className="h-5 w-5" />
-        <span className="truncate font-display text-small font-semibold text-ink">{row.name}</span>
-        <span aria-hidden="true" className={`shrink-0 text-label ${VERDICT_TEXT[row.verdict]}`}>
-          {VERDICT_WORD[row.verdict]}
+        <span className="truncate font-display text-small font-semibold text-ink">
+          {row.name}
+          {row.underplayed && (
+            <span aria-hidden="true" className="ml-1.5 align-middle text-label text-under">rare</span>
+          )}
         </span>
-        {/* How much play the verdict rests on. Two rows read as equally sure
-            without it, and the thinnest here is 175 matches against 2,533. */}
+        <span aria-hidden="true" className="shrink-0 font-mono text-label text-ink-soft">
+          {rateText(row.winRate)}
+        </span>
+        {/* How much play the row rests on. Two rows read as equally sure
+            without it, and these run from 44 matches to 670. */}
         <span aria-hidden="true" className="shrink-0 font-mono text-micro text-faint">
-          {row.communityMatches ? row.communityMatches.toLocaleString("en-US") : ""}
+          {matchesText(row.matches)}
         </span>
         <span className="col-span-4 block">
-          <TierLadder ourStep={row.ourStep} theirStep={row.theirStep} verdict={row.verdict} />
+          <WinBar rate={row.winRate} />
         </span>
       </button>
     </li>
@@ -287,55 +304,48 @@ function DivergenceRow({ row }: { row: Divergence }) {
 
 const ROWS_PER_LANE = 6;
 
-/** One lane, ranked by how hard the two sources disagree. The column header
- * carries the lane's overall lean, which is where a systematic pattern —
- * every Carry rated below the meta, say — becomes visible. */
+/** One lane, best first. */
 function LaneBoardColumn({ col, index }: { col: LaneColumn; index: number }) {
   const shown = col.rows.slice(0, ROWS_PER_LANE);
   const rest = col.rows.length - shown.length;
 
   return (
     <section
-      style={{ ["--bar-delay" as string]: `${index * 70}ms` }}
+      style={{ ["--bar-delay" as string]: index * 70 + "ms" }}
       className="min-w-0 xl:border-l xl:border-line xl:pl-4 xl:first:border-l-0 xl:first:pl-0"
     >
-      <h3 className={`font-display text-body font-bold tracking-[0.02em] ${laneTextClass(col.lane)}`}>
+      <h3 className={"font-display text-body font-bold tracking-[0.02em] " + laneTextClass(col.lane)}>
         {col.lane}
       </h3>
-      {/* The lane's lean moved up into `LaneLeans`, which compares all five
-          at once; repeating it here put the same figure 200px from itself. */}
       {col.rows.length === 0 && (
-        <p className="mt-0.5 text-label text-faint">no ranked gods</p>
+        <p className="mt-0.5 text-label text-faint">no measured gods</p>
       )}
 
       <ul className="mt-2.5 flex flex-col border-t border-line pt-1.5">
-        {shown.map((row) => <DivergenceRow key={row.name} row={row} />)}
+        {shown.map((row) => <StandingRow key={row.name} row={row} />)}
       </ul>
 
-      {(rest > 0 || col.unranked > 0) && (
+      {(rest > 0 || col.unmeasured > 0) && (
         <p className="mt-1.5 px-1.5 text-label text-faint">
           {rest > 0 && <>+{rest} more</>}
-          {rest > 0 && col.unranked > 0 && <span className="px-1">·</span>}
-          {col.unranked > 0 && <>{col.unranked} unranked</>}
+          {rest > 0 && col.unmeasured > 0 && <span className="px-1">·</span>}
+          {col.unmeasured > 0 && <>{col.unmeasured} not measured</>}
         </p>
       )}
     </section>
   );
 }
 
-/** The board. Absent entirely on an index with no tier list — the same rule
- * the rest of this page follows, rather than an empty shell. */
-function DivergenceBoard({ board }: { board: ReturnType<typeof buildDivergenceBoard> }) {
-  // Nothing comparable means no board at all — five columns of "no ranked
-  // gods" under a key explaining bar lengths is exactly the empty shell the
-  // rest of this page refuses. StateBlock already reports the unranked count.
+/** The board. Absent entirely on an index with no results — the same rule the
+ * rest of this page follows, rather than an empty shell. */
+function StandingsBoard({ board }: { board: ReturnType<typeof buildStandingsBoard> }) {
   if (board.ranked === 0) return null;
 
   return (
-    <section data-testid="home-divergence" aria-labelledby="home-divergence-h" className="pt-7">
+    <section data-testid="home-standings" aria-labelledby="home-standings-h" className="pt-7">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
-        <h2 id="home-divergence-h" className="font-display text-lead font-bold text-ink">
-          Where we disagree
+        <h2 id="home-standings-h" className="font-display text-lead font-bold text-ink">
+          What actually wins
         </h2>
         <a
           href={toHash.tiers()}
@@ -348,20 +358,17 @@ function DivergenceBoard({ board }: { board: ReturnType<typeof buildDivergenceBo
         <BoardKey />
       </div>
 
-      {/* Row gap rather than `divide-y`: at sm/lg the five lanes wrap, and a
-          divider drawn per grid child lands in the wrong places once they do.
-          Each column carries its own rule above its rows instead. */}
       <div className="mt-4 grid grid-cols-1 gap-x-5 gap-y-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {board.lanes.map((col, i) => (
           <LaneBoardColumn key={col.lane} col={col} index={i} />
         ))}
       </div>
 
-      {board.unranked > 0 && (
+      {board.unmeasured > 0 && (
         <p className="mt-6 max-w-[72ch] border-t border-line pt-3 text-small leading-relaxed text-muted">
-          <span className="text-ink-soft">{board.unranked} of {board.total} gods have no community data yet.</span>{" "}
-          They&rsquo;re left unranked rather than given an invented tier, so they don&rsquo;t appear above —
-          the model still scores them on their own.
+          <span className="text-ink-soft">{board.unmeasured} of {board.total} gods have too few tracked matches to place.</span>{" "}
+          They&rsquo;re left out rather than given an invented tier &mdash; &ldquo;we didn&rsquo;t measure this&rdquo;
+          and &ldquo;this is bad&rdquo; are different facts. Their builds work the same.
         </p>
       )}
     </section>
@@ -542,12 +549,12 @@ function Freshness({ dataUpdated, dataPatch }: { dataUpdated?: string; dataPatch
 }
 
 export function Home({ data }: { data: IndexData }) {
-  const board = useMemo(() => buildDivergenceBoard(data.tierlist?.gods), [data.tierlist]);
+  const board = useMemo(() => buildStandingsBoard(data.tierlist?.gods), [data.tierlist]);
 
   return (
     <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 pt-7 sm:px-6 sm:pt-9">
       <StateBlock board={board} tierlist={data.tierlist} source={data.community_source} ranked={board.ranked} />
-      <DivergenceBoard board={board} />
+      <StandingsBoard board={board} />
       <div className="mt-7 flex flex-col gap-6">
         <DraftSeam />
         <PinnedSection gods={data.gods} />

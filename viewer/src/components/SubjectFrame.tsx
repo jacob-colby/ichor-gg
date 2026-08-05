@@ -12,7 +12,7 @@
  */
 import type { God, GodTierEntry } from "../types";
 import { godLane, laneTextClass, godRoleTextClass, damageTextClass } from "../lib/roleAccent";
-import { deltaText } from "../lib/divergence";
+import { rateText, matchesText } from "../lib/standings";
 import { encodeDraftHash, useDraft, MODE_TEAM_SIZE, type DraftMode } from "../lib/draft";
 import { iconSlug } from "../lib/builds";
 import { lensHash, toHash, type GodLens, type Lens, type RosterLens } from "../lib/useHashRoute";
@@ -34,13 +34,6 @@ const GOD_TABS: { lens: GodLens; label: (g: string) => string }[] = [
   { lens: "ranking", label: () => "Ranking" },
 ];
 
-function divergenceClass(tierGap: number | null): string {
-  if (tierGap == null || tierGap === 0) return "text-faint";
-  return tierGap > 0 ? "text-under" : "text-premium";
-}
-
-const TIER_INDEX: Record<string, number> = { S: 0, A: 1, B: 2, C: 3 };
-
 function GodArt({ name }: { name: string }) {
   const [tries, setTries] = useState(0);
   const cls = "h-11 w-11 shrink-0 rounded-lg object-cover sm:h-[52px] sm:w-[52px]";
@@ -57,37 +50,35 @@ function GodArt({ name }: { name: string }) {
   );
 }
 
-/** The model's placement and the community's, stated in words.
+/** What this god's record actually is, stated in words.
  *
- * This used to live inside the builds view, which meant it vanished the moment
- * you looked at the kit — even though it's the one fact that's true of the god
- * on every lens. In the frame it stays put. */
+ * This used to print the model's score against the community's and a verdict
+ * on the gap between them. The gap was the product's headline and it did not
+ * survive measurement — see `pipeline/smite/tierlist.py`. What is left is the
+ * half that was always the real measurement, plus the sample behind it, which
+ * is the thing a tier letter hides.
+ *
+ * It lives in the frame rather than the builds view because it's the one fact
+ * that stays true of the god on every lens. */
 function Verdict({ entry }: { entry?: GodTierEntry }) {
-  if (!entry || entry.ours == null) return null;
-  const unranked = entry.community == null;
-  const delta = unranked ? null : entry.ours - entry.community!;
-  const oursIdx = entry.tier_ours ? TIER_INDEX[entry.tier_ours] : null;
-  const commIdx = entry.tier_community ? TIER_INDEX[entry.tier_community] : null;
-  // S=0..C=3, so a smaller index is a better tier.
-  const tierGap = oursIdx != null && commIdx != null ? commIdx - oursIdx : null;
-
+  if (!entry) return null;
+  if (entry.score == null) {
+    return (
+      <p data-testid="god-verdict" className="mt-1 text-label text-muted">
+        not enough tracked matches to place this god
+      </p>
+    );
+  }
   return (
     <p data-testid="god-verdict" className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-label text-faint">
-      <span>model <span className="font-mono text-gold">{entry.ours.toFixed(2)}</span>
-        {entry.tier_ours && <span className="font-mono text-ink-soft"> {entry.tier_ours}</span>}</span>
-      <span>meta {unranked
-        ? <span className="text-muted">unranked</span>
-        : <><span className="font-mono text-ink-soft">{entry.community!.toFixed(2)}</span>
-            {entry.tier_community && <span className="font-mono text-ink-soft"> {entry.tier_community}</span>}</>}</span>
-      {delta != null && (
-        <span className={divergenceClass(tierGap)}>
-          <span className="hidden sm:inline">
-            {tierGap === 0 ? "same tier" : tierGap! > 0 ? "we rank higher" : "the community rates higher"}{" "}
-          </span>
-          <span className="font-mono">{deltaText(delta)}</span>
-        </span>
+      {entry.tier_score && (
+        <span>tier <span className="font-mono text-gold">{entry.tier_score}</span></span>
       )}
-      {unranked && <span className="text-muted">no community rating for this god yet</span>}
+      <span>wins <span className="font-mono text-ink-soft">{rateText(entry.win_rate)}</span></span>
+      <span>over <span className="font-mono text-ink-soft">{matchesText(entry.matches)}</span> matches</span>
+      {typeof entry.play_share === "number" && (
+        <span>picked in <span className="font-mono text-ink-soft">{rateText(entry.play_share)}</span></span>
+      )}
     </p>
   );
 }
@@ -216,10 +207,10 @@ export function SubjectFrame({
                     claim says what the model thinks of it. */}
                 <p className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-label text-faint">
                   {roster.ranked > 0 && (
-                    <span><span className="font-mono text-ink-soft">{roster.ranked}</span> ranked against the community</span>
+                    <span><span className="font-mono text-ink-soft">{roster.ranked}</span> placed on real results</span>
                   )}
                   {roster.unranked > 0 && (
-                    <span><span className="font-mono text-ink-soft">{roster.unranked}</span> unranked</span>
+                    <span><span className="font-mono text-ink-soft">{roster.unranked}</span> not measured</span>
                   )}
                 </p>
               </div>

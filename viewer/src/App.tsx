@@ -21,7 +21,7 @@ import { Wordmark } from "./components/Wordmark";
 import { relativeDate } from "./lib/relativeDate";
 import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
 import { documentTitle } from "./lib/documentTitle";
-import { buildDivergenceBoard } from "./lib/divergence";
+import { buildStandingsBoard } from "./lib/standings";
 import type { CuratedBuildEntry } from "./types";
 
 function App() {
@@ -121,10 +121,10 @@ function App() {
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
   const missingGod = !!route.god && !god;
 
-  // The frame states what's in the index; Home's claim states what the model
-  // thinks of it. Both read the same board, so the two can't drift.
-  const board = buildDivergenceBoard(data.tierlist?.gods);
-  const roster = { total: data.gods.length, ranked: board.ranked, unranked: board.unranked };
+  // The frame states what's in the index; Home's claim states what the record
+  // says about it. Both read the same board, so the two can't drift.
+  const board = buildStandingsBoard(data.tierlist?.gods);
+  const roster = { total: data.gods.length, ranked: board.ranked, unranked: board.unmeasured };
 
   // Per-mode slice, never the Conquest-mirroring top level: only Conquest has
   // community ratings, so reading `tierlist.gods` under any other mode would

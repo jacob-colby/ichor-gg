@@ -4,10 +4,10 @@ import { GodRanking } from "./GodRanking";
 import type { GodTierEntry } from "../types";
 
 const entries: GodTierEntry[] = [
-  { name: "Ymir", ours: 0.90, community: 0.30, tier_ours: "S", tier_community: "C", role: "Solo" },
-  { name: "Ra", ours: 0.70, community: 0.80, tier_ours: "A", tier_community: "S", role: "Mid" },
-  { name: "Agni", ours: 0.60, community: 0.60, tier_ours: "A", tier_community: "A", role: "Mid" },
-  { name: "Anubis", ours: 0.40, community: null, tier_ours: "C", tier_community: null, role: "Mid" },
+  { name: "Ymir", score: 0.56, win_rate: 0.60, matches: 400, play_share: 0.08, tier_score: "S", role: "Solo" },
+  { name: "Ra", score: 0.52, win_rate: 0.55, matches: 380, play_share: 0.07, tier_score: "A", role: "Mid" },
+  { name: "Agni", score: 0.50, win_rate: 0.53, matches: 300, play_share: 0.06, tier_score: "A", role: "Mid" },
+  { name: "Anubis", score: null, tier_score: null, role: "Mid" },
 ];
 
 const rank = (god: string, role: string) => (
@@ -15,44 +15,39 @@ const rank = (god: string, role: string) => (
 );
 
 describe("GodRanking — where a god sits", () => {
-  it("states the disagreement in words, both letters named", () => {
+  it("leads with the record, not with a verdict about the community", () => {
     render(rank("Ra", "Mid"));
-    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/model says\s*A.*community\s*says\s*S/is);
+    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/Ra wins\s*55%\s*of\s*380\s*tracked matches/i);
   });
 
-  it("says both agree when they do", () => {
-    render(rank("Agni", "Mid"));
-    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/Both put Agni at\s*A/i);
+  it("shows the tier and how often the god is picked", () => {
+    render(rank("Ra", "Mid"));
+    expect(screen.getByText(/tier/i)).toBeInTheDocument();
+    expect(screen.getByText(/picked in/i)).toBeInTheDocument();
   });
 
-  it("says the community hasn't rated an unranked god, rather than implying agreement", () => {
+  it("says a god with no sample is unmeasured rather than bad", () => {
+    // Every god outside Conquest. The page used to fill this gap with the
+    // site's own score, which measured -0.12 against real god strength.
     render(rank("Anubis", "Mid"));
-    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/community hasn’t rated Anubis/i);
-    expect(screen.getByText(/it isn’t agreement/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/Anubis isn’t measured in Conquest/i);
+    expect(screen.getByText(/more honest answer/i)).toBeInTheDocument();
   });
 
-  it("names the gods immediately above and below on the model's scale", () => {
+  it("names the gods immediately above and below", () => {
     render(rank("Ra", "Mid"));
     expect(screen.getByRole("link", { name: /Ymir/ })).toHaveAttribute("href", "#/god/Ymir");
     expect(screen.getByRole("link", { name: /Agni/ })).toHaveAttribute("href", "#/god/Agni");
   });
 
-  /* Adjacent gods routinely sit within 0.005 of each other. "+0.00" would
-   * assert a direction the printed figure doesn't show. */
-  it("prints a vanishing gap unsigned", () => {
-    const close: GodTierEntry[] = [
-      { name: "Fenrir", ours: 0.534, community: 0.5, tier_ours: "S", tier_community: "S", role: "Jungle" },
-      { name: "Ra", ours: 0.531, community: 0.5, tier_ours: "S", tier_community: "S", role: "Mid" },
-    ];
-    render(<GodRanking god="Ra" role="Mid" entries={close} modeLabel="Conquest" />);
-    const above = screen.getByRole("link", { name: /Fenrir/ });
-    expect(above).toHaveTextContent("0.00");
-    expect(above.textContent).not.toMatch(/[+-]0\.00/);
+  it("shows each neighbour's raw win rate", () => {
+    render(rank("Ra", "Mid"));
+    expect(screen.getByRole("link", { name: /Ymir/ })).toHaveTextContent("60%");
   });
 
-  it("says there is nothing above the top-rated god instead of leaving a blank", () => {
+  it("says there is nothing above the top-placed god instead of leaving a blank", () => {
     render(rank("Ymir", "Solo"));
-    expect(screen.getByText(/Ymir is the model’s top-rated god/i)).toBeInTheDocument();
+    expect(screen.getByText(/Ymir is the highest-placed god measured/i)).toBeInTheDocument();
   });
 
   it("gives overall, band and lane standing", () => {
@@ -63,10 +58,16 @@ describe("GodRanking — where a god sits", () => {
     expect(within(standing).getByText(/In Mid/)).toBeInTheDocument();
   });
 
-  it("explains an unscored god as a coverage gap rather than a verdict", () => {
+  it("explains a god missing from the mode as a coverage gap rather than a verdict", () => {
     render(<GodRanking god="Loki" role="Jungle" entries={entries} modeLabel="Joust" />);
-    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/Loki isn’t ranked in Joust/i);
-    expect(screen.getByText(/coverage gap in the tier list, not a verdict/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/Loki isn’t in the Joust standings/i);
+    expect(screen.getByText(/coverage gap, not a verdict/i)).toBeInTheDocument();
+  });
+
+  it("states that nothing the site models enters the order", () => {
+    // The page's whole correction, said where a reader can see it.
+    render(rank("Ra", "Mid"));
+    expect(screen.getByText(/Nothing this site models/i)).toBeInTheDocument();
   });
 
   it("links onward to the full tier list", () => {

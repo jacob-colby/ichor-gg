@@ -24,7 +24,7 @@ const data = {
   roster: [],
   data_updated: "2026-07-19",
   tierlist: {
-    gods: [{ name: "Chiron", ours: 0.47, community: 0.58, tier_ours: "C", tier_community: "A", role: "Carry" }],
+    gods: [{ name: "Chiron", score: 0.47, win_rate: 0.52, matches: 380, play_share: 0.07, tier_score: "B", role: "Carry" }],
     items: [],
   },
   god_item_scores: { Chiron: { Rage: 0.49 }, Ymir: { Rage: 0.3 } },
@@ -141,7 +141,7 @@ describe("App — a god and its lenses", () => {
     atUrl(toHash.godKit("Chiron"));
     render(<App />);
     await waitFor(() => expect(screen.getByTestId("god-verdict")).toBeInTheDocument());
-    expect(within(screen.getByTestId("god-verdict")).getByText("0.47")).toBeInTheDocument();
+    expect(within(screen.getByTestId("god-verdict")).getByText("52%")).toBeInTheDocument();
   });
 
   it("opens the per-god item ranking — data no surface used to read", async () => {
@@ -151,10 +151,11 @@ describe("App — a god and its lenses", () => {
       screen.getByRole("heading", { level: 2, name: /ranks 1 items for Chiron/i })).toBeInTheDocument());
   });
 
-  it("opens the per-god ranking against the meta", async () => {
+  it("opens the per-god ranking, led by the record rather than a comparison", async () => {
     atUrl(toHash.godRanking("Chiron"));
     render(<App />);
-    await waitFor(() => expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/the community\s*says/i));
+    await waitFor(() => expect(screen.getByRole("heading", { level: 2 }))
+      .toHaveTextContent(/Chiron wins 52% of 380 tracked matches/i));
   });
 
   it("says so plainly when a link names a god this index doesn't have", async () => {

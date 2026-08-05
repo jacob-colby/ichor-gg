@@ -1,17 +1,50 @@
-"""Rank gods and items for the viewer's tier-list page (Phase 4), per game
-mode (Task R2: Conquest + Joust).
+"""Rank gods and items by how they actually perform, per game mode.
 
-Two independent signals per subject:
-  ours       our continuous score (efficiency model for items, mean
-             suggested-core slot score for gods) — always available where the
-             underlying model produced a number.
-  community  wiki-derived signal (item.meta.win_avg / god aspect_win_rate) —
-             partial coverage; missing on purpose for the rest, never
-             backfilled or zero-filled.
+ONE RANKING, FROM OUTCOMES. `score` is the Wilson lower bound on real
+wins/matches; `tier_score` is its percentile band. Nothing our model computes
+enters it.
 
-`assign_tiers` buckets by percentile of the *ranked* subset (entries that
-have a numeric score for that key) so bucket sizes track the data present,
-not an assumed total. Entries without a score for that key are left
+WHY IT USED TO BE TWO, AND WHY THAT WAS WRONG
+
+This page shipped `ours` against `community` and led the site with the
+disagreement between them — "the community underrates 26 gods". `ours` for a
+god was the MEAN BLENDED SCORE OF THE SIX ITEMS WE PICKED FOR THEM. A god's
+base stats, ability scaling, cooldowns, crowd control and mobility appear
+nowhere in that number. Measured against those gods' real win rates
+(2026-08-05, 87 gods):
+
+    the shipped `ours` god score            +0.28
+    efficiency + fit alone (our model)      -0.117
+    the win-rate term alone                 +0.438
+
+The blend ranked WORSE than the single signal it diluted, and the model's own
+contribution pointed the wrong way. The item side was worse still: `ours`
+there was the gold-efficiency residual, correlating -0.267 with item win rate.
+
+The disagreement itself was the tell. 51 of 87 gods (59%) and 125 of 170 items
+(74%) were "placed differently" — but two UNRELATED rankings bucketed this way
+differ on 75%. The headline was reporting slightly-less-than-chance
+disagreement as insight.
+
+WHAT REPLACED IT
+
+The `community` column was always the better measurement and was sitting right
+next to the one the page argued with, so it became the ranking. Kept from the
+old design because they were the good parts: the Wilson bound (a 62% win rate
+over 133 matches and one over 2,000 are not the same claim), and unranked
+rather than bottom-ranked for thin data.
+
+A consequence worth stating: Joust and Arena have NO outcome data, so they are
+now entirely unranked. They used to be ranked on `ours` alone, which means
+every non-Conquest tier letter this project ever displayed came from the
+signal measured above at -0.117.
+
+The gold-efficiency residual still ships on each item, because "this costs
+less than its stats are worth" is a true and useful statement about stats per
+gold. It is no longer dressed up as a verdict on whether the item is good.
+
+`assign_tiers` buckets by percentile of the *ranked* subset so bucket sizes
+track the data present, not an assumed total. Entries without a score are left
 unranked (`tier_<key>` = None) rather than dumped into the bottom bucket —
 "no data" and "worst score" are different facts and must stay visually
 distinct in the viewer.
@@ -127,17 +160,6 @@ def confident_win_rate(win_rate, pick_rate):
     return 0.5 + (win_rate - 0.5) * (pick_rate / (pick_rate + SHRINKAGE_K))
 
 
-def _suggested_core(god_name, builds, mode="Conquest"):
-    """The god's suggested `mode` 'core' archetype entry, or None."""
-    for group in builds:
-        if group.get("god") != god_name or group.get("mode") != mode:
-            continue
-        for entry in group.get("builds", []):
-            if entry.get("source") == "suggested" and entry.get("archetype") == "core":
-                return entry
-    return None
-
-
 def _community_entry(god_name, builds, mode="Conquest"):
     """The god's community `mode` build entry, or None."""
     for group in builds:
@@ -150,51 +172,46 @@ def _community_entry(god_name, builds, mode="Conquest"):
 
 
 def god_rankings(gods, builds, mode="Conquest"):
-    """One entry per god: {name, role, damage_type, ours, community}.
+    """One entry per god: {name, role, damage_type, score, win_rate, matches,
+    play_share}.
 
-    ours = mean of slot_scores[item]["total"] over the god's suggested
-    `mode` core entry (None if there's no such entry, or it has no
-    slot_scores — e.g. the god was never scraped for that mode at all).
-    community = that god's community `mode` entry scored by
-    `community_score` — the Wilson lower bound on god-level wins/losses where
-    the index scrape supplied them, else the pick-rate-guarded aspect rate.
-    None when there is no community entry for that mode, or no usable sample
-    in it: unranked, never ranked badly.
+    score      the Wilson lower bound on the god's real wins/matches, else the
+               pick-rate-guarded aspect rate for notes predating the index
+               scrape. None when there is no usable sample: unranked, never
+               ranked badly.
+    win_rate   the raw observed rate, shipped alongside the bound so a reader
+               can see the difference confidence makes rather than only its
+               result. Never used for ranking.
+    matches    the denominator. Two rows that look equally confident can differ
+               by an order of magnitude — 44 matches against 670 — and the
+               reader cannot see which is which from a tier letter.
+    play_share this god's share of the analysed matches. Popularity, kept
+               separate from performance on purpose: they are different
+               questions and the old design conflated them.
+
     Conquest is the default mode for backwards compatibility with existing
     callers. Deterministic: sorted by name.
     """
     results = []
     for god in gods:
         name = god.get("name")
+        entry = _community_entry(name, builds, mode)
+        score = community_score(entry) if entry else None
 
-        ours = None
-        core = _suggested_core(name, builds, mode)
-        if core:
-            totals = [
-                v.get("total") for v in (core.get("slot_scores") or {}).values()
-                if isinstance(v, dict) and isinstance(v.get("total"), (int, float))
-            ]
-            if totals:
-                ours = sum(totals) / len(totals)
-
-        community = None
-        comm_entry = _community_entry(name, builds, mode)
-        if comm_entry:
-            community = community_score(comm_entry)
+        played = (entry or {}).get("god_matches_played")
+        won = (entry or {}).get("god_matches_won")
+        analysed = (entry or {}).get("god_matches_analyzed")
+        measured = score is not None and _is_numeric(played) and _is_numeric(won)
 
         results.append({
             "name": name,
             "role": god.get("role"),
             "damage_type": god.get("damage_type"),
-            "ours": ours,
-            "community": community,
-            # How much play the community figure rests on. Two rows that look
-            # equally confident can differ by an order of magnitude — 133
-            # matches against 2,026 — and the reader cannot see which is which
-            # from a tier letter. None where the score came from the aspect
-            # fallback, which has no denominator to report.
-            "community_matches": (comm_entry or {}).get("god_matches_played")
-                                 if community is not None else None,
+            "score": score,
+            "win_rate": (won / played) if measured and played else None,
+            "matches": played if measured else None,
+            "play_share": (played / analysed)
+                          if measured and _is_numeric(analysed) and analysed else None,
         })
 
     results.sort(key=lambda e: e["name"] or "")
@@ -202,25 +219,32 @@ def god_rankings(gods, builds, mode="Conquest"):
 
 
 def item_rankings(items, eff_scores):
-    """One entry per item: {name, tier, efficiency_tier, ours, community}.
+    """One entry per item: {name, tier, efficiency_tier, score, win_rate,
+    matches, value}.
 
-    ours = eff_scores.get(name, {}).get("score") (None if unscored — e.g.
-    tier-1 starters are deliberately excluded from the efficiency model).
-    community = the item's own win rate weighed by its match count where the
-    index supplied one, else the legacy per-god average at face value.
+    score   the Wilson bound on the item's own wins/matches — the ranking.
+    value   the gold-efficiency residual's normalised score, carried along as
+            a PROPERTY of the item rather than as a competing ranking. It
+            answers "does this cost less than its stats are worth", which is
+            true and useful and is not the same question as "is this good".
+            Ranking on it put the two in opposition and the residual lost:
+            correlation with item win rate -0.267.
+
     Deterministic: sorted by name.
     """
     results = []
     for item in items:
         name = item.get("name")
-        ours = (eff_scores.get(name) or {}).get("score")
-        community = _item_community(item.get("meta"))
+        meta = item.get("meta") or {}
+        played, won = meta.get("matches"), meta.get("matches_won")
         results.append({
             "name": name,
             "tier": item.get("tier"),
             "efficiency_tier": item.get("efficiency_tier"),
-            "ours": ours,
-            "community": community,
+            "score": _item_community(meta),
+            "win_rate": meta.get("win_avg") if _is_numeric(meta.get("win_avg")) else None,
+            "matches": played if _is_numeric(played) else None,
+            "value": (eff_scores.get(name) or {}).get("score"),
         })
 
     results.sort(key=lambda e: e["name"] or "")
@@ -296,18 +320,16 @@ def assign_tiers(entries, key):
 
 def _tierlist_for_mode(gods, builds, items, eff_scores, mode):
     """{"gods": [...], "items": [...]} for a single game mode, each entry
-    carrying both tier_ours and tier_community so the viewer can switch
-    source without recomputing.
+    banded by `tier_score`.
 
-    Items are not mode-dependent in the current data model (efficiency is a
-    global stat/cost fit; community win-rate meta is aggregated once, over
-    Conquest builds only, in build_index._attach_item_meta) — so item
-    rankings are identical across modes today. `items`/`eff_scores` are
-    still threaded through per-mode so that changes without breaking this
-    function's shape."""
+    Items are not mode-dependent in the current data model (community win-rate
+    meta is aggregated once, over Conquest builds only, in
+    build_index._attach_item_meta) — so item rankings are identical across
+    modes today. `items`/`eff_scores` are still threaded through per-mode so
+    that can change without breaking this function's shape."""
     return {
-        "gods": assign_tiers(assign_tiers(god_rankings(gods, builds, mode), "ours"), "community"),
-        "items": assign_tiers(assign_tiers(item_rankings(items, eff_scores), "ours"), "community"),
+        "gods": assign_tiers(god_rankings(gods, builds, mode), "score"),
+        "items": assign_tiers(item_rankings(items, eff_scores), "score"),
     }
 
 
@@ -320,12 +342,12 @@ def build_tierlist(gods, builds, items, eff_scores):
     Conquest entry, so the existing viewer (which reads data.tierlist.gods /
     .items directly) keeps working unmodified.
 
-    The community signal is expected to be sparse outside Conquest: SmiteBrain
-    has no Joust or Arena win/pick data, so most (real-world, not necessarily
-    all — see R2 verification notes) non-Conquest community entries carry no
-    aspect_win_rate, surfacing as tier_community: null (unranked), never a
-    fabricated value. Those modes are ranked on the model alone, which is the
-    honest reading of having no community to compare against."""
+    Joust and Arena come back UNRANKED, and that is the correction rather than
+    a regression. SmiteBrain publishes no Joust or Arena outcomes, so there is
+    nothing to rank on. They used to be ranked on the model's own score alone,
+    which measured -0.117 against real god strength — so every non-Conquest
+    tier letter this project ever showed was worse than no letter at all. The
+    viewer says "not measured in this mode" instead."""
     conquest = _tierlist_for_mode(gods, builds, items, eff_scores, "Conquest")
     joust = _tierlist_for_mode(gods, builds, items, eff_scores, "Joust")
     arena = _tierlist_for_mode(gods, builds, items, eff_scores, "Arena")

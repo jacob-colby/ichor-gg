@@ -7,7 +7,8 @@ stats:
   Mana Regen: '2'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Soul Reliquary
 source_url: https://wiki.smite2.com/w/Reliquary
 last_verified: '2026-08-01'
 ---

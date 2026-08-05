@@ -189,3 +189,43 @@ describe("goldText", () => {
     expect(goldText(undefined)).toBe("—");
   });
 });
+
+describe("buildLedger — items the community buys as a slot alternate", () => {
+  // Ratatoskr's real shape: Thistlethorn Acorn is the community's second
+  // choice in two separate slots and the headline pick in none.
+  const community: SlotEntry[] = [
+    { name: "Ashwhorl", pick_rate: 0.32, win_rate: 0.53,
+      alternates: [{ name: "Thistlethorn", pick_rate: 0.27, win_rate: 0.48 }] },
+    { name: "Jotunn", pick_rate: 0.23, win_rate: 0.46,
+      alternates: [{ name: "Thistlethorn", pick_rate: 0.17, win_rate: 0.72 },
+                   { name: "Ashwhorl", pick_rate: 0.40, win_rate: 0.20 }] },
+  ] as unknown as SlotEntry[];
+
+  const ledger = () => buildLedger({
+    preview: plain("Ashwhorl", "Thistlethorn", "Crusher"),
+    itemsByName: map(item("Ashwhorl", 2000), item("Thistlethorn", 2000), item("Crusher", 2400)),
+    communityOrder: community,
+  });
+
+  it("reports the rate for an item that only ever appears as an alternate", () => {
+    // The row used to say "meta doesn't buy this" while the popular-items
+    // panel on the same screen reported 27% pick for the same item.
+    const row = ledger().rows.find((r) => r.name === "Thistlethorn")!;
+    expect(row.metaPosition).toBeNull();        // genuinely has no slot position
+    expect(row.metaAlternatePickRate).toBe(0.27);   // best of its sightings
+    expect(row.metaAlternateWinRate).toBe(0.48);
+  });
+
+  it("keeps the slot pick authoritative over a richer alternate sighting", () => {
+    const row = ledger().rows.find((r) => r.name === "Ashwhorl")!;
+    expect(row.metaPosition).toBe(1);
+    expect(row.metaPickRate).toBe(0.32);          // not the 0.40 alternate
+    expect(row.metaAlternatePickRate).toBeNull();
+  });
+
+  it("still says nothing for an item the community genuinely never buys", () => {
+    const row = ledger().rows.find((r) => r.name === "Crusher")!;
+    expect(row.inMeta).toBe(false);
+    expect(row.metaAlternatePickRate).toBeNull();
+  });
+});

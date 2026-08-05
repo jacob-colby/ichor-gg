@@ -10,7 +10,9 @@ passive: null
 builds_from:
 - Gem
 - Bow
-builds_into: []
+builds_into:
+- Bracer of The Abyss
+- Nimble Ring
 source_url: https://wiki.smite2.com/w/Enchanted_Bracelet
 last_verified: '2026-08-01'
 ---

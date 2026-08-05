@@ -10,7 +10,11 @@ passive: 'While Below 50% Health: +10 Strength.'
 builds_from:
 - Axe
 - Scythe
-builds_into: []
+builds_into:
+- Bloodforge
+- Devourer's Gauntlet
+- Sanguine Lash
+- The Reaper
 source_url: https://wiki.smite2.com/w/Adamantine_Sickle
 last_verified: '2026-08-01'
 ---

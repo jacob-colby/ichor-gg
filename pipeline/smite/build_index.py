@@ -86,9 +86,16 @@ def _enrich_items(items, tags, eff=None):
     it, so `cost - predicted_cost == residual` holds exactly on screen — a
     surface that shows the arithmetic can't have it fail to add up.
 
-    Items outside the scored pool (non-numeric cost, and tier-1 starters, which
-    are passive-priced and deliberately sit out the fit) get `None` for both,
-    never a fabricated zero.
+    Items outside the scored pool (non-numeric cost, tier-1 starters, and
+    statless items, none of which the regression can price — see
+    `efficiency.efficiency_pool`) get `None` for both, never a fabricated zero.
+
+    `comparable` says whether the residual belongs on a ranking against every
+    other item. A god-specific item's price IS meaningful — Ashwhorl Acorn
+    really does give 3,211 gold of stats for 2,000 — but 86 of the 87 gods
+    cannot buy it, so letting it head a global "best value" board answers a
+    question nobody asked. It stays visible and priced, and sorts with its
+    own kind.
     """
     if eff is None:
         eff = {}
@@ -104,6 +111,7 @@ def _enrich_items(items, tags, eff=None):
                 "predicted_cost": it["cost"] - residual,
                 "residual": residual,
                 "score": round(scored["score"], 4),
+                "comparable": not it.get("god"),
             }
         else:
             it["efficiency"] = None
@@ -161,7 +169,7 @@ def _god_item_damage(gods, items, weights) -> dict:
             continue
         pairs = {}
         for item in items:
-            if not scoring.is_buildable(item):
+            if not scoring.is_buildable(item, god):
                 continue
             low = damage_value.item_damage_gain(god, item, SQUISHY_PROTECTION)
             high = damage_value.item_damage_gain(god, item, TANK_PROTECTION)

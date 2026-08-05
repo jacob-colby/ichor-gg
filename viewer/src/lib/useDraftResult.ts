@@ -7,7 +7,7 @@
  * drifted from itself. So the derivation lives once, here, and both surfaces
  * call it rather than each computing their own.
  */
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, God, Item, LifestealCap } from "../types";
 import { deriveThreats, threatOverlay, damageOverlay, threatCulprits, type ThreatKey } from "./threats";
 import { adaptedCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftBuild";
@@ -59,8 +59,18 @@ export interface DraftResult {
   meGod?: God;
   godsByName: Record<string, God>;
   itemsByName: Record<string, Item>;
-  /** Already on the board — SMITE forbids duplicates. */
+  /** Everyone on the board, either side. Only for "is the board empty" —
+   *  NOT for deciding what can be picked; see `takenFor`. */
   taken: Set<string>;
+  /** Gods a given slot may not take: the ones already on THAT team, minus
+   *  whoever currently occupies the slot being edited.
+   *
+   *  Per TEAM, not per board. A team cannot field two Ymirs, but the two
+   *  teams can absolutely mirror each other — every non-draft queue allows
+   *  it, and Joust and Arena are non-draft. Blocking it board-wide made a
+   *  legal and very common comp unenterable, and quietly asserted that this
+   *  tool only models ranked Conquest. */
+  takenFor: (kind: "ally" | "enemy", index: number) => Set<string>;
   enemiesKnown: number;
   roster: number;
   threatCulprits: Record<ThreatKey, string[]>;
@@ -124,8 +134,18 @@ export function useDraftResult(
     [draft.allies, draft.enemies],
   );
 
+  const takenFor = useCallback(
+    (kind: "ally" | "enemy", index: number) => {
+      const side = kind === "ally" ? draft.allies : draft.enemies;
+      // The slot's own occupant is excluded, so re-opening a filled slot
+      // doesn't show the god sitting in it greyed out.
+      return new Set(side.filter((n, i) => n && i !== index) as string[]);
+    },
+    [draft.allies, draft.enemies],
+  );
+
   return {
-    meName, meGod, godsByName, itemsByName, taken,
+    meName, meGod, godsByName, itemsByName, taken, takenFor,
     enemiesKnown: threats.enemyCount, roster: threats.rosterSize,
     threatCulprits: culprits,
     allyAllPhysical: threats.allyAllPhysical, allyCount: threats.allyCount, allyPhysical: threats.allyPhysical,

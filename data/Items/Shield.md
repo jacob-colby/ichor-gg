@@ -7,7 +7,11 @@ stats:
   Physical Protection: '6'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Captain's Ring
+- Engraved Guard
+- Legionnaire Armor
+- Medal of Defense
 source_url: https://wiki.smite2.com/w/Shield
 last_verified: '2026-08-01'
 ---

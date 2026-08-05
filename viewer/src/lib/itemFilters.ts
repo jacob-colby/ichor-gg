@@ -70,7 +70,16 @@ export type SortKey = "value" | "name" | "cost-asc" | "cost-desc";
  *
  * It used to sort by the three-bucket label, so 30 items tied for first in
  * alphabetical order and the most underpriced item in the game was not
- * findable. Unscored items sink rather than being treated as zero.
+ * findable.
+ *
+ * NOT-COMPARABLE ITEMS SINK. A god-specific item's residual is real —
+ * Ashwhorl Acorn genuinely gives 3,211 gold of stats for 2,000 — but 86 of
+ * the 87 gods cannot buy it, so heading a global "best value" board with it
+ * answers a question nobody asked. Together with the statless items the
+ * pipeline stopped scoring at all (Blink Rune read "worth 1,099g" for an item
+ * with no stats), four of this board's top six were unbuyable or meaningless.
+ * They still appear, and still show their own price; they just sort with
+ * their own kind.
  */
 export function sortItems(items: Item[], by: SortKey): Item[] {
   const arr = [...items];
@@ -79,7 +88,11 @@ export function sortItems(items: Item[], by: SortKey): Item[] {
   else if (by === "cost-asc") arr.sort((a, b) => (a.cost ?? 0) - (b.cost ?? 0) || byName(a, b));
   else if (by === "cost-desc") arr.sort((a, b) => (b.cost ?? 0) - (a.cost ?? 0) || byName(a, b));
   else {
+    const rank = (i: Item): number =>
+      i.efficiency == null ? 2 : i.efficiency.comparable === false ? 1 : 0;
     arr.sort((a, b) => {
+      const ka = rank(a), kb = rank(b);
+      if (ka !== kb) return ka - kb;
       const ra = a.efficiency?.residual, rb = b.efficiency?.residual;
       if (ra == null && rb == null) return byName(a, b);
       if (ra == null) return 1;

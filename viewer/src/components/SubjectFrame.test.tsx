@@ -19,8 +19,8 @@ describe("SubjectFrame — the roster is a first-class subject", () => {
     render(frame());
     const header = screen.getByTestId("subject-header");
     expect(header).toHaveTextContent(/All 87 gods/);
-    expect(header).toHaveTextContent(/69\s*ranked against the community/);
-    expect(header).toHaveTextContent(/18\s*unranked/);
+    expect(header).toHaveTextContent(/69\s*placed on real results/);
+    expect(header).toHaveTextContent(/18\s*not measured/);
   });
 
   /* Inventory, not argument. The header used to carry the disputed count —
@@ -88,31 +88,33 @@ describe("SubjectFrame — a god is the subject", () => {
 
 /* The verdict used to live inside the builds view, so it vanished the moment
  * you looked at the kit — even though it's the one fact that's true of the god
- * on every lens. In the frame it stays put. */
+ * on every lens. In the frame it stays put.
+ *
+ * It also used to be a comparison: our score against the community's, plus a
+ * verdict on the gap. That gap did not survive measurement, so what is left is
+ * the record and the sample behind it. */
 describe("SubjectFrame — the verdict", () => {
   const tierEntry: GodTierEntry = {
-    name: "Ra", ours: 0.47, community: 0.58, tier_ours: "C", tier_community: "A",
+    name: "Ra", score: 0.47, win_rate: 0.52, matches: 380, play_share: 0.07, tier_score: "B",
   };
 
-  it("states both scores, both tiers, and which way they disagree", () => {
+  it("states the tier, the raw rate and the sample it rests on", () => {
     render(frame({ god: ra, godName: "Ra", tierEntry }));
     const verdict = within(screen.getByTestId("god-verdict"));
-    expect(verdict.getByText("0.47")).toBeInTheDocument();
-    expect(verdict.getByText("0.58")).toBeInTheDocument();
-    expect(verdict.getByText(/community rates higher/i)).toBeInTheDocument();
-    expect(verdict.getByText(/-0\.11/)).toBeInTheDocument();
+    expect(verdict.getByText("B")).toBeInTheDocument();
+    expect(verdict.getByText("52%")).toBeInTheDocument();
+    expect(verdict.getByText("380")).toBeInTheDocument();
   });
 
-  it("says so the other way when the model rates a god above the meta", () => {
-    render(frame({ god: ra, godName: "Ra", tierEntry: { ...tierEntry, ours: 0.62, tier_ours: "S" } }));
-    expect(within(screen.getByTestId("god-verdict")).getByText(/we rank higher/i)).toBeInTheDocument();
+  it("shows how often the god is actually picked", () => {
+    render(frame({ god: ra, godName: "Ra", tierEntry }));
+    expect(within(screen.getByTestId("god-verdict")).getByText("7%")).toBeInTheDocument();
   });
 
-  it("names an unranked god as unranked rather than leaving a blank", () => {
-    render(frame({ god: ra, godName: "Ra", tierEntry: { ...tierEntry, community: null, tier_community: null } }));
-    const verdict = within(screen.getByTestId("god-verdict"));
-    expect(verdict.getByText(/unranked/i)).toBeInTheDocument();
-    expect(verdict.getByText(/no community rating for this god yet/i)).toBeInTheDocument();
+  it("says a god with no sample is unmeasured rather than leaving a blank", () => {
+    render(frame({ god: ra, godName: "Ra", tierEntry: { name: "Ra", score: null, tier_score: null } }));
+    expect(within(screen.getByTestId("god-verdict"))
+      .getByText(/not enough tracked matches/i)).toBeInTheDocument();
   });
 
   it("shows it on a lens that isn't builds", () => {

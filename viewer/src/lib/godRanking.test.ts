@@ -3,14 +3,14 @@ import { buildGodRanking, topPercent } from "./godRanking";
 import type { GodTierEntry } from "../types";
 
 const gods: GodTierEntry[] = [
-  { name: "Ymir", ours: 0.90, community: 0.30, tier_ours: "S", tier_community: "C", role: "Solo" },
-  { name: "Ra", ours: 0.70, community: 0.80, tier_ours: "A", tier_community: "S", role: "Mid" },
-  { name: "Agni", ours: 0.60, community: 0.60, tier_ours: "A", tier_community: "A", role: "Mid" },
-  { name: "Anubis", ours: 0.40, community: null, tier_ours: "C", tier_community: null, role: "Mid" },
+  { name: "Ymir", score: 0.56, win_rate: 0.60, matches: 400, tier_score: "S", role: "Solo" },
+  { name: "Ra", score: 0.52, win_rate: 0.55, matches: 380, tier_score: "A", role: "Mid" },
+  { name: "Agni", score: 0.50, win_rate: 0.53, matches: 300, tier_score: "A", role: "Mid" },
+  { name: "Anubis", score: 0.42, win_rate: 0.45, matches: 250, tier_score: "C", role: "Mid" },
 ];
 
 describe("buildGodRanking", () => {
-  it("places the god across everything the model scored", () => {
+  it("places the god across everything measured", () => {
     const r = buildGodRanking(gods, "Ra", "Mid")!;
     expect(r.overall).toBe(2);
     expect(r.scored).toBe(4);
@@ -19,18 +19,19 @@ describe("buildGodRanking", () => {
   it("places it inside its own band and its own lane", () => {
     const r = buildGodRanking(gods, "Agni", "Mid")!;
     expect(r.band).toBe("A");
-    expect(r.inBand).toBe(2);       // Ra 0.70 then Agni 0.60
+    expect(r.inBand).toBe(2);       // Ra 0.52 then Agni 0.50
     expect(r.bandSize).toBe(2);
     expect(r.inLane).toBe(2);       // Ra, Agni, Anubis are Mid
     expect(r.laneSize).toBe(3);
   });
 
-  it("names the gods immediately above and below on the model's scale", () => {
+  it("names the gods immediately above and below, with their raw rates", () => {
     const r = buildGodRanking(gods, "Ra", "Mid")!;
     expect(r.above?.name).toBe("Ymir");
-    expect(r.above?.gap).toBeCloseTo(0.20, 5);
+    expect(r.above?.winRate).toBeCloseTo(0.60, 5);
+    expect(r.above?.gap).toBeCloseTo(0.04, 5);
     expect(r.below?.name).toBe("Agni");
-    expect(r.below?.gap).toBeCloseTo(-0.10, 5);
+    expect(r.below?.gap).toBeCloseTo(-0.02, 5);
   });
 
   it("has no neighbour above for the top god, or below for the bottom", () => {
@@ -38,30 +39,7 @@ describe("buildGodRanking", () => {
     expect(buildGodRanking(gods, "Anubis", "Mid")!.below).toBeUndefined();
   });
 
-  /* S=0..C=3, so a smaller index is a better tier. Getting this backwards
-   * would colour "the meta rates higher" onto a god the model ranks two tiers
-   * above the community — the exact bug the tier list already carries a
-   * regression note about. */
-  it("signs the tier gap so positive means the model ranks it higher", () => {
-    expect(buildGodRanking(gods, "Ymir", "Solo")!.tierGap).toBe(3);   // S vs C
-    expect(buildGodRanking(gods, "Ra", "Mid")!.tierGap).toBe(-1);     // A vs S
-    expect(buildGodRanking(gods, "Agni", "Mid")!.tierGap).toBe(0);
-  });
-
-  it("reports agreement only when both sources placed it", () => {
-    expect(buildGodRanking(gods, "Agni", "Mid")!.agrees).toBe(true);
-    expect(buildGodRanking(gods, "Ra", "Mid")!.agrees).toBe(false);
-    expect(buildGodRanking(gods, "Anubis", "Mid")!.agrees).toBe(false);
-  });
-
-  it("marks a god the community hasn't rated as unranked, with no delta", () => {
-    const r = buildGodRanking(gods, "Anubis", "Mid")!;
-    expect(r.unranked).toBe(true);
-    expect(r.delta).toBeNull();
-    expect(r.tierGap).toBeNull();
-  });
-
-  it("returns null for a god the model hasn't scored at all", () => {
+  it("returns null for a god absent from this mode's list", () => {
     expect(buildGodRanking(gods, "Loki", "Jungle")).toBeNull();
     expect(buildGodRanking(undefined, "Ra", "Mid")).toBeNull();
   });
@@ -72,11 +50,27 @@ describe("buildGodRanking", () => {
     expect(r.laneSize).toBe(0);
   });
 
-  // A god the model left unscored can't sit anywhere on the model's scale.
-  it("ignores unscored entries when ranking", () => {
-    const withHole = [...gods, { name: "Ghost", ours: null, community: 0.5, tier_ours: null, tier_community: "B" } as unknown as GodTierEntry];
-    const r = buildGodRanking(withHole, "Ra", "Mid")!;
-    expect(r.scored).toBe(4);
+  describe("a god with no usable sample", () => {
+    // Every god outside Conquest, which publishes no results at all. It is a
+    // real entry that simply isn't placed — not the worst-placed one.
+    const withHole: GodTierEntry[] = [
+      ...gods,
+      { name: "Ghost", score: null, tier_score: null, role: "Mid" },
+    ];
+
+    it("is marked unmeasured and given no position", () => {
+      const r = buildGodRanking(withHole, "Ghost", "Mid")!;
+      expect(r.unmeasured).toBe(true);
+      expect(r.overall).toBeNull();
+      expect(r.inBand).toBeNull();
+      expect(r.inLane).toBeNull();
+    });
+
+    it("does not sink to the bottom of anyone else's ordering", () => {
+      const r = buildGodRanking(withHole, "Anubis", "Mid")!;
+      expect(r.scored).toBe(4);
+      expect(r.below).toBeUndefined();   // Anubis is still last among measured
+    });
   });
 });
 

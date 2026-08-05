@@ -100,9 +100,52 @@ def item_damage_type(item):
     return "neutral"
 
 
-def passes_damage_filter(item, god):
+# A god's `damage_type` is ONE label, but SMITE 2 kits are not one thing.
+# Neith is labelled physical and takes 55% of her ability damage off
+# Intelligence; Danzaburou 53%; Cabrakan is labelled magical and takes 59% off
+# Strength. The label was a hard gate, so the recommender could not offer these
+# gods a single item the stat their kit mostly scales on — while the community
+# builds them that way and nothing else. Neith's whole community build was
+# Intelligence, which scored her a structural 0% with zero items even visible.
+#
+# Nothing new is scraped for this: `kit.scaling_profile` already measures the
+# split from the per-ability coefficients. The label decides which stats are
+# ON-type; the measurement decides whether the OFF-type ones are also allowed.
+#
+# Defaults live in _weights.yaml under `hybrid_scaling`. The confidence floor
+# is the one `kit.kit_stat_overlay` already uses — under 3 abilities with
+# parsed scaling the share is an artifact of a sparse scrape (Artio and Ullr
+# scrape 2 abilities each), so those gods keep the strict label.
+HYBRID_MIN_OFF_SHARE = 0.30
+HYBRID_MIN_ABILITIES = 3
+
+
+def off_type_share(god, weights=None):
+    """How much of this god's ability damage scales on the stat their
+    `damage_type` label says is useless. 0.0 when the kit scrape is too thin
+    to trust."""
+    cfg = ((weights or {}).get("hybrid_scaling") or {})
+    min_abilities = cfg.get("min_abilities", HYBRID_MIN_ABILITIES)
+    profile = kit.scaling_profile(god)
+    if profile["n_scaling_abilities"] < min_abilities:
+        return 0.0
+    return (profile["int_share"] if god.get("damage_type") == "physical"
+            else profile["str_share"])
+
+
+def is_hybrid_scaler(god, weights=None):
+    cfg = ((weights or {}).get("hybrid_scaling") or {})
+    if not cfg.get("enabled", True):
+        return False
+    threshold = cfg.get("min_off_share", HYBRID_MIN_OFF_SHARE)
+    return off_type_share(god, weights) >= threshold
+
+
+def passes_damage_filter(item, god, weights=None):
     dt = item_damage_type(item)
-    return dt == "neutral" or dt == god.get("damage_type")
+    if dt == "neutral" or dt == god.get("damage_type"):
+        return True
+    return is_hybrid_scaler(god, weights)
 
 
 # Offensive stats that are dead weight for the opposite damage type: an
@@ -128,7 +171,13 @@ def _role_stat_map(god, weights):
     stats of the opposite damage type are dropped (the damage filter already
     forbids those items, so they'd only skew fit). Unknown labels (no exact
     or token match in role_stats) contribute nothing — a god with unseen
-    vocabulary just gets an empty map, handled gracefully downstream."""
+    vocabulary just gets an empty map, handled gracefully downstream.
+
+    A measured hybrid scaler keeps its off-type POWER stat, because
+    `passes_damage_filter` now lets those items through and a stat the fit map
+    scores at zero would be admitted and then never picked. Only the power stat
+    is restored — Critical Chance stays dropped for magical gods, since its
+    exclusion was never about damage type (see `_OPPOSITE_OFFENSE`)."""
     role_stats = weights["role_stats"]
     labels = [str(s) for s in (god.get("specializations") or [])]
     if god.get("role"):
@@ -139,7 +188,11 @@ def _role_stat_map(god, weights):
         for key in keys:
             for stat, w in role_stats[key].items():
                 merged[stat] = max(merged.get(stat, 0.0), w)
-    for stat in _OPPOSITE_OFFENSE.get(god.get("damage_type"), ()):
+    dropped = set(_OPPOSITE_OFFENSE.get(god.get("damage_type"), ()))
+    if is_hybrid_scaler(god, weights):
+        dropped.discard("Intelligence" if god.get("damage_type") == "physical"
+                        else "Strength")
+    for stat in dropped:
         merged.pop(stat, None)
     return merged
 
@@ -209,13 +262,84 @@ def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=No
 
 def lookup_rates(god_build, item_name):
     """(pick_rate, win_rate) for item_name from the god's community build entry,
-    or (0.0, None) if the item isn't in that build."""
+    or (0.0, None) if this god's players never buy it.
+
+    A slot pick is authoritative. Failing that, the item's best sighting among
+    the slots' `alternates` — which is what `build_index.popular_items` shows
+    the reader, so the two agree on any item the build row can call unbought.
+
+    They used to disagree, and the product printed both numbers on one screen.
+    Ratatoskr's page rendered "Thistlethorn Acorn · pick 0.00 · meta doesn't
+    buy this" in the buy order while the popular-items panel directly below it
+    said "27% pick · 48% win" for the same item. Reading slot picks only, an
+    item that is the community's SECOND choice in three separate slots looked
+    like an item nobody had ever bought. It affected 406 item/god pairs: the
+    win signal saw 519 of them and should have seen 925.
+
+    This costs headline coverage, 53.8% -> 49.6%, and that is the leaked term
+    moving rather than quality. Coverage counts only the community's SLOT
+    picks, so preferring a 55%-win alternate over a 46%-win slot pick is scored
+    as a miss — exactly the judgement the tool exists to make. The within-god
+    rank correlation, which this does not distort, is unchanged at 0.564. See
+    the leakage probe in calibrate.py."""
+    best_alternate = None
     for entry in god_build.get("builds", []):
-        if entry.get("source") == "community":
-            for slot in entry.get("slot_order", []):
-                if isinstance(slot, dict) and slot.get("name") == item_name:
-                    return slot.get("pick_rate", 0.0), slot.get("win_rate")
-    return 0.0, None
+        if entry.get("source") != "community":
+            continue
+        for slot in entry.get("slot_order", []):
+            if not isinstance(slot, dict):
+                continue
+            if slot.get("name") == item_name:
+                # An item the community actually slots is authoritative here,
+                # and returning early matters: the same item can also appear as
+                # a higher-pick alternate in another slot, and preferring that
+                # sighting detaches the item from the rate it is graded against
+                # (measured: rank correlation 0.564 -> 0.453).
+                return slot.get("pick_rate", 0.0), slot.get("win_rate")
+            for alt in slot.get("alternates") or []:
+                if alt.get("name") != item_name:
+                    continue
+                rate = alt.get("pick_rate") or 0.0
+                if best_alternate is None or rate > best_alternate[0]:
+                    best_alternate = (rate, alt.get("win_rate"))
+    return best_alternate or (0.0, None)
+
+
+# What an item scores on the `win` signal when the community has never built
+# it. NOT a neutral value, despite reading like one — and the distinction runs
+# the recommender.
+#
+# SmiteBrain reports a win rate for a MEDIAN OF 5 items per god against a
+# candidate pool of 95. So for 95.2% of everything ranked, this constant IS the
+# win signal — and `win` carries the largest weight in the blend at 0.45. Its
+# job is not to rank the unknown items against each other (it cannot; they all
+# get the same number). Its job is a THRESHOLD: it decides where the ~5
+# measured items sit relative to the ~90 unmeasured ones.
+#
+# 0.5 is not the middle of anything real. Observed item win rates average
+# 0.556, and 66% of them are above 0.5, so this setting quietly favours the
+# unmeasured item over the average measured one. That is what produces the
+# remaining 0%-coverage gods: Anubis's community items measure 0.27-0.47 and
+# Danzaburou's 0.36-0.44, so every one of them ranks below an item with no data
+# at all, and their cores fill with unmeasured items.
+#
+# LEFT AT 0.5 DELIBERATELY. The obvious repair — impute the god's own mean
+# instead of a constant — is unmeasurable here, because the only metric that
+# responds is `validate.compute`, whose coverage term rewards any change that
+# favours community items and punishes any change that does not (see the
+# leakage probe in calibrate.py). Measured anyway, for the record: god-mean
+# imputation moves coverage 53.3% -> 38.3% and leaves the within-god rank
+# correlation at 0.569, i.e. the ONLY thing that moved was the circular term.
+# Reading `alternates` as well (which would give 925 items real data instead of
+# 519) behaves identically: coverage 53.3% -> 49.2%, rank correlation unchanged
+# at 0.569.
+#
+# Changing this needs a metric that is not made of the community's own build.
+UNKNOWN_WIN_RATE = 0.5
+
+
+def unknown_win_rate(weights):
+    return (weights or {}).get("unknown_win_rate", UNKNOWN_WIN_RATE)
 
 
 def signal_score(item, god, god_build, eff_score, weights, item_tags,
@@ -223,7 +347,7 @@ def signal_score(item, god, god_build, eff_score, weights, item_tags,
                  stat_reference=None):
     w = weights["signals"]
     pick, win = lookup_rates(god_build, item["name"])
-    win_norm = win if win is not None else 0.5   # neutral when unknown
+    win_norm = win if win is not None else unknown_win_rate(weights)
     fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus,
                         base_map=base_map, stat_reference=stat_reference)
     total = (w["efficiency"] * eff_score + w["win"] * win_norm
@@ -257,10 +381,20 @@ def mark_underrated(rows, weights):
     return rows
 
 
-def is_buildable(item):
-    """A final item you'd actually build: tier 3, or a tier-None/non-numeric
-    active/relic (e.g. a "Relic"/"Glyph" tier label). Excludes tier 1/2
-    component items (they're purchase-path steps, not final build slots).
+def is_buildable(item, god=None):
+    """A final item that can occupy one of the SIX core slots: tier 3, plus a
+    `God Specific` item when `god` is the god it belongs to.
+
+    Excludes tier 1/2 components (purchase-path steps, not final slots) and
+    relics, which the game gives their own slots — a relic has never competed
+    for the space it wins here.
+
+    God-specific items DO take one of the six, but only for their owner:
+    Aladdin's Genie's Lamp is in 77% of his community builds and Ratatoskr's
+    acorns in 32-43% of his, while being unbuyable for all 85 other gods.
+    Passing no `god` answers the god-agnostic question ("can this ever take a
+    core slot?") and excludes them, which is what the gold model and the item
+    page want.
 
     Also excludes an item with NO STATS AT ALL, which every signal here is
     blind to. Efficiency is `cost - predicted_cost` and prediction is a sum
@@ -273,17 +407,31 @@ def is_buildable(item):
     maximally *undervalued* by that arithmetic — it read as the best bargain in
     the game and had reached 262 shipped build slots. Blinking Abyss is the
     mirror case at 2600 gold and no stats, which reads as maximally premium.
-    Both are relics, which occupy their own slot rather than one of the six, so
-    neither was ever competing for the space it won.
+    Measured then, and the largest single gain in the recommender's history:
+    coverage 48.4% -> 51.0%, win-weighted 50.6% -> 53.3%.
 
-    Measured, and it is the largest single gain in the recommender's history:
-    coverage 48.4% -> 51.0%, win-weighted 50.6% -> 53.3%."""
+    THE STATLESS RULE WAS NOT ENOUGH, and the reason is worth recording. It
+    excluded every relic only because every relic then known happened to be
+    statless — a coincidence in the data standing in for a rule about the game.
+    Scraping the eight T3/relic items the item list had never discovered
+    (2026-08-05) broke the coincidence: Time-lock Aegis, Shell of Rebuke,
+    Talisman of Purification and Agility Greaves all carry stats, and all four
+    immediately started winning core slots at 2500 gold apiece. Excluding
+    relics by TIER, which is what the game actually says, restores it:
+    coverage 51.0% -> 52.6%, win-weighted 53.1% -> 54.8%.
+
+    Note the asymmetry with `efficiency.efficiency_pool`, which deliberately
+    keeps relics IN the gold fit. Removing them from both drops coverage to
+    47.5% — the same lesson components taught: a narrower fit pool identifies
+    stat prices worse, and the fit's job is to rank, not to predict cost."""
     if not (item.get("stats") or {}):
         return False
+    owner = item.get("god")
+    if owner:
+        return bool(god) and owner == god.get("name")
     tier = item.get("tier")
-    if tier is None or not isinstance(tier, int):
-        return True
-    return tier >= 3
+    # A non-numeric tier is the wiki's label for a relic/glyph/active.
+    return isinstance(tier, int) and not isinstance(tier, bool) and tier >= 3
 
 
 def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
@@ -372,7 +520,9 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     else:
         base_map = _role_stat_map(god, weights)
         blend = eff_weights.get("kit_blend", 0.5)
-        for stat, w in kit.kit_stat_overlay(kit.scaling_profile(god), god).items():
+        hybrid = is_hybrid_scaler(god, eff_weights)
+        for stat, w in kit.kit_stat_overlay(kit.scaling_profile(god), god,
+                                            include_off_type=hybrid).items():
             base_map[stat] = (1 - blend) * base_map.get(stat, 0.0) + blend * w
         # B4: move the offensive weights toward what this god's own scaling
         # coefficients say. Defensive stats keep their role weight — nothing
@@ -394,9 +544,10 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     for item in items:
         if item["name"] in excluded:
             continue
-        if not is_buildable(item):
+        if not is_buildable(item, god):
             continue
-        if not profile.get("bypass_damage_filter") and not passes_damage_filter(item, god):
+        if (not profile.get("bypass_damage_filter")
+                and not passes_damage_filter(item, god, eff_weights)):
             continue
         eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
         row = signal_score(item, god, god_build, eff, eff_weights,

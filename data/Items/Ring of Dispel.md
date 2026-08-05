@@ -11,7 +11,12 @@ passive: 'Hard Crowd Control a God: Target has -10 Strength and -16 Intelligence
 builds_from:
 - Gem
 - Ring
-builds_into: []
+builds_into:
+- Chronos' Pendant
+- Soul Gem
+- Spear of Desolation
+- Staff of Myrddin
+- The Cosmic Horror
 source_url: https://wiki.smite2.com/w/Ring_of_Dispel
 last_verified: '2026-08-01'
 ---

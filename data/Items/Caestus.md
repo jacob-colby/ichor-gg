@@ -10,7 +10,9 @@ passive: 'When Hard Crowd Controlled: +15 Physical and Magical Protection for 4s
 builds_from:
 - Axe
 - Ring
-builds_into: []
+builds_into:
+- Jotunn's Revenge
+- Pendulum Blade
 source_url: https://wiki.smite2.com/w/Caestus
 last_verified: '2026-08-01'
 ---

@@ -8,7 +8,17 @@ stats:
 passive: null
 builds_from:
 - Ring
-builds_into: []
+builds_into:
+- Arondight
+- Chandra's Grace
+- Chronos' Pendant
+- Circe's Hexstone
+- Eye of Erebus
+- Gem of Focus
+- Glorious Pridwen
+- Heartwood Charm
+- Hydra's Lament
+- Shield of the Phoenix
 source_url: https://wiki.smite2.com/w/Adroit_Ring
 last_verified: '2026-08-01'
 ---

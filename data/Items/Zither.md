@@ -10,7 +10,10 @@ passive: null
 builds_from:
 - Axe
 - Gem
-builds_into: []
+builds_into:
+- Bragi's Harp
+- Death Metal
+- Triton's Conch
 source_url: https://wiki.smite2.com/w/Zither
 last_verified: '2026-08-01'
 ---

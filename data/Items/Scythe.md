@@ -7,7 +7,9 @@ stats:
   Lifesteal: 4%
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Adamantine Sickle
+- Cursed Sickle
 source_url: https://wiki.smite2.com/w/Scythe
 last_verified: '2026-08-01'
 ---

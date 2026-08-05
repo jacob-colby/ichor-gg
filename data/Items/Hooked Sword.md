@@ -8,7 +8,10 @@ stats:
 passive: null
 builds_from:
 - Sabre
-builds_into: []
+builds_into:
+- Death Metal
+- Musashi's Dual Swords
+- Rage
 source_url: https://wiki.smite2.com/w/Hooked_Sword
 last_verified: '2026-08-01'
 ---

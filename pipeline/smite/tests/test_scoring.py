@@ -3,17 +3,17 @@ import pytest
 from smite import scoring
 
 
-def test_is_buildable_handles_numeric_and_string_tiers():
-    # tier 3 and final actives/relics (tier None, or a non-numeric label like
-    # "Relic"/"Glyph") are buildable; tier 1/2 components are not. Every
-    # fixture carries a stat, because a statless item is excluded outright.
+def test_only_tier3_can_take_one_of_the_six_core_slots():
+    # Tier 3 is buildable. Components (1/2) are purchase-path steps, and
+    # relics get their own slot from the game, so neither competes here.
+    # Every fixture carries a stat, because a statless item is excluded outright.
     st = {"stats": {"Strength": "40"}}
     assert scoring.is_buildable({"tier": 3, **st}) is True
-    assert scoring.is_buildable({"tier": None, **st}) is True
-    assert scoring.is_buildable({"tier": "Relic", **st}) is True
-    assert scoring.is_buildable({"tier": "Glyph", **st}) is True
     assert scoring.is_buildable({"tier": 2, **st}) is False
     assert scoring.is_buildable({"tier": 1, **st}) is False
+    assert scoring.is_buildable({"tier": None, **st}) is False
+    assert scoring.is_buildable({"tier": "Relic", **st}) is False
+    assert scoring.is_buildable({"tier": "Glyph", **st}) is False
 
 
 def test_a_statless_item_is_not_buildable_at_any_price():
@@ -28,9 +28,17 @@ def test_a_statless_item_is_not_buildable_at_any_price():
     assert scoring.is_buildable({"tier": "Relic", "cost": 0, "stats": {}}) is False
     assert scoring.is_buildable({"tier": "Relic", "cost": 2600, "stats": {}}) is False
     assert scoring.is_buildable({"tier": 3, "cost": 3000}) is False
-    # A relic that actually carries stats still competes.
-    assert scoring.is_buildable({"tier": "Relic", "cost": 2600,
-                                 "stats": {"Strength": "40"}}) is True
+
+
+def test_a_statted_relic_still_does_not_take_a_core_slot():
+    """The statless rule excluded every relic only because every relic then
+    known happened to be statless — a coincidence in the data doing the work of
+    a rule about the game. Scraping the eight untracked items broke it: all
+    four new relics carry stats and immediately started winning core slots at
+    2500 gold each. Excluding by tier restored coverage 51.0% -> 52.6%."""
+    aegis = {"tier": "Relic", "cost": 2500,
+             "stats": {"Physical Protection": "15", "Magical Protection": "15"}}
+    assert scoring.is_buildable(aegis) is False
 
 
 def test_load_weights_missing_file_returns_defaults(tmp_path):
@@ -91,6 +99,69 @@ def test_passes_damage_filter_excludes_mismatched_offense():
     assert scoring.passes_damage_filter(neutral_item, phys_god)  # neutral always passes
 
 
+def _scaling_god(name, damage_type, role, specs, str_pct, int_pct, n=4):
+    """A god whose abilities carry real scaling lines, so `kit.scaling_profile`
+    reads a genuine str/int split rather than the empty default."""
+    abilities = [{"name": f"A{i}", "slot": f"Ability {i}",
+                  "details": [f"Damage Scaling: {str_pct}% Strength + {int_pct}% Intelligence"]}
+                 for i in range(n)]
+    return {"name": name, "damage_type": damage_type, "role": role,
+            "specializations": specs, "abilities": abilities}
+
+
+def test_a_measured_hybrid_scaler_may_build_off_type_items():
+    """Neith is labelled physical and takes 55% of her ability damage off
+    Intelligence. The label was a hard gate, so her entire community build —
+    six Intelligence items — was invisible, scoring a structural 0%."""
+    neith = _scaling_god("Neith", "physical", "Carry Mid", ["Nuker"], 45, 55)
+    artemis = _scaling_god("Artemis", "physical", "Carry", ["Sharpshooter"], 100, 0)
+    int_item = {"stats": {"Intelligence": "70"}}
+    assert scoring.off_type_share(neith) > 0.5
+    assert scoring.passes_damage_filter(int_item, neith)
+    # A genuinely pure-Strength carry keeps the strict gate.
+    assert scoring.off_type_share(artemis) == 0.0
+    assert not scoring.passes_damage_filter(int_item, artemis)
+
+
+def test_hybrid_scaling_needs_enough_parsed_abilities():
+    """Artio and Ullr scrape 2 abilities each. A share computed from that is an
+    artifact of the scrape, and must not unlock off-type items."""
+    thin = _scaling_god("Artio", "physical", "Jungle", ["Bruiser"], 40, 60, n=2)
+    assert scoring.off_type_share(thin) == 0.0
+    assert not scoring.passes_damage_filter({"stats": {"Intelligence": "70"}}, thin)
+
+
+def test_hybrid_scaling_can_be_switched_off_by_config():
+    neith = _scaling_god("Neith", "physical", "Carry Mid", ["Nuker"], 45, 55)
+    off = {"hybrid_scaling": {"enabled": False}}
+    assert not scoring.passes_damage_filter({"stats": {"Intelligence": "70"}}, neith, off)
+
+
+def test_hybrid_scaler_also_gets_fit_credit_for_the_off_type_stat():
+    """Admitting the item without scoring the stat would be worse than the bug
+    it fixes: the item enters the pool and then never wins a slot. The filter
+    and the fit map have to move together."""
+    weights = scoring.load_weights_default()
+    weights["hybrid_scaling"] = {"enabled": True, "min_off_share": 0.30,
+                                 "min_abilities": 3}
+    neith = _scaling_god("Neith", "physical", "Carry Mid", ["Nuker"], 45, 55)
+    artemis = _scaling_god("Artemis", "physical", "Carry", ["Sharpshooter"], 100, 0)
+    assert scoring._role_stat_map(neith, weights).get("Intelligence", 0) > 0
+    assert "Intelligence" not in scoring._role_stat_map(artemis, weights)
+
+
+def test_kit_overlay_weights_both_power_stats_by_their_measured_share():
+    """Symmetric by construction: Neith's 44.5/55.5 split should rank
+    Intelligence ABOVE Strength, which one `damage_type` label cannot say."""
+    from smite import kit
+    neith = _scaling_god("Neith", "physical", "Carry Mid", ["Nuker"], 45, 55)
+    profile = kit.scaling_profile(neith)
+    on_only = kit.kit_stat_overlay(profile, neith)
+    both = kit.kit_stat_overlay(profile, neith, include_off_type=True)
+    assert "Intelligence" not in on_only          # default stays label-gated
+    assert both["Intelligence"] > both["Strength"]
+
+
 def test_god_fit_rewards_role_relevant_stats():
     weights = scoring.load_weights_default()
     sharpshooter = _god("Chiron", "physical", "Carry", ["Sharpshooter"])
@@ -146,19 +217,20 @@ def test_mark_underrated_empty_is_safe():
     assert scoring.mark_underrated([], scoring.load_weights_default()) == []
 
 
-def test_score_god_items_excludes_components_and_wrong_damage_type():
+def test_score_god_items_excludes_components_relics_and_wrong_damage_type():
+    # `_god` builds a fixture with no abilities, so its scaling profile is
+    # empty and it keeps the strict damage-type gate (see hybrid_scaling).
     god = _god("Chiron", "physical", "Carry", ["Sharpshooter"])
     items = [
         {"name": "Final", "tier": 3, "stats": {"Strength": "40"}},
-        {"name": "Active", "tier": None, "stats": {"Strength": "40"}},
+        {"name": "Relic", "tier": None, "stats": {"Strength": "40"}},
         {"name": "Component", "tier": 2, "stats": {"Strength": "40"}},
         {"name": "WrongType", "tier": 3, "stats": {"Intelligence": "70"}},
     ]
     build = _community_build()
-    eff = {n: {"score": 0.5, "tier": "fair"} for n in ["Final", "Active", "Component", "WrongType"]}
+    eff = {n: {"score": 0.5, "tier": "fair"} for n in ["Final", "Relic", "Component", "WrongType"]}
     rows = scoring.score_god_items(god, items, build, eff, scoring.load_weights_default(), {})
-    names = {r["item"] for r in rows}
-    assert names == {"Final", "Active"}   # component + wrong-damage excluded
+    assert {r["item"] for r in rows} == {"Final"}
 
 
 def test_eligible_flavors_gates_by_damage_type_and_tokens():
@@ -535,3 +607,77 @@ def test_the_for_fun_build_is_gone():
     weights = scoring.load_weights(recommend.WEIGHTS_PATH)
     assert "fun-crit" not in (weights.get("flavors") or {})
     assert not any(f.get("fun") for f in (weights.get("flavors") or {}).values())
+
+
+# ── God-specific items ────────────────────────────────────────────────────
+
+def test_a_god_specific_item_is_buildable_only_for_its_owner():
+    """Aladdin's Genie's Lamp is in 77% of his community builds and unbuyable
+    for the other 85 gods. Scored globally it would leak into everyone's build;
+    excluded globally it costs him a slot he always fills."""
+    lamp = {"name": "Genie's Lamp", "tier": "God Specific", "god": "Aladdin",
+            "stats": {"Intelligence": "40"}}
+    aladdin = _god("Aladdin", "magical", "Mid", ["Nuker"])
+    anubis = _god("Anubis", "magical", "Mid", ["Nuker"])
+    assert scoring.is_buildable(lamp, aladdin) is True
+    assert scoring.is_buildable(lamp, anubis) is False
+    # No god asked: the god-agnostic question, which the gold model and the
+    # item page ask, and the answer must be no.
+    assert scoring.is_buildable(lamp) is False
+
+
+def test_god_specific_owner_is_read_from_the_icon_filename():
+    """Nothing else on the page names the owner — the infobox says only
+    'God Specific'."""
+    from smite import wiki_parser
+    assert wiki_parser.god_specific_owner(
+        "/images/GodSpecific_Aladdin_Genie%27s_Lamp.png") == "Aladdin"
+    assert wiki_parser.god_specific_owner(
+        "/images/thumb/GodSpecific_Jing_Wei_Something.png") == "Jing"
+    assert wiki_parser.god_specific_owner("/images/T3_Deathbringer.png") is None
+    assert wiki_parser.god_specific_owner(None) is None
+
+
+# ── Community rates: slot picks and alternates ────────────────────────────
+
+def _rat_build():
+    """Ratatoskr's real shape: Thistlethorn Acorn is the community's SECOND
+    choice in three separate slots and the winner in none."""
+    return {"builds": [{"source": "community", "slot_order": [
+        {"name": "Ashwhorl Acorn", "pick_rate": 0.32, "win_rate": 0.53,
+         "alternates": [{"name": "Thistlethorn Acorn", "pick_rate": 0.27, "win_rate": 0.48}]},
+        {"name": "Jotunn's Revenge", "pick_rate": 0.23, "win_rate": 0.46,
+         "alternates": [{"name": "Thistlethorn Acorn", "pick_rate": 0.17, "win_rate": 0.72}]},
+        {"name": "Shifter's Shield", "pick_rate": 0.17, "win_rate": 0.65,
+         "alternates": [{"name": "Ashwhorl Acorn", "pick_rate": 0.40, "win_rate": 0.20}]},
+    ]}]}
+
+
+def test_lookup_rates_reads_alternates_not_just_slot_winners():
+    """The build row used to print "pick 0.00 · meta doesn't buy this" for an
+    item the panel below it reported at 27% pick."""
+    rates = scoring.lookup_rates(_rat_build(), "Thistlethorn Acorn")
+    assert rates == (0.27, 0.48)          # the best of its alternate sightings
+
+
+def test_lookup_rates_prefers_the_slot_pick_over_a_richer_alternate():
+    """Ashwhorl Acorn is slotted at 32% and is also a 40% alternate elsewhere.
+    The slot entry has to win: it is the rate the item is graded against, and
+    preferring the alternate detaches score from target (rho 0.564 -> 0.453)."""
+    assert scoring.lookup_rates(_rat_build(), "Ashwhorl Acorn") == (0.32, 0.53)
+
+
+def test_lookup_rates_still_reports_nothing_for_an_unbought_item():
+    assert scoring.lookup_rates(_rat_build(), "Rod of Tahuti") == (0.0, None)
+
+
+def test_lookup_rates_agrees_with_the_popular_items_panel():
+    """The two derive community rates independently and are rendered on the
+    same screen, so they must not drift. For an item with no slot pick they
+    have to produce the same numbers."""
+    from smite import build_index
+    entry = _rat_build()["builds"][0]
+    panel = {p["name"]: p for p in build_index.popular_items(entry)}
+    pick, win = scoring.lookup_rates(_rat_build(), "Thistlethorn Acorn")
+    assert (pick, win) == (panel["Thistlethorn Acorn"]["pick_rate"],
+                           panel["Thistlethorn Acorn"]["win_rate"])

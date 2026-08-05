@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Toxic Blade
   - The Reaper
   - Riptalon
   - Damaru
   - Demon Blade
   - The Crusher
-  - Pharaoh's Curse
   flex_slots:
+  - The Crusher
   - Damaru
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,56 +31,56 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.57
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     The Reaper:
-      total: 0.64
-      efficiency: 0.59
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.69
-      efficiency: 0.6
+      total: 0.66
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.77
     Damaru:
-      total: 0.55
-      efficiency: 0.66
+      total: 0.52
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.44
     Demon Blade:
-      total: 0.58
-      efficiency: 0.45
+      total: 0.55
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.57
-      efficiency: 0.7
+      total: 0.55
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
 - source: suggested
   archetype: crit
   slot_order:
+  - Toxic Blade
   - Rage
   - Riptalon
   - Damaru
   - Demon Blade
   - The Crusher
-  - Pharaoh's Curse
   flex_slots:
-  - Pharaoh's Curse
+  - Damaru
   - Rage
   situational_swaps:
   - vs_tag: heavy_cc
@@ -98,55 +98,55 @@ builds:
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Rage:
-      total: 0.46
-      efficiency: 0.45
+      total: 0.44
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.46
     Riptalon:
-      total: 0.68
-      efficiency: 0.6
+      total: 0.65
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.75
     Damaru:
-      total: 0.56
-      efficiency: 0.66
+      total: 0.53
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.46
     Demon Blade:
-      total: 0.58
-      efficiency: 0.45
+      total: 0.55
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.56
-      efficiency: 0.7
+      total: 0.53
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Pharaoh's Curse:
-      total: 0.54
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - Riptalon
   - The Crusher
-  - Eros' Bow
   - Pharaoh's Curse
   flex_slots:
+  - Hydra's Lament
   - Pharaoh's Curse
-  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -163,39 +163,39 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.55
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.46
     Hydra's Lament:
-      total: 0.53
-      efficiency: 0.69
+      total: 0.48
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.36
     Riptalon:
-      total: 0.64
-      efficiency: 0.6
+      total: 0.62
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.68
     The Crusher:
-      total: 0.56
-      efficiency: 0.7
+      total: 0.54
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Eros' Bow:
-      total: 0.48
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Pharaoh's Curse:
-      total: 0.5
-      efficiency: 0.64
+      total: 0.47
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -203,19 +203,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Berserker's Shield
   - Riptalon
-  - Spectral Armor
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Toxic Blade
   - Berserker's Shield
-  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Erosion — magical protection
     swap_item: Erosion
@@ -228,39 +228,39 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Berserker's Shield:
+    Toxic Blade:
       total: 0.57
-      efficiency: 0.74
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Berserker's Shield:
+      total: 0.56
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.41
     Riptalon:
-      total: 0.62
-      efficiency: 0.6
+      total: 0.6
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Spectral Armor:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Amanita Charm:
-      total: 0.76
-      efficiency: 0.68
+      total: 0.75
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.84
     Pharaoh's Curse:
-      total: 0.62
-      efficiency: 0.64
+      total: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.61
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.57
+      total: 0.57
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -268,14 +268,14 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Avenging Blade
+  - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Riptalon
+  - Silverbranch Bow
   - The Crusher
-  - Heartseeker
   flex_slots:
-  - Heartseeker
+  - Silverbranch Bow
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -293,39 +293,39 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Avenging Blade:
-      total: 0.59
-      efficiency: 0.63
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.83
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.5
     Void Shield:
-      total: 0.55
-      efficiency: 0.49
+      total: 0.53
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
     Riptalon:
-      total: 0.73
-      efficiency: 0.6
+      total: 0.71
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.86
-    The Crusher:
-      total: 0.63
-      efficiency: 0.7
+    Silverbranch Bow:
+      total: 0.54
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.53
+      fit: 0.53
+    The Crusher:
+      total: 0.61
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Toxic Blade
   - Tyrfing
   - The Reaper
   - Riptalon
-  - Demon Blade
-  - The Crusher
+  - Silverbranch Bow
   - Pharaoh's Curse
   flex_slots:
-  - The Crusher
-  - Demon Blade
+  - Silverbranch Bow
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,39 +358,39 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
     Tyrfing:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.56
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Reaper:
-      total: 0.59
-      efficiency: 0.59
+      total: 0.56
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.6
     Riptalon:
-      total: 0.74
-      efficiency: 0.6
+      total: 0.72
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.88
-    Demon Blade:
-      total: 0.52
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
-    The Crusher:
-      total: 0.53
-      efficiency: 0.7
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
-    Pharaoh's Curse:
+    Silverbranch Bow:
       total: 0.54
-      efficiency: 0.64
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Pharaoh's Curse:
+      total: 0.51
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Toxic Blade
   - Genji's Guard
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Hydra's Lament
-  - The Crusher
   - Pharaoh's Curse
   flex_slots:
   - Genji's Guard
-  - The Crusher
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -423,39 +423,39 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
+    Toxic Blade:
       total: 0.51
-      efficiency: 0.74
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Genji's Guard:
+      total: 0.5
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.48
     Shield of the Phoenix:
-      total: 0.57
-      efficiency: 0.61
+      total: 0.55
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.53
     Hydra's Lament:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.47
-    The Crusher:
-      total: 0.5
-      efficiency: 0.7
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
     Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.64
+      total: 0.48
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Toxic Blade
   - The Reaper
   - Riptalon
   - Damaru
   - Demon Blade
   - The Crusher
-  - Pharaoh's Curse
   flex_slots:
+  - The Crusher
   - Damaru
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,41 +488,41 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.57
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     The Reaper:
-      total: 0.64
-      efficiency: 0.59
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.69
-      efficiency: 0.6
+      total: 0.66
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.77
     Damaru:
-      total: 0.55
-      efficiency: 0.66
+      total: 0.52
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.44
     Demon Blade:
-      total: 0.58
-      efficiency: 0.45
+      total: 0.55
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.57
-      efficiency: 0.7
+      total: 0.55
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
   starter: *id001
 ---

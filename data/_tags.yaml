@@ -17,9 +17,12 @@
 #  even once their text returns. Bloodforge is a shield/lifesteal item and may
 #  warrant [sustain] once its passive text is scraped.)
 #
-# NOTE: no item currently in the pool carries an anti-heal passive, so the
-# "vs sustain" situational row will report none available — an accurate gap,
-# not a bug.
+# NOTE (updated 2026-08-05): anti-heal now EXISTS in the pool. Toxic Blade
+# ("Hit a God with an Attack: Apply 25% Healing Reduction ... for 5s") is the
+# first, and it arrived with the eight items the item list had never
+# discovered. The "vs sustain" situational row reported "none available" for
+# weeks — accurate about the data we had, wrong about the game. Physical only,
+# so a magical god still has no anti-heal option and that gap is real.
 
 Blinking Abyss: [mobility]
 Bloodforge: [sustain]
@@ -184,3 +187,19 @@ Vampiric Shroud: []
 War Banner: [aura]
 War Flag: [aura]
 Warrior's Axe: []
+
+# Added 2026-08-05 with the eight previously-undiscovered items.
+# Dominance is +20% Penetration on basic attacks: a stat effect, so [] per the
+# same rule that leaves Obsidian Shard and Titan's Bane untagged.
+# Silverbranch Bow fires an extra homing arrow — single-target sustained
+# basic-attack damage, which is neither burst nor wave-clear.
+Dominance: []
+Silverbranch Bow: []
+Toxic Blade: [anti-heal]
+# Relics. They get their own slot and cannot take one of the six, so these are
+# recorded for completeness rather than read by the recommender.
+Agility Greaves: [mobility]
+Shell of Rebuke: [peel]
+Talisman of Purification: [cc-immunity]
+Time-lock Aegis: [cc-immunity]
+Sundering Echo: []

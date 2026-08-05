@@ -28,6 +28,17 @@ export interface LedgerRow {
   metaCumulative: number | null;
   /** The community buys this item at all (in their ordered build). */
   inMeta: boolean;
+  /** The community buys this item, but as a SLOT ALTERNATE rather than in
+   * their headline order, so it has no `metaPosition`. Its best sighting's
+   * pick rate, or null if they genuinely never buy it.
+   *
+   * Without this the row claimed "meta doesn't buy this" about items the
+   * popular-items panel on the same screen reported at 27% pick — Ratatoskr's
+   * Thistlethorn Acorn is the community's second choice in three separate
+   * slots and the winner in none. "No position in their order" and "nobody
+   * buys it" are different statements, and only the first one was true. */
+  metaAlternatePickRate: number | null;
+  metaAlternateWinRate: number | null;
 }
 
 /** An item the community buys that the model's build never reaches — the
@@ -89,10 +100,26 @@ export function buildLedger({
   const goldByName = new Map<string, number | null>();
   purchased.forEach((s, i) => { if (!goldByName.has(s.name)) goldByName.set(s.name, purchasedGold[i]); });
 
+  // The community's slot ALTERNATES, keyed by item, keeping the best sighting.
+  // Mirrors pipeline `scoring.lookup_rates` and `build_index.popular_items`,
+  // which is what makes the row and the popular-items panel agree.
+  const altRates = new Map<string, { pick_rate: number; win_rate: number | null }>();
+  for (const entry of communityOrder ?? []) {
+    if (typeof entry === "string") continue;
+    for (const alt of entry.alternates ?? []) {
+      const seen = altRates.get(alt.name);
+      if (!seen || alt.pick_rate > seen.pick_rate) {
+        altRates.set(alt.name, { pick_rate: alt.pick_rate, win_rate: alt.win_rate ?? null });
+      }
+    }
+  }
+
   const rows: LedgerRow[] = preview.map((slot) => {
     const metaIdx = metaNames.indexOf(slot.name);
     const metaEntry = metaIdx >= 0 ? communityOrder?.[metaIdx] : undefined;
     const rates = metaEntry && typeof metaEntry !== "string" ? metaEntry : undefined;
+    // A slot pick is authoritative; only fall back to alternates.
+    const alt = metaIdx >= 0 ? undefined : altRates.get(slot.name);
     return {
       name: slot.name,
       status: slot.status,
@@ -105,6 +132,8 @@ export function buildLedger({
       metaWinRate: rates?.win_rate ?? null,
       metaCumulative: metaIdx >= 0 ? metaGold[metaIdx] : null,
       inMeta: metaIdx >= 0,
+      metaAlternatePickRate: alt?.pick_rate ?? null,
+      metaAlternateWinRate: alt?.win_rate ?? null,
     };
   });
 

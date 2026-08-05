@@ -46,17 +46,30 @@ def scaling_profile(god):
     }
 
 
-def kit_stat_overlay(profile, god):
+def kit_stat_overlay(profile, god, include_off_type=False):
     """Offensive stat weights implied by the kit, or {} when confidence is low
-    (< 3 abilities with scaling — sparse scrapes like Ullr's stance kit)."""
+    (< 3 abilities with scaling — sparse scrapes like Ullr's stance kit).
+
+    `include_off_type` adds the power stat the god's `damage_type` label calls
+    useless, weighted by the same formula from its own measured share. It is
+    off by default because the damage filter normally forbids those items, so
+    the weight would only dilute the denominator. `scoring.is_hybrid_scaler`
+    turns it on for the gods whose filter is relaxed, keeping the two in step:
+    a stat is admitted and scored, or neither.
+
+    The formula is deliberately the same on both sides. Neith measures 44.5%
+    Strength / 55.5% Intelligence, so she gets Strength 0.867 and Intelligence
+    0.933 — the ordering her kit actually has, which the single `damage_type`
+    label cannot express."""
     if profile["n_scaling_abilities"] < 3:
         return {}
     out = {}
     dt = god.get("damage_type")
-    if dt == "physical" and profile["str_share"] > 0:
-        out["Strength"] = round(0.6 + 0.6 * profile["str_share"], 3)
-    if dt == "magical" and profile["int_share"] > 0:
-        out["Intelligence"] = round(0.6 + 0.6 * profile["int_share"], 3)
+    weight = lambda share: round(0.6 + 0.6 * share, 3)
+    if profile["str_share"] > 0 and (dt == "physical" or include_off_type):
+        out["Strength"] = weight(profile["str_share"])
+    if profile["int_share"] > 0 and (dt == "magical" or include_off_type):
+        out["Intelligence"] = weight(profile["int_share"])
     if profile["basic_attack_share"] >= 0.2:
         out["Attack Speed"] = round(0.5 + profile["basic_attack_share"], 3)
         if dt == "physical":

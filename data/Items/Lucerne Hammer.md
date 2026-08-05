@@ -7,7 +7,11 @@ stats:
   Strength: '20'
 passive: null
 builds_from: []
-builds_into: []
+builds_into:
+- Heartseeker
+- Oath-Sworn Spear
+- The Crusher
+- Titan's Bane
 source_url: https://wiki.smite2.com/w/Lucerne_Hammer
 last_verified: '2026-08-01'
 ---
