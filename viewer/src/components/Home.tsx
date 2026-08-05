@@ -381,7 +381,59 @@ function StandingsBoard({ board }: { board: ReturnType<typeof buildStandingsBoar
  * an icon in the rail and guessing. It also remembers a comp across sessions,
  * so a half-entered draft is worth handing back rather than leaving parked in
  * localStorage where only the rail icon can find it.
+ *
+ * The seam existed and was still being missed, because it had opted out of
+ * every strong move the page makes. Its heading used `sectionLabel` — 11px
+ * mono in `faint`, the quietest tier the system has — while the board above it
+ * gets display/lead/bold/`ink`; and it sat in one flat `gap-6` stack with the
+ * pinned list and the "updated 4 days ago" line, hairline rule and all. The
+ * app's only interactive surface was filed as footer chrome.
+ *
+ * Now a raised plane, in the system's own vocabulary and nothing new:
+ *
+ *   `.plane`        Ground Plane Rule — a real panel catching the page light.
+ *                   Reserved for cards, dialogs and the subject header, which
+ *                   is the company this belongs in, not chips and pills.
+ *   `.is-selected`  the gold ring, but ONLY while a draft is live. "Torchlight
+ *                   gold marks whatever matters right now" is the brief's own
+ *                   sentence, and a comp the app is holding for you is exactly
+ *                   that. At rest the panel is flat, so the ring stays a state
+ *                   rather than decoration (Flat-Until-It-Matters).
+ *   gold button     the Torchlight Rule's third permitted use, primary action.
+ *                   This is Home's one thing to *do*; it was an 11px blue text
+ *                   link.
+ *
+ * The empty state previews the board's own slot vocabulary — the gold "you"
+ * ring, then dashed slots — so the skeleton says "a match, and something to do
+ * about it" before a word is read. Decorative and aria-hidden: the button is
+ * the affordance, and two competing ones would blunt both.
+ *
+ * Everything below it (pinned, patch, freshness) keeps the quiet treatment on
+ * purpose. The promotion is only legible because they didn't get one.
  */
+
+/** The board's slot shapes, at rest — the gold ring for your own slot, dashed
+ *  for the rest. Mirrors `DraftControls`' real slots so the preview is the
+ *  interface rather than an illustration of it.
+ *
+ *  `you` is deliberately not defaulted. Gold means "this one is yours" and
+ *  there is exactly one of those on a board; drawn on both rows it said the
+ *  enemy team had a you-slot too. */
+function SlotPreview({ count, you = false }: { count: number; you?: boolean }) {
+  return (
+    <span aria-hidden="true" className="flex items-center gap-1.5">
+      {Array.from({ length: count }, (_, i) => (
+        <span
+          key={i}
+          className={`h-7 w-7 flex-none rounded-md ${
+            you && i === 0 ? "border-2 border-gold" : "border border-dashed border-line-strong"
+          }`}
+        />
+      ))}
+    </span>
+  );
+}
+
 function DraftSeam() {
   const { draft, mode } = useDraft();
   const allies = draft.allies.filter(Boolean);
@@ -395,14 +447,27 @@ function DraftSeam() {
   const you = draft.allies[0];
 
   return (
-    <section data-testid="home-draft" aria-labelledby="home-draft-h" className="border-t border-line pt-6">
-      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
-        <h2 id="home-draft-h" className={sectionLabel}>
-          {started ? "Your draft in progress" : "Drafting a match"}
-        </h2>
+    <section
+      data-testid="home-draft"
+      aria-labelledby="home-draft-h"
+      className={`plane rounded-lg border bg-bg2 p-4 sm:p-5 ${
+        started ? "is-selected border-gold/40" : "border-line"
+      }`}
+    >
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
+        <div className="min-w-0">
+          <h2 id="home-draft-h" className="font-display text-lead font-bold text-ink">
+            {started ? "Your draft in progress" : "Build for the match you're in"}
+          </h2>
+          {!started && (
+            <p className="mt-0.5 text-small text-muted">
+              The one place a build answers a specific match instead of the average one.
+            </p>
+          )}
+        </div>
         <a
           href={started ? encodeDraftHash(mode, draft) : toHash.draft()}
-          className="press -my-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
+          className="press shrink-0 rounded-md bg-gold px-4 py-2 font-display text-small font-semibold text-bg0 transition-opacity duration-[150ms] ease-standard hover:opacity-90"
         >
           {started ? "Resume draft →" : "Open the draft board →"}
         </a>
@@ -410,21 +475,21 @@ function DraftSeam() {
 
       {started ? (
         <>
-          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <div className="mt-3.5 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-3.5">
             <span className="flex flex-wrap items-center gap-1.5">
-              {allies.map((n) => <GodIcon key={n} name={n} className="h-7 w-7" />)}
+              {allies.map((n) => <GodIcon key={n} name={n} className="h-8 w-8" />)}
               {allies.length === 0 && <span className="text-small text-faint">no allies yet</span>}
             </span>
-            <span aria-hidden="true" className="text-small text-faint">vs</span>
+            <span aria-hidden="true" className="font-display text-small font-semibold text-faint">vs</span>
             <span className="flex flex-wrap items-center gap-1.5">
-              {enemies.map((n) => <GodIcon key={n} name={n} className="h-7 w-7" />)}
+              {enemies.map((n) => <GodIcon key={n} name={n} className="h-8 w-8" />)}
               {enemies.length === 0 && <span className="text-small text-faint">no enemies yet</span>}
             </span>
           </div>
           {/* Named, because two rows of portraits don't say which side is
               which — and the enemy count is what decides how much the build
               can actually adapt. */}
-          <p className="mt-2 max-w-[68ch] text-small leading-relaxed text-muted">
+          <p className="mt-2.5 max-w-[68ch] text-small leading-relaxed text-muted">
             {modeLabel} · <span className="text-ink-soft">{allies.length} of {size}</span> allies
             {" · "}<span className="text-ink-soft">{enemies.length} of {size}</span> enemies.
             {/* Never "the build already answers those picks" — whether any item
@@ -438,11 +503,15 @@ function DraftSeam() {
           </p>
         </>
       ) : (
-        <p className="mt-2 max-w-[68ch] text-body leading-relaxed text-muted">
-          Enter your god and the enemies you know, and the model re-sorts that god&rsquo;s core around
-          them — named items displacing named items, for stated reasons. It&rsquo;s the one place a
-          build answers a specific match instead of the average one.
-        </p>
+        <div className="mt-3.5 flex flex-wrap items-center gap-x-3 gap-y-3 border-t border-line pt-3.5">
+          <SlotPreview count={3} you />
+          <span aria-hidden="true" className="font-display text-small font-semibold text-faint">vs</span>
+          <SlotPreview count={3} />
+          <p className="min-w-[24ch] max-w-[52ch] flex-1 text-small leading-relaxed text-muted">
+            Enter your god and the enemies you know, and the model re-sorts that god&rsquo;s core
+            around them — named items displacing named items, for stated reasons.
+          </p>
+        </div>
       )}
     </section>
   );
@@ -555,8 +624,10 @@ export function Home({ data }: { data: IndexData }) {
     <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 pt-7 sm:px-6 sm:pt-9">
       <StateBlock board={board} tierlist={data.tierlist} source={data.community_source} ranked={board.ranked} />
       <StandingsBoard board={board} />
-      <div className="mt-7 flex flex-col gap-6">
+      <div className="mt-7">
         <DraftSeam />
+      </div>
+      <div className="mt-6 flex flex-col gap-6">
         <PinnedSection gods={data.gods} />
         <LatestPatch periods={data.patch_notes} />
         <Freshness dataUpdated={data.data_updated} dataPatch={data.data_patch} />
