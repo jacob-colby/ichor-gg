@@ -48,21 +48,100 @@
 #
 # pct_pen is a FRACTION: 20% penetration is 0.20, not 20.
 
-observations: []
+observations:
+  # Taken 2026-08-04, Jungle Practice. Thanatos, level 1, Soul Reap rank 1
+  # (raw 100 physical) against Kukulkan at level 1 (17.48 physical protection).
+  # Kukulkan chosen because his passive only grants himself Intelligence from
+  # Mana items and so cannot touch incoming damage.
+  #
+  # The game appears to TRUNCATE the displayed number rather than round it -
+  # every reading sits just below the model and Thanatos's 0.75x chain hit
+  # showed 43 where the arithmetic gives 43.5. That is why the errors here are
+  # uniformly small and negative.
+  - label: "no items - mitigation only"
+    raw: 100
+    protection: 17.48
+    expected: 85
 
-# Example of the shape — delete once real ones are in. These numbers are made
-# up and `calibrate` refuses to treat the file as evidence while `example: true`
-# is set on any entry.
-#
-# observations:
-#   - label: "Agni 2 vs 80 magical prot, no pen"
-#     example: true
-#     raw: 500
-#     protection: 80
-#     expected: 277.8
-#   - label: "same, with Obsidian Shard (20% pen)"
-#     example: true
-#     raw: 500
-#     protection: 80
-#     pct_pen: 0.20
-#     expected: 305.3
+  - label: "Doom Orb only - 10 flat penetration"
+    raw: 100
+    protection: 17.48
+    flat_pen: 10
+    expected: 93
+
+  - label: "Void Shard only - 10% penetration"
+    raw: 100
+    protection: 17.48
+    pct_pen: 0.10
+    expected: 86
+
+  - label: "Doom Orb + Void Shard - both terms"
+    raw: 100
+    protection: 17.48
+    flat_pen: 10
+    pct_pen: 0.10
+    expected: 94
+
+  # ── Basic attacks ───────────────────────────────────────────────────────
+  # Same session. `raw` is the god's scraped Attack Power times
+  # ATTACK_POWER_SCALE (0.81) plus unscaled item Strength - see combat.py for
+  # why that constant exists and what is still unexplained about it.
+  #
+  # Thanatos's chain is 1 / 0.75 / 1.5x, so his rows are the 1x swing; the
+  # full readings were 32/24/49 with no items and 58/43/87 with Rage, and the
+  # model reproduces every one. Neith and Ymir have no chain.
+  #
+  # Ymir is the row that rules out the easy explanations: he is melee where
+  # Neith is ranged, and magical where both others are physical, and the same
+  # constant fits all three.
+  - label: "Thanatos 1x basic, no items"
+    raw: 38.686
+    protection: 17.48
+    expected: 32
+
+  - label: "Thanatos 1x basic, Rage (30 Strength, unscaled)"
+    raw: 68.686
+    protection: 17.48
+    expected: 58
+
+  - label: "Thanatos 1x basic CRIT, Rage - confirms 1.5x"
+    raw: 68.686
+    protection: 17.48
+    crit: true
+    expected: 87
+
+  - label: "Neith basic, no items - ranged, physical"
+    raw: 35.964
+    protection: 17.48
+    expected: 30
+
+  - label: "Ymir basic, no items - melee, MAGICAL protection"
+    raw: 36.118
+    protection: 27.38
+    expected: 28
+
+  # ── Level scaling, and Deathbringer ─────────────────────────────────────
+  # Taken to settle two things a level-1 reading cannot.
+  #
+  # The 0.81 correction turned out to apply to the BASE only — scaling the
+  # whole stat predicts 47 and 64 at levels 10 and 20, and the game showed
+  # 51 and 71. So the scraped base is ~19% high and the scraped per-level of
+  # 2.4 is exact.
+  - label: "Thanatos 1x basic, level 10, no items"
+    raw: 60.286
+    protection: 17.48
+    expected: 51
+
+  - label: "Thanatos 1x basic, level 20, no items"
+    raw: 84.286
+    protection: 17.48
+    expected: 71
+
+  # Deathbringer's +35% ADDS to the 1.5x base rather than multiplying it.
+  # 96.770 x 1.85 = 179.03; x2.025 would have been 195.96.
+  - label: "Thanatos 1x basic CRIT, Rage + Deathbringer - additive 1.85x"
+    raw: 113.686
+    protection: 17.48
+    crit: true
+    crit_multiplier: 1.85
+    expected: 179
