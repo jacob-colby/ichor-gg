@@ -111,7 +111,10 @@ function EntryCard({ band, subject, underplayed }: {
           : `${entry.name} — ${rateText(entry.win_rate)} win over ${
               matches?.toLocaleString("en-US") ?? "?"} matches (ranked on the lower bound of that rate)`}
         // Stacked on a phone so the name gets the card's full width.
-        className={`plane press flex h-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard hover:border-line-strong sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
+        // `w-full` for the same reason the shop's cards need it: a flex <a> is
+        // shrink-to-fit and will size to its own text rather than to its grid
+        // track.
+        className={`plane press flex h-full w-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard hover:border-line-strong sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
           underplayed ? "border-line-strong" : "border-line"}`}
       >
         <EntryIcon name={entry.name} item={!isGod} />

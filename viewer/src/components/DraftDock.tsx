@@ -24,19 +24,27 @@ const MODES: DraftMode[] = ["conquest", "joust"];
 const label = "font-mono text-micro uppercase tracking-[0.08em] text-faint";
 
 /** Small, non-interactive portraits for the collapsed header — the slots
- *  themselves only become individually clickable once the panel is open. */
-function ChipRow({ names }: { names: string[] }) {
+ *  themselves only become individually clickable once the panel is open.
+ *
+ *  `you` is explicit and undefaulted. The gold ring means "this one is yours"
+ *  and a board has exactly one; keyed on `i === 0` alone it was drawn on the
+ *  enemy row's first slot too, which said the enemy team had a you-slot. The
+ *  mark also survives an EMPTY you-slot, so the dock at rest still shows where
+ *  your god goes — the same shape /draft and Home's panel use. */
+function ChipRow({ names, you = false }: { names: string[]; you?: boolean }) {
   return (
     <span className="flex shrink-0 items-center -space-x-1.5">
-      {names.map((name, i) => (
-        name ? (
+      {names.map((name, i) => {
+        const mine = you && i === 0;
+        return name ? (
           <Icon key={i} name={name}
-            className={`h-5 w-5 ring-2 ring-bg1 ${i === 0 ? "ring-2 ring-gold" : ""}`} />
+            className={`h-5 w-5 ring-2 ${mine ? "ring-gold" : "ring-bg3"}`} />
         ) : (
           <span key={i} aria-hidden="true"
-            className="h-5 w-5 rounded-sm border border-dashed border-line-strong bg-bg2 ring-2 ring-bg1" />
-        )
-      ))}
+            className={`h-5 w-5 rounded-sm border border-dashed bg-bg2 ring-2 ring-bg3 ${
+              mine ? "border-gold" : "border-line-strong"}`} />
+        );
+      })}
     </span>
   );
 }
@@ -124,7 +132,13 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
 
   return (
     <div data-testid="draft-dock" className="fixed bottom-3 right-3 z-30 w-[min(94vw,420px)] sm:bottom-4 sm:right-4">
-      <div role="region" aria-label="Your draft" className="plane overflow-hidden rounded-lg border border-line bg-bg1 shadow-raised">
+      {/* `.dock`, not `.plane` + `shadow-raised`: those two both set
+          `box-shadow` and the plane won, so this floated with no lift at all.
+          See index.css — and the surface steps up to bg3, the system's
+          elevated tier, because bg1 measured 1.02:1 against the page. */}
+      <div role="region" aria-label="Your draft"
+        className={`dock overflow-hidden rounded-lg border bg-bg3 ${
+          started ? "is-live border-gold/40" : "border-line-strong"}`}>
         <button
           ref={toggleRef}
           type="button"
@@ -133,7 +147,7 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
           aria-controls="draft-dock-panel"
           className="press flex w-full items-center gap-2.5 px-3 py-2.5 text-left"
         >
-          <ChipRow names={draft.allies} />
+          <ChipRow names={draft.allies} you />
           <span aria-hidden="true" className="shrink-0 text-label text-faint">vs</span>
           <ChipRow names={draft.enemies} />
           <span className={`min-w-0 flex-1 truncate text-small font-medium ${started ? "text-ink-soft" : "text-blue"}`}>

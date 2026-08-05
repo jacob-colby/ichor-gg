@@ -138,6 +138,28 @@ button:not(:disabled) { cursor: pointer; }
    plane's own inset highlight. */
 .plane.is-selected { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), var(--shadow-glow); }
 
+/* The draft dock floats above every route, and on this ground it could not be
+   seen. Measured before the fix: its surface sat at 1.02:1 against the page
+   (bg1 on bg0) behind a 1.23:1 hairline, and it had NO drop shadow at all —
+   `.plane` and `shadow-raised` both set `box-shadow`, so the plane's inset
+   silently overwrote the lift the dock was asking for. `--shadow-raised`
+   already carries that inset, which is why `.plane` was redundant as well as
+   harmful.
+
+   The deeper problem is that a black drop shadow cannot separate a near-black
+   panel from a near-black page; it only darkens what is already dark. What
+   reads on Arena Night is a LIGHT edge, so the dock's elevation is the raised
+   shadow plus a 1px white ring — the same idea as `.plane`'s top highlight,
+   carried all the way round because this surface has no page around it to
+   catch the light on one side only.
+
+   `.is-live` spends gold, and only while a draft is actually entered. That is
+   the Torchlight Rule's "whatever matters right now", the same reading Home's
+   draft panel uses, so the two surfaces agree about when gold is earned. The
+   dock's chrome never wears it at rest. */
+.dock { box-shadow: var(--shadow-raised), 0 0 0 1px rgba(255, 255, 255, 0.07); }
+.dock.is-live { box-shadow: var(--shadow-raised), var(--shadow-glow); }
+
 /* Keyboard focus. DESIGN.md reserves focus-blue for exactly this, but nothing
    was drawing it — every focusable fell back to the UA default. Elements that
    opt out with `focus:outline-none` (search fields inside a bordered wrapper)

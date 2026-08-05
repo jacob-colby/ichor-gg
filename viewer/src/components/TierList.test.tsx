@@ -234,3 +234,12 @@ describe("TierList — board state lives in the URL", () => {
     await waitFor(() => expect(window.location.hash).toBe("#/tiers?mode=arena"));
   });
 });
+
+/* Same shrink-to-fit trap as the items shelf: a flex <a> sizes to its own text
+ * rather than to its grid track unless told to fill. */
+describe("TierList — a card fills its grid cell", () => {
+  it("stretches the card surface to its track", () => {
+    render(<TierList tierlist={{ gods, items }} />);
+    expect(screen.getByRole("link", { name: /^Ymir/ }).className).toContain("w-full");
+  });
+});

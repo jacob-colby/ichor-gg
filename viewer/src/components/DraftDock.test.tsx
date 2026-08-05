@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { render, screen, fireEvent, within } from "@testing-library/react";
+import { render, screen, fireEvent, within, cleanup } from "@testing-library/react";
 import { DraftDock } from "./DraftDock";
 import type { DraftConfig, God, Item } from "../types";
 
@@ -206,5 +206,46 @@ describe("DraftDock — the build, in place", () => {
     render(dock());
     fireEvent.click(screen.getByRole("button", { name: /default core/i }));
     expect(screen.getByRole("link", { name: /full board/i })).toHaveAttribute("href", "#/draft");
+  });
+});
+
+/* The dock floats over every route on a near-black page. Measured before this:
+ * its surface sat at 1.02:1 against the page and it had NO drop shadow at all,
+ * because `.plane` and `shadow-raised` both set `box-shadow` and the plane won.
+ * These pin the separation so a later tidy-up can't silently flatten it. */
+describe("DraftDock — it has to be visible", () => {
+  const panel = () => screen.getByTestId("draft-dock").querySelector('[role="region"]')!;
+
+  it("uses the composed dock elevation, not the shadow pair that cancelled", () => {
+    render(dock());
+    expect(panel().className).toContain("dock");
+    // `.plane` would overwrite the drop shadow again.
+    expect(panel().className).not.toContain("plane");
+  });
+
+  it("sits on the elevated surface tier, not one step off the page", () => {
+    render(dock());
+    expect(panel().className).toContain("bg-bg3");
+    expect(panel().className).not.toContain("bg-bg1");
+  });
+
+  it("wears the gold ring only while a draft is live", () => {
+    render(dock());
+    expect(panel().className).not.toContain("is-live");
+    cleanup();
+
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["Agni", "", "", "", ""], enemies: ["", "", "", "", ""],
+    }));
+    render(dock());
+    expect(panel().className).toContain("is-live");
+  });
+
+  it("marks one you-slot, on the ally row, even while empty", () => {
+    // Keyed on index alone the gold landed on the enemy row's first slot too,
+    // which said the enemy team had a you-slot.
+    render(dock());
+    const gold = screen.getByTestId("draft-dock").querySelectorAll("button > span > .border-gold, button > span > .ring-gold");
+    expect(gold).toHaveLength(1);
   });
 });

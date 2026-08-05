@@ -104,7 +104,14 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
       aria-label={`${item.name}, ${item.cost} gold${
         eff ? `, ${PRICE_SPOKEN[priceVerdict(item.efficiency_tier, eff.residual)]} — the model prices it at ${eff.predicted_cost} gold`
         : ", not scored by the gold model"}`}
-      className="plane press flex h-full flex-col gap-1.5 rounded-md border border-line-strong bg-bg2 p-2 text-left transition-colors duration-[180ms] ease-standard hover:border-blue/50"
+      // `w-full` is load-bearing, not belt-and-braces. A <button> is
+      // shrink-to-fit: unlike a <div> it does not stretch to its grid track,
+      // so these cards sized to their own text and came out 134-180px wide
+      // inside identical 192px cells — nine distinct widths on one shelf.
+      // The earlier attempt at this measured the <li> (uniform 192, as grid
+      // tracks always are) and concluded the widths were fine; the ragged
+      // element was the card inside it.
+      className="plane press flex h-full w-full flex-col gap-1.5 rounded-md border border-line-strong bg-bg2 p-2 text-left transition-colors duration-[180ms] ease-standard hover:border-blue/50"
     >
       <span className="flex items-center gap-2">
         <ItemIcon name={item.name} />

@@ -216,9 +216,15 @@ export function Slot({ kind, position, name, size = "h-16 w-16", onOpen, onRemov
           )}
         </>
       )}
+      {/* Centred ON the bottom edge, not tucked inside it: sitting 2px above
+          the border the badge read as a label floating in the portrait, and it
+          covered the art it was labelling. Straddling the edge makes it read
+          as a tab attached to the slot, and gives the icon its full height
+          back. `translate-y-1/2` against `bottom-0` puts the badge's own
+          centre line exactly on the border whatever the badge's height. */}
       {isYou && (
         <span aria-hidden="true"
-          className="pointer-events-none absolute bottom-0.5 left-1/2 -translate-x-1/2 rounded-sm bg-gold px-1 py-px text-micro font-bold uppercase leading-none tracking-[0.08em] text-bg0">
+          className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-sm bg-gold px-1.5 py-px text-micro font-bold uppercase leading-none tracking-[0.08em] text-bg0">
           You
         </span>
       )}

@@ -245,3 +245,16 @@ describe("ItemsShop — filters live in the URL", () => {
     expect(window.location.hash).toBe("#/items/Aegis?eff=premium");
   });
 });
+
+/* A <button> is shrink-to-fit: unlike a <div> it does not stretch to its grid
+ * track. These cards sized to their own text and came out 134-180px wide
+ * inside identical 192px cells — nine distinct widths on one shelf. The
+ * earlier attempt measured the <li> (uniform 192, as grid tracks always are)
+ * and concluded the widths were fine. */
+describe("ItemsShop — a card fills its grid cell", () => {
+  it("stretches the card surface to its track", () => {
+    render(shop());
+    const card = screen.getByRole("button", { name: /^Rage,/ });
+    expect(card.className).toContain("w-full");
+  });
+});
