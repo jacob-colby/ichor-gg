@@ -216,9 +216,55 @@ describe("Home — the draft seam", () => {
   it("invites you in when no draft is saved", () => {
     render(<Home data={baseData({ tierlist })} />);
     const seam = screen.getByTestId("home-draft");
-    expect(within(seam).getByRole("heading", { level: 2 })).toHaveTextContent(/drafting a match/i);
+    expect(within(seam).getByRole("heading", { level: 2 })).toHaveTextContent(/build for the match you.re in/i);
     expect(within(seam).getByRole("link", { name: /open the draft board/i }))
       .toHaveAttribute("href", toHash.draft());
+  });
+
+  /* The seam existed and was still being missed: its heading used the quietest
+   * tier the system has, in the same footer stack as the pinned list and the
+   * freshness line. These pin the promotion so a later tidy-up can't quietly
+   * demote it again. */
+  it("titles itself at section strength, not as footer chrome", () => {
+    render(<Home data={baseData({ tierlist })} />);
+    const seam = screen.getByTestId("home-draft");
+    const heading = within(seam).getByRole("heading", { level: 2 });
+    // The quiet tier is `font-mono … text-faint`; this one is the display face.
+    expect(heading.className).toContain("font-display");
+    expect(heading.className).toContain("text-ink");
+    expect(heading.className).not.toContain("text-faint");
+  });
+
+  it("carries the primary action as a gold button, not a text link", () => {
+    // The Torchlight Rule allows gold for exactly three things, and this is
+    // one of them: the surface's primary action.
+    render(<Home data={baseData({ tierlist })} />);
+    const cta = within(screen.getByTestId("home-draft")).getByRole("link", { name: /draft board/i });
+    expect(cta.className).toContain("bg-gold");
+    expect(cta.className).toContain("text-bg0");
+  });
+
+  it("is a raised panel, and only wears the gold ring while a draft is live", () => {
+    // Flat-Until-It-Matters: the ring is a state, not decoration.
+    const { unmount } = render(<Home data={baseData({ tierlist })} />);
+    expect(screen.getByTestId("home-draft").className).toContain("plane");
+    expect(screen.getByTestId("home-draft").className).not.toContain("is-selected");
+    unmount();
+
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["Agni", "", "", "", ""], enemies: ["", "", "", "", ""],
+    }));
+    render(<Home data={baseData({ tierlist })} />);
+    expect(screen.getByTestId("home-draft").className).toContain("is-selected");
+  });
+
+  it("shows exactly one gold you-slot in the empty-state preview", () => {
+    // Gold means "this one is yours" and a board has one. Drawn on both rows
+    // it said the enemy team had a you-slot too.
+    const { container } = render(<Home data={baseData({ tierlist })} />);
+    const seam = within(container).getByTestId("home-draft");
+    const gold = seam.querySelectorAll("span[aria-hidden] > span.border-gold");
+    expect(gold).toHaveLength(1);
   });
 
   it("hands back a draft already in progress, named and countable", () => {
