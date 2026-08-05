@@ -11,7 +11,8 @@ const items = [
   { name: "Aegis", tier: 3, cost: 2100, stats: { "Max Health": "200" }, passive: "Shield.",
     builds_from: [], builds_into: [], effect_tags: ["aura"], efficiency_tier: "premium",
     efficiency: { predicted_cost: 1800, residual: 300, score: 0.2 } },
-  { name: "Pendant", tier: 1, cost: 700, stats: { "Max Health": "50" }, passive: "",
+  { name: "Pendant", tier: 1, cost: 700, stats: { "Max Health": "50" },
+    passive: "Gain 1 stack on minion kill.",
     builds_from: [], builds_into: [], effect_tags: [], efficiency_tier: null, efficiency: null },
 ] as unknown as Item[];
 

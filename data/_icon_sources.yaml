@@ -1,0 +1,29 @@
+# Head-icon source overrides.
+#
+# `refresh_god` derives a god's scoreboard icon from its wiki portrait URL
+# (`X_Default.png` -> `X_Default_Icon.png`). For most of the roster that asset
+# is a head crop and looks right in a grid of faces. For a few it is framed as
+# a half- or full-body portrait instead — Scylla, Baron Samedi, Yemoja and Jing
+# Wei — which is not a scraping bug: the icon we fetch IS the game's own, it is
+# just composed differently.
+#
+# SmiteSource serves a properly-cropped head portrait for those gods, so the
+# fix is to point at it rather than to crop the wiki's asset ourselves. An
+# earlier attempt did crop it, and this is better on every count: it is the
+# real artwork rather than an approximation, it needs no judgement about where
+# a face sits, and it cannot drift out of alignment when the art changes.
+#
+# This file exists so the override SURVIVES A REFRESH. Without it the next
+# `refresh --all` would re-derive the wiki URL and quietly overwrite these
+# icons with the portraits again — the kind of fix that looks done and undoes
+# itself on the next patch day.
+#
+# Keys are icon slugs (lowercase, spaces and apostrophes stripped) and the
+# value replaces the derived `<slug>-head.png` source. The CDN takes a width
+# parameter; 256 matches what the wiki serves for every other god.
+
+head_icons:
+  scylla:       "https://cdn.smitesource.com/cdn-cgi/image/width=256%2Cformat=auto%2Cquality=75/Gods/Scylla/Default/t_GodPortrait_Scylla.png"
+  baron-samedi: "https://cdn.smitesource.com/cdn-cgi/image/width=256%2Cformat=auto%2Cquality=75/Gods/BaronSamedi/Default/t_GodPortrait_BaronSamedi.png"
+  yemoja:       "https://cdn.smitesource.com/cdn-cgi/image/width=256%2Cformat=auto%2Cquality=75/Gods/Yemoja/Default/t_GodPortrait_Yemoja.png"
+  jing-wei:     "https://cdn.smitesource.com/cdn-cgi/image/width=256%2Cformat=auto%2Cquality=75/Gods/JingWei/Default/t_GodPortrait_JingWei.png"

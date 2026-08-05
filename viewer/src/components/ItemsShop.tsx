@@ -17,7 +17,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Item, ItemTierEntry } from "../types";
 import {
-  filterItems, sortItems, tierLabel, tiersPresent,
+  filterItems, sortItems, tierLabel, tiersPresent, isComponent,
   residualText, statValueLines, basePrice, EFFICIENCY,
   type SortKey, type ItemFilter,
 } from "../lib/itemFilters";
@@ -447,8 +447,18 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
   const tiers = useMemo(() => tiersPresent(items), [items]);
   const tags = useMemo(() => Array.from(new Set(items.flatMap((i) => i.effect_tags ?? []))).sort(), [items]);
   const stats = useMemo(() => Array.from(new Set(items.flatMap((i) => Object.keys(i.stats ?? {})))).sort(), [items]);
+  // Components are shown only when a tier is explicitly chosen. The shop
+  // gained 49 of them when the item tree was closed, and they are a different
+  // kind of thing: a component has no efficiency verdict of its own, so its
+  // card renders four lines where a finished item renders seven — uniform
+  // boxes with visibly ragged contents. They are still one click away on the
+  // T1/T2 filters; they just no longer set the default texture of the page.
+  const pool = useMemo(
+    () => (filter.tier === undefined ? items.filter((i) => !isComponent(i)) : items),
+    [items, filter.tier],
+  );
   // `filter` carries `sort` too; `filterItems` ignores keys it doesn't know.
-  const shown = useMemo(() => sortItems(filterItems(items, filter), filter.sort), [items, filter]);
+  const shown = useMemo(() => sortItems(filterItems(pool, filter), filter.sort), [pool, filter]);
 
   // Bars scale against the whole set, not the filtered view, so a filter never
   // silently rescales what a bar length means.
