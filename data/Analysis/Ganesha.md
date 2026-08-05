@@ -10,7 +10,6 @@
 | Oni Hunter's Garb | 0.54 | 0.63 | 0.70 | 0.50 | 0.00 | 0.45 | undervalued |  | **UNDERRATED** |
 | Shifter's Shield | 0.53 | 0.62 | 0.58 | 0.50 | 0.00 | 0.70 | fair |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.53 | 0.61 | 0.61 | 0.50 | 0.00 | 0.60 | fair | sustain | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.53 | 0.60 | 0.56 | 0.50 | 0.00 | 0.70 | fair | aura | **UNDERRATED** |
 | Spectral Armor | 0.53 | 0.60 | 0.66 | 0.50 | 0.00 | 0.45 | undervalued | anti-crit, aura | **UNDERRATED** |
 | Draconic Scale | 0.52 | 0.60 | 0.55 | 0.50 | 0.00 | 0.70 | fair |  | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Mercury's Talaria | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.34 | 0.23 | 0.25 | 0.50 | 0.00 | 0.20 | premium |  |  |
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

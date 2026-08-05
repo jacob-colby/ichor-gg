@@ -9,7 +9,6 @@
 | Runeforged Hammer | 0.54 | 0.63 | 0.70 | 0.50 | 0.00 | 0.48 | undervalued | burst | **UNDERRATED** |
 | Lernaean Bow | 0.54 | 0.62 | 0.65 | 0.50 | 0.00 | 0.56 | undervalued | wave-clear, burst | **UNDERRATED** |
 | The Reaper | 0.53 | 0.61 | 0.59 | 0.50 | 0.00 | 0.67 | fair | sustain | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Heartseeker | 0.53 | 0.60 | 0.53 | 0.50 | 0.00 | 0.77 | fair | burst | **UNDERRATED** |
 | Damaru | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.45 | undervalued |  | **UNDERRATED** |
 | Avatar's Parashu | 0.52 | 0.59 | 0.55 | 0.50 | 0.00 | 0.67 | fair | cc-immunity | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | The Executioner | 0.32 | 0.20 | 0.20 | 0.50 | 0.00 | 0.18 | premium | protection-shred |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.19 | 0.00 | 0.00 | 0.40 | 0.10 | 0.00 | premium | mobility |  |

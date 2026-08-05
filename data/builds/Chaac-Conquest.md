@@ -107,11 +107,11 @@ builds:
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Amanita Charm, The Crusher, Jotunn''s Revenge, Runeforged
-    Hammer, Berserker''s Shield, Eye of Providence, Blink Rune, Hydra''s Lament, Oni
-    Hunter''s Garb, Shield Splitter, Avenging Blade, Eye of the Storm, Spectral Armor,
-    Shield of the Phoenix, Freya''s Tears, Breastplate of Valor, Mantle Of Discord,
-    Erosion, Pharaoh''s Curse, Draconic Scale, Golden Blade, Lernaean Bow, Yogi''s
-    Necklace, The Reaper, Leviathan''s Hide, Damaru, Genji''s Guard.'
+    Hammer, Berserker''s Shield, Eye of Providence, Hydra''s Lament, Oni Hunter''s
+    Garb, Shield Splitter, Avenging Blade, Eye of the Storm, Spectral Armor, Shield
+    of the Phoenix, Freya''s Tears, Breastplate of Valor, Mantle Of Discord, Erosion,
+    Pharaoh''s Curse, Draconic Scale, Golden Blade, Lernaean Bow, Yogi''s Necklace,
+    The Reaper, Leviathan''s Hide, Damaru, Genji''s Guard.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -155,15 +155,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Blink Rune
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Hydra's Lament
   - Shifter's Shield
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Blink Rune
   - Kinetic Cuirass
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -178,19 +178,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Heartseeker, Jotunn''s Revenge, The Crusher, Blink Rune, Kinetic Cuirass,
-    Hydra''s Lament, Runeforged Hammer, Amanita Charm, Berserker''s Shield, Eye of
-    Providence, Oni Hunter''s Garb, Breastplate of Valor, Shield of the Phoenix, Avenging
-    Blade, Freya''s Tears, Spectral Armor, Shield Splitter, Mantle Of Discord, Lernaean
-    Bow, Eye of the Storm, Pharaoh''s Curse, Yogi''s Necklace, The Reaper, Golden
-    Blade, Erosion, Damaru, Draconic Scale, Genji''s Guard.'
+    god: Heartseeker, Jotunn''s Revenge, The Crusher, Kinetic Cuirass, Hydra''s Lament,
+    Runeforged Hammer, Amanita Charm, Berserker''s Shield, Eye of Providence, Oni
+    Hunter''s Garb, Breastplate of Valor, Shield of the Phoenix, Avenging Blade, Freya''s
+    Tears, Spectral Armor, Shield Splitter, Mantle Of Discord, Lernaean Bow, Eye of
+    the Storm, Pharaoh''s Curse, Yogi''s Necklace, The Reaper, Golden Blade, Erosion,
+    Damaru, Draconic Scale, Genji''s Guard.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.69
@@ -203,6 +197,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Hydra's Lament:
+      total: 0.52
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     Shifter's Shield:
       total: 0.56
       efficiency: 0.58
@@ -249,11 +249,11 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Runeforged Hammer, The Crusher,
-    Jotunn''s Revenge, Kinetic Cuirass, The Reaper, Berserker''s Shield, Blink Rune,
-    Eye of Providence, Hydra''s Lament, Chandra''s Grace, Oni Hunter''s Garb, Avenging
-    Blade, Eye of the Storm, Spectral Armor, Riptalon, Shield Splitter, Golden Blade,
-    Phoenix Feather, Pharaoh''s Curse, Breastplate of Valor, Yogi''s Necklace, Lernaean
-    Bow, Erosion, Freya''s Tears, Draconic Scale, Genji''s Guard.'
+    Jotunn''s Revenge, Kinetic Cuirass, The Reaper, Berserker''s Shield, Eye of Providence,
+    Hydra''s Lament, Chandra''s Grace, Oni Hunter''s Garb, Avenging Blade, Eye of
+    the Storm, Spectral Armor, Riptalon, Shield Splitter, Golden Blade, Phoenix Feather,
+    Pharaoh''s Curse, Breastplate of Valor, Yogi''s Necklace, Lernaean Bow, Erosion,
+    Freya''s Tears, Draconic Scale, Genji''s Guard.'
   slot_scores:
     Shield of the Phoenix:
       total: 0.55
@@ -319,11 +319,11 @@ builds:
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Heartseeker, The Crusher, Jotunn''s Revenge, Avenging Blade, Kinetic
-    Cuirass, Blink Rune, Amanita Charm, Runeforged Hammer, Berserker''s Shield, Hydra''s
-    Lament, Eye of Providence, Oni Hunter''s Garb, The Reaper, Shield Splitter, Spectral
-    Armor, Stone of Binding, Void Shield, Breastplate of Valor, Eye of the Storm,
-    Shield of the Phoenix, Screeching Gargoyle, Mantle Of Discord, Freya''s Tears,
-    Lernaean Bow, Pharaoh''s Curse, Avatar''s Parashu, Void Stone, Genji''s Guard.'
+    Cuirass, Amanita Charm, Runeforged Hammer, Berserker''s Shield, Hydra''s Lament,
+    Eye of Providence, Oni Hunter''s Garb, The Reaper, Shield Splitter, Spectral Armor,
+    Stone of Binding, Void Shield, Breastplate of Valor, Eye of the Storm, Shield
+    of the Phoenix, Screeching Gargoyle, Mantle Of Discord, Freya''s Tears, Lernaean
+    Bow, Pharaoh''s Curse, Avatar''s Parashu, Void Stone, Genji''s Guard.'
   slot_scores:
     Avenging Blade:
       total: 0.55
@@ -455,11 +455,11 @@ builds:
     swap_item: Contagion
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, The Crusher, Jotunn''s
-    Revenge, Runeforged Hammer, Berserker''s Shield, Eye of Providence, Blink Rune,
-    Hydra''s Lament, Genji''s Guard, Oni Hunter''s Garb, Shield Splitter, Avenging
-    Blade, Eye of the Storm, Spectral Armor, Shield of the Phoenix, Freya''s Tears,
-    Breastplate of Valor, Mantle Of Discord, Erosion, Pharaoh''s Curse, Draconic Scale,
-    Golden Blade, Lernaean Bow, Yogi''s Necklace, The Reaper, Leviathan''s Hide, Damaru.'
+    Revenge, Runeforged Hammer, Berserker''s Shield, Eye of Providence, Hydra''s Lament,
+    Genji''s Guard, Oni Hunter''s Garb, Shield Splitter, Avenging Blade, Eye of the
+    Storm, Spectral Armor, Shield of the Phoenix, Freya''s Tears, Breastplate of Valor,
+    Mantle Of Discord, Erosion, Pharaoh''s Curse, Draconic Scale, Golden Blade, Lernaean
+    Bow, Yogi''s Necklace, The Reaper, Leviathan''s Hide, Damaru.'
   slot_scores:
     Berserker's Shield:
       total: 0.53

@@ -9,7 +9,6 @@
 | Spear of the Magus | 0.54 | 0.63 | 0.62 | 0.50 | 0.00 | 0.67 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.53 | 0.61 | 0.74 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
 | The Cosmic Horror | 0.53 | 0.61 | 0.59 | 0.50 | 0.00 | 0.67 | fair |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Rod of Tahuti | 0.52 | 0.53 | 0.47 | 0.53 | 0.27 | 0.67 | premium |  |  |
 | Breastplate of Valor | 0.51 | 0.57 | 0.67 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
 | Dreamer's Idol | 0.51 | 0.57 | 0.53 | 0.50 | 0.00 | 0.67 | fair | cc-immunity | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Gauntlet of Thebes | 0.33 | 0.22 | 0.31 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

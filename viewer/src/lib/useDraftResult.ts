@@ -9,7 +9,7 @@
  */
 import { useMemo } from "react";
 import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, God, Item, LifestealCap } from "../types";
-import { deriveThreats, threatOverlay, threatCulprits, type ThreatKey } from "./threats";
+import { deriveThreats, threatOverlay, damageOverlay, threatCulprits, type ThreatKey } from "./threats";
 import { adaptedCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftBuild";
 import type { DraftMode } from "./draft";
 
@@ -80,6 +80,7 @@ export function useDraftResult(
   gods: God[], items: Item[], builds: BuildNote[],
   godItemScores: Record<string, Record<string, number>> | undefined,
   draftConfig: DraftConfig | undefined,
+  godItemDamage?: Record<string, Record<string, [number, number]>>,
 ): DraftResult {
   const godsByName = useMemo(() => {
     const m: Record<string, God> = {};
@@ -111,10 +112,12 @@ export function useDraftResult(
     if (!draftEnabled) return null;
     const opts = { maxBonus: draftConfig!.max_bonus, maxLifesteal: draftMaxLifesteal(meGod, draftConfig!.lifesteal_caps) };
     const base = adaptedCore(godItemScores![meName], itemsByName, { tags: {}, stats: {} }, opts);
-    const adapted = adaptedCore(godItemScores![meName], itemsByName, threatOverlay(threats, draftConfig!), opts);
+    const overlay = threatOverlay(threats, draftConfig!);
+    overlay.items = damageOverlay(threats, godItemDamage?.[meName], draftConfig!);
+    const adapted = adaptedCore(godItemScores![meName], itemsByName, overlay, opts);
     // Both builds survive: the diff is the product's whole claim.
     return { base, adapted, diff: diffCore(base, adapted) };
-  }, [draftEnabled, draftConfig, godItemScores, meName, itemsByName, threats, meGod]);
+  }, [draftEnabled, draftConfig, godItemScores, godItemDamage, meName, itemsByName, threats, meGod]);
 
   const taken = useMemo(
     () => new Set([...draft.allies, ...draft.enemies].filter(Boolean)),

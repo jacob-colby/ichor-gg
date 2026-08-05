@@ -107,11 +107,11 @@ builds:
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, Runeforged Hammer, Kinetic Cuirass, Avenging Blade, Berserker''s
-    Shield, Amanita Charm, Blink Rune, Eye of the Storm, Oni Hunter''s Garb, Eye of
-    Providence, Golden Blade, Shield Splitter, Lernaean Bow, Genji''s Guard, The Reaper,
-    Spectral Armor, Damaru, Yogi''s Necklace, Pharaoh''s Curse, Shield of the Phoenix,
-    Shifter''s Shield, Avatar''s Parashu, Wyrmskin Hide, Erosion, Breastplate of Valor,
-    Mantle Of Discord.'
+    Shield, Amanita Charm, Eye of the Storm, Oni Hunter''s Garb, Eye of Providence,
+    Golden Blade, Shield Splitter, Lernaean Bow, Genji''s Guard, The Reaper, Spectral
+    Armor, Damaru, Yogi''s Necklace, Pharaoh''s Curse, Shield of the Phoenix, Shifter''s
+    Shield, Avatar''s Parashu, Wyrmskin Hide, Erosion, Breastplate of Valor, Mantle
+    Of Discord.'
   slot_scores:
     Avenging Blade:
       total: 0.53
@@ -155,15 +155,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Blink Rune
   - Genji's Guard
+  - Berserker's Shield
   - Jotunn's Revenge
   - Hydra's Lament
   - Runeforged Hammer
   - The Crusher
   flex_slots:
-  - Runeforged Hammer
   - Genji's Guard
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -172,31 +172,31 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, Blink Rune, Runeforged Hammer, Genji''s Guard, Berserker''s
-    Shield, Kinetic Cuirass, Amanita Charm, Oni Hunter''s Garb, Avenging Blade, Breastplate
-    of Valor, Shield of the Phoenix, Eye of Providence, The Reaper, Lernaean Bow,
-    Spectral Armor, Yogi''s Necklace, Golden Blade, Eye of the Storm, Freya''s Tears,
-    Arondight, Damaru, Avatar''s Parashu, Shield Splitter, Pharaoh''s Curse, Chandra''s
-    Grace, Pendulum Blade.'
+    god: The Crusher, Runeforged Hammer, Genji''s Guard, Berserker''s Shield, Kinetic
+    Cuirass, Amanita Charm, Oni Hunter''s Garb, Avenging Blade, Breastplate of Valor,
+    Shield of the Phoenix, Eye of Providence, The Reaper, Lernaean Bow, Spectral Armor,
+    Yogi''s Necklace, Golden Blade, Eye of the Storm, Freya''s Tears, Arondight, Damaru,
+    Avatar''s Parashu, Shield Splitter, Pharaoh''s Curse, Chandra''s Grace, Pendulum
+    Blade.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Genji's Guard:
       total: 0.52
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.24
+    Berserker's Shield:
+      total: 0.51
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.19
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.69
@@ -249,11 +249,11 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Runeforged Hammer, Shield of the Phoenix, Kinetic Cuirass,
-    The Crusher, Berserker''s Shield, The Reaper, Eye of Providence, Blink Rune, Oni
-    Hunter''s Garb, Avenging Blade, Eye of the Storm, Chandra''s Grace, Shield Splitter,
-    Spectral Armor, Genji''s Guard, Golden Blade, Shifter''s Shield, Riptalon, Phoenix
-    Feather, Pharaoh''s Curse, Erosion, Lernaean Bow, Draconic Scale, Yogi''s Necklace,
-    Bloodforge, Mantle Of Discord.'
+    The Crusher, Berserker''s Shield, The Reaper, Eye of Providence, Oni Hunter''s
+    Garb, Avenging Blade, Eye of the Storm, Chandra''s Grace, Shield Splitter, Spectral
+    Armor, Genji''s Guard, Golden Blade, Shifter''s Shield, Riptalon, Phoenix Feather,
+    Pharaoh''s Curse, Erosion, Lernaean Bow, Draconic Scale, Yogi''s Necklace, Bloodforge,
+    Mantle Of Discord.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -318,12 +318,11 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Avenging Blade, Runeforged Hammer, Blink Rune, The
-    Reaper, Berserker''s Shield, Kinetic Cuirass, Amanita Charm, Avatar''s Parashu,
-    Oni Hunter''s Garb, Eye of Providence, Genji''s Guard, Lernaean Bow, Golden Blade,
-    Eye of the Storm, Riptalon, Tekko-Kagi, Spectral Armor, Void Shield, Shield Splitter,
-    Yogi''s Necklace, Damaru, Pendulum Blade, Pharaoh''s Curse, Stone of Binding,
-    Titan''s Bane.'
+    for this god: The Crusher, Avenging Blade, Runeforged Hammer, The Reaper, Berserker''s
+    Shield, Kinetic Cuirass, Amanita Charm, Avatar''s Parashu, Oni Hunter''s Garb,
+    Eye of Providence, Genji''s Guard, Lernaean Bow, Golden Blade, Eye of the Storm,
+    Riptalon, Tekko-Kagi, Spectral Armor, Void Shield, Shield Splitter, Yogi''s Necklace,
+    Damaru, Pendulum Blade, Pharaoh''s Curse, Stone of Binding, Titan''s Bane.'
   slot_scores:
     Avenging Blade:
       total: 0.56
@@ -455,10 +454,10 @@ builds:
     swap_item: Contagion
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, Runeforged Hammer, Kinetic Cuirass, Avenging
-    Blade, Berserker''s Shield, Amanita Charm, Blink Rune, Eye of the Storm, Oni Hunter''s
-    Garb, Eye of Providence, Golden Blade, Shield Splitter, Lernaean Bow, Genji''s
-    Guard, The Reaper, Spectral Armor, Damaru, Yogi''s Necklace, Pharaoh''s Curse,
-    Shield of the Phoenix, Shifter''s Shield, Avatar''s Parashu, Wyrmskin Hide, Erosion,
+    Blade, Berserker''s Shield, Amanita Charm, Eye of the Storm, Oni Hunter''s Garb,
+    Eye of Providence, Golden Blade, Shield Splitter, Lernaean Bow, Genji''s Guard,
+    The Reaper, Spectral Armor, Damaru, Yogi''s Necklace, Pharaoh''s Curse, Shield
+    of the Phoenix, Shifter''s Shield, Avatar''s Parashu, Wyrmskin Hide, Erosion,
     Breastplate of Valor, Mantle Of Discord.'
   slot_scores:
     Avenging Blade:

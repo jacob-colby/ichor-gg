@@ -9,7 +9,6 @@
 | Amanita Charm | 0.54 | 0.64 | 0.68 | 0.50 | 0.00 | 0.54 | undervalued | sustain, aura | **UNDERRATED** |
 | Runeforged Hammer | 0.54 | 0.63 | 0.70 | 0.50 | 0.00 | 0.47 | undervalued | burst | **UNDERRATED** |
 | Eye of Providence | 0.53 | 0.62 | 0.65 | 0.50 | 0.00 | 0.54 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.53 | 0.61 | 0.69 | 0.50 | 0.00 | 0.42 | undervalued | burst | **UNDERRATED** |
 | Genji's Guard | 0.53 | 0.60 | 0.74 | 0.48 | 0.21 | 0.29 | undervalued |  |  |
 | Shifter's Shield | 0.52 | 0.57 | 0.58 | 0.49 | 0.40 | 0.54 | fair |  |  |
@@ -95,4 +94,3 @@
 | Sun Beam Bow | 0.34 | 0.23 | 0.28 | 0.50 | 0.00 | 0.10 | premium |  |  |
 | Daybreak Gavel | 0.34 | 0.22 | 0.25 | 0.50 | 0.00 | 0.15 | premium |  |  |
 | The Executioner | 0.33 | 0.20 | 0.20 | 0.50 | 0.00 | 0.20 | premium | protection-shred |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

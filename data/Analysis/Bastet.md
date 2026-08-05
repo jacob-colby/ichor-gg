@@ -15,7 +15,6 @@
 | Tekko-Kagi | 0.54 | 0.63 | 0.50 | 0.50 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
 | Avenging Blade | 0.54 | 0.62 | 0.63 | 0.50 | 0.00 | 0.62 | fair | protection-shred | **UNDERRATED** |
 | Damaru | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.52 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Arondight | 0.52 | 0.59 | 0.59 | 0.50 | 0.00 | 0.60 | fair | mobility | **UNDERRATED** |
 | Golden Blade | 0.52 | 0.59 | 0.62 | 0.50 | 0.00 | 0.52 | fair | wave-clear | **UNDERRATED** |
 | Transcendence | 0.52 | 0.53 | 0.54 | 0.54 | 0.26 | 0.52 | fair |  |  |
@@ -95,4 +94,3 @@
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.31 | 0.17 | 0.20 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

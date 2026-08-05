@@ -107,11 +107,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Breastplate of Valor, Ethereal Staff, Kinetic Cuirass, Amanita Charm,
-    Eye of Providence, Gluttonous Grimoire, Oni Hunter''s Garb, Freya''s Tears, Blink
-    Rune, Shield of the Phoenix, Erosion, Spectral Armor, Draconic Scale, Mantle Of
-    Discord, Leviathan''s Hide, Hussar''s Wings, Soul Gem, Yogi''s Necklace, Midgardian
-    Mail, Hide of the Nemean Lion, Wish-Granting Pearl, Doublet of Binding, Jade Scepter,
-    Gladiator''s Shield, Rod of Asclepius, Ancile.'
+    Eye of Providence, Gluttonous Grimoire, Oni Hunter''s Garb, Freya''s Tears, Shield
+    of the Phoenix, Erosion, Spectral Armor, Draconic Scale, Mantle Of Discord, Leviathan''s
+    Hide, Hussar''s Wings, Soul Gem, Yogi''s Necklace, Midgardian Mail, Hide of the
+    Nemean Lion, Wish-Granting Pearl, Doublet of Binding, Jade Scepter, Gladiator''s
+    Shield, Rod of Asclepius, Ancile.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -180,10 +180,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Breastplate of Valor, Amanita Charm, Ethereal Staff, Shield of the Phoenix,
     Kinetic Cuirass, Eye of Providence, Gluttonous Grimoire, Soul Gem, Rod of Asclepius,
-    Oni Hunter''s Garb, Chandra''s Grace, Spectral Armor, Blink Rune, Erosion, Draconic
-    Scale, Phoenix Feather, Freya''s Tears, Lifebinder, Mantle Of Discord, Yogi''s
-    Necklace, Leviathan''s Hide, Bancroft''s Talon, Blood-Bound Book, Wish-Granting
-    Pearl, Spirit Robe, Jade Scepter.'
+    Oni Hunter''s Garb, Chandra''s Grace, Spectral Armor, Erosion, Draconic Scale,
+    Phoenix Feather, Freya''s Tears, Lifebinder, Mantle Of Discord, Yogi''s Necklace,
+    Leviathan''s Hide, Bancroft''s Talon, Blood-Bound Book, Wish-Granting Pearl, Spirit
+    Robe, Jade Scepter.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -249,11 +249,11 @@ builds:
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Breastplate of Valor, Ethereal Staff, Gluttonous Grimoire, Kinetic
-    Cuirass, Amanita Charm, Soul Gem, Blink Rune, Eye of Providence, Oni Hunter''s
-    Garb, Stone of Binding, Spectral Armor, Void Shield, Spear of the Magus, Shield
-    of the Phoenix, Freya''s Tears, Mantle Of Discord, Screeching Gargoyle, Erosion,
-    Void Stone, The Cosmic Horror, Draconic Scale, Yogi''s Necklace, Spear of Desolation,
-    Leviathan''s Hide, Wish-Granting Pearl, Obsidian Shard.'
+    Cuirass, Amanita Charm, Soul Gem, Eye of Providence, Oni Hunter''s Garb, Stone
+    of Binding, Spectral Armor, Void Shield, Spear of the Magus, Shield of the Phoenix,
+    Freya''s Tears, Mantle Of Discord, Screeching Gargoyle, Erosion, Void Stone, The
+    Cosmic Horror, Draconic Scale, Yogi''s Necklace, Spear of Desolation, Leviathan''s
+    Hide, Wish-Granting Pearl, Obsidian Shard.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -385,11 +385,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Eye of Providence, Gluttonous
-    Grimoire, Oni Hunter''s Garb, Freya''s Tears, Blink Rune, Shield of the Phoenix,
-    Erosion, Spectral Armor, Draconic Scale, Mantle Of Discord, Breastplate of Valor,
-    Ethereal Staff, Leviathan''s Hide, Hussar''s Wings, Soul Gem, Yogi''s Necklace,
-    Midgardian Mail, Hide of the Nemean Lion, Wish-Granting Pearl, Doublet of Binding,
-    Jade Scepter, Gladiator''s Shield, Rod of Asclepius, Ancile.'
+    Grimoire, Oni Hunter''s Garb, Freya''s Tears, Shield of the Phoenix, Erosion,
+    Spectral Armor, Draconic Scale, Mantle Of Discord, Breastplate of Valor, Ethereal
+    Staff, Leviathan''s Hide, Hussar''s Wings, Soul Gem, Yogi''s Necklace, Midgardian
+    Mail, Hide of the Nemean Lion, Wish-Granting Pearl, Doublet of Binding, Jade Scepter,
+    Gladiator''s Shield, Rod of Asclepius, Ancile.'
   slot_scores:
     Eye of Providence:
       total: 0.56

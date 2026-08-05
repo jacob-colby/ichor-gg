@@ -6,7 +6,17 @@ import json
 import shutil
 from pathlib import Path
 
-from smite import abilities, efficiency, notes, recommend, scoring, snapshots, tierlist
+from smite import (abilities, damage_value, efficiency, notes, recommend,
+                   scoring, snapshots, tierlist)
+
+
+# Reference targets for the draft's damage overlay (B6), derived rather than
+# picked: across the roster a level-20 god carries a median 76 physical / 56
+# magical protection with no items, and the median protection item gives 30, so
+# three of them is another ~90. "Squishy" and "three-item tank" are therefore
+# roughly 70 and 170, and every real enemy sits between them.
+SQUISHY_PROTECTION = 70.0
+TANK_PROTECTION = 170.0
 
 
 def _enrich_gods(gods, weights):
@@ -118,6 +128,53 @@ def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
     return out
 
 
+def _god_item_damage(gods, items, weights) -> dict:
+    """Per-god, per-item damage gained against a squishy and against a tank.
+
+    B5's arithmetic, shipped where a TARGET actually exists. As a global fit
+    signal it was useless — measured, and it halved the validation gate,
+    because it cannot price defence. What it does that nothing else can is
+    reverse an item's ranking depending on who you are hitting: on Scylla,
+    Spear of Desolation gains 276 damage against 20 protection and 79 against
+    250, while Void Shard climbs from 8.8 to 13.7.
+
+    The draft is the one surface that knows the enemy, so these are the two
+    endpoints and the viewer interpolates between them by how tanky the
+    entered comp actually is.
+
+    EACH COLUMN is normalised separately, against the best item for that
+    target. Sharing one denominator would be the obvious thing and would be
+    useless: mitigation shrinks every number against a tank, so every item
+    would show a loss and the ranking would never change. What the draft needs
+    is the RELATIVE shift — which items move up the order as the enemy hardens
+    — and that only survives if each target is scored on its own scale.
+
+    A god whose kit didn't parse gets no entry rather than a fabricated one;
+    the overlay simply doesn't fire for them.
+    """
+    cap = int((weights.get("draft") or {}).get("score_cap", 40))
+    out = {}
+    for god in gods:
+        if not damage_value.ability_damage_components(god):
+            continue
+        pairs = {}
+        for item in items:
+            if not scoring.is_buildable(item):
+                continue
+            low = damage_value.item_damage_gain(god, item, SQUISHY_PROTECTION)
+            high = damage_value.item_damage_gain(god, item, TANK_PROTECTION)
+            if low > 0 or high > 0:
+                pairs[item["name"]] = (low, high)
+        if not pairs:
+            continue
+        top_low = max(v[0] for v in pairs.values()) or 1.0
+        top_high = max(v[1] for v in pairs.values()) or 1.0
+        ranked = sorted(pairs.items(), key=lambda kv: -max(kv[1]))[:cap]
+        out[god["name"]] = {n: [round(lo / top_low, 3), round(hi / top_high, 3)]
+                            for n, (lo, hi) in ranked}
+    return out
+
+
 def build_index(repo_root: Path) -> dict:
     data_root = repo_root / "data"
     gods_dir = data_root / "Gods"
@@ -151,6 +208,9 @@ def build_index(repo_root: Path) -> dict:
              # predicted_cost. Rounded to 2dp — these are prices, not weights.
              "item_gold_values": {k: round(v, 2) for k, v in sorted(gold_values.items())},
              "god_item_scores": _god_item_scores(gods, builds, items, eff, weights, tags_map),
+             # B6: what each item is worth against a squishy vs a tank, for the
+             # one surface that knows who you are actually fighting.
+             "god_item_damage": _god_item_damage(gods, items, weights),
              # The viewer re-ranks a core client-side and has to apply the same
              # sustain cap the pipeline applied when it assembled one. It used
              # to hand-copy this rule's conditions into TypeScript, where the

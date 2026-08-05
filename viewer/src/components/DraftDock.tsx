@@ -61,13 +61,16 @@ interface DraftDockProps {
   items: Item[];
   builds: BuildNote[];
   godItemScores?: Record<string, Record<string, number>>;
+  /** B6: per-item damage against a squishy vs a tank. Optional — an older
+   *  index simply leaves the damage term out of the overlay. */
+  godItemDamage?: Record<string, Record<string, [number, number]>>;
   draftConfig?: DraftConfig;
 }
 
-export function DraftDock({ gods, items, builds, godItemScores, draftConfig }: DraftDockProps) {
+export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, draftConfig }: DraftDockProps) {
   const { draft, mode, setMode, setAlly, setEnemy, clear } = useDraft();
   const { meName, taken, enemiesKnown, roster, result, changeCount, coreSize } =
-    useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig);
+    useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
   const [expanded, setExpanded] = useState(false);
   const [pickSlot, setPickSlot] = useState<{ kind: "ally" | "enemy"; index: number } | null>(null);

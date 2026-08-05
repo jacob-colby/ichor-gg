@@ -1,6 +1,14 @@
 import type { Item } from "../types";
 
-export interface Overlay { tags: Record<string, number>; stats: Record<string, number>; }
+export interface Overlay {
+  tags: Record<string, number>;
+  stats: Record<string, number>;
+  /** B6: a bonus keyed directly by item, from the damage model. The tag and
+   *  stat channels can only say "penetration is good against tanks"; this one
+   *  knows that PERCENT penetration rises against a tank while FLAT
+   *  penetration falls, because it is measured per item rather than per stat. */
+  items?: Record<string, number>;
+}
 export interface AdaptOpts { maxBonus: number; maxLifesteal?: number; n?: number; }
 export interface AdaptedCore {
   core: string[];
@@ -42,6 +50,8 @@ export function adaptedCore(
       const w = overlay.stats[stat];
       if (w) { bonus += w; why.push(stat); }
     }
+    const dmg = overlay.items?.[name];
+    if (dmg) { bonus += dmg; why.push(dmg > 0 ? "damage vs their build" : "less damage vs their build"); }
     // Clamp the SUM, not each term — this is what bounds how much a comp can
     // rewrite the build (a maximal overlay still only moves an item by
     // opts.maxBonus, never the raw unbounded total).

@@ -108,10 +108,10 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Runeforged Hammer, Berserker''s Shield, Golden Blade, Draconic Scale,
     Kinetic Cuirass, The Crusher, Amanita Charm, Avenging Blade, Hydra''s Lament,
-    Blink Rune, Lernaean Bow, Jotunn''s Revenge, Genji''s Guard, Eye of Providence,
-    Oni Hunter''s Garb, Eye of the Storm, Pharaoh''s Curse, Shield Splitter, Spectral
-    Armor, Yogi''s Necklace, Shield of the Phoenix, Damaru, Shogun''s Ofuda, Wyrmskin
-    Hide, Erosion, Leviathan''s Hide, Breastplate of Valor, Mantle Of Discord.'
+    Lernaean Bow, Jotunn''s Revenge, Genji''s Guard, Eye of Providence, Oni Hunter''s
+    Garb, Eye of the Storm, Pharaoh''s Curse, Shield Splitter, Spectral Armor, Yogi''s
+    Necklace, Shield of the Phoenix, Damaru, Shogun''s Ofuda, Wyrmskin Hide, Erosion,
+    Leviathan''s Hide, Breastplate of Valor, Mantle Of Discord.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -180,10 +180,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Runeforged Hammer, Draconic Scale,
     Kinetic Cuirass, Shield of the Phoenix, Eye of Providence, Genji''s Guard, Oni
-    Hunter''s Garb, Blink Rune, Golden Blade, The Crusher, Avenging Blade, Pharaoh''s
-    Curse, Eye of the Storm, Hydra''s Lament, The Reaper, Chandra''s Grace, Lernaean
-    Bow, Jotunn''s Revenge, Shield Splitter, Spectral Armor, Phoenix Feather, Erosion,
-    Riptalon, Yogi''s Necklace, Shogun''s Ofuda, Mantle Of Discord.'
+    Hunter''s Garb, Golden Blade, The Crusher, Avenging Blade, Pharaoh''s Curse, Eye
+    of the Storm, Hydra''s Lament, The Reaper, Chandra''s Grace, Lernaean Bow, Jotunn''s
+    Revenge, Shield Splitter, Spectral Armor, Phoenix Feather, Erosion, Riptalon,
+    Yogi''s Necklace, Shogun''s Ofuda, Mantle Of Discord.'
   slot_scores:
     Berserker's Shield:
       total: 0.56
@@ -225,48 +225,48 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Blink Rune
   - Avenging Blade
+  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
   - Runeforged Hammer
   - The Crusher
   flex_slots:
   - Berserker's Shield
-  - Blink Rune
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Draconic Scale — physical protection
+    swap_item: Draconic Scale
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Jotunn''s Revenge, Avenging Blade, Runeforged Hammer,
-    Berserker''s Shield, Blink Rune, Genji''s Guard, The Reaper, Hydra''s Lament,
-    Kinetic Cuirass, Amanita Charm, Heartseeker, Lernaean Bow, Golden Blade, Oni Hunter''s
-    Garb, Riptalon, Avatar''s Parashu, Eye of Providence, Tekko-Kagi, Pharaoh''s Curse,
-    Spectral Armor, Void Shield, Eye of the Storm, Yogi''s Necklace, Titan''s Bane,
-    Shield Splitter, Damaru, Void Stone, Shield of the Phoenix.'
+    Berserker''s Shield, Genji''s Guard, The Reaper, Hydra''s Lament, Kinetic Cuirass,
+    Amanita Charm, Heartseeker, Lernaean Bow, Golden Blade, Oni Hunter''s Garb, Riptalon,
+    Avatar''s Parashu, Eye of Providence, Tekko-Kagi, Pharaoh''s Curse, Spectral Armor,
+    Void Shield, Eye of the Storm, Yogi''s Necklace, Titan''s Bane, Shield Splitter,
+    Damaru, Void Stone, Shield of the Phoenix.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Avenging Blade:
       total: 0.55
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.74
+      win: 0.52
+      pick: 0.15
+      fit: 0.12
     Berserker's Shield:
       total: 0.53
       efficiency: 0.74
@@ -386,11 +386,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Runeforged Hammer, Berserker''s Shield, Golden Blade,
     Kinetic Cuirass, The Crusher, Amanita Charm, Avenging Blade, Hydra''s Lament,
-    Blink Rune, Lernaean Bow, Jotunn''s Revenge, Eye of Providence, Oni Hunter''s
-    Garb, Eye of the Storm, Pharaoh''s Curse, Shield Splitter, Genji''s Guard, Spectral
-    Armor, Yogi''s Necklace, Shield of the Phoenix, Damaru, Shogun''s Ofuda, Wyrmskin
-    Hide, Erosion, Draconic Scale, Leviathan''s Hide, Breastplate of Valor, Mantle
-    Of Discord.'
+    Lernaean Bow, Jotunn''s Revenge, Eye of Providence, Oni Hunter''s Garb, Eye of
+    the Storm, Pharaoh''s Curse, Shield Splitter, Genji''s Guard, Spectral Armor,
+    Yogi''s Necklace, Shield of the Phoenix, Damaru, Shogun''s Ofuda, Wyrmskin Hide,
+    Erosion, Draconic Scale, Leviathan''s Hide, Breastplate of Valor, Mantle Of Discord.'
   slot_scores:
     Golden Blade:
       total: 0.54

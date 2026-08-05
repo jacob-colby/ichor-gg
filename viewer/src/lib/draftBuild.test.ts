@@ -122,3 +122,44 @@ describe("diffCore", () => {
     expect(d).toEqual({ changes: [], unchanged: [], droppedOnly: [] });
   });
 });
+
+/* B6: the per-item damage channel. The tag/stat channels describe an item by
+ * its properties; this one carries a number measured for THAT item against the
+ * comp actually on the board. */
+describe("adaptedCore — the damage channel", () => {
+  const items = [item("Pen", { Penetration: "20%" }), item("Power", { Intelligence: "100" })];
+  const byName = Object.fromEntries(items.map((i) => [i.name, i]));
+  const base = { Pen: 0.5, Power: 0.52 };
+
+  it("can promote an item on damage alone", () => {
+    const flat = adaptedCore(base, byName, { tags: {}, stats: {} }, { maxBonus: 0.12, n: 1 });
+    expect(flat.core).toEqual(["Power"]);
+    const withDamage = adaptedCore(base, byName,
+      { tags: {}, stats: {}, items: { Pen: 0.05 } }, { maxBonus: 0.12, n: 1 });
+    expect(withDamage.core).toEqual(["Pen"]);
+  });
+
+  it("says why, in the diff's own language", () => {
+    const r = adaptedCore(base, byName,
+      { tags: {}, stats: {}, items: { Pen: 0.05 } }, { maxBonus: 0.12, n: 2 });
+    expect(r.reasons["Pen"]).toContain("damage vs their build");
+  });
+
+  it("names a negative shift as a loss rather than a gain", () => {
+    const r = adaptedCore(base, byName,
+      { tags: {}, stats: {}, items: { Power: -0.05 } }, { maxBonus: 0.12, n: 2 });
+    expect(r.reasons["Power"]).toContain("less damage");
+  });
+
+  it("is still bounded by maxBonus, like every other channel", () => {
+    const r = adaptedCore(base, byName,
+      { tags: {}, stats: {}, items: { Pen: 5 } }, { maxBonus: 0.12, n: 2 });
+    expect(r.bonuses["Pen"]).toBe(0.12);
+  });
+
+  it("changes nothing when the overlay carries no item channel", () => {
+    const without = adaptedCore(base, byName, { tags: {}, stats: {} }, { maxBonus: 0.12, n: 2 });
+    const empty = adaptedCore(base, byName, { tags: {}, stats: {}, items: {} }, { maxBonus: 0.12, n: 2 });
+    expect(empty).toEqual(without);
+  });
+});

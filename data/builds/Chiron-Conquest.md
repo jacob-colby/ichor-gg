@@ -83,15 +83,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Blink Rune
   - Lernaean Bow
+  - Berserker's Shield
   - Jotunn's Revenge
   - Hydra's Lament
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Titan's Bane
   - Hydra's Lament
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -100,31 +100,31 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, Blink Rune, Lernaean Bow, Hydra''s Lament, Berserker''s
-    Shield, Damaru, Riptalon, Runeforged Hammer, Golden Blade, Genji''s Guard, The
-    Reaper, Tekko-Kagi, Avenging Blade, Pharaoh''s Curse, Tyrfing, Demon Blade, Heartseeker,
-    Breastplate of Valor, Oni Hunter''s Garb, Arondight, Eros'' Bow, Avatar''s Parashu,
-    Yogi''s Necklace, Kinetic Cuirass, Amanita Charm, Barbed Carver, Shogun''s Ofuda,
-    Spectral Armor.'
+    this god: The Crusher, Lernaean Bow, Hydra''s Lament, Berserker''s Shield, Damaru,
+    Riptalon, Runeforged Hammer, Golden Blade, Genji''s Guard, The Reaper, Tekko-Kagi,
+    Avenging Blade, Pharaoh''s Curse, Tyrfing, Demon Blade, Heartseeker, Breastplate
+    of Valor, Oni Hunter''s Garb, Arondight, Eros'' Bow, Avatar''s Parashu, Yogi''s
+    Necklace, Kinetic Cuirass, Amanita Charm, Barbed Carver, Shogun''s Ofuda, Spectral
+    Armor.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Lernaean Bow:
       total: 0.53
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Berserker's Shield:
+      total: 0.52
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.69
@@ -155,12 +155,12 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Blink Rune
   - Jotunn's Revenge
   - Musashi's Dual Swords
   - Damaru
   - Demon Blade
   - The Crusher
+  - Titan's Bane
   flex_slots:
   - Demon Blade
   - Musashi's Dual Swords
@@ -178,19 +178,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, Blink Rune, Lernaean Bow, Damaru, Hydra''s Lament, Berserker''s
-    Shield, Riptalon, Runeforged Hammer, Golden Blade, Genji''s Guard, The Reaper,
-    Tekko-Kagi, Pharaoh''s Curse, Avenging Blade, Demon Blade, Tyrfing, Breastplate
-    of Valor, Heartseeker, Oni Hunter''s Garb, Yogi''s Necklace, Arondight, Eros''
-    Bow, Avatar''s Parashu, Kinetic Cuirass, Amanita Charm, Barbed Carver, Shogun''s
-    Ofuda, Musashi''s Dual Swords.'
+    this god: The Crusher, Lernaean Bow, Damaru, Hydra''s Lament, Berserker''s Shield,
+    Riptalon, Runeforged Hammer, Golden Blade, Genji''s Guard, The Reaper, Tekko-Kagi,
+    Pharaoh''s Curse, Avenging Blade, Demon Blade, Tyrfing, Breastplate of Valor,
+    Heartseeker, Oni Hunter''s Garb, Yogi''s Necklace, Arondight, Eros'' Bow, Avatar''s
+    Parashu, Kinetic Cuirass, Amanita Charm, Barbed Carver, Shogun''s Ofuda, Musashi''s
+    Dual Swords.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.69
@@ -221,19 +215,25 @@ builds:
       win: 0.5
       pick: 0.09
       fit: 0.42
+    Titan's Bane:
+      total: 0.52
+      efficiency: 0.51
+      win: 0.64
+      pick: 0.15
+      fit: 0.32
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Blink Rune
   - Lernaean Bow
+  - Berserker's Shield
   - Jotunn's Revenge
   - Hydra's Lament
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Hydra's Lament
   - Lernaean Bow
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -242,31 +242,31 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, Blink Rune, Hydra''s Lament, Lernaean Bow, Berserker''s Shield,
-    Runeforged Hammer, Genji''s Guard, Riptalon, Damaru, The Reaper, Golden Blade,
-    Breastplate of Valor, Avenging Blade, Tekko-Kagi, Heartseeker, Pharaoh''s Curse,
-    Oni Hunter''s Garb, Arondight, Yogi''s Necklace, Avatar''s Parashu, Tyrfing, Kinetic
-    Cuirass, Amanita Charm, Shield of the Phoenix, Eros'' Bow, Pendulum Blade, Spectral
-    Armor, Chandra''s Grace.'
+    god: The Crusher, Hydra''s Lament, Lernaean Bow, Berserker''s Shield, Runeforged
+    Hammer, Genji''s Guard, Riptalon, Damaru, The Reaper, Golden Blade, Breastplate
+    of Valor, Avenging Blade, Tekko-Kagi, Heartseeker, Pharaoh''s Curse, Oni Hunter''s
+    Garb, Arondight, Yogi''s Necklace, Avatar''s Parashu, Tyrfing, Kinetic Cuirass,
+    Amanita Charm, Shield of the Phoenix, Eros'' Bow, Pendulum Blade, Spectral Armor,
+    Chandra''s Grace.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Lernaean Bow:
       total: 0.51
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Berserker's Shield:
+      total: 0.51
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.17
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.69
@@ -295,15 +295,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Blink Rune
   - Berserker's Shield
   - Jotunn's Revenge
+  - Runeforged Hammer
   - Riptalon
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - The Crusher
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -318,19 +318,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Berserker''s Shield, Riptalon, Blink Rune, Shield of
-    the Phoenix, The Crusher, The Reaper, Runeforged Hammer, Kinetic Cuirass, Chandra''s
-    Grace, Hydra''s Lament, Lernaean Bow, Genji''s Guard, Pharaoh''s Curse, Oni Hunter''s
+    this god: Amanita Charm, Berserker''s Shield, Riptalon, Shield of the Phoenix,
+    The Crusher, The Reaper, Runeforged Hammer, Kinetic Cuirass, Chandra''s Grace,
+    Hydra''s Lament, Lernaean Bow, Genji''s Guard, Pharaoh''s Curse, Oni Hunter''s
     Garb, Golden Blade, Eye of Providence, Damaru, Avenging Blade, Spectral Armor,
     Bloodforge, Yogi''s Necklace, Breastplate of Valor, Shogun''s Ofuda, Phoenix Feather,
     Eye of the Storm, Mantle Of Discord, Eros'' Bow.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -343,6 +337,12 @@ builds:
       win: 0.5
       pick: 0.24
       fit: 0.3
+    Runeforged Hammer:
+      total: 0.52
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
     Riptalon:
       total: 0.53
       efficiency: 0.6
@@ -365,15 +365,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Blink Rune
+  - Lernaean Bow
   - Avenging Blade
   - Jotunn's Revenge
   - Riptalon
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Avenging Blade
   - Riptalon
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -388,19 +388,19 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Titan''s Bane, Blink Rune, Avenging Blade, Riptalon,
-    Lernaean Bow, Hydra''s Lament, Berserker''s Shield, The Reaper, Damaru, Runeforged
-    Hammer, Tekko-Kagi, Golden Blade, Genji''s Guard, Heartseeker, Avatar''s Parashu,
-    Pharaoh''s Curse, Breastplate of Valor, Tyrfing, Oni Hunter''s Garb, Screeching
-    Gargoyle, Yogi''s Necklace, Pendulum Blade, Kinetic Cuirass, Demon Blade, Arondight,
-    Eros'' Bow, Amanita Charm.'
+    for this god: The Crusher, Titan''s Bane, Avenging Blade, Riptalon, Lernaean Bow,
+    Hydra''s Lament, Berserker''s Shield, The Reaper, Damaru, Runeforged Hammer, Tekko-Kagi,
+    Golden Blade, Genji''s Guard, Heartseeker, Avatar''s Parashu, Pharaoh''s Curse,
+    Breastplate of Valor, Tyrfing, Oni Hunter''s Garb, Screeching Gargoyle, Yogi''s
+    Necklace, Pendulum Blade, Kinetic Cuirass, Demon Blade, Arondight, Eros'' Bow,
+    Amanita Charm.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
+    Lernaean Bow:
+      total: 0.52
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.0
+      fit: 0.44
     Avenging Blade:
       total: 0.52
       efficiency: 0.63
@@ -435,15 +435,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Blink Rune
   - Lernaean Bow
   - Berserker's Shield
   - Jotunn's Revenge
   - Hydra's Lament
+  - Damaru
   - The Crusher
   flex_slots:
-  - Hydra's Lament
   - Berserker's Shield
+  - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -458,19 +458,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: The Crusher, Blink Rune, Lernaean Bow, Hydra''s Lament,
-    Berserker''s Shield, Damaru, Riptalon, Runeforged Hammer, Golden Blade, Genji''s
-    Guard, The Reaper, Tekko-Kagi, Avenging Blade, Pharaoh''s Curse, Tyrfing, Demon
-    Blade, Heartseeker, Breastplate of Valor, Oni Hunter''s Garb, Arondight, Eros''
-    Bow, Avatar''s Parashu, Yogi''s Necklace, Kinetic Cuirass, Amanita Charm, Barbed
-    Carver, Shogun''s Ofuda, Spectral Armor.'
+    Underrated for this god: The Crusher, Lernaean Bow, Hydra''s Lament, Berserker''s
+    Shield, Damaru, Riptalon, Runeforged Hammer, Golden Blade, Genji''s Guard, The
+    Reaper, Tekko-Kagi, Avenging Blade, Pharaoh''s Curse, Tyrfing, Demon Blade, Heartseeker,
+    Breastplate of Valor, Oni Hunter''s Garb, Arondight, Eros'' Bow, Avatar''s Parashu,
+    Yogi''s Necklace, Kinetic Cuirass, Amanita Charm, Barbed Carver, Shogun''s Ofuda,
+    Spectral Armor.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Lernaean Bow:
       total: 0.53
       efficiency: 0.65
@@ -495,6 +489,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Damaru:
+      total: 0.52
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     The Crusher:
       total: 0.54
       efficiency: 0.7
@@ -505,15 +505,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Blink Rune
   - Jotunn's Revenge
   - Hydra's Lament
+  - Runeforged Hammer
   - Damaru
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Blink Rune
   - Damaru
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -528,19 +528,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, Titan''s Bane, Hydra''s Lament, Blink Rune, Damaru, Runeforged
-    Hammer, The Reaper, Lernaean Bow, Genji''s Guard, Riptalon, Berserker''s Shield,
-    Avenging Blade, Heartseeker, Golden Blade, Avatar''s Parashu, Arondight, Breastplate
-    of Valor, Amanita Charm, Tekko-Kagi, Pharaoh''s Curse, Spectral Armor, Oni Hunter''s
+    this god: The Crusher, Titan''s Bane, Hydra''s Lament, Damaru, Runeforged Hammer,
+    The Reaper, Lernaean Bow, Genji''s Guard, Riptalon, Berserker''s Shield, Avenging
+    Blade, Heartseeker, Golden Blade, Avatar''s Parashu, Arondight, Breastplate of
+    Valor, Amanita Charm, Tekko-Kagi, Pharaoh''s Curse, Spectral Armor, Oni Hunter''s
     Garb, Barbed Carver, Musashi''s Dual Swords, Pendulum Blade, Yogi''s Necklace,
     Demon Blade, Kinetic Cuirass.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.69
@@ -553,6 +547,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Runeforged Hammer:
+      total: 0.51
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
     Damaru:
       total: 0.53
       efficiency: 0.66
@@ -576,12 +576,12 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Blink Rune
   - Jotunn's Revenge
   - Musashi's Dual Swords
   - Damaru
   - Demon Blade
   - The Crusher
+  - Titan's Bane
   flex_slots:
   - Demon Blade
   - Musashi's Dual Swords
@@ -599,19 +599,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, Blink Rune, Lernaean Bow, Damaru, Hydra''s Lament, Berserker''s
-    Shield, Riptalon, Runeforged Hammer, Golden Blade, Genji''s Guard, Pharaoh''s
-    Curse, The Reaper, Tekko-Kagi, Eros'' Bow, Avenging Blade, Demon Blade, Amanita
-    Charm, Tyrfing, Breastplate of Valor, Shogun''s Ofuda, Heartseeker, Spectral Armor,
-    Oni Hunter''s Garb, Yogi''s Necklace, Arondight, Avatar''s Parashu, Kinetic Cuirass,
-    Barbed Carver.'
+    this god: The Crusher, Lernaean Bow, Damaru, Hydra''s Lament, Berserker''s Shield,
+    Riptalon, Runeforged Hammer, Golden Blade, Genji''s Guard, Pharaoh''s Curse, The
+    Reaper, Tekko-Kagi, Eros'' Bow, Avenging Blade, Demon Blade, Amanita Charm, Tyrfing,
+    Breastplate of Valor, Shogun''s Ofuda, Heartseeker, Spectral Armor, Oni Hunter''s
+    Garb, Yogi''s Necklace, Arondight, Avatar''s Parashu, Kinetic Cuirass, Barbed
+    Carver.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.69
@@ -642,20 +636,26 @@ builds:
       win: 0.5
       pick: 0.09
       fit: 0.42
+    Titan's Bane:
+      total: 0.52
+      efficiency: 0.51
+      win: 0.64
+      pick: 0.15
+      fit: 0.32
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: burst
   slot_order:
-  - Blink Rune
   - Jotunn's Revenge
   - Hydra's Lament
+  - Runeforged Hammer
   - Damaru
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Hydra's Lament
   - Damaru
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -670,19 +670,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, Titan''s Bane, Blink Rune, Hydra''s Lament, Damaru, Runeforged
-    Hammer, Genji''s Guard, The Reaper, Lernaean Bow, Berserker''s Shield, Riptalon,
-    Breastplate of Valor, Heartseeker, Avenging Blade, Amanita Charm, Arondight, Avatar''s
-    Parashu, Golden Blade, Spectral Armor, Oni Hunter''s Garb, Pharaoh''s Curse, Pendulum
-    Blade, Yogi''s Necklace, Tekko-Kagi, Kinetic Cuirass, Shield of the Phoenix, Chandra''s
+    god: The Crusher, Titan''s Bane, Hydra''s Lament, Damaru, Runeforged Hammer, Genji''s
+    Guard, The Reaper, Lernaean Bow, Berserker''s Shield, Riptalon, Breastplate of
+    Valor, Heartseeker, Avenging Blade, Amanita Charm, Arondight, Avatar''s Parashu,
+    Golden Blade, Spectral Armor, Oni Hunter''s Garb, Pharaoh''s Curse, Pendulum Blade,
+    Yogi''s Necklace, Tekko-Kagi, Kinetic Cuirass, Shield of the Phoenix, Chandra''s
     Grace, Barbed Carver.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.69
@@ -695,6 +689,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Runeforged Hammer:
+      total: 0.51
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.25
     Damaru:
       total: 0.51
       efficiency: 0.66
@@ -718,15 +718,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Blink Rune
   - Berserker's Shield
   - Jotunn's Revenge
   - Shield of the Phoenix
+  - Runeforged Hammer
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - The Crusher
   - Berserker's Shield
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -741,19 +741,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Blink Rune, The Crusher, Berserker''s
-    Shield, The Reaper, Runeforged Hammer, Kinetic Cuirass, Riptalon, Chandra''s Grace,
-    Hydra''s Lament, Spectral Armor, Genji''s Guard, Oni Hunter''s Garb, Pharaoh''s
-    Curse, Eye of Providence, Damaru, Avenging Blade, Bloodforge, Lernaean Bow, Umbral
-    Link, Golden Blade, Erosion, Yogi''s Necklace, Breastplate of Valor, Phoenix Feather,
+    this god: Amanita Charm, Shield of the Phoenix, The Crusher, Berserker''s Shield,
+    The Reaper, Runeforged Hammer, Kinetic Cuirass, Riptalon, Chandra''s Grace, Hydra''s
+    Lament, Spectral Armor, Genji''s Guard, Oni Hunter''s Garb, Pharaoh''s Curse,
+    Eye of Providence, Damaru, Avenging Blade, Bloodforge, Lernaean Bow, Umbral Link,
+    Golden Blade, Erosion, Yogi''s Necklace, Breastplate of Valor, Phoenix Feather,
     Eye of the Storm, Shogun''s Ofuda.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Berserker's Shield:
       total: 0.53
       efficiency: 0.74
@@ -772,6 +766,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Runeforged Hammer:
+      total: 0.52
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     The Crusher:
       total: 0.53
       efficiency: 0.7
@@ -789,15 +789,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Blink Rune
   - Avenging Blade
   - Jotunn's Revenge
+  - Hydra's Lament
   - The Reaper
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Avenging Blade
   - The Reaper
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -812,19 +812,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Titan''s Bane, Blink Rune, Avenging Blade, The Reaper,
-    Hydra''s Lament, Damaru, Riptalon, Runeforged Hammer, Heartseeker, Lernaean Bow,
-    Avatar''s Parashu, Genji''s Guard, Berserker''s Shield, Tekko-Kagi, Pendulum Blade,
-    Amanita Charm, Golden Blade, Breastplate of Valor, Screeching Gargoyle, Spectral
-    Armor, Void Shield, Oni Hunter''s Garb, Pharaoh''s Curse, Arondight, Yogi''s Necklace,
+    for this god: The Crusher, Titan''s Bane, Avenging Blade, The Reaper, Hydra''s
+    Lament, Damaru, Riptalon, Runeforged Hammer, Heartseeker, Lernaean Bow, Avatar''s
+    Parashu, Genji''s Guard, Berserker''s Shield, Tekko-Kagi, Pendulum Blade, Amanita
+    Charm, Golden Blade, Breastplate of Valor, Screeching Gargoyle, Spectral Armor,
+    Void Shield, Oni Hunter''s Garb, Pharaoh''s Curse, Arondight, Yogi''s Necklace,
     Kinetic Cuirass, Barbed Carver.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Avenging Blade:
       total: 0.53
       efficiency: 0.63
@@ -837,6 +831,12 @@ builds:
       win: 0.5
       pick: 0.24
       fit: 0.62
+    Hydra's Lament:
+      total: 0.52
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     The Reaper:
       total: 0.52
       efficiency: 0.59
@@ -860,15 +860,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Blink Rune
   - Jotunn's Revenge
   - Hydra's Lament
   - Runeforged Hammer
+  - The Reaper
   - Damaru
   - The Crusher
   flex_slots:
-  - Damaru
   - Runeforged Hammer
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -883,19 +883,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: The Crusher, Hydra''s Lament, Blink Rune, Damaru, Runeforged
-    Hammer, The Reaper, Lernaean Bow, Genji''s Guard, Riptalon, Berserker''s Shield,
-    Avenging Blade, Heartseeker, Golden Blade, Avatar''s Parashu, Arondight, Breastplate
-    of Valor, Amanita Charm, Tekko-Kagi, Pharaoh''s Curse, Spectral Armor, Oni Hunter''s
+    Underrated for this god: The Crusher, Hydra''s Lament, Damaru, Runeforged Hammer,
+    The Reaper, Lernaean Bow, Genji''s Guard, Riptalon, Berserker''s Shield, Avenging
+    Blade, Heartseeker, Golden Blade, Avatar''s Parashu, Arondight, Breastplate of
+    Valor, Amanita Charm, Tekko-Kagi, Pharaoh''s Curse, Spectral Armor, Oni Hunter''s
     Garb, Barbed Carver, Musashi''s Dual Swords, Pendulum Blade, Yogi''s Necklace,
     Demon Blade, Kinetic Cuirass, Titan''s Bane.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.69
@@ -914,6 +908,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
+    The Reaper:
+      total: 0.51
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Damaru:
       total: 0.53
       efficiency: 0.66

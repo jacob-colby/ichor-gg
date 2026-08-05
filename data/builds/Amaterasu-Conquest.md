@@ -107,11 +107,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Amanita Charm, Runeforged Hammer, Eye of Providence,
-    Genji''s Guard, Hydra''s Lament, Oni Hunter''s Garb, Blink Rune, Jotunn''s Revenge,
-    Shield Splitter, The Crusher, Eye of the Storm, Avenging Blade, Shield of the
-    Phoenix, Freya''s Tears, Spectral Armor, Breastplate of Valor, Mantle Of Discord,
-    Erosion, Draconic Scale, Pharaoh''s Curse, Golden Blade, Lernaean Bow, Yogi''s
-    Necklace, Leviathan''s Hide, Wyrmskin Hide, Damaru.'
+    Genji''s Guard, Hydra''s Lament, Oni Hunter''s Garb, Jotunn''s Revenge, Shield
+    Splitter, The Crusher, Eye of the Storm, Avenging Blade, Shield of the Phoenix,
+    Freya''s Tears, Spectral Armor, Breastplate of Valor, Mantle Of Discord, Erosion,
+    Draconic Scale, Pharaoh''s Curse, Golden Blade, Lernaean Bow, Yogi''s Necklace,
+    Leviathan''s Hide, Wyrmskin Hide, Damaru.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -180,10 +180,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Runeforged Hammer,
     Eye of Providence, Hydra''s Lament, Chandra''s Grace, Oni Hunter''s Garb, Jotunn''s
-    Revenge, Blink Rune, Genji''s Guard, Avenging Blade, The Crusher, Eye of the Storm,
-    The Reaper, Spectral Armor, Shield Splitter, Golden Blade, Phoenix Feather, Pharaoh''s
-    Curse, Erosion, Breastplate of Valor, Freya''s Tears, Draconic Scale, Yogi''s
-    Necklace, Lernaean Bow, Mantle Of Discord.'
+    Revenge, Genji''s Guard, Avenging Blade, The Crusher, Eye of the Storm, The Reaper,
+    Spectral Armor, Shield Splitter, Golden Blade, Phoenix Feather, Pharaoh''s Curse,
+    Erosion, Breastplate of Valor, Freya''s Tears, Draconic Scale, Yogi''s Necklace,
+    Lernaean Bow, Mantle Of Discord.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -249,11 +249,11 @@ builds:
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Jotunn''s Revenge, Avenging Blade, Kinetic Cuirass,
-    Blink Rune, Amanita Charm, Runeforged Hammer, Genji''s Guard, Hydra''s Lament,
-    Eye of Providence, Oni Hunter''s Garb, The Reaper, Shield Splitter, Spectral Armor,
-    Stone of Binding, Void Shield, Breastplate of Valor, Heartseeker, Shield of the
-    Phoenix, Screeching Gargoyle, Eye of the Storm, Freya''s Tears, Mantle Of Discord,
-    Pharaoh''s Curse, Lernaean Bow, Avatar''s Parashu, Void Stone.'
+    Amanita Charm, Runeforged Hammer, Genji''s Guard, Hydra''s Lament, Eye of Providence,
+    Oni Hunter''s Garb, The Reaper, Shield Splitter, Spectral Armor, Stone of Binding,
+    Void Shield, Breastplate of Valor, Heartseeker, Shield of the Phoenix, Screeching
+    Gargoyle, Eye of the Storm, Freya''s Tears, Mantle Of Discord, Pharaoh''s Curse,
+    Lernaean Bow, Avatar''s Parashu, Void Stone.'
   slot_scores:
     Avenging Blade:
       total: 0.55
@@ -385,11 +385,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Runeforged Hammer, Eye
-    of Providence, Genji''s Guard, Hydra''s Lament, Oni Hunter''s Garb, Blink Rune,
-    Jotunn''s Revenge, Shield Splitter, The Crusher, Eye of the Storm, Avenging Blade,
-    Shield of the Phoenix, Freya''s Tears, Spectral Armor, Breastplate of Valor, Mantle
-    Of Discord, Erosion, Draconic Scale, Pharaoh''s Curse, Golden Blade, Lernaean
-    Bow, Yogi''s Necklace, Leviathan''s Hide, Wyrmskin Hide, Damaru.'
+    of Providence, Genji''s Guard, Hydra''s Lament, Oni Hunter''s Garb, Jotunn''s
+    Revenge, Shield Splitter, The Crusher, Eye of the Storm, Avenging Blade, Shield
+    of the Phoenix, Freya''s Tears, Spectral Armor, Breastplate of Valor, Mantle Of
+    Discord, Erosion, Draconic Scale, Pharaoh''s Curse, Golden Blade, Lernaean Bow,
+    Yogi''s Necklace, Leviathan''s Hide, Wyrmskin Hide, Damaru.'
   slot_scores:
     Eye of Providence:
       total: 0.54

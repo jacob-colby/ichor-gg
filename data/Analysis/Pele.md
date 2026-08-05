@@ -13,7 +13,6 @@
 | Pendulum Blade | 0.54 | 0.63 | 0.47 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Lernaean Bow | 0.53 | 0.61 | 0.65 | 0.50 | 0.00 | 0.54 | undervalued | wave-clear, burst | **UNDERRATED** |
 | Arondight | 0.53 | 0.61 | 0.59 | 0.50 | 0.00 | 0.67 | fair | mobility | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Avenging Blade | 0.53 | 0.60 | 0.63 | 0.50 | 0.00 | 0.54 | fair | protection-shred | **UNDERRATED** |
 | Damaru | 0.52 | 0.59 | 0.66 | 0.50 | 0.00 | 0.44 | undervalued |  | **UNDERRATED** |
 | Titan's Bane | 0.52 | 0.59 | 0.51 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.31 | 0.17 | 0.20 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.25 | 0.00 | 0.00 | 0.55 | 0.11 | 0.00 | premium | mobility |  |

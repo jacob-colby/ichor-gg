@@ -107,11 +107,11 @@ builds:
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, Runeforged Hammer, Jotunn''s Revenge, Kinetic Cuirass,
-    Berserker''s Shield, Avenging Blade, Amanita Charm, Hydra''s Lament, Blink Rune,
-    Oni Hunter''s Garb, Eye of the Storm, Eye of Providence, Golden Blade, Shield
-    Splitter, Lernaean Bow, Spectral Armor, The Reaper, Heartseeker, Yogi''s Necklace,
-    Pharaoh''s Curse, Damaru, Shield of the Phoenix, Wyrmskin Hide, Avatar''s Parashu,
-    Erosion, Draconic Scale, Breastplate of Valor.'
+    Berserker''s Shield, Avenging Blade, Amanita Charm, Hydra''s Lament, Oni Hunter''s
+    Garb, Eye of the Storm, Eye of Providence, Golden Blade, Shield Splitter, Lernaean
+    Bow, Spectral Armor, The Reaper, Heartseeker, Yogi''s Necklace, Pharaoh''s Curse,
+    Damaru, Shield of the Phoenix, Wyrmskin Hide, Avatar''s Parashu, Erosion, Draconic
+    Scale, Breastplate of Valor.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -180,10 +180,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Runeforged Hammer, Shield of the Phoenix, Kinetic Cuirass,
     The Crusher, Berserker''s Shield, The Reaper, Jotunn''s Revenge, Eye of Providence,
-    Blink Rune, Oni Hunter''s Garb, Avenging Blade, Hydra''s Lament, Eye of the Storm,
-    Chandra''s Grace, Shield Splitter, Spectral Armor, Golden Blade, Riptalon, Phoenix
-    Feather, Pharaoh''s Curse, Erosion, Lernaean Bow, Draconic Scale, Yogi''s Necklace,
-    Bloodforge, Mantle Of Discord.'
+    Oni Hunter''s Garb, Avenging Blade, Hydra''s Lament, Eye of the Storm, Chandra''s
+    Grace, Shield Splitter, Spectral Armor, Golden Blade, Riptalon, Phoenix Feather,
+    Pharaoh''s Curse, Erosion, Lernaean Bow, Draconic Scale, Yogi''s Necklace, Bloodforge,
+    Mantle Of Discord.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.55
@@ -225,15 +225,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Blink Rune
   - Avenging Blade
   - Genji's Guard
   - Jotunn's Revenge
   - Runeforged Hammer
+  - The Reaper
   - The Crusher
   flex_slots:
-  - Blink Rune
   - Genji's Guard
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -249,18 +249,12 @@ builds:
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Jotunn''s Revenge, Avenging Blade, Runeforged Hammer,
-    Blink Rune, The Reaper, Berserker''s Shield, Hydra''s Lament, Kinetic Cuirass,
-    Heartseeker, Amanita Charm, Avatar''s Parashu, Oni Hunter''s Garb, Eye of Providence,
-    Golden Blade, Eye of the Storm, Lernaean Bow, Spectral Armor, Void Shield, Titan''s
-    Bane, Riptalon, Tekko-Kagi, Yogi''s Necklace, Shield Splitter, Damaru, Pendulum
-    Blade, Pharaoh''s Curse, Void Stone.'
+    The Reaper, Berserker''s Shield, Hydra''s Lament, Kinetic Cuirass, Heartseeker,
+    Amanita Charm, Avatar''s Parashu, Oni Hunter''s Garb, Eye of Providence, Golden
+    Blade, Eye of the Storm, Lernaean Bow, Spectral Armor, Void Shield, Titan''s Bane,
+    Riptalon, Tekko-Kagi, Yogi''s Necklace, Shield Splitter, Damaru, Pendulum Blade,
+    Pharaoh''s Curse, Void Stone.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Avenging Blade:
       total: 0.56
       efficiency: 0.63
@@ -285,6 +279,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    The Reaper:
+      total: 0.52
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     The Crusher:
       total: 0.58
       efficiency: 0.7
@@ -386,10 +386,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, Runeforged Hammer, Jotunn''s Revenge, Kinetic
     Cuirass, Berserker''s Shield, Avenging Blade, Amanita Charm, Hydra''s Lament,
-    Blink Rune, Oni Hunter''s Garb, Eye of the Storm, Eye of Providence, Golden Blade,
-    Shield Splitter, Lernaean Bow, Spectral Armor, The Reaper, Heartseeker, Yogi''s
-    Necklace, Pharaoh''s Curse, Damaru, Shield of the Phoenix, Wyrmskin Hide, Avatar''s
-    Parashu, Erosion, Draconic Scale, Breastplate of Valor.'
+    Oni Hunter''s Garb, Eye of the Storm, Eye of Providence, Golden Blade, Shield
+    Splitter, Lernaean Bow, Spectral Armor, The Reaper, Heartseeker, Yogi''s Necklace,
+    Pharaoh''s Curse, Damaru, Shield of the Phoenix, Wyrmskin Hide, Avatar''s Parashu,
+    Erosion, Draconic Scale, Breastplate of Valor.'
   slot_scores:
     Avenging Blade:
       total: 0.53

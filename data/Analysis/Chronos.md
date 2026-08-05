@@ -4,7 +4,6 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Gluttonous Grimoire | 0.57 | 0.70 | 0.71 | 0.50 | 0.00 | 0.66 | undervalued | burst | **UNDERRATED** |
 | Soul Gem | 0.56 | 0.67 | 0.62 | 0.50 | 0.00 | 0.78 | fair | burst, sustain, aura | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.52 | 0.60 | 0.62 | 0.50 | 0.00 | 0.56 | fair |  | **UNDERRATED** |
 | Bragi's Harp | 0.51 | 0.57 | 0.53 | 0.50 | 0.00 | 0.66 | fair | burst | **UNDERRATED** |
 | Spear of the Magus | 0.51 | 0.56 | 0.62 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Gauntlet of Thebes | 0.33 | 0.22 | 0.31 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

@@ -107,11 +107,11 @@ builds:
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Kinetic Cuirass, Amanita Charm, Runeforged Hammer,
-    Hydra''s Lament, Blink Rune, Jotunn''s Revenge, Eye of Providence, The Crusher,
-    Oni Hunter''s Garb, Avenging Blade, Shield Splitter, Golden Blade, Pharaoh''s
-    Curse, Lernaean Bow, Shield of the Phoenix, Eye of the Storm, Spectral Armor,
-    Freya''s Tears, Mantle Of Discord, Erosion, Draconic Scale, Yogi''s Necklace,
-    Shogun''s Ofuda, Damaru, Leviathan''s Hide.'
+    Hydra''s Lament, Jotunn''s Revenge, Eye of Providence, The Crusher, Oni Hunter''s
+    Garb, Avenging Blade, Shield Splitter, Golden Blade, Pharaoh''s Curse, Lernaean
+    Bow, Shield of the Phoenix, Eye of the Storm, Spectral Armor, Freya''s Tears,
+    Mantle Of Discord, Erosion, Draconic Scale, Yogi''s Necklace, Shogun''s Ofuda,
+    Damaru, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.6
@@ -179,10 +179,10 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Berserker''s Shield, Runeforged
-    Hammer, Kinetic Cuirass, Hydra''s Lament, Chandra''s Grace, Blink Rune, Jotunn''s
-    Revenge, Eye of Providence, Oni Hunter''s Garb, The Crusher, Avenging Blade, Golden
-    Blade, The Reaper, Pharaoh''s Curse, Eye of the Storm, Lernaean Bow, Spectral
-    Armor, Shield Splitter, Riptalon, Freya''s Tears, Phoenix Feather, Yogi''s Necklace,
+    Hammer, Kinetic Cuirass, Hydra''s Lament, Chandra''s Grace, Jotunn''s Revenge,
+    Eye of Providence, Oni Hunter''s Garb, The Crusher, Avenging Blade, Golden Blade,
+    The Reaper, Pharaoh''s Curse, Eye of the Storm, Lernaean Bow, Spectral Armor,
+    Shield Splitter, Riptalon, Freya''s Tears, Phoenix Feather, Yogi''s Necklace,
     Erosion, Draconic Scale.'
   slot_scores:
     Genji's Guard:
@@ -249,11 +249,11 @@ builds:
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, Avenging Blade, Berserker''s Shield,
-    Blink Rune, Runeforged Hammer, Kinetic Cuirass, Hydra''s Lament, Amanita Charm,
-    Oni Hunter''s Garb, Eye of Providence, Lernaean Bow, The Reaper, Pharaoh''s Curse,
-    Golden Blade, Spectral Armor, Void Shield, Screeching Gargoyle, Shield of the
-    Phoenix, Heartseeker, Stone of Binding, Shield Splitter, Riptalon, Eye of the
-    Storm, Freya''s Tears, Yogi''s Necklace, Mantle Of Discord.'
+    Runeforged Hammer, Kinetic Cuirass, Hydra''s Lament, Amanita Charm, Oni Hunter''s
+    Garb, Eye of Providence, Lernaean Bow, The Reaper, Pharaoh''s Curse, Golden Blade,
+    Spectral Armor, Void Shield, Screeching Gargoyle, Shield of the Phoenix, Heartseeker,
+    Stone of Binding, Shield Splitter, Riptalon, Eye of the Storm, Freya''s Tears,
+    Yogi''s Necklace, Mantle Of Discord.'
   slot_scores:
     Avenging Blade:
       total: 0.54
@@ -385,10 +385,10 @@ builds:
     swap_item: Contagion
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Berserker''s Shield, Kinetic Cuirass, Amanita Charm,
-    Runeforged Hammer, Hydra''s Lament, Blink Rune, Jotunn''s Revenge, Eye of Providence,
-    The Crusher, Oni Hunter''s Garb, Avenging Blade, Shield Splitter, Golden Blade,
-    Pharaoh''s Curse, Lernaean Bow, Shield of the Phoenix, Eye of the Storm, Spectral
-    Armor, Freya''s Tears, Mantle Of Discord, Erosion, Draconic Scale, Yogi''s Necklace,
+    Runeforged Hammer, Hydra''s Lament, Jotunn''s Revenge, Eye of Providence, The
+    Crusher, Oni Hunter''s Garb, Avenging Blade, Shield Splitter, Golden Blade, Pharaoh''s
+    Curse, Lernaean Bow, Shield of the Phoenix, Eye of the Storm, Spectral Armor,
+    Freya''s Tears, Mantle Of Discord, Erosion, Draconic Scale, Yogi''s Necklace,
     Shogun''s Ofuda, Damaru, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:

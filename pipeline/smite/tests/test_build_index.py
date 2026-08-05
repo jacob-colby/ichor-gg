@@ -48,6 +48,9 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                                   **{m.lower(): {"gods": [], "items": []}
                                      for m in recommend.MODES}},
                      "god_item_scores": {},
+                     # B6: per-item damage vs a squishy and vs a tank, for the
+                     # draft. Empty with no gods, never absent.
+                     "god_item_damage": {},
                      # Mode display order, so the viewer's strip leads with
                      # Conquest rather than whatever the filenames sorted to.
                      "modes": list(recommend.MODES),

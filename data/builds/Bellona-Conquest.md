@@ -107,11 +107,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Runeforged Hammer, Eye of Providence, Hydra''s Lament,
-    Genji''s Guard, Blink Rune, Shield Splitter, Oni Hunter''s Garb, Jotunn''s Revenge,
-    The Crusher, Eye of the Storm, Avenging Blade, Spectral Armor, Shield of the Phoenix,
-    Freya''s Tears, Mantle Of Discord, Erosion, Breastplate of Valor, Draconic Scale,
-    Pharaoh''s Curse, Golden Blade, Lernaean Bow, Yogi''s Necklace, Leviathan''s Hide,
-    Wyrmskin Hide, Damaru.'
+    Genji''s Guard, Shield Splitter, Oni Hunter''s Garb, Jotunn''s Revenge, The Crusher,
+    Eye of the Storm, Avenging Blade, Spectral Armor, Shield of the Phoenix, Freya''s
+    Tears, Mantle Of Discord, Erosion, Breastplate of Valor, Draconic Scale, Pharaoh''s
+    Curse, Golden Blade, Lernaean Bow, Yogi''s Necklace, Leviathan''s Hide, Wyrmskin
+    Hide, Damaru.'
   slot_scores:
     Eye of Providence:
       total: 0.54
@@ -180,10 +180,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Runeforged Hammer, Eye of Providence,
     Hydra''s Lament, Chandra''s Grace, Oni Hunter''s Garb, Jotunn''s Revenge, Avenging
-    Blade, The Crusher, Blink Rune, Genji''s Guard, Eye of the Storm, The Reaper,
-    Shield Splitter, Spectral Armor, Golden Blade, Phoenix Feather, Pharaoh''s Curse,
-    Erosion, Breastplate of Valor, Draconic Scale, Freya''s Tears, Lernaean Bow, Yogi''s
-    Necklace, Mantle Of Discord.'
+    Blade, The Crusher, Genji''s Guard, Eye of the Storm, The Reaper, Shield Splitter,
+    Spectral Armor, Golden Blade, Phoenix Feather, Pharaoh''s Curse, Erosion, Breastplate
+    of Valor, Draconic Scale, Freya''s Tears, Lernaean Bow, Yogi''s Necklace, Mantle
+    Of Discord.'
   slot_scores:
     Eye of Providence:
       total: 0.54
@@ -225,22 +225,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Blink Rune
   - Avenging Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Runeforged Hammer
   - The Crusher
+  - Amanita Charm
   flex_slots:
-  - Blink Rune
   - Runeforged Hammer
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -248,19 +248,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Jotunn''s Revenge, Avenging Blade, Blink Rune, Runeforged
-    Hammer, Amanita Charm, Hydra''s Lament, Genji''s Guard, Eye of Providence, Oni
-    Hunter''s Garb, The Reaper, Shield Splitter, Spectral Armor, Stone of Binding,
-    Void Shield, Heartseeker, Eye of the Storm, Breastplate of Valor, Shield of the
-    Phoenix, Screeching Gargoyle, Mantle Of Discord, Lernaean Bow, Freya''s Tears,
-    Avatar''s Parashu, Pharaoh''s Curse, Golden Blade.'
+    for this god: The Crusher, Jotunn''s Revenge, Avenging Blade, Runeforged Hammer,
+    Amanita Charm, Hydra''s Lament, Genji''s Guard, Eye of Providence, Oni Hunter''s
+    Garb, The Reaper, Shield Splitter, Spectral Armor, Stone of Binding, Void Shield,
+    Heartseeker, Eye of the Storm, Breastplate of Valor, Shield of the Phoenix, Screeching
+    Gargoyle, Mantle Of Discord, Lernaean Bow, Freya''s Tears, Avatar''s Parashu,
+    Pharaoh''s Curse, Golden Blade.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Avenging Blade:
       total: 0.55
       efficiency: 0.63
@@ -291,6 +285,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Amanita Charm:
+      total: 0.53
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
   starter: *id001
 - source: suggested
   archetype: fun-crit
@@ -385,11 +385,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Runeforged Hammer, Eye of Providence,
-    Hydra''s Lament, Genji''s Guard, Blink Rune, Shield Splitter, Oni Hunter''s Garb,
-    Jotunn''s Revenge, The Crusher, Eye of the Storm, Avenging Blade, Spectral Armor,
-    Shield of the Phoenix, Freya''s Tears, Mantle Of Discord, Erosion, Breastplate
-    of Valor, Draconic Scale, Pharaoh''s Curse, Golden Blade, Lernaean Bow, Yogi''s
-    Necklace, Leviathan''s Hide, Wyrmskin Hide, Damaru.'
+    Hydra''s Lament, Genji''s Guard, Shield Splitter, Oni Hunter''s Garb, Jotunn''s
+    Revenge, The Crusher, Eye of the Storm, Avenging Blade, Spectral Armor, Shield
+    of the Phoenix, Freya''s Tears, Mantle Of Discord, Erosion, Breastplate of Valor,
+    Draconic Scale, Pharaoh''s Curse, Golden Blade, Lernaean Bow, Yogi''s Necklace,
+    Leviathan''s Hide, Wyrmskin Hide, Damaru.'
   slot_scores:
     Eye of Providence:
       total: 0.54

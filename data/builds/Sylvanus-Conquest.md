@@ -83,22 +83,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Blink Rune
   - Eye of Providence
   - Genji's Guard
   - Kinetic Cuirass
   - Oni Hunter's Garb
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Blink Rune
   - Genji's Guard
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -107,18 +107,12 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Amanita Charm, Eye of Providence, Gluttonous Grimoire,
-    Oni Hunter''s Garb, Blink Rune, Shield of the Phoenix, Freya''s Tears, Shifter''s
-    Shield, Ethereal Staff, Spectral Armor, Erosion, Mantle Of Discord, Soul Gem,
-    Draconic Scale, Wish-Granting Pearl, Leviathan''s Hide, Jade Scepter, Yogi''s
-    Necklace, Rod of Asclepius, Hussar''s Wings, Midgardian Mail, Helm of Radiance,
-    Chandra''s Grace, Hide of the Nemean Lion, Gladiator''s Shield.'
+    Oni Hunter''s Garb, Shield of the Phoenix, Freya''s Tears, Shifter''s Shield,
+    Ethereal Staff, Spectral Armor, Erosion, Mantle Of Discord, Soul Gem, Draconic
+    Scale, Wish-Granting Pearl, Leviathan''s Hide, Jade Scepter, Yogi''s Necklace,
+    Rod of Asclepius, Hussar''s Wings, Midgardian Mail, Helm of Radiance, Chandra''s
+    Grace, Hide of the Nemean Lion, Gladiator''s Shield.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Eye of Providence:
       total: 0.55
       efficiency: 0.65
@@ -143,6 +137,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Amanita Charm:
       total: 0.56
       efficiency: 0.68
@@ -155,15 +155,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Blink Rune
   - Eye of Providence
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Oni Hunter's Garb
+  - Ethereal Staff
   - Amanita Charm
   flex_slots:
   - Oni Hunter's Garb
-  - Blink Rune
+  - Ethereal Staff
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -180,17 +180,11 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Soul Gem, Kinetic Cuirass, Gluttonous
     Grimoire, Rod of Asclepius, Eye of Providence, Chandra''s Grace, Oni Hunter''s
-    Garb, Blink Rune, Ethereal Staff, Spectral Armor, Shifter''s Shield, Lifebinder,
-    Freya''s Tears, Bancroft''s Talon, Erosion, Phoenix Feather, Blood-Bound Book,
-    Draconic Scale, Wish-Granting Pearl, Jade Scepter, Yogi''s Necklace, Mantle Of
-    Discord, Leviathan''s Hide, Spirit Robe.'
+    Garb, Ethereal Staff, Spectral Armor, Shifter''s Shield, Lifebinder, Freya''s
+    Tears, Bancroft''s Talon, Erosion, Phoenix Feather, Blood-Bound Book, Draconic
+    Scale, Wish-Granting Pearl, Jade Scepter, Yogi''s Necklace, Mantle Of Discord,
+    Leviathan''s Hide, Spirit Robe.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Eye of Providence:
       total: 0.54
       efficiency: 0.65
@@ -215,6 +209,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Ethereal Staff:
+      total: 0.53
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Amanita Charm:
       total: 0.6
       efficiency: 0.68
@@ -225,15 +225,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Blink Rune
   - Eye of Providence
   - Genji's Guard
   - Kinetic Cuirass
   - Oni Hunter's Garb
+  - Ethereal Staff
   - Gluttonous Grimoire
   flex_slots:
-  - Oni Hunter's Garb
   - Genji's Guard
+  - Ethereal Staff
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -248,19 +248,13 @@ builds:
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita Charm, Blink
-    Rune, Eye of Providence, Oni Hunter''s Garb, Ethereal Staff, Spear of the Magus,
-    Shield of the Phoenix, Spectral Armor, Stone of Binding, Void Shield, Screeching
-    Gargoyle, Freya''s Tears, Shifter''s Shield, Mantle Of Discord, The Cosmic Horror,
-    Void Stone, Spear of Desolation, Erosion, Yogi''s Necklace, Draconic Scale, Wish-Granting
+    for this god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita Charm, Eye
+    of Providence, Oni Hunter''s Garb, Ethereal Staff, Spear of the Magus, Shield
+    of the Phoenix, Spectral Armor, Stone of Binding, Void Shield, Screeching Gargoyle,
+    Freya''s Tears, Shifter''s Shield, Mantle Of Discord, The Cosmic Horror, Void
+    Stone, Spear of Desolation, Erosion, Yogi''s Necklace, Draconic Scale, Wish-Granting
     Pearl, Jade Scepter, Obsidian Shard.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Eye of Providence:
       total: 0.52
       efficiency: 0.65
@@ -285,6 +279,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.29
+    Ethereal Staff:
+      total: 0.51
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.23
     Gluttonous Grimoire:
       total: 0.57
       efficiency: 0.71
@@ -361,22 +361,22 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Blink Rune
   - Eye of Providence
   - Genji's Guard
   - Kinetic Cuirass
   - Oni Hunter's Garb
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Oni Hunter's Garb
-  - Blink Rune
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -385,18 +385,12 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Eye of Providence, Gluttonous
-    Grimoire, Oni Hunter''s Garb, Blink Rune, Shield of the Phoenix, Freya''s Tears,
-    Shifter''s Shield, Ethereal Staff, Spectral Armor, Erosion, Mantle Of Discord,
-    Soul Gem, Draconic Scale, Wish-Granting Pearl, Leviathan''s Hide, Jade Scepter,
-    Yogi''s Necklace, Rod of Asclepius, Hussar''s Wings, Midgardian Mail, Helm of
-    Radiance, Chandra''s Grace, Hide of the Nemean Lion, Gladiator''s Shield.'
+    Grimoire, Oni Hunter''s Garb, Shield of the Phoenix, Freya''s Tears, Shifter''s
+    Shield, Ethereal Staff, Spectral Armor, Erosion, Mantle Of Discord, Soul Gem,
+    Draconic Scale, Wish-Granting Pearl, Leviathan''s Hide, Jade Scepter, Yogi''s
+    Necklace, Rod of Asclepius, Hussar''s Wings, Midgardian Mail, Helm of Radiance,
+    Chandra''s Grace, Hide of the Nemean Lion, Gladiator''s Shield.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Eye of Providence:
       total: 0.55
       efficiency: 0.65
@@ -421,6 +415,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Amanita Charm:
       total: 0.56
       efficiency: 0.68

@@ -260,7 +260,26 @@ def mark_underrated(rows, weights):
 def is_buildable(item):
     """A final item you'd actually build: tier 3, or a tier-None/non-numeric
     active/relic (e.g. a "Relic"/"Glyph" tier label). Excludes tier 1/2
-    component items (they're purchase-path steps, not final build slots)."""
+    component items (they're purchase-path steps, not final build slots).
+
+    Also excludes an item with NO STATS AT ALL, which every signal here is
+    blind to. Efficiency is `cost - predicted_cost` and prediction is a sum
+    over stats, so a statless item's residual is just its cost against the
+    intercept; fit is a weighted read of its stats, so it scores zero. Neither
+    number means anything, and both were being compared against items where
+    they do.
+
+    Found via Blink Rune: cost 0, `stats: {}`, tier "Relic". A free item is
+    maximally *undervalued* by that arithmetic — it read as the best bargain in
+    the game and had reached 262 shipped build slots. Blinking Abyss is the
+    mirror case at 2600 gold and no stats, which reads as maximally premium.
+    Both are relics, which occupy their own slot rather than one of the six, so
+    neither was ever competing for the space it won.
+
+    Measured, and it is the largest single gain in the recommender's history:
+    coverage 48.4% -> 51.0%, win-weighted 50.6% -> 53.3%."""
+    if not (item.get("stats") or {}):
+        return False
     tier = item.get("tier")
     if tier is None or not isinstance(tier, int):
         return True

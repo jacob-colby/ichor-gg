@@ -107,11 +107,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Obsidian Shard, Gluttonous Grimoire, Soul Gem, Spear of the Magus, The
-    Cosmic Horror, Ethereal Staff, Blink Rune, Dreamer''s Idol, Chronos'' Pendant,
-    Rod of Tahuti, The World Stone, Doom Orb, Genji''s Guard, Death Metal, Wish-Granting
-    Pearl, Jade Scepter, Gem of Focus, Bancroft''s Talon, Rod of Asclepius, Blood-Bound
-    Book, Bracer of The Abyss, Helm of Radiance, Alchemist Coat, Breastplate of Valor,
-    Polynomicon, Bragi''s Harp.'
+    Cosmic Horror, Ethereal Staff, Dreamer''s Idol, Chronos'' Pendant, Rod of Tahuti,
+    The World Stone, Doom Orb, Genji''s Guard, Death Metal, Wish-Granting Pearl, Jade
+    Scepter, Gem of Focus, Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book,
+    Bracer of The Abyss, Helm of Radiance, Alchemist Coat, Breastplate of Valor, Polynomicon,
+    Bragi''s Harp.'
   slot_scores:
     Ethereal Staff:
       total: 0.53
@@ -155,22 +155,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Blink Rune
+  - Genji's Guard
   - Death Metal
   - Spear of the Magus
   - Soul Reaver
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
   - Death Metal
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -178,19 +178,19 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Obsidian Shard, Soul Gem, Gluttonous Grimoire, Blink Rune, Spear of the Magus,
-    Death Metal, Genji''s Guard, The Cosmic Horror, Ethereal Staff, Chronos'' Pendant,
-    Breastplate of Valor, Dreamer''s Idol, Bragi''s Harp, Triton''s Conch, Wish-Granting
-    Pearl, Rod of Tahuti, The World Stone, Gem of Focus, Jade Scepter, Doom Orb, Bancroft''s
+    god: Obsidian Shard, Soul Gem, Gluttonous Grimoire, Spear of the Magus, Death
+    Metal, Genji''s Guard, The Cosmic Horror, Ethereal Staff, Chronos'' Pendant, Breastplate
+    of Valor, Dreamer''s Idol, Bragi''s Harp, Triton''s Conch, Wish-Granting Pearl,
+    Rod of Tahuti, The World Stone, Gem of Focus, Jade Scepter, Doom Orb, Bancroft''s
     Talon, Rod of Asclepius, Blood-Bound Book, Bracer of The Abyss, Shield of the
     Phoenix, Oni Hunter''s Garb, Chandra''s Grace.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.0
+      fit: 0.22
     Death Metal:
       total: 0.52
       efficiency: 0.65
@@ -225,15 +225,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Blink Rune
   - Kinetic Cuirass
   - Ethereal Staff
   - Gluttonous Grimoire
+  - Soul Reaver
   - Obsidian Shard
   - Amanita Charm
   flex_slots:
   - Ethereal Staff
-  - Blink Rune
+  - Soul Reaver
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -249,18 +249,12 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Gluttonous Grimoire, Soul Gem, Shield of the Phoenix,
-    Rod of Asclepius, Kinetic Cuirass, Ethereal Staff, Blink Rune, Eye of Providence,
-    Chandra''s Grace, Oni Hunter''s Garb, Bancroft''s Talon, Genji''s Guard, Blood-Bound
-    Book, Lifebinder, Spectral Armor, Wish-Granting Pearl, Jade Scepter, Phoenix Feather,
+    Rod of Asclepius, Kinetic Cuirass, Ethereal Staff, Eye of Providence, Chandra''s
+    Grace, Oni Hunter''s Garb, Bancroft''s Talon, Genji''s Guard, Blood-Bound Book,
+    Lifebinder, Spectral Armor, Wish-Granting Pearl, Jade Scepter, Phoenix Feather,
     Spear of the Magus, Breastplate of Valor, Yogi''s Necklace, Erosion, Freya''s
     Tears, Draconic Scale, Mantle Of Discord, Alchemist Coat, Shifter''s Shield.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.64
@@ -279,6 +273,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Soul Reaver:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.65
+      pick: 0.18
+      fit: 0.31
     Obsidian Shard:
       total: 0.6
       efficiency: 0.55
@@ -319,8 +319,8 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Obsidian Shard, Gluttonous Grimoire, Soul Gem, Spear of the Magus,
-    The Cosmic Horror, Dreamer''s Idol, Blink Rune, Rod of Tahuti, The World Stone,
-    Doom Orb, Ethereal Staff, Genji''s Guard, Chronos'' Pendant, Death Metal, Wish-Granting
+    The Cosmic Horror, Dreamer''s Idol, Rod of Tahuti, The World Stone, Doom Orb,
+    Ethereal Staff, Genji''s Guard, Chronos'' Pendant, Death Metal, Wish-Granting
     Pearl, Jade Scepter, Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, Bracer
     of The Abyss, Breastplate of Valor, Gem of Focus, Screeching Gargoyle, Helm of
     Radiance, Alchemist Coat, Oni Hunter''s Garb, Polynomicon.'
@@ -455,11 +455,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Soul Gem, Spear of the Magus, The
-    Cosmic Horror, Obsidian Shard, Ethereal Staff, Blink Rune, Dreamer''s Idol, Chronos''
-    Pendant, The World Stone, Doom Orb, Genji''s Guard, Death Metal, Wish-Granting
-    Pearl, Jade Scepter, Rod of Tahuti, Gem of Focus, Bancroft''s Talon, Rod of Asclepius,
-    Blood-Bound Book, Bracer of The Abyss, Helm of Radiance, Alchemist Coat, Breastplate
-    of Valor, Polynomicon, Bragi''s Harp.'
+    Cosmic Horror, Obsidian Shard, Ethereal Staff, Dreamer''s Idol, Chronos'' Pendant,
+    The World Stone, Doom Orb, Genji''s Guard, Death Metal, Wish-Granting Pearl, Jade
+    Scepter, Rod of Tahuti, Gem of Focus, Bancroft''s Talon, Rod of Asclepius, Blood-Bound
+    Book, Bracer of The Abyss, Helm of Radiance, Alchemist Coat, Breastplate of Valor,
+    Polynomicon, Bragi''s Harp.'
   slot_scores:
     Ethereal Staff:
       total: 0.53

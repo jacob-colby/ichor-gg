@@ -8,7 +8,6 @@
 | Lernaean Bow | 0.55 | 0.64 | 0.65 | 0.50 | 0.00 | 0.64 | undervalued | wave-clear, burst | **UNDERRATED** |
 | Damaru | 0.54 | 0.62 | 0.66 | 0.50 | 0.00 | 0.54 | undervalued |  | **UNDERRATED** |
 | Berserker's Shield | 0.53 | 0.62 | 0.74 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Golden Blade | 0.52 | 0.60 | 0.62 | 0.50 | 0.00 | 0.54 | fair | wave-clear | **UNDERRATED** |
 | Odysseus' Bow | 0.52 | 0.46 | 0.47 | 0.60 | 0.38 | 0.43 | premium | burst, wave-clear |  |
 | The Crusher | 0.51 | 0.58 | 0.70 | 0.50 | 0.00 | 0.31 | undervalued | burst | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Circe's Hexstone | 0.33 | 0.21 | 0.30 | 0.50 | 0.00 | 0.00 | premium | mobility, cc-immunity |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

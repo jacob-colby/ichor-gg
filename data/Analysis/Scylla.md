@@ -10,7 +10,6 @@
 | The Cosmic Horror | 0.55 | 0.65 | 0.59 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Rod of Tahuti | 0.55 | 0.57 | 0.47 | 0.54 | 0.35 | 0.79 | premium |  |  |
 | Ethereal Staff | 0.53 | 0.62 | 0.70 | 0.50 | 0.00 | 0.42 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Dreamer's Idol | 0.53 | 0.61 | 0.53 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | Chronos' Pendant | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | The World Stone | 0.52 | 0.58 | 0.50 | 0.50 | 0.00 | 0.79 | premium |  | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Gauntlet of Thebes | 0.33 | 0.22 | 0.31 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.08 | 0.00 | premium | mobility |  |

@@ -9,7 +9,6 @@
 | Amanita Charm | 0.54 | 0.63 | 0.68 | 0.50 | 0.00 | 0.50 | undervalued | sustain, aura | **UNDERRATED** |
 | Soul Gem | 0.53 | 0.62 | 0.62 | 0.50 | 0.00 | 0.60 | fair | burst, sustain, aura | **UNDERRATED** |
 | Genji's Guard | 0.53 | 0.61 | 0.74 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.53 | 0.60 | 0.65 | 0.50 | 0.00 | 0.50 | undervalued |  | **UNDERRATED** |
 | Ethereal Staff | 0.52 | 0.60 | 0.70 | 0.50 | 0.00 | 0.36 | undervalued |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.70 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Brawler’s Beat Stick | 0.35 | 0.24 | 0.20 | 0.50 | 0.00 | 0.35 | premium | anti-heal |  |
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.34 | 0.22 | 0.25 | 0.50 | 0.00 | 0.15 | premium |  |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

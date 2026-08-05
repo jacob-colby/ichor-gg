@@ -7,7 +7,6 @@
 | Tyrfing | 0.55 | 0.56 | 0.52 | 0.55 | 0.44 | 0.66 | fair | burst |  |
 | Damaru | 0.54 | 0.63 | 0.66 | 0.50 | 0.00 | 0.55 | undervalued |  | **UNDERRATED** |
 | Berserker's Shield | 0.53 | 0.61 | 0.74 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Golden Blade | 0.53 | 0.61 | 0.62 | 0.50 | 0.00 | 0.56 | fair | wave-clear | **UNDERRATED** |
 | The Crusher | 0.52 | 0.59 | 0.70 | 0.50 | 0.00 | 0.34 | undervalued | burst | **UNDERRATED** |
 | Runeforged Hammer | 0.52 | 0.59 | 0.70 | 0.50 | 0.00 | 0.34 | undervalued | burst | **UNDERRATED** |
@@ -95,4 +94,3 @@
 | Circe's Hexstone | 0.33 | 0.21 | 0.30 | 0.50 | 0.00 | 0.00 | premium | mobility, cc-immunity |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

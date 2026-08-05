@@ -107,11 +107,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Obsidian Shard, Gluttonous Grimoire, Spear of the Magus, The Cosmic
-    Horror, Ethereal Staff, Blink Rune, Chronos'' Pendant, Dreamer''s Idol, Genji''s
-    Guard, The World Stone, Death Metal, Doom Orb, Gem of Focus, Wish-Granting Pearl,
-    Jade Scepter, Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, Bracer of
-    The Abyss, Breastplate of Valor, Helm of Radiance, Alchemist Coat, Polynomicon,
-    Bragi''s Harp, Soul Reaver.'
+    Horror, Ethereal Staff, Chronos'' Pendant, Dreamer''s Idol, Genji''s Guard, The
+    World Stone, Death Metal, Doom Orb, Gem of Focus, Wish-Granting Pearl, Jade Scepter,
+    Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, Bracer of The Abyss, Breastplate
+    of Valor, Helm of Radiance, Alchemist Coat, Polynomicon, Bragi''s Harp, Soul Reaver.'
   slot_scores:
     Spear of Desolation:
       total: 0.61
@@ -155,15 +154,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Blink Rune
   - Genji's Guard
+  - Death Metal
   - Spear of Desolation
   - Spear of the Magus
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
   - Genji's Guard
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -178,25 +177,25 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Obsidian Shard, Gluttonous Grimoire, Blink Rune, Spear of the Magus, Genji''s
-    Guard, Death Metal, The Cosmic Horror, Ethereal Staff, Chronos'' Pendant, Breastplate
+    god: Obsidian Shard, Gluttonous Grimoire, Spear of the Magus, Genji''s Guard,
+    Death Metal, The Cosmic Horror, Ethereal Staff, Chronos'' Pendant, Breastplate
     of Valor, Dreamer''s Idol, Bragi''s Harp, Triton''s Conch, Wish-Granting Pearl,
     The World Stone, Gem of Focus, Jade Scepter, Doom Orb, Bancroft''s Talon, Rod
     of Asclepius, Blood-Bound Book, Bracer of The Abyss, Shield of the Phoenix, Oni
     Hunter''s Garb, Chandra''s Grace.'
   slot_scores:
-    Blink Rune:
-      total: 0.53
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.0
     Genji's Guard:
       total: 0.52
       efficiency: 0.74
       win: 0.5
       pick: 0.11
       fit: 0.22
+    Death Metal:
+      total: 0.52
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
@@ -249,11 +248,11 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Gluttonous Grimoire, Shield of the Phoenix, Rod of Asclepius,
-    Kinetic Cuirass, Ethereal Staff, Blink Rune, Genji''s Guard, Chandra''s Grace,
-    Eye of Providence, Oni Hunter''s Garb, Bancroft''s Talon, Blood-Bound Book, Lifebinder,
-    Spectral Armor, Wish-Granting Pearl, Jade Scepter, Shifter''s Shield, Phoenix
-    Feather, Breastplate of Valor, Spear of the Magus, Yogi''s Necklace, Freya''s
-    Tears, Erosion, Draconic Scale, Mantle Of Discord, Alchemist Coat.'
+    Kinetic Cuirass, Ethereal Staff, Genji''s Guard, Chandra''s Grace, Eye of Providence,
+    Oni Hunter''s Garb, Bancroft''s Talon, Blood-Bound Book, Lifebinder, Spectral
+    Armor, Wish-Granting Pearl, Jade Scepter, Shifter''s Shield, Phoenix Feather,
+    Breastplate of Valor, Spear of the Magus, Yogi''s Necklace, Freya''s Tears, Erosion,
+    Draconic Scale, Mantle Of Discord, Alchemist Coat.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.54
@@ -319,11 +318,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Obsidian Shard, Gluttonous Grimoire, Spear of the Magus, The Cosmic
-    Horror, Dreamer''s Idol, Blink Rune, The World Stone, Doom Orb, Ethereal Staff,
-    Genji''s Guard, Chronos'' Pendant, Death Metal, Wish-Granting Pearl, Jade Scepter,
-    Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, Breastplate of Valor, Bracer
-    of The Abyss, Screeching Gargoyle, Gem of Focus, Helm of Radiance, Alchemist Coat,
-    Oni Hunter''s Garb, Polynomicon.'
+    Horror, Dreamer''s Idol, The World Stone, Doom Orb, Ethereal Staff, Genji''s Guard,
+    Chronos'' Pendant, Death Metal, Wish-Granting Pearl, Jade Scepter, Bancroft''s
+    Talon, Rod of Asclepius, Blood-Bound Book, Breastplate of Valor, Bracer of The
+    Abyss, Screeching Gargoyle, Gem of Focus, Helm of Radiance, Alchemist Coat, Oni
+    Hunter''s Garb, Polynomicon.'
   slot_scores:
     Spear of Desolation:
       total: 0.61
@@ -455,11 +454,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror,
-    Obsidian Shard, Ethereal Staff, Blink Rune, Chronos'' Pendant, Dreamer''s Idol,
-    Genji''s Guard, The World Stone, Death Metal, Doom Orb, Gem of Focus, Wish-Granting
-    Pearl, Jade Scepter, Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, Bracer
-    of The Abyss, Breastplate of Valor, Helm of Radiance, Alchemist Coat, Polynomicon,
-    Bragi''s Harp, Soul Reaver.'
+    Obsidian Shard, Ethereal Staff, Chronos'' Pendant, Dreamer''s Idol, Genji''s Guard,
+    The World Stone, Death Metal, Doom Orb, Gem of Focus, Wish-Granting Pearl, Jade
+    Scepter, Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, Bracer of The
+    Abyss, Breastplate of Valor, Helm of Radiance, Alchemist Coat, Polynomicon, Bragi''s
+    Harp, Soul Reaver.'
   slot_scores:
     Ethereal Staff:
       total: 0.53

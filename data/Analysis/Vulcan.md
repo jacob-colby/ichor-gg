@@ -8,7 +8,6 @@
 | Obsidian Shard | 0.57 | 0.58 | 0.55 | 0.60 | 0.26 | 0.66 | fair |  |  |
 | Rod of Tahuti | 0.54 | 0.53 | 0.47 | 0.59 | 0.22 | 0.66 | premium |  |  |
 | Spear of the Magus | 0.54 | 0.63 | 0.62 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | The Cosmic Horror | 0.53 | 0.61 | 0.59 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
 | Ethereal Staff | 0.52 | 0.60 | 0.70 | 0.50 | 0.00 | 0.35 | undervalued |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.52 | 0.59 | 0.62 | 0.50 | 0.00 | 0.51 | fair |  | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Gauntlet of Thebes | 0.33 | 0.22 | 0.31 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

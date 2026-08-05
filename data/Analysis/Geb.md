@@ -15,7 +15,6 @@
 | Shield of the Phoenix | 0.54 | 0.64 | 0.61 | 0.50 | 0.00 | 0.70 | fair | sustain | **UNDERRATED** |
 | Spectral Armor | 0.54 | 0.63 | 0.66 | 0.50 | 0.00 | 0.55 | undervalued | anti-crit, aura | **UNDERRATED** |
 | Mantle Of Discord | 0.54 | 0.62 | 0.63 | 0.50 | 0.00 | 0.61 | fair | peel, cc-immunity | **UNDERRATED** |
-| Blink Rune | 0.53 | 0.61 | 0.87 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.53 | 0.60 | 0.71 | 0.50 | 0.00 | 0.34 | undervalued | burst | **UNDERRATED** |
 | Hussar's Wings | 0.52 | 0.60 | 0.49 | 0.50 | 0.00 | 0.85 | premium | cc-immunity | **UNDERRATED** |
 | Leviathan's Hide | 0.52 | 0.59 | 0.60 | 0.50 | 0.00 | 0.55 | fair |  | **UNDERRATED** |
@@ -92,4 +91,3 @@
 | Mercury's Talaria | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.35 | 0.25 | 0.25 | 0.50 | 0.00 | 0.24 | premium |  |  |
 | Omen Drum | 0.34 | 0.23 | 0.33 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Blinking Abyss | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
