@@ -206,8 +206,12 @@ function swapOrderShiftNote(swapCost: number | undefined, replacedCost: number |
   return null;
 }
 
+// py-2, not py-1: at py-1 these came out 26px tall, and they are the primary
+// control on the page a phone actually uses — mode, build, flavour. 26px is
+// under every touch-target guideline going, and there are eleven of them in a
+// row.
 const segBtn = (active: boolean) =>
-  `press rounded-md px-2.5 py-1 font-display text-small font-semibold capitalize transition-colors duration-150 ease-standard ${
+  `press rounded-md px-2.5 py-2 font-display text-small font-semibold capitalize transition-colors duration-150 ease-standard ${
     active ? "bg-gold text-bg0" : "text-muted hover:text-ink"
   }`;
 
@@ -575,7 +579,7 @@ export function DetailPanel({
             ))}
           </div>
           <button type="button" onClick={() => setEditing("new")}
-            className="press rounded-md border border-line bg-bg2 px-2.5 py-1 text-small text-blue hover:border-line-strong">
+            className="press rounded-md border border-line bg-bg2 px-2.5 py-2 text-small text-blue hover:border-line-strong">
             + New build
           </button>
           {active.source === "mine" && (

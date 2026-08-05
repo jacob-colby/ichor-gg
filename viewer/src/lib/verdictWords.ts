@@ -1,41 +1,17 @@
-/** The vocabulary for a tier disagreement — the words and the two signal
- *  colours, defined once so Home and the tier list can't say the same thing
- *  two different ways.
+/** The vocabulary for a price verdict — the words and the two signal colours,
+ *  defined once so the shop and the item page can't say the same thing two
+ *  different ways.
  *
- * `under`/`premium` keep the meaning they carry everywhere else in the app:
- * `under` is the model rating something above the market, `premium` the market
- * rating it above the model. Agreement takes no colour at all — on a page
- * about disagreement, the rows that agree should recede rather than light up.
+ * The tier-disagreement half of this file is gone. It named a comparison the
+ * site no longer makes: our ranking against the community's, with "Underrated"
+ * meaning "we rate it above them". That comparison did not survive measurement
+ * — see `pipeline/smite/tierlist.py` — so the words for it went with it.
+ *
+ * `under`/`premium` keep the meaning they carry everywhere else: `under` is
+ * the model valuing something above the market, `premium` the market above
+ * the model.
  */
-import type { Verdict } from "./tierBands";
 
-export const VERDICT_WORD: Record<Verdict, string> = {
-  underrated: "Underrated",
-  overrated: "Overrated",
-  agreed: "Agreed",
-};
-
-export const VERDICT_TEXT: Record<Verdict, string> = {
-  underrated: "text-under",
-  overrated: "text-premium",
-  agreed: "text-faint",
-};
-
-/** Spoken form, for accessible names — "Underrated" alone doesn't say who is
- *  doing the underrating. */
-export const VERDICT_SPOKEN: Record<Verdict, string> = {
-  underrated: "we rate it higher",
-  overrated: "we rate it lower",
-  agreed: "both agree",
-};
-
-/* ── The same question, asked about a price ───────────────────────────────
- * The shop compares an item's cost against what the gold model says its stats
- * are worth. That's a different comparison from model-vs-meta, so it gets its
- * own words — but the same shape of sentence, and the same two colours meaning
- * the same two things: `under` is the model valuing something above the
- * market, `premium` the market above the model.
- */
 export type PriceVerdict = "underpriced" | "overpriced" | "fair";
 
 /**

@@ -90,32 +90,32 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Eye of Providence
   - Breastplate of Valor
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Dwarven Plate — magical protection
-    swap_item: Dwarven Plate
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Dwarven Plate — physical protection
+    swap_item: Dwarven Plate
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Breastplate of Valor,
+    this god: Amanita Charm, Kinetic Cuirass, Breastplate of Valor, Eye of Providence,
     Freya''s Tears, Gluttonous Grimoire, Oni Hunter''s Garb, Erosion, Shield of the
     Phoenix, Stampede, Draconic Scale, Hide of the Nemean Lion, Spectral Armor, Soul
-    Gem, Leviathan''s Hide, Midgardian Mail, Stone of Binding, Mantle Of Discord,
-    Helm of Radiance, Yogi''s Necklace, Magi''s Cloak, Rod of Asclepius, Gladiator''s
-    Shield, Ancile, Prophetic Cloak.'
+    Gem, Leviathan''s Hide, Mantle Of Discord, Stone of Binding, Midgardian Mail,
+    Yogi''s Necklace, Helm of Radiance, Rod of Asclepius, Magi''s Cloak, Ancile, Gladiator''s
+    Shield, Hussar''s Wings.'
   slot_scores:
     Eye of Providence:
       total: 0.55
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -133,19 +133,19 @@ builds:
       fit: 0.39
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.81
     Shifter's Shield:
       total: 0.57
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.57
       pick: 0.23
       fit: 0.71
     Amanita Charm:
-      total: 0.57
-      efficiency: 0.67
+      total: 0.56
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -180,44 +180,44 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Eye of Providence,
     Breastplate of Valor, Soul Gem, Gluttonous Grimoire, Rod of Asclepius, Oni Hunter''s
-    Garb, Chandra''s Grace, Freya''s Tears, Erosion, Stampede, Hide of the Nemean
-    Lion, Draconic Scale, Phoenix Feather, Spectral Armor, Lifebinder, Leviathan''s
-    Hide, Yogi''s Necklace, Blood-Bound Book, Midgardian Mail, Bancroft''s Talon,
-    Glorious Pridwen, Gladiator''s Shield.'
+    Garb, Chandra''s Grace, Freya''s Tears, Stampede, Erosion, Hide of the Nemean
+    Lion, Draconic Scale, Phoenix Feather, Spectral Armor, Lifebinder, Yogi''s Necklace,
+    Leviathan''s Hide, Blood-Bound Book, Midgardian Mail, Bancroft''s Talon, Glorious
+    Pridwen, Jade Scepter.'
   slot_scores:
     Eye of Providence:
       total: 0.55
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.7
     Genji's Guard:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
       win: 0.6
       pick: 0.21
       fit: 0.36
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.61
+      total: 0.55
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.8
     Shield of the Phoenix:
-      total: 0.57
-      efficiency: 0.58
+      total: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.92
     Shifter's Shield:
       total: 0.57
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.57
       pick: 0.23
       fit: 0.7
     Amanita Charm:
       total: 0.61
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -248,16 +248,16 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Amanita Charm, Breastplate of Valor, Kinetic
+    for this god: Gluttonous Grimoire, Breastplate of Valor, Amanita Charm, Kinetic
     Cuirass, Soul Gem, Eye of Providence, Stone of Binding, Oni Hunter''s Garb, Spear
-    of the Magus, Screeching Gargoyle, Void Shield, Freya''s Tears, The Cosmic Horror,
-    Void Stone, Spear of Desolation, Shield of the Phoenix, Erosion, Spectral Armor,
-    Obsidian Shard, Draconic Scale, Yogi''s Necklace, Leviathan''s Hide, Helm of Radiance,
+    of the Magus, Freya''s Tears, Screeching Gargoyle, Void Shield, The Cosmic Horror,
+    Shield of the Phoenix, Void Stone, Spear of Desolation, Erosion, Spectral Armor,
+    Draconic Scale, Obsidian Shard, Yogi''s Necklace, Leviathan''s Hide, Helm of Radiance,
     Rod of Asclepius, Midgardian Mail.'
   slot_scores:
     Eye of Providence:
       total: 0.52
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -274,20 +274,20 @@ builds:
       pick: 0.1
       fit: 0.27
     Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.61
+      total: 0.52
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.59
     Gluttonous Grimoire:
-      total: 0.56
+      total: 0.55
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.66
     Shifter's Shield:
-      total: 0.54
-      efficiency: 0.56
+      total: 0.53
+      efficiency: 0.55
       win: 0.57
       pick: 0.23
       fit: 0.49
@@ -321,9 +321,9 @@ builds:
     this god: Breastplate of Valor, Amanita Charm, Gluttonous Grimoire, Kinetic Cuirass,
     Eye of Providence, Oni Hunter''s Garb, Freya''s Tears, Soul Gem, Hide of the Nemean
     Lion, Shield of the Phoenix, Spectral Armor, Yogi''s Necklace, Erosion, Bracer
-    of The Abyss, Draconic Scale, Death Metal, Rod of Asclepius, Helm of Radiance,
+    of The Abyss, Death Metal, Draconic Scale, Rod of Asclepius, Helm of Radiance,
     Leviathan''s Hide, Bragi''s Harp, Midgardian Mail, Spear of the Magus, Jade Scepter,
-    Stone of Binding, Mantle Of Discord.'
+    Mantle Of Discord, Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -339,7 +339,7 @@ builds:
       fit: 0.2
     Bracer of The Abyss:
       total: 0.46
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.24
@@ -350,14 +350,14 @@ builds:
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.46
-      efficiency: 0.47
+      total: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.44
     Shifter's Shield:
       total: 0.52
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.57
       pick: 0.23
       fit: 0.36
@@ -389,11 +389,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Breastplate of Valor, Freya''s Tears,
-    Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Soul Gem, Eye of Providence,
-    Gluttonous Grimoire, Oni Hunter''s Garb, Screeching Gargoyle, Chronos'' Pendant,
-    Spear of Desolation, Gladiator''s Shield, Chandra''s Grace, Erosion, Spectral
-    Armor, Prophetic Cloak, Draconic Scale, Yogi''s Necklace, Helm of Radiance, Rod
-    of Asclepius, Gem of Focus, Death Metal, Leviathan''s Hide, Midgardian Mail.'
+    Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Soul Gem, Gluttonous Grimoire,
+    Eye of Providence, Oni Hunter''s Garb, Chronos'' Pendant, Screeching Gargoyle,
+    Chandra''s Grace, Spear of Desolation, Gladiator''s Shield, Spectral Armor, Erosion,
+    Yogi''s Necklace, Prophetic Cloak, Draconic Scale, Helm of Radiance, Rod of Asclepius,
+    Gem of Focus, Death Metal, Leviathan''s Hide, Jade Scepter.'
   slot_scores:
     Genji's Guard:
       total: 0.6
@@ -409,7 +409,7 @@ builds:
       fit: 0.48
     Kinetic Cuirass:
       total: 0.52
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -421,13 +421,13 @@ builds:
       fit: 0.64
     Shifter's Shield:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.57
       pick: 0.23
       fit: 0.45
     Amanita Charm:
-      total: 0.53
-      efficiency: 0.67
+      total: 0.52
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -461,13 +461,13 @@ builds:
     Underrated for this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Freya''s
     Tears, Gluttonous Grimoire, Oni Hunter''s Garb, Erosion, Shield of the Phoenix,
     Breastplate of Valor, Draconic Scale, Spectral Armor, Soul Gem, Leviathan''s Hide,
-    Midgardian Mail, Stone of Binding, Mantle Of Discord, Hide of the Nemean Lion,
-    Helm of Radiance, Yogi''s Necklace, Magi''s Cloak, Rod of Asclepius, Stampede,
-    Gladiator''s Shield, Ancile, Prophetic Cloak.'
+    Mantle Of Discord, Stone of Binding, Midgardian Mail, Yogi''s Necklace, Hide of
+    the Nemean Lion, Helm of Radiance, Rod of Asclepius, Magi''s Cloak, Stampede,
+    Ancile, Gladiator''s Shield, Hussar''s Wings.'
   slot_scores:
     Eye of Providence:
       total: 0.55
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -479,7 +479,7 @@ builds:
       fit: 0.39
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -491,13 +491,13 @@ builds:
       fit: 0.64
     Shifter's Shield:
       total: 0.57
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.57
       pick: 0.23
       fit: 0.71
     Amanita Charm:
-      total: 0.57
-      efficiency: 0.67
+      total: 0.56
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -531,13 +531,13 @@ builds:
     + fit + win/pick). Underrated for this god: Amanita Charm, Kinetic Cuirass, Eye
     of Providence, Freya''s Tears, Gluttonous Grimoire, Oni Hunter''s Garb, Erosion,
     Shield of the Phoenix, Breastplate of Valor, Draconic Scale, Spectral Armor, Soul
-    Gem, Leviathan''s Hide, Midgardian Mail, Stone of Binding, Mantle Of Discord,
-    Hide of the Nemean Lion, Helm of Radiance, Yogi''s Necklace, Magi''s Cloak, Rod
-    of Asclepius, Stampede, Gladiator''s Shield, Ancile, Prophetic Cloak.'
+    Gem, Leviathan''s Hide, Mantle Of Discord, Stone of Binding, Midgardian Mail,
+    Yogi''s Necklace, Hide of the Nemean Lion, Helm of Radiance, Rod of Asclepius,
+    Magi''s Cloak, Stampede, Ancile, Gladiator''s Shield, Hussar''s Wings.'
   slot_scores:
     Eye of Providence:
       total: 0.55
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -549,7 +549,7 @@ builds:
       fit: 0.39
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -560,14 +560,14 @@ builds:
       pick: 0.0
       fit: 0.64
     Dwarven Plate:
-      total: 0.53
-      efficiency: 0.37
+      total: 0.52
+      efficiency: 0.35
       win: 0.71
       pick: 0.08
       fit: 0.51
     Amanita Charm:
-      total: 0.57
-      efficiency: 0.67
+      total: 0.56
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.71

@@ -2,19 +2,19 @@
 
 Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 
-**Mean coverage:** 50%  ·  **Win-weighted coverage:** 52%  ·  **Pooled rank corr:** 0.56 (n=416)
+**Mean coverage:** 49%  ·  **Win-weighted coverage:** 51%  ·  **Pooled rank corr:** 0.56 (n=416)
 
 | God | Coverage | Win-weighted | Community items |
 |---|---|---|---|
 | Achilles | 40% | 39% | 5 |
 | Agni | 40% | 40% | 5 |
 | Ah Puch | 40% | 51% | 5 |
-| Aladdin | 40% | 42% | 5 |
-| Amaterasu | 20% | 21% | 5 |
+| Aladdin | 20% | 22% | 5 |
+| Amaterasu | 40% | 37% | 5 |
 | Anhur | 60% | 61% | 5 |
-| Anubis | 25% | 23% | 4 |
+| Anubis | 0% | 0% | 4 |
 | Aphrodite | 40% | 41% | 5 |
-| Apollo | 60% | 60% | 5 |
+| Apollo | 40% | 41% | 5 |
 | Ares | 25% | 29% | 4 |
 | Artemis | 40% | 39% | 5 |
 | Artio | 25% | 29% | 4 |
@@ -68,7 +68,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Nemesis | 40% | 43% | 5 |
 | Nu Wa | 83% | 85% | 6 |
 | Nut | 25% | 26% | 4 |
-| Odin | 80% | 84% | 5 |
+| Odin | 60% | 60% | 5 |
 | Osiris | 50% | 50% | 4 |
 | Pele | 80% | 81% | 5 |
 | Poseidon | 20% | 21% | 5 |
@@ -85,7 +85,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Thanatos | 100% | 100% | 5 |
 | The Morrigan | 67% | 68% | 6 |
 | Thor | 40% | 43% | 5 |
-| Tsukuyomi | 40% | 43% | 5 |
+| Tsukuyomi | 20% | 20% | 5 |
 | Ullr | 80% | 81% | 5 |
 | Vulcan | 50% | 51% | 4 |
 | Xbalanque | 67% | 68% | 6 |

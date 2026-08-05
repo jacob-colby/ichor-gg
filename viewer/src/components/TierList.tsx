@@ -1,19 +1,20 @@
-/* THESIS: the tier list owns "who does the model rank, and where does the meta
- * disagree?" It refuses the source toggle — a control that shows our ranking
- * *instead of* the community's makes the reader hold one in memory to compare,
- * when the comparison is the entire product. Bands stay, because bands are the
- * form this audience reads tier lists in; the community becomes a ghost on
- * every card instead of a second page.
+/* THESIS: this page owns one question — who actually wins, and how sure are we?
+ * It used to own a different one: "where does the model disagree with the
+ * meta?", with the model's bands and the community drawn as a ghost on every
+ * card. That comparison was the product's headline and it did not survive
+ * measurement — the model's god ranking correlated -0.117 with real god
+ * strength, its item ranking -0.267 with item win rate, and 59% of gods
+ * "placed differently" against the 75% two unrelated rankings produce. The
+ * ghost is gone; what it argued with is now the ranking.
  * OWN-WORLD: Arena Night. Hairline rule-work, mono micro-labels, gold reserved
- * for selection and the model's own score. `under`/`premium` carry divergence.
- * STORY: a player scans the model's bands, sees at a glance how much of each
- * band the meta agrees with, and finds the names worth arguing about — which
- * sort to the front of every band.
- * FIRST VIEWPORT: a summary line stating agreement across the whole list, then
- * the S band with its own agreement tally and cards carrying model score plus
- * the community's ghost placement.
- * FORM: tier bands with community ghosts, position 7 of the ordered list, seed
- * key f397d87a.
+ * for selection and the top band. `under` marks the one editorial call left:
+ * a god that wins well and is rarely played.
+ * STORY: a player scans bands built from real outcomes, sees how much play each
+ * placement rests on, and can pull out the gods worth learning because nobody
+ * else is playing them.
+ * FIRST VIEWPORT: a claim carrying its own sample size, then the S band with
+ * cards showing win rate and matches.
+ * FORM: tier bands over measured outcomes, position 7 of the ordered list.
  */
 import { useMemo, useState } from "react";
 import type { CommunitySource as CommunitySourceData, GodTierEntry, ItemTierEntry, TierEntry, TierListData } from "../types";
@@ -21,10 +22,8 @@ import { iconSlug } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { LANES, godLane, godInLane, laneTextClass, type Lane } from "../lib/roleAccent";
 import { efficiencyLabel } from "../lib/itemFilters";
-import { buildBands, tierStep, verdictOf, type BandEntry, type BandSort, type TierLetter } from "../lib/tierBands";
-import { deltaText } from "../lib/divergence";
-import { TierLadder } from "./TierLadder";
-import { VERDICT_TEXT, VERDICT_WORD, VERDICT_SPOKEN } from "../lib/verdictWords";
+import { buildBands, type BandEntry, type BandSort, type TierLetter } from "../lib/tierBands";
+import { rateText, matchesText, findUnderplayed } from "../lib/standings";
 import { useUrlState } from "../lib/urlState";
 import { CommunitySource } from "./CommunitySource";
 
@@ -37,10 +36,7 @@ const GAME_MODES: { key: GameMode; label: string }[] = [
   { key: "arena", label: "Arena" },
 ];
 
-// A neutral ramp, not the signal palette. `under`/`premium` mean "which way
-// the model leans against the market" everywhere else in the app; borrowing
-// one of them to mean "A tier" would break that. Gold marks only the top
-// band — the model's strongest verdict, once per page.
+// A neutral ramp, not the signal palette. Gold marks only the top band.
 const TIER_TEXT: Record<TierLetter, string> = {
   S: "text-gold",
   A: "text-ink",
@@ -49,25 +45,16 @@ const TIER_TEXT: Record<TierLetter, string> = {
 };
 
 const segBtn = (active: boolean) =>
-  `press rounded-sm px-3 py-1.5 font-display text-small font-semibold transition-colors duration-[150ms] ease-standard ${
+  `press rounded-sm px-3 py-2 font-display text-small font-semibold transition-colors duration-[150ms] ease-standard ${
     active ? "bg-gold text-bg0" : "text-muted hover:text-ink"
   }`;
 const chip = (active: boolean, extra = "") =>
-  `press rounded-full px-3 py-1.5 text-small transition-colors duration-[150ms] ease-standard ${
+  `press rounded-full px-3 py-2 text-small transition-colors duration-[150ms] ease-standard ${
     active ? "bg-gold font-semibold text-bg0" : `border border-line hover:border-line-strong ${extra}`
   }`;
-const selCls = "rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted focus:border-blue focus:outline-none";
-function scoreText(v: number | null | undefined): string {
-  return v == null ? "—" : v.toFixed(2);
-}
+const selCls = "rounded-md border border-line bg-bg2 px-2.5 py-2 text-small text-muted focus:border-blue focus:outline-none";
 
 const entityLabel = (s: Subject) => (s === "gods" ? "god" : "item");
-
-/* Direction of a tier disagreement comes from the tier letters, never the raw
- * score gap: the two measures disagree near a band boundary, and colouring
- * from the score put "the meta rates it higher" four characters from letters
- * saying we ranked it two tiers up. `verdictOf` is that same rule, now shared
- * with Home so both pages say it identically. */
 
 /** Entry art with a real fallback rather than a hidden hole in the grid. */
 function EntryIcon({ name, item }: { name: string; item: boolean }) {
@@ -92,40 +79,40 @@ function EntryIcon({ name, item }: { name: string; item: boolean }) {
 }
 
 /**
- * One entry: the model's placement, and the community's as a ghost.
+ * One entry: what it won, and how much play that rests on.
  *
- * The ghost is the whole point of the redesign — where the community puts this
- * is readable without leaving the model's band, so nothing has to be held in
- * memory across a toggle.
+ * Both numbers, always. A card that shows only a rate reads equally sure at 44
+ * matches and at 670, and the samples here span exactly that range.
  */
-function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Subject }) {
-  const { entry, delta, tierGap, agrees, unranked } = band;
+function EntryCard({ band, subject, underplayed }: {
+  band: BandEntry<TierEntry>;
+  subject: Subject;
+  underplayed?: boolean;
+}) {
+  const { entry, unmeasured } = band;
   const isGod = subject === "gods";
   const god = entry as GodTierEntry;
   const item = entry as ItemTierEntry;
   const eff = isGod ? null : efficiencyLabel(item.efficiency_tier);
   const lane = isGod ? godLane(god.role) : undefined;
-  const verdict = verdictOf(tierGap ?? 0);
-  const ourStep = tierStep(entry.tier_ours);
-  const theirStep = tierStep(entry.tier_community);
-  const matches = typeof entry.community_matches === "number" ? entry.community_matches : null;
+  const matches = typeof entry.matches === "number" ? entry.matches : null;
 
   return (
     <li>
       <a
         href={isGod ? toHash.god(entry.name) : toHash.item(entry.name)}
-        aria-label={`${entry.name}: we place it ${entry.tier_ours ?? "unrated"}, ${
-          unranked ? "the community hasn't placed it"
-          : `the community places it ${entry.tier_community} — ${VERDICT_SPOKEN[verdict]}`}`}
-        // The arithmetic is demoted, not deleted — on hover here, and in full
-        // on the entry's own page.
-        title={`${entry.name} — model ${scoreText(entry.ours)}${
-          unranked ? "" : ` · community ${scoreText(entry.community)} (${deltaText(delta)})`}${
-          matches ? ` · ${matches.toLocaleString("en-US")} community matches` : ""}`}
-        // Stacked on a phone so the name gets the card's full width — laid
-        // out beside the icon it truncated at "Thanatos".
+        aria-label={unmeasured
+          ? `${entry.name}: not enough matches to place`
+          : `${entry.name}: ${entry.tier_score} tier, ${rateText(entry.win_rate)} win rate over ${
+              matches?.toLocaleString("en-US") ?? "an unreported number of"} matches${
+              underplayed ? " — wins well and is rarely played" : ""}`}
+        title={unmeasured
+          ? `${entry.name} — no usable sample`
+          : `${entry.name} — ${rateText(entry.win_rate)} win over ${
+              matches?.toLocaleString("en-US") ?? "?"} matches (ranked on the lower bound of that rate)`}
+        // Stacked on a phone so the name gets the card's full width.
         className={`plane press flex h-full flex-col items-center gap-1 rounded-md border bg-bg2 p-2 text-center transition-colors duration-[180ms] ease-standard hover:border-line-strong sm:flex-row sm:items-start sm:gap-2.5 sm:text-left ${
-          agrees || unranked ? "border-line" : "border-line-strong"}`}
+          underplayed ? "border-line-strong" : "border-line"}`}
       >
         <EntryIcon name={entry.name} item={!isGod} />
         <span className="flex w-full min-w-0 flex-col items-center gap-0.5 sm:flex-1 sm:items-start">
@@ -133,36 +120,19 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
           {isGod
             ? lane && <span className={`text-label ${laneTextClass(lane)}`}>{lane}</span>
             : eff && <span className={`text-label ${eff.cls.replace(/bg-\S+/g, "")}`}>{eff.text}</span>}
-          {/* The verdict in words, then the same ladder Home draws. A card
-              used to end in three figures — `0.53  meta B  +0.05` — which is
-              the reading the rest of this redesign moved away from. Within a
-              band our own kite sits at the same rung on every card, so what
-              varies down the column is exactly the thing worth seeing: how
-              far the meta is from us. */}
-          {ourStep == null ? (
-            // The model never tiered this one (the starters and components).
-            // `tierGap` is null here, and a null gap reads as zero — so
-            // without this branch the card would print "Agreed" about a
-            // placement we never made.
-            <span className="mt-0.5 text-label leading-tight text-muted">not tiered by the model</span>
-          ) : unranked || theirStep == null ? (
-            <span className="mt-0.5 text-label leading-tight text-muted">no community rating</span>
+          {unmeasured ? (
+            <span className="mt-0.5 text-label leading-tight text-muted">not measured</span>
           ) : (
             <>
-              {/* Stacked rather than wrapped: side by side these two fit on
-                  one line or two depending on the name beside them, which made
-                  a band's cards a different height from the band above it. */}
-              <span className={`mt-0.5 text-label leading-tight ${VERDICT_TEXT[verdict]}`}>
-                {VERDICT_WORD[verdict]}
+              <span className="mt-0.5 font-mono text-label leading-tight text-ink-soft">
+                {rateText(entry.win_rate)} win
               </span>
-              {/* What the verdict rests on — the samples run 175 to 2,533, and
-                  every card reads equally sure without it. */}
               <span aria-hidden="true" className="font-mono text-micro leading-tight text-faint">
-                {matches ? `${matches.toLocaleString("en-US")} matches` : " "}
+                {matches != null ? `${matchesText(matches)} matches` : " "}
               </span>
-              <span className="mt-1 w-full max-w-[128px]">
-                <TierLadder ourStep={ourStep} theirStep={theirStep} verdict={verdict} />
-              </span>
+              {underplayed && (
+                <span className="mt-0.5 text-label leading-tight text-under">rarely played</span>
+              )}
             </>
           )}
         </span>
@@ -171,54 +141,48 @@ function EntryCard({ band, subject }: { band: BandEntry<TierEntry>; subject: Sub
   );
 }
 
-function TierBand({ tier, entries, total, agreed, disagreed, unranked, subject }: {
+function TierBand({ tier, entries, total, subject, underplayedNames }: {
   tier: TierLetter;
   entries: BandEntry<TierEntry>[];
-  /** Whole-band size, which the tally below describes — `entries` may be
-   * narrowed by the disputed-only filter. */
+  /** Whole-band size, which the count describes — `entries` may be narrowed. */
   total: number;
-  agreed: number;
-  disagreed: number;
-  unranked: number;
   subject: Subject;
+  underplayedNames: Set<string>;
 }) {
+  // Appearances, not matches: ten gods play every match, so these sum to
+  // several times the 4,952 the source line reports.
+  const appearances = entries.reduce((n, b) => n + (b.entry.matches ?? 0), 0);
   return (
     <section data-testid={`band-${tier}`} aria-labelledby={`band-${tier}-h`} className="border-t border-line pt-3">
       <div className="mb-2.5 flex flex-wrap items-center gap-x-3 gap-y-1">
         <h2 id={`band-${tier}-h`} className="flex items-center gap-2">
           <span className={`flex h-7 w-7 items-center justify-center rounded-md bg-bg3 font-display text-body font-bold ${TIER_TEXT[tier]}`}>{tier}</span>
-          {/* One basis: when a filter narrows the band, say so rather than
-              printing a drawn count beside a whole-band tally. */}
           <span className="text-label text-faint">
             {entries.length === total ? total : `${entries.length} of ${total}`}
           </span>
         </h2>
-        <p className="text-label text-faint">
-          {disagreed > 0 && <span className="text-ink-soft">{disagreed} disputed</span>}
-          {disagreed > 0 && agreed > 0 && <span className="px-1">·</span>}
-          {agreed > 0 && <>{agreed} agreed</>}
-          {unranked > 0 && <>{(disagreed > 0 || agreed > 0) && <span className="px-1">·</span>}{unranked} unranked</>}
-        </p>
+        {appearances > 0 && (
+          <p className="font-mono text-label text-faint">
+            {appearances.toLocaleString("en-US")} {subject === "gods" ? "god-games" : "purchases"}
+          </p>
+        )}
       </div>
-      {/* Steps with viewport: a single 158px minimum gave 2 columns on a
-          phone and inflated cards to 181px at 1440. */}
       <ul className="grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
-        {entries.map((b) => <EntryCard key={b.entry.name} band={b} subject={subject} />)}
+        {entries.map((b) => (
+          <EntryCard key={b.entry.name} band={b} subject={subject}
+            underplayed={underplayedNames.has(b.entry.name)} />
+        ))}
       </ul>
     </section>
   );
 }
 
-/* ── Board state in the URL ───────────────────────────────────────────────
- * "The disputed Mid gods in Joust" is the kind of thing this list exists to
- * produce, and it was unlinkable. Defaults stay out of the query so the plain
- * `#/tiers` link keeps working and keeps meaning the same thing.
- */
+/* ── Board state in the URL ─────────────────────────────────────────────── */
 interface BoardState {
   gameMode: GameMode;
   subject: Subject;
   sort: BandSort;
-  disputedOnly: boolean;
+  underplayedOnly: boolean;
   q: string;
   lane?: Lane;
   efficiency?: string;
@@ -227,10 +191,10 @@ interface BoardState {
 function decodeBoard(p: URLSearchParams): BoardState {
   const lane = p.get("lane");
   return {
-    gameMode: p.get("mode") === "joust" ? "joust" : "conquest",
+    gameMode: p.get("mode") === "joust" ? "joust" : p.get("mode") === "arena" ? "arena" : "conquest",
     subject: p.get("of") === "items" ? "items" : "gods",
-    sort: p.get("sort") === "score" ? "score" : "disagreement",
-    disputedOnly: p.get("disputed") === "1",
+    sort: p.get("sort") === "matches" ? "matches" : "score",
+    underplayedOnly: p.get("hidden") === "1",
     q: p.get("q") ?? "",
     lane: LANES.includes(lane as Lane) ? (lane as Lane) : undefined,
     efficiency: p.get("eff") ?? undefined,
@@ -241,8 +205,8 @@ function encodeBoard(s: BoardState): Record<string, string | undefined> {
   return {
     mode: s.gameMode === "conquest" ? undefined : s.gameMode,
     of: s.subject === "gods" ? undefined : s.subject,
-    sort: s.sort === "disagreement" ? undefined : s.sort,
-    disputed: s.disputedOnly ? "1" : undefined,
+    sort: s.sort === "score" ? undefined : s.sort,
+    hidden: s.underplayedOnly ? "1" : undefined,
     q: s.q.trim() || undefined,
     lane: s.lane,
     eff: s.efficiency,
@@ -254,16 +218,21 @@ export function TierList({ tierlist, communitySource }: {
   communitySource?: CommunitySourceData;
 }) {
   const [board, setBoard] = useUrlState(decodeBoard, encodeBoard);
-  const { gameMode, subject, sort, disputedOnly, q, lane, efficiency } = board;
+  const { gameMode, subject, sort, underplayedOnly, q, lane, efficiency } = board;
   const patch = (next: Partial<BoardState>) => setBoard((s) => ({ ...s, ...next }));
 
-  // Per-mode slice, falling back to the legacy flat shape when the per-mode
-  // key is absent — either an index predating it, or Conquest, which is the
-  // same data mirrored at the top level.
   const modeSlice = useMemo(() => tierlist?.[gameMode] ?? tierlist, [tierlist, gameMode]);
   const source: TierEntry[] = useMemo(
     () => (subject === "gods" ? modeSlice?.gods : modeSlice?.items) ?? [],
     [modeSlice, subject],
+  );
+
+  // Computed on the UNFILTERED set: "rarely played" is a fact about the whole
+  // roster, and recomputing it inside a lane filter would make Solo's quietest
+  // god look rare among five names.
+  const underplayedNames = useMemo(
+    () => findUnderplayed(subject === "gods" ? (source as GodTierEntry[]) : []),
+    [source, subject],
   );
 
   const query = q.trim().toLowerCase();
@@ -271,95 +240,53 @@ export function TierList({ tierlist, communitySource }: {
     if (query && !e.name.toLowerCase().includes(query)) return false;
     if (subject === "gods" && lane && !godInLane((e as GodTierEntry).role, lane)) return false;
     if (subject === "items" && efficiency && ((e as ItemTierEntry).efficiency_tier ?? "") !== efficiency) return false;
+    if (underplayedOnly && !underplayedNames.has(e.name)) return false;
     return true;
-  }), [source, query, lane, efficiency, subject]);
+  }), [source, query, lane, efficiency, subject, underplayedOnly, underplayedNames]);
 
   const result = useMemo(() => buildBands(filtered, sort), [filtered, sort]);
-  // Whether this mode/subject has any community coverage at all, judged on the
-  // unfiltered set. Asking the filtered set instead made a search miss print
-  // "0 gods · no community ratings to compare against" for Conquest, which has
-  // 69 of them.
-  const sourceHasCommunity = useMemo(() => source.some((e) => e.community != null), [source]);
-
-  // Applied after the tally so the summary always describes the whole filtered
-  // set, not the narrowed view — otherwise "agreed on 0" would be tautological.
-  const bands = useMemo(() => (disputedOnly
-    ? result.bands
-        .map((b) => ({ ...b, entries: b.entries.filter((e) => !e.agrees && !e.unranked) }))
-        .filter((b) => b.entries.length > 0)
-    : result.bands), [result.bands, disputedOnly]);
-
-  // Entries the model hasn't tiered (the starter items) — counted in the
-  // header, so they have to be drawn rather than silently dropped.
-  const untiered = useMemo(
-    () => (disputedOnly ? [] : result.untiered),
-    [result.untiered, disputedOnly],
-  );
-  const shown = bands.reduce((n, b) => n + b.entries.length, 0) + untiered.length;
-  const anyFilter = !!query || !!lane || !!efficiency || disputedOnly;
-  const clear = () => patch({ q: "", lane: undefined, efficiency: undefined, disputedOnly: false });
-  // The community source covers Conquest only, so every other mode can come
-  // back entirely unranked. Keyed off "not conquest" rather than a named mode,
-  // so adding one can't quietly present an empty column as a loading state.
-  const communityGap = gameMode !== "conquest" && result.ranked === 0 && result.total > 0;
-
-  // Item scores aren't recomputed per mode in the pipeline, so a non-Conquest
-  // slice can be the very same figures as Conquest. Derived rather than
-  // assumed, so the note disappears by itself if that ever stops being true.
-  const modeIsMirrored = useMemo(() => {
-    if (gameMode === "conquest" || subject !== "items") return false;
-    const a = tierlist?.conquest?.items ?? tierlist?.items;
-    const b = tierlist?.[gameMode]?.items;
-    if (!a || !b || a.length !== b.length) return false;
-    return a.every((e, i) => e.name === b[i].name && e.ours === b[i].ours && e.community === b[i].community);
-  }, [tierlist, gameMode, subject]);
+  const untiered = result.untiered;
+  const shown = result.bands.reduce((n, b) => n + b.entries.length, 0) + untiered.length;
+  const anyFilter = !!query || !!lane || !!efficiency || underplayedOnly;
+  const clear = () => patch({ q: "", lane: undefined, efficiency: undefined, underplayedOnly: false });
+  // Only Conquest has outcome data. Every other mode comes back entirely
+  // unmeasured, which is now stated rather than papered over with a ranking.
+  const noOutcomes = result.ranked === 0 && result.total > 0;
 
   return (
     <div className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">
       <header className="pb-4">
-        {/* A claim carrying its own numbers, like Home's — not a route label. */}
-        <h1 className="max-w-[24ch] text-balance font-display text-display font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-display">
+        <h1 className="max-w-[26ch] text-balance font-display text-display font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-display">
           {result.ranked > 0 ? (
-            <>The community agrees with{" "}
-              <span className="text-gold">{result.agreed} of {result.ranked}</span>{" "}
-              {entityLabel(subject)} placements.
+            <>Every {entityLabel(subject)}, ranked by{" "}
+              <span className="text-gold">{result.appearances.toLocaleString("en-US")}</span>{" "}
+              tracked {subject === "gods" ? "god-games" : "item purchases"}.
             </>
           ) : (
-            <>Every {entityLabel(subject)}, ranked by the model.</>
+            <>No outcome data for this mode.</>
           )}
         </h1>
-        <p className="mt-2.5 max-w-[70ch] text-body leading-relaxed text-ink-soft">
-          Bands are the model&rsquo;s. Each card carries where the community places the same{" "}
-          {entityLabel(subject)}, so the disagreement is readable without switching views.
-        </p>
-        {result.ranked > 0 ? (
-          <p data-testid="tier-summary" className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint">
-            <span><span className="text-ink-soft">{result.agreed} of {result.ranked}</span> agreed</span>
-            <span className="text-under">{result.modelHigher} we rank higher</span>
-            <span className="text-premium">{result.metaHigher} the community ranks higher</span>
-            {result.unranked > 0 && <span>{result.unranked} unranked</span>}
-          </p>
-        ) : !sourceHasCommunity ? (
-          <p data-testid="tier-summary" className="mt-2.5 text-label text-faint">
-            {source.length} {subject} · no community ratings to compare against
-          </p>
-        ) : null}
-        {/* Beside the tally it qualifies: this page compares against the same
-            figures Home does, so it states the same provenance. */}
-        {result.ranked > 0 && <CommunitySource source={communitySource} className="mt-1.5" />}
-        {/* Directly under the tally it qualifies — not below the control bar. */}
-        {modeIsMirrored && (
-          <p className="mt-2 max-w-[74ch] text-small leading-relaxed text-muted">
-            Items aren&rsquo;t scored per mode, so these are the same figures as Conquest —
-            the community column reflects Conquest play. Only god tiers differ between modes.
+        {result.ranked > 0 && (
+          <p className="mt-2.5 max-w-[70ch] text-body leading-relaxed text-ink-soft">
+            Bands come from the lower bound of each {entityLabel(subject)}&rsquo;s real win rate, so a
+            62% record over 133 matches doesn&rsquo;t outrank a 58% one over 2,000. Nothing this
+            site models goes into the order.
           </p>
         )}
+        {result.ranked > 0 && (
+          <p data-testid="tier-summary" className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint">
+            <span><span className="text-ink-soft">{result.ranked}</span> placed</span>
+            {underplayedNames.size > 0 && subject === "gods" && (
+              <span className="text-under">{underplayedNames.size} win well and are rarely played</span>
+            )}
+            {result.unmeasured > 0 && <span>{result.unmeasured} not measured</span>}
+          </p>
+        )}
+        {result.ranked > 0 && <CommunitySource source={communitySource} className="mt-1.5" />}
       </header>
 
       {/* Controls */}
       <div className="sticky top-0 z-10 -mx-4 border-b border-line bg-bg0/90 px-4 py-3 backdrop-blur-md sm:-mx-6 sm:px-6">
-        {/* One scrolling line per row on a phone rather than three wrapped
-            ones — the bar was 229px, 28% of a 812px viewport, permanently. */}
         <div className="flex items-center gap-2 overflow-x-auto pb-0.5 sm:flex-wrap sm:overflow-visible [&>*]:shrink-0">
           <div role="group" aria-label="Game mode" className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
             {GAME_MODES.map((m) => (
@@ -372,8 +299,8 @@ export function TierList({ tierlist, communitySource }: {
             <button type="button" aria-pressed={subject === "items"} onClick={() => patch({ subject: "items" })} className={segBtn(subject === "items")}>Items</button>
           </div>
           <div role="group" aria-label="Order within each band" className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
-            <button type="button" aria-pressed={sort === "disagreement"} onClick={() => patch({ sort: "disagreement" })} className={segBtn(sort === "disagreement")}>Biggest gap first</button>
-            <button type="button" aria-pressed={sort === "score"} onClick={() => patch({ sort: "score" })} className={segBtn(sort === "score")}>By score</button>
+            <button type="button" aria-pressed={sort === "score"} onClick={() => patch({ sort: "score" })} className={segBtn(sort === "score")}>Best first</button>
+            <button type="button" aria-pressed={sort === "matches"} onClick={() => patch({ sort: "matches" })} className={segBtn(sort === "matches")}>Most played</button>
           </div>
           <label className="flex cursor-text items-center gap-2 rounded-md border border-line bg-bg2 px-3 py-2 focus-within:border-blue">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="text-muted">
@@ -397,10 +324,8 @@ export function TierList({ tierlist, communitySource }: {
         <div className="mt-2 flex items-center gap-2 overflow-x-auto pb-0.5 sm:flex-wrap sm:overflow-visible [&>*]:shrink-0">
           {subject === "gods" ? (
             <>
-              {/* "All" is the absence of a filter, so it stays neutral —
-                  gold marks a choice the reader made. */}
               <button type="button" aria-pressed={!lane} onClick={() => patch({ lane: undefined })}
-                className={`press rounded-full border px-3 py-1.5 text-small transition-colors duration-[150ms] ease-standard ${
+                className={`press rounded-full border px-3 py-2 text-small transition-colors duration-[150ms] ease-standard ${
                   !lane ? "border-line-strong text-ink" : "border-line text-muted hover:border-line-strong"}`}>
                 All
               </button>
@@ -411,63 +336,61 @@ export function TierList({ tierlist, communitySource }: {
             </>
           ) : (
             <select value={efficiency ?? ""} onChange={(e) => patch({ efficiency: e.target.value || undefined })}
-              aria-label="Filter by efficiency rating" className={selCls}>
-              <option value="">All ratings</option>
-              <option value="undervalued">Efficient</option>
-              <option value="fair">Fair</option>
-              <option value="premium">Premium</option>
+              aria-label="Filter by value rating" className={selCls}>
+              <option value="">All value ratings</option>
+              <option value="undervalued">Cheap for its stats</option>
+              <option value="fair">Fairly priced</option>
+              <option value="premium">Priced over its stats</option>
             </select>
           )}
-          {result.ranked > 0 && (
-            <button type="button" aria-pressed={disputedOnly} onClick={() => patch({ disputedOnly: !disputedOnly })}
-              className={`${chip(disputedOnly, "text-muted")} ml-auto`}>
-              Only disputed
+          {subject === "gods" && underplayedNames.size > 0 && (
+            <button type="button" aria-pressed={underplayedOnly}
+              onClick={() => patch({ underplayedOnly: !underplayedOnly })}
+              className={`${chip(underplayedOnly, "text-muted")} ml-auto`}>
+              Only rarely played
             </button>
           )}
         </div>
       </div>
 
-      {communityGap && (
+      {noOutcomes && (
         <p className="mt-4 max-w-[74ch] text-small leading-relaxed text-muted">
-          SmiteBrain doesn&rsquo;t track {GAME_MODES.find((m) => m.key === gameMode)?.label ?? gameMode},
-          so there are no community ratings for this mode at all — every card below shows the
-          model&rsquo;s placement alone. That&rsquo;s a real coverage gap, not a loading state.
+          SmiteBrain publishes no {GAME_MODES.find((m) => m.key === gameMode)?.label ?? gameMode} results,
+          so there is nothing to rank these on. This page used to fill the gap with the site&rsquo;s own
+          score; that score measured &minus;0.12 against real god strength, so an empty page is the more
+          honest one. Builds for this mode still work &mdash; open any god.
         </p>
       )}
 
-      {shown === 0 ? (
+      {shown === 0 && !noOutcomes ? (
         <div className="flex flex-col items-start gap-2 py-16">
           <p className="max-w-[64ch] text-body leading-relaxed text-muted">
-            {disputedOnly && filtered.length > 0
-              ? `Nothing disputed here — the model and the community agree on ${
-                  filtered.length === 1 ? "the one" : `all ${filtered.length}`
-                } ${filtered.length === 1 ? entityLabel(subject) : `${entityLabel(subject)}s`} matching those filters.`
-              : `No ${subject} match those filters.`}
+            No {subject} match those filters.
           </p>
           {anyFilter && (
-            <button type="button" onClick={clear} className="press rounded-sm px-1 py-1 text-small text-blue hover:underline">
+            <button type="button" onClick={clear} className="press rounded-sm px-1 py-2 text-small text-blue hover:underline">
               Clear filters
             </button>
           )}
         </div>
       ) : (
         <div className="mt-4 flex flex-col gap-5">
-          {bands.map((b) => (
+          {result.bands.map((b) => (
             <TierBand key={b.tier} tier={b.tier} entries={b.entries}
-              total={b.agreed + b.disagreed + b.unranked} agreed={b.agreed}
-              disagreed={b.disagreed} unranked={b.unranked} subject={subject} />
+              total={b.entries.length} subject={subject} underplayedNames={underplayedNames} />
           ))}
           {untiered.length > 0 && (
             <section data-testid="band-untiered" aria-labelledby="band-untiered-h" className="border-t border-line pt-3">
               <div className="mb-2.5 flex flex-wrap items-center gap-x-3 gap-y-1">
                 <h2 id="band-untiered-h" className="font-mono text-label uppercase tracking-[0.1em] text-faint">
-                  Not tiered
+                  Not measured
                 </h2>
                 <p className="font-mono text-label text-faint">{untiered.length}</p>
               </div>
               <p className="mb-2.5 max-w-[70ch] text-small leading-relaxed text-muted">
-                Starters and components the model doesn&rsquo;t rank against full items — they&rsquo;re
-                counted above, so they&rsquo;re shown here rather than dropped.
+                {subject === "gods"
+                  ? "Too few tracked matches to place with any confidence. Shown rather than dropped, and never ranked low for it — “unmeasured” and “bad” are different facts."
+                  : "No tracked win rate of their own — mostly starters and components, which players buy as a step on the way to something else."}
               </p>
               <ul className="grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
                 {untiered.map((b) => <EntryCard key={b.entry.name} band={b} subject={subject} />)}

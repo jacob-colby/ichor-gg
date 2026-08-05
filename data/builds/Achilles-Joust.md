@@ -33,19 +33,19 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.54
     Kinetic Cuirass:
       total: 0.58
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.56
     Runeforged Hammer:
       total: 0.6
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -57,13 +57,13 @@ builds:
       fit: 0.59
     Amanita Charm:
       total: 0.79
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.91
     Erosion:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -100,37 +100,37 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.59
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.55
     Kinetic Cuirass:
       total: 0.63
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shield of the Phoenix:
       total: 0.65
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.72
     Spectral Armor:
       total: 0.59
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.58
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.64
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -145,7 +145,7 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
+  - Void Stone
   - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -165,25 +165,25 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.65
-      efficiency: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.78
     Jotunn's Revenge:
       total: 0.65
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.65
     Void Shield:
-      total: 0.67
-      efficiency: 0.48
+      total: 0.66
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.85
     Void Stone:
       total: 0.65
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -195,7 +195,7 @@ builds:
       fit: 0.71
     Amanita Charm:
       total: 0.73
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.68
-      efficiency: 0.44
+      total: 0.67
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -247,8 +247,8 @@ builds:
       pick: 0.0
       fit: 0.83
     Amanita Charm:
-      total: 0.7
-      efficiency: 0.67
+      total: 0.69
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Shield of the Phoenix
-  - Gladiator's Shield
   - Hydra's Lament
   - Freya's Tears
   flex_slots:
   - Freya's Tears
-  - Gladiator's Shield
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -299,24 +299,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Breastplate of Valor:
+      total: 0.54
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.59
     Shield of the Phoenix:
       total: 0.7
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.82
-    Gladiator's Shield:
-      total: 0.55
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Hydra's Lament:
       total: 0.58
       efficiency: 0.61
@@ -360,19 +360,19 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.54
     Kinetic Cuirass:
       total: 0.58
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.56
     Runeforged Hammer:
       total: 0.6
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -384,13 +384,13 @@ builds:
       fit: 0.59
     Amanita Charm:
       total: 0.79
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.91
     Erosion:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.66

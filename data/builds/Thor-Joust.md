@@ -17,8 +17,8 @@ builds:
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Eye of the Storm — magical protection
     swap_item: Eye of the Storm
@@ -32,20 +32,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.66
+      total: 0.6
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.55
     Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
     Runeforged Hammer:
       total: 0.59
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -57,13 +57,13 @@ builds:
       fit: 0.61
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.59
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -99,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.65
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.56
     Hydra's Lament:
-      total: 0.52
+      total: 0.51
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.42
     The Crusher:
-      total: 0.58
+      total: 0.57
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.5
     Amanita Charm:
-      total: 0.7
-      efficiency: 0.67
+      total: 0.69
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.72
     Erosion:
       total: 0.5
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -165,37 +165,37 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.59
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.55
     Kinetic Cuirass:
       total: 0.63
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shield of the Phoenix:
       total: 0.65
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.72
     Spectral Armor:
       total: 0.59
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.58
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.64
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -210,8 +210,8 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Void Stone
   - Avenging Blade
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -229,26 +229,26 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.65
-      efficiency: 0.53
+      total: 0.64
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
       total: 0.66
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.66
     Void Shield:
-      total: 0.66
-      efficiency: 0.48
+      total: 0.65
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.84
     Void Stone:
-      total: 0.65
-      efficiency: 0.45
+      total: 0.64
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.72
     Amanita Charm:
-      total: 0.73
-      efficiency: 0.67
+      total: 0.72
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -294,8 +294,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.68
-      efficiency: 0.44
+      total: 0.67
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -313,7 +313,7 @@ builds:
       fit: 0.84
     Amanita Charm:
       total: 0.69
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Shogun's Ofuda:
-      total: 0.58
+      total: 0.57
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -372,13 +372,13 @@ builds:
       fit: 0.44
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.6
     Shield of the Phoenix:
-      total: 0.7
-      efficiency: 0.58
+      total: 0.69
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -409,8 +409,8 @@ builds:
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Eye of the Storm — magical protection
     swap_item: Eye of the Storm
@@ -424,20 +424,20 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.66
+      total: 0.6
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.55
     Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
     Runeforged Hammer:
       total: 0.59
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -449,13 +449,13 @@ builds:
       fit: 0.61
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.59
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65

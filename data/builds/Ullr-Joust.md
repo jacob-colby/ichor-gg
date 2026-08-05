@@ -32,32 +32,32 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.4
     The Reaper:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.59
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.65
     Riptalon:
-      total: 0.66
+      total: 0.65
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.75
     Demon Blade:
-      total: 0.53
-      efficiency: 0.4
+      total: 0.52
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -74,11 +74,11 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Rage
   - Riptalon
   - Damaru
   - Demon Blade
-  - The Crusher
   flex_slots:
   - Damaru
   - Rage
@@ -99,14 +99,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
-      efficiency: 0.44
+      total: 0.55
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Rage:
-      total: 0.43
-      efficiency: 0.43
+      total: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -117,23 +123,17 @@ builds:
       pick: 0.0
       fit: 0.72
     Damaru:
-      total: 0.52
-      efficiency: 0.6
+      total: 0.51
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.43
     Demon Blade:
-      total: 0.53
-      efficiency: 0.4
+      total: 0.52
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.66
-    The Crusher:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
   starter: *id001
 - source: suggested
   archetype: burst
@@ -165,18 +165,18 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.46
     Hydra's Lament:
-      total: 0.49
+      total: 0.48
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Pharaoh's Curse:
-      total: 0.48
+      total: 0.47
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -210,7 +210,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
+  - Toxic Blade
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -241,14 +241,14 @@ builds:
       pick: 0.0
       fit: 0.4
     Riptalon:
-      total: 0.6
+      total: 0.59
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
       total: 0.75
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Shogun's Ofuda:
-      total: 0.57
+      total: 0.56
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -294,20 +294,20 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.44
+      total: 0.62
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.82
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.52
     Void Shield:
-      total: 0.54
-      efficiency: 0.48
+      total: 0.53
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -319,7 +319,7 @@ builds:
       fit: 0.84
     Silverbranch Bow:
       total: 0.53
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -359,20 +359,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.44
+      total: 0.62
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.82
     Tyrfing:
-      total: 0.55
-      efficiency: 0.49
+      total: 0.54
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.62
     The Reaper:
       total: 0.56
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -384,7 +384,7 @@ builds:
       fit: 0.84
     Silverbranch Bow:
       total: 0.53
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -424,8 +424,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
-      efficiency: 0.44
+      total: 0.51
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -437,13 +437,13 @@ builds:
       fit: 0.28
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.48
     Shield of the Phoenix:
-      total: 0.56
-      efficiency: 0.58
+      total: 0.55
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -489,32 +489,32 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.4
     The Reaper:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.59
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.65
     Riptalon:
-      total: 0.66
+      total: 0.65
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.75
     Demon Blade:
-      total: 0.53
-      efficiency: 0.4
+      total: 0.52
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.65

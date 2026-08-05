@@ -109,18 +109,18 @@ builds:
     this god: The Crusher, Genji''s Guard, Titan''s Bane, The Reaper, Hydra''s Lament,
     Runeforged Hammer, Pendulum Blade, Tekko-Kagi, Lernaean Bow, Avatar''s Parashu,
     Damaru, Avenging Blade, Golden Blade, Arondight, Shield Splitter, Dominance, Heartseeker,
-    Eye of the Storm, Tyrfing, Riptalon, Silverbranch Bow, Barbed Carver, Berserker''s
-    Shield, Transcendence, Breastplate of Valor, Bloodforge, Musashi''s Dual Swords.'
+    Eye of the Storm, Tyrfing, Riptalon, Silverbranch Bow, Berserker''s Shield, Barbed
+    Carver, Breastplate of Valor, Transcendence, Bloodforge, Musashi''s Dual Swords.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.67
+      total: 0.68
       efficiency: 0.98
       win: 0.53
       pick: 0.32
       fit: 0.52
     Thistlethorn Acorn:
       total: 0.65
-      efficiency: 0.94
+      efficiency: 0.95
       win: 0.48
       pick: 0.27
       fit: 0.61
@@ -132,7 +132,7 @@ builds:
       fit: 0.09
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.46
       pick: 0.23
       fit: 1.0
@@ -144,7 +144,7 @@ builds:
       fit: 1.0
     Titan's Bane:
       total: 0.56
-      efficiency: 0.48
+      efficiency: 0.46
       win: 0.56
       pick: 0.1
       fit: 0.91
@@ -178,11 +178,11 @@ builds:
     swap_item: Contagion
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Genji''s Guard, The Crusher, Shield of the Phoenix, Hydra''s Lament, Titan''s
-    Bane, The Reaper, Pendulum Blade, Breastplate of Valor, Runeforged Hammer, Tekko-Kagi,
-    Berserker''s Shield, Riptalon, Arondight, Lernaean Bow, Damaru, Silverbranch Bow,
-    Freya''s Tears, Avatar''s Parashu, Amanita Charm, Avenging Blade, Golden Blade,
-    Oni Hunter''s Garb, Kinetic Cuirass, Yogi''s Necklace, Shield Splitter, Screeching
-    Gargoyle, Heartseeker.'
+    Bane, The Reaper, Pendulum Blade, Breastplate of Valor, Runeforged Hammer, Berserker''s
+    Shield, Riptalon, Tekko-Kagi, Lernaean Bow, Arondight, Damaru, Silverbranch Bow,
+    Freya''s Tears, Avatar''s Parashu, Amanita Charm, Oni Hunter''s Garb, Avenging
+    Blade, Golden Blade, Yogi''s Necklace, Kinetic Cuirass, Shield Splitter, Dominance,
+    Heartseeker.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.63
@@ -192,7 +192,7 @@ builds:
       fit: 0.22
     Thistlethorn Acorn:
       total: 0.63
-      efficiency: 0.94
+      efficiency: 0.95
       win: 0.48
       pick: 0.27
       fit: 0.44
@@ -203,8 +203,8 @@ builds:
       pick: 0.08
       fit: 0.22
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.56
+      efficiency: 0.65
       win: 0.46
       pick: 0.23
       fit: 0.78
@@ -248,10 +248,10 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Shield of the Phoenix, Genji''s Guard, Amanita Charm, Kinetic Cuirass,
-    Berserker''s Shield, Eye of Providence, The Crusher, The Reaper, Runeforged Hammer,
-    Oni Hunter''s Garb, Eye of the Storm, Shield Splitter, Chandra''s Grace, Erosion,
-    Phoenix Feather, Hydra''s Lament, Spectral Armor, Riptalon, Avenging Blade, Draconic
-    Scale, Freya''s Tears, Golden Blade, Pharaoh''s Curse, Breastplate of Valor, Yogi''s
+    Berserker''s Shield, The Crusher, Eye of Providence, The Reaper, Runeforged Hammer,
+    Oni Hunter''s Garb, Eye of the Storm, Shield Splitter, Chandra''s Grace, Hydra''s
+    Lament, Erosion, Phoenix Feather, Spectral Armor, Riptalon, Freya''s Tears, Avenging
+    Blade, Draconic Scale, Breastplate of Valor, Golden Blade, Pharaoh''s Curse, Yogi''s
     Necklace, Leviathan''s Hide.'
   slot_scores:
     Ashwhorl Acorn:
@@ -262,7 +262,7 @@ builds:
       fit: 0.44
     Thistlethorn Acorn:
       total: 0.63
-      efficiency: 0.94
+      efficiency: 0.95
       win: 0.48
       pick: 0.27
       fit: 0.48
@@ -273,20 +273,20 @@ builds:
       pick: 0.08
       fit: 0.21
     Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.61
+      total: 0.53
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.66
     Shield of the Phoenix:
       total: 0.62
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.67
       pick: 0.13
       fit: 0.73
     Shifter's Shield:
       total: 0.58
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.65
       pick: 0.17
       fit: 0.56
@@ -301,8 +301,8 @@ builds:
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Titan's Bane
   - Genji's Guard
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -317,12 +317,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Titan''s Bane, Genji''s Guard, The Reaper, Tekko-Kagi,
+    for this god: The Crusher, Genji''s Guard, Titan''s Bane, The Reaper, Tekko-Kagi,
     Pendulum Blade, Avatar''s Parashu, Avenging Blade, Riptalon, Hydra''s Lament,
     Silverbranch Bow, Runeforged Hammer, Heartseeker, Lernaean Bow, Damaru, Berserker''s
-    Shield, Golden Blade, Toxic Blade, Screeching Gargoyle, Shield Splitter, Oath-Sworn
-    Spear, Dominance, Breastplate of Valor, Arondight, Eye of the Storm, Tyrfing,
-    Amanita Charm.'
+    Shield, Golden Blade, Toxic Blade, Screeching Gargoyle, Breastplate of Valor,
+    Shield Splitter, Dominance, Oath-Sworn Spear, Arondight, Eye of the Storm, Amanita
+    Charm, Tyrfing.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.65
@@ -332,7 +332,7 @@ builds:
       fit: 0.33
     Thistlethorn Acorn:
       total: 0.62
-      efficiency: 0.94
+      efficiency: 0.95
       win: 0.48
       pick: 0.27
       fit: 0.38
@@ -344,7 +344,7 @@ builds:
       fit: 0.06
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.46
       pick: 0.23
       fit: 1.0
@@ -355,8 +355,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.57
-      efficiency: 0.48
+      total: 0.56
+      efficiency: 0.46
       win: 0.56
       pick: 0.1
       fit: 0.94
@@ -368,11 +368,11 @@ builds:
   - Ashwhorl Acorn
   - Thistlethorn Acorn
   - Genji's Guard
+  - Berserker's Shield
   - Riptalon
-  - Silverbranch Bow
   flex_slots:
   - Golden Blade
-  - Silverbranch Bow
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -381,21 +381,22 @@ builds:
     swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Genji''s Guard, Riptalon, Golden Blade, Silverbranch Bow, Berserker''s
-    Shield, The Crusher, Tyrfing, Lernaean Bow, Tekko-Kagi, Dominance, Hydra''s Lament,
-    Toxic Blade, The Reaper, Runeforged Hammer, Pharaoh''s Curse, Breastplate of Valor,
-    Damaru, Shogun''s Ofuda, Amanita Charm, Qin''s Blade, Oni Hunter''s Garb, Eros''
-    Bow, Kinetic Cuirass, Yogi''s Necklace, Avenging Blade, Eye of Providence, Heartseeker.'
+    this god: Genji''s Guard, Riptalon, Golden Blade, Berserker''s Shield, Silverbranch
+    Bow, The Crusher, Tyrfing, Lernaean Bow, Dominance, Tekko-Kagi, Hydra''s Lament,
+    The Reaper, Toxic Blade, Runeforged Hammer, Pharaoh''s Curse, Breastplate of Valor,
+    Damaru, Shogun''s Ofuda, Amanita Charm, Oni Hunter''s Garb, Yogi''s Necklace,
+    Eros'' Bow, Kinetic Cuirass, Qin''s Blade, Avenging Blade, Eye of Providence,
+    Heartseeker.'
   slot_scores:
     Golden Blade:
-      total: 0.53
-      efficiency: 0.56
+      total: 0.52
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -407,7 +408,7 @@ builds:
       fit: 0.48
     Thistlethorn Acorn:
       total: 0.61
-      efficiency: 0.94
+      efficiency: 0.95
       win: 0.48
       pick: 0.27
       fit: 0.31
@@ -417,18 +418,18 @@ builds:
       win: 0.67
       pick: 0.08
       fit: 0.04
+    Berserker's Shield:
+      total: 0.52
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
     Riptalon:
       total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Silverbranch Bow:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -458,10 +459,10 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Shield of the Phoenix,
     Hydra''s Lament, Breastplate of Valor, The Crusher, Freya''s Tears, Pendulum Blade,
-    Arondight, Screeching Gargoyle, Chandra''s Grace, Runeforged Hammer, Berserker''s
-    Shield, The Reaper, Gladiator''s Shield, Lernaean Bow, Amanita Charm, Damaru,
-    Oni Hunter''s Garb, Prophetic Cloak, Kinetic Cuirass, Yogi''s Necklace, Riptalon,
-    Regrowth Striders, Silverbranch Bow, Avenging Blade, Eye of Providence, Heartseeker.'
+    Arondight, Screeching Gargoyle, Chandra''s Grace, Berserker''s Shield, Runeforged
+    Hammer, The Reaper, Gladiator''s Shield, Lernaean Bow, Amanita Charm, Damaru,
+    Oni Hunter''s Garb, Yogi''s Necklace, Kinetic Cuirass, Riptalon, Prophetic Cloak,
+    Silverbranch Bow, Avenging Blade, Regrowth Striders, Eye of Providence, Heartseeker.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.62
@@ -471,7 +472,7 @@ builds:
       fit: 0.15
     Thistlethorn Acorn:
       total: 0.66
-      efficiency: 0.94
+      efficiency: 0.95
       win: 0.48
       pick: 0.27
       fit: 0.65
@@ -489,7 +490,7 @@ builds:
       fit: 0.5
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.46
       pick: 0.23
       fit: 0.85
@@ -528,31 +529,31 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, The Reaper, Hydra''s Lament, Heartseeker,
     Runeforged Hammer, Titan''s Bane, Pendulum Blade, Tekko-Kagi, Lernaean Bow, Avatar''s
-    Parashu, Damaru, Avenging Blade, Golden Blade, Arondight, Shield Splitter, Dominance,
-    Eye of the Storm, Tyrfing, Genji''s Guard, Riptalon, Silverbranch Bow, Barbed
-    Carver, Berserker''s Shield, Transcendence, Breastplate of Valor, Bloodforge,
-    Musashi''s Dual Swords.'
+    Parashu, Damaru, Avenging Blade, Golden Blade, Arondight, Shield Splitter, Genji''s
+    Guard, Dominance, Eye of the Storm, Tyrfing, Riptalon, Silverbranch Bow, Berserker''s
+    Shield, Barbed Carver, Breastplate of Valor, Transcendence, Bloodforge, Musashi''s
+    Dual Swords.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.67
+      total: 0.68
       efficiency: 0.98
       win: 0.53
       pick: 0.32
       fit: 0.52
     Thistlethorn Acorn:
       total: 0.65
-      efficiency: 0.94
+      efficiency: 0.95
       win: 0.48
       pick: 0.27
       fit: 0.61
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.46
       pick: 0.23
       fit: 1.0
     Hydra's Lament:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -565,7 +566,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.49
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.38
       pick: 0.13
       fit: 1.0

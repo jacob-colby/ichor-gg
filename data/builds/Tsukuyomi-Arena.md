@@ -32,37 +32,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.58
-      efficiency: 0.56
+      total: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.59
     Lernaean Bow:
-      total: 0.63
+      total: 0.62
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.69
     Toxic Blade:
       total: 0.59
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.54
     Soul Gem:
-      total: 0.78
+      total: 0.77
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -80,8 +80,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
   - Dreamer's Idol
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -99,14 +99,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -117,20 +117,20 @@ builds:
       pick: 0.0
       fit: 0.5
     Dreamer's Idol:
-      total: 0.55
-      efficiency: 0.5
+      total: 0.54
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.55
-      efficiency: 0.48
+      total: 0.54
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -165,19 +165,19 @@ builds:
   slot_scores:
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.99
     Erosion:
       total: 0.61
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
     Stampede:
       total: 0.6
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -188,7 +188,7 @@ builds:
       pick: 0.0
       fit: 0.72
     Shogun's Ofuda:
-      total: 0.63
+      total: 0.62
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -229,20 +229,20 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
-      efficiency: 0.44
+      total: 0.65
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.87
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.6
     Void Shield:
-      total: 0.59
-      efficiency: 0.48
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -295,25 +295,25 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.61
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.66
     Lernaean Bow:
-      total: 0.58
+      total: 0.57
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.59
     Toxic Blade:
-      total: 0.65
-      efficiency: 0.44
+      total: 0.64
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.86
     Tyrfing:
-      total: 0.58
-      efficiency: 0.49
+      total: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -366,7 +366,7 @@ builds:
       fit: 0.34
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -378,18 +378,18 @@ builds:
       fit: 0.55
     Spear of Desolation:
       total: 0.56
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.59
     Pharaoh's Curse:
-      total: 0.53
+      total: 0.52
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.47
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -425,13 +425,13 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.46
     Bragi's Harp:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -443,19 +443,19 @@ builds:
       fit: 0.54
     Dreamer's Idol:
       total: 0.55
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
       total: 0.59
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -489,14 +489,14 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.59
+      total: 0.58
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.61
     Bragi's Harp:
-      total: 0.6
-      efficiency: 0.47
+      total: 0.59
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -513,14 +513,14 @@ builds:
       pick: 0.0
       fit: 0.51
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
       total: 0.61
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -554,37 +554,37 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.58
-      efficiency: 0.56
+      total: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.59
     Lernaean Bow:
-      total: 0.63
+      total: 0.62
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.69
     Toxic Blade:
       total: 0.59
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.54
     Soul Gem:
-      total: 0.78
+      total: 0.77
       efficiency: 0.59
       win: 0.5
       pick: 0.0

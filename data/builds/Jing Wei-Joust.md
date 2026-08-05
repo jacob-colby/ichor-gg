@@ -13,7 +13,7 @@ builds:
   - Demon Blade
   - Pharaoh's Curse
   flex_slots:
-  - The Reaper
+  - Tyrfing
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -33,31 +33,31 @@ builds:
   slot_scores:
     Tyrfing:
       total: 0.56
-      efficiency: 0.49
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Reaper:
       total: 0.56
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.58
     Riptalon:
-      total: 0.64
+      total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.71
     Damaru:
       total: 0.57
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.54
     Demon Blade:
-      total: 0.64
-      efficiency: 0.4
+      total: 0.63
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -80,7 +80,7 @@ builds:
   - Demon Blade
   - Pharaoh's Curse
   flex_slots:
-  - Pharaoh's Curse
+  - Tyrfing
   - Rage
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,14 +99,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Tyrfing:
-      total: 0.55
-      efficiency: 0.49
+      total: 0.54
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
     Rage:
-      total: 0.5
-      efficiency: 0.43
+      total: 0.49
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -117,14 +117,14 @@ builds:
       pick: 0.0
       fit: 0.68
     Damaru:
-      total: 0.59
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.57
     Demon Blade:
-      total: 0.64
-      efficiency: 0.4
+      total: 0.63
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -171,13 +171,13 @@ builds:
       fit: 0.48
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.57
-      efficiency: 0.54
+      total: 0.56
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -188,13 +188,13 @@ builds:
       pick: 0.0
       fit: 0.68
     Shogun's Ofuda:
-      total: 0.61
+      total: 0.6
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.68
     Umbral Link:
-      total: 0.59
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -229,20 +229,20 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.65
-      efficiency: 0.44
+      total: 0.64
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.86
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.56
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.47
     Void Shield:
-      total: 0.54
-      efficiency: 0.48
+      total: 0.53
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -254,7 +254,7 @@ builds:
       fit: 0.89
     Silverbranch Bow:
       total: 0.55
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -295,13 +295,13 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.61
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.79
     Tyrfing:
-      total: 0.62
-      efficiency: 0.49
+      total: 0.61
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -313,13 +313,13 @@ builds:
       fit: 0.84
     Demon Blade:
       total: 0.55
-      efficiency: 0.4
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.71
     Amanita Charm:
       total: 0.56
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -372,13 +372,13 @@ builds:
       fit: 0.32
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.41
     Shield of the Phoenix:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -405,7 +405,7 @@ builds:
   - Demon Blade
   - Pharaoh's Curse
   flex_slots:
-  - The Reaper
+  - Tyrfing
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -425,31 +425,31 @@ builds:
   slot_scores:
     Tyrfing:
       total: 0.56
-      efficiency: 0.49
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
     The Reaper:
       total: 0.56
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.58
     Riptalon:
-      total: 0.64
+      total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.71
     Damaru:
       total: 0.57
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.54
     Demon Blade:
-      total: 0.64
-      efficiency: 0.4
+      total: 0.63
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.87

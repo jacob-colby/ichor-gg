@@ -32,26 +32,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.62
-      efficiency: 0.56
+      total: 0.61
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.67
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
       total: 0.59
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Stampede:
       total: 0.59
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -99,31 +99,31 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Shield of the Phoenix:
-      total: 0.61
-      efficiency: 0.58
+      total: 0.6
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.64
-      efficiency: 0.54
+      total: 0.63
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.74
     Stampede:
-      total: 0.62
-      efficiency: 0.53
+      total: 0.61
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.7
     Pharaoh's Curse:
-      total: 0.68
+      total: 0.67
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Avenging Blade
   - Toxic Blade
   - Void Shield
   - Void Stone
+  - The Crusher
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
   - Pharaoh's Curse
-  - Avenging Blade
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -155,46 +155,46 @@ builds:
     swap: Shogun's Ofuda — magical protection
     swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Avenging Blade:
-      total: 0.6
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Toxic Blade:
       total: 0.64
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.85
     Void Shield:
       total: 0.68
-      efficiency: 0.48
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.89
     Void Stone:
-      total: 0.67
-      efficiency: 0.45
+      total: 0.66
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.89
+    The Crusher:
+      total: 0.6
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Amanita Charm:
       total: 0.74
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.81
     Pharaoh's Curse:
-      total: 0.61
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -230,13 +230,13 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.63
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.7
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.44
+      total: 0.62
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -248,12 +248,12 @@ builds:
       fit: 0.73
     Amanita Charm:
       total: 0.74
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.81
     Pharaoh's Curse:
-      total: 0.65
+      total: 0.64
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -301,7 +301,7 @@ builds:
       fit: 0.36
     Shield of the Phoenix:
       total: 0.65
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -312,13 +312,13 @@ builds:
       pick: 0.0
       fit: 0.47
     Stampede:
-      total: 0.56
-      efficiency: 0.53
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.58
     Pharaoh's Curse:
-      total: 0.61
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -359,26 +359,26 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.62
-      efficiency: 0.56
+      total: 0.61
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.67
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
       total: 0.59
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Stampede:
       total: 0.59
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65

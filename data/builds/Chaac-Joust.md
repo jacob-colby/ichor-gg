@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.54
-      efficiency: 0.63
+      total: 0.53
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
     Spectral Armor:
       total: 0.54
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.59
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Triton's Conch:
       total: 0.56
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -100,37 +100,37 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.61
+      total: 0.54
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.48
     The Crusher:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
     Erosion:
-      total: 0.56
-      efficiency: 0.54
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.58
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
       total: 0.53
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -164,38 +164,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.53
     Spectral Armor:
-      total: 0.55
-      efficiency: 0.6
+      total: 0.54
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.5
     Amanita Charm:
-      total: 0.8
-      efficiency: 0.67
+      total: 0.79
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.93
     Erosion:
       total: 0.58
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.59
-      efficiency: 0.48
+      total: 0.58
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -230,25 +230,25 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.58
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
     Avenging Blade:
-      total: 0.59
-      efficiency: 0.53
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
     Void Shield:
-      total: 0.66
-      efficiency: 0.48
+      total: 0.65
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.85
     Void Stone:
-      total: 0.65
-      efficiency: 0.45
+      total: 0.64
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -295,7 +295,7 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -366,13 +366,13 @@ builds:
       fit: 0.43
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.51
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.61
+      total: 0.55
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -383,13 +383,13 @@ builds:
       pick: 0.0
       fit: 0.58
     Erosion:
-      total: 0.57
-      efficiency: 0.54
+      total: 0.56
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.6
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -424,38 +424,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.54
-      efficiency: 0.63
+      total: 0.53
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
     Spectral Armor:
       total: 0.54
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.59
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Triton's Conch:
       total: 0.56
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.65

@@ -154,10 +154,32 @@ def efficiency_pool(items):
     rank well — which is why scraping the missing 41 of them moved the gate
     from 47%/49% to 48.4%/50.6% on its own.
 
-    If you are about to narrow this pool again: measure `validate.compute`, not
-    prediction error.
+    STATLESS ITEMS ARE EXCLUDED, and that is a different rule from the one
+    above rather than an exception to it. A row with no stats is all zeros
+    against the intercept, so it carries no information about what any stat
+    costs — it only drags the intercept toward its own price. Blink Rune (0
+    gold) and Blinking Abyss (2600 gold) were doing exactly that, and the
+    intercept moved 1099 -> 1042 once they left.
+
+    The visible half of the same bug: a statless item's residual is its cost
+    minus the intercept, which is not a measurement of anything, and the Items
+    page was sorting on it. Four of the top six "best value" items in the game
+    were artifacts, led by Blink Rune at "worth 1099g, -1,099g" for an item
+    with no stats at all. Leaving the pool means they ship unscored, which is
+    the true statement.
+
+    God-specific items STAY. Their stats and price are real evidence about
+    what stats cost even though only one god can buy them, and removing them
+    costs a lot: the leakage-free measure falls 4.89x -> 4.20x. What they are
+    not is *comparable* on a global value ranking, which is a display concern
+    and is handled in `build_index._attach_efficiency`.
+
+    If you are about to narrow this pool again: measure it, and measure it
+    with `calibrate.random_core_baseline` rather than `mean_coverage` — see the
+    leakage probe in calibrate.py.
     """
-    return [it for it in numeric_cost_items(items) if it.get("tier") != 1]
+    return [it for it in numeric_cost_items(items)
+            if it.get("tier") != 1 and (it.get("stats") or {})]
 
 
 def fit_gold_values(items):

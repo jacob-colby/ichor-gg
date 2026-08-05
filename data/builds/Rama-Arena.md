@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.55
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -44,19 +44,19 @@ builds:
       pick: 0.0
       fit: 0.64
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.44
+      total: 0.57
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.72
     The Reaper:
-      total: 0.62
-      efficiency: 0.54
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.67
+      total: 0.66
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -105,32 +105,32 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.7
     Rage:
       total: 0.44
-      efficiency: 0.43
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.46
     Riptalon:
-      total: 0.66
+      total: 0.65
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.75
     Damaru:
       total: 0.53
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.46
     Demon Blade:
       total: 0.55
-      efficiency: 0.4
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -171,13 +171,13 @@ builds:
       fit: 0.5
     Toxic Blade:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Pharaoh's Curse:
-      total: 0.53
+      total: 0.52
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -214,8 +214,8 @@ builds:
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -230,24 +230,24 @@ builds:
   slot_scores:
     Amanita Charm:
       total: 0.8
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.94
     Erosion:
-      total: 0.59
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.64
     Stampede:
       total: 0.58
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.64
     Pharaoh's Curse:
-      total: 0.65
+      total: 0.64
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -294,26 +294,26 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
-      efficiency: 0.44
+      total: 0.63
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.83
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.5
     Void Shield:
-      total: 0.59
-      efficiency: 0.48
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.7
     Void Stone:
-      total: 0.58
-      efficiency: 0.45
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -336,19 +336,19 @@ builds:
   - Golden Blade
   - Lernaean Bow
   - Toxic Blade
-  - Tyrfing
   - Riptalon
   - Amanita Charm
+  - Pharaoh's Curse
   flex_slots:
   - Lernaean Bow
-  - Tyrfing
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -360,7 +360,7 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.6
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -371,17 +371,11 @@ builds:
       pick: 0.0
       fit: 0.58
     Toxic Blade:
-      total: 0.64
-      efficiency: 0.44
+      total: 0.63
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Tyrfing:
-      total: 0.57
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Riptalon:
       total: 0.72
       efficiency: 0.56
@@ -390,7 +384,13 @@ builds:
       fit: 0.88
     Amanita Charm:
       total: 0.61
-      efficiency: 0.67
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -405,8 +405,8 @@ builds:
   - Hydra's Lament
   - Pharaoh's Curse
   flex_slots:
-  - Toxic Blade
   - Lernaean Bow
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -424,26 +424,26 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.52
+      total: 0.51
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.47
     Toxic Blade:
-      total: 0.52
-      efficiency: 0.44
+      total: 0.51
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.48
     Shield of the Phoenix:
-      total: 0.56
-      efficiency: 0.58
+      total: 0.55
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.55
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -501,19 +501,19 @@ builds:
       pick: 0.0
       fit: 0.64
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.44
+      total: 0.57
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.72
     The Reaper:
-      total: 0.62
-      efficiency: 0.54
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.67
+      total: 0.66
       efficiency: 0.56
       win: 0.5
       pick: 0.0

@@ -107,13 +107,13 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Stampede, Amanita Charm, Kinetic Cuirass, Eye of Providence, Berserker''s
-    Shield, Gluttonous Grimoire, Jotunn''s Revenge, Shield Splitter, Oni Hunter''s
-    Garb, Freya''s Tears, The Crusher, Hydra''s Lament, Eye of the Storm, Shield of
-    the Phoenix, Erosion, Draconic Scale, Spectral Armor, Pharaoh''s Curse, Avenging
-    Blade, Soul Gem, Golden Blade, Leviathan''s Hide, Yogi''s Necklace, Death Metal,
-    Midgardian Mail, Stone of Binding, Mantle Of Discord, Hide of the Nemean Lion,
-    Helm of Radiance, Lernaean Bow, Rod of Asclepius, Shogun''s Ofuda, Magi''s Cloak,
-    Damaru, Ancile, Wyrmskin Hide.'
+    Shield, Gluttonous Grimoire, Jotunn''s Revenge, Oni Hunter''s Garb, Freya''s Tears,
+    The Crusher, Shield Splitter, Hydra''s Lament, Shield of the Phoenix, Eye of the
+    Storm, Erosion, Draconic Scale, Spectral Armor, Pharaoh''s Curse, Soul Gem, Avenging
+    Blade, Golden Blade, Yogi''s Necklace, Leviathan''s Hide, Death Metal, Midgardian
+    Mail, Mantle Of Discord, Stone of Binding, Hide of the Nemean Lion, Lernaean Bow,
+    Helm of Radiance, Damaru, Rod of Asclepius, Shogun''s Ofuda, Magi''s Cloak, Ancile,
+    Wyrmskin Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -129,25 +129,25 @@ builds:
       fit: 0.31
     Runeforged Hammer:
       total: 0.58
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.63
       pick: 0.26
       fit: 0.48
     Shifter's Shield:
       total: 0.58
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.61
       pick: 0.49
       fit: 0.57
     Amanita Charm:
       total: 0.54
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.57
     Stampede:
       total: 0.56
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.71
       pick: 0.03
       fit: 0.37
@@ -164,8 +164,8 @@ builds:
   - Amanita Charm
   - Stampede
   flex_slots:
-  - Shield of the Phoenix
   - Genji's Guard
+  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -181,13 +181,13 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Berserker''s
-    Shield, Eye of Providence, Soul Gem, Rod of Asclepius, Gluttonous Grimoire, Jotunn''s
+    Shield, Eye of Providence, Soul Gem, Gluttonous Grimoire, Rod of Asclepius, Jotunn''s
     Revenge, Oni Hunter''s Garb, The Crusher, Chandra''s Grace, Hydra''s Lament, Eye
-    of the Storm, The Reaper, Shield Splitter, Freya''s Tears, Erosion, Phoenix Feather,
-    Spectral Armor, Glorious Pridwen, Avenging Blade, Draconic Scale, Golden Blade,
-    Lifebinder, Pharaoh''s Curse, Blood-Bound Book, Yogi''s Necklace, Bancroft''s
-    Talon, Leviathan''s Hide, Death Metal, Midgardian Mail, Riptalon, Hide of the
-    Nemean Lion, Lernaean Bow, Shogun''s Ofuda.'
+    of the Storm, Freya''s Tears, The Reaper, Shield Splitter, Erosion, Phoenix Feather,
+    Spectral Armor, Avenging Blade, Draconic Scale, Golden Blade, Pharaoh''s Curse,
+    Yogi''s Necklace, Lifebinder, Blood-Bound Book, Bancroft''s Talon, Leviathan''s
+    Hide, Death Metal, Midgardian Mail, Riptalon, Hide of the Nemean Lion, Lernaean
+    Bow, Shogun''s Ofuda, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -196,32 +196,32 @@ builds:
       pick: 0.27
       fit: 0.28
     Shield of the Phoenix:
-      total: 0.55
-      efficiency: 0.58
+      total: 0.54
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
     Runeforged Hammer:
       total: 0.59
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.63
       pick: 0.26
       fit: 0.54
     Shifter's Shield:
       total: 0.58
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.61
       pick: 0.49
       fit: 0.56
     Amanita Charm:
-      total: 0.59
-      efficiency: 0.67
+      total: 0.58
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.86
     Stampede:
       total: 0.56
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.71
       pick: 0.03
       fit: 0.38
@@ -253,13 +253,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, The Crusher, Jotunn''s Revenge, Amanita Charm,
-    Kinetic Cuirass, Berserker''s Shield, Avenging Blade, Soul Gem, Eye of Providence,
-    Stone of Binding, Oni Hunter''s Garb, Screeching Gargoyle, Void Shield, Spear
-    of the Magus, Hydra''s Lament, Freya''s Tears, Shield Splitter, Void Stone, The
-    Reaper, The Cosmic Horror, Shield of the Phoenix, Eye of the Storm, Spear of Desolation,
-    Erosion, Spectral Armor, Heartseeker, Yogi''s Necklace, Pharaoh''s Curse, Draconic
-    Scale, Obsidian Shard, Riptalon, Death Metal, Golden Blade, Leviathan''s Hide,
-    Silverbranch Bow, Lernaean Bow.'
+    Kinetic Cuirass, Berserker''s Shield, Soul Gem, Avenging Blade, Eye of Providence,
+    Stone of Binding, Oni Hunter''s Garb, Screeching Gargoyle, Hydra''s Lament, Void
+    Shield, Freya''s Tears, Spear of the Magus, Shield Splitter, The Reaper, Void
+    Stone, The Cosmic Horror, Shield of the Phoenix, Spectral Armor, Eye of the Storm,
+    Spear of Desolation, Erosion, Heartseeker, Yogi''s Necklace, Pharaoh''s Curse,
+    Draconic Scale, Riptalon, Obsidian Shard, Death Metal, Golden Blade, Leviathan''s
+    Hide, Silverbranch Bow, Lernaean Bow.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -268,8 +268,8 @@ builds:
       pick: 0.27
       fit: 0.23
     Runeforged Hammer:
-      total: 0.57
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.6
       win: 0.63
       pick: 0.26
       fit: 0.38
@@ -281,7 +281,7 @@ builds:
       fit: 0.56
     Shifter's Shield:
       total: 0.56
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.61
       pick: 0.49
       fit: 0.42
@@ -292,8 +292,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Stampede:
-      total: 0.55
-      efficiency: 0.53
+      total: 0.54
+      efficiency: 0.52
       win: 0.71
       pick: 0.03
       fit: 0.27
@@ -324,18 +324,18 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Amanita Charm, Kinetic Cuirass, Gluttonous Grimoire,
+    this god: Berserker''s Shield, Amanita Charm, Gluttonous Grimoire, Kinetic Cuirass,
     Golden Blade, Eye of Providence, Pharaoh''s Curse, Oni Hunter''s Garb, The Crusher,
-    Jotunn''s Revenge, Riptalon, Lernaean Bow, Freya''s Tears, Hydra''s Lament, Soul
-    Gem, Shogun''s Ofuda, Tyrfing, Shield of the Phoenix, Shield Splitter, Silverbranch
-    Bow, Spectral Armor, Yogi''s Necklace, Erosion, Eye of the Storm, Draconic Scale,
-    Bracer of The Abyss, Dominance, Leviathan''s Hide, Death Metal, Rod of Asclepius,
-    Helm of Radiance, Avenging Blade, Bragi''s Harp, Midgardian Mail, Eros'' Bow,
-    Hide of the Nemean Lion.'
+    Jotunn''s Revenge, Riptalon, Freya''s Tears, Lernaean Bow, Hydra''s Lament, Soul
+    Gem, Shogun''s Ofuda, Shield of the Phoenix, Tyrfing, Silverbranch Bow, Spectral
+    Armor, Shield Splitter, Yogi''s Necklace, Erosion, Eye of the Storm, Draconic
+    Scale, Bracer of The Abyss, Dominance, Death Metal, Leviathan''s Hide, Rod of
+    Asclepius, Helm of Radiance, Avenging Blade, Midgardian Mail, Bragi''s Harp, Damaru,
+    Eros'' Bow.'
   slot_scores:
     Golden Blade:
       total: 0.5
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -346,20 +346,20 @@ builds:
       pick: 0.0
       fit: 0.43
     Runeforged Hammer:
-      total: 0.56
-      efficiency: 0.61
+      total: 0.55
+      efficiency: 0.6
       win: 0.63
       pick: 0.26
       fit: 0.31
     Shifter's Shield:
       total: 0.55
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.61
       pick: 0.49
       fit: 0.37
     Stampede:
       total: 0.54
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.71
       pick: 0.03
       fit: 0.24
@@ -397,13 +397,14 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Freya''s Tears, Amanita Charm, Jotunn''s
-    Revenge, Kinetic Cuirass, Shield of the Phoenix, Hydra''s Lament, Soul Gem, Berserker''s
-    Shield, Eye of Providence, Gluttonous Grimoire, Oni Hunter''s Garb, The Crusher,
-    Screeching Gargoyle, Chronos'' Pendant, Spear of Desolation, Gladiator''s Shield,
-    Chandra''s Grace, Erosion, Shield Splitter, Spectral Armor, Prophetic Cloak, Draconic
-    Scale, Pharaoh''s Curse, Yogi''s Necklace, Helm of Radiance, Rod of Asclepius,
-    Eye of the Storm, Gem of Focus, Arondight, Death Metal, Leviathan''s Hide, Midgardian
-    Mail, Jade Scepter, Spear of the Magus, Stone of Binding, Hide of the Nemean Lion.'
+    Revenge, Kinetic Cuirass, Shield of the Phoenix, Berserker''s Shield, Hydra''s
+    Lament, Soul Gem, Gluttonous Grimoire, Eye of Providence, Oni Hunter''s Garb,
+    The Crusher, Chronos'' Pendant, Screeching Gargoyle, Chandra''s Grace, Spear of
+    Desolation, Gladiator''s Shield, Spectral Armor, Erosion, Shield Splitter, Yogi''s
+    Necklace, Pharaoh''s Curse, Prophetic Cloak, Draconic Scale, Helm of Radiance,
+    Rod of Asclepius, Gem of Focus, Eye of the Storm, Arondight, Death Metal, Leviathan''s
+    Hide, Jade Scepter, Midgardian Mail, Spear of the Magus, Mantle Of Discord, Hide
+    of the Nemean Lion.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -418,8 +419,8 @@ builds:
       pick: 0.19
       fit: 0.48
     Runeforged Hammer:
-      total: 0.56
-      efficiency: 0.61
+      total: 0.55
+      efficiency: 0.6
       win: 0.63
       pick: 0.26
       fit: 0.32
@@ -431,13 +432,13 @@ builds:
       fit: 0.64
     Shifter's Shield:
       total: 0.56
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.61
       pick: 0.49
       fit: 0.45
     Stampede:
       total: 0.55
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.71
       pick: 0.03
       fit: 0.29
@@ -470,12 +471,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Berserker''s Shield, The Crusher, Jotunn''s
     Revenge, Amanita Charm, Gluttonous Grimoire, Kinetic Cuirass, Eye of Providence,
-    Hydra''s Lament, Shield Splitter, Oni Hunter''s Garb, Freya''s Tears, Soul Gem,
-    Golden Blade, Eye of the Storm, Lernaean Bow, Pharaoh''s Curse, Shield of the
-    Phoenix, Avenging Blade, Death Metal, Spectral Armor, Erosion, The Reaper, Yogi''s
-    Necklace, Draconic Scale, Spear of the Magus, Damaru, Shogun''s Ofuda, Leviathan''s
-    Hide, Dominance, Heartseeker, Tekko-Kagi, The Cosmic Horror, Helm of Radiance,
-    Rod of Asclepius, Midgardian Mail, Tyrfing.'
+    Hydra''s Lament, Oni Hunter''s Garb, Shield Splitter, Freya''s Tears, Soul Gem,
+    Golden Blade, Lernaean Bow, Eye of the Storm, Pharaoh''s Curse, Shield of the
+    Phoenix, Death Metal, Spectral Armor, Avenging Blade, Erosion, Yogi''s Necklace,
+    The Reaper, Damaru, Draconic Scale, Spear of the Magus, Shogun''s Ofuda, Leviathan''s
+    Hide, Dominance, Heartseeker, The Cosmic Horror, Helm of Radiance, Rod of Asclepius,
+    Riptalon, Midgardian Mail, Tekko-Kagi.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -496,20 +497,20 @@ builds:
       pick: 0.19
       fit: 0.23
     Runeforged Hammer:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.6
       win: 0.63
       pick: 0.26
       fit: 0.44
     Shifter's Shield:
-      total: 0.56
-      efficiency: 0.56
+      total: 0.55
+      efficiency: 0.55
       win: 0.61
       pick: 0.49
       fit: 0.42
     Stampede:
-      total: 0.55
-      efficiency: 0.53
+      total: 0.54
+      efficiency: 0.52
       win: 0.71
       pick: 0.03
       fit: 0.27
@@ -542,12 +543,12 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Amanita Charm,
     The Crusher, Jotunn''s Revenge, Kinetic Cuirass, Berserker''s Shield, Soul Gem,
-    Eye of Providence, Oni Hunter''s Garb, Hydra''s Lament, Death Metal, Spear of
-    the Magus, Shield Splitter, Freya''s Tears, The Cosmic Horror, Helm of Radiance,
-    Rod of Asclepius, Shield of the Phoenix, Eye of the Storm, Spectral Armor, Erosion,
+    Eye of Providence, Oni Hunter''s Garb, Hydra''s Lament, Death Metal, Freya''s
+    Tears, Spear of the Magus, Shield Splitter, The Cosmic Horror, Helm of Radiance,
+    Shield of the Phoenix, Rod of Asclepius, Eye of the Storm, Spectral Armor, Erosion,
     Spear of Desolation, Jade Scepter, Yogi''s Necklace, Pharaoh''s Curse, Avenging
-    Blade, Draconic Scale, Golden Blade, Obsidian Shard, Triton''s Conch, The Reaper,
-    Lernaean Bow, Chronos'' Pendant, Leviathan''s Hide, Damaru, Ethereal Staff.'
+    Blade, Draconic Scale, Golden Blade, Obsidian Shard, Lernaean Bow, The Reaper,
+    Triton''s Conch, Chronos'' Pendant, Damaru, Leviathan''s Hide, Wish-Granting Pearl.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -563,7 +564,7 @@ builds:
       fit: 0.23
     Runeforged Hammer:
       total: 0.57
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.63
       pick: 0.26
       fit: 0.4
@@ -574,14 +575,14 @@ builds:
       pick: 0.0
       fit: 0.55
     Shifter's Shield:
-      total: 0.56
-      efficiency: 0.56
+      total: 0.55
+      efficiency: 0.55
       win: 0.61
       pick: 0.49
       fit: 0.42
     Stampede:
-      total: 0.55
-      efficiency: 0.53
+      total: 0.54
+      efficiency: 0.52
       win: 0.71
       pick: 0.03
       fit: 0.27
@@ -603,8 +604,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Freya's Tears — physical protection
     swap_item: Freya's Tears
@@ -613,17 +614,17 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Berserker''s
-    Shield, Gluttonous Grimoire, Jotunn''s Revenge, Shield Splitter, Oni Hunter''s
-    Garb, Freya''s Tears, The Crusher, Hydra''s Lament, Eye of the Storm, Shield of
-    the Phoenix, Erosion, Draconic Scale, Spectral Armor, Pharaoh''s Curse, Avenging
-    Blade, Soul Gem, Golden Blade, Leviathan''s Hide, Yogi''s Necklace, Death Metal,
-    Midgardian Mail, Stone of Binding, Mantle Of Discord, Hide of the Nemean Lion,
-    Helm of Radiance, Lernaean Bow, Rod of Asclepius, Shogun''s Ofuda, Magi''s Cloak,
-    Damaru, Stampede, Ancile, Wyrmskin Hide.'
+    Shield, Gluttonous Grimoire, Jotunn''s Revenge, Oni Hunter''s Garb, Freya''s Tears,
+    The Crusher, Shield Splitter, Hydra''s Lament, Shield of the Phoenix, Eye of the
+    Storm, Erosion, Draconic Scale, Spectral Armor, Pharaoh''s Curse, Soul Gem, Avenging
+    Blade, Golden Blade, Yogi''s Necklace, Leviathan''s Hide, Death Metal, Midgardian
+    Mail, Mantle Of Discord, Stone of Binding, Hide of the Nemean Lion, Lernaean Bow,
+    Helm of Radiance, Damaru, Rod of Asclepius, Shogun''s Ofuda, Stampede, Magi''s
+    Cloak, Ancile, Wyrmskin Hide.'
   slot_scores:
     Eye of Providence:
       total: 0.53
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -641,19 +642,19 @@ builds:
       fit: 0.37
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.37
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.67
     Amanita Charm:
       total: 0.54
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.57

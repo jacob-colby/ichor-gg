@@ -11,7 +11,7 @@ builds:
   - Spear of the Magus
   - Obsidian Shard
   - Dreamer's Idol
-  - Rod of Asclepius
+  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Obsidian Shard
@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.77
-      efficiency: 0.54
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.69
-      efficiency: 0.59
+      total: 0.68
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.78
     Spear of the Magus:
-      total: 0.7
-      efficiency: 0.61
+      total: 0.69
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.78
     Obsidian Shard:
       total: 0.66
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.78
     Dreamer's Idol:
-      total: 0.74
-      efficiency: 0.5
+      total: 0.73
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.98
-    Rod of Asclepius:
-      total: 0.8
-      efficiency: 0.6
+    Soul Gem:
+      total: 0.79
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -99,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.66
-      efficiency: 0.54
+      total: 0.65
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.78
     The Cosmic Horror:
       total: 0.57
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.56
     Spear of the Magus:
       total: 0.58
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.56
     Dreamer's Idol:
-      total: 0.63
-      efficiency: 0.5
+      total: 0.62
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.76
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
       total: 0.61
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -164,38 +164,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Void Shield:
-      total: 0.62
-      efficiency: 0.48
+      total: 0.61
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.76
     Spectral Armor:
       total: 0.63
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.66
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Rod of Asclepius:
       total: 0.8
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.68
-      efficiency: 0.54
+      total: 0.67
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.82
     Stampede:
-      total: 0.65
-      efficiency: 0.53
+      total: 0.64
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -235,32 +235,32 @@ builds:
       pick: 0.0
       fit: 0.95
     Spear of Desolation:
-      total: 0.77
-      efficiency: 0.54
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
       total: 0.72
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.85
     Spear of the Magus:
       total: 0.73
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.85
     Obsidian Shard:
       total: 0.7
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.85
     Dreamer's Idol:
       total: 0.75
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -294,14 +294,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.51
-      efficiency: 0.45
+      total: 0.5
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.57
     Bracer of The Abyss:
       total: 0.49
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -312,20 +312,20 @@ builds:
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
-      total: 0.56
-      efficiency: 0.47
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.64
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.54
-      efficiency: 0.48
+      total: 0.53
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -359,8 +359,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.55
-      efficiency: 0.5
+      total: 0.54
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -378,18 +378,18 @@ builds:
       fit: 0.5
     Chronos' Pendant:
       total: 0.61
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.65
     Spear of Desolation:
       total: 0.69
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.85
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -403,7 +403,7 @@ builds:
   - Spear of the Magus
   - Obsidian Shard
   - Dreamer's Idol
-  - Rod of Asclepius
+  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Obsidian Shard
@@ -424,40 +424,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.77
-      efficiency: 0.54
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Cosmic Horror:
-      total: 0.69
-      efficiency: 0.59
+      total: 0.68
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.78
     Spear of the Magus:
-      total: 0.7
-      efficiency: 0.61
+      total: 0.69
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.78
     Obsidian Shard:
       total: 0.66
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.78
     Dreamer's Idol:
-      total: 0.74
-      efficiency: 0.5
+      total: 0.73
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.98
-    Rod of Asclepius:
-      total: 0.8
-      efficiency: 0.6
+    Soul Gem:
+      total: 0.79
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 1.0
   starter: *id001
 ---

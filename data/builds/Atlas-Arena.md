@@ -33,37 +33,37 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.71
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.81
     Void Shield:
-      total: 0.67
-      efficiency: 0.48
+      total: 0.66
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.86
     Spectral Armor:
       total: 0.68
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.76
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.77
-      efficiency: 0.54
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     Stampede:
       total: 0.69
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -100,36 +100,36 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.7
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.8
     Spectral Armor:
       total: 0.69
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.78
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.77
-      efficiency: 0.54
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.71
-      efficiency: 0.53
+      total: 0.7
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.88
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -165,37 +165,37 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.62
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.75
     Void Shield:
-      total: 0.74
-      efficiency: 0.48
+      total: 0.73
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 1.0
     Void Stone:
-      total: 0.73
-      efficiency: 0.45
+      total: 0.72
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.66
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.79
     Stampede:
       total: 0.62
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bracer of The Abyss:
-      total: 0.41
-      efficiency: 0.57
+      total: 0.4
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.24
@@ -241,26 +241,26 @@ builds:
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.46
-      efficiency: 0.47
+      total: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.44
     Amanita Charm:
       total: 0.79
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.91
     Erosion:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.66
     Stampede:
       total: 0.58
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -300,31 +300,31 @@ builds:
       pick: 0.0
       fit: 0.48
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.64
     Spectral Armor:
       total: 0.59
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.59
     Erosion:
       total: 0.64
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.61
-      efficiency: 0.53
+      total: 0.6
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -360,37 +360,37 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.71
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.81
     Void Shield:
-      total: 0.67
-      efficiency: 0.48
+      total: 0.66
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.86
     Spectral Armor:
       total: 0.68
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.76
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.77
-      efficiency: 0.54
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     Stampede:
       total: 0.69
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.86

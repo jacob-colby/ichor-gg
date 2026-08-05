@@ -11,10 +11,17 @@ const gods = [
 ] as unknown as God[];
 
 const tierlist = {
+  // Six measured gods so the terciles behind "rarely played" are meaningful.
+  // Hidden wins most and is played least; Famous wins nearly as much and is
+  // played most, so only one of them should ever be flagged.
   gods: [
-    { name: "Ymir", role: "Solo", ours: 0.45, community: 0.68, tier_ours: "C", tier_community: "S" },
-    { name: "Zeus", role: "Mid", ours: 0.52, community: 0.5, tier_ours: "A", tier_community: "A" },
-    { name: "Agni", role: "Mid", ours: 0.5, community: null, tier_ours: "B", tier_community: null },
+    { name: "Hidden", role: "Solo", score: 0.60, win_rate: 0.63, matches: 120, play_share: 0.01, tier_score: "S" },
+    { name: "Famous", role: "Mid", score: 0.58, win_rate: 0.60, matches: 900, play_share: 0.13, tier_score: "S" },
+    { name: "Steady", role: "Mid", score: 0.52, win_rate: 0.54, matches: 500, play_share: 0.09, tier_score: "A" },
+    { name: "Middling", role: "Solo", score: 0.50, win_rate: 0.51, matches: 400, play_share: 0.07, tier_score: "B" },
+    { name: "Poor", role: "Mid", score: 0.44, win_rate: 0.46, matches: 300, play_share: 0.05, tier_score: "C" },
+    { name: "Worst", role: "Solo", score: 0.40, win_rate: 0.42, matches: 200, play_share: 0.02, tier_score: "C" },
+    { name: "Unmeasured", role: "Mid", score: null, tier_score: null },
   ] as GodTierEntry[],
   items: [],
 };
@@ -28,106 +35,114 @@ beforeEach(() => {
   localStorage.clear();
 });
 
-describe("Home divergence board", () => {
-  /* The claim leads with the half a reader can act on, and counts it rather
-   * than asserting it. Ymir is C to the meta's S — one god we rate lower;
-   * Zeus (A vs A) agrees; Agni is unranked. */
-  it("leads the claim with the direction the fixture actually supports", () => {
+describe("Home standings board", () => {
+  /* The claim used to read "The community underrates N gods", which rested on
+   * our ranking out-placing theirs. It didn't: measured against real god
+   * strength our score correlated -0.117. What it says now uses only the
+   * community's own two figures — how much a god wins, how often it's picked. */
+  it("leads with a claim built from the community's own numbers", () => {
     render(<Home data={baseData({ tierlist })} />);
     const heading = screen.getByRole("heading", { level: 1 });
-    expect(heading).toHaveTextContent(/the community overrates\s*1 god\./i);
+    expect(heading).toHaveTextContent(/1 god win(s)? more than anyone plays them/i);
     // Never "1 gods" — the count is interpolated, so the noun has to agree.
     expect(heading).not.toHaveTextContent(/1 gods/i);
   });
 
-  it("leads with the underrated count whenever there is one", () => {
-    const flipped = {
+  it("never claims the site disagrees with the community", () => {
+    render(<Home data={baseData({ tierlist })} />);
+    expect(screen.queryByText(/underrate|overrate|where we disagree|argue hardest/i)).not.toBeInTheDocument();
+  });
+
+  it("falls back to the sample size when nothing is rarely played", () => {
+    const flat = {
       gods: [
-        { name: "Ymir", role: "Solo", ours: 0.68, community: 0.45, tier_ours: "S", tier_community: "C" },
-        { name: "Zeus", role: "Mid", ours: 0.5, community: 0.5, tier_ours: "A", tier_community: "A" },
+        { name: "A", role: "Mid", score: 0.52, win_rate: 0.54, matches: 500, play_share: 0.10, tier_score: "S" },
+        { name: "B", role: "Mid", score: 0.50, win_rate: 0.52, matches: 500, play_share: 0.10, tier_score: "B" },
       ] as GodTierEntry[],
       items: [],
     };
-    render(<Home data={baseData({ tierlist: flipped })} />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/the community underrates\s*1 god\./i);
+    render(<Home data={baseData({ tierlist: flat })} />);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/2 gods ranked on results/i);
   });
 
-  it("groups gods into lane columns ranked by disagreement", () => {
+  it("groups gods into lane columns, best first", () => {
     render(<Home data={baseData({ tierlist })} />);
-    const board = within(screen.getByTestId("home-divergence"));
+    const board = within(screen.getByTestId("home-standings"));
     expect(board.getByRole("heading", { name: "Solo" })).toBeInTheDocument();
     expect(board.getByRole("heading", { name: "Mid" })).toBeInTheDocument();
-    expect(board.getByRole("button", { name: /ymir/i })).toBeInTheDocument();
+    expect(board.getByRole("button", { name: /hidden/i })).toBeInTheDocument();
   });
 
-  it("speaks both placements and both scores, so the row is never a bare word", () => {
+  it("speaks the record and the sample, so a row is never a bare word", () => {
     render(<Home data={baseData({ tierlist })} />);
-    const board = within(screen.getByTestId("home-divergence"));
-    const row = board.getByRole("button", { name: /^ymir/i });
-    expect(row).toHaveAccessibleName(/we place it C, the community places it S/i);
-    // "Overrated" alone doesn't say who is doing the overrating.
-    expect(row).toHaveAccessibleName(/we rate it lower/i);
-    expect(row).toHaveAccessibleName(/model score 0\.45, community 0\.68/i);
+    const row = within(screen.getByTestId("home-standings")).getByRole("button", { name: /^hidden/i });
+    expect(row).toHaveAccessibleName(/wins 63%/i);
+    expect(row).toHaveAccessibleName(/over 120 matches/i);
+    expect(row).toHaveAccessibleName(/played in 1% of them/i);
+  });
+
+  it("marks a god that wins well and is rarely played", () => {
+    render(<Home data={baseData({ tierlist })} />);
+    const board = within(screen.getByTestId("home-standings"));
+    expect(board.getByRole("button", { name: /^hidden/i })).toHaveAccessibleName(/rarely played/i);
+    // Famous wins about as much but is played the most — not the same claim.
+    expect(board.getByRole("button", { name: /^famous/i })).not.toHaveAccessibleName(/rarely played/i);
   });
 
   it("navigates to the god when a row is clicked", () => {
     render(<Home data={baseData({ tierlist })} />);
-    const board = within(screen.getByTestId("home-divergence"));
-    fireEvent.click(board.getByRole("button", { name: /^ymir/i }));
-    expect(window.location.hash).toBe(toHash.god("Ymir"));
+    const board = within(screen.getByTestId("home-standings"));
+    fireEvent.click(board.getByRole("button", { name: /^hidden/i }));
+    expect(window.location.hash).toBe(toHash.god("Hidden"));
   });
 
-  it("reports gods with no community data rather than hiding them", () => {
+  it("reports gods with no usable sample rather than hiding or ranking them", () => {
     render(<Home data={baseData({ tierlist })} />);
-    const board = within(screen.getByTestId("home-divergence"));
-    expect(board.getByText(/1 of 3 gods have no community data yet/i)).toBeInTheDocument();
-    // ...and never invents a row for one.
-    expect(board.queryByRole("button", { name: /^agni/i })).not.toBeInTheDocument();
+    const board = within(screen.getByTestId("home-standings"));
+    expect(board.getByText(/1 of 7 gods have too few tracked matches/i)).toBeInTheDocument();
+    expect(board.queryByRole("button", { name: /^unmeasured/i })).not.toBeInTheDocument();
   });
 
   it("omits the board entirely when there is no tierlist", () => {
     render(<Home data={baseData()} />);
-    expect(screen.queryByTestId("home-divergence")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("home-standings")).not.toBeInTheDocument();
   });
 
-  it("omits the board when a tierlist exists but nothing is comparable", () => {
-    const allUnranked = {
+  it("omits the board when a tierlist exists but nothing is measured", () => {
+    const none = {
       gods: [
-        { name: "Ymir", role: "Solo", ours: 0.5, community: null, tier_ours: "B", tier_community: null },
-        { name: "Zeus", role: "Mid", ours: 0.5, community: null, tier_ours: "B", tier_community: null },
+        { name: "Ymir", role: "Solo", score: null, tier_score: null },
+        { name: "Zeus", role: "Mid", score: null, tier_score: null },
       ] as GodTierEntry[],
       items: [],
     };
-    render(<Home data={baseData({ tierlist: allUnranked })} />);
-    // No empty shell: no "Where we disagree", no bar key, no columns of nothing.
-    expect(screen.queryByTestId("home-divergence")).not.toBeInTheDocument();
-    expect(screen.queryByText(/where we disagree/i)).not.toBeInTheDocument();
-    // ...and the claim steps back to something the data supports.
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/scored by a model/i);
+    render(<Home data={baseData({ tierlist: none })} />);
+    // No empty shell: no board, no key, no columns of nothing.
+    expect(screen.queryByTestId("home-standings")).not.toBeInTheDocument();
+    expect(screen.queryByText(/what actually wins/i)).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/reasoning shown/i);
   });
 
-  /* The row leads with the verdict and keeps the arithmetic within reach
-   * rather than printing it. Three decimals per row, thirty rows to a screen,
-   * was the thing that read as a statistics table instead of a tier list. */
-  it("leads a row with the verdict, not with decimals", () => {
+  /* A row leads with the figure a reader can act on and keeps the rest within
+   * reach. Three decimals per row, thirty rows to a screen, was the thing that
+   * read as a statistics table instead of a tier list. */
+  it("leads a row with the win rate, not with a model score", () => {
     render(<Home data={baseData({ tierlist })} />);
-    const row = within(screen.getByTestId("home-divergence")).getByRole("button", { name: /^ymir/i });
-    expect(row).toHaveTextContent(/overrated/i);
-    expect(row).not.toHaveTextContent("0.45");
-    expect(row).not.toHaveTextContent("-0.23");
+    const row = within(screen.getByTestId("home-standings")).getByRole("button", { name: /^hidden/i });
+    expect(row).toHaveTextContent("63%");
+    expect(row).not.toHaveTextContent("0.60");
   });
 
-  it("keeps the scores reachable on hover for anyone who wants them", () => {
+  it("keeps the sample reachable on hover for anyone who wants it", () => {
     render(<Home data={baseData({ tierlist })} />);
-    const row = within(screen.getByTestId("home-divergence")).getByRole("button", { name: /^ymir/i });
-    expect(row).toHaveAttribute("title", expect.stringContaining("0.45"));
-    expect(row).toHaveAttribute("title", expect.stringContaining("0.68"));
-    expect(row).toHaveAttribute("title", expect.stringContaining("-0.23"));
+    const row = within(screen.getByTestId("home-standings")).getByRole("button", { name: /^hidden/i });
+    expect(row).toHaveAttribute("title", expect.stringContaining("120 matches"));
+    expect(row).toHaveAttribute("title", expect.stringContaining("1% play share"));
   });
 
-  it("falls back to a claim it can support when nothing is comparable", () => {
+  it("falls back to a claim it can support when nothing is measured", () => {
     render(<Home data={baseData()} />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/scored by a model/i);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/reasoning shown/i);
   });
 });
 

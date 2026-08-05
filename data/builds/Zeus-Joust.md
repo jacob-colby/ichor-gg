@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Divine Ruin
-  - Bragi's Harp
+  - Bracer of The Abyss
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Soul Gem
   flex_slots:
   - The Cosmic Horror
-  - Bragi's Harp
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -32,37 +32,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.56
-      efficiency: 0.45
+      total: 0.55
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Bragi's Harp:
+    Bracer of The Abyss:
       total: 0.54
-      efficiency: 0.47
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.51
     Spear of Desolation:
       total: 0.58
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
     The Cosmic Horror:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
     Spear of the Magus:
-      total: 0.56
-      efficiency: 0.61
+      total: 0.55
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.5
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -80,8 +80,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Divine Ruin
   - Triton's Conch
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -99,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.51
-      efficiency: 0.45
+      total: 0.5
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.57
     Bragi's Harp:
-      total: 0.54
-      efficiency: 0.47
+      total: 0.53
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
     Spear of Desolation:
-      total: 0.56
-      efficiency: 0.54
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.58
     Spear of the Magus:
-      total: 0.52
-      efficiency: 0.61
+      total: 0.51
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.42
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.51
-      efficiency: 0.48
+      total: 0.5
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -165,36 +165,36 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.55
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.49
     Void Shield:
       total: 0.52
-      efficiency: 0.48
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.57
     Spectral Armor:
-      total: 0.54
-      efficiency: 0.6
+      total: 0.53
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.47
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.89
     Erosion:
       total: 0.56
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -206,16 +206,16 @@ builds:
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
-  - The World Stone
   - Obsidian Shard
+  - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - The World Stone
+  - Dreamer's Idol
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -230,36 +230,36 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.62
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.71
     The Cosmic Horror:
-      total: 0.6
-      efficiency: 0.59
+      total: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.6
     Spear of the Magus:
-      total: 0.61
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    The World Stone:
-      total: 0.55
-      efficiency: 0.5
+      total: 0.6
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.6
     Obsidian Shard:
-      total: 0.58
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Dreamer's Idol:
+      total: 0.55
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -294,38 +294,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.51
-      efficiency: 0.45
+      total: 0.5
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.57
     Bracer of The Abyss:
-      total: 0.49
-      efficiency: 0.57
+      total: 0.48
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.4
     Nimble Ring:
-      total: 0.49
+      total: 0.48
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
-      total: 0.55
-      efficiency: 0.47
+      total: 0.54
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.63
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.49
-      efficiency: 0.48
+      total: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -372,24 +372,24 @@ builds:
       fit: 0.35
     Chronos' Pendant:
       total: 0.51
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.46
     Bragi's Harp:
-      total: 0.48
-      efficiency: 0.47
+      total: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.49
     Spear of Desolation:
       total: 0.58
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -399,14 +399,14 @@ builds:
   archetype: model
   slot_order:
   - Divine Ruin
-  - Bragi's Harp
+  - Bracer of The Abyss
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Soul Gem
   flex_slots:
   - The Cosmic Horror
-  - Bragi's Harp
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -424,37 +424,37 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.56
-      efficiency: 0.45
+      total: 0.55
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Bragi's Harp:
+    Bracer of The Abyss:
       total: 0.54
-      efficiency: 0.47
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.51
     Spear of Desolation:
       total: 0.58
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
     The Cosmic Horror:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
     Spear of the Magus:
-      total: 0.56
-      efficiency: 0.61
+      total: 0.55
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.5
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0

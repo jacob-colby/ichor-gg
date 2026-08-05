@@ -32,14 +32,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.64
     Bragi's Harp:
       total: 0.53
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.5
     Riptalon:
-      total: 0.62
+      total: 0.61
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.4
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -74,10 +74,10 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
-  - Bragi's Harp
   - Death Metal
   - Damaru
   - Demon Blade
+  - The Crusher
   - Soul Gem
   flex_slots:
   - Damaru
@@ -99,37 +99,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Bragi's Harp:
-      total: 0.52
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Death Metal:
-      total: 0.56
+      total: 0.55
       efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.51
     Damaru:
       total: 0.48
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.36
     Demon Blade:
       total: 0.47
-      efficiency: 0.4
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.55
+    The Crusher:
+      total: 0.51
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -165,19 +165,19 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.46
     Bragi's Harp:
       total: 0.5
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -241,8 +241,8 @@ builds:
       pick: 0.0
       fit: 0.34
     Amanita Charm:
-      total: 0.73
-      efficiency: 0.67
+      total: 0.72
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -253,13 +253,13 @@ builds:
       pick: 0.0
       fit: 0.54
     Shogun's Ofuda:
-      total: 0.54
+      total: 0.53
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.54
     Soul Gem:
-      total: 0.76
+      total: 0.75
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -294,26 +294,26 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.53
-      efficiency: 0.53
+      total: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.53
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.44
+      total: 0.58
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.47
     Void Shield:
-      total: 0.54
-      efficiency: 0.48
+      total: 0.53
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.5
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -359,14 +359,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.59
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.76
     Tyrfing:
       total: 0.51
-      efficiency: 0.49
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -384,12 +384,12 @@ builds:
       fit: 0.77
     Silverbranch Bow:
       total: 0.5
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.46
     Soul Gem:
-      total: 0.77
+      total: 0.76
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -425,7 +425,7 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.52
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -437,24 +437,24 @@ builds:
       fit: 0.28
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.46
     Spear of Desolation:
       total: 0.51
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.49
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -489,14 +489,14 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.64
     Bragi's Harp:
       total: 0.53
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.5
     Riptalon:
-      total: 0.62
+      total: 0.61
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.4
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -554,13 +554,13 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.64
     Death Metal:
-      total: 0.54
+      total: 0.53
       efficiency: 0.6
       win: 0.5
       pick: 0.0
@@ -572,7 +572,7 @@ builds:
       pick: 0.0
       fit: 0.58
     The Crusher:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -584,8 +584,8 @@ builds:
       pick: 0.0
       fit: 0.97
     Triton's Conch:
-      total: 0.53
-      efficiency: 0.48
+      total: 0.52
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -620,8 +620,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
-      efficiency: 0.44
+      total: 0.55
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -632,14 +632,14 @@ builds:
       pick: 0.0
       fit: 0.44
     Damaru:
-      total: 0.46
-      efficiency: 0.6
+      total: 0.45
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.31
     Demon Blade:
-      total: 0.44
-      efficiency: 0.4
+      total: 0.43
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -650,7 +650,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Soul Gem:
-      total: 0.77
+      total: 0.76
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -686,19 +686,19 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
     Death Metal:
-      total: 0.51
+      total: 0.5
       efficiency: 0.6
       win: 0.5
       pick: 0.0
@@ -710,14 +710,14 @@ builds:
       pick: 0.0
       fit: 0.41
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
       total: 0.5
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -733,8 +733,8 @@ builds:
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Erosion
   - Shogun's Ofuda
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -752,25 +752,25 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
-      efficiency: 0.44
+      total: 0.51
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.61
     Amanita Charm:
       total: 0.73
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.79
     Erosion:
       total: 0.51
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.49
     Pharaoh's Curse:
-      total: 0.54
+      total: 0.53
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -782,7 +782,7 @@ builds:
       pick: 0.0
       fit: 0.49
     Soul Gem:
-      total: 0.78
+      total: 0.77
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -799,8 +799,8 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Avenging Blade
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -819,25 +819,25 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.56
-      efficiency: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.44
+      total: 0.57
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.73
     Void Shield:
-      total: 0.58
-      efficiency: 0.48
+      total: 0.57
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.68
     Void Stone:
-      total: 0.57
-      efficiency: 0.45
+      total: 0.56
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -848,7 +848,7 @@ builds:
       pick: 0.0
       fit: 0.48
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -865,8 +865,8 @@ builds:
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Tyrfing
   - Shogun's Ofuda
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -884,14 +884,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.62
-      efficiency: 0.44
+      total: 0.61
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.8
     Tyrfing:
-      total: 0.5
-      efficiency: 0.49
+      total: 0.49
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -908,13 +908,13 @@ builds:
       pick: 0.0
       fit: 0.46
     Shogun's Ofuda:
-      total: 0.5
+      total: 0.49
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.46
     Soul Gem:
-      total: 0.73
+      total: 0.72
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -950,8 +950,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
-      efficiency: 0.44
+      total: 0.51
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -963,24 +963,24 @@ builds:
       fit: 0.26
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.46
     Hydra's Lament:
-      total: 0.53
+      total: 0.52
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.44
     Spear of Desolation:
-      total: 0.5
-      efficiency: 0.54
+      total: 0.49
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.46
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -1016,13 +1016,13 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
-      efficiency: 0.44
+      total: 0.53
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.64
     Death Metal:
-      total: 0.54
+      total: 0.53
       efficiency: 0.6
       win: 0.5
       pick: 0.0
@@ -1034,7 +1034,7 @@ builds:
       pick: 0.0
       fit: 0.58
     The Crusher:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -1046,8 +1046,8 @@ builds:
       pick: 0.0
       fit: 0.97
     Triton's Conch:
-      total: 0.53
-      efficiency: 0.48
+      total: 0.52
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.57

@@ -33,37 +33,37 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.6
     Void Shield:
       total: 0.6
-      efficiency: 0.48
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
     Spectral Armor:
       total: 0.61
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
-      efficiency: 0.54
+      total: 0.66
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.63
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -99,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Void Shield:
-      total: 0.56
-      efficiency: 0.48
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.64
     Spectral Armor:
       total: 0.57
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.54
     Erosion:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.67
     Stampede:
       total: 0.58
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.64
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.59
-      efficiency: 0.48
+      total: 0.58
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -164,38 +164,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Void Shield:
-      total: 0.61
-      efficiency: 0.48
+      total: 0.6
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.75
     Spectral Armor:
       total: 0.62
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.65
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Rod of Asclepius:
-      total: 0.8
-      efficiency: 0.6
+      total: 0.79
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
-      efficiency: 0.54
+      total: 0.66
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.64
-      efficiency: 0.53
+      total: 0.63
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -214,8 +214,8 @@ builds:
   - Dreamer's Idol
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Stone of Binding — magical protection
     swap_item: Stone of Binding
@@ -229,38 +229,38 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Void Shield:
-      total: 0.72
-      efficiency: 0.48
+      total: 0.71
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.97
     Void Stone:
-      total: 0.71
-      efficiency: 0.45
+      total: 0.7
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.97
     Dreamer's Idol:
-      total: 0.59
-      efficiency: 0.5
+      total: 0.58
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.68
     Amanita Charm:
       total: 0.81
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.96
     Erosion:
-      total: 0.62
-      efficiency: 0.54
+      total: 0.61
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.71
     Stampede:
-      total: 0.6
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -294,32 +294,32 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bracer of The Abyss:
-      total: 0.43
-      efficiency: 0.57
+      total: 0.42
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.28
     Nimble Ring:
-      total: 0.42
+      total: 0.41
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.34
     Bragi's Harp:
       total: 0.47
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.47
     Erosion:
       total: 0.56
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.59
     Stampede:
-      total: 0.56
-      efficiency: 0.53
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -340,8 +340,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Spectral Armor
   - Genji's Guard
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -371,25 +371,25 @@ builds:
       pick: 0.0
       fit: 0.58
     Spectral Armor:
-      total: 0.58
-      efficiency: 0.6
+      total: 0.57
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.56
     Erosion:
       total: 0.61
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
     Stampede:
       total: 0.59
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.66
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -424,19 +424,19 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Erosion:
-      total: 0.59
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Stampede:
-      total: 0.58
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
     Pharaoh's Curse:
-      total: 0.6
+      total: 0.59
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -448,14 +448,14 @@ builds:
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.62
-      efficiency: 0.48
+      total: 0.61
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -489,38 +489,38 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.58
-      efficiency: 0.6
+      total: 0.57
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.55
     Amanita Charm:
       total: 0.8
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.94
     Erosion:
-      total: 0.61
-      efficiency: 0.54
+      total: 0.6
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
     Stampede:
       total: 0.59
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Pharaoh's Curse:
-      total: 0.57
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
     Triton's Conch:
-      total: 0.63
-      efficiency: 0.48
+      total: 0.62
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -555,37 +555,37 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.6
     Void Shield:
       total: 0.6
-      efficiency: 0.48
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
     Spectral Armor:
       total: 0.61
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
-      efficiency: 0.54
+      total: 0.66
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.63
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.73

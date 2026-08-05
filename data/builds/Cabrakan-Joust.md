@@ -13,8 +13,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Shield Splitter
   - Spectral Armor
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -33,37 +33,37 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.6
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.57
     Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.67
     Shield Splitter:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.63
     Spectral Armor:
       total: 0.58
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.57
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.65
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -80,8 +80,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Eye of Providence
   - Spectral Armor
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -100,36 +100,36 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.59
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.56
     Kinetic Cuirass:
       total: 0.63
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.66
     Spectral Armor:
       total: 0.59
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.58
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.65
-      efficiency: 0.54
+      total: 0.64
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.76
     Soul Gem:
-      total: 0.71
+      total: 0.7
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -145,8 +145,8 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - Avenging Blade
   - Jotunn's Revenge
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -165,30 +165,30 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.6
-      efficiency: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.54
     Void Shield:
       total: 0.67
-      efficiency: 0.48
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.87
     Void Stone:
       total: 0.66
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.87
     The Crusher:
-      total: 0.61
+      total: 0.6
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.59
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -248,12 +248,12 @@ builds:
       fit: 0.68
     Amanita Charm:
       total: 0.74
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.82
     Pharaoh's Curse:
-      total: 0.61
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Kinetic Cuirass
-  - Gladiator's Shield
   - Freya's Tears
   - Erosion
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Gladiator's Shield
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -299,32 +299,32 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Breastplate of Valor:
+      total: 0.57
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Gladiator's Shield:
-      total: 0.57
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.64
     Erosion:
       total: 0.59
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -340,7 +340,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - The Crusher
+  - Kinetic Cuirass
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,14 +359,14 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.66
+      total: 0.55
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -377,14 +377,14 @@ builds:
       pick: 0.0
       fit: 0.47
     Amanita Charm:
-      total: 0.77
-      efficiency: 0.67
+      total: 0.76
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.87
     Erosion:
-      total: 0.58
-      efficiency: 0.54
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - The Crusher
-  - Spectral Armor
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - The Crusher
-  - Spectral Armor
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -423,9 +423,15 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -435,15 +441,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Spectral Armor:
-      total: 0.53
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Erosion:
-      total: 0.58
-      efficiency: 0.54
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.96
     Triton's Conch:
-      total: 0.58
-      efficiency: 0.48
+      total: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -470,8 +470,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Shield Splitter
   - Spectral Armor
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -490,37 +490,37 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.6
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.57
     Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.67
     Shield Splitter:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.63
     Spectral Armor:
       total: 0.58
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.57
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.65
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.77

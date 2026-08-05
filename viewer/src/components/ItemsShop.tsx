@@ -25,6 +25,7 @@ import { iconSlug } from "../lib/builds";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { useUrlState, keepQuery } from "../lib/urlState";
 import { priceVerdict, PRICE_WORD, PRICE_TEXT, PRICE_SPOKEN } from "../lib/verdictWords";
+import { rateText, matchesText } from "../lib/standings";
 
 const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
@@ -319,16 +320,19 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
           )}
         </section>
 
-        {community && (community.ours != null || community.community != null) && (
+        {community && community.score != null && (
           <section aria-labelledby="item-tier-h" className="mt-4 border-t border-line pt-3">
-            <h3 id="item-tier-h" className={eyebrow}>Where it lands</h3>
+            <h3 id="item-tier-h" className={eyebrow}>How it actually does</h3>
+            {/* The record, separate from the price verdict above it. These are
+                different questions and the site used to rank them against each
+                other; the value residual correlates -0.267 with win rate, so
+                the comparison was noise. Both are shown, neither arbitrates. */}
             <p className="mt-1.5 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-label">
-              <span className="text-faint">model <span className="font-mono text-gold">{community.ours?.toFixed(2) ?? "—"}</span>
-                {community.tier_ours && <span className="text-ink-soft"> {community.tier_ours}</span>}</span>
-              <span className="text-faint">community {community.community != null
-                ? <><span className="font-mono text-ink-soft">{community.community.toFixed(2)}</span>
-                    {community.tier_community && <span className="text-ink-soft"> {community.tier_community}</span>}</>
-                : <span className="text-muted">unranked</span>}</span>
+              {community.tier_score && (
+                <span className="text-faint">tier <span className="font-mono text-gold">{community.tier_score}</span></span>
+              )}
+              <span className="text-faint">wins <span className="font-mono text-ink-soft">{rateText(community.win_rate)}</span></span>
+              <span className="text-faint">over <span className="font-mono text-ink-soft">{matchesText(community.matches)}</span> matches</span>
             </p>
           </section>
         )}
@@ -469,8 +473,13 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
   // Counts what the sentence says: priced below what the stats are worth.
   // Counting the `undervalued` bucket (z <= -0.5) instead put 30 in a headline
   // that 71 cards on screen visibly contradicted.
+  // Only items every god can buy. A god-specific item's price is real but
+  // unactionable for 86 of 87 gods, so counting it here would inflate a
+  // headline about "items" with things almost nobody can purchase.
+  const priceable = useMemo(
+    () => items.filter((i) => i.efficiency && i.efficiency.comparable !== false), [items]);
   const underpriced = useMemo(
-    () => items.filter((i) => (i.efficiency?.residual ?? 0) < 0).length, [items]);
+    () => priceable.filter((i) => i.efficiency!.residual < 0).length, [priceable]);
   const withCommunity = useMemo(() => items.filter((i) => i.meta).length, [items]);
   const unscored = useMemo(() => items.filter((i) => !i.efficiency).length, [items]);
 
@@ -485,15 +494,16 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
     <div className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">
       <header className="pb-4">
         <h1 className="max-w-[26ch] text-balance font-display text-display font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-display">
-          <span className="text-gold">{underpriced} of {items.length}</span> items cost less than their stats are worth.
+          <span className="text-gold">{underpriced} of {priceable.length}</span> items cost less than their stats are worth.
         </h1>
         <p className="mt-2.5 max-w-[72ch] text-body leading-relaxed text-ink-soft">
           A regression prices every stat in gold, then compares what an item should cost to what it
-          does. Open one to see the arithmetic.
+          does. Open one to see the arithmetic. It answers whether an item is cheap for what it
+          gives &mdash; not whether it wins, which is a separate figure on every card.
         </p>
         <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint">
           <span>{withCommunity} of {items.length} have community data</span>
-          {unscored > 0 && <span className="before:mr-3 before:content-['·']">{unscored} not priced (starters)</span>}
+          {unscored > 0 && <span className="before:mr-3 before:content-['·']">{unscored} not priced (starters and statless items)</span>}
         </p>
       </header>
 

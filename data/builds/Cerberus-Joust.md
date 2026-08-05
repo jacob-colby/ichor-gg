@@ -33,37 +33,37 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.63
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.63
     Kinetic Cuirass:
       total: 0.67
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.73
     Shifter's Shield:
-      total: 0.6
-      efficiency: 0.56
+      total: 0.59
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.63
     Spectral Armor:
       total: 0.6
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.61
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.68
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -100,31 +100,31 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.62
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.61
     Kinetic Cuirass:
       total: 0.66
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.71
     Spectral Armor:
       total: 0.61
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.68
-      efficiency: 0.54
+      total: 0.67
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -164,37 +164,37 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.61
-      efficiency: 0.49
+      total: 0.6
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.72
     Kinetic Cuirass:
       total: 0.58
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
     Void Shield:
       total: 0.68
-      efficiency: 0.48
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.89
     Void Stone:
       total: 0.67
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.89
     Erosion:
       total: 0.59
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -229,14 +229,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.61
+      total: 0.53
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.46
     Bracer of The Abyss:
-      total: 0.41
-      efficiency: 0.57
+      total: 0.4
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.24
@@ -247,20 +247,20 @@ builds:
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.46
-      efficiency: 0.47
+      total: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.44
     Amanita Charm:
       total: 0.74
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.81
     Erosion:
-      total: 0.55
-      efficiency: 0.54
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -307,7 +307,7 @@ builds:
       fit: 0.45
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -318,8 +318,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Erosion:
-      total: 0.58
-      efficiency: 0.54
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -340,7 +340,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - The Crusher
+  - Kinetic Cuirass
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -360,13 +360,13 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -378,13 +378,13 @@ builds:
       fit: 0.47
     Amanita Charm:
       total: 0.76
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.86
     Erosion:
       total: 0.57
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -424,8 +424,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.61
+      total: 0.54
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.4
     Erosion:
-      total: 0.56
-      efficiency: 0.54
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -455,7 +455,7 @@ builds:
       fit: 0.93
     Triton's Conch:
       total: 0.56
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -490,37 +490,37 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.63
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.63
     Kinetic Cuirass:
       total: 0.67
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.73
     Shifter's Shield:
-      total: 0.6
-      efficiency: 0.56
+      total: 0.59
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.63
     Spectral Armor:
       total: 0.6
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.61
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.68
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.83

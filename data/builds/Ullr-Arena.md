@@ -13,7 +13,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Pharaoh's Curse
+  - Toxic Blade
   - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
@@ -38,25 +38,25 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.7
     Riptalon:
-      total: 0.66
+      total: 0.65
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.75
     Amanita Charm:
       total: 0.61
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.55
     Pharaoh's Curse:
-      total: 0.57
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -74,11 +74,11 @@ builds:
   archetype: crit
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
   - Rage
   - Riptalon
   - Damaru
   - Demon Blade
+  - Pharaoh's Curse
   flex_slots:
   - Damaru
   - Rage
@@ -93,8 +93,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -104,15 +104,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Rage:
-      total: 0.43
-      efficiency: 0.43
+      total: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -123,17 +117,23 @@ builds:
       pick: 0.0
       fit: 0.72
     Damaru:
-      total: 0.52
-      efficiency: 0.6
+      total: 0.51
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.43
     Demon Blade:
-      total: 0.53
-      efficiency: 0.4
+      total: 0.52
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Pharaoh's Curse:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
   starter: *id001
 - source: suggested
   archetype: burst
@@ -171,13 +171,13 @@ builds:
       fit: 0.5
     Toxic Blade:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Pharaoh's Curse:
-      total: 0.53
+      total: 0.52
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -214,8 +214,8 @@ builds:
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -230,19 +230,19 @@ builds:
   slot_scores:
     Amanita Charm:
       total: 0.8
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.93
     Erosion:
       total: 0.58
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
     Stampede:
-      total: 0.58
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Shogun's Ofuda:
-      total: 0.62
+      total: 0.61
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -275,7 +275,7 @@ builds:
   - Riptalon
   - The Crusher
   flex_slots:
-  - Jotunn's Revenge
+  - Void Shield
   - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -294,26 +294,26 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.44
+      total: 0.62
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.82
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.52
     Void Shield:
-      total: 0.59
-      efficiency: 0.48
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.7
     Void Stone:
-      total: 0.58
-      efficiency: 0.45
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -359,8 +359,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
-      efficiency: 0.56
+      total: 0.58
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -371,8 +371,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.44
+      total: 0.62
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -384,7 +384,7 @@ builds:
       fit: 0.84
     Amanita Charm:
       total: 0.61
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -405,8 +405,8 @@ builds:
   - Hydra's Lament
   - Pharaoh's Curse
   flex_slots:
-  - Toxic Blade
   - Lernaean Bow
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -424,26 +424,26 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.52
+      total: 0.51
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.47
     Toxic Blade:
-      total: 0.52
-      efficiency: 0.44
+      total: 0.51
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.48
     Shield of the Phoenix:
-      total: 0.56
-      efficiency: 0.58
+      total: 0.55
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -470,7 +470,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Pharaoh's Curse
+  - Toxic Blade
   - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
@@ -495,25 +495,25 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.7
     Riptalon:
-      total: 0.66
+      total: 0.65
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.75
     Amanita Charm:
       total: 0.61
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.55
     Pharaoh's Curse:
-      total: 0.57
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0

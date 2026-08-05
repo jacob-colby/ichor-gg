@@ -13,7 +13,7 @@ builds:
   - Shogun's Ofuda
   - Triton's Conch
   flex_slots:
-  - Shogun's Ofuda
+  - Erosion
   - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -32,25 +32,25 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Runeforged Hammer:
-      total: 0.59
-      efficiency: 0.61
+      total: 0.58
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.56
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.59
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Pharaoh's Curse:
-      total: 0.62
+      total: 0.61
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -63,7 +63,7 @@ builds:
       fit: 0.65
     Triton's Conch:
       total: 0.6
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -100,25 +100,25 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Rod of Asclepius:
-      total: 0.68
-      efficiency: 0.6
+      total: 0.67
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.76
     Erosion:
-      total: 0.64
-      efficiency: 0.54
+      total: 0.63
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Shogun's Ofuda:
-      total: 0.61
+      total: 0.6
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -165,25 +165,25 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.62
-      efficiency: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.72
     Toxic Blade:
       total: 0.65
-      efficiency: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.87
     Void Shield:
-      total: 0.65
-      efficiency: 0.48
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.82
     Void Stone:
-      total: 0.64
-      efficiency: 0.45
+      total: 0.63
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.65
-      efficiency: 0.44
+      total: 0.64
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -248,12 +248,12 @@ builds:
       fit: 0.77
     Amanita Charm:
       total: 0.7
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.74
     Pharaoh's Curse:
-      total: 0.62
+      total: 0.61
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Gladiator's Shield
   - Hydra's Lament
   - Freya's Tears
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Freya's Tears
-  - Gladiator's Shield
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -300,17 +300,11 @@ builds:
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Gladiator's Shield:
-      total: 0.55
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Hydra's Lament:
       total: 0.58
       efficiency: 0.61
@@ -318,13 +312,19 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.56
+      total: 0.55
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Pharaoh's Curse:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -340,7 +340,7 @@ builds:
   - Shogun's Ofuda
   - Triton's Conch
   flex_slots:
-  - Shogun's Ofuda
+  - Erosion
   - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,25 +359,25 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Runeforged Hammer:
-      total: 0.59
-      efficiency: 0.61
+      total: 0.58
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.56
     Amanita Charm:
       total: 0.78
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.59
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Pharaoh's Curse:
-      total: 0.62
+      total: 0.61
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -390,7 +390,7 @@ builds:
       fit: 0.65
     Triton's Conch:
       total: 0.6
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.72

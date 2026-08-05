@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.56
-      efficiency: 0.63
+      total: 0.55
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.49
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.61
+      total: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.59
     Void Shield:
-      total: 0.55
-      efficiency: 0.48
+      total: 0.54
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.62
     Spectral Armor:
       total: 0.56
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.52
     Amanita Charm:
       total: 0.8
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.94
     Erosion:
-      total: 0.61
-      efficiency: 0.54
+      total: 0.6
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -99,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.61
+      total: 0.53
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.47
     Spear of Desolation:
-      total: 0.52
-      efficiency: 0.54
+      total: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.49
     Spectral Armor:
       total: 0.52
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.44
     Erosion:
-      total: 0.55
-      efficiency: 0.54
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.57
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.54
-      efficiency: 0.48
+      total: 0.53
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -164,37 +164,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.56
-      efficiency: 0.63
+      total: 0.55
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.49
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.61
+      total: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.59
     Spectral Armor:
-      total: 0.57
-      efficiency: 0.6
+      total: 0.56
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.54
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.67
+      total: 0.82
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.61
-      efficiency: 0.54
+      total: 0.6
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -229,37 +229,37 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.58
-      efficiency: 0.5
+      total: 0.57
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.66
     Stone of Binding:
-      total: 0.59
-      efficiency: 0.49
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.68
     Void Shield:
-      total: 0.67
-      efficiency: 0.48
+      total: 0.66
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.87
     Void Stone:
-      total: 0.66
-      efficiency: 0.45
+      total: 0.65
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.87
     Erosion:
-      total: 0.57
-      efficiency: 0.54
+      total: 0.56
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -294,14 +294,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.61
+      total: 0.49
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.38
     Bracer of The Abyss:
-      total: 0.43
-      efficiency: 0.57
+      total: 0.42
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.28
@@ -312,14 +312,14 @@ builds:
       pick: 0.0
       fit: 0.33
     Bragi's Harp:
-      total: 0.47
-      efficiency: 0.47
+      total: 0.46
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.47
     Erosion:
-      total: 0.51
-      efficiency: 0.54
+      total: 0.5
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -371,8 +371,8 @@ builds:
       pick: 0.0
       fit: 0.43
     Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.61
+      total: 0.54
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -383,13 +383,13 @@ builds:
       pick: 0.0
       fit: 0.56
     Erosion:
-      total: 0.56
-      efficiency: 0.54
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -424,38 +424,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.56
-      efficiency: 0.63
+      total: 0.55
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.49
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.61
+      total: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.59
     Void Shield:
-      total: 0.55
-      efficiency: 0.48
+      total: 0.54
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.62
     Spectral Armor:
       total: 0.56
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.52
     Amanita Charm:
       total: 0.8
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.94
     Erosion:
-      total: 0.61
-      efficiency: 0.54
+      total: 0.6
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69

@@ -33,25 +33,25 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.58
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.54
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.67
+      total: 0.82
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.64
-      efficiency: 0.54
+      total: 0.63
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Shogun's Ofuda:
-      total: 0.59
+      total: 0.58
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -100,25 +100,25 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.62
     Shield of the Phoenix:
       total: 0.67
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.77
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.63
-      efficiency: 0.54
+      total: 0.62
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Shogun's Ofuda:
-      total: 0.6
+      total: 0.59
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -145,8 +145,8 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Avenging Blade
   - The Crusher
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -165,25 +165,25 @@ builds:
   slot_scores:
     Avenging Blade:
       total: 0.6
-      efficiency: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.68
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.44
+      total: 0.6
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.77
     Void Shield:
-      total: 0.67
-      efficiency: 0.48
+      total: 0.66
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.86
     Void Stone:
-      total: 0.66
-      efficiency: 0.45
+      total: 0.65
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -195,7 +195,7 @@ builds:
       fit: 0.55
     Amanita Charm:
       total: 0.76
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.44
+      total: 0.6
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -241,19 +241,19 @@ builds:
       pick: 0.0
       fit: 0.45
     Riptalon:
-      total: 0.63
+      total: 0.62
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.69
     Amanita Charm:
       total: 0.75
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.83
     Pharaoh's Curse:
-      total: 0.62
+      total: 0.61
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -275,8 +275,8 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Kinetic Cuirass
   - Pharaoh's Curse
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -301,13 +301,13 @@ builds:
       fit: 0.45
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.52
     Shield of the Phoenix:
-      total: 0.7
-      efficiency: 0.58
+      total: 0.69
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -318,8 +318,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Erosion:
-      total: 0.58
-      efficiency: 0.54
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -360,25 +360,25 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.58
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.54
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.67
+      total: 0.82
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.64
-      efficiency: 0.54
+      total: 0.63
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Shogun's Ofuda:
-      total: 0.59
+      total: 0.58
       efficiency: 0.53
       win: 0.5
       pick: 0.0

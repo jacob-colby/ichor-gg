@@ -33,37 +33,37 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.73
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.84
     Kinetic Cuirass:
       total: 0.77
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.94
     Shifter's Shield:
       total: 0.7
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.84
     Draconic Scale:
-      total: 0.68
-      efficiency: 0.51
+      total: 0.67
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.84
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.77
-      efficiency: 0.54
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -100,37 +100,37 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.73
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.84
     Kinetic Cuirass:
       total: 0.77
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.94
     Shield of the Phoenix:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
     Shifter's Shield:
       total: 0.7
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.84
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.77
-      efficiency: 0.54
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -165,37 +165,37 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.62
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.75
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.61
     Void Shield:
-      total: 0.71
-      efficiency: 0.48
+      total: 0.7
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.93
     Void Stone:
       total: 0.69
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.93
     Amanita Charm:
       total: 0.81
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.96
     Erosion:
       total: 0.62
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -230,13 +230,13 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bracer of The Abyss:
       total: 0.39
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.22
@@ -248,19 +248,19 @@ builds:
       fit: 0.29
     Bragi's Harp:
       total: 0.45
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.43
     Amanita Charm:
-      total: 0.75
-      efficiency: 0.67
+      total: 0.74
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.83
     Erosion:
-      total: 0.56
-      efficiency: 0.54
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Kinetic Cuirass
+  - Breastplate of Valor
   - Gladiator's Shield
   - Freya's Tears
   - Erosion
   - Soul Gem
   flex_slots:
+  - Breastplate of Valor
   - Gladiator's Shield
-  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -299,15 +299,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Kinetic Cuirass:
+    Breastplate of Valor:
       total: 0.58
-      efficiency: 0.61
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.5
     Gladiator's Shield:
       total: 0.58
-      efficiency: 0.43
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -319,12 +319,12 @@ builds:
       fit: 0.66
     Erosion:
       total: 0.59
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -360,37 +360,37 @@ builds:
   slot_scores:
     Eye of Providence:
       total: 0.73
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.84
     Kinetic Cuirass:
       total: 0.77
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.94
     Shifter's Shield:
       total: 0.7
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.84
     Draconic Scale:
-      total: 0.68
-      efficiency: 0.51
+      total: 0.67
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.84
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.77
-      efficiency: 0.54
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0

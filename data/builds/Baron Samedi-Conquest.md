@@ -111,7 +111,7 @@ builds:
     Tears, Oni Hunter''s Garb, Shield of the Phoenix, Spear of the Magus, Rod of Asclepius,
     The Cosmic Horror, Helm of Radiance, Erosion, Spectral Armor, Jade Scepter, Draconic
     Scale, Obsidian Shard, Yogi''s Necklace, Chronos'' Pendant, Leviathan''s Hide,
-    Midgardian Mail, Death Metal.'
+    Wish-Granting Pearl, Death Metal.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -133,19 +133,19 @@ builds:
       fit: 0.62
     Shifter's Shield:
       total: 0.66
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.86
       pick: 0.12
       fit: 0.49
     Spear of Desolation:
       total: 0.6
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.74
       pick: 0.13
       fit: 0.51
     Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.45
+      total: 0.54
+      efficiency: 0.44
       win: 0.73
       pick: 0.09
       fit: 0.37
@@ -162,8 +162,8 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   flex_slots:
-  - Rod of Tahuti
   - Gluttonous Grimoire
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -179,11 +179,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Shifter''s Shield, Spear of Desolation, Gluttonous Grimoire, Soul Gem, Amanita
-    Charm, Kinetic Cuirass, Eye of Providence, Freya''s Tears, Spear of the Magus,
-    Oni Hunter''s Garb, The Cosmic Horror, Shield of the Phoenix, Death Metal, Obsidian
-    Shard, Rod of Asclepius, Helm of Radiance, Spectral Armor, Yogi''s Necklace, Erosion,
-    Chronos'' Pendant, Jade Scepter, Draconic Scale, Leviathan''s Hide, Screeching
-    Gargoyle, Midgardian Mail.'
+    Charm, Kinetic Cuirass, Eye of Providence, Freya''s Tears, Oni Hunter''s Garb,
+    Spear of the Magus, Shield of the Phoenix, The Cosmic Horror, Death Metal, Obsidian
+    Shard, Rod of Asclepius, Helm of Radiance, Spectral Armor, Yogi''s Necklace, Chronos''
+    Pendant, Erosion, Jade Scepter, Draconic Scale, Leviathan''s Hide, Screeching
+    Gargoyle, Wish-Granting Pearl.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -192,7 +192,7 @@ builds:
       pick: 0.2
       fit: 0.27
     Hide of the Nemean Lion:
-      total: 0.57
+      total: 0.56
       efficiency: 0.54
       win: 0.75
       pick: 0.05
@@ -205,19 +205,19 @@ builds:
       fit: 0.56
     Shifter's Shield:
       total: 0.64
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.86
       pick: 0.12
       fit: 0.37
     Spear of Desolation:
       total: 0.6
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.74
       pick: 0.13
       fit: 0.49
     Rod of Tahuti:
       total: 0.54
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.73
       pick: 0.09
       fit: 0.35
@@ -250,9 +250,9 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Shifter''s Shield, Spear of Desolation, Amanita Charm, Soul Gem, Gluttonous
     Grimoire, Shield of the Phoenix, Rod of Asclepius, Lifebinder, Kinetic Cuirass,
-    Eye of Providence, Chandra''s Grace, Blood-Bound Book, Oni Hunter''s Garb, Bancroft''s
+    Eye of Providence, Chandra''s Grace, Oni Hunter''s Garb, Blood-Bound Book, Bancroft''s
     Talon, Freya''s Tears, Spear of the Magus, The Cosmic Horror, Phoenix Feather,
-    Spectral Armor, Erosion, Jade Scepter, Helm of Radiance, Yogi''s Necklace, Draconic
+    Spectral Armor, Jade Scepter, Erosion, Helm of Radiance, Yogi''s Necklace, Draconic
     Scale, Chronos'' Pendant.'
   slot_scores:
     Genji's Guard:
@@ -269,19 +269,19 @@ builds:
       fit: 0.34
     Shifter's Shield:
       total: 0.66
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.86
       pick: 0.12
       fit: 0.49
     Spear of Desolation:
       total: 0.6
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.74
       pick: 0.13
       fit: 0.51
     Amanita Charm:
-      total: 0.58
-      efficiency: 0.67
+      total: 0.57
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -320,10 +320,10 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Shifter''s Shield, Spear of Desolation, Gluttonous Grimoire, Soul
     Gem, Amanita Charm, Kinetic Cuirass, Spear of the Magus, Eye of Providence, The
-    Cosmic Horror, Screeching Gargoyle, Stone of Binding, Oni Hunter''s Garb, Freya''s
+    Cosmic Horror, Stone of Binding, Screeching Gargoyle, Oni Hunter''s Garb, Freya''s
     Tears, Obsidian Shard, Void Shield, Shield of the Phoenix, Void Stone, Rod of
-    Asclepius, Helm of Radiance, Spectral Armor, Erosion, The World Stone, Doom Orb,
-    Yogi''s Necklace, Jade Scepter.'
+    Asclepius, Helm of Radiance, Spectral Armor, Yogi''s Necklace, Erosion, Dreamer''s
+    Idol, Jade Scepter, The World Stone.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -345,19 +345,19 @@ builds:
       fit: 0.7
     Shifter's Shield:
       total: 0.65
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.86
       pick: 0.12
       fit: 0.41
     Spear of Desolation:
-      total: 0.62
-      efficiency: 0.54
+      total: 0.61
+      efficiency: 0.52
       win: 0.74
       pick: 0.13
       fit: 0.59
     Rod of Tahuti:
       total: 0.56
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.73
       pick: 0.09
       fit: 0.48
@@ -390,14 +390,14 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Shifter''s Shield, Spear of Desolation, Gluttonous Grimoire, Soul Gem,
     Amanita Charm, Kinetic Cuirass, Eye of Providence, Oni Hunter''s Garb, Freya''s
-    Tears, Spear of the Magus, Shield of the Phoenix, Bracer of The Abyss, Death Metal,
-    Rod of Asclepius, Yogi''s Necklace, The Cosmic Horror, Helm of Radiance, Spectral
-    Armor, Bragi''s Harp, Blood-Bound Book, Jade Scepter, Bancroft''s Talon, Erosion,
-    Obsidian Shard, Chronos'' Pendant.'
+    Tears, Spear of the Magus, Shield of the Phoenix, Death Metal, Yogi''s Necklace,
+    Bracer of The Abyss, Rod of Asclepius, The Cosmic Horror, Helm of Radiance, Spectral
+    Armor, Jade Scepter, Bragi''s Harp, Blood-Bound Book, Bancroft''s Talon, Chronos''
+    Pendant, Erosion, Leviathan''s Hide.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.47
-      efficiency: 0.57
+      total: 0.46
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.28
@@ -408,8 +408,8 @@ builds:
       pick: 0.0
       fit: 0.33
     Bragi's Harp:
-      total: 0.46
-      efficiency: 0.47
+      total: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -421,13 +421,13 @@ builds:
       fit: 0.19
     Shifter's Shield:
       total: 0.63
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.86
       pick: 0.12
       fit: 0.28
     Spear of Desolation:
       total: 0.57
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.74
       pick: 0.13
       fit: 0.3
@@ -461,9 +461,9 @@ builds:
     + fit + win/pick). Underrated for this god: Shifter''s Shield, Spear of Desolation,
     Soul Gem, Gluttonous Grimoire, Freya''s Tears, Amanita Charm, Kinetic Cuirass,
     Shield of the Phoenix, Eye of Providence, Oni Hunter''s Garb, Chronos'' Pendant,
-    Screeching Gargoyle, Chandra''s Grace, Spear of the Magus, Spectral Armor, Gladiator''s
-    Shield, Erosion, Yogi''s Necklace, Rod of Asclepius, The Cosmic Horror, Helm of
-    Radiance, Gem of Focus, Prophetic Cloak, Death Metal, Draconic Scale.'
+    Screeching Gargoyle, Chandra''s Grace, Spectral Armor, Spear of the Magus, Yogi''s
+    Necklace, Gladiator''s Shield, Erosion, Rod of Asclepius, The Cosmic Horror, Helm
+    of Radiance, Gem of Focus, Death Metal, Draconic Scale, Prophetic Cloak.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -484,19 +484,19 @@ builds:
       pick: 0.05
       fit: 0.25
     Shifter's Shield:
-      total: 0.65
-      efficiency: 0.56
+      total: 0.64
+      efficiency: 0.55
       win: 0.86
       pick: 0.12
       fit: 0.39
     Spear of Desolation:
-      total: 0.61
-      efficiency: 0.54
+      total: 0.6
+      efficiency: 0.52
       win: 0.74
       pick: 0.13
       fit: 0.53
     Soul Gem:
-      total: 0.53
+      total: 0.52
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -533,11 +533,11 @@ builds:
     Phoenix, Spear of the Magus, Shifter''s Shield, Spear of Desolation, Rod of Asclepius,
     The Cosmic Horror, Helm of Radiance, Erosion, Spectral Armor, Jade Scepter, Draconic
     Scale, Yogi''s Necklace, Chronos'' Pendant, Obsidian Shard, Leviathan''s Hide,
-    Ethereal Staff, Midgardian Mail, Death Metal.'
+    Wish-Granting Pearl, Ethereal Staff, Death Metal.'
   slot_scores:
     Eye of Providence:
       total: 0.52
-      efficiency: 0.63
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -548,19 +548,19 @@ builds:
       pick: 0.2
       fit: 0.31
     Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.61
+      total: 0.52
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.59
     Oni Hunter's Garb:
       total: 0.5
-      efficiency: 0.66
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.32
     Freya's Tears:
-      total: 0.51
+      total: 0.5
       efficiency: 0.59
       win: 0.5
       pick: 0.06

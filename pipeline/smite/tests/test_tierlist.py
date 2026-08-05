@@ -31,44 +31,60 @@ def _community_entry(aspect_win_rate=None, aspect_pick_rate=0.45):
 # god_rankings
 # ---------------------------------------------------------------------------
 
-def test_god_rankings_ours_is_mean_of_core_slot_scores():
+def _indexed(won=200, played=400, analysed=4000):
+    """A community entry carrying the god-level record the index publishes."""
+    return {
+        "source": "community",
+        "god_matches_won": won,
+        "god_matches_played": played,
+        "god_matches_analyzed": analysed,
+    }
+
+
+def test_god_rankings_score_is_the_wilson_bound_on_real_matches():
+    """The ranking comes from outcomes, and nothing this project models goes
+    into it. It used to be the mean blended score of the six items we picked
+    for the god — a number that measured -0.117 against real god strength."""
     gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
-    core = _core_entry({
-        "Jotunn's Revenge": {"total": 0.6},
-        "Tyrfing": {"total": 0.4},
-    })
-    builds = [_build_group("Chiron", builds=[core])]
+    # A core with a very high internal score, which must not reach the output.
+    core = _core_entry({"Jotunn's Revenge": {"total": 0.99}})
+    builds = [_build_group("Chiron", builds=[_indexed(won=220, played=400), core])]
 
     result = tierlist.god_rankings(gods, builds)
 
     assert result == [{
         "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
-        "ours": pytest.approx(0.5), "community": None, "community_matches": None,
+        "score": pytest.approx(tierlist.wilson_lower_bound(220, 400)),
+        "win_rate": pytest.approx(0.55),
+        "matches": 400,
+        "play_share": pytest.approx(0.1),
     }]
 
 
-def test_god_rankings_community_reads_aspect_win_rate():
+def test_god_rankings_ships_the_raw_rate_beside_the_bound():
+    """Both, so a reader can see what confidence cost. The bound is always the
+    more conservative of the two."""
     gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
-    core = _core_entry({"Jotunn's Revenge": {"total": 0.6}})
-    community = _community_entry(aspect_win_rate=0.51)
-    builds = [_build_group("Chiron", builds=[community, core])]
+    builds = [_build_group("Chiron", builds=[_indexed(won=220, played=400)])]
 
-    result = tierlist.god_rankings(gods, builds)
+    row = tierlist.god_rankings(gods, builds)[0]
+
+    assert row["win_rate"] == pytest.approx(0.55)
+    assert row["score"] < row["win_rate"]
+
+
+def test_god_rankings_falls_back_to_the_aspect_rate_before_the_index_existed():
+    gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
+    community = _community_entry(aspect_win_rate=0.51)
+    builds = [_build_group("Chiron", builds=[community])]
+
+    row = tierlist.god_rankings(gods, builds)[0]
 
     # Discounted for how much the aspect is actually played, never raw.
-    assert result[0]["community"] == pytest.approx(
-        tierlist.confident_win_rate(0.51, 0.45))
-    assert result[0]["ours"] == pytest.approx(0.6)
-
-
-def test_god_rankings_no_suggested_core_returns_none_ours():
-    gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
-    # only a non-core archetype, no "core" build present
-    builds = [_build_group("Chiron", builds=[_core_entry({"A": {"total": 0.5}}, archetype="crit")])]
-
-    result = tierlist.god_rankings(gods, builds)
-
-    assert result[0]["ours"] is None
+    assert row["score"] == pytest.approx(tierlist.confident_win_rate(0.51, 0.45))
+    # No denominator to report from the fallback, so none is invented.
+    assert row["matches"] is None
+    assert row["play_share"] is None
 
 
 def test_god_rankings_god_with_no_builds_at_all_is_all_none():
@@ -76,7 +92,7 @@ def test_god_rankings_god_with_no_builds_at_all_is_all_none():
     result = tierlist.god_rankings(gods, builds=[])
     assert result == [{
         "name": "Solo", "role": "Mid", "damage_type": "Magical",
-        "ours": None, "community": None, "community_matches": None,
+        "score": None, "win_rate": None, "matches": None, "play_share": None,
     }]
 
 
@@ -91,12 +107,11 @@ def test_god_rankings_deterministic_order_by_name():
 
 def test_god_rankings_ignores_non_conquest_builds():
     gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
-    core = _core_entry({"A": {"total": 0.9}})
-    builds = [_build_group("Chiron", mode="Joust", builds=[core])]
+    builds = [_build_group("Chiron", mode="Joust", builds=[_indexed()])]
 
     result = tierlist.god_rankings(gods, builds)
 
-    assert result[0]["ours"] is None
+    assert result[0]["score"] is None
 
 
 # ---------------------------------------------------------------------------
@@ -107,63 +122,53 @@ def test_god_rankings_mode_defaults_to_conquest():
     # Calling with no mode arg must behave exactly like mode="Conquest" —
     # existing callers (and the tests above) rely on this default.
     gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
-    core = _core_entry({"A": {"total": 0.8}})
-    builds = [_build_group("Chiron", mode="Conquest", builds=[core])]
+    builds = [_build_group("Chiron", mode="Conquest", builds=[_indexed()])]
 
     default_result = tierlist.god_rankings(gods, builds)
     explicit_result = tierlist.god_rankings(gods, builds, mode="Conquest")
 
-    assert default_result == explicit_result == [{
-        "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
-        "ours": pytest.approx(0.8), "community": None, "community_matches": None,
-    }]
+    assert default_result == explicit_result
+    assert default_result[0]["matches"] == 400
 
 
 def test_god_rankings_joust_mode_reads_joust_builds_not_conquest():
     gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
-    conquest_core = _core_entry({"A": {"total": 0.2}})
-    joust_core = _core_entry({"B": {"total": 0.9}})
     builds = [
-        _build_group("Chiron", mode="Conquest", builds=[conquest_core]),
-        _build_group("Chiron", mode="Joust", builds=[joust_core]),
+        _build_group("Chiron", mode="Conquest", builds=[_indexed(played=400)]),
+        _build_group("Chiron", mode="Joust", builds=[_indexed(played=900)]),
     ]
 
-    conquest_result = tierlist.god_rankings(gods, builds, mode="Conquest")
-    joust_result = tierlist.god_rankings(gods, builds, mode="Joust")
-
-    assert conquest_result[0]["ours"] == pytest.approx(0.2)
-    assert joust_result[0]["ours"] == pytest.approx(0.9)
+    assert tierlist.god_rankings(gods, builds, mode="Conquest")[0]["matches"] == 400
+    assert tierlist.god_rankings(gods, builds, mode="Joust")[0]["matches"] == 900
 
 
-def test_god_rankings_joust_community_is_none_when_god_has_no_joust_community_entry():
-    # SmiteBrain has no Joust win/pick data, so the honest, non-fabricated
-    # behaviour for a god whose Joust build note carries only a "suggested"
-    # entry (no "community" entry at all) is an unranked (None) community
-    # signal for that mode — exactly like the pre-existing Conquest gap.
+def test_god_rankings_joust_is_unranked_without_a_community_entry():
+    """SmiteBrain publishes no Joust results, so the honest answer for a god
+    whose Joust note carries only a suggested build is no placement at all.
+
+    This is the correction: Joust and Arena used to be ranked on the model's
+    own score, which is the signal measured at -0.117 against real strength.
+    """
     gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
     joust_core = _core_entry({"A": {"total": 0.5}})
-    builds = [_build_group("Chiron", mode="Joust", builds=[joust_core])]  # no community entry
+    builds = [_build_group("Chiron", mode="Joust", builds=[joust_core])]
 
     result = tierlist.god_rankings(gods, builds, mode="Joust")
 
-    assert result[0]["community"] is None
-    assert result[0]["ours"] == pytest.approx(0.5)
+    assert result[0]["score"] is None
 
 
 def test_god_rankings_god_with_only_a_conquest_build_is_unranked_in_joust():
-    # A god that has never had its Joust data scraped at all (no Joust build
-    # group in the input whatsoever) must still appear in the Joust ranking
-    # — unranked (ours/community both None), not silently dropped from the
-    # list.
+    # A god that has never had its Joust data scraped at all must still appear
+    # in the Joust ranking — unranked, not silently dropped.
     gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
-    conquest_core = _core_entry({"A": {"total": 0.7}})
-    builds = [_build_group("Chiron", mode="Conquest", builds=[conquest_core])]
+    builds = [_build_group("Chiron", mode="Conquest", builds=[_indexed()])]
 
     result = tierlist.god_rankings(gods, builds, mode="Joust")
 
     assert result == [{
         "name": "Chiron", "role": "Hunter", "damage_type": "Physical",
-        "ours": None, "community": None, "community_matches": None,
+        "score": None, "win_rate": None, "matches": None, "play_share": None,
     }]
 
 
@@ -171,10 +176,12 @@ def test_god_rankings_god_with_only_a_conquest_build_is_unranked_in_joust():
 # item_rankings
 # ---------------------------------------------------------------------------
 
-def test_item_rankings_ours_and_community_mapping():
+def test_item_rankings_ranks_on_the_record_and_carries_value_alongside():
+    """`value` is a property of the item, not a competing ranking. Ranked
+    against the record it correlated -0.267 with item win rate."""
     items = [
         {"name": "Deathbringer", "tier": 3, "efficiency_tier": "undervalued",
-         "meta": {"win_avg": 0.53, "gods": 4}},
+         "meta": {"win_avg": 0.53, "matches": 2000, "matches_won": 1060}},
     ]
     eff = {"Deathbringer": {"score": 0.81}}
 
@@ -182,27 +189,30 @@ def test_item_rankings_ours_and_community_mapping():
 
     assert result == [{
         "name": "Deathbringer", "tier": 3, "efficiency_tier": "undervalued",
-        "ours": 0.81, "community": 0.53,
+        "score": pytest.approx(tierlist.wilson_lower_bound(1060, 2000)),
+        "win_rate": 0.53, "matches": 2000, "value": 0.81,
     }]
 
 
-def test_item_rankings_missing_meta_is_none_community():
+def test_item_rankings_missing_meta_is_none_score():
     items = [{"name": "Bumba's Spear", "tier": 2, "efficiency_tier": "fair"}]
     eff = {"Bumba's Spear": {"score": 0.4}}
 
     result = tierlist.item_rankings(items, eff)
 
-    assert result[0]["community"] is None
+    assert result[0]["score"] is None
+    assert result[0]["matches"] is None
+    # The value figure survives the absence of a record — different question.
+    assert result[0]["value"] == 0.4
 
 
-def test_item_rankings_unscored_item_is_none_ours():
+def test_item_rankings_unpriced_item_has_no_value():
     # e.g. a tier-1 starter, deliberately excluded from the efficiency model
     items = [{"name": "Gilded Arrow", "tier": 1, "efficiency_tier": None}]
-    eff = {}
 
-    result = tierlist.item_rankings(items, eff)
+    result = tierlist.item_rankings(items, {})
 
-    assert result[0]["ours"] is None
+    assert result[0]["value"] is None
 
 
 def test_item_rankings_deterministic_order_by_name():
@@ -318,11 +328,14 @@ def test_build_tierlist_shape_has_gods_and_items_with_both_tiers():
     # reads data.tierlist.gods / .items directly and must not break.
     assert {"gods", "items"} <= set(result)
     assert result["gods"][0]["name"] == "Chiron"
-    assert result["gods"][0]["tier_ours"] == "S"
-    assert result["gods"][0]["tier_community"] == "S"
+    assert result["gods"][0]["tier_score"] == "S"
     assert result["items"][0]["name"] == "Deathbringer"
-    assert result["items"][0]["tier_ours"] == "S"
-    assert result["items"][0]["tier_community"] == "S"
+    assert result["items"][0]["tier_score"] == "S"
+    # One ranking, from outcomes. The model's own score used to sit beside it
+    # as `tier_ours` and lead the site; it measured -0.117 against real god
+    # strength, so it is gone rather than demoted.
+    assert "tier_ours" not in result["gods"][0]
+    assert "ours" not in result["gods"][0]
 
 
 def test_build_tierlist_empty_inputs():
@@ -370,24 +383,22 @@ def test_build_tierlist_legacy_top_level_matches_conquest():
 
 
 def test_build_tierlist_conquest_and_joust_computed_independently():
-    # Same god, deliberately different scores per mode, so a bug that
+    # Same god, deliberately different records per mode, so a bug that
     # accidentally shared state (or always read Conquest) would be caught.
     gods = [{"name": "Chiron", "role": "Hunter", "damage_type": "Physical"}]
-    conquest_core = _core_entry({"A": {"total": 0.9}})
-    joust_core = _core_entry({"A": {"total": 0.1}})
     builds = [
-        _build_group("Chiron", mode="Conquest", builds=[conquest_core]),
-        _build_group("Chiron", mode="Joust", builds=[joust_core]),
+        _build_group("Chiron", mode="Conquest", builds=[_indexed(won=250, played=400)]),
+        _build_group("Chiron", mode="Joust", builds=[_indexed(won=150, played=400)]),
     ]
 
     result = tierlist.build_tierlist(gods, builds, [], {})
 
     conquest_chiron = result["conquest"]["gods"][0]
     joust_chiron = result["joust"]["gods"][0]
-    assert conquest_chiron["ours"] == pytest.approx(0.9)
-    assert joust_chiron["ours"] == pytest.approx(0.1)
-    assert conquest_chiron["tier_ours"] == "S"  # sole ranked entry per mode
-    assert joust_chiron["tier_ours"] == "S"
+    assert conquest_chiron["win_rate"] == pytest.approx(0.625)
+    assert joust_chiron["win_rate"] == pytest.approx(0.375)
+    assert conquest_chiron["tier_score"] == "S"  # sole ranked entry per mode
+    assert joust_chiron["tier_score"] == "S"
 
 
 def test_build_tierlist_god_with_only_conquest_build_is_unranked_not_absent_in_joust():
@@ -395,37 +406,21 @@ def test_build_tierlist_god_with_only_conquest_build_is_unranked_not_absent_in_j
         {"name": "Chiron", "role": "Hunter", "damage_type": "Physical"},
         {"name": "Zeus", "role": "Mid", "damage_type": "Magical"},
     ]
-    chiron_core = _core_entry({"A": {"total": 0.9}})
-    zeus_conquest_core = _core_entry({"A": {"total": 0.5}})
-    zeus_joust_core = _core_entry({"A": {"total": 0.4}})
     builds = [
         # Chiron: Conquest only — never scraped for Joust.
-        _build_group("Chiron", mode="Conquest", builds=[chiron_core]),
-        _build_group("Zeus", mode="Conquest", builds=[zeus_conquest_core]),
-        _build_group("Zeus", mode="Joust", builds=[zeus_joust_core]),
+        _build_group("Chiron", mode="Conquest", builds=[_indexed()]),
+        _build_group("Zeus", mode="Conquest", builds=[_indexed()]),
+        _build_group("Zeus", mode="Joust", builds=[_indexed(won=180, played=400)]),
     ]
 
     result = tierlist.build_tierlist(gods, builds, [], {})
 
     joust_gods = {g["name"]: g for g in result["joust"]["gods"]}
-    # Honest behaviour: Chiron is present (not dropped from the list) but
-    # unranked, since he genuinely has no Joust data at all.
-    assert "Chiron" in joust_gods
-    assert joust_gods["Chiron"]["ours"] is None
-    assert joust_gods["Chiron"]["tier_ours"] is None
-    # Zeus genuinely has Joust data, so he IS ranked.
-    assert joust_gods["Zeus"]["ours"] == pytest.approx(0.4)
-    assert joust_gods["Zeus"]["tier_ours"] is not None
+    assert set(joust_gods) == {"Chiron", "Zeus"}      # present, not dropped
+    assert joust_gods["Chiron"]["score"] is None      # unranked
+    assert joust_gods["Chiron"]["tier_score"] is None
+    assert joust_gods["Zeus"]["tier_score"] == "S"
 
-
-# ---------------------------------------------------------------------------
-# confident_win_rate
-#
-# Every community score is one aspect's win rate, and aspects differ hugely in
-# how much they are played. Raw, the signal was least trustworthy exactly where
-# the viewer leaned hardest on it: it ranks "biggest disagreement first", and
-# the biggest gaps came from the thinnest samples.
-# ---------------------------------------------------------------------------
 
 def test_confident_win_rate_drops_a_barely_played_aspect():
     # 2% pick: the number is a rumour. Unranked, never ranked badly — the same
@@ -472,10 +467,11 @@ def test_god_rankings_leaves_a_thinly_played_god_unranked():
 
     result = tierlist.god_rankings(gods, builds)
 
-    assert result[0]["community"] is None
-    # Our own score survives: the god is still ranked by the model, it just
-    # has nothing trustworthy to be compared against.
-    assert result[0]["ours"] == pytest.approx(0.51)
+    # Unranked, never ranked badly: "no usable data" and "bad" are different
+    # facts. There is no second score to fall back on any more, and that is
+    # the point — the one that used to fill this gap measured -0.117 against
+    # real god strength.
+    assert result[0]["score"] is None
 
 
 # ---------------------------------------------------------------------------
@@ -544,7 +540,7 @@ def test_god_rankings_uses_the_index_record_when_present():
 
     # A god with no aspect at all is now ranked — the per-god scrape skipped
     # 18 of these entirely.
-    assert result[0]["community"] == pytest.approx(tierlist.wilson_lower_bound(445, 703))
+    assert result[0]["score"] == pytest.approx(tierlist.wilson_lower_bound(445, 703))
 
 
 # ---------------------------------------------------------------------------
@@ -590,5 +586,5 @@ def test_item_rankings_uses_the_weighed_score():
     items = [{"name": "Rage", "tier": 3, "efficiency_tier": "fair",
               "meta": {"win_avg": 0.62, "matches": 20000}}]
     result = tierlist.item_rankings(items, {"Rage": {"score": 0.8}})
-    assert result[0]["community"] == pytest.approx(
+    assert result[0]["score"] == pytest.approx(
         tierlist.wilson_lower_bound(round(0.62 * 20000), 20000))

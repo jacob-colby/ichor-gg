@@ -33,36 +33,36 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.77
     Spectral Armor:
-      total: 0.67
-      efficiency: 0.6
+      total: 0.66
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.73
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.75
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.97
     Stampede:
-      total: 0.68
-      efficiency: 0.53
+      total: 0.67
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.83
     Pharaoh's Curse:
-      total: 0.66
+      total: 0.65
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -100,36 +100,36 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.75
     Spectral Armor:
-      total: 0.68
-      efficiency: 0.6
+      total: 0.67
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.75
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.74
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.95
     Stampede:
       total: 0.69
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.85
     Soul Gem:
-      total: 0.79
+      total: 0.78
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -149,8 +149,8 @@ builds:
   - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -165,37 +165,37 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.61
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.74
     Void Shield:
-      total: 0.74
-      efficiency: 0.48
+      total: 0.73
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 1.0
     Void Stone:
-      total: 0.73
-      efficiency: 0.45
+      total: 0.72
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.65
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.77
     Stampede:
-      total: 0.62
-      efficiency: 0.53
+      total: 0.61
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Toxic Blade
+  - Golden Blade
   - Riptalon
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Golden Blade
   - Erosion
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -223,37 +223,37 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.6
-      efficiency: 0.44
+    Golden Blade:
+      total: 0.59
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.63
     Riptalon:
-      total: 0.62
+      total: 0.61
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.67
     Amanita Charm:
       total: 0.79
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.91
     Erosion:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.66
     Pharaoh's Curse:
-      total: 0.66
+      total: 0.65
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -300,31 +300,31 @@ builds:
       pick: 0.0
       fit: 0.48
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.64
     Spectral Armor:
       total: 0.59
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.59
     Erosion:
       total: 0.64
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.61
-      efficiency: 0.53
+      total: 0.6
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
     Soul Gem:
-      total: 0.8
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -360,36 +360,36 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.77
     Spectral Armor:
-      total: 0.67
-      efficiency: 0.6
+      total: 0.66
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.73
     Amanita Charm:
       total: 0.83
-      efficiency: 0.67
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.75
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.97
     Stampede:
-      total: 0.68
-      efficiency: 0.53
+      total: 0.67
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.83
     Pharaoh's Curse:
-      total: 0.66
+      total: 0.65
       efficiency: 0.58
       win: 0.5
       pick: 0.0
