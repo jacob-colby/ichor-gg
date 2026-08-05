@@ -116,9 +116,9 @@ def test_plan_produces_a_fully_determined_baseline():
     assert err is None and cases
     base = cases[0]
     assert base["kwargs"] == {}                      # no items, no penetration
-    assert base["raw"] == pytest.approx(95)          # Death Scythe rank 1
+    assert base["raw"] == pytest.approx(100)         # Soul Reap rank 1
     assert base["protection"] == pytest.approx(20.52, abs=0.01)   # Ymir base physical
-    assert base["predicted"] == pytest.approx(95 * 100 / 120.52, rel=1e-3)
+    assert base["predicted"] == pytest.approx(100 * 100 / 120.52, rel=1e-3)
 
 
 def test_plan_covers_both_kinds_of_penetration():
@@ -158,3 +158,28 @@ def test_plan_reports_an_unknown_god_rather_than_guessing():
     data = cc.REPO_ROOT / "data"
     cases, err = cc.plan_cases(data / "Gods", data / "Items", "Nobody", "Ymir")
     assert cases is None and "Nobody" in err
+
+
+def test_plan_refuses_an_ability_with_a_damage_term_we_cannot_model():
+    """Thanatos's Death Scythe reads "Damage: 95" and "85% Strength" — and also
+    "Gods take 12.5% of their Max Health as bonus Physical Damage". Suggesting
+    it would produce a large error and indict the mitigation formula for
+    something that was never its fault. Soul Reap has no such line."""
+    data = cc.REPO_ROOT / "data"
+    cases, _ = cc.plan_cases(data / "Gods", data / "Items", "Thanatos", "Ymir")
+    labels = " ".join(c["label"] for c in cases)
+    assert "Soul Reap" in labels
+    assert "Death Scythe" not in labels
+
+
+def test_the_clean_ability_filter_reads_the_recovered_colour_coding():
+    """It works because B1 recovered `detail_kinds`. Without them every extra
+    damage line is just prose and the filter has nothing to match on."""
+    from smite import notes
+    god, _ = notes.read_note(cc.REPO_ROOT / "data" / "Gods" / "Thanatos.md")
+    scythe = next(a for a in god["abilities"] if a["name"] == "Death Scythe")
+    assert "detail_kinds" in scythe
+    extra = [d for k, d in zip(scythe["detail_kinds"], scythe["details"])
+             if k in ("physical", "magical")
+             and not d.startswith(("Damage:", "Damage Scaling:"))]
+    assert extra, "the hidden %max-health line must still be visible to the filter"

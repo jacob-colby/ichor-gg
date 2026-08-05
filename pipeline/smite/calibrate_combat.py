@@ -57,22 +57,44 @@ _SCALING = re.compile(r"([\d.]+)%\s+(Strength|Intelligence)")
 
 
 def _first_damaging_ability(god):
-    """The god's first ability with a flat rank-1 damage value and a known
-    damage type. Returns (name, damage, damage_type, scaling) or None."""
+    """The god's first CLEAN damaging ability: one whose damage is exactly a
+    flat rank value plus stat scaling, and nothing else.
+
+    The filter matters more than it looks. Thanatos's Death Scythe reads
+    "Damage: 95" and "Damage Scaling: 85% Strength" — and also "Gods take 12.5%
+    of their Max Health as bonus Physical Damage", which against a real target
+    adds a term this model knows nothing about. An observation taken with it
+    would show a large error and indict the mitigation formula for something
+    that was never the formula's fault. His Soul Reap has no such line, so that
+    is what gets suggested.
+
+    Recognising the extra lines is possible because B1 recovered the wiki's
+    colour coding: a damage-coloured detail that is not `Damage:` or `Damage
+    Scaling:` is exactly the sort of hidden term to avoid.
+
+    Returns (name, damage, damage_type, scaling) or None.
+    """
     for a in god.get("abilities") or []:
         if "Basic Attack" in (a.get("slot") or ""):
             continue
         if not a.get("damage_type"):
             continue
         base = scaling = None
-        for line in a.get("details") or []:
+        extra = False
+        kinds = a.get("detail_kinds") or []
+        details = a.get("details") or []
+        for kind, line in zip(kinds + [None] * len(details), details):
             line = line.strip()
             m = _RANK1.match(line)
             if m and base is None:
                 base = float(m.group(1))
+                continue
             if line.startswith("Damage Scaling:"):
                 scaling = {stat: float(pct) / 100 for pct, stat in _SCALING.findall(line)}
-        if base is not None:
+                continue
+            if kind in ("physical", "magical"):
+                extra = True          # some other damage term we can't model
+        if base is not None and not extra:
             return a["name"], base, a["damage_type"], scaling or {}
     return None
 
