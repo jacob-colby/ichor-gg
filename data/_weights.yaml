@@ -48,6 +48,11 @@ underrated:
 # Turn either on only with a `validate.compute` run to back it up.
 magnitude_fit: false
 damage_fit_blend: 0.0
+# Unconditional passive grants counted as stats — measured, and shipped OFF.
+# 51.0% -> 50.4% coverage. It prices items visibly more sensibly (every
+# Adaptive Stat item stops reading "premium") and ranks them worse. See
+# pipeline/smite/passives.py for the numbers and the likeliest reason.
+price_passives: false
 
 kit_blend: 0.3       # how much the parsed ability-scaling profile skews god-fit (0 = role map only).
                      # Swept 2026-07-22: 0.3 captures the full coverage gain (Susano 80->100%)
