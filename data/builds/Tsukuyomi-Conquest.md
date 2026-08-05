@@ -360,17 +360,17 @@ builds:
       fit: 0.6
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
   - Golden Blade
   - Lernaean Bow
   - Berserker's Shield
-  - Death Metal
-  - Damaru
-  - Demon Blade
+  - Jotunn's Revenge
+  - Riptalon
+  - The Crusher
   flex_slots:
-  - Demon Blade
-  - Golden Blade
+  - The Crusher
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -384,46 +384,263 @@ builds:
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+  rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
+    this god: Riptalon, Golden Blade, Lernaean Bow, The Crusher, Berserker''s Shield,
+    Hydra''s Lament, Tyrfing, Runeforged Hammer, Damaru, The Reaper, Pharaoh''s Curse,
+    Genji''s Guard, Tekko-Kagi, Avenging Blade, Eros'' Bow, Oni Hunter''s Garb, Yogi''s
+    Necklace, Demon Blade, Shogun''s Ofuda, Kinetic Cuirass, Breastplate of Valor,
+    Amanita Charm, Avatar''s Parashu, Barbed Carver, Spectral Armor, Arondight.'
   slot_scores:
     Golden Blade:
-      total: 0.3
+      total: 0.53
       efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.59
     Lernaean Bow:
-      total: 0.33
+      total: 0.53
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.51
     Berserker's Shield:
-      total: 0.31
+      total: 0.52
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.27
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.69
+      win: 0.54
+      pick: 0.39
+      fit: 0.32
+    Riptalon:
+      total: 0.54
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    The Crusher:
+      total: 0.53
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Berserker's Shield
+  - Breastplate of Valor
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Crusher
+  flex_slots:
+  - Breastplate of Valor
+  - Berserker's Shield
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Hydra''s Lament, Genji''s Guard, The
+    Crusher, Breastplate of Valor, Berserker''s Shield, Lernaean Bow, Runeforged Hammer,
+    Arondight, Shield of the Phoenix, Damaru, Chandra''s Grace, Golden Blade, Freya''s
+    Tears, Riptalon, Pendulum Blade, Avenging Blade, Pharaoh''s Curse, Oni Hunter''s
+    Garb, Yogi''s Necklace, The Reaper, Kinetic Cuirass, Screeching Gargoyle, Tekko-Kagi,
+    Tyrfing, Amanita Charm, Eros'' Bow.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.53
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.34
-    Death Metal:
-      total: 0.32
+    Berserker's Shield:
+      total: 0.51
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.17
+    Breastplate of Valor:
+      total: 0.51
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.69
+      win: 0.54
+      pick: 0.39
+      fit: 0.59
+    Hydra's Lament:
+      total: 0.56
+      efficiency: 0.69
+      win: 0.51
+      pick: 0.15
+      fit: 0.55
+    The Crusher:
+      total: 0.52
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+  starter: *id001
+- source: suggested
+  archetype: intelligence
+  slot_order:
+  - Lernaean Bow
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Death Metal
+  - Gluttonous Grimoire
+  - The Crusher
+  flex_slots:
+  - Death Metal
+  - Lernaean Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Off-type Intelligence build — this kit scales on it (efficiency + fit
+    + win/pick). Underrated for this god: Gluttonous Grimoire, Soul Gem, Hydra''s
+    Lament, The Crusher, Death Metal, Lernaean Bow, Bragi''s Harp, Runeforged Hammer,
+    Berserker''s Shield, Ethereal Staff, Spear of the Magus, Bracer of The Abyss,
+    Genji''s Guard, Damaru, Golden Blade, The Cosmic Horror, Spear of Desolation,
+    Chronos'' Pendant, Wish-Granting Pearl, Riptalon, Jade Scepter, Avenging Blade,
+    Bancroft''s Talon, Rod of Asclepius, Blood-Bound Book, The Reaper, Nimble Ring,
+    Triton''s Conch, Breastplate of Valor, Obsidian Shard, Tekko-Kagi, Arondight,
+    Pharaoh''s Curse, Oni Hunter''s Garb, Gem of Focus, Dreamer''s Idol, Helm of Radiance.'
+  slot_scores:
+    Lernaean Bow:
+      total: 0.51
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Damaru:
-      total: 0.33
-      efficiency: 0.66
+      fit: 0.43
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.69
+      win: 0.54
+      pick: 0.39
+      fit: 0.46
+    Hydra's Lament:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.51
+      pick: 0.15
+      fit: 0.39
+    Death Metal:
+      total: 0.53
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.31
-      efficiency: 0.45
+      fit: 0.54
+    Gluttonous Grimoire:
+      total: 0.55
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
-      fit: 1.0
-  fun: true
+      fit: 0.51
+    The Crusher:
+      total: 0.53
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+  starter: *id001
+- source: suggested
+  archetype: str-int
+  slot_order:
+  - Lernaean Bow
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Death Metal
+  - Gluttonous Grimoire
+  - The Crusher
+  flex_slots:
+  - Hydra's Lament
+  - Lernaean Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
+    + fit + win/pick). Underrated for this god: Gluttonous Grimoire, The Crusher,
+    Death Metal, Hydra''s Lament, Lernaean Bow, Soul Gem, Bragi''s Harp, Runeforged
+    Hammer, Berserker''s Shield, Damaru, Golden Blade, Ethereal Staff, Spear of the
+    Magus, Bracer of The Abyss, The Reaper, Avenging Blade, Riptalon, The Cosmic Horror,
+    Tekko-Kagi, Genji''s Guard, Triton''s Conch, Wish-Granting Pearl, Tyrfing, Jade
+    Scepter, Nimble Ring, Avatar''s Parashu, Bancroft''s Talon, Rod of Asclepius,
+    Blood-Bound Book, Obsidian Shard, Pharaoh''s Curse, Spear of Desolation, Oni Hunter''s
+    Garb, Dreamer''s Idol, Chronos'' Pendant, Arondight, Yogi''s Necklace.'
+  slot_scores:
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.69
+      win: 0.54
+      pick: 0.39
+      fit: 0.44
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.69
+      win: 0.51
+      pick: 0.15
+      fit: 0.36
+    Death Metal:
+      total: 0.54
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Gluttonous Grimoire:
+      total: 0.55
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    The Crusher:
+      total: 0.55
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
   starter: *id001
 - source: suggested
   archetype: model

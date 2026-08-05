@@ -25,7 +25,13 @@ const ARCHETYPE_LABEL: Record<string, string> = {
   burst: "Burst",
   bruiser: "Bruiser",
   "anti-tank": "Anti-tank",
-  "fun-crit": "Fun crit",
+  "attack-speed": "Attack speed",
+  cooldown: "Cooldown",
+  // Off-type power builds, offered only where the god's own scaling supports
+  // them — see `requires_scaling` in _weights.yaml.
+  strength: "Strength",
+  intelligence: "Intelligence",
+  "str-int": "Str + Int",
 };
 
 export function tabLabel(entry: BuildEntry): string {

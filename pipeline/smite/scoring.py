@@ -425,7 +425,17 @@ def _god_tokens(god):
 
 def eligible_flavors(god, weights):
     """Flavor names whose damage_types (or null=any) include the god's damage
-    type, and whose match_any (or null=any) intersects the god's token set."""
+    type, whose match_any (or null=any) intersects the god's token set, and
+    whose `requires_scaling` thresholds the god's own kit actually meets.
+
+    `requires_scaling` {stat: min_weight} is what keeps the off-type builds
+    honest. A Strength build on a magical god is a real option for Sol, whose
+    abilities scale 1.00 on Strength, and nonsense for Scylla, who scales 0.28.
+    Gating on the god's measured coefficients rather than on a role label means
+    the tab appears exactly where the kit supports it — and it is why Chiron
+    gets no Intelligence build despite Chiron Mid being a thing people try: his
+    kit scales 0.05 on Intelligence, so the model would be lying to offer it.
+    """
     out = []
     for name, f in (weights.get("flavors") or {}).items():
         dts = f.get("damage_types")
@@ -434,6 +444,12 @@ def eligible_flavors(god, weights):
         match_any = f.get("match_any")
         if match_any and not (_god_tokens(god) & set(match_any)):
             continue
+        needs = f.get("requires_scaling")
+        if needs:
+            measured = damage_value.stat_weights(god)
+            if not measured or any(measured.get(stat, 0.0) < floor
+                                   for stat, floor in needs.items()):
+                continue
         out.append(name)
     return out
 

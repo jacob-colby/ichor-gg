@@ -331,6 +331,266 @@ builds:
       fit: 0.57
   starter: *id001
 - source: suggested
+  archetype: attack-speed
+  slot_order:
+  - Tyrfing
+  - The Reaper
+  - Riptalon
+  - Demon Blade
+  - The Crusher
+  - Pharaoh's Curse
+  flex_slots:
+  - The Crusher
+  - Demon Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    The Reaper:
+      total: 0.59
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Riptalon:
+      total: 0.74
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+    Demon Blade:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    The Crusher:
+      total: 0.53
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Pharaoh's Curse:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Jotunn's Revenge
+  - Shield of the Phoenix
+  - Hydra's Lament
+  - The Crusher
+  - Pharaoh's Curse
+  flex_slots:
+  - Genji's Guard
+  - The Crusher
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Shield of the Phoenix:
+      total: 0.57
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Hydra's Lament:
+      total: 0.58
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    The Crusher:
+      total: 0.5
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Pharaoh's Curse:
+      total: 0.51
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+  starter: *id001
+- source: suggested
+  archetype: intelligence
+  slot_order:
+  - Divine Ruin
+  - Jotunn's Revenge
+  - Bragi's Harp
+  - Death Metal
+  - Soul Gem
+  - Triton's Conch
+  flex_slots:
+  - Jotunn's Revenge
+  - Divine Ruin
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
+    Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.53
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    Bragi's Harp:
+      total: 0.57
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Death Metal:
+      total: 0.58
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Soul Gem:
+      total: 0.81
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Triton's Conch:
+      total: 0.55
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+  starter: *id001
+- source: suggested
+  archetype: str-int
+  slot_order:
+  - Jotunn's Revenge
+  - Bragi's Harp
+  - Death Metal
+  - The Crusher
+  - Soul Gem
+  - Triton's Conch
+  flex_slots:
+  - Triton's Conch
+  - Jotunn's Revenge
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Bragi's Harp:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Death Metal:
+      total: 0.6
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    The Crusher:
+      total: 0.56
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Soul Gem:
+      total: 0.8
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.98
+    Triton's Conch:
+      total: 0.56
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+  starter: *id001
+- source: suggested
   archetype: model
   slot_order:
   - The Reaper

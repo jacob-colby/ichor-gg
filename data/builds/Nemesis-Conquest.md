@@ -293,70 +293,144 @@ builds:
       fit: 0.7
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Berserker's Shield
-  - Death Metal
-  - Damaru
-  - Demon Blade
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Riptalon
+  - The Crusher
   flex_slots:
-  - Demon Blade
-  - Golden Blade
+  - Lernaean Bow
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+  rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
+    this god: Riptalon, Jotunn''s Revenge, Golden Blade, Lernaean Bow, The Crusher,
+    Berserker''s Shield, Tyrfing, Runeforged Hammer, Damaru, The Reaper, Pharaoh''s
+    Curse, Genji''s Guard, Tekko-Kagi, Avenging Blade, Heartseeker, Eros'' Bow, Oni
+    Hunter''s Garb, Yogi''s Necklace, Demon Blade, Shogun''s Ofuda, Kinetic Cuirass,
+    Breastplate of Valor, Amanita Charm, Avatar''s Parashu, Barbed Carver, Spectral
+    Armor, Arondight.'
   slot_scores:
     Golden Blade:
-      total: 0.3
+      total: 0.53
       efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.59
     Lernaean Bow:
-      total: 0.33
+      total: 0.53
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Berserker's Shield:
-      total: 0.31
+      fit: 0.51
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.53
+      pick: 0.14
+      fit: 0.32
+    Hydra's Lament:
+      total: 0.58
+      efficiency: 0.69
+      win: 0.63
+      pick: 0.34
+      fit: 0.28
+    Riptalon:
+      total: 0.54
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    The Crusher:
+      total: 0.53
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Shifter's Shield
+  - The Crusher
+  flex_slots:
+  - Shifter's Shield
+  - Breastplate of Valor
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Genji''s Guard,
+    The Crusher, Breastplate of Valor, Berserker''s Shield, Lernaean Bow, Runeforged
+    Hammer, Arondight, Shield of the Phoenix, Damaru, Chandra''s Grace, Golden Blade,
+    Freya''s Tears, Riptalon, Pendulum Blade, Avenging Blade, Pharaoh''s Curse, Oni
+    Hunter''s Garb, Yogi''s Necklace, The Reaper, Heartseeker, Kinetic Cuirass, Screeching
+    Gargoyle, Tekko-Kagi, Tyrfing, Amanita Charm, Eros'' Bow.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.53
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.34
-    Death Metal:
-      total: 0.32
-      efficiency: 0.65
+    Breastplate of Valor:
+      total: 0.51
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Damaru:
-      total: 0.33
-      efficiency: 0.66
+      fit: 0.34
+    Jotunn's Revenge:
+      total: 0.58
+      efficiency: 0.69
+      win: 0.53
+      pick: 0.14
+      fit: 0.59
+    Hydra's Lament:
+      total: 0.62
+      efficiency: 0.69
+      win: 0.63
+      pick: 0.34
+      fit: 0.55
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.58
+      win: 0.68
+      pick: 0.09
+      fit: 0.0
+    The Crusher:
+      total: 0.52
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.31
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-  fun: true
+      fit: 0.34
   starter: *id001
 - source: suggested
   archetype: model

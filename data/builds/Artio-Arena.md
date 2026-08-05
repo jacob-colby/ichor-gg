@@ -201,70 +201,134 @@ builds:
       fit: 0.73
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
-  - Golden Blade
-  - Lernaean Bow
-  - Death Metal
-  - Damaru
-  - Demon Blade
-  - Pharaoh's Curse
+  - Bracer of The Abyss
+  - Nimble Ring
+  - Bragi's Harp
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
   flex_slots:
-  - Golden Blade
-  - Pharaoh's Curse
+  - Nimble Ring
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Bracer of The Abyss:
+      total: 0.42
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.22
+    Nimble Ring:
+      total: 0.42
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Bragi's Harp:
+      total: 0.48
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Spectral Armor:
+      total: 0.61
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Amanita Charm:
+      total: 0.8
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.93
+    Erosion:
+      total: 0.62
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Freya's Tears
+  - Spectral Armor
+  - Erosion
+  - Stampede
+  - Soul Gem
+  flex_slots:
+  - Genji's Guard
+  - Stampede
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.65
-      efficiency: 0.62
+    Genji's Guard:
+      total: 0.62
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Lernaean Bow:
-      total: 0.71
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
-    Death Metal:
-      total: 0.65
-      efficiency: 0.65
+      fit: 0.5
+    Freya's Tears:
+      total: 0.62
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Damaru:
-      total: 0.66
+    Spectral Armor:
+      total: 0.63
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.73
-      efficiency: 0.45
+      fit: 0.59
+    Erosion:
+      total: 0.65
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Stampede:
+      total: 0.62
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Soul Gem:
+      total: 0.81
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Pharaoh's Curse:
-      total: 0.64
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-  fun: true
   starter: *id001
 - source: suggested
   archetype: model

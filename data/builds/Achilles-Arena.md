@@ -201,70 +201,134 @@ builds:
       fit: 0.9
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Lernaean Bow
-  - Death Metal
-  - Damaru
-  - Demon Blade
+  - Riptalon
+  - Eros' Bow
+  - Amanita Charm
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
-  - Golden Blade
-  - Pharaoh's Curse
+  - Shogun's Ofuda
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Erosion — magical protection
+    swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.67
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Riptalon:
+      total: 0.71
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+    Eros' Bow:
+      total: 0.62
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Amanita Charm:
+      total: 0.75
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Pharaoh's Curse:
+      total: 0.68
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Shogun's Ofuda:
+      total: 0.65
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Jotunn's Revenge
+  - Shield of the Phoenix
+  - Hydra's Lament
+  - Spectral Armor
+  - Erosion
+  flex_slots:
+  - Erosion
+  - Genji's Guard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+  rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.65
-      efficiency: 0.62
+    Genji's Guard:
+      total: 0.58
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Lernaean Bow:
-      total: 0.71
-      efficiency: 0.65
+      fit: 0.43
+    Jotunn's Revenge:
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.77
-    Death Metal:
-      total: 0.65
-      efficiency: 0.65
+      fit: 0.59
+    Shield of the Phoenix:
+      total: 0.72
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Damaru:
-      total: 0.66
+      fit: 0.82
+    Hydra's Lament:
+      total: 0.62
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Spectral Armor:
+      total: 0.59
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.73
-      efficiency: 0.45
+      fit: 0.52
+    Erosion:
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    Pharaoh's Curse:
-      total: 0.64
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-  fun: true
+      fit: 0.61
   starter: *id001
 - source: suggested
   archetype: model

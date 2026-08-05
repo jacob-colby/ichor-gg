@@ -433,6 +433,146 @@ builds:
       fit: 0.33
   starter: *id001
 - source: suggested
+  archetype: attack-speed
+  slot_order:
+  - Golden Blade
+  - Lernaean Bow
+  - Tyrfing
+  - Riptalon
+  - The Crusher
+  - Deathbringer
+  flex_slots:
+  - Golden Blade
+  - Lernaean Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
+    this god: Riptalon, The Crusher, Golden Blade, Lernaean Bow, Berserker''s Shield,
+    Jotunn''s Revenge, Hydra''s Lament, Damaru, Runeforged Hammer, Genji''s Guard,
+    Pharaoh''s Curse, The Reaper, Avenging Blade, Tekko-Kagi, Breastplate of Valor,
+    Oni Hunter''s Garb, Yogi''s Necklace, Eros'' Bow, Demon Blade, Kinetic Cuirass,
+    Heartseeker, Amanita Charm, Arondight, Shogun''s Ofuda, Spectral Armor, Avatar''s
+    Parashu, Barbed Carver.'
+  slot_scores:
+    Golden Blade:
+      total: 0.52
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Lernaean Bow:
+      total: 0.52
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Tyrfing:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.6
+      fit: 0.61
+    Riptalon:
+      total: 0.59
+      efficiency: 0.6
+      win: 0.64
+      pick: 0.14
+      fit: 0.59
+    The Crusher:
+      total: 0.52
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Deathbringer:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.75
+      pick: 0.12
+      fit: 0.33
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Jotunn's Revenge
+  - Tyrfing
+  - Hydra's Lament
+  - Riptalon
+  - Deathbringer
+  flex_slots:
+  - Deathbringer
+  - Genji's Guard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Riptalon, Jotunn''s Revenge, Hydra''s
+    Lament, Genji''s Guard, The Crusher, Berserker''s Shield, Lernaean Bow, Breastplate
+    of Valor, Runeforged Hammer, Damaru, Arondight, Golden Blade, Shield of the Phoenix,
+    Chandra''s Grace, Pharaoh''s Curse, Freya''s Tears, The Reaper, Oni Hunter''s
+    Garb, Avenging Blade, Yogi''s Necklace, Kinetic Cuirass, Amanita Charm, Pendulum
+    Blade, Eros'' Bow, Tekko-Kagi, Spectral Armor, Screeching Gargoyle.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.6
+      fit: 0.37
+    Hydra's Lament:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Riptalon:
+      total: 0.56
+      efficiency: 0.6
+      win: 0.64
+      pick: 0.14
+      fit: 0.37
+    Deathbringer:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.75
+      pick: 0.12
+      fit: 0.27
+  starter: *id001
+- source: suggested
   archetype: model
   slot_order:
   - Lernaean Bow

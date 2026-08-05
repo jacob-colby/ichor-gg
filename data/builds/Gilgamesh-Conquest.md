@@ -293,70 +293,145 @@ builds:
       fit: 0.33
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Berserker's Shield
-  - Death Metal
-  - Damaru
-  - Demon Blade
+  - Hide of the Nemean Lion
+  - Runeforged Hammer
+  - The Crusher
+  - Shogun's Ofuda
   flex_slots:
-  - Demon Blade
-  - Golden Blade
+  - The Crusher
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+  rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
+    this god: Shogun''s Ofuda, Golden Blade, The Crusher, Runeforged Hammer, Riptalon,
+    Lernaean Bow, Pharaoh''s Curse, Jotunn''s Revenge, Hydra''s Lament, Amanita Charm,
+    Oni Hunter''s Garb, Genji''s Guard, Avenging Blade, Eye of Providence, Tyrfing,
+    Damaru, Yogi''s Necklace, Spectral Armor, Eros'' Bow, The Reaper, Breastplate
+    of Valor, Eye of the Storm, Shield of the Phoenix, Mantle Of Discord, Shield Splitter,
+    Tekko-Kagi, Kinetic Cuirass.'
   slot_scores:
     Golden Blade:
-      total: 0.3
+      total: 0.53
       efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Lernaean Bow:
-      total: 0.33
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
+      fit: 0.56
     Berserker's Shield:
-      total: 0.31
+      total: 0.56
       efficiency: 0.74
       win: 0.51
       pick: 0.22
-      fit: 0.34
-    Death Metal:
-      total: 0.32
-      efficiency: 0.65
+      fit: 0.38
+    Hide of the Nemean Lion:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.71
+      pick: 0.07
+      fit: 0.18
+    Runeforged Hammer:
+      total: 0.52
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Damaru:
-      total: 0.33
-      efficiency: 0.66
+      fit: 0.32
+    The Crusher:
+      total: 0.52
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.31
-      efficiency: 0.45
+      fit: 0.32
+    Shogun's Ofuda:
+      total: 0.54
+      efficiency: 0.57
+      win: 0.62
+      pick: 0.12
+      fit: 0.38
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Hide of the Nemean Lion
+  - Shogun's Ofuda
+  flex_slots:
+  - Genji's Guard
+  - Shogun's Ofuda
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Hydra''s Lament,
+    Genji''s Guard, Shogun''s Ofuda, The Crusher, Runeforged Hammer, Breastplate of
+    Valor, Shield of the Phoenix, Amanita Charm, Lernaean Bow, Oni Hunter''s Garb,
+    Pharaoh''s Curse, Freya''s Tears, Chandra''s Grace, Golden Blade, Eye of Providence,
+    Avenging Blade, Yogi''s Necklace, Spectral Armor, Damaru, Arondight, Riptalon,
+    Eros'' Bow, Mantle Of Discord, Gladiator''s Shield, Eye of the Storm, Kinetic
+    Cuirass.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 1.0
-  fun: true
+      fit: 0.33
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.74
+      win: 0.51
+      pick: 0.22
+      fit: 0.3
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Hide of the Nemean Lion:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.71
+      pick: 0.07
+      fit: 0.17
+    Shogun's Ofuda:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.62
+      pick: 0.12
+      fit: 0.3
   starter: *id001
 - source: suggested
   archetype: model

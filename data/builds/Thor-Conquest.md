@@ -362,21 +362,21 @@ builds:
       fit: 0.72
   starter: *id001
 - source: suggested
-  archetype: fun-crit
+  archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Berserker's Shield
-  - Death Metal
-  - Damaru
-  - Demon Blade
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Riptalon
+  - The Crusher
   flex_slots:
-  - Demon Blade
-  - Golden Blade
+  - Riptalon
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -386,46 +386,120 @@ builds:
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
-  rationale: For fun — deliberately fights this god's kit (Crit / attack-speed party
-    build). Scored on gold-value + flavor fit only; not meta-checked.
+  rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
+    this god: Berserker''s Shield, Golden Blade, Riptalon, The Crusher, Lernaean Bow,
+    Runeforged Hammer, Pharaoh''s Curse, Kinetic Cuirass, Amanita Charm, Oni Hunter''s
+    Garb, Genji''s Guard, Tyrfing, Avenging Blade, Eye of Providence, Shogun''s Ofuda,
+    Spectral Armor, Yogi''s Necklace, Eros'' Bow, The Reaper, Breastplate of Valor,
+    Eye of the Storm, Tekko-Kagi, Damaru, Shield of the Phoenix, Shield Splitter,
+    Mantle Of Discord.'
   slot_scores:
     Golden Blade:
-      total: 0.3
+      total: 0.54
       efficiency: 0.62
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Lernaean Bow:
-      total: 0.33
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
+      fit: 0.62
     Berserker's Shield:
-      total: 0.31
+      total: 0.55
       efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.34
-    Death Metal:
-      total: 0.32
-      efficiency: 0.65
+      fit: 0.42
+    Jotunn's Revenge:
+      total: 0.56
+      efficiency: 0.69
+      win: 0.55
+      pick: 0.55
+      fit: 0.27
+    Hydra's Lament:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.56
+      pick: 0.24
+      fit: 0.25
+    Riptalon:
+      total: 0.52
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Damaru:
-      total: 0.33
-      efficiency: 0.66
+      fit: 0.59
+    The Crusher:
+      total: 0.52
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Demon Blade:
-      total: 0.31
-      efficiency: 0.45
+      fit: 0.35
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Jotunn's Revenge
+  - Shield of the Phoenix
+  - Hydra's Lament
+  - The Crusher
+  flex_slots:
+  - Shield of the Phoenix
+  - The Crusher
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Genji''s Guard, Breastplate of Valor,
+    Shield of the Phoenix, The Crusher, Runeforged Hammer, Berserker''s Shield, Freya''s
+    Tears, Kinetic Cuirass, Amanita Charm, Chandra''s Grace, Oni Hunter''s Garb, Arondight,
+    Eye of Providence, Avenging Blade, Spectral Armor, Yogi''s Necklace, Gladiator''s
+    Shield, Lernaean Bow, Pharaoh''s Curse, Screeching Gargoyle, Pendulum Blade, Golden
+    Blade, Eye of the Storm, Mantle Of Discord, Shifter''s Shield, Shield Splitter.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 1.0
-  fun: true
+      fit: 0.44
+    Breastplate of Valor:
+      total: 0.53
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Jotunn's Revenge:
+      total: 0.61
+      efficiency: 0.69
+      win: 0.55
+      pick: 0.55
+      fit: 0.6
+    Shield of the Phoenix:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Hydra's Lament:
+      total: 0.59
+      efficiency: 0.69
+      win: 0.56
+      pick: 0.24
+      fit: 0.56
+    The Crusher:
+      total: 0.52
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
   starter: *id001
 - source: suggested
   archetype: model
