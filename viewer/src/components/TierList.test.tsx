@@ -243,3 +243,41 @@ describe("TierList — a card fills its grid cell", () => {
     expect(screen.getByRole("link", { name: /^Ymir/ }).className).toContain("w-full");
   });
 });
+
+/* A bookmark is the reader's own mark on their own list. It highlights, and it
+ * deliberately does NOT reorder — the tier list ranks on outcomes and sorting
+ * a saved god upward would undo exactly that. */
+describe("TierList — bookmarked gods", () => {
+  beforeEach(() => localStorage.setItem("smite:pinnedGods", JSON.stringify(["Ra"])));
+
+  it("marks a bookmarked god and leaves the rest alone", () => {
+    render(<TierList tierlist={{ gods, items }} />);
+    expect(screen.getByRole("link", { name: /^Ra:/ })).toHaveAccessibleName(/bookmarked/i);
+    expect(screen.getByRole("link", { name: /^Ymir:/ })).not.toHaveAccessibleName(/bookmarked/i);
+  });
+
+  it("keeps gold through hover instead of losing it", () => {
+    // `hover:border-line-strong` as a constant in the base string beat
+    // `border-gold/40`, so a bookmarked card went grey the moment you pointed
+    // at it. It now hovers to MORE gold.
+    render(<TierList tierlist={{ gods, items }} />);
+    const cls = screen.getByRole("link", { name: /^Ra:/ }).className;
+    expect(cls).toContain("border-gold/40");
+    expect(cls).toContain("hover:border-gold/70");
+    expect(cls).not.toContain("hover:border-line-strong");
+  });
+
+  it("does not reorder the ranking", () => {
+    render(<TierList tierlist={{ gods, items }} />);
+    // Ymir outranks Ra on score and must stay first despite Ra being saved.
+    const names = within(screen.getByTestId("band-S")).getAllByRole("link").map((a) => a.textContent);
+    expect(names[0]).toMatch(/Ymir/);
+  });
+
+  it("never marks an item, which cannot be bookmarked", () => {
+    localStorage.setItem("smite:pinnedGods", JSON.stringify(["Rage"]));
+    render(<TierList tierlist={{ gods, items }} />);
+    fireEvent.click(screen.getByRole("button", { name: "Items" }));
+    expect(screen.getByRole("link", { name: /^Rage:/ })).not.toHaveAccessibleName(/bookmarked/i);
+  });
+});

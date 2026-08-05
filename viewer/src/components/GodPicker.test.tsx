@@ -76,7 +76,7 @@ describe("GodPicker — the subject switcher", () => {
   it("groups pinned gods above the rest, without duplicating them", () => {
     localStorage.setItem("smite:pinnedGods", JSON.stringify(["Cupid"]));
     render(picker());
-    expect(screen.getByText(/^Pinned$/)).toBeInTheDocument();
+    expect(screen.getByText(/^Bookmarked$/)).toBeInTheDocument();
     expect(screen.getAllByRole("button", { name: "Select Cupid" })).toHaveLength(1);
   });
 
@@ -86,7 +86,7 @@ describe("GodPicker — the subject switcher", () => {
     render(picker());
     const select = screen.getByRole("button", { name: "Select Ymir" });
     expect(within(select).queryByRole("button")).not.toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Pin Ymir" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Bookmark Ymir" })).toBeInTheDocument();
   });
 
   it("is a real dialog: labelled, modal, focus moved in, Escape closes", () => {

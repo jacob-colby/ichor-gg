@@ -14,6 +14,8 @@ import type { God, Item } from "../types";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { iconSlug } from "../lib/builds";
 import { searchSubjects, type Hit } from "../lib/subjectSearch";
+import { usePins } from "../lib/pins";
+import { BookmarkIcon } from "./BookmarkIcon";
 
 function Art({ hit }: { hit: Hit }) {
   const [failed, setFailed] = useState(false);
@@ -36,8 +38,13 @@ export function SubjectSearch({ gods, items }: { gods: God[]; items: Item[] }) {
   const [active, setActive] = useState(0);
   const [open, setOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const results = useMemo(() => searchSubjects(gods, items, q), [gods, items, q]);
-  const expanded = open && q.trim().length > 0;
+  const { pins } = usePins();
+  const results = useMemo(
+    () => searchSubjects(gods, items, q, pins), [gods, items, q, pins]);
+  // Opens on focus with nothing typed too, because with nothing typed the list
+  // is the reader's own bookmarks — the fastest way back to a god they play.
+  // Still nothing to show when they have none, so an empty box stays quiet.
+  const expanded = open && (q.trim().length > 0 || results.length > 0);
 
   // A shrinking result list must never leave the cursor past its end.
   useEffect(() => { setActive(0); }, [q]);
@@ -116,12 +123,19 @@ export function SubjectSearch({ gods, items }: { gods: God[]; items: Item[] }) {
       </form>
 
       <p aria-live="polite" className="sr-only">
-        {expanded ? `${results.length} result${results.length === 1 ? "" : "s"}` : ""}
+        {!expanded ? "" : q.trim()
+          ? `${results.length} result${results.length === 1 ? "" : "s"}`
+          : `${results.length} bookmarked god${results.length === 1 ? "" : "s"}`}
       </p>
 
       {expanded && (
         <ul id="subject-search-results" role="listbox" aria-label="Search results"
           className="absolute z-40 mt-1.5 flex w-full flex-col gap-0.5 rounded-md border border-line-strong bg-bg2 p-1.5 shadow-card">
+          {!q.trim() && results.length > 0 && (
+            <li role="presentation" className="px-2 pb-1 pt-0.5">
+              <span className="font-mono text-label uppercase tracking-[0.1em] text-faint">Your bookmarks</span>
+            </li>
+          )}
           {results.length === 0 ? (
             <li className="px-2.5 py-2 text-small text-muted">
               Nothing called “{q.trim()}” — no god and no item. Check the spelling.
@@ -134,6 +148,11 @@ export function SubjectSearch({ gods, items }: { gods: God[]; items: Item[] }) {
                 className={`press flex w-full items-center gap-2.5 rounded-sm px-2 py-1.5 text-left transition-colors duration-[150ms] ease-standard ${
                   i === active ? "bg-bg3" : ""}`}>
                 <Art hit={hit} />
+                {hit.bookmarked && (
+                  <span className="shrink-0 text-gold" title="Bookmarked">
+                    <BookmarkIcon filled size={11} />
+                  </span>
+                )}
                 <span className="truncate font-display text-small font-semibold text-ink">{hit.name}</span>
                 {hit.note && (
                   <span className={`ml-auto shrink-0 text-label ${

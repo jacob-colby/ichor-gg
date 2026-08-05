@@ -15,15 +15,8 @@ import type { God } from "../types";
 import { filterGods, sortGods, type GodFilter } from "../lib/godFilters";
 import { iconSlug } from "../lib/builds";
 import { usePins } from "../lib/pins";
+import { BookmarkIcon } from "./BookmarkIcon";
 import { LANES, godLane, laneTextClass, type Lane } from "../lib/roleAccent";
-
-function PinIcon({ filled }: { filled: boolean }) {
-  return (
-    <svg viewBox="0 0 24 24" width="13" height="13" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 17v5" /><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2h1z" />
-    </svg>
-  );
-}
 
 const LANE_DOT: Record<Lane, string> = {
   Solo: "bg-role-warrior",
@@ -51,7 +44,9 @@ function GodCard({ god, selected, pinned, onSelect, onTogglePin, onRemove }: {
         onClick={onSelect}
         className={`plane press flex w-full cursor-pointer flex-col items-center gap-1 rounded-lg border p-1.5 pt-2 transition-colors duration-[180ms] ease-standard ${
           selected ? "is-selected border-gold bg-bg3"
-          : pinned ? "border-gold/40 bg-gradient-to-b from-bg3 to-bg2"
+          // Hover belongs to every branch. Left off, a bookmarked card was the
+          // one card on the grid that didn't answer the pointer.
+          : pinned ? "border-gold/40 bg-gradient-to-b from-bg3 to-bg2 hover:border-gold/70"
           : "border-line bg-bg2 hover:border-line-strong"}`}
       >
         <img
@@ -74,11 +69,11 @@ function GodCard({ god, selected, pinned, onSelect, onTogglePin, onRemove }: {
       <button
         type="button"
         onClick={(e) => { e.stopPropagation(); onTogglePin(); }}
-        aria-label={pinned ? `Unpin ${god.name}` : `Pin ${god.name}`}
+        aria-label={pinned ? `Remove ${god.name} from your bookmarks` : `Bookmark ${god.name}`}
         className={`absolute right-0 top-0 flex h-8 w-8 items-center justify-center rounded-sm transition-colors ${
           pinned ? "text-gold" : "text-muted hover:text-ink-soft focus-visible:text-ink-soft"}`}
       >
-        <PinIcon filled={pinned} />
+        <BookmarkIcon filled={pinned} />
       </button>
       {onRemove && (
         <button
@@ -226,7 +221,7 @@ export function GodPickerDialog({ gods, selectedGod, onPick, onClose, onRemove }
             <>
               {pinned.length > 0 && (
                 <>
-                  <div className="mb-1.5 font-mono text-label uppercase tracking-[0.1em] text-gold">Pinned</div>
+                  <div className="mb-1.5 font-mono text-label uppercase tracking-[0.1em] text-gold">Bookmarked</div>
                   <div className="mb-4 grid grid-cols-4 gap-2 sm:grid-cols-6 lg:grid-cols-8">
                     {pinned.map((g) => (
                       <GodCard key={g.name} god={g} selected={g.name === selectedGod} pinned
