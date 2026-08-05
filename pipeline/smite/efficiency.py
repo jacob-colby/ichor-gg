@@ -46,6 +46,12 @@ def stat_key(name, raw):
     return f"{name} %" if str(raw).strip().endswith("%") else name
 
 
+# Whether unconditional passive grants count as stats. OFF: it prices items
+# more sensibly and ranks them worse — see `passives.py` for the numbers and
+# the explanation. Flipped by `price_passives` in _weights.yaml.
+PRICE_PASSIVES = False
+
+
 def item_stat_values(item):
     """`{column name: float}` for one item — the canonical read of its stats.
 
@@ -57,6 +63,9 @@ def item_stat_values(item):
         val = parse_stat_value(raw)
         if val is not None:
             out[stat_key(name, raw)] = val
+    if PRICE_PASSIVES:
+        from smite import passives
+        out = passives.effective_stats(item, out)
     return out
 
 
