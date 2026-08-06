@@ -281,3 +281,62 @@ describe("TierList — bookmarked gods", () => {
     expect(screen.getByRole("link", { name: /^Rage:/ })).not.toHaveAccessibleName(/bookmarked/i);
   });
 });
+
+/* An aspect rewrites part of a kit and often the role with it, so "Sol" and
+ * "Sol with Aspect of Conflagration" are different subjects, not one row with
+ * a variant. They rank on the SAME Wilson bound as everything else here: an
+ * aspect's sample is derived as its god's matches times how often it's taken. */
+describe("TierList — aspects as their own subject", () => {
+  const aspects = [
+    { name: "Loki", god: "Loki", aspect: "Aspect of Agony", role: "Jungle",
+      score: 0.53, win_rate: 0.62, matches: 126, play_share: 0.28, tier_score: "S" },
+    { name: "Sol", god: "Sol", aspect: "Aspect of Conflagration", role: "Mid Carry",
+      score: 0.50, win_rate: 0.59, matches: 139, play_share: 0.31, tier_score: "A" },
+    { name: "Achilles", god: "Achilles", aspect: "Aspect of Prowess", role: "Solo",
+      score: null, win_rate: 0.40, matches: 15, play_share: 0.06, tier_score: null },
+  ] as unknown as import("../types").AspectTierEntry[];
+  const full = { gods, items, conquest: { gods, items, aspects } };
+
+  it("offers Aspects beside Gods and Items", () => {
+    render(<TierList tierlist={full} />);
+    expect(screen.getByRole("button", { name: "Aspects" })).toBeInTheDocument();
+  });
+
+  it("names the aspect on the card, under its god", () => {
+    render(<TierList tierlist={full} />);
+    fireEvent.click(screen.getByRole("button", { name: "Aspects" }));
+    const card = within(screen.getByTestId("band-S")).getByRole("link", { name: /^Loki/ });
+    expect(card).toHaveTextContent("Loki");
+    expect(card).toHaveTextContent("Agony");           // "Aspect of" is stripped
+    expect(card).toHaveAttribute("href", "#/god/Loki");
+  });
+
+  it("leaves a thinly-played aspect unranked rather than bottom-ranked", () => {
+    render(<TierList tierlist={full} />);
+    fireEvent.click(screen.getByRole("button", { name: "Aspects" }));
+    expect(within(screen.getByTestId("band-untiered")).getByText("Achilles")).toBeInTheDocument();
+    expect(screen.getByText(/a rumour, not a measurement/i)).toBeInTheDocument();
+  });
+
+  it("never claims an aspect is rarely played", () => {
+    // `play_share` here is a share of the GOD's games, a different denominator
+    // from the roster-wide one the tercile test uses.
+    render(<TierList tierlist={full} />);
+    fireEvent.click(screen.getByRole("button", { name: "Aspects" }));
+    expect(screen.queryByRole("button", { name: /only rarely played/i })).not.toBeInTheDocument();
+  });
+
+  it("is linkable", () => {
+    atUrl("#/tiers?of=aspects");
+    render(<TierList tierlist={full} />);
+    expect(screen.getByRole("button", { name: "Aspects" })).toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("keeps the lane filter, which an aspect inherits from its god", () => {
+    render(<TierList tierlist={full} />);
+    fireEvent.click(screen.getByRole("button", { name: "Aspects" }));
+    fireEvent.click(screen.getByRole("button", { name: "Jungle" }));
+    expect(screen.getByText("Loki")).toBeInTheDocument();
+    expect(screen.queryByText("Sol")).not.toBeInTheDocument();
+  });
+});

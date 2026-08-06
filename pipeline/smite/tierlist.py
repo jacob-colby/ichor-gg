@@ -218,6 +218,74 @@ def god_rankings(gods, builds, mode="Conquest"):
     return results
 
 
+def aspect_rankings(gods, builds, mode="Conquest"):
+    """One entry per god ASPECT: {name, god, aspect, role, damage_type, score,
+    win_rate, matches, play_share}.
+
+    An aspect rewrites part of a kit and often the role with it, so "Sol" and
+    "Sol with Aspect of Conflagration" are not the same subject and a single
+    row cannot describe both. This ranks them separately.
+
+    THE DENOMINATOR IS DERIVED, AND THAT IS WHAT MAKES IT COMPARABLE.
+    SmiteBrain reports an aspect's win rate and how often it is picked, but no
+    match count of its own — only the god's. Multiplying the two recovers the
+    aspect's own sample:
+
+        aspect matches ~= god_matches_played * aspect_pick_rate
+
+    which lets an aspect go through the SAME Wilson bound as everything else on
+    this page. That matters more than it looks: without it the only available
+    score was `confident_win_rate`, a pick-rate shrinkage proxy, and the tier
+    list would have been mixing two different notions of confidence in one
+    ranking while presenting them as one.
+
+    Measured 2026-08-06: 68 aspects have a derivable record, 35 clear
+    MIN_MATCHES and place, and 33 are left unranked for being too thin —
+    exactly the treatment a thinly-played god gets. `name` is the god's, so
+    icons and links resolve; `aspect` is what distinguishes the row.
+    """
+    results = []
+    for god in gods:
+        name = god.get("name")
+        entry = _community_entry(name, builds, mode)
+        if not entry:
+            continue
+        aspect = entry.get("aspect")
+        rate = entry.get("aspect_win_rate")
+        share = entry.get("aspect_pick_rate")
+        played = entry.get("god_matches_played")
+        if not aspect or not _is_numeric(rate) or not _is_numeric(share):
+            continue
+
+        matches = round(played * share) if _is_numeric(played) else None
+        score = win_rate = None
+        if matches:
+            score = wilson_lower_bound(round(matches * rate), matches)
+            win_rate = rate
+        if score is None:
+            # No usable denominator, or too thin to bound. Unranked rather than
+            # scored by a different rule — see the docstring.
+            matches = matches or None
+            win_rate = rate
+
+        results.append({
+            "name": name,
+            "god": name,
+            "aspect": aspect,
+            "role": god.get("role"),
+            "damage_type": god.get("damage_type"),
+            "score": score,
+            "win_rate": win_rate,
+            "matches": matches,
+            # Share of the GOD's games, not of all games: "when Sol is picked,
+            # how often is it this aspect".
+            "play_share": share,
+        })
+
+    results.sort(key=lambda e: (e["name"] or "", e["aspect"] or ""))
+    return results
+
+
 def item_rankings(items, eff_scores):
     """One entry per item: {name, tier, efficiency_tier, score, win_rate,
     matches, value}.
@@ -330,6 +398,7 @@ def _tierlist_for_mode(gods, builds, items, eff_scores, mode):
     return {
         "gods": assign_tiers(god_rankings(gods, builds, mode), "score"),
         "items": assign_tiers(item_rankings(items, eff_scores), "score"),
+        "aspects": assign_tiers(aspect_rankings(gods, builds, mode), "score"),
     }
 
 

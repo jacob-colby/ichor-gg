@@ -28,6 +28,18 @@ export interface LedgerRow {
   metaCumulative: number | null;
   /** The community buys this item at all (in their ordered build). */
   inMeta: boolean;
+  /** A tier-1/2 item — a component, not something you finish a build with.
+   *
+   * It appears in a COMMUNITY slot because that data is what players actually
+   * had when the match ended, and matches end before six items are built.
+   * Measured across the 87 Conquest builds: slot 6 holds an unfinished item in
+   * 70% of them and slot 5 in 9%, while slots 1-4 never do. Pick rate decays
+   * the same way, 40% at slot 1 down to 9% at slot 6.
+   *
+   * So a community "six-item build" is really four or five finished items plus
+   * whatever was half-built at the final whistle. Presented as six equals it
+   * reads as a recommendation to buy a component last, which nobody means. */
+  unfinished: boolean;
   /** The community buys this item, but as a SLOT ALTERNATE rather than in
    * their headline order, so it has no `metaPosition`. Its best sighting's
    * pick rate, or null if they genuinely never buy it.
@@ -65,6 +77,9 @@ export interface Ledger {
   metaSlots: number;
   /** There is a community order to compare against at all. */
   hasMeta: boolean;
+  /** Slots holding a component rather than a finished item. Only ever
+   *  non-zero on a community build; see `LedgerRow.unfinished`. */
+  unfinishedSlots: number;
 }
 
 /** Cumulative cost per position for an ordered list of item names. A missing
@@ -124,6 +139,10 @@ export function buildLedger({
       name: slot.name,
       status: slot.status,
       cost: itemsByName.get(slot.name)?.cost ?? null,
+      unfinished: (() => {
+        const tier = itemsByName.get(slot.name)?.tier;
+        return typeof tier === "number" && tier < 3;
+      })(),
       cumulative: slot.status === "removed" ? null : goldByName.get(slot.name) ?? null,
       score: scores?.[slot.name],
       isFlex: !!flexSlots?.includes(slot.name),
@@ -163,6 +182,7 @@ export function buildLedger({
     slots: kept.length,
     metaSlots: metaNames.length,
     hasMeta: metaNames.length > 0,
+    unfinishedSlots: kept.filter((r) => r.unfinished).length,
   };
 }
 

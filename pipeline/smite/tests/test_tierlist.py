@@ -346,7 +346,7 @@ def test_build_tierlist_empty_inputs():
     # shipping a tier list that omits it.
     assert set(result) == {"gods", "items"} | {m.lower() for m in recommend.MODES}
     assert result["gods"] == [] and result["items"] == []
-    assert all(result[m.lower()] == {"gods": [], "items": []} for m in recommend.MODES)
+    assert all(result[m.lower()] == {"gods": [], "items": [], "aspects": []} for m in recommend.MODES)
 
 
 # ---------------------------------------------------------------------------
@@ -364,7 +364,7 @@ def test_build_tierlist_emits_conquest_and_joust_keys():
 
     assert {"gods", "items", "conquest", "joust"} <= set(result)
     for mode_key in ("conquest", "joust"):
-        assert set(result[mode_key]) == {"gods", "items"}
+        assert set(result[mode_key]) == {"gods", "items", "aspects"}
         assert [g["name"] for g in result[mode_key]["gods"]] == ["Chiron"]
         assert [i["name"] for i in result[mode_key]["items"]] == ["Deathbringer"]
 
@@ -588,3 +588,75 @@ def test_item_rankings_uses_the_weighed_score():
     result = tierlist.item_rankings(items, {"Rage": {"score": 0.8}})
     assert result[0]["score"] == pytest.approx(
         tierlist.wilson_lower_bound(round(0.62 * 20000), 20000))
+
+
+# ---------------------------------------------------------------------------
+# aspect_rankings
+#
+# An aspect rewrites part of a kit and often the role with it, so it is a
+# different subject from the god, not a variant of the same row.
+# ---------------------------------------------------------------------------
+
+def _aspect_entry(aspect="Aspect of Prowess", win=0.6, pick=0.5, played=400, analysed=4000):
+    return {
+        "source": "community", "aspect": aspect,
+        "aspect_win_rate": win, "aspect_pick_rate": pick,
+        "god_matches_won": 200, "god_matches_played": played,
+        "god_matches_analyzed": analysed,
+    }
+
+
+def test_aspect_rankings_derives_the_aspect_denominator():
+    """SmiteBrain gives an aspect a win rate and a pick rate but no match count.
+    god_matches_played * aspect_pick_rate recovers its own sample, which is what
+    lets it go through the SAME Wilson bound as every other row on the page."""
+    gods = [{"name": "Sol", "role": "Mid Carry", "damage_type": "Magical"}]
+    builds = [_build_group("Sol", builds=[_aspect_entry(pick=0.5, played=400, win=0.6)])]
+
+    row = tierlist.aspect_rankings(gods, builds)[0]
+
+    assert row["matches"] == 200                       # 400 * 0.5
+    assert row["score"] == pytest.approx(tierlist.wilson_lower_bound(120, 200))
+    assert row["win_rate"] == 0.6
+    assert row["play_share"] == 0.5
+
+
+def test_aspect_rankings_keeps_the_gods_name_so_icons_resolve():
+    gods = [{"name": "Sol", "role": "Mid Carry", "damage_type": "Magical"}]
+    builds = [_build_group("Sol", builds=[_aspect_entry()])]
+
+    row = tierlist.aspect_rankings(gods, builds)[0]
+
+    assert row["name"] == "Sol" and row["god"] == "Sol"
+    assert row["aspect"] == "Aspect of Prowess"
+    assert row["role"] == "Mid Carry"
+
+
+def test_aspect_rankings_leaves_a_thinly_played_aspect_unranked():
+    """A 6%-pick aspect on a 250-match god is 15 games. Unranked, exactly like
+    a thinly-played god — never scored by a softer rule so it can place."""
+    gods = [{"name": "Achilles", "role": "Solo", "damage_type": "Physical"}]
+    builds = [_build_group("Achilles", builds=[_aspect_entry(pick=0.06, played=250)])]
+
+    row = tierlist.aspect_rankings(gods, builds)[0]
+
+    assert row["matches"] == 15
+    assert row["score"] is None
+    assert row["win_rate"] == 0.6          # still reported, just not ranked on
+
+
+def test_aspect_rankings_skips_a_god_with_no_aspect_record():
+    gods = [{"name": "Ymir", "role": "Support", "damage_type": "Magical"}]
+    builds = [_build_group("Ymir", builds=[_indexed()])]      # no aspect fields
+    assert tierlist.aspect_rankings(gods, builds) == []
+
+
+def test_build_tierlist_ships_aspects_beside_gods_and_items():
+    gods = [{"name": "Sol", "role": "Mid", "damage_type": "Magical"}]
+    builds = [_build_group("Sol", builds=[_aspect_entry()])]
+
+    result = tierlist.build_tierlist(gods, builds, [], {})
+
+    assert result["conquest"]["aspects"][0]["tier_score"] == "S"
+    # Joust has no community entry at all, so it has no aspects either.
+    assert result["joust"]["aspects"] == []
