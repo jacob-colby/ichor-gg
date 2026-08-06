@@ -278,6 +278,15 @@ function LedgerRowView({
           {row.isFlex && row.status === "kept" && (
             <span className="rounded-sm bg-bg3 px-1 py-px text-micro font-semibold uppercase tracking-[0.06em] text-faint">flex</span>
           )}
+          {/* Named on the row it applies to, not just counted in the header:
+              "4 of 6 finished" tells you how many, this tells you which. */}
+          {row.unfinished && (
+            <span
+              title="A component, not a finished item — the match ended before it was upgraded"
+              className="rounded-sm bg-premium/15 px-1 py-px text-micro font-semibold uppercase tracking-[0.06em] text-premium">
+              unfinished
+            </span>
+          )}
           {/* Only for items the community genuinely never buys. An item they
               buy as a slot alternate gets the rate printed on the line below
               instead, which says more than the badge did and — unlike the
@@ -615,6 +624,14 @@ export function DetailPanel({
               {/* "core", not "total": the starter is bought first and isn't on
                   this spine, so calling it a total would misstate the build. */}
               <span className="font-mono">{goldText(ledger.totalGold)}</span> core
+              {community && ledger.unfinishedSlots > 0 && (
+                <>
+                  <span className="px-1">·</span>
+                  <span className="text-ink-soft">
+                    {ledger.slots - ledger.unfinishedSlots} of {ledger.slots} finished
+                  </span>
+                </>
+              )}
               {compareToMeta && ledger.hasMeta && (
                 <>
                   <span className="px-1">·</span>
@@ -626,6 +643,23 @@ export function DetailPanel({
               )}
             </p>
           </div>
+
+          {/* Said once, where the build is, because the shape of this data is
+              not obvious and reads as a recommendation otherwise. Measured:
+              slot 6 holds a component in 70% of the 87 Conquest builds and
+              slot 5 in 9%, while slots 1-4 never do — matches end before six
+              items are built, so the tail of a community build is whatever was
+              half-finished at the whistle. */}
+          {community && ledger.unfinishedSlots > 0 && (
+            <p data-testid="community-tail-note" className="mt-2 max-w-[70ch] text-small leading-relaxed text-muted">
+              {ledger.unfinishedSlots === 1
+                ? "The last slot is a component, not a finished item."
+                : `The last ${ledger.unfinishedSlots} slots are components, not finished items.`}
+              {" "}This is what players actually had when the match ended, and most matches end before a
+              sixth item is built — so read the tail of this build as where the game got to, not as
+              something to buy.
+            </p>
+          )}
 
           {active.starter && (
             <div className="mt-2.5 flex flex-wrap items-center gap-2 border-b border-line pb-2.5">

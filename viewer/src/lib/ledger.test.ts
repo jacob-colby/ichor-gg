@@ -229,3 +229,45 @@ describe("buildLedger — items the community buys as a slot alternate", () => {
     expect(row.metaAlternatePickRate).toBeNull();
   });
 });
+
+/* A community "six-item build" is really four or five finished items plus
+ * whatever was half-built at the final whistle. Measured across the 87
+ * Conquest builds: slot 6 holds a component in 70% of them and slot 5 in 9%,
+ * while slots 1-4 never do. Presented as six equals it reads as advice to buy
+ * a component last, which nobody means. */
+describe("buildLedger — components in a community build's tail", () => {
+  const map6 = map(
+    item("Bancroft's Talon", 2300), item("Spear of Desolation", 2650),
+    item("Rod of Tahuti", 3000), item("Soul Gem", 2500),
+    { ...item("Evil Eye", 1200), tier: 2 } as Item,
+    { ...item("Void Shard", 900), tier: 2 } as Item,
+  );
+  const names = ["Bancroft's Talon", "Spear of Desolation", "Rod of Tahuti", "Soul Gem", "Evil Eye", "Void Shard"];
+
+  it("flags a tier-1/2 slot as unfinished and leaves finished items alone", () => {
+    const l = buildLedger({ preview: plain(...names), itemsByName: map6 });
+    const byName = Object.fromEntries(l.rows.map((r) => [r.name, r.unfinished]));
+    expect(byName["Evil Eye"]).toBe(true);
+    expect(byName["Void Shard"]).toBe(true);
+    expect(byName["Rod of Tahuti"]).toBe(false);
+  });
+
+  it("counts them so the header can say how many actually completed", () => {
+    const l = buildLedger({ preview: plain(...names), itemsByName: map6 });
+    expect(l.unfinishedSlots).toBe(2);
+    expect(l.slots - l.unfinishedSlots).toBe(4);
+  });
+
+  it("is zero for a build of finished items, so the note never fires", () => {
+    const l = buildLedger({
+      preview: plain("Rod of Tahuti", "Soul Gem"),
+      itemsByName: map6,
+    });
+    expect(l.unfinishedSlots).toBe(0);
+  });
+
+  it("treats an unknown item as finished rather than guessing", () => {
+    const l = buildLedger({ preview: plain("Mystery"), itemsByName: map6 });
+    expect(l.rows[0].unfinished).toBe(false);
+  });
+});
