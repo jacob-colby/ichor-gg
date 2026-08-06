@@ -196,6 +196,19 @@ export interface GodTierEntry extends TierEntry {
   play_share?: number | null;
 }
 
+/** One god played with one aspect. An aspect rewrites part of a kit and often
+ *  the role with it, so this is a different subject from the god, not a
+ *  variant of the same row. `name` is the god's, so icons and links resolve. */
+export interface AspectTierEntry extends TierEntry {
+  god: string;
+  aspect: string;
+  role?: string;
+  damage_type?: string;
+  /** Share of the GOD's games played with this aspect — "when Sol is picked,
+   *  how often is it this one" — not a share of all games. */
+  play_share?: number | null;
+}
+
 export interface ItemTierEntry extends TierEntry {
   tier?: number | string;
   efficiency_tier?: string | null;
@@ -276,6 +289,7 @@ export interface MethodData {
 export interface TierListModeData {
   gods: GodTierEntry[];
   items: ItemTierEntry[];
+  aspects?: AspectTierEntry[];
 }
 
 /** Per-mode tier lists (Task R2). `gods`/`items` at the top level mirror

@@ -17,7 +17,7 @@
  * FORM: tier bands over measured outcomes, position 7 of the ordered list.
  */
 import { useMemo, useState } from "react";
-import type { CommunitySource as CommunitySourceData, GodTierEntry, ItemTierEntry, TierEntry, TierListData } from "../types";
+import type { AspectTierEntry, CommunitySource as CommunitySourceData, GodTierEntry, ItemTierEntry, TierEntry, TierListData } from "../types";
 import { iconSlug } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { LANES, godLane, godInLane, laneTextClass, type Lane } from "../lib/roleAccent";
@@ -29,7 +29,7 @@ import { BookmarkIcon } from "./BookmarkIcon";
 import { useUrlState } from "../lib/urlState";
 import { CommunitySource } from "./CommunitySource";
 
-type Subject = "gods" | "items";
+type Subject = "gods" | "items" | "aspects";
 type GameMode = "conquest" | "joust" | "arena";
 
 const GAME_MODES: { key: GameMode; label: string }[] = [
@@ -56,7 +56,12 @@ const chip = (active: boolean, extra = "") =>
   }`;
 const selCls = "rounded-md border border-line bg-bg2 px-2.5 py-2 text-small text-muted focus:border-blue focus:outline-none";
 
-const entityLabel = (s: Subject) => (s === "gods" ? "god" : "item");
+/** A row's identity. Aspect rows share their god's `name` so icons and links
+ *  resolve, which means the name alone is not unique among them. */
+const entryKey = (e: TierEntry, s: Subject) =>
+  s === "aspects" ? `${e.name}|${(e as AspectTierEntry).aspect}` : e.name;
+
+const entityLabel = (s: Subject) => (s === "gods" ? "god" : s === "aspects" ? "aspect" : "item");
 
 /** Entry art with a real fallback rather than a hidden hole in the grid. */
 function EntryIcon({ name, item }: { name: string; item: boolean }) {
@@ -93,23 +98,28 @@ function EntryCard({ band, subject, underplayed, bookmarked }: {
   bookmarked?: boolean;
 }) {
   const { entry, unmeasured } = band;
+  const isItem = subject === "items";
   const isGod = subject === "gods";
+  const isAspect = subject === "aspects";
   const god = entry as GodTierEntry;
   const item = entry as ItemTierEntry;
-  const eff = isGod ? null : efficiencyLabel(item.efficiency_tier);
-  const lane = isGod ? godLane(god.role) : undefined;
+  const asp = entry as AspectTierEntry;
+  const eff = isItem ? efficiencyLabel(item.efficiency_tier) : null;
+  // An aspect row is a god row wearing a different kit, so it keeps the lane.
+  const lane = isGod || isAspect ? godLane(god.role) : undefined;
   const matches = typeof entry.matches === "number" ? entry.matches : null;
 
   return (
     <li>
       <a
-        href={isGod ? toHash.god(entry.name) : toHash.item(entry.name)}
+        href={isItem ? toHash.item(entry.name) : toHash.god(entry.name)}
         aria-label={unmeasured
           ? `${entry.name}: not enough matches to place`
           : `${entry.name}: ${entry.tier_score} tier, ${rateText(entry.win_rate)} win rate over ${
               matches?.toLocaleString("en-US") ?? "an unreported number of"} matches${
               underplayed ? " — wins well and is rarely played" : ""}${
               bookmarked ? " — bookmarked" : ""}`}
+        data-aspect={isAspect ? asp.aspect : undefined}
         title={unmeasured
           ? `${entry.name} — no usable sample`
           : `${entry.name} — ${rateText(entry.win_rate)} win over ${
@@ -133,15 +143,20 @@ function EntryCard({ band, subject, underplayed, bookmarked }: {
             : underplayed ? "border-line-strong hover:border-line-strong"
             : "border-line hover:border-line-strong"}`}
       >
-        <EntryIcon name={entry.name} item={!isGod} />
+        <EntryIcon name={entry.name} item={isItem} />
         <span className="flex w-full min-w-0 flex-col items-center gap-0.5 sm:flex-1 sm:items-start">
           <span className="flex w-full min-w-0 items-center justify-center gap-1 sm:justify-start">
             {bookmarked && <span className="shrink-0 text-gold"><BookmarkIcon filled size={10} /></span>}
             <span className="min-w-0 truncate font-display text-small font-semibold leading-tight text-ink">{entry.name}</span>
           </span>
-          {isGod
-            ? lane && <span className={`text-label ${laneTextClass(lane)}`}>{lane}</span>
-            : eff && <span className={`text-label ${eff.cls.replace(/bg-\S+/g, "")}`}>{eff.text}</span>}
+          {isAspect && (
+            <span className="max-w-full truncate text-label leading-tight text-gold" title={asp.aspect}>
+              {asp.aspect?.replace(/^Aspect of (the )?/i, "")}
+            </span>
+          )}
+          {isItem
+            ? eff && <span className={`text-label ${eff.cls.replace(/bg-\S+/g, "")}`}>{eff.text}</span>
+            : lane && <span className={`text-label ${laneTextClass(lane)}`}>{lane}</span>}
           {unmeasured ? (
             <span className="mt-0.5 text-label leading-tight text-muted">not measured</span>
           ) : (
@@ -186,13 +201,13 @@ function TierBand({ tier, entries, total, subject, underplayedNames, bookmarks }
         </h2>
         {appearances > 0 && (
           <p className="font-mono text-label text-faint">
-            {appearances.toLocaleString("en-US")} {subject === "gods" ? "god-games" : "purchases"}
+            {appearances.toLocaleString("en-US")} {subject === "items" ? "purchases" : subject === "aspects" ? "aspect games" : "god-games"}
           </p>
         )}
       </div>
       <ul className="grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
         {entries.map((b) => (
-          <EntryCard key={b.entry.name} band={b} subject={subject}
+          <EntryCard key={entryKey(b.entry, subject)} band={b} subject={subject}
             underplayed={underplayedNames.has(b.entry.name)}
             bookmarked={bookmarks.has(b.entry.name)} />
         ))}
@@ -216,7 +231,7 @@ function decodeBoard(p: URLSearchParams): BoardState {
   const lane = p.get("lane");
   return {
     gameMode: p.get("mode") === "joust" ? "joust" : p.get("mode") === "arena" ? "arena" : "conquest",
-    subject: p.get("of") === "items" ? "items" : "gods",
+    subject: p.get("of") === "items" ? "items" : p.get("of") === "aspects" ? "aspects" : "gods",
     sort: p.get("sort") === "matches" ? "matches" : "score",
     underplayedOnly: p.get("hidden") === "1",
     q: p.get("q") ?? "",
@@ -247,7 +262,9 @@ export function TierList({ tierlist, communitySource }: {
 
   const modeSlice = useMemo(() => tierlist?.[gameMode] ?? tierlist, [tierlist, gameMode]);
   const source: TierEntry[] = useMemo(
-    () => (subject === "gods" ? modeSlice?.gods : modeSlice?.items) ?? [],
+    () => (subject === "gods" ? modeSlice?.gods
+      : subject === "aspects" ? modeSlice?.aspects
+      : modeSlice?.items) ?? [],
     [modeSlice, subject],
   );
 
@@ -259,6 +276,9 @@ export function TierList({ tierlist, communitySource }: {
   const bookmarks = useMemo(
     () => new Set(subject === "gods" ? pins : []), [pins, subject]);
 
+  // Gods only. On the aspect board `play_share` means "of this god's games",
+  // a different denominator, so the same tercile test would compare quantities
+  // that aren't comparable.
   const underplayedNames = useMemo(
     () => findUnderplayed(subject === "gods" ? (source as GodTierEntry[]) : []),
     [source, subject],
@@ -267,7 +287,7 @@ export function TierList({ tierlist, communitySource }: {
   const query = q.trim().toLowerCase();
   const filtered = useMemo(() => source.filter((e) => {
     if (query && !e.name.toLowerCase().includes(query)) return false;
-    if (subject === "gods" && lane && !godInLane((e as GodTierEntry).role, lane)) return false;
+    if (subject !== "items" && lane && !godInLane((e as GodTierEntry).role, lane)) return false;
     if (subject === "items" && efficiency && ((e as ItemTierEntry).efficiency_tier ?? "") !== efficiency) return false;
     if (underplayedOnly && !underplayedNames.has(e.name)) return false;
     return true;
@@ -289,7 +309,7 @@ export function TierList({ tierlist, communitySource }: {
           {result.ranked > 0 ? (
             <>Every {entityLabel(subject)}, ranked by{" "}
               <span className="text-gold">{result.appearances.toLocaleString("en-US")}</span>{" "}
-              tracked {subject === "gods" ? "god-games" : "item purchases"}.
+              tracked {subject === "gods" ? "god-games" : subject === "aspects" ? "aspect games" : "item purchases"}.
             </>
           ) : (
             <>No outcome data for this mode.</>
@@ -325,6 +345,7 @@ export function TierList({ tierlist, communitySource }: {
           </div>
           <div role="group" aria-label="Subject" className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
             <button type="button" aria-pressed={subject === "gods"} onClick={() => patch({ subject: "gods" })} className={segBtn(subject === "gods")}>Gods</button>
+            <button type="button" aria-pressed={subject === "aspects"} onClick={() => patch({ subject: "aspects" })} className={segBtn(subject === "aspects")}>Aspects</button>
             <button type="button" aria-pressed={subject === "items"} onClick={() => patch({ subject: "items" })} className={segBtn(subject === "items")}>Items</button>
           </div>
           <div role="group" aria-label="Order within each band" className="flex items-center gap-1 rounded-md border border-line bg-bg2 p-1">
@@ -351,7 +372,7 @@ export function TierList({ tierlist, communitySource }: {
         </div>
 
         <div className="mt-2 flex items-center gap-2 overflow-x-auto pb-0.5 sm:flex-wrap sm:overflow-visible [&>*]:shrink-0">
-          {subject === "gods" ? (
+          {subject !== "items" ? (
             <>
               <button type="button" aria-pressed={!lane} onClick={() => patch({ lane: undefined })}
                 className={`press rounded-full border px-3 py-2 text-small transition-colors duration-[150ms] ease-standard ${
@@ -418,13 +439,15 @@ export function TierList({ tierlist, communitySource }: {
                 <p className="font-mono text-label text-faint">{untiered.length}</p>
               </div>
               <p className="mb-2.5 max-w-[70ch] text-small leading-relaxed text-muted">
-                {subject === "gods"
-                  ? "Too few tracked matches to place with any confidence. Shown rather than dropped, and never ranked low for it — “unmeasured” and “bad” are different facts."
-                  : "No tracked win rate of their own — mostly starters and components, which players buy as a step on the way to something else."}
+                {subject === "items"
+                  ? "No tracked win rate of their own — mostly starters and components, which players buy as a step on the way to something else."
+                  : subject === "aspects"
+                  ? "Played too rarely to place. An aspect's sample is its god's matches times how often that aspect is taken, so a 6%-pick aspect on a 250-match god is 15 games — a rumour, not a measurement."
+                  : "Too few tracked matches to place with any confidence. Shown rather than dropped, and never ranked low for it — “unmeasured” and “bad” are different facts."}
               </p>
               <ul className="grid auto-rows-fr grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(152px,1fr))]">
                 {untiered.map((b) => (
-                  <EntryCard key={b.entry.name} band={b} subject={subject}
+                  <EntryCard key={entryKey(b.entry, subject)} band={b} subject={subject}
                     bookmarked={bookmarks.has(b.entry.name)} />
                 ))}
               </ul>

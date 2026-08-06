@@ -45,7 +45,7 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                      # Per-mode tier list (Task R2) — legacy top-level
                      # gods/items kept alongside the per-mode map.
                      "tierlist": {"gods": [], "items": [],
-                                  **{m.lower(): {"gods": [], "items": []}
+                                  **{m.lower(): {"gods": [], "items": [], "aspects": []}
                                      for m in recommend.MODES}},
                      "god_item_scores": {},
                      # B6: per-item damage vs a squishy and vs a tank, for the
@@ -216,7 +216,7 @@ def test_build_index_emits_joust_tierlist_shaped_like_conquest():
     from pathlib import Path
     r = build_index.build_index(Path(__file__).resolve().parents[3])
     tl = r["tierlist"]
-    assert set(tl["joust"]) == {"gods", "items"}
+    assert set(tl["joust"]) == {"gods", "items", "aspects"}
     assert tl["joust"]["gods"], "expected every god to appear in Joust, unranked"
     god = tl["joust"]["gods"][0]
     assert {"name", "role", "damage_type", "score", "tier_score"} <= set(god)
