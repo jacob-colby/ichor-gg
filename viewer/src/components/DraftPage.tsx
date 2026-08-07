@@ -108,7 +108,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
 
   const {
     meName, itemsByName, taken, takenFor, enemiesKnown, roster, threatCulprits: culprits,
-    allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, coreSize,
+    allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, coreSize, starters,
   } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
   const copyLink = () => {
@@ -261,6 +261,36 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
           {result && (
             <div className="mt-5">
               <h3 className={eyebrow}>{changeCount > 0 ? "Your adapted core" : "The default core"}</h3>
+
+              {/* A build starts before item one, and this page began at item
+                  one — so the first purchase of the match was the one thing it
+                  never showed. These are what this god's players actually open
+                  with, scraped from the same source as the build itself; the
+                  draft doesn't move them, which is why they sit apart from the
+                  numbered core rather than as slot zero. */}
+              {starters.length > 0 && (
+                <div data-testid="draft-starters" className="mt-2 border-b border-line pb-3">
+                  <div className="flex flex-wrap items-baseline gap-x-2">
+                    <span className="text-label text-faint">Opens with</span>
+                    <span className="text-label text-muted">· by pick rate, not adapted by your draft</span>
+                  </div>
+                  <ul className="mt-1.5 flex flex-wrap gap-1.5">
+                    {starters.map((s) => (
+                      <li key={s.name}>
+                        <a href={toHash.item(s.name)}
+                          aria-label={`${s.name} — opened with by ${Math.round(s.pick_rate * 100)}% of ${meName} players, winning ${Math.round(s.win_rate * 100)}%`}
+                          className="press flex items-center gap-1.5 rounded-md border border-line bg-bg2 py-1 pl-1 pr-2 transition-colors duration-150 ease-standard hover:border-line-strong">
+                          <Icon name={s.name} item className="h-6 w-6" />
+                          <span className="max-w-[13ch] truncate text-small text-ink">{s.name}</span>
+                          <span aria-hidden="true" className="font-mono text-label text-gold">
+                            {Math.round(s.pick_rate * 100)}%
+                          </span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <ul className="mt-2 flex flex-col">
                 {result.adapted.core.map((name, i) => {
                   const changed = result.diff.changes.some((c) => c.added === name);

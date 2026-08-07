@@ -109,6 +109,10 @@ export interface CommunityBuildEntry {
   aspect_pick_rate: number | null;
   aspect_win_rate: number | null;
   slot_order: CommunitySlotEntry[];
+  /** What this god's players actually open with, top 3 by pick rate. Distinct
+   *  from `starter`, which is a role RULE from _weights.yaml and so gives every
+   *  Carry the same opener regardless of what Carry players bought. */
+  community_starters?: PopularItem[];
   source_url: string;
   last_verified?: string;
   starter?: { base: string; upgrade: string };

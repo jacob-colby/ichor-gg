@@ -2,26 +2,26 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Titan's Bane | 0.65 | 0.60 | 0.46 | 0.76 | 0.18 | 0.91 | fair |  |  |
-| Jotunn's Revenge | 0.64 | 0.76 | 0.65 | 0.51 | 0.67 | 1.00 | undervalued |  |  |
-| Avatar's Parashu | 0.62 | 0.57 | 0.43 | 0.73 | 0.07 | 0.91 | premium | cc-immunity | **UNDERRATED** |
-| Heartseeker | 0.58 | 0.62 | 0.46 | 0.56 | 0.29 | 1.00 | fair | burst |  |
-| The Reaper | 0.57 | 0.65 | 0.53 | 0.53 | 0.14 | 0.91 | fair | sustain | **UNDERRATED** |
+| Jotunn's Revenge | 0.66 | 0.76 | 0.65 | 0.55 | 0.70 | 1.00 | undervalued |  |  |
+| Titan's Bane | 0.61 | 0.60 | 0.46 | 0.67 | 0.18 | 0.91 | fair |  |  |
+| The Crusher | 0.59 | 0.75 | 0.65 | 0.47 | 0.08 | 1.00 | undervalued | burst | **UNDERRATED** |
+| The Reaper | 0.58 | 0.65 | 0.53 | 0.56 | 0.14 | 0.91 | fair | sustain | **UNDERRATED** |
+| Heartseeker | 0.58 | 0.62 | 0.46 | 0.57 | 0.30 | 1.00 | fair | burst |  |
+| Pendulum Blade | 0.56 | 0.59 | 0.42 | 0.58 | 0.11 | 1.00 | premium |  | **UNDERRATED** |
 | Hydra's Lament | 0.54 | 0.64 | 0.61 | 0.50 | 0.00 | 0.70 | fair | burst | **UNDERRATED** |
-| The Crusher | 0.54 | 0.75 | 0.65 | 0.35 | 0.09 | 1.00 | undervalued | burst | **UNDERRATED** |
-| Pendulum Blade | 0.53 | 0.59 | 0.42 | 0.51 | 0.13 | 1.00 | premium |  | **UNDERRATED** |
 | Runeforged Hammer | 0.53 | 0.60 | 0.60 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Tekko-Kagi | 0.52 | 0.59 | 0.46 | 0.50 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
+| Barbed Carver | 0.52 | 0.49 | 0.43 | 0.59 | 0.20 | 0.62 | premium | burst |  |
+| Transcendence | 0.52 | 0.48 | 0.46 | 0.58 | 0.30 | 0.52 | fair |  |  |
 | Lernaean Bow | 0.51 | 0.57 | 0.56 | 0.50 | 0.00 | 0.62 | fair | wave-clear, burst | **UNDERRATED** |
+| Avatar's Parashu | 0.51 | 0.57 | 0.43 | 0.50 | 0.00 | 0.91 | premium | cc-immunity | **UNDERRATED** |
 | Damaru | 0.51 | 0.57 | 0.59 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Avenging Blade | 0.50 | 0.54 | 0.51 | 0.50 | 0.00 | 0.62 | fair | protection-shred | **UNDERRATED** |
 | Golden Blade | 0.50 | 0.54 | 0.55 | 0.50 | 0.00 | 0.52 | fair | wave-clear | **UNDERRATED** |
-| Transcendence | 0.50 | 0.48 | 0.46 | 0.54 | 0.26 | 0.52 | fair |  |  |
 | Arondight | 0.49 | 0.53 | 0.50 | 0.50 | 0.00 | 0.60 | fair | mobility | **UNDERRATED** |
 | Genji's Guard | 0.49 | 0.53 | 0.72 | 0.50 | 0.00 | 0.09 | undervalued |  | **UNDERRATED** |
 | Shield Splitter | 0.49 | 0.53 | 0.53 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Dominance | 0.49 | 0.53 | 0.53 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
-| Barbed Carver | 0.49 | 0.49 | 0.43 | 0.52 | 0.20 | 0.62 | premium | burst |  |
 | Eye of the Storm | 0.48 | 0.52 | 0.52 | 0.50 | 0.00 | 0.52 | fair | peel | **UNDERRATED** |
 | Tyrfing | 0.48 | 0.52 | 0.47 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Riptalon | 0.48 | 0.51 | 0.56 | 0.50 | 0.00 | 0.40 | fair | sustain | **UNDERRATED** |
@@ -29,6 +29,7 @@
 | Berserker's Shield | 0.47 | 0.50 | 0.71 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Breastplate of Valor | 0.47 | 0.48 | 0.65 | 0.50 | 0.00 | 0.09 | undervalued |  | **UNDERRATED** |
 | Bloodforge | 0.46 | 0.47 | 0.45 | 0.50 | 0.00 | 0.52 | fair | sustain | **UNDERRATED** |
+| Shifter's Shield | 0.46 | 0.39 | 0.55 | 0.59 | 0.04 | 0.00 | fair |  |  |
 | Musashi's Dual Swords | 0.46 | 0.46 | 0.44 | 0.50 | 0.00 | 0.52 | premium | mobility | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
@@ -50,7 +51,6 @@
 | Screeching Gargoyle | 0.42 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.42 | 0.40 | 0.53 | 0.50 | 0.00 | 0.09 | fair | sustain |  |
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Shifter's Shield | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Shogun's Ofuda | 0.41 | 0.37 | 0.53 | 0.50 | 0.00 | 0.00 | fair | aura |  |

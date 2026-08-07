@@ -1,0 +1,95 @@
+# Daily community-data refresh.
+#
+# WHY THIS ONLY TOUCHES SMITEBRAIN. The pipeline has two sources and they need
+# different things to reach them:
+#
+#   smitebrain.com   plain HTTP, no bot protection, numbers move every day —
+#                    win rates, pick rates, builds, starters.
+#   wiki.smite2.com  Cloudflare-gated, needs a real browser (Playwright), and
+#                    only changes on patch days — god kits, item stats, icons.
+#
+# A daily job doing both would be a daily headless-browser run against
+# Cloudflare from a datacentre IP: the part most likely to start failing, and
+# the part least likely to have anything new in it. So this runs the community
+# half unattended, and the wiki half stays a deliberate local `--all` when a
+# patch lands. `workflow_dispatch` is here so you can also trigger this by hand.
+name: Refresh community data
+
+on:
+  schedule:
+    # 09:15 UTC daily. Deliberately not on the hour: GitHub's scheduler queues
+    # heavily at :00 and a job can be delayed or dropped entirely at peak.
+    - cron: "15 9 * * *"
+  workflow_dispatch:
+
+# Never let two refreshes race for the same commit.
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pipeline dependencies
+        working-directory: pipeline
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Pull community data
+        working-directory: pipeline
+        run: python -m smite.refresh --community
+
+      - name: Recompute builds and rebuild the index
+        working-directory: pipeline
+        run: |
+          python -m smite.recommend --all
+          python -m smite.build_index
+
+      # The gates. `data_audit` exits non-zero on any finding and currently has
+      # three standing ones that are properties of the source data, not defects
+      # (Blink Rune's zero cost, two statless tier-2 items) — so its result is
+      # reported, not enforced. `validate --check` is a regression floor and IS
+      # enforced: a scrape that silently returns garbage shows up here first.
+      - name: Data audit (advisory)
+        working-directory: pipeline
+        continue-on-error: true
+        run: python -m smite.data_audit
+
+      - name: Quality gate
+        working-directory: pipeline
+        run: python -m smite.validate --check
+
+      - name: Combat model gate
+        working-directory: pipeline
+        run: python -m smite.calibrate_combat
+
+      - name: Commit if anything moved
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # The HTML cache is a fetch artifact, not data — committing it would
+          # add tens of MB a day for nothing.
+          git add data viewer/public/index.json
+          git reset -q -- data/_cache
+          if git diff --cached --quiet; then
+            echo "No change — SmiteBrain's window hasn't moved."
+            exit 0
+          fi
+          git commit -m "chore(data): daily community refresh
+
+          Automated. SmiteBrain win/pick rates, community builds and starters,
+          then a recompute and reindex. Gods, items and icons come from the
+          wiki and are refreshed by hand on patch days."
+          git push

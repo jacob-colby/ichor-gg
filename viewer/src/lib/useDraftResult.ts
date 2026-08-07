@@ -62,6 +62,10 @@ export interface DraftResult {
   /** Everyone on the board, either side. Only for "is the board empty" —
    *  NOT for deciding what can be picked; see `takenFor`. */
   taken: Set<string>;
+  /** What your god's players open with, top 3 by pick rate. A build starts
+   *  before item one and this page began at item one, so the first purchase of
+   *  the match was the one thing it never showed. */
+  starters: { name: string; pick_rate: number; win_rate: number }[];
   /** Gods a given slot may not take: the ones already on THAT team, minus
    *  whoever currently occupies the slot being edited.
    *
@@ -106,6 +110,13 @@ export function useDraftResult(
   const meName = draft.allies[0];
   const meGod = godsByName[meName];
 
+  const starters = useMemo(() => {
+    const note = builds.find((b) => b.god === meName && b.mode === MODE_LABEL[mode]);
+    const community = note?.builds.find((b) => b.source === "community");
+    return (community as { community_starters?: { name: string; pick_rate: number; win_rate: number }[] })
+      ?.community_starters ?? [];
+  }, [builds, meName, mode]);
+
   const allyCores = useMemo(() => {
     const out: Record<string, string[]> = {};
     for (const name of draft.allies) {
@@ -145,7 +156,7 @@ export function useDraftResult(
   );
 
   return {
-    meName, meGod, godsByName, itemsByName, taken, takenFor,
+    meName, meGod, godsByName, itemsByName, taken, takenFor, starters,
     enemiesKnown: threats.enemyCount, roster: threats.rosterSize,
     threatCulprits: culprits,
     allyAllPhysical: threats.allyAllPhysical, allyCount: threats.allyCount, allyPhysical: threats.allyPhysical,

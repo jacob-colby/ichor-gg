@@ -2,32 +2,31 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.64 | 0.62 | 0.59 | 0.72 | 0.11 | 0.70 | fair | burst, sustain, aura | **UNDERRATED** |
-| Spear of Desolation | 0.61 | 0.55 | 0.52 | 0.72 | 0.22 | 0.60 | fair |  |  |
-| The World Stone | 0.61 | 0.48 | 0.49 | 0.79 | 0.20 | 0.47 | fair |  |  |
-| Obsidian Shard | 0.61 | 0.52 | 0.54 | 0.76 | 0.09 | 0.47 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.58 | 0.45 | 0.44 | 0.77 | 0.25 | 0.47 | premium |  |  |
+| Spear of Desolation | 0.57 | 0.55 | 0.52 | 0.64 | 0.17 | 0.60 | fair |  |  |
 | Gluttonous Grimoire | 0.57 | 0.68 | 0.66 | 0.50 | 0.00 | 0.74 | undervalued | burst | **UNDERRATED** |
-| Shifter's Shield | 0.55 | 0.51 | 0.55 | 0.64 | 0.09 | 0.40 | fair |  | **UNDERRATED** |
-| Bancroft's Talon | 0.52 | 0.48 | 0.58 | 0.61 | 0.15 | 0.25 | fair | sustain |  |
+| The World Stone | 0.57 | 0.48 | 0.49 | 0.70 | 0.20 | 0.47 | fair |  |  |
+| Freya's Tears | 0.56 | 0.52 | 0.59 | 0.66 | 0.08 | 0.36 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.55 | 0.52 | 0.54 | 0.63 | 0.07 | 0.47 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.55 | 0.45 | 0.44 | 0.69 | 0.23 | 0.47 | premium |  |  |
+| Soul Gem | 0.54 | 0.62 | 0.59 | 0.50 | 0.00 | 0.70 | fair | burst, sustain, aura | **UNDERRATED** |
+| Shifter's Shield | 0.53 | 0.51 | 0.55 | 0.61 | 0.10 | 0.40 | fair |  | **UNDERRATED** |
+| Bancroft's Talon | 0.52 | 0.48 | 0.58 | 0.61 | 0.14 | 0.25 | fair | sustain |  |
 | Amanita Charm | 0.52 | 0.58 | 0.66 | 0.50 | 0.00 | 0.40 | undervalued | sustain, aura | **UNDERRATED** |
+| Blood-Bound Book | 0.51 | 0.48 | 0.58 | 0.59 | 0.13 | 0.25 | fair | sustain |  |
 | Genji's Guard | 0.51 | 0.58 | 0.72 | 0.50 | 0.00 | 0.24 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.51 | 0.57 | 0.60 | 0.50 | 0.00 | 0.50 | fair | burst | **UNDERRATED** |
 | Spear of the Magus | 0.51 | 0.56 | 0.60 | 0.50 | 0.00 | 0.47 | fair |  | **UNDERRATED** |
 | Eye of Providence | 0.50 | 0.55 | 0.62 | 0.50 | 0.00 | 0.40 | undervalued |  | **UNDERRATED** |
-| Blood-Bound Book | 0.50 | 0.48 | 0.58 | 0.56 | 0.13 | 0.25 | fair | sustain |  |
 | The Cosmic Horror | 0.50 | 0.55 | 0.58 | 0.50 | 0.00 | 0.47 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.50 | 0.54 | 0.65 | 0.50 | 0.00 | 0.28 | undervalued |  | **UNDERRATED** |
 | Rod of Asclepius | 0.49 | 0.54 | 0.59 | 0.50 | 0.00 | 0.42 | fair | sustain, aura | **UNDERRATED** |
 | Breastplate of Valor | 0.49 | 0.53 | 0.65 | 0.50 | 0.00 | 0.24 | undervalued |  | **UNDERRATED** |
 | Jade Scepter | 0.49 | 0.52 | 0.57 | 0.50 | 0.00 | 0.42 | fair | peel | **UNDERRATED** |
 | Shield of the Phoenix | 0.49 | 0.52 | 0.57 | 0.50 | 0.00 | 0.41 | fair | sustain | **UNDERRATED** |
-| Freya's Tears | 0.48 | 0.52 | 0.59 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
 | Helm of Radiance | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.48 | 0.51 | 0.56 | 0.50 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
 | Yogi's Necklace | 0.48 | 0.50 | 0.65 | 0.50 | 0.00 | 0.17 | undervalued |  | **UNDERRATED** |
 | Wish-Granting Pearl | 0.48 | 0.50 | 0.54 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
-| Sphere of Negation | 0.48 | 0.40 | 0.42 | 0.60 | 0.06 | 0.37 | premium | sustain |  |
 | Spectral Armor | 0.47 | 0.50 | 0.59 | 0.50 | 0.00 | 0.28 | fair | anti-crit, aura | **UNDERRATED** |
 | Ethereal Staff | 0.47 | 0.50 | 0.53 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Death Metal | 0.47 | 0.49 | 0.60 | 0.50 | 0.00 | 0.25 | fair |  | **UNDERRATED** |
@@ -68,6 +67,7 @@
 | Divine Ruin | 0.43 | 0.41 | 0.43 | 0.50 | 0.00 | 0.35 | premium | anti-heal, burst |  |
 | Gem of Isolation | 0.43 | 0.41 | 0.41 | 0.50 | 0.00 | 0.42 | premium | peel |  |
 | Prophetic Cloak | 0.43 | 0.41 | 0.43 | 0.50 | 0.00 | 0.36 | premium |  |  |
+| Sphere of Negation | 0.43 | 0.40 | 0.42 | 0.50 | 0.00 | 0.37 | premium | sustain |  |
 | Hussar's Wings | 0.43 | 0.40 | 0.40 | 0.50 | 0.00 | 0.40 | premium | cc-immunity |  |
 | Mystical Mail | 0.42 | 0.40 | 0.45 | 0.50 | 0.00 | 0.28 | fair | aura, wave-clear |  |
 | Necronomicon | 0.42 | 0.38 | 0.44 | 0.50 | 0.00 | 0.25 | premium |  |  |

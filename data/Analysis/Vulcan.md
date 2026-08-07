@@ -2,19 +2,19 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.63 | 0.69 | 0.59 | 0.61 | 0.21 | 0.93 | fair | burst, sustain, aura |  |
-| The World Stone | 0.61 | 0.54 | 0.49 | 0.74 | 0.08 | 0.66 | fair |  | **UNDERRATED** |
-| Spear of Desolation | 0.59 | 0.62 | 0.52 | 0.58 | 0.45 | 0.83 | fair |  |  |
-| Obsidian Shard | 0.57 | 0.57 | 0.54 | 0.60 | 0.26 | 0.66 | fair |  |  |
+| Soul Gem | 0.61 | 0.69 | 0.59 | 0.56 | 0.18 | 0.93 | fair | burst, sustain, aura |  |
+| Dreamer's Idol | 0.59 | 0.54 | 0.49 | 0.70 | 0.07 | 0.66 | fair | cc-immunity | **UNDERRATED** |
+| The World Stone | 0.58 | 0.54 | 0.49 | 0.67 | 0.10 | 0.66 | fair |  | **UNDERRATED** |
+| Spear of Desolation | 0.57 | 0.62 | 0.52 | 0.54 | 0.46 | 0.83 | fair |  |  |
 | Gluttonous Grimoire | 0.57 | 0.69 | 0.66 | 0.50 | 0.00 | 0.76 | undervalued | burst | **UNDERRATED** |
-| Doom Orb | 0.56 | 0.54 | 0.49 | 0.64 | 0.14 | 0.66 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.56 | 0.57 | 0.54 | 0.58 | 0.27 | 0.66 | fair |  |  |
+| Doom Orb | 0.54 | 0.54 | 0.49 | 0.59 | 0.15 | 0.66 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.53 | 0.62 | 0.60 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.53 | 0.50 | 0.44 | 0.59 | 0.22 | 0.66 | premium |  |  |
 | The Cosmic Horror | 0.53 | 0.60 | 0.58 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.52 | 0.50 | 0.44 | 0.57 | 0.22 | 0.66 | premium |  |  |
 | Genji's Guard | 0.50 | 0.55 | 0.72 | 0.50 | 0.00 | 0.17 | undervalued |  | **UNDERRATED** |
 | Chronos' Pendant | 0.50 | 0.55 | 0.56 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.50 | 0.55 | 0.56 | 0.50 | 0.00 | 0.51 | fair |  | **UNDERRATED** |
-| Dreamer's Idol | 0.50 | 0.54 | 0.49 | 0.50 | 0.00 | 0.66 | fair | cc-immunity | **UNDERRATED** |
 | Death Metal | 0.49 | 0.52 | 0.60 | 0.50 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.48 | 0.52 | 0.59 | 0.50 | 0.00 | 0.35 | fair | sustain, aura | **UNDERRATED** |
 | Gem of Focus | 0.48 | 0.51 | 0.51 | 0.50 | 0.00 | 0.52 | fair | mobility | **UNDERRATED** |

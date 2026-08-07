@@ -193,3 +193,61 @@ def test_parse_god_index_survives_a_payload_with_no_data():
     assert smitebrain_parser.parse_god_index({}) == []
     assert smitebrain_parser.parse_god_index({"nodes": [None]}) == []
     assert smitebrain_parser.parse_god_index({"nodes": [{"data": "not-a-list"}]}) == []
+
+
+# ---------------------------------------------------------------------------
+# Starters
+#
+# Scraped now, having been skipped since the first parser — "Relics and
+# Starters are alternatives, not a build order". True of the ORDER, but it
+# left the app with no community starter at all: the one it showed came from a
+# role rule, so every Carry got the same opener regardless of what Carry
+# players actually bought.
+# ---------------------------------------------------------------------------
+
+def _tile(name, pick, win):
+    return (f'<div class="flex"><img alt="{name}">'
+            f'<div class="text-xs">{pick}% pick {win}% win</div></div>')
+
+
+def _page(starter_tiles, core_tiles=""):
+    return (
+        '<div class="border-neutral bg-base-300 flex"><h2>Starters</h2>'
+        + starter_tiles +
+        '</div>'
+        '<div><div class="flex items-center justify-between"><h2>Core</h2></div>'
+        '<div class="font-semibold">1</div><div>' + core_tiles + '</div></div>'
+    )
+
+
+def test_starters_are_ranked_by_pick_rate_and_capped():
+    html = _page(_tile("Gilded Arrow", 14, 27)
+                 + _tile("Sharpshooter's Arrow", 40, 57)
+                 + _tile("Hunter's Cowl", 21, 57)
+                 + _tile("Death's Embrace", 11, 59))
+    out = smitebrain_parser.parse_build_page(html)["starters"]
+    assert [s["name"] for s in out] == ["Sharpshooter's Arrow", "Hunter's Cowl", "Gilded Arrow"]
+    assert out[0] == {"name": "Sharpshooter's Arrow", "pick_rate": 0.40, "win_rate": 0.57}
+
+
+def test_starters_never_reach_into_the_core_section():
+    """A forward walk from the heading runs straight into Core — its `h2` sits
+    in a different wrapper, so a `break` on the next heading never fires, and
+    Tyrfing and Jotunn's Revenge were being reported as starters."""
+    html = _page(_tile("Conduit Gem", 25, 50),
+                 core_tiles=_tile("Tyrfing", 55, 60) + _tile("Jotunn's Revenge", 44, 58))
+    out = smitebrain_parser.parse_build_page(html)["starters"]
+    assert [s["name"] for s in out] == ["Conduit Gem"]
+
+
+def test_starters_dedupe_a_tile_nested_in_its_own_wrapper():
+    # The markup nests a tile inside a wrapper that also matches `.flex`, so a
+    # naive walk counts each starter twice.
+    dup = '<div class="flex">' + _tile("Conduit Gem", 25, 50) + '</div>'
+    out = smitebrain_parser.parse_build_page(_page(dup))["starters"]
+    assert len(out) == 1 and out[0]["name"] == "Conduit Gem"
+
+
+def test_starters_absent_section_is_empty_not_an_error():
+    html = '<div><div class="flex items-center justify-between"><h2>Core</h2></div></div>'
+    assert smitebrain_parser.parse_build_page(html)["starters"] == []
