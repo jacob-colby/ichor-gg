@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of Ferocity
   aspect_pick_rate: 0.06
-  aspect_win_rate: 0.47
+  aspect_win_rate: 0.48
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.62
@@ -14,79 +14,79 @@ builds:
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.19
-      win_rate: 0.57
+      win_rate: 0.56
     - name: Barbed Carver
-      pick_rate: 0.06
-      win_rate: 0.55
+      pick_rate: 0.07
+      win_rate: 0.52
   - name: Hydra's Lament
     pick_rate: 0.41
     win_rate: 0.52
     alternates:
-    - name: Jotunn's Revenge
-      pick_rate: 0.15
-      win_rate: 0.55
     - name: Barbed Carver
       pick_rate: 0.15
       win_rate: 0.54
+    - name: Jotunn's Revenge
+      pick_rate: 0.15
+      win_rate: 0.55
   - name: Barbed Carver
-    pick_rate: 0.28
-    win_rate: 0.54
+    pick_rate: 0.27
+    win_rate: 0.55
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.14
-      win_rate: 0.47
+      win_rate: 0.48
     - name: The Reaper
-      pick_rate: 0.1
-      win_rate: 0.6
+      pick_rate: 0.11
+      win_rate: 0.58
   - name: Heartseeker
-    pick_rate: 0.33
+    pick_rate: 0.34
     win_rate: 0.58
     alternates:
     - name: Titan's Bane
       pick_rate: 0.17
-      win_rate: 0.47
+      win_rate: 0.46
     - name: The Reaper
       pick_rate: 0.08
-      win_rate: 0.63
+      win_rate: 0.65
   - name: Titan's Bane
-    pick_rate: 0.17
+    pick_rate: 0.18
     win_rate: 0.63
     alternates:
     - name: Heartseeker
       pick_rate: 0.19
-      win_rate: 0.51
+      win_rate: 0.52
     - name: Blinking Abyss
       pick_rate: 0.07
-      win_rate: 0.61
-  - name: Blinking Abyss
+      win_rate: 0.6
+  - name: Lucerne Hammer
     pick_rate: 0.08
-    win_rate: 0.57
+    win_rate: 0.49
     alternates:
     - name: Titan's Bane
       pick_rate: 0.11
-      win_rate: 0.64
-    - name: Lucerne Hammer
+      win_rate: 0.63
+    - name: Blinking Abyss
       pick_rate: 0.08
-      win_rate: 0.49
+      win_rate: 0.57
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.5
     win_rate: 0.59
   - name: Bumba's Cudgel
-    pick_rate: 0.28
-    win_rate: 0.44
+    pick_rate: 0.29
+    win_rate: 0.45
   - name: Conduit Gem
     pick_rate: 0.05
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/da-ji/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5233516483516484
-  god_matches_won: 381
-  god_matches_played: 728
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5256241787122208
+  god_matches_won: 400
+  god_matches_played: 761
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -100,8 +100,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Titan's Bane
   - Heartseeker
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -135,10 +135,10 @@ builds:
       pick: 0.41
       fit: 0.77
     The Reaper:
-      total: 0.58
+      total: 0.57
       efficiency: 0.53
-      win: 0.6
-      pick: 0.1
+      win: 0.58
+      pick: 0.11
       fit: 0.78
     The Crusher:
       total: 0.58
@@ -150,13 +150,13 @@ builds:
       total: 0.57
       efficiency: 0.46
       win: 0.58
-      pick: 0.33
+      pick: 0.34
       fit: 0.88
     Titan's Bane:
       total: 0.57
       efficiency: 0.46
       win: 0.63
-      pick: 0.17
+      pick: 0.18
       fit: 0.78
   starter: &id001
     base: Bumba's Golden Dagger
@@ -171,8 +171,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Titan's Bane
   - Heartseeker
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -206,10 +206,10 @@ builds:
       pick: 0.41
       fit: 0.54
     The Reaper:
-      total: 0.55
+      total: 0.54
       efficiency: 0.53
-      win: 0.6
-      pick: 0.1
+      win: 0.58
+      pick: 0.11
       fit: 0.56
     The Crusher:
       total: 0.55
@@ -221,13 +221,13 @@ builds:
       total: 0.54
       efficiency: 0.46
       win: 0.58
-      pick: 0.33
+      pick: 0.34
       fit: 0.66
     Titan's Bane:
       total: 0.54
       efficiency: 0.46
       win: 0.63
-      pick: 0.17
+      pick: 0.18
       fit: 0.56
   starter: *id001
 - source: suggested
@@ -288,10 +288,10 @@ builds:
       pick: 0.41
       fit: 0.42
     The Reaper:
-      total: 0.56
+      total: 0.55
       efficiency: 0.53
-      win: 0.6
-      pick: 0.1
+      win: 0.58
+      pick: 0.11
       fit: 0.67
     Amanita Charm:
       total: 0.58
@@ -310,7 +310,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Heartseeker
+  - The Reaper
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -345,10 +345,10 @@ builds:
       pick: 0.41
       fit: 0.54
     The Reaper:
-      total: 0.59
+      total: 0.58
       efficiency: 0.53
-      win: 0.6
-      pick: 0.1
+      win: 0.58
+      pick: 0.11
       fit: 0.85
     The Crusher:
       total: 0.59
@@ -360,13 +360,13 @@ builds:
       total: 0.58
       efficiency: 0.46
       win: 0.58
-      pick: 0.33
+      pick: 0.34
       fit: 0.95
     Titan's Bane:
       total: 0.58
       efficiency: 0.46
       win: 0.63
-      pick: 0.17
+      pick: 0.18
       fit: 0.85
   starter: *id001
 - source: suggested
@@ -379,8 +379,8 @@ builds:
   - The Reaper
   - Riptalon
   flex_slots:
-  - Berserker's Shield
   - Golden Blade
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -395,7 +395,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Riptalon, The Reaper, Berserker''s Shield, Golden Blade, The Crusher,
+    this god: Riptalon, Berserker''s Shield, Golden Blade, The Reaper, The Crusher,
     Silverbranch Bow, Tyrfing, Lernaean Bow, Genji''s Guard, Dominance, Tekko-Kagi,
     Runeforged Hammer, Pharaoh''s Curse, Breastplate of Valor, Toxic Blade, Damaru,
     Amanita Charm, Oni Hunter''s Garb, Shogun''s Ofuda, Yogi''s Necklace, Kinetic
@@ -426,10 +426,10 @@ builds:
       pick: 0.41
       fit: 0.36
     The Reaper:
-      total: 0.52
+      total: 0.51
       efficiency: 0.53
-      win: 0.6
-      pick: 0.1
+      win: 0.58
+      pick: 0.11
       fit: 0.41
     Riptalon:
       total: 0.53
@@ -445,11 +445,11 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Hydra's Lament
-  - The Reaper
   - The Crusher
+  - Titan's Bane
   flex_slots:
   - The Crusher
-  - The Reaper
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -495,18 +495,18 @@ builds:
       win: 0.52
       pick: 0.41
       fit: 0.75
-    The Reaper:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.1
-      fit: 0.35
     The Crusher:
       total: 0.52
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Titan's Bane:
+      total: 0.51
+      efficiency: 0.46
+      win: 0.63
+      pick: 0.18
+      fit: 0.35
   starter: *id001
 - source: suggested
   archetype: model
@@ -553,10 +553,10 @@ builds:
       pick: 0.41
       fit: 0.77
     The Reaper:
-      total: 0.58
+      total: 0.57
       efficiency: 0.53
-      win: 0.6
-      pick: 0.1
+      win: 0.58
+      pick: 0.11
       fit: 0.78
     Pendulum Blade:
       total: 0.52
@@ -574,7 +574,7 @@ builds:
       total: 0.57
       efficiency: 0.46
       win: 0.58
-      pick: 0.33
+      pick: 0.34
       fit: 0.88
   starter: *id001
 - source: suggested
@@ -622,10 +622,10 @@ builds:
       pick: 0.41
       fit: 0.77
     The Reaper:
-      total: 0.58
+      total: 0.57
       efficiency: 0.53
-      win: 0.6
-      pick: 0.1
+      win: 0.58
+      pick: 0.11
       fit: 0.78
     Pendulum Blade:
       total: 0.52
@@ -643,12 +643,12 @@ builds:
       total: 0.57
       efficiency: 0.46
       win: 0.63
-      pick: 0.17
+      pick: 0.18
       fit: 0.78
   swaps:
   - added: Titan's Bane
     removed: Heartseeker
-    reason: community 63% win over 124 matches (vs 52% on this god), taking the model's
+    reason: community 63% win over 137 matches (vs 53% on this god), taking the model's
       weakest slot from Heartseeker
   starter: *id001
 ---

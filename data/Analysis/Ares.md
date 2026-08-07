@@ -2,16 +2,16 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Genji's Guard | 0.56 | 0.62 | 0.72 | 0.54 | 0.18 | 0.38 | undervalued |  |  |
 | Amanita Charm | 0.56 | 0.66 | 0.66 | 0.50 | 0.00 | 0.67 | undervalued | sustain, aura | **UNDERRATED** |
+| Genji's Guard | 0.56 | 0.62 | 0.72 | 0.53 | 0.18 | 0.38 | undervalued |  |  |
 | Kinetic Cuirass | 0.55 | 0.65 | 0.60 | 0.50 | 0.00 | 0.77 | fair | burst | **UNDERRATED** |
+| Shifter's Shield | 0.55 | 0.59 | 0.55 | 0.54 | 0.17 | 0.67 | fair |  |  |
 | Eye of Providence | 0.54 | 0.63 | 0.62 | 0.50 | 0.00 | 0.67 | undervalued |  | **UNDERRATED** |
 | Berserker's Shield | 0.54 | 0.62 | 0.71 | 0.50 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
-| Shifter's Shield | 0.54 | 0.59 | 0.55 | 0.52 | 0.17 | 0.67 | fair |  |  |
-| Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.05 | 0.62 | fair |  | **UNDERRATED** |
+| Freya's Tears | 0.52 | 0.60 | 0.59 | 0.50 | 0.00 | 0.62 | fair |  | **UNDERRATED** |
+| Breastplate of Valor | 0.52 | 0.57 | 0.65 | 0.51 | 0.10 | 0.38 | undervalued |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.59 | 0.66 | 0.50 | 0.00 | 0.41 | undervalued | burst | **UNDERRATED** |
-| Breastplate of Valor | 0.52 | 0.57 | 0.65 | 0.50 | 0.10 | 0.38 | undervalued |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.57 | 0.57 | 0.50 | 0.00 | 0.57 | fair | sustain | **UNDERRATED** |
 | Erosion | 0.51 | 0.57 | 0.52 | 0.50 | 0.00 | 0.67 | fair | aura | **UNDERRATED** |
 | Draconic Scale | 0.50 | 0.55 | 0.50 | 0.50 | 0.00 | 0.67 | fair |  | **UNDERRATED** |
@@ -51,19 +51,19 @@
 | Helm of Darkness | 0.46 | 0.46 | 0.43 | 0.50 | 0.00 | 0.54 | premium | mobility |  |
 | Spear of the Magus | 0.45 | 0.46 | 0.60 | 0.50 | 0.00 | 0.12 | fair |  |  |
 | Death Metal | 0.45 | 0.46 | 0.60 | 0.50 | 0.00 | 0.13 | fair |  |  |
-| Hide of the Nemean Lion | 0.45 | 0.50 | 0.54 | 0.44 | 0.06 | 0.43 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.45 | 0.45 | 0.56 | 0.50 | 0.00 | 0.21 | fair |  |  |
 | Phoenix Feather | 0.45 | 0.45 | 0.46 | 0.50 | 0.00 | 0.43 | fair | sustain |  |
 | Wish-Granting Pearl | 0.45 | 0.45 | 0.54 | 0.50 | 0.00 | 0.25 | fair |  |  |
 | Ethereal Staff | 0.45 | 0.45 | 0.53 | 0.50 | 0.00 | 0.25 | fair |  |  |
 | Spear of Desolation | 0.45 | 0.45 | 0.52 | 0.50 | 0.00 | 0.26 | fair |  |  |
-| Dwarven Plate | 0.45 | 0.39 | 0.35 | 0.55 | 0.08 | 0.48 | premium |  |  |
+| Dwarven Plate | 0.45 | 0.39 | 0.35 | 0.55 | 0.07 | 0.48 | premium |  |  |
 | The Cosmic Horror | 0.45 | 0.44 | 0.58 | 0.50 | 0.00 | 0.12 | fair |  |  |
 | Alchemist Coat | 0.45 | 0.44 | 0.52 | 0.50 | 0.00 | 0.25 | fair |  |  |
 | Mystical Mail | 0.45 | 0.44 | 0.45 | 0.50 | 0.00 | 0.43 | fair | aura, wave-clear |  |
 | Wyrmskin Hide | 0.45 | 0.44 | 0.42 | 0.50 | 0.00 | 0.50 | premium |  |  |
 | Glorious Pridwen | 0.45 | 0.44 | 0.36 | 0.50 | 0.00 | 0.62 | premium | sustain |  |
 | Lernaean Bow | 0.44 | 0.44 | 0.56 | 0.50 | 0.00 | 0.17 | fair | wave-clear, burst |  |
+| Hide of the Nemean Lion | 0.44 | 0.50 | 0.54 | 0.42 | 0.06 | 0.43 | fair |  | **UNDERRATED** |
 | Damaru | 0.44 | 0.44 | 0.59 | 0.50 | 0.00 | 0.07 | fair |  |  |
 | Stygian Anchor | 0.44 | 0.43 | 0.41 | 0.50 | 0.00 | 0.48 | premium | anti-heal |  |
 | Blood-Bound Book | 0.44 | 0.43 | 0.58 | 0.50 | 0.00 | 0.06 | fair | sustain |  |

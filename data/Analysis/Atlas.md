@@ -2,26 +2,26 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Freya's Tears | 0.58 | 0.60 | 0.59 | 0.62 | 0.06 | 0.64 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.71 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.81 | fair | burst | **UNDERRATED** |
 | Eye of Providence | 0.55 | 0.65 | 0.62 | 0.50 | 0.00 | 0.71 | undervalued |  | **UNDERRATED** |
 | Genji's Guard | 0.54 | 0.62 | 0.72 | 0.50 | 0.13 | 0.39 | undervalued |  | **UNDERRATED** |
+| Freya's Tears | 0.54 | 0.60 | 0.59 | 0.52 | 0.05 | 0.64 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.46 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.51 | 0.58 | 0.52 | 0.50 | 0.00 | 0.71 | fair | aura | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.58 | 0.57 | 0.50 | 0.00 | 0.59 | fair | sustain | **UNDERRATED** |
 | Draconic Scale | 0.51 | 0.57 | 0.50 | 0.50 | 0.00 | 0.71 | fair |  | **UNDERRATED** |
-| Shifter's Shield | 0.50 | 0.60 | 0.55 | 0.43 | 0.16 | 0.71 | fair |  |  |
+| Shifter's Shield | 0.51 | 0.60 | 0.55 | 0.44 | 0.16 | 0.71 | fair |  |  |
+| Hide of the Nemean Lion | 0.50 | 0.51 | 0.54 | 0.54 | 0.04 | 0.46 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.46 | fair | anti-crit, aura | **UNDERRATED** |
+| Breastplate of Valor | 0.49 | 0.57 | 0.65 | 0.44 | 0.10 | 0.39 | undervalued |  | **UNDERRATED** |
 | Soul Gem | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.39 | fair | burst, sustain, aura | **UNDERRATED** |
 | Leviathan's Hide | 0.49 | 0.53 | 0.55 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.48 | 0.52 | 0.52 | 0.50 | 0.00 | 0.51 | fair | peel, cc-immunity | **UNDERRATED** |
 | Stone of Binding | 0.48 | 0.52 | 0.48 | 0.50 | 0.00 | 0.61 | fair | protection-shred | **UNDERRATED** |
 | Midgardian Mail | 0.48 | 0.52 | 0.54 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
-| Hide of the Nemean Lion | 0.48 | 0.51 | 0.54 | 0.50 | 0.04 | 0.46 | fair |  | **UNDERRATED** |
 | Yogi's Necklace | 0.48 | 0.51 | 0.65 | 0.50 | 0.00 | 0.20 | undervalued |  | **UNDERRATED** |
-| Breastplate of Valor | 0.48 | 0.57 | 0.65 | 0.42 | 0.10 | 0.39 | undervalued |  | **UNDERRATED** |
 | Helm of Radiance | 0.48 | 0.51 | 0.58 | 0.50 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.48 | 0.50 | 0.59 | 0.50 | 0.00 | 0.30 | fair | sustain, aura | **UNDERRATED** |
 | Magi's Cloak | 0.48 | 0.50 | 0.50 | 0.50 | 0.00 | 0.51 | fair | cc-immunity | **UNDERRATED** |
@@ -84,10 +84,10 @@
 | Eye of Erebus | 0.39 | 0.33 | 0.32 | 0.50 | 0.00 | 0.34 | premium |  |  |
 | Book of Thoth | 0.38 | 0.32 | 0.42 | 0.50 | 0.00 | 0.09 | premium |  |  |
 | Staff of Myrddin | 0.38 | 0.30 | 0.34 | 0.50 | 0.00 | 0.23 | premium |  |  |
+| Gauntlet of Thebes | 0.37 | 0.25 | 0.27 | 0.53 | 0.12 | 0.20 | premium |  |  |
 | Brawler’s Beat Stick | 0.36 | 0.28 | 0.18 | 0.50 | 0.00 | 0.51 | premium | anti-heal |  |
 | Circe's Hexstone | 0.36 | 0.28 | 0.25 | 0.50 | 0.00 | 0.34 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.36 | 0.27 | 0.30 | 0.50 | 0.00 | 0.20 | premium | cc-immunity, sustain |  |
-| Gauntlet of Thebes | 0.35 | 0.25 | 0.27 | 0.50 | 0.11 | 0.20 | premium |  |  |
 | Mercury's Talaria | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Omen Drum | 0.32 | 0.19 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.32 | 0.19 | 0.18 | 0.50 | 0.00 | 0.20 | premium |  |  |

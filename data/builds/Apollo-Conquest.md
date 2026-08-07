@@ -9,25 +9,25 @@ builds:
   aspect_win_rate: 0.51
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.42
+    pick_rate: 0.43
     win_rate: 0.5
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.2
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Dominance
       pick_rate: 0.13
-      win_rate: 0.47
+      win_rate: 0.46
   - name: Odysseus' Bow
     pick_rate: 0.18
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Dagger of Frenzy
       pick_rate: 0.16
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Toxic Blade
       pick_rate: 0.14
-      win_rate: 0.51
+      win_rate: 0.52
   - name: Silverbranch Bow
     pick_rate: 0.17
     win_rate: 0.53
@@ -43,50 +43,50 @@ builds:
     win_rate: 0.52
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.16
-      win_rate: 0.55
+      pick_rate: 0.17
+      win_rate: 0.54
     - name: The Executioner
       pick_rate: 0.11
       win_rate: 0.55
   - name: Qin's Blade
     pick_rate: 0.1
-    win_rate: 0.56
+    win_rate: 0.55
     alternates:
     - name: Riptalon
       pick_rate: 0.1
       win_rate: 0.5
     - name: Silverbranch Bow
       pick_rate: 0.09
-      win_rate: 0.56
+      win_rate: 0.57
   - name: Manchu Bow
     pick_rate: 0.13
     win_rate: 0.45
     alternates:
     - name: Hunter's Bow
       pick_rate: 0.1
-      win_rate: 0.49
+      win_rate: 0.48
     - name: Qin's Blade
       pick_rate: 0.08
-      win_rate: 0.52
+      win_rate: 0.51
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.29
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Sharpshooter's Arrow
     pick_rate: 0.24
     win_rate: 0.56
   - name: Death's Embrace
-    pick_rate: 0.14
+    pick_rate: 0.13
     win_rate: 0.54
   source_url: https://smitebrain.com/gods/apollo/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5108467459762072
-  god_matches_won: 730
-  god_matches_played: 1429
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5077966101694915
+  god_matches_won: 749
+  god_matches_played: 1475
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -139,7 +139,7 @@ builds:
       total: 0.5
       efficiency: 0.47
       win: 0.5
-      pick: 0.42
+      pick: 0.43
       fit: 0.6
     Riptalon:
       total: 0.5
@@ -399,11 +399,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Berserker''s Shield, Golden Blade, Lernaean Bow, The Crusher,
-    Damaru, Jotunn''s Revenge, Dominance, Genji''s Guard, Hydra''s Lament, Qin''s
-    Blade, Runeforged Hammer, Pharaoh''s Curse, Breastplate of Valor, Toxic Blade,
-    Demon Blade, Amanita Charm, Tekko-Kagi, Oni Hunter''s Garb, The Reaper, Yogi''s
-    Necklace, Kinetic Cuirass, Shogun''s Ofuda, Eros'' Bow, Eye of Providence, Avenging
-    Blade, Musashi''s Dual Swords.'
+    Damaru, Jotunn''s Revenge, Dominance, Genji''s Guard, Hydra''s Lament, Runeforged
+    Hammer, Pharaoh''s Curse, Qin''s Blade, Toxic Blade, Breastplate of Valor, Demon
+    Blade, Amanita Charm, Tekko-Kagi, Oni Hunter''s Garb, The Reaper, Yogi''s Necklace,
+    Kinetic Cuirass, Shogun''s Ofuda, Eros'' Bow, Eye of Providence, Avenging Blade,
+    Musashi''s Dual Swords.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -427,7 +427,7 @@ builds:
       total: 0.52
       efficiency: 0.47
       win: 0.5
-      pick: 0.42
+      pick: 0.43
       fit: 0.7
     Riptalon:
       total: 0.52

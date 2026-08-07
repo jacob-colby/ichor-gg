@@ -2,21 +2,21 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.63 | 0.76 | 0.65 | 0.52 | 0.37 | 1.00 | undervalued |  |  |
+| Jotunn's Revenge | 0.63 | 0.76 | 0.65 | 0.52 | 0.39 | 1.00 | undervalued |  |  |
 | The Crusher | 0.58 | 0.72 | 0.65 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
-| Heartseeker | 0.54 | 0.59 | 0.46 | 0.55 | 0.06 | 0.88 | fair | burst | **UNDERRATED** |
 | Genji's Guard | 0.54 | 0.57 | 0.72 | 0.55 | 0.11 | 0.22 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.54 | 0.65 | 0.61 | 0.45 | 0.15 | 0.77 | fair | burst | **UNDERRATED** |
 | The Reaper | 0.53 | 0.61 | 0.53 | 0.50 | 0.00 | 0.78 | fair | sustain | **UNDERRATED** |
+| Titan's Bane | 0.52 | 0.56 | 0.46 | 0.53 | 0.12 | 0.78 | fair |  | **UNDERRATED** |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Runeforged Hammer | 0.52 | 0.58 | 0.60 | 0.50 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
-| Titan's Bane | 0.51 | 0.56 | 0.46 | 0.51 | 0.12 | 0.78 | fair |  | **UNDERRATED** |
+| Heartseeker | 0.51 | 0.59 | 0.46 | 0.48 | 0.07 | 0.88 | fair | burst | **UNDERRATED** |
 | Tekko-Kagi | 0.50 | 0.55 | 0.46 | 0.50 | 0.00 | 0.78 | fair | mobility | **UNDERRATED** |
 | Lernaean Bow | 0.50 | 0.55 | 0.56 | 0.50 | 0.00 | 0.54 | fair | wave-clear, burst | **UNDERRATED** |
 | Arondight | 0.50 | 0.55 | 0.50 | 0.50 | 0.00 | 0.67 | fair | mobility | **UNDERRATED** |
 | Damaru | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
-| Rage | 0.50 | 0.42 | 0.41 | 0.63 | 0.09 | 0.44 | premium |  |  |
 | Avatar's Parashu | 0.49 | 0.53 | 0.43 | 0.50 | 0.00 | 0.78 | premium | cc-immunity | **UNDERRATED** |
+| Rage | 0.49 | 0.42 | 0.41 | 0.61 | 0.10 | 0.44 | premium |  |  |
 | Breastplate of Valor | 0.49 | 0.52 | 0.65 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
 | Avenging Blade | 0.49 | 0.52 | 0.51 | 0.50 | 0.00 | 0.54 | fair | protection-shred | **UNDERRATED** |
 | Golden Blade | 0.49 | 0.52 | 0.55 | 0.50 | 0.00 | 0.44 | fair | wave-clear | **UNDERRATED** |
@@ -28,11 +28,11 @@
 | Riptalon | 0.47 | 0.49 | 0.56 | 0.50 | 0.00 | 0.33 | fair | sustain | **UNDERRATED** |
 | Silverbranch Bow | 0.46 | 0.48 | 0.54 | 0.50 | 0.00 | 0.33 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.46 | 0.48 | 0.59 | 0.50 | 0.00 | 0.22 | fair |  | **UNDERRATED** |
-| Shifter's Shield | 0.46 | 0.39 | 0.55 | 0.58 | 0.18 | 0.00 | fair |  |  |
 | Barbed Carver | 0.46 | 0.47 | 0.43 | 0.50 | 0.00 | 0.54 | premium | burst | **UNDERRATED** |
 | Shield of the Phoenix | 0.46 | 0.47 | 0.57 | 0.50 | 0.00 | 0.22 | fair | sustain | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Transcendence | 0.45 | 0.46 | 0.46 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
+| Shifter's Shield | 0.45 | 0.39 | 0.55 | 0.56 | 0.18 | 0.00 | fair |  |  |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |

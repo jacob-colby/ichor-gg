@@ -10,7 +10,7 @@
 | Damaru | 0.49 | 0.54 | 0.59 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
 | The Crusher | 0.49 | 0.57 | 0.65 | 0.45 | 0.05 | 0.41 | undervalued | burst | **UNDERRATED** |
 | Genji's Guard | 0.49 | 0.53 | 0.72 | 0.50 | 0.00 | 0.10 | undervalued |  | **UNDERRATED** |
-| Heartseeker | 0.49 | 0.44 | 0.46 | 0.53 | 0.58 | 0.41 | fair | burst |  |
+| Heartseeker | 0.49 | 0.44 | 0.46 | 0.53 | 0.59 | 0.41 | fair | burst |  |
 | Titan's Bane | 0.48 | 0.42 | 0.46 | 0.57 | 0.38 | 0.31 | fair |  |  |
 | Golden Blade | 0.48 | 0.51 | 0.55 | 0.50 | 0.00 | 0.40 | fair | wave-clear | **UNDERRATED** |
 | Silverbranch Bow | 0.47 | 0.50 | 0.54 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |

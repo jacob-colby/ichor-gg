@@ -2,11 +2,10 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Freya's Tears | 0.63 | 0.58 | 0.59 | 0.75 | 0.05 | 0.57 | fair |  | **UNDERRATED** |
-| Shifter's Shield | 0.57 | 0.58 | 0.55 | 0.59 | 0.31 | 0.63 | fair |  |  |
-| Genji's Guard | 0.56 | 0.61 | 0.72 | 0.55 | 0.21 | 0.35 | undervalued |  |  |
+| Freya's Tears | 0.64 | 0.58 | 0.59 | 0.76 | 0.05 | 0.57 | fair |  | **UNDERRATED** |
+| Genji's Guard | 0.57 | 0.61 | 0.72 | 0.56 | 0.21 | 0.35 | undervalued |  |  |
+| Shifter's Shield | 0.56 | 0.58 | 0.55 | 0.57 | 0.31 | 0.63 | fair |  |  |
 | Amanita Charm | 0.55 | 0.65 | 0.66 | 0.50 | 0.00 | 0.63 | undervalued | sustain, aura | **UNDERRATED** |
-| Spirit Robe | 0.55 | 0.39 | 0.36 | 0.78 | 0.04 | 0.45 | premium | sustain |  |
 | Kinetic Cuirass | 0.55 | 0.64 | 0.60 | 0.50 | 0.00 | 0.73 | fair | burst | **UNDERRATED** |
 | Eye of Providence | 0.54 | 0.62 | 0.62 | 0.50 | 0.00 | 0.63 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.59 | 0.66 | 0.50 | 0.00 | 0.42 | undervalued | burst | **UNDERRATED** |
@@ -67,6 +66,7 @@
 | Umbral Link | 0.42 | 0.39 | 0.47 | 0.50 | 0.00 | 0.23 | fair | sustain, aura |  |
 | Regrowth Striders | 0.42 | 0.39 | 0.41 | 0.50 | 0.00 | 0.35 | premium | mobility, sustain |  |
 | Contagion | 0.42 | 0.39 | 0.43 | 0.50 | 0.00 | 0.28 | premium | anti-heal, burst |  |
+| Spirit Robe | 0.42 | 0.39 | 0.36 | 0.50 | 0.00 | 0.45 | premium | sustain |  |
 | Sphere of Negation | 0.42 | 0.39 | 0.42 | 0.50 | 0.00 | 0.31 | premium | sustain |  |
 | Dreamer's Idol | 0.42 | 0.38 | 0.49 | 0.50 | 0.00 | 0.14 | fair | cc-immunity |  |
 | Dwarven Plate | 0.42 | 0.38 | 0.35 | 0.50 | 0.00 | 0.45 | premium |  |  |
@@ -78,8 +78,8 @@
 | Scepter of Dominion | 0.41 | 0.36 | 0.41 | 0.50 | 0.00 | 0.26 | premium | peel |  |
 | Gem of Isolation | 0.41 | 0.36 | 0.41 | 0.50 | 0.00 | 0.26 | premium | peel |  |
 | Divine Ruin | 0.40 | 0.36 | 0.43 | 0.50 | 0.00 | 0.18 | premium | anti-heal, burst |  |
+| Gauntlet of Thebes | 0.40 | 0.24 | 0.27 | 0.60 | 0.23 | 0.18 | premium |  |  |
 | Rod of Tahuti | 0.40 | 0.35 | 0.44 | 0.50 | 0.00 | 0.14 | premium |  |  |
-| Gauntlet of Thebes | 0.40 | 0.24 | 0.27 | 0.59 | 0.22 | 0.18 | premium |  |  |
 | Necronomicon | 0.39 | 0.33 | 0.44 | 0.50 | 0.00 | 0.08 | premium |  |  |
 | Heartwood Charm | 0.39 | 0.33 | 0.35 | 0.50 | 0.00 | 0.30 | premium |  |  |
 | Book of Thoth | 0.38 | 0.32 | 0.42 | 0.50 | 0.00 | 0.08 | premium |  |  |

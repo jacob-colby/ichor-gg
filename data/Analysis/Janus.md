@@ -2,7 +2,7 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.61 | 0.71 | 0.59 | 0.52 | 0.41 | 1.00 | fair | burst, sustain, aura |  |
+| Soul Gem | 0.61 | 0.71 | 0.59 | 0.52 | 0.40 | 1.00 | fair | burst, sustain, aura |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
 | Obsidian Shard | 0.58 | 0.61 | 0.54 | 0.58 | 0.29 | 0.78 | fair |  |  |
 | Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.49 | 0.51 | 1.00 | fair |  |  |
@@ -41,13 +41,13 @@
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
+| Book of Thoth | 0.45 | 0.43 | 0.42 | 0.50 | 0.22 | 0.44 | premium |  |  |
 | Necronomicon | 0.45 | 0.44 | 0.44 | 0.50 | 0.00 | 0.44 | premium |  |  |
 | Screeching Gargoyle | 0.44 | 0.44 | 0.49 | 0.50 | 0.00 | 0.32 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.22 | fair | sustain |  |
 | Staff of Myrddin | 0.44 | 0.43 | 0.34 | 0.50 | 0.00 | 0.67 | premium |  |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Helm of Darkness | 0.44 | 0.43 | 0.43 | 0.50 | 0.00 | 0.44 | premium | mobility |  |
-| Book of Thoth | 0.44 | 0.43 | 0.42 | 0.48 | 0.22 | 0.44 | premium |  |  |
 | Sphere of Negation | 0.44 | 0.43 | 0.42 | 0.50 | 0.00 | 0.44 | premium | sustain |  |
 | Scepter of Dominion | 0.43 | 0.42 | 0.41 | 0.50 | 0.00 | 0.44 | premium | peel |  |
 | Gem of Isolation | 0.43 | 0.42 | 0.41 | 0.50 | 0.00 | 0.44 | premium | peel |  |

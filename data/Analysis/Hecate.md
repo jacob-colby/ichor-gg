@@ -2,13 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.66 | 0.71 | 0.59 | 0.64 | 0.31 | 1.00 | fair | burst, sustain, aura |  |
+| Soul Gem | 0.65 | 0.71 | 0.59 | 0.63 | 0.30 | 1.00 | fair | burst, sustain, aura |  |
 | Spear of Desolation | 0.65 | 0.67 | 0.52 | 0.63 | 0.58 | 1.00 | fair |  |  |
-| Obsidian Shard | 0.60 | 0.61 | 0.54 | 0.63 | 0.27 | 0.77 | fair |  |  |
-| The World Stone | 0.59 | 0.57 | 0.49 | 0.66 | 0.17 | 0.77 | fair |  |  |
+| The World Stone | 0.60 | 0.57 | 0.49 | 0.67 | 0.16 | 0.77 | fair |  |  |
+| Obsidian Shard | 0.60 | 0.61 | 0.54 | 0.62 | 0.26 | 0.77 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.72 | 0.66 | 0.50 | 0.00 | 0.87 | undervalued | burst | **UNDERRATED** |
+| Soul Reaver | 0.57 | 0.48 | 0.46 | 0.73 | 0.07 | 0.51 | fair | burst |  |
 | Rod of Tahuti | 0.56 | 0.54 | 0.44 | 0.62 | 0.32 | 0.77 | premium |  |  |
-| Soul Reaver | 0.56 | 0.48 | 0.46 | 0.71 | 0.07 | 0.51 | fair | burst |  |
 | Spear of the Magus | 0.55 | 0.65 | 0.60 | 0.50 | 0.00 | 0.77 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.54 | 0.64 | 0.58 | 0.50 | 0.00 | 0.77 | fair |  | **UNDERRATED** |
 | Doom Orb | 0.53 | 0.57 | 0.49 | 0.53 | 0.07 | 0.77 | fair |  | **UNDERRATED** |

@@ -3,12 +3,12 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Golden Blade | 0.57 | 0.56 | 0.55 | 0.63 | 0.14 | 0.57 | fair | wave-clear | **UNDERRATED** |
-| Berserker's Shield | 0.56 | 0.63 | 0.71 | 0.51 | 0.32 | 0.45 | undervalued |  |  |
-| Hide of the Nemean Lion | 0.53 | 0.45 | 0.54 | 0.68 | 0.07 | 0.25 | fair |  |  |
+| Berserker's Shield | 0.56 | 0.63 | 0.71 | 0.52 | 0.32 | 0.45 | undervalued |  |  |
+| Hide of the Nemean Lion | 0.54 | 0.45 | 0.54 | 0.70 | 0.07 | 0.25 | fair |  |  |
 | Amanita Charm | 0.51 | 0.57 | 0.66 | 0.50 | 0.00 | 0.35 | undervalued | sustain, aura | **UNDERRATED** |
 | The Crusher | 0.51 | 0.56 | 0.65 | 0.50 | 0.00 | 0.37 | undervalued | burst | **UNDERRATED** |
 | Runeforged Hammer | 0.51 | 0.56 | 0.60 | 0.50 | 0.00 | 0.47 | fair | burst | **UNDERRATED** |
-| Kinetic Cuirass | 0.50 | 0.56 | 0.60 | 0.48 | 0.19 | 0.45 | fair | burst |  |
+| Kinetic Cuirass | 0.50 | 0.56 | 0.60 | 0.48 | 0.18 | 0.45 | fair | burst |  |
 | Jotunn's Revenge | 0.50 | 0.55 | 0.65 | 0.50 | 0.00 | 0.30 | undervalued |  | **UNDERRATED** |
 | Lernaean Bow | 0.50 | 0.54 | 0.56 | 0.50 | 0.00 | 0.51 | fair | wave-clear, burst | **UNDERRATED** |
 | Genji's Guard | 0.50 | 0.54 | 0.72 | 0.50 | 0.00 | 0.13 | undervalued |  | **UNDERRATED** |
@@ -19,13 +19,13 @@
 | Hydra's Lament | 0.49 | 0.53 | 0.61 | 0.50 | 0.00 | 0.35 | fair | burst | **UNDERRATED** |
 | Damaru | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Eye of the Storm | 0.48 | 0.51 | 0.52 | 0.50 | 0.00 | 0.47 | fair | peel | **UNDERRATED** |
-| Shogun's Ofuda | 0.48 | 0.50 | 0.53 | 0.49 | 0.11 | 0.45 | fair | aura | **UNDERRATED** |
 | Avenging Blade | 0.48 | 0.50 | 0.51 | 0.50 | 0.00 | 0.47 | fair | protection-shred | **UNDERRATED** |
 | Yogi's Necklace | 0.47 | 0.50 | 0.65 | 0.50 | 0.00 | 0.16 | undervalued |  | **UNDERRATED** |
 | Shield Splitter | 0.47 | 0.50 | 0.53 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Breastplate of Valor | 0.47 | 0.50 | 0.65 | 0.50 | 0.00 | 0.13 | undervalued |  | **UNDERRATED** |
 | Dominance | 0.47 | 0.50 | 0.53 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.47 | 0.49 | 0.59 | 0.50 | 0.00 | 0.25 | fair | anti-crit, aura | **UNDERRATED** |
+| Shogun's Ofuda | 0.47 | 0.50 | 0.53 | 0.47 | 0.11 | 0.45 | fair | aura | **UNDERRATED** |
 | Shield of the Phoenix | 0.47 | 0.49 | 0.57 | 0.50 | 0.00 | 0.29 | fair | sustain | **UNDERRATED** |
 | Tyrfing | 0.47 | 0.49 | 0.47 | 0.50 | 0.00 | 0.51 | fair | burst | **UNDERRATED** |
 | Freya's Tears | 0.46 | 0.48 | 0.59 | 0.50 | 0.00 | 0.23 | fair |  | **UNDERRATED** |
@@ -71,9 +71,9 @@
 | Avatar's Parashu | 0.41 | 0.38 | 0.43 | 0.50 | 0.00 | 0.27 | premium | cc-immunity |  |
 | Odysseus' Bow | 0.41 | 0.37 | 0.40 | 0.50 | 0.00 | 0.29 | premium | burst, wave-clear |  |
 | Prophetic Cloak | 0.41 | 0.37 | 0.43 | 0.50 | 0.00 | 0.23 | premium |  |  |
-| Dwarven Plate | 0.41 | 0.31 | 0.35 | 0.55 | 0.13 | 0.19 | premium |  |  |
 | Deathbringer | 0.41 | 0.36 | 0.36 | 0.50 | 0.00 | 0.37 | premium |  |  |
 | Umbral Link | 0.40 | 0.35 | 0.47 | 0.50 | 0.00 | 0.10 | fair | sustain, aura |  |
+| Dwarven Plate | 0.40 | 0.31 | 0.35 | 0.54 | 0.12 | 0.19 | premium |  |  |
 | Qin's Blade | 0.40 | 0.35 | 0.38 | 0.50 | 0.00 | 0.29 | premium | burst |  |
 | Stygian Anchor | 0.40 | 0.35 | 0.41 | 0.50 | 0.00 | 0.19 | premium | anti-heal |  |
 | Oath-Sworn Spear | 0.40 | 0.34 | 0.36 | 0.50 | 0.00 | 0.32 | premium | protection-shred |  |

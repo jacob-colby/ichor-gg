@@ -2,22 +2,22 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Breastplate of Valor | 0.60 | 0.58 | 0.65 | 0.67 | 0.14 | 0.40 | undervalued |  | **UNDERRATED** |
-| Shifter's Shield | 0.58 | 0.60 | 0.55 | 0.61 | 0.11 | 0.70 | fair |  | **UNDERRATED** |
+| Breastplate of Valor | 0.60 | 0.58 | 0.65 | 0.68 | 0.14 | 0.40 | undervalued |  | **UNDERRATED** |
 | Amanita Charm | 0.56 | 0.67 | 0.66 | 0.50 | 0.00 | 0.70 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.80 | fair | burst | **UNDERRATED** |
-| Genji's Guard | 0.55 | 0.62 | 0.72 | 0.51 | 0.21 | 0.40 | undervalued |  |  |
 | Eye of Providence | 0.55 | 0.64 | 0.62 | 0.50 | 0.00 | 0.70 | undervalued |  | **UNDERRATED** |
+| Genji's Guard | 0.54 | 0.62 | 0.72 | 0.49 | 0.20 | 0.40 | undervalued |  |  |
 | Freya's Tears | 0.53 | 0.61 | 0.59 | 0.50 | 0.00 | 0.65 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.45 | undervalued | burst | **UNDERRATED** |
+| Shifter's Shield | 0.52 | 0.60 | 0.55 | 0.50 | 0.00 | 0.70 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.45 | undervalued |  | **UNDERRATED** |
+| Stampede | 0.52 | 0.50 | 0.52 | 0.59 | 0.11 | 0.45 | fair | mobility, aura, cc-immunity | **UNDERRATED** |
 | Shield of the Phoenix | 0.52 | 0.58 | 0.57 | 0.50 | 0.00 | 0.60 | fair | sustain | **UNDERRATED** |
 | Erosion | 0.51 | 0.58 | 0.52 | 0.50 | 0.00 | 0.70 | fair | aura | **UNDERRATED** |
 | Draconic Scale | 0.51 | 0.56 | 0.50 | 0.50 | 0.00 | 0.70 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.45 | fair | anti-crit, aura | **UNDERRATED** |
-| Stampede | 0.50 | 0.50 | 0.52 | 0.55 | 0.06 | 0.45 | fair | mobility, aura, cc-immunity | **UNDERRATED** |
-| Yogi's Necklace | 0.50 | 0.51 | 0.65 | 0.52 | 0.15 | 0.20 | undervalued |  | **UNDERRATED** |
 | Prophetic Cloak | 0.49 | 0.49 | 0.43 | 0.54 | 0.10 | 0.65 | premium |  | **UNDERRATED** |
+| Yogi's Necklace | 0.49 | 0.51 | 0.65 | 0.51 | 0.15 | 0.20 | undervalued |  | **UNDERRATED** |
 | Soul Gem | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.40 | fair | burst, sustain, aura | **UNDERRATED** |
 | Leviathan's Hide | 0.49 | 0.52 | 0.55 | 0.50 | 0.00 | 0.45 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.48 | 0.52 | 0.52 | 0.50 | 0.00 | 0.50 | fair | peel, cc-immunity | **UNDERRATED** |

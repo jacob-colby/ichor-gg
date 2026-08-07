@@ -2,12 +2,12 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.68 | 0.76 | 0.65 | 0.62 | 0.35 | 1.00 | undervalued |  |  |
-| The Reaper | 0.61 | 0.65 | 0.53 | 0.61 | 0.21 | 0.91 | fair | sustain |  |
-| Hydra's Lament | 0.60 | 0.64 | 0.61 | 0.60 | 0.31 | 0.71 | fair | burst |  |
+| Jotunn's Revenge | 0.68 | 0.76 | 0.65 | 0.62 | 0.34 | 1.00 | undervalued |  |  |
 | The Crusher | 0.60 | 0.75 | 0.65 | 0.50 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
-| Heartseeker | 0.60 | 0.62 | 0.46 | 0.60 | 0.37 | 1.00 | fair | burst |  |
-| Titan's Bane | 0.59 | 0.60 | 0.46 | 0.63 | 0.22 | 0.91 | fair |  |  |
+| The Reaper | 0.60 | 0.65 | 0.53 | 0.59 | 0.22 | 0.91 | fair | sustain |  |
+| Hydra's Lament | 0.60 | 0.64 | 0.61 | 0.59 | 0.31 | 0.71 | fair | burst |  |
+| Heartseeker | 0.59 | 0.62 | 0.46 | 0.59 | 0.37 | 1.00 | fair | burst |  |
+| Titan's Bane | 0.59 | 0.60 | 0.46 | 0.62 | 0.22 | 0.91 | fair |  |  |
 | Runeforged Hammer | 0.53 | 0.61 | 0.60 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Barbed Carver | 0.52 | 0.49 | 0.43 | 0.59 | 0.27 | 0.62 | premium | burst |  |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |

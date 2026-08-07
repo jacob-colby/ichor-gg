@@ -5,12 +5,12 @@
 | Jotunn's Revenge | 0.59 | 0.62 | 0.65 | 0.55 | 0.55 | 0.55 | undervalued |  |  |
 | Runeforged Hammer | 0.56 | 0.59 | 0.60 | 0.58 | 0.08 | 0.58 | fair | burst | **UNDERRATED** |
 | Hydra's Lament | 0.56 | 0.56 | 0.61 | 0.59 | 0.23 | 0.44 | fair | burst |  |
-| Shifter's Shield | 0.54 | 0.52 | 0.55 | 0.62 | 0.11 | 0.45 | fair |  | **UNDERRATED** |
 | The Crusher | 0.54 | 0.63 | 0.65 | 0.50 | 0.00 | 0.61 | undervalued | burst | **UNDERRATED** |
+| Shifter's Shield | 0.54 | 0.52 | 0.55 | 0.61 | 0.11 | 0.45 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.45 | undervalued | sustain, aura | **UNDERRATED** |
+| Heartseeker | 0.52 | 0.50 | 0.46 | 0.57 | 0.23 | 0.61 | fair | burst |  |
 | Berserker's Shield | 0.52 | 0.59 | 0.71 | 0.50 | 0.00 | 0.31 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.52 | 0.58 | 0.60 | 0.50 | 0.00 | 0.55 | fair | burst | **UNDERRATED** |
-| Heartseeker | 0.52 | 0.50 | 0.46 | 0.56 | 0.24 | 0.61 | fair | burst |  |
 | Eye of Providence | 0.51 | 0.57 | 0.62 | 0.50 | 0.00 | 0.45 | undervalued |  | **UNDERRATED** |
 | Genji's Guard | 0.50 | 0.56 | 0.72 | 0.50 | 0.00 | 0.18 | undervalued |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.50 | 0.55 | 0.65 | 0.50 | 0.00 | 0.31 | undervalued |  | **UNDERRATED** |
@@ -49,9 +49,9 @@
 | Void Shield | 0.45 | 0.45 | 0.46 | 0.50 | 0.00 | 0.41 | fair | protection-shred, aura |  |
 | Mantle Of Discord | 0.45 | 0.44 | 0.52 | 0.50 | 0.00 | 0.26 | fair | peel, cc-immunity |  |
 | Stone of Binding | 0.45 | 0.44 | 0.48 | 0.50 | 0.00 | 0.36 | fair | protection-shred |  |
+| Transcendence | 0.45 | 0.41 | 0.46 | 0.52 | 0.11 | 0.30 | fair |  |  |
 | Chandra's Grace | 0.45 | 0.44 | 0.53 | 0.50 | 0.00 | 0.23 | fair | sustain |  |
 | Silverbranch Bow | 0.45 | 0.44 | 0.54 | 0.50 | 0.00 | 0.21 | fair |  |  |
-| Transcendence | 0.44 | 0.41 | 0.46 | 0.51 | 0.12 | 0.30 | fair |  |  |
 | Void Stone | 0.44 | 0.43 | 0.44 | 0.50 | 0.00 | 0.41 | premium | protection-shred, aura |  |
 | Magi's Cloak | 0.44 | 0.43 | 0.50 | 0.50 | 0.00 | 0.26 | fair | cc-immunity |  |
 | Ragnarok's Wake | 0.44 | 0.43 | 0.43 | 0.50 | 0.00 | 0.41 | premium | mobility, burst |  |

@@ -13,30 +13,30 @@ builds:
     win_rate: 0.49
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.33
-      win_rate: 0.52
+      pick_rate: 0.32
+      win_rate: 0.51
     - name: Doom Orb
       pick_rate: 0.06
-      win_rate: 0.57
+      win_rate: 0.58
   - name: Book of Thoth
     pick_rate: 0.22
-    win_rate: 0.48
+    win_rate: 0.5
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.27
-      win_rate: 0.52
+      win_rate: 0.51
     - name: Doom Orb
       pick_rate: 0.15
       win_rate: 0.48
   - name: Soul Gem
-    pick_rate: 0.41
+    pick_rate: 0.4
     win_rate: 0.52
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.19
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Spear of Desolation
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.46
   - name: Rod of Tahuti
     pick_rate: 0.39
@@ -47,46 +47,46 @@ builds:
       win_rate: 0.51
     - name: Soul Gem
       pick_rate: 0.11
-      win_rate: 0.55
+      win_rate: 0.54
   - name: Obsidian Shard
     pick_rate: 0.29
     win_rate: 0.58
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.21
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Evil Eye
       pick_rate: 0.08
-      win_rate: 0.37
-  - name: Evil Eye
+      win_rate: 0.39
+  - name: Blinking Abyss
     pick_rate: 0.09
-    win_rate: 0.38
+    win_rate: 0.61
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.09
-      win_rate: 0.58
-    - name: Blinking Abyss
+      win_rate: 0.57
+    - name: Evil Eye
       pick_rate: 0.09
-      win_rate: 0.63
+      win_rate: 0.37
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.5
-    win_rate: 0.54
+    win_rate: 0.53
   - name: Conduit Gem
     pick_rate: 0.3
-    win_rate: 0.41
+    win_rate: 0.42
   - name: Pendulum of The Ages
     pick_rate: 0.14
     win_rate: 0.57
   source_url: https://smitebrain.com/gods/janus/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.49304174950298213
-  god_matches_won: 744
-  god_matches_played: 1509
+  last_verified: '2026-08-07'
+  god_win_rate: 0.4914826498422713
+  god_matches_won: 779
+  god_matches_played: 1585
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -156,7 +156,7 @@ builds:
       total: 0.61
       efficiency: 0.59
       win: 0.52
-      pick: 0.41
+      pick: 0.4
       fit: 1.0
   starter: &id001
     base: Conduit Gem
@@ -228,7 +228,7 @@ builds:
       total: 0.59
       efficiency: 0.59
       win: 0.52
-      pick: 0.41
+      pick: 0.4
       fit: 0.88
   starter: *id001
 - source: suggested
@@ -298,7 +298,7 @@ builds:
       total: 0.59
       efficiency: 0.59
       win: 0.52
-      pick: 0.41
+      pick: 0.4
       fit: 0.88
   starter: *id001
 - source: suggested
@@ -368,7 +368,7 @@ builds:
       total: 0.61
       efficiency: 0.59
       win: 0.52
-      pick: 0.41
+      pick: 0.4
       fit: 1.0
   starter: *id001
 - source: suggested
@@ -438,7 +438,7 @@ builds:
       total: 0.55
       efficiency: 0.59
       win: 0.52
-      pick: 0.41
+      pick: 0.4
       fit: 0.57
   starter: *id001
 - source: suggested
@@ -508,7 +508,7 @@ builds:
       total: 0.6
       efficiency: 0.59
       win: 0.52
-      pick: 0.41
+      pick: 0.4
       fit: 0.95
   starter: *id001
 - source: suggested

@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Watchful Pride
-  aspect_pick_rate: 0.07
+  aspect_pick_rate: 0.06
   aspect_win_rate: 0.51
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.7
-    win_rate: 0.55
+    pick_rate: 0.71
+    win_rate: 0.54
     alternates:
     - name: Transcendence
       pick_rate: 0.12
-      win_rate: 0.59
+      win_rate: 0.57
     - name: Shifter's Shield
       pick_rate: 0.04
       win_rate: 0.59
   - name: Transcendence
     pick_rate: 0.3
-    win_rate: 0.58
+    win_rate: 0.57
     alternates:
     - name: Barbed Carver
       pick_rate: 0.2
       win_rate: 0.54
     - name: Jotunn's Revenge
       pick_rate: 0.14
-      win_rate: 0.56
+      win_rate: 0.55
   - name: Barbed Carver
     pick_rate: 0.2
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: The Reaper
-      pick_rate: 0.14
-      win_rate: 0.56
-    - name: Pendulum Blade
-      pick_rate: 0.11
+      pick_rate: 0.15
       win_rate: 0.58
+    - name: Pendulum Blade
+      pick_rate: 0.12
+      win_rate: 0.54
   - name: Heartseeker
     pick_rate: 0.3
     win_rate: 0.57
     alternates:
     - name: Titan's Bane
       pick_rate: 0.17
-      win_rate: 0.54
+      win_rate: 0.53
     - name: The Crusher
       pick_rate: 0.08
-      win_rate: 0.47
+      win_rate: 0.48
   - name: Titan's Bane
     pick_rate: 0.18
-    win_rate: 0.67
+    win_rate: 0.66
     alternates:
     - name: Heartseeker
       pick_rate: 0.2
-      win_rate: 0.6
+      win_rate: 0.59
     - name: Lucerne Hammer
-      pick_rate: 0.08
+      pick_rate: 0.09
       win_rate: 0.52
   - name: Lucerne Hammer
     pick_rate: 0.13
-    win_rate: 0.51
+    win_rate: 0.49
     alternates:
     - name: Titan's Bane
       pick_rate: 0.09
-      win_rate: 0.55
+      win_rate: 0.53
     - name: Skeggox
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.6
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.31
-    win_rate: 0.62
+    win_rate: 0.61
   - name: Bluestone Pendant
     pick_rate: 0.19
-    win_rate: 0.57
+    win_rate: 0.54
   - name: Bumba's Hammer
     pick_rate: 0.09
-    win_rate: 0.61
+    win_rate: 0.63
   source_url: https://smitebrain.com/gods/bastet/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5565789473684211
-  god_matches_won: 423
-  god_matches_played: 760
+  last_verified: '2026-08-07'
+  god_win_rate: 0.547945205479452
+  god_matches_won: 440
+  god_matches_played: 803
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -125,25 +125,25 @@ builds:
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.65
-      win: 0.55
-      pick: 0.7
+      win: 0.54
+      pick: 0.71
       fit: 1.0
     The Reaper:
-      total: 0.58
+      total: 0.59
       efficiency: 0.53
-      win: 0.56
-      pick: 0.14
+      win: 0.58
+      pick: 0.15
       fit: 0.91
     Pendulum Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.42
-      win: 0.58
-      pick: 0.11
+      win: 0.54
+      pick: 0.12
       fit: 1.0
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.47
+      win: 0.48
       pick: 0.08
       fit: 1.0
     Heartseeker:
@@ -153,9 +153,9 @@ builds:
       pick: 0.3
       fit: 1.0
     Titan's Bane:
-      total: 0.61
+      total: 0.6
       efficiency: 0.46
-      win: 0.67
+      win: 0.66
       pick: 0.18
       fit: 0.91
   starter: &id001
@@ -165,14 +165,14 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Pendulum Blade
-  - The Reaper
+  - Heartseeker
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -187,7 +187,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, Pendulum Blade, The Reaper, Hydra''s Lament, Genji''s Guard,
+    god: The Crusher, The Reaper, Hydra''s Lament, Pendulum Blade, Genji''s Guard,
     Breastplate of Valor, Runeforged Hammer, Berserker''s Shield, Riptalon, Tekko-Kagi,
     Lernaean Bow, Arondight, Damaru, Silverbranch Bow, Freya''s Tears, Shield of the
     Phoenix, Avatar''s Parashu, Amanita Charm, Oni Hunter''s Garb, Avenging Blade,
@@ -195,27 +195,27 @@ builds:
     Gargoyle.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.65
-      win: 0.55
-      pick: 0.7
+      win: 0.54
+      pick: 0.71
       fit: 0.78
+    Hydra's Lament:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     The Reaper:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
-      win: 0.56
-      pick: 0.14
-      fit: 0.56
-    Pendulum Blade:
-      total: 0.53
-      efficiency: 0.42
       win: 0.58
-      pick: 0.11
-      fit: 0.78
+      pick: 0.15
+      fit: 0.56
     The Crusher:
       total: 0.54
       efficiency: 0.65
-      win: 0.47
+      win: 0.48
       pick: 0.08
       fit: 0.66
     Heartseeker:
@@ -225,24 +225,24 @@ builds:
       pick: 0.3
       fit: 0.66
     Titan's Bane:
-      total: 0.56
+      total: 0.55
       efficiency: 0.46
-      win: 0.67
+      win: 0.66
       pick: 0.18
       fit: 0.56
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
   - The Reaper
   - Shifter's Shield
-  - Titan's Bane
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Titan's Bane
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -264,11 +264,17 @@ builds:
     Freya''s Tears, Avenging Blade, Draconic Scale, Breastplate of Valor, Pharaoh''s
     Curse, Golden Blade, Yogi''s Necklace, Leviathan''s Hide, Midgardian Mail.'
   slot_scores:
+    Berserker's Shield:
+      total: 0.53
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.65
-      win: 0.55
-      pick: 0.7
+      win: 0.54
+      pick: 0.71
       fit: 0.44
     Kinetic Cuirass:
       total: 0.53
@@ -277,10 +283,10 @@ builds:
       pick: 0.0
       fit: 0.66
     The Reaper:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
-      win: 0.56
-      pick: 0.14
+      win: 0.58
+      pick: 0.15
       fit: 0.7
     Shifter's Shield:
       total: 0.54
@@ -288,12 +294,6 @@ builds:
       win: 0.59
       pick: 0.04
       fit: 0.56
-    Titan's Bane:
-      total: 0.53
-      efficiency: 0.46
-      win: 0.67
-      pick: 0.18
-      fit: 0.4
     Amanita Charm:
       total: 0.59
       efficiency: 0.66
@@ -327,7 +327,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, The Reaper, Pendulum Blade, Tekko-Kagi, Avatar''s Parashu,
+    for this god: The Reaper, The Crusher, Pendulum Blade, Tekko-Kagi, Avatar''s Parashu,
     Avenging Blade, Riptalon, Hydra''s Lament, Silverbranch Bow, Runeforged Hammer,
     Genji''s Guard, Lernaean Bow, Damaru, Berserker''s Shield, Golden Blade, Toxic
     Blade, Screeching Gargoyle, Breastplate of Valor, Shield Splitter, Dominance,
@@ -337,25 +337,25 @@ builds:
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.65
-      win: 0.55
-      pick: 0.7
+      win: 0.54
+      pick: 0.71
       fit: 1.0
     The Reaper:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
-      win: 0.56
-      pick: 0.14
+      win: 0.58
+      pick: 0.15
       fit: 0.94
     Pendulum Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.42
-      win: 0.58
-      pick: 0.11
+      win: 0.54
+      pick: 0.12
       fit: 1.0
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.47
+      win: 0.48
       pick: 0.08
       fit: 1.0
     Heartseeker:
@@ -367,7 +367,7 @@ builds:
     Titan's Bane:
       total: 0.61
       efficiency: 0.46
-      win: 0.67
+      win: 0.66
       pick: 0.18
       fit: 0.94
   starter: *id001
@@ -377,12 +377,12 @@ builds:
   - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
+  - The Reaper
   - Riptalon
-  - Silverbranch Bow
   - Titan's Bane
   flex_slots:
   - Berserker's Shield
-  - Silverbranch Bow
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -397,11 +397,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Riptalon, Golden Blade, Berserker''s Shield, Silverbranch Bow, The Reaper,
-    Tyrfing, The Crusher, Lernaean Bow, Dominance, Tekko-Kagi, Hydra''s Lament, Genji''s
-    Guard, Toxic Blade, Runeforged Hammer, Pharaoh''s Curse, Breastplate of Valor,
-    Damaru, Shogun''s Ofuda, Amanita Charm, Oni Hunter''s Garb, Yogi''s Necklace,
-    Eros'' Bow, Kinetic Cuirass, Qin''s Blade, Avenging Blade, Eye of Providence,
+    this god: Riptalon, Golden Blade, The Reaper, Berserker''s Shield, Silverbranch
+    Bow, The Crusher, Tyrfing, Lernaean Bow, Dominance, Tekko-Kagi, Hydra''s Lament,
+    Genji''s Guard, Toxic Blade, Runeforged Hammer, Pharaoh''s Curse, Breastplate
+    of Valor, Damaru, Shogun''s Ofuda, Amanita Charm, Oni Hunter''s Garb, Yogi''s
+    Necklace, Eros'' Bow, Kinetic Cuirass, Qin''s Blade, Avenging Blade, Eye of Providence,
     Shield Splitter.'
   slot_scores:
     Golden Blade:
@@ -417,27 +417,27 @@ builds:
       pick: 0.0
       fit: 0.31
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.55
-      pick: 0.7
+      win: 0.54
+      pick: 0.71
       fit: 0.37
+    The Reaper:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.58
+      pick: 0.15
+      fit: 0.44
     Riptalon:
       total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Silverbranch Bow:
-      total: 0.52
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Titan's Bane:
       total: 0.52
       efficiency: 0.46
-      win: 0.67
+      win: 0.66
       pick: 0.18
       fit: 0.33
   starter: *id001
@@ -451,7 +451,7 @@ builds:
   - Pendulum Blade
   - Titan's Bane
   flex_slots:
-  - Breastplate of Valor
+  - Pendulum Blade
   - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
@@ -467,9 +467,9 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Genji''s Guard, Hydra''s Lament, Pendulum
-    Blade, Breastplate of Valor, The Crusher, Freya''s Tears, Shield of the Phoenix,
-    Arondight, The Reaper, Screeching Gargoyle, Chandra''s Grace, Berserker''s Shield,
+    + fit + win/pick). Underrated for this god: Genji''s Guard, Hydra''s Lament, Breastplate
+    of Valor, Pendulum Blade, The Crusher, The Reaper, Freya''s Tears, Shield of the
+    Phoenix, Arondight, Screeching Gargoyle, Chandra''s Grace, Berserker''s Shield,
     Runeforged Hammer, Gladiator''s Shield, Lernaean Bow, Amanita Charm, Damaru, Oni
     Hunter''s Garb, Yogi''s Necklace, Kinetic Cuirass, Riptalon, Prophetic Cloak,
     Silverbranch Bow, Avenging Blade, Regrowth Striders, Eye of Providence, Golden
@@ -490,8 +490,8 @@ builds:
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.65
-      win: 0.55
-      pick: 0.7
+      win: 0.54
+      pick: 0.71
       fit: 0.85
     Hydra's Lament:
       total: 0.55
@@ -500,15 +500,15 @@ builds:
       pick: 0.0
       fit: 0.75
     Pendulum Blade:
-      total: 0.54
+      total: 0.52
       efficiency: 0.42
-      win: 0.58
-      pick: 0.11
+      win: 0.54
+      pick: 0.12
       fit: 0.85
     Titan's Bane:
       total: 0.52
       efficiency: 0.46
-      win: 0.67
+      win: 0.66
       pick: 0.18
       fit: 0.35
   starter: *id001
@@ -547,8 +547,8 @@ builds:
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.65
-      win: 0.55
-      pick: 0.7
+      win: 0.54
+      pick: 0.71
       fit: 1.0
     Hydra's Lament:
       total: 0.54
@@ -563,15 +563,15 @@ builds:
       pick: 0.0
       fit: 0.62
     The Reaper:
-      total: 0.58
+      total: 0.59
       efficiency: 0.53
-      win: 0.56
-      pick: 0.14
+      win: 0.58
+      pick: 0.15
       fit: 0.91
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.47
+      win: 0.48
       pick: 0.08
       fit: 1.0
     Heartseeker:
@@ -616,8 +616,8 @@ builds:
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.65
-      win: 0.55
-      pick: 0.7
+      win: 0.54
+      pick: 0.71
       fit: 1.0
     Hydra's Lament:
       total: 0.54
@@ -626,15 +626,15 @@ builds:
       pick: 0.0
       fit: 0.7
     The Reaper:
-      total: 0.58
+      total: 0.59
       efficiency: 0.53
-      win: 0.56
-      pick: 0.14
+      win: 0.58
+      pick: 0.15
       fit: 0.91
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.47
+      win: 0.48
       pick: 0.08
       fit: 1.0
     Heartseeker:
@@ -644,15 +644,15 @@ builds:
       pick: 0.3
       fit: 1.0
     Titan's Bane:
-      total: 0.61
+      total: 0.6
       efficiency: 0.46
-      win: 0.67
+      win: 0.66
       pick: 0.18
       fit: 0.91
   swaps:
   - added: Titan's Bane
     removed: Runeforged Hammer
-    reason: community 67% win over 137 matches (vs 56% on this god), taking the model's
+    reason: community 66% win over 145 matches (vs 55% on this god), taking the model's
       weakest slot from Runeforged Hammer
   starter: *id001
 ---

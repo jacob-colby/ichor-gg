@@ -2,12 +2,12 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Kinetic Cuirass | 0.57 | 0.61 | 0.60 | 0.59 | 0.05 | 0.61 | fair | burst | **UNDERRATED** |
-| Genji's Guard | 0.57 | 0.59 | 0.72 | 0.59 | 0.17 | 0.28 | undervalued |  |  |
+| Kinetic Cuirass | 0.58 | 0.61 | 0.60 | 0.61 | 0.05 | 0.61 | fair | burst | **UNDERRATED** |
+| Genji's Guard | 0.57 | 0.59 | 0.72 | 0.60 | 0.17 | 0.28 | undervalued |  |  |
 | Shifter's Shield | 0.55 | 0.54 | 0.55 | 0.57 | 0.51 | 0.51 | fair |  |  |
-| Shield of the Phoenix | 0.54 | 0.53 | 0.57 | 0.60 | 0.20 | 0.43 | fair | sustain |  |
-| Gladiator's Shield | 0.54 | 0.45 | 0.41 | 0.68 | 0.12 | 0.53 | premium | burst |  |
+| Shield of the Phoenix | 0.54 | 0.53 | 0.57 | 0.60 | 0.21 | 0.43 | fair | sustain |  |
 | Amanita Charm | 0.53 | 0.62 | 0.66 | 0.50 | 0.00 | 0.51 | undervalued | sustain, aura | **UNDERRATED** |
+| Gladiator's Shield | 0.53 | 0.45 | 0.41 | 0.66 | 0.12 | 0.53 | premium | burst |  |
 | Hide of the Nemean Lion | 0.52 | 0.47 | 0.54 | 0.63 | 0.06 | 0.33 | fair |  | **UNDERRATED** |
 | Berserker's Shield | 0.52 | 0.59 | 0.71 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.59 | 0.66 | 0.50 | 0.00 | 0.44 | undervalued | burst | **UNDERRATED** |

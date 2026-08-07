@@ -10,83 +10,83 @@ builds:
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.17
-    win_rate: 0.64
+    win_rate: 0.65
     alternates:
     - name: Bancroft's Talon
-      pick_rate: 0.14
-      win_rate: 0.61
+      pick_rate: 0.15
+      win_rate: 0.6
     - name: Blood-Bound Book
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.59
   - name: The World Stone
     pick_rate: 0.2
-    win_rate: 0.7
+    win_rate: 0.71
     alternates:
+    - name: Shifter's Shield
+      pick_rate: 0.18
+      win_rate: 0.6
     - name: Spear of Desolation
       pick_rate: 0.16
       win_rate: 0.66
-    - name: Shifter's Shield
-      pick_rate: 0.16
-      win_rate: 0.64
   - name: Shifter's Shield
     pick_rate: 0.1
-    win_rate: 0.61
+    win_rate: 0.63
     alternates:
     - name: The World Stone
-      pick_rate: 0.15
-      win_rate: 0.63
+      pick_rate: 0.16
+      win_rate: 0.6
     - name: Spear of Desolation
       pick_rate: 0.08
-      win_rate: 0.75
+      win_rate: 0.76
   - name: Rod of Tahuti
     pick_rate: 0.23
-    win_rate: 0.69
+    win_rate: 0.7
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.08
-      win_rate: 0.66
+      pick_rate: 0.09
+      win_rate: 0.68
     - name: The World Stone
       pick_rate: 0.06
       win_rate: 0.67
   - name: Obsidian Shard
     pick_rate: 0.07
-    win_rate: 0.63
+    win_rate: 0.64
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.17
-      win_rate: 0.67
-    - name: The World Stone
-      pick_rate: 0.07
-      win_rate: 0.7
+      pick_rate: 0.18
+      win_rate: 0.66
+    - name: Evil Eye
+      pick_rate: 0.06
+      win_rate: 0.6
   - name: Evil Eye
     pick_rate: 0.07
-    win_rate: 0.56
+    win_rate: 0.59
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.07
-      win_rate: 0.64
+      win_rate: 0.63
     - name: Obsidian Shard
       pick_rate: 0.06
       win_rate: 0.68
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.36
+    pick_rate: 0.35
     win_rate: 0.67
   - name: Conduit Gem
-    pick_rate: 0.26
-    win_rate: 0.58
+    pick_rate: 0.27
+    win_rate: 0.59
   - name: Pendulum of The Ages
     pick_rate: 0.15
     win_rate: 0.68
   source_url: https://smitebrain.com/gods/hades/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.6149732620320856
-  god_matches_won: 460
-  god_matches_played: 748
+  last_verified: '2026-08-07'
+  god_win_rate: 0.6097256857855362
+  god_matches_won: 489
+  god_matches_played: 802
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -116,18 +116,18 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Freya''s Tears, Obsidian Shard, Soul Gem, Shifter''s
-    Shield, Amanita Charm, Genji''s Guard, Kinetic Cuirass, Spear of the Magus, Eye
-    of Providence, The Cosmic Horror, Oni Hunter''s Garb, Rod of Asclepius, Breastplate
+    this god: Freya''s Tears, Gluttonous Grimoire, Obsidian Shard, Shifter''s Shield,
+    Soul Gem, Amanita Charm, Genji''s Guard, Kinetic Cuirass, Spear of the Magus,
+    Eye of Providence, The Cosmic Horror, Oni Hunter''s Garb, Rod of Asclepius, Breastplate
     of Valor, Jade Scepter, Shield of the Phoenix, Helm of Radiance, Chronos'' Pendant,
     Yogi''s Necklace, Wish-Granting Pearl, Spectral Armor, Ethereal Staff, Death Metal,
     Alchemist Coat, Erosion, Dreamer''s Idol.'
   slot_scores:
     Freya's Tears:
-      total: 0.56
+      total: 0.57
       efficiency: 0.59
-      win: 0.66
-      pick: 0.08
+      win: 0.68
+      pick: 0.09
       fit: 0.36
     Gluttonous Grimoire:
       total: 0.57
@@ -138,25 +138,25 @@ builds:
     Spear of Desolation:
       total: 0.57
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.17
       fit: 0.6
     The World Stone:
       total: 0.57
       efficiency: 0.49
-      win: 0.7
+      win: 0.71
       pick: 0.2
       fit: 0.47
     Rod of Tahuti:
       total: 0.55
       efficiency: 0.44
-      win: 0.69
+      win: 0.7
       pick: 0.23
       fit: 0.47
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
-      win: 0.63
+      win: 0.64
       pick: 0.07
       fit: 0.47
   starter: &id001
@@ -196,10 +196,10 @@ builds:
     Conch, Wish-Granting Pearl.'
   slot_scores:
     Freya's Tears:
-      total: 0.55
+      total: 0.56
       efficiency: 0.59
-      win: 0.66
-      pick: 0.08
+      win: 0.68
+      pick: 0.09
       fit: 0.32
     Gluttonous Grimoire:
       total: 0.55
@@ -208,27 +208,27 @@ builds:
       pick: 0.0
       fit: 0.62
     Spear of Desolation:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.17
       fit: 0.56
     The World Stone:
       total: 0.56
       efficiency: 0.49
-      win: 0.7
+      win: 0.71
       pick: 0.2
       fit: 0.4
     Rod of Tahuti:
       total: 0.54
       efficiency: 0.44
-      win: 0.69
+      win: 0.7
       pick: 0.23
       fit: 0.4
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
-      win: 0.63
+      win: 0.64
       pick: 0.07
       fit: 0.4
   starter: *id001
@@ -258,35 +258,35 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Freya''s Tears, Soul Gem, Bancroft''s Talon, Gluttonous
-    Grimoire, Blood-Bound Book, Shifter''s Shield, Shield of the Phoenix, Rod of Asclepius,
+    this god: Freya''s Tears, Amanita Charm, Soul Gem, Gluttonous Grimoire, Shifter''s
+    Shield, Bancroft''s Talon, Blood-Bound Book, Shield of the Phoenix, Rod of Asclepius,
     Kinetic Cuirass, Eye of Providence, Genji''s Guard, Oni Hunter''s Garb, Lifebinder,
     Chandra''s Grace, Spear of the Magus, Breastplate of Valor, The Cosmic Horror,
     Phoenix Feather, Spectral Armor, Jade Scepter, Erosion, Helm of Radiance, Yogi''s
     Necklace, Draconic Scale, Wish-Granting Pearl.'
   slot_scores:
     Freya's Tears:
-      total: 0.57
+      total: 0.58
       efficiency: 0.59
-      win: 0.66
-      pick: 0.08
+      win: 0.68
+      pick: 0.09
       fit: 0.42
     Shifter's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.61
+      win: 0.63
       pick: 0.1
       fit: 0.51
     Spear of Desolation:
-      total: 0.55
+      total: 0.56
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.17
       fit: 0.49
     The World Stone:
-      total: 0.55
+      total: 0.56
       efficiency: 0.49
-      win: 0.7
+      win: 0.71
       pick: 0.2
       fit: 0.39
     Amanita Charm:
@@ -336,10 +336,10 @@ builds:
     Pendant, Spectral Armor.'
   slot_scores:
     Freya's Tears:
-      total: 0.55
+      total: 0.56
       efficiency: 0.59
-      win: 0.66
-      pick: 0.08
+      win: 0.68
+      pick: 0.09
       fit: 0.29
     Gluttonous Grimoire:
       total: 0.58
@@ -348,27 +348,27 @@ builds:
       pick: 0.0
       fit: 0.81
     Spear of Desolation:
-      total: 0.58
+      total: 0.59
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.17
       fit: 0.68
     The World Stone:
-      total: 0.58
+      total: 0.59
       efficiency: 0.49
-      win: 0.7
+      win: 0.71
       pick: 0.2
       fit: 0.58
     Rod of Tahuti:
-      total: 0.56
+      total: 0.57
       efficiency: 0.44
-      win: 0.69
+      win: 0.7
       pick: 0.23
       fit: 0.58
     Obsidian Shard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.54
-      win: 0.63
+      win: 0.64
       pick: 0.07
       fit: 0.58
   starter: *id001
@@ -379,7 +379,7 @@ builds:
   - Nimble Ring
   - Bragi's Harp
   - Freya's Tears
-  - Gluttonous Grimoire
+  - Spear of Desolation
   - The World Stone
   flex_slots:
   - Bragi's Harp
@@ -398,8 +398,8 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Freya''s Tears, Gluttonous Grimoire, Bancroft''s Talon, Obsidian Shard,
-    Blood-Bound Book, Shifter''s Shield, Soul Gem, Genji''s Guard, Amanita Charm,
+    this god: Freya''s Tears, Gluttonous Grimoire, Obsidian Shard, Shifter''s Shield,
+    Bancroft''s Talon, Blood-Bound Book, Soul Gem, Genji''s Guard, Amanita Charm,
     Kinetic Cuirass, Oni Hunter''s Garb, Eye of Providence, Spear of the Magus, Breastplate
     of Valor, Bracer of The Abyss, Death Metal, The Cosmic Horror, Rod of Asclepius,
     Yogi''s Necklace, Bragi''s Harp, Helm of Radiance, Shield of the Phoenix, Jade
@@ -426,19 +426,19 @@ builds:
     Freya's Tears:
       total: 0.54
       efficiency: 0.59
-      win: 0.66
-      pick: 0.08
+      win: 0.68
+      pick: 0.09
       fit: 0.19
-    Gluttonous Grimoire:
+    Spear of Desolation:
       total: 0.53
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
+      efficiency: 0.52
+      win: 0.65
+      pick: 0.17
+      fit: 0.32
     The World Stone:
-      total: 0.53
+      total: 0.54
       efficiency: 0.49
-      win: 0.7
+      win: 0.71
       pick: 0.2
       fit: 0.25
   starter: *id001
@@ -446,30 +446,30 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Freya's Tears
+  - Shifter's Shield
   - Spear of Desolation
   - The World Stone
   - Soul Gem
   flex_slots:
-  - The World Stone
-  - Breastplate of Valor
+  - Soul Gem
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Freya''s Tears, Genji''s Guard, Soul
-    Gem, Gluttonous Grimoire, Breastplate of Valor, Shifter''s Shield, Obsidian Shard,
+    Gem, Gluttonous Grimoire, Shifter''s Shield, Obsidian Shard, Breastplate of Valor,
     Shield of the Phoenix, Amanita Charm, Kinetic Cuirass, Chronos'' Pendant, Eye
     of Providence, Oni Hunter''s Garb, Chandra''s Grace, Spear of the Magus, Screeching
     Gargoyle, Gem of Focus, Yogi''s Necklace, The Cosmic Horror, Gladiator''s Shield,
@@ -482,28 +482,28 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Breastplate of Valor:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Freya's Tears:
-      total: 0.58
+      total: 0.59
       efficiency: 0.59
-      win: 0.66
-      pick: 0.08
+      win: 0.68
+      pick: 0.09
       fit: 0.51
+    Shifter's Shield:
+      total: 0.53
+      efficiency: 0.55
+      win: 0.63
+      pick: 0.1
+      fit: 0.29
     Spear of Desolation:
-      total: 0.57
+      total: 0.58
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.17
       fit: 0.61
     The World Stone:
       total: 0.54
       efficiency: 0.49
-      win: 0.7
+      win: 0.71
       pick: 0.2
       fit: 0.26
     Soul Gem:
@@ -516,15 +516,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Jotunn's Revenge
   - Freya's Tears
   - Gluttonous Grimoire
   - Spear of Desolation
-  - The Crusher
   - The World Stone
+  - Rod of Tahuti
+  - Obsidian Shard
   flex_slots:
-  - Jotunn's Revenge
-  - The Crusher
+  - Obsidian Shard
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -539,8 +539,8 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
-    win/pick). Underrated for this god: Freya''s Tears, Gluttonous Grimoire, Jotunn''s
-    Revenge, The Crusher, Obsidian Shard, Berserker''s Shield, Soul Gem, Runeforged
+    win/pick). Underrated for this god: Freya''s Tears, Gluttonous Grimoire, Obsidian
+    Shard, Jotunn''s Revenge, The Crusher, Berserker''s Shield, Soul Gem, Runeforged
     Hammer, Genji''s Guard, Hydra''s Lament, Amanita Charm, Death Metal, Kinetic Cuirass,
     Golden Blade, Spear of the Magus, Lernaean Bow, Oni Hunter''s Garb, Eye of Providence,
     Breastplate of Valor, The Cosmic Horror, Bragi''s Harp, Rod of Asclepius, Avenging
@@ -549,17 +549,11 @@ builds:
     Radiance, Bracer of The Abyss, Dominance, Spectral Armor, Heartseeker, Chronos''
     Pendant, Tekko-Kagi.'
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Freya's Tears:
-      total: 0.54
+      total: 0.55
       efficiency: 0.59
-      win: 0.66
-      pick: 0.08
+      win: 0.68
+      pick: 0.09
       fit: 0.24
     Gluttonous Grimoire:
       total: 0.54
@@ -568,22 +562,28 @@ builds:
       pick: 0.0
       fit: 0.53
     Spear of Desolation:
-      total: 0.54
+      total: 0.55
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.17
       fit: 0.41
-    The Crusher:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     The World Stone:
-      total: 0.54
+      total: 0.55
       efficiency: 0.49
-      win: 0.7
+      win: 0.71
       pick: 0.2
+      fit: 0.32
+    Rod of Tahuti:
+      total: 0.53
+      efficiency: 0.44
+      win: 0.7
+      pick: 0.23
+      fit: 0.32
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.54
+      win: 0.64
+      pick: 0.07
       fit: 0.32
   starter: *id001
 - source: suggested
@@ -612,8 +612,8 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
-    + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Freya''s Tears,
-    Obsidian Shard, Jotunn''s Revenge, The Crusher, Soul Gem, Shifter''s Shield, Blood-Bound
+    + fit + win/pick). Underrated for this god: Freya''s Tears, Gluttonous Grimoire,
+    Obsidian Shard, Shifter''s Shield, Jotunn''s Revenge, The Crusher, Soul Gem, Blood-Bound
     Book, Berserker''s Shield, Genji''s Guard, Amanita Charm, Runeforged Hammer, Hydra''s
     Lament, Death Metal, Kinetic Cuirass, Spear of the Magus, Eye of Providence, The
     Cosmic Horror, Oni Hunter''s Garb, Rod of Asclepius, Breastplate of Valor, Jade
@@ -623,10 +623,10 @@ builds:
     Ethereal Staff, Heartseeker.'
   slot_scores:
     Freya's Tears:
-      total: 0.55
+      total: 0.56
       efficiency: 0.59
-      win: 0.66
-      pick: 0.08
+      win: 0.68
+      pick: 0.09
       fit: 0.27
     Gluttonous Grimoire:
       total: 0.55
@@ -635,27 +635,27 @@ builds:
       pick: 0.0
       fit: 0.62
     Spear of Desolation:
-      total: 0.55
+      total: 0.56
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.17
       fit: 0.48
     The World Stone:
-      total: 0.55
+      total: 0.56
       efficiency: 0.49
-      win: 0.7
+      win: 0.71
       pick: 0.2
       fit: 0.39
     Rod of Tahuti:
-      total: 0.53
+      total: 0.54
       efficiency: 0.44
-      win: 0.69
+      win: 0.7
       pick: 0.23
       fit: 0.39
     Obsidian Shard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
-      win: 0.63
+      win: 0.64
       pick: 0.07
       fit: 0.39
   starter: *id001
@@ -789,23 +789,23 @@ builds:
     The World Stone:
       total: 0.57
       efficiency: 0.49
-      win: 0.7
+      win: 0.71
       pick: 0.2
       fit: 0.47
     Rod of Tahuti:
       total: 0.55
       efficiency: 0.44
-      win: 0.69
+      win: 0.7
       pick: 0.23
       fit: 0.47
   swaps:
   - added: The World Stone
     removed: The Cosmic Horror
-    reason: community 70% win over 150 matches (vs 61% on this god), taking the model's
+    reason: community 71% win over 160 matches (vs 61% on this god), taking the model's
       weakest slot from The Cosmic Horror
   - added: Rod of Tahuti
     removed: Eye of Providence
-    reason: community 69% win over 172 matches (vs 61% on this god), taking the model's
+    reason: community 70% win over 184 matches (vs 61% on this god), taking the model's
       weakest slot from Eye of Providence
   starter: *id001
 ---

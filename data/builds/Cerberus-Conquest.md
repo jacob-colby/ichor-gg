@@ -10,31 +10,31 @@ builds:
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.31
-    win_rate: 0.59
+    win_rate: 0.57
     alternates:
     - name: Gauntlet of Thebes
-      pick_rate: 0.22
-      win_rate: 0.59
+      pick_rate: 0.23
+      win_rate: 0.6
     - name: Stampede
       pick_rate: 0.08
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Genji's Guard
     pick_rate: 0.21
-    win_rate: 0.55
+    win_rate: 0.56
     alternates:
     - name: Stampede
-      pick_rate: 0.15
+      pick_rate: 0.14
       win_rate: 0.64
     - name: Shifter's Shield
       pick_rate: 0.14
-      win_rate: 0.55
+      win_rate: 0.56
   - name: Stampede
     pick_rate: 0.1
     win_rate: 0.5
     alternates:
     - name: Genji's Guard
       pick_rate: 0.25
-      win_rate: 0.65
+      win_rate: 0.64
     - name: Breastplate of Valor
       pick_rate: 0.08
       win_rate: 0.49
@@ -44,18 +44,18 @@ builds:
     alternates:
     - name: Genji's Guard
       pick_rate: 0.11
-      win_rate: 0.62
+      win_rate: 0.6
     - name: Shifter's Shield
-      pick_rate: 0.08
-      win_rate: 0.62
+      pick_rate: 0.07
+      win_rate: 0.63
   - name: Freya's Tears
     pick_rate: 0.05
-    win_rate: 0.75
+    win_rate: 0.76
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.12
       win_rate: 0.63
-    - name: Spirit Robe
+    - name: Engraved Guard
       pick_rate: 0.04
       win_rate: 0.78
   - name: Olmec Blue
@@ -67,26 +67,26 @@ builds:
       win_rate: 0.54
     - name: Mote of Chaos
       pick_rate: 0.04
-      win_rate: 0.7
+      win_rate: 0.67
   community_starters:
   - name: Bluestone Pendant
     pick_rate: 0.3
     win_rate: 0.56
   - name: Bluestone Brooch
     pick_rate: 0.23
-    win_rate: 0.61
-  - name: Blood-soaked Shroud
-    pick_rate: 0.09
-    win_rate: 0.8
+    win_rate: 0.6
+  - name: Conduit Gem
+    pick_rate: 0.1
+    win_rate: 0.48
   source_url: https://smitebrain.com/gods/cerberus/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5673624288425048
-  god_matches_won: 299
-  god_matches_played: 527
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5688405797101449
+  god_matches_won: 314
+  god_matches_played: 552
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -107,8 +107,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -130,9 +130,9 @@ builds:
       pick: 0.0
       fit: 0.63
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.21
       fit: 0.35
     Kinetic Cuirass:
@@ -142,15 +142,15 @@ builds:
       pick: 0.0
       fit: 0.73
     Freya's Tears:
-      total: 0.63
+      total: 0.64
       efficiency: 0.59
-      win: 0.75
+      win: 0.76
       pick: 0.05
       fit: 0.57
     Shifter's Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.55
-      win: 0.59
+      win: 0.57
       pick: 0.31
       fit: 0.63
     Amanita Charm:
@@ -167,12 +167,12 @@ builds:
   slot_order:
   - Genji's Guard
   - Kinetic Cuirass
-  - Spirit Robe
+  - Shield of the Phoenix
   - Freya's Tears
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
+  - Shield of the Phoenix
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -182,8 +182,8 @@ builds:
     swap: Eye of Providence — magical protection
     swap_item: Eye of Providence
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -198,7 +198,7 @@ builds:
     Genji's Guard:
       total: 0.56
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.21
       fit: 0.31
     Kinetic Cuirass:
@@ -207,22 +207,22 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Spirit Robe:
-      total: 0.58
-      efficiency: 0.36
-      win: 0.78
-      pick: 0.04
-      fit: 0.68
+    Shield of the Phoenix:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
     Freya's Tears:
-      total: 0.62
+      total: 0.63
       efficiency: 0.59
-      win: 0.75
+      win: 0.76
       pick: 0.05
       fit: 0.5
     Shifter's Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.55
-      win: 0.59
+      win: 0.57
       pick: 0.31
       fit: 0.61
     Amanita Charm:
@@ -249,11 +249,11 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -274,7 +274,7 @@ builds:
     Genji's Guard:
       total: 0.55
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.21
       fit: 0.25
     Kinetic Cuirass:
@@ -286,7 +286,7 @@ builds:
     Freya's Tears:
       total: 0.61
       efficiency: 0.59
-      win: 0.75
+      win: 0.76
       pick: 0.05
       fit: 0.41
     Gluttonous Grimoire:
@@ -296,9 +296,9 @@ builds:
       pick: 0.0
       fit: 0.61
     Shifter's Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.59
+      win: 0.57
       pick: 0.31
       fit: 0.45
   starter: *id001
@@ -319,11 +319,11 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -338,7 +338,7 @@ builds:
     Genji's Guard:
       total: 0.54
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.21
       fit: 0.2
     Bracer of The Abyss:
@@ -360,15 +360,15 @@ builds:
       pick: 0.0
       fit: 0.44
     Freya's Tears:
-      total: 0.59
+      total: 0.6
       efficiency: 0.59
-      win: 0.75
+      win: 0.76
       pick: 0.05
       fit: 0.33
     Shifter's Shield:
-      total: 0.53
+      total: 0.52
       efficiency: 0.55
-      win: 0.59
+      win: 0.57
       pick: 0.31
       fit: 0.36
   starter: *id001
@@ -378,19 +378,19 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
-  - Spirit Robe
   - Freya's Tears
   - Shifter's Shield
+  - Amanita Charm
   flex_slots:
-  - Breastplate of Valor
+  - Amanita Charm
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -408,7 +408,7 @@ builds:
     Genji's Guard:
       total: 0.58
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.21
       fit: 0.45
     Breastplate of Valor:
@@ -423,23 +423,23 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Spirit Robe:
-      total: 0.52
-      efficiency: 0.36
-      win: 0.78
-      pick: 0.04
-      fit: 0.3
     Freya's Tears:
-      total: 0.63
+      total: 0.64
       efficiency: 0.59
-      win: 0.75
+      win: 0.76
       pick: 0.05
       fit: 0.59
     Shifter's Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.59
+      win: 0.57
       pick: 0.31
+      fit: 0.42
+    Amanita Charm:
+      total: 0.52
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
       fit: 0.42
   starter: *id001
 - source: suggested
@@ -447,13 +447,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Berserker's Shield
-  - Spirit Robe
+  - Jotunn's Revenge
   - Freya's Tears
   - Shifter's Shield
   - The Crusher
   flex_slots:
-  - Spirit Robe
   - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -479,9 +479,9 @@ builds:
     Harp.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.21
       fit: 0.23
     Berserker's Shield:
@@ -490,22 +490,22 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
-    Spirit Robe:
+    Jotunn's Revenge:
       total: 0.52
-      efficiency: 0.36
-      win: 0.78
-      pick: 0.04
-      fit: 0.29
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Freya's Tears:
-      total: 0.6
+      total: 0.61
       efficiency: 0.59
-      win: 0.75
+      win: 0.76
       pick: 0.05
       fit: 0.37
     Shifter's Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.59
+      win: 0.57
       pick: 0.31
       fit: 0.41
     The Crusher:
@@ -532,11 +532,11 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -552,9 +552,9 @@ builds:
     Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.21
       fit: 0.21
     Berserker's Shield:
@@ -566,7 +566,7 @@ builds:
     Freya's Tears:
       total: 0.6
       efficiency: 0.59
-      win: 0.75
+      win: 0.76
       pick: 0.05
       fit: 0.35
     Gluttonous Grimoire:
@@ -576,9 +576,9 @@ builds:
       pick: 0.0
       fit: 0.51
     Shifter's Shield:
-      total: 0.53
+      total: 0.52
       efficiency: 0.55
-      win: 0.59
+      win: 0.57
       pick: 0.31
       fit: 0.39
     The Crusher:
@@ -628,9 +628,9 @@ builds:
       pick: 0.0
       fit: 0.63
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.21
       fit: 0.35
     Kinetic Cuirass:
@@ -646,9 +646,9 @@ builds:
       pick: 0.0
       fit: 0.41
     Freya's Tears:
-      total: 0.63
+      total: 0.64
       efficiency: 0.59
-      win: 0.75
+      win: 0.76
       pick: 0.05
       fit: 0.57
     Amanita Charm:

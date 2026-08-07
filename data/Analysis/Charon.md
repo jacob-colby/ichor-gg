@@ -2,21 +2,21 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Breastplate of Valor | 0.61 | 0.57 | 0.65 | 0.70 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
+| Breastplate of Valor | 0.60 | 0.57 | 0.65 | 0.69 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
 | Amanita Charm | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.71 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.81 | fair | burst | **UNDERRATED** |
 | Eye of Providence | 0.55 | 0.65 | 0.62 | 0.50 | 0.00 | 0.71 | undervalued |  | **UNDERRATED** |
-| Ethereal Staff | 0.54 | 0.46 | 0.53 | 0.68 | 0.07 | 0.30 | fair |  |  |
-| Shifter's Shield | 0.53 | 0.60 | 0.55 | 0.49 | 0.20 | 0.71 | fair |  |  |
+| Ethereal Staff | 0.54 | 0.46 | 0.53 | 0.68 | 0.06 | 0.30 | fair |  |  |
+| Genji's Guard | 0.53 | 0.62 | 0.72 | 0.47 | 0.19 | 0.39 | undervalued |  |  |
+| Shifter's Shield | 0.53 | 0.60 | 0.55 | 0.49 | 0.19 | 0.71 | fair |  |  |
 | Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
-| Genji's Guard | 0.53 | 0.62 | 0.72 | 0.46 | 0.20 | 0.39 | undervalued |  |  |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.46 | undervalued |  | **UNDERRATED** |
+| Hide of the Nemean Lion | 0.52 | 0.51 | 0.54 | 0.58 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
 | Erosion | 0.51 | 0.58 | 0.52 | 0.50 | 0.00 | 0.71 | fair | aura | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.58 | 0.57 | 0.50 | 0.00 | 0.59 | fair | sustain | **UNDERRATED** |
-| Hide of the Nemean Lion | 0.51 | 0.51 | 0.54 | 0.56 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
+| Prophetic Cloak | 0.51 | 0.49 | 0.43 | 0.58 | 0.13 | 0.64 | premium |  |  |
 | Draconic Scale | 0.51 | 0.57 | 0.50 | 0.50 | 0.00 | 0.71 | fair |  | **UNDERRATED** |
-| Prophetic Cloak | 0.51 | 0.49 | 0.43 | 0.57 | 0.13 | 0.64 | premium |  |  |
 | Spectral Armor | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.46 | fair | anti-crit, aura | **UNDERRATED** |
 | Soul Gem | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.39 | fair | burst, sustain, aura | **UNDERRATED** |
 | Leviathan's Hide | 0.49 | 0.53 | 0.55 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
@@ -51,10 +51,10 @@
 | Glorious Pridwen | 0.45 | 0.45 | 0.36 | 0.50 | 0.00 | 0.64 | premium | sustain |  |
 | Death Metal | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.09 | fair |  |  |
 | Stygian Anchor | 0.45 | 0.44 | 0.41 | 0.50 | 0.00 | 0.51 | premium | anti-heal |  |
+| Lifebinder | 0.44 | 0.43 | 0.49 | 0.49 | 0.13 | 0.30 | fair | sustain, aura |  |
 | Blood-Bound Book | 0.44 | 0.44 | 0.58 | 0.50 | 0.00 | 0.09 | fair | sustain |  |
 | Shroud of Vengeance | 0.44 | 0.43 | 0.36 | 0.50 | 0.00 | 0.61 | premium | burst |  |
 | Bancroft's Talon | 0.44 | 0.43 | 0.58 | 0.50 | 0.00 | 0.09 | fair | sustain |  |
-| Lifebinder | 0.44 | 0.43 | 0.49 | 0.48 | 0.13 | 0.30 | fair | sustain, aura |  |
 | Gem of Focus | 0.44 | 0.42 | 0.51 | 0.50 | 0.00 | 0.23 | fair | mobility |  |
 | Obsidian Shard | 0.44 | 0.42 | 0.54 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Bracer of The Abyss | 0.44 | 0.42 | 0.56 | 0.50 | 0.00 | 0.09 | fair |  |  |

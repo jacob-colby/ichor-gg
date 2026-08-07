@@ -5,15 +5,15 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Ruin
-  aspect_pick_rate: 0.12
-  aspect_win_rate: 0.47
+  aspect_pick_rate: 0.13
+  aspect_win_rate: 0.48
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.58
     win_rate: 0.63
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.19
+      pick_rate: 0.18
       win_rate: 0.45
     - name: Doom Orb
       pick_rate: 0.07
@@ -26,35 +26,35 @@ builds:
       pick_rate: 0.2
       win_rate: 0.49
     - name: The World Stone
-      pick_rate: 0.17
-      win_rate: 0.66
+      pick_rate: 0.16
+      win_rate: 0.67
   - name: Soul Gem
-    pick_rate: 0.31
-    win_rate: 0.64
+    pick_rate: 0.3
+    win_rate: 0.63
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.19
-      win_rate: 0.53
+      win_rate: 0.54
     - name: The World Stone
       pick_rate: 0.09
-      win_rate: 0.51
+      win_rate: 0.52
   - name: Rod of Tahuti
     pick_rate: 0.32
     win_rate: 0.62
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.25
-      win_rate: 0.52
+      win_rate: 0.54
     - name: Soul Gem
       pick_rate: 0.06
-      win_rate: 0.65
+      win_rate: 0.6
   - name: Obsidian Shard
-    pick_rate: 0.27
-    win_rate: 0.63
+    pick_rate: 0.26
+    win_rate: 0.62
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.16
-      win_rate: 0.73
+      win_rate: 0.71
     - name: Evil Eye
       pick_rate: 0.11
       win_rate: 0.5
@@ -63,30 +63,30 @@ builds:
     win_rate: 0.48
     alternates:
     - name: Blinking Abyss
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.75
     - name: Soul Reaver
       pick_rate: 0.07
-      win_rate: 0.71
+      win_rate: 0.73
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.28
     win_rate: 0.61
   - name: Conduit Gem
     pick_rate: 0.23
-    win_rate: 0.56
+    win_rate: 0.55
   - name: Pendulum of The Ages
-    pick_rate: 0.19
-    win_rate: 0.64
+    pick_rate: 0.18
+    win_rate: 0.65
   source_url: https://smitebrain.com/gods/hecate/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5602678571428571
-  god_matches_won: 251
-  god_matches_played: 448
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5606694560669456
+  god_matches_won: 268
+  god_matches_played: 478
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -100,8 +100,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Soul Reaver
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -129,15 +129,15 @@ builds:
       pick: 0.58
       fit: 1.0
     The World Stone:
-      total: 0.59
+      total: 0.6
       efficiency: 0.49
-      win: 0.66
-      pick: 0.17
+      win: 0.67
+      pick: 0.16
       fit: 0.77
     Soul Reaver:
-      total: 0.56
+      total: 0.57
       efficiency: 0.46
-      win: 0.71
+      win: 0.73
       pick: 0.07
       fit: 0.51
     Rod of Tahuti:
@@ -149,14 +149,14 @@ builds:
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.63
-      pick: 0.27
+      win: 0.62
+      pick: 0.26
       fit: 0.77
     Soul Gem:
-      total: 0.66
+      total: 0.65
       efficiency: 0.59
-      win: 0.64
-      pick: 0.31
+      win: 0.63
+      pick: 0.3
       fit: 1.0
   starter: &id001
     base: Conduit Gem
@@ -202,13 +202,13 @@ builds:
     The World Stone:
       total: 0.56
       efficiency: 0.49
-      win: 0.66
-      pick: 0.17
+      win: 0.67
+      pick: 0.16
       fit: 0.56
     Soul Reaver:
-      total: 0.53
+      total: 0.54
       efficiency: 0.46
-      win: 0.71
+      win: 0.73
       pick: 0.07
       fit: 0.32
     Rod of Tahuti:
@@ -218,16 +218,16 @@ builds:
       pick: 0.32
       fit: 0.56
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.54
-      win: 0.63
-      pick: 0.27
+      win: 0.62
+      pick: 0.26
       fit: 0.56
     Soul Gem:
       total: 0.64
       efficiency: 0.59
-      win: 0.64
-      pick: 0.31
+      win: 0.63
+      pick: 0.3
       fit: 0.88
   starter: *id001
 - source: suggested
@@ -241,7 +241,7 @@ builds:
   - Soul Gem
   flex_slots:
   - The World Stone
-  - Soul Reaver
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -270,22 +270,22 @@ builds:
       pick: 0.58
       fit: 0.5
     The World Stone:
-      total: 0.53
+      total: 0.54
       efficiency: 0.49
-      win: 0.66
-      pick: 0.17
+      win: 0.67
+      pick: 0.16
       fit: 0.38
     Soul Reaver:
-      total: 0.53
+      total: 0.54
       efficiency: 0.46
-      win: 0.71
+      win: 0.73
       pick: 0.07
       fit: 0.3
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
-      win: 0.63
-      pick: 0.27
+      win: 0.62
+      pick: 0.26
       fit: 0.38
     Amanita Charm:
       total: 0.58
@@ -296,8 +296,8 @@ builds:
     Soul Gem:
       total: 0.64
       efficiency: 0.59
-      win: 0.64
-      pick: 0.31
+      win: 0.63
+      pick: 0.3
       fit: 0.9
   starter: *id001
 - source: suggested
@@ -345,10 +345,10 @@ builds:
       pick: 0.0
       fit: 0.84
     The World Stone:
-      total: 0.6
+      total: 0.61
       efficiency: 0.49
-      win: 0.66
-      pick: 0.17
+      win: 0.67
+      pick: 0.16
       fit: 0.84
     Rod of Tahuti:
       total: 0.57
@@ -359,14 +359,14 @@ builds:
     Obsidian Shard:
       total: 0.61
       efficiency: 0.54
-      win: 0.63
-      pick: 0.27
+      win: 0.62
+      pick: 0.26
       fit: 0.84
     Soul Gem:
-      total: 0.66
+      total: 0.65
       efficiency: 0.59
-      win: 0.64
-      pick: 0.31
+      win: 0.63
+      pick: 0.3
       fit: 1.0
   starter: *id001
 - source: suggested
@@ -376,7 +376,7 @@ builds:
   - Nimble Ring
   - Bragi's Harp
   - Spear of Desolation
-  - Obsidian Shard
+  - Soul Reaver
   - Soul Gem
   flex_slots:
   - Bragi's Harp
@@ -418,38 +418,38 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
       win: 0.63
       pick: 0.58
       fit: 0.41
-    Obsidian Shard:
+    Soul Reaver:
       total: 0.53
-      efficiency: 0.54
-      win: 0.63
-      pick: 0.27
-      fit: 0.31
+      efficiency: 0.46
+      win: 0.73
+      pick: 0.07
+      fit: 0.27
     Soul Gem:
-      total: 0.6
+      total: 0.59
       efficiency: 0.59
-      win: 0.64
-      pick: 0.31
+      win: 0.63
+      pick: 0.3
       fit: 0.58
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Spear of Desolation
   - The World Stone
+  - Soul Reaver
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - The World Stone
-  - Breastplate of Valor
+  - Obsidian Shard
+  - Soul Reaver
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -458,8 +458,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -477,12 +477,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Breastplate of Valor:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Spear of Desolation:
       total: 0.62
       efficiency: 0.52
@@ -490,22 +484,28 @@ builds:
       pick: 0.58
       fit: 0.86
     The World Stone:
-      total: 0.53
+      total: 0.54
       efficiency: 0.49
-      win: 0.66
-      pick: 0.17
+      win: 0.67
+      pick: 0.16
       fit: 0.37
+    Soul Reaver:
+      total: 0.53
+      efficiency: 0.46
+      win: 0.73
+      pick: 0.07
+      fit: 0.24
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
-      win: 0.63
-      pick: 0.27
+      win: 0.62
+      pick: 0.26
       fit: 0.37
     Soul Gem:
       total: 0.65
       efficiency: 0.59
-      win: 0.64
-      pick: 0.31
+      win: 0.63
+      pick: 0.3
       fit: 0.96
   starter: *id001
 - source: suggested
@@ -573,8 +573,8 @@ builds:
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.63
-      pick: 0.27
+      win: 0.62
+      pick: 0.26
       fit: 0.77
   starter: *id001
 ---

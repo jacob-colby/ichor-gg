@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the General
-  aspect_pick_rate: 0.68
-  aspect_win_rate: 0.55
+  aspect_pick_rate: 0.67
+  aspect_win_rate: 0.54
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.22
     win_rate: 0.59
     alternates:
-    - name: Yogi's Necklace
-      pick_rate: 0.12
-      win_rate: 0.57
     - name: Breastplate of Valor
-      pick_rate: 0.1
-      win_rate: 0.54
+      pick_rate: 0.11
+      win_rate: 0.55
+    - name: Yogi's Necklace
+      pick_rate: 0.11
+      win_rate: 0.57
   - name: Breastplate of Valor
     pick_rate: 0.26
-    win_rate: 0.66
+    win_rate: 0.65
     alternates:
     - name: Genji's Guard
       pick_rate: 0.22
       win_rate: 0.57
     - name: Heartwood Charm
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.44
   - name: Genji's Guard
-    pick_rate: 0.31
-    win_rate: 0.6
+    pick_rate: 0.3
+    win_rate: 0.58
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.19
-      win_rate: 0.6
+      win_rate: 0.59
     - name: Freya's Tears
       pick_rate: 0.05
       win_rate: 0.35
-  - name: Heartwood Charm
+  - name: Shell of Rebuke
     pick_rate: 0.06
-    win_rate: 0.59
+    win_rate: 0.71
     alternates:
     - name: Genji's Guard
       pick_rate: 0.12
-      win_rate: 0.58
-    - name: Talisman of Purification
+      win_rate: 0.61
+    - name: Heartwood Charm
       pick_rate: 0.06
-      win_rate: 0.67
-  - name: Shell of Rebuke
-    pick_rate: 0.08
-    win_rate: 0.69
+      win_rate: 0.59
+  - name: Dwarven Plate
+    pick_rate: 0.06
+    win_rate: 0.72
     alternates:
-    - name: Dwarven Plate
-      pick_rate: 0.06
-      win_rate: 0.71
+    - name: Shell of Rebuke
+      pick_rate: 0.08
+      win_rate: 0.7
     - name: Engraved Guard
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.41
   - name: Adroit Ring
-    pick_rate: 0.06
+    pick_rate: 0.05
     win_rate: 0.6
     alternates:
     - name: Legionnaire Armor
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.4
     - name: Engraved Guard
-      pick_rate: 0.05
+      pick_rate: 0.04
       win_rate: 0.63
   community_starters:
   - name: Sands of Time
-    pick_rate: 0.27
-    win_rate: 0.55
+    pick_rate: 0.28
+    win_rate: 0.53
   - name: Pendulum of The Ages
     pick_rate: 0.15
     win_rate: 0.66
   - name: Bluestone Brooch
     pick_rate: 0.1
-    win_rate: 0.63
+    win_rate: 0.66
   source_url: https://smitebrain.com/gods/guan-yu/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5748663101604278
-  god_matches_won: 215
-  god_matches_played: 374
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5757575757575758
+  god_matches_won: 228
+  god_matches_played: 396
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -124,10 +124,10 @@ builds:
     Mail, Hide of the Nemean Lion, Freya''s Tears.'
   slot_scores:
     Genji's Guard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.6
-      pick: 0.31
+      win: 0.58
+      pick: 0.3
       fit: 0.32
     Berserker's Shield:
       total: 0.54
@@ -136,9 +136,9 @@ builds:
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
-      total: 0.59
+      total: 0.58
       efficiency: 0.65
-      win: 0.66
+      win: 0.65
       pick: 0.26
       fit: 0.32
     Kinetic Cuirass:
@@ -189,17 +189,17 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Berserker''s Shield, Kinetic Cuirass,
-    Yogi''s Necklace, Eye of Providence, Jotunn''s Revenge, Runeforged Hammer, Chandra''s
+    Eye of Providence, Yogi''s Necklace, Jotunn''s Revenge, Runeforged Hammer, Chandra''s
     Grace, Oni Hunter''s Garb, Hydra''s Lament, The Crusher, The Reaper, Pharaoh''s
     Curse, Golden Blade, Eye of the Storm, Shield Splitter, Riptalon, Phoenix Feather,
     Spectral Armor, Erosion, Lernaean Bow, Avenging Blade, Draconic Scale, Shogun''s
     Ofuda, Freya''s Tears.'
   slot_scores:
     Genji's Guard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.6
-      pick: 0.31
+      win: 0.58
+      pick: 0.3
       fit: 0.3
     Berserker's Shield:
       total: 0.54
@@ -210,7 +210,7 @@ builds:
     Breastplate of Valor:
       total: 0.58
       efficiency: 0.65
-      win: 0.66
+      win: 0.65
       pick: 0.26
       fit: 0.3
     Shield of the Phoenix:
@@ -259,17 +259,17 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, Berserker''s Shield, Amanita Charm,
-    Kinetic Cuirass, Yogi''s Necklace, Avenging Blade, Eye of Providence, Screeching
+    Kinetic Cuirass, Avenging Blade, Yogi''s Necklace, Eye of Providence, Screeching
     Gargoyle, Stone of Binding, Hydra''s Lament, Oni Hunter''s Garb, Runeforged Hammer,
     Void Shield, The Reaper, Shield of the Phoenix, Void Stone, Pharaoh''s Curse,
     Shield Splitter, Riptalon, Golden Blade, Spectral Armor, Lernaean Bow, Silverbranch
     Bow, Eye of the Storm, Freya''s Tears.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.72
-      win: 0.6
-      pick: 0.31
+      win: 0.58
+      pick: 0.3
       fit: 0.24
     Berserker's Shield:
       total: 0.52
@@ -280,7 +280,7 @@ builds:
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.65
-      win: 0.66
+      win: 0.65
       pick: 0.26
       fit: 0.24
     Jotunn's Revenge:
@@ -342,10 +342,10 @@ builds:
       pick: 0.0
       fit: 0.56
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.72
-      win: 0.6
-      pick: 0.31
+      win: 0.58
+      pick: 0.3
       fit: 0.22
     Berserker's Shield:
       total: 0.54
@@ -356,7 +356,7 @@ builds:
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.65
-      win: 0.66
+      win: 0.65
       pick: 0.26
       fit: 0.22
     Shifter's Shield:
@@ -406,10 +406,10 @@ builds:
     Arondight, Eye of the Storm, Shogun''s Ofuda, Lernaean Bow, Freya''s Tears.'
   slot_scores:
     Genji's Guard:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
-      win: 0.6
-      pick: 0.31
+      win: 0.58
+      pick: 0.3
       fit: 0.44
     Berserker's Shield:
       total: 0.52
@@ -418,9 +418,9 @@ builds:
       pick: 0.0
       fit: 0.34
     Breastplate of Valor:
-      total: 0.61
+      total: 0.6
       efficiency: 0.65
-      win: 0.66
+      win: 0.65
       pick: 0.26
       fit: 0.44
     Jotunn's Revenge:
@@ -482,10 +482,10 @@ builds:
       pick: 0.0
       fit: 0.5
     Genji's Guard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.6
-      pick: 0.31
+      win: 0.58
+      pick: 0.3
       fit: 0.32
     Berserker's Shield:
       total: 0.54

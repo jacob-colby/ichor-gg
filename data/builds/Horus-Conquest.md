@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Falcon
-  aspect_pick_rate: 0.09
+  aspect_pick_rate: 0.08
   aspect_win_rate: 0.11
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.36
-    win_rate: 0.62
+    win_rate: 0.61
     alternates:
     - name: Runeforged Hammer
-      pick_rate: 0.17
-      win_rate: 0.62
+      pick_rate: 0.18
+      win_rate: 0.63
     - name: Gauntlet of Thebes
       pick_rate: 0.11
-      win_rate: 0.56
+      win_rate: 0.57
   - name: Genji's Guard
     pick_rate: 0.21
     win_rate: 0.6
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.18
-      win_rate: 0.56
+      win_rate: 0.57
     - name: Breastplate of Valor
       pick_rate: 0.11
-      win_rate: 0.56
+      win_rate: 0.57
   - name: Breastplate of Valor
     pick_rate: 0.11
     win_rate: 0.53
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.25
+      pick_rate: 0.24
       win_rate: 0.57
     - name: Shell of Rebuke
       pick_rate: 0.1
-      win_rate: 0.69
+      win_rate: 0.68
   - name: Shell of Rebuke
     pick_rate: 0.11
-    win_rate: 0.6
+    win_rate: 0.59
     alternates:
     - name: Genji's Guard
       pick_rate: 0.13
       win_rate: 0.59
     - name: Breastplate of Valor
       pick_rate: 0.07
-      win_rate: 0.6
+      win_rate: 0.59
   - name: Dwarven Plate
     pick_rate: 0.06
     win_rate: 0.63
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.61
     - name: Spirit Robe
       pick_rate: 0.05
-      win_rate: 0.6
+      win_rate: 0.62
   - name: Engraved Guard
     pick_rate: 0.07
     win_rate: 0.58
     alternates:
+    - name: Medal of Defense
+      pick_rate: 0.05
+      win_rate: 0.36
     - name: Legionnaire Armor
       pick_rate: 0.05
       win_rate: 0.6
-    - name: Medal of Defense
-      pick_rate: 0.05
-      win_rate: 0.38
   community_starters:
   - name: Warrior's Axe
     pick_rate: 0.26
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Selflessness
-    pick_rate: 0.2
-    win_rate: 0.61
+    pick_rate: 0.19
+    win_rate: 0.6
   - name: Sundering Axe
     pick_rate: 0.13
-    win_rate: 0.64
+    win_rate: 0.63
   source_url: https://smitebrain.com/gods/horus/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5970731707317073
-  god_matches_won: 612
-  god_matches_played: 1025
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5940409683426443
+  god_matches_won: 638
+  god_matches_played: 1074
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Death's Toll
     upgrade: Death's Embrace
@@ -144,13 +144,13 @@ builds:
     Runeforged Hammer:
       total: 0.56
       efficiency: 0.6
-      win: 0.62
-      pick: 0.17
+      win: 0.63
+      pick: 0.18
       fit: 0.39
     Shifter's Shield:
-      total: 0.59
+      total: 0.58
       efficiency: 0.55
-      win: 0.62
+      win: 0.61
       pick: 0.36
       fit: 0.66
     Amanita Charm:
@@ -172,7 +172,7 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Runeforged Hammer
+  - Shield of the Phoenix
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -214,15 +214,15 @@ builds:
       pick: 0.0
       fit: 0.94
     Runeforged Hammer:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
-      win: 0.62
-      pick: 0.17
+      win: 0.63
+      pick: 0.18
       fit: 0.45
     Shifter's Shield:
-      total: 0.59
+      total: 0.58
       efficiency: 0.55
-      win: 0.62
+      win: 0.61
       pick: 0.36
       fit: 0.66
     Amanita Charm:
@@ -278,15 +278,15 @@ builds:
       pick: 0.0
       fit: 0.54
     Runeforged Hammer:
-      total: 0.54
+      total: 0.55
       efficiency: 0.6
-      win: 0.62
-      pick: 0.17
+      win: 0.63
+      pick: 0.18
       fit: 0.3
     Shifter's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
-      win: 0.62
+      win: 0.61
       pick: 0.36
       fit: 0.46
     The Crusher:
@@ -354,15 +354,15 @@ builds:
       pick: 0.0
       fit: 0.43
     Runeforged Hammer:
-      total: 0.54
+      total: 0.55
       efficiency: 0.6
-      win: 0.62
-      pick: 0.17
+      win: 0.63
+      pick: 0.18
       fit: 0.32
     Shifter's Shield:
       total: 0.54
       efficiency: 0.55
-      win: 0.62
+      win: 0.61
       pick: 0.36
       fit: 0.35
     Pharaoh's Curse:
@@ -427,8 +427,8 @@ builds:
     Runeforged Hammer:
       total: 0.55
       efficiency: 0.6
-      win: 0.62
-      pick: 0.17
+      win: 0.63
+      pick: 0.18
       fit: 0.33
     Freya's Tears:
       total: 0.52
@@ -439,7 +439,7 @@ builds:
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
-      win: 0.62
+      win: 0.61
       pick: 0.36
       fit: 0.43
   starter: *id001

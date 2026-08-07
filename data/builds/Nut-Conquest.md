@@ -5,59 +5,59 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Cosmos
-  aspect_pick_rate: 0.13
-  aspect_win_rate: 0.48
+  aspect_pick_rate: 0.12
+  aspect_win_rate: 0.49
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.33
-    win_rate: 0.48
+    pick_rate: 0.35
+    win_rate: 0.49
     alternates:
     - name: Tyrfing
       pick_rate: 0.33
-      win_rate: 0.53
+      win_rate: 0.51
     - name: Book of Thoth
       pick_rate: 0.06
       win_rate: 0.53
   - name: Bragi's Harp
-    pick_rate: 0.18
-    win_rate: 0.55
+    pick_rate: 0.17
+    win_rate: 0.54
     alternates:
     - name: Staff of Myrddin
-      pick_rate: 0.13
-      win_rate: 0.47
+      pick_rate: 0.15
+      win_rate: 0.49
     - name: Spear of Desolation
       pick_rate: 0.09
-      win_rate: 0.59
+      win_rate: 0.6
   - name: Rod of Tahuti
     pick_rate: 0.13
-    win_rate: 0.45
+    win_rate: 0.48
     alternates:
     - name: Soul Gem
       pick_rate: 0.1
       win_rate: 0.53
     - name: Barbed Carver
       pick_rate: 0.09
-      win_rate: 0.47
+      win_rate: 0.46
   - name: Obsidian Shard
-    pick_rate: 0.13
-    win_rate: 0.44
+    pick_rate: 0.15
+    win_rate: 0.43
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.2
+      pick_rate: 0.19
       win_rate: 0.56
     - name: The Executioner
       pick_rate: 0.08
       win_rate: 0.58
   - name: Evil Eye
     pick_rate: 0.05
-    win_rate: 0.46
+    win_rate: 0.47
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.14
       win_rate: 0.55
     - name: Rod of Tahuti
-      pick_rate: 0.05
-      win_rate: 0.66
+      pick_rate: 0.06
+      win_rate: 0.6
   - name: Hunter's Bow
     pick_rate: 0.07
     win_rate: 0.43
@@ -71,37 +71,37 @@ builds:
   community_starters:
   - name: Death's Embrace
     pick_rate: 0.25
-    win_rate: 0.58
+    win_rate: 0.56
   - name: Archmage's Gem
-    pick_rate: 0.2
-    win_rate: 0.57
-  - name: Conduit Gem
+    pick_rate: 0.21
+    win_rate: 0.56
+  - name: Bluestone Brooch
     pick_rate: 0.11
-    win_rate: 0.47
+    win_rate: 0.53
   source_url: https://smitebrain.com/gods/nut/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5148367952522255
-  god_matches_won: 347
-  god_matches_played: 674
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5138121546961326
+  god_matches_won: 372
+  god_matches_played: 724
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: core
   slot_order:
+  - Lernaean Bow
   - Berserker's Shield
   - Jotunn's Revenge
-  - Tyrfing
   - Bragi's Harp
   - The Crusher
   - Soul Gem
   flex_slots:
   - Berserker's Shield
-  - Tyrfing
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -125,6 +125,12 @@ builds:
     Hunter''s Garb, Jade Scepter, Heartseeker, The World Stone, Doom Orb, Yogi''s
     Necklace, Obsidian Shard.'
   slot_scores:
+    Lernaean Bow:
+      total: 0.5
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Berserker's Shield:
       total: 0.51
       efficiency: 0.71
@@ -137,17 +143,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Tyrfing:
-      total: 0.5
-      efficiency: 0.47
-      win: 0.53
-      pick: 0.33
-      fit: 0.52
     Bragi's Harp:
       total: 0.52
       efficiency: 0.46
-      win: 0.55
-      pick: 0.18
+      win: 0.54
+      pick: 0.17
       fit: 0.71
     The Crusher:
       total: 0.52
@@ -167,22 +167,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
   - Bragi's Harp
+  - Spear of Desolation
   - The Crusher
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - Berserker's Shield
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -196,15 +196,9 @@ builds:
     of Valor, Bracer of The Abyss, Tekko-Kagi, Runeforged Hammer, Golden Blade, Chronos''
     Pendant, Dominance, Blood-Bound Book, Bancroft''s Talon, Nimble Ring, Heartseeker,
     Pharaoh''s Curse, Damaru, Dreamer''s Idol, Rod of Asclepius, Amanita Charm, Pendulum
-    Blade, The World Stone, Doom Orb, Freya''s Tears, Oni Hunter''s Garb, Obsidian
-    Shard, Helm of Radiance.'
+    Blade, The World Stone, Doom Orb, Freya''s Tears, Oni Hunter''s Garb, Helm of
+    Radiance, Obsidian Shard.'
   slot_scores:
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.16
     Berserker's Shield:
       total: 0.5
       efficiency: 0.71
@@ -218,11 +212,17 @@ builds:
       pick: 0.0
       fit: 0.56
     Bragi's Harp:
-      total: 0.51
+      total: 0.5
       efficiency: 0.46
-      win: 0.55
-      pick: 0.18
+      win: 0.54
+      pick: 0.17
       fit: 0.62
+    Spear of Desolation:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.49
+      pick: 0.35
+      fit: 0.56
     The Crusher:
       total: 0.53
       efficiency: 0.65
@@ -313,12 +313,12 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Bragi's Harp
+  - Spear of Desolation
   - Spear of the Magus
   - The Crusher
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
+  - Spear of Desolation
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -339,8 +339,8 @@ builds:
     The Reaper, Genji''s Guard, Lernaean Bow, Tekko-Kagi, Hydra''s Lament, Avenging
     Blade, Bracer of The Abyss, Death Metal, Golden Blade, Dreamer''s Idol, Heartseeker,
     Runeforged Hammer, Screeching Gargoyle, The World Stone, Doom Orb, Breastplate
-    of Valor, Obsidian Shard, Blood-Bound Book, Bancroft''s Talon, Dominance, Nimble
-    Ring, Pharaoh''s Curse, Chronos'' Pendant, Rod of Asclepius, Amanita Charm, Titan''s
+    of Valor, Blood-Bound Book, Bancroft''s Talon, Dominance, Nimble Ring, Obsidian
+    Shard, Pharaoh''s Curse, Chronos'' Pendant, Rod of Asclepius, Amanita Charm, Titan''s
     Bane, Pendulum Blade, Oni Hunter''s Garb.'
   slot_scores:
     Berserker's Shield:
@@ -355,12 +355,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Bragi's Harp:
+    Spear of Desolation:
       total: 0.51
-      efficiency: 0.46
-      win: 0.55
-      pick: 0.18
-      fit: 0.61
+      efficiency: 0.52
+      win: 0.49
+      pick: 0.35
+      fit: 0.57
     Spear of the Magus:
       total: 0.51
       efficiency: 0.6
@@ -386,12 +386,12 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Tyrfing
-  - Bragi's Harp
   - Riptalon
+  - The Crusher
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Berserker's Shield
+  - The Crusher
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -428,16 +428,10 @@ builds:
       pick: 0.0
       fit: 0.36
     Tyrfing:
-      total: 0.52
-      efficiency: 0.47
-      win: 0.53
-      pick: 0.33
-      fit: 0.63
-    Bragi's Harp:
       total: 0.51
-      efficiency: 0.46
-      win: 0.55
-      pick: 0.18
+      efficiency: 0.47
+      win: 0.51
+      pick: 0.33
       fit: 0.63
     Riptalon:
       total: 0.51
@@ -445,6 +439,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    The Crusher:
+      total: 0.51
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Soul Gem:
       total: 0.54
       efficiency: 0.59
@@ -514,8 +514,8 @@ builds:
     Spear of Desolation:
       total: 0.51
       efficiency: 0.52
-      win: 0.48
-      pick: 0.33
+      win: 0.49
+      pick: 0.35
       fit: 0.6
     Soul Gem:
       total: 0.57

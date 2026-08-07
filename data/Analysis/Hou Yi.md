@@ -2,8 +2,8 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Riptalon | 0.53 | 0.52 | 0.56 | 0.58 | 0.14 | 0.44 | fair | sustain | **UNDERRATED** |
-| Tyrfing | 0.52 | 0.50 | 0.47 | 0.55 | 0.42 | 0.56 | fair | burst |  |
+| Riptalon | 0.52 | 0.52 | 0.56 | 0.57 | 0.12 | 0.44 | fair | sustain | **UNDERRATED** |
+| Tyrfing | 0.52 | 0.50 | 0.47 | 0.55 | 0.41 | 0.56 | fair | burst |  |
 | Berserker's Shield | 0.51 | 0.58 | 0.71 | 0.50 | 0.00 | 0.28 | undervalued |  | **UNDERRATED** |
 | Death Metal | 0.51 | 0.57 | 0.60 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Dominance | 0.51 | 0.51 | 0.53 | 0.54 | 0.17 | 0.46 | fair |  |  |
@@ -13,10 +13,10 @@
 | The Crusher | 0.50 | 0.55 | 0.65 | 0.50 | 0.00 | 0.33 | undervalued | burst | **UNDERRATED** |
 | Jotunn's Revenge | 0.50 | 0.54 | 0.65 | 0.50 | 0.00 | 0.27 | undervalued |  | **UNDERRATED** |
 | Golden Blade | 0.49 | 0.53 | 0.55 | 0.50 | 0.00 | 0.46 | fair | wave-clear | **UNDERRATED** |
-| Silverbranch Bow | 0.49 | 0.48 | 0.54 | 0.54 | 0.13 | 0.33 | fair |  | **UNDERRATED** |
 | Hydra's Lament | 0.49 | 0.52 | 0.61 | 0.50 | 0.00 | 0.32 | fair | burst | **UNDERRATED** |
 | Soul Gem | 0.48 | 0.52 | 0.59 | 0.50 | 0.00 | 0.35 | fair | burst, sustain, aura | **UNDERRATED** |
 | Genji's Guard | 0.48 | 0.51 | 0.72 | 0.50 | 0.00 | 0.04 | undervalued |  | **UNDERRATED** |
+| Silverbranch Bow | 0.48 | 0.48 | 0.54 | 0.52 | 0.14 | 0.33 | fair |  | **UNDERRATED** |
 | Bragi's Harp | 0.48 | 0.51 | 0.46 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Runeforged Hammer | 0.48 | 0.50 | 0.60 | 0.50 | 0.00 | 0.28 | fair | burst | **UNDERRATED** |
 | Bracer of The Abyss | 0.47 | 0.50 | 0.56 | 0.50 | 0.00 | 0.34 | fair |  | **UNDERRATED** |
@@ -59,7 +59,7 @@
 | Obsidian Shard | 0.43 | 0.41 | 0.54 | 0.50 | 0.00 | 0.11 | fair |  |  |
 | Bloodforge | 0.43 | 0.40 | 0.45 | 0.50 | 0.00 | 0.29 | fair | sustain |  |
 | Typhon’s Heart | 0.43 | 0.40 | 0.51 | 0.50 | 0.00 | 0.16 | fair |  |  |
-| Dagger of Frenzy | 0.42 | 0.35 | 0.38 | 0.53 | 0.23 | 0.28 | premium |  |  |
+| Dagger of Frenzy | 0.43 | 0.35 | 0.38 | 0.53 | 0.24 | 0.28 | premium |  |  |
 | Triton's Conch | 0.42 | 0.40 | 0.47 | 0.50 | 0.00 | 0.24 | fair | aura |  |
 | Titan's Bane | 0.42 | 0.39 | 0.46 | 0.50 | 0.00 | 0.23 | fair |  |  |
 | Wish-Granting Pearl | 0.42 | 0.39 | 0.54 | 0.50 | 0.00 | 0.06 | fair |  |  |
@@ -76,7 +76,6 @@
 | Transcendence | 0.41 | 0.38 | 0.46 | 0.50 | 0.00 | 0.18 | fair |  |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Pendulum Blade | 0.41 | 0.38 | 0.42 | 0.50 | 0.00 | 0.27 | premium |  |  |
-| Devourer's Gauntlet | 0.41 | 0.33 | 0.35 | 0.52 | 0.25 | 0.29 | premium | sustain |  |
 | Dreamer's Idol | 0.41 | 0.38 | 0.49 | 0.50 | 0.00 | 0.11 | fair | cc-immunity |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | The World Stone | 0.41 | 0.37 | 0.49 | 0.50 | 0.00 | 0.11 | fair |  |  |
@@ -84,6 +83,7 @@
 | Sanguine Lash | 0.41 | 0.37 | 0.41 | 0.50 | 0.00 | 0.29 | premium | aura |  |
 | Soul Reaver | 0.41 | 0.37 | 0.46 | 0.50 | 0.00 | 0.16 | fair | burst |  |
 | Avatar's Parashu | 0.41 | 0.37 | 0.43 | 0.50 | 0.00 | 0.23 | premium | cc-immunity |  |
+| Devourer's Gauntlet | 0.41 | 0.33 | 0.35 | 0.51 | 0.25 | 0.29 | premium | sustain |  |
 | Erosion | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | aura |  |
 | Mantle Of Discord | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | peel, cc-immunity |  |
 | Stone of Binding | 0.41 | 0.37 | 0.48 | 0.50 | 0.00 | 0.10 | fair | protection-shred |  |

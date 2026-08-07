@@ -6,18 +6,18 @@ builds:
 - source: community
   aspect: Aspect of the Unyielding
   aspect_pick_rate: 0.11
-  aspect_win_rate: 0.49
+  aspect_win_rate: 0.47
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.33
-    win_rate: 0.53
+    win_rate: 0.54
     alternates:
     - name: Eye of Erebus
       pick_rate: 0.25
       win_rate: 0.49
     - name: Devourer's Gauntlet
       pick_rate: 0.08
-      win_rate: 0.5
+      win_rate: 0.48
   - name: Prophetic Cloak
     pick_rate: 0.14
     win_rate: 0.51
@@ -26,41 +26,41 @@ builds:
       pick_rate: 0.16
       win_rate: 0.4
     - name: Genji's Guard
-      pick_rate: 0.1
-      win_rate: 0.59
+      pick_rate: 0.11
+      win_rate: 0.6
   - name: Genji's Guard
     pick_rate: 0.16
     win_rate: 0.35
     alternates:
     - name: Ethereal Staff
+      pick_rate: 0.09
+      win_rate: 0.58
+    - name: Soul Reaver
       pick_rate: 0.08
-      win_rate: 0.54
-    - name: Dwarven Plate
-      pick_rate: 0.08
-      win_rate: 0.43
+      win_rate: 0.67
   - name: Ethereal Staff
     pick_rate: 0.14
-    win_rate: 0.56
+    win_rate: 0.57
     alternates:
+    - name: Dwarven Plate
+      pick_rate: 0.11
+      win_rate: 0.41
     - name: Genji's Guard
       pick_rate: 0.11
-      win_rate: 0.53
-    - name: Dwarven Plate
-      pick_rate: 0.1
-      win_rate: 0.45
+      win_rate: 0.52
   - name: Dwarven Plate
     pick_rate: 0.1
-    win_rate: 0.46
+    win_rate: 0.44
     alternates:
+    - name: Shell of Rebuke
+      pick_rate: 0.07
+      win_rate: 0.72
     - name: Soul Reaver
       pick_rate: 0.07
       win_rate: 0.44
-    - name: Shell of Rebuke
-      pick_rate: 0.07
-      win_rate: 0.76
   - name: Shell of Rebuke
     pick_rate: 0.06
-    win_rate: 0.4
+    win_rate: 0.36
     alternates:
     - name: Soul Reaver
       pick_rate: 0.06
@@ -70,23 +70,23 @@ builds:
       win_rate: 0.44
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.38
-    win_rate: 0.58
+    pick_rate: 0.39
+    win_rate: 0.57
   - name: Bluestone Pendant
-    pick_rate: 0.3
-    win_rate: 0.36
+    pick_rate: 0.31
+    win_rate: 0.37
   - name: Death's Embrace
-    pick_rate: 0.12
+    pick_rate: 0.11
     win_rate: 0.61
   source_url: https://smitebrain.com/gods/jormungandr/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5065359477124183
-  god_matches_won: 155
-  god_matches_played: 306
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5031446540880503
+  god_matches_won: 160
+  god_matches_played: 318
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -152,7 +152,7 @@ builds:
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
-      win: 0.53
+      win: 0.54
       pick: 0.33
       fit: 0.48
     Amanita Charm:
@@ -174,7 +174,7 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Shifter's Shield
+  - Kinetic Cuirass
   - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -226,7 +226,7 @@ builds:
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
-      win: 0.53
+      win: 0.54
       pick: 0.33
       fit: 0.46
     Amanita Charm:
@@ -246,8 +246,8 @@ builds:
   - Shifter's Shield
   - The Crusher
   flex_slots:
-  - Kinetic Cuirass
   - Shifter's Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -296,9 +296,9 @@ builds:
       pick: 0.0
       fit: 0.5
     Shifter's Shield:
-      total: 0.5
+      total: 0.51
       efficiency: 0.55
-      win: 0.53
+      win: 0.54
       pick: 0.33
       fit: 0.37
     The Crusher:
@@ -313,8 +313,8 @@ builds:
   slot_order:
   - Golden Blade
   - Berserker's Shield
-  - Kinetic Cuirass
   - Gluttonous Grimoire
+  - Shifter's Shield
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
@@ -325,8 +325,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Eye of Providence — physical protection
     swap_item: Eye of Providence
@@ -355,18 +355,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Gluttonous Grimoire:
       total: 0.51
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.34
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.33
+      fit: 0.37
     Amanita Charm:
       total: 0.51
       efficiency: 0.66
@@ -386,19 +386,19 @@ builds:
   - Berserker's Shield
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Freya's Tears
+  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
-  - Kinetic Cuirass
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -434,18 +434,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Freya's Tears:
       total: 0.51
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.33
+      fit: 0.39
     Amanita Charm:
       total: 0.51
       efficiency: 0.66
@@ -463,8 +463,8 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Shifter's Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -507,9 +507,9 @@ builds:
       pick: 0.0
       fit: 0.52
     Shifter's Shield:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
-      win: 0.53
+      win: 0.54
       pick: 0.33
       fit: 0.42
     The Crusher:
@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Gluttonous Grimoire
   - Shifter's Shield
   - The Crusher
+  - Soul Reaver
   flex_slots:
-  - Kinetic Cuirass
   - Shifter's Shield
+  - Soul Reaver
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -545,8 +545,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -573,12 +573,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
-    Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Gluttonous Grimoire:
       total: 0.53
       efficiency: 0.66
@@ -586,9 +580,9 @@ builds:
       pick: 0.0
       fit: 0.49
     Shifter's Shield:
-      total: 0.5
+      total: 0.51
       efficiency: 0.55
-      win: 0.53
+      win: 0.54
       pick: 0.33
       fit: 0.36
     The Crusher:
@@ -597,6 +591,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.38
+    Soul Reaver:
+      total: 0.51
+      efficiency: 0.46
+      win: 0.67
+      pick: 0.08
+      fit: 0.26
   starter: *id001
 - source: suggested
   archetype: model

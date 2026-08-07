@@ -2,13 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Riptalon | 0.52 | 0.53 | 0.56 | 0.55 | 0.15 | 0.46 | fair | sustain | **UNDERRATED** |
 | Berserker's Shield | 0.52 | 0.58 | 0.71 | 0.50 | 0.00 | 0.29 | undervalued |  | **UNDERRATED** |
-| Tyrfing | 0.51 | 0.51 | 0.47 | 0.52 | 0.41 | 0.60 | fair | burst |  |
+| Riptalon | 0.51 | 0.53 | 0.56 | 0.54 | 0.15 | 0.46 | fair | sustain | **UNDERRATED** |
+| Tyrfing | 0.51 | 0.51 | 0.47 | 0.52 | 0.42 | 0.60 | fair | burst |  |
 | Lernaean Bow | 0.51 | 0.57 | 0.56 | 0.50 | 0.00 | 0.60 | fair | wave-clear, burst | **UNDERRATED** |
-| Dominance | 0.51 | 0.52 | 0.53 | 0.53 | 0.19 | 0.50 | fair |  |  |
 | Damaru | 0.51 | 0.57 | 0.59 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
 | The Crusher | 0.51 | 0.56 | 0.65 | 0.50 | 0.00 | 0.36 | undervalued | burst | **UNDERRATED** |
+| Dominance | 0.50 | 0.52 | 0.53 | 0.52 | 0.19 | 0.50 | fair |  |  |
 | Jotunn's Revenge | 0.50 | 0.55 | 0.65 | 0.50 | 0.00 | 0.30 | undervalued |  | **UNDERRATED** |
 | Golden Blade | 0.49 | 0.54 | 0.55 | 0.50 | 0.00 | 0.50 | fair | wave-clear | **UNDERRATED** |
 | Hydra's Lament | 0.49 | 0.53 | 0.61 | 0.50 | 0.00 | 0.35 | fair | burst | **UNDERRATED** |
@@ -18,14 +18,14 @@
 | Pharaoh's Curse | 0.47 | 0.49 | 0.58 | 0.50 | 0.00 | 0.29 | fair | aura | **UNDERRATED** |
 | Tekko-Kagi | 0.47 | 0.49 | 0.46 | 0.50 | 0.00 | 0.55 | fair | mobility | **UNDERRATED** |
 | The Reaper | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.37 | fair | sustain | **UNDERRATED** |
-| Silverbranch Bow | 0.47 | 0.48 | 0.54 | 0.49 | 0.13 | 0.35 | fair |  | **UNDERRATED** |
-| Qin's Blade | 0.46 | 0.38 | 0.38 | 0.59 | 0.11 | 0.39 | premium | burst |  |
+| Qin's Blade | 0.47 | 0.38 | 0.38 | 0.60 | 0.11 | 0.39 | premium | burst |  |
+| Silverbranch Bow | 0.46 | 0.48 | 0.54 | 0.48 | 0.13 | 0.35 | fair |  | **UNDERRATED** |
 | Breastplate of Valor | 0.46 | 0.47 | 0.65 | 0.50 | 0.00 | 0.04 | undervalued |  | **UNDERRATED** |
-| Devourer's Gauntlet | 0.46 | 0.34 | 0.35 | 0.61 | 0.22 | 0.32 | premium | sustain |  |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Musashi's Dual Swords | 0.45 | 0.46 | 0.44 | 0.50 | 0.00 | 0.50 | premium | mobility | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Shogun's Ofuda | 0.45 | 0.46 | 0.53 | 0.50 | 0.00 | 0.29 | fair | aura | **UNDERRATED** |
+| Devourer's Gauntlet | 0.45 | 0.34 | 0.35 | 0.60 | 0.22 | 0.32 | premium | sustain |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Odysseus' Bow | 0.45 | 0.40 | 0.40 | 0.54 | 0.16 | 0.39 | premium | burst, wave-clear |  |
 | Avenging Blade | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.31 | fair | protection-shred | **UNDERRATED** |
@@ -79,7 +79,7 @@
 | Prophetic Cloak | 0.38 | 0.31 | 0.43 | 0.50 | 0.00 | 0.04 | premium |  |  |
 | Regrowth Striders | 0.37 | 0.30 | 0.41 | 0.50 | 0.00 | 0.04 | premium | mobility, sustain |  |
 | Stygian Anchor | 0.37 | 0.29 | 0.41 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
-| The Executioner | 0.37 | 0.23 | 0.15 | 0.55 | 0.12 | 0.39 | premium | protection-shred |  |
+| The Executioner | 0.37 | 0.23 | 0.15 | 0.55 | 0.13 | 0.39 | premium | protection-shred |  |
 | Shroud of Vengeance | 0.37 | 0.28 | 0.36 | 0.50 | 0.00 | 0.10 | premium | burst |  |
 | Vital Amplifier | 0.37 | 0.28 | 0.28 | 0.50 | 0.00 | 0.29 | premium |  |  |
 | Hussar's Wings | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |

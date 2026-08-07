@@ -316,7 +316,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Soul Gem:
       total: 0.79
       efficiency: 0.59

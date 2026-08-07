@@ -13,11 +13,11 @@ builds:
     win_rate: 0.57
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.26
+      pick_rate: 0.25
       win_rate: 0.57
     - name: Doom Orb
       pick_rate: 0.06
-      win_rate: 0.68
+      win_rate: 0.67
   - name: Book of Thoth
     pick_rate: 0.21
     win_rate: 0.56
@@ -27,30 +27,30 @@ builds:
       win_rate: 0.58
     - name: The World Stone
       pick_rate: 0.2
-      win_rate: 0.61
+      win_rate: 0.59
   - name: Soul Gem
     pick_rate: 0.21
-    win_rate: 0.62
+    win_rate: 0.61
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.18
-      win_rate: 0.61
+      pick_rate: 0.19
+      win_rate: 0.6
     - name: The World Stone
-      pick_rate: 0.16
+      pick_rate: 0.15
       win_rate: 0.56
   - name: Rod of Tahuti
-    pick_rate: 0.34
+    pick_rate: 0.33
     win_rate: 0.6
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.19
       win_rate: 0.58
     - name: Nimble Ring
-      pick_rate: 0.11
-      win_rate: 0.51
+      pick_rate: 0.12
+      win_rate: 0.52
   - name: Obsidian Shard
     pick_rate: 0.24
-    win_rate: 0.59
+    win_rate: 0.6
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.16
@@ -60,33 +60,33 @@ builds:
       win_rate: 0.65
   - name: Evil Eye
     pick_rate: 0.1
-    win_rate: 0.52
+    win_rate: 0.53
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.08
       win_rate: 0.69
     - name: Blinking Abyss
       pick_rate: 0.08
-      win_rate: 0.52
+      win_rate: 0.53
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.31
     win_rate: 0.61
   - name: Pendulum of The Ages
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.65
   - name: Conduit Gem
     pick_rate: 0.19
     win_rate: 0.53
   source_url: https://smitebrain.com/gods/ra/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5804943219772879
-  god_matches_won: 869
-  god_matches_played: 1497
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5800508259212198
+  god_matches_won: 913
+  god_matches_played: 1574
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -129,33 +129,33 @@ builds:
       pick: 0.53
       fit: 1.0
     Doom Orb:
-      total: 0.59
+      total: 0.58
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
       fit: 0.72
     The World Stone:
-      total: 0.56
+      total: 0.55
       efficiency: 0.49
-      win: 0.61
+      win: 0.59
       pick: 0.2
       fit: 0.72
     Rod of Tahuti:
       total: 0.55
       efficiency: 0.44
       win: 0.6
-      pick: 0.34
+      pick: 0.33
       fit: 0.72
     Obsidian Shard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.54
-      win: 0.59
+      win: 0.6
       pick: 0.24
       fit: 0.72
     Soul Gem:
-      total: 0.65
+      total: 0.64
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 1.0
   starter: &id001
@@ -202,53 +202,53 @@ builds:
     Doom Orb:
       total: 0.56
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
       fit: 0.56
     The World Stone:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.61
+      win: 0.59
       pick: 0.2
       fit: 0.56
     Rod of Tahuti:
       total: 0.52
       efficiency: 0.44
       win: 0.6
-      pick: 0.34
+      pick: 0.33
       fit: 0.56
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
-      win: 0.59
+      win: 0.6
       pick: 0.24
       fit: 0.56
     Soul Gem:
-      total: 0.63
+      total: 0.62
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 0.88
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
   - Spear of Desolation
   - Doom Orb
+  - Obsidian Shard
   - Amanita Charm
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Genji's Guard
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -263,12 +263,6 @@ builds:
     Jade Scepter, Erosion, The Cosmic Horror, Helm of Radiance, Yogi''s Necklace,
     Draconic Scale, Chronos'' Pendant.'
   slot_scores:
-    Genji's Guard:
-      total: 0.52
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.6
@@ -284,8 +278,14 @@ builds:
     Doom Orb:
       total: 0.53
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
+      fit: 0.36
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.54
+      win: 0.6
+      pick: 0.24
       fit: 0.36
     Amanita Charm:
       total: 0.58
@@ -296,7 +296,7 @@ builds:
     Soul Gem:
       total: 0.63
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 0.9
   starter: *id001
@@ -341,31 +341,31 @@ builds:
     Doom Orb:
       total: 0.6
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
       fit: 0.81
     The World Stone:
-      total: 0.58
+      total: 0.57
       efficiency: 0.49
-      win: 0.61
+      win: 0.59
       pick: 0.2
       fit: 0.81
     Rod of Tahuti:
       total: 0.56
       efficiency: 0.44
       win: 0.6
-      pick: 0.34
+      pick: 0.33
       fit: 0.81
     Obsidian Shard:
       total: 0.59
       efficiency: 0.54
-      win: 0.59
+      win: 0.6
       pick: 0.24
       fit: 0.81
     Soul Gem:
-      total: 0.65
+      total: 0.64
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 1.0
   starter: *id001
@@ -379,8 +379,8 @@ builds:
   - Doom Orb
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Nimble Ring
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -395,8 +395,8 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Genji''s Guard, Bracer of The Abyss, Spear of the
-    Magus, Bragi''s Harp, Death Metal, Nimble Ring, The Cosmic Horror, Breastplate
+    this god: Gluttonous Grimoire, Genji''s Guard, Bracer of The Abyss, Nimble Ring,
+    Spear of the Magus, Bragi''s Harp, Death Metal, The Cosmic Horror, Breastplate
     of Valor, Blood-Bound Book, Bancroft''s Talon, Chronos'' Pendant, Rod of Asclepius,
     Amanita Charm, Oni Hunter''s Garb, Helm of Radiance, Yogi''s Necklace, Kinetic
     Cuirass, Jade Scepter, Freya''s Tears, Gem of Focus, Shield of the Phoenix, Eye
@@ -411,15 +411,15 @@ builds:
     Nimble Ring:
       total: 0.48
       efficiency: 0.49
-      win: 0.51
-      pick: 0.11
+      win: 0.52
+      pick: 0.12
       fit: 0.48
     Bragi's Harp:
       total: 0.48
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Spear of Desolation:
       total: 0.53
       efficiency: 0.52
@@ -429,13 +429,13 @@ builds:
     Doom Orb:
       total: 0.52
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
       fit: 0.29
     Soul Gem:
       total: 0.58
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 0.58
   starter: *id001
@@ -444,13 +444,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
-  - Chronos' Pendant
   - Spear of Desolation
   - Doom Orb
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
-  - Chronos' Pendant
+  - Doom Orb
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -484,12 +484,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Chronos' Pendant:
-      total: 0.52
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Spear of Desolation:
       total: 0.59
       efficiency: 0.52
@@ -499,13 +493,19 @@ builds:
     Doom Orb:
       total: 0.53
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
       fit: 0.35
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.54
+      win: 0.6
+      pick: 0.24
+      fit: 0.35
     Soul Gem:
-      total: 0.64
+      total: 0.63
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 0.95
   starter: *id001
@@ -566,15 +566,15 @@ builds:
       pick: 0.0
       fit: 0.72
     Obsidian Shard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.54
-      win: 0.59
+      win: 0.6
       pick: 0.24
       fit: 0.72
     Soul Gem:
-      total: 0.65
+      total: 0.64
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 1.0
   starter: *id001
@@ -582,14 +582,14 @@ builds:
   archetype: core
   slot_order:
   - Genji's Guard
+  - Oni Hunter's Garb
   - Spear of Desolation
   - Doom Orb
-  - The World Stone
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - The World Stone
+  - Oni Hunter's Garb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -617,6 +617,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Oni Hunter's Garb:
+      total: 0.51
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
@@ -624,27 +630,21 @@ builds:
       pick: 0.53
       fit: 0.65
     Doom Orb:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
       fit: 0.39
-    The World Stone:
-      total: 0.51
-      efficiency: 0.49
-      win: 0.61
-      pick: 0.2
-      fit: 0.39
     Obsidian Shard:
-      total: 0.52
+      total: 0.53
       efficiency: 0.54
-      win: 0.59
+      win: 0.6
       pick: 0.24
       fit: 0.39
     Soul Gem:
-      total: 0.65
+      total: 0.64
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 1.0
   starter: *id001
@@ -659,8 +659,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - The World Stone
   - Genji's Guard
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -694,27 +694,27 @@ builds:
       pick: 0.53
       fit: 0.62
     Doom Orb:
-      total: 0.55
+      total: 0.54
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
       fit: 0.45
     The World Stone:
-      total: 0.52
+      total: 0.51
       efficiency: 0.49
-      win: 0.61
+      win: 0.59
       pick: 0.2
       fit: 0.45
     Obsidian Shard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
-      win: 0.59
+      win: 0.6
       pick: 0.24
       fit: 0.45
     Soul Gem:
-      total: 0.65
+      total: 0.64
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 1.0
   starter: *id001
@@ -783,9 +783,9 @@ builds:
       pick: 0.0
       fit: 0.87
     Soul Gem:
-      total: 0.65
+      total: 0.64
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 1.0
   starter: *id001
@@ -831,31 +831,31 @@ builds:
     Doom Orb:
       total: 0.56
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
       fit: 0.56
     The World Stone:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.61
+      win: 0.59
       pick: 0.2
       fit: 0.56
     Rod of Tahuti:
       total: 0.52
       efficiency: 0.44
       win: 0.6
-      pick: 0.34
+      pick: 0.33
       fit: 0.56
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
-      win: 0.59
+      win: 0.6
       pick: 0.24
       fit: 0.56
     Soul Gem:
-      total: 0.65
+      total: 0.64
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 1.0
   starter: *id001
@@ -863,15 +863,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Genji's Guard
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Spear of Desolation
-  - Doom Orb
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Nimble Ring
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -893,6 +893,12 @@ builds:
     Stampede, Yogi''s Necklace, Bracer of The Abyss, Void Stone, Spear of the Magus,
     Void Shield, Death Metal, Freya''s Tears.'
   slot_scores:
+    Genji's Guard:
+      total: 0.5
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.19
     Bracer of The Abyss:
       total: 0.46
       efficiency: 0.56
@@ -902,8 +908,8 @@ builds:
     Nimble Ring:
       total: 0.46
       efficiency: 0.49
-      win: 0.51
-      pick: 0.11
+      win: 0.52
+      pick: 0.12
       fit: 0.35
     Bragi's Harp:
       total: 0.46
@@ -917,16 +923,10 @@ builds:
       win: 0.57
       pick: 0.53
       fit: 0.29
-    Doom Orb:
-      total: 0.51
-      efficiency: 0.49
-      win: 0.68
-      pick: 0.06
-      fit: 0.17
     Soul Gem:
       total: 0.64
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 0.96
   starter: *id001
@@ -985,19 +985,19 @@ builds:
     Doom Orb:
       total: 0.52
       efficiency: 0.49
-      win: 0.68
+      win: 0.67
       pick: 0.06
       fit: 0.27
     Obsidian Shard:
       total: 0.51
       efficiency: 0.54
-      win: 0.59
+      win: 0.6
       pick: 0.24
       fit: 0.27
     Soul Gem:
-      total: 0.65
+      total: 0.64
       efficiency: 0.59
-      win: 0.62
+      win: 0.61
       pick: 0.21
       fit: 1.0
   starter: *id001

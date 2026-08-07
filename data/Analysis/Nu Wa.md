@@ -2,15 +2,15 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.62 | 0.71 | 0.59 | 0.57 | 0.22 | 1.00 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.55 | 0.40 | 1.00 | fair |  |  |
+| Soul Gem | 0.62 | 0.71 | 0.59 | 0.57 | 0.20 | 1.00 | fair | burst, sustain, aura |  |
+| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.55 | 0.38 | 1.00 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
-| Rod of Tahuti | 0.56 | 0.54 | 0.44 | 0.62 | 0.23 | 0.79 | premium |  |  |
-| Obsidian Shard | 0.56 | 0.61 | 0.54 | 0.54 | 0.23 | 0.79 | fair |  |  |
+| Obsidian Shard | 0.57 | 0.61 | 0.54 | 0.55 | 0.22 | 0.79 | fair |  |  |
+| Rod of Tahuti | 0.56 | 0.54 | 0.44 | 0.61 | 0.22 | 0.79 | premium |  |  |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Chronos' Pendant | 0.54 | 0.58 | 0.56 | 0.54 | 0.09 | 0.63 | fair |  | **UNDERRATED** |
-| Soul Reaver | 0.52 | 0.48 | 0.46 | 0.62 | 0.11 | 0.52 | fair | burst |  |
+| Chronos' Pendant | 0.53 | 0.58 | 0.56 | 0.52 | 0.11 | 0.63 | fair |  | **UNDERRATED** |
+| Soul Reaver | 0.52 | 0.48 | 0.46 | 0.62 | 0.10 | 0.52 | fair | burst |  |
 | The World Stone | 0.52 | 0.58 | 0.49 | 0.49 | 0.16 | 0.79 | fair |  |  |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | Doom Orb | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
@@ -21,8 +21,8 @@
 | Blood-Bound Book | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.42 | fair | sustain | **UNDERRATED** |
 | Helm of Radiance | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Bancroft's Talon | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.42 | fair | sustain | **UNDERRATED** |
+| Book of Thoth | 0.49 | 0.42 | 0.42 | 0.59 | 0.31 | 0.42 | premium |  |  |
 | Jade Scepter | 0.49 | 0.52 | 0.57 | 0.50 | 0.00 | 0.42 | fair | peel | **UNDERRATED** |
-| Book of Thoth | 0.49 | 0.42 | 0.42 | 0.58 | 0.31 | 0.42 | premium |  |  |
 | Breastplate of Valor | 0.49 | 0.52 | 0.65 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.49 | 0.52 | 0.56 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Wish-Granting Pearl | 0.48 | 0.50 | 0.54 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |

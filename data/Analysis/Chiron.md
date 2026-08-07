@@ -2,10 +2,10 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| The Crusher | 0.58 | 0.58 | 0.65 | 0.63 | 0.12 | 0.44 | undervalued | burst | **UNDERRATED** |
-| Jotunn's Revenge | 0.54 | 0.59 | 0.65 | 0.52 | 0.28 | 0.44 | undervalued |  |  |
+| The Crusher | 0.59 | 0.58 | 0.65 | 0.65 | 0.12 | 0.44 | undervalued | burst | **UNDERRATED** |
+| Jotunn's Revenge | 0.54 | 0.59 | 0.65 | 0.51 | 0.29 | 0.44 | undervalued |  |  |
 | Avatar's Parashu | 0.54 | 0.40 | 0.43 | 0.74 | 0.10 | 0.34 | premium | cc-immunity |  |
-| Heartseeker | 0.52 | 0.45 | 0.46 | 0.64 | 0.10 | 0.44 | fair | burst | **UNDERRATED** |
+| Heartseeker | 0.52 | 0.45 | 0.46 | 0.65 | 0.10 | 0.44 | fair | burst | **UNDERRATED** |
 | Berserker's Shield | 0.51 | 0.57 | 0.71 | 0.50 | 0.00 | 0.24 | undervalued |  | **UNDERRATED** |
 | Tyrfing | 0.50 | 0.48 | 0.47 | 0.57 | 0.13 | 0.50 | fair | burst | **UNDERRATED** |
 | Titan's Bane | 0.50 | 0.42 | 0.46 | 0.61 | 0.18 | 0.34 | fair |  |  |
@@ -18,17 +18,17 @@
 | The Reaper | 0.48 | 0.50 | 0.53 | 0.50 | 0.00 | 0.43 | fair | sustain | **UNDERRATED** |
 | Silverbranch Bow | 0.48 | 0.50 | 0.54 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Runeforged Hammer | 0.47 | 0.50 | 0.60 | 0.50 | 0.00 | 0.27 | fair | burst | **UNDERRATED** |
+| Shifter's Shield | 0.47 | 0.39 | 0.55 | 0.61 | 0.13 | 0.00 | fair |  |  |
 | Dominance | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
 | Tekko-Kagi | 0.47 | 0.49 | 0.46 | 0.50 | 0.00 | 0.58 | fair | mobility | **UNDERRATED** |
-| Shifter's Shield | 0.47 | 0.39 | 0.55 | 0.60 | 0.13 | 0.00 | fair |  |  |
 | Breastplate of Valor | 0.47 | 0.49 | 0.65 | 0.50 | 0.00 | 0.10 | undervalued |  | **UNDERRATED** |
 | Pharaoh's Curse | 0.46 | 0.47 | 0.58 | 0.50 | 0.00 | 0.24 | fair | aura | **UNDERRATED** |
 | Demon Blade | 0.46 | 0.46 | 0.39 | 0.50 | 0.00 | 0.64 | premium |  | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
-| Odysseus' Bow | 0.45 | 0.38 | 0.40 | 0.56 | 0.16 | 0.34 | premium | burst, wave-clear |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
+| Odysseus' Bow | 0.45 | 0.38 | 0.40 | 0.55 | 0.16 | 0.34 | premium | burst, wave-clear |  |
 | Avenging Blade | 0.45 | 0.44 | 0.51 | 0.50 | 0.00 | 0.27 | fair | protection-shred | **UNDERRATED** |
 | Freya's Tears | 0.44 | 0.44 | 0.59 | 0.50 | 0.00 | 0.10 | fair |  | **UNDERRATED** |
 | Shogun's Ofuda | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.24 | fair | aura | **UNDERRATED** |
@@ -77,14 +77,14 @@
 | Devourer's Gauntlet | 0.39 | 0.32 | 0.35 | 0.50 | 0.00 | 0.26 | premium | sustain |  |
 | Regrowth Striders | 0.38 | 0.31 | 0.41 | 0.50 | 0.00 | 0.10 | premium | mobility, sustain |  |
 | Mystical Mail | 0.38 | 0.31 | 0.45 | 0.50 | 0.00 | 0.00 | fair | aura, wave-clear |  |
-| The Executioner | 0.38 | 0.21 | 0.15 | 0.59 | 0.13 | 0.34 | premium | protection-shred |  |
+| The Executioner | 0.38 | 0.21 | 0.15 | 0.60 | 0.13 | 0.34 | premium | protection-shred |  |
 | Hastened Fatalis | 0.37 | 0.30 | 0.32 | 0.50 | 0.00 | 0.24 | premium | mobility |  |
 | Stygian Anchor | 0.37 | 0.29 | 0.41 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
 | Glorious Pridwen | 0.37 | 0.28 | 0.36 | 0.50 | 0.00 | 0.10 | premium | sustain |  |
 | Shroud of Vengeance | 0.37 | 0.28 | 0.36 | 0.50 | 0.00 | 0.10 | premium | burst |  |
 | Hussar's Wings | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |
+| Daybreak Gavel | 0.36 | 0.13 | 0.18 | 0.65 | 0.17 | 0.00 | premium |  |  |
 | Heartwood Charm | 0.36 | 0.27 | 0.35 | 0.50 | 0.00 | 0.10 | premium |  |  |
-| Daybreak Gavel | 0.36 | 0.13 | 0.18 | 0.64 | 0.16 | 0.00 | premium |  |  |
 | Vital Amplifier | 0.36 | 0.26 | 0.28 | 0.50 | 0.00 | 0.24 | premium |  |  |
 | Eye of Erebus | 0.35 | 0.25 | 0.32 | 0.50 | 0.00 | 0.10 | premium |  |  |
 | Spirit Robe | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium | sustain |  |

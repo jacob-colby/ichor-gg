@@ -2,16 +2,16 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.63 | 0.71 | 0.59 | 0.57 | 0.29 | 1.00 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.59 | 0.67 | 0.52 | 0.52 | 0.50 | 1.00 | fair |  |  |
+| Soul Gem | 0.63 | 0.71 | 0.59 | 0.57 | 0.30 | 1.00 | fair | burst, sustain, aura |  |
+| Spear of Desolation | 0.59 | 0.67 | 0.52 | 0.52 | 0.49 | 1.00 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
 | Obsidian Shard | 0.58 | 0.61 | 0.54 | 0.58 | 0.21 | 0.79 | fair |  |  |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Soul Reaver | 0.55 | 0.48 | 0.46 | 0.68 | 0.07 | 0.52 | fair | burst |  |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| The World Stone | 0.54 | 0.58 | 0.49 | 0.55 | 0.16 | 0.79 | fair |  |  |
-| Chronos' Pendant | 0.54 | 0.58 | 0.56 | 0.54 | 0.18 | 0.63 | fair |  |  |
-| Rod of Tahuti | 0.53 | 0.54 | 0.44 | 0.54 | 0.31 | 0.79 | premium |  |  |
+| Chronos' Pendant | 0.54 | 0.58 | 0.56 | 0.54 | 0.19 | 0.63 | fair |  |  |
+| The World Stone | 0.54 | 0.58 | 0.49 | 0.54 | 0.17 | 0.79 | fair |  |  |
+| Soul Reaver | 0.54 | 0.48 | 0.46 | 0.66 | 0.07 | 0.52 | fair | burst |  |
+| Rod of Tahuti | 0.53 | 0.54 | 0.44 | 0.55 | 0.31 | 0.79 | premium |  |  |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | Doom Orb | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |

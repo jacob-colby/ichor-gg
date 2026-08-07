@@ -6,8 +6,8 @@
 | Freya's Tears | 0.57 | 0.61 | 0.59 | 0.58 | 0.05 | 0.65 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.56 | 0.67 | 0.66 | 0.50 | 0.00 | 0.70 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.80 | fair | burst | **UNDERRATED** |
-| Eye of Providence | 0.55 | 0.64 | 0.62 | 0.50 | 0.07 | 0.70 | undervalued |  | **UNDERRATED** |
-| Genji's Guard | 0.54 | 0.62 | 0.72 | 0.49 | 0.18 | 0.40 | undervalued |  |  |
+| Eye of Providence | 0.55 | 0.64 | 0.62 | 0.50 | 0.00 | 0.70 | undervalued |  | **UNDERRATED** |
+| Genji's Guard | 0.54 | 0.62 | 0.72 | 0.48 | 0.19 | 0.40 | undervalued |  |  |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.45 | undervalued | burst | **UNDERRATED** |
 | Shifter's Shield | 0.52 | 0.60 | 0.55 | 0.50 | 0.00 | 0.70 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.45 | undervalued |  | **UNDERRATED** |
@@ -24,19 +24,18 @@
 | Yogi's Necklace | 0.48 | 0.51 | 0.65 | 0.50 | 0.00 | 0.20 | undervalued |  | **UNDERRATED** |
 | Hide of the Nemean Lion | 0.48 | 0.51 | 0.54 | 0.50 | 0.00 | 0.45 | fair |  | **UNDERRATED** |
 | Helm of Radiance | 0.48 | 0.51 | 0.58 | 0.50 | 0.00 | 0.34 | fair |  | **UNDERRATED** |
-| Dwarven Plate | 0.48 | 0.40 | 0.35 | 0.61 | 0.07 | 0.50 | premium |  |  |
 | Rod of Asclepius | 0.48 | 0.50 | 0.59 | 0.50 | 0.00 | 0.29 | fair | sustain, aura | **UNDERRATED** |
 | Magi's Cloak | 0.47 | 0.50 | 0.50 | 0.50 | 0.00 | 0.50 | fair | cc-immunity | **UNDERRATED** |
 | Gladiator's Shield | 0.47 | 0.50 | 0.41 | 0.50 | 0.00 | 0.70 | premium | burst | **UNDERRATED** |
-| Stampede | 0.47 | 0.50 | 0.52 | 0.48 | 0.18 | 0.45 | fair | mobility, aura, cc-immunity |  |
 | Ancile | 0.47 | 0.50 | 0.52 | 0.50 | 0.00 | 0.45 | fair |  | **UNDERRATED** |
-| Prophetic Cloak | 0.47 | 0.49 | 0.43 | 0.50 | 0.00 | 0.65 | premium |  | **UNDERRATED** |
+| Dwarven Plate | 0.47 | 0.40 | 0.35 | 0.60 | 0.07 | 0.50 | premium |  |  |
 | Screeching Gargoyle | 0.47 | 0.49 | 0.49 | 0.50 | 0.00 | 0.50 | fair | protection-shred, peel |  |
 | Hussar's Wings | 0.47 | 0.49 | 0.40 | 0.50 | 0.00 | 0.70 | premium | cc-immunity |  |
 | Xibalban Effigy | 0.47 | 0.49 | 0.49 | 0.50 | 0.00 | 0.50 | fair |  |  |
 | Doublet of Binding | 0.47 | 0.49 | 0.51 | 0.50 | 0.00 | 0.45 | fair | aura |  |
 | Void Shield | 0.47 | 0.49 | 0.46 | 0.50 | 0.00 | 0.55 | fair | protection-shred, aura |  |
 | Jade Scepter | 0.47 | 0.49 | 0.57 | 0.50 | 0.00 | 0.29 | fair | peel |  |
+| Stampede | 0.46 | 0.50 | 0.52 | 0.46 | 0.18 | 0.45 | fair | mobility, aura, cc-immunity |  |
 | Chandra's Grace | 0.46 | 0.48 | 0.53 | 0.50 | 0.00 | 0.35 | fair | sustain |  |
 | Helm of Darkness | 0.46 | 0.48 | 0.43 | 0.50 | 0.00 | 0.59 | premium | mobility |  |
 | Void Stone | 0.46 | 0.47 | 0.44 | 0.50 | 0.00 | 0.55 | premium | protection-shred, aura |  |
@@ -47,6 +46,7 @@
 | Ethereal Staff | 0.46 | 0.46 | 0.53 | 0.50 | 0.00 | 0.29 | fair |  |  |
 | Phoenix Feather | 0.45 | 0.46 | 0.46 | 0.50 | 0.00 | 0.45 | fair | sustain |  |
 | Spear of Desolation | 0.45 | 0.46 | 0.52 | 0.50 | 0.00 | 0.30 | fair |  |  |
+| Prophetic Cloak | 0.45 | 0.49 | 0.43 | 0.45 | 0.07 | 0.65 | premium |  | **UNDERRATED** |
 | Alchemist Coat | 0.45 | 0.45 | 0.52 | 0.50 | 0.00 | 0.29 | fair |  |  |
 | The Cosmic Horror | 0.45 | 0.45 | 0.58 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Glorious Pridwen | 0.45 | 0.45 | 0.36 | 0.50 | 0.00 | 0.65 | premium | sustain |  |
@@ -84,7 +84,7 @@
 | Eye of Erebus | 0.39 | 0.33 | 0.32 | 0.50 | 0.00 | 0.35 | premium |  |  |
 | Book of Thoth | 0.38 | 0.32 | 0.42 | 0.50 | 0.00 | 0.09 | premium |  |  |
 | Staff of Myrddin | 0.38 | 0.31 | 0.34 | 0.50 | 0.00 | 0.24 | premium |  |  |
-| Gauntlet of Thebes | 0.38 | 0.25 | 0.27 | 0.53 | 0.27 | 0.20 | premium |  |  |
+| Gauntlet of Thebes | 0.37 | 0.25 | 0.27 | 0.52 | 0.27 | 0.20 | premium |  |  |
 | Circe's Hexstone | 0.37 | 0.28 | 0.25 | 0.50 | 0.00 | 0.35 | premium | mobility, cc-immunity |  |
 | Brawler’s Beat Stick | 0.36 | 0.28 | 0.18 | 0.50 | 0.00 | 0.50 | premium | anti-heal |  |
 | Resolute Mantle | 0.36 | 0.27 | 0.30 | 0.50 | 0.00 | 0.20 | premium | cc-immunity, sustain |  |

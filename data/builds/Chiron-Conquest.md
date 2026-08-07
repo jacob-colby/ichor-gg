@@ -13,48 +13,48 @@ builds:
     win_rate: 0.52
     alternates:
     - name: Daybreak Gavel
-      pick_rate: 0.16
-      win_rate: 0.64
+      pick_rate: 0.17
+      win_rate: 0.65
     - name: Tyrfing
       pick_rate: 0.13
       win_rate: 0.57
   - name: Jotunn's Revenge
-    pick_rate: 0.28
-    win_rate: 0.52
+    pick_rate: 0.29
+    win_rate: 0.51
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.13
-      win_rate: 0.6
+      win_rate: 0.61
     - name: Odysseus' Bow
       pick_rate: 0.1
       win_rate: 0.6
   - name: Odysseus' Bow
     pick_rate: 0.16
-    win_rate: 0.56
+    win_rate: 0.55
     alternates:
     - name: The Crusher
       pick_rate: 0.12
-      win_rate: 0.63
+      win_rate: 0.65
     - name: Heartseeker
       pick_rate: 0.11
-      win_rate: 0.42
+      win_rate: 0.41
   - name: Titan's Bane
     pick_rate: 0.18
     win_rate: 0.61
     alternates:
     - name: The Executioner
       pick_rate: 0.13
-      win_rate: 0.59
+      win_rate: 0.6
     - name: Heartseeker
-      pick_rate: 0.11
+      pick_rate: 0.12
       win_rate: 0.39
   - name: Heartseeker
     pick_rate: 0.1
-    win_rate: 0.64
+    win_rate: 0.65
     alternates:
     - name: Titan's Bane
       pick_rate: 0.1
-      win_rate: 0.52
+      win_rate: 0.51
     - name: The Crusher
       pick_rate: 0.06
       win_rate: 0.5
@@ -63,30 +63,30 @@ builds:
     win_rate: 0.74
     alternates:
     - name: Skeggox
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.61
     - name: Hunter's Bow
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.4
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.24
-    win_rate: 0.52
+    pick_rate: 0.23
+    win_rate: 0.51
   - name: Hunter's Cowl
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.66
   - name: Bluestone Pendant
-    pick_rate: 0.14
-    win_rate: 0.39
+    pick_rate: 0.15
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/chiron/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5482625482625483
-  god_matches_won: 284
-  god_matches_played: 518
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5464684014869888
+  god_matches_won: 294
+  god_matches_played: 538
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -132,8 +132,8 @@ builds:
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.44
     Tyrfing:
       total: 0.5
@@ -142,15 +142,15 @@ builds:
       pick: 0.13
       fit: 0.5
     The Crusher:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.44
     Heartseeker:
       total: 0.52
       efficiency: 0.46
-      win: 0.64
+      win: 0.65
       pick: 0.1
       fit: 0.44
     Avatar's Parashu:
@@ -198,8 +198,8 @@ builds:
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.41
     Musashi's Dual Swords:
       total: 0.44
@@ -220,9 +220,9 @@ builds:
       pick: 0.0
       fit: 0.64
     The Crusher:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.42
     Avatar's Parashu:
@@ -278,21 +278,21 @@ builds:
       pick: 0.0
       fit: 0.17
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.46
     The Crusher:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.43
     Heartseeker:
       total: 0.52
       efficiency: 0.46
-      win: 0.64
+      win: 0.65
       pick: 0.1
       fit: 0.43
     Avatar's Parashu:
@@ -312,8 +312,8 @@ builds:
   - Avatar's Parashu
   - Amanita Charm
   flex_slots:
+  - Avatar's Parashu
   - Jotunn's Revenge
-  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -344,19 +344,19 @@ builds:
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.3
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
-      win: 0.6
+      win: 0.61
       pick: 0.13
       fit: 0.32
     The Crusher:
       total: 0.57
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.33
     Avatar's Parashu:
@@ -406,10 +406,10 @@ builds:
     Blade, Void Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.53
     Riptalon:
       total: 0.51
@@ -418,15 +418,15 @@ builds:
       pick: 0.0
       fit: 0.58
     The Crusher:
-      total: 0.6
+      total: 0.61
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.55
     Heartseeker:
       total: 0.54
       efficiency: 0.46
-      win: 0.64
+      win: 0.65
       pick: 0.1
       fit: 0.55
     Titan's Bane:
@@ -468,7 +468,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, Tyrfing, Riptalon, Heartseeker, Berserker''s Shield, Golden
+    this god: The Crusher, Tyrfing, Heartseeker, Riptalon, Berserker''s Shield, Golden
     Blade, Silverbranch Bow, Genji''s Guard, Lernaean Bow, Hydra''s Lament, Damaru,
     Runeforged Hammer, Breastplate of Valor, Dominance, The Reaper, Pharaoh''s Curse,
     Tekko-Kagi, Amanita Charm, Oni Hunter''s Garb, Toxic Blade, Yogi''s Necklace,
@@ -482,10 +482,10 @@ builds:
       pick: 0.0
       fit: 0.23
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.35
     Tyrfing:
       total: 0.52
@@ -500,9 +500,9 @@ builds:
       pick: 0.0
       fit: 0.6
     The Crusher:
-      total: 0.57
+      total: 0.58
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.36
     Avatar's Parashu:
@@ -529,8 +529,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -554,8 +554,8 @@ builds:
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.49
     Hydra's Lament:
       total: 0.51
@@ -564,15 +564,15 @@ builds:
       pick: 0.0
       fit: 0.46
     The Crusher:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.31
     Heartseeker:
-      total: 0.5
+      total: 0.51
       efficiency: 0.46
-      win: 0.64
+      win: 0.65
       pick: 0.1
       fit: 0.31
     Avatar's Parashu:
@@ -630,8 +630,8 @@ builds:
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.44
     Riptalon:
       total: 0.49
@@ -646,9 +646,9 @@ builds:
       pick: 0.0
       fit: 0.4
     The Crusher:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.44
   starter: *id001
@@ -700,8 +700,8 @@ builds:
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.44
     Riptalon:
       total: 0.49
@@ -710,9 +710,9 @@ builds:
       pick: 0.0
       fit: 0.5
     The Crusher:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.44
     Avatar's Parashu:
@@ -724,7 +724,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Damaru
-    reason: community 74% win over 52 matches (vs 55% on this god), taking the model's
+    reason: community 74% win over 54 matches (vs 55% on this god), taking the model's
       weakest slot from Damaru
   starter: *id001
 - source: suggested
@@ -761,10 +761,10 @@ builds:
     Tears, Spectral Armor.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.53
     Damaru:
       total: 0.51
@@ -773,15 +773,15 @@ builds:
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.51
     Heartseeker:
-      total: 0.53
+      total: 0.54
       efficiency: 0.46
-      win: 0.64
+      win: 0.65
       pick: 0.1
       fit: 0.51
     Titan's Bane:
@@ -834,8 +834,8 @@ builds:
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.41
     Musashi's Dual Swords:
       total: 0.44
@@ -856,9 +856,9 @@ builds:
       pick: 0.0
       fit: 0.64
     The Crusher:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.42
     Avatar's Parashu:
@@ -886,8 +886,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -909,21 +909,21 @@ builds:
       pick: 0.0
       fit: 0.15
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.53
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.48
     Heartseeker:
       total: 0.53
       efficiency: 0.46
-      win: 0.64
+      win: 0.65
       pick: 0.1
       fit: 0.48
     Titan's Bane:
@@ -950,7 +950,7 @@ builds:
   - Avatar's Parashu
   - Amanita Charm
   flex_slots:
-  - Shifter's Shield
+  - Jotunn's Revenge
   - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
@@ -966,7 +966,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, The Crusher, Shifter''s Shield, Shield of the Phoenix,
+    this god: The Crusher, Amanita Charm, Shifter''s Shield, Shield of the Phoenix,
     Berserker''s Shield, The Reaper, Kinetic Cuirass, Genji''s Guard, Riptalon, Eye
     of Providence, Oni Hunter''s Garb, Runeforged Hammer, Chandra''s Grace, Pharaoh''s
     Curse, Spectral Armor, Hydra''s Lament, Breastplate of Valor, Damaru, Erosion,
@@ -974,10 +974,10 @@ builds:
     Golden Blade, Shield Splitter, Eye of the Storm, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.34
     Shield of the Phoenix:
       total: 0.52
@@ -986,15 +986,15 @@ builds:
       pick: 0.0
       fit: 0.63
     Shifter's Shield:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
-      win: 0.6
+      win: 0.61
       pick: 0.13
       fit: 0.37
     The Crusher:
-      total: 0.57
+      total: 0.58
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.36
     Avatar's Parashu:
@@ -1047,8 +1047,8 @@ builds:
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.62
     The Reaper:
       total: 0.5
@@ -1057,15 +1057,15 @@ builds:
       pick: 0.0
       fit: 0.62
     The Crusher:
-      total: 0.61
+      total: 0.62
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.63
     Heartseeker:
       total: 0.55
       efficiency: 0.46
-      win: 0.64
+      win: 0.65
       pick: 0.1
       fit: 0.63
     Titan's Bane:
@@ -1102,13 +1102,13 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, Tyrfing, Riptalon, Heartseeker, Berserker''s Shield, Golden
+    this god: The Crusher, Tyrfing, Heartseeker, Riptalon, Berserker''s Shield, Golden
     Blade, Silverbranch Bow, Genji''s Guard, Lernaean Bow, Hydra''s Lament, Damaru,
     Pharaoh''s Curse, Amanita Charm, Runeforged Hammer, Breastplate of Valor, Dominance,
     The Reaper, Tekko-Kagi, Shogun''s Ofuda, Oni Hunter''s Garb, Eros'' Bow, Toxic
@@ -1122,10 +1122,10 @@ builds:
       pick: 0.0
       fit: 0.23
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.35
     Tyrfing:
       total: 0.52
@@ -1140,9 +1140,9 @@ builds:
       pick: 0.0
       fit: 0.6
     The Crusher:
-      total: 0.57
+      total: 0.58
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.36
     Avatar's Parashu:
@@ -1195,8 +1195,8 @@ builds:
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.57
     Hydra's Lament:
       total: 0.51
@@ -1205,15 +1205,15 @@ builds:
       pick: 0.0
       fit: 0.52
     The Crusher:
-      total: 0.57
+      total: 0.58
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.35
     Heartseeker:
       total: 0.51
       efficiency: 0.46
-      win: 0.64
+      win: 0.65
       pick: 0.1
       fit: 0.35
     Avatar's Parashu:
@@ -1264,10 +1264,10 @@ builds:
       pick: 0.0
       fit: 0.12
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.53
     Hydra's Lament:
       total: 0.5
@@ -1288,9 +1288,9 @@ builds:
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.51
   starter: *id001
@@ -1335,10 +1335,10 @@ builds:
       pick: 0.0
       fit: 0.12
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.52
-      pick: 0.28
+      win: 0.51
+      pick: 0.29
       fit: 0.53
     Hydra's Lament:
       total: 0.5
@@ -1353,9 +1353,9 @@ builds:
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.63
+      win: 0.65
       pick: 0.12
       fit: 0.51
     Avatar's Parashu:
@@ -1367,7 +1367,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: The Reaper
-    reason: community 74% win over 52 matches (vs 55% on this god), taking the model's
+    reason: community 74% win over 54 matches (vs 55% on this god), taking the model's
       weakest slot from The Reaper
   starter: *id001
   aspect: Aspect of the Heroic Tutor

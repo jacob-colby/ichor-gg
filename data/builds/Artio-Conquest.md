@@ -6,58 +6,58 @@ builds:
 - source: community
   aspect: Aspect of the Denmother
   aspect_pick_rate: 0.36
-  aspect_win_rate: 0.5
+  aspect_win_rate: 0.51
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.35
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Gauntlet of Thebes
       pick_rate: 0.1
-      win_rate: 0.46
+      win_rate: 0.44
     - name: Daybreak Gavel
-      pick_rate: 0.06
-      win_rate: 0.61
+      pick_rate: 0.07
+      win_rate: 0.62
   - name: Breastplate of Valor
     pick_rate: 0.22
-    win_rate: 0.51
+    win_rate: 0.52
     alternates:
     - name: Genji's Guard
       pick_rate: 0.15
-      win_rate: 0.48
+      win_rate: 0.51
     - name: Shifter's Shield
-      pick_rate: 0.13
+      pick_rate: 0.14
       win_rate: 0.59
   - name: Genji's Guard
-    pick_rate: 0.27
-    win_rate: 0.52
+    pick_rate: 0.26
+    win_rate: 0.54
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.11
-      win_rate: 0.46
+      win_rate: 0.48
     - name: Gladiator's Shield
       pick_rate: 0.07
       win_rate: 0.54
   - name: Shell of Rebuke
     pick_rate: 0.14
-    win_rate: 0.51
+    win_rate: 0.53
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.12
-      win_rate: 0.54
+      pick_rate: 0.11
+      win_rate: 0.55
     - name: Dwarven Plate
       pick_rate: 0.1
-      win_rate: 0.42
+      win_rate: 0.41
   - name: Dwarven Plate
     pick_rate: 0.09
-    win_rate: 0.61
+    win_rate: 0.59
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.43
+      win_rate: 0.41
     - name: Veve Charm
       pick_rate: 0.05
-      win_rate: 0.64
+      win_rate: 0.63
   - name: Medallion
     pick_rate: 0.06
     win_rate: 0.73
@@ -70,23 +70,23 @@ builds:
       win_rate: 0.55
   community_starters:
   - name: Bluestone Pendant
-    pick_rate: 0.31
-    win_rate: 0.51
+    pick_rate: 0.32
+    win_rate: 0.49
   - name: Bluestone Brooch
-    pick_rate: 0.23
+    pick_rate: 0.22
     win_rate: 0.61
   - name: Bumba's Cudgel
     pick_rate: 0.1
     win_rate: 0.47
   source_url: https://smitebrain.com/gods/artio/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5081081081081081
-  god_matches_won: 188
-  god_matches_played: 370
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5113350125944585
+  god_matches_won: 203
+  god_matches_played: 397
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -100,7 +100,7 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
+  - Shifter's Shield
   - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
@@ -132,8 +132,8 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.72
-      win: 0.52
-      pick: 0.27
+      win: 0.54
+      pick: 0.26
       fit: 0.45
     Kinetic Cuirass:
       total: 0.58
@@ -150,7 +150,7 @@ builds:
     Shifter's Shield:
       total: 0.57
       efficiency: 0.55
-      win: 0.52
+      win: 0.51
       pick: 0.35
       fit: 0.84
     Amanita Charm:
@@ -173,7 +173,7 @@ builds:
   - Amanita Charm
   flex_slots:
   - Eye of Providence
-  - Genji's Guard
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -182,8 +182,8 @@ builds:
     swap: Oni Hunter's Garb — magical protection
     swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -201,10 +201,10 @@ builds:
       pick: 0.0
       fit: 0.84
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.52
-      pick: 0.27
+      win: 0.54
+      pick: 0.26
       fit: 0.42
     Kinetic Cuirass:
       total: 0.58
@@ -221,7 +221,7 @@ builds:
     Shifter's Shield:
       total: 0.57
       efficiency: 0.55
-      win: 0.52
+      win: 0.51
       pick: 0.35
       fit: 0.84
     Amanita Charm:
@@ -241,7 +241,7 @@ builds:
   - Gluttonous Grimoire
   - Shifter's Shield
   flex_slots:
-  - Eye of Providence
+  - Shifter's Shield
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -271,15 +271,15 @@ builds:
       pick: 0.0
       fit: 0.51
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.72
-      win: 0.52
-      pick: 0.27
+      win: 0.54
+      pick: 0.26
       fit: 0.27
     Breastplate of Valor:
-      total: 0.51
+      total: 0.52
       efficiency: 0.65
-      win: 0.51
+      win: 0.52
       pick: 0.22
       fit: 0.27
     Kinetic Cuirass:
@@ -297,7 +297,7 @@ builds:
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
-      win: 0.52
+      win: 0.51
       pick: 0.35
       fit: 0.51
   starter: *id001
@@ -318,8 +318,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -335,10 +335,10 @@ builds:
     Ancile.'
   slot_scores:
     Genji's Guard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.72
-      win: 0.52
-      pick: 0.27
+      win: 0.54
+      pick: 0.26
       fit: 0.2
     Kinetic Cuirass:
       total: 0.51
@@ -374,22 +374,22 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Eye of Providence
   - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Shifter's Shield
+  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -404,16 +404,22 @@ builds:
     Yogi''s Necklace, Gem of Focus, Draconic Scale, Rod of Asclepius, Helm of Radiance,
     Death Metal, Leviathan''s Hide, Jade Scepter.'
   slot_scores:
+    Eye of Providence:
+      total: 0.51
+      efficiency: 0.62
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Genji's Guard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.52
-      pick: 0.27
+      win: 0.54
+      pick: 0.26
       fit: 0.5
     Breastplate of Valor:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
-      win: 0.51
+      win: 0.52
       pick: 0.22
       fit: 0.5
     Kinetic Cuirass:
@@ -428,12 +434,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Shifter's Shield:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.52
-      pick: 0.35
-      fit: 0.45
     Amanita Charm:
       total: 0.52
       efficiency: 0.66
@@ -483,8 +483,8 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.72
-      win: 0.52
-      pick: 0.27
+      win: 0.54
+      pick: 0.26
       fit: 0.45
     Kinetic Cuirass:
       total: 0.58
@@ -501,7 +501,7 @@ builds:
     Shifter's Shield:
       total: 0.57
       efficiency: 0.55
-      win: 0.52
+      win: 0.51
       pick: 0.35
       fit: 0.84
     Amanita Charm:

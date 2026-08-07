@@ -14,20 +14,20 @@ builds:
     alternates:
     - name: Jotunn's Revenge
       pick_rate: 0.08
-      win_rate: 0.55
+      win_rate: 0.54
     - name: Hydra's Lament
       pick_rate: 0.06
-      win_rate: 0.51
+      win_rate: 0.5
   - name: Hydra's Lament
     pick_rate: 0.52
     win_rate: 0.49
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.29
+      pick_rate: 0.3
       win_rate: 0.52
     - name: Transcendence
       pick_rate: 0.12
-      win_rate: 0.49
+      win_rate: 0.48
   - name: Jotunn's Revenge
     pick_rate: 0.47
     win_rate: 0.48
@@ -37,14 +37,14 @@ builds:
       win_rate: 0.52
     - name: Heartseeker
       pick_rate: 0.05
-      win_rate: 0.66
+      win_rate: 0.63
   - name: Heartseeker
-    pick_rate: 0.58
+    pick_rate: 0.59
     win_rate: 0.53
     alternates:
     - name: Titan's Bane
       pick_rate: 0.19
-      win_rate: 0.46
+      win_rate: 0.47
     - name: The Crusher
       pick_rate: 0.05
       win_rate: 0.45
@@ -54,12 +54,12 @@ builds:
     alternates:
     - name: Heartseeker
       pick_rate: 0.16
-      win_rate: 0.47
+      win_rate: 0.48
     - name: Lucerne Hammer
-      pick_rate: 0.09
-      win_rate: 0.49
+      pick_rate: 0.1
+      win_rate: 0.5
   - name: Blinking Abyss
-    pick_rate: 0.13
+    pick_rate: 0.12
     win_rate: 0.6
     alternates:
     - name: Titan's Bane
@@ -67,7 +67,7 @@ builds:
       win_rate: 0.47
     - name: Lucerne Hammer
       pick_rate: 0.08
-      win_rate: 0.37
+      win_rate: 0.36
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.52
@@ -77,16 +77,16 @@ builds:
     win_rate: 0.44
   - name: Bluestone Brooch
     pick_rate: 0.16
-    win_rate: 0.45
+    win_rate: 0.46
   source_url: https://smitebrain.com/gods/ullr/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5
-  god_matches_won: 316
-  god_matches_played: 632
+  last_verified: '2026-08-07'
+  god_win_rate: 0.4984709480122324
+  god_matches_won: 326
+  god_matches_played: 654
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -298,7 +298,7 @@ builds:
       total: 0.49
       efficiency: 0.46
       win: 0.53
-      pick: 0.58
+      pick: 0.59
       fit: 0.43
   starter: *id001
 - source: suggested
@@ -437,7 +437,7 @@ builds:
       total: 0.51
       efficiency: 0.46
       win: 0.53
-      pick: 0.58
+      pick: 0.59
       fit: 0.54
   starter: *id001
 - source: suggested
@@ -721,7 +721,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Damaru
-    reason: community 57% win over 240 matches (vs 50% on this god), taking the model's
+    reason: community 57% win over 249 matches (vs 50% on this god), taking the model's
       weakest slot from Damaru
   starter: *id001
 ---

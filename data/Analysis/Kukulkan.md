@@ -2,19 +2,19 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.73 | 0.71 | 0.59 | 0.82 | 0.08 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
-| Obsidian Shard | 0.61 | 0.61 | 0.54 | 0.66 | 0.22 | 0.79 | fair |  |  |
-| Spear of Desolation | 0.61 | 0.67 | 0.52 | 0.57 | 0.44 | 1.00 | fair |  |  |
+| Soul Gem | 0.72 | 0.71 | 0.59 | 0.80 | 0.08 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
+| Spear of Desolation | 0.62 | 0.67 | 0.52 | 0.58 | 0.45 | 1.00 | fair |  |  |
+| Obsidian Shard | 0.61 | 0.61 | 0.54 | 0.66 | 0.21 | 0.79 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.54 | 0.54 | 0.44 | 0.56 | 0.34 | 0.79 | premium |  |  |
-| Polynomicon | 0.52 | 0.50 | 0.49 | 0.57 | 0.21 | 0.52 | fair | burst |  |
+| Rod of Tahuti | 0.54 | 0.54 | 0.44 | 0.56 | 0.35 | 0.79 | premium |  |  |
+| Polynomicon | 0.52 | 0.50 | 0.49 | 0.57 | 0.20 | 0.52 | fair | burst |  |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | The World Stone | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Doom Orb | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
-| Soul Reaver | 0.50 | 0.48 | 0.46 | 0.57 | 0.07 | 0.52 | fair | burst |  |
+| Soul Reaver | 0.50 | 0.48 | 0.46 | 0.57 | 0.06 | 0.52 | fair | burst |  |
 | Chronos' Pendant | 0.50 | 0.58 | 0.56 | 0.45 | 0.10 | 0.63 | fair |  | **UNDERRATED** |
 | Gem of Focus | 0.50 | 0.54 | 0.51 | 0.50 | 0.00 | 0.63 | fair | mobility | **UNDERRATED** |
 | Death Metal | 0.50 | 0.54 | 0.60 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |

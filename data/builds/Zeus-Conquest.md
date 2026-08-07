@@ -10,83 +10,83 @@ builds:
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.37
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Bancroft's Talon
       pick_rate: 0.3
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Book of Thoth
       pick_rate: 0.1
-      win_rate: 0.5
+      win_rate: 0.51
   - name: Shifter's Shield
-    pick_rate: 0.12
-    win_rate: 0.56
+    pick_rate: 0.13
+    win_rate: 0.58
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.19
-      win_rate: 0.56
+      win_rate: 0.55
     - name: Soul Gem
       pick_rate: 0.11
-      win_rate: 0.51
+      win_rate: 0.49
   - name: Soul Gem
     pick_rate: 0.17
     win_rate: 0.57
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.08
-      win_rate: 0.46
+      pick_rate: 0.09
+      win_rate: 0.49
     - name: Rod of Tahuti
       pick_rate: 0.08
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Rod of Tahuti
     pick_rate: 0.25
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.14
-      win_rate: 0.51
+      win_rate: 0.5
     - name: Genji's Guard
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.61
   - name: Obsidian Shard
-    pick_rate: 0.21
-    win_rate: 0.54
+    pick_rate: 0.2
+    win_rate: 0.55
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.12
-      win_rate: 0.57
+      pick_rate: 0.13
+      win_rate: 0.59
     - name: Evil Eye
       pick_rate: 0.06
-      win_rate: 0.5
+      win_rate: 0.48
   - name: Evil Eye
     pick_rate: 0.11
-    win_rate: 0.43
+    win_rate: 0.41
     alternates:
     - name: Blinking Abyss
       pick_rate: 0.07
-      win_rate: 0.44
+      win_rate: 0.45
     - name: Obsidian Shard
       pick_rate: 0.07
-      win_rate: 0.47
+      win_rate: 0.45
   community_starters:
   - name: Blood-soaked Shroud
     pick_rate: 0.21
     win_rate: 0.63
-  - name: Archmage's Gem
-    pick_rate: 0.18
-    win_rate: 0.56
   - name: Pendulum of The Ages
     pick_rate: 0.18
-    win_rate: 0.58
+    win_rate: 0.56
+  - name: Archmage's Gem
+    pick_rate: 0.17
+    win_rate: 0.56
   source_url: https://smitebrain.com/gods/zeus/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5391095066185319
-  god_matches_won: 448
-  god_matches_played: 831
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5358361774744027
+  god_matches_won: 471
+  god_matches_played: 879
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -107,8 +107,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -126,12 +126,12 @@ builds:
       total: 0.55
       efficiency: 0.72
       win: 0.61
-      pick: 0.08
+      pick: 0.07
       fit: 0.13
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
-      win: 0.55
+      win: 0.54
       pick: 0.37
       fit: 0.63
     The Cosmic Horror:
@@ -149,8 +149,8 @@ builds:
     Obsidian Shard:
       total: 0.52
       efficiency: 0.54
-      win: 0.54
-      pick: 0.21
+      win: 0.55
+      pick: 0.2
       fit: 0.5
     Soul Gem:
       total: 0.6
@@ -178,8 +178,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -197,12 +197,12 @@ builds:
       total: 0.55
       efficiency: 0.72
       win: 0.61
-      pick: 0.08
+      pick: 0.07
       fit: 0.17
     Spear of Desolation:
-      total: 0.54
+      total: 0.53
       efficiency: 0.52
-      win: 0.55
+      win: 0.54
       pick: 0.37
       fit: 0.58
     The Cosmic Horror:
@@ -218,10 +218,10 @@ builds:
       pick: 0.0
       fit: 0.42
     Obsidian Shard:
-      total: 0.5
+      total: 0.51
       efficiency: 0.54
-      win: 0.54
-      pick: 0.21
+      win: 0.55
+      pick: 0.2
       fit: 0.42
     Soul Gem:
       total: 0.59
@@ -267,7 +267,7 @@ builds:
       total: 0.56
       efficiency: 0.72
       win: 0.61
-      pick: 0.08
+      pick: 0.07
       fit: 0.2
     Kinetic Cuirass:
       total: 0.51
@@ -276,15 +276,15 @@ builds:
       pick: 0.0
       fit: 0.49
     Shifter's Shield:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
-      win: 0.56
-      pick: 0.12
+      win: 0.58
+      pick: 0.13
       fit: 0.39
     Spear of Desolation:
-      total: 0.51
+      total: 0.5
       efficiency: 0.52
-      win: 0.55
+      win: 0.54
       pick: 0.37
       fit: 0.38
     Amanita Charm:
@@ -333,15 +333,15 @@ builds:
     Jade Scepter, Oni Hunter''s Garb, Stone of Binding, Yogi''s Necklace.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.54
       efficiency: 0.72
       win: 0.61
-      pick: 0.08
+      pick: 0.07
       fit: 0.1
     Spear of Desolation:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
-      win: 0.55
+      win: 0.54
       pick: 0.37
       fit: 0.71
     The Cosmic Horror:
@@ -357,10 +357,10 @@ builds:
       pick: 0.0
       fit: 0.6
     Obsidian Shard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
-      win: 0.54
-      pick: 0.21
+      win: 0.55
+      pick: 0.2
       fit: 0.6
     Soul Gem:
       total: 0.61
@@ -386,8 +386,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -405,7 +405,7 @@ builds:
       total: 0.54
       efficiency: 0.72
       win: 0.61
-      pick: 0.08
+      pick: 0.07
       fit: 0.08
     Bracer of The Abyss:
       total: 0.48
@@ -428,7 +428,7 @@ builds:
     Spear of Desolation:
       total: 0.51
       efficiency: 0.52
-      win: 0.55
+      win: 0.54
       pick: 0.37
       fit: 0.4
     Soul Gem:
@@ -444,19 +444,19 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Chronos' Pendant
-  - Freya's Tears
   - Spear of Desolation
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Chronos' Pendant
-  - Freya's Tears
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -475,7 +475,7 @@ builds:
       total: 0.58
       efficiency: 0.72
       win: 0.61
-      pick: 0.08
+      pick: 0.07
       fit: 0.35
     Breastplate of Valor:
       total: 0.51
@@ -489,18 +489,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Freya's Tears:
-      total: 0.48
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
-      win: 0.55
+      win: 0.54
       pick: 0.37
       fit: 0.63
+    Obsidian Shard:
+      total: 0.49
+      efficiency: 0.54
+      win: 0.55
+      pick: 0.2
+      fit: 0.27
     Soul Gem:
       total: 0.59
       efficiency: 0.59
@@ -544,7 +544,7 @@ builds:
       total: 0.55
       efficiency: 0.72
       win: 0.61
-      pick: 0.08
+      pick: 0.07
       fit: 0.13
     Bracer of The Abyss:
       total: 0.5
@@ -561,7 +561,7 @@ builds:
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
-      win: 0.55
+      win: 0.54
       pick: 0.37
       fit: 0.63
     The Cosmic Horror:

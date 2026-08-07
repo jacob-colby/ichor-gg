@@ -9,12 +9,12 @@ builds:
   aspect_win_rate: 0.44
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.43
+    pick_rate: 0.44
     win_rate: 0.55
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.27
-      win_rate: 0.58
+      pick_rate: 0.26
+      win_rate: 0.59
     - name: Dominance
       pick_rate: 0.09
       win_rate: 0.55
@@ -24,10 +24,10 @@ builds:
     alternates:
     - name: Dominance
       pick_rate: 0.13
-      win_rate: 0.56
+      win_rate: 0.54
     - name: Dagger of Frenzy
       pick_rate: 0.13
-      win_rate: 0.58
+      win_rate: 0.59
   - name: Silverbranch Bow
     pick_rate: 0.19
     win_rate: 0.55
@@ -36,8 +36,8 @@ builds:
       pick_rate: 0.17
       win_rate: 0.58
     - name: Odysseus' Bow
-      pick_rate: 0.15
-      win_rate: 0.57
+      pick_rate: 0.16
+      win_rate: 0.55
   - name: Riptalon
     pick_rate: 0.15
     win_rate: 0.56
@@ -50,21 +50,21 @@ builds:
       win_rate: 0.53
   - name: Qin's Blade
     pick_rate: 0.13
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Riptalon
       pick_rate: 0.11
-      win_rate: 0.62
+      win_rate: 0.63
     - name: The Executioner
       pick_rate: 0.09
-      win_rate: 0.58
+      win_rate: 0.6
   - name: Manchu Bow
     pick_rate: 0.09
     win_rate: 0.43
     alternates:
     - name: Hunter's Bow
       pick_rate: 0.09
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Bow
       pick_rate: 0.08
       win_rate: 0.54
@@ -74,19 +74,19 @@ builds:
     win_rate: 0.6
   - name: Hunter's Cowl
     pick_rate: 0.21
-    win_rate: 0.61
+    win_rate: 0.62
   - name: Gilded Arrow
     pick_rate: 0.18
-    win_rate: 0.39
+    win_rate: 0.38
   source_url: https://smitebrain.com/gods/rama/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5443668993020937
-  god_matches_won: 546
-  god_matches_played: 1003
+  last_verified: '2026-08-07'
+  god_win_rate: 0.5424710424710425
+  god_matches_won: 562
+  god_matches_played: 1036
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -139,7 +139,7 @@ builds:
       total: 0.52
       efficiency: 0.47
       win: 0.55
-      pick: 0.43
+      pick: 0.44
       fit: 0.54
     Dominance:
       total: 0.52
@@ -488,7 +488,7 @@ builds:
       total: 0.53
       efficiency: 0.47
       win: 0.55
-      pick: 0.43
+      pick: 0.44
       fit: 0.64
     Dominance:
       total: 0.51

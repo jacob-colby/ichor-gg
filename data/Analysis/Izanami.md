@@ -2,10 +2,10 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Riptalon | 0.58 | 0.53 | 0.56 | 0.68 | 0.12 | 0.47 | fair | sustain | **UNDERRATED** |
-| Tyrfing | 0.55 | 0.48 | 0.47 | 0.63 | 0.64 | 0.49 | fair | burst |  |
+| Riptalon | 0.57 | 0.53 | 0.56 | 0.67 | 0.12 | 0.47 | fair | sustain | **UNDERRATED** |
+| Tyrfing | 0.55 | 0.48 | 0.47 | 0.62 | 0.64 | 0.49 | fair | burst |  |
 | Silverbranch Bow | 0.53 | 0.49 | 0.54 | 0.61 | 0.20 | 0.38 | fair |  |  |
-| Dominance | 0.51 | 0.49 | 0.53 | 0.59 | 0.08 | 0.39 | fair |  | **UNDERRATED** |
+| Dominance | 0.52 | 0.49 | 0.53 | 0.60 | 0.08 | 0.39 | fair |  | **UNDERRATED** |
 | Jotunn's Revenge | 0.51 | 0.58 | 0.65 | 0.50 | 0.00 | 0.39 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.51 | 0.58 | 0.66 | 0.50 | 0.00 | 0.38 | undervalued | burst | **UNDERRATED** |
 | The Crusher | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.40 | undervalued | burst | **UNDERRATED** |
@@ -20,9 +20,9 @@
 | Qin's Blade | 0.48 | 0.36 | 0.38 | 0.65 | 0.10 | 0.34 | premium | burst |  |
 | Golden Blade | 0.48 | 0.50 | 0.55 | 0.50 | 0.00 | 0.39 | fair | wave-clear | **UNDERRATED** |
 | Runeforged Hammer | 0.47 | 0.50 | 0.60 | 0.50 | 0.00 | 0.25 | fair | burst | **UNDERRATED** |
-| Toxic Blade | 0.47 | 0.41 | 0.42 | 0.58 | 0.12 | 0.38 | premium | anti-heal |  |
 | The Reaper | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.39 | fair | sustain | **UNDERRATED** |
 | Breastplate of Valor | 0.47 | 0.49 | 0.65 | 0.50 | 0.00 | 0.10 | undervalued |  | **UNDERRATED** |
+| Toxic Blade | 0.47 | 0.41 | 0.42 | 0.57 | 0.13 | 0.38 | premium | anti-heal |  |
 | Tekko-Kagi | 0.47 | 0.48 | 0.46 | 0.50 | 0.00 | 0.53 | fair | mobility | **UNDERRATED** |
 | Bragi's Harp | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.53 | fair | burst | **UNDERRATED** |
 | Spear of the Magus | 0.46 | 0.48 | 0.60 | 0.50 | 0.00 | 0.19 | fair |  | **UNDERRATED** |
@@ -41,7 +41,6 @@
 | Heartseeker | 0.45 | 0.44 | 0.46 | 0.50 | 0.00 | 0.40 | fair | burst | **UNDERRATED** |
 | Freya's Tears | 0.44 | 0.44 | 0.59 | 0.50 | 0.00 | 0.10 | fair |  | **UNDERRATED** |
 | Shogun's Ofuda | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.24 | fair | aura | **UNDERRATED** |
-| Hastened Fatalis | 0.44 | 0.30 | 0.32 | 0.64 | 0.14 | 0.24 | premium | mobility |  |
 | Avenging Blade | 0.44 | 0.44 | 0.51 | 0.50 | 0.00 | 0.25 | fair | protection-shred | **UNDERRATED** |
 | Chronos' Pendant | 0.44 | 0.44 | 0.56 | 0.50 | 0.00 | 0.14 | fair |  | **UNDERRATED** |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
@@ -52,9 +51,9 @@
 | Arondight | 0.44 | 0.43 | 0.50 | 0.50 | 0.00 | 0.25 | fair | mobility |  |
 | Musashi's Dual Swords | 0.44 | 0.42 | 0.44 | 0.50 | 0.00 | 0.39 | premium | mobility |  |
 | Helm of Radiance | 0.44 | 0.42 | 0.58 | 0.50 | 0.00 | 0.05 | fair |  |  |
+| Hastened Fatalis | 0.43 | 0.30 | 0.32 | 0.62 | 0.14 | 0.24 | premium | mobility |  |
 | Shield Splitter | 0.43 | 0.42 | 0.53 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
-| Devourer's Gauntlet | 0.43 | 0.32 | 0.35 | 0.59 | 0.14 | 0.24 | premium | sustain |  |
 | Pendulum Blade | 0.43 | 0.41 | 0.42 | 0.50 | 0.00 | 0.39 | premium |  |  |
 | Jade Scepter | 0.43 | 0.41 | 0.57 | 0.50 | 0.00 | 0.05 | fair | peel |  |
 | Titan's Bane | 0.43 | 0.41 | 0.46 | 0.50 | 0.00 | 0.30 | fair |  |  |
@@ -66,6 +65,7 @@
 | Dreamer's Idol | 0.43 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair | cc-immunity |  |
 | Gem of Focus | 0.42 | 0.40 | 0.51 | 0.50 | 0.00 | 0.14 | fair | mobility |  |
 | The World Stone | 0.42 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair |  |  |
+| Devourer's Gauntlet | 0.42 | 0.32 | 0.35 | 0.57 | 0.15 | 0.24 | premium | sustain |  |
 | Doom Orb | 0.42 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair |  |  |
 | Typhon’s Heart | 0.42 | 0.40 | 0.51 | 0.50 | 0.00 | 0.14 | fair |  |  |
 | Bloodforge | 0.42 | 0.39 | 0.45 | 0.50 | 0.00 | 0.24 | fair | sustain |  |
@@ -88,8 +88,8 @@
 | Stone of Binding | 0.41 | 0.37 | 0.48 | 0.50 | 0.00 | 0.10 | fair | protection-shred |  |
 | Rod of Tahuti | 0.41 | 0.36 | 0.44 | 0.50 | 0.00 | 0.19 | premium |  |  |
 | Stampede | 0.41 | 0.36 | 0.52 | 0.50 | 0.00 | 0.00 | fair | mobility, aura, cc-immunity |  |
-| The Executioner | 0.41 | 0.21 | 0.15 | 0.66 | 0.11 | 0.34 | premium | protection-shred |  |
 | Ancile | 0.41 | 0.36 | 0.52 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| The Executioner | 0.41 | 0.21 | 0.15 | 0.66 | 0.10 | 0.34 | premium | protection-shred |  |
 | Lifebinder | 0.40 | 0.36 | 0.49 | 0.50 | 0.00 | 0.05 | fair | sustain, aura |  |
 | Sanguine Lash | 0.40 | 0.36 | 0.41 | 0.50 | 0.00 | 0.24 | premium | aura |  |
 | Doublet of Binding | 0.40 | 0.35 | 0.51 | 0.50 | 0.00 | 0.00 | fair | aura |  |

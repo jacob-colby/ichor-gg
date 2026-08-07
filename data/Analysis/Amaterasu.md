@@ -2,17 +2,16 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Shifter's Shield | 0.59 | 0.56 | 0.55 | 0.65 | 0.44 | 0.57 | fair |  |  |
-| Kinetic Cuirass | 0.59 | 0.62 | 0.60 | 0.61 | 0.08 | 0.67 | fair | burst | **UNDERRATED** |
-| Berserker's Shield | 0.58 | 0.60 | 0.71 | 0.60 | 0.18 | 0.36 | undervalued |  |  |
-| Bragi's Harp | 0.55 | 0.43 | 0.46 | 0.73 | 0.09 | 0.36 | fair | burst |  |
+| Kinetic Cuirass | 0.60 | 0.62 | 0.60 | 0.63 | 0.08 | 0.67 | fair | burst | **UNDERRATED** |
+| Shifter's Shield | 0.59 | 0.56 | 0.55 | 0.64 | 0.44 | 0.57 | fair |  |  |
+| Berserker's Shield | 0.58 | 0.60 | 0.71 | 0.59 | 0.17 | 0.36 | undervalued |  |  |
 | Amanita Charm | 0.54 | 0.63 | 0.66 | 0.50 | 0.00 | 0.57 | undervalued | sustain, aura | **UNDERRATED** |
+| Bragi's Harp | 0.53 | 0.43 | 0.46 | 0.70 | 0.09 | 0.36 | fair | burst |  |
 | Eye of Providence | 0.53 | 0.60 | 0.62 | 0.50 | 0.00 | 0.57 | undervalued |  | **UNDERRATED** |
 | Genji's Guard | 0.52 | 0.60 | 0.72 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
-| Golden Blade | 0.51 | 0.50 | 0.55 | 0.56 | 0.23 | 0.37 | fair | wave-clear |  |
+| Golden Blade | 0.52 | 0.50 | 0.55 | 0.57 | 0.23 | 0.37 | fair | wave-clear |  |
 | Gluttonous Grimoire | 0.51 | 0.57 | 0.66 | 0.50 | 0.00 | 0.37 | undervalued | burst | **UNDERRATED** |
 | Jotunn's Revenge | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.38 | undervalued |  | **UNDERRATED** |
-| Shogun's Ofuda | 0.51 | 0.48 | 0.53 | 0.59 | 0.11 | 0.36 | fair | aura | **UNDERRATED** |
 | Freya's Tears | 0.51 | 0.57 | 0.59 | 0.50 | 0.00 | 0.53 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.36 | undervalued |  | **UNDERRATED** |
 | Runeforged Hammer | 0.51 | 0.56 | 0.60 | 0.50 | 0.00 | 0.47 | fair | burst | **UNDERRATED** |
@@ -20,10 +19,10 @@
 | Shield Splitter | 0.50 | 0.56 | 0.53 | 0.50 | 0.00 | 0.61 | fair |  | **UNDERRATED** |
 | Breastplate of Valor | 0.50 | 0.55 | 0.65 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.50 | 0.55 | 0.61 | 0.50 | 0.00 | 0.43 | fair | burst | **UNDERRATED** |
+| Shogun's Ofuda | 0.50 | 0.48 | 0.53 | 0.57 | 0.11 | 0.36 | fair | aura | **UNDERRATED** |
 | Shield of the Phoenix | 0.50 | 0.55 | 0.57 | 0.50 | 0.00 | 0.48 | fair | sustain | **UNDERRATED** |
 | Eye of the Storm | 0.49 | 0.54 | 0.52 | 0.50 | 0.00 | 0.57 | fair | peel | **UNDERRATED** |
 | Erosion | 0.49 | 0.54 | 0.52 | 0.50 | 0.00 | 0.57 | fair | aura | **UNDERRATED** |
-| Dominance | 0.49 | 0.44 | 0.53 | 0.60 | 0.07 | 0.21 | fair |  |  |
 | Spectral Armor | 0.49 | 0.52 | 0.59 | 0.50 | 0.00 | 0.36 | fair | anti-crit, aura | **UNDERRATED** |
 | Draconic Scale | 0.49 | 0.52 | 0.50 | 0.50 | 0.00 | 0.57 | fair |  | **UNDERRATED** |
 | Pharaoh's Curse | 0.48 | 0.51 | 0.58 | 0.50 | 0.00 | 0.36 | fair | aura | **UNDERRATED** |
@@ -32,6 +31,7 @@
 | Avenging Blade | 0.48 | 0.50 | 0.51 | 0.50 | 0.00 | 0.47 | fair | protection-shred | **UNDERRATED** |
 | Death Metal | 0.47 | 0.50 | 0.60 | 0.50 | 0.00 | 0.26 | fair |  | **UNDERRATED** |
 | Leviathan's Hide | 0.47 | 0.50 | 0.55 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
+| Dominance | 0.47 | 0.44 | 0.53 | 0.56 | 0.07 | 0.21 | fair |  |  |
 | Midgardian Mail | 0.47 | 0.49 | 0.54 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.40 | fair | peel, cc-immunity | **UNDERRATED** |
 | Stone of Binding | 0.47 | 0.49 | 0.48 | 0.50 | 0.00 | 0.50 | fair | protection-shred | **UNDERRATED** |

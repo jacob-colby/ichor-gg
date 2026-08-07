@@ -5,7 +5,7 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Gilded Victor
-  aspect_pick_rate: 0.07
+  aspect_pick_rate: 0.08
   aspect_win_rate: 0.46
   slot_order:
   - name: Spear of Desolation
@@ -20,53 +20,53 @@ builds:
       win_rate: 0.57
   - name: Soul Reaver
     pick_rate: 0.19
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.18
-      win_rate: 0.52
+      pick_rate: 0.17
+      win_rate: 0.51
     - name: Book of Thoth
       pick_rate: 0.13
-      win_rate: 0.59
+      win_rate: 0.6
   - name: Soul Gem
     pick_rate: 0.28
-    win_rate: 0.56
+    win_rate: 0.55
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.11
+      pick_rate: 0.12
       win_rate: 0.51
     - name: Soul Reaver
-      pick_rate: 0.1
-      win_rate: 0.55
+      pick_rate: 0.09
+      win_rate: 0.56
   - name: Rod of Tahuti
     pick_rate: 0.3
     win_rate: 0.57
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.23
-      win_rate: 0.45
+      win_rate: 0.47
     - name: Soul Gem
       pick_rate: 0.06
-      win_rate: 0.62
+      win_rate: 0.61
   - name: Obsidian Shard
-    pick_rate: 0.24
-    win_rate: 0.63
+    pick_rate: 0.23
+    win_rate: 0.62
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.16
-      win_rate: 0.57
+      pick_rate: 0.17
+      win_rate: 0.56
     - name: Evil Eye
       pick_rate: 0.11
       win_rate: 0.49
   - name: Evil Eye
-    pick_rate: 0.1
-    win_rate: 0.4
+    pick_rate: 0.11
+    win_rate: 0.41
     alternates:
     - name: Void Shard
       pick_rate: 0.07
       win_rate: 0.59
-    - name: Rod of Tahuti
-      pick_rate: 0.07
+    - name: Obsidian Shard
+      pick_rate: 0.06
       win_rate: 0.56
   community_starters:
   - name: Bluestone Brooch
@@ -74,19 +74,19 @@ builds:
     win_rate: 0.6
   - name: Conduit Gem
     pick_rate: 0.16
-    win_rate: 0.49
+    win_rate: 0.5
   - name: Archmage's Gem
     pick_rate: 0.14
     win_rate: 0.65
   source_url: https://smitebrain.com/gods/discordia/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5270758122743683
-  god_matches_won: 292
-  god_matches_played: 554
+  last_verified: '2026-08-07'
+  god_win_rate: 0.527027027027027
+  god_matches_won: 312
+  god_matches_played: 592
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-07'
+  god_matches_analyzed: 13100
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -149,13 +149,13 @@ builds:
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.63
-      pick: 0.24
+      win: 0.62
+      pick: 0.23
       fit: 0.79
     Soul Gem:
       total: 0.62
       efficiency: 0.59
-      win: 0.56
+      win: 0.55
       pick: 0.28
       fit: 1.0
   starter: &id001
@@ -218,15 +218,15 @@ builds:
       pick: 0.0
       fit: 0.56
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.54
-      win: 0.63
-      pick: 0.24
+      win: 0.62
+      pick: 0.23
       fit: 0.56
     Soul Gem:
       total: 0.6
       efficiency: 0.59
-      win: 0.56
+      win: 0.55
       pick: 0.28
       fit: 0.88
   starter: *id001
@@ -284,8 +284,8 @@ builds:
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
-      win: 0.63
-      pick: 0.24
+      win: 0.62
+      pick: 0.23
       fit: 0.39
     Amanita Charm:
       total: 0.58
@@ -294,9 +294,9 @@ builds:
       pick: 0.0
       fit: 0.81
     Soul Gem:
-      total: 0.61
+      total: 0.6
       efficiency: 0.59
-      win: 0.56
+      win: 0.55
       pick: 0.28
       fit: 0.89
   starter: *id001
@@ -359,13 +359,13 @@ builds:
     Obsidian Shard:
       total: 0.61
       efficiency: 0.54
-      win: 0.63
-      pick: 0.24
+      win: 0.62
+      pick: 0.23
       fit: 0.85
     Soul Gem:
       total: 0.62
       efficiency: 0.59
-      win: 0.56
+      win: 0.55
       pick: 0.28
       fit: 1.0
   starter: *id001
@@ -428,13 +428,13 @@ builds:
     Obsidian Shard:
       total: 0.53
       efficiency: 0.54
-      win: 0.63
-      pick: 0.24
+      win: 0.62
+      pick: 0.23
       fit: 0.32
     Soul Gem:
-      total: 0.56
+      total: 0.55
       efficiency: 0.59
-      win: 0.56
+      win: 0.55
       pick: 0.28
       fit: 0.58
   starter: *id001
@@ -496,15 +496,15 @@ builds:
       pick: 0.45
       fit: 0.86
     Obsidian Shard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.54
-      win: 0.63
-      pick: 0.24
+      win: 0.62
+      pick: 0.23
       fit: 0.37
     Soul Gem:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
-      win: 0.56
+      win: 0.55
       pick: 0.28
       fit: 0.96
   starter: *id001
@@ -568,15 +568,15 @@ builds:
       pick: 0.0
       fit: 0.63
     Obsidian Shard:
-      total: 0.55
+      total: 0.54
       efficiency: 0.54
-      win: 0.63
-      pick: 0.24
+      win: 0.62
+      pick: 0.23
       fit: 0.44
     Soul Gem:
       total: 0.57
       efficiency: 0.59
-      win: 0.56
+      win: 0.55
       pick: 0.28
       fit: 0.65
   starter: *id001
@@ -640,15 +640,15 @@ builds:
       pick: 0.0
       fit: 0.66
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.54
-      win: 0.63
-      pick: 0.24
+      win: 0.62
+      pick: 0.23
       fit: 0.56
     Soul Gem:
       total: 0.59
       efficiency: 0.59
-      win: 0.56
+      win: 0.55
       pick: 0.28
       fit: 0.79
   starter: *id001
@@ -717,8 +717,8 @@ builds:
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.63
-      pick: 0.24
+      win: 0.62
+      pick: 0.23
       fit: 0.79
   starter: *id001
 ---

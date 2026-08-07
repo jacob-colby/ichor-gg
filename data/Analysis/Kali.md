@@ -2,9 +2,9 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Silverbranch Bow | 0.55 | 0.51 | 0.54 | 0.63 | 0.14 | 0.45 | fair |  | **UNDERRATED** |
+| Silverbranch Bow | 0.56 | 0.51 | 0.54 | 0.65 | 0.14 | 0.45 | fair |  | **UNDERRATED** |
+| Riptalon | 0.54 | 0.52 | 0.56 | 0.62 | 0.07 | 0.45 | fair | sustain | **UNDERRATED** |
 | The Crusher | 0.53 | 0.62 | 0.65 | 0.50 | 0.00 | 0.55 | undervalued | burst | **UNDERRATED** |
-| Riptalon | 0.53 | 0.52 | 0.56 | 0.59 | 0.07 | 0.45 | fair | sustain | **UNDERRATED** |
 | Tyrfing | 0.53 | 0.51 | 0.47 | 0.57 | 0.33 | 0.59 | fair | burst |  |
 | Jotunn's Revenge | 0.53 | 0.61 | 0.65 | 0.50 | 0.00 | 0.49 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.51 | 0.57 | 0.66 | 0.50 | 0.00 | 0.36 | undervalued | burst | **UNDERRATED** |
@@ -23,7 +23,7 @@
 | Genji's Guard | 0.48 | 0.52 | 0.72 | 0.50 | 0.00 | 0.04 | undervalued |  | **UNDERRATED** |
 | The Reaper | 0.48 | 0.51 | 0.53 | 0.50 | 0.00 | 0.45 | fair | sustain | **UNDERRATED** |
 | Spear of the Magus | 0.48 | 0.50 | 0.60 | 0.50 | 0.00 | 0.26 | fair |  | **UNDERRATED** |
-| Odysseus' Bow | 0.47 | 0.39 | 0.40 | 0.60 | 0.22 | 0.35 | premium | burst, wave-clear |  |
+| Odysseus' Bow | 0.47 | 0.39 | 0.40 | 0.59 | 0.22 | 0.35 | premium | burst, wave-clear |  |
 | Bracer of The Abyss | 0.47 | 0.49 | 0.56 | 0.50 | 0.00 | 0.31 | fair |  | **UNDERRATED** |
 | Heartseeker | 0.47 | 0.49 | 0.46 | 0.50 | 0.00 | 0.55 | fair | burst | **UNDERRATED** |
 | The Cosmic Horror | 0.47 | 0.49 | 0.58 | 0.50 | 0.00 | 0.26 | fair |  | **UNDERRATED** |
@@ -58,13 +58,12 @@
 | Triton's Conch | 0.44 | 0.42 | 0.47 | 0.50 | 0.00 | 0.31 | fair | aura |  |
 | Rage | 0.44 | 0.42 | 0.41 | 0.50 | 0.00 | 0.45 | premium |  |  |
 | The World Stone | 0.43 | 0.42 | 0.49 | 0.50 | 0.00 | 0.26 | fair |  |  |
-| Rod of Tahuti | 0.43 | 0.38 | 0.44 | 0.53 | 0.08 | 0.26 | premium |  |  |
 | Doom Orb | 0.43 | 0.42 | 0.49 | 0.50 | 0.00 | 0.26 | fair |  |  |
 | Jade Scepter | 0.43 | 0.42 | 0.57 | 0.50 | 0.00 | 0.06 | fair | peel |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Shield of the Phoenix | 0.43 | 0.41 | 0.57 | 0.50 | 0.00 | 0.04 | fair | sustain |  |
-| Polynomicon | 0.43 | 0.39 | 0.49 | 0.51 | 0.11 | 0.16 | fair | burst |  |
 | Barbed Carver | 0.43 | 0.41 | 0.43 | 0.50 | 0.00 | 0.35 | premium | burst |  |
+| Polynomicon | 0.43 | 0.39 | 0.49 | 0.50 | 0.12 | 0.16 | fair | burst |  |
 | Transcendence | 0.42 | 0.40 | 0.46 | 0.50 | 0.00 | 0.25 | fair |  |  |
 | Wish-Granting Pearl | 0.42 | 0.39 | 0.54 | 0.50 | 0.00 | 0.06 | fair |  |  |
 | Ethereal Staff | 0.42 | 0.39 | 0.53 | 0.50 | 0.00 | 0.06 | fair |  |  |
@@ -76,6 +75,7 @@
 | Screeching Gargoyle | 0.42 | 0.39 | 0.49 | 0.50 | 0.00 | 0.14 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.42 | 0.39 | 0.53 | 0.50 | 0.00 | 0.04 | fair | sustain |  |
 | Deathbringer | 0.42 | 0.38 | 0.36 | 0.50 | 0.00 | 0.45 | premium |  |  |
+| Rod of Tahuti | 0.42 | 0.38 | 0.44 | 0.49 | 0.09 | 0.26 | premium |  |  |
 | Alchemist Coat | 0.42 | 0.38 | 0.52 | 0.50 | 0.00 | 0.06 | fair |  |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
@@ -115,12 +115,12 @@
 | Gem of Isolation | 0.38 | 0.30 | 0.41 | 0.50 | 0.00 | 0.06 | premium | peel |  |
 | Regrowth Striders | 0.37 | 0.30 | 0.41 | 0.50 | 0.00 | 0.04 | premium | mobility, sustain |  |
 | Stygian Anchor | 0.37 | 0.29 | 0.41 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
+| Book of Thoth | 0.37 | 0.31 | 0.42 | 0.46 | 0.10 | 0.06 | premium |  |  |
 | Shroud of Vengeance | 0.37 | 0.28 | 0.36 | 0.50 | 0.00 | 0.10 | premium | burst |  |
 | Hussar's Wings | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Vital Amplifier | 0.36 | 0.27 | 0.28 | 0.50 | 0.00 | 0.25 | premium |  |  |
 | Glorious Pridwen | 0.36 | 0.27 | 0.36 | 0.50 | 0.00 | 0.04 | premium | sustain |  |
 | Staff of Myrddin | 0.36 | 0.27 | 0.34 | 0.50 | 0.00 | 0.11 | premium |  |  |
-| Book of Thoth | 0.36 | 0.31 | 0.42 | 0.44 | 0.09 | 0.06 | premium |  |  |
 | Heartwood Charm | 0.35 | 0.26 | 0.35 | 0.50 | 0.00 | 0.04 | premium |  |  |
 | Sun Beam Bow | 0.35 | 0.25 | 0.25 | 0.50 | 0.00 | 0.25 | premium |  |  |
 | Spirit Robe | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium | sustain |  |

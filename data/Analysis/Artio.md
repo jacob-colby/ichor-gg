@@ -4,11 +4,11 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Amanita Charm | 0.58 | 0.71 | 0.66 | 0.50 | 0.00 | 0.84 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.58 | 0.70 | 0.60 | 0.50 | 0.00 | 0.94 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.57 | 0.64 | 0.55 | 0.52 | 0.35 | 0.84 | fair |  |  |
+| Genji's Guard | 0.57 | 0.64 | 0.72 | 0.54 | 0.26 | 0.45 | undervalued |  |  |
 | Eye of Providence | 0.57 | 0.69 | 0.62 | 0.50 | 0.00 | 0.84 | undervalued |  | **UNDERRATED** |
-| Genji's Guard | 0.57 | 0.64 | 0.72 | 0.52 | 0.27 | 0.45 | undervalued |  |  |
+| Shifter's Shield | 0.57 | 0.64 | 0.55 | 0.51 | 0.35 | 0.84 | fair |  |  |
 | Freya's Tears | 0.54 | 0.63 | 0.59 | 0.50 | 0.00 | 0.74 | fair |  | **UNDERRATED** |
-| Breastplate of Valor | 0.54 | 0.59 | 0.65 | 0.51 | 0.22 | 0.45 | undervalued |  |  |
+| Breastplate of Valor | 0.54 | 0.59 | 0.65 | 0.52 | 0.22 | 0.45 | undervalued |  |  |
 | Oni Hunter's Garb | 0.54 | 0.62 | 0.65 | 0.50 | 0.00 | 0.55 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.53 | 0.62 | 0.52 | 0.50 | 0.00 | 0.84 | fair | aura | **UNDERRATED** |
 | Shield of the Phoenix | 0.53 | 0.61 | 0.57 | 0.50 | 0.00 | 0.71 | fair | sustain | **UNDERRATED** |
@@ -22,7 +22,6 @@
 | Hide of the Nemean Lion | 0.49 | 0.54 | 0.54 | 0.50 | 0.00 | 0.55 | fair |  | **UNDERRATED** |
 | Stone of Binding | 0.49 | 0.54 | 0.48 | 0.50 | 0.00 | 0.68 | fair | protection-shred | **UNDERRATED** |
 | Hussar's Wings | 0.49 | 0.53 | 0.40 | 0.50 | 0.00 | 0.84 | premium | cc-immunity | **UNDERRATED** |
-| Dwarven Plate | 0.49 | 0.42 | 0.35 | 0.61 | 0.09 | 0.58 | premium |  |  |
 | Yogi's Necklace | 0.49 | 0.53 | 0.65 | 0.50 | 0.00 | 0.26 | undervalued |  | **UNDERRATED** |
 | Stampede | 0.49 | 0.53 | 0.52 | 0.50 | 0.00 | 0.55 | fair | mobility, aura, cc-immunity | **UNDERRATED** |
 | Ancile | 0.49 | 0.53 | 0.52 | 0.50 | 0.00 | 0.55 | fair |  | **UNDERRATED** |
@@ -31,6 +30,7 @@
 | Doublet of Binding | 0.48 | 0.52 | 0.51 | 0.50 | 0.00 | 0.55 | fair | aura | **UNDERRATED** |
 | Void Shield | 0.48 | 0.52 | 0.46 | 0.50 | 0.00 | 0.65 | fair | protection-shred, aura | **UNDERRATED** |
 | Xibalban Effigy | 0.48 | 0.51 | 0.49 | 0.50 | 0.00 | 0.58 | fair |  |  |
+| Dwarven Plate | 0.48 | 0.42 | 0.35 | 0.59 | 0.09 | 0.58 | premium |  |  |
 | Screeching Gargoyle | 0.48 | 0.51 | 0.49 | 0.50 | 0.00 | 0.55 | fair | protection-shred, peel |  |
 | Void Stone | 0.48 | 0.50 | 0.44 | 0.50 | 0.00 | 0.65 | premium | protection-shred, aura |  |
 | Ragnarok's Wake | 0.47 | 0.50 | 0.43 | 0.50 | 0.00 | 0.65 | premium | mobility, burst |  |
@@ -80,8 +80,8 @@
 | Doom Orb | 0.39 | 0.34 | 0.49 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Nimble Ring | 0.39 | 0.34 | 0.49 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Divine Ruin | 0.39 | 0.33 | 0.43 | 0.50 | 0.00 | 0.10 | premium | anti-heal, burst |  |
+| Daybreak Gavel | 0.38 | 0.20 | 0.18 | 0.62 | 0.07 | 0.26 | premium |  |  |
 | Necronomicon | 0.38 | 0.31 | 0.44 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Daybreak Gavel | 0.38 | 0.20 | 0.18 | 0.61 | 0.06 | 0.26 | premium |  |  |
 | Rod of Tahuti | 0.38 | 0.31 | 0.44 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.38 | 0.30 | 0.25 | 0.50 | 0.00 | 0.42 | premium | mobility, cc-immunity |  |
 | Brawler’s Beat Stick | 0.38 | 0.30 | 0.18 | 0.50 | 0.00 | 0.58 | premium | anti-heal |  |
@@ -89,5 +89,5 @@
 | Resolute Mantle | 0.37 | 0.29 | 0.30 | 0.50 | 0.00 | 0.26 | premium | cc-immunity, sustain |  |
 | Staff of Myrddin | 0.37 | 0.28 | 0.34 | 0.50 | 0.00 | 0.16 | premium |  |  |
 | Mercury's Talaria | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Gauntlet of Thebes | 0.34 | 0.26 | 0.27 | 0.46 | 0.10 | 0.26 | premium |  |  |
+| Gauntlet of Thebes | 0.34 | 0.26 | 0.27 | 0.44 | 0.10 | 0.26 | premium |  |  |
 | Omen Drum | 0.32 | 0.19 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |
