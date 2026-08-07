@@ -9,74 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Book of Thoth
-    pick_rate: 0.34
+    pick_rate: 0.31
     win_rate: 0.63
     alternates:
-    - name: Chronos' Pendant
-      pick_rate: 0.18
-      win_rate: 0.6
     - name: Spear of Desolation
-      pick_rate: 0.13
-      win_rate: 0.53
-  - name: Breastplate of Valor
+      pick_rate: 0.2
+      win_rate: 0.58
+    - name: Chronos' Pendant
+      pick_rate: 0.16
+      win_rate: 0.66
+  - name: Genji's Guard
     pick_rate: 0.15
+    win_rate: 0.64
+    alternates:
+    - name: Breastplate of Valor
+      pick_rate: 0.14
+      win_rate: 0.65
+    - name: Book of Thoth
+      pick_rate: 0.13
+      win_rate: 0.55
+  - name: The World Stone
+    pick_rate: 0.12
     win_rate: 0.6
     alternates:
     - name: Genji's Guard
       pick_rate: 0.15
-      win_rate: 0.6
-    - name: Spear of Desolation
-      pick_rate: 0.13
-      win_rate: 0.53
-  - name: Spear of Desolation
-    pick_rate: 0.16
-    win_rate: 0.65
-    alternates:
-    - name: Genji's Guard
-      pick_rate: 0.14
-      win_rate: 0.56
+      win_rate: 0.62
     - name: Breastplate of Valor
       pick_rate: 0.11
-      win_rate: 0.66
+      win_rate: 0.68
   - name: Rod of Tahuti
-    pick_rate: 0.15
-    win_rate: 0.56
+    pick_rate: 0.16
+    win_rate: 0.69
     alternates:
     - name: The World Stone
-      pick_rate: 0.1
-      win_rate: 0.67
-    - name: Genji's Guard
-      pick_rate: 0.09
-      win_rate: 0.71
+      pick_rate: 0.11
+      win_rate: 0.66
+    - name: Breastplate of Valor
+      pick_rate: 0.07
+      win_rate: 0.6
   - name: Obsidian Shard
     pick_rate: 0.09
     win_rate: 0.59
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.13
-      win_rate: 0.69
-    - name: Evil Eye
-      pick_rate: 0.06
-      win_rate: 0.6
-  - name: Void Shard
-    pick_rate: 0.06
-    win_rate: 1.0
-    alternates:
-    - name: Obsidian Shard
+      pick_rate: 0.11
+      win_rate: 0.66
+    - name: The World Stone
       pick_rate: 0.07
-      win_rate: 0.67
+      win_rate: 0.63
+  - name: Evil Eye
+    pick_rate: 0.07
+    win_rate: 0.61
+    alternates:
     - name: Oracle Staff
       pick_rate: 0.06
-      win_rate: 0.13
+      win_rate: 0.45
+    - name: Obsidian Shard
+      pick_rate: 0.05
+      win_rate: 0.69
+  community_starters:
+  - name: Pendulum of The Ages
+    pick_rate: 0.35
+    win_rate: 0.7
+  - name: Sands of Time
+    pick_rate: 0.32
+    win_rate: 0.59
+  - name: Bumba's Hammer
+    pick_rate: 0.09
+    win_rate: 0.33
   source_url: https://smitebrain.com/gods/aphrodite/
-  last_verified: '2026-08-01'
-  god_win_rate: 0.6007326007326007
-  god_matches_won: 164
-  god_matches_played: 273
+  last_verified: '2026-08-06'
+  god_win_rate: 0.630057803468208
+  god_matches_won: 436
+  god_matches_played: 692
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-01'
-  god_matches_analyzed: 4952
+  god_window_end: '2026-08-06'
+  god_matches_analyzed: 12483
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -86,12 +96,12 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Chronos' Pendant
+  - Kinetic Cuirass
   - Gluttonous Grimoire
   - Spear of Desolation
-  - The World Stone
   flex_slots:
-  - The World Stone
-  - Chronos' Pendant
+  - Spear of Desolation
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -100,8 +110,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -114,23 +124,29 @@ builds:
     Pearl, Ethereal Staff, Death Metal.'
   slot_scores:
     Genji's Guard:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.6
+      win: 0.64
       pick: 0.15
       fit: 0.32
     Breastplate of Valor:
-      total: 0.55
+      total: 0.58
       efficiency: 0.65
-      win: 0.6
-      pick: 0.15
+      win: 0.65
+      pick: 0.14
       fit: 0.32
     Chronos' Pendant:
-      total: 0.53
+      total: 0.55
       efficiency: 0.56
-      win: 0.6
-      pick: 0.18
+      win: 0.66
+      pick: 0.16
       fit: 0.35
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Gluttonous Grimoire:
       total: 0.55
       efficiency: 0.66
@@ -138,17 +154,11 @@ builds:
       pick: 0.0
       fit: 0.61
     Spear of Desolation:
-      total: 0.56
-      efficiency: 0.52
-      win: 0.65
-      pick: 0.16
-      fit: 0.5
-    The World Stone:
       total: 0.53
-      efficiency: 0.49
-      win: 0.67
-      pick: 0.1
-      fit: 0.36
+      efficiency: 0.52
+      win: 0.58
+      pick: 0.2
+      fit: 0.5
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -160,10 +170,10 @@ builds:
   - Chronos' Pendant
   - Gluttonous Grimoire
   - Spear of Desolation
-  - The World Stone
+  - Rod of Tahuti
   flex_slots:
-  - The World Stone
-  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -186,22 +196,22 @@ builds:
     Gargoyle, Wish-Granting Pearl.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.59
       efficiency: 0.72
-      win: 0.6
+      win: 0.64
       pick: 0.15
       fit: 0.27
     Breastplate of Valor:
-      total: 0.55
+      total: 0.57
       efficiency: 0.65
-      win: 0.6
-      pick: 0.15
+      win: 0.65
+      pick: 0.14
       fit: 0.27
     Chronos' Pendant:
-      total: 0.52
+      total: 0.54
       efficiency: 0.56
-      win: 0.6
-      pick: 0.18
+      win: 0.66
+      pick: 0.16
       fit: 0.28
     Gluttonous Grimoire:
       total: 0.54
@@ -210,16 +220,16 @@ builds:
       pick: 0.0
       fit: 0.56
     Spear of Desolation:
-      total: 0.56
-      efficiency: 0.52
-      win: 0.65
-      pick: 0.16
-      fit: 0.49
-    The World Stone:
       total: 0.53
-      efficiency: 0.49
-      win: 0.67
-      pick: 0.1
+      efficiency: 0.52
+      win: 0.58
+      pick: 0.2
+      fit: 0.49
+    Rod of Tahuti:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.69
+      pick: 0.16
       fit: 0.35
   starter: *id001
 - source: suggested
@@ -227,13 +237,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
+  - Chronos' Pendant
   - Spear of Desolation
-  - The World Stone
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
-  - The World Stone
+  - Chronos' Pendant
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -248,37 +258,37 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Genji''s Guard, Soul Gem, Gluttonous Grimoire, Breastplate
-    of Valor, Shield of the Phoenix, Rod of Asclepius, Kinetic Cuirass, Eye of Providence,
+    this god: Genji''s Guard, Amanita Charm, Breastplate of Valor, Soul Gem, Gluttonous
+    Grimoire, Shield of the Phoenix, Rod of Asclepius, Kinetic Cuirass, Eye of Providence,
     Chandra''s Grace, Oni Hunter''s Garb, Blood-Bound Book, Bancroft''s Talon, Lifebinder,
     Freya''s Tears, Shifter''s Shield, Spear of the Magus, Phoenix Feather, Spectral
     Armor, Jade Scepter, Erosion, The Cosmic Horror, Helm of Radiance, Yogi''s Necklace,
     Draconic Scale.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.59
       efficiency: 0.72
-      win: 0.6
+      win: 0.64
       pick: 0.15
       fit: 0.3
     Breastplate of Valor:
-      total: 0.55
+      total: 0.57
       efficiency: 0.65
-      win: 0.6
-      pick: 0.15
-      fit: 0.3
-    Spear of Desolation:
-      total: 0.56
-      efficiency: 0.52
       win: 0.65
+      pick: 0.14
+      fit: 0.3
+    Chronos' Pendant:
+      total: 0.55
+      efficiency: 0.56
+      win: 0.66
       pick: 0.16
-      fit: 0.5
-    The World Stone:
+      fit: 0.35
+    Spear of Desolation:
       total: 0.53
-      efficiency: 0.49
-      win: 0.67
-      pick: 0.1
-      fit: 0.36
+      efficiency: 0.52
+      win: 0.58
+      pick: 0.2
+      fit: 0.5
     Amanita Charm:
       total: 0.58
       efficiency: 0.66
@@ -297,13 +307,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
+  - Chronos' Pendant
   - Gluttonous Grimoire
   - Spear of Desolation
-  - The World Stone
-  - Obsidian Shard
+  - Rod of Tahuti
   flex_slots:
-  - Breastplate of Valor
-  - Obsidian Shard
+  - Chronos' Pendant
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -318,25 +328,31 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Genji''s Guard, Gluttonous Grimoire, The World Stone, Breastplate
-    of Valor, Soul Gem, Obsidian Shard, Amanita Charm, Kinetic Cuirass, Spear of the
-    Magus, Eye of Providence, The Cosmic Horror, Stone of Binding, Screeching Gargoyle,
-    Oni Hunter''s Garb, Freya''s Tears, Void Shield, Shield of the Phoenix, Shifter''s
-    Shield, Void Stone, Rod of Asclepius, Helm of Radiance, Spectral Armor, Yogi''s
-    Necklace, Erosion, Dreamer''s Idol, Jade Scepter.'
+    for this god: Genji''s Guard, Breastplate of Valor, Gluttonous Grimoire, Soul
+    Gem, Obsidian Shard, The World Stone, Amanita Charm, Kinetic Cuirass, Spear of
+    the Magus, Eye of Providence, The Cosmic Horror, Stone of Binding, Screeching
+    Gargoyle, Oni Hunter''s Garb, Freya''s Tears, Void Shield, Shield of the Phoenix,
+    Shifter''s Shield, Void Stone, Rod of Asclepius, Helm of Radiance, Spectral Armor,
+    Yogi''s Necklace, Erosion, Dreamer''s Idol, Jade Scepter.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.59
       efficiency: 0.72
-      win: 0.6
+      win: 0.64
       pick: 0.15
       fit: 0.26
     Breastplate of Valor:
-      total: 0.54
+      total: 0.57
       efficiency: 0.65
-      win: 0.6
-      pick: 0.15
+      win: 0.65
+      pick: 0.14
       fit: 0.26
+    Chronos' Pendant:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.66
+      pick: 0.16
+      fit: 0.28
     Gluttonous Grimoire:
       total: 0.56
       efficiency: 0.66
@@ -344,22 +360,16 @@ builds:
       pick: 0.0
       fit: 0.7
     Spear of Desolation:
-      total: 0.57
+      total: 0.54
       efficiency: 0.52
-      win: 0.65
-      pick: 0.16
+      win: 0.58
+      pick: 0.2
       fit: 0.59
-    The World Stone:
-      total: 0.55
-      efficiency: 0.49
-      win: 0.67
-      pick: 0.1
-      fit: 0.48
-    Obsidian Shard:
-      total: 0.53
-      efficiency: 0.54
-      win: 0.59
-      pick: 0.09
+    Rod of Tahuti:
+      total: 0.54
+      efficiency: 0.44
+      win: 0.69
+      pick: 0.16
       fit: 0.48
   starter: *id001
 - source: suggested
@@ -367,10 +377,10 @@ builds:
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
+  - Chronos' Pendant
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Spear of Desolation
   flex_slots:
   - Bragi's Harp
   - Nimble Ring
@@ -396,17 +406,23 @@ builds:
     Talon, Erosion, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.6
+      win: 0.64
       pick: 0.15
       fit: 0.18
     Breastplate of Valor:
-      total: 0.53
+      total: 0.56
       efficiency: 0.65
-      win: 0.6
-      pick: 0.15
+      win: 0.65
+      pick: 0.14
       fit: 0.18
+    Chronos' Pendant:
+      total: 0.53
+      efficiency: 0.56
+      win: 0.66
+      pick: 0.16
+      fit: 0.2
     Bracer of The Abyss:
       total: 0.46
       efficiency: 0.56
@@ -425,12 +441,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.52
-      win: 0.65
-      pick: 0.16
-      fit: 0.29
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -466,22 +476,22 @@ builds:
     Focus, Death Metal, Draconic Scale, The Cosmic Horror, Prophetic Cloak.'
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.61
       efficiency: 0.72
-      win: 0.6
+      win: 0.64
       pick: 0.15
       fit: 0.44
     Breastplate of Valor:
-      total: 0.57
+      total: 0.59
       efficiency: 0.65
-      win: 0.6
-      pick: 0.15
+      win: 0.65
+      pick: 0.14
       fit: 0.44
     Chronos' Pendant:
-      total: 0.53
+      total: 0.56
       efficiency: 0.56
-      win: 0.6
-      pick: 0.18
+      win: 0.66
+      pick: 0.16
       fit: 0.39
     Freya's Tears:
       total: 0.52
@@ -490,10 +500,10 @@ builds:
       pick: 0.0
       fit: 0.58
     Spear of Desolation:
-      total: 0.56
+      total: 0.53
       efficiency: 0.52
-      win: 0.65
-      pick: 0.16
+      win: 0.58
+      pick: 0.2
       fit: 0.52
     Soul Gem:
       total: 0.52
@@ -508,9 +518,9 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Breastplate of Valor
+  - Chronos' Pendant
   - Jotunn's Revenge
   - Gluttonous Grimoire
-  - Spear of Desolation
   flex_slots:
   - Jotunn's Revenge
   - Berserker's Shield
@@ -539,9 +549,9 @@ builds:
     of The Abyss.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.58
       efficiency: 0.72
-      win: 0.6
+      win: 0.64
       pick: 0.15
       fit: 0.22
     Berserker's Shield:
@@ -551,11 +561,17 @@ builds:
       pick: 0.0
       fit: 0.31
     Breastplate of Valor:
-      total: 0.54
+      total: 0.56
       efficiency: 0.65
-      win: 0.6
-      pick: 0.15
+      win: 0.65
+      pick: 0.14
       fit: 0.22
+    Chronos' Pendant:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.66
+      pick: 0.16
+      fit: 0.24
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.65
@@ -568,25 +584,19 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Spear of Desolation:
-      total: 0.54
-      efficiency: 0.52
-      win: 0.65
-      pick: 0.16
-      fit: 0.37
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
-  - Jotunn's Revenge
+  - Chronos' Pendant
   - Gluttonous Grimoire
   - Spear of Desolation
-  - The World Stone
+  - Rod of Tahuti
   flex_slots:
-  - The World Stone
-  - Jotunn's Revenge
+  - Rod of Tahuti
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -612,23 +622,23 @@ builds:
     Pearl, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.6
+      win: 0.64
       pick: 0.15
       fit: 0.24
     Breastplate of Valor:
-      total: 0.54
+      total: 0.56
       efficiency: 0.65
-      win: 0.6
-      pick: 0.15
+      win: 0.65
+      pick: 0.14
       fit: 0.24
-    Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
+    Chronos' Pendant:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.66
+      pick: 0.16
+      fit: 0.29
     Gluttonous Grimoire:
       total: 0.54
       efficiency: 0.66
@@ -636,16 +646,16 @@ builds:
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.55
+      total: 0.52
       efficiency: 0.52
-      win: 0.65
-      pick: 0.16
+      win: 0.58
+      pick: 0.2
       fit: 0.44
-    The World Stone:
-      total: 0.53
-      efficiency: 0.49
-      win: 0.67
-      pick: 0.1
+    Rod of Tahuti:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.69
+      pick: 0.16
       fit: 0.33
   starter: *id001
 - source: suggested
@@ -688,9 +698,9 @@ builds:
       pick: 0.0
       fit: 0.5
     Genji's Guard:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.6
+      win: 0.64
       pick: 0.15
       fit: 0.32
     Kinetic Cuirass:

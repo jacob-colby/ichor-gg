@@ -1,0 +1,15 @@
+# Pipeline dependencies.
+#
+# Playwright is listed but is only needed for the WIKI half of the refresh:
+# wiki.smite2.com sits behind a Cloudflare JS challenge that a plain HTTP
+# client cannot pass. `smite.refresh --community` — the half the scheduled job
+# runs — talks only to smitebrain.com over plain HTTP, and imports Playwright
+# lazily so it never needs the package or the browser binaries.
+#
+# After installing, the wiki path also needs:  python -m playwright install chromium
+beautifulsoup4>=4.12
+numpy>=1.26
+playwright>=1.44
+PyYAML>=6.0
+requests>=2.31
+scipy>=1.11

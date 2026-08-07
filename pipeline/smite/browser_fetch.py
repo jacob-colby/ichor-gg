@@ -9,8 +9,6 @@ import hashlib
 import time
 from pathlib import Path
 
-from playwright.sync_api import sync_playwright
-
 DEFAULT_TTL_SECONDS = 24 * 60 * 60
 DEFAULT_MIN_INTERVAL = 2.5
 USER_AGENT = (
@@ -52,6 +50,14 @@ class BrowserFetcher:
         return html
 
     def _fetch_live(self, url: str) -> str:
+        # Imported here, not at module load. `refresh` imports this class
+        # unconditionally, so a top-level import made Playwright a hard
+        # dependency of every entry point — including `--community`, which
+        # talks only to smitebrain over plain HTTP and never opens a browser.
+        # That is the path the scheduled job runs, and it should not be able
+        # to fail on a dependency it does not use.
+        from playwright.sync_api import sync_playwright
+
         with sync_playwright() as p:
             browser = p.chromium.launch()
             try:

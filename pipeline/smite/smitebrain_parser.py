@@ -29,7 +29,53 @@ def parse_build_page(html: str) -> dict:
     return {
         "items": _parse_core_recommended_build(soup),
         "aspects": _parse_aspects(soup),
+        "starters": _parse_starters(soup),
     }
+
+
+#: How many starters are worth showing. The tail is long and thin — past the
+#: third the rates are usually low single digits, which is noise dressed as a
+#: choice.
+STARTERS_SHOWN = 3
+
+
+def _parse_starters(soup) -> list:
+    """The Starters section: what this god's players actually open with.
+
+    Scraped now, having been deliberately skipped since the first version of
+    this parser — "Relics and Starters are alternatives, not a build order, and
+    are intentionally excluded". True of the build ORDER, but it meant the app
+    had no community starter at all: the one it showed came from a role rule in
+    _weights.yaml, so every Carry got the same opener regardless of what Carry
+    players actually bought.
+
+    Unlike Core these are not slotted, so there is no numbered-slot structure to
+    walk — the section is a flat list of tiles already sorted by pick rate.
+    Deduped by name because the markup nests a tile inside its own wrapper and
+    a naive walk sees each one twice; the higher rate wins, which is the same
+    rule `build_index.popular_items` uses.
+    """
+    heading = soup.find("h2", string=re.compile(r"^\s*Starters?\s*$"))
+    if heading is None:
+        return []
+
+    # Scope to the heading's own section container, NOT a forward walk.
+    # `find_all_next()` from the heading runs into the Core section and
+    # happily reports Tyrfing and Jotunn's Revenge as starters — the
+    # `break` on the next `h2` never fires, because Core's heading sits
+    # inside a different wrapper than this one's rather than downstream of it.
+    section = heading.parent
+    best = {}
+    for el in section.find_all("div", class_="flex"):
+        entry = _tile_entry(el)
+        if entry is None:
+            continue
+        seen = best.get(entry["name"])
+        if seen is None or entry["pick_rate"] > seen["pick_rate"]:
+            best[entry["name"]] = entry
+
+    ranked = sorted(best.values(), key=lambda e: (-e["pick_rate"], e["name"]))
+    return ranked[:STARTERS_SHOWN]
 
 
 def _tile_entry(container) -> dict:

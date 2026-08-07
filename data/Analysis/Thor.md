@@ -3,20 +3,21 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Jotunn's Revenge | 0.59 | 0.62 | 0.65 | 0.55 | 0.55 | 0.55 | undervalued |  |  |
-| Hydra's Lament | 0.54 | 0.56 | 0.61 | 0.56 | 0.24 | 0.44 | fair | burst |  |
+| Runeforged Hammer | 0.56 | 0.59 | 0.60 | 0.58 | 0.08 | 0.58 | fair | burst | **UNDERRATED** |
+| Hydra's Lament | 0.56 | 0.56 | 0.61 | 0.59 | 0.23 | 0.44 | fair | burst |  |
+| Shifter's Shield | 0.54 | 0.52 | 0.55 | 0.62 | 0.11 | 0.45 | fair |  | **UNDERRATED** |
 | The Crusher | 0.54 | 0.63 | 0.65 | 0.50 | 0.00 | 0.61 | undervalued | burst | **UNDERRATED** |
 | Amanita Charm | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.45 | undervalued | sustain, aura | **UNDERRATED** |
-| Runeforged Hammer | 0.52 | 0.59 | 0.60 | 0.50 | 0.00 | 0.58 | fair | burst | **UNDERRATED** |
 | Berserker's Shield | 0.52 | 0.59 | 0.71 | 0.50 | 0.00 | 0.31 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.52 | 0.58 | 0.60 | 0.50 | 0.00 | 0.55 | fair | burst | **UNDERRATED** |
+| Heartseeker | 0.52 | 0.50 | 0.46 | 0.56 | 0.24 | 0.61 | fair | burst |  |
 | Eye of Providence | 0.51 | 0.57 | 0.62 | 0.50 | 0.00 | 0.45 | undervalued |  | **UNDERRATED** |
-| Shifter's Shield | 0.51 | 0.52 | 0.55 | 0.53 | 0.17 | 0.45 | fair |  |  |
 | Genji's Guard | 0.50 | 0.56 | 0.72 | 0.50 | 0.00 | 0.18 | undervalued |  | **UNDERRATED** |
-| Heartseeker | 0.50 | 0.50 | 0.46 | 0.53 | 0.22 | 0.61 | fair | burst |  |
 | Oni Hunter's Garb | 0.50 | 0.55 | 0.65 | 0.50 | 0.00 | 0.31 | undervalued |  | **UNDERRATED** |
 | Eye of the Storm | 0.50 | 0.55 | 0.52 | 0.50 | 0.00 | 0.61 | fair | peel | **UNDERRATED** |
 | Shield Splitter | 0.50 | 0.54 | 0.53 | 0.50 | 0.00 | 0.56 | fair |  | **UNDERRATED** |
 | Avenging Blade | 0.49 | 0.53 | 0.51 | 0.50 | 0.00 | 0.58 | fair | protection-shred | **UNDERRATED** |
+| Titan's Bane | 0.49 | 0.47 | 0.46 | 0.55 | 0.14 | 0.51 | fair |  |  |
 | Golden Blade | 0.49 | 0.53 | 0.55 | 0.50 | 0.00 | 0.48 | fair | wave-clear | **UNDERRATED** |
 | The Reaper | 0.49 | 0.53 | 0.53 | 0.50 | 0.00 | 0.51 | fair | sustain | **UNDERRATED** |
 | Breastplate of Valor | 0.48 | 0.51 | 0.65 | 0.50 | 0.00 | 0.18 | undervalued |  | **UNDERRATED** |
@@ -40,22 +41,21 @@
 | Stampede | 0.45 | 0.46 | 0.52 | 0.50 | 0.00 | 0.31 | fair | mobility, aura, cc-immunity |  |
 | Ancile | 0.45 | 0.46 | 0.52 | 0.50 | 0.00 | 0.31 | fair |  |  |
 | Arondight | 0.45 | 0.46 | 0.50 | 0.50 | 0.00 | 0.34 | fair | mobility |  |
-| Transcendence | 0.45 | 0.41 | 0.46 | 0.53 | 0.12 | 0.30 | fair |  |  |
 | Riptalon | 0.45 | 0.45 | 0.56 | 0.50 | 0.00 | 0.21 | fair | sustain |  |
+| Barbed Carver | 0.45 | 0.42 | 0.43 | 0.52 | 0.11 | 0.40 | premium | burst |  |
 | Avatar's Parashu | 0.45 | 0.45 | 0.43 | 0.50 | 0.00 | 0.51 | premium | cc-immunity |  |
 | Tyrfing | 0.45 | 0.45 | 0.47 | 0.50 | 0.00 | 0.40 | fair | burst |  |
 | Doublet of Binding | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.31 | fair | aura |  |
 | Void Shield | 0.45 | 0.45 | 0.46 | 0.50 | 0.00 | 0.41 | fair | protection-shred, aura |  |
 | Mantle Of Discord | 0.45 | 0.44 | 0.52 | 0.50 | 0.00 | 0.26 | fair | peel, cc-immunity |  |
 | Stone of Binding | 0.45 | 0.44 | 0.48 | 0.50 | 0.00 | 0.36 | fair | protection-shred |  |
-| Titan's Bane | 0.45 | 0.47 | 0.46 | 0.45 | 0.13 | 0.51 | fair |  |  |
 | Chandra's Grace | 0.45 | 0.44 | 0.53 | 0.50 | 0.00 | 0.23 | fair | sustain |  |
 | Silverbranch Bow | 0.45 | 0.44 | 0.54 | 0.50 | 0.00 | 0.21 | fair |  |  |
+| Transcendence | 0.44 | 0.41 | 0.46 | 0.51 | 0.12 | 0.30 | fair |  |  |
 | Void Stone | 0.44 | 0.43 | 0.44 | 0.50 | 0.00 | 0.41 | premium | protection-shred, aura |  |
 | Magi's Cloak | 0.44 | 0.43 | 0.50 | 0.50 | 0.00 | 0.26 | fair | cc-immunity |  |
 | Ragnarok's Wake | 0.44 | 0.43 | 0.43 | 0.50 | 0.00 | 0.41 | premium | mobility, burst |  |
 | Gladiator's Shield | 0.44 | 0.43 | 0.41 | 0.50 | 0.00 | 0.46 | premium | burst |  |
-| Barbed Carver | 0.44 | 0.42 | 0.43 | 0.49 | 0.12 | 0.40 | premium | burst |  |
 | Screeching Gargoyle | 0.44 | 0.43 | 0.49 | 0.50 | 0.00 | 0.28 | fair | protection-shred, peel |  |
 | Phoenix Feather | 0.43 | 0.42 | 0.46 | 0.50 | 0.00 | 0.31 | fair | sustain |  |
 | Xibalban Effigy | 0.43 | 0.42 | 0.49 | 0.50 | 0.00 | 0.26 | fair |  |  |

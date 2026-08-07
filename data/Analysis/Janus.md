@@ -2,18 +2,18 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.63 | 0.71 | 0.59 | 0.56 | 0.42 | 1.00 | fair | burst, sustain, aura |  |
+| Soul Gem | 0.61 | 0.71 | 0.59 | 0.52 | 0.41 | 1.00 | fair | burst, sustain, aura |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.57 | 0.67 | 0.52 | 0.48 | 0.50 | 1.00 | fair |  |  |
-| Obsidian Shard | 0.55 | 0.61 | 0.54 | 0.52 | 0.30 | 0.78 | fair |  |  |
+| Obsidian Shard | 0.58 | 0.61 | 0.54 | 0.58 | 0.29 | 0.78 | fair |  |  |
+| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.49 | 0.51 | 1.00 | fair |  |  |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
-| Doom Orb | 0.55 | 0.57 | 0.49 | 0.57 | 0.05 | 0.78 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.52 | 0.59 | 0.56 | 0.50 | 0.00 | 0.67 | fair |  | **UNDERRATED** |
 | Dreamer's Idol | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.78 | fair | cc-immunity | **UNDERRATED** |
 | The World Stone | 0.51 | 0.57 | 0.49 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
+| Doom Orb | 0.51 | 0.57 | 0.49 | 0.48 | 0.15 | 0.78 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.51 | 0.54 | 0.44 | 0.49 | 0.39 | 0.78 | premium |  |  |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
-| Rod of Tahuti | 0.51 | 0.54 | 0.44 | 0.48 | 0.39 | 0.78 | premium |  |  |
 | Gem of Focus | 0.50 | 0.56 | 0.51 | 0.50 | 0.00 | 0.67 | fair | mobility | **UNDERRATED** |
 | Death Metal | 0.50 | 0.55 | 0.60 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.44 | fair | sustain, aura | **UNDERRATED** |
@@ -46,8 +46,8 @@
 | Chandra's Grace | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.22 | fair | sustain |  |
 | Staff of Myrddin | 0.44 | 0.43 | 0.34 | 0.50 | 0.00 | 0.67 | premium |  |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
-| Book of Thoth | 0.44 | 0.43 | 0.42 | 0.48 | 0.25 | 0.44 | premium |  |  |
 | Helm of Darkness | 0.44 | 0.43 | 0.43 | 0.50 | 0.00 | 0.44 | premium | mobility |  |
+| Book of Thoth | 0.44 | 0.43 | 0.42 | 0.48 | 0.22 | 0.44 | premium |  |  |
 | Sphere of Negation | 0.44 | 0.43 | 0.42 | 0.50 | 0.00 | 0.44 | premium | sustain |  |
 | Scepter of Dominion | 0.43 | 0.42 | 0.41 | 0.50 | 0.00 | 0.44 | premium | peel |  |
 | Gem of Isolation | 0.43 | 0.42 | 0.41 | 0.50 | 0.00 | 0.44 | premium | peel |  |

@@ -339,12 +339,77 @@ def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = Fal
         "aspect_pick_rate": aspect["pick_rate"] if aspect else None,
         "aspect_win_rate": aspect["win_rate"] if aspect else None,
         "slot_order": parsed["items"],
+        # What this god's players actually open with, top 3 by pick rate. The
+        # app previously showed a starter chosen by a role rule in
+        # _weights.yaml, so every Carry got the same opener no matter what
+        # Carry players bought.
+        "community_starters": parsed["starters"],
         "source_url": url,
         "last_verified": date.today().isoformat(),
     }
     if index_row:
         community_entry.update(god_index_entry(index_row))
     notes.merge_build_note(BUILDS_ROOT / f"{god}-{mode}.md", god, mode, community_entry)
+
+
+def refresh_community(force: bool = True) -> int:
+    """Re-pull everything that changes daily, and nothing that doesn't.
+
+    This is the half of `refresh_all` that can run unattended anywhere. The
+    split is not about speed, it is about what each source needs to be reached:
+
+        smitebrain.com   plain HTTP, no bot protection, and the numbers move
+                         every day — win rates, pick rates, builds, starters.
+        wiki.smite2.com  Cloudflare-gated, so it needs a real browser
+                         (BrowserFetcher/Playwright), and it only changes on
+                         patch days — god kits, item stats, icons.
+
+    A daily job that tried to do both would be a daily Playwright run against
+    Cloudflare from a datacentre IP, which is the part most likely to start
+    failing and the part least likely to have anything new in it. So the
+    scheduled job runs this, and the wiki side stays a deliberate `--all` when
+    a patch lands.
+
+    Returns the number of failures, so a caller can exit non-zero without
+    having to parse the log. Every failure is isolated: an unattended pass
+    should get through what it can and report the rest.
+    """
+    community_fetcher = CachedFetcher(DATA_ROOT / "_cache" / "smitebrain")
+    failures = []
+
+    god_index = {}
+    try:
+        god_index = refresh_god_index(community_fetcher, force=force)
+        print(f"  god index: {len(god_index)} gods with win/loss records")
+    except Exception as exc:
+        print(f"  [FAILED] god index: {exc} — falling back to aspect figures")
+        failures.append(f"god index: {exc}")
+
+    try:
+        n_items = refresh_item_index(community_fetcher, DATA_ROOT, force=force)
+        print(f"  item index: {n_items} items with win/loss records")
+    except Exception as exc:
+        print(f"  [FAILED] item index: {exc} — item stats keep their last values")
+        failures.append(f"item index: {exc}")
+
+    build_paths = list(BUILDS_ROOT.glob("*.md"))
+    for build_path in build_paths:
+        frontmatter, _ = notes.read_note(build_path)
+        god, mode = frontmatter.get("god"), frontmatter.get("mode")
+        if not (god and mode):
+            continue
+        try:
+            refresh_god_builds(god, mode, community_fetcher, force=force,
+                               index_row=god_index.get(god))
+        except Exception as exc:
+            print(f"  [FAILED] build '{god}-{mode}': {exc}")
+            failures.append(f"build '{god}-{mode}': {exc}")
+
+    print(f"Community refresh: {len(build_paths) - len(failures)}/{len(build_paths)} "
+          f"build notes updated, {len(failures)} failure(s)")
+    for f in failures:
+        print(f"  - {f}")
+    return len(failures)
 
 
 def refresh_all(force: bool = False) -> None:
@@ -494,6 +559,9 @@ def main(argv=None) -> int:
     parser.add_argument("--refresh-builds", metavar="GOD", help="re-pull SmiteBrain build stats for one god")
     parser.add_argument("--mode", default="Conquest", help="game mode for --refresh-builds")
     parser.add_argument("--all", action="store_true", help="re-pull everything already tracked")
+    parser.add_argument("--community", action="store_true",
+                         help="re-pull only smitebrain (daily-changing: win/pick rates, builds, "
+                              "starters). No browser needed, so this is the one safe to schedule.")
     parser.add_argument("--roster", action="store_true", help="refresh the full god roster (_roster.json)")
     parser.add_argument("--roster-add-all", action="store_true",
                          help="scrape every roster god not yet tracked (no reindex)")
@@ -537,6 +605,11 @@ def main(argv=None) -> int:
         for name, err in summary["failed"]:
             print(f"  FAILED {name}: {err}")
         return 0
+
+    if args.community:
+        # Non-zero on any failure so a scheduled run fails loudly rather than
+        # committing a half-refreshed dataset.
+        return 1 if refresh_community(force=True) else 0
 
     if args.all:
         refresh_all(force=args.force)

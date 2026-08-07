@@ -2,19 +2,19 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.68 | 0.76 | 0.65 | 0.58 | 0.73 | 1.00 | undervalued |  |  |
-| Heartseeker | 0.61 | 0.62 | 0.46 | 0.63 | 0.34 | 1.00 | fair | burst |  |
+| Jotunn's Revenge | 0.68 | 0.76 | 0.65 | 0.60 | 0.70 | 1.00 | undervalued |  |  |
+| Heartseeker | 0.62 | 0.62 | 0.46 | 0.65 | 0.33 | 1.00 | fair | burst |  |
+| Titan's Bane | 0.61 | 0.60 | 0.46 | 0.67 | 0.17 | 0.91 | fair |  |  |
 | The Crusher | 0.60 | 0.75 | 0.65 | 0.50 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
-| The Reaper | 0.59 | 0.65 | 0.53 | 0.57 | 0.15 | 0.91 | fair | sustain | **UNDERRATED** |
-| Hydra's Lament | 0.59 | 0.64 | 0.61 | 0.55 | 0.43 | 0.71 | fair | burst |  |
-| Titan's Bane | 0.56 | 0.60 | 0.46 | 0.57 | 0.17 | 0.91 | fair |  |  |
+| The Reaper | 0.60 | 0.65 | 0.53 | 0.59 | 0.17 | 0.91 | fair | sustain |  |
+| Hydra's Lament | 0.59 | 0.64 | 0.61 | 0.56 | 0.41 | 0.71 | fair | burst |  |
 | Runeforged Hammer | 0.53 | 0.61 | 0.60 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Tekko-Kagi | 0.52 | 0.59 | 0.46 | 0.50 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
+| Transcendence | 0.52 | 0.48 | 0.46 | 0.60 | 0.16 | 0.52 | fair |  |  |
 | Lernaean Bow | 0.51 | 0.58 | 0.56 | 0.50 | 0.00 | 0.62 | fair | wave-clear, burst | **UNDERRATED** |
 | Avatar's Parashu | 0.51 | 0.57 | 0.43 | 0.50 | 0.00 | 0.91 | premium | cc-immunity | **UNDERRATED** |
 | Damaru | 0.51 | 0.57 | 0.59 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
-| Transcendence | 0.51 | 0.48 | 0.46 | 0.57 | 0.17 | 0.52 | fair |  |  |
 | Avenging Blade | 0.50 | 0.55 | 0.51 | 0.50 | 0.00 | 0.62 | fair | protection-shred | **UNDERRATED** |
 | Golden Blade | 0.50 | 0.54 | 0.55 | 0.50 | 0.00 | 0.52 | fair | wave-clear | **UNDERRATED** |
 | Arondight | 0.49 | 0.53 | 0.50 | 0.50 | 0.00 | 0.61 | fair | mobility | **UNDERRATED** |

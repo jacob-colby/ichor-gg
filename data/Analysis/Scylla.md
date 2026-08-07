@@ -2,18 +2,19 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.54 | 0.56 | 1.00 | fair |  |  |
+| Spear of Desolation | 0.59 | 0.67 | 0.52 | 0.52 | 0.53 | 1.00 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
-| Obsidian Shard | 0.58 | 0.61 | 0.54 | 0.59 | 0.21 | 0.79 | fair |  |  |
-| Soul Gem | 0.57 | 0.71 | 0.59 | 0.47 | 0.09 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
-| Doom Orb | 0.56 | 0.58 | 0.49 | 0.59 | 0.15 | 0.79 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.58 | 0.61 | 0.54 | 0.59 | 0.20 | 0.79 | fair |  |  |
+| Soul Gem | 0.56 | 0.71 | 0.59 | 0.45 | 0.11 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
+| Doom Orb | 0.56 | 0.58 | 0.49 | 0.58 | 0.15 | 0.79 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.53 | 0.54 | 0.44 | 0.54 | 0.35 | 0.79 | premium |  |  |
+| Rod of Tahuti | 0.53 | 0.54 | 0.44 | 0.54 | 0.32 | 0.79 | premium |  |  |
 | Chronos' Pendant | 0.52 | 0.58 | 0.56 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | The World Stone | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
+| Polynomicon | 0.50 | 0.50 | 0.49 | 0.52 | 0.29 | 0.52 | fair | burst |  |
 | Gem of Focus | 0.50 | 0.54 | 0.51 | 0.50 | 0.00 | 0.63 | fair | mobility | **UNDERRATED** |
 | Death Metal | 0.50 | 0.54 | 0.60 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.50 | 0.54 | 0.59 | 0.50 | 0.00 | 0.42 | fair | sustain, aura | **UNDERRATED** |
@@ -21,7 +22,6 @@
 | Helm of Radiance | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Bancroft's Talon | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.42 | fair | sustain | **UNDERRATED** |
 | Jade Scepter | 0.49 | 0.52 | 0.57 | 0.50 | 0.00 | 0.42 | fair | peel | **UNDERRATED** |
-| Polynomicon | 0.49 | 0.50 | 0.49 | 0.49 | 0.31 | 0.52 | fair | burst |  |
 | Breastplate of Valor | 0.49 | 0.52 | 0.65 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.49 | 0.52 | 0.56 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Wish-Granting Pearl | 0.48 | 0.50 | 0.54 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
@@ -39,6 +39,7 @@
 | Divine Ruin | 0.45 | 0.46 | 0.43 | 0.50 | 0.00 | 0.52 | premium | anti-heal, burst |  |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Triton's Conch | 0.45 | 0.45 | 0.47 | 0.50 | 0.00 | 0.42 | fair | aura |  |
+| Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.49 | 0.10 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
 | Necronomicon | 0.44 | 0.44 | 0.44 | 0.50 | 0.00 | 0.42 | premium |  |  |
 | Screeching Gargoyle | 0.44 | 0.44 | 0.49 | 0.50 | 0.00 | 0.31 | fair | protection-shred, peel |  |
@@ -46,12 +47,11 @@
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Helm of Darkness | 0.44 | 0.42 | 0.43 | 0.50 | 0.00 | 0.42 | premium | mobility |  |
 | Staff of Myrddin | 0.44 | 0.42 | 0.34 | 0.50 | 0.00 | 0.63 | premium |  |  |
-| Book of Thoth | 0.43 | 0.42 | 0.42 | 0.47 | 0.29 | 0.42 | premium |  |  |
 | Sphere of Negation | 0.43 | 0.42 | 0.42 | 0.50 | 0.00 | 0.42 | premium | sustain |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Scepter of Dominion | 0.43 | 0.41 | 0.41 | 0.50 | 0.00 | 0.42 | premium | peel |  |
 | Gem of Isolation | 0.43 | 0.41 | 0.41 | 0.50 | 0.00 | 0.42 | premium | peel |  |
-| Yogi's Necklace | 0.43 | 0.45 | 0.65 | 0.43 | 0.11 | 0.00 | undervalued |  |  |
+| Book of Thoth | 0.43 | 0.42 | 0.42 | 0.46 | 0.24 | 0.42 | premium |  |  |
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Shifter's Shield | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Gladiator's Shield | 0.42 | 0.38 | 0.41 | 0.50 | 0.00 | 0.31 | premium | burst |  |

@@ -2,14 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.67 | 0.76 | 0.65 | 0.60 | 0.32 | 1.00 | undervalued |  |  |
-| Hydra's Lament | 0.63 | 0.64 | 0.61 | 0.65 | 0.30 | 0.71 | fair | burst |  |
+| Jotunn's Revenge | 0.68 | 0.76 | 0.65 | 0.62 | 0.35 | 1.00 | undervalued |  |  |
+| The Reaper | 0.61 | 0.65 | 0.53 | 0.61 | 0.21 | 0.91 | fair | sustain |  |
+| Hydra's Lament | 0.60 | 0.64 | 0.61 | 0.60 | 0.31 | 0.71 | fair | burst |  |
 | The Crusher | 0.60 | 0.75 | 0.65 | 0.50 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
-| The Reaper | 0.59 | 0.65 | 0.53 | 0.58 | 0.20 | 0.91 | fair | sustain |  |
-| Heartseeker | 0.59 | 0.62 | 0.46 | 0.59 | 0.32 | 1.00 | fair | burst |  |
-| Titan's Bane | 0.59 | 0.60 | 0.46 | 0.62 | 0.22 | 0.91 | fair |  |  |
+| Heartseeker | 0.60 | 0.62 | 0.46 | 0.60 | 0.37 | 1.00 | fair | burst |  |
+| Titan's Bane | 0.59 | 0.60 | 0.46 | 0.63 | 0.22 | 0.91 | fair |  |  |
 | Runeforged Hammer | 0.53 | 0.61 | 0.60 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
-| Barbed Carver | 0.52 | 0.49 | 0.43 | 0.59 | 0.29 | 0.62 | premium | burst |  |
+| Barbed Carver | 0.52 | 0.49 | 0.43 | 0.59 | 0.27 | 0.62 | premium | burst |  |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Tekko-Kagi | 0.52 | 0.59 | 0.46 | 0.50 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
 | Lernaean Bow | 0.51 | 0.58 | 0.56 | 0.50 | 0.00 | 0.62 | fair | wave-clear, burst | **UNDERRATED** |
@@ -42,7 +42,6 @@
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Demon Blade | 0.44 | 0.43 | 0.39 | 0.50 | 0.00 | 0.52 | premium |  |  |
 | Shield of the Phoenix | 0.44 | 0.43 | 0.57 | 0.50 | 0.00 | 0.09 | fair | sustain |  |
-| Magi's Cloak | 0.43 | 0.35 | 0.50 | 0.57 | 0.07 | 0.00 | fair | cc-immunity |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Toxic Blade | 0.43 | 0.41 | 0.42 | 0.50 | 0.00 | 0.39 | premium | anti-heal |  |
 | Deathbringer | 0.43 | 0.41 | 0.36 | 0.50 | 0.00 | 0.52 | premium |  |  |
@@ -64,6 +63,7 @@
 | Doublet of Binding | 0.40 | 0.35 | 0.51 | 0.50 | 0.00 | 0.00 | fair | aura |  |
 | Void Shield | 0.40 | 0.35 | 0.46 | 0.50 | 0.00 | 0.10 | fair | protection-shred, aura |  |
 | Draconic Scale | 0.40 | 0.35 | 0.50 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Magi's Cloak | 0.40 | 0.35 | 0.50 | 0.50 | 0.00 | 0.00 | fair | cc-immunity |  |
 | Gladiator's Shield | 0.40 | 0.35 | 0.41 | 0.50 | 0.00 | 0.19 | premium | burst |  |
 | Xibalban Effigy | 0.40 | 0.34 | 0.49 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Void Stone | 0.39 | 0.34 | 0.44 | 0.50 | 0.00 | 0.10 | premium | protection-shred, aura |  |

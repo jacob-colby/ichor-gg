@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { renderHook } from "@testing-library/react";
 import { useDraftResult, draftMaxLifesteal } from "./useDraftResult";
-import type { DraftComp, DraftConfig, God, Item } from "../types";
+import type { BuildNote, DraftComp, DraftConfig, God, Item } from "../types";
 
 const god = (name: string, overrides: Partial<God> = {}): God =>
   ({
@@ -40,8 +40,19 @@ const DRAFT_CFG: DraftConfig = {
 
 const comp = (allies: string[], enemies: string[]): DraftComp => ({ allies, enemies });
 
-const run = (allies: string[], enemies: string[], scores = GOD_ITEM_SCORES, cfg: DraftConfig | undefined = DRAFT_CFG) =>
-  renderHook(() => useDraftResult(comp(allies, enemies), "conquest", GODS, ITEMS, [], scores, cfg)).result.current;
+const run = (
+  allies: string[], enemies: string[],
+  scores: typeof GOD_ITEM_SCORES | { builds?: BuildNote[] } = GOD_ITEM_SCORES,
+  cfg: DraftConfig | undefined = DRAFT_CFG,
+) => {
+  // Third arg doubles as an options bag so the starter cases can supply build
+  // notes without every existing caller growing a parameter.
+  const opts = (scores && "builds" in scores ? scores : {}) as { builds?: BuildNote[] };
+  const useScores = (scores && "builds" in scores ? GOD_ITEM_SCORES : scores) as typeof GOD_ITEM_SCORES;
+  return renderHook(() => useDraftResult(
+    comp(allies, enemies), "conquest", GODS, ITEMS, opts.builds ?? [], useScores, cfg,
+  )).result.current;
+};
 
 /* Two surfaces now render a view of the same draft — /draft and the dock.
  * This is the single derivation both call; DraftPage.test.tsx and
@@ -168,5 +179,40 @@ describe("draftMaxLifesteal — reads the shipped rule, not a copy of it", () =>
   it("defaults safely when the index predates the shipped rule", () => {
     expect(draftMaxLifesteal(carry, undefined)).toBe(1);
     expect(draftMaxLifesteal(undefined, rules)).toBe(1);
+  });
+});
+
+/* A build starts before item one, and the draft page began at item one — so
+ * the first purchase of the match was the one thing it never showed. These
+ * come from SmiteBrain's Starters section, which the parser had skipped since
+ * day one; the starter the app used to show came from a role rule instead, so
+ * every Carry got the same opener regardless of what Carry players bought. */
+describe("useDraftResult — what your god opens with", () => {
+  const withStarters = [{
+    god: "TestGod", mode: "Conquest", type: "smite-build",
+    builds: [{
+      source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+      slot_order: [], source_url: "",
+      community_starters: [
+        { name: "Archmage's Gem", pick_rate: 0.25, win_rate: 0.64 },
+        { name: "Conduit Gem", pick_rate: 0.22, win_rate: 0.46 },
+      ],
+    }],
+  }] as unknown as BuildNote[];
+
+  it("reports the god's own starters, in pick-rate order", () => {
+    const r = run(["TestGod", "", "", "", ""], ["", "", "", "", ""], { builds: withStarters });
+    expect(r.starters.map((s) => s.name)).toEqual(["Archmage's Gem", "Conduit Gem"]);
+    expect(r.starters[0].pick_rate).toBe(0.25);
+  });
+
+  it("is empty when the god has no community starters rather than guessing one", () => {
+    const r = run(["TestGod", "", "", "", ""], ["", "", "", "", ""]);
+    expect(r.starters).toEqual([]);
+  });
+
+  it("is empty with no god in the you-slot", () => {
+    const r = run(["", "", "", "", ""], ["Ymir", "", "", "", ""], { builds: withStarters });
+    expect(r.starters).toEqual([]);
   });
 });

@@ -2,19 +2,20 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Genji's Guard | 0.58 | 0.60 | 0.72 | 0.60 | 0.15 | 0.32 | undervalued |  | **UNDERRATED** |
-| Spear of Desolation | 0.56 | 0.52 | 0.52 | 0.65 | 0.16 | 0.50 | fair |  |  |
-| Breastplate of Valor | 0.55 | 0.55 | 0.65 | 0.60 | 0.15 | 0.32 | undervalued |  | **UNDERRATED** |
+| Genji's Guard | 0.59 | 0.60 | 0.72 | 0.64 | 0.15 | 0.32 | undervalued |  | **UNDERRATED** |
+| Breastplate of Valor | 0.58 | 0.55 | 0.65 | 0.65 | 0.14 | 0.32 | undervalued |  | **UNDERRATED** |
+| Chronos' Pendant | 0.55 | 0.50 | 0.56 | 0.66 | 0.16 | 0.35 | fair |  |  |
 | Gluttonous Grimoire | 0.55 | 0.65 | 0.66 | 0.50 | 0.00 | 0.61 | undervalued | burst | **UNDERRATED** |
 | Amanita Charm | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.50 | undervalued | sustain, aura | **UNDERRATED** |
-| The World Stone | 0.53 | 0.45 | 0.49 | 0.67 | 0.10 | 0.36 | fair |  |  |
-| Chronos' Pendant | 0.53 | 0.50 | 0.56 | 0.60 | 0.18 | 0.35 | fair |  |  |
+| Spear of Desolation | 0.53 | 0.52 | 0.52 | 0.58 | 0.20 | 0.50 | fair |  |  |
 | Kinetic Cuirass | 0.53 | 0.60 | 0.60 | 0.50 | 0.00 | 0.60 | fair | burst | **UNDERRATED** |
+| Rod of Tahuti | 0.53 | 0.41 | 0.44 | 0.69 | 0.16 | 0.36 | premium |  |  |
 | Soul Gem | 0.52 | 0.59 | 0.59 | 0.50 | 0.00 | 0.60 | fair | burst, sustain, aura | **UNDERRATED** |
 | Eye of Providence | 0.52 | 0.58 | 0.62 | 0.50 | 0.00 | 0.50 | undervalued |  | **UNDERRATED** |
 | Obsidian Shard | 0.51 | 0.48 | 0.54 | 0.59 | 0.09 | 0.36 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.50 | 0.56 | 0.59 | 0.50 | 0.00 | 0.49 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.50 | 0.56 | 0.65 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
+| The World Stone | 0.50 | 0.45 | 0.49 | 0.60 | 0.12 | 0.36 | fair |  |  |
 | Shield of the Phoenix | 0.50 | 0.54 | 0.57 | 0.50 | 0.00 | 0.47 | fair | sustain | **UNDERRATED** |
 | Shifter's Shield | 0.49 | 0.54 | 0.55 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.49 | 0.53 | 0.60 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
@@ -24,12 +25,11 @@
 | The Cosmic Horror | 0.48 | 0.51 | 0.58 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.48 | 0.51 | 0.59 | 0.50 | 0.00 | 0.33 | fair | anti-crit, aura | **UNDERRATED** |
 | Jade Scepter | 0.48 | 0.51 | 0.57 | 0.50 | 0.00 | 0.36 | fair | peel | **UNDERRATED** |
-| Book of Thoth | 0.48 | 0.35 | 0.42 | 0.63 | 0.34 | 0.20 | premium |  |  |
 | Draconic Scale | 0.48 | 0.50 | 0.50 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
+| Book of Thoth | 0.48 | 0.35 | 0.42 | 0.63 | 0.31 | 0.20 | premium |  |  |
 | Yogi's Necklace | 0.47 | 0.50 | 0.65 | 0.50 | 0.00 | 0.15 | undervalued |  | **UNDERRATED** |
 | Leviathan's Hide | 0.47 | 0.49 | 0.55 | 0.50 | 0.00 | 0.33 | fair |  | **UNDERRATED** |
 | Wish-Granting Pearl | 0.47 | 0.48 | 0.54 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.47 | 0.41 | 0.44 | 0.56 | 0.15 | 0.36 | premium |  |  |
 | Ethereal Staff | 0.47 | 0.48 | 0.53 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
 | Death Metal | 0.46 | 0.48 | 0.60 | 0.50 | 0.00 | 0.20 | fair |  | **UNDERRATED** |
 | Midgardian Mail | 0.46 | 0.48 | 0.54 | 0.50 | 0.00 | 0.33 | fair |  |  |

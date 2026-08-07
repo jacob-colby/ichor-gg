@@ -5,164 +5,175 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Shamash
-  aspect_pick_rate: 0.36
-  aspect_win_rate: 0.55
+  aspect_pick_rate: 0.42
+  aspect_win_rate: 0.54
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.31
-    win_rate: 0.5
+    pick_rate: 0.32
+    win_rate: 0.54
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.21
-      win_rate: 0.58
+      pick_rate: 0.23
+      win_rate: 0.56
     - name: Golden Blade
-      pick_rate: 0.16
-      win_rate: 0.55
+      pick_rate: 0.11
+      win_rate: 0.5
   - name: Berserker's Shield
-    pick_rate: 0.22
+    pick_rate: 0.2
     win_rate: 0.51
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.2
-      win_rate: 0.53
-    - name: Genji's Guard
+      win_rate: 0.55
+    - name: Barbed Carver
       pick_rate: 0.07
-      win_rate: 0.42
+      win_rate: 0.63
   - name: Shogun's Ofuda
-    pick_rate: 0.12
-    win_rate: 0.62
+    pick_rate: 0.1
+    win_rate: 0.51
     alternates:
     - name: Berserker's Shield
-      pick_rate: 0.14
-      win_rate: 0.54
+      pick_rate: 0.15
+      win_rate: 0.56
     - name: Barbed Carver
       pick_rate: 0.09
-      win_rate: 0.6
+      win_rate: 0.53
   - name: Dwarven Plate
-    pick_rate: 0.12
-    win_rate: 0.65
+    pick_rate: 0.09
+    win_rate: 0.55
     alternates:
-    - name: Shogun's Ofuda
-      pick_rate: 0.08
-      win_rate: 0.5
     - name: Berserker's Shield
       pick_rate: 0.08
-      win_rate: 0.46
+      win_rate: 0.54
+    - name: Shogun's Ofuda
+      pick_rate: 0.07
+      win_rate: 0.62
   - name: Kinetic Cuirass
+    pick_rate: 0.08
+    win_rate: 0.57
+    alternates:
+    - name: Dwarven Plate
+      pick_rate: 0.06
+      win_rate: 0.64
+    - name: Heartseeker
+      pick_rate: 0.05
+      win_rate: 0.61
+  - name: Engraved Guard
     pick_rate: 0.06
-    win_rate: 0.33
+    win_rate: 0.67
     alternates:
-    - name: Dwarven Plate
-      pick_rate: 0.08
-      win_rate: 0.83
-    - name: Contagion
-      pick_rate: 0.05
-      win_rate: 1.0
-  - name: Hide of the Nemean Lion
-    pick_rate: 0.07
-    win_rate: 0.71
-    alternates:
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.06
+      win_rate: 0.61
     - name: Dwarven Plate
       pick_rate: 0.05
-      win_rate: 0.4
-    - name: Engraved Guard
-      pick_rate: 0.05
-      win_rate: 0.6
+      win_rate: 0.5
+  community_starters:
+  - name: Bluestone Brooch
+    pick_rate: 0.21
+    win_rate: 0.68
+  - name: Bluestone Pendant
+    pick_rate: 0.16
+    win_rate: 0.46
+  - name: Hunter's Cowl
+    pick_rate: 0.14
+    win_rate: 0.63
   source_url: https://smitebrain.com/gods/gilgamesh/
-  last_verified: '2026-08-01'
-  god_win_rate: 0.547486033519553
-  god_matches_won: 98
-  god_matches_played: 179
+  last_verified: '2026-08-06'
+  god_win_rate: 0.5498084291187739
+  god_matches_won: 287
+  god_matches_played: 522
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-01'
-  god_matches_analyzed: 4952
+  god_window_end: '2026-08-06'
+  god_matches_analyzed: 12483
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: core
   slot_order:
-  - Contagion
-  - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Hide of the Nemean Lion
-  - Shogun's Ofuda
+  - Kinetic Cuirass
+  - The Crusher
+  - Heartseeker
+  - Amanita Charm
   flex_slots:
-  - Shogun's Ofuda
-  - Golden Blade
+  - Heartseeker
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Hide of the Nemean Lion — physical protection
+    swap_item: Hide of the Nemean Lion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Shogun''s Ofuda, The Crusher, Amanita Charm, Runeforged Hammer, Lernaean
-    Bow, Eye of Providence, Oni Hunter''s Garb, Pharaoh''s Curse, Hydra''s Lament,
-    Damaru, Yogi''s Necklace, Breastplate of Valor, Eye of the Storm, Avenging Blade,
-    Shield Splitter, Dominance, Riptalon, Spectral Armor, Shield of the Phoenix, Tekko-Kagi,
-    The Reaper, Tyrfing, Genji''s Guard, Freya''s Tears, Kinetic Cuirass.'
+    this god: Kinetic Cuirass, The Crusher, Amanita Charm, Golden Blade, Runeforged
+    Hammer, Genji''s Guard, Lernaean Bow, Eye of Providence, Oni Hunter''s Garb, Pharaoh''s
+    Curse, Hydra''s Lament, Damaru, Shogun''s Ofuda, Yogi''s Necklace, Breastplate
+    of Valor, Eye of the Storm, Avenging Blade, Shield Splitter, Dominance, Riptalon,
+    Spectral Armor, Shield of the Phoenix, Tekko-Kagi, The Reaper, Tyrfing, Freya''s
+    Tears.'
   slot_scores:
-    Contagion:
-      total: 0.64
-      efficiency: 0.43
-      win: 1.0
-      pick: 0.05
-      fit: 0.24
-    Golden Blade:
-      total: 0.53
-      efficiency: 0.55
-      win: 0.55
-      pick: 0.16
-      fit: 0.51
     Berserker's Shield:
       total: 0.55
       efficiency: 0.71
       win: 0.51
-      pick: 0.22
+      pick: 0.2
       fit: 0.4
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.58
-      pick: 0.21
+      win: 0.56
+      pick: 0.23
       fit: 0.37
-    Hide of the Nemean Lion:
-      total: 0.54
-      efficiency: 0.54
-      win: 0.71
-      pick: 0.07
-      fit: 0.23
-    Shogun's Ofuda:
+    Kinetic Cuirass:
       total: 0.53
-      efficiency: 0.53
-      win: 0.62
-      pick: 0.12
-      fit: 0.4
+      efficiency: 0.6
+      win: 0.57
+      pick: 0.08
+      fit: 0.42
+    The Crusher:
+      total: 0.52
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Heartseeker:
+      total: 0.5
+      efficiency: 0.46
+      win: 0.61
+      pick: 0.05
+      fit: 0.44
+    Amanita Charm:
+      total: 0.5
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Contagion
   - Berserker's Shield
   - Jotunn's Revenge
-  - Hide of the Nemean Lion
+  - Kinetic Cuirass
+  - Shield of the Phoenix
+  - Shifter's Shield
   - Amanita Charm
-  - Shogun's Ofuda
   flex_slots:
-  - Jotunn's Revenge
-  - Shogun's Ofuda
+  - Shield of the Phoenix
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -171,68 +182,68 @@ builds:
     swap: Eye of Providence — magical protection
     swap_item: Eye of Providence
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Hide of the Nemean Lion — physical protection
+    swap_item: Hide of the Nemean Lion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shogun''s Ofuda, Shield of the Phoenix, The Crusher,
-    Riptalon, Eye of Providence, The Reaper, Runeforged Hammer, Oni Hunter''s Garb,
-    Pharaoh''s Curse, Lernaean Bow, Chandra''s Grace, Hydra''s Lament, Damaru, Breastplate
-    of Valor, Eye of the Storm, Shield Splitter, Yogi''s Necklace, Phoenix Feather,
-    Spectral Armor, Freya''s Tears, Avenging Blade, Erosion, Genji''s Guard, Kinetic
-    Cuirass.'
+    this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, The Crusher,
+    Riptalon, Eye of Providence, The Reaper, Runeforged Hammer, Genji''s Guard, Golden
+    Blade, Oni Hunter''s Garb, Pharaoh''s Curse, Lernaean Bow, Shogun''s Ofuda, Chandra''s
+    Grace, Hydra''s Lament, Damaru, Breastplate of Valor, Eye of the Storm, Shield
+    Splitter, Yogi''s Necklace, Phoenix Feather, Spectral Armor, Freya''s Tears, Avenging
+    Blade, Erosion.'
   slot_scores:
-    Contagion:
-      total: 0.64
-      efficiency: 0.43
-      win: 1.0
-      pick: 0.05
-      fit: 0.25
     Berserker's Shield:
       total: 0.55
       efficiency: 0.71
       win: 0.51
-      pick: 0.22
+      pick: 0.2
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.58
-      pick: 0.21
+      win: 0.56
+      pick: 0.23
       fit: 0.32
-    Hide of the Nemean Lion:
+    Kinetic Cuirass:
       total: 0.55
-      efficiency: 0.54
-      win: 0.71
-      pick: 0.07
-      fit: 0.28
+      efficiency: 0.6
+      win: 0.57
+      pick: 0.08
+      fit: 0.5
+    Shield of the Phoenix:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.32
+      fit: 0.4
     Amanita Charm:
       total: 0.56
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Shogun's Ofuda:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.62
-      pick: 0.12
-      fit: 0.43
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Contagion
+  - Avenging Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Hide of the Nemean Lion
+  - Kinetic Cuirass
   - The Crusher
-  - Shogun's Ofuda
+  - Heartseeker
   flex_slots:
-  - The Crusher
-  - Shogun's Ofuda
+  - Heartseeker
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -241,68 +252,68 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Hide of the Nemean Lion — physical protection
+    swap_item: Hide of the Nemean Lion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Shogun''s Ofuda, Avenging Blade, Amanita Charm, Runeforged
-    Hammer, Riptalon, Oni Hunter''s Garb, Eye of Providence, Lernaean Bow, Hydra''s
-    Lament, The Reaper, Silverbranch Bow, Pharaoh''s Curse, Void Shield, Tekko-Kagi,
-    Damaru, Stone of Binding, Screeching Gargoyle, Heartseeker, Breastplate of Valor,
-    Yogi''s Necklace, Void Stone, Spectral Armor, Eye of the Storm, Genji''s Guard,
-    Kinetic Cuirass.'
+    for this god: The Crusher, Kinetic Cuirass, Heartseeker, Avenging Blade, Amanita
+    Charm, Runeforged Hammer, Genji''s Guard, Golden Blade, Riptalon, Oni Hunter''s
+    Garb, Eye of Providence, Lernaean Bow, Hydra''s Lament, The Reaper, Silverbranch
+    Bow, Pharaoh''s Curse, Void Shield, Tekko-Kagi, Damaru, Stone of Binding, Screeching
+    Gargoyle, Shogun''s Ofuda, Breastplate of Valor, Yogi''s Necklace, Void Stone,
+    Spectral Armor, Eye of the Storm.'
   slot_scores:
-    Contagion:
-      total: 0.64
-      efficiency: 0.43
-      win: 1.0
-      pick: 0.05
-      fit: 0.22
+    Avenging Blade:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Berserker's Shield:
       total: 0.54
       efficiency: 0.71
       win: 0.51
-      pick: 0.22
+      pick: 0.2
       fit: 0.33
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.58
-      pick: 0.21
+      win: 0.56
+      pick: 0.23
       fit: 0.48
-    Hide of the Nemean Lion:
-      total: 0.54
-      efficiency: 0.54
-      win: 0.71
-      pick: 0.07
-      fit: 0.19
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.6
+      win: 0.57
+      pick: 0.08
+      fit: 0.36
     The Crusher:
       total: 0.53
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Shogun's Ofuda:
+    Heartseeker:
       total: 0.52
-      efficiency: 0.53
-      win: 0.62
-      pick: 0.12
-      fit: 0.33
+      efficiency: 0.46
+      win: 0.61
+      pick: 0.05
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Contagion
   - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Hide of the Nemean Lion
-  - Shogun's Ofuda
+  - Kinetic Cuirass
+  - Riptalon
+  - The Crusher
   flex_slots:
-  - Golden Blade
-  - Shogun's Ofuda
+  - The Crusher
+  - Riptalon
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -311,65 +322,65 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Hide of the Nemean Lion — physical protection
+    swap_item: Hide of the Nemean Lion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Shogun''s Ofuda, The Crusher, Riptalon, Amanita Charm, Pharaoh''s Curse,
-    Runeforged Hammer, Lernaean Bow, Silverbranch Bow, Oni Hunter''s Garb, Eye of
-    Providence, Tyrfing, Hydra''s Lament, Breastplate of Valor, Yogi''s Necklace,
-    Damaru, Spectral Armor, Dominance, Genji''s Guard, Toxic Blade, Shield of the
-    Phoenix, The Reaper, Freya''s Tears, Avenging Blade, Eye of the Storm, Kinetic
-    Cuirass.'
+    this god: Kinetic Cuirass, Golden Blade, The Crusher, Riptalon, Amanita Charm,
+    Genji''s Guard, Pharaoh''s Curse, Runeforged Hammer, Lernaean Bow, Silverbranch
+    Bow, Oni Hunter''s Garb, Eye of Providence, Shogun''s Ofuda, Tyrfing, Hydra''s
+    Lament, Breastplate of Valor, Yogi''s Necklace, Damaru, Spectral Armor, Dominance,
+    Toxic Blade, Shield of the Phoenix, The Reaper, Freya''s Tears, Avenging Blade,
+    Eye of the Storm.'
   slot_scores:
-    Contagion:
-      total: 0.64
-      efficiency: 0.43
-      win: 1.0
-      pick: 0.05
-      fit: 0.21
     Golden Blade:
-      total: 0.53
+      total: 0.51
       efficiency: 0.55
-      win: 0.55
-      pick: 0.16
+      win: 0.5
+      pick: 0.11
       fit: 0.56
     Berserker's Shield:
       total: 0.54
       efficiency: 0.71
       win: 0.51
-      pick: 0.22
+      pick: 0.2
       fit: 0.38
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.58
-      pick: 0.21
-      fit: 0.24
-    Hide of the Nemean Lion:
-      total: 0.54
-      efficiency: 0.54
-      win: 0.71
-      pick: 0.07
-      fit: 0.18
-    Shogun's Ofuda:
       total: 0.53
-      efficiency: 0.53
-      win: 0.62
-      pick: 0.12
-      fit: 0.38
+      efficiency: 0.65
+      win: 0.56
+      pick: 0.23
+      fit: 0.24
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.6
+      win: 0.57
+      pick: 0.08
+      fit: 0.34
+    Riptalon:
+      total: 0.5
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    The Crusher:
+      total: 0.5
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Contagion
+  - Genji's Guard
   - Berserker's Shield
   - Breastplate of Valor
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Hydra's Lament
-  - Hide of the Nemean Lion
   flex_slots:
   - Hydra's Lament
   - Breastplate of Valor
@@ -378,33 +389,33 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Hide of the Nemean Lion — physical protection
+    swap_item: Hide of the Nemean Lion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Shogun''s Ofuda, Hydra''s Lament,
-    Breastplate of Valor, The Crusher, Genji''s Guard, Amanita Charm, Shield of the
-    Phoenix, Freya''s Tears, Oni Hunter''s Garb, Eye of Providence, Runeforged Hammer,
-    Pharaoh''s Curse, Yogi''s Necklace, Chandra''s Grace, Lernaean Bow, Damaru, Screeching
-    Gargoyle, Spectral Armor, Riptalon, Arondight, Gladiator''s Shield, Silverbranch
-    Bow, Avenging Blade, Eye of the Storm, Kinetic Cuirass.'
+    + fit + win/pick). Underrated for this god: Genji''s Guard, Kinetic Cuirass, Hydra''s
+    Lament, Breastplate of Valor, The Crusher, Amanita Charm, Shield of the Phoenix,
+    Freya''s Tears, Oni Hunter''s Garb, Eye of Providence, Runeforged Hammer, Pharaoh''s
+    Curse, Golden Blade, Yogi''s Necklace, Chandra''s Grace, Lernaean Bow, Shogun''s
+    Ofuda, Damaru, Screeching Gargoyle, Spectral Armor, Riptalon, Arondight, Gladiator''s
+    Shield, Silverbranch Bow, Avenging Blade, Eye of the Storm.'
   slot_scores:
-    Contagion:
-      total: 0.64
-      efficiency: 0.43
-      win: 1.0
-      pick: 0.05
-      fit: 0.21
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
     Berserker's Shield:
       total: 0.53
       efficiency: 0.71
       win: 0.51
-      pick: 0.22
+      pick: 0.2
       fit: 0.3
     Breastplate of Valor:
       total: 0.5
@@ -413,23 +424,23 @@ builds:
       pick: 0.0
       fit: 0.33
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.58
-      pick: 0.21
+      win: 0.56
+      pick: 0.23
       fit: 0.45
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.6
+      win: 0.57
+      pick: 0.08
+      fit: 0.34
     Hydra's Lament:
       total: 0.5
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Hide of the Nemean Lion:
-      total: 0.54
-      efficiency: 0.54
-      win: 0.71
-      pick: 0.07
-      fit: 0.17
   starter: *id001
 - source: suggested
   archetype: model
@@ -458,29 +469,29 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, Amanita Charm, Runeforged Hammer, Kinetic
-    Cuirass, Genji''s Guard, Lernaean Bow, Eye of Providence, Oni Hunter''s Garb,
-    Pharaoh''s Curse, Hydra''s Lament, Damaru, Yogi''s Necklace, Breastplate of Valor,
-    Eye of the Storm, Avenging Blade, Shogun''s Ofuda, Shield Splitter, Dominance,
-    Riptalon, Spectral Armor, Shield of the Phoenix, Tekko-Kagi, The Reaper, Tyrfing,
-    Freya''s Tears.'
+    Cuirass, Golden Blade, Genji''s Guard, Lernaean Bow, Eye of Providence, Oni Hunter''s
+    Garb, Pharaoh''s Curse, Hydra''s Lament, Damaru, Yogi''s Necklace, Breastplate
+    of Valor, Eye of the Storm, Avenging Blade, Shogun''s Ofuda, Shield Splitter,
+    Dominance, Riptalon, Spectral Armor, Shield of the Phoenix, Tekko-Kagi, The Reaper,
+    Tyrfing, Freya''s Tears.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
       efficiency: 0.71
       win: 0.51
-      pick: 0.22
+      pick: 0.2
       fit: 0.4
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.58
-      pick: 0.21
+      win: 0.56
+      pick: 0.23
       fit: 0.37
     Kinetic Cuirass:
-      total: 0.42
+      total: 0.53
       efficiency: 0.6
-      win: 0.33
-      pick: 0.06
+      win: 0.57
+      pick: 0.08
       fit: 0.42
     Runeforged Hammer:
       total: 0.5
