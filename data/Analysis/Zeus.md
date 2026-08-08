@@ -2,11 +2,11 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.60 | 0.67 | 0.59 | 0.57 | 0.17 | 0.85 | fair | burst, sustain, aura |  |
+| Soul Gem | 0.59 | 0.67 | 0.59 | 0.56 | 0.17 | 0.85 | fair | burst, sustain, aura |  |
 | Gluttonous Grimoire | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.72 | undervalued | burst | **UNDERRATED** |
-| Genji's Guard | 0.55 | 0.54 | 0.72 | 0.61 | 0.07 | 0.13 | undervalued |  | **UNDERRATED** |
-| Spear of Desolation | 0.54 | 0.56 | 0.52 | 0.54 | 0.37 | 0.63 | fair |  |  |
-| Obsidian Shard | 0.52 | 0.53 | 0.54 | 0.55 | 0.20 | 0.50 | fair |  |  |
+| Genji's Guard | 0.56 | 0.54 | 0.72 | 0.63 | 0.08 | 0.13 | undervalued |  | **UNDERRATED** |
+| Spear of Desolation | 0.54 | 0.56 | 0.52 | 0.54 | 0.36 | 0.63 | fair |  |  |
+| Obsidian Shard | 0.52 | 0.53 | 0.54 | 0.54 | 0.19 | 0.50 | fair |  |  |
 | Bancroft's Talon | 0.51 | 0.52 | 0.58 | 0.53 | 0.30 | 0.39 | fair | sustain |  |
 | Spear of the Magus | 0.51 | 0.57 | 0.60 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.50 | 0.56 | 0.58 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
@@ -14,7 +14,7 @@
 | Nimble Ring | 0.49 | 0.53 | 0.49 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
 | Blood-Bound Book | 0.49 | 0.52 | 0.58 | 0.50 | 0.00 | 0.39 | fair | sustain | **UNDERRATED** |
 | Chronos' Pendant | 0.48 | 0.51 | 0.56 | 0.50 | 0.00 | 0.39 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.48 | 0.45 | 0.44 | 0.53 | 0.25 | 0.50 | premium |  |  |
+| Rod of Tahuti | 0.48 | 0.45 | 0.44 | 0.53 | 0.24 | 0.50 | premium |  |  |
 | Bragi's Harp | 0.48 | 0.50 | 0.46 | 0.50 | 0.00 | 0.61 | fair | burst | **UNDERRATED** |
 | Breastplate of Valor | 0.47 | 0.50 | 0.65 | 0.50 | 0.00 | 0.13 | undervalued |  | **UNDERRATED** |
 | Death Metal | 0.47 | 0.50 | 0.60 | 0.50 | 0.00 | 0.26 | fair |  | **UNDERRATED** |
@@ -26,8 +26,8 @@
 | Jade Scepter | 0.46 | 0.48 | 0.57 | 0.50 | 0.00 | 0.26 | fair | peel | **UNDERRATED** |
 | Gem of Focus | 0.46 | 0.47 | 0.51 | 0.50 | 0.00 | 0.39 | fair | mobility | **UNDERRATED** |
 | Typhon’s Heart | 0.46 | 0.47 | 0.51 | 0.50 | 0.00 | 0.39 | fair |  | **UNDERRATED** |
-| Shifter's Shield | 0.46 | 0.39 | 0.55 | 0.58 | 0.13 | 0.00 | fair |  |  |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
+| Shifter's Shield | 0.46 | 0.39 | 0.55 | 0.57 | 0.13 | 0.00 | fair |  |  |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Wish-Granting Pearl | 0.45 | 0.46 | 0.54 | 0.50 | 0.00 | 0.26 | fair |  | **UNDERRATED** |
 | Polynomicon | 0.45 | 0.45 | 0.49 | 0.50 | 0.00 | 0.36 | fair | burst |  |
@@ -46,7 +46,7 @@
 | Screeching Gargoyle | 0.43 | 0.41 | 0.49 | 0.50 | 0.00 | 0.23 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.43 | 0.41 | 0.53 | 0.50 | 0.00 | 0.13 | fair | sustain |  |
 | Triton's Conch | 0.43 | 0.41 | 0.47 | 0.50 | 0.00 | 0.26 | fair | aura |  |
-| Book of Thoth | 0.42 | 0.37 | 0.42 | 0.51 | 0.10 | 0.26 | premium |  |  |
+| Book of Thoth | 0.42 | 0.37 | 0.42 | 0.52 | 0.10 | 0.26 | premium |  |  |
 | Necronomicon | 0.42 | 0.39 | 0.44 | 0.50 | 0.00 | 0.26 | premium |  |  |
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |

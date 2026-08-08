@@ -3,16 +3,16 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Genji's Guard | 0.60 | 0.60 | 0.72 | 0.65 | 0.16 | 0.32 | undervalued |  |  |
-| Breastplate of Valor | 0.58 | 0.55 | 0.65 | 0.65 | 0.15 | 0.32 | undervalued |  | **UNDERRATED** |
+| Breastplate of Valor | 0.58 | 0.55 | 0.65 | 0.66 | 0.15 | 0.32 | undervalued |  | **UNDERRATED** |
 | Chronos' Pendant | 0.55 | 0.50 | 0.56 | 0.65 | 0.17 | 0.35 | fair |  |  |
 | Gluttonous Grimoire | 0.55 | 0.65 | 0.66 | 0.50 | 0.00 | 0.61 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.53 | 0.52 | 0.52 | 0.59 | 0.20 | 0.50 | fair |  |  |
 | Amanita Charm | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.50 | undervalued | sustain, aura | **UNDERRATED** |
+| Rod of Tahuti | 0.53 | 0.41 | 0.44 | 0.70 | 0.16 | 0.36 | premium |  |  |
+| Spear of Desolation | 0.53 | 0.52 | 0.52 | 0.58 | 0.19 | 0.50 | fair |  |  |
 | Kinetic Cuirass | 0.53 | 0.60 | 0.60 | 0.50 | 0.00 | 0.60 | fair | burst | **UNDERRATED** |
-| Rod of Tahuti | 0.53 | 0.41 | 0.44 | 0.69 | 0.16 | 0.36 | premium |  |  |
 | Soul Gem | 0.52 | 0.59 | 0.59 | 0.50 | 0.00 | 0.60 | fair | burst, sustain, aura | **UNDERRATED** |
 | Eye of Providence | 0.52 | 0.58 | 0.62 | 0.50 | 0.00 | 0.50 | undervalued |  | **UNDERRATED** |
-| Obsidian Shard | 0.51 | 0.48 | 0.54 | 0.59 | 0.09 | 0.36 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.52 | 0.48 | 0.54 | 0.60 | 0.08 | 0.36 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.50 | 0.56 | 0.59 | 0.50 | 0.00 | 0.49 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.50 | 0.56 | 0.65 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
 | The World Stone | 0.50 | 0.45 | 0.49 | 0.60 | 0.12 | 0.36 | fair |  |  |

@@ -2,14 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.60 | 0.69 | 0.59 | 0.54 | 0.19 | 0.93 | fair | burst, sustain, aura |  |
-| Soul Reaver | 0.60 | 0.46 | 0.46 | 0.81 | 0.06 | 0.45 | fair | burst |  |
-| Dreamer's Idol | 0.58 | 0.54 | 0.49 | 0.69 | 0.07 | 0.66 | fair | cc-immunity | **UNDERRATED** |
-| The World Stone | 0.58 | 0.54 | 0.49 | 0.67 | 0.10 | 0.66 | fair |  | **UNDERRATED** |
+| Soul Gem | 0.59 | 0.69 | 0.59 | 0.53 | 0.18 | 0.93 | fair | burst, sustain, aura |  |
+| Dreamer's Idol | 0.59 | 0.54 | 0.49 | 0.70 | 0.07 | 0.66 | fair | cc-immunity | **UNDERRATED** |
 | Spear of Desolation | 0.57 | 0.62 | 0.52 | 0.54 | 0.46 | 0.83 | fair |  |  |
 | Gluttonous Grimoire | 0.57 | 0.69 | 0.66 | 0.50 | 0.00 | 0.76 | undervalued | burst | **UNDERRATED** |
 | Obsidian Shard | 0.57 | 0.57 | 0.54 | 0.59 | 0.26 | 0.66 | fair |  |  |
-| Doom Orb | 0.55 | 0.54 | 0.49 | 0.60 | 0.15 | 0.66 | fair |  | **UNDERRATED** |
+| The World Stone | 0.56 | 0.54 | 0.49 | 0.64 | 0.11 | 0.66 | fair |  | **UNDERRATED** |
+| Doom Orb | 0.54 | 0.54 | 0.49 | 0.59 | 0.14 | 0.66 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.53 | 0.62 | 0.60 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
 | Rod of Tahuti | 0.53 | 0.50 | 0.44 | 0.59 | 0.22 | 0.66 | premium |  |  |
 | The Cosmic Horror | 0.53 | 0.60 | 0.58 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
@@ -31,10 +30,11 @@
 | Ethereal Staff | 0.46 | 0.48 | 0.53 | 0.50 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
 | Ancient Signet | 0.46 | 0.48 | 0.49 | 0.50 | 0.00 | 0.45 | fair | burst | **UNDERRATED** |
 | Alchemist Coat | 0.46 | 0.47 | 0.52 | 0.50 | 0.00 | 0.35 | fair |  |  |
-| Book of Thoth | 0.46 | 0.40 | 0.42 | 0.56 | 0.17 | 0.35 | premium |  |  |
+| Book of Thoth | 0.46 | 0.40 | 0.42 | 0.56 | 0.18 | 0.35 | premium |  |  |
 | Freya's Tears | 0.46 | 0.46 | 0.59 | 0.50 | 0.00 | 0.17 | fair |  |  |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Typhon’s Heart | 0.46 | 0.46 | 0.51 | 0.50 | 0.00 | 0.35 | fair |  |  |
+| Soul Reaver | 0.45 | 0.46 | 0.46 | 0.50 | 0.00 | 0.45 | fair | burst |  |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Shield of the Phoenix | 0.45 | 0.45 | 0.57 | 0.50 | 0.00 | 0.17 | fair | sustain |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |

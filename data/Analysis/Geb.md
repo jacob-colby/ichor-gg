@@ -2,22 +2,22 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Freya's Tears | 0.61 | 0.64 | 0.59 | 0.64 | 0.11 | 0.76 | fair |  | **UNDERRATED** |
+| Freya's Tears | 0.61 | 0.64 | 0.59 | 0.63 | 0.09 | 0.76 | fair |  | **UNDERRATED** |
+| Genji's Guard | 0.59 | 0.64 | 0.72 | 0.56 | 0.28 | 0.45 | undervalued |  |  |
 | Amanita Charm | 0.58 | 0.72 | 0.66 | 0.50 | 0.00 | 0.85 | undervalued | sustain, aura | **UNDERRATED** |
-| Genji's Guard | 0.58 | 0.64 | 0.72 | 0.55 | 0.28 | 0.45 | undervalued |  |  |
-| Breastplate of Valor | 0.58 | 0.59 | 0.65 | 0.61 | 0.15 | 0.45 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.58 | 0.71 | 0.60 | 0.50 | 0.00 | 0.95 | fair | burst | **UNDERRATED** |
+| Breastplate of Valor | 0.57 | 0.59 | 0.65 | 0.60 | 0.15 | 0.45 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.57 | 0.69 | 0.62 | 0.50 | 0.00 | 0.85 | undervalued |  | **UNDERRATED** |
-| Stampede | 0.56 | 0.53 | 0.52 | 0.63 | 0.17 | 0.55 | fair | mobility, aura, cc-immunity |  |
-| Spirit Robe | 0.55 | 0.43 | 0.36 | 0.74 | 0.06 | 0.61 | premium | sustain |  |
+| Stampede | 0.55 | 0.53 | 0.52 | 0.63 | 0.16 | 0.55 | fair | mobility, aura, cc-immunity |  |
 | Shifter's Shield | 0.55 | 0.64 | 0.55 | 0.50 | 0.00 | 0.85 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.54 | 0.62 | 0.65 | 0.50 | 0.00 | 0.55 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.54 | 0.62 | 0.52 | 0.50 | 0.00 | 0.85 | fair | aura | **UNDERRATED** |
+| Spirit Robe | 0.53 | 0.43 | 0.36 | 0.70 | 0.05 | 0.61 | premium | sustain |  |
 | Shield of the Phoenix | 0.53 | 0.61 | 0.57 | 0.50 | 0.00 | 0.70 | fair | sustain | **UNDERRATED** |
 | Draconic Scale | 0.53 | 0.61 | 0.50 | 0.50 | 0.00 | 0.85 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.51 | 0.58 | 0.59 | 0.50 | 0.00 | 0.55 | fair | anti-crit, aura | **UNDERRATED** |
-| Prophetic Cloak | 0.51 | 0.52 | 0.43 | 0.54 | 0.09 | 0.76 | premium |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.51 | 0.56 | 0.66 | 0.50 | 0.00 | 0.34 | undervalued | burst | **UNDERRATED** |
+| Prophetic Cloak | 0.51 | 0.52 | 0.43 | 0.53 | 0.09 | 0.76 | premium |  | **UNDERRATED** |
 | Leviathan's Hide | 0.50 | 0.55 | 0.55 | 0.50 | 0.00 | 0.55 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.50 | 0.55 | 0.52 | 0.50 | 0.00 | 0.61 | fair | peel, cc-immunity | **UNDERRATED** |
 | Stone of Binding | 0.50 | 0.55 | 0.48 | 0.50 | 0.00 | 0.71 | fair | protection-shred | **UNDERRATED** |
@@ -80,7 +80,7 @@
 | Doom Orb | 0.39 | 0.34 | 0.49 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Nimble Ring | 0.39 | 0.34 | 0.49 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Divine Ruin | 0.39 | 0.33 | 0.43 | 0.50 | 0.00 | 0.10 | premium | anti-heal, burst |  |
-| Gauntlet of Thebes | 0.39 | 0.26 | 0.27 | 0.55 | 0.24 | 0.24 | premium |  |  |
+| Gauntlet of Thebes | 0.39 | 0.26 | 0.27 | 0.54 | 0.26 | 0.24 | premium |  |  |
 | Necronomicon | 0.38 | 0.31 | 0.44 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.38 | 0.31 | 0.18 | 0.50 | 0.00 | 0.61 | premium | anti-heal |  |
 | Rod of Tahuti | 0.38 | 0.31 | 0.44 | 0.50 | 0.00 | 0.00 | premium |  |  |

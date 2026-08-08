@@ -12,7 +12,7 @@
 | Eye of Providence | 0.51 | 0.57 | 0.62 | 0.50 | 0.00 | 0.45 | undervalued |  | **UNDERRATED** |
 | Soul Gem | 0.50 | 0.56 | 0.59 | 0.50 | 0.00 | 0.49 | fair | burst, sustain, aura | **UNDERRATED** |
 | Gladiator's Shield | 0.50 | 0.43 | 0.41 | 0.63 | 0.08 | 0.47 | premium | burst |  |
-| Shifter's Shield | 0.50 | 0.52 | 0.55 | 0.49 | 0.35 | 0.45 | fair |  |  |
+| Shifter's Shield | 0.50 | 0.52 | 0.55 | 0.49 | 0.36 | 0.45 | fair |  |  |
 | Oni Hunter's Garb | 0.50 | 0.54 | 0.65 | 0.50 | 0.00 | 0.29 | undervalued |  | **UNDERRATED** |
 | Runeforged Hammer | 0.49 | 0.54 | 0.60 | 0.50 | 0.00 | 0.40 | fair | burst | **UNDERRATED** |
 | Freya's Tears | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
@@ -23,9 +23,9 @@
 | Spear of the Magus | 0.48 | 0.51 | 0.60 | 0.50 | 0.00 | 0.30 | fair |  | **UNDERRATED** |
 | Eye of the Storm | 0.48 | 0.50 | 0.52 | 0.50 | 0.00 | 0.46 | fair | peel | **UNDERRATED** |
 | Spectral Armor | 0.48 | 0.50 | 0.59 | 0.50 | 0.00 | 0.29 | fair | anti-crit, aura | **UNDERRATED** |
-| Genji's Guard | 0.48 | 0.58 | 0.72 | 0.40 | 0.15 | 0.24 | undervalued |  | **UNDERRATED** |
 | Helm of Radiance | 0.47 | 0.50 | 0.58 | 0.50 | 0.00 | 0.31 | fair |  | **UNDERRATED** |
 | Erosion | 0.47 | 0.50 | 0.52 | 0.50 | 0.00 | 0.45 | fair | aura | **UNDERRATED** |
+| Genji's Guard | 0.47 | 0.58 | 0.72 | 0.40 | 0.14 | 0.24 | undervalued |  | **UNDERRATED** |
 | Rod of Asclepius | 0.47 | 0.50 | 0.59 | 0.50 | 0.00 | 0.28 | fair | sustain, aura | **UNDERRATED** |
 | The Cosmic Horror | 0.47 | 0.50 | 0.58 | 0.50 | 0.00 | 0.30 | fair |  | **UNDERRATED** |
 | Yogi's Necklace | 0.47 | 0.49 | 0.65 | 0.50 | 0.00 | 0.13 | undervalued |  | **UNDERRATED** |

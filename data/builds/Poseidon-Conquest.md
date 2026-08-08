@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of the Trident
   aspect_pick_rate: 0.07
-  aspect_win_rate: 0.34
+  aspect_win_rate: 0.35
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.52
@@ -17,13 +17,13 @@ builds:
       win_rate: 0.52
     - name: Doom Orb
       pick_rate: 0.08
-      win_rate: 0.55
+      win_rate: 0.56
   - name: Book of Thoth
     pick_rate: 0.2
-    win_rate: 0.54
+    win_rate: 0.55
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.19
+      pick_rate: 0.2
       win_rate: 0.52
     - name: The World Stone
       pick_rate: 0.13
@@ -33,7 +33,7 @@ builds:
     win_rate: 0.55
     alternates:
     - name: Nimble Ring
-      pick_rate: 0.17
+      pick_rate: 0.18
       win_rate: 0.62
     - name: The World Stone
       pick_rate: 0.11
@@ -47,46 +47,46 @@ builds:
       win_rate: 0.61
     - name: Nimble Ring
       pick_rate: 0.13
-      win_rate: 0.59
+      win_rate: 0.56
   - name: Nimble Ring
     pick_rate: 0.1
-    win_rate: 0.61
+    win_rate: 0.59
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.27
       win_rate: 0.62
     - name: Rod of Tahuti
-      pick_rate: 0.15
-      win_rate: 0.55
+      pick_rate: 0.14
+      win_rate: 0.57
   - name: Evil Eye
     pick_rate: 0.1
     win_rate: 0.35
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.08
-      win_rate: 0.51
+      win_rate: 0.5
     - name: Blinking Abyss
-      pick_rate: 0.08
-      win_rate: 0.76
+      pick_rate: 0.07
+      win_rate: 0.77
   community_starters:
   - name: Pendulum of The Ages
     pick_rate: 0.32
     win_rate: 0.59
   - name: Archmage's Gem
-    pick_rate: 0.21
+    pick_rate: 0.2
     win_rate: 0.57
   - name: Sands of Time
     pick_rate: 0.14
-    win_rate: 0.45
+    win_rate: 0.44
   source_url: https://smitebrain.com/gods/poseidon/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5425867507886435
-  god_matches_won: 516
-  god_matches_played: 951
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5419921875
+  god_matches_won: 555
+  god_matches_played: 1024
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -96,12 +96,12 @@ builds:
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
   - The World Stone
-  - Obsidian Shard
   flex_slots:
   - The Cosmic Horror
-  - Obsidian Shard
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -140,6 +140,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Doom Orb:
+      total: 0.54
+      efficiency: 0.49
+      win: 0.56
+      pick: 0.08
+      fit: 0.79
     Spear of the Magus:
       total: 0.55
       efficiency: 0.6
@@ -151,12 +157,6 @@ builds:
       efficiency: 0.49
       win: 0.61
       pick: 0.13
-      fit: 0.79
-    Obsidian Shard:
-      total: 0.54
-      efficiency: 0.54
-      win: 0.51
-      pick: 0.16
       fit: 0.79
   starter: &id001
     base: Conduit Gem
@@ -307,12 +307,12 @@ builds:
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
   - The World Stone
-  - Obsidian Shard
   flex_slots:
   - The Cosmic Horror
-  - Obsidian Shard
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -352,6 +352,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
+    Doom Orb:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.56
+      pick: 0.08
+      fit: 0.85
     Spear of the Magus:
       total: 0.56
       efficiency: 0.6
@@ -363,12 +369,6 @@ builds:
       efficiency: 0.49
       win: 0.61
       pick: 0.13
-      fit: 0.85
-    Obsidian Shard:
-      total: 0.55
-      efficiency: 0.54
-      win: 0.51
-      pick: 0.16
       fit: 0.85
   starter: *id001
 - source: suggested
@@ -397,7 +397,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Nimble Ring, Soul Gem, The World Stone, Genji''s
+    this god: Gluttonous Grimoire, Soul Gem, Nimble Ring, The World Stone, Genji''s
     Guard, Spear of the Magus, Bracer of The Abyss, Bragi''s Harp, Death Metal, The
     Cosmic Horror, Doom Orb, Breastplate of Valor, Blood-Bound Book, Bancroft''s Talon,
     Chronos'' Pendant, Rod of Asclepius, Amanita Charm, Oni Hunter''s Garb, Helm of
@@ -411,9 +411,9 @@ builds:
       pick: 0.0
       fit: 0.4
     Nimble Ring:
-      total: 0.52
+      total: 0.51
       efficiency: 0.49
-      win: 0.61
+      win: 0.59
       pick: 0.1
       fit: 0.48
     Bragi's Harp:
@@ -470,7 +470,7 @@ builds:
     + fit + win/pick). Underrated for this god: Soul Gem, Genji''s Guard, Gluttonous
     Grimoire, Breastplate of Valor, Chronos'' Pendant, The World Stone, Freya''s Tears,
     Shield of the Phoenix, Gem of Focus, Spear of the Magus, The Cosmic Horror, Screeching
-    Gargoyle, Chandra''s Grace, Death Metal, Doom Orb, Gladiator''s Shield, Amanita
+    Gargoyle, Chandra''s Grace, Doom Orb, Death Metal, Gladiator''s Shield, Amanita
     Charm, Rod of Asclepius, Oni Hunter''s Garb, Dreamer''s Idol, Yogi''s Necklace,
     Blood-Bound Book, Kinetic Cuirass, Helm of Radiance, Bancroft''s Talon.'
   slot_scores:
@@ -540,7 +540,7 @@ builds:
     win/pick). Underrated for this god: Jotunn''s Revenge, The Crusher, Gluttonous
     Grimoire, Soul Gem, The World Stone, Hydra''s Lament, Death Metal, Spear of the
     Magus, Lernaean Bow, Bragi''s Harp, Runeforged Hammer, The Cosmic Horror, Genji''s
-    Guard, The Reaper, Berserker''s Shield, Doom Orb, Golden Blade, Tekko-Kagi, Damaru,
+    Guard, Doom Orb, The Reaper, Berserker''s Shield, Golden Blade, Tekko-Kagi, Damaru,
     Heartseeker, Dominance, Bracer of The Abyss, Tyrfing, Chronos'' Pendant, Breastplate
     of Valor, Triton''s Conch, Riptalon, Pendulum Blade, Avenging Blade, Titan''s
     Bane, Rod of Asclepius, Arondight, Silverbranch Bow, Blood-Bound Book, Dreamer''s

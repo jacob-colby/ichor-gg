@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of the Cosmos
   aspect_pick_rate: 0.12
-  aspect_win_rate: 0.49
+  aspect_win_rate: 0.51
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.35
+    pick_rate: 0.36
     win_rate: 0.49
     alternates:
     - name: Tyrfing
       pick_rate: 0.33
-      win_rate: 0.51
+      win_rate: 0.52
     - name: Book of Thoth
       pick_rate: 0.06
-      win_rate: 0.53
+      win_rate: 0.55
   - name: Bragi's Harp
-    pick_rate: 0.17
+    pick_rate: 0.18
     win_rate: 0.54
     alternates:
     - name: Staff of Myrddin
-      pick_rate: 0.15
-      win_rate: 0.49
+      pick_rate: 0.14
+      win_rate: 0.47
     - name: Spear of Desolation
       pick_rate: 0.09
-      win_rate: 0.6
+      win_rate: 0.61
   - name: Rod of Tahuti
     pick_rate: 0.13
-    win_rate: 0.48
+    win_rate: 0.46
     alternates:
     - name: Soul Gem
       pick_rate: 0.1
       win_rate: 0.53
     - name: Barbed Carver
-      pick_rate: 0.09
-      win_rate: 0.46
+      pick_rate: 0.08
+      win_rate: 0.45
   - name: Obsidian Shard
-    pick_rate: 0.15
+    pick_rate: 0.14
     win_rate: 0.43
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.19
-      win_rate: 0.56
+      pick_rate: 0.2
+      win_rate: 0.58
     - name: The Executioner
       pick_rate: 0.08
-      win_rate: 0.58
+      win_rate: 0.59
   - name: Evil Eye
     pick_rate: 0.05
-    win_rate: 0.47
+    win_rate: 0.45
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.14
       win_rate: 0.55
     - name: Rod of Tahuti
       pick_rate: 0.06
-      win_rate: 0.6
+      win_rate: 0.63
   - name: Hunter's Bow
-    pick_rate: 0.07
+    pick_rate: 0.06
     win_rate: 0.43
     alternates:
     - name: Evil Eye
       pick_rate: 0.06
-      win_rate: 0.4
+      win_rate: 0.48
     - name: Blinking Abyss
-      pick_rate: 0.05
+      pick_rate: 0.04
       win_rate: 0.47
   community_starters:
   - name: Death's Embrace
     pick_rate: 0.25
-    win_rate: 0.56
+    win_rate: 0.57
   - name: Archmage's Gem
     pick_rate: 0.21
-    win_rate: 0.56
-  - name: Bluestone Brooch
-    pick_rate: 0.11
-    win_rate: 0.53
+    win_rate: 0.58
+  - name: Conduit Gem
+    pick_rate: 0.12
+    win_rate: 0.43
   source_url: https://smitebrain.com/gods/nut/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5138121546961326
-  god_matches_won: 372
-  god_matches_played: 724
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5151133501259446
+  god_matches_won: 409
+  god_matches_played: 794
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -147,7 +147,7 @@ builds:
       total: 0.52
       efficiency: 0.46
       win: 0.54
-      pick: 0.17
+      pick: 0.18
       fit: 0.71
     The Crusher:
       total: 0.52
@@ -212,16 +212,16 @@ builds:
       pick: 0.0
       fit: 0.56
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.46
       win: 0.54
-      pick: 0.17
+      pick: 0.18
       fit: 0.62
     Spear of Desolation:
-      total: 0.5
+      total: 0.51
       efficiency: 0.52
       win: 0.49
-      pick: 0.35
+      pick: 0.36
       fit: 0.56
     The Crusher:
       total: 0.53
@@ -359,7 +359,7 @@ builds:
       total: 0.51
       efficiency: 0.52
       win: 0.49
-      pick: 0.35
+      pick: 0.36
       fit: 0.57
     Spear of the Magus:
       total: 0.51
@@ -390,8 +390,8 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
+  - Berserker's Shield
   - The Crusher
-  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -430,7 +430,7 @@ builds:
     Tyrfing:
       total: 0.51
       efficiency: 0.47
-      win: 0.51
+      win: 0.52
       pick: 0.33
       fit: 0.63
     Riptalon:
@@ -515,7 +515,7 @@ builds:
       total: 0.51
       efficiency: 0.52
       win: 0.49
-      pick: 0.35
+      pick: 0.36
       fit: 0.6
     Soul Gem:
       total: 0.57

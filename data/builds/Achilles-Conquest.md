@@ -14,17 +14,17 @@ builds:
     alternates:
     - name: Daybreak Gavel
       pick_rate: 0.18
-      win_rate: 0.55
+      win_rate: 0.53
     - name: Runeforged Hammer
       pick_rate: 0.12
-      win_rate: 0.57
+      win_rate: 0.58
   - name: Genji's Guard
-    pick_rate: 0.12
+    pick_rate: 0.11
     win_rate: 0.44
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.21
-      win_rate: 0.54
+      pick_rate: 0.22
+      win_rate: 0.53
     - name: Daybreak Gavel
       pick_rate: 0.1
       win_rate: 0.44
@@ -33,60 +33,60 @@ builds:
     win_rate: 0.48
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.19
+      pick_rate: 0.18
       win_rate: 0.56
     - name: Shifter's Shield
       pick_rate: 0.11
-      win_rate: 0.47
+      win_rate: 0.46
   - name: Dwarven Plate
     pick_rate: 0.11
-    win_rate: 0.55
+    win_rate: 0.53
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.1
-      win_rate: 0.56
+      pick_rate: 0.11
+      win_rate: 0.53
     - name: Gladiator's Shield
       pick_rate: 0.07
-      win_rate: 0.44
-  - name: Spirit Robe
+      win_rate: 0.45
+  - name: Freya's Tears
     pick_rate: 0.05
-    win_rate: 0.47
+    win_rate: 0.5
     alternates:
     - name: Dwarven Plate
-      pick_rate: 0.09
+      pick_rate: 0.1
       win_rate: 0.56
     - name: Glorious Pridwen
       pick_rate: 0.05
-      win_rate: 0.59
+      win_rate: 0.61
   - name: Engraved Guard
     pick_rate: 0.06
-    win_rate: 0.6
+    win_rate: 0.62
     alternates:
     - name: Dwarven Plate
       pick_rate: 0.06
       win_rate: 0.58
     - name: Medal of Defense
       pick_rate: 0.06
-      win_rate: 0.52
+      win_rate: 0.48
   community_starters:
   - name: Sundering Axe
     pick_rate: 0.25
-    win_rate: 0.55
+    win_rate: 0.56
   - name: Warrior's Axe
     pick_rate: 0.2
-    win_rate: 0.48
+    win_rate: 0.47
   - name: Bluestone Brooch
-    pick_rate: 0.14
-    win_rate: 0.54
+    pick_rate: 0.15
+    win_rate: 0.53
   source_url: https://smitebrain.com/gods/achilles/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5151953690303908
-  god_matches_won: 356
-  god_matches_played: 691
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5092592592592593
+  god_matches_won: 385
+  god_matches_played: 756
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -120,7 +120,7 @@ builds:
     Shield, Kinetic Cuirass, Eye of Providence, Oni Hunter''s Garb, Hydra''s Lament,
     Eye of the Storm, Avenging Blade, Shield Splitter, Golden Blade, The Reaper, Spectral
     Armor, Shield of the Phoenix, Yogi''s Necklace, Genji''s Guard, Breastplate of
-    Valor, Lernaean Bow, Erosion, Pharaoh''s Curse, Damaru, Freya''s Tears, Heartseeker,
+    Valor, Freya''s Tears, Lernaean Bow, Erosion, Pharaoh''s Curse, Damaru, Heartseeker,
     Draconic Scale, Leviathan''s Hide, Wyrmskin Hide.'
   slot_scores:
     Berserker's Shield:
@@ -142,9 +142,9 @@ builds:
       pick: 0.0
       fit: 0.56
     Runeforged Hammer:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
-      win: 0.57
+      win: 0.58
       pick: 0.12
       fit: 0.59
     The Crusher:
@@ -191,8 +191,8 @@ builds:
     this god: Amanita Charm, Runeforged Hammer, Shield of the Phoenix, Kinetic Cuirass,
     Berserker''s Shield, The Crusher, Eye of Providence, Jotunn''s Revenge, The Reaper,
     Oni Hunter''s Garb, Eye of the Storm, Shield Splitter, Hydra''s Lament, Chandra''s
-    Grace, Erosion, Riptalon, Phoenix Feather, Spectral Armor, Avenging Blade, Freya''s
-    Tears, Golden Blade, Genji''s Guard, Breastplate of Valor, Draconic Scale, Pharaoh''s
+    Grace, Erosion, Riptalon, Phoenix Feather, Spectral Armor, Freya''s Tears, Avenging
+    Blade, Golden Blade, Genji''s Guard, Breastplate of Valor, Draconic Scale, Pharaoh''s
     Curse, Yogi''s Necklace, Leviathan''s Hide, Midgardian Mail.'
   slot_scores:
     Berserker's Shield:
@@ -216,7 +216,7 @@ builds:
     Runeforged Hammer:
       total: 0.56
       efficiency: 0.6
-      win: 0.57
+      win: 0.58
       pick: 0.12
       fit: 0.55
     The Crusher:
@@ -262,7 +262,7 @@ builds:
     Berserker''s Shield, Amanita Charm, The Reaper, Kinetic Cuirass, Eye of Providence,
     Heartseeker, Oni Hunter''s Garb, Hydra''s Lament, Void Shield, Stone of Binding,
     Eye of the Storm, Riptalon, Titan''s Bane, Tekko-Kagi, Void Stone, Screeching
-    Gargoyle, Golden Blade, Genji''s Guard, Yogi''s Necklace, Shield Splitter, Breastplate
+    Gargoyle, Golden Blade, Yogi''s Necklace, Genji''s Guard, Shield Splitter, Breastplate
     of Valor, Silverbranch Bow, Spectral Armor, Pendulum Blade.'
   slot_scores:
     Avenging Blade:
@@ -284,9 +284,9 @@ builds:
       pick: 0.0
       fit: 0.65
     Runeforged Hammer:
-      total: 0.54
+      total: 0.55
       efficiency: 0.6
-      win: 0.57
+      win: 0.58
       pick: 0.12
       fit: 0.48
     The Crusher:
@@ -332,8 +332,8 @@ builds:
     Crusher, Amanita Charm, Jotunn''s Revenge, Kinetic Cuirass, Pharaoh''s Curse,
     Silverbranch Bow, Lernaean Bow, Oni Hunter''s Garb, Eye of Providence, Tyrfing,
     Hydra''s Lament, Shogun''s Ofuda, Genji''s Guard, Breastplate of Valor, Yogi''s
-    Necklace, Toxic Blade, Dominance, Spectral Armor, The Reaper, Shield of the Phoenix,
-    Freya''s Tears, Avenging Blade, Tekko-Kagi, Eros'' Bow.'
+    Necklace, Toxic Blade, Dominance, Spectral Armor, Freya''s Tears, The Reaper,
+    Shield of the Phoenix, Avenging Blade, Tekko-Kagi, Eros'' Bow.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -348,9 +348,9 @@ builds:
       pick: 0.0
       fit: 0.43
     Runeforged Hammer:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
-      win: 0.57
+      win: 0.58
       pick: 0.12
       fit: 0.34
     Riptalon:
@@ -378,29 +378,29 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Shield of the Phoenix
   - Hydra's Lament
   - Runeforged Hammer
+  - Freya's Tears
   flex_slots:
   - Breastplate of Valor
-  - Shield of the Phoenix
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Runeforged Hammer,
-    Genji''s Guard, Hydra''s Lament, Breastplate of Valor, Shield of the Phoenix,
-    Freya''s Tears, Berserker''s Shield, Amanita Charm, The Crusher, Kinetic Cuirass,
+    Hydra''s Lament, Genji''s Guard, Breastplate of Valor, Freya''s Tears, Shield
+    of the Phoenix, Berserker''s Shield, Amanita Charm, The Crusher, Kinetic Cuirass,
     Eye of Providence, Oni Hunter''s Garb, Chandra''s Grace, Screeching Gargoyle,
     Yogi''s Necklace, Arondight, Spectral Armor, Gladiator''s Shield, Pharaoh''s Curse,
     Pendulum Blade, Eye of the Storm, Avenging Blade, Golden Blade, Erosion, Shield
@@ -410,7 +410,7 @@ builds:
       total: 0.52
       efficiency: 0.72
       win: 0.44
-      pick: 0.12
+      pick: 0.11
       fit: 0.43
     Breastplate of Valor:
       total: 0.52
@@ -424,12 +424,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Shield of the Phoenix:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Hydra's Lament:
       total: 0.52
       efficiency: 0.61
@@ -437,11 +431,17 @@ builds:
       pick: 0.0
       fit: 0.55
     Runeforged Hammer:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
-      win: 0.57
+      win: 0.58
       pick: 0.12
       fit: 0.34
+    Freya's Tears:
+      total: 0.51
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.05
+      fit: 0.52
   starter: *id001
 - source: suggested
   archetype: model
@@ -495,9 +495,9 @@ builds:
       pick: 0.0
       fit: 0.56
     Runeforged Hammer:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
-      win: 0.57
+      win: 0.58
       pick: 0.12
       fit: 0.59
     The Crusher:

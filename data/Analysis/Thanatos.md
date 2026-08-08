@@ -3,11 +3,11 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Jotunn's Revenge | 0.67 | 0.76 | 0.65 | 0.58 | 0.68 | 1.00 | undervalued |  |  |
-| Heartseeker | 0.61 | 0.62 | 0.46 | 0.64 | 0.18 | 1.00 | fair | burst |  |
+| Heartseeker | 0.61 | 0.62 | 0.46 | 0.64 | 0.17 | 1.00 | fair | burst |  |
 | The Crusher | 0.60 | 0.75 | 0.65 | 0.50 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
-| The Reaper | 0.59 | 0.65 | 0.53 | 0.56 | 0.28 | 0.91 | fair | sustain |  |
-| Hydra's Lament | 0.59 | 0.64 | 0.61 | 0.56 | 0.36 | 0.71 | fair | burst |  |
-| Titan's Bane | 0.57 | 0.60 | 0.46 | 0.57 | 0.23 | 0.91 | fair |  |  |
+| The Reaper | 0.59 | 0.65 | 0.53 | 0.57 | 0.29 | 0.91 | fair | sustain |  |
+| Hydra's Lament | 0.58 | 0.64 | 0.61 | 0.55 | 0.37 | 0.71 | fair | burst |  |
+| Titan's Bane | 0.56 | 0.60 | 0.46 | 0.56 | 0.23 | 0.91 | fair |  |  |
 | Runeforged Hammer | 0.53 | 0.61 | 0.60 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Tekko-Kagi | 0.52 | 0.59 | 0.46 | 0.50 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
@@ -32,7 +32,6 @@
 | Musashi's Dual Swords | 0.46 | 0.46 | 0.44 | 0.50 | 0.00 | 0.52 | premium | mobility | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
-| Shifter's Shield | 0.45 | 0.39 | 0.55 | 0.57 | 0.05 | 0.00 | fair |  |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
 | Wyrmskin Hide | 0.45 | 0.45 | 0.42 | 0.50 | 0.00 | 0.52 | premium |  |  |
@@ -51,6 +50,7 @@
 | Screeching Gargoyle | 0.42 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.42 | 0.40 | 0.53 | 0.50 | 0.00 | 0.09 | fair | sustain |  |
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Shifter's Shield | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Shogun's Ofuda | 0.41 | 0.37 | 0.53 | 0.50 | 0.00 | 0.00 | fair | aura |  |
@@ -85,8 +85,8 @@
 | Spirit Robe | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Eye of Erebus | 0.35 | 0.25 | 0.32 | 0.50 | 0.00 | 0.09 | premium |  |  |
 | Dwarven Plate | 0.35 | 0.25 | 0.35 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Daybreak Gavel | 0.35 | 0.13 | 0.18 | 0.63 | 0.04 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Daybreak Gavel | 0.34 | 0.13 | 0.18 | 0.62 | 0.04 | 0.00 | premium |  |  |
 | Radiant Bulwark | 0.34 | 0.23 | 0.34 | 0.50 | 0.00 | 0.00 | premium | aura |  |
 | Hastened Fatalis | 0.34 | 0.23 | 0.32 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
 | Resolute Mantle | 0.33 | 0.21 | 0.30 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |

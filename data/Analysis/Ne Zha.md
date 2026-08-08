@@ -2,26 +2,26 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.63 | 0.76 | 0.65 | 0.52 | 0.39 | 1.00 | undervalued |  |  |
+| Jotunn's Revenge | 0.63 | 0.76 | 0.65 | 0.51 | 0.38 | 1.00 | undervalued |  |  |
 | The Crusher | 0.58 | 0.72 | 0.65 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
-| Genji's Guard | 0.54 | 0.57 | 0.72 | 0.55 | 0.11 | 0.22 | undervalued |  | **UNDERRATED** |
-| Hydra's Lament | 0.54 | 0.65 | 0.61 | 0.45 | 0.15 | 0.77 | fair | burst | **UNDERRATED** |
+| Hydra's Lament | 0.54 | 0.65 | 0.61 | 0.46 | 0.14 | 0.77 | fair | burst | **UNDERRATED** |
 | The Reaper | 0.53 | 0.61 | 0.53 | 0.50 | 0.00 | 0.78 | fair | sustain | **UNDERRATED** |
-| Titan's Bane | 0.52 | 0.56 | 0.46 | 0.53 | 0.12 | 0.78 | fair |  | **UNDERRATED** |
+| Genji's Guard | 0.53 | 0.57 | 0.72 | 0.53 | 0.10 | 0.22 | undervalued |  | **UNDERRATED** |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
+| Titan's Bane | 0.52 | 0.56 | 0.46 | 0.52 | 0.12 | 0.78 | fair |  | **UNDERRATED** |
 | Runeforged Hammer | 0.52 | 0.58 | 0.60 | 0.50 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
-| Heartseeker | 0.51 | 0.59 | 0.46 | 0.48 | 0.07 | 0.88 | fair | burst | **UNDERRATED** |
+| Heartseeker | 0.50 | 0.59 | 0.46 | 0.46 | 0.06 | 0.88 | fair | burst | **UNDERRATED** |
 | Tekko-Kagi | 0.50 | 0.55 | 0.46 | 0.50 | 0.00 | 0.78 | fair | mobility | **UNDERRATED** |
 | Lernaean Bow | 0.50 | 0.55 | 0.56 | 0.50 | 0.00 | 0.54 | fair | wave-clear, burst | **UNDERRATED** |
 | Arondight | 0.50 | 0.55 | 0.50 | 0.50 | 0.00 | 0.67 | fair | mobility | **UNDERRATED** |
 | Damaru | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Avatar's Parashu | 0.49 | 0.53 | 0.43 | 0.50 | 0.00 | 0.78 | premium | cc-immunity | **UNDERRATED** |
-| Rage | 0.49 | 0.42 | 0.41 | 0.61 | 0.10 | 0.44 | premium |  |  |
 | Breastplate of Valor | 0.49 | 0.52 | 0.65 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
 | Avenging Blade | 0.49 | 0.52 | 0.51 | 0.50 | 0.00 | 0.54 | fair | protection-shred | **UNDERRATED** |
 | Golden Blade | 0.49 | 0.52 | 0.55 | 0.50 | 0.00 | 0.44 | fair | wave-clear | **UNDERRATED** |
 | Shield Splitter | 0.48 | 0.51 | 0.53 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Dominance | 0.48 | 0.51 | 0.53 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
+| Rage | 0.48 | 0.42 | 0.41 | 0.58 | 0.10 | 0.44 | premium |  |  |
 | Eye of the Storm | 0.47 | 0.50 | 0.52 | 0.50 | 0.00 | 0.44 | fair | peel | **UNDERRATED** |
 | Berserker's Shield | 0.47 | 0.50 | 0.71 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Tyrfing | 0.47 | 0.49 | 0.47 | 0.50 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
@@ -32,7 +32,6 @@
 | Shield of the Phoenix | 0.46 | 0.47 | 0.57 | 0.50 | 0.00 | 0.22 | fair | sustain | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Transcendence | 0.45 | 0.46 | 0.46 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
-| Shifter's Shield | 0.45 | 0.39 | 0.55 | 0.56 | 0.18 | 0.00 | fair |  |  |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
@@ -41,8 +40,9 @@
 | Screeching Gargoyle | 0.44 | 0.44 | 0.49 | 0.50 | 0.00 | 0.32 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.22 | fair | sustain |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
+| Shifter's Shield | 0.44 | 0.39 | 0.55 | 0.53 | 0.18 | 0.00 | fair |  |  |
+| Deathbringer | 0.44 | 0.38 | 0.36 | 0.53 | 0.16 | 0.44 | premium |  |  |
 | Wyrmskin Hide | 0.44 | 0.43 | 0.42 | 0.50 | 0.00 | 0.44 | premium |  |  |
-| Deathbringer | 0.43 | 0.38 | 0.36 | 0.52 | 0.16 | 0.44 | premium |  |  |
 | Sanguine Lash | 0.43 | 0.42 | 0.41 | 0.50 | 0.00 | 0.44 | premium | aura |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Oath-Sworn Spear | 0.43 | 0.41 | 0.36 | 0.50 | 0.00 | 0.54 | premium | protection-shred |  |

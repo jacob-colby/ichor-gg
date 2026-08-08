@@ -2,15 +2,15 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.61 | 0.71 | 0.59 | 0.55 | 0.19 | 1.00 | fair | burst, sustain, aura |  |
+| Soul Gem | 0.60 | 0.71 | 0.59 | 0.53 | 0.15 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.53 | 0.22 | 1.00 | fair |  |  |
-| Rod of Tahuti | 0.57 | 0.54 | 0.44 | 0.63 | 0.31 | 0.79 | premium |  |  |
-| Obsidian Shard | 0.56 | 0.61 | 0.54 | 0.54 | 0.19 | 0.79 | fair |  |  |
+| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.53 | 0.21 | 1.00 | fair |  |  |
+| Obsidian Shard | 0.56 | 0.61 | 0.54 | 0.54 | 0.18 | 0.79 | fair |  |  |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.52 | 0.58 | 0.56 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
+| Rod of Tahuti | 0.51 | 0.54 | 0.44 | 0.52 | 0.18 | 0.79 | premium |  |  |
 | The World Stone | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Doom Orb | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Bancroft's Talon | 0.51 | 0.53 | 0.58 | 0.49 | 0.46 | 0.42 | fair | sustain |  |

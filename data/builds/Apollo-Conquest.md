@@ -6,20 +6,20 @@ builds:
 - source: community
   aspect: Aspect of Harmony
   aspect_pick_rate: 0.03
-  aspect_win_rate: 0.51
+  aspect_win_rate: 0.5
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.43
+    pick_rate: 0.44
     win_rate: 0.5
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.2
+      pick_rate: 0.19
       win_rate: 0.52
     - name: Dominance
-      pick_rate: 0.13
-      win_rate: 0.46
+      pick_rate: 0.12
+      win_rate: 0.45
   - name: Odysseus' Bow
-    pick_rate: 0.18
+    pick_rate: 0.19
     win_rate: 0.51
     alternates:
     - name: Dagger of Frenzy
@@ -29,12 +29,12 @@ builds:
       pick_rate: 0.14
       win_rate: 0.52
   - name: Silverbranch Bow
-    pick_rate: 0.17
-    win_rate: 0.53
+    pick_rate: 0.18
+    win_rate: 0.54
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.16
-      win_rate: 0.55
+      win_rate: 0.53
     - name: Dominance
       pick_rate: 0.15
       win_rate: 0.5
@@ -44,49 +44,49 @@ builds:
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.17
-      win_rate: 0.54
+      win_rate: 0.53
     - name: The Executioner
       pick_rate: 0.11
-      win_rate: 0.55
+      win_rate: 0.53
   - name: Qin's Blade
     pick_rate: 0.1
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Riptalon
-      pick_rate: 0.1
-      win_rate: 0.5
+      pick_rate: 0.11
+      win_rate: 0.52
     - name: Silverbranch Bow
       pick_rate: 0.09
-      win_rate: 0.57
+      win_rate: 0.55
   - name: Manchu Bow
-    pick_rate: 0.13
-    win_rate: 0.45
+    pick_rate: 0.14
+    win_rate: 0.48
     alternates:
     - name: Hunter's Bow
       pick_rate: 0.1
       win_rate: 0.48
     - name: Qin's Blade
-      pick_rate: 0.08
-      win_rate: 0.51
+      pick_rate: 0.09
+      win_rate: 0.54
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.29
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Sharpshooter's Arrow
     pick_rate: 0.24
-    win_rate: 0.56
+    win_rate: 0.55
   - name: Death's Embrace
     pick_rate: 0.13
-    win_rate: 0.54
+    win_rate: 0.53
   source_url: https://smitebrain.com/gods/apollo/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5077966101694915
-  god_matches_won: 749
-  god_matches_played: 1475
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5080545229244114
+  god_matches_won: 820
+  god_matches_played: 1614
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -139,7 +139,7 @@ builds:
       total: 0.5
       efficiency: 0.47
       win: 0.5
-      pick: 0.43
+      pick: 0.44
       fit: 0.6
     Riptalon:
       total: 0.5
@@ -362,8 +362,8 @@ builds:
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.54
-      win: 0.53
-      pick: 0.17
+      win: 0.54
+      pick: 0.18
       fit: 0.53
     The Crusher:
       total: 0.54
@@ -400,7 +400,7 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Berserker''s Shield, Golden Blade, Lernaean Bow, The Crusher,
     Damaru, Jotunn''s Revenge, Dominance, Genji''s Guard, Hydra''s Lament, Runeforged
-    Hammer, Pharaoh''s Curse, Qin''s Blade, Toxic Blade, Breastplate of Valor, Demon
+    Hammer, Pharaoh''s Curse, Toxic Blade, Qin''s Blade, Breastplate of Valor, Demon
     Blade, Amanita Charm, Tekko-Kagi, Oni Hunter''s Garb, The Reaper, Yogi''s Necklace,
     Kinetic Cuirass, Shogun''s Ofuda, Eros'' Bow, Eye of Providence, Avenging Blade,
     Musashi''s Dual Swords.'
@@ -427,7 +427,7 @@ builds:
       total: 0.52
       efficiency: 0.47
       win: 0.5
-      pick: 0.43
+      pick: 0.44
       fit: 0.7
     Riptalon:
       total: 0.52
@@ -436,10 +436,10 @@ builds:
       pick: 0.13
       fit: 0.59
     Silverbranch Bow:
-      total: 0.51
+      total: 0.52
       efficiency: 0.54
-      win: 0.53
-      pick: 0.17
+      win: 0.54
+      pick: 0.18
       fit: 0.5
   starter: *id001
 - source: suggested

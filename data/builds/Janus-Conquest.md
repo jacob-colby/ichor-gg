@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.51
+    pick_rate: 0.5
     win_rate: 0.49
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.32
-      win_rate: 0.51
+      pick_rate: 0.33
+      win_rate: 0.5
     - name: Doom Orb
       pick_rate: 0.06
-      win_rate: 0.58
+      win_rate: 0.56
   - name: Book of Thoth
     pick_rate: 0.22
     win_rate: 0.5
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.27
-      win_rate: 0.51
+      pick_rate: 0.28
+      win_rate: 0.5
     - name: Doom Orb
       pick_rate: 0.15
-      win_rate: 0.48
+      win_rate: 0.47
   - name: Soul Gem
     pick_rate: 0.4
     win_rate: 0.52
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.19
-      win_rate: 0.53
+      pick_rate: 0.18
+      win_rate: 0.54
     - name: Spear of Desolation
       pick_rate: 0.1
-      win_rate: 0.46
+      win_rate: 0.45
   - name: Rod of Tahuti
     pick_rate: 0.39
     win_rate: 0.49
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.24
-      win_rate: 0.51
+      win_rate: 0.5
     - name: Soul Gem
       pick_rate: 0.11
       win_rate: 0.54
   - name: Obsidian Shard
-    pick_rate: 0.29
-    win_rate: 0.58
+    pick_rate: 0.3
+    win_rate: 0.57
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.21
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Evil Eye
       pick_rate: 0.08
       win_rate: 0.39
   - name: Blinking Abyss
     pick_rate: 0.09
-    win_rate: 0.61
+    win_rate: 0.62
     alternates:
-    - name: Obsidian Shard
-      pick_rate: 0.09
-      win_rate: 0.57
     - name: Evil Eye
       pick_rate: 0.09
-      win_rate: 0.37
+      win_rate: 0.38
+    - name: Obsidian Shard
+      pick_rate: 0.09
+      win_rate: 0.55
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.5
     win_rate: 0.53
   - name: Conduit Gem
     pick_rate: 0.3
-    win_rate: 0.42
+    win_rate: 0.41
   - name: Pendulum of The Ages
     pick_rate: 0.14
-    win_rate: 0.57
+    win_rate: 0.56
   source_url: https://smitebrain.com/gods/janus/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.4914826498422713
-  god_matches_won: 779
-  god_matches_played: 1585
+  last_verified: '2026-08-08'
+  god_win_rate: 0.4889663182346109
+  god_matches_won: 842
+  god_matches_played: 1722
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -117,7 +117,7 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Gluttonous Grimoire, Spear of the Magus, The Cosmic Horror, Chronos''
-    Pendant, Dreamer''s Idol, The World Stone, Doom Orb, Genji''s Guard, Gem of Focus,
+    Pendant, Dreamer''s Idol, The World Stone, Genji''s Guard, Doom Orb, Gem of Focus,
     Death Metal, Rod of Asclepius, Blood-Bound Book, Helm of Radiance, Bancroft''s
     Talon, Jade Scepter, Bracer of The Abyss, Breastplate of Valor, Wish-Granting
     Pearl, Polynomicon, Ethereal Staff, Ancient Signet, Alchemist Coat, Typhon’s Heart.'
@@ -132,7 +132,7 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.49
-      pick: 0.51
+      pick: 0.5
       fit: 1.0
     The Cosmic Horror:
       total: 0.55
@@ -149,8 +149,8 @@ builds:
     Obsidian Shard:
       total: 0.58
       efficiency: 0.54
-      win: 0.58
-      pick: 0.29
+      win: 0.57
+      pick: 0.3
       fit: 0.78
     Soul Gem:
       total: 0.61
@@ -204,7 +204,7 @@ builds:
       total: 0.55
       efficiency: 0.52
       win: 0.49
-      pick: 0.51
+      pick: 0.5
       fit: 0.78
     The Cosmic Horror:
       total: 0.51
@@ -219,10 +219,10 @@ builds:
       pick: 0.0
       fit: 0.56
     Obsidian Shard:
-      total: 0.55
+      total: 0.54
       efficiency: 0.54
-      win: 0.58
-      pick: 0.29
+      win: 0.57
+      pick: 0.3
       fit: 0.56
     Soul Gem:
       total: 0.59
@@ -241,8 +241,8 @@ builds:
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
   - Genji's Guard
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -285,8 +285,8 @@ builds:
     Obsidian Shard:
       total: 0.52
       efficiency: 0.54
-      win: 0.58
-      pick: 0.29
+      win: 0.57
+      pick: 0.3
       fit: 0.37
     Amanita Charm:
       total: 0.58
@@ -338,7 +338,7 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.49
-      pick: 0.51
+      pick: 0.5
       fit: 1.0
     The Cosmic Horror:
       total: 0.56
@@ -355,8 +355,8 @@ builds:
     Obsidian Shard:
       total: 0.59
       efficiency: 0.54
-      win: 0.58
-      pick: 0.29
+      win: 0.57
+      pick: 0.3
       fit: 0.85
     Dreamer's Idol:
       total: 0.52
@@ -429,10 +429,10 @@ builds:
       pick: 0.0
       fit: 0.64
     Obsidian Shard:
-      total: 0.51
+      total: 0.5
       efficiency: 0.54
-      win: 0.58
-      pick: 0.29
+      win: 0.57
+      pick: 0.3
       fit: 0.3
     Soul Gem:
       total: 0.55
@@ -496,13 +496,13 @@ builds:
       total: 0.56
       efficiency: 0.52
       win: 0.49
-      pick: 0.51
+      pick: 0.5
       fit: 0.85
     Obsidian Shard:
-      total: 0.52
+      total: 0.51
       efficiency: 0.54
-      win: 0.58
-      pick: 0.29
+      win: 0.57
+      pick: 0.3
       fit: 0.35
     Soul Gem:
       total: 0.6
@@ -559,7 +559,7 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.49
-      pick: 0.51
+      pick: 0.5
       fit: 1.0
     The Cosmic Horror:
       total: 0.55
@@ -576,8 +576,8 @@ builds:
     Obsidian Shard:
       total: 0.58
       efficiency: 0.54
-      win: 0.58
-      pick: 0.29
+      win: 0.57
+      pick: 0.3
       fit: 0.78
   starter: *id001
 ---

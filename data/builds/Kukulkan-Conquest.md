@@ -5,21 +5,21 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Squall
-  aspect_pick_rate: 0.09
-  aspect_win_rate: 0.55
+  aspect_pick_rate: 0.1
+  aspect_win_rate: 0.56
   slot_order:
   - name: Book of Thoth
-    pick_rate: 0.89
-    win_rate: 0.53
+    pick_rate: 0.88
+    win_rate: 0.54
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.05
-      win_rate: 0.5
+      pick_rate: 0.06
+      win_rate: 0.52
     - name: Chronos' Pendant
       pick_rate: 0.02
       win_rate: 0.71
   - name: Spear of Desolation
-    pick_rate: 0.45
+    pick_rate: 0.44
     win_rate: 0.58
     alternates:
     - name: Chronos' Pendant
@@ -27,7 +27,7 @@ builds:
       win_rate: 0.45
     - name: Book of Thoth
       pick_rate: 0.06
-      win_rate: 0.46
+      win_rate: 0.48
   - name: Polynomicon
     pick_rate: 0.2
     win_rate: 0.57
@@ -36,10 +36,10 @@ builds:
       pick_rate: 0.19
       win_rate: 0.55
     - name: Soul Gem
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.8
   - name: Rod of Tahuti
-    pick_rate: 0.35
+    pick_rate: 0.34
     win_rate: 0.56
     alternates:
     - name: Obsidian Shard
@@ -47,46 +47,46 @@ builds:
       win_rate: 0.55
     - name: Soul Reaver
       pick_rate: 0.06
-      win_rate: 0.57
+      win_rate: 0.58
   - name: Obsidian Shard
     pick_rate: 0.21
     win_rate: 0.66
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.17
-      win_rate: 0.58
+      win_rate: 0.57
     - name: Evil Eye
       pick_rate: 0.1
-      win_rate: 0.47
+      win_rate: 0.49
   - name: Void Shard
-    pick_rate: 0.09
+    pick_rate: 0.08
     win_rate: 0.53
     alternates:
-    - name: Evil Eye
-      pick_rate: 0.07
-      win_rate: 0.55
     - name: Obsidian Shard
       pick_rate: 0.07
-      win_rate: 0.48
+      win_rate: 0.47
+    - name: Evil Eye
+      pick_rate: 0.07
+      win_rate: 0.53
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.31
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Pendulum of The Ages
-    pick_rate: 0.28
-    win_rate: 0.59
+    pick_rate: 0.27
+    win_rate: 0.6
   - name: Conduit Gem
     pick_rate: 0.19
-    win_rate: 0.51
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/kukulkan/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5312954876273653
-  god_matches_won: 365
-  god_matches_played: 687
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5393858477970628
+  god_matches_won: 404
+  god_matches_played: 749
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -126,7 +126,7 @@ builds:
       total: 0.62
       efficiency: 0.52
       win: 0.58
-      pick: 0.45
+      pick: 0.44
       fit: 1.0
     The Cosmic Horror:
       total: 0.55
@@ -144,7 +144,7 @@ builds:
       total: 0.54
       efficiency: 0.44
       win: 0.56
-      pick: 0.35
+      pick: 0.34
       fit: 0.79
     Obsidian Shard:
       total: 0.61
@@ -156,7 +156,7 @@ builds:
       total: 0.72
       efficiency: 0.59
       win: 0.8
-      pick: 0.08
+      pick: 0.07
       fit: 1.0
   starter: &id001
     base: Conduit Gem
@@ -204,7 +204,7 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.58
-      pick: 0.45
+      pick: 0.44
       fit: 0.78
     The Cosmic Horror:
       total: 0.51
@@ -228,7 +228,7 @@ builds:
       total: 0.7
       efficiency: 0.59
       win: 0.8
-      pick: 0.08
+      pick: 0.07
       fit: 0.88
   starter: *id001
 - source: suggested
@@ -280,7 +280,7 @@ builds:
       total: 0.54
       efficiency: 0.52
       win: 0.58
-      pick: 0.45
+      pick: 0.44
       fit: 0.49
     Obsidian Shard:
       total: 0.55
@@ -298,7 +298,7 @@ builds:
       total: 0.7
       efficiency: 0.59
       win: 0.8
-      pick: 0.08
+      pick: 0.07
       fit: 0.89
   starter: *id001
 - source: suggested
@@ -337,7 +337,7 @@ builds:
       total: 0.62
       efficiency: 0.52
       win: 0.58
-      pick: 0.45
+      pick: 0.44
       fit: 1.0
     The Cosmic Horror:
       total: 0.56
@@ -355,7 +355,7 @@ builds:
       total: 0.55
       efficiency: 0.44
       win: 0.56
-      pick: 0.35
+      pick: 0.34
       fit: 0.85
     Obsidian Shard:
       total: 0.62
@@ -367,7 +367,7 @@ builds:
       total: 0.72
       efficiency: 0.59
       win: 0.8
-      pick: 0.08
+      pick: 0.07
       fit: 1.0
   starter: *id001
 - source: suggested
@@ -425,7 +425,7 @@ builds:
       total: 0.53
       efficiency: 0.52
       win: 0.58
-      pick: 0.45
+      pick: 0.44
       fit: 0.4
     Obsidian Shard:
       total: 0.54
@@ -437,7 +437,7 @@ builds:
       total: 0.66
       efficiency: 0.59
       win: 0.8
-      pick: 0.08
+      pick: 0.07
       fit: 0.58
   starter: *id001
 - source: suggested
@@ -492,10 +492,10 @@ builds:
       pick: 0.0
       fit: 0.48
     Spear of Desolation:
-      total: 0.6
+      total: 0.59
       efficiency: 0.52
       win: 0.58
-      pick: 0.45
+      pick: 0.44
       fit: 0.86
     Obsidian Shard:
       total: 0.55
@@ -507,7 +507,7 @@ builds:
       total: 0.71
       efficiency: 0.59
       win: 0.8
-      pick: 0.08
+      pick: 0.07
       fit: 0.96
   starter: *id001
 - source: suggested
@@ -559,7 +559,7 @@ builds:
       total: 0.62
       efficiency: 0.52
       win: 0.58
-      pick: 0.45
+      pick: 0.44
       fit: 1.0
     The Cosmic Horror:
       total: 0.55

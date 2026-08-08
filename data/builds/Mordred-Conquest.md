@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of Rage
   aspect_pick_rate: 0.06
-  aspect_win_rate: 0.53
+  aspect_win_rate: 0.54
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.51
-    win_rate: 0.57
+    pick_rate: 0.53
+    win_rate: 0.59
     alternates:
     - name: Barbed Carver
-      pick_rate: 0.17
-      win_rate: 0.5
+      pick_rate: 0.16
+      win_rate: 0.51
     - name: Bracer of The Abyss
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.51
   - name: Shield of the Phoenix
-    pick_rate: 0.21
-    win_rate: 0.6
+    pick_rate: 0.22
+    win_rate: 0.62
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.16
       win_rate: 0.58
     - name: Genji's Guard
-      pick_rate: 0.15
-      win_rate: 0.5
+      pick_rate: 0.16
+      win_rate: 0.53
   - name: Genji's Guard
     pick_rate: 0.17
     win_rate: 0.6
     alternates:
     - name: Shield of the Phoenix
-      pick_rate: 0.15
-      win_rate: 0.56
+      pick_rate: 0.16
+      win_rate: 0.57
     - name: Gladiator's Shield
-      pick_rate: 0.12
-      win_rate: 0.66
+      pick_rate: 0.13
+      win_rate: 0.69
   - name: Dwarven Plate
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.54
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.12
-      win_rate: 0.62
+      pick_rate: 0.13
+      win_rate: 0.64
     - name: Gladiator's Shield
-      pick_rate: 0.09
-      win_rate: 0.56
+      pick_rate: 0.1
+      win_rate: 0.57
   - name: Hide of the Nemean Lion
     pick_rate: 0.06
-    win_rate: 0.63
+    win_rate: 0.64
     alternates:
     - name: Dwarven Plate
       pick_rate: 0.1
       win_rate: 0.57
     - name: Kinetic Cuirass
       pick_rate: 0.05
-      win_rate: 0.61
+      win_rate: 0.63
   - name: Engraved Guard
-    pick_rate: 0.07
-    win_rate: 0.58
+    pick_rate: 0.08
+    win_rate: 0.57
     alternates:
     - name: Hide of the Nemean Lion
       pick_rate: 0.07
-      win_rate: 0.47
+      win_rate: 0.49
     - name: Medal of Defense
       pick_rate: 0.05
-      win_rate: 0.35
+      win_rate: 0.36
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.47
     win_rate: 0.65
   - name: Bluestone Pendant
     pick_rate: 0.34
-    win_rate: 0.47
-  - name: Archmage's Gem
+    win_rate: 0.48
+  - name: Bumba's Spear
     pick_rate: 0.09
-    win_rate: 0.38
+    win_rate: 0.44
   source_url: https://smitebrain.com/gods/mordred/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.560687432867884
-  god_matches_won: 522
-  god_matches_played: 931
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5689655172413793
+  god_matches_won: 594
+  god_matches_played: 1044
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -132,34 +132,34 @@ builds:
       pick: 0.17
       fit: 0.28
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.59
       efficiency: 0.6
-      win: 0.61
+      win: 0.63
       pick: 0.05
       fit: 0.61
     Shield of the Phoenix:
-      total: 0.54
+      total: 0.55
       efficiency: 0.57
-      win: 0.6
-      pick: 0.21
+      win: 0.62
+      pick: 0.22
       fit: 0.43
     Gladiator's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.41
-      win: 0.66
-      pick: 0.12
+      win: 0.69
+      pick: 0.13
       fit: 0.53
     Hide of the Nemean Lion:
-      total: 0.52
+      total: 0.53
       efficiency: 0.54
-      win: 0.63
+      win: 0.64
       pick: 0.06
       fit: 0.33
     Shifter's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.57
-      pick: 0.51
+      win: 0.59
+      pick: 0.53
       fit: 0.51
   starter: &id001
     base: Bumba's Golden Dagger
@@ -170,12 +170,12 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shield of the Phoenix
   - Gladiator's Shield
-  - Gluttonous Grimoire
   - Shifter's Shield
   flex_slots:
-  - Jotunn's Revenge
   - Gladiator's Shield
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -184,8 +184,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Hide of the Nemean Lion — physical protection
+    swap_item: Hide of the Nemean Lion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -212,28 +212,28 @@ builds:
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
-      win: 0.61
+      win: 0.63
       pick: 0.05
       fit: 0.48
+    Shield of the Phoenix:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.62
+      pick: 0.22
+      fit: 0.38
     Gladiator's Shield:
-      total: 0.52
-      efficiency: 0.41
-      win: 0.66
-      pick: 0.12
-      fit: 0.48
-    Gluttonous Grimoire:
-      total: 0.54
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Shifter's Shield:
       total: 0.53
+      efficiency: 0.41
+      win: 0.69
+      pick: 0.13
+      fit: 0.48
+    Shifter's Shield:
+      total: 0.54
       efficiency: 0.55
-      win: 0.57
-      pick: 0.51
+      win: 0.59
+      pick: 0.53
       fit: 0.38
   starter: *id001
 - source: suggested
@@ -262,14 +262,14 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Amanita Charm, Soul Gem, Gluttonous Grimoire, Hide
-    of the Nemean Lion, Berserker''s Shield, Jotunn''s Revenge, The Crusher, Eye of
-    Providence, Rod of Asclepius, The Reaper, Runeforged Hammer, Oni Hunter''s Garb,
-    Chandra''s Grace, Hydra''s Lament, Breastplate of Valor, Freya''s Tears, Eye of
-    the Storm, Shield Splitter, Riptalon, Phoenix Feather, Spectral Armor, Erosion,
-    Blood-Bound Book, Yogi''s Necklace, Bancroft''s Talon, Avenging Blade, Pharaoh''s
-    Curse, Lifebinder, Golden Blade, Draconic Scale, Death Metal, Leviathan''s Hide,
-    Midgardian Mail, Spear of the Magus, Lernaean Bow, Damaru.'
+    this god: Kinetic Cuirass, Amanita Charm, Soul Gem, Hide of the Nemean Lion, Gluttonous
+    Grimoire, Berserker''s Shield, Jotunn''s Revenge, The Crusher, Eye of Providence,
+    Rod of Asclepius, The Reaper, Runeforged Hammer, Oni Hunter''s Garb, Chandra''s
+    Grace, Hydra''s Lament, Breastplate of Valor, Freya''s Tears, Eye of the Storm,
+    Shield Splitter, Riptalon, Phoenix Feather, Spectral Armor, Erosion, Blood-Bound
+    Book, Yogi''s Necklace, Bancroft''s Talon, Avenging Blade, Pharaoh''s Curse, Lifebinder,
+    Golden Blade, Draconic Scale, Death Metal, Leviathan''s Hide, Midgardian Mail,
+    Spear of the Magus, Lernaean Bow, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -278,28 +278,28 @@ builds:
       pick: 0.17
       fit: 0.25
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.59
       efficiency: 0.6
-      win: 0.61
+      win: 0.63
       pick: 0.05
       fit: 0.6
     Shield of the Phoenix:
-      total: 0.59
+      total: 0.6
       efficiency: 0.57
-      win: 0.6
-      pick: 0.21
+      win: 0.62
+      pick: 0.22
       fit: 0.74
     Gladiator's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.41
-      win: 0.66
-      pick: 0.12
+      win: 0.69
+      pick: 0.13
       fit: 0.54
     Shifter's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.57
-      pick: 0.51
+      win: 0.59
+      pick: 0.53
       fit: 0.5
     Amanita Charm:
       total: 0.58
@@ -314,7 +314,7 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Gluttonous Grimoire
+  - Shield of the Phoenix
   - Shifter's Shield
   - The Crusher
   flex_slots:
@@ -328,8 +328,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -358,20 +358,20 @@ builds:
     Kinetic Cuirass:
       total: 0.57
       efficiency: 0.6
-      win: 0.61
+      win: 0.63
       pick: 0.05
       fit: 0.52
-    Gluttonous Grimoire:
+    Shield of the Phoenix:
       total: 0.54
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
+      efficiency: 0.57
+      win: 0.62
+      pick: 0.22
+      fit: 0.35
     Shifter's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.55
-      win: 0.57
-      pick: 0.51
+      win: 0.59
+      pick: 0.53
       fit: 0.42
     The Crusher:
       total: 0.54
@@ -434,16 +434,16 @@ builds:
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.56
       efficiency: 0.6
-      win: 0.61
+      win: 0.63
       pick: 0.05
       fit: 0.44
     Shifter's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.55
-      win: 0.57
-      pick: 0.51
+      win: 0.59
+      pick: 0.53
       fit: 0.34
     Riptalon:
       total: 0.49
@@ -480,7 +480,7 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Kinetic Cuirass, Gladiator''s Shield,
     Jotunn''s Revenge, Soul Gem, Breastplate of Valor, Gluttonous Grimoire, Freya''s
-    Tears, Amanita Charm, Hide of the Nemean Lion, Berserker''s Shield, Hydra''s Lament,
+    Tears, Hide of the Nemean Lion, Amanita Charm, Berserker''s Shield, Hydra''s Lament,
     Eye of Providence, The Crusher, Oni Hunter''s Garb, Spear of Desolation, Runeforged
     Hammer, Chronos'' Pendant, Screeching Gargoyle, Chandra''s Grace, Spectral Armor,
     Erosion, Shield Splitter, Yogi''s Necklace, Spear of the Magus, Pharaoh''s Curse,
@@ -501,42 +501,42 @@ builds:
       pick: 0.0
       fit: 0.5
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
-      win: 0.61
+      win: 0.63
       pick: 0.05
       fit: 0.51
     Shield of the Phoenix:
-      total: 0.56
+      total: 0.57
       efficiency: 0.57
-      win: 0.6
-      pick: 0.21
+      win: 0.62
+      pick: 0.22
       fit: 0.56
     Gladiator's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.41
-      win: 0.66
-      pick: 0.12
+      win: 0.69
+      pick: 0.13
       fit: 0.66
     Shifter's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.55
-      win: 0.57
-      pick: 0.51
+      win: 0.59
+      pick: 0.53
       fit: 0.41
   starter: *id001
 - source: suggested
   archetype: intelligence
   slot_order:
   - Genji's Guard
-  - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shield of the Phoenix
   - Gladiator's Shield
-  - Gluttonous Grimoire
+  - Hide of the Nemean Lion
   - Shifter's Shield
   flex_slots:
   - Gladiator's Shield
-  - Jotunn's Revenge
+  - Hide of the Nemean Lion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -545,8 +545,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -567,49 +567,49 @@ builds:
       win: 0.6
       pick: 0.17
       fit: 0.25
-    Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
-      win: 0.61
+      win: 0.63
       pick: 0.05
       fit: 0.49
-    Gladiator's Shield:
-      total: 0.52
-      efficiency: 0.41
-      win: 0.66
-      pick: 0.12
-      fit: 0.46
-    Gluttonous Grimoire:
+    Shield of the Phoenix:
       total: 0.54
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
-    Shifter's Shield:
+      efficiency: 0.57
+      win: 0.62
+      pick: 0.22
+      fit: 0.36
+    Gladiator's Shield:
       total: 0.53
+      efficiency: 0.41
+      win: 0.69
+      pick: 0.13
+      fit: 0.46
+    Hide of the Nemean Lion:
+      total: 0.52
+      efficiency: 0.54
+      win: 0.64
+      pick: 0.06
+      fit: 0.25
+    Shifter's Shield:
+      total: 0.54
       efficiency: 0.55
-      win: 0.57
-      pick: 0.51
+      win: 0.59
+      pick: 0.53
       fit: 0.39
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Genji's Guard
-  - Jotunn's Revenge
   - Kinetic Cuirass
-  - Gluttonous Grimoire
+  - Shield of the Phoenix
+  - Gladiator's Shield
+  - Hide of the Nemean Lion
   - Shifter's Shield
-  - The Crusher
   flex_slots:
-  - The Crusher
-  - Jotunn's Revenge
+  - Gladiator's Shield
+  - Hide of the Nemean Lion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -618,8 +618,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -640,36 +640,36 @@ builds:
       win: 0.6
       pick: 0.17
       fit: 0.23
-    Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
-      win: 0.61
+      win: 0.63
       pick: 0.05
       fit: 0.52
-    Gluttonous Grimoire:
+    Shield of the Phoenix:
       total: 0.54
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.57
-      pick: 0.51
-      fit: 0.42
-    The Crusher:
+      efficiency: 0.57
+      win: 0.62
+      pick: 0.22
+      fit: 0.35
+    Gladiator's Shield:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.69
+      pick: 0.13
+      fit: 0.45
+    Hide of the Nemean Lion:
       total: 0.52
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
+      efficiency: 0.54
+      win: 0.64
+      pick: 0.06
+      fit: 0.27
+    Shifter's Shield:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.59
+      pick: 0.53
+      fit: 0.42
   starter: *id001
 - source: suggested
   archetype: model
@@ -731,9 +731,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.59
       efficiency: 0.6
-      win: 0.61
+      win: 0.63
       pick: 0.05
       fit: 0.61
     Amanita Charm:

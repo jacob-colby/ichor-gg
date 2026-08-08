@@ -6,10 +6,10 @@ builds:
 - source: community
   aspect: Aspect of Fulmination
   aspect_pick_rate: 0.18
-  aspect_win_rate: 0.39
+  aspect_win_rate: 0.42
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.35
+    pick_rate: 0.36
     win_rate: 0.49
     alternates:
     - name: Daybreak Gavel
@@ -19,11 +19,11 @@ builds:
       pick_rate: 0.07
       win_rate: 0.71
   - name: Genji's Guard
-    pick_rate: 0.15
+    pick_rate: 0.14
     win_rate: 0.4
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.16
+      pick_rate: 0.15
       win_rate: 0.69
     - name: Shield of the Phoenix
       pick_rate: 0.09
@@ -44,7 +44,7 @@ builds:
     alternates:
     - name: Genji's Guard
       pick_rate: 0.11
-      win_rate: 0.6
+      win_rate: 0.55
     - name: Spirit Robe
       pick_rate: 0.06
       win_rate: 0.5
@@ -53,8 +53,8 @@ builds:
     win_rate: 0.5
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.07
-      win_rate: 0.83
+      pick_rate: 0.08
+      win_rate: 0.86
     - name: Kinetic Cuirass
       pick_rate: 0.05
       win_rate: 0.25
@@ -71,22 +71,22 @@ builds:
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.36
-    win_rate: 0.61
+    win_rate: 0.62
   - name: Bluestone Pendant
     pick_rate: 0.32
-    win_rate: 0.44
+    win_rate: 0.42
   - name: Sundering Axe
     pick_rate: 0.12
     win_rate: 0.83
   source_url: https://smitebrain.com/gods/chaac/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5247524752475248
-  god_matches_won: 53
-  god_matches_played: 101
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5192307692307693
+  god_matches_won: 54
+  god_matches_played: 104
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -120,7 +120,7 @@ builds:
     Shield, Jotunn''s Revenge, The Crusher, Eye of Providence, Soul Gem, Oni Hunter''s
     Garb, Runeforged Hammer, Freya''s Tears, Breastplate of Valor, Hydra''s Lament,
     Shield Splitter, Death Metal, Spear of the Magus, Eye of the Storm, Spectral Armor,
-    Genji''s Guard, Helm of Radiance, Erosion, Rod of Asclepius, The Cosmic Horror,
+    Helm of Radiance, Erosion, Genji''s Guard, Rod of Asclepius, The Cosmic Horror,
     Yogi''s Necklace, Pharaoh''s Curse, Draconic Scale, Spear of Desolation, Jade
     Scepter, Avenging Blade, Golden Blade, Leviathan''s Hide, Lernaean Bow, The Reaper,
     Damaru, Obsidian Shard, Midgardian Mail, Chronos'' Pendant, Triton''s Conch, Kinetic
@@ -270,7 +270,7 @@ builds:
     Talon, Chandra''s Grace, Hydra''s Lament, Lifebinder, Riptalon, Breastplate of
     Valor, Death Metal, Freya''s Tears, Spear of the Magus, Eye of the Storm, Shield
     Splitter, Phoenix Feather, Spectral Armor, Yogi''s Necklace, The Cosmic Horror,
-    Jade Scepter, Erosion, Helm of Radiance, Genji''s Guard, Pharaoh''s Curse, Avenging
+    Jade Scepter, Erosion, Helm of Radiance, Pharaoh''s Curse, Genji''s Guard, Avenging
     Blade, Golden Blade, Spear of Desolation, Draconic Scale, Leviathan''s Hide, Kinetic
     Cuirass.'
   slot_scores:
@@ -566,10 +566,10 @@ builds:
     Pendant, Triton''s Conch.'
   slot_scores:
     Genji's Guard:
-      total: 0.48
+      total: 0.47
       efficiency: 0.72
       win: 0.4
-      pick: 0.15
+      pick: 0.14
       fit: 0.24
     Berserker's Shield:
       total: 0.52

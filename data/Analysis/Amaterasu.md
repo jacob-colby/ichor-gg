@@ -2,14 +2,15 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Kinetic Cuirass | 0.60 | 0.62 | 0.60 | 0.63 | 0.08 | 0.67 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.59 | 0.56 | 0.55 | 0.64 | 0.44 | 0.57 | fair |  |  |
-| Berserker's Shield | 0.58 | 0.60 | 0.71 | 0.59 | 0.17 | 0.36 | undervalued |  |  |
+| Kinetic Cuirass | 0.62 | 0.62 | 0.60 | 0.67 | 0.07 | 0.67 | fair | burst | **UNDERRATED** |
+| Shifter's Shield | 0.58 | 0.56 | 0.55 | 0.62 | 0.42 | 0.57 | fair |  |  |
+| Berserker's Shield | 0.57 | 0.60 | 0.71 | 0.58 | 0.20 | 0.36 | undervalued |  |  |
+| Golden Blade | 0.54 | 0.50 | 0.55 | 0.62 | 0.26 | 0.37 | fair | wave-clear |  |
 | Amanita Charm | 0.54 | 0.63 | 0.66 | 0.50 | 0.00 | 0.57 | undervalued | sustain, aura | **UNDERRATED** |
-| Bragi's Harp | 0.53 | 0.43 | 0.46 | 0.70 | 0.09 | 0.36 | fair | burst |  |
+| Bragi's Harp | 0.53 | 0.43 | 0.46 | 0.70 | 0.08 | 0.36 | fair | burst |  |
 | Eye of Providence | 0.53 | 0.60 | 0.62 | 0.50 | 0.00 | 0.57 | undervalued |  | **UNDERRATED** |
 | Genji's Guard | 0.52 | 0.60 | 0.72 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
-| Golden Blade | 0.52 | 0.50 | 0.55 | 0.57 | 0.23 | 0.37 | fair | wave-clear |  |
+| Shogun's Ofuda | 0.52 | 0.48 | 0.53 | 0.61 | 0.10 | 0.36 | fair | aura | **UNDERRATED** |
 | Gluttonous Grimoire | 0.51 | 0.57 | 0.66 | 0.50 | 0.00 | 0.37 | undervalued | burst | **UNDERRATED** |
 | Jotunn's Revenge | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.38 | undervalued |  | **UNDERRATED** |
 | Freya's Tears | 0.51 | 0.57 | 0.59 | 0.50 | 0.00 | 0.53 | fair |  | **UNDERRATED** |
@@ -19,7 +20,6 @@
 | Shield Splitter | 0.50 | 0.56 | 0.53 | 0.50 | 0.00 | 0.61 | fair |  | **UNDERRATED** |
 | Breastplate of Valor | 0.50 | 0.55 | 0.65 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.50 | 0.55 | 0.61 | 0.50 | 0.00 | 0.43 | fair | burst | **UNDERRATED** |
-| Shogun's Ofuda | 0.50 | 0.48 | 0.53 | 0.57 | 0.11 | 0.36 | fair | aura | **UNDERRATED** |
 | Shield of the Phoenix | 0.50 | 0.55 | 0.57 | 0.50 | 0.00 | 0.48 | fair | sustain | **UNDERRATED** |
 | Eye of the Storm | 0.49 | 0.54 | 0.52 | 0.50 | 0.00 | 0.57 | fair | peel | **UNDERRATED** |
 | Erosion | 0.49 | 0.54 | 0.52 | 0.50 | 0.00 | 0.57 | fair | aura | **UNDERRATED** |
@@ -31,7 +31,6 @@
 | Avenging Blade | 0.48 | 0.50 | 0.51 | 0.50 | 0.00 | 0.47 | fair | protection-shred | **UNDERRATED** |
 | Death Metal | 0.47 | 0.50 | 0.60 | 0.50 | 0.00 | 0.26 | fair |  | **UNDERRATED** |
 | Leviathan's Hide | 0.47 | 0.50 | 0.55 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
-| Dominance | 0.47 | 0.44 | 0.53 | 0.56 | 0.07 | 0.21 | fair |  |  |
 | Midgardian Mail | 0.47 | 0.49 | 0.54 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.40 | fair | peel, cc-immunity | **UNDERRATED** |
 | Stone of Binding | 0.47 | 0.49 | 0.48 | 0.50 | 0.00 | 0.50 | fair | protection-shred | **UNDERRATED** |
@@ -64,6 +63,7 @@
 | Ethereal Staff | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.22 | fair |  |  |
 | The Cosmic Horror | 0.44 | 0.44 | 0.58 | 0.50 | 0.00 | 0.10 | fair |  |  |
 | Helm of Darkness | 0.44 | 0.44 | 0.43 | 0.50 | 0.00 | 0.46 | premium | mobility |  |
+| Dominance | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.21 | fair |  |  |
 | Spear of Desolation | 0.44 | 0.44 | 0.52 | 0.50 | 0.00 | 0.23 | fair |  |  |
 | Phoenix Feather | 0.44 | 0.43 | 0.46 | 0.50 | 0.00 | 0.36 | fair | sustain |  |
 | Alchemist Coat | 0.44 | 0.43 | 0.52 | 0.50 | 0.00 | 0.22 | fair |  |  |
@@ -85,6 +85,7 @@
 | Shroud of Vengeance | 0.43 | 0.40 | 0.36 | 0.50 | 0.00 | 0.50 | premium | burst |  |
 | Titan's Bane | 0.42 | 0.40 | 0.46 | 0.50 | 0.00 | 0.26 | fair |  |  |
 | Tekko-Kagi | 0.42 | 0.40 | 0.46 | 0.50 | 0.00 | 0.26 | fair | mobility |  |
+| Dwarven Plate | 0.42 | 0.37 | 0.35 | 0.52 | 0.10 | 0.40 | premium |  |  |
 | Barbed Carver | 0.42 | 0.40 | 0.43 | 0.50 | 0.00 | 0.31 | premium | burst |  |
 | Silverbranch Bow | 0.42 | 0.39 | 0.54 | 0.50 | 0.00 | 0.05 | fair |  |  |
 | Polynomicon | 0.42 | 0.39 | 0.49 | 0.50 | 0.00 | 0.16 | fair | burst |  |
@@ -121,7 +122,6 @@
 | Eye of Erebus | 0.38 | 0.31 | 0.32 | 0.50 | 0.00 | 0.28 | premium |  |  |
 | Devourer's Gauntlet | 0.38 | 0.31 | 0.35 | 0.50 | 0.00 | 0.21 | premium | sustain |  |
 | Qin's Blade | 0.37 | 0.29 | 0.38 | 0.50 | 0.00 | 0.10 | premium | burst |  |
-| Dwarven Plate | 0.37 | 0.37 | 0.35 | 0.40 | 0.09 | 0.40 | premium |  |  |
 | Staff of Myrddin | 0.37 | 0.29 | 0.34 | 0.50 | 0.00 | 0.18 | premium |  |  |
 | Dagger of Frenzy | 0.36 | 0.27 | 0.38 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.36 | 0.26 | 0.25 | 0.50 | 0.00 | 0.28 | premium | mobility, cc-immunity |  |

@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of Reaping
   aspect_pick_rate: 0.19
-  aspect_win_rate: 0.55
+  aspect_win_rate: 0.56
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.68
@@ -17,76 +17,76 @@ builds:
       win_rate: 0.57
     - name: Daybreak Gavel
       pick_rate: 0.04
-      win_rate: 0.62
+      win_rate: 0.63
   - name: Hydra's Lament
-    pick_rate: 0.36
-    win_rate: 0.56
+    pick_rate: 0.37
+    win_rate: 0.55
     alternates:
     - name: The Reaper
-      pick_rate: 0.23
-      win_rate: 0.59
+      pick_rate: 0.22
+      win_rate: 0.58
     - name: Jotunn's Revenge
       pick_rate: 0.13
-      win_rate: 0.56
+      win_rate: 0.57
   - name: The Reaper
-    pick_rate: 0.28
-    win_rate: 0.56
+    pick_rate: 0.29
+    win_rate: 0.57
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.14
-      win_rate: 0.62
-    - name: Shifter's Shield
+      win_rate: 0.61
+    - name: Heartseeker
       pick_rate: 0.05
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Titan's Bane
     pick_rate: 0.23
-    win_rate: 0.57
+    win_rate: 0.56
     alternates:
     - name: Heartseeker
       pick_rate: 0.22
       win_rate: 0.57
     - name: The Reaper
-      pick_rate: 0.09
-      win_rate: 0.6
+      pick_rate: 0.08
+      win_rate: 0.59
   - name: Heartseeker
-    pick_rate: 0.18
+    pick_rate: 0.17
     win_rate: 0.64
     alternates:
     - name: Titan's Bane
       pick_rate: 0.18
-      win_rate: 0.62
+      win_rate: 0.63
     - name: Blinking Abyss
       pick_rate: 0.08
       win_rate: 0.71
   - name: Blinking Abyss
     pick_rate: 0.08
-    win_rate: 0.71
+    win_rate: 0.69
     alternates:
+    - name: Titan's Bane
+      pick_rate: 0.08
+      win_rate: 0.65
     - name: Heartseeker
       pick_rate: 0.07
-      win_rate: 0.68
-    - name: Titan's Bane
-      pick_rate: 0.07
-      win_rate: 0.6
+      win_rate: 0.69
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.34
     win_rate: 0.61
   - name: Bumba's Cudgel
-    pick_rate: 0.25
+    pick_rate: 0.26
     win_rate: 0.48
   - name: Hunter's Cowl
-    pick_rate: 0.16
-    win_rate: 0.68
+    pick_rate: 0.15
+    win_rate: 0.69
   source_url: https://smitebrain.com/gods/thanatos/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5690499510284035
-  god_matches_won: 581
-  god_matches_played: 1021
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5676156583629893
+  god_matches_won: 638
+  god_matches_played: 1124
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -129,16 +129,16 @@ builds:
       pick: 0.68
       fit: 1.0
     Hydra's Lament:
-      total: 0.59
+      total: 0.58
       efficiency: 0.61
-      win: 0.56
-      pick: 0.36
+      win: 0.55
+      pick: 0.37
       fit: 0.71
     The Reaper:
       total: 0.59
       efficiency: 0.53
-      win: 0.56
-      pick: 0.28
+      win: 0.57
+      pick: 0.29
       fit: 0.91
     The Crusher:
       total: 0.6
@@ -150,12 +150,12 @@ builds:
       total: 0.61
       efficiency: 0.46
       win: 0.64
-      pick: 0.18
+      pick: 0.17
       fit: 1.0
     Titan's Bane:
-      total: 0.57
+      total: 0.56
       efficiency: 0.46
-      win: 0.57
+      win: 0.56
       pick: 0.23
       fit: 0.91
   starter: &id001
@@ -164,22 +164,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
   - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
   - The Reaper
-  - Titan's Bane
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -193,6 +193,12 @@ builds:
     Charm, Oni Hunter''s Garb, Avenging Blade, Golden Blade, Yogi''s Necklace, Kinetic
     Cuirass, Shield Splitter, Dominance, Screeching Gargoyle.'
   slot_scores:
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.22
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.65
@@ -202,14 +208,14 @@ builds:
     Hydra's Lament:
       total: 0.56
       efficiency: 0.61
-      win: 0.56
-      pick: 0.36
+      win: 0.55
+      pick: 0.37
       fit: 0.54
     The Reaper:
       total: 0.54
       efficiency: 0.53
-      win: 0.56
-      pick: 0.28
+      win: 0.57
+      pick: 0.29
       fit: 0.56
     The Crusher:
       total: 0.55
@@ -221,14 +227,8 @@ builds:
       total: 0.56
       efficiency: 0.46
       win: 0.64
-      pick: 0.18
+      pick: 0.17
       fit: 0.66
-    Titan's Bane:
-      total: 0.51
-      efficiency: 0.46
-      win: 0.57
-      pick: 0.23
-      fit: 0.56
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -237,11 +237,11 @@ builds:
   - Kinetic Cuirass
   - Hydra's Lament
   - The Reaper
-  - Shifter's Shield
+  - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Shifter's Shield
-  - Kinetic Cuirass
+  - Hydra's Lament
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -256,12 +256,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shifter''s Shield, Kinetic Cuirass, Shield of the Phoenix,
-    Berserker''s Shield, The Crusher, Eye of Providence, Runeforged Hammer, Oni Hunter''s
-    Garb, Genji''s Guard, Eye of the Storm, Shield Splitter, Chandra''s Grace, Erosion,
-    Phoenix Feather, Spectral Armor, Riptalon, Freya''s Tears, Avenging Blade, Draconic
-    Scale, Breastplate of Valor, Golden Blade, Pharaoh''s Curse, Yogi''s Necklace,
-    Leviathan''s Hide, Midgardian Mail.'
+    this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Berserker''s
+    Shield, The Crusher, Eye of Providence, Runeforged Hammer, Oni Hunter''s Garb,
+    Genji''s Guard, Shifter''s Shield, Eye of the Storm, Shield Splitter, Chandra''s
+    Grace, Erosion, Phoenix Feather, Spectral Armor, Riptalon, Freya''s Tears, Avenging
+    Blade, Draconic Scale, Breastplate of Valor, Golden Blade, Pharaoh''s Curse, Yogi''s
+    Necklace, Leviathan''s Hide, Midgardian Mail.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -276,23 +276,23 @@ builds:
       pick: 0.0
       fit: 0.66
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.61
-      win: 0.56
-      pick: 0.36
+      win: 0.55
+      pick: 0.37
       fit: 0.37
     The Reaper:
       total: 0.56
       efficiency: 0.53
-      win: 0.56
-      pick: 0.28
-      fit: 0.7
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
       win: 0.57
-      pick: 0.05
-      fit: 0.56
+      pick: 0.29
+      fit: 0.7
+    Heartseeker:
+      total: 0.53
+      efficiency: 0.46
+      win: 0.64
+      pick: 0.17
+      fit: 0.5
     Amanita Charm:
       total: 0.59
       efficiency: 0.66
@@ -341,14 +341,14 @@ builds:
     Hydra's Lament:
       total: 0.55
       efficiency: 0.61
-      win: 0.56
-      pick: 0.36
+      win: 0.55
+      pick: 0.37
       fit: 0.48
     The Reaper:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
-      win: 0.56
-      pick: 0.28
+      win: 0.57
+      pick: 0.29
       fit: 0.94
     The Crusher:
       total: 0.6
@@ -360,12 +360,12 @@ builds:
       total: 0.61
       efficiency: 0.46
       win: 0.64
-      pick: 0.18
+      pick: 0.17
       fit: 1.0
     Titan's Bane:
       total: 0.57
       efficiency: 0.46
-      win: 0.57
+      win: 0.56
       pick: 0.23
       fit: 0.94
   starter: *id001
@@ -376,8 +376,8 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Hydra's Lament
+  - The Reaper
   - Riptalon
-  - Heartseeker
   flex_slots:
   - Golden Blade
   - Berserker's Shield
@@ -420,23 +420,23 @@ builds:
       pick: 0.68
       fit: 0.37
     Hydra's Lament:
-      total: 0.53
+      total: 0.52
       efficiency: 0.61
-      win: 0.56
-      pick: 0.36
+      win: 0.55
+      pick: 0.37
       fit: 0.31
+    The Reaper:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.29
+      fit: 0.44
     Riptalon:
       total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Heartseeker:
-      total: 0.52
-      efficiency: 0.46
-      win: 0.64
-      pick: 0.18
-      fit: 0.43
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -492,8 +492,8 @@ builds:
     Hydra's Lament:
       total: 0.59
       efficiency: 0.61
-      win: 0.56
-      pick: 0.36
+      win: 0.55
+      pick: 0.37
       fit: 0.75
     The Crusher:
       total: 0.52
@@ -502,10 +502,10 @@ builds:
       pick: 0.0
       fit: 0.45
     Heartseeker:
-      total: 0.53
+      total: 0.52
       efficiency: 0.46
       win: 0.64
-      pick: 0.18
+      pick: 0.17
       fit: 0.45
   starter: *id001
 - source: suggested
@@ -547,10 +547,10 @@ builds:
       pick: 0.68
       fit: 1.0
     Hydra's Lament:
-      total: 0.59
+      total: 0.58
       efficiency: 0.61
-      win: 0.56
-      pick: 0.36
+      win: 0.55
+      pick: 0.37
       fit: 0.71
     Runeforged Hammer:
       total: 0.53
@@ -561,8 +561,8 @@ builds:
     The Reaper:
       total: 0.59
       efficiency: 0.53
-      win: 0.56
-      pick: 0.28
+      win: 0.57
+      pick: 0.29
       fit: 0.91
     The Crusher:
       total: 0.6
@@ -574,7 +574,7 @@ builds:
       total: 0.61
       efficiency: 0.46
       win: 0.64
-      pick: 0.18
+      pick: 0.17
       fit: 1.0
   starter: *id001
 ---

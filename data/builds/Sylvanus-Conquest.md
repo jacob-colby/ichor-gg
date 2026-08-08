@@ -6,27 +6,27 @@ builds:
 - source: community
   aspect: Aspect of Grover's Wrath
   aspect_pick_rate: 0.23
-  aspect_win_rate: 0.54
+  aspect_win_rate: 0.53
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.2
+    pick_rate: 0.19
     win_rate: 0.55
     alternates:
+    - name: Gauntlet of Thebes
+      pick_rate: 0.12
+      win_rate: 0.51
     - name: Prophetic Cloak
       pick_rate: 0.12
       win_rate: 0.48
-    - name: Gauntlet of Thebes
-      pick_rate: 0.12
-      win_rate: 0.5
   - name: Genji's Guard
     pick_rate: 0.19
     win_rate: 0.47
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.1
-      win_rate: 0.47
+      win_rate: 0.48
     - name: Bragi's Harp
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.5
   - name: Breastplate of Valor
     pick_rate: 0.17
@@ -34,59 +34,59 @@ builds:
     alternates:
     - name: Genji's Guard
       pick_rate: 0.16
-      win_rate: 0.48
+      win_rate: 0.5
     - name: Circe's Hexstone
       pick_rate: 0.05
-      win_rate: 0.57
+      win_rate: 0.54
   - name: Shell of Rebuke
-    pick_rate: 0.1
-    win_rate: 0.49
+    pick_rate: 0.09
+    win_rate: 0.5
     alternates:
     - name: Genji's Guard
       pick_rate: 0.08
-      win_rate: 0.56
-    - name: Shield of the Phoenix
-      pick_rate: 0.07
-      win_rate: 0.53
-  - name: Dwarven Plate
-    pick_rate: 0.04
-    win_rate: 0.53
-    alternates:
-    - name: Shell of Rebuke
-      pick_rate: 0.07
-      win_rate: 0.67
-    - name: Engraved Guard
-      pick_rate: 0.04
-      win_rate: 0.46
-  - name: Engraved Guard
-    pick_rate: 0.08
-    win_rate: 0.57
-    alternates:
-    - name: Shell of Rebuke
-      pick_rate: 0.04
       win_rate: 0.57
-    - name: Legionnaire Armor
+    - name: Shield of the Phoenix
+      pick_rate: 0.06
+      win_rate: 0.53
+  - name: Engraved Guard
+    pick_rate: 0.04
+    win_rate: 0.45
+    alternates:
+    - name: Shell of Rebuke
+      pick_rate: 0.07
+      win_rate: 0.69
+    - name: Dwarven Plate
       pick_rate: 0.04
-      win_rate: 0.52
+      win_rate: 0.51
+  - name: Legionnaire Armor
+    pick_rate: 0.04
+    win_rate: 0.54
+    alternates:
+    - name: Engraved Guard
+      pick_rate: 0.07
+      win_rate: 0.57
+    - name: Shell of Rebuke
+      pick_rate: 0.04
+      win_rate: 0.56
   community_starters:
   - name: Selflessness
     pick_rate: 0.29
     win_rate: 0.47
   - name: Death's Embrace
     pick_rate: 0.14
-    win_rate: 0.54
+    win_rate: 0.55
   - name: Heroism
     pick_rate: 0.14
     win_rate: 0.58
   source_url: https://smitebrain.com/gods/sylvanus/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5059252506836828
-  god_matches_won: 555
-  god_matches_played: 1097
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5054031587697423
+  god_matches_won: 608
+  god_matches_played: 1203
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -116,9 +116,9 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Shield of the Phoenix,
-    Gluttonous Grimoire, Freya''s Tears, Oni Hunter''s Garb, Shifter''s Shield, Erosion,
-    Soul Gem, Draconic Scale, Spectral Armor, Helm of Radiance, Rod of Asclepius,
+    this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Gluttonous Grimoire,
+    Shield of the Phoenix, Freya''s Tears, Oni Hunter''s Garb, Shifter''s Shield,
+    Erosion, Soul Gem, Draconic Scale, Spectral Armor, Helm of Radiance, Rod of Asclepius,
     Leviathan''s Hide, Yogi''s Necklace, Midgardian Mail, Mantle Of Discord, Stone
     of Binding, Hide of the Nemean Lion, Jade Scepter, Gladiator''s Shield, Screeching
     Gargoyle, Chronos'' Pendant, Magi''s Cloak.'
@@ -217,7 +217,7 @@ builds:
       total: 0.58
       efficiency: 0.57
       win: 0.53
-      pick: 0.07
+      pick: 0.06
       fit: 0.9
     Oni Hunter's Garb:
       total: 0.52
@@ -331,7 +331,7 @@ builds:
     this god: Gluttonous Grimoire, Amanita Charm, Kinetic Cuirass, Eye of Providence,
     Shield of the Phoenix, Oni Hunter''s Garb, Soul Gem, Freya''s Tears, Shifter''s
     Shield, Yogi''s Necklace, Spectral Armor, Bracer of The Abyss, Death Metal, Erosion,
-    Rod of Asclepius, Bragi''s Harp, Helm of Radiance, Draconic Scale, Spear of the
+    Rod of Asclepius, Helm of Radiance, Bragi''s Harp, Draconic Scale, Spear of the
     Magus, Leviathan''s Hide, Jade Scepter, Blood-Bound Book, Bancroft''s Talon, Midgardian
     Mail, Chronos'' Pendant.'
   slot_scores:
@@ -363,7 +363,7 @@ builds:
       total: 0.46
       efficiency: 0.46
       win: 0.5
-      pick: 0.1
+      pick: 0.09
       fit: 0.46
     Gluttonous Grimoire:
       total: 0.51
@@ -433,7 +433,7 @@ builds:
       total: 0.53
       efficiency: 0.57
       win: 0.53
-      pick: 0.07
+      pick: 0.06
       fit: 0.61
     Freya's Tears:
       total: 0.53

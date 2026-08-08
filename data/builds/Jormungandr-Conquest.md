@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of the Unyielding
   aspect_pick_rate: 0.11
-  aspect_win_rate: 0.47
+  aspect_win_rate: 0.46
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.33
-    win_rate: 0.54
+    pick_rate: 0.32
+    win_rate: 0.55
     alternates:
     - name: Eye of Erebus
-      pick_rate: 0.25
+      pick_rate: 0.26
       win_rate: 0.49
     - name: Devourer's Gauntlet
       pick_rate: 0.08
-      win_rate: 0.48
+      win_rate: 0.5
   - name: Prophetic Cloak
     pick_rate: 0.14
-    win_rate: 0.51
+    win_rate: 0.52
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.16
       win_rate: 0.4
     - name: Genji's Guard
-      pick_rate: 0.11
-      win_rate: 0.6
+      pick_rate: 0.12
+      win_rate: 0.63
   - name: Genji's Guard
     pick_rate: 0.16
     win_rate: 0.35
     alternates:
     - name: Ethereal Staff
       pick_rate: 0.09
-      win_rate: 0.58
+      win_rate: 0.6
     - name: Soul Reaver
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.67
   - name: Ethereal Staff
     pick_rate: 0.14
     win_rate: 0.57
     alternates:
     - name: Dwarven Plate
-      pick_rate: 0.11
-      win_rate: 0.41
+      pick_rate: 0.12
+      win_rate: 0.43
     - name: Genji's Guard
       pick_rate: 0.11
-      win_rate: 0.52
+      win_rate: 0.51
   - name: Dwarven Plate
     pick_rate: 0.1
     win_rate: 0.44
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.72
+      win_rate: 0.67
     - name: Soul Reaver
       pick_rate: 0.07
-      win_rate: 0.44
+      win_rate: 0.48
   - name: Shell of Rebuke
     pick_rate: 0.06
     win_rate: 0.36
     alternates:
-    - name: Soul Reaver
-      pick_rate: 0.06
-      win_rate: 0.7
     - name: Engraved Guard
+      pick_rate: 0.06
+      win_rate: 0.55
+    - name: Soul Reaver
       pick_rate: 0.05
-      win_rate: 0.44
+      win_rate: 0.7
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.57
   - name: Bluestone Pendant
     pick_rate: 0.31
-    win_rate: 0.37
+    win_rate: 0.4
   - name: Death's Embrace
     pick_rate: 0.11
     win_rate: 0.61
   source_url: https://smitebrain.com/gods/jormungandr/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5031446540880503
-  god_matches_won: 160
-  god_matches_played: 318
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5117647058823529
+  god_matches_won: 174
+  god_matches_played: 340
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -150,10 +150,10 @@ builds:
       pick: 0.0
       fit: 0.58
     Shifter's Shield:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
-      win: 0.54
-      pick: 0.33
+      win: 0.55
+      pick: 0.32
       fit: 0.48
     Amanita Charm:
       total: 0.53
@@ -224,10 +224,10 @@ builds:
       pick: 0.0
       fit: 0.71
     Shifter's Shield:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
-      win: 0.54
-      pick: 0.33
+      win: 0.55
+      pick: 0.32
       fit: 0.46
     Amanita Charm:
       total: 0.57
@@ -298,8 +298,8 @@ builds:
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
-      win: 0.54
-      pick: 0.33
+      win: 0.55
+      pick: 0.32
       fit: 0.37
     The Crusher:
       total: 0.53
@@ -364,8 +364,8 @@ builds:
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
-      win: 0.54
-      pick: 0.33
+      win: 0.55
+      pick: 0.32
       fit: 0.37
     Amanita Charm:
       total: 0.51
@@ -390,8 +390,8 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
+  - Freya's Tears
   - Jotunn's Revenge
-  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -410,11 +410,11 @@ builds:
     Valor, Amanita Charm, Freya''s Tears, Jotunn''s Revenge, Kinetic Cuirass, Hydra''s
     Lament, Gluttonous Grimoire, Soul Gem, Shield of the Phoenix, Eye of Providence,
     Oni Hunter''s Garb, Pharaoh''s Curse, The Crusher, Runeforged Hammer, Chronos''
-    Pendant, Screeching Gargoyle, Spectral Armor, Chandra''s Grace, Golden Blade,
-    Prophetic Cloak, Yogi''s Necklace, Lernaean Bow, Spear of Desolation, Shogun''s
-    Ofuda, Erosion, Shield Splitter, Gladiator''s Shield, Helm of Radiance, Rod of
-    Asclepius, Draconic Scale, Death Metal, Eye of the Storm, Gem of Focus, Leviathan''s
-    Hide, Bracer of The Abyss, Arondight, Jade Scepter.'
+    Pendant, Screeching Gargoyle, Prophetic Cloak, Spectral Armor, Chandra''s Grace,
+    Golden Blade, Yogi''s Necklace, Lernaean Bow, Spear of Desolation, Shogun''s Ofuda,
+    Erosion, Shield Splitter, Gladiator''s Shield, Helm of Radiance, Rod of Asclepius,
+    Draconic Scale, Death Metal, Eye of the Storm, Gem of Focus, Leviathan''s Hide,
+    Bracer of The Abyss, Arondight, Jade Scepter.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -443,8 +443,8 @@ builds:
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
-      win: 0.54
-      pick: 0.33
+      win: 0.55
+      pick: 0.32
       fit: 0.39
     Amanita Charm:
       total: 0.51
@@ -463,7 +463,7 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Shifter's Shield
+  - Amanita Charm
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -509,8 +509,8 @@ builds:
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
-      win: 0.54
-      pick: 0.33
+      win: 0.55
+      pick: 0.32
       fit: 0.42
     The Crusher:
       total: 0.52
@@ -535,7 +535,7 @@ builds:
   - The Crusher
   - Soul Reaver
   flex_slots:
-  - Shifter's Shield
+  - Jotunn's Revenge
   - Soul Reaver
   situational_swaps:
   - vs_tag: heavy_cc
@@ -582,8 +582,8 @@ builds:
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
-      win: 0.54
-      pick: 0.33
+      win: 0.55
+      pick: 0.32
       fit: 0.36
     The Crusher:
       total: 0.51
@@ -595,7 +595,7 @@ builds:
       total: 0.51
       efficiency: 0.46
       win: 0.67
-      pick: 0.08
+      pick: 0.07
       fit: 0.26
   starter: *id001
 - source: suggested

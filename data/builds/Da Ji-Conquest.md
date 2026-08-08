@@ -9,32 +9,32 @@ builds:
   aspect_win_rate: 0.48
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.62
+    pick_rate: 0.63
     win_rate: 0.51
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.19
-      win_rate: 0.56
+      pick_rate: 0.18
+      win_rate: 0.57
     - name: Barbed Carver
-      pick_rate: 0.07
-      win_rate: 0.52
+      pick_rate: 0.06
+      win_rate: 0.53
   - name: Hydra's Lament
     pick_rate: 0.41
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Barbed Carver
       pick_rate: 0.15
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Jotunn's Revenge
-      pick_rate: 0.15
-      win_rate: 0.55
+      pick_rate: 0.14
+      win_rate: 0.56
   - name: Barbed Carver
     pick_rate: 0.27
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.14
-      win_rate: 0.48
+      win_rate: 0.47
     - name: The Reaper
       pick_rate: 0.11
       win_rate: 0.58
@@ -50,24 +50,24 @@ builds:
       win_rate: 0.65
   - name: Titan's Bane
     pick_rate: 0.18
-    win_rate: 0.63
+    win_rate: 0.62
     alternates:
     - name: Heartseeker
       pick_rate: 0.19
-      win_rate: 0.52
+      win_rate: 0.53
     - name: Blinking Abyss
       pick_rate: 0.07
-      win_rate: 0.6
+      win_rate: 0.58
   - name: Lucerne Hammer
-    pick_rate: 0.08
-    win_rate: 0.49
+    pick_rate: 0.09
+    win_rate: 0.48
     alternates:
     - name: Titan's Bane
       pick_rate: 0.11
-      win_rate: 0.63
+      win_rate: 0.66
     - name: Blinking Abyss
       pick_rate: 0.08
-      win_rate: 0.57
+      win_rate: 0.59
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.5
@@ -79,14 +79,14 @@ builds:
     pick_rate: 0.05
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/da-ji/
-  last_verified: '2026-08-07'
-  god_win_rate: 0.5256241787122208
-  god_matches_won: 400
-  god_matches_played: 761
+  last_verified: '2026-08-08'
+  god_win_rate: 0.5238678090575275
+  god_matches_won: 428
+  god_matches_played: 817
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-07'
-  god_matches_analyzed: 13100
+  god_window_end: '2026-08-08'
+  god_matches_analyzed: 14443
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -100,8 +100,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Heartseeker
   - The Reaper
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -126,12 +126,12 @@ builds:
       total: 0.64
       efficiency: 0.65
       win: 0.51
-      pick: 0.62
+      pick: 0.63
       fit: 1.0
     Hydra's Lament:
       total: 0.58
       efficiency: 0.61
-      win: 0.52
+      win: 0.51
       pick: 0.41
       fit: 0.77
     The Reaper:
@@ -155,7 +155,7 @@ builds:
     Titan's Bane:
       total: 0.57
       efficiency: 0.46
-      win: 0.63
+      win: 0.62
       pick: 0.18
       fit: 0.78
   starter: &id001
@@ -171,8 +171,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Heartseeker
   - The Reaper
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -197,12 +197,12 @@ builds:
       total: 0.61
       efficiency: 0.65
       win: 0.51
-      pick: 0.62
+      pick: 0.63
       fit: 0.78
     Hydra's Lament:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.52
+      win: 0.51
       pick: 0.41
       fit: 0.54
     The Reaper:
@@ -224,9 +224,9 @@ builds:
       pick: 0.34
       fit: 0.66
     Titan's Bane:
-      total: 0.54
+      total: 0.53
       efficiency: 0.46
-      win: 0.63
+      win: 0.62
       pick: 0.18
       fit: 0.56
   starter: *id001
@@ -240,8 +240,8 @@ builds:
   - The Reaper
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Berserker's Shield
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -273,7 +273,7 @@ builds:
       total: 0.56
       efficiency: 0.65
       win: 0.51
-      pick: 0.62
+      pick: 0.63
       fit: 0.48
     Kinetic Cuirass:
       total: 0.53
@@ -282,9 +282,9 @@ builds:
       pick: 0.0
       fit: 0.62
     Hydra's Lament:
-      total: 0.53
+      total: 0.52
       efficiency: 0.61
-      win: 0.52
+      win: 0.51
       pick: 0.41
       fit: 0.42
     The Reaper:
@@ -310,7 +310,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - The Reaper
+  - Titan's Bane
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -336,12 +336,12 @@ builds:
       total: 0.64
       efficiency: 0.65
       win: 0.51
-      pick: 0.62
+      pick: 0.63
       fit: 1.0
     Hydra's Lament:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.52
+      win: 0.51
       pick: 0.41
       fit: 0.54
     The Reaper:
@@ -365,7 +365,7 @@ builds:
     Titan's Bane:
       total: 0.58
       efficiency: 0.46
-      win: 0.63
+      win: 0.62
       pick: 0.18
       fit: 0.85
   starter: *id001
@@ -417,12 +417,12 @@ builds:
       total: 0.55
       efficiency: 0.65
       win: 0.51
-      pick: 0.62
+      pick: 0.63
       fit: 0.42
     Hydra's Lament:
       total: 0.52
       efficiency: 0.61
-      win: 0.52
+      win: 0.51
       pick: 0.41
       fit: 0.36
     The Reaper:
@@ -446,10 +446,10 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   - The Crusher
-  - Titan's Bane
+  - Heartseeker
   flex_slots:
   - The Crusher
-  - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -487,12 +487,12 @@ builds:
       total: 0.62
       efficiency: 0.65
       win: 0.51
-      pick: 0.62
+      pick: 0.63
       fit: 0.85
     Hydra's Lament:
-      total: 0.58
+      total: 0.57
       efficiency: 0.61
-      win: 0.52
+      win: 0.51
       pick: 0.41
       fit: 0.75
     The Crusher:
@@ -501,12 +501,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Titan's Bane:
+    Heartseeker:
       total: 0.51
       efficiency: 0.46
-      win: 0.63
-      pick: 0.18
-      fit: 0.35
+      win: 0.58
+      pick: 0.34
+      fit: 0.45
   starter: *id001
 - source: suggested
   archetype: model
@@ -544,12 +544,12 @@ builds:
       total: 0.64
       efficiency: 0.65
       win: 0.51
-      pick: 0.62
+      pick: 0.63
       fit: 1.0
     Hydra's Lament:
       total: 0.58
       efficiency: 0.61
-      win: 0.52
+      win: 0.51
       pick: 0.41
       fit: 0.77
     The Reaper:
@@ -613,12 +613,12 @@ builds:
       total: 0.64
       efficiency: 0.65
       win: 0.51
-      pick: 0.62
+      pick: 0.63
       fit: 1.0
     Hydra's Lament:
       total: 0.58
       efficiency: 0.61
-      win: 0.52
+      win: 0.51
       pick: 0.41
       fit: 0.77
     The Reaper:
@@ -642,13 +642,13 @@ builds:
     Titan's Bane:
       total: 0.57
       efficiency: 0.46
-      win: 0.63
+      win: 0.62
       pick: 0.18
       fit: 0.78
   swaps:
   - added: Titan's Bane
     removed: Heartseeker
-    reason: community 63% win over 137 matches (vs 53% on this god), taking the model's
+    reason: community 62% win over 147 matches (vs 52% on this god), taking the model's
       weakest slot from Heartseeker
   starter: *id001
 ---

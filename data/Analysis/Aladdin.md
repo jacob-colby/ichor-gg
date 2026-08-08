@@ -2,54 +2,54 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.63 | 0.73 | 0.65 | 0.58 | 0.21 | 0.90 | undervalued |  |  |
+| Jotunn's Revenge | 0.62 | 0.73 | 0.65 | 0.55 | 0.20 | 0.90 | undervalued |  |  |
 | The Crusher | 0.57 | 0.69 | 0.65 | 0.50 | 0.00 | 0.79 | undervalued | burst | **UNDERRATED** |
 | Hydra's Lament | 0.54 | 0.63 | 0.61 | 0.50 | 0.00 | 0.68 | fair | burst | **UNDERRATED** |
 | Soul Gem | 0.54 | 0.63 | 0.59 | 0.50 | 0.00 | 0.72 | fair | burst, sustain, aura | **UNDERRATED** |
 | Gluttonous Grimoire | 0.53 | 0.62 | 0.66 | 0.50 | 0.00 | 0.52 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.53 | 0.55 | 0.52 | 0.53 | 0.31 | 0.62 | fair |  |  |
-| Obsidian Shard | 0.53 | 0.50 | 0.54 | 0.60 | 0.15 | 0.42 | fair |  | **UNDERRATED** |
+| Spear of Desolation | 0.53 | 0.55 | 0.52 | 0.52 | 0.32 | 0.62 | fair |  |  |
 | The Reaper | 0.52 | 0.58 | 0.53 | 0.50 | 0.00 | 0.69 | fair | sustain | **UNDERRATED** |
-| Heartseeker | 0.51 | 0.56 | 0.46 | 0.49 | 0.17 | 0.79 | fair | burst |  |
+| Obsidian Shard | 0.52 | 0.50 | 0.54 | 0.57 | 0.16 | 0.42 | fair |  |  |
 | Genji's Guard | 0.51 | 0.56 | 0.72 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
 | Pendulum Blade | 0.51 | 0.56 | 0.42 | 0.50 | 0.00 | 0.90 | premium |  | **UNDERRATED** |
 | Runeforged Hammer | 0.51 | 0.56 | 0.60 | 0.50 | 0.00 | 0.48 | fair | burst | **UNDERRATED** |
 | Death Metal | 0.51 | 0.56 | 0.60 | 0.50 | 0.00 | 0.48 | fair |  | **UNDERRATED** |
+| Heartseeker | 0.50 | 0.56 | 0.46 | 0.48 | 0.16 | 0.79 | fair | burst |  |
 | Spear of the Magus | 0.50 | 0.55 | 0.60 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Lernaean Bow | 0.49 | 0.53 | 0.56 | 0.50 | 0.00 | 0.48 | fair | wave-clear, burst | **UNDERRATED** |
 | The Cosmic Horror | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Damaru | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
-| Titan's Bane | 0.49 | 0.53 | 0.46 | 0.49 | 0.08 | 0.69 | fair |  | **UNDERRATED** |
 | Tekko-Kagi | 0.49 | 0.53 | 0.46 | 0.50 | 0.00 | 0.69 | fair | mobility | **UNDERRATED** |
+| Titan's Bane | 0.49 | 0.53 | 0.46 | 0.49 | 0.07 | 0.69 | fair |  | **UNDERRATED** |
 | Arondight | 0.49 | 0.53 | 0.50 | 0.50 | 0.00 | 0.58 | fair | mobility | **UNDERRATED** |
 | Breastplate of Valor | 0.48 | 0.52 | 0.65 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
-| Transcendence | 0.48 | 0.44 | 0.46 | 0.56 | 0.14 | 0.38 | fair |  |  |
 | Avatar's Parashu | 0.48 | 0.51 | 0.43 | 0.50 | 0.00 | 0.69 | premium | cc-immunity | **UNDERRATED** |
 | Avenging Blade | 0.48 | 0.50 | 0.51 | 0.50 | 0.00 | 0.48 | fair | protection-shred | **UNDERRATED** |
-| Rod of Tahuti | 0.48 | 0.43 | 0.44 | 0.56 | 0.17 | 0.42 | premium |  |  |
 | Golden Blade | 0.48 | 0.50 | 0.55 | 0.50 | 0.00 | 0.38 | fair | wave-clear | **UNDERRATED** |
+| Transcendence | 0.47 | 0.44 | 0.46 | 0.55 | 0.13 | 0.38 | fair |  |  |
 | Berserker's Shield | 0.47 | 0.50 | 0.71 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Bragi's Harp | 0.47 | 0.49 | 0.46 | 0.50 | 0.00 | 0.58 | fair | burst | **UNDERRATED** |
+| Rod of Tahuti | 0.47 | 0.43 | 0.44 | 0.55 | 0.17 | 0.42 | premium |  |  |
 | Shield Splitter | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.47 | 0.49 | 0.56 | 0.50 | 0.00 | 0.31 | fair |  | **UNDERRATED** |
 | Dominance | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
 | Riptalon | 0.47 | 0.48 | 0.56 | 0.50 | 0.00 | 0.31 | fair | sustain | **UNDERRATED** |
 | Eye of the Storm | 0.46 | 0.48 | 0.52 | 0.50 | 0.00 | 0.38 | fair | peel | **UNDERRATED** |
+| Polynomicon | 0.46 | 0.41 | 0.49 | 0.56 | 0.16 | 0.20 | fair | burst |  |
 | Tyrfing | 0.46 | 0.48 | 0.47 | 0.50 | 0.00 | 0.48 | fair | burst | **UNDERRATED** |
 | Triton's Conch | 0.46 | 0.47 | 0.47 | 0.50 | 0.00 | 0.48 | fair | aura | **UNDERRATED** |
 | Freya's Tears | 0.46 | 0.47 | 0.59 | 0.50 | 0.00 | 0.21 | fair |  | **UNDERRATED** |
 | Silverbranch Bow | 0.46 | 0.47 | 0.54 | 0.50 | 0.00 | 0.31 | fair |  | **UNDERRATED** |
 | Dreamer's Idol | 0.46 | 0.47 | 0.49 | 0.50 | 0.00 | 0.42 | fair | cc-immunity | **UNDERRATED** |
-| Polynomicon | 0.46 | 0.41 | 0.49 | 0.55 | 0.17 | 0.20 | fair | burst |  |
 | The World Stone | 0.46 | 0.47 | 0.49 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Doom Orb | 0.46 | 0.46 | 0.49 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Shield of the Phoenix | 0.46 | 0.46 | 0.57 | 0.50 | 0.00 | 0.21 | fair | sustain | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
-| Barbed Carver | 0.45 | 0.45 | 0.43 | 0.50 | 0.10 | 0.48 | premium | burst |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
 | Gem of Focus | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.31 | fair | mobility |  |
+| Barbed Carver | 0.45 | 0.45 | 0.43 | 0.50 | 0.00 | 0.48 | premium | burst |  |
 | Rod of Asclepius | 0.45 | 0.45 | 0.59 | 0.50 | 0.00 | 0.10 | fair | sustain, aura |  |
 | Blood-Bound Book | 0.44 | 0.44 | 0.58 | 0.50 | 0.00 | 0.10 | fair | sustain |  |
 | Helm of Radiance | 0.44 | 0.44 | 0.58 | 0.50 | 0.00 | 0.10 | fair |  |  |
@@ -97,8 +97,8 @@
 | Void Shield | 0.40 | 0.35 | 0.46 | 0.50 | 0.00 | 0.10 | fair | protection-shred, aura |  |
 | Draconic Scale | 0.40 | 0.35 | 0.50 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Magi's Cloak | 0.40 | 0.35 | 0.50 | 0.50 | 0.00 | 0.00 | fair | cc-immunity |  |
+| Book of Thoth | 0.40 | 0.32 | 0.42 | 0.51 | 0.17 | 0.10 | premium |  |  |
 | Regrowth Striders | 0.40 | 0.35 | 0.41 | 0.50 | 0.00 | 0.21 | premium | mobility, sustain |  |
-| Book of Thoth | 0.40 | 0.32 | 0.42 | 0.50 | 0.18 | 0.10 | premium |  |  |
 | Necronomicon | 0.40 | 0.34 | 0.44 | 0.50 | 0.00 | 0.10 | premium |  |  |
 | Xibalban Effigy | 0.40 | 0.34 | 0.49 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Void Stone | 0.39 | 0.34 | 0.44 | 0.50 | 0.00 | 0.10 | premium | protection-shred, aura |  |
