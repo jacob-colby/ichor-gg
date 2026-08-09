@@ -5,29 +5,29 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Cosmos
-  aspect_pick_rate: 0.12
-  aspect_win_rate: 0.51
+  aspect_pick_rate: 0.11
+  aspect_win_rate: 0.49
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.36
-    win_rate: 0.49
+    pick_rate: 0.37
+    win_rate: 0.5
     alternates:
     - name: Tyrfing
-      pick_rate: 0.33
+      pick_rate: 0.32
       win_rate: 0.52
     - name: Book of Thoth
       pick_rate: 0.06
-      win_rate: 0.55
+      win_rate: 0.52
   - name: Bragi's Harp
     pick_rate: 0.18
     win_rate: 0.54
     alternates:
     - name: Staff of Myrddin
-      pick_rate: 0.14
-      win_rate: 0.47
+      pick_rate: 0.15
+      win_rate: 0.48
     - name: Spear of Desolation
       pick_rate: 0.09
-      win_rate: 0.61
+      win_rate: 0.58
   - name: Rod of Tahuti
     pick_rate: 0.13
     win_rate: 0.46
@@ -37,30 +37,30 @@ builds:
       win_rate: 0.53
     - name: Barbed Carver
       pick_rate: 0.08
-      win_rate: 0.45
+      win_rate: 0.47
   - name: Obsidian Shard
     pick_rate: 0.14
-    win_rate: 0.43
+    win_rate: 0.44
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.2
+      pick_rate: 0.22
       win_rate: 0.58
     - name: The Executioner
       pick_rate: 0.08
-      win_rate: 0.59
-  - name: Evil Eye
+      win_rate: 0.6
+  - name: The Executioner
     pick_rate: 0.05
-    win_rate: 0.45
+    win_rate: 0.53
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.14
-      win_rate: 0.55
+      pick_rate: 0.15
+      win_rate: 0.56
     - name: Rod of Tahuti
       pick_rate: 0.06
-      win_rate: 0.63
+      win_rate: 0.6
   - name: Hunter's Bow
     pick_rate: 0.06
-    win_rate: 0.43
+    win_rate: 0.44
     alternates:
     - name: Evil Eye
       pick_rate: 0.06
@@ -71,37 +71,37 @@ builds:
   community_starters:
   - name: Death's Embrace
     pick_rate: 0.25
-    win_rate: 0.57
+    win_rate: 0.56
   - name: Archmage's Gem
-    pick_rate: 0.21
+    pick_rate: 0.22
     win_rate: 0.58
   - name: Conduit Gem
     pick_rate: 0.12
-    win_rate: 0.43
+    win_rate: 0.44
   source_url: https://smitebrain.com/gods/nut/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.5151133501259446
-  god_matches_won: 409
-  god_matches_played: 794
+  last_verified: '2026-08-09'
+  god_win_rate: 0.5117581187010078
+  god_matches_won: 457
+  god_matches_played: 893
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: core
   slot_order:
-  - Lernaean Bow
   - Berserker's Shield
   - Jotunn's Revenge
   - Bragi's Harp
+  - Spear of Desolation
   - The Crusher
   - Soul Gem
   flex_slots:
   - Berserker's Shield
-  - Lernaean Bow
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -125,12 +125,6 @@ builds:
     Hunter''s Garb, Jade Scepter, Heartseeker, The World Stone, Doom Orb, Yogi''s
     Necklace, Obsidian Shard.'
   slot_scores:
-    Lernaean Bow:
-      total: 0.5
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Berserker's Shield:
       total: 0.51
       efficiency: 0.71
@@ -149,6 +143,12 @@ builds:
       win: 0.54
       pick: 0.18
       fit: 0.71
+    Spear of Desolation:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.37
+      fit: 0.48
     The Crusher:
       total: 0.52
       efficiency: 0.65
@@ -196,8 +196,8 @@ builds:
     of Valor, Bracer of The Abyss, Tekko-Kagi, Runeforged Hammer, Golden Blade, Chronos''
     Pendant, Dominance, Blood-Bound Book, Bancroft''s Talon, Nimble Ring, Heartseeker,
     Pharaoh''s Curse, Damaru, Dreamer''s Idol, Rod of Asclepius, Amanita Charm, Pendulum
-    Blade, The World Stone, Doom Orb, Freya''s Tears, Oni Hunter''s Garb, Helm of
-    Radiance, Obsidian Shard.'
+    Blade, The World Stone, Doom Orb, Freya''s Tears, Oni Hunter''s Garb, Obsidian
+    Shard, Helm of Radiance.'
   slot_scores:
     Berserker's Shield:
       total: 0.5
@@ -220,8 +220,8 @@ builds:
     Spear of Desolation:
       total: 0.51
       efficiency: 0.52
-      win: 0.49
-      pick: 0.36
+      win: 0.5
+      pick: 0.37
       fit: 0.56
     The Crusher:
       total: 0.53
@@ -318,7 +318,7 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Spear of the Magus
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -339,8 +339,8 @@ builds:
     The Reaper, Genji''s Guard, Lernaean Bow, Tekko-Kagi, Hydra''s Lament, Avenging
     Blade, Bracer of The Abyss, Death Metal, Golden Blade, Dreamer''s Idol, Heartseeker,
     Runeforged Hammer, Screeching Gargoyle, The World Stone, Doom Orb, Breastplate
-    of Valor, Blood-Bound Book, Bancroft''s Talon, Dominance, Nimble Ring, Obsidian
-    Shard, Pharaoh''s Curse, Chronos'' Pendant, Rod of Asclepius, Amanita Charm, Titan''s
+    of Valor, Obsidian Shard, Blood-Bound Book, Bancroft''s Talon, Dominance, Nimble
+    Ring, Pharaoh''s Curse, Chronos'' Pendant, Rod of Asclepius, Amanita Charm, Titan''s
     Bane, Pendulum Blade, Oni Hunter''s Garb.'
   slot_scores:
     Berserker's Shield:
@@ -358,8 +358,8 @@ builds:
     Spear of Desolation:
       total: 0.51
       efficiency: 0.52
-      win: 0.49
-      pick: 0.36
+      win: 0.5
+      pick: 0.37
       fit: 0.57
     Spear of the Magus:
       total: 0.51
@@ -431,7 +431,7 @@ builds:
       total: 0.51
       efficiency: 0.47
       win: 0.52
-      pick: 0.33
+      pick: 0.32
       fit: 0.63
     Riptalon:
       total: 0.51
@@ -512,10 +512,10 @@ builds:
       pick: 0.0
       fit: 0.54
     Spear of Desolation:
-      total: 0.51
+      total: 0.52
       efficiency: 0.52
-      win: 0.49
-      pick: 0.36
+      win: 0.5
+      pick: 0.37
       fit: 0.6
     Soul Gem:
       total: 0.57

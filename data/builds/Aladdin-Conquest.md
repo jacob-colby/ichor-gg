@@ -17,76 +17,76 @@ builds:
       win_rate: 0.56
     - name: Jotunn's Revenge
       pick_rate: 0.05
-      win_rate: 0.44
+      win_rate: 0.46
   - name: Spear of Desolation
     pick_rate: 0.32
-    win_rate: 0.52
+    win_rate: 0.53
     alternates:
     - name: Jotunn's Revenge
       pick_rate: 0.2
-      win_rate: 0.55
+      win_rate: 0.54
     - name: Book of Thoth
       pick_rate: 0.14
-      win_rate: 0.49
+      win_rate: 0.5
   - name: Book of Thoth
     pick_rate: 0.17
-    win_rate: 0.51
+    win_rate: 0.53
     alternates:
-    - name: Transcendence
-      pick_rate: 0.13
-      win_rate: 0.55
     - name: Spear of Desolation
       pick_rate: 0.13
-      win_rate: 0.43
-  - name: Rod of Tahuti
-    pick_rate: 0.17
-    win_rate: 0.55
-    alternates:
-    - name: Polynomicon
-      pick_rate: 0.16
-      win_rate: 0.56
-    - name: Heartseeker
-      pick_rate: 0.09
-      win_rate: 0.59
-  - name: Heartseeker
+      win_rate: 0.46
+    - name: Transcendence
+      pick_rate: 0.13
+      win_rate: 0.54
+  - name: Polynomicon
     pick_rate: 0.16
-    win_rate: 0.48
+    win_rate: 0.57
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.25
-      win_rate: 0.54
-    - name: Obsidian Shard
       pick_rate: 0.16
-      win_rate: 0.54
+      win_rate: 0.56
+    - name: Barbed Carver
+      pick_rate: 0.09
+      win_rate: 0.49
+  - name: Rod of Tahuti
+    pick_rate: 0.25
+    win_rate: 0.54
+    alternates:
+    - name: Heartseeker
+      pick_rate: 0.16
+      win_rate: 0.49
+    - name: Obsidian Shard
+      pick_rate: 0.15
+      win_rate: 0.55
   - name: Obsidian Shard
     pick_rate: 0.16
     win_rate: 0.57
     alternates:
     - name: Titan's Bane
       pick_rate: 0.07
-      win_rate: 0.49
+      win_rate: 0.48
     - name: Evil Eye
       pick_rate: 0.07
-      win_rate: 0.49
+      win_rate: 0.45
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.47
-    win_rate: 0.55
+    pick_rate: 0.45
+    win_rate: 0.56
   - name: Conduit Gem
-    pick_rate: 0.15
+    pick_rate: 0.16
     win_rate: 0.41
   - name: Bumba's Hammer
     pick_rate: 0.12
-    win_rate: 0.58
+    win_rate: 0.56
   source_url: https://smitebrain.com/gods/aladdin/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.5140625
-  god_matches_won: 329
-  god_matches_played: 640
+  last_verified: '2026-08-09'
+  god_win_rate: 0.5153203342618384
+  god_matches_won: 370
+  god_matches_played: 718
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -118,8 +118,8 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, Hydra''s Lament, Soul Gem, Gluttonous Grimoire, The Reaper,
     Genji''s Guard, Pendulum Blade, Runeforged Hammer, Death Metal, Spear of the Magus,
-    Lernaean Bow, The Cosmic Horror, Damaru, Tekko-Kagi, Titan''s Bane, Arondight,
-    Breastplate of Valor, Avatar''s Parashu, Avenging Blade, Golden Blade, Berserker''s
+    Lernaean Bow, The Cosmic Horror, Damaru, Tekko-Kagi, Arondight, Breastplate of
+    Valor, Titan''s Bane, Avatar''s Parashu, Avenging Blade, Golden Blade, Berserker''s
     Shield, Bragi''s Harp, Shield Splitter, Chronos'' Pendant, Dominance, Riptalon,
     Eye of the Storm, Tyrfing, Triton''s Conch, Freya''s Tears, Silverbranch Bow,
     Dreamer''s Idol, The World Stone, Doom Orb, Amanita Charm, Shield of the Phoenix.'
@@ -127,7 +127,7 @@ builds:
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.2
       fit: 0.9
     Hydra's Lament:
@@ -139,7 +139,7 @@ builds:
     Spear of Desolation:
       total: 0.53
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.32
       fit: 0.62
     The Crusher:
@@ -193,20 +193,20 @@ builds:
     Lament, The Cosmic Horror, Genji''s Guard, Death Metal, The Reaper, Pendulum Blade,
     Chronos'' Pendant, Breastplate of Valor, Runeforged Hammer, Dreamer''s Idol, The
     World Stone, Doom Orb, Berserker''s Shield, Gem of Focus, Riptalon, Tekko-Kagi,
-    Titan''s Bane, Lernaean Bow, Arondight, Bragi''s Harp, Damaru, Rod of Asclepius,
+    Lernaean Bow, Arondight, Bragi''s Harp, Damaru, Rod of Asclepius, Titan''s Bane,
     Silverbranch Bow, Freya''s Tears, Blood-Bound Book, Helm of Radiance, Bancroft''s
     Talon, Shield of the Phoenix, Avatar''s Parashu, Jade Scepter, Amanita Charm.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.2
       fit: 0.78
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.32
       fit: 0.78
     Spear of the Magus:
@@ -279,7 +279,7 @@ builds:
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.2
       fit: 0.45
     Kinetic Cuirass:
@@ -334,17 +334,17 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Gluttonous Grimoire, Soul Gem, The Reaper, Spear of
-    the Magus, The Cosmic Horror, Hydra''s Lament, Pendulum Blade, Tekko-Kagi, Titan''s
-    Bane, Avenging Blade, Riptalon, Genji''s Guard, Silverbranch Bow, Avatar''s Parashu,
+    the Magus, The Cosmic Horror, Hydra''s Lament, Pendulum Blade, Tekko-Kagi, Avenging
+    Blade, Riptalon, Titan''s Bane, Genji''s Guard, Silverbranch Bow, Avatar''s Parashu,
     Runeforged Hammer, Dreamer''s Idol, The World Stone, Doom Orb, Death Metal, Screeching
     Gargoyle, Breastplate of Valor, Lernaean Bow, Berserker''s Shield, Damaru, Arondight,
     Golden Blade, Amanita Charm, Oni Hunter''s Garb, Chronos'' Pendant, Stone of Binding,
     Toxic Blade, Freya''s Tears, Yogi''s Necklace, Shield Splitter.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.2
       fit: 0.93
     Gluttonous Grimoire:
@@ -356,7 +356,7 @@ builds:
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.32
       fit: 0.74
     Spear of the Magus:
@@ -426,9 +426,9 @@ builds:
       pick: 0.0
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.2
       fit: 0.39
     Gluttonous Grimoire:
@@ -500,7 +500,7 @@ builds:
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.2
       fit: 0.85
     Hydra's Lament:
@@ -510,9 +510,9 @@ builds:
       pick: 0.0
       fit: 0.75
     Spear of Desolation:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.32
       fit: 0.85
     Soul Gem:
@@ -566,7 +566,7 @@ builds:
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.2
       fit: 0.9
     Hydra's Lament:

@@ -2,13 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Kinetic Cuirass | 0.59 | 0.63 | 0.60 | 0.60 | 0.13 | 0.70 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.55 | 0.56 | 0.55 | 0.55 | 0.40 | 0.60 | fair |  |  |
+| Kinetic Cuirass | 0.60 | 0.63 | 0.60 | 0.62 | 0.17 | 0.70 | fair | burst |  |
+| Draconic Scale | 0.57 | 0.53 | 0.50 | 0.67 | 0.06 | 0.60 | fair |  | **UNDERRATED** |
+| Shifter's Shield | 0.55 | 0.56 | 0.55 | 0.56 | 0.40 | 0.60 | fair |  |  |
+| Berserker's Shield | 0.55 | 0.61 | 0.71 | 0.51 | 0.31 | 0.38 | undervalued |  |  |
 | Amanita Charm | 0.55 | 0.64 | 0.66 | 0.50 | 0.00 | 0.60 | undervalued | sustain, aura | **UNDERRATED** |
-| Golden Blade | 0.54 | 0.51 | 0.55 | 0.62 | 0.21 | 0.41 | fair | wave-clear |  |
-| Berserker's Shield | 0.53 | 0.61 | 0.71 | 0.47 | 0.31 | 0.38 | undervalued |  |  |
+| Golden Blade | 0.54 | 0.51 | 0.55 | 0.61 | 0.22 | 0.41 | fair | wave-clear |  |
 | Eye of Providence | 0.53 | 0.61 | 0.62 | 0.50 | 0.00 | 0.60 | undervalued |  | **UNDERRATED** |
-| Dwarven Plate | 0.53 | 0.38 | 0.35 | 0.74 | 0.12 | 0.43 | premium |  |  |
+| Dwarven Plate | 0.53 | 0.38 | 0.35 | 0.74 | 0.11 | 0.43 | premium |  |  |
 | Genji's Guard | 0.52 | 0.60 | 0.72 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
 | Jotunn's Revenge | 0.51 | 0.58 | 0.65 | 0.50 | 0.00 | 0.40 | undervalued |  | **UNDERRATED** |
 | Shield Splitter | 0.51 | 0.57 | 0.53 | 0.50 | 0.00 | 0.67 | fair |  | **UNDERRATED** |
@@ -16,20 +17,18 @@
 | Oni Hunter's Garb | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.38 | undervalued |  | **UNDERRATED** |
 | Freya's Tears | 0.51 | 0.57 | 0.59 | 0.50 | 0.00 | 0.54 | fair |  | **UNDERRATED** |
 | The Crusher | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.39 | undervalued | burst | **UNDERRATED** |
-| Hide of the Nemean Lion | 0.51 | 0.49 | 0.54 | 0.57 | 0.08 | 0.38 | fair |  | **UNDERRATED** |
 | Hydra's Lament | 0.51 | 0.56 | 0.61 | 0.50 | 0.00 | 0.45 | fair | burst | **UNDERRATED** |
 | Breastplate of Valor | 0.50 | 0.56 | 0.65 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
-| Shogun's Ofuda | 0.50 | 0.48 | 0.53 | 0.56 | 0.15 | 0.38 | fair | aura |  |
+| Hide of the Nemean Lion | 0.50 | 0.49 | 0.54 | 0.56 | 0.08 | 0.38 | fair |  | **UNDERRATED** |
 | Eye of the Storm | 0.50 | 0.55 | 0.52 | 0.50 | 0.00 | 0.62 | fair | peel | **UNDERRATED** |
 | Shield of the Phoenix | 0.50 | 0.55 | 0.57 | 0.50 | 0.00 | 0.50 | fair | sustain | **UNDERRATED** |
 | Erosion | 0.50 | 0.54 | 0.52 | 0.50 | 0.00 | 0.60 | fair | aura | **UNDERRATED** |
-| Draconic Scale | 0.49 | 0.53 | 0.50 | 0.50 | 0.00 | 0.60 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.38 | fair | anti-crit, aura | **UNDERRATED** |
 | Pharaoh's Curse | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.38 | fair | aura | **UNDERRATED** |
 | Avenging Blade | 0.48 | 0.51 | 0.51 | 0.50 | 0.00 | 0.51 | fair | protection-shred | **UNDERRATED** |
 | Yogi's Necklace | 0.48 | 0.50 | 0.65 | 0.50 | 0.00 | 0.17 | undervalued |  | **UNDERRATED** |
 | Leviathan's Hide | 0.48 | 0.50 | 0.55 | 0.50 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
-| Hastened Fatalis | 0.48 | 0.23 | 0.32 | 0.80 | 0.04 | 0.00 | premium | mobility |  |
+| Shogun's Ofuda | 0.47 | 0.48 | 0.53 | 0.50 | 0.13 | 0.38 | fair | aura |  |
 | Midgardian Mail | 0.47 | 0.49 | 0.54 | 0.50 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.43 | fair | peel, cc-immunity | **UNDERRATED** |
 | Stone of Binding | 0.47 | 0.49 | 0.48 | 0.50 | 0.00 | 0.53 | fair | protection-shred | **UNDERRATED** |
@@ -48,6 +47,7 @@
 | Hussar's Wings | 0.45 | 0.46 | 0.40 | 0.50 | 0.00 | 0.60 | premium | cc-immunity |  |
 | Prophetic Cloak | 0.45 | 0.46 | 0.43 | 0.50 | 0.00 | 0.54 | premium |  |  |
 | Arondight | 0.45 | 0.46 | 0.50 | 0.50 | 0.00 | 0.35 | fair | mobility |  |
+| Hastened Fatalis | 0.45 | 0.23 | 0.32 | 0.75 | 0.05 | 0.00 | premium | mobility |  |
 | Chandra's Grace | 0.45 | 0.46 | 0.53 | 0.50 | 0.00 | 0.28 | fair | sustain |  |
 | Void Stone | 0.45 | 0.45 | 0.44 | 0.50 | 0.00 | 0.48 | premium | protection-shred, aura |  |
 | Ragnarok's Wake | 0.45 | 0.45 | 0.43 | 0.50 | 0.00 | 0.48 | premium | mobility, burst |  |

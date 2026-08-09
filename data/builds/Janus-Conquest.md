@@ -9,15 +9,15 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.5
+    pick_rate: 0.51
     win_rate: 0.49
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.33
+      pick_rate: 0.32
       win_rate: 0.5
     - name: Doom Orb
       pick_rate: 0.06
-      win_rate: 0.56
+      win_rate: 0.55
   - name: Book of Thoth
     pick_rate: 0.22
     win_rate: 0.5
@@ -30,14 +30,14 @@ builds:
       win_rate: 0.47
   - name: Soul Gem
     pick_rate: 0.4
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.18
+      pick_rate: 0.19
       win_rate: 0.54
     - name: Spear of Desolation
       pick_rate: 0.1
-      win_rate: 0.45
+      win_rate: 0.44
   - name: Rod of Tahuti
     pick_rate: 0.39
     win_rate: 0.49
@@ -47,46 +47,46 @@ builds:
       win_rate: 0.5
     - name: Soul Gem
       pick_rate: 0.11
-      win_rate: 0.54
+      win_rate: 0.55
   - name: Obsidian Shard
     pick_rate: 0.3
     win_rate: 0.57
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.21
-      win_rate: 0.52
+      win_rate: 0.53
     - name: Evil Eye
       pick_rate: 0.08
-      win_rate: 0.39
-  - name: Blinking Abyss
-    pick_rate: 0.09
-    win_rate: 0.62
-    alternates:
-    - name: Evil Eye
-      pick_rate: 0.09
       win_rate: 0.38
+  - name: Evil Eye
+    pick_rate: 0.09
+    win_rate: 0.38
+    alternates:
     - name: Obsidian Shard
       pick_rate: 0.09
-      win_rate: 0.55
+      win_rate: 0.58
+    - name: Blinking Abyss
+      pick_rate: 0.09
+      win_rate: 0.62
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.5
     win_rate: 0.53
   - name: Conduit Gem
-    pick_rate: 0.3
-    win_rate: 0.41
+    pick_rate: 0.29
+    win_rate: 0.42
   - name: Pendulum of The Ages
     pick_rate: 0.14
     win_rate: 0.56
   source_url: https://smitebrain.com/gods/janus/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.4889663182346109
-  god_matches_won: 842
-  god_matches_played: 1722
+  last_verified: '2026-08-09'
+  god_win_rate: 0.4893503727369542
+  god_matches_won: 919
+  god_matches_played: 1878
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -132,7 +132,7 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.49
-      pick: 0.5
+      pick: 0.51
       fit: 1.0
     The Cosmic Horror:
       total: 0.55
@@ -155,7 +155,7 @@ builds:
     Soul Gem:
       total: 0.61
       efficiency: 0.59
-      win: 0.52
+      win: 0.51
       pick: 0.4
       fit: 1.0
   starter: &id001
@@ -204,7 +204,7 @@ builds:
       total: 0.55
       efficiency: 0.52
       win: 0.49
-      pick: 0.5
+      pick: 0.51
       fit: 0.78
     The Cosmic Horror:
       total: 0.51
@@ -227,7 +227,7 @@ builds:
     Soul Gem:
       total: 0.59
       efficiency: 0.59
-      win: 0.52
+      win: 0.51
       pick: 0.4
       fit: 0.88
   starter: *id001
@@ -297,7 +297,7 @@ builds:
     Soul Gem:
       total: 0.59
       efficiency: 0.59
-      win: 0.52
+      win: 0.51
       pick: 0.4
       fit: 0.88
   starter: *id001
@@ -338,7 +338,7 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.49
-      pick: 0.5
+      pick: 0.51
       fit: 1.0
     The Cosmic Horror:
       total: 0.56
@@ -367,7 +367,7 @@ builds:
     Soul Gem:
       total: 0.61
       efficiency: 0.59
-      win: 0.52
+      win: 0.51
       pick: 0.4
       fit: 1.0
   starter: *id001
@@ -435,9 +435,9 @@ builds:
       pick: 0.3
       fit: 0.3
     Soul Gem:
-      total: 0.55
+      total: 0.54
       efficiency: 0.59
-      win: 0.52
+      win: 0.51
       pick: 0.4
       fit: 0.57
   starter: *id001
@@ -496,7 +496,7 @@ builds:
       total: 0.56
       efficiency: 0.52
       win: 0.49
-      pick: 0.5
+      pick: 0.51
       fit: 0.85
     Obsidian Shard:
       total: 0.51
@@ -507,7 +507,7 @@ builds:
     Soul Gem:
       total: 0.6
       efficiency: 0.59
-      win: 0.52
+      win: 0.51
       pick: 0.4
       fit: 0.95
   starter: *id001
@@ -559,7 +559,7 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.49
-      pick: 0.5
+      pick: 0.51
       fit: 1.0
     The Cosmic Horror:
       total: 0.55

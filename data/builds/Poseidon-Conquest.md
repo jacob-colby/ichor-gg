@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of the Trident
   aspect_pick_rate: 0.07
-  aspect_win_rate: 0.35
+  aspect_win_rate: 0.36
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.52
+    pick_rate: 0.51
     win_rate: 0.58
     alternates:
     - name: Book of Thoth
       pick_rate: 0.16
-      win_rate: 0.52
+      win_rate: 0.51
     - name: Doom Orb
       pick_rate: 0.08
       win_rate: 0.56
   - name: Book of Thoth
-    pick_rate: 0.2
+    pick_rate: 0.19
     win_rate: 0.55
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.2
       win_rate: 0.52
     - name: The World Stone
-      pick_rate: 0.13
-      win_rate: 0.61
+      pick_rate: 0.14
+      win_rate: 0.6
   - name: Rod of Tahuti
     pick_rate: 0.21
-    win_rate: 0.55
+    win_rate: 0.53
     alternates:
     - name: Nimble Ring
       pick_rate: 0.18
       win_rate: 0.62
     - name: The World Stone
       pick_rate: 0.11
-      win_rate: 0.6
+      win_rate: 0.62
   - name: Obsidian Shard
     pick_rate: 0.16
     win_rate: 0.51
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.29
-      win_rate: 0.61
+      win_rate: 0.62
     - name: Nimble Ring
       pick_rate: 0.13
-      win_rate: 0.56
+      win_rate: 0.55
   - name: Nimble Ring
-    pick_rate: 0.1
+    pick_rate: 0.09
     win_rate: 0.59
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.27
-      win_rate: 0.62
+      pick_rate: 0.26
+      win_rate: 0.63
     - name: Rod of Tahuti
-      pick_rate: 0.14
+      pick_rate: 0.15
       win_rate: 0.57
   - name: Evil Eye
     pick_rate: 0.1
-    win_rate: 0.35
+    win_rate: 0.33
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.08
-      win_rate: 0.5
+      win_rate: 0.52
     - name: Blinking Abyss
       pick_rate: 0.07
-      win_rate: 0.77
+      win_rate: 0.79
   community_starters:
   - name: Pendulum of The Ages
-    pick_rate: 0.32
+    pick_rate: 0.31
     win_rate: 0.59
   - name: Archmage's Gem
     pick_rate: 0.2
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Sands of Time
     pick_rate: 0.14
-    win_rate: 0.44
+    win_rate: 0.45
   source_url: https://smitebrain.com/gods/poseidon/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.5419921875
-  god_matches_won: 555
-  god_matches_played: 1024
+  last_verified: '2026-08-09'
+  god_win_rate: 0.543010752688172
+  god_matches_won: 606
+  god_matches_played: 1116
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -132,7 +132,7 @@ builds:
       total: 0.62
       efficiency: 0.52
       win: 0.58
-      pick: 0.52
+      pick: 0.51
       fit: 1.0
     The Cosmic Horror:
       total: 0.55
@@ -155,8 +155,8 @@ builds:
     The World Stone:
       total: 0.57
       efficiency: 0.49
-      win: 0.61
-      pick: 0.13
+      win: 0.6
+      pick: 0.14
       fit: 0.79
   starter: &id001
     base: Conduit Gem
@@ -204,7 +204,7 @@ builds:
       total: 0.59
       efficiency: 0.52
       win: 0.58
-      pick: 0.52
+      pick: 0.51
       fit: 0.78
     The Cosmic Horror:
       total: 0.51
@@ -219,10 +219,10 @@ builds:
       pick: 0.0
       fit: 0.56
     The World Stone:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.61
-      pick: 0.13
+      win: 0.6
+      pick: 0.14
       fit: 0.56
     Soul Gem:
       total: 0.56
@@ -286,7 +286,7 @@ builds:
       total: 0.54
       efficiency: 0.52
       win: 0.58
-      pick: 0.52
+      pick: 0.51
       fit: 0.49
     Amanita Charm:
       total: 0.58
@@ -344,7 +344,7 @@ builds:
       total: 0.62
       efficiency: 0.52
       win: 0.58
-      pick: 0.52
+      pick: 0.51
       fit: 1.0
     The Cosmic Horror:
       total: 0.56
@@ -367,8 +367,8 @@ builds:
     The World Stone:
       total: 0.58
       efficiency: 0.49
-      win: 0.61
-      pick: 0.13
+      win: 0.6
+      pick: 0.14
       fit: 0.85
   starter: *id001
 - source: suggested
@@ -414,7 +414,7 @@ builds:
       total: 0.51
       efficiency: 0.49
       win: 0.59
-      pick: 0.1
+      pick: 0.09
       fit: 0.48
     Bragi's Harp:
       total: 0.48
@@ -432,13 +432,13 @@ builds:
       total: 0.53
       efficiency: 0.52
       win: 0.58
-      pick: 0.52
+      pick: 0.51
       fit: 0.4
     The World Stone:
       total: 0.5
       efficiency: 0.49
-      win: 0.61
-      pick: 0.13
+      win: 0.6
+      pick: 0.14
       fit: 0.32
   starter: *id001
 - source: suggested
@@ -496,13 +496,13 @@ builds:
       total: 0.6
       efficiency: 0.52
       win: 0.58
-      pick: 0.52
+      pick: 0.51
       fit: 0.86
     The World Stone:
-      total: 0.51
+      total: 0.5
       efficiency: 0.49
-      win: 0.61
-      pick: 0.13
+      win: 0.6
+      pick: 0.14
       fit: 0.37
     Soul Gem:
       total: 0.57
@@ -516,13 +516,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Hydra's Lament
+  - Death Metal
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Crusher
-  - The World Stone
   flex_slots:
-  - The World Stone
   - Hydra's Lament
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -538,7 +538,7 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, The Crusher, Gluttonous
-    Grimoire, Soul Gem, The World Stone, Hydra''s Lament, Death Metal, Spear of the
+    Grimoire, Soul Gem, Hydra''s Lament, Death Metal, The World Stone, Spear of the
     Magus, Lernaean Bow, Bragi''s Harp, Runeforged Hammer, The Cosmic Horror, Genji''s
     Guard, Doom Orb, The Reaper, Berserker''s Shield, Golden Blade, Tekko-Kagi, Damaru,
     Heartseeker, Dominance, Bracer of The Abyss, Tyrfing, Chronos'' Pendant, Breastplate
@@ -558,6 +558,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
+    Death Metal:
+      total: 0.52
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Gluttonous Grimoire:
       total: 0.54
       efficiency: 0.66
@@ -568,7 +574,7 @@ builds:
       total: 0.55
       efficiency: 0.52
       win: 0.58
-      pick: 0.52
+      pick: 0.51
       fit: 0.55
     The Crusher:
       total: 0.55
@@ -576,12 +582,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    The World Stone:
-      total: 0.52
-      efficiency: 0.49
-      win: 0.61
-      pick: 0.13
-      fit: 0.44
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -640,7 +640,7 @@ builds:
       total: 0.57
       efficiency: 0.52
       win: 0.58
-      pick: 0.52
+      pick: 0.51
       fit: 0.69
     The Crusher:
       total: 0.55
@@ -649,10 +649,10 @@ builds:
       pick: 0.0
       fit: 0.66
     The World Stone:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.61
-      pick: 0.13
+      win: 0.6
+      pick: 0.14
       fit: 0.56
   starter: *id001
 - source: suggested
@@ -704,7 +704,7 @@ builds:
       total: 0.62
       efficiency: 0.52
       win: 0.58
-      pick: 0.52
+      pick: 0.51
       fit: 1.0
     The Cosmic Horror:
       total: 0.55

@@ -6,10 +6,10 @@ builds:
 - source: community
   aspect: Aspect of the Gilded Victor
   aspect_pick_rate: 0.07
-  aspect_win_rate: 0.47
+  aspect_win_rate: 0.44
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.46
+    pick_rate: 0.45
     win_rate: 0.52
     alternates:
     - name: Chronos' Pendant
@@ -17,76 +17,76 @@ builds:
       win_rate: 0.51
     - name: Book of Thoth
       pick_rate: 0.14
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Soul Reaver
     pick_rate: 0.19
-    win_rate: 0.56
+    win_rate: 0.55
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.17
-      win_rate: 0.52
-    - name: Book of Thoth
-      pick_rate: 0.13
       win_rate: 0.54
+    - name: Soul Gem
+      pick_rate: 0.13
+      win_rate: 0.55
   - name: Soul Gem
     pick_rate: 0.29
-    win_rate: 0.55
+    win_rate: 0.56
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.13
-      win_rate: 0.52
+      win_rate: 0.51
     - name: Soul Reaver
-      pick_rate: 0.09
-      win_rate: 0.55
+      pick_rate: 0.1
+      win_rate: 0.59
   - name: Rod of Tahuti
     pick_rate: 0.29
     win_rate: 0.56
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.26
-      win_rate: 0.48
+      pick_rate: 0.25
+      win_rate: 0.49
     - name: Soul Gem
       pick_rate: 0.06
-      win_rate: 0.6
+      win_rate: 0.56
   - name: Obsidian Shard
-    pick_rate: 0.22
+    pick_rate: 0.23
     win_rate: 0.63
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.18
-      win_rate: 0.54
+      win_rate: 0.55
     - name: Evil Eye
       pick_rate: 0.1
-      win_rate: 0.44
+      win_rate: 0.45
   - name: Evil Eye
     pick_rate: 0.1
-    win_rate: 0.35
+    win_rate: 0.36
     alternates:
+    - name: Rod of Tahuti
+      pick_rate: 0.06
+      win_rate: 0.55
     - name: Obsidian Shard
       pick_rate: 0.06
       win_rate: 0.47
-    - name: Void Shard
-      pick_rate: 0.06
-      win_rate: 0.53
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.25
+    pick_rate: 0.24
     win_rate: 0.58
   - name: Conduit Gem
     pick_rate: 0.16
-    win_rate: 0.5
+    win_rate: 0.49
   - name: Archmage's Gem
     pick_rate: 0.14
-    win_rate: 0.62
+    win_rate: 0.63
   source_url: https://smitebrain.com/gods/discordia/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.522962962962963
-  god_matches_won: 353
-  god_matches_played: 675
+  last_verified: '2026-08-09'
+  god_win_rate: 0.5226960110041265
+  god_matches_won: 380
+  god_matches_played: 727
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -126,7 +126,7 @@ builds:
       total: 0.59
       efficiency: 0.52
       win: 0.52
-      pick: 0.46
+      pick: 0.45
       fit: 1.0
     The Cosmic Horror:
       total: 0.55
@@ -150,12 +150,12 @@ builds:
       total: 0.6
       efficiency: 0.54
       win: 0.63
-      pick: 0.22
+      pick: 0.23
       fit: 0.79
     Soul Gem:
       total: 0.62
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.29
       fit: 1.0
   starter: &id001
@@ -203,7 +203,7 @@ builds:
       total: 0.56
       efficiency: 0.52
       win: 0.52
-      pick: 0.46
+      pick: 0.45
       fit: 0.78
     The Cosmic Horror:
       total: 0.51
@@ -221,12 +221,12 @@ builds:
       total: 0.57
       efficiency: 0.54
       win: 0.63
-      pick: 0.22
+      pick: 0.23
       fit: 0.56
     Soul Gem:
       total: 0.6
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.29
       fit: 0.88
   starter: *id001
@@ -285,7 +285,7 @@ builds:
       total: 0.54
       efficiency: 0.54
       win: 0.63
-      pick: 0.22
+      pick: 0.23
       fit: 0.39
     Amanita Charm:
       total: 0.58
@@ -294,9 +294,9 @@ builds:
       pick: 0.0
       fit: 0.81
     Soul Gem:
-      total: 0.6
+      total: 0.61
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.29
       fit: 0.89
   starter: *id001
@@ -336,7 +336,7 @@ builds:
       total: 0.59
       efficiency: 0.52
       win: 0.52
-      pick: 0.46
+      pick: 0.45
       fit: 1.0
     The Cosmic Horror:
       total: 0.56
@@ -360,12 +360,12 @@ builds:
       total: 0.61
       efficiency: 0.54
       win: 0.63
-      pick: 0.22
+      pick: 0.23
       fit: 0.85
     Soul Gem:
       total: 0.62
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.29
       fit: 1.0
   starter: *id001
@@ -423,18 +423,18 @@ builds:
       total: 0.5
       efficiency: 0.52
       win: 0.52
-      pick: 0.46
+      pick: 0.45
       fit: 0.4
     Obsidian Shard:
       total: 0.53
       efficiency: 0.54
       win: 0.63
-      pick: 0.22
+      pick: 0.23
       fit: 0.32
     Soul Gem:
-      total: 0.55
+      total: 0.56
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.29
       fit: 0.58
   starter: *id001
@@ -493,18 +493,18 @@ builds:
       total: 0.57
       efficiency: 0.52
       win: 0.52
-      pick: 0.46
+      pick: 0.45
       fit: 0.86
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
       win: 0.63
-      pick: 0.22
+      pick: 0.23
       fit: 0.37
     Soul Gem:
-      total: 0.61
+      total: 0.62
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.29
       fit: 0.96
   starter: *id001
@@ -559,7 +559,7 @@ builds:
       total: 0.52
       efficiency: 0.52
       win: 0.52
-      pick: 0.46
+      pick: 0.45
       fit: 0.55
     The Crusher:
       total: 0.55
@@ -571,12 +571,12 @@ builds:
       total: 0.55
       efficiency: 0.54
       win: 0.63
-      pick: 0.22
+      pick: 0.23
       fit: 0.44
     Soul Gem:
       total: 0.57
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.29
       fit: 0.65
   starter: *id001
@@ -631,7 +631,7 @@ builds:
       total: 0.54
       efficiency: 0.52
       win: 0.52
-      pick: 0.46
+      pick: 0.45
       fit: 0.69
     The Crusher:
       total: 0.55
@@ -643,12 +643,12 @@ builds:
       total: 0.57
       efficiency: 0.54
       win: 0.63
-      pick: 0.22
+      pick: 0.23
       fit: 0.56
     Soul Gem:
       total: 0.59
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.29
       fit: 0.79
   starter: *id001
@@ -700,7 +700,7 @@ builds:
       total: 0.59
       efficiency: 0.52
       win: 0.52
-      pick: 0.46
+      pick: 0.45
       fit: 1.0
     The Cosmic Horror:
       total: 0.55
@@ -718,7 +718,7 @@ builds:
       total: 0.6
       efficiency: 0.54
       win: 0.63
-      pick: 0.22
+      pick: 0.23
       fit: 0.79
   starter: *id001
 ---

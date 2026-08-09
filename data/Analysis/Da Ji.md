@@ -2,12 +2,12 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.64 | 0.76 | 0.65 | 0.51 | 0.63 | 1.00 | undervalued |  |  |
+| Jotunn's Revenge | 0.64 | 0.76 | 0.65 | 0.51 | 0.64 | 1.00 | undervalued |  |  |
 | The Crusher | 0.58 | 0.72 | 0.65 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
-| Hydra's Lament | 0.58 | 0.65 | 0.61 | 0.51 | 0.41 | 0.77 | fair | burst |  |
-| Heartseeker | 0.57 | 0.59 | 0.46 | 0.58 | 0.34 | 0.88 | fair | burst |  |
+| Hydra's Lament | 0.57 | 0.65 | 0.61 | 0.50 | 0.42 | 0.77 | fair | burst |  |
 | The Reaper | 0.57 | 0.61 | 0.53 | 0.58 | 0.11 | 0.78 | fair | sustain | **UNDERRATED** |
-| Titan's Bane | 0.57 | 0.56 | 0.46 | 0.62 | 0.18 | 0.78 | fair |  |  |
+| Heartseeker | 0.57 | 0.59 | 0.46 | 0.57 | 0.33 | 0.88 | fair | burst |  |
+| Titan's Bane | 0.56 | 0.56 | 0.46 | 0.61 | 0.18 | 0.78 | fair |  |  |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Runeforged Hammer | 0.52 | 0.58 | 0.60 | 0.50 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
@@ -16,9 +16,9 @@
 | Arondight | 0.50 | 0.55 | 0.50 | 0.50 | 0.00 | 0.67 | fair | mobility | **UNDERRATED** |
 | Damaru | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Avatar's Parashu | 0.49 | 0.53 | 0.43 | 0.50 | 0.00 | 0.78 | premium | cc-immunity | **UNDERRATED** |
-| Barbed Carver | 0.49 | 0.47 | 0.43 | 0.54 | 0.27 | 0.54 | premium | burst |  |
 | Breastplate of Valor | 0.49 | 0.52 | 0.65 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
 | Avenging Blade | 0.49 | 0.52 | 0.51 | 0.50 | 0.00 | 0.54 | fair | protection-shred | **UNDERRATED** |
+| Barbed Carver | 0.49 | 0.47 | 0.43 | 0.53 | 0.27 | 0.54 | premium | burst |  |
 | Golden Blade | 0.49 | 0.52 | 0.55 | 0.50 | 0.00 | 0.44 | fair | wave-clear | **UNDERRATED** |
 | Shield Splitter | 0.48 | 0.51 | 0.53 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Dominance | 0.48 | 0.51 | 0.53 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |

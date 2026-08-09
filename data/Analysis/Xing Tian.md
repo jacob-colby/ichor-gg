@@ -3,10 +3,10 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Shifter's Shield | 0.59 | 0.60 | 0.55 | 0.60 | 0.40 | 0.71 | fair |  |  |
-| Genji's Guard | 0.57 | 0.62 | 0.72 | 0.55 | 0.19 | 0.39 | undervalued |  |  |
-| Breastplate of Valor | 0.56 | 0.57 | 0.65 | 0.60 | 0.12 | 0.39 | undervalued |  | **UNDERRATED** |
 | Amanita Charm | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.71 | undervalued | sustain, aura | **UNDERRATED** |
+| Genji's Guard | 0.56 | 0.62 | 0.72 | 0.54 | 0.19 | 0.39 | undervalued |  |  |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.81 | fair | burst | **UNDERRATED** |
+| Breastplate of Valor | 0.55 | 0.57 | 0.65 | 0.58 | 0.12 | 0.39 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.55 | 0.65 | 0.62 | 0.50 | 0.00 | 0.71 | undervalued |  | **UNDERRATED** |
 | Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
@@ -15,7 +15,7 @@
 | Shield of the Phoenix | 0.51 | 0.58 | 0.57 | 0.50 | 0.00 | 0.59 | fair | sustain | **UNDERRATED** |
 | Draconic Scale | 0.51 | 0.57 | 0.50 | 0.50 | 0.00 | 0.71 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.46 | fair | anti-crit, aura | **UNDERRATED** |
-| Yogi's Necklace | 0.49 | 0.51 | 0.65 | 0.51 | 0.11 | 0.20 | undervalued |  | **UNDERRATED** |
+| Yogi's Necklace | 0.50 | 0.51 | 0.65 | 0.52 | 0.11 | 0.20 | undervalued |  | **UNDERRATED** |
 | Soul Gem | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.39 | fair | burst, sustain, aura | **UNDERRATED** |
 | Leviathan's Hide | 0.49 | 0.53 | 0.55 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.48 | 0.52 | 0.52 | 0.50 | 0.00 | 0.51 | fair | peel, cc-immunity | **UNDERRATED** |
@@ -34,10 +34,10 @@
 | Prophetic Cloak | 0.47 | 0.49 | 0.43 | 0.50 | 0.00 | 0.64 | premium |  |  |
 | Screeching Gargoyle | 0.47 | 0.49 | 0.49 | 0.50 | 0.00 | 0.49 | fair | protection-shred, peel |  |
 | Jade Scepter | 0.47 | 0.49 | 0.57 | 0.50 | 0.00 | 0.30 | fair | peel |  |
+| Hide of the Nemean Lion | 0.47 | 0.51 | 0.54 | 0.46 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
 | Helm of Darkness | 0.46 | 0.48 | 0.43 | 0.50 | 0.00 | 0.60 | premium | mobility |  |
 | Void Stone | 0.46 | 0.47 | 0.44 | 0.50 | 0.00 | 0.56 | premium | protection-shred, aura |  |
 | Chandra's Grace | 0.46 | 0.47 | 0.53 | 0.50 | 0.00 | 0.34 | fair | sustain |  |
-| Hide of the Nemean Lion | 0.46 | 0.51 | 0.54 | 0.45 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
 | Ragnarok's Wake | 0.46 | 0.47 | 0.43 | 0.50 | 0.00 | 0.56 | premium | mobility, burst |  |
 | Spear of the Magus | 0.46 | 0.47 | 0.60 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Wish-Granting Pearl | 0.46 | 0.46 | 0.54 | 0.50 | 0.00 | 0.30 | fair |  |  |
@@ -50,9 +50,9 @@
 | Mystical Mail | 0.45 | 0.45 | 0.45 | 0.50 | 0.00 | 0.46 | fair | aura, wave-clear |  |
 | Glorious Pridwen | 0.45 | 0.45 | 0.36 | 0.50 | 0.00 | 0.64 | premium | sustain |  |
 | Death Metal | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.09 | fair |  |  |
-| Dwarven Plate | 0.45 | 0.40 | 0.35 | 0.54 | 0.07 | 0.51 | premium |  |  |
 | Stygian Anchor | 0.45 | 0.44 | 0.41 | 0.50 | 0.00 | 0.51 | premium | anti-heal |  |
 | Blood-Bound Book | 0.44 | 0.44 | 0.58 | 0.50 | 0.00 | 0.09 | fair | sustain |  |
+| Dwarven Plate | 0.44 | 0.40 | 0.35 | 0.53 | 0.07 | 0.51 | premium |  |  |
 | Shroud of Vengeance | 0.44 | 0.43 | 0.36 | 0.50 | 0.00 | 0.61 | premium | burst |  |
 | Lifebinder | 0.44 | 0.43 | 0.49 | 0.50 | 0.00 | 0.30 | fair | sustain, aura |  |
 | Bancroft's Talon | 0.44 | 0.43 | 0.58 | 0.50 | 0.00 | 0.09 | fair | sustain |  |
@@ -87,7 +87,7 @@
 | Brawler’s Beat Stick | 0.36 | 0.28 | 0.18 | 0.50 | 0.00 | 0.51 | premium | anti-heal |  |
 | Circe's Hexstone | 0.36 | 0.28 | 0.25 | 0.50 | 0.00 | 0.34 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.36 | 0.27 | 0.30 | 0.50 | 0.00 | 0.20 | premium | cc-immunity, sustain |  |
-| Gauntlet of Thebes | 0.36 | 0.25 | 0.27 | 0.51 | 0.11 | 0.20 | premium |  |  |
+| Gauntlet of Thebes | 0.36 | 0.25 | 0.27 | 0.51 | 0.10 | 0.20 | premium |  |  |
 | Mercury's Talaria | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Omen Drum | 0.32 | 0.19 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.32 | 0.19 | 0.18 | 0.50 | 0.00 | 0.20 | premium |  |  |

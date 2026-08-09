@@ -3,19 +3,19 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Genji's Guard | 0.60 | 0.60 | 0.72 | 0.65 | 0.16 | 0.32 | undervalued |  |  |
-| Breastplate of Valor | 0.58 | 0.55 | 0.65 | 0.66 | 0.15 | 0.32 | undervalued |  | **UNDERRATED** |
-| Chronos' Pendant | 0.55 | 0.50 | 0.56 | 0.65 | 0.17 | 0.35 | fair |  |  |
+| Breastplate of Valor | 0.58 | 0.55 | 0.65 | 0.67 | 0.12 | 0.32 | undervalued |  | **UNDERRATED** |
+| Chronos' Pendant | 0.55 | 0.50 | 0.56 | 0.66 | 0.18 | 0.35 | fair |  |  |
 | Gluttonous Grimoire | 0.55 | 0.65 | 0.66 | 0.50 | 0.00 | 0.61 | undervalued | burst | **UNDERRATED** |
+| Spear of Desolation | 0.53 | 0.52 | 0.52 | 0.59 | 0.19 | 0.50 | fair |  |  |
 | Amanita Charm | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.50 | undervalued | sustain, aura | **UNDERRATED** |
 | Rod of Tahuti | 0.53 | 0.41 | 0.44 | 0.70 | 0.16 | 0.36 | premium |  |  |
-| Spear of Desolation | 0.53 | 0.52 | 0.52 | 0.58 | 0.19 | 0.50 | fair |  |  |
 | Kinetic Cuirass | 0.53 | 0.60 | 0.60 | 0.50 | 0.00 | 0.60 | fair | burst | **UNDERRATED** |
 | Soul Gem | 0.52 | 0.59 | 0.59 | 0.50 | 0.00 | 0.60 | fair | burst, sustain, aura | **UNDERRATED** |
+| Obsidian Shard | 0.52 | 0.48 | 0.54 | 0.61 | 0.08 | 0.36 | fair |  | **UNDERRATED** |
 | Eye of Providence | 0.52 | 0.58 | 0.62 | 0.50 | 0.00 | 0.50 | undervalued |  | **UNDERRATED** |
-| Obsidian Shard | 0.52 | 0.48 | 0.54 | 0.60 | 0.08 | 0.36 | fair |  | **UNDERRATED** |
+| The World Stone | 0.51 | 0.45 | 0.49 | 0.62 | 0.12 | 0.36 | fair |  |  |
 | Freya's Tears | 0.50 | 0.56 | 0.59 | 0.50 | 0.00 | 0.49 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.50 | 0.56 | 0.65 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
-| The World Stone | 0.50 | 0.45 | 0.49 | 0.60 | 0.12 | 0.36 | fair |  |  |
 | Shield of the Phoenix | 0.50 | 0.54 | 0.57 | 0.50 | 0.00 | 0.47 | fair | sustain | **UNDERRATED** |
 | Shifter's Shield | 0.49 | 0.54 | 0.55 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.49 | 0.53 | 0.60 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
@@ -26,8 +26,8 @@
 | Spectral Armor | 0.48 | 0.51 | 0.59 | 0.50 | 0.00 | 0.33 | fair | anti-crit, aura | **UNDERRATED** |
 | Jade Scepter | 0.48 | 0.51 | 0.57 | 0.50 | 0.00 | 0.36 | fair | peel | **UNDERRATED** |
 | Draconic Scale | 0.48 | 0.50 | 0.50 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
-| Book of Thoth | 0.48 | 0.35 | 0.42 | 0.63 | 0.30 | 0.20 | premium |  |  |
 | Yogi's Necklace | 0.47 | 0.50 | 0.65 | 0.50 | 0.00 | 0.15 | undervalued |  | **UNDERRATED** |
+| Book of Thoth | 0.47 | 0.35 | 0.42 | 0.62 | 0.29 | 0.20 | premium |  |  |
 | Leviathan's Hide | 0.47 | 0.49 | 0.55 | 0.50 | 0.00 | 0.33 | fair |  | **UNDERRATED** |
 | Wish-Granting Pearl | 0.47 | 0.48 | 0.54 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
 | Ethereal Staff | 0.47 | 0.48 | 0.53 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |

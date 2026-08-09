@@ -9,8 +9,8 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.6
-    win_rate: 0.58
+    pick_rate: 0.59
+    win_rate: 0.57
     alternates:
     - name: Chronos' Pendant
       pick_rate: 0.08
@@ -20,14 +20,14 @@ builds:
       win_rate: 0.56
   - name: Soul Gem
     pick_rate: 0.23
-    win_rate: 0.55
+    win_rate: 0.56
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.15
-      win_rate: 0.54
+      win_rate: 0.52
     - name: The World Stone
-      pick_rate: 0.14
-      win_rate: 0.56
+      pick_rate: 0.15
+      win_rate: 0.57
   - name: Rod of Tahuti
     pick_rate: 0.21
     win_rate: 0.57
@@ -37,56 +37,56 @@ builds:
       win_rate: 0.56
     - name: The World Stone
       pick_rate: 0.13
-      win_rate: 0.64
+      win_rate: 0.62
   - name: Obsidian Shard
-    pick_rate: 0.17
-    win_rate: 0.44
+    pick_rate: 0.18
+    win_rate: 0.43
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.33
-      win_rate: 0.58
+      pick_rate: 0.32
+      win_rate: 0.59
     - name: Soul Gem
       pick_rate: 0.07
-      win_rate: 0.56
+      win_rate: 0.59
   - name: Evil Eye
     pick_rate: 0.1
-    win_rate: 0.45
+    win_rate: 0.43
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.23
-      win_rate: 0.66
+      pick_rate: 0.22
+      win_rate: 0.65
     - name: Rod of Tahuti
       pick_rate: 0.15
-      win_rate: 0.4
+      win_rate: 0.42
   - name: The Cosmic Horror
-    pick_rate: 0.07
+    pick_rate: 0.06
     win_rate: 0.63
     alternates:
     - name: Evil Eye
-      pick_rate: 0.14
+      pick_rate: 0.13
       win_rate: 0.59
     - name: Obsidian Shard
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.44
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.31
+    pick_rate: 0.32
     win_rate: 0.51
   - name: Conduit Gem
     pick_rate: 0.16
     win_rate: 0.56
-  - name: Pendulum of The Ages
-    pick_rate: 0.13
-    win_rate: 0.63
+  - name: Bluestone Brooch
+    pick_rate: 0.12
+    win_rate: 0.59
   source_url: https://smitebrain.com/gods/princess-bari/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.5099601593625498
-  god_matches_won: 128
-  god_matches_played: 251
+  last_verified: '2026-08-09'
+  god_win_rate: 0.5054545454545455
+  god_matches_won: 139
+  god_matches_played: 275
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -118,7 +118,7 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Cosmic Horror, Gluttonous Grimoire, Jotunn''s Revenge, The Crusher,
     Berserker''s Shield, Lernaean Bow, Riptalon, Bragi''s Harp, Hydra''s Lament, Genji''s
-    Guard, Bracer of The Abyss, Spear of the Magus, Death Metal, The World Stone,
+    Guard, Bracer of The Abyss, Spear of the Magus, The World Stone, Death Metal,
     Golden Blade, Nimble Ring, Silverbranch Bow, The Reaper, Dominance, Runeforged
     Hammer, Blood-Bound Book, Tekko-Kagi, Bancroft''s Talon, Tyrfing, Breastplate
     of Valor, Pharaoh''s Curse, Rod of Asclepius, Helm of Radiance, Damaru, Amanita
@@ -138,16 +138,16 @@ builds:
       pick: 0.0
       fit: 0.43
     Spear of Desolation:
-      total: 0.55
+      total: 0.54
       efficiency: 0.52
-      win: 0.58
-      pick: 0.6
+      win: 0.57
+      pick: 0.59
       fit: 0.47
     The Cosmic Horror:
       total: 0.54
       efficiency: 0.58
       win: 0.63
-      pick: 0.07
+      pick: 0.06
       fit: 0.36
     The Crusher:
       total: 0.52
@@ -158,7 +158,7 @@ builds:
     Soul Gem:
       total: 0.57
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.23
       fit: 0.67
   starter: &id001
@@ -191,8 +191,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: The Cosmic Horror, Gluttonous Grimoire, Jotunn''s Revenge, The Crusher, Berserker''s
-    Shield, Genji''s Guard, Hydra''s Lament, Riptalon, Spear of the Magus, Lernaean
-    Bow, The World Stone, The Reaper, Death Metal, Silverbranch Bow, Bragi''s Harp,
+    Shield, Genji''s Guard, Hydra''s Lament, Riptalon, Spear of the Magus, The World
+    Stone, Lernaean Bow, The Reaper, Death Metal, Silverbranch Bow, Bragi''s Harp,
     Breastplate of Valor, Bracer of The Abyss, Tekko-Kagi, Runeforged Hammer, Golden
     Blade, Dominance, Blood-Bound Book, Bancroft''s Talon, Nimble Ring, Tyrfing, Heartseeker,
     Pharaoh''s Curse, Damaru, Dreamer''s Idol, Rod of Asclepius, Amanita Charm, Pendulum
@@ -212,16 +212,16 @@ builds:
       pick: 0.0
       fit: 0.56
     Spear of Desolation:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
-      win: 0.58
-      pick: 0.6
+      win: 0.57
+      pick: 0.59
       fit: 0.56
     The Cosmic Horror:
       total: 0.55
       efficiency: 0.58
       win: 0.63
-      pick: 0.07
+      pick: 0.06
       fit: 0.4
     The Crusher:
       total: 0.53
@@ -232,7 +232,7 @@ builds:
     Soul Gem:
       total: 0.58
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.23
       fit: 0.73
   starter: *id001
@@ -287,14 +287,14 @@ builds:
     Spear of Desolation:
       total: 0.52
       efficiency: 0.52
-      win: 0.58
-      pick: 0.6
+      win: 0.57
+      pick: 0.59
       fit: 0.31
     The Cosmic Horror:
       total: 0.53
       efficiency: 0.58
       win: 0.63
-      pick: 0.07
+      pick: 0.06
       fit: 0.24
     Amanita Charm:
       total: 0.55
@@ -303,9 +303,9 @@ builds:
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.58
+      total: 0.59
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.23
       fit: 0.77
   starter: *id001
@@ -336,7 +336,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Cosmic Horror, Gluttonous Grimoire, Jotunn''s Revenge, The Crusher,
-    Riptalon, Spear of the Magus, Berserker''s Shield, The World Stone, Silverbranch
+    Riptalon, Spear of the Magus, The World Stone, Berserker''s Shield, Silverbranch
     Bow, The Reaper, Genji''s Guard, Lernaean Bow, Tekko-Kagi, Hydra''s Lament, Avenging
     Blade, Bracer of The Abyss, Death Metal, Bragi''s Harp, Golden Blade, Dreamer''s
     Idol, Heartseeker, Runeforged Hammer, Screeching Gargoyle, Doom Orb, Breastplate
@@ -353,14 +353,14 @@ builds:
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
-      win: 0.58
-      pick: 0.6
+      win: 0.57
+      pick: 0.59
       fit: 0.57
     The Cosmic Horror:
       total: 0.56
       efficiency: 0.58
       win: 0.63
-      pick: 0.07
+      pick: 0.06
       fit: 0.49
     Spear of the Magus:
       total: 0.51
@@ -377,7 +377,7 @@ builds:
     Soul Gem:
       total: 0.58
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.23
       fit: 0.76
   starter: *id001
@@ -431,14 +431,14 @@ builds:
     Spear of Desolation:
       total: 0.53
       efficiency: 0.52
-      win: 0.58
-      pick: 0.6
+      win: 0.57
+      pick: 0.59
       fit: 0.38
     The Cosmic Horror:
       total: 0.53
       efficiency: 0.58
       win: 0.63
-      pick: 0.07
+      pick: 0.06
       fit: 0.29
     Riptalon:
       total: 0.51
@@ -449,7 +449,7 @@ builds:
     Soul Gem:
       total: 0.55
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.23
       fit: 0.56
   starter: *id001
@@ -510,19 +510,19 @@ builds:
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
-      win: 0.58
-      pick: 0.6
+      win: 0.57
+      pick: 0.59
       fit: 0.59
     The Cosmic Horror:
       total: 0.53
       efficiency: 0.58
       win: 0.63
-      pick: 0.07
+      pick: 0.06
       fit: 0.24
     Soul Gem:
-      total: 0.58
+      total: 0.59
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.23
       fit: 0.77
   starter: *id001
@@ -574,16 +574,16 @@ builds:
       pick: 0.0
       fit: 0.5
     Spear of Desolation:
-      total: 0.55
+      total: 0.54
       efficiency: 0.52
-      win: 0.58
-      pick: 0.6
+      win: 0.57
+      pick: 0.59
       fit: 0.49
     The Cosmic Horror:
       total: 0.55
       efficiency: 0.58
       win: 0.63
-      pick: 0.07
+      pick: 0.06
       fit: 0.39
     The Crusher:
       total: 0.54
@@ -594,7 +594,7 @@ builds:
     Soul Gem:
       total: 0.57
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.23
       fit: 0.69
   starter: *id001
@@ -626,8 +626,8 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: The Cosmic Horror, Gluttonous Grimoire,
     Jotunn''s Revenge, The Crusher, Berserker''s Shield, Lernaean Bow, Hydra''s Lament,
-    Death Metal, Bragi''s Harp, Spear of the Magus, Riptalon, Genji''s Guard, Bracer
-    of The Abyss, The World Stone, Golden Blade, The Reaper, Runeforged Hammer, Tekko-Kagi,
+    Death Metal, Bragi''s Harp, Spear of the Magus, Riptalon, The World Stone, Genji''s
+    Guard, Bracer of The Abyss, Golden Blade, The Reaper, Runeforged Hammer, Tekko-Kagi,
     Dominance, Silverbranch Bow, Blood-Bound Book, Nimble Ring, Bancroft''s Talon,
     Tyrfing, Breastplate of Valor, Damaru, Rod of Asclepius, Pharaoh''s Curse, Helm
     of Radiance, Heartseeker, Amanita Charm, Jade Scepter, Dreamer''s Idol, Oni Hunter''s
@@ -646,16 +646,16 @@ builds:
       pick: 0.0
       fit: 0.48
     Spear of Desolation:
-      total: 0.55
+      total: 0.54
       efficiency: 0.52
-      win: 0.58
-      pick: 0.6
+      win: 0.57
+      pick: 0.59
       fit: 0.48
     The Cosmic Horror:
       total: 0.55
       efficiency: 0.58
       win: 0.63
-      pick: 0.07
+      pick: 0.06
       fit: 0.38
     The Crusher:
       total: 0.52
@@ -664,9 +664,9 @@ builds:
       pick: 0.0
       fit: 0.48
     Soul Gem:
-      total: 0.56
+      total: 0.57
       efficiency: 0.59
-      win: 0.55
+      win: 0.56
       pick: 0.23
       fit: 0.66
   starter: *id001

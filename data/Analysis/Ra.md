@@ -2,13 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.64 | 0.71 | 0.59 | 0.60 | 0.21 | 1.00 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.62 | 0.67 | 0.52 | 0.57 | 0.52 | 1.00 | fair |  |  |
+| Soul Gem | 0.64 | 0.71 | 0.59 | 0.60 | 0.22 | 1.00 | fair | burst, sustain, aura |  |
+| Spear of Desolation | 0.62 | 0.67 | 0.52 | 0.57 | 0.53 | 1.00 | fair |  |  |
 | Gluttonous Grimoire | 0.58 | 0.71 | 0.66 | 0.50 | 0.00 | 0.82 | undervalued | burst | **UNDERRATED** |
 | Obsidian Shard | 0.58 | 0.59 | 0.54 | 0.60 | 0.23 | 0.72 | fair |  |  |
-| The World Stone | 0.55 | 0.56 | 0.49 | 0.58 | 0.20 | 0.72 | fair |  |  |
+| The World Stone | 0.55 | 0.56 | 0.49 | 0.57 | 0.21 | 0.72 | fair |  |  |
 | Spear of the Magus | 0.54 | 0.64 | 0.60 | 0.50 | 0.00 | 0.72 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.54 | 0.52 | 0.44 | 0.59 | 0.33 | 0.72 | premium |  |  |
+| Rod of Tahuti | 0.54 | 0.52 | 0.44 | 0.58 | 0.33 | 0.72 | premium |  |  |
 | The Cosmic Horror | 0.54 | 0.62 | 0.58 | 0.50 | 0.00 | 0.72 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.53 | 0.60 | 0.56 | 0.50 | 0.00 | 0.69 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.52 | 0.59 | 0.72 | 0.50 | 0.00 | 0.28 | undervalued |  | **UNDERRATED** |
@@ -23,7 +23,7 @@
 | Bancroft's Talon | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.41 | fair | sustain | **UNDERRATED** |
 | Jade Scepter | 0.49 | 0.52 | 0.57 | 0.50 | 0.00 | 0.41 | fair | peel | **UNDERRATED** |
 | Bracer of The Abyss | 0.48 | 0.52 | 0.56 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
-| Nimble Ring | 0.48 | 0.46 | 0.49 | 0.54 | 0.13 | 0.41 | fair |  |  |
+| Nimble Ring | 0.48 | 0.46 | 0.49 | 0.53 | 0.13 | 0.41 | fair |  |  |
 | Wish-Granting Pearl | 0.47 | 0.50 | 0.54 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Polynomicon | 0.47 | 0.50 | 0.49 | 0.50 | 0.00 | 0.51 | fair | burst | **UNDERRATED** |
 | Freya's Tears | 0.47 | 0.50 | 0.59 | 0.50 | 0.00 | 0.28 | fair |  | **UNDERRATED** |
@@ -41,10 +41,10 @@
 | Chandra's Grace | 0.45 | 0.46 | 0.53 | 0.50 | 0.00 | 0.28 | fair | sustain |  |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Divine Ruin | 0.45 | 0.46 | 0.43 | 0.50 | 0.00 | 0.51 | premium | anti-heal, burst |  |
-| Shifter's Shield | 0.45 | 0.39 | 0.55 | 0.57 | 0.06 | 0.00 | fair |  |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
 | Triton's Conch | 0.45 | 0.45 | 0.47 | 0.50 | 0.00 | 0.41 | fair | aura |  |
+| Shifter's Shield | 0.45 | 0.39 | 0.55 | 0.56 | 0.06 | 0.00 | fair |  |  |
 | Staff of Myrddin | 0.45 | 0.44 | 0.34 | 0.50 | 0.00 | 0.69 | premium |  |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Necronomicon | 0.44 | 0.43 | 0.44 | 0.50 | 0.00 | 0.41 | premium |  |  |

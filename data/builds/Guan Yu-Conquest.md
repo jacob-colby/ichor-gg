@@ -6,11 +6,11 @@ builds:
 - source: community
   aspect: Aspect of the General
   aspect_pick_rate: 0.67
-  aspect_win_rate: 0.56
+  aspect_win_rate: 0.55
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.21
-    win_rate: 0.62
+    win_rate: 0.63
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.1
@@ -19,74 +19,74 @@ builds:
       pick_rate: 0.1
       win_rate: 0.55
   - name: Breastplate of Valor
-    pick_rate: 0.27
-    win_rate: 0.67
+    pick_rate: 0.26
+    win_rate: 0.66
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.21
-      win_rate: 0.58
+      pick_rate: 0.22
+      win_rate: 0.56
     - name: Shifter's Shield
       pick_rate: 0.06
-      win_rate: 0.54
+      win_rate: 0.5
   - name: Genji's Guard
-    pick_rate: 0.3
+    pick_rate: 0.29
     win_rate: 0.59
     alternates:
     - name: Breastplate of Valor
-      pick_rate: 0.18
-      win_rate: 0.59
+      pick_rate: 0.2
+      win_rate: 0.58
     - name: Heartwood Charm
       pick_rate: 0.05
-      win_rate: 0.55
+      win_rate: 0.57
   - name: Shell of Rebuke
-    pick_rate: 0.06
-    win_rate: 0.68
+    pick_rate: 0.07
+    win_rate: 0.66
     alternates:
     - name: Genji's Guard
       pick_rate: 0.12
       win_rate: 0.59
     - name: Heartwood Charm
       pick_rate: 0.06
-      win_rate: 0.65
+      win_rate: 0.67
   - name: Dwarven Plate
     pick_rate: 0.05
     win_rate: 0.75
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.08
-      win_rate: 0.69
+      pick_rate: 0.07
+      win_rate: 0.67
     - name: Engraved Guard
       pick_rate: 0.04
-      win_rate: 0.41
+      win_rate: 0.39
   - name: Legionnaire Armor
     pick_rate: 0.05
-    win_rate: 0.42
+    win_rate: 0.46
     alternates:
-    - name: Medallion
-      pick_rate: 0.04
-      win_rate: 0.9
     - name: Adroit Ring
+      pick_rate: 0.05
+      win_rate: 0.5
+    - name: Engraved Guard
       pick_rate: 0.04
-      win_rate: 0.6
+      win_rate: 0.55
   community_starters:
   - name: Sands of Time
-    pick_rate: 0.28
+    pick_rate: 0.27
     win_rate: 0.56
   - name: Pendulum of The Ages
     pick_rate: 0.14
-    win_rate: 0.63
+    win_rate: 0.59
   - name: Bluestone Brooch
     pick_rate: 0.1
-    win_rate: 0.68
+    win_rate: 0.67
   source_url: https://smitebrain.com/gods/guan-yu/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.581140350877193
-  god_matches_won: 265
-  god_matches_played: 456
+  last_verified: '2026-08-09'
+  god_win_rate: 0.5728744939271255
+  god_matches_won: 283
+  god_matches_played: 494
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -127,7 +127,7 @@ builds:
       total: 0.58
       efficiency: 0.72
       win: 0.59
-      pick: 0.3
+      pick: 0.29
       fit: 0.32
     Berserker's Shield:
       total: 0.54
@@ -138,8 +138,8 @@ builds:
     Breastplate of Valor:
       total: 0.59
       efficiency: 0.65
-      win: 0.67
-      pick: 0.27
+      win: 0.66
+      pick: 0.26
       fit: 0.32
     Kinetic Cuirass:
       total: 0.53
@@ -150,7 +150,7 @@ builds:
     Shifter's Shield:
       total: 0.56
       efficiency: 0.55
-      win: 0.62
+      win: 0.63
       pick: 0.21
       fit: 0.5
     Amanita Charm:
@@ -199,7 +199,7 @@ builds:
       total: 0.58
       efficiency: 0.72
       win: 0.59
-      pick: 0.3
+      pick: 0.29
       fit: 0.3
     Berserker's Shield:
       total: 0.54
@@ -208,10 +208,10 @@ builds:
       pick: 0.0
       fit: 0.45
     Breastplate of Valor:
-      total: 0.59
+      total: 0.58
       efficiency: 0.65
-      win: 0.67
-      pick: 0.27
+      win: 0.66
+      pick: 0.26
       fit: 0.3
     Shield of the Phoenix:
       total: 0.54
@@ -222,7 +222,7 @@ builds:
     Shifter's Shield:
       total: 0.56
       efficiency: 0.55
-      win: 0.62
+      win: 0.63
       pick: 0.21
       fit: 0.5
     Amanita Charm:
@@ -269,7 +269,7 @@ builds:
       total: 0.57
       efficiency: 0.72
       win: 0.59
-      pick: 0.3
+      pick: 0.29
       fit: 0.24
     Berserker's Shield:
       total: 0.52
@@ -278,10 +278,10 @@ builds:
       pick: 0.0
       fit: 0.32
     Breastplate of Valor:
-      total: 0.58
+      total: 0.57
       efficiency: 0.65
-      win: 0.67
-      pick: 0.27
+      win: 0.66
+      pick: 0.26
       fit: 0.24
     Jotunn's Revenge:
       total: 0.54
@@ -292,7 +292,7 @@ builds:
     Shifter's Shield:
       total: 0.54
       efficiency: 0.55
-      win: 0.62
+      win: 0.63
       pick: 0.21
       fit: 0.38
     The Crusher:
@@ -345,7 +345,7 @@ builds:
       total: 0.56
       efficiency: 0.72
       win: 0.59
-      pick: 0.3
+      pick: 0.29
       fit: 0.22
     Berserker's Shield:
       total: 0.54
@@ -354,15 +354,15 @@ builds:
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
-      total: 0.58
+      total: 0.57
       efficiency: 0.65
-      win: 0.67
-      pick: 0.27
+      win: 0.66
+      pick: 0.26
       fit: 0.22
     Shifter's Shield:
       total: 0.54
       efficiency: 0.55
-      win: 0.62
+      win: 0.63
       pick: 0.21
       fit: 0.35
     Pharaoh's Curse:
@@ -409,7 +409,7 @@ builds:
       total: 0.6
       efficiency: 0.72
       win: 0.59
-      pick: 0.3
+      pick: 0.29
       fit: 0.44
     Berserker's Shield:
       total: 0.52
@@ -420,8 +420,8 @@ builds:
     Breastplate of Valor:
       total: 0.61
       efficiency: 0.65
-      win: 0.67
-      pick: 0.27
+      win: 0.66
+      pick: 0.26
       fit: 0.44
     Jotunn's Revenge:
       total: 0.52
@@ -436,9 +436,9 @@ builds:
       pick: 0.0
       fit: 0.58
     Shifter's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.55
-      win: 0.62
+      win: 0.63
       pick: 0.21
       fit: 0.4
   starter: *id001
@@ -485,7 +485,7 @@ builds:
       total: 0.58
       efficiency: 0.72
       win: 0.59
-      pick: 0.3
+      pick: 0.29
       fit: 0.32
     Berserker's Shield:
       total: 0.54

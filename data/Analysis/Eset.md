@@ -2,17 +2,17 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.62 | 0.71 | 0.59 | 0.58 | 0.11 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
+| Soul Gem | 0.62 | 0.71 | 0.59 | 0.57 | 0.11 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
 | Spear of Desolation | 0.61 | 0.67 | 0.52 | 0.57 | 0.37 | 1.00 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.72 | 0.66 | 0.50 | 0.00 | 0.87 | undervalued | burst | **UNDERRATED** |
 | Doom Orb | 0.57 | 0.57 | 0.49 | 0.63 | 0.09 | 0.77 | fair |  | **UNDERRATED** |
 | Obsidian Shard | 0.56 | 0.61 | 0.54 | 0.56 | 0.13 | 0.77 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.56 | 0.54 | 0.44 | 0.63 | 0.15 | 0.77 | premium |  | **UNDERRATED** |
+| Rod of Tahuti | 0.55 | 0.54 | 0.44 | 0.62 | 0.14 | 0.77 | premium |  | **UNDERRATED** |
 | Spear of the Magus | 0.55 | 0.65 | 0.60 | 0.50 | 0.00 | 0.77 | fair |  | **UNDERRATED** |
+| Genji's Guard | 0.55 | 0.57 | 0.72 | 0.57 | 0.07 | 0.23 | undervalued |  | **UNDERRATED** |
 | The Cosmic Horror | 0.54 | 0.64 | 0.58 | 0.50 | 0.00 | 0.77 | fair |  | **UNDERRATED** |
-| Genji's Guard | 0.54 | 0.57 | 0.72 | 0.55 | 0.07 | 0.23 | undervalued |  | **UNDERRATED** |
+| Book of Thoth | 0.52 | 0.41 | 0.42 | 0.68 | 0.12 | 0.41 | premium |  |  |
 | Chronos' Pendant | 0.52 | 0.58 | 0.56 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
-| Book of Thoth | 0.51 | 0.41 | 0.42 | 0.67 | 0.12 | 0.41 | premium |  |  |
 | Dreamer's Idol | 0.51 | 0.57 | 0.49 | 0.50 | 0.00 | 0.77 | fair | cc-immunity | **UNDERRATED** |
 | The World Stone | 0.51 | 0.57 | 0.49 | 0.50 | 0.00 | 0.77 | fair |  | **UNDERRATED** |
 | Gem of Focus | 0.50 | 0.55 | 0.51 | 0.50 | 0.00 | 0.64 | fair | mobility | **UNDERRATED** |

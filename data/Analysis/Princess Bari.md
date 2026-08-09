@@ -2,10 +2,10 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.57 | 0.61 | 0.59 | 0.55 | 0.23 | 0.67 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.55 | 0.51 | 0.52 | 0.58 | 0.60 | 0.47 | fair |  |  |
-| The Cosmic Horror | 0.54 | 0.52 | 0.58 | 0.63 | 0.07 | 0.36 | fair |  | **UNDERRATED** |
+| Soul Gem | 0.57 | 0.61 | 0.59 | 0.56 | 0.23 | 0.67 | fair | burst, sustain, aura |  |
+| The Cosmic Horror | 0.54 | 0.52 | 0.58 | 0.63 | 0.06 | 0.36 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.54 | 0.63 | 0.66 | 0.50 | 0.00 | 0.56 | undervalued | burst | **UNDERRATED** |
+| Spear of Desolation | 0.54 | 0.51 | 0.52 | 0.57 | 0.59 | 0.47 | fair |  |  |
 | Jotunn's Revenge | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
 | The Crusher | 0.52 | 0.58 | 0.65 | 0.50 | 0.00 | 0.43 | undervalued | burst | **UNDERRATED** |
 | Berserker's Shield | 0.51 | 0.57 | 0.71 | 0.50 | 0.00 | 0.26 | undervalued |  | **UNDERRATED** |
@@ -16,8 +16,8 @@
 | Genji's Guard | 0.49 | 0.53 | 0.72 | 0.50 | 0.00 | 0.11 | undervalued |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.49 | 0.53 | 0.56 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.49 | 0.53 | 0.60 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
+| The World Stone | 0.49 | 0.45 | 0.49 | 0.57 | 0.15 | 0.36 | fair |  | **UNDERRATED** |
 | Death Metal | 0.49 | 0.53 | 0.60 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
-| The World Stone | 0.48 | 0.45 | 0.49 | 0.56 | 0.14 | 0.36 | fair |  | **UNDERRATED** |
 | Golden Blade | 0.48 | 0.52 | 0.55 | 0.50 | 0.00 | 0.43 | fair | wave-clear | **UNDERRATED** |
 | Nimble Ring | 0.48 | 0.51 | 0.49 | 0.50 | 0.00 | 0.57 | fair |  | **UNDERRATED** |
 | Silverbranch Bow | 0.48 | 0.51 | 0.54 | 0.50 | 0.00 | 0.43 | fair |  | **UNDERRATED** |
@@ -43,10 +43,10 @@
 | Heartseeker | 0.45 | 0.45 | 0.46 | 0.50 | 0.00 | 0.43 | fair | burst | **UNDERRATED** |
 | Doom Orb | 0.45 | 0.45 | 0.49 | 0.50 | 0.00 | 0.36 | fair |  |  |
 | Gem of Focus | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.31 | fair | mobility |  |
-| Obsidian Shard | 0.45 | 0.49 | 0.54 | 0.44 | 0.17 | 0.36 | fair |  |  |
 | Shogun's Ofuda | 0.45 | 0.45 | 0.53 | 0.50 | 0.00 | 0.26 | fair | aura |  |
 | Typhon’s Heart | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.30 | fair |  |  |
 | Freya's Tears | 0.45 | 0.44 | 0.59 | 0.50 | 0.00 | 0.11 | fair |  |  |
+| Obsidian Shard | 0.45 | 0.49 | 0.54 | 0.43 | 0.18 | 0.36 | fair |  |  |
 | Avenging Blade | 0.44 | 0.44 | 0.51 | 0.50 | 0.00 | 0.27 | fair | protection-shred |  |
 | Triton's Conch | 0.44 | 0.44 | 0.47 | 0.50 | 0.00 | 0.37 | fair | aura |  |
 | Wish-Granting Pearl | 0.44 | 0.44 | 0.54 | 0.50 | 0.00 | 0.20 | fair |  |  |

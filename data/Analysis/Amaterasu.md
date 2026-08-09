@@ -2,15 +2,15 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Kinetic Cuirass | 0.62 | 0.62 | 0.60 | 0.67 | 0.07 | 0.67 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.58 | 0.56 | 0.55 | 0.62 | 0.42 | 0.57 | fair |  |  |
+| Kinetic Cuirass | 0.60 | 0.62 | 0.60 | 0.62 | 0.12 | 0.67 | fair | burst | **UNDERRATED** |
+| Shifter's Shield | 0.58 | 0.56 | 0.55 | 0.63 | 0.43 | 0.57 | fair |  |  |
 | Berserker's Shield | 0.57 | 0.60 | 0.71 | 0.58 | 0.20 | 0.36 | undervalued |  |  |
-| Golden Blade | 0.54 | 0.50 | 0.55 | 0.62 | 0.26 | 0.37 | fair | wave-clear |  |
 | Amanita Charm | 0.54 | 0.63 | 0.66 | 0.50 | 0.00 | 0.57 | undervalued | sustain, aura | **UNDERRATED** |
-| Bragi's Harp | 0.53 | 0.43 | 0.46 | 0.70 | 0.08 | 0.36 | fair | burst |  |
+| Golden Blade | 0.54 | 0.50 | 0.55 | 0.61 | 0.28 | 0.37 | fair | wave-clear |  |
+| Bragi's Harp | 0.53 | 0.43 | 0.46 | 0.70 | 0.07 | 0.36 | fair | burst |  |
 | Eye of Providence | 0.53 | 0.60 | 0.62 | 0.50 | 0.00 | 0.57 | undervalued |  | **UNDERRATED** |
 | Genji's Guard | 0.52 | 0.60 | 0.72 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
-| Shogun's Ofuda | 0.52 | 0.48 | 0.53 | 0.61 | 0.10 | 0.36 | fair | aura | **UNDERRATED** |
+| Shogun's Ofuda | 0.52 | 0.48 | 0.53 | 0.61 | 0.17 | 0.36 | fair | aura |  |
 | Gluttonous Grimoire | 0.51 | 0.57 | 0.66 | 0.50 | 0.00 | 0.37 | undervalued | burst | **UNDERRATED** |
 | Jotunn's Revenge | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.38 | undervalued |  | **UNDERRATED** |
 | Freya's Tears | 0.51 | 0.57 | 0.59 | 0.50 | 0.00 | 0.53 | fair |  | **UNDERRATED** |
@@ -85,7 +85,6 @@
 | Shroud of Vengeance | 0.43 | 0.40 | 0.36 | 0.50 | 0.00 | 0.50 | premium | burst |  |
 | Titan's Bane | 0.42 | 0.40 | 0.46 | 0.50 | 0.00 | 0.26 | fair |  |  |
 | Tekko-Kagi | 0.42 | 0.40 | 0.46 | 0.50 | 0.00 | 0.26 | fair | mobility |  |
-| Dwarven Plate | 0.42 | 0.37 | 0.35 | 0.52 | 0.10 | 0.40 | premium |  |  |
 | Barbed Carver | 0.42 | 0.40 | 0.43 | 0.50 | 0.00 | 0.31 | premium | burst |  |
 | Silverbranch Bow | 0.42 | 0.39 | 0.54 | 0.50 | 0.00 | 0.05 | fair |  |  |
 | Polynomicon | 0.42 | 0.39 | 0.49 | 0.50 | 0.00 | 0.16 | fair | burst |  |
@@ -95,6 +94,7 @@
 | Contagion | 0.42 | 0.38 | 0.43 | 0.50 | 0.00 | 0.26 | premium | anti-heal, burst |  |
 | Regrowth Striders | 0.42 | 0.38 | 0.41 | 0.50 | 0.00 | 0.32 | premium | mobility, sustain |  |
 | Bloodforge | 0.41 | 0.38 | 0.45 | 0.50 | 0.00 | 0.21 | fair | sustain |  |
+| Dwarven Plate | 0.41 | 0.37 | 0.35 | 0.50 | 0.09 | 0.40 | premium |  |  |
 | Avatar's Parashu | 0.41 | 0.38 | 0.43 | 0.50 | 0.00 | 0.26 | premium | cc-immunity |  |
 | Dreamer's Idol | 0.41 | 0.38 | 0.49 | 0.50 | 0.00 | 0.10 | fair | cc-immunity |  |
 | Spirit Robe | 0.41 | 0.37 | 0.36 | 0.50 | 0.00 | 0.40 | premium | sustain |  |

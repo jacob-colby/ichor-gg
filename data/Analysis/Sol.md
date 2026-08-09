@@ -3,11 +3,11 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Soul Gem | 0.61 | 0.65 | 0.59 | 0.60 | 0.21 | 0.80 | fair | burst, sustain, aura |  |
-| Obsidian Shard | 0.56 | 0.51 | 0.54 | 0.66 | 0.15 | 0.46 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.57 | 0.51 | 0.54 | 0.67 | 0.16 | 0.46 | fair |  |  |
 | Gluttonous Grimoire | 0.56 | 0.66 | 0.66 | 0.50 | 0.00 | 0.67 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.55 | 0.54 | 0.52 | 0.60 | 0.28 | 0.58 | fair |  |  |
-| Doom Orb | 0.54 | 0.48 | 0.49 | 0.67 | 0.07 | 0.46 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.51 | 0.44 | 0.44 | 0.62 | 0.25 | 0.46 | premium |  |  |
+| Spear of Desolation | 0.56 | 0.54 | 0.52 | 0.60 | 0.29 | 0.58 | fair |  |  |
+| Doom Orb | 0.55 | 0.48 | 0.49 | 0.68 | 0.07 | 0.46 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.52 | 0.44 | 0.44 | 0.63 | 0.25 | 0.46 | premium |  |  |
 | Spear of the Magus | 0.50 | 0.56 | 0.60 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.50 | 0.56 | 0.56 | 0.50 | 0.00 | 0.54 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.50 | 0.54 | 0.58 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
@@ -21,10 +21,10 @@
 | Death Metal | 0.47 | 0.49 | 0.60 | 0.50 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.47 | 0.49 | 0.59 | 0.50 | 0.00 | 0.24 | fair | sustain, aura | **UNDERRATED** |
 | Dreamer's Idol | 0.47 | 0.48 | 0.49 | 0.50 | 0.00 | 0.46 | fair | cc-immunity | **UNDERRATED** |
+| Book of Thoth | 0.47 | 0.36 | 0.42 | 0.61 | 0.18 | 0.24 | premium |  |  |
 | The World Stone | 0.46 | 0.48 | 0.49 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Helm of Radiance | 0.46 | 0.48 | 0.58 | 0.50 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Jade Scepter | 0.46 | 0.47 | 0.57 | 0.50 | 0.00 | 0.24 | fair | peel | **UNDERRATED** |
-| Book of Thoth | 0.46 | 0.36 | 0.42 | 0.60 | 0.16 | 0.24 | premium |  |  |
 | Gem of Focus | 0.46 | 0.46 | 0.51 | 0.50 | 0.00 | 0.36 | fair | mobility | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Typhon’s Heart | 0.46 | 0.46 | 0.51 | 0.50 | 0.00 | 0.35 | fair |  | **UNDERRATED** |

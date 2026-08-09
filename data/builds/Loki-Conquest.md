@@ -10,7 +10,7 @@ builds:
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.39
-    win_rate: 0.57
+    win_rate: 0.56
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.22
@@ -20,17 +20,17 @@ builds:
       win_rate: 0.57
   - name: Hydra's Lament
     pick_rate: 0.32
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
-    - name: Transcendence
-      pick_rate: 0.12
-      win_rate: 0.52
     - name: Jotunn's Revenge
       pick_rate: 0.12
-      win_rate: 0.54
+      win_rate: 0.55
+    - name: Transcendence
+      pick_rate: 0.12
+      win_rate: 0.51
   - name: Barbed Carver
-    pick_rate: 0.17
-    win_rate: 0.58
+    pick_rate: 0.16
+    win_rate: 0.57
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.15
@@ -39,54 +39,54 @@ builds:
       pick_rate: 0.07
       win_rate: 0.49
   - name: Heartseeker
-    pick_rate: 0.28
+    pick_rate: 0.27
     win_rate: 0.6
     alternates:
     - name: Titan's Bane
       pick_rate: 0.13
       win_rate: 0.59
     - name: The Crusher
-      pick_rate: 0.07
-      win_rate: 0.56
+      pick_rate: 0.06
+      win_rate: 0.55
   - name: Titan's Bane
     pick_rate: 0.15
-    win_rate: 0.6
+    win_rate: 0.59
     alternates:
     - name: Heartseeker
       pick_rate: 0.16
-      win_rate: 0.6
+      win_rate: 0.59
     - name: Lucerne Hammer
       pick_rate: 0.04
-      win_rate: 0.52
+      win_rate: 0.53
   - name: Lucerne Hammer
     pick_rate: 0.07
-    win_rate: 0.65
+    win_rate: 0.64
     alternates:
-    - name: Titan's Bane
-      pick_rate: 0.06
-      win_rate: 0.71
     - name: Blinking Abyss
       pick_rate: 0.06
-      win_rate: 0.55
+      win_rate: 0.57
+    - name: Titan's Bane
+      pick_rate: 0.06
+      win_rate: 0.7
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.41
-    win_rate: 0.63
+    win_rate: 0.62
   - name: Bluestone Brooch
-    pick_rate: 0.2
+    pick_rate: 0.21
     win_rate: 0.64
   - name: Bumba's Cudgel
-    pick_rate: 0.2
+    pick_rate: 0.19
     win_rate: 0.44
   source_url: https://smitebrain.com/gods/loki/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.5726937269372694
-  god_matches_won: 776
-  god_matches_played: 1355
+  last_verified: '2026-08-09'
+  god_win_rate: 0.5695364238410596
+  god_matches_won: 860
+  god_matches_played: 1510
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -119,19 +119,19 @@ builds:
     this god: The Crusher, Titan''s Bane, The Reaper, Runeforged Hammer, Pendulum
     Blade, Tekko-Kagi, Lernaean Bow, Avatar''s Parashu, Damaru, Avenging Blade, Golden
     Blade, Arondight, Shield Splitter, Genji''s Guard, Dominance, Eye of the Storm,
-    Tyrfing, Transcendence, Riptalon, Silverbranch Bow, Berserker''s Shield, Breastplate
+    Tyrfing, Riptalon, Transcendence, Silverbranch Bow, Berserker''s Shield, Breastplate
     of Valor, Bloodforge, Musashi''s Dual Swords, Amanita Charm.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.66
+      total: 0.65
       efficiency: 0.65
-      win: 0.57
+      win: 0.56
       pick: 0.39
       fit: 1.0
     Hydra's Lament:
       total: 0.6
       efficiency: 0.61
-      win: 0.59
+      win: 0.58
       pick: 0.32
       fit: 0.71
     The Reaper:
@@ -143,19 +143,19 @@ builds:
     The Crusher:
       total: 0.63
       efficiency: 0.65
-      win: 0.56
-      pick: 0.07
+      win: 0.55
+      pick: 0.06
       fit: 1.0
     Heartseeker:
       total: 0.59
       efficiency: 0.46
       win: 0.6
-      pick: 0.28
+      pick: 0.27
       fit: 1.0
     Titan's Bane:
-      total: 0.58
+      total: 0.57
       efficiency: 0.46
-      win: 0.6
+      win: 0.59
       pick: 0.15
       fit: 0.91
   starter: &id001
@@ -202,31 +202,31 @@ builds:
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.65
-      win: 0.57
+      win: 0.56
       pick: 0.39
       fit: 0.78
     Hydra's Lament:
-      total: 0.58
+      total: 0.57
       efficiency: 0.61
-      win: 0.59
+      win: 0.58
       pick: 0.32
       fit: 0.54
     The Crusher:
       total: 0.58
       efficiency: 0.65
-      win: 0.56
-      pick: 0.07
+      win: 0.55
+      pick: 0.06
       fit: 0.66
     Heartseeker:
       total: 0.54
       efficiency: 0.46
       win: 0.6
-      pick: 0.28
+      pick: 0.27
       fit: 0.66
     Titan's Bane:
       total: 0.52
       efficiency: 0.46
-      win: 0.6
+      win: 0.59
       pick: 0.15
       fit: 0.56
   starter: *id001
@@ -266,7 +266,7 @@ builds:
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
-      win: 0.57
+      win: 0.56
       pick: 0.39
       fit: 0.44
     Kinetic Cuirass:
@@ -276,9 +276,9 @@ builds:
       pick: 0.0
       fit: 0.66
     Hydra's Lament:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.59
+      win: 0.58
       pick: 0.32
       fit: 0.37
     Shifter's Shield:
@@ -288,10 +288,10 @@ builds:
       pick: 0.22
       fit: 0.56
     The Crusher:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.56
-      pick: 0.07
+      win: 0.55
+      pick: 0.06
       fit: 0.5
     Amanita Charm:
       total: 0.59
@@ -334,15 +334,15 @@ builds:
     Garb.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.66
+      total: 0.65
       efficiency: 0.65
-      win: 0.57
+      win: 0.56
       pick: 0.39
       fit: 1.0
     Hydra's Lament:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
-      win: 0.59
+      win: 0.58
       pick: 0.32
       fit: 0.48
     The Reaper:
@@ -354,19 +354,19 @@ builds:
     The Crusher:
       total: 0.63
       efficiency: 0.65
-      win: 0.56
-      pick: 0.07
+      win: 0.55
+      pick: 0.06
       fit: 1.0
     Heartseeker:
       total: 0.59
       efficiency: 0.46
       win: 0.6
-      pick: 0.28
+      pick: 0.27
       fit: 1.0
     Titan's Bane:
       total: 0.58
       efficiency: 0.46
-      win: 0.6
+      win: 0.59
       pick: 0.15
       fit: 0.94
   starter: *id001
@@ -417,13 +417,13 @@ builds:
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
-      win: 0.57
+      win: 0.56
       pick: 0.39
       fit: 0.37
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.61
-      win: 0.59
+      win: 0.58
       pick: 0.32
       fit: 0.31
     Riptalon:
@@ -433,10 +433,10 @@ builds:
       pick: 0.0
       fit: 0.79
     The Crusher:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.56
-      pick: 0.07
+      win: 0.55
+      pick: 0.06
       fit: 0.43
   starter: *id001
 - source: suggested
@@ -487,26 +487,26 @@ builds:
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.65
-      win: 0.57
+      win: 0.56
       pick: 0.39
       fit: 0.85
     Hydra's Lament:
-      total: 0.61
+      total: 0.6
       efficiency: 0.61
-      win: 0.59
+      win: 0.58
       pick: 0.32
       fit: 0.75
     The Crusher:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.56
-      pick: 0.07
+      win: 0.55
+      pick: 0.06
       fit: 0.45
     Heartseeker:
       total: 0.51
       efficiency: 0.46
       win: 0.6
-      pick: 0.28
+      pick: 0.27
       fit: 0.45
   starter: *id001
 - source: suggested
@@ -542,15 +542,15 @@ builds:
     of Valor, Transcendence, Bloodforge, Musashi''s Dual Swords, Amanita Charm.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.66
+      total: 0.65
       efficiency: 0.65
-      win: 0.57
+      win: 0.56
       pick: 0.39
       fit: 1.0
     Hydra's Lament:
       total: 0.6
       efficiency: 0.61
-      win: 0.59
+      win: 0.58
       pick: 0.32
       fit: 0.71
     Runeforged Hammer:
@@ -568,14 +568,14 @@ builds:
     The Crusher:
       total: 0.63
       efficiency: 0.65
-      win: 0.56
-      pick: 0.07
+      win: 0.55
+      pick: 0.06
       fit: 1.0
     Heartseeker:
       total: 0.59
       efficiency: 0.46
       win: 0.6
-      pick: 0.28
+      pick: 0.27
       fit: 1.0
   starter: *id001
 ---

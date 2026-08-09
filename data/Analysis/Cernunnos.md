@@ -2,25 +2,25 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Silverbranch Bow | 0.53 | 0.48 | 0.54 | 0.63 | 0.10 | 0.34 | fair |  | **UNDERRATED** |
+| Silverbranch Bow | 0.53 | 0.48 | 0.54 | 0.64 | 0.07 | 0.34 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.53 | 0.60 | 0.66 | 0.50 | 0.00 | 0.47 | undervalued | burst | **UNDERRATED** |
-| The Reaper | 0.52 | 0.49 | 0.53 | 0.60 | 0.05 | 0.37 | fair | sustain | **UNDERRATED** |
+| The Reaper | 0.52 | 0.49 | 0.53 | 0.61 | 0.05 | 0.37 | fair | sustain | **UNDERRATED** |
 | Soul Gem | 0.51 | 0.58 | 0.59 | 0.50 | 0.00 | 0.55 | fair | burst, sustain, aura | **UNDERRATED** |
 | Jotunn's Revenge | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.38 | undervalued |  | **UNDERRATED** |
 | The Crusher | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.40 | undervalued | burst | **UNDERRATED** |
 | Death Metal | 0.51 | 0.57 | 0.60 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
-| Riptalon | 0.50 | 0.52 | 0.56 | 0.53 | 0.17 | 0.42 | fair | sustain |  |
 | Berserker's Shield | 0.50 | 0.55 | 0.71 | 0.50 | 0.00 | 0.20 | undervalued |  | **UNDERRATED** |
+| Riptalon | 0.50 | 0.52 | 0.56 | 0.52 | 0.18 | 0.42 | fair | sustain |  |
 | Genji's Guard | 0.49 | 0.53 | 0.72 | 0.50 | 0.00 | 0.08 | undervalued |  | **UNDERRATED** |
 | Lernaean Bow | 0.49 | 0.52 | 0.56 | 0.50 | 0.00 | 0.45 | fair | wave-clear, burst | **UNDERRATED** |
 | Hydra's Lament | 0.49 | 0.52 | 0.61 | 0.50 | 0.00 | 0.33 | fair | burst | **UNDERRATED** |
 | Damaru | 0.49 | 0.52 | 0.59 | 0.50 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
-| Tyrfing | 0.49 | 0.47 | 0.47 | 0.53 | 0.27 | 0.45 | fair | burst |  |
-| Dominance | 0.48 | 0.48 | 0.53 | 0.53 | 0.07 | 0.35 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.48 | 0.51 | 0.60 | 0.50 | 0.00 | 0.29 | fair |  | **UNDERRATED** |
-| Odysseus' Bow | 0.48 | 0.37 | 0.40 | 0.63 | 0.18 | 0.30 | premium | burst, wave-clear |  |
+| Dominance | 0.48 | 0.48 | 0.53 | 0.52 | 0.12 | 0.35 | fair |  | **UNDERRATED** |
+| Tyrfing | 0.48 | 0.47 | 0.47 | 0.51 | 0.27 | 0.45 | fair | burst |  |
 | Bragi's Harp | 0.47 | 0.50 | 0.46 | 0.50 | 0.00 | 0.60 | fair | burst | **UNDERRATED** |
 | Bracer of The Abyss | 0.47 | 0.50 | 0.56 | 0.50 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
+| Odysseus' Bow | 0.47 | 0.37 | 0.40 | 0.62 | 0.17 | 0.30 | premium | burst, wave-clear |  |
 | Runeforged Hammer | 0.47 | 0.50 | 0.60 | 0.50 | 0.00 | 0.25 | fair | burst | **UNDERRATED** |
 | The Cosmic Horror | 0.47 | 0.49 | 0.58 | 0.50 | 0.00 | 0.29 | fair |  | **UNDERRATED** |
 | Golden Blade | 0.47 | 0.49 | 0.55 | 0.50 | 0.00 | 0.35 | fair | wave-clear | **UNDERRATED** |
@@ -52,7 +52,6 @@
 | Doom Orb | 0.44 | 0.43 | 0.49 | 0.50 | 0.00 | 0.29 | fair |  |  |
 | Shield of the Phoenix | 0.44 | 0.42 | 0.57 | 0.50 | 0.00 | 0.08 | fair | sustain |  |
 | Gem of Focus | 0.44 | 0.42 | 0.51 | 0.50 | 0.00 | 0.23 | fair | mobility |  |
-| Devourer's Gauntlet | 0.44 | 0.31 | 0.35 | 0.57 | 0.46 | 0.23 | premium | sustain |  |
 | Arondight | 0.44 | 0.42 | 0.50 | 0.50 | 0.00 | 0.23 | fair | mobility |  |
 | Typhon’s Heart | 0.44 | 0.42 | 0.51 | 0.50 | 0.00 | 0.22 | fair |  |  |
 | Wish-Granting Pearl | 0.43 | 0.42 | 0.54 | 0.50 | 0.00 | 0.15 | fair |  |  |
@@ -63,6 +62,7 @@
 | Eros' Bow | 0.43 | 0.42 | 0.51 | 0.50 | 0.00 | 0.20 | fair | aura |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Ancient Signet | 0.43 | 0.41 | 0.49 | 0.50 | 0.00 | 0.25 | fair | burst |  |
+| Devourer's Gauntlet | 0.43 | 0.31 | 0.35 | 0.56 | 0.45 | 0.23 | premium | sustain |  |
 | Musashi's Dual Swords | 0.43 | 0.41 | 0.44 | 0.50 | 0.00 | 0.35 | premium | mobility |  |
 | Titan's Bane | 0.43 | 0.41 | 0.46 | 0.50 | 0.00 | 0.30 | fair |  |  |
 | Eye of the Storm | 0.43 | 0.41 | 0.52 | 0.50 | 0.00 | 0.15 | fair | peel |  |

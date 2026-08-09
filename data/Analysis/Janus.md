@@ -2,9 +2,9 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.61 | 0.71 | 0.59 | 0.52 | 0.40 | 1.00 | fair | burst, sustain, aura |  |
+| Soul Gem | 0.61 | 0.71 | 0.59 | 0.51 | 0.40 | 1.00 | fair | burst, sustain, aura |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.49 | 0.50 | 1.00 | fair |  |  |
+| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.49 | 0.51 | 1.00 | fair |  |  |
 | Obsidian Shard | 0.58 | 0.61 | 0.54 | 0.57 | 0.30 | 0.78 | fair |  |  |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |

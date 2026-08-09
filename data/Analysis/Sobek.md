@@ -4,20 +4,20 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Amanita Charm | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.71 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.81 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.55 | 0.60 | 0.55 | 0.53 | 0.24 | 0.71 | fair |  |  |
+| Shifter's Shield | 0.56 | 0.60 | 0.55 | 0.54 | 0.25 | 0.71 | fair |  |  |
 | Eye of Providence | 0.55 | 0.65 | 0.62 | 0.50 | 0.00 | 0.71 | undervalued |  | **UNDERRATED** |
-| Genji's Guard | 0.54 | 0.62 | 0.72 | 0.49 | 0.20 | 0.39 | undervalued |  |  |
+| Genji's Guard | 0.55 | 0.62 | 0.72 | 0.50 | 0.21 | 0.39 | undervalued |  |  |
 | Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.46 | undervalued |  | **UNDERRATED** |
 | Stampede | 0.52 | 0.50 | 0.52 | 0.59 | 0.13 | 0.46 | fair | mobility, aura, cc-immunity | **UNDERRATED** |
-| Hide of the Nemean Lion | 0.52 | 0.51 | 0.54 | 0.57 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
 | Erosion | 0.51 | 0.58 | 0.52 | 0.50 | 0.00 | 0.71 | fair | aura | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.58 | 0.57 | 0.50 | 0.00 | 0.59 | fair | sustain | **UNDERRATED** |
+| Breastplate of Valor | 0.51 | 0.57 | 0.65 | 0.49 | 0.10 | 0.39 | undervalued |  | **UNDERRATED** |
+| Dwarven Plate | 0.51 | 0.40 | 0.35 | 0.68 | 0.06 | 0.51 | premium |  |  |
 | Draconic Scale | 0.51 | 0.57 | 0.50 | 0.50 | 0.00 | 0.71 | fair |  | **UNDERRATED** |
-| Breastplate of Valor | 0.51 | 0.57 | 0.65 | 0.48 | 0.10 | 0.39 | undervalued |  | **UNDERRATED** |
-| Dwarven Plate | 0.50 | 0.40 | 0.35 | 0.67 | 0.06 | 0.51 | premium |  |  |
 | Spectral Armor | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.46 | fair | anti-crit, aura | **UNDERRATED** |
+| Hide of the Nemean Lion | 0.50 | 0.51 | 0.54 | 0.53 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
 | Soul Gem | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.39 | fair | burst, sustain, aura | **UNDERRATED** |
 | Leviathan's Hide | 0.49 | 0.53 | 0.55 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.48 | 0.52 | 0.52 | 0.50 | 0.00 | 0.51 | fair | peel, cc-immunity | **UNDERRATED** |

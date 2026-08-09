@@ -5,59 +5,59 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Grover's Wrath
-  aspect_pick_rate: 0.23
-  aspect_win_rate: 0.53
+  aspect_pick_rate: 0.22
+  aspect_win_rate: 0.52
   slot_order:
   - name: Tyrfing
     pick_rate: 0.19
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Gauntlet of Thebes
       pick_rate: 0.12
-      win_rate: 0.51
+      win_rate: 0.52
     - name: Prophetic Cloak
       pick_rate: 0.12
-      win_rate: 0.48
+      win_rate: 0.47
   - name: Genji's Guard
-    pick_rate: 0.19
-    win_rate: 0.47
+    pick_rate: 0.2
+    win_rate: 0.46
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.1
-      win_rate: 0.48
+      win_rate: 0.49
     - name: Bragi's Harp
       pick_rate: 0.09
-      win_rate: 0.5
+      win_rate: 0.49
   - name: Breastplate of Valor
     pick_rate: 0.17
-    win_rate: 0.48
+    win_rate: 0.47
     alternates:
     - name: Genji's Guard
       pick_rate: 0.16
-      win_rate: 0.5
+      win_rate: 0.51
     - name: Circe's Hexstone
       pick_rate: 0.05
-      win_rate: 0.54
+      win_rate: 0.53
   - name: Shell of Rebuke
     pick_rate: 0.09
-    win_rate: 0.5
+    win_rate: 0.49
     alternates:
     - name: Genji's Guard
       pick_rate: 0.08
-      win_rate: 0.57
+      win_rate: 0.56
     - name: Shield of the Phoenix
       pick_rate: 0.06
       win_rate: 0.53
   - name: Engraved Guard
     pick_rate: 0.04
-    win_rate: 0.45
+    win_rate: 0.44
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.69
+      win_rate: 0.7
     - name: Dwarven Plate
       pick_rate: 0.04
-      win_rate: 0.51
+      win_rate: 0.54
   - name: Legionnaire Armor
     pick_rate: 0.04
     win_rate: 0.54
@@ -67,26 +67,26 @@ builds:
       win_rate: 0.57
     - name: Shell of Rebuke
       pick_rate: 0.04
-      win_rate: 0.56
+      win_rate: 0.54
   community_starters:
   - name: Selflessness
     pick_rate: 0.29
     win_rate: 0.47
-  - name: Death's Embrace
-    pick_rate: 0.14
-    win_rate: 0.55
   - name: Heroism
     pick_rate: 0.14
-    win_rate: 0.58
+    win_rate: 0.59
+  - name: Death's Embrace
+    pick_rate: 0.13
+    win_rate: 0.55
   source_url: https://smitebrain.com/gods/sylvanus/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.5054031587697423
-  god_matches_won: 608
-  god_matches_played: 1203
+  last_verified: '2026-08-09'
+  god_win_rate: 0.5007824726134585
+  god_matches_won: 640
+  god_matches_played: 1278
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -132,8 +132,8 @@ builds:
     Genji's Guard:
       total: 0.53
       efficiency: 0.72
-      win: 0.47
-      pick: 0.19
+      win: 0.46
+      pick: 0.2
       fit: 0.39
     Kinetic Cuirass:
       total: 0.55
@@ -202,10 +202,10 @@ builds:
       pick: 0.0
       fit: 0.62
     Genji's Guard:
-      total: 0.53
+      total: 0.52
       efficiency: 0.72
-      win: 0.47
-      pick: 0.19
+      win: 0.46
+      pick: 0.2
       fit: 0.36
     Kinetic Cuirass:
       total: 0.54
@@ -280,8 +280,8 @@ builds:
     Genji's Guard:
       total: 0.51
       efficiency: 0.72
-      win: 0.47
-      pick: 0.19
+      win: 0.46
+      pick: 0.2
       fit: 0.28
     Kinetic Cuirass:
       total: 0.52
@@ -338,8 +338,8 @@ builds:
     Genji's Guard:
       total: 0.5
       efficiency: 0.72
-      win: 0.47
-      pick: 0.19
+      win: 0.46
+      pick: 0.2
       fit: 0.21
     Kinetic Cuirass:
       total: 0.5
@@ -360,9 +360,9 @@ builds:
       pick: 0.0
       fit: 0.32
     Bragi's Harp:
-      total: 0.46
+      total: 0.45
       efficiency: 0.46
-      win: 0.5
+      win: 0.49
       pick: 0.09
       fit: 0.46
     Gluttonous Grimoire:
@@ -402,8 +402,8 @@ builds:
     Amanita Charm, Kinetic Cuirass, Soul Gem, Gluttonous Grimoire, Eye of Providence,
     Oni Hunter''s Garb, Shifter''s Shield, Chronos'' Pendant, Screeching Gargoyle,
     Chandra''s Grace, Spear of Desolation, Gladiator''s Shield, Spectral Armor, Erosion,
-    Yogi''s Necklace, Draconic Scale, Prophetic Cloak, Helm of Radiance, Rod of Asclepius,
-    Gem of Focus, Death Metal, Leviathan''s Hide, Jade Scepter.'
+    Yogi''s Necklace, Draconic Scale, Helm of Radiance, Rod of Asclepius, Gem of Focus,
+    Death Metal, Prophetic Cloak, Leviathan''s Hide, Jade Scepter.'
   slot_scores:
     Eye of Providence:
       total: 0.51
@@ -414,13 +414,13 @@ builds:
     Genji's Guard:
       total: 0.54
       efficiency: 0.72
-      win: 0.47
-      pick: 0.19
+      win: 0.46
+      pick: 0.2
       fit: 0.48
     Breastplate of Valor:
-      total: 0.53
+      total: 0.52
       efficiency: 0.65
-      win: 0.48
+      win: 0.47
       pick: 0.17
       fit: 0.48
     Kinetic Cuirass:
@@ -474,14 +474,14 @@ builds:
     Garb, Freya''s Tears, Shield Splitter, Golden Blade, Death Metal, Lernaean Bow,
     Pharaoh''s Curse, Shifter''s Shield, Eye of the Storm, Spear of the Magus, Spectral
     Armor, Yogi''s Necklace, Avenging Blade, Erosion, Damaru, The Reaper, The Cosmic
-    Horror, Helm of Radiance, Rod of Asclepius, Bragi''s Harp, Draconic Scale, Shogun''s
-    Ofuda, Spear of Desolation, Leviathan''s Hide, Dominance, Jade Scepter, Riptalon.'
+    Horror, Helm of Radiance, Rod of Asclepius, Draconic Scale, Shogun''s Ofuda, Spear
+    of Desolation, Bragi''s Harp, Leviathan''s Hide, Dominance, Jade Scepter, Riptalon.'
   slot_scores:
     Genji's Guard:
-      total: 0.51
+      total: 0.5
       efficiency: 0.72
-      win: 0.47
-      pick: 0.19
+      win: 0.46
+      pick: 0.2
       fit: 0.24
     Berserker's Shield:
       total: 0.52
@@ -553,8 +553,8 @@ builds:
     Genji's Guard:
       total: 0.51
       efficiency: 0.72
-      win: 0.47
-      pick: 0.19
+      win: 0.46
+      pick: 0.2
       fit: 0.25
     Berserker's Shield:
       total: 0.51
@@ -629,8 +629,8 @@ builds:
     Genji's Guard:
       total: 0.53
       efficiency: 0.72
-      win: 0.47
-      pick: 0.19
+      win: 0.46
+      pick: 0.2
       fit: 0.39
     Kinetic Cuirass:
       total: 0.55

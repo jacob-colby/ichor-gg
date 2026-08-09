@@ -2,18 +2,18 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Tyrfing | 0.56 | 0.52 | 0.47 | 0.61 | 0.55 | 0.64 | fair | burst |  |
+| Tyrfing | 0.56 | 0.52 | 0.47 | 0.60 | 0.56 | 0.64 | fair | burst |  |
 | Riptalon | 0.53 | 0.53 | 0.56 | 0.59 | 0.11 | 0.46 | fair | sustain | **UNDERRATED** |
-| Dominance | 0.53 | 0.53 | 0.53 | 0.57 | 0.13 | 0.54 | fair |  | **UNDERRATED** |
+| Dominance | 0.53 | 0.53 | 0.53 | 0.56 | 0.13 | 0.54 | fair |  | **UNDERRATED** |
 | Berserker's Shield | 0.52 | 0.60 | 0.71 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
-| Qin's Blade | 0.52 | 0.39 | 0.38 | 0.70 | 0.10 | 0.43 | premium | burst |  |
 | Lernaean Bow | 0.52 | 0.58 | 0.56 | 0.50 | 0.00 | 0.64 | fair | wave-clear, burst | **UNDERRATED** |
 | Damaru | 0.51 | 0.58 | 0.59 | 0.50 | 0.00 | 0.54 | fair |  | **UNDERRATED** |
-| Silverbranch Bow | 0.51 | 0.48 | 0.54 | 0.58 | 0.12 | 0.33 | fair |  | **UNDERRATED** |
+| Qin's Blade | 0.50 | 0.39 | 0.38 | 0.67 | 0.10 | 0.43 | premium | burst |  |
+| Silverbranch Bow | 0.50 | 0.48 | 0.54 | 0.57 | 0.12 | 0.33 | fair |  | **UNDERRATED** |
 | Golden Blade | 0.50 | 0.55 | 0.55 | 0.50 | 0.00 | 0.54 | fair | wave-clear | **UNDERRATED** |
 | The Crusher | 0.50 | 0.54 | 0.65 | 0.50 | 0.00 | 0.31 | undervalued | burst | **UNDERRATED** |
-| Odysseus' Bow | 0.49 | 0.41 | 0.40 | 0.59 | 0.41 | 0.43 | premium | burst, wave-clear |  |
 | Demon Blade | 0.49 | 0.53 | 0.39 | 0.50 | 0.00 | 0.87 | premium |  | **UNDERRATED** |
+| Odysseus' Bow | 0.49 | 0.41 | 0.40 | 0.58 | 0.42 | 0.43 | premium | burst, wave-clear |  |
 | Jotunn's Revenge | 0.48 | 0.52 | 0.65 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.48 | 0.52 | 0.61 | 0.50 | 0.00 | 0.31 | fair | burst | **UNDERRATED** |
 | Runeforged Hammer | 0.48 | 0.51 | 0.60 | 0.50 | 0.00 | 0.31 | fair | burst | **UNDERRATED** |
@@ -31,10 +31,10 @@
 | Avenging Blade | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.31 | fair | protection-shred | **UNDERRATED** |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
 | Rage | 0.45 | 0.45 | 0.41 | 0.50 | 0.00 | 0.54 | premium |  | **UNDERRATED** |
-| Hastened Fatalis | 0.45 | 0.33 | 0.32 | 0.61 | 0.16 | 0.33 | premium | mobility |  |
 | Shield Splitter | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.21 | fair |  | **UNDERRATED** |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Barbed Carver | 0.44 | 0.43 | 0.43 | 0.50 | 0.00 | 0.43 | premium | burst |  |
+| Hastened Fatalis | 0.44 | 0.33 | 0.32 | 0.60 | 0.16 | 0.33 | premium | mobility |  |
 | Eye of the Storm | 0.44 | 0.43 | 0.52 | 0.50 | 0.00 | 0.21 | fair | peel |  |
 | Bloodforge | 0.43 | 0.42 | 0.45 | 0.50 | 0.00 | 0.33 | fair | sustain |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |

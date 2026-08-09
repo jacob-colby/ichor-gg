@@ -9,7 +9,7 @@ builds:
   aspect_win_rate: 0.52
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.52
+    pick_rate: 0.53
     win_rate: 0.57
     alternates:
     - name: Book of Thoth
@@ -17,76 +17,76 @@ builds:
       win_rate: 0.55
     - name: Shifter's Shield
       pick_rate: 0.06
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Book of Thoth
     pick_rate: 0.22
     win_rate: 0.56
     alternates:
+    - name: The World Stone
+      pick_rate: 0.21
+      win_rate: 0.57
     - name: Spear of Desolation
       pick_rate: 0.21
       win_rate: 0.57
-    - name: The World Stone
-      pick_rate: 0.2
-      win_rate: 0.58
   - name: Soul Gem
-    pick_rate: 0.21
+    pick_rate: 0.22
     win_rate: 0.6
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.19
+      pick_rate: 0.18
       win_rate: 0.6
     - name: The World Stone
       pick_rate: 0.15
       win_rate: 0.55
   - name: Rod of Tahuti
     pick_rate: 0.33
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.19
-      win_rate: 0.58
+      win_rate: 0.59
     - name: Nimble Ring
       pick_rate: 0.13
-      win_rate: 0.54
+      win_rate: 0.53
   - name: Obsidian Shard
     pick_rate: 0.23
     win_rate: 0.6
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.15
-      win_rate: 0.63
+      win_rate: 0.62
     - name: Nimble Ring
       pick_rate: 0.1
-      win_rate: 0.64
+      win_rate: 0.63
   - name: Evil Eye
     pick_rate: 0.1
-    win_rate: 0.53
+    win_rate: 0.5
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.08
+      pick_rate: 0.09
       win_rate: 0.68
     - name: Blinking Abyss
       pick_rate: 0.08
-      win_rate: 0.52
+      win_rate: 0.54
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.3
-    win_rate: 0.61
+    pick_rate: 0.29
+    win_rate: 0.6
   - name: Pendulum of The Ages
-    pick_rate: 0.23
+    pick_rate: 0.24
     win_rate: 0.64
   - name: Conduit Gem
-    pick_rate: 0.19
+    pick_rate: 0.18
     win_rate: 0.51
   source_url: https://smitebrain.com/gods/ra/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.5725760183591508
-  god_matches_won: 998
-  god_matches_played: 1743
+  last_verified: '2026-08-09'
+  god_win_rate: 0.5701708959088555
+  god_matches_won: 1101
+  god_matches_played: 1931
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -126,7 +126,7 @@ builds:
       total: 0.62
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 1.0
     Spear of the Magus:
       total: 0.54
@@ -137,13 +137,13 @@ builds:
     The World Stone:
       total: 0.55
       efficiency: 0.49
-      win: 0.58
-      pick: 0.2
+      win: 0.57
+      pick: 0.21
       fit: 0.72
     Rod of Tahuti:
       total: 0.54
       efficiency: 0.44
-      win: 0.59
+      win: 0.58
       pick: 0.33
       fit: 0.72
     Obsidian Shard:
@@ -156,7 +156,7 @@ builds:
       total: 0.64
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 1.0
   starter: &id001
     base: Conduit Gem
@@ -197,7 +197,7 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.78
     Spear of the Magus:
       total: 0.52
@@ -206,15 +206,15 @@ builds:
       pick: 0.0
       fit: 0.56
     The World Stone:
-      total: 0.53
+      total: 0.52
       efficiency: 0.49
-      win: 0.58
-      pick: 0.2
+      win: 0.57
+      pick: 0.21
       fit: 0.56
     Rod of Tahuti:
-      total: 0.52
+      total: 0.51
       efficiency: 0.44
-      win: 0.59
+      win: 0.58
       pick: 0.33
       fit: 0.56
     Obsidian Shard:
@@ -227,7 +227,7 @@ builds:
       total: 0.62
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 0.88
   starter: *id001
 - source: suggested
@@ -240,8 +240,8 @@ builds:
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Obsidian Shard
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -257,7 +257,7 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Gluttonous Grimoire, Shield of the Phoenix, Rod of Asclepius,
-    Shifter''s Shield, Kinetic Cuirass, Genji''s Guard, Eye of Providence, Chandra''s
+    Kinetic Cuirass, Shifter''s Shield, Genji''s Guard, Eye of Providence, Chandra''s
     Grace, Oni Hunter''s Garb, Blood-Bound Book, Bancroft''s Talon, Lifebinder, Breastplate
     of Valor, Freya''s Tears, Spear of the Magus, Phoenix Feather, Spectral Armor,
     Jade Scepter, Erosion, The Cosmic Horror, Helm of Radiance, Yogi''s Necklace,
@@ -270,16 +270,16 @@ builds:
       pick: 0.0
       fit: 0.6
     Shifter's Shield:
-      total: 0.53
+      total: 0.52
       efficiency: 0.55
-      win: 0.57
+      win: 0.56
       pick: 0.06
       fit: 0.5
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.5
     Obsidian Shard:
       total: 0.52
@@ -297,7 +297,7 @@ builds:
       total: 0.62
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 0.9
   starter: *id001
 - source: suggested
@@ -336,7 +336,7 @@ builds:
       total: 0.62
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 1.0
     Spear of the Magus:
       total: 0.56
@@ -347,13 +347,13 @@ builds:
     The World Stone:
       total: 0.56
       efficiency: 0.49
-      win: 0.58
-      pick: 0.2
+      win: 0.57
+      pick: 0.21
       fit: 0.81
     Rod of Tahuti:
-      total: 0.56
+      total: 0.55
       efficiency: 0.44
-      win: 0.59
+      win: 0.58
       pick: 0.33
       fit: 0.81
     Obsidian Shard:
@@ -366,7 +366,7 @@ builds:
       total: 0.64
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 1.0
   starter: *id001
 - source: suggested
@@ -411,7 +411,7 @@ builds:
     Nimble Ring:
       total: 0.49
       efficiency: 0.49
-      win: 0.54
+      win: 0.53
       pick: 0.13
       fit: 0.48
     Bragi's Harp:
@@ -424,7 +424,7 @@ builds:
       total: 0.53
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.41
     Obsidian Shard:
       total: 0.51
@@ -436,7 +436,7 @@ builds:
       total: 0.57
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 0.58
   starter: *id001
 - source: suggested
@@ -494,7 +494,7 @@ builds:
       total: 0.59
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.85
     Obsidian Shard:
       total: 0.52
@@ -506,7 +506,7 @@ builds:
       total: 0.63
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 0.95
   starter: *id001
 - source: suggested
@@ -551,7 +551,7 @@ builds:
       total: 0.62
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 1.0
     The Cosmic Horror:
       total: 0.54
@@ -575,7 +575,7 @@ builds:
       total: 0.64
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 1.0
   starter: *id001
 - source: suggested
@@ -627,7 +627,7 @@ builds:
       total: 0.56
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.65
     Obsidian Shard:
       total: 0.53
@@ -645,7 +645,7 @@ builds:
       total: 0.64
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 1.0
   starter: *id001
   aspect: Aspect of Thermotherapy
@@ -691,13 +691,13 @@ builds:
       total: 0.56
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.62
     The World Stone:
-      total: 0.51
+      total: 0.5
       efficiency: 0.49
-      win: 0.58
-      pick: 0.2
+      win: 0.57
+      pick: 0.21
       fit: 0.45
     Obsidian Shard:
       total: 0.54
@@ -709,7 +709,7 @@ builds:
       total: 0.64
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 1.0
     Triton's Conch:
       total: 0.5
@@ -729,8 +729,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Spectral Armor
   - Kinetic Cuirass
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -746,7 +746,7 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Rod of Asclepius, Shield of the Phoenix, Gluttonous Grimoire,
-    Erosion, Shifter''s Shield, Spectral Armor, Kinetic Cuirass, Lifebinder, Genji''s
+    Erosion, Spectral Armor, Kinetic Cuirass, Shifter''s Shield, Lifebinder, Genji''s
     Guard, Eye of Providence, Chandra''s Grace, Oni Hunter''s Garb, Stampede, Freya''s
     Tears, Doublet of Binding, Breastplate of Valor, Void Shield, Umbral Link, Void
     Stone, Phoenix Feather, Blood-Bound Book, Draconic Scale, Bancroft''s Talon, Mystical
@@ -759,9 +759,9 @@ builds:
       pick: 0.0
       fit: 0.67
     Shifter's Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.57
+      win: 0.56
       pick: 0.06
       fit: 0.57
     Spectral Armor:
@@ -786,7 +786,7 @@ builds:
       total: 0.64
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 1.0
   starter: *id001
   aspect: Aspect of Thermotherapy
@@ -800,8 +800,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Void Stone
   - Genji's Guard
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -839,13 +839,13 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.74
     The World Stone:
-      total: 0.53
+      total: 0.52
       efficiency: 0.49
-      win: 0.58
-      pick: 0.2
+      win: 0.57
+      pick: 0.21
       fit: 0.56
     Obsidian Shard:
       total: 0.55
@@ -857,7 +857,7 @@ builds:
       total: 0.64
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 1.0
   starter: *id001
   aspect: Aspect of Thermotherapy
@@ -909,7 +909,7 @@ builds:
     Nimble Ring:
       total: 0.47
       efficiency: 0.49
-      win: 0.54
+      win: 0.53
       pick: 0.13
       fit: 0.35
     Bragi's Harp:
@@ -922,13 +922,13 @@ builds:
       total: 0.51
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.29
     Soul Gem:
       total: 0.63
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 0.96
   starter: *id001
   aspect: Aspect of Thermotherapy
@@ -987,7 +987,7 @@ builds:
       total: 0.57
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.67
     Obsidian Shard:
       total: 0.51
@@ -999,7 +999,7 @@ builds:
       total: 0.64
       efficiency: 0.59
       win: 0.6
-      pick: 0.21
+      pick: 0.22
       fit: 1.0
   starter: *id001
   aspect: Aspect of Thermotherapy
@@ -1052,7 +1052,7 @@ builds:
       total: 0.56
       efficiency: 0.52
       win: 0.57
-      pick: 0.52
+      pick: 0.53
       fit: 0.65
     Spectral Armor:
       total: 0.51

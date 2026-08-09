@@ -2,9 +2,9 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Breastplate of Valor | 0.59 | 0.55 | 0.65 | 0.67 | 0.27 | 0.32 | undervalued |  |  |
-| Genji's Guard | 0.58 | 0.60 | 0.72 | 0.59 | 0.30 | 0.32 | undervalued |  |  |
-| Shifter's Shield | 0.56 | 0.54 | 0.55 | 0.62 | 0.21 | 0.50 | fair |  |  |
+| Breastplate of Valor | 0.59 | 0.55 | 0.65 | 0.66 | 0.26 | 0.32 | undervalued |  |  |
+| Genji's Guard | 0.58 | 0.60 | 0.72 | 0.59 | 0.29 | 0.32 | undervalued |  |  |
+| Shifter's Shield | 0.56 | 0.54 | 0.55 | 0.63 | 0.21 | 0.50 | fair |  |  |
 | Berserker's Shield | 0.54 | 0.62 | 0.71 | 0.50 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
 | Amanita Charm | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.50 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.53 | 0.60 | 0.60 | 0.50 | 0.00 | 0.60 | fair | burst | **UNDERRATED** |
@@ -28,11 +28,11 @@
 | Draconic Scale | 0.48 | 0.50 | 0.50 | 0.50 | 0.00 | 0.50 | fair |  | **UNDERRATED** |
 | Avenging Blade | 0.47 | 0.50 | 0.51 | 0.50 | 0.00 | 0.46 | fair | protection-shred | **UNDERRATED** |
 | Shogun's Ofuda | 0.47 | 0.50 | 0.53 | 0.50 | 0.00 | 0.43 | fair | aura | **UNDERRATED** |
+| Heartwood Charm | 0.47 | 0.33 | 0.35 | 0.67 | 0.06 | 0.30 | premium |  |  |
 | Leviathan's Hide | 0.47 | 0.49 | 0.55 | 0.50 | 0.00 | 0.33 | fair |  | **UNDERRATED** |
 | Damaru | 0.46 | 0.48 | 0.59 | 0.50 | 0.00 | 0.21 | fair |  | **UNDERRATED** |
 | Midgardian Mail | 0.46 | 0.48 | 0.54 | 0.50 | 0.00 | 0.33 | fair |  | **UNDERRATED** |
 | Hide of the Nemean Lion | 0.46 | 0.47 | 0.54 | 0.50 | 0.00 | 0.33 | fair |  | **UNDERRATED** |
-| Heartwood Charm | 0.46 | 0.33 | 0.35 | 0.65 | 0.06 | 0.30 | premium |  |  |
 | Mantle Of Discord | 0.46 | 0.47 | 0.52 | 0.50 | 0.00 | 0.35 | fair | peel, cc-immunity |  |
 | Stone of Binding | 0.46 | 0.47 | 0.48 | 0.50 | 0.00 | 0.45 | fair | protection-shred |  |
 | Screeching Gargoyle | 0.46 | 0.47 | 0.49 | 0.50 | 0.00 | 0.42 | fair | protection-shred, peel |  |

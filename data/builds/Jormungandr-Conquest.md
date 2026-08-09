@@ -5,21 +5,21 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Unyielding
-  aspect_pick_rate: 0.11
-  aspect_win_rate: 0.46
+  aspect_pick_rate: 0.12
+  aspect_win_rate: 0.48
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.32
-    win_rate: 0.55
+    pick_rate: 0.33
+    win_rate: 0.57
     alternates:
     - name: Eye of Erebus
       pick_rate: 0.26
-      win_rate: 0.49
+      win_rate: 0.5
     - name: Devourer's Gauntlet
       pick_rate: 0.08
       win_rate: 0.5
   - name: Prophetic Cloak
-    pick_rate: 0.14
+    pick_rate: 0.13
     win_rate: 0.52
     alternates:
     - name: Shifter's Shield
@@ -27,66 +27,66 @@ builds:
       win_rate: 0.4
     - name: Genji's Guard
       pick_rate: 0.12
-      win_rate: 0.63
+      win_rate: 0.67
   - name: Genji's Guard
     pick_rate: 0.16
-    win_rate: 0.35
+    win_rate: 0.38
     alternates:
     - name: Ethereal Staff
       pick_rate: 0.09
-      win_rate: 0.6
+      win_rate: 0.61
     - name: Soul Reaver
-      pick_rate: 0.07
-      win_rate: 0.67
+      pick_rate: 0.08
+      win_rate: 0.68
   - name: Ethereal Staff
     pick_rate: 0.14
     win_rate: 0.57
     alternates:
     - name: Dwarven Plate
       pick_rate: 0.12
-      win_rate: 0.43
+      win_rate: 0.48
     - name: Genji's Guard
       pick_rate: 0.11
-      win_rate: 0.51
+      win_rate: 0.49
   - name: Dwarven Plate
-    pick_rate: 0.1
-    win_rate: 0.44
+    pick_rate: 0.09
+    win_rate: 0.45
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.67
+      win_rate: 0.7
     - name: Soul Reaver
       pick_rate: 0.07
-      win_rate: 0.48
-  - name: Shell of Rebuke
-    pick_rate: 0.06
-    win_rate: 0.36
+      win_rate: 0.5
+  - name: Soul Reaver
+    pick_rate: 0.07
+    win_rate: 0.71
     alternates:
     - name: Engraved Guard
       pick_rate: 0.06
-      win_rate: 0.55
-    - name: Soul Reaver
-      pick_rate: 0.05
-      win_rate: 0.7
+      win_rate: 0.62
+    - name: Shell of Rebuke
+      pick_rate: 0.06
+      win_rate: 0.42
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.38
-    win_rate: 0.57
+    pick_rate: 0.39
+    win_rate: 0.59
   - name: Bluestone Pendant
-    pick_rate: 0.31
-    win_rate: 0.4
+    pick_rate: 0.3
+    win_rate: 0.41
   - name: Death's Embrace
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.61
   source_url: https://smitebrain.com/gods/jormungandr/
-  last_verified: '2026-08-08'
-  god_win_rate: 0.5117647058823529
-  god_matches_won: 174
-  god_matches_played: 340
+  last_verified: '2026-08-09'
+  god_win_rate: 0.5241935483870968
+  god_matches_won: 195
+  god_matches_played: 372
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-08'
-  god_matches_analyzed: 14443
+  god_window_end: '2026-08-09'
+  god_matches_analyzed: 15881
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Eye of Providence
   - Berserker's Shield
-  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shifter's Shield
+  - Soul Reaver
   - Amanita Charm
   flex_slots:
   - Eye of Providence
-  - Jotunn's Revenge
+  - Soul Reaver
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -137,12 +137,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.31
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.6
@@ -150,11 +144,17 @@ builds:
       pick: 0.0
       fit: 0.58
     Shifter's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.55
-      win: 0.55
-      pick: 0.32
+      win: 0.57
+      pick: 0.33
       fit: 0.48
+    Soul Reaver:
+      total: 0.51
+      efficiency: 0.46
+      win: 0.71
+      pick: 0.07
+      fit: 0.15
     Amanita Charm:
       total: 0.53
       efficiency: 0.66
@@ -226,8 +226,8 @@ builds:
     Shifter's Shield:
       total: 0.53
       efficiency: 0.55
-      win: 0.55
-      pick: 0.32
+      win: 0.57
+      pick: 0.33
       fit: 0.46
     Amanita Charm:
       total: 0.57
@@ -296,10 +296,10 @@ builds:
       pick: 0.0
       fit: 0.5
     Shifter's Shield:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
-      win: 0.55
-      pick: 0.32
+      win: 0.57
+      pick: 0.33
       fit: 0.37
     The Crusher:
       total: 0.53
@@ -362,10 +362,10 @@ builds:
       pick: 0.0
       fit: 0.34
     Shifter's Shield:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
-      win: 0.55
-      pick: 0.32
+      win: 0.57
+      pick: 0.33
       fit: 0.37
     Amanita Charm:
       total: 0.51
@@ -441,10 +441,10 @@ builds:
       pick: 0.0
       fit: 0.55
     Shifter's Shield:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
-      win: 0.55
-      pick: 0.32
+      win: 0.57
+      pick: 0.33
       fit: 0.39
     Amanita Charm:
       total: 0.51
@@ -507,10 +507,10 @@ builds:
       pick: 0.0
       fit: 0.52
     Shifter's Shield:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
-      win: 0.55
-      pick: 0.32
+      win: 0.57
+      pick: 0.33
       fit: 0.42
     The Crusher:
       total: 0.52
@@ -535,8 +535,8 @@ builds:
   - The Crusher
   - Soul Reaver
   flex_slots:
+  - The Crusher
   - Jotunn's Revenge
-  - Soul Reaver
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -580,10 +580,10 @@ builds:
       pick: 0.0
       fit: 0.49
     Shifter's Shield:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
-      win: 0.55
-      pick: 0.32
+      win: 0.57
+      pick: 0.33
       fit: 0.36
     The Crusher:
       total: 0.51
@@ -592,9 +592,9 @@ builds:
       pick: 0.0
       fit: 0.38
     Soul Reaver:
-      total: 0.51
+      total: 0.52
       efficiency: 0.46
-      win: 0.67
+      win: 0.71
       pick: 0.07
       fit: 0.26
   starter: *id001
@@ -641,9 +641,9 @@ builds:
       pick: 0.0
       fit: 0.48
     Genji's Guard:
-      total: 0.46
+      total: 0.47
       efficiency: 0.72
-      win: 0.35
+      win: 0.38
       pick: 0.16
       fit: 0.26
     Berserker's Shield:
