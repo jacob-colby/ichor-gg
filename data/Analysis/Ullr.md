@@ -3,17 +3,17 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Jotunn's Revenge | 0.53 | 0.58 | 0.65 | 0.48 | 0.48 | 0.40 | undervalued |  |  |
-| Hydra's Lament | 0.52 | 0.53 | 0.61 | 0.50 | 0.53 | 0.35 | fair | burst |  |
+| Hydra's Lament | 0.52 | 0.53 | 0.61 | 0.50 | 0.54 | 0.35 | fair | burst |  |
 | Berserker's Shield | 0.51 | 0.57 | 0.71 | 0.50 | 0.00 | 0.25 | undervalued |  | **UNDERRATED** |
-| The Crusher | 0.50 | 0.57 | 0.65 | 0.46 | 0.05 | 0.41 | undervalued | burst | **UNDERRATED** |
+| The Crusher | 0.50 | 0.57 | 0.65 | 0.47 | 0.04 | 0.41 | undervalued | burst | **UNDERRATED** |
 | Lernaean Bow | 0.50 | 0.54 | 0.56 | 0.50 | 0.00 | 0.50 | fair | wave-clear, burst | **UNDERRATED** |
 | Riptalon | 0.49 | 0.54 | 0.56 | 0.50 | 0.00 | 0.50 | fair | sustain | **UNDERRATED** |
 | Damaru | 0.49 | 0.54 | 0.59 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.49 | 0.53 | 0.72 | 0.50 | 0.00 | 0.10 | undervalued |  | **UNDERRATED** |
 | Heartseeker | 0.48 | 0.44 | 0.46 | 0.51 | 0.59 | 0.41 | fair | burst |  |
 | Golden Blade | 0.48 | 0.51 | 0.55 | 0.50 | 0.00 | 0.40 | fair | wave-clear | **UNDERRATED** |
-| Titan's Bane | 0.48 | 0.42 | 0.46 | 0.56 | 0.38 | 0.31 | fair |  |  |
 | Silverbranch Bow | 0.47 | 0.50 | 0.54 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
+| Titan's Bane | 0.47 | 0.42 | 0.46 | 0.55 | 0.38 | 0.31 | fair |  |  |
 | Runeforged Hammer | 0.47 | 0.50 | 0.60 | 0.50 | 0.00 | 0.25 | fair | burst | **UNDERRATED** |
 | The Reaper | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.40 | fair | sustain | **UNDERRATED** |
 | Dominance | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
@@ -26,7 +26,7 @@
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
-| Transcendence | 0.45 | 0.37 | 0.46 | 0.49 | 0.83 | 0.15 | fair |  |  |
+| Transcendence | 0.45 | 0.37 | 0.46 | 0.49 | 0.84 | 0.15 | fair |  |  |
 | Shogun's Ofuda | 0.45 | 0.44 | 0.53 | 0.50 | 0.00 | 0.25 | fair | aura | **UNDERRATED** |
 | Freya's Tears | 0.44 | 0.44 | 0.59 | 0.50 | 0.00 | 0.10 | fair |  | **UNDERRATED** |
 | Avenging Blade | 0.44 | 0.44 | 0.51 | 0.50 | 0.00 | 0.25 | fair | protection-shred | **UNDERRATED** |

@@ -9,7 +9,7 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Hydra's Lament
-    pick_rate: 0.41
+    pick_rate: 0.42
     win_rate: 0.54
     alternates:
     - name: Jotunn's Revenge
@@ -19,38 +19,38 @@ builds:
       pick_rate: 0.05
       win_rate: 0.51
   - name: Dagger of Frenzy
-    pick_rate: 0.21
+    pick_rate: 0.2
     win_rate: 0.54
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.25
-      win_rate: 0.47
+      pick_rate: 0.26
+      win_rate: 0.46
     - name: The Reaper
-      pick_rate: 0.18
+      pick_rate: 0.19
       win_rate: 0.55
   - name: The Reaper
     pick_rate: 0.18
-    win_rate: 0.57
+    win_rate: 0.55
     alternates:
     - name: Dagger of Frenzy
       pick_rate: 0.12
-      win_rate: 0.52
+      win_rate: 0.53
     - name: Blinking Abyss
       pick_rate: 0.1
-      win_rate: 0.44
+      win_rate: 0.46
   - name: Heartseeker
     pick_rate: 0.2
     win_rate: 0.54
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.18
-      win_rate: 0.52
+      pick_rate: 0.17
+      win_rate: 0.5
     - name: Blinking Abyss
-      pick_rate: 0.16
-      win_rate: 0.48
+      pick_rate: 0.17
+      win_rate: 0.47
   - name: Blinking Abyss
     pick_rate: 0.13
-    win_rate: 0.53
+    win_rate: 0.52
     alternates:
     - name: Heartseeker
       pick_rate: 0.14
@@ -60,33 +60,33 @@ builds:
       win_rate: 0.47
   - name: Lucerne Hammer
     pick_rate: 0.1
-    win_rate: 0.5
+    win_rate: 0.53
     alternates:
     - name: Blinking Abyss
       pick_rate: 0.08
-      win_rate: 0.61
+      win_rate: 0.63
     - name: Titan's Bane
       pick_rate: 0.07
-      win_rate: 0.56
+      win_rate: 0.57
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.28
     win_rate: 0.56
-  - name: Leather Cowl
-    pick_rate: 0.17
-    win_rate: 0.46
   - name: Bumba's Hammer
     pick_rate: 0.16
     win_rate: 0.53
+  - name: Leather Cowl
+    pick_rate: 0.16
+    win_rate: 0.47
   source_url: https://smitebrain.com/gods/awilix/
-  last_verified: '2026-08-09'
-  god_win_rate: 0.5158959537572254
-  god_matches_won: 357
-  god_matches_played: 692
+  last_verified: '2026-08-10'
+  god_win_rate: 0.514745308310992
+  god_matches_won: 384
+  god_matches_played: 746
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-09'
-  god_matches_analyzed: 15881
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -132,12 +132,12 @@ builds:
       total: 0.58
       efficiency: 0.61
       win: 0.54
-      pick: 0.41
+      pick: 0.42
       fit: 0.71
     The Reaper:
-      total: 0.59
+      total: 0.58
       efficiency: 0.53
-      win: 0.57
+      win: 0.55
       pick: 0.18
       fit: 0.91
     The Crusher:
@@ -153,10 +153,10 @@ builds:
       pick: 0.2
       fit: 1.0
     Titan's Bane:
-      total: 0.54
+      total: 0.53
       efficiency: 0.46
-      win: 0.52
-      pick: 0.18
+      win: 0.5
+      pick: 0.17
       fit: 0.91
   starter: &id001
     base: Bumba's Golden Dagger
@@ -209,12 +209,12 @@ builds:
       total: 0.56
       efficiency: 0.61
       win: 0.54
-      pick: 0.41
+      pick: 0.42
       fit: 0.54
     The Reaper:
-      total: 0.54
+      total: 0.53
       efficiency: 0.53
-      win: 0.57
+      win: 0.55
       pick: 0.18
       fit: 0.56
     The Crusher:
@@ -240,8 +240,8 @@ builds:
   - The Reaper
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
   - Hydra's Lament
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -285,12 +285,12 @@ builds:
       total: 0.53
       efficiency: 0.61
       win: 0.54
-      pick: 0.41
+      pick: 0.42
       fit: 0.37
     The Reaper:
-      total: 0.56
+      total: 0.55
       efficiency: 0.53
-      win: 0.57
+      win: 0.55
       pick: 0.18
       fit: 0.7
     Amanita Charm:
@@ -342,12 +342,12 @@ builds:
       total: 0.55
       efficiency: 0.61
       win: 0.54
-      pick: 0.41
+      pick: 0.42
       fit: 0.48
     The Reaper:
       total: 0.59
       efficiency: 0.53
-      win: 0.57
+      win: 0.55
       pick: 0.18
       fit: 0.94
     The Crusher:
@@ -363,10 +363,10 @@ builds:
       pick: 0.2
       fit: 1.0
     Titan's Bane:
-      total: 0.55
+      total: 0.54
       efficiency: 0.46
-      win: 0.52
-      pick: 0.18
+      win: 0.5
+      pick: 0.17
       fit: 0.94
   starter: *id001
 - source: suggested
@@ -376,11 +376,11 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Hydra's Lament
-  - The Reaper
   - Riptalon
+  - Silverbranch Bow
   flex_slots:
   - Berserker's Shield
-  - The Reaper
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -423,20 +423,20 @@ builds:
       total: 0.52
       efficiency: 0.61
       win: 0.54
-      pick: 0.41
+      pick: 0.42
       fit: 0.31
-    The Reaper:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.57
-      pick: 0.18
-      fit: 0.44
     Riptalon:
       total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Silverbranch Bow:
+      total: 0.52
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -493,7 +493,7 @@ builds:
       total: 0.59
       efficiency: 0.61
       win: 0.54
-      pick: 0.41
+      pick: 0.42
       fit: 0.75
     Freya's Tears:
       total: 0.51
@@ -550,7 +550,7 @@ builds:
       total: 0.58
       efficiency: 0.61
       win: 0.54
-      pick: 0.41
+      pick: 0.42
       fit: 0.71
     Runeforged Hammer:
       total: 0.53
@@ -559,9 +559,9 @@ builds:
       pick: 0.0
       fit: 0.62
     The Reaper:
-      total: 0.59
+      total: 0.58
       efficiency: 0.53
-      win: 0.57
+      win: 0.55
       pick: 0.18
       fit: 0.91
     The Crusher:

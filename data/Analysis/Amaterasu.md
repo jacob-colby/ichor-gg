@@ -2,15 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Kinetic Cuirass | 0.60 | 0.62 | 0.60 | 0.62 | 0.12 | 0.67 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.58 | 0.56 | 0.55 | 0.63 | 0.43 | 0.57 | fair |  |  |
-| Berserker's Shield | 0.57 | 0.60 | 0.71 | 0.58 | 0.20 | 0.36 | undervalued |  |  |
+| Kinetic Cuirass | 0.60 | 0.62 | 0.60 | 0.63 | 0.11 | 0.67 | fair | burst | **UNDERRATED** |
+| Shifter's Shield | 0.59 | 0.56 | 0.55 | 0.64 | 0.42 | 0.57 | fair |  |  |
+| Berserker's Shield | 0.57 | 0.60 | 0.71 | 0.58 | 0.21 | 0.36 | undervalued |  |  |
+| Golden Blade | 0.54 | 0.50 | 0.55 | 0.62 | 0.29 | 0.37 | fair | wave-clear |  |
 | Amanita Charm | 0.54 | 0.63 | 0.66 | 0.50 | 0.00 | 0.57 | undervalued | sustain, aura | **UNDERRATED** |
-| Golden Blade | 0.54 | 0.50 | 0.55 | 0.61 | 0.28 | 0.37 | fair | wave-clear |  |
-| Bragi's Harp | 0.53 | 0.43 | 0.46 | 0.70 | 0.07 | 0.36 | fair | burst |  |
 | Eye of Providence | 0.53 | 0.60 | 0.62 | 0.50 | 0.00 | 0.57 | undervalued |  | **UNDERRATED** |
 | Genji's Guard | 0.52 | 0.60 | 0.72 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
-| Shogun's Ofuda | 0.52 | 0.48 | 0.53 | 0.61 | 0.17 | 0.36 | fair | aura |  |
+| Shogun's Ofuda | 0.52 | 0.48 | 0.53 | 0.60 | 0.17 | 0.36 | fair | aura |  |
 | Gluttonous Grimoire | 0.51 | 0.57 | 0.66 | 0.50 | 0.00 | 0.37 | undervalued | burst | **UNDERRATED** |
 | Jotunn's Revenge | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.38 | undervalued |  | **UNDERRATED** |
 | Freya's Tears | 0.51 | 0.57 | 0.59 | 0.50 | 0.00 | 0.53 | fair |  | **UNDERRATED** |
@@ -67,6 +66,7 @@
 | Spear of Desolation | 0.44 | 0.44 | 0.52 | 0.50 | 0.00 | 0.23 | fair |  |  |
 | Phoenix Feather | 0.44 | 0.43 | 0.46 | 0.50 | 0.00 | 0.36 | fair | sustain |  |
 | Alchemist Coat | 0.44 | 0.43 | 0.52 | 0.50 | 0.00 | 0.22 | fair |  |  |
+| Bragi's Harp | 0.44 | 0.43 | 0.46 | 0.50 | 0.00 | 0.36 | fair | burst |  |
 | Heartseeker | 0.44 | 0.43 | 0.46 | 0.50 | 0.00 | 0.36 | fair | burst |  |
 | Blood-Bound Book | 0.44 | 0.43 | 0.58 | 0.50 | 0.00 | 0.06 | fair | sustain |  |
 | Tyrfing | 0.44 | 0.42 | 0.47 | 0.50 | 0.00 | 0.31 | fair | burst |  |

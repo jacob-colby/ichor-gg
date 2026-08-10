@@ -2,10 +2,10 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Kinetic Cuirass | 0.60 | 0.61 | 0.60 | 0.66 | 0.05 | 0.61 | fair | burst | **UNDERRATED** |
-| Genji's Guard | 0.57 | 0.59 | 0.72 | 0.60 | 0.17 | 0.28 | undervalued |  |  |
+| Kinetic Cuirass | 0.60 | 0.61 | 0.60 | 0.65 | 0.06 | 0.61 | fair | burst | **UNDERRATED** |
+| Genji's Guard | 0.57 | 0.59 | 0.72 | 0.59 | 0.17 | 0.28 | undervalued |  |  |
 | Shifter's Shield | 0.56 | 0.54 | 0.55 | 0.58 | 0.53 | 0.51 | fair |  |  |
-| Shield of the Phoenix | 0.55 | 0.53 | 0.57 | 0.62 | 0.23 | 0.43 | fair | sustain |  |
+| Shield of the Phoenix | 0.55 | 0.53 | 0.57 | 0.62 | 0.22 | 0.43 | fair | sustain |  |
 | Gladiator's Shield | 0.54 | 0.45 | 0.41 | 0.68 | 0.13 | 0.53 | premium | burst |  |
 | Amanita Charm | 0.53 | 0.62 | 0.66 | 0.50 | 0.00 | 0.51 | undervalued | sustain, aura | **UNDERRATED** |
 | Berserker's Shield | 0.52 | 0.59 | 0.71 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
@@ -13,7 +13,7 @@
 | Jotunn's Revenge | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.44 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.52 | 0.59 | 0.62 | 0.50 | 0.00 | 0.51 | undervalued |  | **UNDERRATED** |
 | The Crusher | 0.52 | 0.58 | 0.65 | 0.50 | 0.00 | 0.44 | undervalued | burst | **UNDERRATED** |
-| Hide of the Nemean Lion | 0.51 | 0.47 | 0.54 | 0.60 | 0.06 | 0.33 | fair |  | **UNDERRATED** |
+| Hide of the Nemean Lion | 0.51 | 0.47 | 0.54 | 0.59 | 0.07 | 0.33 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.50 | 0.56 | 0.65 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
 | Runeforged Hammer | 0.50 | 0.55 | 0.60 | 0.50 | 0.00 | 0.44 | fair | burst | **UNDERRATED** |
 | Freya's Tears | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.47 | fair |  | **UNDERRATED** |
@@ -55,18 +55,18 @@
 | Wyrmskin Hide | 0.45 | 0.45 | 0.42 | 0.50 | 0.00 | 0.52 | premium |  |  |
 | Chandra's Grace | 0.45 | 0.45 | 0.53 | 0.50 | 0.00 | 0.24 | fair | sustain |  |
 | Triton's Conch | 0.45 | 0.44 | 0.47 | 0.50 | 0.00 | 0.39 | fair | aura |  |
-| Bracer of The Abyss | 0.45 | 0.41 | 0.56 | 0.53 | 0.05 | 0.05 | fair |  |  |
 | Arondight | 0.44 | 0.44 | 0.50 | 0.50 | 0.00 | 0.29 | fair | mobility |  |
 | Prophetic Cloak | 0.44 | 0.44 | 0.43 | 0.50 | 0.00 | 0.47 | premium |  |  |
 | Void Stone | 0.44 | 0.44 | 0.44 | 0.50 | 0.00 | 0.43 | premium | protection-shred, aura |  |
 | Chronos' Pendant | 0.44 | 0.44 | 0.56 | 0.50 | 0.00 | 0.14 | fair |  |  |
+| Barbed Carver | 0.44 | 0.39 | 0.43 | 0.53 | 0.16 | 0.29 | premium | burst |  |
 | Hussar's Wings | 0.44 | 0.44 | 0.40 | 0.50 | 0.00 | 0.51 | premium | cc-immunity |  |
 | Obsidian Shard | 0.44 | 0.43 | 0.54 | 0.50 | 0.00 | 0.19 | fair |  |  |
 | Wish-Granting Pearl | 0.44 | 0.43 | 0.54 | 0.50 | 0.00 | 0.19 | fair |  |  |
-| Barbed Carver | 0.44 | 0.39 | 0.43 | 0.53 | 0.15 | 0.29 | premium | burst |  |
 | Riptalon | 0.44 | 0.43 | 0.56 | 0.50 | 0.00 | 0.15 | fair | sustain |  |
 | Ragnarok's Wake | 0.44 | 0.43 | 0.43 | 0.50 | 0.00 | 0.43 | premium | mobility, burst |  |
 | Ethereal Staff | 0.44 | 0.43 | 0.53 | 0.50 | 0.00 | 0.19 | fair |  |  |
+| Bracer of The Abyss | 0.44 | 0.41 | 0.56 | 0.52 | 0.05 | 0.05 | fair |  |  |
 | Dominance | 0.44 | 0.43 | 0.53 | 0.50 | 0.00 | 0.19 | fair |  |  |
 | Pendulum Blade | 0.44 | 0.43 | 0.42 | 0.50 | 0.00 | 0.44 | premium |  |  |
 | Titan's Bane | 0.44 | 0.43 | 0.46 | 0.50 | 0.00 | 0.34 | fair |  |  |
@@ -79,7 +79,6 @@
 | Silverbranch Bow | 0.44 | 0.42 | 0.54 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Tyrfing | 0.43 | 0.42 | 0.47 | 0.50 | 0.00 | 0.29 | fair | burst |  |
 | Bancroft's Talon | 0.43 | 0.42 | 0.58 | 0.50 | 0.00 | 0.05 | fair | sustain |  |
-| Dwarven Plate | 0.43 | 0.36 | 0.35 | 0.55 | 0.10 | 0.37 | premium |  |  |
 | Mystical Mail | 0.43 | 0.41 | 0.45 | 0.50 | 0.00 | 0.33 | fair | aura, wave-clear |  |
 | Lifebinder | 0.43 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair | sustain, aura |  |
 | Dreamer's Idol | 0.43 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair | cc-immunity |  |
@@ -90,6 +89,7 @@
 | Gem of Focus | 0.42 | 0.40 | 0.51 | 0.50 | 0.00 | 0.14 | fair | mobility |  |
 | Doom Orb | 0.42 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair |  |  |
 | Sanguine Lash | 0.42 | 0.40 | 0.41 | 0.50 | 0.00 | 0.38 | premium | aura |  |
+| Dwarven Plate | 0.42 | 0.36 | 0.35 | 0.53 | 0.10 | 0.37 | premium |  |  |
 | Glorious Pridwen | 0.42 | 0.39 | 0.36 | 0.50 | 0.00 | 0.47 | premium | sustain |  |
 | Shroud of Vengeance | 0.42 | 0.39 | 0.36 | 0.50 | 0.00 | 0.47 | premium | burst |  |
 | Polynomicon | 0.42 | 0.39 | 0.49 | 0.50 | 0.00 | 0.15 | fair | burst |  |

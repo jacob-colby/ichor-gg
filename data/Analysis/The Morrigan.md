@@ -2,16 +2,16 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| The Cosmic Horror | 0.64 | 0.65 | 0.58 | 0.69 | 0.09 | 0.80 | fair |  | **UNDERRATED** |
-| Obsidian Shard | 0.59 | 0.62 | 0.54 | 0.61 | 0.19 | 0.80 | fair |  |  |
+| The Cosmic Horror | 0.62 | 0.65 | 0.58 | 0.66 | 0.09 | 0.80 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.60 | 0.62 | 0.54 | 0.63 | 0.19 | 0.80 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.90 | undervalued | burst | **UNDERRATED** |
 | Soul Gem | 0.58 | 0.71 | 0.59 | 0.50 | 0.00 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
-| Spear of Desolation | 0.57 | 0.67 | 0.52 | 0.50 | 0.32 | 1.00 | fair |  |  |
+| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.51 | 0.32 | 1.00 | fair |  |  |
 | The World Stone | 0.57 | 0.58 | 0.49 | 0.57 | 0.39 | 0.80 | fair |  |  |
-| Gem of Focus | 0.56 | 0.54 | 0.51 | 0.64 | 0.16 | 0.60 | fair | mobility |  |
+| Gem of Focus | 0.56 | 0.54 | 0.51 | 0.63 | 0.16 | 0.60 | fair | mobility |  |
 | Spear of the Magus | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.80 | fair |  | **UNDERRATED** |
-| Polynomicon | 0.53 | 0.49 | 0.49 | 0.57 | 0.45 | 0.50 | fair | burst |  |
-| Rod of Tahuti | 0.52 | 0.55 | 0.44 | 0.51 | 0.29 | 0.80 | premium |  |  |
+| Polynomicon | 0.53 | 0.49 | 0.49 | 0.57 | 0.44 | 0.50 | fair | burst |  |
+| Rod of Tahuti | 0.52 | 0.55 | 0.44 | 0.52 | 0.28 | 0.80 | premium |  |  |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.80 | fair | cc-immunity | **UNDERRATED** |
 | Doom Orb | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.80 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.51 | 0.57 | 0.56 | 0.50 | 0.00 | 0.60 | fair |  | **UNDERRATED** |

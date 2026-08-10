@@ -9,25 +9,25 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.25
-    win_rate: 0.54
+    pick_rate: 0.26
+    win_rate: 0.53
     alternates:
     - name: Gauntlet of Thebes
       pick_rate: 0.13
       win_rate: 0.53
     - name: Stampede
-      pick_rate: 0.12
-      win_rate: 0.52
+      pick_rate: 0.13
+      win_rate: 0.54
   - name: Genji's Guard
-    pick_rate: 0.2
+    pick_rate: 0.19
     win_rate: 0.57
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.17
-      win_rate: 0.58
+      win_rate: 0.57
     - name: Stampede
       pick_rate: 0.09
-      win_rate: 0.6
+      win_rate: 0.58
   - name: Breastplate of Valor
     pick_rate: 0.1
     win_rate: 0.55
@@ -37,56 +37,56 @@ builds:
       win_rate: 0.54
     - name: Stampede
       pick_rate: 0.08
-      win_rate: 0.45
-  - name: Spirit Robe
+      win_rate: 0.46
+  - name: Shell of Rebuke
     pick_rate: 0.09
-    win_rate: 0.46
+    win_rate: 0.61
     alternates:
-    - name: Shell of Rebuke
-      pick_rate: 0.09
-      win_rate: 0.61
+    - name: Spirit Robe
+      pick_rate: 0.08
+      win_rate: 0.46
     - name: Genji's Guard
       pick_rate: 0.06
-      win_rate: 0.52
-  - name: Shell of Rebuke
-    pick_rate: 0.08
-    win_rate: 0.68
+      win_rate: 0.51
+  - name: Spirit Robe
+    pick_rate: 0.06
+    win_rate: 0.62
     alternates:
-    - name: Spirit Robe
-      pick_rate: 0.06
-      win_rate: 0.59
+    - name: Shell of Rebuke
+      pick_rate: 0.08
+      win_rate: 0.67
     - name: Hide of the Nemean Lion
       pick_rate: 0.05
-      win_rate: 0.53
+      win_rate: 0.55
   - name: Engraved Guard
     pick_rate: 0.07
-    win_rate: 0.77
+    win_rate: 0.74
     alternates:
     - name: Spirit Robe
       pick_rate: 0.05
-      win_rate: 0.74
-    - name: Medallion
+      win_rate: 0.75
+    - name: Veve Charm
       pick_rate: 0.05
-      win_rate: 0.53
+      win_rate: 0.61
   community_starters:
   - name: Warrior's Axe
-    pick_rate: 0.18
-    win_rate: 0.55
+    pick_rate: 0.19
+    win_rate: 0.53
   - name: Selflessness
-    pick_rate: 0.17
-    win_rate: 0.46
+    pick_rate: 0.16
+    win_rate: 0.47
   - name: Sundering Axe
     pick_rate: 0.12
-    win_rate: 0.63
+    win_rate: 0.64
   source_url: https://smitebrain.com/gods/ymir/
-  last_verified: '2026-08-09'
-  god_win_rate: 0.532967032967033
-  god_matches_won: 388
-  god_matches_played: 728
+  last_verified: '2026-08-10'
+  god_win_rate: 0.5238693467336684
+  god_matches_won: 417
+  god_matches_played: 796
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-09'
-  god_matches_analyzed: 15881
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -118,7 +118,7 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Eye of Providence, Breastplate of Valor,
     Freya''s Tears, Oni Hunter''s Garb, Erosion, Gluttonous Grimoire, Shield of the
-    Phoenix, Draconic Scale, Spectral Armor, Hide of the Nemean Lion, Stampede, Leviathan''s
+    Phoenix, Draconic Scale, Hide of the Nemean Lion, Spectral Armor, Stampede, Leviathan''s
     Hide, Mantle Of Discord, Stone of Binding, Midgardian Mail, Yogi''s Necklace,
     Helm of Radiance, Soul Gem, Magi''s Cloak, Rod of Asclepius, Ancile, Gladiator''s
     Shield, Hussar''s Wings.'
@@ -130,10 +130,10 @@ builds:
       pick: 0.0
       fit: 0.72
     Genji's Guard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.39
     Breastplate of Valor:
       total: 0.54
@@ -148,10 +148,10 @@ builds:
       pick: 0.0
       fit: 0.82
     Shifter's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
-      win: 0.54
-      pick: 0.25
+      win: 0.53
+      pick: 0.26
       fit: 0.72
     Amanita Charm:
       total: 0.56
@@ -190,10 +190,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Eye of Providence,
     Breastplate of Valor, Rod of Asclepius, Oni Hunter''s Garb, Gluttonous Grimoire,
-    Soul Gem, Chandra''s Grace, Freya''s Tears, Erosion, Draconic Scale, Phoenix Feather,
-    Spectral Armor, Hide of the Nemean Lion, Lifebinder, Stampede, Leviathan''s Hide,
-    Yogi''s Necklace, Midgardian Mail, Blood-Bound Book, Bancroft''s Talon, Glorious
-    Pridwen, Ancile.'
+    Soul Gem, Chandra''s Grace, Freya''s Tears, Erosion, Hide of the Nemean Lion,
+    Draconic Scale, Phoenix Feather, Spectral Armor, Stampede, Lifebinder, Leviathan''s
+    Hide, Yogi''s Necklace, Midgardian Mail, Blood-Bound Book, Bancroft''s Talon,
+    Glorious Pridwen, Ancile.'
   slot_scores:
     Eye of Providence:
       total: 0.55
@@ -205,7 +205,7 @@ builds:
       total: 0.57
       efficiency: 0.72
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.35
     Kinetic Cuirass:
       total: 0.56
@@ -222,8 +222,8 @@ builds:
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
-      win: 0.54
-      pick: 0.25
+      win: 0.53
+      pick: 0.26
       fit: 0.7
     Amanita Charm:
       total: 0.61
@@ -242,7 +242,7 @@ builds:
   - Gluttonous Grimoire
   - Shifter's Shield
   flex_slots:
-  - Breastplate of Valor
+  - Shifter's Shield
   - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -275,7 +275,7 @@ builds:
       total: 0.56
       efficiency: 0.72
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.25
     Breastplate of Valor:
       total: 0.52
@@ -298,8 +298,8 @@ builds:
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
-      win: 0.54
-      pick: 0.25
+      win: 0.53
+      pick: 0.26
       fit: 0.48
   starter: *id001
 - source: suggested
@@ -329,8 +329,8 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Breastplate of Valor, Kinetic Cuirass, Gluttonous Grimoire,
-    Eye of Providence, Oni Hunter''s Garb, Freya''s Tears, Soul Gem, Shield of the
-    Phoenix, Spectral Armor, Yogi''s Necklace, Hide of the Nemean Lion, Erosion, Bracer
+    Eye of Providence, Oni Hunter''s Garb, Freya''s Tears, Hide of the Nemean Lion,
+    Soul Gem, Shield of the Phoenix, Spectral Armor, Yogi''s Necklace, Erosion, Bracer
     of The Abyss, Draconic Scale, Death Metal, Helm of Radiance, Rod of Asclepius,
     Leviathan''s Hide, Bragi''s Harp, Midgardian Mail, Mantle Of Discord, Stone of
     Binding, Jade Scepter, Blood-Bound Book.'
@@ -339,7 +339,7 @@ builds:
       total: 0.55
       efficiency: 0.72
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.2
     Breastplate of Valor:
       total: 0.51
@@ -409,7 +409,7 @@ builds:
       total: 0.59
       efficiency: 0.72
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.48
     Breastplate of Valor:
       total: 0.55
@@ -430,10 +430,10 @@ builds:
       pick: 0.0
       fit: 0.64
     Shifter's Shield:
-      total: 0.52
+      total: 0.51
       efficiency: 0.55
-      win: 0.54
-      pick: 0.25
+      win: 0.53
+      pick: 0.26
       fit: 0.45
     Amanita Charm:
       total: 0.52
@@ -481,7 +481,7 @@ builds:
       total: 0.55
       efficiency: 0.72
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.22
     Berserker's Shield:
       total: 0.53
@@ -554,7 +554,7 @@ builds:
       total: 0.55
       efficiency: 0.72
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.22
     Berserker's Shield:
       total: 0.52
@@ -627,10 +627,10 @@ builds:
       pick: 0.0
       fit: 0.72
     Genji's Guard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.39
     Kinetic Cuirass:
       total: 0.56
@@ -645,10 +645,10 @@ builds:
       pick: 0.0
       fit: 0.64
     Shifter's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
-      win: 0.54
-      pick: 0.25
+      win: 0.53
+      pick: 0.26
       fit: 0.72
     Amanita Charm:
       total: 0.56

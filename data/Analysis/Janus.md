@@ -5,16 +5,16 @@
 | Soul Gem | 0.61 | 0.71 | 0.59 | 0.51 | 0.40 | 1.00 | fair | burst, sustain, aura |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
 | Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.49 | 0.51 | 1.00 | fair |  |  |
-| Obsidian Shard | 0.58 | 0.61 | 0.54 | 0.57 | 0.30 | 0.78 | fair |  |  |
+| Obsidian Shard | 0.57 | 0.61 | 0.54 | 0.56 | 0.30 | 0.78 | fair |  |  |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.52 | 0.59 | 0.56 | 0.50 | 0.00 | 0.67 | fair |  | **UNDERRATED** |
 | Dreamer's Idol | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.78 | fair | cc-immunity | **UNDERRATED** |
 | The World Stone | 0.51 | 0.57 | 0.49 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.51 | 0.54 | 0.44 | 0.49 | 0.39 | 0.78 | premium |  |  |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
-| Doom Orb | 0.51 | 0.57 | 0.49 | 0.47 | 0.15 | 0.78 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.51 | 0.54 | 0.44 | 0.49 | 0.38 | 0.78 | premium |  |  |
 | Gem of Focus | 0.50 | 0.56 | 0.51 | 0.50 | 0.00 | 0.67 | fair | mobility | **UNDERRATED** |
+| Doom Orb | 0.50 | 0.57 | 0.49 | 0.46 | 0.15 | 0.78 | fair |  | **UNDERRATED** |
 | Death Metal | 0.50 | 0.55 | 0.60 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.44 | fair | sustain, aura | **UNDERRATED** |
 | Blood-Bound Book | 0.50 | 0.54 | 0.58 | 0.50 | 0.00 | 0.44 | fair | sustain | **UNDERRATED** |
@@ -41,10 +41,10 @@
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
-| Book of Thoth | 0.45 | 0.43 | 0.42 | 0.50 | 0.22 | 0.44 | premium |  |  |
 | Necronomicon | 0.45 | 0.44 | 0.44 | 0.50 | 0.00 | 0.44 | premium |  |  |
 | Screeching Gargoyle | 0.44 | 0.44 | 0.49 | 0.50 | 0.00 | 0.32 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.22 | fair | sustain |  |
+| Book of Thoth | 0.44 | 0.43 | 0.42 | 0.49 | 0.22 | 0.44 | premium |  |  |
 | Staff of Myrddin | 0.44 | 0.43 | 0.34 | 0.50 | 0.00 | 0.67 | premium |  |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Helm of Darkness | 0.44 | 0.43 | 0.43 | 0.50 | 0.00 | 0.44 | premium | mobility |  |

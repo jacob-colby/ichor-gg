@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Book of Thoth
-    pick_rate: 0.29
-    win_rate: 0.62
+    pick_rate: 0.28
+    win_rate: 0.63
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.19
       win_rate: 0.59
     - name: Chronos' Pendant
       pick_rate: 0.18
-      win_rate: 0.66
+      win_rate: 0.67
   - name: Genji's Guard
     pick_rate: 0.16
-    win_rate: 0.65
+    win_rate: 0.66
     alternates:
     - name: Breastplate of Valor
-      pick_rate: 0.15
-      win_rate: 0.65
-    - name: Spear of Desolation
       pick_rate: 0.14
-      win_rate: 0.58
-  - name: Breastplate of Valor
+      win_rate: 0.64
+    - name: Spear of Desolation
+      pick_rate: 0.13
+      win_rate: 0.59
+  - name: The World Stone
     pick_rate: 0.12
-    win_rate: 0.67
+    win_rate: 0.61
     alternates:
     - name: Genji's Guard
       pick_rate: 0.15
       win_rate: 0.62
-    - name: The World Stone
+    - name: Breastplate of Valor
       pick_rate: 0.12
-      win_rate: 0.62
+      win_rate: 0.67
   - name: Rod of Tahuti
     pick_rate: 0.16
     win_rate: 0.7
     alternates:
     - name: The World Stone
-      pick_rate: 0.12
+      pick_rate: 0.11
       win_rate: 0.7
     - name: Genji's Guard
-      pick_rate: 0.07
-      win_rate: 0.68
+      pick_rate: 0.08
+      win_rate: 0.67
   - name: Obsidian Shard
     pick_rate: 0.08
     win_rate: 0.61
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.11
-      win_rate: 0.66
+      pick_rate: 0.1
+      win_rate: 0.68
     - name: Evil Eye
-      pick_rate: 0.07
-      win_rate: 0.61
+      pick_rate: 0.08
+      win_rate: 0.64
   - name: Evil Eye
     pick_rate: 0.07
-    win_rate: 0.65
+    win_rate: 0.69
     alternates:
     - name: Oracle Staff
       pick_rate: 0.06
-      win_rate: 0.48
+      win_rate: 0.46
     - name: Obsidian Shard
       pick_rate: 0.05
-      win_rate: 0.74
+      win_rate: 0.76
   community_starters:
   - name: Sands of Time
-    pick_rate: 0.34
-    win_rate: 0.59
+    pick_rate: 0.35
+    win_rate: 0.6
   - name: Pendulum of The Ages
     pick_rate: 0.33
     win_rate: 0.7
-  - name: Conduit Gem
-    pick_rate: 0.09
-    win_rate: 0.55
+  - name: Archmage's Gem
+    pick_rate: 0.08
+    win_rate: 0.63
   source_url: https://smitebrain.com/gods/aphrodite/
-  last_verified: '2026-08-09'
-  god_win_rate: 0.6299303944315545
-  god_matches_won: 543
-  god_matches_played: 862
+  last_verified: '2026-08-10'
+  god_win_rate: 0.6321961620469083
+  god_matches_won: 593
+  god_matches_played: 938
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-09'
-  god_matches_analyzed: 15881
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -126,19 +126,19 @@ builds:
     Genji's Guard:
       total: 0.6
       efficiency: 0.72
-      win: 0.65
+      win: 0.66
       pick: 0.16
       fit: 0.32
     Breastplate of Valor:
-      total: 0.58
+      total: 0.57
       efficiency: 0.65
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.14
       fit: 0.32
     Chronos' Pendant:
-      total: 0.55
+      total: 0.56
       efficiency: 0.56
-      win: 0.66
+      win: 0.67
       pick: 0.18
       fit: 0.35
     Gluttonous Grimoire:
@@ -196,21 +196,21 @@ builds:
     Wish-Granting Pearl.'
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
-      win: 0.65
+      win: 0.66
       pick: 0.16
       fit: 0.27
     Breastplate of Valor:
-      total: 0.58
+      total: 0.56
       efficiency: 0.65
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.14
       fit: 0.27
     Chronos' Pendant:
-      total: 0.54
+      total: 0.55
       efficiency: 0.56
-      win: 0.66
+      win: 0.67
       pick: 0.18
       fit: 0.28
     Gluttonous Grimoire:
@@ -258,7 +258,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Breastplate of Valor, Amanita Charm, Soul Gem, Gluttonous Grimoire,
+    this god: Amanita Charm, Breastplate of Valor, Soul Gem, Gluttonous Grimoire,
     Shield of the Phoenix, Rod of Asclepius, Kinetic Cuirass, Eye of Providence, Chandra''s
     Grace, Oni Hunter''s Garb, Blood-Bound Book, Bancroft''s Talon, Lifebinder, Freya''s
     Tears, Shifter''s Shield, Spear of the Magus, Phoenix Feather, Spectral Armor,
@@ -268,19 +268,19 @@ builds:
     Genji's Guard:
       total: 0.6
       efficiency: 0.72
-      win: 0.65
+      win: 0.66
       pick: 0.16
       fit: 0.3
     Breastplate of Valor:
-      total: 0.58
+      total: 0.57
       efficiency: 0.65
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.14
       fit: 0.3
     Chronos' Pendant:
-      total: 0.55
+      total: 0.56
       efficiency: 0.56
-      win: 0.66
+      win: 0.67
       pick: 0.18
       fit: 0.35
     Spear of Desolation:
@@ -312,8 +312,8 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   flex_slots:
+  - Spear of Desolation
   - Rod of Tahuti
-  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -338,19 +338,19 @@ builds:
     Genji's Guard:
       total: 0.59
       efficiency: 0.72
-      win: 0.65
+      win: 0.66
       pick: 0.16
       fit: 0.26
     Breastplate of Valor:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.14
       fit: 0.26
     Chronos' Pendant:
-      total: 0.54
+      total: 0.55
       efficiency: 0.56
-      win: 0.66
+      win: 0.67
       pick: 0.18
       fit: 0.28
     Gluttonous Grimoire:
@@ -408,19 +408,19 @@ builds:
     Genji's Guard:
       total: 0.58
       efficiency: 0.72
-      win: 0.65
+      win: 0.66
       pick: 0.16
       fit: 0.18
     Breastplate of Valor:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.14
       fit: 0.18
     Chronos' Pendant:
-      total: 0.53
+      total: 0.54
       efficiency: 0.56
-      win: 0.66
+      win: 0.67
       pick: 0.18
       fit: 0.2
     Bracer of The Abyss:
@@ -478,19 +478,19 @@ builds:
     Genji's Guard:
       total: 0.62
       efficiency: 0.72
-      win: 0.65
+      win: 0.66
       pick: 0.16
       fit: 0.44
     Breastplate of Valor:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.14
       fit: 0.44
     Chronos' Pendant:
-      total: 0.56
+      total: 0.57
       efficiency: 0.56
-      win: 0.66
+      win: 0.67
       pick: 0.18
       fit: 0.39
     Freya's Tears:
@@ -549,9 +549,9 @@ builds:
     The Abyss.'
   slot_scores:
     Genji's Guard:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.65
+      win: 0.66
       pick: 0.16
       fit: 0.22
     Berserker's Shield:
@@ -561,15 +561,15 @@ builds:
       pick: 0.0
       fit: 0.31
     Breastplate of Valor:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.14
       fit: 0.22
     Chronos' Pendant:
       total: 0.54
       efficiency: 0.56
-      win: 0.66
+      win: 0.67
       pick: 0.18
       fit: 0.24
     Jotunn's Revenge:
@@ -624,19 +624,19 @@ builds:
     Genji's Guard:
       total: 0.59
       efficiency: 0.72
-      win: 0.65
+      win: 0.66
       pick: 0.16
       fit: 0.24
     Breastplate of Valor:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.14
       fit: 0.24
     Chronos' Pendant:
       total: 0.55
       efficiency: 0.56
-      win: 0.66
+      win: 0.67
       pick: 0.18
       fit: 0.29
     Gluttonous Grimoire:
@@ -700,7 +700,7 @@ builds:
     Genji's Guard:
       total: 0.6
       efficiency: 0.72
-      win: 0.65
+      win: 0.66
       pick: 0.16
       fit: 0.32
     Kinetic Cuirass:

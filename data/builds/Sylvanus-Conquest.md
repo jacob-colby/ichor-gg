@@ -9,38 +9,38 @@ builds:
   aspect_win_rate: 0.52
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.19
+    pick_rate: 0.18
     win_rate: 0.54
     alternates:
     - name: Gauntlet of Thebes
-      pick_rate: 0.12
-      win_rate: 0.52
+      pick_rate: 0.13
+      win_rate: 0.53
     - name: Prophetic Cloak
       pick_rate: 0.12
-      win_rate: 0.47
+      win_rate: 0.48
   - name: Genji's Guard
     pick_rate: 0.2
     win_rate: 0.46
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.1
-      win_rate: 0.49
+      win_rate: 0.5
     - name: Bragi's Harp
       pick_rate: 0.09
-      win_rate: 0.49
+      win_rate: 0.5
   - name: Breastplate of Valor
-    pick_rate: 0.17
-    win_rate: 0.47
+    pick_rate: 0.16
+    win_rate: 0.48
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.16
+      pick_rate: 0.17
       win_rate: 0.51
-    - name: Circe's Hexstone
+    - name: Shell of Rebuke
       pick_rate: 0.05
-      win_rate: 0.53
+      win_rate: 0.54
   - name: Shell of Rebuke
     pick_rate: 0.09
-    win_rate: 0.49
+    win_rate: 0.48
     alternates:
     - name: Genji's Guard
       pick_rate: 0.08
@@ -50,43 +50,43 @@ builds:
       win_rate: 0.53
   - name: Engraved Guard
     pick_rate: 0.04
-    win_rate: 0.44
+    win_rate: 0.43
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.7
+      win_rate: 0.69
     - name: Dwarven Plate
       pick_rate: 0.04
-      win_rate: 0.54
+      win_rate: 0.56
   - name: Legionnaire Armor
     pick_rate: 0.04
-    win_rate: 0.54
+    win_rate: 0.52
     alternates:
     - name: Engraved Guard
       pick_rate: 0.07
-      win_rate: 0.57
+      win_rate: 0.58
     - name: Shell of Rebuke
       pick_rate: 0.04
-      win_rate: 0.54
+      win_rate: 0.55
   community_starters:
   - name: Selflessness
     pick_rate: 0.29
-    win_rate: 0.47
+    win_rate: 0.46
   - name: Heroism
     pick_rate: 0.14
-    win_rate: 0.59
+    win_rate: 0.57
   - name: Death's Embrace
     pick_rate: 0.13
-    win_rate: 0.55
+    win_rate: 0.56
   source_url: https://smitebrain.com/gods/sylvanus/
-  last_verified: '2026-08-09'
-  god_win_rate: 0.5007824726134585
-  god_matches_won: 640
-  god_matches_played: 1278
+  last_verified: '2026-08-10'
+  god_win_rate: 0.5010893246187363
+  god_matches_won: 690
+  god_matches_played: 1377
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-09'
-  god_matches_analyzed: 15881
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -360,9 +360,9 @@ builds:
       pick: 0.0
       fit: 0.32
     Bragi's Harp:
-      total: 0.45
+      total: 0.46
       efficiency: 0.46
-      win: 0.49
+      win: 0.5
       pick: 0.09
       fit: 0.46
     Gluttonous Grimoire:
@@ -402,8 +402,8 @@ builds:
     Amanita Charm, Kinetic Cuirass, Soul Gem, Gluttonous Grimoire, Eye of Providence,
     Oni Hunter''s Garb, Shifter''s Shield, Chronos'' Pendant, Screeching Gargoyle,
     Chandra''s Grace, Spear of Desolation, Gladiator''s Shield, Spectral Armor, Erosion,
-    Yogi''s Necklace, Draconic Scale, Helm of Radiance, Rod of Asclepius, Gem of Focus,
-    Death Metal, Prophetic Cloak, Leviathan''s Hide, Jade Scepter.'
+    Yogi''s Necklace, Draconic Scale, Prophetic Cloak, Helm of Radiance, Rod of Asclepius,
+    Gem of Focus, Death Metal, Leviathan''s Hide, Jade Scepter.'
   slot_scores:
     Eye of Providence:
       total: 0.51
@@ -418,10 +418,10 @@ builds:
       pick: 0.2
       fit: 0.48
     Breastplate of Valor:
-      total: 0.52
+      total: 0.53
       efficiency: 0.65
-      win: 0.47
-      pick: 0.17
+      win: 0.48
+      pick: 0.16
       fit: 0.48
     Kinetic Cuirass:
       total: 0.52
@@ -474,8 +474,8 @@ builds:
     Garb, Freya''s Tears, Shield Splitter, Golden Blade, Death Metal, Lernaean Bow,
     Pharaoh''s Curse, Shifter''s Shield, Eye of the Storm, Spear of the Magus, Spectral
     Armor, Yogi''s Necklace, Avenging Blade, Erosion, Damaru, The Reaper, The Cosmic
-    Horror, Helm of Radiance, Rod of Asclepius, Draconic Scale, Shogun''s Ofuda, Spear
-    of Desolation, Bragi''s Harp, Leviathan''s Hide, Dominance, Jade Scepter, Riptalon.'
+    Horror, Helm of Radiance, Rod of Asclepius, Bragi''s Harp, Draconic Scale, Shogun''s
+    Ofuda, Spear of Desolation, Leviathan''s Hide, Dominance, Jade Scepter, Riptalon.'
   slot_scores:
     Genji's Guard:
       total: 0.5

@@ -2,13 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.57 | 0.61 | 0.59 | 0.56 | 0.23 | 0.67 | fair | burst, sustain, aura |  |
-| The Cosmic Horror | 0.54 | 0.52 | 0.58 | 0.63 | 0.06 | 0.36 | fair |  | **UNDERRATED** |
+| Soul Gem | 0.58 | 0.61 | 0.59 | 0.58 | 0.22 | 0.67 | fair | burst, sustain, aura |  |
+| The Cosmic Horror | 0.56 | 0.52 | 0.58 | 0.67 | 0.06 | 0.36 | fair |  | **UNDERRATED** |
+| Spear of Desolation | 0.55 | 0.51 | 0.52 | 0.58 | 0.61 | 0.47 | fair |  |  |
 | Gluttonous Grimoire | 0.54 | 0.63 | 0.66 | 0.50 | 0.00 | 0.56 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.54 | 0.51 | 0.52 | 0.57 | 0.59 | 0.47 | fair |  |  |
 | Jotunn's Revenge | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
 | The Crusher | 0.52 | 0.58 | 0.65 | 0.50 | 0.00 | 0.43 | undervalued | burst | **UNDERRATED** |
 | Berserker's Shield | 0.51 | 0.57 | 0.71 | 0.50 | 0.00 | 0.26 | undervalued |  | **UNDERRATED** |
+| The World Stone | 0.50 | 0.45 | 0.49 | 0.60 | 0.17 | 0.36 | fair |  |  |
 | Lernaean Bow | 0.50 | 0.55 | 0.56 | 0.50 | 0.00 | 0.53 | fair | wave-clear, burst | **UNDERRATED** |
 | Riptalon | 0.50 | 0.55 | 0.56 | 0.50 | 0.00 | 0.53 | fair | sustain | **UNDERRATED** |
 | Bragi's Harp | 0.49 | 0.54 | 0.46 | 0.50 | 0.00 | 0.73 | fair | burst | **UNDERRATED** |
@@ -16,7 +17,6 @@
 | Genji's Guard | 0.49 | 0.53 | 0.72 | 0.50 | 0.00 | 0.11 | undervalued |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.49 | 0.53 | 0.56 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.49 | 0.53 | 0.60 | 0.50 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
-| The World Stone | 0.49 | 0.45 | 0.49 | 0.57 | 0.15 | 0.36 | fair |  | **UNDERRATED** |
 | Death Metal | 0.49 | 0.53 | 0.60 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Golden Blade | 0.48 | 0.52 | 0.55 | 0.50 | 0.00 | 0.43 | fair | wave-clear | **UNDERRATED** |
 | Nimble Ring | 0.48 | 0.51 | 0.49 | 0.50 | 0.00 | 0.57 | fair |  | **UNDERRATED** |
@@ -26,16 +26,17 @@
 | Runeforged Hammer | 0.47 | 0.50 | 0.60 | 0.50 | 0.00 | 0.27 | fair | burst | **UNDERRATED** |
 | Blood-Bound Book | 0.47 | 0.50 | 0.58 | 0.50 | 0.00 | 0.30 | fair | sustain | **UNDERRATED** |
 | Tekko-Kagi | 0.47 | 0.50 | 0.46 | 0.50 | 0.00 | 0.59 | fair | mobility | **UNDERRATED** |
-| Rod of Tahuti | 0.47 | 0.41 | 0.44 | 0.57 | 0.21 | 0.36 | premium |  |  |
 | Bancroft's Talon | 0.47 | 0.50 | 0.58 | 0.50 | 0.00 | 0.30 | fair | sustain | **UNDERRATED** |
 | Tyrfing | 0.47 | 0.49 | 0.47 | 0.50 | 0.00 | 0.53 | fair | burst | **UNDERRATED** |
 | Breastplate of Valor | 0.47 | 0.49 | 0.65 | 0.50 | 0.00 | 0.11 | undervalued |  | **UNDERRATED** |
+| Rod of Tahuti | 0.47 | 0.41 | 0.44 | 0.56 | 0.21 | 0.36 | premium |  |  |
 | Pharaoh's Curse | 0.47 | 0.48 | 0.58 | 0.50 | 0.00 | 0.26 | fair | aura | **UNDERRATED** |
 | Rod of Asclepius | 0.46 | 0.47 | 0.59 | 0.50 | 0.00 | 0.20 | fair | sustain, aura | **UNDERRATED** |
 | Helm of Radiance | 0.46 | 0.47 | 0.58 | 0.50 | 0.00 | 0.20 | fair |  | **UNDERRATED** |
 | Damaru | 0.46 | 0.47 | 0.59 | 0.50 | 0.00 | 0.17 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Jade Scepter | 0.45 | 0.46 | 0.57 | 0.50 | 0.00 | 0.20 | fair | peel | **UNDERRATED** |
+| Obsidian Shard | 0.45 | 0.49 | 0.54 | 0.45 | 0.18 | 0.36 | fair |  |  |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Dreamer's Idol | 0.45 | 0.45 | 0.49 | 0.50 | 0.00 | 0.36 | fair | cc-immunity | **UNDERRATED** |
@@ -46,7 +47,6 @@
 | Shogun's Ofuda | 0.45 | 0.45 | 0.53 | 0.50 | 0.00 | 0.26 | fair | aura |  |
 | Typhon’s Heart | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.30 | fair |  |  |
 | Freya's Tears | 0.45 | 0.44 | 0.59 | 0.50 | 0.00 | 0.11 | fair |  |  |
-| Obsidian Shard | 0.45 | 0.49 | 0.54 | 0.43 | 0.18 | 0.36 | fair |  |  |
 | Avenging Blade | 0.44 | 0.44 | 0.51 | 0.50 | 0.00 | 0.27 | fair | protection-shred |  |
 | Triton's Conch | 0.44 | 0.44 | 0.47 | 0.50 | 0.00 | 0.37 | fair | aura |  |
 | Wish-Granting Pearl | 0.44 | 0.44 | 0.54 | 0.50 | 0.00 | 0.20 | fair |  |  |
@@ -66,7 +66,7 @@
 | Eye of the Storm | 0.43 | 0.41 | 0.52 | 0.50 | 0.00 | 0.17 | fair | peel |  |
 | Soul Reaver | 0.43 | 0.41 | 0.46 | 0.50 | 0.00 | 0.30 | fair | burst |  |
 | Barbed Carver | 0.43 | 0.41 | 0.43 | 0.50 | 0.00 | 0.37 | premium | burst |  |
-| Book of Thoth | 0.43 | 0.35 | 0.42 | 0.56 | 0.06 | 0.20 | premium |  |  |
+| Book of Thoth | 0.43 | 0.35 | 0.42 | 0.56 | 0.05 | 0.20 | premium |  |  |
 | Screeching Gargoyle | 0.43 | 0.40 | 0.49 | 0.50 | 0.00 | 0.21 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.43 | 0.40 | 0.53 | 0.50 | 0.00 | 0.11 | fair | sustain |  |
 | Lifebinder | 0.43 | 0.40 | 0.49 | 0.50 | 0.00 | 0.20 | fair | sustain, aura |  |
@@ -82,6 +82,7 @@
 | Transcendence | 0.41 | 0.37 | 0.46 | 0.50 | 0.00 | 0.17 | fair |  |  |
 | Qin's Blade | 0.41 | 0.37 | 0.38 | 0.50 | 0.00 | 0.36 | premium | burst |  |
 | Necronomicon | 0.41 | 0.37 | 0.44 | 0.50 | 0.00 | 0.20 | premium |  |  |
+| Chronos' Pendant | 0.41 | 0.49 | 0.56 | 0.36 | 0.08 | 0.31 | fair |  | **UNDERRATED** |
 | Erosion | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | aura |  |
 | Mantle Of Discord | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | peel, cc-immunity |  |
 | Stone of Binding | 0.41 | 0.37 | 0.48 | 0.50 | 0.00 | 0.10 | fair | protection-shred |  |
@@ -89,7 +90,6 @@
 | Stampede | 0.41 | 0.36 | 0.52 | 0.50 | 0.00 | 0.00 | fair | mobility, aura, cc-immunity |  |
 | Ancile | 0.41 | 0.36 | 0.52 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Helm of Darkness | 0.40 | 0.36 | 0.43 | 0.50 | 0.00 | 0.20 | premium | mobility |  |
-| Chronos' Pendant | 0.40 | 0.49 | 0.56 | 0.35 | 0.08 | 0.31 | fair |  | **UNDERRATED** |
 | Musashi's Dual Swords | 0.40 | 0.36 | 0.44 | 0.50 | 0.00 | 0.17 | premium | mobility |  |
 | Umbral Link | 0.40 | 0.36 | 0.47 | 0.50 | 0.00 | 0.10 | fair | sustain, aura |  |
 | Doublet of Binding | 0.40 | 0.35 | 0.51 | 0.50 | 0.00 | 0.00 | fair | aura |  |

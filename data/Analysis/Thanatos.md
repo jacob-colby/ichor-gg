@@ -4,10 +4,10 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Jotunn's Revenge | 0.67 | 0.76 | 0.65 | 0.57 | 0.68 | 1.00 | undervalued |  |  |
 | The Crusher | 0.60 | 0.75 | 0.65 | 0.50 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
+| The Reaper | 0.60 | 0.65 | 0.53 | 0.57 | 0.30 | 0.91 | fair | sustain |  |
 | Titan's Bane | 0.59 | 0.60 | 0.46 | 0.62 | 0.18 | 0.91 | fair |  |  |
-| The Reaper | 0.59 | 0.65 | 0.53 | 0.55 | 0.30 | 0.91 | fair | sustain |  |
 | Hydra's Lament | 0.59 | 0.64 | 0.61 | 0.55 | 0.39 | 0.71 | fair | burst |  |
-| Heartseeker | 0.57 | 0.62 | 0.46 | 0.55 | 0.23 | 1.00 | fair | burst |  |
+| Heartseeker | 0.57 | 0.62 | 0.46 | 0.56 | 0.22 | 1.00 | fair | burst |  |
 | Runeforged Hammer | 0.53 | 0.61 | 0.60 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Tekko-Kagi | 0.52 | 0.59 | 0.46 | 0.50 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
@@ -82,11 +82,11 @@
 | Hussar's Wings | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Heartwood Charm | 0.36 | 0.27 | 0.35 | 0.50 | 0.00 | 0.09 | premium |  |  |
 | Dagger of Frenzy | 0.36 | 0.27 | 0.38 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Daybreak Gavel | 0.35 | 0.13 | 0.18 | 0.64 | 0.04 | 0.00 | premium |  |  |
 | Spirit Robe | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Eye of Erebus | 0.35 | 0.25 | 0.32 | 0.50 | 0.00 | 0.09 | premium |  |  |
 | Dwarven Plate | 0.35 | 0.25 | 0.35 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Daybreak Gavel | 0.34 | 0.13 | 0.18 | 0.62 | 0.04 | 0.00 | premium |  |  |
 | Radiant Bulwark | 0.34 | 0.23 | 0.34 | 0.50 | 0.00 | 0.00 | premium | aura |  |
 | Hastened Fatalis | 0.34 | 0.23 | 0.32 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
 | Resolute Mantle | 0.33 | 0.21 | 0.30 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |

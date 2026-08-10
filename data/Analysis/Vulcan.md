@@ -4,11 +4,11 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Dreamer's Idol | 0.59 | 0.54 | 0.49 | 0.71 | 0.07 | 0.66 | fair | cc-immunity | **UNDERRATED** |
 | Soul Gem | 0.59 | 0.69 | 0.59 | 0.53 | 0.18 | 0.93 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.57 | 0.62 | 0.52 | 0.54 | 0.45 | 0.83 | fair |  |  |
+| Spear of Desolation | 0.58 | 0.62 | 0.52 | 0.56 | 0.45 | 0.83 | fair |  |  |
+| The World Stone | 0.57 | 0.54 | 0.49 | 0.66 | 0.11 | 0.66 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.57 | 0.69 | 0.66 | 0.50 | 0.00 | 0.76 | undervalued | burst | **UNDERRATED** |
-| The World Stone | 0.56 | 0.54 | 0.49 | 0.64 | 0.10 | 0.66 | fair |  | **UNDERRATED** |
-| Obsidian Shard | 0.56 | 0.57 | 0.54 | 0.58 | 0.26 | 0.66 | fair |  |  |
-| Doom Orb | 0.54 | 0.54 | 0.49 | 0.58 | 0.14 | 0.66 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.57 | 0.57 | 0.54 | 0.59 | 0.26 | 0.66 | fair |  |  |
+| Doom Orb | 0.54 | 0.54 | 0.49 | 0.59 | 0.13 | 0.66 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.53 | 0.62 | 0.60 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
 | Rod of Tahuti | 0.53 | 0.50 | 0.44 | 0.60 | 0.22 | 0.66 | premium |  |  |
 | The Cosmic Horror | 0.53 | 0.60 | 0.58 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |

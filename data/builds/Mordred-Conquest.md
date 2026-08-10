@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of Rage
   aspect_pick_rate: 0.06
-  aspect_win_rate: 0.55
+  aspect_win_rate: 0.56
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.53
     win_rate: 0.58
     alternates:
     - name: Barbed Carver
-      pick_rate: 0.15
+      pick_rate: 0.16
       win_rate: 0.53
     - name: Bracer of The Abyss
       pick_rate: 0.05
-      win_rate: 0.53
+      win_rate: 0.52
   - name: Shield of the Phoenix
-    pick_rate: 0.23
+    pick_rate: 0.22
     win_rate: 0.62
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.16
-      win_rate: 0.6
+      pick_rate: 0.17
+      win_rate: 0.58
     - name: Genji's Guard
       pick_rate: 0.16
-      win_rate: 0.53
+      win_rate: 0.52
   - name: Genji's Guard
     pick_rate: 0.17
-    win_rate: 0.6
+    win_rate: 0.59
     alternates:
     - name: Shield of the Phoenix
-      pick_rate: 0.16
-      win_rate: 0.57
+      pick_rate: 0.15
+      win_rate: 0.56
     - name: Gladiator's Shield
       pick_rate: 0.13
       win_rate: 0.68
   - name: Dwarven Plate
     pick_rate: 0.1
-    win_rate: 0.55
+    win_rate: 0.53
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.14
-      win_rate: 0.65
+      pick_rate: 0.13
+      win_rate: 0.63
     - name: Gladiator's Shield
       pick_rate: 0.1
-      win_rate: 0.57
-  - name: Hide of the Nemean Lion
+      win_rate: 0.58
+  - name: Kinetic Cuirass
     pick_rate: 0.06
-    win_rate: 0.6
+    win_rate: 0.65
     alternates:
     - name: Dwarven Plate
       pick_rate: 0.1
       win_rate: 0.58
-    - name: Kinetic Cuirass
-      pick_rate: 0.05
-      win_rate: 0.66
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.06
+      win_rate: 0.6
   - name: Engraved Guard
     pick_rate: 0.08
-    win_rate: 0.55
+    win_rate: 0.56
     alternates:
     - name: Hide of the Nemean Lion
       pick_rate: 0.07
-      win_rate: 0.54
+      win_rate: 0.59
     - name: Medal of Defense
-      pick_rate: 0.05
+      pick_rate: 0.04
       win_rate: 0.42
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.48
+    pick_rate: 0.47
     win_rate: 0.66
   - name: Bluestone Pendant
-    pick_rate: 0.33
-    win_rate: 0.49
-  - name: Bumba's Golden Dagger
+    pick_rate: 0.34
+    win_rate: 0.48
+  - name: Bumba's Spear
     pick_rate: 0.09
-    win_rate: 0.6
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/mordred/
-  last_verified: '2026-08-09'
-  god_win_rate: 0.5750658472344161
-  god_matches_won: 655
-  god_matches_played: 1139
+  last_verified: '2026-08-10'
+  god_win_rate: 0.5705378020265004
+  god_matches_won: 732
+  god_matches_played: 1283
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-09'
-  god_matches_analyzed: 15881
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -128,7 +128,7 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.72
-      win: 0.6
+      win: 0.59
       pick: 0.17
       fit: 0.28
     Berserker's Shield:
@@ -140,14 +140,14 @@ builds:
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.6
-      win: 0.66
-      pick: 0.05
+      win: 0.65
+      pick: 0.06
       fit: 0.61
     Shield of the Phoenix:
       total: 0.55
       efficiency: 0.57
       win: 0.62
-      pick: 0.23
+      pick: 0.22
       fit: 0.43
     Gladiator's Shield:
       total: 0.54
@@ -202,7 +202,7 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.72
-      win: 0.6
+      win: 0.59
       pick: 0.17
       fit: 0.27
     Jotunn's Revenge:
@@ -214,14 +214,14 @@ builds:
     Kinetic Cuirass:
       total: 0.58
       efficiency: 0.6
-      win: 0.66
-      pick: 0.05
+      win: 0.65
+      pick: 0.06
       fit: 0.48
     Shield of the Phoenix:
       total: 0.55
       efficiency: 0.57
       win: 0.62
-      pick: 0.23
+      pick: 0.22
       fit: 0.38
     Gladiator's Shield:
       total: 0.53
@@ -263,8 +263,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Amanita Charm, Soul Gem, Gluttonous Grimoire, Berserker''s
-    Shield, Jotunn''s Revenge, The Crusher, Eye of Providence, Rod of Asclepius, Hide
-    of the Nemean Lion, The Reaper, Runeforged Hammer, Oni Hunter''s Garb, Chandra''s
+    Shield, Jotunn''s Revenge, The Crusher, Eye of Providence, Rod of Asclepius, The
+    Reaper, Runeforged Hammer, Hide of the Nemean Lion, Oni Hunter''s Garb, Chandra''s
     Grace, Hydra''s Lament, Breastplate of Valor, Freya''s Tears, Eye of the Storm,
     Shield Splitter, Riptalon, Phoenix Feather, Spectral Armor, Erosion, Blood-Bound
     Book, Yogi''s Necklace, Bancroft''s Talon, Avenging Blade, Pharaoh''s Curse, Lifebinder,
@@ -272,22 +272,22 @@ builds:
     Spear of the Magus, Lernaean Bow, Damaru.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.72
-      win: 0.6
+      win: 0.59
       pick: 0.17
       fit: 0.25
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.6
-      win: 0.66
-      pick: 0.05
+      win: 0.65
+      pick: 0.06
       fit: 0.6
     Shield of the Phoenix:
       total: 0.6
       efficiency: 0.57
       win: 0.62
-      pick: 0.23
+      pick: 0.22
       fit: 0.74
     Gladiator's Shield:
       total: 0.54
@@ -346,7 +346,7 @@ builds:
     Genji's Guard:
       total: 0.56
       efficiency: 0.72
-      win: 0.6
+      win: 0.59
       pick: 0.17
       fit: 0.23
     Jotunn's Revenge:
@@ -356,16 +356,16 @@ builds:
       pick: 0.0
       fit: 0.54
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.58
       efficiency: 0.6
-      win: 0.66
-      pick: 0.05
+      win: 0.65
+      pick: 0.06
       fit: 0.52
     Shield of the Phoenix:
       total: 0.54
       efficiency: 0.57
       win: 0.62
-      pick: 0.23
+      pick: 0.22
       fit: 0.35
     Shifter's Shield:
       total: 0.54
@@ -409,8 +409,8 @@ builds:
     this god: Kinetic Cuirass, Berserker''s Shield, Gluttonous Grimoire, Amanita Charm,
     The Crusher, Golden Blade, Eye of Providence, Jotunn''s Revenge, Riptalon, Pharaoh''s
     Curse, Oni Hunter''s Garb, Soul Gem, Breastplate of Valor, Runeforged Hammer,
-    Freya''s Tears, Lernaean Bow, Hydra''s Lament, Silverbranch Bow, Bracer of The
-    Abyss, Shogun''s Ofuda, Tyrfing, Yogi''s Necklace, Spectral Armor, Shield Splitter,
+    Freya''s Tears, Lernaean Bow, Hydra''s Lament, Silverbranch Bow, Shogun''s Ofuda,
+    Tyrfing, Yogi''s Necklace, Bracer of The Abyss, Spectral Armor, Shield Splitter,
     Erosion, Spear of the Magus, Eye of the Storm, Dominance, Death Metal, Draconic
     Scale, Leviathan''s Hide, Rod of Asclepius, Helm of Radiance, The Reaper, Avenging
     Blade, Toxic Blade, Midgardian Mail.'
@@ -422,9 +422,9 @@ builds:
       pick: 0.0
       fit: 0.5
     Genji's Guard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.72
-      win: 0.6
+      win: 0.59
       pick: 0.17
       fit: 0.19
     Berserker's Shield:
@@ -434,16 +434,16 @@ builds:
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.57
       efficiency: 0.6
-      win: 0.66
-      pick: 0.05
+      win: 0.65
+      pick: 0.06
       fit: 0.44
     Shield of the Phoenix:
       total: 0.53
       efficiency: 0.57
       win: 0.62
-      pick: 0.23
+      pick: 0.22
       fit: 0.28
     Riptalon:
       total: 0.49
@@ -481,7 +481,7 @@ builds:
     + fit + win/pick). Underrated for this god: Kinetic Cuirass, Gladiator''s Shield,
     Jotunn''s Revenge, Soul Gem, Breastplate of Valor, Gluttonous Grimoire, Freya''s
     Tears, Amanita Charm, Berserker''s Shield, Hydra''s Lament, Eye of Providence,
-    Hide of the Nemean Lion, The Crusher, Oni Hunter''s Garb, Spear of Desolation,
+    The Crusher, Hide of the Nemean Lion, Oni Hunter''s Garb, Spear of Desolation,
     Runeforged Hammer, Chronos'' Pendant, Screeching Gargoyle, Chandra''s Grace, Spectral
     Armor, Erosion, Shield Splitter, Yogi''s Necklace, Spear of the Magus, Pharaoh''s
     Curse, Helm of Radiance, Draconic Scale, Rod of Asclepius, Prophetic Cloak, Gem
@@ -489,9 +489,9 @@ builds:
     Arondight, Jade Scepter, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
-      win: 0.6
+      win: 0.59
       pick: 0.17
       fit: 0.44
     Jotunn's Revenge:
@@ -501,16 +501,16 @@ builds:
       pick: 0.0
       fit: 0.5
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.58
       efficiency: 0.6
-      win: 0.66
-      pick: 0.05
+      win: 0.65
+      pick: 0.06
       fit: 0.51
     Shield of the Phoenix:
       total: 0.57
       efficiency: 0.57
       win: 0.62
-      pick: 0.23
+      pick: 0.22
       fit: 0.56
     Gladiator's Shield:
       total: 0.56
@@ -562,9 +562,9 @@ builds:
     Golden Blade, Lernaean Bow.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.72
-      win: 0.6
+      win: 0.59
       pick: 0.17
       fit: 0.25
     Jotunn's Revenge:
@@ -576,14 +576,14 @@ builds:
     Kinetic Cuirass:
       total: 0.58
       efficiency: 0.6
-      win: 0.66
-      pick: 0.05
+      win: 0.65
+      pick: 0.06
       fit: 0.49
     Shield of the Phoenix:
-      total: 0.55
+      total: 0.54
       efficiency: 0.57
       win: 0.62
-      pick: 0.23
+      pick: 0.22
       fit: 0.36
     Gladiator's Shield:
       total: 0.53
@@ -637,20 +637,20 @@ builds:
     Genji's Guard:
       total: 0.56
       efficiency: 0.72
-      win: 0.6
+      win: 0.59
       pick: 0.17
       fit: 0.23
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.58
       efficiency: 0.6
-      win: 0.66
-      pick: 0.05
+      win: 0.65
+      pick: 0.06
       fit: 0.52
     Shield of the Phoenix:
       total: 0.54
       efficiency: 0.57
       win: 0.62
-      pick: 0.23
+      pick: 0.22
       fit: 0.35
     Gladiator's Shield:
       total: 0.52
@@ -715,7 +715,7 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.72
-      win: 0.6
+      win: 0.59
       pick: 0.17
       fit: 0.28
     Berserker's Shield:
@@ -733,8 +733,8 @@ builds:
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.6
-      win: 0.66
-      pick: 0.05
+      win: 0.65
+      pick: 0.06
       fit: 0.61
     Amanita Charm:
       total: 0.53

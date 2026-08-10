@@ -3,22 +3,22 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Draconic Scale | 0.62 | 0.50 | 0.50 | 0.82 | 0.04 | 0.49 | fair |  | **UNDERRATED** |
-| Ethereal Staff | 0.57 | 0.48 | 0.53 | 0.73 | 0.06 | 0.35 | fair |  | **UNDERRATED** |
-| Genji's Guard | 0.56 | 0.59 | 0.72 | 0.57 | 0.14 | 0.31 | undervalued |  | **UNDERRATED** |
-| Shifter's Shield | 0.55 | 0.53 | 0.55 | 0.62 | 0.13 | 0.49 | fair |  | **UNDERRATED** |
+| Ethereal Staff | 0.56 | 0.48 | 0.53 | 0.70 | 0.06 | 0.35 | fair |  | **UNDERRATED** |
+| Genji's Guard | 0.55 | 0.59 | 0.72 | 0.55 | 0.14 | 0.31 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.55 | 0.65 | 0.66 | 0.50 | 0.00 | 0.62 | undervalued | burst | **UNDERRATED** |
-| Soul Gem | 0.54 | 0.60 | 0.59 | 0.53 | 0.08 | 0.61 | fair | burst, sustain, aura | **UNDERRATED** |
+| Shifter's Shield | 0.53 | 0.53 | 0.55 | 0.58 | 0.14 | 0.49 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.49 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.52 | 0.60 | 0.60 | 0.50 | 0.00 | 0.59 | fair | burst | **UNDERRATED** |
+| Soul Gem | 0.52 | 0.60 | 0.59 | 0.50 | 0.00 | 0.61 | fair | burst, sustain, aura | **UNDERRATED** |
 | Spear of Desolation | 0.52 | 0.52 | 0.52 | 0.55 | 0.17 | 0.51 | fair |  |  |
 | Eye of Providence | 0.52 | 0.58 | 0.62 | 0.50 | 0.00 | 0.49 | undervalued |  | **UNDERRATED** |
-| Obsidian Shard | 0.51 | 0.49 | 0.54 | 0.58 | 0.08 | 0.37 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.48 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.50 | 0.55 | 0.65 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
-| Breastplate of Valor | 0.50 | 0.55 | 0.65 | 0.49 | 0.09 | 0.31 | undervalued |  | **UNDERRATED** |
+| Obsidian Shard | 0.50 | 0.49 | 0.54 | 0.55 | 0.07 | 0.37 | fair |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.49 | 0.54 | 0.57 | 0.50 | 0.00 | 0.46 | fair | sustain | **UNDERRATED** |
 | Spear of the Magus | 0.49 | 0.53 | 0.60 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
-| Lifebinder | 0.49 | 0.45 | 0.49 | 0.57 | 0.12 | 0.35 | fair | sustain, aura |  |
+| Breastplate of Valor | 0.49 | 0.55 | 0.65 | 0.47 | 0.09 | 0.31 | undervalued |  | **UNDERRATED** |
+| Lifebinder | 0.49 | 0.45 | 0.49 | 0.58 | 0.11 | 0.35 | fair | sustain, aura |  |
 | Rod of Asclepius | 0.48 | 0.52 | 0.59 | 0.50 | 0.00 | 0.35 | fair | sustain, aura | **UNDERRATED** |
 | The Cosmic Horror | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Helm of Radiance | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
@@ -38,7 +38,7 @@
 | Stone of Binding | 0.46 | 0.47 | 0.48 | 0.50 | 0.00 | 0.44 | fair | protection-shred |  |
 | Screeching Gargoyle | 0.46 | 0.46 | 0.49 | 0.50 | 0.00 | 0.41 | fair | protection-shred, peel |  |
 | Bancroft's Talon | 0.46 | 0.46 | 0.58 | 0.50 | 0.00 | 0.20 | fair | sustain |  |
-| Rod of Tahuti | 0.46 | 0.42 | 0.44 | 0.54 | 0.10 | 0.37 | premium |  |  |
+| Rod of Tahuti | 0.46 | 0.42 | 0.44 | 0.54 | 0.09 | 0.37 | premium |  |  |
 | Helm of Darkness | 0.45 | 0.46 | 0.43 | 0.50 | 0.00 | 0.54 | premium | mobility |  |
 | Chandra's Grace | 0.45 | 0.46 | 0.53 | 0.50 | 0.00 | 0.29 | fair | sustain |  |
 | Stampede | 0.45 | 0.46 | 0.52 | 0.50 | 0.00 | 0.32 | fair | mobility, aura, cc-immunity |  |
@@ -83,9 +83,9 @@
 | Radiant Bulwark | 0.39 | 0.34 | 0.34 | 0.50 | 0.00 | 0.34 | premium | aura |  |
 | Heartwood Charm | 0.39 | 0.33 | 0.35 | 0.50 | 0.00 | 0.29 | premium |  |  |
 | Eye of Erebus | 0.38 | 0.31 | 0.32 | 0.50 | 0.00 | 0.29 | premium |  |  |
-| Dwarven Plate | 0.37 | 0.35 | 0.35 | 0.42 | 0.04 | 0.34 | premium |  |  |
 | Circe's Hexstone | 0.36 | 0.26 | 0.25 | 0.50 | 0.00 | 0.29 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.35 | 0.26 | 0.30 | 0.50 | 0.00 | 0.15 | premium | cc-immunity, sustain |  |
+| Dwarven Plate | 0.35 | 0.35 | 0.35 | 0.38 | 0.04 | 0.34 | premium |  |  |
 | Mercury's Talaria | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Gauntlet of Thebes | 0.34 | 0.23 | 0.27 | 0.50 | 0.00 | 0.15 | premium |  |  |
 | Brawler’s Beat Stick | 0.34 | 0.23 | 0.18 | 0.50 | 0.00 | 0.34 | premium | anti-heal |  |

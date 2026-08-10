@@ -3,22 +3,22 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Freya's Tears | 0.57 | 0.60 | 0.59 | 0.59 | 0.05 | 0.62 | fair |  | **UNDERRATED** |
-| Breastplate of Valor | 0.56 | 0.58 | 0.65 | 0.59 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
+| Breastplate of Valor | 0.56 | 0.58 | 0.65 | 0.58 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
 | Amanita Charm | 0.55 | 0.65 | 0.66 | 0.50 | 0.00 | 0.63 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.55 | 0.64 | 0.60 | 0.50 | 0.00 | 0.73 | fair | burst | **UNDERRATED** |
 | Eye of Providence | 0.54 | 0.62 | 0.62 | 0.50 | 0.00 | 0.63 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.48 | undervalued | burst | **UNDERRATED** |
-| Prophetic Cloak | 0.53 | 0.48 | 0.43 | 0.62 | 0.11 | 0.62 | premium |  |  |
-| Genji's Guard | 0.52 | 0.62 | 0.72 | 0.44 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.51 | 0.58 | 0.65 | 0.50 | 0.00 | 0.41 | undervalued |  | **UNDERRATED** |
+| Prophetic Cloak | 0.51 | 0.48 | 0.43 | 0.59 | 0.12 | 0.62 | premium |  |  |
 | Shifter's Shield | 0.51 | 0.58 | 0.55 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.57 | 0.57 | 0.50 | 0.00 | 0.57 | fair | sustain | **UNDERRATED** |
+| Genji's Guard | 0.51 | 0.62 | 0.72 | 0.43 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.50 | 0.56 | 0.52 | 0.50 | 0.00 | 0.63 | fair | aura | **UNDERRATED** |
 | Soul Gem | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.47 | fair | burst, sustain, aura | **UNDERRATED** |
 | Draconic Scale | 0.50 | 0.54 | 0.50 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.49 | 0.54 | 0.59 | 0.50 | 0.00 | 0.41 | fair | anti-crit, aura | **UNDERRATED** |
+| Chandra's Grace | 0.49 | 0.48 | 0.53 | 0.54 | 0.12 | 0.35 | fair | sustain |  |
 | Helm of Radiance | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
-| Chandra's Grace | 0.48 | 0.48 | 0.53 | 0.53 | 0.12 | 0.35 | fair | sustain |  |
 | Rod of Asclepius | 0.48 | 0.51 | 0.59 | 0.50 | 0.00 | 0.33 | fair | sustain, aura | **UNDERRATED** |
 | Leviathan's Hide | 0.48 | 0.51 | 0.55 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Yogi's Necklace | 0.48 | 0.51 | 0.65 | 0.50 | 0.00 | 0.18 | undervalued |  | **UNDERRATED** |
@@ -48,11 +48,11 @@
 | Ragnarok's Wake | 0.45 | 0.46 | 0.43 | 0.50 | 0.00 | 0.51 | premium | mobility, burst |  |
 | Blood-Bound Book | 0.45 | 0.45 | 0.58 | 0.50 | 0.00 | 0.14 | fair | sustain |  |
 | Gem of Focus | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.31 | fair | mobility |  |
+| Spear of Desolation | 0.45 | 0.48 | 0.52 | 0.45 | 0.16 | 0.37 | fair |  |  |
 | Bancroft's Talon | 0.45 | 0.45 | 0.58 | 0.50 | 0.00 | 0.14 | fair | sustain |  |
 | Phoenix Feather | 0.45 | 0.45 | 0.46 | 0.50 | 0.00 | 0.41 | fair | sustain |  |
 | Lifebinder | 0.45 | 0.44 | 0.49 | 0.50 | 0.00 | 0.33 | fair | sustain, aura |  |
 | Glorious Pridwen | 0.45 | 0.44 | 0.36 | 0.50 | 0.00 | 0.62 | premium | sustain |  |
-| Spear of Desolation | 0.44 | 0.48 | 0.52 | 0.44 | 0.15 | 0.37 | fair |  |  |
 | Bracer of The Abyss | 0.44 | 0.44 | 0.56 | 0.50 | 0.00 | 0.14 | fair |  |  |
 | Obsidian Shard | 0.44 | 0.44 | 0.54 | 0.50 | 0.00 | 0.20 | fair |  |  |
 | Mystical Mail | 0.44 | 0.43 | 0.45 | 0.50 | 0.00 | 0.41 | fair | aura, wave-clear |  |
@@ -79,8 +79,8 @@
 | Radiant Bulwark | 0.41 | 0.37 | 0.34 | 0.50 | 0.00 | 0.45 | premium | aura |  |
 | Rod of Tahuti | 0.41 | 0.37 | 0.44 | 0.50 | 0.00 | 0.20 | premium |  |  |
 | Necronomicon | 0.40 | 0.35 | 0.44 | 0.50 | 0.00 | 0.14 | premium |  |  |
+| Spirit Robe | 0.40 | 0.39 | 0.36 | 0.45 | 0.05 | 0.45 | premium | sustain |  |
 | Heartwood Charm | 0.40 | 0.35 | 0.35 | 0.50 | 0.00 | 0.35 | premium |  |  |
-| Spirit Robe | 0.39 | 0.39 | 0.36 | 0.44 | 0.05 | 0.45 | premium | sustain |  |
 | Book of Thoth | 0.39 | 0.34 | 0.42 | 0.50 | 0.00 | 0.14 | premium |  |  |
 | Eye of Erebus | 0.39 | 0.33 | 0.32 | 0.50 | 0.00 | 0.35 | premium |  |  |
 | Staff of Myrddin | 0.39 | 0.33 | 0.34 | 0.50 | 0.00 | 0.31 | premium |  |  |

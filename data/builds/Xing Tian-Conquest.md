@@ -10,83 +10,83 @@ builds:
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.4
-    win_rate: 0.6
+    win_rate: 0.59
     alternates:
     - name: Yogi's Necklace
       pick_rate: 0.11
       win_rate: 0.52
     - name: Gauntlet of Thebes
-      pick_rate: 0.1
-      win_rate: 0.51
+      pick_rate: 0.11
+      win_rate: 0.52
   - name: Genji's Guard
     pick_rate: 0.19
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.15
-      win_rate: 0.56
+      win_rate: 0.55
     - name: Breastplate of Valor
       pick_rate: 0.14
-      win_rate: 0.6
+      win_rate: 0.59
   - name: Breastplate of Valor
     pick_rate: 0.12
     win_rate: 0.58
     alternates:
     - name: Genji's Guard
       pick_rate: 0.21
-      win_rate: 0.58
+      win_rate: 0.57
     - name: Shifter's Shield
       pick_rate: 0.06
-      win_rate: 0.58
+      win_rate: 0.57
   - name: Shell of Rebuke
     pick_rate: 0.08
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.13
-      win_rate: 0.6
+      pick_rate: 0.14
+      win_rate: 0.59
     - name: Breastplate of Valor
-      pick_rate: 0.06
-      win_rate: 0.57
+      pick_rate: 0.07
+      win_rate: 0.55
   - name: Dwarven Plate
     pick_rate: 0.07
-    win_rate: 0.53
+    win_rate: 0.54
     alternates:
     - name: Hide of the Nemean Lion
       pick_rate: 0.06
-      win_rate: 0.46
+      win_rate: 0.47
     - name: Shell of Rebuke
       pick_rate: 0.05
-      win_rate: 0.64
+      win_rate: 0.61
   - name: Engraved Guard
     pick_rate: 0.06
-    win_rate: 0.71
+    win_rate: 0.72
     alternates:
     - name: Medal of Defense
       pick_rate: 0.05
-      win_rate: 0.58
+      win_rate: 0.56
     - name: Hide of the Nemean Lion
       pick_rate: 0.05
-      win_rate: 0.44
+      win_rate: 0.45
   community_starters:
   - name: Bluestone Pendant
     pick_rate: 0.41
     win_rate: 0.54
   - name: Bluestone Brooch
-    pick_rate: 0.37
-    win_rate: 0.63
+    pick_rate: 0.36
+    win_rate: 0.62
   - name: Sands of Time
     pick_rate: 0.08
-    win_rate: 0.53
+    win_rate: 0.47
   source_url: https://smitebrain.com/gods/xing-tian/
-  last_verified: '2026-08-09'
-  god_win_rate: 0.5679197994987468
-  god_matches_won: 1133
-  god_matches_played: 1995
+  last_verified: '2026-08-10'
+  god_win_rate: 0.5633672525439408
+  god_matches_won: 1218
+  god_matches_played: 2162
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-09'
-  god_matches_analyzed: 15881
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -132,7 +132,7 @@ builds:
     Genji's Guard:
       total: 0.56
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.19
       fit: 0.39
     Breastplate of Valor:
@@ -150,7 +150,7 @@ builds:
     Shifter's Shield:
       total: 0.59
       efficiency: 0.55
-      win: 0.6
+      win: 0.59
       pick: 0.4
       fit: 0.71
     Amanita Charm:
@@ -172,7 +172,7 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
+  - Genji's Guard
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -196,9 +196,9 @@ builds:
     Hide of the Nemean Lion.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.19
       fit: 0.36
     Breastplate of Valor:
@@ -220,9 +220,9 @@ builds:
       pick: 0.0
       fit: 0.92
     Shifter's Shield:
-      total: 0.59
+      total: 0.58
       efficiency: 0.55
-      win: 0.6
+      win: 0.59
       pick: 0.4
       fit: 0.7
     Amanita Charm:
@@ -274,7 +274,7 @@ builds:
     Genji's Guard:
       total: 0.54
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.19
       fit: 0.27
     Breastplate of Valor:
@@ -296,9 +296,9 @@ builds:
       pick: 0.0
       fit: 0.66
     Shifter's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
-      win: 0.6
+      win: 0.59
       pick: 0.4
       fit: 0.49
   starter: *id001
@@ -338,7 +338,7 @@ builds:
     Genji's Guard:
       total: 0.53
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.19
       fit: 0.2
     Breastplate of Valor:
@@ -366,9 +366,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Shifter's Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.6
+      win: 0.59
       pick: 0.4
       fit: 0.36
   starter: *id001
@@ -406,9 +406,9 @@ builds:
     Gem of Focus, Death Metal, Leviathan''s Hide, Jade Scepter.'
   slot_scores:
     Genji's Guard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.19
       fit: 0.48
     Breastplate of Valor:
@@ -432,7 +432,7 @@ builds:
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
-      win: 0.6
+      win: 0.59
       pick: 0.4
       fit: 0.45
     Amanita Charm:
@@ -479,9 +479,9 @@ builds:
     Harp.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.19
       fit: 0.23
     Berserker's Shield:
@@ -505,7 +505,7 @@ builds:
     Shifter's Shield:
       total: 0.54
       efficiency: 0.55
-      win: 0.6
+      win: 0.59
       pick: 0.4
       fit: 0.41
     The Crusher:
@@ -552,9 +552,9 @@ builds:
     Hide, Wish-Granting Pearl.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.19
       fit: 0.23
     Breastplate of Valor:
@@ -576,9 +576,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Shifter's Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.55
-      win: 0.6
+      win: 0.59
       pick: 0.4
       fit: 0.42
     The Crusher:
@@ -630,7 +630,7 @@ builds:
     Genji's Guard:
       total: 0.56
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.19
       fit: 0.39
     Kinetic Cuirass:
@@ -648,7 +648,7 @@ builds:
     Shifter's Shield:
       total: 0.59
       efficiency: 0.55
-      win: 0.6
+      win: 0.59
       pick: 0.4
       fit: 0.71
     Amanita Charm:

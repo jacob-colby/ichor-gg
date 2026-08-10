@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.35
+    pick_rate: 0.37
     win_rate: 0.6
     alternates:
     - name: Barbed Carver
       pick_rate: 0.26
-      win_rate: 0.58
-    - name: Hydra's Lament
-      pick_rate: 0.25
       win_rate: 0.57
+    - name: Hydra's Lament
+      pick_rate: 0.24
+      win_rate: 0.55
   - name: Hydra's Lament
-    pick_rate: 0.32
+    pick_rate: 0.33
     win_rate: 0.58
     alternates:
     - name: The Reaper
-      pick_rate: 0.18
+      pick_rate: 0.17
       win_rate: 0.58
     - name: Barbed Carver
-      pick_rate: 0.17
-      win_rate: 0.57
+      pick_rate: 0.16
+      win_rate: 0.54
   - name: The Reaper
-    pick_rate: 0.2
+    pick_rate: 0.21
     win_rate: 0.58
     alternates:
     - name: Barbed Carver
-      pick_rate: 0.16
-      win_rate: 0.63
+      pick_rate: 0.15
+      win_rate: 0.62
     - name: Hydra's Lament
       pick_rate: 0.13
-      win_rate: 0.51
+      win_rate: 0.49
   - name: Heartseeker
     pick_rate: 0.36
     win_rate: 0.58
     alternates:
     - name: Titan's Bane
       pick_rate: 0.17
-      win_rate: 0.57
+      win_rate: 0.54
     - name: Blinking Abyss
-      pick_rate: 0.08
-      win_rate: 0.58
+      pick_rate: 0.09
+      win_rate: 0.55
   - name: Titan's Bane
-    pick_rate: 0.21
-    win_rate: 0.61
+    pick_rate: 0.2
+    win_rate: 0.6
     alternates:
     - name: Heartseeker
-      pick_rate: 0.18
-      win_rate: 0.65
+      pick_rate: 0.19
+      win_rate: 0.61
     - name: Blinking Abyss
       pick_rate: 0.11
       win_rate: 0.56
   - name: Blinking Abyss
     pick_rate: 0.12
-    win_rate: 0.59
+    win_rate: 0.6
     alternates:
     - name: Titan's Bane
       pick_rate: 0.09
-      win_rate: 0.73
+      win_rate: 0.74
     - name: Lucerne Hammer
-      pick_rate: 0.08
-      win_rate: 0.56
+      pick_rate: 0.07
+      win_rate: 0.55
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.53
-    win_rate: 0.64
+    win_rate: 0.62
   - name: Bumba's Cudgel
-    pick_rate: 0.29
+    pick_rate: 0.28
     win_rate: 0.46
   - name: Hunter's Cowl
-    pick_rate: 0.08
-    win_rate: 0.64
+    pick_rate: 0.07
+    win_rate: 0.61
   source_url: https://smitebrain.com/gods/susano/
-  last_verified: '2026-08-09'
-  god_win_rate: 0.576530612244898
-  god_matches_won: 678
-  god_matches_played: 1176
+  last_verified: '2026-08-10'
+  god_win_rate: 0.5670411985018726
+  god_matches_won: 757
+  god_matches_played: 1335
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-09'
-  god_matches_analyzed: 15881
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -126,19 +126,19 @@ builds:
       total: 0.67
       efficiency: 0.65
       win: 0.6
-      pick: 0.35
+      pick: 0.37
       fit: 1.0
     Hydra's Lament:
       total: 0.6
       efficiency: 0.61
       win: 0.58
-      pick: 0.32
+      pick: 0.33
       fit: 0.71
     The Reaper:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
       win: 0.58
-      pick: 0.2
+      pick: 0.21
       fit: 0.91
     The Crusher:
       total: 0.6
@@ -155,8 +155,8 @@ builds:
     Titan's Bane:
       total: 0.58
       efficiency: 0.46
-      win: 0.61
-      pick: 0.21
+      win: 0.6
+      pick: 0.2
       fit: 0.91
   starter: &id001
     base: Bumba's Golden Dagger
@@ -197,19 +197,19 @@ builds:
       total: 0.63
       efficiency: 0.65
       win: 0.6
-      pick: 0.35
+      pick: 0.37
       fit: 0.78
     Hydra's Lament:
       total: 0.57
       efficiency: 0.61
       win: 0.58
-      pick: 0.32
+      pick: 0.33
       fit: 0.54
     The Reaper:
       total: 0.54
       efficiency: 0.53
       win: 0.58
-      pick: 0.2
+      pick: 0.21
       fit: 0.56
     The Crusher:
       total: 0.55
@@ -224,10 +224,10 @@ builds:
       pick: 0.36
       fit: 0.66
     Titan's Bane:
-      total: 0.53
+      total: 0.52
       efficiency: 0.46
-      win: 0.61
-      pick: 0.21
+      win: 0.6
+      pick: 0.2
       fit: 0.56
   starter: *id001
 - source: suggested
@@ -273,7 +273,7 @@ builds:
       total: 0.58
       efficiency: 0.65
       win: 0.6
-      pick: 0.35
+      pick: 0.37
       fit: 0.44
     Kinetic Cuirass:
       total: 0.53
@@ -285,13 +285,13 @@ builds:
       total: 0.54
       efficiency: 0.61
       win: 0.58
-      pick: 0.32
+      pick: 0.33
       fit: 0.37
     The Reaper:
       total: 0.56
       efficiency: 0.53
       win: 0.58
-      pick: 0.2
+      pick: 0.21
       fit: 0.7
     Amanita Charm:
       total: 0.59
@@ -336,19 +336,19 @@ builds:
       total: 0.67
       efficiency: 0.65
       win: 0.6
-      pick: 0.35
+      pick: 0.37
       fit: 1.0
     Hydra's Lament:
       total: 0.56
       efficiency: 0.61
       win: 0.58
-      pick: 0.32
+      pick: 0.33
       fit: 0.48
     The Reaper:
       total: 0.6
       efficiency: 0.53
       win: 0.58
-      pick: 0.2
+      pick: 0.21
       fit: 0.94
     The Crusher:
       total: 0.6
@@ -363,10 +363,10 @@ builds:
       pick: 0.36
       fit: 1.0
     Titan's Bane:
-      total: 0.59
+      total: 0.58
       efficiency: 0.46
-      win: 0.61
-      pick: 0.21
+      win: 0.6
+      pick: 0.2
       fit: 0.94
   starter: *id001
 - source: suggested
@@ -417,19 +417,19 @@ builds:
       total: 0.57
       efficiency: 0.65
       win: 0.6
-      pick: 0.35
+      pick: 0.37
       fit: 0.37
     Hydra's Lament:
-      total: 0.53
+      total: 0.54
       efficiency: 0.61
       win: 0.58
-      pick: 0.32
+      pick: 0.33
       fit: 0.31
     The Reaper:
       total: 0.52
       efficiency: 0.53
       win: 0.58
-      pick: 0.2
+      pick: 0.21
       fit: 0.44
     Riptalon:
       total: 0.54
@@ -484,22 +484,22 @@ builds:
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.64
+      total: 0.65
       efficiency: 0.65
       win: 0.6
-      pick: 0.35
+      pick: 0.37
       fit: 0.85
     Hydra's Lament:
       total: 0.6
       efficiency: 0.61
       win: 0.58
-      pick: 0.32
+      pick: 0.33
       fit: 0.75
     The Reaper:
       total: 0.51
       efficiency: 0.53
       win: 0.58
-      pick: 0.2
+      pick: 0.21
       fit: 0.35
     The Crusher:
       total: 0.52
@@ -544,13 +544,13 @@ builds:
       total: 0.67
       efficiency: 0.65
       win: 0.6
-      pick: 0.35
+      pick: 0.37
       fit: 1.0
     Hydra's Lament:
       total: 0.6
       efficiency: 0.61
       win: 0.58
-      pick: 0.32
+      pick: 0.33
       fit: 0.71
     Runeforged Hammer:
       total: 0.53
@@ -559,10 +559,10 @@ builds:
       pick: 0.0
       fit: 0.62
     The Reaper:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
       win: 0.58
-      pick: 0.2
+      pick: 0.21
       fit: 0.91
     The Crusher:
       total: 0.6

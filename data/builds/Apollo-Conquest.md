@@ -6,11 +6,11 @@ builds:
 - source: community
   aspect: Aspect of Harmony
   aspect_pick_rate: 0.03
-  aspect_win_rate: 0.49
+  aspect_win_rate: 0.48
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.45
-    win_rate: 0.5
+    pick_rate: 0.47
+    win_rate: 0.51
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.18
@@ -19,74 +19,74 @@ builds:
       pick_rate: 0.12
       win_rate: 0.46
   - name: Odysseus' Bow
-    pick_rate: 0.19
-    win_rate: 0.5
+    pick_rate: 0.21
+    win_rate: 0.52
     alternates:
     - name: Dagger of Frenzy
-      pick_rate: 0.17
-      win_rate: 0.51
+      pick_rate: 0.16
+      win_rate: 0.52
     - name: Toxic Blade
       pick_rate: 0.13
-      win_rate: 0.52
+      win_rate: 0.51
   - name: Silverbranch Bow
-    pick_rate: 0.18
+    pick_rate: 0.19
     win_rate: 0.55
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.16
+      pick_rate: 0.17
       win_rate: 0.53
     - name: Dominance
-      pick_rate: 0.14
+      pick_rate: 0.13
       win_rate: 0.5
   - name: Riptalon
     pick_rate: 0.13
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.18
-      win_rate: 0.54
+      win_rate: 0.55
     - name: The Executioner
       pick_rate: 0.12
-      win_rate: 0.54
+      win_rate: 0.56
   - name: Qin's Blade
-    pick_rate: 0.1
-    win_rate: 0.55
+    pick_rate: 0.09
+    win_rate: 0.56
     alternates:
     - name: Riptalon
       pick_rate: 0.12
-      win_rate: 0.52
+      win_rate: 0.53
     - name: Silverbranch Bow
-      pick_rate: 0.1
+      pick_rate: 0.11
       win_rate: 0.54
   - name: Manchu Bow
-    pick_rate: 0.15
-    win_rate: 0.46
+    pick_rate: 0.14
+    win_rate: 0.48
     alternates:
     - name: Hunter's Bow
       pick_rate: 0.1
-      win_rate: 0.52
+      win_rate: 0.51
     - name: Qin's Blade
       pick_rate: 0.09
-      win_rate: 0.52
+      win_rate: 0.54
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.3
-    win_rate: 0.58
+    win_rate: 0.59
   - name: Sharpshooter's Arrow
     pick_rate: 0.24
-    win_rate: 0.55
+    win_rate: 0.56
   - name: Death's Embrace
     pick_rate: 0.13
-    win_rate: 0.53
+    win_rate: 0.52
   source_url: https://smitebrain.com/gods/apollo/
-  last_verified: '2026-08-09'
-  god_win_rate: 0.5065155807365439
-  god_matches_won: 894
-  god_matches_played: 1765
+  last_verified: '2026-08-10'
+  god_win_rate: 0.5086161879895561
+  god_matches_won: 974
+  god_matches_played: 1915
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-09'
-  god_matches_analyzed: 15881
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -100,8 +100,8 @@ builds:
   - Damaru
   - The Crusher
   flex_slots:
+  - The Crusher
   - Riptalon
-  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -136,15 +136,15 @@ builds:
       pick: 0.0
       fit: 0.29
     Tyrfing:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
-      win: 0.5
-      pick: 0.45
+      win: 0.51
+      pick: 0.47
       fit: 0.6
     Riptalon:
       total: 0.5
       efficiency: 0.56
-      win: 0.52
+      win: 0.51
       pick: 0.13
       fit: 0.46
     Damaru:
@@ -167,10 +167,10 @@ builds:
   slot_order:
   - Lernaean Bow
   - Berserker's Shield
+  - Tyrfing
   - Musashi's Dual Swords
   - Damaru
   - Demon Blade
-  - The Crusher
   flex_slots:
   - Demon Blade
   - Musashi's Dual Swords
@@ -207,6 +207,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.27
+    Tyrfing:
+      total: 0.5
+      efficiency: 0.47
+      win: 0.51
+      pick: 0.47
+      fit: 0.55
     Musashi's Dual Swords:
       total: 0.46
       efficiency: 0.44
@@ -225,12 +231,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
-    The Crusher:
-      total: 0.5
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -292,7 +292,7 @@ builds:
     Riptalon:
       total: 0.52
       efficiency: 0.56
-      win: 0.52
+      win: 0.51
       pick: 0.13
       fit: 0.59
     Amanita Charm:
@@ -354,16 +354,16 @@ builds:
       pick: 0.0
       fit: 0.5
     Riptalon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.56
-      win: 0.52
+      win: 0.51
       pick: 0.13
       fit: 0.61
     Silverbranch Bow:
       total: 0.53
       efficiency: 0.54
       win: 0.55
-      pick: 0.18
+      pick: 0.19
       fit: 0.53
     The Crusher:
       total: 0.54
@@ -400,7 +400,7 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Berserker''s Shield, Golden Blade, Lernaean Bow, The Crusher,
     Damaru, Jotunn''s Revenge, Genji''s Guard, Dominance, Hydra''s Lament, Runeforged
-    Hammer, Pharaoh''s Curse, Qin''s Blade, Toxic Blade, Breastplate of Valor, Demon
+    Hammer, Qin''s Blade, Pharaoh''s Curse, Breastplate of Valor, Demon Blade, Toxic
     Blade, Amanita Charm, Tekko-Kagi, Oni Hunter''s Garb, The Reaper, Yogi''s Necklace,
     Kinetic Cuirass, Shogun''s Ofuda, Eros'' Bow, Eye of Providence, Avenging Blade,
     Musashi''s Dual Swords.'
@@ -426,20 +426,20 @@ builds:
     Tyrfing:
       total: 0.52
       efficiency: 0.47
-      win: 0.5
-      pick: 0.45
+      win: 0.51
+      pick: 0.47
       fit: 0.7
     Riptalon:
       total: 0.52
       efficiency: 0.56
-      win: 0.52
+      win: 0.51
       pick: 0.13
       fit: 0.59
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.54
       win: 0.55
-      pick: 0.18
+      pick: 0.19
       fit: 0.5
   starter: *id001
 - source: suggested
@@ -469,8 +469,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Jotunn''s Revenge,
-    Hydra''s Lament, Berserker''s Shield, Breastplate of Valor, The Crusher, Riptalon,
-    Lernaean Bow, Damaru, Freya''s Tears, Shield of the Phoenix, Runeforged Hammer,
+    Hydra''s Lament, Berserker''s Shield, Breastplate of Valor, The Crusher, Lernaean
+    Bow, Riptalon, Damaru, Freya''s Tears, Shield of the Phoenix, Runeforged Hammer,
     Golden Blade, Dominance, Arondight, Screeching Gargoyle, Chandra''s Grace, Pharaoh''s
     Curse, Amanita Charm, Oni Hunter''s Garb, Yogi''s Necklace, Kinetic Cuirass, The
     Reaper, Eye of Providence, Shogun''s Ofuda, Pendulum Blade, Tekko-Kagi.'

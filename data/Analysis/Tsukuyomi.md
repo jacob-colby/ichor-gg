@@ -2,9 +2,9 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.58 | 0.60 | 0.65 | 0.57 | 0.44 | 0.49 | undervalued |  |  |
-| The Reaper | 0.55 | 0.51 | 0.53 | 0.66 | 0.09 | 0.44 | fair | sustain | **UNDERRATED** |
-| Hydra's Lament | 0.54 | 0.54 | 0.61 | 0.58 | 0.14 | 0.39 | fair | burst | **UNDERRATED** |
+| Jotunn's Revenge | 0.58 | 0.60 | 0.65 | 0.56 | 0.45 | 0.49 | undervalued |  |  |
+| The Reaper | 0.55 | 0.51 | 0.53 | 0.65 | 0.10 | 0.44 | fair | sustain | **UNDERRATED** |
+| Hydra's Lament | 0.54 | 0.54 | 0.61 | 0.58 | 0.15 | 0.39 | fair | burst | **UNDERRATED** |
 | The Crusher | 0.53 | 0.61 | 0.65 | 0.50 | 0.00 | 0.54 | undervalued | burst | **UNDERRATED** |
 | Gluttonous Grimoire | 0.51 | 0.57 | 0.66 | 0.50 | 0.00 | 0.37 | undervalued | burst | **UNDERRATED** |
 | Death Metal | 0.51 | 0.57 | 0.60 | 0.50 | 0.00 | 0.51 | fair |  | **UNDERRATED** |
@@ -13,11 +13,11 @@
 | Damaru | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Golden Blade | 0.49 | 0.53 | 0.55 | 0.50 | 0.00 | 0.49 | fair | wave-clear | **UNDERRATED** |
 | Soul Gem | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.41 | fair | burst, sustain, aura | **UNDERRATED** |
+| Heartseeker | 0.49 | 0.48 | 0.46 | 0.53 | 0.21 | 0.54 | fair | burst |  |
 | Tekko-Kagi | 0.49 | 0.53 | 0.46 | 0.50 | 0.00 | 0.69 | fair | mobility | **UNDERRATED** |
 | Titan's Bane | 0.49 | 0.46 | 0.46 | 0.56 | 0.16 | 0.44 | fair |  |  |
 | Riptalon | 0.49 | 0.52 | 0.56 | 0.50 | 0.00 | 0.45 | fair | sustain | **UNDERRATED** |
 | Runeforged Hammer | 0.49 | 0.52 | 0.60 | 0.50 | 0.00 | 0.34 | fair | burst | **UNDERRATED** |
-| Heartseeker | 0.49 | 0.48 | 0.46 | 0.52 | 0.20 | 0.54 | fair | burst |  |
 | Dominance | 0.49 | 0.52 | 0.53 | 0.50 | 0.00 | 0.49 | fair |  | **UNDERRATED** |
 | Bragi's Harp | 0.48 | 0.52 | 0.46 | 0.50 | 0.00 | 0.66 | fair | burst | **UNDERRATED** |
 | Genji's Guard | 0.48 | 0.52 | 0.72 | 0.50 | 0.00 | 0.04 | undervalued |  | **UNDERRATED** |

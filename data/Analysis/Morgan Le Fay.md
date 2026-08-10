@@ -4,16 +4,16 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
 | Soul Gem | 0.59 | 0.71 | 0.59 | 0.50 | 0.14 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
-| Obsidian Shard | 0.58 | 0.61 | 0.54 | 0.59 | 0.13 | 0.79 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.58 | 0.61 | 0.54 | 0.59 | 0.12 | 0.79 | fair |  | **UNDERRATED** |
+| Spear of Desolation | 0.56 | 0.67 | 0.52 | 0.47 | 0.24 | 1.00 | fair |  |  |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Spear of Desolation | 0.55 | 0.67 | 0.52 | 0.46 | 0.23 | 1.00 | fair |  |  |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.52 | 0.54 | 0.44 | 0.54 | 0.16 | 0.79 | premium |  |  |
+| Rod of Tahuti | 0.52 | 0.54 | 0.44 | 0.53 | 0.17 | 0.79 | premium |  |  |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | The World Stone | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Doom Orb | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Chronos' Pendant | 0.51 | 0.58 | 0.56 | 0.47 | 0.17 | 0.63 | fair |  |  |
-| Genji's Guard | 0.50 | 0.57 | 0.72 | 0.47 | 0.10 | 0.21 | undervalued |  | **UNDERRATED** |
+| Chronos' Pendant | 0.51 | 0.58 | 0.56 | 0.47 | 0.18 | 0.63 | fair |  |  |
+| Genji's Guard | 0.50 | 0.57 | 0.72 | 0.48 | 0.10 | 0.21 | undervalued |  | **UNDERRATED** |
 | Gem of Focus | 0.50 | 0.54 | 0.51 | 0.50 | 0.00 | 0.63 | fair | mobility | **UNDERRATED** |
 | Death Metal | 0.50 | 0.54 | 0.60 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Ethereal Staff | 0.50 | 0.50 | 0.53 | 0.54 | 0.08 | 0.42 | fair |  | **UNDERRATED** |
@@ -24,7 +24,7 @@
 | Jade Scepter | 0.49 | 0.52 | 0.57 | 0.50 | 0.00 | 0.42 | fair | peel | **UNDERRATED** |
 | Breastplate of Valor | 0.49 | 0.52 | 0.65 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.49 | 0.52 | 0.56 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
-| Lifebinder | 0.48 | 0.47 | 0.49 | 0.54 | 0.14 | 0.42 | fair | sustain, aura |  |
+| Lifebinder | 0.48 | 0.47 | 0.49 | 0.54 | 0.13 | 0.42 | fair | sustain, aura |  |
 | Wish-Granting Pearl | 0.48 | 0.50 | 0.54 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Polynomicon | 0.48 | 0.50 | 0.49 | 0.50 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |
 | Ancient Signet | 0.47 | 0.50 | 0.49 | 0.50 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |

@@ -4,20 +4,19 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Amanita Charm | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.71 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.81 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.56 | 0.60 | 0.55 | 0.54 | 0.25 | 0.71 | fair |  |  |
+| Shifter's Shield | 0.56 | 0.60 | 0.55 | 0.54 | 0.26 | 0.71 | fair |  |  |
 | Eye of Providence | 0.55 | 0.65 | 0.62 | 0.50 | 0.00 | 0.71 | undervalued |  | **UNDERRATED** |
 | Genji's Guard | 0.55 | 0.62 | 0.72 | 0.50 | 0.21 | 0.39 | undervalued |  |  |
 | Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.46 | undervalued |  | **UNDERRATED** |
-| Stampede | 0.52 | 0.50 | 0.52 | 0.59 | 0.13 | 0.46 | fair | mobility, aura, cc-immunity | **UNDERRATED** |
 | Erosion | 0.51 | 0.58 | 0.52 | 0.50 | 0.00 | 0.71 | fair | aura | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.58 | 0.57 | 0.50 | 0.00 | 0.59 | fair | sustain | **UNDERRATED** |
+| Stampede | 0.51 | 0.50 | 0.52 | 0.57 | 0.14 | 0.46 | fair | mobility, aura, cc-immunity | **UNDERRATED** |
 | Breastplate of Valor | 0.51 | 0.57 | 0.65 | 0.49 | 0.10 | 0.39 | undervalued |  | **UNDERRATED** |
-| Dwarven Plate | 0.51 | 0.40 | 0.35 | 0.68 | 0.06 | 0.51 | premium |  |  |
 | Draconic Scale | 0.51 | 0.57 | 0.50 | 0.50 | 0.00 | 0.71 | fair |  | **UNDERRATED** |
+| Hide of the Nemean Lion | 0.50 | 0.51 | 0.54 | 0.54 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.46 | fair | anti-crit, aura | **UNDERRATED** |
-| Hide of the Nemean Lion | 0.50 | 0.51 | 0.54 | 0.53 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
 | Soul Gem | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.39 | fair | burst, sustain, aura | **UNDERRATED** |
 | Leviathan's Hide | 0.49 | 0.53 | 0.55 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.48 | 0.52 | 0.52 | 0.50 | 0.00 | 0.51 | fair | peel, cc-immunity | **UNDERRATED** |
@@ -47,6 +46,7 @@
 | Chronos' Pendant | 0.46 | 0.46 | 0.56 | 0.50 | 0.00 | 0.23 | fair |  |  |
 | Alchemist Coat | 0.45 | 0.45 | 0.52 | 0.50 | 0.00 | 0.30 | fair |  |  |
 | Spear of Desolation | 0.45 | 0.45 | 0.52 | 0.50 | 0.00 | 0.29 | fair |  |  |
+| Dwarven Plate | 0.45 | 0.40 | 0.35 | 0.55 | 0.07 | 0.51 | premium |  |  |
 | The Cosmic Horror | 0.45 | 0.45 | 0.58 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Mystical Mail | 0.45 | 0.45 | 0.45 | 0.50 | 0.00 | 0.46 | fair | aura, wave-clear |  |
 | Glorious Pridwen | 0.45 | 0.45 | 0.36 | 0.50 | 0.00 | 0.64 | premium | sustain |  |

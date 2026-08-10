@@ -4,18 +4,18 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Gluttonous Grimoire | 0.56 | 0.66 | 0.66 | 0.50 | 0.00 | 0.66 | undervalued | burst | **UNDERRATED** |
 | Soul Gem | 0.55 | 0.65 | 0.59 | 0.50 | 0.00 | 0.78 | fair | burst, sustain, aura | **UNDERRATED** |
-| Nimble Ring | 0.54 | 0.54 | 0.49 | 0.56 | 0.24 | 0.68 | fair |  |  |
-| Obsidian Shard | 0.52 | 0.51 | 0.54 | 0.58 | 0.13 | 0.44 | fair |  | **UNDERRATED** |
+| Nimble Ring | 0.54 | 0.54 | 0.49 | 0.56 | 0.23 | 0.68 | fair |  |  |
+| Obsidian Shard | 0.51 | 0.51 | 0.54 | 0.56 | 0.13 | 0.44 | fair |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.51 | 0.56 | 0.56 | 0.50 | 0.00 | 0.56 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.50 | 0.55 | 0.60 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.49 | 0.54 | 0.72 | 0.50 | 0.00 | 0.12 | undervalued |  | **UNDERRATED** |
 | The Cosmic Horror | 0.49 | 0.54 | 0.58 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
+| Spear of Desolation | 0.49 | 0.54 | 0.52 | 0.46 | 0.23 | 0.56 | fair |  |  |
 | Blood-Bound Book | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.37 | fair | sustain | **UNDERRATED** |
 | Bragi's Harp | 0.48 | 0.52 | 0.46 | 0.50 | 0.00 | 0.66 | fair | burst | **UNDERRATED** |
 | Bancroft's Talon | 0.48 | 0.51 | 0.58 | 0.50 | 0.00 | 0.37 | fair | sustain | **UNDERRATED** |
-| Spear of Desolation | 0.48 | 0.54 | 0.52 | 0.45 | 0.23 | 0.56 | fair |  |  |
-| Doom Orb | 0.48 | 0.47 | 0.49 | 0.53 | 0.05 | 0.44 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.48 | 0.50 | 0.56 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
+| Doom Orb | 0.47 | 0.47 | 0.49 | 0.52 | 0.05 | 0.44 | fair |  | **UNDERRATED** |
 | Breastplate of Valor | 0.47 | 0.49 | 0.65 | 0.50 | 0.00 | 0.12 | undervalued |  | **UNDERRATED** |
 | Death Metal | 0.47 | 0.49 | 0.60 | 0.50 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.47 | 0.49 | 0.59 | 0.50 | 0.00 | 0.24 | fair | sustain, aura | **UNDERRATED** |
@@ -25,7 +25,7 @@
 | Jade Scepter | 0.46 | 0.47 | 0.57 | 0.50 | 0.00 | 0.24 | fair | peel | **UNDERRATED** |
 | Gem of Focus | 0.46 | 0.47 | 0.51 | 0.50 | 0.00 | 0.37 | fair | mobility | **UNDERRATED** |
 | Typhon’s Heart | 0.46 | 0.46 | 0.51 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.46 | 0.44 | 0.44 | 0.50 | 0.27 | 0.44 | premium |  |  |
+| Rod of Tahuti | 0.46 | 0.44 | 0.44 | 0.50 | 0.26 | 0.44 | premium |  |  |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
@@ -38,9 +38,9 @@
 | Shield of the Phoenix | 0.44 | 0.44 | 0.57 | 0.50 | 0.00 | 0.12 | fair | sustain |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Soul Reaver | 0.44 | 0.43 | 0.46 | 0.50 | 0.00 | 0.34 | fair | burst |  |
-| Polynomicon | 0.44 | 0.45 | 0.49 | 0.46 | 0.11 | 0.34 | fair | burst |  |
 | Lifebinder | 0.43 | 0.42 | 0.49 | 0.50 | 0.00 | 0.24 | fair | sustain, aura |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
+| Polynomicon | 0.43 | 0.45 | 0.49 | 0.45 | 0.11 | 0.34 | fair | burst |  |
 | Screeching Gargoyle | 0.43 | 0.41 | 0.49 | 0.50 | 0.00 | 0.22 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.43 | 0.41 | 0.53 | 0.50 | 0.00 | 0.12 | fair | sustain |  |
 | Divine Ruin | 0.43 | 0.41 | 0.43 | 0.50 | 0.00 | 0.34 | premium | anti-heal, burst |  |
@@ -48,9 +48,9 @@
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Shifter's Shield | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Necronomicon | 0.42 | 0.38 | 0.44 | 0.50 | 0.00 | 0.24 | premium |  |  |
+| Book of Thoth | 0.42 | 0.37 | 0.42 | 0.48 | 0.35 | 0.24 | premium |  |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Book of Thoth | 0.41 | 0.37 | 0.42 | 0.47 | 0.35 | 0.24 | premium |  |  |
 | Helm of Darkness | 0.41 | 0.37 | 0.43 | 0.50 | 0.00 | 0.24 | premium | mobility |  |
 | Sphere of Negation | 0.41 | 0.37 | 0.42 | 0.50 | 0.00 | 0.24 | premium | sustain |  |
 | Erosion | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | aura |  |

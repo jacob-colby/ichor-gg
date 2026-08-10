@@ -6,48 +6,48 @@ builds:
 - source: community
   aspect: Aspect of Fulmination
   aspect_pick_rate: 0.2
-  aspect_win_rate: 0.39
+  aspect_win_rate: 0.42
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.37
-    win_rate: 0.5
+    pick_rate: 0.4
+    win_rate: 0.48
     alternates:
     - name: Daybreak Gavel
       pick_rate: 0.11
-      win_rate: 0.58
+      win_rate: 0.54
     - name: Transcendence
       pick_rate: 0.07
       win_rate: 0.63
   - name: Genji's Guard
-    pick_rate: 0.15
+    pick_rate: 0.14
     win_rate: 0.41
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.15
-      win_rate: 0.65
+      win_rate: 0.61
     - name: Shield of the Phoenix
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.67
   - name: Gladiator's Shield
     pick_rate: 0.08
-    win_rate: 0.56
+    win_rate: 0.5
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.57
     - name: Genji's Guard
       pick_rate: 0.11
-      win_rate: 0.42
+      win_rate: 0.38
   - name: Shield of the Phoenix
-    pick_rate: 0.07
+    pick_rate: 0.06
     win_rate: 0.57
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.1
-      win_rate: 0.55
+      pick_rate: 0.11
+      win_rate: 0.5
     - name: Freya's Tears
       pick_rate: 0.06
-      win_rate: 0.83
+      win_rate: 0.71
   - name: Dwarven Plate
     pick_rate: 0.05
     win_rate: 0.6
@@ -56,37 +56,37 @@ builds:
       pick_rate: 0.07
       win_rate: 0.86
     - name: Kinetic Cuirass
-      pick_rate: 0.04
-      win_rate: 0.25
+      pick_rate: 0.05
+      win_rate: 0.2
   - name: Shell of Rebuke
-    pick_rate: 0.06
+    pick_rate: 0.05
     win_rate: 0.5
     alternates:
     - name: Sage's Ring
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.5
     - name: Captain's Ring
       pick_rate: 0.04
       win_rate: 0.33
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.35
+    pick_rate: 0.36
     win_rate: 0.6
   - name: Bluestone Pendant
-    pick_rate: 0.32
-    win_rate: 0.47
+    pick_rate: 0.33
+    win_rate: 0.45
   - name: Sundering Axe
     pick_rate: 0.12
-    win_rate: 0.79
+    win_rate: 0.73
   source_url: https://smitebrain.com/gods/chaac/
-  last_verified: '2026-08-09'
-  god_win_rate: 0.5221238938053098
-  god_matches_won: 59
-  god_matches_played: 113
+  last_verified: '2026-08-10'
+  god_win_rate: 0.512396694214876
+  god_matches_won: 62
+  god_matches_played: 121
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-09'
-  god_matches_analyzed: 15881
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -116,9 +116,9 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Freya''s Tears, Gluttonous Grimoire, Amanita Charm, Shield of the Phoenix,
-    Berserker''s Shield, Jotunn''s Revenge, The Crusher, Eye of Providence, Soul Gem,
-    Oni Hunter''s Garb, Runeforged Hammer, Breastplate of Valor, Hydra''s Lament,
+    this god: Freya''s Tears, Gluttonous Grimoire, Amanita Charm, Berserker''s Shield,
+    Shield of the Phoenix, Jotunn''s Revenge, The Crusher, Eye of Providence, Soul
+    Gem, Oni Hunter''s Garb, Runeforged Hammer, Breastplate of Valor, Hydra''s Lament,
     Shield Splitter, Death Metal, Spear of the Magus, Genji''s Guard, Eye of the Storm,
     Spectral Armor, Helm of Radiance, Erosion, Rod of Asclepius, The Cosmic Horror,
     Yogi''s Necklace, Pharaoh''s Curse, Draconic Scale, Spear of Desolation, Jade
@@ -145,9 +145,9 @@ builds:
       pick: 0.0
       fit: 0.4
     Freya's Tears:
-      total: 0.64
+      total: 0.59
       efficiency: 0.59
-      win: 0.83
+      win: 0.71
       pick: 0.06
       fit: 0.4
     Gluttonous Grimoire:
@@ -191,8 +191,8 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Freya''s Tears, Gluttonous Grimoire, Jotunn''s Revenge, Soul Gem, Shield
-    of the Phoenix, The Crusher, Amanita Charm, Berserker''s Shield, Eye of Providence,
+    god: Freya''s Tears, Gluttonous Grimoire, Jotunn''s Revenge, Soul Gem, The Crusher,
+    Shield of the Phoenix, Amanita Charm, Berserker''s Shield, Eye of Providence,
     Breastplate of Valor, Hydra''s Lament, Oni Hunter''s Garb, Spear of the Magus,
     Runeforged Hammer, Genji''s Guard, Spear of Desolation, The Cosmic Horror, Death
     Metal, Shield Splitter, Helm of Radiance, Rod of Asclepius, Spectral Armor, Yogi''s
@@ -220,9 +220,9 @@ builds:
       pick: 0.0
       fit: 0.48
     Freya's Tears:
-      total: 0.64
+      total: 0.59
       efficiency: 0.59
-      win: 0.83
+      win: 0.71
       pick: 0.06
       fit: 0.41
     Gluttonous Grimoire:
@@ -269,7 +269,7 @@ builds:
     The Reaper, Eye of Providence, Runeforged Hammer, Oni Hunter''s Garb, Blood-Bound
     Book, Bancroft''s Talon, Chandra''s Grace, Hydra''s Lament, Lifebinder, Riptalon,
     Breastplate of Valor, Death Metal, Spear of the Magus, Eye of the Storm, Shield
-    Splitter, Phoenix Feather, Spectral Armor, Genji''s Guard, Yogi''s Necklace, The
+    Splitter, Phoenix Feather, Spectral Armor, Yogi''s Necklace, Genji''s Guard, The
     Cosmic Horror, Jade Scepter, Erosion, Helm of Radiance, Pharaoh''s Curse, Avenging
     Blade, Golden Blade, Spear of Desolation, Draconic Scale, Leviathan''s Hide, Kinetic
     Cuirass.'
@@ -290,12 +290,12 @@ builds:
       total: 0.56
       efficiency: 0.57
       win: 0.57
-      pick: 0.07
+      pick: 0.06
       fit: 0.68
     Freya's Tears:
-      total: 0.63
+      total: 0.58
       efficiency: 0.59
-      win: 0.83
+      win: 0.71
       pick: 0.06
       fit: 0.35
     The Crusher:
@@ -342,7 +342,7 @@ builds:
     Blade, Eye of Providence, Spear of the Magus, Stone of Binding, Oni Hunter''s
     Garb, The Cosmic Horror, Runeforged Hammer, Screeching Gargoyle, Breastplate of
     Valor, Hydra''s Lament, Void Shield, Spear of Desolation, Void Stone, Death Metal,
-    Shield Splitter, Genji''s Guard, The Reaper, Obsidian Shard, Spectral Armor, Helm
+    Shield Splitter, The Reaper, Genji''s Guard, Obsidian Shard, Spectral Armor, Helm
     of Radiance, Rod of Asclepius, Yogi''s Necklace, Eye of the Storm, Erosion, Pharaoh''s
     Curse, Heartseeker, Riptalon, Jade Scepter, Draconic Scale, Dreamer''s Idol, Kinetic
     Cuirass.'
@@ -366,9 +366,9 @@ builds:
       pick: 0.0
       fit: 0.49
     Freya's Tears:
-      total: 0.63
+      total: 0.58
       efficiency: 0.59
-      win: 0.83
+      win: 0.71
       pick: 0.06
       fit: 0.34
     Gluttonous Grimoire:
@@ -432,9 +432,9 @@ builds:
       pick: 0.0
       fit: 0.37
     Freya's Tears:
-      total: 0.62
+      total: 0.57
       efficiency: 0.59
-      win: 0.83
+      win: 0.71
       pick: 0.06
       fit: 0.28
     Gluttonous Grimoire:
@@ -485,8 +485,8 @@ builds:
     + fit + win/pick). Underrated for this god: Freya''s Tears, Shield of the Phoenix,
     Jotunn''s Revenge, Soul Gem, Gluttonous Grimoire, Breastplate of Valor, Amanita
     Charm, Berserker''s Shield, Hydra''s Lament, Genji''s Guard, Eye of Providence,
-    The Crusher, Gladiator''s Shield, Oni Hunter''s Garb, Spear of Desolation, Runeforged
-    Hammer, Chronos'' Pendant, Screeching Gargoyle, Chandra''s Grace, Spectral Armor,
+    The Crusher, Oni Hunter''s Garb, Spear of Desolation, Runeforged Hammer, Chronos''
+    Pendant, Screeching Gargoyle, Chandra''s Grace, Spectral Armor, Gladiator''s Shield,
     Spear of the Magus, Yogi''s Necklace, Erosion, Shield Splitter, Pharaoh''s Curse,
     Helm of Radiance, Rod of Asclepius, Draconic Scale, The Cosmic Horror, Prophetic
     Cloak, Death Metal, Gem of Focus, Eye of the Storm, Leviathan''s Hide, Arondight,
@@ -514,7 +514,7 @@ builds:
       total: 0.54
       efficiency: 0.57
       win: 0.57
-      pick: 0.07
+      pick: 0.06
       fit: 0.55
     Hydra's Lament:
       total: 0.51
@@ -523,9 +523,9 @@ builds:
       pick: 0.0
       fit: 0.47
     Freya's Tears:
-      total: 0.67
+      total: 0.61
       efficiency: 0.59
-      win: 0.83
+      win: 0.71
       pick: 0.06
       fit: 0.58
   starter: *id001
@@ -569,7 +569,7 @@ builds:
       total: 0.48
       efficiency: 0.72
       win: 0.41
-      pick: 0.15
+      pick: 0.14
       fit: 0.24
     Berserker's Shield:
       total: 0.52
@@ -584,10 +584,10 @@ builds:
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.41
+      total: 0.38
       efficiency: 0.6
-      win: 0.25
-      pick: 0.04
+      win: 0.2
+      pick: 0.05
       fit: 0.55
     Gluttonous Grimoire:
       total: 0.54

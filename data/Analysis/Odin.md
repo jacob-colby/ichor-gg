@@ -2,22 +2,23 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Kinetic Cuirass | 0.60 | 0.61 | 0.60 | 0.65 | 0.05 | 0.64 | fair | burst | **UNDERRATED** |
-| Genji's Guard | 0.58 | 0.59 | 0.72 | 0.60 | 0.29 | 0.29 | undervalued |  |  |
-| Jotunn's Revenge | 0.56 | 0.60 | 0.65 | 0.53 | 0.45 | 0.46 | undervalued |  |  |
+| Genji's Guard | 0.58 | 0.59 | 0.72 | 0.61 | 0.29 | 0.29 | undervalued |  |  |
+| Kinetic Cuirass | 0.57 | 0.61 | 0.60 | 0.59 | 0.05 | 0.64 | fair | burst | **UNDERRATED** |
+| Gladiator's Shield | 0.57 | 0.45 | 0.41 | 0.75 | 0.05 | 0.55 | premium | burst |  |
+| Jotunn's Revenge | 0.56 | 0.60 | 0.65 | 0.53 | 0.43 | 0.46 | undervalued |  |  |
 | Amanita Charm | 0.54 | 0.62 | 0.66 | 0.50 | 0.00 | 0.54 | undervalued | sustain, aura | **UNDERRATED** |
-| Shifter's Shield | 0.53 | 0.55 | 0.55 | 0.54 | 0.23 | 0.54 | fair |  |  |
+| Shifter's Shield | 0.54 | 0.55 | 0.55 | 0.56 | 0.22 | 0.54 | fair |  |  |
+| Breastplate of Valor | 0.53 | 0.55 | 0.65 | 0.54 | 0.23 | 0.29 | undervalued |  |  |
 | Berserker's Shield | 0.52 | 0.60 | 0.71 | 0.50 | 0.00 | 0.35 | undervalued |  | **UNDERRATED** |
-| Breastplate of Valor | 0.52 | 0.55 | 0.65 | 0.53 | 0.23 | 0.29 | undervalued |  |  |
 | Eye of Providence | 0.52 | 0.60 | 0.62 | 0.50 | 0.00 | 0.54 | undervalued |  | **UNDERRATED** |
 | The Crusher | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
-| Hide of the Nemean Lion | 0.52 | 0.48 | 0.54 | 0.61 | 0.05 | 0.35 | fair |  |  |
+| Mystical Mail | 0.51 | 0.42 | 0.45 | 0.66 | 0.06 | 0.35 | fair | aura, wave-clear |  |
 | Oni Hunter's Garb | 0.51 | 0.56 | 0.65 | 0.50 | 0.00 | 0.35 | undervalued |  | **UNDERRATED** |
 | Runeforged Hammer | 0.50 | 0.56 | 0.60 | 0.50 | 0.00 | 0.46 | fair | burst | **UNDERRATED** |
 | Freya's Tears | 0.50 | 0.56 | 0.59 | 0.50 | 0.00 | 0.49 | fair |  | **UNDERRATED** |
 | Shield Splitter | 0.50 | 0.55 | 0.53 | 0.50 | 0.00 | 0.59 | fair |  | **UNDERRATED** |
 | Hydra's Lament | 0.50 | 0.55 | 0.61 | 0.50 | 0.00 | 0.41 | fair | burst | **UNDERRATED** |
-| Mystical Mail | 0.49 | 0.42 | 0.45 | 0.63 | 0.06 | 0.35 | fair | aura, wave-clear |  |
+| Hide of the Nemean Lion | 0.49 | 0.48 | 0.54 | 0.56 | 0.06 | 0.35 | fair |  |  |
 | Shield of the Phoenix | 0.49 | 0.53 | 0.57 | 0.50 | 0.00 | 0.45 | fair | sustain | **UNDERRATED** |
 | Eye of the Storm | 0.49 | 0.53 | 0.52 | 0.50 | 0.00 | 0.55 | fair | peel | **UNDERRATED** |
 | Erosion | 0.49 | 0.53 | 0.52 | 0.50 | 0.00 | 0.54 | fair | aura | **UNDERRATED** |
@@ -44,11 +45,10 @@
 | Wyrmskin Hide | 0.45 | 0.46 | 0.42 | 0.50 | 0.00 | 0.55 | premium |  |  |
 | Void Shield | 0.45 | 0.46 | 0.46 | 0.50 | 0.00 | 0.45 | fair | protection-shred, aura |  |
 | Xibalban Effigy | 0.45 | 0.46 | 0.49 | 0.50 | 0.00 | 0.38 | fair |  |  |
-| Gladiator's Shield | 0.45 | 0.45 | 0.41 | 0.50 | 0.00 | 0.55 | premium | burst |  |
-| Dwarven Plate | 0.45 | 0.36 | 0.35 | 0.59 | 0.08 | 0.38 | premium |  |  |
 | Chandra's Grace | 0.45 | 0.45 | 0.53 | 0.50 | 0.00 | 0.26 | fair | sustain |  |
 | Arondight | 0.45 | 0.44 | 0.50 | 0.50 | 0.00 | 0.31 | fair | mobility |  |
 | Prophetic Cloak | 0.45 | 0.44 | 0.43 | 0.50 | 0.00 | 0.49 | premium |  |  |
+| Dwarven Plate | 0.45 | 0.36 | 0.35 | 0.58 | 0.07 | 0.38 | premium |  |  |
 | Hussar's Wings | 0.45 | 0.44 | 0.40 | 0.50 | 0.00 | 0.54 | premium | cc-immunity |  |
 | Void Stone | 0.45 | 0.44 | 0.44 | 0.50 | 0.00 | 0.45 | premium | protection-shred, aura |  |
 | Ragnarok's Wake | 0.44 | 0.44 | 0.43 | 0.50 | 0.00 | 0.45 | premium | mobility, burst |  |
