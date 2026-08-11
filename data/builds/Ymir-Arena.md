@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.71
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -44,14 +44,14 @@ builds:
       pick: 0.0
       fit: 0.86
     Spectral Armor:
-      total: 0.68
-      efficiency: 0.59
+      total: 0.67
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.76
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -62,8 +62,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.69
-      efficiency: 0.52
+      total: 0.67
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -80,7 +80,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Kinetic Cuirass
+  - Stampede
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -100,25 +100,25 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.7
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.8
     Spectral Armor:
-      total: 0.69
-      efficiency: 0.59
+      total: 0.68
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.79
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Rod of Asclepius:
-      total: 0.78
-      efficiency: 0.59
+      total: 0.76
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.96
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.7
-      efficiency: 0.52
+      total: 0.69
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -145,8 +145,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Stampede
   - Stone of Binding
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -177,13 +177,13 @@ builds:
       fit: 1.0
     Void Stone:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Stampede:
-      total: 0.61
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -229,26 +229,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bracer of The Abyss:
-      total: 0.41
+      total: 0.4
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.25
     Nimble Ring:
       total: 0.4
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.46
-      efficiency: 0.46
+      total: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.45
     Amanita Charm:
-      total: 0.79
-      efficiency: 0.66
+      total: 0.78
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Stampede:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.56
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -275,12 +275,12 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Genji's Guard
+  - Stampede
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -294,8 +294,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -306,20 +306,20 @@ builds:
       pick: 0.0
       fit: 0.64
     Spectral Armor:
-      total: 0.59
-      efficiency: 0.59
+      total: 0.58
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.59
     Erosion:
-      total: 0.64
+      total: 0.63
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.6
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
-  - Triton's Conch
   flex_slots:
-  - Shogun's Ofuda
-  - Triton's Conch
+  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -358,9 +358,15 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Spectral Armor:
+      total: 0.57
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Amanita Charm:
-      total: 0.81
-      efficiency: 0.66
+      total: 0.8
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -371,49 +377,43 @@ builds:
       pick: 0.0
       fit: 0.72
     Stampede:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
     Pharaoh's Curse:
-      total: 0.62
-      efficiency: 0.58
+      total: 0.61
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.66
     Shogun's Ofuda:
       total: 0.59
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Triton's Conch:
-      total: 0.58
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Spectral Armor
-  - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
+  - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Pharaoh's Curse
+  - Stampede
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -424,17 +424,11 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.58
-      efficiency: 0.59
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Amanita Charm:
-      total: 0.81
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.95
     Erosion:
       total: 0.61
       efficiency: 0.52
@@ -442,20 +436,26 @@ builds:
       pick: 0.0
       fit: 0.7
     Stampede:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.57
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.66
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.58
+      total: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Soul Gem:
+      total: 0.79
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
     Triton's Conch:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.71
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -501,14 +501,14 @@ builds:
       pick: 0.0
       fit: 0.86
     Spectral Armor:
-      total: 0.68
-      efficiency: 0.59
+      total: 0.67
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.76
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -519,8 +519,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.69
-      efficiency: 0.52
+      total: 0.67
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.86

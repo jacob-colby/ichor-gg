@@ -56,8 +56,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Dreamer's Idol:
-      total: 0.68
-      efficiency: 0.49
+      total: 0.67
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -90,8 +90,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -117,8 +117,8 @@ builds:
       pick: 0.0
       fit: 0.5
     Dreamer's Idol:
-      total: 0.6
-      efficiency: 0.49
+      total: 0.59
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.58
-      efficiency: 0.47
+      total: 0.57
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -170,14 +170,14 @@ builds:
       pick: 0.0
       fit: 0.72
     Spectral Armor:
-      total: 0.61
-      efficiency: 0.59
+      total: 0.6
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -188,8 +188,8 @@ builds:
       pick: 0.0
       fit: 0.76
     Stampede:
-      total: 0.62
-      efficiency: 0.52
+      total: 0.6
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Spear of the Magus:
-      total: 0.68
+      total: 0.67
       efficiency: 0.6
       win: 0.5
       pick: 0.0
@@ -253,8 +253,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Dreamer's Idol:
-      total: 0.72
-      efficiency: 0.49
+      total: 0.71
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.95
@@ -301,19 +301,19 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
       total: 0.54
-      efficiency: 0.46
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
     Dreamer's Idol:
       total: 0.5
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.53
-      efficiency: 0.47
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
   - Soul Gem
-  - Triton's Conch
   flex_slots:
   - Breastplate of Valor
-  - Triton's Conch
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -358,15 +358,21 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Genji's Guard:
       total: 0.57
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
       total: 0.54
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -388,12 +394,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.51
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
   starter: *id001
 - source: suggested
   archetype: model
@@ -448,8 +448,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Dreamer's Idol:
-      total: 0.68
-      efficiency: 0.49
+      total: 0.67
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.86

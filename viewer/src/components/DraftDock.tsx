@@ -77,7 +77,7 @@ interface DraftDockProps {
 
 export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, draftConfig }: DraftDockProps) {
   const { draft, mode, setMode, setAlly, setEnemy, clear } = useDraft();
-  const { meName, taken, takenFor, enemiesKnown, roster, result, changeCount, coreSize } =
+  const { meName, taken, takenFor, enemiesKnown, roster, result, changeCount, coreSize, starters } =
     useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
   const [expanded, setExpanded] = useState(false);
@@ -208,6 +208,33 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
                 could report that six items moved but never say which, so the
                 claim it makes was unverifiable without leaving the page —
                 which is the one thing this dock exists to avoid. */}
+            {/* A build starts before item one, and the dock began at item one —
+                so the first purchase of the match was the one thing the shell's
+                copy of the build never showed, while /draft has shown it all
+                along. Same data, same source, same "the draft doesn't move
+                these" caveat; only the chip is tighter, because 420px is not
+                the draft page. */}
+            {starters.length > 0 && (
+              <div data-testid="dock-starters" className="mt-2 border-t border-line pt-2">
+                <div className={label}>Opens with</div>
+                <ul className="mt-1 flex flex-wrap gap-1">
+                  {starters.map((s) => (
+                    <li key={s.name}>
+                      <a href={toHash.item(s.name)}
+                        aria-label={`${s.name} — opened with by ${Math.round(s.pick_rate * 100)}% of ${meName} players, winning ${Math.round(s.win_rate * 100)}%`}
+                        className="press flex items-center gap-1 rounded-md border border-line bg-bg2 py-0.5 pl-0.5 pr-1.5 transition-colors duration-150 ease-standard hover:border-line-strong">
+                        <Icon name={s.name} item className="h-5 w-5" />
+                        <span className="max-w-[10ch] truncate text-label text-ink">{s.name}</span>
+                        <span aria-hidden="true" className="font-mono text-micro text-gold">
+                          {Math.round(s.pick_rate * 100)}%
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             {result && (
               <div className="mt-2 border-t border-line pt-2">
                 <div className={label}>{changeCount > 0 ? "Your adapted core" : "The default core"}</div>

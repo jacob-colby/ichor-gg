@@ -131,7 +131,13 @@ export function useDraftResult(
   const draftEnabled = !!meName && !!godItemScores?.[meName] && !!draftConfig;
   const result = useMemo(() => {
     if (!draftEnabled) return null;
-    const opts = { maxBonus: draftConfig!.max_bonus, maxLifesteal: draftMaxLifesteal(meGod, draftConfig!.lifesteal_caps) };
+    const opts = {
+      maxBonus: draftConfig!.max_bonus,
+      maxLifesteal: draftMaxLifesteal(meGod, draftConfig!.lifesteal_caps),
+      // Defaults to 1 (pay in full) on an index built before the rule shipped,
+      // so an older data file keeps behaving exactly as it did.
+      selfCovered: draftConfig!.self_covered ?? 1,
+    };
     const base = adaptedCore(godItemScores![meName], itemsByName, { tags: {}, stats: {} }, opts);
     const overlay = threatOverlay(threats, draftConfig!);
     overlay.items = damageOverlay(threats, godItemDamage?.[meName], draftConfig!);

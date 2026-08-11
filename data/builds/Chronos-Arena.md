@@ -44,8 +44,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Bragi's Harp:
-      total: 0.56
-      efficiency: 0.46
+      total: 0.55
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -57,7 +57,7 @@ builds:
       fit: 0.56
     Dreamer's Idol:
       total: 0.56
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -80,7 +80,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Spear of Desolation
+  - Bragi's Harp
   - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,8 +99,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bragi's Harp:
-      total: 0.54
-      efficiency: 0.46
+      total: 0.53
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -118,7 +118,7 @@ builds:
       fit: 0.4
     Dreamer's Idol:
       total: 0.54
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.54
-      efficiency: 0.47
+      total: 0.53
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -164,32 +164,32 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Void Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
     Spectral Armor:
-      total: 0.58
-      efficiency: 0.59
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.57
     Amanita Charm:
-      total: 0.82
-      efficiency: 0.66
+      total: 0.81
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.61
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
     Stampede:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -253,8 +253,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Dreamer's Idol:
-      total: 0.63
-      efficiency: 0.49
+      total: 0.62
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -307,13 +307,13 @@ builds:
       fit: 0.41
     Nimble Ring:
       total: 0.49
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
-      total: 0.55
-      efficiency: 0.46
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.53
-      efficiency: 0.47
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -360,13 +360,13 @@ builds:
   slot_scores:
     Genji's Guard:
       total: 0.53
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.34
     Breastplate of Valor:
       total: 0.5
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.34
@@ -378,12 +378,12 @@ builds:
       fit: 0.45
     Bragi's Harp:
       total: 0.49
-      efficiency: 0.46
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.53
     Spear of Desolation:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -425,25 +425,25 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.58
-      efficiency: 0.56
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.59
     Bragi's Harp:
-      total: 0.58
-      efficiency: 0.46
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.71
     The Crusher:
-      total: 0.62
-      efficiency: 0.65
+      total: 0.61
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.63
-      efficiency: 0.47
+      total: 0.62
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -464,14 +464,14 @@ builds:
   archetype: str-int
   slot_order:
   - Lernaean Bow
+  - Toxic Blade
   - Jotunn's Revenge
   - Bragi's Harp
-  - The Crusher
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - The Crusher
   - Jotunn's Revenge
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,35 +483,35 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.6
-      efficiency: 0.56
+      total: 0.59
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Jotunn's Revenge:
+    Toxic Blade:
       total: 0.56
-      efficiency: 0.65
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.47
     Bragi's Harp:
-      total: 0.6
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
-    The Crusher:
-      total: 0.57
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -519,8 +519,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.58
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -566,8 +566,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Bragi's Harp:
-      total: 0.56
-      efficiency: 0.46
+      total: 0.55
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -579,7 +579,7 @@ builds:
       fit: 0.56
     Dreamer's Idol:
       total: 0.56
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -600,8 +600,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
   - Dreamer's Idol
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -620,7 +620,7 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -632,7 +632,7 @@ builds:
       fit: 0.46
     Dreamer's Idol:
       total: 0.49
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -643,8 +643,8 @@ builds:
       pick: 0.0
       fit: 0.47
     Stampede:
-      total: 0.5
-      efficiency: 0.52
+      total: 0.48
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -666,7 +666,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Spear of Desolation
+  - Bragi's Harp
   - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
@@ -685,14 +685,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.49
+      total: 0.48
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.54
     Bragi's Harp:
-      total: 0.51
-      efficiency: 0.46
+      total: 0.5
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -704,7 +704,7 @@ builds:
       fit: 0.49
     Dreamer's Idol:
       total: 0.52
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -715,8 +715,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.55
-      efficiency: 0.47
+      total: 0.54
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -742,11 +742,11 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -758,13 +758,13 @@ builds:
       fit: 0.67
     Spectral Armor:
       total: 0.58
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.57
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.81
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -775,8 +775,8 @@ builds:
       pick: 0.0
       fit: 0.69
     Stampede:
-      total: 0.6
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -823,26 +823,26 @@ builds:
       pick: 0.0
       fit: 0.6
     Void Shield:
-      total: 0.62
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.77
     Void Stone:
-      total: 0.64
-      efficiency: 0.44
+      total: 0.63
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.83
     Spear of Desolation:
-      total: 0.55
+      total: 0.54
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.57
     Dreamer's Idol:
       total: 0.56
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -860,7 +860,7 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Stampede
+  - Void Stone
   - Soul Gem
   - Triton's Conch
   flex_slots:
@@ -868,8 +868,8 @@ builds:
   - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -883,29 +883,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bracer of The Abyss:
-      total: 0.44
+      total: 0.43
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.31
     Nimble Ring:
       total: 0.43
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.38
     Bragi's Harp:
-      total: 0.49
-      efficiency: 0.46
+      total: 0.48
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Stampede:
-      total: 0.49
-      efficiency: 0.52
+    Void Stone:
+      total: 0.48
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.52
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -913,8 +913,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.52
-      efficiency: 0.47
+      total: 0.51
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -924,18 +924,18 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Void Stone
   - Spear of Desolation
-  - Stampede
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Stampede
+  - Breastplate of Valor
   - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -950,13 +950,19 @@ builds:
   slot_scores:
     Genji's Guard:
       total: 0.54
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Breastplate of Valor:
+      total: 0.48
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
     Void Stone:
       total: 0.48
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -966,12 +972,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Stampede:
-      total: 0.49
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -979,8 +979,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.49
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -1015,26 +1015,26 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.56
-      efficiency: 0.56
+      total: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.57
     The Crusher:
-      total: 0.59
-      efficiency: 0.65
+      total: 0.58
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.53
     Pharaoh's Curse:
       total: 0.56
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -1045,8 +1045,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.6
-      efficiency: 0.47
+      total: 0.59
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -1062,8 +1062,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Lernaean Bow
   - Toxic Blade
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1081,8 +1081,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.56
-      efficiency: 0.56
+      total: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -1094,13 +1094,13 @@ builds:
       fit: 0.7
     Pharaoh's Curse:
       total: 0.59
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.61
     Shogun's Ofuda:
       total: 0.57
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -1111,8 +1111,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.58
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -1128,8 +1128,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
   - Dreamer's Idol
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Resolute Mantle — CC-immunity / cleanse
@@ -1148,7 +1148,7 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -1160,7 +1160,7 @@ builds:
       fit: 0.46
     Dreamer's Idol:
       total: 0.49
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -1171,8 +1171,8 @@ builds:
       pick: 0.0
       fit: 0.47
     Stampede:
-      total: 0.5
-      efficiency: 0.52
+      total: 0.48
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.48

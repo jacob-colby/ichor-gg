@@ -1,0 +1,118 @@
+# Expert judgements on the recommender's output.
+#
+# WHY THIS FILE EXISTS. Everything else in this project validates against
+# community build data, and docs/STATE.md §1 shows that data cannot adjudicate
+# the model's central claims: both of the headline gate's targets are also model
+# inputs, so the objective is maximised by deleting the model. §5 names the
+# absence of a second, non-circular gate as the highest-value thing left, and
+# says the fix "is not a modelling task".
+#
+# This is that second gate, in its cheapest possible form: a strong player looks
+# at a build and says what is wrong with it, and the claim is written down in a
+# shape a script can check. It is not a large sample and it is not blind. It is
+# the only signal here that is not made of the community's own build.
+#
+# HOW TO USE IT. `python -m smite.expert_review` replays every claim against the
+# CURRENT index and reports which still hold. A claim that has stopped holding
+# is not automatically a win — read what it says. `item-overweighted` resolving
+# because the item left the build is a win; it resolving because the whole build
+# changed underneath is a coincidence.
+#
+# SCHEMA. Each entry:
+#   reviewer     free text; who said it, at what level of play
+#   date         ISO date the judgement was made
+#   god / mode   what it is about; omit both for a claim about the whole model
+#   claim        one of the checkable kinds below, or `narrative` for prose
+#   detail       the specifics the checker reads
+#   quote        their own words, verbatim, so a paraphrase can't drift
+#   status       open | resolved | rejected — set by a human, never by a script
+#
+# CLAIM KINDS the checker understands:
+#   missing-item      detail.items should appear in this god's core and do not
+#   item-overweighted detail.items should NOT appear in this god's core
+#   narrative         prose only; recorded, never auto-checked
+
+reviews:
+  - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
+    date: 2026-08-09
+    god: Ullr
+    mode: Conquest
+    claim: missing-item
+    detail:
+      items: [Transcendence, Heartseeker, "Hydra's Lament", "Jotunn's Revenge"]
+    quote: >-
+      Ullr's build is almost always Transcendence, Heartseeker, Hydras,
+      Jotunn's, etc.
+    status: open
+    notes: >-
+      Partly addressed. At the time of the review the model's core was
+      Lernaean Bow / Berserker's Shield / Jotunn's / Riptalon / Damaru /
+      The Crusher, overlapping the community build on 2 of 6. Fixing the
+      stance-god ability scrape (wiki_parser._section_tables) gave Ullr a
+      measured kit for the first time — he reported n_scaling_abilities 0 —
+      and the core now also holds Heartseeker and Titan's Bane. Transcendence
+      is still ranked 25th of 40: it is a STACKING item whose listed stats are
+      deliberately below curve, which the gold model reads as poor value.
+      Diagnosed and reproducible: `price_stacks` in _weights.yaml prices a
+      persistent stack at its full-stack value and moves Transcendence to rank
+      6/95, residual +208 -> -222. It ships OFF because the coverage gate says
+      33.1% -> 28.8%. This claim is therefore open BY DECISION rather than for
+      want of a fix, and it is the sharpest case on record of the expert gate
+      and the coverage gate disagreeing about one named item.
+
+  - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
+    date: 2026-08-09
+    claim: item-overweighted
+    detail:
+      items: [Eye of Providence]
+      scope: support-solo
+    quote: >-
+      Eye of Providence seems to be overvalued because it's assuming you'll get
+      the gold from it.
+    status: resolved
+    notes: >-
+      Confirmed and fixed. Cost 2300 against a fitted stat price of 2550, so it
+      read as a 250g bargain — the discount is really the ward economy's price
+      tag. Across the 34 Support/Solo Conquest gods the model put it in 16
+      cores; those gods' own players buy it, in any slot or as any alternate,
+      on exactly one. Tagged `ward-economy` with a -0.15 conquest tag_bonus;
+      16 cores -> 4, and the leakage-free gate moved 29.3% -> 30.0%.
+
+  - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
+    date: 2026-08-09
+    claim: narrative
+    detail:
+      topic: build-coherence
+    quote: >-
+      It doesn't seem to consider the build as a whole and it's just
+      recommending the statistically best items. So when looking at the
+      community data it needs to consider item pairing over raw pick
+      percentage.
+    status: open
+    notes: >-
+      Real, and the sharpest single observation in the review. `assemble_core`
+      takes six independent arg-maxes, and for Ullr the items ranked 3rd
+      through 10th of 40 span 0.027 — the cut at six is close to arbitrary.
+      A set-level coherence term was built and measured against the
+      leakage-free gate and made it monotonically worse (32.1% -> 16.6% at full
+      strength); it ships off, with the numbers under `coherence` in
+      _weights.yaml. True item PAIRING is not derivable from the current
+      source at all: smitebrain gives per-slot marginals plus two alternates,
+      never a joint distribution. That needs match-level data.
+
+  - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
+    date: 2026-08-09
+    claim: narrative
+    detail:
+      topic: incomplete-builds
+    quote: >-
+      It also needs to factor in incomplete builds (for short matches or
+      forfeits, it shouldn't count those empty item slots as "games where
+      people didn't buy it" for items that are typically bought later).
+    status: resolved
+    notes: >-
+      Confirmed and fixed. Summing each slot's top pick and its two scraped
+      alternates across all 87 Conquest builds: 0.684 at slot 1 decaying to
+      0.222 at slot 6. Pick is now conditional on reaching the slot
+      (scoring.SLOT_REACH). 214 community slot picks stopped being read as
+      "rarely picked" by the underrated flag.

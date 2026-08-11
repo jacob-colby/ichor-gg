@@ -17,8 +17,8 @@ builds:
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -38,26 +38,26 @@ builds:
       pick: 0.0
       fit: 0.6
     Kinetic Cuirass:
-      total: 0.65
-      efficiency: 0.6
+      total: 0.64
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.7
     Shield Splitter:
-      total: 0.6
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.67
     Spectral Armor:
-      total: 0.59
-      efficiency: 0.59
+      total: 0.58
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.58
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -106,7 +106,7 @@ builds:
       fit: 0.58
     Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -117,14 +117,14 @@ builds:
       pick: 0.0
       fit: 0.82
     Spectral Armor:
-      total: 0.6
-      efficiency: 0.59
+      total: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.6
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Avenging Blade
+  - Stone of Binding
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
-  - Avenging Blade
+  - The Crusher
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,15 +163,15 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Avenging Blade:
-      total: 0.61
-      efficiency: 0.51
+    Stone of Binding:
+      total: 0.6
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.71
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -183,19 +183,19 @@ builds:
       fit: 0.88
     Void Stone:
       total: 0.66
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.88
     The Crusher:
-      total: 0.62
-      efficiency: 0.65
+      total: 0.61
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.58
     Amanita Charm:
-      total: 0.77
-      efficiency: 0.66
+      total: 0.76
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.71
+      total: 0.56
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -247,20 +247,20 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.75
-      efficiency: 0.66
+      total: 0.73
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.83
     Pharaoh's Curse:
       total: 0.61
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
       total: 0.59
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -294,25 +294,25 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
       total: 0.57
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
       total: 0.57
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.55
     Shield of the Phoenix:
-      total: 0.72
+      total: 0.71
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Erosion:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -344,8 +344,8 @@ builds:
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -365,26 +365,26 @@ builds:
       pick: 0.0
       fit: 0.6
     Kinetic Cuirass:
-      total: 0.65
-      efficiency: 0.6
+      total: 0.64
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.7
     Shield Splitter:
-      total: 0.6
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.67
     Spectral Armor:
-      total: 0.59
-      efficiency: 0.59
+      total: 0.58
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.58
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0

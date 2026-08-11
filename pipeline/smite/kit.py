@@ -48,7 +48,19 @@ def scaling_profile(god):
 
 def kit_stat_overlay(profile, god, include_off_type=False):
     """Offensive stat weights implied by the kit, or {} when confidence is low
-    (< 3 abilities with scaling — sparse scrapes like Ullr's stance kit).
+    (< 3 abilities with scaling).
+
+    The floor used to be reached by the three STANCE gods, and that was a
+    parser bug wearing a confidence threshold's clothes: Ullr, Artio and Merlin
+    render their kits inside the wiki's tab wrapper, which `_section_tables`
+    walked straight past, so all three arrived here with
+    `n_scaling_abilities: 0` and got no kit measurement at all. Fixed at the
+    source (see `wiki_parser._section_tables`) — they now measure 4, 4 and 9,
+    and Artio turns out to take 54% of her ability damage off Strength while
+    labelled magical, which makes her a hybrid scaler the model had no way to
+    see. The threshold itself stays: it is a real guard for a genuinely thin
+    scrape, it just should never have been load-bearing for a fifth of the
+    stance roster.
 
     `include_off_type` adds the power stat the god's `damage_type` label calls
     useless, weighted by the same formula from its own measured share. It is

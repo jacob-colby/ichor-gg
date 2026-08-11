@@ -377,3 +377,172 @@ def test_shipped_god_notes_carry_the_recovered_fields():
     for a in abilities:
         if "detail_kinds" in a:
             assert len(a["detail_kinds"]) == len(a["details"])
+
+
+# ── Stance gods: abilities nested inside the wiki's tab wrapper ─────────────
+#
+# Ullr, Artio and Merlin render their kits inside `div.img-tab-wrapper`, one
+# `div.img-tab-panel` per stance. A walk that only accepted top-level sibling
+# tables collected two tables for each of them (Basic Attack and Passive) and
+# none of the abilities — 28 ability tables invisible across the three gods,
+# which left all three reporting `n_scaling_abilities: 0` and so getting no
+# kit measurement in their god-fit at all.
+
+STANCE_HTML = """
+<h2><span id="Abilities">Abilities</span></h2>
+<table class="wikitable">
+  <tr><th><span>Passive</span><span>Weapon Master</span></th></tr>
+  <tr><td><ul><li>Cooldown: 1 seconds</li></ul></td></tr>
+</table>
+<div class="img-tab-wrapper">
+  <div class="img-tab-nav">
+    <span class="img-trigger active" data-target="Bow"></span>
+    <span class="img-trigger" data-target="Axe"></span>
+  </div>
+  <div class="img-tab-panel active">
+    <table class="wikitable">
+      <tr><th><span>1st Ability</span><span>Bladed Arrow</span></th></tr>
+      <tr><td><ul><li>Damage Scaling: 80% Strength</li></ul></td></tr>
+    </table>
+    <table class="wikitable">
+      <tr><th><span>Ultimate</span><span>Shared Ult</span></th></tr>
+      <tr><td><ul><li>Damage Scaling: 20% Strength</li></ul></td></tr>
+    </table>
+  </div>
+  <div class="img-tab-panel">
+    <table class="wikitable">
+      <tr><th><span>1st Ability</span><span>Thrown Axe</span></th></tr>
+      <tr><td><ul><li>Damage Scaling: 60% Strength</li></ul></td></tr>
+    </table>
+    <table class="wikitable">
+      <tr><th><span>Ultimate</span><span>Shared Ult</span></th></tr>
+      <tr><td><ul><li>Damage Scaling: 20% Strength</li></ul></td></tr>
+    </table>
+  </div>
+</div>
+"""
+
+
+def _stance_abilities():
+    from bs4 import BeautifulSoup
+    return wiki_parser._parse_abilities(BeautifulSoup(STANCE_HTML, "html.parser"))
+
+
+def test_parse_abilities_reaches_inside_the_stance_tab_wrapper():
+    names = [a["name"] for a in _stance_abilities()]
+    assert "Bladed Arrow" in names
+    assert "Thrown Axe" in names
+    # The un-nested table still lands, in document order, ahead of them.
+    assert names[0] == "Weapon Master"
+
+
+def test_parse_abilities_names_the_stance_each_one_belongs_to():
+    by_name = {a["name"]: a for a in _stance_abilities()}
+    assert by_name["Bladed Arrow"]["stance"] == "Bow"
+    assert by_name["Thrown Axe"]["stance"] == "Axe"
+    # A god with no stances carries no stance key at all, so nothing
+    # downstream has to learn a new shape for the other 84.
+    assert "stance" not in by_name["Weapon Master"]
+
+
+def test_parse_abilities_lists_a_shared_ability_once():
+    """The wiki repeats a stance-shared ability under every tab. Counting it
+    once per tab would weight `kit.scaling_profile` toward it, since that
+    averages over abilities."""
+    assert [a["name"] for a in _stance_abilities()].count("Shared Ult") == 1
+
+
+def test_parse_abilities_keeps_same_named_abilities_that_actually_differ():
+    """Merlin's Flicker is a DIFFERENT ability in each stance — Arcane heals,
+    Fire applies a burn, Ice cuts cooldowns — so name alone cannot be the
+    dedupe key. The details are what distinguish them."""
+    from bs4 import BeautifulSoup
+    html = STANCE_HTML.replace(
+        "<tr><th><span>Ultimate</span><span>Shared Ult</span></th></tr>\n"
+        "      <tr><td><ul><li>Damage Scaling: 20% Strength</li></ul></td></tr>",
+        "<tr><th><span>Ultimate</span><span>Shared Ult</span></th></tr>\n"
+        "      <tr><td><ul><li>Damage Scaling: 20% Strength</li><li>Slow: 20%</li></ul></td></tr>",
+        1)
+    names = [a["name"] for a in
+             wiki_parser._parse_abilities(BeautifulSoup(html, "html.parser"))]
+    assert names.count("Shared Ult") == 2
+
+
+# ── Stats an editor typed into the wrong infobox cell ───────────────────────
+
+PROSE_STATS_ITEM = """
+<table class="infobox">
+  <tr><th>Item Type</th><td>God Specific</td></tr>
+  <tr><th>Total Cost</th><td>2000</td></tr>
+  <tr><th>Stats</th><td></td></tr>
+  <tr><th>Passive Effect</th><td>Non-Aspect: 45 Strength 8 Pathfinding
+    Aspect: 400 Max Health 4 Health Regen 2 Mana Regen
+    Non-Aspect: Dart fires 5 projectiles and passes through 2 enemy gods</td></tr>
+</table>
+"""
+
+
+def test_parse_item_page_recovers_stats_an_editor_put_in_the_passive():
+    """Briskberry Acorn's `Stats:` cell is empty and its numbers sit in the
+    passive. `is_buildable` drops a statless item, so it was structurally
+    unbuildable while being Ratatoskr's most-picked opener at 30% — a pick the
+    model was forbidden to make, not a ranking it got wrong."""
+    r = wiki_parser.parse_item_page(PROSE_STATS_ITEM)
+    assert r["stats"] == {"Strength": "45", "Pathfinding": "8", "Max Health": "400",
+                          "Health Regen": "4", "Mana Regen": "2"}
+
+
+def test_prose_stat_recovery_ignores_numbers_in_ability_text():
+    """"fires 5 projectiles" and "2 enemy gods" must not become stats. The
+    closed stat vocabulary is the whole safety mechanism here."""
+    r = wiki_parser.parse_item_page(PROSE_STATS_ITEM)
+    assert "projectiles" not in r["stats"]
+    assert all(k in wiki_parser.ITEM_STAT_NAMES for k in r["stats"])
+
+
+def test_prose_stat_recovery_never_overrides_a_filled_stats_cell():
+    """It is a last resort. A properly-filled cell is authoritative, even when
+    the passive also names stats — which most passives do."""
+    html = """
+    <table class="infobox">
+      <tr><th>Total Cost</th><td>2500</td></tr>
+      <tr><th>Stats</th><td><b>60</b> Strength</td></tr>
+      <tr><th>Passive Effect</th><td>Over 75% Health: +30 Strength</td></tr>
+    </table>
+    """
+    assert wiki_parser.parse_item_page(html)["stats"] == {"Strength": "60"}
+
+
+def test_a_stat_only_item_gains_nothing_from_prose_recovery():
+    html = """
+    <table class="infobox">
+      <tr><th>Total Cost</th><td>2500</td></tr>
+      <tr><th>Stats</th><td><b>40</b> Strength</td></tr>
+    </table>
+    """
+    assert wiki_parser.parse_item_page(html)["stats"] == {"Strength": "40"}
+
+
+def test_a_negative_cost_is_a_sentinel_not_a_price():
+    """Genie's Lamp reads `Cost: -1` — it is not purchasable, Aladdin simply
+    has it. Stripping non-digits made that a ONE GOLD item, which is the Blink
+    Rune failure exactly: `cost - predicted_cost` reads a near-free item as the
+    best bargain in the game."""
+    html = """
+    <table class="infobox">
+      <tr><th>Item Type</th><td>God Specific</td></tr>
+      <tr><th>Cost</th><td>-1</td></tr>
+      <tr><th>Total Cost</th><td></td></tr>
+    </table>
+    """
+    assert wiki_parser.parse_item_page(html)["cost"] is None
+
+
+def test_a_zero_cost_is_still_a_price():
+    """Blink Rune genuinely costs 0. Only NEGATIVE is the sentinel."""
+    html = """
+    <table class="infobox">
+      <tr><th>Cost</th><td>0</td></tr>
+    </table>
+    """
+    assert wiki_parser.parse_item_page(html)["cost"] == 0

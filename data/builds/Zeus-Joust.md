@@ -76,11 +76,11 @@ builds:
   - Divine Ruin
   - Bragi's Harp
   - Spear of Desolation
+  - The Cosmic Horror
   - Spear of the Magus
   - Soul Gem
-  - Triton's Conch
   flex_slots:
-  - Triton's Conch
+  - The Cosmic Horror
   - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Bragi's Harp:
-      total: 0.53
-      efficiency: 0.46
+      total: 0.52
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -116,6 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
+    The Cosmic Horror:
+      total: 0.5
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Spear of the Magus:
       total: 0.51
       efficiency: 0.6
@@ -128,12 +134,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.5
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -164,8 +164,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.6
+      total: 0.54
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -177,18 +177,18 @@ builds:
       fit: 0.57
     Spectral Armor:
       total: 0.53
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.47
     Amanita Charm:
-      total: 0.78
-      efficiency: 0.66
+      total: 0.76
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.89
     Erosion:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -205,17 +205,17 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
-  - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Dreamer's Idol
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -229,7 +229,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.62
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -237,6 +237,12 @@ builds:
     The Cosmic Horror:
       total: 0.59
       efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Doom Orb:
+      total: 0.54
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -249,12 +255,6 @@ builds:
     Obsidian Shard:
       total: 0.57
       efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Dreamer's Idol:
-      total: 0.55
-      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -307,13 +307,13 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
       total: 0.54
-      efficiency: 0.46
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.48
-      efficiency: 0.47
+      total: 0.47
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Chronos' Pendant
-  - Bragi's Harp
   - Spear of Desolation
   - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Bragi's Harp
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -358,15 +358,21 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.47
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Genji's Guard:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.35
     Breastplate of Valor:
-      total: 0.5
-      efficiency: 0.65
+      total: 0.51
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -376,12 +382,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Bragi's Harp:
-      total: 0.47
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52

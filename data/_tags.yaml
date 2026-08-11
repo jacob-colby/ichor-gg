@@ -1,13 +1,27 @@
 # Effect-tags for the build recommender. Seeded 2026-07-16 by reading each
 # item's scraped `passive` text and assigning from the FIXED vocabulary:
 #   burst · execute · anti-heal · protection-shred · peel · wave-clear ·
-#   mobility · sustain · cc-immunity · aura · anti-crit
+#   mobility · sustain · cc-immunity · aura · anti-crit · ward-economy
 # Sidecar so item refresh never clobbers it. Hand-correctable — edit freely.
 #
 # An item with a purely-statistical passive (crit damage, +power, penetration,
 # cooldown reduction) correctly gets NO tag: its value is raw stats, already
 # captured by the efficiency + god-fit layers. Tags exist only for effects the
 # stat math can't see.
+#
+# `ward-economy` (added 2026-08-09) is the first tag that exists to mark value
+# the stat math WRONGLY SEES AS FREE, rather than value it misses. The game
+# prices these items' stats below curve because part of what you buy is a ward
+# engine; the gold model reads only the discount. Eye of Providence is 30/30
+# protections + 250 health for 2300 gold, which the fit prices at 2550 — a
+# 250g "bargain" that is really the ward economy's price tag, and one you
+# collect only by holding a free consumable slot and hunting enemy wards.
+#
+# Measured before tagging: across the 34 Support/Solo Conquest gods the model
+# put it in 16 cores; those gods' own players buy it, in any slot or as any
+# alternate, on exactly ONE. Arena already excluded it outright for having no
+# wards at all (see `modes.arena.excluded_items` in _weights.yaml) — this is
+# the same judgement made continuous for the mode where wards do exist.
 #
 # NEEDS MANUAL REVIEW — these items had an EMPTY passive field in the scrape,
 # so they were tagged [] without text to judge. Verify on patch days:
@@ -89,8 +103,8 @@ Dreamer's Idol: [cc-immunity]
 Eros' Bow: [aura]
 Erosion: [aura]
 Ethereal Staff: []
-Eye of Erebus: []
-Eye of Providence: []
+Eye of Erebus: [ward-economy]
+Eye of Providence: [ward-economy]
 Eye of the Storm: [peel]
 Freya's Tears: []
 Gauntlet of Thebes: []

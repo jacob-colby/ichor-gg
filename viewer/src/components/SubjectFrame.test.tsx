@@ -84,6 +84,30 @@ describe("SubjectFrame — a god is the subject", () => {
     render(frame({ god: ra, godName: "Ra" }));
     expect(screen.getByRole("link", { name: /All 87 gods/ })).toHaveAttribute("href", "#/");
   });
+
+  /* These tabs used to ride the navbar beside the wordmark and the search
+   * field, where readers took them for the site's global navigation and never
+   * found out that Kit, Items and Ranking were about the god they were looking
+   * at. Seating them inside the god's own block is the whole fix, so the seat
+   * is what this pins — not just the four links existing somewhere. */
+  it("seats a god's lenses inside the god's own block, not loose in the chrome", () => {
+    render(frame({ god: ra, godName: "Ra", lens: "builds" }));
+    const header = within(screen.getByTestId("subject-header"));
+    expect(header.getByRole("navigation", { name: "Ra views" })).toBeInTheDocument();
+    // And below the god it belongs to, not above them.
+    const heading = screen.getByRole("heading", { level: 1, name: "Ra" });
+    const tabs = screen.getByTestId("lens-tabs-strip");
+    expect(heading.compareDocumentPosition(tabs) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  /* The roster's lenses genuinely ARE global, so they keep the navbar seat and
+   * this strip stays a narrow-width fallback for them alone. */
+  it("leaves the roster's own lenses outside the header block", () => {
+    render(frame());
+    const header = within(screen.getByTestId("subject-header"));
+    expect(header.queryByRole("navigation")).not.toBeInTheDocument();
+    expect(screen.getByRole("navigation", { name: "Roster views" })).toBeInTheDocument();
+  });
 });
 
 /* The verdict used to live inside the builds view, so it vanished the moment

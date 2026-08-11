@@ -21,7 +21,8 @@ import type {
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel, orderBuilds } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { tierLabel } from "../lib/itemFilters";
-import { buildLedger, goldText, goldGap, type LedgerRow } from "../lib/ledger";
+import { buildLedger, goldText, ordinal, type LedgerRow } from "../lib/ledger";
+import { GodOnlyAsterisk, GodOnlyBadge } from "./GodOnlyMark";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
 import { getMine } from "../lib/mineStore";
 
@@ -38,7 +39,13 @@ const VS_LABELS: Record<string, string> = {
 const AXES: { key: keyof Omit<SlotScore, "total">; label: string; help: string }[] = [
   { key: "efficiency", label: "value", help: "Gold efficiency — stats returned per gold spent" },
   { key: "win", label: "win", help: "Community win rate with this item on this god" },
-  { key: "pick", label: "pick", help: "How often this god's players buy it" },
+  // Not the same number as the "% pick" printed beside it on the row, and the
+  // difference is the point. That one is the observation — the share of all
+  // tracked matches that ended holding the item. This one conditions on
+  // reaching the slot, because a sixth item is otherwise divided by a
+  // denominator most of which never bought a sixth item. See
+  // `scoring.SLOT_REACH`.
+  { key: "pick", label: "pick", help: "How often this god's players buy it, among matches that got that far" },
   { key: "fit", label: "fit", help: "How well the item's stats match this god's kit" },
 ];
 
@@ -102,7 +109,7 @@ function ScoreBar({ label, value, help }: { label: string; value: number; help?:
 function WhyScoreBlock({ score, measured, meta }: {
   score: SlotScore;
   measured: boolean;
-  meta?: { position: number; pickRate: number | null; winRate: number | null; gap: number | null };
+  meta?: { position: number; pickRate: number | null; winRate: number | null; modelPosition: number | null };
 }) {
   const axes = measured ? AXES : AXES.filter((a) => a.key !== "win" && a.key !== "pick");
   return (
@@ -125,12 +132,14 @@ function WhyScoreBlock({ score, measured, meta }: {
         <p className="mt-1.5 border-t border-line pt-1.5 text-label leading-relaxed text-faint">
           {meta ? (
             <>
-              Community buys it {meta.position}
+              Community buys it {ordinal(meta.position)}
               {meta.pickRate != null && <> · {Math.round(meta.pickRate * 100)}% pick</>}
               {meta.winRate != null && <> · {Math.round(meta.winRate * 100)}% win</>}
-              {meta.gap != null && Math.abs(meta.gap) >= 500 && (
-                <span className={meta.gap < 0 ? "text-under" : "text-premium"}>
-                  {" "}· {meta.gap < 0 ? "model buys it earlier" : "model buys it later"} by {goldText(Math.abs(meta.gap))}
+              {/* Only when the two orders actually disagree. Printing
+                  "community 3rd · model 3rd" would spend a line on agreement. */}
+              {meta.modelPosition != null && meta.modelPosition !== meta.position && (
+                <span className={meta.modelPosition < meta.position ? "text-under" : "text-premium"}>
+                  {" "}· model buys it {ordinal(meta.modelPosition)}
                 </span>
               )}
             </>
@@ -150,7 +159,7 @@ function ItemDetailCard({ item, name, score, measured = true, meta }: {
   name: string;
   score?: SlotScore;
   measured?: boolean;
-  meta?: { position: number; pickRate: number | null; winRate: number | null; gap: number | null };
+  meta?: { position: number; pickRate: number | null; winRate: number | null; modelPosition: number | null };
 }) {
   const scoreBlock = score && (
     <div className="mt-2 border-t border-line pt-2">
@@ -163,11 +172,14 @@ function ItemDetailCard({ item, name, score, measured = true, meta }: {
   return (
     <div>
       <div className="mb-1 flex items-baseline justify-between gap-2">
-        <span className="font-display text-body font-semibold text-ink">{item.name}</span>
+        <span className="font-display text-body font-semibold text-ink">
+          {item.name}{item.god && <GodOnlyAsterisk god={item.god} />}
+        </span>
         <span className="shrink-0 font-mono text-label text-faint">
           <span className="text-gold">{item.cost}g</span> · {tierLabel(item.tier)}
         </span>
       </div>
+      {item.god && <GodOnlyBadge god={item.god} className="mb-1.5" />}
       {Object.entries(item.stats || {}).map(([k, v]) => (
         <div key={k} className="flex justify-between text-small text-muted">
           <span>{k}</span><span className="font-mono text-ink">{v}</span>
@@ -239,7 +251,6 @@ function LedgerRowView({
    * community-sourced row. */
   alternates?: { name: string; pick_rate: number; win_rate: number }[];
 }) {
-  const gap = goldGap(row);
   const removed = row.status === "removed";
   const added = row.status === "added";
 
@@ -249,7 +260,7 @@ function LedgerRowView({
     row.cumulative != null ? `at ${goldText(row.cumulative)} spent` : null,
     row.score ? `model score ${row.score.total.toFixed(2)}` : null,
     row.metaPosition != null
-      ? `community buys it ${row.metaPosition}${row.metaPosition === 1 ? "st" : row.metaPosition === 2 ? "nd" : row.metaPosition === 3 ? "rd" : "th"}`
+      ? `community buys it ${ordinal(row.metaPosition)}`
       : showScores ? "community does not buy it" : null,
   ].filter(Boolean).join(", ");
 
@@ -272,7 +283,7 @@ function LedgerRowView({
         <span className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-1">
           <span className={`truncate text-body ${
             removed ? "text-muted line-through" : added ? "font-medium text-under" : "text-ink"}`}>
-            {row.name}
+            {row.name}{item?.god && <GodOnlyAsterisk god={item.god} />}
           </span>
           {added && <span className="text-micro font-semibold uppercase tracking-[0.06em] text-under">swap in</span>}
           {row.isFlex && row.status === "kept" && (
@@ -333,11 +344,11 @@ function LedgerRowView({
           {showScores && !removed && (
             row.metaPosition != null ? (
               <span>
-                meta buys <span className="font-mono">{row.metaPosition}</span>
+                meta buys <span className="font-mono">{ordinal(row.metaPosition)}</span>
                 {row.metaPickRate != null && <> · <span className="font-mono">{Math.round(row.metaPickRate * 100)}% pick</span></>}
-                {gap != null && Math.abs(gap) >= 500 && (
-                  <span className={gap < 0 ? " text-under" : " text-premium"}>
-                    {" "}· {gap < 0 ? "model buys earlier" : "model buys later"} by <span className="font-mono">{goldText(Math.abs(gap))}</span>
+                {row.modelPosition != null && row.modelPosition !== row.metaPosition && (
+                  <span className={row.modelPosition < row.metaPosition ? " text-under" : " text-premium"}>
+                    {" "}· model buys <span className="font-mono">{ordinal(row.modelPosition)}</span>
                   </span>
                 )}
               </span>
@@ -366,7 +377,8 @@ function LedgerRowView({
             score={row.score}
             measured={measuredAxes}
             meta={showScores && row.metaPosition != null
-              ? { position: row.metaPosition, pickRate: row.metaPickRate, winRate: row.metaWinRate, gap }
+              ? { position: row.metaPosition, pickRate: row.metaPickRate, winRate: row.metaWinRate,
+                  modelPosition: row.modelPosition }
               : undefined}
           />
         </div>
@@ -719,7 +731,7 @@ export function DetailPanel({
                     <li key={m.name}>
                       <a
                         href={toHash.item(m.name)}
-                        aria-label={`${m.name}, bought ${m.position} by the community at ${goldText(m.cumulative)} spent, not in this build`}
+                        aria-label={`${m.name}, bought ${ordinal(m.position)} by the community at ${goldText(m.cumulative)} spent, not in this build`}
                         className="press grid w-full grid-cols-[58px_28px_minmax(0,1fr)_auto] items-center gap-x-2.5 rounded-md py-1.5 pr-1.5 text-left transition-colors duration-150 ease-standard hover:bg-bg1"
                       >
                         <span aria-hidden="true" className="self-stretch border-r border-line pr-2.5 text-right font-mono text-micro leading-5 text-faint">

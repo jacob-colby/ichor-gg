@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   flex_slots:
+  - Briskberry Acorn
   - Heartseeker
-  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.75
-      efficiency: 0.98
+      total: 0.74
+      efficiency: 0.96
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Briskberry Acorn:
+      total: 0.73
+      efficiency: 0.94
       win: 0.5
       pick: 0.0
       fit: 0.52
     Thistlethorn Acorn:
-      total: 0.78
-      efficiency: 0.95
+      total: 0.76
+      efficiency: 0.92
       win: 0.5
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
       total: 0.83
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Pendulum Blade:
-      total: 0.71
-      efficiency: 0.42
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.82
-      efficiency: 0.65
+      total: 0.81
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.73
-      efficiency: 0.46
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -74,14 +74,14 @@ builds:
   archetype: burst
   slot_order:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Hydra's Lament
   - Pendulum Blade
   - The Crusher
   flex_slots:
-  - Pendulum Blade
-  - Hydra's Lament
+  - Ashwhorl Acorn
+  - Briskberry Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -99,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.6
-      efficiency: 0.98
+      total: 0.59
+      efficiency: 0.96
+      win: 0.5
+      pick: 0.0
+      fit: 0.22
+    Briskberry Acorn:
+      total: 0.58
+      efficiency: 0.94
       win: 0.5
       pick: 0.0
       fit: 0.22
     Thistlethorn Acorn:
-      total: 0.7
-      efficiency: 0.95
+      total: 0.68
+      efficiency: 0.92
       win: 0.5
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
       total: 0.72
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Hydra's Lament:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Pendulum Blade:
-      total: 0.6
-      efficiency: 0.42
+      total: 0.59
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.78
     The Crusher:
-      total: 0.65
-      efficiency: 0.65
+      total: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -139,21 +139,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
-  - Eye of Providence
   - Kinetic Cuirass
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Erosion
   - Kinetic Cuirass
-  - Eye of Providence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -164,32 +164,32 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.71
-      efficiency: 0.98
+      total: 0.7
+      efficiency: 0.96
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Briskberry Acorn:
+      total: 0.69
+      efficiency: 0.94
       win: 0.5
       pick: 0.0
       fit: 0.44
     Thistlethorn Acorn:
-      total: 0.71
-      efficiency: 0.95
+      total: 0.7
+      efficiency: 0.92
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Eye of Providence:
-      total: 0.59
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Kinetic Cuirass:
       total: 0.63
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.66
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -230,37 +230,37 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.83
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.77
-      efficiency: 0.53
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     Pendulum Blade:
       total: 0.71
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.82
-      efficiency: 0.65
+      total: 0.81
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.73
-      efficiency: 0.46
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
     Titan's Bane:
       total: 0.7
-      efficiency: 0.46
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -275,18 +275,18 @@ builds:
   - Riptalon
   - Silverbranch Bow
   flex_slots:
-  - Thistlethorn Acorn
   - Silverbranch Bow
+  - Thistlethorn Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -294,26 +294,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.71
+      total: 0.7
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.99
     Ashwhorl Acorn:
-      total: 0.73
-      efficiency: 0.98
+      total: 0.72
+      efficiency: 0.96
       win: 0.5
       pick: 0.0
       fit: 0.48
     Thistlethorn Acorn:
-      total: 0.63
-      efficiency: 0.95
+      total: 0.61
+      efficiency: 0.92
       win: 0.5
       pick: 0.0
       fit: 0.31
     Tyrfing:
-      total: 0.63
-      efficiency: 0.47
+      total: 0.62
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -359,38 +359,38 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Thistlethorn Acorn:
-      total: 0.8
-      efficiency: 0.95
+      total: 0.78
+      efficiency: 0.92
       win: 0.5
       pick: 0.0
       fit: 0.65
     Genji's Guard:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.5
     Breastplate of Valor:
       total: 0.58
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
       total: 0.75
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.85
     Hydra's Lament:
-      total: 0.68
-      efficiency: 0.61
+      total: 0.66
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.75
     Pendulum Blade:
-      total: 0.64
-      efficiency: 0.42
+      total: 0.63
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -399,14 +399,14 @@ builds:
   archetype: model
   slot_order:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   flex_slots:
+  - Briskberry Acorn
   - Heartseeker
-  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -424,38 +424,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.75
-      efficiency: 0.98
+      total: 0.74
+      efficiency: 0.96
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Briskberry Acorn:
+      total: 0.73
+      efficiency: 0.94
       win: 0.5
       pick: 0.0
       fit: 0.52
     Thistlethorn Acorn:
-      total: 0.78
-      efficiency: 0.95
+      total: 0.76
+      efficiency: 0.92
       win: 0.5
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
       total: 0.83
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Pendulum Blade:
-      total: 0.71
-      efficiency: 0.42
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.82
-      efficiency: 0.65
+      total: 0.81
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.73
-      efficiency: 0.46
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

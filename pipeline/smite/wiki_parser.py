@@ -111,7 +111,24 @@ def parse_god_page(html: str) -> dict:
 
 
 def _section_tables(soup, heading_id: str) -> list:
-    """wikitable elements between an <h2 id=heading_id> and the next <h2>."""
+    """wikitable elements between an <h2 id=heading_id> and the next <h2>,
+    including ones NESTED inside a sibling rather than being one.
+
+    The nesting is not a curiosity — it is how the wiki renders every
+    STANCE god, and reading only top-level siblings lost their entire kit.
+    Ullr, Artio and Merlin put their real abilities inside a
+    `div.img-tab-wrapper`, one `div.img-tab-panel` per stance, so a walk that
+    only accepted `sibling.name == "table"` collected exactly two tables for
+    each of them — Basic Attack and Passive — and none of the abilities.
+
+    Measured on the cached HTML: 28 ability tables were invisible this way,
+    8 for Ullr (Bow + Axe), 8 for Artio, 12 for Merlin (Arcane + Fire + Ice).
+    Downstream that is not a cosmetic gap. `kit.scaling_profile` counts
+    abilities carrying a scaling line, so all three gods reported
+    `n_scaling_abilities: 0`; `kit_stat_overlay` returns {} below 3, so their
+    god-fit fell back to the role label alone with no measurement in it at
+    all, and `scoring.is_hybrid_scaler` could never fire for them. Ullr is the
+    god a Masters player picked out as the recommender's worst output."""
     heading = soup.find(id=heading_id)
     if heading is None:
         return []
@@ -121,7 +138,36 @@ def _section_tables(soup, heading_id: str) -> list:
             break
         if sibling.name == "table" and "wikitable" in (sibling.get("class") or []):
             tables.append(sibling)
+        else:
+            # `find_all` is document order, so a wrapper's panels arrive in the
+            # order the page presents them (first stance first).
+            tables.extend(sibling.find_all("table", class_="wikitable"))
     return tables
+
+
+def _stance_of(table) -> str | None:
+    """Which stance tab this ability table sits under, or None for a god with
+    no stances.
+
+    The panel carries no label of its own — the readable name lives on the
+    matching nav trigger's `data-target` ("Bow", "Axe", "Arcane", …) — so the
+    two are paired by position within the wrapper, which is what makes the tab
+    UI work in the first place."""
+    panel = table.find_parent("div", class_="img-tab-panel")
+    if panel is None:
+        return None
+    wrapper = panel.find_parent("div", class_="img-tab-wrapper")
+    if wrapper is None:
+        return None
+    panels = wrapper.find_all("div", class_="img-tab-panel")
+    triggers = wrapper.find_all("span", class_="img-trigger")
+    try:
+        index = panels.index(panel)
+    except ValueError:
+        return None
+    if index >= len(triggers):
+        return None
+    return triggers[index].get("data-target") or None
 
 
 # Control text the wiki renders inside the ability table itself. It is UI, not
@@ -191,6 +237,16 @@ def _normalize_colons(text: str) -> str:
 
 def _parse_abilities(soup) -> list:
     abilities = []
+    #: (slot, name, details) already emitted. A stance god's shared ability is
+    #: repeated once per tab, and the repeat is only sometimes a duplicate:
+    #: Merlin's Elemental Mastery is byte-identical in all three stances, while
+    #: his Flicker is a DIFFERENT ability in each (Arcane heals, Fire applies
+    #: Radiate's burn, Ice cuts cooldowns). Keying on the details rather than
+    #: on the name keeps all three Flickers and collapses the one that really
+    #: is the same ability listed three times — which matters because
+    #: `kit.scaling_profile` averages over abilities, so a triple-counted one
+    #: would weight the kit toward itself.
+    seen = set()
     for table in _section_tables(soup, "Abilities"):
         header_th = table.find("th")
         if header_th is None:
@@ -239,6 +295,17 @@ def _parse_abilities(soup) -> list:
         if description:
             ability["description"] = description
 
+        key = (ability["slot"], ability["name"], tuple(details))
+        if key in seen:
+            continue
+        seen.add(key)
+
+        # Recorded only where it exists, so the 84 gods without stances carry
+        # no empty field and nothing downstream has to learn a new shape.
+        stance = _stance_of(table)
+        if stance:
+            ability["stance"] = stance
+
         abilities.append(ability)
     return abilities
 
@@ -251,6 +318,71 @@ def _parse_aspects(soup) -> list:
     if len(dds) < 2:
         return []
     return [{"name": _clean(dds[0].get_text()), "kit_changes": _clean(dds[1].get_text())}]
+
+
+def _parse_cost(text: str):
+    """A gold cost from an infobox cell, or None when there isn't one.
+
+    Stripping non-digits and calling `int` is what this used to do, and it
+    turned the wiki's `-1` sentinel into a one-gold item. Genie's Lamp reads
+    `Cost: -1` with `Total Cost:` blank — it is not purchasable, Aladdin simply
+    has it — and it shipped priced at 1 gold. That is the Blink Rune failure
+    exactly (`scoring.is_buildable`): a near-free item is maximally
+    "undervalued" by `cost - predicted_cost`, so the arithmetic reads the
+    cheapest thing in the game as the best bargain in it.
+
+    A negative cost is a sentinel, never a price, so it returns None and the
+    item is treated as unpriced rather than as free."""
+    m = re.search(r"-?\d+", text or "")
+    if not m:
+        return None
+    value = int(m.group())
+    return value if value >= 0 else None
+
+
+# Every stat name the corpus uses. A closed vocabulary is what makes
+# `_stats_from_prose` safe: it matches "45 Strength" and refuses "5 projectiles",
+# so recovering stats from prose can't invent a stat out of ability text.
+# Longest-first so "Max Health" wins over a hypothetical "Health".
+ITEM_STAT_NAMES = (
+    "Physical Protection", "Magical Protection", "Critical Chance",
+    "Cooldown Rate", "Movement Speed", "Attack Damage", "Attack Speed",
+    "Health Regen", "Intelligence", "Mana Regen", "Max Health", "Max Mana",
+    "Penetration", "Pathfinding", "Dampening", "Lifesteal", "Strength",
+    "Tenacity", "Plating", "Echo",
+)
+_PROSE_STAT_RE = re.compile(
+    r"(?<![\w.])(\d+(?:\.\d+)?%?)\s+(" + "|".join(ITEM_STAT_NAMES) + r")\b")
+
+
+def _stats_from_prose(text: str) -> dict:
+    """Stats an editor typed into the Passive Effect cell instead of Stats.
+
+    A wiki data-entry quirk, not a parsing failure on our side: Briskberry
+    Acorn's infobox has `Stats:` EMPTY and `Passive Effect: Non-Aspect: 45
+    Strength 8 Pathfinding Aspect: 400 Max Health 4 Health Regen 2 Mana Regen
+    <then the real ability prose>`. Its two sibling acorns have the identical
+    stat shape (Strength 45 + Max Health 400 + two extras) filled in properly,
+    so this is one page formatted differently, not a different kind of item.
+
+    The cost of not recovering them is total. `scoring.is_buildable` excludes a
+    statless item outright — correctly, since efficiency and fit are both
+    functions of `stats` and would otherwise be reading an empty dict — so
+    Briskberry Acorn was structurally unbuildable while being the community's
+    single most-picked opening item for Ratatoskr at 30%. Not a ranking the
+    model got wrong; a pick it was forbidden to make.
+
+    BOTH aspect branches are taken, as a union. It reads like double-counting
+    and isn't: the sibling acorns' own `Stats:` cells list stats from both
+    branches too (Ashwhorl carries Attack Speed and Tenacity, Thistlethorn
+    Lifesteal and Cooldown Rate, both alongside the shared Strength and Max
+    Health), so the union is what the wiki means by an acorn's stat line — the
+    Non-Aspect/Aspect labels here are formatting on the ability changes that
+    follow, which the editor let run backwards over the stats.
+
+    Only ever called when `Stats:` came back empty, so it can never override a
+    properly-filled cell."""
+    return {name: value for value, name in _PROSE_STAT_RE.findall(text or "")}
 
 
 def parse_item_page(html: str) -> dict:
@@ -273,11 +405,9 @@ def parse_item_page(html: str) -> dict:
             m = re.search(r"Tier (\d)", td.get_text())
             result["tier"] = int(m.group(1)) if m else (_clean(td.get_text()) or None)
         elif label == "Cost":
-            digits = re.sub(r"\D", "", td.get_text())
-            base_cost = int(digits) if digits else None
+            base_cost = _parse_cost(td.get_text())
         elif label == "Total Cost":
-            digits = re.sub(r"\D", "", td.get_text())
-            total_cost = int(digits) if digits else None
+            total_cost = _parse_cost(td.get_text())
         elif label == "Passive Effect":
             passive_text = _clean(td.get_text())
         elif label == "Active Effect":
@@ -301,6 +431,14 @@ def parse_item_page(html: str) -> dict:
     effect_parts = [t for t in (passive_text, active_text) if t]
     if effect_parts:
         result["passive"] = " ".join(effect_parts)
+
+    # Last resort only — see `_stats_from_prose`. An empty `Stats:` cell beside
+    # a passive that names stats is an editing slip on the wiki, and the
+    # alternative to reading it is shipping the item unbuildable.
+    if not result.get("stats"):
+        recovered = _stats_from_prose(passive_text)
+        if recovered:
+            result["stats"] = recovered
 
     result["image_url"] = _extract_image_url(infobox)
     owner = god_specific_owner(result["image_url"])

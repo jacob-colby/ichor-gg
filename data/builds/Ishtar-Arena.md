@@ -13,8 +13,8 @@ builds:
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
-  - Amanita Charm
   - Pharaoh's Curse
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -32,14 +32,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.6
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.66
     Lernaean Bow:
-      total: 0.66
-      efficiency: 0.56
+      total: 0.65
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -50,20 +50,20 @@ builds:
       pick: 0.0
       fit: 0.7
     Demon Blade:
-      total: 0.63
-      efficiency: 0.39
+      total: 0.62
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.87
     Amanita Charm:
-      total: 0.61
-      efficiency: 0.66
+      total: 0.59
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.55
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.58
+      total: 0.59
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -99,14 +99,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.63
-      efficiency: 0.56
+      total: 0.62
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.7
     Rage:
       total: 0.49
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -118,19 +118,19 @@ builds:
       fit: 0.68
     Damaru:
       total: 0.58
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.57
     Demon Blade:
       total: 0.63
-      efficiency: 0.39
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.88
     Pharaoh's Curse:
       total: 0.59
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -155,8 +155,8 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -164,37 +164,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.62
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.71
     Stampede:
-      total: 0.6
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.68
     Pharaoh's Curse:
       total: 0.67
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.77
     Shogun's Ofuda:
       total: 0.65
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.77
     Umbral Link:
-      total: 0.63
+      total: 0.64
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -210,7 +210,7 @@ builds:
   - Riptalon
   - The Crusher
   flex_slots:
-  - Jotunn's Revenge
+  - Void Shield
   - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -236,7 +236,7 @@ builds:
       fit: 0.85
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -248,7 +248,7 @@ builds:
       fit: 0.7
     Void Stone:
       total: 0.57
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.89
     The Crusher:
-      total: 0.63
-      efficiency: 0.65
+      total: 0.62
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -294,14 +294,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.66
-      efficiency: 0.55
+      total: 0.65
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.77
     Lernaean Bow:
-      total: 0.61
-      efficiency: 0.56
+      total: 0.6
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -312,8 +312,8 @@ builds:
       pick: 0.0
       fit: 0.8
     Tyrfing:
-      total: 0.62
-      efficiency: 0.47
+      total: 0.61
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Amanita Charm:
-      total: 0.61
-      efficiency: 0.66
+      total: 0.59
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -340,8 +340,8 @@ builds:
   - Hydra's Lament
   - Pharaoh's Curse
   flex_slots:
-  - Lernaean Bow
   - Genji's Guard
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -359,38 +359,38 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.53
-      efficiency: 0.56
+      total: 0.52
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.5
     Genji's Guard:
       total: 0.52
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.33
     Jotunn's Revenge:
       total: 0.54
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.43
     Shield of the Phoenix:
-      total: 0.58
+      total: 0.57
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.58
     Hydra's Lament:
-      total: 0.57
-      efficiency: 0.61
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.53
     Pharaoh's Curse:
-      total: 0.54
-      efficiency: 0.58
+      total: 0.53
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -405,8 +405,8 @@ builds:
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
-  - Amanita Charm
   - Pharaoh's Curse
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -424,14 +424,14 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.6
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.66
     Lernaean Bow:
-      total: 0.66
-      efficiency: 0.56
+      total: 0.65
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -442,20 +442,20 @@ builds:
       pick: 0.0
       fit: 0.7
     Demon Blade:
-      total: 0.63
-      efficiency: 0.39
+      total: 0.62
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.87
     Amanita Charm:
-      total: 0.61
-      efficiency: 0.66
+      total: 0.59
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.55
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.58
+      total: 0.59
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.62

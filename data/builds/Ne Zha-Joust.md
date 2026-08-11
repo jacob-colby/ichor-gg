@@ -33,37 +33,37 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.83
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Hydra's Lament:
-      total: 0.69
-      efficiency: 0.61
+      total: 0.67
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.77
     The Reaper:
-      total: 0.77
-      efficiency: 0.53
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     Pendulum Blade:
       total: 0.71
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.76
-      efficiency: 0.65
+      total: 0.75
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.88
     Heartseeker:
-      total: 0.67
-      efficiency: 0.46
+      total: 0.66
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -100,37 +100,37 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.72
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.78
     Hydra's Lament:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.54
     The Reaper:
-      total: 0.67
-      efficiency: 0.53
+      total: 0.66
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.81
     Pendulum Blade:
-      total: 0.6
-      efficiency: 0.42
+      total: 0.59
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.78
     The Crusher:
-      total: 0.65
-      efficiency: 0.65
+      total: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.56
-      efficiency: 0.46
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -171,7 +171,7 @@ builds:
       fit: 0.52
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -182,14 +182,14 @@ builds:
       pick: 0.0
       fit: 0.77
     Spectral Armor:
-      total: 0.58
-      efficiency: 0.59
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.56
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -230,37 +230,37 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.83
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.77
-      efficiency: 0.53
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     Pendulum Blade:
       total: 0.71
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.8
-      efficiency: 0.65
+      total: 0.79
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.95
     Heartseeker:
-      total: 0.71
-      efficiency: 0.46
+      total: 0.7
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.95
     Titan's Bane:
-      total: 0.66
-      efficiency: 0.46
+      total: 0.65
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -275,7 +275,7 @@ builds:
   - Riptalon
   - Silverbranch Bow
   flex_slots:
-  - Silverbranch Bow
+  - The Reaper
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -300,20 +300,20 @@ builds:
       pick: 0.0
       fit: 0.94
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.65
+      total: 0.54
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.42
     Tyrfing:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.74
     The Reaper:
-      total: 0.6
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -350,8 +350,8 @@ builds:
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -359,20 +359,20 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.5
     Breastplate of Valor:
       total: 0.58
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
       total: 0.75
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.75
     Hydra's Lament:
-      total: 0.68
-      efficiency: 0.61
+      total: 0.66
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.75
     Pendulum Blade:
-      total: 0.64
-      efficiency: 0.42
+      total: 0.63
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -425,37 +425,37 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.83
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 1.0
     Hydra's Lament:
-      total: 0.69
-      efficiency: 0.61
+      total: 0.67
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.77
     The Reaper:
-      total: 0.77
-      efficiency: 0.53
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     Pendulum Blade:
       total: 0.71
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.76
-      efficiency: 0.65
+      total: 0.75
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.88
     Heartseeker:
-      total: 0.67
-      efficiency: 0.46
+      total: 0.66
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.88

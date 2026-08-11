@@ -39,25 +39,25 @@ builds:
       fit: 0.74
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.45
     Bragi's Harp:
       total: 0.58
-      efficiency: 0.46
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.71
     The Crusher:
-      total: 0.55
-      efficiency: 0.65
+      total: 0.54
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.45
     Pharaoh's Curse:
-      total: 0.52
-      efficiency: 0.58
+      total: 0.51
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -80,8 +80,8 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Spear of Desolation
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -106,13 +106,13 @@ builds:
       fit: 0.74
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.56
     Bragi's Harp:
-      total: 0.54
-      efficiency: 0.46
+      total: 0.53
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -123,8 +123,8 @@ builds:
       pick: 0.0
       fit: 0.56
     The Crusher:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -158,8 +158,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -170,26 +170,26 @@ builds:
       pick: 0.0
       fit: 0.72
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.71
+      total: 0.54
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.4
     Amanita Charm:
-      total: 0.75
-      efficiency: 0.66
+      total: 0.73
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.84
     Pharaoh's Curse:
       total: 0.59
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.6
     Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.53
+      total: 0.56
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -236,7 +236,7 @@ builds:
       fit: 0.84
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -253,8 +253,8 @@ builds:
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.6
-      efficiency: 0.65
+      total: 0.59
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -275,7 +275,7 @@ builds:
   - Silverbranch Bow
   - Soul Gem
   flex_slots:
-  - Silverbranch Bow
+  - Tyrfing
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
@@ -294,20 +294,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.63
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.85
     Tyrfing:
-      total: 0.55
-      efficiency: 0.47
+      total: 0.54
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.63
     Bragi's Harp:
-      total: 0.54
-      efficiency: 0.46
+      total: 0.53
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -365,20 +365,20 @@ builds:
       pick: 0.0
       fit: 0.68
     Genji's Guard:
-      total: 0.53
-      efficiency: 0.72
+      total: 0.52
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.34
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.6
     Hydra's Lament:
-      total: 0.57
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -431,25 +431,25 @@ builds:
       fit: 0.74
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.45
     Bragi's Harp:
       total: 0.58
-      efficiency: 0.46
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.71
     The Crusher:
-      total: 0.55
-      efficiency: 0.65
+      total: 0.54
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.45
     Pharaoh's Curse:
-      total: 0.52
-      efficiency: 0.58
+      total: 0.51
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.46

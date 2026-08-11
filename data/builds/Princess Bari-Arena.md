@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.59
-      efficiency: 0.56
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -44,14 +44,14 @@ builds:
       pick: 0.0
       fit: 0.73
     Bragi's Harp:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.73
     Pharaoh's Curse:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -62,8 +62,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -76,16 +76,16 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
+  - Spear of Desolation
   - The Crusher
-  - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - Lernaean Bow
-  - Dreamer's Idol
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -99,8 +99,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.56
-      efficiency: 0.56
+      total: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -112,22 +112,22 @@ builds:
       fit: 0.74
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.65
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.56
     The Crusher:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Dreamer's Idol:
-      total: 0.54
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -138,19 +138,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Erosion
-  - Stampede
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -158,14 +158,20 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Amanita Charm:
-      total: 0.8
-      efficiency: 0.66
+      total: 0.79
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.95
@@ -175,21 +181,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Stampede:
-      total: 0.58
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Pharaoh's Curse:
       total: 0.64
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.71
     Shogun's Ofuda:
       total: 0.62
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -236,7 +236,7 @@ builds:
       fit: 0.84
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -247,14 +247,14 @@ builds:
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.6
-      efficiency: 0.65
+      total: 0.59
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.56
     Dreamer's Idol:
-      total: 0.59
-      efficiency: 0.49
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -294,14 +294,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.59
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.64
     Lernaean Bow:
-      total: 0.57
-      efficiency: 0.56
+      total: 0.56
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -319,7 +319,7 @@ builds:
       fit: 0.87
     Pharaoh's Curse:
       total: 0.56
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -366,25 +366,25 @@ builds:
       fit: 0.66
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.59
     Hydra's Lament:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.59
     Pharaoh's Curse:
       total: 0.55
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -425,25 +425,25 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.58
-      efficiency: 0.56
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.59
     Bragi's Harp:
-      total: 0.58
-      efficiency: 0.46
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.62
-      efficiency: 0.65
+      total: 0.61
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.63
-      efficiency: 0.47
+      total: 0.62
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -464,14 +464,14 @@ builds:
   archetype: str-int
   slot_order:
   - Lernaean Bow
+  - Toxic Blade
   - Jotunn's Revenge
   - Bragi's Harp
-  - The Crusher
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Jotunn's Revenge
-  - The Crusher
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,35 +483,35 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.6
-      efficiency: 0.56
+      total: 0.59
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
-      total: 0.6
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
-    The Crusher:
-      total: 0.57
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -519,8 +519,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.58
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -554,8 +554,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.59
-      efficiency: 0.56
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -566,14 +566,14 @@ builds:
       pick: 0.0
       fit: 0.73
     Bragi's Harp:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.73
     Pharaoh's Curse:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -584,8 +584,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.67

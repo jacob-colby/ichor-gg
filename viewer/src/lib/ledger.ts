@@ -20,6 +20,15 @@ export interface LedgerRow {
   cumulative: number | null;
   score?: SlotScore;
   isFlex: boolean;
+  /** 1-based position in the MODEL's own build order — counted over purchased
+   * slots only, so a struck-through removed slot doesn't shift the numbers the
+   * reader can see. Null on a removed row, which is not bought at all.
+   *
+   * This is the same spine `cumulative` runs on, stated as an ordinal. The row
+   * used to compare the two orders in gold ("model buys later by 2,550g"),
+   * which is precise and answers a question nobody asks: a build is bought in
+   * slots, and "sixth" is the unit players actually think and talk in. */
+  modelPosition: number | null;
   /** 1-based position in the community's own build order, if they buy it. */
   metaPosition: number | null;
   metaPickRate: number | null;
@@ -113,7 +122,11 @@ export function buildLedger({
   const purchased = preview.filter((s) => s.status !== "removed");
   const purchasedGold = runningGold(purchased.map((s) => s.name), itemsByName);
   const goldByName = new Map<string, number | null>();
-  purchased.forEach((s, i) => { if (!goldByName.has(s.name)) goldByName.set(s.name, purchasedGold[i]); });
+  const positionByName = new Map<string, number>();
+  purchased.forEach((s, i) => {
+    if (!goldByName.has(s.name)) goldByName.set(s.name, purchasedGold[i]);
+    if (!positionByName.has(s.name)) positionByName.set(s.name, i + 1);
+  });
 
   // The community's slot ALTERNATES, keyed by item, keeping the best sighting.
   // Mirrors pipeline `scoring.lookup_rates` and `build_index.popular_items`,
@@ -146,6 +159,7 @@ export function buildLedger({
       cumulative: slot.status === "removed" ? null : goldByName.get(slot.name) ?? null,
       score: scores?.[slot.name],
       isFlex: !!flexSlots?.includes(slot.name),
+      modelPosition: slot.status === "removed" ? null : positionByName.get(slot.name) ?? null,
       metaPosition: metaIdx >= 0 ? metaIdx + 1 : null,
       metaPickRate: rates?.pick_rate ?? null,
       metaWinRate: rates?.win_rate ?? null,
@@ -193,9 +207,12 @@ export function goldText(v: number | null | undefined): string {
   return `${v.toLocaleString("en-US")}g`;
 }
 
-/** How far apart the two sources are on *when* to buy an item, in gold.
- * Null when either side doesn't buy it, or a cost is missing. */
-export function goldGap(row: LedgerRow): number | null {
-  if (row.cumulative == null || row.metaCumulative == null) return null;
-  return row.cumulative - row.metaCumulative;
+/** "1st", "2nd", "6th" — a build is six slots long, so no 11-13 special case
+ * can ever fire here, but it is handled anyway rather than left as a trap for
+ * the first caller who counts something longer. */
+export function ordinal(n: number): string {
+  const rem100 = n % 100;
+  if (rem100 >= 11 && rem100 <= 13) return `${n}th`;
+  const suffix = { 1: "st", 2: "nd", 3: "rd" }[n % 10] ?? "th";
+  return `${n}${suffix}`;
 }

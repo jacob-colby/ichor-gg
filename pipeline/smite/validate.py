@@ -64,7 +64,8 @@ def god_metrics(god, items, build_note, weights, tags_map, eff_scores, items_by_
     score = {r["item"]: r["total"] for r in rows}
     core = assemble.assemble_core(rows, items_by_name, n=6,
                                   max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
-                                  stat_caps=weights.get("stat_caps"))
+                                  stat_caps=weights.get("stat_caps"),
+                                  **assemble.coherence_args(items, weights))
     community = [c for c in _community_slots(build_note)
                  if c.get("name") in score and c.get("win_rate") is not None]
     names = [c["name"] for c in community]

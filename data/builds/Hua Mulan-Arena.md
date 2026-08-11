@@ -13,8 +13,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Stampede
   - Kinetic Cuirass
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -33,13 +33,13 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -50,20 +50,20 @@ builds:
       pick: 0.0
       fit: 0.84
     Stampede:
-      total: 0.63
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.75
     Pharaoh's Curse:
       total: 0.66
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.74
     Shogun's Ofuda:
       total: 0.63
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -117,20 +117,20 @@ builds:
       pick: 0.0
       fit: 0.82
     Stampede:
-      total: 0.64
-      efficiency: 0.52
+      total: 0.62
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.76
     Pharaoh's Curse:
       total: 0.67
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.76
     Shogun's Ofuda:
       total: 0.64
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -177,13 +177,13 @@ builds:
       fit: 0.96
     Void Stone:
       total: 0.7
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.96
     Amanita Charm:
-      total: 0.81
-      efficiency: 0.66
+      total: 0.79
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.95
@@ -195,7 +195,7 @@ builds:
       fit: 0.7
     Pharaoh's Curse:
       total: 0.6
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Golden Blade
   - Toxic Blade
   - Riptalon
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Golden Blade
   - Toxic Blade
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -228,12 +228,6 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.61
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Toxic Blade:
       total: 0.6
       efficiency: 0.42
@@ -247,20 +241,26 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.8
-      efficiency: 0.66
+      total: 0.78
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.93
+    Erosion:
+      total: 0.6
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Pharaoh's Curse:
       total: 0.66
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
       total: 0.64
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -272,15 +272,15 @@ builds:
   - Shield of the Phoenix
   - Freya's Tears
   - Erosion
-  - Stampede
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
-  - Freya's Tears
+  - Shogun's Ofuda
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -295,7 +295,7 @@ builds:
   slot_scores:
     Genji's Guard:
       total: 0.58
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -317,15 +317,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Stampede:
-      total: 0.59
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Pharaoh's Curse:
       total: 0.61
-      efficiency: 0.58
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Shogun's Ofuda:
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -340,8 +340,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Stampede
   - Kinetic Cuirass
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -360,13 +360,13 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -377,20 +377,20 @@ builds:
       pick: 0.0
       fit: 0.84
     Stampede:
-      total: 0.63
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.75
     Pharaoh's Curse:
       total: 0.66
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.74
     Shogun's Ofuda:
       total: 0.63
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.74

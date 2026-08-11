@@ -124,9 +124,15 @@ def test_a_measured_hybrid_scaler_may_build_off_type_items():
 
 
 def test_hybrid_scaling_needs_enough_parsed_abilities():
-    """Artio and Ullr scrape 2 abilities each. A share computed from that is an
-    artifact of the scrape, and must not unlock off-type items."""
-    thin = _scaling_god("Artio", "physical", "Jungle", ["Bruiser"], 40, 60, n=2)
+    """A share computed from one or two abilities is an artifact of a thin
+    scrape and must not unlock off-type items.
+
+    This guard used to be what the three stance gods hit, because the parser
+    could not see their kits at all — a real bug the threshold was quietly
+    absorbing. That is fixed at the source now
+    (`wiki_parser._section_tables`); the guard remains for a genuinely thin
+    scrape, which is what it was for."""
+    thin = _scaling_god("Thin", "physical", "Jungle", ["Bruiser"], 40, 60, n=2)
     assert scoring.off_type_share(thin) == 0.0
     assert not scoring.passes_damage_filter({"stats": {"Intelligence": "70"}}, thin)
 
@@ -671,13 +677,102 @@ def test_lookup_rates_still_reports_nothing_for_an_unbought_item():
     assert scoring.lookup_rates(_rat_build(), "Rod of Tahuti") == (0.0, None)
 
 
-def test_lookup_rates_agrees_with_the_popular_items_panel():
+def test_lookup_rates_agrees_with_the_popular_items_panel_on_what_is_bought():
     """The two derive community rates independently and are rendered on the
-    same screen, so they must not drift. For an item with no slot pick they
-    have to produce the same numbers."""
+    same screen, so they must not drift on the question the build row asks:
+    does this god's playerbase buy this item at all?
+
+    They no longer agree on the NUMBER, and deliberately. The panel reports an
+    observation — the share of all tracked matches that ended holding the item
+    — which is what a reader means by "pick rate". The model reads the same
+    sighting conditioned on reaching the slot (see `SLOT_REACH`), because an
+    item bought sixth is otherwise divided by a denominator most of which never
+    bought a sixth item. Both are correct; they are different quantities. What
+    must never drift is the verdict, since only one of them renders the words
+    "meta doesn't buy this"."""
     from smite import build_index
     entry = _rat_build()["builds"][0]
     panel = {p["name"]: p for p in build_index.popular_items(entry)}
-    pick, win = scoring.lookup_rates(_rat_build(), "Thistlethorn Acorn")
-    assert (pick, win) == (panel["Thistlethorn Acorn"]["pick_rate"],
-                           panel["Thistlethorn Acorn"]["win_rate"])
+    for name in ("Thistlethorn Acorn", "Ashwhorl Acorn", "Jotunn's Revenge"):
+        pick, _ = scoring.lookup_rates(_rat_build(), name)
+        assert (pick > 0) == (panel[name]["pick_rate"] > 0), name
+    # For an item with NO slot pick the win rates must still match exactly:
+    # both sides are then reading the same best alternate sighting, and this is
+    # the case that used to print two different numbers on one screen. (An item
+    # WITH a slot pick is allowed to differ — the slot entry is authoritative
+    # here by design, while the panel takes the highest-pick sighting.)
+    assert (scoring.lookup_rates(_rat_build(), "Thistlethorn Acorn")[1]
+            == panel["Thistlethorn Acorn"]["win_rate"])
+    # And an item neither of them has ever seen stays unseen in both.
+    assert scoring.lookup_rates(_rat_build(), "Rod of Tahuti") == (0.0, None)
+    assert "Rod of Tahuti" not in panel
+
+
+# ── The slot-reach correction ──────────────────────────────────────────────
+
+def _late_slot_build():
+    """One item per slot, so each slot's reach factor is exercised alone."""
+    return {"builds": [{"source": "community", "slot_order": [
+        {"name": f"Slot{i}", "pick_rate": 0.20, "win_rate": 0.5} for i in range(1, 7)
+    ]}]}
+
+
+def test_lookup_rates_conditions_pick_on_reaching_the_slot():
+    """The same 20% means something very different first and sixth: nearly
+    every match buys a first item, and under a third reach a sixth."""
+    rates = {n: scoring.lookup_rates(_late_slot_build(), n)[0] for n in
+             (f"Slot{i}" for i in range(1, 7))}
+    assert rates["Slot1"] == pytest.approx(0.20)        # reach 1.0, unchanged
+    assert rates["Slot6"] == pytest.approx(0.20 / 0.325)
+    # Monotone: a later slot's identical raw rate always scores at least as high.
+    ordered = [rates[f"Slot{i}"] for i in range(1, 7)]
+    assert ordered == sorted(ordered)
+
+
+def test_lookup_rates_never_reports_a_pick_rate_above_one():
+    """`signal_score` blends every axis as [0,1]. A late slot divides by 0.325,
+    so an unclamped rate could exceed 1 and let one item out-score a rival that
+    is perfect on every other axis at once."""
+    build = {"builds": [{"source": "community", "slot_order": [
+        {"name": "A", "pick_rate": 0.1}, {"name": "B", "pick_rate": 0.1},
+        {"name": "C", "pick_rate": 0.1}, {"name": "D", "pick_rate": 0.1},
+        {"name": "E", "pick_rate": 0.1}, {"name": "Late", "pick_rate": 0.9},
+    ]}]}
+    assert scoring.lookup_rates(build, "Late")[0] == 1.0
+
+
+def test_lookup_rates_leaves_an_unbought_item_at_zero():
+    """Conditioning scales; it must not manufacture a pick out of nothing."""
+    assert scoring.lookup_rates(_late_slot_build(), "Never Bought") == (0.0, None)
+
+
+def test_lookup_rates_picks_the_best_alternate_after_conditioning():
+    """"Best sighting" has to mean the slot where players most preferred it,
+    not merely the earliest slot it appeared in. Raw, the slot-1 sighting looks
+    stronger; conditioned, the slot-6 one is."""
+    build = {"builds": [{"source": "community", "slot_order": [
+        {"name": "A", "pick_rate": 0.5, "alternates": [{"name": "X", "pick_rate": 0.20, "win_rate": 0.4}]},
+        {"name": "B", "pick_rate": 0.4}, {"name": "C", "pick_rate": 0.3},
+        {"name": "D", "pick_rate": 0.3}, {"name": "E", "pick_rate": 0.2},
+        {"name": "F", "pick_rate": 0.2, "alternates": [{"name": "X", "pick_rate": 0.18, "win_rate": 0.7}]},
+    ]}]}
+    pick, win = scoring.lookup_rates(build, "X")
+    assert win == 0.7                       # the slot-6 sighting won
+    assert pick == pytest.approx(0.18 / 0.325)
+
+
+def test_measure_slot_reach_reproduces_the_shipped_constant():
+    """The constant is a measurement, so it has to be re-derivable from the
+    corpus it was measured on rather than being a number someone typed."""
+    builds = [_late_slot_build()]
+    assert scoring.measure_slot_reach(builds) == {i: 1.0 for i in range(1, 7)}
+    # An empty corpus yields nothing rather than a silent all-1.0 no-op.
+    assert scoring.measure_slot_reach([]) == {}
+
+
+def test_slot_reach_can_be_overridden_from_weights():
+    weights = {"slot_reach": {1: 1.0, 2: 0.5}}
+    build = {"builds": [{"source": "community", "slot_order": [
+        {"name": "A", "pick_rate": 0.3}, {"name": "B", "pick_rate": 0.3},
+    ]}]}
+    assert scoring.lookup_rates(build, "B", weights)[0] == pytest.approx(0.6)

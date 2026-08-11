@@ -2,6 +2,7 @@
 situational-swap table. Greedy-with-rules, not optimization — transparent and
 debuggable. vs_tag values match the viewer's archetype taxonomy so the existing
 chip-highlighting works unchanged."""
+from smite import scoring
 from smite.efficiency import parse_stat_value
 
 
@@ -20,8 +21,53 @@ def _is_lifesteal(item, tags):
     return "sustain" in (tags or []) or any("Lifesteal" in s for s in stats)
 
 
+def coherence_multiplier(item, core_totals, stat_reference, strength):
+    """How much of this item's stat line is still worth buying, given what the
+    core already holds. 1.0 = nothing here is duplicated; lower = more of it is.
+
+    This is the only place the recommender scores a build rather than an item.
+    Every other signal — efficiency, win, pick, fit — is computed for one item
+    against one god and knows nothing about the other five slots, so the core
+    was six independent arg-maxes and the sixth pick could not tell that the
+    first five had already bought its whole stat line. Measured on the shipped
+    builds: Anubis's core carried Penetration on 6 slots of 6 where his own
+    playerbase carries it on 4, and Cernunnos — whose community build is a
+    basic-attack carry, Attack Speed on 5 slots — was handed 4 Penetration
+    items and one Attack Speed.
+
+    Diminishing returns, not a cap. `stat_caps` in `assemble_core` is the hard
+    version of this idea and it was measured to change 0 of 261 cores, because
+    a hard cap only fires when a stat is *completely* wasted and no real build
+    gets there. The soft version fires where the waste actually happens: the
+    third Penetration item is not worthless, it is just worth less than the
+    first, and that is enough to lose a slot to an item bringing something new.
+
+    Each stat is measured in typical rolls of itself — `scoring.stat_reference`
+    gives the pool median, so 250 Health and 40 Strength are commensurable —
+    and weighted by how much of the item that stat IS, so a token 5 Strength
+    on a protection item cannot drag the whole item's verdict. `strength` 0
+    makes this a no-op, which is what keeps it tunable rather than baked in."""
+    stats = item.get("stats") or {}
+    weighted, total = 0.0, 0.0
+    for stat, raw in stats.items():
+        amount = _amount(raw)
+        if not amount:
+            continue
+        # A stat with no reference is one no other item carries; treat this
+        # item as its own yardstick rather than skipping it, so a unique stat
+        # counts as exactly one roll instead of silently weighing nothing.
+        ref = stat_reference.get(stat) or amount
+        share = amount / ref
+        held = core_totals.get(stat, 0.0) / ref
+        weighted += share * (1.0 / (1.0 + held))
+        total += share
+    if not total:
+        return 1.0
+    return (1.0 - strength) + strength * (weighted / total)
+
+
 def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
-                  stat_caps=None):
+                  stat_caps=None, coherence=0.0, stat_reference=None):
     """Highest-total items filling n slots: at most one boots, at most
     `max_lifesteal` lifesteal/sustain items, no duplicates. rows must be
     pre-sorted by -total (score_god_items already does). When `require`
@@ -50,7 +96,12 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
     have_boots = [False]
     lifesteal_count = [0]
     capped_totals = {}
+    # Every stat the core holds so far, for `coherence_multiplier`. Separate
+    # from `capped_totals`, which only tracks the handful of stats with real
+    # in-game caps.
+    core_totals = {}
     _row_tags = {r["item"]: r.get("tags") for r in rows}
+    stat_reference = stat_reference or {}
 
     def _capped_out(item):
         """True when the item has nothing left to offer: every stat it carries
@@ -88,6 +139,8 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
             raw = (item.get("stats") or {}).get(stat)
             if raw:
                 capped_totals[stat] = capped_totals.get(stat, 0.0) + _amount(raw)
+        for stat, raw in (item.get("stats") or {}).items():
+            core_totals[stat] = core_totals.get(stat, 0.0) + _amount(raw)
         core.append(name)
         used.add(name)
         return True
@@ -102,9 +155,33 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
             if stat in (item.get("stats") or {}) and _try_add(r["item"]):
                 seeded += 1
 
-    for r in rows:
-        if len(core) >= n:
-            break
+    if not coherence:
+        # The original path, kept exactly: rows arrive sorted by -total, so
+        # walking them once IS picking the best remaining item every time.
+        for r in rows:
+            if len(core) >= n:
+                break
+            _try_add(r["item"])
+        return core
+
+    # With coherence on, an item's worth depends on what is already in the
+    # core, so the ranking is no longer fixed and has to be recomputed each
+    # slot. Ties fall back to the row order, which is the score order, so this
+    # degrades to the loop above as the multiplier flattens.
+    remaining = [r for r in rows if r["item"] not in used]
+    while len(core) < n and remaining:
+        best_index = None
+        best_score = None
+        for index, r in enumerate(remaining):
+            item = items_by_name.get(r["item"], {})
+            score = r["total"] * coherence_multiplier(
+                item, core_totals, stat_reference, coherence)
+            if best_score is None or score > best_score:
+                best_index, best_score = index, score
+        r = remaining.pop(best_index)
+        # A rejected candidate is dropped, not retried: every guard here is
+        # monotone (boots taken, lifesteal spent, stat capped), so nothing that
+        # fails now can start passing once the core has grown.
         _try_add(r["item"])
     return core
 
@@ -189,3 +266,15 @@ def situational_swaps(rows, items_by_name, tags_map, core=None):
         else:
             table.append({"vs_tag": vs_tag, "swap": f"(no {label} available in pool)", "swap_item": None})
     return table
+
+def coherence_args(items, weights):
+    """The `coherence` / `stat_reference` pair for `assemble.assemble_core`.
+
+    Both callers need them and both must agree: the strength is a single
+    tunable in _weights.yaml, and the reference magnitudes must be measured
+    over the SAME item pool every time or the same build assembles differently
+    depending on who asked for it."""
+    strength = (weights or {}).get("coherence", 0.0)
+    if not strength:
+        return {}
+    return {"coherence": strength, "stat_reference": scoring.stat_reference(items)}

@@ -70,6 +70,55 @@ damage_fit_blend: 0.0
 # Adaptive Stat item stops reading "premium") and ranks them worse. See
 # pipeline/smite/passives.py for the numbers and the likeliest reason.
 price_passives: false
+# Persistent stacks at their full-stack value — measured, and shipped OFF.
+# Strictly narrower than price_passives: only stacks that reach a cap and keep
+# it, never a transient one. Four items qualify (Book of Thoth +500 Max Mana,
+# Devourer's Gauntlet +40 Strength/+6.75% Lifesteal, Gauntlet of Thebes +700
+# Max Health, Transcendence +600 Max Mana/+10 Penetration); Doom Orb,
+# Necronomicon, Hastened Fatalis, The Executioner and Prophetic Cloak are all
+# correctly refused for having a decay clause.
+#
+#     leakage-free coverage        OFF      ON
+#     probe   eff 0.70 : fit 0.30  33.1%   28.8%
+#     best    eff 0.45 : fit 0.55  30.5%   30.7%
+#
+# THE CONFLICT IS WORTH READING BEFORE TOUCHING THIS. It does exactly what a
+# Masters player asked for on the one item they named: Transcendence goes from
+# rank 25/95 to 6/95 for Ullr and its residual flips +208 -> -222, i.e. from
+# "you are overpaying" to "this is a bargain", which is the correct reading of
+# a 2400g item that ends the match with +600 mana. The coverage gate still
+# says no. That is STATE.md section 1's failure mode stated as plainly as it
+# ever gets: the gate rewards resembling the community's build, and this makes
+# the model better at the thing the community is doing without making the
+# ranking resemble it more. Off, because the discipline is that the gate wins
+# absent a better measure — not because the item is priced right at +208.
+price_stacks: false
+
+# ── Build coherence — measured, and shipped OFF ────────────────────────────
+# The one term that scores a BUILD rather than an item: an item's worth is
+# discounted by how much of its stat line the core already holds
+# (`assemble.coherence_multiplier`). Proposed after a Masters player's review
+# said the recommender "doesn't consider the build as a whole", which the data
+# backed — Anubis's core carried Penetration on 6 slots of 6 where his own
+# playerbase carries it on 4.
+#
+# Measured against the LEAKAGE-FREE gate (eff 0.45 : fit 0.55, win and pick
+# zeroed; random-core baseline 5.8%):
+#     0.00  32.1%   0.20  32.2%   0.30  28.2%   0.50  24.0%   1.00  16.6%
+# Flat to 0.2 and then monotonically worse. Restricting the penalty to stats
+# with real in-game diminishing returns (penetration, cooldown, lifesteal,
+# attack speed, crit, tenacity) — leaving uncapped power alone — does not
+# rescue it: 0.15 -> 30.1%, 0.30 -> 27.8%, 1.00 -> 17.7%.
+#
+# The likeliest reason, and it is a flaw in the idea rather than in the gate:
+# real builds ARE stat-concentrated. A crit carry stacks crit and a mage stacks
+# intelligence, so a term that penalises duplication is pushing away from the
+# shape of every focused build in the game. What is wrong with Anubis is not
+# duplication in general, it is duplication PAST A CAP — and the hard version
+# of that, `stat_caps`, already exists and already measures as changing
+# nothing. Turning this on needs a formulation that can tell a focused build
+# from a redundant one, which neither of these is.
+coherence: 0.0
 
 # ── Hybrid scalers: when the god's damage_type label is not the whole story ──
 # A god carries ONE damage_type, and the recommender used it as a hard gate:
@@ -136,6 +185,39 @@ draft:
     tanks: {Penetration: 0.6}
   ally_covered: -0.5     # multiplier delta when an ally already covers that job
   ally_gap: 0.5          # multiplier delta when NOBODY covers it
+  # How much of a draft bonus survives when YOUR OWN CORE already covers the
+  # job. The same judgement `ally_covered` makes about a teammate, applied to
+  # the build the overlay is actually rewriting.
+  #
+  # Without it the overlay paid the full anti-heal bonus to a second anti-heal
+  # item while the first was already in the core, and that second copy
+  # displaced whatever the build still genuinely needed. A recommended swap has
+  # to be better than what it removes GIVEN the other five slots — answering a
+  # threat twice is not twice as good, and the second copy is bought with a
+  # slot that was doing something else.
+  #
+  # 0.35 rather than 0: a second answer is worth something (an enemy can build
+  # around one, and effects stack imperfectly), just not full price. Applies
+  # only to POSITIVE bonuses; a penalty is not a job that can be already done.
+  #
+  # MEASURED, AND IT IS A GUARD RATHER THAN A FIX. Across four enemy comps
+  # (5 healers / 5 tanks / mixed / crit-heavy) x 87 gods = 348 adapted builds,
+  # the old pay-in-full logic doubled up on a bonused tag exactly ONCE:
+  # Mercury took Screeching Gargoyle and Eye of the Storm, both `peel`, against
+  # five healers. `max_bonus` already bounds the whole overlay at 0.12, which
+  # is small enough that a second copy rarely out-scores a fresh item on its
+  # own merits. So this changes 1 of 348 builds today.
+  #
+  # It is kept for the same reason `assemble.stat_caps` is kept while changing
+  # 0 of 261 cores: the rule is real and the cost is nil, and it becomes
+  # load-bearing the moment `max_bonus` is raised or more tagged items enter
+  # the pool. Do not read it as currently doing much.
+  #
+  # TAGS ONLY, deliberately — see `draftBuild.adaptedCore`. Damping stats too
+  # changed 70-79 of 87 cores per comp, which is a different model rather than
+  # a correction: protection is a quantity that scales, not a job you either
+  # have or don't.
+  self_covered: 0.35
 
 # ── Disagreement-report findings (2026-07-22, see Analysis/_disagreements.md) ──
 # Tank archetypes undervalued CDR items the community actually runs
@@ -308,7 +390,29 @@ aspects:
 # `conquest` is the default and takes no overlay: three lanes, jungle camps,
 # towers and phoenixes, ~30min games, and the meta data we actually have.
 modes:
-  conquest: {}
+  conquest:
+    tag_bonus:
+      # The ward economy is not free value. See `ward-economy` in _tags.yaml
+      # for the measurement; Arena already drops these items outright because
+      # the mode has no wards, and this is the same judgement made continuous
+      # for the mode where wards exist but only some players farm them.
+      # Sized by sweeping it against BOTH gates, which agree — rare enough
+      # here to be worth stating. Against the 34 Support/Solo Conquest gods,
+      # whose players buy this item ZERO times on the current scrape:
+      #
+      #     bonus    leakage-free    cores holding it
+      #      0.00        33.5%            18/34
+      #     -0.15        34.1%             7/34
+      #     -0.25        36.1%             0/34
+      #     -0.35        36.1%             0/34
+      #     -0.50        36.1%             0/34
+      #
+      # -0.25 is where it saturates: stronger values buy nothing, so this is
+      # the point at which the item simply stops out-scoring real ones rather
+      # than a knob turned until the answer looked right. It first shipped at
+      # -0.15, which the expert register caught as a regression when a fresh
+      # community scrape landed and the count went 4 -> 7.
+      ward-economy: -0.25
 
   # One lane, no jungle to rotate through, and you fight the same three people
   # all game: sustain and anti-heal decide who can stay on the lane, auras

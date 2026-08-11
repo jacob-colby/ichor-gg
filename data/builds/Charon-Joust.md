@@ -13,8 +13,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Shifter's Shield
   - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -32,32 +32,32 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.67
+      total: 0.66
       efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.71
     Kinetic Cuirass:
-      total: 0.71
-      efficiency: 0.6
+      total: 0.7
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.81
     Shifter's Shield:
-      total: 0.63
-      efficiency: 0.55
+      total: 0.62
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.71
     Spectral Armor:
-      total: 0.63
-      efficiency: 0.59
+      total: 0.62
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.66
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -84,11 +84,11 @@ builds:
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -106,7 +106,7 @@ builds:
       fit: 0.7
     Kinetic Cuirass:
       total: 0.7
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -117,14 +117,14 @@ builds:
       pick: 0.0
       fit: 0.92
     Spectral Armor:
-      total: 0.64
-      efficiency: 0.59
+      total: 0.63
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.68
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -142,8 +142,8 @@ builds:
   - Kinetic Cuirass
   - Void Shield
   - Void Stone
-  - Amanita Charm
   - Erosion
+  - Soul Gem
   flex_slots:
   - Erosion
   - Kinetic Cuirass
@@ -152,8 +152,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.59
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -183,22 +183,22 @@ builds:
       fit: 0.92
     Void Stone:
       total: 0.68
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.92
-    Amanita Charm:
-      total: 0.8
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.94
     Erosion:
-      total: 0.61
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Soul Gem:
+      total: 0.79
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.53
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -242,19 +242,19 @@ builds:
       fit: 0.24
     Nimble Ring:
       total: 0.4
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.45
-      efficiency: 0.46
+      total: 0.44
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.44
     Amanita Charm:
-      total: 0.74
-      efficiency: 0.66
+      total: 0.72
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -294,20 +294,20 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
       total: 0.57
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
       total: 0.57
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Erosion:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -340,8 +340,8 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Kinetic Cuirass
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -360,37 +360,37 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.6
+      total: 0.55
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.51
     The Crusher:
-      total: 0.56
-      efficiency: 0.65
+      total: 0.55
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.47
     Amanita Charm:
-      total: 0.76
-      efficiency: 0.66
+      total: 0.75
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.86
     Erosion:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
     Pharaoh's Curse:
-      total: 0.57
-      efficiency: 0.58
+      total: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -405,8 +405,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - The Crusher
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -418,26 +418,26 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.41
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.6
+      total: 0.55
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.52
     The Crusher:
-      total: 0.54
-      efficiency: 0.65
+      total: 0.53
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.96
     Triton's Conch:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -470,8 +470,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Shifter's Shield
   - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -489,32 +489,32 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Eye of Providence:
-      total: 0.67
+      total: 0.66
       efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.71
     Kinetic Cuirass:
-      total: 0.71
-      efficiency: 0.6
+      total: 0.7
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.81
     Shifter's Shield:
-      total: 0.63
-      efficiency: 0.55
+      total: 0.62
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.71
     Spectral Armor:
-      total: 0.63
-      efficiency: 0.59
+      total: 0.62
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.66
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0

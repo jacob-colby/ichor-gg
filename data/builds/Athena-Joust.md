@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Eye of Providence
   - Kinetic Cuirass
-  - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Shifter's Shield
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -39,25 +39,19 @@ builds:
       fit: 0.68
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Shifter's Shield:
-      total: 0.62
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Spectral Armor:
-      total: 0.62
-      efficiency: 0.59
+      total: 0.61
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -67,6 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
+    Pharaoh's Curse:
+      total: 0.6
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -84,8 +84,8 @@ builds:
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -106,7 +106,7 @@ builds:
       fit: 0.66
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -117,14 +117,14 @@ builds:
       pick: 0.0
       fit: 0.9
     Spectral Armor:
-      total: 0.63
-      efficiency: 0.59
+      total: 0.62
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.66
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -176,14 +176,14 @@ builds:
       pick: 0.0
       fit: 0.78
     Void Shield:
-      total: 0.69
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.91
     Void Stone:
       total: 0.67
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.91
@@ -235,32 +235,32 @@ builds:
       pick: 0.0
       fit: 0.76
     Berserker's Shield:
-      total: 0.57
-      efficiency: 0.71
+      total: 0.56
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.43
     Riptalon:
-      total: 0.61
+      total: 0.62
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.67
     Amanita Charm:
-      total: 0.74
-      efficiency: 0.66
+      total: 0.72
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.82
     Pharaoh's Curse:
       total: 0.6
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
       total: 0.58
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -294,20 +294,20 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
       total: 0.57
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
       total: 0.57
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Erosion:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -340,8 +340,8 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Kinetic Cuirass
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -360,25 +360,25 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.6
+      total: 0.55
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.52
     The Crusher:
-      total: 0.56
-      efficiency: 0.65
+      total: 0.55
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.47
     Amanita Charm:
-      total: 0.76
-      efficiency: 0.66
+      total: 0.75
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.62
     Pharaoh's Curse:
-      total: 0.57
-      efficiency: 0.58
+      total: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -405,8 +405,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - The Crusher
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -418,26 +418,26 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.41
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.6
+      total: 0.55
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.52
     The Crusher:
-      total: 0.54
-      efficiency: 0.65
+      total: 0.53
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.96
     Triton's Conch:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Eye of Providence
   - Kinetic Cuirass
-  - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Shifter's Shield
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -496,25 +496,19 @@ builds:
       fit: 0.68
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Shifter's Shield:
-      total: 0.62
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Spectral Armor:
-      total: 0.62
-      efficiency: 0.59
+      total: 0.61
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -524,5 +518,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
+    Pharaoh's Curse:
+      total: 0.6
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
   starter: *id001
 ---

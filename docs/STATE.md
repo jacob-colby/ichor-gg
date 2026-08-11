@@ -1,6 +1,6 @@
 # State of the project
 
-_Last verified 2026-08-05, against `main` at the merge of PR #22._
+_Last verified 2026-08-09, on `feat/community-starters`._
 
 `docs/plans/` and `docs/specs/` are dated, point-in-time documents — they record
 what was intended on the day they were written and are never updated. **This
@@ -42,7 +42,7 @@ coverage against a random legal 6-item core:
 cd pipeline && python -m smite.calibrate     # prints the probe, the baseline, and the sweep
 ```
 
-Chance is ~6.0%. Shipped is ~29%, i.e. **~4.9× chance**. That is the number to
+Chance is ~5.9%. Shipped is ~36%, i.e. **~6.1× chance**. That is the number to
 quote and the number to move. Headline coverage moving the other way is
 expected and is not by itself a reason to revert — that judgement is what
 `efficiency.efficiency_pool` and `scoring.lookup_rates` both record.
@@ -86,6 +86,10 @@ Each of these has its evidence in the named module.
 | Community rates read slot picks **and** alternates | `scoring.lookup_rates` | Slot-only made an item bought 27% of the time read as "meta doesn't buy this" |
 | `unknown_win_rate` stays at 0.5 | `scoring.UNKNOWN_WIN_RATE` | It is *not* neutral (observed mean 0.556) but the only metric that responds to changing it is the circular one |
 | Draft blocks duplicates per **team**, not per board | `useDraftResult.takenFor` | Only ranked Conquest drafts globally-unique picks; Joust and Arena are not draft modes |
+| A draft bonus is damped when the core already covers that **tag** | `draftBuild.adaptedCore` | Same judgement `ally_covered` makes about a teammate; tags only, because a stat is a quantity not a job |
+| Community pick is **conditional on reaching the slot** | `scoring.SLOT_REACH` | Slot mass decays 0.684 → 0.222 from slot 1 to 6; an item bought sixth was divided by matches that never bought a sixth item |
+| Stance gods' abilities live in a **tab wrapper** | `wiki_parser._section_tables` | Ullr, Artio and Merlin reported `n_scaling_abilities: 0` — 28 ability tables the parser walked straight past |
+| Eye of Providence carries a **`ward-economy`** penalty | `data/_tags.yaml` | Its stat discount is the ward engine's price tag; 16 Support/Solo cores against 1 community sighting |
 
 ### The combat model is exact and should stay that way
 
@@ -122,6 +126,23 @@ shipped **off**. Numbers are in the named module.
 5. **Pricing item passives** — the extraction is right and the prices are
    visibly more sensible; the recommender still got worse.
 6. **The 2026-08-05 weight sweep's own winner** — rejected as leakage (§1).
+7. **Build coherence (2026-08-09)** — the only term that scores a *set* rather
+   than an item, discounting an item by how much of its stat line the core
+   already holds. Leakage-free coverage 32.1% → 16.6% as strength goes 0 → 1,
+   and restricting it to stats with real diminishing returns doesn't rescue it.
+   Unlike 1–5 this one probably *is* wrong on its merits rather than punished
+   by the gate: real builds are stat-concentrated, so penalising duplication
+   pushes away from the shape of every focused build in the game. Numbers under
+   `coherence` in `_weights.yaml`; ships off.
+8. **Pricing persistent stacks (2026-08-09)** — counting a stacking item at its
+   full-stack value when it reaches a cap and keeps it, never for a transient
+   stack. Leakage-free coverage 33.1% → 28.8% at the probe split, flat at the
+   best split. Keep the numbers in view though: it moves Transcendence from
+   rank 25/95 to 6/95 for Ullr and flips its residual +208 → −222, which is the
+   exact item an expert reviewer named. **This is the cleanest case on record
+   of the two gates disagreeing about a specific item**, and the one most worth
+   revisiting if a non-circular measure ever exists. `price_stacks` in
+   `_weights.yaml`; ships off.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -142,13 +163,20 @@ them. The tier list now admits this; the builds do not, and the builds are the
 product. Either find a source with per-mode outcomes, or disclose it on those
 builds the way the tier list does.
 
-### There is no feedback loop
-Everything validates against community data, which §1 shows cannot adjudicate
-the model's central claims. The project can currently tell you whether it is
-*honest*; it cannot tell you whether it is *good*. The cheapest fix is capturing
-real games — a way to record "I played this build, here's what happened" turns
-opinion into a second, non-circular gate. **This is the highest-value thing
-left and it is not a modelling task.**
+### The feedback loop has a first version, and it is tiny
+Everything else validates against community data, which §1 shows cannot
+adjudicate the model's central claims. `data/_expert_reviews.yaml` +
+`smite.expert_review` are the first gate here that isn't made of that data: a
+strong player's judgements, written down in a shape a script can replay. Four
+claims from one reviewer (2026-08-09) — two now resolved, two open.
+
+**It is not a measurement and must never be quoted as one.** One reviewer,
+claims chosen because they looked wrong. It answers "did the thing they
+objected to change?" and nothing else. The real version of this is still
+capturing real games — "I played this build, here's what happened" — and that
+remains the highest-value thing left. What exists now is the cheapest possible
+stand-in for it, and its value is that judgements stop evaporating when the
+conversation ends.
 
 ### The win signal is a constant for ~95% of the pool
 SmiteBrain reports a win rate for a median of **5 items per god** against a
@@ -162,12 +190,20 @@ a metric that isn't made of the community's build.
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
   a leveled practice target; `calibrate_combat --plan` will generate the setup.
-- **Aspect-conditional stats don't parse.** Briskberry Acorn's stats live in
-  prose (`Non-Aspect: 45 Strength … Aspect: 400 Max Health`), so it ships
-  statless and unbuildable. Affects god-specific items today; will affect more
-  if the wiki adopts the pattern.
+- **Genie's Lamp cannot be modelled at all.** It has no stats on the wiki and
+  no price (`Cost: -1`), and its value is `+0.6% per Level of all Stats from
+  Items` — a MULTIPLIER on the rest of the build, which nothing here can
+  express. It is in 76% of Aladdin's community builds and is structurally
+  unbuildable, and that is the honest state: fixing it needs a value model for
+  multiplicative items, not a parser change. Briskberry Acorn was the same
+  symptom with a different cause and is fixed (`wiki_parser._stats_from_prose`).
 - **Cu Chulainn and Ix Chel** have empty wiki pages — nothing to scrape. They
   are in the roster and get picked up automatically if that changes.
+- **Transcendence and the other stacking items don't price.** Their listed
+  stats are deliberately below curve because the stacking is the value, so the
+  gold model reads them as poor value — Transcendence ranks 25th of 40 for
+  Ullr while being his community build's first item. The mirror of the
+  `ward-economy` case and the one open expert claim with a clear cause.
 - **Threat detection reads wiki ability tags.** A god who is situationally a
   healer without the `Healing` label is not counted.
 
@@ -185,15 +221,19 @@ python -m smite.data_audit               # integrity gate, non-zero exit on find
 python -m smite.validate --check         # regression floor (NOT a tuning target — see §1)
 python -m smite.calibrate                # the leakage-free measure
 python -m smite.calibrate_combat         # the combat gate
+python -m smite.expert_review            # replay recorded expert judgements
+python -m smite.expert_review --check    # non-zero exit if a resolved claim regressed
 ```
 
 Scraping needs Playwright (`python -m playwright install chromium`).
 
 `data_audit` exits non-zero whenever it has findings, and it currently has
-three standing ones — Blink Rune (`cost: 0`, genuinely free) and Mote of Chaos
-/ Survivor's Sash (tier-2 items the wiki lists with no stats). All three are
-real properties of the source data, not defects, and none reaches a build.
-Treat "3 findings, all of them these" as green; treat a fourth as news.
+four standing ones — Blink Rune (`cost: 0`, genuinely free), Genie's Lamp
+(`cost: None`; the wiki says `-1`, a sentinel meaning Aladdin is given it
+rather than buying it) and Mote of Chaos / Survivor's Sash (tier-2 items the
+wiki lists with no stats). All four are real properties of the source data,
+not defects, and none reaches a build. Treat "4 findings, all of them these"
+as green; treat a fifth as news.
 
 **Adding a new item is manual by design.** `refresh_all` only re-pulls what
 already has a note, so nothing can learn an item exists. Two detectors close
@@ -210,8 +250,8 @@ numbers in the file.
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (489) ·
-`cd viewer && npm test -- --run` (559).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (544) ·
+`cd viewer && npm test -- --run` (614).
 
 ---
 
@@ -225,13 +265,14 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (489) ·
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int |
 | Conquest gods placed | 87 / 87 |
 | Joust / Arena gods placed | 0 / 87 — no outcome data exists |
-| Items placed | 191 / 220 |
-| Community sample | 4,952 Obsidian+ Conquest matches, 28 Jul – 1 Aug |
-| Headline gate | coverage 48.6%, win-weighted 50.8%, ρ 0.557 |
-| **Leakage-free** | **29.2% vs 6.0% chance = 4.89×** |
+| Items placed | 220 / 220 |
+| Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
+| Headline gate | coverage 60%, win-weighted 60%, ρ 0.38 |
+| **Leakage-free** | **36.1% vs 5.9% chance = 6.12×** |
 | Combat model | 0.0% worst case over 12 observations |
-| Gods at 0% coverage | 5 — Anubis, Chronos, Danzaburou, Jing Wei, Neith |
-| Tests | 489 pipeline · 559 viewer |
+| Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
+| Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
+| Tests | 544 pipeline · 614 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

@@ -163,3 +163,81 @@ describe("adaptedCore — the damage channel", () => {
     expect(empty).toEqual(without);
   });
 });
+
+/* THE SWAP HAS TO BE BETTER GIVEN THE OTHER FIVE SLOTS.
+ *
+ * `threats.ts` already damps a threat one of your ALLIES covers (`ally_covered`)
+ * — but nothing asked whether your own core already covered it, so the overlay
+ * paid the full anti-heal bonus to a second anti-heal item while the first was
+ * sitting in the build, and that second copy displaced whatever the build still
+ * genuinely needed. */
+describe("adaptedCore — a job already done isn't paid for twice", () => {
+  const items: Record<string, Item> = {
+    AntiHeal1: { name: "AntiHeal1", stats: {}, effect_tags: ["anti-heal"] },
+    AntiHeal2: { name: "AntiHeal2", stats: {}, effect_tags: ["anti-heal"] },
+    Needed: { name: "Needed", stats: {}, effect_tags: [] },
+  } as unknown as Record<string, Item>;
+  // Needed out-scores AntiHeal2 on merit; the overlay is what promotes it.
+  const base = { AntiHeal1: 0.60, Needed: 0.52, AntiHeal2: 0.50 };
+  const overlay = { tags: { "anti-heal": 0.10 }, stats: {} };
+
+  it("pays in full for the FIRST answer to a threat", () => {
+    const r = adaptedCore(base, items, overlay, { maxBonus: 1, n: 1, selfCovered: 0 });
+    expect(r.core).toEqual(["AntiHeal1"]);
+    expect(r.bonuses.AntiHeal1).toBeCloseTo(0.10);
+  });
+
+  it("does not let a second copy displace what the build still needs", () => {
+    const full = adaptedCore(base, items, overlay, { maxBonus: 1, n: 2, selfCovered: 1 });
+    expect(full.core).toEqual(["AntiHeal1", "AntiHeal2"]);   // the old behaviour
+
+    const damped = adaptedCore(base, items, overlay, { maxBonus: 1, n: 2, selfCovered: 0 });
+    expect(damped.core).toEqual(["AntiHeal1", "Needed"]);
+  });
+
+  it("still lets a second copy in when it is better on merit anyway", () => {
+    // AntiHeal2 now beats Needed without any overlay help at all.
+    const strong = { AntiHeal1: 0.60, AntiHeal2: 0.55, Needed: 0.50 };
+    const r = adaptedCore(strong, items, overlay, { maxBonus: 1, n: 2, selfCovered: 0 });
+    expect(r.core).toEqual(["AntiHeal1", "AntiHeal2"]);
+  });
+
+  it("names the damping in the reason, so the row can explain itself", () => {
+    const r = adaptedCore(base, items, overlay, { maxBonus: 1, n: 2, selfCovered: 0.5 });
+    expect(r.reasons.AntiHeal1).toBe("anti-heal");
+    expect(r.reasons.AntiHeal2).toContain("already covered");
+  });
+
+  /* A penalty is not a job that can be "already done". Damping it would
+   * quietly re-promote the very items the overlay is pushing down. */
+  it("never damps a negative bonus", () => {
+    const penalised = { A: 0.60, B: 0.59 };
+    const its: Record<string, Item> = {
+      A: { name: "A", stats: {}, effect_tags: ["mobility"] },
+      B: { name: "B", stats: {}, effect_tags: ["mobility"] },
+    } as unknown as Record<string, Item>;
+    const r = adaptedCore(penalised, its, { tags: { mobility: -0.10 }, stats: {} },
+                          { maxBonus: 1, n: 2, selfCovered: 0 });
+    expect(r.bonuses.A).toBeCloseTo(-0.10);
+    expect(r.bonuses.B).toBeCloseTo(-0.10);
+  });
+
+  it("is unchanged from the old single-sort behaviour at selfCovered = 1", () => {
+    const r = adaptedCore(base, items, overlay, { maxBonus: 1, n: 3, selfCovered: 1 });
+    expect(r.core).toEqual(["AntiHeal1", "AntiHeal2", "Needed"]);
+  });
+
+  /* Per-item damage is measured against the enemy build for THIS item; no
+   * other slot can do that job for it. */
+  it("never damps the per-item damage channel", () => {
+    const its: Record<string, Item> = {
+      A: { name: "A", stats: { Penetration: "20" }, effect_tags: [] },
+      B: { name: "B", stats: { Penetration: "20" }, effect_tags: [] },
+    } as unknown as Record<string, Item>;
+    const r = adaptedCore({ A: 0.6, B: 0.5 }, its,
+      { tags: {}, stats: {}, items: { A: 0.05, B: 0.05 } },
+      { maxBonus: 1, n: 2, selfCovered: 0 });
+    expect(r.bonuses.A).toBeCloseTo(0.05);
+    expect(r.bonuses.B).toBeCloseTo(0.05);
+  });
+});

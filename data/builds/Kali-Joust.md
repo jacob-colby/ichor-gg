@@ -32,32 +32,32 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
-      total: 0.56
-      efficiency: 0.46
+      total: 0.55
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.66
     Death Metal:
       total: 0.55
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.51
     The Crusher:
-      total: 0.6
-      efficiency: 0.65
+      total: 0.59
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -74,27 +74,27 @@ builds:
   archetype: bruiser
   slot_order:
   - Toxic Blade
-  - Berserker's Shield
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Toxic Blade
-  - Berserker's Shield
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -104,27 +104,27 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Berserker's Shield:
-      total: 0.57
-      efficiency: 0.71
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Amanita Charm:
-      total: 0.78
-      efficiency: 0.66
+      total: 0.76
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.89
+    Erosion:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Pharaoh's Curse:
       total: 0.6
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.62
     Shogun's Ofuda:
       total: 0.57
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -140,13 +140,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Tekko-Kagi
+  - Silverbranch Bow
   - The Crusher
   - Heartseeker
   - Soul Gem
   flex_slots:
   - Heartseeker
-  - Tekko-Kagi
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -171,25 +171,25 @@ builds:
       fit: 0.87
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Tekko-Kagi:
+    Silverbranch Bow:
       total: 0.56
-      efficiency: 0.46
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.57
     The Crusher:
-      total: 0.66
-      efficiency: 0.65
+      total: 0.65
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.67
     Heartseeker:
-      total: 0.57
-      efficiency: 0.46
+      total: 0.56
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -214,8 +214,8 @@ builds:
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Tyrfing:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -253,8 +253,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Pharaoh's Curse:
-      total: 0.52
-      efficiency: 0.58
+      total: 0.51
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -294,31 +294,31 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.61
     Genji's Guard:
       total: 0.53
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.34
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.59
     Hydra's Lament:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -359,32 +359,32 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
-      total: 0.56
-      efficiency: 0.46
+      total: 0.55
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.66
     Death Metal:
       total: 0.55
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.51
     The Crusher:
-      total: 0.6
-      efficiency: 0.65
+      total: 0.59
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.55
