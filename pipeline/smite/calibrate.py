@@ -115,6 +115,11 @@ class _Fixture:
         self.gods = gods if gods is not None else recommend.load_gods()
         self.builds_by_god = builds_by_god if builds_by_god is not None else {
             g["name"]: recommend.load_build_note(g["name"]) for g in self.gods}
+        # Applied once here as well as inside `validate.compute`, because
+        # `random_core_baseline` fits its own gold values and would otherwise
+        # depend on whether a probe happened to run first. A baseline computed
+        # against a different model than the thing it baselines is not one.
+        efficiency.apply_pricing_flags(self.weights)
 
     def evaluate(self, signals):
         """(per_god, agg) for one signal vector."""

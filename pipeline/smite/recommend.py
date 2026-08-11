@@ -239,8 +239,7 @@ def main(argv=None):
     if args.all:
         items = load_items()
         weights = scoring.load_weights(WEIGHTS_PATH)
-        efficiency.PRICE_PASSIVES = bool(weights.get("price_passives"))
-        efficiency.PRICE_STACKS = bool(weights.get("price_stacks"))
+        efficiency.apply_pricing_flags(weights)
         tags_map = scoring.load_tags(TAGS_PATH)
         # Only buildable items need effect tags — a component is never in a
         # build, so listing all 49 of them turns a useful warning into noise

@@ -304,3 +304,79 @@ def survey(items):
             conditional += 1
     return {"with_passive": total, "parsed": parsed,
             "conditional": conditional, "adaptive": adaptive}
+
+
+# ── Crit-damage multipliers: the one passive the combat model can price exactly ──
+#
+# `combat.py` is calibrated against the game to 0.0% over twelve readings, and
+# two of those readings exist specifically to pin crit: the multiplier is 1.50
+# where two published sources said 1.65, and Deathbringer's +35% ADDS onto it
+# to reach 1.85 rather than multiplying to 2.0. Rage + Deathbringer measured 96
+# normal and 179 crit, and 96.770 x 1.85 = 179.025.
+#
+# Nothing has ever asked. `efficiency` prices stat columns and a crit-damage
+# bonus is not a stat; `damage_value.item_damage_gain` walks ability components
+# and never touches the basic-attack channel crit lives on. So the single item
+# whose passive this project knows the exact value of was priced at zero, and
+# the gold model called it premium (+470 residual) while 40% of the community
+# builds that reach it buy it.
+#
+# EXPRESSED AS EQUIVALENT CRITICAL CHANCE, deliberately, rather than as a new
+# column. A column carried by ONE item is exactly determined — NNLS drives its
+# residual to zero and the coefficient is a fit artifact, which is what
+# `efficiency.MIN_STAT_CARRIERS` exists to prevent. Critical Chance already has
+# many carriers and a fitted price, so converting into it prices the passive in
+# a currency the model can already value.
+#
+# The conversion is exact for the item alone. Expected basic damage at crit
+# chance C and multiplier M is 1 + C(M-1). Adding a bonus B moves M to M+B, and
+# the extra crit chance C' that would buy the same at the base multiplier is:
+#
+#     1 + (M-1)(C + C')  =  1 + (M-1+B)C     ->     C' = C * B / (M-1)
+#
+# For Deathbringer at its own 20% crit and B = 0.35: C' = 0.20 * 0.35 / 0.50 =
+# 14 points of Critical Chance, on top of the 20 it lists.
+#
+# IT IS A FLOOR, and that is the honest caveat. The conversion uses the item's
+# OWN crit chance because the gold model is god-agnostic and item-level; in a
+# real crit build carrying 60% chance the same passive is worth 42 points, not
+# 14. Understating it is the safe direction — the failure being fixed is
+# pricing it at zero.
+_CRIT_DAMAGE_GRANT = re.compile(
+    r"\+\s*([\d.]+)\s*%\s*Critical\s+Strike\s+Damage", re.I)
+
+
+def crit_damage_bonus(item):
+    """The unconditional crit-damage multiplier an item grants, as a fraction.
+
+    0.0 for anything conditional. `Critically Strike: +8% Ability Damage for
+    5s` is a trigger with a duration, not a standing bonus, and every crit
+    passive in the pool except Deathbringer's is one of those."""
+    text = (item.get("passive") or "").strip()
+    if not text or is_conditional(text):
+        return 0.0
+    m = _CRIT_DAMAGE_GRANT.search(text)
+    return float(m.group(1)) / 100.0 if m else 0.0
+
+
+def crit_damage_as_chance(item):
+    """`{"Critical Chance %": points}` for a crit-damage passive, or {}.
+
+    Empty unless the item carries crit chance of its own: a crit-damage bonus
+    on an item with no crit chance multiplies a zero, and pricing it would be
+    inventing value the item cannot deliver by itself."""
+    from smite import combat
+    from smite.efficiency import parse_stat_value
+    bonus = crit_damage_bonus(item)
+    if not bonus:
+        return {}
+    # Read the raw stat rather than calling `efficiency.item_stat_values`:
+    # that function is this one's CALLER when the flag is on, and routing back
+    # through it recurses until the stack dies.
+    chance = parse_stat_value((item.get("stats") or {}).get("Critical Chance")) or 0.0
+    if not chance:
+        return {}
+    base = combat.CRIT_MULTIPLIER - 1.0
+    if base <= 0:
+        return {}
+    return {"Critical Chance %": chance * bonus / base}

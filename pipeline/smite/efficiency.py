@@ -59,6 +59,35 @@ PRICE_PASSIVES = False
 # transient stacker is refused. Flipped by `price_stacks` in _weights.yaml.
 PRICE_STACKS = False
 
+# Whether a crit-damage multiplier counts, converted into the equivalent
+# Critical Chance the model already prices. One item qualifies — Deathbringer,
+# whose +35% this project has measured against the game to the digit and never
+# consulted. See `passives.crit_damage_as_chance`. Flipped by
+# `price_crit_multipliers` in _weights.yaml.
+PRICE_CRIT_MULTIPLIERS = False
+
+
+def apply_pricing_flags(weights):
+    """Set the module's pricing switches from a weights dict.
+
+    These are module globals rather than parameters because `item_stat_values`
+    is called from deep inside the fit with no weights in scope. That is fine
+    until only ONE caller sets them: `recommend.main` did, and
+    `calibrate`/`validate` did not, so every gate measured with every flag OFF
+    no matter what _weights.yaml said. A config that the thing measuring it
+    cannot see is worse than no config — it reports the shipped number for an
+    unshipped model.
+
+    Returns the previous values so a caller sweeping a flag can restore them.
+    """
+    global PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS
+    before = (PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS)
+    w = weights or {}
+    PRICE_PASSIVES = bool(w.get("price_passives"))
+    PRICE_STACKS = bool(w.get("price_stacks"))
+    PRICE_CRIT_MULTIPLIERS = bool(w.get("price_crit_multipliers"))
+    return before
+
 
 def item_stat_values(item):
     """`{column name: float}` for one item — the canonical read of its stats.
@@ -77,6 +106,10 @@ def item_stat_values(item):
     if PRICE_STACKS:
         from smite import passives
         for key, amount in passives.persistent_stack_grants(item).items():
+            out[key] = out.get(key, 0.0) + amount
+    if PRICE_CRIT_MULTIPLIERS:
+        from smite import passives
+        for key, amount in passives.crit_damage_as_chance(item).items():
             out[key] = out.get(key, 0.0) + amount
     return out
 

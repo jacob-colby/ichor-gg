@@ -99,6 +99,11 @@ def compute(items=None, weights=None, tags_map=None, gods=None, builds_by_god=No
     gods = gods if gods is not None else recommend.load_gods()
     if builds_by_god is None:
         builds_by_god = {g["name"]: recommend.load_build_note(g["name"]) for g in gods}
+    # The gate has to measure the model the config describes. These are module
+    # globals set by whoever runs the pipeline, and only `recommend.main` used
+    # to set them — so calibrate and validate scored every off-by-default
+    # experiment as OFF even when _weights.yaml turned it on.
+    efficiency.apply_pricing_flags(weights)
     eff_scores, _ = efficiency.efficiency_scores(items)
     items_by_name = {it["name"]: it for it in items}
     per_god = {}

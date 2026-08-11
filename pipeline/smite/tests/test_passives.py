@@ -182,3 +182,54 @@ def test_an_item_with_no_per_stack_line_says_nothing_rather_than_a_fraction():
 def test_a_non_stacking_item_is_untouched():
     assert passives.persistent_stack_grants(_p("+20% Attack Speed")) == {}
     assert passives.persistent_stack_grants(_p("")) == {}
+
+
+# ── Crit-damage multipliers (shipped ON — `price_crit_multipliers`) ─────────
+
+def test_deathbringers_bonus_is_read_as_unconditional():
+    assert passives.crit_damage_bonus(
+        _p("+35% Critical Strike Damage.")) == pytest.approx(0.35)
+
+
+@pytest.mark.parametrize("text", [
+    "Critically Strike: +8% Ability Damage for 5s. Max 3 stacks",
+    "Critically Strike: +30% Attack Speed for 3s.",
+    "On Use: +35% Critical Strike Damage. Cooldown: 45s",
+])
+def test_a_triggered_crit_passive_is_refused(text):
+    """Every crit passive in the pool except Deathbringer's is a trigger with a
+    duration. `Critically Strike:` is a condition, not a standing bonus."""
+    assert passives.crit_damage_bonus(_p(text)) == 0.0
+
+
+def test_the_bonus_converts_to_equivalent_critical_chance():
+    """Expected basic damage at crit chance C and multiplier M is 1 + C(M-1).
+    Adding B moves M to M+B, so the extra chance buying the same at the base
+    multiplier is C' = C*B/(M-1). Deathbringer: 0.20 * 0.35 / 0.50 = 14 points,
+    on top of the 20 it lists."""
+    item = {"name": "Deathbringer", "passive": "+35% Critical Strike Damage.",
+            "stats": {"Strength": "45", "Critical Chance": "20%"}}
+    assert passives.crit_damage_as_chance(item) == {"Critical Chance %": pytest.approx(14.0)}
+
+
+def test_a_crit_damage_bonus_on_an_item_with_no_crit_chance_is_worth_nothing():
+    """It multiplies a zero. Pricing it would invent value the item cannot
+    deliver on its own."""
+    item = {"name": "X", "passive": "+35% Critical Strike Damage.",
+            "stats": {"Strength": "45"}}
+    assert passives.crit_damage_as_chance(item) == {}
+
+
+def test_conversion_does_not_recurse_through_the_pricing_path():
+    """`efficiency.item_stat_values` calls this when the flag is on, so reading
+    the item's crit chance back through that function recursed until the stack
+    died. It reads the raw stat instead."""
+    from smite import efficiency
+    item = {"name": "Deathbringer", "passive": "+35% Critical Strike Damage.",
+            "stats": {"Strength": "45", "Critical Chance": "20%"}}
+    efficiency.PRICE_CRIT_MULTIPLIERS = True
+    try:
+        values = efficiency.item_stat_values(item)
+    finally:
+        efficiency.PRICE_CRIT_MULTIPLIERS = False
+    assert values["Critical Chance %"] == pytest.approx(34.0)   # its own 20 + 14

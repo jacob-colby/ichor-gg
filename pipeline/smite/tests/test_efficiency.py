@@ -228,3 +228,33 @@ def test_min_stat_carriers_keeps_thin_but_real_columns():
     items = [{"name": f"E{i}", "cost": 2000, "tier": 3, "stats": {"Echo": "10"}}
              for i in range(efficiency.MIN_STAT_CARRIERS)]
     assert "Echo" in efficiency.collect_stat_names(items)
+
+
+def test_pricing_flags_come_from_the_weights_the_gate_is_measuring():
+    """These are module globals, and only `recommend.main` used to set them —
+    so `calibrate` and `validate` scored every off-by-default experiment as OFF
+    even when _weights.yaml turned it on. A gate that cannot see the config
+    reports the shipped number for an unshipped model."""
+    before = efficiency.apply_pricing_flags(
+        {"price_passives": True, "price_stacks": True, "price_crit_multipliers": True})
+    try:
+        assert (efficiency.PRICE_PASSIVES, efficiency.PRICE_STACKS,
+                efficiency.PRICE_CRIT_MULTIPLIERS) == (True, True, True)
+        efficiency.apply_pricing_flags({})
+        assert (efficiency.PRICE_PASSIVES, efficiency.PRICE_STACKS,
+                efficiency.PRICE_CRIT_MULTIPLIERS) == (False, False, False)
+        # It returns the prior values so a sweep can restore them.
+        prior = efficiency.apply_pricing_flags({"price_stacks": True})
+        assert prior == (False, False, False)
+    finally:
+        (efficiency.PRICE_PASSIVES, efficiency.PRICE_STACKS,
+         efficiency.PRICE_CRIT_MULTIPLIERS) = before
+
+
+def test_validate_applies_the_flags_before_fitting():
+    """The regression path is what every gate goes through."""
+    import inspect
+    from smite import validate
+    src = inspect.getsource(validate.compute)
+    assert "apply_pricing_flags" in src
+    assert src.index("apply_pricing_flags") < src.index("efficiency_scores(items)")
