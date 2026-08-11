@@ -51,6 +51,14 @@ def stat_key(name, raw):
 # the explanation. Flipped by `price_passives` in _weights.yaml.
 PRICE_PASSIVES = False
 
+# Whether a PERSISTENT stacker counts at its full-stack value. Strictly
+# narrower than PRICE_PASSIVES and independent of it: that flag prices every
+# unconditional grant, this one prices only stacks that reach a cap and keep
+# it (`passives.persistent_stack_grants`). Four items qualify — Book of Thoth,
+# Devourer's Gauntlet, Gauntlet of Thebes and Transcendence — and every
+# transient stacker is refused. Flipped by `price_stacks` in _weights.yaml.
+PRICE_STACKS = False
+
 
 def item_stat_values(item):
     """`{column name: float}` for one item — the canonical read of its stats.
@@ -66,6 +74,10 @@ def item_stat_values(item):
     if PRICE_PASSIVES:
         from smite import passives
         out = passives.effective_stats(item, out)
+    if PRICE_STACKS:
+        from smite import passives
+        for key, amount in passives.persistent_stack_grants(item).items():
+            out[key] = out.get(key, 0.0) + amount
     return out
 
 
@@ -173,6 +185,30 @@ def efficiency_pool(items):
     costs a lot: the leakage-free measure falls 4.89x -> 4.20x. What they are
     not is *comparable* on a global value ranking, which is a display concern
     and is handled in `build_index._attach_efficiency`.
+
+    THEY ARE ALSO A LOT OF LEVERAGE FOR FOUR ITEMS, which is worth knowing
+    before adding a fifth. Recovering Briskberry Acorn's stats (2026-08-09 —
+    they were stranded in its passive text, see
+    `wiki_parser._stats_from_prose`) put ONE more god-locked item in this pool
+    and repriced the whole game: Pathfinding -59.9%, Health Regen -27.0%,
+    Mana Regen -20.0%, Strength -7.8%, Max Health -6.1%, intercept +4.2%. A
+    god-specific item is balanced around being unavailable to 86 gods, so it
+    is deliberately overloaded for its price, and the fit reads that as stats
+    being cheap for everyone.
+
+    Measured both ways, and the honest answer is that it does not resolve:
+
+                                    eff 0.7 : fit 0.3    eff 0.45 : fit 0.55
+        Briskberry statless (before)        30.0%                  32.1%
+        in the pool (shipped)               33.1%                  30.5%
+        out of the pool                     29.9%                  32.0%
+
+    The sign FLIPS with the split and every interval overlaps every other
+    ([28.3%, 38.1%] against [25.7%, 34.3%] on the first column). So this is
+    not evidence for changing the rule, and the rule is unchanged — the 4.89x
+    -> 4.20x measurement above was made on stronger ground than this one.
+    Do not quote the 33.1% as an improvement; it is one arm of a sign-flipping
+    comparison inside its own noise.
 
     If you are about to narrow this pool again: measure it, and measure it
     with `calibrate.random_core_baseline` rather than `mean_coverage` — see the
