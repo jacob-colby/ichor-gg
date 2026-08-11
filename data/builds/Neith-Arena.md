@@ -13,8 +13,8 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
+  - Lernaean Bow
   - Death Metal
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -38,14 +38,14 @@ builds:
       pick: 0.0
       fit: 0.53
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.65
     Death Metal:
-      total: 0.54
-      efficiency: 0.59
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -73,7 +73,7 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Lernaean Bow
+  - Toxic Blade
   - Death Metal
   - Damaru
   - Demon Blade
@@ -93,20 +93,20 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
+    Toxic Blade:
       total: 0.53
-      efficiency: 0.54
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.63
     Death Metal:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -118,7 +118,7 @@ builds:
       fit: 0.36
     Demon Blade:
       total: 0.46
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -145,8 +145,8 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
   - Pharaoh's Curse
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
-      total: 0.58
+      total: 0.59
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -313,7 +313,7 @@ builds:
       fit: 0.7
     Void Stone:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -377,13 +377,13 @@ builds:
       pick: 0.0
       fit: 0.76
     Riptalon:
-      total: 0.66
+      total: 0.67
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.77
     Pharaoh's Curse:
-      total: 0.53
+      total: 0.54
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.49
     Pharaoh's Curse:
-      total: 0.52
+      total: 0.53
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -502,7 +502,7 @@ builds:
       fit: 0.6
     Death Metal:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -566,8 +566,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Death Metal:
-      total: 0.56
-      efficiency: 0.59
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -600,8 +600,8 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
+  - Lernaean Bow
   - Death Metal
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -625,14 +625,14 @@ builds:
       pick: 0.0
       fit: 0.53
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.65
     Death Metal:
-      total: 0.54
-      efficiency: 0.59
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49

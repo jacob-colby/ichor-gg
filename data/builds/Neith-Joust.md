@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -50,8 +50,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Death Metal:
-      total: 0.54
-      efficiency: 0.59
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -99,7 +99,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.53
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.35
     Death Metal:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -124,7 +124,7 @@ builds:
       fit: 0.36
     Demon Blade:
       total: 0.46
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -177,7 +177,7 @@ builds:
       fit: 0.46
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Shogun's Ofuda:
-      total: 0.53
+      total: 0.54
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -313,7 +313,7 @@ builds:
       fit: 0.6
     Void Stone:
       total: 0.52
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -371,13 +371,13 @@ builds:
       pick: 0.0
       fit: 0.54
     Death Metal:
-      total: 0.5
-      efficiency: 0.59
+      total: 0.49
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.41
     Riptalon:
-      total: 0.66
+      total: 0.67
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -514,7 +514,7 @@ builds:
       fit: 0.6
     Death Metal:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -572,8 +572,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Death Metal:
-      total: 0.56
-      efficiency: 0.59
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -619,7 +619,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -637,8 +637,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Death Metal:
-      total: 0.54
-      efficiency: 0.59
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49

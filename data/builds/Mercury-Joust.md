@@ -99,7 +99,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -275,7 +275,7 @@ builds:
   - Silverbranch Bow
   - Pharaoh's Curse
   flex_slots:
-  - Silverbranch Bow
+  - The Reaper
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Breastplate of Valor:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
       win: 0.5
       pick: 0.0

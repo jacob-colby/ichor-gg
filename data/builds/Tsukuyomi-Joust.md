@@ -50,8 +50,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Death Metal:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -112,7 +112,7 @@ builds:
       fit: 0.56
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -359,7 +359,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.52
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -436,14 +436,14 @@ builds:
       pick: 0.0
       fit: 0.46
     Bragi's Harp:
-      total: 0.56
+      total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
       total: 0.56
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Bragi's Harp
   - Death Metal
   - The Crusher
   - Soul Gem
-  - Triton's Conch
   flex_slots:
   - Jotunn's Revenge
-  - Triton's Conch
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,11 +483,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.55
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.66
@@ -495,14 +501,14 @@ builds:
       pick: 0.0
       fit: 0.44
     Bragi's Harp:
-      total: 0.59
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.73
     Death Metal:
       total: 0.59
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -518,12 +524,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.99
-    Triton's Conch:
-      total: 0.55
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: model
@@ -572,8 +572,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Death Metal:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51

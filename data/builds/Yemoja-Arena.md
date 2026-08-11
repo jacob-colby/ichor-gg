@@ -123,7 +123,7 @@ builds:
       pick: 0.0
       fit: 0.92
     Stampede:
-      total: 0.65
+      total: 0.66
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.99
     Void Stone:
       total: 0.71
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -236,7 +236,7 @@ builds:
       fit: 0.26
     Nimble Ring:
       total: 0.4
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Triton's Conch:
-      total: 0.58
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -442,7 +442,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Pharaoh's Curse:
-      total: 0.56
+      total: 0.57
       efficiency: 0.57
       win: 0.5
       pick: 0.0

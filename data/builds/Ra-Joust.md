@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Eye of Providence
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -163,18 +163,18 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.56
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Void Shield:
+      total: 0.55
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Spectral Armor:
       total: 0.56
       efficiency: 0.58
@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
+  - The World Stone
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -240,15 +240,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Doom Orb:
-      total: 0.65
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
     Spear of the Magus:
       total: 0.7
       efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    The World Stone:
+      total: 0.65
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -307,7 +307,7 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Void Stone:
-      total: 0.59
-      efficiency: 0.43
+      total: 0.6
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -556,7 +556,7 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.52
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -567,7 +567,7 @@ builds:
       pick: 0.0
       fit: 0.62
     The Cosmic Horror:
-      total: 0.51
+      total: 0.52
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -585,7 +585,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.61
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -700,7 +700,7 @@ builds:
       fit: 0.84
     Void Stone:
       total: 0.7
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.96
@@ -760,24 +760,24 @@ builds:
       fit: 0.28
     Nimble Ring:
       total: 0.42
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.35
     Bragi's Harp:
-      total: 0.47
+      total: 0.46
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.49
     Void Stone:
       total: 0.5
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.77
+      total: 0.78
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -891,8 +891,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Void Stone:
-      total: 0.59
-      efficiency: 0.43
+      total: 0.6
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75

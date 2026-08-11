@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
+  - The World Stone
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -43,15 +43,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Doom Orb:
-      total: 0.63
-      efficiency: 0.49
+    Spear of the Magus:
+      total: 0.69
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Spear of the Magus:
-      total: 0.68
-      efficiency: 0.6
+    The World Stone:
+      total: 0.63
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Eye of Providence
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -163,18 +163,18 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.56
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Void Shield:
+      total: 0.55
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Spectral Armor:
       total: 0.56
       efficiency: 0.58
@@ -206,12 +206,12 @@ builds:
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
+  - The World Stone
   - Obsidian Shard
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -246,15 +246,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Doom Orb:
-      total: 0.66
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
     Spear of the Magus:
       total: 0.72
       efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    The World Stone:
+      total: 0.66
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -307,7 +307,7 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -399,14 +399,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
+  - Hydra's Lament
   - Bragi's Harp
-  - Death Metal
   - The Crusher
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Death Metal
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,18 +429,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Hydra's Lament:
+      total: 0.56
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Bragi's Harp:
       total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.76
-    Death Metal:
-      total: 0.56
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     The Crusher:
       total: 0.63
       efficiency: 0.63
@@ -496,7 +496,7 @@ builds:
       fit: 0.7
     Death Metal:
       total: 0.59
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
+  - The World Stone
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -565,15 +565,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Doom Orb:
-      total: 0.63
-      efficiency: 0.49
+    Spear of the Magus:
+      total: 0.69
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Spear of the Magus:
-      total: 0.68
-      efficiency: 0.6
+    The World Stone:
+      total: 0.63
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.77

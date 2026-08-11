@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Pharaoh's Curse:
-      total: 0.61
+      total: 0.62
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.98
     Void Stone:
       total: 0.71
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.98
@@ -275,8 +275,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Stampede
   - Genji's Guard
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse

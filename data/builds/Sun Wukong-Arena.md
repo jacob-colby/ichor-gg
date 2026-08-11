@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Triton's Conch:
-      total: 0.64
+      total: 0.63
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -183,7 +183,7 @@ builds:
       fit: 0.92
     Void Stone:
       total: 0.68
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Shogun's Ofuda
-  - Hydra's Lament
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -305,12 +305,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Hydra's Lament:
+    Erosion:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.61
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.57
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Triton's Conch:
-      total: 0.64
+      total: 0.63
       efficiency: 0.45
       win: 0.5
       pick: 0.0

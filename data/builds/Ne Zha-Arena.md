@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.74
     Riptalon:
-      total: 0.77
+      total: 0.78
       efficiency: 0.56
       win: 0.5
       pick: 0.0

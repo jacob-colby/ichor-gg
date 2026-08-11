@@ -100,8 +100,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
+  - Heartseeker
   - Jotunn's Revenge
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -117,10 +117,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, The Reaper, Hydra''s Lament, Pendulum Blade, Tekko-Kagi,
-    Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden Blade, Avenging
-    Blade, Shield Splitter, Arondight, Dominance, Eye of the Storm, Riptalon, Tyrfing,
-    Silverbranch Bow, Breastplate of Valor, Barbed Carver, Berserker''s Shield, Transcendence,
-    Musashi''s Dual Swords.'
+    Runeforged Hammer, Lernaean Bow, Damaru, Avatar''s Parashu, Golden Blade, Avenging
+    Blade, Shield Splitter, Arondight, Riptalon, Dominance, Eye of the Storm, Tyrfing,
+    Silverbranch Bow, Breastplate of Valor, Berserker''s Shield, Barbed Carver, Deathbringer,
+    Transcendence.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.67
@@ -147,9 +147,9 @@ builds:
       pick: 0.33
       fit: 1.0
     The Crusher:
-      total: 0.6
+      total: 0.62
       efficiency: 0.63
-      win: 0.5
+      win: 0.55
       pick: 0.0
       fit: 1.0
     Heartseeker:
@@ -169,10 +169,10 @@ builds:
   - Thistlethorn Acorn
   - Genji's Guard
   - Jotunn's Revenge
-  - Heartseeker
+  - The Crusher
   flex_slots:
+  - The Crusher
   - Jotunn's Revenge
-  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -187,11 +187,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, Hydra''s Lament, The Reaper, Breastplate of Valor, Pendulum
-    Blade, Riptalon, Runeforged Hammer, Tekko-Kagi, Silverbranch Bow, Freya''s Tears,
-    Berserker''s Shield, Damaru, Lernaean Bow, Arondight, Kinetic Cuirass, Golden
-    Blade, Amanita Charm, Screeching Gargoyle, Oni Hunter''s Garb, Avatar''s Parashu,
-    Avenging Blade, Chandra''s Grace.'
+    god: The Crusher, Hydra''s Lament, Breastplate of Valor, The Reaper, Pendulum
+    Blade, Riptalon, Runeforged Hammer, Silverbranch Bow, Tekko-Kagi, Freya''s Tears,
+    Berserker''s Shield, Lernaean Bow, Damaru, Arondight, Kinetic Cuirass, Golden
+    Blade, Amanita Charm, Screeching Gargoyle, Oni Hunter''s Garb, Chandra''s Grace,
+    Avatar''s Parashu, Eye of Providence.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.63
@@ -223,11 +223,11 @@ builds:
       win: 0.45
       pick: 0.33
       fit: 0.78
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.45
-      win: 0.63
-      pick: 0.26
+    The Crusher:
+      total: 0.57
+      efficiency: 0.63
+      win: 0.55
+      pick: 0.0
       fit: 0.66
   starter: *id001
 - source: suggested
@@ -257,10 +257,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Berserker''s Shield, The Crusher, The
-    Reaper, Oni Hunter''s Garb, Runeforged Hammer, Eye of the Storm, Shield Splitter,
-    Riptalon, Chandra''s Grace, Erosion, Phoenix Feather, Freya''s Tears, Breastplate
-    of Valor, Eye of Providence, Spectral Armor, Hydra''s Lament, Draconic Scale,
-    Pharaoh''s Curse, Golden Blade, Avenging Blade, Leviathan''s Hide.'
+    Reaper, Oni Hunter''s Garb, Runeforged Hammer, Eye of the Storm, Riptalon, Chandra''s
+    Grace, Shield Splitter, Erosion, Phoenix Feather, Freya''s Tears, Breastplate
+    of Valor, Eye of Providence, Spectral Armor, Pharaoh''s Curse, Draconic Scale,
+    Hydra''s Lament, Golden Blade, Leviathan''s Hide, Avenging Blade.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.66
@@ -287,9 +287,9 @@ builds:
       pick: 0.25
       fit: 0.21
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.55
       efficiency: 0.59
-      win: 0.5
+      win: 0.55
       pick: 0.0
       fit: 0.66
     Shield of the Phoenix:
@@ -309,8 +309,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
+  - Heartseeker
   - Jotunn's Revenge
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -326,13 +326,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, The Reaper, Tekko-Kagi, Pendulum Blade, Riptalon, Silverbranch
-    Bow, Avenging Blade, Avatar''s Parashu, Hydra''s Lament, Runeforged Hammer, Damaru,
-    Lernaean Bow, Screeching Gargoyle, Toxic Blade, Breastplate of Valor, Berserker''s
+    Bow, Avenging Blade, Hydra''s Lament, Avatar''s Parashu, Runeforged Hammer, Lernaean
+    Bow, Damaru, Screeching Gargoyle, Toxic Blade, Breastplate of Valor, Berserker''s
     Shield, Golden Blade, Shield Splitter, Stone of Binding, Dominance, Eye of the
     Storm, Oath-Sworn Spear, Tyrfing.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.65
+      total: 0.64
       efficiency: 0.96
       win: 0.55
       pick: 0.27
@@ -356,9 +356,9 @@ builds:
       pick: 0.33
       fit: 1.0
     The Crusher:
-      total: 0.6
+      total: 0.62
       efficiency: 0.63
-      win: 0.5
+      win: 0.55
       pick: 0.0
       fit: 1.0
     Heartseeker:
@@ -378,27 +378,27 @@ builds:
   - Riptalon
   - Silverbranch Bow
   flex_slots:
-  - Riptalon
   - Silverbranch Bow
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Silverbranch Bow, Golden Blade, Berserker''s Shield, The Crusher,
-    Tyrfing, Lernaean Bow, Tekko-Kagi, Toxic Blade, Dominance, Hydra''s Lament, The
-    Reaper, Pharaoh''s Curse, Breastplate of Valor, Runeforged Hammer, Shogun''s Ofuda,
-    Damaru, Eros'' Bow, Qin''s Blade, Kinetic Cuirass, Amanita Charm, Oni Hunter''s
-    Garb, Eye of Providence, Freya''s Tears.'
+    Tyrfing, Lernaean Bow, Tekko-Kagi, Toxic Blade, Dominance, Hydra''s Lament, Pharaoh''s
+    Curse, The Reaper, Breastplate of Valor, Runeforged Hammer, Shogun''s Ofuda, Damaru,
+    Eros'' Bow, Qin''s Blade, Kinetic Cuirass, Amanita Charm, Oni Hunter''s Garb,
+    Eye of Providence, Freya''s Tears.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.67
@@ -425,15 +425,15 @@ builds:
       pick: 0.25
       fit: 0.04
     Riptalon:
-      total: 0.54
+      total: 0.56
       efficiency: 0.56
-      win: 0.5
+      win: 0.55
       pick: 0.0
       fit: 0.79
     Silverbranch Bow:
-      total: 0.52
+      total: 0.54
       efficiency: 0.54
-      win: 0.5
+      win: 0.55
       pick: 0.0
       fit: 0.69
   starter: *id001
@@ -465,8 +465,8 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Hydra''s Lament, Breastplate of Valor,
     The Crusher, Freya''s Tears, Pendulum Blade, Arondight, Screeching Gargoyle, Chandra''s
-    Grace, Berserker''s Shield, The Reaper, Gladiator''s Shield, Runeforged Hammer,
-    Damaru, Lernaean Bow, Riptalon, Prophetic Cloak, Kinetic Cuirass, Amanita Charm,
+    Grace, Berserker''s Shield, Gladiator''s Shield, The Reaper, Runeforged Hammer,
+    Riptalon, Lernaean Bow, Damaru, Prophetic Cloak, Kinetic Cuirass, Amanita Charm,
     Silverbranch Bow, Oni Hunter''s Garb, Eye of Providence, Regrowth Striders, Golden
     Blade.'
   slot_scores:
@@ -501,9 +501,9 @@ builds:
       pick: 0.33
       fit: 0.85
     Hydra's Lament:
-      total: 0.54
+      total: 0.56
       efficiency: 0.58
-      win: 0.5
+      win: 0.55
       pick: 0.0
       fit: 0.75
   starter: *id001
@@ -534,10 +534,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, The Reaper, Hydra''s Lament, Pendulum Blade,
-    Tekko-Kagi, Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden
-    Blade, Avenging Blade, Shield Splitter, Arondight, Dominance, Eye of the Storm,
-    Riptalon, Tyrfing, Silverbranch Bow, Breastplate of Valor, Barbed Carver, Berserker''s
-    Shield, Transcendence, Musashi''s Dual Swords.'
+    Tekko-Kagi, Runeforged Hammer, Lernaean Bow, Damaru, Avatar''s Parashu, Golden
+    Blade, Avenging Blade, Shield Splitter, Arondight, Riptalon, Dominance, Eye of
+    the Storm, Tyrfing, Silverbranch Bow, Breastplate of Valor, Berserker''s Shield,
+    Barbed Carver, Deathbringer, Transcendence.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.67
@@ -564,15 +564,15 @@ builds:
       pick: 0.33
       fit: 1.0
     Hydra's Lament:
-      total: 0.53
+      total: 0.56
       efficiency: 0.58
-      win: 0.5
+      win: 0.55
       pick: 0.0
       fit: 0.71
     The Crusher:
-      total: 0.6
+      total: 0.62
       efficiency: 0.63
-      win: 0.5
+      win: 0.55
       pick: 0.0
       fit: 1.0
   starter: *id001

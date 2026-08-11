@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Eye of Providence
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -163,12 +163,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.59
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.59
@@ -199,6 +193,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -294,7 +294,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.7
+      total: 0.71
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Silverbranch Bow:
-      total: 0.61
+      total: 0.62
       efficiency: 0.54
       win: 0.5
       pick: 0.0

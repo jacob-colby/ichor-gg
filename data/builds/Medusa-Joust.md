@@ -45,7 +45,7 @@ builds:
       fit: 0.39
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -112,19 +112,19 @@ builds:
       fit: 0.38
     Death Metal:
       total: 0.52
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.46
     Damaru:
-      total: 0.5
+      total: 0.49
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.41
     Demon Blade:
       total: 0.5
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -177,7 +177,7 @@ builds:
       fit: 0.46
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.38
     Amanita Charm:
-      total: 0.72
+      total: 0.73
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -294,7 +294,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -313,7 +313,7 @@ builds:
       fit: 0.6
     Void Stone:
       total: 0.52
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Tyrfing:
-      total: 0.53
+      total: 0.52
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.42
     Soul Gem:
-      total: 0.72
+      total: 0.73
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -514,7 +514,7 @@ builds:
       fit: 0.6
     Death Metal:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -572,8 +572,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Death Metal:
-      total: 0.56
-      efficiency: 0.59
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -632,7 +632,7 @@ builds:
       fit: 0.39
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43

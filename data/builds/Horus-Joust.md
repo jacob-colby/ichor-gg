@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Freya's Tears
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Freya's Tears
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.64
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Kinetic Cuirass:
       total: 0.68
       efficiency: 0.59
@@ -67,21 +61,27 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
+    Pharaoh's Curse:
+      total: 0.6
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Eye of Providence
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -98,12 +98,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.64
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Kinetic Cuirass:
       total: 0.68
       efficiency: 0.59
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
+    Pharaoh's Curse:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.72
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -189,7 +189,7 @@ builds:
       fit: 0.9
     Void Stone:
       total: 0.67
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Freya's Tears
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Freya's Tears
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -358,12 +358,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.64
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Kinetic Cuirass:
       total: 0.68
       efficiency: 0.59
@@ -394,5 +388,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
+    Pharaoh's Curse:
+      total: 0.6
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
   starter: *id001
 ---

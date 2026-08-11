@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.59
     Lernaean Bow:
-      total: 0.62
+      total: 0.61
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Avatar's Parashu:
-      total: 0.58
+      total: 0.57
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.46
     Bragi's Harp:
-      total: 0.56
+      total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.67
     Death Metal:
       total: 0.56
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -495,14 +495,14 @@ builds:
       pick: 0.0
       fit: 0.61
     Bragi's Harp:
-      total: 0.59
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.73
     Death Metal:
       total: 0.59
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -560,7 +560,7 @@ builds:
       pick: 0.0
       fit: 0.59
     Lernaean Bow:
-      total: 0.62
+      total: 0.61
       efficiency: 0.54
       win: 0.5
       pick: 0.0

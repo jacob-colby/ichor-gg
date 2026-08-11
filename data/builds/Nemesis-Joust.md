@@ -50,8 +50,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Death Metal:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -294,7 +294,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.52
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -377,8 +377,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Death Metal:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51

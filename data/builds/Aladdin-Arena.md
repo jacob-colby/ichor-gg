@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Avatar's Parashu:
-      total: 0.64
+      total: 0.63
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.6
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.89
     Avatar's Parashu:
-      total: 0.69
+      total: 0.68
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Toxic Blade:
-      total: 0.66
+      total: 0.67
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -333,7 +333,7 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Chronos' Pendant
+  - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
@@ -341,14 +341,14 @@ builds:
   - Soul Gem
   flex_slots:
   - Pendulum Blade
-  - Chronos' Pendant
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -358,12 +358,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Chronos' Pendant:
+    Genji's Guard:
       total: 0.6
-      efficiency: 0.56
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.5
     Jotunn's Revenge:
       total: 0.75
       efficiency: 0.66
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Avatar's Parashu:
-      total: 0.64
+      total: 0.63
       efficiency: 0.38
       win: 0.5
       pick: 0.0

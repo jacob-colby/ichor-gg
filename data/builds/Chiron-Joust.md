@@ -57,7 +57,7 @@ builds:
       fit: 0.75
     Demon Blade:
       total: 0.51
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Rage
   - Riptalon
   - Damaru
   - Demon Blade
+  - Deathbringer
   flex_slots:
   - Damaru
-  - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -99,7 +99,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -110,12 +110,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Rage:
-      total: 0.41
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Riptalon:
       total: 0.65
       efficiency: 0.56
@@ -130,10 +124,16 @@ builds:
       fit: 0.42
     Demon Blade:
       total: 0.51
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Deathbringer:
+      total: 0.44
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
 - source: suggested
   archetype: burst
@@ -145,8 +145,8 @@ builds:
   - The Crusher
   - Pharaoh's Curse
   flex_slots:
-  - Hydra's Lament
   - Pharaoh's Curse
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Riptalon:
-      total: 0.69
+      total: 0.7
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.59
     Riptalon:
-      total: 0.7
+      total: 0.71
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -454,7 +454,7 @@ builds:
       pick: 0.0
       fit: 0.46
     Pharaoh's Curse:
-      total: 0.47
+      total: 0.48
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -514,7 +514,7 @@ builds:
       fit: 0.75
     Demon Blade:
       total: 0.51
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -596,13 +596,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Rage
   - Riptalon
   - Damaru
   - Demon Blade
+  - Deathbringer
   flex_slots:
   - Damaru
-  - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -620,7 +620,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -631,12 +631,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Rage:
-      total: 0.41
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Riptalon:
       total: 0.65
       efficiency: 0.56
@@ -651,10 +645,16 @@ builds:
       fit: 0.42
     Demon Blade:
       total: 0.51
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Deathbringer:
+      total: 0.44
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -908,7 +908,7 @@ builds:
       pick: 0.0
       fit: 0.59
     Riptalon:
-      total: 0.7
+      total: 0.71
       efficiency: 0.56
       win: 0.5
       pick: 0.0

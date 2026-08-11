@@ -177,7 +177,7 @@ builds:
       fit: 1.0
     Void Stone:
       total: 0.72
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -236,7 +236,7 @@ builds:
       fit: 0.21
     Nimble Ring:
       total: 0.38
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.28

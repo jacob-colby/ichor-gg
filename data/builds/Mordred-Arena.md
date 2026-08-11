@@ -80,7 +80,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Stampede
+  - Triton's Conch
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Stampede:
-      total: 0.56
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.57
+      total: 0.56
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -242,7 +242,7 @@ builds:
       fit: 0.97
     Void Stone:
       total: 0.7
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -340,8 +340,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Stampede
   - Genji's Guard
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse

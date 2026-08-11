@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Bragi's Harp:
-      total: 0.58
+      total: 0.57
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Pharaoh's Curse:
-      total: 0.54
+      total: 0.55
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -442,7 +442,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Bragi's Harp:
-      total: 0.58
+      total: 0.57
       efficiency: 0.44
       win: 0.5
       pick: 0.0

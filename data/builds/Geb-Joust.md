@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Freya's Tears
   - Shifter's Shield
   - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Shifter's Shield
   - Draconic Scale
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -31,18 +31,18 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.73
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.85
     Kinetic Cuirass:
       total: 0.77
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.95
+    Freya's Tears:
+      total: 0.67
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Shifter's Shield:
       total: 0.68
       efficiency: 0.52
@@ -73,22 +73,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Eye of Providence
   - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -98,12 +98,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.73
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
     Kinetic Cuirass:
       total: 0.77
       efficiency: 0.59
@@ -116,6 +110,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Shifter's Shield:
+      total: 0.68
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
     Spectral Armor:
       total: 0.68
       efficiency: 0.58
@@ -183,7 +183,7 @@ builds:
       fit: 0.94
     Void Stone:
       total: 0.69
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -217,14 +217,14 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Stygian Anchor — magical protection
+    swap_item: Stygian Anchor
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -242,7 +242,7 @@ builds:
       fit: 0.21
     Nimble Ring:
       total: 0.38
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.28
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Freya's Tears
   - Shifter's Shield
   - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Shifter's Shield
   - Draconic Scale
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -488,18 +488,18 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.73
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.85
     Kinetic Cuirass:
       total: 0.77
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.95
+    Freya's Tears:
+      total: 0.67
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Shifter's Shield:
       total: 0.68
       efficiency: 0.52

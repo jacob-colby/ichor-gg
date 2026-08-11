@@ -13,7 +13,7 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - The Crusher
+  - Death Metal
   - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -39,7 +39,7 @@ builds:
       fit: 0.69
     Death Metal:
       total: 0.53
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -51,7 +51,7 @@ builds:
       fit: 0.74
     Demon Blade:
       total: 0.52
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -84,8 +84,8 @@ builds:
   - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Death Metal:
-      total: 0.54
-      efficiency: 0.59
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -118,7 +118,7 @@ builds:
       fit: 0.44
     Demon Blade:
       total: 0.52
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -177,7 +177,7 @@ builds:
       fit: 0.46
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -229,7 +229,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -470,8 +470,8 @@ builds:
   - Death Metal
   - Soul Gem
   flex_slots:
+  - Divine Ruin
   - Jotunn's Revenge
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -507,14 +507,14 @@ builds:
       pick: 0.0
       fit: 0.38
     Bragi's Harp:
-      total: 0.53
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.61
     Death Metal:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -573,7 +573,7 @@ builds:
       fit: 0.65
     Death Metal:
       total: 0.57
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -600,7 +600,7 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - The Crusher
+  - Death Metal
   - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -626,7 +626,7 @@ builds:
       fit: 0.69
     Death Metal:
       total: 0.53
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -638,7 +638,7 @@ builds:
       fit: 0.74
     Demon Blade:
       total: 0.52
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67

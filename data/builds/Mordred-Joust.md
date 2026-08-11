@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Spectral Armor
   - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -31,12 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.57
-      efficiency: 0.62
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.44
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.59
@@ -152,8 +152,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.54
     Soul Gem:
-      total: 0.74
+      total: 0.75
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -248,7 +248,7 @@ builds:
       fit: 0.87
     Void Stone:
       total: 0.65
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Spectral Armor
   - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -553,12 +553,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.57
-      efficiency: 0.62
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.44
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.59

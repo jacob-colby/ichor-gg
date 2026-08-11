@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Amanita Charm:
-      total: 0.71
+      total: 0.72
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -183,7 +183,7 @@ builds:
       fit: 0.79
     Void Stone:
       total: 0.61
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -371,7 +371,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Amanita Charm:
-      total: 0.71
+      total: 0.72
       efficiency: 0.63
       win: 0.5
       pick: 0.0

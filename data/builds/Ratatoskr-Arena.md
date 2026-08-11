@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Toxic Blade:
-      total: 0.7
+      total: 0.71
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Silverbranch Bow:
-      total: 0.61
+      total: 0.62
       efficiency: 0.54
       win: 0.5
       pick: 0.0

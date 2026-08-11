@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Eye of Providence
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -163,18 +163,18 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.57
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Void Shield:
+      total: 0.56
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Spectral Armor:
       total: 0.57
       efficiency: 0.58
@@ -206,12 +206,12 @@ builds:
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
+  - The World Stone
   - Obsidian Shard
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -246,15 +246,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
-    Doom Orb:
-      total: 0.67
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.85
     Spear of the Magus:
       total: 0.73
       efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    The World Stone:
+      total: 0.67
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -307,7 +307,7 @@ builds:
       fit: 0.41
     Nimble Ring:
       total: 0.49
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.49

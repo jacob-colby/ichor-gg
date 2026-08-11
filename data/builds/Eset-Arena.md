@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Spear of the Magus:
-      total: 0.68
+      total: 0.69
       efficiency: 0.6
       win: 0.5
       pick: 0.0
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.6
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -268,10 +268,10 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Divine Ruin
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
+  - Dreamer's Idol
   - Soul Gem
   - Triton's Conch
   flex_slots:
@@ -279,8 +279,8 @@ builds:
   - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -288,17 +288,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.5
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Bracer of The Abyss:
       total: 0.48
       efficiency: 0.56
@@ -307,7 +301,7 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -317,6 +311,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Dreamer's Idol:
+      total: 0.5
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -566,7 +566,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Spear of the Magus:
-      total: 0.68
+      total: 0.69
       efficiency: 0.6
       win: 0.5
       pick: 0.0

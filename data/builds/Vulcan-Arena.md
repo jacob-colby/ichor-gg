@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.88
     The Cosmic Horror:
-      total: 0.66
+      total: 0.67
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -247,7 +247,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Obsidian Shard:
-      total: 0.64
+      total: 0.65
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -301,12 +301,12 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
-      total: 0.54
+      total: 0.53
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -371,7 +371,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
       win: 0.5
       pick: 0.0

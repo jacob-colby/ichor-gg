@@ -156,6 +156,12 @@ just reproduce the old answer.
 Roughly in the order I would do them.
 
 ### Two thirds of the shipped builds rest on nothing measurable
+**No source for this exists** (checked 2026-08-10): SmiteBrain is Conquest-only
+and ignores every mode query param, smite2.live ships a Joust/Arena selector
+with zero rows behind it, SmiteTracker's meta report is Conquest-only. The
+builds now disclose it in the reader's own terms — "no outcome data exists for
+Joust … read this as a shortlist rather than a buy order".
+
 174 of 261 build groups are Joust and Arena. Those modes have no community data
 at all, so the recommender falls back to efficiency + fit alone — the
 combination measured at 4.9× chance for *finding* items and ≈0 for *ranking*
@@ -178,14 +184,18 @@ remains the highest-value thing left. What exists now is the cheapest possible
 stand-in for it, and its value is that judgements stop evaporating when the
 conversation ends.
 
-### The win signal is a constant for ~95% of the pool
-SmiteBrain reports a win rate for a median of **5 items per god** against a
-candidate pool of ~95, yet `win` carries the largest weight (0.45). For most
-items the signal is a flat offset, and `unknown_win_rate` is a threshold
-deciding where the ~5 measured items sit relative to the ~90 unmeasured ones.
-It is also what produces the remaining 0%-coverage gods, whose set is
-*unstable* — it moved 6 → 4 → 5 across one session's changes. Fixing this needs
-a metric that isn't made of the community's build.
+### The win signal is still a constant for ~92% of the pool
+SmiteBrain reports a win rate for a median of **11 items per god** against a
+pool of 133, and `win` carries the largest weight (0.45). The *flatness* is
+addressed — `unknown_win_per_god` imputes the god's own median instead of a
+global 0.5, because 77 of 87 gods measure above 0.5 and the constant was
+handing every community-built item **+0.0242 on `total`, 186% of Ullr's entire
+rank-3-to-10 margin**, purely for appearing in the data.
+
+**The WEIGHT is untouched and unvalidatable.** 0.45 on a signal that is a
+constant for 92% of the pool cannot be justified or refuted by anything here:
+`calibrate` zeroes `win`, and the headline gate uses it as its own target. It
+is the largest single unexamined number in the model.
 
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
@@ -250,7 +260,7 @@ numbers in the file.
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (544) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (559) ·
 `cd viewer && npm test -- --run` (614).
 
 ---
@@ -267,12 +277,12 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (544) ·
 | Joust / Arena gods placed | 0 / 87 — no outcome data exists |
 | Items placed | 220 / 220 |
 | Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
-| Headline gate | coverage 60%, win-weighted 60%, ρ 0.38 |
-| **Leakage-free** | **36.1% vs 5.9% chance = 6.12×** |
+| Headline gate | coverage 48%, win-weighted 49% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior |
+| **Leakage-free** | **36.7% vs 6.0% chance = 6.12×** |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
-| Tests | 544 pipeline · 614 viewer |
+| Tests | 559 pipeline · 614 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

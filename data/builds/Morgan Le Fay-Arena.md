@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.6
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -301,12 +301,12 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
-      total: 0.54
+      total: 0.53
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -620,7 +620,7 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.61
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -686,7 +686,7 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.54
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -824,7 +824,7 @@ builds:
       fit: 0.91
     Void Stone:
       total: 0.72
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -890,7 +890,7 @@ builds:
       fit: 0.31
     Nimble Ring:
       total: 0.43
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -902,7 +902,7 @@ builds:
       fit: 0.51
     Void Stone:
       total: 0.51
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -956,7 +956,7 @@ builds:
       fit: 0.43
     Void Stone:
       total: 0.54
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -1088,7 +1088,7 @@ builds:
       fit: 0.51
     Void Stone:
       total: 0.55
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -1148,7 +1148,7 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.61
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.78

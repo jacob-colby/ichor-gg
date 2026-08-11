@@ -6,22 +6,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Spectral Armor
   - Jotunn's Revenge
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.58
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.66
@@ -67,6 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -87,8 +87,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -149,8 +149,8 @@ builds:
   - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Erosion — magical protection
     swap_item: Erosion
@@ -183,7 +183,7 @@ builds:
       fit: 0.88
     Void Stone:
       total: 0.66
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -333,22 +333,22 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Spectral Armor
   - Jotunn's Revenge
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -358,12 +358,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.58
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.66
@@ -394,5 +388,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: *id001
 ---

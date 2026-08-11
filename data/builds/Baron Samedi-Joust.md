@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Void Shield
+  - Freya's Tears
   - Spectral Armor
   - Erosion
   - Soul Gem
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.55
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.59
@@ -49,6 +43,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Spectral Armor:
       total: 0.55
       efficiency: 0.58
@@ -93,8 +93,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Eye of Providence
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -163,18 +163,18 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.55
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Void Shield:
+      total: 0.55
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Spectral Armor:
       total: 0.56
       efficiency: 0.58
@@ -248,7 +248,7 @@ builds:
       fit: 0.87
     Void Stone:
       total: 0.65
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -307,7 +307,7 @@ builds:
       fit: 0.28
     Nimble Ring:
       total: 0.41
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.49
     Freya's Tears:
-      total: 0.57
+      total: 0.58
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Void Shield
+  - Freya's Tears
   - Spectral Armor
   - Erosion
   - Soul Gem
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -423,12 +423,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.55
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.59
@@ -441,6 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Spectral Armor:
       total: 0.55
       efficiency: 0.58

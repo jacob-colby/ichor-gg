@@ -123,7 +123,7 @@ builds:
       pick: 0.0
       fit: 0.78
     Pharaoh's Curse:
-      total: 0.62
+      total: 0.63
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.97
     Void Stone:
       total: 0.7
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Riptalon:
-      total: 0.61
+      total: 0.62
       efficiency: 0.56
       win: 0.5
       pick: 0.0

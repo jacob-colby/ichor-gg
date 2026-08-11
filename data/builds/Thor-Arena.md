@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.6
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - The Crusher
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
   - Stampede
-  - Spectral Armor
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -93,11 +93,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.66
@@ -110,12 +116,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Spectral Armor:
-      total: 0.54
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Amanita Charm:
       total: 0.73
       efficiency: 0.63
@@ -248,7 +248,7 @@ builds:
       fit: 0.94
     Void Stone:
       total: 0.69
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -424,7 +424,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.6
       efficiency: 0.66
       win: 0.5
       pick: 0.0

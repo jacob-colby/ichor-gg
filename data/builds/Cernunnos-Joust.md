@@ -51,12 +51,12 @@ builds:
       fit: 0.6
     Death Metal:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
     Riptalon:
-      total: 0.61
+      total: 0.62
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -105,14 +105,14 @@ builds:
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.5
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.35
     Death Metal:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -124,7 +124,7 @@ builds:
       fit: 0.36
     Demon Blade:
       total: 0.46
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -177,7 +177,7 @@ builds:
       fit: 0.46
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -313,7 +313,7 @@ builds:
       fit: 0.6
     Void Stone:
       total: 0.52
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -371,8 +371,8 @@ builds:
       pick: 0.0
       fit: 0.54
     Death Metal:
-      total: 0.5
-      efficiency: 0.59
+      total: 0.49
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -508,12 +508,12 @@ builds:
       fit: 0.6
     Death Metal:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
     Riptalon:
-      total: 0.61
+      total: 0.62
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -566,8 +566,8 @@ builds:
       pick: 0.0
       fit: 0.36
     Death Metal:
-      total: 0.53
-      efficiency: 0.59
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -627,7 +627,7 @@ builds:
       fit: 0.67
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -639,7 +639,7 @@ builds:
       fit: 0.31
     Demon Blade:
       total: 0.43
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -698,8 +698,8 @@ builds:
       pick: 0.0
       fit: 0.44
     Death Metal:
-      total: 0.5
-      efficiency: 0.59
+      total: 0.49
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -837,7 +837,7 @@ builds:
       fit: 0.68
     Void Stone:
       total: 0.56
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -859,14 +859,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Toxic Blade
-  - Tyrfing
   - Riptalon
+  - Silverbranch Bow
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Shogun's Ofuda
-  - Tyrfing
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -889,20 +889,20 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Tyrfing:
-      total: 0.48
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Riptalon:
       total: 0.62
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Silverbranch Bow:
+      total: 0.48
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Pharaoh's Curse:
-      total: 0.51
+      total: 0.52
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -1028,8 +1028,8 @@ builds:
       pick: 0.0
       fit: 0.36
     Death Metal:
-      total: 0.53
-      efficiency: 0.59
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.47

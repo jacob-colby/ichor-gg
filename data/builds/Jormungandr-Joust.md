@@ -20,8 +20,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Stygian Anchor — magical protection
+    swap_item: Stygian Anchor
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Soul Gem:
-      total: 0.68
+      total: 0.69
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -183,7 +183,7 @@ builds:
       fit: 0.84
     Void Stone:
       total: 0.64
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.74
+      total: 0.75
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -477,8 +477,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Stygian Anchor — magical protection
+    swap_item: Stygian Anchor
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix

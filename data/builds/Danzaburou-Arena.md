@@ -84,8 +84,8 @@ builds:
   - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Death Metal:
-      total: 0.54
-      efficiency: 0.59
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -124,7 +124,7 @@ builds:
       fit: 0.44
     Demon Blade:
       total: 0.52
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -145,8 +145,8 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
   - Pharaoh's Curse
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -203,19 +203,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Erosion
-  - Stampede
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -223,11 +223,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Amanita Charm:
       total: 0.78
       efficiency: 0.63
@@ -237,12 +243,6 @@ builds:
     Erosion:
       total: 0.57
       efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Stampede:
-      total: 0.56
-      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -313,7 +313,7 @@ builds:
       fit: 0.7
     Void Stone:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - Pharaoh's Curse
+  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Toxic Blade
-  - Lernaean Bow
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.5
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Toxic Blade:
       total: 0.51
       efficiency: 0.42
@@ -453,6 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Shogun's Ofuda:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -470,8 +470,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Lernaean Bow
   - Pharaoh's Curse
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,8 +483,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -495,14 +495,14 @@ builds:
       pick: 0.0
       fit: 0.51
     Bragi's Harp:
-      total: 0.53
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.61
     Death Metal:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -567,7 +567,7 @@ builds:
       fit: 0.65
     Death Metal:
       total: 0.57
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55

@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Freya's Tears
+  - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Freya's Tears
   - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.66
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Kinetic Cuirass:
       total: 0.7
       efficiency: 0.59
@@ -49,8 +43,14 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Spectral Armor:
+    Shifter's Shield:
       total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Spectral Armor:
+      total: 0.62
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Eye of Providence
   - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -98,18 +98,18 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.65
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Kinetic Cuirass:
       total: 0.69
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Void Shield:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Spectral Armor:
       total: 0.63
       efficiency: 0.58
@@ -183,7 +183,7 @@ builds:
       fit: 0.91
     Void Stone:
       total: 0.67
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.91
@@ -217,14 +217,14 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Stygian Anchor — magical protection
+    swap_item: Stygian Anchor
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -242,7 +242,7 @@ builds:
       fit: 0.24
     Nimble Ring:
       total: 0.39
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.3
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Freya's Tears
+  - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Freya's Tears
   - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -488,12 +488,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.66
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Kinetic Cuirass:
       total: 0.7
       efficiency: 0.59
@@ -506,8 +500,14 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Spectral Armor:
+    Shifter's Shield:
       total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Spectral Armor:
+      total: 0.62
       efficiency: 0.58
       win: 0.5
       pick: 0.0

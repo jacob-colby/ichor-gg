@@ -99,7 +99,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Amanita Charm:
-      total: 0.81
+      total: 0.82
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.89
     Void Stone:
       total: 0.66
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Pharaoh's Curse:
-      total: 0.62
+      total: 0.63
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Shield of the Phoenix:
-      total: 0.62
+      total: 0.63
       efficiency: 0.57
       win: 0.5
       pick: 0.0

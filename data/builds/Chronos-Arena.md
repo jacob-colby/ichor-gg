@@ -307,7 +307,7 @@ builds:
       fit: 0.41
     Nimble Ring:
       total: 0.49
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Bragi's Harp:
-      total: 0.49
+      total: 0.48
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -409,8 +409,8 @@ builds:
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -424,7 +424,7 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.58
+      total: 0.57
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -620,7 +620,7 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.5
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -830,7 +830,7 @@ builds:
       fit: 0.77
     Void Stone:
       total: 0.63
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -883,14 +883,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bracer of The Abyss:
-      total: 0.43
+      total: 0.44
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.31
     Nimble Ring:
       total: 0.43
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -902,7 +902,7 @@ builds:
       fit: 0.53
     Void Stone:
       total: 0.48
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -913,7 +913,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.51
+      total: 0.5
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -962,7 +962,7 @@ builds:
       fit: 0.3
     Void Stone:
       total: 0.48
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -1148,7 +1148,7 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.5
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57

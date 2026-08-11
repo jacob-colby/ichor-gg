@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
@@ -14,7 +14,7 @@ builds:
   - Triton's Conch
   flex_slots:
   - Spectral Armor
-  - Eye of Providence
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -31,12 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
+    Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.62
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.4
     Kinetic Cuirass:
       total: 0.57
       efficiency: 0.59
@@ -248,7 +248,7 @@ builds:
       fit: 0.85
     Void Stone:
       total: 0.64
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.57
     Shogun's Ofuda:
-      total: 0.54
+      total: 0.55
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -398,7 +398,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
@@ -406,7 +406,7 @@ builds:
   - Triton's Conch
   flex_slots:
   - Spectral Armor
-  - Eye of Providence
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -423,12 +423,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
+    Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.62
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.4
     Kinetic Cuirass:
       total: 0.57
       efficiency: 0.59

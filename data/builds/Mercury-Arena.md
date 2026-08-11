@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Avatar's Parashu:
-      total: 0.55
+      total: 0.54
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.87
     Avatar's Parashu:
-      total: 0.68
+      total: 0.67
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -275,12 +275,12 @@ builds:
   - Riptalon
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
+  - Tyrfing
   - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Breastplate of Valor:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
       win: 0.5
       pick: 0.0

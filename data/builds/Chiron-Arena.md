@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
-  - Rage
   - Riptalon
   - Damaru
   - Demon Blade
+  - Deathbringer
   flex_slots:
   - Damaru
-  - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -105,17 +105,11 @@ builds:
       pick: 0.0
       fit: 0.57
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Rage:
-      total: 0.41
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Riptalon:
       total: 0.65
       efficiency: 0.56
@@ -130,10 +124,16 @@ builds:
       fit: 0.42
     Demon Blade:
       total: 0.51
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Deathbringer:
+      total: 0.44
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
 - source: suggested
   archetype: burst
@@ -145,8 +145,8 @@ builds:
   - The Crusher
   - Pharaoh's Curse
   flex_slots:
-  - Lernaean Bow
   - Pharaoh's Curse
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -313,12 +313,12 @@ builds:
       fit: 0.7
     Void Stone:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
     Riptalon:
-      total: 0.69
+      total: 0.7
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Lernaean Bow:
-      total: 0.55
+      total: 0.54
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Riptalon:
-      total: 0.7
+      total: 0.71
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.46
     Pharaoh's Curse:
-      total: 0.52
+      total: 0.53
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -554,7 +554,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.51
+      total: 0.5
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -596,13 +596,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
-  - Rage
   - Riptalon
   - Damaru
   - Demon Blade
+  - Deathbringer
   flex_slots:
   - Damaru
-  - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -626,17 +626,11 @@ builds:
       pick: 0.0
       fit: 0.57
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Rage:
-      total: 0.41
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Riptalon:
       total: 0.65
       efficiency: 0.56
@@ -651,10 +645,16 @@ builds:
       fit: 0.42
     Demon Blade:
       total: 0.51
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Deathbringer:
+      total: 0.44
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -848,7 +848,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Avatar's Parashu:
-      total: 0.56
+      total: 0.55
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -890,7 +890,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Lernaean Bow:
-      total: 0.55
+      total: 0.54
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -908,7 +908,7 @@ builds:
       pick: 0.0
       fit: 0.59
     Riptalon:
-      total: 0.7
+      total: 0.71
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -1016,7 +1016,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.51
+      total: 0.5
       efficiency: 0.54
       win: 0.5
       pick: 0.0

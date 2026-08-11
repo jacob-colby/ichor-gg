@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Lernaean Bow
-  - Death Metal
   - Riptalon
   - Demon Blade
   - Pharaoh's Curse
+  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Demon Blade
-  - Death Metal
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -37,27 +37,27 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Death Metal:
-      total: 0.55
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Riptalon:
-      total: 0.62
+      total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.69
     Demon Blade:
       total: 0.56
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.75
     Pharaoh's Curse:
       total: 0.58
       efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Shogun's Ofuda:
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -80,7 +80,7 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Pharaoh's Curse
+  - Demon Blade
   - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Death Metal:
-      total: 0.57
-      efficiency: 0.59
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -118,7 +118,7 @@ builds:
       fit: 0.49
     Demon Blade:
       total: 0.56
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Soul Gem:
-      total: 0.72
+      total: 0.73
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -248,7 +248,7 @@ builds:
       fit: 0.7
     Void Stone:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -294,7 +294,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Riptalon:
-      total: 0.68
+      total: 0.69
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -359,13 +359,13 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.52
+      total: 0.51
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.49
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.5
     Pharaoh's Curse:
-      total: 0.53
+      total: 0.54
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -398,7 +398,7 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Lernaean Bow
+  - Toxic Blade
   - Bragi's Harp
   - Death Metal
   - Pharaoh's Curse
@@ -406,7 +406,7 @@ builds:
   - Triton's Conch
   flex_slots:
   - Bragi's Harp
-  - Lernaean Bow
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -418,17 +418,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
+    Toxic Blade:
       total: 0.52
-      efficiency: 0.54
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.62
     Bragi's Harp:
       total: 0.52
       efficiency: 0.44
@@ -437,12 +437,12 @@ builds:
       fit: 0.6
     Death Metal:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
     Pharaoh's Curse:
-      total: 0.52
+      total: 0.53
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -454,7 +454,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -502,7 +502,7 @@ builds:
       fit: 0.65
     Death Metal:
       total: 0.57
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -529,14 +529,14 @@ builds:
   archetype: model
   slot_order:
   - Lernaean Bow
-  - Death Metal
   - Riptalon
   - Demon Blade
   - Pharaoh's Curse
+  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Demon Blade
-  - Death Metal
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -559,27 +559,27 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Death Metal:
-      total: 0.55
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Riptalon:
-      total: 0.62
+      total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.69
     Demon Blade:
       total: 0.56
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.75
     Pharaoh's Curse:
       total: 0.58
       efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Shogun's Ofuda:
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.58

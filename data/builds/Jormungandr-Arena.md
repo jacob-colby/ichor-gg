@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Soul Gem:
-      total: 0.73
+      total: 0.74
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.94
     Void Stone:
       total: 0.69
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -188,7 +188,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Shogun's Ofuda:
-      total: 0.59
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0

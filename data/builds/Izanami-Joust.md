@@ -45,7 +45,7 @@ builds:
       fit: 0.39
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -84,8 +84,8 @@ builds:
   - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -112,7 +112,7 @@ builds:
       fit: 0.38
     Death Metal:
       total: 0.52
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -124,7 +124,7 @@ builds:
       fit: 0.41
     Demon Blade:
       total: 0.5
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -177,7 +177,7 @@ builds:
       fit: 0.46
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.38
     Amanita Charm:
-      total: 0.72
+      total: 0.73
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -294,7 +294,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -313,7 +313,7 @@ builds:
       fit: 0.6
     Void Stone:
       total: 0.52
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.42
     Soul Gem:
-      total: 0.72
+      total: 0.73
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -502,7 +502,7 @@ builds:
       fit: 0.39
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43

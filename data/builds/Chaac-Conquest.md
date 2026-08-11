@@ -116,14 +116,14 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Freya''s Tears, Gluttonous Grimoire, Jotunn''s Revenge, Shield of the
-    Phoenix, Amanita Charm, The Crusher, Berserker''s Shield, Soul Gem, Breastplate
-    of Valor, Oni Hunter''s Garb, Hydra''s Lament, Spear of the Magus, Shield Splitter,
-    Death Metal, Runeforged Hammer, Helm of Radiance, The Cosmic Horror, Erosion,
-    Spectral Armor, Eye of the Storm, Eye of Providence, Pharaoh''s Curse, Spear of
+    this god: Freya''s Tears, Gluttonous Grimoire, Shield of the Phoenix, Jotunn''s
+    Revenge, Amanita Charm, The Crusher, Berserker''s Shield, Soul Gem, Breastplate
+    of Valor, Oni Hunter''s Garb, Spear of the Magus, Hydra''s Lament, Shield Splitter,
+    Runeforged Hammer, Death Metal, The Cosmic Horror, Helm of Radiance, Erosion,
+    Spectral Armor, Eye of Providence, Eye of the Storm, Pharaoh''s Curse, Spear of
     Desolation, Draconic Scale, Rod of Asclepius, Jade Scepter, Obsidian Shard, Leviathan''s
-    Hide, Golden Blade, Midgardian Mail, Mantle Of Discord, Stone of Binding, Chronos''
-    Pendant, Damaru, Lernaean Bow, The Reaper, Avenging Blade, Kinetic Cuirass.'
+    Hide, Golden Blade, Mantle Of Discord, Midgardian Mail, Stone of Binding, Chronos''
+    Pendant, The Reaper, Lernaean Bow, Damaru, Shogun''s Ofuda, Kinetic Cuirass.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -138,7 +138,7 @@ builds:
       pick: 0.0
       fit: 0.24
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.51
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -150,7 +150,7 @@ builds:
       pick: 0.1
       fit: 0.4
     Gluttonous Grimoire:
-      total: 0.53
+      total: 0.54
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -192,12 +192,13 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Freya''s Tears, Gluttonous Grimoire, Jotunn''s Revenge, Soul Gem, Shield
     of the Phoenix, The Crusher, Amanita Charm, Berserker''s Shield, Breastplate of
-    Valor, Spear of the Magus, Hydra''s Lament, Oni Hunter''s Garb, Spear of Desolation,
-    The Cosmic Horror, Death Metal, Runeforged Hammer, Helm of Radiance, Shield Splitter,
-    Obsidian Shard, Spectral Armor, Erosion, Pharaoh''s Curse, Chronos'' Pendant,
-    Eye of Providence, Rod of Asclepius, Eye of the Storm, The Reaper, Draconic Scale,
-    Jade Scepter, Leviathan''s Hide, Screeching Gargoyle, Riptalon, Golden Blade,
-    Midgardian Mail, Damaru, Mantle Of Discord, Lernaean Bow, Kinetic Cuirass.'
+    Valor, Spear of the Magus, Hydra''s Lament, Oni Hunter''s Garb, The Cosmic Horror,
+    Spear of Desolation, Runeforged Hammer, Helm of Radiance, Death Metal, Shield
+    Splitter, Obsidian Shard, Spectral Armor, Erosion, Pharaoh''s Curse, Chronos''
+    Pendant, Eye of Providence, Rod of Asclepius, Eye of the Storm, The Reaper, Draconic
+    Scale, Jade Scepter, Leviathan''s Hide, Screeching Gargoyle, Riptalon, Golden
+    Blade, Midgardian Mail, Mantle Of Discord, Stone of Binding, Blood-Bound Book,
+    Kinetic Cuirass.'
   slot_scores:
     Berserker's Shield:
       total: 0.5
@@ -264,12 +265,12 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Freya''s Tears, Shield of the Phoenix, Amanita Charm, Soul Gem, Gluttonous
     Grimoire, Jotunn''s Revenge, Rod of Asclepius, The Crusher, Berserker''s Shield,
-    The Reaper, Blood-Bound Book, Bancroft''s Talon, Chandra''s Grace, Breastplate
-    of Valor, Riptalon, Oni Hunter''s Garb, Runeforged Hammer, Hydra''s Lament, Spear
-    of the Magus, Lifebinder, Death Metal, The Cosmic Horror, Phoenix Feather, Spectral
-    Armor, Eye of the Storm, Shield Splitter, Helm of Radiance, Erosion, Pharaoh''s
-    Curse, Spear of Desolation, Jade Scepter, Eye of Providence, Golden Blade, Draconic
-    Scale, Obsidian Shard, Leviathan''s Hide, Avenging Blade, Kinetic Cuirass.'
+    The Reaper, Blood-Bound Book, Bancroft''s Talon, Chandra''s Grace, Riptalon, Breastplate
+    of Valor, Oni Hunter''s Garb, Runeforged Hammer, Spear of the Magus, Hydra''s
+    Lament, Lifebinder, Death Metal, The Cosmic Horror, Phoenix Feather, Spectral
+    Armor, Eye of the Storm, Shield Splitter, Erosion, Helm of Radiance, Pharaoh''s
+    Curse, Spear of Desolation, Eye of Providence, Jade Scepter, Golden Blade, Draconic
+    Scale, Obsidian Shard, Leviathan''s Hide, Sphere of Negation, Kinetic Cuirass.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -337,11 +338,11 @@ builds:
     for this god: Freya''s Tears, Gluttonous Grimoire, Jotunn''s Revenge, The Crusher,
     Soul Gem, Shield of the Phoenix, Amanita Charm, Berserker''s Shield, Spear of
     the Magus, Stone of Binding, Avenging Blade, The Cosmic Horror, Screeching Gargoyle,
-    Breastplate of Valor, Void Shield, Oni Hunter''s Garb, Spear of Desolation, Hydra''s
-    Lament, Obsidian Shard, Void Stone, Runeforged Hammer, Death Metal, The Reaper,
-    Shield Splitter, Helm of Radiance, Spectral Armor, Erosion, Pharaoh''s Curse,
-    Riptalon, Eye of Providence, Eye of the Storm, Heartseeker, Rod of Asclepius,
-    Draconic Scale, Doom Orb, The World Stone, Jade Scepter, Kinetic Cuirass.'
+    Breastplate of Valor, Void Shield, Oni Hunter''s Garb, Spear of Desolation, Obsidian
+    Shard, Hydra''s Lament, Void Stone, Runeforged Hammer, The Reaper, Death Metal,
+    Shield Splitter, Helm of Radiance, Spectral Armor, Erosion, Riptalon, Pharaoh''s
+    Curse, Eye of Providence, Eye of the Storm, Heartseeker, Rod of Asclepius, The
+    World Stone, Doom Orb, Draconic Scale, Silverbranch Bow, Kinetic Cuirass.'
   slot_scores:
     Berserker's Shield:
       total: 0.5
@@ -407,13 +408,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Freya''s Tears, Gluttonous Grimoire, Berserker''s Shield, Shield of
-    the Phoenix, Soul Gem, Jotunn''s Revenge, Amanita Charm, The Crusher, Riptalon,
+    the Phoenix, Soul Gem, Amanita Charm, Jotunn''s Revenge, The Crusher, Riptalon,
     Golden Blade, Breastplate of Valor, Pharaoh''s Curse, Oni Hunter''s Garb, Silverbranch
-    Bow, Lernaean Bow, Spear of the Magus, Hydra''s Lament, Shogun''s Ofuda, Bracer
-    of The Abyss, The Cosmic Horror, Helm of Radiance, Runeforged Hammer, Death Metal,
-    Spectral Armor, Tyrfing, Erosion, Shield Splitter, Blood-Bound Book, Rod of Asclepius,
-    Bancroft''s Talon, Eye of Providence, Jade Scepter, Spear of Desolation, Bragi''s
-    Harp, Leviathan''s Hide, Obsidian Shard, Draconic Scale, Kinetic Cuirass.'
+    Bow, Spear of the Magus, Lernaean Bow, Hydra''s Lament, Shogun''s Ofuda, Bracer
+    of The Abyss, The Cosmic Horror, Helm of Radiance, Runeforged Hammer, Spectral
+    Armor, Death Metal, Tyrfing, Erosion, Blood-Bound Book, Rod of Asclepius, Shield
+    Splitter, Bancroft''s Talon, Eye of Providence, Spear of Desolation, Jade Scepter,
+    Bragi''s Harp, Obsidian Shard, Leviathan''s Hide, Yogi''s Necklace, Kinetic Cuirass.'
   slot_scores:
     Golden Blade:
       total: 0.48
@@ -482,11 +483,11 @@ builds:
     Jotunn''s Revenge, Soul Gem, Gluttonous Grimoire, Breastplate of Valor, Amanita
     Charm, Berserker''s Shield, Hydra''s Lament, The Crusher, Spear of Desolation,
     Oni Hunter''s Garb, Chronos'' Pendant, Screeching Gargoyle, Gladiator''s Shield,
-    Spear of the Magus, Chandra''s Grace, Spectral Armor, Erosion, Eye of Providence,
-    Pharaoh''s Curse, Runeforged Hammer, Shield Splitter, Helm of Radiance, The Cosmic
-    Horror, Prophetic Cloak, Draconic Scale, Gem of Focus, Death Metal, Leviathan''s
-    Hide, Eye of the Storm, Rod of Asclepius, Midgardian Mail, Mantle Of Discord,
-    Stone of Binding, Jade Scepter, Yogi''s Necklace, Kinetic Cuirass.'
+    Spear of the Magus, Chandra''s Grace, Spectral Armor, Erosion, Pharaoh''s Curse,
+    Eye of Providence, The Cosmic Horror, Runeforged Hammer, Helm of Radiance, Shield
+    Splitter, Prophetic Cloak, Draconic Scale, Gem of Focus, Leviathan''s Hide, Rod
+    of Asclepius, Eye of the Storm, Death Metal, Midgardian Mail, Mantle Of Discord,
+    Stone of Binding, Yogi''s Necklace, Jade Scepter, Kinetic Cuirass.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -553,13 +554,13 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge, Kinetic Cuirass,
     Amanita Charm, The Crusher, Berserker''s Shield, Soul Gem, Breastplate of Valor,
-    Freya''s Tears, Oni Hunter''s Garb, Hydra''s Lament, Spear of the Magus, Shield
-    Splitter, Shield of the Phoenix, Death Metal, Runeforged Hammer, Helm of Radiance,
-    The Cosmic Horror, Erosion, Spectral Armor, Eye of the Storm, Eye of Providence,
+    Freya''s Tears, Oni Hunter''s Garb, Spear of the Magus, Hydra''s Lament, Shield
+    of the Phoenix, Shield Splitter, Runeforged Hammer, Death Metal, The Cosmic Horror,
+    Helm of Radiance, Erosion, Spectral Armor, Eye of Providence, Eye of the Storm,
     Pharaoh''s Curse, Spear of Desolation, Draconic Scale, Rod of Asclepius, Jade
-    Scepter, Obsidian Shard, Leviathan''s Hide, Golden Blade, Midgardian Mail, Mantle
-    Of Discord, Stone of Binding, Chronos'' Pendant, Damaru, Lernaean Bow, The Reaper,
-    Avenging Blade.'
+    Scepter, Obsidian Shard, Leviathan''s Hide, Golden Blade, Mantle Of Discord, Midgardian
+    Mail, Stone of Binding, Chronos'' Pendant, The Reaper, Lernaean Bow, Damaru, Shogun''s
+    Ofuda.'
   slot_scores:
     Genji's Guard:
       total: 0.48
@@ -574,19 +575,19 @@ builds:
       pick: 0.0
       fit: 0.29
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.51
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.38
+      total: 0.39
       efficiency: 0.59
       win: 0.2
       pick: 0.11
       fit: 0.55
     Gluttonous Grimoire:
-      total: 0.53
+      total: 0.54
       efficiency: 0.66
       win: 0.5
       pick: 0.0

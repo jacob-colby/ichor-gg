@@ -236,7 +236,7 @@ builds:
       fit: 0.93
     Void Stone:
       total: 0.68
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -301,7 +301,7 @@ builds:
       fit: 0.32
     Nimble Ring:
       total: 0.43
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -424,7 +424,7 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -470,7 +470,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Erosion
+  - The Crusher
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc

@@ -6,22 +6,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Shield Splitter
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Shield Splitter
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.61
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.59
@@ -45,7 +39,7 @@ builds:
       fit: 0.7
     Shield Splitter:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -67,28 +61,34 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Eye of Providence
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -98,12 +98,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.6
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.59
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Pharaoh's Curse:
+      total: 0.59
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -183,7 +183,7 @@ builds:
       fit: 0.88
     Void Stone:
       total: 0.66
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Riptalon:
-      total: 0.62
+      total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -333,22 +333,22 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Shield Splitter
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Shield Splitter
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -358,12 +358,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.61
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.59
@@ -372,7 +366,7 @@ builds:
       fit: 0.7
     Shield Splitter:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -394,6 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
   starter: *id001
 - source: suggested
   archetype: core
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.71
+      total: 0.72
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -556,7 +556,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.62
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -575,7 +575,7 @@ builds:
       fit: 1.0
     Void Stone:
       total: 0.72
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -778,7 +778,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.71
+      total: 0.72
       efficiency: 0.52
       win: 0.5
       pick: 0.0

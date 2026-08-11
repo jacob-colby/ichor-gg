@@ -50,14 +50,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Damaru:
-      total: 0.57
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
     Demon Blade:
       total: 0.62
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -74,18 +74,18 @@ builds:
   archetype: crit
   slot_order:
   - Tyrfing
-  - Rage
   - Riptalon
   - Damaru
   - Demon Blade
+  - Deathbringer
   - Pharaoh's Curse
   flex_slots:
   - Tyrfing
-  - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -104,12 +104,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Rage:
-      total: 0.49
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Riptalon:
       total: 0.62
       efficiency: 0.56
@@ -123,11 +117,17 @@ builds:
       pick: 0.0
       fit: 0.57
     Demon Blade:
-      total: 0.63
-      efficiency: 0.38
+      total: 0.62
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.88
+    Deathbringer:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Pharaoh's Curse:
       total: 0.54
       efficiency: 0.57
@@ -247,7 +247,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Riptalon:
-      total: 0.72
+      total: 0.73
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -275,8 +275,8 @@ builds:
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
-  - Demon Blade
   - Pharaoh's Curse
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -313,7 +313,7 @@ builds:
       fit: 0.85
     Demon Blade:
       total: 0.54
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.33
     Breastplate of Valor:
-      total: 0.49
+      total: 0.5
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -442,14 +442,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Damaru:
-      total: 0.57
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
     Demon Blade:
       total: 0.62
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.87

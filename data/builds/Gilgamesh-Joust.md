@@ -105,13 +105,13 @@ builds:
       pick: 0.0
       fit: 0.73
     Shield of the Phoenix:
-      total: 0.58
+      total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.6
     Amanita Charm:
-      total: 0.76
+      total: 0.77
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -183,7 +183,7 @@ builds:
       fit: 0.79
     Void Stone:
       total: 0.61
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Pharaoh's Curse:
-      total: 0.57
+      total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Shield of the Phoenix:
-      total: 0.62
+      total: 0.63
       efficiency: 0.57
       win: 0.5
       pick: 0.0

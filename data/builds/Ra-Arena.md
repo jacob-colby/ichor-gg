@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.6
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -307,7 +307,7 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Void Stone:
-      total: 0.59
-      efficiency: 0.43
+      total: 0.6
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -556,7 +556,7 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.52
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -585,7 +585,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.61
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -700,7 +700,7 @@ builds:
       fit: 0.84
     Void Stone:
       total: 0.7
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.96
@@ -760,24 +760,24 @@ builds:
       fit: 0.28
     Nimble Ring:
       total: 0.42
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.35
     Bragi's Harp:
-      total: 0.47
+      total: 0.46
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.49
     Void Stone:
       total: 0.5
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.77
+      total: 0.78
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -891,8 +891,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Void Stone:
-      total: 0.59
-      efficiency: 0.43
+      total: 0.6
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75

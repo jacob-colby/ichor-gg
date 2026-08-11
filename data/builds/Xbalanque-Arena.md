@@ -44,14 +44,14 @@ builds:
       pick: 0.0
       fit: 0.74
     Riptalon:
-      total: 0.63
+      total: 0.64
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.71
     Demon Blade:
-      total: 0.63
-      efficiency: 0.38
+      total: 0.62
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -74,14 +74,14 @@ builds:
   archetype: crit
   slot_order:
   - Lernaean Bow
-  - Rage
   - Riptalon
   - Damaru
   - Demon Blade
+  - Deathbringer
   - Pharaoh's Curse
   flex_slots:
   - Damaru
-  - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -104,12 +104,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Rage:
-      total: 0.49
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Riptalon:
       total: 0.62
       efficiency: 0.56
@@ -123,11 +117,17 @@ builds:
       pick: 0.0
       fit: 0.57
     Demon Blade:
-      total: 0.63
-      efficiency: 0.38
+      total: 0.62
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.88
+    Deathbringer:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.57
@@ -248,7 +248,7 @@ builds:
       fit: 0.7
     Void Stone:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -300,13 +300,13 @@ builds:
       pick: 0.0
       fit: 0.75
     Lernaean Bow:
-      total: 0.6
+      total: 0.59
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.65
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.57
     Hydra's Lament:
-      total: 0.55
+      total: 0.54
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.51
     Shogun's Ofuda:
-      total: 0.51
+      total: 0.52
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -405,8 +405,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Bragi's Harp
   - Toxic Blade
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -437,7 +437,7 @@ builds:
       fit: 0.6
     Death Metal:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -507,8 +507,8 @@ builds:
       pick: 0.0
       fit: 0.67
     Death Metal:
-      total: 0.58
-      efficiency: 0.59
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -566,14 +566,14 @@ builds:
       pick: 0.0
       fit: 0.74
     Riptalon:
-      total: 0.63
+      total: 0.64
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.71
     Demon Blade:
-      total: 0.63
-      efficiency: 0.38
+      total: 0.62
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.87

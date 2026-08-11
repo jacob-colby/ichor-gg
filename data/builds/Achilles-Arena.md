@@ -183,7 +183,7 @@ builds:
       fit: 0.95
     Void Stone:
       total: 0.69
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.95
@@ -275,7 +275,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Erosion
+  - Hydra's Lament
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc

@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -275,8 +275,8 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
   - Pharaoh's Curse
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.84
     Riptalon:
-      total: 0.71
+      total: 0.72
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -409,8 +409,8 @@ builds:
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -424,7 +424,7 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.58
+      total: 0.57
       efficiency: 0.54
       win: 0.5
       pick: 0.0

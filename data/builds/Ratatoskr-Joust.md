@@ -152,8 +152,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -294,7 +294,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.7
+      total: 0.71
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Silverbranch Bow:
-      total: 0.61
+      total: 0.62
       efficiency: 0.54
       win: 0.5
       pick: 0.0

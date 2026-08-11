@@ -51,7 +51,7 @@ builds:
       fit: 0.7
     Demon Blade:
       total: 0.62
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -74,14 +74,14 @@ builds:
   archetype: crit
   slot_order:
   - Lernaean Bow
-  - Rage
   - Riptalon
   - Damaru
   - Demon Blade
+  - Deathbringer
   - Pharaoh's Curse
   flex_slots:
   - Damaru
-  - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -104,12 +104,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Rage:
-      total: 0.49
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Riptalon:
       total: 0.62
       efficiency: 0.56
@@ -123,11 +117,17 @@ builds:
       pick: 0.0
       fit: 0.57
     Demon Blade:
-      total: 0.63
-      efficiency: 0.38
+      total: 0.62
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.88
+    Deathbringer:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.57
@@ -248,12 +248,12 @@ builds:
       fit: 0.7
     Void Stone:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
     Riptalon:
-      total: 0.72
+      total: 0.73
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -443,7 +443,7 @@ builds:
       fit: 0.7
     Demon Blade:
       total: 0.62
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.87

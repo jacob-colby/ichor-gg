@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Eye of Providence
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,12 +163,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.56
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.59
@@ -193,6 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Soul Gem:
       total: 0.75
       efficiency: 0.59
@@ -279,8 +279,8 @@ builds:
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -294,7 +294,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
+      total: 0.67
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -333,7 +333,7 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Chronos' Pendant
+  - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
@@ -341,14 +341,14 @@ builds:
   - Soul Gem
   flex_slots:
   - Pendulum Blade
-  - Chronos' Pendant
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -358,12 +358,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Chronos' Pendant:
+    Genji's Guard:
       total: 0.6
-      efficiency: 0.56
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.5
     Jotunn's Revenge:
       total: 0.75
       efficiency: 0.66

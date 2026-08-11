@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.58
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -80,7 +80,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Stampede
+  - Triton's Conch
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Stampede:
-      total: 0.56
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.57
+      total: 0.56
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -242,7 +242,7 @@ builds:
       fit: 0.95
     Void Stone:
       total: 0.69
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.95
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Shogun's Ofuda:
-      total: 0.59
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Genji's Guard
   - Jotunn's Revenge
   - Freya's Tears
-  - Spectral Armor
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
   - Stampede
-  - Spectral Armor
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -358,6 +358,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.66
@@ -370,12 +376,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Spectral Armor:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Erosion:
       total: 0.61
       efficiency: 0.52
@@ -442,7 +442,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.58
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0

@@ -93,8 +93,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -242,7 +242,7 @@ builds:
       fit: 0.97
     Void Stone:
       total: 0.7
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -301,7 +301,7 @@ builds:
       fit: 0.28
     Nimble Ring:
       total: 0.41
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Freya's Tears:
-      total: 0.57
+      total: 0.58
       efficiency: 0.59
       win: 0.5
       pick: 0.0

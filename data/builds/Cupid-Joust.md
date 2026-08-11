@@ -44,14 +44,14 @@ builds:
       pick: 0.0
       fit: 0.38
     Bragi's Harp:
-      total: 0.51
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
     Death Metal:
-      total: 0.53
-      efficiency: 0.59
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -105,26 +105,26 @@ builds:
       pick: 0.0
       fit: 0.62
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.51
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.37
     Death Metal:
-      total: 0.54
-      efficiency: 0.59
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
     Damaru:
-      total: 0.47
+      total: 0.46
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.35
     Demon Blade:
       total: 0.45
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -177,7 +177,7 @@ builds:
       fit: 0.46
     Death Metal:
       total: 0.51
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -313,7 +313,7 @@ builds:
       fit: 0.6
     Void Stone:
       total: 0.52
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -334,14 +334,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
   - Riptalon
   - Silverbranch Bow
   - Soul Gem
   flex_slots:
-  - Silverbranch Bow
-  - Death Metal
+  - Tyrfing
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -364,18 +364,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Jotunn's Revenge:
+      total: 0.49
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
     Tyrfing:
       total: 0.49
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Death Metal:
-      total: 0.49
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Riptalon:
       total: 0.66
       efficiency: 0.56
@@ -501,14 +501,14 @@ builds:
       pick: 0.0
       fit: 0.38
     Bragi's Harp:
-      total: 0.51
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
     Death Metal:
-      total: 0.53
-      efficiency: 0.59
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.47

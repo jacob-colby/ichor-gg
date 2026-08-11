@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.6
+      total: 0.61
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.63
+      total: 0.64
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -183,7 +183,7 @@ builds:
       fit: 0.95
     Void Stone:
       total: 0.69
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.95
@@ -294,7 +294,7 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -359,7 +359,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.6
+      total: 0.61
       efficiency: 0.58
       win: 0.5
       pick: 0.0

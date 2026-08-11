@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Eye of Providence
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -31,18 +31,18 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.58
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Spectral Armor:
+      total: 0.56
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Amanita Charm:
       total: 0.81
       efficiency: 0.63
@@ -87,8 +87,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -183,7 +183,7 @@ builds:
       fit: 0.86
     Void Stone:
       total: 0.65
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Riptalon:
-      total: 0.62
+      total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Eye of Providence
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -358,18 +358,18 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.58
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Spectral Armor:
+      total: 0.56
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Amanita Charm:
       total: 0.81
       efficiency: 0.63

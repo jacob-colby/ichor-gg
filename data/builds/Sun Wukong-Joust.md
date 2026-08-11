@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Triton's Conch:
-      total: 0.59
+      total: 0.58
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -87,8 +87,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -183,7 +183,7 @@ builds:
       fit: 0.82
     Void Stone:
       total: 0.63
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Triton's Conch:
-      total: 0.59
+      total: 0.58
       efficiency: 0.45
       win: 0.5
       pick: 0.0

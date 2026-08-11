@@ -74,18 +74,18 @@ builds:
   archetype: crit
   slot_order:
   - Lernaean Bow
-  - Rage
   - Riptalon
   - Damaru
   - Demon Blade
+  - Deathbringer
   - Pharaoh's Curse
   flex_slots:
   - Damaru
-  - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -104,12 +104,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Rage:
-      total: 0.42
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Riptalon:
       total: 0.64
       efficiency: 0.56
@@ -117,17 +111,23 @@ builds:
       pick: 0.0
       fit: 0.72
     Damaru:
-      total: 0.51
+      total: 0.5
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
     Demon Blade:
-      total: 0.52
-      efficiency: 0.38
+      total: 0.51
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Deathbringer:
+      total: 0.44
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Pharaoh's Curse:
       total: 0.55
       efficiency: 0.57
@@ -145,8 +145,8 @@ builds:
   - The Crusher
   - Pharaoh's Curse
   flex_slots:
-  - Lernaean Bow
   - Pharaoh's Curse
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Stampede:
-      total: 0.55
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -313,12 +313,12 @@ builds:
       fit: 0.7
     Void Stone:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
     Riptalon:
-      total: 0.69
+      total: 0.7
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Hydra's Lament
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
   - Toxic Blade
-  - Lernaean Bow
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.5
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Toxic Blade:
       total: 0.51
       efficiency: 0.42
@@ -456,6 +450,12 @@ builds:
     Pharaoh's Curse:
       total: 0.53
       efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Shogun's Ofuda:
+      total: 0.5
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.48

@@ -39,12 +39,12 @@ builds:
       fit: 0.67
     Eros' Bow:
       total: 0.58
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
     Amanita Charm:
-      total: 0.76
+      total: 0.77
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.89
     Void Stone:
       total: 0.66
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -366,12 +366,12 @@ builds:
       fit: 0.67
     Eros' Bow:
       total: 0.58
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
     Amanita Charm:
-      total: 0.76
+      total: 0.77
       efficiency: 0.63
       win: 0.5
       pick: 0.0

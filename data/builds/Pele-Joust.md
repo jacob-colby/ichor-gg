@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Spectral Armor
@@ -146,7 +146,7 @@ builds:
   - Erosion
   flex_slots:
   - Spectral Armor
-  - Eye of Providence
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -163,12 +163,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
+    Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.62
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.48
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.59
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Riptalon:
-      total: 0.77
+      total: 0.78
       efficiency: 0.56
       win: 0.5
       pick: 0.0

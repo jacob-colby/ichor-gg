@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Spectral Armor
   - Pharaoh's Curse
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -31,15 +31,15 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.59
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Void Shield:
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -73,22 +73,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Eye of Providence
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -98,12 +98,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.59
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.59
@@ -128,6 +122,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Soul Gem:
       total: 0.7
       efficiency: 0.59
@@ -183,7 +183,7 @@ builds:
       fit: 0.86
     Void Stone:
       total: 0.65
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
   - Kinetic Cuirass
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Spectral Armor
   - Pharaoh's Curse
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -488,15 +488,15 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Eye of Providence:
-      total: 0.59
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Void Shield:
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.66
