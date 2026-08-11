@@ -2,19 +2,19 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.65 | 0.71 | 0.59 | 0.62 | 0.21 | 1.00 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.62 | 0.67 | 0.52 | 0.57 | 0.53 | 1.00 | fair |  |  |
-| Doom Orb | 0.59 | 0.55 | 0.49 | 0.68 | 0.06 | 0.72 | fair |  | **UNDERRATED** |
+| Soul Gem | 0.64 | 0.71 | 0.59 | 0.61 | 0.21 | 1.00 | fair | burst, sustain, aura |  |
+| Spear of Desolation | 0.62 | 0.67 | 0.52 | 0.58 | 0.54 | 1.00 | fair |  |  |
+| Obsidian Shard | 0.58 | 0.59 | 0.54 | 0.61 | 0.23 | 0.72 | fair |  |  |
 | Gluttonous Grimoire | 0.58 | 0.71 | 0.66 | 0.50 | 0.00 | 0.82 | undervalued | burst | **UNDERRATED** |
-| Obsidian Shard | 0.57 | 0.59 | 0.54 | 0.59 | 0.24 | 0.72 | fair |  |  |
-| The World Stone | 0.56 | 0.56 | 0.49 | 0.61 | 0.20 | 0.72 | fair |  |  |
-| Rod of Tahuti | 0.55 | 0.52 | 0.44 | 0.60 | 0.34 | 0.72 | premium |  |  |
+| The World Stone | 0.55 | 0.56 | 0.49 | 0.58 | 0.22 | 0.72 | fair |  |  |
 | Spear of the Magus | 0.54 | 0.64 | 0.60 | 0.50 | 0.00 | 0.72 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.54 | 0.52 | 0.44 | 0.59 | 0.33 | 0.72 | premium |  |  |
 | The Cosmic Horror | 0.54 | 0.62 | 0.58 | 0.50 | 0.00 | 0.72 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.53 | 0.60 | 0.56 | 0.50 | 0.00 | 0.69 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.52 | 0.59 | 0.72 | 0.50 | 0.00 | 0.28 | undervalued |  | **UNDERRATED** |
 | Gem of Focus | 0.51 | 0.56 | 0.51 | 0.50 | 0.00 | 0.69 | fair | mobility | **UNDERRATED** |
 | Dreamer's Idol | 0.50 | 0.56 | 0.49 | 0.50 | 0.00 | 0.72 | fair | cc-immunity | **UNDERRATED** |
+| Doom Orb | 0.50 | 0.55 | 0.49 | 0.50 | 0.00 | 0.72 | fair |  | **UNDERRATED** |
 | Breastplate of Valor | 0.50 | 0.54 | 0.65 | 0.50 | 0.00 | 0.28 | undervalued |  | **UNDERRATED** |
 | Death Metal | 0.50 | 0.54 | 0.60 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.49 | 0.54 | 0.59 | 0.50 | 0.00 | 0.41 | fair | sustain, aura | **UNDERRATED** |
@@ -23,15 +23,15 @@
 | Bancroft's Talon | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.41 | fair | sustain | **UNDERRATED** |
 | Jade Scepter | 0.49 | 0.52 | 0.57 | 0.50 | 0.00 | 0.41 | fair | peel | **UNDERRATED** |
 | Bracer of The Abyss | 0.48 | 0.52 | 0.56 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
+| Nimble Ring | 0.48 | 0.46 | 0.49 | 0.53 | 0.13 | 0.41 | fair |  |  |
+| Book of Thoth | 0.47 | 0.41 | 0.42 | 0.57 | 0.22 | 0.41 | premium |  |  |
 | Wish-Granting Pearl | 0.47 | 0.50 | 0.54 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Polynomicon | 0.47 | 0.50 | 0.49 | 0.50 | 0.00 | 0.51 | fair | burst | **UNDERRATED** |
 | Freya's Tears | 0.47 | 0.50 | 0.59 | 0.50 | 0.00 | 0.28 | fair |  | **UNDERRATED** |
 | Ethereal Staff | 0.47 | 0.50 | 0.53 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Ancient Signet | 0.47 | 0.49 | 0.49 | 0.50 | 0.00 | 0.51 | fair | burst | **UNDERRATED** |
-| Book of Thoth | 0.47 | 0.41 | 0.42 | 0.56 | 0.21 | 0.41 | premium |  |  |
 | Alchemist Coat | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.47 | 0.49 | 0.57 | 0.50 | 0.00 | 0.28 | fair | sustain |  |
-| Nimble Ring | 0.47 | 0.46 | 0.49 | 0.51 | 0.11 | 0.41 | fair |  |  |
 | Typhon’s Heart | 0.46 | 0.48 | 0.51 | 0.50 | 0.00 | 0.41 | fair |  |  |
 | Soul Reaver | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.51 | fair | burst |  |
 | Bragi's Harp | 0.46 | 0.47 | 0.46 | 0.50 | 0.00 | 0.51 | fair | burst |  |
@@ -45,6 +45,7 @@
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
 | Triton's Conch | 0.45 | 0.45 | 0.47 | 0.50 | 0.00 | 0.41 | fair | aura |  |
 | Staff of Myrddin | 0.45 | 0.44 | 0.34 | 0.50 | 0.00 | 0.69 | premium |  |  |
+| Shifter's Shield | 0.44 | 0.39 | 0.55 | 0.55 | 0.06 | 0.00 | fair |  |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Necronomicon | 0.44 | 0.43 | 0.44 | 0.50 | 0.00 | 0.41 | premium |  |  |
 | Helm of Darkness | 0.44 | 0.42 | 0.43 | 0.50 | 0.00 | 0.41 | premium | mobility |  |
@@ -54,7 +55,6 @@
 | Gem of Isolation | 0.43 | 0.41 | 0.41 | 0.50 | 0.00 | 0.41 | premium | peel |  |
 | Gladiator's Shield | 0.43 | 0.41 | 0.41 | 0.50 | 0.00 | 0.38 | premium | burst |  |
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Shifter's Shield | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Prophetic Cloak | 0.42 | 0.38 | 0.43 | 0.50 | 0.00 | 0.28 | premium |  |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |

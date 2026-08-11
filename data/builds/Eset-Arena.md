@@ -310,7 +310,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Dreamer's Idol:
       total: 0.5
       efficiency: 0.49

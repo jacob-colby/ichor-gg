@@ -2,14 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Genji's Guard | 0.59 | 0.63 | 0.72 | 0.60 | 0.21 | 0.42 | undervalued |  |  |
-| Shifter's Shield | 0.59 | 0.58 | 0.55 | 0.62 | 0.36 | 0.66 | fair |  |  |
+| Genji's Guard | 0.59 | 0.63 | 0.72 | 0.60 | 0.22 | 0.42 | undervalued |  |  |
+| Shifter's Shield | 0.58 | 0.58 | 0.55 | 0.59 | 0.35 | 0.66 | fair |  |  |
 | Runeforged Hammer | 0.56 | 0.54 | 0.60 | 0.62 | 0.17 | 0.39 | fair | burst |  |
 | Amanita Charm | 0.56 | 0.66 | 0.66 | 0.50 | 0.00 | 0.66 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.55 | 0.65 | 0.60 | 0.50 | 0.00 | 0.76 | fair | burst | **UNDERRATED** |
 | Eye of Providence | 0.54 | 0.63 | 0.62 | 0.50 | 0.00 | 0.66 | undervalued |  | **UNDERRATED** |
+| Breastplate of Valor | 0.54 | 0.58 | 0.65 | 0.54 | 0.13 | 0.42 | undervalued |  | **UNDERRATED** |
 | Berserker's Shield | 0.54 | 0.62 | 0.71 | 0.50 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
-| Breastplate of Valor | 0.54 | 0.58 | 0.65 | 0.53 | 0.11 | 0.42 | undervalued |  | **UNDERRATED** |
 | Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.52 | 0.59 | 0.57 | 0.50 | 0.00 | 0.62 | fair | sustain | **UNDERRATED** |
@@ -23,9 +23,9 @@
 | The Crusher | 0.49 | 0.53 | 0.65 | 0.50 | 0.00 | 0.25 | undervalued | burst | **UNDERRATED** |
 | Eye of the Storm | 0.49 | 0.52 | 0.52 | 0.50 | 0.00 | 0.52 | fair | peel | **UNDERRATED** |
 | Leviathan's Hide | 0.48 | 0.52 | 0.55 | 0.50 | 0.00 | 0.43 | fair |  | **UNDERRATED** |
+| Dwarven Plate | 0.48 | 0.39 | 0.35 | 0.64 | 0.05 | 0.46 | premium |  |  |
 | Yogi's Necklace | 0.48 | 0.51 | 0.65 | 0.50 | 0.00 | 0.20 | undervalued |  | **UNDERRATED** |
 | Midgardian Mail | 0.48 | 0.51 | 0.54 | 0.50 | 0.00 | 0.43 | fair |  | **UNDERRATED** |
-| Dwarven Plate | 0.48 | 0.39 | 0.35 | 0.63 | 0.06 | 0.46 | premium |  |  |
 | Gladiator's Shield | 0.48 | 0.51 | 0.41 | 0.50 | 0.00 | 0.72 | premium | burst | **UNDERRATED** |
 | Hide of the Nemean Lion | 0.48 | 0.50 | 0.54 | 0.50 | 0.00 | 0.43 | fair |  | **UNDERRATED** |
 | Mantle Of Discord | 0.48 | 0.50 | 0.52 | 0.50 | 0.00 | 0.46 | fair | peel, cc-immunity | **UNDERRATED** |
@@ -79,9 +79,9 @@
 | Eye of Erebus | 0.40 | 0.34 | 0.32 | 0.50 | 0.00 | 0.39 | premium |  |  |
 | Musashi's Dual Swords | 0.39 | 0.34 | 0.44 | 0.50 | 0.00 | 0.09 | premium | mobility |  |
 | Rage | 0.38 | 0.31 | 0.41 | 0.50 | 0.00 | 0.09 | premium |  |  |
-| Gauntlet of Thebes | 0.38 | 0.25 | 0.27 | 0.56 | 0.11 | 0.20 | premium |  |  |
 | Odysseus' Bow | 0.38 | 0.31 | 0.40 | 0.50 | 0.00 | 0.10 | premium | burst, wave-clear |  |
 | Oath-Sworn Spear | 0.38 | 0.31 | 0.36 | 0.50 | 0.00 | 0.19 | premium | protection-shred |  |
+| Gauntlet of Thebes | 0.38 | 0.25 | 0.27 | 0.55 | 0.11 | 0.20 | premium |  |  |
 | Demon Blade | 0.37 | 0.30 | 0.39 | 0.50 | 0.00 | 0.09 | premium |  |  |
 | Circe's Hexstone | 0.37 | 0.29 | 0.25 | 0.50 | 0.00 | 0.39 | premium | mobility, cc-immunity |  |
 | Qin's Blade | 0.37 | 0.29 | 0.38 | 0.50 | 0.00 | 0.10 | premium | burst |  |

@@ -2,22 +2,22 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Breastplate of Valor | 0.57 | 0.58 | 0.65 | 0.60 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
-| Freya's Tears | 0.55 | 0.60 | 0.59 | 0.56 | 0.06 | 0.62 | fair |  | **UNDERRATED** |
-| Prophetic Cloak | 0.55 | 0.48 | 0.43 | 0.68 | 0.11 | 0.62 | premium |  |  |
+| Freya's Tears | 0.57 | 0.60 | 0.59 | 0.59 | 0.05 | 0.62 | fair |  | **UNDERRATED** |
+| Breastplate of Valor | 0.56 | 0.58 | 0.65 | 0.58 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
 | Amanita Charm | 0.55 | 0.65 | 0.66 | 0.50 | 0.00 | 0.63 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.55 | 0.64 | 0.60 | 0.50 | 0.00 | 0.73 | fair | burst | **UNDERRATED** |
 | Eye of Providence | 0.54 | 0.62 | 0.62 | 0.50 | 0.00 | 0.63 | undervalued |  | **UNDERRATED** |
-| Genji's Guard | 0.53 | 0.62 | 0.72 | 0.48 | 0.13 | 0.39 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.48 | undervalued | burst | **UNDERRATED** |
 | Oni Hunter's Garb | 0.51 | 0.58 | 0.65 | 0.50 | 0.00 | 0.41 | undervalued |  | **UNDERRATED** |
+| Prophetic Cloak | 0.51 | 0.48 | 0.43 | 0.59 | 0.12 | 0.62 | premium |  |  |
 | Shifter's Shield | 0.51 | 0.58 | 0.55 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.57 | 0.57 | 0.50 | 0.00 | 0.57 | fair | sustain | **UNDERRATED** |
+| Genji's Guard | 0.51 | 0.62 | 0.72 | 0.43 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.50 | 0.56 | 0.52 | 0.50 | 0.00 | 0.63 | fair | aura | **UNDERRATED** |
 | Soul Gem | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.47 | fair | burst, sustain, aura | **UNDERRATED** |
-| Chandra's Grace | 0.50 | 0.48 | 0.53 | 0.56 | 0.13 | 0.35 | fair | sustain |  |
 | Draconic Scale | 0.50 | 0.54 | 0.50 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.49 | 0.54 | 0.59 | 0.50 | 0.00 | 0.41 | fair | anti-crit, aura | **UNDERRATED** |
+| Chandra's Grace | 0.49 | 0.48 | 0.53 | 0.54 | 0.12 | 0.35 | fair | sustain |  |
 | Helm of Radiance | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.48 | 0.51 | 0.59 | 0.50 | 0.00 | 0.33 | fair | sustain, aura | **UNDERRATED** |
 | Leviathan's Hide | 0.48 | 0.51 | 0.55 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
@@ -79,11 +79,11 @@
 | Radiant Bulwark | 0.41 | 0.37 | 0.34 | 0.50 | 0.00 | 0.45 | premium | aura |  |
 | Rod of Tahuti | 0.41 | 0.37 | 0.44 | 0.50 | 0.00 | 0.20 | premium |  |  |
 | Necronomicon | 0.40 | 0.35 | 0.44 | 0.50 | 0.00 | 0.14 | premium |  |  |
+| Spirit Robe | 0.40 | 0.39 | 0.36 | 0.45 | 0.05 | 0.45 | premium | sustain |  |
 | Heartwood Charm | 0.40 | 0.35 | 0.35 | 0.50 | 0.00 | 0.35 | premium |  |  |
 | Book of Thoth | 0.39 | 0.34 | 0.42 | 0.50 | 0.00 | 0.14 | premium |  |  |
 | Eye of Erebus | 0.39 | 0.33 | 0.32 | 0.50 | 0.00 | 0.35 | premium |  |  |
 | Staff of Myrddin | 0.39 | 0.33 | 0.34 | 0.50 | 0.00 | 0.31 | premium |  |  |
-| Spirit Robe | 0.38 | 0.39 | 0.36 | 0.40 | 0.07 | 0.45 | premium | sustain |  |
 | Circe's Hexstone | 0.37 | 0.28 | 0.25 | 0.50 | 0.00 | 0.35 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.36 | 0.27 | 0.30 | 0.50 | 0.00 | 0.18 | premium | cc-immunity, sustain |  |
 | Brawler’s Beat Stick | 0.36 | 0.26 | 0.18 | 0.50 | 0.00 | 0.45 | premium | anti-heal |  |

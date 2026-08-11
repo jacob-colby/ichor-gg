@@ -5,16 +5,16 @@
 | Spear of Desolation | 0.62 | 0.67 | 0.52 | 0.58 | 0.51 | 1.00 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
 | Soul Gem | 0.58 | 0.71 | 0.59 | 0.50 | 0.00 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
-| The World Stone | 0.58 | 0.58 | 0.49 | 0.63 | 0.12 | 0.79 | fair |  | **UNDERRATED** |
+| The World Stone | 0.57 | 0.58 | 0.49 | 0.60 | 0.14 | 0.79 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Obsidian Shard | 0.54 | 0.61 | 0.54 | 0.51 | 0.16 | 0.79 | fair |  |  |
 | Doom Orb | 0.54 | 0.58 | 0.49 | 0.55 | 0.08 | 0.79 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.53 | 0.54 | 0.44 | 0.55 | 0.21 | 0.79 | premium |  |  |
+| Rod of Tahuti | 0.52 | 0.54 | 0.44 | 0.53 | 0.20 | 0.79 | premium |  |  |
 | Chronos' Pendant | 0.52 | 0.58 | 0.56 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
-| Nimble Ring | 0.51 | 0.47 | 0.49 | 0.60 | 0.11 | 0.42 | fair |  |  |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
+| Nimble Ring | 0.51 | 0.47 | 0.49 | 0.60 | 0.09 | 0.42 | fair |  |  |
 | Gem of Focus | 0.50 | 0.54 | 0.51 | 0.50 | 0.00 | 0.63 | fair | mobility | **UNDERRATED** |
 | Death Metal | 0.50 | 0.54 | 0.60 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.50 | 0.54 | 0.59 | 0.50 | 0.00 | 0.42 | fair | sustain, aura | **UNDERRATED** |
@@ -29,12 +29,12 @@
 | Ethereal Staff | 0.47 | 0.50 | 0.53 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Ancient Signet | 0.47 | 0.50 | 0.49 | 0.50 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |
 | Alchemist Coat | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
+| Book of Thoth | 0.47 | 0.42 | 0.42 | 0.56 | 0.19 | 0.42 | premium |  |  |
 | Typhon’s Heart | 0.47 | 0.48 | 0.51 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Soul Reaver | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.52 | fair | burst |  |
 | Bragi's Harp | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.52 | fair | burst |  |
 | Freya's Tears | 0.46 | 0.47 | 0.59 | 0.50 | 0.00 | 0.21 | fair |  |  |
 | Lifebinder | 0.46 | 0.47 | 0.49 | 0.50 | 0.00 | 0.42 | fair | sustain, aura |  |
-| Book of Thoth | 0.46 | 0.42 | 0.42 | 0.53 | 0.21 | 0.42 | premium |  |  |
 | Shield of the Phoenix | 0.46 | 0.46 | 0.57 | 0.50 | 0.00 | 0.21 | fair | sustain |  |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Divine Ruin | 0.45 | 0.46 | 0.43 | 0.50 | 0.00 | 0.52 | premium | anti-heal, burst |  |

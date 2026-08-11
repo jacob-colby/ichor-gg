@@ -2,13 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Freya's Tears | 0.59 | 0.60 | 0.59 | 0.63 | 0.05 | 0.64 | fair |  | **UNDERRATED** |
-| Shifter's Shield | 0.58 | 0.60 | 0.55 | 0.59 | 0.39 | 0.71 | fair |  |  |
-| Genji's Guard | 0.57 | 0.62 | 0.72 | 0.55 | 0.19 | 0.39 | undervalued |  |  |
+| Shifter's Shield | 0.59 | 0.60 | 0.55 | 0.59 | 0.40 | 0.71 | fair |  |  |
 | Amanita Charm | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.71 | undervalued | sustain, aura | **UNDERRATED** |
-| Breastplate of Valor | 0.56 | 0.57 | 0.65 | 0.60 | 0.11 | 0.39 | undervalued |  | **UNDERRATED** |
+| Genji's Guard | 0.56 | 0.62 | 0.72 | 0.53 | 0.19 | 0.39 | undervalued |  |  |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.81 | fair | burst | **UNDERRATED** |
+| Breastplate of Valor | 0.55 | 0.57 | 0.65 | 0.58 | 0.12 | 0.39 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.55 | 0.65 | 0.62 | 0.50 | 0.00 | 0.71 | undervalued |  | **UNDERRATED** |
+| Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.46 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.51 | 0.58 | 0.52 | 0.50 | 0.00 | 0.71 | fair | aura | **UNDERRATED** |
@@ -31,6 +31,7 @@
 | Xibalban Effigy | 0.47 | 0.49 | 0.49 | 0.50 | 0.00 | 0.51 | fair |  |  |
 | Doublet of Binding | 0.47 | 0.49 | 0.51 | 0.50 | 0.00 | 0.46 | fair | aura |  |
 | Void Shield | 0.47 | 0.49 | 0.46 | 0.50 | 0.00 | 0.56 | fair | protection-shred, aura |  |
+| Hide of the Nemean Lion | 0.47 | 0.51 | 0.54 | 0.47 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
 | Prophetic Cloak | 0.47 | 0.49 | 0.43 | 0.50 | 0.00 | 0.64 | premium |  |  |
 | Screeching Gargoyle | 0.47 | 0.49 | 0.49 | 0.50 | 0.00 | 0.49 | fair | protection-shred, peel |  |
 | Jade Scepter | 0.47 | 0.49 | 0.57 | 0.50 | 0.00 | 0.30 | fair | peel |  |
@@ -49,10 +50,9 @@
 | Mystical Mail | 0.45 | 0.45 | 0.45 | 0.50 | 0.00 | 0.46 | fair | aura, wave-clear |  |
 | Glorious Pridwen | 0.45 | 0.45 | 0.36 | 0.50 | 0.00 | 0.64 | premium | sustain |  |
 | Death Metal | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.09 | fair |  |  |
+| Dwarven Plate | 0.45 | 0.40 | 0.35 | 0.54 | 0.07 | 0.51 | premium |  |  |
 | Stygian Anchor | 0.45 | 0.44 | 0.41 | 0.50 | 0.00 | 0.51 | premium | anti-heal |  |
-| Hide of the Nemean Lion | 0.44 | 0.51 | 0.54 | 0.41 | 0.05 | 0.46 | fair |  | **UNDERRATED** |
 | Blood-Bound Book | 0.44 | 0.44 | 0.58 | 0.50 | 0.00 | 0.09 | fair | sustain |  |
-| Dwarven Plate | 0.44 | 0.40 | 0.35 | 0.53 | 0.07 | 0.51 | premium |  |  |
 | Shroud of Vengeance | 0.44 | 0.43 | 0.36 | 0.50 | 0.00 | 0.61 | premium | burst |  |
 | Lifebinder | 0.44 | 0.43 | 0.49 | 0.50 | 0.00 | 0.30 | fair | sustain, aura |  |
 | Bancroft's Talon | 0.44 | 0.43 | 0.58 | 0.50 | 0.00 | 0.09 | fair | sustain |  |

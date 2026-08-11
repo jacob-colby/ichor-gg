@@ -2,13 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Riptalon | 0.61 | 0.50 | 0.56 | 0.78 | 0.14 | 0.37 | fair | sustain | **UNDERRATED** |
+| Riptalon | 0.60 | 0.50 | 0.56 | 0.77 | 0.11 | 0.37 | fair | sustain | **UNDERRATED** |
 | Jotunn's Revenge | 0.58 | 0.71 | 0.65 | 0.50 | 0.00 | 0.84 | undervalued |  | **UNDERRATED** |
 | The Crusher | 0.57 | 0.68 | 0.65 | 0.50 | 0.00 | 0.77 | undervalued | burst | **UNDERRATED** |
-| Lernaean Bow | 0.55 | 0.56 | 0.56 | 0.58 | 0.15 | 0.56 | fair | wave-clear, burst | **UNDERRATED** |
-| Hydra's Lament | 0.54 | 0.62 | 0.61 | 0.50 | 0.07 | 0.66 | fair | burst | **UNDERRATED** |
-| Dominance | 0.52 | 0.51 | 0.53 | 0.58 | 0.12 | 0.46 | fair |  | **UNDERRATED** |
+| Lernaean Bow | 0.55 | 0.56 | 0.56 | 0.58 | 0.13 | 0.56 | fair | wave-clear, burst | **UNDERRATED** |
+| Dominance | 0.53 | 0.51 | 0.53 | 0.59 | 0.10 | 0.46 | fair |  | **UNDERRATED** |
 | The Reaper | 0.51 | 0.57 | 0.53 | 0.50 | 0.00 | 0.67 | fair | sustain | **UNDERRATED** |
+| Hydra's Lament | 0.51 | 0.62 | 0.61 | 0.43 | 0.09 | 0.66 | fair | burst | **UNDERRATED** |
 | Runeforged Hammer | 0.51 | 0.56 | 0.60 | 0.50 | 0.00 | 0.48 | fair | burst | **UNDERRATED** |
 | Genji's Guard | 0.50 | 0.56 | 0.72 | 0.50 | 0.00 | 0.18 | undervalued |  | **UNDERRATED** |
 | Damaru | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.45 | fair |  | **UNDERRATED** |
@@ -22,20 +22,19 @@
 | Avenging Blade | 0.48 | 0.50 | 0.51 | 0.50 | 0.00 | 0.48 | fair | protection-shred | **UNDERRATED** |
 | Tyrfing | 0.48 | 0.50 | 0.47 | 0.50 | 0.00 | 0.56 | fair | burst | **UNDERRATED** |
 | Avatar's Parashu | 0.47 | 0.50 | 0.43 | 0.50 | 0.00 | 0.67 | premium | cc-immunity | **UNDERRATED** |
-| Titan's Bane | 0.47 | 0.52 | 0.46 | 0.45 | 0.12 | 0.67 | fair |  | **UNDERRATED** |
 | Silverbranch Bow | 0.47 | 0.49 | 0.54 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Shield Splitter | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
+| Titan's Bane | 0.47 | 0.52 | 0.46 | 0.44 | 0.14 | 0.67 | fair |  | **UNDERRATED** |
 | Eye of the Storm | 0.46 | 0.48 | 0.52 | 0.50 | 0.00 | 0.38 | fair | peel | **UNDERRATED** |
-| Rage | 0.46 | 0.42 | 0.41 | 0.49 | 0.64 | 0.45 | premium |  |  |
+| Rage | 0.46 | 0.42 | 0.41 | 0.48 | 0.64 | 0.45 | premium |  |  |
 | Freya's Tears | 0.46 | 0.46 | 0.59 | 0.50 | 0.00 | 0.18 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.45 | 0.45 | 0.57 | 0.50 | 0.00 | 0.18 | fair | sustain | **UNDERRATED** |
+| Deathbringer | 0.45 | 0.39 | 0.36 | 0.53 | 0.40 | 0.45 | premium |  |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
-| Musashi's Dual Swords | 0.45 | 0.44 | 0.44 | 0.50 | 0.07 | 0.45 | premium | mobility |  |
 | Barbed Carver | 0.45 | 0.45 | 0.43 | 0.50 | 0.00 | 0.48 | premium | burst |  |
-| Deathbringer | 0.45 | 0.39 | 0.36 | 0.52 | 0.40 | 0.45 | premium |  |  |
 | Transcendence | 0.44 | 0.44 | 0.46 | 0.50 | 0.00 | 0.38 | fair |  |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Demon Blade | 0.44 | 0.43 | 0.39 | 0.50 | 0.00 | 0.53 | premium |  |  |
@@ -46,6 +45,7 @@
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Wyrmskin Hide | 0.43 | 0.41 | 0.42 | 0.50 | 0.00 | 0.38 | premium |  |  |
 | Toxic Blade | 0.43 | 0.41 | 0.42 | 0.50 | 0.00 | 0.37 | premium | anti-heal |  |
+| Musashi's Dual Swords | 0.43 | 0.44 | 0.44 | 0.45 | 0.07 | 0.45 | premium | mobility |  |
 | Sanguine Lash | 0.42 | 0.40 | 0.41 | 0.50 | 0.00 | 0.38 | premium | aura |  |
 | Shogun's Ofuda | 0.42 | 0.39 | 0.53 | 0.50 | 0.00 | 0.08 | fair | aura |  |
 | Oath-Sworn Spear | 0.42 | 0.39 | 0.36 | 0.50 | 0.00 | 0.48 | premium | protection-shred |  |

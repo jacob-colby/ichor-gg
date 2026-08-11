@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Thunderstruck
-  aspect_pick_rate: 0.3
-  aspect_win_rate: 0.56
+  aspect_pick_rate: 0.31
+  aspect_win_rate: 0.55
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.55
     win_rate: 0.55
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.16
-      win_rate: 0.52
+      pick_rate: 0.17
+      win_rate: 0.5
     - name: Runeforged Hammer
       pick_rate: 0.08
-      win_rate: 0.58
+      win_rate: 0.59
   - name: Hydra's Lament
-    pick_rate: 0.23
-    win_rate: 0.59
+    pick_rate: 0.24
+    win_rate: 0.58
     alternates:
-    - name: Transcendence
+    - name: Barbed Carver
       pick_rate: 0.12
       win_rate: 0.51
-    - name: Shifter's Shield
-      pick_rate: 0.12
-      win_rate: 0.57
+    - name: Transcendence
+      pick_rate: 0.11
+      win_rate: 0.54
   - name: Shifter's Shield
-    pick_rate: 0.11
-    win_rate: 0.62
+    pick_rate: 0.1
+    win_rate: 0.6
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.13
-      win_rate: 0.49
+      pick_rate: 0.12
+      win_rate: 0.52
     - name: Barbed Carver
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.52
   - name: Heartseeker
     pick_rate: 0.24
-    win_rate: 0.56
+    win_rate: 0.57
     alternates:
     - name: Titan's Bane
       pick_rate: 0.15
-      win_rate: 0.59
+      win_rate: 0.58
     - name: Shifter's Shield
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.52
   - name: Titan's Bane
-    pick_rate: 0.14
-    win_rate: 0.55
+    pick_rate: 0.15
+    win_rate: 0.56
     alternates:
     - name: Heartseeker
       pick_rate: 0.14
-      win_rate: 0.61
+      win_rate: 0.63
     - name: Lucerne Hammer
-      pick_rate: 0.07
-      win_rate: 0.46
-  - name: Skeggox
-    pick_rate: 0.06
-    win_rate: 0.68
-    alternates:
-    - name: Engraved Guard
       pick_rate: 0.06
-      win_rate: 0.51
-    - name: Heartseeker
+      win_rate: 0.48
+  - name: Lucerne Hammer
+    pick_rate: 0.06
+    win_rate: 0.52
+    alternates:
+    - name: Skeggox
       pick_rate: 0.05
-      win_rate: 0.72
+      win_rate: 0.65
+    - name: Engraved Guard
+      pick_rate: 0.05
+      win_rate: 0.52
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.38
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Bumba's Cudgel
-    pick_rate: 0.22
-    win_rate: 0.47
+    pick_rate: 0.23
+    win_rate: 0.48
   - name: Bluestone Brooch
-    pick_rate: 0.16
-    win_rate: 0.6
+    pick_rate: 0.17
+    win_rate: 0.59
   source_url: https://smitebrain.com/gods/thor/
-  last_verified: '2026-08-06'
-  god_win_rate: 0.5506638714185884
-  god_matches_won: 788
-  god_matches_played: 1431
+  last_verified: '2026-08-10'
+  god_win_rate: 0.5458624127617149
+  god_matches_won: 1095
+  god_matches_played: 2006
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-06'
-  god_matches_analyzed: 12483
+  god_window_end: '2026-08-10'
+  god_matches_analyzed: 17490
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -100,7 +100,7 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - The Crusher
+  - Shifter's Shield
   - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
@@ -116,7 +116,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Runeforged Hammer, Shifter''s Shield, The Crusher, Amanita Charm, Berserker''s
+    this god: Runeforged Hammer, The Crusher, Shifter''s Shield, Amanita Charm, Berserker''s
     Shield, Kinetic Cuirass, Eye of Providence, Genji''s Guard, Oni Hunter''s Garb,
     Eye of the Storm, Shield Splitter, Avenging Blade, Golden Blade, The Reaper, Breastplate
     of Valor, Spectral Armor, Shield of the Phoenix, Lernaean Bow, Yogi''s Necklace,
@@ -130,22 +130,22 @@ builds:
       pick: 0.55
       fit: 0.55
     Hydra's Lament:
-      total: 0.56
+      total: 0.55
       efficiency: 0.61
-      win: 0.59
-      pick: 0.23
+      win: 0.58
+      pick: 0.24
       fit: 0.44
     Runeforged Hammer:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
-      win: 0.58
+      win: 0.59
       pick: 0.08
       fit: 0.58
     Shifter's Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.62
-      pick: 0.11
+      win: 0.6
+      pick: 0.1
       fit: 0.45
     The Crusher:
       total: 0.54
@@ -172,8 +172,8 @@ builds:
   - Shifter's Shield
   - The Crusher
   flex_slots:
-  - Shifter's Shield
   - Genji's Guard
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -188,7 +188,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Runeforged Hammer, The Crusher, Shifter''s Shield, Genji''s Guard, Berserker''s
+    god: Runeforged Hammer, The Crusher, Genji''s Guard, Shifter''s Shield, Berserker''s
     Shield, Amanita Charm, Kinetic Cuirass, Breastplate of Valor, Eye of Providence,
     Oni Hunter''s Garb, Freya''s Tears, Shield of the Phoenix, The Reaper, Yogi''s
     Necklace, Spectral Armor, Avenging Blade, Eye of the Storm, Shield Splitter, Golden
@@ -210,20 +210,20 @@ builds:
     Hydra's Lament:
       total: 0.55
       efficiency: 0.61
-      win: 0.59
-      pick: 0.23
+      win: 0.58
+      pick: 0.24
       fit: 0.42
     Runeforged Hammer:
-      total: 0.53
+      total: 0.54
       efficiency: 0.6
-      win: 0.58
+      win: 0.59
       pick: 0.08
       fit: 0.37
     Shifter's Shield:
-      total: 0.52
+      total: 0.51
       efficiency: 0.55
-      win: 0.62
-      pick: 0.11
+      win: 0.6
+      pick: 0.1
       fit: 0.27
     The Crusher:
       total: 0.53
@@ -258,7 +258,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shifter''s Shield, Runeforged Hammer, Shield of the Phoenix,
+    this god: Amanita Charm, Runeforged Hammer, Shifter''s Shield, Shield of the Phoenix,
     Kinetic Cuirass, Berserker''s Shield, The Crusher, Eye of Providence, The Reaper,
     Oni Hunter''s Garb, Genji''s Guard, Eye of the Storm, Shield Splitter, Chandra''s
     Grace, Erosion, Riptalon, Phoenix Feather, Spectral Armor, Avenging Blade, Freya''s
@@ -278,22 +278,22 @@ builds:
       pick: 0.0
       fit: 0.72
     Hydra's Lament:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.59
-      pick: 0.23
+      win: 0.58
+      pick: 0.24
       fit: 0.38
     Runeforged Hammer:
       total: 0.56
       efficiency: 0.6
-      win: 0.58
+      win: 0.59
       pick: 0.08
       fit: 0.55
     Shifter's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
-      win: 0.62
-      pick: 0.11
+      win: 0.6
+      pick: 0.1
       fit: 0.55
     Amanita Charm:
       total: 0.58
@@ -305,22 +305,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Avenging Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - Runeforged Hammer
-  - Shifter's Shield
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Shifter's Shield
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -328,13 +328,19 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Runeforged Hammer, Shifter''s Shield, Avenging Blade,
+    for this god: The Crusher, Runeforged Hammer, Avenging Blade, Shifter''s Shield,
     Titan''s Bane, Berserker''s Shield, Amanita Charm, The Reaper, Kinetic Cuirass,
     Genji''s Guard, Eye of Providence, Oni Hunter''s Garb, Void Shield, Stone of Binding,
     Riptalon, Tekko-Kagi, Eye of the Storm, Screeching Gargoyle, Shield Splitter,
     Void Stone, Breastplate of Valor, Silverbranch Bow, Golden Blade, Yogi''s Necklace,
     Pendulum Blade, Lernaean Bow.'
   slot_scores:
+    Avenging Blade:
+      total: 0.52
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.65
@@ -344,21 +350,15 @@ builds:
     Hydra's Lament:
       total: 0.54
       efficiency: 0.61
-      win: 0.59
-      pick: 0.23
+      win: 0.58
+      pick: 0.24
       fit: 0.36
     Runeforged Hammer:
-      total: 0.54
+      total: 0.55
       efficiency: 0.6
-      win: 0.58
+      win: 0.59
       pick: 0.08
       fit: 0.47
-    Shifter's Shield:
-      total: 0.53
-      efficiency: 0.55
-      win: 0.62
-      pick: 0.11
-      fit: 0.34
     The Crusher:
       total: 0.56
       efficiency: 0.65
@@ -366,9 +366,9 @@ builds:
       pick: 0.0
       fit: 0.72
     Heartseeker:
-      total: 0.53
+      total: 0.54
       efficiency: 0.46
-      win: 0.56
+      win: 0.57
       pick: 0.24
       fit: 0.72
   starter: *id001
@@ -398,8 +398,8 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Runeforged Hammer, Shifter''s Shield, Golden Blade,
-    Riptalon, The Crusher, Amanita Charm, Genji''s Guard, Silverbranch Bow, Kinetic
+    this god: Berserker''s Shield, Runeforged Hammer, Golden Blade, Riptalon, Shifter''s
+    Shield, The Crusher, Amanita Charm, Genji''s Guard, Silverbranch Bow, Kinetic
     Cuirass, Pharaoh''s Curse, Lernaean Bow, Tyrfing, Oni Hunter''s Garb, Eye of Providence,
     Shogun''s Ofuda, Breastplate of Valor, Yogi''s Necklace, Toxic Blade, Dominance,
     The Reaper, Spectral Armor, Freya''s Tears, Tekko-Kagi, Shield of the Phoenix,
@@ -424,15 +424,15 @@ builds:
       pick: 0.55
       fit: 0.27
     Hydra's Lament:
-      total: 0.53
+      total: 0.52
       efficiency: 0.61
-      win: 0.59
-      pick: 0.23
+      win: 0.58
+      pick: 0.24
       fit: 0.25
     Runeforged Hammer:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
-      win: 0.58
+      win: 0.59
       pick: 0.08
       fit: 0.33
     Riptalon:
@@ -452,8 +452,8 @@ builds:
   - Runeforged Hammer
   - Shifter's Shield
   flex_slots:
-  - Shifter's Shield
   - Breastplate of Valor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -469,7 +469,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Runeforged Hammer,
-    Shifter''s Shield, Breastplate of Valor, Freya''s Tears, Shield of the Phoenix,
+    Breastplate of Valor, Shifter''s Shield, Freya''s Tears, Shield of the Phoenix,
     Berserker''s Shield, The Crusher, Amanita Charm, Kinetic Cuirass, Eye of Providence,
     Oni Hunter''s Garb, Chandra''s Grace, Screeching Gargoyle, Yogi''s Necklace, Arondight,
     Gladiator''s Shield, Spectral Armor, Pendulum Blade, Pharaoh''s Curse, Eye of
@@ -497,20 +497,20 @@ builds:
     Hydra's Lament:
       total: 0.57
       efficiency: 0.61
-      win: 0.59
-      pick: 0.23
+      win: 0.58
+      pick: 0.24
       fit: 0.56
     Runeforged Hammer:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
-      win: 0.58
+      win: 0.59
       pick: 0.08
       fit: 0.33
     Shifter's Shield:
-      total: 0.52
+      total: 0.51
       efficiency: 0.55
-      win: 0.62
-      pick: 0.11
+      win: 0.6
+      pick: 0.1
       fit: 0.3
   starter: *id001
 - source: suggested
@@ -565,9 +565,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Runeforged Hammer:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
-      win: 0.58
+      win: 0.59
       pick: 0.08
       fit: 0.58
     The Crusher:

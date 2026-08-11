@@ -2,20 +2,19 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Spear of Desolation | 0.57 | 0.55 | 0.52 | 0.64 | 0.17 | 0.60 | fair |  |  |
+| Obsidian Shard | 0.60 | 0.52 | 0.54 | 0.74 | 0.06 | 0.47 | fair |  | **UNDERRATED** |
+| Spear of Desolation | 0.57 | 0.55 | 0.52 | 0.65 | 0.14 | 0.60 | fair |  | **UNDERRATED** |
+| The World Stone | 0.57 | 0.48 | 0.49 | 0.70 | 0.22 | 0.47 | fair |  |  |
 | Gluttonous Grimoire | 0.57 | 0.68 | 0.66 | 0.50 | 0.00 | 0.74 | undervalued | burst | **UNDERRATED** |
-| The World Stone | 0.57 | 0.48 | 0.49 | 0.70 | 0.20 | 0.47 | fair |  |  |
-| Freya's Tears | 0.56 | 0.52 | 0.59 | 0.66 | 0.08 | 0.36 | fair |  | **UNDERRATED** |
-| Obsidian Shard | 0.55 | 0.52 | 0.54 | 0.63 | 0.07 | 0.47 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.55 | 0.45 | 0.44 | 0.69 | 0.23 | 0.47 | premium |  |  |
+| Freya's Tears | 0.56 | 0.52 | 0.59 | 0.66 | 0.12 | 0.36 | fair |  | **UNDERRATED** |
+| Shifter's Shield | 0.55 | 0.51 | 0.55 | 0.65 | 0.12 | 0.40 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.55 | 0.45 | 0.44 | 0.70 | 0.23 | 0.47 | premium |  |  |
 | Soul Gem | 0.54 | 0.62 | 0.59 | 0.50 | 0.00 | 0.70 | fair | burst, sustain, aura | **UNDERRATED** |
-| Shifter's Shield | 0.53 | 0.51 | 0.55 | 0.61 | 0.10 | 0.40 | fair |  | **UNDERRATED** |
-| Bancroft's Talon | 0.52 | 0.48 | 0.58 | 0.61 | 0.14 | 0.25 | fair | sustain |  |
 | Amanita Charm | 0.52 | 0.58 | 0.66 | 0.50 | 0.00 | 0.40 | undervalued | sustain, aura | **UNDERRATED** |
-| Blood-Bound Book | 0.51 | 0.48 | 0.58 | 0.59 | 0.13 | 0.25 | fair | sustain |  |
 | Genji's Guard | 0.51 | 0.58 | 0.72 | 0.50 | 0.00 | 0.24 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.51 | 0.57 | 0.60 | 0.50 | 0.00 | 0.50 | fair | burst | **UNDERRATED** |
 | Spear of the Magus | 0.51 | 0.56 | 0.60 | 0.50 | 0.00 | 0.47 | fair |  | **UNDERRATED** |
+| Bancroft's Talon | 0.50 | 0.48 | 0.58 | 0.57 | 0.14 | 0.25 | fair | sustain |  |
 | Eye of Providence | 0.50 | 0.55 | 0.62 | 0.50 | 0.00 | 0.40 | undervalued |  | **UNDERRATED** |
 | The Cosmic Horror | 0.50 | 0.55 | 0.58 | 0.50 | 0.00 | 0.47 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.50 | 0.54 | 0.65 | 0.50 | 0.00 | 0.28 | undervalued |  | **UNDERRATED** |
@@ -33,6 +32,7 @@
 | Alchemist Coat | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Erosion | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.40 | fair | aura | **UNDERRATED** |
 | Dreamer's Idol | 0.47 | 0.49 | 0.49 | 0.50 | 0.00 | 0.47 | fair | cc-immunity | **UNDERRATED** |
+| Blood-Bound Book | 0.47 | 0.48 | 0.58 | 0.50 | 0.00 | 0.25 | fair | sustain |  |
 | Doom Orb | 0.47 | 0.48 | 0.49 | 0.50 | 0.00 | 0.47 | fair |  |  |
 | Draconic Scale | 0.46 | 0.47 | 0.50 | 0.50 | 0.00 | 0.40 | fair |  |  |
 | Leviathan's Hide | 0.46 | 0.47 | 0.55 | 0.50 | 0.00 | 0.28 | fair |  |  |
@@ -79,6 +79,7 @@
 | Regrowth Striders | 0.40 | 0.36 | 0.41 | 0.50 | 0.00 | 0.24 | premium | mobility, sustain |  |
 | Shroud of Vengeance | 0.40 | 0.35 | 0.36 | 0.50 | 0.00 | 0.34 | premium | burst |  |
 | Staff of Myrddin | 0.40 | 0.35 | 0.34 | 0.50 | 0.00 | 0.38 | premium |  |  |
+| Daybreak Gavel | 0.39 | 0.18 | 0.18 | 0.65 | 0.20 | 0.17 | premium |  |  |
 | Heartwood Charm | 0.39 | 0.33 | 0.35 | 0.50 | 0.00 | 0.29 | premium |  |  |
 | Spirit Robe | 0.39 | 0.32 | 0.36 | 0.50 | 0.00 | 0.24 | premium | sustain |  |
 | Dwarven Plate | 0.38 | 0.32 | 0.35 | 0.50 | 0.00 | 0.24 | premium |  |  |
@@ -90,4 +91,3 @@
 | Gauntlet of Thebes | 0.34 | 0.24 | 0.27 | 0.50 | 0.00 | 0.17 | premium |  |  |
 | Brawler’s Beat Stick | 0.32 | 0.20 | 0.18 | 0.50 | 0.00 | 0.24 | premium | anti-heal |  |
 | Omen Drum | 0.32 | 0.19 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Daybreak Gavel | 0.31 | 0.18 | 0.18 | 0.50 | 0.00 | 0.17 | premium |  |  |

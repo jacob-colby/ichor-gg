@@ -2,18 +2,17 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.61 | 0.65 | 0.59 | 0.61 | 0.21 | 0.80 | fair | burst, sustain, aura |  |
-| Doom Orb | 0.57 | 0.48 | 0.49 | 0.72 | 0.06 | 0.46 | fair |  | **UNDERRATED** |
+| Soul Gem | 0.61 | 0.65 | 0.59 | 0.60 | 0.22 | 0.80 | fair | burst, sustain, aura |  |
+| Obsidian Shard | 0.58 | 0.51 | 0.54 | 0.69 | 0.17 | 0.46 | fair |  |  |
 | Gluttonous Grimoire | 0.56 | 0.66 | 0.66 | 0.50 | 0.00 | 0.67 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.55 | 0.54 | 0.52 | 0.60 | 0.27 | 0.58 | fair |  |  |
-| Obsidian Shard | 0.55 | 0.51 | 0.54 | 0.64 | 0.16 | 0.46 | fair |  |  |
+| Spear of Desolation | 0.55 | 0.54 | 0.52 | 0.59 | 0.29 | 0.58 | fair |  |  |
+| Doom Orb | 0.53 | 0.48 | 0.49 | 0.64 | 0.07 | 0.46 | fair |  | **UNDERRATED** |
 | Rod of Tahuti | 0.52 | 0.44 | 0.44 | 0.63 | 0.26 | 0.46 | premium |  |  |
 | Spear of the Magus | 0.50 | 0.56 | 0.60 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.50 | 0.56 | 0.56 | 0.50 | 0.00 | 0.54 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.50 | 0.54 | 0.58 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.49 | 0.54 | 0.72 | 0.50 | 0.00 | 0.12 | undervalued |  | **UNDERRATED** |
 | Nimble Ring | 0.49 | 0.54 | 0.49 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
-| Gem of Focus | 0.49 | 0.46 | 0.51 | 0.56 | 0.07 | 0.36 | fair | mobility | **UNDERRATED** |
 | Blood-Bound Book | 0.48 | 0.51 | 0.58 | 0.50 | 0.00 | 0.35 | fair | sustain | **UNDERRATED** |
 | Bragi's Harp | 0.48 | 0.51 | 0.46 | 0.50 | 0.00 | 0.64 | fair | burst | **UNDERRATED** |
 | Bancroft's Talon | 0.48 | 0.51 | 0.58 | 0.50 | 0.00 | 0.35 | fair | sustain | **UNDERRATED** |
@@ -22,10 +21,11 @@
 | Death Metal | 0.47 | 0.49 | 0.60 | 0.50 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.47 | 0.49 | 0.59 | 0.50 | 0.00 | 0.24 | fair | sustain, aura | **UNDERRATED** |
 | Dreamer's Idol | 0.47 | 0.48 | 0.49 | 0.50 | 0.00 | 0.46 | fair | cc-immunity | **UNDERRATED** |
+| Book of Thoth | 0.46 | 0.36 | 0.42 | 0.61 | 0.17 | 0.24 | premium |  |  |
 | The World Stone | 0.46 | 0.48 | 0.49 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
-| Book of Thoth | 0.46 | 0.36 | 0.42 | 0.61 | 0.16 | 0.24 | premium |  |  |
 | Helm of Radiance | 0.46 | 0.48 | 0.58 | 0.50 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Jade Scepter | 0.46 | 0.47 | 0.57 | 0.50 | 0.00 | 0.24 | fair | peel | **UNDERRATED** |
+| Gem of Focus | 0.46 | 0.46 | 0.51 | 0.50 | 0.00 | 0.36 | fair | mobility | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Typhon’s Heart | 0.46 | 0.46 | 0.51 | 0.50 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
