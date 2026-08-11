@@ -142,7 +142,8 @@ def hybrid_core(model_core, rows, community_entry, items_by_name, weights,
              + [scored[n] for n in model_core if n not in displaced_names and n in scored]
              + [r for r in rows if r["item"] not in model_core])
     core = assemble.assemble_core(order, items_by_name, n=n, max_lifesteal=max_lifesteal,
-                                  stat_caps=(weights or {}).get("stat_caps"))
+                                  stat_caps=(weights or {}).get("stat_caps"),
+                                  **assemble.coherence_args(list(items_by_name.values()), weights))
 
     swaps = [
         {"added": name, "removed": weakest,

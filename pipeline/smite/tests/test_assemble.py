@@ -225,3 +225,85 @@ def test_a_rejected_item_does_not_consume_the_boots_slot():
     by_name = {i["name"]: i for i in (both, boots)}
     core = assemble.assemble_core(rows, by_name, n=2, max_lifesteal=0)
     assert core == ["Plain Boots"]
+
+
+# ── Build coherence (shipped OFF — see `coherence` in _weights.yaml) ────────
+
+def _stats(**kw):
+    return {"stats": {k.replace("_", " "): str(v) for k, v in kw.items()}}
+
+
+def test_coherence_multiplier_is_a_no_op_at_zero_strength():
+    """The shipped setting. It has to be exactly 1.0, not approximately, or
+    every core would drift the moment the term was merely present."""
+    item = _stats(Penetration=20)
+    assert assemble.coherence_multiplier(item, {"Penetration": 100}, {"Penetration": 20}, 0.0) == 1.0
+
+
+def test_coherence_multiplier_discounts_a_stat_the_core_already_holds():
+    ref = {"Penetration": 20}
+    item = _stats(Penetration=20)
+    fresh = assemble.coherence_multiplier(item, {}, ref, 1.0)
+    third = assemble.coherence_multiplier(item, {"Penetration": 40}, ref, 1.0)
+    assert fresh == 1.0                       # nothing held yet
+    assert 0.0 < third < fresh                # diminishing, never zero
+
+
+def test_coherence_multiplier_is_not_dragged_by_a_token_stat():
+    """An item that is mostly protections but carries 5 Strength must not be
+    judged as a Strength item just because the core is Strength-heavy."""
+    ref = {"Strength": 40, "Physical Protection": 50}
+    item = {"stats": {"Physical Protection": "60", "Strength": "5"}}
+    m = assemble.coherence_multiplier(item, {"Strength": 200}, ref, 1.0)
+    assert m > 0.85
+
+
+def test_coherence_multiplier_handles_a_stat_no_other_item_carries():
+    """No reference magnitude means no yardstick. Counting it as zero would
+    make a unique stat weigh nothing and silently skew the average."""
+    item = _stats(Echo=1)
+    assert assemble.coherence_multiplier(item, {}, {}, 1.0) == 1.0
+
+
+def test_coherence_multiplier_survives_a_statless_item():
+    assert assemble.coherence_multiplier({}, {"Strength": 100}, {"Strength": 40}, 1.0) == 1.0
+
+
+def test_assemble_core_ignores_coherence_when_it_is_off():
+    """Off must mean byte-identical to the pre-coherence path, since that is
+    what every shipped build was measured against."""
+    items = {
+        "A": _stats(Penetration=20), "B": _stats(Penetration=20),
+        "C": _stats(Strength=40), "D": _stats(Max_Health=200),
+    }
+    rows = [{"item": n, "total": t} for n, t in
+            (("A", 0.9), ("B", 0.85), ("C", 0.6), ("D", 0.5))]
+    assert assemble.assemble_core(rows, items, n=3) == ["A", "B", "C"]
+    assert assemble.assemble_core(rows, items, n=3, coherence=0.0) == ["A", "B", "C"]
+
+
+def test_assemble_core_reorders_once_coherence_is_on():
+    """B duplicates A's whole stat line; C brings something new at a lower raw
+    score. With the term on, C takes the slot."""
+    items = {
+        "A": _stats(Penetration=20), "B": _stats(Penetration=20),
+        "C": _stats(Strength=40),
+    }
+    rows = [{"item": n, "total": t} for n, t in (("A", 0.9), ("B", 0.85), ("C", 0.6))]
+    ref = {"Penetration": 20, "Strength": 40}
+    core = assemble.assemble_core(rows, items, n=2, coherence=1.0, stat_reference=ref)
+    assert core == ["A", "C"]
+
+
+def test_assemble_core_still_honours_its_hard_guards_under_coherence():
+    """Coherence re-ranks; it must not become a way past the one-boots rule."""
+    items = {
+        "Boots1": _stats(Movement_Speed=18, Strength=30),
+        "Boots2": _stats(Movement_Speed=18, Intelligence=60),
+        "Plain": _stats(Max_Health=250),
+    }
+    rows = [{"item": n, "total": t} for n, t in
+            (("Boots1", 0.9), ("Boots2", 0.88), ("Plain", 0.1))]
+    core = assemble.assemble_core(rows, items, n=2, coherence=1.0,
+                                  stat_reference={"Movement Speed": 18})
+    assert core == ["Boots1", "Plain"]
