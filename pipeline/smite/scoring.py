@@ -114,8 +114,11 @@ def item_damage_type(item):
 #
 # Defaults live in _weights.yaml under `hybrid_scaling`. The confidence floor
 # is the one `kit.kit_stat_overlay` already uses — under 3 abilities with
-# parsed scaling the share is an artifact of a sparse scrape (Artio and Ullr
-# scrape 2 abilities each), so those gods keep the strict label.
+# parsed scaling the share is an artifact of a sparse scrape, so those gods
+# keep the strict label. It used to catch the three stance gods, whose kits the
+# parser could not see at all; with that fixed (`wiki_parser._section_tables`)
+# Artio measures 54% Strength on a magical label and becomes a hybrid scaler
+# here — which is what her Bear stance actually does.
 HYBRID_MIN_OFF_SHARE = 0.30
 HYBRID_MIN_ABILITIES = 3
 
@@ -260,9 +263,83 @@ def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=No
     return max(0.0, min(stat_fit + bonus, 1.0))
 
 
-def lookup_rates(god_build, item_name):
+# How much of the playerbase is still buying by each build slot, relative to
+# slot 1. A community "pick rate" is the share of ALL tracked matches in which
+# that god's player held that item in that slot — so it is divided by matches
+# that ended at 20 minutes with four items as readily as by matches that ran
+# long. An item bought sixth is therefore scored against a denominator most of
+# which never reached a sixth item, and the signal decays for a reason that has
+# nothing to do with whether players want the item.
+#
+# Measured over all 87 Conquest community builds, summing each slot's top pick
+# and its two scraped alternates:
+#
+#     slot 1  0.684      slot 4  0.410
+#     slot 2  0.501      slot 5  0.316
+#     slot 3  0.439      slot 6  0.222
+#
+# Slot 1 anchors at 1.0 because every match buys a first item. `ledger.ts`
+# already documents the other half of the same fact from the viewer's side —
+# slot 6 holds an unfinished COMPONENT in 70% of these builds and slot 5 in 9%,
+# while slots 1-4 never do.
+#
+# These are corpus-level constants, deliberately NOT computed per god. A
+# per-god, per-slot normalisation would divide out the god's own choice
+# diversity along with the attrition, which would erase a real signal: a slot
+# where every player buys the same item genuinely IS more consensus than one
+# where the picks are split three ways. Match-length attrition is common to
+# every god; item diversity is not.
+#
+# Regenerate with `measure_slot_reach` over the shipped community builds; an
+# override lives in _weights.yaml under `slot_reach`.
+SLOT_REACH = {1: 1.0, 2: 0.733, 3: 0.642, 4: 0.599, 5: 0.462, 6: 0.325}
+
+
+def measure_slot_reach(god_builds):
+    """Re-derive `SLOT_REACH` from a corpus of god build notes.
+
+    Each slot's mass is the sum of its top pick and its scraped alternates,
+    averaged across gods, then divided by slot 1's. Slots with no data are
+    omitted rather than defaulted to 1.0, which would silently disable the
+    correction for exactly the slots that need it most."""
+    totals, counts = {}, {}
+    for build in god_builds or []:
+        for entry in (build or {}).get("builds", []):
+            if entry.get("source") != "community":
+                continue
+            for index, slot in enumerate(entry.get("slot_order") or [], start=1):
+                if not isinstance(slot, dict):
+                    continue
+                mass = (slot.get("pick_rate") or 0.0) + sum(
+                    (alt.get("pick_rate") or 0.0) for alt in (slot.get("alternates") or []))
+                totals[index] = totals.get(index, 0.0) + mass
+                counts[index] = counts.get(index, 0) + 1
+    means = {i: totals[i] / counts[i] for i in totals if counts[i]}
+    anchor = means.get(1)
+    if not anchor:
+        return {}
+    return {i: round(m / anchor, 3) for i, m in sorted(means.items())}
+
+
+def slot_reach(weights=None):
+    override = (weights or {}).get("slot_reach")
+    if not override:
+        return SLOT_REACH
+    # YAML keys arrive as ints already, but a hand-edited file may use strings.
+    return {int(k): float(v) for k, v in override.items()}
+
+
+def lookup_rates(god_build, item_name, weights=None):
     """(pick_rate, win_rate) for item_name from the god's community build entry,
     or (0.0, None) if this god's players never buy it.
+
+    The pick rate is CONDITIONAL on reaching the slot — the raw rate divided by
+    `SLOT_REACH` for the slot it was seen in. See that constant for the
+    measurement and for why the divisor is a corpus-level attrition factor
+    rather than the slot's own mass. Without it the best sixth item any god has
+    reads at 16% while the best first item reads at 89%, and the model was
+    being asked to believe that the community half-heartedly buys every late
+    item in the game.
 
     A slot pick is authoritative. Failing that, the item's best sighting among
     the slots' `alternates` — which is what `build_index.popular_items` shows
@@ -282,11 +359,18 @@ def lookup_rates(god_build, item_name):
     as a miss — exactly the judgement the tool exists to make. The within-god
     rank correlation, which this does not distort, is unchanged at 0.564. See
     the leakage probe in calibrate.py."""
+    reach = slot_reach(weights)
+    # A rate can exceed 1.0 in principle once divided by a reach below 1; it
+    # never does in the shipped data (the largest is 0.16 / 0.325 = 0.49), but
+    # the signal blend treats every axis as [0,1] and a stray >1 would let one
+    # item outscore a perfect item on every other axis at once.
+    conditional = lambda rate, index: min(rate / reach.get(index, 1.0), 1.0)
+
     best_alternate = None
     for entry in god_build.get("builds", []):
         if entry.get("source") != "community":
             continue
-        for slot in entry.get("slot_order", []):
+        for index, slot in enumerate(entry.get("slot_order", []), start=1):
             if not isinstance(slot, dict):
                 continue
             if slot.get("name") == item_name:
@@ -295,11 +379,14 @@ def lookup_rates(god_build, item_name):
                 # a higher-pick alternate in another slot, and preferring that
                 # sighting detaches the item from the rate it is graded against
                 # (measured: rank correlation 0.564 -> 0.453).
-                return slot.get("pick_rate", 0.0), slot.get("win_rate")
+                return conditional(slot.get("pick_rate", 0.0), index), slot.get("win_rate")
             for alt in slot.get("alternates") or []:
                 if alt.get("name") != item_name:
                     continue
-                rate = alt.get("pick_rate") or 0.0
+                # Compared AFTER conditioning, so "best sighting" means the slot
+                # where this god's players most preferred it, not merely the
+                # earliest slot it turned up in.
+                rate = conditional(alt.get("pick_rate") or 0.0, index)
                 if best_alternate is None or rate > best_alternate[0]:
                     best_alternate = (rate, alt.get("win_rate"))
     return best_alternate or (0.0, None)
@@ -346,7 +433,7 @@ def signal_score(item, god, god_build, eff_score, weights, item_tags,
                  stat_overlay=None, tag_bonus=None, base_map=None,
                  stat_reference=None):
     w = weights["signals"]
-    pick, win = lookup_rates(god_build, item["name"])
+    pick, win = lookup_rates(god_build, item["name"], weights)
     win_norm = win if win is not None else unknown_win_rate(weights)
     fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus,
                         base_map=base_map, stat_reference=stat_reference)
