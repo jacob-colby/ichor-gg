@@ -4,13 +4,14 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Amanita Charm | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.71 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.81 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.56 | 0.60 | 0.55 | 0.54 | 0.26 | 0.71 | fair |  |  |
+| Shifter's Shield | 0.56 | 0.60 | 0.55 | 0.54 | 0.25 | 0.71 | fair |  |  |
 | Eye of Providence | 0.55 | 0.65 | 0.62 | 0.50 | 0.00 | 0.71 | undervalued |  | **UNDERRATED** |
-| Genji's Guard | 0.55 | 0.62 | 0.72 | 0.50 | 0.21 | 0.39 | undervalued |  |  |
+| Genji's Guard | 0.54 | 0.62 | 0.72 | 0.50 | 0.20 | 0.39 | undervalued |  |  |
 | Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.46 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.51 | 0.58 | 0.52 | 0.50 | 0.00 | 0.71 | fair | aura | **UNDERRATED** |
+| Dwarven Plate | 0.51 | 0.40 | 0.35 | 0.69 | 0.07 | 0.51 | premium |  |  |
 | Shield of the Phoenix | 0.51 | 0.58 | 0.57 | 0.50 | 0.00 | 0.59 | fair | sustain | **UNDERRATED** |
 | Stampede | 0.51 | 0.50 | 0.52 | 0.57 | 0.14 | 0.46 | fair | mobility, aura, cc-immunity | **UNDERRATED** |
 | Breastplate of Valor | 0.51 | 0.57 | 0.65 | 0.49 | 0.10 | 0.39 | undervalued |  | **UNDERRATED** |
@@ -46,7 +47,6 @@
 | Chronos' Pendant | 0.46 | 0.46 | 0.56 | 0.50 | 0.00 | 0.23 | fair |  |  |
 | Alchemist Coat | 0.45 | 0.45 | 0.52 | 0.50 | 0.00 | 0.30 | fair |  |  |
 | Spear of Desolation | 0.45 | 0.45 | 0.52 | 0.50 | 0.00 | 0.29 | fair |  |  |
-| Dwarven Plate | 0.45 | 0.40 | 0.35 | 0.55 | 0.07 | 0.51 | premium |  |  |
 | The Cosmic Horror | 0.45 | 0.45 | 0.58 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Mystical Mail | 0.45 | 0.45 | 0.45 | 0.50 | 0.00 | 0.46 | fair | aura, wave-clear |  |
 | Glorious Pridwen | 0.45 | 0.45 | 0.36 | 0.50 | 0.00 | 0.64 | premium | sustain |  |
@@ -84,7 +84,7 @@
 | Eye of Erebus | 0.39 | 0.33 | 0.32 | 0.50 | 0.00 | 0.34 | premium |  |  |
 | Book of Thoth | 0.38 | 0.32 | 0.42 | 0.50 | 0.00 | 0.09 | premium |  |  |
 | Staff of Myrddin | 0.38 | 0.30 | 0.34 | 0.50 | 0.00 | 0.23 | premium |  |  |
-| Gauntlet of Thebes | 0.37 | 0.25 | 0.27 | 0.53 | 0.25 | 0.20 | premium |  |  |
+| Gauntlet of Thebes | 0.38 | 0.25 | 0.27 | 0.53 | 0.26 | 0.20 | premium |  |  |
 | Brawler’s Beat Stick | 0.36 | 0.28 | 0.18 | 0.50 | 0.00 | 0.51 | premium | anti-heal |  |
 | Circe's Hexstone | 0.36 | 0.28 | 0.25 | 0.50 | 0.00 | 0.34 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.36 | 0.27 | 0.30 | 0.50 | 0.00 | 0.20 | premium | cc-immunity, sustain |  |

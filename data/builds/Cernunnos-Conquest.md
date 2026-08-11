@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of Strife
   aspect_pick_rate: 0.44
-  aspect_win_rate: 0.52
+  aspect_win_rate: 0.53
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.44
-    win_rate: 0.56
+    pick_rate: 0.43
+    win_rate: 0.55
     alternates:
     - name: Tyrfing
-      pick_rate: 0.28
-      win_rate: 0.51
+      pick_rate: 0.29
+      win_rate: 0.54
     - name: The Reaper
       pick_rate: 0.05
       win_rate: 0.6
   - name: Dagger of Frenzy
-    pick_rate: 0.33
-    win_rate: 0.51
+    pick_rate: 0.34
+    win_rate: 0.52
     alternates:
     - name: Toxic Blade
       pick_rate: 0.1
       win_rate: 0.54
     - name: Odysseus' Bow
       pick_rate: 0.08
-      win_rate: 0.55
-  - name: Odysseus' Bow
+      win_rate: 0.56
+  - name: Riptalon
     pick_rate: 0.17
-    win_rate: 0.6
+    win_rate: 0.53
+    alternates:
+    - name: Odysseus' Bow
+      pick_rate: 0.16
+      win_rate: 0.59
+    - name: Dominance
+      pick_rate: 0.08
+      win_rate: 0.51
+  - name: Dominance
+    pick_rate: 0.12
+    win_rate: 0.53
     alternates:
     - name: Riptalon
-      pick_rate: 0.17
-      win_rate: 0.53
-    - name: Dominance
-      pick_rate: 0.09
-      win_rate: 0.51
-  - name: Riptalon
-    pick_rate: 0.18
-    win_rate: 0.54
-    alternates:
-    - name: Dominance
-      pick_rate: 0.11
-      win_rate: 0.52
+      pick_rate: 0.18
+      win_rate: 0.55
     - name: Silverbranch Bow
       pick_rate: 0.1
-      win_rate: 0.6
+      win_rate: 0.59
   - name: Silverbranch Bow
     pick_rate: 0.08
     win_rate: 0.64
     alternates:
     - name: Riptalon
       pick_rate: 0.13
-      win_rate: 0.6
+      win_rate: 0.61
     - name: Dominance
-      pick_rate: 0.06
-      win_rate: 0.57
+      pick_rate: 0.07
+      win_rate: 0.55
   - name: Manchu Bow
     pick_rate: 0.09
-    win_rate: 0.47
+    win_rate: 0.46
     alternates:
     - name: Riptalon
-      pick_rate: 0.08
-      win_rate: 0.47
+      pick_rate: 0.09
+      win_rate: 0.49
     - name: Hunter's Bow
       pick_rate: 0.07
-      win_rate: 0.67
+      win_rate: 0.65
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.38
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Leather Cowl
     pick_rate: 0.2
-    win_rate: 0.5
+    win_rate: 0.49
   - name: Sharpshooter's Arrow
     pick_rate: 0.16
     win_rate: 0.55
   source_url: https://smitebrain.com/gods/cernunnos/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.5381114903299203
-  god_matches_won: 473
-  god_matches_played: 879
+  last_verified: '2026-08-11'
+  god_win_rate: 0.5407407407407407
+  god_matches_won: 511
+  god_matches_played: 945
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -118,7 +118,7 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Silverbranch Bow, Gluttonous Grimoire, The Reaper, Soul Gem, Jotunn''s
     Revenge, The Crusher, Death Metal, Berserker''s Shield, Genji''s Guard, Lernaean
-    Bow, Hydra''s Lament, Damaru, Spear of the Magus, Dominance, Bragi''s Harp, Bracer
+    Bow, Hydra''s Lament, Damaru, Dominance, Spear of the Magus, Bragi''s Harp, Bracer
     of The Abyss, Runeforged Hammer, The Cosmic Horror, Golden Blade, Breastplate
     of Valor, Spear of Desolation, Blood-Bound Book, Bancroft''s Talon, Tekko-Kagi,
     Nimble Ring, Pharaoh''s Curse, Obsidian Shard, Amanita Charm, Chronos'' Pendant,
@@ -265,7 +265,7 @@ builds:
     god: Silverbranch Bow, Gluttonous Grimoire, Soul Gem, Jotunn''s Revenge, The Reaper,
     The Crusher, Death Metal, Berserker''s Shield, Genji''s Guard, Hydra''s Lament,
     Spear of the Magus, Lernaean Bow, Damaru, The Cosmic Horror, Spear of Desolation,
-    Breastplate of Valor, Dominance, Runeforged Hammer, Bracer of The Abyss, Bragi''s
+    Dominance, Breastplate of Valor, Runeforged Hammer, Bracer of The Abyss, Bragi''s
     Harp, Golden Blade, Obsidian Shard, Chronos'' Pendant, Tekko-Kagi, Blood-Bound
     Book, Bancroft''s Talon, Amanita Charm, Oni Hunter''s Garb, Pharaoh''s Curse,
     Rod of Asclepius, Yogi''s Necklace, Kinetic Cuirass, Heartseeker, Freya''s Tears,
@@ -410,7 +410,7 @@ builds:
     for this god: Silverbranch Bow, Gluttonous Grimoire, The Reaper, The Crusher,
     Soul Gem, Jotunn''s Revenge, Berserker''s Shield, Death Metal, Spear of the Magus,
     The Cosmic Horror, Genji''s Guard, Avenging Blade, Hydra''s Lament, Lernaean Bow,
-    Damaru, Spear of Desolation, Obsidian Shard, Dominance, Tekko-Kagi, Runeforged
+    Damaru, Spear of Desolation, Dominance, Obsidian Shard, Tekko-Kagi, Runeforged
     Hammer, Bracer of The Abyss, Screeching Gargoyle, Breastplate of Valor, Golden
     Blade, Bragi''s Harp, Heartseeker, Blood-Bound Book, Amanita Charm, Bancroft''s
     Talon, Dreamer''s Idol, The World Stone, Oni Hunter''s Garb, Doom Orb, Pharaoh''s
@@ -457,14 +457,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Tyrfing
   - Gluttonous Grimoire
   - Riptalon
   - Silverbranch Bow
   - The Crusher
   flex_slots:
+  - Berserker's Shield
   - The Crusher
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -481,7 +481,7 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Silverbranch Bow, Gluttonous Grimoire, Soul Gem, The Reaper, Berserker''s
     Shield, The Crusher, Jotunn''s Revenge, Death Metal, Genji''s Guard, Golden Blade,
-    Lernaean Bow, Hydra''s Lament, Damaru, Spear of the Magus, Dominance, Bracer of
+    Lernaean Bow, Hydra''s Lament, Dominance, Damaru, Spear of the Magus, Bracer of
     The Abyss, The Cosmic Horror, Runeforged Hammer, Bragi''s Harp, Breastplate of
     Valor, Toxic Blade, Blood-Bound Book, Spear of Desolation, Pharaoh''s Curse, Bancroft''s
     Talon, Amanita Charm, Oni Hunter''s Garb, Nimble Ring, Rod of Asclepius, Yogi''s
@@ -494,12 +494,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.2
-    Jotunn's Revenge:
+    Tyrfing:
       total: 0.5
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
+      efficiency: 0.47
+      win: 0.54
+      pick: 0.29
+      fit: 0.54
     Gluttonous Grimoire:
       total: 0.52
       efficiency: 0.66
@@ -507,10 +507,10 @@ builds:
       pick: 0.0
       fit: 0.42
     Riptalon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.56
-      win: 0.54
-      pick: 0.18
+      win: 0.53
+      pick: 0.17
       fit: 0.52
     Silverbranch Bow:
       total: 0.55
@@ -554,8 +554,8 @@ builds:
     + fit + win/pick). Underrated for this god: Soul Gem, Jotunn''s Revenge, Silverbranch
     Bow, Genji''s Guard, Gluttonous Grimoire, Hydra''s Lament, The Reaper, Berserker''s
     Shield, The Crusher, Breastplate of Valor, Death Metal, Spear of Desolation, Chronos''
-    Pendant, Lernaean Bow, Damaru, Freya''s Tears, Spear of the Magus, Shield of the
-    Phoenix, Dominance, Runeforged Hammer, Bracer of The Abyss, The Cosmic Horror,
+    Pendant, Lernaean Bow, Damaru, Freya''s Tears, Dominance, Spear of the Magus,
+    Shield of the Phoenix, Runeforged Hammer, Bracer of The Abyss, The Cosmic Horror,
     Golden Blade, Gem of Focus, Amanita Charm, Arondight, Pharaoh''s Curse, Oni Hunter''s
     Garb, Screeching Gargoyle, Chandra''s Grace, Blood-Bound Book, Bragi''s Harp,
     Yogi''s Necklace, Kinetic Cuirass, Bancroft''s Talon, Pendulum Blade, Obsidian
@@ -700,8 +700,8 @@ builds:
     Jotunn''s Revenge, Death Metal, Berserker''s Shield, Amanita Charm, Blood-Bound
     Book, Rod of Asclepius, Bancroft''s Talon, Genji''s Guard, Hydra''s Lament, Runeforged
     Hammer, Damaru, Shield of the Phoenix, Spear of the Magus, Lernaean Bow, Golden
-    Blade, The Cosmic Horror, Oni Hunter''s Garb, Chandra''s Grace, Breastplate of
-    Valor, Dominance, Yogi''s Necklace, Kinetic Cuirass, Spear of Desolation, Lifebinder,
+    Blade, Dominance, The Cosmic Horror, Oni Hunter''s Garb, Chandra''s Grace, Breastplate
+    of Valor, Yogi''s Necklace, Kinetic Cuirass, Spear of Desolation, Lifebinder,
     Bracer of The Abyss, Bragi''s Harp, Jade Scepter, Pharaoh''s Curse, Eye of Providence,
     Avenging Blade, Obsidian Shard, Chronos'' Pendant, Bloodforge, Nimble Ring.'
   slot_scores:
@@ -773,7 +773,7 @@ builds:
     Shield, The Crusher, Jotunn''s Revenge, Death Metal, Amanita Charm, Blood-Bound
     Book, Rod of Asclepius, Bancroft''s Talon, Genji''s Guard, Damaru, Hydra''s Lament,
     Runeforged Hammer, Shield of the Phoenix, Lernaean Bow, Spear of the Magus, Golden
-    Blade, The Cosmic Horror, Dominance, Bracer of The Abyss, Oni Hunter''s Garb,
+    Blade, Dominance, The Cosmic Horror, Bracer of The Abyss, Oni Hunter''s Garb,
     Breastplate of Valor, Chandra''s Grace, Pharaoh''s Curse, Yogi''s Necklace, Kinetic
     Cuirass, Bragi''s Harp, Lifebinder, Spear of Desolation, Jade Scepter, Nimble
     Ring, Eye of Providence, Obsidian Shard, Chronos'' Pendant, Avenging Blade, Helm
@@ -1042,14 +1042,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Tyrfing
   - The Reaper
   - Riptalon
   - Silverbranch Bow
   - The Crusher
   flex_slots:
+  - Tyrfing
   - The Crusher
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1067,11 +1067,11 @@ builds:
     this god: Silverbranch Bow, The Reaper, Soul Gem, Gluttonous Grimoire, Berserker''s
     Shield, The Crusher, Amanita Charm, Jotunn''s Revenge, Rod of Asclepius, Golden
     Blade, Death Metal, Genji''s Guard, Blood-Bound Book, Bancroft''s Talon, Lernaean
-    Bow, Hydra''s Lament, Shield of the Phoenix, Runeforged Hammer, Damaru, Spear
-    of the Magus, Dominance, Bracer of The Abyss, Pharaoh''s Curse, Oni Hunter''s
-    Garb, Breastplate of Valor, The Cosmic Horror, Yogi''s Necklace, Chandra''s Grace,
-    Kinetic Cuirass, Bragi''s Harp, Lifebinder, Spear of Desolation, Jade Scepter,
-    Eye of Providence, Nimble Ring, Chronos'' Pendant, Shogun''s Ofuda, Obsidian Shard.'
+    Bow, Hydra''s Lament, Shield of the Phoenix, Runeforged Hammer, Dominance, Damaru,
+    Spear of the Magus, Bracer of The Abyss, Pharaoh''s Curse, Oni Hunter''s Garb,
+    Breastplate of Valor, The Cosmic Horror, Yogi''s Necklace, Chandra''s Grace, Kinetic
+    Cuirass, Bragi''s Harp, Lifebinder, Spear of Desolation, Jade Scepter, Eye of
+    Providence, Nimble Ring, Chronos'' Pendant, Shogun''s Ofuda, Obsidian Shard.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -1079,12 +1079,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.26
-    Jotunn's Revenge:
+    Tyrfing:
       total: 0.5
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.28
+      efficiency: 0.47
+      win: 0.54
+      pick: 0.29
+      fit: 0.51
     The Reaper:
       total: 0.53
       efficiency: 0.53
@@ -1092,10 +1092,10 @@ builds:
       pick: 0.05
       fit: 0.48
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
-      win: 0.54
-      pick: 0.18
+      win: 0.53
+      pick: 0.17
       fit: 0.69
     Silverbranch Bow:
       total: 0.54

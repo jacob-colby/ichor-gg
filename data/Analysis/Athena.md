@@ -2,25 +2,25 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
+| Shifter's Shield | 0.59 | 0.59 | 0.55 | 0.62 | 0.23 | 0.68 | fair |  |  |
 | Genji's Guard | 0.58 | 0.61 | 0.72 | 0.60 | 0.16 | 0.37 | undervalued |  |  |
-| Shifter's Shield | 0.58 | 0.59 | 0.55 | 0.61 | 0.23 | 0.68 | fair |  |  |
 | Breastplate of Valor | 0.56 | 0.57 | 0.65 | 0.60 | 0.14 | 0.37 | undervalued |  | **UNDERRATED** |
 | Amanita Charm | 0.56 | 0.67 | 0.66 | 0.50 | 0.00 | 0.68 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.78 | fair | burst | **UNDERRATED** |
 | Eye of Providence | 0.54 | 0.64 | 0.62 | 0.50 | 0.00 | 0.68 | undervalued |  | **UNDERRATED** |
 | Berserker's Shield | 0.54 | 0.63 | 0.71 | 0.50 | 0.00 | 0.44 | undervalued |  | **UNDERRATED** |
-| Dwarven Plate | 0.53 | 0.39 | 0.35 | 0.74 | 0.05 | 0.49 | premium |  |  |
+| Dwarven Plate | 0.52 | 0.39 | 0.35 | 0.72 | 0.05 | 0.49 | premium |  |  |
 | Freya's Tears | 0.52 | 0.60 | 0.59 | 0.50 | 0.00 | 0.62 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.44 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.59 | 0.66 | 0.50 | 0.00 | 0.42 | undervalued | burst | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.57 | 0.57 | 0.50 | 0.00 | 0.57 | fair | sustain | **UNDERRATED** |
 | Erosion | 0.51 | 0.57 | 0.52 | 0.50 | 0.00 | 0.68 | fair | aura | **UNDERRATED** |
-| Hide of the Nemean Lion | 0.50 | 0.51 | 0.54 | 0.55 | 0.07 | 0.44 | fair |  | **UNDERRATED** |
 | Draconic Scale | 0.50 | 0.56 | 0.50 | 0.50 | 0.00 | 0.68 | fair |  | **UNDERRATED** |
 | Stampede | 0.50 | 0.49 | 0.52 | 0.55 | 0.17 | 0.44 | fair | mobility, aura, cc-immunity |  |
+| Spirit Robe | 0.50 | 0.40 | 0.36 | 0.67 | 0.05 | 0.49 | premium | sustain |  |
+| Hide of the Nemean Lion | 0.50 | 0.51 | 0.54 | 0.54 | 0.07 | 0.44 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.44 | fair | anti-crit, aura | **UNDERRATED** |
 | Shield Splitter | 0.49 | 0.54 | 0.53 | 0.50 | 0.00 | 0.55 | fair |  | **UNDERRATED** |
-| Spirit Robe | 0.49 | 0.40 | 0.36 | 0.65 | 0.05 | 0.49 | premium | sustain |  |
 | Pharaoh's Curse | 0.49 | 0.54 | 0.58 | 0.50 | 0.00 | 0.44 | fair | aura | **UNDERRATED** |
 | Jotunn's Revenge | 0.49 | 0.53 | 0.65 | 0.50 | 0.00 | 0.25 | undervalued |  | **UNDERRATED** |
 | Runeforged Hammer | 0.49 | 0.53 | 0.60 | 0.50 | 0.00 | 0.36 | fair | burst | **UNDERRATED** |
@@ -114,9 +114,9 @@
 | Necronomicon | 0.39 | 0.33 | 0.44 | 0.50 | 0.00 | 0.07 | premium |  |  |
 | Musashi's Dual Swords | 0.39 | 0.33 | 0.44 | 0.50 | 0.00 | 0.06 | premium | mobility |  |
 | Eye of Erebus | 0.39 | 0.32 | 0.32 | 0.50 | 0.00 | 0.32 | premium |  |  |
-| Gauntlet of Thebes | 0.38 | 0.25 | 0.27 | 0.57 | 0.10 | 0.19 | premium |  |  |
 | Book of Thoth | 0.38 | 0.31 | 0.42 | 0.50 | 0.00 | 0.07 | premium |  |  |
 | Odysseus' Bow | 0.38 | 0.31 | 0.40 | 0.50 | 0.00 | 0.10 | premium | burst, wave-clear |  |
+| Gauntlet of Thebes | 0.38 | 0.25 | 0.27 | 0.56 | 0.10 | 0.19 | premium |  |  |
 | Rage | 0.38 | 0.31 | 0.41 | 0.50 | 0.00 | 0.06 | premium |  |  |
 | Oath-Sworn Spear | 0.37 | 0.30 | 0.36 | 0.50 | 0.00 | 0.16 | premium | protection-shred |  |
 | Staff of Myrddin | 0.37 | 0.29 | 0.34 | 0.50 | 0.00 | 0.20 | premium |  |  |

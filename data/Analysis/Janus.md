@@ -2,17 +2,17 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.61 | 0.71 | 0.59 | 0.51 | 0.40 | 1.00 | fair | burst, sustain, aura |  |
+| Soul Gem | 0.60 | 0.71 | 0.59 | 0.50 | 0.40 | 1.00 | fair | burst, sustain, aura |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.49 | 0.51 | 1.00 | fair |  |  |
-| Obsidian Shard | 0.57 | 0.61 | 0.54 | 0.56 | 0.30 | 0.78 | fair |  |  |
+| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.49 | 0.52 | 1.00 | fair |  |  |
+| Obsidian Shard | 0.57 | 0.61 | 0.54 | 0.55 | 0.31 | 0.78 | fair |  |  |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.52 | 0.59 | 0.56 | 0.50 | 0.00 | 0.67 | fair |  | **UNDERRATED** |
 | Dreamer's Idol | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.78 | fair | cc-immunity | **UNDERRATED** |
 | The World Stone | 0.51 | 0.57 | 0.49 | 0.50 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
-| Rod of Tahuti | 0.51 | 0.54 | 0.44 | 0.49 | 0.38 | 0.78 | premium |  |  |
+| Rod of Tahuti | 0.50 | 0.54 | 0.44 | 0.48 | 0.38 | 0.78 | premium |  |  |
 | Gem of Focus | 0.50 | 0.56 | 0.51 | 0.50 | 0.00 | 0.67 | fair | mobility | **UNDERRATED** |
 | Doom Orb | 0.50 | 0.57 | 0.49 | 0.46 | 0.15 | 0.78 | fair |  | **UNDERRATED** |
 | Death Metal | 0.50 | 0.55 | 0.60 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |

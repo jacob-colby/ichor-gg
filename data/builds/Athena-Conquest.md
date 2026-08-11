@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of War
   aspect_pick_rate: 0.21
-  aspect_win_rate: 0.56
+  aspect_win_rate: 0.55
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.23
-    win_rate: 0.61
+    win_rate: 0.62
     alternates:
     - name: Stampede
       pick_rate: 0.17
       win_rate: 0.55
     - name: Gauntlet of Thebes
       pick_rate: 0.1
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Genji's Guard
     pick_rate: 0.16
     win_rate: 0.6
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.14
-      win_rate: 0.6
+      win_rate: 0.58
     - name: Shifter's Shield
       pick_rate: 0.08
-      win_rate: 0.45
+      win_rate: 0.43
   - name: Breastplate of Valor
     pick_rate: 0.14
     win_rate: 0.6
     alternates:
     - name: Genji's Guard
       pick_rate: 0.16
-      win_rate: 0.53
+      win_rate: 0.51
     - name: Shifter's Shield
       pick_rate: 0.08
       win_rate: 0.57
   - name: Shell of Rebuke
     pick_rate: 0.05
-    win_rate: 0.63
+    win_rate: 0.65
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.1
+      pick_rate: 0.11
       win_rate: 0.54
     - name: Breastplate of Valor
       pick_rate: 0.09
-      win_rate: 0.68
+      win_rate: 0.65
   - name: Hide of the Nemean Lion
     pick_rate: 0.07
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Dwarven Plate
       pick_rate: 0.05
-      win_rate: 0.74
+      win_rate: 0.72
     - name: Spirit Robe
       pick_rate: 0.05
-      win_rate: 0.65
+      win_rate: 0.67
   - name: Engraved Guard
     pick_rate: 0.07
-    win_rate: 0.62
+    win_rate: 0.6
     alternates:
     - name: Veve Charm
       pick_rate: 0.05
-      win_rate: 0.58
+      win_rate: 0.6
     - name: Olmec Blue
       pick_rate: 0.04
-      win_rate: 0.65
+      win_rate: 0.61
   community_starters:
   - name: Selflessness
     pick_rate: 0.16
-    win_rate: 0.53
+    win_rate: 0.54
   - name: Bumba's Cudgel
     pick_rate: 0.15
-    win_rate: 0.57
+    win_rate: 0.56
   - name: Bumba's Hammer
     pick_rate: 0.15
-    win_rate: 0.66
+    win_rate: 0.65
   source_url: https://smitebrain.com/gods/athena/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.5703794369645043
-  god_matches_won: 466
-  god_matches_played: 817
+  last_verified: '2026-08-11'
+  god_win_rate: 0.5649651972157773
+  god_matches_won: 487
+  god_matches_played: 862
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -118,7 +118,7 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Breastplate of Valor, Amanita Charm, Kinetic Cuirass, Eye of Providence,
     Berserker''s Shield, Freya''s Tears, Oni Hunter''s Garb, Gluttonous Grimoire,
-    Shield of the Phoenix, Erosion, Hide of the Nemean Lion, Draconic Scale, Spectral
+    Shield of the Phoenix, Erosion, Draconic Scale, Hide of the Nemean Lion, Spectral
     Armor, Shield Splitter, Pharaoh''s Curse, Jotunn''s Revenge, Runeforged Hammer,
     Soul Gem, Leviathan''s Hide, The Crusher, Eye of the Storm, Mantle Of Discord,
     Hydra''s Lament, Stone of Binding, Midgardian Mail, Yogi''s Necklace, Helm of
@@ -151,9 +151,9 @@ builds:
       pick: 0.0
       fit: 0.78
     Shifter's Shield:
-      total: 0.58
+      total: 0.59
       efficiency: 0.55
-      win: 0.61
+      win: 0.62
       pick: 0.23
       fit: 0.68
     Amanita Charm:
@@ -193,8 +193,8 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Breastplate of Valor, Kinetic
     Cuirass, Eye of Providence, Berserker''s Shield, Soul Gem, Gluttonous Grimoire,
-    Rod of Asclepius, Oni Hunter''s Garb, Chandra''s Grace, Freya''s Tears, Hide of
-    the Nemean Lion, Erosion, Phoenix Feather, Draconic Scale, Spectral Armor, Runeforged
+    Rod of Asclepius, Oni Hunter''s Garb, Chandra''s Grace, Freya''s Tears, Erosion,
+    Hide of the Nemean Lion, Phoenix Feather, Draconic Scale, Spectral Armor, Runeforged
     Hammer, Pharaoh''s Curse, Jotunn''s Revenge, Lifebinder, Yogi''s Necklace, Leviathan''s
     Hide, Eye of the Storm, Blood-Bound Book, The Crusher, Midgardian Mail, Bancroft''s
     Talon, Shield Splitter, Hydra''s Lament, Glorious Pridwen, Shogun''s Ofuda, The
@@ -227,7 +227,7 @@ builds:
     Shifter's Shield:
       total: 0.58
       efficiency: 0.55
-      win: 0.61
+      win: 0.62
       pick: 0.23
       fit: 0.66
     Amanita Charm:
@@ -297,9 +297,9 @@ builds:
       pick: 0.0
       fit: 0.63
     Shifter's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.61
+      win: 0.62
       pick: 0.23
       fit: 0.48
     The Crusher:
@@ -369,9 +369,9 @@ builds:
       pick: 0.14
       fit: 0.2
     Shifter's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.55
-      win: 0.61
+      win: 0.62
       pick: 0.23
       fit: 0.37
     Pharaoh's Curse:
@@ -411,7 +411,7 @@ builds:
     Amanita Charm, Jotunn''s Revenge, Kinetic Cuirass, Shield of the Phoenix, Berserker''s
     Shield, Hydra''s Lament, Soul Gem, Gluttonous Grimoire, Eye of Providence, Oni
     Hunter''s Garb, The Crusher, Chronos'' Pendant, Runeforged Hammer, Screeching
-    Gargoyle, Hide of the Nemean Lion, Chandra''s Grace, Spear of Desolation, Gladiator''s
+    Gargoyle, Chandra''s Grace, Hide of the Nemean Lion, Spear of Desolation, Gladiator''s
     Shield, Spectral Armor, Erosion, Shield Splitter, Yogi''s Necklace, Pharaoh''s
     Curse, Prophetic Cloak, Draconic Scale, Helm of Radiance, Rod of Asclepius, Gem
     of Focus, Eye of the Storm, Arondight, Death Metal, Leviathan''s Hide, Jade Scepter,
@@ -444,7 +444,7 @@ builds:
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
-      win: 0.61
+      win: 0.62
       pick: 0.23
       fit: 0.45
     Amanita Charm:
@@ -514,9 +514,9 @@ builds:
       pick: 0.0
       fit: 0.45
     Shifter's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.55
-      win: 0.61
+      win: 0.62
       pick: 0.23
       fit: 0.42
     The Crusher:
@@ -587,9 +587,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Shifter's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.55
-      win: 0.61
+      win: 0.62
       pick: 0.23
       fit: 0.42
     The Crusher:

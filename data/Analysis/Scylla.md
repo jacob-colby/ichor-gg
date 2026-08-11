@@ -2,12 +2,12 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.60 | 0.71 | 0.59 | 0.52 | 0.12 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
+| Spear of Desolation | 0.59 | 0.67 | 0.52 | 0.52 | 0.52 | 1.00 | fair |  |  |
+| Obsidian Shard | 0.59 | 0.61 | 0.54 | 0.61 | 0.22 | 0.79 | fair |  |  |
+| Soul Gem | 0.59 | 0.71 | 0.59 | 0.51 | 0.12 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.59 | 0.67 | 0.52 | 0.51 | 0.52 | 1.00 | fair |  |  |
-| Obsidian Shard | 0.59 | 0.61 | 0.54 | 0.60 | 0.22 | 0.79 | fair |  |  |
+| Doom Orb | 0.56 | 0.58 | 0.49 | 0.58 | 0.14 | 0.79 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Doom Orb | 0.55 | 0.58 | 0.49 | 0.56 | 0.14 | 0.79 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Rod of Tahuti | 0.54 | 0.54 | 0.44 | 0.55 | 0.35 | 0.79 | premium |  |  |
 | Chronos' Pendant | 0.52 | 0.58 | 0.56 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
@@ -29,10 +29,10 @@
 | Ancient Signet | 0.47 | 0.50 | 0.49 | 0.50 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |
 | Alchemist Coat | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Typhon’s Heart | 0.47 | 0.48 | 0.51 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
+| Yogi's Necklace | 0.47 | 0.45 | 0.65 | 0.52 | 0.10 | 0.00 | undervalued |  |  |
 | Soul Reaver | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.52 | fair | burst |  |
 | Bragi's Harp | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.52 | fair | burst |  |
 | Freya's Tears | 0.46 | 0.47 | 0.59 | 0.50 | 0.00 | 0.21 | fair |  |  |
-| Yogi's Necklace | 0.46 | 0.45 | 0.65 | 0.51 | 0.10 | 0.00 | undervalued |  |  |
 | Lifebinder | 0.46 | 0.47 | 0.49 | 0.50 | 0.00 | 0.42 | fair | sustain, aura |  |
 | Nimble Ring | 0.46 | 0.47 | 0.49 | 0.50 | 0.00 | 0.42 | fair |  |  |
 | Shield of the Phoenix | 0.46 | 0.46 | 0.57 | 0.50 | 0.00 | 0.21 | fair | sustain |  |
@@ -48,10 +48,10 @@
 | Helm of Darkness | 0.44 | 0.42 | 0.43 | 0.50 | 0.00 | 0.42 | premium | mobility |  |
 | Staff of Myrddin | 0.44 | 0.42 | 0.34 | 0.50 | 0.00 | 0.63 | premium |  |  |
 | Sphere of Negation | 0.43 | 0.42 | 0.42 | 0.50 | 0.00 | 0.42 | premium | sustain |  |
-| Book of Thoth | 0.43 | 0.42 | 0.42 | 0.47 | 0.24 | 0.42 | premium |  |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Scepter of Dominion | 0.43 | 0.41 | 0.41 | 0.50 | 0.00 | 0.42 | premium | peel |  |
 | Gem of Isolation | 0.43 | 0.41 | 0.41 | 0.50 | 0.00 | 0.42 | premium | peel |  |
+| Book of Thoth | 0.43 | 0.42 | 0.42 | 0.46 | 0.24 | 0.42 | premium |  |  |
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Shifter's Shield | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Gladiator's Shield | 0.42 | 0.38 | 0.41 | 0.50 | 0.00 | 0.31 | premium | burst |  |

@@ -5,20 +5,19 @@
 | Genji's Guard | 0.57 | 0.62 | 0.72 | 0.57 | 0.19 | 0.39 | undervalued |  |  |
 | Amanita Charm | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.72 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.67 | 0.60 | 0.50 | 0.00 | 0.82 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.55 | 0.60 | 0.55 | 0.53 | 0.26 | 0.72 | fair |  |  |
+| Shifter's Shield | 0.56 | 0.60 | 0.55 | 0.54 | 0.25 | 0.72 | fair |  |  |
 | Eye of Providence | 0.55 | 0.65 | 0.62 | 0.50 | 0.00 | 0.72 | undervalued |  | **UNDERRATED** |
-| Breastplate of Valor | 0.54 | 0.57 | 0.65 | 0.55 | 0.10 | 0.39 | undervalued |  | **UNDERRATED** |
+| Breastplate of Valor | 0.54 | 0.57 | 0.65 | 0.56 | 0.10 | 0.39 | undervalued |  | **UNDERRATED** |
 | Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.60 | 0.65 | 0.50 | 0.00 | 0.46 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.52 | 0.58 | 0.52 | 0.50 | 0.00 | 0.72 | fair | aura | **UNDERRATED** |
 | Gluttonous Grimoire | 0.51 | 0.58 | 0.66 | 0.50 | 0.00 | 0.39 | undervalued | burst | **UNDERRATED** |
 | Shield of the Phoenix | 0.51 | 0.58 | 0.57 | 0.50 | 0.00 | 0.59 | fair | sustain | **UNDERRATED** |
+| Hide of the Nemean Lion | 0.51 | 0.51 | 0.54 | 0.56 | 0.05 | 0.46 | fair |  | **UNDERRATED** |
 | Draconic Scale | 0.51 | 0.57 | 0.50 | 0.50 | 0.00 | 0.72 | fair |  | **UNDERRATED** |
-| Hide of the Nemean Lion | 0.51 | 0.51 | 0.54 | 0.55 | 0.05 | 0.46 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.46 | fair | anti-crit, aura | **UNDERRATED** |
 | Stampede | 0.50 | 0.50 | 0.52 | 0.54 | 0.13 | 0.46 | fair | mobility, aura, cc-immunity | **UNDERRATED** |
 | Leviathan's Hide | 0.49 | 0.53 | 0.55 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
-| Spirit Robe | 0.49 | 0.41 | 0.36 | 0.62 | 0.06 | 0.51 | premium | sustain |  |
 | Mantle Of Discord | 0.48 | 0.52 | 0.52 | 0.50 | 0.00 | 0.51 | fair | peel, cc-immunity | **UNDERRATED** |
 | Stone of Binding | 0.48 | 0.52 | 0.48 | 0.50 | 0.00 | 0.61 | fair | protection-shred | **UNDERRATED** |
 | Midgardian Mail | 0.48 | 0.52 | 0.54 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
@@ -26,6 +25,7 @@
 | Helm of Radiance | 0.48 | 0.51 | 0.58 | 0.50 | 0.00 | 0.34 | fair |  | **UNDERRATED** |
 | Soul Gem | 0.48 | 0.51 | 0.59 | 0.50 | 0.00 | 0.31 | fair | burst, sustain, aura | **UNDERRATED** |
 | Magi's Cloak | 0.48 | 0.50 | 0.50 | 0.50 | 0.00 | 0.51 | fair | cc-immunity | **UNDERRATED** |
+| Spirit Robe | 0.48 | 0.41 | 0.36 | 0.60 | 0.07 | 0.51 | premium | sustain |  |
 | Rod of Asclepius | 0.48 | 0.50 | 0.59 | 0.50 | 0.00 | 0.29 | fair | sustain, aura | **UNDERRATED** |
 | Ancile | 0.48 | 0.50 | 0.52 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Gladiator's Shield | 0.47 | 0.50 | 0.41 | 0.50 | 0.00 | 0.69 | premium | burst | **UNDERRATED** |

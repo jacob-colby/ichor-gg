@@ -2,12 +2,12 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.61 | 0.65 | 0.59 | 0.60 | 0.22 | 0.80 | fair | burst, sustain, aura |  |
-| Obsidian Shard | 0.58 | 0.51 | 0.54 | 0.69 | 0.17 | 0.46 | fair |  |  |
+| Soul Gem | 0.61 | 0.65 | 0.59 | 0.60 | 0.21 | 0.80 | fair | burst, sustain, aura |  |
+| Obsidian Shard | 0.56 | 0.51 | 0.54 | 0.66 | 0.17 | 0.46 | fair |  |  |
 | Gluttonous Grimoire | 0.56 | 0.66 | 0.66 | 0.50 | 0.00 | 0.67 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.55 | 0.54 | 0.52 | 0.59 | 0.29 | 0.58 | fair |  |  |
-| Doom Orb | 0.53 | 0.48 | 0.49 | 0.64 | 0.07 | 0.46 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.52 | 0.44 | 0.44 | 0.63 | 0.26 | 0.46 | premium |  |  |
+| Spear of Desolation | 0.55 | 0.54 | 0.52 | 0.58 | 0.29 | 0.58 | fair |  |  |
+| Doom Orb | 0.53 | 0.48 | 0.49 | 0.63 | 0.07 | 0.46 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.51 | 0.44 | 0.44 | 0.62 | 0.26 | 0.46 | premium |  |  |
 | Spear of the Magus | 0.50 | 0.56 | 0.60 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.50 | 0.56 | 0.56 | 0.50 | 0.00 | 0.54 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.50 | 0.54 | 0.58 | 0.50 | 0.00 | 0.46 | fair |  | **UNDERRATED** |

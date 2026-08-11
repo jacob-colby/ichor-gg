@@ -5,11 +5,11 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Mischief
-  aspect_pick_rate: 0.09
+  aspect_pick_rate: 0.1
   aspect_win_rate: 0.53
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.32
+    pick_rate: 0.31
     win_rate: 0.51
     alternates:
     - name: Book of Thoth
@@ -19,7 +19,7 @@ builds:
       pick_rate: 0.1
       win_rate: 0.53
   - name: The World Stone
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.57
     alternates:
     - name: Spear of Desolation
@@ -29,79 +29,79 @@ builds:
       pick_rate: 0.09
       win_rate: 0.65
   - name: Polynomicon
-    pick_rate: 0.44
+    pick_rate: 0.43
     win_rate: 0.57
     alternates:
     - name: The World Stone
-      pick_rate: 0.11
+      pick_rate: 0.12
       win_rate: 0.51
     - name: Spear of Desolation
-      pick_rate: 0.08
-      win_rate: 0.76
+      pick_rate: 0.09
+      win_rate: 0.74
   - name: Rod of Tahuti
     pick_rate: 0.28
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Polynomicon
       pick_rate: 0.16
-      win_rate: 0.59
+      win_rate: 0.6
     - name: Gem of Focus
       pick_rate: 0.16
-      win_rate: 0.63
+      win_rate: 0.61
   - name: Obsidian Shard
     pick_rate: 0.19
-    win_rate: 0.63
+    win_rate: 0.62
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.28
-      win_rate: 0.61
+      pick_rate: 0.27
+      win_rate: 0.62
     - name: Evil Eye
       pick_rate: 0.09
-      win_rate: 0.58
+      win_rate: 0.57
   - name: The Cosmic Horror
     pick_rate: 0.09
-    win_rate: 0.66
+    win_rate: 0.67
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.16
-      win_rate: 0.59
+      win_rate: 0.6
     - name: Evil Eye
       pick_rate: 0.09
       win_rate: 0.58
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.39
-    win_rate: 0.61
+    pick_rate: 0.38
+    win_rate: 0.62
   - name: Conduit Gem
     pick_rate: 0.28
-    win_rate: 0.51
-  - name: Gilded Arrow
-    pick_rate: 0.08
-    win_rate: 0.17
+    win_rate: 0.5
+  - name: Pendulum of The Ages
+    pick_rate: 0.09
+    win_rate: 0.53
   source_url: https://smitebrain.com/gods/the-morrigan/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.5582901554404145
-  god_matches_won: 431
-  god_matches_played: 772
+  last_verified: '2026-08-11'
+  god_win_rate: 0.5548780487804879
+  god_matches_won: 455
+  god_matches_played: 820
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: core
   slot_order:
-  - Gem of Focus
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
+  - Spear of the Magus
   - The World Stone
   - Obsidian Shard
   flex_slots:
   - The World Stone
-  - Gem of Focus
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,12 +122,6 @@ builds:
     Breastplate of Valor, Bracer of The Abyss, Wish-Granting Pearl, Ethereal Staff,
     Ancient Signet, Alchemist Coat, Typhon’s Heart.'
   slot_scores:
-    Gem of Focus:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.63
-      pick: 0.16
-      fit: 0.6
     Gluttonous Grimoire:
       total: 0.59
       efficiency: 0.66
@@ -138,24 +132,30 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.51
-      pick: 0.32
+      pick: 0.31
       fit: 1.0
     The Cosmic Horror:
-      total: 0.62
+      total: 0.63
       efficiency: 0.58
-      win: 0.66
+      win: 0.67
       pick: 0.09
+      fit: 0.8
+    Spear of the Magus:
+      total: 0.56
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
       fit: 0.8
     The World Stone:
       total: 0.57
       efficiency: 0.49
       win: 0.57
-      pick: 0.39
+      pick: 0.38
       fit: 0.8
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.63
+      win: 0.62
       pick: 0.19
       fit: 0.8
   starter: &id001
@@ -171,8 +171,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Gem of Focus
   - The World Stone
+  - Gem of Focus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -194,33 +194,33 @@ builds:
     Triton''s Conch, Bracer of The Abyss, Oni Hunter''s Garb.'
   slot_scores:
     Gem of Focus:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
-      win: 0.63
+      win: 0.61
       pick: 0.16
       fit: 0.44
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
       win: 0.51
-      pick: 0.32
+      pick: 0.31
       fit: 0.78
     The Cosmic Horror:
       total: 0.59
       efficiency: 0.58
-      win: 0.66
+      win: 0.67
       pick: 0.09
       fit: 0.56
     The World Stone:
       total: 0.53
       efficiency: 0.49
       win: 0.57
-      pick: 0.39
+      pick: 0.38
       fit: 0.56
     Obsidian Shard:
       total: 0.56
       efficiency: 0.54
-      win: 0.63
+      win: 0.62
       pick: 0.19
       fit: 0.56
     Soul Gem:
@@ -256,7 +256,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Soul Gem, The Cosmic Horror, Gluttonous Grimoire, Shield
+    this god: Amanita Charm, The Cosmic Horror, Soul Gem, Gluttonous Grimoire, Shield
     of the Phoenix, Rod of Asclepius, Kinetic Cuirass, Eye of Providence, Genji''s
     Guard, Oni Hunter''s Garb, Blood-Bound Book, Bancroft''s Talon, Lifebinder, Chandra''s
     Grace, Spear of the Magus, Shifter''s Shield, Freya''s Tears, Breastplate of Valor,
@@ -276,15 +276,15 @@ builds:
       pick: 0.0
       fit: 0.61
     The Cosmic Horror:
-      total: 0.56
+      total: 0.57
       efficiency: 0.58
-      win: 0.66
+      win: 0.67
       pick: 0.09
       fit: 0.39
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
-      win: 0.63
+      win: 0.62
       pick: 0.19
       fit: 0.39
     Amanita Charm:
@@ -342,12 +342,12 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.51
-      pick: 0.32
+      pick: 0.31
       fit: 1.0
     The Cosmic Horror:
-      total: 0.63
+      total: 0.64
       efficiency: 0.58
-      win: 0.66
+      win: 0.67
       pick: 0.09
       fit: 0.86
     Spear of the Magus:
@@ -357,15 +357,15 @@ builds:
       pick: 0.0
       fit: 0.86
     The World Stone:
-      total: 0.58
+      total: 0.57
       efficiency: 0.49
       win: 0.57
-      pick: 0.39
+      pick: 0.38
       fit: 0.86
     Obsidian Shard:
       total: 0.61
       efficiency: 0.54
-      win: 0.63
+      win: 0.62
       pick: 0.19
       fit: 0.86
   starter: *id001
@@ -426,15 +426,15 @@ builds:
       pick: 0.0
       fit: 0.5
     The Cosmic Horror:
-      total: 0.55
+      total: 0.56
       efficiency: 0.58
-      win: 0.66
+      win: 0.67
       pick: 0.09
       fit: 0.32
     Obsidian Shard:
-      total: 0.53
+      total: 0.52
       efficiency: 0.54
-      win: 0.63
+      win: 0.62
       pick: 0.19
       fit: 0.32
   starter: *id001
@@ -478,27 +478,27 @@ builds:
       pick: 0.0
       fit: 0.48
     Gem of Focus:
-      total: 0.56
+      total: 0.55
       efficiency: 0.51
-      win: 0.63
+      win: 0.61
       pick: 0.16
       fit: 0.62
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
       win: 0.51
-      pick: 0.32
+      pick: 0.31
       fit: 0.86
     The Cosmic Horror:
-      total: 0.56
+      total: 0.57
       efficiency: 0.58
-      win: 0.66
+      win: 0.67
       pick: 0.09
       fit: 0.38
     Obsidian Shard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.54
-      win: 0.63
+      win: 0.62
       pick: 0.19
       fit: 0.38
     Soul Gem:
@@ -550,12 +550,12 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.51
-      pick: 0.32
+      pick: 0.31
       fit: 1.0
     The Cosmic Horror:
-      total: 0.62
+      total: 0.63
       efficiency: 0.58
-      win: 0.66
+      win: 0.67
       pick: 0.09
       fit: 0.8
     Spear of the Magus:
@@ -567,7 +567,7 @@ builds:
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.63
+      win: 0.62
       pick: 0.19
       fit: 0.8
     Dreamer's Idol:

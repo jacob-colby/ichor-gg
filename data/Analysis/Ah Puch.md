@@ -4,22 +4,22 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
 | Soul Gem | 0.58 | 0.71 | 0.59 | 0.50 | 0.00 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
-| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.53 | 0.17 | 1.00 | fair |  |  |
+| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.53 | 0.16 | 1.00 | fair |  |  |
 | Rod of Tahuti | 0.57 | 0.54 | 0.44 | 0.66 | 0.13 | 0.79 | premium |  | **UNDERRATED** |
 | Obsidian Shard | 0.57 | 0.61 | 0.54 | 0.57 | 0.11 | 0.79 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.54 | 0.57 | 0.72 | 0.55 | 0.13 | 0.21 | undervalued |  | **UNDERRATED** |
-| Soul Reaver | 0.54 | 0.48 | 0.46 | 0.65 | 0.08 | 0.52 | fair | burst |  |
+| Soul Reaver | 0.53 | 0.48 | 0.46 | 0.64 | 0.09 | 0.52 | fair | burst |  |
 | Chronos' Pendant | 0.52 | 0.58 | 0.56 | 0.50 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | The World Stone | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Doom Orb | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Breastplate of Valor | 0.51 | 0.52 | 0.65 | 0.54 | 0.09 | 0.21 | undervalued |  | **UNDERRATED** |
+| Shield of the Phoenix | 0.50 | 0.46 | 0.57 | 0.59 | 0.08 | 0.21 | fair | sustain |  |
 | Gem of Focus | 0.50 | 0.54 | 0.51 | 0.50 | 0.00 | 0.63 | fair | mobility | **UNDERRATED** |
-| Shield of the Phoenix | 0.50 | 0.46 | 0.57 | 0.58 | 0.09 | 0.21 | fair | sustain |  |
 | Death Metal | 0.50 | 0.54 | 0.60 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.50 | 0.54 | 0.59 | 0.50 | 0.00 | 0.42 | fair | sustain, aura | **UNDERRATED** |
+| Breastplate of Valor | 0.49 | 0.52 | 0.65 | 0.51 | 0.09 | 0.21 | undervalued |  | **UNDERRATED** |
 | Blood-Bound Book | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.42 | fair | sustain | **UNDERRATED** |
 | Helm of Radiance | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Bancroft's Talon | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.42 | fair | sustain | **UNDERRATED** |
@@ -51,8 +51,8 @@
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Scepter of Dominion | 0.43 | 0.41 | 0.41 | 0.50 | 0.00 | 0.42 | premium | peel |  |
 | Gem of Isolation | 0.43 | 0.41 | 0.41 | 0.50 | 0.00 | 0.42 | premium | peel |  |
-| Book of Thoth | 0.42 | 0.42 | 0.42 | 0.46 | 0.13 | 0.42 | premium |  |  |
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Book of Thoth | 0.42 | 0.42 | 0.42 | 0.45 | 0.12 | 0.42 | premium |  |  |
 | Gladiator's Shield | 0.42 | 0.38 | 0.41 | 0.50 | 0.00 | 0.31 | premium | burst |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
@@ -80,7 +80,7 @@
 | Eye of Erebus | 0.37 | 0.29 | 0.32 | 0.50 | 0.00 | 0.21 | premium |  |  |
 | Shroud of Vengeance | 0.37 | 0.28 | 0.36 | 0.50 | 0.00 | 0.10 | premium | burst |  |
 | Hussar's Wings | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |
-| Shifter's Shield | 0.36 | 0.39 | 0.55 | 0.37 | 0.08 | 0.00 | fair |  |  |
+| Shifter's Shield | 0.35 | 0.39 | 0.55 | 0.35 | 0.08 | 0.00 | fair |  |  |
 | Spirit Robe | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
 | Dwarven Plate | 0.35 | 0.25 | 0.35 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | premium |  |  |

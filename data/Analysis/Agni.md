@@ -2,15 +2,15 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.63 | 0.71 | 0.59 | 0.57 | 0.28 | 1.00 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.59 | 0.67 | 0.52 | 0.52 | 0.47 | 1.00 | fair |  |  |
+| Soul Gem | 0.63 | 0.71 | 0.59 | 0.57 | 0.27 | 1.00 | fair | burst, sustain, aura |  |
+| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.53 | 0.46 | 1.00 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.73 | 0.66 | 0.50 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
-| Obsidian Shard | 0.57 | 0.61 | 0.54 | 0.56 | 0.20 | 0.79 | fair |  |  |
+| Obsidian Shard | 0.56 | 0.61 | 0.54 | 0.55 | 0.20 | 0.79 | fair |  |  |
 | Spear of the Magus | 0.55 | 0.66 | 0.60 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.55 | 0.64 | 0.58 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Chronos' Pendant | 0.54 | 0.58 | 0.56 | 0.54 | 0.22 | 0.63 | fair |  |  |
-| The World Stone | 0.54 | 0.58 | 0.49 | 0.54 | 0.19 | 0.79 | fair |  |  |
-| Rod of Tahuti | 0.53 | 0.54 | 0.44 | 0.55 | 0.31 | 0.79 | premium |  |  |
+| The World Stone | 0.54 | 0.58 | 0.49 | 0.54 | 0.20 | 0.79 | fair |  |  |
+| Chronos' Pendant | 0.54 | 0.58 | 0.56 | 0.53 | 0.23 | 0.63 | fair |  |  |
+| Rod of Tahuti | 0.53 | 0.54 | 0.44 | 0.55 | 0.30 | 0.79 | premium |  |  |
 | Dreamer's Idol | 0.52 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | Doom Orb | 0.51 | 0.58 | 0.49 | 0.50 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
@@ -27,8 +27,8 @@
 | Polynomicon | 0.48 | 0.50 | 0.49 | 0.50 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |
 | Ethereal Staff | 0.47 | 0.50 | 0.53 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Ancient Signet | 0.47 | 0.50 | 0.49 | 0.50 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |
+| Soul Reaver | 0.47 | 0.48 | 0.46 | 0.50 | 0.13 | 0.52 | fair | burst |  |
 | Alchemist Coat | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
-| Soul Reaver | 0.47 | 0.48 | 0.46 | 0.49 | 0.13 | 0.52 | fair | burst |  |
 | Typhon’s Heart | 0.47 | 0.48 | 0.51 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Book of Thoth | 0.46 | 0.42 | 0.42 | 0.55 | 0.14 | 0.42 | premium |  |  |
 | Bragi's Harp | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.52 | fair | burst |  |

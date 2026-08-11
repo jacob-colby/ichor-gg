@@ -6,68 +6,68 @@ builds:
 - source: community
   aspect: Aspect of Fortification
   aspect_pick_rate: 0.09
-  aspect_win_rate: 0.5
+  aspect_win_rate: 0.51
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.45
-    win_rate: 0.56
+    win_rate: 0.55
     alternates:
     - name: Book of Thoth
       pick_rate: 0.36
-      win_rate: 0.57
+      win_rate: 0.56
     - name: Doom Orb
       pick_rate: 0.05
-      win_rate: 0.44
+      win_rate: 0.47
   - name: Book of Thoth
-    pick_rate: 0.18
-    win_rate: 0.58
+    pick_rate: 0.17
+    win_rate: 0.57
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.24
-      win_rate: 0.57
+      win_rate: 0.56
     - name: Doom Orb
       pick_rate: 0.13
-      win_rate: 0.59
+      win_rate: 0.58
   - name: Rod of Tahuti
     pick_rate: 0.22
-    win_rate: 0.6
+    win_rate: 0.58
     alternates:
     - name: Soul Gem
       pick_rate: 0.18
       win_rate: 0.53
     - name: The World Stone
       pick_rate: 0.11
-      win_rate: 0.66
+      win_rate: 0.64
   - name: Obsidian Shard
-    pick_rate: 0.26
-    win_rate: 0.59
+    pick_rate: 0.27
+    win_rate: 0.58
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.32
-      win_rate: 0.61
+      pick_rate: 0.31
+      win_rate: 0.6
     - name: Soul Gem
       pick_rate: 0.04
-      win_rate: 0.48
+      win_rate: 0.47
   - name: Evil Eye
     pick_rate: 0.1
     win_rate: 0.52
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.21
-      win_rate: 0.67
+      win_rate: 0.66
     - name: Rod of Tahuti
-      pick_rate: 0.13
-      win_rate: 0.68
+      pick_rate: 0.12
+      win_rate: 0.69
   - name: Dreamer's Idol
     pick_rate: 0.07
-    win_rate: 0.71
+    win_rate: 0.68
     alternates:
     - name: Evil Eye
       pick_rate: 0.1
-      win_rate: 0.5
+      win_rate: 0.48
     - name: Killing Stone
-      pick_rate: 0.07
-      win_rate: 0.64
+      pick_rate: 0.06
+      win_rate: 0.61
   community_starters:
   - name: Pendulum of The Ages
     pick_rate: 0.33
@@ -79,14 +79,14 @@ builds:
     pick_rate: 0.19
     win_rate: 0.6
   source_url: https://smitebrain.com/gods/vulcan/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.5430060816681147
-  god_matches_won: 625
-  god_matches_played: 1151
+  last_verified: '2026-08-11'
+  god_win_rate: 0.5388349514563107
+  god_matches_won: 666
+  god_matches_played: 1236
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -116,7 +116,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Dreamer''s Idol, The World Stone, Gluttonous Grimoire, Doom Orb, Spear
+    this god: Dreamer''s Idol, Gluttonous Grimoire, The World Stone, Doom Orb, Spear
     of the Magus, The Cosmic Horror, Genji''s Guard, Chronos'' Pendant, Bracer of
     The Abyss, Death Metal, Rod of Asclepius, Gem of Focus, Blood-Bound Book, Helm
     of Radiance, Breastplate of Valor, Bancroft''s Talon, Bragi''s Harp, Jade Scepter,
@@ -125,31 +125,31 @@ builds:
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.45
       fit: 0.83
     Doom Orb:
       total: 0.54
       efficiency: 0.49
-      win: 0.59
+      win: 0.58
       pick: 0.13
       fit: 0.66
     The World Stone:
-      total: 0.57
+      total: 0.56
       efficiency: 0.49
-      win: 0.66
+      win: 0.64
       pick: 0.11
       fit: 0.66
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.54
-      win: 0.59
-      pick: 0.26
+      win: 0.58
+      pick: 0.27
       fit: 0.66
     Dreamer's Idol:
-      total: 0.59
+      total: 0.58
       efficiency: 0.49
-      win: 0.71
+      win: 0.68
       pick: 0.07
       fit: 0.66
     Soul Gem:
@@ -187,7 +187,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Dreamer''s Idol, The World Stone, Gluttonous Grimoire, Doom Orb, Spear of
+    god: Dreamer''s Idol, Gluttonous Grimoire, The World Stone, Doom Orb, Spear of
     the Magus, Genji''s Guard, The Cosmic Horror, Death Metal, Breastplate of Valor,
     Chronos'' Pendant, Bragi''s Harp, Bracer of The Abyss, Gem of Focus, Rod of Asclepius,
     Freya''s Tears, Blood-Bound Book, Helm of Radiance, Bancroft''s Talon, Amanita
@@ -196,31 +196,31 @@ builds:
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.45
       fit: 0.7
     Doom Orb:
-      total: 0.52
+      total: 0.51
       efficiency: 0.49
-      win: 0.59
+      win: 0.58
       pick: 0.13
       fit: 0.5
     The World Stone:
-      total: 0.55
+      total: 0.54
       efficiency: 0.49
-      win: 0.66
+      win: 0.64
       pick: 0.11
       fit: 0.5
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
-      win: 0.59
-      pick: 0.26
+      win: 0.58
+      pick: 0.27
       fit: 0.5
     Dreamer's Idol:
-      total: 0.57
+      total: 0.56
       efficiency: 0.49
-      win: 0.71
+      win: 0.68
       pick: 0.07
       fit: 0.5
     Soul Gem:
@@ -233,22 +233,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Kinetic Cuirass
   - Spear of Desolation
   - The World Stone
-  - Obsidian Shard
   - Dreamer's Idol
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
-  - Obsidian Shard
+  - Kinetic Cuirass
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -263,28 +263,28 @@ builds:
     Phoenix Feather, Spectral Armor, Jade Scepter, Helm of Radiance, Yogi''s Necklace,
     Erosion, Draconic Scale, Wish-Granting Pearl.'
   slot_scores:
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Spear of Desolation:
-      total: 0.53
+      total: 0.52
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.45
       fit: 0.45
     The World Stone:
-      total: 0.53
+      total: 0.52
       efficiency: 0.49
-      win: 0.66
+      win: 0.64
       pick: 0.11
       fit: 0.36
-    Obsidian Shard:
-      total: 0.52
-      efficiency: 0.54
-      win: 0.59
-      pick: 0.26
-      fit: 0.36
     Dreamer's Idol:
-      total: 0.55
+      total: 0.53
       efficiency: 0.49
-      win: 0.71
+      win: 0.68
       pick: 0.07
       fit: 0.36
     Amanita Charm:
@@ -326,7 +326,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Dreamer''s Idol, The World Stone, Gluttonous Grimoire, Doom Orb,
+    for this god: Dreamer''s Idol, Gluttonous Grimoire, The World Stone, Doom Orb,
     Spear of the Magus, The Cosmic Horror, Genji''s Guard, Chronos'' Pendant, Bracer
     of The Abyss, Screeching Gargoyle, Breastplate of Valor, Death Metal, Rod of Asclepius,
     Blood-Bound Book, Helm of Radiance, Bancroft''s Talon, Jade Scepter, Gem of Focus,
@@ -335,31 +335,31 @@ builds:
     Spear of Desolation:
       total: 0.59
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.45
       fit: 0.88
     Doom Orb:
       total: 0.55
       efficiency: 0.49
-      win: 0.59
+      win: 0.58
       pick: 0.13
       fit: 0.75
     The World Stone:
-      total: 0.59
+      total: 0.58
       efficiency: 0.49
-      win: 0.66
+      win: 0.64
       pick: 0.11
       fit: 0.75
     Obsidian Shard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.54
-      win: 0.59
-      pick: 0.26
+      win: 0.58
+      pick: 0.27
       fit: 0.75
     Dreamer's Idol:
-      total: 0.61
+      total: 0.59
       efficiency: 0.49
-      win: 0.71
+      win: 0.68
       pick: 0.07
       fit: 0.75
     Soul Gem:
@@ -375,7 +375,7 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - The World Stone
+  - Spear of Desolation
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
@@ -395,9 +395,9 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Dreamer''s Idol, Gluttonous Grimoire, The World Stone, Doom Orb, Genji''s
-    Guard, Spear of the Magus, Bracer of The Abyss, Bragi''s Harp, Death Metal, The
-    Cosmic Horror, Nimble Ring, Breastplate of Valor, Blood-Bound Book, Bancroft''s
+    this god: Gluttonous Grimoire, Dreamer''s Idol, The World Stone, Genji''s Guard,
+    Doom Orb, Spear of the Magus, Bracer of The Abyss, Bragi''s Harp, Death Metal,
+    The Cosmic Horror, Nimble Ring, Breastplate of Valor, Blood-Bound Book, Bancroft''s
     Talon, Chronos'' Pendant, Rod of Asclepius, Amanita Charm, Oni Hunter''s Garb,
     Helm of Radiance, Yogi''s Necklace, Kinetic Cuirass, Jade Scepter, Freya''s Tears,
     Eye of Providence.'
@@ -420,16 +420,16 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    The World Stone:
-      total: 0.52
-      efficiency: 0.49
-      win: 0.66
-      pick: 0.11
-      fit: 0.32
+    Spear of Desolation:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.55
+      pick: 0.45
+      fit: 0.4
     Dreamer's Idol:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.71
+      win: 0.68
       pick: 0.07
       fit: 0.32
     Soul Gem:
@@ -449,8 +449,8 @@ builds:
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
-  - The World Stone
   - Breastplate of Valor
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -465,7 +465,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Dreamer''s Idol, Genji''s Guard, Gluttonous
+    + fit + win/pick). Underrated for this god: Genji''s Guard, Dreamer''s Idol, Gluttonous
     Grimoire, Breastplate of Valor, Chronos'' Pendant, Freya''s Tears, Shield of the
     Phoenix, Gem of Focus, Spear of the Magus, The Cosmic Horror, Screeching Gargoyle,
     Chandra''s Grace, Death Metal, Bracer of The Abyss, Amanita Charm, Bragi''s Harp,
@@ -487,19 +487,19 @@ builds:
     Spear of Desolation:
       total: 0.57
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.45
       fit: 0.76
     The World Stone:
-      total: 0.52
+      total: 0.51
       efficiency: 0.49
-      win: 0.66
+      win: 0.64
       pick: 0.11
       fit: 0.33
     Dreamer's Idol:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.71
+      win: 0.68
       pick: 0.07
       fit: 0.33
     Soul Gem:
@@ -551,7 +551,7 @@ builds:
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.45
       fit: 0.83
     The Cosmic Horror:
@@ -567,10 +567,10 @@ builds:
       pick: 0.0
       fit: 0.66
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.54
-      win: 0.59
-      pick: 0.26
+      win: 0.58
+      pick: 0.27
       fit: 0.66
     Soul Gem:
       total: 0.59
@@ -615,7 +615,7 @@ builds:
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.45
       fit: 0.83
     The Cosmic Horror:
@@ -631,15 +631,15 @@ builds:
       pick: 0.0
       fit: 0.66
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.54
-      win: 0.59
-      pick: 0.26
+      win: 0.58
+      pick: 0.27
       fit: 0.66
     Dreamer's Idol:
-      total: 0.59
+      total: 0.58
       efficiency: 0.49
-      win: 0.71
+      win: 0.68
       pick: 0.07
       fit: 0.66
     Soul Gem:
@@ -651,7 +651,7 @@ builds:
   swaps:
   - added: Dreamer's Idol
     removed: Genji's Guard
-    reason: community 71% win over 81 matches (vs 54% on this god), taking the model's
+    reason: community 68% win over 87 matches (vs 54% on this god), taking the model's
       weakest slot from Genji's Guard
   starter: *id001
 ---

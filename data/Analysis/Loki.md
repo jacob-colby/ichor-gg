@@ -3,10 +3,10 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Jotunn's Revenge | 0.65 | 0.76 | 0.65 | 0.56 | 0.39 | 1.00 | undervalued |  |  |
-| The Crusher | 0.63 | 0.75 | 0.65 | 0.56 | 0.07 | 1.00 | undervalued | burst | **UNDERRATED** |
-| Heartseeker | 0.59 | 0.62 | 0.46 | 0.60 | 0.27 | 1.00 | fair | burst |  |
+| The Crusher | 0.64 | 0.75 | 0.65 | 0.57 | 0.07 | 1.00 | undervalued | burst | **UNDERRATED** |
+| Heartseeker | 0.59 | 0.62 | 0.46 | 0.59 | 0.28 | 1.00 | fair | burst |  |
 | Hydra's Lament | 0.59 | 0.64 | 0.61 | 0.57 | 0.31 | 0.71 | fair | burst |  |
-| Titan's Bane | 0.58 | 0.60 | 0.46 | 0.60 | 0.15 | 0.91 | fair |  | **UNDERRATED** |
+| Titan's Bane | 0.57 | 0.60 | 0.46 | 0.58 | 0.15 | 0.91 | fair |  | **UNDERRATED** |
 | The Reaper | 0.55 | 0.65 | 0.53 | 0.50 | 0.00 | 0.91 | fair | sustain | **UNDERRATED** |
 | Runeforged Hammer | 0.53 | 0.61 | 0.60 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
@@ -29,9 +29,9 @@
 | Berserker's Shield | 0.47 | 0.50 | 0.71 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Breastplate of Valor | 0.47 | 0.48 | 0.65 | 0.50 | 0.00 | 0.09 | undervalued |  | **UNDERRATED** |
 | Bloodforge | 0.46 | 0.47 | 0.45 | 0.50 | 0.00 | 0.52 | fair | sustain | **UNDERRATED** |
-| Shifter's Shield | 0.46 | 0.39 | 0.55 | 0.57 | 0.22 | 0.00 | fair |  |  |
 | Musashi's Dual Swords | 0.46 | 0.46 | 0.44 | 0.50 | 0.00 | 0.52 | premium | mobility | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
+| Shifter's Shield | 0.46 | 0.39 | 0.55 | 0.56 | 0.22 | 0.00 | fair |  |  |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |

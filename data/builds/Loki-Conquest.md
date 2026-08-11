@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of Agony
   aspect_pick_rate: 0.3
-  aspect_win_rate: 0.59
+  aspect_win_rate: 0.57
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.39
@@ -14,7 +14,7 @@ builds:
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.22
-      win_rate: 0.57
+      win_rate: 0.56
     - name: Hydra's Lament
       pick_rate: 0.15
       win_rate: 0.57
@@ -27,66 +27,66 @@ builds:
       win_rate: 0.52
     - name: Jotunn's Revenge
       pick_rate: 0.12
-      win_rate: 0.56
+      win_rate: 0.55
   - name: Barbed Carver
     pick_rate: 0.16
     win_rate: 0.55
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.14
-      win_rate: 0.56
+      win_rate: 0.57
     - name: Heartseeker
       pick_rate: 0.07
-      win_rate: 0.49
+      win_rate: 0.5
   - name: Heartseeker
-    pick_rate: 0.27
-    win_rate: 0.6
+    pick_rate: 0.28
+    win_rate: 0.59
     alternates:
     - name: Titan's Bane
       pick_rate: 0.13
-      win_rate: 0.57
+      win_rate: 0.59
     - name: The Crusher
       pick_rate: 0.07
-      win_rate: 0.56
+      win_rate: 0.57
   - name: Titan's Bane
     pick_rate: 0.15
-    win_rate: 0.6
+    win_rate: 0.58
     alternates:
     - name: Heartseeker
       pick_rate: 0.16
-      win_rate: 0.58
-    - name: Lucerne Hammer
-      pick_rate: 0.04
-      win_rate: 0.52
+      win_rate: 0.61
+    - name: The Crusher
+      pick_rate: 0.05
+      win_rate: 0.53
   - name: Lucerne Hammer
-    pick_rate: 0.07
-    win_rate: 0.65
+    pick_rate: 0.06
+    win_rate: 0.64
     alternates:
+    - name: Titan's Bane
+      pick_rate: 0.07
+      win_rate: 0.69
     - name: Heartseeker
-      pick_rate: 0.06
-      win_rate: 0.63
-    - name: Blinking Abyss
-      pick_rate: 0.06
-      win_rate: 0.56
+      pick_rate: 0.07
+      win_rate: 0.62
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.4
+    pick_rate: 0.41
     win_rate: 0.62
   - name: Bluestone Brooch
     pick_rate: 0.21
-    win_rate: 0.64
+    win_rate: 0.63
   - name: Bumba's Cudgel
     pick_rate: 0.2
-    win_rate: 0.45
+    win_rate: 0.46
   source_url: https://smitebrain.com/gods/loki/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.5665653495440729
-  god_matches_won: 932
-  god_matches_played: 1645
+  last_verified: '2026-08-11'
+  god_win_rate: 0.5647581989994441
+  god_matches_won: 1016
+  god_matches_played: 1799
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -141,21 +141,21 @@ builds:
       pick: 0.0
       fit: 0.91
     The Crusher:
-      total: 0.63
+      total: 0.64
       efficiency: 0.65
-      win: 0.56
+      win: 0.57
       pick: 0.07
       fit: 1.0
     Heartseeker:
       total: 0.59
       efficiency: 0.46
-      win: 0.6
-      pick: 0.27
+      win: 0.59
+      pick: 0.28
       fit: 1.0
     Titan's Bane:
-      total: 0.58
+      total: 0.57
       efficiency: 0.46
-      win: 0.6
+      win: 0.58
       pick: 0.15
       fit: 0.91
   starter: &id001
@@ -214,19 +214,19 @@ builds:
     The Crusher:
       total: 0.58
       efficiency: 0.65
-      win: 0.56
+      win: 0.57
       pick: 0.07
       fit: 0.66
     Heartseeker:
       total: 0.54
       efficiency: 0.46
-      win: 0.6
-      pick: 0.27
+      win: 0.59
+      pick: 0.28
       fit: 0.66
     Titan's Bane:
-      total: 0.52
+      total: 0.51
       efficiency: 0.46
-      win: 0.6
+      win: 0.58
       pick: 0.15
       fit: 0.56
   starter: *id001
@@ -284,13 +284,13 @@ builds:
     Shifter's Shield:
       total: 0.54
       efficiency: 0.55
-      win: 0.57
+      win: 0.56
       pick: 0.22
       fit: 0.56
     The Crusher:
       total: 0.56
       efficiency: 0.65
-      win: 0.56
+      win: 0.57
       pick: 0.07
       fit: 0.5
     Amanita Charm:
@@ -352,21 +352,21 @@ builds:
       pick: 0.0
       fit: 0.94
     The Crusher:
-      total: 0.63
+      total: 0.64
       efficiency: 0.65
-      win: 0.56
+      win: 0.57
       pick: 0.07
       fit: 1.0
     Heartseeker:
       total: 0.59
       efficiency: 0.46
-      win: 0.6
-      pick: 0.27
+      win: 0.59
+      pick: 0.28
       fit: 1.0
     Titan's Bane:
-      total: 0.58
+      total: 0.57
       efficiency: 0.46
-      win: 0.6
+      win: 0.58
       pick: 0.15
       fit: 0.94
   starter: *id001
@@ -390,8 +390,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -435,7 +435,7 @@ builds:
     The Crusher:
       total: 0.55
       efficiency: 0.65
-      win: 0.56
+      win: 0.57
       pick: 0.07
       fit: 0.43
   starter: *id001
@@ -465,7 +465,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Genji''s Guard, The Crusher, Breastplate
+    + fit + win/pick). Underrated for this god: The Crusher, Genji''s Guard, Breastplate
     of Valor, Freya''s Tears, Shield of the Phoenix, Pendulum Blade, Arondight, Screeching
     Gargoyle, Chandra''s Grace, Berserker''s Shield, Runeforged Hammer, The Reaper,
     Gladiator''s Shield, Lernaean Bow, Amanita Charm, Damaru, Oni Hunter''s Garb,
@@ -499,14 +499,14 @@ builds:
     The Crusher:
       total: 0.55
       efficiency: 0.65
-      win: 0.56
+      win: 0.57
       pick: 0.07
       fit: 0.45
     Heartseeker:
       total: 0.51
       efficiency: 0.46
-      win: 0.6
-      pick: 0.27
+      win: 0.59
+      pick: 0.28
       fit: 0.45
   starter: *id001
 - source: suggested
@@ -566,16 +566,16 @@ builds:
       pick: 0.0
       fit: 0.91
     The Crusher:
-      total: 0.63
+      total: 0.64
       efficiency: 0.65
-      win: 0.56
+      win: 0.57
       pick: 0.07
       fit: 1.0
     Heartseeker:
       total: 0.59
       efficiency: 0.46
-      win: 0.6
-      pick: 0.27
+      win: 0.59
+      pick: 0.28
       fit: 1.0
   starter: *id001
 ---

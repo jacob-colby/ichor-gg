@@ -2,20 +2,20 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Riptalon | 0.58 | 0.53 | 0.56 | 0.68 | 0.13 | 0.47 | fair | sustain | **UNDERRATED** |
-| Jotunn's Revenge | 0.55 | 0.58 | 0.65 | 0.56 | 0.16 | 0.39 | undervalued |  |  |
+| Jotunn's Revenge | 0.54 | 0.58 | 0.65 | 0.55 | 0.15 | 0.39 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.51 | 0.58 | 0.66 | 0.50 | 0.00 | 0.38 | undervalued | burst | **UNDERRATED** |
 | The Crusher | 0.51 | 0.57 | 0.65 | 0.50 | 0.00 | 0.40 | undervalued | burst | **UNDERRATED** |
 | Berserker's Shield | 0.51 | 0.57 | 0.71 | 0.50 | 0.00 | 0.24 | undervalued |  | **UNDERRATED** |
-| Tyrfing | 0.51 | 0.48 | 0.47 | 0.56 | 0.32 | 0.49 | fair | burst |  |
 | Soul Gem | 0.50 | 0.56 | 0.59 | 0.50 | 0.00 | 0.48 | fair | burst, sustain, aura | **UNDERRATED** |
+| Tyrfing | 0.50 | 0.48 | 0.47 | 0.55 | 0.33 | 0.49 | fair | burst |  |
 | Death Metal | 0.50 | 0.55 | 0.60 | 0.50 | 0.00 | 0.43 | fair |  | **UNDERRATED** |
-| Dominance | 0.50 | 0.49 | 0.53 | 0.55 | 0.10 | 0.39 | fair |  | **UNDERRATED** |
 | Lernaean Bow | 0.49 | 0.53 | 0.56 | 0.50 | 0.00 | 0.49 | fair | wave-clear, burst | **UNDERRATED** |
+| Dominance | 0.49 | 0.49 | 0.53 | 0.54 | 0.10 | 0.39 | fair |  | **UNDERRATED** |
 | Damaru | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.39 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.49 | 0.53 | 0.72 | 0.50 | 0.00 | 0.10 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.49 | 0.53 | 0.61 | 0.50 | 0.00 | 0.35 | fair | burst | **UNDERRATED** |
-| Avenging Blade | 0.48 | 0.44 | 0.51 | 0.58 | 0.12 | 0.25 | fair | protection-shred | **UNDERRATED** |
+| Riptalon | 0.49 | 0.53 | 0.56 | 0.48 | 0.09 | 0.47 | fair | sustain | **UNDERRATED** |
+| Avenging Blade | 0.48 | 0.44 | 0.51 | 0.57 | 0.12 | 0.25 | fair | protection-shred | **UNDERRATED** |
 | Golden Blade | 0.48 | 0.50 | 0.55 | 0.50 | 0.00 | 0.39 | fair | wave-clear | **UNDERRATED** |
 | Runeforged Hammer | 0.47 | 0.49 | 0.60 | 0.50 | 0.00 | 0.25 | fair | burst | **UNDERRATED** |
 | The Reaper | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.39 | fair | sustain | **UNDERRATED** |
@@ -24,14 +24,14 @@
 | Bragi's Harp | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.53 | fair | burst | **UNDERRATED** |
 | Spear of the Magus | 0.46 | 0.48 | 0.60 | 0.50 | 0.00 | 0.19 | fair |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.46 | 0.48 | 0.56 | 0.50 | 0.00 | 0.28 | fair |  | **UNDERRATED** |
-| Titan's Bane | 0.46 | 0.41 | 0.46 | 0.56 | 0.10 | 0.30 | fair |  |  |
+| Titan's Bane | 0.46 | 0.41 | 0.46 | 0.56 | 0.09 | 0.30 | fair |  |  |
 | Pharaoh's Curse | 0.46 | 0.47 | 0.58 | 0.50 | 0.00 | 0.24 | fair | aura | **UNDERRATED** |
 | The Cosmic Horror | 0.46 | 0.46 | 0.58 | 0.50 | 0.00 | 0.19 | fair |  | **UNDERRATED** |
-| Silverbranch Bow | 0.46 | 0.49 | 0.54 | 0.45 | 0.16 | 0.38 | fair |  |  |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Demon Blade | 0.45 | 0.46 | 0.39 | 0.50 | 0.00 | 0.62 | premium |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Spear of Desolation | 0.45 | 0.45 | 0.52 | 0.50 | 0.00 | 0.29 | fair |  | **UNDERRATED** |
+| Silverbranch Bow | 0.45 | 0.49 | 0.54 | 0.44 | 0.15 | 0.38 | fair |  | **UNDERRATED** |
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Nimble Ring | 0.45 | 0.45 | 0.49 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
@@ -76,9 +76,9 @@
 | Ancient Signet | 0.42 | 0.38 | 0.49 | 0.50 | 0.00 | 0.15 | fair | burst |  |
 | Alchemist Coat | 0.41 | 0.38 | 0.52 | 0.50 | 0.00 | 0.05 | fair |  |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
-| Odysseus' Bow | 0.41 | 0.38 | 0.40 | 0.48 | 0.12 | 0.34 | premium | burst, wave-clear |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Soul Reaver | 0.41 | 0.37 | 0.46 | 0.50 | 0.00 | 0.15 | fair | burst |  |
+| Odysseus' Bow | 0.41 | 0.38 | 0.40 | 0.47 | 0.12 | 0.34 | premium | burst, wave-clear |  |
 | Deathbringer | 0.41 | 0.37 | 0.36 | 0.50 | 0.00 | 0.39 | premium |  |  |
 | Erosion | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | aura |  |
 | Mantle Of Discord | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | peel, cc-immunity |  |
@@ -106,7 +106,7 @@
 | Phoenix Feather | 0.39 | 0.32 | 0.46 | 0.50 | 0.00 | 0.00 | fair | sustain |  |
 | Oath-Sworn Spear | 0.39 | 0.32 | 0.36 | 0.50 | 0.00 | 0.25 | premium | protection-shred |  |
 | Necronomicon | 0.39 | 0.32 | 0.44 | 0.50 | 0.00 | 0.05 | premium |  |  |
-| Devourer's Gauntlet | 0.39 | 0.32 | 0.35 | 0.49 | 0.12 | 0.24 | premium | sustain |  |
+| Devourer's Gauntlet | 0.39 | 0.32 | 0.35 | 0.49 | 0.11 | 0.24 | premium | sustain |  |
 | Helm of Darkness | 0.38 | 0.31 | 0.43 | 0.50 | 0.00 | 0.05 | premium | mobility |  |
 | Regrowth Striders | 0.38 | 0.31 | 0.41 | 0.50 | 0.00 | 0.10 | premium | mobility, sustain |  |
 | Mystical Mail | 0.38 | 0.31 | 0.45 | 0.50 | 0.00 | 0.00 | fair | aura, wave-clear |  |
@@ -115,11 +115,11 @@
 | Scepter of Dominion | 0.37 | 0.30 | 0.41 | 0.50 | 0.00 | 0.05 | premium | peel |  |
 | Gem of Isolation | 0.37 | 0.30 | 0.41 | 0.50 | 0.00 | 0.05 | premium | peel |  |
 | Hastened Fatalis | 0.37 | 0.30 | 0.32 | 0.50 | 0.00 | 0.24 | premium | mobility |  |
+| The Executioner | 0.37 | 0.21 | 0.15 | 0.58 | 0.12 | 0.34 | premium | protection-shred |  |
 | Stygian Anchor | 0.37 | 0.29 | 0.41 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
 | Glorious Pridwen | 0.37 | 0.28 | 0.36 | 0.50 | 0.00 | 0.10 | premium | sustain |  |
 | Shroud of Vengeance | 0.37 | 0.28 | 0.36 | 0.50 | 0.00 | 0.10 | premium | burst |  |
 | Hussar's Wings | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |
-| The Executioner | 0.36 | 0.21 | 0.15 | 0.57 | 0.09 | 0.34 | premium | protection-shred |  |
 | Staff of Myrddin | 0.36 | 0.28 | 0.34 | 0.50 | 0.00 | 0.14 | premium |  |  |
 | Heartwood Charm | 0.36 | 0.27 | 0.35 | 0.50 | 0.00 | 0.10 | premium |  |  |
 | Vital Amplifier | 0.36 | 0.26 | 0.28 | 0.50 | 0.00 | 0.24 | premium |  |  |

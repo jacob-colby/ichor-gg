@@ -2,29 +2,29 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Draconic Scale | 0.62 | 0.50 | 0.50 | 0.82 | 0.04 | 0.49 | fair |  | **UNDERRATED** |
-| Ethereal Staff | 0.56 | 0.48 | 0.53 | 0.70 | 0.06 | 0.35 | fair |  | **UNDERRATED** |
-| Genji's Guard | 0.55 | 0.59 | 0.72 | 0.55 | 0.14 | 0.31 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.55 | 0.65 | 0.66 | 0.50 | 0.00 | 0.62 | undervalued | burst | **UNDERRATED** |
-| Shifter's Shield | 0.53 | 0.53 | 0.55 | 0.58 | 0.14 | 0.49 | fair |  | **UNDERRATED** |
+| Genji's Guard | 0.55 | 0.59 | 0.72 | 0.54 | 0.14 | 0.31 | undervalued |  | **UNDERRATED** |
+| Freya's Tears | 0.54 | 0.55 | 0.59 | 0.59 | 0.05 | 0.48 | fair |  | **UNDERRATED** |
+| Ethereal Staff | 0.54 | 0.48 | 0.53 | 0.67 | 0.06 | 0.35 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.53 | 0.61 | 0.66 | 0.50 | 0.00 | 0.49 | undervalued | sustain, aura | **UNDERRATED** |
+| Shifter's Shield | 0.53 | 0.53 | 0.55 | 0.56 | 0.14 | 0.49 | fair |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.52 | 0.60 | 0.60 | 0.50 | 0.00 | 0.59 | fair | burst | **UNDERRATED** |
 | Soul Gem | 0.52 | 0.60 | 0.59 | 0.50 | 0.00 | 0.61 | fair | burst, sustain, aura | **UNDERRATED** |
 | Spear of Desolation | 0.52 | 0.52 | 0.52 | 0.55 | 0.17 | 0.51 | fair |  |  |
 | Eye of Providence | 0.52 | 0.58 | 0.62 | 0.50 | 0.00 | 0.49 | undervalued |  | **UNDERRATED** |
-| Freya's Tears | 0.50 | 0.55 | 0.59 | 0.50 | 0.00 | 0.48 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.50 | 0.55 | 0.65 | 0.50 | 0.00 | 0.32 | undervalued |  | **UNDERRATED** |
-| Obsidian Shard | 0.50 | 0.49 | 0.54 | 0.55 | 0.07 | 0.37 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.50 | 0.49 | 0.54 | 0.56 | 0.07 | 0.37 | fair |  | **UNDERRATED** |
+| Lifebinder | 0.50 | 0.45 | 0.49 | 0.59 | 0.11 | 0.35 | fair | sustain, aura |  |
 | Shield of the Phoenix | 0.49 | 0.54 | 0.57 | 0.50 | 0.00 | 0.46 | fair | sustain | **UNDERRATED** |
 | Spear of the Magus | 0.49 | 0.53 | 0.60 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
-| Breastplate of Valor | 0.49 | 0.55 | 0.65 | 0.47 | 0.09 | 0.31 | undervalued |  | **UNDERRATED** |
-| Lifebinder | 0.49 | 0.45 | 0.49 | 0.58 | 0.11 | 0.35 | fair | sustain, aura |  |
+| Breastplate of Valor | 0.49 | 0.55 | 0.65 | 0.46 | 0.09 | 0.31 | undervalued |  | **UNDERRATED** |
 | Rod of Asclepius | 0.48 | 0.52 | 0.59 | 0.50 | 0.00 | 0.35 | fair | sustain, aura | **UNDERRATED** |
 | The Cosmic Horror | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Helm of Radiance | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Erosion | 0.48 | 0.51 | 0.52 | 0.50 | 0.00 | 0.49 | fair | aura | **UNDERRATED** |
 | Spectral Armor | 0.48 | 0.51 | 0.59 | 0.50 | 0.00 | 0.32 | fair | anti-crit, aura | **UNDERRATED** |
 | Jade Scepter | 0.48 | 0.50 | 0.57 | 0.50 | 0.00 | 0.35 | fair | peel | **UNDERRATED** |
+| Draconic Scale | 0.47 | 0.50 | 0.50 | 0.50 | 0.00 | 0.49 | fair |  | **UNDERRATED** |
 | Yogi's Necklace | 0.47 | 0.50 | 0.65 | 0.50 | 0.00 | 0.15 | undervalued |  | **UNDERRATED** |
 | Chronos' Pendant | 0.47 | 0.49 | 0.56 | 0.50 | 0.00 | 0.34 | fair |  | **UNDERRATED** |
 | Leviathan's Hide | 0.47 | 0.48 | 0.55 | 0.50 | 0.00 | 0.32 | fair |  | **UNDERRATED** |
@@ -62,7 +62,6 @@
 | Hussar's Wings | 0.44 | 0.43 | 0.40 | 0.50 | 0.00 | 0.49 | premium | cc-immunity |  |
 | Phoenix Feather | 0.44 | 0.42 | 0.46 | 0.50 | 0.00 | 0.32 | fair | sustain |  |
 | Typhon’s Heart | 0.43 | 0.41 | 0.51 | 0.50 | 0.00 | 0.20 | fair |  |  |
-| Soul Reaver | 0.43 | 0.41 | 0.46 | 0.50 | 0.00 | 0.30 | fair | burst |  |
 | Bragi's Harp | 0.43 | 0.41 | 0.46 | 0.50 | 0.00 | 0.30 | fair | burst |  |
 | Mystical Mail | 0.43 | 0.41 | 0.45 | 0.50 | 0.00 | 0.32 | fair | aura, wave-clear |  |
 | Sphere of Negation | 0.43 | 0.40 | 0.42 | 0.50 | 0.00 | 0.37 | premium | sustain |  |
@@ -83,6 +82,7 @@
 | Radiant Bulwark | 0.39 | 0.34 | 0.34 | 0.50 | 0.00 | 0.34 | premium | aura |  |
 | Heartwood Charm | 0.39 | 0.33 | 0.35 | 0.50 | 0.00 | 0.29 | premium |  |  |
 | Eye of Erebus | 0.38 | 0.31 | 0.32 | 0.50 | 0.00 | 0.29 | premium |  |  |
+| Soul Reaver | 0.37 | 0.41 | 0.46 | 0.36 | 0.03 | 0.30 | fair | burst |  |
 | Circe's Hexstone | 0.36 | 0.26 | 0.25 | 0.50 | 0.00 | 0.29 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.35 | 0.26 | 0.30 | 0.50 | 0.00 | 0.15 | premium | cc-immunity, sustain |  |
 | Dwarven Plate | 0.35 | 0.35 | 0.35 | 0.38 | 0.04 | 0.34 | premium |  |  |

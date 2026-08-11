@@ -10,98 +10,98 @@ builds:
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.37
-    win_rate: 0.5
+    win_rate: 0.49
     alternates:
     - name: Tyrfing
       pick_rate: 0.32
-      win_rate: 0.51
+      win_rate: 0.52
     - name: Book of Thoth
       pick_rate: 0.06
-      win_rate: 0.55
+      win_rate: 0.57
   - name: Bragi's Harp
     pick_rate: 0.18
-    win_rate: 0.52
+    win_rate: 0.53
     alternates:
     - name: Staff of Myrddin
-      pick_rate: 0.15
-      win_rate: 0.51
+      pick_rate: 0.16
+      win_rate: 0.5
     - name: Spear of Desolation
       pick_rate: 0.09
       win_rate: 0.6
   - name: Rod of Tahuti
     pick_rate: 0.13
-    win_rate: 0.49
+    win_rate: 0.48
     alternates:
     - name: Soul Gem
       pick_rate: 0.1
       win_rate: 0.55
     - name: Barbed Carver
       pick_rate: 0.08
-      win_rate: 0.44
+      win_rate: 0.46
   - name: Obsidian Shard
     pick_rate: 0.14
     win_rate: 0.45
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.22
-      win_rate: 0.57
+      win_rate: 0.55
     - name: The Executioner
       pick_rate: 0.08
-      win_rate: 0.59
-  - name: The Executioner
+      win_rate: 0.58
+  - name: Evil Eye
     pick_rate: 0.06
-    win_rate: 0.46
+    win_rate: 0.41
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.15
-      win_rate: 0.58
+      win_rate: 0.55
     - name: Rod of Tahuti
       pick_rate: 0.06
-      win_rate: 0.6
-  - name: Evil Eye
-    pick_rate: 0.06
-    win_rate: 0.5
+      win_rate: 0.61
+  - name: Hunter's Bow
+    pick_rate: 0.05
+    win_rate: 0.41
     alternates:
-    - name: Hunter's Bow
-      pick_rate: 0.05
-      win_rate: 0.41
-    - name: Blinking Abyss
+    - name: Evil Eye
+      pick_rate: 0.06
+      win_rate: 0.55
+    - name: Void Shard
       pick_rate: 0.04
-      win_rate: 0.48
+      win_rate: 0.45
   community_starters:
   - name: Death's Embrace
-    pick_rate: 0.25
+    pick_rate: 0.24
     win_rate: 0.55
   - name: Archmage's Gem
     pick_rate: 0.22
     win_rate: 0.59
   - name: Conduit Gem
     pick_rate: 0.13
-    win_rate: 0.45
+    win_rate: 0.43
   source_url: https://smitebrain.com/gods/nut/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.5101832993890021
-  god_matches_won: 501
-  god_matches_played: 982
+  last_verified: '2026-08-11'
+  god_win_rate: 0.5080875356803045
+  god_matches_won: 534
+  god_matches_played: 1051
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: core
   slot_order:
+  - Lernaean Bow
   - Berserker's Shield
   - Jotunn's Revenge
   - Bragi's Harp
-  - Spear of Desolation
   - The Crusher
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
-  - Spear of Desolation
+  - Berserker's Shield
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -125,6 +125,12 @@ builds:
     Idol, Oni Hunter''s Garb, Jade Scepter, Heartseeker, The World Stone, Doom Orb,
     Yogi''s Necklace.'
   slot_scores:
+    Lernaean Bow:
+      total: 0.5
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Berserker's Shield:
       total: 0.51
       efficiency: 0.71
@@ -140,15 +146,9 @@ builds:
     Bragi's Harp:
       total: 0.51
       efficiency: 0.46
-      win: 0.52
+      win: 0.53
       pick: 0.18
       fit: 0.71
-    Spear of Desolation:
-      total: 0.5
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.37
-      fit: 0.48
     The Crusher:
       total: 0.52
       efficiency: 0.65
@@ -167,22 +167,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
+  - Bragi's Harp
   - Spear of Desolation
   - The Crusher
   - Soul Gem
   flex_slots:
   - Berserker's Shield
-  - Genji's Guard
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -199,12 +199,6 @@ builds:
     Charm, Pendulum Blade, The World Stone, Doom Orb, Freya''s Tears, Oni Hunter''s
     Garb, Helm of Radiance.'
   slot_scores:
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.16
     Berserker's Shield:
       total: 0.5
       efficiency: 0.71
@@ -217,10 +211,16 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Bragi's Harp:
+      total: 0.5
+      efficiency: 0.46
+      win: 0.53
+      pick: 0.18
+      fit: 0.62
     Spear of Desolation:
       total: 0.51
       efficiency: 0.52
-      win: 0.5
+      win: 0.49
       pick: 0.37
       fit: 0.56
     The Crusher:
@@ -318,7 +318,7 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
+  - Spear of Desolation
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -358,7 +358,7 @@ builds:
     Spear of Desolation:
       total: 0.51
       efficiency: 0.52
-      win: 0.5
+      win: 0.49
       pick: 0.37
       fit: 0.57
     Spear of the Magus:
@@ -390,8 +390,8 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
+  - Berserker's Shield
   - The Crusher
-  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -430,7 +430,7 @@ builds:
     Tyrfing:
       total: 0.51
       efficiency: 0.47
-      win: 0.51
+      win: 0.52
       pick: 0.32
       fit: 0.63
     Riptalon:
@@ -512,9 +512,9 @@ builds:
       pick: 0.0
       fit: 0.54
     Spear of Desolation:
-      total: 0.52
+      total: 0.51
       efficiency: 0.52
-      win: 0.5
+      win: 0.49
       pick: 0.37
       fit: 0.6
     Soul Gem:

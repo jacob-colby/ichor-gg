@@ -2,12 +2,12 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.67 | 0.76 | 0.65 | 0.57 | 0.68 | 1.00 | undervalued |  |  |
+| Jotunn's Revenge | 0.67 | 0.76 | 0.65 | 0.56 | 0.69 | 1.00 | undervalued |  |  |
 | The Crusher | 0.60 | 0.75 | 0.65 | 0.50 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
-| The Reaper | 0.60 | 0.65 | 0.53 | 0.57 | 0.30 | 0.91 | fair | sustain |  |
+| The Reaper | 0.59 | 0.65 | 0.53 | 0.56 | 0.30 | 0.91 | fair | sustain |  |
 | Titan's Bane | 0.59 | 0.60 | 0.46 | 0.62 | 0.18 | 0.91 | fair |  |  |
 | Hydra's Lament | 0.59 | 0.64 | 0.61 | 0.55 | 0.39 | 0.71 | fair | burst |  |
-| Heartseeker | 0.57 | 0.62 | 0.46 | 0.56 | 0.22 | 1.00 | fair | burst |  |
+| Heartseeker | 0.57 | 0.62 | 0.46 | 0.55 | 0.23 | 1.00 | fair | burst |  |
 | Runeforged Hammer | 0.53 | 0.61 | 0.60 | 0.50 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Tekko-Kagi | 0.52 | 0.59 | 0.46 | 0.50 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
@@ -86,9 +86,9 @@
 | Eye of Erebus | 0.35 | 0.25 | 0.32 | 0.50 | 0.00 | 0.09 | premium |  |  |
 | Dwarven Plate | 0.35 | 0.25 | 0.35 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | premium |  |  |
-| Daybreak Gavel | 0.34 | 0.13 | 0.18 | 0.62 | 0.04 | 0.00 | premium |  |  |
 | Radiant Bulwark | 0.34 | 0.23 | 0.34 | 0.50 | 0.00 | 0.00 | premium | aura |  |
 | Hastened Fatalis | 0.34 | 0.23 | 0.32 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
+| Daybreak Gavel | 0.34 | 0.13 | 0.18 | 0.60 | 0.04 | 0.00 | premium |  |  |
 | Resolute Mantle | 0.33 | 0.21 | 0.30 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Circe's Hexstone | 0.33 | 0.20 | 0.25 | 0.50 | 0.00 | 0.09 | premium | mobility, cc-immunity |  |
 | Vital Amplifier | 0.32 | 0.19 | 0.28 | 0.50 | 0.00 | 0.00 | premium |  |  |

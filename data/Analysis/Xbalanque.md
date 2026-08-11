@@ -2,18 +2,17 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Tyrfing | 0.56 | 0.52 | 0.47 | 0.60 | 0.56 | 0.64 | fair | burst |  |
-| Riptalon | 0.53 | 0.53 | 0.56 | 0.58 | 0.12 | 0.46 | fair | sustain | **UNDERRATED** |
+| Tyrfing | 0.56 | 0.52 | 0.47 | 0.60 | 0.57 | 0.64 | fair | burst |  |
+| Riptalon | 0.54 | 0.53 | 0.56 | 0.60 | 0.12 | 0.46 | fair | sustain | **UNDERRATED** |
 | Berserker's Shield | 0.52 | 0.60 | 0.71 | 0.50 | 0.00 | 0.33 | undervalued |  | **UNDERRATED** |
 | Lernaean Bow | 0.52 | 0.58 | 0.56 | 0.50 | 0.00 | 0.64 | fair | wave-clear, burst | **UNDERRATED** |
-| Dominance | 0.52 | 0.53 | 0.53 | 0.54 | 0.10 | 0.54 | fair |  | **UNDERRATED** |
 | Damaru | 0.51 | 0.58 | 0.59 | 0.50 | 0.00 | 0.54 | fair |  | **UNDERRATED** |
 | Silverbranch Bow | 0.51 | 0.48 | 0.54 | 0.59 | 0.12 | 0.33 | fair |  | **UNDERRATED** |
+| Dominance | 0.51 | 0.53 | 0.53 | 0.52 | 0.10 | 0.54 | fair |  | **UNDERRATED** |
 | Golden Blade | 0.50 | 0.55 | 0.55 | 0.50 | 0.00 | 0.54 | fair | wave-clear | **UNDERRATED** |
 | The Crusher | 0.50 | 0.54 | 0.65 | 0.50 | 0.00 | 0.31 | undervalued | burst | **UNDERRATED** |
-| Odysseus' Bow | 0.49 | 0.41 | 0.40 | 0.59 | 0.43 | 0.43 | premium | burst, wave-clear |  |
 | Demon Blade | 0.49 | 0.53 | 0.39 | 0.50 | 0.00 | 0.87 | premium |  | **UNDERRATED** |
-| Qin's Blade | 0.49 | 0.39 | 0.38 | 0.63 | 0.10 | 0.43 | premium | burst |  |
+| Odysseus' Bow | 0.49 | 0.41 | 0.40 | 0.58 | 0.44 | 0.43 | premium | burst, wave-clear |  |
 | Jotunn's Revenge | 0.48 | 0.52 | 0.65 | 0.50 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.48 | 0.52 | 0.61 | 0.50 | 0.00 | 0.31 | fair | burst | **UNDERRATED** |
 | Runeforged Hammer | 0.48 | 0.51 | 0.60 | 0.50 | 0.00 | 0.31 | fair | burst | **UNDERRATED** |
@@ -31,7 +30,7 @@
 | Avenging Blade | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.31 | fair | protection-shred | **UNDERRATED** |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
 | Rage | 0.45 | 0.45 | 0.41 | 0.50 | 0.00 | 0.54 | premium |  | **UNDERRATED** |
-| Hastened Fatalis | 0.45 | 0.33 | 0.32 | 0.61 | 0.17 | 0.33 | premium | mobility |  |
+| Hastened Fatalis | 0.45 | 0.33 | 0.32 | 0.61 | 0.18 | 0.33 | premium | mobility |  |
 | Shield Splitter | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.21 | fair |  | **UNDERRATED** |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Barbed Carver | 0.44 | 0.43 | 0.43 | 0.50 | 0.00 | 0.43 | premium | burst |  |
@@ -45,11 +44,11 @@
 | Freya's Tears | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Shield of the Phoenix | 0.43 | 0.40 | 0.57 | 0.50 | 0.00 | 0.00 | fair | sustain |  |
 | Toxic Blade | 0.42 | 0.40 | 0.42 | 0.50 | 0.00 | 0.33 | premium | anti-heal |  |
+| Qin's Blade | 0.42 | 0.39 | 0.38 | 0.50 | 0.00 | 0.43 | premium | burst |  |
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Shifter's Shield | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Sanguine Lash | 0.42 | 0.38 | 0.41 | 0.50 | 0.00 | 0.33 | premium | aura |  |
 | Titan's Bane | 0.42 | 0.38 | 0.46 | 0.50 | 0.00 | 0.21 | fair |  |  |
-| The Executioner | 0.42 | 0.24 | 0.15 | 0.64 | 0.20 | 0.43 | premium | protection-shred |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Screeching Gargoyle | 0.41 | 0.37 | 0.49 | 0.50 | 0.00 | 0.10 | fair | protection-shred, peel |  |
@@ -57,6 +56,7 @@
 | Erosion | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | aura |  |
 | Mantle Of Discord | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | peel, cc-immunity |  |
 | Dagger of Frenzy | 0.41 | 0.37 | 0.38 | 0.50 | 0.00 | 0.33 | premium |  |  |
+| The Executioner | 0.41 | 0.24 | 0.15 | 0.62 | 0.20 | 0.43 | premium | protection-shred |  |
 | Stone of Binding | 0.41 | 0.37 | 0.48 | 0.50 | 0.00 | 0.10 | fair | protection-shred |  |
 | Umbral Link | 0.41 | 0.36 | 0.47 | 0.50 | 0.00 | 0.13 | fair | sustain, aura |  |
 | Stampede | 0.41 | 0.36 | 0.52 | 0.50 | 0.00 | 0.00 | fair | mobility, aura, cc-immunity |  |

@@ -10,7 +10,7 @@
 | Spear of the Magus | 0.50 | 0.55 | 0.60 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.49 | 0.54 | 0.72 | 0.50 | 0.00 | 0.12 | undervalued |  | **UNDERRATED** |
 | The Cosmic Horror | 0.49 | 0.54 | 0.58 | 0.50 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
-| Spear of Desolation | 0.49 | 0.54 | 0.52 | 0.46 | 0.23 | 0.56 | fair |  |  |
+| Spear of Desolation | 0.49 | 0.54 | 0.52 | 0.47 | 0.23 | 0.56 | fair |  |  |
 | Blood-Bound Book | 0.48 | 0.52 | 0.58 | 0.50 | 0.00 | 0.37 | fair | sustain | **UNDERRATED** |
 | Bragi's Harp | 0.48 | 0.52 | 0.46 | 0.50 | 0.00 | 0.66 | fair | burst | **UNDERRATED** |
 | Bancroft's Talon | 0.48 | 0.51 | 0.58 | 0.50 | 0.00 | 0.37 | fair | sustain | **UNDERRATED** |
@@ -37,10 +37,10 @@
 | Alchemist Coat | 0.44 | 0.44 | 0.52 | 0.50 | 0.00 | 0.24 | fair |  |  |
 | Shield of the Phoenix | 0.44 | 0.44 | 0.57 | 0.50 | 0.00 | 0.12 | fair | sustain |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
+| Polynomicon | 0.44 | 0.45 | 0.49 | 0.47 | 0.12 | 0.34 | fair | burst |  |
 | Soul Reaver | 0.44 | 0.43 | 0.46 | 0.50 | 0.00 | 0.34 | fair | burst |  |
 | Lifebinder | 0.43 | 0.42 | 0.49 | 0.50 | 0.00 | 0.24 | fair | sustain, aura |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
-| Polynomicon | 0.43 | 0.45 | 0.49 | 0.45 | 0.11 | 0.34 | fair | burst |  |
 | Screeching Gargoyle | 0.43 | 0.41 | 0.49 | 0.50 | 0.00 | 0.22 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.43 | 0.41 | 0.53 | 0.50 | 0.00 | 0.12 | fair | sustain |  |
 | Divine Ruin | 0.43 | 0.41 | 0.43 | 0.50 | 0.00 | 0.34 | premium | anti-heal, burst |  |
@@ -48,9 +48,9 @@
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Shifter's Shield | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Necronomicon | 0.42 | 0.38 | 0.44 | 0.50 | 0.00 | 0.24 | premium |  |  |
-| Book of Thoth | 0.42 | 0.37 | 0.42 | 0.48 | 0.35 | 0.24 | premium |  |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
+| Book of Thoth | 0.41 | 0.37 | 0.42 | 0.47 | 0.35 | 0.24 | premium |  |  |
 | Helm of Darkness | 0.41 | 0.37 | 0.43 | 0.50 | 0.00 | 0.24 | premium | mobility |  |
 | Sphere of Negation | 0.41 | 0.37 | 0.42 | 0.50 | 0.00 | 0.24 | premium | sustain |  |
 | Erosion | 0.41 | 0.37 | 0.52 | 0.50 | 0.00 | 0.00 | fair | aura |  |

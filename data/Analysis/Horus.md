@@ -2,13 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Genji's Guard | 0.59 | 0.63 | 0.72 | 0.60 | 0.22 | 0.42 | undervalued |  |  |
-| Shifter's Shield | 0.58 | 0.58 | 0.55 | 0.59 | 0.35 | 0.66 | fair |  |  |
+| Genji's Guard | 0.60 | 0.63 | 0.72 | 0.61 | 0.22 | 0.42 | undervalued |  |  |
+| Shifter's Shield | 0.57 | 0.58 | 0.55 | 0.59 | 0.34 | 0.66 | fair |  |  |
 | Runeforged Hammer | 0.56 | 0.54 | 0.60 | 0.62 | 0.17 | 0.39 | fair | burst |  |
 | Amanita Charm | 0.56 | 0.66 | 0.66 | 0.50 | 0.00 | 0.66 | undervalued | sustain, aura | **UNDERRATED** |
+| Breastplate of Valor | 0.55 | 0.58 | 0.65 | 0.56 | 0.13 | 0.42 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.55 | 0.65 | 0.60 | 0.50 | 0.00 | 0.76 | fair | burst | **UNDERRATED** |
 | Eye of Providence | 0.54 | 0.63 | 0.62 | 0.50 | 0.00 | 0.66 | undervalued |  | **UNDERRATED** |
-| Breastplate of Valor | 0.54 | 0.58 | 0.65 | 0.54 | 0.13 | 0.42 | undervalued |  | **UNDERRATED** |
 | Berserker's Shield | 0.54 | 0.62 | 0.71 | 0.50 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
 | Freya's Tears | 0.53 | 0.60 | 0.59 | 0.50 | 0.00 | 0.64 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |

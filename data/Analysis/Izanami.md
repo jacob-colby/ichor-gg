@@ -2,9 +2,9 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Tyrfing | 0.55 | 0.48 | 0.47 | 0.61 | 0.63 | 0.49 | fair | burst |  |
-| Riptalon | 0.54 | 0.53 | 0.56 | 0.59 | 0.13 | 0.47 | fair | sustain | **UNDERRATED** |
-| Silverbranch Bow | 0.52 | 0.49 | 0.54 | 0.59 | 0.16 | 0.38 | fair |  |  |
+| Tyrfing | 0.54 | 0.48 | 0.47 | 0.60 | 0.64 | 0.49 | fair | burst |  |
+| Riptalon | 0.54 | 0.53 | 0.56 | 0.59 | 0.12 | 0.47 | fair | sustain | **UNDERRATED** |
+| Silverbranch Bow | 0.51 | 0.49 | 0.54 | 0.58 | 0.16 | 0.38 | fair |  |  |
 | Dominance | 0.51 | 0.49 | 0.53 | 0.59 | 0.09 | 0.39 | fair |  | **UNDERRATED** |
 | Jotunn's Revenge | 0.51 | 0.58 | 0.65 | 0.50 | 0.00 | 0.39 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.51 | 0.58 | 0.66 | 0.50 | 0.00 | 0.38 | undervalued | burst | **UNDERRATED** |
@@ -16,19 +16,19 @@
 | Damaru | 0.49 | 0.53 | 0.59 | 0.50 | 0.00 | 0.39 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.49 | 0.53 | 0.72 | 0.50 | 0.00 | 0.10 | undervalued |  | **UNDERRATED** |
 | Hydra's Lament | 0.49 | 0.53 | 0.61 | 0.50 | 0.00 | 0.35 | fair | burst | **UNDERRATED** |
-| Odysseus' Bow | 0.49 | 0.38 | 0.40 | 0.63 | 0.23 | 0.34 | premium | burst, wave-clear |  |
+| Odysseus' Bow | 0.48 | 0.38 | 0.40 | 0.61 | 0.24 | 0.34 | premium | burst, wave-clear |  |
 | Golden Blade | 0.48 | 0.50 | 0.55 | 0.50 | 0.00 | 0.39 | fair | wave-clear | **UNDERRATED** |
 | Runeforged Hammer | 0.47 | 0.50 | 0.60 | 0.50 | 0.00 | 0.25 | fair | burst | **UNDERRATED** |
-| Qin's Blade | 0.47 | 0.36 | 0.38 | 0.63 | 0.10 | 0.34 | premium | burst |  |
 | The Reaper | 0.47 | 0.49 | 0.53 | 0.50 | 0.00 | 0.39 | fair | sustain | **UNDERRATED** |
 | Breastplate of Valor | 0.47 | 0.49 | 0.65 | 0.50 | 0.00 | 0.10 | undervalued |  | **UNDERRATED** |
+| Toxic Blade | 0.47 | 0.41 | 0.42 | 0.57 | 0.13 | 0.38 | premium | anti-heal |  |
 | Tekko-Kagi | 0.47 | 0.48 | 0.46 | 0.50 | 0.00 | 0.53 | fair | mobility | **UNDERRATED** |
 | Bragi's Harp | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.53 | fair | burst | **UNDERRATED** |
 | Spear of the Magus | 0.46 | 0.48 | 0.60 | 0.50 | 0.00 | 0.19 | fair |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.46 | 0.48 | 0.56 | 0.50 | 0.00 | 0.28 | fair |  | **UNDERRATED** |
-| Toxic Blade | 0.46 | 0.41 | 0.42 | 0.56 | 0.13 | 0.38 | premium | anti-heal |  |
 | Pharaoh's Curse | 0.46 | 0.47 | 0.58 | 0.50 | 0.00 | 0.24 | fair | aura | **UNDERRATED** |
 | The Cosmic Horror | 0.46 | 0.46 | 0.58 | 0.50 | 0.00 | 0.19 | fair |  | **UNDERRATED** |
+| Qin's Blade | 0.46 | 0.36 | 0.38 | 0.60 | 0.10 | 0.34 | premium | burst |  |
 | Amanita Charm | 0.46 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Demon Blade | 0.45 | 0.46 | 0.39 | 0.50 | 0.00 | 0.62 | premium |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.45 | 0.46 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
@@ -73,12 +73,12 @@
 | Avatar's Parashu | 0.42 | 0.39 | 0.43 | 0.50 | 0.00 | 0.30 | premium | cc-immunity |  |
 | Leviathan's Hide | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Triton's Conch | 0.42 | 0.39 | 0.47 | 0.50 | 0.00 | 0.20 | fair | aura |  |
+| Devourer's Gauntlet | 0.42 | 0.32 | 0.35 | 0.56 | 0.14 | 0.24 | premium | sustain |  |
 | Ethereal Staff | 0.42 | 0.39 | 0.53 | 0.50 | 0.00 | 0.05 | fair |  |  |
 | Shifter's Shield | 0.42 | 0.39 | 0.55 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Ancient Signet | 0.42 | 0.38 | 0.49 | 0.50 | 0.00 | 0.15 | fair | burst |  |
 | Midgardian Mail | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Alchemist Coat | 0.41 | 0.38 | 0.52 | 0.50 | 0.00 | 0.05 | fair |  |  |
-| Devourer's Gauntlet | 0.41 | 0.32 | 0.35 | 0.55 | 0.14 | 0.24 | premium | sustain |  |
 | Hide of the Nemean Lion | 0.41 | 0.38 | 0.54 | 0.50 | 0.00 | 0.00 | fair |  |  |
 | Transcendence | 0.41 | 0.37 | 0.46 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Soul Reaver | 0.41 | 0.37 | 0.46 | 0.50 | 0.00 | 0.15 | fair | burst |  |

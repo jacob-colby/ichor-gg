@@ -2,13 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Freya's Tears | 0.57 | 0.60 | 0.59 | 0.58 | 0.05 | 0.64 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.56 | 0.68 | 0.66 | 0.50 | 0.00 | 0.71 | undervalued | sustain, aura | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.66 | 0.60 | 0.50 | 0.00 | 0.81 | fair | burst | **UNDERRATED** |
+| Freya's Tears | 0.56 | 0.60 | 0.59 | 0.56 | 0.05 | 0.64 | fair |  | **UNDERRATED** |
 | Eye of Providence | 0.55 | 0.65 | 0.62 | 0.50 | 0.00 | 0.71 | undervalued |  | **UNDERRATED** |
-| Shifter's Shield | 0.53 | 0.60 | 0.55 | 0.50 | 0.18 | 0.71 | fair |  |  |
-| Genji's Guard | 0.53 | 0.62 | 0.72 | 0.48 | 0.14 | 0.39 | undervalued |  | **UNDERRATED** |
-| Breastplate of Valor | 0.53 | 0.57 | 0.65 | 0.53 | 0.11 | 0.39 | undervalued |  | **UNDERRATED** |
+| Shifter's Shield | 0.54 | 0.60 | 0.55 | 0.51 | 0.17 | 0.71 | fair |  |  |
+| Genji's Guard | 0.53 | 0.62 | 0.72 | 0.48 | 0.13 | 0.39 | undervalued |  | **UNDERRATED** |
+| Breastplate of Valor | 0.53 | 0.57 | 0.65 | 0.52 | 0.10 | 0.39 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.60 | 0.66 | 0.50 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
 | Oni Hunter's Garb | 0.52 | 0.59 | 0.65 | 0.50 | 0.00 | 0.46 | undervalued |  | **UNDERRATED** |
 | Erosion | 0.51 | 0.58 | 0.52 | 0.50 | 0.00 | 0.71 | fair | aura | **UNDERRATED** |
@@ -58,6 +58,7 @@
 | Obsidian Shard | 0.44 | 0.42 | 0.54 | 0.50 | 0.00 | 0.15 | fair |  |  |
 | Bracer of The Abyss | 0.44 | 0.42 | 0.56 | 0.50 | 0.00 | 0.09 | fair |  |  |
 | Triton's Conch | 0.43 | 0.42 | 0.47 | 0.50 | 0.00 | 0.30 | fair | aura |  |
+| The World Stone | 0.43 | 0.39 | 0.49 | 0.52 | 0.09 | 0.15 | fair |  |  |
 | Spirit Robe | 0.43 | 0.40 | 0.36 | 0.50 | 0.00 | 0.51 | premium | sustain |  |
 | Polynomicon | 0.43 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair | burst |  |
 | Umbral Link | 0.43 | 0.40 | 0.47 | 0.50 | 0.00 | 0.25 | fair | sustain, aura |  |
@@ -65,18 +66,17 @@
 | Dwarven Plate | 0.43 | 0.40 | 0.35 | 0.50 | 0.00 | 0.51 | premium |  |  |
 | Ancient Signet | 0.42 | 0.40 | 0.49 | 0.50 | 0.00 | 0.19 | fair | burst |  |
 | Sphere of Negation | 0.42 | 0.40 | 0.42 | 0.50 | 0.00 | 0.35 | premium | sustain |  |
-| The World Stone | 0.42 | 0.39 | 0.49 | 0.50 | 0.08 | 0.15 | fair |  |  |
 | Contagion | 0.42 | 0.39 | 0.43 | 0.50 | 0.00 | 0.30 | premium | anti-heal, burst |  |
 | Prophetic Cloak | 0.42 | 0.49 | 0.43 | 0.38 | 0.09 | 0.64 | premium |  |  |
 | Dreamer's Idol | 0.42 | 0.39 | 0.49 | 0.50 | 0.00 | 0.15 | fair | cc-immunity |  |
 | Radiant Bulwark | 0.42 | 0.39 | 0.34 | 0.50 | 0.00 | 0.51 | premium | aura |  |
 | Doom Orb | 0.42 | 0.39 | 0.49 | 0.50 | 0.00 | 0.15 | fair |  |  |
+| Rod of Tahuti | 0.42 | 0.35 | 0.44 | 0.53 | 0.07 | 0.15 | premium |  |  |
 | Typhon’s Heart | 0.42 | 0.38 | 0.51 | 0.50 | 0.00 | 0.09 | fair |  |  |
 | Soul Reaver | 0.42 | 0.38 | 0.46 | 0.50 | 0.00 | 0.19 | fair | burst |  |
 | Bragi's Harp | 0.41 | 0.38 | 0.46 | 0.50 | 0.00 | 0.19 | fair | burst |  |
 | Scepter of Dominion | 0.41 | 0.37 | 0.41 | 0.50 | 0.00 | 0.30 | premium | peel |  |
 | Gem of Isolation | 0.41 | 0.37 | 0.41 | 0.50 | 0.00 | 0.30 | premium | peel |  |
-| Rod of Tahuti | 0.41 | 0.35 | 0.44 | 0.51 | 0.07 | 0.15 | premium |  |  |
 | Nimble Ring | 0.41 | 0.37 | 0.49 | 0.50 | 0.00 | 0.09 | fair |  |  |
 | Divine Ruin | 0.41 | 0.36 | 0.43 | 0.50 | 0.00 | 0.19 | premium | anti-heal, burst |  |
 | Heartwood Charm | 0.40 | 0.34 | 0.35 | 0.50 | 0.00 | 0.34 | premium |  |  |
@@ -84,7 +84,7 @@
 | Eye of Erebus | 0.39 | 0.33 | 0.32 | 0.50 | 0.00 | 0.34 | premium |  |  |
 | Book of Thoth | 0.38 | 0.32 | 0.42 | 0.50 | 0.00 | 0.09 | premium |  |  |
 | Staff of Myrddin | 0.38 | 0.30 | 0.34 | 0.50 | 0.00 | 0.23 | premium |  |  |
-| Gauntlet of Thebes | 0.37 | 0.25 | 0.27 | 0.53 | 0.11 | 0.20 | premium |  |  |
+| Gauntlet of Thebes | 0.37 | 0.25 | 0.27 | 0.54 | 0.12 | 0.20 | premium |  |  |
 | Brawler’s Beat Stick | 0.36 | 0.28 | 0.18 | 0.50 | 0.00 | 0.51 | premium | anti-heal |  |
 | Circe's Hexstone | 0.36 | 0.28 | 0.25 | 0.50 | 0.00 | 0.34 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.36 | 0.27 | 0.30 | 0.50 | 0.00 | 0.20 | premium | cc-immunity, sustain |  |

@@ -5,29 +5,29 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Unbound Destruction
-  aspect_pick_rate: 0.38
-  aspect_win_rate: 0.53
+  aspect_pick_rate: 0.37
+  aspect_win_rate: 0.52
   slot_order:
   - name: Tyrfing
     pick_rate: 0.35
-    win_rate: 0.53
+    win_rate: 0.54
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.15
       win_rate: 0.58
     - name: Book of Thoth
-      pick_rate: 0.08
-      win_rate: 0.45
+      pick_rate: 0.09
+      win_rate: 0.44
   - name: Odysseus' Bow
-    pick_rate: 0.22
+    pick_rate: 0.21
     win_rate: 0.55
     alternates:
     - name: Hastened Fatalis
       pick_rate: 0.13
       win_rate: 0.52
     - name: Spear of Desolation
-      pick_rate: 0.06
-      win_rate: 0.56
+      pick_rate: 0.07
+      win_rate: 0.57
   - name: Hastened Fatalis
     pick_rate: 0.21
     win_rate: 0.52
@@ -37,56 +37,56 @@ builds:
       win_rate: 0.54
     - name: Polynomicon
       pick_rate: 0.11
-      win_rate: 0.52
+      win_rate: 0.53
   - name: Silverbranch Bow
     pick_rate: 0.14
-    win_rate: 0.6
+    win_rate: 0.62
     alternates:
     - name: The Executioner
-      pick_rate: 0.1
-      win_rate: 0.38
-    - name: Hastened Fatalis
       pick_rate: 0.09
-      win_rate: 0.46
+      win_rate: 0.4
+    - name: Rod of Tahuti
+      pick_rate: 0.09
+      win_rate: 0.53
   - name: Qin's Blade
     pick_rate: 0.07
-    win_rate: 0.46
+    win_rate: 0.48
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.1
-      win_rate: 0.47
+      pick_rate: 0.09
+      win_rate: 0.49
     - name: The Executioner
-      pick_rate: 0.06
+      pick_rate: 0.07
       win_rate: 0.6
   - name: Blinking Abyss
     pick_rate: 0.07
-    win_rate: 0.65
+    win_rate: 0.69
     alternates:
+    - name: Manchu Bow
+      pick_rate: 0.07
+      win_rate: 0.57
     - name: Silverbranch Bow
       pick_rate: 0.07
       win_rate: 0.64
-    - name: Hunter's Bow
-      pick_rate: 0.07
-      win_rate: 0.42
   community_starters:
   - name: Death's Embrace
     pick_rate: 0.17
-    win_rate: 0.55
+    win_rate: 0.54
   - name: Hunter's Cowl
     pick_rate: 0.15
-    win_rate: 0.53
+    win_rate: 0.54
   - name: Archmage's Gem
     pick_rate: 0.14
     win_rate: 0.61
   source_url: https://smitebrain.com/gods/kali/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.5226586102719033
-  god_matches_won: 346
-  god_matches_played: 662
+  last_verified: '2026-08-11'
+  god_win_rate: 0.5276595744680851
+  god_matches_won: 372
+  god_matches_played: 705
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -132,9 +132,9 @@ builds:
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.51
+      total: 0.52
       efficiency: 0.47
-      win: 0.53
+      win: 0.54
       pick: 0.35
       fit: 0.59
     Death Metal:
@@ -150,9 +150,9 @@ builds:
       pick: 0.0
       fit: 0.36
     Silverbranch Bow:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
-      win: 0.6
+      win: 0.62
       pick: 0.14
       fit: 0.45
     The Crusher:
@@ -174,8 +174,8 @@ builds:
   - Amanita Charm
   - Soul Gem
   flex_slots:
+  - Kinetic Cuirass
   - The Crusher
-  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -213,9 +213,9 @@ builds:
       pick: 0.0
       fit: 0.49
     Silverbranch Bow:
-      total: 0.51
+      total: 0.52
       efficiency: 0.54
-      win: 0.6
+      win: 0.62
       pick: 0.14
       fit: 0.27
     The Crusher:
@@ -263,7 +263,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Silverbranch Bow, Jotunn''s Revenge, Gluttonous Grimoire,
+    for this god: Silverbranch Bow, The Crusher, Jotunn''s Revenge, Gluttonous Grimoire,
     Spear of Desolation, Soul Gem, Riptalon, Berserker''s Shield, Spear of the Magus,
     Tekko-Kagi, The Reaper, Avenging Blade, The Cosmic Horror, Death Metal, Lernaean
     Bow, Heartseeker, Hydra''s Lament, Damaru, Genji''s Guard, Runeforged Hammer,
@@ -297,9 +297,9 @@ builds:
       pick: 0.15
       fit: 0.47
     Silverbranch Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.54
-      win: 0.6
+      win: 0.62
       pick: 0.14
       fit: 0.57
     The Crusher:
@@ -351,9 +351,9 @@ builds:
       pick: 0.0
       fit: 0.26
     Tyrfing:
-      total: 0.52
+      total: 0.53
       efficiency: 0.47
-      win: 0.53
+      win: 0.54
       pick: 0.35
       fit: 0.67
     Gluttonous Grimoire:
@@ -369,9 +369,9 @@ builds:
       pick: 0.0
       fit: 0.65
     Silverbranch Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.54
-      win: 0.6
+      win: 0.62
       pick: 0.14
       fit: 0.57
     The Crusher:
@@ -391,8 +391,8 @@ builds:
   - Silverbranch Bow
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
   - Silverbranch Bow
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -408,7 +408,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Spear of Desolation,
-    Soul Gem, Genji''s Guard, Hydra''s Lament, Silverbranch Bow, Gluttonous Grimoire,
+    Soul Gem, Genji''s Guard, Silverbranch Bow, Hydra''s Lament, Gluttonous Grimoire,
     Breastplate of Valor, The Crusher, Berserker''s Shield, Chronos'' Pendant, Death
     Metal, Freya''s Tears, Shield of the Phoenix, Lernaean Bow, Spear of the Magus,
     Gem of Focus, Damaru, Arondight, Riptalon, Runeforged Hammer, The Cosmic Horror,
@@ -442,9 +442,9 @@ builds:
       pick: 0.15
       fit: 0.59
     Silverbranch Bow:
-      total: 0.51
+      total: 0.52
       efficiency: 0.54
-      win: 0.6
+      win: 0.62
       pick: 0.14
       fit: 0.31
     Soul Gem:

@@ -2,16 +2,16 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Dreamer's Idol | 0.59 | 0.54 | 0.49 | 0.71 | 0.07 | 0.66 | fair | cc-immunity | **UNDERRATED** |
 | Soul Gem | 0.59 | 0.69 | 0.59 | 0.53 | 0.18 | 0.93 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.58 | 0.62 | 0.52 | 0.56 | 0.45 | 0.83 | fair |  |  |
-| The World Stone | 0.57 | 0.54 | 0.49 | 0.66 | 0.11 | 0.66 | fair |  | **UNDERRATED** |
+| Dreamer's Idol | 0.58 | 0.54 | 0.49 | 0.68 | 0.07 | 0.66 | fair | cc-immunity | **UNDERRATED** |
+| Spear of Desolation | 0.58 | 0.62 | 0.52 | 0.55 | 0.45 | 0.83 | fair |  |  |
 | Gluttonous Grimoire | 0.57 | 0.69 | 0.66 | 0.50 | 0.00 | 0.76 | undervalued | burst | **UNDERRATED** |
-| Obsidian Shard | 0.57 | 0.57 | 0.54 | 0.59 | 0.26 | 0.66 | fair |  |  |
-| Doom Orb | 0.54 | 0.54 | 0.49 | 0.59 | 0.13 | 0.66 | fair |  | **UNDERRATED** |
+| The World Stone | 0.56 | 0.54 | 0.49 | 0.64 | 0.11 | 0.66 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.56 | 0.57 | 0.54 | 0.58 | 0.27 | 0.66 | fair |  |  |
+| Doom Orb | 0.54 | 0.54 | 0.49 | 0.58 | 0.13 | 0.66 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.53 | 0.62 | 0.60 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
-| Rod of Tahuti | 0.53 | 0.50 | 0.44 | 0.60 | 0.22 | 0.66 | premium |  |  |
 | The Cosmic Horror | 0.53 | 0.60 | 0.58 | 0.50 | 0.00 | 0.66 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.52 | 0.50 | 0.44 | 0.58 | 0.22 | 0.66 | premium |  |  |
 | Genji's Guard | 0.50 | 0.55 | 0.72 | 0.50 | 0.00 | 0.17 | undervalued |  | **UNDERRATED** |
 | Chronos' Pendant | 0.50 | 0.55 | 0.56 | 0.50 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Bracer of The Abyss | 0.50 | 0.55 | 0.56 | 0.50 | 0.00 | 0.51 | fair |  | **UNDERRATED** |
@@ -25,10 +25,10 @@
 | Bragi's Harp | 0.48 | 0.50 | 0.46 | 0.50 | 0.00 | 0.61 | fair | burst | **UNDERRATED** |
 | Jade Scepter | 0.48 | 0.50 | 0.57 | 0.50 | 0.00 | 0.35 | fair | peel | **UNDERRATED** |
 | Nimble Ring | 0.47 | 0.49 | 0.49 | 0.50 | 0.00 | 0.51 | fair |  | **UNDERRATED** |
-| Book of Thoth | 0.47 | 0.40 | 0.42 | 0.58 | 0.18 | 0.35 | premium |  |  |
 | Wish-Granting Pearl | 0.47 | 0.48 | 0.54 | 0.50 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
 | Polynomicon | 0.46 | 0.48 | 0.49 | 0.50 | 0.00 | 0.45 | fair | burst | **UNDERRATED** |
 | Ethereal Staff | 0.46 | 0.48 | 0.53 | 0.50 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
+| Book of Thoth | 0.46 | 0.40 | 0.42 | 0.57 | 0.17 | 0.35 | premium |  |  |
 | Ancient Signet | 0.46 | 0.48 | 0.49 | 0.50 | 0.00 | 0.45 | fair | burst | **UNDERRATED** |
 | Alchemist Coat | 0.46 | 0.47 | 0.52 | 0.50 | 0.00 | 0.35 | fair |  |  |
 | Freya's Tears | 0.46 | 0.46 | 0.59 | 0.50 | 0.00 | 0.17 | fair |  |  |

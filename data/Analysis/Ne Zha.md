@@ -2,14 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.63 | 0.76 | 0.65 | 0.52 | 0.40 | 1.00 | undervalued |  |  |
+| Jotunn's Revenge | 0.63 | 0.76 | 0.65 | 0.51 | 0.40 | 1.00 | undervalued |  |  |
 | The Crusher | 0.58 | 0.72 | 0.65 | 0.50 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
-| Hydra's Lament | 0.57 | 0.65 | 0.61 | 0.52 | 0.14 | 0.77 | fair | burst | **UNDERRATED** |
-| Heartseeker | 0.53 | 0.59 | 0.46 | 0.52 | 0.07 | 0.88 | fair | burst | **UNDERRATED** |
+| Hydra's Lament | 0.55 | 0.65 | 0.61 | 0.49 | 0.14 | 0.77 | fair | burst | **UNDERRATED** |
+| Genji's Guard | 0.54 | 0.57 | 0.72 | 0.56 | 0.10 | 0.22 | undervalued |  | **UNDERRATED** |
+| Heartseeker | 0.53 | 0.59 | 0.46 | 0.53 | 0.06 | 0.88 | fair | burst | **UNDERRATED** |
 | The Reaper | 0.53 | 0.61 | 0.53 | 0.50 | 0.00 | 0.78 | fair | sustain | **UNDERRATED** |
-| Genji's Guard | 0.53 | 0.57 | 0.72 | 0.53 | 0.10 | 0.22 | undervalued |  | **UNDERRATED** |
-| Titan's Bane | 0.52 | 0.56 | 0.46 | 0.53 | 0.13 | 0.78 | fair |  | **UNDERRATED** |
 | Pendulum Blade | 0.52 | 0.59 | 0.42 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
+| Titan's Bane | 0.52 | 0.56 | 0.46 | 0.52 | 0.12 | 0.78 | fair |  | **UNDERRATED** |
 | Runeforged Hammer | 0.52 | 0.58 | 0.60 | 0.50 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
 | Tekko-Kagi | 0.50 | 0.55 | 0.46 | 0.50 | 0.00 | 0.78 | fair | mobility | **UNDERRATED** |
 | Lernaean Bow | 0.50 | 0.55 | 0.56 | 0.50 | 0.00 | 0.54 | fair | wave-clear, burst | **UNDERRATED** |
@@ -36,16 +36,16 @@
 | Yogi's Necklace | 0.45 | 0.45 | 0.65 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
 | Kinetic Cuirass | 0.45 | 0.45 | 0.60 | 0.50 | 0.00 | 0.10 | fair | burst |  |
 | Bloodforge | 0.45 | 0.45 | 0.45 | 0.50 | 0.00 | 0.44 | fair | sustain |  |
+| Shifter's Shield | 0.45 | 0.39 | 0.55 | 0.54 | 0.20 | 0.00 | fair |  |  |
 | Musashi's Dual Swords | 0.45 | 0.44 | 0.44 | 0.50 | 0.00 | 0.44 | premium | mobility |  |
 | Screeching Gargoyle | 0.44 | 0.44 | 0.49 | 0.50 | 0.00 | 0.32 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.44 | 0.44 | 0.53 | 0.50 | 0.00 | 0.22 | fair | sustain |  |
 | Eye of Providence | 0.44 | 0.43 | 0.62 | 0.50 | 0.00 | 0.00 | undervalued |  |  |
-| Shifter's Shield | 0.44 | 0.39 | 0.55 | 0.53 | 0.18 | 0.00 | fair |  |  |
 | Wyrmskin Hide | 0.44 | 0.43 | 0.42 | 0.50 | 0.00 | 0.44 | premium |  |  |
-| Deathbringer | 0.43 | 0.38 | 0.36 | 0.52 | 0.16 | 0.44 | premium |  |  |
 | Sanguine Lash | 0.43 | 0.42 | 0.41 | 0.50 | 0.00 | 0.44 | premium | aura |  |
 | Spectral Armor | 0.43 | 0.41 | 0.59 | 0.50 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Oath-Sworn Spear | 0.43 | 0.41 | 0.36 | 0.50 | 0.00 | 0.54 | premium | protection-shred |  |
+| Deathbringer | 0.43 | 0.38 | 0.36 | 0.51 | 0.15 | 0.44 | premium |  |  |
 | Demon Blade | 0.43 | 0.40 | 0.39 | 0.50 | 0.00 | 0.44 | premium |  |  |
 | Pharaoh's Curse | 0.43 | 0.40 | 0.58 | 0.50 | 0.00 | 0.00 | fair | aura |  |
 | Toxic Blade | 0.42 | 0.40 | 0.42 | 0.50 | 0.00 | 0.33 | premium | anti-heal |  |
@@ -74,6 +74,7 @@
 | Umbral Link | 0.39 | 0.33 | 0.47 | 0.50 | 0.00 | 0.00 | fair | sustain, aura |  |
 | Phoenix Feather | 0.39 | 0.32 | 0.46 | 0.50 | 0.00 | 0.00 | fair | sustain |  |
 | Glorious Pridwen | 0.39 | 0.32 | 0.36 | 0.50 | 0.00 | 0.22 | premium | sustain |  |
+| Dwarven Plate | 0.38 | 0.25 | 0.35 | 0.57 | 0.04 | 0.00 | premium |  |  |
 | Mystical Mail | 0.38 | 0.31 | 0.45 | 0.50 | 0.00 | 0.00 | fair | aura, wave-clear |  |
 | Odysseus' Bow | 0.38 | 0.31 | 0.40 | 0.50 | 0.00 | 0.10 | premium | burst, wave-clear |  |
 | Heartwood Charm | 0.38 | 0.31 | 0.35 | 0.50 | 0.00 | 0.22 | premium |  |  |
@@ -84,7 +85,6 @@
 | Hussar's Wings | 0.37 | 0.28 | 0.40 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Dagger of Frenzy | 0.36 | 0.27 | 0.38 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Spirit Robe | 0.35 | 0.25 | 0.36 | 0.50 | 0.00 | 0.00 | premium | sustain |  |
-| Dwarven Plate | 0.35 | 0.25 | 0.35 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.35 | 0.24 | 0.25 | 0.50 | 0.00 | 0.22 | premium | mobility, cc-immunity |  |
 | Mercury's Talaria | 0.34 | 0.24 | 0.34 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Radiant Bulwark | 0.34 | 0.23 | 0.34 | 0.50 | 0.00 | 0.00 | premium | aura |  |

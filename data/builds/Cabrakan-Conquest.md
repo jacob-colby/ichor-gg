@@ -17,76 +17,76 @@ builds:
       win_rate: 0.58
     - name: Stampede
       pick_rate: 0.03
-      win_rate: 0.45
+      win_rate: 0.46
   - name: Genji's Guard
     pick_rate: 0.19
     win_rate: 0.56
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.2
-      win_rate: 0.64
+      win_rate: 0.62
     - name: Breastplate of Valor
       pick_rate: 0.18
-      win_rate: 0.55
+      win_rate: 0.54
   - name: Breastplate of Valor
-    pick_rate: 0.18
+    pick_rate: 0.17
     win_rate: 0.62
     alternates:
     - name: Genji's Guard
       pick_rate: 0.25
-      win_rate: 0.51
+      win_rate: 0.49
     - name: Gladiator's Shield
-      pick_rate: 0.07
-      win_rate: 0.57
+      pick_rate: 0.08
+      win_rate: 0.56
   - name: Dwarven Plate
     pick_rate: 0.1
     win_rate: 0.56
     alternates:
     - name: Genji's Guard
       pick_rate: 0.16
-      win_rate: 0.62
-    - name: Breastplate of Valor
-      pick_rate: 0.07
-      win_rate: 0.55
+      win_rate: 0.61
+    - name: Shell of Rebuke
+      pick_rate: 0.08
+      win_rate: 0.61
   - name: Kinetic Cuirass
-    pick_rate: 0.07
-    win_rate: 0.52
+    pick_rate: 0.08
+    win_rate: 0.53
     alternates:
     - name: Dwarven Plate
       pick_rate: 0.08
       win_rate: 0.56
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.56
+      win_rate: 0.53
   - name: Engraved Guard
-    pick_rate: 0.08
-    win_rate: 0.59
+    pick_rate: 0.09
+    win_rate: 0.57
     alternates:
     - name: Medal of Defense
       pick_rate: 0.05
       win_rate: 0.55
     - name: Hide of the Nemean Lion
       pick_rate: 0.05
-      win_rate: 0.52
+      win_rate: 0.53
   community_starters:
   - name: Bumba's Cudgel
     pick_rate: 0.39
     win_rate: 0.52
   - name: Bumba's Hammer
     pick_rate: 0.34
-    win_rate: 0.65
-  - name: Bluestone Pendant
-    pick_rate: 0.07
-    win_rate: 0.47
+    win_rate: 0.64
+  - name: Conduit Gem
+    pick_rate: 0.08
+    win_rate: 0.11
   source_url: https://smitebrain.com/gods/cabrakan/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.5649819494584838
-  god_matches_won: 626
-  god_matches_played: 1108
+  last_verified: '2026-08-11'
+  god_win_rate: 0.558748943364328
+  god_matches_won: 661
+  god_matches_played: 1183
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -119,10 +119,10 @@ builds:
     this god: Kinetic Cuirass, Amanita Charm, Eye of Providence, Berserker''s Shield,
     Gluttonous Grimoire, Jotunn''s Revenge, Oni Hunter''s Garb, Freya''s Tears, The
     Crusher, Shield Splitter, Hydra''s Lament, Shield of the Phoenix, Eye of the Storm,
-    Erosion, Draconic Scale, Spectral Armor, Pharaoh''s Curse, Hide of the Nemean
-    Lion, Soul Gem, Avenging Blade, Golden Blade, Yogi''s Necklace, Leviathan''s Hide,
-    Death Metal, Midgardian Mail, Mantle Of Discord, Stone of Binding, Lernaean Bow,
-    Helm of Radiance, Damaru, Rod of Asclepius, Shogun''s Ofuda, Magi''s Cloak, Ancile,
+    Erosion, Draconic Scale, Spectral Armor, Hide of the Nemean Lion, Pharaoh''s Curse,
+    Soul Gem, Avenging Blade, Golden Blade, Yogi''s Necklace, Leviathan''s Hide, Death
+    Metal, Midgardian Mail, Mantle Of Discord, Stone of Binding, Lernaean Bow, Helm
+    of Radiance, Damaru, Rod of Asclepius, Shogun''s Ofuda, Magi''s Cloak, Ancile,
     Wyrmskin Hide, Stampede.'
   slot_scores:
     Genji's Guard:
@@ -135,13 +135,13 @@ builds:
       total: 0.56
       efficiency: 0.65
       win: 0.62
-      pick: 0.18
+      pick: 0.17
       fit: 0.31
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.6
-      win: 0.52
-      pick: 0.07
+      win: 0.53
+      pick: 0.08
       fit: 0.67
     Runeforged Hammer:
       total: 0.56
@@ -194,8 +194,8 @@ builds:
     Shield, Eye of Providence, Soul Gem, Gluttonous Grimoire, Rod of Asclepius, Jotunn''s
     Revenge, Oni Hunter''s Garb, The Crusher, Chandra''s Grace, Hydra''s Lament, Eye
     of the Storm, Freya''s Tears, The Reaper, Shield Splitter, Erosion, Phoenix Feather,
-    Spectral Armor, Avenging Blade, Draconic Scale, Golden Blade, Pharaoh''s Curse,
-    Yogi''s Necklace, Lifebinder, Blood-Bound Book, Hide of the Nemean Lion, Bancroft''s
+    Spectral Armor, Hide of the Nemean Lion, Avenging Blade, Draconic Scale, Golden
+    Blade, Pharaoh''s Curse, Yogi''s Necklace, Lifebinder, Blood-Bound Book, Bancroft''s
     Talon, Leviathan''s Hide, Death Metal, Midgardian Mail, Riptalon, Lernaean Bow,
     Shogun''s Ofuda, Damaru.'
   slot_scores:
@@ -209,13 +209,13 @@ builds:
       total: 0.56
       efficiency: 0.65
       win: 0.62
-      pick: 0.18
+      pick: 0.17
       fit: 0.28
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.6
-      win: 0.52
-      pick: 0.07
+      win: 0.53
+      pick: 0.08
       fit: 0.66
     Runeforged Hammer:
       total: 0.57
@@ -281,7 +281,7 @@ builds:
       total: 0.55
       efficiency: 0.65
       win: 0.62
-      pick: 0.18
+      pick: 0.17
       fit: 0.23
     Jotunn's Revenge:
       total: 0.54
@@ -365,7 +365,7 @@ builds:
       total: 0.55
       efficiency: 0.65
       win: 0.62
-      pick: 0.18
+      pick: 0.17
       fit: 0.2
     Runeforged Hammer:
       total: 0.53
@@ -390,7 +390,7 @@ builds:
   - Freya's Tears
   - Shifter's Shield
   flex_slots:
-  - Kinetic Cuirass
+  - Runeforged Hammer
   - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
@@ -408,11 +408,11 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Kinetic Cuirass, Freya''s Tears, Amanita
     Charm, Jotunn''s Revenge, Shield of the Phoenix, Berserker''s Shield, Hydra''s
-    Lament, Soul Gem, Gladiator''s Shield, Gluttonous Grimoire, Eye of Providence,
+    Lament, Soul Gem, Gluttonous Grimoire, Eye of Providence, Gladiator''s Shield,
     Oni Hunter''s Garb, The Crusher, Chronos'' Pendant, Screeching Gargoyle, Chandra''s
-    Grace, Spear of Desolation, Spectral Armor, Erosion, Shield Splitter, Yogi''s
-    Necklace, Pharaoh''s Curse, Prophetic Cloak, Draconic Scale, Hide of the Nemean
-    Lion, Helm of Radiance, Rod of Asclepius, Gem of Focus, Eye of the Storm, Arondight,
+    Grace, Spear of Desolation, Spectral Armor, Erosion, Shield Splitter, Hide of
+    the Nemean Lion, Yogi''s Necklace, Pharaoh''s Curse, Prophetic Cloak, Draconic
+    Scale, Helm of Radiance, Rod of Asclepius, Gem of Focus, Eye of the Storm, Arondight,
     Death Metal, Leviathan''s Hide, Jade Scepter, Midgardian Mail, Spear of the Magus,
     Mantle Of Discord.'
   slot_scores:
@@ -426,13 +426,13 @@ builds:
       total: 0.59
       efficiency: 0.65
       win: 0.62
-      pick: 0.18
+      pick: 0.17
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.54
       efficiency: 0.6
-      win: 0.52
-      pick: 0.07
+      win: 0.53
+      pick: 0.08
       fit: 0.55
     Runeforged Hammer:
       total: 0.53
@@ -463,8 +463,8 @@ builds:
   - Runeforged Hammer
   - Shifter's Shield
   flex_slots:
-  - Berserker's Shield
   - Kinetic Cuirass
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -479,7 +479,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
-    win/pick). Underrated for this god: Berserker''s Shield, Kinetic Cuirass, The
+    win/pick). Underrated for this god: Kinetic Cuirass, Berserker''s Shield, The
     Crusher, Jotunn''s Revenge, Amanita Charm, Gluttonous Grimoire, Eye of Providence,
     Hydra''s Lament, Oni Hunter''s Garb, Shield Splitter, Freya''s Tears, Soul Gem,
     Golden Blade, Lernaean Bow, Eye of the Storm, Pharaoh''s Curse, Shield of the
@@ -504,13 +504,13 @@ builds:
       total: 0.55
       efficiency: 0.65
       win: 0.62
-      pick: 0.18
+      pick: 0.17
       fit: 0.23
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.6
-      win: 0.52
-      pick: 0.07
+      win: 0.53
+      pick: 0.08
       fit: 0.52
     Runeforged Hammer:
       total: 0.55
@@ -570,13 +570,13 @@ builds:
       total: 0.55
       efficiency: 0.65
       win: 0.62
-      pick: 0.18
+      pick: 0.17
       fit: 0.23
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.6
-      win: 0.52
-      pick: 0.07
+      win: 0.53
+      pick: 0.08
       fit: 0.52
     Runeforged Hammer:
       total: 0.55
@@ -659,8 +659,8 @@ builds:
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.6
-      win: 0.52
-      pick: 0.07
+      win: 0.53
+      pick: 0.08
       fit: 0.67
     Amanita Charm:
       total: 0.54

@@ -5,26 +5,26 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Relativity
-  aspect_pick_rate: 0.09
-  aspect_win_rate: 0.56
+  aspect_pick_rate: 0.1
+  aspect_win_rate: 0.53
   slot_order:
   - name: Book of Thoth
     pick_rate: 0.35
-    win_rate: 0.48
+    win_rate: 0.47
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.22
       win_rate: 0.46
     - name: Tyrfing
       pick_rate: 0.06
-      win_rate: 0.59
+      win_rate: 0.58
   - name: Spear of Desolation
     pick_rate: 0.23
-    win_rate: 0.46
+    win_rate: 0.47
     alternates:
     - name: Book of Thoth
       pick_rate: 0.15
-      win_rate: 0.47
+      win_rate: 0.48
     - name: Doom Orb
       pick_rate: 0.05
       win_rate: 0.52
@@ -33,18 +33,18 @@ builds:
     win_rate: 0.56
     alternates:
     - name: Polynomicon
-      pick_rate: 0.11
-      win_rate: 0.45
+      pick_rate: 0.12
+      win_rate: 0.47
     - name: Rod of Tahuti
       pick_rate: 0.09
-      win_rate: 0.44
+      win_rate: 0.43
   - name: Rod of Tahuti
     pick_rate: 0.26
     win_rate: 0.5
     alternates:
     - name: Nimble Ring
       pick_rate: 0.12
-      win_rate: 0.51
+      win_rate: 0.5
     - name: Obsidian Shard
       pick_rate: 0.09
       win_rate: 0.53
@@ -54,17 +54,17 @@ builds:
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.13
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Nimble Ring
       pick_rate: 0.08
       win_rate: 0.51
   - name: Evil Eye
-    pick_rate: 0.07
+    pick_rate: 0.08
     win_rate: 0.4
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.06
-      win_rate: 0.38
+      win_rate: 0.41
     - name: Obsidian Shard
       pick_rate: 0.06
       win_rate: 0.59
@@ -74,19 +74,19 @@ builds:
     win_rate: 0.52
   - name: Sands of Time
     pick_rate: 0.22
-    win_rate: 0.42
+    win_rate: 0.41
   - name: Archmage's Gem
     pick_rate: 0.09
     win_rate: 0.56
   source_url: https://smitebrain.com/gods/chronos/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.49175824175824173
-  god_matches_won: 537
-  god_matches_played: 1092
+  last_verified: '2026-08-11'
+  god_win_rate: 0.4860383944153578
+  god_matches_won: 557
+  god_matches_played: 1146
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -172,8 +172,8 @@ builds:
   - Spear of the Magus
   - Obsidian Shard
   flex_slots:
-  - The Cosmic Horror
   - Spear of Desolation
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -210,7 +210,7 @@ builds:
     Spear of Desolation:
       total: 0.49
       efficiency: 0.52
-      win: 0.46
+      win: 0.47
       pick: 0.23
       fit: 0.56
     The Cosmic Horror:
@@ -342,9 +342,9 @@ builds:
       pick: 0.0
       fit: 0.76
     Spear of Desolation:
-      total: 0.5
+      total: 0.51
       efficiency: 0.52
-      win: 0.46
+      win: 0.47
       pick: 0.23
       fit: 0.66
     The Cosmic Horror:
@@ -497,7 +497,7 @@ builds:
     Spear of Desolation:
       total: 0.49
       efficiency: 0.52
-      win: 0.46
+      win: 0.47
       pick: 0.23
       fit: 0.59
     Obsidian Shard:
@@ -523,8 +523,8 @@ builds:
   - Gluttonous Grimoire
   - The Crusher
   flex_slots:
-  - Hydra's Lament
   - Death Metal
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -540,7 +540,7 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge, The
-    Crusher, Soul Gem, Tyrfing, Hydra''s Lament, Death Metal, Obsidian Shard, The
+    Crusher, Soul Gem, Hydra''s Lament, Death Metal, Tyrfing, Obsidian Shard, The
     Reaper, Lernaean Bow, Spear of the Magus, Runeforged Hammer, Bragi''s Harp, Genji''s
     Guard, Berserker''s Shield, The Cosmic Horror, Riptalon, Golden Blade, Damaru,
     Tekko-Kagi, Heartseeker, Blood-Bound Book, Dominance, Bancroft''s Talon, Bracer
@@ -557,7 +557,7 @@ builds:
     Tyrfing:
       total: 0.51
       efficiency: 0.47
-      win: 0.59
+      win: 0.58
       pick: 0.06
       fit: 0.51
     Hydra's Lament:
@@ -633,9 +633,9 @@ builds:
       pick: 0.0
       fit: 0.47
     Tyrfing:
-      total: 0.52
+      total: 0.51
       efficiency: 0.47
-      win: 0.59
+      win: 0.58
       pick: 0.06
       fit: 0.54
     Gluttonous Grimoire:
@@ -711,7 +711,7 @@ builds:
     Spear of Desolation:
       total: 0.49
       efficiency: 0.52
-      win: 0.46
+      win: 0.47
       pick: 0.23
       fit: 0.56
     The Cosmic Horror:
@@ -799,7 +799,7 @@ builds:
   swaps:
   - added: Nimble Ring
     removed: Spear of Desolation
-    reason: community 56% win over 251 matches (vs 49% on this god), taking the model's
+    reason: community 56% win over 264 matches (vs 49% on this god), taking the model's
       weakest slot from Spear of Desolation
   starter: *id001
 - source: suggested
@@ -1162,13 +1162,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
-  - Chronos' Pendant
   - Freya's Tears
+  - Spear of Desolation
   - Spectral Armor
   - Soul Gem
   flex_slots:
   - Freya's Tears
-  - Chronos' Pendant
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1202,18 +1202,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
-    Chronos' Pendant:
-      total: 0.48
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Freya's Tears:
       total: 0.48
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Spear of Desolation:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.47
+      pick: 0.23
+      fit: 0.52
     Spectral Armor:
       total: 0.49
       efficiency: 0.59
@@ -1304,15 +1304,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
-  - Tyrfing
   - The Crusher
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Berserker's Shield
-  - Tyrfing
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1329,13 +1329,19 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Soul Gem, Gluttonous Grimoire, Jotunn''s
     Revenge, Amanita Charm, Pharaoh''s Curse, The Crusher, Rod of Asclepius, Berserker''s
-    Shield, Tyrfing, Genji''s Guard, Shogun''s Ofuda, Hydra''s Lament, Triton''s Conch,
+    Shield, Genji''s Guard, Shogun''s Ofuda, Tyrfing, Hydra''s Lament, Triton''s Conch,
     Obsidian Shard, Lernaean Bow, Death Metal, Spectral Armor, Eros'' Bow, Runeforged
     Hammer, Spear of the Magus, Golden Blade, Bragi''s Harp, Riptalon, Lifebinder,
     Bracer of The Abyss, The Cosmic Horror, Breastplate of Valor, Oni Hunter''s Garb,
     The Reaper, Erosion, Kinetic Cuirass, Blood-Bound Book, Dominance, Chronos'' Pendant,
     Doublet of Binding, Bancroft''s Talon, Silverbranch Bow, Tekko-Kagi.'
   slot_scores:
+    Genji's Guard:
+      total: 0.5
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.18
     Berserker's Shield:
       total: 0.51
       efficiency: 0.71
@@ -1348,12 +1354,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Tyrfing:
-      total: 0.5
-      efficiency: 0.47
-      win: 0.59
-      pick: 0.06
-      fit: 0.47
     The Crusher:
       total: 0.51
       efficiency: 0.65
@@ -1517,7 +1517,7 @@ builds:
   swaps:
   - added: Nimble Ring
     removed: Breastplate of Valor
-    reason: community 56% win over 251 matches (vs 49% on this god), taking the model's
+    reason: community 56% win over 264 matches (vs 49% on this god), taking the model's
       weakest slot from Breastplate of Valor
   starter: *id001
   aspect: Aspect of Relativity

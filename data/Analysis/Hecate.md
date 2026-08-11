@@ -2,23 +2,22 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.65 | 0.71 | 0.59 | 0.62 | 0.29 | 1.00 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.64 | 0.67 | 0.52 | 0.62 | 0.57 | 1.00 | fair |  |  |
+| Soul Gem | 0.65 | 0.71 | 0.59 | 0.62 | 0.28 | 1.00 | fair | burst, sustain, aura |  |
+| Spear of Desolation | 0.65 | 0.67 | 0.52 | 0.63 | 0.57 | 1.00 | fair |  |  |
 | Obsidian Shard | 0.60 | 0.61 | 0.54 | 0.64 | 0.26 | 0.77 | fair |  |  |
-| Soul Reaver | 0.59 | 0.48 | 0.46 | 0.78 | 0.06 | 0.51 | fair | burst |  |
 | The World Stone | 0.59 | 0.57 | 0.49 | 0.65 | 0.16 | 0.77 | fair |  |  |
 | Gluttonous Grimoire | 0.59 | 0.72 | 0.66 | 0.50 | 0.00 | 0.87 | undervalued | burst | **UNDERRATED** |
-| Rod of Tahuti | 0.57 | 0.54 | 0.44 | 0.64 | 0.34 | 0.77 | premium |  |  |
-| Chronos' Pendant | 0.55 | 0.58 | 0.56 | 0.57 | 0.06 | 0.64 | fair |  | **UNDERRATED** |
+| Rod of Tahuti | 0.57 | 0.54 | 0.44 | 0.64 | 0.33 | 0.77 | premium |  |  |
+| Chronos' Pendant | 0.56 | 0.58 | 0.56 | 0.58 | 0.07 | 0.64 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.55 | 0.65 | 0.60 | 0.50 | 0.00 | 0.77 | fair |  | **UNDERRATED** |
 | The Cosmic Horror | 0.54 | 0.64 | 0.58 | 0.50 | 0.00 | 0.77 | fair |  | **UNDERRATED** |
 | Dreamer's Idol | 0.51 | 0.57 | 0.49 | 0.50 | 0.00 | 0.77 | fair | cc-immunity | **UNDERRATED** |
 | Genji's Guard | 0.51 | 0.57 | 0.72 | 0.50 | 0.00 | 0.23 | undervalued |  | **UNDERRATED** |
 | Doom Orb | 0.51 | 0.57 | 0.49 | 0.50 | 0.00 | 0.77 | fair |  | **UNDERRATED** |
 | Gem of Focus | 0.50 | 0.55 | 0.51 | 0.50 | 0.00 | 0.64 | fair | mobility | **UNDERRATED** |
+| Book of Thoth | 0.50 | 0.41 | 0.42 | 0.62 | 0.22 | 0.41 | premium |  |  |
 | Death Metal | 0.50 | 0.54 | 0.60 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Rod of Asclepius | 0.49 | 0.54 | 0.59 | 0.50 | 0.00 | 0.41 | fair | sustain, aura | **UNDERRATED** |
-| Book of Thoth | 0.49 | 0.41 | 0.42 | 0.61 | 0.22 | 0.41 | premium |  |  |
 | Blood-Bound Book | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.41 | fair | sustain | **UNDERRATED** |
 | Helm of Radiance | 0.49 | 0.53 | 0.58 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Breastplate of Valor | 0.49 | 0.53 | 0.65 | 0.50 | 0.00 | 0.23 | undervalued |  | **UNDERRATED** |
@@ -32,6 +31,7 @@
 | Alchemist Coat | 0.47 | 0.49 | 0.52 | 0.50 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.47 | 0.48 | 0.59 | 0.50 | 0.00 | 0.23 | fair |  | **UNDERRATED** |
 | Typhon’s Heart | 0.46 | 0.48 | 0.51 | 0.50 | 0.00 | 0.41 | fair |  |  |
+| Soul Reaver | 0.46 | 0.48 | 0.46 | 0.50 | 0.00 | 0.51 | fair | burst |  |
 | Bragi's Harp | 0.46 | 0.47 | 0.46 | 0.50 | 0.00 | 0.51 | fair | burst |  |
 | Shield of the Phoenix | 0.46 | 0.47 | 0.57 | 0.50 | 0.00 | 0.23 | fair | sustain |  |
 | Lifebinder | 0.46 | 0.47 | 0.49 | 0.50 | 0.00 | 0.41 | fair | sustain, aura |  |

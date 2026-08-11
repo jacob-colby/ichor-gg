@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of the General
   aspect_pick_rate: 0.68
-  aspect_win_rate: 0.55
+  aspect_win_rate: 0.56
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.22
-    win_rate: 0.64
+    pick_rate: 0.23
+    win_rate: 0.65
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.1
       win_rate: 0.57
     - name: Yogi's Necklace
-      pick_rate: 0.1
-      win_rate: 0.51
+      pick_rate: 0.09
+      win_rate: 0.5
   - name: Breastplate of Valor
     pick_rate: 0.26
-    win_rate: 0.64
+    win_rate: 0.65
     alternates:
     - name: Genji's Guard
       pick_rate: 0.22
-      win_rate: 0.56
-    - name: Heartwood Charm
-      pick_rate: 0.06
-      win_rate: 0.46
+      win_rate: 0.57
+    - name: Shifter's Shield
+      pick_rate: 0.07
+      win_rate: 0.53
   - name: Genji's Guard
     pick_rate: 0.29
-    win_rate: 0.59
+    win_rate: 0.6
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.2
-      win_rate: 0.56
+      win_rate: 0.57
     - name: Freya's Tears
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.37
   - name: Shell of Rebuke
-    pick_rate: 0.07
-    win_rate: 0.66
+    pick_rate: 0.08
+    win_rate: 0.67
     alternates:
     - name: Genji's Guard
       pick_rate: 0.12
-      win_rate: 0.59
-    - name: Breastplate of Valor
+      win_rate: 0.6
+    - name: Heartwood Charm
       pick_rate: 0.06
-      win_rate: 0.63
+      win_rate: 0.65
   - name: Freya's Tears
     pick_rate: 0.06
-    win_rate: 0.81
+    win_rate: 0.82
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.64
+      win_rate: 0.63
     - name: Dwarven Plate
       pick_rate: 0.05
-      win_rate: 0.74
-  - name: Adroit Ring
+      win_rate: 0.72
+  - name: Engraved Guard
     pick_rate: 0.05
-    win_rate: 0.54
+    win_rate: 0.5
     alternates:
-    - name: Engraved Guard
+    - name: Medal of Defense
       pick_rate: 0.05
-      win_rate: 0.54
+      win_rate: 0.79
     - name: Legionnaire Armor
       pick_rate: 0.05
-      win_rate: 0.46
+      win_rate: 0.5
   community_starters:
   - name: Sands of Time
     pick_rate: 0.26
     win_rate: 0.55
   - name: Pendulum of The Ages
     pick_rate: 0.15
-    win_rate: 0.58
+    win_rate: 0.62
   - name: Bluestone Brooch
-    pick_rate: 0.09
-    win_rate: 0.69
+    pick_rate: 0.1
+    win_rate: 0.7
   source_url: https://smitebrain.com/gods/guan-yu/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.5688073394495413
-  god_matches_won: 310
-  god_matches_played: 545
+  last_verified: '2026-08-11'
+  god_win_rate: 0.5763293310463122
+  god_matches_won: 336
+  god_matches_played: 583
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -119,14 +119,14 @@ builds:
     this god: Freya''s Tears, Berserker''s Shield, Amanita Charm, Kinetic Cuirass,
     Eye of Providence, Jotunn''s Revenge, Hydra''s Lament, The Crusher, Runeforged
     Hammer, Oni Hunter''s Garb, Shield of the Phoenix, Shield Splitter, Pharaoh''s
-    Curse, Eye of the Storm, Golden Blade, Yogi''s Necklace, Erosion, Spectral Armor,
-    Lernaean Bow, Draconic Scale, Avenging Blade, Shogun''s Ofuda, Leviathan''s Hide,
-    Damaru, Midgardian Mail, Hide of the Nemean Lion.'
+    Curse, Eye of the Storm, Golden Blade, Erosion, Spectral Armor, Lernaean Bow,
+    Yogi''s Necklace, Draconic Scale, Avenging Blade, Shogun''s Ofuda, Leviathan''s
+    Hide, Damaru, Midgardian Mail, Hide of the Nemean Lion.'
   slot_scores:
     Genji's Guard:
       total: 0.58
       efficiency: 0.72
-      win: 0.59
+      win: 0.6
       pick: 0.29
       fit: 0.32
     Berserker's Shield:
@@ -138,20 +138,20 @@ builds:
     Breastplate of Valor:
       total: 0.58
       efficiency: 0.65
-      win: 0.64
+      win: 0.65
       pick: 0.26
       fit: 0.32
     Freya's Tears:
       total: 0.65
       efficiency: 0.59
-      win: 0.81
+      win: 0.82
       pick: 0.06
       fit: 0.49
     Shifter's Shield:
       total: 0.57
       efficiency: 0.55
-      win: 0.64
-      pick: 0.22
+      win: 0.65
+      pick: 0.23
       fit: 0.5
     Amanita Charm:
       total: 0.53
@@ -191,20 +191,20 @@ builds:
     this god: Freya''s Tears, Amanita Charm, Shield of the Phoenix, Berserker''s Shield,
     Kinetic Cuirass, Eye of Providence, Jotunn''s Revenge, Runeforged Hammer, Chandra''s
     Grace, Oni Hunter''s Garb, Hydra''s Lament, The Crusher, The Reaper, Pharaoh''s
-    Curse, Golden Blade, Eye of the Storm, Yogi''s Necklace, Shield Splitter, Riptalon,
+    Curse, Golden Blade, Eye of the Storm, Shield Splitter, Riptalon, Yogi''s Necklace,
     Phoenix Feather, Spectral Armor, Erosion, Lernaean Bow, Avenging Blade, Draconic
     Scale, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
       total: 0.58
       efficiency: 0.72
-      win: 0.59
+      win: 0.6
       pick: 0.29
       fit: 0.3
     Breastplate of Valor:
-      total: 0.57
+      total: 0.58
       efficiency: 0.65
-      win: 0.64
+      win: 0.65
       pick: 0.26
       fit: 0.3
     Shield of the Phoenix:
@@ -214,16 +214,16 @@ builds:
       pick: 0.0
       fit: 0.79
     Freya's Tears:
-      total: 0.64
+      total: 0.65
       efficiency: 0.59
-      win: 0.81
+      win: 0.82
       pick: 0.06
       fit: 0.45
     Shifter's Shield:
       total: 0.57
       efficiency: 0.55
-      win: 0.64
-      pick: 0.22
+      win: 0.65
+      pick: 0.23
       fit: 0.5
     Amanita Charm:
       total: 0.58
@@ -261,20 +261,20 @@ builds:
     for this god: Freya''s Tears, Jotunn''s Revenge, The Crusher, Berserker''s Shield,
     Amanita Charm, Kinetic Cuirass, Avenging Blade, Eye of Providence, Screeching
     Gargoyle, Stone of Binding, Hydra''s Lament, Oni Hunter''s Garb, Runeforged Hammer,
-    Void Shield, The Reaper, Yogi''s Necklace, Shield of the Phoenix, Void Stone,
-    Pharaoh''s Curse, Shield Splitter, Riptalon, Golden Blade, Spectral Armor, Lernaean
+    Void Shield, The Reaper, Shield of the Phoenix, Void Stone, Pharaoh''s Curse,
+    Shield Splitter, Riptalon, Yogi''s Necklace, Golden Blade, Spectral Armor, Lernaean
     Bow, Silverbranch Bow, Eye of the Storm.'
   slot_scores:
     Genji's Guard:
       total: 0.57
       efficiency: 0.72
-      win: 0.59
+      win: 0.6
       pick: 0.29
       fit: 0.24
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.65
-      win: 0.64
+      win: 0.65
       pick: 0.26
       fit: 0.24
     Jotunn's Revenge:
@@ -286,14 +286,14 @@ builds:
     Freya's Tears:
       total: 0.63
       efficiency: 0.59
-      win: 0.81
+      win: 0.82
       pick: 0.06
       fit: 0.37
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
-      win: 0.64
-      pick: 0.22
+      win: 0.65
+      pick: 0.23
       fit: 0.38
     The Crusher:
       total: 0.53
@@ -331,7 +331,7 @@ builds:
     this god: Freya''s Tears, Berserker''s Shield, Amanita Charm, Kinetic Cuirass,
     Golden Blade, Eye of Providence, Pharaoh''s Curse, Jotunn''s Revenge, Oni Hunter''s
     Garb, The Crusher, Riptalon, Hydra''s Lament, Runeforged Hammer, Lernaean Bow,
-    Yogi''s Necklace, Shield of the Phoenix, Shogun''s Ofuda, Tyrfing, Silverbranch
+    Shield of the Phoenix, Shogun''s Ofuda, Tyrfing, Yogi''s Necklace, Silverbranch
     Bow, Spectral Armor, Shield Splitter, Erosion, Eye of the Storm, Dominance, Draconic
     Scale, Leviathan''s Hide.'
   slot_scores:
@@ -342,9 +342,9 @@ builds:
       pick: 0.0
       fit: 0.56
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.59
+      win: 0.6
       pick: 0.29
       fit: 0.22
     Berserker's Shield:
@@ -354,15 +354,15 @@ builds:
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.64
+      win: 0.65
       pick: 0.26
       fit: 0.22
     Freya's Tears:
-      total: 0.62
+      total: 0.63
       efficiency: 0.59
-      win: 0.81
+      win: 0.82
       pick: 0.06
       fit: 0.34
     Pharaoh's Curse:
@@ -401,14 +401,14 @@ builds:
     + fit + win/pick). Underrated for this god: Freya''s Tears, Berserker''s Shield,
     Jotunn''s Revenge, Amanita Charm, Hydra''s Lament, Kinetic Cuirass, Shield of
     the Phoenix, Eye of Providence, Oni Hunter''s Garb, The Crusher, Runeforged Hammer,
-    Yogi''s Necklace, Screeching Gargoyle, Pharaoh''s Curse, Chandra''s Grace, Spectral
+    Screeching Gargoyle, Pharaoh''s Curse, Chandra''s Grace, Yogi''s Necklace, Spectral
     Armor, Gladiator''s Shield, Erosion, Shield Splitter, Golden Blade, Draconic Scale,
     Prophetic Cloak, Arondight, Eye of the Storm, Shogun''s Ofuda, Lernaean Bow.'
   slot_scores:
     Genji's Guard:
       total: 0.6
       efficiency: 0.72
-      win: 0.59
+      win: 0.6
       pick: 0.29
       fit: 0.44
     Berserker's Shield:
@@ -420,7 +420,7 @@ builds:
     Breastplate of Valor:
       total: 0.6
       efficiency: 0.65
-      win: 0.64
+      win: 0.65
       pick: 0.26
       fit: 0.44
     Jotunn's Revenge:
@@ -432,14 +432,14 @@ builds:
     Freya's Tears:
       total: 0.66
       efficiency: 0.59
-      win: 0.81
+      win: 0.82
       pick: 0.06
       fit: 0.58
     Shifter's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.64
-      pick: 0.22
+      win: 0.65
+      pick: 0.23
       fit: 0.4
   starter: *id001
 - source: suggested
@@ -484,7 +484,7 @@ builds:
     Genji's Guard:
       total: 0.58
       efficiency: 0.72
-      win: 0.59
+      win: 0.6
       pick: 0.29
       fit: 0.32
     Berserker's Shield:
@@ -554,7 +554,7 @@ builds:
     Genji's Guard:
       total: 0.58
       efficiency: 0.72
-      win: 0.59
+      win: 0.6
       pick: 0.29
       fit: 0.32
     Berserker's Shield:
@@ -572,7 +572,7 @@ builds:
     Freya's Tears:
       total: 0.65
       efficiency: 0.59
-      win: 0.81
+      win: 0.82
       pick: 0.06
       fit: 0.49
     Amanita Charm:
@@ -584,7 +584,7 @@ builds:
   swaps:
   - added: Freya's Tears
     removed: Jotunn's Revenge
-    reason: community 81% win over 33 matches (vs 57% on this god), taking the model's
+    reason: community 82% win over 35 matches (vs 58% on this god), taking the model's
       weakest slot from Jotunn's Revenge
   starter: *id001
 ---

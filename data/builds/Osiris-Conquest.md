@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of the Fragmented
   aspect_pick_rate: 0.12
-  aspect_win_rate: 0.52
+  aspect_win_rate: 0.49
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.57
-    win_rate: 0.48
+    pick_rate: 0.58
+    win_rate: 0.49
     alternates:
     - name: Golden Blade
-      pick_rate: 0.15
-      win_rate: 0.61
+      pick_rate: 0.14
+      win_rate: 0.6
     - name: Berserker's Shield
       pick_rate: 0.05
-      win_rate: 0.36
+      win_rate: 0.42
   - name: Berserker's Shield
     pick_rate: 0.32
     win_rate: 0.5
     alternates:
     - name: Golden Blade
       pick_rate: 0.12
-      win_rate: 0.47
+      win_rate: 0.49
     - name: Shifter's Shield
-      pick_rate: 0.1
-      win_rate: 0.6
+      pick_rate: 0.09
+      win_rate: 0.59
   - name: Kinetic Cuirass
-    pick_rate: 0.2
-    win_rate: 0.48
+    pick_rate: 0.19
+    win_rate: 0.49
     alternates:
     - name: Berserker's Shield
-      pick_rate: 0.19
-      win_rate: 0.47
+      pick_rate: 0.2
+      win_rate: 0.46
     - name: Shogun's Ofuda
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.47
   - name: Dwarven Plate
     pick_rate: 0.11
-    win_rate: 0.5
+    win_rate: 0.52
     alternates:
     - name: Kinetic Cuirass
-      pick_rate: 0.1
+      pick_rate: 0.11
       win_rate: 0.38
     - name: Berserker's Shield
       pick_rate: 0.08
       win_rate: 0.64
   - name: Hide of the Nemean Lion
-    pick_rate: 0.07
-    win_rate: 0.61
+    pick_rate: 0.08
+    win_rate: 0.63
     alternates:
     - name: Dwarven Plate
-      pick_rate: 0.08
-      win_rate: 0.41
+      pick_rate: 0.09
+      win_rate: 0.44
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.46
+      win_rate: 0.47
   - name: Medal of Defense
-    pick_rate: 0.06
+    pick_rate: 0.07
     win_rate: 0.33
     alternates:
     - name: Hide of the Nemean Lion
       pick_rate: 0.1
-      win_rate: 0.6
+      win_rate: 0.62
     - name: Shell of Rebuke
       pick_rate: 0.06
-      win_rate: 0.57
+      win_rate: 0.63
   community_starters:
   - name: Death's Embrace
     pick_rate: 0.43
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Death's Toll
     pick_rate: 0.27
-    win_rate: 0.37
-  - name: Bumba's Spear
-    pick_rate: 0.09
-    win_rate: 0.5
+    win_rate: 0.38
+  - name: Sundering Axe
+    pick_rate: 0.1
+    win_rate: 0.6
   source_url: https://smitebrain.com/gods/osiris/
-  last_verified: '2026-08-10'
-  god_win_rate: 0.4868421052631579
-  god_matches_won: 222
-  god_matches_played: 456
+  last_verified: '2026-08-11'
+  god_win_rate: 0.49390243902439024
+  god_matches_won: 243
+  god_matches_played: 492
   god_division: obsidian
   god_window_start: '2026-07-28'
-  god_window_end: '2026-08-10'
-  god_matches_analyzed: 17490
+  god_window_end: '2026-08-11'
+  god_matches_analyzed: 18835
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -96,12 +96,12 @@ builds:
   - Golden Blade
   - Berserker's Shield
   - Kinetic Cuirass
-  - Runeforged Hammer
+  - Hide of the Nemean Lion
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Runeforged Hammer
   - Kinetic Cuirass
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -110,8 +110,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Hide of the Nemean Lion — physical protection
-    swap_item: Hide of the Nemean Lion
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -126,8 +126,8 @@ builds:
     Golden Blade:
       total: 0.56
       efficiency: 0.55
-      win: 0.61
-      pick: 0.15
+      win: 0.6
+      pick: 0.14
       fit: 0.57
     Berserker's Shield:
       total: 0.56
@@ -136,17 +136,17 @@ builds:
       pick: 0.32
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.6
-      win: 0.48
-      pick: 0.2
-      fit: 0.45
-    Runeforged Hammer:
       total: 0.51
       efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
+      win: 0.49
+      pick: 0.19
+      fit: 0.45
+    Hide of the Nemean Lion:
+      total: 0.51
+      efficiency: 0.54
+      win: 0.63
+      pick: 0.08
+      fit: 0.25
     The Crusher:
       total: 0.51
       efficiency: 0.65
@@ -172,18 +172,18 @@ builds:
   - Hide of the Nemean Lion
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Hide of the Nemean Lion
+  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -198,8 +198,8 @@ builds:
     Golden Blade:
       total: 0.55
       efficiency: 0.55
-      win: 0.61
-      pick: 0.15
+      win: 0.6
+      pick: 0.14
       fit: 0.53
     Berserker's Shield:
       total: 0.56
@@ -210,8 +210,8 @@ builds:
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.6
-      win: 0.48
-      pick: 0.2
+      win: 0.49
+      pick: 0.19
       fit: 0.54
     Shield of the Phoenix:
       total: 0.52
@@ -220,10 +220,10 @@ builds:
       pick: 0.0
       fit: 0.63
     Hide of the Nemean Lion:
-      total: 0.51
+      total: 0.52
       efficiency: 0.54
-      win: 0.61
-      pick: 0.07
+      win: 0.63
+      pick: 0.08
       fit: 0.3
     Amanita Charm:
       total: 0.57
@@ -239,21 +239,21 @@ builds:
   - Avenging Blade
   - Berserker's Shield
   - Jotunn's Revenge
+  - Hide of the Nemean Lion
   - The Crusher
-  - Amanita Charm
   flex_slots:
   - Avenging Blade
-  - Amanita Charm
+  - Hide of the Nemean Lion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Hide of the Nemean Lion — physical protection
-    swap_item: Hide of the Nemean Lion
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -266,10 +266,10 @@ builds:
     Eye of the Storm, Shogun''s Ofuda.'
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.61
-      pick: 0.15
+      win: 0.6
+      pick: 0.14
       fit: 0.42
     Avenging Blade:
       total: 0.51
@@ -289,41 +289,41 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Hide of the Nemean Lion:
+      total: 0.5
+      efficiency: 0.54
+      win: 0.63
+      pick: 0.08
+      fit: 0.19
     The Crusher:
       total: 0.53
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Amanita Charm:
-      total: 0.5
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.26
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Genji's Guard
   - Berserker's Shield
+  - Kinetic Cuirass
   - Hide of the Nemean Lion
   - Riptalon
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
+  - Kinetic Cuirass
   - Riptalon
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -336,28 +336,28 @@ builds:
     Storm, Shield Splitter.'
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.55
-      win: 0.61
-      pick: 0.15
+      win: 0.6
+      pick: 0.14
       fit: 0.6
-    Genji's Guard:
-      total: 0.49
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.1
     Berserker's Shield:
       total: 0.55
       efficiency: 0.71
       win: 0.5
       pick: 0.32
       fit: 0.41
-    Hide of the Nemean Lion:
+    Kinetic Cuirass:
       total: 0.49
+      efficiency: 0.6
+      win: 0.49
+      pick: 0.19
+      fit: 0.36
+    Hide of the Nemean Lion:
+      total: 0.5
       efficiency: 0.54
-      win: 0.61
-      pick: 0.07
+      win: 0.63
+      pick: 0.08
       fit: 0.19
     Riptalon:
       total: 0.49
@@ -392,8 +392,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Hide of the Nemean Lion — physical protection
+    swap_item: Hide of the Nemean Lion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -402,14 +402,14 @@ builds:
     Revenge, Hydra''s Lament, Breastplate of Valor, Shield of the Phoenix, Amanita
     Charm, Freya''s Tears, The Crusher, Oni Hunter''s Garb, Eye of Providence, Runeforged
     Hammer, Pharaoh''s Curse, Chandra''s Grace, Lernaean Bow, Yogi''s Necklace, Screeching
-    Gargoyle, Damaru, Spectral Armor, Arondight, Gladiator''s Shield, Shogun''s Ofuda,
-    Avenging Blade, Eye of the Storm, Leviathan''s Hide, Erosion.'
+    Gargoyle, Damaru, Spectral Armor, Arondight, Gladiator''s Shield, Avenging Blade,
+    Shogun''s Ofuda, Eye of the Storm, Leviathan''s Hide, Erosion.'
   slot_scores:
     Golden Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.55
-      win: 0.61
-      pick: 0.15
+      win: 0.6
+      pick: 0.14
       fit: 0.34
     Genji's Guard:
       total: 0.53
@@ -478,8 +478,8 @@ builds:
     Golden Blade:
       total: 0.56
       efficiency: 0.55
-      win: 0.61
-      pick: 0.15
+      win: 0.6
+      pick: 0.14
       fit: 0.57
     Berserker's Shield:
       total: 0.56
@@ -488,10 +488,10 @@ builds:
       pick: 0.32
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.51
       efficiency: 0.6
-      win: 0.48
-      pick: 0.2
+      win: 0.49
+      pick: 0.19
       fit: 0.45
     Runeforged Hammer:
       total: 0.51
