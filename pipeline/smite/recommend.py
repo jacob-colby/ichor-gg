@@ -165,7 +165,8 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         core = assemble.assemble_core(rows, items_by_name, n=6,
                                       max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
                                       require=require,
-                                      stat_caps=weights.get("stat_caps"))
+                                      stat_caps=weights.get("stat_caps"),
+                                      **assemble.coherence_args(items, weights))
         archetype = flavor or "core"
         if flavor is None:
             core_rows, core_profile = rows, profile
@@ -186,7 +187,8 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         model_rows = sorted(core_rows, key=lambda r: (-r["quality"], r["item"]))
         model_core = assemble.assemble_core(model_rows, items_by_name, n=6,
                                             max_lifesteal=max_ls,
-                                            stat_caps=weights.get("stat_caps"))
+                                            stat_caps=weights.get("stat_caps"),
+                                            **assemble.coherence_args(items, weights))
         entries.append(_entry("model", model_core, model_rows, items_by_name,
                               tags_map, weights, core_profile, flex_count,
                               starter, aspect_name))
@@ -238,6 +240,7 @@ def main(argv=None):
         items = load_items()
         weights = scoring.load_weights(WEIGHTS_PATH)
         efficiency.PRICE_PASSIVES = bool(weights.get("price_passives"))
+        efficiency.PRICE_STACKS = bool(weights.get("price_stacks"))
         tags_map = scoring.load_tags(TAGS_PATH)
         # Only buildable items need effect tags — a component is never in a
         # build, so listing all 49 of them turns a useful warning into noise

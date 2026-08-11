@@ -150,6 +150,129 @@ def unconditional_grants(item):
     return out
 
 
+# ── Persistent stacks: the end state you actually play with ────────────────
+#
+# `CONDITIONAL_MARKERS` matches `\bStack`, so every stacking item was excluded
+# from `unconditional_grants` alongside on-use buffs and health thresholds.
+# That lumped together two things the game treats as opposites:
+#
+#   PERSISTENT   Devourer's Gauntlet stacks off minion kills to a 75-stack cap
+#                and never drops them. By ten minutes it is +40 Strength and
+#                +6.75% Lifesteal, and it stays that for the rest of the match.
+#   TRANSIENT    Doom Orb's five stacks "last 10s" and "fall off one at a
+#                time"; Hastened Fatalis's buff "lasts 2s"; Necronomicon loses
+#                four stacks on death.
+#
+# A transient stack is worth some fraction of its number that depends on uptime
+# nobody has measured — the original judgement, and still right. A persistent
+# one is a delayed but unconditional grant, and pricing it at zero is part of
+# why the gold model calls these items overpriced: Book of Thoth is in 89% of
+# some gods' community builds and the recommender's core took it ZERO times.
+#
+# Any decay marker at all disqualifies an item. The asymmetry is deliberate and
+# matches this module: a missed persistent stacker costs one item's signal, a
+# transient one counted at full value overprices it by its own headline number.
+_STACK_DECAY = re.compile(
+    r"lasts?\s*\d|fall off|On Death:\s*Lose|for \d+\s*s\b|expire", re.I)
+
+_STACK_CAP = re.compile(
+    r"\(?\s*max(?:imum)?\s*(\d+)\s*stacks?"
+    r"|stacks?\s+up\s+to\s+(\d+)"
+    r"|at\s+(\d+)\s+(?:\w+\s+)?stacks?", re.I)
+
+#: Where a per-stack grant starts. The grants themselves are read by `_GRANT`
+#: from a bounded window after the cue rather than by one heroic pattern —
+#: these lines run "+.4 Strength +0.05% Lifesteal" with no separator, and a
+#: single regex that tried to span them kept swallowing the next sentence.
+_PER_STACK_CUE = re.compile(
+    r"(?:each|per)\s+[\w' ]*?stacks?\s*[:,]?\s*(?:grants?\s*[:,]?\s*)?"
+    r"|stacks?\s+grants?\s+", re.I)
+
+#: The at-cap bonus: `At 75 Stacks, gain: +10 Strength`, `At 40 Stacks, Item
+#: evolves and gains: +100 Max Health`.
+_EVOLVE_CUE = re.compile(
+    r"at\s+\d+\s+(?:\w+\s+)?stacks?\s*[,:]?\s*"
+    r"(?:item\s+evolves\s+and\s+)?gains?\s*[:,]?\s*", re.I)
+
+#: How far past a cue to read grants. Long enough for the longest real line
+#: (Devourer's "+.4 Strength +0.05% Lifesteal") and short enough that the
+#: following sentence cannot be absorbed.
+_GRANT_WINDOW = 60
+
+
+#: A sentence break, which is a period followed by space or end — NOT any
+#: period. Devourer's Gauntlet grants "+.4 Strength", so splitting on a bare
+#: "." cut the fragment at the decimal point and found no grants at all.
+_SENTENCE_BREAK = re.compile(r"[.;](?=\s|$)|\bDamage dealt\b")
+
+#: Passive prose says "+10 Mana" where the stats table says "Max Mana". Applied
+#: only to grants read here, not to `_GRANT` globally, so the shipped-off
+#: `price_passives` path keeps the exact vocabulary it was measured with.
+_GRANT_ALIASES = {"Mana": "Max Mana", "Health": "Max Health"}
+_ALIAS_GRANT = re.compile(
+    r"\+\s*([\d.]+)\s*(%?)\s*(Mana|Health)\b(?!\s*Regen)")
+
+
+def _grants_after(text, cue, window=_GRANT_WINDOW):
+    """Stat grants in the `window` characters following each `cue` match,
+    stopping at the first sentence break so a neighbouring clause can't be
+    read as part of this one."""
+    out = {}
+    for m in cue.finditer(text or ""):
+        fragment = _SENTENCE_BREAK.split(text[m.end():m.end() + window])[0]
+        for amount, percent, stat in _GRANT.findall(fragment):
+            key = f"{stat} %" if percent else stat
+            out[key] = out.get(key, 0.0) + float(amount)
+        # Bare "Mana"/"Health" only where the canonical name did not already
+        # claim that span — `_STATS` is longest-first, so "Max Mana" and
+        # "Mana Regen" are matched above and must not be counted twice.
+        claimed = {s for _, _, s in _GRANT.findall(fragment)}
+        for amount, percent, stat in _ALIAS_GRANT.findall(fragment):
+            canonical = _GRANT_ALIASES[stat]
+            if canonical in claimed:
+                continue
+            key = f"{canonical} %" if percent else canonical
+            out[key] = out.get(key, 0.0) + float(amount)
+    return out
+
+
+def is_persistent_stacker(item):
+    """A stacking passive that reaches a cap and keeps it."""
+    text = item.get("passive") or ""
+    if not re.search(r"stack", text, re.I):
+        return False
+    if _STACK_DECAY.search(text):
+        return False
+    return bool(_STACK_CAP.search(text))
+
+
+def persistent_stack_grants(item):
+    """`{column: amount}` this item is worth once its stacks are full.
+
+    cap x per-stack grant, plus any at-cap evolve bonus. Returns `{}` unless
+    the cap and the per-stack numbers are both found and no decay clause is
+    present, because a half-parsed stack line is a wrong number rather than a
+    missing one."""
+    if not is_persistent_stacker(item):
+        return {}
+    text = item.get("passive") or ""
+    m = _STACK_CAP.search(text)
+    cap = int(next(g for g in m.groups() if g))
+    if cap <= 0:
+        return {}
+
+    out = {}
+    for key, amount in _grants_after(text, _PER_STACK_CUE).items():
+        out[key] = out.get(key, 0.0) + amount * cap
+    if not out:
+        # No per-stack line found. An evolve bonus alone is real but partial,
+        # and shipping half an item's value is the error this module exists to
+        # avoid — so say nothing rather than say a fraction.
+        return {}
+    for key, amount in _grants_after(text, _EVOLVE_CUE).items():
+        out[key] = out.get(key, 0.0) + amount
+    return out
+
 def effective_stats(item, base_values):
     """`base_values` with unconditional passive grants merged in.
 

@@ -108,3 +108,77 @@ def test_the_flag_actually_changes_the_priced_stats():
         assert efficiency.item_stat_values(gavel)[passives.ADAPTIVE_KEY] == 70.0
     finally:
         efficiency.PRICE_PASSIVES = False
+
+
+# ── Persistent vs transient stacks (shipped OFF — `price_stacks`) ───────────
+
+def _p(text):
+    return {"name": "X", "passive": text}
+
+
+def test_a_farm_stacked_item_is_persistent():
+    """Devourer's Gauntlet fills off minion kills and never drops a stack, so
+    by mid-game its full-stack value is what you are actually playing with."""
+    item = _p("Kill Minion or Jungle Monsters: +1 Stack. Each Stack grants: "
+              "+.4 Strength +0.05% Lifesteal At 75 Stacks, gain: +10 Strength +3% Lifesteal")
+    assert passives.is_persistent_stacker(item)
+    g = passives.persistent_stack_grants(item)
+    assert g["Strength"] == pytest.approx(75 * 0.4 + 10)          # 40
+    assert g["Lifesteal %"] == pytest.approx(75 * 0.05 + 3)       # 6.75
+
+
+def test_a_decimal_per_stack_value_is_not_cut_at_its_own_point():
+    """"+.4 Strength" contains a period. Splitting the fragment on any "." cut
+    it at the decimal and found no grants at all — the whole item read as
+    worth nothing."""
+    g = passives.persistent_stack_grants(
+        _p("Each Stack grants: +.4 Strength Stacks up to 10"))
+    assert g["Strength"] == pytest.approx(4.0)
+
+
+@pytest.mark.parametrize("text", [
+    "Per Stack: +8 Intelligence Max 5 Stacks. Stacks last 10s. Stacks fall off one at a time",
+    "+1 Stack of: +30 Intelligence Stacks up to 6 times. On Death: Lose 4 Stacks.",
+    "Melee hits grants 2 Stacks. Stacks up to 4 times. Buff lasts 2s.",
+])
+def test_a_transient_stack_is_refused(text):
+    """A stack with a duration or a loss clause is worth some fraction of its
+    number that depends on uptime nobody has measured. Counting it at face
+    value would overprice exactly the items this is meant to help."""
+    assert not passives.is_persistent_stacker(_p(text))
+    assert passives.persistent_stack_grants(_p(text)) == {}
+
+
+def test_bare_mana_in_prose_reads_as_max_mana():
+    """The stats table says "Max Mana"; passive prose says "+10 Mana". Book of
+    Thoth is 50 stacks of it and read as zero until these were reconciled."""
+    g = passives.persistent_stack_grants(
+        _p("Deal 900 Damage: +1 Mana Infusion Stack (Max 50 Stacks) "
+           "Per Mana Infusion Stack: +10 Mana."))
+    assert g == {"Max Mana": pytest.approx(500.0)}
+
+
+def test_mana_regen_is_not_mistaken_for_mana():
+    """"Mana Regen" is its own stat. The alias must not double-count it."""
+    g = passives.persistent_stack_grants(
+        _p("Each Stack grants: +2 Mana Regen Stacks up to 10"))
+    assert g == {"Mana Regen": pytest.approx(20.0)}
+
+
+def test_an_evolve_bonus_is_added_once_on_top_of_the_capped_stacks():
+    g = passives.persistent_stack_grants(
+        _p("Stacks grant +15 Max Health (max 40 Stacks). At 40 Stacks, "
+           "Item evolves and gains: +100 Max Health"))
+    assert g["Max Health"] == pytest.approx(40 * 15 + 100)
+
+
+def test_an_item_with_no_per_stack_line_says_nothing_rather_than_a_fraction():
+    """An evolve bonus alone is real but partial. Shipping half an item's
+    value is the error this module exists to avoid."""
+    assert passives.persistent_stack_grants(
+        _p("Stacks up to 40. At 40 Stacks, Item evolves and gains: +100 Max Health")) == {}
+
+
+def test_a_non_stacking_item_is_untouched():
+    assert passives.persistent_stack_grants(_p("+20% Attack Speed")) == {}
+    assert passives.persistent_stack_grants(_p("")) == {}
