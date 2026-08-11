@@ -161,9 +161,13 @@ function App() {
         <a href={toHash.home()} aria-label="ichor — home" className="press shrink-0 py-1">
           <Wordmark />
         </a>
-        {/* Only one of these two is ever in the accessibility tree — the
-            other is display:none at its breakpoint. */}
-        <LensTabs god={route.god && god ? route.god : undefined} lens={route.lens} compact
+        {/* The navbar carries the ROSTER's lenses and only those — they are
+            the site's global destinations, and this is the site's global
+            chrome. A god's lenses used to sit here too, which is precisely why
+            they read as global navigation; they now live under the god in
+            SubjectFrame. On a god's page this strip stays, so Items, Draft and
+            Method are still one click away from Ra rather than two. */}
+        <LensTabs lens={route.god && god ? undefined : route.lens} compact
           testId="lens-tabs-bar" className="hidden min-w-0 shrink-0 lg:block" />
         <div className="ml-auto min-w-0 max-w-xs shrink lg:max-w-md">
           <SubjectSearch gods={data.gods} items={data.items} />

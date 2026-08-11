@@ -88,7 +88,14 @@ function Verdict({ entry }: { entry?: GodTierEntry }) {
 /** The lens strip on its own, so the shell can seat it in the navbar where
  *  there is room and drop it to its own row where there isn't. */
 export function LensTabs({ god, lens, className = "", testId, compact = false }: {
-  god?: string; lens: Lens; className?: string; testId?: string;
+  god?: string;
+  /** The lens in view, or undefined when this strip's subject is NOT the one on
+   *  screen — the navbar's roster strip on a god's page. Undefined marks
+   *  nothing current, which is the truth: "Items" there is the item shop, and
+   *  lighting it up while the reader is on Ra's items lens would be a lie the
+   *  route can't back. */
+  lens?: Lens;
+  className?: string; testId?: string;
   /** Seated inside the navbar row, where it must not drive the row's height. */
   compact?: boolean;
 }) {
@@ -147,8 +154,9 @@ export function SubjectFrame({
 
   return (
     <>
-      <div data-testid="subject-header" className="plane border-b border-line bg-bg1 px-4 py-2 sm:px-6 sm:py-3">
-        <div className="mx-auto flex w-full max-w-[1440px] flex-wrap items-center gap-x-4 gap-y-1.5">
+      <div data-testid="subject-header" className="plane border-b border-line bg-bg1 px-4 pt-2 sm:px-6 sm:pt-3">
+        <div className="mx-auto w-full max-w-[1440px]">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
           {name ? (
             <>
               <button type="button" onClick={onPickGod}
@@ -244,12 +252,27 @@ export function SubjectFrame({
             </>
           )}
         </div>
+
+        {/* A GOD'S lenses belong to the god, so they sit inside the god's own
+            block — under the portrait, the name and the record, at every
+            breakpoint. They used to ride the navbar at lg+, beside the
+            wordmark and the search field, where readers took "Builds · Kit ·
+            Items · Ranking" for the site's global navigation and never
+            discovered that three quarters of what the app knows about a god
+            was one click away. Same tabs, same order; only the seat changed,
+            and the seat was the whole problem.
+            The roster's lenses are genuinely global, so they stay in the
+            navbar and keep their own strip below it at narrow widths. */}
+        {name ? (
+          <LensTabs god={name} lens={lens} testId="lens-tabs-strip" className="mt-1.5" />
+        ) : <div className="h-2 sm:h-3" />}
+        </div>
       </div>
 
-      {/* Below md the navbar has no room for these, so they keep their own
-          strip; above it the shell renders them inline and this is hidden. */}
-      <LensTabs god={name} lens={lens} testId="lens-tabs-strip"
-        className="border-b border-line px-4 sm:px-6 lg:hidden" />
+      {!name && (
+        <LensTabs lens={lens} testId="lens-tabs-strip"
+          className="border-b border-line px-4 sm:px-6 lg:hidden" />
+      )}
     </>
   );
 }

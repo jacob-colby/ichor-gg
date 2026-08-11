@@ -67,6 +67,37 @@ describe("App — roster lenses", () => {
     expect(nav.getByRole("link", { name: "Draft" })).toHaveAttribute("aria-current", "page");
   });
 
+  /* The navbar is the site's global chrome, so only genuinely global
+   * destinations belong in it. A god's four lenses sat here too, which is
+   * exactly why they read as global navigation — they are now under the god.
+   * The roster strip stays put on a god's page, so the item shop and the draft
+   * board are still one click from Ra. */
+  it("keeps a god's own lenses out of the global navbar", async () => {
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: "Chiron" })).toBeInTheDocument());
+    const bar = within(screen.getByTestId("lens-tabs-bar"));
+    expect(bar.getByRole("link", { name: "Draft" })).toBeInTheDocument();
+    expect(bar.queryByRole("link", { name: "Kit" })).not.toBeInTheDocument();
+    expect(bar.queryByRole("link", { name: "Ranking" })).not.toBeInTheDocument();
+    // Chiron's lenses are there — under Chiron.
+    const own = within(screen.getByTestId("lens-tabs-strip"));
+    expect(own.getByRole("link", { name: "Kit" })).toHaveAttribute("href", "#/god/Chiron/kit");
+  });
+
+  /* The navbar's "Items" is the item shop; the god's "Items" is that god's
+   * ranking. Both are on screen at once now, so the global one must not claim
+   * to be the page you're on. */
+  it("marks nothing current in the navbar while a god is the subject", async () => {
+    atUrl(toHash.godItems("Chiron"));
+    render(<App />);
+    await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: "Chiron" })).toBeInTheDocument());
+    const bar = within(screen.getByTestId("lens-tabs-bar"));
+    expect(bar.getByRole("link", { name: "Items" })).not.toHaveAttribute("aria-current");
+    const own = within(screen.getByTestId("lens-tabs-strip"));
+    expect(own.getByRole("link", { name: "Items" })).toHaveAttribute("aria-current", "page");
+  });
+
   it("shows no second navigation — the picker is a control, not a column", async () => {
     render(<App />);
     await screen.findByTestId("subject-header");
