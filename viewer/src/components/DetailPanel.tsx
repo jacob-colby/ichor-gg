@@ -750,10 +750,24 @@ export function DetailPanel({
               )}
             </div>
           )}
+          {/* The tier list has admitted this about Joust and Arena since it
+              stopped ranking them; the BUILDS never did, and the builds are
+              the product. Two thirds of the shipped build groups are these
+              modes. Saying "nothing to compare against" understated it — that
+              reads as a missing convenience, when what is missing is the
+              evidence that the ordering means anything. The 5-6x and
+              "unproven" figures are `smite.calibrate`'s, measured leakage-free
+              on Conquest; no per-mode outcome data exists anywhere to measure
+              these modes directly (checked 2026-08-10: SmiteBrain is Conquest
+              only, smite2.live offers a Joust/Arena selector with no data
+              behind it, SmiteTracker's meta report is Conquest only). */}
           {!community && !compareToMeta && !isFun && (
-            <p className="mt-2 border-t border-line pt-2 text-small text-muted">
-              No community build for {god} in {note.mode} — nothing to compare this against, so the
-              rows show the model&rsquo;s score alone.
+            <p className="mt-2 border-t border-line pt-2 text-small leading-relaxed text-muted">
+              <span className="text-premium">No outcome data exists for {note.mode}.</span>{" "}
+              These rows are efficiency and kit-fit alone. Measured on the modes that do have
+              data, that pairing finds community-worthy items about 6&times; better than chance —
+              but its <em>ordering</em> is unproven, so read this as a shortlist rather than a
+              buy order.
             </p>
           )}
         </div>

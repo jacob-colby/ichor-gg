@@ -263,12 +263,19 @@ describe("DetailPanel — the buy ledger", () => {
     expect(screen.queryByText(/why this item/i)).not.toBeInTheDocument();
   });
 
-  it("says when there is no community build to compare against", () => {
-    const noCommunity = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+  /* Two thirds of the shipped build groups are Joust and Arena, which have no
+   * outcome data anywhere — the tier list has admitted that since it stopped
+   * ranking them and the builds never did. "Nothing to compare against" read
+   * as a missing convenience; what is missing is the evidence that the
+   * ORDERING means anything, which is the one thing a buy order asserts. */
+  it("says outright that a mode with no outcome data is a shortlist, not an order", () => {
+    const noCommunity = [{ type: "smite-build", god: "Chiron", mode: "Joust", builds: [
       { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
     ] }];
-    render(panel({ items, builds: noCommunity as never }));
-    expect(screen.getByText(/no community build for Chiron in Conquest/i)).toBeInTheDocument();
+    render(panel({ items, builds: noCommunity as never, mode: "Joust" }));
+    expect(screen.getByText(/no outcome data exists for Joust/i)).toBeInTheDocument();
+    expect(screen.getByText(/ordering.*unproven|unproven/i)).toBeInTheDocument();
+    expect(screen.getByText(/shortlist rather than a buy order/i)).toBeInTheDocument();
     expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
   });
 
