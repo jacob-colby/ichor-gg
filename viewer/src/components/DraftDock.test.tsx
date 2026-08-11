@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen, fireEvent, within, cleanup } from "@testing-library/react";
 import { DraftDock } from "./DraftDock";
-import type { DraftConfig, God, Item } from "../types";
+import type { BuildNote, DraftConfig, God, Item } from "../types";
 
 const god = (name: string, overrides: Partial<God> = {}): God =>
   ({
@@ -39,8 +39,20 @@ const DRAFT_CFG: DraftConfig = {
   ally_covered: -0.5, ally_gap: 0.5,
 };
 
-const dock = () => (
-  <DraftDock gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />
+const BUILDS = [{
+  type: "smite-build", god: "TestGod", mode: "Conquest",
+  builds: [{
+    source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+    slot_order: [], source_url: "",
+    community_starters: [
+      { name: "Gilded Arrow", pick_rate: 0.62, win_rate: 0.53 },
+      { name: "Bumba's Golden Dagger", pick_rate: 0.21, win_rate: 0.49 },
+    ],
+  }],
+}] as unknown as BuildNote[];
+
+const dock = (builds: BuildNote[] = []) => (
+  <DraftDock gods={GODS} items={ITEMS} builds={builds} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />
 );
 
 beforeEach(() => {
@@ -206,6 +218,25 @@ describe("DraftDock — the build, in place", () => {
     render(dock());
     fireEvent.click(screen.getByRole("button", { name: /default core/i }));
     expect(screen.getByRole("link", { name: /full board/i })).toHaveAttribute("href", "#/draft");
+  });
+
+  /* /draft has shown the opener since it was added; the dock never did, so the
+   * shell's copy of the build silently started at item one. */
+  it("opens the build where the match does, not at item one", () => {
+    seed(["", "", "", "", ""]);
+    render(dock(BUILDS));
+    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    const starters = within(screen.getByTestId("dock-starters"));
+    expect(starters.getByRole("link", { name: /Gilded Arrow — opened with by 62%/i }))
+      .toHaveAttribute("href", "#/items/Gilded%20Arrow");
+    expect(starters.getAllByRole("link")).toHaveLength(2);
+  });
+
+  it("says nothing about openers for a god with no community data", () => {
+    seed(["", "", "", "", ""]);
+    render(dock());
+    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    expect(screen.queryByTestId("dock-starters")).not.toBeInTheDocument();
   });
 });
 

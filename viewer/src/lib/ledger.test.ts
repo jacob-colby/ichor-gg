@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildLedger, goldText, goldGap } from "./ledger";
+import { buildLedger, goldText, ordinal } from "./ledger";
 import { applySwap } from "./builds";
 import type { Item, SlotEntry } from "../types";
 
@@ -132,16 +132,37 @@ describe("buildLedger — joining the community order", () => {
     expect(soul.cumulative).toBe(7800);
     // Community buys it 3rd at 2650+2300+2500 = 7450.
     expect(soul.metaCumulative).toBe(7450);
-    expect(goldGap(soul)).toBe(350);
   });
 
-  it("reports no gap when only one side buys the item", () => {
+  /* The row states an order disagreement in SLOTS now, not in gold — a build
+   * is bought in slots, and "sixth" is the unit players think in. The two
+   * positions are what the surface compares, so both have to be on the row. */
+  it("numbers each purchase in the model's own order", () => {
     const l = buildLedger({
-      preview: plain("Spear", "Cosmic"),
+      preview: plain("Spear", "Cosmic", "Soul Gem"),
       itemsByName: items,
       communityOrder: community,
     });
-    expect(goldGap(l.rows[1])).toBeNull();
+    expect(l.rows.map((r) => r.modelPosition)).toEqual([1, 2, 3]);
+    // Cosmic isn't in the community's order at all, so it has no position to
+    // disagree with — the surface prints "meta doesn't buy this" instead.
+    expect(l.rows.map((r) => r.metaPosition)).toEqual([1, null, 3]);
+  });
+
+  /* A removed slot is struck through and consumes no gold, so it must consume
+   * no position either — otherwise every purchase after a swap is numbered one
+   * higher than the reader can count on screen. */
+  it("does not let a swapped-out slot spend a purchase number", () => {
+    const l = buildLedger({
+      preview: [
+        { name: "Spear", status: "kept" },
+        { name: "Cosmic", status: "removed" },
+        { name: "Soul Gem", status: "added" },
+      ],
+      itemsByName: items,
+      communityOrder: community,
+    });
+    expect(l.rows.map((r) => r.modelPosition)).toEqual([1, null, 2]);
   });
 
   it("has no meta to compare against when the community order is absent or empty", () => {
@@ -163,6 +184,18 @@ describe("buildLedger — joining the community order", () => {
     expect(l.rows[0].inMeta).toBe(true);
     expect(l.rows[0].metaPosition).toBe(1);
     expect(l.rows[0].metaPickRate).toBeNull();
+  });
+});
+
+describe("ordinal", () => {
+  it("names the six slots a build actually has", () => {
+    expect([1, 2, 3, 4, 5, 6].map(ordinal)).toEqual(["1st", "2nd", "3rd", "4th", "5th", "6th"]);
+  });
+
+  /* No build is 11 items long, so this can't fire today — it is here so the
+   * first caller who counts something longer doesn't inherit "11st". */
+  it("handles the teens, which no build reaches", () => {
+    expect([11, 12, 13, 21, 112].map(ordinal)).toEqual(["11th", "12th", "13th", "21st", "112th"]);
   });
 });
 

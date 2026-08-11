@@ -46,6 +46,14 @@ export interface Item {
   name: string;
   tier: number | string;
   cost: number;
+  /** The one god who can buy this, for a `God Specific` item — Ratatoskr's
+   *  three acorns and Aladdin's Genie's Lamp today.
+   *
+   *  It has always been in index.json and was never declared here, so the
+   *  viewer had no way to say that an item on a build is unbuyable for every
+   *  other god in the game. `scoring.is_buildable` enforces exactly that on the
+   *  pipeline side; this is the same fact, made sayable on the surface. */
+  god?: string;
   stats: Record<string, string>;
   passive: string;
   builds_from: string[];
@@ -278,6 +286,10 @@ export interface DraftConfig {
   stat_bonus: Record<string, Record<string, number>>;
   ally_covered: number;
   ally_gap: number;
+  /** Fraction of a draft bonus that survives when the core already covers the
+   *  job earning it. Absent on an index built before the rule was shipped, in
+   *  which case the client falls back to 1 — the old pay-in-full behaviour. */
+  self_covered?: number;
   /** Absent on an index built before the rule was shipped. */
   lifesteal_caps?: LifestealCap[];
 }

@@ -22,6 +22,7 @@ import {
   type SortKey, type ItemFilter,
 } from "../lib/itemFilters";
 import { iconSlug } from "../lib/builds";
+import { GodOnlyAsterisk, GodOnlyBadge } from "./GodOnlyMark";
 import { toHash, navigate } from "../lib/useHashRoute";
 import { useUrlState, keepQuery } from "../lib/urlState";
 import { priceVerdict, PRICE_WORD, PRICE_TEXT, PRICE_SPOKEN } from "../lib/verdictWords";
@@ -102,6 +103,7 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
       type="button"
       onClick={onClick}
       aria-label={`${item.name}, ${item.cost} gold${
+        item.god ? `, ${item.god} only` : ""}${
         eff ? `, ${PRICE_SPOKEN[priceVerdict(item.efficiency_tier, eff.residual)]} — the model prices it at ${eff.predicted_cost} gold`
         : ", not scored by the gold model"}`}
       // `w-full` is load-bearing, not belt-and-braces. A <button> is
@@ -116,12 +118,18 @@ export function ItemCard({ item, onClick, scale = 1000 }: {
       <span className="flex items-center gap-2">
         <ItemIcon name={item.name} />
         <span className="min-w-0 flex-1">
-          <span className="block truncate text-body text-ink" title={item.name}>{item.name}</span>
+          {/* The asterisk sits INSIDE the truncating span so it rides the name
+              rather than floating loose beside a clipped one. */}
+          <span className="block truncate text-body text-ink" title={item.name}>
+            {item.name}{item.god && <GodOnlyAsterisk god={item.god} />}
+          </span>
           <span className="block font-mono text-micro text-faint">
             <span className="text-ink-soft">{item.cost}g</span> · {tierLabel(item.tier)}
           </span>
         </span>
       </span>
+
+      {item.god && <GodOnlyBadge god={item.god} className="w-fit" />}
 
       {/* The verdict in words, then by how much. The word used to be a chip
           down in the footer saying "PREMIUM" — the shop's own jargon, in a
@@ -237,8 +245,9 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
           <div className="min-w-0 flex-1">
             <h2 id="item-detail-title" ref={headingRef} tabIndex={-1}
               className="font-display text-title font-bold leading-tight text-ink focus:outline-none">
-              {item.name}
+              {item.name}{item.god && <GodOnlyAsterisk god={item.god} />}
             </h2>
+            {item.god && <GodOnlyBadge god={item.god} className="mt-1" />}
             <p className="mt-0.5 text-label text-faint">
               <span className="font-mono text-ink-soft">{item.cost}g</span> · <span className="font-mono">{tierLabel(item.tier)}</span>
               {item.meta && <> · <span className="font-mono">{Math.round(item.meta.win_avg * 100)}% win</span>{

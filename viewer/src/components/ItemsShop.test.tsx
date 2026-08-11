@@ -15,7 +15,7 @@ const items = [
     passive: "Gain 1 stack on minion kill.",
     builds_from: [], builds_into: [], effect_tags: [], efficiency_tier: null, efficiency: null },
   { name: "Acorn", tier: "God Specific", cost: 2000, stats: { "Max Health": "400" },
-    passive: "Only one god can buy this.",
+    god: "Ratatoskr", passive: "Only one god can buy this.",
     builds_from: [], builds_into: [], effect_tags: [], efficiency_tier: "undervalued",
     efficiency: { predicted_cost: 3200, residual: -1200, score: 1, comparable: false } },
 ] as unknown as Item[];
@@ -50,6 +50,25 @@ describe("ItemsShop — the verdict, decomposed", () => {
     const cards = screen.getAllByRole("button", { name: /,/ });
     expect(cards[0]).toHaveAccessibleName(/^Rage,/);
     expect(screen.getByRole("button", { name: /^Acorn,/ })).toBeInTheDocument();
+  });
+
+  /* Keeping it on the board is only honest if the board says whose it is.
+   * `god` has always been in index.json and the viewer never read it, so the
+   * most underpriced item on the shelf sat there unmarked. */
+  it("names the one god who can buy it, on the card", () => {
+    render(shop());
+    const card = screen.getByRole("button", { name: /^Acorn,/ });
+    expect(card).toHaveAccessibleName(/Ratatoskr only/);
+    expect(within(card).getByTitle(/Only Ratatoskr can buy this/i)).toBeInTheDocument();
+    // And an asterisk on the name itself, which survives truncation.
+    expect(within(card).getByTitle("Ratatoskr only")).toHaveTextContent("*");
+  });
+
+  it("leaves an item everyone can buy unmarked", () => {
+    render(shop());
+    const card = screen.getByRole("button", { name: /^Rage,/ });
+    expect(card).not.toHaveAccessibleName(/only/i);
+    expect(within(card).queryByTitle(/can buy this/i)).not.toBeInTheDocument();
   });
 
   /* The card leads with the verdict in the same words the tier list and the

@@ -151,6 +151,35 @@ describe("DetailPanel — the buy ledger", () => {
     expect(row("B")).toHaveAccessibleName(/community does not buy it/i);
   });
 
+  /* The row used to state the order disagreement in gold — "model buys later
+   * by 2,550g" — which is precise and answers a question nobody asks. A build
+   * is bought in slots, so the disagreement is stated in slots. */
+  it("states an order disagreement in slots, not in gold", () => {
+    const shifted = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
+        slot_order: [{ name: "B", pick_rate: 0.5, win_rate: 0.6 }, { name: "A", pick_rate: 0.3, win_rate: 0.5 }] },
+      { source: "suggested", archetype: "core", slot_order: ["A", "B"], situational_swaps: [], rationale: "",
+        slot_scores: {
+          A: { total: 0.59, efficiency: 0.41, win: 0.6, pick: 0.51, fit: 1 },
+          B: { total: 0.48, efficiency: 0.5, win: 0.5, pick: 0, fit: 0.9 },
+        } },
+    ] }];
+    render(panel({ items, builds: shifted as never }));
+    expect(row("A")).toHaveTextContent(/meta buys 2nd/);
+    expect(row("A")).toHaveTextContent(/model buys 1st/);
+    // The gold SPINE stays — it's the ledger's axis. What goes is stating the
+    // disagreement itself in gold: "model buys earlier by 2,550g".
+    expect(row("A")).toHaveTextContent("2,650g");
+    expect(row("A")).not.toHaveTextContent(/buys (earlier|later)/);
+  });
+
+  it("stays quiet when both orders agree on the slot", () => {
+    render(panel({ items, builds: withMeta as never }));
+    // A is first in both orders — there is no disagreement to report.
+    expect(row("A")).toHaveTextContent(/meta buys 1st/);
+    expect(row("A")).not.toHaveTextContent(/model buys/);
+  });
+
   it("marks an item the meta doesn't buy", () => {
     render(panel({ items, builds: withMeta as never }));
     expect(row("B")).toHaveTextContent(/meta doesn.t buy this/i);
@@ -191,7 +220,7 @@ describe("DetailPanel — the buy ledger", () => {
     render(panel({ items, builds: withMeta as never }));
     expect(screen.getByText(/what the community buys instead/i)).toBeInTheDocument();
     // C is in the community order but not the model's build.
-    const link = screen.getByRole("link", { name: /^C, bought 2 by the community/i });
+    const link = screen.getByRole("link", { name: /^C, bought 2nd by the community/i });
     expect(link).toHaveAttribute("href", expect.stringContaining("/items/C"));
   });
 
