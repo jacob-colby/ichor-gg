@@ -396,10 +396,23 @@ modes:
       # for the measurement; Arena already drops these items outright because
       # the mode has no wards, and this is the same judgement made continuous
       # for the mode where wards exist but only some players farm them.
-      # Sized to cancel the stat discount rather than to ban the item: a
-      # warding support can still reach it, it just no longer arrives on the
-      # strength of a bargain it has to earn.
-      ward-economy: -0.15
+      # Sized by sweeping it against BOTH gates, which agree — rare enough
+      # here to be worth stating. Against the 34 Support/Solo Conquest gods,
+      # whose players buy this item ZERO times on the current scrape:
+      #
+      #     bonus    leakage-free    cores holding it
+      #      0.00        33.5%            18/34
+      #     -0.15        34.1%             7/34
+      #     -0.25        36.1%             0/34
+      #     -0.35        36.1%             0/34
+      #     -0.50        36.1%             0/34
+      #
+      # -0.25 is where it saturates: stronger values buy nothing, so this is
+      # the point at which the item simply stops out-scoring real ones rather
+      # than a knob turned until the answer looked right. It first shipped at
+      # -0.15, which the expert register caught as a regression when a fresh
+      # community scrape landed and the count went 4 -> 7.
+      ward-economy: -0.25
 
   # One lane, no jungle to rotate through, and you fight the same three people
   # all game: sustain and anti-heal decide who can stay on the lane, auras
