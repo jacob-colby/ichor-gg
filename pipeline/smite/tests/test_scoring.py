@@ -776,3 +776,65 @@ def test_slot_reach_can_be_overridden_from_weights():
         {"name": "A", "pick_rate": 0.3}, {"name": "B", "pick_rate": 0.3},
     ]}]}
     assert scoring.lookup_rates(build, "B", weights)[0] == pytest.approx(0.6)
+
+
+# ---- The win signal's stand-in for "no record" -----------------------------
+
+def _win_build(*rates, alternates=None):
+    slots = [{"name": f"S{i}", "pick_rate": 0.3, "win_rate": r}
+             for i, r in enumerate(rates)]
+    if alternates:
+        slots[0]["alternates"] = list(alternates)
+    return {"builds": [{"source": "community", "slot_order": slots}]}
+
+
+def test_unknown_win_uses_the_gods_own_median():
+    """`win` only ever ranks items WITHIN one god, so the number standing in
+    for "no data" has to sit inside that god's distribution. A global constant
+    compared against a per-god distribution is a units error."""
+    build = _win_build(0.60, 0.62, 0.64)
+    assert scoring.god_unknown_win_rate(build, {}) == pytest.approx(0.62)
+
+
+def test_unknown_win_falls_back_when_the_god_has_no_record():
+    """No distribution to sit inside, so the global constant is the honest
+    answer rather than a fabricated one."""
+    assert scoring.god_unknown_win_rate({"builds": []}, {}) == scoring.UNKNOWN_WIN_RATE
+    assert scoring.god_unknown_win_rate(None, {}) == scoring.UNKNOWN_WIN_RATE
+
+
+def test_unknown_win_can_be_switched_back_to_the_flat_constant():
+    build = _win_build(0.60, 0.62, 0.64)
+    off = {"unknown_win_per_god": False}
+    assert scoring.god_unknown_win_rate(build, off) == scoring.UNKNOWN_WIN_RATE
+
+
+def test_unknown_win_respects_an_explicit_constant_when_per_god_is_off():
+    build = _win_build(0.60, 0.62, 0.64)
+    assert scoring.god_unknown_win_rate(
+        build, {"unknown_win_per_god": False, "unknown_win_rate": 0.55}) == 0.55
+
+
+def test_measured_win_rates_mirror_what_lookup_rates_hands_out():
+    """One rate per ITEM, not per sighting. `lookup_rates` prefers a slot pick
+    over an alternate and takes only the best alternate for an unslotted item,
+    so a raw sweep of the entry both double-counts and includes sightings no
+    item ever receives — and the imputed value would then be drawn from a
+    different population than the values it stands in for."""
+    build = _win_build(0.40, 0.80, alternates=[
+        {"name": "S1", "pick_rate": 0.9, "win_rate": 0.10},   # S1 is slotted: 0.80 wins
+        {"name": "Extra", "pick_rate": 0.2, "win_rate": 0.70},
+    ])
+    rates = scoring.measured_win_rates(build, {})
+    assert rates == [0.40, 0.70, 0.80]
+    assert 0.10 not in rates          # the alternate sighting of a slotted item
+
+
+def test_an_unmeasured_item_scores_the_gods_median_not_a_half():
+    """The end-to-end effect: `signal_score` is what actually consumes this."""
+    build = _win_build(0.60, 0.62, 0.64)
+    weights = scoring.load_weights_default()
+    row = scoring.signal_score({"name": "Nobody", "stats": {"Strength": "40"}},
+                               _god("G", "physical", "Carry", ["Carry"]),
+                               build, 0.5, weights, [])
+    assert row["win"] == pytest.approx(0.62)

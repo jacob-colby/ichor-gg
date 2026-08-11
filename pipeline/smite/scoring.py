@@ -3,6 +3,7 @@
 _weights.yaml; effect-tags in _tags.yaml. See the design spec."""
 import copy
 import math
+import statistics
 
 import yaml
 
@@ -424,9 +425,90 @@ def lookup_rates(god_build, item_name, weights=None):
 # Changing this needs a metric that is not made of the community's own build.
 UNKNOWN_WIN_RATE = 0.5
 
+#: Fewest measured items a god needs before its own median is trusted over the
+#: global constant. Below this the median is one of the measured items itself,
+#: so imputing it makes that item indistinguishable from every unrecorded one.
+#: Never fires on real data - the thinnest god carries 6.
+UNKNOWN_WIN_MIN_ITEMS = 3
+
 
 def unknown_win_rate(weights):
     return (weights or {}).get("unknown_win_rate", UNKNOWN_WIN_RATE)
+
+
+def god_unknown_win_rate(god_build, weights=None):
+    """What an item with no record should score on `win`, FOR THIS GOD.
+
+    The global constant is a units error. `win` is not an absolute quantity the
+    model compares across gods — it only ever ranks items within one god, so
+    the number standing in for "no data" has to sit inside THAT god's
+    distribution. Measured on the 17,490-match scrape, per-god median win rates
+    run 0.480 (Mercury) to 0.655 — a 0.175 spread — so a flat 0.5 makes
+    "unmeasured" mean *better than most of what we measured* for one god and
+    *worse than most of it* for another, from the same number.
+
+    Returns the god's own median measured win rate, or the global constant when
+    the god has none — which is the honest fallback, since there is then no
+    distribution to sit inside.
+
+    NOT VALIDATED AGAINST A GATE, AND IT CANNOT BE. `calibrate`'s leakage-free
+    measure zeroes `win` by construction, and the headline gate uses win as its
+    own Spearman target, so every metric here is either blind to this or
+    circular in it (docs/STATE.md section 1). The argument is that comparing a
+    per-god distribution to a global constant is wrong on its face, not that
+    some number improved. `unknown_win_per_god` in _weights.yaml turns it off.
+
+    Worth recording what changed since STATE.md described this: on the older,
+    thinner scrape some gods had EVERY measured item below 0.5, so unmeasured
+    items outranked all of them and their cores filled with unknowns. On the
+    current sample no god is fully below — the worst is Mercury at 67% of its
+    items — so that specific failure has largely dissolved with more data. The
+    units error has not."""
+    cfg = weights or {}
+    if not cfg.get("unknown_win_per_god", True):
+        return unknown_win_rate(weights)
+    rates = measured_win_rates(god_build, weights)
+    # A median needs a distribution. With one or two measured items the median
+    # IS one of them, so every unmeasured item inherits that exact score and the
+    # measured item stops being distinguishable from the 90 items nobody has
+    # ever recorded — the signal erases itself precisely where it is thinnest.
+    # The same shape of guard as `MIN_STAT_CARRIERS` and `HYBRID_MIN_ABILITIES`.
+    # It never fires on real data: the thinnest god carries 6 measured items and
+    # the median is 8.
+    if len(rates) < cfg.get("unknown_win_min_items", UNKNOWN_WIN_MIN_ITEMS):
+        return unknown_win_rate(weights)
+    return statistics.median(rates)
+
+
+def measured_win_rates(god_build, weights=None):
+    """Every win rate `lookup_rates` can actually hand out for this god, one
+    per item.
+
+    Deliberately not "every win rate in the entry". `lookup_rates` prefers a
+    SLOT pick over an alternate sighting, and takes only the best alternate for
+    an item slotted nowhere — so the raw list both double-counts items that
+    appear in several slots and includes sightings no item ever receives. The
+    imputed value has to be drawn from the same population as the measured
+    values it stands in for, or it is answering a different question.
+    """
+    names = set()
+    for entry in (god_build or {}).get("builds", []):
+        if entry.get("source") != "community":
+            continue
+        for slot in entry.get("slot_order") or []:
+            if not isinstance(slot, dict):
+                continue
+            names.add(slot.get("name"))
+            for alt in slot.get("alternates") or []:
+                names.add(alt.get("name"))
+    rates = []
+    for name in names:
+        if not name:
+            continue
+        _, win = lookup_rates(god_build, name, weights)
+        if win is not None:
+            rates.append(win)
+    return sorted(rates)
 
 
 def signal_score(item, god, god_build, eff_score, weights, item_tags,
@@ -434,7 +516,7 @@ def signal_score(item, god, god_build, eff_score, weights, item_tags,
                  stat_reference=None):
     w = weights["signals"]
     pick, win = lookup_rates(god_build, item["name"], weights)
-    win_norm = win if win is not None else unknown_win_rate(weights)
+    win_norm = win if win is not None else god_unknown_win_rate(god_build, weights)
     fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus,
                         base_map=base_map, stat_reference=stat_reference)
     total = (w["efficiency"] * eff_score + w["win"] * win_norm

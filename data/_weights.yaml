@@ -94,6 +94,67 @@ price_passives: false
 # absent a better measure — not because the item is priced right at +208.
 price_stacks: false
 
+# Crit-damage multipliers, converted into the equivalent Critical Chance the
+# model already prices — measured, and the first pricing experiment here to
+# ship ON.
+#
+# combat.py is calibrated to 0.0% over twelve in-game readings and two exist
+# purely to pin crit: the multiplier is 1.50 where two published sources said
+# 1.65, and Deathbringer's +35% ADDS onto it to reach 1.85 rather than
+# multiplying to 2.0. Nothing had ever asked. efficiency prices stat columns
+# and a crit-damage bonus is not a stat; damage_value.item_damage_gain walks
+# ability components and never touches the basic-attack channel crit lives on.
+# So the one item whose passive this project knows the exact value of was
+# priced at zero, called premium at +488, and taken 0 times while 40% of the
+# community builds that reach it buy it.
+#
+#     leakage-free coverage        OFF      ON
+#     probe   eff 0.70 : fit 0.30  36.1%   36.7%
+#     best    eff 0.45 : fit 0.55  30.7%   31.6%
+#
+# Better on BOTH splits, unlike coherence and price_stacks. Deathbringer's
+# residual goes +488 -> +196 and its tier premium -> fair.
+#
+# Converted into Critical Chance rather than given its own column because a
+# column carried by one item is exactly determined — see MIN_STAT_CARRIERS. It
+# is a FLOOR: the conversion uses the item's own 20% crit, so it prices the
+# passive at 14 points, where a real 60%-crit build makes it worth 42.
+price_crit_multipliers: true
+
+# What an item with no community record scores on `win` -- the god's own median
+# measured rate, not a global constant. SHIPPED ON.
+#
+# THE CONSTANT WAS NEVER NEUTRAL. SmiteBrain reports a win rate for a median of
+# 8 items per god against a pool of 133, so for ~94% of everything ranked this
+# number IS the win signal, and `win` carries the largest weight at 0.45.
+# Measured on the 17,490-match scrape, 77 of 87 gods have a median measured win
+# rate ABOVE 0.5 (mean 0.5538, per-god range 0.480 to 0.650). So the flat 0.5
+# scored every unmeasured item BELOW the typical measured one, which is a
+# systematic +0.0242 on `total` handed to an item purely for appearing in the
+# community data.
+#
+# That is not small. Ullr's items ranked 3rd through 10th span 0.0130 of
+# `total`, so the bonus for being community-built was 186% of the entire
+# decision margin. The `win` signal was not mostly measuring outcomes; it was
+# mostly expressing a preference for what the community already buys -- the
+# leakage of STATE.md section 1, sitting inside the model rather than inside
+# the metric.
+#
+# THE COVERAGE DROP IS THE POINT, NOT A COST. Headline coverage 59.3% -> 48.1%,
+# win-weighted 60.2% -> 49.0%, 0%-coverage gods 3 -> 5, 50 of 87 Conquest cores
+# changed. Coverage measures agreement with the community, and what was removed
+# is a term that manufactured that agreement. Unlike the entries in section 4
+# this is not a hypothesis about why the gate punished a change: the term's
+# size and direction are derivable, and it is the gate's own target.
+#
+# Nothing leakage-free can adjudicate this either way -- `calibrate` zeroes
+# `win` by construction. The argument is that comparing a per-god distribution
+# against one global number is a units error, and that 0.5 is demonstrably not
+# the middle of any real distribution.
+#
+# Set false to restore the flat constant; `unknown_win_rate` still sets it.
+unknown_win_per_god: true
+
 # ── Build coherence — measured, and shipped OFF ────────────────────────────
 # The one term that scores a BUILD rather than an item: an item's worth is
 # discounted by how much of its stat line the core already holds
@@ -420,7 +481,19 @@ modes:
   # second wave to matter.
   joust:
     signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}
-    tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2, wave-clear: -0.15, mobility: -0.1}
+    # Joust HAS wards, so the ward economy is real here and this item's stat
+    # discount is no more free than it is in Conquest. It was getting neither
+    # the Conquest penalty nor Arena's outright exclusion, and sat in 27 of the
+    # 87 Joust cores as a result — one item, one mechanism, three different
+    # treatments.
+    #
+    # UNMEASURED, and it cannot be otherwise: Joust has no community data at
+    # all, so there is no coverage gate to move (STATE.md section 5). This is a
+    # judgement about the mechanism carried over from the mode where it WAS
+    # measured. Arena's excluded_items is the same kind of judgement, made the
+    # same way, and predates it.
+    tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2, wave-clear: -0.15,
+                mobility: -0.1, ward-economy: -0.25}
     label: "Joust — math + mode profile (no meta win/pick data)"
 
   # No towers, no phoenixes, no jungle camps, and no fog worth warding: one
