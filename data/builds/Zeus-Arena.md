@@ -57,7 +57,7 @@ builds:
       fit: 0.5
     Dreamer's Idol:
       total: 0.59
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -99,8 +99,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bragi's Harp:
-      total: 0.53
-      efficiency: 0.46
+      total: 0.52
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -118,7 +118,7 @@ builds:
       fit: 0.42
     Dreamer's Idol:
       total: 0.55
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.55
-      efficiency: 0.47
+      total: 0.54
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -149,8 +149,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -171,25 +171,25 @@ builds:
       fit: 0.67
     Spectral Armor:
       total: 0.58
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.57
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.81
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.61
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
     Stampede:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Spear of Desolation:
-      total: 0.62
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -253,8 +253,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Dreamer's Idol:
-      total: 0.65
-      efficiency: 0.49
+      total: 0.64
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -301,19 +301,19 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
       total: 0.54
-      efficiency: 0.46
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
     Dreamer's Idol:
       total: 0.5
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.53
-      efficiency: 0.47
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -359,14 +359,14 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.35
     Breastplate of Valor:
-      total: 0.5
-      efficiency: 0.65
+      total: 0.51
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.49
-      efficiency: 0.47
+      total: 0.48
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -449,7 +449,7 @@ builds:
       fit: 0.5
     Dreamer's Idol:
       total: 0.59
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.7

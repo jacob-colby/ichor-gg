@@ -32,20 +32,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     The Crusher:
-      total: 0.62
-      efficiency: 0.65
+      total: 0.61
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.59
     Spectral Armor:
       total: 0.61
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.76
     Stampede:
-      total: 0.63
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.73
     Pharaoh's Curse:
       total: 0.6
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -99,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Shield of the Phoenix:
-      total: 0.65
+      total: 0.64
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.72
     Spectral Armor:
-      total: 0.64
-      efficiency: 0.59
+      total: 0.63
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.68
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.69
+      total: 0.68
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.85
     Stampede:
-      total: 0.65
-      efficiency: 0.52
+      total: 0.63
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.78
     Pharaoh's Curse:
       total: 0.63
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Avenging Blade
+  - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
@@ -146,7 +146,7 @@ builds:
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
-  - Avenging Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -158,20 +158,20 @@ builds:
     swap: Stampede — physical protection
     swap_item: Stampede
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Avenging Blade:
-      total: 0.65
-      efficiency: 0.51
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.85
     Jotunn's Revenge:
       total: 0.65
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -182,20 +182,20 @@ builds:
       pick: 0.0
       fit: 0.95
     Void Stone:
-      total: 0.7
-      efficiency: 0.44
+      total: 0.69
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.95
     The Crusher:
-      total: 0.68
-      efficiency: 0.65
+      total: 0.67
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.71
     Amanita Charm:
-      total: 0.78
-      efficiency: 0.66
+      total: 0.77
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.64
-      efficiency: 0.55
+      total: 0.63
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -247,20 +247,20 @@ builds:
       pick: 0.0
       fit: 0.83
     Amanita Charm:
-      total: 0.74
-      efficiency: 0.66
+      total: 0.73
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.82
     Pharaoh's Curse:
       total: 0.65
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.73
     Shogun's Ofuda:
-      total: 0.63
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -275,12 +275,12 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Stampede
   - Erosion
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -295,37 +295,37 @@ builds:
   slot_scores:
     Genji's Guard:
       total: 0.57
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.59
     Shield of the Phoenix:
-      total: 0.7
+      total: 0.69
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.82
     Hydra's Lament:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
     Erosion:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
     Stampede:
-      total: 0.57
-      efficiency: 0.52
+      total: 0.55
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -359,20 +359,20 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     The Crusher:
-      total: 0.62
-      efficiency: 0.65
+      total: 0.61
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.59
     Spectral Armor:
       total: 0.61
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.76
     Stampede:
-      total: 0.63
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.73
     Pharaoh's Curse:
       total: 0.6
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.63

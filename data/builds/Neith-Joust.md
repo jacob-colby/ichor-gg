@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Bragi's Harp
   - Death Metal
   - Riptalon
-  - The Crusher
   - Soul Gem
   flex_slots:
   - Bragi's Harp
-  - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -32,20 +32,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Bragi's Harp:
-      total: 0.52
-      efficiency: 0.46
+      total: 0.51
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.59
     Death Metal:
       total: 0.54
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -55,12 +61,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    The Crusher:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.38
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -74,7 +74,7 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
-  - Bragi's Harp
+  - Jotunn's Revenge
   - Death Metal
   - Damaru
   - Demon Blade
@@ -99,32 +99,32 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Bragi's Harp:
-      total: 0.51
-      efficiency: 0.46
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.35
     Death Metal:
       total: 0.55
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.51
     Damaru:
-      total: 0.48
-      efficiency: 0.59
+      total: 0.47
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.36
     Demon Blade:
-      total: 0.47
-      efficiency: 0.39
+      total: 0.46
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -140,13 +140,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Bragi's Harp
   - Death Metal
+  - Spear of Desolation
   - The Crusher
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Bragi's Harp
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -164,32 +164,32 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Bragi's Harp:
-      total: 0.5
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Death Metal:
-      total: 0.52
-      efficiency: 0.6
+      total: 0.51
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Spear of Desolation:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     The Crusher:
-      total: 0.54
-      efficiency: 0.65
+      total: 0.53
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -223,8 +223,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -235,26 +235,26 @@ builds:
       pick: 0.0
       fit: 0.66
     Berserker's Shield:
-      total: 0.53
-      efficiency: 0.71
+      total: 0.51
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.35
     Amanita Charm:
-      total: 0.73
-      efficiency: 0.66
+      total: 0.71
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.79
     Pharaoh's Curse:
       total: 0.56
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.55
     Shogun's Ofuda:
-      total: 0.54
-      efficiency: 0.53
+      total: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -301,7 +301,7 @@ builds:
       fit: 0.74
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -313,13 +313,13 @@ builds:
       fit: 0.6
     Void Stone:
       total: 0.52
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Crusher:
-      total: 0.56
-      efficiency: 0.65
+      total: 0.55
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -340,8 +340,8 @@ builds:
   - Silverbranch Bow
   - Soul Gem
   flex_slots:
+  - Tyrfing
   - Death Metal
-  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -365,14 +365,14 @@ builds:
       pick: 0.0
       fit: 0.76
     Tyrfing:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.54
     Death Metal:
       total: 0.5
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -424,26 +424,26 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.61
     Genji's Guard:
-      total: 0.5
-      efficiency: 0.72
+      total: 0.49
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.28
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.49
     Hydra's Lament:
-      total: 0.53
-      efficiency: 0.61
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -470,7 +470,7 @@ builds:
   - Death Metal
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Divine Ruin
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -502,19 +502,19 @@ builds:
       fit: 0.62
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.36
     Bragi's Harp:
-      total: 0.53
-      efficiency: 0.46
+      total: 0.52
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.6
     Death Metal:
-      total: 0.55
-      efficiency: 0.6
+      total: 0.54
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -535,8 +535,8 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -561,25 +561,25 @@ builds:
       fit: 0.63
     Jotunn's Revenge:
       total: 0.52
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.39
     Bragi's Harp:
-      total: 0.54
-      efficiency: 0.46
+      total: 0.53
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
     Death Metal:
       total: 0.56
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.53
     The Crusher:
-      total: 0.53
-      efficiency: 0.65
+      total: 0.52
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -594,14 +594,14 @@ builds:
   archetype: model
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Bragi's Harp
   - Death Metal
   - Riptalon
-  - The Crusher
   - Soul Gem
   flex_slots:
   - Bragi's Harp
-  - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -619,20 +619,26 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Bragi's Harp:
-      total: 0.52
-      efficiency: 0.46
+      total: 0.51
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.59
     Death Metal:
       total: 0.54
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -642,12 +648,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    The Crusher:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.38
     Soul Gem:
       total: 0.79
       efficiency: 0.59

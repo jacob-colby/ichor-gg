@@ -32,14 +32,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.61
-      efficiency: 0.59
+      total: 0.6
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -50,20 +50,20 @@ builds:
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.62
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.73
     Pharaoh's Curse:
       total: 0.65
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.73
     Shogun's Ofuda:
       total: 0.63
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.79
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -117,20 +117,20 @@ builds:
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.63
-      efficiency: 0.52
+      total: 0.62
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.75
     Pharaoh's Curse:
       total: 0.66
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.53
+      total: 0.63
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -171,7 +171,7 @@ builds:
       fit: 0.78
     Jotunn's Revenge:
       total: 0.6
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -183,13 +183,13 @@ builds:
       fit: 0.95
     Void Stone:
       total: 0.69
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.95
     Amanita Charm:
-      total: 0.79
-      efficiency: 0.66
+      total: 0.78
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -210,8 +210,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Golden Blade
   - Toxic Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.6
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -247,20 +247,20 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.78
-      efficiency: 0.66
+      total: 0.77
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.9
     Pharaoh's Curse:
-      total: 0.66
-      efficiency: 0.58
+      total: 0.65
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.73
     Shogun's Ofuda:
       total: 0.63
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -272,15 +272,15 @@ builds:
   - Shield of the Phoenix
   - Freya's Tears
   - Erosion
-  - Stampede
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
-  - Freya's Tears
+  - Shogun's Ofuda
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -294,8 +294,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -317,15 +317,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Stampede:
-      total: 0.59
-      efficiency: 0.52
+    Pharaoh's Curse:
+      total: 0.6
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.58
+      fit: 0.64
+    Shogun's Ofuda:
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -359,14 +359,14 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.61
-      efficiency: 0.59
+      total: 0.6
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -377,20 +377,20 @@ builds:
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.62
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.73
     Pharaoh's Curse:
       total: 0.65
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.73
     Shogun's Ofuda:
       total: 0.63
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.73

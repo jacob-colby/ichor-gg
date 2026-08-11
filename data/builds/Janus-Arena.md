@@ -57,7 +57,7 @@ builds:
       fit: 0.78
     Dreamer's Idol:
       total: 0.73
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.98
@@ -118,7 +118,7 @@ builds:
       fit: 0.56
     Dreamer's Idol:
       total: 0.62
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -141,9 +141,9 @@ builds:
   - Void Shield
   - Spectral Armor
   - Amanita Charm
-  - Rod of Asclepius
   - Erosion
   - Stampede
+  - Soul Gem
   flex_slots:
   - Spectral Armor
   - Void Shield
@@ -170,20 +170,14 @@ builds:
       pick: 0.0
       fit: 0.76
     Spectral Armor:
-      total: 0.63
-      efficiency: 0.59
+      total: 0.62
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.66
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Rod of Asclepius:
-      total: 0.8
-      efficiency: 0.59
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -194,11 +188,17 @@ builds:
       pick: 0.0
       fit: 0.82
     Stampede:
-      total: 0.64
-      efficiency: 0.52
+      total: 0.62
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Soul Gem:
+      total: 0.79
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Dreamer's Idol:
-      total: 0.75
-      efficiency: 0.49
+      total: 0.74
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -307,13 +307,13 @@ builds:
       fit: 0.41
     Nimble Ring:
       total: 0.49
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
-      total: 0.55
-      efficiency: 0.46
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.53
-      efficiency: 0.47
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -365,19 +365,19 @@ builds:
       pick: 0.0
       fit: 0.6
     Genji's Guard:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.5
     Breastplate of Valor:
       total: 0.58
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.5
     Chronos' Pendant:
-      total: 0.61
+      total: 0.6
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -449,7 +449,7 @@ builds:
       fit: 0.78
     Dreamer's Idol:
       total: 0.73
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.98

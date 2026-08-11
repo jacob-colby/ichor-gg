@@ -80,8 +80,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
   - Obsidian Shard
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.56
-      efficiency: 0.47
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -171,19 +171,19 @@ builds:
       fit: 0.52
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.62
     Spectral Armor:
-      total: 0.58
-      efficiency: 0.59
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.56
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.66
+      total: 0.82
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -206,16 +206,16 @@ builds:
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
-  - Dreamer's Idol
   flex_slots:
   - Obsidian Shard
-  - Dreamer's Idol
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -246,6 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
+    Doom Orb:
+      total: 0.67
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
     Spear of the Magus:
       total: 0.73
       efficiency: 0.6
@@ -255,12 +261,6 @@ builds:
     Obsidian Shard:
       total: 0.7
       efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.85
-    Dreamer's Idol:
-      total: 0.67
-      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -307,13 +307,13 @@ builds:
       fit: 0.41
     Nimble Ring:
       total: 0.49
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
-      total: 0.55
-      efficiency: 0.46
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.48
-      efficiency: 0.47
+      total: 0.47
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -365,19 +365,19 @@ builds:
       pick: 0.0
       fit: 0.6
     Genji's Guard:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.5
     Breastplate of Valor:
       total: 0.58
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.5
     Chronos' Pendant:
-      total: 0.61
+      total: 0.6
       efficiency: 0.56
       win: 0.5
       pick: 0.0

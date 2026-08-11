@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Bragi's Harp
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
+  - Obsidian Shard
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Bragi's Harp
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,12 +98,6 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Bragi's Harp:
-      total: 0.53
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Spear of Desolation:
       total: 0.61
       efficiency: 0.52
@@ -122,6 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.53
-      efficiency: 0.47
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -152,8 +152,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.58
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -176,14 +176,14 @@ builds:
       pick: 0.0
       fit: 0.62
     Spectral Armor:
-      total: 0.56
-      efficiency: 0.59
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.52
     Amanita Charm:
-      total: 0.81
-      efficiency: 0.66
+      total: 0.8
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.96
@@ -205,17 +205,17 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
-  - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Dreamer's Idol
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -240,8 +240,14 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Doom Orb:
+      total: 0.62
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Spear of the Magus:
-      total: 0.68
+      total: 0.67
       efficiency: 0.6
       win: 0.5
       pick: 0.0
@@ -249,12 +255,6 @@ builds:
     Obsidian Shard:
       total: 0.64
       efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
-    Dreamer's Idol:
-      total: 0.62
-      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -307,13 +307,13 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.48
-      efficiency: 0.49
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
       total: 0.54
-      efficiency: 0.46
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.48
-      efficiency: 0.47
+      total: 0.47
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -366,13 +366,13 @@ builds:
       fit: 0.53
     Genji's Guard:
       total: 0.57
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
       total: 0.54
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.43

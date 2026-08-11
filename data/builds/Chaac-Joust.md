@@ -39,19 +39,19 @@ builds:
       fit: 0.45
     Kinetic Cuirass:
       total: 0.57
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.55
     Spectral Armor:
-      total: 0.54
-      efficiency: 0.59
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
     Amanita Charm:
-      total: 0.78
-      efficiency: 0.66
+      total: 0.76
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -62,8 +62,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Triton's Conch:
-      total: 0.56
-      efficiency: 0.47
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - The Crusher
   - Erosion
   - Soul Gem
-  - Triton's Conch
   flex_slots:
-  - Kinetic Cuirass
-  - Triton's Conch
+  - The Crusher
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -93,26 +93,32 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.52
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.48
     The Crusher:
       total: 0.54
-      efficiency: 0.65
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -128,12 +134,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.53
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -165,24 +165,24 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.53
     Spectral Armor:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
     Amanita Charm:
-      total: 0.79
-      efficiency: 0.66
+      total: 0.78
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.93
     Erosion:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.58
-      efficiency: 0.47
+      total: 0.57
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -204,14 +204,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Stone of Binding
-  - Avenging Blade
+  - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - The Crusher
   - Soul Gem
   flex_slots:
   - The Crusher
-  - Stone of Binding
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -234,12 +234,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Avenging Blade:
-      total: 0.58
-      efficiency: 0.51
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.49
     Void Shield:
       total: 0.65
       efficiency: 0.46
@@ -248,13 +248,13 @@ builds:
       fit: 0.85
     Void Stone:
       total: 0.64
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.85
     The Crusher:
-      total: 0.58
-      efficiency: 0.65
+      total: 0.57
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -288,20 +288,20 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.77
     Berserker's Shield:
-      total: 0.54
-      efficiency: 0.71
+      total: 0.52
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -313,13 +313,13 @@ builds:
       fit: 0.69
     Pharaoh's Curse:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.57
     Shogun's Ofuda:
-      total: 0.55
-      efficiency: 0.53
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -360,19 +360,19 @@ builds:
   slot_scores:
     Genji's Guard:
       total: 0.57
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.65
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.51
     Kinetic Cuirass:
       total: 0.55
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -431,19 +431,19 @@ builds:
       fit: 0.45
     Kinetic Cuirass:
       total: 0.57
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.55
     Spectral Armor:
-      total: 0.54
-      efficiency: 0.59
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
     Amanita Charm:
-      total: 0.78
-      efficiency: 0.66
+      total: 0.76
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Triton's Conch:
-      total: 0.56
-      efficiency: 0.47
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.65
