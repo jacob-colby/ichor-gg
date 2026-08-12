@@ -643,6 +643,10 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
         # way it bypasses the damage filter: an item that isn't in the shop is
         # not a daring pick, it's a build the player cannot actually assemble.
         "excluded_items": frozenset(mode_prof.get("excluded_items") or ()),
+        # The mode's economy and how its objective accrues, for
+        # `assemble.time_value_multiplier`. Absent for a mode that has no entry,
+        # which switches the weighting off rather than guessing at it.
+        "economy": mode_prof.get("economy"),
         "label": mode_prof.get("label"),
         "flavor": flavor,
         "bypass_damage_filter": "damage_filter" in bypass,

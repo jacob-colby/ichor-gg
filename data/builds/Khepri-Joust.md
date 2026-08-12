@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - The Crusher
+  - Spectral Armor
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Jotunn's Revenge
-  - The Crusher
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -435,12 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
-    The Crusher:
-      total: 0.53
-      efficiency: 0.63
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.46
     Erosion:
       total: 0.56
       efficiency: 0.52

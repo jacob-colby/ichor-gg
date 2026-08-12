@@ -399,14 +399,14 @@ builds:
   archetype: str-int
   slot_order:
   - Toxic Blade
+  - Kinetic Cuirass
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
-  - Triton's Conch
   flex_slots:
   - Erosion
-  - Triton's Conch
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -429,6 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Erosion:
       total: 0.54
       efficiency: 0.52
@@ -453,12 +459,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
-    Triton's Conch:
-      total: 0.53
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
   starter: *id001
 - source: suggested
   archetype: model

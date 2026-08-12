@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
   - Riptalon
   - The Crusher
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - The Crusher
-  - Death Metal
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -43,12 +43,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Death Metal:
-      total: 0.51
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Riptalon:
       total: 0.64
       efficiency: 0.56
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Pharaoh's Curse:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Soul Gem:
       total: 0.76
       efficiency: 0.59
@@ -595,13 +595,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
   - Riptalon
   - The Crusher
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - The Crusher
-  - Death Metal
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -630,12 +630,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Death Metal:
-      total: 0.51
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Riptalon:
       total: 0.64
       efficiency: 0.56
@@ -648,6 +642,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Pharaoh's Curse:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Soul Gem:
       total: 0.76
       efficiency: 0.59

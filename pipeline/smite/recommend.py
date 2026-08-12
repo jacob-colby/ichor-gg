@@ -166,6 +166,7 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                                       max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
                                       require=require,
                                       stat_caps=weights.get("stat_caps"),
+                                      economy=profile.get("economy"),
                                       **assemble.coherence_args(items, weights))
         archetype = flavor or "core"
         if flavor is None:
@@ -188,6 +189,7 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         model_core = assemble.assemble_core(model_rows, items_by_name, n=6,
                                             max_lifesteal=max_ls,
                                             stat_caps=weights.get("stat_caps"),
+                                            economy=core_profile.get("economy"),
                                             **assemble.coherence_args(items, weights))
         entries.append(_entry("model", model_core, model_rows, items_by_name,
                               tags_map, weights, core_profile, flex_count,

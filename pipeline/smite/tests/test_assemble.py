@@ -1,3 +1,4 @@
+import pytest
 from smite import assemble
 
 
@@ -307,3 +308,83 @@ def test_assemble_core_still_honours_its_hard_guards_under_coherence():
     core = assemble.assemble_core(rows, items, n=2, coherence=1.0,
                                   stat_reference={"Movement Speed": 18})
     assert core == ["Boots1", "Plain"]
+
+
+# ---- Mode economy: how much of the scoring window an item is active for ----
+
+ARENA = {"start_gold": 1250, "gold_per_min": 900, "match_minutes": 17.5, "uniformity": 0.6}
+JOUST = {"start_gold": 1250, "gold_per_min": 690, "match_minutes": 22.5, "uniformity": 0.3}
+
+
+def test_no_economy_is_a_no_op():
+    """Conquest has no economy block, and a mode nobody has researched must be
+    left alone rather than guessed at."""
+    assert assemble.time_value_multiplier(2600, 10000, None) == 1.0
+    assert assemble.time_value_multiplier(2600, 10000, {}) == 1.0
+
+
+def test_zero_uniformity_is_a_no_op():
+    """Conquest's Titan cannot fall early, so the sixth item is present for the
+    fight that ends the game and keeps full value."""
+    econ = {**ARENA, "uniformity": 0.0}
+    assert assemble.time_value_multiplier(2600, 13000, econ) == 1.0
+
+
+def test_an_item_bought_later_is_active_for_less_of_the_match():
+    early = assemble.time_value_multiplier(2600, 0, ARENA)
+    late = assemble.time_value_multiplier(2600, 13000, ARENA)
+    assert early > late
+    assert 0.0 < late < 1.0                      # a discount, never a ban
+
+
+def test_a_cheaper_item_completes_sooner_and_weighs_more():
+    """The only item-SPECIFIC term. Everything else at a given slot is common
+    to all candidates and so cannot change which one is picked."""
+    cheap = assemble.time_value_multiplier(2300, 7500, ARENA)
+    dear = assemble.time_value_multiplier(3050, 7500, ARENA)
+    assert cheap > dear
+
+
+def test_arena_decays_harder_than_joust():
+    """Arena's 500 tickets fall from 0:00, so value accrues uniformly and a
+    late item misses most of the scoring. Joust has a Titan like Conquest, so
+    its late items keep most of their worth."""
+    a = assemble.time_value_multiplier(2600, 10000, ARENA)
+    j = assemble.time_value_multiplier(2600, 10000, JOUST)
+    assert a < j
+
+
+def test_an_item_finishing_after_the_match_still_keeps_the_endgame_share():
+    """Clamped at the uniformity floor, not at zero: even in Arena the last
+    fight happens, so a sixth item is worth (1 - uniformity), never nothing."""
+    m = assemble.time_value_multiplier(3000, 99999, ARENA)
+    assert m == pytest.approx(1.0 - ARENA["uniformity"])
+
+
+def test_assemble_core_prefers_earlier_power_under_an_economy():
+    """Dear only wins on raw score; under Arena's decay the cheaper item that
+    arrives sooner takes the slot."""
+    items = {
+        "Dear": {"cost": 3050, "stats": {"Strength": "60"}},
+        "Cheap": {"cost": 2300, "stats": {"Intelligence": "60"}},
+    }
+    # A 3% score lead is not enough to survive arriving 750g later: measured
+    # across the shipped Arena cores this trade fires 24 times in 87 builds and
+    # drops the average item bought by 680g.
+    narrow = [{"item": "Dear", "total": 0.520}, {"item": "Cheap", "total": 0.505}]
+    assert assemble.assemble_core(narrow, items, n=1) == ["Dear"]
+    assert assemble.assemble_core(narrow, items, n=1, economy=ARENA) == ["Cheap"]
+    # A big enough lead still wins — this is a discount, not a cost cap.
+    clear = [{"item": "Dear", "total": 0.60}, {"item": "Cheap", "total": 0.505}]
+    assert assemble.assemble_core(clear, items, n=1, economy=ARENA) == ["Dear"]
+
+
+def test_economy_still_honours_the_hard_guards():
+    items = {
+        "Boots1": {"cost": 2000, "stats": {"Movement Speed": "18"}},
+        "Boots2": {"cost": 2100, "stats": {"Movement Speed": "18"}},
+        "Plain": {"cost": 2500, "stats": {"Max Health": "250"}},
+    }
+    rows = [{"item": "Boots1", "total": 0.9}, {"item": "Boots2", "total": 0.88},
+            {"item": "Plain", "total": 0.1}]
+    assert assemble.assemble_core(rows, items, n=2, economy=ARENA) == ["Boots1", "Plain"]

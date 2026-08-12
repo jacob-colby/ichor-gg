@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - The Crusher
+  - Jotunn's Revenge
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   flex_slots:
-  - Spectral Armor
   - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,12 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    The Crusher:
-      total: 0.61
-      efficiency: 0.63
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.54
     Spectral Armor:
       total: 0.61
       efficiency: 0.58
@@ -272,15 +272,15 @@ builds:
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Hydra's Lament
+  - Spectral Armor
   - Erosion
-  - Stampede
   flex_slots:
   - Hydra's Lament
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -317,31 +317,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Spectral Armor:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Erosion:
       total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Stampede:
-      total: 0.55
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - The Crusher
+  - Jotunn's Revenge
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   flex_slots:
-  - Spectral Armor
   - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,12 +358,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    The Crusher:
-      total: 0.61
-      efficiency: 0.63
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.54
     Spectral Armor:
       total: 0.61
       efficiency: 0.58

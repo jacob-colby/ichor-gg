@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Toxic Blade
   - Bragi's Harp
   - Death Metal
   - Riptalon
   - Demon Blade
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Bragi's Harp
-  - Toxic Blade
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -26,17 +26,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.53
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Bragi's Harp:
       total: 0.53
       efficiency: 0.44
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Pharaoh's Curse:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Soul Gem:
       total: 0.7
       efficiency: 0.59
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Toxic Blade
   - Bragi's Harp
   - Death Metal
   - Riptalon
   - Demon Blade
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Bragi's Harp
-  - Toxic Blade
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -548,17 +548,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.53
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Bragi's Harp:
       total: 0.53
       efficiency: 0.44
@@ -583,6 +577,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Pharaoh's Curse:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Soul Gem:
       total: 0.7
       efficiency: 0.59

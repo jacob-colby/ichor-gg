@@ -74,11 +74,11 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
+  - Shield of the Phoenix
   - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Soul Gem
   flex_slots:
   - Spectral Armor
   - Void Shield
@@ -90,8 +90,8 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
+    Shield of the Phoenix:
+      total: 0.75
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
     Void Shield:
       total: 0.62
       efficiency: 0.46
@@ -125,12 +131,6 @@ builds:
     Erosion:
       total: 0.71
       efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.9
-    Soul Gem:
-      total: 0.75
-      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.9

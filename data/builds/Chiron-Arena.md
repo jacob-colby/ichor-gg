@@ -74,11 +74,11 @@ builds:
   archetype: crit
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
   - Riptalon
   - Damaru
   - Demon Blade
   - Deathbringer
+  - Pharaoh's Curse
   flex_slots:
   - Damaru
   - Deathbringer
@@ -93,8 +93,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -104,12 +104,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Riptalon:
       total: 0.65
       efficiency: 0.56
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Pharaoh's Curse:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
   starter: *id001
 - source: suggested
   archetype: burst
@@ -203,7 +203,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Toxic Blade
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
@@ -211,7 +211,7 @@ builds:
   - Umbral Link
   flex_slots:
   - Erosion
-  - Toxic Blade
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -223,17 +223,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.42
+    Spectral Armor:
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.52
     Amanita Charm:
       total: 0.78
       efficiency: 0.63
@@ -660,19 +660,19 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
   - The Crusher
-  - Avatar's Parashu
   flex_slots:
   - Hydra's Lament
-  - Avatar's Parashu
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -685,6 +685,12 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.47
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Toxic Blade:
       total: 0.5
       efficiency: 0.42
@@ -715,12 +721,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Avatar's Parashu:
-      total: 0.48
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -730,11 +730,11 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - The Crusher
   - Amanita Charm
+  - Erosion
   flex_slots:
   - Jotunn's Revenge
-  - The Crusher
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -775,36 +775,36 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    The Crusher:
-      total: 0.5
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Amanita Charm:
       total: 0.7
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Erosion:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - The Crusher
   - Heartseeker
-  - Avatar's Parashu
   flex_slots:
-  - Avatar's Parashu
   - Heartseeker
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
@@ -817,6 +817,12 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Avenging Blade:
+      total: 0.52
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Toxic Blade:
       total: 0.57
       efficiency: 0.42
@@ -847,12 +853,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Avatar's Parashu:
-      total: 0.55
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -861,12 +861,12 @@ builds:
   - Golden Blade
   - Lernaean Bow
   - Toxic Blade
+  - Tyrfing
   - The Reaper
   - Riptalon
-  - Silverbranch Bow
   flex_slots:
   - Lernaean Bow
-  - Silverbranch Bow
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -901,6 +901,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     The Reaper:
       total: 0.55
       efficiency: 0.52
@@ -913,12 +919,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
-    Silverbranch Bow:
-      total: 0.53
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested

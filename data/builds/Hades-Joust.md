@@ -9,12 +9,12 @@ builds:
   - Divine Ruin
   - Kinetic Cuirass
   - Spear of Desolation
-  - Spear of the Magus
+  - Spectral Armor
   - Erosion
   - Soul Gem
   flex_slots:
   - Divine Ruin
-  - Spear of the Magus
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -49,12 +49,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Spear of the Magus:
-      total: 0.54
-      efficiency: 0.6
+    Spectral Armor:
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.48
     Erosion:
       total: 0.56
       efficiency: 0.52
@@ -464,14 +464,14 @@ builds:
   archetype: str-int
   slot_order:
   - Divine Ruin
-  - Toxic Blade
   - Jotunn's Revenge
   - The Crusher
+  - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Divine Ruin
-  - Toxic Blade
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,8 +483,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -494,12 +494,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Toxic Blade:
-      total: 0.51
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.66
@@ -512,6 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Erosion:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -531,12 +531,12 @@ builds:
   - Divine Ruin
   - Kinetic Cuirass
   - Spear of Desolation
-  - Spear of the Magus
+  - Spectral Armor
   - Erosion
   - Soul Gem
   flex_slots:
   - Divine Ruin
-  - Spear of the Magus
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -571,12 +571,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Spear of the Magus:
-      total: 0.54
-      efficiency: 0.6
+    Spectral Armor:
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.48
     Erosion:
       total: 0.56
       efficiency: 0.52

@@ -74,10 +74,10 @@ builds:
   archetype: crit
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
   - Death Metal
   - Damaru
   - Demon Blade
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Demon Blade
@@ -93,8 +93,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -104,12 +104,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Toxic Blade:
-      total: 0.55
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Death Metal:
       total: 0.53
       efficiency: 0.58
@@ -128,6 +122,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Pharaoh's Curse:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -203,7 +203,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Toxic Blade
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
@@ -211,7 +211,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Erosion
-  - Toxic Blade
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -223,17 +223,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.42
+    Spectral Armor:
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.53
     Amanita Charm:
       total: 0.78
       efficiency: 0.63
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Toxic Blade
+  - Lernaean Bow
   - Jotunn's Revenge
   - Hydra's Lament
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Shogun's Ofuda
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -418,17 +418,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.51
-      efficiency: 0.42
+    Lernaean Bow:
+      total: 0.5
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.47
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.66

@@ -7,18 +7,18 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Avatar's Parashu
   flex_slots:
   - Pendulum Blade
-  - Avatar's Parashu
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -37,6 +37,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Hydra's Lament:
+      total: 0.64
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     The Reaper:
       total: 0.76
       efficiency: 0.52
@@ -61,12 +67,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Avatar's Parashu:
-      total: 0.69
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -78,14 +78,14 @@ builds:
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Avatar's Parashu
+  - Heartseeker
   flex_slots:
-  - Avatar's Parashu
   - Hydra's Lament
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -128,12 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Avatar's Parashu:
-      total: 0.57
-      efficiency: 0.38
+    Heartseeker:
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -399,18 +399,18 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Avatar's Parashu
   flex_slots:
   - Pendulum Blade
-  - Avatar's Parashu
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -429,6 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Hydra's Lament:
+      total: 0.64
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     The Reaper:
       total: 0.76
       efficiency: 0.52
@@ -450,12 +456,6 @@ builds:
     Heartseeker:
       total: 0.72
       efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Avatar's Parashu:
-      total: 0.69
-      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 1.0

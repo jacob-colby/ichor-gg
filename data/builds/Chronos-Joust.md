@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Genji's Guard
   - Void Stone
   - Spear of Desolation
   - Spectral Armor
   - Erosion
   - Soul Gem
-  - Doublet of Binding
   flex_slots:
   - Spectral Armor
-  - Doublet of Binding
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -618,6 +618,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Genji's Guard:
+      total: 0.48
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.25
     Void Stone:
       total: 0.5
       efficiency: 0.44
@@ -648,12 +654,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doublet of Binding:
-      total: 0.48
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -923,15 +923,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
-  - Void Stone
   - Spear of Desolation
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Breastplate of Valor
-  - Void Stone
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -948,6 +948,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Genji's Guard:
       total: 0.54
       efficiency: 0.71
@@ -960,12 +966,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
-    Void Stone:
-      total: 0.48
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Spear of Desolation:
       total: 0.52
       efficiency: 0.52
@@ -1121,15 +1121,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Genji's Guard
   - Void Stone
   - Spear of Desolation
   - Spectral Armor
   - Erosion
   - Soul Gem
-  - Doublet of Binding
   flex_slots:
   - Spectral Armor
-  - Doublet of Binding
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1146,6 +1146,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Genji's Guard:
+      total: 0.48
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.25
     Void Stone:
       total: 0.5
       efficiency: 0.44
@@ -1176,12 +1182,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doublet of Binding:
-      total: 0.48
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
   starter: *id001
   aspect: Aspect of Relativity
 ---

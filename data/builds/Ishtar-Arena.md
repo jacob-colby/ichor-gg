@@ -138,31 +138,37 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Umbral Link
   flex_slots:
   - Erosion
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Spectral Armor:
+      total: 0.58
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Amanita Charm:
       total: 0.82
       efficiency: 0.63
@@ -175,12 +181,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Stampede:
-      total: 0.58
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Pharaoh's Curse:
       total: 0.67
       efficiency: 0.57

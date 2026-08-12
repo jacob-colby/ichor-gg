@@ -10,11 +10,11 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   - Riptalon
-  - Demon Blade
   - The Crusher
+  - Pharaoh's Curse
   flex_slots:
   - The Crusher
-  - Demon Blade
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -55,15 +55,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Demon Blade:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     The Crusher:
       total: 0.53
       efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Pharaoh's Curse:
+      total: 0.5
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -467,11 +467,11 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   - Riptalon
-  - Demon Blade
   - The Crusher
+  - Pharaoh's Curse
   flex_slots:
   - The Crusher
-  - Demon Blade
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -512,15 +512,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Demon Blade:
-      total: 0.51
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     The Crusher:
       total: 0.53
       efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Pharaoh's Curse:
+      total: 0.5
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -730,11 +730,11 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - The Crusher
   - Amanita Charm
+  - Erosion
   flex_slots:
   - Jotunn's Revenge
-  - The Crusher
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -775,18 +775,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    The Crusher:
-      total: 0.5
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Amanita Charm:
       total: 0.7
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Erosion:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested

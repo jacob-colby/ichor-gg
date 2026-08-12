@@ -860,13 +860,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Riptalon
-  - Silverbranch Bow
+  - Eros' Bow
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Shogun's Ofuda
-  - Silverbranch Bow
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -895,12 +895,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Silverbranch Bow:
+    Eros' Bow:
       total: 0.48
-      efficiency: 0.54
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.46
     Pharaoh's Curse:
       total: 0.52
       efficiency: 0.57

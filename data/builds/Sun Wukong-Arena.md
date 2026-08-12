@@ -73,19 +73,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Spectral Armor
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
-  - Soul Gem
   flex_slots:
   - Shogun's Ofuda
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -98,24 +98,30 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Spectral Armor:
+      total: 0.63
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Amanita Charm:
       total: 0.82
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Rod of Asclepius:
+      total: 0.71
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
     Erosion:
       total: 0.68
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Stampede:
-      total: 0.63
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
     Pharaoh's Curse:
       total: 0.67
       efficiency: 0.57
@@ -128,12 +134,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Soul Gem:
-      total: 0.71
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
   starter: *id001
 - source: suggested
   archetype: anti-tank

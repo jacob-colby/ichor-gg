@@ -6,22 +6,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Dreamer's Idol
+  - Void Shield
   - Spectral Armor
+  - Amanita Charm
   - Erosion
   - Stampede
-  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Dreamer's Idol
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -31,18 +31,24 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Dreamer's Idol:
-      total: 0.58
-      efficiency: 0.48
+    Void Shield:
+      total: 0.57
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.68
     Spectral Armor:
       total: 0.58
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Amanita Charm:
+      total: 0.79
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
     Erosion:
       total: 0.61
       efficiency: 0.52
@@ -55,12 +61,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Soul Gem:
-      total: 0.79
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
     Triton's Conch:
       total: 0.58
       efficiency: 0.45
@@ -74,18 +74,18 @@ builds:
   archetype: burst
   slot_order:
   - Spear of Desolation
-  - Dreamer's Idol
+  - Spectral Armor
   - Erosion
   - Stampede
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Dreamer's Idol
   - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -104,12 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Dreamer's Idol:
+    Spectral Armor:
       total: 0.54
-      efficiency: 0.48
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.49
     Erosion:
       total: 0.55
       efficiency: 0.52
@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Void Shield
+  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
@@ -146,14 +146,14 @@ builds:
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Void Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,12 +163,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Shield:
-      total: 0.61
-      efficiency: 0.46
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.61
     Spectral Armor:
       total: 0.62
       efficiency: 0.58
@@ -271,7 +271,7 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Stampede
+  - Spectral Armor
   - Soul Gem
   - Triton's Conch
   flex_slots:
@@ -279,8 +279,8 @@ builds:
   - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -311,12 +311,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Stampede:
-      total: 0.52
-      efficiency: 0.48
+    Spectral Armor:
+      total: 0.51
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.45
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -334,14 +334,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Freya's Tears
   - Spear of Desolation
+  - Spectral Armor
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
-  - Freya's Tears
   - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -364,18 +364,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Spectral Armor:
+      total: 0.54
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Erosion:
       total: 0.55
       efficiency: 0.52
@@ -464,14 +464,14 @@ builds:
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
-  - The Crusher
+  - Spectral Armor
   - Erosion
   - Stampede
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - The Crusher
   - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -494,12 +494,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    The Crusher:
-      total: 0.56
-      efficiency: 0.63
+    Spectral Armor:
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.51
     Erosion:
       total: 0.56
       efficiency: 0.52
@@ -528,22 +528,22 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Dreamer's Idol
+  - Void Shield
   - Spectral Armor
+  - Amanita Charm
   - Erosion
   - Stampede
-  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Dreamer's Idol
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -553,18 +553,24 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Dreamer's Idol:
-      total: 0.58
-      efficiency: 0.48
+    Void Shield:
+      total: 0.57
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.68
     Spectral Armor:
       total: 0.58
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Amanita Charm:
+      total: 0.79
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
     Erosion:
       total: 0.61
       efficiency: 0.52
@@ -577,12 +583,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Soul Gem:
-      total: 0.79
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
     Triton's Conch:
       total: 0.58
       efficiency: 0.45

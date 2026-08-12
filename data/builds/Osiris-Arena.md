@@ -73,31 +73,43 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Shield of the Phoenix
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
-  - Umbral Link
   flex_slots:
-  - Umbral Link
-  - Stampede
+  - Shield of the Phoenix
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Shield of the Phoenix:
+      total: 0.6
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Spectral Armor:
+      total: 0.59
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Amanita Charm:
       total: 0.82
       efficiency: 0.63
@@ -110,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Stampede:
-      total: 0.59
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Pharaoh's Curse:
       total: 0.67
       efficiency: 0.57
@@ -128,12 +134,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Umbral Link:
-      total: 0.6
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -141,19 +141,19 @@ builds:
   - Toxic Blade
   - Void Shield
   - Void Stone
-  - The Crusher
   - Amanita Charm
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
   - Pharaoh's Curse
-  - The Crusher
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -181,12 +181,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.89
-    The Crusher:
-      total: 0.59
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Amanita Charm:
       total: 0.72
       efficiency: 0.63
@@ -196,6 +190,12 @@ builds:
     Pharaoh's Curse:
       total: 0.6
       efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Shogun's Ofuda:
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63

@@ -66,8 +66,59 @@ def coherence_multiplier(item, core_totals, stat_reference, strength):
     return (1.0 - strength) + strength * (weighted / total)
 
 
+def time_value_multiplier(item_cost, gold_before, economy):
+    """How much of the match's SCORING WINDOW this item is actually active for.
+
+    The recommender builds one shape of core for every mode. Measured across the
+    shipped builds it costs 15,545g in Arena, 15,452g in Joust and 15,472g in
+    Conquest - the same build for a 17-minute ticket race and a 35-minute Titan
+    push. This is the term that tells them apart.
+
+    IT IS NOT ABOUT AFFORDING THE ITEMS. That was the obvious theory and the
+    numbers refute it: gold income scales with match length, so the FRACTION of
+    the match spent at each item count is near-identical everywhere (62% / 62%
+    / 61% of the match at three items or fewer). Arena's documented 15 gold/sec
+    spooling alone funds the entire core by ~16 minutes of a 15-20 minute match,
+    before a single kill. You finish six items in every mode.
+
+    IT IS ABOUT WHEN THE GAME IS SCORED.
+
+      Arena  500 tickets falling from 0:00. Every kill and every minion pushed
+             scores immediately, so value accrues UNIFORMLY across the match.
+             A sixth item bought at minute 16 of 17 is present for almost none
+             of the scoring.
+      Joust  a Titan, like Conquest - the win happens at the end, so late items
+             keep most of their worth. Faster than Conquest, and its income is
+             only 90% spooled (the rest is farm, so a losing player may never
+             reach six), which is why it decays a little rather than not at all.
+      Conquest  the Titan cannot fall early. The sixth item is present for the
+             fight that ends the game and is worth full value. No decay.
+
+    `uniformity` is that axis, 0 = purely endgame, 1 = purely uniform. The
+    weight is item-specific through COST: an expensive item completes later, so
+    it is active for less of the window. That produces a preference for earlier
+    power without ever asserting "cheap is good", which the economy data does
+    not support.
+
+    Every number lives in `modes.<mode>.economy` in _weights.yaml with its
+    source and evidence tier. Returns 1.0 - a no-op - when a mode has no
+    economy block, so a mode nobody has researched is left alone.
+    """
+    if not economy:
+        return 1.0
+    gpm = economy.get("gold_per_min") or 0
+    minutes = economy.get("match_minutes") or 0
+    uniformity = economy.get("uniformity", 0.0)
+    if gpm <= 0 or minutes <= 0 or uniformity <= 0:
+        return 1.0
+    finish_gold = gold_before + (item_cost or 0)
+    completed_at = max(0.0, (finish_gold - economy.get("start_gold", 0)) / gpm)
+    active = max(0.0, 1.0 - completed_at / minutes)
+    return (1.0 - uniformity) + uniformity * active
+
+
 def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
-                  stat_caps=None, coherence=0.0, stat_reference=None):
+                  stat_caps=None, coherence=0.0, stat_reference=None, economy=None):
     """Highest-total items filling n slots: at most one boots, at most
     `max_lifesteal` lifesteal/sustain items, no duplicates. rows must be
     pre-sorted by -total (score_god_items already does). When `require`
@@ -100,6 +151,9 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
     # from `capped_totals`, which only tracks the handful of stats with real
     # in-game caps.
     core_totals = {}
+    # Gold committed so far, so `time_value_multiplier` knows when the next
+    # purchase actually completes.
+    spent = [0]
     _row_tags = {r["item"]: r.get("tags") for r in rows}
     stat_reference = stat_reference or {}
 
@@ -141,6 +195,7 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
                 capped_totals[stat] = capped_totals.get(stat, 0.0) + _amount(raw)
         for stat, raw in (item.get("stats") or {}).items():
             core_totals[stat] = core_totals.get(stat, 0.0) + _amount(raw)
+        spent[0] += item.get("cost") or 0
         core.append(name)
         used.add(name)
         return True
@@ -155,7 +210,7 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
             if stat in (item.get("stats") or {}) and _try_add(r["item"]):
                 seeded += 1
 
-    if not coherence:
+    if not coherence and not economy:
         # The original path, kept exactly: rows arrive sorted by -total, so
         # walking them once IS picking the best remaining item every time.
         for r in rows:
@@ -164,18 +219,23 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
             _try_add(r["item"])
         return core
 
-    # With coherence on, an item's worth depends on what is already in the
-    # core, so the ranking is no longer fixed and has to be recomputed each
-    # slot. Ties fall back to the row order, which is the score order, so this
-    # degrades to the loop above as the multiplier flattens.
+    # With coherence or a mode economy on, an item's worth depends on what is
+    # already in the core — its stat overlap, and the gold already committed
+    # ahead of it — so the ranking is no longer fixed and has to be recomputed
+    # each slot. Ties fall back to the row order, which is the score order, so
+    # this degrades to the loop above as the multipliers flatten.
     remaining = [r for r in rows if r["item"] not in used]
     while len(core) < n and remaining:
         best_index = None
         best_score = None
         for index, r in enumerate(remaining):
             item = items_by_name.get(r["item"], {})
-            score = r["total"] * coherence_multiplier(
-                item, core_totals, stat_reference, coherence)
+            score = r["total"]
+            if coherence:
+                score *= coherence_multiplier(item, core_totals, stat_reference,
+                                              coherence)
+            if economy:
+                score *= time_value_multiplier(item.get("cost"), spent[0], economy)
             if best_score is None or score > best_score:
                 best_index, best_score = index, score
         r = remaining.pop(best_index)

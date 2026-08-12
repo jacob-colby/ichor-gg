@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Chronos' Pendant
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - The Cosmic Horror
-  - Obsidian Shard
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -31,6 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Chronos' Pendant:
+      total: 0.62
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Spear of Desolation:
       total: 0.76
       efficiency: 0.52
@@ -46,12 +52,6 @@ builds:
     Spear of the Magus:
       total: 0.66
       efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
-    Obsidian Shard:
-      total: 0.63
-      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Void Shield
+  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
@@ -146,14 +146,14 @@ builds:
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Void Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,12 +163,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Shield:
+    Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.46
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.6
     Spectral Armor:
       total: 0.61
       efficiency: 0.58
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Chronos' Pendant
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - The Cosmic Horror
-  - Obsidian Shard
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Chronos' Pendant:
+      total: 0.62
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Spear of Desolation:
       total: 0.76
       efficiency: 0.52
@@ -438,12 +444,6 @@ builds:
     Spear of the Magus:
       total: 0.66
       efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
-    Obsidian Shard:
-      total: 0.63
-      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -665,15 +665,15 @@ builds:
   - Void Shield
   - Void Stone
   - Spear of Desolation
-  - Dreamer's Idol
+  - Spear of the Magus
   - Soul Gem
   flex_slots:
-  - Dreamer's Idol
   - Screeching Gargoyle
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -710,12 +710,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Dreamer's Idol:
-      total: 0.62
-      efficiency: 0.48
+    Spear of the Magus:
+      total: 0.58
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.56
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -795,13 +795,13 @@ builds:
   slot_order:
   - Screeching Gargoyle
   - Genji's Guard
-  - Freya's Tears
+  - Chronos' Pendant
   - Spear of Desolation
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Screeching Gargoyle
-  - Freya's Tears
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -830,12 +830,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Freya's Tears:
-      total: 0.54
-      efficiency: 0.59
+    Chronos' Pendant:
+      total: 0.53
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.51
     Spear of Desolation:
       total: 0.59
       efficiency: 0.52

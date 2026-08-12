@@ -73,19 +73,19 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Spear of Desolation
   - The Crusher
-  - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Dreamer's Idol
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -98,6 +98,12 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Toxic Blade:
       total: 0.56
       efficiency: 0.42
@@ -122,12 +128,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Dreamer's Idol:
-      total: 0.54
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -138,19 +138,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Erosion
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -163,6 +163,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Spectral Armor:
+      total: 0.58
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Amanita Charm:
       total: 0.81
       efficiency: 0.63
@@ -175,12 +181,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Stampede:
-      total: 0.58
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Pharaoh's Curse:
       total: 0.65
       efficiency: 0.57
@@ -206,16 +206,16 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   - The Crusher
-  - Avatar's Parashu
   - Soul Gem
   flex_slots:
   - Void Shield
-  - Avatar's Parashu
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -246,18 +246,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Void Stone:
+      total: 0.57
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     The Crusher:
       total: 0.65
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Avatar's Parashu:
-      total: 0.57
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -398,19 +398,19 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Divine Ruin
   - Jotunn's Revenge
   - Bragi's Harp
   - Death Metal
-  - Dreamer's Idol
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Bragi's Harp
-  - Dreamer's Idol
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -418,11 +418,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.66
@@ -441,12 +447,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Dreamer's Idol:
-      total: 0.55
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Soul Gem:
       total: 0.79
       efficiency: 0.59

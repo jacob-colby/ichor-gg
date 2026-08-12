@@ -74,24 +74,24 @@ builds:
   archetype: bruiser
   slot_order:
   - Shield of the Phoenix
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Spectral Armor:
+      total: 0.61
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Amanita Charm:
       total: 0.82
       efficiency: 0.63
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Stampede:
-      total: 0.62
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Pharaoh's Curse:
       total: 0.66
       efficiency: 0.57
@@ -138,37 +138,31 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Toxic Blade
   - Erosion
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.6
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.66
@@ -199,6 +193,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Pharaoh's Curse:
+      total: 0.59
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: attack-speed

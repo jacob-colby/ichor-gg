@@ -142,8 +142,8 @@ builds:
   - Void Shield
   - Void Stone
   - The Crusher
+  - Amanita Charm
   - Erosion
-  - Soul Gem
   flex_slots:
   - Jotunn's Revenge
   - The Crusher
@@ -152,8 +152,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Stone of Binding — magical protection
+    swap_item: Stone of Binding
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -187,18 +187,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Amanita Charm:
+      total: 0.79
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
     Erosion:
       total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Soul Gem:
-      total: 0.79
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -399,10 +399,10 @@ builds:
   archetype: str-int
   slot_order:
   - Spectral Armor
+  - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
-  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Spectral Armor
@@ -412,8 +412,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -429,6 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Amanita Charm:
+      total: 0.79
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
     Erosion:
       total: 0.61
       efficiency: 0.52
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Soul Gem:
-      total: 0.79
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
     Triton's Conch:
       total: 0.62
       efficiency: 0.45

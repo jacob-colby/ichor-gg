@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
-  - The World Stone
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - The World Stone
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -240,15 +240,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Spear of the Magus:
-      total: 0.6
-      efficiency: 0.6
+    Doom Orb:
+      total: 0.54
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
-    The World Stone:
-      total: 0.54
-      efficiency: 0.49
+    Spear of the Magus:
+      total: 0.6
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.6

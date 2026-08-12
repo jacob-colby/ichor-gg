@@ -87,6 +87,7 @@ Each of these has its evidence in the named module.
 | `unknown_win_rate` stays at 0.5 | `scoring.UNKNOWN_WIN_RATE` | It is *not* neutral (observed mean 0.556) but the only metric that responds to changing it is the circular one |
 | Draft blocks duplicates per **team**, not per board | `useDraftResult.takenFor` | Only ranked Conquest drafts globally-unique picks; Joust and Arena are not draft modes |
 | A draft bonus is damped when the core already covers that **tag** | `draftBuild.adaptedCore` | Same judgement `ally_covered` makes about a teammate; tags only, because a stat is a quantity not a job |
+| Arena and Joust discount **late** items; Conquest does not | `assemble.time_value_multiplier` | Arena's 500 tickets accrue from 0:00 so value is uniform; both Titan modes are back-loaded. Not about affording items — income scales with match length |
 | Community pick is **conditional on reaching the slot** | `scoring.SLOT_REACH` | Slot mass decays 0.684 → 0.222 from slot 1 to 6; an item bought sixth was divided by matches that never bought a sixth item |
 | Stance gods' abilities live in a **tab wrapper** | `wiki_parser._section_tables` | Ullr, Artio and Merlin reported `n_scaling_abilities: 0` — 28 ability tables the parser walked straight past |
 | Eye of Providence carries a **`ward-economy`** penalty | `data/_tags.yaml` | Its stat discount is the ward engine's price tag; 16 Support/Solo cores against 1 community sighting |
@@ -156,7 +157,15 @@ just reproduce the old answer.
 Roughly in the order I would do them.
 
 ### Two thirds of the shipped builds rest on nothing measurable
-**No source for this exists** (checked 2026-08-10): SmiteBrain is Conquest-only
+The builds are no longer *identical* to Conquest's, at least:
+`modes.<mode>.economy` discounts an item by the share of the scoring window it
+is active for, which moves Arena's average purchase −680g and Joust's −133g.
+Every input carries its source and tier in `_weights.yaml`; Arena's are
+DOCUMENTED (15 g/s spooling from OB28 — the mode page's 11 is pre-OB1 and
+stale), Joust's are INFERRED because its wiki page is a stub. Still no outcome
+data to check any of it against.
+
+**No source for outcomes exists** (checked 2026-08-10): SmiteBrain is Conquest-only
 and ignores every mode query param, smite2.live ships a Joust/Arena selector
 with zero rows behind it, SmiteTracker's meta report is Conquest-only. The
 builds now disclose it in the reader's own terms — "no outcome data exists for

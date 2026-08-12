@@ -75,10 +75,10 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
-  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
   - Shogun's Ofuda
@@ -110,6 +110,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Rod of Asclepius:
+      total: 0.66
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Erosion:
       total: 0.63
       efficiency: 0.52
@@ -128,12 +134,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Soul Gem:
-      total: 0.66
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
   starter: *id001
 - source: suggested
   archetype: anti-tank

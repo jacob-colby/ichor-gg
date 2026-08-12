@@ -141,16 +141,16 @@ builds:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
   - Erosion
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -181,6 +181,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Spectral Armor:
+      total: 0.63
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Amanita Charm:
       total: 0.82
       efficiency: 0.63
@@ -193,25 +199,19 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
-    Stampede:
-      total: 0.64
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Ashwhorl Acorn
   - Jotunn's Revenge
   - The Reaper
   - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
   - Pendulum Blade
-  - Titan's Bane
+  - Ashwhorl Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -228,6 +228,12 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Ashwhorl Acorn:
+      total: 0.64
+      efficiency: 0.96
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
     Jotunn's Revenge:
       total: 0.83
       efficiency: 0.66
@@ -258,12 +264,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Titan's Bane:
-      total: 0.7
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.94
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -271,12 +271,12 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Ashwhorl Acorn
+  - Thistlethorn Acorn
   - Tyrfing
   - Riptalon
-  - Silverbranch Bow
   flex_slots:
   - Tyrfing
-  - Silverbranch Bow
+  - Thistlethorn Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -311,6 +311,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Thistlethorn Acorn:
+      total: 0.61
+      efficiency: 0.92
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
     Tyrfing:
       total: 0.62
       efficiency: 0.46
@@ -323,12 +329,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Silverbranch Bow:
-      total: 0.62
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: cooldown

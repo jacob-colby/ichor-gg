@@ -139,14 +139,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Stone of Binding
-  - Toxic Blade
   - Void Shield
   - Void Stone
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Stone of Binding
-  - Toxic Blade
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -158,8 +158,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -169,12 +169,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Toxic Blade:
-      total: 0.6
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
     Void Shield:
       total: 0.73
       efficiency: 0.46
@@ -187,6 +181,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Spectral Armor:
+      total: 0.59
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Amanita Charm:
       total: 0.82
       efficiency: 0.63
@@ -203,7 +203,7 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Toxic Blade
+  - Golden Blade
   - Riptalon
   - Amanita Charm
   - Erosion
@@ -211,7 +211,7 @@ builds:
   - Shogun's Ofuda
   flex_slots:
   - Erosion
-  - Toxic Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -223,17 +223,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
+    Golden Blade:
       total: 0.59
-      efficiency: 0.42
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.64
     Riptalon:
       total: 0.62
       efficiency: 0.56

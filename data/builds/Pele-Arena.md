@@ -11,14 +11,14 @@ builds:
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Avatar's Parashu
+  - Heartseeker
   flex_slots:
-  - Avatar's Parashu
   - Hydra's Lament
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -61,12 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
-    Avatar's Parashu:
-      total: 0.68
-      efficiency: 0.38
+    Heartseeker:
+      total: 0.66
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 0.88
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -78,14 +78,14 @@ builds:
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Avatar's Parashu
+  - Heartseeker
   flex_slots:
-  - Avatar's Parashu
   - Hydra's Lament
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -128,12 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Avatar's Parashu:
-      total: 0.57
-      efficiency: 0.38
+    Heartseeker:
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -273,17 +273,17 @@ builds:
   - Toxic Blade
   - Tyrfing
   - Riptalon
-  - Silverbranch Bow
+  - Amanita Charm
   flex_slots:
   - Lernaean Bow
-  - Silverbranch Bow
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -323,12 +323,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.99
-    Silverbranch Bow:
+    Amanita Charm:
       total: 0.59
-      efficiency: 0.54
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -403,14 +403,14 @@ builds:
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Avatar's Parashu
+  - Heartseeker
   flex_slots:
-  - Avatar's Parashu
   - Hydra's Lament
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -453,11 +453,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
-    Avatar's Parashu:
-      total: 0.68
-      efficiency: 0.38
+    Heartseeker:
+      total: 0.66
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 0.88
   starter: *id001
 ---

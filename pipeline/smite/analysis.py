@@ -19,6 +19,7 @@ def god_disagreements(god, items, build_note, weights, tags_map, eff_scores, ite
     core = assemble.assemble_core(rows, items_by_name, n=6,
                                   max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
                                   stat_caps=weights.get("stat_caps"),
+                                  economy=profile.get("economy"),
                                   **assemble.coherence_args(items, weights))
     community = [c for b in build_note.get("builds", []) if b.get("source") == "community"
                  for c in b.get("slot_order", []) if isinstance(c, dict)]

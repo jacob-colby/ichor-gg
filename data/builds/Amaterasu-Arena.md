@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Crusher
   - Amanita Charm
   - Erosion
   flex_slots:
   - Jotunn's Revenge
-  - The Crusher
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,6 +163,12 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Stone of Binding:
+      total: 0.59
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.66
@@ -181,12 +187,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.97
-    The Crusher:
-      total: 0.59
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Amanita Charm:
       total: 0.8
       efficiency: 0.63
@@ -203,7 +203,7 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Toxic Blade
+  - Golden Blade
   - Riptalon
   - Amanita Charm
   - Erosion
@@ -211,7 +211,7 @@ builds:
   - Shogun's Ofuda
   flex_slots:
   - Erosion
-  - Toxic Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -223,17 +223,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.59
-      efficiency: 0.42
+    Golden Blade:
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.63
     Riptalon:
       total: 0.62
       efficiency: 0.56

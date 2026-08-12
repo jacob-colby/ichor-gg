@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Divine Ruin
   - Bragi's Harp
   - Spear of Desolation
-  - Spear of the Magus
   - Dreamer's Idol
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Bragi's Harp
-  - Spear of the Magus
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -93,11 +93,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.49
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Bragi's Harp:
       total: 0.53
       efficiency: 0.44
@@ -110,12 +116,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Spear of the Magus:
-      total: 0.5
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Dreamer's Idol:
       total: 0.54
       efficiency: 0.48
@@ -595,17 +595,17 @@ builds:
   slot_order:
   - Void Stone
   - Spear of Desolation
-  - Dreamer's Idol
+  - Spectral Armor
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
-  - Dreamer's Idol
   - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -630,12 +630,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Dreamer's Idol:
-      total: 0.49
-      efficiency: 0.48
+    Spectral Armor:
+      total: 0.48
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.38
     Erosion:
       total: 0.49
       efficiency: 0.52
@@ -662,16 +662,16 @@ builds:
   - Divine Ruin
   - Bragi's Harp
   - Spear of Desolation
-  - Dreamer's Idol
+  - Spectral Armor
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Bragi's Harp
   - Divine Ruin
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -702,12 +702,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Dreamer's Idol:
-      total: 0.52
-      efficiency: 0.48
+    Spectral Armor:
+      total: 0.47
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.36
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -860,7 +860,7 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Void Stone
+  - Spectral Armor
   - Soul Gem
   - Triton's Conch
   flex_slots:
@@ -900,12 +900,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Void Stone:
-      total: 0.48
-      efficiency: 0.44
+    Spectral Armor:
+      total: 0.47
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.36
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -923,15 +923,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
-  - Void Stone
   - Spear of Desolation
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Breastplate of Valor
-  - Void Stone
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -948,6 +948,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Genji's Guard:
       total: 0.54
       efficiency: 0.71
@@ -960,12 +966,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
-    Void Stone:
-      total: 0.48
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Spear of Desolation:
       total: 0.52
       efficiency: 0.52
@@ -1056,14 +1056,14 @@ builds:
   archetype: str-int
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
+  - Jotunn's Revenge
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
   - Lernaean Bow
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1075,8 +1075,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -1086,12 +1086,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.42
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.44
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.57
@@ -1123,17 +1123,17 @@ builds:
   slot_order:
   - Void Stone
   - Spear of Desolation
-  - Dreamer's Idol
+  - Spectral Armor
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
-  - Dreamer's Idol
   - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Resolute Mantle — CC-immunity / cleanse
-    swap_item: Resolute Mantle
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -1158,12 +1158,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Dreamer's Idol:
-      total: 0.49
-      efficiency: 0.48
+    Spectral Armor:
+      total: 0.48
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.38
     Erosion:
       total: 0.49
       efficiency: 0.52

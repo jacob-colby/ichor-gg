@@ -73,7 +73,7 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Toxic Blade
+  - Lernaean Bow
   - Death Metal
   - Damaru
   - Demon Blade
@@ -93,17 +93,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.53
-      efficiency: 0.42
+    Lernaean Bow:
+      total: 0.52
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.51
     Death Metal:
       total: 0.54
       efficiency: 0.58
@@ -203,19 +203,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Erosion
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -228,6 +228,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Spectral Armor:
+      total: 0.54
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Amanita Charm:
       total: 0.76
       efficiency: 0.63
@@ -240,12 +246,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Stampede:
-      total: 0.54
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Pharaoh's Curse:
       total: 0.61
       efficiency: 0.57
@@ -401,12 +401,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
-  - Spear of Desolation
   - Pharaoh's Curse
+  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Toxic Blade
-  - Spear of Desolation
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -441,15 +441,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Spear of Desolation:
-      total: 0.51
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Pharaoh's Curse:
       total: 0.53
       efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Shogun's Ofuda:
+      total: 0.5
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -726,19 +726,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Erosion
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -751,6 +751,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Spectral Armor:
+      total: 0.54
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Amanita Charm:
       total: 0.76
       efficiency: 0.63
@@ -763,12 +769,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Stampede:
-      total: 0.54
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Pharaoh's Curse:
       total: 0.58
       efficiency: 0.57

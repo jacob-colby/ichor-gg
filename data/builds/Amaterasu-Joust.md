@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Divine Ruin
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Spectral Armor
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Jotunn's Revenge
-  - Divine Ruin
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -353,17 +353,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.52
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.66
@@ -376,6 +370,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Erosion:
       total: 0.56
       efficiency: 0.52
@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - The Crusher
+  - Spectral Armor
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Jotunn's Revenge
-  - The Crusher
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -435,12 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
-    The Crusher:
-      total: 0.53
-      efficiency: 0.63
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.46
     Erosion:
       total: 0.56
       efficiency: 0.52

@@ -141,16 +141,16 @@ builds:
   - Stone of Binding
   - Void Shield
   - Void Stone
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
   - Stone of Binding
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -181,6 +181,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Spectral Armor:
+      total: 0.6
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Amanita Charm:
       total: 0.82
       efficiency: 0.63
@@ -193,12 +199,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Stampede:
-      total: 0.6
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -206,16 +206,16 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
   - Bracer of The Abyss
   - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -246,6 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Spectral Armor:
+      total: 0.56
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Amanita Charm:
       total: 0.77
       efficiency: 0.63
@@ -258,12 +264,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Stampede:
-      total: 0.56
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: cooldown

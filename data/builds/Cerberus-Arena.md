@@ -141,16 +141,16 @@ builds:
   - Stone of Binding
   - Void Shield
   - Void Stone
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
   - Stone of Binding
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -181,6 +181,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.99
+    Spectral Armor:
+      total: 0.59
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Amanita Charm:
       total: 0.82
       efficiency: 0.63
@@ -193,12 +199,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Stampede:
-      total: 0.59
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -206,16 +206,16 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
   - Bracer of The Abyss
   - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -246,6 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Spectral Armor:
+      total: 0.56
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Amanita Charm:
       total: 0.77
       efficiency: 0.63
@@ -258,12 +264,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Stampede:
-      total: 0.56
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -398,19 +398,19 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Spectral Armor
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Shogun's Ofuda
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -423,18 +423,18 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Spectral Armor:
+      total: 0.56
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Erosion:
       total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Stampede:
-      total: 0.57
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.57

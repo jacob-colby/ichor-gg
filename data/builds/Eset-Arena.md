@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Void Shield
+  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
@@ -146,14 +146,14 @@ builds:
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Void Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,12 +163,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Shield:
+    Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.46
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.6
     Spectral Armor:
       total: 0.61
       efficiency: 0.58
@@ -268,10 +268,10 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Divine Ruin
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Dreamer's Idol
   - Soul Gem
   - Triton's Conch
   flex_slots:
@@ -279,8 +279,8 @@ builds:
   - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -288,11 +288,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.5
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Bracer of The Abyss:
       total: 0.48
       efficiency: 0.56
@@ -311,12 +317,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Dreamer's Idol:
-      total: 0.5
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -464,18 +464,18 @@ builds:
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
+  - Death Metal
   - Spear of Desolation
   - The Crusher
-  - Dreamer's Idol
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Dreamer's Idol
   - Spear of Desolation
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -494,6 +494,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Death Metal:
+      total: 0.59
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Spear of Desolation:
       total: 0.61
       efficiency: 0.52
@@ -506,12 +512,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Dreamer's Idol:
-      total: 0.62
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Soul Gem:
       total: 0.79
       efficiency: 0.59

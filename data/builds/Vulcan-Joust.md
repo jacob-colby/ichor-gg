@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Bragi's Harp
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Obsidian Shard
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,6 +98,12 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Spear of Desolation:
       total: 0.61
       efficiency: 0.52
@@ -113,12 +119,6 @@ builds:
     Spear of the Magus:
       total: 0.55
       efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
-    Obsidian Shard:
-      total: 0.52
-      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
-  - The World Stone
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - The World Stone
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -240,15 +240,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Spear of the Magus:
-      total: 0.67
-      efficiency: 0.6
+    Doom Orb:
+      total: 0.62
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.75
-    The World Stone:
-      total: 0.62
-      efficiency: 0.49
+    Spear of the Magus:
+      total: 0.67
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.75

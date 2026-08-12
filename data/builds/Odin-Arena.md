@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Crusher
   - Amanita Charm
   - Erosion
   flex_slots:
   - Jotunn's Revenge
-  - The Crusher
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,6 +163,12 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Stone of Binding:
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.66
@@ -181,12 +187,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.98
-    The Crusher:
-      total: 0.6
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Amanita Charm:
       total: 0.81
       efficiency: 0.63
@@ -272,15 +272,15 @@ builds:
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Freya's Tears
+  - Spectral Armor
   - Erosion
-  - Stampede
   flex_slots:
   - Genji's Guard
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -317,18 +317,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Spectral Armor:
+      total: 0.57
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Erosion:
       total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Stampede:
-      total: 0.57
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: model

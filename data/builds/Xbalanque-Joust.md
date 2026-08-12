@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Divine Ruin
   - Toxic Blade
   - Bragi's Harp
   - Death Metal
   - The Crusher
   - Soul Gem
-  - Triton's Conch
   flex_slots:
   - The Crusher
-  - Triton's Conch
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,11 +483,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.51
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Toxic Blade:
       total: 0.54
       efficiency: 0.42
@@ -518,12 +524,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.97
-    Triton's Conch:
-      total: 0.51
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
   starter: *id001
 - source: suggested
   archetype: model

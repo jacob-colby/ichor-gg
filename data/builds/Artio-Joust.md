@@ -7,21 +7,21 @@ builds:
   archetype: core
   slot_order:
   - Kinetic Cuirass
-  - Void Shield
+  - Shield Splitter
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
   - Pharaoh's Curse
-  - Void Shield
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -37,12 +37,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Void Shield:
+    Shield Splitter:
       total: 0.56
-      efficiency: 0.46
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.61
     Spectral Armor:
       total: 0.57
       efficiency: 0.58
@@ -464,21 +464,21 @@ builds:
   archetype: model
   slot_order:
   - Kinetic Cuirass
-  - Void Shield
+  - Shield Splitter
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
   - Pharaoh's Curse
-  - Void Shield
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -494,12 +494,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Void Shield:
+    Shield Splitter:
       total: 0.56
-      efficiency: 0.46
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.61
     Spectral Armor:
       total: 0.57
       efficiency: 0.58

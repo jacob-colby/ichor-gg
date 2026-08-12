@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -158,17 +158,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.61
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.66
@@ -187,6 +181,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Spectral Armor:
+      total: 0.59
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Amanita Charm:
       total: 0.82
       efficiency: 0.63

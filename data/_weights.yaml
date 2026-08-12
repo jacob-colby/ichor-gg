@@ -494,6 +494,21 @@ modes:
     # same way, and predates it.
     tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2, wave-clear: -0.15,
                 mobility: -0.1, ward-economy: -0.25}
+    # Joust is NOT a small Arena, and that is the whole finding. It has a Titan,
+    # jungle camps and towers - structurally Conquest, paced faster. Its win
+    # still happens at the END, so late items keep most of their value and the
+    # decay is mild. What justifies any decay at all is the income: only ~90% of
+    # the core is covered by spooling, the rest is farm, so a losing player may
+    # never reach six items.
+    #   start_gold      1,250     DOCUMENTED - OB1 notes, "Start: Level 3, 1250 Gold"
+    #   gold_per_min      690     INFERRED - documented spooling is 7/sec = 420,
+    #                             which alone reaches six items only at 33.8 min;
+    #                             the remainder is farm, calibrated so the core
+    #                             completes near the match-length midpoint.
+    #   match_minutes    22.5     INFERRED - the SMITE 2 wiki's Joust page is a
+    #                             stub with no length; 15-30 is secondary-source.
+    #   uniformity        0.3     JUDGEMENT - Titan objective, so mostly endgame.
+    economy: {start_gold: 1250, gold_per_min: 690, match_minutes: 22.5, uniformity: 0.3}
     label: "Joust — math + mode profile (no meta win/pick data)"
 
   # No towers, no phoenixes, no jungle camps, and no fog worth warding: one
@@ -509,12 +524,27 @@ modes:
       sustain: 0.25       # continuous fighting, no lane phase to recover in
       cc-immunity: 0.2    # perpetual 5v5; chain CC is the way people die
       wave-clear: 0.1     # minion denial is the objective, not a lane chore
+      ward-economy: -0.25 # no wards at all; excluded_items already drops these
       mobility: -0.1      # no camps or lanes to rotate between
     # Arena has no ward game, so the vision items are absent from its shop.
     # This is the list to correct first if a build recommends something the
     # shop does not have — it cannot be derived: "forward" and "toward" both
     # contain "ward", and Eye of Erebus spawns a Watchful Eye without ever
     # using the word.
+    # The only mode whose value accrues UNIFORMLY: 500 tickets falling from
+    # 0:00, so a kill at minute 3 scores exactly as much as one at minute 15.
+    # A sixth item bought at ~16 min of a 15-20 min match is therefore present
+    # for almost none of the scoring, which is what the decay expresses.
+    #   start_gold      1,250     DOCUMENTED - Arena page infobox
+    #   gold_per_min      900     DOCUMENTED - 15 gold/sec spooling, OB28 notes
+    #                             ("Decreased Gold Spooling: 21 -> 15", Arena).
+    #                             NOTE the Arena page still prints 11/sec, which
+    #                             is pre-OB1 and stale - patch notes win.
+    #                             Conservative: combat income sits on top.
+    #   match_minutes    17.5     DOCUMENTED - Arena page, "Average Length 15~20"
+    #   uniformity        0.6     JUDGEMENT - tickets accrue continuously, but
+    #                             the last fight still matters, so not 1.0.
+    economy: {start_gold: 1250, gold_per_min: 900, match_minutes: 17.5, uniformity: 0.6}
     excluded_items:
       - Eye of Providence   # grants a Sentry Ward; pays gold for killing wards
       - Eye of Erebus       # spawns a Watchful Eye

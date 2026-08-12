@@ -6,19 +6,19 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Lernaean Bow
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Avatar's Parashu
   flex_slots:
-  - Avatar's Parashu
   - Hydra's Lament
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -31,6 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.6
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Jotunn's Revenge:
       total: 0.75
       efficiency: 0.66
@@ -61,31 +67,25 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Avatar's Parashu:
-      total: 0.62
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.87
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: burst
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Avatar's Parashu
   flex_slots:
-  - Avatar's Parashu
   - Hydra's Lament
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -93,11 +93,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.66
@@ -128,12 +134,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Avatar's Parashu:
-      total: 0.54
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -203,19 +203,19 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Avatar's Parashu
   flex_slots:
-  - Heartseeker
   - Pendulum Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -223,11 +223,17 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.64
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
     Jotunn's Revenge:
       total: 0.77
       efficiency: 0.66
@@ -258,12 +264,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Avatar's Parashu:
-      total: 0.67
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -398,19 +398,19 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Lernaean Bow
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Avatar's Parashu
   flex_slots:
-  - Avatar's Parashu
   - Hydra's Lament
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -423,6 +423,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.6
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Jotunn's Revenge:
       total: 0.75
       efficiency: 0.66
@@ -453,11 +459,5 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Avatar's Parashu:
-      total: 0.62
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.87
   starter: *id001
 ---

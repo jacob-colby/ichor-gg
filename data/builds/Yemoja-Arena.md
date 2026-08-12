@@ -141,16 +141,16 @@ builds:
   - Stone of Binding
   - Void Shield
   - Void Stone
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
   - Stone of Binding
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
@@ -181,6 +181,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.99
+    Spectral Armor:
+      total: 0.59
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Amanita Charm:
       total: 0.82
       efficiency: 0.63
@@ -193,12 +199,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Stampede:
-      total: 0.59
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -206,16 +206,16 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
   - Bracer of The Abyss
   - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -246,6 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Spectral Armor:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Amanita Charm:
       total: 0.76
       efficiency: 0.63
@@ -258,12 +264,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Stampede:
-      total: 0.55
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
-  - Triton's Conch
   flex_slots:
-  - Triton's Conch
   - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -358,6 +358,12 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Spectral Armor:
+      total: 0.56
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Amanita Charm:
       total: 0.78
       efficiency: 0.63
@@ -388,21 +394,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Triton's Conch:
-      total: 0.57
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Spectral Armor
+  - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
-  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Spectral Armor
@@ -412,8 +412,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -429,6 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Amanita Charm:
+      total: 0.79
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
     Erosion:
       total: 0.61
       efficiency: 0.52
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Soul Gem:
-      total: 0.79
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
     Triton's Conch:
       total: 0.6
       efficiency: 0.45

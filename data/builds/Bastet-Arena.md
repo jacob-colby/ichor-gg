@@ -11,14 +11,14 @@ builds:
   - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Avatar's Parashu
+  - Titan's Bane
   flex_slots:
   - Pendulum Blade
-  - Avatar's Parashu
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -61,12 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Avatar's Parashu:
-      total: 0.69
-      efficiency: 0.38
+    Titan's Bane:
+      total: 0.68
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.91
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -78,14 +78,14 @@ builds:
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Avatar's Parashu
+  - Heartseeker
   flex_slots:
-  - Avatar's Parashu
   - Hydra's Lament
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -128,32 +128,32 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Avatar's Parashu:
-      total: 0.57
-      efficiency: 0.38
+    Heartseeker:
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Kinetic Cuirass
   - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
-  - Pharaoh's Curse
   flex_slots:
   - Spectral Armor
-  - Pharaoh's Curse
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -163,6 +163,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Kinetic Cuirass:
+      total: 0.63
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Shield of the Phoenix:
       total: 0.65
       efficiency: 0.57
@@ -193,12 +199,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Pharaoh's Curse:
-      total: 0.63
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -403,14 +403,14 @@ builds:
   - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Avatar's Parashu
+  - Titan's Bane
   flex_slots:
   - Pendulum Blade
-  - Avatar's Parashu
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -453,11 +453,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Avatar's Parashu:
-      total: 0.69
-      efficiency: 0.38
+    Titan's Bane:
+      total: 0.68
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.91
   starter: *id001
 ---

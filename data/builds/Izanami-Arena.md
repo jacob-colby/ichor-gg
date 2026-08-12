@@ -203,19 +203,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Erosion
-  - Stampede
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -228,6 +228,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Spectral Armor:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Amanita Charm:
       total: 0.78
       efficiency: 0.63
@@ -237,12 +243,6 @@ builds:
     Erosion:
       total: 0.57
       efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
-    Stampede:
-      total: 0.55
-      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Toxic Blade
+  - Lernaean Bow
   - Jotunn's Revenge
   - Hydra's Lament
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Shogun's Ofuda
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -418,17 +418,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.51
-      efficiency: 0.42
+    Lernaean Bow:
+      total: 0.5
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.47
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.66

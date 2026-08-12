@@ -77,11 +77,11 @@ builds:
   - Spectral Armor
   - Erosion
   - Stampede
+  - Pharaoh's Curse
   - Soul Gem
-  - Triton's Conch
   flex_slots:
-  - Triton's Conch
   - Spectral Armor
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,18 +122,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Soul Gem:
       total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.56
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -204,14 +204,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Stone of Binding
+  - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Crusher
   - Erosion
   - Soul Gem
   flex_slots:
   - Stone of Binding
-  - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -234,6 +234,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Void Shield:
       total: 0.7
       efficiency: 0.46
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.95
-    The Crusher:
-      total: 0.57
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Erosion:
       total: 0.6
       efficiency: 0.52
@@ -336,16 +336,16 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Freya's Tears
+  - Spectral Armor
   - Erosion
-  - Stampede
   - Soul Gem
   flex_slots:
-  - Stampede
   - Genji's Guard
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -376,18 +376,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Spectral Armor:
+      total: 0.57
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Erosion:
       total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Stampede:
-      total: 0.57
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Soul Gem:
       total: 0.79
       efficiency: 0.59
