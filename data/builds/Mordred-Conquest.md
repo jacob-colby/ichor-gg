@@ -97,69 +97,69 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield of the Phoenix
-  - Shifter's Shield
+  - The Crusher
+  - Amanita Charm
   flex_slots:
   - Berserker's Shield
-  - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Amanita Charm, Berserker''s Shield, Gluttonous Grimoire,
-    Jotunn''s Revenge, Eye of Providence, The Crusher, Oni Hunter''s Garb, Hide of
-    the Nemean Lion, Runeforged Hammer, Freya''s Tears, Breastplate of Valor, Shield
-    Splitter, Hydra''s Lament, Soul Gem, Eye of the Storm, Erosion, Spectral Armor,
-    Draconic Scale, Pharaoh''s Curse, Yogi''s Necklace, Avenging Blade, Death Metal,
-    Golden Blade, Leviathan''s Hide, Spear of the Magus, Midgardian Mail, Lernaean
-    Bow, Helm of Radiance, The Reaper, Mantle Of Discord, Stone of Binding, Damaru,
-    Rod of Asclepius, Shogun''s Ofuda, The Cosmic Horror, Stampede.'
+    this god: Kinetic Cuirass, Amanita Charm, Gluttonous Grimoire, Jotunn''s Revenge,
+    Berserker''s Shield, The Crusher, Freya''s Tears, Breastplate of Valor, Oni Hunter''s
+    Garb, Soul Gem, Shield Splitter, Hydra''s Lament, Erosion, Runeforged Hammer,
+    Eye of Providence, Eye of the Storm, Spectral Armor, Draconic Scale, Pharaoh''s
+    Curse, Leviathan''s Hide, Golden Blade, Spear of the Magus, Mantle Of Discord,
+    Stone of Binding, Midgardian Mail, Death Metal, Helm of Radiance, The Cosmic Horror,
+    Shogun''s Ofuda, Avenging Blade, Lernaean Bow, The Reaper, Damaru, Magi''s Cloak,
+    Yogi''s Necklace, Screeching Gargoyle, Ancile.'
   slot_scores:
     Genji's Guard:
       total: 0.57
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.59
-      pick: 0.18
+      pick: 0.28
       fit: 0.28
     Berserker's Shield:
-      total: 0.52
-      efficiency: 0.71
-      win: 0.5
+      total: 0.55
+      efficiency: 0.68
+      win: 0.58
       pick: 0.0
       fit: 0.33
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
+      total: 0.56
+      efficiency: 0.66
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
       total: 0.59
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.63
-      pick: 0.06
+      pick: 0.13
       fit: 0.61
-    Shield of the Phoenix:
+    The Crusher:
       total: 0.55
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.23
-      fit: 0.43
-    Shifter's Shield:
-      total: 0.56
-      efficiency: 0.55
+      efficiency: 0.63
       win: 0.58
-      pick: 0.54
+      pick: 0.0
+      fit: 0.44
+    Amanita Charm:
+      total: 0.56
+      efficiency: 0.63
+      win: 0.58
+      pick: 0.0
       fit: 0.51
   starter: &id001
     base: Bumba's Golden Dagger
@@ -168,14 +168,14 @@ builds:
   archetype: burst
   slot_order:
   - Genji's Guard
+  - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield of the Phoenix
-  - Shifter's Shield
+  - Gluttonous Grimoire
   - The Crusher
   flex_slots:
-  - Jotunn's Revenge
   - The Crusher
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -184,55 +184,55 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Kinetic Cuirass, Gluttonous Grimoire, Jotunn''s Revenge, Soul Gem, The Crusher,
-    Amanita Charm, Berserker''s Shield, Eye of Providence, Breastplate of Valor, Hydra''s
-    Lament, Freya''s Tears, Oni Hunter''s Garb, Spear of the Magus, Runeforged Hammer,
-    Spear of Desolation, The Cosmic Horror, Death Metal, Shield Splitter, Helm of
-    Radiance, Rod of Asclepius, Spectral Armor, Yogi''s Necklace, Erosion, Eye of
-    the Storm, Obsidian Shard, Pharaoh''s Curse, The Reaper, Chronos'' Pendant, Jade
-    Scepter, Draconic Scale, Avenging Blade, Leviathan''s Hide, Golden Blade, Lernaean
-    Bow, Damaru, Heartseeker, Screeching Gargoyle.'
+    god: Gluttonous Grimoire, Kinetic Cuirass, Jotunn''s Revenge, Soul Gem, The Crusher,
+    Amanita Charm, Berserker''s Shield, Breastplate of Valor, Freya''s Tears, Spear
+    of the Magus, Hydra''s Lament, Oni Hunter''s Garb, The Cosmic Horror, Spear of
+    Desolation, Runeforged Hammer, Helm of Radiance, Death Metal, Shield Splitter,
+    Obsidian Shard, Spectral Armor, Erosion, Pharaoh''s Curse, Chronos'' Pendant,
+    Eye of Providence, Rod of Asclepius, Eye of the Storm, The Reaper, Draconic Scale,
+    Jade Scepter, Leviathan''s Hide, Screeching Gargoyle, Riptalon, Golden Blade,
+    Midgardian Mail, Mantle Of Discord, Stone of Binding, Blood-Bound Book.'
   slot_scores:
     Genji's Guard:
       total: 0.57
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.59
-      pick: 0.18
+      pick: 0.28
       fit: 0.27
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.68
+      win: 0.58
+      pick: 0.0
+      fit: 0.25
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.5
+      total: 0.56
+      efficiency: 0.66
+      win: 0.58
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
       total: 0.57
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.63
-      pick: 0.06
+      pick: 0.13
       fit: 0.48
-    Shield of the Phoenix:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.23
-      fit: 0.38
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
+    Gluttonous Grimoire:
+      total: 0.57
+      efficiency: 0.66
       win: 0.58
-      pick: 0.54
-      fit: 0.38
+      pick: 0.0
+      fit: 0.55
     The Crusher:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
+      total: 0.55
+      efficiency: 0.63
+      win: 0.58
       pick: 0.0
       fit: 0.44
   starter: *id001
@@ -241,70 +241,70 @@ builds:
   slot_order:
   - Genji's Guard
   - Berserker's Shield
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Shifter's Shield
+  - Jotunn's Revenge
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Hide of the Nemean Lion — physical protection
-    swap_item: Hide of the Nemean Lion
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Amanita Charm, Soul Gem, Gluttonous Grimoire, Berserker''s
-    Shield, Jotunn''s Revenge, The Crusher, Eye of Providence, Rod of Asclepius, The
-    Reaper, Runeforged Hammer, Oni Hunter''s Garb, Hide of the Nemean Lion, Chandra''s
-    Grace, Hydra''s Lament, Breastplate of Valor, Freya''s Tears, Eye of the Storm,
-    Shield Splitter, Riptalon, Phoenix Feather, Spectral Armor, Erosion, Blood-Bound
-    Book, Yogi''s Necklace, Bancroft''s Talon, Avenging Blade, Pharaoh''s Curse, Lifebinder,
-    Golden Blade, Draconic Scale, Death Metal, Leviathan''s Hide, Midgardian Mail,
-    Spear of the Magus, Lernaean Bow, Damaru.'
+    this god: Amanita Charm, Kinetic Cuirass, Soul Gem, Gluttonous Grimoire, Jotunn''s
+    Revenge, Berserker''s Shield, The Crusher, The Reaper, Rod of Asclepius, Chandra''s
+    Grace, Oni Hunter''s Garb, Breastplate of Valor, Freya''s Tears, Runeforged Hammer,
+    Riptalon, Hydra''s Lament, Eye of the Storm, Phoenix Feather, Shield Splitter,
+    Blood-Bound Book, Erosion, Spectral Armor, Bancroft''s Talon, Eye of Providence,
+    Pharaoh''s Curse, Draconic Scale, Golden Blade, Lifebinder, Leviathan''s Hide,
+    Avenging Blade, Spear of the Magus, Midgardian Mail, Death Metal, Yogi''s Necklace,
+    Shogun''s Ofuda, The Cosmic Horror, Lernaean Bow.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.71
       win: 0.59
-      pick: 0.18
+      pick: 0.28
       fit: 0.25
     Berserker's Shield:
-      total: 0.52
-      efficiency: 0.71
-      win: 0.5
+      total: 0.55
+      efficiency: 0.68
+      win: 0.58
       pick: 0.0
       fit: 0.34
+    Jotunn's Revenge:
+      total: 0.56
+      efficiency: 0.66
+      win: 0.58
+      pick: 0.0
+      fit: 0.46
     Kinetic Cuirass:
       total: 0.59
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.63
-      pick: 0.06
+      pick: 0.13
       fit: 0.6
     Shield of the Phoenix:
       total: 0.6
       efficiency: 0.57
       win: 0.62
-      pick: 0.23
+      pick: 0.31
       fit: 0.74
-    Shifter's Shield:
-      total: 0.56
-      efficiency: 0.55
-      win: 0.58
-      pick: 0.54
-      fit: 0.5
     Amanita Charm:
-      total: 0.58
-      efficiency: 0.66
-      win: 0.5
+      total: 0.6
+      efficiency: 0.63
+      win: 0.58
       pick: 0.0
       fit: 0.8
   starter: *id001
@@ -312,14 +312,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Genji's Guard
+  - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield of the Phoenix
-  - Shifter's Shield
+  - Gluttonous Grimoire
   - The Crusher
   flex_slots:
-  - The Crusher
-  - Jotunn's Revenge
+  - Genji's Guard
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -328,55 +328,55 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Kinetic Cuirass, Gluttonous Grimoire, The Crusher, Jotunn''s Revenge,
-    Amanita Charm, Berserker''s Shield, Soul Gem, Avenging Blade, Eye of Providence,
-    Stone of Binding, Oni Hunter''s Garb, Runeforged Hammer, Screeching Gargoyle,
-    Breastplate of Valor, Hydra''s Lament, Void Shield, Freya''s Tears, Spear of the
-    Magus, Shield Splitter, The Reaper, Void Stone, The Cosmic Horror, Spectral Armor,
-    Eye of the Storm, Spear of Desolation, Erosion, Heartseeker, Yogi''s Necklace,
-    Pharaoh''s Curse, Draconic Scale, Riptalon, Obsidian Shard, Death Metal, Golden
-    Blade, Leviathan''s Hide, Silverbranch Bow, Lernaean Bow.'
+    for this god: Gluttonous Grimoire, Kinetic Cuirass, Jotunn''s Revenge, The Crusher,
+    Amanita Charm, Soul Gem, Berserker''s Shield, Stone of Binding, Avenging Blade,
+    Screeching Gargoyle, Breastplate of Valor, Freya''s Tears, Void Shield, Spear
+    of the Magus, Oni Hunter''s Garb, The Cosmic Horror, Void Stone, Hydra''s Lament,
+    The Reaper, Runeforged Hammer, Shield Splitter, Spear of Desolation, Erosion,
+    Spectral Armor, Riptalon, Eye of Providence, Obsidian Shard, Pharaoh''s Curse,
+    Eye of the Storm, Heartseeker, Draconic Scale, Silverbranch Bow, Leviathan''s
+    Hide, Death Metal, Helm of Radiance, Golden Blade, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.56
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.59
-      pick: 0.18
+      pick: 0.28
       fit: 0.23
-    Jotunn's Revenge:
+    Berserker's Shield:
       total: 0.54
-      efficiency: 0.65
-      win: 0.5
+      efficiency: 0.68
+      win: 0.58
+      pick: 0.0
+      fit: 0.27
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.66
+      win: 0.58
       pick: 0.0
       fit: 0.54
     Kinetic Cuirass:
       total: 0.58
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.63
-      pick: 0.06
+      pick: 0.13
       fit: 0.52
-    Shield of the Phoenix:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.23
-      fit: 0.35
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
+    Gluttonous Grimoire:
+      total: 0.58
+      efficiency: 0.66
       win: 0.58
-      pick: 0.54
-      fit: 0.42
+      pick: 0.0
+      fit: 0.56
     The Crusher:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.5
+      total: 0.57
+      efficiency: 0.63
+      win: 0.58
       pick: 0.0
       fit: 0.56
   starter: *id001
@@ -387,68 +387,68 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Kinetic Cuirass
-  - Shield of the Phoenix
+  - Gluttonous Grimoire
   - Riptalon
   flex_slots:
-  - Golden Blade
   - Riptalon
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Berserker''s Shield, Gluttonous Grimoire, Amanita Charm,
-    The Crusher, Golden Blade, Eye of Providence, Jotunn''s Revenge, Riptalon, Pharaoh''s
-    Curse, Oni Hunter''s Garb, Soul Gem, Breastplate of Valor, Runeforged Hammer,
-    Freya''s Tears, Lernaean Bow, Hydra''s Lament, Silverbranch Bow, Shogun''s Ofuda,
-    Tyrfing, Yogi''s Necklace, Bracer of The Abyss, Spectral Armor, Shield Splitter,
-    Erosion, Spear of the Magus, Eye of the Storm, Dominance, Death Metal, Draconic
-    Scale, Leviathan''s Hide, Rod of Asclepius, Helm of Radiance, The Reaper, Avenging
-    Blade, Toxic Blade, Midgardian Mail.'
+    Jotunn''s Revenge, Riptalon, The Crusher, Golden Blade, Pharaoh''s Curse, Soul
+    Gem, Breastplate of Valor, Oni Hunter''s Garb, Freya''s Tears, Silverbranch Bow,
+    Lernaean Bow, Shogun''s Ofuda, Hydra''s Lament, Runeforged Hammer, Spectral Armor,
+    Tyrfing, Erosion, Shield Splitter, Spear of the Magus, Eye of Providence, Draconic
+    Scale, Helm of Radiance, Leviathan''s Hide, Eye of the Storm, The Cosmic Horror,
+    Toxic Blade, Yogi''s Necklace, Midgardian Mail, Death Metal, Mantle Of Discord,
+    Stone of Binding, Eros'' Bow, Bracer of The Abyss.'
   slot_scores:
     Golden Blade:
-      total: 0.49
-      efficiency: 0.55
-      win: 0.5
+      total: 0.52
+      efficiency: 0.54
+      win: 0.58
       pick: 0.0
       fit: 0.5
     Genji's Guard:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.71
       win: 0.59
-      pick: 0.18
+      pick: 0.28
       fit: 0.19
     Berserker's Shield:
-      total: 0.53
-      efficiency: 0.71
-      win: 0.5
+      total: 0.56
+      efficiency: 0.68
+      win: 0.58
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.63
-      pick: 0.06
+      pick: 0.13
       fit: 0.44
-    Shield of the Phoenix:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.23
-      fit: 0.28
+    Gluttonous Grimoire:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.58
+      pick: 0.0
+      fit: 0.39
     Riptalon:
-      total: 0.49
+      total: 0.53
       efficiency: 0.56
-      win: 0.5
+      win: 0.58
       pick: 0.0
       fit: 0.46
   starter: *id001
@@ -460,156 +460,10 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Shifter's Shield
+  - Freya's Tears
   flex_slots:
-  - Jotunn's Revenge
   - Breastplate of Valor
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
-  - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
-  - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
-  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Kinetic Cuirass, Jotunn''s Revenge,
-    Soul Gem, Breastplate of Valor, Gluttonous Grimoire, Freya''s Tears, Amanita Charm,
-    Berserker''s Shield, Gladiator''s Shield, Hydra''s Lament, Eye of Providence,
-    The Crusher, Oni Hunter''s Garb, Hide of the Nemean Lion, Spear of Desolation,
-    Runeforged Hammer, Chronos'' Pendant, Screeching Gargoyle, Chandra''s Grace, Spectral
-    Armor, Erosion, Shield Splitter, Yogi''s Necklace, Spear of the Magus, Pharaoh''s
-    Curse, Helm of Radiance, Draconic Scale, Rod of Asclepius, Prophetic Cloak, Gem
-    of Focus, Eye of the Storm, Death Metal, The Cosmic Horror, Leviathan''s Hide,
-    Arondight, Jade Scepter, Midgardian Mail.'
-  slot_scores:
-    Genji's Guard:
-      total: 0.59
-      efficiency: 0.72
-      win: 0.59
-      pick: 0.18
-      fit: 0.44
-    Breastplate of Valor:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
-    Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.6
-      win: 0.63
-      pick: 0.06
-      fit: 0.51
-    Shield of the Phoenix:
-      total: 0.57
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.23
-      fit: 0.56
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.58
-      pick: 0.54
-      fit: 0.41
-  starter: *id001
-- source: suggested
-  archetype: intelligence
-  slot_order:
-  - Genji's Guard
-  - Berserker's Shield
-  - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Shield of the Phoenix
-  - Shifter's Shield
-  flex_slots:
-  - Jotunn's Revenge
-  - Berserker's Shield
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
-  - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
-  rationale: 'Off-type Intelligence build — this kit scales on it (efficiency + fit
-    + win/pick). Underrated for this god: Kinetic Cuirass, Gluttonous Grimoire, Soul
-    Gem, Amanita Charm, Jotunn''s Revenge, Berserker''s Shield, The Crusher, Eye of
-    Providence, Breastplate of Valor, Oni Hunter''s Garb, Hydra''s Lament, Freya''s
-    Tears, Runeforged Hammer, Spear of the Magus, Death Metal, The Cosmic Horror,
-    Helm of Radiance, Rod of Asclepius, Spear of Desolation, Shield Splitter, Jade
-    Scepter, Spectral Armor, Chronos'' Pendant, Yogi''s Necklace, Eye of the Storm,
-    Erosion, Obsidian Shard, Pharaoh''s Curse, Wish-Granting Pearl, Blood-Bound Book,
-    Draconic Scale, Ethereal Staff, Triton''s Conch, Bancroft''s Talon, Avenging Blade,
-    Golden Blade, Lernaean Bow.'
-  slot_scores:
-    Genji's Guard:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.59
-      pick: 0.18
-      fit: 0.25
-    Berserker's Shield:
-      total: 0.51
-      efficiency: 0.71
-      win: 0.5
-      pick: 0.0
-      fit: 0.25
-    Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
-    Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.6
-      win: 0.63
-      pick: 0.06
-      fit: 0.49
-    Shield of the Phoenix:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.23
-      fit: 0.36
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.58
-      pick: 0.54
-      fit: 0.39
-  starter: *id001
-- source: suggested
-  archetype: str-int
-  slot_order:
-  - Genji's Guard
-  - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Shield of the Phoenix
-  - Shifter's Shield
-  - The Crusher
-  flex_slots:
-  - The Crusher
-  - Jotunn's Revenge
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -621,125 +475,271 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
+    + fit + win/pick). Underrated for this god: Kinetic Cuirass, Jotunn''s Revenge,
+    Breastplate of Valor, Soul Gem, Gluttonous Grimoire, Freya''s Tears, Amanita Charm,
+    Berserker''s Shield, Hydra''s Lament, The Crusher, Oni Hunter''s Garb, Spear of
+    Desolation, Chronos'' Pendant, Screeching Gargoyle, Chandra''s Grace, Erosion,
+    Spectral Armor, Spear of the Magus, Eye of Providence, Pharaoh''s Curse, Runeforged
+    Hammer, Prophetic Cloak, Helm of Radiance, Shield Splitter, Draconic Scale, The
+    Cosmic Horror, Gem of Focus, Leviathan''s Hide, Eye of the Storm, Rod of Asclepius,
+    Death Metal, Midgardian Mail, Mantle Of Discord, Stone of Binding, Jade Scepter,
+    Yogi''s Necklace.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.59
+      efficiency: 0.71
+      win: 0.59
+      pick: 0.28
+      fit: 0.44
+    Breastplate of Valor:
+      total: 0.56
+      efficiency: 0.66
+      win: 0.58
+      pick: 0.0
+      fit: 0.44
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.66
+      win: 0.58
+      pick: 0.0
+      fit: 0.5
+    Kinetic Cuirass:
+      total: 0.57
+      efficiency: 0.59
+      win: 0.63
+      pick: 0.13
+      fit: 0.51
+    Shield of the Phoenix:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.62
+      pick: 0.31
+      fit: 0.56
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.59
+      win: 0.58
+      pick: 0.0
+      fit: 0.59
+  starter: *id001
+- source: suggested
+  archetype: intelligence
+  slot_order:
+  - Genji's Guard
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Gluttonous Grimoire
+  - The Crusher
+  flex_slots:
+  - The Crusher
+  - Berserker's Shield
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Off-type Intelligence build — this kit scales on it (efficiency + fit
+    + win/pick). Underrated for this god: Gluttonous Grimoire, Kinetic Cuirass, Soul
+    Gem, Jotunn''s Revenge, Amanita Charm, The Crusher, Berserker''s Shield, Breastplate
+    of Valor, Freya''s Tears, Spear of the Magus, Oni Hunter''s Garb, The Cosmic Horror,
+    Hydra''s Lament, Death Metal, Helm of Radiance, Spear of Desolation, Rod of Asclepius,
+    Runeforged Hammer, Shield Splitter, Chronos'' Pendant, Jade Scepter, Obsidian
+    Shard, Spectral Armor, Erosion, Pharaoh''s Curse, Eye of Providence, Eye of the
+    Storm, Blood-Bound Book, Bancroft''s Talon, Draconic Scale, Ethereal Staff, Wish-Granting
+    Pearl, Leviathan''s Hide, Golden Blade, Midgardian Mail, Triton''s Conch, Bracer
+    of The Abyss.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.71
+      win: 0.59
+      pick: 0.28
+      fit: 0.25
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.68
+      win: 0.58
+      pick: 0.0
+      fit: 0.25
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.58
+      pick: 0.0
+      fit: 0.4
+    Kinetic Cuirass:
+      total: 0.57
+      efficiency: 0.59
+      win: 0.63
+      pick: 0.13
+      fit: 0.49
+    Gluttonous Grimoire:
+      total: 0.58
+      efficiency: 0.66
+      win: 0.58
+      pick: 0.0
+      fit: 0.56
+    The Crusher:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.58
+      pick: 0.0
+      fit: 0.39
+  starter: *id001
+- source: suggested
+  archetype: str-int
+  slot_order:
+  - Genji's Guard
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Gluttonous Grimoire
+  - The Crusher
+  flex_slots:
+  - The Crusher
+  - Berserker's Shield
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Kinetic Cuirass, Gluttonous Grimoire,
-    Amanita Charm, The Crusher, Jotunn''s Revenge, Berserker''s Shield, Soul Gem,
-    Eye of Providence, Runeforged Hammer, Oni Hunter''s Garb, Hydra''s Lament, Breastplate
-    of Valor, Death Metal, Freya''s Tears, Spear of the Magus, Shield Splitter, The
-    Cosmic Horror, Helm of Radiance, Rod of Asclepius, Eye of the Storm, Spectral
-    Armor, Erosion, Spear of Desolation, Jade Scepter, Yogi''s Necklace, Pharaoh''s
-    Curse, Avenging Blade, Draconic Scale, Golden Blade, Obsidian Shard, Lernaean
-    Bow, The Reaper, Triton''s Conch, Chronos'' Pendant, Damaru, Leviathan''s Hide,
-    Wish-Granting Pearl.'
+    Jotunn''s Revenge, The Crusher, Amanita Charm, Soul Gem, Berserker''s Shield,
+    Breastplate of Valor, Freya''s Tears, Spear of the Magus, Oni Hunter''s Garb,
+    Hydra''s Lament, Death Metal, The Cosmic Horror, Runeforged Hammer, Shield Splitter,
+    Helm of Radiance, Spear of Desolation, Erosion, Spectral Armor, Eye of the Storm,
+    Rod of Asclepius, Eye of Providence, Pharaoh''s Curse, Obsidian Shard, Jade Scepter,
+    Draconic Scale, Chronos'' Pendant, Golden Blade, Leviathan''s Hide, Blood-Bound
+    Book, Lernaean Bow, The Reaper, Damaru, Bancroft''s Talon, Midgardian Mail, Mantle
+    Of Discord.'
   slot_scores:
     Genji's Guard:
       total: 0.56
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.59
-      pick: 0.18
+      pick: 0.28
       fit: 0.23
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.68
+      win: 0.58
+      pick: 0.0
+      fit: 0.27
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.5
+      total: 0.55
+      efficiency: 0.66
+      win: 0.58
       pick: 0.0
       fit: 0.41
     Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.59
       win: 0.63
-      pick: 0.06
+      pick: 0.13
       fit: 0.52
-    Shield of the Phoenix:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.23
-      fit: 0.35
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
+    Gluttonous Grimoire:
+      total: 0.57
+      efficiency: 0.66
       win: 0.58
-      pick: 0.54
-      fit: 0.42
+      pick: 0.0
+      fit: 0.55
     The Crusher:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
+      total: 0.55
+      efficiency: 0.63
+      win: 0.58
       pick: 0.0
       fit: 0.43
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Eye of Providence
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - The Crusher
   - Amanita Charm
   flex_slots:
-  - Eye of Providence
-  - Genji's Guard
+  - Berserker's Shield
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Amanita Charm, Kinetic Cuirass, Berserker''s Shield,
-    Gluttonous Grimoire, Jotunn''s Revenge, Eye of Providence, The Crusher, Oni Hunter''s
-    Garb, Runeforged Hammer, Freya''s Tears, Breastplate of Valor, Shield Splitter,
-    Hydra''s Lament, Soul Gem, Eye of the Storm, Erosion, Spectral Armor, Draconic
-    Scale, Pharaoh''s Curse, Yogi''s Necklace, Avenging Blade, Death Metal, Golden
-    Blade, Leviathan''s Hide, Spear of the Magus, Midgardian Mail, Lernaean Bow, Helm
-    of Radiance, The Reaper, Mantle Of Discord, Stone of Binding, Hide of the Nemean
-    Lion, Damaru, Rod of Asclepius, Shogun''s Ofuda, The Cosmic Horror, Stampede.'
+    Underrated for this god: Kinetic Cuirass, Amanita Charm, Gluttonous Grimoire,
+    Jotunn''s Revenge, Berserker''s Shield, The Crusher, Freya''s Tears, Breastplate
+    of Valor, Oni Hunter''s Garb, Soul Gem, Shield Splitter, Hydra''s Lament, Erosion,
+    Runeforged Hammer, Eye of Providence, Eye of the Storm, Spectral Armor, Draconic
+    Scale, Pharaoh''s Curse, Leviathan''s Hide, Golden Blade, Spear of the Magus,
+    Mantle Of Discord, Stone of Binding, Midgardian Mail, Death Metal, Helm of Radiance,
+    The Cosmic Horror, Shogun''s Ofuda, Avenging Blade, Lernaean Bow, The Reaper,
+    Damaru, Magi''s Cloak, Yogi''s Necklace, Screeching Gargoyle, Ancile.'
   slot_scores:
-    Eye of Providence:
-      total: 0.52
-      efficiency: 0.62
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Genji's Guard:
       total: 0.57
-      efficiency: 0.72
+      efficiency: 0.71
       win: 0.59
-      pick: 0.18
+      pick: 0.28
       fit: 0.28
     Berserker's Shield:
-      total: 0.52
-      efficiency: 0.71
-      win: 0.5
+      total: 0.55
+      efficiency: 0.68
+      win: 0.58
       pick: 0.0
       fit: 0.33
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
+      total: 0.56
+      efficiency: 0.66
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
       total: 0.59
-      efficiency: 0.6
+      efficiency: 0.59
       win: 0.63
-      pick: 0.06
+      pick: 0.13
       fit: 0.61
+    The Crusher:
+      total: 0.55
+      efficiency: 0.63
+      win: 0.58
+      pick: 0.0
+      fit: 0.44
     Amanita Charm:
-      total: 0.53
-      efficiency: 0.66
-      win: 0.5
+      total: 0.56
+      efficiency: 0.63
+      win: 0.58
       pick: 0.0
       fit: 0.51
   starter: *id001
