@@ -59,6 +59,10 @@ PRICE_PASSIVES = False
 # transient stacker is refused. Flipped by `price_stacks` in _weights.yaml.
 PRICE_STACKS = False
 
+# How much of a stacker's cap a real match reaches. 1.0 prices the tooltip;
+# lower prices what you play with. Set by `stack_fraction` in _weights.yaml.
+STACK_FRACTION = 1.0
+
 # Whether a crit-damage multiplier counts, converted into the equivalent
 # Critical Chance the model already prices. One item qualifies — Deathbringer,
 # whose +35% this project has measured against the game to the digit and never
@@ -93,12 +97,13 @@ def apply_pricing_flags(weights):
     Returns the previous values so a caller sweeping a flag can restore them.
     """
     global PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS
-    global PRICE_CONVERSIONS, CONVERSION_REFERENCE
+    global PRICE_CONVERSIONS, CONVERSION_REFERENCE, STACK_FRACTION
     before = (PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS,
               PRICE_CONVERSIONS, dict(CONVERSION_REFERENCE))
     w = weights or {}
     PRICE_PASSIVES = bool(w.get("price_passives"))
     PRICE_STACKS = bool(w.get("price_stacks"))
+    STACK_FRACTION = float(w.get("stack_fraction", 1.0))
     PRICE_CRIT_MULTIPLIERS = bool(w.get("price_crit_multipliers"))
     PRICE_CONVERSIONS = bool(w.get("price_conversions"))
     CONVERSION_REFERENCE = dict(w.get("conversion_reference") or {})
@@ -121,7 +126,7 @@ def item_stat_values(item):
         out = passives.effective_stats(item, out)
     if PRICE_STACKS:
         from smite import passives
-        for key, amount in passives.persistent_stack_grants(item).items():
+        for key, amount in passives.persistent_stack_grants(item, STACK_FRACTION).items():
             out[key] = out.get(key, 0.0) + amount
     if PRICE_CRIT_MULTIPLIERS:
         from smite import passives

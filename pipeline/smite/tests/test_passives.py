@@ -312,3 +312,25 @@ def test_the_reference_is_measured_over_builds_that_carry_the_stat():
     ref = passives.measure_conversion_reference(builds, items)
     assert ref["Intelligence"] == 100        # not 50 — the zero build is excluded
     assert ref["Max Mana"] == 300
+
+
+def test_stack_fraction_prices_the_state_you_reach_not_the_tooltip():
+    """`fraction` is how much of the cap a real match gets to. Kept
+    parameterised after the conservative-pricing hypothesis was tested and
+    refuted — see `stack_fraction` in _weights.yaml — because the sweep is
+    cheap to re-run and the next hypothesis will want it."""
+    item = _p("Kill Minion: +1 Stack. Each Stack grants: +.4 Strength "
+              "At 75 Stacks, gain: +10 Strength")
+    full = passives.persistent_stack_grants(item)
+    assert full["Strength"] == pytest.approx(75 * 0.4 + 10)
+    half = passives.persistent_stack_grants(item, 0.5)
+    # Both the per-stack total and the at-cap bonus scale: a build that never
+    # reaches the cap never evolves either.
+    assert half["Strength"] == pytest.approx(75 * 0.4 * 0.5 + 10 * 0.5)
+
+
+def test_stack_fraction_defaults_to_the_cap_and_clamps():
+    item = _p("Each Stack grants: +1 Strength Stacks up to 10")
+    assert passives.persistent_stack_grants(item)["Strength"] == pytest.approx(10)
+    assert passives.persistent_stack_grants(item, 2.0)["Strength"] == pytest.approx(10)
+    assert passives.persistent_stack_grants(item, -1)["Strength"] == pytest.approx(0)

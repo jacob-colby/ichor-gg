@@ -247,7 +247,7 @@ def is_persistent_stacker(item):
     return bool(_STACK_CAP.search(text))
 
 
-def persistent_stack_grants(item):
+def persistent_stack_grants(item, fraction=1.0):
     """`{column: amount}` this item is worth once its stacks are full.
 
     cap x per-stack grant, plus any at-cap evolve bonus. Returns `{}` unless
@@ -262,16 +262,25 @@ def persistent_stack_grants(item):
     if cap <= 0:
         return {}
 
+    # `fraction` is how much of the cap a real match actually reaches. 1.0 is
+    # the item's ceiling, which is what this shipped at and what
+    # `price_stacks` was measured on. Anything lower prices the state you play
+    # with rather than the state on the tooltip - the same move
+    # `conversion_reference` makes by pricing a MEDIAN build instead of a
+    # maximal one.
+    reached = cap * max(0.0, min(fraction, 1.0))
     out = {}
     for key, amount in _grants_after(text, _PER_STACK_CUE).items():
-        out[key] = out.get(key, 0.0) + amount * cap
+        out[key] = out.get(key, 0.0) + amount * reached
     if not out:
         # No per-stack line found. An evolve bonus alone is real but partial,
         # and shipping half an item's value is the error this module exists to
         # avoid — so say nothing rather than say a fraction.
         return {}
+    # The at-cap bonus only exists AT the cap, so it is scaled too rather than
+    # granted in full to a build that never gets there.
     for key, amount in _grants_after(text, _EVOLVE_CUE).items():
-        out[key] = out.get(key, 0.0) + amount
+        out[key] = out.get(key, 0.0) + amount * max(0.0, min(fraction, 1.0))
     return out
 
 def effective_stats(item, base_values):
