@@ -75,7 +75,7 @@ builds:
   - name: Conduit Gem
     pick_rate: 0.13
     win_rate: 0.43
-  - name: Sands of Time
+  - name: Sands Of Time
     pick_rate: 0.11
     win_rate: 0.18
   source_url: https://smitebrain.com/gods/sol/
@@ -119,8 +119,8 @@ builds:
     this god: Bragi''s Harp, Gluttonous Grimoire, Spear of the Magus, Bracer of The
     Abyss, The Cosmic Horror, Nimble Ring, Genji''s Guard, Blood-Bound Book, Bancroft''s
     Talon, Chronos'' Pendant, Breastplate of Valor, The World Stone, Doom Orb, Helm
-    of Radiance, Death Metal, Dreamer''s Idol, Rod of Asclepius, Jade Scepter, Typhon’s
-    Heart, Ancient Signet, Freya''s Tears, Kinetic Cuirass.'
+    of Radiance, Dreamer''s Idol, Death Metal, Rod of Asclepius, Jade Scepter, Typhon’s
+    Heart, Totem of Death, Freya''s Tears, Ancient Signet, Kinetic Cuirass.'
   slot_scores:
     Bragi's Harp:
       total: 0.57
@@ -191,7 +191,8 @@ builds:
     Cosmic Horror, Breastplate of Valor, Bracer of The Abyss, Death Metal, Chronos''
     Pendant, Blood-Bound Book, Bancroft''s Talon, Nimble Ring, The World Stone, Doom
     Orb, Freya''s Tears, Dreamer''s Idol, Helm of Radiance, Kinetic Cuirass, Shield
-    of the Phoenix, Rod of Asclepius, Amanita Charm, Oni Hunter''s Garb, Jade Scepter.'
+    of the Phoenix, Rod of Asclepius, Amanita Charm, Totem of Death, Oni Hunter''s
+    Garb.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -259,7 +260,7 @@ builds:
     this god: Amanita Charm, Gluttonous Grimoire, Shield of the Phoenix, Rod of Asclepius,
     Blood-Bound Book, Bancroft''s Talon, Kinetic Cuirass, Genji''s Guard, Chandra''s
     Grace, Breastplate of Valor, Oni Hunter''s Garb, Spear of the Magus, Freya''s
-    Tears, Lifebinder, Bracer of The Abyss, The Cosmic Horror, Phoenix Feather, Spectral
+    Tears, Lifebinder, The Cosmic Horror, Bracer of The Abyss, Phoenix Feather, Spectral
     Armor, Helm of Radiance, Shifter''s Shield, Jade Scepter, Erosion, Umbral Link,
     Eye of Providence.'
   slot_scores:
@@ -328,10 +329,10 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Bragi''s Harp, Spear of the Magus, The Cosmic
     Horror, Genji''s Guard, Bracer of The Abyss, The World Stone, Doom Orb, Dreamer''s
-    Idol, Nimble Ring, Screeching Gargoyle, Blood-Bound Book, Breastplate of Valor,
+    Idol, Nimble Ring, Screeching Gargoyle, Breastplate of Valor, Blood-Bound Book,
     Bancroft''s Talon, Chronos'' Pendant, Helm of Radiance, Death Metal, Stone of
-    Binding, Rod of Asclepius, Kinetic Cuirass, Jade Scepter, Void Shield, Amanita
-    Charm.'
+    Binding, Rod of Asclepius, Jade Scepter, Kinetic Cuirass, Void Shield, Freya''s
+    Tears.'
   slot_scores:
     Bragi's Harp:
       total: 0.55
@@ -399,8 +400,8 @@ builds:
     this god: Bragi''s Harp, Gluttonous Grimoire, Genji''s Guard, Spear of the Magus,
     Bracer of The Abyss, The Cosmic Horror, Death Metal, Breastplate of Valor, Nimble
     Ring, Blood-Bound Book, Bancroft''s Talon, Chronos'' Pendant, Helm of Radiance,
-    Kinetic Cuirass, Rod of Asclepius, Amanita Charm, Oni Hunter''s Garb, The World
-    Stone, Jade Scepter, Freya''s Tears, Doom Orb, Eye of Providence, Dreamer''s Idol.'
+    Kinetic Cuirass, Rod of Asclepius, Amanita Charm, Oni Hunter''s Garb, Freya''s
+    Tears, Jade Scepter, The World Stone, Doom Orb, Dreamer''s Idol, Eye of Providence.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.49
@@ -467,10 +468,10 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Bragi''s Harp, Genji''s Guard, Gluttonous
     Grimoire, Breastplate of Valor, Chronos'' Pendant, Freya''s Tears, Spear of the
-    Magus, Shield of the Phoenix, Bracer of The Abyss, The Cosmic Horror, Screeching
-    Gargoyle, Chandra''s Grace, Death Metal, Blood-Bound Book, Nimble Ring, Bancroft''s
-    Talon, Kinetic Cuirass, Amanita Charm, Oni Hunter''s Garb, Helm of Radiance, Eye
-    of Providence, Rod of Asclepius, The World Stone.'
+    Magus, Shield of the Phoenix, Bracer of The Abyss, The Cosmic Horror, Totem of
+    Death, Screeching Gargoyle, Chandra''s Grace, Death Metal, Blood-Bound Book, Nimble
+    Ring, Bancroft''s Talon, Kinetic Cuirass, Amanita Charm, Oni Hunter''s Garb, Helm
+    of Radiance, Eye of Providence, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -538,11 +539,11 @@ builds:
     win/pick). Underrated for this god: Bragi''s Harp, Gluttonous Grimoire, Jotunn''s
     Revenge, The Crusher, Hydra''s Lament, Death Metal, Spear of the Magus, The Reaper,
     Lernaean Bow, Genji''s Guard, The Cosmic Horror, Berserker''s Shield, Runeforged
-    Hammer, Golden Blade, Blood-Bound Book, Tekko-Kagi, Breastplate of Valor, Bancroft''s
-    Talon, Damaru, Heartseeker, Bracer of The Abyss, Chronos'' Pendant, Dominance,
-    Tyrfing, Pendulum Blade, Nimble Ring, Helm of Radiance, The World Stone, Titan''s
-    Bane, Doom Orb, Triton''s Conch, Rod of Asclepius, Dreamer''s Idol, Avenging Blade,
-    Arondight.'
+    Hammer, Golden Blade, Blood-Bound Book, Damaru, Breastplate of Valor, Bancroft''s
+    Talon, Tekko-Kagi, Heartseeker, Bracer of The Abyss, Chronos'' Pendant, Dominance,
+    Tyrfing, Pendulum Blade, Nimble Ring, Helm of Radiance, Titan''s Bane, The World
+    Stone, Doom Orb, Triton''s Conch, Dreamer''s Idol, Rod of Asclepius, Avenging
+    Blade, Arondight, Jade Scepter.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -609,12 +610,12 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Bragi''s Harp, Gluttonous Grimoire,
     Jotunn''s Revenge, The Crusher, Berserker''s Shield, Lernaean Bow, Spear of the
-    Magus, Death Metal, Hydra''s Lament, Bracer of The Abyss, The Cosmic Horror, Genji''s
+    Magus, Death Metal, The Cosmic Horror, Hydra''s Lament, Bracer of The Abyss, Genji''s
     Guard, Golden Blade, The Reaper, Nimble Ring, Blood-Bound Book, Tekko-Kagi, Bancroft''s
     Talon, Breastplate of Valor, Chronos'' Pendant, Dominance, Tyrfing, Runeforged
-    Hammer, Pharaoh''s Curse, Damaru, Helm of Radiance, The World Stone, Rod of Asclepius,
-    Heartseeker, Doom Orb, Dreamer''s Idol, Jade Scepter, Kinetic Cuirass, Amanita
-    Charm.'
+    Hammer, Damaru, Pharaoh''s Curse, Helm of Radiance, Rod of Asclepius, The World
+    Stone, Heartseeker, Doom Orb, Dreamer''s Idol, Jade Scepter, Kinetic Cuirass,
+    Typhon’s Heart, Amanita Charm.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.53
@@ -681,9 +682,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Spear of the Magus, Bracer of The
     Abyss, The Cosmic Horror, Nimble Ring, Genji''s Guard, Blood-Bound Book, Bancroft''s
-    Talon, Breastplate of Valor, Chronos'' Pendant, Bragi''s Harp, The World Stone,
-    Doom Orb, Helm of Radiance, Death Metal, Dreamer''s Idol, Rod of Asclepius, Jade
-    Scepter, Typhon’s Heart, Ancient Signet, Freya''s Tears, Kinetic Cuirass.'
+    Talon, Chronos'' Pendant, Breastplate of Valor, Bragi''s Harp, The World Stone,
+    Doom Orb, Helm of Radiance, Dreamer''s Idol, Death Metal, Rod of Asclepius, Jade
+    Scepter, Typhon’s Heart, Totem of Death, Freya''s Tears, Ancient Signet, Kinetic
+    Cuirass.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -711,7 +713,7 @@ builds:
       fit: 0.58
     The Cosmic Horror:
       total: 0.5
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.51
       pick: 0.0
       fit: 0.46

@@ -69,13 +69,13 @@ builds:
       pick_rate: 0.05
       win_rate: 0.5
   community_starters:
-  - name: Pendulum of The Ages
+  - name: Pendulum of the Ages
     pick_rate: 0.2
     win_rate: 0.72
   - name: Blood-soaked Shroud
     pick_rate: 0.18
     win_rate: 0.65
-  - name: Sands of Time
+  - name: Sands Of Time
     pick_rate: 0.13
     win_rate: 0.38
   source_url: https://smitebrain.com/gods/zeus/
@@ -120,7 +120,7 @@ builds:
     Cosmic Horror, Bracer of The Abyss, Nimble Ring, Blood-Bound Book, Chronos'' Pendant,
     Breastplate of Valor, The World Stone, Doom Orb, Bragi''s Harp, Dreamer''s Idol,
     Helm of Radiance, Death Metal, Rod of Asclepius, Gem of Focus, Typhon’s Heart,
-    Jade Scepter, Ancient Signet, Freya''s Tears, Polynomicon.'
+    Jade Scepter, Totem of Death, Ancient Signet, Freya''s Tears.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -191,7 +191,7 @@ builds:
     Horror, Breastplate of Valor, Death Metal, Bracer of The Abyss, Chronos'' Pendant,
     Bragi''s Harp, Blood-Bound Book, The World Stone, Doom Orb, Nimble Ring, Dreamer''s
     Idol, Freya''s Tears, Helm of Radiance, Gem of Focus, Shield of the Phoenix, Rod
-    of Asclepius, Kinetic Cuirass, Amanita Charm, Jade Scepter, Oni Hunter''s Garb.'
+    of Asclepius, Totem of Death, Kinetic Cuirass, Amanita Charm, Jade Scepter.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -258,12 +258,12 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Soul Gem, Gluttonous Grimoire, Amanita Charm, Genji''s Guard, Shield
     of the Phoenix, Rod of Asclepius, Blood-Bound Book, Kinetic Cuirass, Chandra''s
-    Grace, Breastplate of Valor, Oni Hunter''s Garb, Spear of the Magus, Lifebinder,
-    Freya''s Tears, The Cosmic Horror, Phoenix Feather, Helm of Radiance, Spectral
+    Grace, Breastplate of Valor, Oni Hunter''s Garb, Spear of the Magus, Freya''s
+    Tears, Lifebinder, The Cosmic Horror, Phoenix Feather, Helm of Radiance, Spectral
     Armor, Bracer of The Abyss, Jade Scepter, Erosion, Umbral Link, Eye of Providence.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.71
       win: 0.6
       pick: 0.13
@@ -293,7 +293,7 @@ builds:
       pick: 0.24
       fit: 0.3
     Soul Gem:
-      total: 0.65
+      total: 0.66
       efficiency: 0.59
       win: 0.7
       pick: 0.11
@@ -397,8 +397,8 @@ builds:
     this god: Soul Gem, Gluttonous Grimoire, Genji''s Guard, Spear of the Magus, Bracer
     of The Abyss, The Cosmic Horror, Bragi''s Harp, Death Metal, Breastplate of Valor,
     Nimble Ring, Blood-Bound Book, Chronos'' Pendant, Helm of Radiance, Rod of Asclepius,
-    Kinetic Cuirass, Amanita Charm, Jade Scepter, Oni Hunter''s Garb, The World Stone,
-    Doom Orb, Freya''s Tears, Dreamer''s Idol, Eye of Providence, Gem of Focus.'
+    Kinetic Cuirass, Amanita Charm, Jade Scepter, Oni Hunter''s Garb, Freya''s Tears,
+    The World Stone, Doom Orb, Dreamer''s Idol, Eye of Providence, Gem of Focus.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.5
@@ -465,10 +465,10 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Soul Gem, Genji''s Guard, Gluttonous
     Grimoire, Breastplate of Valor, Chronos'' Pendant, Freya''s Tears, Shield of the
-    Phoenix, Spear of the Magus, Gem of Focus, The Cosmic Horror, Screeching Gargoyle,
-    Bracer of The Abyss, Chandra''s Grace, Death Metal, Blood-Bound Book, Bragi''s
-    Harp, Nimble Ring, Kinetic Cuirass, Amanita Charm, Oni Hunter''s Garb, Helm of
-    Radiance, Eye of Providence, Rod of Asclepius, The World Stone.'
+    Phoenix, Spear of the Magus, Gem of Focus, The Cosmic Horror, Totem of Death,
+    Screeching Gargoyle, Bracer of The Abyss, Chandra''s Grace, Death Metal, Blood-Bound
+    Book, Bragi''s Harp, Nimble Ring, Kinetic Cuirass, Amanita Charm, Oni Hunter''s
+    Garb, Helm of Radiance, Eye of Providence, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -537,7 +537,7 @@ builds:
     Cosmic Horror, Bracer of The Abyss, Genji''s Guard, Nimble Ring, Blood-Bound Book,
     Chronos'' Pendant, Breastplate of Valor, The World Stone, Doom Orb, Bragi''s Harp,
     Dreamer''s Idol, Helm of Radiance, Death Metal, Rod of Asclepius, Gem of Focus,
-    Typhon’s Heart, Jade Scepter, Ancient Signet, Freya''s Tears, Polynomicon.'
+    Typhon’s Heart, Jade Scepter, Totem of Death, Ancient Signet, Freya''s Tears.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -565,7 +565,7 @@ builds:
       fit: 0.63
     The Cosmic Horror:
       total: 0.52
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.54
       pick: 0.0
       fit: 0.5

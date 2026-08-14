@@ -58,7 +58,7 @@ builds:
     - name: Hide of the Nemean Lion
       pick_rate: 0.06
       win_rate: 1.0
-  - name: Mantle of Discord
+  - name: Mantle Of Discord
     pick_rate: 0.1
     win_rate: 0.75
     alternates:
@@ -104,8 +104,8 @@ builds:
   - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -117,7 +117,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, The Reaper, Titan''s Bane, Pendulum Blade, Tekko-Kagi,
-    Runeforged Hammer, Lernaean Bow, Damaru, Genji''s Guard, Avatar''s Parashu, Golden
+    Runeforged Hammer, Damaru, Lernaean Bow, Genji''s Guard, Avatar''s Parashu, Golden
     Blade, Shield Splitter, Arondight, Riptalon, Dominance, Eye of the Storm, Tyrfing,
     Hydra''s Lament, Silverbranch Bow, Breastplate of Valor, Berserker''s Shield,
     Barbed Carver, Deathbringer, Transcendence, Bloodforge, Musashi''s Dual Swords,
@@ -166,14 +166,14 @@ builds:
   archetype: burst
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
   - Hide of the Nemean Lion
   - Freya's Tears
+  - Mantle Of Discord
   - The Crusher
   flex_slots:
   - Freya's Tears
-  - Breastplate of Valor
+  - Mantle Of Discord
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -182,15 +182,15 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, Genji''s Guard, Breastplate of Valor, The Reaper, Pendulum Blade,
+    god: The Crusher, Genji''s Guard, Breastplate of Valor, Pendulum Blade, The Reaper,
     Riptalon, Titan''s Bane, Runeforged Hammer, Silverbranch Bow, Tekko-Kagi, Berserker''s
-    Shield, Lernaean Bow, Damaru, Arondight, Shield of the Phoenix, Hydra''s Lament,
+    Shield, Damaru, Lernaean Bow, Arondight, Shield of the Phoenix, Hydra''s Lament,
     Kinetic Cuirass, Golden Blade, Amanita Charm, Screeching Gargoyle, Oni Hunter''s
     Garb, Chandra''s Grace, Avatar''s Parashu, Eye of Providence, Shield Splitter,
     Avenging Blade.'
@@ -200,12 +200,6 @@ builds:
       efficiency: 0.71
       win: 0.6
       pick: 0.11
-      fit: 0.22
-    Breastplate of Valor:
-      total: 0.52
-      efficiency: 0.66
-      win: 0.57
-      pick: 0.0
       fit: 0.22
     Jotunn's Revenge:
       total: 0.58
@@ -225,6 +219,12 @@ builds:
       win: 0.67
       pick: 0.15
       fit: 0.22
+    Mantle Of Discord:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.75
+      pick: 0.31
+      fit: 0.0
     The Crusher:
       total: 0.58
       efficiency: 0.63
@@ -235,25 +235,25 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Hide of the Nemean Lion
   - Freya's Tears
+  - Mantle Of Discord
   - Amanita Charm
   flex_slots:
+  - Shield of the Phoenix
   - Kinetic Cuirass
-  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -265,12 +265,6 @@ builds:
     Curse, Draconic Scale, Golden Blade, Leviathan''s Hide, Midgardian Mail, Shogun''s
     Ofuda, Hydra''s Lament, Avenging Blade.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
-      win: 0.57
-      pick: 0.0
-      fit: 0.39
     Kinetic Cuirass:
       total: 0.57
       efficiency: 0.59
@@ -295,6 +289,12 @@ builds:
       win: 0.67
       pick: 0.15
       fit: 0.38
+    Mantle Of Discord:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.75
+      pick: 0.31
+      fit: 0.34
     Amanita Charm:
       total: 0.61
       efficiency: 0.63
@@ -316,8 +316,8 @@ builds:
   - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -330,7 +330,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, The Reaper, Titan''s Bane, Tekko-Kagi, Pendulum Blade,
     Riptalon, Silverbranch Bow, Avatar''s Parashu, Genji''s Guard, Runeforged Hammer,
-    Lernaean Bow, Damaru, Screeching Gargoyle, Toxic Blade, Breastplate of Valor,
+    Damaru, Lernaean Bow, Screeching Gargoyle, Breastplate of Valor, Toxic Blade,
     Berserker''s Shield, Golden Blade, Shield Splitter, Stone of Binding, Dominance,
     Eye of the Storm, Oath-Sworn Spear, Tyrfing, Arondight, Kinetic Cuirass, Hydra''s
     Lament, Avenging Blade.'
@@ -382,8 +382,8 @@ builds:
   - Silverbranch Bow
   - The Crusher
   flex_slots:
-  - Berserker's Shield
   - The Crusher
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -398,11 +398,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Riptalon, Silverbranch Bow, Golden Blade, Berserker''s Shield, The Crusher,
-    Tyrfing, Lernaean Bow, Genji''s Guard, Tekko-Kagi, Toxic Blade, Dominance, Pharaoh''s
-    Curse, The Reaper, Breastplate of Valor, Runeforged Hammer, Shogun''s Ofuda, Damaru,
-    Eros'' Bow, Qin''s Blade, Kinetic Cuirass, Amanita Charm, Oni Hunter''s Garb,
-    Eye of Providence, Dagger of Frenzy, Titan''s Bane, Hydra''s Lament.'
+    this god: Riptalon, Silverbranch Bow, Golden Blade, The Crusher, Berserker''s
+    Shield, Tyrfing, Lernaean Bow, Genji''s Guard, Tekko-Kagi, Toxic Blade, Dominance,
+    Pharaoh''s Curse, The Reaper, Breastplate of Valor, Runeforged Hammer, Shogun''s
+    Ofuda, Damaru, Eros'' Bow, Qin''s Blade, Kinetic Cuirass, Amanita Charm, Oni Hunter''s
+    Garb, Eye of Providence, Dagger of Frenzy, Titan''s Bane, Hydra''s Lament.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -455,8 +455,8 @@ builds:
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
@@ -470,7 +470,7 @@ builds:
     + fit + win/pick). Underrated for this god: Genji''s Guard, Breastplate of Valor,
     The Crusher, Shield of the Phoenix, Pendulum Blade, Arondight, Screeching Gargoyle,
     Chandra''s Grace, Hydra''s Lament, Berserker''s Shield, Gladiator''s Shield, Runeforged
-    Hammer, The Reaper, Riptalon, Lernaean Bow, Damaru, Prophetic Cloak, Kinetic Cuirass,
+    Hammer, The Reaper, Riptalon, Damaru, Lernaean Bow, Prophetic Cloak, Kinetic Cuirass,
     Amanita Charm, Silverbranch Bow, Oni Hunter''s Garb, Eye of Providence, Regrowth
     Striders, Golden Blade, Titan''s Bane, Tekko-Kagi.'
   slot_scores:
@@ -481,7 +481,7 @@ builds:
       pick: 0.11
       fit: 0.5
     Breastplate of Valor:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
       win: 0.57
       pick: 0.0
@@ -538,7 +538,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, The Reaper, Hydra''s Lament, Titan''s Bane,
-    Pendulum Blade, Tekko-Kagi, Runeforged Hammer, Lernaean Bow, Damaru, Avatar''s
+    Pendulum Blade, Tekko-Kagi, Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s
     Parashu, Golden Blade, Genji''s Guard, Avenging Blade, Shield Splitter, Arondight,
     Riptalon, Dominance, Eye of the Storm, Tyrfing, Silverbranch Bow, Breastplate
     of Valor, Berserker''s Shield, Barbed Carver, Deathbringer, Transcendence, Bloodforge,

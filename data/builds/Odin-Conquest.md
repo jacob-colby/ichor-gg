@@ -120,8 +120,7 @@ builds:
     Hunter''s Garb, Shield Splitter, Shield of the Phoenix, Hydra''s Lament, Erosion,
     Runeforged Hammer, Eye of the Storm, Eye of Providence, Spectral Armor, Draconic
     Scale, Pharaoh''s Curse, Leviathan''s Hide, Golden Blade, Mantle Of Discord, Stone
-    of Binding, Midgardian Mail, Avenging Blade, Shogun''s Ofuda, The Reaper, Lernaean
-    Bow.'
+    of Binding, Midgardian Mail, Avenging Blade, Shogun''s Ofuda, The Reaper, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.63
@@ -190,7 +189,7 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Berserker''s
     Shield, The Crusher, The Reaper, Chandra''s Grace, Oni Hunter''s Garb, Runeforged
-    Hammer, Riptalon, Hydra''s Lament, Eye of the Storm, Shield Splitter, Phoenix
+    Hammer, Hydra''s Lament, Riptalon, Eye of the Storm, Shield Splitter, Phoenix
     Feather, Erosion, Spectral Armor, Eye of Providence, Pharaoh''s Curse, Draconic
     Scale, Golden Blade, Leviathan''s Hide, Avenging Blade, Midgardian Mail, Shogun''s
     Ofuda.'
@@ -260,9 +259,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Kinetic Cuirass, Amanita Charm, Berserker''s Shield,
     Stone of Binding, Avenging Blade, Screeching Gargoyle, Void Shield, Oni Hunter''s
-    Garb, Hydra''s Lament, Void Stone, The Reaper, Shield of the Phoenix, Shield Splitter,
-    Runeforged Hammer, Erosion, Spectral Armor, Eye of Providence, Heartseeker, Eye
-    of the Storm, Riptalon, Pharaoh''s Curse, Draconic Scale, Silverbranch Bow.'
+    Garb, Hydra''s Lament, Void Stone, Shield of the Phoenix, The Reaper, Shield Splitter,
+    Runeforged Hammer, Erosion, Spectral Armor, Eye of Providence, Eye of the Storm,
+    Heartseeker, Riptalon, Pharaoh''s Curse, Draconic Scale, Silverbranch Bow.'
   slot_scores:
     Genji's Guard:
       total: 0.62
@@ -327,10 +326,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Kinetic Cuirass, Amanita Charm, Riptalon, Golden
-    Blade, The Crusher, Pharaoh''s Curse, Oni Hunter''s Garb, Silverbranch Bow, Lernaean
-    Bow, Shogun''s Ofuda, Shield of the Phoenix, Hydra''s Lament, Runeforged Hammer,
-    Tyrfing, Spectral Armor, Erosion, Shield Splitter, Eye of Providence, Draconic
+    this god: Berserker''s Shield, Kinetic Cuirass, Amanita Charm, Riptalon, The Crusher,
+    Golden Blade, Pharaoh''s Curse, Oni Hunter''s Garb, Silverbranch Bow, Lernaean
+    Bow, Shogun''s Ofuda, Shield of the Phoenix, Hydra''s Lament, Tyrfing, Runeforged
+    Hammer, Spectral Armor, Erosion, Shield Splitter, Eye of Providence, Draconic
     Scale, Leviathan''s Hide, Eye of the Storm, Toxic Blade, Midgardian Mail.'
   slot_scores:
     Golden Blade:
@@ -340,7 +339,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Genji's Guard:
-      total: 0.61
+      total: 0.62
       efficiency: 0.71
       win: 0.71
       pick: 0.37
@@ -471,7 +470,7 @@ builds:
     Lament, Erosion, Runeforged Hammer, Eye of the Storm, Eye of Providence, Spectral
     Armor, Draconic Scale, Pharaoh''s Curse, Leviathan''s Hide, Golden Blade, Mantle
     Of Discord, Stone of Binding, Midgardian Mail, Avenging Blade, Shogun''s Ofuda,
-    The Reaper, Lernaean Bow.'
+    The Reaper, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.63

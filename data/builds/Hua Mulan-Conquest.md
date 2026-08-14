@@ -190,7 +190,7 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Berserker''s Shield, Kinetic Cuirass,
     Jotunn''s Revenge, The Crusher, Chandra''s Grace, Oni Hunter''s Garb, Freya''s
-    Tears, Pharaoh''s Curse, Golden Blade, The Reaper, Hydra''s Lament, Eye of the
+    Tears, Pharaoh''s Curse, Golden Blade, Hydra''s Lament, The Reaper, Eye of the
     Storm, Riptalon, Shield Splitter, Phoenix Feather, Erosion, Spectral Armor, Eye
     of Providence, Shogun''s Ofuda, Lernaean Bow, Avenging Blade, Leviathan''s Hide,
     Breastplate of Valor, Runeforged Hammer.'
@@ -259,11 +259,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, Berserker''s Shield, Kinetic Cuirass,
-    Amanita Charm, Stone of Binding, Avenging Blade, Screeching Gargoyle, Void Shield,
-    Freya''s Tears, Oni Hunter''s Garb, Hydra''s Lament, Void Stone, Riptalon, Pharaoh''s
-    Curse, Shield of the Phoenix, The Reaper, Shield Splitter, Silverbranch Bow, Spectral
-    Armor, Erosion, Golden Blade, Eye of the Storm, Heartseeker, Eye of Providence,
-    Breastplate of Valor, Runeforged Hammer.'
+    Amanita Charm, Stone of Binding, Avenging Blade, Screeching Gargoyle, Freya''s
+    Tears, Void Shield, Oni Hunter''s Garb, Hydra''s Lament, Void Stone, Riptalon,
+    Pharaoh''s Curse, Shield of the Phoenix, The Reaper, Shield Splitter, Silverbranch
+    Bow, Spectral Armor, Erosion, Golden Blade, Eye of the Storm, Heartseeker, Lernaean
+    Bow, Breastplate of Valor, Runeforged Hammer.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -296,7 +296,7 @@ builds:
       pick: 0.51
       fit: 0.4
     The Crusher:
-      total: 0.55
+      total: 0.56
       efficiency: 0.63
       win: 0.56
       pick: 0.0
@@ -392,14 +392,14 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Freya''s Tears, Jotunn''s Revenge,
-    Berserker''s Shield, Kinetic Cuirass, Amanita Charm, Shield of the Phoenix, Hydra''s
+    Berserker''s Shield, Kinetic Cuirass, Shield of the Phoenix, Amanita Charm, Hydra''s
     Lament, Oni Hunter''s Garb, The Crusher, Screeching Gargoyle, Pharaoh''s Curse,
     Breastplate of Valor, Chandra''s Grace, Erosion, Spectral Armor, Eye of Providence,
     Prophetic Cloak, Shield Splitter, Shogun''s Ofuda, Leviathan''s Hide, Golden Blade,
@@ -418,7 +418,7 @@ builds:
       pick: 0.0
       fit: 0.34
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
       win: 0.56
       pick: 0.0

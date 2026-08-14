@@ -39,18 +39,18 @@
 | Doublet of Binding | 0.48 | 0.45 | 0.50 | 0.56 | 0.00 | 0.35 | fair | aura |  |
 | Wyrmskin Hide | 0.48 | 0.45 | 0.40 | 0.56 | 0.00 | 0.56 | premium |  |  |
 | Dwarven Plate | 0.48 | 0.36 | 0.35 | 0.63 | 0.22 | 0.38 | premium |  |  |
+| Breastplate of Valor | 0.48 | 0.55 | 0.66 | 0.43 | 0.12 | 0.29 | undervalued |  | **UNDERRATED** |
 | Dominance | 0.48 | 0.45 | 0.50 | 0.56 | 0.00 | 0.31 | fair |  |  |
-| Breastplate of Valor | 0.47 | 0.55 | 0.66 | 0.43 | 0.12 | 0.29 | undervalued |  | **UNDERRATED** |
-| Prophetic Cloak | 0.47 | 0.44 | 0.43 | 0.56 | 0.00 | 0.49 | premium |  |  |
+| Prophetic Cloak | 0.47 | 0.45 | 0.43 | 0.56 | 0.00 | 0.49 | premium |  |  |
 | Tyrfing | 0.47 | 0.44 | 0.46 | 0.56 | 0.00 | 0.41 | fair | burst |  |
-| Stampede | 0.47 | 0.44 | 0.48 | 0.56 | 0.00 | 0.35 | fair | mobility, aura, cc-immunity |  |
 | Chandra's Grace | 0.47 | 0.44 | 0.52 | 0.56 | 0.00 | 0.26 | fair | sustain |  |
+| Stampede | 0.47 | 0.44 | 0.48 | 0.56 | 0.00 | 0.35 | fair | mobility, aura, cc-immunity |  |
 | The Reaper | 0.47 | 0.44 | 0.52 | 0.56 | 0.00 | 0.26 | fair | sustain |  |
 | Void Stone | 0.47 | 0.44 | 0.44 | 0.56 | 0.00 | 0.45 | premium | protection-shred, aura |  |
 | Riptalon | 0.47 | 0.44 | 0.56 | 0.56 | 0.00 | 0.14 | fair | sustain |  |
 | Ragnarok's Wake | 0.47 | 0.43 | 0.43 | 0.56 | 0.00 | 0.45 | premium | mobility, burst |  |
-| Hussar's Wings | 0.47 | 0.43 | 0.38 | 0.56 | 0.00 | 0.54 | premium | cc-immunity |  |
 | Eros' Bow | 0.47 | 0.43 | 0.51 | 0.56 | 0.00 | 0.25 | fair | aura |  |
+| Hussar's Wings | 0.47 | 0.43 | 0.38 | 0.56 | 0.00 | 0.54 | premium | cc-immunity |  |
 | Arondight | 0.47 | 0.43 | 0.47 | 0.56 | 0.00 | 0.32 | fair | mobility |  |
 | Phoenix Feather | 0.46 | 0.42 | 0.46 | 0.56 | 0.00 | 0.35 | fair | sustain |  |
 | Silverbranch Bow | 0.46 | 0.42 | 0.54 | 0.56 | 0.00 | 0.14 | fair |  |  |
@@ -58,7 +58,7 @@
 | Tekko-Kagi | 0.46 | 0.42 | 0.45 | 0.56 | 0.00 | 0.36 | fair | mobility |  |
 | Mystical Mail | 0.46 | 0.41 | 0.44 | 0.56 | 0.00 | 0.35 | fair | aura, wave-clear |  |
 | Stygian Anchor | 0.46 | 0.41 | 0.42 | 0.56 | 0.00 | 0.38 | premium | anti-heal |  |
-| Glorious Pridwen | 0.45 | 0.40 | 0.36 | 0.56 | 0.00 | 0.49 | premium | sustain |  |
+| Glorious Pridwen | 0.45 | 0.40 | 0.37 | 0.56 | 0.00 | 0.49 | premium | sustain |  |
 | Shroud of Vengeance | 0.45 | 0.40 | 0.36 | 0.56 | 0.00 | 0.48 | premium | burst |  |
 | Sanguine Lash | 0.45 | 0.40 | 0.39 | 0.56 | 0.00 | 0.41 | premium | aura |  |
 | Pendulum Blade | 0.45 | 0.40 | 0.41 | 0.56 | 0.00 | 0.37 | premium |  |  |
@@ -83,16 +83,16 @@
 | Heartwood Charm | 0.41 | 0.32 | 0.35 | 0.56 | 0.00 | 0.26 | premium |  |  |
 | Qin's Blade | 0.41 | 0.32 | 0.37 | 0.56 | 0.00 | 0.20 | premium | burst |  |
 | Devourer's Gauntlet | 0.40 | 0.30 | 0.33 | 0.56 | 0.00 | 0.22 | premium | sustain |  |
-| Eye of Erebus | 0.40 | 0.29 | 0.31 | 0.56 | 0.00 | 0.26 | premium | ward-economy |  |
+| Eye of Erebus | 0.40 | 0.30 | 0.31 | 0.56 | 0.00 | 0.26 | premium | ward-economy |  |
 | Dagger of Frenzy | 0.40 | 0.29 | 0.38 | 0.56 | 0.00 | 0.10 | premium |  |  |
-| Vital Amplifier | 0.38 | 0.25 | 0.25 | 0.56 | 0.00 | 0.25 | premium |  |  |
 | Hastened Fatalis | 0.38 | 0.25 | 0.32 | 0.56 | 0.00 | 0.10 | premium | mobility |  |
+| Vital Amplifier | 0.38 | 0.25 | 0.25 | 0.56 | 0.00 | 0.25 | premium |  |  |
 | Resolute Mantle | 0.38 | 0.25 | 0.29 | 0.56 | 0.00 | 0.15 | premium | cc-immunity, sustain |  |
 | Brawler’s Beat Stick | 0.37 | 0.24 | 0.18 | 0.56 | 0.00 | 0.38 | premium | anti-heal |  |
 | Gauntlet of Thebes | 0.37 | 0.24 | 0.27 | 0.56 | 0.00 | 0.15 | premium |  |  |
 | Circe's Hexstone | 0.37 | 0.23 | 0.22 | 0.56 | 0.00 | 0.26 | premium | mobility, cc-immunity |  |
 | Sun Beam Bow | 0.35 | 0.20 | 0.25 | 0.56 | 0.00 | 0.10 | premium |  |  |
-| Omen Drum | 0.35 | 0.19 | 0.28 | 0.56 | 0.00 | 0.00 | premium |  |  |
+| Omen Drum | 0.35 | 0.20 | 0.28 | 0.56 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.34 | 0.17 | 0.15 | 0.56 | 0.00 | 0.20 | premium | protection-shred |  |
 | Daybreak Gavel | 0.34 | 0.17 | 0.17 | 0.56 | 0.00 | 0.15 | premium |  |  |
 | Mercury's Talaria | 0.30 | 0.10 | 0.14 | 0.56 | 0.00 | 0.00 | premium |  |  |

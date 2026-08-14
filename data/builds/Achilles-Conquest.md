@@ -120,7 +120,7 @@ builds:
     Shield, Runeforged Hammer, Eye of the Storm, Oni Hunter''s Garb, Hydra''s Lament,
     Golden Blade, Avenging Blade, Shield Splitter, Breastplate of Valor, Shield of
     the Phoenix, The Reaper, Spectral Armor, Erosion, Pharaoh''s Curse, Eye of Providence,
-    Lernaean Bow, Damaru, Heartseeker, Draconic Scale, Leviathan''s Hide, Midgardian
+    Damaru, Lernaean Bow, Heartseeker, Draconic Scale, Leviathan''s Hide, Midgardian
     Mail, Yogi''s Necklace.'
   slot_scores:
     Berserker's Shield:
@@ -148,7 +148,7 @@ builds:
       pick: 0.17
       fit: 0.3
     The Crusher:
-      total: 0.53
+      total: 0.54
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -172,8 +172,8 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -188,12 +188,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Jotunn''s Revenge,
-    The Crusher, Berserker''s Shield, The Reaper, Oni Hunter''s Garb, Runeforged Hammer,
-    Eye of the Storm, Shield Splitter, Riptalon, Chandra''s Grace, Erosion, Phoenix
-    Feather, Breastplate of Valor, Eye of Providence, Spectral Armor, Hydra''s Lament,
-    Pharaoh''s Curse, Draconic Scale, Golden Blade, Avenging Blade, Leviathan''s Hide,
-    Midgardian Mail, Shogun''s Ofuda.'
+    this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, The Crusher,
+    Jotunn''s Revenge, Berserker''s Shield, The Reaper, Oni Hunter''s Garb, Runeforged
+    Hammer, Eye of the Storm, Shield Splitter, Riptalon, Chandra''s Grace, Erosion,
+    Breastplate of Valor, Phoenix Feather, Eye of Providence, Spectral Armor, Hydra''s
+    Lament, Pharaoh''s Curse, Draconic Scale, Golden Blade, Avenging Blade, Leviathan''s
+    Hide, Midgardian Mail, Shogun''s Ofuda.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.52
@@ -471,7 +471,7 @@ builds:
     Charm, Berserker''s Shield, Runeforged Hammer, Eye of the Storm, Oni Hunter''s
     Garb, Hydra''s Lament, Golden Blade, Shield Splitter, Breastplate of Valor, Avenging
     Blade, Shield of the Phoenix, The Reaper, Spectral Armor, Erosion, Pharaoh''s
-    Curse, Eye of Providence, Lernaean Bow, Damaru, Heartseeker, Draconic Scale, Leviathan''s
+    Curse, Eye of Providence, Damaru, Lernaean Bow, Heartseeker, Draconic Scale, Leviathan''s
     Hide, Midgardian Mail, Yogi''s Necklace.'
   slot_scores:
     Berserker's Shield:
@@ -499,7 +499,7 @@ builds:
       pick: 0.0
       fit: 0.59
     The Crusher:
-      total: 0.53
+      total: 0.54
       efficiency: 0.63
       win: 0.5
       pick: 0.0

@@ -119,11 +119,11 @@ builds:
     this god: Jotunn''s Revenge, Eye of the Storm, Gluttonous Grimoire, Kinetic Cuirass,
     Amanita Charm, The Crusher, Berserker''s Shield, Soul Gem, Freya''s Tears, Oni
     Hunter''s Garb, Spear of the Magus, Hydra''s Lament, Shield of the Phoenix, Shield
-    Splitter, Runeforged Hammer, Death Metal, The Cosmic Horror, Erosion, Spectral
+    Splitter, Runeforged Hammer, The Cosmic Horror, Death Metal, Erosion, Spectral
     Armor, Eye of Providence, Pharaoh''s Curse, Spear of Desolation, Draconic Scale,
     Rod of Asclepius, Jade Scepter, Obsidian Shard, Leviathan''s Hide, Golden Blade,
-    Mantle Of Discord, Midgardian Mail, Stone of Binding, Chronos'' Pendant, The Reaper,
-    Lernaean Bow, Damaru, Shogun''s Ofuda.'
+    Mantle Of Discord, Chronos'' Pendant, Midgardian Mail, Stone of Binding, Damaru,
+    Lernaean Bow, The Reaper, Shogun''s Ofuda, Blood-Bound Book.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.75
@@ -192,12 +192,12 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Jotunn''s Revenge, Eye of the Storm, Gluttonous Grimoire, Soul Gem, The Crusher,
     Kinetic Cuirass, Amanita Charm, Berserker''s Shield, Freya''s Tears, Spear of
-    the Magus, Hydra''s Lament, Oni Hunter''s Garb, Shield of the Phoenix, The Cosmic
-    Horror, Spear of Desolation, Runeforged Hammer, Death Metal, Shield Splitter,
-    Obsidian Shard, Spectral Armor, Erosion, Pharaoh''s Curse, Chronos'' Pendant,
-    Eye of Providence, Rod of Asclepius, The Reaper, Draconic Scale, Jade Scepter,
-    Leviathan''s Hide, Screeching Gargoyle, Riptalon, Golden Blade, Midgardian Mail,
-    Mantle Of Discord, Stone of Binding, Blood-Bound Book.'
+    the Magus, Hydra''s Lament, The Cosmic Horror, Shield of the Phoenix, Oni Hunter''s
+    Garb, Spear of Desolation, Runeforged Hammer, Death Metal, Shield Splitter, Obsidian
+    Shard, Spectral Armor, Erosion, Chronos'' Pendant, Pharaoh''s Curse, Eye of Providence,
+    Rod of Asclepius, The Reaper, Jade Scepter, Draconic Scale, Leviathan''s Hide,
+    Screeching Gargoyle, Riptalon, Golden Blade, Midgardian Mail, Mantle Of Discord,
+    Blood-Bound Book, Stone of Binding, Damaru.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.76
@@ -265,11 +265,11 @@ builds:
     this god: Jotunn''s Revenge, Amanita Charm, Eye of the Storm, Soul Gem, Gluttonous
     Grimoire, Shield of the Phoenix, Rod of Asclepius, Kinetic Cuirass, The Crusher,
     Berserker''s Shield, The Reaper, Blood-Bound Book, Bancroft''s Talon, Chandra''s
-    Grace, Riptalon, Oni Hunter''s Garb, Runeforged Hammer, Freya''s Tears, Spear
-    of the Magus, Hydra''s Lament, Lifebinder, Death Metal, The Cosmic Horror, Phoenix
+    Grace, Riptalon, Oni Hunter''s Garb, Freya''s Tears, Runeforged Hammer, Spear
+    of the Magus, Hydra''s Lament, Lifebinder, The Cosmic Horror, Death Metal, Phoenix
     Feather, Spectral Armor, Shield Splitter, Erosion, Pharaoh''s Curse, Spear of
-    Desolation, Eye of Providence, Jade Scepter, Golden Blade, Draconic Scale, Obsidian
-    Shard, Leviathan''s Hide, Sphere of Negation.'
+    Desolation, Jade Scepter, Eye of Providence, Golden Blade, Draconic Scale, Obsidian
+    Shard, Leviathan''s Hide, Sphere of Negation, Midgardian Mail.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.75
@@ -336,12 +336,12 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, Heartseeker, Gluttonous Grimoire, Eye of the
     Storm, The Crusher, Soul Gem, Kinetic Cuirass, Amanita Charm, Berserker''s Shield,
-    Spear of the Magus, Stone of Binding, Avenging Blade, The Cosmic Horror, Screeching
+    Spear of the Magus, Stone of Binding, The Cosmic Horror, Avenging Blade, Screeching
     Gargoyle, Void Shield, Freya''s Tears, Oni Hunter''s Garb, Spear of Desolation,
     Obsidian Shard, Hydra''s Lament, Void Stone, Shield of the Phoenix, Runeforged
-    Hammer, The Reaper, Death Metal, Shield Splitter, Spectral Armor, Erosion, Riptalon,
-    Pharaoh''s Curse, Eye of Providence, Rod of Asclepius, The World Stone, Doom Orb,
-    Draconic Scale, Silverbranch Bow.'
+    Hammer, Death Metal, The Reaper, Shield Splitter, Spectral Armor, Erosion, Riptalon,
+    Pharaoh''s Curse, Eye of Providence, Rod of Asclepius, Draconic Scale, The World
+    Stone, Doom Orb, Silverbranch Bow, Jade Scepter.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.76
@@ -411,9 +411,9 @@ builds:
     Curse, Oni Hunter''s Garb, Freya''s Tears, Silverbranch Bow, Spear of the Magus,
     Lernaean Bow, Hydra''s Lament, Shogun''s Ofuda, Bracer of The Abyss, Shield of
     the Phoenix, The Cosmic Horror, Runeforged Hammer, Spectral Armor, Death Metal,
-    Tyrfing, Erosion, Blood-Bound Book, Rod of Asclepius, Shield Splitter, Bancroft''s
-    Talon, Eye of Providence, Spear of Desolation, Jade Scepter, Bragi''s Harp, Obsidian
-    Shard, Leviathan''s Hide, Yogi''s Necklace.'
+    Tyrfing, Blood-Bound Book, Erosion, Rod of Asclepius, Bancroft''s Talon, Shield
+    Splitter, Eye of Providence, Jade Scepter, Spear of Desolation, Bragi''s Harp,
+    Obsidian Shard, Leviathan''s Hide, Chronos'' Pendant, Yogi''s Necklace.'
   slot_scores:
     Golden Blade:
       total: 0.41
@@ -462,7 +462,7 @@ builds:
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
+  - Eye of the Storm
   - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
@@ -481,12 +481,12 @@ builds:
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Eye of the Storm,
     Soul Gem, Gluttonous Grimoire, Freya''s Tears, Kinetic Cuirass, Amanita Charm,
     Shield of the Phoenix, Berserker''s Shield, Hydra''s Lament, The Crusher, Spear
-    of Desolation, Oni Hunter''s Garb, Chronos'' Pendant, Screeching Gargoyle, Spear
-    of the Magus, Chandra''s Grace, Spectral Armor, Erosion, Gladiator''s Shield,
-    Pharaoh''s Curse, Eye of Providence, The Cosmic Horror, Runeforged Hammer, Shield
-    Splitter, Prophetic Cloak, Draconic Scale, Gem of Focus, Leviathan''s Hide, Rod
-    of Asclepius, Death Metal, Midgardian Mail, Mantle Of Discord, Stone of Binding,
-    Yogi''s Necklace, Jade Scepter.'
+    of Desolation, Oni Hunter''s Garb, Chronos'' Pendant, Screeching Gargoyle, Chandra''s
+    Grace, Spear of the Magus, Spectral Armor, Erosion, Gladiator''s Shield, Pharaoh''s
+    Curse, Eye of Providence, The Cosmic Horror, Runeforged Hammer, Shield Splitter,
+    Prophetic Cloak, Draconic Scale, Gem of Focus, Leviathan''s Hide, Rod of Asclepius,
+    Death Metal, Midgardian Mail, Mantle Of Discord, Stone of Binding, Jade Scepter,
+    Yogi''s Necklace.'
   slot_scores:
     Breastplate of Valor:
       total: 0.46
@@ -554,11 +554,11 @@ builds:
     Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge, Kinetic Cuirass,
     Amanita Charm, The Crusher, Berserker''s Shield, Soul Gem, Freya''s Tears, Oni
     Hunter''s Garb, Spear of the Magus, Hydra''s Lament, Shield of the Phoenix, Shield
-    Splitter, Runeforged Hammer, Death Metal, The Cosmic Horror, Erosion, Spectral
+    Splitter, Runeforged Hammer, The Cosmic Horror, Death Metal, Erosion, Spectral
     Armor, Eye of Providence, Eye of the Storm, Pharaoh''s Curse, Spear of Desolation,
     Draconic Scale, Rod of Asclepius, Jade Scepter, Obsidian Shard, Leviathan''s Hide,
-    Golden Blade, Mantle Of Discord, Midgardian Mail, Stone of Binding, Chronos''
-    Pendant, The Reaper, Lernaean Bow, Damaru, Shogun''s Ofuda.'
+    Golden Blade, Mantle Of Discord, Chronos'' Pendant, Midgardian Mail, Stone of
+    Binding, Damaru, Lernaean Bow, The Reaper, Shogun''s Ofuda, Blood-Bound Book.'
   slot_scores:
     Genji's Guard:
       total: 0.3

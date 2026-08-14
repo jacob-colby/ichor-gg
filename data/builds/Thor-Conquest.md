@@ -119,9 +119,9 @@ builds:
     this god: The Crusher, Shifter''s Shield, Kinetic Cuirass, Amanita Charm, Berserker''s
     Shield, Runeforged Hammer, Genji''s Guard, Eye of the Storm, Oni Hunter''s Garb,
     Shield Splitter, Golden Blade, Breastplate of Valor, Avenging Blade, Shield of
-    the Phoenix, Freya''s Tears, Spectral Armor, Erosion, Lernaean Bow, Pharaoh''s
-    Curse, Damaru, Eye of Providence, Draconic Scale, Leviathan''s Hide, Midgardian
-    Mail, Yogi''s Necklace, The Reaper.'
+    the Phoenix, Freya''s Tears, Spectral Armor, Erosion, Damaru, Lernaean Bow, Pharaoh''s
+    Curse, Eye of Providence, Draconic Scale, Leviathan''s Hide, Midgardian Mail,
+    Yogi''s Necklace, The Reaper.'
   slot_scores:
     Berserker's Shield:
       total: 0.52
@@ -166,14 +166,14 @@ builds:
   archetype: burst
   slot_order:
   - Genji's Guard
-  - Berserker's Shield
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Hydra's Lament
   - Shifter's Shield
   - The Crusher
   flex_slots:
   - Hydra's Lament
-  - Berserker's Shield
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -182,18 +182,18 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Crusher, Genji''s Guard, Shifter''s Shield, Berserker''s Shield, Breastplate
-    of Valor, Kinetic Cuirass, Amanita Charm, Freya''s Tears, Shield of the Phoenix,
+    god: The Crusher, Genji''s Guard, Shifter''s Shield, Breastplate of Valor, Berserker''s
+    Shield, Kinetic Cuirass, Amanita Charm, Freya''s Tears, Shield of the Phoenix,
     Oni Hunter''s Garb, Runeforged Hammer, Riptalon, Spectral Armor, Golden Blade,
-    Eye of the Storm, Pharaoh''s Curse, Shield Splitter, Pendulum Blade, Lernaean
-    Bow, Damaru, Silverbranch Bow, Yogi''s Necklace, Chandra''s Grace, Avenging Blade,
-    Screeching Gargoyle, The Reaper.'
+    Eye of the Storm, Pharaoh''s Curse, Pendulum Blade, Shield Splitter, Damaru, Lernaean
+    Bow, Silverbranch Bow, Chandra''s Grace, Yogi''s Necklace, Screeching Gargoyle,
+    Avenging Blade, The Reaper.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -201,12 +201,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.24
-    Berserker's Shield:
+    Breastplate of Valor:
       total: 0.5
-      efficiency: 0.68
+      efficiency: 0.66
       win: 0.51
       pick: 0.0
-      fit: 0.19
+      fit: 0.24
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.66
@@ -261,7 +261,7 @@ builds:
     this god: The Crusher, Amanita Charm, Shifter''s Shield, Shield of the Phoenix,
     Kinetic Cuirass, Berserker''s Shield, Genji''s Guard, Oni Hunter''s Garb, Runeforged
     Hammer, Eye of the Storm, Shield Splitter, Riptalon, Chandra''s Grace, Erosion,
-    Phoenix Feather, Breastplate of Valor, Freya''s Tears, Eye of Providence, Spectral
+    Breastplate of Valor, Freya''s Tears, Phoenix Feather, Eye of Providence, Spectral
     Armor, Pharaoh''s Curse, Draconic Scale, Golden Blade, Avenging Blade, The Reaper,
     Leviathan''s Hide, Midgardian Mail, Shogun''s Ofuda.'
   slot_scores:
@@ -290,7 +290,7 @@ builds:
       pick: 0.13
       fit: 0.55
     The Crusher:
-      total: 0.68
+      total: 0.69
       efficiency: 0.63
       win: 0.85
       pick: 0.11
@@ -330,10 +330,10 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Avenging Blade, Berserker''s Shield, Kinetic Cuirass,
     Amanita Charm, Genji''s Guard, Runeforged Hammer, Stone of Binding, Void Shield,
-    Riptalon, Oni Hunter''s Garb, Screeching Gargoyle, Breastplate of Valor, Tekko-Kagi,
-    Silverbranch Bow, Void Stone, Eye of the Storm, Shield Splitter, Golden Blade,
-    Pendulum Blade, Freya''s Tears, Shield of the Phoenix, Spectral Armor, Lernaean
-    Bow, The Reaper.'
+    Riptalon, Oni Hunter''s Garb, Screeching Gargoyle, Breastplate of Valor, Silverbranch
+    Bow, Tekko-Kagi, Void Stone, Eye of the Storm, Shield Splitter, Golden Blade,
+    Pendulum Blade, Freya''s Tears, Shield of the Phoenix, Spectral Armor, Damaru,
+    The Reaper.'
   slot_scores:
     Avenging Blade:
       total: 0.51
@@ -398,12 +398,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, Berserker''s Shield, Riptalon, Golden Blade, Shifter''s
-    Shield, Silverbranch Bow, Genji''s Guard, Pharaoh''s Curse, Kinetic Cuirass, Amanita
-    Charm, Lernaean Bow, Tyrfing, Oni Hunter''s Garb, Breastplate of Valor, Shogun''s
-    Ofuda, Runeforged Hammer, Toxic Blade, Freya''s Tears, Spectral Armor, Shield
-    of the Phoenix, Dominance, Eros'' Bow, Tekko-Kagi, Yogi''s Necklace, Eye of the
-    Storm, Shield Splitter, The Reaper.'
+    this god: The Crusher, Berserker''s Shield, Riptalon, Golden Blade, Silverbranch
+    Bow, Genji''s Guard, Pharaoh''s Curse, Kinetic Cuirass, Amanita Charm, Lernaean
+    Bow, Tyrfing, Breastplate of Valor, Oni Hunter''s Garb, Shogun''s Ofuda, Runeforged
+    Hammer, Toxic Blade, Freya''s Tears, Spectral Armor, Shield of the Phoenix, Dominance,
+    Eros'' Bow, Tekko-Kagi, Yogi''s Necklace, Eye of the Storm, Damaru, Shield Splitter,
+    The Reaper.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -469,7 +469,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: The Crusher, Genji''s Guard, Breastplate
-    of Valor, Freya''s Tears, Shifter''s Shield, Shield of the Phoenix, Berserker''s
+    of Valor, Freya''s Tears, Shield of the Phoenix, Shifter''s Shield, Berserker''s
     Shield, Kinetic Cuirass, Amanita Charm, Chandra''s Grace, Screeching Gargoyle,
     Oni Hunter''s Garb, Gladiator''s Shield, Runeforged Hammer, Spectral Armor, Arondight,
     Pendulum Blade, Pharaoh''s Curse, Prophetic Cloak, Erosion, Yogi''s Necklace,
@@ -543,7 +543,7 @@ builds:
     Shield, Runeforged Hammer, Genji''s Guard, Eye of the Storm, Oni Hunter''s Garb,
     Shield Splitter, Golden Blade, Breastplate of Valor, The Reaper, Avenging Blade,
     Shield of the Phoenix, Freya''s Tears, Spectral Armor, Shifter''s Shield, Erosion,
-    Lernaean Bow, Pharaoh''s Curse, Damaru, Eye of Providence, Draconic Scale, Leviathan''s
+    Damaru, Lernaean Bow, Pharaoh''s Curse, Eye of Providence, Draconic Scale, Leviathan''s
     Hide, Midgardian Mail, Yogi''s Necklace.'
   slot_scores:
     Berserker's Shield:

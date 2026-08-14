@@ -100,8 +100,8 @@ builds:
   - Amanita Charm
   - Stampede
   flex_slots:
-  - Oni Hunter's Garb
   - Chronos' Pendant
+  - Oni Hunter's Garb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -117,10 +117,10 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Kinetic Cuirass, Amanita Charm, Gluttonous Grimoire, Freya''s Tears,
-    Shield of the Phoenix, Oni Hunter''s Garb, Chronos'' Pendant, Shifter''s Shield,
+    Shield of the Phoenix, Chronos'' Pendant, Oni Hunter''s Garb, Shifter''s Shield,
     Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Helm of Radiance,
     Leviathan''s Hide, Mantle Of Discord, Stone of Binding, Midgardian Mail, Rod of
-    Asclepius, Screeching Gargoyle, Gladiator''s Shield, Magi''s Cloak, Jade Scepter,
+    Asclepius, Screeching Gargoyle, Gladiator''s Shield, Jade Scepter, Magi''s Cloak,
     Prophetic Cloak, Spear of the Magus, Breastplate of Valor, Soul Gem.'
   slot_scores:
     Chronos' Pendant:
@@ -142,7 +142,7 @@ builds:
       pick: 0.0
       fit: 0.41
     Freya's Tears:
-      total: 0.55
+      total: 0.56
       efficiency: 0.59
       win: 0.57
       pick: 0.0
@@ -165,36 +165,42 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Chronos' Pendant
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Oni Hunter's Garb
   - Freya's Tears
   - Amanita Charm
   - Stampede
   flex_slots:
   - Freya's Tears
-  - Oni Hunter's Garb
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Gluttonous Grimoire,
-    Rod of Asclepius, Chandra''s Grace, Freya''s Tears, Oni Hunter''s Garb, Chronos''
-    Pendant, Shifter''s Shield, Erosion, Blood-Bound Book, Eye of Providence, Bancroft''s
+    Rod of Asclepius, Chandra''s Grace, Freya''s Tears, Chronos'' Pendant, Oni Hunter''s
+    Garb, Shifter''s Shield, Erosion, Blood-Bound Book, Eye of Providence, Bancroft''s
     Talon, Phoenix Feather, Spectral Armor, Draconic Scale, Lifebinder, Glorious Pridwen,
     Leviathan''s Hide, Helm of Radiance, Jade Scepter, Midgardian Mail, Gladiator''s
     Shield, Breastplate of Valor, Soul Gem.'
   slot_scores:
+    Chronos' Pendant:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.64
+      pick: 0.12
+      fit: 0.33
     Kinetic Cuirass:
       total: 0.57
       efficiency: 0.59
@@ -207,12 +213,6 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.9
-    Oni Hunter's Garb:
-      total: 0.54
-      efficiency: 0.63
-      win: 0.57
-      pick: 0.0
-      fit: 0.43
     Freya's Tears:
       total: 0.55
       efficiency: 0.59
@@ -262,7 +262,7 @@ builds:
     Spear of the Magus, Screeching Gargoyle, Freya''s Tears, The Cosmic Horror, Void
     Shield, Oni Hunter''s Garb, Shield of the Phoenix, Void Stone, Shifter''s Shield,
     Erosion, Spectral Armor, Eye of Providence, Helm of Radiance, Draconic Scale,
-    Leviathan''s Hide, Doom Orb, Rod of Asclepius, Breastplate of Valor, Soul Gem.'
+    Leviathan''s Hide, Doom Orb, Dreamer''s Idol, Breastplate of Valor, Soul Gem.'
   slot_scores:
     Stone of Binding:
       total: 0.53
@@ -327,12 +327,12 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm, Freya''s Tears,
-    Oni Hunter''s Garb, Shield of the Phoenix, Spectral Armor, Bracer of The Abyss,
-    Shifter''s Shield, Erosion, Helm of Radiance, Eye of Providence, Death Metal,
-    Spear of the Magus, Draconic Scale, Blood-Bound Book, Leviathan''s Hide, Rod of
-    Asclepius, Bancroft''s Talon, Yogi''s Necklace, Bragi''s Harp, Midgardian Mail,
-    Jade Scepter, The Cosmic Horror, Breastplate of Valor, Soul Gem.'
+    this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm, Chronos'' Pendant,
+    Freya''s Tears, Oni Hunter''s Garb, Shield of the Phoenix, Bracer of The Abyss,
+    Spectral Armor, Shifter''s Shield, Helm of Radiance, Erosion, Eye of Providence,
+    Death Metal, Spear of the Magus, Draconic Scale, Blood-Bound Book, Rod of Asclepius,
+    Leviathan''s Hide, Bancroft''s Talon, Yogi''s Necklace, Bragi''s Harp, Midgardian
+    Mail, The Cosmic Horror, Breastplate of Valor, Soul Gem.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.53
@@ -347,7 +347,7 @@ builds:
       pick: 0.0
       fit: 0.26
     Nimble Ring:
-      total: 0.47
+      total: 0.48
       efficiency: 0.49
       win: 0.57
       pick: 0.0
@@ -400,9 +400,9 @@ builds:
     + fit + win/pick). Underrated for this god: Freya''s Tears, Chronos'' Pendant,
     Kinetic Cuirass, Shield of the Phoenix, Amanita Charm, Gluttonous Grimoire, Oni
     Hunter''s Garb, Screeching Gargoyle, Chandra''s Grace, Gladiator''s Shield, Shifter''s
-    Shield, Erosion, Spectral Armor, Breastplate of Valor, Eye of Providence, Prophetic
-    Cloak, Draconic Scale, Helm of Radiance, Gem of Focus, Leviathan''s Hide, Mantle
-    Of Discord, Midgardian Mail, Rod of Asclepius, Stone of Binding, Soul Gem.'
+    Shield, Erosion, Breastplate of Valor, Spectral Armor, Prophetic Cloak, Eye of
+    Providence, Draconic Scale, Helm of Radiance, Gem of Focus, Totem of Death, Leviathan''s
+    Hide, Mantle Of Discord, Rod of Asclepius, Midgardian Mail, Soul Gem.'
   slot_scores:
     Chronos' Pendant:
       total: 0.55
@@ -467,15 +467,15 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
-    win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge, Berserker''s
+    win/pick). Underrated for this god: Jotunn''s Revenge, Gluttonous Grimoire, Berserker''s
     Shield, The Crusher, Kinetic Cuirass, Amanita Charm, Hydra''s Lament, Freya''s
-    Tears, Oni Hunter''s Garb, Runeforged Hammer, Shield Splitter, Shield of the Phoenix,
-    Pharaoh''s Curse, Golden Blade, Lernaean Bow, Death Metal, Spear of the Magus,
-    Eye of the Storm, Spectral Armor, Shifter''s Shield, Erosion, The Cosmic Horror,
-    Helm of Radiance, Eye of Providence, Damaru, Shogun''s Ofuda, The Reaper, Draconic
-    Scale, Avenging Blade, Riptalon, Leviathan''s Hide, Rod of Asclepius, Midgardian
-    Mail, Mantle Of Discord, Bragi''s Harp, Stone of Binding, Breastplate of Valor,
-    Soul Gem.'
+    Tears, Chronos'' Pendant, Oni Hunter''s Garb, Runeforged Hammer, Shield Splitter,
+    Shield of the Phoenix, Pharaoh''s Curse, Golden Blade, Lernaean Bow, Death Metal,
+    Spear of the Magus, Eye of the Storm, Spectral Armor, Shifter''s Shield, The Cosmic
+    Horror, Erosion, Helm of Radiance, Eye of Providence, Damaru, Shogun''s Ofuda,
+    The Reaper, Draconic Scale, Avenging Blade, Riptalon, Leviathan''s Hide, Rod of
+    Asclepius, Midgardian Mail, Mantle Of Discord, Bragi''s Harp, Stone of Binding,
+    Breastplate of Valor, Soul Gem.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -524,7 +524,7 @@ builds:
   - The Crusher
   - Stampede
   flex_slots:
-  - The Crusher
+  - Kinetic Cuirass
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -541,14 +541,14 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge,
-    Kinetic Cuirass, The Crusher, Amanita Charm, Berserker''s Shield, Chronos'' Pendant,
+    The Crusher, Kinetic Cuirass, Amanita Charm, Berserker''s Shield, Chronos'' Pendant,
     Freya''s Tears, Hydra''s Lament, Spear of the Magus, Oni Hunter''s Garb, Death
     Metal, Shield of the Phoenix, The Cosmic Horror, Runeforged Hammer, Helm of Radiance,
     Shield Splitter, Shifter''s Shield, Spectral Armor, Erosion, Rod of Asclepius,
     Eye of the Storm, Pharaoh''s Curse, Eye of Providence, Jade Scepter, Draconic
-    Scale, Golden Blade, Leviathan''s Hide, Blood-Bound Book, Lernaean Bow, The Reaper,
-    Damaru, Bancroft''s Talon, Midgardian Mail, Mantle Of Discord, Breastplate of
-    Valor, Soul Gem.'
+    Scale, Golden Blade, Leviathan''s Hide, Blood-Bound Book, Damaru, Lernaean Bow,
+    Bancroft''s Talon, The Reaper, Midgardian Mail, Ethereal Staff, Wish-Granting
+    Pearl, Breastplate of Valor, Soul Gem.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -615,10 +615,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Gluttonous Grimoire,
     Freya''s Tears, Breastplate of Valor, Shield of the Phoenix, Oni Hunter''s Garb,
-    Shifter''s Shield, Erosion, Soul Gem, Eye of Providence, Draconic Scale, Spectral
+    Shifter''s Shield, Soul Gem, Erosion, Eye of Providence, Draconic Scale, Spectral
     Armor, Helm of Radiance, Leviathan''s Hide, Mantle Of Discord, Stone of Binding,
-    Midgardian Mail, Rod of Asclepius, Screeching Gargoyle, Gladiator''s Shield, Magi''s
-    Cloak, Jade Scepter, Prophetic Cloak, Chronos'' Pendant, Spear of the Magus.'
+    Midgardian Mail, Rod of Asclepius, Screeching Gargoyle, Gladiator''s Shield, Jade
+    Scepter, Magi''s Cloak, Chronos'' Pendant, Prophetic Cloak, Spear of the Magus.'
   slot_scores:
     Genji's Guard:
       total: 0.44
@@ -645,7 +645,7 @@ builds:
       pick: 0.0
       fit: 0.41
     Freya's Tears:
-      total: 0.55
+      total: 0.56
       efficiency: 0.59
       win: 0.57
       pick: 0.0

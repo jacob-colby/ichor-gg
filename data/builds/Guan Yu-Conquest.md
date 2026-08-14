@@ -69,13 +69,13 @@ builds:
       pick_rate: 0.08
       win_rate: 0.75
   community_starters:
-  - name: Sands of Time
+  - name: Sands Of Time
     pick_rate: 0.28
     win_rate: 0.53
   - name: Bluestone Pendant
     pick_rate: 0.17
     win_rate: 0.5
-  - name: Pendulum of The Ages
+  - name: Pendulum of the Ages
     pick_rate: 0.13
     win_rate: 0.71
   source_url: https://smitebrain.com/gods/guan-yu/
@@ -120,8 +120,8 @@ builds:
     The Crusher, Hydra''s Lament, Shield of the Phoenix, Oni Hunter''s Garb, Pharaoh''s
     Curse, Shield Splitter, Runeforged Hammer, Golden Blade, Eye of the Storm, Erosion,
     Eye of Providence, Spectral Armor, Lernaean Bow, Shogun''s Ofuda, Leviathan''s
-    Hide, Midgardian Mail, Avenging Blade, Mantle Of Discord, Stone of Binding, Screeching
-    Gargoyle, Shifter''s Shield.'
+    Hide, Midgardian Mail, Avenging Blade, Mantle Of Discord, Stone of Binding, Damaru,
+    Shifter''s Shield.'
   slot_scores:
     Berserker's Shield:
       total: 0.58
@@ -259,7 +259,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, Berserker''s Shield, Kinetic Cuirass,
-    Amanita Charm, Avenging Blade, Stone of Binding, Screeching Gargoyle, Void Shield,
+    Amanita Charm, Avenging Blade, Screeching Gargoyle, Stone of Binding, Void Shield,
     Hydra''s Lament, Oni Hunter''s Garb, Shield of the Phoenix, Riptalon, Void Stone,
     Runeforged Hammer, Pharaoh''s Curse, The Reaper, Silverbranch Bow, Shield Splitter,
     Golden Blade, Spectral Armor, Heartseeker, Erosion, Lernaean Bow, Eye of the Storm,
@@ -473,7 +473,7 @@ builds:
     Garb, Pharaoh''s Curse, Shield Splitter, Runeforged Hammer, Golden Blade, Shifter''s
     Shield, Eye of the Storm, Erosion, Eye of Providence, Spectral Armor, Lernaean
     Bow, Shogun''s Ofuda, Leviathan''s Hide, Midgardian Mail, Avenging Blade, Mantle
-    Of Discord, Stone of Binding, Screeching Gargoyle.'
+    Of Discord, Stone of Binding, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -543,7 +543,7 @@ builds:
     Phoenix, Oni Hunter''s Garb, Pharaoh''s Curse, Shield Splitter, Runeforged Hammer,
     Golden Blade, Shifter''s Shield, Eye of the Storm, Erosion, Eye of Providence,
     Spectral Armor, Lernaean Bow, Shogun''s Ofuda, Leviathan''s Hide, Midgardian Mail,
-    Avenging Blade, Mantle Of Discord, Stone of Binding, Screeching Gargoyle.'
+    Avenging Blade, Mantle Of Discord, Stone of Binding, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.55

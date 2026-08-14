@@ -117,9 +117,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Avenging Blade, The Crusher, Amanita Charm, Genji''s Guard, Golden Blade,
-    Pharaoh''s Curse, Lernaean Bow, Runeforged Hammer, Oni Hunter''s Garb, Damaru,
+    Pharaoh''s Curse, Lernaean Bow, Runeforged Hammer, Damaru, Oni Hunter''s Garb,
     Hydra''s Lament, Breastplate of Valor, Shogun''s Ofuda, Riptalon, Eye of the Storm,
-    Spectral Armor, Shield of the Phoenix, Silverbranch Bow, Shield Splitter, Tekko-Kagi,
+    Shield of the Phoenix, Spectral Armor, Silverbranch Bow, Shield Splitter, Tekko-Kagi,
     Dominance, The Reaper, Tyrfing, Erosion, Freya''s Tears.'
   slot_scores:
     Avenging Blade:
@@ -190,7 +190,7 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Riptalon, The Crusher, Genji''s
     Guard, The Reaper, Pharaoh''s Curse, Golden Blade, Oni Hunter''s Garb, Runeforged
     Hammer, Chandra''s Grace, Breastplate of Valor, Lernaean Bow, Shogun''s Ofuda,
-    Hydra''s Lament, Phoenix Feather, Damaru, Spectral Armor, Eye of the Storm, Shield
+    Damaru, Hydra''s Lament, Phoenix Feather, Spectral Armor, Eye of the Storm, Shield
     Splitter, Erosion, Eye of Providence, Draconic Scale, Leviathan''s Hide, Freya''s
     Tears.'
   slot_scores:
@@ -219,7 +219,7 @@ builds:
       pick: 0.0
       fit: 0.6
     The Crusher:
-      total: 0.5
+      total: 0.51
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -260,7 +260,7 @@ builds:
     for this god: Avenging Blade, The Crusher, Genji''s Guard, Riptalon, Amanita Charm,
     Silverbranch Bow, Golden Blade, Stone of Binding, Pharaoh''s Curse, Void Shield,
     Lernaean Bow, Runeforged Hammer, The Reaper, Oni Hunter''s Garb, Screeching Gargoyle,
-    Tekko-Kagi, Breastplate of Valor, Hydra''s Lament, Heartseeker, Damaru, Void Stone,
+    Breastplate of Valor, Hydra''s Lament, Tekko-Kagi, Damaru, Heartseeker, Void Stone,
     Shogun''s Ofuda, Spectral Armor, Shield of the Phoenix, Toxic Blade, Freya''s
     Tears.'
   slot_scores:
@@ -328,10 +328,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Golden Blade, The Crusher, Genji''s Guard, Amanita Charm,
-    Pharaoh''s Curse, Silverbranch Bow, Lernaean Bow, Oni Hunter''s Garb, Breastplate
-    of Valor, Tyrfing, Shogun''s Ofuda, Runeforged Hammer, Hydra''s Lament, Damaru,
-    Toxic Blade, Spectral Armor, Shield of the Phoenix, Eros'' Bow, Yogi''s Necklace,
-    The Reaper, Dominance, Tekko-Kagi, Eye of the Storm, Freya''s Tears.'
+    Pharaoh''s Curse, Silverbranch Bow, Lernaean Bow, Breastplate of Valor, Oni Hunter''s
+    Garb, Tyrfing, Shogun''s Ofuda, Runeforged Hammer, Hydra''s Lament, Damaru, Toxic
+    Blade, Spectral Armor, Shield of the Phoenix, Eros'' Bow, Yogi''s Necklace, The
+    Reaper, Dominance, Eye of the Storm, Tekko-Kagi, Freya''s Tears.'
   slot_scores:
     Golden Blade:
       total: 0.5
@@ -398,10 +398,10 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Breastplate of Valor,
     Hydra''s Lament, Shield of the Phoenix, The Crusher, Amanita Charm, Pharaoh''s
-    Curse, Oni Hunter''s Garb, Chandra''s Grace, Golden Blade, Screeching Gargoyle,
+    Curse, Oni Hunter''s Garb, Chandra''s Grace, Screeching Gargoyle, Golden Blade,
     Lernaean Bow, Runeforged Hammer, Riptalon, Damaru, Shogun''s Ofuda, Spectral Armor,
-    Silverbranch Bow, Gladiator''s Shield, Yogi''s Necklace, Leviathan''s Hide, Arondight,
-    Erosion, Eye of Providence, Freya''s Tears.'
+    Silverbranch Bow, Gladiator''s Shield, Yogi''s Necklace, Arondight, Leviathan''s
+    Hide, Erosion, Eye of Providence, Freya''s Tears.'
   slot_scores:
     Avenging Blade:
       total: 0.59
@@ -467,9 +467,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, Amanita Charm, Genji''s Guard, Golden Blade,
-    Pharaoh''s Curse, Lernaean Bow, Runeforged Hammer, Oni Hunter''s Garb, Damaru,
+    Pharaoh''s Curse, Lernaean Bow, Runeforged Hammer, Damaru, Oni Hunter''s Garb,
     Hydra''s Lament, Breastplate of Valor, Shogun''s Ofuda, Riptalon, Eye of the Storm,
-    Spectral Armor, Shield of the Phoenix, Silverbranch Bow, Freya''s Tears, Shield
+    Shield of the Phoenix, Spectral Armor, Freya''s Tears, Silverbranch Bow, Shield
     Splitter, Tekko-Kagi, Avenging Blade, Dominance, The Reaper, Tyrfing, Erosion.'
   slot_scores:
     Genji's Guard:

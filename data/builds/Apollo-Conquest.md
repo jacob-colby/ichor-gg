@@ -116,10 +116,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Lernaean Bow, Damaru, Jotunn''s Revenge, The Crusher,
+    this god: Berserker''s Shield, Damaru, Lernaean Bow, Jotunn''s Revenge, The Crusher,
     Golden Blade, Avenging Blade, Hydra''s Lament, Genji''s Guard, Demon Blade, Pharaoh''s
     Curse, Tekko-Kagi, Runeforged Hammer, Breastplate of Valor, The Reaper, Deathbringer,
-    Shogun''s Ofuda, Musashi''s Dual Swords, Kinetic Cuirass, Eros'' Bow, Amanita
+    Shogun''s Ofuda, Kinetic Cuirass, Musashi''s Dual Swords, Eros'' Bow, Amanita
     Charm, Oni Hunter''s Garb, Eye of Providence, Rage, Freya''s Tears.'
   slot_scores:
     Lernaean Bow:
@@ -164,8 +164,8 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Lernaean Bow
   - Berserker's Shield
+  - Jotunn's Revenge
   - Riptalon
   - Damaru
   - Demon Blade
@@ -187,24 +187,24 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: Damaru, Berserker''s Shield, Lernaean Bow, Jotunn''s Revenge, The Crusher,
-    Avenging Blade, Golden Blade, Genji''s Guard, Hydra''s Lament, Demon Blade, Pharaoh''s
-    Curse, Breastplate of Valor, Deathbringer, Runeforged Hammer, The Reaper, Tekko-Kagi,
-    Musashi''s Dual Swords, Shogun''s Ofuda, Kinetic Cuirass, Amanita Charm, Oni Hunter''s
-    Garb, Eros'' Bow, Rage, Eye of Providence, Freya''s Tears.'
+    this god: Damaru, Berserker''s Shield, Jotunn''s Revenge, The Crusher, Lernaean
+    Bow, Avenging Blade, Golden Blade, Genji''s Guard, Hydra''s Lament, Demon Blade,
+    Pharaoh''s Curse, Breastplate of Valor, Deathbringer, Runeforged Hammer, The Reaper,
+    Tekko-Kagi, Musashi''s Dual Swords, Shogun''s Ofuda, Kinetic Cuirass, Amanita
+    Charm, Oni Hunter''s Garb, Eros'' Bow, Rage, Eye of Providence, Freya''s Tears.'
   slot_scores:
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.54
-      win: 0.58
-      pick: 0.0
-      fit: 0.55
     Berserker's Shield:
       total: 0.54
       efficiency: 0.68
       win: 0.58
       pick: 0.0
       fit: 0.27
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.58
+      pick: 0.0
+      fit: 0.28
     Riptalon:
       total: 0.57
       efficiency: 0.56
@@ -257,9 +257,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Shield of the Phoenix, Kinetic Cuirass,
-    Genji''s Guard, Pharaoh''s Curse, The Reaper, The Crusher, Jotunn''s Revenge,
-    Oni Hunter''s Garb, Golden Blade, Chandra''s Grace, Breastplate of Valor, Lernaean
-    Bow, Damaru, Shogun''s Ofuda, Runeforged Hammer, Phoenix Feather, Freya''s Tears,
+    Genji''s Guard, Pharaoh''s Curse, The Crusher, The Reaper, Jotunn''s Revenge,
+    Golden Blade, Oni Hunter''s Garb, Chandra''s Grace, Breastplate of Valor, Damaru,
+    Lernaean Bow, Shogun''s Ofuda, Runeforged Hammer, Freya''s Tears, Phoenix Feather,
     Spectral Armor, Hydra''s Lament, Shifter''s Shield, Umbral Link, Erosion, Eye
     of the Storm, Shield Splitter, Eye of Providence, Leviathan''s Hide.'
   slot_scores:
@@ -327,10 +327,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Jotunn''s Revenge, Avenging Blade, Berserker''s Shield,
-    The Reaper, Tekko-Kagi, Lernaean Bow, Damaru, Genji''s Guard, Hydra''s Lament,
+    The Reaper, Tekko-Kagi, Damaru, Lernaean Bow, Genji''s Guard, Hydra''s Lament,
     Golden Blade, Heartseeker, Screeching Gargoyle, Breastplate of Valor, Pharaoh''s
     Curse, Runeforged Hammer, Stone of Binding, Titan''s Bane, Kinetic Cuirass, Void
-    Shield, Amanita Charm, Oni Hunter''s Garb, Pendulum Blade, Eye of Providence.'
+    Shield, Amanita Charm, Pendulum Blade, Oni Hunter''s Garb, Eye of Providence.'
   slot_scores:
     Avenging Blade:
       total: 0.56
@@ -466,13 +466,13 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Genji''s Guard,
     Breastplate of Valor, Hydra''s Lament, Berserker''s Shield, The Crusher, Freya''s
-    Tears, Lernaean Bow, Damaru, Shield of the Phoenix, Screeching Gargoyle, Golden
+    Tears, Damaru, Lernaean Bow, Shield of the Phoenix, Screeching Gargoyle, Golden
     Blade, Pharaoh''s Curse, Chandra''s Grace, Arondight, Kinetic Cuirass, Runeforged
     Hammer, Amanita Charm, Oni Hunter''s Garb, Eye of Providence, Shogun''s Ofuda,
     The Reaper, Pendulum Blade, Yogi''s Necklace, Eros'' Bow.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.71
       win: 0.58
       pick: 0.0
@@ -534,10 +534,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Berserker''s Shield, Lernaean Bow, Damaru, Jotunn''s
+    Underrated for this god: Berserker''s Shield, Damaru, Lernaean Bow, Jotunn''s
     Revenge, The Crusher, Golden Blade, Hydra''s Lament, Genji''s Guard, Demon Blade,
     Pharaoh''s Curse, Tekko-Kagi, Runeforged Hammer, Breastplate of Valor, The Reaper,
-    Deathbringer, Shogun''s Ofuda, Musashi''s Dual Swords, Kinetic Cuirass, Eros''
+    Deathbringer, Shogun''s Ofuda, Kinetic Cuirass, Musashi''s Dual Swords, Eros''
     Bow, Amanita Charm, Oni Hunter''s Garb, Eye of Providence, Rage, Avenging Blade,
     Freya''s Tears.'
   slot_scores:

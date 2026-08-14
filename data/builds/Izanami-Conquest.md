@@ -150,7 +150,7 @@ builds:
       pick: 0.0
       fit: 0.38
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.63
       win: 0.7
       pick: 0.0
@@ -357,7 +357,7 @@ builds:
       pick: 0.0
       fit: 0.38
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.66
       win: 0.7
       pick: 0.0
@@ -658,7 +658,7 @@ builds:
       pick: 0.0
       fit: 0.38
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.63
       win: 0.7
       pick: 0.0

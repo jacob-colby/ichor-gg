@@ -118,10 +118,10 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Freya''s Tears, Breastplate of Valor, Kinetic Cuirass, Amanita Charm,
     Gluttonous Grimoire, Shield of the Phoenix, Shifter''s Shield, Oni Hunter''s Garb,
-    Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Soul Gem, Leviathan''s
-    Hide, Mantle Of Discord, Stone of Binding, Midgardian Mail, Helm of Radiance,
+    Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Soul Gem, Mantle Of
+    Discord, Leviathan''s Hide, Stone of Binding, Midgardian Mail, Helm of Radiance,
     Magi''s Cloak, Gladiator''s Shield, Prophetic Cloak, Screeching Gargoyle, Ancile,
-    Xibalban Effigy, Void Shield, Hide of the Nemean Lion.'
+    Xibalban Effigy, Hide of the Nemean Lion, Void Shield.'
   slot_scores:
     Stygian Anchor:
       total: 0.68
@@ -190,10 +190,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Freya''s Tears, Amanita Charm, Breastplate of Valor, Shield of the Phoenix,
     Kinetic Cuirass, Soul Gem, Gluttonous Grimoire, Rod of Asclepius, Chandra''s Grace,
-    Oni Hunter''s Garb, Shifter''s Shield, Erosion, Eye of Providence, Draconic Scale,
-    Phoenix Feather, Spectral Armor, Blood-Bound Book, Leviathan''s Hide, Bancroft''s
-    Talon, Lifebinder, Midgardian Mail, Glorious Pridwen, Gladiator''s Shield, Ancile,
-    Helm of Radiance, Jade Scepter.'
+    Oni Hunter''s Garb, Shifter''s Shield, Erosion, Eye of Providence, Phoenix Feather,
+    Draconic Scale, Spectral Armor, Blood-Bound Book, Leviathan''s Hide, Bancroft''s
+    Talon, Lifebinder, Glorious Pridwen, Midgardian Mail, Gladiator''s Shield, Ancile,
+    Jade Scepter, Helm of Radiance.'
   slot_scores:
     Stygian Anchor:
       total: 0.67
@@ -202,7 +202,7 @@ builds:
       pick: 0.15
       fit: 0.42
     Breastplate of Valor:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
       win: 0.56
       pick: 0.12
@@ -260,7 +260,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Freya''s Tears, Breastplate of Valor, Gluttonous Grimoire, Soul
     Gem, Kinetic Cuirass, Amanita Charm, Stone of Binding, Screeching Gargoyle, Spear
-    of the Magus, Void Shield, Oni Hunter''s Garb, The Cosmic Horror, Shield of the
+    of the Magus, Void Shield, The Cosmic Horror, Oni Hunter''s Garb, Shield of the
     Phoenix, Spear of Desolation, Void Stone, Shifter''s Shield, Erosion, Obsidian
     Shard, Eye of Providence, Spectral Armor, Draconic Scale, Leviathan''s Hide, Helm
     of Radiance, Mantle Of Discord, Midgardian Mail, The World Stone.'
@@ -348,7 +348,7 @@ builds:
       pick: 0.12
       fit: 0.21
     Bracer of The Abyss:
-      total: 0.43
+      total: 0.44
       efficiency: 0.56
       win: 0.45
       pick: 0.0
@@ -400,11 +400,11 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Freya''s Tears, Breastplate of Valor,
     Kinetic Cuirass, Shield of the Phoenix, Soul Gem, Amanita Charm, Gluttonous Grimoire,
-    Oni Hunter''s Garb, Chronos'' Pendant, Screeching Gargoyle, Spear of Desolation,
+    Chronos'' Pendant, Oni Hunter''s Garb, Screeching Gargoyle, Spear of Desolation,
     Chandra''s Grace, Gladiator''s Shield, Shifter''s Shield, Erosion, Spectral Armor,
-    Eye of Providence, Prophetic Cloak, Draconic Scale, Helm of Radiance, Gem of Focus,
-    Leviathan''s Hide, Mantle Of Discord, Midgardian Mail, Rod of Asclepius, Stone
-    of Binding.'
+    Prophetic Cloak, Eye of Providence, Draconic Scale, Helm of Radiance, Gem of Focus,
+    Totem of Death, Leviathan''s Hide, Mantle Of Discord, Rod of Asclepius, Midgardian
+    Mail.'
   slot_scores:
     Stygian Anchor:
       total: 0.65
@@ -437,7 +437,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Freya's Tears:
-      total: 0.64
+      total: 0.65
       efficiency: 0.59
       win: 0.75
       pick: 0.11
@@ -473,11 +473,11 @@ builds:
     Revenge, Gluttonous Grimoire, Berserker''s Shield, The Crusher, Kinetic Cuirass,
     Amanita Charm, Soul Gem, Hydra''s Lament, Oni Hunter''s Garb, Runeforged Hammer,
     Shield Splitter, Pharaoh''s Curse, Golden Blade, Shield of the Phoenix, Lernaean
-    Bow, Eye of the Storm, Shifter''s Shield, Spectral Armor, Erosion, Death Metal,
-    Spear of the Magus, Eye of Providence, Shogun''s Ofuda, The Reaper, Draconic Scale,
-    Damaru, The Cosmic Horror, Avenging Blade, Helm of Radiance, Riptalon, Leviathan''s
-    Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding, Heartseeker, Spear
-    of Desolation, Yogi''s Necklace.'
+    Bow, Eye of the Storm, Shifter''s Shield, Death Metal, Erosion, Spectral Armor,
+    Spear of the Magus, Eye of Providence, Damaru, Shogun''s Ofuda, Draconic Scale,
+    The Reaper, The Cosmic Horror, Avenging Blade, Helm of Radiance, Riptalon, Leviathan''s
+    Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding, Spear of Desolation,
+    Heartseeker, Silverbranch Bow, Yogi''s Necklace.'
   slot_scores:
     Stygian Anchor:
       total: 0.65
@@ -545,12 +545,12 @@ builds:
     + fit + win/pick). Underrated for this god: Freya''s Tears, Breastplate of Valor,
     Gluttonous Grimoire, Jotunn''s Revenge, Kinetic Cuirass, The Crusher, Soul Gem,
     Amanita Charm, Berserker''s Shield, Spear of the Magus, Oni Hunter''s Garb, Hydra''s
-    Lament, Death Metal, The Cosmic Horror, Runeforged Hammer, Shield of the Phoenix,
+    Lament, Death Metal, The Cosmic Horror, Shield of the Phoenix, Runeforged Hammer,
     Helm of Radiance, Shield Splitter, Spear of Desolation, Shifter''s Shield, Erosion,
-    Spectral Armor, Eye of the Storm, Rod of Asclepius, Eye of Providence, Pharaoh''s
-    Curse, Chronos'' Pendant, Obsidian Shard, Jade Scepter, Draconic Scale, Golden
-    Blade, Leviathan''s Hide, Blood-Bound Book, Lernaean Bow, The Reaper, Damaru,
-    Bancroft''s Talon, Midgardian Mail, Mantle Of Discord.'
+    Spectral Armor, Eye of the Storm, Rod of Asclepius, Chronos'' Pendant, Eye of
+    Providence, Pharaoh''s Curse, Jade Scepter, Obsidian Shard, Draconic Scale, Golden
+    Blade, Leviathan''s Hide, Blood-Bound Book, Damaru, Lernaean Bow, Bancroft''s
+    Talon, The Reaper, Ethereal Staff, Midgardian Mail, Wish-Granting Pearl.'
   slot_scores:
     Stygian Anchor:
       total: 0.65
@@ -565,7 +565,7 @@ builds:
       pick: 0.3
       fit: 0.24
     Breastplate of Valor:
-      total: 0.52
+      total: 0.53
       efficiency: 0.66
       win: 0.56
       pick: 0.12
@@ -618,9 +618,9 @@ builds:
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Freya''s Tears, Gluttonous
     Grimoire, Breastplate of Valor, Shield of the Phoenix, Shifter''s Shield, Oni
     Hunter''s Garb, Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Soul
-    Gem, Leviathan''s Hide, Mantle Of Discord, Stone of Binding, Midgardian Mail,
+    Gem, Mantle Of Discord, Leviathan''s Hide, Stone of Binding, Midgardian Mail,
     Helm of Radiance, Magi''s Cloak, Gladiator''s Shield, Prophetic Cloak, Screeching
-    Gargoyle, Ancile, Xibalban Effigy, Void Shield, Hide of the Nemean Lion.'
+    Gargoyle, Ancile, Xibalban Effigy, Hide of the Nemean Lion, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.53

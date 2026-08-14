@@ -259,7 +259,7 @@ builds:
     for this god: The Crusher, Jotunn''s Revenge, Genji''s Guard, Avenging Blade,
     Riptalon, Amanita Charm, Silverbranch Bow, Stone of Binding, Pharaoh''s Curse,
     Void Shield, Lernaean Bow, Runeforged Hammer, The Reaper, Oni Hunter''s Garb,
-    Screeching Gargoyle, Tekko-Kagi, Breastplate of Valor, Hydra''s Lament, Damaru,
+    Screeching Gargoyle, Breastplate of Valor, Hydra''s Lament, Tekko-Kagi, Damaru,
     Void Stone, Heartseeker, Shogun''s Ofuda, Spectral Armor, Shield of the Phoenix,
     Toxic Blade.'
   slot_scores:
@@ -327,7 +327,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Genji''s Guard, Riptalon, Pharaoh''s Curse, Amanita Charm, The Crusher,
-    Jotunn''s Revenge, Lernaean Bow, Silverbranch Bow, Oni Hunter''s Garb, Tyrfing,
+    Jotunn''s Revenge, Lernaean Bow, Silverbranch Bow, Tyrfing, Oni Hunter''s Garb,
     Breastplate of Valor, Shogun''s Ofuda, Runeforged Hammer, Hydra''s Lament, Damaru,
     Spectral Armor, Shield of the Phoenix, Eros'' Bow, Dominance, Yogi''s Necklace,
     Toxic Blade, Eye of the Storm, Erosion, Leviathan''s Hide.'
@@ -398,7 +398,7 @@ builds:
     + fit + win/pick). Underrated for this god: Genji''s Guard, Jotunn''s Revenge,
     Breastplate of Valor, Hydra''s Lament, Shield of the Phoenix, Amanita Charm, The
     Crusher, Pharaoh''s Curse, Oni Hunter''s Garb, Chandra''s Grace, Screeching Gargoyle,
-    Lernaean Bow, Runeforged Hammer, Shogun''s Ofuda, Damaru, Spectral Armor, Gladiator''s
+    Lernaean Bow, Runeforged Hammer, Damaru, Shogun''s Ofuda, Spectral Armor, Gladiator''s
     Shield, Yogi''s Necklace, Riptalon, Arondight, Erosion, Leviathan''s Hide, Eye
     of the Storm, Eye of Providence.'
   slot_scores:
@@ -427,7 +427,7 @@ builds:
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.52
       efficiency: 0.66
       win: 0.5
       pick: 0.0

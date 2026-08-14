@@ -448,7 +448,7 @@ builds:
   - The Crusher
   - Avatar's Parashu
   flex_slots:
-  - Avatar's Parashu
+  - Breastplate of Valor
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc

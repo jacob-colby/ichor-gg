@@ -69,10 +69,10 @@ builds:
       pick_rate: 0.06
       win_rate: 1.0
   community_starters:
-  - name: Sands of Time
+  - name: Sands Of Time
     pick_rate: 0.38
     win_rate: 0.59
-  - name: Pendulum of The Ages
+  - name: Pendulum of the Ages
     pick_rate: 0.31
     win_rate: 0.75
   - name: Archmage's Gem
@@ -120,7 +120,7 @@ builds:
     Tears, Shield of the Phoenix, Oni Hunter''s Garb, Spear of the Magus, Helm of
     Radiance, Shifter''s Shield, Erosion, Eye of Providence, Spectral Armor, Rod of
     Asclepius, Spear of Desolation, Draconic Scale, Jade Scepter, Leviathan''s Hide,
-    Midgardian Mail, Ethereal Staff, Wish-Granting Pearl, Mantle Of Discord, The Cosmic
+    Ethereal Staff, Wish-Granting Pearl, Midgardian Mail, Mantle Of Discord, The Cosmic
     Horror.'
   slot_scores:
     Genji's Guard:
@@ -191,7 +191,7 @@ builds:
     god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita Charm, Freya''s Tears,
     Spear of the Magus, Shield of the Phoenix, Oni Hunter''s Garb, Spear of Desolation,
     Death Metal, Helm of Radiance, Spectral Armor, Shifter''s Shield, Erosion, Rod
-    of Asclepius, Eye of Providence, Jade Scepter, Draconic Scale, The Cosmic Horror,
+    of Asclepius, Eye of Providence, Jade Scepter, The Cosmic Horror, Draconic Scale,
     Leviathan''s Hide, Screeching Gargoyle, Blood-Bound Book, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
@@ -331,7 +331,7 @@ builds:
     Amanita Charm, Stone of Binding, Screeching Gargoyle, Freya''s Tears, Spear of
     Desolation, Void Shield, Oni Hunter''s Garb, Shield of the Phoenix, Void Stone,
     Helm of Radiance, The Cosmic Horror, Spectral Armor, Shifter''s Shield, Doom Orb,
-    Erosion, Rod of Asclepius, Dreamer''s Idol, Eye of Providence, Jade Scepter.'
+    Erosion, Rod of Asclepius, Dreamer''s Idol, Eye of Providence.'
   slot_scores:
     Stone of Binding:
       total: 0.59
@@ -399,8 +399,8 @@ builds:
     this god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita Charm, Freya''s
     Tears, Oni Hunter''s Garb, Spear of the Magus, Bracer of The Abyss, Shield of
     the Phoenix, Helm of Radiance, Death Metal, Spectral Armor, Blood-Bound Book,
-    Rod of Asclepius, Bancroft''s Talon, Shifter''s Shield, Jade Scepter, Erosion,
-    Bragi''s Harp, Eye of Providence, Nimble Ring, Spear of Desolation, The Cosmic
+    Rod of Asclepius, Bancroft''s Talon, Jade Scepter, Shifter''s Shield, Erosion,
+    Bragi''s Harp, Nimble Ring, Eye of Providence, Spear of Desolation, The Cosmic
     Horror.'
   slot_scores:
     Breastplate of Valor:
@@ -470,8 +470,8 @@ builds:
     Tears, Shield of the Phoenix, Kinetic Cuirass, Amanita Charm, Oni Hunter''s Garb,
     Screeching Gargoyle, Spear of Desolation, Chandra''s Grace, Gladiator''s Shield,
     Spear of the Magus, Spectral Armor, Shifter''s Shield, Erosion, Eye of Providence,
-    Helm of Radiance, Prophetic Cloak, Gem of Focus, Draconic Scale, Leviathan''s
-    Hide, Rod of Asclepius, Death Metal, The Cosmic Horror.'
+    Helm of Radiance, Gem of Focus, Prophetic Cloak, Draconic Scale, Totem of Death,
+    Leviathan''s Hide, Rod of Asclepius, The Cosmic Horror.'
   slot_scores:
     Genji's Guard:
       total: 0.61
@@ -538,12 +538,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge, The
     Crusher, Berserker''s Shield, Soul Gem, Kinetic Cuirass, Amanita Charm, Hydra''s
-    Lament, Freya''s Tears, Runeforged Hammer, Oni Hunter''s Garb, Death Metal, Spear
+    Lament, Freya''s Tears, Runeforged Hammer, Death Metal, Oni Hunter''s Garb, Spear
     of the Magus, Shield of the Phoenix, Golden Blade, Pharaoh''s Curse, Shield Splitter,
     Lernaean Bow, Helm of Radiance, Eye of the Storm, Spectral Armor, Rod of Asclepius,
-    Shifter''s Shield, Erosion, Damaru, Jade Scepter, Bragi''s Harp, Spear of Desolation,
-    The Reaper, Eye of Providence, Bracer of The Abyss, Shogun''s Ofuda, Riptalon,
-    Avenging Blade, Draconic Scale, The Cosmic Horror.'
+    Shifter''s Shield, Damaru, Erosion, Jade Scepter, Bragi''s Harp, Spear of Desolation,
+    The Reaper, Bracer of The Abyss, Eye of Providence, Shogun''s Ofuda, Riptalon,
+    Avenging Blade, Draconic Scale, Leviathan''s Hide, The Cosmic Horror.'
   slot_scores:
     Berserker's Shield:
       total: 0.6
@@ -612,10 +612,11 @@ builds:
     Soul Gem, The Crusher, Kinetic Cuirass, Amanita Charm, Berserker''s Shield, Freya''s
     Tears, Hydra''s Lament, Spear of the Magus, Oni Hunter''s Garb, Death Metal, Shield
     of the Phoenix, Runeforged Hammer, Helm of Radiance, Shield Splitter, Rod of Asclepius,
-    Spectral Armor, Eye of the Storm, Spear of Desolation, Shifter''s Shield, Erosion,
-    Jade Scepter, Pharaoh''s Curse, Eye of Providence, Golden Blade, Draconic Scale,
-    Blood-Bound Book, Lernaean Bow, The Reaper, Leviathan''s Hide, Damaru, Bancroft''s
-    Talon, Ethereal Staff, Wish-Granting Pearl, The Cosmic Horror.'
+    Spectral Armor, Eye of the Storm, Spear of Desolation, Shifter''s Shield, Jade
+    Scepter, Erosion, Pharaoh''s Curse, Eye of Providence, Golden Blade, Draconic
+    Scale, Blood-Bound Book, Damaru, Lernaean Bow, The Reaper, Bancroft''s Talon,
+    Leviathan''s Hide, Ethereal Staff, Wish-Granting Pearl, Triton''s Conch, The Cosmic
+    Horror.'
   slot_scores:
     Breastplate of Valor:
       total: 0.6
@@ -682,10 +683,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Kinetic Cuirass, Soul Gem, Amanita
     Charm, Freya''s Tears, Shield of the Phoenix, Oni Hunter''s Garb, Spear of the
-    Magus, Helm of Radiance, Spear of Desolation, The Cosmic Horror, Shifter''s Shield,
+    Magus, Helm of Radiance, The Cosmic Horror, Spear of Desolation, Shifter''s Shield,
     Erosion, Eye of Providence, Spectral Armor, Rod of Asclepius, Draconic Scale,
-    Jade Scepter, Leviathan''s Hide, Midgardian Mail, Ethereal Staff, Wish-Granting
-    Pearl, Mantle Of Discord.'
+    Jade Scepter, Leviathan''s Hide, Ethereal Staff, Wish-Granting Pearl, Midgardian
+    Mail, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
       total: 0.59

@@ -50,7 +50,19 @@ def audit_items(items: list) -> list:
         stats = it.get("stats") or {}
         is_numeric_tier = isinstance(tier, (int, float)) and not isinstance(tier, bool)
 
-        if not cost:
+        # A god's ABILITY MOD is not a purchasable item and its zero cost is not
+        # a gap in the data. Vulcan's five Mods (`God Specific`, cost 0, no
+        # stats, "Requires level 14", "you can only have one Mod from each
+        # set") are a kit upgrade the game grants, and every future god with
+        # the same system would add five more permanent findings to a gate
+        # whose whole value is that a new finding means something.
+        #
+        # `scoring.is_buildable` already refuses them for being statless, so
+        # nothing downstream can put one in a build. Recognised by the shape
+        # rather than by a name list, so the next god's Mods need no edit here.
+        is_ability_mod = (it.get("god") and not cost and not stats
+                          and not is_numeric_tier)
+        if not cost and not is_ability_mod:
             findings.append({
                 "item": name, "issue": "blank-cost",
                 "detail": f"cost is {cost!r}",

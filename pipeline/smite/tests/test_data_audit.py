@@ -253,3 +253,31 @@ def test_main_returns_one_when_index_corrupt(monkeypatch):
 
     monkeypatch.setattr(data_audit, "_load_index", _raise)
     assert data_audit.main([]) == 1
+
+
+def test_a_gods_ability_mod_is_not_a_blank_cost_finding():
+    """Vulcan's five Mods are `God Specific`, cost 0, statless and level-gated
+    — a kit upgrade the game grants, not an item anyone buys. Flagging them
+    would add five permanent findings to a gate whose entire value is that a
+    new finding means something, and every future god with the system would
+    add five more."""
+    mods = [{"name": "Thermal Mod", "tier": "God Specific", "cost": 0,
+             "stats": {}, "god": "Vulcan"}]
+    assert data_audit.audit_items(mods) == []
+
+
+def test_a_statless_zero_cost_item_with_no_owner_is_still_flagged():
+    """Blink Rune is nobody's ability mod. The exemption keys on the OWNER, so
+    the failure that put a free statless item into 262 build slots still
+    reports."""
+    found = data_audit.audit_items(
+        [{"name": "Blink Rune", "tier": "Relic", "cost": 0, "stats": {}}])
+    assert [f["issue"] for f in found] == ["blank-cost"]
+
+
+def test_a_god_specific_item_that_costs_real_gold_is_unaffected():
+    """Ratatoskr's acorns are bought. Only the zero-cost statless shape is
+    exempt, so a genuinely missing price on a real item still reports."""
+    acorn = [{"name": "Briskberry Acorn", "tier": "God Specific", "cost": 0,
+              "stats": {"Strength": "45"}, "god": "Ratatoskr"}]
+    assert [f["issue"] for f in data_audit.audit_items(acorn)] == ["blank-cost"]

@@ -192,7 +192,7 @@ builds:
     Berserker''s Shield, Freya''s Tears, Chandra''s Grace, Oni Hunter''s Garb, Jotunn''s
     Revenge, Erosion, Eye of Providence, Phoenix Feather, Spectral Armor, Draconic
     Scale, Pharaoh''s Curse, Glorious Pridwen, Leviathan''s Hide, Hydra''s Lament,
-    Eye of the Storm, The Crusher, Midgardian Mail, Gladiator''s Shield, Shield Splitter,
+    The Crusher, Eye of the Storm, Midgardian Mail, Gladiator''s Shield, Shield Splitter,
     Shogun''s Ofuda, Riptalon, The Reaper.'
   slot_scores:
     Genji's Guard:
@@ -262,7 +262,7 @@ builds:
     Amanita Charm, Berserker''s Shield, Stone of Binding, Screeching Gargoyle, Freya''s
     Tears, Void Shield, Oni Hunter''s Garb, Shield of the Phoenix, Avenging Blade,
     Void Stone, Erosion, Riptalon, Spectral Armor, Eye of Providence, Hydra''s Lament,
-    Pharaoh''s Curse, The Reaper, Silverbranch Bow, Draconic Scale, Shield Splitter,
+    Pharaoh''s Curse, Silverbranch Bow, The Reaper, Draconic Scale, Shield Splitter,
     Leviathan''s Hide, Heartseeker.'
   slot_scores:
     Genji's Guard:
@@ -403,7 +403,7 @@ builds:
     Lament, Berserker''s Shield, Oni Hunter''s Garb, Screeching Gargoyle, The Crusher,
     Chandra''s Grace, Gladiator''s Shield, Erosion, Spectral Armor, Prophetic Cloak,
     Eye of Providence, Pharaoh''s Curse, Shield Splitter, Draconic Scale, Leviathan''s
-    Hide, Eye of the Storm, Midgardian Mail, Arondight, Mantle Of Discord, Stone of
+    Hide, Eye of the Storm, Arondight, Midgardian Mail, Mantle Of Discord, Stone of
     Binding.'
   slot_scores:
     Genji's Guard:

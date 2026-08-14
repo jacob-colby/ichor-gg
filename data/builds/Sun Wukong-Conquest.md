@@ -121,9 +121,9 @@ builds:
     Garb, Pharaoh''s Curse, Eye of the Storm, Hydra''s Lament, Lernaean Bow, Shield
     Splitter, Breastplate of Valor, Shield of the Phoenix, Spectral Armor, Avenging
     Blade, Shogun''s Ofuda, Death Metal, Freya''s Tears, Erosion, Eye of Providence,
-    Damaru, Draconic Scale, Leviathan''s Hide, Yogi''s Necklace, Midgardian Mail,
-    Rod of Asclepius, Bragi''s Harp, Dominance, Triton''s Conch, Tyrfing, Jade Scepter,
-    Helm of Radiance, The Reaper, Wyrmskin Hide.'
+    Damaru, Draconic Scale, Leviathan''s Hide, Yogi''s Necklace, Rod of Asclepius,
+    Midgardian Mail, Bragi''s Harp, Dominance, Triton''s Conch, Tyrfing, Jade Scepter,
+    Helm of Radiance, The Reaper, Spear of the Magus, Wyrmskin Hide.'
   slot_scores:
     Berserker's Shield:
       total: 0.5
@@ -193,11 +193,11 @@ builds:
     this god: Runeforged Hammer, Amanita Charm, Berserker''s Shield, Shield of the
     Phoenix, Kinetic Cuirass, Gluttonous Grimoire, Rod of Asclepius, The Crusher,
     Jotunn''s Revenge, Oni Hunter''s Garb, Pharaoh''s Curse, Golden Blade, The Reaper,
-    Eye of the Storm, Chandra''s Grace, Riptalon, Shield Splitter, Erosion, Breastplate
-    of Valor, Phoenix Feather, Freya''s Tears, Spectral Armor, Eye of Providence,
+    Chandra''s Grace, Eye of the Storm, Riptalon, Shield Splitter, Breastplate of
+    Valor, Erosion, Freya''s Tears, Phoenix Feather, Spectral Armor, Eye of Providence,
     Blood-Bound Book, Hydra''s Lament, Shogun''s Ofuda, Bancroft''s Talon, Draconic
     Scale, Lernaean Bow, Leviathan''s Hide, Avenging Blade, Lifebinder, Midgardian
-    Mail, Death Metal, Yogi''s Necklace, Damaru, Helm of Radiance.'
+    Mail, Death Metal, Yogi''s Necklace, Damaru, Helm of Radiance, Ancile.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -266,10 +266,10 @@ builds:
     Berserker''s Shield, Avenging Blade, Kinetic Cuirass, Spear of the Magus, Amanita
     Charm, The Cosmic Horror, Riptalon, The Reaper, Void Shield, Silverbranch Bow,
     Stone of Binding, Oni Hunter''s Garb, Heartseeker, Golden Blade, Hydra''s Lament,
-    Screeching Gargoyle, Tekko-Kagi, Breastplate of Valor, Pharaoh''s Curse, Void
-    Stone, Lernaean Bow, Eye of the Storm, Titan''s Bane, Spectral Armor, Shield of
-    the Phoenix, Freya''s Tears, Death Metal, Shield Splitter, Toxic Blade, Shogun''s
-    Ofuda, Damaru, The World Stone, Spear of Desolation.'
+    Screeching Gargoyle, Breastplate of Valor, Tekko-Kagi, Pharaoh''s Curse, Void
+    Stone, Lernaean Bow, Eye of the Storm, Shield of the Phoenix, Titan''s Bane, Spectral
+    Armor, Freya''s Tears, Death Metal, Shield Splitter, Toxic Blade, Damaru, Shogun''s
+    Ofuda, The World Stone, Doom Orb, Spear of Desolation.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.51
@@ -337,11 +337,11 @@ builds:
     this god: Runeforged Hammer, Berserker''s Shield, Gluttonous Grimoire, Golden
     Blade, Riptalon, Pharaoh''s Curse, Kinetic Cuirass, Amanita Charm, The Crusher,
     Jotunn''s Revenge, Lernaean Bow, Silverbranch Bow, Tyrfing, Shogun''s Ofuda, Oni
-    Hunter''s Garb, Breastplate of Valor, Hydra''s Lament, Bracer of The Abyss, Spectral
-    Armor, Shield of the Phoenix, Freya''s Tears, Eros'' Bow, Toxic Blade, Dominance,
-    Bragi''s Harp, Death Metal, Yogi''s Necklace, Eye of the Storm, Erosion, Nimble
-    Ring, Shield Splitter, Rod of Asclepius, Leviathan''s Hide, Spear of the Magus,
-    Damaru, Blood-Bound Book, Eye of Providence.'
+    Hunter''s Garb, Breastplate of Valor, Hydra''s Lament, Bracer of The Abyss, Freya''s
+    Tears, Spectral Armor, Shield of the Phoenix, Eros'' Bow, Toxic Blade, Dominance,
+    Bragi''s Harp, Death Metal, Eye of the Storm, Yogi''s Necklace, Erosion, Nimble
+    Ring, Shield Splitter, Rod of Asclepius, Damaru, Leviathan''s Hide, Spear of the
+    Magus, Blood-Bound Book, Eye of Providence, Bancroft''s Talon.'
   slot_scores:
     Golden Blade:
       total: 0.48
@@ -410,11 +410,11 @@ builds:
     Jotunn''s Revenge, Breastplate of Valor, Gluttonous Grimoire, Berserker''s Shield,
     Hydra''s Lament, Shield of the Phoenix, Freya''s Tears, Kinetic Cuirass, Chronos''
     Pendant, Amanita Charm, The Crusher, Chandra''s Grace, Oni Hunter''s Garb, Screeching
-    Gargoyle, Pharaoh''s Curse, Gem of Focus, Golden Blade, Spectral Armor, Rod of
-    Asclepius, Arondight, Death Metal, Spear of the Magus, Lernaean Bow, Helm of Radiance,
-    Jade Scepter, Shogun''s Ofuda, Erosion, Yogi''s Necklace, Prophetic Cloak, The
-    Cosmic Horror, Eye of the Storm, Bracer of The Abyss, Leviathan''s Hide, Eye of
-    Providence, Spear of Desolation.'
+    Gargoyle, Pharaoh''s Curse, Gem of Focus, Totem of Death, Golden Blade, Spectral
+    Armor, Rod of Asclepius, Arondight, Death Metal, Spear of the Magus, Lernaean
+    Bow, Jade Scepter, Helm of Radiance, Shogun''s Ofuda, Erosion, Yogi''s Necklace,
+    Prophetic Cloak, The Cosmic Horror, Eye of the Storm, Bracer of The Abyss, Leviathan''s
+    Hide, Eye of Providence, Spear of Desolation.'
   slot_scores:
     Breastplate of Valor:
       total: 0.49
@@ -429,7 +429,7 @@ builds:
       pick: 0.0
       fit: 0.49
     Gladiator's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.41
       win: 0.63
       pick: 0.14
@@ -484,9 +484,9 @@ builds:
     Oni Hunter''s Garb, Pharaoh''s Curse, Eye of the Storm, Hydra''s Lament, Lernaean
     Bow, Shield Splitter, Breastplate of Valor, Shield of the Phoenix, Spectral Armor,
     Avenging Blade, Shogun''s Ofuda, Death Metal, Freya''s Tears, Erosion, Eye of
-    Providence, Damaru, Draconic Scale, Leviathan''s Hide, Yogi''s Necklace, Midgardian
-    Mail, Rod of Asclepius, Bragi''s Harp, Dominance, Triton''s Conch, Tyrfing, Jade
-    Scepter, Helm of Radiance, The Reaper, Wyrmskin Hide.'
+    Providence, Damaru, Draconic Scale, Leviathan''s Hide, Yogi''s Necklace, Rod of
+    Asclepius, Midgardian Mail, Bragi''s Harp, Dominance, Triton''s Conch, Tyrfing,
+    Jade Scepter, Helm of Radiance, The Reaper, Spear of the Magus, Wyrmskin Hide.'
   slot_scores:
     Golden Blade:
       total: 0.47

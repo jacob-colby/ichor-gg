@@ -75,7 +75,7 @@ builds:
   - name: Archmage's Gem
     pick_rate: 0.33
     win_rate: 0.68
-  - name: Pendulum of The Ages
+  - name: Pendulum of the Ages
     pick_rate: 0.12
     win_rate: 0.73
   source_url: https://smitebrain.com/gods/hades/
@@ -120,7 +120,7 @@ builds:
     of the Magus, Amanita Charm, The Cosmic Horror, Obsidian Shard, Breastplate of
     Valor, Oni Hunter''s Garb, Rod of Asclepius, Shield of the Phoenix, Helm of Radiance,
     Jade Scepter, Chronos'' Pendant, Ethereal Staff, Wish-Granting Pearl, Spectral
-    Armor, Doom Orb, Erosion, Blood-Bound Book, Bancroft''s Talon, Alchemist Coat,
+    Armor, Doom Orb, Blood-Bound Book, Erosion, Bancroft''s Talon, Alchemist Coat,
     Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
@@ -192,7 +192,7 @@ builds:
     of Valor, The Cosmic Horror, Kinetic Cuirass, Amanita Charm, Obsidian Shard, Shield
     of the Phoenix, Death Metal, Oni Hunter''s Garb, Chronos'' Pendant, Rod of Asclepius,
     Helm of Radiance, Jade Scepter, Spectral Armor, Doom Orb, Dreamer''s Idol, Blood-Bound
-    Book, Bancroft''s Talon, Ethereal Staff, Wish-Granting Pearl, Gem of Focus.'
+    Book, Bancroft''s Talon, Gem of Focus, Ethereal Staff, Wish-Granting Pearl.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -329,9 +329,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Soul Gem, Spear of the Magus, The Cosmic Horror,
     Obsidian Shard, Genji''s Guard, Kinetic Cuirass, Amanita Charm, Screeching Gargoyle,
-    Breastplate of Valor, Doom Orb, Stone of Binding, Void Shield, Dreamer''s Idol,
-    Oni Hunter''s Garb, Rod of Asclepius, Shield of the Phoenix, Void Stone, Helm
-    of Radiance, Jade Scepter, Chronos'' Pendant, Spectral Armor, Blood-Bound Book.'
+    Breastplate of Valor, Doom Orb, Stone of Binding, Dreamer''s Idol, Void Shield,
+    Oni Hunter''s Garb, Rod of Asclepius, Shield of the Phoenix, Helm of Radiance,
+    Void Stone, Jade Scepter, Chronos'' Pendant, Spectral Armor, Blood-Bound Book.'
   slot_scores:
     Freya's Tears:
       total: 0.59
@@ -353,7 +353,7 @@ builds:
       fit: 0.68
     The Cosmic Horror:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.62
       pick: 0.0
       fit: 0.58
@@ -399,8 +399,8 @@ builds:
     this god: Gluttonous Grimoire, Soul Gem, Genji''s Guard, Kinetic Cuirass, Amanita
     Charm, Breastplate of Valor, Spear of the Magus, Bracer of The Abyss, The Cosmic
     Horror, Oni Hunter''s Garb, Obsidian Shard, Death Metal, Blood-Bound Book, Bancroft''s
-    Talon, Helm of Radiance, Bragi''s Harp, Rod of Asclepius, Shield of the Phoenix,
-    Nimble Ring, Jade Scepter, Spectral Armor, Chronos'' Pendant, Yogi''s Necklace,
+    Talon, Helm of Radiance, Rod of Asclepius, Bragi''s Harp, Shield of the Phoenix,
+    Nimble Ring, Jade Scepter, Chronos'' Pendant, Spectral Armor, Yogi''s Necklace,
     Ethereal Staff, Wish-Granting Pearl.'
   slot_scores:
     Bracer of The Abyss:
@@ -470,8 +470,9 @@ builds:
     Grimoire, Breastplate of Valor, Shield of the Phoenix, Kinetic Cuirass, Amanita
     Charm, Chronos'' Pendant, Chandra''s Grace, Screeching Gargoyle, Spear of the
     Magus, Oni Hunter''s Garb, The Cosmic Horror, Gem of Focus, Gladiator''s Shield,
-    Obsidian Shard, Spectral Armor, Death Metal, Rod of Asclepius, Helm of Radiance,
-    Jade Scepter, Prophetic Cloak, Yogi''s Necklace, Erosion, Shifter''s Shield.'
+    Totem of Death, Obsidian Shard, Spectral Armor, Death Metal, Rod of Asclepius,
+    Helm of Radiance, Jade Scepter, Prophetic Cloak, Yogi''s Necklace, Shifter''s
+    Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.59
@@ -540,10 +541,11 @@ builds:
     Crusher, Soul Gem, Berserker''s Shield, Genji''s Guard, Hydra''s Lament, Kinetic
     Cuirass, Death Metal, Amanita Charm, Spear of the Magus, Runeforged Hammer, Breastplate
     of Valor, Golden Blade, The Cosmic Horror, Lernaean Bow, Obsidian Shard, Oni Hunter''s
-    Garb, Pharaoh''s Curse, Bragi''s Harp, Eye of the Storm, The Reaper, Rod of Asclepius,
-    Shield of the Phoenix, Helm of Radiance, Shield Splitter, Damaru, Bracer of The
-    Abyss, Jade Scepter, Riptalon, Avenging Blade, Chronos'' Pendant, Triton''s Conch,
-    Spectral Armor, Heartseeker, Tekko-Kagi, Blood-Bound Book, Silverbranch Bow.'
+    Garb, Bragi''s Harp, Pharaoh''s Curse, Eye of the Storm, Rod of Asclepius, Shield
+    of the Phoenix, Helm of Radiance, The Reaper, Shield Splitter, Damaru, Bracer
+    of The Abyss, Jade Scepter, Riptalon, Chronos'' Pendant, Avenging Blade, Triton''s
+    Conch, Spectral Armor, Heartseeker, Blood-Bound Book, Tekko-Kagi, Bancroft''s
+    Talon, Silverbranch Bow.'
   slot_scores:
     Berserker's Shield:
       total: 0.56
@@ -610,13 +612,13 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge,
     The Crusher, Soul Gem, Genji''s Guard, Berserker''s Shield, Spear of the Magus,
-    Kinetic Cuirass, Amanita Charm, Death Metal, Hydra''s Lament, The Cosmic Horror,
-    Obsidian Shard, Breastplate of Valor, Runeforged Hammer, Oni Hunter''s Garb, Rod
+    Kinetic Cuirass, Amanita Charm, Death Metal, The Cosmic Horror, Hydra''s Lament,
+    Breastplate of Valor, Obsidian Shard, Runeforged Hammer, Oni Hunter''s Garb, Rod
     of Asclepius, Helm of Radiance, Jade Scepter, Shield of the Phoenix, Chronos''
-    Pendant, Eye of the Storm, The Reaper, Golden Blade, Shield Splitter, Triton''s
-    Conch, Blood-Bound Book, Lernaean Bow, Spectral Armor, Ethereal Staff, Damaru,
-    Bancroft''s Talon, Wish-Granting Pearl, Avenging Blade, Bragi''s Harp, Pharaoh''s
-    Curse, Heartseeker.'
+    Pendant, Eye of the Storm, Golden Blade, The Reaper, Shield Splitter, Triton''s
+    Conch, Blood-Bound Book, Damaru, Lernaean Bow, Spectral Armor, Ethereal Staff,
+    Wish-Granting Pearl, Bancroft''s Talon, Avenging Blade, Bragi''s Harp, Pharaoh''s
+    Curse, Heartseeker, Doom Orb.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -685,7 +687,7 @@ builds:
     Cuirass, Spear of the Magus, Amanita Charm, The Cosmic Horror, Breastplate of
     Valor, Oni Hunter''s Garb, Obsidian Shard, Rod of Asclepius, Shield of the Phoenix,
     Helm of Radiance, Jade Scepter, Chronos'' Pendant, Ethereal Staff, Wish-Granting
-    Pearl, Spectral Armor, Shifter''s Shield, Doom Orb, Erosion, Blood-Bound Book,
+    Pearl, Spectral Armor, Shifter''s Shield, Doom Orb, Blood-Bound Book, Erosion,
     Bancroft''s Talon, Alchemist Coat.'
   slot_scores:
     Genji's Guard:
@@ -713,8 +715,8 @@ builds:
       pick: 0.22
       fit: 0.6
     The Cosmic Horror:
-      total: 0.55
-      efficiency: 0.58
+      total: 0.56
+      efficiency: 0.59
       win: 0.62
       pick: 0.0
       fit: 0.47

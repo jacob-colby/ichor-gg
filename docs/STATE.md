@@ -247,12 +247,16 @@ python -m smite.expert_review --check    # non-zero exit if a resolved claim reg
 Scraping needs Playwright (`python -m playwright install chromium`).
 
 `data_audit` exits non-zero whenever it has findings, and it currently has
-four standing ones — Blink Rune (`cost: 0`, genuinely free), Genie's Lamp
-(`cost: None`; the wiki says `-1`, a sentinel meaning Aladdin is given it
-rather than buying it) and Mote of Chaos / Survivor's Sash (tier-2 items the
-wiki lists with no stats). All four are real properties of the source data,
-not defects, and none reaches a build. Treat "4 findings, all of them these"
-as green; treat a fifth as news.
+three standing ones — Blink Rune (`cost: 0`, genuinely free) and Mote of Chaos
+/ Survivor's Sash (tier-2 items the wiki lists with no stats). All three are
+real properties of the source data, not defects, and none reaches a build.
+Treat "3 findings, all of them these" as green; treat a fourth as news.
+
+A god's ABILITY MODS are exempt by shape (`God Specific`, zero cost, no
+stats): Vulcan's five, and Aladdin's Genie's Lamp, are granted rather than
+bought. Without that, every future god with the system would add five
+permanent findings to a gate whose value is that a new finding means
+something. `scoring.is_buildable` already refuses them for being statless.
 
 **Two sources, two spellings.** The community source and our item notes
 disagree on apostrophes and casing, and a failed join reads as "this god's
@@ -287,7 +291,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (573) ·
 | | |
 |---|---|
 | Gods tracked | 87 of 89 on the roster |
-| Items | 221 |
+| Items | 226 |
 | Build groups | 261 (87 gods × 3 modes) |
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int |
 | Conquest gods placed | 87 / 87 |

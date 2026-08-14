@@ -117,10 +117,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Avenging Blade, Jotunn''s Revenge, The Crusher, The Reaper, Genji''s
-    Guard, Lernaean Bow, Heartseeker, Pendulum Blade, Damaru, Tekko-Kagi, Runeforged
-    Hammer, Golden Blade, Breastplate of Valor, Titan''s Bane, Berserker''s Shield,
-    Arondight, Dominance, Tyrfing, Shield Splitter, Eye of the Storm, Avatar''s Parashu,
-    Freya''s Tears, Shield of the Phoenix, Kinetic Cuirass, Amanita Charm.'
+    Guard, Lernaean Bow, Damaru, Heartseeker, Pendulum Blade, Tekko-Kagi, Runeforged
+    Hammer, Breastplate of Valor, Golden Blade, Titan''s Bane, Berserker''s Shield,
+    Arondight, Dominance, Tyrfing, Shield Splitter, Eye of the Storm, Freya''s Tears,
+    Avatar''s Parashu, Shield of the Phoenix, Kinetic Cuirass, Amanita Charm.'
   slot_scores:
     Avenging Blade:
       total: 0.69
@@ -189,9 +189,9 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Jotunn''s Revenge, Avenging Blade, The Crusher, Genji''s Guard, Breastplate
     of Valor, The Reaper, Pendulum Blade, Heartseeker, Berserker''s Shield, Lernaean
-    Bow, Tekko-Kagi, Damaru, Runeforged Hammer, Freya''s Tears, Titan''s Bane, Shield
+    Bow, Damaru, Tekko-Kagi, Runeforged Hammer, Freya''s Tears, Titan''s Bane, Shield
     of the Phoenix, Arondight, Golden Blade, Kinetic Cuirass, Amanita Charm, Oni Hunter''s
-    Garb, Screeching Gargoyle, Eye of Providence, Dominance, Chandra''s Grace, Tyrfing.'
+    Garb, Screeching Gargoyle, Eye of Providence, Chandra''s Grace, Dominance, Tyrfing.'
   slot_scores:
     Avenging Blade:
       total: 0.67
@@ -240,8 +240,8 @@ builds:
   - Silverbranch Bow
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -256,12 +256,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Avenging Blade, Amanita Charm, Shield of the Phoenix, Berserker''s Shield,
-    Jotunn''s Revenge, Kinetic Cuirass, The Crusher, Genji''s Guard, The Reaper, Chandra''s
-    Grace, Oni Hunter''s Garb, Breastplate of Valor, Runeforged Hammer, Freya''s Tears,
-    Pharaoh''s Curse, Eye of the Storm, Phoenix Feather, Shifter''s Shield, Shield
-    Splitter, Erosion, Spectral Armor, Golden Blade, Eye of Providence, Draconic Scale,
-    Leviathan''s Hide, Shogun''s Ofuda, Lernaean Bow.'
+    this god: Avenging Blade, Amanita Charm, Shield of the Phoenix, Jotunn''s Revenge,
+    Berserker''s Shield, Kinetic Cuirass, The Crusher, Genji''s Guard, The Reaper,
+    Chandra''s Grace, Oni Hunter''s Garb, Breastplate of Valor, Freya''s Tears, Runeforged
+    Hammer, Pharaoh''s Curse, Eye of the Storm, Phoenix Feather, Shifter''s Shield,
+    Shield Splitter, Erosion, Spectral Armor, Golden Blade, Eye of Providence, Draconic
+    Scale, Leviathan''s Hide, Shogun''s Ofuda, Lernaean Bow.'
   slot_scores:
     Avenging Blade:
       total: 0.69
@@ -327,10 +327,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Avenging Blade, Jotunn''s Revenge, The Crusher, The Reaper, Heartseeker,
-    Tekko-Kagi, Pendulum Blade, Titan''s Bane, Genji''s Guard, Lernaean Bow, Screeching
-    Gargoyle, Damaru, Breastplate of Valor, Avatar''s Parashu, Berserker''s Shield,
-    Runeforged Hammer, Golden Blade, Toxic Blade, Stone of Binding, Dominance, Arondight,
-    Freya''s Tears, Tyrfing, Kinetic Cuirass, Void Shield, Amanita Charm.'
+    Tekko-Kagi, Pendulum Blade, Titan''s Bane, Genji''s Guard, Lernaean Bow, Damaru,
+    Screeching Gargoyle, Breastplate of Valor, Berserker''s Shield, Avatar''s Parashu,
+    Runeforged Hammer, Golden Blade, Toxic Blade, Stone of Binding, Freya''s Tears,
+    Dominance, Arondight, Tyrfing, Kinetic Cuirass, Void Shield, Amanita Charm.'
   slot_scores:
     Avenging Blade:
       total: 0.72
@@ -379,8 +379,8 @@ builds:
   - Silverbranch Bow
   - The Crusher
   flex_slots:
-  - Berserker's Shield
   - The Crusher
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -395,11 +395,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, Golden Blade, Berserker''s Shield, The Crusher, Lernaean
+    this god: Jotunn''s Revenge, Golden Blade, The Crusher, Berserker''s Shield, Lernaean
     Bow, Tyrfing, Genji''s Guard, Breastplate of Valor, Tekko-Kagi, Pharaoh''s Curse,
     Dominance, Toxic Blade, The Reaper, Damaru, Runeforged Hammer, Shogun''s Ofuda,
-    Kinetic Cuirass, Amanita Charm, Eros'' Bow, Freya''s Tears, Oni Hunter''s Garb,
-    Heartseeker, Eye of Providence, Qin''s Blade, Shield of the Phoenix, Yogi''s Necklace.'
+    Kinetic Cuirass, Amanita Charm, Freya''s Tears, Eros'' Bow, Oni Hunter''s Garb,
+    Heartseeker, Qin''s Blade, Eye of Providence, Shield of the Phoenix, Yogi''s Necklace.'
   slot_scores:
     Golden Blade:
       total: 0.61
@@ -535,10 +535,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Jotunn''s Revenge, The Crusher, The Reaper, Genji''s
-    Guard, Lernaean Bow, Heartseeker, Pendulum Blade, Damaru, Tekko-Kagi, Runeforged
-    Hammer, Golden Blade, Breastplate of Valor, Titan''s Bane, Berserker''s Shield,
+    Guard, Lernaean Bow, Damaru, Heartseeker, Pendulum Blade, Tekko-Kagi, Runeforged
+    Hammer, Breastplate of Valor, Golden Blade, Titan''s Bane, Berserker''s Shield,
     Arondight, Dominance, Tyrfing, Avenging Blade, Shield Splitter, Eye of the Storm,
-    Avatar''s Parashu, Freya''s Tears, Shield of the Phoenix, Kinetic Cuirass, Amanita
+    Freya''s Tears, Avatar''s Parashu, Shield of the Phoenix, Kinetic Cuirass, Amanita
     Charm.'
   slot_scores:
     Lernaean Bow:

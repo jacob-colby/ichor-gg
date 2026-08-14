@@ -100,30 +100,30 @@ builds:
   - Amanita Charm
   - Stampede
   flex_slots:
-  - Freya's Tears
+  - Stampede
   - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
-  - vs_tag: physical_heavy
-    swap: Prophetic Cloak — physical protection
+    swap: Prophetic Cloak — magical protection
     swap_item: Prophetic Cloak
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Freya''s Tears, Gluttonous Grimoire,
-    Oni Hunter''s Garb, Prophetic Cloak, Erosion, Shield of the Phoenix, Eye of Providence,
+    Prophetic Cloak, Oni Hunter''s Garb, Shield of the Phoenix, Erosion, Eye of Providence,
     Draconic Scale, Spectral Armor, Jotunn''s Revenge, Pharaoh''s Curse, Shield Splitter,
-    Soul Gem, Leviathan''s Hide, Mantle Of Discord, Stone of Binding, Midgardian Mail,
-    The Crusher, Eye of the Storm, Shogun''s Ofuda, Helm of Radiance, Magi''s Cloak,
-    Hydra''s Lament, Runeforged Hammer, Ancile, Gladiator''s Shield, Xibalban Effigy,
-    Void Shield, Screeching Gargoyle, Doublet of Binding, Rod of Asclepius, Hussar''s
-    Wings, Yogi''s Necklace, Hide of the Nemean Lion, Breastplate of Valor.'
+    Soul Gem, Leviathan''s Hide, Mantle Of Discord, Stone of Binding, The Crusher,
+    Midgardian Mail, Eye of the Storm, Shogun''s Ofuda, Helm of Radiance, Magi''s
+    Cloak, Hydra''s Lament, Runeforged Hammer, Ancile, Gladiator''s Shield, Xibalban
+    Effigy, Screeching Gargoyle, Void Shield, Doublet of Binding, Rod of Asclepius,
+    Hussar''s Wings, Yogi''s Necklace, Hide of the Nemean Lion, Breastplate of Valor.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -194,10 +194,10 @@ builds:
     Gluttonous Grimoire, Rod of Asclepius, Oni Hunter''s Garb, Freya''s Tears, Chandra''s
     Grace, Erosion, Eye of Providence, Phoenix Feather, Draconic Scale, Spectral Armor,
     Jotunn''s Revenge, Pharaoh''s Curse, Leviathan''s Hide, Blood-Bound Book, Bancroft''s
-    Talon, Midgardian Mail, Lifebinder, Runeforged Hammer, Eye of the Storm, The Crusher,
-    Glorious Pridwen, Shogun''s Ofuda, Shield Splitter, Riptalon, Gladiator''s Shield,
-    Hydra''s Lament, Ancile, Void Shield, Mantle Of Discord, The Reaper, Yogi''s Necklace,
-    Hide of the Nemean Lion, Breastplate of Valor.'
+    Talon, Midgardian Mail, Lifebinder, Runeforged Hammer, The Crusher, Eye of the
+    Storm, Glorious Pridwen, Shogun''s Ofuda, Shield Splitter, Riptalon, Gladiator''s
+    Shield, Hydra''s Lament, Ancile, Void Shield, Mantle Of Discord, The Reaper, Stone
+    of Binding, Yogi''s Necklace, Hide of the Nemean Lion, Breastplate of Valor.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -269,7 +269,7 @@ builds:
     Spectral Armor, Obsidian Shard, Riptalon, Pharaoh''s Curse, Draconic Scale, Silverbranch
     Bow, The Reaper, Shield Splitter, Hydra''s Lament, Leviathan''s Hide, Mantle Of
     Discord, Helm of Radiance, Midgardian Mail, Runeforged Hammer, Shogun''s Ofuda,
-    Heartseeker, The World Stone, Breastplate of Valor.'
+    Heartseeker, Eye of the Storm, The World Stone, Breastplate of Valor.'
   slot_scores:
     Stone of Binding:
       total: 0.5
@@ -339,9 +339,9 @@ builds:
     Hunter''s Garb, Soul Gem, Lernaean Bow, Shogun''s Ofuda, Shield of the Phoenix,
     Silverbranch Bow, Hydra''s Lament, Tyrfing, Runeforged Hammer, Spectral Armor,
     Erosion, Shield Splitter, Eye of Providence, Bracer of The Abyss, Draconic Scale,
-    Eye of the Storm, Helm of Radiance, Leviathan''s Hide, Midgardian Mail, Mantle
+    Helm of Radiance, Eye of the Storm, Leviathan''s Hide, Midgardian Mail, Mantle
     Of Discord, Death Metal, Stone of Binding, Eros'' Bow, Dominance, Spear of the
-    Magus, Rod of Asclepius, Yogi''s Necklace, Breastplate of Valor.'
+    Magus, Rod of Asclepius, Blood-Bound Book, Yogi''s Necklace, Breastplate of Valor.'
   slot_scores:
     Golden Blade:
       total: 0.49
@@ -411,10 +411,10 @@ builds:
     Berserker''s Shield, Hydra''s Lament, Oni Hunter''s Garb, Screeching Gargoyle,
     Chronos'' Pendant, The Crusher, Spear of Desolation, Chandra''s Grace, Gladiator''s
     Shield, Erosion, Spectral Armor, Eye of Providence, Pharaoh''s Curse, Shield Splitter,
-    Draconic Scale, Runeforged Hammer, Helm of Radiance, Gem of Focus, Leviathan''s
-    Hide, Eye of the Storm, Mantle Of Discord, Midgardian Mail, Rod of Asclepius,
-    Stone of Binding, Spear of the Magus, Death Metal, Arondight, Jade Scepter, Shogun''s
-    Ofuda, Breastplate of Valor.'
+    Draconic Scale, Helm of Radiance, Runeforged Hammer, Gem of Focus, Totem of Death,
+    Leviathan''s Hide, Eye of the Storm, Mantle Of Discord, Rod of Asclepius, Midgardian
+    Mail, Stone of Binding, Spear of the Magus, Death Metal, Arondight, Jade Scepter,
+    Shogun''s Ofuda, Breastplate of Valor.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -483,10 +483,10 @@ builds:
     Shield, The Crusher, Amanita Charm, Hydra''s Lament, Freya''s Tears, Soul Gem,
     Oni Hunter''s Garb, Runeforged Hammer, Shield Splitter, Pharaoh''s Curse, Golden
     Blade, Shield of the Phoenix, Lernaean Bow, Eye of the Storm, Erosion, Spectral
-    Armor, Death Metal, Eye of Providence, Spear of the Magus, Shogun''s Ofuda, The
-    Reaper, Draconic Scale, Damaru, Avenging Blade, The Cosmic Horror, Riptalon, Leviathan''s
+    Armor, Death Metal, Eye of Providence, Spear of the Magus, Shogun''s Ofuda, Damaru,
+    Draconic Scale, The Reaper, The Cosmic Horror, Avenging Blade, Riptalon, Leviathan''s
     Hide, Helm of Radiance, Midgardian Mail, Mantle Of Discord, Stone of Binding,
-    Heartseeker, Silverbranch Bow, Tekko-Kagi, Breastplate of Valor.'
+    Heartseeker, Silverbranch Bow, Tekko-Kagi, Yogi''s Necklace, Breastplate of Valor.'
   slot_scores:
     Berserker's Shield:
       total: 0.52
@@ -554,12 +554,12 @@ builds:
     + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge,
     The Crusher, Amanita Charm, Soul Gem, Berserker''s Shield, Freya''s Tears, Spear
     of the Magus, Oni Hunter''s Garb, Hydra''s Lament, Death Metal, The Cosmic Horror,
-    Runeforged Hammer, Shield Splitter, Helm of Radiance, Shield of the Phoenix, Spear
+    Runeforged Hammer, Helm of Radiance, Shield Splitter, Shield of the Phoenix, Spear
     of Desolation, Erosion, Spectral Armor, Eye of the Storm, Rod of Asclepius, Eye
-    of Providence, Pharaoh''s Curse, Obsidian Shard, Jade Scepter, Draconic Scale,
-    Chronos'' Pendant, Golden Blade, Leviathan''s Hide, Blood-Bound Book, Lernaean
-    Bow, The Reaper, Damaru, Bancroft''s Talon, Midgardian Mail, Mantle Of Discord,
-    Breastplate of Valor.'
+    of Providence, Pharaoh''s Curse, Jade Scepter, Obsidian Shard, Draconic Scale,
+    Chronos'' Pendant, Golden Blade, Leviathan''s Hide, Blood-Bound Book, Damaru,
+    Lernaean Bow, The Reaper, Bancroft''s Talon, Ethereal Staff, Wish-Granting Pearl,
+    Midgardian Mail, Breastplate of Valor.'
   slot_scores:
     Berserker's Shield:
       total: 0.5
@@ -625,17 +625,17 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Berserker''s Shield, Freya''s Tears, Gluttonous
-    Grimoire, Breastplate of Valor, Oni Hunter''s Garb, Erosion, Shield of the Phoenix,
+    Grimoire, Breastplate of Valor, Oni Hunter''s Garb, Shield of the Phoenix, Erosion,
     Eye of Providence, Draconic Scale, Spectral Armor, Jotunn''s Revenge, Pharaoh''s
     Curse, Shield Splitter, Soul Gem, Leviathan''s Hide, Mantle Of Discord, Stone
-    of Binding, Midgardian Mail, The Crusher, Eye of the Storm, Shogun''s Ofuda, Helm
+    of Binding, The Crusher, Midgardian Mail, Eye of the Storm, Shogun''s Ofuda, Helm
     of Radiance, Magi''s Cloak, Hydra''s Lament, Runeforged Hammer, Ancile, Gladiator''s
-    Shield, Xibalban Effigy, Void Shield, Screeching Gargoyle, Hide of the Nemean
-    Lion, Prophetic Cloak, Doublet of Binding, Rod of Asclepius, Yogi''s Necklace,
-    Hussar''s Wings.'
+    Shield, Xibalban Effigy, Screeching Gargoyle, Hide of the Nemean Lion, Void Shield,
+    Prophetic Cloak, Doublet of Binding, Rod of Asclepius, Yogi''s Necklace, Hussar''s
+    Wings.'
   slot_scores:
     Genji's Guard:
-      total: 0.46
+      total: 0.47
       efficiency: 0.71
       win: 0.33
       pick: 0.25
@@ -647,7 +647,7 @@ builds:
       pick: 0.0
       fit: 0.44
     Breastplate of Valor:
-      total: 0.4
+      total: 0.41
       efficiency: 0.66
       win: 0.25
       pick: 0.11

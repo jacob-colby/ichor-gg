@@ -97,33 +97,33 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Runeforged Hammer
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
-  - Runeforged Hammer
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
-  - vs_tag: physical_heavy
-    swap: Dwarven Plate — physical protection
+    swap: Dwarven Plate — magical protection
     swap_item: Dwarven Plate
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Amanita Charm, Berserker''s Shield, Gluttonous Grimoire,
-    Jotunn''s Revenge, Freya''s Tears, The Crusher, Oni Hunter''s Garb, Shield Splitter,
+    this god: Kinetic Cuirass, Amanita Charm, Berserker''s Shield, Jotunn''s Revenge,
+    Gluttonous Grimoire, Freya''s Tears, The Crusher, Oni Hunter''s Garb, Shield Splitter,
     Shield of the Phoenix, Erosion, Hydra''s Lament, Eye of Providence, Eye of the
     Storm, Spectral Armor, Pharaoh''s Curse, Soul Gem, Leviathan''s Hide, Golden Blade,
     Mantle Of Discord, Stone of Binding, Midgardian Mail, Death Metal, Helm of Radiance,
-    Avenging Blade, Shogun''s Ofuda, Magi''s Cloak, Lernaean Bow, Damaru, Ancile,
-    Screeching Gargoyle, Yogi''s Necklace, Void Shield, Hide of the Nemean Lion, Xibalban
-    Effigy, Draconic Scale.'
+    Shogun''s Ofuda, Avenging Blade, Magi''s Cloak, Damaru, Lernaean Bow, Screeching
+    Gargoyle, Ancile, Yogi''s Necklace, Hide of the Nemean Lion, Void Shield, Xibalban
+    Effigy, Rod of Asclepius, Draconic Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -149,12 +149,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.67
-    Runeforged Hammer:
+    Freya's Tears:
       total: 0.54
-      efficiency: 0.55
-      win: 0.58
-      pick: 0.2
-      fit: 0.48
+      efficiency: 0.59
+      win: 0.56
+      pick: 0.0
+      fit: 0.52
     Amanita Charm:
       total: 0.56
       efficiency: 0.63
@@ -196,7 +196,8 @@ builds:
     The Reaper, Shield Splitter, Erosion, Phoenix Feather, Eye of Providence, Spectral
     Armor, Pharaoh''s Curse, Blood-Bound Book, Bancroft''s Talon, Golden Blade, Leviathan''s
     Hide, Riptalon, Avenging Blade, Lifebinder, Midgardian Mail, Death Metal, Shogun''s
-    Ofuda, Glorious Pridwen, Yogi''s Necklace, Lernaean Bow, Damaru, Draconic Scale.'
+    Ofuda, Glorious Pridwen, Yogi''s Necklace, Damaru, Lernaean Bow, Helm of Radiance,
+    Draconic Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -245,8 +246,8 @@ builds:
   - The Cosmic Horror
   - The Crusher
   flex_slots:
-  - Kinetic Cuirass
   - Genji's Guard
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -262,13 +263,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Jotunn''s Revenge, The Crusher, The Cosmic
-    Horror, Kinetic Cuirass, Amanita Charm, Soul Gem, Berserker''s Shield, Stone of
+    Horror, Kinetic Cuirass, Soul Gem, Amanita Charm, Berserker''s Shield, Stone of
     Binding, Avenging Blade, Screeching Gargoyle, Freya''s Tears, Void Shield, Spear
-    of the Magus, Oni Hunter''s Garb, Void Stone, Hydra''s Lament, Shield of the Phoenix,
+    of the Magus, Oni Hunter''s Garb, Hydra''s Lament, Void Stone, Shield of the Phoenix,
     The Reaper, Shield Splitter, Spear of Desolation, Erosion, Spectral Armor, Riptalon,
-    Eye of Providence, Obsidian Shard, Eye of the Storm, Pharaoh''s Curse, Heartseeker,
-    Silverbranch Bow, Leviathan''s Hide, Death Metal, Golden Blade, Helm of Radiance,
-    Midgardian Mail, Draconic Scale.'
+    Eye of Providence, Obsidian Shard, Pharaoh''s Curse, Eye of the Storm, Heartseeker,
+    Silverbranch Bow, Leviathan''s Hide, Death Metal, Helm of Radiance, Golden Blade,
+    Midgardian Mail, Mantle Of Discord, Draconic Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -296,7 +297,7 @@ builds:
       fit: 0.56
     The Cosmic Horror:
       total: 0.55
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.64
       pick: 0.13
       fit: 0.34
@@ -335,12 +336,12 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm,
     Golden Blade, Pharaoh''s Curse, Jotunn''s Revenge, Riptalon, The Crusher, Freya''s
-    Tears, Oni Hunter''s Garb, Soul Gem, Shogun''s Ofuda, Lernaean Bow, Shield of
+    Tears, Oni Hunter''s Garb, Soul Gem, Lernaean Bow, Shogun''s Ofuda, Shield of
     the Phoenix, Silverbranch Bow, Hydra''s Lament, Tyrfing, Spectral Armor, Erosion,
     Shield Splitter, Eye of Providence, Bracer of The Abyss, Eye of the Storm, Helm
     of Radiance, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord, Yogi''s Necklace,
-    Stone of Binding, Eros'' Bow, Death Metal, Dominance, Spear of the Magus, Rod
-    of Asclepius, Draconic Scale.'
+    Stone of Binding, Death Metal, Eros'' Bow, Dominance, Spear of the Magus, Damaru,
+    Rod of Asclepius, Draconic Scale.'
   slot_scores:
     Golden Blade:
       total: 0.52
@@ -409,11 +410,11 @@ builds:
     Kinetic Cuirass, Shield of the Phoenix, Soul Gem, Amanita Charm, Gluttonous Grimoire,
     Berserker''s Shield, Hydra''s Lament, Oni Hunter''s Garb, Chronos'' Pendant, Screeching
     Gargoyle, The Crusher, Spear of Desolation, Chandra''s Grace, Gladiator''s Shield,
-    Erosion, Spectral Armor, Eye of Providence, Prophetic Cloak, Pharaoh''s Curse,
-    Shield Splitter, Helm of Radiance, Gem of Focus, Leviathan''s Hide, Eye of the
-    Storm, Mantle Of Discord, Midgardian Mail, Rod of Asclepius, Stone of Binding,
-    Spear of the Magus, Death Metal, Arondight, Jade Scepter, Shogun''s Ofuda, Draconic
-    Scale.'
+    Erosion, Spectral Armor, Prophetic Cloak, Eye of Providence, Pharaoh''s Curse,
+    Shield Splitter, Helm of Radiance, Gem of Focus, Totem of Death, Leviathan''s
+    Hide, Eye of the Storm, Mantle Of Discord, Rod of Asclepius, Midgardian Mail,
+    Stone of Binding, Spear of the Magus, Death Metal, Arondight, Jade Scepter, Shogun''s
+    Ofuda, Draconic Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -462,8 +463,8 @@ builds:
   - Gluttonous Grimoire
   - The Crusher
   flex_slots:
-  - Kinetic Cuirass
   - Genji's Guard
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -479,13 +480,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Berserker''s Shield, Gluttonous
-    Grimoire, The Crusher, Kinetic Cuirass, Amanita Charm, The Cosmic Horror, Hydra''s
-    Lament, Freya''s Tears, Soul Gem, Oni Hunter''s Garb, Shield Splitter, Pharaoh''s
+    Grimoire, The Crusher, Kinetic Cuirass, Amanita Charm, The Cosmic Horror, Freya''s
+    Tears, Hydra''s Lament, Soul Gem, Oni Hunter''s Garb, Shield Splitter, Pharaoh''s
     Curse, Golden Blade, Shield of the Phoenix, Lernaean Bow, Eye of the Storm, Erosion,
     Spectral Armor, Death Metal, Eye of Providence, Spear of the Magus, Shogun''s
-    Ofuda, The Reaper, Damaru, Avenging Blade, Riptalon, Leviathan''s Hide, Helm of
-    Radiance, Midgardian Mail, Mantle Of Discord, Stone of Binding, Heartseeker, Tekko-Kagi,
-    Silverbranch Bow, Draconic Scale.'
+    Ofuda, Damaru, The Reaper, Avenging Blade, Riptalon, Leviathan''s Hide, Helm of
+    Radiance, Midgardian Mail, Mantle Of Discord, Stone of Binding, Heartseeker, Silverbranch
+    Bow, Tekko-Kagi, Yogi''s Necklace, Draconic Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -553,11 +554,12 @@ builds:
     + fit + win/pick). Underrated for this god: Gluttonous Grimoire, The Cosmic Horror,
     Jotunn''s Revenge, Kinetic Cuirass, The Crusher, Amanita Charm, Soul Gem, Berserker''s
     Shield, Freya''s Tears, Spear of the Magus, Oni Hunter''s Garb, Hydra''s Lament,
-    Death Metal, Shield Splitter, Helm of Radiance, Shield of the Phoenix, Spear of
+    Death Metal, Helm of Radiance, Shield Splitter, Shield of the Phoenix, Spear of
     Desolation, Erosion, Spectral Armor, Eye of the Storm, Rod of Asclepius, Eye of
-    Providence, Pharaoh''s Curse, Obsidian Shard, Jade Scepter, Chronos'' Pendant,
-    Golden Blade, Leviathan''s Hide, Blood-Bound Book, Lernaean Bow, The Reaper, Damaru,
-    Bancroft''s Talon, Midgardian Mail, Mantle Of Discord, Draconic Scale.'
+    Providence, Pharaoh''s Curse, Jade Scepter, Obsidian Shard, Chronos'' Pendant,
+    Golden Blade, Leviathan''s Hide, Blood-Bound Book, Damaru, Lernaean Bow, The Reaper,
+    Bancroft''s Talon, Ethereal Staff, Wish-Granting Pearl, Midgardian Mail, Draconic
+    Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -578,14 +580,14 @@ builds:
       pick: 0.0
       fit: 0.52
     Gluttonous Grimoire:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
       win: 0.56
       pick: 0.0
       fit: 0.55
     The Cosmic Horror:
       total: 0.55
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.64
       pick: 0.13
       fit: 0.33
@@ -623,13 +625,13 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Berserker''s Shield,
-    Gluttonous Grimoire, Jotunn''s Revenge, Freya''s Tears, The Crusher, Oni Hunter''s
+    Jotunn''s Revenge, Gluttonous Grimoire, Freya''s Tears, The Crusher, Oni Hunter''s
     Garb, Shield Splitter, Shield of the Phoenix, Erosion, Hydra''s Lament, Eye of
     Providence, Eye of the Storm, Draconic Scale, Spectral Armor, Pharaoh''s Curse,
     Soul Gem, Leviathan''s Hide, Golden Blade, Mantle Of Discord, Stone of Binding,
-    Midgardian Mail, Death Metal, Helm of Radiance, Avenging Blade, Shogun''s Ofuda,
-    Magi''s Cloak, Lernaean Bow, Damaru, Ancile, Screeching Gargoyle, Yogi''s Necklace,
-    Void Shield, Hide of the Nemean Lion, Xibalban Effigy.'
+    Midgardian Mail, Death Metal, Helm of Radiance, Shogun''s Ofuda, Avenging Blade,
+    Magi''s Cloak, Damaru, Lernaean Bow, Screeching Gargoyle, Ancile, Yogi''s Necklace,
+    Hide of the Nemean Lion, Void Shield, Xibalban Effigy, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.55

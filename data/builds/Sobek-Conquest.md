@@ -120,8 +120,8 @@ builds:
     Valor, Freya''s Tears, Erosion, Oni Hunter''s Garb, Shield of the Phoenix, Eye
     of Providence, Spectral Armor, Soul Gem, Mantle Of Discord, Leviathan''s Hide,
     Stone of Binding, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s
-    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Void Shield, Hide of the Nemean
-    Lion, Screeching Gargoyle.'
+    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Screeching Gargoyle, Hide of
+    the Nemean Lion, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -190,9 +190,9 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Soul Gem, Gluttonous
     Grimoire, Rod of Asclepius, Oni Hunter''s Garb, Chandra''s Grace, Erosion, Breastplate
-    of Valor, Eye of Providence, Phoenix Feather, Freya''s Tears, Spectral Armor,
+    of Valor, Eye of Providence, Freya''s Tears, Phoenix Feather, Spectral Armor,
     Leviathan''s Hide, Blood-Bound Book, Lifebinder, Bancroft''s Talon, Midgardian
-    Mail, Glorious Pridwen, Gladiator''s Shield, Ancile, Jade Scepter, Void Shield.'
+    Mail, Glorious Pridwen, Gladiator''s Shield, Ancile, Jade Scepter, Helm of Radiance.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.58
@@ -259,7 +259,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita Charm, Stone
     of Binding, Spear of the Magus, Screeching Gargoyle, Breastplate of Valor, Void
-    Shield, The Cosmic Horror, Oni Hunter''s Garb, Void Stone, Shield of the Phoenix,
+    Shield, The Cosmic Horror, Oni Hunter''s Garb, Shield of the Phoenix, Void Stone,
     Spear of Desolation, Freya''s Tears, Erosion, Obsidian Shard, Eye of Providence,
     Spectral Armor, Leviathan''s Hide, Helm of Radiance, Mantle Of Discord, Midgardian
     Mail, The World Stone.'
@@ -330,8 +330,8 @@ builds:
     this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm, Breastplate of
     Valor, Oni Hunter''s Garb, Soul Gem, Shield of the Phoenix, Freya''s Tears, Spectral
     Armor, Erosion, Bracer of The Abyss, Eye of Providence, Helm of Radiance, Leviathan''s
-    Hide, Death Metal, Midgardian Mail, Yogi''s Necklace, Mantle Of Discord, Stone
-    of Binding, Spear of the Magus, Rod of Asclepius, Blood-Bound Book, Bragi''s Harp,
+    Hide, Death Metal, Midgardian Mail, Yogi''s Necklace, Mantle Of Discord, Spear
+    of the Magus, Stone of Binding, Blood-Bound Book, Rod of Asclepius, Bragi''s Harp,
     Bancroft''s Talon.'
   slot_scores:
     Genji's Guard:
@@ -398,11 +398,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Breastplate of Valor, Kinetic Cuirass,
-    Shield of the Phoenix, Soul Gem, Amanita Charm, Freya''s Tears, Gluttonous Grimoire,
+    Shield of the Phoenix, Soul Gem, Freya''s Tears, Amanita Charm, Gluttonous Grimoire,
     Oni Hunter''s Garb, Screeching Gargoyle, Chronos'' Pendant, Spear of Desolation,
-    Chandra''s Grace, Gladiator''s Shield, Erosion, Spectral Armor, Eye of Providence,
-    Prophetic Cloak, Helm of Radiance, Gem of Focus, Leviathan''s Hide, Mantle Of
-    Discord, Midgardian Mail, Rod of Asclepius, Stone of Binding.'
+    Chandra''s Grace, Gladiator''s Shield, Erosion, Spectral Armor, Prophetic Cloak,
+    Eye of Providence, Helm of Radiance, Gem of Focus, Totem of Death, Leviathan''s
+    Hide, Mantle Of Discord, Rod of Asclepius, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -471,8 +471,8 @@ builds:
     Grimoire, Breastplate of Valor, Erosion, Oni Hunter''s Garb, Shield of the Phoenix,
     Eye of Providence, Spectral Armor, Soul Gem, Mantle Of Discord, Leviathan''s Hide,
     Stone of Binding, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s
-    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Void Shield, Hide of the Nemean
-    Lion, Screeching Gargoyle.'
+    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Screeching Gargoyle, Hide of
+    the Nemean Lion, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.54

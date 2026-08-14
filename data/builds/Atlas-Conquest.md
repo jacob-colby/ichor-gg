@@ -120,7 +120,7 @@ builds:
     Gluttonous Grimoire, Erosion, Oni Hunter''s Garb, Shield of the Phoenix, Eye of
     Providence, Draconic Scale, Spectral Armor, Soul Gem, Mantle Of Discord, Leviathan''s
     Hide, Stone of Binding, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s
-    Shield, Ancile, Xibalban Effigy, Void Shield, Screeching Gargoyle.'
+    Shield, Ancile, Xibalban Effigy, Screeching Gargoyle, Void Shield.'
   slot_scores:
     Breastplate of Valor:
       total: 0.59
@@ -191,7 +191,7 @@ builds:
     Grimoire, Rod of Asclepius, Oni Hunter''s Garb, Chandra''s Grace, Erosion, Eye
     of Providence, Draconic Scale, Phoenix Feather, Spectral Armor, Leviathan''s Hide,
     Blood-Bound Book, Lifebinder, Bancroft''s Talon, Midgardian Mail, Glorious Pridwen,
-    Gladiator''s Shield, Ancile, Jade Scepter, Void Shield.'
+    Gladiator''s Shield, Ancile, Jade Scepter, Helm of Radiance.'
   slot_scores:
     Breastplate of Valor:
       total: 0.59
@@ -258,7 +258,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita Charm, Stone
     of Binding, Spear of the Magus, Screeching Gargoyle, Void Shield, The Cosmic Horror,
-    Oni Hunter''s Garb, Void Stone, Shield of the Phoenix, Spear of Desolation, Erosion,
+    Oni Hunter''s Garb, Shield of the Phoenix, Void Stone, Spear of Desolation, Erosion,
     Obsidian Shard, Eye of Providence, Spectral Armor, Draconic Scale, Leviathan''s
     Hide, Helm of Radiance, Mantle Of Discord, Midgardian Mail, The World Stone.'
   slot_scores:
@@ -328,8 +328,8 @@ builds:
     this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm, Oni Hunter''s Garb,
     Soul Gem, Shield of the Phoenix, Spectral Armor, Erosion, Bracer of The Abyss,
     Eye of Providence, Helm of Radiance, Draconic Scale, Leviathan''s Hide, Death
-    Metal, Midgardian Mail, Yogi''s Necklace, Mantle Of Discord, Stone of Binding,
-    Spear of the Magus, Rod of Asclepius, Blood-Bound Book, Bragi''s Harp, Bancroft''s
+    Metal, Midgardian Mail, Yogi''s Necklace, Mantle Of Discord, Spear of the Magus,
+    Stone of Binding, Blood-Bound Book, Rod of Asclepius, Bragi''s Harp, Bancroft''s
     Talon.'
   slot_scores:
     Breastplate of Valor:
@@ -399,8 +399,8 @@ builds:
     Shield of the Phoenix, Soul Gem, Amanita Charm, Gluttonous Grimoire, Oni Hunter''s
     Garb, Screeching Gargoyle, Chronos'' Pendant, Spear of Desolation, Chandra''s
     Grace, Gladiator''s Shield, Erosion, Spectral Armor, Eye of Providence, Draconic
-    Scale, Helm of Radiance, Gem of Focus, Leviathan''s Hide, Mantle Of Discord, Midgardian
-    Mail, Rod of Asclepius, Stone of Binding.'
+    Scale, Helm of Radiance, Gem of Focus, Totem of Death, Leviathan''s Hide, Mantle
+    Of Discord, Rod of Asclepius, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.59
@@ -469,8 +469,8 @@ builds:
     Erosion, Oni Hunter''s Garb, Shield of the Phoenix, Eye of Providence, Draconic
     Scale, Spectral Armor, Soul Gem, Mantle Of Discord, Leviathan''s Hide, Stone of
     Binding, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s Shield,
-    Ancile, Xibalban Effigy, Prophetic Cloak, Void Shield, Hide of the Nemean Lion,
-    Screeching Gargoyle.'
+    Ancile, Xibalban Effigy, Prophetic Cloak, Screeching Gargoyle, Hide of the Nemean
+    Lion, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.58

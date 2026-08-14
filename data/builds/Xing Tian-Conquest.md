@@ -120,7 +120,7 @@ builds:
     Erosion, Oni Hunter''s Garb, Shield of the Phoenix, Eye of Providence, Spectral
     Armor, Soul Gem, Mantle Of Discord, Leviathan''s Hide, Stone of Binding, Midgardian
     Mail, Freya''s Tears, Helm of Radiance, Magi''s Cloak, Gladiator''s Shield, Ancile,
-    Xibalban Effigy, Prophetic Cloak, Void Shield, Screeching Gargoyle.'
+    Xibalban Effigy, Prophetic Cloak, Screeching Gargoyle, Void Shield.'
   slot_scores:
     Yogi's Necklace:
       total: 0.59
@@ -191,10 +191,10 @@ builds:
     Grimoire, Draconic Scale, Rod of Asclepius, Oni Hunter''s Garb, Chandra''s Grace,
     Erosion, Eye of Providence, Phoenix Feather, Spectral Armor, Leviathan''s Hide,
     Blood-Bound Book, Lifebinder, Bancroft''s Talon, Midgardian Mail, Glorious Pridwen,
-    Gladiator''s Shield, Ancile, Jade Scepter, Void Shield, Freya''s Tears.'
+    Gladiator''s Shield, Ancile, Jade Scepter, Helm of Radiance, Freya''s Tears.'
   slot_scores:
     Yogi's Necklace:
-      total: 0.6
+      total: 0.59
       efficiency: 0.59
       win: 0.76
       pick: 0.11
@@ -258,7 +258,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita Charm, Stone
     of Binding, Spear of the Magus, Screeching Gargoyle, Draconic Scale, Void Shield,
-    The Cosmic Horror, Oni Hunter''s Garb, Void Stone, Shield of the Phoenix, Spear
+    The Cosmic Horror, Oni Hunter''s Garb, Shield of the Phoenix, Void Stone, Spear
     of Desolation, Erosion, Obsidian Shard, Eye of Providence, Spectral Armor, Leviathan''s
     Hide, Helm of Radiance, Mantle Of Discord, Midgardian Mail, The World Stone, Freya''s
     Tears.'
@@ -329,8 +329,8 @@ builds:
     this god: Yogi''s Necklace, Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm,
     Oni Hunter''s Garb, Soul Gem, Draconic Scale, Shield of the Phoenix, Spectral
     Armor, Erosion, Bracer of The Abyss, Eye of Providence, Helm of Radiance, Leviathan''s
-    Hide, Death Metal, Midgardian Mail, Mantle Of Discord, Stone of Binding, Spear
-    of the Magus, Rod of Asclepius, Blood-Bound Book, Bragi''s Harp, Bancroft''s Talon,
+    Hide, Death Metal, Midgardian Mail, Mantle Of Discord, Spear of the Magus, Stone
+    of Binding, Blood-Bound Book, Rod of Asclepius, Bragi''s Harp, Bancroft''s Talon,
     Freya''s Tears.'
   slot_scores:
     Yogi's Necklace:
@@ -399,9 +399,9 @@ builds:
     + fit + win/pick). Underrated for this god: Kinetic Cuirass, Shield of the Phoenix,
     Soul Gem, Amanita Charm, Gluttonous Grimoire, Draconic Scale, Oni Hunter''s Garb,
     Screeching Gargoyle, Chronos'' Pendant, Freya''s Tears, Spear of Desolation, Chandra''s
-    Grace, Gladiator''s Shield, Erosion, Spectral Armor, Eye of Providence, Prophetic
-    Cloak, Helm of Radiance, Gem of Focus, Leviathan''s Hide, Mantle Of Discord, Midgardian
-    Mail, Rod of Asclepius, Stone of Binding.'
+    Grace, Gladiator''s Shield, Erosion, Spectral Armor, Prophetic Cloak, Eye of Providence,
+    Helm of Radiance, Gem of Focus, Totem of Death, Leviathan''s Hide, Mantle Of Discord,
+    Rod of Asclepius, Midgardian Mail.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.54
@@ -416,7 +416,7 @@ builds:
       pick: 0.11
       fit: 0.13
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.58
       pick: 0.27
@@ -470,10 +470,11 @@ builds:
     Grimoire, Berserker''s Shield, The Crusher, Kinetic Cuirass, Amanita Charm, Soul
     Gem, Hydra''s Lament, Oni Hunter''s Garb, Draconic Scale, Runeforged Hammer, Shield
     Splitter, Pharaoh''s Curse, Golden Blade, Shield of the Phoenix, Lernaean Bow,
-    Eye of the Storm, Erosion, Spectral Armor, Death Metal, Spear of the Magus, Eye
-    of Providence, Shogun''s Ofuda, The Reaper, Damaru, The Cosmic Horror, Avenging
+    Eye of the Storm, Erosion, Death Metal, Spectral Armor, Spear of the Magus, Eye
+    of Providence, Shogun''s Ofuda, Damaru, The Reaper, The Cosmic Horror, Avenging
     Blade, Helm of Radiance, Riptalon, Leviathan''s Hide, Midgardian Mail, Mantle
-    Of Discord, Stone of Binding, Heartseeker, Silverbranch Bow, Freya''s Tears.'
+    Of Discord, Stone of Binding, Heartseeker, Silverbranch Bow, Spear of Desolation,
+    Freya''s Tears.'
   slot_scores:
     Yogi's Necklace:
       total: 0.57
@@ -541,12 +542,12 @@ builds:
     + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge,
     Kinetic Cuirass, The Crusher, Amanita Charm, Soul Gem, Berserker''s Shield, Spear
     of the Magus, Oni Hunter''s Garb, Draconic Scale, Hydra''s Lament, Death Metal,
-    The Cosmic Horror, Runeforged Hammer, Shield Splitter, Helm of Radiance, Shield
-    of the Phoenix, Spear of Desolation, Erosion, Spectral Armor, Eye of the Storm,
-    Rod of Asclepius, Eye of Providence, Pharaoh''s Curse, Obsidian Shard, Jade Scepter,
-    Chronos'' Pendant, Golden Blade, Leviathan''s Hide, Blood-Bound Book, Lernaean
-    Bow, The Reaper, Damaru, Bancroft''s Talon, Midgardian Mail, Mantle Of Discord,
-    Freya''s Tears.'
+    The Cosmic Horror, Runeforged Hammer, Helm of Radiance, Shield Splitter, Ethereal
+    Staff, Shield of the Phoenix, Spear of Desolation, Erosion, Spectral Armor, Eye
+    of the Storm, Rod of Asclepius, Eye of Providence, Pharaoh''s Curse, Jade Scepter,
+    Obsidian Shard, Chronos'' Pendant, Golden Blade, Leviathan''s Hide, Blood-Bound
+    Book, Damaru, Lernaean Bow, The Reaper, Bancroft''s Talon, Wish-Granting Pearl,
+    Midgardian Mail, Freya''s Tears.'
   slot_scores:
     Yogi's Necklace:
       total: 0.57
@@ -615,7 +616,7 @@ builds:
     Grimoire, Erosion, Oni Hunter''s Garb, Shield of the Phoenix, Eye of Providence,
     Draconic Scale, Spectral Armor, Soul Gem, Mantle Of Discord, Leviathan''s Hide,
     Stone of Binding, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s
-    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Void Shield, Screeching Gargoyle.'
+    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Screeching Gargoyle, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -624,7 +625,7 @@ builds:
       pick: 0.27
       fit: 0.39
     Breastplate of Valor:
-      total: 0.51
+      total: 0.52
       efficiency: 0.66
       win: 0.48
       pick: 0.19
