@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Wind
-  aspect_pick_rate: 0.43
-  aspect_win_rate: 0.51
+  aspect_pick_rate: 0.45
+  aspect_win_rate: 0.5
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.27
-    win_rate: 0.44
+    win_rate: 0.37
     alternates:
     - name: Tyrfing
-      pick_rate: 0.18
-      win_rate: 0.43
+      pick_rate: 0.22
+      win_rate: 0.47
     - name: Book of Thoth
-      pick_rate: 0.14
-      win_rate: 0.44
+      pick_rate: 0.13
+      win_rate: 0.48
   - name: The World Stone
-    pick_rate: 0.13
-    win_rate: 0.35
+    pick_rate: 0.14
+    win_rate: 0.32
     alternates:
-    - name: Book of Thoth
-      pick_rate: 0.12
-      win_rate: 0.6
     - name: Odysseus' Bow
+      pick_rate: 0.12
+      win_rate: 0.54
+    - name: Book of Thoth
       pick_rate: 0.11
-      win_rate: 0.64
+      win_rate: 0.48
   - name: Silverbranch Bow
-    pick_rate: 0.1
-    win_rate: 0.58
+    pick_rate: 0.11
+    win_rate: 0.54
     alternates:
     - name: Soul Gem
       pick_rate: 0.1
-      win_rate: 0.5
-    - name: Rod of Tahuti
-      pick_rate: 0.09
-      win_rate: 0.45
-  - name: Rod of Tahuti
-    pick_rate: 0.16
-    win_rate: 0.63
-    alternates:
-    - name: The Executioner
-      pick_rate: 0.12
-      win_rate: 0.53
-    - name: Obsidian Shard
-      pick_rate: 0.12
-      win_rate: 0.43
-  - name: Obsidian Shard
-    pick_rate: 0.11
-    win_rate: 0.55
-    alternates:
-    - name: Silverbranch Bow
-      pick_rate: 0.13
-      win_rate: 0.46
-    - name: Rod of Tahuti
+      win_rate: 0.41
+    - name: The World Stone
       pick_rate: 0.09
       win_rate: 0.33
+  - name: Rod of Tahuti
+    pick_rate: 0.16
+    win_rate: 0.5
+    alternates:
+    - name: Silverbranch Bow
+      pick_rate: 0.11
+      win_rate: 0.52
+    - name: Obsidian Shard
+      pick_rate: 0.11
+      win_rate: 0.32
+  - name: Obsidian Shard
+    pick_rate: 0.12
+    win_rate: 0.36
+    alternates:
+    - name: Rod of Tahuti
+      pick_rate: 0.1
+      win_rate: 0.17
+    - name: Silverbranch Bow
+      pick_rate: 0.08
+      win_rate: 0.5
   - name: Evil Eye
-    pick_rate: 0.1
-    win_rate: 0.43
+    pick_rate: 0.07
+    win_rate: 0.38
     alternates:
     - name: Hunter's Bow
-      pick_rate: 0.09
-      win_rate: 0.67
-    - name: Oracle Staff
       pick_rate: 0.07
-      win_rate: 0.6
+      win_rate: 0.5
+    - name: Manchu Bow
+      pick_rate: 0.07
+      win_rate: 0.75
   community_starters:
   - name: Death's Embrace
     pick_rate: 0.16
-    win_rate: 0.65
-  - name: Conduit Gem
-    pick_rate: 0.15
-    win_rate: 0.42
+    win_rate: 0.53
   - name: Archmage's Gem
-    pick_rate: 0.14
-    win_rate: 0.56
+    pick_rate: 0.15
+    win_rate: 0.41
+  - name: Conduit Gem
+    pick_rate: 0.13
+    win_rate: 0.41
   source_url: https://smitebrain.com/gods/neith/
-  last_verified: '2026-08-13'
-  god_win_rate: 0.4921875
-  god_matches_won: 63
-  god_matches_played: 128
+  last_verified: '2026-08-14'
+  god_win_rate: 0.4474885844748858
+  god_matches_won: 98
+  god_matches_played: 219
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-13'
-  god_matches_analyzed: 2102
+  god_window_end: '2026-08-14'
+  god_matches_analyzed: 3454
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -97,8 +97,8 @@ builds:
   - Jotunn's Revenge
   - Death Metal
   - Gluttonous Grimoire
+  - Silverbranch Bow
   - The Crusher
-  - Soul Gem
   flex_slots:
   - Death Metal
   - Berserker's Shield
@@ -125,41 +125,41 @@ builds:
     Garb, Freya''s Tears, Jade Scepter, Doom Orb, Eye of Providence.'
   slot_scores:
     Berserker's Shield:
-      total: 0.52
+      total: 0.48
       efficiency: 0.68
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.2
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.5
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.36
     Death Metal:
-      total: 0.52
+      total: 0.49
       efficiency: 0.58
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.49
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.48
+    Silverbranch Bow:
+      total: 0.49
+      efficiency: 0.54
+      win: 0.54
+      pick: 0.17
+      fit: 0.35
     The Crusher:
-      total: 0.52
+      total: 0.49
       efficiency: 0.63
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.38
-    Soul Gem:
-      total: 0.52
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.16
-      fit: 0.56
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -169,9 +169,9 @@ builds:
   - Jotunn's Revenge
   - Death Metal
   - Gluttonous Grimoire
+  - Silverbranch Bow
   - Damaru
   - Demon Blade
-  - The Crusher
   flex_slots:
   - Damaru
   - Demon Blade
@@ -198,41 +198,41 @@ builds:
     Freya''s Tears, Jade Scepter, Eye of Providence, Doom Orb.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.5
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.35
     Death Metal:
-      total: 0.53
+      total: 0.49
       efficiency: 0.58
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.51
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.48
+    Silverbranch Bow:
+      total: 0.49
+      efficiency: 0.54
+      win: 0.54
+      pick: 0.17
+      fit: 0.33
     Damaru:
-      total: 0.5
+      total: 0.47
       efficiency: 0.58
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.36
     Demon Blade:
-      total: 0.46
+      total: 0.43
       efficiency: 0.37
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.54
-    The Crusher:
-      total: 0.52
-      efficiency: 0.63
-      win: 0.55
-      pick: 0.0
-      fit: 0.37
   starter: *id001
 - source: suggested
   archetype: burst
@@ -244,8 +244,8 @@ builds:
   - Silverbranch Bow
   - The Crusher
   flex_slots:
+  - Genji's Guard
   - Death Metal
-  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -269,39 +269,39 @@ builds:
     Charm, Doom Orb, Oni Hunter''s Garb, Shield of the Phoenix, Dreamer''s Idol.'
   slot_scores:
     Genji's Guard:
-      total: 0.52
+      total: 0.48
       efficiency: 0.71
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.13
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.51
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.46
     Death Metal:
-      total: 0.51
+      total: 0.48
       efficiency: 0.58
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.43
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.49
     Silverbranch Bow:
-      total: 0.51
+      total: 0.5
       efficiency: 0.54
-      win: 0.58
-      pick: 0.16
+      win: 0.54
+      pick: 0.17
       fit: 0.37
     The Crusher:
-      total: 0.53
+      total: 0.5
       efficiency: 0.63
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.43
   starter: *id001
@@ -341,39 +341,39 @@ builds:
     Scepter, Shifter''s Shield, Erosion, Yogi''s Necklace.'
   slot_scores:
     Genji's Guard:
-      total: 0.52
+      total: 0.48
       efficiency: 0.71
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.15
     Berserker's Shield:
-      total: 0.54
+      total: 0.5
       efficiency: 0.68
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.35
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.48
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.26
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.48
       efficiency: 0.59
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.39
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.48
     Amanita Charm:
-      total: 0.56
+      total: 0.52
       efficiency: 0.63
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.59
   starter: *id001
@@ -412,39 +412,39 @@ builds:
     Hammer, Kinetic Cuirass, Helm of Radiance, Void Shield, Amanita Charm, Dominance.'
   slot_scores:
     Berserker's Shield:
-      total: 0.51
+      total: 0.48
       efficiency: 0.68
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.17
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.51
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.45
     Gluttonous Grimoire:
-      total: 0.56
+      total: 0.53
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.57
     Silverbranch Bow:
-      total: 0.53
+      total: 0.51
       efficiency: 0.54
-      win: 0.58
-      pick: 0.16
+      win: 0.54
+      pick: 0.17
       fit: 0.44
     Spear of the Magus:
-      total: 0.52
+      total: 0.48
       efficiency: 0.6
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.4
     The Crusher:
-      total: 0.54
+      total: 0.51
       efficiency: 0.63
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.48
   starter: *id001
@@ -484,39 +484,39 @@ builds:
     Ofuda.'
   slot_scores:
     Berserker's Shield:
-      total: 0.52
+      total: 0.48
       efficiency: 0.68
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.2
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.49
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.3
     Gluttonous Grimoire:
-      total: 0.54
+      total: 0.51
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.42
     Riptalon:
-      total: 0.52
+      total: 0.49
       efficiency: 0.56
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.52
     Silverbranch Bow:
-      total: 0.53
+      total: 0.51
       efficiency: 0.54
-      win: 0.58
-      pick: 0.16
+      win: 0.54
+      pick: 0.17
       fit: 0.46
     The Crusher:
-      total: 0.52
+      total: 0.48
       efficiency: 0.63
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.33
   starter: *id001
@@ -527,11 +527,11 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Hydra's Lament
-  - The Crusher
+  - Silverbranch Bow
   - Soul Gem
   flex_slots:
+  - Breastplate of Valor
   - Hydra's Lament
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -556,61 +556,61 @@ builds:
     Garb, Pendulum Blade, Eye of Providence, Dominance, Tekko-Kagi.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.5
       efficiency: 0.71
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.28
     Breastplate of Valor:
-      total: 0.52
+      total: 0.49
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.49
     Hydra's Lament:
-      total: 0.52
+      total: 0.48
       efficiency: 0.58
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.46
-    The Crusher:
-      total: 0.51
-      efficiency: 0.63
-      win: 0.55
-      pick: 0.0
+    Silverbranch Bow:
+      total: 0.49
+      efficiency: 0.54
+      win: 0.54
+      pick: 0.17
       fit: 0.31
     Soul Gem:
-      total: 0.54
+      total: 0.5
       efficiency: 0.59
-      win: 0.5
+      win: 0.41
       pick: 0.16
       fit: 0.66
   starter: *id001
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
   - Death Metal
   - Gluttonous Grimoire
+  - Silverbranch Bow
   - The Crusher
   flex_slots:
+  - The Crusher
   - Berserker's Shield
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -627,40 +627,40 @@ builds:
     Doom Orb, Kinetic Cuirass, Freya''s Tears, Tekko-Kagi, Amanita Charm, Dreamer''s
     Idol, Dominance, Ancient Signet.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.71
-      win: 0.55
-      pick: 0.0
-      fit: 0.11
     Berserker's Shield:
-      total: 0.51
+      total: 0.48
       efficiency: 0.68
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.18
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.5
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.36
     Death Metal:
-      total: 0.52
+      total: 0.49
       efficiency: 0.58
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.5
     Gluttonous Grimoire:
-      total: 0.56
+      total: 0.52
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.52
+    Silverbranch Bow:
+      total: 0.49
+      efficiency: 0.54
+      win: 0.54
+      pick: 0.17
+      fit: 0.32
     The Crusher:
-      total: 0.52
+      total: 0.49
       efficiency: 0.63
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.35
   starter: *id001
@@ -674,8 +674,8 @@ builds:
   - Silverbranch Bow
   - The Crusher
   flex_slots:
-  - Berserker's Shield
   - Silverbranch Bow
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -700,39 +700,39 @@ builds:
     Freya''s Tears.'
   slot_scores:
     Berserker's Shield:
-      total: 0.51
+      total: 0.48
       efficiency: 0.68
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.18
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.5
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.39
     Death Metal:
-      total: 0.53
+      total: 0.49
       efficiency: 0.58
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.53
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.48
     Silverbranch Bow:
-      total: 0.51
+      total: 0.49
       efficiency: 0.54
-      win: 0.58
-      pick: 0.16
+      win: 0.54
+      pick: 0.17
       fit: 0.33
     The Crusher:
-      total: 0.53
+      total: 0.5
       efficiency: 0.63
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.41
   starter: *id001
@@ -772,39 +772,39 @@ builds:
     of Providence.'
   slot_scores:
     Berserker's Shield:
-      total: 0.52
+      total: 0.48
       efficiency: 0.68
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.2
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.5
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.36
     Death Metal:
-      total: 0.52
+      total: 0.49
       efficiency: 0.58
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.49
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.48
     The Crusher:
-      total: 0.52
+      total: 0.49
       efficiency: 0.63
-      win: 0.55
+      win: 0.47
       pick: 0.0
       fit: 0.38
     Soul Gem:
-      total: 0.52
+      total: 0.48
       efficiency: 0.59
-      win: 0.5
+      win: 0.41
       pick: 0.16
       fit: 0.56
   starter: *id001
