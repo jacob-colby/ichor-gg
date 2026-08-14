@@ -13,7 +13,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Freya's Tears
+  - Spectral Armor
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Freya's Tears:
-      total: 0.6
+      total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Shield of the Phoenix:
-      total: 0.73
+      total: 0.74
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -275,8 +275,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,7 +294,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.61
+      total: 0.62
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -340,7 +340,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Freya's Tears
+  - Spectral Armor
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Freya's Tears:
-      total: 0.6
+      total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0

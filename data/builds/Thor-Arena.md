@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.61
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -334,14 +334,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Hydra's Lament
-  - Spectral Armor
   - Erosion
   flex_slots:
   - Erosion
-  - Spectral Armor
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -364,6 +364,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Breastplate of Valor:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.66
@@ -382,12 +388,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Spectral Armor:
-      total: 0.55
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Erosion:
       total: 0.56
       efficiency: 0.52
@@ -424,7 +424,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.61
       efficiency: 0.66
       win: 0.5
       pick: 0.0

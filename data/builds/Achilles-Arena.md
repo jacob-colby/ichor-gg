@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Shogun's Ofuda:
-      total: 0.62
+      total: 0.63
       efficiency: 0.52
       win: 0.5
       pick: 0.0

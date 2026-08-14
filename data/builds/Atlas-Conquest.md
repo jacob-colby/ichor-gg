@@ -120,8 +120,8 @@ builds:
     Shifter''s Shield, Erosion, Oni Hunter''s Garb, Shield of the Phoenix, Eye of
     Providence, Draconic Scale, Spectral Armor, Soul Gem, Mantle Of Discord, Leviathan''s
     Hide, Stone of Binding, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s
-    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Void Shield, Hide of the Nemean
-    Lion, Screeching Gargoyle.'
+    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Screeching Gargoyle, Hide of
+    the Nemean Lion, Void Shield.'
   slot_scores:
     Yogi's Necklace:
       total: 0.69
@@ -193,7 +193,7 @@ builds:
     Chandra''s Grace, Shifter''s Shield, Erosion, Eye of Providence, Draconic Scale,
     Phoenix Feather, Spectral Armor, Leviathan''s Hide, Blood-Bound Book, Lifebinder,
     Bancroft''s Talon, Midgardian Mail, Glorious Pridwen, Gladiator''s Shield, Ancile,
-    Jade Scepter, Void Shield.'
+    Jade Scepter, Helm of Radiance.'
   slot_scores:
     Yogi's Necklace:
       total: 0.7
@@ -260,7 +260,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Breastplate of Valor, Gluttonous Grimoire, Soul Gem, Kinetic Cuirass,
     Amanita Charm, Stone of Binding, Spear of the Magus, Screeching Gargoyle, Void
-    Shield, The Cosmic Horror, Oni Hunter''s Garb, Void Stone, Shield of the Phoenix,
+    Shield, The Cosmic Horror, Oni Hunter''s Garb, Shield of the Phoenix, Void Stone,
     Shifter''s Shield, Erosion, Obsidian Shard, Eye of Providence, Spectral Armor,
     Draconic Scale, Leviathan''s Hide, Helm of Radiance, Mantle Of Discord, Midgardian
     Mail, Spear of Desolation.'
@@ -332,8 +332,8 @@ builds:
     Cuirass, Amanita Charm, Oni Hunter''s Garb, Soul Gem, Shield of the Phoenix, Shifter''s
     Shield, Spectral Armor, Erosion, Bracer of The Abyss, Eye of Providence, Helm
     of Radiance, Draconic Scale, Leviathan''s Hide, Death Metal, Midgardian Mail,
-    Mantle Of Discord, Stone of Binding, Spear of the Magus, Rod of Asclepius, Blood-Bound
-    Book, Bragi''s Harp, Bancroft''s Talon.'
+    Mantle Of Discord, Spear of the Magus, Stone of Binding, Blood-Bound Book, Rod
+    of Asclepius, Bragi''s Harp, Bancroft''s Talon.'
   slot_scores:
     Yogi's Necklace:
       total: 0.68
@@ -401,9 +401,9 @@ builds:
     + fit + win/pick). Underrated for this god: Breastplate of Valor, Kinetic Cuirass,
     Shield of the Phoenix, Soul Gem, Amanita Charm, Gluttonous Grimoire, Oni Hunter''s
     Garb, Screeching Gargoyle, Chronos'' Pendant, Shifter''s Shield, Chandra''s Grace,
-    Gladiator''s Shield, Erosion, Spectral Armor, Eye of Providence, Prophetic Cloak,
-    Draconic Scale, Helm of Radiance, Gem of Focus, Leviathan''s Hide, Mantle Of Discord,
-    Midgardian Mail, Rod of Asclepius, Stone of Binding, Spear of Desolation.'
+    Gladiator''s Shield, Erosion, Spectral Armor, Prophetic Cloak, Eye of Providence,
+    Draconic Scale, Helm of Radiance, Gem of Focus, Totem of Death, Leviathan''s Hide,
+    Mantle Of Discord, Rod of Asclepius, Midgardian Mail, Spear of Desolation.'
   slot_scores:
     Yogi's Necklace:
       total: 0.68
@@ -473,7 +473,7 @@ builds:
     the Phoenix, Eye of Providence, Draconic Scale, Spectral Armor, Soul Gem, Mantle
     Of Discord, Leviathan''s Hide, Stone of Binding, Midgardian Mail, Helm of Radiance,
     Magi''s Cloak, Gladiator''s Shield, Ancile, Xibalban Effigy, Prophetic Cloak,
-    Void Shield, Hide of the Nemean Lion, Screeching Gargoyle.'
+    Screeching Gargoyle, Hide of the Nemean Lion, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.58

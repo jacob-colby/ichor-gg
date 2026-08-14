@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -294,7 +294,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Genji's Guard:
-      total: 0.49
+      total: 0.5
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.66
       win: 0.5
       pick: 0.0

@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.78
     Stampede:
-      total: 0.59
+      total: 0.6
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Pharaoh's Curse:
-      total: 0.61
+      total: 0.62
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.78
     Stampede:
-      total: 0.59
+      total: 0.6
       efficiency: 0.48
       win: 0.5
       pick: 0.0

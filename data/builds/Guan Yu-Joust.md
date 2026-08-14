@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Spectral Armor:
-      total: 0.56
+      total: 0.55
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Freya's Tears:
-      total: 0.58
+      total: 0.59
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Spectral Armor:
-      total: 0.56
+      total: 0.55
       efficiency: 0.58
       win: 0.5
       pick: 0.0

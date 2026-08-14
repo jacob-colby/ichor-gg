@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.81
+      total: 0.82
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.81
+      total: 0.82
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Toxic Blade:
-      total: 0.71
+      total: 0.7
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.81
+      total: 0.82
       efficiency: 0.63
       win: 0.5
       pick: 0.0

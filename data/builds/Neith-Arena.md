@@ -13,7 +13,7 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
+  - Toxic Blade
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.55
+      total: 0.56
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -600,7 +600,7 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
+  - Toxic Blade
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc

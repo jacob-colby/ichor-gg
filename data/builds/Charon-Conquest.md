@@ -120,8 +120,8 @@ builds:
     Breastplate of Valor, Erosion, Oni Hunter''s Garb, Shield of the Phoenix, Eye
     of Providence, Draconic Scale, Spectral Armor, Soul Gem, Mantle Of Discord, Leviathan''s
     Hide, Stone of Binding, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s
-    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Void Shield, Hide of the Nemean
-    Lion, Screeching Gargoyle.'
+    Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Screeching Gargoyle, Hide of
+    the Nemean Lion, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -130,7 +130,7 @@ builds:
       pick: 0.23
       fit: 0.39
     Breastplate of Valor:
-      total: 0.51
+      total: 0.52
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -193,10 +193,10 @@ builds:
     Grace, Erosion, Breastplate of Valor, Eye of Providence, Draconic Scale, Phoenix
     Feather, Spectral Armor, Leviathan''s Hide, Blood-Bound Book, Bancroft''s Talon,
     Midgardian Mail, Glorious Pridwen, Gladiator''s Shield, Ancile, Jade Scepter,
-    Void Shield.'
+    Helm of Radiance.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.71
       win: 0.56
       pick: 0.23
@@ -260,7 +260,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Freya''s Tears, Gluttonous Grimoire, Soul Gem, Kinetic Cuirass,
     Amanita Charm, Stone of Binding, Spear of the Magus, Screeching Gargoyle, Breastplate
-    of Valor, Void Shield, Oni Hunter''s Garb, Void Stone, Shield of the Phoenix,
+    of Valor, Void Shield, Oni Hunter''s Garb, Shield of the Phoenix, Void Stone,
     Spear of Desolation, Erosion, Obsidian Shard, Eye of Providence, Spectral Armor,
     Draconic Scale, Leviathan''s Hide, Helm of Radiance, Mantle Of Discord, Midgardian
     Mail, The World Stone, The Cosmic Horror.'
@@ -332,8 +332,8 @@ builds:
     Breastplate of Valor, Oni Hunter''s Garb, Soul Gem, Shield of the Phoenix, Spectral
     Armor, Erosion, Bracer of The Abyss, Eye of Providence, Helm of Radiance, Draconic
     Scale, Leviathan''s Hide, Death Metal, Midgardian Mail, Yogi''s Necklace, Mantle
-    Of Discord, Stone of Binding, Spear of the Magus, Rod of Asclepius, Blood-Bound
-    Book, Bragi''s Harp, Bancroft''s Talon.'
+    Of Discord, Spear of the Magus, Stone of Binding, Blood-Bound Book, Rod of Asclepius,
+    Bragi''s Harp, Bancroft''s Talon.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -401,9 +401,9 @@ builds:
     + fit + win/pick). Underrated for this god: Freya''s Tears, Breastplate of Valor,
     Kinetic Cuirass, Shield of the Phoenix, Soul Gem, Amanita Charm, Gluttonous Grimoire,
     Chronos'' Pendant, Oni Hunter''s Garb, Screeching Gargoyle, Spear of Desolation,
-    Chandra''s Grace, Gladiator''s Shield, Erosion, Spectral Armor, Eye of Providence,
-    Prophetic Cloak, Draconic Scale, Helm of Radiance, Gem of Focus, Leviathan''s
-    Hide, Mantle Of Discord, Midgardian Mail, Rod of Asclepius, Stone of Binding.'
+    Chandra''s Grace, Gladiator''s Shield, Erosion, Spectral Armor, Prophetic Cloak,
+    Eye of Providence, Draconic Scale, Helm of Radiance, Gem of Focus, Leviathan''s
+    Hide, Mantle Of Discord, Rod of Asclepius, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -472,11 +472,11 @@ builds:
     Grimoire, Berserker''s Shield, The Crusher, Kinetic Cuirass, Amanita Charm, Breastplate
     of Valor, Soul Gem, Hydra''s Lament, Oni Hunter''s Garb, Runeforged Hammer, Shield
     Splitter, Pharaoh''s Curse, Golden Blade, Shield of the Phoenix, Lernaean Bow,
-    Eye of the Storm, Erosion, Spectral Armor, Death Metal, Spear of the Magus, Eye
-    of Providence, Shogun''s Ofuda, The Reaper, Draconic Scale, Damaru, Avenging Blade,
+    Eye of the Storm, Erosion, Death Metal, Spectral Armor, Spear of the Magus, Eye
+    of Providence, Shogun''s Ofuda, Damaru, Draconic Scale, The Reaper, Avenging Blade,
     Helm of Radiance, Riptalon, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord,
-    Stone of Binding, Heartseeker, Silverbranch Bow, Yogi''s Necklace, The Cosmic
-    Horror.'
+    Stone of Binding, Heartseeker, Silverbranch Bow, Spear of Desolation, Yogi''s
+    Necklace, The Cosmic Horror.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -544,12 +544,12 @@ builds:
     + fit + win/pick). Underrated for this god: Freya''s Tears, Gluttonous Grimoire,
     Jotunn''s Revenge, Kinetic Cuirass, The Crusher, Amanita Charm, Soul Gem, Berserker''s
     Shield, Breastplate of Valor, Spear of the Magus, Oni Hunter''s Garb, Hydra''s
-    Lament, Death Metal, Runeforged Hammer, Shield Splitter, Helm of Radiance, Shield
+    Lament, Death Metal, Runeforged Hammer, Helm of Radiance, Shield Splitter, Shield
     of the Phoenix, Spear of Desolation, Erosion, Spectral Armor, Eye of the Storm,
-    Rod of Asclepius, Eye of Providence, Pharaoh''s Curse, Obsidian Shard, Jade Scepter,
-    Chronos'' Pendant, Draconic Scale, Golden Blade, Leviathan''s Hide, Blood-Bound
-    Book, Lernaean Bow, The Reaper, Damaru, Bancroft''s Talon, Midgardian Mail, Mantle
-    Of Discord, The Cosmic Horror.'
+    Rod of Asclepius, Eye of Providence, Pharaoh''s Curse, Chronos'' Pendant, Jade
+    Scepter, Obsidian Shard, Draconic Scale, Golden Blade, Leviathan''s Hide, Blood-Bound
+    Book, Damaru, Lernaean Bow, The Reaper, Bancroft''s Talon, Ethereal Staff, Wish-Granting
+    Pearl, Midgardian Mail, The Cosmic Horror.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -618,8 +618,8 @@ builds:
     Grimoire, Breastplate of Valor, Erosion, Oni Hunter''s Garb, Shield of the Phoenix,
     Eye of Providence, Draconic Scale, Spectral Armor, Soul Gem, Mantle Of Discord,
     Leviathan''s Hide, Stone of Binding, Midgardian Mail, Helm of Radiance, Magi''s
-    Cloak, Gladiator''s Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Void Shield,
-    Hide of the Nemean Lion, Screeching Gargoyle.'
+    Cloak, Gladiator''s Shield, Ancile, Xibalban Effigy, Prophetic Cloak, Screeching
+    Gargoyle, Hide of the Nemean Lion, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -628,7 +628,7 @@ builds:
       pick: 0.23
       fit: 0.39
     Breastplate of Valor:
-      total: 0.51
+      total: 0.52
       efficiency: 0.66
       win: 0.5
       pick: 0.0

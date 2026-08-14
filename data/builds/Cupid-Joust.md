@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.52
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.54
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.59
       win: 0.5
       pick: 0.0

@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Soul Gem:
-      total: 0.75
+      total: 0.76
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -483,8 +483,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:

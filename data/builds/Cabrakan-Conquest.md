@@ -116,14 +116,14 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Runeforged Hammer, Amanita Charm, Berserker''s Shield, Gluttonous Grimoire,
-    Jotunn''s Revenge, Freya''s Tears, The Crusher, Oni Hunter''s Garb, Shield Splitter,
+    this god: Runeforged Hammer, Amanita Charm, Berserker''s Shield, Jotunn''s Revenge,
+    Gluttonous Grimoire, Freya''s Tears, The Crusher, Oni Hunter''s Garb, Shield Splitter,
     Shield of the Phoenix, Erosion, Hydra''s Lament, Eye of Providence, Eye of the
     Storm, Kinetic Cuirass, Spectral Armor, Pharaoh''s Curse, Soul Gem, Leviathan''s
     Hide, Golden Blade, Mantle Of Discord, Stone of Binding, Midgardian Mail, Death
-    Metal, Helm of Radiance, Avenging Blade, Shogun''s Ofuda, Magi''s Cloak, Lernaean
-    Bow, Damaru, Ancile, Screeching Gargoyle, Yogi''s Necklace, Void Shield, Hide
-    of the Nemean Lion, Xibalban Effigy.'
+    Metal, Helm of Radiance, Shogun''s Ofuda, Avenging Blade, Magi''s Cloak, Damaru,
+    Lernaean Bow, Screeching Gargoyle, Ancile, Yogi''s Necklace, Hide of the Nemean
+    Lion, Void Shield, Xibalban Effigy, Rod of Asclepius.'
   slot_scores:
     Berserker's Shield:
       total: 0.58
@@ -196,8 +196,8 @@ builds:
     The Reaper, Shield Splitter, Erosion, Phoenix Feather, Eye of Providence, Spectral
     Armor, Pharaoh''s Curse, Blood-Bound Book, Kinetic Cuirass, Bancroft''s Talon,
     Golden Blade, Leviathan''s Hide, Riptalon, Avenging Blade, Lifebinder, Midgardian
-    Mail, Death Metal, Shogun''s Ofuda, Glorious Pridwen, Yogi''s Necklace, Lernaean
-    Bow, Damaru.'
+    Mail, Death Metal, Shogun''s Ofuda, Glorious Pridwen, Yogi''s Necklace, Damaru,
+    Lernaean Bow, Helm of Radiance.'
   slot_scores:
     Berserker's Shield:
       total: 0.58
@@ -263,13 +263,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Runeforged Hammer, Gluttonous Grimoire, Jotunn''s Revenge, The Crusher,
-    Amanita Charm, Soul Gem, Berserker''s Shield, Stone of Binding, Avenging Blade,
+    Soul Gem, Amanita Charm, Berserker''s Shield, Stone of Binding, Avenging Blade,
     Screeching Gargoyle, Freya''s Tears, Void Shield, Spear of the Magus, Oni Hunter''s
-    Garb, Void Stone, Hydra''s Lament, Shield of the Phoenix, The Reaper, Shield Splitter,
+    Garb, Hydra''s Lament, Void Stone, Shield of the Phoenix, The Reaper, Shield Splitter,
     Spear of Desolation, Erosion, Spectral Armor, Riptalon, Eye of Providence, Obsidian
-    Shard, Eye of the Storm, Pharaoh''s Curse, Heartseeker, Kinetic Cuirass, Silverbranch
-    Bow, Leviathan''s Hide, Death Metal, Golden Blade, Helm of Radiance, Midgardian
-    Mail.'
+    Shard, Pharaoh''s Curse, Eye of the Storm, Heartseeker, Kinetic Cuirass, Silverbranch
+    Bow, Leviathan''s Hide, Death Metal, Helm of Radiance, Golden Blade, Midgardian
+    Mail, Mantle Of Discord.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -291,7 +291,7 @@ builds:
       fit: 0.56
     The Cosmic Horror:
       total: 0.6
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.75
       pick: 0.18
       fit: 0.34
@@ -336,12 +336,12 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Runeforged Hammer, Berserker''s Shield, Gluttonous Grimoire, Amanita
     Charm, Golden Blade, Pharaoh''s Curse, Jotunn''s Revenge, Riptalon, The Crusher,
-    Freya''s Tears, Oni Hunter''s Garb, Soul Gem, Shogun''s Ofuda, Lernaean Bow, Shield
+    Freya''s Tears, Oni Hunter''s Garb, Soul Gem, Lernaean Bow, Shogun''s Ofuda, Shield
     of the Phoenix, Silverbranch Bow, Hydra''s Lament, Tyrfing, Spectral Armor, Erosion,
     Shield Splitter, Eye of Providence, Bracer of The Abyss, Kinetic Cuirass, Eye
     of the Storm, Helm of Radiance, Leviathan''s Hide, Midgardian Mail, Mantle Of
-    Discord, Yogi''s Necklace, Stone of Binding, Eros'' Bow, Death Metal, Dominance,
-    Spear of the Magus, Rod of Asclepius.'
+    Discord, Yogi''s Necklace, Stone of Binding, Death Metal, Eros'' Bow, Dominance,
+    Spear of the Magus, Damaru, Rod of Asclepius.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -383,22 +383,22 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
   - Runeforged Hammer
   - Freya's Tears
+  - The Cosmic Horror
   - Rod of Tahuti
   flex_slots:
   - Jotunn's Revenge
-  - Genji's Guard
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -410,18 +410,12 @@ builds:
     Jotunn''s Revenge, Shield of the Phoenix, Soul Gem, Amanita Charm, Gluttonous
     Grimoire, Berserker''s Shield, Hydra''s Lament, Oni Hunter''s Garb, Screeching
     Gargoyle, The Crusher, Spear of Desolation, Chandra''s Grace, Gladiator''s Shield,
-    Erosion, Spectral Armor, Eye of Providence, Prophetic Cloak, Chronos'' Pendant,
+    Erosion, Spectral Armor, Chronos'' Pendant, Prophetic Cloak, Eye of Providence,
     Pharaoh''s Curse, Shield Splitter, Helm of Radiance, Kinetic Cuirass, Gem of Focus,
-    Leviathan''s Hide, Eye of the Storm, Mantle Of Discord, Midgardian Mail, Rod of
-    Asclepius, Stone of Binding, Spear of the Magus, Death Metal, Arondight, Jade
-    Scepter, Shogun''s Ofuda.'
+    Totem of Death, Leviathan''s Hide, Eye of the Storm, Mantle Of Discord, Rod of
+    Asclepius, Midgardian Mail, Stone of Binding, Spear of the Magus, Death Metal,
+    Arondight, Jade Scepter, Shogun''s Ofuda.'
   slot_scores:
-    Genji's Guard:
-      total: 0.57
-      efficiency: 0.71
-      win: 0.53
-      pick: 0.26
-      fit: 0.48
     Breastplate of Valor:
       total: 0.62
       efficiency: 0.66
@@ -446,6 +440,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.64
+    The Cosmic Horror:
+      total: 0.57
+      efficiency: 0.59
+      win: 0.75
+      pick: 0.18
+      fit: 0.13
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.44
@@ -480,13 +480,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Runeforged Hammer, Jotunn''s Revenge, Berserker''s
-    Shield, Gluttonous Grimoire, The Crusher, Amanita Charm, Hydra''s Lament, Freya''s
-    Tears, Soul Gem, Oni Hunter''s Garb, Shield Splitter, Pharaoh''s Curse, Golden
+    Shield, Gluttonous Grimoire, The Crusher, Amanita Charm, Freya''s Tears, Hydra''s
+    Lament, Soul Gem, Oni Hunter''s Garb, Shield Splitter, Pharaoh''s Curse, Golden
     Blade, Shield of the Phoenix, Lernaean Bow, Eye of the Storm, Erosion, Spectral
-    Armor, Death Metal, Eye of Providence, Spear of the Magus, Shogun''s Ofuda, The
-    Reaper, Damaru, Kinetic Cuirass, Avenging Blade, Riptalon, Leviathan''s Hide,
-    Helm of Radiance, Midgardian Mail, Mantle Of Discord, Stone of Binding, Heartseeker,
-    Tekko-Kagi, Silverbranch Bow.'
+    Armor, Death Metal, Eye of Providence, Spear of the Magus, Shogun''s Ofuda, Damaru,
+    The Reaper, Kinetic Cuirass, Avenging Blade, Riptalon, Leviathan''s Hide, Helm
+    of Radiance, Midgardian Mail, Mantle Of Discord, Stone of Binding, Heartseeker,
+    Silverbranch Bow, Tekko-Kagi, Yogi''s Necklace.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -514,7 +514,7 @@ builds:
       fit: 0.44
     The Cosmic Horror:
       total: 0.58
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.75
       pick: 0.18
       fit: 0.19
@@ -554,11 +554,11 @@ builds:
     + fit + win/pick). Underrated for this god: Runeforged Hammer, Gluttonous Grimoire,
     Jotunn''s Revenge, The Crusher, Amanita Charm, Soul Gem, Berserker''s Shield,
     Freya''s Tears, Spear of the Magus, Oni Hunter''s Garb, Hydra''s Lament, Death
-    Metal, Shield Splitter, Helm of Radiance, Shield of the Phoenix, Spear of Desolation,
+    Metal, Helm of Radiance, Shield Splitter, Shield of the Phoenix, Spear of Desolation,
     Erosion, Spectral Armor, Eye of the Storm, Rod of Asclepius, Eye of Providence,
-    Pharaoh''s Curse, Obsidian Shard, Jade Scepter, Kinetic Cuirass, Golden Blade,
-    Leviathan''s Hide, Blood-Bound Book, Lernaean Bow, The Reaper, Damaru, Bancroft''s
-    Talon, Midgardian Mail, Mantle Of Discord, Chronos'' Pendant.'
+    Pharaoh''s Curse, Jade Scepter, Obsidian Shard, Kinetic Cuirass, Golden Blade,
+    Leviathan''s Hide, Blood-Bound Book, Damaru, Lernaean Bow, The Reaper, Bancroft''s
+    Talon, Ethereal Staff, Wish-Granting Pearl, Midgardian Mail, Chronos'' Pendant.'
   slot_scores:
     Breastplate of Valor:
       total: 0.58
@@ -586,7 +586,7 @@ builds:
       fit: 0.55
     The Cosmic Horror:
       total: 0.6
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.75
       pick: 0.18
       fit: 0.33
@@ -624,13 +624,13 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Berserker''s Shield,
-    Gluttonous Grimoire, Jotunn''s Revenge, Freya''s Tears, The Crusher, Oni Hunter''s
-    Garb, Shield Splitter, Shield of the Phoenix, Erosion, Hydra''s Lament, Eye of
-    Providence, Runeforged Hammer, Eye of the Storm, Spectral Armor, Pharaoh''s Curse,
+    Jotunn''s Revenge, Gluttonous Grimoire, Freya''s Tears, The Crusher, Oni Hunter''s
+    Garb, Shield Splitter, Shield of the Phoenix, Erosion, Hydra''s Lament, Runeforged
+    Hammer, Eye of Providence, Eye of the Storm, Spectral Armor, Pharaoh''s Curse,
     Soul Gem, Leviathan''s Hide, Golden Blade, Mantle Of Discord, Stone of Binding,
-    Midgardian Mail, Death Metal, Helm of Radiance, Avenging Blade, Shogun''s Ofuda,
-    Magi''s Cloak, Lernaean Bow, Damaru, Ancile, Screeching Gargoyle, Yogi''s Necklace,
-    Void Shield, Hide of the Nemean Lion, Xibalban Effigy.'
+    Midgardian Mail, Death Metal, Helm of Radiance, Shogun''s Ofuda, Avenging Blade,
+    Magi''s Cloak, Damaru, Lernaean Bow, Screeching Gargoyle, Ancile, Yogi''s Necklace,
+    Hide of the Nemean Lion, Void Shield, Xibalban Effigy, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -657,7 +657,7 @@ builds:
       pick: 0.13
       fit: 0.67
     Freya's Tears:
-      total: 0.56
+      total: 0.57
       efficiency: 0.59
       win: 0.62
       pick: 0.0

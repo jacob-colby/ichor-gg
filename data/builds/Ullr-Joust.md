@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.72
     Damaru:
-      total: 0.5
+      total: 0.51
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Genji's Guard:
-      total: 0.49
+      total: 0.5
       efficiency: 0.71
       win: 0.5
       pick: 0.0

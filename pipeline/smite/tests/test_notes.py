@@ -288,3 +288,59 @@ def test_delete_mine_entry_removes_only_that_one(tmp_path):
     names = [b.get("name") for b in fm["builds"] if b["source"] == "mine"]
     assert names == ["B"]
     assert any(b["source"] == "community" for b in fm["builds"])
+
+
+# ---- Item-name joins between two sources that spell things differently ----
+
+KNOWN = ["Brawler’s Beat Stick", "Mantle Of Discord", "Spear of the Magus", "Rage"]
+
+
+def test_canonical_item_name_folds_the_three_ways_the_sources_disagreed():
+    """All three shipped silently. A failed join is not cosmetic: it reads as
+    "this god's players never buy it" — pick 0, win None — which is a claim
+    about the meta rather than about our spelling."""
+    assert notes.canonical_item_name("Brawler's Beat Stick", KNOWN) == "Brawler’s Beat Stick"
+    assert notes.canonical_item_name("Mantle of Discord", KNOWN) == "Mantle Of Discord"
+    assert notes.canonical_item_name("Spear Of The Magus", KNOWN) == "Spear of the Magus"
+
+
+def test_an_exact_match_is_returned_unchanged():
+    assert notes.canonical_item_name("Rage", KNOWN) == "Rage"
+
+
+def test_a_genuinely_new_item_is_left_alone():
+    """The detector's whole job. Silently merging an unknown name into the
+    closest existing one would hide exactly what it exists to report —
+    Totem of Death was built by 10 gods and had no note at all."""
+    assert notes.canonical_item_name("Totem of Death", KNOWN) == "Totem of Death"
+
+
+def test_no_known_names_is_a_no_op():
+    assert notes.canonical_item_name("anything", []) == "anything"
+    assert notes.canonical_item_name("", KNOWN) == ""
+
+
+def test_canonicalise_rewrites_slots_alternates_and_starters():
+    entry = {
+        "slot_order": [
+            {"name": "Mantle of Discord",
+             "alternates": [{"name": "Spear Of The Magus"}, {"name": "Rage"}]},
+            "a plain string slot, which must not crash",
+        ],
+        "community_starters": [{"name": "Brawler's Beat Stick"}],
+        "popular_items": [{"name": "Mantle of Discord"}],
+    }
+    changed = notes.canonicalise_community_items(entry, KNOWN)
+    assert changed == 4
+    assert entry["slot_order"][0]["name"] == "Mantle Of Discord"
+    assert entry["slot_order"][0]["alternates"][0]["name"] == "Spear of the Magus"
+    assert entry["slot_order"][0]["alternates"][1]["name"] == "Rage"
+    assert entry["community_starters"][0]["name"] == "Brawler’s Beat Stick"
+    assert entry["popular_items"][0]["name"] == "Mantle Of Discord"
+
+
+def test_canonicalise_reports_zero_when_nothing_drifts():
+    entry = {"slot_order": [{"name": "Rage"}]}
+    assert notes.canonicalise_community_items(entry, KNOWN) == 0
+    assert notes.canonicalise_community_items(None, KNOWN) == 0
+    assert notes.canonicalise_community_items({"slot_order": [{"name": "Rage"}]}, []) == 0

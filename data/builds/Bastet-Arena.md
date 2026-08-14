@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.81
+      total: 0.82
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
   - Shield of the Phoenix
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
+  - Pharaoh's Curse
   flex_slots:
   - Spectral Armor
-  - Kinetic Cuirass
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -163,12 +163,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.63
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Shield of the Phoenix:
       total: 0.65
       efficiency: 0.57
@@ -199,6 +193,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Pharaoh's Curse:
+      total: 0.63
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -247,7 +247,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.81
+      total: 0.82
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Toxic Blade:
-      total: 0.71
+      total: 0.7
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -442,7 +442,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.81
+      total: 0.82
       efficiency: 0.63
       win: 0.5
       pick: 0.0

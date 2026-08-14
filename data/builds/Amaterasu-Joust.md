@@ -275,8 +275,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,7 +294,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.61
+      total: 0.62
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Divine Ruin
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Spectral Armor
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Jotunn's Revenge
-  - Spectral Armor
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -353,11 +353,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.66
@@ -370,12 +376,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Spectral Armor:
-      total: 0.52
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Erosion:
       total: 0.56
       efficiency: 0.52
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.77
+      total: 0.78
       efficiency: 0.59
       win: 0.5
       pick: 0.0

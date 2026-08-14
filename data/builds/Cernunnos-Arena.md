@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.54
+      total: 0.55
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -489,7 +489,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.54
+      total: 0.55
       efficiency: 0.54
       win: 0.5
       pick: 0.0

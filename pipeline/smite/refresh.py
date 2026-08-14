@@ -148,11 +148,15 @@ def refresh_item(name: str, wiki_fetcher, force: bool = False) -> None:
         "passive": parsed.get("passive"),
         "builds_from": parsed.get("builds_from", []),
         "builds_into": [],
-        # Only set for `God Specific` items; see wiki_parser.god_specific_owner.
-        "god": parsed.get("god"),
         "source_url": url,
         "last_verified": date.today().isoformat(),
     }
+    # Only `God Specific` items carry an owner (wiki_parser.god_specific_owner).
+    # Set conditionally rather than always: writing `god: null` onto the other
+    # 215 notes would be a 215-file diff on the next full refresh, for a key
+    # every reader already treats as absent.
+    if parsed.get("god"):
+        frontmatter["god"] = parsed["god"]
     notes.merge_item_note(DATA_ROOT / "Items" / f"{name}.md", frontmatter,
                            parsed.get("passive", ""), log_dir=DATA_ROOT / "_logs")
     _download_icon(parsed.get("image_url"), name.lower().replace(" ", "-").replace("'", ""))
@@ -322,6 +326,18 @@ def refresh_item_index(community_fetcher, data_root: Path, force: bool = False) 
     return len(table)
 
 
+def _known_item_names():
+    """Every item name our notes use. Cached — `refresh_community` calls this
+    once per god and the directory does not change mid-run."""
+    global _KNOWN_ITEM_NAMES
+    if _KNOWN_ITEM_NAMES is None:
+        _KNOWN_ITEM_NAMES = [p.stem for p in (DATA_ROOT / "Items").glob("*.md")]
+    return _KNOWN_ITEM_NAMES
+
+
+_KNOWN_ITEM_NAMES = None
+
+
 def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = False,
                        index_row: dict | None = None) -> None:
     """`index_row` is this god's row from `refresh_god_index`, when the caller
@@ -349,6 +365,13 @@ def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = Fal
     }
     if index_row:
         community_entry.update(god_index_entry(index_row))
+    # Canonicalise at INGEST, so exactly one place knows the two sources spell
+    # some items differently and everything downstream - scoring, the index,
+    # the viewer's icons and links, the audit - joins on one spelling. See
+    # `notes.canonicalise_community_items` for what shipped broken.
+    drift = notes.canonicalise_community_items(community_entry, _known_item_names())
+    if drift:
+        print(f"  {god} {mode}: renamed {drift} community item(s) to our spelling")
     notes.merge_build_note(BUILDS_ROOT / f"{god}-{mode}.md", god, mode, community_entry)
 
 

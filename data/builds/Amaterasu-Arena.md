@@ -229,7 +229,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -294,13 +294,13 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.48
     Freya's Tears:
-      total: 0.61
+      total: 0.62
       efficiency: 0.59
       win: 0.5
       pick: 0.0

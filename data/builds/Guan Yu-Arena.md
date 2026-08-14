@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.61
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Freya's Tears:
-      total: 0.58
+      total: 0.59
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -359,7 +359,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.61
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0

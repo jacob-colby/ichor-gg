@@ -99,7 +99,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.49
+      total: 0.5
       efficiency: 0.43
       win: 0.5
       pick: 0.0
@@ -248,7 +248,7 @@ builds:
       fit: 0.68
     The Cosmic Horror:
       total: 0.58
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.51
     Spear of Desolation:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
       win: 0.5
       pick: 0.0

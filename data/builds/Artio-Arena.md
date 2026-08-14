@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Soul Gem:
-      total: 0.75
+      total: 0.76
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -204,27 +204,27 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Toxic Blade
   - Riptalon
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
   - Golden Blade
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -234,12 +234,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Toxic Blade:
-      total: 0.6
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
     Riptalon:
       total: 0.62
       efficiency: 0.56
@@ -252,6 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
+    Erosion:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Pharaoh's Curse:
       total: 0.65
       efficiency: 0.57
@@ -399,10 +399,10 @@ builds:
   archetype: str-int
   slot_order:
   - Spectral Armor
-  - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Spectral Armor
@@ -412,8 +412,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -429,12 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Amanita Charm:
-      total: 0.79
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.95
     Erosion:
       total: 0.61
       efficiency: 0.52
@@ -453,6 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Soul Gem:
+      total: 0.79
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
     Triton's Conch:
       total: 0.62
       efficiency: 0.45

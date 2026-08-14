@@ -39,7 +39,7 @@ builds:
       fit: 1.0
     The Cosmic Horror:
       total: 0.68
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -106,7 +106,7 @@ builds:
       fit: 0.78
     The Cosmic Horror:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -188,7 +188,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.61
+      total: 0.62
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -242,7 +242,7 @@ builds:
       fit: 1.0
     The Cosmic Horror:
       total: 0.71
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
+  - Totem of Death
   - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Screeching Gargoyle
+  - Totem of Death
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -358,12 +358,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.54
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Genji's Guard:
       total: 0.6
       efficiency: 0.71
@@ -388,6 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
+    Totem of Death:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -561,7 +561,7 @@ builds:
       fit: 1.0
     The Cosmic Horror:
       total: 0.68
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.77

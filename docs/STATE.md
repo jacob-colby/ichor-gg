@@ -254,6 +254,14 @@ wiki lists with no stats). All four are real properties of the source data,
 not defects, and none reaches a build. Treat "4 findings, all of them these"
 as green; treat a fifth as news.
 
+**Two sources, two spellings.** The community source and our item notes
+disagree on apostrophes and casing, and a failed join reads as "this god's
+players never buy it" rather than as a spelling problem — 22 of 1,566 community
+sightings were being dropped that way. `notes.canonicalise_community_items`
+folds them at INGEST so exactly one place knows, and everything downstream
+joins on one spelling. It only rewrites on an exact folded match, so a
+genuinely new item still reaches the untracked detector.
+
 **Adding a new item is manual by design.** `refresh_all` only re-pulls what
 already has a note, so nothing can learn an item exists. Two detectors close
 that loop and both should stay green: `--discover-items` scans the wiki cache,
@@ -269,7 +277,7 @@ numbers in the file.
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (559) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (573) ·
 `cd viewer && npm test -- --run` (614).
 
 ---
@@ -279,7 +287,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (559) ·
 | | |
 |---|---|
 | Gods tracked | 87 of 89 on the roster |
-| Items | 220 |
+| Items | 221 |
 | Build groups | 261 (87 gods × 3 modes) |
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int |
 | Conquest gods placed | 87 / 87 |
@@ -291,7 +299,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (559) ·
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
-| Tests | 559 pipeline · 614 viewer |
+| Tests | 573 pipeline · 614 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

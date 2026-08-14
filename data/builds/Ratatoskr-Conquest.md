@@ -117,7 +117,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Reaper, Hydra''s Lament, Titan''s Bane, Pendulum Blade, Tekko-Kagi,
-    Runeforged Hammer, Lernaean Bow, Damaru, Avatar''s Parashu, Golden Blade, Avenging
+    Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden Blade, Avenging
     Blade, Shield Splitter, Arondight, Riptalon, Dominance, Eye of the Storm, Tyrfing,
     Breastplate of Valor, Silverbranch Bow, Berserker''s Shield, Deathbringer, Transcendence.'
   slot_scores:
@@ -140,7 +140,7 @@ builds:
       pick: 0.36
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.62
       efficiency: 0.66
       win: 0.5
       pick: 0.2
@@ -187,8 +187,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Hydra''s Lament, Breastplate of Valor, The Reaper, Pendulum Blade, Riptalon,
-    Titan''s Bane, Runeforged Hammer, Silverbranch Bow, Tekko-Kagi, Freya''s Tears,
-    Berserker''s Shield, Lernaean Bow, Damaru, Arondight, Shield of the Phoenix, Kinetic
+    Titan''s Bane, Runeforged Hammer, Silverbranch Bow, Freya''s Tears, Tekko-Kagi,
+    Berserker''s Shield, Damaru, Lernaean Bow, Arondight, Shield of the Phoenix, Kinetic
     Cuirass, Golden Blade, Amanita Charm, Screeching Gargoyle, Oni Hunter''s Garb,
     Chandra''s Grace, Avatar''s Parashu, Eye of Providence.'
   slot_scores:
@@ -258,7 +258,7 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Berserker''s
     Shield, The Reaper, Oni Hunter''s Garb, Runeforged Hammer, Breastplate of Valor,
     Eye of the Storm, Riptalon, Chandra''s Grace, Shifter''s Shield, Shield Splitter,
-    Erosion, Phoenix Feather, Freya''s Tears, Eye of Providence, Spectral Armor, Pharaoh''s
+    Erosion, Freya''s Tears, Phoenix Feather, Eye of Providence, Spectral Armor, Pharaoh''s
     Curse, Draconic Scale, Hydra''s Lament, Golden Blade, Leviathan''s Hide, Avenging
     Blade.'
   slot_scores:
@@ -327,7 +327,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Reaper, Titan''s Bane, Tekko-Kagi, Pendulum Blade, Riptalon,
     Silverbranch Bow, Avenging Blade, Hydra''s Lament, Avatar''s Parashu, Runeforged
-    Hammer, Lernaean Bow, Damaru, Breastplate of Valor, Screeching Gargoyle, Toxic
+    Hammer, Damaru, Lernaean Bow, Breastplate of Valor, Screeching Gargoyle, Toxic
     Blade, Berserker''s Shield, Golden Blade, Shield Splitter, Stone of Binding, Dominance,
     Eye of the Storm, Oath-Sworn Spear, Tyrfing.'
   slot_scores:
@@ -350,7 +350,7 @@ builds:
       pick: 0.36
       fit: 0.38
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.62
       efficiency: 0.66
       win: 0.5
       pick: 0.2
@@ -466,7 +466,7 @@ builds:
     + fit + win/pick). Underrated for this god: Hydra''s Lament, Breastplate of Valor,
     Freya''s Tears, Shield of the Phoenix, Pendulum Blade, Arondight, Screeching Gargoyle,
     Chandra''s Grace, Berserker''s Shield, Gladiator''s Shield, The Reaper, Runeforged
-    Hammer, Riptalon, Lernaean Bow, Damaru, Prophetic Cloak, Kinetic Cuirass, Amanita
+    Hammer, Riptalon, Damaru, Lernaean Bow, Prophetic Cloak, Kinetic Cuirass, Amanita
     Charm, Silverbranch Bow, Oni Hunter''s Garb, Eye of Providence, Regrowth Striders,
     Golden Blade.'
   slot_scores:
@@ -534,7 +534,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Reaper, Hydra''s Lament, Titan''s Bane, Pendulum
-    Blade, Tekko-Kagi, Runeforged Hammer, Lernaean Bow, Damaru, Avatar''s Parashu,
+    Blade, Tekko-Kagi, Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s Parashu,
     Golden Blade, Avenging Blade, Shield Splitter, Arondight, Riptalon, Dominance,
     Eye of the Storm, Tyrfing, Silverbranch Bow, Breastplate of Valor, Berserker''s
     Shield, Deathbringer, Transcendence.'
@@ -558,7 +558,7 @@ builds:
       pick: 0.36
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.62
       efficiency: 0.66
       win: 0.5
       pick: 0.2

@@ -118,7 +118,7 @@ builds:
       fit: 0.56
     The Cosmic Horror:
       total: 0.49
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -242,7 +242,7 @@ builds:
       fit: 0.66
     The Cosmic Horror:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.56

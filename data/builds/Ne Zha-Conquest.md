@@ -117,9 +117,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Breastplate of Valor, The Crusher, The Reaper, Pendulum Blade, Kinetic
-    Cuirass, Runeforged Hammer, Tekko-Kagi, Lernaean Bow, Damaru, Arondight, Golden
+    Cuirass, Runeforged Hammer, Tekko-Kagi, Damaru, Lernaean Bow, Arondight, Golden
     Blade, Avatar''s Parashu, Avenging Blade, Shield Splitter, Riptalon, Dominance,
-    Eye of the Storm, Tyrfing, Silverbranch Bow, Berserker''s Shield, Freya''s Tears,
+    Eye of the Storm, Tyrfing, Silverbranch Bow, Freya''s Tears, Berserker''s Shield,
     Shield of the Phoenix, Barbed Carver.'
   slot_scores:
     Genji's Guard:
@@ -188,8 +188,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Breastplate of Valor, The Crusher, Kinetic Cuirass, The Reaper, Pendulum
-    Blade, Riptalon, Runeforged Hammer, Silverbranch Bow, Tekko-Kagi, Freya''s Tears,
-    Berserker''s Shield, Lernaean Bow, Damaru, Arondight, Shield of the Phoenix, Golden
+    Blade, Riptalon, Runeforged Hammer, Silverbranch Bow, Freya''s Tears, Tekko-Kagi,
+    Berserker''s Shield, Damaru, Lernaean Bow, Arondight, Shield of the Phoenix, Golden
     Blade, Amanita Charm, Screeching Gargoyle, Oni Hunter''s Garb, Chandra''s Grace,
     Avatar''s Parashu, Eye of Providence, Avenging Blade, Shield Splitter.'
   slot_scores:
@@ -224,7 +224,7 @@ builds:
       pick: 0.09
       fit: 0.22
     The Crusher:
-      total: 0.57
+      total: 0.58
       efficiency: 0.63
       win: 0.57
       pick: 0.0
@@ -328,9 +328,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Breastplate of Valor, The Crusher, The Reaper, Pendulum Blade, Tekko-Kagi,
     Riptalon, Kinetic Cuirass, Silverbranch Bow, Avenging Blade, Avatar''s Parashu,
-    Screeching Gargoyle, Runeforged Hammer, Lernaean Bow, Damaru, Berserker''s Shield,
+    Screeching Gargoyle, Runeforged Hammer, Damaru, Lernaean Bow, Berserker''s Shield,
     Golden Blade, Arondight, Toxic Blade, Stone of Binding, Freya''s Tears, Shield
-    Splitter, Void Shield, Amanita Charm, Dominance.'
+    Splitter, Void Shield, Amanita Charm, Shield of the Phoenix.'
   slot_scores:
     Genji's Guard:
       total: 0.64
@@ -351,7 +351,7 @@ builds:
       pick: 0.37
       fit: 1.0
     The Reaper:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.57
       pick: 0.0
@@ -374,13 +374,13 @@ builds:
   slot_order:
   - Golden Blade
   - Genji's Guard
-  - Berserker's Shield
   - Breastplate of Valor
   - Riptalon
   - Silverbranch Bow
+  - The Crusher
   flex_slots:
   - Golden Blade
-  - Berserker's Shield
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -389,17 +389,17 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Breastplate of Valor, Riptalon, Silverbranch Bow, Golden Blade, Berserker''s
-    Shield, The Crusher, Kinetic Cuirass, Tyrfing, Lernaean Bow, Tekko-Kagi, Pharaoh''s
-    Curse, Dominance, Toxic Blade, The Reaper, Runeforged Hammer, Shogun''s Ofuda,
-    Damaru, Eros'' Bow, Freya''s Tears, Amanita Charm, Oni Hunter''s Garb, Qin''s
-    Blade, Eye of Providence, Shield of the Phoenix, Yogi''s Necklace.'
+    this god: Breastplate of Valor, Riptalon, Silverbranch Bow, Golden Blade, The
+    Crusher, Berserker''s Shield, Kinetic Cuirass, Tyrfing, Lernaean Bow, Tekko-Kagi,
+    Pharaoh''s Curse, Dominance, Toxic Blade, The Reaper, Runeforged Hammer, Shogun''s
+    Ofuda, Damaru, Freya''s Tears, Eros'' Bow, Amanita Charm, Oni Hunter''s Garb,
+    Qin''s Blade, Eye of Providence, Shield of the Phoenix, Yogi''s Necklace.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -413,12 +413,6 @@ builds:
       win: 0.8
       pick: 0.16
       fit: 0.1
-    Berserker's Shield:
-      total: 0.54
-      efficiency: 0.68
-      win: 0.57
-      pick: 0.0
-      fit: 0.29
     Breastplate of Valor:
       total: 0.7
       efficiency: 0.66
@@ -437,6 +431,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.64
+    The Crusher:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.57
+      pick: 0.0
+      fit: 0.41
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -467,7 +467,7 @@ builds:
     + fit + win/pick). Underrated for this god: Breastplate of Valor, The Crusher,
     Freya''s Tears, Kinetic Cuirass, Shield of the Phoenix, Pendulum Blade, Arondight,
     Screeching Gargoyle, Chandra''s Grace, Berserker''s Shield, Gladiator''s Shield,
-    The Reaper, Runeforged Hammer, Riptalon, Lernaean Bow, Damaru, Prophetic Cloak,
+    The Reaper, Runeforged Hammer, Riptalon, Damaru, Lernaean Bow, Prophetic Cloak,
     Amanita Charm, Silverbranch Bow, Oni Hunter''s Garb, Eye of Providence, Regrowth
     Striders, Golden Blade, Tekko-Kagi.'
   slot_scores:
@@ -502,7 +502,7 @@ builds:
       pick: 0.0
       fit: 0.5
     The Crusher:
-      total: 0.54
+      total: 0.55
       efficiency: 0.63
       win: 0.57
       pick: 0.0
@@ -535,9 +535,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, The Reaper, Pendulum Blade, Runeforged Hammer,
-    Tekko-Kagi, Lernaean Bow, Damaru, Arondight, Breastplate of Valor, Golden Blade,
+    Tekko-Kagi, Damaru, Lernaean Bow, Arondight, Breastplate of Valor, Golden Blade,
     Avatar''s Parashu, Avenging Blade, Shield Splitter, Riptalon, Dominance, Eye of
-    the Storm, Tyrfing, Silverbranch Bow, Berserker''s Shield, Freya''s Tears, Shield
+    the Storm, Tyrfing, Silverbranch Bow, Freya''s Tears, Berserker''s Shield, Shield
     of the Phoenix, Barbed Carver, Kinetic Cuirass.'
   slot_scores:
     Jotunn's Revenge:

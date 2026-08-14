@@ -17,8 +17,8 @@ builds:
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.46
     Damaru:
-      total: 0.49
+      total: 0.5
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -294,7 +294,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.6
     The Crusher:
-      total: 0.57
+      total: 0.58
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Genji's Guard:
-      total: 0.49
+      total: 0.5
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -604,8 +604,8 @@ builds:
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm

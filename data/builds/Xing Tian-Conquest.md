@@ -120,7 +120,7 @@ builds:
     Garb, Shield of the Phoenix, Eye of Providence, Draconic Scale, Spectral Armor,
     Soul Gem, Mantle Of Discord, Leviathan''s Hide, Stone of Binding, Midgardian Mail,
     Helm of Radiance, Magi''s Cloak, Gladiator''s Shield, Ancile, Xibalban Effigy,
-    Prophetic Cloak, Void Shield, Screeching Gargoyle.'
+    Prophetic Cloak, Screeching Gargoyle, Void Shield.'
   slot_scores:
     Yogi's Necklace:
       total: 0.6
@@ -191,7 +191,7 @@ builds:
     Grimoire, Rod of Asclepius, Oni Hunter''s Garb, Chandra''s Grace, Erosion, Eye
     of Providence, Draconic Scale, Phoenix Feather, Spectral Armor, Leviathan''s Hide,
     Blood-Bound Book, Lifebinder, Bancroft''s Talon, Midgardian Mail, Glorious Pridwen,
-    Gladiator''s Shield, Ancile, Jade Scepter, Void Shield.'
+    Gladiator''s Shield, Ancile, Jade Scepter, Helm of Radiance.'
   slot_scores:
     Yogi's Necklace:
       total: 0.61
@@ -206,7 +206,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Shield of the Phoenix:
-      total: 0.62
+      total: 0.63
       efficiency: 0.57
       win: 0.64
       pick: 0.0
@@ -258,7 +258,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita Charm, Stone
     of Binding, Spear of the Magus, Screeching Gargoyle, Void Shield, The Cosmic Horror,
-    Oni Hunter''s Garb, Void Stone, Shield of the Phoenix, Spear of Desolation, Erosion,
+    Oni Hunter''s Garb, Shield of the Phoenix, Void Stone, Spear of Desolation, Erosion,
     Obsidian Shard, Eye of Providence, Spectral Armor, Draconic Scale, Leviathan''s
     Hide, Helm of Radiance, Mantle Of Discord, Midgardian Mail, The World Stone.'
   slot_scores:
@@ -328,8 +328,8 @@ builds:
     this god: Yogi''s Necklace, Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm,
     Oni Hunter''s Garb, Soul Gem, Shield of the Phoenix, Spectral Armor, Erosion,
     Bracer of The Abyss, Eye of Providence, Helm of Radiance, Draconic Scale, Leviathan''s
-    Hide, Death Metal, Midgardian Mail, Mantle Of Discord, Stone of Binding, Spear
-    of the Magus, Rod of Asclepius, Blood-Bound Book, Bragi''s Harp, Bancroft''s Talon.'
+    Hide, Death Metal, Midgardian Mail, Mantle Of Discord, Spear of the Magus, Stone
+    of Binding, Blood-Bound Book, Rod of Asclepius, Bragi''s Harp, Bancroft''s Talon.'
   slot_scores:
     Yogi's Necklace:
       total: 0.58
@@ -397,9 +397,9 @@ builds:
     + fit + win/pick). Underrated for this god: Kinetic Cuirass, Shield of the Phoenix,
     Soul Gem, Amanita Charm, Gluttonous Grimoire, Oni Hunter''s Garb, Screeching Gargoyle,
     Chronos'' Pendant, Spear of Desolation, Chandra''s Grace, Gladiator''s Shield,
-    Erosion, Spectral Armor, Eye of Providence, Prophetic Cloak, Draconic Scale, Helm
-    of Radiance, Gem of Focus, Leviathan''s Hide, Mantle Of Discord, Midgardian Mail,
-    Rod of Asclepius, Stone of Binding.'
+    Erosion, Spectral Armor, Prophetic Cloak, Eye of Providence, Draconic Scale, Helm
+    of Radiance, Gem of Focus, Totem of Death, Leviathan''s Hide, Mantle Of Discord,
+    Rod of Asclepius, Midgardian Mail.'
   slot_scores:
     Yogi's Necklace:
       total: 0.59
@@ -468,10 +468,10 @@ builds:
     Grimoire, Berserker''s Shield, The Crusher, Kinetic Cuirass, Amanita Charm, Soul
     Gem, Hydra''s Lament, Oni Hunter''s Garb, Runeforged Hammer, Shield Splitter,
     Pharaoh''s Curse, Golden Blade, Shield of the Phoenix, Lernaean Bow, Eye of the
-    Storm, Erosion, Spectral Armor, Death Metal, Spear of the Magus, Eye of Providence,
-    Shogun''s Ofuda, The Reaper, Draconic Scale, Damaru, The Cosmic Horror, Avenging
+    Storm, Erosion, Death Metal, Spectral Armor, Spear of the Magus, Eye of Providence,
+    Shogun''s Ofuda, Damaru, Draconic Scale, The Reaper, The Cosmic Horror, Avenging
     Blade, Helm of Radiance, Riptalon, Leviathan''s Hide, Midgardian Mail, Mantle
-    Of Discord, Stone of Binding, Heartseeker, Silverbranch Bow.'
+    Of Discord, Stone of Binding, Heartseeker, Silverbranch Bow, Spear of Desolation.'
   slot_scores:
     Yogi's Necklace:
       total: 0.59
@@ -486,7 +486,7 @@ builds:
       pick: 0.0
       fit: 0.35
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.66
       win: 0.64
       pick: 0.0
@@ -539,11 +539,12 @@ builds:
     + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge,
     Kinetic Cuirass, The Crusher, Amanita Charm, Soul Gem, Berserker''s Shield, Spear
     of the Magus, Oni Hunter''s Garb, Hydra''s Lament, Death Metal, The Cosmic Horror,
-    Runeforged Hammer, Shield Splitter, Helm of Radiance, Shield of the Phoenix, Spear
+    Runeforged Hammer, Helm of Radiance, Shield Splitter, Shield of the Phoenix, Spear
     of Desolation, Erosion, Spectral Armor, Eye of the Storm, Rod of Asclepius, Eye
-    of Providence, Pharaoh''s Curse, Obsidian Shard, Jade Scepter, Draconic Scale,
-    Chronos'' Pendant, Golden Blade, Leviathan''s Hide, Blood-Bound Book, Lernaean
-    Bow, The Reaper, Damaru, Bancroft''s Talon, Midgardian Mail, Mantle Of Discord.'
+    of Providence, Pharaoh''s Curse, Jade Scepter, Obsidian Shard, Draconic Scale,
+    Chronos'' Pendant, Golden Blade, Leviathan''s Hide, Blood-Bound Book, Damaru,
+    Lernaean Bow, The Reaper, Bancroft''s Talon, Wish-Granting Pearl, Midgardian Mail,
+    Ethereal Staff.'
   slot_scores:
     Yogi's Necklace:
       total: 0.59
@@ -612,7 +613,7 @@ builds:
     Erosion, Oni Hunter''s Garb, Shield of the Phoenix, Eye of Providence, Draconic
     Scale, Spectral Armor, Soul Gem, Mantle Of Discord, Leviathan''s Hide, Stone of
     Binding, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s Shield,
-    Ancile, Xibalban Effigy, Prophetic Cloak, Void Shield, Screeching Gargoyle.'
+    Ancile, Xibalban Effigy, Prophetic Cloak, Screeching Gargoyle, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.57

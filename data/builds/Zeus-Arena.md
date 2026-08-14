@@ -242,7 +242,7 @@ builds:
       fit: 0.71
     The Cosmic Horror:
       total: 0.59
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.4
     Nimble Ring:
-      total: 0.48
+      total: 0.49
       efficiency: 0.49
       win: 0.5
       pick: 0.0

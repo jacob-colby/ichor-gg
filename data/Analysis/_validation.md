@@ -2,17 +2,17 @@
 
 Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 
-**Mean coverage:** 43%  ·  **Win-weighted coverage:** 47%  ·  **Pooled rank corr:** 0.67 (n=407)
+**Mean coverage:** 43%  ·  **Win-weighted coverage:** 47%  ·  **Pooled rank corr:** 0.68 (n=416)
 
 | God | Coverage | Win-weighted | Community items |
 |---|---|---|---|
 | Achilles | 33% | 46% | 6 |
 | Agni | 60% | 65% | 5 |
-| Ah Puch | 75% | 78% | 4 |
+| Ah Puch | 60% | 68% | 5 |
 | Aladdin | 20% | 32% | 5 |
 | Amaterasu | 25% | 28% | 4 |
 | Anhur | 40% | 44% | 5 |
-| Anubis | 75% | 75% | 4 |
+| Anubis | 60% | 64% | 5 |
 | Aphrodite | 50% | 58% | 4 |
 | Apollo | 20% | 26% | 5 |
 | Ares | 33% | 35% | 3 |
@@ -29,13 +29,13 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Cerberus | 100% | 100% | 4 |
 | Cernunnos | 40% | 48% | 5 |
 | Chaac | 0% | 0% | 5 |
-| Charon | 33% | 34% | 3 |
+| Charon | 25% | 28% | 4 |
 | Chiron | 17% | 19% | 6 |
 | Chronos | 60% | 68% | 5 |
 | Cupid | 20% | 23% | 5 |
 | Da Ji | 60% | 62% | 5 |
 | Danzaburou | 20% | 30% | 5 |
-| Discordia | 60% | 62% | 5 |
+| Discordia | 67% | 71% | 6 |
 | Eset | 40% | 43% | 5 |
 | Fenrir | 40% | 45% | 5 |
 | Ganesha | 20% | 24% | 5 |
@@ -54,15 +54,15 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Janus | 60% | 63% | 5 |
 | Jing Wei | 20% | 21% | 5 |
 | Jormungandr | 25% | 26% | 4 |
-| Kali | 50% | 58% | 4 |
-| Khepri | 0% | 0% | 3 |
+| Kali | 40% | 46% | 5 |
+| Khepri | 20% | 27% | 5 |
 | Kukulkan | 60% | 64% | 5 |
 | Loki | 80% | 82% | 5 |
 | Medusa | 40% | 44% | 5 |
 | Mercury | 40% | 46% | 5 |
-| Merlin | 50% | 51% | 4 |
+| Merlin | 40% | 42% | 5 |
 | Mordred | 60% | 65% | 5 |
-| Morgan Le Fay | 50% | 51% | 4 |
+| Morgan Le Fay | 40% | 41% | 5 |
 | Ne Zha | 20% | 19% | 5 |
 | Neith | 0% | 0% | 5 |
 | Nemesis | 25% | 24% | 4 |

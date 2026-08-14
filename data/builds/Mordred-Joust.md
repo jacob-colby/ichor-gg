@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.87
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -285,8 +285,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -359,7 +359,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.71
       win: 0.5
       pick: 0.0

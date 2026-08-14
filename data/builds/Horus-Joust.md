@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.47
     Shield of the Phoenix:
-      total: 0.71
+      total: 0.72
       efficiency: 0.57
       win: 0.5
       pick: 0.0

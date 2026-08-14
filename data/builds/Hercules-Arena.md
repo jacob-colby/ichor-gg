@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Stone of Binding
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
+  - The Crusher
   - Amanita Charm
   - Erosion
   flex_slots:
   - Jotunn's Revenge
-  - Stone of Binding
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Stone of Binding — magical protection
+    swap_item: Stone of Binding
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,12 +163,6 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Stone of Binding:
-      total: 0.6
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.66
@@ -187,6 +181,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.98
+    The Crusher:
+      total: 0.61
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Amanita Charm:
       total: 0.81
       efficiency: 0.63
@@ -294,7 +294,7 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.86
     Freya's Tears:
-      total: 0.61
+      total: 0.62
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -530,15 +530,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Avenging Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Avenging Blade
   - Jotunn's Revenge
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -547,20 +547,14 @@ builds:
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Avenging Blade:
-      total: 0.61
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.66
@@ -579,6 +573,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Spectral Armor:
+      total: 0.6
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Amanita Charm:
       total: 0.79
       efficiency: 0.63
@@ -613,8 +613,8 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -718,7 +718,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Stampede:
-      total: 0.6
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0

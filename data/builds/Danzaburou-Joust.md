@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.7
+      total: 0.71
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Genji's Guard:
-      total: 0.49
+      total: 0.5
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -471,7 +471,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Divine Ruin
-  - Jotunn's Revenge
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -584,7 +584,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.59
       win: 0.5
       pick: 0.0

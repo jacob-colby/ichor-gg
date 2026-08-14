@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.38
     The Reaper:
-      total: 0.61
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.71
     Berserker's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.68
       win: 0.5
       pick: 0.0
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Genji's Guard:
-      total: 0.49
+      total: 0.5
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.38
     The Reaper:
-      total: 0.61
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0

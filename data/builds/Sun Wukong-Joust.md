@@ -145,7 +145,7 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - The Crusher
+  - Void Stone
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.55
+      total: 0.56
       efficiency: 0.59
       win: 0.5
       pick: 0.0

@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.72
     Damaru:
-      total: 0.5
+      total: 0.51
       efficiency: 0.58
       win: 0.5
       pick: 0.0

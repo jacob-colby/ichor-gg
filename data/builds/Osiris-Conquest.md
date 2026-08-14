@@ -96,27 +96,27 @@ builds:
   - Golden Blade
   - Genji's Guard
   - Berserker's Shield
-  - Kinetic Cuirass
+  - Jotunn's Revenge
   - Draconic Scale
   - The Crusher
   flex_slots:
-  - Kinetic Cuirass
   - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, The Crusher, Jotunn''s Revenge, Amanita Charm, Pharaoh''s
+    this god: The Crusher, Jotunn''s Revenge, Kinetic Cuirass, Amanita Charm, Pharaoh''s
     Curse, Lernaean Bow, Runeforged Hammer, Damaru, Oni Hunter''s Garb, Hydra''s Lament,
     Breastplate of Valor, Eye of the Storm, Shield Splitter, Shield of the Phoenix,
     Spectral Armor, Freya''s Tears, Dominance, Tyrfing, Erosion, Riptalon, Yogi''s
@@ -140,12 +140,12 @@ builds:
       win: 0.4
       pick: 0.34
       fit: 0.45
-    Kinetic Cuirass:
+    Jotunn's Revenge:
       total: 0.46
-      efficiency: 0.59
+      efficiency: 0.66
       win: 0.42
       pick: 0.0
-      fit: 0.45
+      fit: 0.3
     Draconic Scale:
       total: 0.55
       efficiency: 0.5
@@ -189,8 +189,8 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Riptalon, Pharaoh''s
     Curse, The Crusher, Jotunn''s Revenge, Oni Hunter''s Garb, Runeforged Hammer,
-    The Reaper, Chandra''s Grace, Lernaean Bow, Breastplate of Valor, Damaru, Phoenix
-    Feather, Freya''s Tears, Hydra''s Lament, Eye of the Storm, Shield Splitter, Spectral
+    The Reaper, Chandra''s Grace, Lernaean Bow, Breastplate of Valor, Damaru, Freya''s
+    Tears, Phoenix Feather, Hydra''s Lament, Eye of the Storm, Shield Splitter, Spectral
     Armor, Erosion, Eye of Providence, Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
@@ -258,9 +258,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Jotunn''s Revenge, Kinetic Cuirass, Riptalon, Amanita
     Charm, Silverbranch Bow, Stone of Binding, Pharaoh''s Curse, Void Shield, Lernaean
-    Bow, Runeforged Hammer, The Reaper, Oni Hunter''s Garb, Screeching Gargoyle, Tekko-Kagi,
-    Breastplate of Valor, Hydra''s Lament, Damaru, Void Stone, Heartseeker, Spectral
-    Armor, Freya''s Tears, Shield of the Phoenix, Toxic Blade, Avenging Blade.'
+    Bow, Runeforged Hammer, The Reaper, Oni Hunter''s Garb, Screeching Gargoyle, Breastplate
+    of Valor, Hydra''s Lament, Tekko-Kagi, Damaru, Void Stone, Heartseeker, Freya''s
+    Tears, Spectral Armor, Shield of the Phoenix, Toxic Blade, Avenging Blade.'
   slot_scores:
     Golden Blade:
       total: 0.48
@@ -326,9 +326,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Kinetic Cuirass, Pharaoh''s Curse, Amanita Charm, The Crusher,
-    Jotunn''s Revenge, Lernaean Bow, Silverbranch Bow, Oni Hunter''s Garb, Tyrfing,
-    Breastplate of Valor, Runeforged Hammer, Hydra''s Lament, Damaru, Spectral Armor,
-    Freya''s Tears, Shield of the Phoenix, Eros'' Bow, Dominance, Yogi''s Necklace,
+    Jotunn''s Revenge, Lernaean Bow, Silverbranch Bow, Tyrfing, Oni Hunter''s Garb,
+    Breastplate of Valor, Runeforged Hammer, Hydra''s Lament, Damaru, Freya''s Tears,
+    Spectral Armor, Shield of the Phoenix, Eros'' Bow, Dominance, Yogi''s Necklace,
     Toxic Blade, Eye of the Storm, Erosion, Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
@@ -464,7 +464,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Kinetic Cuirass, The Crusher, Jotunn''s Revenge, Amanita
+    Underrated for this god: The Crusher, Jotunn''s Revenge, Kinetic Cuirass, Amanita
     Charm, Pharaoh''s Curse, Lernaean Bow, Runeforged Hammer, Damaru, Oni Hunter''s
     Garb, Hydra''s Lament, Breastplate of Valor, Eye of the Storm, Shield Splitter,
     Shield of the Phoenix, Spectral Armor, Freya''s Tears, Dominance, Avenging Blade,

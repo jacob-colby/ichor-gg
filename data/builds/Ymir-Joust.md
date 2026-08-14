@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Stygian Anchor
   - Kinetic Cuirass
+  - Freya's Tears
   - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Shifter's Shield
-  - Stygian Anchor
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,23 +26,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.61
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
     Kinetic Cuirass:
       total: 0.71
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Freya's Tears:
+      total: 0.62
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Shifter's Shield:
       total: 0.62
       efficiency: 0.52
@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Shield of the Phoenix:
-      total: 0.74
+      total: 0.75
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -275,8 +275,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Stygian Anchor
   - Kinetic Cuirass
+  - Freya's Tears
   - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
   - Shifter's Shield
-  - Stygian Anchor
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -483,23 +483,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.61
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
     Kinetic Cuirass:
       total: 0.71
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Freya's Tears:
+      total: 0.62
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Shifter's Shield:
       total: 0.62
       efficiency: 0.52

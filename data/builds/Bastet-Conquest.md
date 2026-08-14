@@ -75,7 +75,7 @@ builds:
   - name: Bluestone Brooch
     pick_rate: 0.27
     win_rate: 0.48
-  - name: Pendulum of The Ages
+  - name: Pendulum of the Ages
     pick_rate: 0.11
     win_rate: 0.58
   source_url: https://smitebrain.com/gods/bastet/
@@ -116,8 +116,8 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Hydra''s Lament, Pendulum Blade, Tekko-Kagi, Runeforged Hammer, Lernaean
-    Bow, Damaru, Avatar''s Parashu, Golden Blade, Avenging Blade, Shield Splitter,
+    this god: Hydra''s Lament, Pendulum Blade, Tekko-Kagi, Runeforged Hammer, Damaru,
+    Lernaean Bow, Avatar''s Parashu, Golden Blade, Avenging Blade, Shield Splitter,
     Arondight, Riptalon, Dominance, Eye of the Storm, Tyrfing, Silverbranch Bow, Breastplate
     of Valor, Berserker''s Shield, Deathbringer, Bloodforge, Musashi''s Dual Swords.'
   slot_scores:
@@ -187,8 +187,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Hydra''s Lament, Breastplate of Valor, Pendulum Blade, Riptalon, Runeforged
-    Hammer, Silverbranch Bow, Tekko-Kagi, Freya''s Tears, Berserker''s Shield, Lernaean
-    Bow, Damaru, Arondight, Shield of the Phoenix, Kinetic Cuirass, Golden Blade,
+    Hammer, Silverbranch Bow, Freya''s Tears, Tekko-Kagi, Berserker''s Shield, Damaru,
+    Lernaean Bow, Arondight, Shield of the Phoenix, Kinetic Cuirass, Golden Blade,
     Amanita Charm, Screeching Gargoyle, Oni Hunter''s Garb, Chandra''s Grace, Avatar''s
     Parashu, Eye of Providence, Avenging Blade, Shield Splitter.'
   slot_scores:
@@ -211,7 +211,7 @@ builds:
       pick: 0.5
       fit: 0.78
     Hydra's Lament:
-      total: 0.54
+      total: 0.55
       efficiency: 0.58
       win: 0.58
       pick: 0.0
@@ -223,7 +223,7 @@ builds:
       pick: 0.22
       fit: 0.56
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.63
       win: 0.58
       pick: 0.3
@@ -257,8 +257,8 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Shifter''s Shield,
     Berserker''s Shield, Oni Hunter''s Garb, Runeforged Hammer, Eye of the Storm,
-    Riptalon, Chandra''s Grace, Shield Splitter, Erosion, Phoenix Feather, Freya''s
-    Tears, Breastplate of Valor, Eye of Providence, Spectral Armor, Pharaoh''s Curse,
+    Riptalon, Chandra''s Grace, Shield Splitter, Erosion, Freya''s Tears, Phoenix
+    Feather, Breastplate of Valor, Eye of Providence, Spectral Armor, Pharaoh''s Curse,
     Draconic Scale, Hydra''s Lament, Golden Blade, Leviathan''s Hide, Avenging Blade,
     Midgardian Mail, Shogun''s Ofuda.'
   slot_scores:
@@ -275,7 +275,7 @@ builds:
       pick: 0.0
       fit: 0.66
     The Reaper:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
       win: 0.62
       pick: 0.22
@@ -326,10 +326,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Tekko-Kagi, Pendulum Blade, Riptalon, Silverbranch Bow, Avenging
-    Blade, Avatar''s Parashu, Hydra''s Lament, Runeforged Hammer, Lernaean Bow, Damaru,
-    Toxic Blade, Screeching Gargoyle, Breastplate of Valor, Berserker''s Shield, Golden
-    Blade, Shield Splitter, Stone of Binding, Dominance, Eye of the Storm, Oath-Sworn
-    Spear, Tyrfing, Kinetic Cuirass, Arondight.'
+    Blade, Hydra''s Lament, Avatar''s Parashu, Runeforged Hammer, Damaru, Lernaean
+    Bow, Screeching Gargoyle, Breastplate of Valor, Toxic Blade, Berserker''s Shield,
+    Golden Blade, Shield Splitter, Stone of Binding, Dominance, Eye of the Storm,
+    Oath-Sworn Spear, Tyrfing, Arondight, Kinetic Cuirass.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
@@ -413,7 +413,7 @@ builds:
       pick: 0.0
       fit: 0.31
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
       win: 0.52
       pick: 0.5
@@ -466,7 +466,7 @@ builds:
     + fit + win/pick). Underrated for this god: Hydra''s Lament, Breastplate of Valor,
     Freya''s Tears, Shield of the Phoenix, Pendulum Blade, Arondight, Screeching Gargoyle,
     Chandra''s Grace, Berserker''s Shield, Gladiator''s Shield, Runeforged Hammer,
-    Riptalon, Lernaean Bow, Damaru, Prophetic Cloak, Kinetic Cuirass, Amanita Charm,
+    Riptalon, Damaru, Lernaean Bow, Prophetic Cloak, Kinetic Cuirass, Amanita Charm,
     Silverbranch Bow, Oni Hunter''s Garb, Eye of Providence, Regrowth Striders, Golden
     Blade, Tekko-Kagi.'
   slot_scores:
@@ -534,7 +534,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Hydra''s Lament, Pendulum Blade, Tekko-Kagi, Runeforged
-    Hammer, Lernaean Bow, Damaru, Avatar''s Parashu, Golden Blade, Avenging Blade,
+    Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden Blade, Avenging Blade,
     Shield Splitter, Arondight, Riptalon, Dominance, Eye of the Storm, Tyrfing, Silverbranch
     Bow, Breastplate of Valor, Berserker''s Shield, Deathbringer, Bloodforge, Musashi''s
     Dual Swords.'

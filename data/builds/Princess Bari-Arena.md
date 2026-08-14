@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.55
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -464,14 +464,14 @@ builds:
   archetype: str-int
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
   - Jotunn's Revenge
   - Bragi's Harp
+  - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Jotunn's Revenge
-  - Toxic Blade
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,8 +483,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -494,12 +494,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.66
@@ -512,6 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Pharaoh's Curse:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Soul Gem:
       total: 0.79
       efficiency: 0.59

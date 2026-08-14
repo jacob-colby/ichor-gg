@@ -118,10 +118,10 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Stone of Binding, Freya''s Tears, Kinetic Cuirass, Amanita Charm, Gluttonous
     Grimoire, Shield of the Phoenix, Shifter''s Shield, Oni Hunter''s Garb, Erosion,
-    Eye of Providence, Draconic Scale, Spectral Armor, Soul Gem, Leviathan''s Hide,
-    Mantle Of Discord, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s
-    Shield, Prophetic Cloak, Screeching Gargoyle, Ancile, Xibalban Effigy, Void Shield,
-    Hide of the Nemean Lion.'
+    Eye of Providence, Draconic Scale, Spectral Armor, Soul Gem, Mantle Of Discord,
+    Leviathan''s Hide, Midgardian Mail, Helm of Radiance, Magi''s Cloak, Gladiator''s
+    Shield, Prophetic Cloak, Screeching Gargoyle, Ancile, Xibalban Effigy, Hide of
+    the Nemean Lion, Void Shield.'
   slot_scores:
     Stone of Binding:
       total: 0.62
@@ -167,33 +167,33 @@ builds:
   slot_order:
   - Stone of Binding
   - Stygian Anchor
-  - Kinetic Cuirass
+  - Breastplate of Valor
   - Shield of the Phoenix
   - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Shield of the Phoenix
-  - Kinetic Cuirass
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Spirit Robe — physical protection
+    swap_item: Spirit Robe
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Freya''s Tears, Shield of the Phoenix, Kinetic Cuirass,
     Soul Gem, Gluttonous Grimoire, Rod of Asclepius, Chandra''s Grace, Oni Hunter''s
-    Garb, Shifter''s Shield, Erosion, Eye of Providence, Draconic Scale, Phoenix Feather,
-    Spectral Armor, Blood-Bound Book, Leviathan''s Hide, Bancroft''s Talon, Lifebinder,
-    Midgardian Mail, Glorious Pridwen, Gladiator''s Shield, Ancile, Helm of Radiance,
-    Jade Scepter.'
+    Garb, Shifter''s Shield, Erosion, Eye of Providence, Phoenix Feather, Draconic
+    Scale, Spectral Armor, Blood-Bound Book, Leviathan''s Hide, Bancroft''s Talon,
+    Lifebinder, Glorious Pridwen, Midgardian Mail, Gladiator''s Shield, Ancile, Jade
+    Scepter, Helm of Radiance.'
   slot_scores:
     Stone of Binding:
       total: 0.61
@@ -207,12 +207,12 @@ builds:
       win: 1.0
       pick: 0.28
       fit: 0.42
-    Kinetic Cuirass:
+    Breastplate of Valor:
       total: 0.58
-      efficiency: 0.59
-      win: 0.56
-      pick: 0.0
-      fit: 0.78
+      efficiency: 0.66
+      win: 0.63
+      pick: 0.19
+      fit: 0.37
     Shield of the Phoenix:
       total: 0.59
       efficiency: 0.57
@@ -260,7 +260,7 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Stone of Binding, Gluttonous Grimoire, Freya''s Tears, Soul Gem,
     Kinetic Cuirass, Amanita Charm, Screeching Gargoyle, Spear of the Magus, Void
-    Shield, Oni Hunter''s Garb, The Cosmic Horror, Shield of the Phoenix, Spear of
+    Shield, The Cosmic Horror, Oni Hunter''s Garb, Shield of the Phoenix, Spear of
     Desolation, Void Stone, Shifter''s Shield, Erosion, Obsidian Shard, Eye of Providence,
     Spectral Armor, Draconic Scale, Leviathan''s Hide, Helm of Radiance, Mantle Of
     Discord, Midgardian Mail, The World Stone.'
@@ -398,12 +398,12 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Freya''s Tears, Stone of Binding,
-    Kinetic Cuirass, Shield of the Phoenix, Soul Gem, Amanita Charm, Gluttonous Grimoire,
-    Oni Hunter''s Garb, Screeching Gargoyle, Spear of Desolation, Chandra''s Grace,
-    Gladiator''s Shield, Shifter''s Shield, Erosion, Spectral Armor, Eye of Providence,
-    Prophetic Cloak, Draconic Scale, Helm of Radiance, Gem of Focus, Leviathan''s
-    Hide, Chronos'' Pendant, Mantle Of Discord, Midgardian Mail, Rod of Asclepius.'
+    + fit + win/pick). Underrated for this god: Freya''s Tears, Kinetic Cuirass, Shield
+    of the Phoenix, Soul Gem, Amanita Charm, Gluttonous Grimoire, Oni Hunter''s Garb,
+    Screeching Gargoyle, Spear of Desolation, Chandra''s Grace, Gladiator''s Shield,
+    Shifter''s Shield, Erosion, Spectral Armor, Prophetic Cloak, Eye of Providence,
+    Draconic Scale, Helm of Radiance, Gem of Focus, Totem of Death, Leviathan''s Hide,
+    Chronos'' Pendant, Mantle Of Discord, Rod of Asclepius, Midgardian Mail.'
   slot_scores:
     Stone of Binding:
       total: 0.6
@@ -472,11 +472,11 @@ builds:
     Revenge, Gluttonous Grimoire, Berserker''s Shield, The Crusher, Kinetic Cuirass,
     Amanita Charm, Soul Gem, Hydra''s Lament, Oni Hunter''s Garb, Runeforged Hammer,
     Shield Splitter, Pharaoh''s Curse, Golden Blade, Shield of the Phoenix, Lernaean
-    Bow, Eye of the Storm, Shifter''s Shield, Spectral Armor, Erosion, Death Metal,
-    Spear of the Magus, Eye of Providence, Shogun''s Ofuda, The Reaper, Draconic Scale,
-    Damaru, The Cosmic Horror, Avenging Blade, Helm of Radiance, Riptalon, Leviathan''s
-    Hide, Midgardian Mail, Mantle Of Discord, Heartseeker, Spear of Desolation, Yogi''s
-    Necklace.'
+    Bow, Eye of the Storm, Shifter''s Shield, Death Metal, Erosion, Spectral Armor,
+    Spear of the Magus, Eye of Providence, Damaru, Shogun''s Ofuda, Draconic Scale,
+    The Reaper, The Cosmic Horror, Avenging Blade, Helm of Radiance, Riptalon, Leviathan''s
+    Hide, Midgardian Mail, Mantle Of Discord, Spear of Desolation, Heartseeker, Silverbranch
+    Bow, Yogi''s Necklace.'
   slot_scores:
     Stone of Binding:
       total: 0.59
@@ -544,12 +544,12 @@ builds:
     + fit + win/pick). Underrated for this god: Freya''s Tears, Gluttonous Grimoire,
     Jotunn''s Revenge, Kinetic Cuirass, The Crusher, Soul Gem, Amanita Charm, Berserker''s
     Shield, Spear of the Magus, Oni Hunter''s Garb, Hydra''s Lament, Death Metal,
-    The Cosmic Horror, Runeforged Hammer, Shield of the Phoenix, Helm of Radiance,
+    The Cosmic Horror, Shield of the Phoenix, Runeforged Hammer, Helm of Radiance,
     Shield Splitter, Spear of Desolation, Shifter''s Shield, Erosion, Spectral Armor,
-    Eye of the Storm, Rod of Asclepius, Eye of Providence, Pharaoh''s Curse, Obsidian
-    Shard, Jade Scepter, Draconic Scale, Golden Blade, Leviathan''s Hide, Blood-Bound
-    Book, Lernaean Bow, The Reaper, Damaru, Bancroft''s Talon, Midgardian Mail, Mantle
-    Of Discord, Chronos'' Pendant.'
+    Eye of the Storm, Rod of Asclepius, Eye of Providence, Pharaoh''s Curse, Jade
+    Scepter, Obsidian Shard, Draconic Scale, Golden Blade, Leviathan''s Hide, Blood-Bound
+    Book, Damaru, Lernaean Bow, Bancroft''s Talon, The Reaper, Ethereal Staff, Midgardian
+    Mail, Wish-Granting Pearl, Chronos'' Pendant.'
   slot_scores:
     Stone of Binding:
       total: 0.59
@@ -616,10 +616,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Kinetic Cuirass, Amanita Charm, Freya''s Tears, Gluttonous
     Grimoire, Shield of the Phoenix, Shifter''s Shield, Oni Hunter''s Garb, Erosion,
-    Eye of Providence, Draconic Scale, Spectral Armor, Soul Gem, Leviathan''s Hide,
-    Mantle Of Discord, Stone of Binding, Midgardian Mail, Helm of Radiance, Magi''s
+    Eye of Providence, Draconic Scale, Spectral Armor, Soul Gem, Mantle Of Discord,
+    Leviathan''s Hide, Stone of Binding, Midgardian Mail, Helm of Radiance, Magi''s
     Cloak, Gladiator''s Shield, Prophetic Cloak, Screeching Gargoyle, Ancile, Xibalban
-    Effigy, Void Shield, Hide of the Nemean Lion.'
+    Effigy, Hide of the Nemean Lion, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.55

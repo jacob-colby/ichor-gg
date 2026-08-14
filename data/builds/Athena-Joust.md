@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Stygian Anchor
   - Kinetic Cuirass
+  - Freya's Tears
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
   - Pharaoh's Curse
-  - Stygian Anchor
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,23 +26,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.6
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Kinetic Cuirass:
       total: 0.69
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Freya's Tears:
+      total: 0.6
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Spectral Armor:
       total: 0.61
       efficiency: 0.58
@@ -275,8 +275,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,7 +294,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.61
+      total: 0.62
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Stygian Anchor
   - Kinetic Cuirass
+  - Freya's Tears
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
   - Pharaoh's Curse
-  - Stygian Anchor
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -483,23 +483,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.6
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Kinetic Cuirass:
       total: 0.69
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Freya's Tears:
+      total: 0.6
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Spectral Armor:
       total: 0.61
       efficiency: 0.58

@@ -359,7 +359,7 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Pharaoh's Curse:
-      total: 0.56
+      total: 0.57
       efficiency: 0.57
       win: 0.5
       pick: 0.0

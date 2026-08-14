@@ -73,7 +73,7 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Lernaean Bow
+  - Jotunn's Revenge
   - Death Metal
   - Damaru
   - Demon Blade
@@ -98,12 +98,12 @@ builds:
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
+    Jotunn's Revenge:
       total: 0.52
-      efficiency: 0.54
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.37
     Death Metal:
       total: 0.53
       efficiency: 0.58

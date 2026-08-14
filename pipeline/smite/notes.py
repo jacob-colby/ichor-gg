@@ -105,6 +105,80 @@ def merge_god_note(path: Path, scraped_frontmatter: dict, wiki_block_content: st
 merge_item_note = merge_god_note
 
 
+#: Spellings that differ between the community source and our item notes but
+#: mean the same item. All three shipped silently for weeks.
+#:
+#:     community                our note                 difference
+#:     Brawler's Beat Stick     Brawler’s Beat Stick     straight vs curly apostrophe
+#:     Mantle of Discord        Mantle Of Discord        capital O
+#:     Spear Of The Magus       Spear of the Magus       of/the casing
+#:
+#: A mismatch is not a cosmetic problem. `scoring.lookup_rates` finds an item's
+#: community record by comparing our name to the slot's, so a failed join reads
+#: as "this god's players never buy it" - pick 0, win None - which is a
+#: statement about the meta rather than about our spelling. The items also lose
+#: their icon and their link in the viewer, which joins the same way.
+#:
+#: Normalised rather than aliased, because the next drift will be a fourth
+#: spelling and a table of three renames would not catch it.
+def _fold_item_name(name: str) -> str:
+    """A join key that ignores the ways these two sources disagree."""
+    import unicodedata
+    folded = unicodedata.normalize("NFKC", str(name or ""))
+    # Curly apostrophe, prime, and backtick all stand in for an apostrophe.
+    for ch in ("’", "ʼ", "′", "`"):
+        folded = folded.replace(ch, "'")
+    return " ".join(folded.split()).casefold()
+
+
+def canonical_item_name(name, known_names):
+    """`name` rewritten to the spelling our item notes use, or unchanged.
+
+    Only ever rewrites when the folded forms match EXACTLY. A near-miss is left
+    alone so `data_audit`'s untracked-item detector still reports a genuinely
+    new item rather than silently merging it into whichever existing name
+    happened to look closest.
+    """
+    if not name:
+        return name
+    lookup = {_fold_item_name(k): k for k in known_names or ()}
+    return lookup.get(_fold_item_name(name), name)
+
+
+def canonicalise_community_items(community_entry: dict, known_names) -> int:
+    """Rewrite every item name in a community entry to our spelling, in place.
+
+    Returns how many names changed, so a caller can log a drift that would
+    otherwise be invisible.
+    """
+    if not community_entry or not known_names:
+        return 0
+    lookup = {_fold_item_name(k): k for k in known_names}
+    changed = 0
+
+    def fix(entry):
+        nonlocal changed
+        name = entry.get("name")
+        if not name:
+            return
+        canon = lookup.get(_fold_item_name(name))
+        if canon and canon != name:
+            entry["name"] = canon
+            changed += 1
+
+    for slot in community_entry.get("slot_order") or []:
+        if not isinstance(slot, dict):
+            continue
+        fix(slot)
+        for alt in slot.get("alternates") or []:
+            fix(alt)
+    for key in ("community_starters", "popular_items"):
+        for entry in community_entry.get(key) or []:
+            if isinstance(entry, dict):
+                fix(entry)
+    return changed
+
+
 def merge_build_note(path: Path, god: str, mode: str, community_entry: dict) -> None:
     frontmatter, body = read_note(path)
     if not frontmatter:

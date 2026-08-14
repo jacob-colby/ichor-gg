@@ -118,7 +118,7 @@ builds:
       fit: 0.56
     The Cosmic Horror:
       total: 0.49
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -241,8 +241,8 @@ builds:
       pick: 0.0
       fit: 0.66
     The Cosmic Horror:
-      total: 0.57
-      efficiency: 0.58
+      total: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.53
     Spear of Desolation:
-      total: 0.55
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.59
     Hydra's Lament:
-      total: 0.53
+      total: 0.54
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -798,7 +798,7 @@ builds:
   - Spear of the Magus
   - Soul Gem
   flex_slots:
-  - Screeching Gargoyle
+  - Spear of Desolation
   - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
@@ -817,7 +817,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.54
+      total: 0.55
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -835,7 +835,7 @@ builds:
       pick: 0.0
       fit: 0.83
     Spear of Desolation:
-      total: 0.54
+      total: 0.55
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -913,7 +913,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.5
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -923,15 +923,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
+  - Chronos' Pendant
   - Spear of Desolation
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Breastplate of Valor
-  - Screeching Gargoyle
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -948,12 +948,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.48
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Genji's Guard:
       total: 0.54
       efficiency: 0.71
@@ -966,6 +960,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
+    Chronos' Pendant:
+      total: 0.48
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Spear of Desolation:
       total: 0.52
       efficiency: 0.52

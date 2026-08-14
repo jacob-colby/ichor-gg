@@ -294,7 +294,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.62
+      total: 0.63
       efficiency: 0.54
       win: 0.5
       pick: 0.0

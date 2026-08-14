@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.72
     The Reaper:
-      total: 0.61
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.72
     The Reaper:
-      total: 0.61
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0

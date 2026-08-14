@@ -191,9 +191,9 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Berserker''s
     Shield, Freya''s Tears, Chandra''s Grace, Oni Hunter''s Garb, Jotunn''s Revenge,
     Erosion, Eye of Providence, Phoenix Feather, Spectral Armor, Pharaoh''s Curse,
-    Glorious Pridwen, Leviathan''s Hide, Hydra''s Lament, Eye of the Storm, The Crusher,
-    Midgardian Mail, Gladiator''s Shield, Shield Splitter, Shogun''s Ofuda, Riptalon,
-    The Reaper.'
+    Glorious Pridwen, Leviathan''s Hide, Hydra''s Lament, The Crusher, Eye of the
+    Storm, Midgardian Mail, Gladiator''s Shield, Shield Splitter, Shogun''s Ofuda,
+    Riptalon, The Reaper.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -262,7 +262,7 @@ builds:
     Berserker''s Shield, Stone of Binding, Screeching Gargoyle, Freya''s Tears, Void
     Shield, Oni Hunter''s Garb, Shield of the Phoenix, Avenging Blade, Void Stone,
     Erosion, Riptalon, Spectral Armor, Eye of Providence, Hydra''s Lament, Pharaoh''s
-    Curse, The Reaper, Silverbranch Bow, Shield Splitter, Leviathan''s Hide, Heartseeker.'
+    Curse, Silverbranch Bow, The Reaper, Shield Splitter, Leviathan''s Hide, Heartseeker.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -400,8 +400,8 @@ builds:
     Shield of the Phoenix, Kinetic Cuirass, Amanita Charm, Hydra''s Lament, Berserker''s
     Shield, Oni Hunter''s Garb, Screeching Gargoyle, The Crusher, Chandra''s Grace,
     Gladiator''s Shield, Erosion, Spectral Armor, Prophetic Cloak, Eye of Providence,
-    Pharaoh''s Curse, Shield Splitter, Leviathan''s Hide, Eye of the Storm, Midgardian
-    Mail, Arondight, Mantle Of Discord, Stone of Binding.'
+    Pharaoh''s Curse, Shield Splitter, Leviathan''s Hide, Eye of the Storm, Arondight,
+    Midgardian Mail, Mantle Of Discord, Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.56

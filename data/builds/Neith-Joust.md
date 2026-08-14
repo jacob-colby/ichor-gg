@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.6
     The Crusher:
-      total: 0.55
+      total: 0.56
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.46
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.59
       win: 0.5
       pick: 0.0

@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.55
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -554,7 +554,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.54
       win: 0.5
       pick: 0.0

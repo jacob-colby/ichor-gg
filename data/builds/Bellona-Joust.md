@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.78
     Berserker's Shield:
-      total: 0.56
+      total: 0.57
       efficiency: 0.68
       win: 0.5
       pick: 0.0
@@ -275,8 +275,8 @@ builds:
   - Freya's Tears
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
   - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,7 +294,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.86
     Freya's Tears:
-      total: 0.61
+      total: 0.62
       efficiency: 0.59
       win: 0.5
       pick: 0.0

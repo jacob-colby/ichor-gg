@@ -121,9 +121,9 @@ builds:
     Garb, Pharaoh''s Curse, Eye of the Storm, Hydra''s Lament, Lernaean Bow, Shield
     Splitter, Shield of the Phoenix, Spectral Armor, Avenging Blade, Shogun''s Ofuda,
     Death Metal, Freya''s Tears, Erosion, Eye of Providence, Damaru, Draconic Scale,
-    Leviathan''s Hide, Yogi''s Necklace, Midgardian Mail, Rod of Asclepius, Bragi''s
+    Leviathan''s Hide, Yogi''s Necklace, Rod of Asclepius, Midgardian Mail, Bragi''s
     Harp, Dominance, Triton''s Conch, Tyrfing, Jade Scepter, Helm of Radiance, The
-    Reaper, Wyrmskin Hide.'
+    Reaper, Spear of the Magus, Wyrmskin Hide.'
   slot_scores:
     Contagion:
       total: 0.64
@@ -192,12 +192,12 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Shield of the Phoenix, Kinetic Cuirass,
     Gluttonous Grimoire, Rod of Asclepius, The Crusher, Jotunn''s Revenge, Oni Hunter''s
-    Garb, Pharaoh''s Curse, Runeforged Hammer, Golden Blade, The Reaper, Eye of the
-    Storm, Chandra''s Grace, Riptalon, Shield Splitter, Erosion, Phoenix Feather,
-    Freya''s Tears, Spectral Armor, Eye of Providence, Blood-Bound Book, Hydra''s
-    Lament, Shogun''s Ofuda, Bancroft''s Talon, Draconic Scale, Lernaean Bow, Leviathan''s
+    Garb, Pharaoh''s Curse, Runeforged Hammer, Golden Blade, The Reaper, Chandra''s
+    Grace, Eye of the Storm, Riptalon, Shield Splitter, Erosion, Freya''s Tears, Phoenix
+    Feather, Spectral Armor, Eye of Providence, Blood-Bound Book, Hydra''s Lament,
+    Shogun''s Ofuda, Bancroft''s Talon, Draconic Scale, Lernaean Bow, Leviathan''s
     Hide, Avenging Blade, Lifebinder, Midgardian Mail, Death Metal, Yogi''s Necklace,
-    Damaru, Helm of Radiance.'
+    Damaru, Helm of Radiance, Ancile.'
   slot_scores:
     Contagion:
       total: 0.64
@@ -267,9 +267,9 @@ builds:
     Charm, The Cosmic Horror, Riptalon, The Reaper, Runeforged Hammer, Void Shield,
     Silverbranch Bow, Stone of Binding, Oni Hunter''s Garb, Golden Blade, Hydra''s
     Lament, Screeching Gargoyle, Tekko-Kagi, Pharaoh''s Curse, Void Stone, Lernaean
-    Bow, Eye of the Storm, Titan''s Bane, Spectral Armor, Shield of the Phoenix, Freya''s
-    Tears, Death Metal, Shield Splitter, Toxic Blade, Shogun''s Ofuda, Damaru, The
-    World Stone.'
+    Bow, Eye of the Storm, Shield of the Phoenix, Titan''s Bane, Spectral Armor, Freya''s
+    Tears, Death Metal, Shield Splitter, Toxic Blade, Damaru, Shogun''s Ofuda, The
+    World Stone, Doom Orb.'
   slot_scores:
     Contagion:
       total: 0.63
@@ -337,11 +337,11 @@ builds:
     this god: Berserker''s Shield, Gluttonous Grimoire, Golden Blade, Riptalon, Pharaoh''s
     Curse, Kinetic Cuirass, Amanita Charm, The Crusher, Jotunn''s Revenge, Lernaean
     Bow, Silverbranch Bow, Tyrfing, Shogun''s Ofuda, Oni Hunter''s Garb, Runeforged
-    Hammer, Hydra''s Lament, Bracer of The Abyss, Spectral Armor, Shield of the Phoenix,
-    Freya''s Tears, Eros'' Bow, Toxic Blade, Dominance, Bragi''s Harp, Death Metal,
-    Yogi''s Necklace, Eye of the Storm, Erosion, Nimble Ring, Shield Splitter, Rod
-    of Asclepius, Leviathan''s Hide, Spear of the Magus, Damaru, Blood-Bound Book,
-    Eye of Providence.'
+    Hammer, Hydra''s Lament, Bracer of The Abyss, Freya''s Tears, Spectral Armor,
+    Shield of the Phoenix, Eros'' Bow, Toxic Blade, Dominance, Bragi''s Harp, Death
+    Metal, Eye of the Storm, Yogi''s Necklace, Erosion, Nimble Ring, Shield Splitter,
+    Rod of Asclepius, Damaru, Leviathan''s Hide, Spear of the Magus, Blood-Bound Book,
+    Eye of Providence, Bancroft''s Talon.'
   slot_scores:
     Contagion:
       total: 0.63
@@ -409,11 +409,11 @@ builds:
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Gluttonous Grimoire,
     Berserker''s Shield, Hydra''s Lament, Shield of the Phoenix, Freya''s Tears, Kinetic
     Cuirass, Amanita Charm, The Crusher, Chandra''s Grace, Oni Hunter''s Garb, Screeching
-    Gargoyle, Pharaoh''s Curse, Gladiator''s Shield, Runeforged Hammer, Golden Blade,
-    Spectral Armor, Gem of Focus, Rod of Asclepius, Arondight, Death Metal, Spear
-    of the Magus, Lernaean Bow, Helm of Radiance, Jade Scepter, Shogun''s Ofuda, Erosion,
-    Yogi''s Necklace, Prophetic Cloak, The Cosmic Horror, Eye of the Storm, Chronos''
-    Pendant, Bracer of The Abyss, Leviathan''s Hide, Eye of Providence.'
+    Gargoyle, Pharaoh''s Curse, Gladiator''s Shield, Runeforged Hammer, Totem of Death,
+    Golden Blade, Gem of Focus, Spectral Armor, Rod of Asclepius, Arondight, Death
+    Metal, Spear of the Magus, Lernaean Bow, Jade Scepter, Helm of Radiance, Shogun''s
+    Ofuda, Erosion, Yogi''s Necklace, Prophetic Cloak, The Cosmic Horror, Chronos''
+    Pendant, Eye of the Storm, Bracer of The Abyss, Leviathan''s Hide, Eye of Providence.'
   slot_scores:
     Contagion:
       total: 0.63
@@ -483,9 +483,9 @@ builds:
     Oni Hunter''s Garb, Pharaoh''s Curse, Eye of the Storm, Hydra''s Lament, Lernaean
     Bow, Shield Splitter, Shield of the Phoenix, Spectral Armor, Avenging Blade, Shogun''s
     Ofuda, Death Metal, Freya''s Tears, Erosion, Eye of Providence, Damaru, Draconic
-    Scale, Leviathan''s Hide, Yogi''s Necklace, Midgardian Mail, Rod of Asclepius,
+    Scale, Leviathan''s Hide, Yogi''s Necklace, Rod of Asclepius, Midgardian Mail,
     Bragi''s Harp, Dominance, Triton''s Conch, Tyrfing, Jade Scepter, Helm of Radiance,
-    The Reaper, Wyrmskin Hide.'
+    The Reaper, Spear of the Magus, Wyrmskin Hide.'
   slot_scores:
     Golden Blade:
       total: 0.47

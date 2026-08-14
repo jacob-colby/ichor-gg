@@ -117,13 +117,13 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Gluttonous Grimoire, Spear of the Magus, Doom Orb, The World Stone,
-    Dreamer''s Idol, Gem of Focus, Breastplate of Valor, Blood-Bound Book, Bancroft''s
-    Talon, Helm of Radiance, Death Metal, Rod of Asclepius, Bracer of The Abyss, Jade
-    Scepter, Ancient Signet, Polynomicon, Ethereal Staff, Wish-Granting Pearl, Alchemist
-    Coat, Chronos'' Pendant.'
+    Dreamer''s Idol, Gem of Focus, Totem of Death, Breastplate of Valor, Blood-Bound
+    Book, Bancroft''s Talon, Helm of Radiance, Death Metal, Rod of Asclepius, Bracer
+    of The Abyss, Jade Scepter, Ancient Signet, Polynomicon, Ethereal Staff, Wish-Granting
+    Pearl, Chronos'' Pendant.'
   slot_scores:
     Gluttonous Grimoire:
-      total: 0.64
+      total: 0.65
       efficiency: 0.66
       win: 0.63
       pick: 0.0
@@ -188,10 +188,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Gluttonous Grimoire, Spear of the Magus, Doom Orb, Death Metal, Breastplate
-    of Valor, The World Stone, Dreamer''s Idol, Gem of Focus, Blood-Bound Book, Bancroft''s
-    Talon, Helm of Radiance, Bragi''s Harp, Shield of the Phoenix, Rod of Asclepius,
-    Bracer of The Abyss, Jade Scepter, Kinetic Cuirass, Triton''s Conch, Ancient Signet,
-    Chronos'' Pendant.'
+    of Valor, The World Stone, Dreamer''s Idol, Gem of Focus, Totem of Death, Blood-Bound
+    Book, Bancroft''s Talon, Helm of Radiance, Bragi''s Harp, Shield of the Phoenix,
+    Rod of Asclepius, Bracer of The Abyss, Jade Scepter, Kinetic Cuirass, Triton''s
+    Conch, Chronos'' Pendant.'
   slot_scores:
     Death Metal:
       total: 0.55
@@ -247,8 +247,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -260,7 +260,7 @@ builds:
     Kinetic Cuirass, Blood-Bound Book, Bancroft''s Talon, Chandra''s Grace, Breastplate
     of Valor, Oni Hunter''s Garb, Spear of the Magus, Lifebinder, Phoenix Feather,
     Erosion, Helm of Radiance, Spectral Armor, Jade Scepter, Eye of Providence, Draconic
-    Scale, Sphere of Negation.'
+    Scale, Chronos'' Pendant.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.58
@@ -327,12 +327,12 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Spear of the Magus, Doom Orb, The World Stone,
     Dreamer''s Idol, Screeching Gargoyle, Breastplate of Valor, Blood-Bound Book,
-    Bancroft''s Talon, Helm of Radiance, Death Metal, Gem of Focus, Rod of Asclepius,
-    Bracer of The Abyss, Jade Scepter, Ancient Signet, Polynomicon, Stone of Binding,
-    Ethereal Staff, Chronos'' Pendant.'
+    Bancroft''s Talon, Helm of Radiance, Gem of Focus, Death Metal, Rod of Asclepius,
+    Totem of Death, Bracer of The Abyss, Jade Scepter, Ancient Signet, Polynomicon,
+    Stone of Binding, Chronos'' Pendant.'
   slot_scores:
     Gluttonous Grimoire:
-      total: 0.65
+      total: 0.66
       efficiency: 0.66
       win: 0.63
       pick: 0.0
@@ -395,10 +395,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Gluttonous Grimoire, Spear of the Magus, Bracer of The Abyss, Bragi''s
-    Harp, Death Metal, Breastplate of Valor, Doom Orb, Nimble Ring, Blood-Bound Book,
-    Bancroft''s Talon, Helm of Radiance, Kinetic Cuirass, Rod of Asclepius, Amanita
-    Charm, Jade Scepter, Oni Hunter''s Garb, The World Stone, Eye of Providence, Dreamer''s
-    Idol, Gem of Focus, Chronos'' Pendant.'
+    Harp, Breastplate of Valor, Death Metal, Doom Orb, Nimble Ring, Blood-Bound Book,
+    Bancroft''s Talon, Helm of Radiance, Rod of Asclepius, Kinetic Cuirass, Amanita
+    Charm, Jade Scepter, Oni Hunter''s Garb, The World Stone, Gem of Focus, Dreamer''s
+    Idol, Eye of Providence, Chronos'' Pendant.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.54
@@ -464,11 +464,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Breastplate of Valor, Gluttonous Grimoire,
-    Shield of the Phoenix, Gem of Focus, Spear of the Magus, Screeching Gargoyle,
-    Chandra''s Grace, Doom Orb, Death Metal, Gladiator''s Shield, The World Stone,
-    Blood-Bound Book, Dreamer''s Idol, Bancroft''s Talon, Helm of Radiance, Kinetic
-    Cuirass, Prophetic Cloak, Amanita Charm, Rod of Asclepius, Oni Hunter''s Garb,
-    Chronos'' Pendant.'
+    Gem of Focus, Shield of the Phoenix, Totem of Death, Spear of the Magus, Screeching
+    Gargoyle, Chandra''s Grace, Doom Orb, Death Metal, Gladiator''s Shield, The World
+    Stone, Blood-Bound Book, Dreamer''s Idol, Bancroft''s Talon, Helm of Radiance,
+    Kinetic Cuirass, Prophetic Cloak, Amanita Charm, Rod of Asclepius, Chronos'' Pendant.'
   slot_scores:
     Genji's Guard:
       total: 0.59
@@ -536,10 +535,11 @@ builds:
     win/pick). Underrated for this god: Jotunn''s Revenge, The Crusher, Gluttonous
     Grimoire, Hydra''s Lament, Death Metal, Spear of the Magus, Lernaean Bow, Bragi''s
     Harp, Doom Orb, The Reaper, Berserker''s Shield, Golden Blade, Runeforged Hammer,
-    Tekko-Kagi, Heartseeker, Breastplate of Valor, Damaru, Bracer of The Abyss, Riptalon,
+    Tekko-Kagi, Damaru, Breastplate of Valor, Heartseeker, Bracer of The Abyss, Riptalon,
     Dominance, Pendulum Blade, Tyrfing, Silverbranch Bow, Blood-Bound Book, Triton''s
-    Conch, Titan''s Bane, The World Stone, Bancroft''s Talon, Helm of Radiance, Dreamer''s
-    Idol, Arondight, Rod of Asclepius, Avenging Blade, Gem of Focus, Chronos'' Pendant.'
+    Conch, Titan''s Bane, Bancroft''s Talon, Helm of Radiance, The World Stone, Dreamer''s
+    Idol, Arondight, Rod of Asclepius, Gem of Focus, Avenging Blade, Jade Scepter,
+    Chronos'' Pendant.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -606,11 +606,12 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Gluttonous Grimoire,
     The Crusher, Spear of the Magus, Death Metal, Hydra''s Lament, Doom Orb, The Reaper,
-    Bragi''s Harp, Heartseeker, Breastplate of Valor, The World Stone, Runeforged
-    Hammer, Dreamer''s Idol, Pendulum Blade, Blood-Bound Book, Lernaean Bow, Damaru,
+    Bragi''s Harp, Breastplate of Valor, Heartseeker, The World Stone, Runeforged
+    Hammer, Dreamer''s Idol, Pendulum Blade, Blood-Bound Book, Damaru, Lernaean Bow,
     Bancroft''s Talon, Helm of Radiance, Triton''s Conch, Gem of Focus, Rod of Asclepius,
-    Bracer of The Abyss, Titan''s Bane, Jade Scepter, Berserker''s Shield, Tekko-Kagi,
-    Riptalon, Ancient Signet, Golden Blade, Arondight, Polynomicon, Chronos'' Pendant.'
+    Bracer of The Abyss, Totem of Death, Titan''s Bane, Jade Scepter, Berserker''s
+    Shield, Tekko-Kagi, Ancient Signet, Riptalon, Arondight, Golden Blade, Polynomicon,
+    Chronos'' Pendant.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.62
@@ -676,10 +677,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Spear of the Magus, Chronos'' Pendant,
-    The World Stone, Doom Orb, Dreamer''s Idol, Gem of Focus, Breastplate of Valor,
-    Blood-Bound Book, Bancroft''s Talon, Helm of Radiance, Death Metal, Rod of Asclepius,
-    Bracer of The Abyss, Jade Scepter, Ancient Signet, Polynomicon, Ethereal Staff,
-    Wish-Granting Pearl, Alchemist Coat.'
+    The World Stone, Doom Orb, Dreamer''s Idol, Gem of Focus, Totem of Death, Breastplate
+    of Valor, Blood-Bound Book, Bancroft''s Talon, Helm of Radiance, Death Metal,
+    Rod of Asclepius, Bracer of The Abyss, Jade Scepter, Ancient Signet, Polynomicon,
+    Ethereal Staff, Wish-Granting Pearl.'
   slot_scores:
     Chronos' Pendant:
       total: 0.44
@@ -688,7 +689,7 @@ builds:
       pick: 0.05
       fit: 0.64
     Gluttonous Grimoire:
-      total: 0.64
+      total: 0.65
       efficiency: 0.66
       win: 0.63
       pick: 0.0
@@ -701,7 +702,7 @@ builds:
       fit: 1.0
     The Cosmic Horror:
       total: 0.56
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.28
       fit: 0.77

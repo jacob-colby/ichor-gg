@@ -93,8 +93,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -188,7 +188,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.61
+      total: 0.62
       efficiency: 0.48
       win: 0.5
       pick: 0.0

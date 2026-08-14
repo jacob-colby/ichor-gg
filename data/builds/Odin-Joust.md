@@ -188,7 +188,7 @@ builds:
       pick: 0.0
       fit: 0.88
     The Crusher:
-      total: 0.6
+      total: 0.61
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.42
     Riptalon:
-      total: 0.64
+      total: 0.65
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -294,7 +294,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.71
       win: 0.5
       pick: 0.0

@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.63
       win: 0.5
       pick: 0.0

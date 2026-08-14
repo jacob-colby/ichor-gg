@@ -13,8 +13,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Draconic Scale
   - Freya's Tears
+  - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -275,8 +275,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -470,8 +470,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Draconic Scale
   - Freya's Tears
+  - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse

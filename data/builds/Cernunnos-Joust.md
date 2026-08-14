@@ -13,8 +13,8 @@ builds:
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Jotunn's Revenge
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.5
+      total: 0.51
       efficiency: 0.66
       win: 0.5
       pick: 0.0
@@ -470,8 +470,8 @@ builds:
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Jotunn's Revenge
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -535,8 +535,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
   - Jotunn's Revenge
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -782,7 +782,7 @@ builds:
       pick: 0.0
       fit: 0.49
     Soul Gem:
-      total: 0.77
+      total: 0.78
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -956,7 +956,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Genji's Guard:
-      total: 0.48
+      total: 0.49
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -997,8 +997,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
   - Jotunn's Revenge
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse

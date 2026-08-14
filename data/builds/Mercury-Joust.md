@@ -99,7 +99,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.42
       win: 0.5
       pick: 0.0
@@ -269,14 +269,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Tyrfing
   - The Reaper
   - Riptalon
   - Silverbranch Bow
-  - Pharaoh's Curse
   flex_slots:
   - The Reaper
-  - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -299,6 +299,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.92
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Tyrfing:
       total: 0.59
       efficiency: 0.46
@@ -323,12 +329,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Pharaoh's Curse:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
   starter: *id001
 - source: suggested
   archetype: cooldown

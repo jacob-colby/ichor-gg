@@ -39,7 +39,7 @@ builds:
       fit: 1.0
     The Cosmic Horror:
       total: 0.69
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -106,7 +106,7 @@ builds:
       fit: 0.78
     The Cosmic Horror:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -242,7 +242,7 @@ builds:
       fit: 1.0
     The Cosmic Horror:
       total: 0.72
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.4
     Nimble Ring:
-      total: 0.48
+      total: 0.49
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
+  - Totem of Death
   - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Screeching Gargoyle
+  - Totem of Death
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -358,12 +358,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.54
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Genji's Guard:
       total: 0.6
       efficiency: 0.71
@@ -388,6 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
+    Totem of Death:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.69
     The Crusher:
-      total: 0.64
+      total: 0.65
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -561,7 +561,7 @@ builds:
       fit: 1.0
     The Cosmic Horror:
       total: 0.69
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -619,7 +619,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.59
+      total: 0.6
       efficiency: 0.43
       win: 0.5
       pick: 0.0
@@ -632,7 +632,7 @@ builds:
       fit: 0.86
     The Cosmic Horror:
       total: 0.63
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -692,7 +692,7 @@ builds:
       fit: 0.71
     The Cosmic Horror:
       total: 0.55
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -824,7 +824,7 @@ builds:
       fit: 0.9
     The Cosmic Horror:
       total: 0.68
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -841,7 +841,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Obsidian Shard:
-      total: 0.65
+      total: 0.66
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -895,7 +895,7 @@ builds:
       pick: 0.0
       fit: 0.4
     Nimble Ring:
-      total: 0.48
+      total: 0.49
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -923,15 +923,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
+  - Totem of Death
   - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Screeching Gargoyle
+  - Totem of Death
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -948,14 +948,8 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.51
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Genji's Guard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.71
       win: 0.5
       pick: 0.0
@@ -978,6 +972,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Totem of Death:
+      total: 0.53
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -1147,7 +1147,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.59
+      total: 0.6
       efficiency: 0.43
       win: 0.5
       pick: 0.0
@@ -1160,7 +1160,7 @@ builds:
       fit: 0.86
     The Cosmic Horror:
       total: 0.63
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.68

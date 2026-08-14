@@ -334,18 +334,18 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Spear of Desolation
   - Spectral Armor
   - Erosion
-  - Stampede
   - Soul Gem
   flex_slots:
-  - Stampede
+  - Breastplate of Valor
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -364,8 +364,14 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Breastplate of Valor:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Spear of Desolation:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -382,12 +388,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Stampede:
-      total: 0.54
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Soul Gem:
       total: 0.79
       efficiency: 0.59
@@ -424,7 +424,7 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
       win: 0.5
       pick: 0.0
