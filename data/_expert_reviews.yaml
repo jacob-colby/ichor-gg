@@ -60,6 +60,19 @@ reviews:
       want of a fix, and it is the sharpest case on record of the expert gate
       and the coverage gate disagreeing about one named item.
 
+      UPDATE 2026-08-14. Root-caused and partly answered. Transcendence's
+      value is a CONVERSION - "+Strength equal to 3% of Mana from Items" - so
+      it is worth what the rest of the build feeds it, and the fit map priced
+      Max Mana at zero. `price_conversions` now prices that against a typical
+      build, which lifts its residual +216 -> -8 but leaves it conservative on
+      purpose: at a median physical build it is a +43% item, and only at
+      Ullr's actual 1,550-mana build is it +133%. The `mana-stack` flavor is
+      the other half, and it reproduces the reviewer's build at 5 of 6 -
+      Transcendence, Jotunn's, Hydra's, Heartseeker, Titan's Bane. The CORE
+      still does not hold it, so this claim stays open: the register checks
+      the build the app opens on, not whichever of twelve flavors contains the
+      item.
+
   - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
     date: 2026-08-09
     claim: item-overweighted

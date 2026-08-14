@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.68
+      total: 0.57
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.68
     Pharaoh's Curse:
-      total: 0.62
-      efficiency: 0.57
+      total: 0.61
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.68
     Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -73,7 +73,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Berserker's Shield
+  - Kinetic Cuirass
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
@@ -81,14 +81,14 @@ builds:
   - Soul Gem
   flex_slots:
   - Erosion
-  - Berserker's Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -98,12 +98,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Berserker's Shield:
-      total: 0.59
-      efficiency: 0.68
+    Kinetic Cuirass:
+      total: 0.57
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.56
     Amanita Charm:
       total: 0.79
       efficiency: 0.63
@@ -117,20 +117,20 @@ builds:
       pick: 0.0
       fit: 0.66
     Pharaoh's Curse:
-      total: 0.63
-      efficiency: 0.57
+      total: 0.62
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.69
     Shogun's Ofuda:
-      total: 0.61
-      efficiency: 0.52
+      total: 0.6
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.69
     Soul Gem:
-      total: 0.69
-      efficiency: 0.59
+      total: 0.68
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -142,11 +142,11 @@ builds:
   - Toxic Blade
   - Void Shield
   - Void Stone
-  - Pharaoh's Curse
+  - The Crusher
   - Soul Gem
   flex_slots:
+  - The Crusher
   - Stone of Binding
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.57
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.66
     Toxic Blade:
       total: 0.61
-      efficiency: 0.42
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -183,19 +183,19 @@ builds:
       fit: 0.84
     Void Stone:
       total: 0.64
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Pharaoh's Curse:
+    The Crusher:
       total: 0.57
-      efficiency: 0.57
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.5
     Soul Gem:
-      total: 0.75
-      efficiency: 0.59
+      total: 0.74
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -229,20 +229,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.42
+      total: 0.6
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.76
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.54
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.43
     Riptalon:
-      total: 0.62
-      efficiency: 0.56
+      total: 0.6
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.82
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.57
+      total: 0.59
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -275,8 +275,8 @@ builds:
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
+  - Genji's Guard
   - Shogun's Ofuda
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,8 +294,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.56
-      efficiency: 0.71
+      total: 0.55
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -312,20 +312,20 @@ builds:
       pick: 0.0
       fit: 0.59
     Pharaoh's Curse:
-      total: 0.58
-      efficiency: 0.57
+      total: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.59
     Shogun's Ofuda:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.55
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.77
-      efficiency: 0.59
+      total: 0.76
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -340,8 +340,8 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
+  - Pharaoh's Curse
   - Jotunn's Revenge
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -359,20 +359,20 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.66
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.55
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.52
     The Crusher:
-      total: 0.55
-      efficiency: 0.63
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.62
     Pharaoh's Curse:
-      total: 0.57
-      efficiency: 0.57
+      total: 0.55
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -405,7 +405,7 @@ builds:
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Erosion
+  - Shogun's Ofuda
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -418,14 +418,14 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
-      efficiency: 0.42
+      total: 0.55
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -442,20 +442,20 @@ builds:
       pick: 0.0
       fit: 0.56
     Pharaoh's Curse:
-      total: 0.57
-      efficiency: 0.57
+      total: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.56
     Shogun's Ofuda:
-      total: 0.54
-      efficiency: 0.52
+      total: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.75
-      efficiency: 0.59
+      total: 0.74
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -489,8 +489,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.68
+      total: 0.57
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -513,14 +513,14 @@ builds:
       pick: 0.0
       fit: 0.68
     Pharaoh's Curse:
-      total: 0.62
-      efficiency: 0.57
+      total: 0.61
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.68
     Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.68

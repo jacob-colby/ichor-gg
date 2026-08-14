@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Nimble Ring
   - Death Metal
-  - Gluttonous Grimoire
   - Riptalon
   - The Crusher
+  - Rod of Tahuti
   flex_slots:
+  - The Crusher
   - Death Metal
-  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -110,69 +110,141 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Soul Gem, Jotunn''s Revenge, The Crusher, Death
-    Metal, Berserker''s Shield, Genji''s Guard, Spear of the Magus, Hydra''s Lament,
-    Damaru, Lernaean Bow, Breastplate of Valor, Bracer of The Abyss, The Cosmic Horror,
-    Spear of Desolation, Bragi''s Harp, Golden Blade, Blood-Bound Book, Bancroft''s
-    Talon, Chronos'' Pendant, Obsidian Shard, Nimble Ring, The Reaper, Pharaoh''s
-    Curse, Runeforged Hammer, Tekko-Kagi, Helm of Radiance, Freya''s Tears, Dominance,
-    Kinetic Cuirass, Amanita Charm, Rod of Asclepius, Oni Hunter''s Garb, Jade Scepter,
-    Gem of Focus, Eye of Providence, Shield of the Phoenix, The World Stone.'
+    this god: Rod of Tahuti, Nimble Ring, Gluttonous Grimoire, Soul Gem, Jotunn''s
+    Revenge, The Crusher, Death Metal, Berserker''s Shield, Genji''s Guard, Damaru,
+    The Cosmic Horror, Hydra''s Lament, Spear of the Magus, Spear of Desolation, Lernaean
+    Bow, Breastplate of Valor, Golden Blade, The Reaper, Bragi''s Harp, Bracer of
+    The Abyss, Chronos'' Pendant, Runeforged Hammer, Tekko-Kagi, Obsidian Shard, Blood-Bound
+    Book, Kinetic Cuirass, Freya''s Tears, Pharaoh''s Curse, Amanita Charm, Bancroft''s
+    Talon, Helm of Radiance, Eye of Providence, Shield of the Phoenix, Oni Hunter''s
+    Garb, Rod of Asclepius, Dominance, Gem of Focus, Jade Scepter.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.62
-      pick: 0.0
-      fit: 0.2
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.56
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.38
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.68
+      win: 0.62
+      pick: 0.0
+      fit: 0.42
     Death Metal:
       total: 0.55
-      efficiency: 0.58
+      efficiency: 0.56
       win: 0.62
       pick: 0.0
       fit: 0.47
-    Gluttonous Grimoire:
-      total: 0.58
-      efficiency: 0.66
-      win: 0.62
-      pick: 0.0
-      fit: 0.46
     Riptalon:
-      total: 0.58
-      efficiency: 0.56
+      total: 0.57
+      efficiency: 0.53
       win: 0.68
       pick: 0.3
       fit: 0.42
     The Crusher:
       total: 0.56
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.37
+    Rod of Tahuti:
+      total: 0.59
+      efficiency: 0.77
+      win: 0.62
+      pick: 0.0
+      fit: 0.29
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
 - source: suggested
+  archetype: mana-stack
+  slot_order:
+  - Genji's Guard
+  - Jotunn's Revenge
+  - Nimble Ring
+  - Death Metal
+  - The Crusher
+  - Rod of Tahuti
+  flex_slots:
+  - Death Metal
+  - Genji's Guard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
+    of Tahuti, Nimble Ring, Jotunn''s Revenge, Gluttonous Grimoire, The Crusher, Soul
+    Gem, Death Metal, Genji''s Guard, Hydra''s Lament, Berserker''s Shield, Damaru,
+    The Cosmic Horror, Breastplate of Valor, Spear of the Magus, Lernaean Bow, Spear
+    of Desolation, Bragi''s Harp, Golden Blade, The Reaper, Runeforged Hammer, Bancroft''s
+    Talon, Chronos'' Pendant, Bracer of The Abyss, Blood-Bound Book, Obsidian Shard,
+    Oni Hunter''s Garb, Dominance, Tekko-Kagi, Kinetic Cuirass, Helm of Radiance,
+    Amanita Charm, Freya''s Tears, Transcendence, Rod of Asclepius, Pharaoh''s Curse,
+    Eye of Providence, Doom Orb, The World Stone.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.62
+      pick: 0.0
+      fit: 0.15
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.64
+      win: 0.62
+      pick: 0.0
+      fit: 0.44
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.68
+      win: 0.62
+      pick: 0.0
+      fit: 0.4
+    Death Metal:
+      total: 0.55
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.0
+      fit: 0.51
+    The Crusher:
+      total: 0.56
+      efficiency: 0.64
+      win: 0.62
+      pick: 0.0
+      fit: 0.39
+    Rod of Tahuti:
+      total: 0.6
+      efficiency: 0.77
+      win: 0.62
+      pick: 0.0
+      fit: 0.35
+  starter: *id001
+- source: suggested
   archetype: crit
   slot_order:
   - Jotunn's Revenge
+  - Nimble Ring
   - Death Metal
-  - Gluttonous Grimoire
   - Damaru
-  - The Crusher
   - Deathbringer
+  - Rod of Tahuti
   flex_slots:
   - Damaru
   - Deathbringer
@@ -190,64 +262,64 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Soul Gem, Jotunn''s Revenge, Death Metal, The Crusher,
-    Berserker''s Shield, Genji''s Guard, Damaru, Spear of the Magus, Hydra''s Lament,
-    Lernaean Bow, Breastplate of Valor, The Cosmic Horror, Bracer of The Abyss, Spear
-    of Desolation, Blood-Bound Book, Bancroft''s Talon, Bragi''s Harp, Chronos'' Pendant,
-    Golden Blade, Obsidian Shard, The Reaper, Nimble Ring, Pharaoh''s Curse, Runeforged
-    Hammer, Helm of Radiance, Freya''s Tears, Kinetic Cuirass, Tekko-Kagi, Amanita
-    Charm, Rod of Asclepius, Dominance, Oni Hunter''s Garb, Jade Scepter, Gem of Focus,
-    Eye of Providence, Shield of the Phoenix, The World Stone.'
+    this god: Rod of Tahuti, Nimble Ring, Gluttonous Grimoire, Soul Gem, Jotunn''s
+    Revenge, The Crusher, Death Metal, Genji''s Guard, Berserker''s Shield, Damaru,
+    The Cosmic Horror, Hydra''s Lament, Spear of the Magus, Spear of Desolation, Breastplate
+    of Valor, Lernaean Bow, The Reaper, Golden Blade, Chronos'' Pendant, Bragi''s
+    Harp, Bracer of The Abyss, Runeforged Hammer, Obsidian Shard, Blood-Bound Book,
+    Kinetic Cuirass, Freya''s Tears, Tekko-Kagi, Amanita Charm, Pharaoh''s Curse,
+    Bancroft''s Talon, Helm of Radiance, Eye of Providence, Shield of the Phoenix,
+    Oni Hunter''s Garb, Rod of Asclepius, Gem of Focus, Dominance, Deathbringer.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.56
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.37
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.68
+      win: 0.62
+      pick: 0.0
+      fit: 0.4
     Death Metal:
       total: 0.55
-      efficiency: 0.58
+      efficiency: 0.56
       win: 0.62
       pick: 0.0
       fit: 0.49
-    Gluttonous Grimoire:
-      total: 0.58
-      efficiency: 0.66
-      win: 0.62
-      pick: 0.0
-      fit: 0.46
     Damaru:
       total: 0.53
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.62
       pick: 0.0
       fit: 0.35
-    The Crusher:
-      total: 0.55
-      efficiency: 0.63
-      win: 0.62
-      pick: 0.0
-      fit: 0.36
     Deathbringer:
       total: 0.49
       efficiency: 0.45
       win: 0.62
       pick: 0.0
       fit: 0.35
+    Rod of Tahuti:
+      total: 0.59
+      efficiency: 0.77
+      win: 0.62
+      pick: 0.0
+      fit: 0.29
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Death Metal
   - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
+  - Rod of Tahuti
   flex_slots:
+  - Silverbranch Bow
   - Genji's Guard
-  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -262,64 +334,64 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Gluttonous Grimoire, Soul Gem, Jotunn''s Revenge, The Crusher, Genji''s Guard,
-    Death Metal, Berserker''s Shield, Spear of the Magus, Hydra''s Lament, The Cosmic
-    Horror, Spear of Desolation, Breastplate of Valor, Damaru, Lernaean Bow, Bracer
-    of The Abyss, The Reaper, Obsidian Shard, Chronos'' Pendant, Golden Blade, Blood-Bound
-    Book, Bragi''s Harp, Bancroft''s Talon, Tekko-Kagi, Runeforged Hammer, Freya''s
-    Tears, Nimble Ring, Pharaoh''s Curse, Kinetic Cuirass, Helm of Radiance, Amanita
-    Charm, Heartseeker, The World Stone, Doom Orb, Dominance, Oni Hunter''s Garb,
-    Dreamer''s Idol, Shield of the Phoenix, Rod of Asclepius.'
+    god: Rod of Tahuti, Gluttonous Grimoire, Nimble Ring, Soul Gem, Jotunn''s Revenge,
+    The Crusher, Genji''s Guard, Death Metal, Berserker''s Shield, The Cosmic Horror,
+    Spear of Desolation, Hydra''s Lament, Spear of the Magus, Damaru, Breastplate
+    of Valor, The Reaper, Lernaean Bow, Obsidian Shard, Golden Blade, Chronos'' Pendant,
+    Tekko-Kagi, Runeforged Hammer, Bragi''s Harp, Freya''s Tears, Bracer of The Abyss,
+    Kinetic Cuirass, Blood-Bound Book, Amanita Charm, Shield of the Phoenix, Pharaoh''s
+    Curse, Eye of Providence, Bancroft''s Talon, Oni Hunter''s Garb, Helm of Radiance,
+    Pendulum Blade, Doom Orb, Rod of Asclepius, Dominance.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
-      efficiency: 0.71
+      total: 0.54
+      efficiency: 0.69
       win: 0.62
       pick: 0.0
       fit: 0.13
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.46
-    Death Metal:
-      total: 0.55
-      efficiency: 0.58
-      win: 0.62
-      pick: 0.0
-      fit: 0.43
     Gluttonous Grimoire:
-      total: 0.58
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.63
       win: 0.62
       pick: 0.0
       fit: 0.49
     Silverbranch Bow:
-      total: 0.55
-      efficiency: 0.54
+      total: 0.54
+      efficiency: 0.52
       win: 0.65
       pick: 0.28
       fit: 0.37
     The Crusher:
-      total: 0.56
-      efficiency: 0.63
+      total: 0.57
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.43
+    Rod of Tahuti:
+      total: 0.6
+      efficiency: 0.77
+      win: 0.62
+      pick: 0.0
+      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Genji's Guard
   - Berserker's Shield
-  - Jotunn's Revenge
-  - Kinetic Cuirass
   - Riptalon
+  - The Crusher
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Kinetic Cuirass
+  - The Crusher
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -334,49 +406,49 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Amanita Charm, Gluttonous Grimoire, Berserker''s Shield, Shield
-    of the Phoenix, Rod of Asclepius, Genji''s Guard, Blood-Bound Book, Jotunn''s
-    Revenge, Bancroft''s Talon, Kinetic Cuirass, The Crusher, The Reaper, Chandra''s
-    Grace, Breastplate of Valor, Death Metal, Pharaoh''s Curse, Oni Hunter''s Garb,
-    Freya''s Tears, Hydra''s Lament, Spear of the Magus, Golden Blade, Lifebinder,
-    Damaru, Lernaean Bow, Runeforged Hammer, The Cosmic Horror, Phoenix Feather, Shogun''s
-    Ofuda, Bracer of The Abyss, Spectral Armor, Helm of Radiance, Umbral Link, Jade
-    Scepter, Spear of Desolation, Shifter''s Shield, Chronos'' Pendant, Erosion, Yogi''s
-    Necklace.'
+    this god: Soul Gem, Amanita Charm, Rod of Tahuti, Gluttonous Grimoire, Shield
+    of the Phoenix, Nimble Ring, Berserker''s Shield, Rod of Asclepius, The Crusher,
+    Genji''s Guard, Kinetic Cuirass, The Reaper, Jotunn''s Revenge, Blood-Bound Book,
+    Chandra''s Grace, Bancroft''s Talon, Breastplate of Valor, Death Metal, Oni Hunter''s
+    Garb, Freya''s Tears, Pharaoh''s Curse, Runeforged Hammer, Golden Blade, Hydra''s
+    Lament, Lifebinder, Phoenix Feather, The Cosmic Horror, Damaru, Spectral Armor,
+    Spear of the Magus, Shogun''s Ofuda, Spear of Desolation, Lernaean Bow, Erosion,
+    Shifter''s Shield, Helm of Radiance, Umbral Link, Eye of Providence, Leviathan''s
+    Hide, Eye of the Storm.'
   slot_scores:
     Genji's Guard:
       total: 0.55
-      efficiency: 0.71
+      efficiency: 0.69
       win: 0.62
       pick: 0.0
       fit: 0.17
     Berserker's Shield:
-      total: 0.57
-      efficiency: 0.68
-      win: 0.62
-      pick: 0.0
-      fit: 0.34
-    Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
       win: 0.62
       pick: 0.0
-      fit: 0.27
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.59
-      win: 0.62
-      pick: 0.0
-      fit: 0.38
+      fit: 0.34
     Riptalon:
-      total: 0.61
-      efficiency: 0.56
+      total: 0.6
+      efficiency: 0.53
       win: 0.68
       pick: 0.3
       fit: 0.6
+    The Crusher:
+      total: 0.55
+      efficiency: 0.64
+      win: 0.62
+      pick: 0.0
+      fit: 0.29
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.62
+      pick: 0.0
+      fit: 0.21
     Soul Gem:
-      total: 0.6
-      efficiency: 0.59
+      total: 0.59
+      efficiency: 0.57
       win: 0.62
       pick: 0.0
       fit: 0.74
@@ -384,15 +456,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
   - Gluttonous Grimoire
+  - The Cosmic Horror
   - Silverbranch Bow
-  - Spear of the Magus
   - The Crusher
+  - Rod of Tahuti
   flex_slots:
-  - Spear of the Magus
-  - Berserker's Shield
+  - Silverbranch Bow
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -401,67 +473,67 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Soul Gem, Jotunn''s Revenge, The Crusher, Spear
-    of the Magus, Berserker''s Shield, The Cosmic Horror, Genji''s Guard, Death Metal,
-    Spear of Desolation, Hydra''s Lament, Obsidian Shard, Screeching Gargoyle, Breastplate
-    of Valor, The Reaper, Damaru, Lernaean Bow, Avenging Blade, Bracer of The Abyss,
-    Tekko-Kagi, Blood-Bound Book, Bancroft''s Talon, Golden Blade, Chronos'' Pendant,
-    Bragi''s Harp, The World Stone, Doom Orb, Stone of Binding, Heartseeker, Dreamer''s
-    Idol, Pharaoh''s Curse, Nimble Ring, Runeforged Hammer, Kinetic Cuirass, Void
-    Shield, Helm of Radiance, Amanita Charm, Freya''s Tears, Oni Hunter''s Garb.'
+    for this god: Rod of Tahuti, Gluttonous Grimoire, Soul Gem, The Crusher, Nimble
+    Ring, Jotunn''s Revenge, The Cosmic Horror, Spear of the Magus, Death Metal, Genji''s
+    Guard, Spear of Desolation, Berserker''s Shield, The Reaper, Screeching Gargoyle,
+    Avenging Blade, Hydra''s Lament, Damaru, Obsidian Shard, Breastplate of Valor,
+    Tekko-Kagi, Lernaean Bow, Golden Blade, Stone of Binding, Chronos'' Pendant, Runeforged
+    Hammer, Bracer of The Abyss, Kinetic Cuirass, Bragi''s Harp, Void Shield, Doom
+    Orb, Blood-Bound Book, Amanita Charm, Freya''s Tears, The World Stone, Pharaoh''s
+    Curse, Toxic Blade, Eye of Providence, Heartseeker.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.54
-      efficiency: 0.68
-      win: 0.62
-      pick: 0.0
-      fit: 0.17
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.47
     Gluttonous Grimoire:
-      total: 0.59
-      efficiency: 0.66
-      win: 0.62
-      pick: 0.0
-      fit: 0.55
-    Silverbranch Bow:
-      total: 0.56
-      efficiency: 0.54
-      win: 0.65
-      pick: 0.28
-      fit: 0.43
-    Spear of the Magus:
-      total: 0.55
-      efficiency: 0.6
-      win: 0.62
-      pick: 0.0
-      fit: 0.39
-    The Crusher:
-      total: 0.57
+      total: 0.58
       efficiency: 0.63
       win: 0.62
       pick: 0.0
+      fit: 0.55
+    The Cosmic Horror:
+      total: 0.54
+      efficiency: 0.58
+      win: 0.62
+      pick: 0.0
+      fit: 0.39
+    Silverbranch Bow:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.65
+      pick: 0.28
+      fit: 0.43
+    The Crusher:
+      total: 0.57
+      efficiency: 0.64
+      win: 0.62
+      pick: 0.0
       fit: 0.47
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.77
+      win: 0.62
+      pick: 0.0
+      fit: 0.39
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Jotunn's Revenge
   - Tyrfing
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Riptalon
   - Silverbranch Bow
   - The Crusher
+  - Rod of Tahuti
   flex_slots:
   - Tyrfing
   - The Crusher
@@ -479,51 +551,51 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Soul Gem, Jotunn''s Revenge, The Crusher, Berserker''s
-    Shield, Genji''s Guard, Death Metal, Golden Blade, Lernaean Bow, Spear of the
-    Magus, Hydra''s Lament, Breastplate of Valor, Bracer of The Abyss, Damaru, The
-    Cosmic Horror, Spear of Desolation, Blood-Bound Book, Bragi''s Harp, Bancroft''s
-    Talon, Chronos'' Pendant, Pharaoh''s Curse, Nimble Ring, Obsidian Shard, The Reaper,
-    Kinetic Cuirass, Runeforged Hammer, Helm of Radiance, Amanita Charm, Freya''s
-    Tears, Oni Hunter''s Garb, Dominance, Tekko-Kagi, Rod of Asclepius, Eye of Providence,
-    Toxic Blade, Jade Scepter, Shield of the Phoenix, Shogun''s Ofuda.'
+    this god: Rod of Tahuti, Nimble Ring, Gluttonous Grimoire, Soul Gem, The Crusher,
+    Jotunn''s Revenge, Berserker''s Shield, Genji''s Guard, Death Metal, Golden Blade,
+    The Cosmic Horror, Hydra''s Lament, Damaru, Breastplate of Valor, Spear of the
+    Magus, Lernaean Bow, Spear of Desolation, Bracer of The Abyss, The Reaper, Bragi''s
+    Harp, Chronos'' Pendant, Runeforged Hammer, Kinetic Cuirass, Pharaoh''s Curse,
+    Amanita Charm, Blood-Bound Book, Freya''s Tears, Obsidian Shard, Toxic Blade,
+    Tekko-Kagi, Eye of Providence, Oni Hunter''s Garb, Bancroft''s Talon, Helm of
+    Radiance, Shield of the Phoenix, Rod of Asclepius, Dominance, Shogun''s Ofuda.'
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.66
-      win: 0.62
-      pick: 0.0
-      fit: 0.32
     Tyrfing:
-      total: 0.55
+      total: 0.56
       efficiency: 0.46
       win: 0.64
       pick: 0.55
       fit: 0.53
-    Gluttonous Grimoire:
-      total: 0.57
-      efficiency: 0.66
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.68
       win: 0.62
       pick: 0.0
-      fit: 0.41
+      fit: 0.38
     Riptalon:
-      total: 0.59
-      efficiency: 0.56
+      total: 0.58
+      efficiency: 0.53
       win: 0.68
       pick: 0.3
       fit: 0.51
     Silverbranch Bow:
       total: 0.56
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.65
       pick: 0.28
       fit: 0.44
     The Crusher:
       total: 0.55
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.32
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.62
+      pick: 0.0
+      fit: 0.25
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -531,12 +603,12 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Hydra's Lament
   - The Crusher
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
   - The Crusher
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -551,49 +623,49 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Soul Gem, Jotunn''s Revenge, Genji''s
-    Guard, Gluttonous Grimoire, Breastplate of Valor, Hydra''s Lament, The Crusher,
-    Berserker''s Shield, Spear of Desolation, Death Metal, Chronos'' Pendant, Freya''s
-    Tears, Damaru, Lernaean Bow, Spear of the Magus, Shield of the Phoenix, The Cosmic
-    Horror, Bracer of The Abyss, Gem of Focus, Screeching Gargoyle, Golden Blade,
-    Pharaoh''s Curse, Totem of Death, Blood-Bound Book, Bancroft''s Talon, Chandra''s
-    Grace, Kinetic Cuirass, The Reaper, Obsidian Shard, Amanita Charm, Nimble Ring,
-    Arondight, Bragi''s Harp, Runeforged Hammer, Oni Hunter''s Garb, Pendulum Blade,
-    Eye of Providence, Helm of Radiance, Dominance.'
+    + fit + win/pick). Underrated for this god: Rod of Tahuti, Soul Gem, Jotunn''s
+    Revenge, Nimble Ring, Genji''s Guard, Gluttonous Grimoire, The Crusher, Breastplate
+    of Valor, Hydra''s Lament, Berserker''s Shield, Spear of Desolation, Death Metal,
+    Freya''s Tears, Chronos'' Pendant, Shield of the Phoenix, Damaru, The Cosmic Horror,
+    Spear of the Magus, Lernaean Bow, Screeching Gargoyle, Chandra''s Grace, Golden
+    Blade, Gem of Focus, The Reaper, Kinetic Cuirass, Amanita Charm, Runeforged Hammer,
+    Totem of Death, Arondight, Pharaoh''s Curse, Bracer of The Abyss, Pendulum Blade,
+    Eye of Providence, Oni Hunter''s Garb, Blood-Bound Book, Tekko-Kagi, Obsidian
+    Shard, Bragi''s Harp.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
-      efficiency: 0.71
+      total: 0.56
+      efficiency: 0.69
       win: 0.62
       pick: 0.0
       fit: 0.28
     Breastplate of Valor:
-      total: 0.55
-      efficiency: 0.66
+      total: 0.54
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.49
-    Hydra's Lament:
-      total: 0.55
-      efficiency: 0.58
-      win: 0.62
-      pick: 0.0
-      fit: 0.46
     The Crusher:
       total: 0.55
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.31
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.62
+      pick: 0.0
+      fit: 0.21
     Soul Gem:
       total: 0.58
-      efficiency: 0.59
+      efficiency: 0.57
       win: 0.62
       pick: 0.0
       fit: 0.66
@@ -601,15 +673,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Nimble Ring
   - Death Metal
   - Gluttonous Grimoire
   - The Crusher
-  - Soul Gem
+  - Rod of Tahuti
   flex_slots:
+  - The Crusher
   - Death Metal
-  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -618,70 +690,69 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Gluttonous Grimoire, Soul Gem, Jotunn''s Revenge, The
-    Crusher, Death Metal, Berserker''s Shield, Genji''s Guard, Spear of the Magus,
-    Hydra''s Lament, Damaru, Lernaean Bow, Breastplate of Valor, Bracer of The Abyss,
-    The Cosmic Horror, Spear of Desolation, Bragi''s Harp, Golden Blade, Blood-Bound
-    Book, Bancroft''s Talon, Chronos'' Pendant, Obsidian Shard, Nimble Ring, The Reaper,
-    Pharaoh''s Curse, Runeforged Hammer, Tekko-Kagi, Dominance, Helm of Radiance,
-    Freya''s Tears, Kinetic Cuirass, Amanita Charm, Rod of Asclepius, Oni Hunter''s
-    Garb, Jade Scepter, Gem of Focus, Eye of Providence, Shield of the Phoenix, The
-    World Stone.'
+    Underrated for this god: Rod of Tahuti, Nimble Ring, Gluttonous Grimoire, Soul
+    Gem, Jotunn''s Revenge, The Crusher, Death Metal, Berserker''s Shield, Genji''s
+    Guard, Damaru, The Cosmic Horror, Hydra''s Lament, Spear of the Magus, Spear of
+    Desolation, Lernaean Bow, Breastplate of Valor, Golden Blade, The Reaper, Bragi''s
+    Harp, Bracer of The Abyss, Chronos'' Pendant, Runeforged Hammer, Tekko-Kagi, Obsidian
+    Shard, Blood-Bound Book, Kinetic Cuirass, Freya''s Tears, Pharaoh''s Curse, Amanita
+    Charm, Bancroft''s Talon, Helm of Radiance, Eye of Providence, Shield of the Phoenix,
+    Oni Hunter''s Garb, Dominance, Rod of Asclepius, Gem of Focus, Jade Scepter.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.62
-      pick: 0.0
-      fit: 0.2
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.56
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.38
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.68
+      win: 0.62
+      pick: 0.0
+      fit: 0.42
     Death Metal:
       total: 0.55
-      efficiency: 0.58
+      efficiency: 0.56
       win: 0.62
       pick: 0.0
       fit: 0.47
     Gluttonous Grimoire:
-      total: 0.58
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.63
       win: 0.62
       pick: 0.0
       fit: 0.46
     The Crusher:
       total: 0.56
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.37
-    Soul Gem:
-      total: 0.57
-      efficiency: 0.59
+    Rod of Tahuti:
+      total: 0.59
+      efficiency: 0.77
       win: 0.62
       pick: 0.0
-      fit: 0.58
+      fit: 0.29
   starter: *id001
 - source: suggested
   archetype: hybrid
   slot_order:
   - Odysseus' Bow
   - Jotunn's Revenge
-  - Death Metal
+  - Nimble Ring
   - Gluttonous Grimoire
   - The Crusher
-  - Soul Gem
+  - Rod of Tahuti
   flex_slots:
-  - Death Metal
+  - The Crusher
   - Odysseus' Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -697,56 +768,56 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s core, corrected where the community is clearly right (efficiency
-    + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Soul Gem, Jotunn''s
-    Revenge, The Crusher, Death Metal, Berserker''s Shield, Genji''s Guard, Spear
-    of the Magus, Hydra''s Lament, Damaru, Lernaean Bow, Breastplate of Valor, Bracer
-    of The Abyss, The Cosmic Horror, Spear of Desolation, Bragi''s Harp, Golden Blade,
-    Blood-Bound Book, Bancroft''s Talon, Chronos'' Pendant, Obsidian Shard, Nimble
-    Ring, The Reaper, Pharaoh''s Curse, Runeforged Hammer, Tekko-Kagi, Dominance,
-    Helm of Radiance, Freya''s Tears, Kinetic Cuirass, Amanita Charm, Rod of Asclepius,
-    Oni Hunter''s Garb, Jade Scepter, Gem of Focus, Eye of Providence, Shield of the
-    Phoenix, The World Stone.'
+    + fit + win/pick). Underrated for this god: Rod of Tahuti, Nimble Ring, Gluttonous
+    Grimoire, Soul Gem, Jotunn''s Revenge, The Crusher, Death Metal, Berserker''s
+    Shield, Genji''s Guard, Damaru, The Cosmic Horror, Hydra''s Lament, Spear of the
+    Magus, Spear of Desolation, Lernaean Bow, Breastplate of Valor, Golden Blade,
+    The Reaper, Bragi''s Harp, Bracer of The Abyss, Chronos'' Pendant, Runeforged
+    Hammer, Tekko-Kagi, Obsidian Shard, Blood-Bound Book, Kinetic Cuirass, Freya''s
+    Tears, Pharaoh''s Curse, Amanita Charm, Bancroft''s Talon, Helm of Radiance, Eye
+    of Providence, Shield of the Phoenix, Oni Hunter''s Garb, Dominance, Rod of Asclepius,
+    Gem of Focus, Jade Scepter.'
   slot_scores:
     Odysseus' Bow:
-      total: 0.54
-      efficiency: 0.41
+      total: 0.52
+      efficiency: 0.36
       win: 0.73
       pick: 0.42
       fit: 0.3
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.56
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.38
-    Death Metal:
-      total: 0.55
-      efficiency: 0.58
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.68
       win: 0.62
       pick: 0.0
-      fit: 0.47
+      fit: 0.42
     Gluttonous Grimoire:
-      total: 0.58
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.63
       win: 0.62
       pick: 0.0
       fit: 0.46
     The Crusher:
       total: 0.56
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.37
-    Soul Gem:
-      total: 0.57
-      efficiency: 0.59
+    Rod of Tahuti:
+      total: 0.59
+      efficiency: 0.77
       win: 0.62
       pick: 0.0
-      fit: 0.58
+      fit: 0.29
   swaps:
   - added: Odysseus' Bow
-    removed: Berserker's Shield
+    removed: Death Metal
     reason: community 73% win over 63 matches (vs 59% on this god), taking the model's
-      weakest slot from Berserker's Shield
+      weakest slot from Death Metal
   starter: *id001
 ---

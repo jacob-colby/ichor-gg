@@ -233,3 +233,82 @@ def test_conversion_does_not_recurse_through_the_pricing_path():
     finally:
         efficiency.PRICE_CRIT_MULTIPLIERS = False
     assert values["Critical Chance %"] == pytest.approx(34.0)   # its own 20 + 14
+
+
+# ---- Stat conversion (shipped ON — `price_conversions`) --------------------
+
+REF = {"Max Mana": 500, "Intelligence": 325}
+
+
+def _conv(passive, stats):
+    return {"name": "X", "passive": passive, "stats": stats}
+
+
+def test_the_percent_conversion_grammar():
+    item = _conv("+Strength equal to 3% of Mana from Items.", {"Strength": "35"})
+    assert passives.stat_conversions(item) == [("Max Mana", 0.03, {"Strength": 1.0})]
+    assert passives.conversion_grants(item, REF) == {"Strength": pytest.approx(15.0)}
+
+
+def test_the_per_unit_conversion_grammar():
+    """`For every 10 Intelligence: +1 Attack Damage +1% Attack Speed` — a
+    different sentence shape entirely from the `equal to N%` one."""
+    item = _conv("For every 10 Intelligence: +1 Attack Damage +1% Attack Speed",
+                 {"Attack Speed": "20%", "Attack Damage": "5"})
+    src, rate, per = passives.stat_conversions(item)[0]
+    assert (src, rate) == ("Intelligence", 1.0)
+    assert per == {"Attack Damage": pytest.approx(0.1), "Attack Speed %": pytest.approx(0.1)}
+
+
+def test_a_conditional_conversion_clause_is_not_counted():
+    """Book of Thoth converts 5% of mana outright AND another 2% only "At 50
+    Evolve Stacks". Read as one blob those sum to 7% and overprice the item for
+    a build that has not stacked."""
+    item = _conv("+Intelligence equal to 5% of Mana from Items. Deal 900 Damage: "
+                 "+1 Stack. At 50 Evolve Stacks, Item evolves and gains: Additional "
+                 "+Intelligence equal to 2% of Mana from Items",
+                 {"Intelligence": "30"})
+    assert passives.stat_conversions(item) == [("Max Mana", 0.05, {"Intelligence": 1.0})]
+
+
+def test_a_conversion_into_a_stat_the_item_does_not_sell_is_skipped():
+    """AMPLIFY ONLY. Rod of Tahuti turns Intelligence into more Intelligence,
+    which anyone who bought it for the Intelligence wants. Nimble Ring turns it
+    into ATTACK DAMAGE, worth market price only to a god who both stacks
+    Intelligence and auto-attacks — and the gold model is god-agnostic. Priced
+    in full it read -869 residual and reached 52 cores against 3 community
+    builds in 87."""
+    ring = _conv("For every 10 Intelligence: +1 Attack Damage +1% Attack Speed",
+                 {"Intelligence": "35", "Attack Speed": "20%"})
+    grants = passives.conversion_grants(ring, REF)
+    assert "Attack Damage" not in grants          # not on its sheet
+    assert grants["Attack Speed %"] == pytest.approx(32.5)
+
+
+def test_a_non_converting_item_yields_nothing():
+    assert passives.stat_conversions(_conv("+20% Attack Speed", {})) == []
+    assert passives.conversion_grants(_conv("", {}), REF) == {}
+
+
+def test_a_missing_reference_prices_nothing_rather_than_guessing():
+    item = _conv("+Strength equal to 3% of Mana from Items.", {"Strength": "35"})
+    assert passives.conversion_grants(item, {}) == {}
+    assert passives.conversion_grants(item, {"Max Mana": 0}) == {}
+
+
+def test_the_reference_is_measured_over_builds_that_carry_the_stat():
+    """45 of 87 gods are physical and carry zero Intelligence, so a median over
+    every build is 0 — which would price Rod of Tahuti and Nimble Ring at
+    nothing, the two items this exists to fix."""
+    items = [{"name": "Mana", "stats": {"Max Mana": "300"}},
+             {"name": "Int", "stats": {"Intelligence": "100"}},
+             {"name": "Plain", "stats": {"Strength": "40"}}]
+    builds = [
+        {"builds": [{"source": "community",
+                     "slot_order": [{"name": "Int"}, {"name": "Mana"}]}]},
+        {"builds": [{"source": "community",
+                     "slot_order": [{"name": "Plain"}, {"name": "Mana"}]}]},
+    ]
+    ref = passives.measure_conversion_reference(builds, items)
+    assert ref["Intelligence"] == 100        # not 50 — the zero build is excluded
+    assert ref["Max Mana"] == 300

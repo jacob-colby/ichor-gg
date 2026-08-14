@@ -10,11 +10,11 @@ builds:
   - Jotunn's Revenge
   - Bragi's Harp
   - The Crusher
-  - Pharaoh's Curse
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Jotunn's Revenge
   - The Crusher
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.42
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.66
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
     Bragi's Harp:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.71
     The Crusher:
       total: 0.54
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.57
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.38
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -71,17 +71,82 @@ builds:
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
+  archetype: mana-stack
+  slot_order:
+  - Toxic Blade
+  - Bancroft's Talon
+  - Jotunn's Revenge
+  - Bragi's Harp
+  - The Crusher
+  - Rod of Tahuti
+  flex_slots:
+  - The Crusher
+  - Toxic Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
+    data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Bancroft's Talon:
+      total: 0.57
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Jotunn's Revenge:
+      total: 0.58
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Bragi's Harp:
+      total: 0.56
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    The Crusher:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Rod of Tahuti:
+      total: 0.59
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+  starter: *id001
+- source: suggested
   archetype: burst
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Bragi's Harp
   - Spear of Desolation
   - The Crusher
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - The Crusher
   - Spear of Desolation
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -99,23 +164,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.42
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.66
+      total: 0.6
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Bragi's Harp:
-      total: 0.53
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
@@ -123,14 +182,20 @@ builds:
       pick: 0.0
       fit: 0.56
     The Crusher:
-      total: 0.56
-      efficiency: 0.63
+      total: 0.57
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -164,14 +229,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.42
+      total: 0.58
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.72
     Berserker's Shield:
-      total: 0.54
-      efficiency: 0.68
+      total: 0.53
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -182,20 +247,20 @@ builds:
       pick: 0.0
       fit: 0.84
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.57
+      total: 0.58
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.6
     Shogun's Ofuda:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.55
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.6
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -206,12 +271,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Spear of Desolation
-  - Spear of the Magus
   - The Crusher
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Jotunn's Revenge
   - Spear of Desolation
-  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -229,14 +294,14 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.42
+      total: 0.64
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.84
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.66
+      total: 0.59
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -246,21 +311,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Spear of the Magus:
-      total: 0.54
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     The Crusher:
       total: 0.6
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Rod of Tahuti:
+      total: 0.63
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -270,13 +335,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Tyrfing
-  - Bragi's Harp
+  - Nimble Ring
   - Riptalon
   - Silverbranch Bow
-  - Soul Gem
+  - Rod of Tahuti
   flex_slots:
-  - Tyrfing
-  - Bragi's Harp
+  - Rod of Tahuti
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -294,8 +359,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.42
+      total: 0.64
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -305,30 +370,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Bragi's Harp:
-      total: 0.53
-      efficiency: 0.44
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.48
     Riptalon:
-      total: 0.72
-      efficiency: 0.56
+      total: 0.71
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.88
     Silverbranch Bow:
-      total: 0.55
-      efficiency: 0.54
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+    Rod of Tahuti:
+      total: 0.54
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.31
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -340,7 +405,7 @@ builds:
   - Spear of Desolation
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Hydra's Lament
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -360,25 +425,25 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.55
-      efficiency: 0.42
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.68
     Genji's Guard:
-      total: 0.52
-      efficiency: 0.71
+      total: 0.51
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.34
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.66
+      total: 0.62
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.6
     Hydra's Lament:
-      total: 0.56
-      efficiency: 0.58
+      total: 0.55
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -389,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -402,11 +467,11 @@ builds:
   - Jotunn's Revenge
   - Bragi's Harp
   - The Crusher
-  - Pharaoh's Curse
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Jotunn's Revenge
   - The Crusher
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -424,38 +489,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.42
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.66
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
     Bragi's Harp:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.71
     The Crusher:
       total: 0.54
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.57
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.38
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0

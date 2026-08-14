@@ -32,20 +32,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.75
-      efficiency: 0.66
+      total: 0.74
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.84
     Hydra's Lament:
-      total: 0.62
-      efficiency: 0.58
+      total: 0.61
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -63,13 +63,78 @@ builds:
       fit: 0.84
     The Crusher:
       total: 0.7
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.77
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
+- source: suggested
+  archetype: mana-stack
+  slot_order:
+  - Lernaean Bow
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  flex_slots:
+  - Heartseeker
+  - Lernaean Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
+    data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.5
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Jotunn's Revenge:
+      total: 0.65
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Hydra's Lament:
+      total: 0.57
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    The Reaper:
+      total: 0.6
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    The Crusher:
+      total: 0.59
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+  starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
@@ -80,8 +145,8 @@ builds:
   - Pendulum Blade
   - The Crusher
   flex_slots:
-  - Hydra's Lament
   - Toxic Blade
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -99,20 +164,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
-      efficiency: 0.42
+      total: 0.54
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.68
-      efficiency: 0.66
+      total: 0.67
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.71
     Hydra's Lament:
-      total: 0.54
-      efficiency: 0.58
+      total: 0.53
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -130,7 +195,7 @@ builds:
       fit: 0.71
     The Crusher:
       total: 0.62
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -176,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -194,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.73
     Pharaoh's Curse:
-      total: 0.62
-      efficiency: 0.57
+      total: 0.61
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -210,8 +275,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Pendulum Blade
   - Toxic Blade
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -229,14 +294,14 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
-      efficiency: 0.42
+      total: 0.65
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.86
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.66
+      total: 0.76
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -254,13 +319,13 @@ builds:
       fit: 0.89
     The Crusher:
       total: 0.75
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.87
     Heartseeker:
-      total: 0.66
-      efficiency: 0.45
+      total: 0.64
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -275,7 +340,7 @@ builds:
   - Riptalon
   - Amanita Charm
   flex_slots:
-  - Tyrfing
+  - Amanita Charm
   - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -295,19 +360,19 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.63
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.72
     Lernaean Bow:
-      total: 0.59
-      efficiency: 0.54
+      total: 0.57
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
     Toxic Blade:
-      total: 0.67
-      efficiency: 0.42
+      total: 0.68
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -318,8 +383,8 @@ builds:
       pick: 0.0
       fit: 0.72
     Riptalon:
-      total: 0.76
-      efficiency: 0.56
+      total: 0.75
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -359,20 +424,20 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.58
-      efficiency: 0.71
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
     Breastplate of Valor:
-      total: 0.56
-      efficiency: 0.66
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.71
-      efficiency: 0.66
+      total: 0.7
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -383,8 +448,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Hydra's Lament:
-      total: 0.63
-      efficiency: 0.58
+      total: 0.62
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -424,20 +489,20 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.75
-      efficiency: 0.66
+      total: 0.74
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.84
     Hydra's Lament:
-      total: 0.62
-      efficiency: 0.58
+      total: 0.61
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -455,7 +520,7 @@ builds:
       fit: 0.84
     The Crusher:
       total: 0.7
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.77

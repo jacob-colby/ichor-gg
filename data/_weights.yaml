@@ -121,6 +121,39 @@ price_stacks: false
 # passive at 14 points, where a real 60%-crit build makes it worth 42.
 price_crit_multipliers: true
 
+# Items that convert one stat into another, priced against a REFERENCE build.
+# Four qualify and three of them reach zero model cores:
+#
+#   Transcendence  +Strength     = 3%  of Mana from Items
+#   Book of Thoth  +Intelligence = 5%  of Mana from Items
+#   Rod of Tahuti  +Intelligence = 25% of Intelligence from items
+#   Nimble Ring    per 10 Intelligence: +1 Attack Damage, +1% Attack Speed
+#
+# Against the reference below that is +15 Strength on Transcendence (sheet 35),
+# +25 Intelligence on Book of Thoth (sheet 30), +81 on Rod of Tahuti (sheet
+# 80 - it literally doubles) and +32.5 Attack Damage / +32.5% Attack Speed on
+# Nimble Ring, which lists neither at that size.
+#
+# ONE PASS, DELIBERATELY. Evaluating against a typical build rather than the
+# core being assembled means there is no fixed point to converge: adding
+# Transcendence would raise mana's value, pulling in more mana items, raising
+# Transcendence again. So this prices the DETERMINISTIC case correctly (a mage
+# builds Intelligence whether or not Tahuti is in the core) and the
+# self-referential case conservatively - Transcendence gets +43%, where Ullr's
+# actual 1,550-mana build would be +133%. See
+# docs/plans/2026-08-13-mana-conversion-fit.md.
+price_conversions: true
+
+# Median total across community builds THAT CARRY THE STAT AT ALL, from
+# `passives.measure_conversion_reference`. The qualifier matters: 45 of 87 gods
+# are physical and carry zero Intelligence, so a median over every build is 0,
+# which would price Rod of Tahuti and Nimble Ring at nothing - the two items
+# this exists to fix. It is also the wrong question, since Tahuti is only ever
+# bought by a god who builds Intelligence.
+conversion_reference:
+  Max Mana: 500
+  Intelligence: 325
+
 # What an item with no community record scores on `win` -- the god's own median
 # measured rate, not a global constant. SHIPPED ON.
 #
@@ -329,6 +362,45 @@ stat_caps:
 # whose tokenized role+specs intersect `match_any` (null = any). `stats` skews
 # god-fit; `tag_bonus` rewards tagged items; `max_lifesteal` caps sustain items.
 flavors:
+  # The build a mana converter defines. Transcendence turns 3% of your Mana
+  # from Items into Strength and Book of Thoth 5% into Intelligence, so every
+  # mana item makes the converter better and the converter makes every mana
+  # item into power. `price_conversions` prices that against a TYPICAL build,
+  # which is deliberately conservative and leaves both items under-picked
+  # (Transcendence reaches 1 core against 11 community builds, Book of Thoth 0
+  # against 22). This is the other half: an explicit archetype where the mana
+  # build is the user's choice rather than something the assembler has to
+  # discover, which sidesteps the fixed point that makes two-pass assembly
+  # risky. See docs/plans/2026-08-13-mana-conversion-fit.md.
+  #
+  # `require` seeds the core with three Max Mana items before filling by score,
+  # so the converter is bought into a build that actually feeds it. Gated by
+  # `requires_item`: without a converter in the god's pool this is just a pile
+  # of mana, and the tab would be empty of the thing that justifies it.
+  mana-stack:
+    damage_types: null
+    # Every god can build ONE of the two converters - Transcendence is a
+    # Strength item and Book of Thoth an Intelligence one - so `requires_item`
+    # alone offered this to all 87. The build only makes sense for a god who
+    # turns power into damage, so it is gated on the damage-dealing roles the
+    # way the other offensive flavors are.
+    match_any: [Carry, Hunter, Sharpshooter, Mage, Mid, Nuker, Assassin,
+                Jungle, Slayer, Sniper, Burst]
+    requires_item: [Transcendence, Book of Thoth]
+    # Max Mana is deliberately the SMALLEST weight here, which reads backwards
+    # for a mana build and is not. `require` already guarantees three mana
+    # carriers; the overlay's job is to decide WHICH ones, and at 1.2 it chose
+    # Genji's Guard and Breastplate of Valor - the items with the most mana on
+    # them, which are tank items. Mana is the fuel, not the goal: what the
+    # converter turns it into is power, so power is what the overlay weights.
+    stats:
+      Strength: 1.4
+      Intelligence: 1.4
+      Penetration: 0.9
+      Cooldown Rate: 0.7
+      Max Mana: 0.5
+    require: {stat: Max Mana, min: 3}
+    max_lifesteal: 1
   crit:
     damage_types: [physical]
     match_any: [Carry, Sharpshooter]

@@ -13,7 +13,7 @@ builds:
   - Shogun's Ofuda
   - Triton's Conch
   flex_slots:
-  - Erosion
+  - Shogun's Ofuda
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.61
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -50,20 +50,20 @@ builds:
       pick: 0.0
       fit: 0.75
     Pharaoh's Curse:
-      total: 0.66
-      efficiency: 0.57
+      total: 0.65
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.52
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.75
     Triton's Conch:
       total: 0.63
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -105,14 +105,14 @@ builds:
       pick: 0.0
       fit: 0.67
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Rod of Asclepius:
-      total: 0.71
-      efficiency: 0.57
+      total: 0.7
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -123,14 +123,14 @@ builds:
       pick: 0.0
       fit: 0.84
     Pharaoh's Curse:
-      total: 0.67
-      efficiency: 0.57
+      total: 0.66
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.78
     Shogun's Ofuda:
-      total: 0.65
-      efficiency: 0.52
+      total: 0.64
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -149,8 +149,8 @@ builds:
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -164,14 +164,14 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
-      efficiency: 0.42
+      total: 0.65
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.87
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.66
+      total: 0.6
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -183,19 +183,19 @@ builds:
       fit: 0.92
     Void Stone:
       total: 0.68
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.92
     The Crusher:
       total: 0.63
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.63
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -210,7 +210,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
+  - Golden Blade
   - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
@@ -229,20 +229,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.65
-      efficiency: 0.54
+      total: 0.64
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.75
     Toxic Blade:
-      total: 0.64
-      efficiency: 0.42
+      total: 0.65
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.87
     Riptalon:
-      total: 0.66
-      efficiency: 0.56
+      total: 0.65
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.84
     Pharaoh's Curse:
-      total: 0.66
-      efficiency: 0.57
+      total: 0.65
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.52
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Spectral Armor
   - Erosion
   - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Shogun's Ofuda
-  - Erosion
+  - Genji's Guard
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,17 +294,23 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
-      efficiency: 0.71
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Spectral Armor:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Erosion:
       total: 0.57
       efficiency: 0.52
@@ -312,20 +318,14 @@ builds:
       pick: 0.0
       fit: 0.61
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -340,7 +340,7 @@ builds:
   - Shogun's Ofuda
   - Triton's Conch
   flex_slots:
-  - Erosion
+  - Shogun's Ofuda
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -360,7 +360,7 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.61
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -377,20 +377,20 @@ builds:
       pick: 0.0
       fit: 0.75
     Pharaoh's Curse:
-      total: 0.66
-      efficiency: 0.57
+      total: 0.65
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.52
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.75
     Triton's Conch:
       total: 0.63
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.82

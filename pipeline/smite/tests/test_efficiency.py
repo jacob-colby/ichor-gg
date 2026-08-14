@@ -235,20 +235,26 @@ def test_pricing_flags_come_from_the_weights_the_gate_is_measuring():
     so `calibrate` and `validate` scored every off-by-default experiment as OFF
     even when _weights.yaml turned it on. A gate that cannot see the config
     reports the shipped number for an unshipped model."""
+    def snapshot():
+        return (efficiency.PRICE_PASSIVES, efficiency.PRICE_STACKS,
+                efficiency.PRICE_CRIT_MULTIPLIERS, efficiency.PRICE_CONVERSIONS,
+                dict(efficiency.CONVERSION_REFERENCE))
+
     before = efficiency.apply_pricing_flags(
-        {"price_passives": True, "price_stacks": True, "price_crit_multipliers": True})
+        {"price_passives": True, "price_stacks": True,
+         "price_crit_multipliers": True, "price_conversions": True,
+         "conversion_reference": {"Max Mana": 500}})
     try:
-        assert (efficiency.PRICE_PASSIVES, efficiency.PRICE_STACKS,
-                efficiency.PRICE_CRIT_MULTIPLIERS) == (True, True, True)
+        assert snapshot() == (True, True, True, True, {"Max Mana": 500})
         efficiency.apply_pricing_flags({})
-        assert (efficiency.PRICE_PASSIVES, efficiency.PRICE_STACKS,
-                efficiency.PRICE_CRIT_MULTIPLIERS) == (False, False, False)
+        assert snapshot() == (False, False, False, False, {})
         # It returns the prior values so a sweep can restore them.
         prior = efficiency.apply_pricing_flags({"price_stacks": True})
-        assert prior == (False, False, False)
+        assert prior == (False, False, False, False, {})
     finally:
         (efficiency.PRICE_PASSIVES, efficiency.PRICE_STACKS,
-         efficiency.PRICE_CRIT_MULTIPLIERS) = before
+         efficiency.PRICE_CRIT_MULTIPLIERS, efficiency.PRICE_CONVERSIONS,
+         efficiency.CONVERSION_REFERENCE) = before
 
 
 def test_validate_applies_the_flags_before_fitting():

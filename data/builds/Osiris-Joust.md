@@ -13,7 +13,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
+  - Berserker's Shield
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
@@ -33,18 +33,18 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.56
-      efficiency: 0.42
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.7
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.55
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.45
     Amanita Charm:
-      total: 0.72
+      total: 0.71
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.55
     Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.57
+      total: 0.6
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -73,7 +73,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Berserker's Shield
+  - Kinetic Cuirass
   - Shield of the Phoenix
   - Amanita Charm
   - Erosion
@@ -81,29 +81,29 @@ builds:
   - Shogun's Ofuda
   flex_slots:
   - Erosion
-  - Berserker's Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Berserker's Shield:
-      total: 0.58
-      efficiency: 0.68
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.54
     Shield of the Phoenix:
       total: 0.6
       efficiency: 0.57
@@ -123,14 +123,14 @@ builds:
       pick: 0.0
       fit: 0.64
     Pharaoh's Curse:
-      total: 0.62
-      efficiency: 0.57
+      total: 0.61
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.67
     Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.42
+      total: 0.64
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -183,13 +183,13 @@ builds:
       fit: 0.79
     Void Stone:
       total: 0.61
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.79
     The Crusher:
-      total: 0.59
-      efficiency: 0.63
+      total: 0.6
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -229,20 +229,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.62
-      efficiency: 0.42
+      total: 0.63
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.82
     Berserker's Shield:
-      total: 0.55
-      efficiency: 0.68
+      total: 0.53
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.41
     Riptalon:
-      total: 0.64
-      efficiency: 0.56
+      total: 0.63
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.71
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.57
+      total: 0.58
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.61
     Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.52
+      total: 0.56
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -294,14 +294,14 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.53
-      efficiency: 0.71
+      total: 0.52
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.66
+      total: 0.52
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -312,20 +312,20 @@ builds:
       pick: 0.0
       fit: 0.72
     Hydra's Lament:
-      total: 0.52
-      efficiency: 0.58
+      total: 0.51
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.47
     Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.57
+      total: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.53
     Shogun's Ofuda:
-      total: 0.53
-      efficiency: 0.52
+      total: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -340,7 +340,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
+  - Berserker's Shield
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
@@ -360,18 +360,18 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.56
-      efficiency: 0.42
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.7
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.55
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.45
     Amanita Charm:
-      total: 0.72
+      total: 0.71
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.55
     Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.57
+      total: 0.6
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65

@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -70,6 +70,71 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+- source: suggested
+  archetype: mana-stack
+  slot_order:
+  - Bancroft's Talon
+  - Genji's Guard
+  - Rod of Tahuti
+  - Spectral Armor
+  - Erosion
+  - Triton's Conch
+  flex_slots:
+  - Bancroft's Talon
+  - Genji's Guard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
+    data).
+  slot_scores:
+    Bancroft's Talon:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Genji's Guard:
+      total: 0.49
+      efficiency: 0.69
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Spectral Armor:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Erosion:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Triton's Conch:
+      total: 0.61
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+  starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
@@ -93,8 +158,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -123,14 +188,14 @@ builds:
       pick: 0.0
       fit: 0.64
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
       total: 0.57
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -158,8 +223,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -176,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -194,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -205,17 +270,17 @@ builds:
   slot_order:
   - Void Shield
   - Void Stone
+  - Rod of Tahuti
   - Spectral Armor
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
-  - Stampede
+  - Erosion
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Stone of Binding — magical protection
     swap_item: Stone of Binding
@@ -236,10 +301,16 @@ builds:
       fit: 0.97
     Void Stone:
       total: 0.7
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.97
+    Rod of Tahuti:
+      total: 0.62
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Spectral Armor:
       total: 0.57
       efficiency: 0.58
@@ -258,12 +329,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Stampede:
-      total: 0.57
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -275,8 +340,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - Bracer of The Abyss
-  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,20 +359,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bracer of The Abyss:
-      total: 0.42
-      efficiency: 0.56
+      total: 0.4
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.28
     Nimble Ring:
-      total: 0.41
-      efficiency: 0.49
+      total: 0.51
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.33
     Bragi's Harp:
-      total: 0.45
-      efficiency: 0.44
+      total: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -324,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.58
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -340,8 +405,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Stampede
   - Spectral Armor
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -359,13 +424,13 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
-      efficiency: 0.71
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.43
     Freya's Tears:
-      total: 0.58
+      total: 0.57
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -389,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -442,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0

@@ -747,10 +747,16 @@ def _god_tokens(god):
     return toks
 
 
-def eligible_flavors(god, weights):
+def eligible_flavors(god, weights, items=None):
     """Flavor names whose damage_types (or null=any) include the god's damage
     type, whose match_any (or null=any) intersects the god's token set, and
     whose `requires_scaling` thresholds the god's own kit actually meets.
+
+    `requires_item` [names] gates a flavor on the god actually being able to
+    build one of them — a mana-stack build is not an option for a god with no
+    mana converter in their pool, it is an empty tab. Needs `items`; without it
+    the gate cannot be evaluated and the flavor is withheld rather than offered
+    on a guess.
 
     `requires_scaling` {stat: min_weight} is what keeps the off-type builds
     honest. A Strength build on a magical god is a real option for Sol, whose
@@ -768,6 +774,19 @@ def eligible_flavors(god, weights):
         match_any = f.get("match_any")
         if match_any and not (_god_tokens(god) & set(match_any)):
             continue
+        wants = f.get("requires_item")
+        if wants:
+            if items is None:
+                continue
+            # The SCORED pool, not just the buildable one: `is_buildable`
+            # answers "can this take a core slot" and lets Transcendence
+            # through for all 87 gods, while the damage filter is what actually
+            # keeps a Strength converter off a mage. Using the looser predicate
+            # offered the flavor to every god on the roster.
+            buildable = {i["name"] for i in items
+                         if is_buildable(i, god) and passes_damage_filter(i, god, weights)}
+            if not (buildable & set(wants)):
+                continue
         needs = f.get("requires_scaling")
         if needs:
             measured = damage_value.stat_weights(god)

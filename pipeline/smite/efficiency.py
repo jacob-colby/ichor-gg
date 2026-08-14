@@ -66,6 +66,18 @@ PRICE_STACKS = False
 # `price_crit_multipliers` in _weights.yaml.
 PRICE_CRIT_MULTIPLIERS = False
 
+# Whether an item that converts one stat into another is priced for it, against
+# a REFERENCE build total rather than the core being assembled. Four items
+# qualify; three of them reach zero model cores today. See
+# `passives.stat_conversions` and docs/plans/2026-08-13-mana-conversion-fit.md.
+# Flipped by `price_conversions` in _weights.yaml.
+PRICE_CONVERSIONS = False
+
+# `{stat: typical total across a finished build}` the conversions are priced
+# against. Measured, not guessed — `passives.measure_conversion_reference`
+# re-derives it, and _weights.yaml carries the numbers with that derivation.
+CONVERSION_REFERENCE = {}
+
 
 def apply_pricing_flags(weights):
     """Set the module's pricing switches from a weights dict.
@@ -81,11 +93,15 @@ def apply_pricing_flags(weights):
     Returns the previous values so a caller sweeping a flag can restore them.
     """
     global PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS
-    before = (PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS)
+    global PRICE_CONVERSIONS, CONVERSION_REFERENCE
+    before = (PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS,
+              PRICE_CONVERSIONS, dict(CONVERSION_REFERENCE))
     w = weights or {}
     PRICE_PASSIVES = bool(w.get("price_passives"))
     PRICE_STACKS = bool(w.get("price_stacks"))
     PRICE_CRIT_MULTIPLIERS = bool(w.get("price_crit_multipliers"))
+    PRICE_CONVERSIONS = bool(w.get("price_conversions"))
+    CONVERSION_REFERENCE = dict(w.get("conversion_reference") or {})
     return before
 
 
@@ -110,6 +126,10 @@ def item_stat_values(item):
     if PRICE_CRIT_MULTIPLIERS:
         from smite import passives
         for key, amount in passives.crit_damage_as_chance(item).items():
+            out[key] = out.get(key, 0.0) + amount
+    if PRICE_CONVERSIONS and CONVERSION_REFERENCE:
+        from smite import passives
+        for key, amount in passives.conversion_grants(item, CONVERSION_REFERENCE).items():
             out[key] = out.get(key, 0.0) + amount
     return out
 

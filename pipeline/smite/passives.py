@@ -75,6 +75,7 @@ Kept because the parse is real and useful outside scoring: it is the only
 place that can tell a reader an item grants +70 power the model never counted.
 """
 import re
+import statistics
 
 # The stat vocabulary the gold model already prices, longest first so
 # "Critical Strike Damage" wins over "Critical Strike".
@@ -380,3 +381,167 @@ def crit_damage_as_chance(item):
     if base <= 0:
         return {}
     return {"Critical Chance %": chance * bonus / base}
+
+
+# ── Stat conversion: an item whose value is a function of the rest of the build ──
+#
+# Four items grant a stat computed from a stat you already own. Nothing else in
+# the model can see them, because every signal reads an item's `stats` dict in
+# isolation and these items' worth is a property of the whole core.
+#
+#     Transcendence  +Strength equal to 3% of Mana from Items
+#     Book of Thoth  +Intelligence equal to 5% of Mana from Items
+#     Rod of Tahuti  +Intelligence equal to 25% of your Intelligence from items
+#     Nimble Ring    For every 10 Intelligence: +1 Attack Damage +1% Attack Speed
+#
+# Three of the four reach ZERO model cores. See
+# `docs/plans/2026-08-13-mana-conversion-fit.md` for the full scope; the short
+# version is that this splits into two problems.
+#
+#   Conversion off a stat the build stacks ANYWAY (Rod of Tahuti, Nimble Ring,
+#   both off Intelligence) is near-deterministic — a mage builds Intelligence
+#   whether or not Tahuti is in the core. At the median mage build of 295
+#   Intelligence, Tahuti grants +74 against a sheet value of 80: it is priced
+#   at roughly HALF what it is worth.
+#
+#   Conversion off a stat you would only stack BECAUSE of the item
+#   (Transcendence, Book of Thoth, both off Max Mana) is self-referential. At a
+#   median physical build of 250 Max Mana, Transcendence is a +21% item; at
+#   Ullr's actual 1,550-mana community build it is +46.5 Strength, 2.3x sheet.
+#
+# WHAT IS IMPLEMENTED HERE IS THE FIRST, CONSERVATIVE HALF. The conversion is
+# evaluated against a REFERENCE build total rather than the core actually being
+# assembled, so it is one pass with no fixed point to converge. That prices the
+# deterministic case correctly and the self-referential case conservatively —
+# Transcendence gets its +21%, not its +133%. Chasing the rest needs two-pass
+# assembly, which the scope deliberately holds back because adding
+# Transcendence raises mana's value, which pulls in more mana items, which
+# raises Transcendence again.
+#
+# `+Strength equal to 3% of Mana from Items` and its two siblings.
+_CONVERSION_PERCENT = re.compile(
+    r"\+\s*(" + "|".join(map(re.escape, _STATS)) + r")\s+equal to\s+([\d.]+)\s*%\s*"
+    r"of\s+(?:your\s+)?(Mana|Intelligence|Strength|Health)\b",
+    re.I)
+
+#: `For every 10 Intelligence: +1 Attack Damage +1% Attack Speed`
+_CONVERSION_PER = re.compile(
+    r"For every\s+([\d.]+)\s+(Mana|Intelligence|Strength|Health)\s*:\s*"
+    r"((?:\+\s*[\d.]+\s*%?\s*[A-Za-z][A-Za-z ]*?(?=\s*\+|\s*[.;]|$)\s*)+)",
+    re.I)
+
+#: The passive says "Mana"; the stats dict says "Max Mana".
+_CONVERSION_SOURCE = {"Mana": "Max Mana", "Health": "Max Health",
+                      "Intelligence": "Intelligence", "Strength": "Strength"}
+
+
+def stat_conversions(item):
+    """`[(source_stat, rate, {granted: amount_per_unit})]` for one item.
+
+    `rate` is the fraction of the source stat converted. An empty list for
+    anything that does not convert, which is 217 of the 226 items.
+    """
+    text = (item.get("passive") or "").strip()
+    if not text:
+        return []
+    # Sentence by sentence, skipping any that is conditional. Book of Thoth
+    # converts 5% of mana outright AND another 2% only "At 50 Evolve Stacks";
+    # read as one blob those sum to 7% and overprice the item for a build that
+    # has not stacked. Same rule the rest of this module applies — an
+    # unconditional grant is priced, a conditional one is not.
+    clauses = [c for c in _SENTENCE_BREAK.split(text) if c and not is_conditional(c)]
+    out = []
+    for clause in clauses:
+      for granted, pct, source in _CONVERSION_PERCENT.findall(clause):
+        src = _CONVERSION_SOURCE.get(source.title())
+        if src:
+            out.append((src, float(pct) / 100.0, {granted: 1.0}))
+    # `For every N X: +M Y` is its own grammar and is never gated by a stack
+    # count in the pool today, so it reads the whole text.
+    for per, source, grants in _CONVERSION_PER.findall(text):
+        src = _CONVERSION_SOURCE.get(source.title())
+        if not src or float(per) <= 0:
+            continue
+        fragment = _SENTENCE_BREAK.split(grants)[0]
+        per_unit = {}
+        for amount, percent, stat in _GRANT.findall(fragment):
+            key = f"{stat} %" if percent else stat
+            per_unit[key] = per_unit.get(key, 0.0) + float(amount) / float(per)
+        if per_unit:
+            out.append((src, 1.0, per_unit))
+    return out
+
+
+def conversion_grants(item, reference):
+    """`{column: amount}` the conversion is worth against a REFERENCE build.
+
+    `reference` is `{stat: typical total across a finished build}` — measured,
+    not guessed; see `measure_conversion_reference`. An item's own contribution
+    to the source stat is included in that total, which is correct: you own it
+    once the item is bought.
+    """
+    from smite.efficiency import parse_stat_value, stat_key
+    # The item's own sheet, keyed the way the regression keys it. Read from the
+    # raw dict rather than through `efficiency.item_stat_values`, which is this
+    # function's CALLER when the flag is on.
+    carried = {stat_key(n, raw) for n, raw in (item.get("stats") or {}).items()
+               if parse_stat_value(raw) is not None}
+
+    out = {}
+    for source, rate, per_unit in stat_conversions(item):
+        pool = (reference or {}).get(source, 0.0)
+        if pool <= 0:
+            continue
+        for key, amount in per_unit.items():
+            # AMPLIFY ONLY: price a conversion whose output the item already
+            # sells you, and skip one that opens a different channel.
+            #
+            # Rod of Tahuti turns Intelligence into more Intelligence — anyone
+            # who bought it for the Intelligence wants that. Nimble Ring turns
+            # Intelligence into ATTACK DAMAGE, which is worth its market price
+            # only to a god who both stacks Intelligence and auto-attacks, and
+            # the gold model is god-agnostic so it cannot tell. Priced in full
+            # it read -869 residual, the best bargain in the game, and reached
+            # 52 model cores against 3 community builds in 87. The god-aware
+            # judgement belongs to `fit`, which already gates on the god's own
+            # stat map; efficiency should not pre-empt it.
+            if key not in carried:
+                continue
+            out[key] = out.get(key, 0.0) + pool * rate * amount
+    return out
+
+
+def measure_conversion_reference(builds, items):
+    """`{stat: median total across community builds}` — the reference the
+    conversions are priced against.
+
+    Median rather than mean: one 1,050-mana outlier would otherwise price
+    Transcendence for a build almost nobody runs. Re-derivable so the constants
+    in _weights.yaml stay a measurement rather than a number someone typed.
+
+    OVER BUILDS THAT CARRY THE STAT AT ALL, not over every build. 45 of the 87
+    gods are physical and carry zero Intelligence, so a median over all of them
+    is 0 — which would price Rod of Tahuti and Nimble Ring at nothing, the two
+    items this exists to fix. It is also the wrong question: Tahuti is only
+    ever bought by a god who builds Intelligence, so the reference it should be
+    measured against is a typical INTELLIGENCE build, not a typical build.
+    """
+    from smite.efficiency import parse_stat_value
+    by_name = {i.get("name"): i for i in items or ()}
+    totals = {"Max Mana": [], "Intelligence": []}
+    for group in builds or ():
+        for entry in (group or {}).get("builds", []):
+            if entry.get("source") != "community":
+                continue
+            names = [s.get("name") for s in entry.get("slot_order") or []
+                     if isinstance(s, dict)]
+            for stat in totals:
+                totals[stat].append(sum(
+                    parse_stat_value((by_name.get(n, {}).get("stats") or {}).get(stat)) or 0.0
+                    for n in names))
+    out = {}
+    for stat, vals in totals.items():
+        carried = [v for v in vals if v > 0]
+        if carried:
+            out[stat] = statistics.median(carried)
+    return out

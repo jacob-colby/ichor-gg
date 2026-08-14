@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Shield of the Phoenix:
-      total: 0.75
+      total: 0.74
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -123,7 +123,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.61
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -183,7 +183,7 @@ builds:
       fit: 0.91
     Void Stone:
       total: 0.67
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.91
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -210,8 +210,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Bragi's Harp
   - Bracer of The Abyss
-  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -229,26 +229,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.53
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bracer of The Abyss:
-      total: 0.4
-      efficiency: 0.56
+      total: 0.38
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.25
     Nimble Ring:
-      total: 0.4
-      efficiency: 0.49
+      total: 0.5
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.45
-      efficiency: 0.44
+      total: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Kinetic Cuirass
+  - Gladiator's Shield
   - Freya's Tears
   - Erosion
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
   - Kinetic Cuirass
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -295,13 +295,7 @@ builds:
   slot_scores:
     Genji's Guard:
       total: 0.59
-      efficiency: 0.71
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
-    Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.66
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -311,6 +305,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Gladiator's Shield:
+      total: 0.56
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Freya's Tears:
       total: 0.61
       efficiency: 0.59
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.78
-      efficiency: 0.59
+      total: 0.77
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -340,8 +340,8 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
+  - Pharaoh's Curse
   - Jotunn's Revenge
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -359,8 +359,8 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.66
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -371,8 +371,8 @@ builds:
       pick: 0.0
       fit: 0.52
     The Crusher:
-      total: 0.55
-      efficiency: 0.63
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.62
     Pharaoh's Curse:
-      total: 0.56
-      efficiency: 0.57
+      total: 0.55
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Jotunn's Revenge
   - Kinetic Cuirass
+  - The Crusher
+  - Rod of Tahuti
   - Erosion
-  - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Pharaoh's Curse
-  - Jotunn's Revenge
+  - Rod of Tahuti
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -423,39 +423,39 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.5
+    The Crusher:
+      total: 0.53
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Rod of Tahuti:
+      total: 0.54
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
     Erosion:
       total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Pharaoh's Curse:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Soul Gem:
-      total: 0.76
-      efficiency: 0.59
+      total: 0.75
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.94
     Triton's Conch:
       total: 0.55
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -513,7 +513,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0

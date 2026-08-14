@@ -153,7 +153,7 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                      items_by_name, starter, flex_count, aspect_overlay, aspect_name):
     entries = []
     core_rows = core_profile = None
-    eligible = scoring.eligible_flavors(god, weights)
+    eligible = scoring.eligible_flavors(god, weights, items)
     for flavor in [None] + eligible:
         cfg = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
         if cfg.get("fun") and (aspect_overlay is not None

@@ -100,8 +100,8 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
   - Freya's Tears
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -116,22 +116,22 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Kinetic Cuirass, Amanita Charm, Runeforged Hammer, Berserker''s Shield,
-    Freya''s Tears, Shield of the Phoenix, Oni Hunter''s Garb, Jotunn''s Revenge,
-    Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Pharaoh''s Curse,
-    Shield Splitter, Hydra''s Lament, The Crusher, Leviathan''s Hide, Eye of the Storm,
-    Midgardian Mail, Mantle Of Discord, Stone of Binding, Gladiator''s Shield, Screeching
-    Gargoyle, Shogun''s Ofuda, Prophetic Cloak, Magi''s Cloak.'
+    this god: Kinetic Cuirass, Amanita Charm, Runeforged Hammer, Freya''s Tears, Berserker''s
+    Shield, Shield of the Phoenix, Erosion, Oni Hunter''s Garb, Eye of Providence,
+    Jotunn''s Revenge, Draconic Scale, Spectral Armor, The Crusher, Shield Splitter,
+    Pharaoh''s Curse, Leviathan''s Hide, Eye of the Storm, Midgardian Mail, Gladiator''s
+    Shield, Hydra''s Lament, Mantle Of Discord, Screeching Gargoyle, Stone of Binding,
+    Prophetic Cloak, Ancile, Chandra''s Grace.'
   slot_scores:
     Genji's Guard:
-      total: 0.59
-      efficiency: 0.71
+      total: 0.58
+      efficiency: 0.69
       win: 0.58
       pick: 0.3
       fit: 0.42
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.55
+      efficiency: 0.66
       win: 0.57
       pick: 0.0
       fit: 0.43
@@ -189,21 +189,21 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Runeforged Hammer,
-    Berserker''s Shield, Freya''s Tears, Chandra''s Grace, Oni Hunter''s Garb, Jotunn''s
-    Revenge, Erosion, Eye of Providence, Phoenix Feather, Spectral Armor, Draconic
-    Scale, Pharaoh''s Curse, Glorious Pridwen, Leviathan''s Hide, Hydra''s Lament,
-    The Crusher, Eye of the Storm, Midgardian Mail, Gladiator''s Shield, Shield Splitter,
-    Shogun''s Ofuda, Riptalon, The Reaper.'
+    Berserker''s Shield, Chandra''s Grace, Freya''s Tears, Oni Hunter''s Garb, Erosion,
+    Eye of Providence, Phoenix Feather, Jotunn''s Revenge, Spectral Armor, Draconic
+    Scale, The Crusher, Glorious Pridwen, Pharaoh''s Curse, Leviathan''s Hide, Eye
+    of the Storm, Midgardian Mail, Gladiator''s Shield, Shield Splitter, Hydra''s
+    Lament, The Reaper, Ancile, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
       total: 0.58
-      efficiency: 0.71
+      efficiency: 0.69
       win: 0.58
       pick: 0.3
       fit: 0.39
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.55
+      efficiency: 0.66
       win: 0.57
       pick: 0.0
       fit: 0.46
@@ -249,8 +249,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -259,21 +259,21 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, Kinetic Cuirass, Runeforged Hammer,
-    Amanita Charm, Berserker''s Shield, Stone of Binding, Screeching Gargoyle, Freya''s
-    Tears, Void Shield, Oni Hunter''s Garb, Shield of the Phoenix, Avenging Blade,
-    Void Stone, Erosion, Riptalon, Spectral Armor, Eye of Providence, Hydra''s Lament,
-    Pharaoh''s Curse, Silverbranch Bow, The Reaper, Draconic Scale, Shield Splitter,
-    Leviathan''s Hide, Heartseeker.'
+    Amanita Charm, Screeching Gargoyle, Berserker''s Shield, Stone of Binding, Freya''s
+    Tears, Void Shield, Shield of the Phoenix, Oni Hunter''s Garb, Avenging Blade,
+    Void Stone, Erosion, Spectral Armor, Eye of Providence, The Reaper, Hydra''s Lament,
+    Riptalon, Draconic Scale, Pharaoh''s Curse, Shield Splitter, Leviathan''s Hide,
+    Silverbranch Bow, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
-      efficiency: 0.71
+      total: 0.56
+      efficiency: 0.69
       win: 0.58
       pick: 0.3
       fit: 0.29
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.56
+      efficiency: 0.64
       win: 0.57
       pick: 0.0
       fit: 0.54
@@ -290,13 +290,13 @@ builds:
       pick: 0.15
       fit: 0.3
     The Crusher:
-      total: 0.55
-      efficiency: 0.63
+      total: 0.56
+      efficiency: 0.64
       win: 0.57
       pick: 0.0
       fit: 0.51
     Amanita Charm:
-      total: 0.55
+      total: 0.54
       efficiency: 0.63
       win: 0.57
       pick: 0.0
@@ -329,27 +329,27 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Runeforged Hammer, Kinetic Cuirass, Amanita Charm,
-    Golden Blade, Jotunn''s Revenge, Pharaoh''s Curse, Riptalon, Freya''s Tears, The
-    Crusher, Oni Hunter''s Garb, Lernaean Bow, Shogun''s Ofuda, Hydra''s Lament, Shield
-    of the Phoenix, Silverbranch Bow, Tyrfing, Spectral Armor, Erosion, Shield Splitter,
-    Eye of Providence, Eye of the Storm, Leviathan''s Hide, Eros'' Bow, Yogi''s Necklace,
-    Draconic Scale.'
+    Golden Blade, The Crusher, Jotunn''s Revenge, Pharaoh''s Curse, Freya''s Tears,
+    Riptalon, Oni Hunter''s Garb, Shield of the Phoenix, Tyrfing, Shogun''s Ofuda,
+    Hydra''s Lament, Silverbranch Bow, Lernaean Bow, Spectral Armor, Erosion, Shield
+    Splitter, Eye of Providence, Eye of the Storm, Leviathan''s Hide, Toxic Blade,
+    Draconic Scale, Midgardian Mail.'
   slot_scores:
     Golden Blade:
       total: 0.53
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.57
       pick: 0.0
       fit: 0.56
     Genji's Guard:
-      total: 0.56
-      efficiency: 0.71
+      total: 0.55
+      efficiency: 0.69
       win: 0.58
       pick: 0.3
       fit: 0.22
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.55
+      efficiency: 0.66
       win: 0.57
       pick: 0.0
       fit: 0.43
@@ -366,8 +366,8 @@ builds:
       pick: 0.15
       fit: 0.32
     Pharaoh's Curse:
-      total: 0.52
-      efficiency: 0.57
+      total: 0.51
+      efficiency: 0.55
       win: 0.57
       pick: 0.0
       fit: 0.43
@@ -382,8 +382,8 @@ builds:
   - Runeforged Hammer
   - Freya's Tears
   flex_slots:
-  - Runeforged Hammer
   - Shield of the Phoenix
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -398,29 +398,29 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Freya''s Tears,
-    Runeforged Hammer, Shield of the Phoenix, Kinetic Cuirass, Amanita Charm, Hydra''s
-    Lament, Berserker''s Shield, Oni Hunter''s Garb, Screeching Gargoyle, The Crusher,
+    + fit + win/pick). Underrated for this god: Freya''s Tears, Runeforged Hammer,
+    Jotunn''s Revenge, Shield of the Phoenix, Kinetic Cuirass, Amanita Charm, Hydra''s
+    Lament, Berserker''s Shield, The Crusher, Screeching Gargoyle, Oni Hunter''s Garb,
     Chandra''s Grace, Gladiator''s Shield, Erosion, Spectral Armor, Prophetic Cloak,
-    Eye of Providence, Pharaoh''s Curse, Shield Splitter, Draconic Scale, Leviathan''s
-    Hide, Eye of the Storm, Arondight, Midgardian Mail, Mantle Of Discord, Stone of
-    Binding.'
+    Eye of Providence, Shield Splitter, Draconic Scale, Pharaoh''s Curse, Eye of the
+    Storm, Leviathan''s Hide, Midgardian Mail, Arondight, Mantle Of Discord, Stone
+    of Binding.'
   slot_scores:
     Genji's Guard:
-      total: 0.6
-      efficiency: 0.71
+      total: 0.59
+      efficiency: 0.69
       win: 0.58
       pick: 0.3
       fit: 0.48
     Breastplate of Valor:
-      total: 0.55
-      efficiency: 0.66
+      total: 0.54
+      efficiency: 0.64
       win: 0.53
       pick: 0.2
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.66
+      total: 0.55
+      efficiency: 0.64
       win: 0.57
       pick: 0.0
       fit: 0.47
@@ -453,15 +453,15 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
+  - Berserker's Shield
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -469,28 +469,28 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Kinetic Cuirass, Amanita Charm, Berserker''s Shield,
-    Freya''s Tears, Shield of the Phoenix, Oni Hunter''s Garb, Jotunn''s Revenge,
-    Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Pharaoh''s Curse,
-    Shield Splitter, Hydra''s Lament, The Crusher, Leviathan''s Hide, Eye of the Storm,
-    Midgardian Mail, Mantle Of Discord, Stone of Binding, Gladiator''s Shield, Runeforged
-    Hammer, Screeching Gargoyle, Shogun''s Ofuda, Prophetic Cloak, Magi''s Cloak.'
+    Underrated for this god: Kinetic Cuirass, Amanita Charm, Freya''s Tears, Berserker''s
+    Shield, Shield of the Phoenix, Erosion, Oni Hunter''s Garb, Eye of Providence,
+    Jotunn''s Revenge, Draconic Scale, Spectral Armor, The Crusher, Shield Splitter,
+    Pharaoh''s Curse, Leviathan''s Hide, Eye of the Storm, Midgardian Mail, Gladiator''s
+    Shield, Hydra''s Lament, Runeforged Hammer, Mantle Of Discord, Screeching Gargoyle,
+    Stone of Binding, Prophetic Cloak, Ancile, Chandra''s Grace.'
   slot_scores:
     Genji's Guard:
-      total: 0.59
-      efficiency: 0.71
+      total: 0.58
+      efficiency: 0.69
       win: 0.58
       pick: 0.3
       fit: 0.42
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.55
+      efficiency: 0.66
       win: 0.57
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.66
+      total: 0.53
+      efficiency: 0.64
       win: 0.53
       pick: 0.2
       fit: 0.42

@@ -838,3 +838,29 @@ def test_an_unmeasured_item_scores_the_gods_median_not_a_half():
                                _god("G", "physical", "Carry", ["Carry"]),
                                build, 0.5, weights, [])
     assert row["win"] == pytest.approx(0.62)
+
+
+def test_a_flavor_can_require_an_item_the_god_can_actually_build():
+    """A mana-stack build is not an option for a god with no mana converter in
+    their pool — it is an empty tab. Gated on the SCORED pool, not merely the
+    buildable one: `is_buildable` lets a Strength converter through for all 87
+    gods and only the damage filter keeps it off a mage."""
+    weights = scoring.load_weights_default()
+    weights["flavors"] = {"mana-stack": {"requires_item": ["Transcendence"],
+                                         "stats": {"Max Mana": 1.0}}}
+    items = [{"name": "Transcendence", "tier": 3,
+              "stats": {"Strength": "35", "Max Mana": "250"}}]
+    physical = _god("Ullr", "physical", "Carry", ["Carry"])
+    magical = _god("Ra", "magical", "Mid", ["Mage"])
+    assert "mana-stack" in scoring.eligible_flavors(physical, weights, items)
+    # A Strength item never reaches a mage's scored pool.
+    assert "mana-stack" not in scoring.eligible_flavors(magical, weights, items)
+
+
+def test_a_requires_item_flavor_is_withheld_when_the_pool_is_unknown():
+    """Without `items` the gate cannot be evaluated, so the flavor is withheld
+    rather than offered on a guess."""
+    weights = scoring.load_weights_default()
+    weights["flavors"] = {"mana-stack": {"requires_item": ["Transcendence"]}}
+    assert scoring.eligible_flavors(
+        _god("Ullr", "physical", "Carry", ["Carry"]), weights) == []

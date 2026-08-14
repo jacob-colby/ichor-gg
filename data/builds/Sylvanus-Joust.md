@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.82
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.98
@@ -142,15 +142,15 @@ builds:
   - Stone of Binding
   - Void Shield
   - Void Stone
-  - Erosion
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Rod of Tahuti
   - Screeching Gargoyle
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -171,31 +171,31 @@ builds:
       fit: 0.68
     Stone of Binding:
       total: 0.6
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.72
     Void Shield:
-      total: 0.68
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.89
     Void Stone:
       total: 0.66
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.89
-    Erosion:
-      total: 0.59
-      efficiency: 0.52
+    Rod of Tahuti:
+      total: 0.6
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.43
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -210,8 +210,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Bragi's Harp
   - Bracer of The Abyss
-  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -223,8 +223,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -235,20 +235,20 @@ builds:
       pick: 0.0
       fit: 0.44
     Bracer of The Abyss:
-      total: 0.41
-      efficiency: 0.56
+      total: 0.39
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.26
     Nimble Ring:
-      total: 0.4
-      efficiency: 0.49
+      total: 0.5
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.32
     Bragi's Harp:
-      total: 0.45
-      efficiency: 0.44
+      total: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Kinetic Cuirass
+  - Gladiator's Shield
   - Freya's Tears
   - Erosion
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
   - Kinetic Cuirass
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,14 +294,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.6
-      efficiency: 0.71
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
-    Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -311,8 +305,14 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Gladiator's Shield:
+      total: 0.56
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -340,8 +340,8 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
+  - Pharaoh's Curse
   - Kinetic Cuirass
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -359,8 +359,8 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.66
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -372,7 +372,7 @@ builds:
       fit: 0.48
     The Crusher:
       total: 0.54
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.58
     Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.57
+      total: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Spectral Armor
+  - Rod of Tahuti
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Rod of Tahuti
   - Jotunn's Revenge
-  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -424,8 +424,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.66
+      total: 0.53
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -435,12 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Spectral Armor:
-      total: 0.52
-      efficiency: 0.58
+    Rod of Tahuti:
+      total: 0.54
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.32
     Erosion:
       total: 0.56
       efficiency: 0.52
@@ -448,14 +448,14 @@ builds:
       pick: 0.0
       fit: 0.6
     Soul Gem:
-      total: 0.78
-      efficiency: 0.59
+      total: 0.77
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.97
     Triton's Conch:
       total: 0.55
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -513,7 +513,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0

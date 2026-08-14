@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
-  - Eros' Bow
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Erosion
-  - Eros' Bow
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -23,8 +23,8 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -33,18 +33,18 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.6
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Eros' Bow:
-      total: 0.58
-      efficiency: 0.51
+    Spectral Armor:
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.55
     Amanita Charm:
-      total: 0.77
+      total: 0.76
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.65
     Pharaoh's Curse:
-      total: 0.66
-      efficiency: 0.57
+      total: 0.65
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.52
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -123,14 +123,14 @@ builds:
       pick: 0.0
       fit: 0.74
     Pharaoh's Curse:
-      total: 0.67
-      efficiency: 0.57
+      total: 0.66
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.77
     Shogun's Ofuda:
-      total: 0.65
-      efficiency: 0.52
+      total: 0.64
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -141,22 +141,22 @@ builds:
   - Toxic Blade
   - Void Shield
   - Void Stone
+  - The Crusher
   - Amanita Charm
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
+  - The Crusher
   - Pharaoh's Curse
-  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -164,8 +164,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.42
+      total: 0.64
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -177,10 +177,16 @@ builds:
       fit: 0.89
     Void Stone:
       total: 0.66
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.89
+    The Crusher:
+      total: 0.6
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Amanita Charm:
       total: 0.72
       efficiency: 0.63
@@ -188,14 +194,8 @@ builds:
       pick: 0.0
       fit: 0.81
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -210,7 +210,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
+  - Golden Blade
   - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
@@ -230,19 +230,19 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.62
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.7
     Toxic Blade:
-      total: 0.62
-      efficiency: 0.42
+      total: 0.63
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.82
     Riptalon:
-      total: 0.64
-      efficiency: 0.56
+      total: 0.63
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.81
     Pharaoh's Curse:
-      total: 0.64
-      efficiency: 0.57
+      total: 0.63
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.71
     Shogun's Ofuda:
-      total: 0.62
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -294,14 +294,14 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.53
-      efficiency: 0.71
+      total: 0.52
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.66
+      total: 0.52
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.56
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.57
+      total: 0.59
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -334,14 +334,14 @@ builds:
   archetype: model
   slot_order:
   - Golden Blade
-  - Eros' Bow
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Erosion
-  - Eros' Bow
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -350,8 +350,8 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -360,18 +360,18 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.6
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Eros' Bow:
-      total: 0.58
-      efficiency: 0.51
+    Spectral Armor:
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.55
     Amanita Charm:
-      total: 0.77
+      total: 0.76
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.65
     Pharaoh's Curse:
-      total: 0.66
-      efficiency: 0.57
+      total: 0.65
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.52
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.75

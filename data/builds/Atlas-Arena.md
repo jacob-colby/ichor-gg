@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -99,7 +99,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.7
+      total: 0.69
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.78
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.88
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -164,8 +164,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.62
-      efficiency: 0.48
+      total: 0.61
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -177,7 +177,7 @@ builds:
       fit: 1.0
     Void Stone:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -188,13 +188,13 @@ builds:
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.65
+      total: 0.66
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -210,8 +210,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Bragi's Harp
   - Bracer of The Abyss
-  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -229,20 +229,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bracer of The Abyss:
-      total: 0.4
-      efficiency: 0.56
+      total: 0.38
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.24
     Nimble Ring:
-      total: 0.4
-      efficiency: 0.49
+      total: 0.49
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.44
-      efficiency: 0.44
+      total: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -294,13 +294,13 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.6
-      efficiency: 0.71
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.69
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0

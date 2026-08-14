@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -111,14 +111,14 @@ builds:
       pick: 0.0
       fit: 0.79
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Rod of Asclepius:
-      total: 0.76
-      efficiency: 0.57
+      total: 0.75
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.96
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.69
+      total: 0.68
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.61
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -177,7 +177,7 @@ builds:
       fit: 1.0
     Void Stone:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -188,7 +188,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -210,8 +210,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Bragi's Harp
   - Bracer of The Abyss
-  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -229,20 +229,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bracer of The Abyss:
-      total: 0.4
-      efficiency: 0.56
+      total: 0.38
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.25
     Nimble Ring:
-      total: 0.4
-      efficiency: 0.49
+      total: 0.5
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.45
-      efficiency: 0.44
+      total: 0.44
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -295,7 +295,7 @@ builds:
   slot_scores:
     Genji's Guard:
       total: 0.59
-      efficiency: 0.71
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.69
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -350,8 +350,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -377,20 +377,20 @@ builds:
       pick: 0.0
       fit: 0.72
     Stampede:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
     Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.57
+      total: 0.6
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.66
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -415,8 +415,8 @@ builds:
     swap: Shogun's Ofuda — magical protection
     swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -448,14 +448,14 @@ builds:
       pick: 0.0
       fit: 0.66
     Pharaoh's Curse:
-      total: 0.58
-      efficiency: 0.57
+      total: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.6
     Triton's Conch:
       total: 0.6
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0

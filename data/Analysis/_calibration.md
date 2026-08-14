@@ -10,13 +10,13 @@ Each row deletes the model and hands the metric one of its own inputs. A corner 
 |---|---|---|---|
 | win only (Spearman's target verbatim) | 1.000 | +1.00 (positive on 86/86) | 44.4% |
 | pick only (community membership) | 0.059 | -0.06 (positive on 37/86) | 94.7% |
-| model only (efficiency + fit) | -0.081 | -0.06 (positive on 39/86) | 33.7% |
+| model only (efficiency + fit) | -0.071 | -0.03 (positive on 40/86) | 37.6% |
 
 `win only` scores a perfect Spearman because the score *is* the target. `pick only` all but reproduces the community build. Neither contains any modeling.
 
 ## 2. Baseline — what coverage means
 
-A **random** legal 6-item core, drawn 200x per god from the same candidate pool (median 95 items), covers **5.9%** of the community set. Every coverage number below is a multiple of that, not of zero.
+A **random** legal 6-item core, drawn 200x per god from the same candidate pool (median 95 items), covers **6.0%** of the community set. Every coverage number below is a multiple of that, not of zero.
 
 ## 3. Leakage-free sweep of the model signals
 
@@ -25,28 +25,28 @@ A **random** legal 6-item core, drawn 200x per god from the same candidate pool 
 | efficiency | fit | coverage | 95% CI | vs chance |
 |---|---|---|---|---|
 | 0.00 | 1.00 | 26.1% | [21.1%, 31.5%] | 4.4x |
-| 0.05 | 0.95 | 27.3% | [22.2%, 32.7%] | 4.6x |
-| 0.10 | 0.90 | 28.0% | [22.8%, 33.3%] | 4.7x |
-| 0.15 | 0.85 | 28.2% | [23.0%, 33.5%] | 4.8x |
-| 0.20 | 0.80 | 29.0% | [24.0%, 34.1%] | 4.9x |
-| 0.25 | 0.75 | 29.5% | [24.6%, 34.4%] | 5.0x |
-| 0.30 | 0.70 | 29.5% | [24.6%, 34.4%] | 5.0x |
-| 0.35 | 0.65 | 30.6% | [25.8%, 35.5%] | 5.2x |
-| 0.40 | 0.60 | 30.8% | [25.9%, 35.7%] | 5.2x |
-| 0.45 | 0.55 | 30.9% | [26.0%, 36.0%] | 5.2x |
-| 0.50 | 0.50 | 31.1% | [26.1%, 36.3%] | 5.3x |
-| 0.55 | 0.45 | 32.2% | [27.1%, 37.3%] | 5.5x |
-| 0.60 | 0.40 | 32.2% | [27.2%, 37.4%] | 5.5x |
-| 0.65 | 0.35 | 34.5% | [29.4%, 39.4%] | 5.9x |
-| 0.70 | 0.30 | 33.7% | [28.4%, 39.0%] | 5.7x |
-| 0.75 | 0.25 | 31.0% | [26.1%, 36.0%] | 5.3x |
-| 0.80 | 0.20 | 28.9% | [24.2%, 33.8%] | 4.9x |
-| 0.85 | 0.15 | 23.5% | [19.5%, 27.6%] | 4.0x |
-| 0.90 | 0.10 | 21.1% | [17.3%, 25.1%] | 3.6x |
-| 0.95 | 0.05 | 16.7% | [12.9%, 20.5%] | 2.8x |
-| 1.00 | 0.00 | 15.6% | [12.1%, 19.3%] | 2.6x |
+| 0.05 | 0.95 | 29.7% | [24.1%, 35.8%] | 5.0x |
+| 0.10 | 0.90 | 29.7% | [24.0%, 35.7%] | 5.0x |
+| 0.15 | 0.85 | 30.5% | [24.7%, 36.6%] | 5.1x |
+| 0.20 | 0.80 | 31.4% | [25.8%, 37.3%] | 5.3x |
+| 0.25 | 0.75 | 31.7% | [26.1%, 37.5%] | 5.3x |
+| 0.30 | 0.70 | 32.5% | [26.9%, 38.2%] | 5.4x |
+| 0.35 | 0.65 | 33.8% | [28.3%, 39.4%] | 5.6x |
+| 0.40 | 0.60 | 34.3% | [29.0%, 39.8%] | 5.7x |
+| 0.45 | 0.55 | 34.1% | [28.7%, 39.8%] | 5.7x |
+| 0.50 | 0.50 | 33.8% | [28.1%, 39.6%] | 5.6x |
+| 0.55 | 0.45 | 34.8% | [29.4%, 40.4%] | 5.8x |
+| 0.60 | 0.40 | 36.5% | [31.2%, 42.1%] | 6.1x |
+| 0.65 | 0.35 | 37.7% | [32.3%, 43.3%] | 6.3x |
+| 0.70 | 0.30 | 37.6% | [32.7%, 42.6%] | 6.3x |
+| 0.75 | 0.25 | 35.4% | [30.5%, 40.7%] | 5.9x |
+| 0.80 | 0.20 | 31.4% | [27.2%, 35.7%] | 5.3x |
+| 0.85 | 0.15 | 31.0% | [26.7%, 35.3%] | 5.2x |
+| 0.90 | 0.10 | 24.9% | [21.3%, 28.5%] | 4.2x |
+| 0.95 | 0.05 | 22.9% | [19.7%, 26.3%] | 3.8x |
+| 1.00 | 0.00 | 22.1% | [18.9%, 25.6%] | 3.7x |
 
-Best: efficiency 0.65 : fit 0.35 at 34.5%. **17 of 21 splits have a CI overlapping it** — treat a winner inside that band as noise and leave the shipped split alone.
+Best: efficiency 0.65 : fit 0.35 at 37.7%. **17 of 21 splits have a CI overlapping it** — treat a winner inside that band as noise and leave the shipped split alone.
 
 ## 4. Guardrailed grid — the trade-off frontier, not a winner
 
@@ -56,21 +56,21 @@ Guardrails: efficiency+fit ≥ 0.50, pick ≤ 0.15, sum = 1. Objective = 0.5·no
 
 | eff | win | pick | fit | objective | Spearman | coverage |
 |---|---|---|---|---|---|---|
-| 0.35 | 0.35 | 0.15 | 0.15 | 0.647 | 0.46 | 57% |
-| 0.4 | 0.35 | 0.15 | 0.1 | 0.647 | 0.48 | 55% |
-| 0.3 | 0.35 | 0.15 | 0.2 | 0.639 | 0.42 | 57% |
-| 0.35 | 0.3 | 0.15 | 0.2 | 0.625 | 0.35 | 57% |
-| 0.45 | 0.35 | 0.15 | 0.05 | 0.625 | 0.50 | 50% |
-| 0.4 | 0.3 | 0.15 | 0.15 | 0.624 | 0.38 | 56% |
-| 0.3 | 0.4 | 0.1 | 0.2 | 0.620 | 0.48 | 50% |
-| 0.45 | 0.3 | 0.15 | 0.1 | 0.619 | 0.40 | 54% |
-| 0.25 | 0.35 | 0.15 | 0.25 | 0.619 | 0.39 | 54% |
-| 0.35 | 0.4 | 0.1 | 0.15 | 0.619 | 0.51 | 48% |
-| 0.4 | 0.4 | 0.1 | 0.1 | 0.613 | 0.55 | 45% |
-| 0.45 | 0.25 | 0.15 | 0.15 | 0.603 | 0.30 | 55% |
-| 0.4 | 0.25 | 0.15 | 0.2 | 0.602 | 0.28 | 56% |
-| 0.3 | 0.3 | 0.15 | 0.25 | 0.601 | 0.33 | 54% |
-| 0.4 | 0.35 | 0.1 | 0.15 | 0.601 | 0.44 | 48% |
+| 0.35 | 0.35 | 0.15 | 0.15 | 0.653 | 0.43 | 59% |
+| 0.4 | 0.35 | 0.15 | 0.1 | 0.650 | 0.45 | 58% |
+| 0.3 | 0.35 | 0.15 | 0.2 | 0.644 | 0.40 | 59% |
+| 0.45 | 0.35 | 0.15 | 0.05 | 0.635 | 0.46 | 54% |
+| 0.35 | 0.4 | 0.1 | 0.15 | 0.631 | 0.49 | 52% |
+| 0.3 | 0.4 | 0.1 | 0.2 | 0.631 | 0.46 | 53% |
+| 0.4 | 0.3 | 0.15 | 0.15 | 0.631 | 0.35 | 58% |
+| 0.4 | 0.4 | 0.1 | 0.1 | 0.628 | 0.51 | 50% |
+| 0.35 | 0.3 | 0.15 | 0.2 | 0.627 | 0.34 | 59% |
+| 0.25 | 0.35 | 0.15 | 0.25 | 0.627 | 0.38 | 56% |
+| 0.45 | 0.3 | 0.15 | 0.1 | 0.624 | 0.37 | 56% |
+| 0.25 | 0.4 | 0.1 | 0.25 | 0.610 | 0.43 | 50% |
+| 0.45 | 0.25 | 0.15 | 0.15 | 0.610 | 0.28 | 58% |
+| 0.35 | 0.35 | 0.1 | 0.2 | 0.610 | 0.39 | 52% |
+| 0.3 | 0.3 | 0.15 | 0.25 | 0.609 | 0.31 | 56% |
 
 ## 5. Leave-one-god-out winners
 
@@ -94,7 +94,7 @@ _Stability only. A leaked objective leaks identically in every fold, so this can
 - without Bacchus: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Baron Samedi: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Bastet: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Bellona: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Bellona: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Cabrakan: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Cerberus: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Cernunnos: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
@@ -116,23 +116,23 @@ _Stability only. A leaked objective leaks identically in every fold, so this can
 - without Hecate: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Hercules: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Horus: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Hou Yi: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Hou Yi: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Hua Mulan: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Hun Batz: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Ishtar: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
-- without Izanami: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Ishtar: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
+- without Izanami: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Janus: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Jing Wei: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Jing Wei: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Jormungandr: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Kali: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Kali: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Khepri: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Kukulkan: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Loki: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Medusa: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Medusa: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Mercury: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Merlin: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Mordred: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Morgan Le Fay: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Morgan Le Fay: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Ne Zha: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Neith: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Nemesis: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
@@ -143,16 +143,16 @@ _Stability only. A leaked objective leaks identically in every fold, so this can
 - without Pele: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Poseidon: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Princess Bari: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Ra: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Ra: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Rama: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Ratatoskr: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Ratatoskr: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Scylla: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Sobek: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Sol: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Sun Wukong: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Susano: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Susano: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Sylvanus: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
-- without Thanatos: eff 0.40 · win 0.35 · pick 0.15 · fit 0.10
+- without Thanatos: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without The Morrigan: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Thor: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Tsukuyomi: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
@@ -164,4 +164,4 @@ _Stability only. A leaked objective leaks identically in every fold, so this can
 - without Ymir: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 - without Zeus: eff 0.35 · win 0.35 · pick 0.15 · fit 0.15
 
-**Stability:** 2 distinct fold-winner(s) across 87 folds — stable.
+**Stability:** 1 distinct fold-winner(s) across 87 folds — stable.

@@ -100,8 +100,8 @@ builds:
   - Damaru
   - The Crusher
   flex_slots:
+  - Lernaean Bow
   - Riptalon
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -116,21 +116,21 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Lernaean Bow, Berserker''s Shield, Damaru, The Crusher, Golden Blade,
-    Jotunn''s Revenge, Demon Blade, Hydra''s Lament, Genji''s Guard, Pharaoh''s Curse,
-    Runeforged Hammer, Deathbringer, Tekko-Kagi, The Reaper, Breastplate of Valor,
-    Shogun''s Ofuda, Musashi''s Dual Swords, Eros'' Bow, Kinetic Cuirass, Rage, Amanita
-    Charm, Oni Hunter''s Garb, Avenging Blade, Barbed Carver, Shield Splitter.'
+    this god: Damaru, Berserker''s Shield, The Crusher, Lernaean Bow, Golden Blade,
+    Jotunn''s Revenge, Demon Blade, Hydra''s Lament, Runeforged Hammer, Genji''s Guard,
+    Pharaoh''s Curse, Tekko-Kagi, Deathbringer, The Reaper, Musashi''s Dual Swords,
+    Shogun''s Ofuda, Breastplate of Valor, Kinetic Cuirass, Rage, Amanita Charm, Transcendence,
+    Avenging Blade, Eye of Providence, Shield Splitter, Eros'' Bow.'
   slot_scores:
     Lernaean Bow:
-      total: 0.57
-      efficiency: 0.54
+      total: 0.56
+      efficiency: 0.5
       win: 0.63
       pick: 0.0
       fit: 0.66
     Berserker's Shield:
-      total: 0.57
-      efficiency: 0.68
+      total: 0.56
+      efficiency: 0.66
       win: 0.63
       pick: 0.0
       fit: 0.32
@@ -141,20 +141,20 @@ builds:
       pick: 0.51
       fit: 0.66
     Riptalon:
-      total: 0.57
-      efficiency: 0.56
+      total: 0.56
+      efficiency: 0.53
       win: 0.63
       pick: 0.37
       fit: 0.45
     Damaru:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.63
       pick: 0.0
       fit: 0.55
     The Crusher:
       total: 0.56
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.63
       pick: 0.0
       fit: 0.34
@@ -162,13 +162,82 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
 - source: suggested
+  archetype: mana-stack
+  slot_order:
+  - Genji's Guard
+  - Jotunn's Revenge
+  - Tyrfing
+  - Hydra's Lament
+  - Riptalon
+  - The Crusher
+  flex_slots:
+  - Tyrfing
+  - Riptalon
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
+    Revenge, The Crusher, Genji''s Guard, Hydra''s Lament, Berserker''s Shield, Damaru,
+    Breastplate of Valor, Lernaean Bow, The Reaper, Golden Blade, Runeforged Hammer,
+    Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Amanita Charm, Transcendence,
+    Freya''s Tears, Eye of Providence, Pharaoh''s Curse, Heartseeker, Shield of the
+    Phoenix, Avenging Blade, Yogi''s Necklace, Arondight, Shield Splitter.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.69
+      win: 0.63
+      pick: 0.0
+      fit: 0.15
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.64
+      win: 0.63
+      pick: 0.0
+      fit: 0.45
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.46
+      win: 0.65
+      pick: 0.51
+      fit: 0.43
+    Hydra's Lament:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.63
+      pick: 0.0
+      fit: 0.44
+    Riptalon:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.63
+      pick: 0.37
+      fit: 0.33
+    The Crusher:
+      total: 0.57
+      efficiency: 0.64
+      win: 0.63
+      pick: 0.0
+      fit: 0.4
+  starter: *id001
+- source: suggested
   archetype: crit
   slot_order:
   - Berserker's Shield
   - Tyrfing
-  - Riptalon
   - Damaru
   - Demon Blade
+  - The Crusher
   - Deathbringer
   flex_slots:
   - Demon Blade
@@ -187,15 +256,15 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: Damaru, Berserker''s Shield, Lernaean Bow, The Crusher, Golden Blade,
-    Demon Blade, Jotunn''s Revenge, Genji''s Guard, Hydra''s Lament, Pharaoh''s Curse,
-    Deathbringer, Runeforged Hammer, Musashi''s Dual Swords, Breastplate of Valor,
-    Tekko-Kagi, The Reaper, Shogun''s Ofuda, Rage, Kinetic Cuirass, Eros'' Bow, Amanita
-    Charm, Oni Hunter''s Garb, Eye of Providence, Avenging Blade, Shield Splitter.'
+    this god: Damaru, Berserker''s Shield, The Crusher, Lernaean Bow, Golden Blade,
+    Demon Blade, Jotunn''s Revenge, Deathbringer, Genji''s Guard, Hydra''s Lament,
+    Runeforged Hammer, Pharaoh''s Curse, Musashi''s Dual Swords, The Reaper, Tekko-Kagi,
+    Rage, Breastplate of Valor, Kinetic Cuirass, Shogun''s Ofuda, Amanita Charm, Eye
+    of Providence, Oni Hunter''s Garb, Transcendence, Eros'' Bow, Avenging Blade.'
   slot_scores:
     Berserker's Shield:
-      total: 0.57
-      efficiency: 0.68
+      total: 0.56
+      efficiency: 0.66
       win: 0.63
       pick: 0.0
       fit: 0.3
@@ -205,24 +274,24 @@ builds:
       win: 0.65
       pick: 0.51
       fit: 0.6
-    Riptalon:
-      total: 0.56
-      efficiency: 0.56
-      win: 0.63
-      pick: 0.37
-      fit: 0.42
     Damaru:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.63
       pick: 0.0
       fit: 0.57
     Demon Blade:
-      total: 0.55
-      efficiency: 0.37
+      total: 0.54
+      efficiency: 0.35
       win: 0.63
       pick: 0.0
       fit: 0.88
+    The Crusher:
+      total: 0.55
+      efficiency: 0.64
+      win: 0.63
+      pick: 0.0
+      fit: 0.3
     Deathbringer:
       total: 0.53
       efficiency: 0.45
@@ -233,22 +302,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
   - Kinetic Cuirass
   - Riptalon
+  - The Crusher
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
   - Pharaoh's Curse
-  - Genji's Guard
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -257,21 +326,15 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Shield of the Phoenix, Kinetic Cuirass,
-    Pharaoh''s Curse, Genji''s Guard, Golden Blade, Oni Hunter''s Garb, The Reaper,
-    The Crusher, Shogun''s Ofuda, Lernaean Bow, Damaru, Runeforged Hammer, Chandra''s
-    Grace, Jotunn''s Revenge, Breastplate of Valor, Phoenix Feather, Spectral Armor,
-    Freya''s Tears, Shifter''s Shield, Erosion, Eye of the Storm, Umbral Link, Eye
-    of Providence, Shield Splitter, Hydra''s Lament, Draconic Scale.'
+    Pharaoh''s Curse, The Crusher, Genji''s Guard, The Reaper, Golden Blade, Oni Hunter''s
+    Garb, Chandra''s Grace, Runeforged Hammer, Damaru, Phoenix Feather, Shogun''s
+    Ofuda, Spectral Armor, Jotunn''s Revenge, Freya''s Tears, Erosion, Shifter''s
+    Shield, Breastplate of Valor, Lernaean Bow, Eye of the Storm, Eye of Providence,
+    Shield Splitter, Draconic Scale, Leviathan''s Hide, Hydra''s Lament.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.71
-      win: 0.63
-      pick: 0.0
-      fit: 0.13
     Berserker's Shield:
-      total: 0.59
-      efficiency: 0.68
+      total: 0.58
+      efficiency: 0.66
       win: 0.63
       pick: 0.0
       fit: 0.47
@@ -282,11 +345,17 @@ builds:
       pick: 0.0
       fit: 0.51
     Riptalon:
-      total: 0.58
-      efficiency: 0.56
+      total: 0.57
+      efficiency: 0.53
       win: 0.63
       pick: 0.37
       fit: 0.57
+    The Crusher:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.63
+      pick: 0.0
+      fit: 0.24
     Amanita Charm:
       total: 0.61
       efficiency: 0.63
@@ -295,7 +364,7 @@ builds:
       fit: 0.71
     Pharaoh's Curse:
       total: 0.55
-      efficiency: 0.57
+      efficiency: 0.55
       win: 0.63
       pick: 0.0
       fit: 0.47
@@ -303,15 +372,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
   - Tyrfing
   - Riptalon
   - Silverbranch Bow
+  - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Berserker's Shield
-  - Tyrfing
+  - Silverbranch Bow
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -320,28 +389,21 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Jotunn''s Revenge, Berserker''s Shield, The Reaper,
-    Tekko-Kagi, Lernaean Bow, Damaru, Avenging Blade, Genji''s Guard, Heartseeker,
-    Golden Blade, Hydra''s Lament, Titan''s Bane, Screeching Gargoyle, Breastplate
-    of Valor, Runeforged Hammer, Pharaoh''s Curse, Toxic Blade, Stone of Binding,
-    Kinetic Cuirass, Void Shield, Amanita Charm, Pendulum Blade, Oni Hunter''s Garb,
-    Eye of Providence.'
+    for this god: The Crusher, Jotunn''s Revenge, The Reaper, Tekko-Kagi, Berserker''s
+    Shield, Damaru, Avenging Blade, Lernaean Bow, Genji''s Guard, Golden Blade, Heartseeker,
+    Toxic Blade, Hydra''s Lament, Titan''s Bane, Screeching Gargoyle, Runeforged Hammer,
+    Stone of Binding, Breastplate of Valor, Pharaoh''s Curse, Kinetic Cuirass, Void
+    Shield, Amanita Charm, Pendulum Blade, Eye of Providence, Oni Hunter''s Garb.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.63
-      pick: 0.0
-      fit: 0.21
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.66
+      total: 0.58
+      efficiency: 0.64
       win: 0.63
       pick: 0.0
       fit: 0.51
@@ -352,20 +414,26 @@ builds:
       pick: 0.51
       fit: 0.47
     Riptalon:
-      total: 0.59
-      efficiency: 0.56
+      total: 0.58
+      efficiency: 0.53
       win: 0.63
       pick: 0.37
       fit: 0.64
     Silverbranch Bow:
       total: 0.55
-      efficiency: 0.54
+      efficiency: 0.52
       win: 0.59
       pick: 0.31
       fit: 0.55
+    Tekko-Kagi:
+      total: 0.55
+      efficiency: 0.44
+      win: 0.63
+      pick: 0.0
+      fit: 0.71
     The Crusher:
       total: 0.6
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.63
       pick: 0.0
       fit: 0.61
@@ -378,10 +446,10 @@ builds:
   - Berserker's Shield
   - Tyrfing
   - Riptalon
-  - Silverbranch Bow
+  - The Crusher
   flex_slots:
+  - The Crusher
   - Lernaean Bow
-  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -396,27 +464,27 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Golden Blade, Berserker''s Shield, Lernaean Bow, Damaru, The Crusher,
-    Jotunn''s Revenge, Genji''s Guard, Pharaoh''s Curse, Hydra''s Lament, Demon Blade,
-    Breastplate of Valor, Runeforged Hammer, Shogun''s Ofuda, Tekko-Kagi, Kinetic
-    Cuirass, Eros'' Bow, Toxic Blade, Amanita Charm, Qin''s Blade, The Reaper, Oni
-    Hunter''s Garb, Deathbringer, Eye of Providence, Yogi''s Necklace.'
+    this god: Golden Blade, Berserker''s Shield, The Crusher, Lernaean Bow, Damaru,
+    Jotunn''s Revenge, Genji''s Guard, Pharaoh''s Curse, Hydra''s Lament, Runeforged
+    Hammer, Demon Blade, Toxic Blade, Tekko-Kagi, Breastplate of Valor, Shogun''s
+    Ofuda, Kinetic Cuirass, The Reaper, Amanita Charm, Qin''s Blade, Eye of Providence,
+    Deathbringer, Oni Hunter''s Garb, Eros'' Bow, Transcendence, Avenging Blade.'
   slot_scores:
     Golden Blade:
       total: 0.57
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.63
       pick: 0.0
       fit: 0.67
     Lernaean Bow:
-      total: 0.56
-      efficiency: 0.54
+      total: 0.54
+      efficiency: 0.5
       win: 0.63
       pick: 0.0
       fit: 0.56
     Berserker's Shield:
-      total: 0.57
-      efficiency: 0.68
+      total: 0.56
+      efficiency: 0.66
       win: 0.63
       pick: 0.0
       fit: 0.3
@@ -427,17 +495,17 @@ builds:
       pick: 0.51
       fit: 0.77
     Riptalon:
-      total: 0.59
-      efficiency: 0.56
+      total: 0.58
+      efficiency: 0.53
       win: 0.63
       pick: 0.37
       fit: 0.6
-    Silverbranch Bow:
+    The Crusher:
       total: 0.55
-      efficiency: 0.54
-      win: 0.59
-      pick: 0.31
-      fit: 0.5
+      efficiency: 0.64
+      win: 0.63
+      pick: 0.0
+      fit: 0.26
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -447,17 +515,17 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Hydra's Lament
-  - Riptalon
+  - Freya's Tears
   flex_slots:
   - Berserker's Shield
-  - Riptalon
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -467,47 +535,47 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Jotunn''s Revenge,
     Hydra''s Lament, Breastplate of Valor, Berserker''s Shield, Freya''s Tears, The
-    Crusher, Shield of the Phoenix, Lernaean Bow, Damaru, Screeching Gargoyle, Chandra''s
-    Grace, Golden Blade, Arondight, Pharaoh''s Curse, Kinetic Cuirass, Runeforged
-    Hammer, Amanita Charm, Oni Hunter''s Garb, Eye of Providence, Shogun''s Ofuda,
-    Pendulum Blade, Gladiator''s Shield, The Reaper, Yogi''s Necklace.'
+    Crusher, Shield of the Phoenix, Damaru, Screeching Gargoyle, Lernaean Bow, Chandra''s
+    Grace, Arondight, Golden Blade, Runeforged Hammer, Kinetic Cuirass, Pharaoh''s
+    Curse, Amanita Charm, Eye of Providence, Oni Hunter''s Garb, The Reaper, Gladiator''s
+    Shield, Pendulum Blade, Shogun''s Ofuda, Spectral Armor.'
   slot_scores:
     Genji's Guard:
-      total: 0.58
-      efficiency: 0.71
+      total: 0.57
+      efficiency: 0.69
       win: 0.63
       pick: 0.0
       fit: 0.33
     Berserker's Shield:
-      total: 0.55
-      efficiency: 0.68
+      total: 0.54
+      efficiency: 0.66
       win: 0.63
       pick: 0.0
       fit: 0.2
     Breastplate of Valor:
       total: 0.56
-      efficiency: 0.66
+      efficiency: 0.64
       win: 0.63
       pick: 0.0
       fit: 0.33
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.66
+      total: 0.57
+      efficiency: 0.64
       win: 0.63
       pick: 0.0
       fit: 0.43
     Hydra's Lament:
-      total: 0.57
-      efficiency: 0.58
+      total: 0.56
+      efficiency: 0.56
       win: 0.63
       pick: 0.0
       fit: 0.53
-    Riptalon:
+    Freya's Tears:
       total: 0.54
-      efficiency: 0.56
+      efficiency: 0.59
       win: 0.63
-      pick: 0.37
-      fit: 0.28
+      pick: 0.0
+      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: model
@@ -515,12 +583,12 @@ builds:
   - Golden Blade
   - Lernaean Bow
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Tyrfing
   - Damaru
   - The Crusher
   flex_slots:
   - Golden Blade
-  - Jotunn's Revenge
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -535,46 +603,46 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Lernaean Bow, Berserker''s Shield, Damaru, The Crusher,
-    Golden Blade, Jotunn''s Revenge, Demon Blade, Hydra''s Lament, Genji''s Guard,
-    Pharaoh''s Curse, Runeforged Hammer, Deathbringer, Tekko-Kagi, The Reaper, Breastplate
-    of Valor, Shogun''s Ofuda, Musashi''s Dual Swords, Eros'' Bow, Kinetic Cuirass,
-    Rage, Amanita Charm, Oni Hunter''s Garb, Avenging Blade, Barbed Carver, Shield
-    Splitter.'
+    Underrated for this god: Damaru, Berserker''s Shield, The Crusher, Lernaean Bow,
+    Golden Blade, Jotunn''s Revenge, Demon Blade, Hydra''s Lament, Runeforged Hammer,
+    Genji''s Guard, Pharaoh''s Curse, Tekko-Kagi, Deathbringer, The Reaper, Musashi''s
+    Dual Swords, Shogun''s Ofuda, Breastplate of Valor, Kinetic Cuirass, Rage, Amanita
+    Charm, Transcendence, Avenging Blade, Eye of Providence, Shield Splitter, Eros''
+    Bow.'
   slot_scores:
     Golden Blade:
-      total: 0.56
-      efficiency: 0.54
+      total: 0.55
+      efficiency: 0.53
       win: 0.63
       pick: 0.0
       fit: 0.56
     Lernaean Bow:
-      total: 0.57
-      efficiency: 0.54
+      total: 0.56
+      efficiency: 0.5
       win: 0.63
       pick: 0.0
       fit: 0.66
     Berserker's Shield:
-      total: 0.57
-      efficiency: 0.68
-      win: 0.63
-      pick: 0.0
-      fit: 0.32
-    Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
       win: 0.63
       pick: 0.0
-      fit: 0.24
+      fit: 0.32
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.46
+      win: 0.65
+      pick: 0.51
+      fit: 0.66
     Damaru:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.63
       pick: 0.0
       fit: 0.55
     The Crusher:
       total: 0.56
-      efficiency: 0.63
+      efficiency: 0.64
       win: 0.63
       pick: 0.0
       fit: 0.34

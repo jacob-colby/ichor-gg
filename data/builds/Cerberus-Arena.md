@@ -50,19 +50,19 @@ builds:
       pick: 0.0
       fit: 0.71
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.72
+      total: 0.73
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.93
     Stampede:
-      total: 0.65
+      total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -80,7 +80,7 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
+  - Stampede
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.83
     Soul Gem:
-      total: 0.78
-      efficiency: 0.59
+      total: 0.77
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -165,30 +165,30 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.6
-      efficiency: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.72
     Void Shield:
-      total: 0.73
+      total: 0.72
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.99
     Void Stone:
       total: 0.71
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.99
     Spectral Armor:
-      total: 0.59
+      total: 0.58
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.59
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -210,8 +210,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Bragi's Harp
   - Bracer of The Abyss
-  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -229,20 +229,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bracer of The Abyss:
-      total: 0.4
-      efficiency: 0.56
+      total: 0.38
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.24
     Nimble Ring:
-      total: 0.4
-      efficiency: 0.49
+      total: 0.49
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.44
-      efficiency: 0.44
+      total: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -275,8 +275,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Stampede
   - Spectral Armor
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -294,8 +294,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.58
-      efficiency: 0.71
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.72
     Stampede:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
     Soul Gem:
-      total: 0.79
-      efficiency: 0.59
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -350,8 +350,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.67
     Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.57
+      total: 0.6
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -399,24 +399,24 @@ builds:
   archetype: str-int
   slot_order:
   - Spectral Armor
+  - Amanita Charm
   - Erosion
+  - Stampede
   - Pharaoh's Curse
-  - Shogun's Ofuda
-  - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Shogun's Ofuda
+  - Stampede
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -429,33 +429,33 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Amanita Charm:
+      total: 0.78
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.94
     Erosion:
       total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Stampede:
+      total: 0.56
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.57
+      total: 0.58
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
-    Soul Gem:
-      total: 0.79
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
     Triton's Conch:
       total: 0.59
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -507,19 +507,19 @@ builds:
       pick: 0.0
       fit: 0.71
     Amanita Charm:
-      total: 0.82
+      total: 0.81
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.72
+      total: 0.73
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.93
     Stampede:
-      total: 0.65
+      total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
