@@ -214,13 +214,25 @@ _ALIAS_GRANT = re.compile(
     r"\+\s*([\d.]+)\s*(%?)\s*(Mana|Health)\b(?!\s*Regen)")
 
 
-def _grants_after(text, cue, window=_GRANT_WINDOW):
+def _grants_after(text, cue, window=_GRANT_WINDOW, stop=None):
     """Stat grants in the `window` characters following each `cue` match,
-    stopping at the first sentence break so a neighbouring clause can't be
-    read as part of this one."""
+    stopping at the first sentence break — or at `stop`, the cue that starts
+    the NEXT clause.
+
+    `stop` is not belt-and-braces. These lines run without punctuation
+    ("+.4 Strength +0.05% Lifesteal At 75 Stacks, gain: +10 Strength"), so the
+    per-stack read had nothing but the character window keeping the at-cap
+    bonus out of it — and it worked only because 60 characters happened to cut
+    "+10 Streng" mid-word so the stat pattern's word boundary failed. A shorter
+    item name or a reworded passive would have silently multiplied the evolve
+    bonus by the stack cap: on a 75-stack item that is 790 Strength instead of
+    40, and nothing would have flagged it."""
     out = {}
     for m in cue.finditer(text or ""):
-        fragment = _SENTENCE_BREAK.split(text[m.end():m.end() + window])[0]
+        fragment = text[m.end():m.end() + window]
+        if stop:
+            fragment = stop.split(fragment)[0]
+        fragment = _SENTENCE_BREAK.split(fragment)[0]
         for amount, percent, stat in _GRANT.findall(fragment):
             key = f"{stat} %" if percent else stat
             out[key] = out.get(key, 0.0) + float(amount)
@@ -270,7 +282,7 @@ def persistent_stack_grants(item, fraction=1.0):
     # maximal one.
     reached = cap * max(0.0, min(fraction, 1.0))
     out = {}
-    for key, amount in _grants_after(text, _PER_STACK_CUE).items():
+    for key, amount in _grants_after(text, _PER_STACK_CUE, stop=_EVOLVE_CUE).items():
         out[key] = out.get(key, 0.0) + amount * reached
     if not out:
         # No per-stack line found. An evolve bonus alone is real but partial,
