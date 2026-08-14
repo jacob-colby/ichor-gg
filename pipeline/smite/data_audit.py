@@ -60,7 +60,13 @@ def audit_items(items: list) -> list:
         # `scoring.is_buildable` already refuses them for being statless, so
         # nothing downstream can put one in a build. Recognised by the shape
         # rather than by a name list, so the next god's Mods need no edit here.
-        is_ability_mod = (it.get("god") and not cost and not stats
+        # `cost == 0` exactly, never merely falsy. Genie's Lamp reads `-1` on
+        # the wiki — a sentinel `wiki_parser._parse_cost` turns into None — and
+        # it matches this shape in every other respect, so a `not cost` test
+        # swallowed it. It is a different statement: a Mod has no price because
+        # it is a kit upgrade, the Lamp has no price we could read. The second
+        # one is worth keeping in front of a human.
+        is_ability_mod = (it.get("god") and cost == 0 and not stats
                           and not is_numeric_tier)
         if not cost and not is_ability_mod:
             findings.append({

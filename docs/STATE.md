@@ -247,16 +247,21 @@ python -m smite.expert_review --check    # non-zero exit if a resolved claim reg
 Scraping needs Playwright (`python -m playwright install chromium`).
 
 `data_audit` exits non-zero whenever it has findings, and it currently has
-three standing ones — Blink Rune (`cost: 0`, genuinely free) and Mote of Chaos
-/ Survivor's Sash (tier-2 items the wiki lists with no stats). All three are
-real properties of the source data, not defects, and none reaches a build.
-Treat "3 findings, all of them these" as green; treat a fourth as news.
+four standing ones — Blink Rune (`cost: 0`, genuinely free), Genie's Lamp
+(`cost: None`; the wiki says `-1`, a sentinel meaning Aladdin is given it
+rather than buying it) and Mote of Chaos / Survivor's Sash (tier-2 items the
+wiki lists with no stats). All four are real properties of the source data,
+not defects, and none reaches a build. Treat "4 findings, all of them these"
+as green; treat a fifth as news.
 
-A god's ABILITY MODS are exempt by shape (`God Specific`, zero cost, no
-stats): Vulcan's five, and Aladdin's Genie's Lamp, are granted rather than
-bought. Without that, every future god with the system would add five
-permanent findings to a gate whose value is that a new finding means
-something. `scoring.is_buildable` already refuses them for being statless.
+A god's ABILITY MODS are exempt by shape (`God Specific`, cost exactly 0, no
+stats) — Vulcan's five are a kit upgrade the game grants, and without the
+exemption every future god with the system would add five permanent findings
+to a gate whose value is that a new finding means something.
+`scoring.is_buildable` already refuses them for being statless. The test is
+`cost == 0`, not merely falsy, which is what keeps Genie's Lamp visible: a Mod
+has no price because it is not bought, the Lamp has no price we could read,
+and only the second is a fact about our parsing.
 
 **Two sources, two spellings.** The community source and our item notes
 disagree on apostrophes and casing, and a failed join reads as "this god's

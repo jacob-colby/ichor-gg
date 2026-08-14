@@ -275,6 +275,17 @@ def test_a_statless_zero_cost_item_with_no_owner_is_still_flagged():
     assert [f["issue"] for f in found] == ["blank-cost"]
 
 
+def test_an_unreadable_price_is_not_the_same_as_no_price():
+    """Genie's Lamp matches the ability-mod shape in every respect except one:
+    its cost is None, from the `-1` sentinel on the wiki, not 0. A Mod has no
+    price because it is a kit upgrade; the Lamp has no price WE COULD READ.
+    The second is worth keeping in front of a human, so the exemption tests
+    `cost == 0` exactly rather than merely falsy."""
+    lamp = [{"name": "Genie's Lamp", "tier": "God Specific", "cost": None,
+             "stats": {}, "god": "Aladdin"}]
+    assert [f["issue"] for f in data_audit.audit_items(lamp)] == ["blank-cost"]
+
+
 def test_a_god_specific_item_that_costs_real_gold_is_unaffected():
     """Ratatoskr's acorns are bought. Only the zero-cost statless shape is
     exempt, so a genuinely missing price on a real item still reports."""
