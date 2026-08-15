@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Chronos' Pendant
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
-  - The Cosmic Horror
   - Spear of the Magus
+  - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Spear of Desolation
-  - The Cosmic Horror
+  - Nimble Ring
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -128,29 +128,29 @@ builds:
       win: 0.63
       pick: 0.09
       fit: 0.63
-    Gluttonous Grimoire:
-      total: 0.56
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.5
+      efficiency: 0.68
       win: 0.45
       pick: 0.0
-      fit: 0.89
+      fit: 0.42
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
       win: 0.45
       pick: 0.17
       fit: 1.0
-    The Cosmic Horror:
-      total: 0.53
-      efficiency: 0.58
-      win: 0.42
-      pick: 0.28
-      fit: 0.79
     Spear of the Magus:
       total: 0.72
       efficiency: 0.57
       win: 0.86
       pick: 0.25
+      fit: 0.79
+    Rod of Tahuti:
+      total: 0.47
+      efficiency: 0.77
+      win: 0.17
+      pick: 0.22
       fit: 0.79
     Obsidian Shard:
       total: 0.65
@@ -233,14 +233,14 @@ builds:
   archetype: burst
   slot_order:
   - Chronos' Pendant
+  - Nimble Ring
   - Spear of Desolation
-  - The Cosmic Horror
   - Spear of the Magus
+  - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
-  - Spear of Desolation
-  - The Cosmic Horror
+  - Nimble Ring
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -267,23 +267,29 @@ builds:
       win: 0.63
       pick: 0.09
       fit: 0.44
+    Nimble Ring:
+      total: 0.47
+      efficiency: 0.68
+      win: 0.45
+      pick: 0.0
+      fit: 0.22
     Spear of Desolation:
       total: 0.51
       efficiency: 0.52
       win: 0.45
       pick: 0.17
       fit: 0.78
-    The Cosmic Horror:
-      total: 0.49
-      efficiency: 0.58
-      win: 0.42
-      pick: 0.28
-      fit: 0.56
     Spear of the Magus:
       total: 0.68
       efficiency: 0.57
       win: 0.86
       pick: 0.25
+      fit: 0.56
+    Rod of Tahuti:
+      total: 0.44
+      efficiency: 0.77
+      win: 0.17
+      pick: 0.22
       fit: 0.56
     Obsidian Shard:
       total: 0.61
@@ -291,32 +297,26 @@ builds:
       win: 0.75
       pick: 0.24
       fit: 0.56
-    Soul Gem:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.45
-      pick: 0.0
-      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Chronos' Pendant
-  - Kinetic Cuirass
   - Spear of the Magus
+  - Rod of Tahuti
   - Obsidian Shard
   - Amanita Charm
   - Soul Gem
   flex_slots:
   - Chronos' Pendant
-  - Kinetic Cuirass
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -336,17 +336,17 @@ builds:
       win: 0.63
       pick: 0.09
       fit: 0.31
-    Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.59
-      win: 0.45
-      pick: 0.0
-      fit: 0.61
     Spear of the Magus:
       total: 0.66
       efficiency: 0.57
       win: 0.86
       pick: 0.25
+      fit: 0.39
+    Rod of Tahuti:
+      total: 0.41
+      efficiency: 0.77
+      win: 0.17
+      pick: 0.22
       fit: 0.39
     Obsidian Shard:
       total: 0.59
@@ -371,14 +371,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Chronos' Pendant
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
-  - The Cosmic Horror
   - Spear of the Magus
+  - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Spear of Desolation
-  - The Cosmic Horror
+  - Nimble Ring
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -405,29 +405,29 @@ builds:
       win: 0.63
       pick: 0.09
       fit: 0.44
-    Gluttonous Grimoire:
-      total: 0.57
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.49
+      efficiency: 0.68
       win: 0.45
       pick: 0.0
-      fit: 0.95
+      fit: 0.3
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
       win: 0.45
       pick: 0.17
       fit: 1.0
-    The Cosmic Horror:
-      total: 0.53
-      efficiency: 0.58
-      win: 0.42
-      pick: 0.28
-      fit: 0.85
     Spear of the Magus:
       total: 0.73
       efficiency: 0.57
       win: 0.86
       pick: 0.25
+      fit: 0.85
+    Rod of Tahuti:
+      total: 0.48
+      efficiency: 0.77
+      win: 0.17
+      pick: 0.22
       fit: 0.85
     Obsidian Shard:
       total: 0.66
@@ -508,22 +508,22 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Chronos' Pendant
   - Spear of Desolation
   - Spear of the Magus
+  - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Genji's Guard
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -537,12 +537,6 @@ builds:
     Metal, Gladiator''s Shield, Kinetic Cuirass, Prophetic Cloak, Amanita Charm, Doom
     Orb, The World Stone, Helm of Radiance, Eye of Providence, Oni Hunter''s Garb.'
   slot_scores:
-    Genji's Guard:
-      total: 0.52
-      efficiency: 0.69
-      win: 0.45
-      pick: 0.0
-      fit: 0.48
     Chronos' Pendant:
       total: 0.57
       efficiency: 0.55
@@ -560,6 +554,12 @@ builds:
       efficiency: 0.57
       win: 0.86
       pick: 0.25
+      fit: 0.37
+    Rod of Tahuti:
+      total: 0.41
+      efficiency: 0.77
+      win: 0.17
+      pick: 0.22
       fit: 0.37
     Obsidian Shard:
       total: 0.59
@@ -579,13 +579,13 @@ builds:
   slot_order:
   - Chronos' Pendant
   - Jotunn's Revenge
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of the Magus
-  - The Crusher
+  - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - The Crusher
-  - Gluttonous Grimoire
+  - Nimble Ring
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -620,24 +620,24 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.65
-    Gluttonous Grimoire:
-      total: 0.5
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.49
+      efficiency: 0.68
       win: 0.45
       pick: 0.0
-      fit: 0.54
+      fit: 0.35
     Spear of the Magus:
       total: 0.67
       efficiency: 0.57
       win: 0.86
       pick: 0.25
       fit: 0.44
-    The Crusher:
-      total: 0.52
-      efficiency: 0.64
-      win: 0.45
-      pick: 0.0
-      fit: 0.63
+    Rod of Tahuti:
+      total: 0.42
+      efficiency: 0.77
+      win: 0.17
+      pick: 0.22
+      fit: 0.44
     Obsidian Shard:
       total: 0.6
       efficiency: 0.52
@@ -650,13 +650,13 @@ builds:
   slot_order:
   - Chronos' Pendant
   - Jotunn's Revenge
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of the Magus
-  - The Crusher
+  - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - The Crusher
-  - Gluttonous Grimoire
+  - Nimble Ring
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -692,24 +692,24 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.69
-    Gluttonous Grimoire:
-      total: 0.52
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.49
+      efficiency: 0.68
       win: 0.45
       pick: 0.0
-      fit: 0.66
+      fit: 0.31
     Spear of the Magus:
       total: 0.68
       efficiency: 0.57
       win: 0.86
       pick: 0.25
       fit: 0.56
-    The Crusher:
-      total: 0.53
-      efficiency: 0.64
-      win: 0.45
-      pick: 0.0
-      fit: 0.66
+    Rod of Tahuti:
+      total: 0.44
+      efficiency: 0.77
+      win: 0.17
+      pick: 0.22
+      fit: 0.56
     Obsidian Shard:
       total: 0.61
       efficiency: 0.52

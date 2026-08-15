@@ -93,7 +93,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Berserker's Shield
+  - Book of Thoth
   - Jotunn's Revenge
   - The Crusher
   - Rod of Tahuti
@@ -101,7 +101,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Jotunn's Revenge
-  - Berserker's Shield
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -110,8 +110,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -124,12 +124,12 @@ builds:
     Rod of Asclepius, Freya''s Tears, Amanita Charm, Gem of Focus, Doom Orb, Shogun''s
     Ofuda, Eye of Providence, Toxic Blade, The Cosmic Horror, Tyrfing.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.56
-      efficiency: 0.66
+    Book of Thoth:
+      total: 0.5
+      efficiency: 0.49
       win: 0.66
       pick: 0.0
-      fit: 0.26
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.64
@@ -597,14 +597,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -634,12 +634,12 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.59
-    Hydra's Lament:
-      total: 0.56
-      efficiency: 0.56
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
       win: 0.66
       pick: 0.0
-      fit: 0.5
+      fit: 0.29
     The Crusher:
       total: 0.61
       efficiency: 0.64
@@ -668,15 +668,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Jotunn's Revenge
-  - Spear of Desolation
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -700,17 +700,17 @@ builds:
     Charm, Doom Orb, Freya''s Tears, Heartseeker, Jade Scepter, Gem of Focus, The
     Cosmic Horror, Tyrfing.'
   slot_scores:
+    Book of Thoth:
+      total: 0.5
+      efficiency: 0.49
+      win: 0.66
+      pick: 0.0
+      fit: 0.21
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.64
       win: 0.66
       pick: 0.0
-      fit: 0.48
-    Spear of Desolation:
-      total: 0.56
-      efficiency: 0.52
-      win: 0.6
-      pick: 0.74
       fit: 0.48
     The Crusher:
       total: 0.59

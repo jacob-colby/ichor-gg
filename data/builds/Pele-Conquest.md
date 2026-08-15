@@ -93,22 +93,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
   flex_slots:
   - Pendulum Blade
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -122,18 +122,18 @@ builds:
     Storm, Tyrfing, Freya''s Tears, Riptalon, Silverbranch Bow, Dominance, Shield
     of the Phoenix, Berserker''s Shield, Deathbringer, Kinetic Cuirass.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.69
-      win: 0.62
-      pick: 0.0
-      fit: 0.22
     Jotunn's Revenge:
       total: 0.69
       efficiency: 0.64
       win: 0.68
       pick: 0.28
       fit: 1.0
+    Transcendence:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.62
+      pick: 0.0
+      fit: 0.44
     Hydra's Lament:
       total: 0.59
       efficiency: 0.56
@@ -166,13 +166,13 @@ builds:
   slot_order:
   - Yogi's Necklace
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Crusher
   flex_slots:
   - Yogi's Necklace
-  - Breastplate of Valor
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -181,8 +181,8 @@ builds:
     swap: Oni Hunter's Garb — magical protection
     swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Mystical Mail — physical protection
-    swap_item: Mystical Mail
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -205,18 +205,18 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.24
-    Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.64
-      win: 0.62
-      pick: 0.0
-      fit: 0.24
     Jotunn's Revenge:
       total: 0.65
       efficiency: 0.64
       win: 0.68
       pick: 0.28
       fit: 0.71
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.62
+      pick: 0.0
+      fit: 0.39
     Hydra's Lament:
       total: 0.57
       efficiency: 0.56
@@ -235,13 +235,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   flex_slots:
   - The Reaper
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -274,6 +274,12 @@ builds:
       win: 0.68
       pick: 0.28
       fit: 0.78
+    Transcendence:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.62
+      pick: 0.0
+      fit: 0.22
     Hydra's Lament:
       total: 0.56
       efficiency: 0.56
@@ -286,12 +292,6 @@ builds:
       win: 0.56
       pick: 0.49
       fit: 0.56
-    Pendulum Blade:
-      total: 0.54
-      efficiency: 0.41
-      win: 0.62
-      pick: 0.0
-      fit: 0.78
     The Crusher:
       total: 0.61
       efficiency: 0.64
@@ -581,14 +581,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Heartseeker
   flex_slots:
   - Pendulum Blade
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -615,6 +615,12 @@ builds:
       win: 0.68
       pick: 0.28
       fit: 1.0
+    Transcendence:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.62
+      pick: 0.0
+      fit: 0.44
     Hydra's Lament:
       total: 0.59
       efficiency: 0.56
@@ -638,12 +644,6 @@ builds:
       efficiency: 0.64
       win: 0.62
       pick: 0.15
-      fit: 0.88
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.41
-      win: 0.55
-      pick: 0.43
       fit: 0.88
   starter: *id001
 ---

@@ -235,13 +235,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - The Reaper
+  - Transcendence
   - Silverbranch Bow
   - Tekko-Kagi
   - The Crusher
   flex_slots:
   - Genji's Guard
-  - The Reaper
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -274,12 +274,12 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.71
-    The Reaper:
-      total: 0.56
+    Transcendence:
+      total: 0.51
       efficiency: 0.52
       win: 0.67
       pick: 0.0
-      fit: 0.51
+      fit: 0.2
     Silverbranch Bow:
       total: 0.65
       efficiency: 0.52
@@ -580,22 +580,22 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
   flex_slots:
   - Pendulum Blade
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -609,18 +609,18 @@ builds:
     Shield, Transcendence, Avenging Blade, Shield Splitter, Eye of the Storm, Freya''s
     Tears, Avatar''s Parashu, Shield of the Phoenix, Kinetic Cuirass.'
   slot_scores:
-    Genji's Guard:
-      total: 0.57
-      efficiency: 0.69
-      win: 0.67
-      pick: 0.0
-      fit: 0.18
     Jotunn's Revenge:
       total: 0.65
       efficiency: 0.64
       win: 0.67
       pick: 0.0
       fit: 0.84
+    Transcendence:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.67
+      pick: 0.0
+      fit: 0.38
     Hydra's Lament:
       total: 0.45
       efficiency: 0.56

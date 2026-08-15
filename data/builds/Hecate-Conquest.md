@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Chronos' Pendant
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   flex_slots:
-  - The Cosmic Horror
   - Spear of the Magus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -128,12 +128,12 @@ builds:
       win: 0.71
       pick: 0.11
       fit: 0.64
-    Gluttonous Grimoire:
-      total: 0.57
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.68
       win: 0.49
       pick: 0.0
-      fit: 0.87
+      fit: 0.41
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
@@ -234,14 +234,14 @@ builds:
   archetype: burst
   slot_order:
   - Chronos' Pendant
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   flex_slots:
-  - The Cosmic Horror
   - Spear of the Magus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -268,12 +268,12 @@ builds:
       win: 0.71
       pick: 0.11
       fit: 0.44
-    Gluttonous Grimoire:
-      total: 0.54
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.49
+      efficiency: 0.68
       win: 0.49
       pick: 0.0
-      fit: 0.66
+      fit: 0.22
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
@@ -493,7 +493,7 @@ builds:
       efficiency: 0.42
       win: 0.49
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Gluttonous Grimoire:
       total: 0.51
       efficiency: 0.63

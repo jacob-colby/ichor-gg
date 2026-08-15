@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Nimble Ring
   - Gem of Focus
-  - Gluttonous Grimoire
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Spear of the Magus
   - Gem of Focus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,18 +122,18 @@ builds:
     Rod of Asclepius, Bancroft''s Talon, Jade Scepter, Bracer of The Abyss, Ethereal
     Staff, Freya''s Tears, Alchemist Coat.'
   slot_scores:
+    Nimble Ring:
+      total: 0.5
+      efficiency: 0.68
+      win: 0.45
+      pick: 0.0
+      fit: 0.4
     Gem of Focus:
       total: 0.52
       efficiency: 0.49
       win: 0.55
       pick: 0.2
       fit: 0.6
-    Gluttonous Grimoire:
-      total: 0.56
-      efficiency: 0.63
-      win: 0.45
-      pick: 0.0
-      fit: 0.9
     The Cosmic Horror:
       total: 0.53
       efficiency: 0.58
@@ -443,8 +443,8 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Gem of Focus
   - Gluttonous Grimoire
+  - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - Bragi's Harp
@@ -487,18 +487,18 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.62
-    Gem of Focus:
-      total: 0.46
-      efficiency: 0.49
-      win: 0.55
-      pick: 0.2
-      fit: 0.24
     Gluttonous Grimoire:
       total: 0.5
       efficiency: 0.63
       win: 0.45
       pick: 0.0
       fit: 0.5
+    Rod of Tahuti:
+      total: 0.46
+      efficiency: 0.77
+      win: 0.28
+      pick: 0.3
+      fit: 0.32
     Obsidian Shard:
       total: 0.53
       efficiency: 0.52

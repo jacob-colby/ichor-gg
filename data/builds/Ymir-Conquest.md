@@ -448,12 +448,12 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Runeforged Hammer
+  - Gluttonous Grimoire
   - Draconic Scale
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
   - Jotunn's Revenge
+  - Gluttonous Grimoire
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -496,6 +496,12 @@ builds:
       win: 0.68
       pick: 0.12
       fit: 0.44
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.58
+      pick: 0.0
+      fit: 0.42
     Draconic Scale:
       total: 0.58
       efficiency: 0.5
@@ -508,35 +514,29 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.47
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.58
-      pick: 0.0
-      fit: 0.2
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
+  - Genji's Guard
   - Kinetic Cuirass
   - Runeforged Hammer
   - Gluttonous Grimoire
   - Draconic Scale
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
   - The Crusher
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -551,6 +551,12 @@ builds:
     Jade Scepter, Chronos'' Pendant, Midgardian Mail, Avenging Blade, Damaru, Mantle
     Of Discord, Stone of Binding.'
   slot_scores:
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.57
+      pick: 0.23
+      fit: 0.22
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.59
@@ -581,12 +587,6 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.42
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.58
-      pick: 0.0
-      fit: 0.32
   starter: *id001
 - source: suggested
   archetype: model

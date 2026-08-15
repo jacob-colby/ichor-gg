@@ -510,15 +510,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
   - Spear of Desolation
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Obsidian Shard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -540,6 +540,12 @@ builds:
     Cuirass, Prophetic Cloak, Amanita Charm, Doom Orb, Helm of Radiance, Eye of Providence,
     Oni Hunter''s Garb.'
   slot_scores:
+    Book of Thoth:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.68
+      pick: 0.2
+      fit: 0.14
     Genji's Guard:
       total: 0.62
       efficiency: 0.69
@@ -563,12 +569,6 @@ builds:
       efficiency: 0.77
       win: 0.72
       pick: 0.57
-      fit: 0.37
-    Obsidian Shard:
-      total: 0.59
-      efficiency: 0.52
-      win: 0.72
-      pick: 0.54
       fit: 0.37
     Soul Gem:
       total: 0.67

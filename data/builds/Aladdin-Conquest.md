@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Spear of Desolation
+  - Transcendence
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - The Crusher
-  - Spear of Desolation
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -130,12 +130,12 @@ builds:
       win: 0.48
       pick: 0.29
       fit: 0.9
-    Spear of Desolation:
-      total: 0.52
+    Transcendence:
+      total: 0.47
       efficiency: 0.52
       win: 0.48
-      pick: 0.49
-      fit: 0.62
+      pick: 0.2
+      fit: 0.38
     The Crusher:
       total: 0.56
       efficiency: 0.64
@@ -597,14 +597,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Pendulum Blade
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Hydra's Lament
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -633,18 +633,18 @@ builds:
       win: 0.48
       pick: 0.29
       fit: 0.9
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.48
+      pick: 0.2
+      fit: 0.38
     Hydra's Lament:
       total: 0.51
       efficiency: 0.56
       win: 0.48
       pick: 0.0
       fit: 0.68
-    Pendulum Blade:
-      total: 0.49
-      efficiency: 0.41
-      win: 0.48
-      pick: 0.0
-      fit: 0.9
     The Crusher:
       total: 0.56
       efficiency: 0.64

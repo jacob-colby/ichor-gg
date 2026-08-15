@@ -239,15 +239,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Avenging Blade
   - Berserker's Shield
   - Jotunn's Revenge
   - Runeforged Hammer
   - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Jotunn's Revenge
   - Berserker's Shield
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -271,6 +271,12 @@ builds:
     Toxic Blade, Spectral Armor, Shield of the Phoenix, Titan''s Bane, Shield Splitter,
     Lernaean Bow, Death Metal, Erosion, Pendulum Blade, Genji''s Guard.'
   slot_scores:
+    Avenging Blade:
+      total: 0.52
+      efficiency: 0.48
+      win: 0.55
+      pick: 0.0
+      fit: 0.72
     Berserker's Shield:
       total: 0.52
       efficiency: 0.66
@@ -301,12 +307,6 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.63
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.13
-      fit: 0.39
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -459,12 +459,12 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Runeforged Hammer
   - The Crusher
-  - Rod of Tahuti
   - Amanita Charm
   flex_slots:
-  - Rod of Tahuti
   - Jotunn's Revenge
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -506,18 +506,18 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.55
+    Runeforged Hammer:
+      total: 0.58
+      efficiency: 0.55
+      win: 0.67
+      pick: 0.08
+      fit: 0.56
     The Crusher:
       total: 0.54
       efficiency: 0.64
       win: 0.55
       pick: 0.0
       fit: 0.42
-    Rod of Tahuti:
-      total: 0.52
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.13
-      fit: 0.12
     Amanita Charm:
       total: 0.53
       efficiency: 0.63

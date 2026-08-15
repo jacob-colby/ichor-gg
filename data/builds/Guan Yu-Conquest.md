@@ -237,19 +237,19 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Kinetic Cuirass
+  - Transcendence
   - Freya's Tears
   - The Crusher
   flex_slots:
   - Genji's Guard
-  - Kinetic Cuirass
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -282,12 +282,12 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.55
-    Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.59
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
       win: 0.61
       pick: 0.0
-      fit: 0.48
+      fit: 0.16
     Freya's Tears:
       total: 0.62
       efficiency: 0.59

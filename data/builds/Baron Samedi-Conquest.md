@@ -93,25 +93,25 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
-  - Kinetic Cuirass
   - Freya's Tears
   - Gluttonous Grimoire
   - Rod of Tahuti
   flex_slots:
   - Gluttonous Grimoire
-  - Kinetic Cuirass
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -123,6 +123,12 @@ builds:
     Obsidian Shard, Jade Scepter, Midgardian Mail, Screeching Gargoyle, The Cosmic
     Horror.'
   slot_scores:
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.57
+      pick: 0.0
+      fit: 0.2
     Genji's Guard:
       total: 0.59
       efficiency: 0.69
@@ -135,12 +141,6 @@ builds:
       win: 0.67
       pick: 0.14
       fit: 0.31
-    Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.59
-      win: 0.57
-      pick: 0.0
-      fit: 0.59
     Freya's Tears:
       total: 0.57
       efficiency: 0.59
@@ -234,25 +234,25 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
-  - Kinetic Cuirass
   - Freya's Tears
   - Gluttonous Grimoire
   - Rod of Tahuti
   flex_slots:
   - Freya's Tears
-  - Kinetic Cuirass
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -263,6 +263,12 @@ builds:
     Shard, Chronos'' Pendant, Eye of Providence, Rod of Asclepius, Draconic Scale,
     Screeching Gargoyle, Leviathan''s Hide, Midgardian Mail, The Cosmic Horror.'
   slot_scores:
+    Book of Thoth:
+      total: 0.45
+      efficiency: 0.49
+      win: 0.57
+      pick: 0.0
+      fit: 0.14
     Genji's Guard:
       total: 0.58
       efficiency: 0.69
@@ -275,12 +281,6 @@ builds:
       win: 0.67
       pick: 0.14
       fit: 0.27
-    Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.59
-      win: 0.57
-      pick: 0.0
-      fit: 0.47
     Freya's Tears:
       total: 0.56
       efficiency: 0.59
@@ -372,25 +372,25 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
-  - Kinetic Cuirass
   - Freya's Tears
   - Gluttonous Grimoire
   - Rod of Tahuti
   flex_slots:
   - Freya's Tears
-  - Kinetic Cuirass
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -401,6 +401,12 @@ builds:
     Obsidian Shard, Void Stone, Spectral Armor, Erosion, Helm of Radiance, Eye of
     Providence, Rod of Asclepius, Draconic Scale, Doom Orb, The Cosmic Horror.'
   slot_scores:
+    Book of Thoth:
+      total: 0.45
+      efficiency: 0.49
+      win: 0.57
+      pick: 0.0
+      fit: 0.17
     Genji's Guard:
       total: 0.58
       efficiency: 0.69
@@ -413,12 +419,6 @@ builds:
       win: 0.67
       pick: 0.14
       fit: 0.26
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.59
-      win: 0.57
-      pick: 0.0
-      fit: 0.51
     Freya's Tears:
       total: 0.56
       efficiency: 0.59

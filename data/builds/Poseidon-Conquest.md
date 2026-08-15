@@ -123,9 +123,9 @@ builds:
     Staff, Alchemist Coat, Freya''s Tears.'
   slot_scores:
     Nimble Ring:
-      total: 0.52
+      total: 0.53
       efficiency: 0.68
-      win: 0.45
+      win: 0.48
       pick: 0.33
       fit: 0.42
     Spear of Desolation:
@@ -165,14 +165,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Genji's Guard
   - The World Stone
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -199,12 +199,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.24
-    Gluttonous Grimoire:
-      total: 0.56
-      efficiency: 0.63
-      win: 0.56
-      pick: 0.0
-      fit: 0.57
+    Nimble Ring:
+      total: 0.51
+      efficiency: 0.68
+      win: 0.48
+      pick: 0.33
+      fit: 0.29
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
@@ -233,15 +233,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
-  - The Cosmic Horror
   - Spear of the Magus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -262,6 +262,12 @@ builds:
     Harp, Helm of Radiance, Blood-Bound Book, Rod of Asclepius, Kinetic Cuirass, Amanita
     Charm, Screeching Gargoyle, Triton''s Conch.'
   slot_scores:
+    Nimble Ring:
+      total: 0.5
+      efficiency: 0.68
+      win: 0.48
+      pick: 0.33
+      fit: 0.22
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
@@ -292,12 +298,6 @@ builds:
       win: 0.69
       pick: 0.43
       fit: 0.56
-    Soul Gem:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.0
-      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -581,14 +581,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Gluttonous Grimoire
   - Spear of Desolation
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -618,12 +618,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.65
-    Gluttonous Grimoire:
-      total: 0.55
-      efficiency: 0.63
-      win: 0.56
-      pick: 0.0
-      fit: 0.54
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.68
+      win: 0.48
+      pick: 0.33
+      fit: 0.35
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52

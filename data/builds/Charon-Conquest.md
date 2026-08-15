@@ -592,19 +592,19 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Rod of Tahuti
   - Erosion
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -637,12 +637,12 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.64
-    Rod of Tahuti:
-      total: 0.64
-      efficiency: 0.77
-      win: 0.75
-      pick: 0.25
-      fit: 0.15
+    Shifter's Shield:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.12
+      fit: 0.71
     Amanita Charm:
       total: 0.54
       efficiency: 0.63

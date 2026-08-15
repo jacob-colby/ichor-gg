@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Transcendence
   - Riptalon
-  - Damaru
   - The Crusher
   - Heartseeker
   flex_slots:
   - Riptalon
-  - Damaru
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -134,18 +134,18 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.44
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.17
     Riptalon:
       total: 0.52
       efficiency: 0.53
       win: 0.56
       pick: 0.0
       fit: 0.5
-    Damaru:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.0
-      fit: 0.4
     The Crusher:
       total: 0.53
       efficiency: 0.64
@@ -165,14 +165,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Crusher
   - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Berserker's Shield
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -181,8 +181,8 @@ builds:
     swap: Oni Hunter's Garb — magical protection
     swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -199,18 +199,18 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.15
-    Berserker's Shield:
-      total: 0.51
-      efficiency: 0.66
-      win: 0.56
-      pick: 0.0
-      fit: 0.16
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.64
       win: 0.55
       pick: 0.33
       fit: 0.44
+    Transcendence:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.24
     Hydra's Lament:
       total: 0.51
       efficiency: 0.56
@@ -234,9 +234,9 @@ builds:
   archetype: crit
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Damaru
   - Demon Blade
-  - The Crusher
   - Deathbringer
   - Heartseeker
   flex_slots:
@@ -269,6 +269,12 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.41
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.15
     Damaru:
       total: 0.52
       efficiency: 0.57
@@ -281,12 +287,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.64
-    The Crusher:
-      total: 0.53
-      efficiency: 0.64
-      win: 0.52
-      pick: 0.16
-      fit: 0.42
     Deathbringer:
       total: 0.47
       efficiency: 0.45
@@ -306,12 +306,12 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
-  - Riptalon
+  - Transcendence
   - The Crusher
   - Heartseeker
   flex_slots:
   - Berserker's Shield
-  - Riptalon
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -350,12 +350,12 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.46
-    Riptalon:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.56
-      pick: 0.0
-      fit: 0.43
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.13
     The Crusher:
       total: 0.53
       efficiency: 0.64
@@ -444,13 +444,13 @@ builds:
   slot_order:
   - Avenging Blade
   - Jotunn's Revenge
+  - Transcendence
   - Riptalon
   - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
   - Riptalon
-  - Titan's Bane
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -483,6 +483,12 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.53
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.14
     Riptalon:
       total: 0.53
       efficiency: 0.53
@@ -501,12 +507,6 @@ builds:
       win: 0.71
       pick: 0.17
       fit: 0.55
-    Titan's Bane:
-      total: 0.52
-      efficiency: 0.45
-      win: 0.62
-      pick: 0.3
-      fit: 0.45
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -514,12 +514,12 @@ builds:
   - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
+  - Transcendence
   - Riptalon
-  - The Crusher
   - Heartseeker
   flex_slots:
-  - Berserker's Shield
   - Golden Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -559,18 +559,18 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.35
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.12
     Riptalon:
       total: 0.53
       efficiency: 0.53
       win: 0.56
       pick: 0.0
       fit: 0.6
-    The Crusher:
-      total: 0.52
-      efficiency: 0.64
-      win: 0.52
-      pick: 0.16
-      fit: 0.36
     Heartseeker:
       total: 0.53
       efficiency: 0.41
@@ -584,12 +584,12 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - The Crusher
   - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - The Crusher
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -629,18 +629,18 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.49
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.08
     Hydra's Lament:
       total: 0.52
       efficiency: 0.56
       win: 0.56
       pick: 0.0
       fit: 0.46
-    The Crusher:
-      total: 0.51
-      efficiency: 0.64
-      win: 0.52
-      pick: 0.16
-      fit: 0.31
     Heartseeker:
       total: 0.52
       efficiency: 0.41
@@ -721,22 +721,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - The Reaper
   - Damaru
   - The Crusher
   - Heartseeker
   flex_slots:
   - The Reaper
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -750,18 +750,18 @@ builds:
     Tears, Kinetic Cuirass, Musashi''s Dual Swords, Spectral Armor, Pharaoh''s Curse,
     Eye of Providence, Shield of the Phoenix, Oni Hunter''s Garb, Arondight, Tyrfing.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.69
-      win: 0.56
-      pick: 0.0
-      fit: 0.12
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.64
       win: 0.55
       pick: 0.33
       fit: 0.53
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.2
     The Reaper:
       total: 0.52
       efficiency: 0.52
@@ -793,13 +793,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Damaru
   - The Crusher
   - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Damaru
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -832,18 +832,18 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.5
+    Transcendence:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.27
     Hydra's Lament:
       total: 0.52
       efficiency: 0.56
       win: 0.56
       pick: 0.0
       fit: 0.47
-    Damaru:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.0
-      fit: 0.39
     The Crusher:
       total: 0.53
       efficiency: 0.64
@@ -862,9 +862,9 @@ builds:
   archetype: crit
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Damaru
   - Demon Blade
-  - The Crusher
   - Deathbringer
   - Heartseeker
   flex_slots:
@@ -897,6 +897,12 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.41
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.15
     Damaru:
       total: 0.52
       efficiency: 0.57
@@ -909,12 +915,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.64
-    The Crusher:
-      total: 0.53
-      efficiency: 0.64
-      win: 0.52
-      pick: 0.16
-      fit: 0.42
     Deathbringer:
       total: 0.47
       efficiency: 0.45
@@ -934,13 +934,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
   - Hydra's Lament
-  - Titan's Bane
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -974,6 +974,12 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.53
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.15
     Hydra's Lament:
       total: 0.51
       efficiency: 0.56
@@ -992,12 +998,6 @@ builds:
       win: 0.71
       pick: 0.17
       fit: 0.48
-    Titan's Bane:
-      total: 0.51
-      efficiency: 0.45
-      win: 0.62
-      pick: 0.3
-      fit: 0.38
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -1076,13 +1076,13 @@ builds:
   slot_order:
   - Avenging Blade
   - Jotunn's Revenge
-  - The Reaper
+  - Transcendence
   - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
   - Titan's Bane
-  - The Reaper
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1115,12 +1115,12 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.62
-    The Reaper:
-      total: 0.53
+    Transcendence:
+      total: 0.48
       efficiency: 0.52
-      win: 0.56
-      pick: 0.0
-      fit: 0.62
+      win: 0.57
+      pick: 0.29
+      fit: 0.17
     The Crusher:
       total: 0.56
       efficiency: 0.64
@@ -1147,12 +1147,12 @@ builds:
   - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
+  - Transcendence
   - Riptalon
-  - The Crusher
   - Heartseeker
   flex_slots:
-  - Berserker's Shield
   - Golden Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1192,18 +1192,18 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.35
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.12
     Riptalon:
       total: 0.53
       efficiency: 0.53
       win: 0.56
       pick: 0.0
       fit: 0.6
-    The Crusher:
-      total: 0.52
-      efficiency: 0.64
-      win: 0.52
-      pick: 0.16
-      fit: 0.36
     Heartseeker:
       total: 0.53
       efficiency: 0.41
@@ -1218,12 +1218,12 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - The Crusher
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1263,18 +1263,18 @@ builds:
       win: 0.55
       pick: 0.33
       fit: 0.57
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.29
+      fit: 0.1
     Hydra's Lament:
       total: 0.53
       efficiency: 0.56
       win: 0.56
       pick: 0.0
       fit: 0.52
-    The Crusher:
-      total: 0.52
-      efficiency: 0.64
-      win: 0.52
-      pick: 0.16
-      fit: 0.35
     Heartseeker:
       total: 0.52
       efficiency: 0.41

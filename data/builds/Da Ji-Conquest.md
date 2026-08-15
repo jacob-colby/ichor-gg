@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Pendulum Blade
   - The Crusher
   - Titan's Bane
   - Avatar's Parashu
   flex_slots:
   - Hydra's Lament
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -128,18 +128,18 @@ builds:
       win: 0.49
       pick: 0.71
       fit: 1.0
+    Transcendence:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.56
+      pick: 0.0
+      fit: 0.44
     Hydra's Lament:
       total: 0.55
       efficiency: 0.56
       win: 0.47
       pick: 0.5
       fit: 0.77
-    Pendulum Blade:
-      total: 0.55
-      efficiency: 0.41
-      win: 0.56
-      pick: 0.0
-      fit: 1.0
     The Crusher:
       total: 0.7
       efficiency: 0.64
@@ -166,13 +166,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Crusher
-  - Titan's Bane
   - Avatar's Parashu
   flex_slots:
   - Hydra's Lament
-  - Titan's Bane
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -205,6 +205,12 @@ builds:
       win: 0.49
       pick: 0.71
       fit: 0.71
+    Transcendence:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.56
+      pick: 0.0
+      fit: 0.39
     Hydra's Lament:
       total: 0.53
       efficiency: 0.56
@@ -217,12 +223,6 @@ builds:
       win: 0.73
       pick: 0.37
       fit: 0.57
-    Titan's Bane:
-      total: 0.51
-      efficiency: 0.45
-      win: 0.6
-      pick: 0.32
-      fit: 0.47
     Avatar's Parashu:
       total: 0.55
       efficiency: 0.37
@@ -235,13 +235,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - The Crusher
   - Titan's Bane
   - Avatar's Parashu
   flex_slots:
   - Titan's Bane
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -274,12 +274,12 @@ builds:
       win: 0.49
       pick: 0.71
       fit: 0.78
-    Hydra's Lament:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.47
-      pick: 0.5
-      fit: 0.54
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.56
+      pick: 0.0
+      fit: 0.22
     The Crusher:
       total: 0.67
       efficiency: 0.64
@@ -581,14 +581,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Heartseeker
   flex_slots:
   - Pendulum Blade
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -615,6 +615,12 @@ builds:
       win: 0.49
       pick: 0.71
       fit: 1.0
+    Transcendence:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.56
+      pick: 0.0
+      fit: 0.44
     Hydra's Lament:
       total: 0.55
       efficiency: 0.56
@@ -638,12 +644,6 @@ builds:
       efficiency: 0.64
       win: 0.73
       pick: 0.37
-      fit: 0.88
-    Heartseeker:
-      total: 0.53
-      efficiency: 0.41
-      win: 0.48
-      pick: 0.75
       fit: 0.88
   starter: *id001
 ---

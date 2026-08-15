@@ -95,12 +95,12 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   flex_slots:
-  - Nimble Ring
+  - Gluttonous Grimoire
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
@@ -137,18 +137,18 @@ builds:
       win: 0.61
       pick: 0.43
       fit: 0.59
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.68
-      win: 0.56
-      pick: 0.0
-      fit: 0.31
     Death Metal:
       total: 0.53
       efficiency: 0.56
       win: 0.56
       pick: 0.0
       fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.53
+      efficiency: 0.63
+      win: 0.56
+      pick: 0.0
+      fit: 0.36
     Silverbranch Bow:
       total: 0.57
       efficiency: 0.52
@@ -170,7 +170,7 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
-  - Nimble Ring
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   flex_slots:
@@ -217,12 +217,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.49
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
       win: 0.56
       pick: 0.0
-      fit: 0.36
+      fit: 0.44
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.52

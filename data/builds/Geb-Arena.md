@@ -387,13 +387,13 @@ builds:
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.68
     Shogun's Ofuda:
       total: 0.59
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.68
   starter: *id001
 - source: suggested
   archetype: str-int

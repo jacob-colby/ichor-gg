@@ -120,12 +120,12 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus
@@ -149,6 +149,12 @@ builds:
     Blood-Bound Book, Rod of Asclepius, Bragi''s Harp, Bancroft''s Talon, Jade Scepter,
     Freya''s Tears, Ethereal Staff, Alchemist Coat.'
   slot_scores:
+    Nimble Ring:
+      total: 0.54
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
@@ -179,12 +185,6 @@ builds:
       win: 0.59
       pick: 0.65
       fit: 0.66
-    Soul Gem:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.23
-      fit: 0.93
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -193,10 +193,10 @@ builds:
   slot_order:
   - Book of Thoth
   - Genji's Guard
+  - Nimble Ring
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Genji's Guard
   - Book of Thoth
@@ -232,6 +232,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.22
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Spear of Desolation:
       total: 0.52
       efficiency: 0.52
@@ -250,22 +256,16 @@ builds:
       win: 0.59
       pick: 0.65
       fit: 0.43
-    Soul Gem:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.23
-      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus
@@ -289,6 +289,12 @@ builds:
     Totem of Death, Helm of Radiance, Bracer of The Abyss, Kinetic Cuirass, Blood-Bound
     Book, Rod of Asclepius, Amanita Charm, Screeching Gargoyle.'
   slot_scores:
+    Nimble Ring:
+      total: 0.51
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
@@ -319,12 +325,6 @@ builds:
       win: 0.59
       pick: 0.65
       fit: 0.5
-    Soul Gem:
-      total: 0.56
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.23
-      fit: 0.8
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -399,15 +399,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
-  - The Cosmic Horror
   - Spear of the Magus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -428,6 +428,12 @@ builds:
     Blood-Bound Book, Rod of Asclepius, Gem of Focus, Stone of Binding, Bancroft''s
     Talon, Freya''s Tears, Totem of Death, Jade Scepter, Kinetic Cuirass.'
   slot_scores:
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Spear of Desolation:
       total: 0.57
       efficiency: 0.52
@@ -458,12 +464,6 @@ builds:
       win: 0.59
       pick: 0.65
       fit: 0.75
-    Soul Gem:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.23
-      fit: 0.98
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -537,15 +537,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Book of Thoth
   - Genji's Guard
-  - Breastplate of Valor
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Breastplate of Valor
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -554,8 +554,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -567,15 +567,15 @@ builds:
     Cuirass, Amanita Charm, Bragi''s Harp, Eye of Providence, Oni Hunter''s Garb,
     Bracer of The Abyss, Prophetic Cloak, Helm of Radiance.'
   slot_scores:
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.55
+      pick: 0.38
+      fit: 0.13
     Genji's Guard:
       total: 0.53
       efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
-    Breastplate of Valor:
-      total: 0.51
-      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -607,12 +607,12 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Obsidian Shard
@@ -636,6 +636,12 @@ builds:
     of Radiance, Totem of Death, Blood-Bound Book, Rod of Asclepius, Bragi''s Harp,
     Bancroft''s Talon, Jade Scepter, Freya''s Tears, Ethereal Staff, Alchemist Coat.'
   slot_scores:
+    Nimble Ring:
+      total: 0.54
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
@@ -666,11 +672,5 @@ builds:
       win: 0.59
       pick: 0.65
       fit: 0.66
-    Soul Gem:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.23
-      fit: 0.93
   starter: *id001
 ---

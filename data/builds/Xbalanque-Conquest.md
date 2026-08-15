@@ -583,8 +583,8 @@ builds:
   archetype: intelligence
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
@@ -621,18 +621,18 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.36
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.55
-      pick: 0.0
-      fit: 0.46
     Death Metal:
       total: 0.52
       efficiency: 0.56
       win: 0.55
       pick: 0.0
       fit: 0.5
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.55
+      pick: 0.0
+      fit: 0.52
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.52
@@ -656,8 +656,8 @@ builds:
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
@@ -694,18 +694,18 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.34
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.55
-      pick: 0.0
-      fit: 0.46
     Death Metal:
       total: 0.53
       efficiency: 0.56
       win: 0.55
       pick: 0.0
       fit: 0.57
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.55
+      pick: 0.0
+      fit: 0.52
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.52

@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Nimble Ring
-  - Gluttonous Grimoire
-  - The Crusher
   - The World Stone
   - Rod of Tahuti
   flex_slots:
-  - The Crusher
-  - Gluttonous Grimoire
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -124,30 +124,30 @@ builds:
     Charm, Deathbringer, Eye of Providence, Oni Hunter''s Garb, Shogun''s Ofuda, Blood-Bound
     Book, Toxic Blade, Freya''s Tears, Musashi''s Dual Swords, Avenging Blade, Tyrfing.'
   slot_scores:
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.66
+      pick: 0.0
+      fit: 0.05
     Jotunn's Revenge:
       total: 0.67
       efficiency: 0.64
       win: 0.84
       pick: 0.22
       fit: 0.37
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.66
+      pick: 0.34
+      fit: 0.18
     Nimble Ring:
       total: 0.59
       efficiency: 0.68
       win: 0.66
       pick: 0.0
       fit: 0.39
-    Gluttonous Grimoire:
-      total: 0.58
-      efficiency: 0.63
-      win: 0.66
-      pick: 0.0
-      fit: 0.4
-    The Crusher:
-      total: 0.59
-      efficiency: 0.64
-      win: 0.66
-      pick: 0.0
-      fit: 0.43
     The World Stone:
       total: 0.6
       efficiency: 0.46
@@ -167,8 +167,8 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - The Crusher
   - The World Stone
   - Rod of Tahuti
@@ -203,18 +203,18 @@ builds:
       win: 0.84
       pick: 0.22
       fit: 0.44
-    Nimble Ring:
-      total: 0.6
-      efficiency: 0.68
-      win: 0.66
-      pick: 0.0
-      fit: 0.4
     Death Metal:
       total: 0.57
       efficiency: 0.56
       win: 0.66
       pick: 0.0
       fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.59
+      efficiency: 0.63
+      win: 0.66
+      pick: 0.0
+      fit: 0.45
     The Crusher:
       total: 0.58
       efficiency: 0.64
@@ -309,15 +309,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Gluttonous Grimoire
-  - Spear of Desolation
-  - The Crusher
+  - Transcendence
+  - Nimble Ring
   - The World Stone
   - Rod of Tahuti
   flex_slots:
-  - The Crusher
-  - Spear of Desolation
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -341,30 +341,30 @@ builds:
     Bancroft''s Talon, Oni Hunter''s Garb, Helm of Radiance, Pendulum Blade, Doom
     Orb, Rod of Asclepius, Dominance, Tyrfing.'
   slot_scores:
+    Book of Thoth:
+      total: 0.49
+      efficiency: 0.49
+      win: 0.66
+      pick: 0.0
+      fit: 0.13
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.64
       win: 0.84
       pick: 0.22
       fit: 0.46
-    Gluttonous Grimoire:
-      total: 0.59
-      efficiency: 0.63
-      win: 0.66
-      pick: 0.0
-      fit: 0.49
-    Spear of Desolation:
-      total: 0.58
+    Transcendence:
+      total: 0.52
       efficiency: 0.52
-      win: 0.71
-      pick: 0.16
-      fit: 0.46
-    The Crusher:
+      win: 0.66
+      pick: 0.34
+      fit: 0.13
+    Nimble Ring:
       total: 0.59
-      efficiency: 0.64
+      efficiency: 0.68
       win: 0.66
       pick: 0.0
-      fit: 0.43
+      fit: 0.37
     The World Stone:
       total: 0.62
       efficiency: 0.46
@@ -383,13 +383,13 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - The Crusher
   - The World Stone
-  - Rod of Tahuti
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Soul Gem
   - Berserker's Shield
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -425,17 +425,17 @@ builds:
       win: 0.84
       pick: 0.22
       fit: 0.25
+    The Crusher:
+      total: 0.57
+      efficiency: 0.64
+      win: 0.66
+      pick: 0.0
+      fit: 0.32
     The World Stone:
       total: 0.59
       efficiency: 0.46
       win: 0.89
       pick: 0.25
-      fit: 0.14
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.77
-      win: 0.69
-      pick: 0.18
       fit: 0.14
     Amanita Charm:
       total: 0.61
@@ -453,15 +453,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Gluttonous Grimoire
-  - Silverbranch Bow
-  - The Crusher
+  - Transcendence
+  - Nimble Ring
   - The World Stone
   - Rod of Tahuti
   flex_slots:
-  - Gluttonous Grimoire
-  - Silverbranch Bow
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -484,30 +484,30 @@ builds:
     Pharaoh''s Curse, Void Shield, Amanita Charm, Bragi''s Harp, Dominance, Pendulum
     Blade, Eye of Providence, Bracer of The Abyss, Doom Orb, Oni Hunter''s Garb, Tyrfing.'
   slot_scores:
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.66
+      pick: 0.0
+      fit: 0.04
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.64
       win: 0.84
       pick: 0.22
       fit: 0.48
-    Gluttonous Grimoire:
-      total: 0.6
-      efficiency: 0.63
-      win: 0.66
-      pick: 0.0
-      fit: 0.53
-    Silverbranch Bow:
-      total: 0.57
+    Transcendence:
+      total: 0.52
       efficiency: 0.52
-      win: 0.67
-      pick: 0.19
-      fit: 0.51
-    The Crusher:
-      total: 0.6
-      efficiency: 0.64
+      win: 0.66
+      pick: 0.34
+      fit: 0.15
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.68
       win: 0.66
       pick: 0.0
-      fit: 0.55
+      fit: 0.32
     The World Stone:
       total: 0.63
       efficiency: 0.46
@@ -596,22 +596,22 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -628,18 +628,18 @@ builds:
     Pharaoh''s Curse, Bracer of The Abyss, Eye of Providence, Pendulum Blade, Blood-Bound
     Book, Oni Hunter''s Garb, Bragi''s Harp, Tekko-Kagi, Tyrfing.'
   slot_scores:
-    Genji's Guard:
-      total: 0.58
-      efficiency: 0.69
-      win: 0.66
-      pick: 0.0
-      fit: 0.28
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.64
       win: 0.84
       pick: 0.22
       fit: 0.48
+    Transcendence:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.66
+      pick: 0.34
+      fit: 0.08
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
@@ -668,15 +668,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Nimble Ring
-  - Spear of Desolation
-  - The Crusher
   - The World Stone
   - Rod of Tahuti
   flex_slots:
-  - Spear of Desolation
-  - The Crusher
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -700,30 +700,30 @@ builds:
     Amanita Charm, Pharaoh''s Curse, Gem of Focus, Eye of Providence, Jade Scepter,
     Oni Hunter''s Garb, Shield of the Phoenix, Doom Orb, Tyrfing.'
   slot_scores:
+    Book of Thoth:
+      total: 0.5
+      efficiency: 0.49
+      win: 0.66
+      pick: 0.0
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.67
       efficiency: 0.64
       win: 0.84
       pick: 0.22
       fit: 0.38
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.66
+      pick: 0.34
+      fit: 0.13
     Nimble Ring:
       total: 0.6
       efficiency: 0.68
       win: 0.66
       pick: 0.0
       fit: 0.45
-    Spear of Desolation:
-      total: 0.58
-      efficiency: 0.52
-      win: 0.71
-      pick: 0.16
-      fit: 0.45
-    The Crusher:
-      total: 0.58
-      efficiency: 0.64
-      win: 0.66
-      pick: 0.0
-      fit: 0.37
     The World Stone:
       total: 0.62
       efficiency: 0.46
@@ -740,15 +740,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Nimble Ring
-  - Death Metal
-  - The Crusher
   - The World Stone
   - Rod of Tahuti
   flex_slots:
-  - The Crusher
-  - Death Metal
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -772,30 +772,30 @@ builds:
     Amanita Charm, Rod of Asclepius, Eye of Providence, Oni Hunter''s Garb, Deathbringer,
     Jade Scepter, Doom Orb, Tyrfing.'
   slot_scores:
+    Book of Thoth:
+      total: 0.5
+      efficiency: 0.49
+      win: 0.66
+      pick: 0.0
+      fit: 0.18
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.64
       win: 0.84
       pick: 0.22
       fit: 0.36
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.66
+      pick: 0.34
+      fit: 0.18
     Nimble Ring:
       total: 0.6
       efficiency: 0.68
       win: 0.66
       pick: 0.0
       fit: 0.45
-    Death Metal:
-      total: 0.58
-      efficiency: 0.56
-      win: 0.66
-      pick: 0.0
-      fit: 0.55
-    The Crusher:
-      total: 0.59
-      efficiency: 0.64
-      win: 0.66
-      pick: 0.0
-      fit: 0.43
     The World Stone:
       total: 0.62
       efficiency: 0.46

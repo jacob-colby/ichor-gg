@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
   - The Reaper
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -128,18 +128,18 @@ builds:
       win: 0.52
       pick: 0.39
       fit: 1.0
+    Transcendence:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.56
+      pick: 0.0
+      fit: 0.52
     The Reaper:
       total: 0.57
       efficiency: 0.52
       win: 0.56
       pick: 0.0
       fit: 0.91
-    Pendulum Blade:
-      total: 0.55
-      efficiency: 0.41
-      win: 0.56
-      pick: 0.0
-      fit: 1.0
     The Crusher:
       total: 0.74
       efficiency: 0.64
@@ -165,14 +165,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
+  - Transcendence
   - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
   - Genji's Guard
-  - Breastplate of Valor
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -181,8 +181,8 @@ builds:
     swap: Oni Hunter's Garb — magical protection
     swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -199,18 +199,18 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.24
-    Breastplate of Valor:
-      total: 0.51
-      efficiency: 0.64
-      win: 0.56
-      pick: 0.0
-      fit: 0.24
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.64
       win: 0.52
       pick: 0.39
       fit: 0.71
+    Transcendence:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.56
+      pick: 0.0
+      fit: 0.39
     The Crusher:
       total: 0.68
       efficiency: 0.64
@@ -235,13 +235,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - The Reaper
+  - Transcendence
   - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
   - Genji's Guard
-  - The Reaper
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -274,12 +274,12 @@ builds:
       win: 0.52
       pick: 0.39
       fit: 0.78
-    The Reaper:
-      total: 0.52
+    Transcendence:
+      total: 0.47
       efficiency: 0.52
       win: 0.56
       pick: 0.0
-      fit: 0.56
+      fit: 0.22
     The Crusher:
       total: 0.69
       efficiency: 0.64
@@ -581,14 +581,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -615,6 +615,12 @@ builds:
       win: 0.52
       pick: 0.39
       fit: 1.0
+    Transcendence:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.56
+      pick: 0.0
+      fit: 0.52
     Hydra's Lament:
       total: 0.52
       efficiency: 0.56
@@ -627,12 +633,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.91
-    Pendulum Blade:
-      total: 0.55
-      efficiency: 0.41
-      win: 0.56
-      pick: 0.0
-      fit: 1.0
     The Crusher:
       total: 0.74
       efficiency: 0.64
@@ -716,8 +716,8 @@ builds:
       fit: 0.91
   swaps:
   - added: Titan's Bane
-    removed: Pendulum Blade
+    removed: Transcendence
     reason: community 67% win over 53 matches (vs 52% on this god), taking the model's
-      weakest slot from Pendulum Blade
+      weakest slot from Transcendence
   starter: *id001
 ---

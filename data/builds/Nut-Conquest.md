@@ -168,10 +168,10 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Nimble Ring
   - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
   - The Crusher
   - Genji's Guard
@@ -209,12 +209,6 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.52
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.54
-      pick: 0.0
-      fit: 0.48
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
@@ -233,6 +227,12 @@ builds:
       win: 0.55
       pick: 0.23
       fit: 0.42
+    Soul Gem:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.56
+      pick: 0.17
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: burst

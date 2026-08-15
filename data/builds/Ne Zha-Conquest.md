@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Runeforged Hammer
+  - Transcendence
   - The Reaper
   - Pendulum Blade
   - The Crusher
   flex_slots:
   - Pendulum Blade
-  - Runeforged Hammer
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -134,12 +134,12 @@ builds:
       win: 0.49
       pick: 0.41
       fit: 1.0
-    Runeforged Hammer:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.53
-      pick: 0.11
-      fit: 0.54
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     The Reaper:
       total: 0.52
       efficiency: 0.52
@@ -165,14 +165,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Runeforged Hammer
   - The Crusher
   flex_slots:
   - Runeforged Hammer
-  - Breastplate of Valor
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -181,8 +181,8 @@ builds:
     swap: Oni Hunter's Garb — magical protection
     swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -199,18 +199,18 @@ builds:
       win: 0.58
       pick: 0.14
       fit: 0.24
-    Breastplate of Valor:
-      total: 0.48
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.24
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.64
       win: 0.49
       pick: 0.41
       fit: 0.71
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Hydra's Lament:
       total: 0.5
       efficiency: 0.56
@@ -235,13 +235,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Runeforged Hammer
+  - Transcendence
   - The Reaper
   - Pendulum Blade
   - The Crusher
   flex_slots:
   - Pendulum Blade
-  - Runeforged Hammer
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -274,12 +274,12 @@ builds:
       win: 0.49
       pick: 0.41
       fit: 0.78
-    Runeforged Hammer:
-      total: 0.48
-      efficiency: 0.55
-      win: 0.53
-      pick: 0.11
-      fit: 0.32
+    Transcendence:
+      total: 0.44
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.22
     The Reaper:
       total: 0.49
       efficiency: 0.52
@@ -581,14 +581,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
-  - Heartseeker
   flex_slots:
   - Pendulum Blade
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -615,6 +615,12 @@ builds:
       win: 0.49
       pick: 0.41
       fit: 1.0
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Hydra's Lament:
       total: 0.52
       efficiency: 0.56
@@ -638,12 +644,6 @@ builds:
       efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.88
-    Heartseeker:
-      total: 0.44
-      efficiency: 0.41
-      win: 0.35
-      pick: 0.22
       fit: 0.88
   starter: *id001
 ---

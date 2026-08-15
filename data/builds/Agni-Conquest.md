@@ -580,14 +580,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
-  - Death Metal
+  - Transcendence
   - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Death Metal
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -616,12 +616,12 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.65
-    Death Metal:
-      total: 0.53
-      efficiency: 0.56
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
       win: 0.55
       pick: 0.0
-      fit: 0.55
+      fit: 0.32
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
@@ -1284,14 +1284,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
-  - Death Metal
+  - Transcendence
   - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Death Metal
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1320,12 +1320,12 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.65
-    Death Metal:
-      total: 0.53
-      efficiency: 0.56
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
       win: 0.55
       pick: 0.0
-      fit: 0.55
+      fit: 0.32
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52

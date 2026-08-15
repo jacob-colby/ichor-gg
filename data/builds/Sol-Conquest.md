@@ -93,12 +93,12 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Nimble Ring
   - Bragi's Harp
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus
@@ -122,6 +122,12 @@ builds:
     Orb, Helm of Radiance, Chronos'' Pendant, Rod of Asclepius, Freya''s Tears, Kinetic
     Cuirass, Dreamer''s Idol, Jade Scepter, Amanita Charm, Totem of Death.'
   slot_scores:
+    Nimble Ring:
+      total: 0.56
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Bragi's Harp:
       total: 0.56
       efficiency: 0.42
@@ -152,12 +158,6 @@ builds:
       win: 0.57
       pick: 0.26
       fit: 0.46
-    Soul Gem:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.6
-      pick: 0.17
-      fit: 0.8
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem

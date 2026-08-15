@@ -235,15 +235,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
   - Yogi's Necklace
   - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Gluttonous Grimoire
-  - Rod of Tahuti
   flex_slots:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -252,8 +252,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -265,6 +265,12 @@ builds:
     Scale, Leviathan''s Hide, Midgardian Mail, Nimble Ring, Obsidian Shard, Mantle
     Of Discord.'
   slot_scores:
+    Stone of Binding:
+      total: 0.53
+      efficiency: 0.47
+      win: 0.56
+      pick: 0.0
+      fit: 0.78
     Yogi's Necklace:
       total: 0.55
       efficiency: 0.57
@@ -295,12 +301,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.63
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.38
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -375,15 +375,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Yogi's Necklace
   - Genji's Guard
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
-  - Rod of Tahuti
   flex_slots:
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -405,6 +405,12 @@ builds:
     of Desolation, Spectral Armor, Draconic Scale, Gem of Focus, Leviathan''s Hide,
     Helm of Radiance, Midgardian Mail, Mantle Of Discord.'
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.56
+      pick: 0.0
+      fit: 0.6
     Yogi's Necklace:
       total: 0.55
       efficiency: 0.57
@@ -435,12 +441,6 @@ builds:
       win: 0.75
       pick: 0.2
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.1
   starter: *id001
 - source: suggested
   archetype: strength
@@ -448,22 +448,22 @@ builds:
   - Yogi's Necklace
   - Genji's Guard
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Freya's Tears
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
   - Jotunn's Revenge
-  - Rod of Tahuti
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -482,7 +482,7 @@ builds:
       efficiency: 0.57
       win: 0.73
       pick: 0.09
-      fit: 0.12
+      fit: 0.13
     Genji's Guard:
       total: 0.55
       efficiency: 0.69
@@ -495,6 +495,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.47
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.56
+      pick: 0.0
+      fit: 0.54
     Freya's Tears:
       total: 0.61
       efficiency: 0.59
@@ -507,35 +513,29 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.16
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Yogi's Necklace
   - Genji's Guard
+  - Kinetic Cuirass
   - Freya's Tears
   - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Genji's Guard
   - The Crusher
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -562,6 +562,12 @@ builds:
       win: 0.55
       pick: 0.45
       fit: 0.22
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.56
+      pick: 0.0
+      fit: 0.52
     Freya's Tears:
       total: 0.61
       efficiency: 0.59
@@ -580,12 +586,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: model

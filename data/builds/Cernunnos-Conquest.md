@@ -169,7 +169,7 @@ builds:
   slot_order:
   - Genji's Guard
   - Hydra's Lament
-  - Nimble Ring
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
@@ -210,13 +210,13 @@ builds:
       efficiency: 0.56
       win: 0.62
       pick: 0.0
-      fit: 0.42
-    Nimble Ring:
-      total: 0.58
-      efficiency: 0.68
+      fit: 0.43
+    Gluttonous Grimoire:
+      total: 0.57
+      efficiency: 0.63
       win: 0.62
       pick: 0.0
-      fit: 0.4
+      fit: 0.45
     Silverbranch Bow:
       total: 0.62
       efficiency: 0.52
@@ -239,12 +239,12 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - Damaru
+  - The Crusher
   - Deathbringer
-  - Rod of Tahuti
   flex_slots:
   - Damaru
   - Deathbringer
@@ -271,18 +271,18 @@ builds:
     of Radiance, Eye of Providence, Oni Hunter''s Garb, Rod of Asclepius, Shield of
     the Phoenix, Deathbringer, Jade Scepter, Jotunn''s Revenge.'
   slot_scores:
-    Nimble Ring:
-      total: 0.58
-      efficiency: 0.68
-      win: 0.62
-      pick: 0.0
-      fit: 0.41
     Death Metal:
       total: 0.55
       efficiency: 0.56
       win: 0.62
       pick: 0.0
       fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.57
+      efficiency: 0.63
+      win: 0.62
+      pick: 0.0
+      fit: 0.47
     Silverbranch Bow:
       total: 0.63
       efficiency: 0.52
@@ -295,18 +295,18 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.36
+    The Crusher:
+      total: 0.56
+      efficiency: 0.64
+      win: 0.62
+      pick: 0.0
+      fit: 0.37
     Deathbringer:
       total: 0.49
       efficiency: 0.45
       win: 0.62
       pick: 0.0
       fit: 0.36
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.29
   starter: *id001
 - source: suggested
   archetype: burst
@@ -384,21 +384,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Berserker's Shield
+  - Kinetic Cuirass
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Berserker's Shield
   - The Crusher
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -422,6 +422,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.34
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.62
+      pick: 0.0
+      fit: 0.39
     Silverbranch Bow:
       total: 0.61
       efficiency: 0.52
@@ -434,12 +440,6 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.31
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.21
     Amanita Charm:
       total: 0.59
       efficiency: 0.63
@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Berserker's Shield
   - Nimble Ring
+  - Death Metal
   - Riptalon
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - The Crusher
   - Berserker's Shield
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -572,6 +572,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.39
+    Death Metal:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.0
+      fit: 0.41
     Riptalon:
       total: 0.56
       efficiency: 0.53
@@ -590,25 +596,19 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.33
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.25
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
+  - Hydra's Lament
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Breastplate of Valor
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -645,6 +645,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.28
+    Hydra's Lament:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.0
+      fit: 0.46
     Silverbranch Bow:
       total: 0.62
       efficiency: 0.52
@@ -657,12 +663,6 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.31
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.21
     Soul Gem:
       total: 0.58
       efficiency: 0.57
@@ -745,8 +745,8 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Nimble Ring
   - Death Metal
-  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
@@ -778,18 +778,18 @@ builds:
     Bracer of The Abyss, Eye of Providence, Spectral Armor, Helm of Radiance, Jotunn''s
     Revenge.'
   slot_scores:
+    Nimble Ring:
+      total: 0.57
+      efficiency: 0.68
+      win: 0.62
+      pick: 0.0
+      fit: 0.37
     Death Metal:
       total: 0.55
       efficiency: 0.56
       win: 0.62
       pick: 0.0
       fit: 0.47
-    Gluttonous Grimoire:
-      total: 0.59
-      efficiency: 0.63
-      win: 0.62
-      pick: 0.0
-      fit: 0.58
     Silverbranch Bow:
       total: 0.61
       efficiency: 0.52
@@ -896,8 +896,8 @@ builds:
   - Death Metal
   - Silverbranch Bow
   - Damaru
+  - The Crusher
   - Deathbringer
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Damaru
@@ -943,18 +943,18 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.31
+    The Crusher:
+      total: 0.55
+      efficiency: 0.64
+      win: 0.62
+      pick: 0.0
+      fit: 0.34
     Deathbringer:
       total: 0.48
       efficiency: 0.45
       win: 0.62
       pick: 0.0
       fit: 0.31
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.26
     Soul Gem:
       total: 0.59
       efficiency: 0.57
@@ -1003,7 +1003,7 @@ builds:
       efficiency: 0.69
       win: 0.62
       pick: 0.0
-      fit: 0.12
+      fit: 0.13
     Death Metal:
       total: 0.54
       efficiency: 0.56
@@ -1040,21 +1040,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Berserker's Shield
+  - Kinetic Cuirass
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Berserker's Shield
   - The Crusher
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -1078,6 +1078,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.29
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.62
+      pick: 0.0
+      fit: 0.39
     Silverbranch Bow:
       total: 0.61
       efficiency: 0.52
@@ -1090,12 +1096,6 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.32
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.21
     Amanita Charm:
       total: 0.59
       efficiency: 0.63
@@ -1186,15 +1186,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Berserker's Shield
   - Nimble Ring
   - Riptalon
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - The Crusher
   - Berserker's Shield
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1218,6 +1218,12 @@ builds:
     Bragi''s Harp, Chronos'' Pendant, Lifebinder, Obsidian Shard, Eye of Providence,
     Shogun''s Ofuda, Freya''s Tears, Tekko-Kagi, Jotunn''s Revenge, Toxic Blade.'
   slot_scores:
+    Golden Blade:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.62
+      pick: 0.0
+      fit: 0.48
     Berserker's Shield:
       total: 0.55
       efficiency: 0.66
@@ -1248,12 +1254,6 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.31
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.23
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -1261,13 +1261,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
+  - Hydra's Lament
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Breastplate of Valor
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1304,6 +1304,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.26
+    Hydra's Lament:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.0
+      fit: 0.44
     Silverbranch Bow:
       total: 0.61
       efficiency: 0.52
@@ -1316,12 +1322,6 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.3
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.2
     Soul Gem:
       total: 0.61
       efficiency: 0.57

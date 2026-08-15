@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
+  - Transcendence
   - Death Metal
+  - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
   - Titan's Bane
   flex_slots:
-  - Nimble Ring
   - Death Metal
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -130,30 +130,30 @@ builds:
       win: 0.53
       pick: 0.53
       fit: 0.49
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.68
-      win: 0.57
-      pick: 0.0
-      fit: 0.31
+    Transcendence:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.67
+      pick: 0.11
+      fit: 0.25
     Death Metal:
       total: 0.53
       efficiency: 0.56
       win: 0.57
       pick: 0.0
       fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.53
+      efficiency: 0.63
+      win: 0.57
+      pick: 0.0
+      fit: 0.36
     The Crusher:
       total: 0.56
       efficiency: 0.64
       win: 0.57
       pick: 0.0
       fit: 0.54
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.57
-      pick: 0.0
-      fit: 0.26
     Titan's Bane:
       total: 0.58
       efficiency: 0.45
@@ -168,12 +168,12 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Nimble Ring
+  - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   - Titan's Bane
   flex_slots:
-  - The Crusher
+  - Gluttonous Grimoire
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -210,12 +210,12 @@ builds:
       win: 0.67
       pick: 0.11
       fit: 0.28
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
       win: 0.57
       pick: 0.0
-      fit: 0.36
+      fit: 0.44
     The Crusher:
       total: 0.55
       efficiency: 0.64
@@ -239,21 +239,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Berserker's Shield
+  - Kinetic Cuirass
   - Shield of the Phoenix
   - Shifter's Shield
-  - Rod of Tahuti
   - Titan's Bane
   - Amanita Charm
   flex_slots:
-  - Rod of Tahuti
   - Shield of the Phoenix
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Freya's Tears — physical protection
     swap_item: Freya's Tears
@@ -276,6 +276,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.42
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.57
+      pick: 0.0
+      fit: 0.49
     Shield of the Phoenix:
       total: 0.54
       efficiency: 0.57
@@ -288,12 +294,6 @@ builds:
       win: 0.7
       pick: 0.26
       fit: 0.39
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.57
-      pick: 0.0
-      fit: 0.16
     Titan's Bane:
       total: 0.55
       efficiency: 0.45
@@ -311,14 +311,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Gluttonous Grimoire
-  - Tekko-Kagi
   - The Crusher
   - Rod of Tahuti
   - Titan's Bane
   flex_slots:
   - Gluttonous Grimoire
-  - Tekko-Kagi
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -348,18 +348,18 @@ builds:
       win: 0.53
       pick: 0.53
       fit: 0.61
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.67
+      pick: 0.11
+      fit: 0.19
     Gluttonous Grimoire:
       total: 0.56
       efficiency: 0.63
       win: 0.57
       pick: 0.0
       fit: 0.53
-    Tekko-Kagi:
-      total: 0.53
-      efficiency: 0.44
-      win: 0.57
-      pick: 0.0
-      fit: 0.76
     The Crusher:
       total: 0.58
       efficiency: 0.64
@@ -383,13 +383,13 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Jotunn's Revenge
   - Nimble Ring
   - Riptalon
   - The Crusher
-  - Rod of Tahuti
   - Titan's Bane
   flex_slots:
-  - The Crusher
+  - Jotunn's Revenge
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -420,6 +420,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.57
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.64
+      win: 0.53
+      pick: 0.53
+      fit: 0.31
     Nimble Ring:
       total: 0.55
       efficiency: 0.68
@@ -438,12 +444,6 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.37
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.57
-      pick: 0.0
-      fit: 0.18
     Titan's Bane:
       total: 0.56
       efficiency: 0.45
@@ -456,13 +456,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - The Crusher
-  - Rod of Tahuti
   - Titan's Bane
   - Soul Gem
   flex_slots:
-  - Genji's Guard
   - The Crusher
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -499,18 +499,18 @@ builds:
       win: 0.53
       pick: 0.53
       fit: 0.59
+    Transcendence:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.67
+      pick: 0.11
+      fit: 0.1
     The Crusher:
       total: 0.53
       efficiency: 0.64
       win: 0.57
       pick: 0.0
       fit: 0.34
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.57
-      pick: 0.0
-      fit: 0.24
     Titan's Bane:
       total: 0.55
       efficiency: 0.45

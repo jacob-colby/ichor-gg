@@ -93,12 +93,12 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus
@@ -122,6 +122,12 @@ builds:
     Asclepius, Freya''s Tears, Bancroft''s Talon, Jade Scepter, Shield of the Phoenix,
     Bracer of The Abyss, Ethereal Staff, Alchemist Coat.'
   slot_scores:
+    Nimble Ring:
+      total: 0.62
+      efficiency: 0.68
+      win: 0.67
+      pick: 0.3
+      fit: 0.41
     Spear of Desolation:
       total: 0.61
       efficiency: 0.52
@@ -152,12 +158,6 @@ builds:
       win: 0.56
       pick: 0.35
       fit: 0.72
-    Soul Gem:
-      total: 0.64
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.34
-      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -233,12 +233,12 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus
@@ -262,6 +262,12 @@ builds:
     Harp, Helm of Radiance, Blood-Bound Book, Rod of Asclepius, Kinetic Cuirass, Amanita
     Charm, Screeching Gargoyle, Triton''s Conch.'
   slot_scores:
+    Nimble Ring:
+      total: 0.59
+      efficiency: 0.68
+      win: 0.67
+      pick: 0.3
+      fit: 0.22
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
@@ -292,12 +298,6 @@ builds:
       win: 0.56
       pick: 0.35
       fit: 0.56
-    Soul Gem:
-      total: 0.63
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.34
-      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -371,12 +371,12 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus
@@ -400,6 +400,12 @@ builds:
     Freya''s Tears, Blood-Bound Book, Rod of Asclepius, Bancroft''s Talon, Shield
     of the Phoenix, Jade Scepter, Stone of Binding, Kinetic Cuirass.'
   slot_scores:
+    Nimble Ring:
+      total: 0.6
+      efficiency: 0.68
+      win: 0.67
+      pick: 0.3
+      fit: 0.28
     Spear of Desolation:
       total: 0.61
       efficiency: 0.52
@@ -430,12 +436,6 @@ builds:
       win: 0.56
       pick: 0.35
       fit: 0.81
-    Soul Gem:
-      total: 0.64
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.34
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -487,7 +487,7 @@ builds:
       efficiency: 0.42
       win: 0.54
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Spear of Desolation:
       total: 0.53
       efficiency: 0.52
@@ -859,22 +859,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Genji's Guard
   - Kinetic Cuirass
-  - Rod of Tahuti
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Spectral Armor
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -888,18 +888,18 @@ builds:
     Oni Hunter''s Garb, Umbral Link, Stampede, Void Stone, Phoenix Feather, Eye of
     Providence, Shifter''s Shield, Draconic Scale, Mystical Mail, Glorious Pridwen.'
   slot_scores:
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.54
+      pick: 0.0
+      fit: 0.35
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.59
       win: 0.54
       pick: 0.0
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.51
-      pick: 0.47
-      fit: 0.26
     Spectral Armor:
       total: 0.55
       efficiency: 0.58

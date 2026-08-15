@@ -93,7 +93,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
+  - Book of Thoth
   - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
@@ -101,14 +101,14 @@ builds:
   - Rod of Tahuti
   flex_slots:
   - Spear of the Magus
-  - Genji's Guard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -122,12 +122,12 @@ builds:
     Helm of Radiance, Rod of Asclepius, Gem of Focus, Dreamer''s Idol, Totem of Death,
     Freya''s Tears, Jade Scepter, Kinetic Cuirass, Typhon’s Heart.'
   slot_scores:
-    Genji's Guard:
-      total: 0.49
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.13
-      fit: 0.13
+    Book of Thoth:
+      total: 0.45
+      efficiency: 0.49
+      win: 0.52
+      pick: 0.12
+      fit: 0.26
     Nimble Ring:
       total: 0.56
       efficiency: 0.68
@@ -164,15 +164,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
   - Nimble Ring
-  - Death Metal
   - Spear of Desolation
   - Rod of Tahuti
   flex_slots:
-  - Death Metal
   - Breastplate of Valor
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -193,6 +193,12 @@ builds:
     World Stone, Rod of Asclepius, Kinetic Cuirass, Freya''s Tears, Gem of Focus,
     Amanita Charm, Triton''s Conch, Jade Scepter.'
   slot_scores:
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.52
+      pick: 0.12
+      fit: 0.3
     Genji's Guard:
       total: 0.5
       efficiency: 0.69
@@ -211,12 +217,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Death Metal:
-      total: 0.49
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
@@ -233,15 +233,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Book of Thoth
   - Genji's Guard
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
-  - Soul Gem
   flex_slots:
   - The Cosmic Horror
-  - Spear of the Magus
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -262,12 +262,24 @@ builds:
     Doom Orb, The World Stone, Kinetic Cuirass, Gem of Focus, Amanita Charm, Helm
     of Radiance, Rod of Asclepius, Dreamer''s Idol, Totem of Death.'
   slot_scores:
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.49
+      win: 0.52
+      pick: 0.12
+      fit: 0.17
     Genji's Guard:
       total: 0.5
       efficiency: 0.69
       win: 0.5
       pick: 0.13
       fit: 0.17
+    Nimble Ring:
+      total: 0.53
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
@@ -280,33 +292,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Spear of the Magus:
-      total: 0.49
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.77
       win: 0.53
       pick: 0.3
       fit: 0.42
-    Soul Gem:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Genji's Guard
   - Kinetic Cuirass
+  - Nimble Ring
   - Spear of Desolation
   - Rod of Tahuti
-  - Amanita Charm
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
@@ -316,8 +316,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -343,6 +343,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
@@ -355,12 +361,6 @@ builds:
       win: 0.53
       pick: 0.3
       fit: 0.3
-    Amanita Charm:
-      total: 0.55
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Soul Gem:
       total: 0.55
       efficiency: 0.57
@@ -371,7 +371,7 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
@@ -400,12 +400,12 @@ builds:
     Blood-Bound Book, Death Metal, Helm of Radiance, Stone of Binding, Rod of Asclepius,
     Kinetic Cuirass, Bragi''s Harp, Freya''s Tears, Void Shield, Amanita Charm.'
   slot_scores:
-    Gluttonous Grimoire:
-      total: 0.57
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.54
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.5
     Spear of Desolation:
       total: 0.6
       efficiency: 0.52
@@ -509,15 +509,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
-  - Chronos' Pendant
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Chronos' Pendant
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -539,6 +539,12 @@ builds:
     of The Abyss, Blood-Bound Book, Amanita Charm, Bragi''s Harp, Eye of Providence,
     Oni Hunter''s Garb, Gladiator''s Shield.'
   slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.49
+      win: 0.52
+      pick: 0.12
+      fit: 0.11
     Genji's Guard:
       total: 0.53
       efficiency: 0.69
@@ -551,12 +557,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
-    Chronos' Pendant:
-      total: 0.49
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Spear of Desolation:
       total: 0.59
       efficiency: 0.52

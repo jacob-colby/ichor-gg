@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Avenging Blade
   - Berserker's Shield
-  - Jotunn's Revenge
   - Kinetic Cuirass
+  - Transcendence
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Jotunn's Revenge
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -134,18 +134,18 @@ builds:
       win: 0.47
       pick: 0.3
       fit: 0.4
-    Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.64
-      win: 0.46
-      pick: 0.3
-      fit: 0.37
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.59
       win: 0.52
       pick: 0.19
       fit: 0.42
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.14
+      fit: 0.2
     The Crusher:
       total: 0.51
       efficiency: 0.64
@@ -167,19 +167,19 @@ builds:
   - Avenging Blade
   - Genji's Guard
   - Jotunn's Revenge
-  - Kinetic Cuirass
+  - Transcendence
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Kinetic Cuirass
   - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -211,12 +211,12 @@ builds:
       win: 0.46
       pick: 0.3
       fit: 0.41
-    Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.59
-      win: 0.52
-      pick: 0.19
-      fit: 0.31
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.14
+      fit: 0.22
     The Crusher:
       total: 0.5
       efficiency: 0.64
@@ -306,22 +306,22 @@ builds:
   - Avenging Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
+  - Transcendence
   - The Crusher
   - Heartseeker
   flex_slots:
   - Berserker's Shield
-  - Kinetic Cuirass
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -350,12 +350,12 @@ builds:
       win: 0.46
       pick: 0.3
       fit: 0.48
-    Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.59
-      win: 0.52
-      pick: 0.19
-      fit: 0.36
+    Transcendence:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.14
+      fit: 0.16
     The Crusher:
       total: 0.53
       efficiency: 0.64

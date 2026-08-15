@@ -652,15 +652,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
-  - Obsidian Shard
   flex_slots:
   - Jotunn's Revenge
-  - Obsidian Shard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -684,6 +684,12 @@ builds:
     Conch, Spectral Armor, Avenging Blade, Damaru, Ethereal Staff, Erosion, Bragi''s
     Harp, Alchemist Coat, Pharaoh''s Curse, Eye of Providence, Blood-Bound Book.'
   slot_scores:
+    Book of Thoth:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.67
+      pick: 0.0
+      fit: 0.21
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.64
@@ -713,12 +719,6 @@ builds:
       efficiency: 0.77
       win: 0.76
       pick: 0.45
-      fit: 0.39
-    Obsidian Shard:
-      total: 0.57
-      efficiency: 0.52
-      win: 0.73
-      pick: 0.11
       fit: 0.39
   starter: *id001
 - source: suggested

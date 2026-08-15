@@ -862,14 +862,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
+  - Book of Thoth
   - Genji's Guard
-  - Oni Hunter's Garb
   - Death Metal
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - Bancroft's Talon
-  - Oni Hunter's Garb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -895,18 +895,18 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.5
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.58
+      pick: 0.0
+      fit: 0.3
     Genji's Guard:
       total: 0.55
       efficiency: 0.69
       win: 0.58
       pick: 0.19
       fit: 0.25
-    Oni Hunter's Garb:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.58
-      pick: 0.0
-      fit: 0.3
     Death Metal:
       total: 0.52
       efficiency: 0.56
@@ -1279,15 +1279,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Genji's Guard
+  - Book of Thoth
   - Jotunn's Revenge
-  - Runeforged Hammer
+  - Transcendence
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Genji's Guard
-  - Runeforged Hammer
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1311,24 +1311,24 @@ builds:
     Harp, Tekko-Kagi, Jade Scepter, Tyrfing, Freya''s Tears, Shogun''s Ofuda, Spectral
     Armor.'
   slot_scores:
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.69
+    Book of Thoth:
+      total: 0.45
+      efficiency: 0.49
       win: 0.58
-      pick: 0.19
-      fit: 0.16
+      pick: 0.0
+      fit: 0.14
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.64
       win: 0.58
       pick: 0.0
       fit: 0.52
-    Runeforged Hammer:
-      total: 0.53
-      efficiency: 0.55
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
       win: 0.58
       pick: 0.0
-      fit: 0.53
+      fit: 0.26
     The Crusher:
       total: 0.56
       efficiency: 0.64
@@ -1352,15 +1352,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Genji's Guard
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - The Crusher
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
-  - Genji's Guard
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1384,18 +1384,24 @@ builds:
     Coat, Damaru, Freya''s Tears, Pharaoh''s Curse, Spectral Armor, Phoenix Feather,
     Bragi''s Harp.'
   slot_scores:
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.69
+    Book of Thoth:
+      total: 0.47
+      efficiency: 0.49
       win: 0.58
-      pick: 0.19
-      fit: 0.17
+      pick: 0.0
+      fit: 0.23
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.64
       win: 0.58
       pick: 0.0
       fit: 0.51
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.58
+      pick: 0.0
+      fit: 0.23
     The Crusher:
       total: 0.56
       efficiency: 0.64
@@ -1407,12 +1413,6 @@ builds:
       efficiency: 0.77
       win: 0.63
       pick: 0.28
-      fit: 0.41
-    Obsidian Shard:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.63
-      pick: 0.39
       fit: 0.41
     Soul Gem:
       total: 0.65

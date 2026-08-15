@@ -98,10 +98,10 @@ builds:
   - Kinetic Cuirass
   - Gluttonous Grimoire
   - Omen Drum
-  - Rod of Tahuti
+  - The Crusher
   flex_slots:
-  - Gluttonous Grimoire
   - Kinetic Cuirass
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -155,12 +155,12 @@ builds:
       win: 1.0
       pick: 0.17
       fit: 0.0
-    Rod of Tahuti:
-      total: 0.48
-      efficiency: 0.77
+    The Crusher:
+      total: 0.44
+      efficiency: 0.64
       win: 0.33
-      pick: 0.26
-      fit: 0.3
+      pick: 0.0
+      fit: 0.42
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -241,23 +241,23 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Gluttonous Grimoire
   - Omen Drum
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Gluttonous Grimoire
   - The Crusher
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -283,6 +283,12 @@ builds:
       win: 1.0
       pick: 0.1
       fit: 0.48
+    Kinetic Cuirass:
+      total: 0.43
+      efficiency: 0.59
+      win: 0.33
+      pick: 0.0
+      fit: 0.48
     Gluttonous Grimoire:
       total: 0.45
       efficiency: 0.63
@@ -301,12 +307,6 @@ builds:
       win: 0.33
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.48
-      efficiency: 0.77
-      win: 0.33
-      pick: 0.26
-      fit: 0.34
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -314,12 +314,12 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Omen Drum
-  - Rod of Tahuti
+  - The Crusher
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Soul Gem
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -361,12 +361,12 @@ builds:
       win: 1.0
       pick: 0.17
       fit: 0.0
-    Rod of Tahuti:
-      total: 0.48
-      efficiency: 0.77
+    The Crusher:
+      total: 0.44
+      efficiency: 0.64
       win: 0.33
-      pick: 0.26
-      fit: 0.31
+      pick: 0.0
+      fit: 0.43
     Amanita Charm:
       total: 0.48
       efficiency: 0.63
@@ -529,23 +529,23 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Freya's Tears
   - Omen Drum
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Freya's Tears
   - Soul Gem
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -572,6 +572,12 @@ builds:
       win: 1.0
       pick: 0.1
       fit: 0.51
+    Kinetic Cuirass:
+      total: 0.43
+      efficiency: 0.59
+      win: 0.33
+      pick: 0.0
+      fit: 0.5
     Freya's Tears:
       total: 0.44
       efficiency: 0.59
@@ -584,12 +590,6 @@ builds:
       win: 1.0
       pick: 0.17
       fit: 0.0
-    Rod of Tahuti:
-      total: 0.46
-      efficiency: 0.77
-      win: 0.33
-      pick: 0.26
-      fit: 0.22
     Soul Gem:
       total: 0.44
       efficiency: 0.57

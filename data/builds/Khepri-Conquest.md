@@ -96,19 +96,19 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
   - Obsidian Shard
   - Amanita Charm
+  - Erosion
   flex_slots:
-  - Genji's Guard
   - Obsidian Shard
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -141,12 +141,6 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.65
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.55
-      pick: 0.41
-      fit: 0.15
     Obsidian Shard:
       total: 0.54
       efficiency: 0.52
@@ -156,6 +150,12 @@ builds:
     Amanita Charm:
       total: 0.58
       efficiency: 0.63
+      win: 0.57
+      pick: 0.0
+      fit: 0.7
+    Erosion:
+      total: 0.54
+      efficiency: 0.52
       win: 0.57
       pick: 0.0
       fit: 0.7
@@ -169,11 +169,11 @@ builds:
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
-  - Rod of Tahuti
+  - Obsidian Shard
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
   - Freya's Tears
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -219,11 +219,11 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.58
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.55
-      pick: 0.41
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.73
+      pick: 0.22
       fit: 0.16
     Amanita Charm:
       total: 0.62
@@ -380,10 +380,10 @@ builds:
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
-  - Rod of Tahuti
+  - Obsidian Shard
   flex_slots:
-  - Kinetic Cuirass
   - Shield of the Phoenix
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -435,11 +435,11 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.64
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.55
-      pick: 0.41
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.73
+      pick: 0.22
       fit: 0.13
   starter: *id001
 - source: suggested
@@ -594,19 +594,19 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Rod of Tahuti
   - Erosion
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -639,12 +639,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.65
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.55
-      pick: 0.41
-      fit: 0.15
+    Shifter's Shield:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.0
+      fit: 0.7
     Amanita Charm:
       total: 0.58
       efficiency: 0.63

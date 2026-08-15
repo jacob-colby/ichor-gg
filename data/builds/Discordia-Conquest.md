@@ -577,14 +577,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - Death Metal
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -613,12 +613,12 @@ builds:
       win: 0.65
       pick: 0.0
       fit: 0.65
-    Hydra's Lament:
-      total: 0.57
-      efficiency: 0.56
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
       win: 0.65
       pick: 0.0
-      fit: 0.53
+      fit: 0.32
     Death Metal:
       total: 0.57
       efficiency: 0.56

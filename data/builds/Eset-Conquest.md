@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Spear of the Magus
   - Obsidian Shard
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,12 +122,12 @@ builds:
     of Asclepius, Bancroft''s Talon, Jade Scepter, Book of Thoth, Bracer of The Abyss,
     Ethereal Staff, Alchemist Coat, Breastplate of Valor.'
   slot_scores:
-    Gluttonous Grimoire:
-      total: 0.62
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.57
+      efficiency: 0.68
       win: 0.6
       pick: 0.0
-      fit: 0.87
+      fit: 0.41
     Spear of Desolation:
       total: 0.61
       efficiency: 0.52
@@ -492,7 +492,7 @@ builds:
       efficiency: 0.42
       win: 0.6
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Gluttonous Grimoire:
       total: 0.56
       efficiency: 0.63
