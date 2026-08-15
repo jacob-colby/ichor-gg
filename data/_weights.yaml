@@ -197,8 +197,12 @@ price_conversions: true
 #
 # IT ALSO COSTS RUNTIME. Every assembly runs up to three times, and `calibrate`
 # assembles a core per god per weight combination, so the leakage-free sweep
-# goes from about a minute to over ten. `recommend --all` and
-# `validate --check` are barely affected; it is the grid that multiplies.
+# went from about a minute to over fifteen - long enough that the first two
+# attempts to run it were killed. Two fixes brought it to ~7 minutes:
+# `passives.stat_conversions` memoises its parse, and
+# `assemble.conversion_score_bonus` checks that cheap lookup BEFORE building
+# any stat maps, since 222 of the 226 items convert nothing. Budget ~7 minutes
+# for `calibrate`; `recommend --all` and `validate --check` are unaffected.
 #
 # WHAT IT GETS RIGHT IS WORTH KEEPING IN VIEW. At 3 passes the item-level
 # calibration improves on three of the four converters - Transcendence 2 -> 12

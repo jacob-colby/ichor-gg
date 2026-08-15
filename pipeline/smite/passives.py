@@ -456,6 +456,15 @@ _CONVERSION_SOURCE = {"Mana": "Max Mana", "Health": "Max Health",
                       "Intelligence": "Intelligence", "Strength": "Strength"}
 
 
+#: Parsed conversions, keyed by (name, passive). `conversion_score_bonus` asks
+#: for every candidate at every slot of every pass, so with two-pass assembly
+#: on, `calibrate` was re-running these regexes roughly 130 items x 6 slots x
+#: 3 passes x 87 gods x every weight combination - and 222 of the 226 items
+#: parse to nothing. The cache is on the TEXT, not the dict, so a reworded
+#: passive re-parses rather than serving a stale answer.
+_CONVERSION_CACHE = {}
+
+
 def stat_conversions(item):
     """`[(source_stat, rate, {granted: amount_per_unit})]` for one item.
 
@@ -465,6 +474,10 @@ def stat_conversions(item):
     text = (item.get("passive") or "").strip()
     if not text:
         return []
+    key = (item.get("name"), text)
+    cached = _CONVERSION_CACHE.get(key)
+    if cached is not None:
+        return cached
     # Sentence by sentence, skipping any that is conditional. Book of Thoth
     # converts 5% of mana outright AND another 2% only "At 50 Evolve Stacks";
     # read as one blob those sum to 7% and overprice the item for a build that
@@ -490,6 +503,7 @@ def stat_conversions(item):
             per_unit[key] = per_unit.get(key, 0.0) + float(amount) / float(per)
         if per_unit:
             out.append((src, 1.0, per_unit))
+    _CONVERSION_CACHE[key] = out
     return out
 
 

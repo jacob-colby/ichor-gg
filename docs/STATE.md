@@ -306,7 +306,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (596) ·
 | Items placed | 220 / 220 |
 | Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
 | Headline gate | coverage 48%, win-weighted 49% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior |
-| **Leakage-free** | **36.7% vs 6.0% chance = 6.12×** |
+| **Leakage-free** | **37.5% vs 5.8% chance = 6.47×** |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |

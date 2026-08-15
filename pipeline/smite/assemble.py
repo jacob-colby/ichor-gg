@@ -141,11 +141,18 @@ def conversion_score_bonus(item, core_totals, reference, gold_values, span):
     from smite import passives
     if not reference or not gold_values or not span:
         return 0.0
+    # Asked for EVERY candidate at every slot of every pass, and 222 of the 226
+    # items convert nothing — so the cheap cached lookup comes first and the two
+    # dict comprehensions below only run for the four that matter. Without this
+    # `calibrate` spent most of its time building stat maps to multiply by zero.
+    rules = passives.stat_conversions(item)
+    if not rules:
+        return 0.0
     carried = {stat_key(name, raw) for name, raw in (item.get("stats") or {}).items()
                if parse_stat_value(raw) is not None}
     own = {k: parse_stat_value(v) or 0.0 for k, v in (item.get("stats") or {}).items()}
     delta_gold = 0.0
-    for source, rate, per_unit in passives.stat_conversions(item):
+    for source, rate, per_unit in rules:
         # The item is not in the core yet, so its own contribution to the
         # source stat is added — you own it the moment you buy it.
         actual = core_totals.get(source, 0.0) + own.get(source, 0.0)
