@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Breastplate of Valor
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.54
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Genji's Guard:
       total: 0.59
       efficiency: 0.69
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -991,7 +991,7 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Spectral Armor
+  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
@@ -1005,8 +1005,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -1031,12 +1031,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
-    Spectral Armor:
-      total: 0.51
-      efficiency: 0.58
+    Rod of Tahuti:
+      total: 0.5
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.23
     Soul Gem:
       total: 0.77
       efficiency: 0.57
@@ -1187,14 +1187,14 @@ builds:
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
+  - Void Stone
   - The Crusher
-  - Rod of Tahuti
   - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Jotunn's Revenge
   - Pharaoh's Curse
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1217,18 +1217,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Void Stone:
+      total: 0.55
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     The Crusher:
       total: 0.58
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.51
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
     Pharaoh's Curse:
       total: 0.56
       efficiency: 0.55

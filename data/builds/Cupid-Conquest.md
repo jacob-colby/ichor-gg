@@ -94,8 +94,8 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Riptalon
   - The Crusher
   - Rod of Tahuti
@@ -131,18 +131,18 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.38
-    Nimble Ring:
-      total: 0.58
-      efficiency: 0.68
-      win: 0.62
-      pick: 0.0
-      fit: 0.42
     Death Metal:
       total: 0.55
       efficiency: 0.56
       win: 0.62
       pick: 0.0
       fit: 0.47
+    Gluttonous Grimoire:
+      total: 0.57
+      efficiency: 0.63
+      win: 0.62
+      pick: 0.0
+      fit: 0.46
     Riptalon:
       total: 0.57
       efficiency: 0.53
@@ -169,8 +169,8 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
@@ -211,18 +211,18 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.44
-    Nimble Ring:
-      total: 0.58
-      efficiency: 0.68
-      win: 0.62
-      pick: 0.0
-      fit: 0.4
     Death Metal:
       total: 0.55
       efficiency: 0.56
       win: 0.62
       pick: 0.0
       fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.57
+      efficiency: 0.63
+      win: 0.62
+      pick: 0.0
+      fit: 0.45
     The Crusher:
       total: 0.56
       efficiency: 0.64
@@ -240,11 +240,11 @@ builds:
   archetype: crit
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Damaru
+  - The Crusher
   - Deathbringer
-  - Rod of Tahuti
   flex_slots:
   - Damaru
   - Deathbringer
@@ -277,49 +277,49 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.37
-    Nimble Ring:
-      total: 0.58
-      efficiency: 0.68
-      win: 0.62
-      pick: 0.0
-      fit: 0.4
     Death Metal:
       total: 0.55
       efficiency: 0.56
       win: 0.62
       pick: 0.0
       fit: 0.49
+    Gluttonous Grimoire:
+      total: 0.57
+      efficiency: 0.63
+      win: 0.62
+      pick: 0.0
+      fit: 0.46
     Damaru:
       total: 0.53
       efficiency: 0.57
       win: 0.62
       pick: 0.0
       fit: 0.35
+    The Crusher:
+      total: 0.56
+      efficiency: 0.64
+      win: 0.62
+      pick: 0.0
+      fit: 0.36
     Deathbringer:
       total: 0.49
       efficiency: 0.45
       win: 0.62
       pick: 0.0
       fit: 0.35
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.29
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Death Metal
   - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Silverbranch Bow
   - Genji's Guard
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -355,6 +355,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.46
+    Death Metal:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.0
+      fit: 0.43
     Gluttonous Grimoire:
       total: 0.57
       efficiency: 0.63
@@ -373,25 +379,19 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Genji's Guard
   - Berserker's Shield
+  - Kinetic Cuirass
   - Riptalon
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Genji's Guard
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -428,6 +428,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.34
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.62
+      pick: 0.0
+      fit: 0.38
     Riptalon:
       total: 0.6
       efficiency: 0.53
@@ -440,12 +446,6 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.29
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.21
     Soul Gem:
       total: 0.59
       efficiency: 0.57
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Jotunn's Revenge
   - Tyrfing
   - Nimble Ring
   - Riptalon
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Tyrfing
   - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -560,6 +560,12 @@ builds:
     Tekko-Kagi, Eye of Providence, Oni Hunter''s Garb, Bancroft''s Talon, Helm of
     Radiance, Shield of the Phoenix, Rod of Asclepius, Dominance, Shogun''s Ofuda.'
   slot_scores:
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.64
+      win: 0.62
+      pick: 0.0
+      fit: 0.32
     Tyrfing:
       total: 0.56
       efficiency: 0.46
@@ -590,12 +596,6 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.32
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.25
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -603,12 +603,12 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
+  - Hydra's Lament
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Breastplate of Valor
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -651,18 +651,18 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.49
+    Hydra's Lament:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.0
+      fit: 0.46
     The Crusher:
       total: 0.55
       efficiency: 0.64
       win: 0.62
       pick: 0.0
       fit: 0.31
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.62
-      pick: 0.0
-      fit: 0.21
     Soul Gem:
       total: 0.58
       efficiency: 0.57

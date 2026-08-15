@@ -272,10 +272,10 @@ builds:
   - Spear of Desolation
   - Pendulum Blade
   - The Crusher
-  - Rod of Tahuti
+  - Heartseeker
   - Soul Gem
   flex_slots:
-  - Pendulum Blade
+  - Heartseeker
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
@@ -317,12 +317,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.89
-    Rod of Tahuti:
-      total: 0.68
-      efficiency: 0.77
+    Heartseeker:
+      total: 0.65
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57

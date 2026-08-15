@@ -288,7 +288,7 @@ numbers in the file.
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (586) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (596) ·
 `cd viewer && npm test -- --run` (614).
 
 ---
@@ -310,7 +310,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (586) ·
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
-| Tests | 586 pipeline · 614 viewer |
+| Tests | 596 pipeline · 614 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

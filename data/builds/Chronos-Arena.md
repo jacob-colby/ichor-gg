@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Lernaean Bow
   - Jotunn's Revenge
   - Bragi's Harp
   - The Crusher
+  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Rod of Tahuti
   - Bragi's Harp
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,12 +488,6 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.56
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.64
@@ -512,6 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -529,13 +529,13 @@ builds:
   archetype: str-int
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
   - Jotunn's Revenge
   - Bragi's Harp
+  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
+  - Lernaean Bow
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -548,8 +548,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -559,12 +559,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Toxic Blade:
-      total: 0.57
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.64
@@ -577,6 +571,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -659,7 +659,7 @@ builds:
   archetype: core
   slot_order:
   - Void Stone
-  - Rod of Tahuti
+  - Spear of Desolation
   - Spectral Armor
   - Erosion
   - Stampede
@@ -689,12 +689,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
+    Spear of Desolation:
+      total: 0.49
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.29
+      fit: 0.46
     Spectral Armor:
       total: 0.48
       efficiency: 0.58
@@ -991,11 +991,11 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Spectral Armor
+  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Spectral Armor
+  - Bragi's Harp
   - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1031,12 +1031,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Spectral Armor:
-      total: 0.47
-      efficiency: 0.58
+    Rod of Tahuti:
+      total: 0.49
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.36
+      fit: 0.21
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -1253,7 +1253,7 @@ builds:
   archetype: model
   slot_order:
   - Void Stone
-  - Rod of Tahuti
+  - Spear of Desolation
   - Spectral Armor
   - Erosion
   - Stampede
@@ -1283,12 +1283,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
+    Spear of Desolation:
+      total: 0.49
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.29
+      fit: 0.46
     Spectral Armor:
       total: 0.48
       efficiency: 0.58

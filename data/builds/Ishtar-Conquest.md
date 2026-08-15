@@ -514,18 +514,18 @@ builds:
   - Berserker's Shield
   - Breastplate of Valor
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Freya's Tears
   flex_slots:
   - Berserker's Shield
-  - Freya's Tears
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -564,18 +564,18 @@ builds:
       win: 0.63
       pick: 0.0
       fit: 0.43
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.63
+      pick: 0.0
+      fit: 0.1
     Hydra's Lament:
       total: 0.56
       efficiency: 0.56
       win: 0.63
       pick: 0.0
       fit: 0.53
-    Freya's Tears:
-      total: 0.54
-      efficiency: 0.59
-      win: 0.63
-      pick: 0.0
-      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: model

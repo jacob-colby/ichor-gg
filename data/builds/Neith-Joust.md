@@ -142,7 +142,7 @@ builds:
   - Death Metal
   - Damaru
   - Demon Blade
-  - Rod of Tahuti
+  - The Crusher
   - Soul Gem
   flex_slots:
   - Damaru
@@ -187,12 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
+    The Crusher:
+      total: 0.5
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.3
+      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -336,12 +336,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -376,18 +376,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Void Stone:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     The Crusher:
       total: 0.56
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -401,12 +401,12 @@ builds:
   - Toxic Blade
   - Tyrfing
   - Nimble Ring
+  - Death Metal
   - Riptalon
   - Silverbranch Bow
-  - Rod of Tahuti
   flex_slots:
-  - Tyrfing
   - Silverbranch Bow
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -441,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Death Metal:
+      total: 0.48
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Riptalon:
       total: 0.65
       efficiency: 0.53
@@ -453,12 +459,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Rod of Tahuti:
-      total: 0.51
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.25
   starter: *id001
 - source: suggested
   archetype: cooldown

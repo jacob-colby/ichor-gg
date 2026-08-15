@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
+  - Death Metal
+  - Gluttonous Grimoire
   - The Crusher
   - Heartseeker
-  - Rod of Tahuti
   - Titan's Bane
   flex_slots:
-  - Jotunn's Revenge
-  - Nimble Ring
+  - Gluttonous Grimoire
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -130,12 +130,18 @@ builds:
       win: 0.53
       pick: 0.49
       fit: 0.49
-    Nimble Ring:
-      total: 0.56
-      efficiency: 0.68
+    Death Metal:
+      total: 0.54
+      efficiency: 0.56
       win: 0.6
       pick: 0.0
-      fit: 0.31
+      fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.6
+      pick: 0.0
+      fit: 0.36
     The Crusher:
       total: 0.58
       efficiency: 0.64
@@ -148,12 +154,6 @@ builds:
       win: 0.7
       pick: 0.37
       fit: 0.54
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.6
-      pick: 0.0
-      fit: 0.26
     Titan's Bane:
       total: 0.6
       efficiency: 0.45
@@ -167,13 +167,13 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
+  - Gluttonous Grimoire
   - The Crusher
   - Heartseeker
   - Rod of Tahuti
   - Titan's Bane
   flex_slots:
-  - The Crusher
+  - Gluttonous Grimoire
   - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
@@ -204,12 +204,12 @@ builds:
       win: 0.53
       pick: 0.49
       fit: 0.52
-    Nimble Ring:
+    Gluttonous Grimoire:
       total: 0.56
-      efficiency: 0.68
+      efficiency: 0.63
       win: 0.6
       pick: 0.0
-      fit: 0.36
+      fit: 0.44
     The Crusher:
       total: 0.56
       efficiency: 0.64
@@ -241,12 +241,12 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Rod of Tahuti
+  - The Crusher
   - Titan's Bane
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
   - Kinetic Cuirass
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -288,12 +288,12 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.6
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
+    The Crusher:
+      total: 0.55
+      efficiency: 0.64
       win: 0.6
       pick: 0.0
-      fit: 0.16
+      fit: 0.37
     Titan's Bane:
       total: 0.57
       efficiency: 0.45
@@ -383,14 +383,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Berserker's Shield
   - Nimble Ring
   - Riptalon
   - The Crusher
-  - Rod of Tahuti
   - Titan's Bane
   flex_slots:
-  - The Crusher
   - Golden Blade
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -399,8 +399,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -420,6 +420,12 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.57
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.6
+      pick: 0.0
+      fit: 0.26
     Nimble Ring:
       total: 0.57
       efficiency: 0.68
@@ -438,12 +444,6 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.37
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.6
-      pick: 0.0
-      fit: 0.18
     Titan's Bane:
       total: 0.57
       efficiency: 0.45
@@ -455,14 +455,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
   - The Crusher
-  - Rod of Tahuti
   - Titan's Bane
   - Soul Gem
   flex_slots:
-  - Genji's Guard
   - The Crusher
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -471,8 +471,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -493,6 +493,12 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.34
+    Breastplate of Valor:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.6
+      pick: 0.0
+      fit: 0.34
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.64
@@ -505,12 +511,6 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.34
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.6
-      pick: 0.0
-      fit: 0.24
     Titan's Bane:
       total: 0.57
       efficiency: 0.45

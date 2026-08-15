@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - The Crusher
-  - Rod of Tahuti
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Pharaoh's Curse
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -228,6 +228,12 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.5
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Toxic Blade:
       total: 0.55
       efficiency: 0.43
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
     Pharaoh's Curse:
       total: 0.51
       efficiency: 0.55
@@ -595,13 +595,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
-  - Bragi's Harp
   - Death Metal
+  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Toxic Blade
   - Lernaean Bow
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -630,18 +630,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Bragi's Harp:
-      total: 0.52
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Death Metal:
       total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.53
+    Rod of Tahuti:
+      total: 0.54
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
     Soul Gem:
       total: 0.78
       efficiency: 0.57

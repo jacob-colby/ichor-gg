@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - The Crusher
-  - Rod of Tahuti
   - Erosion
+  - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - The Crusher
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -435,18 +435,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.32
     Erosion:
       total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Pharaoh's Curse:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Soul Gem:
       total: 0.75
       efficiency: 0.57

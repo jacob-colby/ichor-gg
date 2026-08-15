@@ -95,20 +95,20 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Freya's Tears
   - Erosion
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -135,12 +135,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.77
-      win: 0.67
-      pick: 0.19
-      fit: 0.2
+    Shifter's Shield:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.0
+      fit: 0.63
     Amanita Charm:
       total: 0.57
       efficiency: 0.63
@@ -167,23 +167,23 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Oni Hunter's Garb
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
   - Stampede
   flex_slots:
-  - Kinetic Cuirass
   - Freya's Tears
+  - Oni Hunter's Garb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
-  - vs_tag: physical_heavy
-    swap: Erosion — physical protection
+    swap: Erosion — magical protection
     swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -207,18 +207,18 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.9
+    Oni Hunter's Garb:
+      total: 0.53
+      efficiency: 0.61
+      win: 0.57
+      pick: 0.0
+      fit: 0.43
     Freya's Tears:
       total: 0.54
       efficiency: 0.59
       win: 0.57
       pick: 0.0
       fit: 0.55
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.77
-      win: 0.67
-      pick: 0.19
-      fit: 0.21
     Amanita Charm:
       total: 0.61
       efficiency: 0.63
@@ -595,18 +595,18 @@ builds:
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
+  - Erosion
   flex_slots:
-  - Freya's Tears
   - Breastplate of Valor
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -645,15 +645,15 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.77
-      win: 0.67
-      pick: 0.19
-      fit: 0.2
     Amanita Charm:
       total: 0.57
       efficiency: 0.63
+      win: 0.57
+      pick: 0.0
+      fit: 0.63
+    Erosion:
+      total: 0.53
+      efficiency: 0.52
       win: 0.57
       pick: 0.0
       fit: 0.63

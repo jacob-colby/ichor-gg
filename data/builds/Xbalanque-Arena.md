@@ -529,14 +529,14 @@ builds:
   archetype: str-int
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
   - Bragi's Harp
   - Death Metal
+  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Lernaean Bow
   - Bragi's Harp
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -548,8 +548,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -559,12 +559,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Toxic Blade:
-      total: 0.54
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Bragi's Harp:
       total: 0.54
       efficiency: 0.42
@@ -577,6 +571,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Rod of Tahuti:
+      total: 0.55
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
     Soul Gem:
       total: 0.78
       efficiency: 0.57

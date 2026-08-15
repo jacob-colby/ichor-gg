@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Kinetic Cuirass
-  - Rod of Tahuti
   - Erosion
   - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - Pharaoh's Curse
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -418,23 +418,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
     Erosion:
       total: 0.55
       efficiency: 0.52

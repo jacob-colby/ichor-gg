@@ -142,11 +142,11 @@ builds:
   - Stone of Binding
   - Void Shield
   - Void Stone
-  - Rod of Tahuti
+  - Erosion
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Screeching Gargoyle
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -187,12 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.89
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.77
+    Erosion:
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.65
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - The Crusher
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -435,12 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
+    The Crusher:
+      total: 0.53
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.32
+      fit: 0.42
     Erosion:
       total: 0.56
       efficiency: 0.52

@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Polynomicon
-  - Gluttonous Grimoire
+  - Book of Thoth
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   flex_slots:
-  - Spear of the Magus
-  - Polynomicon
+  - Nimble Ring
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,18 +122,18 @@ builds:
     of Valor, Bancroft''s Talon, Jade Scepter, Bracer of The Abyss, Ethereal Staff,
     Alchemist Coat, Freya''s Tears.'
   slot_scores:
-    Polynomicon:
+    Book of Thoth:
+      total: 0.53
+      efficiency: 0.49
+      win: 0.57
+      pick: 0.8
+      fit: 0.42
+    Nimble Ring:
       total: 0.56
-      efficiency: 0.44
-      win: 0.71
-      pick: 0.17
-      fit: 0.52
-    Gluttonous Grimoire:
-      total: 0.61
-      efficiency: 0.63
+      efficiency: 0.68
       win: 0.57
       pick: 0.0
-      fit: 0.89
+      fit: 0.42
     Spear of Desolation:
       total: 0.62
       efficiency: 0.52
@@ -164,15 +164,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Polynomicon
   - Gluttonous Grimoire
-  - Spear of Desolation
   - The Cosmic Horror
   - Rod of Tahuti
   flex_slots:
-  - Polynomicon
   - Genji's Guard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -192,6 +192,12 @@ builds:
     Triton''s Conch, Helm of Radiance, Gem of Focus, Blood-Bound Book, Rod of Asclepius,
     Totem of Death, Oni Hunter''s Garb, Jade Scepter, Freya''s Tears.'
   slot_scores:
+    Book of Thoth:
+      total: 0.53
+      efficiency: 0.49
+      win: 0.57
+      pick: 0.8
+      fit: 0.39
     Genji's Guard:
       total: 0.54
       efficiency: 0.69
@@ -210,12 +216,6 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.57
-    Spear of Desolation:
-      total: 0.56
-      efficiency: 0.52
-      win: 0.59
-      pick: 0.34
-      fit: 0.61
     The Cosmic Horror:
       total: 0.57
       efficiency: 0.58
@@ -232,7 +232,7 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
+  - Book of Thoth
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
@@ -240,14 +240,14 @@ builds:
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - Genji's Guard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -261,11 +261,11 @@ builds:
     Harp, Helm of Radiance, Blood-Bound Book, Rod of Asclepius, Kinetic Cuirass, Amanita
     Charm, Screeching Gargoyle, Triton''s Conch.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.69
+    Book of Thoth:
+      total: 0.5
+      efficiency: 0.49
       win: 0.57
-      pick: 0.0
+      pick: 0.8
       fit: 0.22
     Spear of Desolation:
       total: 0.58
@@ -371,15 +371,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Book of Thoth
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Doom Orb
   - Spear of the Magus
   - Rod of Tahuti
   flex_slots:
   - Spear of the Magus
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -400,6 +400,12 @@ builds:
     Book, Rod of Asclepius, Totem of Death, Bancroft''s Talon, Jade Scepter, Freya''s
     Tears, Stone of Binding, Bracer of The Abyss, Ethereal Staff.'
   slot_scores:
+    Book of Thoth:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.57
+      pick: 0.8
+      fit: 0.3
     Gluttonous Grimoire:
       total: 0.62
       efficiency: 0.63
@@ -417,12 +423,6 @@ builds:
       efficiency: 0.58
       win: 0.63
       pick: 0.16
-      fit: 0.85
-    Doom Orb:
-      total: 0.55
-      efficiency: 0.46
-      win: 0.57
-      pick: 0.0
       fit: 0.85
     Spear of the Magus:
       total: 0.59

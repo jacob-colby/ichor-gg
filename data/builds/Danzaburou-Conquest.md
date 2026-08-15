@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
   - Gluttonous Grimoire
+  - Spear of Desolation
   - Silverbranch Bow
   - The Crusher
   - The World Stone
   flex_slots:
-  - The Crusher
   - Gluttonous Grimoire
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -130,18 +130,18 @@ builds:
       win: 0.92
       pick: 0.19
       fit: 0.37
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.57
-      pick: 0.0
-      fit: 0.39
     Gluttonous Grimoire:
       total: 0.54
       efficiency: 0.63
       win: 0.57
       pick: 0.0
       fit: 0.4
+    Spear of Desolation:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.67
+      pick: 0.15
+      fit: 0.24
     Silverbranch Bow:
       total: 0.57
       efficiency: 0.52
@@ -310,14 +310,14 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - Silverbranch Bow
-  - The Crusher
   - The World Stone
+  - Rod of Tahuti
   flex_slots:
-  - Gluttonous Grimoire
-  - The Crusher
+  - Nimble Ring
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -347,12 +347,12 @@ builds:
       win: 0.92
       pick: 0.19
       fit: 0.46
-    Gluttonous Grimoire:
+    Nimble Ring:
       total: 0.55
-      efficiency: 0.63
+      efficiency: 0.68
       win: 0.57
       pick: 0.0
-      fit: 0.49
+      fit: 0.37
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
@@ -365,17 +365,17 @@ builds:
       win: 0.71
       pick: 0.19
       fit: 0.37
-    The Crusher:
-      total: 0.54
-      efficiency: 0.64
-      win: 0.57
-      pick: 0.0
-      fit: 0.43
     The World Stone:
       total: 0.63
       efficiency: 0.46
       win: 0.92
       pick: 0.22
+      fit: 0.33
+    Rod of Tahuti:
+      total: 0.51
+      efficiency: 0.77
+      win: 0.4
+      pick: 0.15
       fit: 0.33
   starter: *id001
 - source: suggested
@@ -525,14 +525,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Nimble Ring
   - Riptalon
   - Silverbranch Bow
-  - The Crusher
   - The World Stone
   flex_slots:
-  - The Crusher
   - Riptalon
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -562,6 +562,12 @@ builds:
       win: 0.92
       pick: 0.19
       fit: 0.28
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.32
+      fit: 0.13
     Nimble Ring:
       total: 0.55
       efficiency: 0.68
@@ -580,12 +586,6 @@ builds:
       win: 0.71
       pick: 0.19
       fit: 0.52
-    The Crusher:
-      total: 0.53
-      efficiency: 0.64
-      win: 0.57
-      pick: 0.0
-      fit: 0.35
     The World Stone:
       total: 0.61
       efficiency: 0.46
@@ -669,13 +669,13 @@ builds:
   archetype: intelligence
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
+  - Gluttonous Grimoire
   - Spear of Desolation
   - Silverbranch Bow
   - The Crusher
   - The World Stone
   flex_slots:
-  - Silverbranch Bow
+  - Gluttonous Grimoire
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -706,12 +706,12 @@ builds:
       win: 0.92
       pick: 0.19
       fit: 0.38
-    Nimble Ring:
-      total: 0.56
-      efficiency: 0.68
+    Gluttonous Grimoire:
+      total: 0.55
+      efficiency: 0.63
       win: 0.57
       pick: 0.0
-      fit: 0.45
+      fit: 0.51
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
@@ -741,7 +741,7 @@ builds:
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
+  - Gluttonous Grimoire
   - Spear of Desolation
   - Silverbranch Bow
   - The Crusher
@@ -778,12 +778,12 @@ builds:
       win: 0.92
       pick: 0.19
       fit: 0.36
-    Nimble Ring:
-      total: 0.56
-      efficiency: 0.68
+    Gluttonous Grimoire:
+      total: 0.55
+      efficiency: 0.63
       win: 0.57
       pick: 0.0
-      fit: 0.45
+      fit: 0.5
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52

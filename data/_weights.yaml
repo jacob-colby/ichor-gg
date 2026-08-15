@@ -181,9 +181,24 @@ price_conversions: true
 #     best     34.1%   33.3%   34.3%   34.5%
 #
 # No pass count beats the control on BOTH splits, which is the standard
-# `price_crit_multipliers` and `price_conversions` were held to, so it ships
-# off. Note the non-monotonicity: that is the fixed point failing to settle,
-# and 3 of 87 gods oscillate outright between two cores.
+# `price_crit_multipliers` and `price_conversions` were held to. Note the
+# non-monotonicity: that is the fixed point failing to settle, and 3 of 87 gods
+# oscillate outright between two cores.
+#
+# SHIPPED ON ANYWAY, 2026-08-14, BY THE MAINTAINER'S EXPLICIT DECISION - not
+# because the gate approved it. It did not. The gate is worse on the probe
+# corner (-1.4pp) and better on the split `calibrate` calls the leakage-free
+# optimum (+0.2pp), and the item-level calibration is better on three of the
+# four converters. Reading that as "on" is a judgement about which evidence to
+# weigh, and it is a defensible one; what it is NOT is a measurement saying
+# yes. Anyone re-deriving the numbers later should expect the coverage figures
+# to look slightly worse than they did at `conversion_passes: 1` and should not
+# read that as a regression to fix.
+#
+# IT ALSO COSTS RUNTIME. Every assembly runs up to three times, and `calibrate`
+# assembles a core per god per weight combination, so the leakage-free sweep
+# goes from about a minute to over ten. `recommend --all` and
+# `validate --check` are barely affected; it is the grid that multiplies.
 #
 # WHAT IT GETS RIGHT IS WORTH KEEPING IN VIEW. At 3 passes the item-level
 # calibration improves on three of the four converters - Transcendence 2 -> 12
@@ -199,7 +214,7 @@ price_conversions: true
 # itself calls the leakage-free optimum. Resolving it needs a measure that is
 # not made of the community's build. Until then the discipline holds and the
 # standard is not moved to fit a result someone likes.
-conversion_passes: 1
+conversion_passes: 3
 
 # Median total across community builds THAT CARRY THE STAT AT ALL, from
 # `passives.measure_conversion_reference`. The qualifier matters: 45 of 87 gods

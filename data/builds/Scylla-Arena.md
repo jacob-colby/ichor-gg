@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Breastplate of Valor
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.54
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Genji's Guard:
       total: 0.59
       efficiency: 0.69
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57

@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Nimble Ring
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
   flex_slots:
   - Silverbranch Bow
-  - Nimble Ring
+  - Gluttonous Grimoire
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -137,12 +137,12 @@ builds:
       win: 0.62
       pick: 0.44
       fit: 0.59
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.68
+    Gluttonous Grimoire:
+      total: 0.52
+      efficiency: 0.63
       win: 0.56
       pick: 0.0
-      fit: 0.31
+      fit: 0.36
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.52
@@ -170,7 +170,7 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Tyrfing
-  - Nimble Ring
+  - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
@@ -217,12 +217,12 @@ builds:
       win: 0.62
       pick: 0.44
       fit: 0.46
-    Nimble Ring:
+    Gluttonous Grimoire:
       total: 0.54
-      efficiency: 0.68
+      efficiency: 0.63
       win: 0.56
       pick: 0.0
-      fit: 0.36
+      fit: 0.44
     The Crusher:
       total: 0.54
       efficiency: 0.64
@@ -242,12 +242,12 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Tyrfing
   - The Crusher
-  - Rod of Tahuti
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - The Crusher
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -290,18 +290,18 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.6
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.46
+      win: 0.62
+      pick: 0.44
+      fit: 0.4
     The Crusher:
       total: 0.53
       efficiency: 0.64
       win: 0.56
       pick: 0.0
       fit: 0.37
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.28
-      fit: 0.16
     Amanita Charm:
       total: 0.57
       efficiency: 0.63

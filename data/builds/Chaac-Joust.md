@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - The Crusher
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - Spectral Armor
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -37,12 +37,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Rod of Tahuti:
+    The Crusher:
       total: 0.53
-      efficiency: 0.77
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.3
+      fit: 0.42
     Spectral Armor:
       total: 0.53
       efficiency: 0.58
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - The Crusher
-  - Rod of Tahuti
   - Erosion
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Kinetic Cuirass
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -158,11 +158,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.64
@@ -181,12 +187,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
     Erosion:
       total: 0.55
       efficiency: 0.52
@@ -269,14 +269,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Stone of Binding
+  - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Stone of Binding
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -299,6 +299,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Jotunn's Revenge:
+      total: 0.56
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Void Shield:
       total: 0.65
       efficiency: 0.46
@@ -317,12 +323,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -464,14 +464,14 @@ builds:
   archetype: model
   slot_order:
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - The Crusher
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - Spectral Armor
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -494,12 +494,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Rod of Tahuti:
+    The Crusher:
       total: 0.53
-      efficiency: 0.77
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.3
+      fit: 0.42
     Spectral Armor:
       total: 0.53
       efficiency: 0.58

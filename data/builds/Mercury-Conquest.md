@@ -234,21 +234,21 @@ builds:
   archetype: burst
   slot_order:
   - Avenging Blade
-  - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Silverbranch Bow
   - The Crusher
   flex_slots:
   - Hydra's Lament
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -268,18 +268,18 @@ builds:
       win: 1.0
       pick: 0.07
       fit: 0.3
-    Genji's Guard:
-      total: 0.61
-      efficiency: 0.69
-      win: 0.74
-      pick: 0.0
-      fit: 0.2
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.64
       win: 0.74
       pick: 0.0
       fit: 0.71
+    Transcendence:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.74
+      pick: 0.0
+      fit: 0.2
     Hydra's Lament:
       total: 0.61
       efficiency: 0.56
@@ -580,22 +580,22 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
   flex_slots:
   - Pendulum Blade
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -609,18 +609,18 @@ builds:
     Shield, Transcendence, Avenging Blade, Shield Splitter, Dominance, Eye of the
     Storm, Freya''s Tears, Avatar''s Parashu, Shield of the Phoenix, Kinetic Cuirass.'
   slot_scores:
-    Genji's Guard:
-      total: 0.6
-      efficiency: 0.69
-      win: 0.74
-      pick: 0.0
-      fit: 0.18
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.64
       win: 0.74
       pick: 0.0
       fit: 0.84
+    Transcendence:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.74
+      pick: 0.0
+      fit: 0.38
     Hydra's Lament:
       total: 0.63
       efficiency: 0.56

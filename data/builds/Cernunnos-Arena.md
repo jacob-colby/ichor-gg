@@ -8,7 +8,7 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
-  - Death Metal
+  - Rod of Tahuti
   - Rod of Asclepius
   - Pharaoh's Curse
   - Soul Gem
@@ -43,12 +43,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Death Metal:
+    Rod of Tahuti:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.29
     Rod of Asclepius:
       total: 0.62
       efficiency: 0.55
@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - The Crusher
-  - Rod of Tahuti
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Pharaoh's Curse
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -228,6 +228,12 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.5
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Toxic Blade:
       total: 0.55
       efficiency: 0.43
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
     Pharaoh's Curse:
       total: 0.51
       efficiency: 0.55
@@ -337,7 +337,7 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - Rod of Tahuti
+  - The Crusher
   - Soul Gem
   flex_slots:
   - Void Stone
@@ -382,12 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
+    The Crusher:
+      total: 0.57
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.5
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -530,7 +530,7 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
-  - Death Metal
+  - Rod of Tahuti
   - Rod of Asclepius
   - Pharaoh's Curse
   - Soul Gem
@@ -565,12 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Death Metal:
+    Rod of Tahuti:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.29
     Rod of Asclepius:
       total: 0.62
       efficiency: 0.55
@@ -594,14 +594,14 @@ builds:
   archetype: core
   slot_order:
   - Toxic Blade
-  - Death Metal
+  - Rod of Tahuti
   - Rod of Asclepius
   - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Pharaoh's Curse
-  - Death Metal
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -624,12 +624,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Death Metal:
+    Rod of Tahuti:
       total: 0.52
-      efficiency: 0.56
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.27
     Rod of Asclepius:
       total: 0.64
       efficiency: 0.55
@@ -793,12 +793,12 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Rod of Tahuti
+  - The Crusher
   - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
+  - The Crusher
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -828,12 +828,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
+    The Crusher:
+      total: 0.53
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.31
+      fit: 0.41
     Pharaoh's Curse:
       total: 0.51
       efficiency: 0.55
@@ -927,10 +927,10 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - Rod of Tahuti
+  - The Crusher
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
+  - The Crusher
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -972,12 +972,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
+    The Crusher:
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.48
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -1122,14 +1122,14 @@ builds:
   archetype: model
   slot_order:
   - Toxic Blade
-  - Death Metal
+  - Rod of Tahuti
   - Rod of Asclepius
   - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Pharaoh's Curse
-  - Death Metal
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1152,12 +1152,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Death Metal:
+    Rod of Tahuti:
       total: 0.52
-      efficiency: 0.56
+      efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.27
     Rod of Asclepius:
       total: 0.64
       efficiency: 0.55

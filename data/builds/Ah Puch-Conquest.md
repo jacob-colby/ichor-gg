@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Chronos' Pendant
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Spear of Desolation
   - Spear of the Magus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -128,12 +128,12 @@ builds:
       win: 0.69
       pick: 0.1
       fit: 0.63
-    Gluttonous Grimoire:
-      total: 0.59
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.53
+      efficiency: 0.68
       win: 0.52
       pick: 0.0
-      fit: 0.89
+      fit: 0.42
     Spear of Desolation:
       total: 0.57
       efficiency: 0.52
@@ -166,12 +166,12 @@ builds:
   slot_order:
   - Genji's Guard
   - Chronos' Pendant
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Soul Reaver
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Soul Reaver
+  - Nimble Ring
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -205,12 +205,12 @@ builds:
       win: 0.69
       pick: 0.1
       fit: 0.43
-    Gluttonous Grimoire:
-      total: 0.54
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.51
+      efficiency: 0.68
       win: 0.52
       pick: 0.0
-      fit: 0.57
+      fit: 0.29
     Soul Reaver:
       total: 0.54
       efficiency: 0.4
@@ -234,14 +234,14 @@ builds:
   archetype: burst
   slot_order:
   - Chronos' Pendant
+  - Nimble Ring
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
-  - Spear of Desolation
   - Spear of the Magus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -268,6 +268,12 @@ builds:
       win: 0.69
       pick: 0.1
       fit: 0.44
+    Nimble Ring:
+      total: 0.5
+      efficiency: 0.68
+      win: 0.52
+      pick: 0.0
+      fit: 0.22
     Spear of Desolation:
       total: 0.53
       efficiency: 0.52
@@ -292,12 +298,6 @@ builds:
       win: 0.82
       pick: 0.22
       fit: 0.56
-    Soul Gem:
-      total: 0.56
-      efficiency: 0.57
-      win: 0.52
-      pick: 0.0
-      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -582,13 +582,13 @@ builds:
   slot_order:
   - Chronos' Pendant
   - Jotunn's Revenge
-  - Damaru
+  - Nimble Ring
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - The Crusher
-  - Damaru
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -624,12 +624,12 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.65
-    Damaru:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.64
-      pick: 0.14
-      fit: 0.32
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.68
+      win: 0.52
+      pick: 0.0
+      fit: 0.35
     The Crusher:
       total: 0.55
       efficiency: 0.64
@@ -654,13 +654,13 @@ builds:
   slot_order:
   - Chronos' Pendant
   - Jotunn's Revenge
-  - Gluttonous Grimoire
+  - Nimble Ring
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - The Crusher
-  - Gluttonous Grimoire
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -696,12 +696,12 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.69
-    Gluttonous Grimoire:
-      total: 0.55
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.68
       win: 0.52
       pick: 0.0
-      fit: 0.66
+      fit: 0.31
     The Crusher:
       total: 0.55
       efficiency: 0.64

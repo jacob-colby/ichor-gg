@@ -302,15 +302,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Transcendence
   - Titan's Bane
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
-  - Berserker's Shield
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -319,8 +319,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -332,12 +332,6 @@ builds:
     of Valor, Golden Blade, Pharaoh''s Curse, Avenging Blade, Leviathan''s Hide, Midgardian
     Mail, Ancile.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.5
-      efficiency: 0.66
-      win: 0.47
-      pick: 0.0
-      fit: 0.39
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.64
@@ -356,6 +350,12 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.73
+    Transcendence:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.16
+      fit: 0.23
     Titan's Bane:
       total: 0.56
       efficiency: 0.45
@@ -443,13 +443,13 @@ builds:
   slot_order:
   - Golden Blade
   - Jotunn's Revenge
-  - Tyrfing
+  - Transcendence
   - Riptalon
   - Silverbranch Bow
   - Titan's Bane
   flex_slots:
   - Silverbranch Bow
-  - Tyrfing
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -482,12 +482,12 @@ builds:
       win: 0.42
       pick: 0.67
       fit: 0.37
-    Tyrfing:
+    Transcendence:
       total: 0.49
-      efficiency: 0.46
-      win: 0.47
-      pick: 0.0
-      fit: 0.79
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.16
+      fit: 0.17
     Riptalon:
       total: 0.52
       efficiency: 0.53
@@ -513,19 +513,19 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Freya's Tears
   - Titan's Bane
   flex_slots:
   - Breastplate of Valor
-  - Freya's Tears
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -558,18 +558,18 @@ builds:
       win: 0.42
       pick: 0.67
       fit: 0.85
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.16
+      fit: 0.15
     Hydra's Lament:
       total: 0.52
       efficiency: 0.56
       win: 0.39
       pick: 0.71
       fit: 0.75
-    Freya's Tears:
-      total: 0.49
-      efficiency: 0.59
-      win: 0.47
-      pick: 0.0
-      fit: 0.5
     Titan's Bane:
       total: 0.55
       efficiency: 0.45
@@ -581,14 +581,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -615,6 +615,12 @@ builds:
       win: 0.42
       pick: 0.67
       fit: 1.0
+    Transcendence:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.16
+      fit: 0.52
     Hydra's Lament:
       total: 0.51
       efficiency: 0.56
@@ -627,12 +633,6 @@ builds:
       win: 0.44
       pick: 0.33
       fit: 0.91
-    Pendulum Blade:
-      total: 0.5
-      efficiency: 0.41
-      win: 0.47
-      pick: 0.0
-      fit: 1.0
     The Crusher:
       total: 0.56
       efficiency: 0.64

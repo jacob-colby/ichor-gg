@@ -449,21 +449,21 @@ builds:
   - Kinetic Cuirass
   - Runeforged Hammer
   - Gluttonous Grimoire
+  - Shifter's Shield
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Jotunn's Revenge
   - Gluttonous Grimoire
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -501,31 +501,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.16
+      fit: 0.42
     The Crusher:
       total: 0.52
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Rod of Tahuti:
-      total: 0.52
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.2
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Runeforged Hammer
   - Gluttonous Grimoire
   - Shifter's Shield
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - The Crusher
   - Shifter's Shield
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -550,6 +550,12 @@ builds:
     Scepter, Chronos'' Pendant, Midgardian Mail, Avenging Blade, Damaru, Mantle Of
     Discord, Stone of Binding.'
   slot_scores:
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.59
@@ -580,12 +586,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.32
   starter: *id001
 - source: suggested
   archetype: model

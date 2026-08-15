@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -234,12 +234,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
+    Void Shield:
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.65
     Spectral Armor:
       total: 0.56
       efficiency: 0.58
@@ -1054,15 +1054,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Genji's Guard
   - Gladiator's Shield
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - Triton's Conch
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1079,6 +1079,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Genji's Guard:
       total: 0.56
       efficiency: 0.69
@@ -1097,12 +1103,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Rod of Tahuti:
-      total: 0.52
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.28
     Soul Gem:
       total: 0.78
       efficiency: 0.57

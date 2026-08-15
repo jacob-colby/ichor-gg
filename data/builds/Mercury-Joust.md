@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Transcendence:
+      total: 0.44
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Hydra's Lament:
       total: 0.57
       efficiency: 0.56
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Pendulum Blade:
-      total: 0.49
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     The Crusher:
       total: 0.59
       efficiency: 0.64

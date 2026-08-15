@@ -244,12 +244,12 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Hydra's Lament
   - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
   - Genji's Guard
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -292,6 +292,12 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.58
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.56
+      win: 0.64
+      pick: 0.14
+      fit: 0.23
     Gluttonous Grimoire:
       total: 0.55
       efficiency: 0.63
@@ -304,12 +310,6 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.48
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.53
-      pick: 0.0
-      fit: 0.39
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -317,22 +317,22 @@ builds:
   - Golden Blade
   - Genji's Guard
   - Berserker's Shield
+  - Kinetic Cuirass
   - Hydra's Lament
   - Nimble Ring
-  - Rod of Tahuti
   flex_slots:
-  - Genji's Guard
+  - Kinetic Cuirass
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -364,6 +364,12 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.43
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.59
+      win: 0.53
+      pick: 0.0
+      fit: 0.47
     Hydra's Lament:
       total: 0.53
       efficiency: 0.56
@@ -376,12 +382,6 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.3
-    Rod of Tahuti:
-      total: 0.52
-      efficiency: 0.77
-      win: 0.53
-      pick: 0.0
-      fit: 0.07
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -464,17 +464,17 @@ builds:
   - Kinetic Cuirass
   - Hydra's Lament
   - The Crusher
-  - Rod of Tahuti
+  - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Berserker's Shield
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Freya's Tears — physical protection
     swap_item: Freya's Tears
@@ -522,25 +522,25 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.47
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
+    Amanita Charm:
+      total: 0.52
+      efficiency: 0.63
       win: 0.53
       pick: 0.0
-      fit: 0.19
+      fit: 0.42
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Hydra's Lament
   - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
   - Jotunn's Revenge
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -565,6 +565,12 @@ builds:
     Chronos'' Pendant, Jade Scepter, Midgardian Mail, Avenging Blade, Mantle Of Discord,
     Damaru, Stone of Binding.'
   slot_scores:
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.49
+      win: 0.53
+      pick: 0.14
+      fit: 0.18
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
@@ -595,12 +601,6 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.53
-      pick: 0.0
-      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: model
@@ -609,21 +609,21 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
+  - Erosion
   flex_slots:
   - Berserker's Shield
-  - Rod of Tahuti
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -662,15 +662,15 @@ builds:
       win: 0.55
       pick: 0.13
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
-      win: 0.53
-      pick: 0.0
-      fit: 0.13
     Amanita Charm:
       total: 0.56
       efficiency: 0.63
+      win: 0.53
+      pick: 0.0
+      fit: 0.68
+    Erosion:
+      total: 0.52
+      efficiency: 0.52
       win: 0.53
       pick: 0.0
       fit: 0.68

@@ -441,22 +441,22 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Gluttonous Grimoire
+  - Transcendence
   - The Crusher
   - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
-  - Gluttonous Grimoire
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -473,6 +473,12 @@ builds:
     Shogun''s Ofuda, Midgardian Mail, Mantle Of Discord, Spear of Desolation, Stone
     of Binding, Helm of Radiance, Tekko-Kagi, Tyrfing.'
   slot_scores:
+    Book of Thoth:
+      total: 0.37
+      efficiency: 0.49
+      win: 0.43
+      pick: 0.0
+      fit: 0.05
     Genji's Guard:
       total: 0.53
       efficiency: 0.69
@@ -485,18 +491,12 @@ builds:
       win: 0.43
       pick: 0.0
       fit: 0.45
-    Kinetic Cuirass:
-      total: 0.48
-      efficiency: 0.59
+    Transcendence:
+      total: 0.41
+      efficiency: 0.52
       win: 0.43
       pick: 0.0
-      fit: 0.51
-    Gluttonous Grimoire:
-      total: 0.48
-      efficiency: 0.63
-      win: 0.43
-      pick: 0.0
-      fit: 0.42
+      fit: 0.22
     The Crusher:
       total: 0.49
       efficiency: 0.64
@@ -588,19 +588,19 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Rod of Tahuti
   - Erosion
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -633,12 +633,12 @@ builds:
       win: 0.43
       pick: 0.15
       fit: 0.64
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.63
-      pick: 0.17
-      fit: 0.15
+    Shifter's Shield:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.41
+      pick: 0.18
+      fit: 0.71
     Amanita Charm:
       total: 0.52
       efficiency: 0.63

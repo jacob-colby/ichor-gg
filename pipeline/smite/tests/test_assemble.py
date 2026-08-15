@@ -462,3 +462,36 @@ def test_an_oscillating_build_returns_the_conservative_first_pass():
     assert info["oscillated"] is True
     assert info["converged"] is False
     assert core == ["A", "B"]        # pass one's answer, not the cycle's
+
+
+def test_the_reranking_path_honours_the_callers_ranking_key():
+    """The `model` archetype hands in rows sorted by QUALITY — efficiency and
+    fit only, the build the model would pick if it had never seen a win rate.
+    The walk path honours that for free because it never re-ranks; the greedy
+    path does re-rank, and reading "total" there put win and pick straight back
+    into the one build whose entire point is that they are absent.
+
+    It shipped that way for Joust and Arena from the moment `economy` turned
+    the greedy path on, and stayed invisible only because those modes zero win
+    and pick anyway."""
+    items = {"Meta": {"cost": 2500, "stats": {"Strength": "20"}},
+             "Good": {"cost": 2500, "stats": {"Strength": "60"}}}
+    # Meta wins on the blended total (a big win rate); Good wins on quality.
+    rows = [{"item": "Meta", "total": 0.90, "quality": 0.20},
+            {"item": "Good", "total": 0.40, "quality": 0.95}]
+    econ = {"start_gold": 1250, "gold_per_min": 900,
+            "match_minutes": 17.5, "uniformity": 0.6}
+    assert assemble.assemble_core(rows, items, n=1, economy=econ) == ["Meta"]
+    assert assemble.assemble_core(rows, items, n=1, economy=econ,
+                                  score_key="quality") == ["Good"]
+
+
+def test_an_unknown_ranking_key_falls_back_to_total():
+    """A row set that never carried the key must not silently score zero."""
+    items = {"A": {"cost": 2500, "stats": {"Strength": "60"}},
+             "B": {"cost": 2500, "stats": {"Strength": "50"}}}
+    rows = [{"item": "A", "total": 0.9}, {"item": "B", "total": 0.8}]
+    econ = {"start_gold": 1250, "gold_per_min": 900,
+            "match_minutes": 17.5, "uniformity": 0.6}
+    assert assemble.assemble_core(rows, items, n=1, economy=econ,
+                                  score_key="quality") == ["A"]

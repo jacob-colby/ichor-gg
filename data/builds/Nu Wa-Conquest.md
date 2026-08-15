@@ -164,15 +164,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
-  - Death Metal
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Genji's Guard
   - Breastplate of Valor
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -193,6 +193,12 @@ builds:
     of Death, Oni Hunter''s Garb, Polynomicon, Jade Scepter, Freya''s Tears, Chronos''
     Pendant.'
   slot_scores:
+    Book of Thoth:
+      total: 0.57
+      efficiency: 0.49
+      win: 0.74
+      pick: 0.23
+      fit: 0.39
     Genji's Guard:
       total: 0.61
       efficiency: 0.69
@@ -205,12 +211,6 @@ builds:
       win: 0.74
       pick: 0.0
       fit: 0.24
-    Death Metal:
-      total: 0.61
-      efficiency: 0.56
-      win: 0.74
-      pick: 0.0
-      fit: 0.57
     Spear of Desolation:
       total: 0.62
       efficiency: 0.52
@@ -302,15 +302,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Kinetic Cuirass
-  - Spear of Desolation
   - Rod of Tahuti
   - Amanita Charm
   - Soul Gem
   flex_slots:
   - Genji's Guard
-  - Spear of Desolation
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -332,6 +332,12 @@ builds:
     Shield, Spectral Armor, Eye of Providence, Draconic Scale, Helm of Radiance, Jade
     Scepter.'
   slot_scores:
+    Book of Thoth:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.74
+      pick: 0.23
+      fit: 0.21
     Genji's Guard:
       total: 0.61
       efficiency: 0.69
@@ -344,12 +350,6 @@ builds:
       win: 0.74
       pick: 0.0
       fit: 0.61
-    Spear of Desolation:
-      total: 0.6
-      efficiency: 0.52
-      win: 0.7
-      pick: 0.61
-      fit: 0.49
     Rod of Tahuti:
       total: 0.71
       efficiency: 0.77
@@ -510,22 +510,22 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
-  - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Freya's Tears
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -540,6 +540,12 @@ builds:
     Cloak, Amanita Charm, Doom Orb, Helm of Radiance, Eye of Providence, Oni Hunter''s
     Garb, Chronos'' Pendant.'
   slot_scores:
+    Book of Thoth:
+      total: 0.54
+      efficiency: 0.49
+      win: 0.74
+      pick: 0.23
+      fit: 0.14
     Genji's Guard:
       total: 0.65
       efficiency: 0.69
@@ -549,12 +555,6 @@ builds:
     Breastplate of Valor:
       total: 0.63
       efficiency: 0.64
-      win: 0.74
-      pick: 0.0
-      fit: 0.48
-    Freya's Tears:
-      total: 0.61
-      efficiency: 0.59
       win: 0.74
       pick: 0.0
       fit: 0.48
@@ -652,15 +652,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Spear of Desolation
+  - Transcendence
   - The Crusher
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
-  - Obsidian Shard
+  - Book of Thoth
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -684,18 +684,24 @@ builds:
     Talon, Golden Blade, Jade Scepter, Berserker''s Shield, Transcendence, Avenging
     Blade, Freya''s Tears, Chronos'' Pendant.'
   slot_scores:
+    Book of Thoth:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.74
+      pick: 0.23
+      fit: 0.31
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.64
       win: 0.74
       pick: 0.0
       fit: 0.69
-    Spear of Desolation:
-      total: 0.63
+    Transcendence:
+      total: 0.56
       efficiency: 0.52
-      win: 0.7
-      pick: 0.61
-      fit: 0.69
+      win: 0.74
+      pick: 0.0
+      fit: 0.31
     The Crusher:
       total: 0.66
       efficiency: 0.64
@@ -707,12 +713,6 @@ builds:
       efficiency: 0.77
       win: 0.78
       pick: 0.58
-      fit: 0.56
-    Obsidian Shard:
-      total: 0.63
-      efficiency: 0.52
-      win: 0.74
-      pick: 0.54
       fit: 0.56
     Soul Gem:
       total: 0.66

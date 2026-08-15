@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - The Crusher
-  - Rod of Tahuti
+  - Spectral Armor
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - The Crusher
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -435,12 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.33
+      fit: 0.47
     Erosion:
       total: 0.57
       efficiency: 0.52

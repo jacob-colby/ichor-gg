@@ -9,12 +9,12 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Bragi's Harp
-  - Rod of Tahuti
   - Pharaoh's Curse
   - Soul Gem
+  - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - Pharaoh's Curse
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -49,12 +49,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Pharaoh's Curse:
       total: 0.56
       efficiency: 0.55
@@ -67,6 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Triton's Conch:
+      total: 0.55
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -141,11 +141,11 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
+  - Spear of Desolation
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
+  - Spear of Desolation
   - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -181,18 +181,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     The Crusher:
       total: 0.57
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -271,12 +271,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -311,18 +311,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Void Stone:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     The Crusher:
       total: 0.6
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Lernaean Bow
   - Jotunn's Revenge
   - Bragi's Harp
   - The Crusher
+  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Rod of Tahuti
   - Bragi's Harp
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,12 +488,6 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.56
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.64
@@ -512,6 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -596,12 +596,12 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Bragi's Harp
-  - Rod of Tahuti
   - Pharaoh's Curse
   - Soul Gem
+  - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - Pharaoh's Curse
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -636,12 +636,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Pharaoh's Curse:
       total: 0.56
       efficiency: 0.55
@@ -654,5 +648,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Triton's Conch:
+      total: 0.55
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
   starter: *id001
 ---

@@ -97,11 +97,11 @@ builds:
   - Kinetic Cuirass
   - Gladiator's Shield
   - Runeforged Hammer
-  - Rod of Tahuti
+  - The Crusher
   - Obsidian Shard
   flex_slots:
-  - Rod of Tahuti
   - Kinetic Cuirass
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -149,12 +149,12 @@ builds:
       win: 0.6
       pick: 0.12
       fit: 0.56
-    Rod of Tahuti:
+    The Crusher:
       total: 0.49
-      efficiency: 0.77
+      efficiency: 0.64
       win: 0.44
-      pick: 0.2
-      fit: 0.12
+      pick: 0.0
+      fit: 0.42
     Obsidian Shard:
       total: 0.51
       efficiency: 0.52
@@ -313,12 +313,12 @@ builds:
   slot_order:
   - Golden Blade
   - Berserker's Shield
+  - Gladiator's Shield
   - Nimble Ring
   - Runeforged Hammer
-  - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Rod of Tahuti
+  - Gladiator's Shield
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -328,8 +328,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Gladiator's Shield — physical protection
-    swap_item: Gladiator's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -355,6 +355,12 @@ builds:
       win: 0.44
       pick: 0.0
       fit: 0.45
+    Gladiator's Shield:
+      total: 0.49
+      efficiency: 0.41
+      win: 0.63
+      pick: 0.14
+      fit: 0.34
     Nimble Ring:
       total: 0.49
       efficiency: 0.68
@@ -367,12 +373,6 @@ builds:
       win: 0.6
       pick: 0.12
       fit: 0.36
-    Rod of Tahuti:
-      total: 0.49
-      efficiency: 0.77
-      win: 0.44
-      pick: 0.2
-      fit: 0.08
     Obsidian Shard:
       total: 0.51
       efficiency: 0.52
@@ -383,15 +383,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Gladiator's Shield
   - Runeforged Hammer
-  - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Jotunn's Revenge
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -400,8 +400,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -416,6 +416,12 @@ builds:
     Hide, Shogun''s Ofuda, Helm of Radiance, Midgardian Mail, Spear of the Magus,
     Jade Scepter, Spear of Desolation.'
   slot_scores:
+    Breastplate of Valor:
+      total: 0.49
+      efficiency: 0.64
+      win: 0.44
+      pick: 0.0
+      fit: 0.44
     Jotunn's Revenge:
       total: 0.49
       efficiency: 0.64
@@ -434,12 +440,6 @@ builds:
       win: 0.6
       pick: 0.12
       fit: 0.34
-    Rod of Tahuti:
-      total: 0.5
-      efficiency: 0.77
-      win: 0.44
-      pick: 0.2
-      fit: 0.15
     Obsidian Shard:
       total: 0.52
       efficiency: 0.52
@@ -459,12 +459,12 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Runeforged Hammer
   - The Crusher
-  - Rod of Tahuti
   - Amanita Charm
   flex_slots:
-  - Rod of Tahuti
   - Jotunn's Revenge
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -506,18 +506,18 @@ builds:
       win: 0.44
       pick: 0.0
       fit: 0.55
+    Runeforged Hammer:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.6
+      pick: 0.12
+      fit: 0.56
     The Crusher:
       total: 0.49
       efficiency: 0.64
       win: 0.44
       pick: 0.0
       fit: 0.42
-    Rod of Tahuti:
-      total: 0.49
-      efficiency: 0.77
-      win: 0.44
-      pick: 0.2
-      fit: 0.12
     Amanita Charm:
       total: 0.49
       efficiency: 0.63

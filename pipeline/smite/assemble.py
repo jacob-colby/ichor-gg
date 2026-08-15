@@ -162,7 +162,7 @@ def conversion_score_bonus(item, core_totals, reference, gold_values, span):
 
 def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
                   stat_caps=None, coherence=0.0, stat_reference=None, economy=None,
-                  conversion=None, seed_totals=None):
+                  conversion=None, seed_totals=None, score_key="total"):
     """Highest-total items filling n slots: at most one boots, at most
     `max_lifesteal` lifesteal/sustain items, no duplicates. rows must be
     pre-sorted by -total (score_god_items already does). When `require`
@@ -261,8 +261,8 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
         core_totals.update(seed_totals)
 
     if not coherence and not economy and not conversion:
-        # The original path, kept exactly: rows arrive sorted by -total, so
-        # walking them once IS picking the best remaining item every time.
+        # The original path, kept exactly: rows arrive pre-sorted, so walking
+        # them once IS picking the best remaining item every time.
         for r in rows:
             if len(core) >= n:
                 break
@@ -280,7 +280,16 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
         best_score = None
         for index, r in enumerate(remaining):
             item = items_by_name.get(r["item"], {})
-            score = r["total"]
+            # `score_key`, not always "total". The `model` archetype hands in
+            # rows sorted by QUALITY — efficiency and fit only, the build the
+            # model would pick if it had never seen a win rate — and the walk
+            # path honours that ordering for free because it never re-ranks.
+            # This path does re-rank, so reading "total" here put win and pick
+            # straight back into the one build whose entire point is that they
+            # are absent. It shipped that way for Joust and Arena the moment
+            # `economy` turned this path on, and stayed invisible only because
+            # those modes zero win and pick anyway.
+            score = r.get(score_key, r["total"])
             if coherence:
                 score *= coherence_multiplier(item, core_totals, stat_reference,
                                               coherence)

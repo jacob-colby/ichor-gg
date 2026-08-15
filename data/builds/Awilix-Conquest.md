@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - The Crusher
-  - Heartseeker
   - Avatar's Parashu
   flex_slots:
   - Hydra's Lament
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -128,6 +128,12 @@ builds:
       win: 0.61
       pick: 0.24
       fit: 1.0
+    Transcendence:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.54
+      pick: 0.0
+      fit: 0.52
     Hydra's Lament:
       total: 0.57
       efficiency: 0.56
@@ -145,12 +151,6 @@ builds:
       efficiency: 0.64
       win: 0.54
       pick: 0.0
-      fit: 1.0
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.41
-      win: 0.52
-      pick: 0.4
       fit: 1.0
     Avatar's Parashu:
       total: 0.67
@@ -233,22 +233,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - The Crusher
   - Avatar's Parashu
   flex_slots:
   - Hydra's Lament
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -262,18 +262,18 @@ builds:
     Cuirass, Amanita Charm, Screeching Gargoyle, Golden Blade, Chandra''s Grace, Eye
     of Providence, Transcendence, Avenging Blade, Oni Hunter''s Garb.'
   slot_scores:
-    Genji's Guard:
-      total: 0.52
-      efficiency: 0.69
-      win: 0.54
-      pick: 0.0
-      fit: 0.22
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.64
       win: 0.61
       pick: 0.24
       fit: 0.78
+    Transcendence:
+      total: 0.46
+      efficiency: 0.52
+      win: 0.54
+      pick: 0.0
+      fit: 0.22
     Hydra's Lament:
       total: 0.55
       efficiency: 0.56
@@ -581,14 +581,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -615,6 +615,12 @@ builds:
       win: 0.61
       pick: 0.24
       fit: 1.0
+    Transcendence:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.54
+      pick: 0.0
+      fit: 0.52
     Hydra's Lament:
       total: 0.57
       efficiency: 0.56
@@ -627,12 +633,6 @@ builds:
       win: 0.58
       pick: 0.48
       fit: 0.91
-    Pendulum Blade:
-      total: 0.54
-      efficiency: 0.41
-      win: 0.54
-      pick: 0.0
-      fit: 1.0
     The Crusher:
       total: 0.62
       efficiency: 0.64

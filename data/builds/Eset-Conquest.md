@@ -94,7 +94,7 @@ builds:
   archetype: core
   slot_order:
   - Chronos' Pendant
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
@@ -128,12 +128,12 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.64
-    Gluttonous Grimoire:
-      total: 0.62
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.57
+      efficiency: 0.68
       win: 0.6
       pick: 0.0
-      fit: 0.87
+      fit: 0.41
     Spear of Desolation:
       total: 0.62
       efficiency: 0.52

@@ -312,11 +312,11 @@ builds:
   - Kinetic Cuirass
   - Shield of the Phoenix
   - The Crusher
-  - Rod of Tahuti
+  - Obsidian Shard
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - The Crusher
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -364,11 +364,11 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.51
-      efficiency: 0.77
-      win: 0.39
-      pick: 0.71
+    Obsidian Shard:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.56
+      pick: 0.49
       fit: 0.21
     Amanita Charm:
       total: 0.54
@@ -455,10 +455,10 @@ builds:
   - Jotunn's Revenge
   - Nimble Ring
   - Riptalon
-  - Rod of Tahuti
+  - The Crusher
   - Obsidian Shard
   flex_slots:
-  - Obsidian Shard
+  - The Crusher
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -507,12 +507,12 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.7
-    Rod of Tahuti:
-      total: 0.51
-      efficiency: 0.77
-      win: 0.39
-      pick: 0.71
-      fit: 0.2
+    The Crusher:
+      total: 0.49
+      efficiency: 0.64
+      win: 0.45
+      pick: 0.0
+      fit: 0.4
     Obsidian Shard:
       total: 0.49
       efficiency: 0.52
@@ -597,14 +597,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Pendulum Blade
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Hydra's Lament
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -633,18 +633,18 @@ builds:
       win: 0.45
       pick: 0.27
       fit: 0.9
+    Transcendence:
+      total: 0.45
+      efficiency: 0.52
+      win: 0.45
+      pick: 0.2
+      fit: 0.38
     Hydra's Lament:
       total: 0.5
       efficiency: 0.56
       win: 0.45
       pick: 0.0
       fit: 0.68
-    Pendulum Blade:
-      total: 0.48
-      efficiency: 0.41
-      win: 0.45
-      pick: 0.0
-      fit: 0.9
     The Crusher:
       total: 0.54
       efficiency: 0.64

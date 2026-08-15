@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -234,12 +234,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
+    Void Shield:
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.65
     Spectral Armor:
       total: 0.56
       efficiency: 0.58
@@ -466,12 +466,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - The Crusher
-  - Rod of Tahuti
+  - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Toxic Blade
-  - Rod of Tahuti
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -506,12 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
+    Pharaoh's Curse:
+      total: 0.51
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.32
+      fit: 0.48
     Soul Gem:
       total: 0.76
       efficiency: 0.57

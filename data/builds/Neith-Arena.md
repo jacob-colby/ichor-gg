@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Death Metal
+  - Rod of Tahuti
   - Rod of Asclepius
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
+  - Pharaoh's Curse
   - Death Metal
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.52
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Toxic Blade:
       total: 0.54
       efficiency: 0.43
@@ -49,6 +43,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Rod of Tahuti:
+      total: 0.53
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
     Rod of Asclepius:
       total: 0.63
       efficiency: 0.55
@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - The Crusher
-  - Rod of Tahuti
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Pharaoh's Curse
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -228,6 +228,12 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.5
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Toxic Blade:
       total: 0.55
       efficiency: 0.43
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
     Pharaoh's Curse:
       total: 0.51
       efficiency: 0.55
@@ -337,10 +337,10 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - Rod of Tahuti
+  - The Crusher
   - Soul Gem
   flex_slots:
-  - Void Stone
+  - The Crusher
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -382,12 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
+    The Crusher:
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.48
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -595,13 +595,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
-  - Bragi's Harp
   - Death Metal
+  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Toxic Blade
   - Lernaean Bow
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -630,18 +630,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Bragi's Harp:
-      total: 0.52
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Death Metal:
       total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.53
+    Rod of Tahuti:
+      total: 0.54
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -658,15 +658,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Death Metal
+  - Rod of Tahuti
   - Rod of Asclepius
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
+  - Pharaoh's Curse
   - Death Metal
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -683,12 +683,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.52
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Toxic Blade:
       total: 0.54
       efficiency: 0.43
@@ -701,6 +695,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Rod of Tahuti:
+      total: 0.53
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
     Rod of Asclepius:
       total: 0.63
       efficiency: 0.55

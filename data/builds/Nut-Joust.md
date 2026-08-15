@@ -336,12 +336,12 @@ builds:
   - Toxic Blade
   - Tyrfing
   - Nimble Ring
+  - Bragi's Harp
   - Riptalon
   - Silverbranch Bow
-  - Rod of Tahuti
   flex_slots:
-  - Rod of Tahuti
   - Silverbranch Bow
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -376,6 +376,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Riptalon:
       total: 0.71
       efficiency: 0.53
@@ -388,12 +394,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.31
   starter: *id001
 - source: suggested
   archetype: cooldown

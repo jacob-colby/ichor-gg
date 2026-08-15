@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Berserker's Shield
   - Tyrfing
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
+  - Damaru
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Tyrfing
-  - Berserker's Shield
+  - Damaru
+  - Gluttonous Grimoire
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -137,30 +137,30 @@ builds:
       win: 0.54
       pick: 0.54
       fit: 0.56
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.54
-      pick: 0.0
-      fit: 0.44
     Death Metal:
       total: 0.52
       efficiency: 0.56
       win: 0.54
       pick: 0.0
       fit: 0.52
+    Gluttonous Grimoire:
+      total: 0.51
+      efficiency: 0.63
+      win: 0.54
+      pick: 0.0
+      fit: 0.32
+    Damaru:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.54
+      pick: 0.0
+      fit: 0.46
     The Crusher:
       total: 0.52
       efficiency: 0.64
       win: 0.54
       pick: 0.0
       fit: 0.33
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
-      win: 0.54
-      pick: 0.0
-      fit: 0.11
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -169,8 +169,8 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
@@ -211,18 +211,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.44
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.68
-      win: 0.54
-      pick: 0.0
-      fit: 0.4
     Death Metal:
       total: 0.52
       efficiency: 0.56
       win: 0.54
       pick: 0.0
       fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.53
+      efficiency: 0.63
+      win: 0.54
+      pick: 0.0
+      fit: 0.45
     The Crusher:
       total: 0.53
       efficiency: 0.64
@@ -239,14 +239,14 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Nimble Ring
+  - Berserker's Shield
   - Death Metal
+  - Gluttonous Grimoire
   - Damaru
   - Demon Blade
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - The Crusher
+  - Gluttonous Grimoire
   - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -256,8 +256,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -271,18 +271,24 @@ builds:
     Book, Shogun''s Ofuda, Oni Hunter''s Garb, Rage, Freya''s Tears, Bancroft''s Talon,
     Transcendence, Eros'' Bow.'
   slot_scores:
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.68
+    Berserker's Shield:
+      total: 0.51
+      efficiency: 0.66
       win: 0.54
       pick: 0.0
-      fit: 0.42
+      fit: 0.26
     Death Metal:
       total: 0.52
       efficiency: 0.56
       win: 0.54
       pick: 0.0
       fit: 0.55
+    Gluttonous Grimoire:
+      total: 0.51
+      efficiency: 0.63
+      win: 0.54
+      pick: 0.0
+      fit: 0.31
     Damaru:
       total: 0.52
       efficiency: 0.57
@@ -301,12 +307,6 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.32
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
-      win: 0.54
-      pick: 0.0
-      fit: 0.11
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -315,11 +315,11 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Rod of Tahuti
+  - The Crusher
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Genji's Guard
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -368,12 +368,12 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.57
-    Rod of Tahuti:
-      total: 0.52
-      efficiency: 0.77
+    The Crusher:
+      total: 0.5
+      efficiency: 0.64
       win: 0.54
       pick: 0.0
-      fit: 0.07
+      fit: 0.25
     Amanita Charm:
       total: 0.56
       efficiency: 0.63
@@ -457,14 +457,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Berserker's Shield
   - Tyrfing
   - Nimble Ring
   - Riptalon
   - Silverbranch Bow
-  - Rod of Tahuti
   flex_slots:
-  - Riptalon
   - Golden Blade
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -473,8 +473,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -493,6 +493,12 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.57
+    Berserker's Shield:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.54
+      pick: 0.0
+      fit: 0.26
     Tyrfing:
       total: 0.53
       efficiency: 0.46
@@ -517,25 +523,19 @@ builds:
       win: 0.58
       pick: 0.35
       fit: 0.47
-    Rod of Tahuti:
-      total: 0.52
-      efficiency: 0.77
-      win: 0.54
-      pick: 0.0
-      fit: 0.09
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Berserker's Shield
   - Breastplate of Valor
   - Jotunn's Revenge
   - Hydra's Lament
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
   - Breastplate of Valor
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -544,8 +544,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -565,6 +565,12 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.31
+    Berserker's Shield:
+      total: 0.5
+      efficiency: 0.66
+      win: 0.54
+      pick: 0.0
+      fit: 0.2
     Breastplate of Valor:
       total: 0.51
       efficiency: 0.64
@@ -583,12 +589,6 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.5
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
-      win: 0.54
-      pick: 0.0
-      fit: 0.13
     Soul Gem:
       total: 0.53
       efficiency: 0.57
@@ -599,22 +599,22 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Genji's Guard
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Death Metal
   - Silverbranch Bow
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -632,24 +632,30 @@ builds:
     Jade Scepter, Eye of Providence, Shield of the Phoenix, Oni Hunter''s Garb, Doom
     Orb.'
   slot_scores:
+    Genji's Guard:
+      total: 0.5
+      efficiency: 0.69
+      win: 0.54
+      pick: 0.0
+      fit: 0.11
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
       win: 0.54
       pick: 0.0
       fit: 0.37
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.54
-      pick: 0.0
-      fit: 0.46
     Death Metal:
       total: 0.51
       efficiency: 0.56
       win: 0.54
       pick: 0.0
       fit: 0.5
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.54
+      pick: 0.0
+      fit: 0.51
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.52
@@ -662,19 +668,13 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.35
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.54
-      pick: 0.0
-      fit: 0.35
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
@@ -710,18 +710,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.36
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.54
-      pick: 0.0
-      fit: 0.45
     Death Metal:
       total: 0.52
       efficiency: 0.56
       win: 0.54
       pick: 0.0
       fit: 0.55
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.54
+      pick: 0.0
+      fit: 0.5
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.52

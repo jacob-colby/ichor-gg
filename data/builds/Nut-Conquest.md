@@ -95,7 +95,7 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Nimble Ring
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
@@ -136,12 +136,12 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.45
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.68
+    Gluttonous Grimoire:
+      total: 0.53
+      efficiency: 0.63
       win: 0.48
       pick: 0.0
-      fit: 0.55
+      fit: 0.58
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
@@ -381,15 +381,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
-  - The Cosmic Horror
   - The Crusher
   - Rod of Tahuti
   flex_slots:
   - Jotunn's Revenge
-  - The Cosmic Horror
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -413,30 +413,30 @@ builds:
     Pendulum Blade, Titan''s Bane, Pharaoh''s Curse, Bancroft''s Talon, Kinetic Cuirass,
     Void Shield.'
   slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.11
+      fit: 0.16
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
       win: 0.48
       pick: 0.0
       fit: 0.55
-    Gluttonous Grimoire:
-      total: 0.54
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.53
+      efficiency: 0.68
       win: 0.48
       pick: 0.0
-      fit: 0.67
+      fit: 0.45
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
       win: 0.58
       pick: 0.42
       fit: 0.57
-    The Cosmic Horror:
-      total: 0.49
-      efficiency: 0.58
-      win: 0.48
-      pick: 0.0
-      fit: 0.49
     The Crusher:
       total: 0.53
       efficiency: 0.64

@@ -93,12 +93,12 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Obsidian Shard
@@ -122,6 +122,12 @@ builds:
     Asclepius, Freya''s Tears, Bancroft''s Talon, Jade Scepter, Shield of the Phoenix,
     Bracer of The Abyss, Ethereal Staff, Alchemist Coat.'
   slot_scores:
+    Nimble Ring:
+      total: 0.62
+      efficiency: 0.68
+      win: 0.68
+      pick: 0.28
+      fit: 0.41
     Spear of Desolation:
       total: 0.62
       efficiency: 0.52
@@ -152,12 +158,6 @@ builds:
       win: 0.57
       pick: 0.35
       fit: 0.72
-    Soul Gem:
-      total: 0.66
-      efficiency: 0.57
-      win: 0.65
-      pick: 0.39
-      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -233,12 +233,12 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Obsidian Shard
@@ -262,6 +262,12 @@ builds:
     Harp, Helm of Radiance, Blood-Bound Book, Rod of Asclepius, Kinetic Cuirass, Amanita
     Charm, Screeching Gargoyle, Triton''s Conch.'
   slot_scores:
+    Nimble Ring:
+      total: 0.59
+      efficiency: 0.68
+      win: 0.68
+      pick: 0.28
+      fit: 0.22
     Spear of Desolation:
       total: 0.59
       efficiency: 0.52
@@ -292,12 +298,6 @@ builds:
       win: 0.57
       pick: 0.35
       fit: 0.56
-    Soul Gem:
-      total: 0.64
-      efficiency: 0.57
-      win: 0.65
-      pick: 0.39
-      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -861,21 +861,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - Shifter's Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -895,12 +895,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.53
-      pick: 0.48
-      fit: 0.26
+    Shifter's Shield:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.64
+      pick: 0.05
+      fit: 0.57
     Spectral Armor:
       total: 0.57
       efficiency: 0.58

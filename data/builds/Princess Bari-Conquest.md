@@ -93,7 +93,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Berserker's Shield
+  - Book of Thoth
   - Jotunn's Revenge
   - Spear of Desolation
   - The Crusher
@@ -101,7 +101,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Jotunn's Revenge
-  - Berserker's Shield
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -110,8 +110,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -124,12 +124,12 @@ builds:
     of Radiance, Damaru, Kinetic Cuirass, Rod of Asclepius, Freya''s Tears, Amanita
     Charm, Gem of Focus, Shogun''s Ofuda, Eye of Providence, Toxic Blade.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.49
-      efficiency: 0.66
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.26
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.64
@@ -524,15 +524,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Jotunn's Revenge
-  - Hydra's Lament
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Genji's Guard
-  - Hydra's Lament
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -556,6 +556,12 @@ builds:
     Tyrfing, Tekko-Kagi, Runeforged Hammer, Kinetic Cuirass, Amanita Charm, Blood-Bound
     Book, Eye of Providence, Damaru, Oni Hunter''s Garb.'
   slot_scores:
+    Book of Thoth:
+      total: 0.41
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.1
     Genji's Guard:
       total: 0.52
       efficiency: 0.69
@@ -568,12 +574,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Hydra's Lament:
-      total: 0.5
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
@@ -597,14 +597,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Spear of Desolation
-  - The Cosmic Horror
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - The Cosmic Horror
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -634,18 +634,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Transcendence:
+      total: 0.45
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
     Spear of Desolation:
       total: 0.53
       efficiency: 0.52
       win: 0.53
       pick: 0.64
       fit: 0.49
-    The Cosmic Horror:
-      total: 0.5
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.22
-      fit: 0.39
     The Crusher:
       total: 0.54
       efficiency: 0.64
@@ -668,15 +668,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
   - Spear of Desolation
-  - The Cosmic Horror
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Jotunn's Revenge
-  - The Cosmic Horror
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -700,6 +700,12 @@ builds:
     Kinetic Cuirass, Amanita Charm, Freya''s Tears, Heartseeker, Jade Scepter, Gem
     of Focus.'
   slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.21
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
@@ -712,12 +718,6 @@ builds:
       win: 0.53
       pick: 0.64
       fit: 0.48
-    The Cosmic Horror:
-      total: 0.5
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.22
-      fit: 0.38
     The Crusher:
       total: 0.52
       efficiency: 0.64

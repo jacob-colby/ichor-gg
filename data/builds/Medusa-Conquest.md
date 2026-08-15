@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Avenging Blade
   - Jotunn's Revenge
   - Rage
-  - Nimble Ring
   - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
+  - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Gluttonous Grimoire
+  - Avenging Blade
+  - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -125,6 +125,12 @@ builds:
     Chronos'' Pendant, Shield of the Phoenix, Blood-Bound Book, Shogun''s Ofuda, Obsidian
     Shard, Toxic Blade, Bancroft''s Talon, Dominance.'
   slot_scores:
+    Avenging Blade:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.72
+      pick: 0.25
+      fit: 0.25
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.64
@@ -137,12 +143,6 @@ builds:
       win: 0.83
       pick: 0.22
       fit: 0.39
-    Nimble Ring:
-      total: 0.56
-      efficiency: 0.68
-      win: 0.59
-      pick: 0.0
-      fit: 0.37
     Gluttonous Grimoire:
       total: 0.55
       efficiency: 0.63
@@ -155,12 +155,12 @@ builds:
       win: 0.64
       pick: 0.12
       fit: 0.4
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
+    Soul Gem:
+      total: 0.54
+      efficiency: 0.57
       win: 0.59
       pick: 0.0
-      fit: 0.19
+      fit: 0.48
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -170,11 +170,11 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Rage
-  - Nimble Ring
+  - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
-  - Jotunn's Revenge
+  - Gluttonous Grimoire
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -217,12 +217,12 @@ builds:
       win: 0.83
       pick: 0.22
       fit: 0.34
-    Nimble Ring:
-      total: 0.57
-      efficiency: 0.68
+    Gluttonous Grimoire:
+      total: 0.56
+      efficiency: 0.63
       win: 0.59
       pick: 0.0
-      fit: 0.4
+      fit: 0.45
     The Crusher:
       total: 0.58
       efficiency: 0.64
@@ -239,12 +239,12 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
+  - Jotunn's Revenge
   - Rage
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Damaru
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
   - Death Metal
   - Damaru
@@ -271,24 +271,30 @@ builds:
     Chronos'' Pendant, Shield of the Phoenix, Blood-Bound Book, Obsidian Shard, Shogun''s
     Ofuda, Musashi''s Dual Swords, Bancroft''s Talon, Dominance.'
   slot_scores:
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.64
+      win: 0.59
+      pick: 0.0
+      fit: 0.38
     Rage:
       total: 0.58
       efficiency: 0.39
       win: 0.83
       pick: 0.22
       fit: 0.41
-    Nimble Ring:
-      total: 0.56
-      efficiency: 0.68
-      win: 0.59
-      pick: 0.0
-      fit: 0.35
     Death Metal:
       total: 0.53
       efficiency: 0.56
       win: 0.59
       pick: 0.0
       fit: 0.46
+    Gluttonous Grimoire:
+      total: 0.55
+      efficiency: 0.63
+      win: 0.59
+      pick: 0.0
+      fit: 0.38
     Damaru:
       total: 0.53
       efficiency: 0.57
@@ -301,12 +307,6 @@ builds:
       win: 0.64
       pick: 0.12
       fit: 0.39
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.59
-      pick: 0.0
-      fit: 0.19
   starter: *id001
 - source: suggested
   archetype: burst
@@ -383,15 +383,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Avenging Blade
   - Berserker's Shield
   - Rage
   - The Crusher
-  - Rod of Tahuti
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Berserker's Shield
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -416,6 +416,12 @@ builds:
     Umbral Link, Shield Splitter, Leviathan''s Hide, The Cosmic Horror, Draconic Scale,
     Midgardian Mail.'
   slot_scores:
+    Avenging Blade:
+      total: 0.55
+      efficiency: 0.48
+      win: 0.72
+      pick: 0.25
+      fit: 0.33
     Berserker's Shield:
       total: 0.55
       efficiency: 0.66
@@ -434,12 +440,6 @@ builds:
       win: 0.64
       pick: 0.12
       fit: 0.3
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.59
-      pick: 0.0
-      fit: 0.13
     Amanita Charm:
       total: 0.58
       efficiency: 0.63
@@ -529,13 +529,13 @@ builds:
   archetype: attack-speed
   slot_order:
   - Berserker's Shield
+  - Jotunn's Revenge
   - Rage
   - Nimble Ring
   - Riptalon
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Riptalon
+  - Jotunn's Revenge
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -566,6 +566,12 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.22
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.59
+      pick: 0.0
+      fit: 0.32
     Rage:
       total: 0.57
       efficiency: 0.39
@@ -590,25 +596,19 @@ builds:
       win: 0.64
       pick: 0.12
       fit: 0.34
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.59
-      pick: 0.0
-      fit: 0.16
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Hydra's Lament
   - Rage
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Rage
   - Genji's Guard
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -645,6 +645,12 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.48
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.56
+      win: 0.59
+      pick: 0.0
+      fit: 0.47
     Rage:
       total: 0.56
       efficiency: 0.39
@@ -657,12 +663,6 @@ builds:
       win: 0.64
       pick: 0.12
       fit: 0.3
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.59
-      pick: 0.0
-      fit: 0.2
     Soul Gem:
       total: 0.56
       efficiency: 0.57
@@ -673,15 +673,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Avenging Blade
   - Jotunn's Revenge
   - Rage
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Jotunn's Revenge
   - Death Metal
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -706,6 +706,12 @@ builds:
     Gem of Focus, Jade Scepter, Eye of Providence, Shield of the Phoenix, Oni Hunter''s
     Garb, Doom Orb.'
   slot_scores:
+    Avenging Blade:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.72
+      pick: 0.25
+      fit: 0.22
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.64
@@ -718,29 +724,23 @@ builds:
       win: 0.83
       pick: 0.22
       fit: 0.29
-    Nimble Ring:
-      total: 0.58
-      efficiency: 0.68
-      win: 0.59
-      pick: 0.0
-      fit: 0.46
     Death Metal:
       total: 0.54
       efficiency: 0.56
       win: 0.59
       pick: 0.0
       fit: 0.5
+    Gluttonous Grimoire:
+      total: 0.57
+      efficiency: 0.63
+      win: 0.59
+      pick: 0.0
+      fit: 0.51
     The Crusher:
       total: 0.57
       efficiency: 0.64
       win: 0.64
       pick: 0.12
-      fit: 0.35
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.59
-      pick: 0.0
       fit: 0.35
   starter: *id001
 - source: suggested
@@ -749,7 +749,7 @@ builds:
   - Avenging Blade
   - Jotunn's Revenge
   - Rage
-  - Nimble Ring
+  - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
@@ -797,12 +797,12 @@ builds:
       win: 0.83
       pick: 0.22
       fit: 0.36
-    Nimble Ring:
-      total: 0.57
-      efficiency: 0.68
+    Gluttonous Grimoire:
+      total: 0.56
+      efficiency: 0.63
       win: 0.59
       pick: 0.0
-      fit: 0.43
+      fit: 0.48
     The Crusher:
       total: 0.58
       efficiency: 0.64

@@ -1056,12 +1056,12 @@ builds:
   slot_order:
   - Screeching Gargoyle
   - Genji's Guard
+  - Void Stone
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
+  - Void Stone
   - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1091,18 +1091,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Void Stone:
+      total: 0.48
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Spear of Desolation:
       total: 0.52
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Rod of Tahuti:
-      total: 0.49
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.21
     Soul Gem:
       total: 0.78
       efficiency: 0.57

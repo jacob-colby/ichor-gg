@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lernaean Bow
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Lernaean Bow
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -98,18 +98,18 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.5
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Jotunn's Revenge:
       total: 0.65
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Transcendence:
+      total: 0.44
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Hydra's Lament:
       total: 0.57
       efficiency: 0.56

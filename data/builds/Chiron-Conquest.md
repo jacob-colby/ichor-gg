@@ -165,14 +165,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Crusher
   - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Berserker's Shield
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -181,8 +181,8 @@ builds:
     swap: Oni Hunter's Garb — magical protection
     swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -199,18 +199,18 @@ builds:
       win: 0.64
       pick: 0.0
       fit: 0.15
-    Berserker's Shield:
-      total: 0.54
-      efficiency: 0.66
-      win: 0.64
-      pick: 0.0
-      fit: 0.16
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.64
       win: 0.59
       pick: 0.38
       fit: 0.44
+    Transcendence:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.34
+      fit: 0.24
     Hydra's Lament:
       total: 0.54
       efficiency: 0.56
@@ -306,12 +306,12 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
-  - Riptalon
+  - Transcendence
   - The Crusher
   - Heartseeker
   flex_slots:
   - Berserker's Shield
-  - Riptalon
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -350,12 +350,12 @@ builds:
       win: 0.59
       pick: 0.38
       fit: 0.46
-    Riptalon:
-      total: 0.54
-      efficiency: 0.53
-      win: 0.64
-      pick: 0.0
-      fit: 0.43
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.34
+      fit: 0.13
     The Crusher:
       total: 0.6
       efficiency: 0.64
@@ -584,12 +584,12 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - The Crusher
   - Heartseeker
   flex_slots:
   - Breastplate of Valor
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -629,12 +629,12 @@ builds:
       win: 0.59
       pick: 0.38
       fit: 0.49
-    Hydra's Lament:
-      total: 0.55
-      efficiency: 0.56
-      win: 0.64
-      pick: 0.0
-      fit: 0.46
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.34
+      fit: 0.08
     The Crusher:
       total: 0.58
       efficiency: 0.64
@@ -721,22 +721,22 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - The Reaper
   - Damaru
   - The Crusher
   - Heartseeker
   flex_slots:
   - The Reaper
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -750,18 +750,18 @@ builds:
     Tears, Kinetic Cuirass, Musashi''s Dual Swords, Spectral Armor, Pharaoh''s Curse,
     Eye of Providence, Shield of the Phoenix, Oni Hunter''s Garb, Arondight, Tyrfing.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.69
-      win: 0.64
-      pick: 0.0
-      fit: 0.12
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.64
       win: 0.59
       pick: 0.38
       fit: 0.53
+    Transcendence:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.34
+      fit: 0.2
     The Reaper:
       total: 0.55
       efficiency: 0.52
@@ -793,13 +793,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Damaru
   - The Crusher
   - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Damaru
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -832,18 +832,18 @@ builds:
       win: 0.59
       pick: 0.38
       fit: 0.5
+    Transcendence:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.34
+      fit: 0.27
     Hydra's Lament:
       total: 0.55
       efficiency: 0.56
       win: 0.64
       pick: 0.0
       fit: 0.47
-    Damaru:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.64
-      pick: 0.0
-      fit: 0.39
     The Crusher:
       total: 0.6
       efficiency: 0.64
@@ -934,13 +934,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Damaru
   - The Crusher
   - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Damaru
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -974,18 +974,18 @@ builds:
       win: 0.59
       pick: 0.38
       fit: 0.53
+    Transcendence:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.34
+      fit: 0.15
     Hydra's Lament:
       total: 0.54
       efficiency: 0.56
       win: 0.64
       pick: 0.0
       fit: 0.4
-    Damaru:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.64
-      pick: 0.0
-      fit: 0.35
     The Crusher:
       total: 0.61
       efficiency: 0.64
@@ -1216,14 +1216,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Crusher
   - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Breastplate of Valor
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1232,8 +1232,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -1251,18 +1251,18 @@ builds:
       win: 0.64
       pick: 0.0
       fit: 0.32
-    Breastplate of Valor:
-      total: 0.56
-      efficiency: 0.64
-      win: 0.64
-      pick: 0.0
-      fit: 0.32
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.64
       win: 0.59
       pick: 0.38
       fit: 0.57
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.34
+      fit: 0.1
     Hydra's Lament:
       total: 0.56
       efficiency: 0.56

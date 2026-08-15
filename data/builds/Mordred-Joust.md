@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - The Crusher
-  - Rod of Tahuti
   - Erosion
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Kinetic Cuirass
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -158,11 +158,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.64
@@ -181,12 +187,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
     Erosion:
       total: 0.55
       efficiency: 0.52
@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - The Crusher
-  - Rod of Tahuti
+  - Spectral Armor
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - The Crusher
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -565,12 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.33
+      fit: 0.47
     Erosion:
       total: 0.57
       efficiency: 0.52

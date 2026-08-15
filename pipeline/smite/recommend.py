@@ -150,7 +150,8 @@ def _entry(archetype, core, rows, items_by_name, tags_map, weights, profile,
 
 
 def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
-                     items_by_name, starter, flex_count, aspect_overlay, aspect_name):
+                     items_by_name, starter, flex_count, aspect_overlay, aspect_name,
+                     gold_values=None):
     entries = []
     core_rows = core_profile = None
     eligible = scoring.eligible_flavors(god, weights, items)
@@ -162,12 +163,14 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         profile = scoring.resolve_profile(weights, mode, flavor, aspect_overlay=aspect_overlay)
         rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map, profile)
         require = cfg.get("require") if flavor else None
-        core = assemble.assemble_core(rows, items_by_name, n=6,
-                                      max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
-                                      require=require,
-                                      stat_caps=weights.get("stat_caps"),
-                                      economy=profile.get("economy"),
-                                      **assemble.coherence_args(items, weights))
+        core, _ = assemble.assemble_core_converged(
+            rows, items_by_name, passes=weights.get("conversion_passes", 1), n=6,
+            max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
+            require=require,
+            stat_caps=weights.get("stat_caps"),
+            economy=profile.get("economy"),
+            **assemble.coherence_args(items, weights),
+            **assemble.conversion_args(weights, eff_scores, gold_values))
         archetype = flavor or "core"
         if flavor is None:
             core_rows, core_profile = rows, profile
@@ -186,11 +189,14 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
     if core_rows is not None:
         max_ls = scoring.god_max_lifesteal(god, weights, core_profile)
         model_rows = sorted(core_rows, key=lambda r: (-r["quality"], r["item"]))
-        model_core = assemble.assemble_core(model_rows, items_by_name, n=6,
-                                            max_lifesteal=max_ls,
-                                            stat_caps=weights.get("stat_caps"),
-                                            economy=core_profile.get("economy"),
-                                            **assemble.coherence_args(items, weights))
+        model_core, _ = assemble.assemble_core_converged(
+            model_rows, items_by_name, passes=weights.get("conversion_passes", 1), n=6,
+            score_key="quality",
+            max_lifesteal=max_ls,
+            stat_caps=weights.get("stat_caps"),
+            economy=core_profile.get("economy"),
+            **assemble.coherence_args(items, weights),
+            **assemble.conversion_args(weights, eff_scores, gold_values))
         entries.append(_entry("model", model_core, model_rows, items_by_name,
                               tags_map, weights, core_profile, flex_count,
                               starter, aspect_name))
@@ -213,18 +219,19 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
 
 
 def build_suggested_entries(god, items, god_build, weights, tags_map, mode="Conquest"):
-    eff_scores, _ = efficiency.efficiency_scores(items)
+    eff_scores, gold_values = efficiency.efficiency_scores(items)
     items_by_name = {it["name"]: it for it in items}
     starter = scoring.pick_starter(god, weights)
     flex_count = (weights.get("build_order") or {}).get("flex_count", 2)
     entries = _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
-                               items_by_name, starter, flex_count, None, None)
+                               items_by_name, starter, flex_count, None, None, gold_values)
     aspect_overlay = (weights.get("aspects") or {}).get(god["name"])
     god_aspects = god.get("aspects") or []
     if aspect_overlay and god_aspects:
         aspect_name = god_aspects[0].get("name")
         entries += _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
-                                    items_by_name, starter, flex_count, aspect_overlay, aspect_name)
+                                    items_by_name, starter, flex_count, aspect_overlay,
+                                    aspect_name, gold_values)
     return entries
 
 

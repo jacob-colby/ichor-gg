@@ -233,15 +233,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
   - Breastplate of Valor
   - Kinetic Cuirass
   - Hide of the Nemean Lion
   - Freya's Tears
   - Gluttonous Grimoire
-  - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
   - Breastplate of Valor
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -250,8 +250,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Prophetic Cloak — physical protection
+    swap_item: Prophetic Cloak
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -262,6 +262,12 @@ builds:
     of Desolation, Erosion, Eye of Providence, Spectral Armor, Nimble Ring, Draconic
     Scale, Obsidian Shard, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord.'
   slot_scores:
+    Stone of Binding:
+      total: 0.55
+      efficiency: 0.47
+      win: 0.61
+      pick: 0.0
+      fit: 0.75
     Breastplate of Valor:
       total: 0.56
       efficiency: 0.64
@@ -292,22 +298,16 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.66
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.77
-      win: 0.61
-      pick: 0.0
-      fit: 0.41
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Kinetic Cuirass
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Hide of the Nemean Lion
   - Freya's Tears
-  - Rod of Tahuti
   flex_slots:
   - Bracer of The Abyss
   - Bragi's Harp
@@ -316,8 +316,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -331,6 +331,12 @@ builds:
     Helm of Radiance, Mantle Of Discord, Stone of Binding, Death Metal, Screeching
     Gargoyle, The Cosmic Horror, Yogi''s Necklace, Bracer of The Abyss, Ancile.'
   slot_scores:
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.59
+      win: 0.61
+      pick: 0.0
+      fit: 0.46
     Bracer of The Abyss:
       total: 0.49
       efficiency: 0.51
@@ -361,12 +367,6 @@ builds:
       win: 0.86
       pick: 0.16
       fit: 0.33
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.61
-      pick: 0.0
-      fit: 0.08
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -444,19 +444,19 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Rod of Tahuti
   - Erosion
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Eye of Providence — magical protection
+    swap_item: Eye of Providence
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -489,12 +489,12 @@ builds:
       win: 0.86
       pick: 0.16
       fit: 0.64
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.61
-      pick: 0.0
-      fit: 0.15
+    Shifter's Shield:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.58
+      pick: 0.18
+      fit: 0.71
     Amanita Charm:
       total: 0.6
       efficiency: 0.63

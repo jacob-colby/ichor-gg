@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Chronos' Pendant
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - The World Stone
   - Rod of Tahuti
-  - Soul Gem
   flex_slots:
-  - The World Stone
   - The Cosmic Horror
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -128,6 +128,12 @@ builds:
       win: 0.71
       pick: 0.13
       fit: 0.64
+    Nimble Ring:
+      total: 0.5
+      efficiency: 0.68
+      win: 0.45
+      pick: 0.0
+      fit: 0.41
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
@@ -152,12 +158,6 @@ builds:
       win: 0.59
       pick: 0.5
       fit: 0.77
-    Soul Gem:
-      total: 0.56
-      efficiency: 0.57
-      win: 0.44
-      pick: 0.25
-      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem

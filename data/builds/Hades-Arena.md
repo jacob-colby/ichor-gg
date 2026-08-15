@@ -7,13 +7,13 @@ builds:
   archetype: core
   slot_order:
   - Void Shield
-  - Rod of Tahuti
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
+  - Triton's Conch
   flex_slots:
-  - Spectral Armor
+  - Triton's Conch
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -37,12 +37,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Spectral Armor:
       total: 0.58
       efficiency: 0.58
@@ -67,6 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Triton's Conch:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -529,7 +529,7 @@ builds:
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
-  - Rod of Tahuti
+  - The Crusher
   - Spectral Armor
   - Erosion
   - Soul Gem
@@ -559,12 +559,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
+    The Crusher:
+      total: 0.57
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.49
     Spectral Armor:
       total: 0.55
       efficiency: 0.58
@@ -594,13 +594,13 @@ builds:
   archetype: model
   slot_order:
   - Void Shield
-  - Rod of Tahuti
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
+  - Triton's Conch
   flex_slots:
-  - Spectral Armor
+  - Triton's Conch
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -624,12 +624,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Spectral Armor:
       total: 0.58
       efficiency: 0.58
@@ -654,5 +648,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Triton's Conch:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
   starter: *id001
 ---

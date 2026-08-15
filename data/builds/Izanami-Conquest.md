@@ -169,8 +169,8 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
@@ -211,18 +211,18 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.44
-    Nimble Ring:
-      total: 0.61
-      efficiency: 0.68
-      win: 0.7
-      pick: 0.0
-      fit: 0.4
     Death Metal:
       total: 0.59
       efficiency: 0.56
       win: 0.7
       pick: 0.0
       fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.6
+      efficiency: 0.63
+      win: 0.7
+      pick: 0.0
+      fit: 0.45
     The Crusher:
       total: 0.6
       efficiency: 0.64
@@ -239,12 +239,12 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Nimble Ring
+  - Jotunn's Revenge
   - Death Metal
+  - Gluttonous Grimoire
   - Damaru
   - The Crusher
   - Deathbringer
-  - Rod of Tahuti
   flex_slots:
   - Damaru
   - Deathbringer
@@ -271,18 +271,24 @@ builds:
     Hunter''s Garb, Chronos'' Pendant, Shield of the Phoenix, Blood-Bound Book, Obsidian
     Shard, Shogun''s Ofuda, Musashi''s Dual Swords, Bancroft''s Talon, Dominance.'
   slot_scores:
-    Nimble Ring:
-      total: 0.61
-      efficiency: 0.68
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.64
       win: 0.7
       pick: 0.0
-      fit: 0.35
+      fit: 0.38
     Death Metal:
       total: 0.58
       efficiency: 0.56
       win: 0.7
       pick: 0.0
       fit: 0.46
+    Gluttonous Grimoire:
+      total: 0.59
+      efficiency: 0.63
+      win: 0.7
+      pick: 0.0
+      fit: 0.38
     Damaru:
       total: 0.58
       efficiency: 0.57
@@ -301,32 +307,26 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.41
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.0
-      fit: 0.19
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
+  - Book of Thoth
   - Jotunn's Revenge
-  - Death Metal
+  - Transcendence
   - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
-  - Genji's Guard
-  - Death Metal
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -343,9 +343,9 @@ builds:
     Curse, Eye of Providence, Bancroft''s Talon, Oni Hunter''s Garb, Helm of Radiance,
     Pendulum Blade, Doom Orb, Rod of Asclepius, Dominance.'
   slot_scores:
-    Genji's Guard:
-      total: 0.58
-      efficiency: 0.69
+    Book of Thoth:
+      total: 0.51
+      efficiency: 0.49
       win: 0.7
       pick: 0.0
       fit: 0.13
@@ -355,12 +355,12 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.46
-    Death Metal:
-      total: 0.58
-      efficiency: 0.56
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
       win: 0.7
       pick: 0.0
-      fit: 0.43
+      fit: 0.13
     Gluttonous Grimoire:
       total: 0.61
       efficiency: 0.63
@@ -383,22 +383,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Genji's Guard
   - Berserker's Shield
   - Kinetic Cuirass
   - The Crusher
-  - Rod of Tahuti
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - The Crusher
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -416,6 +416,12 @@ builds:
     Umbral Link, Shield Splitter, Leviathan''s Hide, The Cosmic Horror, Draconic Scale,
     Midgardian Mail.'
   slot_scores:
+    Genji's Guard:
+      total: 0.58
+      efficiency: 0.69
+      win: 0.7
+      pick: 0.0
+      fit: 0.16
     Berserker's Shield:
       total: 0.6
       efficiency: 0.66
@@ -434,12 +440,6 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.3
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.0
-      fit: 0.13
     Amanita Charm:
       total: 0.63
       efficiency: 0.63
@@ -529,13 +529,13 @@ builds:
   archetype: attack-speed
   slot_order:
   - Berserker's Shield
+  - Jotunn's Revenge
   - Nimble Ring
   - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Gluttonous Grimoire
+  - Jotunn's Revenge
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -566,6 +566,12 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.22
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.64
+      win: 0.7
+      pick: 0.0
+      fit: 0.32
     Nimble Ring:
       total: 0.6
       efficiency: 0.68
@@ -590,25 +596,19 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.34
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.0
-      fit: 0.16
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Hydra's Lament
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Hydra's Lament
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -617,8 +617,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -636,6 +636,12 @@ builds:
     Genji's Guard:
       total: 0.6
       efficiency: 0.69
+      win: 0.7
+      pick: 0.0
+      fit: 0.28
+    Breastplate of Valor:
+      total: 0.58
+      efficiency: 0.64
       win: 0.7
       pick: 0.0
       fit: 0.28
@@ -657,12 +663,6 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.3
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.0
-      fit: 0.2
     Soul Gem:
       total: 0.61
       efficiency: 0.57

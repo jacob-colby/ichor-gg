@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Berserker's Shield
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
-  - Rod of Tahuti
   - Amanita Charm
   flex_slots:
   - Amanita Charm
-  - Rod of Tahuti
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -110,8 +110,8 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -125,6 +125,12 @@ builds:
     Magi''s Cloak, Helm of Radiance, Shogun''s Ofuda, Gladiator''s Shield, Hide of
     the Nemean Lion, Void Shield, Doublet of Binding.'
   slot_scores:
+    Berserker's Shield:
+      total: 0.6
+      efficiency: 0.66
+      win: 0.7
+      pick: 0.0
+      fit: 0.36
     Breastplate of Valor:
       total: 0.64
       efficiency: 0.64
@@ -149,12 +155,6 @@ builds:
       win: 1.0
       pick: 0.25
       fit: 0.56
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.0
-      fit: 0.11
     Amanita Charm:
       total: 0.62
       efficiency: 0.63
@@ -240,14 +240,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Breastplate of Valor
+  - Jotunn's Revenge
   - Freya's Tears
   - Gluttonous Grimoire
   - Draconic Scale
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Breastplate of Valor
   - Gluttonous Grimoire
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -277,6 +277,12 @@ builds:
       win: 0.79
       pick: 0.25
       fit: 0.22
+    Jotunn's Revenge:
+      total: 0.62
+      efficiency: 0.64
+      win: 0.7
+      pick: 0.0
+      fit: 0.56
     Freya's Tears:
       total: 0.72
       efficiency: 0.59
@@ -301,12 +307,6 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.57
-    Rod of Tahuti:
-      total: 0.64
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.0
-      fit: 0.35
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -385,23 +385,23 @@ builds:
   slot_order:
   - Breastplate of Valor
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
   - Draconic Scale
-  - Rod of Tahuti
   flex_slots:
   - Shield of the Phoenix
-  - Rod of Tahuti
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -427,6 +427,12 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.47
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.59
+      win: 0.7
+      pick: 0.0
+      fit: 0.53
     Shield of the Phoenix:
       total: 0.6
       efficiency: 0.57
@@ -445,12 +451,6 @@ builds:
       win: 1.0
       pick: 0.25
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.0
-      fit: 0.14
   starter: *id001
 - source: suggested
   archetype: strength
@@ -458,12 +458,12 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Freya's Tears
+  - Gluttonous Grimoire
   - Draconic Scale
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - The Crusher
   - Jotunn's Revenge
+  - Gluttonous Grimoire
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -505,6 +505,12 @@ builds:
       win: 1.0
       pick: 0.15
       fit: 0.36
+    Gluttonous Grimoire:
+      total: 0.6
+      efficiency: 0.63
+      win: 0.7
+      pick: 0.0
+      fit: 0.42
     Draconic Scale:
       total: 0.7
       efficiency: 0.5
@@ -517,25 +523,19 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.0
-      fit: 0.19
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Breastplate of Valor
+  - Jotunn's Revenge
   - Freya's Tears
   - Gluttonous Grimoire
   - Draconic Scale
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Gluttonous Grimoire
   - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -565,6 +565,12 @@ builds:
       win: 0.79
       pick: 0.25
       fit: 0.22
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.64
+      win: 0.7
+      pick: 0.0
+      fit: 0.42
     Freya's Tears:
       total: 0.72
       efficiency: 0.59
@@ -589,12 +595,6 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.77
-      win: 0.7
-      pick: 0.0
-      fit: 0.34
   starter: *id001
 - source: suggested
   archetype: model
@@ -603,11 +603,11 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - The Crusher
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -655,12 +655,12 @@ builds:
       win: 0.7
       pick: 0.0
       fit: 0.66
-    Rod of Tahuti:
+    The Crusher:
       total: 0.6
-      efficiency: 0.77
+      efficiency: 0.64
       win: 0.7
       pick: 0.0
-      fit: 0.11
+      fit: 0.38
     Amanita Charm:
       total: 0.62
       efficiency: 0.63

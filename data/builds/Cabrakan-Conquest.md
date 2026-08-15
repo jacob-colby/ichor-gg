@@ -97,21 +97,21 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Runeforged Hammer
-  - Rod of Tahuti
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
   - Runeforged Hammer
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
-  - vs_tag: physical_heavy
-    swap: Dwarven Plate — physical protection
+    swap: Dwarven Plate — magical protection
     swap_item: Dwarven Plate
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -149,12 +149,12 @@ builds:
       win: 0.58
       pick: 0.2
       fit: 0.48
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.67
-      pick: 0.12
-      fit: 0.1
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.56
+      pick: 0.0
+      fit: 0.52
     Amanita Charm:
       total: 0.56
       efficiency: 0.63
@@ -168,14 +168,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Genji's Guard
+  - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Runeforged Hammer
-  - Rod of Tahuti
   - Amanita Charm
   flex_slots:
-  - Runeforged Hammer
   - Genji's Guard
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -184,8 +184,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Dwarven Plate — physical protection
+    swap_item: Dwarven Plate
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -205,6 +205,12 @@ builds:
       win: 0.54
       pick: 0.25
       fit: 0.28
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.56
+      pick: 0.0
+      fit: 0.38
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.59
@@ -223,12 +229,6 @@ builds:
       win: 0.58
       pick: 0.2
       fit: 0.54
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.67
-      pick: 0.12
-      fit: 0.11
     Amanita Charm:
       total: 0.6
       efficiency: 0.63
@@ -312,21 +312,21 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Genji's Guard
   - Berserker's Shield
   - Kinetic Cuirass
   - Nimble Ring
-  - Rod of Tahuti
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
+  - Genji's Guard
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Freya's Tears — physical protection
     swap_item: Freya's Tears
@@ -349,6 +349,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.54
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.69
+      win: 0.54
+      pick: 0.25
+      fit: 0.2
     Berserker's Shield:
       total: 0.55
       efficiency: 0.66
@@ -367,12 +373,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.3
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.67
-      pick: 0.12
-      fit: 0.06
     Amanita Charm:
       total: 0.53
       efficiency: 0.63
@@ -384,14 +384,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
-  - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
   - Shield of the Phoenix
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -400,8 +400,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -421,6 +421,12 @@ builds:
       efficiency: 0.69
       win: 0.54
       pick: 0.25
+      fit: 0.48
+    Breastplate of Valor:
+      total: 0.53
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.23
       fit: 0.48
     Jotunn's Revenge:
       total: 0.54
@@ -446,35 +452,29 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.64
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.77
-      win: 0.67
-      pick: 0.12
-      fit: 0.13
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
+  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
   - The Crusher
-  - Rod of Tahuti
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
   - Amanita Charm
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Dwarven Plate — physical protection
+    swap_item: Dwarven Plate
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -488,6 +488,12 @@ builds:
     Midgardian Mail, Spear of the Magus, Mantle Of Discord, Stone of Binding, Tekko-Kagi,
     Spear of Desolation, Tyrfing, Riptalon, Draconic Scale.'
   slot_scores:
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.69
+      win: 0.54
+      pick: 0.25
+      fit: 0.23
     Berserker's Shield:
       total: 0.54
       efficiency: 0.66
@@ -512,12 +518,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.47
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.77
-      win: 0.67
-      pick: 0.12
-      fit: 0.19
     Amanita Charm:
       total: 0.53
       efficiency: 0.63
@@ -604,11 +604,11 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
+  - The Crusher
   - Amanita Charm
   flex_slots:
-  - Rod of Tahuti
   - Freya's Tears
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -656,12 +656,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.52
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.67
-      pick: 0.12
-      fit: 0.1
+    The Crusher:
+      total: 0.53
+      efficiency: 0.64
+      win: 0.56
+      pick: 0.0
+      fit: 0.37
     Amanita Charm:
       total: 0.56
       efficiency: 0.63

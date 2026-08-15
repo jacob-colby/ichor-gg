@@ -2,7 +2,7 @@
 
 Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 
-**Mean coverage:** 44%  ·  **Win-weighted coverage:** 48%  ·  **Pooled rank corr:** 0.54 (n=415)
+**Mean coverage:** 45%  ·  **Win-weighted coverage:** 48%  ·  **Pooled rank corr:** 0.54 (n=415)
 
 | God | Coverage | Win-weighted | Community items |
 |---|---|---|---|
@@ -20,10 +20,10 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Artio | 50% | 67% | 4 |
 | Athena | 40% | 39% | 5 |
 | Atlas | 50% | 60% | 4 |
-| Awilix | 60% | 60% | 5 |
-| Bacchus | 25% | 30% | 4 |
+| Awilix | 40% | 41% | 5 |
+| Bacchus | 50% | 53% | 4 |
 | Baron Samedi | 25% | 29% | 4 |
-| Bastet | 60% | 64% | 5 |
+| Bastet | 80% | 82% | 5 |
 | Bellona | 20% | 24% | 5 |
 | Cabrakan | 20% | 20% | 5 |
 | Cerberus | 75% | 78% | 4 |
@@ -55,10 +55,10 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Jing Wei | 40% | 43% | 5 |
 | Jormungandr | 0% | 0% | 5 |
 | Kali | 40% | 40% | 5 |
-| Khepri | 25% | 25% | 4 |
-| Kukulkan | 50% | 53% | 4 |
+| Khepri | 0% | 0% | 4 |
+| Kukulkan | 75% | 80% | 4 |
 | Loki | 80% | 84% | 5 |
-| Medusa | 20% | 25% | 5 |
+| Medusa | 40% | 47% | 5 |
 | Mercury | 20% | 26% | 5 |
 | Merlin | 60% | 65% | 5 |
 | Mordred | 20% | 25% | 5 |
@@ -71,25 +71,25 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Odin | 60% | 67% | 5 |
 | Osiris | 25% | 37% | 4 |
 | Pele | 40% | 39% | 5 |
-| Poseidon | 60% | 62% | 5 |
+| Poseidon | 80% | 79% | 5 |
 | Princess Bari | 50% | 56% | 4 |
-| Ra | 80% | 80% | 5 |
+| Ra | 60% | 58% | 5 |
 | Rama | 20% | 22% | 5 |
 | Ratatoskr | 60% | 74% | 5 |
 | Scylla | 60% | 64% | 5 |
 | Sobek | 50% | 50% | 4 |
 | Sol | 80% | 86% | 5 |
-| Sun Wukong | 40% | 48% | 5 |
+| Sun Wukong | 20% | 29% | 5 |
 | Susano | 80% | 82% | 5 |
 | Sylvanus | 50% | 58% | 4 |
 | Thanatos | 80% | 83% | 5 |
 | The Morrigan | 40% | 37% | 5 |
 | Thor | 20% | 22% | 5 |
-| Tsukuyomi | 20% | 22% | 5 |
-| Ullr | 80% | 81% | 5 |
+| Tsukuyomi | 40% | 42% | 5 |
+| Ullr | 100% | 100% | 5 |
 | Vulcan | 75% | 77% | 4 |
 | Xbalanque | 60% | 59% | 5 |
 | Xing Tian | 40% | 43% | 5 |
-| Yemoja | 17% | 21% | 6 |
+| Yemoja | 0% | 0% | 6 |
 | Ymir | 67% | 66% | 3 |
 | Zeus | 60% | 67% | 5 |

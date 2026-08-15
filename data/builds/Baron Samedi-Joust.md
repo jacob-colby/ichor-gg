@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Void Shield
-  - Rod of Tahuti
+  - Freya's Tears
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -43,12 +43,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.48
     Spectral Armor:
       total: 0.55
       efficiency: 0.58
@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -234,12 +234,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
+    Void Shield:
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.64
     Spectral Armor:
       total: 0.56
       efficiency: 0.58
@@ -272,11 +272,11 @@ builds:
   - Stone of Binding
   - Void Shield
   - Void Stone
-  - Rod of Tahuti
+  - Erosion
   - Soul Gem
   flex_slots:
-  - Stone of Binding
   - Screeching Gargoyle
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -317,12 +317,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.77
+    Erosion:
+      total: 0.56
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.61
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Void Shield
-  - Rod of Tahuti
+  - Freya's Tears
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -500,12 +500,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.48
     Spectral Armor:
       total: 0.55
       efficiency: 0.58

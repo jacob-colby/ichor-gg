@@ -97,18 +97,18 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   - Shifter's Shield
-  - Rod of Tahuti
   - Amanita Charm
+  - Erosion
   flex_slots:
   - Shifter's Shield
-  - Rod of Tahuti
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -149,15 +149,15 @@ builds:
       win: 0.58
       pick: 0.17
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.58
-      pick: 0.0
-      fit: 0.12
     Amanita Charm:
       total: 0.58
       efficiency: 0.63
+      win: 0.58
+      pick: 0.0
+      fit: 0.67
+    Erosion:
+      total: 0.54
+      efficiency: 0.52
       win: 0.58
       pick: 0.0
       fit: 0.67
@@ -171,18 +171,18 @@ builds:
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
-  - Rod of Tahuti
+  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Berserker's Shield
-  - Rod of Tahuti
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Erosion — physical protection
     swap_item: Erosion
@@ -223,12 +223,12 @@ builds:
       win: 0.71
       pick: 0.12
       fit: 0.55
-    Rod of Tahuti:
+    Shifter's Shield:
       total: 0.55
-      efficiency: 0.77
+      efficiency: 0.52
       win: 0.58
-      pick: 0.0
-      fit: 0.13
+      pick: 0.17
+      fit: 0.65
     Amanita Charm:
       total: 0.62
       efficiency: 0.63
@@ -239,15 +239,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Freya's Tears
   - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Jotunn's Revenge
   - Kinetic Cuirass
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -256,8 +256,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -271,6 +271,12 @@ builds:
     Shield Splitter, Leviathan''s Hide, Runeforged Hammer, Midgardian Mail, Silverbranch
     Bow, Hydra''s Lament, Mantle Of Discord, Eye of the Storm, Helm of Radiance, Ancile.'
   slot_scores:
+    Stone of Binding:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.58
+      pick: 0.0
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.64
@@ -301,12 +307,6 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.48
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
-      win: 0.58
-      pick: 0.0
-      fit: 0.38
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -316,17 +316,17 @@ builds:
   - Kinetic Cuirass
   - Nimble Ring
   - Freya's Tears
-  - Rod of Tahuti
+  - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
+  - Amanita Charm
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -373,12 +373,12 @@ builds:
       win: 0.71
       pick: 0.12
       fit: 0.34
-    Rod of Tahuti:
+    Amanita Charm:
       total: 0.54
-      efficiency: 0.77
+      efficiency: 0.63
       win: 0.58
       pick: 0.0
-      fit: 0.07
+      fit: 0.36
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -387,11 +387,11 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Hydra's Lament
   - Freya's Tears
-  - Rod of Tahuti
   flex_slots:
   - Breastplate of Valor
-  - Rod of Tahuti
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -440,18 +440,18 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.61
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.56
+      win: 0.58
+      pick: 0.0
+      fit: 0.52
     Freya's Tears:
       total: 0.63
       efficiency: 0.59
       win: 0.71
       pick: 0.12
       fit: 0.64
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.58
-      pick: 0.0
-      fit: 0.13
   starter: *id001
 - source: suggested
   archetype: model
@@ -460,18 +460,18 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
+  - Erosion
   flex_slots:
   - Berserker's Shield
-  - Rod of Tahuti
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -512,15 +512,15 @@ builds:
       win: 0.71
       pick: 0.12
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.58
-      pick: 0.0
-      fit: 0.12
     Amanita Charm:
       total: 0.58
       efficiency: 0.63
+      win: 0.58
+      pick: 0.0
+      fit: 0.67
+    Erosion:
+      total: 0.54
+      efficiency: 0.52
       win: 0.58
       pick: 0.0
       fit: 0.67

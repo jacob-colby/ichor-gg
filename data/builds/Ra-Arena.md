@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Void Stone
   - Spear of Desolation
+  - Rod of Tahuti
   - Erosion
   - Soul Gem
   - Doublet of Binding
   flex_slots:
+  - Rod of Tahuti
   - Doublet of Binding
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -553,12 +553,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Void Stone:
       total: 0.59
       efficiency: 0.43
@@ -571,6 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Erosion:
       total: 0.59
       efficiency: 0.52
@@ -990,15 +990,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Void Stone
   - Spear of Desolation
+  - Rod of Tahuti
   - Erosion
   - Soul Gem
   - Doublet of Binding
   flex_slots:
+  - Rod of Tahuti
   - Doublet of Binding
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1015,12 +1015,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Void Stone:
       total: 0.59
       efficiency: 0.43
@@ -1033,6 +1027,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Erosion:
       total: 0.59
       efficiency: 0.52

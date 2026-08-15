@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Spear of Desolation
   - Spear of the Magus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,12 +122,12 @@ builds:
     of Valor, Jade Scepter, Bracer of The Abyss, Ethereal Staff, Alchemist Coat, Freya''s
     Tears, Book of Thoth.'
   slot_scores:
-    Gluttonous Grimoire:
-      total: 0.59
-      efficiency: 0.63
+    Nimble Ring:
+      total: 0.54
+      efficiency: 0.68
       win: 0.53
       pick: 0.0
-      fit: 0.89
+      fit: 0.42
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
@@ -232,15 +232,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
-  - Spear of Desolation
   - Spear of the Magus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -261,6 +261,12 @@ builds:
     Harp, Helm of Radiance, Blood-Bound Book, Rod of Asclepius, Kinetic Cuirass, Amanita
     Charm, Screeching Gargoyle, Triton''s Conch.'
   slot_scores:
+    Nimble Ring:
+      total: 0.51
+      efficiency: 0.68
+      win: 0.53
+      pick: 0.0
+      fit: 0.22
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
@@ -291,12 +297,6 @@ builds:
       win: 0.7
       pick: 0.32
       fit: 0.56
-    Soul Gem:
-      total: 0.57
-      efficiency: 0.57
-      win: 0.53
-      pick: 0.0
-      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: bruiser

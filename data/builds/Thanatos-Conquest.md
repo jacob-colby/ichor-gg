@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -128,6 +128,12 @@ builds:
       win: 0.57
       pick: 0.65
       fit: 1.0
+    Transcendence:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.0
+      fit: 0.52
     Hydra's Lament:
       total: 0.6
       efficiency: 0.56
@@ -140,12 +146,6 @@ builds:
       win: 0.6
       pick: 0.56
       fit: 0.91
-    Pendulum Blade:
-      total: 0.56
-      efficiency: 0.41
-      win: 0.59
-      pick: 0.0
-      fit: 1.0
     The Crusher:
       total: 0.64
       efficiency: 0.64
@@ -166,13 +166,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - The Crusher
-  - Heartseeker
   flex_slots:
   - Genji's Guard
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -205,6 +205,12 @@ builds:
       win: 0.57
       pick: 0.65
       fit: 0.71
+    Transcendence:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.0
+      fit: 0.39
     Hydra's Lament:
       total: 0.59
       efficiency: 0.56
@@ -223,32 +229,26 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.57
-    Heartseeker:
-      total: 0.54
-      efficiency: 0.41
-      win: 0.62
-      pick: 0.38
-      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -262,18 +262,18 @@ builds:
     Amanita Charm, Screeching Gargoyle, Golden Blade, Chandra''s Grace, Eye of Providence,
     Transcendence, Avenging Blade, Oni Hunter''s Garb.'
   slot_scores:
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.69
-      win: 0.59
-      pick: 0.0
-      fit: 0.22
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.64
       win: 0.57
       pick: 0.65
       fit: 0.78
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.0
+      fit: 0.22
     Hydra's Lament:
       total: 0.57
       efficiency: 0.56
@@ -373,14 +373,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Tekko-Kagi
   - The Crusher
   - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Tekko-Kagi
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -407,6 +407,12 @@ builds:
       win: 0.57
       pick: 0.65
       fit: 1.0
+    Transcendence:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.0
+      fit: 0.33
     Hydra's Lament:
       total: 0.56
       efficiency: 0.56
@@ -418,12 +424,6 @@ builds:
       efficiency: 0.52
       win: 0.6
       pick: 0.56
-      fit: 0.94
-    Tekko-Kagi:
-      total: 0.56
-      efficiency: 0.44
-      win: 0.59
-      pick: 0.0
       fit: 0.94
     The Crusher:
       total: 0.64
@@ -581,14 +581,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -615,6 +615,12 @@ builds:
       win: 0.57
       pick: 0.65
       fit: 1.0
+    Transcendence:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.0
+      fit: 0.52
     Hydra's Lament:
       total: 0.6
       efficiency: 0.56
@@ -627,12 +633,6 @@ builds:
       win: 0.6
       pick: 0.56
       fit: 0.91
-    Pendulum Blade:
-      total: 0.56
-      efficiency: 0.41
-      win: 0.59
-      pick: 0.0
-      fit: 1.0
     The Crusher:
       total: 0.64
       efficiency: 0.64

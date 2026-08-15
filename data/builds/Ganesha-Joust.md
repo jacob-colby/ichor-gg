@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - The Crusher
-  - Rod of Tahuti
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Jotunn's Revenge:
+      total: 0.52
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.59
@@ -435,12 +441,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.32
     Erosion:
       total: 0.57
       efficiency: 0.52

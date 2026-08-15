@@ -96,22 +96,22 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
+  - Shifter's Shield
   - Amanita Charm
   - Stampede
   flex_slots:
   - Berserker's Shield
-  - Rod of Tahuti
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
-  - vs_tag: physical_heavy
-    swap: Prophetic Cloak — physical protection
+    swap: Prophetic Cloak — magical protection
     swap_item: Prophetic Cloak
+  - vs_tag: physical_heavy
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -143,12 +143,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Rod of Tahuti:
+    Shifter's Shield:
       total: 0.51
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.13
+      efficiency: 0.52
+      win: 0.48
+      pick: 0.25
+      fit: 0.68
     Amanita Charm:
       total: 0.55
       efficiency: 0.63
@@ -170,22 +170,22 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Rod of Tahuti
+  - Freya's Tears
   - Amanita Charm
   - Stampede
   flex_slots:
   - Berserker's Shield
-  - Rod of Tahuti
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -217,12 +217,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
-    Rod of Tahuti:
+    Freya's Tears:
       total: 0.51
-      efficiency: 0.77
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.13
+      fit: 0.54
     Amanita Charm:
       total: 0.59
       efficiency: 0.63
@@ -239,15 +239,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
   - Stampede
   flex_slots:
-  - Jotunn's Revenge
   - Stampede
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -256,8 +256,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -271,6 +271,12 @@ builds:
     Runeforged Hammer, Midgardian Mail, Silverbranch Bow, Mantle Of Discord, Hydra''s
     Lament, Eye of the Storm, Helm of Radiance, Ancile, Breastplate of Valor.'
   slot_scores:
+    Stone of Binding:
+      total: 0.5
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
@@ -295,12 +301,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Stampede:
       total: 0.5
       efficiency: 0.48
@@ -315,15 +315,15 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Nimble Ring
-  - Rod of Tahuti
   - Amanita Charm
+  - Stampede
   flex_slots:
-  - Amanita Charm
+  - Stampede
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -367,18 +367,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
-    Rod of Tahuti:
-      total: 0.5
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.07
     Amanita Charm:
       total: 0.5
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.37
+    Stampede:
+      total: 0.49
+      efficiency: 0.48
+      win: 0.62
+      pick: 0.19
+      fit: 0.24
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -388,14 +388,14 @@ builds:
   - Prophetic Cloak
   - Shield of the Phoenix
   - Freya's Tears
-  - Rod of Tahuti
+  - Stampede
   flex_slots:
-  - Rod of Tahuti
   - Prophetic Cloak
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -446,12 +446,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Rod of Tahuti:
-      total: 0.51
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.13
+    Stampede:
+      total: 0.5
+      efficiency: 0.48
+      win: 0.62
+      pick: 0.19
+      fit: 0.29
   starter: *id001
 - source: suggested
   archetype: strength
@@ -460,15 +460,15 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - The Crusher
-  - Rod of Tahuti
   - Amanita Charm
+  - Stampede
   flex_slots:
-  - Berserker's Shield
   - Amanita Charm
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
@@ -513,31 +513,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Rod of Tahuti:
-      total: 0.52
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.19
     Amanita Charm:
       total: 0.51
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Stampede:
+      total: 0.5
+      efficiency: 0.48
+      win: 0.62
+      pick: 0.19
+      fit: 0.27
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
+  - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Gluttonous Grimoire
   - The Crusher
-  - Rod of Tahuti
   - Stampede
   flex_slots:
-  - Jotunn's Revenge
   - Stampede
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -546,8 +546,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -562,6 +562,12 @@ builds:
     Pendant, Jade Scepter, Midgardian Mail, Avenging Blade, Mantle Of Discord, Damaru,
     Stone of Binding, Breastplate of Valor.'
   slot_scores:
+    Berserker's Shield:
+      total: 0.49
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.27
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.64
@@ -586,12 +592,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
     Stampede:
       total: 0.5
       efficiency: 0.48
@@ -606,21 +606,21 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
+  - Erosion
   flex_slots:
   - Berserker's Shield
-  - Rod of Tahuti
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -659,15 +659,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.51
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.13
     Amanita Charm:
       total: 0.55
       efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Erosion:
+      total: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.68

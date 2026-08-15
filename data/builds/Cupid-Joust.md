@@ -10,11 +10,11 @@ builds:
   - Jotunn's Revenge
   - Death Metal
   - Riptalon
-  - Rod of Tahuti
+  - The Crusher
   - Soul Gem
   flex_slots:
-  - Death Metal
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -55,12 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
+    The Crusher:
+      total: 0.51
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.29
+      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -139,10 +139,10 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Death Metal
   - Damaru
   - Demon Blade
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Damaru
@@ -169,6 +169,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     Death Metal:
       total: 0.53
       efficiency: 0.56
@@ -187,12 +193,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.29
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -336,12 +336,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -376,18 +376,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Void Stone:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     The Crusher:
       total: 0.56
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -399,14 +399,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Tyrfing
   - Nimble Ring
   - Riptalon
   - Silverbranch Bow
-  - Rod of Tahuti
   flex_slots:
-  - Tyrfing
   - Silverbranch Bow
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,6 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Jotunn's Revenge:
+      total: 0.48
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
     Tyrfing:
       total: 0.49
       efficiency: 0.46
@@ -453,12 +459,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.51
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.25
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -532,11 +532,11 @@ builds:
   - Jotunn's Revenge
   - Death Metal
   - Riptalon
-  - Rod of Tahuti
+  - The Crusher
   - Soul Gem
   flex_slots:
-  - Death Metal
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -577,12 +577,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.77
+    The Crusher:
+      total: 0.51
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.29
+      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57

@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - The Reaper
   - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
   - Pendulum Blade
-  - Titan's Bane
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -37,6 +37,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     The Reaper:
       total: 0.76
       efficiency: 0.52
@@ -61,12 +67,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Titan's Bane:
-      total: 0.68
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.91
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
+    Transcendence:
+      total: 0.45
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Hydra's Lament:
       total: 0.59
       efficiency: 0.56
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Pendulum Blade:
-      total: 0.51
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     The Crusher:
       total: 0.6
       efficiency: 0.64
@@ -464,14 +464,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - The Reaper
   - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
   - Pendulum Blade
-  - Titan's Bane
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -494,6 +494,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Transcendence:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     The Reaper:
       total: 0.76
       efficiency: 0.52
@@ -518,11 +524,5 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Titan's Bane:
-      total: 0.68
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.91
   starter: *id001
 ---

@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Rod of Tahuti
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -234,12 +234,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
+    Void Shield:
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.66
     Spectral Armor:
       total: 0.57
       efficiency: 0.58

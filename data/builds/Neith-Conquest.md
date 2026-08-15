@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
+  - Death Metal
   - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
   flex_slots:
-  - Jotunn's Revenge
   - Silverbranch Bow
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -131,12 +131,12 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.36
-    Nimble Ring:
-      total: 0.52
-      efficiency: 0.68
+    Death Metal:
+      total: 0.48
+      efficiency: 0.56
       win: 0.47
       pick: 0.0
-      fit: 0.44
+      fit: 0.49
     Gluttonous Grimoire:
       total: 0.51
       efficiency: 0.63
@@ -169,8 +169,8 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
@@ -210,18 +210,18 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.44
-    Nimble Ring:
-      total: 0.51
-      efficiency: 0.68
-      win: 0.47
-      pick: 0.0
-      fit: 0.4
     Death Metal:
       total: 0.49
       efficiency: 0.56
       win: 0.47
       pick: 0.0
       fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.5
+      efficiency: 0.63
+      win: 0.47
+      pick: 0.0
+      fit: 0.45
     The Crusher:
       total: 0.5
       efficiency: 0.64
@@ -238,8 +238,8 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Nimble Ring
   - Death Metal
+  - Gluttonous Grimoire
   - Damaru
   - The Crusher
   - Deathbringer
@@ -270,18 +270,18 @@ builds:
     Oni Hunter''s Garb, Rod of Asclepius, Dominance, Shield of the Phoenix, Deathbringer,
     Jade Scepter.'
   slot_scores:
-    Nimble Ring:
-      total: 0.52
-      efficiency: 0.68
-      win: 0.47
-      pick: 0.0
-      fit: 0.42
     Death Metal:
       total: 0.49
       efficiency: 0.56
       win: 0.47
       pick: 0.0
       fit: 0.51
+    Gluttonous Grimoire:
+      total: 0.51
+      efficiency: 0.63
+      win: 0.47
+      pick: 0.0
+      fit: 0.48
     Damaru:
       total: 0.47
       efficiency: 0.57
@@ -310,22 +310,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Gluttonous Grimoire
-  - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
   flex_slots:
-  - Silverbranch Bow
-  - Genji's Guard
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -342,11 +342,11 @@ builds:
     Talon, Oni Hunter''s Garb, Helm of Radiance, Pendulum Blade, Doom Orb, Rod of
     Asclepius, Dominance.'
   slot_scores:
-    Genji's Guard:
-      total: 0.48
-      efficiency: 0.69
-      win: 0.47
-      pick: 0.0
+    Book of Thoth:
+      total: 0.42
+      efficiency: 0.49
+      win: 0.48
+      pick: 0.15
       fit: 0.13
     Jotunn's Revenge:
       total: 0.51
@@ -354,18 +354,18 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.46
+    Transcendence:
+      total: 0.42
+      efficiency: 0.52
+      win: 0.47
+      pick: 0.0
+      fit: 0.13
     Gluttonous Grimoire:
       total: 0.51
       efficiency: 0.63
       win: 0.47
       pick: 0.0
       fit: 0.49
-    Silverbranch Bow:
-      total: 0.49
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.17
-      fit: 0.37
     The Crusher:
       total: 0.5
       efficiency: 0.64
@@ -525,15 +525,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Berserker's Shield
   - Jotunn's Revenge
   - Nimble Ring
   - Riptalon
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Jotunn's Revenge
   - Riptalon
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -542,8 +542,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -557,6 +557,12 @@ builds:
     Garb, Helm of Radiance, Rod of Asclepius, Dominance, Shield of the Phoenix, Shogun''s
     Ofuda.'
   slot_scores:
+    Berserker's Shield:
+      total: 0.47
+      efficiency: 0.66
+      win: 0.47
+      pick: 0.0
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.48
       efficiency: 0.64
@@ -587,25 +593,19 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.33
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.27
-      fit: 0.25
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Silverbranch Bow
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -614,8 +614,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -632,6 +632,12 @@ builds:
     Genji's Guard:
       total: 0.5
       efficiency: 0.69
+      win: 0.47
+      pick: 0.0
+      fit: 0.28
+    Breastplate of Valor:
+      total: 0.48
+      efficiency: 0.64
       win: 0.47
       pick: 0.0
       fit: 0.28
@@ -653,12 +659,6 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.31
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.27
-      fit: 0.21
     Soul Gem:
       total: 0.49
       efficiency: 0.57
@@ -669,15 +669,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Nimble Ring
-  - Death Metal
-  - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
   flex_slots:
-  - Death Metal
-  - Silverbranch Bow
+  - Book of Thoth
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -701,30 +701,30 @@ builds:
     Pharaoh''s Curse, Gem of Focus, Jade Scepter, Eye of Providence, Shield of the
     Phoenix, Oni Hunter''s Garb, Doom Orb.'
   slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.49
+      win: 0.48
+      pick: 0.15
+      fit: 0.21
     Jotunn's Revenge:
       total: 0.49
       efficiency: 0.64
       win: 0.47
       pick: 0.0
       fit: 0.36
+    Transcendence:
+      total: 0.41
+      efficiency: 0.52
+      win: 0.47
+      pick: 0.0
+      fit: 0.11
     Nimble Ring:
       total: 0.52
       efficiency: 0.68
       win: 0.47
       pick: 0.0
       fit: 0.46
-    Death Metal:
-      total: 0.49
-      efficiency: 0.56
-      win: 0.47
-      pick: 0.0
-      fit: 0.5
-    Silverbranch Bow:
-      total: 0.48
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.17
-      fit: 0.32
     The Crusher:
       total: 0.49
       efficiency: 0.64
@@ -741,15 +741,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Nimble Ring
-  - Death Metal
-  - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
   flex_slots:
-  - Death Metal
-  - Silverbranch Bow
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -773,30 +773,30 @@ builds:
     Curse, Dominance, Rod of Asclepius, Freya''s Tears, Eye of Providence, Oni Hunter''s
     Garb, Jade Scepter, Shield of the Phoenix, Deathbringer.'
   slot_scores:
+    Book of Thoth:
+      total: 0.42
+      efficiency: 0.49
+      win: 0.48
+      pick: 0.15
+      fit: 0.17
     Jotunn's Revenge:
       total: 0.49
       efficiency: 0.64
       win: 0.47
       pick: 0.0
       fit: 0.39
+    Transcendence:
+      total: 0.42
+      efficiency: 0.52
+      win: 0.47
+      pick: 0.0
+      fit: 0.17
     Nimble Ring:
       total: 0.52
       efficiency: 0.68
       win: 0.47
       pick: 0.0
       fit: 0.43
-    Death Metal:
-      total: 0.49
-      efficiency: 0.56
-      win: 0.47
-      pick: 0.0
-      fit: 0.53
-    Silverbranch Bow:
-      total: 0.48
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.17
-      fit: 0.33
     The Crusher:
       total: 0.5
       efficiency: 0.64

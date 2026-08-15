@@ -1281,14 +1281,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Ethereal Staff
-  - Runeforged Hammer
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Ethereal Staff
-  - Runeforged Hammer
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1318,18 +1318,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.52
+    Transcendence:
+      total: 0.46
+      efficiency: 0.52
+      win: 0.54
+      pick: 0.0
+      fit: 0.26
     Ethereal Staff:
       total: 0.54
       efficiency: 0.51
       win: 0.67
       pick: 0.18
       fit: 0.31
-    Runeforged Hammer:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.0
-      fit: 0.53
     The Crusher:
       total: 0.54
       efficiency: 0.64

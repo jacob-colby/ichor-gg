@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
+  - Jotunn's Revenge
   - Bragi's Harp
-  - Rod of Tahuti
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
   - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -43,18 +43,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Bragi's Harp:
       total: 0.56
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.38
     Pharaoh's Curse:
       total: 0.55
       efficiency: 0.55
@@ -141,11 +141,11 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
+  - Spear of Desolation
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
+  - Spear of Desolation
   - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -181,18 +181,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     The Crusher:
       total: 0.57
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -271,12 +271,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -311,18 +311,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Void Stone:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     The Crusher:
       total: 0.6
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
+  - Jotunn's Revenge
   - Bragi's Harp
-  - Rod of Tahuti
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
   - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -500,18 +500,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Bragi's Harp:
       total: 0.56
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.38
     Pharaoh's Curse:
       total: 0.55
       efficiency: 0.55

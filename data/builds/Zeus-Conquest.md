@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Spear of Desolation
-  - The Cosmic Horror
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Genji's Guard
-  - The Cosmic Horror
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,6 +122,12 @@ builds:
     Helm of Radiance, Rod of Asclepius, Gem of Focus, Dreamer''s Idol, Totem of Death,
     Freya''s Tears, Jade Scepter, Kinetic Cuirass, Typhon’s Heart.'
   slot_scores:
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.54
+      pick: 0.1
+      fit: 0.26
     Genji's Guard:
       total: 0.54
       efficiency: 0.69
@@ -134,12 +140,6 @@ builds:
       win: 0.65
       pick: 0.22
       fit: 0.63
-    The Cosmic Horror:
-      total: 0.52
-      efficiency: 0.58
-      win: 0.54
-      pick: 0.0
-      fit: 0.5
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.77
@@ -303,21 +303,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Genji's Guard
+  - Nimble Ring
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
-  - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Nimble Ring
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -337,6 +337,12 @@ builds:
       win: 0.6
       pick: 0.13
       fit: 0.2
+    Nimble Ring:
+      total: 0.54
+      efficiency: 0.68
+      win: 0.54
+      pick: 0.0
+      fit: 0.39
     Spear of Desolation:
       total: 0.54
       efficiency: 0.52
@@ -355,12 +361,6 @@ builds:
       win: 0.64
       pick: 0.24
       fit: 0.3
-    Amanita Charm:
-      total: 0.57
-      efficiency: 0.63
-      win: 0.54
-      pick: 0.0
-      fit: 0.69
     Soul Gem:
       total: 0.65
       efficiency: 0.57

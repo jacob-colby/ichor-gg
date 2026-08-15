@@ -168,8 +168,8 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
-  - Nimble Ring
   - Dominance
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
   - Rod of Tahuti
@@ -205,18 +205,18 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.15
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.56
-      pick: 0.0
-      fit: 0.4
     Dominance:
       total: 0.63
       efficiency: 0.47
       win: 0.87
       pick: 0.18
       fit: 0.4
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.56
+      pick: 0.0
+      fit: 0.45
     Silverbranch Bow:
       total: 0.65
       efficiency: 0.52
@@ -241,10 +241,10 @@ builds:
   slot_order:
   - Death Metal
   - Dominance
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - Damaru
   - Deathbringer
-  - Rod of Tahuti
   flex_slots:
   - Damaru
   - Deathbringer
@@ -283,6 +283,12 @@ builds:
       win: 0.87
       pick: 0.18
       fit: 0.31
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.63
+      win: 0.56
+      pick: 0.0
+      fit: 0.47
     Silverbranch Bow:
       total: 0.66
       efficiency: 0.52
@@ -301,32 +307,26 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.36
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.29
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
+  - Genji's Guard
   - Jotunn's Revenge
   - Dominance
   - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - The Crusher
   - Jotunn's Revenge
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -343,6 +343,12 @@ builds:
     Curse, Eye of Providence, Bancroft''s Talon, Oni Hunter''s Garb, Helm of Radiance,
     Pendulum Blade, Doom Orb, Rod of Asclepius.'
   slot_scores:
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.69
+      win: 0.56
+      pick: 0.0
+      fit: 0.13
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
@@ -373,12 +379,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -387,11 +387,11 @@ builds:
   - Dominance
   - Riptalon
   - Silverbranch Bow
-  - Rod of Tahuti
+  - The Crusher
   - Amanita Charm
   flex_slots:
-  - Rod of Tahuti
   - Berserker's Shield
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -440,12 +440,12 @@ builds:
       win: 0.93
       pick: 0.24
       fit: 0.25
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
+    The Crusher:
+      total: 0.52
+      efficiency: 0.64
       win: 0.56
       pick: 0.0
-      fit: 0.21
+      fit: 0.31
     Amanita Charm:
       total: 0.56
       efficiency: 0.63
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Berserker's Shield
   - Nimble Ring
   - Dominance
   - Riptalon
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Riptalon
   - The Crusher
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -545,8 +545,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -560,6 +560,12 @@ builds:
     Freya''s Tears, Bancroft''s Talon, Oni Hunter''s Garb, Helm of Radiance, Rod of
     Asclepius, Shield of the Phoenix, Shogun''s Ofuda, Toxic Blade.'
   slot_scores:
+    Berserker's Shield:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.56
+      pick: 0.0
+      fit: 0.2
     Nimble Ring:
       total: 0.55
       efficiency: 0.68
@@ -590,12 +596,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.33
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.25
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -604,11 +604,11 @@ builds:
   - Jotunn's Revenge
   - Dominance
   - Silverbranch Bow
-  - Rod of Tahuti
+  - The Crusher
   - Soul Gem
   flex_slots:
-  - Genji's Guard
   - Jotunn's Revenge
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -657,12 +657,12 @@ builds:
       win: 0.93
       pick: 0.24
       fit: 0.31
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
+    The Crusher:
+      total: 0.52
+      efficiency: 0.64
       win: 0.56
       pick: 0.0
-      fit: 0.21
+      fit: 0.31
     Soul Gem:
       total: 0.55
       efficiency: 0.57
@@ -965,15 +965,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Genji's Guard
   - Jotunn's Revenge
   - Dominance
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Jotunn's Revenge
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -998,6 +998,12 @@ builds:
     Providence, Jade Scepter, Spectral Armor, Bragi''s Harp, Helm of Radiance, Bracer
     of The Abyss.'
   slot_scores:
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.69
+      win: 0.56
+      pick: 0.0
+      fit: 0.13
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
@@ -1022,12 +1028,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.41
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.31
     Soul Gem:
       total: 0.58
       efficiency: 0.57
@@ -1042,12 +1042,12 @@ builds:
   - Berserker's Shield
   - Dominance
   - Silverbranch Bow
-  - Rod of Tahuti
+  - The Crusher
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Berserker's Shield
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -1090,12 +1090,12 @@ builds:
       win: 0.93
       pick: 0.24
       fit: 0.2
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
+    The Crusher:
+      total: 0.52
+      efficiency: 0.64
       win: 0.56
       pick: 0.0
-      fit: 0.21
+      fit: 0.32
     Amanita Charm:
       total: 0.56
       efficiency: 0.63
@@ -1115,13 +1115,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Dominance
+  - The Cosmic Horror
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Jotunn's Revenge
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1157,6 +1157,12 @@ builds:
       win: 0.87
       pick: 0.18
       fit: 0.23
+    The Cosmic Horror:
+      total: 0.51
+      efficiency: 0.58
+      win: 0.56
+      pick: 0.0
+      fit: 0.37
     Silverbranch Bow:
       total: 0.67
       efficiency: 0.52
@@ -1169,12 +1175,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.48
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.37
     Soul Gem:
       total: 0.58
       efficiency: 0.57
@@ -1186,15 +1186,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Berserker's Shield
   - Dominance
   - Riptalon
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Soul Gem
   - The Crusher
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1203,8 +1203,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -1218,6 +1218,12 @@ builds:
     Bracer of The Abyss, Bragi''s Harp, Chronos'' Pendant, Lifebinder, Obsidian Shard,
     Eye of Providence, Shogun''s Ofuda, Freya''s Tears, Tekko-Kagi, Toxic Blade.'
   slot_scores:
+    Berserker's Shield:
+      total: 0.52
+      efficiency: 0.66
+      win: 0.56
+      pick: 0.0
+      fit: 0.26
     Dominance:
       total: 0.61
       efficiency: 0.47
@@ -1242,12 +1248,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.31
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.56
-      pick: 0.0
-      fit: 0.23
     Soul Gem:
       total: 0.55
       efficiency: 0.57
@@ -1263,10 +1263,10 @@ builds:
   - Jotunn's Revenge
   - Dominance
   - Silverbranch Bow
-  - Rod of Tahuti
+  - The Crusher
   - Soul Gem
   flex_slots:
-  - Genji's Guard
+  - The Crusher
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1316,12 +1316,12 @@ builds:
       win: 0.93
       pick: 0.24
       fit: 0.23
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
+    The Crusher:
+      total: 0.52
+      efficiency: 0.64
       win: 0.56
       pick: 0.0
-      fit: 0.2
+      fit: 0.3
     Soul Gem:
       total: 0.58
       efficiency: 0.57

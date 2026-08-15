@@ -268,14 +268,14 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Screeching Gargoyle
   - Void Shield
   - Void Stone
-  - Rod of Tahuti
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Erosion
+  - Screeching Gargoyle
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -293,6 +293,12 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.57
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Void Shield:
       total: 0.71
       efficiency: 0.46
@@ -305,12 +311,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.97
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Spectral Armor:
       total: 0.57
       efficiency: 0.58

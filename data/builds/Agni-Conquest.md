@@ -579,14 +579,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
-  - Death Metal
+  - Transcendence
   - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Death Metal
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -615,12 +615,12 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.65
-    Death Metal:
-      total: 0.54
-      efficiency: 0.56
+    Transcendence:
+      total: 0.49
+      efficiency: 0.52
       win: 0.58
       pick: 0.0
-      fit: 0.55
+      fit: 0.32
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
@@ -790,12 +790,12 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Obsidian Shard
@@ -819,6 +819,12 @@ builds:
     Asclepius, Bancroft''s Talon, Jade Scepter, Bragi''s Harp, Ethereal Staff, Freya''s
     Tears, Alchemist Coat.'
   slot_scores:
+    Nimble Ring:
+      total: 0.57
+      efficiency: 0.68
+      win: 0.58
+      pick: 0.0
+      fit: 0.5
     Spear of Desolation:
       total: 0.59
       efficiency: 0.52
@@ -849,12 +855,6 @@ builds:
       win: 0.58
       pick: 0.32
       fit: 0.68
-    Soul Gem:
-      total: 0.62
-      efficiency: 0.57
-      win: 0.59
-      pick: 0.22
-      fit: 0.96
   starter: *id001
   aspect: Aspect of Combustion
 - source: suggested
@@ -1283,14 +1283,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
-  - Death Metal
+  - Transcendence
   - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Death Metal
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1319,12 +1319,12 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.65
-    Death Metal:
-      total: 0.54
-      efficiency: 0.56
+    Transcendence:
+      total: 0.49
+      efficiency: 0.52
       win: 0.58
       pick: 0.0
-      fit: 0.55
+      fit: 0.32
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52

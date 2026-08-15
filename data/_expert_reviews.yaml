@@ -43,7 +43,7 @@ reviews:
     quote: >-
       Ullr's build is almost always Transcendence, Heartseeker, Hydras,
       Jotunn's, etc.
-    status: open
+    status: resolved
     notes: >-
       Partly addressed. At the time of the review the model's core was
       Lernaean Bow / Berserker's Shield / Jotunn's / Riptalon / Damaru /
@@ -83,6 +83,19 @@ reviews:
       _weights.yaml is one value away. So this claim is now open for the SAME
       reason twice over: two independent fixes each do what the reviewer asked
       on the item they named, and the only gate available refuses both.
+
+      RESOLVED 2026-08-14, BY DECISION RATHER THAN BY MEASUREMENT. The
+      maintainer turned `conversion_passes` to 3. Ullr's core now holds
+      Transcendence, Heartseeker, Hydra's Lament and Jotunn's Revenge - all
+      four items named, 5 of 6 against his community build - and the checker
+      reads `clear` on its own terms rather than through a flavor.
+
+      What has NOT changed is the evidence. The gate still prefers one pass on
+      the probe corner; this claim closed because a human weighed the
+      item-level calibration and an expert's judgement above a coverage figure
+      that STATE.md section 1 says cannot adjudicate it. That is a defensible
+      call and it is not a measurement. If a non-circular gate ever exists,
+      this is among the first things it should be pointed at.
 
   - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
     date: 2026-08-09

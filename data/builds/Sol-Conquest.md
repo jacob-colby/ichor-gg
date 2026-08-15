@@ -303,10 +303,10 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
+  - Nimble Ring
   - Bragi's Harp
   - Rod of Tahuti
   - Obsidian Shard
-  - Amanita Charm
   - Soul Gem
   flex_slots:
   - Bragi's Harp
@@ -316,8 +316,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -338,6 +338,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.48
+    Nimble Ring:
+      total: 0.53
+      efficiency: 0.68
+      win: 0.51
+      pick: 0.0
+      fit: 0.41
     Bragi's Harp:
       total: 0.53
       efficiency: 0.42
@@ -356,12 +362,6 @@ builds:
       win: 0.7
       pick: 0.24
       fit: 0.28
-    Amanita Charm:
-      total: 0.55
-      efficiency: 0.63
-      win: 0.51
-      pick: 0.0
-      fit: 0.68
     Soul Gem:
       total: 0.66
       efficiency: 0.57
