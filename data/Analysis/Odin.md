@@ -2,15 +2,15 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.65 | 0.58 | 0.64 | 0.74 | 0.41 | 0.46 | undervalued |  |  |
-| Genji's Guard | 0.62 | 0.57 | 0.69 | 0.71 | 0.37 | 0.29 | undervalued |  |  |
-| Shifter's Shield | 0.61 | 0.52 | 0.52 | 0.74 | 0.34 | 0.54 | fair |  |  |
-| Kinetic Cuirass | 0.60 | 0.61 | 0.59 | 0.67 | 0.00 | 0.64 | fair | burst | **UNDERRATED** |
+| Genji's Guard | 0.64 | 0.57 | 0.69 | 0.74 | 0.39 | 0.29 | undervalued |  |  |
+| Jotunn's Revenge | 0.63 | 0.58 | 0.64 | 0.71 | 0.43 | 0.46 | undervalued |  |  |
 | Amanita Charm | 0.60 | 0.60 | 0.63 | 0.67 | 0.00 | 0.54 | undervalued | sustain, aura | **UNDERRATED** |
 | Eye of Providence | 0.60 | 0.59 | 0.62 | 0.67 | 0.00 | 0.54 | undervalued | ward-economy | **UNDERRATED** |
 | The Crusher | 0.59 | 0.59 | 0.64 | 0.67 | 0.00 | 0.46 | undervalued | burst | **UNDERRATED** |
-| Freya's Tears | 0.59 | 0.56 | 0.59 | 0.67 | 0.22 | 0.49 | fair |  |  |
+| Kinetic Cuirass | 0.59 | 0.61 | 0.59 | 0.63 | 0.15 | 0.64 | fair | burst |  |
+| Freya's Tears | 0.59 | 0.56 | 0.59 | 0.67 | 0.17 | 0.49 | fair |  |  |
 | Berserker's Shield | 0.58 | 0.56 | 0.66 | 0.67 | 0.00 | 0.35 | undervalued |  | **UNDERRATED** |
+| Shifter's Shield | 0.57 | 0.52 | 0.52 | 0.65 | 0.33 | 0.54 | fair |  |  |
 | Shield Splitter | 0.57 | 0.54 | 0.51 | 0.67 | 0.00 | 0.59 | fair |  | **UNDERRATED** |
 | Oni Hunter's Garb | 0.57 | 0.53 | 0.61 | 0.67 | 0.00 | 0.35 | undervalued |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.57 | 0.53 | 0.57 | 0.67 | 0.00 | 0.45 | fair | sustain | **UNDERRATED** |
@@ -58,9 +58,9 @@
 | Tyrfing | 0.51 | 0.41 | 0.46 | 0.67 | 0.00 | 0.31 | fair | burst |  |
 | Silverbranch Bow | 0.51 | 0.41 | 0.52 | 0.67 | 0.00 | 0.15 | fair |  |  |
 | Stygian Anchor | 0.50 | 0.40 | 0.41 | 0.67 | 0.00 | 0.38 | premium | anti-heal |  |
-| Breastplate of Valor | 0.50 | 0.53 | 0.64 | 0.50 | 0.20 | 0.29 | undervalued |  |  |
 | Glorious Pridwen | 0.50 | 0.40 | 0.36 | 0.67 | 0.00 | 0.49 | premium | sustain |  |
 | Shroud of Vengeance | 0.50 | 0.40 | 0.36 | 0.67 | 0.00 | 0.48 | premium | burst |  |
+| Breastplate of Valor | 0.50 | 0.53 | 0.64 | 0.50 | 0.15 | 0.29 | undervalued |  |  |
 | Toxic Blade | 0.50 | 0.39 | 0.43 | 0.67 | 0.00 | 0.31 | fair | anti-heal |  |
 | Dominance | 0.50 | 0.39 | 0.47 | 0.67 | 0.00 | 0.21 | fair |  |  |
 | Sanguine Lash | 0.49 | 0.39 | 0.38 | 0.67 | 0.00 | 0.40 | premium | aura |  |
@@ -72,7 +72,7 @@
 | Spirit Robe | 0.48 | 0.37 | 0.36 | 0.67 | 0.00 | 0.38 | premium | sustain |  |
 | Regrowth Striders | 0.48 | 0.37 | 0.40 | 0.67 | 0.00 | 0.29 | premium | mobility, sustain |  |
 | Dwarven Plate | 0.48 | 0.36 | 0.35 | 0.67 | 0.00 | 0.38 | premium |  |  |
-| Mystical Mail | 0.48 | 0.41 | 0.44 | 0.60 | 0.07 | 0.35 | fair | aura, wave-clear |  |
+| Mystical Mail | 0.48 | 0.41 | 0.44 | 0.60 | 0.05 | 0.35 | fair | aura, wave-clear |  |
 | Musashi's Dual Swords | 0.48 | 0.35 | 0.42 | 0.67 | 0.00 | 0.21 | premium | mobility |  |
 | Bloodforge | 0.48 | 0.35 | 0.42 | 0.67 | 0.00 | 0.21 | premium | sustain |  |
 | Rage | 0.47 | 0.34 | 0.39 | 0.67 | 0.00 | 0.21 | premium |  |  |
@@ -82,9 +82,9 @@
 | Heartwood Charm | 0.45 | 0.30 | 0.33 | 0.67 | 0.00 | 0.26 | premium |  |  |
 | Eye of Erebus | 0.45 | 0.30 | 0.32 | 0.67 | 0.00 | 0.26 | premium | ward-economy |  |
 | Devourer's Gauntlet | 0.45 | 0.29 | 0.32 | 0.67 | 0.00 | 0.21 | premium | sustain |  |
-| Contagion | 0.44 | 0.35 | 0.39 | 0.57 | 0.24 | 0.25 | premium | anti-heal, burst |  |
 | Qin's Blade | 0.44 | 0.28 | 0.36 | 0.67 | 0.00 | 0.10 | premium | burst |  |
 | Odysseus' Bow | 0.44 | 0.28 | 0.36 | 0.67 | 0.00 | 0.10 | premium | burst, wave-clear |  |
+| Contagion | 0.44 | 0.35 | 0.39 | 0.57 | 0.19 | 0.25 | premium | anti-heal, burst |  |
 | Resolute Mantle | 0.43 | 0.25 | 0.30 | 0.67 | 0.00 | 0.15 | premium | cc-immunity, sustain |  |
 | Dagger of Frenzy | 0.43 | 0.25 | 0.36 | 0.67 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.42 | 0.24 | 0.18 | 0.67 | 0.00 | 0.38 | premium | anti-heal |  |
