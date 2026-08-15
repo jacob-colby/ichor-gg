@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Heroic Tutor
-  aspect_pick_rate: 0.37
-  aspect_win_rate: 0.59
+  aspect_pick_rate: 0.42
+  aspect_win_rate: 0.6
   slot_order:
-  - name: Transcendence
+  - name: Daybreak Gavel
     pick_rate: 0.34
     win_rate: 0.59
     alternates:
-    - name: Daybreak Gavel
-      pick_rate: 0.34
-      win_rate: 0.65
+    - name: Transcendence
+      pick_rate: 0.29
+      win_rate: 0.57
     - name: Tyrfing
       pick_rate: 0.09
-      win_rate: 0.4
+      win_rate: 0.5
   - name: Jotunn's Revenge
-    pick_rate: 0.28
-    win_rate: 0.59
+    pick_rate: 0.24
+    win_rate: 0.55
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.25
-      win_rate: 0.67
-    - name: Odysseus' Bow
-      pick_rate: 0.06
-      win_rate: 0.4
+      pick_rate: 0.23
+      win_rate: 0.6
+    - name: Vital Amplifier
+      pick_rate: 0.09
+      win_rate: 0.71
   - name: Avenging Blade
     pick_rate: 0.27
-    win_rate: 0.66
+    win_rate: 0.58
     alternates:
     - name: The Crusher
-      pick_rate: 0.12
-      win_rate: 0.67
-    - name: Heartseeker
       pick_rate: 0.1
-      win_rate: 0.53
+      win_rate: 0.52
+    - name: Heartseeker
+      pick_rate: 0.08
+      win_rate: 0.56
   - name: The Executioner
-    pick_rate: 0.25
-    win_rate: 0.62
+    pick_rate: 0.22
+    win_rate: 0.56
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.23
+      pick_rate: 0.18
       win_rate: 0.62
     - name: Heartseeker
       pick_rate: 0.1
-      win_rate: 0.67
+      win_rate: 0.52
   - name: Vital Amplifier
-    pick_rate: 0.12
-    win_rate: 0.71
+    pick_rate: 0.1
+    win_rate: 0.65
     alternates:
-    - name: Heartseeker
-      pick_rate: 0.1
-      win_rate: 0.79
     - name: The Executioner
-      pick_rate: 0.1
-      win_rate: 0.64
-  - name: Qin's Blade
-    pick_rate: 0.08
-    win_rate: 0.38
+      pick_rate: 0.11
+      win_rate: 0.7
+    - name: Heartseeker
+      pick_rate: 0.08
+      win_rate: 0.71
+  - name: Odysseus' Bow
+    pick_rate: 0.07
+    win_rate: 0.55
     alternates:
-    - name: Odysseus' Bow
-      pick_rate: 0.07
-      win_rate: 0.57
-    - name: Skeggox
+    - name: Bow
       pick_rate: 0.06
-      win_rate: 0.67
+      win_rate: 0.56
+    - name: Qin's Blade
+      pick_rate: 0.06
+      win_rate: 0.44
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.31
-    win_rate: 0.67
+    pick_rate: 0.33
+    win_rate: 0.68
   - name: Bluestone Brooch
-    pick_rate: 0.21
-    win_rate: 0.67
+    pick_rate: 0.2
+    win_rate: 0.61
   - name: Leather Cowl
-    pick_rate: 0.16
-    win_rate: 0.36
+    pick_rate: 0.19
+    win_rate: 0.48
   source_url: https://smitebrain.com/gods/chiron/
-  last_verified: '2026-08-14'
-  god_win_rate: 0.5632911392405063
-  god_matches_won: 89
-  god_matches_played: 158
+  last_verified: '2026-08-15'
+  god_win_rate: 0.5641025641025641
+  god_matches_won: 132
+  god_matches_played: 234
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-14'
-  god_matches_analyzed: 3454
+  god_window_end: '2026-08-15'
+  god_matches_analyzed: 4746
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -120,43 +120,43 @@ builds:
     Hydra''s Lament, The Reaper, Golden Blade, Silverbranch Bow, Tekko-Kagi, Breastplate
     of Valor, Runeforged Hammer, Pharaoh''s Curse, Dominance, Kinetic Cuirass, Amanita
     Charm, Freya''s Tears, Demon Blade, Deathbringer, Eye of Providence, Oni Hunter''s
-    Garb, Toxic Blade, Shogun''s Ofuda, Shield of the Phoenix, Pendulum Blade, Tyrfing.'
+    Garb, Toxic Blade, Shogun''s Ofuda, Shield of the Phoenix, Tyrfing, Pendulum Blade.'
   slot_scores:
     Berserker's Shield:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.24
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.55
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.44
     Riptalon:
-      total: 0.55
+      total: 0.52
       efficiency: 0.53
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.5
     Damaru:
-      total: 0.55
+      total: 0.51
       efficiency: 0.57
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.4
     The Crusher:
-      total: 0.6
+      total: 0.53
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.44
     Heartseeker:
-      total: 0.58
+      total: 0.54
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.44
   starter: &id001
     base: Gilded Arrow
@@ -194,40 +194,40 @@ builds:
     Deathbringer, Arondight, Tyrfing.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.52
       efficiency: 0.69
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.15
     Berserker's Shield:
-      total: 0.54
+      total: 0.51
       efficiency: 0.66
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.16
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.55
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.44
     Hydra's Lament:
-      total: 0.54
+      total: 0.51
       efficiency: 0.56
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.42
     The Crusher:
-      total: 0.59
+      total: 0.52
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.39
     Heartseeker:
-      total: 0.58
+      total: 0.54
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.45
   starter: *id001
 - source: suggested
@@ -264,40 +264,40 @@ builds:
     Tyrfing.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.55
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.41
     Damaru:
-      total: 0.55
+      total: 0.52
       efficiency: 0.57
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.42
     Demon Blade:
-      total: 0.5
+      total: 0.47
       efficiency: 0.35
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.64
     The Crusher:
-      total: 0.6
+      total: 0.53
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.42
     Deathbringer:
-      total: 0.5
+      total: 0.47
       efficiency: 0.45
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.42
     Heartseeker:
-      total: 0.57
+      total: 0.54
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.42
   starter: *id001
 - source: suggested
@@ -333,54 +333,54 @@ builds:
     Dominance, Toxic Blade, Screeching Gargoyle, Arondight, Tyrfing.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.52
       efficiency: 0.69
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.13
     Berserker's Shield:
-      total: 0.54
+      total: 0.51
       efficiency: 0.66
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.17
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.56
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.46
     Riptalon:
-      total: 0.54
+      total: 0.51
       efficiency: 0.53
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.43
     The Crusher:
-      total: 0.6
+      total: 0.53
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.43
     Heartseeker:
-      total: 0.58
+      total: 0.54
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.43
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Berserker's Shield
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - The Crusher
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Heartseeker
   - Kinetic Cuirass
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -403,39 +403,39 @@ builds:
     Link, Silverbranch Bow.'
   slot_scores:
     Berserker's Shield:
-      total: 0.57
+      total: 0.54
       efficiency: 0.66
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.38
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.64
+      win: 0.55
+      pick: 0.33
+      fit: 0.3
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.52
       efficiency: 0.59
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.42
     Shield of the Phoenix:
-      total: 0.57
+      total: 0.54
       efficiency: 0.57
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.59
-    The Crusher:
-      total: 0.58
-      efficiency: 0.64
-      win: 0.67
-      pick: 0.19
-      fit: 0.33
     Heartseeker:
-      total: 0.56
+      total: 0.52
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.33
     Amanita Charm:
-      total: 0.6
+      total: 0.57
       efficiency: 0.63
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.62
   starter: *id001
@@ -443,14 +443,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Berserker's Shield
   - Jotunn's Revenge
   - Riptalon
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
   - Riptalon
-  - Berserker's Shield
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -459,8 +459,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -472,41 +472,41 @@ builds:
     Freya''s Tears, Dominance, Eye of Providence, Tyrfing.'
   slot_scores:
     Avenging Blade:
-      total: 0.57
+      total: 0.53
       efficiency: 0.48
-      win: 0.66
+      win: 0.58
       pick: 0.42
       fit: 0.54
-    Berserker's Shield:
-      total: 0.54
-      efficiency: 0.66
-      win: 0.64
-      pick: 0.0
-      fit: 0.2
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.57
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.53
     Riptalon:
-      total: 0.56
+      total: 0.53
       efficiency: 0.53
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.58
     The Crusher:
-      total: 0.62
+      total: 0.55
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.55
     Heartseeker:
-      total: 0.59
+      total: 0.55
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.55
+    Titan's Bane:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.62
+      pick: 0.3
+      fit: 0.45
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -536,46 +536,46 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Berserker''s Shield, Golden Blade, Silverbranch Bow, Genji''s
     Guard, Damaru, Lernaean Bow, Hydra''s Lament, Breastplate of Valor, The Reaper,
-    Toxic Blade, Tekko-Kagi, Pharaoh''s Curse, Runeforged Hammer, Kinetic Cuirass,
-    Amanita Charm, Dominance, Freya''s Tears, Eye of Providence, Oni Hunter''s Garb,
-    Shogun''s Ofuda, Shield of the Phoenix, Demon Blade, Deathbringer, Spectral Armor,
-    Eros'' Bow, Tyrfing.'
+    Toxic Blade, Tekko-Kagi, Tyrfing, Pharaoh''s Curse, Runeforged Hammer, Kinetic
+    Cuirass, Amanita Charm, Dominance, Freya''s Tears, Eye of Providence, Oni Hunter''s
+    Garb, Shogun''s Ofuda, Shield of the Phoenix, Demon Blade, Deathbringer, Spectral
+    Armor, Eros'' Bow.'
   slot_scores:
     Golden Blade:
-      total: 0.55
+      total: 0.52
       efficiency: 0.53
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.5
     Berserker's Shield:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.23
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.54
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.35
     Riptalon:
-      total: 0.56
+      total: 0.53
       efficiency: 0.53
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.6
     The Crusher:
-      total: 0.59
+      total: 0.52
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.36
     Heartseeker:
-      total: 0.57
+      total: 0.53
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.36
   starter: *id001
 - source: suggested
@@ -588,8 +588,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Breastplate of Valor
   - Hydra's Lament
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -612,40 +612,40 @@ builds:
     Garb, Tekko-Kagi, Dominance, Shogun''s Ofuda, Spectral Armor, Tyrfing.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.54
       efficiency: 0.69
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.28
     Breastplate of Valor:
-      total: 0.55
+      total: 0.52
       efficiency: 0.64
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.56
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.49
     Hydra's Lament:
-      total: 0.55
+      total: 0.52
       efficiency: 0.56
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.46
     The Crusher:
-      total: 0.58
+      total: 0.51
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.31
     Heartseeker:
-      total: 0.56
+      total: 0.52
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.31
   starter: *id001
 - source: suggested
@@ -682,40 +682,40 @@ builds:
     Phoenix, Pendulum Blade.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.51
       efficiency: 0.69
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.1
     Berserker's Shield:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.24
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.55
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.44
     Riptalon:
-      total: 0.55
+      total: 0.52
       efficiency: 0.53
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.5
     Damaru:
-      total: 0.55
+      total: 0.51
       efficiency: 0.57
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.4
     The Crusher:
-      total: 0.6
+      total: 0.53
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.44
   starter: *id001
 - source: suggested
@@ -751,40 +751,40 @@ builds:
     Eye of Providence, Shield of the Phoenix, Oni Hunter''s Garb, Arondight, Tyrfing.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.51
       efficiency: 0.69
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.12
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.57
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.53
     The Reaper:
-      total: 0.55
+      total: 0.52
       efficiency: 0.52
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.53
     Damaru:
-      total: 0.56
+      total: 0.53
       efficiency: 0.57
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.61
+      total: 0.54
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.51
     Heartseeker:
-      total: 0.59
+      total: 0.55
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.51
   starter: *id001
   aspect: Aspect of the Heroic Tutor
@@ -821,40 +821,40 @@ builds:
     Yogi''s Necklace, Tyrfing.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.52
       efficiency: 0.69
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.17
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.56
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.5
     Hydra's Lament:
-      total: 0.55
+      total: 0.52
       efficiency: 0.56
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.47
     Damaru:
-      total: 0.54
+      total: 0.51
       efficiency: 0.57
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.39
     The Crusher:
-      total: 0.6
+      total: 0.53
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.43
     Heartseeker:
-      total: 0.59
+      total: 0.55
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.5
   starter: *id001
   aspect: Aspect of the Heroic Tutor
@@ -892,40 +892,40 @@ builds:
     Blade, Tyrfing.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.55
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.41
     Damaru:
-      total: 0.55
+      total: 0.52
       efficiency: 0.57
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.42
     Demon Blade:
-      total: 0.5
+      total: 0.47
       efficiency: 0.35
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.64
     The Crusher:
-      total: 0.6
+      total: 0.53
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.42
     Deathbringer:
-      total: 0.5
+      total: 0.47
       efficiency: 0.45
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.42
     Heartseeker:
-      total: 0.57
+      total: 0.54
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.42
   starter: *id001
   aspect: Aspect of the Heroic Tutor
@@ -935,12 +935,12 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
-  - Damaru
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
   - Hydra's Lament
-  - Damaru
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -963,55 +963,55 @@ builds:
     Grace.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.52
       efficiency: 0.69
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.15
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.57
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.53
     Hydra's Lament:
-      total: 0.54
+      total: 0.51
       efficiency: 0.56
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.4
-    Damaru:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.64
-      pick: 0.0
-      fit: 0.35
     The Crusher:
-      total: 0.61
+      total: 0.54
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.48
     Heartseeker:
-      total: 0.58
+      total: 0.54
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.48
+    Titan's Bane:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.62
+      pick: 0.3
+      fit: 0.38
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: bruiser
   slot_order:
   - Berserker's Shield
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - The Crusher
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Berserker's Shield
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1034,39 +1034,39 @@ builds:
     Void Shield.'
   slot_scores:
     Berserker's Shield:
-      total: 0.56
+      total: 0.53
       efficiency: 0.66
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.3
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.55
+      pick: 0.33
+      fit: 0.34
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.53
       efficiency: 0.59
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.47
     Shield of the Phoenix:
-      total: 0.58
+      total: 0.55
       efficiency: 0.57
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.63
-    The Crusher:
-      total: 0.59
-      efficiency: 0.64
-      win: 0.67
-      pick: 0.19
-      fit: 0.36
     Heartseeker:
-      total: 0.57
+      total: 0.53
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.36
     Amanita Charm:
-      total: 0.62
+      total: 0.59
       efficiency: 0.63
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.77
   starter: *id001
@@ -1077,12 +1077,12 @@ builds:
   - Avenging Blade
   - Jotunn's Revenge
   - The Reaper
-  - Damaru
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
+  - Titan's Bane
   - The Reaper
-  - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1104,41 +1104,41 @@ builds:
     Armor, Deathbringer, Eye of Providence, Pharaoh''s Curse.'
   slot_scores:
     Avenging Blade:
-      total: 0.57
+      total: 0.53
       efficiency: 0.48
-      win: 0.66
+      win: 0.58
       pick: 0.42
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.58
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.62
     The Reaper:
-      total: 0.56
+      total: 0.53
       efficiency: 0.52
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.62
-    Damaru:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.64
-      pick: 0.0
-      fit: 0.4
     The Crusher:
-      total: 0.63
+      total: 0.56
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.63
     Heartseeker:
-      total: 0.6
+      total: 0.57
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.63
+    Titan's Bane:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.62
+      pick: 0.3
+      fit: 0.53
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -1169,46 +1169,46 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Berserker''s Shield, Golden Blade, Silverbranch Bow, Genji''s
     Guard, Damaru, Lernaean Bow, Pharaoh''s Curse, Hydra''s Lament, Amanita Charm,
-    Breastplate of Valor, The Reaper, Toxic Blade, Tekko-Kagi, Shogun''s Ofuda, Runeforged
-    Hammer, Kinetic Cuirass, Spectral Armor, Dominance, Freya''s Tears, Eros'' Bow,
-    Eye of Providence, Oni Hunter''s Garb, Shield of the Phoenix, Demon Blade, Deathbringer,
-    Tyrfing.'
+    Breastplate of Valor, The Reaper, Toxic Blade, Tekko-Kagi, Shogun''s Ofuda, Tyrfing,
+    Runeforged Hammer, Kinetic Cuirass, Spectral Armor, Dominance, Freya''s Tears,
+    Eros'' Bow, Eye of Providence, Oni Hunter''s Garb, Shield of the Phoenix, Demon
+    Blade, Deathbringer.'
   slot_scores:
     Golden Blade:
-      total: 0.55
+      total: 0.52
       efficiency: 0.53
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.5
     Berserker's Shield:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.23
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.54
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.35
     Riptalon:
-      total: 0.56
+      total: 0.53
       efficiency: 0.53
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.6
     The Crusher:
-      total: 0.59
+      total: 0.52
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.36
     Heartseeker:
-      total: 0.57
+      total: 0.53
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.36
   starter: *id001
   aspect: Aspect of the Heroic Tutor
@@ -1222,8 +1222,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Hydra's Lament
-  - Breastplate of Valor
+  - Heartseeker
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1246,40 +1246,40 @@ builds:
     Gladiator''s Shield, Golden Blade, Deathbringer, Yogi''s Necklace, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
-      total: 0.58
+      total: 0.54
       efficiency: 0.69
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.32
     Breastplate of Valor:
-      total: 0.56
+      total: 0.53
       efficiency: 0.64
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.32
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.57
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.57
     Hydra's Lament:
-      total: 0.56
+      total: 0.53
       efficiency: 0.56
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.52
     The Crusher:
-      total: 0.59
+      total: 0.52
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.35
     Heartseeker:
-      total: 0.56
+      total: 0.52
       efficiency: 0.41
-      win: 0.79
-      pick: 0.22
+      win: 0.71
+      pick: 0.17
       fit: 0.35
   starter: *id001
   aspect: Aspect of the Heroic Tutor
@@ -1317,40 +1317,40 @@ builds:
     Hunter''s Garb, Arondight.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.51
       efficiency: 0.69
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.12
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.57
       efficiency: 0.64
-      win: 0.59
-      pick: 0.38
+      win: 0.55
+      pick: 0.33
       fit: 0.53
     Hydra's Lament:
-      total: 0.54
+      total: 0.51
       efficiency: 0.56
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.42
     The Reaper:
-      total: 0.55
+      total: 0.52
       efficiency: 0.52
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.53
     Damaru:
-      total: 0.56
+      total: 0.53
       efficiency: 0.57
-      win: 0.64
+      win: 0.56
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.61
+      total: 0.54
       efficiency: 0.64
-      win: 0.67
-      pick: 0.19
+      win: 0.52
+      pick: 0.16
       fit: 0.51
   starter: *id001
   aspect: Aspect of the Heroic Tutor

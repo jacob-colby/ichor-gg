@@ -5,103 +5,103 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Rage
-  aspect_pick_rate: 0.05
-  aspect_win_rate: 0.44
+  aspect_pick_rate: 0.04
+  aspect_win_rate: 0.36
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.53
-    win_rate: 0.54
+    pick_rate: 0.51
+    win_rate: 0.58
     alternates:
     - name: Mystical Mail
       pick_rate: 0.08
-      win_rate: 0.75
+      win_rate: 0.7
     - name: Barbed Carver
-      pick_rate: 0.06
-      win_rate: 0.58
+      pick_rate: 0.08
+      win_rate: 0.55
   - name: Shield of the Phoenix
-    pick_rate: 0.28
-    win_rate: 0.62
+    pick_rate: 0.25
+    win_rate: 0.64
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.2
-      win_rate: 0.41
+      pick_rate: 0.21
+      win_rate: 0.55
     - name: Shifter's Shield
-      pick_rate: 0.1
-      win_rate: 0.47
+      pick_rate: 0.15
+      win_rate: 0.6
   - name: Gladiator's Shield
-    pick_rate: 0.18
-    win_rate: 0.74
+    pick_rate: 0.17
+    win_rate: 0.78
     alternates:
     - name: Shield of the Phoenix
       pick_rate: 0.15
-      win_rate: 0.54
+      win_rate: 0.55
     - name: Genji's Guard
-      pick_rate: 0.13
-      win_rate: 0.46
+      pick_rate: 0.12
+      win_rate: 0.48
   - name: Genji's Guard
-    pick_rate: 0.17
-    win_rate: 0.56
+    pick_rate: 0.15
+    win_rate: 0.55
     alternates:
     - name: Dwarven Plate
-      pick_rate: 0.11
-      win_rate: 0.65
+      pick_rate: 0.08
+      win_rate: 0.57
     - name: Shield of the Phoenix
       pick_rate: 0.07
-      win_rate: 0.69
-  - name: Kinetic Cuirass
-    pick_rate: 0.09
-    win_rate: 0.8
+      win_rate: 0.78
+  - name: Dwarven Plate
+    pick_rate: 0.08
+    win_rate: 0.74
     alternates:
+    - name: Kinetic Cuirass
+      pick_rate: 0.07
+      win_rate: 0.76
     - name: Draconic Scale
       pick_rate: 0.07
-      win_rate: 0.73
-    - name: Shell of Rebuke
-      pick_rate: 0.06
-      win_rate: 0.8
-  - name: Engraved Guard
-    pick_rate: 0.09
-    win_rate: 0.7
+      win_rate: 0.69
+  - name: Hide of the Nemean Lion
+    pick_rate: 0.07
+    win_rate: 0.67
     alternates:
-    - name: Medal of Defense
+    - name: Engraved Guard
       pick_rate: 0.07
-      win_rate: 0.14
-    - name: Hide of the Nemean Lion
-      pick_rate: 0.07
-      win_rate: 0.71
+      win_rate: 0.64
+    - name: Shield
+      pick_rate: 0.06
+      win_rate: 0.5
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.49
-    win_rate: 0.61
+    pick_rate: 0.47
+    win_rate: 0.65
   - name: Bluestone Pendant
-    pick_rate: 0.38
-    win_rate: 0.43
-  - name: Sands Of Time
-    pick_rate: 0.05
-    win_rate: 0.0
+    pick_rate: 0.4
+    win_rate: 0.48
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.07
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/mordred/
-  last_verified: '2026-08-14'
-  god_win_rate: 0.5440414507772021
-  god_matches_won: 105
-  god_matches_played: 193
+  last_verified: '2026-08-15'
+  god_win_rate: 0.5769230769230769
+  god_matches_won: 165
+  god_matches_played: 286
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-14'
-  god_matches_analyzed: 3454
+  god_window_end: '2026-08-15'
+  god_matches_analyzed: 4746
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: core
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Gladiator's Shield
   - The Crusher
   - Rod of Tahuti
   - Amanita Charm
   flex_slots:
+  - The Crusher
   - Jotunn's Revenge
-  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -110,8 +110,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Draconic Scale — physical protection
-    swap_item: Draconic Scale
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -125,40 +125,40 @@ builds:
     Spear of the Magus, Helm of Radiance, Screeching Gargoyle, Ancile, Damaru, Spear
     of Desolation, Shogun''s Ofuda.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.59
-      efficiency: 0.66
-      win: 0.7
-      pick: 0.0
-      fit: 0.33
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.67
+      total: 0.65
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.61
+    Gladiator's Shield:
+      total: 0.59
+      efficiency: 0.41
+      win: 0.78
+      pick: 0.26
+      fit: 0.53
     The Crusher:
-      total: 0.61
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.61
+      total: 0.59
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.19
     Amanita Charm:
-      total: 0.61
+      total: 0.59
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.51
   starter: &id001
@@ -184,8 +184,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -200,39 +200,39 @@ builds:
     Mail, Bancroft''s Talon.'
   slot_scores:
     Breastplate of Valor:
-      total: 0.58
+      total: 0.56
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.29
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.59
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.65
+      total: 0.63
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.46
     Gluttonous Grimoire:
-      total: 0.61
+      total: 0.59
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.5
     The Crusher:
-      total: 0.6
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.4
     Rod of Tahuti:
-      total: 0.64
+      total: 0.62
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.36
   starter: *id001
@@ -241,13 +241,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
+  - Gladiator's Shield
   - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
   - The Crusher
-  - Freya's Tears
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -256,8 +256,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -272,54 +272,54 @@ builds:
     Chandra''s Grace, Jade Scepter, Stone of Binding.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.59
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.65
+      total: 0.63
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.48
-    Freya's Tears:
+    Gladiator's Shield:
       total: 0.58
-      efficiency: 0.59
-      win: 0.7
-      pick: 0.0
-      fit: 0.41
+      efficiency: 0.41
+      win: 0.78
+      pick: 0.26
+      fit: 0.48
     Gluttonous Grimoire:
-      total: 0.62
+      total: 0.6
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.55
     The Crusher:
-      total: 0.61
+      total: 0.59
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.63
+      total: 0.61
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.34
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shield of the Phoenix
+  - Gladiator's Shield
   - The Crusher
   - Rod of Tahuti
   - Amanita Charm
-  - Soul Gem
   flex_slots:
+  - Gladiator's Shield
   - The Crusher
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -328,8 +328,8 @@ builds:
     swap: Draconic Scale — magical protection
     swap_item: Draconic Scale
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -343,55 +343,55 @@ builds:
     Bancroft''s Talon, Death Metal, The Cosmic Horror, Glorious Pridwen, Ancile, Spear
     of the Magus.'
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.64
-      win: 0.7
-      pick: 0.0
-      fit: 0.46
     Kinetic Cuirass:
-      total: 0.67
+      total: 0.65
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.6
-    The Crusher:
+    Shield of the Phoenix:
       total: 0.61
+      efficiency: 0.57
+      win: 0.64
+      pick: 0.34
+      fit: 0.74
+    Gladiator's Shield:
+      total: 0.59
+      efficiency: 0.41
+      win: 0.78
+      pick: 0.26
+      fit: 0.54
+    The Crusher:
+      total: 0.59
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.45
     Rod of Tahuti:
-      total: 0.61
+      total: 0.59
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.2
     Amanita Charm:
-      total: 0.65
+      total: 0.63
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.8
-    Soul Gem:
-      total: 0.62
-      efficiency: 0.57
-      win: 0.7
-      pick: 0.0
-      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Stone of Binding
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Gladiator's Shield
   - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
   - Jotunn's Revenge
-  - Stone of Binding
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -400,8 +400,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -415,40 +415,40 @@ builds:
     Curse, Riptalon, Leviathan''s Hide, Midgardian Mail, Heartseeker, Silverbranch
     Bow, Golden Blade, Mantle Of Discord.'
   slot_scores:
-    Stone of Binding:
-      total: 0.59
-      efficiency: 0.47
-      win: 0.7
-      pick: 0.0
-      fit: 0.7
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.6
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.54
     Kinetic Cuirass:
-      total: 0.66
+      total: 0.63
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.52
+    Gladiator's Shield:
+      total: 0.58
+      efficiency: 0.41
+      win: 0.78
+      pick: 0.26
+      fit: 0.45
     Gluttonous Grimoire:
-      total: 0.62
+      total: 0.6
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.56
     The Crusher:
-      total: 0.62
+      total: 0.6
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
-      total: 0.63
+      total: 0.61
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.34
   starter: *id001
@@ -472,8 +472,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -488,54 +488,54 @@ builds:
     Metal, Screeching Gargoyle.'
   slot_scores:
     Golden Blade:
-      total: 0.58
+      total: 0.56
       efficiency: 0.53
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.5
     Berserker's Shield:
-      total: 0.6
+      total: 0.58
       efficiency: 0.66
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.64
+      total: 0.62
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.44
     Nimble Ring:
-      total: 0.6
+      total: 0.58
       efficiency: 0.68
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.28
     Gluttonous Grimoire:
-      total: 0.59
+      total: 0.57
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.39
     Rod of Tahuti:
-      total: 0.6
+      total: 0.58
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.13
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shield of the Phoenix
+  - Gladiator's Shield
   - Freya's Tears
   - Rod of Tahuti
-  - Soul Gem
   flex_slots:
-  - Breastplate of Valor
-  - Soul Gem
+  - Freya's Tears
+  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -544,8 +544,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Gladiator's Shield — physical protection
-    swap_item: Gladiator's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -559,55 +559,55 @@ builds:
     Hide, Helm of Radiance, Eye of the Storm, Gem of Focus, Midgardian Mail, Mantle
     Of Discord, Stone of Binding, Totem of Death, Arondight, Death Metal.'
   slot_scores:
-    Breastplate of Valor:
-      total: 0.6
-      efficiency: 0.64
-      win: 0.7
-      pick: 0.0
-      fit: 0.44
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.59
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.5
     Kinetic Cuirass:
-      total: 0.65
+      total: 0.63
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.51
-    Freya's Tears:
+    Shield of the Phoenix:
+      total: 0.59
+      efficiency: 0.57
+      win: 0.64
+      pick: 0.34
+      fit: 0.56
+    Gladiator's Shield:
       total: 0.61
+      efficiency: 0.41
+      win: 0.78
+      pick: 0.26
+      fit: 0.66
+    Freya's Tears:
+      total: 0.59
       efficiency: 0.59
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.59
     Rod of Tahuti:
-      total: 0.61
+      total: 0.59
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.21
-    Soul Gem:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.7
-      pick: 0.0
-      fit: 0.6
   starter: *id001
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Gladiator's Shield
   - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
+  - Jotunn's Revenge
   - The Crusher
-  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -616,8 +616,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -632,55 +632,55 @@ builds:
     Mail, The Reaper, Screeching Gargoyle, Golden Blade, Mantle Of Discord, Blood-Bound
     Book.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.58
-      efficiency: 0.66
-      win: 0.7
-      pick: 0.0
-      fit: 0.25
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.65
+      total: 0.63
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.49
+    Gladiator's Shield:
+      total: 0.58
+      efficiency: 0.41
+      win: 0.78
+      pick: 0.26
+      fit: 0.46
     Gluttonous Grimoire:
-      total: 0.62
+      total: 0.6
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.56
     The Crusher:
-      total: 0.6
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.39
     Rod of Tahuti:
-      total: 0.64
+      total: 0.62
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.35
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Gladiator's Shield
   - Gluttonous Grimoire
   - The Crusher
   - Rod of Tahuti
   flex_slots:
   - Jotunn's Revenge
-  - Berserker's Shield
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -689,8 +689,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -704,40 +704,40 @@ builds:
     Shard, Leviathan''s Hide, Golden Blade, Chronos'' Pendant, Jade Scepter, Midgardian
     Mail, Avenging Blade, Mantle Of Discord, Damaru, Stone of Binding.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.58
-      efficiency: 0.66
-      win: 0.7
-      pick: 0.0
-      fit: 0.27
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.41
     Kinetic Cuirass:
-      total: 0.65
+      total: 0.63
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.52
+    Gladiator's Shield:
+      total: 0.58
+      efficiency: 0.41
+      win: 0.78
+      pick: 0.26
+      fit: 0.45
     Gluttonous Grimoire:
-      total: 0.62
+      total: 0.6
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.55
     The Crusher:
-      total: 0.6
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.43
     Rod of Tahuti:
-      total: 0.63
+      total: 0.61
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.33
   starter: *id001
@@ -777,39 +777,39 @@ builds:
     Ancile, Damaru, Spear of Desolation, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.54
       efficiency: 0.69
-      win: 0.56
-      pick: 0.28
+      win: 0.55
+      pick: 0.25
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.67
+      total: 0.65
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.61
     The Crusher:
-      total: 0.61
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.61
+      total: 0.59
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.19
     Amanita Charm:
-      total: 0.61
+      total: 0.59
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.51
   starter: *id001
@@ -849,45 +849,45 @@ builds:
     Gargoyle, Ancile, Damaru, Spear of Desolation, Shogun''s Ofuda.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.67
+      total: 0.65
       efficiency: 0.59
-      win: 0.8
-      pick: 0.19
+      win: 0.76
+      pick: 0.15
       fit: 0.61
     Gladiator's Shield:
-      total: 0.57
+      total: 0.59
       efficiency: 0.41
-      win: 0.74
-      pick: 0.28
+      win: 0.78
+      pick: 0.26
       fit: 0.53
     The Crusher:
-      total: 0.61
+      total: 0.58
       efficiency: 0.64
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.61
+      total: 0.59
       efficiency: 0.77
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.19
     Amanita Charm:
-      total: 0.61
+      total: 0.59
       efficiency: 0.63
-      win: 0.7
+      win: 0.66
       pick: 0.0
       fit: 0.51
   swaps:
   - added: Gladiator's Shield
     removed: Genji's Guard
-    reason: community 74% win over 35 matches (vs 54% on this god), taking the model's
+    reason: community 78% win over 49 matches (vs 58% on this god), taking the model's
       weakest slot from Genji's Guard
   starter: *id001
 ---
