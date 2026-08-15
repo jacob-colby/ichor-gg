@@ -73,6 +73,17 @@ reviews:
       the build the app opens on, not whichever of twelve flavors contains the
       item.
 
+      TWO-PASS ASSEMBLY WOULD CLEAR THIS, AND IS SHIPPED OFF. Re-pricing the
+      converter against the core the previous pass produced puts Transcendence
+      in Ullr's core at 5 of 6, converging in two passes with no oscillation
+      for him, and takes Transcendence to 12 model cores against 11 community
+      builds. It ships off because no pass count beats one pass on BOTH
+      leakage-free splits (probe 37.6% -> 36.2%, best 34.1% -> 34.3%) and 3 of
+      87 gods oscillate between two cores. `conversion_passes` in
+      _weights.yaml is one value away. So this claim is now open for the SAME
+      reason twice over: two independent fixes each do what the reviewer asked
+      on the item they named, and the only gate available refuses both.
+
   - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
     date: 2026-08-09
     claim: item-overweighted

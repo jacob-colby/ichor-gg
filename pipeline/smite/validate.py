@@ -58,15 +58,17 @@ def _community_slots(build_note):
     return []
 
 
-def god_metrics(god, items, build_note, weights, tags_map, eff_scores, items_by_name):
+def god_metrics(god, items, build_note, weights, tags_map, eff_scores, items_by_name,
+                gold_values=None):
     profile = scoring.resolve_profile(weights, "Conquest", None)
     rows = scoring.score_god_items(god, items, build_note, eff_scores, weights, tags_map, profile)
     score = {r["item"]: r["total"] for r in rows}
-    core = assemble.assemble_core(rows, items_by_name, n=6,
-                                  max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
-                                  stat_caps=weights.get("stat_caps"),
-                                  economy=profile.get("economy"),
-                                  **assemble.coherence_args(items, weights))
+    core, _ = assemble.assemble_core_converged(
+        rows, items_by_name, passes=weights.get("conversion_passes", 1), n=6,
+        max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
+        stat_caps=weights.get("stat_caps"), economy=profile.get("economy"),
+        **assemble.coherence_args(items, weights),
+        **assemble.conversion_args(weights, eff_scores, gold_values))
     community = [c for c in _community_slots(build_note)
                  if c.get("name") in score and c.get("win_rate") is not None]
     names = [c["name"] for c in community]
@@ -105,14 +107,15 @@ def compute(items=None, weights=None, tags_map=None, gods=None, builds_by_god=No
     # to set them — so calibrate and validate scored every off-by-default
     # experiment as OFF even when _weights.yaml turned it on.
     efficiency.apply_pricing_flags(weights)
-    eff_scores, _ = efficiency.efficiency_scores(items)
+    eff_scores, gold_values = efficiency.efficiency_scores(items)
     items_by_name = {it["name"]: it for it in items}
     per_god = {}
     for god in gods:
         build = builds_by_god[god["name"]]
         if not _community_slots(build):
             continue
-        per_god[god["name"]] = god_metrics(god, items, build, weights, tags_map, eff_scores, items_by_name)
+        per_god[god["name"]] = god_metrics(god, items, build, weights, tags_map,
+                                           eff_scores, items_by_name, gold_values)
     return per_god, aggregate(per_god)
 
 

@@ -388,3 +388,77 @@ def test_economy_still_honours_the_hard_guards():
     rows = [{"item": "Boots1", "total": 0.9}, {"item": "Boots2", "total": 0.88},
             {"item": "Plain", "total": 0.1}]
     assert assemble.assemble_core(rows, items, n=2, economy=ARENA) == ["Boots1", "Plain"]
+
+
+# ---- Two-pass assembly (shipped OFF — `conversion_passes`) -----------------
+
+# The bonus function's own arguments. `weight` is NOT among them — that
+# belongs to the caller, which multiplies the bonus by the efficiency signal's
+# weight so it enters the blended total exactly as efficiency does.
+CONV = {"reference": {"Max Mana": 500}, "gold_values": {"Strength": 20.0},
+        "span": 1000.0}
+CONV_CTX = {**CONV, "weight": 1.0}
+
+
+def _converter(cost=2400):
+    return {"cost": cost, "stats": {"Strength": "35", "Max Mana": "250"},
+            "passive": "+Strength equal to 3% of Mana from Items."}
+
+
+def test_a_converter_in_a_mana_rich_core_is_marked_up():
+    """3% of 1,550 mana is not 3% of a median 500. The one-pass reference
+    prices the typical build; this is what corrects a build that is not it."""
+    rich = assemble.conversion_score_bonus(_converter(), {"Max Mana": 1300}, **CONV)
+    assert rich > 0
+
+
+def test_a_converter_in_a_mana_poor_core_is_marked_down():
+    """Symmetric on purpose — otherwise it is a one-way ratchet that only ever
+    argues for more converters."""
+    poor = assemble.conversion_score_bonus(_converter(), {}, **CONV)
+    assert poor < 0
+
+
+def test_a_non_converter_gets_no_bonus_either_way():
+    plain = {"cost": 2500, "stats": {"Strength": "60"}, "passive": "+20% Attack Speed"}
+    assert assemble.conversion_score_bonus(plain, {"Max Mana": 2000}, **CONV) == 0.0
+
+
+def test_the_bonus_needs_a_reference_a_price_and_a_span():
+    item = _converter()
+    for missing in ({"reference": {}}, {"gold_values": {}}, {"span": 0}):
+        assert assemble.conversion_score_bonus(item, {"Max Mana": 1300},
+                                               **{**CONV, **missing}) == 0.0
+
+
+def test_one_pass_is_the_plain_assembler():
+    items = {"A": {"cost": 2500, "stats": {"Strength": "60"}},
+             "B": {"cost": 2500, "stats": {"Strength": "50"}}}
+    rows = [{"item": "A", "total": 0.9}, {"item": "B", "total": 0.8}]
+    core, info = assemble.assemble_core_converged(rows, items, passes=1, n=2)
+    assert core == assemble.assemble_core(rows, items, n=2)
+    assert info == {"passes": 1, "converged": True, "oscillated": False}
+
+
+def test_an_oscillating_build_returns_the_conservative_first_pass():
+    """Adding a converter raises mana's value, which pulls in more mana items,
+    which raises the converter again — the fixed point can be a two-cycle. When
+    it is, the answer returned is pass one's, priced against a typical build,
+    because that is the one that does not depend on which half of the cycle the
+    loop stopped on."""
+    calls = {"n": 0}
+    real = assemble.assemble_core
+
+    def flapping(rows, items_by_name, **kw):
+        calls["n"] += 1
+        return ["A", "B"] if calls["n"] % 2 else ["C", "D"]
+
+    assemble.assemble_core = flapping
+    try:
+        core, info = assemble.assemble_core_converged(
+            [], {}, passes=5, conversion=CONV_CTX)
+    finally:
+        assemble.assemble_core = real
+    assert info["oscillated"] is True
+    assert info["converged"] is False
+    assert core == ["A", "B"]        # pass one's answer, not the cycle's

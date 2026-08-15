@@ -170,6 +170,37 @@ price_crit_multipliers: true
 # docs/plans/2026-08-13-mana-conversion-fit.md.
 price_conversions: true
 
+# How many times to re-assemble, re-pricing converters against the core the
+# previous pass produced. 1 = the one-pass reference pricing above.
+#
+# MEASURED, AND THE CLOSEST CALL ON RECORD. Control is 1 pass at probe 37.6% /
+# best 34.1%:
+#
+#     passes      1       2       3       4
+#     probe    37.6%   36.7%   36.2%   36.9%
+#     best     34.1%   33.3%   34.3%   34.5%
+#
+# No pass count beats the control on BOTH splits, which is the standard
+# `price_crit_multipliers` and `price_conversions` were held to, so it ships
+# off. Note the non-monotonicity: that is the fixed point failing to settle,
+# and 3 of 87 gods oscillate outright between two cores.
+#
+# WHAT IT GETS RIGHT IS WORTH KEEPING IN VIEW. At 3 passes the item-level
+# calibration improves on three of the four converters - Transcendence 2 -> 12
+# model cores against 11 community builds, Rod of Tahuti 49 -> 32 against 34 -
+# and Ullr's core gains Transcendence, reaching 5 of 6 with his community
+# build and clearing the one open expert claim. It converges for him in two
+# passes with no oscillation.
+#
+# So this is the second case where a change does exactly what a Masters player
+# asked, on the item they named, and the coverage gate refuses it. The
+# difference from #8 is that this one is split rather than uniformly worse: it
+# loses 1.4pp on the probe corner and gains 0.2pp on the split `calibrate`
+# itself calls the leakage-free optimum. Resolving it needs a measure that is
+# not made of the community's build. Until then the discipline holds and the
+# standard is not moved to fit a result someone likes.
+conversion_passes: 1
+
 # Median total across community builds THAT CARRY THE STAT AT ALL, from
 # `passives.measure_conversion_reference`. The qualifier matters: 45 of 87 gods
 # are physical and carry zero Intelligence, so a median over every build is 0,

@@ -3,7 +3,7 @@ situational-swap table. Greedy-with-rules, not optimization — transparent and
 debuggable. vs_tag values match the viewer's archetype taxonomy so the existing
 chip-highlighting works unchanged."""
 from smite import scoring
-from smite.efficiency import parse_stat_value
+from smite.efficiency import parse_stat_value, stat_key
 
 
 def _amount(raw):
@@ -117,8 +117,52 @@ def time_value_multiplier(item_cost, gold_before, economy):
     return (1.0 - uniformity) + uniformity * active
 
 
+def conversion_score_bonus(item, core_totals, reference, gold_values, span):
+    """Score delta for a converter, given what the core ACTUALLY feeds it.
+
+    `price_conversions` values these items against a typical build, which is
+    one pass and has no fixed point to converge — see
+    `passives.conversion_grants`. The cost of that safety is that a build which
+    is NOT typical is priced as if it were: Transcendence gets 3% of a median
+    500 mana where Ullr's own community build carries 1,550, and Book of Thoth
+    reaches 0 model cores against 22 community builds.
+
+    This is the correction, applied against the core being assembled. It does
+    NOT refit the gold model: prices are a property of the game, not of one
+    god's build, so the fitted values stand and only the item's own residual
+    moves. `efficiency_scores` carries `span` for exactly this — score is
+    `(hi - residual) / span`, so a gold delta divides straight into a score
+    delta.
+
+    Symmetric on purpose. A converter in a build that feeds it LESS than the
+    reference is marked down, not merely left alone; otherwise this is a
+    one-way ratchet that only ever argues for more converters.
+    """
+    from smite import passives
+    if not reference or not gold_values or not span:
+        return 0.0
+    carried = {stat_key(name, raw) for name, raw in (item.get("stats") or {}).items()
+               if parse_stat_value(raw) is not None}
+    own = {k: parse_stat_value(v) or 0.0 for k, v in (item.get("stats") or {}).items()}
+    delta_gold = 0.0
+    for source, rate, per_unit in passives.stat_conversions(item):
+        # The item is not in the core yet, so its own contribution to the
+        # source stat is added — you own it the moment you buy it.
+        actual = core_totals.get(source, 0.0) + own.get(source, 0.0)
+        extra = (actual - reference.get(source, 0.0)) * rate
+        for stat, per in per_unit.items():
+            # Same amplify-only rule the reference pricing uses; see
+            # `passives.conversion_grants`.
+            if stat not in carried:
+                continue
+            delta_gold += extra * per * gold_values.get(stat, 0.0)
+    # A negative residual is a bargain, so a POSITIVE gold delta raises score.
+    return delta_gold / span
+
+
 def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
-                  stat_caps=None, coherence=0.0, stat_reference=None, economy=None):
+                  stat_caps=None, coherence=0.0, stat_reference=None, economy=None,
+                  conversion=None, seed_totals=None):
     """Highest-total items filling n slots: at most one boots, at most
     `max_lifesteal` lifesteal/sustain items, no duplicates. rows must be
     pre-sorted by -total (score_god_items already does). When `require`
@@ -210,7 +254,13 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
             if stat in (item.get("stats") or {}) and _try_add(r["item"]):
                 seeded += 1
 
-    if not coherence and not economy:
+    # Stat totals carried in from a previous pass, so a converter can be
+    # valued against the build it will actually end up in rather than only
+    # against what happens to precede it in this pass's greedy order.
+    if seed_totals:
+        core_totals.update(seed_totals)
+
+    if not coherence and not economy and not conversion:
         # The original path, kept exactly: rows arrive sorted by -total, so
         # walking them once IS picking the best remaining item every time.
         for r in rows:
@@ -236,6 +286,10 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
                                               coherence)
             if economy:
                 score *= time_value_multiplier(item.get("cost"), spent[0], economy)
+            if conversion:
+                score += conversion["weight"] * conversion_score_bonus(
+                    item, core_totals, conversion["reference"],
+                    conversion["gold_values"], conversion["span"])
             if best_score is None or score > best_score:
                 best_index, best_score = index, score
         r = remaining.pop(best_index)
@@ -244,6 +298,47 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
         # fails now can start passing once the core has grown.
         _try_add(r["item"])
     return core
+
+
+def assemble_core_converged(rows, items_by_name, passes=2, **kwargs):
+    """`assemble_core`, re-run until the core it produces stops changing.
+
+    Only meaningful with `conversion`. Pass one prices a converter against a
+    TYPICAL build; every pass after prices it against the core pass one
+    actually produced, which is the whole point — Transcendence is worth 3% of
+    500 mana in the abstract and 3% of 1,550 in the build its own players run.
+
+    IT MAY NOT CONVERGE, and that is why this is a loop with a cap rather than
+    a recursion. Adding Transcendence raises the value of mana, which pulls in
+    more mana items, which raises Transcendence again; the fixed point can be a
+    two-cycle instead of a point. Every core seen is remembered, so a repeat is
+    detected as an oscillation and the FIRST core is returned — the
+    conservative one, priced against a typical build, which is the answer that
+    does not depend on which half of the cycle the loop happened to stop on.
+
+    Returns (core, info) where info records passes run and whether it settled,
+    so a caller can report the oscillation instead of hiding it.
+    """
+    core = assemble_core(rows, items_by_name, **kwargs)
+    if not kwargs.get("conversion") or passes < 2:
+        return core, {"passes": 1, "converged": True, "oscillated": False}
+
+    first = list(core)
+    seen = [frozenset(core)]
+    for index in range(2, passes + 1):
+        totals = {}
+        for name in core:
+            for stat, raw in (items_by_name.get(name, {}).get("stats") or {}).items():
+                totals[stat] = totals.get(stat, 0.0) + _amount(raw)
+        nxt = assemble_core(rows, items_by_name, seed_totals=totals, **kwargs)
+        key = frozenset(nxt)
+        if key == seen[-1]:
+            return nxt, {"passes": index, "converged": True, "oscillated": False}
+        if key in seen:
+            return first, {"passes": index, "converged": False, "oscillated": True}
+        seen.append(key)
+        core = nxt
+    return first, {"passes": passes, "converged": False, "oscillated": False}
 
 
 def build_order(core, items_by_name, tags_map, weights):
@@ -326,6 +421,27 @@ def situational_swaps(rows, items_by_name, tags_map, core=None):
         else:
             table.append({"vs_tag": vs_tag, "swap": f"(no {label} available in pool)", "swap_item": None})
     return table
+
+def conversion_args(weights, eff_scores, gold_values):
+    """The `conversion` context for `assemble_core`, or {} when off.
+
+    Built in one place so every caller values a converter identically. The
+    weight is the EFFICIENCY signal's own weight: this adjusts an item's
+    efficiency score, so it enters the blended total exactly as efficiency
+    does, rather than as a free-floating bonus with its own scale."""
+    w = weights or {}
+    if not (w.get("price_conversions") and w.get("conversion_passes", 1) > 1):
+        return {}
+    span = next((v.get("span") for v in eff_scores.values() if v.get("span")), None)
+    if not span:
+        return {}
+    return {"conversion": {
+        "reference": dict(w.get("conversion_reference") or {}),
+        "gold_values": gold_values,
+        "span": span,
+        "weight": (w.get("signals") or {}).get("efficiency", 0.35),
+    }}
+
 
 def coherence_args(items, weights):
     """The `coherence` / `stat_reference` pair for `assemble.assemble_core`.

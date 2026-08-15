@@ -321,5 +321,10 @@ def efficiency_scores(items):
         z = (resid - mean) / std
         score = (hi - resid) / span  # cheapest-relative → 1.0, most-premium → 0.0
         tier = "undervalued" if z <= -0.5 else "premium" if z >= 0.5 else "fair"
-        scores[name] = {"residual": resid, "z": z, "score": score, "tier": tier}
+        # `span` is the same for every item and is carried on each so a caller
+        # holding one score can convert a GOLD delta into a SCORE delta without
+        # refitting: score = (hi - residual) / span, so d(score) = d(gold)/span.
+        # `assemble.conversion_score_bonus` is what needs it.
+        scores[name] = {"residual": resid, "z": z, "score": score, "tier": tier,
+                        "span": span}
     return scores, gold
