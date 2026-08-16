@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Unyielding
-  aspect_pick_rate: 0.14
-  aspect_win_rate: 0.68
+  aspect_pick_rate: 0.12
+  aspect_win_rate: 0.65
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.33
-    win_rate: 0.58
+    pick_rate: 0.38
+    win_rate: 0.51
     alternates:
     - name: Eye of Erebus
       pick_rate: 0.15
-      win_rate: 0.48
+      win_rate: 0.44
     - name: Devourer's Gauntlet
-      pick_rate: 0.13
+      pick_rate: 0.1
       win_rate: 0.71
   - name: Ethereal Staff
-    pick_rate: 0.15
-    win_rate: 0.45
+    pick_rate: 0.16
+    win_rate: 0.44
     alternates:
     - name: Prophetic Cloak
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.5
-    - name: Shifter's Shield
+    - name: Genji's Guard
       pick_rate: 0.11
-      win_rate: 0.6
-  - name: Genji's Guard
+      win_rate: 0.63
+  - name: Gladiator's Shield
     pick_rate: 0.13
-    win_rate: 0.63
+    win_rate: 0.38
     alternates:
     - name: Ethereal Staff
-      pick_rate: 0.14
-      win_rate: 0.56
-    - name: Shifter's Shield
-      pick_rate: 0.1
-      win_rate: 0.54
+      pick_rate: 0.12
+      win_rate: 0.5
+    - name: Genji's Guard
+      pick_rate: 0.11
+      win_rate: 0.61
   - name: Soul Reaver
-    pick_rate: 0.15
-    win_rate: 0.56
+    pick_rate: 0.14
+    win_rate: 0.55
     alternates:
     - name: Ethereal Staff
-      pick_rate: 0.14
-      win_rate: 0.65
+      pick_rate: 0.16
+      win_rate: 0.58
     - name: Gladiator's Shield
-      pick_rate: 0.13
+      pick_rate: 0.1
       win_rate: 0.5
   - name: Shell of Rebuke
     pick_rate: 0.09
-    win_rate: 0.6
+    win_rate: 0.69
     alternates:
     - name: Soul Reaver
       pick_rate: 0.08
       win_rate: 0.33
     - name: Hide of the Nemean Lion
       pick_rate: 0.08
-      win_rate: 0.44
-  - name: Hide of the Nemean Lion
-    pick_rate: 0.05
-    win_rate: 1.0
+      win_rate: 0.42
+  - name: Soul Reliquary
+    pick_rate: 0.06
+    win_rate: 0.5
     alternates:
-    - name: Soul Reliquary
+    - name: Hide of the Nemean Lion
       pick_rate: 0.05
-      win_rate: 0.75
-    - name: Spirit Robe
+      win_rate: 1.0
+    - name: Oracle Staff
       pick_rate: 0.04
-      win_rate: 0.33
+      win_rate: 0.75
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.43
-    win_rate: 0.51
+    pick_rate: 0.46
+    win_rate: 0.5
   - name: Bluestone Pendant
-    pick_rate: 0.25
-    win_rate: 0.56
-  - name: Heroism
-    pick_rate: 0.07
-    win_rate: 1.0
+    pick_rate: 0.26
+    win_rate: 0.48
+  - name: Archmage's Gem
+    pick_rate: 0.06
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/jormungandr/
-  last_verified: '2026-08-15'
-  god_win_rate: 0.5441176470588235
-  god_matches_won: 74
-  god_matches_played: 136
+  last_verified: '2026-08-16'
+  god_win_rate: 0.5146198830409356
+  god_matches_won: 88
+  god_matches_played: 171
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-15'
-  god_matches_analyzed: 4746
+  god_window_end: '2026-08-16'
+  god_matches_analyzed: 6103
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -96,12 +96,12 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Kinetic Cuirass
-  - Hide of the Nemean Lion
   - Shifter's Shield
+  - The Crusher
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
   - Shifter's Shield
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -126,39 +126,39 @@ builds:
     Screeching Gargoyle, Ancile, Magi''s Cloak, Void Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.69
-      win: 0.63
-      pick: 0.2
+      win: 0.61
+      pick: 0.17
       fit: 0.26
     Berserker's Shield:
-      total: 0.56
+      total: 0.53
       efficiency: 0.66
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.52
       efficiency: 0.59
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.58
-    Hide of the Nemean Lion:
-      total: 0.68
-      efficiency: 0.5
-      win: 1.0
-      pick: 0.15
-      fit: 0.31
     Shifter's Shield:
-      total: 0.53
+      total: 0.5
       efficiency: 0.52
-      win: 0.58
-      pick: 0.33
+      win: 0.51
+      pick: 0.38
       fit: 0.48
+    The Crusher:
+      total: 0.5
+      efficiency: 0.64
+      win: 0.51
+      pick: 0.0
+      fit: 0.32
     Amanita Charm:
-      total: 0.55
+      total: 0.52
       efficiency: 0.63
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.48
   starter: &id001
@@ -171,11 +171,11 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Hide of the Nemean Lion
+  - The Crusher
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
   - Kinetic Cuirass
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -200,39 +200,39 @@ builds:
     Blade, Midgardian Mail, Death Metal, Tyrfing, Glorious Pridwen.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.69
-      win: 0.63
-      pick: 0.2
+      win: 0.61
+      pick: 0.17
       fit: 0.23
     Berserker's Shield:
-      total: 0.56
+      total: 0.53
       efficiency: 0.66
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.49
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.52
       efficiency: 0.59
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.56
     Shield of the Phoenix:
-      total: 0.56
+      total: 0.53
       efficiency: 0.57
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.71
-    Hide of the Nemean Lion:
-      total: 0.68
-      efficiency: 0.5
-      win: 1.0
-      pick: 0.15
-      fit: 0.32
+    The Crusher:
+      total: 0.5
+      efficiency: 0.64
+      win: 0.51
+      pick: 0.0
+      fit: 0.33
     Amanita Charm:
-      total: 0.59
+      total: 0.56
       efficiency: 0.63
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.76
   starter: *id001
@@ -242,22 +242,22 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
-  - Hide of the Nemean Lion
+  - Kinetic Cuirass
   - Gluttonous Grimoire
   - The Crusher
   flex_slots:
-  - Jotunn's Revenge
   - Berserker's Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -273,39 +273,39 @@ builds:
     Blade.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.55
       efficiency: 0.69
-      win: 0.63
-      pick: 0.2
+      win: 0.61
+      pick: 0.17
       fit: 0.2
     Berserker's Shield:
-      total: 0.54
+      total: 0.51
       efficiency: 0.66
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.37
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.52
       efficiency: 0.64
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.47
-    Hide of the Nemean Lion:
-      total: 0.67
-      efficiency: 0.5
-      win: 1.0
-      pick: 0.15
-      fit: 0.24
+    Kinetic Cuirass:
+      total: 0.5
+      efficiency: 0.59
+      win: 0.51
+      pick: 0.0
+      fit: 0.47
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.52
       efficiency: 0.63
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.5
     The Crusher:
-      total: 0.56
+      total: 0.53
       efficiency: 0.64
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.5
   starter: *id001
@@ -317,20 +317,20 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   - Nimble Ring
-  - Hide of the Nemean Lion
+  - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
+  - Amanita Charm
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -345,41 +345,41 @@ builds:
     Death Metal, Screeching Gargoyle, Yogi''s Necklace, Damaru, Ancile.'
   slot_scores:
     Golden Blade:
-      total: 0.52
+      total: 0.49
       efficiency: 0.53
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.54
     Genji's Guard:
-      total: 0.57
+      total: 0.55
       efficiency: 0.69
-      win: 0.63
-      pick: 0.2
+      win: 0.61
+      pick: 0.17
       fit: 0.2
     Berserker's Shield:
-      total: 0.55
+      total: 0.52
       efficiency: 0.66
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.43
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.5
       efficiency: 0.59
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.47
     Nimble Ring:
-      total: 0.54
+      total: 0.51
       efficiency: 0.68
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.3
-    Hide of the Nemean Lion:
-      total: 0.67
-      efficiency: 0.5
-      win: 1.0
-      pick: 0.15
-      fit: 0.24
+    Amanita Charm:
+      total: 0.5
+      efficiency: 0.63
+      win: 0.51
+      pick: 0.0
+      fit: 0.37
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -388,21 +388,21 @@ builds:
   - Berserker's Shield
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Hide of the Nemean Lion
+  - Kinetic Cuirass
   - Freya's Tears
   flex_slots:
-  - Breastplate of Valor
   - Jotunn's Revenge
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -418,39 +418,39 @@ builds:
     The Cosmic Horror.'
   slot_scores:
     Genji's Guard:
-      total: 0.6
+      total: 0.59
       efficiency: 0.69
-      win: 0.63
-      pick: 0.2
+      win: 0.61
+      pick: 0.17
       fit: 0.41
     Berserker's Shield:
-      total: 0.54
+      total: 0.51
       efficiency: 0.66
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.39
     Breastplate of Valor:
-      total: 0.54
+      total: 0.51
       efficiency: 0.64
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.41
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.51
       efficiency: 0.64
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.39
-    Hide of the Nemean Lion:
-      total: 0.67
-      efficiency: 0.5
-      win: 1.0
-      pick: 0.15
-      fit: 0.25
-    Freya's Tears:
-      total: 0.54
+    Kinetic Cuirass:
+      total: 0.51
       efficiency: 0.59
-      win: 0.57
+      win: 0.51
+      pick: 0.0
+      fit: 0.49
+    Freya's Tears:
+      total: 0.52
+      efficiency: 0.59
+      win: 0.51
       pick: 0.0
       fit: 0.55
   starter: *id001
@@ -461,21 +461,21 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Hide of the Nemean Lion
   - The Crusher
+  - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Berserker's Shield
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -491,54 +491,54 @@ builds:
     Tyrfing, Helm of Radiance.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.69
-      win: 0.63
-      pick: 0.2
+      win: 0.61
+      pick: 0.17
       fit: 0.23
     Berserker's Shield:
-      total: 0.54
+      total: 0.51
       efficiency: 0.66
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.52
       efficiency: 0.64
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.51
       efficiency: 0.59
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.52
-    Hide of the Nemean Lion:
-      total: 0.67
-      efficiency: 0.5
-      win: 1.0
-      pick: 0.15
-      fit: 0.27
     The Crusher:
-      total: 0.55
+      total: 0.52
       efficiency: 0.64
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.47
+    Amanita Charm:
+      total: 0.51
+      efficiency: 0.63
+      win: 0.51
+      pick: 0.0
+      fit: 0.42
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Genji's Guard
   - Berserker's Shield
+  - Jotunn's Revenge
   - Kinetic Cuirass
-  - Hide of the Nemean Lion
   - Gluttonous Grimoire
   - The Crusher
   flex_slots:
-  - The Crusher
   - Kinetic Cuirass
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -564,39 +564,39 @@ builds:
     Shard, Jade Scepter, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.55
       efficiency: 0.69
-      win: 0.63
-      pick: 0.2
+      win: 0.61
+      pick: 0.17
       fit: 0.2
     Berserker's Shield:
-      total: 0.54
+      total: 0.51
       efficiency: 0.66
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.36
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.64
+      win: 0.51
+      pick: 0.0
+      fit: 0.35
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.5
       efficiency: 0.59
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.46
-    Hide of the Nemean Lion:
-      total: 0.67
-      efficiency: 0.5
-      win: 1.0
-      pick: 0.15
-      fit: 0.23
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.52
       efficiency: 0.63
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.54
+      total: 0.51
       efficiency: 0.64
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.38
   starter: *id001
@@ -636,39 +636,39 @@ builds:
     Screeching Gargoyle, Ancile, Magi''s Cloak, Void Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.69
-      win: 0.63
-      pick: 0.2
+      win: 0.61
+      pick: 0.17
       fit: 0.26
     Berserker's Shield:
-      total: 0.56
+      total: 0.53
       efficiency: 0.66
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.52
       efficiency: 0.59
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.58
     Freya's Tears:
-      total: 0.53
+      total: 0.5
       efficiency: 0.59
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.43
     The Crusher:
-      total: 0.53
+      total: 0.5
       efficiency: 0.64
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.32
     Amanita Charm:
-      total: 0.55
+      total: 0.52
       efficiency: 0.63
-      win: 0.57
+      win: 0.51
       pick: 0.0
       fit: 0.48
   starter: *id001

@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Mark
-  aspect_pick_rate: 0.09
-  aspect_win_rate: 0.49
+  aspect_pick_rate: 0.1
+  aspect_win_rate: 0.57
   slot_order:
   - name: Tyrfing
     pick_rate: 0.54
-    win_rate: 0.53
+    win_rate: 0.54
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.21
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Avenging Blade
-      pick_rate: 0.07
-      win_rate: 0.54
+      pick_rate: 0.08
+      win_rate: 0.53
   - name: Odysseus' Bow
     pick_rate: 0.32
-    win_rate: 0.52
+    win_rate: 0.55
     alternates:
     - name: Dagger of Frenzy
-      pick_rate: 0.24
-      win_rate: 0.52
-    - name: Toxic Blade
-      pick_rate: 0.12
+      pick_rate: 0.25
       win_rate: 0.53
+    - name: Toxic Blade
+      pick_rate: 0.11
+      win_rate: 0.51
   - name: Dominance
     pick_rate: 0.14
     win_rate: 0.53
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.19
-      win_rate: 0.52
+      pick_rate: 0.18
+      win_rate: 0.51
     - name: The Executioner
       pick_rate: 0.14
-      win_rate: 0.56
+      win_rate: 0.6
   - name: Silverbranch Bow
     pick_rate: 0.23
-    win_rate: 0.56
+    win_rate: 0.57
     alternates:
     - name: The Executioner
       pick_rate: 0.15
       win_rate: 0.43
     - name: Riptalon
       pick_rate: 0.13
-      win_rate: 0.5
+      win_rate: 0.48
   - name: Riptalon
     pick_rate: 0.16
-    win_rate: 0.53
+    win_rate: 0.59
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.14
-      win_rate: 0.6
-    - name: Qin's Blade
+      pick_rate: 0.15
+      win_rate: 0.59
+    - name: The Executioner
       pick_rate: 0.1
-      win_rate: 0.58
+      win_rate: 0.45
   - name: Manchu Bow
-    pick_rate: 0.1
-    win_rate: 0.58
+    pick_rate: 0.09
+    win_rate: 0.59
     alternates:
     - name: Riptalon
-      pick_rate: 0.09
-      win_rate: 0.53
+      pick_rate: 0.1
+      win_rate: 0.57
     - name: Hunter's Bow
       pick_rate: 0.08
-      win_rate: 0.53
+      win_rate: 0.52
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.35
-    win_rate: 0.58
+    pick_rate: 0.33
+    win_rate: 0.59
   - name: Hunter's Cowl
-    pick_rate: 0.23
-    win_rate: 0.58
-  - name: Leather Cowl
+    pick_rate: 0.24
+    win_rate: 0.59
+  - name: Gilded Arrow
     pick_rate: 0.15
-    win_rate: 0.48
+    win_rate: 0.38
   source_url: https://smitebrain.com/gods/hou-yi/
-  last_verified: '2026-08-15'
-  god_win_rate: 0.5261538461538462
-  god_matches_won: 342
-  god_matches_played: 650
+  last_verified: '2026-08-16'
+  god_win_rate: 0.5298416565164433
+  god_matches_won: 435
+  god_matches_played: 821
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-15'
-  god_matches_analyzed: 4746
+  god_window_end: '2026-08-16'
+  god_matches_analyzed: 6103
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -97,11 +97,11 @@ builds:
   - Tyrfing
   - Death Metal
   - Riptalon
-  - Damaru
+  - Silverbranch Bow
   - The Crusher
   flex_slots:
-  - Riptalon
-  - Damaru
+  - Berserker's Shield
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -121,8 +121,8 @@ builds:
     Gem, Genji''s Guard, Hydra''s Lament, Bragi''s Harp, Demon Blade, Runeforged Hammer,
     Pharaoh''s Curse, The Reaper, Tekko-Kagi, Bracer of The Abyss, Breastplate of
     Valor, Deathbringer, Kinetic Cuirass, Amanita Charm, The Cosmic Horror, Shogun''s
-    Ofuda, Avenging Blade, Spear of the Magus, Blood-Bound Book, Eye of Providence,
-    Musashi''s Dual Swords, Oni Hunter''s Garb, Freya''s Tears, Bancroft''s Talon,
+    Ofuda, Spear of the Magus, Blood-Bound Book, Eye of Providence, Musashi''s Dual
+    Swords, Oni Hunter''s Garb, Avenging Blade, Freya''s Tears, Bancroft''s Talon,
     Transcendence, Eros'' Bow, Rage.'
   slot_scores:
     Berserker's Shield:
@@ -132,9 +132,9 @@ builds:
       pick: 0.0
       fit: 0.28
     Tyrfing:
-      total: 0.51
+      total: 0.52
       efficiency: 0.46
-      win: 0.53
+      win: 0.54
       pick: 0.54
       fit: 0.56
     Death Metal:
@@ -144,17 +144,17 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.51
+      total: 0.54
       efficiency: 0.53
-      win: 0.53
+      win: 0.59
       pick: 0.35
       fit: 0.44
-    Damaru:
+    Silverbranch Bow:
       total: 0.51
-      efficiency: 0.57
-      win: 0.53
-      pick: 0.0
-      fit: 0.46
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.38
+      fit: 0.33
     The Crusher:
       total: 0.51
       efficiency: 0.64
@@ -239,14 +239,14 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Berserker's Shield
+  - Tyrfing
   - Death Metal
-  - Gluttonous Grimoire
+  - Riptalon
   - Damaru
   - Demon Blade
   - The Crusher
   flex_slots:
-  - Gluttonous Grimoire
+  - Tyrfing
   - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -256,8 +256,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -267,28 +267,28 @@ builds:
     Blade, Genji''s Guard, Hydra''s Lament, Demon Blade, Bragi''s Harp, Runeforged
     Hammer, The Reaper, Pharaoh''s Curse, Deathbringer, Breastplate of Valor, Tekko-Kagi,
     Bracer of The Abyss, Kinetic Cuirass, Amanita Charm, Musashi''s Dual Swords, The
-    Cosmic Horror, Spear of the Magus, Avenging Blade, Eye of Providence, Blood-Bound
-    Book, Shogun''s Ofuda, Oni Hunter''s Garb, Rage, Freya''s Tears, Bancroft''s Talon,
+    Cosmic Horror, Spear of the Magus, Eye of Providence, Blood-Bound Book, Shogun''s
+    Ofuda, Oni Hunter''s Garb, Avenging Blade, Rage, Freya''s Tears, Bancroft''s Talon,
     Transcendence, Eros'' Bow.'
   slot_scores:
-    Berserker's Shield:
+    Tyrfing:
       total: 0.51
-      efficiency: 0.66
-      win: 0.53
-      pick: 0.0
-      fit: 0.26
+      efficiency: 0.46
+      win: 0.54
+      pick: 0.54
+      fit: 0.53
     Death Metal:
       total: 0.52
       efficiency: 0.56
       win: 0.53
       pick: 0.0
       fit: 0.55
-    Gluttonous Grimoire:
-      total: 0.51
-      efficiency: 0.63
-      win: 0.53
-      pick: 0.0
-      fit: 0.31
+    Riptalon:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.59
+      pick: 0.35
+      fit: 0.41
     Damaru:
       total: 0.51
       efficiency: 0.57
@@ -341,8 +341,8 @@ builds:
     Death Metal, Runeforged Hammer, Damaru, Breastplate of Valor, Phoenix Feather,
     Freya''s Tears, Shogun''s Ofuda, Spectral Armor, Erosion, Lernaean Bow, Shifter''s
     Shield, Eye of Providence, Hydra''s Lament, Eye of the Storm, Lifebinder, Shield
-    Splitter, Avenging Blade, Draconic Scale, Umbral Link, Leviathan''s Hide, Midgardian
-    Mail.'
+    Splitter, Draconic Scale, Umbral Link, Leviathan''s Hide, Midgardian Mail, Avenging
+    Blade.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -363,9 +363,9 @@ builds:
       pick: 0.0
       fit: 0.46
     Riptalon:
-      total: 0.53
+      total: 0.56
       efficiency: 0.53
-      win: 0.53
+      win: 0.59
       pick: 0.35
       fit: 0.58
     The Crusher:
@@ -386,13 +386,13 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Gluttonous Grimoire
+  - Tyrfing
+  - Riptalon
   - Silverbranch Bow
   - The Crusher
-  - Rod of Tahuti
   flex_slots:
-  - Silverbranch Bow
   - Berserker's Shield
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -408,13 +408,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Rod of Tahuti, The Crusher, Gluttonous Grimoire, Jotunn''s Revenge,
-    Nimble Ring, Soul Gem, The Reaper, Berserker''s Shield, The Cosmic Horror, Avenging
-    Blade, Spear of the Magus, Death Metal, Tekko-Kagi, Damaru, Genji''s Guard, Lernaean
-    Bow, Spear of Desolation, Golden Blade, Screeching Gargoyle, Obsidian Shard, Hydra''s
-    Lament, Runeforged Hammer, Breastplate of Valor, Heartseeker, Stone of Binding,
-    Titan''s Bane, Pharaoh''s Curse, Kinetic Cuirass, Void Shield, Amanita Charm,
-    Bragi''s Harp, Eye of Providence, Doom Orb, Bracer of The Abyss, Pendulum Blade,
-    Oni Hunter''s Garb.'
+    Nimble Ring, Soul Gem, The Reaper, Berserker''s Shield, The Cosmic Horror, Spear
+    of the Magus, Death Metal, Tekko-Kagi, Avenging Blade, Damaru, Genji''s Guard,
+    Lernaean Bow, Spear of Desolation, Golden Blade, Screeching Gargoyle, Obsidian
+    Shard, Hydra''s Lament, Runeforged Hammer, Breastplate of Valor, Heartseeker,
+    Stone of Binding, Titan''s Bane, Pharaoh''s Curse, Kinetic Cuirass, Void Shield,
+    Amanita Charm, Bragi''s Harp, Eye of Providence, Doom Orb, Bracer of The Abyss,
+    Pendulum Blade, Oni Hunter''s Garb.'
   slot_scores:
     Berserker's Shield:
       total: 0.5
@@ -428,16 +428,22 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.47
-    Gluttonous Grimoire:
-      total: 0.54
-      efficiency: 0.63
-      win: 0.53
-      pick: 0.0
-      fit: 0.53
+    Tyrfing:
+      total: 0.5
+      efficiency: 0.46
+      win: 0.54
+      pick: 0.54
+      fit: 0.44
+    Riptalon:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.59
+      pick: 0.35
+      fit: 0.6
     Silverbranch Bow:
-      total: 0.53
+      total: 0.54
       efficiency: 0.52
-      win: 0.56
+      win: 0.57
       pick: 0.38
       fit: 0.52
     The Crusher:
@@ -446,12 +452,6 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.55
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.77
-      win: 0.53
-      pick: 0.0
-      fit: 0.35
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -484,8 +484,8 @@ builds:
     Guard, Soul Gem, Hydra''s Lament, Pharaoh''s Curse, Runeforged Hammer, Breastplate
     of Valor, Bragi''s Harp, Bracer of The Abyss, Kinetic Cuirass, The Reaper, Tekko-Kagi,
     Amanita Charm, Demon Blade, The Cosmic Horror, Shogun''s Ofuda, Eye of Providence,
-    Oni Hunter''s Garb, Spear of the Magus, Blood-Bound Book, Avenging Blade, Deathbringer,
-    Freya''s Tears, Eros'' Bow, Bancroft''s Talon, Transcendence.'
+    Oni Hunter''s Garb, Spear of the Magus, Blood-Bound Book, Deathbringer, Freya''s
+    Tears, Avenging Blade, Eros'' Bow, Qin''s Blade, Bancroft''s Talon, Transcendence.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -502,7 +502,7 @@ builds:
     Tyrfing:
       total: 0.53
       efficiency: 0.46
-      win: 0.53
+      win: 0.54
       pick: 0.54
       fit: 0.67
     Nimble Ring:
@@ -512,15 +512,15 @@ builds:
       pick: 0.0
       fit: 0.39
     Riptalon:
-      total: 0.53
+      total: 0.55
       efficiency: 0.53
-      win: 0.53
+      win: 0.59
       pick: 0.35
       fit: 0.56
     Silverbranch Bow:
-      total: 0.52
+      total: 0.53
       efficiency: 0.52
-      win: 0.56
+      win: 0.57
       pick: 0.38
       fit: 0.47
   starter: *id001
@@ -657,9 +657,9 @@ builds:
       pick: 0.0
       fit: 0.51
     Silverbranch Bow:
-      total: 0.5
+      total: 0.51
       efficiency: 0.52
-      win: 0.56
+      win: 0.57
       pick: 0.38
       fit: 0.32
     The Crusher:
@@ -673,14 +673,14 @@ builds:
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
   - Death Metal
   - Gluttonous Grimoire
   - Silverbranch Bow
   - The Crusher
+  - Rod of Tahuti
   flex_slots:
+  - Jotunn's Revenge
   - Silverbranch Bow
-  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -710,12 +710,6 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.36
-    Tyrfing:
-      total: 0.5
-      efficiency: 0.46
-      win: 0.53
-      pick: 0.54
-      fit: 0.47
     Death Metal:
       total: 0.52
       efficiency: 0.56
@@ -731,7 +725,7 @@ builds:
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.52
-      win: 0.56
+      win: 0.57
       pick: 0.38
       fit: 0.34
     The Crusher:
@@ -740,6 +734,12 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.43
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.77
+      win: 0.53
+      pick: 0.0
+      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: model
