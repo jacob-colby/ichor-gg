@@ -146,6 +146,23 @@ shipped **off**. Numbers are in the named module.
    of the two gates disagreeing about a specific item**, and the one most worth
    revisiting if a non-circular measure ever exists. `price_stacks` in
    `_weights.yaml`; ships off.
+9. **Conversion-aware fit (2026-08-15)** — the fit half of the conversion fix.
+   `price_conversions` taught *efficiency* that Transcendence's 300 mana is
+   really Strength; fit still read the item at 0.172 and ranked it 48/95 for
+   Ullr in Joust, where there is no win rate to carry it. `conversion_fit` adds
+   the source stat to the god's fit map, weighted by what that god's own map
+   says about the stat it converts *into* — mana is worth to Ullr exactly what
+   Strength is, and worth nothing to a Guardian whose only converter makes
+   Intelligence. It works as designed (fit 0.172 → 0.238, rank 48 → 36) and no
+   setting from 0.05 to 1.0 beats control on both leakage-free splits; the two
+   splits move in *opposite* directions across the sweep. Two things worth
+   keeping: the obvious gate ("does the god's pool contain a converter") is
+   **vacuous at 87 of 87 gods**, since the damage filter admits Transcendence
+   to every physical god and Book of Thoth to every magical one — any future
+   attempt must weight by the target, not the converter. And 36/95 is not a
+   core slot, so even shipped on this would not produce the build the reviewer
+   asked for; the `mana-stack` flavor is the supported route to it. Numbers
+   under `conversion_fit` in `_weights.yaml`; ships off.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a

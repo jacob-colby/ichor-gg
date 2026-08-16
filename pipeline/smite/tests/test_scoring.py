@@ -864,3 +864,50 @@ def test_a_requires_item_flavor_is_withheld_when_the_pool_is_unknown():
     weights["flavors"] = {"mana-stack": {"requires_item": ["Transcendence"]}}
     assert scoring.eligible_flavors(
         _god("Ullr", "physical", "Carry", ["Carry"]), weights) == []
+
+
+# ── conversion_fit: Max Mana is worth what it converts into ────────────────
+
+_TRANS = {"name": "Transcendence", "cost": 2900, "tier": 3, "stats": {"Strength": "30", "Max Mana": "300"},
+          "passive": "+Strength equal to 3% of Mana from Items."}
+_THOTH = {"name": "Book of Thoth", "cost": 2800, "tier": 3, "stats": {"Intelligence": "80", "Max Mana": "300"},
+          "passive": "+Intelligence equal to 5% of Mana from Items."}
+
+
+def test_converter_weight_follows_the_target_stat_not_the_converter():
+    """The naive gate — "is a converter buildable" — is vacuous: Transcendence
+    is physical and Book of Thoth magical, so the damage filter admits exactly
+    one of them to all 87 gods. The weight has to come from the target."""
+    w = scoring.load_weights_default()
+    ullr = _god("Ullr", "physical", "Carry", ["Sharpshooter"])
+    ymir = _god("Ymir", "magical", "Support", ["Tank"])
+    items = [_TRANS, _THOTH]
+    # Ullr sees only Transcendence (physical), and wants the Strength it makes.
+    assert scoring.converter_stat_weights(
+        ullr, items, {"Strength": 1.0}, w) == {"Max Mana": 1.0}
+    # Ymir sees only Book of Thoth, and has no use for the Intelligence it
+    # makes — so its mana is worth nothing to him and drops out entirely.
+    assert scoring.converter_stat_weights(
+        ymir, items, {"Max Health": 0.8, "Physical Protection": 1.0}, w) == {}
+
+
+def test_converter_weight_reads_percentage_grants():
+    """`_GRANT` keys a percentage grant as "Strength %"; the fit map is keyed
+    on the bare stat, so the lookup has to strip the suffix or the whole class
+    of percentage converters silently scores zero."""
+    w = scoring.load_weights_default()
+    item = {"name": "Pct", "cost": 2500, "tier": 3, "stats": {"Strength": "40", "Max Mana": "200"},
+            "passive": "For every 100 Mana: +2% Strength"}
+    got = scoring.converter_stat_weights(
+        _god("X", "physical", "Carry", ["Sharpshooter"]), [item], {"Strength": 0.6}, w)
+    assert got == {"Max Mana": 0.6}
+
+
+def test_conversion_fit_off_by_default_leaves_the_map_alone():
+    w = scoring.load_weights_default()
+    assert w.get("conversion_fit", 0.0) == 0.0
+    ullr = _god("Ullr", "physical", "Carry", ["Sharpshooter"])
+    rows = scoring.score_god_items(ullr, [_TRANS], {}, {}, w, {})
+    w2 = dict(w, conversion_fit=1.0)
+    rows2 = scoring.score_god_items(ullr, [_TRANS], {}, {}, w2, {})
+    assert rows2[0]["fit"] > rows[0]["fit"]

@@ -65,6 +65,33 @@ underrated:
 # Turn either on only with a `validate.compute` run to back it up.
 magnitude_fit: false
 damage_fit_blend: 0.0
+# Fit credit for a stat the god's pool can CONVERT into one they want, scaled
+# by what the god thinks of the target stat (see scoring.converter_stat_weights).
+# In practice this is Max Mana: Transcendence -> Strength, Book of Thoth ->
+# Intelligence. `price_conversions` fixed the efficiency half of this and left
+# fit reading 0.17 on Transcendence for Ullr.
+#
+# MEASURED, AND SHIPPED OFF. It does exactly what it was built to do — Ullr's
+# Transcendence goes fit 0.172 -> 0.238 and rank 48/95 -> 36/95 in Joust — and
+# no setting beats control on both leakage-free splits:
+#
+#            probe 0.70:0.30      best 0.45:0.55
+#   0.00        37.5%  (control)    35.2%  (control)
+#   0.05        37.0                35.0
+#   0.10        36.8                34.3
+#   0.20        37.9                32.2
+#   0.25        39.1                32.9
+#   0.30        37.9                33.4
+#   0.50        36.7                34.1
+#   0.75        35.2                36.4
+#   1.00        32.1                35.1
+#
+# The two splits move in opposite directions, which is the signature of a term
+# trading against the fit weight rather than adding information. Note also that
+# 36th of 95 is nowhere near a core slot: even shipped ON this would not put
+# Transcendence in Ullr's Joust build. The `mana-stack` flavor is the supported
+# way to ask for that build, and it already weights Max Mana at 0.5.
+conversion_fit: 0.0
 # Unconditional passive grants counted as stats — measured, and shipped OFF.
 # 51.0% -> 50.4% coverage. It prices items visibly more sensibly (every
 # Adaptive Stat item stops reading "premium") and ranks them worse. See

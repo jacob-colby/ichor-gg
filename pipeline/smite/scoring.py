@@ -676,6 +676,46 @@ def god_max_lifesteal(god, weights, profile):
     return profile["max_lifesteal"]
 
 
+def converter_stat_weights(god, items, base_map, weights=None):
+    """`{source_stat: 0..1}` — how much a stat this god cannot use directly is
+    worth anyway, because something in their pool converts it into a stat they
+    can.
+
+    A fit weight answers "does this god want this kind of item". Max Mana sits
+    at zero in every role map and correctly so: on its own it buys nothing. But
+    Transcendence turns 3% of it into Strength and Book of Thoth 5% into
+    Intelligence, and for a god who can buy one of those, mana IS power.
+
+    The obvious gate — "does the god's scored pool contain a converter" — is
+    vacuous. Measured: 87 of 87 gods, because Transcendence is a physical item,
+    Book of Thoth a magical one, and the damage filter admits exactly one of
+    them to everybody. That gate would hand Max Mana to Ymir on the strength of
+    a Book of Thoth he will never build.
+
+    So the weight is carried by the TARGET instead: mana is worth what the god
+    thinks of the stat it becomes. `base_map` is the post-kit-blend map, so
+    Ullr's Strength 1.0 makes mana fully live for him, while a Guardian's
+    Intelligence 0.0 makes Book of Thoth's mana worth nothing — self-gating,
+    with no separate role rule to keep in sync. Conversion RATE deliberately
+    does not scale this: 3% vs 5% is an efficiency question, and efficiency
+    already prices it (`price_conversions`). This term only decides whether the
+    stat belongs in the map at all.
+    """
+    from smite import passives
+    out = {}
+    for item in items or ():
+        if not (is_buildable(item, god) and passes_damage_filter(item, god, weights)):
+            continue
+        for source, _rate, per_unit in passives.stat_conversions(item):
+            # "Strength %" and "Strength" are the same want as far as fit is
+            # concerned — the map is keyed on the bare stat name.
+            target = max((base_map.get(g[:-2].strip() if g.endswith(" %") else g, 0.0)
+                          for g in per_unit), default=0.0)
+            if target > out.get(source, 0.0):
+                out[source] = target
+    return {stat: w for stat, w in out.items() if w > 0.0}
+
+
 def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_map, profile=None):
     """Score every buildable, damage-filter-passing item for one god, ranked by
     total descending. An optional profile (from resolve_profile) applies mode
@@ -703,6 +743,18 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         dmg_blend = eff_weights.get("damage_fit_blend", 0.0)
         if dmg_blend:
             base_map = damage_value.blend_stat_values(god, base_map, dmg_blend)
+
+        # A stat the god can CONVERT into power belongs in the map, for that
+        # god only. `price_conversions` fixed the efficiency half of this -
+        # Transcendence's residual went +216 to -8 - and left the fit half
+        # untouched, so the item still scored fit 0.17 for Ullr and sat 48th of
+        # 95 in Joust, where there is no win rate to carry it. Efficiency
+        # knowing an item is a bargain does not help if fit still says the god
+        # does not want that kind of item.
+        conv_fit = eff_weights.get("conversion_fit", 0.0)
+        if conv_fit:
+            for stat, w in converter_stat_weights(god, items, base_map, eff_weights).items():
+                base_map[stat] = max(base_map.get(stat, 0.0), conv_fit * w)
 
     # Magnitude reference for the fit term, computed once over the whole pool.
     reference = stat_reference(items) if eff_weights.get("magnitude_fit", False) else None
