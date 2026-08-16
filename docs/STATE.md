@@ -327,7 +327,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (596) ·
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
-| Tests | 596 pipeline · 614 viewer |
+| Tests | 599 pipeline · 614 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
