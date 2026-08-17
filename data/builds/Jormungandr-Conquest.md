@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Unyielding
-  aspect_pick_rate: 0.12
-  aspect_win_rate: 0.65
+  aspect_pick_rate: 0.11
+  aspect_win_rate: 0.58
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.38
-    win_rate: 0.51
+    pick_rate: 0.44
+    win_rate: 0.54
     alternates:
     - name: Eye of Erebus
-      pick_rate: 0.15
-      win_rate: 0.44
+      pick_rate: 0.13
+      win_rate: 0.46
     - name: Devourer's Gauntlet
-      pick_rate: 0.1
-      win_rate: 0.71
-  - name: Ethereal Staff
-    pick_rate: 0.16
-    win_rate: 0.44
+      pick_rate: 0.09
+      win_rate: 0.68
+  - name: Genji's Guard
+    pick_rate: 0.15
+    win_rate: 0.56
     alternates:
+    - name: Ethereal Staff
+      pick_rate: 0.13
+      win_rate: 0.44
     - name: Prophetic Cloak
-      pick_rate: 0.12
-      win_rate: 0.5
-    - name: Genji's Guard
-      pick_rate: 0.11
-      win_rate: 0.63
-  - name: Gladiator's Shield
-    pick_rate: 0.13
-    win_rate: 0.38
-    alternates:
-    - name: Ethereal Staff
-      pick_rate: 0.12
-      win_rate: 0.5
-    - name: Genji's Guard
-      pick_rate: 0.11
-      win_rate: 0.61
-  - name: Soul Reaver
-    pick_rate: 0.14
-    win_rate: 0.55
-    alternates:
-    - name: Ethereal Staff
-      pick_rate: 0.16
-      win_rate: 0.58
-    - name: Gladiator's Shield
       pick_rate: 0.1
-      win_rate: 0.5
-  - name: Shell of Rebuke
+      win_rate: 0.55
+  - name: Gladiator's Shield
+    pick_rate: 0.14
+    win_rate: 0.43
+    alternates:
+    - name: Genji's Guard
+      pick_rate: 0.14
+      win_rate: 0.57
+    - name: Ethereal Staff
+      pick_rate: 0.11
+      win_rate: 0.57
+  - name: Ethereal Staff
+    pick_rate: 0.15
+    win_rate: 0.57
+    alternates:
+    - name: Soul Reaver
+      pick_rate: 0.13
+      win_rate: 0.54
+    - name: Gladiator's Shield
+      pick_rate: 0.09
+      win_rate: 0.56
+  - name: Hide of the Nemean Lion
     pick_rate: 0.09
-    win_rate: 0.69
+    win_rate: 0.44
     alternates:
     - name: Soul Reaver
       pick_rate: 0.08
-      win_rate: 0.33
-    - name: Hide of the Nemean Lion
-      pick_rate: 0.08
-      win_rate: 0.42
+      win_rate: 0.36
+    - name: Shell of Rebuke
+      pick_rate: 0.07
+      win_rate: 0.69
   - name: Soul Reliquary
-    pick_rate: 0.06
+    pick_rate: 0.05
     win_rate: 0.5
     alternates:
     - name: Hide of the Nemean Lion
       pick_rate: 0.05
       win_rate: 1.0
-    - name: Oracle Staff
+    - name: Glorious Pridwen
       pick_rate: 0.04
-      win_rate: 0.75
+      win_rate: 0.6
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.46
+    pick_rate: 0.47
     win_rate: 0.5
   - name: Bluestone Pendant
-    pick_rate: 0.26
+    pick_rate: 0.28
     win_rate: 0.48
   - name: Archmage's Gem
-    pick_rate: 0.06
-    win_rate: 0.0
+    pick_rate: 0.09
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/jormungandr/
-  last_verified: '2026-08-16'
-  god_win_rate: 0.5146198830409356
-  god_matches_won: 88
-  god_matches_played: 171
+  last_verified: '2026-08-17'
+  god_win_rate: 0.5093457943925234
+  god_matches_won: 109
+  god_matches_played: 214
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-16'
-  god_matches_analyzed: 6103
+  god_window_end: '2026-08-17'
+  god_matches_analyzed: 7467
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -126,39 +126,39 @@ builds:
     Screeching Gargoyle, Ancile, Magi''s Cloak, Void Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.54
       efficiency: 0.69
-      win: 0.61
-      pick: 0.17
+      win: 0.56
+      pick: 0.2
       fit: 0.26
     Berserker's Shield:
-      total: 0.53
+      total: 0.55
       efficiency: 0.66
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.52
+      total: 0.54
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.58
     Shifter's Shield:
-      total: 0.5
+      total: 0.52
       efficiency: 0.52
-      win: 0.51
-      pick: 0.38
+      win: 0.54
+      pick: 0.44
       fit: 0.48
     The Crusher:
-      total: 0.5
+      total: 0.52
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.32
     Amanita Charm:
-      total: 0.52
+      total: 0.54
       efficiency: 0.63
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.48
   starter: &id001
@@ -193,46 +193,46 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Berserker''s Shield, Kinetic Cuirass,
     Soul Gem, Rod of Tahuti, Gluttonous Grimoire, The Crusher, Nimble Ring, Chandra''s
     Grace, Jotunn''s Revenge, Rod of Asclepius, Golden Blade, Pharaoh''s Curse, Riptalon,
-    Oni Hunter''s Garb, Runeforged Hammer, Freya''s Tears, The Reaper, Breastplate
-    of Valor, Phoenix Feather, Hydra''s Lament, Eye of the Storm, Shogun''s Ofuda,
-    Spectral Armor, Erosion, Shield Splitter, Eye of Providence, Lernaean Bow, Blood-Bound
-    Book, Draconic Scale, Leviathan''s Hide, Bancroft''s Talon, Lifebinder, Avenging
-    Blade, Midgardian Mail, Death Metal, Tyrfing, Glorious Pridwen.'
+    Oni Hunter''s Garb, Runeforged Hammer, Freya''s Tears, The Reaper, Glorious Pridwen,
+    Breastplate of Valor, Phoenix Feather, Hydra''s Lament, Eye of the Storm, Shogun''s
+    Ofuda, Spectral Armor, Erosion, Shield Splitter, Eye of Providence, Lernaean Bow,
+    Blood-Bound Book, Draconic Scale, Leviathan''s Hide, Bancroft''s Talon, Lifebinder,
+    Avenging Blade, Midgardian Mail, Death Metal, Tyrfing.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.54
       efficiency: 0.69
-      win: 0.61
-      pick: 0.17
+      win: 0.56
+      pick: 0.2
       fit: 0.23
     Berserker's Shield:
-      total: 0.53
+      total: 0.55
       efficiency: 0.66
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.49
     Kinetic Cuirass:
-      total: 0.52
+      total: 0.54
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.56
     Shield of the Phoenix:
-      total: 0.53
+      total: 0.55
       efficiency: 0.57
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.71
     The Crusher:
-      total: 0.5
+      total: 0.52
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.33
     Amanita Charm:
-      total: 0.56
+      total: 0.58
       efficiency: 0.63
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.76
   starter: *id001
@@ -273,39 +273,39 @@ builds:
     Blade.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.53
       efficiency: 0.69
-      win: 0.61
-      pick: 0.17
+      win: 0.56
+      pick: 0.2
       fit: 0.2
     Berserker's Shield:
-      total: 0.51
+      total: 0.53
       efficiency: 0.66
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.37
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.54
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.47
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.52
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.47
     Gluttonous Grimoire:
-      total: 0.52
+      total: 0.54
       efficiency: 0.63
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.5
     The Crusher:
-      total: 0.53
+      total: 0.54
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.5
   starter: *id001
@@ -326,11 +326,11 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -345,39 +345,39 @@ builds:
     Death Metal, Screeching Gargoyle, Yogi''s Necklace, Damaru, Ancile.'
   slot_scores:
     Golden Blade:
-      total: 0.49
+      total: 0.51
       efficiency: 0.53
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.54
     Genji's Guard:
-      total: 0.55
+      total: 0.53
       efficiency: 0.69
-      win: 0.61
-      pick: 0.17
+      win: 0.56
+      pick: 0.2
       fit: 0.2
     Berserker's Shield:
-      total: 0.52
+      total: 0.54
       efficiency: 0.66
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.43
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.52
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.47
     Nimble Ring:
-      total: 0.51
+      total: 0.53
       efficiency: 0.68
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.3
     Amanita Charm:
-      total: 0.5
+      total: 0.52
       efficiency: 0.63
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.37
   starter: *id001
@@ -411,46 +411,46 @@ builds:
     Rod of Tahuti, Breastplate of Valor, Jotunn''s Revenge, Kinetic Cuirass, Amanita
     Charm, Shield of the Phoenix, Soul Gem, Nimble Ring, Gluttonous Grimoire, Hydra''s
     Lament, The Crusher, Oni Hunter''s Garb, Pharaoh''s Curse, Screeching Gargoyle,
-    Chronos'' Pendant, Chandra''s Grace, Spear of Desolation, Spectral Armor, Erosion,
-    Runeforged Hammer, Eye of Providence, Golden Blade, Shogun''s Ofuda, Shield Splitter,
-    Draconic Scale, Leviathan''s Hide, Helm of Radiance, Eye of the Storm, Midgardian
-    Mail, Gem of Focus, Lernaean Bow, Mantle Of Discord, Stone of Binding, Death Metal,
-    The Cosmic Horror.'
+    Chronos'' Pendant, Chandra''s Grace, Spear of Desolation, Prophetic Cloak, Spectral
+    Armor, Erosion, Runeforged Hammer, Eye of Providence, Golden Blade, Shogun''s
+    Ofuda, Shield Splitter, Draconic Scale, Leviathan''s Hide, Helm of Radiance, Eye
+    of the Storm, Midgardian Mail, Gem of Focus, Lernaean Bow, Mantle Of Discord,
+    Stone of Binding, Death Metal, The Cosmic Horror.'
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.57
       efficiency: 0.69
-      win: 0.61
-      pick: 0.17
+      win: 0.56
+      pick: 0.2
       fit: 0.41
     Berserker's Shield:
-      total: 0.51
+      total: 0.53
       efficiency: 0.66
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.39
     Breastplate of Valor:
-      total: 0.51
+      total: 0.53
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.41
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.53
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.39
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.53
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.49
     Freya's Tears:
-      total: 0.52
+      total: 0.53
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.55
   starter: *id001
@@ -491,39 +491,39 @@ builds:
     Tyrfing, Helm of Radiance.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.54
       efficiency: 0.69
-      win: 0.61
-      pick: 0.17
+      win: 0.56
+      pick: 0.2
       fit: 0.23
     Berserker's Shield:
-      total: 0.51
+      total: 0.53
       efficiency: 0.66
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.54
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.53
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.52
     The Crusher:
-      total: 0.52
+      total: 0.54
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.47
     Amanita Charm:
-      total: 0.51
+      total: 0.53
       efficiency: 0.63
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.42
   starter: *id001
@@ -564,39 +564,39 @@ builds:
     Shard, Jade Scepter, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.53
       efficiency: 0.69
-      win: 0.61
-      pick: 0.17
+      win: 0.56
+      pick: 0.2
       fit: 0.2
     Berserker's Shield:
-      total: 0.51
+      total: 0.53
       efficiency: 0.66
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.5
+      total: 0.52
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.35
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.52
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.46
     Gluttonous Grimoire:
-      total: 0.52
+      total: 0.54
       efficiency: 0.63
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.49
     The Crusher:
-      total: 0.51
+      total: 0.53
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.38
   starter: *id001
@@ -636,39 +636,39 @@ builds:
     Screeching Gargoyle, Ancile, Magi''s Cloak, Void Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.54
       efficiency: 0.69
-      win: 0.61
-      pick: 0.17
+      win: 0.56
+      pick: 0.2
       fit: 0.26
     Berserker's Shield:
-      total: 0.53
+      total: 0.55
       efficiency: 0.66
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.52
+      total: 0.54
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.58
     Freya's Tears:
-      total: 0.5
+      total: 0.51
       efficiency: 0.59
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.43
     The Crusher:
-      total: 0.5
+      total: 0.52
       efficiency: 0.64
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.32
     Amanita Charm:
-      total: 0.52
+      total: 0.54
       efficiency: 0.63
-      win: 0.51
+      win: 0.55
       pick: 0.0
       fit: 0.48
   starter: *id001

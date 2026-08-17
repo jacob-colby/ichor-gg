@@ -2,14 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Ashwhorl Acorn | 0.65 | 0.82 | 0.94 | 0.52 | 0.23 | 0.52 | undervalued |  |  |
-| Briskberry Acorn | 0.65 | 0.81 | 0.93 | 0.50 | 0.41 | 0.52 | undervalued |  |  |
-| Thistlethorn Acorn | 0.64 | 0.82 | 0.92 | 0.48 | 0.31 | 0.61 | undervalued |  |  |
-| Jotunn's Revenge | 0.61 | 0.75 | 0.64 | 0.50 | 0.30 | 1.00 | undervalued |  |  |
+| Ashwhorl Acorn | 0.67 | 0.82 | 0.94 | 0.55 | 0.24 | 0.52 | undervalued |  |  |
+| Briskberry Acorn | 0.64 | 0.81 | 0.93 | 0.48 | 0.38 | 0.52 | undervalued |  |  |
+| Thistlethorn Acorn | 0.64 | 0.82 | 0.92 | 0.47 | 0.30 | 0.61 | undervalued |  |  |
+| Jotunn's Revenge | 0.60 | 0.75 | 0.64 | 0.48 | 0.31 | 1.00 | undervalued |  |  |
 | The Crusher | 0.60 | 0.75 | 0.64 | 0.50 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
-| Breastplate of Valor | 0.58 | 0.47 | 0.64 | 0.75 | 0.19 | 0.09 | undervalued |  |  |
+| Breastplate of Valor | 0.58 | 0.47 | 0.64 | 0.73 | 0.22 | 0.09 | undervalued |  |  |
 | The Reaper | 0.54 | 0.64 | 0.52 | 0.50 | 0.00 | 0.91 | fair | sustain | **UNDERRATED** |
-| Kinetic Cuirass | 0.53 | 0.44 | 0.59 | 0.67 | 0.15 | 0.10 | fair | burst |  |
 | Heartseeker | 0.53 | 0.59 | 0.41 | 0.50 | 0.22 | 1.00 | premium | burst |  |
 | Hydra's Lament | 0.53 | 0.60 | 0.56 | 0.50 | 0.00 | 0.71 | fair | burst | **UNDERRATED** |
 | Pendulum Blade | 0.52 | 0.59 | 0.41 | 0.50 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
@@ -35,6 +34,7 @@
 | Berserker's Shield | 0.45 | 0.46 | 0.66 | 0.50 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Musashi's Dual Swords | 0.45 | 0.45 | 0.42 | 0.50 | 0.00 | 0.52 | premium | mobility |  |
 | Bloodforge | 0.45 | 0.45 | 0.42 | 0.50 | 0.00 | 0.52 | premium | sustain |  |
+| Kinetic Cuirass | 0.45 | 0.44 | 0.59 | 0.50 | 0.00 | 0.10 | fair | burst |  |
 | Amanita Charm | 0.45 | 0.44 | 0.63 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Freya's Tears | 0.44 | 0.44 | 0.59 | 0.50 | 0.00 | 0.09 | fair |  |  |
 | Wyrmskin Hide | 0.44 | 0.44 | 0.40 | 0.50 | 0.00 | 0.52 | premium |  |  |
