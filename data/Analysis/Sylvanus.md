@@ -2,14 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Freya's Tears | 0.61 | 0.60 | 0.59 | 0.69 | 0.12 | 0.62 | fair |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.56 | 0.63 | 0.59 | 0.53 | 0.00 | 0.73 | fair | burst | **UNDERRATED** |
 | Genji's Guard | 0.55 | 0.60 | 0.69 | 0.54 | 0.22 | 0.39 | undervalued |  |  |
 | Amanita Charm | 0.55 | 0.63 | 0.63 | 0.53 | 0.00 | 0.63 | undervalued | sustain, aura | **UNDERRATED** |
 | Eye of Providence | 0.55 | 0.62 | 0.62 | 0.53 | 0.00 | 0.63 | undervalued | ward-economy | **UNDERRATED** |
+| Freya's Tears | 0.54 | 0.60 | 0.59 | 0.53 | 0.09 | 0.62 | fair |  | **UNDERRATED** |
 | Rod of Tahuti | 0.54 | 0.60 | 0.77 | 0.53 | 0.00 | 0.20 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.53 | 0.59 | 0.63 | 0.53 | 0.00 | 0.48 | undervalued | burst | **UNDERRATED** |
-| Spirit Robe | 0.53 | 0.39 | 0.36 | 0.73 | 0.09 | 0.45 | premium | sustain |  |
 | Shield of the Phoenix | 0.52 | 0.57 | 0.57 | 0.53 | 0.00 | 0.57 | fair | sustain | **UNDERRATED** |
 | Erosion | 0.51 | 0.55 | 0.52 | 0.53 | 0.00 | 0.63 | fair | aura | **UNDERRATED** |
 | Shifter's Shield | 0.51 | 0.55 | 0.52 | 0.53 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
@@ -38,7 +37,7 @@
 | Jade Scepter | 0.47 | 0.47 | 0.53 | 0.53 | 0.00 | 0.33 | fair | peel |  |
 | The Cosmic Horror | 0.47 | 0.47 | 0.58 | 0.53 | 0.00 | 0.20 | fair |  |  |
 | Helm of Darkness | 0.47 | 0.46 | 0.41 | 0.53 | 0.00 | 0.60 | premium | mobility |  |
-| Breastplate of Valor | 0.47 | 0.56 | 0.64 | 0.40 | 0.17 | 0.39 | undervalued |  |  |
+| Breastplate of Valor | 0.47 | 0.56 | 0.64 | 0.40 | 0.16 | 0.39 | undervalued |  |  |
 | Spear of the Magus | 0.47 | 0.46 | 0.57 | 0.53 | 0.00 | 0.20 | fair |  |  |
 | Hussar's Wings | 0.47 | 0.46 | 0.38 | 0.53 | 0.00 | 0.63 | premium | cc-immunity |  |
 | Void Stone | 0.47 | 0.46 | 0.43 | 0.53 | 0.00 | 0.51 | fair | protection-shred, aura |  |
@@ -65,8 +64,10 @@
 | Regrowth Striders | 0.44 | 0.40 | 0.40 | 0.53 | 0.00 | 0.39 | premium | mobility, sustain |  |
 | Sphere of Negation | 0.43 | 0.39 | 0.40 | 0.53 | 0.00 | 0.37 | premium | sustain |  |
 | Book of Thoth | 0.43 | 0.39 | 0.49 | 0.53 | 0.00 | 0.14 | fair |  |  |
+| Spirit Robe | 0.43 | 0.39 | 0.36 | 0.53 | 0.00 | 0.45 | premium | sustain |  |
 | Doom Orb | 0.43 | 0.38 | 0.46 | 0.53 | 0.00 | 0.20 | fair |  |  |
 | Polynomicon | 0.43 | 0.38 | 0.44 | 0.53 | 0.00 | 0.24 | fair | burst |  |
+| Stampede | 0.43 | 0.46 | 0.48 | 0.43 | 0.14 | 0.41 | fair | mobility, aura, cc-immunity |  |
 | The World Stone | 0.43 | 0.38 | 0.46 | 0.53 | 0.00 | 0.20 | fair |  |  |
 | Umbral Link | 0.43 | 0.38 | 0.45 | 0.53 | 0.00 | 0.23 | fair | sustain, aura |  |
 | Dwarven Plate | 0.43 | 0.38 | 0.35 | 0.53 | 0.00 | 0.45 | premium |  |  |
@@ -79,7 +80,6 @@
 | Contagion | 0.42 | 0.36 | 0.39 | 0.53 | 0.00 | 0.28 | premium | anti-heal, burst |  |
 | Radiant Bulwark | 0.42 | 0.36 | 0.32 | 0.53 | 0.00 | 0.45 | premium | aura |  |
 | Divine Ruin | 0.42 | 0.36 | 0.40 | 0.53 | 0.00 | 0.24 | premium | anti-heal, burst |  |
-| Stampede | 0.42 | 0.46 | 0.48 | 0.40 | 0.12 | 0.41 | fair | mobility, aura, cc-immunity |  |
 | Soul Reaver | 0.41 | 0.35 | 0.40 | 0.53 | 0.00 | 0.24 | premium | burst |  |
 | Heartwood Charm | 0.40 | 0.33 | 0.33 | 0.53 | 0.00 | 0.35 | premium |  |  |
 | Eye of Erebus | 0.40 | 0.33 | 0.32 | 0.53 | 0.00 | 0.35 | premium | ward-economy |  |
@@ -88,7 +88,7 @@
 | Resolute Mantle | 0.37 | 0.26 | 0.30 | 0.53 | 0.00 | 0.18 | premium | cc-immunity, sustain |  |
 | Brawler’s Beat Stick | 0.37 | 0.26 | 0.18 | 0.53 | 0.00 | 0.45 | premium | anti-heal |  |
 | Circe's Hexstone | 0.37 | 0.26 | 0.22 | 0.53 | 0.00 | 0.35 | premium | mobility, cc-immunity |  |
-| Gauntlet of Thebes | 0.36 | 0.23 | 0.26 | 0.52 | 0.19 | 0.18 | premium |  |  |
+| Gauntlet of Thebes | 0.36 | 0.23 | 0.26 | 0.51 | 0.18 | 0.18 | premium |  |  |
 | Omen Drum | 0.33 | 0.19 | 0.27 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.33 | 0.18 | 0.18 | 0.53 | 0.00 | 0.18 | premium |  |  |
 | Mercury's Talaria | 0.28 | 0.09 | 0.13 | 0.53 | 0.00 | 0.00 | premium |  |  |

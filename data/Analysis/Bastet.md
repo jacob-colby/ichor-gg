@@ -2,15 +2,15 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| The Crusher | 0.66 | 0.75 | 0.64 | 0.60 | 0.23 | 1.00 | undervalued | burst |  |
-| Jotunn's Revenge | 0.63 | 0.75 | 0.64 | 0.51 | 0.62 | 1.00 | undervalued |  |  |
-| The Reaper | 0.58 | 0.64 | 0.52 | 0.57 | 0.12 | 0.91 | fair | sustain | **UNDERRATED** |
-| Heartseeker | 0.58 | 0.59 | 0.41 | 0.57 | 0.53 | 1.00 | premium | burst |  |
-| Titan's Bane | 0.55 | 0.59 | 0.45 | 0.55 | 0.28 | 0.91 | fair |  |  |
+| The Crusher | 0.64 | 0.75 | 0.64 | 0.57 | 0.23 | 1.00 | undervalued | burst |  |
+| Jotunn's Revenge | 0.63 | 0.75 | 0.64 | 0.51 | 0.61 | 1.00 | undervalued |  |  |
+| The Reaper | 0.58 | 0.64 | 0.52 | 0.56 | 0.12 | 0.91 | fair | sustain | **UNDERRATED** |
+| Heartseeker | 0.57 | 0.59 | 0.41 | 0.55 | 0.52 | 1.00 | premium | burst |  |
+| Titan's Bane | 0.56 | 0.59 | 0.45 | 0.55 | 0.30 | 0.91 | fair |  |  |
 | Hydra's Lament | 0.55 | 0.60 | 0.56 | 0.55 | 0.00 | 0.70 | fair | burst | **UNDERRATED** |
 | Tekko-Kagi | 0.54 | 0.58 | 0.44 | 0.55 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
-| Pendulum Blade | 0.54 | 0.59 | 0.41 | 0.52 | 0.20 | 1.00 | premium |  |  |
 | Runeforged Hammer | 0.53 | 0.57 | 0.55 | 0.55 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
+| Pendulum Blade | 0.52 | 0.59 | 0.41 | 0.49 | 0.20 | 1.00 | premium |  |  |
 | Damaru | 0.52 | 0.55 | 0.57 | 0.55 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Lernaean Bow | 0.52 | 0.54 | 0.50 | 0.55 | 0.00 | 0.62 | fair | wave-clear, burst | **UNDERRATED** |
 | Avatar's Parashu | 0.51 | 0.53 | 0.37 | 0.55 | 0.00 | 0.91 | premium | cc-immunity | **UNDERRATED** |
@@ -21,6 +21,7 @@
 | Genji's Guard | 0.50 | 0.51 | 0.69 | 0.55 | 0.00 | 0.09 | undervalued |  | **UNDERRATED** |
 | Eye of the Storm | 0.50 | 0.51 | 0.50 | 0.55 | 0.00 | 0.52 | fair | peel | **UNDERRATED** |
 | Tyrfing | 0.50 | 0.51 | 0.46 | 0.55 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
+| Barbed Carver | 0.50 | 0.46 | 0.40 | 0.56 | 0.25 | 0.62 | premium | burst |  |
 | Transcendence | 0.50 | 0.52 | 0.52 | 0.49 | 0.30 | 0.52 | fair |  |  |
 | Riptalon | 0.49 | 0.49 | 0.53 | 0.55 | 0.00 | 0.40 | fair | sustain | **UNDERRATED** |
 | Dominance | 0.49 | 0.48 | 0.47 | 0.55 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
@@ -34,7 +35,6 @@
 | Amanita Charm | 0.47 | 0.44 | 0.63 | 0.55 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Freya's Tears | 0.47 | 0.44 | 0.59 | 0.55 | 0.00 | 0.09 | fair |  |  |
 | Wyrmskin Hide | 0.47 | 0.44 | 0.40 | 0.55 | 0.00 | 0.52 | premium |  |  |
-| Barbed Carver | 0.46 | 0.46 | 0.40 | 0.49 | 0.23 | 0.62 | premium | burst |  |
 | Eye of Providence | 0.46 | 0.43 | 0.62 | 0.55 | 0.00 | 0.00 | undervalued | ward-economy |  |
 | Rage | 0.46 | 0.43 | 0.39 | 0.55 | 0.00 | 0.52 | premium |  |  |
 | Oni Hunter's Garb | 0.46 | 0.43 | 0.61 | 0.55 | 0.00 | 0.00 | undervalued |  |  |
@@ -77,8 +77,8 @@
 | Qin's Blade | 0.39 | 0.28 | 0.36 | 0.55 | 0.00 | 0.10 | premium | burst |  |
 | Glorious Pridwen | 0.39 | 0.28 | 0.36 | 0.55 | 0.00 | 0.09 | premium | sustain |  |
 | Shroud of Vengeance | 0.39 | 0.28 | 0.36 | 0.55 | 0.00 | 0.10 | premium | burst |  |
+| Shifter's Shield | 0.39 | 0.36 | 0.52 | 0.45 | 0.09 | 0.00 | fair |  |  |
 | Odysseus' Bow | 0.39 | 0.28 | 0.36 | 0.55 | 0.00 | 0.10 | premium | burst, wave-clear |  |
-| Shifter's Shield | 0.38 | 0.36 | 0.52 | 0.44 | 0.09 | 0.00 | fair |  |  |
 | Hussar's Wings | 0.38 | 0.27 | 0.38 | 0.55 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Heartwood Charm | 0.38 | 0.26 | 0.33 | 0.55 | 0.00 | 0.09 | premium |  |  |
 | Dagger of Frenzy | 0.37 | 0.25 | 0.36 | 0.55 | 0.00 | 0.00 | premium |  |  |

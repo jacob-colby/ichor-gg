@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Loyalty
-  aspect_pick_rate: 0.09
-  aspect_win_rate: 0.54
+  aspect_pick_rate: 0.12
+  aspect_win_rate: 0.58
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.31
-    win_rate: 0.48
-    alternates:
-    - name: The Reaper
-      pick_rate: 0.16
-      win_rate: 0.65
-    - name: Shifter's Shield
-      pick_rate: 0.13
-      win_rate: 0.72
-  - name: Shifter's Shield
-    pick_rate: 0.19
-    win_rate: 0.56
-    alternates:
-    - name: Sanguine Lash
-      pick_rate: 0.15
-      win_rate: 0.62
-    - name: Jotunn's Revenge
-      pick_rate: 0.1
-      win_rate: 0.8
-  - name: Genji's Guard
-    pick_rate: 0.1
+    pick_rate: 0.3
     win_rate: 0.5
     alternates:
     - name: The Reaper
+      pick_rate: 0.17
+      win_rate: 0.57
+    - name: Shifter's Shield
+      pick_rate: 0.13
+      win_rate: 0.71
+  - name: Shifter's Shield
+    pick_rate: 0.19
+    win_rate: 0.58
+    alternates:
+    - name: Sanguine Lash
+      pick_rate: 0.14
+      win_rate: 0.57
+    - name: Jotunn's Revenge
+      pick_rate: 0.1
+      win_rate: 0.81
+  - name: Genji's Guard
+    pick_rate: 0.11
+    win_rate: 0.47
+    alternates:
+    - name: The Reaper
       pick_rate: 0.07
-      win_rate: 0.8
+      win_rate: 0.73
     - name: Shifter's Shield
       pick_rate: 0.06
-      win_rate: 0.56
+      win_rate: 0.6
   - name: Magi's Cloak
     pick_rate: 0.08
-    win_rate: 0.36
+    win_rate: 0.33
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.78
     - name: The Reaper
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.63
   - name: Heartseeker
     pick_rate: 0.1
-    win_rate: 0.54
+    win_rate: 0.5
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.07
-      win_rate: 0.78
-    - name: Umbral Link
       pick_rate: 0.06
-      win_rate: 0.43
+      win_rate: 0.78
+    - name: Magi's Cloak
+      pick_rate: 0.06
+      win_rate: 0.63
   - name: Titan's Bane
-    pick_rate: 0.1
+    pick_rate: 0.09
     win_rate: 0.63
     alternates:
     - name: Mantle Of Discord
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.8
     - name: Heartseeker
-      pick_rate: 0.05
+      pick_rate: 0.04
       win_rate: 0.5
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.26
-    win_rate: 0.65
+    pick_rate: 0.25
+    win_rate: 0.63
   - name: Bumba's Cudgel
     pick_rate: 0.13
-    win_rate: 0.39
+    win_rate: 0.48
   - name: Death's Embrace
     pick_rate: 0.12
-    win_rate: 0.71
+    win_rate: 0.6
   source_url: https://smitebrain.com/gods/fenrir/
-  last_verified: '2026-08-17'
-  god_win_rate: 0.5902777777777778
-  god_matches_won: 85
-  god_matches_played: 144
+  last_verified: '2026-08-18'
+  god_win_rate: 0.5853658536585366
+  god_matches_won: 96
+  god_matches_played: 164
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-17'
-  god_matches_analyzed: 7467
+  god_window_end: '2026-08-18'
+  god_matches_analyzed: 8839
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -123,40 +123,40 @@ builds:
     Berserker''s Shield, Musashi''s Dual Swords, Bloodforge.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.61
       efficiency: 0.64
-      win: 0.48
-      pick: 0.31
+      win: 0.5
+      pick: 0.3
       fit: 1.0
     Hydra's Lament:
-      total: 0.55
+      total: 0.56
       efficiency: 0.56
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.71
     Freya's Tears:
-      total: 0.58
+      total: 0.57
       efficiency: 0.59
       win: 0.78
-      pick: 0.12
+      pick: 0.1
       fit: 0.09
     The Reaper:
-      total: 0.62
+      total: 0.58
       efficiency: 0.52
-      win: 0.65
-      pick: 0.16
+      win: 0.57
+      pick: 0.17
       fit: 0.91
     The Crusher:
       total: 0.63
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 1.0
     Titan's Bane:
       total: 0.59
       efficiency: 0.45
       win: 0.63
-      pick: 0.31
+      pick: 0.28
       fit: 0.91
   starter: &id001
     base: Bumba's Golden Dagger
@@ -168,15 +168,15 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   - Freya's Tears
-  - The Reaper
+  - Mantle Of Discord
   - The Crusher
   flex_slots:
   - Hydra's Lament
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -194,39 +194,39 @@ builds:
     the Storm, Tyrfing, Eye of Providence, Yogi''s Necklace.'
   slot_scores:
     Breastplate of Valor:
-      total: 0.51
+      total: 0.52
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.24
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.64
-      win: 0.48
-      pick: 0.31
+      win: 0.5
+      pick: 0.3
       fit: 0.71
     Hydra's Lament:
-      total: 0.54
+      total: 0.55
       efficiency: 0.56
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.63
     Freya's Tears:
       total: 0.58
       efficiency: 0.59
       win: 0.78
-      pick: 0.12
+      pick: 0.1
       fit: 0.14
-    The Reaper:
+    Mantle Of Discord:
       total: 0.55
       efficiency: 0.52
-      win: 0.65
-      pick: 0.16
-      fit: 0.47
+      win: 0.8
+      pick: 0.15
+      fit: 0.0
     The Crusher:
-      total: 0.56
+      total: 0.57
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.57
   starter: *id001
@@ -234,14 +234,14 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Hydra's Lament
   - Freya's Tears
   - Mantle Of Discord
-  - The Reaper
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Mantle Of Discord
   - Titan's Bane
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -263,49 +263,49 @@ builds:
     Transcendence, Avenging Blade, Oni Hunter''s Garb, Avatar''s Parashu.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.64
-      win: 0.48
-      pick: 0.31
+      win: 0.5
+      pick: 0.3
       fit: 0.78
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.56
+      win: 0.57
+      pick: 0.0
+      fit: 0.54
     Freya's Tears:
-      total: 0.6
+      total: 0.59
       efficiency: 0.59
       win: 0.78
-      pick: 0.12
+      pick: 0.1
       fit: 0.22
     Mantle Of Discord:
       total: 0.55
       efficiency: 0.52
       win: 0.8
-      pick: 0.18
+      pick: 0.15
       fit: 0.0
-    The Reaper:
-      total: 0.57
-      efficiency: 0.52
-      win: 0.65
-      pick: 0.16
-      fit: 0.56
     The Crusher:
-      total: 0.57
+      total: 0.58
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.66
     Titan's Bane:
       total: 0.54
       efficiency: 0.45
       win: 0.63
-      pick: 0.31
+      pick: 0.28
       fit: 0.56
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
+  - Shield of the Phoenix
   - Freya's Tears
   - Mantle Of Discord
-  - The Reaper
   - The Crusher
   - Amanita Charm
   flex_slots:
@@ -319,8 +319,8 @@ builds:
     swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -335,37 +335,37 @@ builds:
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.59
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.66
+    Shield of the Phoenix:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.57
+      pick: 0.0
+      fit: 0.73
     Freya's Tears:
       total: 0.62
       efficiency: 0.59
       win: 0.78
-      pick: 0.12
+      pick: 0.1
       fit: 0.38
     Mantle Of Discord:
       total: 0.6
       efficiency: 0.52
       win: 0.8
-      pick: 0.18
+      pick: 0.15
       fit: 0.34
-    The Reaper:
-      total: 0.59
-      efficiency: 0.52
-      win: 0.65
-      pick: 0.16
-      fit: 0.7
     The Crusher:
-      total: 0.55
+      total: 0.56
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.5
     Amanita Charm:
-      total: 0.6
+      total: 0.61
       efficiency: 0.63
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.86
   starter: *id001
@@ -374,17 +374,17 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Freya's Tears
-  - Mantle Of Discord
   - The Reaper
+  - Tekko-Kagi
   - The Crusher
   - Titan's Bane
   flex_slots:
   - Freya's Tears
-  - Mantle Of Discord
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
@@ -402,40 +402,40 @@ builds:
     Tyrfing, Oath-Sworn Spear, Arondight, Kinetic Cuirass.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.61
       efficiency: 0.64
-      win: 0.48
-      pick: 0.31
+      win: 0.5
+      pick: 0.3
       fit: 1.0
     Freya's Tears:
       total: 0.57
       efficiency: 0.59
       win: 0.78
-      pick: 0.12
+      pick: 0.1
       fit: 0.06
-    Mantle Of Discord:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.8
-      pick: 0.18
-      fit: 0.0
     The Reaper:
-      total: 0.62
+      total: 0.59
       efficiency: 0.52
-      win: 0.65
-      pick: 0.16
+      win: 0.57
+      pick: 0.17
+      fit: 0.94
+    Tekko-Kagi:
+      total: 0.55
+      efficiency: 0.44
+      win: 0.57
+      pick: 0.0
       fit: 0.94
     The Crusher:
       total: 0.63
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.6
+      total: 0.59
       efficiency: 0.45
       win: 0.63
-      pick: 0.31
+      pick: 0.28
       fit: 0.94
   starter: *id001
 - source: suggested
@@ -444,9 +444,9 @@ builds:
   - Golden Blade
   - Freya's Tears
   - Mantle Of Discord
-  - The Reaper
   - Riptalon
   - Silverbranch Bow
+  - The Crusher
   flex_slots:
   - Golden Blade
   - Silverbranch Bow
@@ -471,61 +471,61 @@ builds:
     Providence, Oni Hunter''s Garb, Eros'' Bow, Transcendence, Avenging Blade.'
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.55
       efficiency: 0.53
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.69
     Freya's Tears:
       total: 0.57
       efficiency: 0.59
       win: 0.78
-      pick: 0.12
+      pick: 0.1
       fit: 0.04
     Mantle Of Discord:
       total: 0.55
       efficiency: 0.52
       win: 0.8
-      pick: 0.18
+      pick: 0.15
       fit: 0.0
-    The Reaper:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.65
-      pick: 0.16
-      fit: 0.44
     Riptalon:
       total: 0.56
       efficiency: 0.53
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.79
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.52
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.69
+    The Crusher:
+      total: 0.55
+      efficiency: 0.64
+      win: 0.57
+      pick: 0.0
+      fit: 0.43
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
   - Hydra's Lament
   - Freya's Tears
   - Mantle Of Discord
+  - The Crusher
   flex_slots:
-  - Breastplate of Valor
-  - Genji's Guard
+  - Mantle Of Discord
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -540,42 +540,42 @@ builds:
     of Providence, Oni Hunter''s Garb, Regrowth Striders, Lernaean Bow, Silverbranch
     Bow, Golden Blade, Tekko-Kagi.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.16
-      fit: 0.5
     Breastplate of Valor:
       total: 0.55
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.64
-      win: 0.48
-      pick: 0.31
+      win: 0.5
+      pick: 0.3
       fit: 0.85
     Hydra's Lament:
       total: 0.56
       efficiency: 0.56
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.75
     Freya's Tears:
       total: 0.64
       efficiency: 0.59
       win: 0.78
-      pick: 0.12
+      pick: 0.1
       fit: 0.5
     Mantle Of Discord:
       total: 0.55
       efficiency: 0.52
       win: 0.8
-      pick: 0.18
+      pick: 0.15
       fit: 0.0
+    The Crusher:
+      total: 0.55
+      efficiency: 0.64
+      win: 0.57
+      pick: 0.0
+      fit: 0.45
   starter: *id001
 - source: suggested
   archetype: model
@@ -610,39 +610,39 @@ builds:
     Berserker''s Shield, Musashi''s Dual Swords, Bloodforge.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.61
       efficiency: 0.64
-      win: 0.48
-      pick: 0.31
+      win: 0.5
+      pick: 0.3
       fit: 1.0
     Transcendence:
-      total: 0.51
+      total: 0.52
       efficiency: 0.52
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.52
     Hydra's Lament:
-      total: 0.55
+      total: 0.56
       efficiency: 0.56
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.71
     The Reaper:
-      total: 0.62
+      total: 0.58
       efficiency: 0.52
-      win: 0.65
-      pick: 0.16
+      win: 0.57
+      pick: 0.17
       fit: 0.91
     The Crusher:
       total: 0.63
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.55
+      total: 0.53
       efficiency: 0.41
-      win: 0.54
+      win: 0.5
       pick: 0.22
       fit: 1.0
   starter: *id001

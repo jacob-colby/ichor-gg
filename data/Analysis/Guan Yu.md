@@ -2,13 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Freya's Tears | 0.65 | 0.56 | 0.59 | 0.79 | 0.22 | 0.49 | fair |  |  |
-| Genji's Guard | 0.60 | 0.58 | 0.69 | 0.66 | 0.30 | 0.32 | undervalued |  |  |
+| Freya's Tears | 0.64 | 0.56 | 0.59 | 0.78 | 0.24 | 0.49 | fair |  |  |
+| Breastplate of Valor | 0.61 | 0.54 | 0.64 | 0.72 | 0.36 | 0.32 | undervalued |  |  |
 | Kinetic Cuirass | 0.58 | 0.60 | 0.59 | 0.63 | 0.00 | 0.60 | fair | burst | **UNDERRATED** |
-| Breastplate of Valor | 0.58 | 0.54 | 0.64 | 0.65 | 0.35 | 0.32 | undervalued |  |  |
 | Amanita Charm | 0.58 | 0.59 | 0.63 | 0.63 | 0.00 | 0.50 | undervalued | sustain, aura | **UNDERRATED** |
 | Berserker's Shield | 0.58 | 0.59 | 0.66 | 0.63 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
 | Eye of Providence | 0.57 | 0.58 | 0.62 | 0.63 | 0.00 | 0.50 | undervalued | ward-economy | **UNDERRATED** |
+| Genji's Guard | 0.57 | 0.58 | 0.69 | 0.59 | 0.34 | 0.32 | undervalued |  |  |
+| Shifter's Shield | 0.57 | 0.51 | 0.52 | 0.68 | 0.16 | 0.50 | fair |  |  |
 | Jotunn's Revenge | 0.57 | 0.56 | 0.64 | 0.63 | 0.00 | 0.40 | undervalued |  | **UNDERRATED** |
 | The Crusher | 0.56 | 0.55 | 0.64 | 0.63 | 0.00 | 0.36 | undervalued | burst | **UNDERRATED** |
 | Shield of the Phoenix | 0.55 | 0.54 | 0.57 | 0.63 | 0.00 | 0.47 | fair | sustain | **UNDERRATED** |
@@ -16,7 +17,6 @@
 | Hydra's Lament | 0.55 | 0.53 | 0.56 | 0.63 | 0.00 | 0.45 | fair | burst | **UNDERRATED** |
 | Shield Splitter | 0.55 | 0.53 | 0.51 | 0.63 | 0.00 | 0.56 | fair |  | **UNDERRATED** |
 | Runeforged Hammer | 0.55 | 0.52 | 0.55 | 0.63 | 0.00 | 0.46 | fair | burst | **UNDERRATED** |
-| Shifter's Shield | 0.54 | 0.51 | 0.52 | 0.62 | 0.15 | 0.50 | fair |  | **UNDERRATED** |
 | Eye of the Storm | 0.54 | 0.51 | 0.50 | 0.63 | 0.00 | 0.54 | fair | peel | **UNDERRATED** |
 | Erosion | 0.54 | 0.51 | 0.52 | 0.63 | 0.00 | 0.50 | fair | aura | **UNDERRATED** |
 | Pharaoh's Curse | 0.54 | 0.51 | 0.55 | 0.63 | 0.00 | 0.43 | fair | aura | **UNDERRATED** |
@@ -35,7 +35,7 @@
 | Chandra's Grace | 0.51 | 0.46 | 0.53 | 0.63 | 0.00 | 0.30 | fair | sustain |  |
 | Ancile | 0.51 | 0.46 | 0.51 | 0.63 | 0.00 | 0.33 | fair |  |  |
 | Magi's Cloak | 0.51 | 0.45 | 0.50 | 0.63 | 0.00 | 0.35 | fair | cc-immunity |  |
-| Draconic Scale | 0.51 | 0.50 | 0.50 | 0.55 | 0.25 | 0.50 | fair |  |  |
+| Hide of the Nemean Lion | 0.51 | 0.45 | 0.50 | 0.63 | 0.00 | 0.33 | fair |  |  |
 | Void Shield | 0.51 | 0.45 | 0.46 | 0.63 | 0.00 | 0.43 | fair | protection-shred, aura |  |
 | Doublet of Binding | 0.51 | 0.45 | 0.50 | 0.63 | 0.00 | 0.33 | fair | aura |  |
 | Prophetic Cloak | 0.51 | 0.45 | 0.43 | 0.63 | 0.00 | 0.49 | premium |  |  |
@@ -57,6 +57,7 @@
 | Eros' Bow | 0.49 | 0.41 | 0.48 | 0.63 | 0.00 | 0.25 | fair | aura |  |
 | Mystical Mail | 0.49 | 0.41 | 0.44 | 0.63 | 0.00 | 0.33 | fair | aura, wave-clear |  |
 | Silverbranch Bow | 0.49 | 0.41 | 0.52 | 0.63 | 0.00 | 0.14 | fair |  |  |
+| Draconic Scale | 0.49 | 0.50 | 0.50 | 0.50 | 0.25 | 0.50 | fair |  |  |
 | Pendulum Blade | 0.49 | 0.41 | 0.41 | 0.63 | 0.00 | 0.40 | premium |  |  |
 | Glorious Pridwen | 0.48 | 0.40 | 0.36 | 0.63 | 0.00 | 0.49 | premium | sustain |  |
 | Heartseeker | 0.48 | 0.40 | 0.41 | 0.63 | 0.00 | 0.36 | premium | burst |  |
@@ -69,16 +70,15 @@
 | Regrowth Striders | 0.47 | 0.37 | 0.40 | 0.63 | 0.00 | 0.32 | premium | mobility, sustain |  |
 | Barbed Carver | 0.47 | 0.37 | 0.40 | 0.63 | 0.00 | 0.31 | premium | burst |  |
 | Umbral Link | 0.47 | 0.36 | 0.45 | 0.63 | 0.00 | 0.17 | fair | sustain, aura |  |
-| Heartwood Charm | 0.46 | 0.32 | 0.33 | 0.65 | 0.20 | 0.30 | premium |  |  |
 | Spirit Robe | 0.46 | 0.36 | 0.36 | 0.63 | 0.00 | 0.35 | premium | sustain |  |
 | Musashi's Dual Swords | 0.46 | 0.35 | 0.42 | 0.63 | 0.00 | 0.21 | premium | mobility |  |
 | Bloodforge | 0.46 | 0.35 | 0.42 | 0.63 | 0.00 | 0.21 | premium | sustain |  |
-| Hide of the Nemean Lion | 0.46 | 0.45 | 0.50 | 0.50 | 0.18 | 0.33 | fair |  |  |
 | Contagion | 0.46 | 0.35 | 0.39 | 0.63 | 0.00 | 0.26 | premium | anti-heal, burst |  |
 | Dwarven Plate | 0.46 | 0.35 | 0.35 | 0.63 | 0.00 | 0.35 | premium |  |  |
 | Demon Blade | 0.45 | 0.34 | 0.35 | 0.63 | 0.00 | 0.31 | premium |  |  |
 | Rage | 0.45 | 0.34 | 0.39 | 0.63 | 0.00 | 0.21 | premium |  |  |
 | Avatar's Parashu | 0.45 | 0.34 | 0.37 | 0.63 | 0.00 | 0.26 | premium | cc-immunity |  |
+| Heartwood Charm | 0.45 | 0.32 | 0.33 | 0.62 | 0.20 | 0.30 | premium |  |  |
 | Radiant Bulwark | 0.45 | 0.33 | 0.32 | 0.63 | 0.00 | 0.35 | premium | aura |  |
 | Oath-Sworn Spear | 0.44 | 0.32 | 0.33 | 0.63 | 0.00 | 0.31 | premium | protection-shred |  |
 | Eye of Erebus | 0.44 | 0.31 | 0.32 | 0.63 | 0.00 | 0.30 | premium | ward-economy |  |

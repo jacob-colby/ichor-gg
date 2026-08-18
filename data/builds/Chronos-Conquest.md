@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: 0.48
   slot_order:
   - name: Book of Thoth
-    pick_rate: 0.35
-    win_rate: 0.47
+    pick_rate: 0.37
+    win_rate: 0.48
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.25
-      win_rate: 0.42
+      pick_rate: 0.23
+      win_rate: 0.4
     - name: Bracer of The Abyss
       pick_rate: 0.05
-      win_rate: 0.65
+      win_rate: 0.68
   - name: Spear of Desolation
-    pick_rate: 0.22
-    win_rate: 0.49
+    pick_rate: 0.24
+    win_rate: 0.48
     alternates:
     - name: Book of Thoth
       pick_rate: 0.11
-      win_rate: 0.51
+      win_rate: 0.46
     - name: Nimble Ring
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.44
   - name: Nimble Ring
     pick_rate: 0.29
     win_rate: 0.54
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.11
-      win_rate: 0.6
+      pick_rate: 0.13
+      win_rate: 0.58
     - name: Polynomicon
-      pick_rate: 0.08
-      win_rate: 0.32
+      pick_rate: 0.09
+      win_rate: 0.3
   - name: Rod of Tahuti
-    pick_rate: 0.25
-    win_rate: 0.38
+    pick_rate: 0.24
+    win_rate: 0.37
     alternates:
     - name: Nimble Ring
-      pick_rate: 0.11
-      win_rate: 0.48
+      pick_rate: 0.13
+      win_rate: 0.5
     - name: Obsidian Shard
-      pick_rate: 0.11
-      win_rate: 0.45
+      pick_rate: 0.1
+      win_rate: 0.42
   - name: Obsidian Shard
     pick_rate: 0.14
-    win_rate: 0.47
+    win_rate: 0.45
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.12
-      win_rate: 0.62
+      pick_rate: 0.13
+      win_rate: 0.54
     - name: Evil Eye
-      pick_rate: 0.08
-      win_rate: 0.37
+      pick_rate: 0.07
+      win_rate: 0.35
   - name: Evil Eye
     pick_rate: 0.06
-    win_rate: 0.4
+    win_rate: 0.36
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.06
-      win_rate: 0.67
+      win_rate: 0.7
     - name: Obsidian Shard
       pick_rate: 0.06
-      win_rate: 0.89
+      win_rate: 0.8
   community_starters:
   - name: Pendulum of the Ages
     pick_rate: 0.31
-    win_rate: 0.59
+    win_rate: 0.55
   - name: Sands Of Time
-    pick_rate: 0.25
-    win_rate: 0.23
+    pick_rate: 0.24
+    win_rate: 0.24
   - name: Bluestone Brooch
     pick_rate: 0.09
     win_rate: 1.0
   source_url: https://smitebrain.com/gods/chronos/
-  last_verified: '2026-08-17'
-  god_win_rate: 0.4748427672955975
-  god_matches_won: 151
-  god_matches_played: 318
+  last_verified: '2026-08-18'
+  god_win_rate: 0.47277936962750716
+  god_matches_won: 165
+  god_matches_played: 349
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-17'
-  god_matches_analyzed: 7467
+  god_window_end: '2026-08-18'
+  god_matches_analyzed: 8839
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -123,9 +123,9 @@ builds:
     Cuirass, Jade Scepter, Totem of Death, Amanita Charm, Dreamer''s Idol.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.56
     Nimble Ring:
@@ -137,26 +137,26 @@ builds:
     Spear of Desolation:
       total: 0.5
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.56
     The Cosmic Horror:
       total: 0.48
       efficiency: 0.58
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.44
     Spear of the Magus:
       total: 0.48
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.53
+      total: 0.52
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.44
   starter: &id001
     base: Conduit Gem
@@ -164,15 +164,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
   - Bracer of The Abyss
   - Nimble Ring
-  - Spear of Desolation
   - Rod of Tahuti
   flex_slots:
-  - Genji's Guard
   - Breastplate of Valor
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -193,22 +193,28 @@ builds:
     Doom Orb, The World Stone, Rod of Asclepius, Kinetic Cuirass, Freya''s Tears,
     Amanita Charm, Gem of Focus, Jade Scepter, Eye of Providence.'
   slot_scores:
+    Book of Thoth:
+      total: 0.45
+      efficiency: 0.49
+      win: 0.48
+      pick: 0.37
+      fit: 0.28
     Genji's Guard:
       total: 0.48
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.18
     Breastplate of Valor:
       total: 0.46
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.18
     Bracer of The Abyss:
-      total: 0.53
+      total: 0.55
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.4
     Nimble Ring:
@@ -217,17 +223,11 @@ builds:
       win: 0.54
       pick: 0.45
       fit: 0.48
-    Spear of Desolation:
-      total: 0.49
-      efficiency: 0.52
-      win: 0.49
-      pick: 0.3
-      fit: 0.45
     Rod of Tahuti:
       total: 0.52
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.42
   starter: *id001
 - source: suggested
@@ -264,21 +264,21 @@ builds:
     Garb.'
   slot_scores:
     Book of Thoth:
-      total: 0.42
+      total: 0.43
       efficiency: 0.49
-      win: 0.47
-      pick: 0.35
+      win: 0.48
+      pick: 0.37
       fit: 0.16
     Genji's Guard:
-      total: 0.48
+      total: 0.47
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.16
     Bracer of The Abyss:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.37
     Nimble Ring:
@@ -290,14 +290,14 @@ builds:
     Spear of Desolation:
       total: 0.5
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.56
     Rod of Tahuti:
-      total: 0.52
+      total: 0.51
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.4
   starter: *id001
 - source: suggested
@@ -336,19 +336,19 @@ builds:
     Genji's Guard:
       total: 0.48
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.19
     Kinetic Cuirass:
       total: 0.49
       efficiency: 0.59
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.49
     Bracer of The Abyss:
-      total: 0.52
+      total: 0.54
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.34
     Nimble Ring:
@@ -360,13 +360,13 @@ builds:
     Rod of Tahuti:
       total: 0.5
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.27
     Amanita Charm:
       total: 0.53
       efficiency: 0.63
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.69
   starter: *id001
@@ -396,16 +396,16 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Bracer of The Abyss, Soul Gem, The Cosmic Horror,
+    for this god: Bracer of The Abyss, Gluttonous Grimoire, Soul Gem, The Cosmic Horror,
     Spear of the Magus, Genji''s Guard, Doom Orb, Screeching Gargoyle, The World Stone,
     Dreamer''s Idol, Breastplate of Valor, Blood-Bound Book, Chronos'' Pendant, Bancroft''s
     Talon, Bragi''s Harp, Stone of Binding, Death Metal, Helm of Radiance, Kinetic
     Cuirass, Void Shield, Amanita Charm, Rod of Asclepius, Freya''s Tears.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.43
     Nimble Ring:
@@ -415,28 +415,28 @@ builds:
       pick: 0.45
       fit: 0.53
     Spear of Desolation:
-      total: 0.52
+      total: 0.51
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.66
     The Cosmic Horror:
       total: 0.5
       efficiency: 0.58
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.57
     Spear of the Magus:
-      total: 0.5
+      total: 0.49
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
-      total: 0.55
+      total: 0.54
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.57
   starter: *id001
 - source: suggested
@@ -472,9 +472,9 @@ builds:
     Oni Hunter''s Garb, Shield of the Phoenix, Jade Scepter, Gem of Focus, Doom Orb.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.53
+      total: 0.55
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.41
     Nimble Ring:
@@ -486,40 +486,40 @@ builds:
     Bragi's Harp:
       total: 0.45
       efficiency: 0.42
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.64
     Gluttonous Grimoire:
       total: 0.5
       efficiency: 0.63
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.48
     Spear of Desolation:
       total: 0.47
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.38
     Rod of Tahuti:
       total: 0.5
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.3
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Book of Thoth
   - Genji's Guard
-  - Breastplate of Valor
   - Bracer of The Abyss
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Rod of Tahuti
-  - Breastplate of Valor
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -528,53 +528,53 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Soul Gem, Bracer of The Abyss, Genji''s
+    + fit + win/pick). Underrated for this god: Bracer of The Abyss, Soul Gem, Genji''s
     Guard, Gluttonous Grimoire, Breastplate of Valor, Chronos'' Pendant, Freya''s
     Tears, Shield of the Phoenix, The Cosmic Horror, Screeching Gargoyle, Gem of Focus,
     Chandra''s Grace, Spear of the Magus, Totem of Death, Death Metal, Bragi''s Harp,
     Kinetic Cuirass, Amanita Charm, Blood-Bound Book, Eye of Providence, Oni Hunter''s
     Garb, Bancroft''s Talon, Gladiator''s Shield.'
   slot_scores:
+    Book of Thoth:
+      total: 0.42
+      efficiency: 0.49
+      win: 0.48
+      pick: 0.37
+      fit: 0.1
     Genji's Guard:
       total: 0.5
       efficiency: 0.69
-      win: 0.47
-      pick: 0.0
-      fit: 0.34
-    Breastplate of Valor:
-      total: 0.49
-      efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.34
     Bracer of The Abyss:
-      total: 0.52
+      total: 0.54
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.33
     Spear of Desolation:
-      total: 0.51
+      total: 0.5
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.59
     Rod of Tahuti:
-      total: 0.5
+      total: 0.49
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.24
     Soul Gem:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.77
   starter: *id001
@@ -604,8 +604,8 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
-    win/pick). Underrated for this god: The Crusher, Jotunn''s Revenge, Gluttonous
-    Grimoire, Bracer of The Abyss, Soul Gem, The Reaper, Death Metal, Hydra''s Lament,
+    win/pick). Underrated for this god: Bracer of The Abyss, The Crusher, Jotunn''s
+    Revenge, Gluttonous Grimoire, Soul Gem, The Reaper, Death Metal, Hydra''s Lament,
     The Cosmic Horror, Spear of the Magus, Genji''s Guard, Lernaean Bow, Bragi''s
     Harp, Runeforged Hammer, Riptalon, Golden Blade, Berserker''s Shield, Tekko-Kagi,
     Damaru, Breastplate of Valor, Tyrfing, Blood-Bound Book, Chronos'' Pendant, Heartseeker,
@@ -614,21 +614,21 @@ builds:
     Splitter, Kinetic Cuirass, Doom Orb.'
   slot_scores:
     Book of Thoth:
-      total: 0.43
+      total: 0.44
       efficiency: 0.49
-      win: 0.47
-      pick: 0.35
+      win: 0.48
+      pick: 0.37
       fit: 0.2
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.59
     Bracer of The Abyss:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.31
     Nimble Ring:
@@ -640,14 +640,14 @@ builds:
     The Crusher:
       total: 0.52
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.59
     Rod of Tahuti:
-      total: 0.52
+      total: 0.51
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.39
   starter: *id001
 - source: suggested
@@ -686,15 +686,15 @@ builds:
     World Stone, Heartseeker, Jade Scepter, Eye of Providence.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.5
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.47
     Bracer of The Abyss:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.44
     Nimble Ring:
@@ -706,20 +706,20 @@ builds:
     Spear of Desolation:
       total: 0.49
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.47
     The Crusher:
       total: 0.51
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
-      total: 0.52
+      total: 0.51
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.39
   starter: *id001
 - source: suggested
@@ -756,9 +756,9 @@ builds:
     Idol.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.56
     Nimble Ring:
@@ -770,26 +770,26 @@ builds:
     Spear of Desolation:
       total: 0.5
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.56
     The Cosmic Horror:
       total: 0.48
       efficiency: 0.58
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.44
     Spear of the Magus:
       total: 0.48
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.53
+      total: 0.52
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.44
   starter: *id001
 - source: suggested
@@ -825,21 +825,21 @@ builds:
     Void Shield, Triton''s Conch, Blood-Bound Book, Stampede.'
   slot_scores:
     Book of Thoth:
-      total: 0.42
+      total: 0.43
       efficiency: 0.49
-      win: 0.47
-      pick: 0.35
+      win: 0.48
+      pick: 0.37
       fit: 0.12
     Genji's Guard:
       total: 0.49
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.25
     Bracer of The Abyss:
-      total: 0.53
+      total: 0.55
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.4
     Nimble Ring:
@@ -849,16 +849,16 @@ builds:
       pick: 0.45
       fit: 0.5
     Spear of Desolation:
-      total: 0.49
+      total: 0.48
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.46
     Rod of Tahuti:
       total: 0.5
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.29
   starter: *id001
   aspect: Aspect of Relativity
@@ -887,9 +887,9 @@ builds:
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
-  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Soul
-    Gem, Bracer of The Abyss, Gluttonous Grimoire, Amanita Charm, Genji''s Guard,
-    Rod of Asclepius, Triton''s Conch, Spectral Armor, Death Metal, The Cosmic Horror,
+  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Bracer
+    of The Abyss, Soul Gem, Gluttonous Grimoire, Amanita Charm, Genji''s Guard, Rod
+    of Asclepius, Triton''s Conch, Spectral Armor, Death Metal, The Cosmic Horror,
     Breastplate of Valor, Spear of the Magus, Bragi''s Harp, Erosion, Oni Hunter''s
     Garb, Lifebinder, Kinetic Cuirass, Doublet of Binding, Bancroft''s Talon, Chronos''
     Pendant, Blood-Bound Book, Void Shield, Void Stone.'
@@ -897,25 +897,25 @@ builds:
     Book of Thoth:
       total: 0.44
       efficiency: 0.49
-      win: 0.47
-      pick: 0.35
+      win: 0.48
+      pick: 0.37
       fit: 0.25
     Genji's Guard:
-      total: 0.49
+      total: 0.48
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.21
     Breastplate of Valor:
       total: 0.46
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.16
     Bracer of The Abyss:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.36
     Nimble Ring:
@@ -925,10 +925,10 @@ builds:
       pick: 0.45
       fit: 0.43
     Rod of Tahuti:
-      total: 0.52
+      total: 0.51
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.37
   starter: *id001
   aspect: Aspect of Relativity
@@ -965,21 +965,21 @@ builds:
     Garb, Bragi''s Harp, Void Stone, Void Shield, Shield of the Phoenix.'
   slot_scores:
     Book of Thoth:
-      total: 0.42
+      total: 0.43
       efficiency: 0.49
-      win: 0.47
-      pick: 0.35
+      win: 0.48
+      pick: 0.37
       fit: 0.14
     Genji's Guard:
       total: 0.48
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.2
     Bracer of The Abyss:
-      total: 0.52
+      total: 0.54
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.32
     Nimble Ring:
@@ -991,14 +991,14 @@ builds:
     Spear of Desolation:
       total: 0.49
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.49
     Rod of Tahuti:
       total: 0.51
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.35
   starter: *id001
   aspect: Aspect of Relativity
@@ -1037,37 +1037,37 @@ builds:
     Kinetic Cuirass:
       total: 0.49
       efficiency: 0.59
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.49
     Bracer of The Abyss:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.29
     Spectral Armor:
       total: 0.5
       efficiency: 0.58
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.57
     Amanita Charm:
       total: 0.58
       efficiency: 0.63
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.5
+      total: 0.49
       efficiency: 0.52
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.69
     Soul Gem:
       total: 0.56
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 1.0
   starter: *id001
@@ -1098,46 +1098,46 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Soul Gem, Gluttonous Grimoire, Bracer of The Abyss, Amanita Charm,
+    for this god: Soul Gem, Bracer of The Abyss, Gluttonous Grimoire, Amanita Charm,
     Void Stone, Void Shield, Genji''s Guard, The Cosmic Horror, Spear of the Magus,
     Screeching Gargoyle, Rod of Asclepius, Spectral Armor, Erosion, Breastplate of
     Valor, Kinetic Cuirass, Doublet of Binding, Stone of Binding, Freya''s Tears,
     Oni Hunter''s Garb, Lifebinder, Shield of the Phoenix, Doom Orb, Chronos'' Pendant.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.32
     Void Shield:
-      total: 0.49
+      total: 0.48
       efficiency: 0.46
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.77
     Void Stone:
       total: 0.49
       efficiency: 0.43
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.83
     Spear of Desolation:
       total: 0.5
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.57
     Rod of Tahuti:
-      total: 0.53
+      total: 0.52
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.43
     Soul Gem:
       total: 0.56
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 1.0
   starter: *id001
@@ -1168,7 +1168,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Bracer of The Abyss, Gluttonous Grimoire, Amanita Charm, Genji''s
+    this god: Bracer of The Abyss, Soul Gem, Gluttonous Grimoire, Amanita Charm, Genji''s
     Guard, Rod of Asclepius, Spectral Armor, Erosion, Breastplate of Valor, Kinetic
     Cuirass, Triton''s Conch, Doublet of Binding, The Cosmic Horror, Oni Hunter''s
     Garb, Freya''s Tears, Spear of the Magus, Void Stone, Void Shield, Death Metal,
@@ -1177,13 +1177,13 @@ builds:
     Genji's Guard:
       total: 0.48
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.18
     Bracer of The Abyss:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.31
     Nimble Ring:
@@ -1193,21 +1193,21 @@ builds:
       pick: 0.45
       fit: 0.38
     Bragi's Harp:
-      total: 0.44
+      total: 0.43
       efficiency: 0.42
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.53
     Rod of Tahuti:
       total: 0.49
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.21
     Soul Gem:
       total: 0.53
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.8
   starter: *id001
@@ -1218,12 +1218,12 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Bracer of The Abyss
+  - Freya's Tears
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Breastplate of Valor
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1232,8 +1232,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -1248,37 +1248,37 @@ builds:
     Genji's Guard:
       total: 0.51
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.36
     Breastplate of Valor:
       total: 0.48
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.3
     Bracer of The Abyss:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.29
+    Freya's Tears:
+      total: 0.47
+      efficiency: 0.59
+      win: 0.46
+      pick: 0.0
+      fit: 0.36
     Spear of Desolation:
-      total: 0.5
-      efficiency: 0.52
-      win: 0.49
-      pick: 0.3
-      fit: 0.52
-    Rod of Tahuti:
       total: 0.49
-      efficiency: 0.77
-      win: 0.38
-      pick: 0.42
-      fit: 0.21
+      efficiency: 0.52
+      win: 0.48
+      pick: 0.33
+      fit: 0.52
     Soul Gem:
       total: 0.56
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.99
   starter: *id001
@@ -1321,37 +1321,37 @@ builds:
     Genji's Guard:
       total: 0.48
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.21
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.57
     Bracer of The Abyss:
-      total: 0.5
+      total: 0.52
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.21
     The Crusher:
-      total: 0.52
+      total: 0.51
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.53
     Pharaoh's Curse:
       total: 0.48
       efficiency: 0.55
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.54
     Soul Gem:
-      total: 0.55
+      total: 0.54
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.9
   starter: *id001
@@ -1394,37 +1394,37 @@ builds:
     Jotunn's Revenge:
       total: 0.5
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.44
     Bracer of The Abyss:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
-      win: 0.65
+      win: 0.68
       pick: 0.05
       fit: 0.37
     Spear of Desolation:
       total: 0.48
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.44
     The Crusher:
       total: 0.5
       efficiency: 0.64
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.42
     Pharaoh's Curse:
       total: 0.49
       efficiency: 0.55
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.61
     Soul Gem:
       total: 0.55
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.91
   starter: *id001
@@ -1464,37 +1464,37 @@ builds:
     Genji's Guard:
       total: 0.49
       efficiency: 0.69
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.25
     Spear of Desolation:
-      total: 0.49
+      total: 0.48
       efficiency: 0.52
-      win: 0.49
-      pick: 0.3
+      win: 0.48
+      pick: 0.33
       fit: 0.46
     Rod of Tahuti:
       total: 0.5
       efficiency: 0.77
-      win: 0.38
-      pick: 0.42
+      win: 0.37
+      pick: 0.4
       fit: 0.29
     Spectral Armor:
       total: 0.47
       efficiency: 0.58
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.38
     Erosion:
       total: 0.46
       efficiency: 0.52
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.47
     Soul Gem:
       total: 0.55
       efficiency: 0.57
-      win: 0.47
+      win: 0.46
       pick: 0.0
       fit: 0.96
   starter: *id001

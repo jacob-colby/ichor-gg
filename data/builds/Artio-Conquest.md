@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Denmother
-  aspect_pick_rate: 0.23
-  aspect_win_rate: 0.71
+  aspect_pick_rate: 0.25
+  aspect_win_rate: 0.65
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.23
-    win_rate: 0.43
+    pick_rate: 0.22
+    win_rate: 0.38
     alternates:
     - name: Yogi's Necklace
-      pick_rate: 0.12
-      win_rate: 0.71
+      pick_rate: 0.11
+      win_rate: 0.7
     - name: Daybreak Gavel
-      pick_rate: 0.12
-      win_rate: 0.52
+      pick_rate: 0.11
+      win_rate: 0.57
   - name: Genji's Guard
-    pick_rate: 0.22
-    win_rate: 0.56
+    pick_rate: 0.21
+    win_rate: 0.58
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.16
-      win_rate: 0.54
+      pick_rate: 0.14
+      win_rate: 0.57
     - name: Breastplate of Valor
-      pick_rate: 0.09
-      win_rate: 0.25
+      pick_rate: 0.11
+      win_rate: 0.26
   - name: Breastplate of Valor
-    pick_rate: 0.11
-    win_rate: 0.8
+    pick_rate: 0.1
+    win_rate: 0.82
     alternates:
     - name: Genji's Guard
       pick_rate: 0.19
-      win_rate: 0.52
+      win_rate: 0.51
     - name: Freya's Tears
-      pick_rate: 0.09
-      win_rate: 0.4
+      pick_rate: 0.08
+      win_rate: 0.44
   - name: Shell of Rebuke
     pick_rate: 0.1
-    win_rate: 0.53
+    win_rate: 0.5
     alternates:
     - name: Breastplate of Valor
-      pick_rate: 0.09
-      win_rate: 0.6
+      pick_rate: 0.08
+      win_rate: 0.56
     - name: Genji's Guard
-      pick_rate: 0.07
-      win_rate: 0.27
+      pick_rate: 0.08
+      win_rate: 0.4
   - name: Draconic Scale
     pick_rate: 0.07
-    win_rate: 0.4
+    win_rate: 0.36
     alternates:
+    - name: Shell of Rebuke
+      pick_rate: 0.06
+      win_rate: 0.5
     - name: Dwarven Plate
-      pick_rate: 0.07
-      win_rate: 0.78
-    - name: Shell of Rebuke
-      pick_rate: 0.05
-      win_rate: 0.43
+      pick_rate: 0.06
+      win_rate: 0.7
   - name: Legionnaire Armor
-    pick_rate: 0.08
-    win_rate: 0.57
+    pick_rate: 0.09
+    win_rate: 0.67
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.33
+      win_rate: 0.29
     - name: Veve Charm
       pick_rate: 0.06
-      win_rate: 0.6
+      win_rate: 0.5
   community_starters:
   - name: Bluestone Pendant
-    pick_rate: 0.35
+    pick_rate: 0.34
     win_rate: 0.38
   - name: Bluestone Brooch
     pick_rate: 0.27
     win_rate: 0.53
   - name: Selflessness
-    pick_rate: 0.14
-    win_rate: 0.48
+    pick_rate: 0.13
+    win_rate: 0.43
   source_url: https://smitebrain.com/gods/artio/
-  last_verified: '2026-08-17'
-  god_win_rate: 0.49444444444444446
-  god_matches_won: 89
-  god_matches_played: 180
+  last_verified: '2026-08-18'
+  god_win_rate: 0.4861111111111111
+  god_matches_won: 105
+  god_matches_played: 216
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-17'
-  god_matches_analyzed: 7467
+  god_window_end: '2026-08-18'
+  god_matches_analyzed: 8839
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -95,23 +95,23 @@ builds:
   slot_order:
   - Yogi's Necklace
   - Genji's Guard
+  - Berserker's Shield
   - Breastplate of Valor
   - Kinetic Cuirass
-  - Transcendence
   - Amanita Charm
   flex_slots:
   - Yogi's Necklace
-  - Transcendence
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Dwarven Plate — magical protection
-    swap_item: Dwarven Plate
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -128,37 +128,37 @@ builds:
     Yogi's Necklace:
       total: 0.55
       efficiency: 0.57
-      win: 0.71
-      pick: 0.12
+      win: 0.7
+      pick: 0.11
       fit: 0.17
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.69
-      win: 0.56
-      pick: 0.3
+      win: 0.58
+      pick: 0.29
       fit: 0.31
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.57
+      pick: 0.0
+      fit: 0.36
     Breastplate of Valor:
-      total: 0.64
+      total: 0.65
       efficiency: 0.64
-      win: 0.8
-      pick: 0.17
+      win: 0.82
+      pick: 0.16
       fit: 0.31
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.59
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.66
-    Transcendence:
-      total: 0.47
-      efficiency: 0.52
-      win: 0.56
-      pick: 0.0
-      fit: 0.22
     Amanita Charm:
       total: 0.56
       efficiency: 0.63
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.56
   starter: &id001
@@ -174,15 +174,15 @@ builds:
   - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
-  - Yogi's Necklace
   - Genji's Guard
+  - Yogi's Necklace
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Dwarven Plate — magical protection
-    swap_item: Dwarven Plate
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -200,64 +200,64 @@ builds:
     Shield, Freya''s Tears.'
   slot_scores:
     Yogi's Necklace:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
-      win: 0.71
-      pick: 0.12
+      win: 0.7
+      pick: 0.11
       fit: 0.21
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.69
-      win: 0.56
-      pick: 0.3
+      win: 0.58
+      pick: 0.29
       fit: 0.28
     Breastplate of Valor:
-      total: 0.63
+      total: 0.64
       efficiency: 0.64
-      win: 0.8
-      pick: 0.17
+      win: 0.82
+      pick: 0.16
       fit: 0.28
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.59
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.66
     Shield of the Phoenix:
       total: 0.57
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.8
     Amanita Charm:
       total: 0.6
       efficiency: 0.63
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.86
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Yogi's Necklace
+  - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
   - Transcendence
   - Gluttonous Grimoire
   - The Crusher
   flex_slots:
-  - Yogi's Necklace
+  - Genji's Guard
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -271,40 +271,40 @@ builds:
     Riptalon, Pharaoh''s Curse, Heartseeker, Leviathan''s Hide, Silverbranch Bow,
     Golden Blade, Midgardian Mail, Titan''s Bane, Freya''s Tears.'
   slot_scores:
-    Yogi's Necklace:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.71
-      pick: 0.12
-      fit: 0.12
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.69
+      win: 0.58
+      pick: 0.29
+      fit: 0.22
     Breastplate of Valor:
-      total: 0.62
+      total: 0.63
       efficiency: 0.64
-      win: 0.8
-      pick: 0.17
+      win: 0.82
+      pick: 0.16
       fit: 0.22
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.56
     Transcendence:
       total: 0.46
       efficiency: 0.52
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.16
     Gluttonous Grimoire:
       total: 0.56
       efficiency: 0.63
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.58
     The Crusher:
-      total: 0.56
+      total: 0.57
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.57
   starter: *id001
@@ -318,7 +318,7 @@ builds:
   - Breastplate of Valor
   - Nimble Ring
   flex_slots:
-  - Nimble Ring
+  - Yogi's Necklace
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -334,7 +334,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Yogi''s Necklace, Nimble Ring, Rod of Tahuti, Kinetic
+    this god: Berserker''s Shield, Nimble Ring, Yogi''s Necklace, Rod of Tahuti, Kinetic
     Cuirass, Amanita Charm, Gluttonous Grimoire, Golden Blade, The Crusher, Pharaoh''s
     Curse, Jotunn''s Revenge, Riptalon, Oni Hunter''s Garb, Soul Gem, Shield of the
     Phoenix, Tyrfing, Shogun''s Ofuda, Runeforged Hammer, Silverbranch Bow, Lernaean
@@ -346,37 +346,37 @@ builds:
     Golden Blade:
       total: 0.52
       efficiency: 0.53
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.55
     Yogi's Necklace:
       total: 0.54
       efficiency: 0.57
-      win: 0.71
-      pick: 0.12
+      win: 0.7
+      pick: 0.11
       fit: 0.11
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.69
-      win: 0.56
-      pick: 0.3
+      win: 0.58
+      pick: 0.29
       fit: 0.19
     Berserker's Shield:
       total: 0.55
       efficiency: 0.66
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
-      total: 0.62
+      total: 0.63
       efficiency: 0.64
-      win: 0.8
-      pick: 0.17
+      win: 0.82
+      pick: 0.16
       fit: 0.19
     Nimble Ring:
       total: 0.54
       efficiency: 0.68
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.3
   starter: *id001
@@ -390,8 +390,8 @@ builds:
   - Kinetic Cuirass
   - Shield of the Phoenix
   flex_slots:
-  - Shield of the Phoenix
   - Kinetic Cuirass
+  - Yogi's Necklace
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -400,8 +400,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Dwarven Plate — physical protection
-    swap_item: Dwarven Plate
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -410,54 +410,54 @@ builds:
     Rod of Tahuti, Kinetic Cuirass, Amanita Charm, Soul Gem, Gluttonous Grimoire,
     Hydra''s Lament, Berserker''s Shield, The Crusher, Screeching Gargoyle, Oni Hunter''s
     Garb, Chronos'' Pendant, Chandra''s Grace, Nimble Ring, Spear of Desolation, Gladiator''s
-    Shield, Erosion, Spectral Armor, Prophetic Cloak, Eye of Providence, Runeforged
-    Hammer, Shield Splitter, Gem of Focus, Freya''s Tears, Pharaoh''s Curse, Eye of
-    the Storm, Leviathan''s Hide, Helm of Radiance, Midgardian Mail, Totem of Death,
-    Arondight, Rod of Asclepius, Mantle Of Discord, Death Metal, Stone of Binding,
-    The Cosmic Horror.'
+    Shield, Freya''s Tears, Erosion, Spectral Armor, Prophetic Cloak, Eye of Providence,
+    Runeforged Hammer, Shield Splitter, Gem of Focus, Pharaoh''s Curse, Eye of the
+    Storm, Leviathan''s Hide, Helm of Radiance, Midgardian Mail, Totem of Death, Arondight,
+    Rod of Asclepius, Mantle Of Discord, Death Metal, Stone of Binding, The Cosmic
+    Horror.'
   slot_scores:
     Yogi's Necklace:
       total: 0.54
       efficiency: 0.57
-      win: 0.71
-      pick: 0.12
+      win: 0.7
+      pick: 0.11
       fit: 0.13
     Genji's Guard:
-      total: 0.58
+      total: 0.59
       efficiency: 0.69
-      win: 0.56
-      pick: 0.3
+      win: 0.58
+      pick: 0.29
       fit: 0.48
     Breastplate of Valor:
-      total: 0.66
+      total: 0.67
       efficiency: 0.64
-      win: 0.8
-      pick: 0.17
+      win: 0.82
+      pick: 0.16
       fit: 0.48
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.47
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.59
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.53
     Shield of the Phoenix:
-      total: 0.54
+      total: 0.55
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.61
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
-  - Yogi's Necklace
   - Book of Thoth
+  - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
   - Transcendence
@@ -470,8 +470,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -488,65 +488,65 @@ builds:
     Spear of the Magus, Midgardian Mail, Tekko-Kagi, Spear of Desolation, Tyrfing,
     Riptalon, Mantle Of Discord, Stone of Binding, Freya''s Tears.'
   slot_scores:
-    Yogi's Necklace:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.71
-      pick: 0.12
-      fit: 0.12
     Book of Thoth:
       total: 0.43
       efficiency: 0.49
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.04
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.69
+      win: 0.58
+      pick: 0.29
+      fit: 0.22
     Breastplate of Valor:
-      total: 0.62
+      total: 0.63
       efficiency: 0.64
-      win: 0.8
-      pick: 0.17
+      win: 0.82
+      pick: 0.16
       fit: 0.22
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.55
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.47
     Transcendence:
       total: 0.47
       efficiency: 0.52
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.23
     The Crusher:
       total: 0.55
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.49
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Yogi's Necklace
-  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
-  - Transcendence
+  - Jotunn's Revenge
+  - Kinetic Cuirass
   - Gluttonous Grimoire
+  - The Crusher
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Jotunn's Revenge
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -560,42 +560,42 @@ builds:
     Blade, Chronos'' Pendant, Pharaoh''s Curse, Jade Scepter, Leviathan''s Hide, Avenging
     Blade, Midgardian Mail, Damaru, Triton''s Conch, Ethereal Staff, Freya''s Tears.'
   slot_scores:
-    Yogi's Necklace:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.71
-      pick: 0.12
-      fit: 0.12
-    Book of Thoth:
-      total: 0.45
-      efficiency: 0.49
-      win: 0.56
-      pick: 0.0
-      fit: 0.18
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.69
-      win: 0.56
-      pick: 0.3
+      win: 0.58
+      pick: 0.29
       fit: 0.22
     Breastplate of Valor:
-      total: 0.62
+      total: 0.63
       efficiency: 0.64
-      win: 0.8
-      pick: 0.17
+      win: 0.82
+      pick: 0.16
       fit: 0.22
-    Transcendence:
-      total: 0.46
-      efficiency: 0.52
-      win: 0.56
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.57
       pick: 0.0
-      fit: 0.18
+      fit: 0.42
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.57
+      pick: 0.0
+      fit: 0.5
     Gluttonous Grimoire:
       total: 0.56
       efficiency: 0.63
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.56
+    The Crusher:
+      total: 0.55
+      efficiency: 0.64
+      win: 0.57
+      pick: 0.0
+      fit: 0.44
   starter: *id001
 - source: suggested
   archetype: model
@@ -633,39 +633,39 @@ builds:
     Shield, Hide of the Nemean Lion, Void Shield, Doublet of Binding.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.69
-      win: 0.56
-      pick: 0.3
+      win: 0.58
+      pick: 0.29
       fit: 0.31
     Berserker's Shield:
       total: 0.54
       efficiency: 0.66
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.54
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.39
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.59
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.66
     The Crusher:
-      total: 0.53
+      total: 0.54
       efficiency: 0.64
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.38
     Amanita Charm:
       total: 0.56
       efficiency: 0.63
-      win: 0.56
+      win: 0.57
       pick: 0.0
       fit: 0.56
   starter: *id001

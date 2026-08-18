@@ -2,15 +2,15 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| The Crusher | 0.59 | 0.57 | 0.64 | 0.66 | 0.12 | 0.42 | undervalued | burst | **UNDERRATED** |
-| Jotunn's Revenge | 0.58 | 0.57 | 0.64 | 0.58 | 0.75 | 0.42 | undervalued |  |  |
-| Hydra's Lament | 0.54 | 0.50 | 0.56 | 0.55 | 0.82 | 0.37 | fair | burst |  |
-| Heartseeker | 0.52 | 0.42 | 0.41 | 0.59 | 0.95 | 0.42 | premium | burst |  |
+| The Crusher | 0.61 | 0.57 | 0.64 | 0.71 | 0.15 | 0.42 | undervalued | burst |  |
+| Jotunn's Revenge | 0.57 | 0.57 | 0.64 | 0.56 | 0.73 | 0.42 | undervalued |  |  |
+| Hydra's Lament | 0.53 | 0.50 | 0.56 | 0.53 | 0.79 | 0.37 | fair | burst |  |
+| Heartseeker | 0.53 | 0.42 | 0.41 | 0.60 | 0.98 | 0.42 | premium | burst |  |
+| Titan's Bane | 0.52 | 0.41 | 0.45 | 0.61 | 0.76 | 0.32 | fair |  |  |
 | Berserker's Shield | 0.51 | 0.53 | 0.66 | 0.55 | 0.00 | 0.24 | undervalued |  | **UNDERRATED** |
 | Damaru | 0.51 | 0.52 | 0.57 | 0.55 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Riptalon | 0.51 | 0.52 | 0.53 | 0.55 | 0.00 | 0.49 | fair | sustain | **UNDERRATED** |
 | Genji's Guard | 0.50 | 0.51 | 0.69 | 0.55 | 0.00 | 0.10 | undervalued |  | **UNDERRATED** |
-| Titan's Bane | 0.50 | 0.41 | 0.45 | 0.58 | 0.74 | 0.32 | fair |  |  |
 | Lernaean Bow | 0.50 | 0.51 | 0.50 | 0.55 | 0.00 | 0.51 | fair | wave-clear, burst | **UNDERRATED** |
 | Transcendence | 0.50 | 0.42 | 0.52 | 0.55 | 0.87 | 0.17 | fair |  |  |
 | Golden Blade | 0.50 | 0.50 | 0.53 | 0.55 | 0.00 | 0.41 | fair | wave-clear | **UNDERRATED** |

@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Thickbark
-  aspect_pick_rate: 0.36
-  aspect_win_rate: 0.51
+  aspect_pick_rate: 0.34
+  aspect_win_rate: 0.52
   slot_order:
+  - name: Briskberry Acorn
+    pick_rate: 0.31
+    win_rate: 0.46
+    alternates:
+    - name: Thistlethorn Acorn
+      pick_rate: 0.31
+      win_rate: 0.47
+    - name: Ashwhorl Acorn
+      pick_rate: 0.24
+      win_rate: 0.54
   - name: Thistlethorn Acorn
-    pick_rate: 0.3
-    win_rate: 0.47
+    pick_rate: 0.17
+    win_rate: 0.48
     alternates:
     - name: Briskberry Acorn
       pick_rate: 0.29
-      win_rate: 0.4
-    - name: Ashwhorl Acorn
-      pick_rate: 0.24
-      win_rate: 0.55
-  - name: Briskberry Acorn
-    pick_rate: 0.28
-    win_rate: 0.48
-    alternates:
-    - name: Thistlethorn Acorn
-      pick_rate: 0.18
-      win_rate: 0.41
+      win_rate: 0.45
     - name: Jotunn's Revenge
-      pick_rate: 0.11
-      win_rate: 0.62
+      pick_rate: 0.13
+      win_rate: 0.63
   - name: Jotunn's Revenge
     pick_rate: 0.2
-    win_rate: 0.48
+    win_rate: 0.52
     alternates:
     - name: Briskberry Acorn
-      pick_rate: 0.21
-      win_rate: 0.5
+      pick_rate: 0.19
+      win_rate: 0.48
     - name: Thistlethorn Acorn
       pick_rate: 0.1
-      win_rate: 0.25
+      win_rate: 0.29
   - name: Heartseeker
-    pick_rate: 0.13
-    win_rate: 0.5
+    pick_rate: 0.12
+    win_rate: 0.44
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.11
-      win_rate: 0.5
+      pick_rate: 0.09
+      win_rate: 0.46
     - name: Briskberry Acorn
-      pick_rate: 0.07
-      win_rate: 0.63
+      pick_rate: 0.08
+      win_rate: 0.64
   - name: Breastplate of Valor
-    pick_rate: 0.1
+    pick_rate: 0.08
     win_rate: 0.73
     alternates:
     - name: Heartseeker
-      pick_rate: 0.24
+      pick_rate: 0.23
       win_rate: 0.4
     - name: Jotunn's Revenge
-      pick_rate: 0.07
-      win_rate: 0.43
+      pick_rate: 0.06
+      win_rate: 0.5
   - name: Lucerne Hammer
     pick_rate: 0.07
-    win_rate: 0.33
+    win_rate: 0.43
     alternates:
     - name: Heartseeker
-      pick_rate: 0.16
-      win_rate: 0.38
+      pick_rate: 0.15
+      win_rate: 0.4
     - name: Medal of Defense
       pick_rate: 0.06
-      win_rate: 0.6
+      win_rate: 0.5
   community_starters:
   - name: Bluestone Pendant
-    pick_rate: 0.24
-    win_rate: 0.43
-  - name: Bumba's Hammer
-    pick_rate: 0.17
-    win_rate: 0.55
+    pick_rate: 0.22
+    win_rate: 0.45
   - name: Bluestone Brooch
+    pick_rate: 0.18
+    win_rate: 0.5
+  - name: Bumba's Hammer
     pick_rate: 0.16
-    win_rate: 0.53
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/ratatoskr/
-  last_verified: '2026-08-17'
-  god_win_rate: 0.44537815126050423
-  god_matches_won: 53
-  god_matches_played: 119
+  last_verified: '2026-08-18'
+  god_win_rate: 0.4557823129251701
+  god_matches_won: 67
+  god_matches_played: 147
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-17'
-  god_matches_analyzed: 7467
+  god_window_end: '2026-08-18'
+  god_matches_analyzed: 8839
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -107,11 +107,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -123,39 +123,39 @@ builds:
     Shield.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.67
+      total: 0.66
       efficiency: 0.94
-      win: 0.55
+      win: 0.54
       pick: 0.24
       fit: 0.52
     Briskberry Acorn:
-      total: 0.64
+      total: 0.63
       efficiency: 0.93
-      win: 0.48
-      pick: 0.38
+      win: 0.46
+      pick: 0.31
       fit: 0.52
     Thistlethorn Acorn:
       total: 0.64
       efficiency: 0.92
-      win: 0.47
-      pick: 0.3
+      win: 0.48
+      pick: 0.23
       fit: 0.61
     Breastplate of Valor:
-      total: 0.58
+      total: 0.57
       efficiency: 0.64
       win: 0.73
-      pick: 0.22
+      pick: 0.17
       fit: 0.09
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.62
       efficiency: 0.64
-      win: 0.48
+      win: 0.52
       pick: 0.31
       fit: 1.0
     The Crusher:
-      total: 0.6
+      total: 0.59
       efficiency: 0.64
-      win: 0.5
+      win: 0.48
       pick: 0.0
       fit: 1.0
   starter: &id001
@@ -196,37 +196,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.63
       efficiency: 0.94
-      win: 0.55
+      win: 0.54
       pick: 0.24
       fit: 0.29
     Briskberry Acorn:
-      total: 0.6
+      total: 0.59
       efficiency: 0.93
-      win: 0.48
-      pick: 0.38
+      win: 0.46
+      pick: 0.31
       fit: 0.29
     Thistlethorn Acorn:
       total: 0.61
       efficiency: 0.92
-      win: 0.47
-      pick: 0.3
+      win: 0.48
+      pick: 0.23
       fit: 0.43
     Breastplate of Valor:
       total: 0.6
       efficiency: 0.64
       win: 0.73
-      pick: 0.22
+      pick: 0.17
       fit: 0.24
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.58
       efficiency: 0.64
-      win: 0.48
+      win: 0.52
       pick: 0.31
       fit: 0.71
     Hydra's Lament:
       total: 0.51
       efficiency: 0.56
-      win: 0.5
+      win: 0.48
       pick: 0.0
       fit: 0.63
   starter: *id001
@@ -240,7 +240,7 @@ builds:
   - Jotunn's Revenge
   - The Crusher
   flex_slots:
-  - Jotunn's Revenge
+  - Briskberry Acorn
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -265,37 +265,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.62
       efficiency: 0.94
-      win: 0.55
+      win: 0.54
       pick: 0.24
       fit: 0.22
     Briskberry Acorn:
-      total: 0.6
+      total: 0.58
       efficiency: 0.93
-      win: 0.48
-      pick: 0.38
+      win: 0.46
+      pick: 0.31
       fit: 0.22
     Thistlethorn Acorn:
       total: 0.61
       efficiency: 0.92
-      win: 0.47
-      pick: 0.3
+      win: 0.48
+      pick: 0.23
       fit: 0.44
     Breastplate of Valor:
-      total: 0.6
+      total: 0.59
       efficiency: 0.64
       win: 0.73
-      pick: 0.22
+      pick: 0.17
       fit: 0.22
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.59
       efficiency: 0.64
-      win: 0.48
+      win: 0.52
       pick: 0.31
       fit: 0.78
     The Crusher:
-      total: 0.55
+      total: 0.54
       efficiency: 0.64
-      win: 0.5
+      win: 0.48
       pick: 0.0
       fit: 0.66
   starter: *id001
@@ -306,18 +306,18 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Breastplate of Valor
-  - Kinetic Cuirass
+  - Jotunn's Revenge
   - Amanita Charm
   flex_slots:
   - Amanita Charm
-  - Kinetic Cuirass
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -333,39 +333,39 @@ builds:
     Hide.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.66
+      total: 0.65
       efficiency: 0.94
-      win: 0.55
+      win: 0.54
       pick: 0.24
       fit: 0.44
     Briskberry Acorn:
-      total: 0.63
+      total: 0.62
       efficiency: 0.93
-      win: 0.48
-      pick: 0.38
+      win: 0.46
+      pick: 0.31
       fit: 0.44
     Thistlethorn Acorn:
       total: 0.62
       efficiency: 0.92
-      win: 0.47
-      pick: 0.3
+      win: 0.48
+      pick: 0.23
       fit: 0.48
     Breastplate of Valor:
       total: 0.59
       efficiency: 0.64
       win: 0.73
-      pick: 0.22
+      pick: 0.17
       fit: 0.21
-    Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.52
+      pick: 0.31
+      fit: 0.44
     Amanita Charm:
       total: 0.57
       efficiency: 0.63
-      win: 0.5
+      win: 0.48
       pick: 0.0
       fit: 0.86
   starter: *id001
@@ -402,39 +402,39 @@ builds:
     Stone of Binding, Tyrfing, Oath-Sworn Spear.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.64
+      total: 0.63
       efficiency: 0.94
-      win: 0.55
+      win: 0.54
       pick: 0.24
       fit: 0.33
     Briskberry Acorn:
-      total: 0.61
+      total: 0.6
       efficiency: 0.93
-      win: 0.48
-      pick: 0.38
+      win: 0.46
+      pick: 0.31
       fit: 0.33
     Thistlethorn Acorn:
-      total: 0.6
+      total: 0.61
       efficiency: 0.92
-      win: 0.47
-      pick: 0.3
+      win: 0.48
+      pick: 0.23
       fit: 0.38
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.64
       win: 0.73
-      pick: 0.22
+      pick: 0.17
       fit: 0.06
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.62
       efficiency: 0.64
-      win: 0.48
+      win: 0.52
       pick: 0.31
       fit: 1.0
     The Crusher:
-      total: 0.6
+      total: 0.59
       efficiency: 0.64
-      win: 0.5
+      win: 0.48
       pick: 0.0
       fit: 1.0
   starter: *id001
@@ -471,39 +471,39 @@ builds:
     Freya''s Tears.'
   slot_scores:
     Golden Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
-      win: 0.5
+      win: 0.48
       pick: 0.0
       fit: 0.69
     Ashwhorl Acorn:
       total: 0.66
       efficiency: 0.94
-      win: 0.55
+      win: 0.54
       pick: 0.24
       fit: 0.48
     Briskberry Acorn:
-      total: 0.59
+      total: 0.57
       efficiency: 0.93
-      win: 0.48
-      pick: 0.38
+      win: 0.46
+      pick: 0.31
       fit: 0.17
     Thistlethorn Acorn:
       total: 0.59
       efficiency: 0.92
-      win: 0.47
-      pick: 0.3
+      win: 0.48
+      pick: 0.23
       fit: 0.31
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.64
       win: 0.73
-      pick: 0.22
+      pick: 0.17
       fit: 0.04
     Riptalon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.53
-      win: 0.5
+      win: 0.48
       pick: 0.0
       fit: 0.79
   starter: *id001
@@ -517,7 +517,7 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   flex_slots:
-  - Jotunn's Revenge
+  - Briskberry Acorn
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -543,37 +543,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.61
       efficiency: 0.94
-      win: 0.55
+      win: 0.54
       pick: 0.24
       fit: 0.15
     Briskberry Acorn:
-      total: 0.58
+      total: 0.57
       efficiency: 0.93
-      win: 0.48
-      pick: 0.38
+      win: 0.46
+      pick: 0.31
       fit: 0.15
     Thistlethorn Acorn:
-      total: 0.64
+      total: 0.65
       efficiency: 0.92
-      win: 0.47
-      pick: 0.3
+      win: 0.48
+      pick: 0.23
       fit: 0.65
     Genji's Guard:
-      total: 0.55
+      total: 0.53
       efficiency: 0.69
-      win: 0.5
-      pick: 0.18
+      win: 0.46
+      pick: 0.15
       fit: 0.5
     Breastplate of Valor:
-      total: 0.64
+      total: 0.63
       efficiency: 0.64
       win: 0.73
-      pick: 0.22
+      pick: 0.17
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.6
       efficiency: 0.64
-      win: 0.48
+      win: 0.52
       pick: 0.31
       fit: 0.85
   starter: *id001
@@ -610,39 +610,39 @@ builds:
     Barbed Carver, Berserker''s Shield.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.67
+      total: 0.66
       efficiency: 0.94
-      win: 0.55
+      win: 0.54
       pick: 0.24
       fit: 0.52
     Briskberry Acorn:
-      total: 0.64
+      total: 0.63
       efficiency: 0.93
-      win: 0.48
-      pick: 0.38
+      win: 0.46
+      pick: 0.31
       fit: 0.52
     Thistlethorn Acorn:
       total: 0.64
       efficiency: 0.92
-      win: 0.47
-      pick: 0.3
+      win: 0.48
+      pick: 0.23
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.62
       efficiency: 0.64
-      win: 0.48
+      win: 0.52
       pick: 0.31
       fit: 1.0
     Hydra's Lament:
-      total: 0.53
+      total: 0.52
       efficiency: 0.56
-      win: 0.5
+      win: 0.48
       pick: 0.0
       fit: 0.71
     The Crusher:
-      total: 0.6
+      total: 0.59
       efficiency: 0.64
-      win: 0.5
+      win: 0.48
       pick: 0.0
       fit: 1.0
   starter: *id001
