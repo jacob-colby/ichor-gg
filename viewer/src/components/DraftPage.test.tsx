@@ -105,7 +105,11 @@ describe("DraftPage", () => {
     expect(core.getByText(/in place of/i)).toBeInTheDocument();
     expect(core.getByText("Zeta")).toBeInTheDocument();
     expect(core.getByText(/^\+0\.\d\d$/)).toBeInTheDocument();
-    expect(core.getByText(/answers anti-heal/i)).toBeInTheDocument();
+    // The threat names sit in their own span now (they are the answer, so
+    // they carry `ink-soft` inside a `muted` sentence), so this has to match
+    // across elements rather than within one.
+    expect(core.getByText(/answers/i)).toBeInTheDocument();
+    expect(core.getByText("anti-heal")).toBeInTheDocument();
   });
 
   it("puts the build itself above the diff that explains it", () => {

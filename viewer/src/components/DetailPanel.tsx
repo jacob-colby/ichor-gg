@@ -276,18 +276,24 @@ function LedgerRowView({
         onClick={onToggle}
         aria-expanded={expanded}
         aria-label={label}
-        className="press grid w-full grid-cols-[58px_28px_minmax(0,1fr)_auto] items-center gap-x-2.5 gap-y-1 rounded-md py-1.5 pr-1.5 text-left transition-colors duration-150 ease-standard hover:bg-bg1"
+        /* The ledger row is the build, and it carried the same presence as a
+           caption: a 13px name beside a 28px icon, flat on the page ground.
+           It reads as an object now — its own surface, art at 36px, the name
+           a step up the scale — and a swapped-in row gets a left edge in
+           `under` so the corrections are findable without reading every line. */
+        className={`press grid w-full grid-cols-[58px_36px_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 rounded-md border-l-2 bg-bg2/40 py-2 pr-2 text-left transition-colors duration-150 ease-standard hover:bg-bg2 ${
+          added ? "border-l-under" : removed ? "border-l-transparent opacity-70" : "border-l-transparent"}`}
       >
         {/* The gold spine — a continuous hairline down the left of the ledger. */}
         <span aria-hidden="true" className={`self-stretch border-r border-line pr-2.5 text-right font-mono text-micro leading-5 ${removed ? "text-line-strong line-through" : "text-faint"}`}>
           {removed ? "—" : goldText(row.cumulative)}
         </span>
 
-        <ItemIcon name={row.name} className={`h-7 w-7 ${removed ? "opacity-30" : ""}`} />
+        <ItemIcon name={row.name} className={`h-9 w-9 ${removed ? "opacity-30" : ""}`} />
 
         <span className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-1">
-          <span className={`truncate text-body ${
-            removed ? "text-muted line-through" : added ? "font-medium text-under" : "text-ink"}`}>
+          <span className={`truncate font-display text-lead font-semibold ${
+            removed ? "text-muted line-through" : added ? "text-under" : "text-ink"}`}>
             {row.name}{item?.god && <GodOnlyAsterisk god={item.god} />}
           </span>
           {added && <span className="text-micro font-semibold uppercase tracking-[0.06em] text-under">swap in</span>}

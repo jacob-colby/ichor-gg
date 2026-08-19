@@ -48,8 +48,8 @@ function ChangeRow({ change, itemsByName, maxBonus }: {
   const pct = maxBonus > 0 ? Math.min(100, Math.round((Math.abs(change.bonus) / maxBonus) * 100)) : 0;
   const cost = itemsByName[change.added]?.cost;
   return (
-    <li className="grid grid-cols-[32px_minmax(0,1fr)_auto] items-center gap-x-2.5 gap-y-1 rounded-md px-1.5 py-2">
-      <Icon name={change.added} item className="col-start-1 h-8 w-8" />
+    <li className="grid grid-cols-[36px_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 rounded-md border border-line bg-bg2/50 px-2 py-2.5">
+      <Icon name={change.added} item className="col-start-1 h-9 w-9" />
       <span className="col-start-2 flex min-w-0 flex-wrap items-baseline gap-x-2">
         <a href={toHash.item(change.added)}
           className="press -my-1 truncate rounded-sm py-1 text-body font-medium text-under hover:underline">
@@ -67,9 +67,13 @@ function ChangeRow({ change, itemsByName, maxBonus }: {
         </span>
         <span className="w-10 text-right font-mono text-label text-under">+{change.bonus.toFixed(2)}</span>
       </span>
+      {/* WHY an item was promoted is the page's whole claim, and it was set in
+          `faint` at 11px — the app's quietest tier, the same one incidental
+          captions use. It reads at `small`/`muted` now, with the threat names
+          in `ink-soft` so the answer stands out inside its own sentence. */}
       {change.reason && (
-        <span className="col-start-2 col-span-2 text-label text-faint">
-          answers {change.reason}
+        <span className="col-start-2 col-span-2 text-small text-muted">
+          answers <span className="text-ink-soft">{change.reason}</span>
           {cost != null && <span className="font-mono text-faint"> · {cost}g</span>}
         </span>
       )}
@@ -247,13 +251,23 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
           answer put the answer last — and below the fold under 1280px. */}
       <div className="flex flex-col gap-6 xl:flex-row xl:gap-8">
       {meName && (
-        <section aria-labelledby="draft-core-h" data-testid="draft-core" className="min-w-0 flex-1 border-t border-line pt-5">
+        <section aria-labelledby="draft-core-h" data-testid="draft-core"
+          className="plane min-w-0 flex-1 rounded-lg border border-line bg-bg1 p-4 sm:p-5">
           {/* The build leads. It is the thing the page exists to produce, and
               it used to sit UNDER the diff that explains it — so the answer was
               below the footnote, and on a narrow screen the first thing a
               reader saw was a list of items they hadn't been shown yet. The
               diff still earns its place; it just isn't the headline. */}
-          <h2 id="draft-core-h" className={eyebrow}>
+          {/* Measured before changing it: this heading, the reasoning line and
+              the incidental captions were all 11px / weight 400 / `faint` —
+              the same size, weight AND colour, so there was no ratio anywhere
+              between the deliverable and its chrome. That is what "the UI
+              feels flat" describes.
+              The eyebrow stays an eyebrow: DESIGN.md's convention is a quiet
+              mono label over loud content, and the loud content here is the
+              item list, not the word "core". It moves off `faint` only so it
+              stops matching the reasoning line exactly. */}
+          <h2 id="draft-core-h" className="font-mono text-label uppercase tracking-[0.1em] text-muted">
             {changeCount > 0 ? "Your adapted core" : "The default core"}
             {/* 65 of the 72 gods with an aspect have no scoring overlay behind
                 it, so the toggle can be pressed and change nothing. Saying so
@@ -313,16 +327,23 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                   const it = itemsByName[name];
                   return (
                     <li key={name}>
+                      {/* The build row is the product. It was a 13px name and
+                          a 32px icon on the page ground, which is the same
+                          presence as a caption. Bigger art, a name a step up
+                          the scale, and a surface of its own — and a draft pick
+                          gets a left edge in `under` so the swaps are findable
+                          without reading every row. */}
                       <a href={toHash.item(name)}
                         aria-label={`${name}${changed ? ", added by your draft" : ""}, ${it?.cost ?? "unknown"} gold`}
-                        className="press grid grid-cols-[20px_32px_minmax(0,1fr)_auto] items-center gap-2.5 rounded-md py-1.5 pr-1.5 transition-colors duration-150 ease-standard hover:bg-bg1">
-                        <span aria-hidden="true" className="text-right font-mono text-micro text-faint">{i + 1}</span>
-                        <Icon name={name} item className="h-8 w-8" />
-                        <span className="flex min-w-0 items-center gap-2">
-                          <span className={`truncate text-body ${changed ? "font-medium text-under" : "text-ink"}`}>{name}</span>
+                        className={`press grid grid-cols-[18px_40px_minmax(0,1fr)_auto] items-center gap-3 rounded-md border-l-2 bg-bg2/40 py-2 pl-1.5 pr-2 transition-colors duration-150 ease-standard hover:bg-bg2 ${
+                          changed ? "border-l-under" : "border-l-transparent"}`}>
+                        <span aria-hidden="true" className="text-right font-mono text-label text-faint">{i + 1}</span>
+                        <Icon name={name} item className="h-10 w-10" />
+                        <span className="flex min-w-0 flex-wrap items-baseline gap-x-2">
+                          <span className={`truncate font-display text-lead font-semibold ${changed ? "text-under" : "text-ink"}`}>{name}</span>
                           {changed && <span className="text-micro font-semibold uppercase tracking-[0.06em] text-under">draft pick</span>}
                         </span>
-                        {it && <span aria-hidden="true" className="font-mono text-label text-faint">{it.cost}g</span>}
+                        {it && <span aria-hidden="true" className="font-mono text-small text-muted">{it.cost}g</span>}
                       </a>
                     </li>
                   );
@@ -364,7 +385,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                     : "Nothing so far. This draft doesn't threaten anything the default core wasn't already handling."}
                 </p>
               ) : (
-                <ul className="mt-2 flex flex-col divide-y divide-line">
+                <ul className="mt-2 flex flex-col gap-1.5">
                   {result.diff.changes.map((c) => (
                     <ChangeRow key={c.added} change={c} itemsByName={itemsByName} maxBonus={draftConfig!.max_bonus} />
                   ))}

@@ -184,6 +184,10 @@ This replaces "flat at rest", which was true and was also why the world read as 
 - **Glow** (`0 0 0 1px rgba(227,178,60,0.4), 0 4px 14px rgba(227,178,60,0.15)`): the selected-state halo on a god card — the one place shadow doubles as the accent color.
 
 ### Named Rules
+**The Ratio Rule.** A surface is flat when its parts have no ratio between them, not when it lacks shadows. Measured on the draft page: the heading naming the build, the sentence explaining why an item was promoted, and the incidental captions were all **11px / weight 400 / `faint`** — the same size, weight *and* colour. Nothing was competing to be read first because nothing could be. The fix is hierarchy, not decoration: the build's item rows step to `lead`/600 on their own surface, the reasoning moves off the quietest tier to `small`/`muted`, and the eyebrow stays an eyebrow. Depth was added only where a surface is genuinely a distinct object (the build card takes `.plane`), per the Ground Plane Rule above.
+
+Contrast was re-measured after, because the Readable-Floor Rule outranks this one: the worst ratio on the reworked draft page is 6.25:1, against a 4.5:1 floor — every change moved contrast up, none down.
+
 **The Flat-Until-It-Matters Rule.** Surfaces are flat at rest. Shadow only appears for a floating layer (tooltip, modal) or a selected state (glow) — never as ambient decoration on a resting card.
 
 ## Shapes
