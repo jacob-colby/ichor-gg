@@ -321,7 +321,10 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                   </ul>
                 </div>
               )}
-              <ul className="mt-2 flex flex-col">
+              {/* The purchase spine: one continuous hairline the whole build
+                  hangs off, the same device the god page's ledger uses for
+                  cumulative gold. A draft pick notches it. */}
+              <ul className="mt-2 flex flex-col border-l border-line pl-1">
                 {result.adapted.core.map((name, i) => {
                   const changed = result.diff.changes.some((c) => c.added === name);
                   const it = itemsByName[name];
@@ -329,15 +332,28 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                     <li key={name}>
                       {/* The build row is the product. It was a 13px name and
                           a 32px icon on the page ground, which is the same
-                          presence as a caption. Bigger art, a name a step up
-                          the scale, and a surface of its own — and a draft pick
-                          gets a left edge in `under` so the swaps are findable
-                          without reading every row. */}
+                          presence as a caption. Bigger art and a name a step up
+                          the scale fix that.
+
+                          The draft pick is marked ON THE SPINE, not with a
+                          coloured left border. The border was a 2px `under`
+                          rule down the row — the generic accent-bar every
+                          dashboard reaches for, and a shape this world does not
+                          otherwise use. The tier ladder already owns the
+                          grammar for "the model's own mark": a rotated square
+                          sitting on a rule, so the pair never depends on colour
+                          alone. The purchase column is that rule here. */}
                       <a href={toHash.item(name)}
                         aria-label={`${name}${changed ? ", added by your draft" : ""}, ${it?.cost ?? "unknown"} gold`}
-                        className={`press grid grid-cols-[18px_40px_minmax(0,1fr)_auto] items-center gap-3 rounded-md border-l-2 bg-bg2/40 py-2 pl-1.5 pr-2 transition-colors duration-150 ease-standard hover:bg-bg2 ${
-                          changed ? "border-l-under" : "border-l-transparent"}`}>
-                        <span aria-hidden="true" className="text-right font-mono text-label text-faint">{i + 1}</span>
+                        className="press relative grid grid-cols-[18px_40px_minmax(0,1fr)_auto] items-center gap-3 rounded-md bg-bg2/40 py-2 pl-1.5 pr-2 transition-colors duration-150 ease-standard hover:bg-bg2">
+                        <span aria-hidden="true"
+                          className={`relative text-right font-mono text-label ${changed ? "text-under" : "text-faint"}`}>
+                          {i + 1}
+                          {changed && (
+                            <span aria-hidden="true"
+                              className="absolute -right-2 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rotate-45 bg-under" />
+                          )}
+                        </span>
                         <Icon name={name} item className="h-10 w-10" />
                         <span className="flex min-w-0 flex-wrap items-baseline gap-x-2">
                           <span className={`truncate font-display text-lead font-semibold ${changed ? "text-under" : "text-ink"}`}>{name}</span>

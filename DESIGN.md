@@ -188,6 +188,14 @@ This replaces "flat at rest", which was true and was also why the world read as 
 
 Contrast was re-measured after, because the Readable-Floor Rule outranks this one: the worst ratio on the reworked draft page is 6.25:1, against a 4.5:1 floor — every change moved contrast up, none down.
 
+**The Spine Rule.** A build's corrections are marked *on the rule the build already hangs off*, never with a coloured left border on the row. The god page's ledger has a cumulative-gold hairline and the draft's core has a purchase spine; a swap or a draft pick puts a 6px `under` square, rotated 45°, centred on that line.
+
+This exists because the first attempt used `border-l-2 border-l-under` on every promoted row — the accent bar every dashboard reaches for, a shape this world uses nowhere else, and a form the craft floor names outright ("a colored border-left above 1px on cards, list items, callouts"). The grammar was already here and better: the tier ladder marks *the model's own verdict* with a rotated square sitting on a rule, precisely so the mark never depends on colour alone. The spine is that rule. Colour still says which way (`under` = the model promoting something); the shape says *this one*, and the row's own `DRAFT PICK` / `SWAP IN` label says it a third time in words.
+
+**The stack has to actually step.** Measured 2026-08-19, the four surface tiers were not tiers: `bg0` → `bg1` was **1.022:1** and the entire `bg0` → `bg3` run **1.130:1**. A panel resting on the page ground was, in luminance, the page ground — which is the Ratio Rule applied to surfaces, and no amount of shadow fixes parts that have no ratio between them.
+
+The light end could not move: `faint` on `bg3` sits at 4.52:1 against a 4.5:1 floor, and a first pass that lifted the whole stack put it at 4.28:1. So the dark end came down — steps are now 1.038 / 1.066 / 1.051 and the run 1.163:1, with every text tier on every surface equal or better (`faint` on `bg0` 4.99 → 5.26). **The headroom really is this small**: near-black pins one end and AA pins the other, so anyone hoping to find depth in the palette should spend it on the plane highlight and the type ratio instead.
+
 **The Flat-Until-It-Matters Rule.** Surfaces are flat at rest. Shadow only appears for a floating layer (tooltip, modal) or a selected state (glow) — never as ambient decoration on a resting card.
 
 ## Shapes

@@ -279,14 +279,24 @@ function LedgerRowView({
         /* The ledger row is the build, and it carried the same presence as a
            caption: a 13px name beside a 28px icon, flat on the page ground.
            It reads as an object now — its own surface, art at 36px, the name
-           a step up the scale — and a swapped-in row gets a left edge in
-           `under` so the corrections are findable without reading every line. */
-        className={`press grid w-full grid-cols-[58px_36px_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 rounded-md border-l-2 bg-bg2/40 py-2 pr-2 text-left transition-colors duration-150 ease-standard hover:bg-bg2 ${
-          added ? "border-l-under" : removed ? "border-l-transparent opacity-70" : "border-l-transparent"}`}
+           a step up the scale.
+
+           A swap is marked ON THE GOLD SPINE rather than with a coloured left
+           border. The border was the generic dashboard accent-bar, and this
+           surface already has the better device: the cumulative-gold hairline
+           running down the ledger. A rotated square on that rule is the tier
+           ladder's own grammar for "the model's mark", so the pair never
+           depends on colour alone. */
+        className={`press grid w-full grid-cols-[58px_36px_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 rounded-md bg-bg2/40 py-2 pr-2 text-left transition-colors duration-150 ease-standard hover:bg-bg2 ${
+          removed ? "opacity-70" : ""}`}
       >
         {/* The gold spine — a continuous hairline down the left of the ledger. */}
-        <span aria-hidden="true" className={`self-stretch border-r border-line pr-2.5 text-right font-mono text-micro leading-5 ${removed ? "text-line-strong line-through" : "text-faint"}`}>
+        <span aria-hidden="true" className={`relative self-stretch border-r border-line pr-2.5 text-right font-mono text-micro leading-5 ${
+          removed ? "text-line-strong line-through" : added ? "text-under" : "text-faint"}`}>
           {removed ? "—" : goldText(row.cumulative)}
+          {added && (
+            <span className="absolute -right-[3px] top-1/2 h-1.5 w-1.5 -translate-y-1/2 rotate-45 bg-under" />
+          )}
         </span>
 
         <ItemIcon name={row.name} className={`h-9 w-9 ${removed ? "opacity-30" : ""}`} />

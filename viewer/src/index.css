@@ -2,11 +2,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* Surfaces — evolved "Arena Night" (rail is the darkest frame) */
+  /* Surfaces — evolved "Arena Night" (rail is the darkest frame).
+     WIDENED 2026-08-19, downward only. The stack claimed four tiers "each one
+     step closer or more elevated" and did not deliver them: measured, bg0 -> bg1
+     was 1.022:1 and the whole bg0 -> bg3 run only 1.130:1. A panel on the page
+     ground was not reading as a panel, which is the surface half of the Ratio
+     Rule — parts with no ratio between them read flat however much shadow you
+     add.
+     The light end could not move. `faint` on bg3 sits at 4.52:1 against a
+     4.5:1 floor, so bg3 is pinned exactly where it was; the Readable-Floor Rule
+     outranks atmosphere and a first attempt at lifting the whole stack put it
+     at 4.28:1. So the dark end came down instead: steps are now 1.038 / 1.066 /
+     1.051 and the run is 1.163:1, with every text tier on every surface equal
+     or better than before (faint on bg0: 4.99 -> 5.26). The headroom really is
+     this small — near-black pins one end and AA pins the other. */
   --color-rail: #05070a;
-  --color-bg0: #0b0e13;
-  --color-bg1: #0e1116;
-  --color-bg2: #12161d;
+  --color-bg0: #070910;
+  --color-bg1: #0c0f16;
+  --color-bg2: #12171f;
   --color-bg3: #171c24;
   --color-line: #1e2530;
   --color-line-strong: #2a3342;
@@ -122,7 +135,7 @@
    wouldn't — and the falloff would start to band. */
 body {
   background:
-    radial-gradient(140% 95% at 50% -8%, #0f1218 0%, #0c0f14 46%, #090b0f 100%)
+    radial-gradient(140% 95% at 50% -8%, #0d1119 0%, #090c12 46%, #05070b 100%)
     fixed var(--color-bg0);
   font-family: var(--font-sans);
   color: var(--color-ink);
