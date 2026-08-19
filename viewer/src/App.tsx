@@ -32,6 +32,10 @@ function App() {
   const [scraping, setScraping] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
   const [pickerOpen, setPickerOpen] = useState(false);
+  /* The aspect belongs to the god, not to the build panel that used to own it.
+     Lifted here so the portrait can carry the control (where SMITE puts it)
+     and the build panel can still read it. */
+  const [aspectOn, setAspectOn] = useState(false);
   const isDev = import.meta.env.DEV;
 
   /* Refetching index.json is a pipeline affordance, not a visitor's control:
@@ -59,6 +63,8 @@ function App() {
 
   // Changing subject closes the switcher; nothing else should.
   useEffect(() => { setPickerOpen(false); }, [route.god]);
+  // ...and drops the aspect, which described the god you just left.
+  useEffect(() => { setAspectOn(false); }, [route.god]);
 
   const godsApi = async (action: "add" | "remove", name: string) => {
     setScraping(true);
@@ -151,6 +157,13 @@ function App() {
     ? data.god_item_scores?.[route.god]?.[(godNote?.mode ?? mode).toLowerCase()]
     : undefined;
 
+  /* 72 of 89 gods have an aspect, and only the 7 with a hand-tuned overlay in
+     `_weights.yaml` have a build behind it. The control shows on all of them —
+     the kit text and the community's pick rate are real information — but it
+     says which kind it is rather than silently doing nothing. */
+  const hasAspectBuild = !!godNote?.builds.some(
+    (b) => b.source === "suggested" && !!(b as { aspect?: string }).aspect);
+
   const patchNotes = data.patch_notes ?? [];
   const pickGod = (name: string) => { setPickerOpen(false); navigate(toHash.god(name)); };
 
@@ -224,6 +237,9 @@ function App() {
         tierEntry={tierEntry}
         roster={roster}
         modeLabel={route.god ? (godNote?.mode ?? mode) : "Conquest"}
+        aspectOn={aspectOn}
+        onToggleAspect={() => setAspectOn((v) => !v)}
+        aspectChangesBuild={hasAspectBuild}
         onPickGod={() => setPickerOpen(true)}
       />
 
@@ -260,6 +276,8 @@ function App() {
                 onModeChange={setMode}
                 modeOrder={data.modes}
                 starters={data.starters ?? []}
+                aspectOn={aspectOn}
+                onAspectChange={setAspectOn}
               />
             )}
           </div>

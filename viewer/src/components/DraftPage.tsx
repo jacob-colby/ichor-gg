@@ -14,7 +14,7 @@
  * assigned step-wizard, kept where it wins), giving way to a diff ledger once
  * populated. Seed key 2cd32ee3.
  */
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { BuildNote, DraftConfig, God, Item } from "../types";
 import { toHash } from "../lib/useHashRoute";
 import { useDraft, MODE_TEAM_SIZE, encodeDraftHash, type DraftMode } from "../lib/draft";
@@ -106,12 +106,18 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
     setPickSlot({ kind, index });
   };
   const [copied, setCopied] = useState(false);
+  /* The draft builds for YOUR god, so only your aspect can change anything it
+     shows. Reset when the you-slot changes — an aspect describes a god. */
+  const [aspectOn, setAspectOn] = useState(false);
 
   const {
     meName, itemsByName, taken, takenFor, enemiesKnown, roster, threatCulprits: culprits,
     allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, coreSize, starters,
-    startersAreConquest, relicPicks,
-  } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
+    startersAreConquest, relicPicks, aspectScored, meGod,
+  } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage,
+    aspectOn);
+  const meAspect = meGod?.aspects?.[0]?.name;
+  useEffect(() => { setAspectOn(false); }, [meName]);
 
   const copyLink = () => {
     if (!navigator.clipboard?.writeText) return;
@@ -190,7 +196,12 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
               {draft.allies.map((name, i) => (
                 <Slot key={i} kind={i === 0 ? "you" : "ally"} position={i + 1} name={name}
                   onOpen={() => openPicker("ally", i)}
-                  onRemove={name ? () => setAlly(i, "") : undefined} />
+                  onRemove={name ? () => setAlly(i, "") : undefined}
+                  aspectName={i === 0 ? meAspect : undefined}
+                  aspectOn={i === 0 ? aspectOn : undefined}
+                  onToggleAspect={i === 0 && meAspect ? () => setAspectOn((v) => !v) : undefined}
+                  aspectChangesBuild={i === 0
+                    ? !!godItemScores?.[name]?.[`${mode}:aspect`] : undefined} />
               ))}
             </div>
           </div>
@@ -244,6 +255,16 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
               diff still earns its place; it just isn't the headline. */}
           <h2 id="draft-core-h" className={eyebrow}>
             {changeCount > 0 ? "Your adapted core" : "The default core"}
+            {/* 65 of the 72 gods with an aspect have no scoring overlay behind
+                it, so the toggle can be pressed and change nothing. Saying so
+                beats a control that looks broken. */}
+            {aspectOn && (
+              <span className="ml-2 normal-case tracking-normal text-aspect">
+                {aspectScored
+                  ? `· ${meAspect?.replace(/^Aspect of (the )?/i, "")}`
+                  : `· ${meAspect?.replace(/^Aspect of (the )?/i, "")} — kit only, no build change scored`}
+              </span>
+            )}
           </h2>
           {!draftEnabled || !result ? (
             <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">

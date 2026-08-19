@@ -23,6 +23,14 @@
 
   /* Accent + semantic */
   --color-gold: #e3b23c;
+  /* Aspect orange. NOT a second app accent — the Torchlight Rule still holds
+     and gold still means selection / primary action / the model talking. This
+     is a GAME-OBJECT marker, the same category as the role tints: SMITE marks
+     a god's aspect with an orange hexagon, and matching the game's own
+     vocabulary is why a player recognises the control without a legend.
+     Pulled well off gold's hue (43° -> 25°) so the two never read as the same
+     state at icon size, where they sit within a few pixels of each other. */
+  --color-aspect: #ef8034;
   --color-blue: #4ea3ff;
   --color-under: #63c088;
   --color-premium: #c58b8b;

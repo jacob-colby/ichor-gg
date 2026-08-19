@@ -14,7 +14,7 @@
  * FORM: Buy Timeline, position 7 of the ordered list, seed key d3f94782,
  * rendered on a cumulative-gold axis because no timing data exists to render.
  */
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type {
   BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
@@ -61,6 +61,11 @@ interface DetailPanelProps {
   modeOrder?: string[];
   starters?: { base: string; upgrade: string }[];
   onReload?: () => void;
+  /** Controlled by App — the portrait carries the toggle now, so this panel
+   *  reads the state rather than owning it. Defaults keep the component
+   *  usable standalone in tests. */
+  aspectOn?: boolean;
+  onAspectChange?: (on: boolean) => void;
 }
 
 /** Item art with a real fallback — one cache-bust retry, then the item's
@@ -389,6 +394,7 @@ function LedgerRowView({
 
 export function DetailPanel({
   god, godData, items, builds, mode, onModeChange, modeOrder, starters = [],
+  aspectOn: aspectProp, onAspectChange,
 }: DetailPanelProps) {
   const godNotes = builds.filter((b) => b.god === god);
   const note = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
@@ -406,7 +412,14 @@ export function DetailPanel({
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [editing, setEditing] = useState<MineDraft | "new" | null>(null);
-  const [aspectOn, setAspectOn] = useState(false);
+  /* Controlled when App passes the state (the portrait's hexagon owns it),
+     uncontrolled otherwise so the panel still stands alone. */
+  const [aspectLocal, setAspectLocal] = useState(false);
+  const aspectOn = aspectProp ?? aspectLocal;
+  const setAspectOn = (on: boolean) => {
+    setAspectLocal(on);
+    onAspectChange?.(on);
+  };
   const [mineVersion, setMineVersion] = useState(0);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -456,10 +469,19 @@ export function DetailPanel({
   // were two answers; with three it left one of them unreadable on its own
   // terms. It is selectable now, and the comparison track still runs whenever a
   // model-side build is the active one.
+  /* Aspect-on selects the aspect family — but only if there IS one. The
+     control now shows for all 72 gods that have an aspect, while only the 7
+     with a scoring overlay in `_weights.yaml` have builds behind it, so
+     filtering strictly would blank the model side for the other 65. Falling
+     back to the base family means the badge always shows the kit text and
+     never costs the reader the build. */
+  const aspectFamily = note.builds.filter(
+    (b) => b.source === "suggested" && !!(b as { aspect?: string }).aspect);
+  const useAspect = aspectOn && aspectFamily.length > 0;
   const suggested = note.builds.filter((b) => {
     if (b.source !== "suggested") return false;
     const a = (b as { aspect?: string }).aspect;
-    return aspectOn ? !!a : !a;
+    return useAspect ? !!a : !a;
   });
   const selectable: BuildEntry[] = [
     ...orderBuilds(suggested, communityEntry), ...mineEntries,
@@ -477,14 +499,21 @@ export function DetailPanel({
   // whose community entry carried an aspect showed the toggle with no aspect
   // build behind it — and turning it on emptied the surface.
   const hasAspectBuild = note.builds.some((b) => b.source === "suggested" && !!(b as { aspect?: string }).aspect);
-  const toggleAspect = () => {
-    const next = !aspectOn;
+  /* The control moved to the portrait (see AspectBadge.tsx), so this panel no
+     longer renders a button — but the build strip still has to follow. When
+     the aspect flips, re-point the selection at the SAME archetype in the
+     other family, so a reader comparing the bruiser build across aspects
+     doesn't get silently dropped back to the core one. */
+  const aspectRef = useRef(aspectOn);
+  useEffect(() => {
+    if (aspectRef.current === aspectOn) return;
+    aspectRef.current = aspectOn;
     const cur = selectable[activeIndex ?? defaultIndex];
     const curArch = cur && cur.source === "suggested" ? (cur as CuratedBuildEntry).archetype : undefined;
     const nextSuggested = note.builds.filter((b) => {
       if (b.source !== "suggested") return false;
       const a = (b as { aspect?: string }).aspect;
-      return next ? !!a : !a;
+      return useAspect ? !!a : !a;
     });
     // Index into the ORDERED list, which is what the tab strip renders.
     // Searching the raw filtered list silently pointed at a different build
@@ -494,10 +523,12 @@ export function DetailPanel({
       ? nextSelectable.findIndex(
           (e) => e.source === "suggested" && (e as CuratedBuildEntry).archetype === curArch)
       : -1;
-    setAspectOn(next);
     setActiveIndex(i >= 0 ? i : null);
     setSelectedTag(null);
-  };
+    // Depends only on the aspect flip; re-running on every selection change
+    // would fight the reader for control of the strip.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [aspectOn]);
 
   const community = isCommunityEntry(active);
   const swaps = !community ? (active as CuratedBuildEntry).situational_swaps : undefined;
@@ -573,11 +604,7 @@ export function DetailPanel({
               ))}
             </div>
           )}
-          {hasAspectBuild && (
-            <button type="button" onClick={toggleAspect} aria-pressed={aspectOn} className={`${segBtn(aspectOn)} border border-line`}>
-              {aspectMeta ? `Aspect: ${aspectMeta.name.replace(/^Aspect of (the )?/i, "")}` : "Aspect"}
-            </button>
-          )}
+
         </div>
       )}
 

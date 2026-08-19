@@ -255,3 +255,54 @@ describe("SubjectFrame — bookmarking a god from its own page", () => {
       .toHaveAttribute("aria-pressed", "true");
   });
 });
+
+/* The aspect control used to be a text button in the build header, on the god
+ * page only — so the draft could not express an aspect at all, and on a page
+ * already carrying a mode strip and a flavor strip it read as a third
+ * unrelated filter. SMITE marks an aspect with an orange hexagon on the
+ * portrait; putting it back there makes it self-describing. */
+describe("SubjectFrame — the aspect badge sits on the portrait", () => {
+  const raWithAspect = {
+    ...ra, aspects: [{ name: "Aspect of Thermotherapy", kit_changes: "heals allies" }],
+  } as unknown as God;
+
+  it("offers the toggle for a god that has an aspect", () => {
+    render(frame({ god: raWithAspect, onToggleAspect: () => {} }));
+    expect(screen.getByRole("button", { name: /Thermotherapy/i })).toBeInTheDocument();
+  });
+
+  it("shows nothing for a god with no aspect", () => {
+    render(frame({ god: ra, onToggleAspect: () => {} }));
+    expect(screen.queryAllByRole("button", { name: /aspect/i })).toHaveLength(0);
+  });
+
+  it("reports pressed state, so it is a toggle and not a link", () => {
+    render(frame({ god: raWithAspect, aspectOn: true, onToggleAspect: () => {} }));
+    expect(screen.getByRole("button", { name: /Turn off Thermotherapy/i }))
+      .toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("says when the aspect has no scoring overlay behind it", () => {
+    // 65 of the 72 gods with an aspect. A control that can be pressed and
+    // changes nothing has to say so, or it reads as broken.
+    render(frame({ god: raWithAspect, onToggleAspect: () => {}, aspectChangesBuild: false }));
+    expect(screen.getByRole("button", { name: /no scoring overlay/i })).toBeInTheDocument();
+  });
+
+  it("does not nest the toggle inside the change-god button", () => {
+    // Both are buttons over the same portrait; nesting them would make the
+    // hexagon also fire the god picker.
+    render(frame({ god: raWithAspect, onToggleAspect: () => {} }));
+    const toggle = screen.getByRole("button", { name: /Thermotherapy/i });
+    expect(toggle.closest("button")).toBe(toggle);
+  });
+
+  it("fires only its own handler", () => {
+    const onToggleAspect = vi.fn();
+    const onPickGod = vi.fn();
+    render(frame({ god: raWithAspect, onToggleAspect, onPickGod }));
+    fireEvent.click(screen.getByRole("button", { name: /Thermotherapy/i }));
+    expect(onToggleAspect).toHaveBeenCalledTimes(1);
+    expect(onPickGod).not.toHaveBeenCalled();
+  });
+});

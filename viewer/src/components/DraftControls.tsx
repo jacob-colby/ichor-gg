@@ -3,6 +3,7 @@
  *  and the persistent `DraftDock` — and they render it identically rather
  *  than drifting into two slightly different boards. */
 import { useEffect, useMemo, useRef, useState } from "react";
+import { AspectToggle } from "./AspectBadge";
 import type { God } from "../types";
 import { iconSlug } from "../lib/builds";
 import { godLane, laneTextClass, LANES, godInLane, type Lane } from "../lib/roleAccent";
@@ -199,8 +200,13 @@ export type SlotKind = "you" | "ally" | "enemy";
  * "You" is a badge on the slot rather than a caption above it — as a caption
  * it only existed on ally slots, which pushed the whole ally row a line below
  * the enemy row it's meant to be read against. */
-export function Slot({ kind, position, name, size = "h-16 w-16", onOpen, onRemove }: {
+export function Slot({ kind, position, name, size = "h-16 w-16", onOpen, onRemove,
+  aspectName, aspectOn, onToggleAspect, aspectChangesBuild }: {
   kind: SlotKind; position: number; name: string; size?: string; onOpen: () => void; onRemove?: () => void;
+  /** Aspect controls, wired only on the "you" slot — the draft builds for
+   *  your god, so nobody else's aspect changes anything it can show. */
+  aspectName?: string; aspectOn?: boolean; onToggleAspect?: () => void;
+  aspectChangesBuild?: boolean;
 }) {
   const row = kind === "enemy" ? "enemy" : "ally";
   const rowPlural = row === "enemy" ? "enemies" : "allies";
@@ -234,6 +240,17 @@ export function Slot({ kind, position, name, size = "h-16 w-16", onOpen, onRemov
             </button>
           )}
         </>
+      )}
+      {/* The aspect hexagon, where SMITE puts it. Sibling of the picker
+          button for the same reason the remove control is. */}
+      {name && aspectName && onToggleAspect && (
+        <AspectToggle
+          aspectName={aspectName}
+          on={!!aspectOn}
+          onToggle={onToggleAspect}
+          changesBuild={aspectChangesBuild}
+          className="h-5 w-5"
+        />
       )}
       {/* Centred ON the bottom edge, not tucked inside it: sitting 2px above
           the border the badge read as a label floating in the portrait, and it

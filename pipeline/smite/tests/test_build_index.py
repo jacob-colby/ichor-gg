@@ -282,10 +282,30 @@ def test_build_index_emits_capped_god_item_scores():
     scores = r["god_item_scores"]
     assert set(scores) == {g["name"] for g in r["gods"]}
     for god, per_mode in scores.items():
-        assert set(per_mode) == {"conquest", "joust", "arena"}, god
+        # Every god has all three modes. A god with a hand-tuned entry under
+        # `aspects` in _weights.yaml ALSO gets a `<mode>:aspect` table — only
+        # those, since emitting an identical copy for the other 65 gods with an
+        # aspect would tell the viewer their build changes when it does not.
+        assert {"conquest", "joust", "arena"} <= set(per_mode), god
+        extra = set(per_mode) - {"conquest", "joust", "arena"}
+        assert extra in (set(), {"conquest:aspect", "joust:aspect", "arena:aspect"}), (god, extra)
         for mode, table in per_mode.items():
             assert 0 < len(table) <= 40, f"{god}/{mode} has {len(table)} entries"
             assert all(isinstance(v, float) for v in table.values())
+
+
+def test_only_gods_with_a_tuned_overlay_get_an_aspect_table():
+    """72 gods have an aspect and 7 have a scoring overlay. The viewer keys the
+    "does this toggle move the build" message off the table's existence, so an
+    empty-but-present table would be a lie rather than a no-op."""
+    from smite import build_index, scoring, recommend
+    from pathlib import Path
+    repo = Path(__file__).resolve().parents[3]
+    weights = scoring.load_weights(repo / "data" / "_weights.yaml")
+    tuned = set(weights.get("aspects") or {})
+    scores = build_index.build_index(repo)["god_item_scores"]
+    with_table = {g for g, m in scores.items() if "conquest:aspect" in m}
+    assert with_table == tuned & set(scores), (with_table, tuned)
 
 
 def test_god_item_scores_apply_the_mode_profile():

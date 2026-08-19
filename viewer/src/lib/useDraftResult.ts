@@ -73,6 +73,8 @@ export interface DraftResult {
    *  relics from the six slots because the game gives them their own, so the
    *  tag overlay could never have recommended one. */
   relicPicks: { item: string; because: string; threat: string; count: number }[];
+  /** The aspect is on and moved the build (only 7 gods have an overlay). */
+  aspectScored: boolean;
   /** Gods a given slot may not take: the ones already on THAT team, minus
    *  whoever currently occupies the slot being edited.
    *
@@ -102,6 +104,10 @@ export function useDraftResult(
   godItemScores: Record<string, Record<string, Record<string, number>>> | undefined,
   draftConfig: DraftConfig | undefined,
   godItemDamage?: Record<string, Record<string, [number, number]>>,
+  /** Build for your god's aspect. Only the 7 gods with a hand-tuned overlay
+   *  have an `<mode>:aspect` table; for anyone else this is inert by
+   *  construction rather than by a separate guard. */
+  aspectOn = false,
 ): DraftResult {
   const godsByName = useMemo(() => {
     const m: Record<string, God> = {};
@@ -166,9 +172,15 @@ export function useDraftResult(
   }, [draftConfig, threats]);
   const culprits = useMemo(() => threatCulprits(draft, godsByName), [draft, godsByName]);
 
-  // Scored items for THIS mode. Conquest's table used to be the only one, so
-  // the Joust toggle changed the label and left the model alone.
-  const modeScores = godItemScores?.[meName]?.[mode];
+  // Scored items for THIS mode, and this god's aspect if they have one.
+  // Conquest's table used to be the only one, so the Joust toggle changed the
+  // label and left the model alone.
+  const byMode = godItemScores?.[meName];
+  const modeScores = (aspectOn ? byMode?.[`${mode}:aspect`] : undefined) ?? byMode?.[mode];
+  /** True when the aspect is on AND actually has a table behind it — the
+   *  board says which of the two it is rather than leaving a pressed control
+   *  that changed nothing. */
+  const aspectScored = aspectOn && !!byMode?.[`${mode}:aspect`];
   const draftEnabled = !!meName && !!modeScores && !!draftConfig;
   const result = useMemo(() => {
     if (!draftEnabled) return null;
@@ -204,7 +216,7 @@ export function useDraftResult(
 
   return {
     meName, meGod, godsByName, itemsByName, taken, takenFor, starters, startersAreConquest,
-    relicPicks,
+    relicPicks, aspectScored,
     enemiesKnown: threats.enemyCount, roster: threats.rosterSize,
     threatCulprits: culprits,
     allyAllPhysical: threats.allyAllPhysical, allyCount: threats.allyCount, allyPhysical: threats.allyPhysical,

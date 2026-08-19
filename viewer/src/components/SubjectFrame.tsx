@@ -14,6 +14,7 @@ import type { God, GodTierEntry } from "../types";
 import { godLane, laneTextClass, godRoleTextClass, damageTextClass } from "../lib/roleAccent";
 import { usePins } from "../lib/pins";
 import { BookmarkIcon } from "./BookmarkIcon";
+import { AspectToggle } from "./AspectBadge";
 import { rateText, matchesText } from "../lib/standings";
 import { encodeDraftHash, useDraft, MODE_TEAM_SIZE, type DraftMode } from "../lib/draft";
 import { iconSlug } from "../lib/builds";
@@ -134,10 +135,18 @@ export interface SubjectFrameProps {
   roster: { total: number; ranked: number; unranked: number };
   modeLabel: string;
   onPickGod: () => void;
+  /** Aspect state lives in App, because the aspect belongs to the god rather
+   *  than to the build panel that used to own it. */
+  aspectOn?: boolean;
+  onToggleAspect?: () => void;
+  /** False when this god's aspect has no scoring overlay, so the control shows
+   *  the kit text without moving the build. 65 of the 72 gods with an aspect. */
+  aspectChangesBuild?: boolean;
 }
 
 export function SubjectFrame({
   god, godName, lens, tierEntry, roster, modeLabel, onPickGod,
+  aspectOn = false, onToggleAspect, aspectChangesBuild = true,
 }: SubjectFrameProps) {
   const name = god?.name ?? godName;
   const lane = godLane(god?.role);
@@ -159,11 +168,26 @@ export function SubjectFrame({
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
           {name ? (
             <>
-              <button type="button" onClick={onPickGod}
-                aria-label={`Change god — currently ${name}`}
-                className="press shrink-0 rounded-lg">
-                <GodArt name={name} />
-              </button>
+              {/* `relative` so the aspect hexagon can sit on the corner of
+                  the portrait. The toggle is a SIBLING of the change-god
+                  button, never a child: nesting it would put a button inside
+                  a button. */}
+              <div className="relative shrink-0">
+                <button type="button" onClick={onPickGod}
+                  aria-label={`Change god — currently ${name}`}
+                  className="press block rounded-lg">
+                  <GodArt name={name} />
+                </button>
+                {god?.aspects?.[0] && onToggleAspect && (
+                  <AspectToggle
+                    aspectName={god.aspects[0].name}
+                    on={aspectOn}
+                    onToggle={onToggleAspect}
+                    changesBuild={aspectChangesBuild}
+                    className="h-5 w-5"
+                  />
+                )}
+              </div>
               <div className="min-w-0 flex-1">
                 {/* The bookmark sits with the name because that is what it
                     marks. Home has always told readers to "bookmark a god from

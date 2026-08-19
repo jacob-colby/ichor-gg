@@ -151,23 +151,35 @@ def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
 
     All three modes ship, including Arena, which is not a draft mode today: the
     whole table is 92 KB against a 5 MB index, and the alternative is encoding
-    a viewer decision in the pipeline."""
+    a viewer decision in the pipeline.
+
+    A god with a hand-tuned entry under `aspects` in `_weights.yaml` also gets
+    a `<mode>:aspect` table, so the draft's aspect toggle moves the build the
+    same way the god page's does. Only the 7 gods with an overlay get one —
+    the other 65 with an aspect have nothing to score differently, and
+    emitting an identical copy would tell the viewer they did."""
     cap = int((weights.get("draft") or {}).get("score_cap", 40))
     by_god_mode = {}
     for b in builds:
         key = (b.get("god"), b.get("mode"))
         if key not in by_god_mode:
             by_god_mode[key] = b
+    aspects = weights.get("aspects") or {}
     out = {}
     for god in gods:
         per_mode = {}
+        overlay = aspects.get(god["name"])
         for mode in recommend.MODES:
-            profile = scoring.resolve_profile(weights, mode, None)
-            rows = scoring.score_god_items(
-                god, items, by_god_mode.get((god["name"], mode), {}), eff,
-                weights, tags_map, profile)
-            per_mode[mode.lower()] = {
-                r["item"]: round(float(r["total"]), 4) for r in rows[:cap]}
+            for suffix, asp in (("", None), (":aspect", overlay)):
+                if suffix and not asp:
+                    continue
+                profile = scoring.resolve_profile(weights, mode, None,
+                                                  aspect_overlay=asp)
+                rows = scoring.score_god_items(
+                    god, items, by_god_mode.get((god["name"], mode), {}), eff,
+                    weights, tags_map, profile)
+                per_mode[mode.lower() + suffix] = {
+                    r["item"]: round(float(r["total"]), 4) for r in rows[:cap]}
         out[god["name"]] = per_mode
     return out
 

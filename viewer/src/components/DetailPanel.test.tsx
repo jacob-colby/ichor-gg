@@ -428,26 +428,34 @@ describe("DetailPanel — modes, aspects, starters, mine", () => {
       aspect: "Aspect of Preservation" },
   ] }]);
 
-  it("swaps to the aspect build and shows the kit banner when toggled on", () => {
-    render(panel({ god: "Hercules", godData: godWithAspect, builds: aspectBuild() as never }));
+  /* The control itself moved to the god's portrait, where SMITE draws it —
+     see AspectBadge.tsx and SubjectFrame.test.tsx. This panel is controlled
+     now, so what it owes is: given the state, show the right build. */
+  it("swaps to the aspect build and shows the kit banner when the state is on", () => {
+    const { rerender } = render(
+      panel({ god: "Hercules", godData: godWithAspect, builds: aspectBuild() as never,
+              aspectOn: false }));
     expect(screen.getByText("BaseItem")).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: /aspect/i }));
+    rerender(panel({ god: "Hercules", godData: godWithAspect, builds: aspectBuild() as never,
+                     aspectOn: true }));
     expect(screen.getByText("AspectItem")).toBeInTheDocument();
     expect(screen.queryByText("BaseItem")).not.toBeInTheDocument();
     expect(screen.getByText(/ally-heal tank/i)).toBeInTheDocument();
   });
 
-  it("shows no aspect toggle when only the community entry carries an aspect", () => {
+  it("keeps the model build when only the community entry carries an aspect", () => {
     // Regression: the toggle used to appear for any build with an `aspect`
     // field — including community — then emptied the surface when pressed,
-    // because only *suggested* aspect builds are selectable.
+    // because only *suggested* aspect builds are selectable. With the control
+    // on the portrait the failure mode is the same and quieter: an aspect-on
+    // state must not blank a god who has no suggested aspect build.
     const communityAspectOnly = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
       { source: "community", aspect: "Aspect of the Heroic Tutor", aspect_pick_rate: 0.09,
         aspect_win_rate: 0.45, slot_order: [{ name: "X", pick_rate: 0.5, win_rate: 0.5 }], source_url: "u" },
       { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
     ] }];
-    render(panel({ builds: communityAspectOnly as never }));
-    expect(screen.queryByRole("button", { name: /^aspect/i })).not.toBeInTheDocument();
+    render(panel({ builds: communityAspectOnly as never, aspectOn: true }));
+    expect(screen.getByText("A")).toBeInTheDocument();
   });
 
   it("shows no aspect toggle for a god with no aspect builds", () => {

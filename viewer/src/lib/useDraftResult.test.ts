@@ -297,8 +297,8 @@ describe("useDraftResult — relics answer threats the six slots cannot", () => 
   const waller = god("Waller", {
     threat_kit: { hard_cc: 3, slow: 3, heal: 0, shield: 0, wall: 1 },
   } as never);
-  const CFG = { ...DRAFT_CFG, relics: { walls: { item: "Shell of Rebuke", because: "walls" } } };
-  const at = (enemies: string[], cfg = CFG) => renderHook(() => useDraftResult(
+  const CFG: DraftConfig = { ...DRAFT_CFG, relics: { walls: { item: "Shell of Rebuke", because: "walls" } } };
+  const at = (enemies: string[], cfg: DraftConfig = CFG) => renderHook(() => useDraftResult(
     comp(["TestGod", "", "", "", ""], enemies),
     "conquest", [...GODS, waller], ITEMS, [], GOD_ITEM_SCORES, cfg,
   )).result.current;
@@ -319,5 +319,37 @@ describe("useDraftResult — relics answer threats the six slots cannot", () => 
 
   it("suggests nothing on an index whose config has no relic table", () => {
     expect(at(["Waller", "", "", "", ""], DRAFT_CFG).relicPicks).toEqual([]);
+  });
+});
+
+/* The draft builds for YOUR god, so only your aspect can move it. Only the 7
+ * gods with a hand-tuned overlay in `_weights.yaml` get a `<mode>:aspect`
+ * table; for the other 65 with an aspect the toggle is inert BY CONSTRUCTION
+ * (there is no table to select) rather than by a separate guard — and the
+ * board says which of the two it is. */
+describe("useDraftResult — the aspect selects a different table when one exists", () => {
+  const SCORED = {
+    TestGod: {
+      conquest: { Alpha: 0.9, Beta: 0.1, Gamma: 0.1, Delta: 0.1, Epsilon: 0.1, Zeta: 0.1 },
+      "conquest:aspect": { Alpha: 0.1, Beta: 0.9, Gamma: 0.1, Delta: 0.1, Epsilon: 0.1, Zeta: 0.1 },
+    },
+  };
+  const UNSCORED = { TestGod: { conquest: { Alpha: 0.9, Beta: 0.1, Gamma: 0.1 } } };
+  const at = (scores: typeof SCORED | typeof UNSCORED, aspectOn: boolean) => renderHook(() => useDraftResult(
+    comp(["TestGod", "", "", "", ""], ["", "", "", "", ""]),
+    "conquest", GODS, ITEMS, [], scores as never, DRAFT_CFG, undefined, aspectOn,
+  )).result.current;
+
+  it("builds from the aspect table when the god has one", () => {
+    expect(at(SCORED, false).result?.adapted.core[0]).toBe("Alpha");
+    expect(at(SCORED, true).result?.adapted.core[0]).toBe("Beta");
+    expect(at(SCORED, true).aspectScored).toBe(true);
+  });
+
+  it("keeps the base build, and says so, when the aspect has no table", () => {
+    const r = at(UNSCORED, true);
+    expect(r.result?.adapted.core[0]).toBe("Alpha");
+    expect(r.aspectScored).toBe(false);
+    expect(r.draftEnabled).toBe(true);
   });
 });
