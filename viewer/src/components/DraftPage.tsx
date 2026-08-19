@@ -235,32 +235,22 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
       <div className="flex flex-col gap-6 xl:flex-row xl:gap-8">
       {meName && (
         <section aria-labelledby="draft-core-h" data-testid="draft-core" className="min-w-0 flex-1 border-t border-line pt-5">
-          <h2 id="draft-core-h" className={eyebrow}>What changed</h2>
+          {/* The build leads. It is the thing the page exists to produce, and
+              it used to sit UNDER the diff that explains it — so the answer was
+              below the footnote, and on a narrow screen the first thing a
+              reader saw was a list of items they hadn't been shown yet. The
+              diff still earns its place; it just isn't the headline. */}
+          <h2 id="draft-core-h" className={eyebrow}>
+            {changeCount > 0 ? "Your adapted core" : "The default core"}
+          </h2>
           {!draftEnabled || !result ? (
             <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
               {meName} has no scored items in this index yet, so there&rsquo;s nothing to adapt.
               Pick a different god, or check back after the next data refresh.
             </p>
-          ) : result.diff.changes.length === 0 ? (
-            <div className="mt-2 max-w-[64ch]">
-              <p className="text-body leading-relaxed text-muted">
-                {enemiesKnown === 0
-                  ? "Nothing yet — add an enemy and the model starts re-ranking against them."
-                  : "Nothing so far. This draft doesn't threaten anything the default core wasn't already handling."}
-              </p>
-            </div>
           ) : (
-            <ul className="mt-2 flex flex-col divide-y divide-line">
-              {result.diff.changes.map((c) => (
-                <ChangeRow key={c.added} change={c} itemsByName={itemsByName} maxBonus={draftConfig!.max_bonus} />
-              ))}
-            </ul>
-          )}
-
-          {/* The build itself, with the changed rows marked in place. */}
-          {result && (
-            <div className="mt-5">
-              <h3 className={eyebrow}>{changeCount > 0 ? "Your adapted core" : "The default core"}</h3>
+            <>
+            <div>
 
               {/* A build starts before item one, and this page began at item
                   one — so the first purchase of the match was the one thing it
@@ -313,6 +303,24 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                 })}
               </ul>
             </div>
+
+            <div className="mt-5" data-testid="draft-changed">
+              <h3 className={eyebrow}>What changed</h3>
+              {result.diff.changes.length === 0 ? (
+                <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
+                  {enemiesKnown === 0
+                    ? "Nothing yet — add an enemy and the model starts re-ranking against them."
+                    : "Nothing so far. This draft doesn't threaten anything the default core wasn't already handling."}
+                </p>
+              ) : (
+                <ul className="mt-2 flex flex-col divide-y divide-line">
+                  {result.diff.changes.map((c) => (
+                    <ChangeRow key={c.added} change={c} itemsByName={itemsByName} maxBonus={draftConfig!.max_bonus} />
+                  ))}
+                </ul>
+              )}
+            </div>
+            </>
           )}
         </section>
       )}

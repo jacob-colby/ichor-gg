@@ -102,6 +102,22 @@ describe("DraftPage", () => {
     expect(core.getByText(/answers anti-heal/i)).toBeInTheDocument();
   });
 
+  it("puts the build itself above the diff that explains it", () => {
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    // The core is the deliverable; "What changed" is the footnote that
+    // explains it. Reversed, the page answered before it had asked, and on a
+    // narrow screen the reader met a diff against a build they hadn't seen.
+    const section = screen.getByTestId("draft-core");
+    const changed = screen.getByTestId("draft-changed");
+    const core = within(section).getByRole("heading", { level: 2 });
+    expect(core).toHaveTextContent(/adapted core/i);
+    expect(core.compareDocumentPosition(changed) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
   it("states plainly when the draft has not moved the build", () => {
     render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
