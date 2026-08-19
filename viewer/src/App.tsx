@@ -143,6 +143,13 @@ function App() {
       && (b as CuratedBuildEntry).archetype === "core"
       && !(b as CuratedBuildEntry).fun,
   ) as CuratedBuildEntry | undefined)?.slot_order as string[] | undefined;
+  // Item scores for the mode being viewed. This lens read the Conquest table
+  // under every mode toggle, exactly as the draft page did — so a god's Joust
+  // item ranking was Conquest's, and `modes.joust.tag_bonus` reached neither
+  // surface. `god_item_scores` now ships one table per mode.
+  const godItemScoresForMode = route.god
+    ? data.god_item_scores?.[route.god]?.[(godNote?.mode ?? mode).toLowerCase()]
+    : undefined;
 
   const patchNotes = data.patch_notes ?? [];
   const pickGod = (name: string) => { setPickerOpen(false); navigate(toHash.god(name)); };
@@ -238,7 +245,7 @@ function App() {
             {route.lens === "kit" ? (
               <GodInfo god={god} />
             ) : route.lens === "items" ? (
-              <GodItems god={god.name} scores={data.god_item_scores?.[god.name]}
+              <GodItems god={god.name} scores={godItemScoresForMode}
                 items={data.items} core={godCore ?? []} />
             ) : route.lens === "ranking" ? (
               <GodRanking god={god.name} role={god.role} entries={modeSlice?.gods}

@@ -80,7 +80,7 @@ interface DraftPageProps {
   gods: God[];
   items: Item[];
   builds: BuildNote[];
-  godItemScores?: Record<string, Record<string, number>>;
+  godItemScores?: Record<string, Record<string, Record<string, number>>>;
   /** B6: per-item damage against a squishy vs a tank. Optional — an older
    *  index simply leaves the damage term out of the overlay. */
   godItemDamage?: Record<string, Record<string, [number, number]>>;
@@ -109,6 +109,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
   const {
     meName, itemsByName, taken, takenFor, enemiesKnown, roster, threatCulprits: culprits,
     allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, coreSize, starters,
+    startersAreConquest,
   } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
   const copyLink = () => {
@@ -262,7 +263,10 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                 <div data-testid="draft-starters" className="mt-2 border-b border-line pb-3">
                   <div className="flex flex-wrap items-baseline gap-x-2">
                     <span className="text-label text-faint">Opens with</span>
-                    <span className="text-label text-muted">· by pick rate, not adapted by your draft</span>
+                    <span className="text-label text-muted">
+                      · by pick rate, not adapted by your draft
+                      {startersAreConquest && " · Conquest data, no Joust openers are tracked"}
+                    </span>
                   </div>
                   <ul className="mt-1.5 flex flex-wrap gap-1.5">
                     {starters.map((s) => (

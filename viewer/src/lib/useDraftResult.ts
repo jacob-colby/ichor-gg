@@ -66,6 +66,9 @@ export interface DraftResult {
    *  before item one and this page began at item one, so the first purchase of
    *  the match was the one thing it never showed. */
   starters: { name: string; pick_rate: number; win_rate: number }[];
+  /** True when `starters` came from Conquest because the selected mode has no
+   *  community data of its own. The row has to say so — see `starters`. */
+  startersAreConquest: boolean;
   /** Gods a given slot may not take: the ones already on THAT team, minus
    *  whoever currently occupies the slot being edited.
    *
@@ -92,7 +95,7 @@ export interface DraftResult {
 export function useDraftResult(
   draft: DraftComp, mode: DraftMode,
   gods: God[], items: Item[], builds: BuildNote[],
-  godItemScores: Record<string, Record<string, number>> | undefined,
+  godItemScores: Record<string, Record<string, Record<string, number>>> | undefined,
   draftConfig: DraftConfig | undefined,
   godItemDamage?: Record<string, Record<string, [number, number]>>,
 ): DraftResult {
@@ -110,11 +113,29 @@ export function useDraftResult(
   const meName = draft.allies[0];
   const meGod = godsByName[meName];
 
-  const starters = useMemo(() => {
-    const note = builds.find((b) => b.god === meName && b.mode === MODE_LABEL[mode]);
-    const community = note?.builds.find((b) => b.source === "community");
-    return (community as { community_starters?: { name: string; pick_rate: number; win_rate: number }[] })
-      ?.community_starters ?? [];
+  /** Openers for the selected mode, falling back to Conquest's.
+   *
+   *  Joust and Arena build notes carry NO community build at all — SmiteBrain
+   *  is Conquest-only — so the mode-scoped lookup found nothing and the whole
+   *  "Opens with" row silently vanished the moment you switched to Joust.
+   *
+   *  Conquest's openers are a real answer for the other modes (a Warrior's Axe
+   *  opener is a Warrior's Axe opener), just not a measured one, so they are
+   *  shown WITH the fallback flagged rather than dropped or passed off as
+   *  native. Same judgement the build pages already make about Joust. */
+  const { starters, startersAreConquest } = useMemo(() => {
+    const openersFor = (label: string) => {
+      const note = builds.find((b) => b.god === meName && b.mode === label);
+      const community = note?.builds.find((b) => b.source === "community");
+      return (community as { community_starters?: { name: string; pick_rate: number; win_rate: number }[] })
+        ?.community_starters ?? [];
+    };
+    const own = openersFor(MODE_LABEL[mode]);
+    if (own.length > 0 || MODE_LABEL[mode] === "Conquest") {
+      return { starters: own, startersAreConquest: false };
+    }
+    const fallback = openersFor("Conquest");
+    return { starters: fallback, startersAreConquest: fallback.length > 0 };
   }, [builds, meName, mode]);
 
   const allyCores = useMemo(() => {
@@ -128,7 +149,10 @@ export function useDraftResult(
   const threats = useMemo(() => deriveThreats(draft, godsByName, allyCores), [draft, godsByName, allyCores]);
   const culprits = useMemo(() => threatCulprits(draft, godsByName), [draft, godsByName]);
 
-  const draftEnabled = !!meName && !!godItemScores?.[meName] && !!draftConfig;
+  // Scored items for THIS mode. Conquest's table used to be the only one, so
+  // the Joust toggle changed the label and left the model alone.
+  const modeScores = godItemScores?.[meName]?.[mode];
+  const draftEnabled = !!meName && !!modeScores && !!draftConfig;
   const result = useMemo(() => {
     if (!draftEnabled) return null;
     const opts = {
@@ -138,13 +162,13 @@ export function useDraftResult(
       // so an older data file keeps behaving exactly as it did.
       selfCovered: draftConfig!.self_covered ?? 1,
     };
-    const base = adaptedCore(godItemScores![meName], itemsByName, { tags: {}, stats: {} }, opts);
+    const base = adaptedCore(modeScores!, itemsByName, { tags: {}, stats: {} }, opts);
     const overlay = threatOverlay(threats, draftConfig!);
     overlay.items = damageOverlay(threats, godItemDamage?.[meName], draftConfig!);
-    const adapted = adaptedCore(godItemScores![meName], itemsByName, overlay, opts);
+    const adapted = adaptedCore(modeScores!, itemsByName, overlay, opts);
     // Both builds survive: the diff is the product's whole claim.
     return { base, adapted, diff: diffCore(base, adapted) };
-  }, [draftEnabled, draftConfig, godItemScores, godItemDamage, meName, itemsByName, threats, meGod]);
+  }, [draftEnabled, draftConfig, modeScores, godItemDamage, meName, itemsByName, threats, meGod]);
 
   const taken = useMemo(
     () => new Set([...draft.allies, ...draft.enemies].filter(Boolean)),
@@ -162,7 +186,7 @@ export function useDraftResult(
   );
 
   return {
-    meName, meGod, godsByName, itemsByName, taken, takenFor, starters,
+    meName, meGod, godsByName, itemsByName, taken, takenFor, starters, startersAreConquest,
     enemiesKnown: threats.enemyCount, roster: threats.rosterSize,
     threatCulprits: culprits,
     allyAllPhysical: threats.allyAllPhysical, allyCount: threats.allyCount, allyPhysical: threats.allyPhysical,

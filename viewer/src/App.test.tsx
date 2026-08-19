@@ -27,7 +27,12 @@ const data = {
     gods: [{ name: "Chiron", score: 0.47, win_rate: 0.52, matches: 380, play_share: 0.07, tier_score: "B", role: "Carry" }],
     items: [],
   },
-  god_item_scores: { Chiron: { Rage: 0.49 }, Ymir: { Rage: 0.3 } },
+  // One table per mode — the god page's item lens reads the mode being viewed,
+  // and used to read Conquest's under all three.
+  god_item_scores: {
+    Chiron: { conquest: { Rage: 0.49 }, joust: { Rage: 0.49 }, arena: { Rage: 0.49 } },
+    Ymir: { conquest: { Rage: 0.3 }, joust: { Rage: 0.3 }, arena: { Rage: 0.3 } },
+  },
 };
 
 const atUrl = (hash: string) => window.history.replaceState(null, "", `/${hash}`);

@@ -119,22 +119,50 @@ def _enrich_items(items, tags, eff=None):
 
 
 def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
-    """Per-god base item scores for the viewer's draft-aware re-rank.
+    """`{god: {mode: {item: score}}}` — base item scores for the viewer's
+    draft-aware re-rank, one table per mode.
 
     The viewer is static, so it can't re-run scoring when a comp is entered; it
     instead applies a threat overlay to these shipped totals. Capped at the top
     `draft.score_cap` items per god — a bounded bonus can't promote a god's #60
-    item, so shipping the whole matrix would just bloat the index."""
+    item, so shipping the whole matrix would just bloat the index.
+
+    THIS USED TO BE CONQUEST-ONLY, under a draft page that has offered a Joust
+    toggle the whole time. The toggle switched which build NOTE was displayed
+    and left the suggested core scored by Conquest's weights, so none of the
+    per-mode work reached the draft at all: `modes.joust.tag_bonus` never
+    applied, and Eye of Providence — which that table penalises at -0.25 for
+    exactly this reason — sat at slot 4 of Achilles' Joust core. A mode
+    selector that changes the label and not the model is worse than no mode
+    selector.
+
+    Each mode is scored through its own `resolve_profile`, and against its OWN
+    build note rather than Conquest's. Joust and Arena have no community note
+    at all (SmiteBrain is Conquest-only), which is harmless here because both
+    modes zero the `win` and `pick` weights that would read it — but passing
+    Conquest's note in would create a silent dependency on those weights
+    staying zero, and they are a config value, not a law.
+
+    All three modes ship, including Arena, which is not a draft mode today: the
+    whole table is 92 KB against a 5 MB index, and the alternative is encoding
+    a viewer decision in the pipeline."""
     cap = int((weights.get("draft") or {}).get("score_cap", 40))
-    by_god = {}
+    by_god_mode = {}
     for b in builds:
-        if b.get("mode") == "Conquest" and b.get("god") not in by_god:
-            by_god[b["god"]] = b
+        key = (b.get("god"), b.get("mode"))
+        if key not in by_god_mode:
+            by_god_mode[key] = b
     out = {}
     for god in gods:
-        rows = scoring.score_god_items(
-            god, items, by_god.get(god["name"], {}), eff, weights, tags_map)
-        out[god["name"]] = {r["item"]: round(float(r["total"]), 4) for r in rows[:cap]}
+        per_mode = {}
+        for mode in recommend.MODES:
+            profile = scoring.resolve_profile(weights, mode, None)
+            rows = scoring.score_god_items(
+                god, items, by_god_mode.get((god["name"], mode), {}), eff,
+                weights, tags_map, profile)
+            per_mode[mode.lower()] = {
+                r["item"]: round(float(r["total"]), 4) for r in rows[:cap]}
+        out[god["name"]] = per_mode
     return out
 
 

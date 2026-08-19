@@ -29,9 +29,13 @@ const ITEMS = [
 const SCORES: Record<string, number> = {
   Alpha: 0.6, Beta: 0.59, Gamma: 0.58, Delta: 0.57, Epsilon: 0.56, Zeta: 0.55, AntiHeal: 0.4,
 };
-const GOD_ITEM_SCORES: Record<string, Record<string, number>> = {
+/** One table per mode — see the same helper in DraftPage.test.tsx. */
+const perMode = <T,>(flat: Record<string, T>) =>
+  Object.fromEntries(Object.entries(flat).map(([g, t]) => [g, { conquest: t, joust: t, arena: t }]));
+
+const GOD_ITEM_SCORES: Record<string, Record<string, Record<string, number>>> = perMode({
   TestGod: SCORES, EnemyHealer: { Alpha: 0.5 }, Buddy: { Alpha: 0.3 },
-};
+});
 
 const DRAFT_CFG: DraftConfig = {
   max_bonus: 0.5, per_share: 0.5,

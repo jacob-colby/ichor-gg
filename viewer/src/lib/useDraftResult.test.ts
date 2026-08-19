@@ -30,7 +30,13 @@ const ITEMS = [
   item("AntiHeal", ["anti-heal"]),
 ];
 const SCORES = { Alpha: 0.6, Beta: 0.59, Gamma: 0.58, Delta: 0.57, Epsilon: 0.56, Zeta: 0.55, AntiHeal: 0.4 };
-const GOD_ITEM_SCORES = { TestGod: SCORES };
+/** The index ships one score table per mode; these fixtures care about the
+ *  draft's arithmetic rather than about mode weighting, so every mode gets the
+ *  same numbers unless a test says otherwise. */
+const perMode = <T,>(flat: Record<string, T>) =>
+  Object.fromEntries(Object.entries(flat).map(([g, t]) => [g, { conquest: t, joust: t, arena: t }]));
+
+const GOD_ITEM_SCORES = perMode({ TestGod: SCORES });
 
 const DRAFT_CFG: DraftConfig = {
   max_bonus: 0.5, per_share: 0.5,
@@ -214,5 +220,70 @@ describe("useDraftResult — what your god opens with", () => {
   it("is empty with no god in the you-slot", () => {
     const r = run(["", "", "", "", ""], ["Ymir", "", "", "", ""], { builds: withStarters });
     expect(r.starters).toEqual([]);
+  });
+});
+
+/* The draft page has offered a Joust toggle since it shipped, and until now it
+ * switched only which build NOTE was displayed: `god_item_scores` was a single
+ * Conquest table, so the suggested core was Conquest-scored under every mode.
+ * `modes.joust.tag_bonus` — including the -0.25 that exists specifically to
+ * keep Eye of Providence out of builds that don't run the ward economy — never
+ * reached this surface at all. */
+describe("useDraftResult — the mode selector selects a model, not a label", () => {
+  const PER_MODE = {
+    TestGod: {
+      conquest: { Alpha: 0.9, Beta: 0.1, Gamma: 0.1, Delta: 0.1, Epsilon: 0.1, Zeta: 0.1 },
+      joust: { Alpha: 0.1, Beta: 0.9, Gamma: 0.1, Delta: 0.1, Epsilon: 0.1, Zeta: 0.1 },
+      arena: { Alpha: 0.1, Beta: 0.1, Gamma: 0.9, Delta: 0.1, Epsilon: 0.1, Zeta: 0.1 },
+    },
+  };
+  const at = (mode: "conquest" | "joust") => renderHook(() => useDraftResult(
+    comp(["TestGod", "", "", "", ""], ["", "", "", "", ""]),
+    mode, GODS, ITEMS, [], PER_MODE, DRAFT_CFG,
+  )).result.current;
+
+  it("reads the table for the selected mode", () => {
+    expect(at("conquest").result?.adapted.core[0]).toBe("Alpha");
+    expect(at("joust").result?.adapted.core[0]).toBe("Beta");
+  });
+
+  it("disables the draft for a god with no table in this mode", () => {
+    const r = renderHook(() => useDraftResult(
+      comp(["TestGod", "", "", "", ""], ["", "", "", "", ""]),
+      "joust", GODS, ITEMS, [], { TestGod: { conquest: { Alpha: 0.9 } } }, DRAFT_CFG,
+    )).result.current;
+    expect(r.draftEnabled).toBe(false);
+  });
+});
+
+/* SmiteBrain is Conquest-only, so a Joust build note carries no community
+ * build and therefore no openers. Scoped strictly to the mode, the whole
+ * "Opens with" row vanished the moment you switched to Joust. Conquest's
+ * openers are a real answer there, just not a measured one — so they are shown
+ * with the fallback flagged rather than dropped or passed off as native. */
+describe("useDraftResult — openers fall back to Conquest, and say so", () => {
+  const conquestOnly = [{
+    god: "TestGod", mode: "Conquest", type: "smite-build",
+    builds: [{
+      source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+      slot_order: [], source_url: "",
+      community_starters: [{ name: "Archmage's Gem", pick_rate: 0.25, win_rate: 0.64 }],
+    }],
+  }] as unknown as BuildNote[];
+  const at = (mode: "conquest" | "joust") => renderHook(() => useDraftResult(
+    comp(["TestGod", "", "", "", ""], ["", "", "", "", ""]),
+    mode, GODS, ITEMS, conquestOnly, GOD_ITEM_SCORES, DRAFT_CFG,
+  )).result.current;
+
+  it("shows Conquest's openers in Joust, flagged as borrowed", () => {
+    const r = at("joust");
+    expect(r.starters.map((s) => s.name)).toEqual(["Archmage's Gem"]);
+    expect(r.startersAreConquest).toBe(true);
+  });
+
+  it("does not flag Conquest's own openers as borrowed", () => {
+    const r = at("conquest");
+    expect(r.starters.map((s) => s.name)).toEqual(["Archmage's Gem"]);
+    expect(r.startersAreConquest).toBe(false);
   });
 });

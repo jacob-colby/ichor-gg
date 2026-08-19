@@ -274,9 +274,29 @@ def test_build_index_emits_capped_god_item_scores():
     r = build_index.build_index(Path(__file__).resolve().parents[3])
     scores = r["god_item_scores"]
     assert set(scores) == {g["name"] for g in r["gods"]}
-    for god, table in scores.items():
-        assert 0 < len(table) <= 40, f"{god} has {len(table)} entries"
-        assert all(isinstance(v, float) for v in table.values())
+    for god, per_mode in scores.items():
+        assert set(per_mode) == {"conquest", "joust", "arena"}, god
+        for mode, table in per_mode.items():
+            assert 0 < len(table) <= 40, f"{god}/{mode} has {len(table)} entries"
+            assert all(isinstance(v, float) for v in table.values())
+
+
+def test_god_item_scores_apply_the_mode_profile():
+    """The draft page has offered a Joust toggle the whole time, and this table
+    was Conquest-only — so `modes.joust.tag_bonus` reached neither the draft nor
+    the god page's item lens. Eye of Providence, whose -0.25 `ward-economy`
+    penalty exists precisely because Joust and Arena don't run a ward economy,
+    was in the Joust core of gods whose Conquest score carried it there.
+
+    Asserted on that item because it is the one the penalty names, and on the
+    DIRECTION rather than an exact rank, so a data refresh can move it."""
+    from smite import build_index
+    from pathlib import Path
+    r = build_index.build_index(Path(__file__).resolve().parents[3])
+    scores = r["god_item_scores"]
+    carriers = {m: sum(1 for t in scores.values() if "Eye of Providence" in t[m])
+                for m in ("conquest", "joust", "arena")}
+    assert carriers["conquest"] > carriers["joust"] > carriers["arena"] == 0, carriers
 
 
 # --- popular_items (Task P2: most-picked community items) -----------------

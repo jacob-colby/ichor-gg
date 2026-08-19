@@ -31,9 +31,15 @@ const SCORES: Record<string, number> = {
 };
 // EnemyHealer/Buddy need their own god_item_scores entries too — the picker
 // is limited to gods present in god_item_scores, same as production.
-const GOD_ITEM_SCORES: Record<string, Record<string, number>> = {
+/** The index ships one score table per mode; these fixtures care about the
+ *  draft's arithmetic rather than about mode weighting, so every mode gets the
+ *  same numbers unless a test says otherwise. */
+const perMode = <T,>(flat: Record<string, T>) =>
+  Object.fromEntries(Object.entries(flat).map(([g, t]) => [g, { conquest: t, joust: t, arena: t }]));
+
+const GOD_ITEM_SCORES: Record<string, Record<string, Record<string, number>>> = perMode({
   TestGod: SCORES, EnemyHealer: { Alpha: 0.5 }, Buddy: { Alpha: 0.3 },
-};
+});
 
 // Exaggerated weights vs. production _weights.yaml — the point of this
 // fixture is a deterministic, clearly visible promotion, not realism.

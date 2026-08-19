@@ -68,7 +68,7 @@ interface DraftDockProps {
   gods: God[];
   items: Item[];
   builds: BuildNote[];
-  godItemScores?: Record<string, Record<string, number>>;
+  godItemScores?: Record<string, Record<string, Record<string, number>>>;
   /** B6: per-item damage against a squishy vs a tank. Optional — an older
    *  index simply leaves the damage term out of the overlay. */
   godItemDamage?: Record<string, Record<string, [number, number]>>;
@@ -77,7 +77,8 @@ interface DraftDockProps {
 
 export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, draftConfig }: DraftDockProps) {
   const { draft, mode, setMode, setAlly, setEnemy, clear } = useDraft();
-  const { meName, taken, takenFor, enemiesKnown, roster, result, changeCount, coreSize, starters } =
+  const { meName, taken, takenFor, enemiesKnown, roster, result, changeCount, coreSize, starters,
+    startersAreConquest } =
     useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
   const [expanded, setExpanded] = useState(false);
@@ -216,7 +217,9 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
                 the draft page. */}
             {starters.length > 0 && (
               <div data-testid="dock-starters" className="mt-2 border-t border-line pt-2">
-                <div className={label}>Opens with</div>
+                <div className={label}>
+                  Opens with{startersAreConquest && " · Conquest"}
+                </div>
                 <ul className="mt-1 flex flex-wrap gap-1">
                   {starters.map((s) => (
                     <li key={s.name}>

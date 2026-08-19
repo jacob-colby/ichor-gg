@@ -343,7 +343,9 @@ export interface IndexData {
   community_source?: CommunitySource;
   tierlist?: TierListData;
   patch_notes?: PatchPeriod[];
-  god_item_scores?: Record<string, Record<string, number>>;
+  /** god -> mode -> item -> blended score. One table per mode: the draft
+   *  page's mode toggle used to change only which build note it showed. */
+  god_item_scores?: Record<string, Record<string, Record<string, number>>>;
   /** Fitted marginal gold price per stat — what makes a predicted cost
    * auditable rather than asserted. */
   item_gold_values?: Record<string, number>;
