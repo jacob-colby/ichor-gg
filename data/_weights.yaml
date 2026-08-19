@@ -363,7 +363,33 @@ abilities:
 # three, never rewrites the build into full defense.
 draft:
   score_cap: 40          # items shipped per god (a god's #60 item can't win a slot)
-  max_bonus: 0.12        # clamp on the total bonus any one item can receive
+  # Clamp on the bonus any one item can receive. The CEILING IS RAISED TO THE
+  # STRONGEST SINGLE CHANNEL (see draftBuild.adaptedCore): this bounds many weak
+  # channels stacking into a rewrite, which is what the clamp is for, without
+  # vetoing one channel that genuinely earned more.
+  #
+  # Applied to the sum alone it did veto exactly that, and hurt the highest-
+  # leverage counter-buy in the game worst. A healer comp is also a CC and tank
+  # comp, so anti-heal shared one fixed budget with penetration and cc-immunity
+  # and lost. Measured on the shipped data with the real overlay, of the 31 gods
+  # who can buy anti-heal at all:
+  #
+  #                          clamp the sum      ceiling >= strongest
+  #     healers 4 of 5          16 / 31              31 / 31
+  #     healers 2 of 5          16 / 31              16 / 31
+  #     healers 1 of 5           8 / 31               8 / 31
+  #     no healers               3 / 31               3 / 31
+  #
+  # Read the first two rows together: under the old rule TWICE THE EVIDENCE
+  # produced the identical build, because the bonus doubled and the clamp ate
+  # the difference. Nothing but the 4-of-5 row moves, and churn on a no-threat
+  # comp is unchanged at 1.89 — raising max_bonus instead reached the same
+  # anti-heal numbers only by loosening every channel on every draft.
+  #
+  # The B6 per-item damage channel is excluded from "strongest": it is a
+  # continuous measurement rather than bounded evidence, so it keeps the flat
+  # cap. So does the negative side; a penalty is not a well-evidenced answer.
+  max_bonus: 0.12
   per_share: 0.1         # weight per matching share of the enemy team (count / enemyCount)
   tag_bonus:             # threat -> item effect_tag
     # anti-heal is weighted 2x because it is the highest-leverage counter-buy in

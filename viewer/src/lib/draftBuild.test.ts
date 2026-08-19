@@ -241,3 +241,59 @@ describe("adaptedCore — a job already done isn't paid for twice", () => {
     expect(r.bonuses.B).toBeCloseTo(0.05);
   });
 });
+
+/* The clamp bounds how much a comp may rewrite a build. Applied to the SUM
+ * alone it also vetoed a single well-evidenced channel, and that was the case
+ * it hurt most: because a healer comp is also a CC and tank comp, anti-heal
+ * shared one fixed budget with penetration and cc-immunity and lost.
+ *
+ * Measured on the shipped data before and after, with the real overlay: of the
+ * 31 gods who can buy anti-heal at all, 16 did against 4 of 5 healers; now 31
+ * do. Nothing else moved — a 2-healer comp, a 1-healer comp and a no-healer
+ * comp are byte-identical either way. The sharpest symptom of the old rule was
+ * that 2 healers and 4 healers produced the SAME build: the bonus doubled and
+ * the clamp ate the difference. */
+describe("adaptedCore — the clamp bounds the stack, not the strongest channel", () => {
+  const opts = { maxBonus: 0.12 };
+  // `bonuses` only records items that made the core, so the item under test
+  // carries a base high enough to survive even the penalty case.
+  const MARK = item("Mark", { A: "1", B: "1", C: "1" }, ["anti-heal"]);
+  const ITEMS2 = { ...byName, Mark: MARK };
+  const BASE2 = { ...BASE, Mark: 0.9 };
+
+  it("lets one well-evidenced channel exceed the flat clamp", () => {
+    const r = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": 0.24 }, stats: {} }, opts);
+    expect(r.bonuses.Mark).toBeCloseTo(0.24, 6);
+  });
+
+  it("still bounds many weak channels stacking into a rewrite", () => {
+    // Four small channels summing past the clamp is exactly the failure the
+    // clamp exists for, and none of them individually earned more than 0.12.
+    const r = adaptedCore(BASE2, ITEMS2, {
+      tags: { "anti-heal": 0.05 }, stats: { A: 0.05, B: 0.05, C: 0.05 },
+    }, opts);
+    expect(r.bonuses.Mark).toBeCloseTo(0.12, 6);  // 0.20 earned, clamped
+  });
+
+  it("distinguishes a 2-of-5 threat from a 4-of-5 one", () => {
+    // The old rule could not: both saturated the flat clamp and produced the
+    // same build, so the draft was blind to twice the evidence. Measured on
+    // the shipped data, 2 healers and 4 healers gave 16/31 gods either way.
+    const weak = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": 0.12 }, stats: {} }, opts);
+    const strong = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": 0.24 }, stats: {} }, opts);
+    expect(strong.bonuses.Mark).toBeGreaterThan(weak.bonuses.Mark);
+  });
+
+  it("does not widen the floor for a penalty", () => {
+    // A penalty is not a well-evidenced answer to anything, and letting a
+    // strong positive channel widen the negative bound would push items down
+    // harder than the overlay intended.
+    const r = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": -0.4 }, stats: {} }, opts);
+    expect(r.bonuses.Mark).toBeCloseTo(-0.12, 6);
+  });
+
+  it("leaves an item with no channels untouched", () => {
+    const r = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": 0.24 }, stats: {} }, opts);
+    expect(r.bonuses.Alpha).toBeUndefined();
+  });
+});

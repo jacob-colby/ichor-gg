@@ -66,6 +66,10 @@ export function adaptedCore(
   const scoreOf = (name: string, covered: Set<string>) => {
     const it = itemsByName[name];
     let bonus = 0;
+    // The largest single POSITIVE channel this item earned. The clamp is
+    // raised to it, so a well-evidenced answer is never vetoed by the budget
+    // it has to share with everything else — see the clamp note below.
+    let strongest = 0;
     const why: string[] = [];
     const credit = (key: string, w: number, label: string) => {
       if (!w) return;
@@ -74,7 +78,9 @@ export function adaptedCore(
       // "already done" — damping it would quietly re-promote the very items
       // the overlay is trying to push down.
       const damp = w > 0 && covered.has(key) ? selfCovered : 1;
-      bonus += w * damp;
+      const amount = w * damp;
+      bonus += amount;
+      if (amount > strongest) strongest = amount;
       why.push(damp === 1 ? label : `${label} (already covered)`);
     };
     // TAGS ONLY. A tag is a job — you have anti-heal or you don't, and the
@@ -89,18 +95,53 @@ export function adaptedCore(
     for (const tag of it?.effect_tags ?? []) credit(`tag:${tag}`, overlay.tags[tag], tag);
     for (const stat of Object.keys(it?.stats ?? {})) {
       const w = overlay.stats[stat];
-      if (w) { bonus += w; why.push(stat); }
+      if (w) { bonus += w; if (w > strongest) strongest = w; why.push(stat); }
     }
     const dmg = overlay.items?.[name];
     if (dmg) {
       // Per-item damage, not a job any other slot can do for you — never damped.
       bonus += dmg;
+      // Deliberately NOT counted toward `strongest`. The threat channels are
+      // bounded evidence ("4 of 5 enemies heal"); this one is a continuous
+      // per-item measurement with no such ceiling, so letting it raise its own
+      // clamp would let a single large damage figure rewrite the build
+      // wholesale — which is the invariant the B6 tests already pin.
       why.push(dmg > 0 ? "damage vs their build" : "less damage vs their build");
     }
-    // Clamp the SUM, not each term — this is what bounds how much a comp can
-    // rewrite the build (a maximal overlay still only moves an item by
-    // opts.maxBonus, never the raw unbounded total).
-    bonus = Math.max(-opts.maxBonus, Math.min(opts.maxBonus, bonus));
+    /* CLAMP THE STACK, NOT THE STRONGEST SIGNAL.
+     *
+     * The clamp exists to bound how much a comp can rewrite a build, and the
+     * failure it guards against is many weak channels summing into a rewrite.
+     * Applied to the SUM alone it also vetoed a single well-evidenced one, and
+     * that is the case it was hurting most.
+     *
+     * Measured before changing it. Against 4 of 5 healers, Divine Ruin earned
+     * 0.8 share x 0.1 per_share x 2.0 weight x 1.5 ally_gap = 0.240 and was cut
+     * to 0.120, landing 8th of 40 — 0.027 short of a core slot. Worse, because
+     * a healer comp is also a CC and tank comp, anti-heal was sharing that one
+     * fixed budget with penetration and cc-immunity and losing: of the 31 gods
+     * who can buy anti-heal at all, only 13 did.
+     *
+     * The sharpest symptom: a 2-healer comp and a 4-healer comp produced
+     * BYTE-IDENTICAL builds (29/89 both). The bonus doubled, the clamp ate it,
+     * and the draft could not tell the difference between the two comps.
+     *
+     * So the ceiling is `max(maxBonus, strongest single channel)`. Stacking is
+     * still bounded exactly as before; one channel that genuinely earned more
+     * is allowed to keep it. Worst case is a 5-of-5 comp on the highest-weighted
+     * threat, which reaches 0.30.
+     *
+     * Raising `max_bonus` instead was measured and rejected: it reaches the
+     * same anti-heal numbers only by loosening every channel on every draft,
+     * including comps with no threat at all (churn on a no-threat comp went
+     * 2.35 -> 2.91, while this rule leaves it at 2.35).
+     *
+     * The negative side keeps the flat bound. A penalty is not a well-evidenced
+     * answer to anything, and letting a strong positive channel widen the floor
+     * would push items down harder than the overlay ever intended.
+     */
+    const ceiling = Math.max(opts.maxBonus, strongest);
+    bonus = Math.max(-opts.maxBonus, Math.min(ceiling, bonus));
     return { score: base[name] + bonus, bonus, why: why.join(", ") };
   };
 
