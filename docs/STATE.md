@@ -42,7 +42,7 @@ coverage against a random legal 6-item core:
 cd pipeline && python -m smite.calibrate     # prints the probe, the baseline, and the sweep
 ```
 
-Chance is ~5.9%. Shipped is ~36%, i.e. **~6.1× chance**. That is the number to
+Chance is ~5.7%. Shipped is ~35.5%, i.e. **~6.2× chance**. That is the number to
 quote and the number to move. Headline coverage moving the other way is
 expected and is not by itself a reason to revert — that judgement is what
 `efficiency.efficiency_pool` and `scoring.lookup_rates` both record.
@@ -197,9 +197,9 @@ with zero rows behind it, SmiteTracker's meta report is Conquest-only. The
 builds now disclose it in the reader's own terms — "no outcome data exists for
 Joust … read this as a shortlist rather than a buy order".
 
-174 of 261 build groups are Joust and Arena. Those modes have no community data
+178 of 267 build groups are Joust and Arena. Those modes have no community data
 at all, so the recommender falls back to efficiency + fit alone — the
-combination measured at 4.9× chance for *finding* items and ≈0 for *ranking*
+combination measured at ~6× chance for *finding* items and ≈0 for *ranking*
 them. The tier list now admits this; the builds do not, and the builds are the
 product. Either find a source with per-mode outcomes, or disclose it on those
 builds the way the tier list does.
@@ -338,7 +338,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (596) ·
 | Items placed | 220 / 220 |
 | Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
 | Headline gate | coverage 48%, win-weighted 49% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior |
-| **Leakage-free** | **37.5% vs 5.8% chance = 6.47×** |
+| **Leakage-free** | **35.5% vs 5.7% chance = 6.23×** — down from 37.5% because paid relics entered the denominator (see `is_buildable`) |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |

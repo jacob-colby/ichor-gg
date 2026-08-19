@@ -26,12 +26,14 @@ Two halves: a Python pipeline (`pipeline/smite/`) that scrapes wiki.smite2.com a
 
 ## Capabilities and Constraints
 
-- Covers 87 of 89 gods (Cu Chulainn and Ix Chel have no wiki content to scrape).
-- The model is a working **filter** and not a working **ranker**: measured against a random-baseline control it finds community-worthy items ~4.9x better than chance, while its ordering skill inside the community's own item set is indistinguishable from zero. "Sensible items" is supported; "right order" is not.
+- Covers all 89 gods on the roster. Cu Chulainn and Ix Chel had empty wiki pages for months and were scraped on 2026-08-19 once those filled in.
+- The model is a working **filter** and not a working **ranker**: measured against a random-baseline control it finds community-worthy items ~6x better than chance (35.5% against a 5.7% random core), while its ordering skill inside the community's own item set is indistinguishable from zero. "Sensible items" is supported; "right order" is not.
 - Joust and Arena have no outcome data whatsoever. Their gods ship *unranked* rather than given an invented tier — but their builds still ship, resting on the model alone. That is two thirds of the shipped builds.
-- The headline agreement metric cannot be used to tune the model: both its targets are also model inputs, so it is maximised by deleting the model. Use the leakage-free measure in `smite.calibrate`. Six correct-looking improvements were measured and shipped off because of this; see `docs/STATE.md` section 4 before re-attempting any of them.
+- The headline agreement metric cannot be used to tune the model: both its targets are also model inputs, so it is maximised by deleting the model. Use the leakage-free measure in `smite.calibrate`. Nine correct-looking improvements have been measured and shipped off because of this; see `docs/STATE.md` section 4 before re-attempting any of them.
 - Patch-notes diffs only exist between data refreshes, so that page starts empty and fills in over time.
-- Threat detection (e.g. flagging enemy healers) relies on wiki ability tags; a god who is situationally a healer without the `Healing` tag won't be counted.
+- 72 of the 89 gods have an aspect, and only the 7 with a hand-tuned scoring overlay in `data/_weights.yaml` have a build behind it. The aspect control shows for all 72 — the kit text and the community's pick rate are real information — and states plainly when it will not move the build.
+- Threat detection reads the scraped **ability text**, not just the wiki's role labels, and takes the union of the two — `Healing` is on 9 of 89 gods while 42 actually heal, and player-made walls (Cabrakan, Odin, Thor, Ymir) have no label at all. The counts say a kit *contains* an effect, not how often it lands or how long it lasts; that is the honest ceiling on text classification.
+- Four relics are structurally unrecommendable. An upgraded relic does take one of the six item slots — the community holds Shell of Rebuke in 62 tracked builds — but all four carry a `+7.5% of all Stats from Items` multiplier that nothing here can price, so the gold model reads them 698–1416g overpriced and they never win a slot on score. Genie's Lamp is the same failure.
 - All scoring weights, role stat maps, flavors, and the draft overlay are tunable via `data/_weights.yaml`.
 
 ## Brand Commitments
@@ -45,7 +47,7 @@ Name: **ichor**. Explicitly a fan project — not affiliated with or endorsed by
 - Design specs and implementation plans for prior viewer work: `docs/specs/`, `docs/plans/`.
 - Living engineering doc — current state, design decisions with their evidence, negative-results register, what's left: `docs/STATE.md`. The dated files in `docs/specs/` and `docs/plans/` are point-in-time and never updated.
 - The combat model is calibrated against twelve in-game readings at 0.0% worst-case error (`pipeline/smite/combat.py`, gated by `smite.calibrate_combat`).
-- Test suites back the pipeline and viewer: 489 Python tests (`pipeline/smite/tests`), 559 viewer tests.
+- Test suites back the pipeline and viewer: 616 Python tests (`pipeline/smite/tests`), 655 viewer tests.
 - No invented testimonials, customer logos, or pricing exist and none should be fabricated — this is a free fan tool, not a commercial product.
 
 ## Product Principles
