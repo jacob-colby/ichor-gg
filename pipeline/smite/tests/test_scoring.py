@@ -30,15 +30,19 @@ def test_a_statless_item_is_not_buildable_at_any_price():
     assert scoring.is_buildable({"tier": 3, "cost": 3000}) is False
 
 
-def test_a_statted_relic_still_does_not_take_a_core_slot():
-    """The statless rule excluded every relic only because every relic then
-    known happened to be statless — a coincidence in the data doing the work of
-    a rule about the game. Scraping the eight untracked items broke it: all
-    four new relics carry stats and immediately started winning core slots at
-    2500 gold each. Excluding by tier restored coverage 51.0% -> 52.6%."""
+def test_a_statted_paid_relic_does_take_a_core_slot():
+    """CORRECTED 2026-08-19. This asserted the opposite, on a docstring that
+    said excluding relics by tier was "what the game actually says". It is not:
+    the game gives a free slot to the BASE relic, and an upgraded one is bought
+    with gold and takes one of the six like anything else.
+
+    The community data was saying so the whole time — Shell of Rebuke appears
+    62 times across the tracked six-item builds — and the old rule made the
+    model structurally unable to recommend it. See is_buildable's docstring for
+    what that cost the measurement."""
     aegis = {"tier": "Relic", "cost": 2500,
              "stats": {"Physical Protection": "15", "Magical Protection": "15"}}
-    assert scoring.is_buildable(aegis) is False
+    assert scoring.is_buildable(aegis) is True
 
 
 def test_load_weights_missing_file_returns_defaults(tmp_path):
@@ -911,3 +915,47 @@ def test_conversion_fit_off_by_default_leaves_the_map_alone():
     w2 = dict(w, conversion_fit=1.0)
     rows2 = scoring.score_god_items(ullr, [_TRANS], {}, {}, w2, {})
     assert rows2[0]["fit"] > rows[0]["fit"]
+
+
+# ── Paid relics take one of the six ────────────────────────────────────────
+
+def test_a_paid_relic_takes_a_core_slot_and_a_free_one_does_not():
+    """The game gives a free slot to the BASE relic only; an upgraded relic is
+    bought with gold and occupies one of the six.
+
+    The old rule excluded relics by TIER, justified in the docstring as "what
+    the game actually says", which was simply wrong. The community data settles
+    it: across the tracked six-item builds Shell of Rebuke appears 62 times and
+    the one free relic in the pool (Blink Rune, cost 0) appears zero times."""
+    paid = {"name": "Shell of Rebuke", "tier": "Relic", "cost": 2500,
+            "stats": {"Magical Protection": "20", "Physical Protection": "20"}}
+    free = {"name": "Some Base Relic", "tier": "Relic", "cost": 0,
+            "stats": {"Magical Protection": "20"}}
+    assert scoring.is_buildable(paid) is True
+    assert scoring.is_buildable(free) is False
+
+
+def test_a_statless_paid_relic_is_still_excluded():
+    """Blinking Abyss (2600g, no stats) has 20 community sightings and stays
+    out — by the STATLESS rule, not the relic rule. That is a known blindness
+    (nothing here can score an item with no stats) rather than a claim about
+    the game, and it is the honest place for it to fail."""
+    assert scoring.is_buildable(
+        {"name": "Blinking Abyss", "tier": "Relic", "cost": 2600, "stats": {}}) is False
+
+
+def test_a_relic_with_an_unreadable_cost_is_not_assumed_buildable():
+    """`cost: None` is a scrape failure, not a price. Defaulting it to buildable
+    would let a mis-scraped relic into every build in the game."""
+    assert scoring.is_buildable(
+        {"name": "Mystery", "tier": "Relic", "cost": None, "stats": {"Strength": "10"}}) is False
+
+
+def test_the_real_pool_admits_exactly_the_paid_statted_relics():
+    from smite import recommend
+    items = recommend.load_items()
+    relics = [i for i in items if i.get("tier") == "Relic"]
+    assert relics, "expected relics in the pool"
+    admitted = sorted(i["name"] for i in relics if scoring.is_buildable(i))
+    assert admitted == ["Agility Greaves", "Shell of Rebuke",
+                        "Talisman of Purification", "Time-lock Aegis"], admitted

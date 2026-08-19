@@ -44,7 +44,7 @@
 | The World Stone | 0.46 | 0.43 | 0.46 | 0.54 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
 | Eye of Providence | 0.46 | 0.43 | 0.62 | 0.54 | 0.00 | 0.00 | undervalued | ward-economy | **UNDERRATED** |
 | Gem of Focus | 0.46 | 0.43 | 0.49 | 0.54 | 0.00 | 0.30 | fair | mobility | **UNDERRATED** |
-| Shogun's Ofuda | 0.46 | 0.43 | 0.51 | 0.54 | 0.00 | 0.26 | fair | aura |  |
+| Shogun's Ofuda | 0.46 | 0.43 | 0.51 | 0.54 | 0.00 | 0.26 | fair | aura | **UNDERRATED** |
 | Oni Hunter's Garb | 0.46 | 0.43 | 0.61 | 0.54 | 0.00 | 0.00 | undervalued |  |  |
 | Jade Scepter | 0.46 | 0.43 | 0.53 | 0.54 | 0.00 | 0.19 | fair | peel |  |
 | Shield of the Phoenix | 0.46 | 0.43 | 0.57 | 0.54 | 0.00 | 0.10 | fair | sustain |  |
@@ -132,7 +132,11 @@
 | Resolute Mantle | 0.35 | 0.21 | 0.30 | 0.54 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Omen Drum | 0.34 | 0.19 | 0.27 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.34 | 0.19 | 0.22 | 0.54 | 0.00 | 0.10 | premium | mobility, cc-immunity |  |
+| Shell of Rebuke | 0.33 | 0.18 | 0.26 | 0.54 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.33 | 0.18 | 0.26 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.33 | 0.17 | 0.20 | 0.54 | 0.00 | 0.10 | premium | cc-immunity |  |
+| Time-lock Aegis | 0.31 | 0.14 | 0.20 | 0.54 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.29 | 0.09 | 0.13 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.24 | 0.00 | 0.00 | 0.54 | 0.00 | 0.00 | premium | mobility |  |

@@ -30,7 +30,7 @@
 | Bracer of The Abyss | 0.48 | 0.48 | 0.51 | 0.54 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Ethereal Staff | 0.48 | 0.48 | 0.51 | 0.54 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Alchemist Coat | 0.48 | 0.47 | 0.50 | 0.54 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
-| Polynomicon | 0.47 | 0.46 | 0.44 | 0.54 | 0.00 | 0.51 | fair | burst |  |
+| Polynomicon | 0.47 | 0.46 | 0.44 | 0.54 | 0.00 | 0.51 | fair | burst | **UNDERRATED** |
 | Screeching Gargoyle | 0.47 | 0.46 | 0.49 | 0.54 | 0.00 | 0.38 | fair | protection-shred, peel |  |
 | Ancient Signet | 0.47 | 0.46 | 0.43 | 0.54 | 0.00 | 0.51 | fair | burst |  |
 | Chandra's Grace | 0.47 | 0.46 | 0.53 | 0.54 | 0.00 | 0.28 | fair | sustain |  |
@@ -85,10 +85,14 @@
 | Shifter's Shield | 0.37 | 0.36 | 0.52 | 0.41 | 0.06 | 0.00 | fair |  |  |
 | Dwarven Plate | 0.36 | 0.24 | 0.35 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.36 | 0.24 | 0.22 | 0.54 | 0.00 | 0.28 | premium | mobility, cc-immunity |  |
+| Talisman of Purification | 0.36 | 0.22 | 0.20 | 0.54 | 0.00 | 0.28 | premium | cc-immunity |  |
 | Radiant Bulwark | 0.35 | 0.22 | 0.32 | 0.54 | 0.00 | 0.00 | premium | aura |  |
 | Resolute Mantle | 0.35 | 0.21 | 0.30 | 0.54 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Omen Drum | 0.34 | 0.19 | 0.27 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.33 | 0.18 | 0.26 | 0.54 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.33 | 0.18 | 0.26 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Time-lock Aegis | 0.31 | 0.14 | 0.20 | 0.54 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.29 | 0.09 | 0.13 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.24 | 0.00 | 0.00 | 0.54 | 0.00 | 0.00 | premium | mobility |  |

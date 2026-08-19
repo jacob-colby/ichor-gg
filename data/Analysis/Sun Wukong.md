@@ -43,7 +43,7 @@
 | Bragi's Harp | 0.45 | 0.46 | 0.42 | 0.50 | 0.00 | 0.55 | premium | burst | **UNDERRATED** |
 | Ancile | 0.45 | 0.45 | 0.51 | 0.50 | 0.00 | 0.32 | fair |  | **UNDERRATED** |
 | Shifter's Shield | 0.45 | 0.50 | 0.52 | 0.42 | 0.29 | 0.45 | fair |  |  |
-| Void Shield | 0.45 | 0.45 | 0.46 | 0.50 | 0.00 | 0.42 | fair | protection-shred, aura |  |
+| Void Shield | 0.45 | 0.45 | 0.46 | 0.50 | 0.00 | 0.42 | fair | protection-shred, aura | **UNDERRATED** |
 | Jade Scepter | 0.45 | 0.45 | 0.53 | 0.50 | 0.00 | 0.26 | fair | peel |  |
 | Dominance | 0.45 | 0.45 | 0.47 | 0.50 | 0.00 | 0.39 | fair |  |  |
 | Doublet of Binding | 0.45 | 0.44 | 0.50 | 0.50 | 0.00 | 0.32 | fair | aura |  |
@@ -131,8 +131,12 @@
 | Gauntlet of Thebes | 0.34 | 0.24 | 0.26 | 0.50 | 0.00 | 0.20 | premium |  |  |
 | Circe's Hexstone | 0.34 | 0.23 | 0.22 | 0.50 | 0.00 | 0.24 | premium | mobility, cc-immunity |  |
 | Sun Beam Bow | 0.33 | 0.21 | 0.25 | 0.50 | 0.00 | 0.12 | premium |  |  |
+| Time-lock Aegis | 0.33 | 0.21 | 0.20 | 0.50 | 0.00 | 0.25 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.32 | 0.20 | 0.18 | 0.50 | 0.00 | 0.25 | premium | anti-heal |  |
 | Omen Drum | 0.32 | 0.19 | 0.27 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.32 | 0.18 | 0.18 | 0.50 | 0.00 | 0.20 | premium |  |  |
 | The Executioner | 0.30 | 0.16 | 0.13 | 0.50 | 0.00 | 0.22 | premium | protection-shred |  |
+| Talisman of Purification | 0.30 | 0.15 | 0.20 | 0.50 | 0.00 | 0.04 | premium | cc-immunity |  |
 | Mercury's Talaria | 0.27 | 0.09 | 0.13 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.26 | 0.26 | 0.26 | 0.29 | 0.10 | 0.25 | premium | peel |  |
+| Agility Greaves | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

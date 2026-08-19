@@ -30,7 +30,7 @@
 | Avatar's Parashu | 0.47 | 0.46 | 0.37 | 0.54 | 0.00 | 0.67 | premium | cc-immunity | **UNDERRATED** |
 | Shield of the Phoenix | 0.47 | 0.45 | 0.57 | 0.54 | 0.00 | 0.18 | fair | sustain | **UNDERRATED** |
 | Kinetic Cuirass | 0.47 | 0.44 | 0.59 | 0.54 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
-| Amanita Charm | 0.46 | 0.44 | 0.63 | 0.54 | 0.00 | 0.00 | undervalued | sustain, aura |  |
+| Amanita Charm | 0.46 | 0.44 | 0.63 | 0.54 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
 | Rage | 0.46 | 0.41 | 0.39 | 0.50 | 0.59 | 0.45 | premium |  |  |
 | Eye of Providence | 0.46 | 0.43 | 0.62 | 0.54 | 0.00 | 0.00 | undervalued | ward-economy |  |
 | Oni Hunter's Garb | 0.46 | 0.43 | 0.61 | 0.54 | 0.00 | 0.00 | undervalued |  |  |
@@ -91,9 +91,13 @@
 | Resolute Mantle | 0.35 | 0.21 | 0.30 | 0.54 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Sun Beam Bow | 0.34 | 0.20 | 0.25 | 0.54 | 0.00 | 0.08 | premium |  |  |
 | Vital Amplifier | 0.34 | 0.20 | 0.24 | 0.54 | 0.00 | 0.08 | premium |  |  |
+| Talisman of Purification | 0.34 | 0.19 | 0.20 | 0.54 | 0.00 | 0.18 | premium | cc-immunity |  |
 | Omen Drum | 0.34 | 0.19 | 0.27 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.33 | 0.18 | 0.26 | 0.54 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.33 | 0.18 | 0.26 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.32 | 0.15 | 0.13 | 0.54 | 0.00 | 0.18 | premium | protection-shred |  |
+| Time-lock Aegis | 0.31 | 0.14 | 0.20 | 0.54 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.29 | 0.09 | 0.13 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.24 | 0.00 | 0.00 | 0.54 | 0.00 | 0.00 | premium | mobility |  |

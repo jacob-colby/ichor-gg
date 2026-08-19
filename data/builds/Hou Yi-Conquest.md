@@ -123,7 +123,7 @@ builds:
     Valor, Deathbringer, Kinetic Cuirass, Amanita Charm, The Cosmic Horror, Shogun''s
     Ofuda, Spear of the Magus, Blood-Bound Book, Eye of Providence, Musashi''s Dual
     Swords, Oni Hunter''s Garb, Freya''s Tears, Bancroft''s Talon, Transcendence,
-    Eros'' Bow, Rage, Avenging Blade.'
+    Eros'' Bow, Rage, Shield Splitter, Avenging Blade.'
   slot_scores:
     Berserker's Shield:
       total: 0.52
@@ -197,7 +197,7 @@ builds:
     Talon, Chronos'' Pendant, Bracer of The Abyss, Blood-Bound Book, Obsidian Shard,
     Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Helm of Radiance, Amanita Charm,
     Freya''s Tears, Transcendence, Rod of Asclepius, Pharaoh''s Curse, Eye of Providence,
-    Doom Orb, The World Stone.'
+    Doom Orb, The World Stone, Heartseeker.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -269,7 +269,7 @@ builds:
     Bracer of The Abyss, Kinetic Cuirass, Amanita Charm, Musashi''s Dual Swords, The
     Cosmic Horror, Spear of the Magus, Eye of Providence, Blood-Bound Book, Shogun''s
     Ofuda, Oni Hunter''s Garb, Rage, Freya''s Tears, Bancroft''s Talon, Transcendence,
-    Eros'' Bow, Avenging Blade.'
+    Eros'' Bow, Chronos'' Pendant, Avenging Blade.'
   slot_scores:
     Death Metal:
       total: 0.53
@@ -414,7 +414,7 @@ builds:
     Avenging Blade, Runeforged Hammer, Breastplate of Valor, Heartseeker, Stone of
     Binding, Titan''s Bane, Pharaoh''s Curse, Toxic Blade, Kinetic Cuirass, Void Shield,
     Amanita Charm, Bragi''s Harp, Eye of Providence, Doom Orb, Bracer of The Abyss,
-    Pendulum Blade, Oni Hunter''s Garb.'
+    Pendulum Blade, Oni Hunter''s Garb, The World Stone.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -485,8 +485,8 @@ builds:
     of Valor, Bragi''s Harp, Bracer of The Abyss, Kinetic Cuirass, The Reaper, Tekko-Kagi,
     Amanita Charm, Demon Blade, The Cosmic Horror, Shogun''s Ofuda, Eye of Providence,
     Toxic Blade, Oni Hunter''s Garb, Spear of the Magus, Blood-Bound Book, Deathbringer,
-    Freya''s Tears, Eros'' Bow, Qin''s Blade, Bancroft''s Talon, Transcendence, Avenging
-    Blade.'
+    Freya''s Tears, Eros'' Bow, Qin''s Blade, Bancroft''s Talon, Transcendence, Spectral
+    Armor, Avenging Blade.'
   slot_scores:
     Golden Blade:
       total: 0.52
@@ -558,7 +558,8 @@ builds:
     Gargoyle, Chandra''s Grace, Gem of Focus, Golden Blade, Totem of Death, Arondight,
     The Cosmic Horror, Kinetic Cuirass, Bracer of The Abyss, Pharaoh''s Curse, Runeforged
     Hammer, Amanita Charm, Spear of the Magus, Bragi''s Harp, Blood-Bound Book, Eye
-    of Providence, Oni Hunter''s Garb, The Reaper, Bancroft''s Talon, Pendulum Blade.'
+    of Providence, Oni Hunter''s Garb, The Reaper, Bancroft''s Talon, Pendulum Blade,
+    Helm of Radiance.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -631,7 +632,7 @@ builds:
     Bancroft''s Talon, Helm of Radiance, Runeforged Hammer, Rod of Asclepius, Kinetic
     Cuirass, Freya''s Tears, Amanita Charm, Tekko-Kagi, Pharaoh''s Curse, Gem of Focus,
     Jade Scepter, Eye of Providence, Shield of the Phoenix, Oni Hunter''s Garb, Doom
-    Orb.'
+    Orb, Totem of Death.'
   slot_scores:
     Book of Thoth:
       total: 0.45
@@ -703,7 +704,7 @@ builds:
     Bracer of The Abyss, Runeforged Hammer, Tekko-Kagi, Obsidian Shard, Blood-Bound
     Book, Breastplate of Valor, Bancroft''s Talon, Chronos'' Pendant, Kinetic Cuirass,
     Helm of Radiance, Pharaoh''s Curse, Amanita Charm, Rod of Asclepius, Eye of Providence,
-    Oni Hunter''s Garb, Deathbringer, Jade Scepter, Doom Orb, The World Stone.'
+    Oni Hunter''s Garb, Deathbringer, Jade Scepter, Doom Orb, The World Stone, Transcendence.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.52
@@ -775,7 +776,7 @@ builds:
     The Abyss, Breastplate of Valor, Deathbringer, Kinetic Cuirass, Amanita Charm,
     The Cosmic Horror, Shogun''s Ofuda, Spear of the Magus, Blood-Bound Book, Eye
     of Providence, Musashi''s Dual Swords, Oni Hunter''s Garb, Freya''s Tears, Bancroft''s
-    Talon, Transcendence, Avenging Blade, Eros'' Bow, Rage.'
+    Talon, Transcendence, Avenging Blade, Eros'' Bow, Rage, Shield Splitter.'
   slot_scores:
     Berserker's Shield:
       total: 0.52
@@ -847,7 +848,7 @@ builds:
     Bracer of The Abyss, Breastplate of Valor, Deathbringer, Kinetic Cuirass, Amanita
     Charm, The Cosmic Horror, Shogun''s Ofuda, Spear of the Magus, Blood-Bound Book,
     Eye of Providence, Musashi''s Dual Swords, Oni Hunter''s Garb, Freya''s Tears,
-    Bancroft''s Talon, Transcendence, Avenging Blade, Eros'' Bow, Rage.'
+    Bancroft''s Talon, Transcendence, Avenging Blade, Eros'' Bow, Rage, Shield Splitter.'
   slot_scores:
     Berserker's Shield:
       total: 0.52

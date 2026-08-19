@@ -121,7 +121,7 @@ builds:
     Garb, Shield Splitter, Hydra''s Lament, Golden Blade, The Reaper, Shield of the
     Phoenix, Spectral Armor, Erosion, Freya''s Tears, Breastplate of Valor, Eye of
     Providence, Draconic Scale, Damaru, Pharaoh''s Curse, Leviathan''s Hide, Midgardian
-    Mail, Lernaean Bow, Wyrmskin Hide, Heartseeker.'
+    Mail, Lernaean Bow, Wyrmskin Hide, Heartseeker, Titan''s Bane.'
   slot_scores:
     Avenging Blade:
       total: 0.5
@@ -193,7 +193,7 @@ builds:
     Shield of the Phoenix, Kinetic Cuirass, Eye of the Storm, Golden Blade, The Reaper,
     Shield Splitter, Spectral Armor, Damaru, Yogi''s Necklace, Transcendence, Lernaean
     Bow, Heartseeker, Erosion, Pharaoh''s Curse, Leviathan''s Hide, Chandra''s Grace,
-    Eye of Providence.'
+    Eye of Providence, Midgardian Mail.'
   slot_scores:
     Avenging Blade:
       total: 0.48
@@ -263,7 +263,7 @@ builds:
     Oni Hunter''s Garb, Eye of the Storm, Chandra''s Grace, Shield Splitter, Erosion,
     Phoenix Feather, Freya''s Tears, Eye of Providence, Spectral Armor, Riptalon,
     Draconic Scale, Breastplate of Valor, Golden Blade, Hydra''s Lament, Pharaoh''s
-    Curse, Leviathan''s Hide, Midgardian Mail, Ancile.'
+    Curse, Leviathan''s Hide, Midgardian Mail, Ancile, Damaru.'
   slot_scores:
     Avenging Blade:
       total: 0.5
@@ -403,7 +403,7 @@ builds:
     Oni Hunter''s Garb, Runeforged Hammer, Lernaean Bow, Kinetic Cuirass, Shogun''s
     Ofuda, Breastplate of Valor, Hydra''s Lament, Spectral Armor, Freya''s Tears,
     Shield of the Phoenix, The Reaper, Tekko-Kagi, Eye of the Storm, Erosion, Leviathan''s
-    Hide, Shield Splitter, Eros'' Bow.'
+    Hide, Shield Splitter, Eros'' Bow, Eye of Providence.'
   slot_scores:
     Golden Blade:
       total: 0.48
@@ -474,7 +474,7 @@ builds:
     Garb, Kinetic Cuirass, Gladiator''s Shield, Runeforged Hammer, Spectral Armor,
     Arondight, Pendulum Blade, Erosion, Prophetic Cloak, Eye of the Storm, Pharaoh''s
     Curse, Eye of Providence, Leviathan''s Hide, Midgardian Mail, Golden Blade, Draconic
-    Scale, Shield Splitter.'
+    Scale, Shield Splitter, Yogi''s Necklace.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -544,7 +544,7 @@ builds:
     Garb, Shield Splitter, Hydra''s Lament, Golden Blade, Avenging Blade, The Reaper,
     Shield of the Phoenix, Spectral Armor, Erosion, Freya''s Tears, Breastplate of
     Valor, Eye of Providence, Draconic Scale, Damaru, Pharaoh''s Curse, Leviathan''s
-    Hide, Midgardian Mail, Lernaean Bow, Wyrmskin Hide, Heartseeker.'
+    Hide, Midgardian Mail, Lernaean Bow, Wyrmskin Hide, Heartseeker, Titan''s Bane.'
   slot_scores:
     Berserker's Shield:
       total: 0.48

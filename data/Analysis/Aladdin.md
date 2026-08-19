@@ -43,7 +43,7 @@
 | Doom Orb | 0.45 | 0.45 | 0.46 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | The World Stone | 0.45 | 0.45 | 0.46 | 0.50 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.45 | 0.44 | 0.59 | 0.50 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
-| Dominance | 0.45 | 0.44 | 0.47 | 0.50 | 0.00 | 0.38 | fair |  |  |
+| Dominance | 0.45 | 0.44 | 0.47 | 0.50 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
 | Amanita Charm | 0.45 | 0.44 | 0.63 | 0.50 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Screeching Gargoyle | 0.44 | 0.44 | 0.49 | 0.50 | 0.00 | 0.31 | fair | protection-shred, peel |  |
 | Gem of Focus | 0.44 | 0.43 | 0.49 | 0.50 | 0.00 | 0.31 | fair | mobility |  |
@@ -128,11 +128,15 @@
 | Circe's Hexstone | 0.33 | 0.22 | 0.22 | 0.50 | 0.00 | 0.21 | premium | mobility, cc-immunity |  |
 | Hastened Fatalis | 0.33 | 0.21 | 0.31 | 0.50 | 0.00 | 0.00 | premium | mobility |  |
 | Resolute Mantle | 0.33 | 0.21 | 0.30 | 0.50 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
+| Talisman of Purification | 0.33 | 0.20 | 0.20 | 0.50 | 0.00 | 0.21 | premium | cc-immunity |  |
 | Omen Drum | 0.32 | 0.19 | 0.27 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.32 | 0.18 | 0.26 | 0.50 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.32 | 0.18 | 0.26 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Sun Beam Bow | 0.31 | 0.18 | 0.25 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Vital Amplifier | 0.31 | 0.17 | 0.24 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Time-lock Aegis | 0.29 | 0.14 | 0.20 | 0.50 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.29 | 0.12 | 0.18 | 0.50 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.29 | 0.12 | 0.18 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.29 | 0.12 | 0.13 | 0.50 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.27 | 0.09 | 0.13 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

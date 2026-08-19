@@ -121,7 +121,7 @@ builds:
     Shield of the Phoenix, Oni Hunter''s Garb, The Cosmic Horror, Spear of the Magus,
     Erosion, Eye of Providence, Spectral Armor, Helm of Radiance, Draconic Scale,
     Rod of Asclepius, Chronos'' Pendant, Leviathan''s Hide, Jade Scepter, Midgardian
-    Mail, Screeching Gargoyle.'
+    Mail, Screeching Gargoyle, Mantle Of Discord, Stone of Binding.'
   slot_scores:
     Breastplate of Valor:
       total: 0.53
@@ -192,7 +192,8 @@ builds:
     Soul Gem, Amanita Charm, Nimble Ring, Oni Hunter''s Garb, Freya''s Tears, Death
     Metal, The Cosmic Horror, Spear of the Magus, Shield of the Phoenix, Helm of Radiance,
     Spectral Armor, Rod of Asclepius, Erosion, Chronos'' Pendant, Eye of Providence,
-    Jade Scepter, Draconic Scale, Yogi''s Necklace, Triton''s Conch.'
+    Jade Scepter, Draconic Scale, Yogi''s Necklace, Triton''s Conch, Leviathan''s
+    Hide, Bancroft''s Talon.'
   slot_scores:
     Genji's Guard:
       total: 0.52
@@ -262,7 +263,7 @@ builds:
     Horror, Shield of the Phoenix, Spear of the Magus, Oni Hunter''s Garb, Spectral
     Armor, Death Metal, Erosion, Helm of Radiance, Chronos'' Pendant, Eye of Providence,
     Rod of Asclepius, Draconic Scale, Screeching Gargoyle, Leviathan''s Hide, Midgardian
-    Mail.'
+    Mail, Chandra''s Grace, Jade Scepter.'
   slot_scores:
     Breastplate of Valor:
       total: 0.53
@@ -331,7 +332,8 @@ builds:
     of the Phoenix, Breastplate of Valor, Kinetic Cuirass, Rod of Asclepius, Chandra''s
     Grace, Freya''s Tears, Nimble Ring, Blood-Bound Book, Oni Hunter''s Garb, Bancroft''s
     Talon, The Cosmic Horror, Spear of the Magus, Phoenix Feather, Erosion, Spectral
-    Armor, Eye of Providence, Draconic Scale, Helm of Radiance, Jade Scepter, Lifebinder.'
+    Armor, Eye of Providence, Draconic Scale, Helm of Radiance, Jade Scepter, Chronos''
+    Pendant, Leviathan''s Hide, Lifebinder.'
   slot_scores:
     Shifter's Shield:
       total: 0.55
@@ -401,7 +403,7 @@ builds:
     of the Magus, Screeching Gargoyle, Stone of Binding, Freya''s Tears, Nimble Ring,
     Void Shield, Shield of the Phoenix, Oni Hunter''s Garb, Void Stone, Spectral Armor,
     Erosion, Helm of Radiance, Eye of Providence, Rod of Asclepius, Draconic Scale,
-    Doom Orb.'
+    Doom Orb, Chronos'' Pendant, The World Stone.'
   slot_scores:
     Breastplate of Valor:
       total: 0.52
@@ -471,7 +473,7 @@ builds:
     Garb, Shield of the Phoenix, The Cosmic Horror, Spear of the Magus, Spectral Armor,
     Death Metal, Helm of Radiance, Erosion, Rod of Asclepius, Eye of Providence, Chronos''
     Pendant, Bracer of The Abyss, Leviathan''s Hide, Blood-Bound Book, Draconic Scale,
-    Midgardian Mail.'
+    Midgardian Mail, Bragi''s Harp, Jade Scepter.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.45
@@ -541,7 +543,8 @@ builds:
     Cuirass, Amanita Charm, Nimble Ring, Oni Hunter''s Garb, Screeching Gargoyle,
     Chronos'' Pendant, Chandra''s Grace, Gladiator''s Shield, Spectral Armor, Erosion,
     The Cosmic Horror, Eye of Providence, Spear of the Magus, Prophetic Cloak, Draconic
-    Scale, Gem of Focus, Leviathan''s Hide, Helm of Radiance.'
+    Scale, Gem of Focus, Leviathan''s Hide, Helm of Radiance, Midgardian Mail, Totem
+    of Death.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -611,7 +614,7 @@ builds:
     Oni Hunter''s Garb, The Cosmic Horror, Spear of the Magus, Erosion, Shifter''s
     Shield, Eye of Providence, Spectral Armor, Helm of Radiance, Draconic Scale, Rod
     of Asclepius, Chronos'' Pendant, Leviathan''s Hide, Obsidian Shard, Jade Scepter,
-    Midgardian Mail, Screeching Gargoyle.'
+    Midgardian Mail, Screeching Gargoyle, Mantle Of Discord, Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.53

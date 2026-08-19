@@ -123,7 +123,8 @@ builds:
     Lernaean Bow, Erosion, Eye of Providence, Death Metal, Shogun''s Ofuda, Draconic
     Scale, Damaru, Leviathan''s Hide, Soul Gem, Midgardian Mail, Breastplate of Valor,
     Tyrfing, Triton''s Conch, The Reaper, Rod of Asclepius, Hide of the Nemean Lion,
-    Yogi''s Necklace, Wyrmskin Hide, Bragi''s Harp, Ancile, Genji''s Guard.'
+    Yogi''s Necklace, Wyrmskin Hide, Bragi''s Harp, Ancile, Void Shield, Genji''s
+    Guard.'
   slot_scores:
     Berserker's Shield:
       total: 0.52
@@ -197,7 +198,8 @@ builds:
     Shield Splitter, Phoenix Feather, Eye of Providence, Spectral Armor, Draconic
     Scale, Riptalon, Hydra''s Lament, Shogun''s Ofuda, Avenging Blade, Leviathan''s
     Hide, Midgardian Mail, Blood-Bound Book, Lifebinder, Breastplate of Valor, Lernaean
-    Bow, Bancroft''s Talon, Death Metal, Ancile, Damaru, Genji''s Guard.'
+    Bow, Bancroft''s Talon, Hide of the Nemean Lion, Death Metal, Ancile, Damaru,
+    Genji''s Guard.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -341,7 +343,7 @@ builds:
     Hydra''s Lament, Shield of the Phoenix, Breastplate of Valor, Eye of the Storm,
     Erosion, Eros'' Bow, Shield Splitter, Bragi''s Harp, Leviathan''s Hide, Eye of
     Providence, Death Metal, Avenging Blade, Bracer of The Abyss, Dominance, Midgardian
-    Mail, The Reaper, Yogi''s Necklace, Damaru, Genji''s Guard.'
+    Mail, The Reaper, Yogi''s Necklace, Damaru, Draconic Scale, Genji''s Guard.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -414,7 +416,8 @@ builds:
     Pharaoh''s Curse, Gem of Focus, Spectral Armor, Golden Blade, Totem of Death,
     Arondight, Erosion, Rod of Asclepius, Death Metal, Prophetic Cloak, Eye of the
     Storm, The Cosmic Horror, Eye of Providence, Leviathan''s Hide, Shogun''s Ofuda,
-    Helm of Radiance, Midgardian Mail, Spear of the Magus, Jade Scepter.'
+    Helm of Radiance, Midgardian Mail, Spear of the Magus, Jade Scepter, Draconic
+    Scale.'
   slot_scores:
     Berserker's Shield:
       total: 0.5
@@ -486,7 +489,8 @@ builds:
     Blade, Spectral Armor, Lernaean Bow, Erosion, Breastplate of Valor, Eye of Providence,
     Death Metal, Shogun''s Ofuda, Draconic Scale, Damaru, Leviathan''s Hide, Soul
     Gem, Midgardian Mail, Tyrfing, Triton''s Conch, The Reaper, Rod of Asclepius,
-    Yogi''s Necklace, Wyrmskin Hide, Bragi''s Harp, Ancile, Hide of the Nemean Lion.'
+    Yogi''s Necklace, Wyrmskin Hide, Bragi''s Harp, Ancile, Hide of the Nemean Lion,
+    Void Shield.'
   slot_scores:
     Berserker's Shield:
       total: 0.52

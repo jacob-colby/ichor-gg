@@ -123,7 +123,7 @@ builds:
     The Abyss, Chronos'' Pendant, Runeforged Hammer, Tekko-Kagi, Obsidian Shard, Blood-Bound
     Book, Kinetic Cuirass, Freya''s Tears, Pharaoh''s Curse, Amanita Charm, Bancroft''s
     Talon, Helm of Radiance, Eye of Providence, Shield of the Phoenix, Oni Hunter''s
-    Garb, Rod of Asclepius, Gem of Focus, Jade Scepter, Dominance.'
+    Garb, Rod of Asclepius, Gem of Focus, Jade Scepter, Shogun''s Ofuda, Dominance.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -197,7 +197,7 @@ builds:
     Talon, Chronos'' Pendant, Bracer of The Abyss, Blood-Bound Book, Obsidian Shard,
     Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Helm of Radiance, Amanita Charm,
     Freya''s Tears, Transcendence, Rod of Asclepius, Pharaoh''s Curse, Eye of Providence,
-    Doom Orb, The World Stone, Dominance.'
+    Doom Orb, The World Stone, Heartseeker, Dominance.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -269,7 +269,8 @@ builds:
     Harp, Bracer of The Abyss, Runeforged Hammer, Obsidian Shard, Blood-Bound Book,
     Kinetic Cuirass, Freya''s Tears, Tekko-Kagi, Amanita Charm, Pharaoh''s Curse,
     Bancroft''s Talon, Helm of Radiance, Eye of Providence, Shield of the Phoenix,
-    Oni Hunter''s Garb, Rod of Asclepius, Gem of Focus, Deathbringer, Dominance.'
+    Oni Hunter''s Garb, Rod of Asclepius, Gem of Focus, Deathbringer, Jade Scepter,
+    Dominance.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -341,7 +342,7 @@ builds:
     Tekko-Kagi, Runeforged Hammer, Bragi''s Harp, Freya''s Tears, Bracer of The Abyss,
     Kinetic Cuirass, Blood-Bound Book, Amanita Charm, Shield of the Phoenix, Pharaoh''s
     Curse, Eye of Providence, Bancroft''s Talon, Oni Hunter''s Garb, Helm of Radiance,
-    Pendulum Blade, Doom Orb, Rod of Asclepius, Dominance.'
+    Pendulum Blade, Doom Orb, Rod of Asclepius, Gem of Focus, Dominance.'
   slot_scores:
     Book of Thoth:
       total: 0.47
@@ -414,7 +415,7 @@ builds:
     Lament, Lifebinder, Phoenix Feather, The Cosmic Horror, Damaru, Spectral Armor,
     Spear of the Magus, Shogun''s Ofuda, Spear of Desolation, Lernaean Bow, Erosion,
     Shifter''s Shield, Helm of Radiance, Umbral Link, Eye of Providence, Leviathan''s
-    Hide, Eye of the Storm.'
+    Hide, Eye of the Storm, Chronos'' Pendant.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -486,7 +487,7 @@ builds:
     Tekko-Kagi, Lernaean Bow, Golden Blade, Stone of Binding, Chronos'' Pendant, Runeforged
     Hammer, Bracer of The Abyss, Kinetic Cuirass, Bragi''s Harp, Void Shield, Doom
     Orb, Blood-Bound Book, Amanita Charm, Freya''s Tears, The World Stone, Toxic Blade,
-    Pharaoh''s Curse, Eye of Providence, Heartseeker.'
+    Pharaoh''s Curse, Eye of Providence, Heartseeker, Oni Hunter''s Garb.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.57
@@ -558,7 +559,8 @@ builds:
     Harp, Chronos'' Pendant, Runeforged Hammer, Kinetic Cuirass, Pharaoh''s Curse,
     Amanita Charm, Blood-Bound Book, Toxic Blade, Freya''s Tears, Obsidian Shard,
     Tekko-Kagi, Eye of Providence, Oni Hunter''s Garb, Bancroft''s Talon, Helm of
-    Radiance, Shield of the Phoenix, Rod of Asclepius, Shogun''s Ofuda, Dominance.'
+    Radiance, Shield of the Phoenix, Rod of Asclepius, Shogun''s Ofuda, Gem of Focus,
+    Dominance.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -631,7 +633,7 @@ builds:
     Blade, Gem of Focus, The Reaper, Kinetic Cuirass, Amanita Charm, Runeforged Hammer,
     Totem of Death, Arondight, Pharaoh''s Curse, Bracer of The Abyss, Pendulum Blade,
     Eye of Providence, Oni Hunter''s Garb, Blood-Bound Book, Tekko-Kagi, Obsidian
-    Shard, Bragi''s Harp.'
+    Shard, Bragi''s Harp, Bancroft''s Talon.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -703,7 +705,8 @@ builds:
     Harp, Bracer of The Abyss, Chronos'' Pendant, Runeforged Hammer, Tekko-Kagi, Obsidian
     Shard, Blood-Bound Book, Kinetic Cuirass, Freya''s Tears, Pharaoh''s Curse, Amanita
     Charm, Bancroft''s Talon, Helm of Radiance, Eye of Providence, Shield of the Phoenix,
-    Oni Hunter''s Garb, Dominance, Rod of Asclepius, Gem of Focus, Jade Scepter.'
+    Oni Hunter''s Garb, Dominance, Rod of Asclepius, Gem of Focus, Jade Scepter, Shogun''s
+    Ofuda.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55

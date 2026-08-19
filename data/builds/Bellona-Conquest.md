@@ -121,7 +121,7 @@ builds:
     of Valor, Erosion, Eye of the Storm, Runeforged Hammer, Eye of Providence, Draconic
     Scale, Hydra''s Lament, Spectral Armor, Pharaoh''s Curse, Leviathan''s Hide, Midgardian
     Mail, Mantle Of Discord, Stone of Binding, Avenging Blade, Magi''s Cloak, Ancile,
-    Screeching Gargoyle.'
+    Screeching Gargoyle, Damaru.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -193,7 +193,7 @@ builds:
     Garb, Eye of the Storm, The Reaper, Shield Splitter, Erosion, Breastplate of Valor,
     Hydra''s Lament, Phoenix Feather, Eye of Providence, Spectral Armor, Draconic
     Scale, Avenging Blade, Pharaoh''s Curse, Leviathan''s Hide, Midgardian Mail, Glorious
-    Pridwen, Riptalon.'
+    Pridwen, Riptalon, Ancile.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -332,7 +332,8 @@ builds:
     Tears, Jotunn''s Revenge, Breastplate of Valor, Riptalon, Oni Hunter''s Garb,
     Shield of the Phoenix, Tyrfing, Runeforged Hammer, Spectral Armor, Erosion, Silverbranch
     Bow, Lernaean Bow, Hydra''s Lament, Shield Splitter, Eye of Providence, Draconic
-    Scale, Eye of the Storm, Leviathan''s Hide, Midgardian Mail, Toxic Blade.'
+    Scale, Eye of the Storm, Leviathan''s Hide, Midgardian Mail, Toxic Blade, Mantle
+    Of Discord.'
   slot_scores:
     Golden Blade:
       total: 0.56
@@ -402,7 +403,8 @@ builds:
     The Crusher, Screeching Gargoyle, Oni Hunter''s Garb, Chandra''s Grace, Gladiator''s
     Shield, Erosion, Spectral Armor, Eye of Providence, Prophetic Cloak, Shield Splitter,
     Draconic Scale, Runeforged Hammer, Pharaoh''s Curse, Eye of the Storm, Leviathan''s
-    Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding, Arondight.'
+    Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding, Arondight, Glorious
+    Pridwen.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -472,7 +474,7 @@ builds:
     Breastplate of Valor, Erosion, Eye of the Storm, Runeforged Hammer, Eye of Providence,
     Draconic Scale, Hydra''s Lament, Spectral Armor, Pharaoh''s Curse, Leviathan''s
     Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding, Avenging Blade, Magi''s
-    Cloak, Ancile, Screeching Gargoyle.'
+    Cloak, Ancile, Screeching Gargoyle, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.52

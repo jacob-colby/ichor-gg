@@ -31,7 +31,7 @@
 | Dominance | 0.44 | 0.46 | 0.47 | 0.48 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Leviathan's Hide | 0.44 | 0.45 | 0.54 | 0.48 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Tekko-Kagi | 0.44 | 0.45 | 0.44 | 0.48 | 0.00 | 0.47 | fair | mobility | **UNDERRATED** |
-| Midgardian Mail | 0.44 | 0.45 | 0.54 | 0.48 | 0.00 | 0.24 | fair |  |  |
+| Midgardian Mail | 0.44 | 0.45 | 0.54 | 0.48 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Riptalon | 0.44 | 0.45 | 0.53 | 0.48 | 0.00 | 0.25 | fair | sustain |  |
 | The Reaper | 0.44 | 0.45 | 0.52 | 0.48 | 0.00 | 0.27 | fair | sustain |  |
 | Yogi's Necklace | 0.44 | 0.44 | 0.57 | 0.48 | 0.00 | 0.14 | fair |  |  |
@@ -76,6 +76,7 @@
 | Qin's Blade | 0.39 | 0.34 | 0.36 | 0.48 | 0.00 | 0.30 | premium | burst |  |
 | Shroud of Vengeance | 0.39 | 0.34 | 0.36 | 0.48 | 0.00 | 0.30 | premium | burst |  |
 | Odysseus' Bow | 0.39 | 0.34 | 0.36 | 0.48 | 0.00 | 0.30 | premium | burst, wave-clear |  |
+| Shell of Rebuke | 0.38 | 0.24 | 0.26 | 0.56 | 0.15 | 0.20 | premium | peel |  |
 | Oath-Sworn Spear | 0.38 | 0.33 | 0.33 | 0.48 | 0.00 | 0.32 | premium | protection-shred |  |
 | Glorious Pridwen | 0.38 | 0.32 | 0.36 | 0.48 | 0.00 | 0.23 | premium | sustain |  |
 | Regrowth Striders | 0.37 | 0.32 | 0.40 | 0.48 | 0.00 | 0.13 | premium | mobility, sustain |  |
@@ -92,8 +93,11 @@
 | Sun Beam Bow | 0.33 | 0.24 | 0.25 | 0.48 | 0.00 | 0.20 | premium |  |  |
 | Gauntlet of Thebes | 0.33 | 0.22 | 0.26 | 0.48 | 0.00 | 0.14 | premium |  |  |
 | Circe's Hexstone | 0.32 | 0.21 | 0.22 | 0.48 | 0.00 | 0.17 | premium | mobility, cc-immunity |  |
+| Time-lock Aegis | 0.31 | 0.20 | 0.20 | 0.48 | 0.00 | 0.20 | premium | cc-immunity |  |
 | Omen Drum | 0.31 | 0.19 | 0.27 | 0.48 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.31 | 0.18 | 0.18 | 0.48 | 0.00 | 0.20 | premium | anti-heal |  |
 | The Executioner | 0.31 | 0.18 | 0.13 | 0.48 | 0.00 | 0.30 | premium | protection-shred |  |
 | Daybreak Gavel | 0.30 | 0.17 | 0.18 | 0.48 | 0.00 | 0.14 | premium |  |  |
+| Talisman of Purification | 0.29 | 0.15 | 0.20 | 0.48 | 0.00 | 0.04 | premium | cc-immunity |  |
 | Mercury's Talaria | 0.26 | 0.09 | 0.13 | 0.48 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.22 | 0.00 | 0.00 | 0.48 | 0.00 | 0.00 | premium | mobility |  |

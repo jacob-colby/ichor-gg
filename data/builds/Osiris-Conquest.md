@@ -121,7 +121,7 @@ builds:
     Garb, Hydra''s Lament, Eye of the Storm, Breastplate of Valor, Shield of the Phoenix,
     Shield Splitter, Spectral Armor, Freya''s Tears, Avenging Blade, Tyrfing, Erosion,
     Eye of Providence, Leviathan''s Hide, Dominance, Draconic Scale, Midgardian Mail,
-    Shogun''s Ofuda.'
+    Tekko-Kagi, Shogun''s Ofuda.'
   slot_scores:
     Golden Blade:
       total: 0.49
@@ -193,7 +193,7 @@ builds:
     Chandra''s Grace, Oni Hunter''s Garb, Phoenix Feather, Eye of the Storm, Freya''s
     Tears, Spectral Armor, Shield Splitter, Damaru, Breastplate of Valor, Erosion,
     Lernaean Bow, Eye of Providence, Hydra''s Lament, Draconic Scale, Avenging Blade,
-    Shogun''s Ofuda.'
+    Leviathan''s Hide, Shogun''s Ofuda.'
   slot_scores:
     Contagion:
       total: 0.49
@@ -263,7 +263,7 @@ builds:
     Bow, Stone of Binding, Screeching Gargoyle, Tekko-Kagi, Oni Hunter''s Garb, Pharaoh''s
     Curse, Damaru, Void Stone, Hydra''s Lament, Breastplate of Valor, Lernaean Bow,
     Toxic Blade, Spectral Armor, Freya''s Tears, Shield of the Phoenix, Eye of the
-    Storm, Heartseeker.'
+    Storm, Heartseeker, Shogun''s Ofuda.'
   slot_scores:
     Contagion:
       total: 0.48
@@ -333,7 +333,7 @@ builds:
     Silverbranch Bow, Lernaean Bow, Breastplate of Valor, Damaru, Hydra''s Lament,
     Spectral Armor, Freya''s Tears, Shield of the Phoenix, Toxic Blade, Eye of the
     Storm, Erosion, Leviathan''s Hide, Shield Splitter, Eye of Providence, Eros''
-    Bow, Shogun''s Ofuda.'
+    Bow, Avenging Blade, Shogun''s Ofuda.'
   slot_scores:
     Contagion:
       total: 0.48
@@ -403,7 +403,8 @@ builds:
     Amanita Charm, The Crusher, Chandra''s Grace, Oni Hunter''s Garb, Pharaoh''s Curse,
     Screeching Gargoyle, Golden Blade, Runeforged Hammer, Spectral Armor, Gladiator''s
     Shield, Damaru, Lernaean Bow, Arondight, Erosion, Leviathan''s Hide, Eye of the
-    Storm, Eye of Providence, Yogi''s Necklace, Midgardian Mail, Shogun''s Ofuda.'
+    Storm, Eye of Providence, Yogi''s Necklace, Midgardian Mail, Shield Splitter,
+    Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -473,7 +474,7 @@ builds:
     Hunter''s Garb, Hydra''s Lament, Eye of the Storm, Shogun''s Ofuda, Breastplate
     of Valor, Shield of the Phoenix, Shield Splitter, Spectral Armor, Freya''s Tears,
     Avenging Blade, Tyrfing, Erosion, Eye of Providence, Leviathan''s Hide, Dominance,
-    Draconic Scale, Midgardian Mail.'
+    Draconic Scale, Midgardian Mail, Tekko-Kagi.'
   slot_scores:
     Golden Blade:
       total: 0.49

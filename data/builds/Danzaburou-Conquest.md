@@ -123,7 +123,7 @@ builds:
     Breastplate of Valor, Demon Blade, Bracer of The Abyss, Kinetic Cuirass, Amanita
     Charm, Deathbringer, Eye of Providence, Spear of Desolation, Oni Hunter''s Garb,
     Shogun''s Ofuda, Blood-Bound Book, Obsidian Shard, Toxic Blade, Freya''s Tears,
-    Musashi''s Dual Swords, Avenging Blade, Tyrfing.'
+    Musashi''s Dual Swords, Avenging Blade, Heartseeker, Tyrfing.'
   slot_scores:
     Book of Thoth:
       total: 0.42
@@ -197,7 +197,7 @@ builds:
     Talon, Chronos'' Pendant, Bracer of The Abyss, Blood-Bound Book, Dominance, Obsidian
     Shard, Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Helm of Radiance, Amanita
     Charm, Freya''s Tears, Rod of Asclepius, Pharaoh''s Curse, Eye of Providence,
-    Doom Orb, Tyrfing.'
+    Doom Orb, Heartseeker, Tyrfing.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -341,7 +341,7 @@ builds:
     Tekko-Kagi, Runeforged Hammer, Bragi''s Harp, Freya''s Tears, Bracer of The Abyss,
     Kinetic Cuirass, Blood-Bound Book, Amanita Charm, Shield of the Phoenix, Pharaoh''s
     Curse, Eye of Providence, Bancroft''s Talon, Oni Hunter''s Garb, Helm of Radiance,
-    Pendulum Blade, Doom Orb, Rod of Asclepius, Dominance, Tyrfing.'
+    Pendulum Blade, Doom Orb, Rod of Asclepius, Dominance, Gem of Focus, Tyrfing.'
   slot_scores:
     Book of Thoth:
       total: 0.43
@@ -408,12 +408,12 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Berserker''s Shield, Gluttonous Grimoire, Riptalon,
     Shield of the Phoenix, Nimble Ring, The Crusher, Kinetic Cuirass, The Reaper,
-    Rod of Asclepius, Genji''s Guard, Chandra''s Grace, Blood-Bound Book, Pharaoh''s
-    Curse, Oni Hunter''s Garb, Golden Blade, Bancroft''s Talon, Runeforged Hammer,
-    Death Metal, Damaru, Breastplate of Valor, Phoenix Feather, Freya''s Tears, Spectral
-    Armor, Shogun''s Ofuda, Lernaean Bow, Hydra''s Lament, Erosion, Shifter''s Shield,
-    Eye of the Storm, Lifebinder, Eye of Providence, Shield Splitter, Umbral Link,
-    Leviathan''s Hide, The Cosmic Horror, Draconic Scale, Midgardian Mail.'
+    Silverbranch Bow, Rod of Asclepius, Genji''s Guard, Chandra''s Grace, Blood-Bound
+    Book, Pharaoh''s Curse, Oni Hunter''s Garb, Golden Blade, Bancroft''s Talon, Runeforged
+    Hammer, Death Metal, Damaru, Breastplate of Valor, Phoenix Feather, Freya''s Tears,
+    Spectral Armor, Shogun''s Ofuda, Lernaean Bow, Hydra''s Lament, Erosion, Shifter''s
+    Shield, Eye of the Storm, Lifebinder, Eye of Providence, Shield Splitter, Umbral
+    Link, Leviathan''s Hide, The Cosmic Horror, Draconic Scale, Midgardian Mail.'
   slot_scores:
     Book of Thoth:
       total: 0.42
@@ -557,7 +557,7 @@ builds:
     Kinetic Cuirass, Bragi''s Harp, Bracer of The Abyss, Amanita Charm, Dominance,
     Eye of Providence, Oni Hunter''s Garb, Shogun''s Ofuda, Blood-Bound Book, Spear
     of Desolation, Freya''s Tears, Demon Blade, Obsidian Shard, Deathbringer, Bancroft''s
-    Talon, Eros'' Bow, Spectral Armor, Tyrfing.'
+    Talon, Eros'' Bow, Spectral Armor, Shield of the Phoenix, Tyrfing.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
@@ -630,7 +630,7 @@ builds:
     Focus, Golden Blade, The Reaper, Kinetic Cuirass, Totem of Death, Arondight, Runeforged
     Hammer, Amanita Charm, Pharaoh''s Curse, Bracer of The Abyss, Eye of Providence,
     Pendulum Blade, Blood-Bound Book, Oni Hunter''s Garb, Bragi''s Harp, Tekko-Kagi,
-    Obsidian Shard, Tyrfing.'
+    Obsidian Shard, Bancroft''s Talon, Tyrfing.'
   slot_scores:
     Book of Thoth:
       total: 0.43
@@ -703,7 +703,7 @@ builds:
     Runeforged Hammer, Bancroft''s Talon, Helm of Radiance, Kinetic Cuirass, Rod of
     Asclepius, Freya''s Tears, Tekko-Kagi, Amanita Charm, Pharaoh''s Curse, Gem of
     Focus, Eye of Providence, Jade Scepter, Oni Hunter''s Garb, Shield of the Phoenix,
-    Doom Orb, Tyrfing.'
+    Doom Orb, Totem of Death, Tyrfing.'
   slot_scores:
     Book of Thoth:
       total: 0.45
@@ -847,7 +847,7 @@ builds:
     Pharaoh''s Curse, Breastplate of Valor, Demon Blade, Bracer of The Abyss, Kinetic
     Cuirass, Amanita Charm, Deathbringer, Spear of Desolation, Eye of Providence,
     Oni Hunter''s Garb, Shogun''s Ofuda, Blood-Bound Book, Obsidian Shard, Toxic Blade,
-    Freya''s Tears, Musashi''s Dual Swords, Avenging Blade.'
+    Freya''s Tears, Musashi''s Dual Swords, Avenging Blade, Heartseeker.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -919,7 +919,7 @@ builds:
     of the Magus, Dominance, Pharaoh''s Curse, Breastplate of Valor, Demon Blade,
     Bracer of The Abyss, Kinetic Cuirass, Amanita Charm, Deathbringer, Spear of Desolation,
     Eye of Providence, Oni Hunter''s Garb, Shogun''s Ofuda, Blood-Bound Book, Obsidian
-    Shard, Toxic Blade, Freya''s Tears, Musashi''s Dual Swords, Avenging Blade.'
+    Shard, Toxic Blade, Freya''s Tears, Musashi''s Dual Swords, Avenging Blade, Heartseeker.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59

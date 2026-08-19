@@ -29,8 +29,8 @@
 | Jade Scepter | 0.49 | 0.45 | 0.53 | 0.58 | 0.00 | 0.26 | fair | peel | **UNDERRATED** |
 | Kinetic Cuirass | 0.48 | 0.44 | 0.59 | 0.58 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
 | Typhon’s Heart | 0.48 | 0.44 | 0.46 | 0.58 | 0.00 | 0.39 | fair |  | **UNDERRATED** |
-| Amanita Charm | 0.48 | 0.44 | 0.63 | 0.58 | 0.00 | 0.00 | undervalued | sustain, aura |  |
-| Ethereal Staff | 0.48 | 0.44 | 0.51 | 0.58 | 0.00 | 0.26 | fair |  |  |
+| Amanita Charm | 0.48 | 0.44 | 0.63 | 0.58 | 0.00 | 0.00 | undervalued | sustain, aura | **UNDERRATED** |
+| Ethereal Staff | 0.48 | 0.44 | 0.51 | 0.58 | 0.00 | 0.26 | fair |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.48 | 0.44 | 0.57 | 0.58 | 0.00 | 0.13 | fair | sustain |  |
 | Eye of Providence | 0.48 | 0.43 | 0.62 | 0.58 | 0.00 | 0.00 | undervalued | ward-economy |  |
 | Oni Hunter's Garb | 0.48 | 0.43 | 0.61 | 0.58 | 0.00 | 0.00 | undervalued |  |  |
@@ -88,7 +88,11 @@
 | Resolute Mantle | 0.36 | 0.21 | 0.30 | 0.58 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Circe's Hexstone | 0.36 | 0.19 | 0.22 | 0.58 | 0.00 | 0.13 | premium | mobility, cc-immunity |  |
 | Omen Drum | 0.35 | 0.19 | 0.27 | 0.58 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.35 | 0.18 | 0.26 | 0.58 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.35 | 0.18 | 0.26 | 0.58 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.35 | 0.18 | 0.20 | 0.58 | 0.00 | 0.13 | premium | cc-immunity |  |
+| Time-lock Aegis | 0.33 | 0.14 | 0.20 | 0.58 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.32 | 0.12 | 0.18 | 0.58 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.32 | 0.12 | 0.18 | 0.58 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.31 | 0.09 | 0.13 | 0.58 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.26 | 0.00 | 0.00 | 0.58 | 0.00 | 0.00 | premium | mobility |  |

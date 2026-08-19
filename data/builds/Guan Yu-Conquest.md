@@ -121,7 +121,7 @@ builds:
     Splitter, Runeforged Hammer, Eye of the Storm, Erosion, Pharaoh''s Curse, Golden
     Blade, Eye of Providence, Spectral Armor, Shogun''s Ofuda, Leviathan''s Hide,
     Midgardian Mail, Lernaean Bow, Avenging Blade, Screeching Gargoyle, Mantle Of
-    Discord, Stone of Binding.'
+    Discord, Stone of Binding, Gladiator''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -192,7 +192,8 @@ builds:
     Shield, Jotunn''s Revenge, Chandra''s Grace, The Crusher, Runeforged Hammer, Oni
     Hunter''s Garb, The Reaper, Hydra''s Lament, Golden Blade, Eye of the Storm, Pharaoh''s
     Curse, Phoenix Feather, Erosion, Shield Splitter, Spectral Armor, Eye of Providence,
-    Riptalon, Shogun''s Ofuda, Leviathan''s Hide, Avenging Blade, Midgardian Mail.'
+    Riptalon, Shogun''s Ofuda, Leviathan''s Hide, Avenging Blade, Midgardian Mail,
+    Glorious Pridwen.'
   slot_scores:
     Berserker's Shield:
       total: 0.58
@@ -331,7 +332,8 @@ builds:
     Crusher, Jotunn''s Revenge, Pharaoh''s Curse, Riptalon, Oni Hunter''s Garb, Shield
     of the Phoenix, Tyrfing, Shogun''s Ofuda, Hydra''s Lament, Runeforged Hammer,
     Silverbranch Bow, Lernaean Bow, Spectral Armor, Erosion, Shield Splitter, Eye
-    of Providence, Eye of the Storm, Leviathan''s Hide, Toxic Blade, Midgardian Mail.'
+    of Providence, Eye of the Storm, Leviathan''s Hide, Toxic Blade, Midgardian Mail,
+    Screeching Gargoyle.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -401,7 +403,7 @@ builds:
     Oni Hunter''s Garb, Screeching Gargoyle, Chandra''s Grace, Gladiator''s Shield,
     Pharaoh''s Curse, Spectral Armor, Erosion, Runeforged Hammer, Eye of Providence,
     Prophetic Cloak, Shield Splitter, Leviathan''s Hide, Eye of the Storm, Golden
-    Blade, Shogun''s Ofuda, Midgardian Mail, Arondight.'
+    Blade, Shogun''s Ofuda, Midgardian Mail, Arondight, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
       total: 0.59
@@ -471,7 +473,7 @@ builds:
     Lament, Shield Splitter, Runeforged Hammer, Eye of the Storm, Erosion, Pharaoh''s
     Curse, Golden Blade, Eye of Providence, Spectral Armor, Shogun''s Ofuda, Leviathan''s
     Hide, Midgardian Mail, Lernaean Bow, Avenging Blade, Screeching Gargoyle, Mantle
-    Of Discord, Stone of Binding.'
+    Of Discord, Stone of Binding, Gladiator''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -541,7 +543,7 @@ builds:
     Hydra''s Lament, Shield Splitter, Runeforged Hammer, Eye of the Storm, Erosion,
     Pharaoh''s Curse, Golden Blade, Eye of Providence, Spectral Armor, Shogun''s Ofuda,
     Leviathan''s Hide, Midgardian Mail, Lernaean Bow, Avenging Blade, Screeching Gargoyle,
-    Mantle Of Discord, Stone of Binding.'
+    Mantle Of Discord, Stone of Binding, Gladiator''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.57

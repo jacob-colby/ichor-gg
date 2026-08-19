@@ -120,7 +120,7 @@ builds:
     Hunter''s Garb, Shield of the Phoenix, Erosion, Runeforged Hammer, Eye of the
     Storm, Eye of Providence, Hydra''s Lament, Draconic Scale, Spectral Armor, Pharaoh''s
     Curse, Leviathan''s Hide, Midgardian Mail, Golden Blade, Mantle Of Discord, Stone
-    of Binding, Avenging Blade, The Reaper, Magi''s Cloak, Ancile.'
+    of Binding, Avenging Blade, The Reaper, Magi''s Cloak, Ancile, Screeching Gargoyle.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -191,7 +191,7 @@ builds:
     Runeforged Hammer, Shield of the Phoenix, Shield Splitter, Eye of the Storm, Spectral
     Armor, Erosion, Eye of Providence, Draconic Scale, Golden Blade, The Reaper, Pharaoh''s
     Curse, Damaru, Leviathan''s Hide, Avenging Blade, Yogi''s Necklace, Midgardian
-    Mail, Mantle Of Discord, Screeching Gargoyle.'
+    Mail, Mantle Of Discord, Screeching Gargoyle, Transcendence.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -260,7 +260,7 @@ builds:
     The Reaper, Chandra''s Grace, Runeforged Hammer, Oni Hunter''s Garb, Eye of the
     Storm, Phoenix Feather, Erosion, Shield Splitter, Hydra''s Lament, Spectral Armor,
     Eye of Providence, Riptalon, Draconic Scale, Golden Blade, Pharaoh''s Curse, Avenging
-    Blade, Leviathan''s Hide, Midgardian Mail, Glorious Pridwen.'
+    Blade, Leviathan''s Hide, Midgardian Mail, Glorious Pridwen, Ancile.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.62
@@ -329,7 +329,8 @@ builds:
     Avenging Blade, Screeching Gargoyle, Void Shield, Oni Hunter''s Garb, Void Stone,
     The Reaper, Shield of the Phoenix, Runeforged Hammer, Shield Splitter, Hydra''s
     Lament, Erosion, Spectral Armor, Eye of Providence, Eye of the Storm, Draconic
-    Scale, Pharaoh''s Curse, Riptalon, Leviathan''s Hide, Heartseeker.'
+    Scale, Pharaoh''s Curse, Riptalon, Leviathan''s Hide, Heartseeker, Midgardian
+    Mail.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.63
@@ -398,7 +399,7 @@ builds:
     Pharaoh''s Curse, Oni Hunter''s Garb, Silverbranch Bow, Shield of the Phoenix,
     Shogun''s Ofuda, Tyrfing, Runeforged Hammer, Spectral Armor, Hydra''s Lament,
     Erosion, Lernaean Bow, Shield Splitter, Eye of Providence, Toxic Blade, Draconic
-    Scale, Eye of the Storm, Leviathan''s Hide, Midgardian Mail.'
+    Scale, Eye of the Storm, Leviathan''s Hide, Midgardian Mail, The Reaper.'
   slot_scores:
     Golden Blade:
       total: 0.57
@@ -468,7 +469,7 @@ builds:
     Gargoyle, Chandra''s Grace, Gladiator''s Shield, Erosion, Spectral Armor, Eye
     of Providence, Runeforged Hammer, Prophetic Cloak, Shield Splitter, Draconic Scale,
     Pharaoh''s Curse, Leviathan''s Hide, Eye of the Storm, Midgardian Mail, Mantle
-    Of Discord, Stone of Binding, Arondight.'
+    Of Discord, Stone of Binding, Arondight, Ancile.'
   slot_scores:
     Genji's Guard:
       total: 0.61
@@ -537,7 +538,8 @@ builds:
     Splitter, Oni Hunter''s Garb, Shield of the Phoenix, Erosion, Runeforged Hammer,
     Eye of the Storm, Eye of Providence, Hydra''s Lament, Draconic Scale, Spectral
     Armor, Pharaoh''s Curse, Leviathan''s Hide, Midgardian Mail, Golden Blade, Mantle
-    Of Discord, Stone of Binding, Avenging Blade, The Reaper, Magi''s Cloak, Ancile.'
+    Of Discord, Stone of Binding, Avenging Blade, The Reaper, Magi''s Cloak, Ancile,
+    Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.58

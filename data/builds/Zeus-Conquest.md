@@ -120,7 +120,8 @@ builds:
     Spear of the Magus, Bracer of The Abyss, Chronos'' Pendant, Blood-Bound Book,
     Breastplate of Valor, The World Stone, Bragi''s Harp, Doom Orb, Death Metal, Helm
     of Radiance, Rod of Asclepius, Gem of Focus, Dreamer''s Idol, Totem of Death,
-    Freya''s Tears, Jade Scepter, Kinetic Cuirass, Typhon’s Heart.'
+    Freya''s Tears, Jade Scepter, Kinetic Cuirass, Typhon’s Heart, Amanita Charm,
+    Ethereal Staff.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -191,7 +192,7 @@ builds:
     of the Magus, Breastplate of Valor, Bragi''s Harp, Chronos'' Pendant, Blood-Bound
     Book, Bracer of The Abyss, The World Stone, Doom Orb, Helm of Radiance, Oni Hunter''s
     Garb, Rod of Asclepius, Kinetic Cuirass, Freya''s Tears, Gem of Focus, Amanita
-    Charm, Triton''s Conch, Jade Scepter.'
+    Charm, Triton''s Conch, Jade Scepter, Eye of Providence, Book of Thoth.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -260,7 +261,8 @@ builds:
     of the Magus, Breastplate of Valor, Death Metal, Chronos'' Pendant, Bragi''s Harp,
     Freya''s Tears, The World Stone, Blood-Bound Book, Bracer of The Abyss, Doom Orb,
     Shield of the Phoenix, Kinetic Cuirass, Gem of Focus, Amanita Charm, Helm of Radiance,
-    Rod of Asclepius, Dreamer''s Idol, Totem of Death.'
+    Rod of Asclepius, Dreamer''s Idol, Totem of Death, Eye of Providence, Oni Hunter''s
+    Garb.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -329,7 +331,8 @@ builds:
     Genji''s Guard, Rod of Asclepius, Kinetic Cuirass, Blood-Bound Book, Chandra''s
     Grace, Oni Hunter''s Garb, Freya''s Tears, Breastplate of Valor, Lifebinder, The
     Cosmic Horror, Phoenix Feather, Spear of the Magus, Spectral Armor, Erosion, Eye
-    of Providence, Helm of Radiance, Draconic Scale, Jade Scepter.'
+    of Providence, Helm of Radiance, Draconic Scale, Jade Scepter, Leviathan''s Hide,
+    Umbral Link.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -398,7 +401,8 @@ builds:
     Magus, Genji''s Guard, The World Stone, Doom Orb, Screeching Gargoyle, Dreamer''s
     Idol, Bracer of The Abyss, Breastplate of Valor, Chronos'' Pendant, Blood-Bound
     Book, Death Metal, Helm of Radiance, Stone of Binding, Rod of Asclepius, Kinetic
-    Cuirass, Bragi''s Harp, Freya''s Tears, Void Shield, Amanita Charm.'
+    Cuirass, Bragi''s Harp, Freya''s Tears, Void Shield, Amanita Charm, Gem of Focus,
+    Jade Scepter.'
   slot_scores:
     Nimble Ring:
       total: 0.58
@@ -467,7 +471,8 @@ builds:
     Spear of the Magus, Bragi''s Harp, Death Metal, Bracer of The Abyss, Breastplate
     of Valor, Chronos'' Pendant, Blood-Bound Book, Kinetic Cuirass, Amanita Charm,
     Helm of Radiance, Freya''s Tears, Rod of Asclepius, Eye of Providence, Oni Hunter''s
-    Garb, Shield of the Phoenix, Jade Scepter, Doom Orb, Gem of Focus.'
+    Garb, The World Stone, Shield of the Phoenix, Jade Scepter, Doom Orb, Gem of Focus,
+    Totem of Death.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -537,7 +542,7 @@ builds:
     Phoenix, The Cosmic Horror, Spear of the Magus, Gem of Focus, Screeching Gargoyle,
     Chandra''s Grace, Totem of Death, Death Metal, Kinetic Cuirass, Bracer of The
     Abyss, Blood-Bound Book, Amanita Charm, Bragi''s Harp, Eye of Providence, Oni
-    Hunter''s Garb, Gladiator''s Shield.'
+    Hunter''s Garb, Gladiator''s Shield, Helm of Radiance, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -606,7 +611,8 @@ builds:
     Spear of the Magus, Genji''s Guard, Bracer of The Abyss, Chronos'' Pendant, Blood-Bound
     Book, Breastplate of Valor, Bragi''s Harp, Doom Orb, Death Metal, The World Stone,
     Helm of Radiance, Rod of Asclepius, Gem of Focus, Dreamer''s Idol, Totem of Death,
-    Freya''s Tears, Jade Scepter, Kinetic Cuirass, Typhon’s Heart.'
+    Freya''s Tears, Jade Scepter, Kinetic Cuirass, Typhon’s Heart, Amanita Charm,
+    Ethereal Staff.'
   slot_scores:
     Genji's Guard:
       total: 0.54

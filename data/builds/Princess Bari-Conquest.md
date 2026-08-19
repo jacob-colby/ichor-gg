@@ -123,7 +123,7 @@ builds:
     Chronos'' Pendant, Blood-Bound Book, Runeforged Hammer, Pharaoh''s Curse, Bancroft''s
     Talon, Dominance, Helm of Radiance, Damaru, Kinetic Cuirass, Rod of Asclepius,
     Freya''s Tears, Amanita Charm, Gem of Focus, Shogun''s Ofuda, Eye of Providence,
-    Toxic Blade.'
+    Toxic Blade, Jade Scepter.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -196,7 +196,7 @@ builds:
     Reaper, Bancroft''s Talon, Bracer of The Abyss, Runeforged Hammer, Chronos'' Pendant,
     Dominance, Tyrfing, Tekko-Kagi, Blood-Bound Book, Silverbranch Bow, Damaru, Oni
     Hunter''s Garb, Helm of Radiance, Transcendence, Rod of Asclepius, Heartseeker,
-    Kinetic Cuirass, Pharaoh''s Curse, Freya''s Tears, Amanita Charm.'
+    Kinetic Cuirass, Pharaoh''s Curse, Freya''s Tears, Amanita Charm, Gem of Focus.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -267,7 +267,8 @@ builds:
     Death Metal, Golden Blade, Bragi''s Harp, Chronos'' Pendant, Bracer of The Abyss,
     Runeforged Hammer, Tyrfing, Freya''s Tears, Blood-Bound Book, Pendulum Blade,
     Damaru, Pharaoh''s Curse, Kinetic Cuirass, Shield of the Phoenix, Bancroft''s
-    Talon, Amanita Charm, Dominance, Heartseeker, Gem of Focus, Helm of Radiance.'
+    Talon, Amanita Charm, Dominance, Heartseeker, Gem of Focus, Helm of Radiance,
+    Toxic Blade.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -340,7 +341,7 @@ builds:
     The Cosmic Horror, Shogun''s Ofuda, Spectral Armor, Hydra''s Lament, Spear of
     the Magus, Erosion, Lernaean Bow, Shifter''s Shield, Death Metal, Eye of Providence,
     Helm of Radiance, Eye of the Storm, Shield Splitter, Umbral Link, Leviathan''s
-    Hide.'
+    Hide, Draconic Scale.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -411,7 +412,7 @@ builds:
     Hydra''s Lament, Lernaean Bow, Death Metal, Golden Blade, Bragi''s Harp, Breastplate
     of Valor, Bracer of The Abyss, Toxic Blade, Heartseeker, Chronos'' Pendant, Blood-Bound
     Book, Runeforged Hammer, Tyrfing, Stone of Binding, Pendulum Blade, Titan''s Bane,
-    Pharaoh''s Curse, Bancroft''s Talon, Kinetic Cuirass, Void Shield.'
+    Pharaoh''s Curse, Bancroft''s Talon, Kinetic Cuirass, Void Shield, Amanita Charm.'
   slot_scores:
     Nimble Ring:
       total: 0.55
@@ -483,7 +484,7 @@ builds:
     Blade, Tekko-Kagi, Pharaoh''s Curse, Chronos'' Pendant, Blood-Bound Book, Runeforged
     Hammer, Bancroft''s Talon, Kinetic Cuirass, Dominance, Amanita Charm, Damaru,
     Helm of Radiance, Freya''s Tears, Eye of Providence, Rod of Asclepius, Oni Hunter''s
-    Garb, Shogun''s Ofuda, Shield of the Phoenix.'
+    Garb, Shogun''s Ofuda, Shield of the Phoenix, Jade Scepter.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -555,7 +556,7 @@ builds:
     Grace, Silverbranch Bow, Spear of the Magus, Golden Blade, Totem of Death, Arondight,
     Pendulum Blade, The Reaper, Bracer of The Abyss, Death Metal, Bragi''s Harp, Pharaoh''s
     Curse, Tyrfing, Tekko-Kagi, Runeforged Hammer, Kinetic Cuirass, Amanita Charm,
-    Blood-Bound Book, Eye of Providence, Damaru, Oni Hunter''s Garb.'
+    Blood-Bound Book, Eye of Providence, Damaru, Oni Hunter''s Garb, Bancroft''s Talon.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -699,7 +700,7 @@ builds:
     Bow, Tyrfing, Runeforged Hammer, Breastplate of Valor, Chronos'' Pendant, Blood-Bound
     Book, Dominance, Damaru, Bancroft''s Talon, Pharaoh''s Curse, Helm of Radiance,
     Rod of Asclepius, Kinetic Cuirass, Amanita Charm, Freya''s Tears, Heartseeker,
-    Jade Scepter, Gem of Focus.'
+    Jade Scepter, Gem of Focus, Eye of Providence.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -771,7 +772,7 @@ builds:
     of Valor, Chronos'' Pendant, Blood-Bound Book, Runeforged Hammer, Pharaoh''s Curse,
     Bancroft''s Talon, Dominance, Helm of Radiance, Damaru, Kinetic Cuirass, Rod of
     Asclepius, Freya''s Tears, Amanita Charm, Gem of Focus, Shogun''s Ofuda, Eye of
-    Providence, Toxic Blade.'
+    Providence, Toxic Blade, Jade Scepter.'
   slot_scores:
     Berserker's Shield:
       total: 0.52

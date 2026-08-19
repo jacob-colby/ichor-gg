@@ -31,7 +31,7 @@
 | Prophetic Cloak | 0.50 | 0.49 | 0.43 | 0.57 | 0.00 | 0.64 | premium |  | **UNDERRATED** |
 | Ancile | 0.50 | 0.49 | 0.51 | 0.57 | 0.00 | 0.43 | fair |  | **UNDERRATED** |
 | Chandra's Grace | 0.50 | 0.49 | 0.53 | 0.57 | 0.00 | 0.39 | fair | sustain | **UNDERRATED** |
-| Magi's Cloak | 0.50 | 0.49 | 0.50 | 0.57 | 0.00 | 0.46 | fair | cc-immunity |  |
+| Magi's Cloak | 0.50 | 0.49 | 0.50 | 0.57 | 0.00 | 0.46 | fair | cc-immunity | **UNDERRATED** |
 | Shogun's Ofuda | 0.50 | 0.48 | 0.51 | 0.57 | 0.00 | 0.43 | fair | aura |  |
 | Hide of the Nemean Lion | 0.50 | 0.48 | 0.50 | 0.57 | 0.00 | 0.43 | fair |  |  |
 | Void Shield | 0.50 | 0.48 | 0.46 | 0.57 | 0.00 | 0.53 | fair | protection-shred, aura |  |
@@ -50,6 +50,7 @@
 | Wyrmskin Hide | 0.48 | 0.44 | 0.40 | 0.57 | 0.00 | 0.52 | premium |  |  |
 | Damaru | 0.47 | 0.43 | 0.57 | 0.57 | 0.00 | 0.09 | fair |  |  |
 | Stygian Anchor | 0.47 | 0.42 | 0.41 | 0.57 | 0.00 | 0.46 | premium | anti-heal |  |
+| Shell of Rebuke | 0.47 | 0.32 | 0.26 | 0.67 | 0.13 | 0.46 | premium | peel |  |
 | Shroud of Vengeance | 0.47 | 0.42 | 0.36 | 0.57 | 0.00 | 0.56 | premium | burst |  |
 | Arondight | 0.46 | 0.42 | 0.47 | 0.57 | 0.00 | 0.28 | fair | mobility |  |
 | The Reaper | 0.46 | 0.41 | 0.52 | 0.57 | 0.00 | 0.15 | fair | sustain |  |
@@ -83,6 +84,7 @@
 | Oath-Sworn Spear | 0.40 | 0.29 | 0.33 | 0.57 | 0.00 | 0.19 | premium | protection-shred |  |
 | Qin's Blade | 0.40 | 0.28 | 0.36 | 0.57 | 0.00 | 0.10 | premium | burst |  |
 | Odysseus' Bow | 0.40 | 0.28 | 0.36 | 0.57 | 0.00 | 0.10 | premium | burst, wave-clear |  |
+| Time-lock Aegis | 0.39 | 0.27 | 0.20 | 0.57 | 0.00 | 0.46 | premium | cc-immunity |  |
 | Demon Blade | 0.39 | 0.27 | 0.35 | 0.57 | 0.00 | 0.09 | premium |  |  |
 | Circe's Hexstone | 0.39 | 0.27 | 0.22 | 0.57 | 0.00 | 0.39 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.39 | 0.27 | 0.30 | 0.57 | 0.00 | 0.20 | premium | cc-immunity, sustain |  |
@@ -91,9 +93,11 @@
 | Dagger of Frenzy | 0.38 | 0.25 | 0.36 | 0.57 | 0.00 | 0.00 | premium |  |  |
 | Vital Amplifier | 0.37 | 0.23 | 0.24 | 0.57 | 0.00 | 0.20 | premium |  |  |
 | Hastened Fatalis | 0.36 | 0.21 | 0.31 | 0.57 | 0.00 | 0.00 | premium | mobility |  |
+| Talisman of Purification | 0.35 | 0.20 | 0.20 | 0.57 | 0.00 | 0.19 | premium | cc-immunity |  |
 | Omen Drum | 0.35 | 0.19 | 0.27 | 0.57 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.35 | 0.19 | 0.18 | 0.57 | 0.00 | 0.20 | premium |  |  |
 | Gauntlet of Thebes | 0.34 | 0.24 | 0.26 | 0.48 | 0.16 | 0.20 | premium |  |  |
 | Sun Beam Bow | 0.34 | 0.18 | 0.25 | 0.57 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.32 | 0.12 | 0.13 | 0.57 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.30 | 0.09 | 0.13 | 0.57 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.26 | 0.00 | 0.00 | 0.57 | 0.00 | 0.00 | premium | mobility |  |

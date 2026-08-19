@@ -191,7 +191,7 @@ builds:
     Blade, Lernaean Bow, Arondight, Oni Hunter''s Garb, Berserker''s Shield, Golden
     Blade, Freya''s Tears, Tekko-Kagi, Avenging Blade, Dominance, Kinetic Cuirass,
     Shield Splitter, Amanita Charm, Shield of the Phoenix, Eye of the Storm, Tyrfing,
-    Eye of Providence, Yogi''s Necklace.'
+    Eye of Providence, Yogi''s Necklace, Riptalon.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -260,7 +260,7 @@ builds:
     Freya''s Tears, Tekko-Kagi, Riptalon, Arondight, Damaru, Silverbranch Bow, Shield
     of the Phoenix, Berserker''s Shield, Lernaean Bow, Kinetic Cuirass, Amanita Charm,
     Screeching Gargoyle, Golden Blade, Chandra''s Grace, Eye of Providence, Transcendence,
-    Avenging Blade, Oni Hunter''s Garb, Avatar''s Parashu.'
+    Avenging Blade, Oni Hunter''s Garb, Avatar''s Parashu, Shield Splitter.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -330,7 +330,7 @@ builds:
     Tears, Oni Hunter''s Garb, Breastplate of Valor, Eye of the Storm, Phoenix Feather,
     Erosion, Shield Splitter, Spectral Armor, Eye of Providence, Riptalon, Draconic
     Scale, Golden Blade, Pharaoh''s Curse, Leviathan''s Hide, Avenging Blade, Midgardian
-    Mail, Glorious Pridwen.'
+    Mail, Glorious Pridwen, Ancile.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
@@ -399,7 +399,7 @@ builds:
     Bow, Genji''s Guard, Avatar''s Parashu, Screeching Gargoyle, Runeforged Hammer,
     Breastplate of Valor, Damaru, Lernaean Bow, Toxic Blade, Arondight, Golden Blade,
     Berserker''s Shield, Freya''s Tears, Transcendence, Stone of Binding, Shield Splitter,
-    Kinetic Cuirass, Eye of the Storm, Void Shield.'
+    Kinetic Cuirass, Eye of the Storm, Void Shield, Shield of the Phoenix.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
@@ -468,7 +468,7 @@ builds:
     Lernaean Bow, Genji''s Guard, Toxic Blade, Tekko-Kagi, Breastplate of Valor, Pharaoh''s
     Curse, Dominance, Runeforged Hammer, Damaru, Kinetic Cuirass, Shogun''s Ofuda,
     Freya''s Tears, Amanita Charm, Eye of Providence, Oni Hunter''s Garb, Qin''s Blade,
-    Shield of the Phoenix, Eros'' Bow, Pendulum Blade.'
+    Shield of the Phoenix, Eros'' Bow, Pendulum Blade, Transcendence.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -538,7 +538,7 @@ builds:
     Chandra''s Grace, Gladiator''s Shield, Runeforged Hammer, Berserker''s Shield,
     Prophetic Cloak, Kinetic Cuirass, Damaru, Amanita Charm, Riptalon, Eye of Providence,
     Oni Hunter''s Garb, Regrowth Striders, Lernaean Bow, Silverbranch Bow, Golden
-    Blade, Tekko-Kagi.'
+    Blade, Tekko-Kagi, Transcendence.'
   slot_scores:
     Genji's Guard:
       total: 0.55

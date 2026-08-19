@@ -123,7 +123,8 @@ builds:
     Gem, Pharaoh''s Curse, Leviathan''s Hide, Golden Blade, Midgardian Mail, Avenging
     Blade, Mantle Of Discord, Death Metal, Stone of Binding, Ancile, Damaru, Screeching
     Gargoyle, Magi''s Cloak, Helm of Radiance, Shogun''s Ofuda, Gladiator''s Shield,
-    Hide of the Nemean Lion, Void Shield, Doublet of Binding, Draconic Scale.'
+    Hide of the Nemean Lion, Void Shield, Doublet of Binding, Wyrmskin Hide, Draconic
+    Scale.'
   slot_scores:
     Yogi's Necklace:
       total: 0.55
@@ -197,7 +198,7 @@ builds:
     Eye of Providence, Hydra''s Lament, Spectral Armor, Golden Blade, Pharaoh''s Curse,
     Leviathan''s Hide, Avenging Blade, Nimble Ring, Midgardian Mail, Blood-Bound Book,
     Lifebinder, Glorious Pridwen, Riptalon, Bancroft''s Talon, Death Metal, Ancile,
-    Shogun''s Ofuda, Gladiator''s Shield, Draconic Scale.'
+    Shogun''s Ofuda, Gladiator''s Shield, Hide of the Nemean Lion, Draconic Scale.'
   slot_scores:
     Yogi's Necklace:
       total: 0.55
@@ -269,7 +270,7 @@ builds:
     Shield of the Phoenix, Spear of Desolation, Hydra''s Lament, Nimble Ring, Shield
     Splitter, Spectral Armor, Erosion, Eye of the Storm, Eye of Providence, Obsidian
     Shard, Riptalon, Pharaoh''s Curse, Heartseeker, Leviathan''s Hide, Silverbranch
-    Bow, Golden Blade, Midgardian Mail, Titan''s Bane, Draconic Scale.'
+    Bow, Golden Blade, Midgardian Mail, Titan''s Bane, Pendulum Blade, Draconic Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -341,7 +342,7 @@ builds:
     Silverbranch Bow, Lernaean Bow, Hydra''s Lament, Spectral Armor, Erosion, Shield
     Splitter, Eye of Providence, Eye of the Storm, Leviathan''s Hide, Toxic Blade,
     Midgardian Mail, Mantle Of Discord, Death Metal, Helm of Radiance, Stone of Binding,
-    Screeching Gargoyle, Damaru, Avenging Blade, Draconic Scale.'
+    Screeching Gargoyle, Damaru, Avenging Blade, Bracer of The Abyss, Draconic Scale.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -414,7 +415,7 @@ builds:
     Eye of Providence, Runeforged Hammer, Shield Splitter, Gem of Focus, Pharaoh''s
     Curse, Eye of the Storm, Leviathan''s Hide, Helm of Radiance, Midgardian Mail,
     Totem of Death, Arondight, Rod of Asclepius, Mantle Of Discord, Death Metal, Stone
-    of Binding, The Cosmic Horror, Draconic Scale.'
+    of Binding, The Cosmic Horror, Glorious Pridwen, Draconic Scale.'
   slot_scores:
     Yogi's Necklace:
       total: 0.54
@@ -486,7 +487,7 @@ builds:
     Pharaoh''s Curse, Spectral Armor, Erosion, The Reaper, Lernaean Bow, Eye of Providence,
     Death Metal, Avenging Blade, Damaru, The Cosmic Horror, Shogun''s Ofuda, Leviathan''s
     Hide, Spear of the Magus, Midgardian Mail, Tekko-Kagi, Spear of Desolation, Tyrfing,
-    Riptalon, Mantle Of Discord, Stone of Binding, Draconic Scale.'
+    Riptalon, Mantle Of Discord, Stone of Binding, Helm of Radiance, Draconic Scale.'
   slot_scores:
     Yogi's Necklace:
       total: 0.54
@@ -559,7 +560,7 @@ builds:
     Spectral Armor, Erosion, Eye of Providence, Rod of Asclepius, The Reaper, Obsidian
     Shard, Golden Blade, Chronos'' Pendant, Pharaoh''s Curse, Jade Scepter, Leviathan''s
     Hide, Avenging Blade, Midgardian Mail, Damaru, Triton''s Conch, Ethereal Staff,
-    Draconic Scale.'
+    Mantle Of Discord, Draconic Scale.'
   slot_scores:
     Yogi's Necklace:
       total: 0.54
@@ -631,7 +632,8 @@ builds:
     Armor, Nimble Ring, Soul Gem, Pharaoh''s Curse, Leviathan''s Hide, Golden Blade,
     Midgardian Mail, Avenging Blade, Mantle Of Discord, Death Metal, Stone of Binding,
     Ancile, Damaru, Screeching Gargoyle, Magi''s Cloak, Helm of Radiance, Shogun''s
-    Ofuda, Gladiator''s Shield, Hide of the Nemean Lion, Void Shield, Doublet of Binding.'
+    Ofuda, Gladiator''s Shield, Hide of the Nemean Lion, Void Shield, Doublet of Binding,
+    Wyrmskin Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -704,7 +706,7 @@ builds:
     Hide, Golden Blade, Midgardian Mail, Avenging Blade, Mantle Of Discord, Death
     Metal, Stone of Binding, Ancile, Damaru, Screeching Gargoyle, Magi''s Cloak, Helm
     of Radiance, Shogun''s Ofuda, Gladiator''s Shield, Hide of the Nemean Lion, Void
-    Shield, Doublet of Binding.'
+    Shield, Doublet of Binding, Wyrmskin Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.56

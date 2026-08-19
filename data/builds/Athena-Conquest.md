@@ -123,7 +123,7 @@ builds:
     Hide, Mantle Of Discord, Midgardian Mail, Stone of Binding, Soul Gem, Eye of the
     Storm, Nimble Ring, Magi''s Cloak, Runeforged Hammer, Stampede, Ancile, Gladiator''s
     Shield, Shogun''s Ofuda, Screeching Gargoyle, Prophetic Cloak, Helm of Radiance,
-    Void Shield, Doublet of Binding, Hussar''s Wings, Chandra''s Grace.'
+    Void Shield, Doublet of Binding, Hussar''s Wings, Chandra''s Grace, Void Stone.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -197,7 +197,7 @@ builds:
     Curse, Leviathan''s Hide, The Crusher, Midgardian Mail, Runeforged Hammer, Eye
     of the Storm, Glorious Pridwen, Lifebinder, Nimble Ring, Shield Splitter, Gladiator''s
     Shield, Ancile, Blood-Bound Book, Shogun''s Ofuda, The Reaper, Void Shield, Doublet
-    of Binding, Mantle Of Discord, Bancroft''s Talon, Stone of Binding.'
+    of Binding, Mantle Of Discord, Bancroft''s Talon, Stone of Binding, Riptalon.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -270,7 +270,7 @@ builds:
     of Providence, Spectral Armor, Nimble Ring, Draconic Scale, Obsidian Shard, The
     Reaper, Pharaoh''s Curse, Riptalon, Shield Splitter, Leviathan''s Hide, Midgardian
     Mail, Runeforged Hammer, Silverbranch Bow, Mantle Of Discord, Eye of the Storm,
-    Helm of Radiance, Ancile.'
+    Helm of Radiance, Ancile, Magi''s Cloak.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -342,7 +342,8 @@ builds:
     Runeforged Hammer, Spectral Armor, Erosion, Lernaean Bow, Silverbranch Bow, Shield
     Splitter, Eye of Providence, Draconic Scale, Eye of the Storm, Leviathan''s Hide,
     Midgardian Mail, Mantle Of Discord, Toxic Blade, Stone of Binding, Helm of Radiance,
-    Death Metal, Screeching Gargoyle, Yogi''s Necklace, Damaru, Ancile.'
+    Death Metal, Screeching Gargoyle, Yogi''s Necklace, Damaru, Ancile, The Cosmic
+    Horror.'
   slot_scores:
     Golden Blade:
       total: 0.52
@@ -415,7 +416,7 @@ builds:
     of Providence, Prophetic Cloak, Shield Splitter, Draconic Scale, Runeforged Hammer,
     Pharaoh''s Curse, Eye of the Storm, Leviathan''s Hide, Gem of Focus, Helm of Radiance,
     Midgardian Mail, Mantle Of Discord, Totem of Death, Stone of Binding, Arondight,
-    Death Metal, Rod of Asclepius, The Cosmic Horror.'
+    Death Metal, Rod of Asclepius, The Cosmic Horror, Glorious Pridwen.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -488,7 +489,7 @@ builds:
     The Reaper, Lernaean Bow, Draconic Scale, Death Metal, Avenging Blade, Damaru,
     The Cosmic Horror, Shogun''s Ofuda, Leviathan''s Hide, Spear of the Magus, Midgardian
     Mail, Mantle Of Discord, Stone of Binding, Tekko-Kagi, Spear of Desolation, Helm
-    of Radiance, Tyrfing.'
+    of Radiance, Tyrfing, Riptalon.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -561,7 +562,7 @@ builds:
     Eye of the Storm, Helm of Radiance, Spectral Armor, Eye of Providence, Draconic
     Scale, Rod of Asclepius, Pharaoh''s Curse, The Reaper, Obsidian Shard, Leviathan''s
     Hide, Golden Blade, Chronos'' Pendant, Jade Scepter, Midgardian Mail, Avenging
-    Blade, Mantle Of Discord, Damaru, Stone of Binding.'
+    Blade, Mantle Of Discord, Damaru, Stone of Binding, Triton''s Conch.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -634,7 +635,7 @@ builds:
     Storm, Nimble Ring, Magi''s Cloak, Runeforged Hammer, Ancile, Gladiator''s Shield,
     Shogun''s Ofuda, Screeching Gargoyle, Prophetic Cloak, Helm of Radiance, Void
     Shield, Doublet of Binding, Hydra''s Lament, Hussar''s Wings, Stampede, Chandra''s
-    Grace.'
+    Grace, Void Stone.'
   slot_scores:
     Genji's Guard:
       total: 0.56

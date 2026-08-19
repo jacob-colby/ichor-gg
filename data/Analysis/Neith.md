@@ -44,7 +44,7 @@
 | Shield of the Phoenix | 0.45 | 0.42 | 0.57 | 0.53 | 0.00 | 0.08 | fair | sustain | **UNDERRATED** |
 | Jade Scepter | 0.45 | 0.42 | 0.53 | 0.53 | 0.00 | 0.15 | fair | peel | **UNDERRATED** |
 | Shogun's Ofuda | 0.45 | 0.42 | 0.51 | 0.53 | 0.00 | 0.20 | fair | aura | **UNDERRATED** |
-| Doom Orb | 0.45 | 0.41 | 0.46 | 0.53 | 0.00 | 0.30 | fair |  |  |
+| Doom Orb | 0.45 | 0.41 | 0.46 | 0.53 | 0.00 | 0.30 | fair |  | **UNDERRATED** |
 | Gem of Focus | 0.44 | 0.41 | 0.49 | 0.53 | 0.00 | 0.24 | fair | mobility |  |
 | Deathbringer | 0.44 | 0.41 | 0.45 | 0.53 | 0.00 | 0.33 | fair |  |  |
 | Odysseus' Bow | 0.44 | 0.34 | 0.36 | 0.59 | 0.15 | 0.30 | premium | burst, wave-clear |  |
@@ -130,9 +130,13 @@
 | Radiant Bulwark | 0.35 | 0.22 | 0.32 | 0.53 | 0.00 | 0.00 | premium | aura |  |
 | Resolute Mantle | 0.34 | 0.21 | 0.30 | 0.53 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Omen Drum | 0.33 | 0.19 | 0.27 | 0.53 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.33 | 0.18 | 0.26 | 0.53 | 0.00 | 0.00 | premium | peel |  |
 | The Executioner | 0.33 | 0.18 | 0.13 | 0.53 | 0.00 | 0.30 | premium | protection-shred |  |
 | Gauntlet of Thebes | 0.33 | 0.18 | 0.26 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.33 | 0.18 | 0.22 | 0.53 | 0.00 | 0.08 | premium | mobility, cc-immunity |  |
+| Talisman of Purification | 0.32 | 0.16 | 0.20 | 0.53 | 0.00 | 0.08 | premium | cc-immunity |  |
+| Time-lock Aegis | 0.31 | 0.14 | 0.20 | 0.53 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.30 | 0.12 | 0.18 | 0.53 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.30 | 0.12 | 0.18 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.28 | 0.09 | 0.13 | 0.53 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.24 | 0.00 | 0.00 | 0.53 | 0.00 | 0.00 | premium | mobility |  |

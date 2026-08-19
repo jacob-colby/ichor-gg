@@ -113,7 +113,8 @@ builds:
     Revenge, Runeforged Hammer, Pharaoh''s Curse, Damaru, Lernaean Bow, Freya''s Tears,
     Oni Hunter''s Garb, Hydra''s Lament, Eye of the Storm, Breastplate of Valor, Shogun''s
     Ofuda, Shield Splitter, Shield of the Phoenix, Tyrfing, Spectral Armor, Avenging
-    Blade, Erosion, Eye of Providence, Dominance, Leviathan''s Hide, Tekko-Kagi.'
+    Blade, Erosion, Eye of Providence, Dominance, Leviathan''s Hide, Tekko-Kagi, Midgardian
+    Mail.'
   slot_scores:
     Golden Blade:
       total: 0.49
@@ -185,7 +186,7 @@ builds:
     Tears, Runeforged Hammer, Chandra''s Grace, Oni Hunter''s Garb, Phoenix Feather,
     Eye of the Storm, Spectral Armor, Shield Splitter, Damaru, Shogun''s Ofuda, Breastplate
     of Valor, Erosion, Lernaean Bow, Eye of Providence, Hydra''s Lament, Avenging
-    Blade.'
+    Blade, Leviathan''s Hide.'
   slot_scores:
     Berserker's Shield:
       total: 0.52
@@ -255,7 +256,7 @@ builds:
     Hammer, Stone of Binding, Void Shield, Screeching Gargoyle, Tekko-Kagi, Freya''s
     Tears, Damaru, Oni Hunter''s Garb, Pharaoh''s Curse, Hydra''s Lament, Void Stone,
     Lernaean Bow, Breastplate of Valor, Toxic Blade, Spectral Armor, Heartseeker,
-    Shield of the Phoenix, Eye of the Storm.'
+    Shield of the Phoenix, Eye of the Storm, Shield Splitter.'
   slot_scores:
     Avenging Blade:
       total: 0.48
@@ -324,7 +325,8 @@ builds:
     Pharaoh''s Curse, Jotunn''s Revenge, Tyrfing, Silverbranch Bow, Freya''s Tears,
     Lernaean Bow, Oni Hunter''s Garb, Runeforged Hammer, Breastplate of Valor, Shogun''s
     Ofuda, Damaru, Hydra''s Lament, Spectral Armor, Shield of the Phoenix, Toxic Blade,
-    Eye of the Storm, Erosion, Shield Splitter, Leviathan''s Hide, The Reaper, Dominance.'
+    Eye of the Storm, Erosion, Shield Splitter, Leviathan''s Hide, The Reaper, Dominance,
+    Eros'' Bow.'
   slot_scores:
     Golden Blade:
       total: 0.49
@@ -394,7 +396,7 @@ builds:
     The Crusher, Amanita Charm, Chandra''s Grace, Screeching Gargoyle, Oni Hunter''s
     Garb, Pharaoh''s Curse, Runeforged Hammer, Golden Blade, Damaru, Spectral Armor,
     Lernaean Bow, Shogun''s Ofuda, Arondight, Erosion, Leviathan''s Hide, Eye of Providence,
-    Eye of the Storm, Yogi''s Necklace, Midgardian Mail.'
+    Eye of the Storm, Yogi''s Necklace, Midgardian Mail, Prophetic Cloak.'
   slot_scores:
     Genji's Guard:
       total: 0.52
@@ -464,7 +466,7 @@ builds:
     Bow, Oni Hunter''s Garb, Hydra''s Lament, Eye of the Storm, Breastplate of Valor,
     Shogun''s Ofuda, Shield Splitter, Freya''s Tears, Shield of the Phoenix, Tyrfing,
     Spectral Armor, Avenging Blade, Erosion, Eye of Providence, Dominance, Leviathan''s
-    Hide, Tekko-Kagi.'
+    Hide, Tekko-Kagi, Midgardian Mail.'
   slot_scores:
     Golden Blade:
       total: 0.49

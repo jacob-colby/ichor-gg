@@ -123,7 +123,7 @@ builds:
     of Valor, Pharaoh''s Curse, Spear of Desolation, Demon Blade, Bracer of The Abyss,
     Deathbringer, Kinetic Cuirass, Obsidian Shard, Avenging Blade, Amanita Charm,
     Toxic Blade, Pendulum Blade, Eye of Providence, Shield Splitter, Oni Hunter''s
-    Garb.'
+    Garb, Shogun''s Ofuda.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -197,7 +197,7 @@ builds:
     Shard, Bracer of The Abyss, Tyrfing, Riptalon, Tekko-Kagi, Bancroft''s Talon,
     Oni Hunter''s Garb, Helm of Radiance, Doom Orb, Silverbranch Bow, The World Stone,
     Blood-Bound Book, Rod of Asclepius, Kinetic Cuirass, Freya''s Tears, Amanita Charm,
-    Gem of Focus.'
+    Gem of Focus, Jade Scepter.'
   slot_scores:
     Book of Thoth:
       total: 0.46
@@ -269,7 +269,7 @@ builds:
     Breastplate of Valor, Spectral Armor, Death Metal, Blood-Bound Book, Erosion,
     Shogun''s Ofuda, Eye of the Storm, Damaru, Shield Splitter, Eye of Providence,
     Bancroft''s Talon, Lernaean Bow, Draconic Scale, Lifebinder, Leviathan''s Hide,
-    Midgardian Mail, Avenging Blade, The Cosmic Horror.'
+    Midgardian Mail, Avenging Blade, The Cosmic Horror, Spear of the Magus.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -340,7 +340,8 @@ builds:
     Damaru, Lernaean Bow, Genji''s Guard, Obsidian Shard, Golden Blade, Toxic Blade,
     Screeching Gargoyle, Runeforged Hammer, Pendulum Blade, Tyrfing, Breastplate of
     Valor, Doom Orb, Bragi''s Harp, Stone of Binding, The World Stone, Kinetic Cuirass,
-    Pharaoh''s Curse, Void Shield, Amanita Charm, Dreamer''s Idol, Avatar''s Parashu.'
+    Pharaoh''s Curse, Void Shield, Amanita Charm, Dreamer''s Idol, Avatar''s Parashu,
+    Eye of Providence.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -412,7 +413,7 @@ builds:
     of Valor, Spear of the Magus, Bragi''s Harp, Bracer of The Abyss, Kinetic Cuirass,
     Amanita Charm, Eye of Providence, Shogun''s Ofuda, Spear of Desolation, Oni Hunter''s
     Garb, Blood-Bound Book, Freya''s Tears, Obsidian Shard, Eros'' Bow, Bancroft''s
-    Talon, Qin''s Blade, Demon Blade.'
+    Talon, Qin''s Blade, Avenging Blade, Demon Blade.'
   slot_scores:
     Golden Blade:
       total: 0.52
@@ -485,7 +486,7 @@ builds:
     Lernaean Bow, Pendulum Blade, Silverbranch Bow, Golden Blade, Runeforged Hammer,
     Kinetic Cuirass, Amanita Charm, Bracer of The Abyss, Bragi''s Harp, Obsidian Shard,
     Pharaoh''s Curse, Tyrfing, Tekko-Kagi, Eye of Providence, Oni Hunter''s Garb,
-    Gladiator''s Shield.'
+    Gladiator''s Shield, Helm of Radiance.'
   slot_scores:
     Book of Thoth:
       total: 0.43
@@ -557,7 +558,7 @@ builds:
     of Valor, Pharaoh''s Curse, Spear of Desolation, Demon Blade, Bracer of The Abyss,
     Deathbringer, Kinetic Cuirass, Obsidian Shard, Amanita Charm, Transcendence, Avenging
     Blade, Toxic Blade, Pendulum Blade, Eye of Providence, Shield Splitter, Oni Hunter''s
-    Garb.'
+    Garb, Shogun''s Ofuda.'
   slot_scores:
     Berserker's Shield:
       total: 0.51

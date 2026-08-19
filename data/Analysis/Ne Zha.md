@@ -30,7 +30,7 @@
 | Shield of the Phoenix | 0.47 | 0.46 | 0.57 | 0.53 | 0.00 | 0.22 | fair | sustain | **UNDERRATED** |
 | Berserker's Shield | 0.47 | 0.46 | 0.66 | 0.53 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Kinetic Cuirass | 0.46 | 0.44 | 0.59 | 0.53 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
-| Barbed Carver | 0.46 | 0.44 | 0.40 | 0.53 | 0.00 | 0.54 | premium | burst |  |
+| Barbed Carver | 0.46 | 0.44 | 0.40 | 0.53 | 0.00 | 0.54 | premium | burst | **UNDERRATED** |
 | Amanita Charm | 0.46 | 0.44 | 0.63 | 0.53 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Screeching Gargoyle | 0.46 | 0.44 | 0.49 | 0.53 | 0.00 | 0.32 | fair | protection-shred, peel |  |
 | Chandra's Grace | 0.46 | 0.44 | 0.53 | 0.53 | 0.00 | 0.22 | fair | sustain |  |
@@ -89,11 +89,15 @@
 | Radiant Bulwark | 0.35 | 0.22 | 0.32 | 0.53 | 0.00 | 0.00 | premium | aura |  |
 | Hastened Fatalis | 0.35 | 0.21 | 0.31 | 0.53 | 0.00 | 0.00 | premium | mobility |  |
 | Resolute Mantle | 0.34 | 0.21 | 0.30 | 0.53 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
+| Talisman of Purification | 0.34 | 0.21 | 0.20 | 0.53 | 0.00 | 0.22 | premium | cc-immunity |  |
 | Omen Drum | 0.33 | 0.19 | 0.27 | 0.53 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.33 | 0.18 | 0.26 | 0.53 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.33 | 0.18 | 0.26 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | Sun Beam Bow | 0.33 | 0.18 | 0.25 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | Vital Amplifier | 0.32 | 0.17 | 0.24 | 0.53 | 0.00 | 0.00 | premium |  |  |
+| Time-lock Aegis | 0.31 | 0.14 | 0.20 | 0.53 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.30 | 0.12 | 0.18 | 0.53 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.30 | 0.12 | 0.18 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.30 | 0.12 | 0.13 | 0.53 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.28 | 0.09 | 0.13 | 0.53 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.24 | 0.00 | 0.00 | 0.53 | 0.00 | 0.00 | premium | mobility |  |

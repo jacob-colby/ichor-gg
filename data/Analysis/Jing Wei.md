@@ -30,7 +30,7 @@
 | Transcendence | 0.45 | 0.43 | 0.52 | 0.52 | 0.00 | 0.21 | fair |  | **UNDERRATED** |
 | Avenging Blade | 0.45 | 0.43 | 0.48 | 0.52 | 0.00 | 0.31 | fair | protection-shred | **UNDERRATED** |
 | Demon Blade | 0.45 | 0.51 | 0.35 | 0.41 | 0.16 | 0.87 | premium |  |  |
-| Shield Splitter | 0.44 | 0.42 | 0.51 | 0.52 | 0.00 | 0.21 | fair |  |  |
+| Shield Splitter | 0.44 | 0.42 | 0.51 | 0.52 | 0.00 | 0.21 | fair |  | **UNDERRATED** |
 | Dagger of Frenzy | 0.44 | 0.35 | 0.36 | 0.53 | 0.56 | 0.33 | premium |  |  |
 | Eye of the Storm | 0.44 | 0.41 | 0.50 | 0.52 | 0.00 | 0.21 | fair | peel |  |
 | Freya's Tears | 0.44 | 0.41 | 0.59 | 0.52 | 0.00 | 0.00 | fair |  |  |
@@ -92,8 +92,12 @@
 | Radiant Bulwark | 0.34 | 0.22 | 0.32 | 0.52 | 0.00 | 0.00 | premium | aura |  |
 | Resolute Mantle | 0.34 | 0.21 | 0.30 | 0.52 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Omen Drum | 0.33 | 0.19 | 0.27 | 0.52 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.33 | 0.18 | 0.26 | 0.52 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.32 | 0.18 | 0.26 | 0.52 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.31 | 0.15 | 0.22 | 0.52 | 0.00 | 0.00 | premium | mobility, cc-immunity |  |
+| Talisman of Purification | 0.30 | 0.14 | 0.20 | 0.52 | 0.00 | 0.00 | premium | cc-immunity |  |
+| Time-lock Aegis | 0.30 | 0.14 | 0.20 | 0.52 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.30 | 0.12 | 0.18 | 0.52 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.30 | 0.12 | 0.18 | 0.52 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.28 | 0.09 | 0.13 | 0.52 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.23 | 0.00 | 0.00 | 0.52 | 0.00 | 0.00 | premium | mobility |  |

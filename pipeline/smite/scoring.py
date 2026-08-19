@@ -586,8 +586,24 @@ def is_buildable(item, god=None):
     (2026-08-05) broke the coincidence: Time-lock Aegis, Shell of Rebuke,
     Talisman of Purification and Agility Greaves all carry stats, and all four
     immediately started winning core slots at 2500 gold apiece. Excluding
-    relics by TIER, which is what the game actually says, restores it:
-    coverage 51.0% -> 52.6%, win-weighted 53.1% -> 54.8%.
+    relics by TIER restored the gate: coverage 51.0% -> 52.6%, win-weighted
+    53.1% -> 54.8%.
+
+    THAT RULE WAS TOO WIDE, and its stated justification — "which is what the
+    game actually says" — was simply wrong (corrected 2026-08-19). The game
+    gives a free slot to the BASE relic only. An UPGRADED relic is bought with
+    gold and occupies one of the six like any other item, and the community
+    data says so plainly: across the tracked six-item builds, Shell of Rebuke
+    appears 62 times, Blinking Abyss 20 and Sundering Echo 2, while the one
+    free relic in the pool (Blink Rune, cost 0) appears zero times. The model
+    was structurally unable to recommend an item sitting in 62 real builds.
+
+    So the rule is COST, not tier: a relic you paid for took a slot.
+
+    Blinking Abyss and Sundering Echo are still excluded — by the statless rule
+    above, not by this one. That is a known blindness (nothing here can score an
+    item with no stats) rather than a claim about the game, and it is the honest
+    place for them to fail.
 
     Note the asymmetry with `efficiency.efficiency_pool`, which deliberately
     keeps relics IN the gold fit. Removing them from both drops coverage to
@@ -599,8 +615,12 @@ def is_buildable(item, god=None):
     if owner:
         return bool(god) and owner == god.get("name")
     tier = item.get("tier")
-    # A non-numeric tier is the wiki's label for a relic/glyph/active.
-    return isinstance(tier, int) and not isinstance(tier, bool) and tier >= 3
+    if isinstance(tier, int) and not isinstance(tier, bool):
+        return tier >= 3
+    # A non-numeric tier is the wiki's label for a relic/glyph/active. A PAID
+    # one takes a core slot; the free base relic gets the game's own slot.
+    cost = item.get("cost")
+    return isinstance(cost, (int, float)) and not isinstance(cost, bool) and cost > 0
 
 
 def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):

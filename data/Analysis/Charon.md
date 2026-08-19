@@ -30,13 +30,14 @@
 | Prophetic Cloak | 0.45 | 0.49 | 0.43 | 0.45 | 0.00 | 0.64 | premium |  | **UNDERRATED** |
 | Screeching Gargoyle | 0.45 | 0.49 | 0.49 | 0.45 | 0.00 | 0.49 | fair | protection-shred, peel | **UNDERRATED** |
 | Hide of the Nemean Lion | 0.45 | 0.49 | 0.50 | 0.45 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
-| Void Shield | 0.45 | 0.49 | 0.46 | 0.45 | 0.00 | 0.56 | fair | protection-shred, aura |  |
-| Doublet of Binding | 0.45 | 0.49 | 0.50 | 0.45 | 0.00 | 0.46 | fair | aura |  |
+| Void Shield | 0.45 | 0.49 | 0.46 | 0.45 | 0.00 | 0.56 | fair | protection-shred, aura | **UNDERRATED** |
+| Doublet of Binding | 0.45 | 0.49 | 0.50 | 0.45 | 0.00 | 0.46 | fair | aura | **UNDERRATED** |
 | Hussar's Wings | 0.44 | 0.48 | 0.38 | 0.45 | 0.00 | 0.71 | premium | cc-immunity |  |
 | Stampede | 0.44 | 0.47 | 0.48 | 0.45 | 0.00 | 0.46 | fair | mobility, aura, cc-immunity |  |
 | Chandra's Grace | 0.44 | 0.47 | 0.53 | 0.45 | 0.00 | 0.34 | fair | sustain |  |
 | Void Stone | 0.44 | 0.47 | 0.43 | 0.45 | 0.00 | 0.56 | fair | protection-shred, aura |  |
 | Rod of Asclepius | 0.44 | 0.47 | 0.55 | 0.45 | 0.00 | 0.30 | fair | sustain, aura |  |
+| Shell of Rebuke | 0.44 | 0.34 | 0.26 | 0.58 | 0.17 | 0.51 | premium | peel |  |
 | Ragnarok's Wake | 0.44 | 0.47 | 0.43 | 0.45 | 0.00 | 0.56 | premium | mobility, burst |  |
 | Xibalban Effigy | 0.44 | 0.47 | 0.45 | 0.45 | 0.00 | 0.51 | fair |  |  |
 | Helm of Darkness | 0.44 | 0.47 | 0.41 | 0.45 | 0.00 | 0.60 | premium | mobility |  |
@@ -85,10 +86,13 @@
 | Heartwood Charm | 0.37 | 0.33 | 0.33 | 0.45 | 0.00 | 0.34 | premium |  |  |
 | Eye of Erebus | 0.36 | 0.32 | 0.32 | 0.45 | 0.00 | 0.34 | premium | ward-economy |  |
 | Necronomicon | 0.35 | 0.30 | 0.39 | 0.45 | 0.00 | 0.09 | premium |  |  |
+| Time-lock Aegis | 0.35 | 0.29 | 0.20 | 0.45 | 0.00 | 0.51 | premium | cc-immunity |  |
 | Staff of Myrddin | 0.34 | 0.28 | 0.31 | 0.45 | 0.00 | 0.23 | premium |  |  |
 | Brawler’s Beat Stick | 0.34 | 0.28 | 0.18 | 0.45 | 0.00 | 0.51 | premium | anti-heal |  |
 | Resolute Mantle | 0.34 | 0.27 | 0.30 | 0.45 | 0.00 | 0.20 | premium | cc-immunity, sustain |  |
 | Circe's Hexstone | 0.33 | 0.26 | 0.22 | 0.45 | 0.00 | 0.34 | premium | mobility, cc-immunity |  |
 | Omen Drum | 0.31 | 0.19 | 0.27 | 0.46 | 0.18 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.30 | 0.19 | 0.18 | 0.45 | 0.00 | 0.20 | premium |  |  |
+| Talisman of Purification | 0.29 | 0.18 | 0.20 | 0.45 | 0.00 | 0.13 | premium | cc-immunity |  |
 | Mercury's Talaria | 0.25 | 0.09 | 0.13 | 0.45 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.20 | 0.00 | 0.00 | 0.45 | 0.00 | 0.00 | premium | mobility |  |

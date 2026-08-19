@@ -120,7 +120,8 @@ builds:
     Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden Blade, Transcendence,
     Avenging Blade, Arondight, Shield Splitter, Eye of the Storm, Tyrfing, Riptalon,
     Dominance, Silverbranch Bow, Breastplate of Valor, Deathbringer, Barbed Carver,
-    Berserker''s Shield, Genji''s Guard, Musashi''s Dual Swords, Bloodforge.'
+    Berserker''s Shield, Genji''s Guard, Musashi''s Dual Swords, Bloodforge, Kinetic
+    Cuirass.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -191,7 +192,7 @@ builds:
     Hammer, Damaru, Transcendence, Pendulum Blade, Lernaean Bow, Arondight, Oni Hunter''s
     Garb, Berserker''s Shield, Golden Blade, Tekko-Kagi, Avenging Blade, Dominance,
     Kinetic Cuirass, Shield Splitter, Amanita Charm, Shield of the Phoenix, Eye of
-    the Storm, Tyrfing, Eye of Providence, Yogi''s Necklace.'
+    the Storm, Tyrfing, Eye of Providence, Yogi''s Necklace, Riptalon.'
   slot_scores:
     Breastplate of Valor:
       total: 0.5
@@ -261,7 +262,7 @@ builds:
     Damaru, Silverbranch Bow, Shield of the Phoenix, Berserker''s Shield, Lernaean
     Bow, Kinetic Cuirass, Amanita Charm, Screeching Gargoyle, Golden Blade, Chandra''s
     Grace, Eye of Providence, Transcendence, Avenging Blade, Oni Hunter''s Garb, Avatar''s
-    Parashu.'
+    Parashu, Shield Splitter.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
@@ -331,7 +332,7 @@ builds:
     the Storm, Chandra''s Grace, Erosion, Shield Splitter, Phoenix Feather, Eye of
     Providence, Spectral Armor, Draconic Scale, Riptalon, Breastplate of Valor, Golden
     Blade, Hydra''s Lament, Pharaoh''s Curse, Avenging Blade, Leviathan''s Hide, Genji''s
-    Guard, Midgardian Mail, Ancile.'
+    Guard, Midgardian Mail, Ancile, Shogun''s Ofuda.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.55
@@ -400,7 +401,7 @@ builds:
     Silverbranch Bow, Avatar''s Parashu, Hydra''s Lament, Runeforged Hammer, Damaru,
     Toxic Blade, Lernaean Bow, Screeching Gargoyle, Golden Blade, Transcendence, Breastplate
     of Valor, Berserker''s Shield, Shield Splitter, Eye of the Storm, Stone of Binding,
-    Tyrfing, Oath-Sworn Spear, Genji''s Guard, Arondight, Kinetic Cuirass.'
+    Tyrfing, Oath-Sworn Spear, Genji''s Guard, Arondight, Kinetic Cuirass, Void Shield.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -540,7 +541,7 @@ builds:
     Arondight, Screeching Gargoyle, Chandra''s Grace, Gladiator''s Shield, Runeforged
     Hammer, Berserker''s Shield, Prophetic Cloak, Kinetic Cuirass, Damaru, Amanita
     Charm, Riptalon, Eye of Providence, Oni Hunter''s Garb, Regrowth Striders, Lernaean
-    Bow, Silverbranch Bow, Golden Blade, Tekko-Kagi.'
+    Bow, Silverbranch Bow, Golden Blade, Tekko-Kagi, Transcendence.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -609,7 +610,8 @@ builds:
     Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden Blade, Transcendence,
     Avenging Blade, Arondight, Shield Splitter, Genji''s Guard, Eye of the Storm,
     Tyrfing, Riptalon, Dominance, Silverbranch Bow, Breastplate of Valor, Deathbringer,
-    Barbed Carver, Berserker''s Shield, Musashi''s Dual Swords, Bloodforge.'
+    Barbed Carver, Berserker''s Shield, Musashi''s Dual Swords, Bloodforge, Kinetic
+    Cuirass.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61

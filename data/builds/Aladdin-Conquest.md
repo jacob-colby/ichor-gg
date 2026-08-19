@@ -122,7 +122,7 @@ builds:
     of Valor, Arondight, Lernaean Bow, Golden Blade, Avenging Blade, Chronos'' Pendant,
     Freya''s Tears, Shield Splitter, Bragi''s Harp, Avatar''s Parashu, Riptalon, Eye
     of the Storm, Tyrfing, Berserker''s Shield, Silverbranch Bow, Shield of the Phoenix,
-    Triton''s Conch, Doom Orb, The World Stone, Kinetic Cuirass.'
+    Triton''s Conch, Doom Orb, The World Stone, Kinetic Cuirass, Dominance.'
   slot_scores:
     Book of Thoth:
       total: 0.42
@@ -195,7 +195,7 @@ builds:
     Bancroft''s Talon, Damaru, Triton''s Conch, Helm of Radiance, Pendulum Blade,
     Gem of Focus, Blood-Bound Book, Rod of Asclepius, Lernaean Bow, Totem of Death,
     Arondight, Oni Hunter''s Garb, Berserker''s Shield, Golden Blade, Jade Scepter,
-    Freya''s Tears, Titan''s Bane.'
+    Freya''s Tears, Titan''s Bane, Ancient Signet.'
   slot_scores:
     Book of Thoth:
       total: 0.47
@@ -267,7 +267,7 @@ builds:
     Idol, Riptalon, Totem of Death, Arondight, Damaru, Silverbranch Bow, Shield of
     the Phoenix, Berserker''s Shield, Bragi''s Harp, Helm of Radiance, Blood-Bound
     Book, Rod of Asclepius, Lernaean Bow, Kinetic Cuirass, Amanita Charm, Screeching
-    Gargoyle.'
+    Gargoyle, Triton''s Conch.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -410,7 +410,8 @@ builds:
     Gargoyle, Doom Orb, The World Stone, Nimble Ring, Avatar''s Parashu, Runeforged
     Hammer, Death Metal, Dreamer''s Idol, Breastplate of Valor, Damaru, Toxic Blade,
     Lernaean Bow, Berserker''s Shield, Freya''s Tears, Arondight, Stone of Binding,
-    Golden Blade, Chronos'' Pendant, Kinetic Cuirass, Void Shield, Amanita Charm.'
+    Golden Blade, Chronos'' Pendant, Kinetic Cuirass, Void Shield, Amanita Charm,
+    Shield of the Phoenix.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -555,7 +556,7 @@ builds:
     Hammer, Berserker''s Shield, Prophetic Cloak, Kinetic Cuirass, Damaru, Amanita
     Charm, Helm of Radiance, Riptalon, Eye of Providence, Doom Orb, Oni Hunter''s
     Garb, Blood-Bound Book, Rod of Asclepius, Regrowth Striders, Lernaean Bow, The
-    World Stone.'
+    World Stone, Silverbranch Bow.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -626,7 +627,7 @@ builds:
     Ring, Breastplate of Valor, Arondight, Lernaean Bow, Golden Blade, Avenging Blade,
     Chronos'' Pendant, Freya''s Tears, Shield Splitter, Bragi''s Harp, Avatar''s Parashu,
     Riptalon, Eye of the Storm, Tyrfing, Berserker''s Shield, Silverbranch Bow, Shield
-    of the Phoenix, Triton''s Conch, Doom Orb, The World Stone, Kinetic Cuirass.'
+    of the Phoenix, Triton''s Conch, Doom Orb, The World Stone, Kinetic Cuirass, Dominance.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -698,7 +699,7 @@ builds:
     Avenging Blade, Chronos'' Pendant, Freya''s Tears, Shield Splitter, Bragi''s Harp,
     Avatar''s Parashu, Riptalon, Eye of the Storm, Tyrfing, Berserker''s Shield, Silverbranch
     Bow, Shield of the Phoenix, Triton''s Conch, Doom Orb, The World Stone, Kinetic
-    Cuirass.'
+    Cuirass, Dominance.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6

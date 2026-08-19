@@ -31,7 +31,7 @@
 | Lernaean Bow | 0.44 | 0.47 | 0.50 | 0.45 | 0.00 | 0.39 | fair | wave-clear, burst | **UNDERRATED** |
 | Wyrmskin Hide | 0.44 | 0.47 | 0.40 | 0.45 | 0.00 | 0.62 | premium |  | **UNDERRATED** |
 | Heartseeker | 0.44 | 0.47 | 0.41 | 0.45 | 0.00 | 0.59 | premium | burst | **UNDERRATED** |
-| Titan's Bane | 0.43 | 0.46 | 0.45 | 0.45 | 0.00 | 0.49 | fair |  |  |
+| Titan's Bane | 0.43 | 0.46 | 0.45 | 0.45 | 0.00 | 0.49 | fair |  | **UNDERRATED** |
 | Yogi's Necklace | 0.43 | 0.46 | 0.57 | 0.45 | 0.00 | 0.20 | fair |  |  |
 | Ancile | 0.43 | 0.46 | 0.51 | 0.45 | 0.00 | 0.33 | fair |  |  |
 | Tekko-Kagi | 0.43 | 0.46 | 0.44 | 0.45 | 0.00 | 0.49 | fair | mobility |  |
@@ -72,6 +72,7 @@
 | Contagion | 0.38 | 0.36 | 0.39 | 0.45 | 0.00 | 0.30 | premium | anti-heal, burst |  |
 | Rage | 0.38 | 0.36 | 0.39 | 0.45 | 0.00 | 0.29 | premium |  |  |
 | Shroud of Vengeance | 0.38 | 0.36 | 0.36 | 0.45 | 0.00 | 0.36 | premium | burst |  |
+| Shell of Rebuke | 0.38 | 0.26 | 0.26 | 0.54 | 0.13 | 0.26 | premium | peel |  |
 | Umbral Link | 0.38 | 0.35 | 0.45 | 0.45 | 0.00 | 0.13 | fair | sustain, aura |  |
 | Oath-Sworn Spear | 0.38 | 0.35 | 0.33 | 0.45 | 0.00 | 0.39 | premium | protection-shred |  |
 | Dagger of Frenzy | 0.37 | 0.25 | 0.36 | 0.54 | 0.11 | 0.00 | premium |  |  |
@@ -90,10 +91,13 @@
 | Gauntlet of Thebes | 0.32 | 0.24 | 0.26 | 0.45 | 0.00 | 0.20 | premium |  |  |
 | Vital Amplifier | 0.32 | 0.23 | 0.24 | 0.45 | 0.00 | 0.20 | premium |  |  |
 | Circe's Hexstone | 0.32 | 0.23 | 0.22 | 0.45 | 0.00 | 0.25 | premium | mobility, cc-immunity |  |
+| Time-lock Aegis | 0.31 | 0.21 | 0.20 | 0.45 | 0.00 | 0.26 | premium | cc-immunity |  |
 | Hastened Fatalis | 0.31 | 0.21 | 0.31 | 0.45 | 0.00 | 0.00 | premium | mobility |  |
 | Daybreak Gavel | 0.31 | 0.19 | 0.18 | 0.45 | 0.25 | 0.20 | premium |  |  |
 | Brawler’s Beat Stick | 0.30 | 0.20 | 0.18 | 0.45 | 0.00 | 0.26 | premium | anti-heal |  |
 | Omen Drum | 0.30 | 0.19 | 0.27 | 0.45 | 0.00 | 0.00 | premium |  |  |
 | Sun Beam Bow | 0.29 | 0.18 | 0.25 | 0.45 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.28 | 0.15 | 0.20 | 0.45 | 0.00 | 0.05 | premium | cc-immunity |  |
 | The Executioner | 0.26 | 0.12 | 0.13 | 0.45 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.25 | 0.09 | 0.13 | 0.45 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.20 | 0.00 | 0.00 | 0.45 | 0.00 | 0.00 | premium | mobility |  |

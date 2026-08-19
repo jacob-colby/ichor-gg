@@ -120,7 +120,8 @@ builds:
     Tears, Nimble Ring, Shield of the Phoenix, Spear of Desolation, Oni Hunter''s
     Garb, The Cosmic Horror, Erosion, Shifter''s Shield, Spear of the Magus, Eye of
     Providence, Spectral Armor, Helm of Radiance, Draconic Scale, Rod of Asclepius,
-    Obsidian Shard, Leviathan''s Hide, Jade Scepter, Midgardian Mail, Screeching Gargoyle.'
+    Obsidian Shard, Leviathan''s Hide, Jade Scepter, Midgardian Mail, Screeching Gargoyle,
+    Mantle Of Discord, Stone of Binding.'
   slot_scores:
     Book of Thoth:
       total: 0.51
@@ -191,7 +192,8 @@ builds:
     Garb, Freya''s Tears, The Cosmic Horror, Spear of Desolation, Death Metal, Spear
     of the Magus, Shield of the Phoenix, Helm of Radiance, Spectral Armor, Obsidian
     Shard, Rod of Asclepius, Erosion, Shifter''s Shield, Eye of Providence, Jade Scepter,
-    Draconic Scale, Yogi''s Necklace, Triton''s Conch.'
+    Draconic Scale, Yogi''s Necklace, Triton''s Conch, Leviathan''s Hide, Bancroft''s
+    Talon.'
   slot_scores:
     Book of Thoth:
       total: 0.52
@@ -260,7 +262,8 @@ builds:
     Freya''s Tears, Nimble Ring, The Cosmic Horror, Shield of the Phoenix, Spear of
     the Magus, Oni Hunter''s Garb, Obsidian Shard, Spectral Armor, Death Metal, Erosion,
     Shifter''s Shield, Helm of Radiance, Eye of Providence, Rod of Asclepius, Draconic
-    Scale, Screeching Gargoyle, Leviathan''s Hide, Midgardian Mail.'
+    Scale, Screeching Gargoyle, Leviathan''s Hide, Midgardian Mail, Chandra''s Grace,
+    Jade Scepter.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -330,7 +333,7 @@ builds:
     Spear of Desolation, Blood-Bound Book, Oni Hunter''s Garb, Lifebinder, Bancroft''s
     Talon, The Cosmic Horror, Phoenix Feather, Erosion, Shifter''s Shield, Spectral
     Armor, Spear of the Magus, Eye of Providence, Draconic Scale, Helm of Radiance,
-    Jade Scepter.'
+    Jade Scepter, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -469,7 +472,8 @@ builds:
     Charm, Freya''s Tears, Oni Hunter''s Garb, Shield of the Phoenix, The Cosmic Horror,
     Spear of Desolation, Spear of the Magus, Spectral Armor, Death Metal, Helm of
     Radiance, Erosion, Shifter''s Shield, Rod of Asclepius, Eye of Providence, Bracer
-    of The Abyss, Leviathan''s Hide, Blood-Bound Book, Draconic Scale, Bragi''s Harp.'
+    of The Abyss, Leviathan''s Hide, Blood-Bound Book, Draconic Scale, Bragi''s Harp,
+    Midgardian Mail, Jade Scepter.'
   slot_scores:
     Breastplate of Valor:
       total: 0.56
@@ -539,7 +543,7 @@ builds:
     Oni Hunter''s Garb, Nimble Ring, Screeching Gargoyle, Chandra''s Grace, Gladiator''s
     Shield, Spectral Armor, Erosion, Shifter''s Shield, The Cosmic Horror, Eye of
     Providence, Prophetic Cloak, Draconic Scale, Spear of the Magus, Gem of Focus,
-    Leviathan''s Hide, Helm of Radiance.'
+    Leviathan''s Hide, Helm of Radiance, Midgardian Mail, Totem of Death.'
   slot_scores:
     Genji's Guard:
       total: 0.59
@@ -612,7 +616,7 @@ builds:
     Spectral Armor, Erosion, Helm of Radiance, Lernaean Bow, Shifter''s Shield, The
     Reaper, Obsidian Shard, Eye of Providence, Damaru, Rod of Asclepius, Avenging
     Blade, Draconic Scale, Leviathan''s Hide, Bragi''s Harp, Shogun''s Ofuda, Midgardian
-    Mail.'
+    Mail, Jade Scepter.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -684,7 +688,8 @@ builds:
     of the Magus, Shield Splitter, Helm of Radiance, Eye of the Storm, Spectral Armor,
     Erosion, Obsidian Shard, Shifter''s Shield, Eye of Providence, Rod of Asclepius,
     Draconic Scale, The Reaper, Golden Blade, Pharaoh''s Curse, Jade Scepter, Leviathan''s
-    Hide, Avenging Blade, Midgardian Mail, Damaru, Triton''s Conch, Screeching Gargoyle.'
+    Hide, Avenging Blade, Midgardian Mail, Damaru, Triton''s Conch, Screeching Gargoyle,
+    Ethereal Staff.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -754,7 +759,7 @@ builds:
     Spear of Desolation, The Cosmic Horror, Erosion, Shifter''s Shield, Spear of the
     Magus, Eye of Providence, Spectral Armor, Helm of Radiance, Draconic Scale, Rod
     of Asclepius, Leviathan''s Hide, Jade Scepter, Midgardian Mail, Obsidian Shard,
-    Screeching Gargoyle.'
+    Screeching Gargoyle, Mantle Of Discord, Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.57

@@ -32,7 +32,7 @@
 | Eye of Providence | 0.49 | 0.43 | 0.62 | 0.60 | 0.00 | 0.00 | undervalued | ward-economy | **UNDERRATED** |
 | Shield Splitter | 0.49 | 0.43 | 0.51 | 0.60 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Eros' Bow | 0.48 | 0.43 | 0.48 | 0.60 | 0.00 | 0.32 | fair | aura | **UNDERRATED** |
-| Oni Hunter's Garb | 0.48 | 0.43 | 0.61 | 0.60 | 0.00 | 0.00 | undervalued |  |  |
+| Oni Hunter's Garb | 0.48 | 0.43 | 0.61 | 0.60 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Eye of the Storm | 0.48 | 0.43 | 0.50 | 0.60 | 0.00 | 0.24 | fair | peel |  |
 | Odysseus' Bow | 0.48 | 0.37 | 0.36 | 0.60 | 0.49 | 0.42 | premium | burst, wave-clear |  |
 | Barbed Carver | 0.48 | 0.42 | 0.40 | 0.60 | 0.00 | 0.48 | premium | burst |  |
@@ -92,8 +92,12 @@
 | Radiant Bulwark | 0.38 | 0.22 | 0.32 | 0.60 | 0.00 | 0.00 | premium | aura |  |
 | Resolute Mantle | 0.37 | 0.21 | 0.30 | 0.60 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Omen Drum | 0.36 | 0.19 | 0.27 | 0.60 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.36 | 0.18 | 0.26 | 0.60 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.36 | 0.18 | 0.26 | 0.60 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.35 | 0.15 | 0.22 | 0.60 | 0.00 | 0.00 | premium | mobility, cc-immunity |  |
+| Talisman of Purification | 0.34 | 0.14 | 0.20 | 0.60 | 0.00 | 0.00 | premium | cc-immunity |  |
+| Time-lock Aegis | 0.34 | 0.14 | 0.20 | 0.60 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.33 | 0.12 | 0.18 | 0.60 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.33 | 0.12 | 0.18 | 0.60 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.32 | 0.09 | 0.13 | 0.60 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.27 | 0.00 | 0.00 | 0.60 | 0.00 | 0.00 | premium | mobility |  |

@@ -121,7 +121,7 @@ builds:
     Breastplate of Valor, Shield of the Phoenix, Oni Hunter''s Garb, Rod of Asclepius,
     Helm of Radiance, Chronos'' Pendant, Jade Scepter, Spectral Armor, Obsidian Shard,
     Erosion, Ethereal Staff, Eye of Providence, Alchemist Coat, Draconic Scale, Death
-    Metal, Shifter''s Shield.'
+    Metal, Doom Orb, Leviathan''s Hide, Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -193,7 +193,7 @@ builds:
     Hunter''s Garb, Spear of the Magus, Bancroft''s Talon, Shield of the Phoenix,
     Rod of Asclepius, Chronos'' Pendant, Helm of Radiance, Jade Scepter, Triton''s
     Conch, Spectral Armor, Yogi''s Necklace, Ethereal Staff, Doom Orb, Bragi''s Harp,
-    Obsidian Shard.'
+    Obsidian Shard, Blood-Bound Book.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -262,7 +262,8 @@ builds:
     Horror, Nimble Ring, Kinetic Cuirass, Amanita Charm, Spear of the Magus, Breastplate
     of Valor, Shield of the Phoenix, Death Metal, Oni Hunter''s Garb, Chronos'' Pendant,
     Rod of Asclepius, Obsidian Shard, Spectral Armor, Helm of Radiance, Chandra''s
-    Grace, Jade Scepter, Screeching Gargoyle, Doom Orb, Erosion, Shifter''s Shield.'
+    Grace, Jade Scepter, Screeching Gargoyle, Doom Orb, Erosion, Eye of Providence,
+    Ethereal Staff, Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -332,7 +333,7 @@ builds:
     Grace, Nimble Ring, Blood-Bound Book, Oni Hunter''s Garb, Spear of Desolation,
     Lifebinder, The Cosmic Horror, Breastplate of Valor, Spear of the Magus, Phoenix
     Feather, Erosion, Spectral Armor, Eye of Providence, Draconic Scale, Helm of Radiance,
-    Jade Scepter, Shifter''s Shield.'
+    Jade Scepter, Leviathan''s Hide, Midgardian Mail, Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -401,7 +402,8 @@ builds:
     Spear of the Magus, Genji''s Guard, Kinetic Cuirass, Nimble Ring, Amanita Charm,
     Screeching Gargoyle, Obsidian Shard, Void Shield, Stone of Binding, Breastplate
     of Valor, Doom Orb, Oni Hunter''s Garb, Shield of the Phoenix, Void Stone, Rod
-    of Asclepius, Helm of Radiance, Spectral Armor, Chronos'' Pendant, Jade Scepter.'
+    of Asclepius, Helm of Radiance, Spectral Armor, Chronos'' Pendant, Jade Scepter,
+    Erosion, Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -471,7 +473,7 @@ builds:
     Spear of the Magus, Oni Hunter''s Garb, Death Metal, Shield of the Phoenix, Bancroft''s
     Talon, Bracer of The Abyss, Spectral Armor, Rod of Asclepius, Bragi''s Harp, Helm
     of Radiance, Chronos'' Pendant, Blood-Bound Book, Jade Scepter, Eye of Providence,
-    Erosion, Obsidian Shard.'
+    Erosion, Leviathan''s Hide, Obsidian Shard, Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -541,7 +543,8 @@ builds:
     Cuirass, Amanita Charm, Chronos'' Pendant, Nimble Ring, Chandra''s Grace, Screeching
     Gargoyle, Oni Hunter''s Garb, The Cosmic Horror, Gladiator''s Shield, Spear of
     the Magus, Gem of Focus, Spectral Armor, Totem of Death, Death Metal, Prophetic
-    Cloak, Erosion, Rod of Asclepius, Helm of Radiance, Shifter''s Shield.'
+    Cloak, Erosion, Rod of Asclepius, Helm of Radiance, Eye of Providence, Leviathan''s
+    Hide, Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.61
@@ -613,8 +616,8 @@ builds:
     Hunter''s Garb, The Reaper, Lernaean Bow, Eye of the Storm, Shield of the Phoenix,
     Shield Splitter, Bragi''s Harp, Damaru, Pharaoh''s Curse, Avenging Blade, Rod
     of Asclepius, Helm of Radiance, Spectral Armor, Triton''s Conch, Chronos'' Pendant,
-    Tekko-Kagi, Jade Scepter, Tyrfing, Riptalon, Erosion, Obsidian Shard, Shifter''s
-    Shield.'
+    Tekko-Kagi, Jade Scepter, Tyrfing, Riptalon, Erosion, Silverbranch Bow, Obsidian
+    Shard, Shifter''s Shield.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -687,7 +690,7 @@ builds:
     the Storm, Helm of Radiance, Shield Splitter, Chronos'' Pendant, Golden Blade,
     Jade Scepter, Triton''s Conch, Spectral Armor, Avenging Blade, Damaru, Obsidian
     Shard, Ethereal Staff, Erosion, Bragi''s Harp, Alchemist Coat, Pharaoh''s Curse,
-    Eye of Providence, Blood-Bound Book, Shifter''s Shield.'
+    Eye of Providence, Blood-Bound Book, Lernaean Bow, Shifter''s Shield.'
   slot_scores:
     Book of Thoth:
       total: 0.51
@@ -757,7 +760,7 @@ builds:
     of the Magus, Breastplate of Valor, Shield of the Phoenix, Oni Hunter''s Garb,
     Rod of Asclepius, Obsidian Shard, Helm of Radiance, Chronos'' Pendant, Jade Scepter,
     Spectral Armor, Erosion, Shifter''s Shield, Ethereal Staff, Eye of Providence,
-    Alchemist Coat, Draconic Scale, Death Metal.'
+    Alchemist Coat, Draconic Scale, Death Metal, Doom Orb, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.58

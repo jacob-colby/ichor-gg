@@ -123,7 +123,7 @@ builds:
     of the Phoenix, Draconic Scale, Helm of Radiance, Spear of Desolation, Pharaoh''s
     Curse, Leviathan''s Hide, Rod of Asclepius, Midgardian Mail, Golden Blade, The
     Reaper, Mantle Of Discord, Stone of Binding, Jade Scepter, Obsidian Shard, Avenging
-    Blade, Chronos'' Pendant, Damaru.'
+    Blade, Chronos'' Pendant, Damaru, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.44
@@ -197,7 +197,7 @@ builds:
     Erosion, Shield of the Phoenix, Rod of Asclepius, Eye of Providence, Chronos''
     Pendant, Draconic Scale, Golden Blade, Jade Scepter, The Reaper, Pharaoh''s Curse,
     Obsidian Shard, Damaru, Leviathan''s Hide, Avenging Blade, Yogi''s Necklace, Midgardian
-    Mail, Bancroft''s Talon.'
+    Mail, Bancroft''s Talon, Triton''s Conch.'
   slot_scores:
     Genji's Guard:
       total: 0.45
@@ -269,7 +269,7 @@ builds:
     Metal, Eye of Providence, Helm of Radiance, Eye of the Storm, The Reaper, Obsidian
     Shard, Chronos'' Pendant, Draconic Scale, Pharaoh''s Curse, Rod of Asclepius,
     Screeching Gargoyle, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord, Golden
-    Blade, Chandra''s Grace, Jade Scepter, Stone of Binding.'
+    Blade, Chandra''s Grace, Jade Scepter, Stone of Binding, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.45
@@ -341,7 +341,7 @@ builds:
     Phoenix Feather, Hydra''s Lament, Spectral Armor, Eye of the Storm, Spear of the
     Magus, Death Metal, Erosion, Shield Splitter, Spear of Desolation, Eye of Providence,
     Draconic Scale, Helm of Radiance, Golden Blade, Pharaoh''s Curse, Leviathan''s
-    Hide, Avenging Blade, Jade Scepter.'
+    Hide, Avenging Blade, Jade Scepter, Midgardian Mail.'
   slot_scores:
     Ethereal Staff:
       total: 0.5
@@ -413,7 +413,7 @@ builds:
     The Reaper, Hydra''s Lament, Obsidian Shard, Shield Splitter, Spectral Armor,
     Erosion, Death Metal, Eye of Providence, Eye of the Storm, Helm of Radiance, Shield
     of the Phoenix, Draconic Scale, Pharaoh''s Curse, Riptalon, Rod of Asclepius,
-    Leviathan''s Hide, Midgardian Mail, Golden Blade.'
+    Leviathan''s Hide, Midgardian Mail, Golden Blade, Silverbranch Bow.'
   slot_scores:
     Ethereal Staff:
       total: 0.49
@@ -485,7 +485,7 @@ builds:
     Tyrfing, Lernaean Bow, Erosion, Helm of Radiance, Shield Splitter, Death Metal,
     Eye of Providence, Shield of the Phoenix, Spear of Desolation, Toxic Blade, Draconic
     Scale, Rod of Asclepius, Leviathan''s Hide, Eye of the Storm, The Reaper, Bracer
-    of The Abyss, Midgardian Mail.'
+    of The Abyss, Midgardian Mail, Chronos'' Pendant.'
   slot_scores:
     Golden Blade:
       total: 0.4
@@ -558,7 +558,7 @@ builds:
     Hammer, The Cosmic Horror, Shield Splitter, Draconic Scale, Spear of the Magus,
     Pharaoh''s Curse, Leviathan''s Hide, Helm of Radiance, Eye of the Storm, Midgardian
     Mail, Gem of Focus, Mantle Of Discord, Stone of Binding, Death Metal, Totem of
-    Death, Arondight.'
+    Death, Arondight, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.47
@@ -630,7 +630,7 @@ builds:
     Eye of the Storm, Death Metal, Draconic Scale, Helm of Radiance, Spear of Desolation,
     Pharaoh''s Curse, Leviathan''s Hide, Rod of Asclepius, Midgardian Mail, Golden
     Blade, The Reaper, Mantle Of Discord, Stone of Binding, Jade Scepter, Obsidian
-    Shard, Avenging Blade, Chronos'' Pendant, Damaru.'
+    Shard, Avenging Blade, Chronos'' Pendant, Damaru, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.44

@@ -2,7 +2,7 @@
 
 Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 
-**Mean coverage:** 48%  ·  **Win-weighted coverage:** 49%  ·  **Pooled rank corr:** 0.43 (n=432)
+**Mean coverage:** 45%  ·  **Win-weighted coverage:** 47%  ·  **Pooled rank corr:** 0.39 (n=453)
 
 | God | Coverage | Win-weighted | Community items |
 |---|---|---|---|
@@ -15,18 +15,18 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Anubis | 60% | 61% | 5 |
 | Aphrodite | 75% | 77% | 4 |
 | Apollo | 40% | 39% | 5 |
-| Ares | 0% | 0% | 4 |
+| Ares | 0% | 0% | 5 |
 | Artemis | 20% | 20% | 5 |
-| Artio | 50% | 66% | 4 |
+| Artio | 40% | 54% | 5 |
 | Athena | 60% | 61% | 5 |
-| Atlas | 50% | 54% | 4 |
+| Atlas | 40% | 43% | 5 |
 | Awilix | 40% | 40% | 5 |
-| Bacchus | 75% | 76% | 4 |
-| Baron Samedi | 75% | 77% | 4 |
+| Bacchus | 60% | 56% | 5 |
+| Baron Samedi | 60% | 60% | 5 |
 | Bastet | 100% | 100% | 5 |
 | Bellona | 40% | 43% | 5 |
-| Cabrakan | 25% | 28% | 4 |
-| Cerberus | 50% | 53% | 4 |
+| Cabrakan | 20% | 21% | 5 |
+| Cerberus | 40% | 42% | 5 |
 | Cernunnos | 0% | 0% | 5 |
 | Chaac | 40% | 53% | 5 |
 | Charon | 0% | 0% | 5 |
@@ -37,16 +37,16 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Da Ji | 80% | 78% | 5 |
 | Danzaburou | 80% | 81% | 5 |
 | Discordia | 80% | 77% | 5 |
-| Eset | 75% | 83% | 4 |
+| Eset | 60% | 63% | 5 |
 | Fenrir | 50% | 55% | 6 |
-| Ganesha | 50% | 55% | 4 |
-| Geb | 25% | 26% | 4 |
-| Gilgamesh | 20% | 21% | 5 |
-| Guan Yu | 60% | 64% | 5 |
+| Ganesha | 40% | 45% | 5 |
+| Geb | 20% | 22% | 5 |
+| Gilgamesh | 17% | 17% | 6 |
+| Guan Yu | 50% | 55% | 6 |
 | Hades | 17% | 18% | 6 |
 | Hecate | 40% | 43% | 5 |
-| Hercules | 40% | 43% | 5 |
-| Horus | 50% | 54% | 4 |
+| Hercules | 33% | 35% | 6 |
+| Horus | 40% | 42% | 5 |
 | Hou Yi | 40% | 41% | 5 |
 | Hua Mulan | 50% | 45% | 4 |
 | Hun Batz | 80% | 82% | 5 |
@@ -55,7 +55,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Izanami | 40% | 41% | 5 |
 | Janus | 60% | 62% | 5 |
 | Jing Wei | 20% | 25% | 5 |
-| Jormungandr | 40% | 48% | 5 |
+| Jormungandr | 33% | 39% | 6 |
 | Kali | 33% | 35% | 6 |
 | Khepri | 0% | 0% | 4 |
 | Kukulkan | 80% | 82% | 5 |
@@ -71,7 +71,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Nu Wa | 80% | 80% | 5 |
 | Nut | 33% | 39% | 6 |
 | Odin | 60% | 62% | 5 |
-| Osiris | 40% | 44% | 5 |
+| Osiris | 33% | 36% | 6 |
 | Pele | 40% | 43% | 5 |
 | Poseidon | 80% | 79% | 5 |
 | Princess Bari | 40% | 38% | 5 |
@@ -79,11 +79,11 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Rama | 40% | 42% | 5 |
 | Ratatoskr | 80% | 80% | 5 |
 | Scylla | 60% | 61% | 5 |
-| Sobek | 75% | 75% | 4 |
+| Sobek | 60% | 60% | 5 |
 | Sol | 33% | 39% | 3 |
 | Sun Wukong | 20% | 23% | 5 |
 | Susano | 80% | 81% | 5 |
-| Sylvanus | 25% | 26% | 4 |
+| Sylvanus | 20% | 20% | 5 |
 | Thanatos | 80% | 82% | 5 |
 | The Morrigan | 60% | 60% | 5 |
 | Thor | 20% | 21% | 5 |
@@ -91,7 +91,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Ullr | 80% | 79% | 5 |
 | Vulcan | 75% | 75% | 4 |
 | Xbalanque | 33% | 36% | 6 |
-| Xing Tian | 40% | 43% | 5 |
-| Yemoja | 40% | 45% | 5 |
-| Ymir | 75% | 75% | 4 |
+| Xing Tian | 33% | 36% | 6 |
+| Yemoja | 33% | 38% | 6 |
+| Ymir | 60% | 60% | 5 |
 | Zeus | 60% | 61% | 5 |

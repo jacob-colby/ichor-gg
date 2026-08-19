@@ -31,8 +31,8 @@
 | The World Stone | 0.54 | 0.46 | 0.46 | 0.64 | 0.38 | 0.47 | fair |  |  |
 | Draconic Scale | 0.54 | 0.47 | 0.50 | 0.68 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
 | Death Metal | 0.54 | 0.47 | 0.56 | 0.68 | 0.00 | 0.25 | fair |  | **UNDERRATED** |
-| Doom Orb | 0.54 | 0.47 | 0.46 | 0.68 | 0.00 | 0.47 | fair |  |  |
-| Leviathan's Hide | 0.54 | 0.47 | 0.54 | 0.68 | 0.00 | 0.28 | fair |  |  |
+| Doom Orb | 0.54 | 0.47 | 0.46 | 0.68 | 0.00 | 0.47 | fair |  | **UNDERRATED** |
+| Leviathan's Hide | 0.54 | 0.47 | 0.54 | 0.68 | 0.00 | 0.28 | fair |  | **UNDERRATED** |
 | Midgardian Mail | 0.53 | 0.46 | 0.54 | 0.68 | 0.00 | 0.28 | fair |  |  |
 | Blood-Bound Book | 0.53 | 0.46 | 0.55 | 0.68 | 0.00 | 0.25 | fair | sustain |  |
 | Chandra's Grace | 0.53 | 0.46 | 0.53 | 0.68 | 0.00 | 0.29 | fair | sustain |  |
@@ -88,7 +88,11 @@
 | Resolute Mantle | 0.43 | 0.26 | 0.30 | 0.68 | 0.00 | 0.17 | premium | cc-immunity, sustain |  |
 | Circe's Hexstone | 0.42 | 0.24 | 0.22 | 0.68 | 0.00 | 0.29 | premium | mobility, cc-immunity |  |
 | Gauntlet of Thebes | 0.42 | 0.23 | 0.26 | 0.68 | 0.00 | 0.17 | premium |  |  |
+| Shell of Rebuke | 0.42 | 0.25 | 0.26 | 0.62 | 0.25 | 0.24 | premium | peel |  |
+| Time-lock Aegis | 0.41 | 0.21 | 0.20 | 0.68 | 0.00 | 0.24 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.40 | 0.20 | 0.18 | 0.68 | 0.00 | 0.24 | premium | anti-heal |  |
 | Omen Drum | 0.40 | 0.19 | 0.27 | 0.68 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.39 | 0.18 | 0.20 | 0.68 | 0.00 | 0.13 | premium | cc-immunity |  |
 | Daybreak Gavel | 0.38 | 0.17 | 0.18 | 0.62 | 0.28 | 0.17 | premium |  |  |
 | Mercury's Talaria | 0.35 | 0.09 | 0.13 | 0.68 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.30 | 0.00 | 0.00 | 0.68 | 0.00 | 0.00 | premium | mobility |  |

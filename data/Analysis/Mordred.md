@@ -118,6 +118,7 @@
 | Demon Blade | 0.43 | 0.30 | 0.35 | 0.62 | 0.00 | 0.19 | premium |  |  |
 | Heartwood Charm | 0.43 | 0.30 | 0.33 | 0.62 | 0.00 | 0.24 | premium |  |  |
 | Eye of Erebus | 0.43 | 0.30 | 0.32 | 0.62 | 0.00 | 0.24 | premium | ward-economy |  |
+| Shell of Rebuke | 0.43 | 0.29 | 0.26 | 0.62 | 0.00 | 0.37 | premium | peel |  |
 | Necronomicon | 0.42 | 0.29 | 0.39 | 0.62 | 0.00 | 0.05 | premium |  |  |
 | Devourer's Gauntlet | 0.42 | 0.28 | 0.32 | 0.62 | 0.00 | 0.19 | premium | sustain |  |
 | Qin's Blade | 0.42 | 0.28 | 0.36 | 0.62 | 0.00 | 0.10 | premium | burst |  |
@@ -126,6 +127,7 @@
 | Staff of Myrddin | 0.41 | 0.26 | 0.31 | 0.62 | 0.00 | 0.14 | premium |  |  |
 | Dagger of Frenzy | 0.41 | 0.25 | 0.36 | 0.62 | 0.00 | 0.00 | premium |  |  |
 | Resolute Mantle | 0.41 | 0.25 | 0.30 | 0.62 | 0.00 | 0.15 | premium | cc-immunity, sustain |  |
+| Time-lock Aegis | 0.41 | 0.25 | 0.20 | 0.62 | 0.00 | 0.37 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.40 | 0.24 | 0.18 | 0.62 | 0.00 | 0.37 | premium | anti-heal |  |
 | Circe's Hexstone | 0.40 | 0.23 | 0.22 | 0.62 | 0.00 | 0.24 | premium | mobility, cc-immunity |  |
 | Gauntlet of Thebes | 0.39 | 0.22 | 0.26 | 0.62 | 0.00 | 0.15 | premium |  |  |
@@ -133,6 +135,8 @@
 | Hastened Fatalis | 0.39 | 0.21 | 0.31 | 0.62 | 0.00 | 0.00 | premium | mobility |  |
 | Omen Drum | 0.38 | 0.19 | 0.27 | 0.62 | 0.00 | 0.00 | premium |  |  |
 | Sun Beam Bow | 0.37 | 0.18 | 0.25 | 0.62 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.37 | 0.17 | 0.20 | 0.62 | 0.00 | 0.10 | premium | cc-immunity |  |
 | Daybreak Gavel | 0.37 | 0.17 | 0.18 | 0.62 | 0.00 | 0.15 | premium |  |  |
 | The Executioner | 0.34 | 0.12 | 0.13 | 0.62 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.33 | 0.09 | 0.13 | 0.62 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.28 | 0.00 | 0.00 | 0.62 | 0.00 | 0.00 | premium | mobility |  |

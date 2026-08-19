@@ -13,6 +13,7 @@
 | Erosion | 0.52 | 0.57 | 0.52 | 0.53 | 0.00 | 0.68 | fair | aura | **UNDERRATED** |
 | Gluttonous Grimoire | 0.52 | 0.57 | 0.63 | 0.53 | 0.00 | 0.42 | undervalued | burst | **UNDERRATED** |
 | Shield of the Phoenix | 0.52 | 0.57 | 0.57 | 0.53 | 0.00 | 0.57 | fair | sustain | **UNDERRATED** |
+| Shell of Rebuke | 0.52 | 0.33 | 0.26 | 0.77 | 0.15 | 0.49 | premium | peel |  |
 | Oni Hunter's Garb | 0.52 | 0.56 | 0.61 | 0.53 | 0.00 | 0.44 | undervalued |  | **UNDERRATED** |
 | Breastplate of Valor | 0.52 | 0.56 | 0.64 | 0.53 | 0.00 | 0.37 | undervalued |  | **UNDERRATED** |
 | Draconic Scale | 0.51 | 0.55 | 0.50 | 0.53 | 0.00 | 0.68 | fair |  | **UNDERRATED** |
@@ -40,7 +41,7 @@
 | Hydra's Lament | 0.48 | 0.48 | 0.56 | 0.53 | 0.00 | 0.29 | fair | burst | **UNDERRATED** |
 | Hussar's Wings | 0.47 | 0.47 | 0.38 | 0.53 | 0.00 | 0.68 | premium | cc-immunity | **UNDERRATED** |
 | Chandra's Grace | 0.47 | 0.47 | 0.53 | 0.53 | 0.00 | 0.32 | fair | sustain | **UNDERRATED** |
-| Void Stone | 0.47 | 0.47 | 0.43 | 0.53 | 0.00 | 0.54 | fair | protection-shred, aura |  |
+| Void Stone | 0.47 | 0.47 | 0.43 | 0.53 | 0.00 | 0.54 | fair | protection-shred, aura | **UNDERRATED** |
 | Rod of Asclepius | 0.47 | 0.46 | 0.55 | 0.53 | 0.00 | 0.26 | fair | sustain, aura |  |
 | Ragnarok's Wake | 0.47 | 0.46 | 0.43 | 0.53 | 0.00 | 0.54 | premium | mobility, burst |  |
 | Xibalban Effigy | 0.47 | 0.46 | 0.45 | 0.53 | 0.00 | 0.49 | fair |  |  |
@@ -119,6 +120,7 @@
 | Avatar's Parashu | 0.39 | 0.30 | 0.37 | 0.53 | 0.00 | 0.12 | premium | cc-immunity |  |
 | Rage | 0.39 | 0.29 | 0.39 | 0.53 | 0.00 | 0.06 | premium |  |  |
 | Necronomicon | 0.38 | 0.29 | 0.39 | 0.53 | 0.00 | 0.07 | premium |  |  |
+| Time-lock Aegis | 0.38 | 0.28 | 0.20 | 0.53 | 0.00 | 0.49 | premium | cc-immunity |  |
 | Qin's Blade | 0.38 | 0.28 | 0.36 | 0.53 | 0.00 | 0.10 | premium | burst |  |
 | Odysseus' Bow | 0.38 | 0.28 | 0.36 | 0.53 | 0.00 | 0.10 | premium | burst, wave-clear |  |
 | Oath-Sworn Spear | 0.38 | 0.28 | 0.33 | 0.53 | 0.00 | 0.16 | premium | protection-shred |  |
@@ -133,6 +135,8 @@
 | Hastened Fatalis | 0.35 | 0.21 | 0.31 | 0.53 | 0.00 | 0.00 | premium | mobility |  |
 | Omen Drum | 0.33 | 0.19 | 0.27 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.33 | 0.18 | 0.18 | 0.53 | 0.00 | 0.19 | premium |  |  |
+| Talisman of Purification | 0.33 | 0.18 | 0.20 | 0.53 | 0.00 | 0.13 | premium | cc-immunity |  |
 | Sun Beam Bow | 0.33 | 0.18 | 0.25 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.30 | 0.12 | 0.13 | 0.53 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.28 | 0.09 | 0.13 | 0.53 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.24 | 0.00 | 0.00 | 0.53 | 0.00 | 0.00 | premium | mobility |  |

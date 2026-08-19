@@ -32,7 +32,7 @@
 | Tyrfing | 0.47 | 0.46 | 0.46 | 0.54 | 0.00 | 0.47 | fair | burst | **UNDERRATED** |
 | Silverbranch Bow | 0.47 | 0.46 | 0.52 | 0.54 | 0.00 | 0.32 | fair |  | **UNDERRATED** |
 | Erosion | 0.47 | 0.46 | 0.52 | 0.54 | 0.00 | 0.32 | fair | aura | **UNDERRATED** |
-| Leviathan's Hide | 0.47 | 0.45 | 0.54 | 0.54 | 0.00 | 0.23 | fair |  |  |
+| Leviathan's Hide | 0.47 | 0.45 | 0.54 | 0.54 | 0.00 | 0.23 | fair |  | **UNDERRATED** |
 | Midgardian Mail | 0.46 | 0.44 | 0.54 | 0.54 | 0.00 | 0.23 | fair |  |  |
 | Draconic Scale | 0.46 | 0.44 | 0.50 | 0.54 | 0.00 | 0.32 | fair |  |  |
 | Dominance | 0.46 | 0.44 | 0.47 | 0.54 | 0.00 | 0.37 | fair |  |  |
@@ -73,6 +73,7 @@
 | Contagion | 0.41 | 0.34 | 0.39 | 0.54 | 0.00 | 0.24 | premium | anti-heal, burst |  |
 | Stygian Anchor | 0.41 | 0.34 | 0.41 | 0.54 | 0.00 | 0.18 | premium | anti-heal |  |
 | Umbral Link | 0.41 | 0.34 | 0.45 | 0.54 | 0.00 | 0.09 | fair | sustain, aura |  |
+| Shell of Rebuke | 0.41 | 0.24 | 0.26 | 0.63 | 0.15 | 0.18 | premium | peel |  |
 | Qin's Blade | 0.41 | 0.33 | 0.36 | 0.54 | 0.00 | 0.28 | premium | burst |  |
 | Shroud of Vengeance | 0.41 | 0.33 | 0.36 | 0.54 | 0.00 | 0.28 | premium | burst |  |
 | Odysseus' Bow | 0.41 | 0.33 | 0.36 | 0.54 | 0.00 | 0.28 | premium | burst, wave-clear |  |
@@ -92,8 +93,11 @@
 | Sun Beam Bow | 0.35 | 0.23 | 0.25 | 0.54 | 0.00 | 0.18 | premium |  |  |
 | Gauntlet of Thebes | 0.35 | 0.22 | 0.26 | 0.54 | 0.00 | 0.14 | premium |  |  |
 | Circe's Hexstone | 0.34 | 0.21 | 0.22 | 0.54 | 0.00 | 0.17 | premium | mobility, cc-immunity |  |
+| Time-lock Aegis | 0.34 | 0.19 | 0.20 | 0.54 | 0.00 | 0.18 | premium | cc-immunity |  |
 | Omen Drum | 0.33 | 0.19 | 0.27 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.33 | 0.18 | 0.18 | 0.54 | 0.00 | 0.18 | premium | anti-heal |  |
 | The Executioner | 0.33 | 0.17 | 0.13 | 0.54 | 0.00 | 0.28 | premium | protection-shred |  |
 | Daybreak Gavel | 0.32 | 0.17 | 0.18 | 0.54 | 0.00 | 0.14 | premium |  |  |
+| Talisman of Purification | 0.32 | 0.15 | 0.20 | 0.54 | 0.00 | 0.03 | premium | cc-immunity |  |
 | Mercury's Talaria | 0.29 | 0.09 | 0.13 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.24 | 0.00 | 0.00 | 0.54 | 0.00 | 0.00 | premium | mobility |  |

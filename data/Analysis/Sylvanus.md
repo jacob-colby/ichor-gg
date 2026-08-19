@@ -28,8 +28,8 @@
 | Magi's Cloak | 0.49 | 0.48 | 0.50 | 0.55 | 0.00 | 0.45 | fair | cc-immunity | **UNDERRATED** |
 | Rod of Asclepius | 0.49 | 0.48 | 0.55 | 0.55 | 0.00 | 0.33 | fair | sustain, aura | **UNDERRATED** |
 | Ancile | 0.49 | 0.48 | 0.51 | 0.55 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
-| Chronos' Pendant | 0.48 | 0.48 | 0.55 | 0.55 | 0.00 | 0.31 | fair |  |  |
-| Spear of Desolation | 0.48 | 0.48 | 0.52 | 0.55 | 0.00 | 0.37 | fair |  |  |
+| Chronos' Pendant | 0.48 | 0.48 | 0.55 | 0.55 | 0.00 | 0.31 | fair |  | **UNDERRATED** |
+| Spear of Desolation | 0.48 | 0.48 | 0.52 | 0.55 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
 | Chandra's Grace | 0.48 | 0.47 | 0.53 | 0.55 | 0.00 | 0.35 | fair | sustain |  |
 | Hide of the Nemean Lion | 0.48 | 0.47 | 0.50 | 0.55 | 0.00 | 0.41 | fair |  |  |
 | Void Shield | 0.48 | 0.47 | 0.46 | 0.55 | 0.00 | 0.51 | fair | protection-shred, aura |  |
@@ -81,14 +81,18 @@
 | Radiant Bulwark | 0.42 | 0.36 | 0.32 | 0.55 | 0.00 | 0.45 | premium | aura |  |
 | Divine Ruin | 0.42 | 0.36 | 0.40 | 0.55 | 0.00 | 0.24 | premium | anti-heal, burst |  |
 | Soul Reaver | 0.42 | 0.35 | 0.40 | 0.55 | 0.00 | 0.24 | premium | burst |  |
+| Shell of Rebuke | 0.41 | 0.32 | 0.26 | 0.55 | 0.12 | 0.45 | premium | peel |  |
 | Heartwood Charm | 0.41 | 0.33 | 0.33 | 0.55 | 0.00 | 0.35 | premium |  |  |
 | Eye of Erebus | 0.41 | 0.33 | 0.32 | 0.55 | 0.00 | 0.35 | premium | ward-economy |  |
 | Necronomicon | 0.40 | 0.31 | 0.39 | 0.55 | 0.00 | 0.14 | premium |  |  |
 | Staff of Myrddin | 0.40 | 0.31 | 0.31 | 0.55 | 0.00 | 0.31 | premium |  |  |
+| Time-lock Aegis | 0.38 | 0.27 | 0.20 | 0.55 | 0.00 | 0.45 | premium | cc-immunity |  |
 | Resolute Mantle | 0.38 | 0.26 | 0.30 | 0.55 | 0.00 | 0.18 | premium | cc-immunity, sustain |  |
 | Brawler’s Beat Stick | 0.38 | 0.26 | 0.18 | 0.55 | 0.00 | 0.45 | premium | anti-heal |  |
 | Circe's Hexstone | 0.37 | 0.26 | 0.22 | 0.55 | 0.00 | 0.35 | premium | mobility, cc-immunity |  |
 | Gauntlet of Thebes | 0.36 | 0.23 | 0.26 | 0.51 | 0.17 | 0.18 | premium |  |  |
+| Talisman of Purification | 0.34 | 0.19 | 0.20 | 0.55 | 0.00 | 0.17 | premium | cc-immunity |  |
 | Omen Drum | 0.34 | 0.19 | 0.27 | 0.55 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.33 | 0.18 | 0.18 | 0.55 | 0.00 | 0.18 | premium |  |  |
 | Mercury's Talaria | 0.29 | 0.09 | 0.13 | 0.55 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.25 | 0.00 | 0.00 | 0.55 | 0.00 | 0.00 | premium | mobility |  |

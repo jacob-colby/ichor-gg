@@ -123,7 +123,7 @@ builds:
     Bracer of The Abyss, Tekko-Kagi, Chronos'' Pendant, Obsidian Shard, Blood-Bound
     Book, Dominance, Kinetic Cuirass, Pharaoh''s Curse, Amanita Charm, Bancroft''s
     Talon, Freya''s Tears, Helm of Radiance, Eye of Providence, Oni Hunter''s Garb,
-    Rod of Asclepius, Shield of the Phoenix, Deathbringer, Shogun''s Ofuda.'
+    Rod of Asclepius, Shield of the Phoenix, Deathbringer, Shogun''s Ofuda, Jade Scepter.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
@@ -197,7 +197,7 @@ builds:
     Bancroft''s Talon, Chronos'' Pendant, Bracer of The Abyss, Blood-Bound Book, Obsidian
     Shard, Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Helm of Radiance, Amanita
     Charm, Freya''s Tears, Transcendence, Rod of Asclepius, Pharaoh''s Curse, Eye
-    of Providence, Doom Orb, The World Stone.'
+    of Providence, Doom Orb, The World Stone, Heartseeker.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -269,7 +269,8 @@ builds:
     The Abyss, Runeforged Hammer, Chronos'' Pendant, Obsidian Shard, Blood-Bound Book,
     Tekko-Kagi, Kinetic Cuirass, Amanita Charm, Pharaoh''s Curse, Bancroft''s Talon,
     Dominance, Freya''s Tears, Helm of Radiance, Eye of Providence, Oni Hunter''s
-    Garb, Rod of Asclepius, Shield of the Phoenix, Deathbringer, Jade Scepter.'
+    Garb, Rod of Asclepius, Shield of the Phoenix, Deathbringer, Jade Scepter, Doom
+    Orb.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -341,7 +342,7 @@ builds:
     Tekko-Kagi, Runeforged Hammer, Bragi''s Harp, Freya''s Tears, Bracer of The Abyss,
     Kinetic Cuirass, Blood-Bound Book, Amanita Charm, Shield of the Phoenix, Pharaoh''s
     Curse, Dominance, Eye of Providence, Bancroft''s Talon, Oni Hunter''s Garb, Helm
-    of Radiance, Pendulum Blade, Doom Orb, Rod of Asclepius.'
+    of Radiance, Pendulum Blade, Doom Orb, Rod of Asclepius, Gem of Focus.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -414,7 +415,7 @@ builds:
     Lifebinder, Hydra''s Lament, Phoenix Feather, The Cosmic Horror, Spectral Armor,
     Spear of the Magus, Lernaean Bow, Shogun''s Ofuda, Erosion, Shifter''s Shield,
     Helm of Radiance, Spear of Desolation, Eye of the Storm, Umbral Link, Shield Splitter,
-    Eye of Providence.'
+    Eye of Providence, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -486,7 +487,7 @@ builds:
     Breastplate of Valor, Golden Blade, Runeforged Hammer, Stone of Binding, Bragi''s
     Harp, Toxic Blade, Bracer of The Abyss, Kinetic Cuirass, Doom Orb, Chronos'' Pendant,
     Void Shield, Blood-Bound Book, Amanita Charm, The World Stone, Heartseeker, Pharaoh''s
-    Curse, Eye of Providence, Freya''s Tears.'
+    Curse, Eye of Providence, Freya''s Tears, Titan''s Bane.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.57
@@ -558,7 +559,7 @@ builds:
     Blade, Bragi''s Harp, Runeforged Hammer, Kinetic Cuirass, Pharaoh''s Curse, Chronos''
     Pendant, Blood-Bound Book, Amanita Charm, Tekko-Kagi, Obsidian Shard, Dominance,
     Eye of Providence, Freya''s Tears, Bancroft''s Talon, Oni Hunter''s Garb, Helm
-    of Radiance, Rod of Asclepius, Shield of the Phoenix, Shogun''s Ofuda.'
+    of Radiance, Rod of Asclepius, Shield of the Phoenix, Shogun''s Ofuda, Jade Scepter.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -631,7 +632,7 @@ builds:
     Blade, Gem of Focus, The Reaper, Kinetic Cuirass, Amanita Charm, Runeforged Hammer,
     Totem of Death, Arondight, Pharaoh''s Curse, Bracer of The Abyss, Pendulum Blade,
     Eye of Providence, Oni Hunter''s Garb, Blood-Bound Book, Tekko-Kagi, Obsidian
-    Shard, Bragi''s Harp.'
+    Shard, Bragi''s Harp, Bancroft''s Talon.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -704,7 +705,7 @@ builds:
     Obsidian Shard, Blood-Bound Book, Kinetic Cuirass, Pharaoh''s Curse, Amanita Charm,
     Bancroft''s Talon, Dominance, Freya''s Tears, Helm of Radiance, Eye of Providence,
     Oni Hunter''s Garb, Rod of Asclepius, Shield of the Phoenix, Deathbringer, Shogun''s
-    Ofuda.'
+    Ofuda, Jade Scepter.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
@@ -923,7 +924,8 @@ builds:
     Grace, Hydra''s Lament, Runeforged Hammer, Kinetic Cuirass, Breastplate of Valor,
     Spear of Desolation, Lernaean Bow, Pharaoh''s Curse, Oni Hunter''s Garb, Bracer
     of The Abyss, Chronos'' Pendant, Bragi''s Harp, Lifebinder, Obsidian Shard, Jade
-    Scepter, Freya''s Tears, Eye of Providence, Tekko-Kagi, Spectral Armor.'
+    Scepter, Freya''s Tears, Eye of Providence, Tekko-Kagi, Spectral Armor, Shogun''s
+    Ofuda.'
   slot_scores:
     Death Metal:
       total: 0.54
@@ -997,7 +999,7 @@ builds:
     Cuirass, Golden Blade, Chronos'' Pendant, Obsidian Shard, Oni Hunter''s Garb,
     Lernaean Bow, Freya''s Tears, Lifebinder, Pharaoh''s Curse, Tekko-Kagi, Eye of
     Providence, Jade Scepter, Spectral Armor, Bragi''s Harp, Helm of Radiance, Bracer
-    of The Abyss.'
+    of The Abyss, Avenging Blade.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -1071,7 +1073,7 @@ builds:
     Phoenix Feather, Pharaoh''s Curse, The Cosmic Horror, Spectral Armor, Golden Blade,
     Spear of the Magus, Umbral Link, Erosion, Shifter''s Shield, Helm of Radiance,
     Spear of Desolation, Eye of the Storm, Shield Splitter, Eye of Providence, Lernaean
-    Bow, Shogun''s Ofuda.'
+    Bow, Shogun''s Ofuda, Leviathan''s Hide.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -1144,7 +1146,7 @@ builds:
     Damaru, Screeching Gargoyle, Hydra''s Lament, Runeforged Hammer, Obsidian Shard,
     Chandra''s Grace, Kinetic Cuirass, Breastplate of Valor, Void Shield, Golden Blade,
     Tekko-Kagi, Oni Hunter''s Garb, Stone of Binding, Lernaean Bow, Void Stone, Chronos''
-    Pendant, Lifebinder, Pharaoh''s Curse, Doom Orb, Heartseeker.'
+    Pendant, Lifebinder, Pharaoh''s Curse, Doom Orb, Heartseeker, Eye of Providence.'
   slot_scores:
     Book of Thoth:
       total: 0.47
@@ -1217,7 +1219,8 @@ builds:
     the Magus, Hydra''s Lament, Lernaean Bow, Runeforged Hammer, Kinetic Cuirass,
     Toxic Blade, Breastplate of Valor, Pharaoh''s Curse, Spear of Desolation, Oni
     Hunter''s Garb, Bracer of The Abyss, Bragi''s Harp, Chronos'' Pendant, Lifebinder,
-    Obsidian Shard, Eye of Providence, Shogun''s Ofuda, Freya''s Tears, Tekko-Kagi.'
+    Obsidian Shard, Eye of Providence, Shogun''s Ofuda, Freya''s Tears, Tekko-Kagi,
+    Spectral Armor.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -1291,7 +1294,7 @@ builds:
     Damaru, Kinetic Cuirass, The Cosmic Horror, Runeforged Hammer, Spear of the Magus,
     Oni Hunter''s Garb, Screeching Gargoyle, Golden Blade, Gem of Focus, Pharaoh''s
     Curse, Lernaean Bow, Totem of Death, Arondight, Eye of Providence, Spectral Armor,
-    Pendulum Blade, Lifebinder, Obsidian Shard.'
+    Pendulum Blade, Lifebinder, Obsidian Shard, Yogi''s Necklace.'
   slot_scores:
     Genji's Guard:
       total: 0.56

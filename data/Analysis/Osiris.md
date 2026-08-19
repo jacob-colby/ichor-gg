@@ -31,7 +31,7 @@
 | Dominance | 0.45 | 0.45 | 0.47 | 0.48 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Draconic Scale | 0.44 | 0.45 | 0.50 | 0.48 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
 | Midgardian Mail | 0.44 | 0.45 | 0.54 | 0.48 | 0.00 | 0.25 | fair |  | **UNDERRATED** |
-| Tekko-Kagi | 0.44 | 0.45 | 0.44 | 0.48 | 0.00 | 0.46 | fair | mobility |  |
+| Tekko-Kagi | 0.44 | 0.45 | 0.44 | 0.48 | 0.00 | 0.46 | fair | mobility | **UNDERRATED** |
 | Riptalon | 0.44 | 0.45 | 0.53 | 0.48 | 0.00 | 0.24 | fair | sustain |  |
 | Yogi's Necklace | 0.44 | 0.44 | 0.57 | 0.48 | 0.00 | 0.16 | fair |  |  |
 | The Reaper | 0.44 | 0.44 | 0.52 | 0.48 | 0.00 | 0.27 | fair | sustain |  |
@@ -88,12 +88,16 @@
 | Radiant Bulwark | 0.36 | 0.28 | 0.32 | 0.48 | 0.00 | 0.19 | premium | aura |  |
 | Vital Amplifier | 0.36 | 0.28 | 0.24 | 0.48 | 0.00 | 0.35 | premium |  |  |
 | Hastened Fatalis | 0.35 | 0.27 | 0.31 | 0.48 | 0.00 | 0.19 | premium | mobility |  |
+| Shell of Rebuke | 0.35 | 0.24 | 0.26 | 0.50 | 0.15 | 0.19 | premium | peel |  |
 | Resolute Mantle | 0.35 | 0.25 | 0.30 | 0.48 | 0.00 | 0.16 | premium | cc-immunity, sustain |  |
 | Sun Beam Bow | 0.34 | 0.23 | 0.25 | 0.48 | 0.00 | 0.19 | premium |  |  |
 | Gauntlet of Thebes | 0.33 | 0.23 | 0.26 | 0.48 | 0.00 | 0.16 | premium |  |  |
 | Circe's Hexstone | 0.32 | 0.21 | 0.22 | 0.48 | 0.00 | 0.19 | premium | mobility, cc-immunity |  |
+| Time-lock Aegis | 0.32 | 0.20 | 0.20 | 0.48 | 0.00 | 0.19 | premium | cc-immunity |  |
 | Omen Drum | 0.31 | 0.19 | 0.27 | 0.48 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.31 | 0.18 | 0.18 | 0.48 | 0.00 | 0.19 | premium | anti-heal |  |
 | The Executioner | 0.31 | 0.18 | 0.13 | 0.48 | 0.00 | 0.29 | premium | protection-shred |  |
 | Daybreak Gavel | 0.30 | 0.17 | 0.18 | 0.48 | 0.00 | 0.16 | premium |  |  |
+| Talisman of Purification | 0.29 | 0.15 | 0.20 | 0.48 | 0.00 | 0.03 | premium | cc-immunity |  |
 | Mercury's Talaria | 0.26 | 0.09 | 0.13 | 0.48 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.22 | 0.00 | 0.00 | 0.48 | 0.00 | 0.00 | premium | mobility |  |

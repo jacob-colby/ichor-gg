@@ -33,7 +33,7 @@
 | Shield of the Phoenix | 0.47 | 0.43 | 0.57 | 0.57 | 0.00 | 0.10 | fair | sustain | **UNDERRATED** |
 | Toxic Blade | 0.47 | 0.42 | 0.43 | 0.57 | 0.00 | 0.39 | fair | anti-heal | **UNDERRATED** |
 | Musashi's Dual Swords | 0.46 | 0.42 | 0.42 | 0.57 | 0.00 | 0.41 | premium | mobility | **UNDERRATED** |
-| Avenging Blade | 0.46 | 0.42 | 0.48 | 0.57 | 0.00 | 0.27 | fair | protection-shred |  |
+| Avenging Blade | 0.46 | 0.42 | 0.48 | 0.57 | 0.00 | 0.27 | fair | protection-shred | **UNDERRATED** |
 | Pendulum Blade | 0.46 | 0.41 | 0.41 | 0.57 | 0.00 | 0.42 | premium |  |  |
 | Arondight | 0.46 | 0.41 | 0.47 | 0.57 | 0.00 | 0.27 | fair | mobility |  |
 | Shield Splitter | 0.46 | 0.41 | 0.51 | 0.57 | 0.00 | 0.17 | fair |  |  |
@@ -93,7 +93,11 @@
 | The Executioner | 0.35 | 0.20 | 0.13 | 0.57 | 0.00 | 0.34 | premium | protection-shred |  |
 | Omen Drum | 0.35 | 0.19 | 0.27 | 0.57 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.35 | 0.18 | 0.22 | 0.57 | 0.00 | 0.10 | premium | mobility, cc-immunity |  |
+| Shell of Rebuke | 0.35 | 0.18 | 0.26 | 0.57 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.35 | 0.18 | 0.26 | 0.57 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.34 | 0.17 | 0.20 | 0.57 | 0.00 | 0.10 | premium | cc-immunity |  |
+| Time-lock Aegis | 0.33 | 0.14 | 0.20 | 0.57 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.32 | 0.12 | 0.18 | 0.57 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.32 | 0.12 | 0.18 | 0.57 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.30 | 0.09 | 0.13 | 0.57 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.26 | 0.00 | 0.00 | 0.57 | 0.00 | 0.00 | premium | mobility |  |

@@ -120,7 +120,7 @@ builds:
     Nimble Ring, Doom Orb, Chronos'' Pendant, Dreamer''s Idol, Genji''s Guard, Death
     Metal, Totem of Death, Helm of Radiance, Breastplate of Valor, Blood-Bound Book,
     Rod of Asclepius, Bancroft''s Talon, Jade Scepter, Bracer of The Abyss, Ethereal
-    Staff, Freya''s Tears, Alchemist Coat.'
+    Staff, Freya''s Tears, Alchemist Coat, Shield of the Phoenix.'
   slot_scores:
     Gluttonous Grimoire:
       total: 0.56
@@ -190,7 +190,8 @@ builds:
     Grimoire, Soul Gem, Nimble Ring, Death Metal, Genji''s Guard, The Cosmic Horror,
     Spear of the Magus, Breastplate of Valor, Chronos'' Pendant, Doom Orb, Bragi''s
     Harp, Bancroft''s Talon, Triton''s Conch, Helm of Radiance, Blood-Bound Book,
-    Rod of Asclepius, Totem of Death, Oni Hunter''s Garb, Jade Scepter, Freya''s Tears.'
+    Rod of Asclepius, Totem of Death, Oni Hunter''s Garb, Jade Scepter, Freya''s Tears,
+    Ancient Signet, Dreamer''s Idol.'
   slot_scores:
     Book of Thoth:
       total: 0.45
@@ -259,7 +260,7 @@ builds:
     Guard, Nimble Ring, Death Metal, Chronos'' Pendant, Breastplate of Valor, Doom
     Orb, Freya''s Tears, Dreamer''s Idol, Totem of Death, Shield of the Phoenix, Bragi''s
     Harp, Helm of Radiance, Blood-Bound Book, Rod of Asclepius, Kinetic Cuirass, Amanita
-    Charm, Screeching Gargoyle, Triton''s Conch.'
+    Charm, Screeching Gargoyle, Triton''s Conch, Bancroft''s Talon, Chandra''s Grace.'
   slot_scores:
     Gem of Focus:
       total: 0.48
@@ -329,7 +330,7 @@ builds:
     Oni Hunter''s Garb, Freya''s Tears, Blood-Bound Book, Lifebinder, The Cosmic Horror,
     Breastplate of Valor, Bancroft''s Talon, Spear of the Magus, Phoenix Feather,
     Erosion, Shifter''s Shield, Spectral Armor, Eye of Providence, Draconic Scale,
-    Helm of Radiance, Jade Scepter.'
+    Helm of Radiance, Jade Scepter, Leviathan''s Hide, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.48
@@ -398,7 +399,7 @@ builds:
     Doom Orb, Dreamer''s Idol, Nimble Ring, Genji''s Guard, Chronos'' Pendant, Screeching
     Gargoyle, Breastplate of Valor, Death Metal, Helm of Radiance, Blood-Bound Book,
     Rod of Asclepius, Totem of Death, Bancroft''s Talon, Jade Scepter, Freya''s Tears,
-    Stone of Binding, Kinetic Cuirass, Bracer of The Abyss.'
+    Stone of Binding, Kinetic Cuirass, Bracer of The Abyss, Ethereal Staff, Void Shield.'
   slot_scores:
     Gluttonous Grimoire:
       total: 0.56
@@ -467,7 +468,7 @@ builds:
     Horror, Spear of the Magus, Bragi''s Harp, Death Metal, Bracer of The Abyss, Breastplate
     of Valor, Blood-Bound Book, Chronos'' Pendant, Kinetic Cuirass, Bancroft''s Talon,
     Amanita Charm, Helm of Radiance, Freya''s Tears, Eye of Providence, Rod of Asclepius,
-    Oni Hunter''s Garb, Shield of the Phoenix, Doom Orb, Jade Scepter.'
+    Oni Hunter''s Garb, Shield of the Phoenix, Doom Orb, Jade Scepter, Spectral Armor.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.44
@@ -537,7 +538,7 @@ builds:
     Phoenix, The Cosmic Horror, Nimble Ring, Totem of Death, Screeching Gargoyle,
     Spear of the Magus, Chandra''s Grace, Death Metal, Gladiator''s Shield, Kinetic
     Cuirass, Prophetic Cloak, Amanita Charm, Doom Orb, Eye of Providence, Helm of
-    Radiance, Oni Hunter''s Garb.'
+    Radiance, Oni Hunter''s Garb, Blood-Bound Book, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -606,7 +607,7 @@ builds:
     of the Magus, Nimble Ring, Doom Orb, Chronos'' Pendant, Dreamer''s Idol, Genji''s
     Guard, Death Metal, Totem of Death, Helm of Radiance, Breastplate of Valor, Blood-Bound
     Book, Rod of Asclepius, Bancroft''s Talon, Jade Scepter, Bracer of The Abyss,
-    Ethereal Staff, Freya''s Tears, Alchemist Coat.'
+    Ethereal Staff, Freya''s Tears, Alchemist Coat, Shield of the Phoenix.'
   slot_scores:
     Gluttonous Grimoire:
       total: 0.56

@@ -85,15 +85,19 @@
 | Eye of Erebus | 0.40 | 0.29 | 0.32 | 0.56 | 0.00 | 0.23 | premium | ward-economy |  |
 | Qin's Blade | 0.39 | 0.28 | 0.36 | 0.56 | 0.00 | 0.10 | premium | burst |  |
 | Odysseus' Bow | 0.39 | 0.28 | 0.36 | 0.56 | 0.00 | 0.10 | premium | burst, wave-clear |  |
+| Shell of Rebuke | 0.38 | 0.26 | 0.26 | 0.56 | 0.00 | 0.26 | premium | peel |  |
 | Resolute Mantle | 0.38 | 0.26 | 0.30 | 0.56 | 0.00 | 0.18 | premium | cc-immunity, sustain |  |
 | Dagger of Frenzy | 0.38 | 0.25 | 0.36 | 0.56 | 0.00 | 0.00 | premium |  |  |
 | Gauntlet of Thebes | 0.37 | 0.24 | 0.26 | 0.56 | 0.00 | 0.18 | premium |  |  |
 | Vital Amplifier | 0.36 | 0.23 | 0.24 | 0.56 | 0.00 | 0.18 | premium |  |  |
 | Circe's Hexstone | 0.36 | 0.22 | 0.22 | 0.56 | 0.00 | 0.23 | premium | mobility, cc-immunity |  |
+| Time-lock Aegis | 0.36 | 0.22 | 0.20 | 0.56 | 0.00 | 0.26 | premium | cc-immunity |  |
 | Hastened Fatalis | 0.36 | 0.21 | 0.31 | 0.56 | 0.00 | 0.00 | premium | mobility |  |
 | Brawler’s Beat Stick | 0.35 | 0.20 | 0.18 | 0.56 | 0.00 | 0.26 | premium | anti-heal |  |
 | Omen Drum | 0.35 | 0.19 | 0.27 | 0.56 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.34 | 0.18 | 0.18 | 0.56 | 0.00 | 0.18 | premium |  |  |
 | Sun Beam Bow | 0.34 | 0.18 | 0.25 | 0.56 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.33 | 0.15 | 0.20 | 0.56 | 0.00 | 0.05 | premium | cc-immunity |  |
 | The Executioner | 0.31 | 0.12 | 0.13 | 0.56 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.30 | 0.09 | 0.13 | 0.56 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.25 | 0.00 | 0.00 | 0.56 | 0.00 | 0.00 | premium | mobility |  |

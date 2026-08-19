@@ -119,7 +119,8 @@ builds:
     this god: The Crusher, The Reaper, Hydra''s Lament, Pendulum Blade, Tekko-Kagi,
     Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden Blade, Transcendence,
     Avenging Blade, Arondight, Shield Splitter, Eye of the Storm, Tyrfing, Riptalon,
-    Dominance, Silverbranch Bow, Deathbringer, Barbed Carver, Berserker''s Shield.'
+    Dominance, Silverbranch Bow, Deathbringer, Barbed Carver, Berserker''s Shield,
+    Musashi''s Dual Swords.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.69
@@ -189,7 +190,8 @@ builds:
     Crusher, Hydra''s Lament, The Reaper, Runeforged Hammer, Damaru, Transcendence,
     Pendulum Blade, Lernaean Bow, Arondight, Oni Hunter''s Garb, Berserker''s Shield,
     Golden Blade, Freya''s Tears, Tekko-Kagi, Avenging Blade, Dominance, Kinetic Cuirass,
-    Shield Splitter, Amanita Charm, Shield of the Phoenix, Eye of the Storm, Tyrfing.'
+    Shield Splitter, Amanita Charm, Shield of the Phoenix, Eye of the Storm, Tyrfing,
+    Eye of Providence.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.65
@@ -258,7 +260,7 @@ builds:
     Freya''s Tears, Tekko-Kagi, Riptalon, Arondight, Damaru, Silverbranch Bow, Shield
     of the Phoenix, Berserker''s Shield, Lernaean Bow, Kinetic Cuirass, Amanita Charm,
     Screeching Gargoyle, Golden Blade, Chandra''s Grace, Eye of Providence, Transcendence,
-    Avenging Blade.'
+    Avenging Blade, Oni Hunter''s Garb.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.64
@@ -328,7 +330,7 @@ builds:
     the Storm, Chandra''s Grace, Erosion, Shifter''s Shield, Shield Splitter, Phoenix
     Feather, Freya''s Tears, Eye of Providence, Spectral Armor, Draconic Scale, Riptalon,
     Golden Blade, Hydra''s Lament, Pharaoh''s Curse, Avenging Blade, Leviathan''s
-    Hide.'
+    Hide, Midgardian Mail.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.67
@@ -397,7 +399,7 @@ builds:
     Blade, Silverbranch Bow, Avatar''s Parashu, Hydra''s Lament, Runeforged Hammer,
     Damaru, Toxic Blade, Lernaean Bow, Screeching Gargoyle, Golden Blade, Transcendence,
     Berserker''s Shield, Shield Splitter, Eye of the Storm, Stone of Binding, Tyrfing,
-    Oath-Sworn Spear.'
+    Oath-Sworn Spear, Arondight.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.66
@@ -466,7 +468,7 @@ builds:
     Shield, Lernaean Bow, Toxic Blade, Tekko-Kagi, The Reaper, Hydra''s Lament, Pharaoh''s
     Curse, Dominance, Runeforged Hammer, Damaru, Shogun''s Ofuda, Kinetic Cuirass,
     Amanita Charm, Qin''s Blade, Eye of Providence, Oni Hunter''s Garb, Eros'' Bow,
-    Freya''s Tears.'
+    Freya''s Tears, Transcendence.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -536,7 +538,7 @@ builds:
     Chandra''s Grace, The Reaper, Gladiator''s Shield, Runeforged Hammer, Berserker''s
     Shield, Prophetic Cloak, Kinetic Cuirass, Damaru, Amanita Charm, Riptalon, Eye
     of Providence, Oni Hunter''s Garb, Regrowth Striders, Lernaean Bow, Silverbranch
-    Bow.'
+    Bow, Golden Blade.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.63
@@ -605,7 +607,7 @@ builds:
     Tekko-Kagi, Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden
     Blade, Transcendence, Avenging Blade, Arondight, Shield Splitter, Eye of the Storm,
     Tyrfing, Riptalon, Dominance, Silverbranch Bow, Deathbringer, Barbed Carver, Berserker''s
-    Shield.'
+    Shield, Musashi''s Dual Swords.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.69

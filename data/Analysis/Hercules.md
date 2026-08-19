@@ -32,7 +32,7 @@
 | Magi's Cloak | 0.48 | 0.48 | 0.50 | 0.53 | 0.00 | 0.43 | fair | cc-immunity | **UNDERRATED** |
 | Ancile | 0.48 | 0.47 | 0.51 | 0.53 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
 | Screeching Gargoyle | 0.47 | 0.47 | 0.49 | 0.53 | 0.00 | 0.43 | fair | protection-shred, peel | **UNDERRATED** |
-| Damaru | 0.47 | 0.47 | 0.57 | 0.53 | 0.00 | 0.24 | fair |  |  |
+| Damaru | 0.47 | 0.47 | 0.57 | 0.53 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Shogun's Ofuda | 0.47 | 0.47 | 0.51 | 0.53 | 0.00 | 0.38 | fair | aura |  |
 | Gladiator's Shield | 0.47 | 0.47 | 0.41 | 0.53 | 0.00 | 0.60 | premium | burst |  |
 | Wyrmskin Hide | 0.47 | 0.47 | 0.40 | 0.53 | 0.00 | 0.62 | premium |  |  |
@@ -73,6 +73,7 @@
 | Dwarven Plate | 0.42 | 0.37 | 0.35 | 0.53 | 0.00 | 0.43 | premium |  |  |
 | Toxic Blade | 0.42 | 0.37 | 0.43 | 0.53 | 0.00 | 0.22 | fair | anti-heal |  |
 | Musashi's Dual Swords | 0.42 | 0.36 | 0.42 | 0.53 | 0.00 | 0.24 | premium | mobility |  |
+| Shell of Rebuke | 0.42 | 0.31 | 0.26 | 0.56 | 0.25 | 0.43 | premium | peel |  |
 | Bloodforge | 0.42 | 0.36 | 0.42 | 0.53 | 0.00 | 0.24 | premium | sustain |  |
 | Contagion | 0.42 | 0.35 | 0.39 | 0.53 | 0.00 | 0.27 | premium | anti-heal, burst |  |
 | Radiant Bulwark | 0.41 | 0.35 | 0.32 | 0.53 | 0.00 | 0.43 | premium | aura |  |
@@ -85,6 +86,7 @@
 | Devourer's Gauntlet | 0.39 | 0.30 | 0.32 | 0.53 | 0.00 | 0.24 | premium | sustain |  |
 | Qin's Blade | 0.38 | 0.28 | 0.36 | 0.53 | 0.00 | 0.10 | premium | burst |  |
 | Odysseus' Bow | 0.38 | 0.28 | 0.36 | 0.53 | 0.00 | 0.10 | premium | burst, wave-clear |  |
+| Time-lock Aegis | 0.37 | 0.27 | 0.20 | 0.53 | 0.00 | 0.43 | premium | cc-immunity |  |
 | Resolute Mantle | 0.37 | 0.26 | 0.30 | 0.53 | 0.00 | 0.17 | premium | cc-immunity, sustain |  |
 | Dagger of Frenzy | 0.36 | 0.25 | 0.36 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.36 | 0.25 | 0.18 | 0.53 | 0.00 | 0.43 | premium | anti-heal |  |
@@ -95,5 +97,7 @@
 | Omen Drum | 0.33 | 0.19 | 0.27 | 0.53 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.33 | 0.18 | 0.18 | 0.53 | 0.10 | 0.17 | premium |  |  |
 | Sun Beam Bow | 0.33 | 0.18 | 0.25 | 0.53 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.33 | 0.17 | 0.20 | 0.53 | 0.00 | 0.11 | premium | cc-immunity |  |
 | The Executioner | 0.30 | 0.12 | 0.13 | 0.53 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.28 | 0.09 | 0.13 | 0.53 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.24 | 0.00 | 0.00 | 0.53 | 0.00 | 0.00 | premium | mobility |  |

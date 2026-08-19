@@ -123,7 +123,7 @@ builds:
     Nimble Ring, Leviathan''s Hide, Soul Gem, Midgardian Mail, Mantle Of Discord,
     Golden Blade, Stone of Binding, Avenging Blade, Death Metal, Magi''s Cloak, Gladiator''s
     Shield, Ancile, Screeching Gargoyle, Helm of Radiance, Shogun''s Ofuda, Damaru,
-    Void Shield, Doublet of Binding.'
+    Void Shield, Doublet of Binding, Wyrmskin Hide.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -269,7 +269,7 @@ builds:
     the Phoenix, Shield Splitter, Hydra''s Lament, Spear of Desolation, Nimble Ring,
     Erosion, Spectral Armor, Eye of Providence, Eye of the Storm, Draconic Scale,
     Pharaoh''s Curse, Obsidian Shard, Riptalon, Leviathan''s Hide, Midgardian Mail,
-    Heartseeker, Golden Blade, Silverbranch Bow, Mantle Of Discord.'
+    Heartseeker, Golden Blade, Silverbranch Bow, Mantle Of Discord, Death Metal.'
   slot_scores:
     Stone of Binding:
       total: 0.51
@@ -341,7 +341,7 @@ builds:
     Lernaean Bow, Silverbranch Bow, Shield Splitter, Eye of Providence, Draconic Scale,
     Eye of the Storm, Leviathan''s Hide, Midgardian Mail, Toxic Blade, Mantle Of Discord,
     Stone of Binding, Helm of Radiance, Death Metal, Screeching Gargoyle, Yogi''s
-    Necklace, Damaru, Ancile.'
+    Necklace, Damaru, Ancile, Avenging Blade.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -414,7 +414,7 @@ builds:
     Pendant, Shield Splitter, Draconic Scale, Pharaoh''s Curse, Eye of the Storm,
     Leviathan''s Hide, Gem of Focus, Helm of Radiance, Midgardian Mail, Mantle Of
     Discord, Totem of Death, Stone of Binding, Arondight, Death Metal, Rod of Asclepius,
-    The Cosmic Horror.'
+    The Cosmic Horror, Glorious Pridwen.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -486,7 +486,7 @@ builds:
     Erosion, Spectral Armor, Eye of Providence, The Reaper, Lernaean Bow, Draconic
     Scale, Death Metal, Avenging Blade, Damaru, The Cosmic Horror, Shogun''s Ofuda,
     Leviathan''s Hide, Midgardian Mail, Spear of the Magus, Mantle Of Discord, Stone
-    of Binding, Tekko-Kagi, Spear of Desolation, Tyrfing, Riptalon.'
+    of Binding, Tekko-Kagi, Spear of Desolation, Tyrfing, Riptalon, Helm of Radiance.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -558,7 +558,8 @@ builds:
     Erosion, Spear of Desolation, Eye of the Storm, Helm of Radiance, Spectral Armor,
     Eye of Providence, Draconic Scale, Rod of Asclepius, Pharaoh''s Curse, The Reaper,
     Obsidian Shard, Leviathan''s Hide, Golden Blade, Jade Scepter, Midgardian Mail,
-    Avenging Blade, Mantle Of Discord, Damaru, Stone of Binding, Chronos'' Pendant.'
+    Avenging Blade, Mantle Of Discord, Damaru, Stone of Binding, Triton''s Conch,
+    Chronos'' Pendant.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -630,7 +631,7 @@ builds:
     Curse, Nimble Ring, Leviathan''s Hide, Soul Gem, Midgardian Mail, Mantle Of Discord,
     Golden Blade, Stone of Binding, Avenging Blade, Death Metal, Magi''s Cloak, Ancile,
     Screeching Gargoyle, Helm of Radiance, Shogun''s Ofuda, Damaru, Gladiator''s Shield,
-    Void Shield, Doublet of Binding.'
+    Void Shield, Doublet of Binding, Wyrmskin Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.52

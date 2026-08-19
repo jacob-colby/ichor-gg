@@ -29,8 +29,8 @@
 | Helm of Radiance | 0.52 | 0.49 | 0.55 | 0.61 | 0.00 | 0.34 | fair |  | **UNDERRATED** |
 | Prophetic Cloak | 0.52 | 0.49 | 0.43 | 0.61 | 0.00 | 0.64 | premium |  | **UNDERRATED** |
 | Void Shield | 0.52 | 0.49 | 0.46 | 0.61 | 0.00 | 0.56 | fair | protection-shred, aura | **UNDERRATED** |
-| Screeching Gargoyle | 0.52 | 0.49 | 0.49 | 0.61 | 0.00 | 0.49 | fair | protection-shred, peel |  |
-| Doublet of Binding | 0.52 | 0.49 | 0.50 | 0.61 | 0.00 | 0.46 | fair | aura |  |
+| Screeching Gargoyle | 0.52 | 0.49 | 0.49 | 0.61 | 0.00 | 0.49 | fair | protection-shred, peel | **UNDERRATED** |
+| Doublet of Binding | 0.52 | 0.49 | 0.50 | 0.61 | 0.00 | 0.46 | fair | aura | **UNDERRATED** |
 | Stampede | 0.52 | 0.48 | 0.48 | 0.61 | 0.16 | 0.46 | fair | mobility, aura, cc-immunity |  |
 | Hussar's Wings | 0.52 | 0.48 | 0.38 | 0.61 | 0.00 | 0.72 | premium | cc-immunity |  |
 | Void Stone | 0.51 | 0.47 | 0.43 | 0.61 | 0.00 | 0.56 | fair | protection-shred, aura |  |
@@ -77,6 +77,7 @@
 | Typhon’s Heart | 0.45 | 0.35 | 0.46 | 0.61 | 0.00 | 0.09 | fair |  |  |
 | Doom Orb | 0.45 | 0.35 | 0.46 | 0.61 | 0.00 | 0.09 | fair |  |  |
 | Scepter of Dominion | 0.45 | 0.35 | 0.37 | 0.61 | 0.00 | 0.29 | premium | peel |  |
+| Shell of Rebuke | 0.45 | 0.34 | 0.26 | 0.61 | 0.13 | 0.51 | premium | peel |  |
 | The World Stone | 0.45 | 0.35 | 0.46 | 0.61 | 0.00 | 0.09 | fair |  |  |
 | Divine Ruin | 0.45 | 0.34 | 0.40 | 0.61 | 0.00 | 0.19 | premium | anti-heal, burst |  |
 | Dreamer's Idol | 0.44 | 0.33 | 0.44 | 0.61 | 0.00 | 0.09 | fair | cc-immunity |  |
@@ -84,11 +85,14 @@
 | Heartwood Charm | 0.44 | 0.33 | 0.33 | 0.61 | 0.00 | 0.33 | premium |  |  |
 | Eye of Erebus | 0.44 | 0.32 | 0.32 | 0.61 | 0.00 | 0.33 | premium | ward-economy |  |
 | Necronomicon | 0.43 | 0.30 | 0.39 | 0.61 | 0.00 | 0.09 | premium |  |  |
+| Time-lock Aegis | 0.42 | 0.29 | 0.20 | 0.61 | 0.00 | 0.51 | premium | cc-immunity |  |
 | Resolute Mantle | 0.42 | 0.27 | 0.30 | 0.62 | 0.11 | 0.21 | premium | cc-immunity, sustain |  |
 | Brawler’s Beat Stick | 0.42 | 0.28 | 0.18 | 0.61 | 0.00 | 0.51 | premium | anti-heal |  |
 | Staff of Myrddin | 0.42 | 0.28 | 0.31 | 0.61 | 0.00 | 0.21 | premium |  |  |
 | Circe's Hexstone | 0.40 | 0.25 | 0.22 | 0.61 | 0.00 | 0.33 | premium | mobility, cc-immunity |  |
 | Omen Drum | 0.37 | 0.19 | 0.27 | 0.61 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.37 | 0.19 | 0.18 | 0.61 | 0.00 | 0.21 | premium |  |  |
+| Talisman of Purification | 0.37 | 0.18 | 0.20 | 0.61 | 0.00 | 0.13 | premium | cc-immunity |  |
 | Gauntlet of Thebes | 0.36 | 0.24 | 0.26 | 0.52 | 0.13 | 0.21 | premium |  |  |
 | Mercury's Talaria | 0.32 | 0.09 | 0.13 | 0.61 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.28 | 0.00 | 0.00 | 0.61 | 0.00 | 0.00 | premium | mobility |  |

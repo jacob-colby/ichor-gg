@@ -33,7 +33,7 @@
 | Magi's Cloak | 0.47 | 0.48 | 0.50 | 0.52 | 0.00 | 0.43 | fair | cc-immunity | **UNDERRATED** |
 | Ancile | 0.47 | 0.47 | 0.51 | 0.52 | 0.00 | 0.38 | fair |  | **UNDERRATED** |
 | Screeching Gargoyle | 0.47 | 0.47 | 0.49 | 0.52 | 0.00 | 0.43 | fair | protection-shred, peel | **UNDERRATED** |
-| Damaru | 0.47 | 0.47 | 0.57 | 0.52 | 0.00 | 0.24 | fair |  |  |
+| Damaru | 0.47 | 0.47 | 0.57 | 0.52 | 0.00 | 0.24 | fair |  | **UNDERRATED** |
 | Gladiator's Shield | 0.47 | 0.47 | 0.41 | 0.52 | 0.00 | 0.60 | premium | burst |  |
 | Wyrmskin Hide | 0.47 | 0.47 | 0.40 | 0.52 | 0.00 | 0.62 | premium |  |  |
 | Void Shield | 0.47 | 0.47 | 0.46 | 0.52 | 0.00 | 0.48 | fair | protection-shred, aura |  |
@@ -85,6 +85,7 @@
 | Devourer's Gauntlet | 0.38 | 0.30 | 0.32 | 0.52 | 0.00 | 0.24 | premium | sustain |  |
 | Qin's Blade | 0.37 | 0.28 | 0.36 | 0.52 | 0.00 | 0.10 | premium | burst |  |
 | Odysseus' Bow | 0.37 | 0.28 | 0.36 | 0.52 | 0.00 | 0.10 | premium | burst, wave-clear |  |
+| Time-lock Aegis | 0.37 | 0.27 | 0.20 | 0.52 | 0.00 | 0.43 | premium | cc-immunity |  |
 | Resolute Mantle | 0.36 | 0.26 | 0.30 | 0.52 | 0.00 | 0.17 | premium | cc-immunity, sustain |  |
 | Dagger of Frenzy | 0.36 | 0.25 | 0.36 | 0.52 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.36 | 0.25 | 0.18 | 0.52 | 0.00 | 0.43 | premium | anti-heal |  |
@@ -95,5 +96,8 @@
 | Omen Drum | 0.33 | 0.19 | 0.27 | 0.52 | 0.00 | 0.00 | premium |  |  |
 | Sun Beam Bow | 0.32 | 0.18 | 0.25 | 0.52 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.32 | 0.18 | 0.18 | 0.52 | 0.00 | 0.17 | premium |  |  |
+| Talisman of Purification | 0.32 | 0.17 | 0.20 | 0.52 | 0.00 | 0.11 | premium | cc-immunity |  |
+| Shell of Rebuke | 0.31 | 0.31 | 0.26 | 0.33 | 0.15 | 0.43 | premium | peel |  |
 | The Executioner | 0.30 | 0.12 | 0.13 | 0.52 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.28 | 0.09 | 0.13 | 0.52 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.23 | 0.00 | 0.00 | 0.52 | 0.00 | 0.00 | premium | mobility |  |

@@ -121,7 +121,7 @@ builds:
     Erosion, Eye of the Storm, Eye of Providence, Hydra''s Lament, Pharaoh''s Curse,
     Golden Blade, Spectral Armor, Breastplate of Valor, Shogun''s Ofuda, Leviathan''s
     Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding, Lernaean Bow, Avenging
-    Blade, Runeforged Hammer, Magi''s Cloak.'
+    Blade, Runeforged Hammer, Magi''s Cloak, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -193,7 +193,7 @@ builds:
     Hunter''s Garb, The Reaper, Golden Blade, Eye of the Storm, Shield Splitter, Pharaoh''s
     Curse, Hydra''s Lament, Phoenix Feather, Erosion, Spectral Armor, Eye of Providence,
     Riptalon, Breastplate of Valor, Avenging Blade, Shogun''s Ofuda, Runeforged Hammer,
-    Leviathan''s Hide, Midgardian Mail.'
+    Leviathan''s Hide, Midgardian Mail, Lernaean Bow.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -263,7 +263,7 @@ builds:
     Tears, Void Shield, Oni Hunter''s Garb, Void Stone, The Reaper, Shield of the
     Phoenix, Shield Splitter, Hydra''s Lament, Erosion, Spectral Armor, Pharaoh''s
     Curse, Riptalon, Eye of the Storm, Breastplate of Valor, Eye of Providence, Golden
-    Blade, Silverbranch Bow, Runeforged Hammer.'
+    Blade, Silverbranch Bow, Tekko-Kagi, Runeforged Hammer.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -333,7 +333,7 @@ builds:
     Garb, Shield of the Phoenix, Shogun''s Ofuda, Tyrfing, Spectral Armor, Erosion,
     Silverbranch Bow, Lernaean Bow, Breastplate of Valor, Hydra''s Lament, Shield
     Splitter, Eye of Providence, Eye of the Storm, Leviathan''s Hide, Midgardian Mail,
-    Toxic Blade, Runeforged Hammer.'
+    Toxic Blade, Mantle Of Discord, Runeforged Hammer.'
   slot_scores:
     Golden Blade:
       total: 0.49
@@ -403,7 +403,8 @@ builds:
     of Valor, Hydra''s Lament, The Crusher, Oni Hunter''s Garb, Screeching Gargoyle,
     Chandra''s Grace, Erosion, Pharaoh''s Curse, Spectral Armor, Eye of Providence,
     Prophetic Cloak, Shield Splitter, Leviathan''s Hide, Eye of the Storm, Midgardian
-    Mail, Shogun''s Ofuda, Golden Blade, Mantle Of Discord, Runeforged Hammer.'
+    Mail, Shogun''s Ofuda, Golden Blade, Mantle Of Discord, Stone of Binding, Runeforged
+    Hammer.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -473,7 +474,7 @@ builds:
     Valor, Oni Hunter''s Garb, Shield of the Phoenix, Runeforged Hammer, Erosion,
     Eye of the Storm, Eye of Providence, Hydra''s Lament, Pharaoh''s Curse, Golden
     Blade, Spectral Armor, Shogun''s Ofuda, Leviathan''s Hide, Midgardian Mail, Mantle
-    Of Discord, Stone of Binding, Lernaean Bow, Avenging Blade, Magi''s Cloak.'
+    Of Discord, Stone of Binding, Lernaean Bow, Avenging Blade, Magi''s Cloak, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.51

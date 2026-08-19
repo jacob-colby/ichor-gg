@@ -351,14 +351,18 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
               </ul>
             </div>
 
-            {/* A relic does not take one of the six, so it cannot be a row in
-                the build and cannot be reached by the tag overlay — it needs
-                its own line or it cannot be recommended at all. */}
+            {/* An UPGRADED relic does take one of the six -- only the free
+                base relic gets the game's own slot -- so this is a genuine
+                build suggestion, not a parallel one. It still needs its own
+                line because the model will not pick it for you: its "+7.5% of
+                all Stats from Items" is a multiplier nothing here can price,
+                so the gold model reads it as 698g overpriced and it never wins
+                a slot on score. Same blindness as Genie's Lamp. */}
             {relicPicks.length > 0 && (
               <div data-testid="draft-relics" className="mt-3 border-t border-line pt-3">
                 <div className="flex flex-wrap items-baseline gap-x-2">
                   <span className="text-label text-faint">Relic</span>
-                  <span className="text-label text-muted">· its own slot, not one of the six</span>
+                  <span className="text-label text-muted">· takes one of your six · the model can&rsquo;t price it, so it won&rsquo;t pick it for you</span>
                 </div>
                 <ul className="mt-1.5 flex flex-col gap-1">
                   {relicPicks.map((r) => (

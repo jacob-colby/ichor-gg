@@ -121,7 +121,7 @@ builds:
     Blood-Bound Book, Bragi''s Harp, Breastplate of Valor, Bancroft''s Talon, Death
     Metal, Doom Orb, Helm of Radiance, The World Stone, Rod of Asclepius, Gem of Focus,
     Freya''s Tears, Kinetic Cuirass, Dreamer''s Idol, Jade Scepter, Amanita Charm,
-    Totem of Death.'
+    Totem of Death, Shield of the Phoenix, Eye of Providence.'
   slot_scores:
     Genji's Guard:
       total: 0.47
@@ -192,7 +192,8 @@ builds:
     The Cosmic Horror, Bragi''s Harp, Spear of the Magus, Breastplate of Valor, Bancroft''s
     Talon, Bracer of The Abyss, Chronos'' Pendant, Blood-Bound Book, Oni Hunter''s
     Garb, Helm of Radiance, Doom Orb, The World Stone, Rod of Asclepius, Kinetic Cuirass,
-    Freya''s Tears, Amanita Charm, Gem of Focus, Jade Scepter, Eye of Providence.'
+    Freya''s Tears, Amanita Charm, Gem of Focus, Jade Scepter, Eye of Providence,
+    Triton''s Conch.'
   slot_scores:
     Genji's Guard:
       total: 0.48
@@ -262,7 +263,7 @@ builds:
     Harp, Chronos'' Pendant, Bracer of The Abyss, Freya''s Tears, Blood-Bound Book,
     Kinetic Cuirass, Shield of the Phoenix, Doom Orb, Bancroft''s Talon, Amanita Charm,
     The World Stone, Gem of Focus, Helm of Radiance, Eye of Providence, Rod of Asclepius,
-    Oni Hunter''s Garb.'
+    Oni Hunter''s Garb, Totem of Death, Dreamer''s Idol.'
   slot_scores:
     Genji's Guard:
       total: 0.48
@@ -332,7 +333,7 @@ builds:
     Blood-Bound Book, Bancroft''s Talon, Chandra''s Grace, Oni Hunter''s Garb, Breastplate
     of Valor, Freya''s Tears, Lifebinder, The Cosmic Horror, Phoenix Feather, Spear
     of the Magus, Spectral Armor, Erosion, Shifter''s Shield, Eye of Providence, Helm
-    of Radiance, Draconic Scale, Leviathan''s Hide.'
+    of Radiance, Draconic Scale, Leviathan''s Hide, Umbral Link, Bracer of The Abyss.'
   slot_scores:
     Genji's Guard:
       total: 0.48
@@ -402,7 +403,7 @@ builds:
     World Stone, Bracer of The Abyss, Dreamer''s Idol, Breastplate of Valor, Chronos''
     Pendant, Blood-Bound Book, Bancroft''s Talon, Bragi''s Harp, Stone of Binding,
     Death Metal, Helm of Radiance, Kinetic Cuirass, Void Shield, Freya''s Tears, Amanita
-    Charm, Rod of Asclepius.'
+    Charm, Rod of Asclepius, Eye of Providence, Oni Hunter''s Garb.'
   slot_scores:
     Genji's Guard:
       total: 0.47
@@ -472,7 +473,7 @@ builds:
     of The Abyss, Breastplate of Valor, Chronos'' Pendant, Blood-Bound Book, Kinetic
     Cuirass, Bancroft''s Talon, Amanita Charm, Helm of Radiance, Freya''s Tears, Eye
     of Providence, Rod of Asclepius, Oni Hunter''s Garb, Shield of the Phoenix, Jade
-    Scepter, Doom Orb, Gem of Focus.'
+    Scepter, Doom Orb, Gem of Focus, The World Stone, Totem of Death.'
   slot_scores:
     Genji's Guard:
       total: 0.47
@@ -542,7 +543,8 @@ builds:
     Freya''s Tears, Shield of the Phoenix, The Cosmic Horror, Spear of the Magus,
     Screeching Gargoyle, Gem of Focus, Chandra''s Grace, Totem of Death, Death Metal,
     Bracer of The Abyss, Bragi''s Harp, Kinetic Cuirass, Amanita Charm, Blood-Bound
-    Book, Eye of Providence, Oni Hunter''s Garb, Bancroft''s Talon, Gladiator''s Shield.'
+    Book, Eye of Providence, Oni Hunter''s Garb, Bancroft''s Talon, Gladiator''s Shield,
+    Helm of Radiance, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -614,7 +616,7 @@ builds:
     Damaru, Breastplate of Valor, Chronos'' Pendant, Blood-Bound Book, Heartseeker,
     Pendulum Blade, Bancroft''s Talon, Silverbranch Bow, Titan''s Bane, Dominance,
     Transcendence, Avenging Blade, Triton''s Conch, Bracer of The Abyss, Arondight,
-    Helm of Radiance, Shield Splitter, Kinetic Cuirass, Rod of Asclepius.'
+    Helm of Radiance, Shield Splitter, Kinetic Cuirass, Rod of Asclepius, Doom Orb.'
   slot_scores:
     Book of Thoth:
       total: 0.38
@@ -686,7 +688,8 @@ builds:
     of The Abyss, Silverbranch Bow, Runeforged Hammer, Breastplate of Valor, Chronos''
     Pendant, Blood-Bound Book, Dominance, Damaru, Bancroft''s Talon, Pharaoh''s Curse,
     Helm of Radiance, Rod of Asclepius, Kinetic Cuirass, Amanita Charm, Doom Orb,
-    Freya''s Tears, The World Stone, Heartseeker, Jade Scepter, Gem of Focus.'
+    Freya''s Tears, The World Stone, Heartseeker, Jade Scepter, Gem of Focus, Eye
+    of Providence.'
   slot_scores:
     Berserker's Shield:
       total: 0.47
@@ -756,7 +759,7 @@ builds:
     Chronos'' Pendant, Blood-Bound Book, Bragi''s Harp, Breastplate of Valor, Bancroft''s
     Talon, Death Metal, Doom Orb, Helm of Radiance, The World Stone, Rod of Asclepius,
     Gem of Focus, Freya''s Tears, Kinetic Cuirass, Dreamer''s Idol, Jade Scepter,
-    Amanita Charm, Totem of Death.'
+    Amanita Charm, Totem of Death, Shield of the Phoenix, Eye of Providence.'
   slot_scores:
     Genji's Guard:
       total: 0.47

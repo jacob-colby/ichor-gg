@@ -31,7 +31,7 @@
 | Berserker's Shield | 0.45 | 0.46 | 0.66 | 0.48 | 0.00 | 0.00 | undervalued |  | **UNDERRATED** |
 | Musashi's Dual Swords | 0.44 | 0.45 | 0.42 | 0.48 | 0.00 | 0.52 | premium | mobility | **UNDERRATED** |
 | Bloodforge | 0.44 | 0.45 | 0.42 | 0.48 | 0.00 | 0.52 | premium | sustain | **UNDERRATED** |
-| Kinetic Cuirass | 0.44 | 0.44 | 0.59 | 0.48 | 0.00 | 0.10 | fair | burst |  |
+| Kinetic Cuirass | 0.44 | 0.44 | 0.59 | 0.48 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
 | Amanita Charm | 0.44 | 0.44 | 0.63 | 0.48 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Freya's Tears | 0.43 | 0.44 | 0.59 | 0.48 | 0.00 | 0.09 | fair |  |  |
 | Wyrmskin Hide | 0.43 | 0.44 | 0.40 | 0.48 | 0.00 | 0.52 | premium |  |  |
@@ -89,11 +89,15 @@
 | Hastened Fatalis | 0.32 | 0.21 | 0.31 | 0.48 | 0.00 | 0.00 | premium | mobility |  |
 | Resolute Mantle | 0.32 | 0.21 | 0.30 | 0.48 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Omen Drum | 0.31 | 0.19 | 0.27 | 0.48 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.31 | 0.18 | 0.26 | 0.48 | 0.00 | 0.00 | premium | peel |  |
 | Circe's Hexstone | 0.31 | 0.18 | 0.22 | 0.48 | 0.00 | 0.09 | premium | mobility, cc-immunity |  |
 | Gauntlet of Thebes | 0.31 | 0.18 | 0.26 | 0.48 | 0.00 | 0.00 | premium |  |  |
 | Sun Beam Bow | 0.30 | 0.18 | 0.25 | 0.48 | 0.00 | 0.00 | premium |  |  |
 | Vital Amplifier | 0.30 | 0.17 | 0.24 | 0.48 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.30 | 0.17 | 0.20 | 0.48 | 0.00 | 0.09 | premium | cc-immunity |  |
+| Time-lock Aegis | 0.28 | 0.14 | 0.20 | 0.48 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.28 | 0.12 | 0.18 | 0.48 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.28 | 0.12 | 0.18 | 0.48 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.28 | 0.12 | 0.13 | 0.48 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.26 | 0.09 | 0.13 | 0.48 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.22 | 0.00 | 0.00 | 0.48 | 0.00 | 0.00 | premium | mobility |  |

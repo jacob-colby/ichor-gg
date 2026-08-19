@@ -197,7 +197,7 @@ builds:
     Talon, Chronos'' Pendant, Bracer of The Abyss, Blood-Bound Book, Dominance, Obsidian
     Shard, Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Helm of Radiance, Amanita
     Charm, Freya''s Tears, Rod of Asclepius, Pharaoh''s Curse, Eye of Providence,
-    Doom Orb, The World Stone.'
+    Doom Orb, The World Stone, Heartseeker.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -265,11 +265,11 @@ builds:
     this god: Rod of Tahuti, Nimble Ring, The Crusher, Jotunn''s Revenge, Gluttonous
     Grimoire, Soul Gem, Death Metal, Berserker''s Shield, Damaru, Genji''s Guard,
     Hydra''s Lament, Lernaean Bow, Golden Blade, The Reaper, Breastplate of Valor,
-    The Cosmic Horror, Tekko-Kagi, Runeforged Hammer, Spear of the Magus, Spear of
-    Desolation, Pharaoh''s Curse, Kinetic Cuirass, Bragi''s Harp, Amanita Charm, Freya''s
-    Tears, Dominance, Bracer of The Abyss, Demon Blade, Eye of Providence, Oni Hunter''s
-    Garb, Chronos'' Pendant, Shield of the Phoenix, Blood-Bound Book, Obsidian Shard,
-    Shogun''s Ofuda, Musashi''s Dual Swords, Bancroft''s Talon.'
+    The Cosmic Horror, Tekko-Kagi, Runeforged Hammer, Spear of the Magus, Toxic Blade,
+    Spear of Desolation, Pharaoh''s Curse, Kinetic Cuirass, Bragi''s Harp, Amanita
+    Charm, Freya''s Tears, Dominance, Bracer of The Abyss, Demon Blade, Eye of Providence,
+    Oni Hunter''s Garb, Chronos'' Pendant, Shield of the Phoenix, Blood-Bound Book,
+    Obsidian Shard, Shogun''s Ofuda, Musashi''s Dual Swords, Bancroft''s Talon.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.52
@@ -341,7 +341,7 @@ builds:
     Tekko-Kagi, Runeforged Hammer, Bragi''s Harp, Freya''s Tears, Bracer of The Abyss,
     Kinetic Cuirass, Blood-Bound Book, Amanita Charm, Shield of the Phoenix, Pharaoh''s
     Curse, Eye of Providence, Bancroft''s Talon, Oni Hunter''s Garb, Helm of Radiance,
-    Pendulum Blade, Doom Orb, Rod of Asclepius, Dominance.'
+    Pendulum Blade, Doom Orb, Rod of Asclepius, Dominance, Gem of Focus.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -486,7 +486,7 @@ builds:
     of Valor, Golden Blade, Obsidian Shard, Runeforged Hammer, Stone of Binding, Heartseeker,
     Kinetic Cuirass, Pharaoh''s Curse, Void Shield, Amanita Charm, Titan''s Bane,
     Pendulum Blade, Freya''s Tears, Eye of Providence, Bragi''s Harp, Oni Hunter''s
-    Garb, Bracer of The Abyss, Doom Orb.'
+    Garb, Bracer of The Abyss, Doom Orb, Dominance.'
   slot_scores:
     Avenging Blade:
       total: 0.53
@@ -558,7 +558,7 @@ builds:
     of the Magus, Kinetic Cuirass, Amanita Charm, Spear of Desolation, Bragi''s Harp,
     Bracer of The Abyss, Freya''s Tears, Dominance, Eye of Providence, Oni Hunter''s
     Garb, Shogun''s Ofuda, Shield of the Phoenix, Chronos'' Pendant, Blood-Bound Book,
-    Obsidian Shard, Demon Blade, Bancroft''s Talon.'
+    Obsidian Shard, Demon Blade, Bancroft''s Talon, Spectral Armor.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.51
@@ -631,7 +631,7 @@ builds:
     Gem of Focus, Golden Blade, The Reaper, Kinetic Cuirass, Totem of Death, Arondight,
     Runeforged Hammer, Amanita Charm, Pharaoh''s Curse, Bracer of The Abyss, Eye of
     Providence, Pendulum Blade, Blood-Bound Book, Oni Hunter''s Garb, Bragi''s Harp,
-    Tekko-Kagi, Obsidian Shard.'
+    Tekko-Kagi, Obsidian Shard, Bancroft''s Talon.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -704,7 +704,7 @@ builds:
     Bancroft''s Talon, Helm of Radiance, Runeforged Hammer, Rod of Asclepius, Kinetic
     Cuirass, Freya''s Tears, Amanita Charm, Tekko-Kagi, Pharaoh''s Curse, Gem of Focus,
     Jade Scepter, Eye of Providence, Shield of the Phoenix, Oni Hunter''s Garb, Doom
-    Orb.'
+    Orb, Totem of Death.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -777,7 +777,7 @@ builds:
     Shard, Chronos'' Pendant, Blood-Bound Book, Kinetic Cuirass, Bancroft''s Talon,
     Amanita Charm, Helm of Radiance, Pharaoh''s Curse, Dominance, Rod of Asclepius,
     Freya''s Tears, Eye of Providence, Oni Hunter''s Garb, Jade Scepter, Shield of
-    the Phoenix.'
+    the Phoenix, Doom Orb.'
   slot_scores:
     Berserker's Shield:
       total: 0.5

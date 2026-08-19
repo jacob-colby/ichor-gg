@@ -30,7 +30,7 @@
 | Screeching Gargoyle | 0.52 | 0.47 | 0.49 | 0.62 | 0.00 | 0.42 | fair | protection-shred, peel | **UNDERRATED** |
 | Mantle Of Discord | 0.52 | 0.47 | 0.52 | 0.62 | 0.00 | 0.35 | fair | peel, cc-immunity | **UNDERRATED** |
 | Stone of Binding | 0.51 | 0.47 | 0.47 | 0.62 | 0.00 | 0.45 | fair | protection-shred | **UNDERRATED** |
-| Gladiator's Shield | 0.51 | 0.46 | 0.41 | 0.62 | 0.00 | 0.57 | premium | burst |  |
+| Gladiator's Shield | 0.51 | 0.46 | 0.41 | 0.62 | 0.00 | 0.57 | premium | burst | **UNDERRATED** |
 | Damaru | 0.51 | 0.46 | 0.57 | 0.62 | 0.00 | 0.21 | fair |  |  |
 | Chandra's Grace | 0.51 | 0.46 | 0.53 | 0.62 | 0.00 | 0.30 | fair | sustain |  |
 | Ancile | 0.51 | 0.46 | 0.51 | 0.62 | 0.00 | 0.33 | fair |  |  |
@@ -86,14 +86,18 @@
 | Odysseus' Bow | 0.44 | 0.31 | 0.36 | 0.62 | 0.00 | 0.20 | premium | burst, wave-clear |  |
 | Devourer's Gauntlet | 0.43 | 0.29 | 0.32 | 0.62 | 0.00 | 0.21 | premium | sustain |  |
 | Dagger of Frenzy | 0.42 | 0.28 | 0.36 | 0.62 | 0.00 | 0.10 | premium |  |  |
+| Shell of Rebuke | 0.41 | 0.29 | 0.26 | 0.57 | 0.17 | 0.35 | premium | peel |  |
 | Resolute Mantle | 0.41 | 0.25 | 0.30 | 0.62 | 0.00 | 0.16 | premium | cc-immunity, sustain |  |
 | Vital Amplifier | 0.40 | 0.25 | 0.24 | 0.62 | 0.00 | 0.25 | premium |  |  |
 | Circe's Hexstone | 0.40 | 0.24 | 0.22 | 0.62 | 0.00 | 0.30 | premium | mobility, cc-immunity |  |
 | Hastened Fatalis | 0.40 | 0.24 | 0.31 | 0.62 | 0.00 | 0.10 | premium | mobility |  |
+| Time-lock Aegis | 0.40 | 0.24 | 0.20 | 0.62 | 0.00 | 0.35 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.40 | 0.23 | 0.18 | 0.62 | 0.00 | 0.35 | premium | anti-heal |  |
 | Gauntlet of Thebes | 0.39 | 0.23 | 0.26 | 0.62 | 0.00 | 0.16 | premium |  |  |
 | Sun Beam Bow | 0.38 | 0.20 | 0.25 | 0.62 | 0.00 | 0.10 | premium |  |  |
 | Omen Drum | 0.38 | 0.19 | 0.27 | 0.62 | 0.00 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.37 | 0.18 | 0.20 | 0.62 | 0.00 | 0.14 | premium | cc-immunity |  |
 | Daybreak Gavel | 0.37 | 0.17 | 0.18 | 0.62 | 0.00 | 0.16 | premium |  |  |
 | The Executioner | 0.36 | 0.15 | 0.13 | 0.62 | 0.00 | 0.20 | premium | protection-shred |  |
 | Mercury's Talaria | 0.33 | 0.09 | 0.13 | 0.62 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.28 | 0.00 | 0.00 | 0.62 | 0.00 | 0.00 | premium | mobility |  |

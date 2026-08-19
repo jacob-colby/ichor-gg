@@ -33,7 +33,7 @@
 | Genji's Guard | 0.47 | 0.51 | 0.69 | 0.47 | 0.14 | 0.09 | undervalued |  | **UNDERRATED** |
 | Musashi's Dual Swords | 0.47 | 0.45 | 0.42 | 0.54 | 0.00 | 0.52 | premium | mobility | **UNDERRATED** |
 | Bloodforge | 0.47 | 0.45 | 0.42 | 0.54 | 0.00 | 0.52 | premium | sustain | **UNDERRATED** |
-| Kinetic Cuirass | 0.47 | 0.44 | 0.59 | 0.54 | 0.00 | 0.10 | fair | burst |  |
+| Kinetic Cuirass | 0.47 | 0.44 | 0.59 | 0.54 | 0.00 | 0.10 | fair | burst | **UNDERRATED** |
 | Amanita Charm | 0.47 | 0.44 | 0.63 | 0.54 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Wyrmskin Hide | 0.46 | 0.44 | 0.40 | 0.54 | 0.00 | 0.52 | premium |  |  |
 | Eye of Providence | 0.46 | 0.43 | 0.62 | 0.54 | 0.00 | 0.00 | undervalued | ward-economy |  |
@@ -88,12 +88,16 @@
 | Hastened Fatalis | 0.35 | 0.21 | 0.31 | 0.54 | 0.00 | 0.00 | premium | mobility |  |
 | Resolute Mantle | 0.35 | 0.21 | 0.30 | 0.54 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Omen Drum | 0.34 | 0.19 | 0.27 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.34 | 0.18 | 0.26 | 0.54 | 0.00 | 0.00 | premium | peel |  |
 | Circe's Hexstone | 0.34 | 0.18 | 0.22 | 0.54 | 0.00 | 0.09 | premium | mobility, cc-immunity |  |
 | Gauntlet of Thebes | 0.34 | 0.18 | 0.26 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Sun Beam Bow | 0.33 | 0.18 | 0.25 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Vital Amplifier | 0.33 | 0.17 | 0.24 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Magi's Cloak | 0.33 | 0.35 | 0.50 | 0.33 | 0.12 | 0.00 | fair | cc-immunity |  |
+| Talisman of Purification | 0.33 | 0.17 | 0.20 | 0.54 | 0.00 | 0.09 | premium | cc-immunity |  |
+| Time-lock Aegis | 0.31 | 0.14 | 0.20 | 0.54 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.31 | 0.12 | 0.13 | 0.54 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.29 | 0.09 | 0.13 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.25 | 0.00 | 0.00 | 0.54 | 0.00 | 0.00 | premium | mobility |  |

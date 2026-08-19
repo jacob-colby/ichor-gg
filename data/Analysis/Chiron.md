@@ -92,8 +92,12 @@
 | Radiant Bulwark | 0.36 | 0.22 | 0.32 | 0.55 | 0.00 | 0.00 | premium | aura |  |
 | Resolute Mantle | 0.35 | 0.21 | 0.30 | 0.55 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Omen Drum | 0.34 | 0.19 | 0.27 | 0.55 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.34 | 0.18 | 0.26 | 0.55 | 0.00 | 0.00 | premium | peel |  |
 | Circe's Hexstone | 0.34 | 0.18 | 0.22 | 0.55 | 0.00 | 0.10 | premium | mobility, cc-immunity |  |
 | Gauntlet of Thebes | 0.34 | 0.18 | 0.26 | 0.55 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.34 | 0.12 | 0.18 | 0.57 | 0.33 | 0.00 | premium |  |  |
+| Talisman of Purification | 0.33 | 0.17 | 0.20 | 0.55 | 0.00 | 0.10 | premium | cc-immunity |  |
+| Time-lock Aegis | 0.32 | 0.14 | 0.20 | 0.55 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.31 | 0.12 | 0.18 | 0.55 | 0.00 | 0.00 | premium | anti-heal |  |
 | Mercury's Talaria | 0.29 | 0.09 | 0.13 | 0.55 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.25 | 0.00 | 0.00 | 0.55 | 0.00 | 0.00 | premium | mobility |  |

@@ -123,7 +123,7 @@ builds:
     Pharaoh''s Curse, Demon Blade, Heartseeker, Bracer of The Abyss, Titan''s Bane,
     Deathbringer, Kinetic Cuirass, Obsidian Shard, Amanita Charm, Transcendence, Avenging
     Blade, Toxic Blade, Pendulum Blade, Shield Splitter, Eye of Providence, Oni Hunter''s
-    Garb.'
+    Garb, Shogun''s Ofuda.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -197,7 +197,7 @@ builds:
     of The Abyss, Dominance, Riptalon, Tekko-Kagi, Bancroft''s Talon, Oni Hunter''s
     Garb, Helm of Radiance, Doom Orb, Transcendence, The World Stone, Blood-Bound
     Book, Rod of Asclepius, Heartseeker, Kinetic Cuirass, Freya''s Tears, Amanita
-    Charm, Gem of Focus.'
+    Charm, Gem of Focus, Jade Scepter.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -269,8 +269,8 @@ builds:
     Tears, Breastplate of Valor, Spectral Armor, Death Metal, Blood-Bound Book, Erosion,
     Shogun''s Ofuda, Shifter''s Shield, Eye of the Storm, Damaru, Shield Splitter,
     Eye of Providence, Hydra''s Lament, Bancroft''s Talon, Lernaean Bow, Draconic
-    Scale, Lifebinder, Leviathan''s Hide, Midgardian Mail, Avenging Blade, The Cosmic
-    Horror.'
+    Scale, Lifebinder, Leviathan''s Hide, Midgardian Mail, Avenging Blade, Spear of
+    the Magus, The Cosmic Horror.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -342,7 +342,7 @@ builds:
     Toxic Blade, Screeching Gargoyle, Runeforged Hammer, Pendulum Blade, Breastplate
     of Valor, Doom Orb, Bragi''s Harp, Stone of Binding, The World Stone, Dominance,
     Kinetic Cuirass, Pharaoh''s Curse, Void Shield, Amanita Charm, Dreamer''s Idol,
-    Avatar''s Parashu.'
+    Avatar''s Parashu, Eye of Providence.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
@@ -414,7 +414,7 @@ builds:
     The Cosmic Horror, Dominance, Bracer of The Abyss, Kinetic Cuirass, Amanita Charm,
     Eye of Providence, Shogun''s Ofuda, Oni Hunter''s Garb, Blood-Bound Book, Freya''s
     Tears, Obsidian Shard, Eros'' Bow, Bancroft''s Talon, Qin''s Blade, Demon Blade,
-    Transcendence.'
+    Transcendence, Avenging Blade.'
   slot_scores:
     Golden Blade:
       total: 0.52
@@ -486,7 +486,7 @@ builds:
     of the Magus, Damaru, The Cosmic Horror, Riptalon, Arondight, Lernaean Bow, Pendulum
     Blade, Golden Blade, Runeforged Hammer, Kinetic Cuirass, Amanita Charm, Bracer
     of The Abyss, The Reaper, Bragi''s Harp, Obsidian Shard, Pharaoh''s Curse, Tekko-Kagi,
-    Eye of Providence, Oni Hunter''s Garb, Gladiator''s Shield.'
+    Eye of Providence, Oni Hunter''s Garb, Gladiator''s Shield, Helm of Radiance.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -558,7 +558,7 @@ builds:
     of Valor, Pharaoh''s Curse, Demon Blade, Heartseeker, Bracer of The Abyss, Titan''s
     Bane, Deathbringer, Kinetic Cuirass, Obsidian Shard, Amanita Charm, Transcendence,
     Avenging Blade, Toxic Blade, Pendulum Blade, Shield Splitter, Eye of Providence,
-    Oni Hunter''s Garb.'
+    Oni Hunter''s Garb, Shogun''s Ofuda.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -630,7 +630,7 @@ builds:
     Spear of the Magus, Breastplate of Valor, Pharaoh''s Curse, Demon Blade, Heartseeker,
     Bracer of The Abyss, Titan''s Bane, Deathbringer, Kinetic Cuirass, Obsidian Shard,
     Amanita Charm, Transcendence, Avenging Blade, Toxic Blade, Pendulum Blade, Shield
-    Splitter, Eye of Providence, Oni Hunter''s Garb.'
+    Splitter, Eye of Providence, Oni Hunter''s Garb, Shogun''s Ofuda.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54

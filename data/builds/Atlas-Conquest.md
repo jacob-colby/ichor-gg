@@ -120,7 +120,8 @@ builds:
     Grimoire, Erosion, Shield of the Phoenix, Eye of Providence, Oni Hunter''s Garb,
     Draconic Scale, Spectral Armor, Leviathan''s Hide, Mantle Of Discord, Midgardian
     Mail, Soul Gem, Stone of Binding, Nimble Ring, Magi''s Cloak, Gladiator''s Shield,
-    Ancile, Helm of Radiance, Screeching Gargoyle, Hide of the Nemean Lion.'
+    Ancile, Helm of Radiance, Screeching Gargoyle, Hide of the Nemean Lion, Void Shield,
+    Doublet of Binding.'
   slot_scores:
     Yogi's Necklace:
       total: 0.58
@@ -191,7 +192,8 @@ builds:
     Grimoire, Rod of Tahuti, Chandra''s Grace, Rod of Asclepius, Oni Hunter''s Garb,
     Erosion, Eye of Providence, Draconic Scale, Phoenix Feather, Spectral Armor, Leviathan''s
     Hide, Midgardian Mail, Lifebinder, Glorious Pridwen, Nimble Ring, Gladiator''s
-    Shield, Ancile, Blood-Bound Book, Hide of the Nemean Lion.'
+    Shield, Ancile, Blood-Bound Book, Hide of the Nemean Lion, Void Shield, Doublet
+    of Binding.'
   slot_scores:
     Yogi's Necklace:
       total: 0.59
@@ -260,7 +262,8 @@ builds:
     Soul Gem, Stone of Binding, Screeching Gargoyle, Void Shield, The Cosmic Horror,
     Spear of the Magus, Oni Hunter''s Garb, Void Stone, Shield of the Phoenix, Spear
     of Desolation, Erosion, Eye of Providence, Spectral Armor, Nimble Ring, Draconic
-    Scale, Obsidian Shard, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord.'
+    Scale, Obsidian Shard, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord,
+    Helm of Radiance, Magi''s Cloak.'
   slot_scores:
     Stone of Binding:
       total: 0.55
@@ -329,7 +332,8 @@ builds:
     Charm, Gluttonous Grimoire, Oni Hunter''s Garb, Soul Gem, Shield of the Phoenix,
     Spectral Armor, Erosion, Eye of Providence, Draconic Scale, Leviathan''s Hide,
     Midgardian Mail, Helm of Radiance, Mantle Of Discord, Stone of Binding, Death
-    Metal, Screeching Gargoyle, The Cosmic Horror, Bracer of The Abyss, Ancile.'
+    Metal, Screeching Gargoyle, The Cosmic Horror, Bracer of The Abyss, Ancile, Rod
+    of Asclepius, Magi''s Cloak.'
   slot_scores:
     Yogi's Necklace:
       total: 0.57
@@ -399,7 +403,7 @@ builds:
     Screeching Gargoyle, Oni Hunter''s Garb, Chronos'' Pendant, Nimble Ring, Chandra''s
     Grace, Spear of Desolation, Gladiator''s Shield, Erosion, Spectral Armor, Eye
     of Providence, Draconic Scale, Leviathan''s Hide, Gem of Focus, Helm of Radiance,
-    Midgardian Mail, Mantle Of Discord.'
+    Midgardian Mail, Mantle Of Discord, Totem of Death, Stone of Binding.'
   slot_scores:
     Yogi's Necklace:
       total: 0.57
@@ -469,7 +473,7 @@ builds:
     Draconic Scale, Spectral Armor, Leviathan''s Hide, Mantle Of Discord, Midgardian
     Mail, Soul Gem, Stone of Binding, Nimble Ring, Magi''s Cloak, Gladiator''s Shield,
     Ancile, Helm of Radiance, Prophetic Cloak, Screeching Gargoyle, Hide of the Nemean
-    Lion.'
+    Lion, Void Shield, Doublet of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.56

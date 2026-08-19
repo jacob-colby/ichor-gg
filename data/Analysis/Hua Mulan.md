@@ -33,7 +33,7 @@
 | Runeforged Hammer | 0.46 | 0.53 | 0.55 | 0.43 | 0.11 | 0.47 | fair | burst | **UNDERRATED** |
 | Draconic Scale | 0.46 | 0.51 | 0.50 | 0.44 | 0.18 | 0.54 | fair |  |  |
 | Magi's Cloak | 0.46 | 0.46 | 0.50 | 0.50 | 0.00 | 0.38 | fair | cc-immunity | **UNDERRATED** |
-| Damaru | 0.46 | 0.46 | 0.57 | 0.50 | 0.00 | 0.22 | fair |  |  |
+| Damaru | 0.46 | 0.46 | 0.57 | 0.50 | 0.00 | 0.22 | fair |  | **UNDERRATED** |
 | Ancile | 0.46 | 0.46 | 0.51 | 0.50 | 0.00 | 0.35 | fair |  |  |
 | Screeching Gargoyle | 0.46 | 0.46 | 0.49 | 0.50 | 0.00 | 0.39 | fair | protection-shred, peel |  |
 | Hide of the Nemean Lion | 0.45 | 0.46 | 0.50 | 0.50 | 0.00 | 0.35 | fair |  |  |
@@ -84,9 +84,11 @@
 | Odysseus' Bow | 0.38 | 0.31 | 0.36 | 0.50 | 0.00 | 0.20 | premium | burst, wave-clear |  |
 | Heartwood Charm | 0.38 | 0.31 | 0.33 | 0.50 | 0.00 | 0.26 | premium |  |  |
 | Eye of Erebus | 0.37 | 0.30 | 0.32 | 0.50 | 0.00 | 0.26 | premium | ward-economy |  |
+| Shell of Rebuke | 0.37 | 0.30 | 0.26 | 0.50 | 0.00 | 0.38 | premium | peel |  |
 | Devourer's Gauntlet | 0.37 | 0.29 | 0.32 | 0.50 | 0.00 | 0.22 | premium | sustain |  |
 | Dagger of Frenzy | 0.37 | 0.28 | 0.36 | 0.50 | 0.00 | 0.10 | premium |  |  |
 | Resolute Mantle | 0.35 | 0.25 | 0.30 | 0.50 | 0.00 | 0.15 | premium | cc-immunity, sustain |  |
+| Time-lock Aegis | 0.35 | 0.25 | 0.20 | 0.50 | 0.00 | 0.38 | premium | cc-immunity |  |
 | Vital Amplifier | 0.35 | 0.25 | 0.24 | 0.50 | 0.00 | 0.25 | premium |  |  |
 | Hastened Fatalis | 0.35 | 0.24 | 0.31 | 0.50 | 0.00 | 0.10 | premium | mobility |  |
 | Brawler’s Beat Stick | 0.35 | 0.24 | 0.18 | 0.50 | 0.00 | 0.38 | premium | anti-heal |  |
@@ -95,5 +97,7 @@
 | Sun Beam Bow | 0.33 | 0.20 | 0.25 | 0.50 | 0.00 | 0.10 | premium |  |  |
 | Omen Drum | 0.32 | 0.19 | 0.27 | 0.50 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.31 | 0.17 | 0.18 | 0.50 | 0.00 | 0.15 | premium |  |  |
+| Talisman of Purification | 0.31 | 0.17 | 0.20 | 0.50 | 0.00 | 0.10 | premium | cc-immunity |  |
 | The Executioner | 0.30 | 0.15 | 0.13 | 0.50 | 0.00 | 0.20 | premium | protection-shred |  |
 | Mercury's Talaria | 0.27 | 0.09 | 0.13 | 0.50 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.23 | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | premium | mobility |  |

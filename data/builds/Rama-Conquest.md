@@ -120,7 +120,7 @@ builds:
     Bow, Golden Blade, The Reaper, Genji''s Guard, Tekko-Kagi, Hydra''s Lament, Runeforged
     Hammer, Dominance, Pharaoh''s Curse, Demon Blade, Breastplate of Valor, Deathbringer,
     Kinetic Cuirass, Amanita Charm, Shogun''s Ofuda, Eye of Providence, Oni Hunter''s
-    Garb, Musashi''s Dual Swords, Heartseeker, Freya''s Tears, Transcendence.'
+    Garb, Musashi''s Dual Swords, Avenging Blade, Heartseeker, Freya''s Tears, Transcendence.'
   slot_scores:
     Toxic Blade:
       total: 0.52
@@ -191,7 +191,8 @@ builds:
     Breastplate of Valor, Lernaean Bow, Golden Blade, The Reaper, Runeforged Hammer,
     Dominance, Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Amanita Charm, Freya''s
     Tears, Transcendence, Pharaoh''s Curse, Eye of Providence, Heartseeker, Shield
-    of the Phoenix, Avenging Blade, Yogi''s Necklace, Deathbringer, Arondight.'
+    of the Phoenix, Avenging Blade, Yogi''s Necklace, Deathbringer, Arondight, Shield
+    Splitter.'
   slot_scores:
     Toxic Blade:
       total: 0.5
@@ -260,7 +261,7 @@ builds:
     Bow, Genji''s Guard, Golden Blade, The Reaper, Hydra''s Lament, Tekko-Kagi, Runeforged
     Hammer, Demon Blade, Breastplate of Valor, Pharaoh''s Curse, Dominance, Deathbringer,
     Kinetic Cuirass, Amanita Charm, Eye of Providence, Musashi''s Dual Swords, Oni
-    Hunter''s Garb, Shogun''s Ofuda, Freya''s Tears, Heartseeker, Rage.'
+    Hunter''s Garb, Shogun''s Ofuda, Freya''s Tears, Heartseeker, Rage, Transcendence.'
   slot_scores:
     Toxic Blade:
       total: 0.52
@@ -330,7 +331,7 @@ builds:
     Tekko-Kagi, Runeforged Hammer, Freya''s Tears, Kinetic Cuirass, Amanita Charm,
     Shield of the Phoenix, Pharaoh''s Curse, Eye of Providence, Oni Hunter''s Garb,
     Pendulum Blade, Dominance, Heartseeker, Screeching Gargoyle, Arondight, Titan''s
-    Bane.'
+    Bane, Chandra''s Grace.'
   slot_scores:
     Toxic Blade:
       total: 0.52
@@ -400,7 +401,7 @@ builds:
     Pharaoh''s Curse, Oni Hunter''s Garb, Golden Blade, Runeforged Hammer, Damaru,
     Breastplate of Valor, Phoenix Feather, Freya''s Tears, Spectral Armor, Shogun''s
     Ofuda, Lernaean Bow, Erosion, Shifter''s Shield, Hydra''s Lament, Eye of the Storm,
-    Eye of Providence, Shield Splitter, Umbral Link, Leviathan''s Hide.'
+    Eye of Providence, Shield Splitter, Umbral Link, Leviathan''s Hide, Draconic Scale.'
   slot_scores:
     Toxic Blade:
       total: 0.52
@@ -470,7 +471,7 @@ builds:
     Hydra''s Lament, Screeching Gargoyle, Heartseeker, Runeforged Hammer, Breastplate
     of Valor, Titan''s Bane, Stone of Binding, Pharaoh''s Curse, Kinetic Cuirass,
     Void Shield, Amanita Charm, Dominance, Pendulum Blade, Eye of Providence, Oni
-    Hunter''s Garb.'
+    Hunter''s Garb, Void Stone.'
   slot_scores:
     Toxic Blade:
       total: 0.54
@@ -539,7 +540,8 @@ builds:
     Lernaean Bow, Genji''s Guard, Hydra''s Lament, The Reaper, Tekko-Kagi, Pharaoh''s
     Curse, Breastplate of Valor, Runeforged Hammer, Kinetic Cuirass, Dominance, Amanita
     Charm, Eye of Providence, Oni Hunter''s Garb, Shogun''s Ofuda, Demon Blade, Freya''s
-    Tears, Deathbringer, Eros'' Bow, Spectral Armor, Shield of the Phoenix.'
+    Tears, Deathbringer, Eros'' Bow, Spectral Armor, Shield of the Phoenix, Qin''s
+    Blade.'
   slot_scores:
     Golden Blade:
       total: 0.5
@@ -609,7 +611,7 @@ builds:
     Tears, Shield of the Phoenix, Damaru, Lernaean Bow, Screeching Gargoyle, Chandra''s
     Grace, Golden Blade, The Reaper, Kinetic Cuirass, Arondight, Runeforged Hammer,
     Amanita Charm, Pharaoh''s Curse, Eye of Providence, Pendulum Blade, Oni Hunter''s
-    Garb, Tekko-Kagi, Dominance, Shogun''s Ofuda, Spectral Armor.'
+    Garb, Tekko-Kagi, Dominance, Shogun''s Ofuda, Spectral Armor, Gladiator''s Shield.'
   slot_scores:
     Toxic Blade:
       total: 0.5
@@ -679,7 +681,7 @@ builds:
     Lament, Runeforged Hammer, Dominance, Pharaoh''s Curse, Demon Blade, Breastplate
     of Valor, Deathbringer, Kinetic Cuirass, Amanita Charm, Shogun''s Ofuda, Eye of
     Providence, Oni Hunter''s Garb, Musashi''s Dual Swords, Heartseeker, Freya''s
-    Tears, Transcendence.'
+    Tears, Transcendence, Avenging Blade.'
   slot_scores:
     Lernaean Bow:
       total: 0.49

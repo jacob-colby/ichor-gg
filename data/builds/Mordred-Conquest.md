@@ -197,7 +197,7 @@ builds:
     Eye of the Storm, Spectral Armor, Erosion, Rod of Asclepius, Eye of Providence,
     Chronos'' Pendant, Golden Blade, Jade Scepter, The Reaper, Pharaoh''s Curse, Obsidian
     Shard, Damaru, Leviathan''s Hide, Avenging Blade, Yogi''s Necklace, Midgardian
-    Mail, Bancroft''s Talon.'
+    Mail, Bancroft''s Talon, Triton''s Conch.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -269,7 +269,7 @@ builds:
     Death Metal, Eye of Providence, Helm of Radiance, Eye of the Storm, The Reaper,
     Obsidian Shard, Chronos'' Pendant, Pharaoh''s Curse, Rod of Asclepius, Screeching
     Gargoyle, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord, Golden Blade,
-    Chandra''s Grace, Jade Scepter, Stone of Binding.'
+    Chandra''s Grace, Jade Scepter, Stone of Binding, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -341,7 +341,7 @@ builds:
     Spectral Armor, Eye of Providence, Nimble Ring, Golden Blade, Blood-Bound Book,
     Pharaoh''s Curse, Leviathan''s Hide, Avenging Blade, Lifebinder, Midgardian Mail,
     Bancroft''s Talon, Death Metal, The Cosmic Horror, Glorious Pridwen, Ancile, Spear
-    of the Magus.'
+    of the Magus, Damaru.'
   slot_scores:
     Berserker's Shield:
       total: 0.56
@@ -413,7 +413,7 @@ builds:
     Hammer, Shield Splitter, Hydra''s Lament, Spear of Desolation, Nimble Ring, Erosion,
     Spectral Armor, Eye of Providence, Eye of the Storm, Obsidian Shard, Pharaoh''s
     Curse, Riptalon, Leviathan''s Hide, Midgardian Mail, Heartseeker, Silverbranch
-    Bow, Golden Blade, Mantle Of Discord.'
+    Bow, Golden Blade, Mantle Of Discord, Death Metal.'
   slot_scores:
     Stone of Binding:
       total: 0.55
@@ -485,7 +485,7 @@ builds:
     Lernaean Bow, Erosion, Shield Splitter, Eye of Providence, Toxic Blade, Eye of
     the Storm, Leviathan''s Hide, The Cosmic Horror, Midgardian Mail, The Reaper,
     Spear of the Magus, Mantle Of Discord, Helm of Radiance, Stone of Binding, Death
-    Metal, Screeching Gargoyle.'
+    Metal, Screeching Gargoyle, Yogi''s Necklace.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -557,7 +557,7 @@ builds:
     Spectral Armor, Eye of Providence, Runeforged Hammer, Prophetic Cloak, Shield
     Splitter, The Cosmic Horror, Pharaoh''s Curse, Spear of the Magus, Leviathan''s
     Hide, Helm of Radiance, Eye of the Storm, Gem of Focus, Midgardian Mail, Mantle
-    Of Discord, Stone of Binding, Totem of Death, Arondight, Death Metal.'
+    Of Discord, Stone of Binding, Totem of Death, Arondight, Death Metal, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -630,7 +630,7 @@ builds:
     Rod of Asclepius, Chronos'' Pendant, Eye of Providence, Eye of the Storm, Obsidian
     Shard, Jade Scepter, Pharaoh''s Curse, Leviathan''s Hide, Ethereal Staff, Midgardian
     Mail, The Reaper, Screeching Gargoyle, Golden Blade, Mantle Of Discord, Blood-Bound
-    Book.'
+    Book, Triton''s Conch.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -702,7 +702,7 @@ builds:
     Lament, Erosion, Spear of Desolation, Eye of the Storm, Helm of Radiance, Spectral
     Armor, Eye of Providence, Rod of Asclepius, Pharaoh''s Curse, The Reaper, Obsidian
     Shard, Leviathan''s Hide, Golden Blade, Chronos'' Pendant, Jade Scepter, Midgardian
-    Mail, Avenging Blade, Mantle Of Discord, Damaru, Stone of Binding.'
+    Mail, Avenging Blade, Mantle Of Discord, Damaru, Stone of Binding, Triton''s Conch.'
   slot_scores:
     Genji's Guard:
       total: 0.55

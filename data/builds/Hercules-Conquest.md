@@ -121,7 +121,7 @@ builds:
     Garb, Erosion, Eye of the Storm, Eye of Providence, Draconic Scale, Hydra''s Lament,
     Spectral Armor, Runeforged Hammer, Pharaoh''s Curse, Leviathan''s Hide, Golden
     Blade, Midgardian Mail, Mantle Of Discord, Stone of Binding, Avenging Blade, Magi''s
-    Cloak, Ancile, Screeching Gargoyle.'
+    Cloak, Ancile, Screeching Gargoyle, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -193,7 +193,7 @@ builds:
     Garb, Eye of the Storm, The Reaper, Shield Splitter, Freya''s Tears, Erosion,
     Hydra''s Lament, Phoenix Feather, Eye of Providence, Spectral Armor, Draconic
     Scale, Runeforged Hammer, Golden Blade, Avenging Blade, Pharaoh''s Curse, Leviathan''s
-    Hide, Midgardian Mail, Riptalon.'
+    Hide, Midgardian Mail, Riptalon, Ancile.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -263,7 +263,7 @@ builds:
     Shield, Freya''s Tears, Oni Hunter''s Garb, The Reaper, Void Stone, Shield of
     the Phoenix, Shield Splitter, Hydra''s Lament, Erosion, Spectral Armor, Eye of
     the Storm, Eye of Providence, Draconic Scale, Pharaoh''s Curse, Runeforged Hammer,
-    Riptalon, Heartseeker, Leviathan''s Hide.'
+    Riptalon, Heartseeker, Leviathan''s Hide, Golden Blade.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -333,7 +333,7 @@ builds:
     Tears, Shield of the Phoenix, Shogun''s Ofuda, Tyrfing, Spectral Armor, Erosion,
     Silverbranch Bow, Lernaean Bow, Hydra''s Lament, Shield Splitter, Eye of Providence,
     Draconic Scale, Eye of the Storm, Leviathan''s Hide, Midgardian Mail, Toxic Blade,
-    Runeforged Hammer.'
+    Mantle Of Discord, Runeforged Hammer.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -398,13 +398,13 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Freya''s Tears, Jotunn''s Revenge,
-    Kinetic Cuirass, Shield of the Phoenix, Amanita Charm, Hydra''s Lament, Berserker''s
-    Shield, The Crusher, Screeching Gargoyle, Oni Hunter''s Garb, Chandra''s Grace,
-    Gladiator''s Shield, Erosion, Spectral Armor, Eye of Providence, Prophetic Cloak,
-    Shield Splitter, Draconic Scale, Pharaoh''s Curse, Eye of the Storm, Leviathan''s
-    Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding, Arondight, Runeforged
-    Hammer.'
+    + fit + win/pick). Underrated for this god: Glorious Pridwen, Freya''s Tears,
+    Jotunn''s Revenge, Kinetic Cuirass, Shield of the Phoenix, Amanita Charm, Hydra''s
+    Lament, Berserker''s Shield, The Crusher, Screeching Gargoyle, Oni Hunter''s Garb,
+    Chandra''s Grace, Gladiator''s Shield, Erosion, Spectral Armor, Eye of Providence,
+    Prophetic Cloak, Shield Splitter, Draconic Scale, Pharaoh''s Curse, Eye of the
+    Storm, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding,
+    Arondight, Runeforged Hammer.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -474,7 +474,7 @@ builds:
     Phoenix, Oni Hunter''s Garb, Erosion, Eye of the Storm, Runeforged Hammer, Eye
     of Providence, Draconic Scale, Hydra''s Lament, Spectral Armor, Pharaoh''s Curse,
     Leviathan''s Hide, Golden Blade, Midgardian Mail, Mantle Of Discord, Stone of
-    Binding, Avenging Blade, Magi''s Cloak, Ancile, Screeching Gargoyle.'
+    Binding, Avenging Blade, Magi''s Cloak, Ancile, Screeching Gargoyle, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -544,7 +544,7 @@ builds:
     Doublet of Binding, The Crusher, Jotunn''s Revenge, Oni Hunter''s Garb, Stampede,
     Void Stone, Eye of the Storm, Eye of Providence, Freya''s Tears, Shield Splitter,
     Chandra''s Grace, Draconic Scale, Mystical Mail, Hydra''s Lament, Runeforged Hammer,
-    Umbral Link, Golden Blade.'
+    Umbral Link, Golden Blade, Phoenix Feather.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -615,7 +615,7 @@ builds:
     Shogun''s Ofuda, Chandra''s Grace, Void Shield, Doublet of Binding, Oni Hunter''s
     Garb, Eye of the Storm, Stampede, The Reaper, Umbral Link, Void Stone, Shield
     Splitter, Freya''s Tears, Hydra''s Lament, Phoenix Feather, Eye of Providence,
-    Draconic Scale, Runeforged Hammer.'
+    Draconic Scale, Runeforged Hammer, Mystical Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -686,7 +686,7 @@ builds:
     Curse, The Reaper, Avenging Blade, Berserker''s Shield, Shogun''s Ofuda, Doublet
     of Binding, Stone of Binding, Screeching Gargoyle, Oni Hunter''s Garb, Riptalon,
     Stampede, Chandra''s Grace, Umbral Link, Freya''s Tears, Eye of the Storm, Hydra''s
-    Lament, Runeforged Hammer.'
+    Lament, Mystical Mail, Runeforged Hammer.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -756,8 +756,8 @@ builds:
     Spectral Armor, Erosion, Kinetic Cuirass, Riptalon, Shield of the Phoenix, Golden
     Blade, Eros'' Bow, Void Shield, Doublet of Binding, The Crusher, Umbral Link,
     Oni Hunter''s Garb, Stampede, Void Stone, Jotunn''s Revenge, Chandra''s Grace,
-    Freya''s Tears, The Reaper, Mystical Mail, Tyrfing, Eye of Providence, Runeforged
-    Hammer.'
+    Freya''s Tears, The Reaper, Mystical Mail, Tyrfing, Eye of Providence, Hydra''s
+    Lament, Runeforged Hammer.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -828,7 +828,7 @@ builds:
     Revenge, Freya''s Tears, Pharaoh''s Curse, Berserker''s Shield, Shogun''s Ofuda,
     Hydra''s Lament, Void Shield, Doublet of Binding, Oni Hunter''s Garb, Stampede,
     Void Stone, The Crusher, Gladiator''s Shield, Screeching Gargoyle, Umbral Link,
-    Mystical Mail, Eye of Providence, Draconic Scale, Runeforged Hammer.'
+    Mystical Mail, Eye of Providence, Draconic Scale, Eros'' Bow, Runeforged Hammer.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -899,7 +899,7 @@ builds:
     Void Shield, Doublet of Binding, The Crusher, Jotunn''s Revenge, Runeforged Hammer,
     Oni Hunter''s Garb, Stampede, Freya''s Tears, Void Stone, Eye of the Storm, Eye
     of Providence, Shield Splitter, Chandra''s Grace, Draconic Scale, Mystical Mail,
-    Hydra''s Lament, Umbral Link, Golden Blade.'
+    Hydra''s Lament, Umbral Link, Golden Blade, Phoenix Feather.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.55

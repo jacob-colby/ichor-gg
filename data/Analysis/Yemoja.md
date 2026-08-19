@@ -18,7 +18,7 @@
 | Draconic Scale | 0.53 | 0.54 | 0.50 | 0.57 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
 | Spectral Armor | 0.52 | 0.53 | 0.58 | 0.57 | 0.00 | 0.41 | fair | anti-crit, aura | **UNDERRATED** |
 | Nimble Ring | 0.52 | 0.52 | 0.68 | 0.57 | 0.00 | 0.14 | undervalued |  | **UNDERRATED** |
-| Chronos' Pendant | 0.51 | 0.48 | 0.55 | 0.60 | 0.11 | 0.31 | fair |  |  |
+| Chronos' Pendant | 0.51 | 0.48 | 0.55 | 0.60 | 0.11 | 0.31 | fair |  | **UNDERRATED** |
 | Soul Gem | 0.51 | 0.54 | 0.57 | 0.52 | 0.14 | 0.47 | fair | burst, sustain, aura | **UNDERRATED** |
 | Leviathan's Hide | 0.51 | 0.50 | 0.54 | 0.57 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
 | Helm of Radiance | 0.51 | 0.50 | 0.55 | 0.57 | 0.00 | 0.37 | fair |  | **UNDERRATED** |
@@ -81,14 +81,18 @@
 | Radiant Bulwark | 0.43 | 0.36 | 0.32 | 0.57 | 0.00 | 0.45 | premium | aura |  |
 | Divine Ruin | 0.43 | 0.36 | 0.40 | 0.57 | 0.00 | 0.24 | premium | anti-heal, burst |  |
 | Soul Reaver | 0.43 | 0.35 | 0.40 | 0.57 | 0.00 | 0.24 | premium | burst |  |
+| Shell of Rebuke | 0.43 | 0.32 | 0.26 | 0.57 | 0.22 | 0.45 | premium | peel |  |
 | Heartwood Charm | 0.42 | 0.33 | 0.33 | 0.57 | 0.00 | 0.35 | premium |  |  |
 | Eye of Erebus | 0.42 | 0.33 | 0.32 | 0.57 | 0.00 | 0.35 | premium | ward-economy |  |
 | Necronomicon | 0.41 | 0.31 | 0.39 | 0.57 | 0.00 | 0.14 | premium |  |  |
 | Staff of Myrddin | 0.41 | 0.31 | 0.31 | 0.57 | 0.00 | 0.31 | premium |  |  |
+| Time-lock Aegis | 0.39 | 0.27 | 0.20 | 0.57 | 0.00 | 0.45 | premium | cc-immunity |  |
 | Resolute Mantle | 0.39 | 0.26 | 0.30 | 0.57 | 0.00 | 0.18 | premium | cc-immunity, sustain |  |
 | Brawler’s Beat Stick | 0.39 | 0.26 | 0.18 | 0.57 | 0.00 | 0.45 | premium | anti-heal |  |
 | Circe's Hexstone | 0.39 | 0.26 | 0.22 | 0.57 | 0.00 | 0.35 | premium | mobility, cc-immunity |  |
 | Gauntlet of Thebes | 0.37 | 0.23 | 0.26 | 0.57 | 0.00 | 0.18 | premium |  |  |
+| Talisman of Purification | 0.35 | 0.19 | 0.20 | 0.57 | 0.00 | 0.17 | premium | cc-immunity |  |
 | Omen Drum | 0.35 | 0.19 | 0.27 | 0.57 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.35 | 0.18 | 0.18 | 0.57 | 0.00 | 0.18 | premium |  |  |
 | Mercury's Talaria | 0.30 | 0.09 | 0.13 | 0.57 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.26 | 0.00 | 0.00 | 0.57 | 0.00 | 0.00 | premium | mobility |  |

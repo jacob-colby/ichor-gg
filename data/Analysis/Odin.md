@@ -31,7 +31,7 @@
 | The Reaper | 0.54 | 0.47 | 0.52 | 0.68 | 0.00 | 0.36 | fair | sustain | **UNDERRATED** |
 | Magi's Cloak | 0.54 | 0.46 | 0.50 | 0.68 | 0.00 | 0.38 | fair | cc-immunity | **UNDERRATED** |
 | Ancile | 0.53 | 0.46 | 0.51 | 0.68 | 0.00 | 0.35 | fair |  | **UNDERRATED** |
-| Screeching Gargoyle | 0.53 | 0.46 | 0.49 | 0.68 | 0.00 | 0.39 | fair | protection-shred, peel |  |
+| Screeching Gargoyle | 0.53 | 0.46 | 0.49 | 0.68 | 0.00 | 0.39 | fair | protection-shred, peel | **UNDERRATED** |
 | Damaru | 0.53 | 0.46 | 0.57 | 0.68 | 0.00 | 0.21 | fair |  |  |
 | Shogun's Ofuda | 0.53 | 0.46 | 0.51 | 0.68 | 0.00 | 0.35 | fair | aura |  |
 | Void Shield | 0.53 | 0.45 | 0.46 | 0.68 | 0.00 | 0.45 | fair | protection-shred, aura |  |
@@ -81,10 +81,12 @@
 | Demon Blade | 0.46 | 0.31 | 0.35 | 0.68 | 0.00 | 0.21 | premium |  |  |
 | Heartwood Charm | 0.46 | 0.30 | 0.33 | 0.68 | 0.00 | 0.26 | premium |  |  |
 | Eye of Erebus | 0.45 | 0.30 | 0.32 | 0.68 | 0.00 | 0.26 | premium | ward-economy |  |
+| Shell of Rebuke | 0.45 | 0.30 | 0.26 | 0.68 | 0.00 | 0.38 | premium | peel |  |
 | Devourer's Gauntlet | 0.45 | 0.29 | 0.32 | 0.68 | 0.00 | 0.21 | premium | sustain |  |
 | Qin's Blade | 0.44 | 0.28 | 0.36 | 0.68 | 0.00 | 0.10 | premium | burst |  |
 | Odysseus' Bow | 0.44 | 0.28 | 0.36 | 0.68 | 0.00 | 0.10 | premium | burst, wave-clear |  |
 | Resolute Mantle | 0.43 | 0.25 | 0.30 | 0.68 | 0.00 | 0.15 | premium | cc-immunity, sustain |  |
+| Time-lock Aegis | 0.43 | 0.25 | 0.20 | 0.68 | 0.00 | 0.38 | premium | cc-immunity |  |
 | Dagger of Frenzy | 0.43 | 0.25 | 0.36 | 0.68 | 0.00 | 0.00 | premium |  |  |
 | Brawler’s Beat Stick | 0.42 | 0.24 | 0.18 | 0.68 | 0.00 | 0.38 | premium | anti-heal |  |
 | Circe's Hexstone | 0.42 | 0.23 | 0.22 | 0.68 | 0.00 | 0.26 | premium | mobility, cc-immunity |  |
@@ -94,6 +96,8 @@
 | Omen Drum | 0.40 | 0.19 | 0.27 | 0.68 | 0.00 | 0.00 | premium |  |  |
 | Sun Beam Bow | 0.39 | 0.18 | 0.25 | 0.68 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.39 | 0.17 | 0.18 | 0.68 | 0.00 | 0.15 | premium |  |  |
+| Talisman of Purification | 0.39 | 0.17 | 0.20 | 0.68 | 0.00 | 0.10 | premium | cc-immunity |  |
 | Mystical Mail | 0.39 | 0.41 | 0.44 | 0.39 | 0.08 | 0.35 | fair | aura, wave-clear |  |
 | The Executioner | 0.36 | 0.12 | 0.13 | 0.68 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.35 | 0.09 | 0.13 | 0.68 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.30 | 0.00 | 0.00 | 0.68 | 0.00 | 0.00 | premium | mobility |  |

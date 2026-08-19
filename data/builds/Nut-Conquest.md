@@ -122,7 +122,8 @@ builds:
     Bracer of The Abyss, Tekko-Kagi, Breastplate of Valor, Chronos'' Pendant, Blood-Bound
     Book, Runeforged Hammer, Pharaoh''s Curse, Bancroft''s Talon, Dominance, Helm
     of Radiance, Damaru, Kinetic Cuirass, Freya''s Tears, Rod of Asclepius, Amanita
-    Charm, Doom Orb, Toxic Blade, The World Stone, Eye of Providence, Gem of Focus.'
+    Charm, Doom Orb, Toxic Blade, The World Stone, Eye of Providence, Gem of Focus,
+    Shogun''s Ofuda.'
   slot_scores:
     Book of Thoth:
       total: 0.49
@@ -195,7 +196,7 @@ builds:
     Talon, Bracer of The Abyss, Runeforged Hammer, Chronos'' Pendant, Dominance, Tekko-Kagi,
     Blood-Bound Book, Silverbranch Bow, Damaru, Oni Hunter''s Garb, Helm of Radiance,
     Doom Orb, Transcendence, The World Stone, Rod of Asclepius, Heartseeker, Kinetic
-    Cuirass, Pharaoh''s Curse, Freya''s Tears, Amanita Charm.'
+    Cuirass, Pharaoh''s Curse, Freya''s Tears, Amanita Charm, Gem of Focus.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -266,7 +267,8 @@ builds:
     Death Metal, Golden Blade, Chronos'' Pendant, Bracer of The Abyss, Runeforged
     Hammer, Freya''s Tears, Blood-Bound Book, Pendulum Blade, Damaru, Pharaoh''s Curse,
     Kinetic Cuirass, Shield of the Phoenix, Doom Orb, Bancroft''s Talon, Amanita Charm,
-    The World Stone, Dominance, Heartseeker, Gem of Focus, Helm of Radiance.'
+    The World Stone, Dominance, Heartseeker, Gem of Focus, Helm of Radiance, Toxic
+    Blade.'
   slot_scores:
     Book of Thoth:
       total: 0.49
@@ -339,7 +341,7 @@ builds:
     Phoenix Feather, Spectral Armor, Spear of the Magus, Shogun''s Ofuda, Hydra''s
     Lament, Erosion, Lernaean Bow, Shifter''s Shield, Death Metal, Eye of Providence,
     Helm of Radiance, Eye of the Storm, Umbral Link, Shield Splitter, Silverbranch
-    Bow.'
+    Bow, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -411,7 +413,7 @@ builds:
     Doom Orb, Bracer of The Abyss, The World Stone, Toxic Blade, Heartseeker, Chronos''
     Pendant, Blood-Bound Book, Runeforged Hammer, Dreamer''s Idol, Stone of Binding,
     Pendulum Blade, Titan''s Bane, Pharaoh''s Curse, Bancroft''s Talon, Kinetic Cuirass,
-    Void Shield.'
+    Void Shield, Amanita Charm.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -483,7 +485,7 @@ builds:
     Curse, Chronos'' Pendant, Blood-Bound Book, Runeforged Hammer, Kinetic Cuirass,
     Bancroft''s Talon, Dominance, Amanita Charm, Damaru, Freya''s Tears, Helm of Radiance,
     Eye of Providence, Rod of Asclepius, Oni Hunter''s Garb, Shogun''s Ofuda, Shield
-    of the Phoenix.'
+    of the Phoenix, Jade Scepter.'
   slot_scores:
     Book of Thoth:
       total: 0.49
@@ -555,7 +557,7 @@ builds:
     Screeching Gargoyle, Gem of Focus, Chandra''s Grace, The Reaper, Golden Blade,
     Pendulum Blade, Totem of Death, Arondight, Death Metal, Bracer of The Abyss, Tekko-Kagi,
     Pharaoh''s Curse, Runeforged Hammer, Kinetic Cuirass, Amanita Charm, Blood-Bound
-    Book, Eye of Providence, Oni Hunter''s Garb, Damaru.'
+    Book, Eye of Providence, Oni Hunter''s Garb, Damaru, Bancroft''s Talon.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -627,7 +629,7 @@ builds:
     Pendant, Blood-Bound Book, Runeforged Hammer, Pharaoh''s Curse, Bancroft''s Talon,
     Dominance, Helm of Radiance, Damaru, Kinetic Cuirass, Freya''s Tears, Rod of Asclepius,
     Amanita Charm, Doom Orb, Toxic Blade, The World Stone, Eye of Providence, Gem
-    of Focus.'
+    of Focus, Shogun''s Ofuda.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -699,7 +701,7 @@ builds:
     of Valor, Chronos'' Pendant, Blood-Bound Book, Runeforged Hammer, Pharaoh''s Curse,
     Bancroft''s Talon, Dominance, Helm of Radiance, Damaru, Kinetic Cuirass, Freya''s
     Tears, Rod of Asclepius, Amanita Charm, Doom Orb, Toxic Blade, The World Stone,
-    Eye of Providence, Gem of Focus.'
+    Eye of Providence, Gem of Focus, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
       total: 0.5

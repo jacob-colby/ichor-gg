@@ -124,7 +124,7 @@ builds:
     Mail, Stone of Binding, Eye of the Storm, Nimble Ring, Runeforged Hammer, Magi''s
     Cloak, Gladiator''s Shield, Screeching Gargoyle, Ancile, Hydra''s Lament, Shogun''s
     Ofuda, Void Shield, Helm of Radiance, Doublet of Binding, Chandra''s Grace, Hussar''s
-    Wings.'
+    Wings, Void Stone.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -199,7 +199,7 @@ builds:
     Mail, Runeforged Hammer, Glorious Pridwen, Eye of the Storm, Lifebinder, Gladiator''s
     Shield, Shield Splitter, Nimble Ring, Ancile, The Reaper, Blood-Bound Book, Shogun''s
     Ofuda, Void Shield, Hydra''s Lament, Doublet of Binding, Mantle Of Discord, Bancroft''s
-    Talon.'
+    Talon, Stone of Binding.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -272,7 +272,7 @@ builds:
     Armor, Nimble Ring, Draconic Scale, The Reaper, Obsidian Shard, Pharaoh''s Curse,
     Riptalon, Shield Splitter, Leviathan''s Hide, Runeforged Hammer, Midgardian Mail,
     Silverbranch Bow, Hydra''s Lament, Mantle Of Discord, Shifter''s Shield, Eye of
-    the Storm, Helm of Radiance, Ancile.'
+    the Storm, Helm of Radiance, Ancile, Magi''s Cloak.'
   slot_scores:
     Stone of Binding:
       total: 0.55
@@ -344,8 +344,8 @@ builds:
     Spectral Armor, Hydra''s Lament, Erosion, Lernaean Bow, Silverbranch Bow, Shield
     Splitter, Eye of Providence, Draconic Scale, Eye of the Storm, Leviathan''s Hide,
     Midgardian Mail, Mantle Of Discord, Toxic Blade, Stone of Binding, Helm of Radiance,
-    Screeching Gargoyle, Death Metal, Yogi''s Necklace, Damaru, Ancile, Shifter''s
-    Shield.'
+    Screeching Gargoyle, Death Metal, Yogi''s Necklace, Damaru, Ancile, The Cosmic
+    Horror, Shifter''s Shield.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -418,7 +418,8 @@ builds:
     Spectral Armor, Eye of Providence, Shield Splitter, Draconic Scale, Runeforged
     Hammer, Pharaoh''s Curse, Eye of the Storm, Leviathan''s Hide, Gem of Focus, Helm
     of Radiance, Midgardian Mail, Mantle Of Discord, Totem of Death, Stone of Binding,
-    Arondight, Shifter''s Shield, Death Metal, Rod of Asclepius, The Cosmic Horror.'
+    Arondight, Shifter''s Shield, Death Metal, Rod of Asclepius, The Cosmic Horror,
+    Glorious Pridwen.'
   slot_scores:
     Breastplate of Valor:
       total: 0.57
@@ -491,7 +492,7 @@ builds:
     of Binding, Eye of the Storm, Nimble Ring, Runeforged Hammer, Magi''s Cloak, Gladiator''s
     Shield, Screeching Gargoyle, Ancile, Prophetic Cloak, Hydra''s Lament, Shogun''s
     Ofuda, Void Shield, Helm of Radiance, Doublet of Binding, Chandra''s Grace, Hussar''s
-    Wings.'
+    Wings, Void Stone.'
   slot_scores:
     Genji's Guard:
       total: 0.52

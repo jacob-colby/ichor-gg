@@ -31,7 +31,7 @@
 | Dreamer's Idol | 0.45 | 0.54 | 0.44 | 0.37 | 0.22 | 0.79 | fair | cc-immunity |  |
 | Alchemist Coat | 0.45 | 0.47 | 0.50 | 0.47 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.45 | 0.47 | 0.59 | 0.47 | 0.00 | 0.21 | fair |  | **UNDERRATED** |
-| Ancient Signet | 0.44 | 0.46 | 0.43 | 0.47 | 0.00 | 0.52 | fair | burst |  |
+| Ancient Signet | 0.44 | 0.46 | 0.43 | 0.47 | 0.00 | 0.52 | fair | burst | **UNDERRATED** |
 | Shield of the Phoenix | 0.44 | 0.46 | 0.57 | 0.47 | 0.00 | 0.21 | fair | sustain |  |
 | Wish-Granting Pearl | 0.44 | 0.45 | 0.47 | 0.47 | 0.00 | 0.42 | fair |  |  |
 | Typhon’s Heart | 0.44 | 0.45 | 0.46 | 0.47 | 0.00 | 0.42 | fair |  |  |
@@ -87,8 +87,12 @@
 | Radiant Bulwark | 0.32 | 0.22 | 0.32 | 0.47 | 0.00 | 0.00 | premium | aura |  |
 | Circe's Hexstone | 0.32 | 0.22 | 0.22 | 0.47 | 0.00 | 0.21 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.32 | 0.21 | 0.30 | 0.47 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
+| Talisman of Purification | 0.31 | 0.20 | 0.20 | 0.47 | 0.00 | 0.21 | premium | cc-immunity |  |
 | Omen Drum | 0.31 | 0.19 | 0.27 | 0.47 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.30 | 0.18 | 0.26 | 0.47 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.30 | 0.18 | 0.26 | 0.47 | 0.00 | 0.00 | premium |  |  |
+| Time-lock Aegis | 0.28 | 0.14 | 0.20 | 0.47 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.27 | 0.12 | 0.18 | 0.47 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.27 | 0.12 | 0.18 | 0.47 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.26 | 0.09 | 0.13 | 0.47 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.21 | 0.00 | 0.00 | 0.47 | 0.00 | 0.00 | premium | mobility |  |

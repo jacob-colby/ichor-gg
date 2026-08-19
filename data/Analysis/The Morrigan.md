@@ -30,7 +30,7 @@
 | Ethereal Staff | 0.44 | 0.48 | 0.51 | 0.45 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.44 | 0.47 | 0.59 | 0.45 | 0.00 | 0.20 | fair |  | **UNDERRATED** |
 | Alchemist Coat | 0.43 | 0.47 | 0.50 | 0.45 | 0.00 | 0.40 | fair |  | **UNDERRATED** |
-| Shield of the Phoenix | 0.43 | 0.46 | 0.57 | 0.45 | 0.00 | 0.20 | fair | sustain |  |
+| Shield of the Phoenix | 0.43 | 0.46 | 0.57 | 0.45 | 0.00 | 0.20 | fair | sustain | **UNDERRATED** |
 | Ancient Signet | 0.43 | 0.45 | 0.43 | 0.45 | 0.00 | 0.50 | fair | burst |  |
 | Wish-Granting Pearl | 0.42 | 0.45 | 0.47 | 0.45 | 0.00 | 0.40 | fair |  |  |
 | Typhon’s Heart | 0.42 | 0.44 | 0.46 | 0.45 | 0.00 | 0.40 | fair |  |  |
@@ -87,8 +87,12 @@
 | Radiant Bulwark | 0.31 | 0.22 | 0.32 | 0.45 | 0.00 | 0.00 | premium | aura |  |
 | Circe's Hexstone | 0.31 | 0.21 | 0.22 | 0.45 | 0.00 | 0.20 | premium | mobility, cc-immunity |  |
 | Resolute Mantle | 0.30 | 0.21 | 0.30 | 0.45 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
+| Talisman of Purification | 0.30 | 0.20 | 0.20 | 0.45 | 0.00 | 0.20 | premium | cc-immunity |  |
 | Omen Drum | 0.29 | 0.19 | 0.27 | 0.45 | 0.00 | 0.00 | premium |  |  |
+| Shell of Rebuke | 0.29 | 0.18 | 0.26 | 0.45 | 0.00 | 0.00 | premium | peel |  |
 | Gauntlet of Thebes | 0.29 | 0.18 | 0.26 | 0.45 | 0.00 | 0.00 | premium |  |  |
+| Time-lock Aegis | 0.27 | 0.14 | 0.20 | 0.45 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Brawler’s Beat Stick | 0.26 | 0.12 | 0.18 | 0.45 | 0.00 | 0.00 | premium | anti-heal |  |
 | Daybreak Gavel | 0.26 | 0.12 | 0.18 | 0.45 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.25 | 0.09 | 0.13 | 0.45 | 0.00 | 0.00 | premium |  |  |
+| Agility Greaves | 0.20 | 0.00 | 0.00 | 0.45 | 0.00 | 0.00 | premium | mobility |  |
