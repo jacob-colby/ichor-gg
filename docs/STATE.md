@@ -235,8 +235,11 @@ is the largest single unexamined number in the model.
   unbuildable, and that is the honest state: fixing it needs a value model for
   multiplicative items, not a parser change. Briskberry Acorn was the same
   symptom with a different cause and is fixed (`wiki_parser._stats_from_prose`).
-- **Cu Chulainn and Ix Chel** have empty wiki pages — nothing to scrape. They
-  are in the roster and get picked up automatically if that changes.
+- ~~**Cu Chulainn and Ix Chel** have empty wiki pages~~ — fixed 2026-08-19.
+  Both pages filled in and both scraped clean, so the pool is now 89 of 89.
+  Cu Chulainn is a **stance god** (Human / Berserk) and landed all 10 abilities
+  across both forms, 8 of them with parsed scaling — the `_section_tables`
+  fix earning its keep on a god it was never tested against.
 - **Transcendence and the other stacking items don't price.** Their listed
   stats are deliberately below curve because the stacking is the value, so the
   gold model reads them as poor value — Transcendence ranks 25th of 40 for
@@ -314,12 +317,12 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (596) ·
 
 | | |
 |---|---|
-| Gods tracked | 87 of 89 on the roster |
+| Gods tracked | 89 of 89 on the roster |
 | Items | 226 |
-| Build groups | 261 (87 gods × 3 modes) |
+| Build groups | 267 (89 gods × 3 modes) |
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int, mana-stack |
-| Conquest gods placed | 87 / 87 |
-| Joust / Arena gods placed | 0 / 87 — no outcome data exists |
+| Conquest gods placed | 89 / 89 |
+| Joust / Arena gods placed | 0 / 89 — no outcome data exists |
 | Items placed | 220 / 220 |
 | Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
 | Headline gate | coverage 48%, win-weighted 49% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior |

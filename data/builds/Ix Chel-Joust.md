@@ -1,72 +1,72 @@
 ---
 type: smite-build
-god: Hecate
+god: Ix Chel
 mode: Joust
 builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Spear of Desolation
-  - The Cosmic Horror
-  - Spear of the Magus
-  - Rod of Tahuti
-  - Obsidian Shard
-  - Soul Gem
+  - Kinetic Cuirass
+  - Void Shield
+  - Freya's Tears
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
   flex_slots:
-  - Spear of the Magus
-  - Obsidian Shard
+  - Void Shield
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Spear of Desolation:
-      total: 0.76
-      efficiency: 0.52
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    The Cosmic Horror:
-      total: 0.68
+      fit: 0.6
+    Void Shield:
+      total: 0.54
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Spectral Armor:
+      total: 0.55
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.77
-    Spear of the Magus:
-      total: 0.67
-      efficiency: 0.57
+      fit: 0.53
+    Amanita Charm:
+      total: 0.79
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
-      fit: 0.77
-    Rod of Tahuti:
-      total: 0.77
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
-    Obsidian Shard:
-      total: 0.64
+      fit: 0.95
+    Erosion:
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.77
-    Soul Gem:
-      total: 0.78
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
+      fit: 0.7
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -74,18 +74,18 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
-  - Death Metal
-  - Spear of Desolation
-  - Doom Orb
+  - Genji's Guard
+  - Kinetic Cuirass
   - Rod of Tahuti
+  - Erosion
   - Triton's Conch
   flex_slots:
-  - Death Metal
-  - Doom Orb
+  - Bancroft's Talon
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -99,58 +99,58 @@ builds:
     data).
   slot_scores:
     Bancroft's Talon:
-      total: 0.58
+      total: 0.52
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.64
-    Death Metal:
-      total: 0.57
-      efficiency: 0.56
+      fit: 0.5
+    Genji's Guard:
+      total: 0.49
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Spear of Desolation:
-      total: 0.57
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Doom Orb:
+      fit: 0.28
+    Kinetic Cuirass:
       total: 0.52
-      efficiency: 0.46
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.45
     Rod of Tahuti:
-      total: 0.67
+      total: 0.57
       efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.37
+    Erosion:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Triton's Conch:
-      total: 0.6
+      total: 0.56
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.68
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Spear of Desolation
-  - The Cosmic Horror
-  - Spear of the Magus
+  - Kinetic Cuirass
   - Rod of Tahuti
+  - Spectral Armor
+  - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Spear of the Magus
   - Triton's Conch
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -158,35 +158,35 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Spear of Desolation:
-      total: 0.65
-      efficiency: 0.52
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.78
-    The Cosmic Horror:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
-    Spear of the Magus:
-      total: 0.56
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
+      fit: 0.47
     Rod of Tahuti:
-      total: 0.66
+      total: 0.56
       efficiency: 0.77
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.35
+    Spectral Armor:
+      total: 0.51
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Erosion:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -194,11 +194,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.54
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.59
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -217,8 +217,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Spear of Desolation
-  - The Cosmic Horror
-  - Spear of the Magus
-  - Rod of Tahuti
-  - Obsidian Shard
+  - Screeching Gargoyle
+  - Stone of Binding
+  - Void Shield
+  - Void Stone
+  - Erosion
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
-  - Obsidian Shard
+  - Screeching Gargoyle
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -285,44 +285,44 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Spear of Desolation:
-      total: 0.76
+    Screeching Gargoyle:
+      total: 0.57
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Stone of Binding:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Void Shield:
+      total: 0.66
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    Void Stone:
+      total: 0.65
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    Erosion:
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    The Cosmic Horror:
-      total: 0.71
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
-    Spear of the Magus:
-      total: 0.7
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
-    Rod of Tahuti:
-      total: 0.8
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
-    Obsidian Shard:
-      total: 0.68
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
+      fit: 0.61
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -333,126 +333,126 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Divine Ruin
+  - Kinetic Cuirass
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Rod of Tahuti
+  - Erosion
   - Soul Gem
   flex_slots:
-  - Divine Ruin
+  - Bragi's Harp
   - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
-  - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
-  rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
-    (no meta win/pick data).
-  slot_scores:
-    Divine Ruin:
-      total: 0.48
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
-    Bracer of The Abyss:
-      total: 0.45
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
-    Nimble Ring:
-      total: 0.58
-      efficiency: 0.68
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
-    Bragi's Harp:
-      total: 0.52
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.31
-    Soul Gem:
-      total: 0.78
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-  starter: *id001
-- source: suggested
-  archetype: cooldown
-  slot_order:
-  - Genji's Guard
-  - Breastplate of Valor
-  - Chronos' Pendant
-  - Spear of Desolation
-  - Rod of Tahuti
-  - Soul Gem
-  flex_slots:
-  - Rod of Tahuti
-  - Breastplate of Valor
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
-  - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
+  rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
+    (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.49
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Bracer of The Abyss:
+      total: 0.4
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
+    Nimble Ring:
+      total: 0.51
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Bragi's Harp:
+      total: 0.45
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Erosion:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Soul Gem:
+      total: 0.73
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
+  starter: *id001
+- source: suggested
+  archetype: cooldown
+  slot_order:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Kinetic Cuirass
+  - Freya's Tears
+  - Erosion
+  - Soul Gem
+  flex_slots:
+  - Kinetic Cuirass
+  - Breastplate of Valor
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.56
       efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.44
     Breastplate of Valor:
-      total: 0.56
+      total: 0.54
       efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.48
-    Chronos' Pendant:
-      total: 0.59
-      efficiency: 0.55
+      fit: 0.44
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.63
-    Spear of Desolation:
-      total: 0.69
+      fit: 0.49
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Erosion:
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.86
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
+      fit: 0.59
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -463,66 +463,66 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Spear of Desolation
-  - The Cosmic Horror
-  - Spear of the Magus
-  - Rod of Tahuti
-  - Obsidian Shard
-  - Soul Gem
+  - Kinetic Cuirass
+  - Void Shield
+  - Freya's Tears
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
   flex_slots:
-  - Spear of the Magus
-  - Obsidian Shard
+  - Void Shield
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Spear of Desolation:
-      total: 0.76
-      efficiency: 0.52
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    The Cosmic Horror:
-      total: 0.68
+      fit: 0.6
+    Void Shield:
+      total: 0.54
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Spectral Armor:
+      total: 0.55
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.77
-    Spear of the Magus:
-      total: 0.67
-      efficiency: 0.57
+      fit: 0.53
+    Amanita Charm:
+      total: 0.79
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
-      fit: 0.77
-    Rod of Tahuti:
-      total: 0.77
-      efficiency: 0.77
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
-    Obsidian Shard:
-      total: 0.64
+      fit: 0.95
+    Erosion:
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.77
-    Soul Gem:
-      total: 0.78
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
+      fit: 0.7
   starter: *id001
 ---
