@@ -12,9 +12,16 @@ import { statKey, INTERCEPT_KEY } from "../lib/itemFilters";
  *
  * It is also where the model's limits are written down. Those are easy to
  * leave out and they are the part a reader most needs: a build tool that
- * cannot see item passives will be systematically wrong about passive-heavy
- * items, and someone comparing our verdict to their own experience deserves to
- * know that before they conclude the model is simply bad.
+ * cannot see most item passives will be systematically wrong about
+ * passive-heavy items, and someone comparing our verdict to their own
+ * experience deserves to know that before they conclude the model is simply
+ * bad.
+ *
+ * The limits list is a claim about the code and goes stale the same way a
+ * weights table would. Two entries here already had: crit multipliers and stat
+ * conversions are both priced now, and `combat.py` is exact to 0.0% and feeds
+ * the draft, while this page still said neither existed. Re-read it whenever a
+ * pricing flag flips.
  */
 
 /** Stats fitted from very few items get a coefficient the data can't really
@@ -286,16 +293,23 @@ export function Method({ method, goldValues, items, godCount }: {
           </p>
           <ul className="flex max-w-[74ch] flex-col gap-2">
             <li>
-              <b className="text-ink">Item passives are invisible.</b> Deathbringer&rsquo;s crit
-              bonus, The Executioner&rsquo;s protection shred, Qin&rsquo;s Blade&rsquo;s
-              percent-health damage are prose we extract no numbers from. Every one of them is
-              priced as if the passive were free, so passive-heavy items read as{" "}
-              <b className="text-premium">premium</b> more often than they should.
+              <b className="text-ink">Most item passives are still unpriced.</b> Two classes are
+              not: a crit multiplier is converted to the critical chance it is worth and priced
+              (Deathbringer&rsquo;s +35% reads as +14% chance), and a stat conversion is priced
+              against a typical build (Transcendence&rsquo;s mana into Strength). Everything else —
+              The Executioner&rsquo;s protection shred, Qin&rsquo;s Blade&rsquo;s percent-health
+              damage — is prose we extract no numbers from, and is priced as if it were free, so
+              those items read as <b className="text-premium">premium</b> more often than they
+              should. Pricing the whole class was tried, measured, and made the model worse.
             </li>
             <li>
-              <b className="text-ink">There is no damage simulation.</b> Nothing here computes what
-              an ability hits for, or what it hits for through a given amount of protection. Fit is
-              a weighting, not a fight.
+              <b className="text-ink">The damage model is exact, and only the draft uses it.</b>{" "}
+              Ability and basic-attack damage through a given amount of protection is computed
+              exactly — calibrated against in-game readings to 0.0% worst-case error, which
+              overturned several published constants along the way. It decides which items rise
+              against a tanky enemy comp and which fall. It does <i>not</i> feed the base build:
+              as a global fit signal it was measured and it halved the gate, because it cannot
+              price defence at all.
             </li>
             <li>
               <b className="text-ink">Fit ignores magnitude.</b> Stated above, repeated here

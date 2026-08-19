@@ -78,8 +78,12 @@ describe("Method — the numbers are the pipeline's, not the page's", () => {
 
   it("writes the limits down rather than gesturing at them", () => {
     render(page());
-    expect(screen.getByText(/Item passives are invisible/i)).toBeInTheDocument();
-    expect(screen.getByText(/no damage simulation/i)).toBeInTheDocument();
+    // These two entries went stale silently: crit multipliers and stat
+    // conversions are priced now, and combat.py is exact and feeds the draft,
+    // while the page still claimed neither existed. Asserted on the CURRENT
+    // claim so the next flag flip trips a test rather than shipping a lie.
+    expect(screen.getByText(/Most item passives are still unpriced/i)).toBeInTheDocument();
+    expect(screen.getByText(/damage model is exact/i)).toBeInTheDocument();
     expect(screen.getAllByText(/ignores magnitude/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/one mode and one skill band/i)).toBeInTheDocument();
   });
