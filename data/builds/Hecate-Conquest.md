@@ -493,7 +493,7 @@ builds:
       efficiency: 0.42
       win: 0.6
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Gluttonous Grimoire:
       total: 0.57
       efficiency: 0.63

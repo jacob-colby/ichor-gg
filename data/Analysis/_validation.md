@@ -2,7 +2,7 @@
 
 Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 
-**Mean coverage:** 48%  ·  **Win-weighted coverage:** 49%  ·  **Pooled rank corr:** 0.42 (n=422)
+**Mean coverage:** 48%  ·  **Win-weighted coverage:** 49%  ·  **Pooled rank corr:** 0.43 (n=432)
 
 | God | Coverage | Win-weighted | Community items |
 |---|---|---|---|
@@ -32,6 +32,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Charon | 0% | 0% | 5 |
 | Chiron | 20% | 17% | 5 |
 | Chronos | 80% | 81% | 5 |
+| Cu Chulainn | 20% | 24% | 5 |
 | Cupid | 20% | 21% | 5 |
 | Da Ji | 80% | 78% | 5 |
 | Danzaburou | 80% | 81% | 5 |
@@ -50,6 +51,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Hua Mulan | 50% | 45% | 4 |
 | Hun Batz | 80% | 82% | 5 |
 | Ishtar | 33% | 35% | 6 |
+| Ix Chel | 60% | 61% | 5 |
 | Izanami | 40% | 41% | 5 |
 | Janus | 60% | 62% | 5 |
 | Jing Wei | 20% | 25% | 5 |
