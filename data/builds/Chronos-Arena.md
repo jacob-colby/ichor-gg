@@ -140,13 +140,13 @@ builds:
   slot_order:
   - Bragi's Harp
   - Spear of Desolation
-  - The Cosmic Horror
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Bragi's Harp
-  - The Cosmic Horror
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -175,18 +175,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    The Cosmic Horror:
-      total: 0.49
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Obsidian Shard:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -269,14 +269,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Void Shield
-  - Void Stone
   - Spear of Desolation
   - The Cosmic Horror
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - Void Shield
   - The Cosmic Horror
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -299,12 +299,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Void Stone:
-      total: 0.57
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Spear of Desolation:
       total: 0.59
       efficiency: 0.52
@@ -323,6 +317,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Obsidian Shard:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
+  - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Rod of Tahuti
   - Chronos' Pendant
-  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -429,12 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.34
-    Breastplate of Valor:
-      total: 0.49
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
     Chronos' Pendant:
       total: 0.5
       efficiency: 0.55
@@ -447,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Totem of Death:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Rod of Tahuti:
       total: 0.5
       efficiency: 0.77

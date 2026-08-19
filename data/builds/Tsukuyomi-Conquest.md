@@ -118,10 +118,10 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, The Crusher, Nimble Ring, Gluttonous Grimoire, Death
     Metal, The Reaper, Berserker''s Shield, Damaru, Lernaean Bow, Soul Gem, Golden
-    Blade, Tekko-Kagi, Riptalon, Silverbranch Bow, Tyrfing, Genji''s Guard, Bragi''s
-    Harp, Runeforged Hammer, The Cosmic Horror, Spear of the Magus, Dominance, Breastplate
-    of Valor, Spear of Desolation, Pharaoh''s Curse, Demon Blade, Bracer of The Abyss,
-    Kinetic Cuirass, Deathbringer, Obsidian Shard, Amanita Charm, Avenging Blade,
+    Blade, Tekko-Kagi, Dominance, Riptalon, Silverbranch Bow, Tyrfing, Genji''s Guard,
+    Bragi''s Harp, Runeforged Hammer, The Cosmic Horror, Spear of the Magus, Obsidian
+    Shard, Breastplate of Valor, Spear of Desolation, Pharaoh''s Curse, Demon Blade,
+    Bracer of The Abyss, Kinetic Cuirass, Deathbringer, Amanita Charm, Avenging Blade,
     Toxic Blade, Pendulum Blade, Eye of Providence, Shield Splitter, Oni Hunter''s
     Garb, Shogun''s Ofuda.'
   slot_scores:
@@ -192,12 +192,12 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
     of Tahuti, Nimble Ring, The Crusher, Gluttonous Grimoire, Soul Gem, Death Metal,
     Genji''s Guard, The Reaper, The Cosmic Horror, Berserker''s Shield, Spear of the
-    Magus, Spear of Desolation, Breastplate of Valor, Damaru, Bragi''s Harp, Lernaean
-    Bow, Golden Blade, Runeforged Hammer, Chronos'' Pendant, Obsidian Shard, Bracer
-    of The Abyss, Dominance, Tyrfing, Riptalon, Tekko-Kagi, Bancroft''s Talon, Oni
-    Hunter''s Garb, Helm of Radiance, Doom Orb, Silverbranch Bow, The World Stone,
-    Blood-Bound Book, Rod of Asclepius, Kinetic Cuirass, Freya''s Tears, Amanita Charm,
-    Gem of Focus, Jade Scepter.'
+    Magus, Spear of Desolation, Breastplate of Valor, Damaru, Obsidian Shard, Bragi''s
+    Harp, Dominance, Lernaean Bow, Golden Blade, Runeforged Hammer, Chronos'' Pendant,
+    Bracer of The Abyss, Tyrfing, Riptalon, Tekko-Kagi, Bancroft''s Talon, Totem of
+    Death, Oni Hunter''s Garb, Helm of Radiance, Doom Orb, Silverbranch Bow, Ethereal
+    Staff, The World Stone, Blood-Bound Book, Rod of Asclepius, Kinetic Cuirass, Freya''s
+    Tears.'
   slot_scores:
     Book of Thoth:
       total: 0.47
@@ -264,12 +264,12 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Rod of Tahuti, The Crusher, Soul Gem, Gluttonous Grimoire, Nimble Ring, Spear
     of Desolation, Genji''s Guard, The Reaper, The Cosmic Horror, Death Metal, Spear
-    of the Magus, Berserker''s Shield, Breastplate of Valor, Riptalon, Damaru, Silverbranch
-    Bow, Obsidian Shard, Chronos'' Pendant, Lernaean Bow, Tekko-Kagi, Golden Blade,
-    Bragi''s Harp, Runeforged Hammer, Freya''s Tears, Pendulum Blade, Bracer of The
-    Abyss, Tyrfing, Kinetic Cuirass, Shield of the Phoenix, Doom Orb, Amanita Charm,
-    The World Stone, Gem of Focus, Helm of Radiance, Eye of Providence, Pharaoh''s
-    Curse, Blood-Bound Book, Rod of Asclepius.'
+    of the Magus, Obsidian Shard, Berserker''s Shield, Breastplate of Valor, Riptalon,
+    Damaru, Silverbranch Bow, Chronos'' Pendant, Lernaean Bow, Tekko-Kagi, Golden
+    Blade, Bragi''s Harp, Runeforged Hammer, Freya''s Tears, Totem of Death, Dominance,
+    Pendulum Blade, Bracer of The Abyss, Tyrfing, Kinetic Cuirass, Shield of the Phoenix,
+    Doom Orb, Amanita Charm, The World Stone, Gem of Focus, Helm of Radiance, Ethereal
+    Staff, Eye of Providence.'
   slot_scores:
     Book of Thoth:
       total: 0.45
@@ -336,13 +336,13 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Rod of Tahuti, The Reaper, Shield
     of the Phoenix, Soul Gem, Gluttonous Grimoire, Kinetic Cuirass, The Crusher, Riptalon,
-    Nimble Ring, Rod of Asclepius, Genji''s Guard, Chandra''s Grace, Pharaoh''s Curse,
-    Oni Hunter''s Garb, Golden Blade, Runeforged Hammer, Phoenix Feather, Freya''s
-    Tears, Breastplate of Valor, Spectral Armor, Death Metal, Blood-Bound Book, Erosion,
-    Shogun''s Ofuda, Shifter''s Shield, Eye of the Storm, Damaru, Shield Splitter,
-    Eye of Providence, Bancroft''s Talon, Lernaean Bow, Draconic Scale, Lifebinder,
-    Leviathan''s Hide, Midgardian Mail, The Cosmic Horror, Avenging Blade, Spear of
-    the Magus.'
+    Nimble Ring, Ethereal Staff, Yogi''s Necklace, Rod of Asclepius, Genji''s Guard,
+    Chandra''s Grace, Pharaoh''s Curse, Oni Hunter''s Garb, Golden Blade, Runeforged
+    Hammer, Phoenix Feather, Freya''s Tears, Breastplate of Valor, Spectral Armor,
+    Death Metal, Blood-Bound Book, Erosion, Shogun''s Ofuda, Shifter''s Shield, Eye
+    of the Storm, Damaru, Shield Splitter, Eye of Providence, Bancroft''s Talon, Lernaean
+    Bow, Draconic Scale, Lifebinder, Leviathan''s Hide, Midgardian Mail, The Cosmic
+    Horror.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -386,13 +386,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Gluttonous Grimoire
-  - The Cosmic Horror
   - Tekko-Kagi
   - The Crusher
-  - Rod of Tahuti
+  - Heartseeker
+  - Titan's Bane
   flex_slots:
+  - Titan's Bane
   - Tekko-Kagi
-  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -409,12 +409,12 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Rod of Tahuti, The Crusher, Gluttonous Grimoire, The Reaper, Soul
     Gem, Nimble Ring, Riptalon, Tekko-Kagi, The Cosmic Horror, Silverbranch Bow, Spear
-    of the Magus, Berserker''s Shield, Avenging Blade, Death Metal, Spear of Desolation,
-    Damaru, Lernaean Bow, Genji''s Guard, Obsidian Shard, Golden Blade, Toxic Blade,
-    Screeching Gargoyle, Runeforged Hammer, Pendulum Blade, Tyrfing, Breastplate of
-    Valor, Doom Orb, The World Stone, Bragi''s Harp, Stone of Binding, Kinetic Cuirass,
-    Dominance, Pharaoh''s Curse, Void Shield, Amanita Charm, Dreamer''s Idol, Eye
-    of Providence, Avatar''s Parashu.'
+    of the Magus, Obsidian Shard, Berserker''s Shield, Avenging Blade, Death Metal,
+    Spear of Desolation, Damaru, Lernaean Bow, Genji''s Guard, Golden Blade, Toxic
+    Blade, Screeching Gargoyle, Dominance, Runeforged Hammer, Pendulum Blade, Tyrfing,
+    Breastplate of Valor, Doom Orb, The World Stone, Bragi''s Harp, Stone of Binding,
+    Kinetic Cuirass, Pharaoh''s Curse, Void Shield, Amanita Charm, Dreamer''s Idol,
+    Eye of Providence, Avatar''s Parashu.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -428,12 +428,6 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.53
-    The Cosmic Horror:
-      total: 0.53
-      efficiency: 0.58
-      win: 0.58
-      pick: 0.0
-      fit: 0.43
     Tekko-Kagi:
       total: 0.53
       efficiency: 0.44
@@ -446,12 +440,18 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.77
+    Heartseeker:
+      total: 0.54
+      efficiency: 0.41
       win: 0.58
-      pick: 0.0
-      fit: 0.43
+      pick: 0.42
+      fit: 0.77
+    Titan's Bane:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.58
+      pick: 0.26
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -481,12 +481,12 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Nimble Ring, Rod of Tahuti, Riptalon, The Crusher, Gluttonous Grimoire,
     Golden Blade, Berserker''s Shield, Silverbranch Bow, Tyrfing, The Reaper, Soul
-    Gem, Lernaean Bow, Genji''s Guard, Death Metal, Damaru, Toxic Blade, Tekko-Kagi,
-    The Cosmic Horror, Pharaoh''s Curse, Runeforged Hammer, Breastplate of Valor,
-    Spear of the Magus, Bragi''s Harp, Dominance, Bracer of The Abyss, Kinetic Cuirass,
-    Amanita Charm, Eye of Providence, Shogun''s Ofuda, Spear of Desolation, Oni Hunter''s
-    Garb, Blood-Bound Book, Freya''s Tears, Obsidian Shard, Eros'' Bow, Bancroft''s
-    Talon, Qin''s Blade, Demon Blade, Chronos'' Pendant.'
+    Gem, Lernaean Bow, Genji''s Guard, Death Metal, Damaru, Dominance, Toxic Blade,
+    Tekko-Kagi, The Cosmic Horror, Pharaoh''s Curse, Runeforged Hammer, Breastplate
+    of Valor, Spear of the Magus, Bragi''s Harp, Obsidian Shard, Bracer of The Abyss,
+    Kinetic Cuirass, Amanita Charm, Qin''s Blade, Eye of Providence, Shogun''s Ofuda,
+    Spear of Desolation, Oni Hunter''s Garb, Blood-Bound Book, Freya''s Tears, Eros''
+    Bow, Bancroft''s Talon.'
   slot_scores:
     Golden Blade:
       total: 0.53
@@ -554,12 +554,12 @@ builds:
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Soul Gem, Genji''s
     Guard, Nimble Ring, The Crusher, Breastplate of Valor, Gluttonous Grimoire, Spear
     of Desolation, Chronos'' Pendant, Freya''s Tears, Berserker''s Shield, Shield
-    of the Phoenix, Death Metal, The Reaper, The Cosmic Horror, Screeching Gargoyle,
-    Gem of Focus, Chandra''s Grace, Spear of the Magus, Damaru, Totem of Death, Riptalon,
-    Arondight, Lernaean Bow, Pendulum Blade, Silverbranch Bow, Golden Blade, Runeforged
-    Hammer, Kinetic Cuirass, Amanita Charm, Bracer of The Abyss, Bragi''s Harp, Obsidian
-    Shard, Pharaoh''s Curse, Tyrfing, Tekko-Kagi, Eye of Providence, Oni Hunter''s
-    Garb, Gladiator''s Shield, Helm of Radiance.'
+    of the Phoenix, Totem of Death, Death Metal, The Reaper, The Cosmic Horror, Screeching
+    Gargoyle, Gem of Focus, Chandra''s Grace, Spear of the Magus, Damaru, Riptalon,
+    Arondight, Obsidian Shard, Lernaean Bow, Pendulum Blade, Silverbranch Bow, Golden
+    Blade, Runeforged Hammer, Kinetic Cuirass, Dominance, Amanita Charm, Bracer of
+    The Abyss, Bragi''s Harp, Pharaoh''s Curse, Tyrfing, Tekko-Kagi, Eye of Providence,
+    Oni Hunter''s Garb, Gladiator''s Shield.'
   slot_scores:
     Book of Thoth:
       total: 0.45
@@ -626,13 +626,12 @@ builds:
   rationale: 'Off-type Intelligence build — this kit scales on it (efficiency + fit
     + win/pick). Underrated for this god: Rod of Tahuti, Nimble Ring, Gluttonous Grimoire,
     Soul Gem, The Crusher, Death Metal, The Cosmic Horror, Spear of Desolation, Spear
-    of the Magus, Genji''s Guard, The Reaper, Berserker''s Shield, Chronos'' Pendant,
-    Bragi''s Harp, Obsidian Shard, Damaru, Breastplate of Valor, Bracer of The Abyss,
-    Lernaean Bow, Riptalon, Golden Blade, Silverbranch Bow, Runeforged Hammer, Helm
-    of Radiance, Blood-Bound Book, Rod of Asclepius, Tekko-Kagi, Gem of Focus, Freya''s
-    Tears, Tyrfing, Doom Orb, Bancroft''s Talon, Totem of Death, Kinetic Cuirass,
-    The World Stone, Jade Scepter, Amanita Charm, Shield of the Phoenix, Pharaoh''s
-    Curse, Eye of Providence.'
+    of the Magus, Genji''s Guard, Obsidian Shard, The Reaper, Berserker''s Shield,
+    Chronos'' Pendant, Bragi''s Harp, Damaru, Breastplate of Valor, Bracer of The
+    Abyss, Lernaean Bow, Totem of Death, Riptalon, Golden Blade, Silverbranch Bow,
+    Runeforged Hammer, Helm of Radiance, Ethereal Staff, Dominance, Blood-Bound Book,
+    Rod of Asclepius, Tekko-Kagi, Gem of Focus, Freya''s Tears, Tyrfing, Doom Orb,
+    Bancroft''s Talon, Kinetic Cuirass, The World Stone, Jade Scepter, Amanita Charm.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
@@ -699,12 +698,12 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Nimble Ring, The Crusher,
     Gluttonous Grimoire, Death Metal, Soul Gem, The Reaper, The Cosmic Horror, Spear
-    of the Magus, Berserker''s Shield, Bragi''s Harp, Damaru, Lernaean Bow, Spear
-    of Desolation, Golden Blade, Genji''s Guard, Tekko-Kagi, Obsidian Shard, Riptalon,
-    Runeforged Hammer, Bracer of The Abyss, Silverbranch Bow, Tyrfing, Chronos'' Pendant,
-    Breastplate of Valor, Helm of Radiance, Dominance, Blood-Bound Book, Rod of Asclepius,
-    Doom Orb, Kinetic Cuirass, The World Stone, Amanita Charm, Pharaoh''s Curse, Triton''s
-    Conch, Bancroft''s Talon, Jade Scepter, Eye of Providence.'
+    of the Magus, Obsidian Shard, Berserker''s Shield, Bragi''s Harp, Damaru, Lernaean
+    Bow, Spear of Desolation, Golden Blade, Genji''s Guard, Tekko-Kagi, Riptalon,
+    Dominance, Runeforged Hammer, Bracer of The Abyss, Silverbranch Bow, Tyrfing,
+    Chronos'' Pendant, Breastplate of Valor, Helm of Radiance, Ethereal Staff, Blood-Bound
+    Book, Rod of Asclepius, Doom Orb, Kinetic Cuirass, The World Stone, Amanita Charm,
+    Pharaoh''s Curse, Triton''s Conch, Totem of Death, Bancroft''s Talon.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
@@ -771,11 +770,11 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Rod of Tahuti, The Crusher, Nimble Ring, Gluttonous Grimoire,
     Death Metal, Berserker''s Shield, Damaru, Lernaean Bow, Soul Gem, Golden Blade,
-    Tekko-Kagi, Riptalon, Silverbranch Bow, Tyrfing, Genji''s Guard, The Reaper, Bragi''s
-    Harp, Runeforged Hammer, The Cosmic Horror, Spear of the Magus, Dominance, Breastplate
-    of Valor, Spear of Desolation, Pharaoh''s Curse, Demon Blade, Bracer of The Abyss,
-    Kinetic Cuirass, Deathbringer, Obsidian Shard, Amanita Charm, Avenging Blade,
-    Toxic Blade, Pendulum Blade, Eye of Providence, Shield Splitter, Oni Hunter''s
+    Tekko-Kagi, Dominance, Riptalon, Silverbranch Bow, Tyrfing, Genji''s Guard, The
+    Reaper, Bragi''s Harp, Runeforged Hammer, The Cosmic Horror, Spear of the Magus,
+    Obsidian Shard, Breastplate of Valor, Spear of Desolation, Pharaoh''s Curse, Demon
+    Blade, Bracer of The Abyss, Kinetic Cuirass, Deathbringer, Amanita Charm, Avenging
+    Blade, Toxic Blade, Pendulum Blade, Eye of Providence, Shield Splitter, Oni Hunter''s
     Garb, Shogun''s Ofuda.'
   slot_scores:
     Berserker's Shield:

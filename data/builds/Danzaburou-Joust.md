@@ -336,12 +336,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
-  - Void Stone
   - The Crusher
+  - Heartseeker
   - Soul Gem
   flex_slots:
+  - Heartseeker
   - Void Shield
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -376,18 +376,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Void Stone:
-      total: 0.52
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     The Crusher:
       total: 0.6
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Heartseeker:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Soul Gem:
       total: 0.78
       efficiency: 0.57

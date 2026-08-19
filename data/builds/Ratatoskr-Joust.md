@@ -10,11 +10,11 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Pendulum Blade
   - The Crusher
+  - Titan's Bane
   flex_slots:
   - Briskberry Acorn
-  - Pendulum Blade
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -55,15 +55,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Pendulum Blade:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
     The Crusher:
       total: 0.82
       efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Titan's Bane:
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -129,11 +129,11 @@ builds:
       pick: 0.0
       fit: 0.63
     Heartseeker:
-      total: 0.54
+      total: 0.59
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: burst
@@ -275,8 +275,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
+  - Heartseeker
   - Pendulum Blade
-  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -324,11 +324,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.69
+      total: 0.72
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -467,11 +467,11 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Pendulum Blade
   - The Crusher
+  - Titan's Bane
   flex_slots:
   - Briskberry Acorn
-  - Pendulum Blade
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -512,15 +512,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Pendulum Blade:
-      total: 0.7
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
     The Crusher:
       total: 0.82
       efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Titan's Bane:
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

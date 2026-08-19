@@ -74,21 +74,21 @@ builds:
   archetype: mana-stack
   slot_order:
   - Toxic Blade
-  - Genji's Guard
+  - Yogi's Necklace
   - Jotunn's Revenge
   - Hydra's Lament
-  - Amanita Charm
+  - The Crusher
   - Pharaoh's Curse
   flex_slots:
+  - Yogi's Necklace
   - Hydra's Lament
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -104,12 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Genji's Guard:
-      total: 0.45
-      efficiency: 0.69
+    Yogi's Necklace:
+      total: 0.49
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.2
+      fit: 0.4
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
@@ -122,12 +122,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Amanita Charm:
-      total: 0.65
-      efficiency: 0.63
+    The Crusher:
+      total: 0.51
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.37
     Pharaoh's Curse:
       total: 0.51
       efficiency: 0.55

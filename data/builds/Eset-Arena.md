@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
+  - Obsidian Shard
   - The Cosmic Horror
-  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -43,18 +43,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Spear of the Magus:
-      total: 0.67
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
     Rod of Tahuti:
       total: 0.77
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Obsidian Shard:
+      total: 0.69
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
     Dreamer's Idol:
       total: 0.7
       efficiency: 0.44
@@ -139,18 +139,18 @@ builds:
   archetype: burst
   slot_order:
   - Spear of Desolation
-  - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - The Cosmic Horror
-  - Spear of the Magus
+  - Triton's Conch
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -169,24 +169,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    The Cosmic Horror:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
-    Spear of the Magus:
-      total: 0.56
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Obsidian Shard:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Dreamer's Idol:
+      total: 0.6
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -272,15 +272,15 @@ builds:
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
-  - Dreamer's Idol
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - The Cosmic Horror
   - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -317,12 +317,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Dreamer's Idol:
-      total: 0.72
-      efficiency: 0.44
+    Obsidian Shard:
+      total: 0.73
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.94
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
-  - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
+  - Totem of Death
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
-  - Screeching Gargoyle
+  - Genji's Guard
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,21 +423,9 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.54
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Genji's Guard:
       total: 0.59
       efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
-    Breastplate of Valor:
-      total: 0.56
-      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -453,6 +441,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
+    Totem of Death:
+      total: 0.6
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -595,13 +595,13 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
+  - Obsidian Shard
   - The Cosmic Horror
-  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -630,18 +630,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Spear of the Magus:
-      total: 0.67
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
     Rod of Tahuti:
       total: 0.77
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Obsidian Shard:
+      total: 0.69
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
     Dreamer's Idol:
       total: 0.7
       efficiency: 0.44

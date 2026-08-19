@@ -97,6 +97,32 @@ conversion_fit: 0.0
 # Adaptive Stat item stops reading "premium") and ranks them worse. See
 # pipeline/smite/passives.py for the numbers and the likeliest reason.
 price_passives: false
+# The FIT half of the same problem — measured 2026-08-19, and shipped OFF for a
+# more interesting reason than its twin above.
+#
+# Eight buildable items read `Adaptive Stat: +X Strength or +Y Intelligence` and
+# carry that power nowhere in `stats`. Four have a one-entry stats dict, so
+# `god_fit_score` scores Omen Drum — 2800 gold — off `{Echo: 30}` and returns
+# 0.0000 for Ullr. `price_passives` (above) is the efficiency half and was
+# already measured; the fit half had never been tried and is not in STATE.md 4.
+#
+#   variant                 eff 0.70:fit 0.30   eff 0.45:fit 0.55
+#   control, both off             35.5%               36.7%
+#   fit half only                 35.5%               36.7%   <- exact no-op
+#   efficiency half only          34.1%               36.6%
+#   both halves                   34.1%               36.6%   <- fit adds 0.0
+#
+# IT IS NOT INERT BECAUSE IT DOES NOTHING. The mechanism fires and fixes what
+# it claims to: Omen Drum's fit for Ullr goes 0.0000 -> 0.1720. It moves him
+# from rank 90 to rank 88 of ~90, which is not a core slot and never becomes
+# one. Swept 0.15 to 1.0, every strength gives the identical figures above.
+#
+# So the blindness is real, the correction is right, and it cannot matter,
+# because these items are ALSO bottom-ranked on efficiency and the half that
+# would move them is the half that reproduces 4.5's damage — -1.4pp on the
+# probe split, alone or paired. Fixing one half of a two-half problem buys
+# exactly nothing, and this is the measurement that says so.
+adaptive_fit: 0.0
 # Persistent stacks at their full-stack value — measured, and shipped OFF.
 # Strictly narrower than price_passives: only stacks that reach a cap and keep
 # it, never a transient one. Four items qualify (Book of Thoth +500 Max Mana,
@@ -401,7 +427,19 @@ draft:
     healers: {anti-heal: 2.0}
     lockdown: {cc-immunity: 1.0, peel: 0.4}
     crit: {anti-crit: 1.0}
-    tanks: {protection-shred: 1.0}
+    # Three mechanisms answer a tank and until 2026-08-19 only one of them had
+    # a name: strip their protections (`protection-shred`), pierce them
+    # (`penetration`), or bypass them by scaling off health
+    # (`percent-health`). The two new ones take protection-shred's existing
+    # weight rather than a fresh number — same threat, same answer, and there
+    # is nothing here to calibrate a distinct value against.
+    #
+    # UNMEASURED, AND IT CANNOT BE OTHERWISE. This block is read only by the
+    # viewer's draft overlay, which `smite.calibrate` never runs, so no gate in
+    # this project can confirm or refute it — the same objection that keeps
+    # `threat_kit.py` out of scope. The gate-visible half of the same fix is
+    # `offense_tags` above, which carries both of these tags and IS measured.
+    tanks: {protection-shred: 1.0, penetration: 1.0, percent-health: 1.0}
     # NOTE there is deliberately no `walls` entry here. A player-made wall is
     # answered by Shell of Rebuke, which is a RELIC — `scoring.is_buildable`
     # excludes relics from the six core slots because the game gives them
@@ -515,6 +553,67 @@ stat_caps:
   Tenacity: 50
   Plating: 35
   Dampening: 35
+
+
+# ── Offense tags ──────────────────────────────────────────────────────────
+# Which effect-tags mark an item as offensive to `god_fit_score`, and what each
+# is worth. Moved here from a hardcoded set in `scoring.py` on 2026-08-19: it
+# was the only tag weight in the model that did not live in this file, so
+# adding a tag to it was a code change and sweeping it meant editing Python.
+#
+# `penetration` was added with the tag itself and is the one wire of that pass
+# the coverage gate can see — 35.5% -> 35.9% at the probe split and 34.8% ->
+# 36.1% at eff 0.45, against a 5.7% baseline.
+#
+# TWO FOLLOW-UPS MEASURED THE SAME DAY. BOTH SHIP ON, AND ONLY TOGETHER.
+#
+#   variant                         eff 0.70:fit 0.30   eff 0.45:fit 0.55
+#   HEAD, before any of this pass          35.5%               34.8%
+#   penetration only                       35.9%               36.1%
+#   + percent-health in this map           35.9%               36.1%
+#   offense_tags_additive: true            35.9%               36.1%
+#   both together                          35.5%               36.7%
+#
+# Each ALONE is an exact no-op, for two different reasons that only surface
+# together. `percent-health` alone buys nothing because the flat rule gives its
+# three big carriers (Heartseeker, Qin's Blade, Soul Reaver) nothing they did
+# not already have from `burst`, and its four bare carriers (Ethereal Staff,
+# Eye of Erebus, Sanguine Lash, Totem of Death) do not reach a core either way.
+# `additive` alone buys nothing because almost no item carries two offense tags
+# yet. Adding `percent-health` is what CREATES the two-tag items, so the two
+# only interact when both are on.
+#
+# READ THE TABLE AGAINST HEAD, NOT AGAINST THE ROW ABOVE. Measured the other
+# way, `both` looks like a -0.4pp regression on the probe split and gets
+# rejected for the diverging-splits signature that sank `conversion_fit`
+# (STATE.md 4.9). That is the wrong baseline: `penetration only` was never
+# committed. Against what IS committed, `both` is +0.0 and +1.9pp — worse than
+# HEAD on neither split — and it buys something `penetration only` costs.
+#
+# WHAT IT BUYS is Ullr's expert claim. `penetration only` moves Heartseeker out
+# of his Conquest core for Titan's Bane and takes `expert_review` from [clear]
+# to [partial]; `both` puts it back. The flat rule is exactly why it was lost:
+# Heartseeker carries `burst` AND `percent-health` and scored the same as an
+# item carrying one, so `penetration` on Titan's Bane cleared it by a step
+# Heartseeker could not answer. Additive is not a workaround for that, it is
+# the correction — an item that answers a tank two ways is worth more than an
+# item that answers it one way, and the flat step could not say so.
+#
+# That claim was resolved BY HAND on 2026-08-14, by a maintainer who turned
+# `conversion_passes` to 3 and accepted probe 37.6% -> 36.2% against best
+# 34.1% -> 34.3% to get those four items into that core. Shipping
+# `penetration only` would have silently reversed that decision for +0.4pp
+# inside a +-5pp CI. The precedent is the same reviewer, the same god and the
+# same item, and it points here.
+offense_tags:
+  burst: 0.1
+  execute: 0.1              # declared since 2026-07-16, still zero carriers
+  protection-shred: 0.1
+  penetration: 0.1
+  percent-health: 0.1
+# true = an item's offense tags SUM. Only 7 items carry two, all of them items
+# that answer a tank in more than one way; see the table above.
+offense_tags_additive: true
 
 
 # ── Build flavors ─────────────────────────────────────────────────────────

@@ -117,11 +117,11 @@ builds:
       pick: 0.0
       fit: 0.42
     Dominance:
-      total: 0.44
+      total: 0.49
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.5
     The Reaper:
       total: 0.56
       efficiency: 0.52
@@ -208,10 +208,10 @@ builds:
   - Hydra's Lament
   - Riptalon
   - The Crusher
-  - Pharaoh's Curse
+  - Heartseeker
   flex_slots:
+  - Heartseeker
   - Hydra's Lament
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -258,12 +258,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Pharaoh's Curse:
-      total: 0.46
-      efficiency: 0.55
+    Heartseeker:
+      total: 0.47
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.53
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -336,12 +336,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
-  - Void Stone
   - Riptalon
   - The Crusher
+  - Heartseeker
   flex_slots:
+  - Heartseeker
   - Void Shield
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -376,12 +376,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Void Stone:
-      total: 0.52
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Riptalon:
       total: 0.68
       efficiency: 0.53
@@ -394,6 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Heartseeker:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: attack-speed

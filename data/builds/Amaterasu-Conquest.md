@@ -192,12 +192,12 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Soul Gem, Genji''s Guard, Rod
     of Tahuti, Gluttonous Grimoire, Jotunn''s Revenge, Chandra''s Grace, The Crusher,
-    Rod of Asclepius, Freya''s Tears, Runeforged Hammer, Oni Hunter''s Garb, The Reaper,
-    Breastplate of Valor, Eye of the Storm, Erosion, Phoenix Feather, Shield Splitter,
-    Hydra''s Lament, Eye of Providence, Spectral Armor, Draconic Scale, Pharaoh''s
-    Curse, Nimble Ring, Leviathan''s Hide, Avenging Blade, Blood-Bound Book, Midgardian
-    Mail, Lifebinder, Glorious Pridwen, Bancroft''s Talon, Riptalon, Death Metal,
-    Ancile, Gladiator''s Shield.'
+    Ethereal Staff, Rod of Asclepius, Yogi''s Necklace, Freya''s Tears, Runeforged
+    Hammer, Oni Hunter''s Garb, The Reaper, Breastplate of Valor, Eye of the Storm,
+    Erosion, Phoenix Feather, Shield Splitter, Hydra''s Lament, Eye of Providence,
+    Spectral Armor, Draconic Scale, Pharaoh''s Curse, Nimble Ring, Leviathan''s Hide,
+    Avenging Blade, Blood-Bound Book, Midgardian Mail, Lifebinder, Glorious Pridwen,
+    Bancroft''s Talon, Riptalon, Death Metal, Ancile, Gladiator''s Shield.'
   slot_scores:
     Golden Blade:
       total: 0.56
@@ -266,10 +266,10 @@ builds:
     Amanita Charm, Soul Gem, Genji''s Guard, Stone of Binding, Avenging Blade, Screeching
     Gargoyle, Freya''s Tears, Void Shield, Breastplate of Valor, Oni Hunter''s Garb,
     The Cosmic Horror, Void Stone, Shield of the Phoenix, Spear of the Magus, The
-    Reaper, Runeforged Hammer, Spear of Desolation, Hydra''s Lament, Shield Splitter,
-    Nimble Ring, Erosion, Spectral Armor, Eye of Providence, Eye of the Storm, Draconic
-    Scale, Obsidian Shard, Pharaoh''s Curse, Riptalon, Leviathan''s Hide, Midgardian
-    Mail, Heartseeker, Silverbranch Bow, Mantle Of Discord, Death Metal.'
+    Reaper, Runeforged Hammer, Obsidian Shard, Spear of Desolation, Hydra''s Lament,
+    Shield Splitter, Nimble Ring, Erosion, Spectral Armor, Heartseeker, Eye of Providence,
+    Eye of the Storm, Titan''s Bane, Draconic Scale, Pharaoh''s Curse, Riptalon, Leviathan''s
+    Hide, Midgardian Mail, Silverbranch Bow, Mantle Of Discord.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -339,9 +339,9 @@ builds:
     of Valor, Riptalon, Oni Hunter''s Garb, Soul Gem, Shield of the Phoenix, Tyrfing,
     Runeforged Hammer, Spectral Armor, Hydra''s Lament, Erosion, Lernaean Bow, Silverbranch
     Bow, Shield Splitter, Eye of Providence, Draconic Scale, Eye of the Storm, Leviathan''s
-    Hide, Midgardian Mail, Mantle Of Discord, Toxic Blade, Stone of Binding, Helm
-    of Radiance, Screeching Gargoyle, Death Metal, Yogi''s Necklace, Damaru, Ancile,
-    The Cosmic Horror.'
+    Hide, Dominance, Midgardian Mail, Mantle Of Discord, Toxic Blade, Stone of Binding,
+    Helm of Radiance, Screeching Gargoyle, Death Metal, Yogi''s Necklace, Damaru,
+    Ethereal Staff.'
   slot_scores:
     Golden Blade:
       total: 0.57
@@ -411,10 +411,10 @@ builds:
     Soul Gem, Gluttonous Grimoire, Hydra''s Lament, The Crusher, Screeching Gargoyle,
     Oni Hunter''s Garb, Chronos'' Pendant, Nimble Ring, Chandra''s Grace, Spear of
     Desolation, Gladiator''s Shield, Erosion, Spectral Armor, Eye of Providence, Prophetic
-    Cloak, Shield Splitter, Draconic Scale, Runeforged Hammer, Pharaoh''s Curse, Eye
-    of the Storm, Leviathan''s Hide, Gem of Focus, Helm of Radiance, Midgardian Mail,
-    Mantle Of Discord, Totem of Death, Stone of Binding, Arondight, Death Metal, Rod
-    of Asclepius, The Cosmic Horror, Glorious Pridwen.'
+    Cloak, Totem of Death, Shield Splitter, Draconic Scale, Runeforged Hammer, Pharaoh''s
+    Curse, Eye of the Storm, Leviathan''s Hide, Gem of Focus, Helm of Radiance, Midgardian
+    Mail, Mantle Of Discord, Stone of Binding, Arondight, Ethereal Staff, Death Metal,
+    Rod of Asclepius, The Cosmic Horror.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -482,12 +482,12 @@ builds:
     + win/pick). Underrated for this god: Rod of Tahuti, Gluttonous Grimoire, Soul
     Gem, Jotunn''s Revenge, The Crusher, Genji''s Guard, Amanita Charm, Nimble Ring,
     Freya''s Tears, Breastplate of Valor, The Cosmic Horror, Shield of the Phoenix,
-    Spear of the Magus, Spear of Desolation, Oni Hunter''s Garb, Death Metal, Hydra''s
-    Lament, Helm of Radiance, Runeforged Hammer, Shield Splitter, Spectral Armor,
-    Erosion, Rod of Asclepius, Chronos'' Pendant, Eye of Providence, Eye of the Storm,
-    Obsidian Shard, Jade Scepter, Draconic Scale, Pharaoh''s Curse, Leviathan''s Hide,
-    Ethereal Staff, Midgardian Mail, The Reaper, Screeching Gargoyle, Mantle Of Discord,
-    Blood-Bound Book, Triton''s Conch.'
+    Spear of the Magus, Spear of Desolation, Oni Hunter''s Garb, Death Metal, Obsidian
+    Shard, Hydra''s Lament, Helm of Radiance, Runeforged Hammer, Shield Splitter,
+    Ethereal Staff, Spectral Armor, Erosion, Rod of Asclepius, Chronos'' Pendant,
+    Eye of Providence, Eye of the Storm, Jade Scepter, Draconic Scale, Pharaoh''s
+    Curse, Totem of Death, Leviathan''s Hide, Midgardian Mail, The Reaper, Screeching
+    Gargoyle, Mantle Of Discord, Blood-Bound Book.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -556,11 +556,11 @@ builds:
     The Crusher, Jotunn''s Revenge, Amanita Charm, Genji''s Guard, Soul Gem, Nimble
     Ring, Freya''s Tears, Breastplate of Valor, Oni Hunter''s Garb, The Cosmic Horror,
     Runeforged Hammer, Shield of the Phoenix, Hydra''s Lament, Shield Splitter, Death
-    Metal, Spear of the Magus, Spear of Desolation, Erosion, Helm of Radiance, Eye
-    of the Storm, Spectral Armor, Eye of Providence, Draconic Scale, Rod of Asclepius,
-    Pharaoh''s Curse, Chronos'' Pendant, The Reaper, Obsidian Shard, Leviathan''s
-    Hide, Jade Scepter, Midgardian Mail, Avenging Blade, Mantle Of Discord, Damaru,
-    Stone of Binding, Triton''s Conch.'
+    Metal, Spear of the Magus, Obsidian Shard, Spear of Desolation, Erosion, Helm
+    of Radiance, Eye of the Storm, Spectral Armor, Eye of Providence, Ethereal Staff,
+    Draconic Scale, Rod of Asclepius, Pharaoh''s Curse, Chronos'' Pendant, The Reaper,
+    Leviathan''s Hide, Jade Scepter, Midgardian Mail, Avenging Blade, Mantle Of Discord,
+    Damaru, Stone of Binding.'
   slot_scores:
     Golden Blade:
       total: 0.54

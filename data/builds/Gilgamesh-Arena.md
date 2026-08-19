@@ -20,8 +20,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
@@ -73,22 +73,22 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Genji's Guard
+  - Yogi's Necklace
   - Jotunn's Revenge
   - Hydra's Lament
-  - Amanita Charm
+  - Spectral Armor
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Yogi's Necklace
   - Hydra's Lament
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -98,12 +98,12 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Genji's Guard:
-      total: 0.45
-      efficiency: 0.69
+    Yogi's Necklace:
+      total: 0.49
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.2
+      fit: 0.4
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.64
@@ -116,12 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Amanita Charm:
-      total: 0.7
-      efficiency: 0.63
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.45
     Pharaoh's Curse:
       total: 0.56
       efficiency: 0.55
@@ -412,8 +412,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor

@@ -190,9 +190,8 @@ builds:
     Crusher, Genji''s Guard, Runeforged Hammer, Breastplate of Valor, Kinetic Cuirass,
     Amanita Charm, Berserker''s Shield, Oni Hunter''s Garb, Freya''s Tears, Shield
     of the Phoenix, Eye of the Storm, Shield Splitter, Golden Blade, Transcendence,
-    Damaru, Spectral Armor, Avenging Blade, Yogi''s Necklace, Lernaean Bow, Erosion,
-    Pharaoh''s Curse, Leviathan''s Hide, Chandra''s Grace, Eye of Providence, Midgardian
-    Mail.'
+    Damaru, Spectral Armor, Avenging Blade, Yogi''s Necklace, Dominance, Lernaean
+    Bow, Erosion, Pharaoh''s Curse, Leviathan''s Hide, Chandra''s Grace.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -261,8 +260,7 @@ builds:
     Breastplate of Valor, Berserker''s Shield, Freya''s Tears, Shield of the Phoenix,
     Oni Hunter''s Garb, Spectral Armor, Eye of the Storm, Pendulum Blade, Shield Splitter,
     Golden Blade, Chandra''s Grace, Avenging Blade, Damaru, Screeching Gargoyle, Riptalon,
-    Erosion, Pharaoh''s Curse, Eye of Providence, Leviathan''s Hide, Silverbranch
-    Bow.'
+    Erosion, Pharaoh''s Curse, Eye of Providence, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -328,11 +326,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, The Crusher, Shield of the Phoenix, Kinetic Cuirass,
-    Genji''s Guard, Runeforged Hammer, Berserker''s Shield, Oni Hunter''s Garb, Eye
-    of the Storm, Chandra''s Grace, Shield Splitter, Erosion, Phoenix Feather, Freya''s
-    Tears, Eye of Providence, Spectral Armor, Riptalon, Draconic Scale, Breastplate
-    of Valor, Golden Blade, Avenging Blade, Pharaoh''s Curse, Leviathan''s Hide, Midgardian
-    Mail, Ancile, Damaru.'
+    Genji''s Guard, Runeforged Hammer, Berserker''s Shield, Yogi''s Necklace, Oni
+    Hunter''s Garb, Eye of the Storm, Chandra''s Grace, Shield Splitter, Erosion,
+    Phoenix Feather, Freya''s Tears, Eye of Providence, Spectral Armor, Riptalon,
+    Draconic Scale, Breastplate of Valor, Golden Blade, Avenging Blade, Pharaoh''s
+    Curse, Leviathan''s Hide, Midgardian Mail, Ancile.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -470,8 +468,8 @@ builds:
     this god: The Crusher, Berserker''s Shield, Genji''s Guard, Golden Blade, Riptalon,
     Kinetic Cuirass, Amanita Charm, Silverbranch Bow, Pharaoh''s Curse, Runeforged
     Hammer, Tyrfing, Lernaean Bow, Toxic Blade, Oni Hunter''s Garb, Shogun''s Ofuda,
-    Breastplate of Valor, Freya''s Tears, Spectral Armor, Shield of the Phoenix, Tekko-Kagi,
-    Eye of the Storm, Erosion, Shield Splitter, Dominance, Eros'' Bow, Leviathan''s
+    Breastplate of Valor, Dominance, Freya''s Tears, Spectral Armor, Shield of the
+    Phoenix, Tekko-Kagi, Eye of the Storm, Erosion, Shield Splitter, Eros'' Bow, Leviathan''s
     Hide.'
   slot_scores:
     Golden Blade:

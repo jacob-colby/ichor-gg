@@ -117,8 +117,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Riptalon, Damaru, Genji''s Guard, Lernaean Bow,
-    Hydra''s Lament, The Reaper, Golden Blade, Silverbranch Bow, Tekko-Kagi, Breastplate
-    of Valor, Runeforged Hammer, Tyrfing, Pharaoh''s Curse, Dominance, Kinetic Cuirass,
+    Hydra''s Lament, The Reaper, Golden Blade, Silverbranch Bow, Tekko-Kagi, Dominance,
+    Breastplate of Valor, Runeforged Hammer, Tyrfing, Pharaoh''s Curse, Kinetic Cuirass,
     Amanita Charm, Freya''s Tears, Demon Blade, Deathbringer, Eye of Providence, Oni
     Hunter''s Garb, Toxic Blade, Shogun''s Ofuda, Shield of the Phoenix, Pendulum
     Blade.'
@@ -189,10 +189,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Genji''s
     Guard, Hydra''s Lament, Berserker''s Shield, Damaru, Breastplate of Valor, Lernaean
-    Bow, Riptalon, Golden Blade, The Reaper, Runeforged Hammer, Dominance, Oni Hunter''s
+    Bow, Dominance, Riptalon, Golden Blade, The Reaper, Runeforged Hammer, Oni Hunter''s
     Garb, Silverbranch Bow, Tekko-Kagi, Kinetic Cuirass, Amanita Charm, Freya''s Tears,
     Tyrfing, Pharaoh''s Curse, Eye of Providence, Shield of the Phoenix, Yogi''s Necklace,
-    Deathbringer, Arondight, Shield Splitter.'
+    Deathbringer, Arondight.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -259,10 +259,10 @@ builds:
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Damaru, Riptalon, Genji''s Guard, Hydra''s Lament,
     Lernaean Bow, The Reaper, Silverbranch Bow, Golden Blade, Breastplate of Valor,
-    Tekko-Kagi, Runeforged Hammer, Pharaoh''s Curse, Tyrfing, Kinetic Cuirass, Amanita
-    Charm, Dominance, Freya''s Tears, Demon Blade, Deathbringer, Eye of Providence,
-    Oni Hunter''s Garb, Shield of the Phoenix, Toxic Blade, Shogun''s Ofuda, Musashi''s
-    Dual Swords, Pendulum Blade.'
+    Tekko-Kagi, Dominance, Runeforged Hammer, Pharaoh''s Curse, Tyrfing, Kinetic Cuirass,
+    Amanita Charm, Freya''s Tears, Demon Blade, Deathbringer, Eye of Providence, Oni
+    Hunter''s Garb, Shield of the Phoenix, Toxic Blade, Shogun''s Ofuda, Musashi''s
+    Dual Swords.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -329,9 +329,10 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Genji''s Guard, Berserker''s Shield, Riptalon, Hydra''s Lament, Damaru, Breastplate
     of Valor, The Reaper, Silverbranch Bow, Lernaean Bow, Golden Blade, Tekko-Kagi,
-    Runeforged Hammer, Freya''s Tears, Kinetic Cuirass, Amanita Charm, Shield of the
-    Phoenix, Pharaoh''s Curse, Eye of Providence, Oni Hunter''s Garb, Tyrfing, Pendulum
-    Blade, Dominance, Toxic Blade, Screeching Gargoyle, Arondight, Chandra''s Grace.'
+    Runeforged Hammer, Dominance, Freya''s Tears, Kinetic Cuirass, Amanita Charm,
+    Shield of the Phoenix, Pharaoh''s Curse, Eye of Providence, Oni Hunter''s Garb,
+    Tyrfing, Pendulum Blade, Toxic Blade, Screeching Gargoyle, Arondight, Chandra''s
+    Grace.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -397,11 +398,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Shield of the Phoenix, Riptalon,
-    The Reaper, Kinetic Cuirass, Genji''s Guard, Chandra''s Grace, Pharaoh''s Curse,
-    Oni Hunter''s Garb, Breastplate of Valor, Golden Blade, Freya''s Tears, Runeforged
-    Hammer, Damaru, Phoenix Feather, Hydra''s Lament, Spectral Armor, Shogun''s Ofuda,
-    Lernaean Bow, Erosion, Eye of the Storm, Eye of Providence, Shield Splitter, Umbral
-    Link, Silverbranch Bow, Leviathan''s Hide.'
+    The Reaper, Kinetic Cuirass, Genji''s Guard, Yogi''s Necklace, Chandra''s Grace,
+    Pharaoh''s Curse, Oni Hunter''s Garb, Breastplate of Valor, Golden Blade, Freya''s
+    Tears, Runeforged Hammer, Damaru, Phoenix Feather, Hydra''s Lament, Spectral Armor,
+    Shogun''s Ofuda, Lernaean Bow, Erosion, Eye of the Storm, Eye of Providence, Shield
+    Splitter, Umbral Link, Silverbranch Bow.'
   slot_scores:
     Avenging Blade:
       total: 0.5
@@ -468,9 +469,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Riptalon, The Reaper, Berserker''s Shield, Silverbranch Bow, Genji''s
     Guard, Tekko-Kagi, Damaru, Screeching Gargoyle, Hydra''s Lament, Lernaean Bow,
-    Golden Blade, Breastplate of Valor, Runeforged Hammer, Toxic Blade, Stone of Binding,
-    Pendulum Blade, Kinetic Cuirass, Pharaoh''s Curse, Void Shield, Amanita Charm,
-    Tyrfing, Freya''s Tears, Dominance, Eye of Providence, Oni Hunter''s Garb.'
+    Golden Blade, Breastplate of Valor, Dominance, Runeforged Hammer, Toxic Blade,
+    Stone of Binding, Pendulum Blade, Kinetic Cuirass, Pharaoh''s Curse, Void Shield,
+    Amanita Charm, Tyrfing, Freya''s Tears, Eye of Providence, Oni Hunter''s Garb.'
   slot_scores:
     Avenging Blade:
       total: 0.53
@@ -537,10 +538,9 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Berserker''s Shield, Golden Blade, Silverbranch Bow, Genji''s
     Guard, Damaru, Lernaean Bow, Tyrfing, Hydra''s Lament, Breastplate of Valor, The
-    Reaper, Toxic Blade, Tekko-Kagi, Pharaoh''s Curse, Runeforged Hammer, Kinetic
-    Cuirass, Amanita Charm, Dominance, Freya''s Tears, Eye of Providence, Oni Hunter''s
-    Garb, Shogun''s Ofuda, Shield of the Phoenix, Demon Blade, Deathbringer, Spectral
-    Armor, Eros'' Bow.'
+    Reaper, Dominance, Toxic Blade, Tekko-Kagi, Pharaoh''s Curse, Runeforged Hammer,
+    Kinetic Cuirass, Amanita Charm, Freya''s Tears, Eye of Providence, Oni Hunter''s
+    Garb, Qin''s Blade, Shogun''s Ofuda, Shield of the Phoenix, Demon Blade, Deathbringer.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -609,9 +609,8 @@ builds:
     Hydra''s Lament, Berserker''s Shield, Freya''s Tears, Riptalon, Shield of the
     Phoenix, Damaru, Lernaean Bow, Silverbranch Bow, Screeching Gargoyle, Chandra''s
     Grace, Golden Blade, The Reaper, Kinetic Cuirass, Amanita Charm, Runeforged Hammer,
-    Arondight, Pharaoh''s Curse, Pendulum Blade, Eye of Providence, Oni Hunter''s
-    Garb, Tekko-Kagi, Tyrfing, Dominance, Shogun''s Ofuda, Spectral Armor, Gladiator''s
-    Shield.'
+    Arondight, Dominance, Pharaoh''s Curse, Pendulum Blade, Eye of Providence, Oni
+    Hunter''s Garb, Tekko-Kagi, Tyrfing, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -678,7 +677,7 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Berserker''s Shield, Riptalon, Damaru, Genji''s Guard,
     Lernaean Bow, Hydra''s Lament, The Reaper, Golden Blade, Silverbranch Bow, Tekko-Kagi,
-    Breastplate of Valor, Tyrfing, Runeforged Hammer, Pharaoh''s Curse, Dominance,
+    Dominance, Breastplate of Valor, Tyrfing, Runeforged Hammer, Pharaoh''s Curse,
     Kinetic Cuirass, Amanita Charm, Freya''s Tears, Demon Blade, Deathbringer, Eye
     of Providence, Oni Hunter''s Garb, Toxic Blade, Shogun''s Ofuda, Shield of the
     Phoenix, Pendulum Blade.'
@@ -749,8 +748,9 @@ builds:
     this god: Damaru, The Reaper, Genji''s Guard, Hydra''s Lament, Riptalon, Breastplate
     of Valor, Berserker''s Shield, Runeforged Hammer, Amanita Charm, Lernaean Bow,
     Deathbringer, Tekko-Kagi, Golden Blade, Silverbranch Bow, Pendulum Blade, Freya''s
-    Tears, Kinetic Cuirass, Musashi''s Dual Swords, Spectral Armor, Pharaoh''s Curse,
-    Eye of Providence, Shield of the Phoenix, Oni Hunter''s Garb, Arondight, Tyrfing.'
+    Tears, Kinetic Cuirass, Dominance, Musashi''s Dual Swords, Spectral Armor, Pharaoh''s
+    Curse, Eye of Providence, Shield of the Phoenix, Oni Hunter''s Garb, Arondight,
+    Tyrfing.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -817,10 +817,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Genji''s
     Guard, Hydra''s Lament, Damaru, Breastplate of Valor, The Reaper, Runeforged Hammer,
-    Berserker''s Shield, Amanita Charm, Lernaean Bow, Oni Hunter''s Garb, Riptalon,
-    Kinetic Cuirass, Golden Blade, Freya''s Tears, Spectral Armor, Eye of Providence,
-    Deathbringer, Pharaoh''s Curse, Shield of the Phoenix, Dominance, Arondight, Tekko-Kagi,
-    Yogi''s Necklace, Shield Splitter, Tyrfing.'
+    Berserker''s Shield, Amanita Charm, Lernaean Bow, Dominance, Oni Hunter''s Garb,
+    Riptalon, Kinetic Cuirass, Golden Blade, Freya''s Tears, Spectral Armor, Eye of
+    Providence, Deathbringer, Pharaoh''s Curse, Shield of the Phoenix, Arondight,
+    Tekko-Kagi, Yogi''s Necklace, Tyrfing.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -888,10 +888,9 @@ builds:
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Damaru, Riptalon, Genji''s Guard, Hydra''s Lament,
     Lernaean Bow, The Reaper, Silverbranch Bow, Golden Blade, Pharaoh''s Curse, Breastplate
-    of Valor, Tekko-Kagi, Amanita Charm, Runeforged Hammer, Shogun''s Ofuda, Tyrfing,
-    Kinetic Cuirass, Dominance, Freya''s Tears, Demon Blade, Deathbringer, Spectral
-    Armor, Eye of Providence, Eros'' Bow, Oni Hunter''s Garb, Shield of the Phoenix,
-    Toxic Blade, Musashi''s Dual Swords.'
+    of Valor, Tekko-Kagi, Amanita Charm, Dominance, Runeforged Hammer, Shogun''s Ofuda,
+    Tyrfing, Kinetic Cuirass, Freya''s Tears, Demon Blade, Deathbringer, Spectral
+    Armor, Eye of Providence, Eros'' Bow, Oni Hunter''s Garb, Shield of the Phoenix.'
   slot_scores:
     Berserker's Shield:
       total: 0.51
@@ -961,8 +960,8 @@ builds:
     Riptalon, Berserker''s Shield, Amanita Charm, Runeforged Hammer, Freya''s Tears,
     Silverbranch Bow, Pendulum Blade, Kinetic Cuirass, Shield of the Phoenix, Lernaean
     Bow, Tekko-Kagi, Spectral Armor, Eye of Providence, Golden Blade, Oni Hunter''s
-    Garb, Pharaoh''s Curse, Arondight, Screeching Gargoyle, Deathbringer, Chandra''s
-    Grace, Tyrfing.'
+    Garb, Pharaoh''s Curse, Arondight, Dominance, Screeching Gargoyle, Deathbringer,
+    Chandra''s Grace.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -1029,11 +1028,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, The Reaper, Berserker''s
-    Shield, Genji''s Guard, Riptalon, Chandra''s Grace, Spectral Armor, Oni Hunter''s
-    Garb, Erosion, Pharaoh''s Curse, Breastplate of Valor, Freya''s Tears, Runeforged
-    Hammer, Damaru, Phoenix Feather, Umbral Link, Hydra''s Lament, Shogun''s Ofuda,
-    Eye of the Storm, Eye of Providence, Golden Blade, Shield Splitter, Draconic Scale,
-    Void Shield, Leviathan''s Hide.'
+    Shield, Genji''s Guard, Riptalon, Yogi''s Necklace, Chandra''s Grace, Spectral
+    Armor, Oni Hunter''s Garb, Erosion, Pharaoh''s Curse, Breastplate of Valor, Freya''s
+    Tears, Runeforged Hammer, Damaru, Phoenix Feather, Umbral Link, Hydra''s Lament,
+    Shogun''s Ofuda, Eye of the Storm, Eye of Providence, Golden Blade, Shield Splitter,
+    Draconic Scale, Void Shield.'
   slot_scores:
     Avenging Blade:
       total: 0.5
@@ -1077,21 +1076,21 @@ builds:
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Genji's Guard
   - Jotunn's Revenge
   - The Reaper
-  - Damaru
   - The Crusher
+  - Heartseeker
+  - Titan's Bane
   flex_slots:
-  - Damaru
-  - Genji's Guard
+  - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -1111,12 +1110,6 @@ builds:
       win: 0.59
       pick: 0.31
       fit: 0.57
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.69
-      win: 0.55
-      pick: 0.0
-      fit: 0.1
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.64
@@ -1129,17 +1122,23 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.62
-    Damaru:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.55
-      pick: 0.0
-      fit: 0.4
     The Crusher:
       total: 0.54
       efficiency: 0.64
       win: 0.48
       pick: 0.16
+      fit: 0.63
+    Heartseeker:
+      total: 0.51
+      efficiency: 0.41
+      win: 0.55
+      pick: 0.23
+      fit: 0.73
+    Titan's Bane:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.56
+      pick: 0.17
       fit: 0.63
   starter: *id001
   aspect: Aspect of the Heroic Tutor
@@ -1171,10 +1170,9 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Berserker''s Shield, Golden Blade, Silverbranch Bow, Genji''s
     Guard, Damaru, Lernaean Bow, Tyrfing, Pharaoh''s Curse, Hydra''s Lament, Amanita
-    Charm, Breastplate of Valor, The Reaper, Toxic Blade, Tekko-Kagi, Shogun''s Ofuda,
-    Runeforged Hammer, Kinetic Cuirass, Spectral Armor, Dominance, Freya''s Tears,
-    Eros'' Bow, Eye of Providence, Oni Hunter''s Garb, Shield of the Phoenix, Demon
-    Blade, Deathbringer.'
+    Charm, Breastplate of Valor, The Reaper, Dominance, Toxic Blade, Tekko-Kagi, Shogun''s
+    Ofuda, Runeforged Hammer, Kinetic Cuirass, Spectral Armor, Freya''s Tears, Eros''
+    Bow, Eye of Providence, Oni Hunter''s Garb, Qin''s Blade, Shield of the Phoenix.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -1245,8 +1243,7 @@ builds:
     Amanita Charm, Screeching Gargoyle, Chandra''s Grace, The Reaper, Pendulum Blade,
     Riptalon, Arondight, Kinetic Cuirass, Runeforged Hammer, Spectral Armor, Eye of
     Providence, Oni Hunter''s Garb, Pharaoh''s Curse, Lernaean Bow, Silverbranch Bow,
-    Gladiator''s Shield, Golden Blade, Deathbringer, Yogi''s Necklace, Shogun''s Ofuda,
-    Tekko-Kagi.'
+    Gladiator''s Shield, Golden Blade, Dominance, Deathbringer.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -1315,9 +1312,9 @@ builds:
     Underrated for this god: Damaru, The Reaper, Genji''s Guard, Hydra''s Lament,
     Riptalon, Breastplate of Valor, Berserker''s Shield, Runeforged Hammer, Amanita
     Charm, Lernaean Bow, Deathbringer, Tekko-Kagi, Golden Blade, Silverbranch Bow,
-    Pendulum Blade, Freya''s Tears, Kinetic Cuirass, Musashi''s Dual Swords, Spectral
-    Armor, Pharaoh''s Curse, Tyrfing, Eye of Providence, Shield of the Phoenix, Oni
-    Hunter''s Garb, Arondight.'
+    Pendulum Blade, Freya''s Tears, Kinetic Cuirass, Dominance, Musashi''s Dual Swords,
+    Spectral Armor, Pharaoh''s Curse, Tyrfing, Eye of Providence, Shield of the Phoenix,
+    Oni Hunter''s Garb, Arondight.'
   slot_scores:
     Genji's Guard:
       total: 0.51

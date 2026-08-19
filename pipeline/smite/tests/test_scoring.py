@@ -959,3 +959,59 @@ def test_the_real_pool_admits_exactly_the_paid_statted_relics():
     admitted = sorted(i["name"] for i in relics if scoring.is_buildable(i))
     assert admitted == ["Agility Greaves", "Shell of Rebuke",
                         "Talisman of Purification", "Time-lock Aegis"], admitted
+
+
+# --- offense tags + adaptive fit -------------------------------------------
+
+def _pow_god(name="T", dt="physical"):
+    return {"name": name, "damage_type": dt, "role": "Hunter", "specs": []}
+
+
+def _w(**over):
+    w = scoring.load_weights_default()
+    w.update(over)
+    return w
+
+
+def test_offense_tags_are_configurable_rather_than_hardcoded():
+    """They lived as a set literal in god_fit_score until 2026-08-19, which
+    made them the one tag weight not in _weights.yaml."""
+    item = {"name": "X", "cost": 2400, "stats": {"Strength": "40"}}
+    plain = scoring.god_fit_score(item, _pow_god(), _w(offense_tags={}), ["burst"])
+    bonus = scoring.god_fit_score(item, _pow_god(),
+                                  _w(offense_tags={"burst": 0.1}), ["burst"])
+    assert bonus > plain
+
+
+def test_offense_tags_sum_only_when_additive_is_on():
+    """Flat, an item answering a tank two ways scores what one answering it
+    once does — the rule that let Titan's Bane displace Heartseeker."""
+    item = {"name": "X", "cost": 2400, "stats": {"Strength": "40"}}
+    tags = ["burst", "percent-health"]
+    om = {"burst": 0.1, "percent-health": 0.1}
+    flat = scoring.god_fit_score(item, _pow_god(),
+                                 _w(offense_tags=om, offense_tags_additive=False), tags)
+    add = scoring.god_fit_score(item, _pow_god(),
+                                _w(offense_tags=om, offense_tags_additive=True), tags)
+    one = scoring.god_fit_score(item, _pow_god(),
+                                _w(offense_tags=om, offense_tags_additive=False), ["burst"])
+    assert flat == one
+    assert add > flat
+
+
+def test_adaptive_fit_is_a_true_no_op_at_zero():
+    """It ships off; a non-zero cost while off would be a bug, not a trade."""
+    item = {"name": "Omen", "cost": 2800, "stats": {"Echo": "30"}}
+    off = scoring.god_fit_score(item, _pow_god(), _w(adaptive_fit=0.0), [],
+                                adaptive_grant=72.5)
+    bare = scoring.god_fit_score(item, _pow_god(), _w(adaptive_fit=0.0), [])
+    assert off == bare
+
+
+def test_adaptive_fit_credits_the_power_stat_the_god_actually_wants():
+    """The grant is one good taken as whichever stat suits, so it lands on the
+    higher-weighted of Strength/Intelligence, not on both."""
+    item = {"name": "Omen", "cost": 2800, "stats": {"Echo": "30"}}
+    on = scoring.god_fit_score(item, _pow_god(), _w(adaptive_fit=1.0), [],
+                               adaptive_grant=72.5)
+    assert on > 0.0

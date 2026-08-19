@@ -8,12 +8,12 @@ builds:
   slot_order:
   - Toxic Blade
   - Tyrfing
+  - Dominance
   - The Reaper
   - Riptalon
-  - Damaru
   - Demon Blade
   flex_slots:
-  - Damaru
+  - Dominance
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -43,6 +43,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Dominance:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     The Reaper:
       total: 0.57
       efficiency: 0.52
@@ -55,12 +61,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Damaru:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Demon Blade:
       total: 0.57
       efficiency: 0.35
@@ -117,11 +117,11 @@ builds:
       pick: 0.0
       fit: 0.42
     Dominance:
-      total: 0.44
+      total: 0.49
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.5
     The Reaper:
       total: 0.56
       efficiency: 0.52
@@ -139,13 +139,13 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
+  - Dominance
   - Riptalon
   - Damaru
   - Demon Blade
   - Deathbringer
-  - Pharaoh's Curse
   flex_slots:
-  - Pharaoh's Curse
+  - Dominance
   - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -169,6 +169,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Dominance:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Riptalon:
       total: 0.61
       efficiency: 0.53
@@ -193,12 +199,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -272,11 +272,11 @@ builds:
   - Jotunn's Revenge
   - Void Shield
   - Riptalon
-  - Silverbranch Bow
   - The Crusher
+  - Heartseeker
   flex_slots:
+  - Heartseeker
   - Void Shield
-  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -317,18 +317,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
-    Silverbranch Bow:
-      total: 0.53
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     The Crusher:
       total: 0.61
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Heartseeker:
+      total: 0.54
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -465,12 +465,12 @@ builds:
   slot_order:
   - Toxic Blade
   - Tyrfing
+  - Dominance
   - The Reaper
   - Riptalon
-  - Damaru
   - Demon Blade
   flex_slots:
-  - Damaru
+  - Dominance
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -500,6 +500,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Dominance:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     The Reaper:
       total: 0.57
       efficiency: 0.52
@@ -512,12 +518,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Damaru:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Demon Blade:
       total: 0.57
       efficiency: 0.35

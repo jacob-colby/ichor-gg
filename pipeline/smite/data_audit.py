@@ -11,6 +11,23 @@ from smite import scoring
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 INDEX_PATH = REPO_ROOT / "viewer" / "public" / "index.json"
+TAGS_PATH = REPO_ROOT / "data" / "_tags.yaml"
+
+# The declared effect-tag vocabulary. Nothing else validates these strings, so
+# a typo (`sustian`) silently does nothing: `god_fit_score` looks the tag up in
+# `offense_tags` and a `tag_bonus` map, misses both, and adds zero. This list
+# is what turns that into a finding. Adding a tag means adding it here AND
+# writing its provenance block in `data/_tags.yaml`.
+KNOWN_TAGS = {
+    # what job the item does in a fight
+    "burst", "execute", "anti-heal", "protection-shred", "penetration",
+    "percent-health", "peel", "wave-clear", "mobility", "sustain",
+    "cc-immunity", "aura", "anti-crit", "damage-debuff", "anti-shield",
+    "heal-scaling",
+    # when the value arrives
+    "ability-uptime", "stacking", "ramp", "low-health", "crit-scaling",
+    "mitigation", "ward-economy", "active",
+}
 
 STAT_VALUE_RE = re.compile(r"-?\d+\.?\d*")
 TIER3_COST_MIN = 1800
@@ -102,6 +119,70 @@ def audit_items(items: list) -> list:
 
     findings.sort(key=lambda f: (f["item"] or "", f["issue"]))
     return findings
+
+
+def audit_tags(items: list, tags_map: dict) -> tuple:
+    """Effect-tag coverage over the god-agnostic buildable pool.
+
+    Returns (findings, reviewed_empty) — the second is a COUNT, not a finding,
+    and the distinction is the whole point of this check.
+
+    `recommend --all` has printed a tag warning since the tags file existed,
+    and on 2026-08-19 it read "[tags] 1 untagged items: Totem of Death" while
+    55 of the 138 buildable items carried no tag at all. Neither number was
+    wrong; they answer different questions. That warning tests `name not in
+    tags_map` — FILE MEMBERSHIP — and exactly one item was missing. The 55 is
+    `len(tags) == 0`, which folds in 54 more sitting at `[]`.
+
+    They are genuinely different states and only one is a defect:
+
+        absent from _tags.yaml   nobody has read this item's passive  -> FINDING
+        present as `[]`          read, and no tag was warranted       -> COUNT
+
+    Collapsing them in either direction lies. Reporting only absences (what
+    the old warning did) says the pool is covered when 39% of it is untagged;
+    reporting every `[]` as a finding would permanently flag Wish-Granting
+    Pearl, which has no passive text to judge and never will.
+
+    Reads `_tags.yaml` rather than the index because `build_index._enrich_items`
+    writes `tags.get(name, [])` — which collapses absent into `[]` and destroys
+    exactly the distinction above before the audit could see it.
+
+    THERE IS DELIBERATELY NO "this tags entry names an item that no longer
+    exists" CHECK, though a renamed item silently losing its tags is a real
+    risk. It was written, and it is the wrong SHAPE for this gate: it is the
+    only check here that needs a closed world over `items`, so any partial view
+    turns all 168 entries into findings at once — which is what it did to the
+    minimal fixture in `test_main_returns_zero_when_clean`. A gate whose value
+    is that a new finding means something cannot have a mode that emits 168 of
+    them. The risk is covered upstream anyway, by
+    `notes.canonicalise_community_items` at ingest and `audit_item_coverage`
+    here."""
+    findings = []
+    buildable = [it for it in items if scoring.is_buildable(it)]
+
+    reviewed_empty = 0
+    for it in sorted(buildable, key=lambda i: i.get("name") or ""):
+        name = it.get("name")
+        if name not in tags_map:
+            findings.append({
+                "item": name, "issue": "untagged-item",
+                "detail": "buildable but absent from data/_tags.yaml "
+                          "(no one has read its passive)",
+            })
+        elif not (tags_map.get(name) or []):
+            reviewed_empty += 1
+
+    for name, tags in sorted(tags_map.items()):
+        for tag in (tags or []):
+            if tag not in KNOWN_TAGS:
+                findings.append({
+                    "item": name, "issue": "unknown-tag",
+                    "detail": f"{tag!r} is not in KNOWN_TAGS; nothing reads it",
+                })
+
+    findings.sort(key=lambda f: (f["item"] or "", f["issue"]))
+    return findings, reviewed_empty
 
 
 MIN_CORE_ITEMS = 5
@@ -196,6 +277,14 @@ def _load_index() -> dict:
     return json.loads(INDEX_PATH.read_text(encoding="utf-8"))
 
 
+def _load_tags() -> dict:
+    # Separate loader so a test can inject a tags map for its own fixture
+    # items, the same way every test here injects `_load_index`. Without it
+    # `audit_tags` compares a synthetic index against the real 168-entry file
+    # and every fixture item is correctly, uselessly reported as untagged.
+    return scoring.load_tags(TAGS_PATH)
+
+
 def load_items() -> list:
     return _load_index().get("items", [])
 
@@ -220,16 +309,25 @@ def main(argv=None) -> int:
     builds = index.get("builds", [])
 
     item_findings = audit_items(items) + audit_item_coverage(items, builds)
+    tag_findings, reviewed_empty = audit_tags(items, _load_tags())
     god_findings = audit_gods(gods, builds, items)
 
     print(f"Item audit: {len(items)} items, {len(item_findings)} finding(s)")
     for f in item_findings:
         print(f"{f['item']}: {f['issue']} - {f['detail']}")
+    buildable = sum(1 for it in items if scoring.is_buildable(it))
+    tagged = buildable - reviewed_empty - sum(
+        1 for f in tag_findings if f["issue"] == "untagged-item")
+    print(f"Tag audit: {buildable} buildable items, {tagged} tagged, "
+          f"{reviewed_empty} reviewed with no tag warranted, "
+          f"{len(tag_findings)} finding(s)")
+    for f in tag_findings:
+        print(f"{f['item']}: {f['issue']} - {f['detail']}")
     print(f"God audit: {len(gods)} gods, {len(god_findings)} finding(s)")
     for f in god_findings:
         print(f"{f['god']}: {f['issue']} - {f['detail']}")
 
-    if not item_findings and not god_findings:
+    if not item_findings and not tag_findings and not god_findings:
         print("no issues found")
         return 0
     return 1

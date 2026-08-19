@@ -2,7 +2,7 @@
 
 Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 
-**Mean coverage:** 45%  ·  **Win-weighted coverage:** 47%  ·  **Pooled rank corr:** 0.39 (n=453)
+**Mean coverage:** 47%  ·  **Win-weighted coverage:** 48%  ·  **Pooled rank corr:** 0.39 (n=453)
 
 | God | Coverage | Win-weighted | Community items |
 |---|---|---|---|
@@ -19,7 +19,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Artemis | 20% | 20% | 5 |
 | Artio | 40% | 54% | 5 |
 | Athena | 60% | 61% | 5 |
-| Atlas | 40% | 43% | 5 |
+| Atlas | 60% | 61% | 5 |
 | Awilix | 40% | 40% | 5 |
 | Bacchus | 60% | 56% | 5 |
 | Baron Samedi | 60% | 60% | 5 |
@@ -31,7 +31,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Chaac | 40% | 53% | 5 |
 | Charon | 0% | 0% | 5 |
 | Chiron | 20% | 17% | 5 |
-| Chronos | 80% | 81% | 5 |
+| Chronos | 80% | 79% | 5 |
 | Cu Chulainn | 20% | 24% | 5 |
 | Cupid | 20% | 21% | 5 |
 | Da Ji | 80% | 78% | 5 |
@@ -44,7 +44,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Gilgamesh | 17% | 17% | 6 |
 | Guan Yu | 50% | 55% | 6 |
 | Hades | 17% | 18% | 6 |
-| Hecate | 40% | 43% | 5 |
+| Hecate | 60% | 65% | 5 |
 | Hercules | 33% | 35% | 6 |
 | Horus | 40% | 42% | 5 |
 | Hou Yi | 40% | 41% | 5 |
@@ -62,17 +62,17 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | Loki | 60% | 62% | 5 |
 | Medusa | 20% | 21% | 5 |
 | Mercury | 17% | 24% | 6 |
-| Merlin | 80% | 78% | 5 |
+| Merlin | 100% | 100% | 5 |
 | Mordred | 40% | 41% | 5 |
 | Morgan Le Fay | 60% | 61% | 5 |
-| Ne Zha | 20% | 19% | 5 |
+| Ne Zha | 40% | 41% | 5 |
 | Neith | 20% | 22% | 5 |
 | Nemesis | 20% | 22% | 5 |
 | Nu Wa | 80% | 80% | 5 |
 | Nut | 33% | 39% | 6 |
 | Odin | 60% | 62% | 5 |
 | Osiris | 33% | 36% | 6 |
-| Pele | 40% | 43% | 5 |
+| Pele | 60% | 62% | 5 |
 | Poseidon | 80% | 79% | 5 |
 | Princess Bari | 40% | 38% | 5 |
 | Ra | 60% | 59% | 5 |
@@ -88,7 +88,7 @@ Agreement is a proxy — win rate is popularity-biased and Conquest-only.
 | The Morrigan | 60% | 60% | 5 |
 | Thor | 20% | 21% | 5 |
 | Tsukuyomi | 20% | 21% | 5 |
-| Ullr | 80% | 79% | 5 |
+| Ullr | 100% | 100% | 5 |
 | Vulcan | 75% | 75% | 4 |
 | Xbalanque | 33% | 36% | 6 |
 | Xing Tian | 33% | 36% | 6 |

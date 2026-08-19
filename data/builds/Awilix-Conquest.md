@@ -100,7 +100,7 @@ builds:
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Titan's Bane
+  - Hydra's Lament
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -120,7 +120,7 @@ builds:
     Lernaean Bow, Avatar''s Parashu, Golden Blade, Transcendence, Avenging Blade,
     Arondight, Shield Splitter, Genji''s Guard, Eye of the Storm, Tyrfing, Riptalon,
     Silverbranch Bow, Breastplate of Valor, Deathbringer, Barbed Carver, Berserker''s
-    Shield, Musashi''s Dual Swords, Bloodforge, Kinetic Cuirass.'
+    Shield, Sanguine Lash, Musashi''s Dual Swords, Bloodforge.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.65
@@ -153,11 +153,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.56
+      total: 0.57
       efficiency: 0.45
       win: 0.56
       pick: 0.22
-      fit: 0.91
+      fit: 1.0
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -233,22 +233,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
   - The Reaper
   - The Crusher
+  - Titan's Bane
   flex_slots:
-  - Genji's Guard
+  - Titan's Bane
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -260,14 +260,8 @@ builds:
     Hammer, Freya''s Tears, Tekko-Kagi, Riptalon, Arondight, Damaru, Silverbranch
     Bow, Shield of the Phoenix, Berserker''s Shield, Lernaean Bow, Kinetic Cuirass,
     Amanita Charm, Screeching Gargoyle, Golden Blade, Chandra''s Grace, Eye of Providence,
-    Transcendence, Avenging Blade, Oni Hunter''s Garb, Avatar''s Parashu, Shield Splitter.'
+    Transcendence, Avenging Blade, Oni Hunter''s Garb, Avatar''s Parashu.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.69
-      win: 0.52
-      pick: 0.0
-      fit: 0.22
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.64
@@ -298,6 +292,12 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.66
+    Titan's Bane:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.56
+      pick: 0.22
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -326,11 +326,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, The Crusher,
-    Berserker''s Shield, Runeforged Hammer, Genji''s Guard, Oni Hunter''s Garb, Eye
-    of the Storm, Chandra''s Grace, Erosion, Shifter''s Shield, Shield Splitter, Phoenix
-    Feather, Freya''s Tears, Eye of Providence, Spectral Armor, Draconic Scale, Riptalon,
-    Breastplate of Valor, Golden Blade, Pharaoh''s Curse, Avenging Blade, Leviathan''s
-    Hide, Midgardian Mail, Ancile, Shogun''s Ofuda.'
+    Berserker''s Shield, Yogi''s Necklace, Runeforged Hammer, Genji''s Guard, Oni
+    Hunter''s Garb, Eye of the Storm, Chandra''s Grace, Erosion, Shifter''s Shield,
+    Shield Splitter, Phoenix Feather, Freya''s Tears, Eye of Providence, Spectral
+    Armor, Draconic Scale, Riptalon, Breastplate of Valor, Golden Blade, Pharaoh''s
+    Curse, Avenging Blade, Leviathan''s Hide, Midgardian Mail, Ancile.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.57
@@ -399,7 +399,7 @@ builds:
     Silverbranch Bow, Avatar''s Parashu, Runeforged Hammer, Genji''s Guard, Damaru,
     Lernaean Bow, Screeching Gargoyle, Golden Blade, Transcendence, Breastplate of
     Valor, Berserker''s Shield, Shield Splitter, Eye of the Storm, Stone of Binding,
-    Tyrfing, Oath-Sworn Spear, Arondight, Kinetic Cuirass, Void Shield.'
+    Tyrfing, Oath-Sworn Spear, Arondight, Kinetic Cuirass.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.65
@@ -432,11 +432,11 @@ builds:
       pick: 0.38
       fit: 1.0
     Titan's Bane:
-      total: 0.56
+      total: 0.57
       efficiency: 0.45
       win: 0.56
       pick: 0.22
-      fit: 0.94
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -465,10 +465,10 @@ builds:
     swap_item: Contagion
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, The Crusher, Golden Blade, Silverbranch Bow, Tyrfing, Berserker''s
-    Shield, Lernaean Bow, Tekko-Kagi, Genji''s Guard, Pharaoh''s Curse, Runeforged
-    Hammer, Breastplate of Valor, Damaru, Shogun''s Ofuda, Kinetic Cuirass, Amanita
-    Charm, Qin''s Blade, Eye of Providence, Oni Hunter''s Garb, Eros'' Bow, Freya''s
-    Tears, Transcendence, Avenging Blade.'
+    Shield, Lernaean Bow, Tekko-Kagi, Genji''s Guard, Pharaoh''s Curse, Qin''s Blade,
+    Runeforged Hammer, Breastplate of Valor, Damaru, Shogun''s Ofuda, Kinetic Cuirass,
+    Amanita Charm, Eye of Providence, Oni Hunter''s Garb, Eros'' Bow, Freya''s Tears,
+    Transcendence, Avenging Blade.'
   slot_scores:
     Golden Blade:
       total: 0.52
@@ -581,14 +581,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
   - The Reaper
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
+  - Hydra's Lament
   - Heartseeker
-  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -607,7 +607,7 @@ builds:
     Damaru, Lernaean Bow, Avatar''s Parashu, Golden Blade, Transcendence, Avenging
     Blade, Arondight, Shield Splitter, Genji''s Guard, Eye of the Storm, Tyrfing,
     Riptalon, Silverbranch Bow, Breastplate of Valor, Deathbringer, Barbed Carver,
-    Berserker''s Shield, Musashi''s Dual Swords, Bloodforge, Kinetic Cuirass.'
+    Berserker''s Shield, Sanguine Lash, Musashi''s Dual Swords, Bloodforge.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.65
@@ -615,12 +615,6 @@ builds:
       win: 0.59
       pick: 0.28
       fit: 1.0
-    Transcendence:
-      total: 0.49
-      efficiency: 0.52
-      win: 0.52
-      pick: 0.0
-      fit: 0.52
     Hydra's Lament:
       total: 0.56
       efficiency: 0.56
@@ -644,6 +638,12 @@ builds:
       efficiency: 0.41
       win: 0.5
       pick: 0.38
+      fit: 1.0
+    Titan's Bane:
+      total: 0.57
+      efficiency: 0.45
+      win: 0.56
+      pick: 0.22
       fit: 1.0
   starter: *id001
 ---

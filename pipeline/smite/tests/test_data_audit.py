@@ -205,6 +205,54 @@ def test_audit_gods_only_considers_conquest_core():
     assert [f["issue"] for f in findings] == ["no-build"]
 
 
+# --- tags -----------------------------------------------------------------
+
+
+def _buildable(name):
+    return _clean_item(name, tier=3, cost=2400)
+
+
+def test_audit_tags_flags_a_buildable_item_absent_from_the_file():
+    items = [_buildable("Nobody Read This")]
+    findings, _ = data_audit.audit_tags(items, {})
+    assert [(f["item"], f["issue"]) for f in findings] == [
+        ("Nobody Read This", "untagged-item")]
+
+
+def test_audit_tags_counts_reviewed_empty_instead_of_flagging_it():
+    # `[]` is a judgement — reviewed, no tag warranted — not a gap. It is the
+    # difference this check exists to draw, so it must never become a finding.
+    items = [_buildable("Read And Left Bare")]
+    findings, reviewed_empty = data_audit.audit_tags(
+        items, {"Read And Left Bare": []})
+    assert findings == []
+    assert reviewed_empty == 1
+
+
+def test_audit_tags_ignores_components():
+    # A tier-1 component never reaches a build, so its absence is not a gap.
+    findings, reviewed_empty = data_audit.audit_tags(
+        [_clean_item("Some Component", tier=1, cost=650)], {})
+    assert findings == []
+    assert reviewed_empty == 0
+
+
+def test_audit_tags_flags_a_tag_outside_the_declared_vocabulary():
+    # A typo'd tag is silently inert: god_fit_score misses it in offense_tags
+    # and in every tag_bonus map, and adds zero. Nothing else catches it.
+    findings, _ = data_audit.audit_tags(
+        [_buildable("Typo Carrier")], {"Typo Carrier": ["sustian"]})
+    assert [(f["item"], f["issue"]) for f in findings] == [
+        ("Typo Carrier", "unknown-tag")]
+
+
+def test_audit_tags_accepts_every_tag_the_shipped_file_uses():
+    # Guards the other direction: KNOWN_TAGS must not fall behind _tags.yaml.
+    tags_map = data_audit._load_tags()
+    used = {t for tags in tags_map.values() for t in (tags or [])}
+    assert used <= data_audit.KNOWN_TAGS
+
+
 # --- main -----------------------------------------------------------------
 
 def _index(items=None, gods=None, builds=None):
@@ -228,13 +276,17 @@ def test_main_returns_nonzero_when_god_findings_exist(monkeypatch):
 
 
 def test_main_returns_zero_when_clean(monkeypatch):
+    items = [_clean_item("Clean Item Two", tier=1, cost=650)] + _GODS_ITEMS
     monkeypatch.setattr(
         data_audit, "_load_index",
-        lambda: _index(
-            items=[_clean_item("Clean Item Two", tier=1, cost=650)] + _GODS_ITEMS,
-            gods=[_mag_god()],
-            builds=[_core_build()],
-        ),
+        lambda: _index(items=items, gods=[_mag_god()], builds=[_core_build()]),
+    )
+    # The tags map has to cover the fixture's own items, not the shipped file:
+    # `audit_tags` reports a buildable item missing from it, and every fixture
+    # item is missing from the real one.
+    monkeypatch.setattr(
+        data_audit, "_load_tags",
+        lambda: {it["name"]: [] for it in items},
     )
     assert data_audit.main([]) == 0
 

@@ -189,11 +189,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Berserker''s
-    Shield, The Crusher, Jotunn''s Revenge, Chandra''s Grace, Freya''s Tears, Oni
-    Hunter''s Garb, The Reaper, Golden Blade, Eye of the Storm, Shield Splitter, Pharaoh''s
-    Curse, Hydra''s Lament, Phoenix Feather, Erosion, Spectral Armor, Eye of Providence,
-    Riptalon, Breastplate of Valor, Avenging Blade, Shogun''s Ofuda, Runeforged Hammer,
-    Leviathan''s Hide, Midgardian Mail, Lernaean Bow.'
+    Shield, The Crusher, Jotunn''s Revenge, Chandra''s Grace, Yogi''s Necklace, Freya''s
+    Tears, Oni Hunter''s Garb, The Reaper, Golden Blade, Eye of the Storm, Shield
+    Splitter, Pharaoh''s Curse, Hydra''s Lament, Phoenix Feather, Erosion, Spectral
+    Armor, Eye of Providence, Riptalon, Breastplate of Valor, Avenging Blade, Shogun''s
+    Ofuda, Runeforged Hammer, Leviathan''s Hide, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -261,9 +261,9 @@ builds:
     for this god: The Crusher, Jotunn''s Revenge, Kinetic Cuirass, Amanita Charm,
     Berserker''s Shield, Avenging Blade, Stone of Binding, Screeching Gargoyle, Freya''s
     Tears, Void Shield, Oni Hunter''s Garb, Void Stone, The Reaper, Shield of the
-    Phoenix, Shield Splitter, Hydra''s Lament, Erosion, Spectral Armor, Pharaoh''s
-    Curse, Riptalon, Eye of the Storm, Breastplate of Valor, Eye of Providence, Golden
-    Blade, Silverbranch Bow, Tekko-Kagi, Runeforged Hammer.'
+    Phoenix, Shield Splitter, Hydra''s Lament, Heartseeker, Erosion, Spectral Armor,
+    Pharaoh''s Curse, Riptalon, Eye of the Storm, Breastplate of Valor, Eye of Providence,
+    Titan''s Bane, Golden Blade, Silverbranch Bow, Runeforged Hammer.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -332,8 +332,8 @@ builds:
     Crusher, Pharaoh''s Curse, Freya''s Tears, Jotunn''s Revenge, Riptalon, Oni Hunter''s
     Garb, Shield of the Phoenix, Shogun''s Ofuda, Tyrfing, Spectral Armor, Erosion,
     Silverbranch Bow, Lernaean Bow, Breastplate of Valor, Hydra''s Lament, Shield
-    Splitter, Eye of Providence, Eye of the Storm, Leviathan''s Hide, Midgardian Mail,
-    Toxic Blade, Mantle Of Discord, Runeforged Hammer.'
+    Splitter, Eye of Providence, Eye of the Storm, Leviathan''s Hide, Dominance, Midgardian
+    Mail, Toxic Blade, Runeforged Hammer.'
   slot_scores:
     Golden Blade:
       total: 0.49

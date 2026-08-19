@@ -190,10 +190,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Draconic Scale,
     Berserker''s Shield, Chandra''s Grace, Runeforged Hammer, Oni Hunter''s Garb,
-    Erosion, Eye of Providence, Phoenix Feather, Jotunn''s Revenge, Spectral Armor,
-    The Crusher, Glorious Pridwen, Pharaoh''s Curse, Leviathan''s Hide, Eye of the
-    Storm, Midgardian Mail, Gladiator''s Shield, Shield Splitter, Hydra''s Lament,
-    The Reaper, Ancile, Shogun''s Ofuda, Screeching Gargoyle.'
+    Yogi''s Necklace, Erosion, Eye of Providence, Phoenix Feather, Jotunn''s Revenge,
+    Spectral Armor, The Crusher, Glorious Pridwen, Pharaoh''s Curse, Leviathan''s
+    Hide, Eye of the Storm, Midgardian Mail, Gladiator''s Shield, Shield Splitter,
+    Hydra''s Lament, The Reaper, Ancile, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -262,8 +262,8 @@ builds:
     Draconic Scale, Screeching Gargoyle, Berserker''s Shield, Stone of Binding, Runeforged
     Hammer, Void Shield, Shield of the Phoenix, Oni Hunter''s Garb, Avenging Blade,
     Void Stone, Erosion, Spectral Armor, Eye of Providence, The Reaper, Hydra''s Lament,
-    Riptalon, Pharaoh''s Curse, Shield Splitter, Leviathan''s Hide, Silverbranch Bow,
-    Midgardian Mail, Eye of the Storm.'
+    Riptalon, Heartseeker, Pharaoh''s Curse, Shield Splitter, Leviathan''s Hide, Silverbranch
+    Bow, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -332,8 +332,8 @@ builds:
     Golden Blade, Draconic Scale, The Crusher, Jotunn''s Revenge, Pharaoh''s Curse,
     Riptalon, Oni Hunter''s Garb, Shield of the Phoenix, Tyrfing, Shogun''s Ofuda,
     Hydra''s Lament, Silverbranch Bow, Lernaean Bow, Spectral Armor, Erosion, Shield
-    Splitter, Eye of Providence, Eye of the Storm, Leviathan''s Hide, Toxic Blade,
-    Midgardian Mail, Screeching Gargoyle.'
+    Splitter, Eye of Providence, Eye of the Storm, Dominance, Leviathan''s Hide, Toxic
+    Blade, Midgardian Mail.'
   slot_scores:
     Golden Blade:
       total: 0.53

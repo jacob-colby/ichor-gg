@@ -118,9 +118,9 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, The Reaper, Hydra''s Lament, Pendulum Blade, Tekko-Kagi,
     Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden Blade, Transcendence,
-    Avenging Blade, Arondight, Shield Splitter, Eye of the Storm, Tyrfing, Riptalon,
-    Dominance, Silverbranch Bow, Deathbringer, Barbed Carver, Berserker''s Shield,
-    Musashi''s Dual Swords.'
+    Avenging Blade, Dominance, Arondight, Shield Splitter, Eye of the Storm, Tyrfing,
+    Riptalon, Silverbranch Bow, Deathbringer, Barbed Carver, Berserker''s Shield,
+    Sanguine Lash.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.69
@@ -169,10 +169,10 @@ builds:
   - Thistlethorn Acorn
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Heartseeker
   flex_slots:
   - Briskberry Acorn
-  - Hydra's Lament
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -188,8 +188,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: The
     Crusher, Hydra''s Lament, The Reaper, Runeforged Hammer, Damaru, Transcendence,
-    Pendulum Blade, Lernaean Bow, Arondight, Oni Hunter''s Garb, Berserker''s Shield,
-    Golden Blade, Freya''s Tears, Tekko-Kagi, Avenging Blade, Dominance, Kinetic Cuirass,
+    Dominance, Pendulum Blade, Lernaean Bow, Arondight, Oni Hunter''s Garb, Berserker''s
+    Shield, Golden Blade, Freya''s Tears, Tekko-Kagi, Avenging Blade, Kinetic Cuirass,
     Shield Splitter, Amanita Charm, Shield of the Phoenix, Eye of the Storm, Tyrfing,
     Eye of Providence.'
   slot_scores:
@@ -223,12 +223,12 @@ builds:
       win: 0.56
       pick: 0.31
       fit: 0.71
-    Hydra's Lament:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.41
+      win: 0.55
+      pick: 0.22
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: burst
@@ -326,11 +326,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, The Crusher,
-    Berserker''s Shield, The Reaper, Runeforged Hammer, Oni Hunter''s Garb, Eye of
-    the Storm, Chandra''s Grace, Erosion, Shifter''s Shield, Shield Splitter, Phoenix
-    Feather, Freya''s Tears, Eye of Providence, Spectral Armor, Draconic Scale, Riptalon,
-    Golden Blade, Hydra''s Lament, Pharaoh''s Curse, Avenging Blade, Leviathan''s
-    Hide, Midgardian Mail.'
+    Berserker''s Shield, The Reaper, Yogi''s Necklace, Runeforged Hammer, Oni Hunter''s
+    Garb, Eye of the Storm, Chandra''s Grace, Erosion, Shifter''s Shield, Shield Splitter,
+    Phoenix Feather, Freya''s Tears, Eye of Providence, Spectral Armor, Draconic Scale,
+    Riptalon, Golden Blade, Hydra''s Lament, Pharaoh''s Curse, Avenging Blade, Leviathan''s
+    Hide.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.67
@@ -398,8 +398,8 @@ builds:
     for this god: The Crusher, The Reaper, Tekko-Kagi, Pendulum Blade, Riptalon, Avenging
     Blade, Silverbranch Bow, Avatar''s Parashu, Hydra''s Lament, Runeforged Hammer,
     Damaru, Toxic Blade, Lernaean Bow, Screeching Gargoyle, Golden Blade, Transcendence,
-    Berserker''s Shield, Shield Splitter, Eye of the Storm, Stone of Binding, Tyrfing,
-    Oath-Sworn Spear, Arondight.'
+    Berserker''s Shield, Dominance, Shield Splitter, Eye of the Storm, Stone of Binding,
+    Tyrfing, Oath-Sworn Spear.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.66
@@ -465,10 +465,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, The Crusher, Golden Blade, Silverbranch Bow, Tyrfing, Berserker''s
-    Shield, Lernaean Bow, Toxic Blade, Tekko-Kagi, The Reaper, Hydra''s Lament, Pharaoh''s
-    Curse, Dominance, Runeforged Hammer, Damaru, Shogun''s Ofuda, Kinetic Cuirass,
-    Amanita Charm, Qin''s Blade, Eye of Providence, Oni Hunter''s Garb, Eros'' Bow,
-    Freya''s Tears, Transcendence.'
+    Shield, Lernaean Bow, Toxic Blade, Dominance, Tekko-Kagi, The Reaper, Hydra''s
+    Lament, Pharaoh''s Curse, Qin''s Blade, Runeforged Hammer, Damaru, Shogun''s Ofuda,
+    Kinetic Cuirass, Amanita Charm, Eye of Providence, Oni Hunter''s Garb, Eros''
+    Bow, Freya''s Tears.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -584,11 +584,11 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Hydra's Lament
   - The Crusher
+  - Titan's Bane
   flex_slots:
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -605,9 +605,9 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, The Reaper, Hydra''s Lament, Pendulum Blade,
     Tekko-Kagi, Runeforged Hammer, Damaru, Lernaean Bow, Avatar''s Parashu, Golden
-    Blade, Transcendence, Avenging Blade, Arondight, Shield Splitter, Eye of the Storm,
-    Tyrfing, Riptalon, Dominance, Silverbranch Bow, Deathbringer, Barbed Carver, Berserker''s
-    Shield, Musashi''s Dual Swords.'
+    Blade, Transcendence, Avenging Blade, Dominance, Arondight, Shield Splitter, Eye
+    of the Storm, Tyrfing, Riptalon, Silverbranch Bow, Deathbringer, Barbed Carver,
+    Berserker''s Shield, Sanguine Lash.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.69
@@ -633,17 +633,17 @@ builds:
       win: 0.56
       pick: 0.31
       fit: 1.0
-    Hydra's Lament:
-      total: 0.53
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     The Crusher:
       total: 0.6
       efficiency: 0.64
       win: 0.5
       pick: 0.0
+      fit: 1.0
+    Titan's Bane:
+      total: 0.43
+      efficiency: 0.45
+      win: 0.27
+      pick: 0.15
       fit: 1.0
   starter: *id001
 ---

@@ -9,11 +9,11 @@ builds:
   - Divine Ruin
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
+  - The Cosmic Horror
   - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
@@ -49,18 +49,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Spear of the Magus:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Obsidian Shard:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -141,12 +141,12 @@ builds:
   - Bragi's Harp
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - The Cosmic Horror
-  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -181,18 +181,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Spear of the Magus:
-      total: 0.49
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -275,8 +275,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -318,11 +318,11 @@ builds:
       pick: 0.0
       fit: 0.6
     Obsidian Shard:
-      total: 0.56
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.7
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
+  - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Totem of Death
   - Chronos' Pendant
-  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,12 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
-    Breastplate of Valor:
-      total: 0.5
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Chronos' Pendant:
       total: 0.5
       efficiency: 0.55
@@ -447,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Totem of Death:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Rod of Tahuti:
       total: 0.52
       efficiency: 0.77
@@ -466,11 +466,11 @@ builds:
   - Divine Ruin
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
+  - The Cosmic Horror
   - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
@@ -506,18 +506,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Spear of the Magus:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Obsidian Shard:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Soul Gem:
       total: 0.78
       efficiency: 0.57

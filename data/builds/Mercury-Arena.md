@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Lernaean Bow
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - The Reaper
   - Pendulum Blade
   - The Crusher
+  - Heartseeker
   flex_slots:
-  - Hydra's Lament
-  - Lernaean Bow
+  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,24 +31,18 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.58
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Jotunn's Revenge:
       total: 0.74
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Hydra's Lament:
-      total: 0.61
-      efficiency: 0.56
+    Transcendence:
+      total: 0.45
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.38
     The Reaper:
       total: 0.72
       efficiency: 0.52
@@ -67,6 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Heartseeker:
+      total: 0.64
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -129,23 +129,23 @@ builds:
       pick: 0.0
       fit: 0.53
     Heartseeker:
-      total: 0.52
+      total: 0.57
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.72
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
+  - Heartseeker
   flex_slots:
-  - Toxic Blade
+  - Pendulum Blade
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -158,17 +158,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.54
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Jotunn's Revenge:
       total: 0.67
       efficiency: 0.64
@@ -199,6 +193,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Heartseeker:
+      total: 0.56
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -275,8 +275,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
+  - Pendulum Blade
   - Toxic Blade
-  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -324,11 +324,11 @@ builds:
       pick: 0.0
       fit: 0.87
     Heartseeker:
-      total: 0.64
+      total: 0.69
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Lernaean Bow
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - The Reaper
   - Pendulum Blade
   - The Crusher
+  - Heartseeker
   flex_slots:
-  - Hydra's Lament
-  - Lernaean Bow
+  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,24 +488,18 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.58
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Jotunn's Revenge:
       total: 0.74
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Hydra's Lament:
-      total: 0.61
-      efficiency: 0.56
+    Transcendence:
+      total: 0.45
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.38
     The Reaper:
       total: 0.72
       efficiency: 0.52
@@ -524,5 +518,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Heartseeker:
+      total: 0.64
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
   starter: *id001
 ---

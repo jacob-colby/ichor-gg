@@ -253,10 +253,22 @@ def main(argv=None):
         # Only buildable items need effect tags — a component is never in a
         # build, so listing all 49 of them turns a useful warning into noise
         # nobody reads.
-        untagged = [it["name"] for it in items
-                    if scoring.is_buildable(it) and it["name"] not in tags_map]
+        #
+        # Absent from the file and present-as-`[]` are DIFFERENT STATES and
+        # this used to print only the first, which is how it reported "1
+        # untagged" against a pool where 55 of 138 carried no tag. Both numbers
+        # now appear so they cannot contradict each other; `data_audit.audit_tags`
+        # is the gate and carries the reasoning.
+        buildable = [it["name"] for it in items if scoring.is_buildable(it)]
+        untagged = [n for n in buildable if n not in tags_map]
+        reviewed_empty = [n for n in buildable
+                          if n in tags_map and not (tags_map[n] or [])]
+        print(f"[tags] {len(buildable)} buildable · "
+              f"{len(buildable) - len(untagged) - len(reviewed_empty)} tagged · "
+              f"{len(reviewed_empty)} reviewed, no tag warranted · "
+              f"{len(untagged)} never reviewed")
         if untagged:
-            print(f"[tags] {len(untagged)} untagged items: {', '.join(sorted(untagged))}")
+            print(f"[tags] never reviewed: {', '.join(sorted(untagged))}")
         out_dir = DATA_ROOT / "Analysis"
         out_dir.mkdir(parents=True, exist_ok=True)
         for god in load_gods():

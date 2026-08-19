@@ -48,6 +48,17 @@ DEFAULT_WEIGHTS = {
     "underrated": {"max_pick": 0.15, "top_quality_frac": 0.30},
     # How much the kit-scaling overlay skews god-fit (0 = role map only).
     "kit_blend": 0.5,
+    # Effect-tags that mark an item as offensive, and what each is worth to
+    # god-fit. This lived as a hardcoded set in `god_fit_score` until
+    # 2026-08-19, which made it the one tag weight in the model that was NOT
+    # in `_weights.yaml` — so adding `penetration` to it was a code change,
+    # and sweeping it meant editing Python. See `offense_tags` there for the
+    # flat-vs-additive measurement.
+    "offense_tags": {"burst": 0.1, "execute": 0.1, "protection-shred": 0.1,
+                     "penetration": 0.1},
+    # false = an item scores the bonus ONCE however many offense tags it
+    # carries; true = they sum. Measured — see `offense_tags` in _weights.yaml.
+    "offense_tags_additive": False,
 }
 
 
@@ -221,7 +232,7 @@ def stat_reference(items):
 
 
 def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=None,
-                  base_map=None, stat_reference=None):
+                  base_map=None, stat_reference=None, adaptive_grant=0.0):
     """Archetype fit in [0,1]: weighted presence of role-relevant stats, plus a
     small bonus for archetype-relevant tags. An optional stat_overlay (flavor
     weights, which win over the god's role map) and tag_bonus (per-tag deltas,
@@ -241,6 +252,25 @@ def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=No
     role_map = dict(base_map) if base_map is not None else _role_stat_map(god, weights)
     if stat_overlay:
         role_map = {**role_map, **stat_overlay}
+
+    # ADAPTIVE POWER (experiment, `adaptive_fit`, default 0 = off).
+    #
+    # Eight buildable items read `Adaptive Stat: +X Strength or +Y Intelligence`
+    # and carry that power NOWHERE IN `stats`. Four have a single-entry stats
+    # dict, so fit scores Omen Drum — a 2800g item — off `{Echo: 30}` alone.
+    # `passives.unconditional_grants` already extracts the number; nothing has
+    # ever shown it to `fit`. STATE.md 4.5 shipped the EFFICIENCY half off; the
+    # fit half is not in the register, which is why it is worth measuring.
+    #
+    # Credited to whichever of Strength/Intelligence the god's own map weights
+    # higher, because that is what the grant literally is — one good, taken as
+    # whichever suits the build. `adaptive_fit` scales how much of the stat's
+    # weight it earns, so 0 is a true no-op and 1.0 treats it as the real thing.
+    if adaptive_grant and weights.get("adaptive_fit"):
+        power = max(("Strength", "Intelligence"),
+                    key=lambda s: role_map.get(s, 0.0))
+        if role_map.get(power):
+            stats = {**stats, power: stats.get(power) or adaptive_grant}
     denom = sum(role_map.values()) or 1.0
     stat_fit = 0.0
     for stat, w in role_map.items():
@@ -256,8 +286,25 @@ def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=No
         stat_fit += w * share
     stat_fit = min(stat_fit / denom, 1.0)
 
-    offense_tags = {"burst", "execute", "protection-shred"}
-    bonus = 0.1 if any(t in offense_tags for t in (item_tags or [])) else 0.0
+    # `penetration` joined this map 2026-08-19 with the tag itself. It is the
+    # same KIND of thing `protection-shred` already is — the answer to a target
+    # whose protections are the problem — and the three items carrying it
+    # (Titan's Bane, Obsidian Shard, Dominance) were reachable by neither this
+    # bonus nor `draft.tag_bonus.tanks`, so the anti-tank response ran on its
+    # stat half alone. `execute` is in the map and has NO carriers in the pool;
+    # it is left in place because a name with no items behind it costs nothing.
+    # See `offense_tags` in data/_weights.yaml for the numbers.
+    offense = weights.get("offense_tags") or {}
+    earned = [offense[t] for t in (item_tags or []) if t in offense]
+    if not earned:
+        bonus = 0.0
+    elif weights.get("offense_tags_additive"):
+        bonus = sum(earned)
+    else:
+        # Flat by default: an item with two offense tags scores what an item
+        # with one does. That is a real limitation, not an oversight — it is
+        # why Titan's Bane displaced Heartseeker, which already had `burst`.
+        bonus = max(earned)
     if tag_bonus:
         for t in (item_tags or []):
             bonus += tag_bonus.get(t, 0.0)
@@ -513,12 +560,13 @@ def measured_win_rates(god_build, weights=None):
 
 def signal_score(item, god, god_build, eff_score, weights, item_tags,
                  stat_overlay=None, tag_bonus=None, base_map=None,
-                 stat_reference=None):
+                 stat_reference=None, adaptive_grant=0.0):
     w = weights["signals"]
     pick, win = lookup_rates(god_build, item["name"], weights)
     win_norm = win if win is not None else god_unknown_win_rate(god_build, weights)
     fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus,
-                        base_map=base_map, stat_reference=stat_reference)
+                        base_map=base_map, stat_reference=stat_reference,
+                        adaptive_grant=adaptive_grant)
     total = (w["efficiency"] * eff_score + w["win"] * win_norm
              + w["pick"] * pick + w["fit"] * fit)
     # Intrinsic merit for this god — efficiency + fit only, renormalized so it
@@ -779,6 +827,18 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     # Magnitude reference for the fit term, computed once over the whole pool.
     reference = stat_reference(items) if eff_weights.get("magnitude_fit", False) else None
 
+    # Adaptive-power grants, extracted once rather than per (god, item) — the
+    # regex is the expensive part. Empty dict when `adaptive_fit` is off, so
+    # the experiment costs nothing while it ships off.
+    adaptive = {}
+    if eff_weights.get("adaptive_fit"):
+        from smite import passives
+        for it in items:
+            amount = (passives.unconditional_grants(it) or {}).get(
+                passives.ADAPTIVE_KEY)
+            if amount:
+                adaptive[it["name"]] = amount
+
     # Filtering here, at the single point every archetype's rows come from,
     # keeps an excluded item out of the core, the flex slots, the situational
     # swaps and the underrated list at once — none of those can reintroduce a
@@ -797,7 +857,8 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
         row = signal_score(item, god, god_build, eff, eff_weights,
                            tags_map.get(item["name"], []), stat_overlay, tag_bonus,
-                           base_map=base_map, stat_reference=reference)
+                           base_map=base_map, stat_reference=reference,
+                           adaptive_grant=adaptive.get(item["name"], 0.0))
         row["tier"] = efficiency_scores_map.get(item["name"], {}).get("tier", "fair")
         rows.append(row)
 

@@ -118,10 +118,10 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, Amanita Charm, Golden Blade, Jotunn''s Revenge, Runeforged
     Hammer, Genji''s Guard, Pharaoh''s Curse, Damaru, Lernaean Bow, Oni Hunter''s
-    Garb, Hydra''s Lament, Eye of the Storm, Breastplate of Valor, Shield of the Phoenix,
-    Shield Splitter, Spectral Armor, Freya''s Tears, Avenging Blade, Tyrfing, Erosion,
-    Eye of Providence, Leviathan''s Hide, Dominance, Draconic Scale, Midgardian Mail,
-    Tekko-Kagi, Shogun''s Ofuda.'
+    Garb, Hydra''s Lament, Eye of the Storm, Breastplate of Valor, Dominance, Shield
+    of the Phoenix, Shield Splitter, Spectral Armor, Freya''s Tears, Avenging Blade,
+    Tyrfing, Erosion, Eye of Providence, Leviathan''s Hide, Draconic Scale, Midgardian
+    Mail, Tekko-Kagi, Shogun''s Ofuda.'
   slot_scores:
     Golden Blade:
       total: 0.49
@@ -188,12 +188,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, The Crusher, Genji''s Guard, Golden
-    Blade, Riptalon, Pharaoh''s Curse, Jotunn''s Revenge, The Reaper, Runeforged Hammer,
-    Chandra''s Grace, Oni Hunter''s Garb, Phoenix Feather, Eye of the Storm, Freya''s
-    Tears, Spectral Armor, Shield Splitter, Damaru, Breastplate of Valor, Erosion,
-    Lernaean Bow, Eye of Providence, Hydra''s Lament, Draconic Scale, Avenging Blade,
-    Leviathan''s Hide, Shogun''s Ofuda.'
+    this god: Amanita Charm, Shield of the Phoenix, The Crusher, Yogi''s Necklace,
+    Genji''s Guard, Golden Blade, Riptalon, Pharaoh''s Curse, Jotunn''s Revenge, The
+    Reaper, Runeforged Hammer, Chandra''s Grace, Oni Hunter''s Garb, Phoenix Feather,
+    Eye of the Storm, Freya''s Tears, Spectral Armor, Shield Splitter, Damaru, Breastplate
+    of Valor, Erosion, Lernaean Bow, Eye of Providence, Hydra''s Lament, Draconic
+    Scale, Avenging Blade, Shogun''s Ofuda.'
   slot_scores:
     Contagion:
       total: 0.49
@@ -260,10 +260,10 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Jotunn''s Revenge, Avenging Blade, Amanita Charm, Genji''s
     Guard, Riptalon, The Reaper, Golden Blade, Runeforged Hammer, Void Shield, Silverbranch
-    Bow, Stone of Binding, Screeching Gargoyle, Tekko-Kagi, Oni Hunter''s Garb, Pharaoh''s
-    Curse, Damaru, Void Stone, Hydra''s Lament, Breastplate of Valor, Lernaean Bow,
-    Toxic Blade, Spectral Armor, Freya''s Tears, Shield of the Phoenix, Eye of the
-    Storm, Heartseeker, Shogun''s Ofuda.'
+    Bow, Stone of Binding, Screeching Gargoyle, Tekko-Kagi, Oni Hunter''s Garb, Heartseeker,
+    Pharaoh''s Curse, Damaru, Void Stone, Titan''s Bane, Hydra''s Lament, Breastplate
+    of Valor, Lernaean Bow, Toxic Blade, Spectral Armor, Freya''s Tears, Shield of
+    the Phoenix, Eye of the Storm.'
   slot_scores:
     Contagion:
       total: 0.48
@@ -331,9 +331,9 @@ builds:
     this god: Golden Blade, The Crusher, Amanita Charm, Riptalon, Genji''s Guard,
     Pharaoh''s Curse, Jotunn''s Revenge, Tyrfing, Oni Hunter''s Garb, Runeforged Hammer,
     Silverbranch Bow, Lernaean Bow, Breastplate of Valor, Damaru, Hydra''s Lament,
-    Spectral Armor, Freya''s Tears, Shield of the Phoenix, Toxic Blade, Eye of the
-    Storm, Erosion, Leviathan''s Hide, Shield Splitter, Eye of Providence, Eros''
-    Bow, Avenging Blade, Shogun''s Ofuda.'
+    Spectral Armor, Freya''s Tears, Dominance, Shield of the Phoenix, Toxic Blade,
+    Eye of the Storm, Erosion, Leviathan''s Hide, Shield Splitter, Eye of Providence,
+    Eros'' Bow, Shogun''s Ofuda.'
   slot_scores:
     Contagion:
       total: 0.48
@@ -403,8 +403,8 @@ builds:
     Amanita Charm, The Crusher, Chandra''s Grace, Oni Hunter''s Garb, Pharaoh''s Curse,
     Screeching Gargoyle, Golden Blade, Runeforged Hammer, Spectral Armor, Gladiator''s
     Shield, Damaru, Lernaean Bow, Arondight, Erosion, Leviathan''s Hide, Eye of the
-    Storm, Eye of Providence, Yogi''s Necklace, Midgardian Mail, Shield Splitter,
-    Shogun''s Ofuda.'
+    Storm, Eye of Providence, Yogi''s Necklace, Midgardian Mail, Dominance, Shogun''s
+    Ofuda.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -472,8 +472,8 @@ builds:
     Underrated for this god: The Crusher, Amanita Charm, Golden Blade, Jotunn''s Revenge,
     Runeforged Hammer, Genji''s Guard, Pharaoh''s Curse, Damaru, Lernaean Bow, Oni
     Hunter''s Garb, Hydra''s Lament, Eye of the Storm, Shogun''s Ofuda, Breastplate
-    of Valor, Shield of the Phoenix, Shield Splitter, Spectral Armor, Freya''s Tears,
-    Avenging Blade, Tyrfing, Erosion, Eye of Providence, Leviathan''s Hide, Dominance,
+    of Valor, Dominance, Shield of the Phoenix, Shield Splitter, Spectral Armor, Freya''s
+    Tears, Avenging Blade, Tyrfing, Erosion, Eye of Providence, Leviathan''s Hide,
     Draconic Scale, Midgardian Mail, Tekko-Kagi.'
   slot_scores:
     Golden Blade:

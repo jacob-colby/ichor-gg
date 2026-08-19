@@ -120,8 +120,8 @@ builds:
     of Valor, Kinetic Cuirass, Amanita Charm, Soul Gem, Freya''s Tears, Nimble Ring,
     Shield of the Phoenix, Oni Hunter''s Garb, The Cosmic Horror, Spear of the Magus,
     Erosion, Eye of Providence, Spectral Armor, Helm of Radiance, Draconic Scale,
-    Rod of Asclepius, Chronos'' Pendant, Leviathan''s Hide, Jade Scepter, Midgardian
-    Mail, Screeching Gargoyle, Mantle Of Discord, Stone of Binding.'
+    Ethereal Staff, Rod of Asclepius, Chronos'' Pendant, Leviathan''s Hide, Jade Scepter,
+    Midgardian Mail, Screeching Gargoyle, Mantle Of Discord.'
   slot_scores:
     Breastplate of Valor:
       total: 0.53
@@ -154,11 +154,11 @@ builds:
       pick: 0.17
       fit: 0.37
     Obsidian Shard:
-      total: 0.55
+      total: 0.57
       efficiency: 0.52
       win: 0.69
       pick: 0.13
-      fit: 0.37
+      fit: 0.47
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -191,9 +191,9 @@ builds:
     Shard, Gluttonous Grimoire, Breastplate of Valor, Shifter''s Shield, Kinetic Cuirass,
     Soul Gem, Amanita Charm, Nimble Ring, Oni Hunter''s Garb, Freya''s Tears, Death
     Metal, The Cosmic Horror, Spear of the Magus, Shield of the Phoenix, Helm of Radiance,
-    Spectral Armor, Rod of Asclepius, Erosion, Chronos'' Pendant, Eye of Providence,
-    Jade Scepter, Draconic Scale, Yogi''s Necklace, Triton''s Conch, Leviathan''s
-    Hide, Bancroft''s Talon.'
+    Ethereal Staff, Spectral Armor, Rod of Asclepius, Erosion, Chronos'' Pendant,
+    Eye of Providence, Jade Scepter, Draconic Scale, Yogi''s Necklace, Triton''s Conch,
+    Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.52
@@ -226,11 +226,11 @@ builds:
       pick: 0.17
       fit: 0.37
     Obsidian Shard:
-      total: 0.54
+      total: 0.56
       efficiency: 0.52
       win: 0.69
       pick: 0.13
-      fit: 0.31
+      fit: 0.41
   starter: *id001
 - source: suggested
   archetype: burst
@@ -262,8 +262,8 @@ builds:
     Soul Gem, Kinetic Cuirass, Amanita Charm, Freya''s Tears, Nimble Ring, The Cosmic
     Horror, Shield of the Phoenix, Spear of the Magus, Oni Hunter''s Garb, Spectral
     Armor, Death Metal, Erosion, Helm of Radiance, Chronos'' Pendant, Eye of Providence,
-    Rod of Asclepius, Draconic Scale, Screeching Gargoyle, Leviathan''s Hide, Midgardian
-    Mail, Chandra''s Grace, Jade Scepter.'
+    Ethereal Staff, Rod of Asclepius, Draconic Scale, Screeching Gargoyle, Leviathan''s
+    Hide, Midgardian Mail, Totem of Death.'
   slot_scores:
     Breastplate of Valor:
       total: 0.53
@@ -296,11 +296,11 @@ builds:
       pick: 0.17
       fit: 0.35
     Obsidian Shard:
-      total: 0.55
+      total: 0.57
       efficiency: 0.52
       win: 0.69
       pick: 0.13
-      fit: 0.35
+      fit: 0.45
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -328,12 +328,12 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Soul Gem, Gluttonous Grimoire, Shifter''s Shield, Shield
-    of the Phoenix, Breastplate of Valor, Kinetic Cuirass, Rod of Asclepius, Chandra''s
-    Grace, Freya''s Tears, Nimble Ring, Blood-Bound Book, Oni Hunter''s Garb, Bancroft''s
-    Talon, The Cosmic Horror, Spear of the Magus, Phoenix Feather, Erosion, Spectral
-    Armor, Eye of Providence, Draconic Scale, Helm of Radiance, Jade Scepter, Chronos''
-    Pendant, Leviathan''s Hide, Lifebinder.'
+    this god: Amanita Charm, Obsidian Shard, Soul Gem, Gluttonous Grimoire, Shifter''s
+    Shield, Shield of the Phoenix, Breastplate of Valor, Ethereal Staff, Kinetic Cuirass,
+    Rod of Asclepius, Chandra''s Grace, Yogi''s Necklace, Freya''s Tears, Nimble Ring,
+    Blood-Bound Book, Oni Hunter''s Garb, Bancroft''s Talon, The Cosmic Horror, Spear
+    of the Magus, Phoenix Feather, Erosion, Spectral Armor, Eye of Providence, Draconic
+    Scale, Helm of Radiance, Lifebinder.'
   slot_scores:
     Shifter's Shield:
       total: 0.55
@@ -354,11 +354,11 @@ builds:
       pick: 0.17
       fit: 0.37
     Obsidian Shard:
-      total: 0.55
+      total: 0.57
       efficiency: 0.52
       win: 0.69
       pick: 0.13
-      fit: 0.37
+      fit: 0.47
     Amanita Charm:
       total: 0.57
       efficiency: 0.63
@@ -402,8 +402,8 @@ builds:
     Breastplate of Valor, Kinetic Cuirass, Amanita Charm, The Cosmic Horror, Spear
     of the Magus, Screeching Gargoyle, Stone of Binding, Freya''s Tears, Nimble Ring,
     Void Shield, Shield of the Phoenix, Oni Hunter''s Garb, Void Stone, Spectral Armor,
-    Erosion, Helm of Radiance, Eye of Providence, Rod of Asclepius, Draconic Scale,
-    Doom Orb, Chronos'' Pendant, The World Stone.'
+    Erosion, Helm of Radiance, Eye of Providence, Ethereal Staff, Rod of Asclepius,
+    Draconic Scale, Doom Orb, Chronos'' Pendant.'
   slot_scores:
     Breastplate of Valor:
       total: 0.52
@@ -436,11 +436,11 @@ builds:
       pick: 0.17
       fit: 0.48
     Obsidian Shard:
-      total: 0.57
+      total: 0.59
       efficiency: 0.52
       win: 0.69
       pick: 0.13
-      fit: 0.48
+      fit: 0.58
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -468,12 +468,12 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Nimble Ring, Shifter''s Shield, Breastplate of
-    Valor, Soul Gem, Kinetic Cuirass, Amanita Charm, Freya''s Tears, Oni Hunter''s
-    Garb, Shield of the Phoenix, The Cosmic Horror, Spear of the Magus, Spectral Armor,
-    Death Metal, Helm of Radiance, Erosion, Rod of Asclepius, Eye of Providence, Chronos''
-    Pendant, Bracer of The Abyss, Leviathan''s Hide, Blood-Bound Book, Draconic Scale,
-    Midgardian Mail, Bragi''s Harp, Jade Scepter.'
+    this god: Obsidian Shard, Gluttonous Grimoire, Nimble Ring, Shifter''s Shield,
+    Breastplate of Valor, Soul Gem, Kinetic Cuirass, Amanita Charm, Freya''s Tears,
+    Oni Hunter''s Garb, Shield of the Phoenix, The Cosmic Horror, Spear of the Magus,
+    Spectral Armor, Death Metal, Helm of Radiance, Erosion, Ethereal Staff, Rod of
+    Asclepius, Eye of Providence, Chronos'' Pendant, Bracer of The Abyss, Leviathan''s
+    Hide, Blood-Bound Book, Draconic Scale, Midgardian Mail.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.45
@@ -506,11 +506,11 @@ builds:
       pick: 0.17
       fit: 0.22
     Obsidian Shard:
-      total: 0.53
+      total: 0.55
       efficiency: 0.52
       win: 0.69
       pick: 0.13
-      fit: 0.22
+      fit: 0.32
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -522,7 +522,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Obsidian Shard
+  - Shifter's Shield
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
@@ -538,13 +538,12 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Breastplate of Valor, Shifter''s Shield,
-    Soul Gem, Freya''s Tears, Gluttonous Grimoire, Shield of the Phoenix, Kinetic
-    Cuirass, Amanita Charm, Nimble Ring, Oni Hunter''s Garb, Screeching Gargoyle,
-    Chronos'' Pendant, Chandra''s Grace, Gladiator''s Shield, Spectral Armor, Erosion,
-    The Cosmic Horror, Eye of Providence, Spear of the Magus, Prophetic Cloak, Draconic
-    Scale, Gem of Focus, Leviathan''s Hide, Helm of Radiance, Midgardian Mail, Totem
-    of Death.'
+    + fit + win/pick). Underrated for this god: Breastplate of Valor, Obsidian Shard,
+    Shifter''s Shield, Soul Gem, Freya''s Tears, Gluttonous Grimoire, Shield of the
+    Phoenix, Kinetic Cuirass, Amanita Charm, Nimble Ring, Oni Hunter''s Garb, Screeching
+    Gargoyle, Chronos'' Pendant, Chandra''s Grace, Gladiator''s Shield, Spectral Armor,
+    Erosion, Totem of Death, The Cosmic Horror, Eye of Providence, Spear of the Magus,
+    Prophetic Cloak, Draconic Scale, Gem of Focus, Leviathan''s Hide, Helm of Radiance.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -577,11 +576,11 @@ builds:
       pick: 0.17
       fit: 0.23
     Obsidian Shard:
-      total: 0.53
+      total: 0.55
       efficiency: 0.52
       win: 0.69
       pick: 0.13
-      fit: 0.23
+      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: model
@@ -612,9 +611,9 @@ builds:
     Underrated for this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm,
     Soul Gem, Freya''s Tears, Nimble Ring, Breastplate of Valor, Shield of the Phoenix,
     Oni Hunter''s Garb, The Cosmic Horror, Spear of the Magus, Erosion, Shifter''s
-    Shield, Eye of Providence, Spectral Armor, Helm of Radiance, Draconic Scale, Rod
-    of Asclepius, Chronos'' Pendant, Leviathan''s Hide, Obsidian Shard, Jade Scepter,
-    Midgardian Mail, Screeching Gargoyle, Mantle Of Discord, Stone of Binding.'
+    Shield, Obsidian Shard, Eye of Providence, Spectral Armor, Helm of Radiance, Draconic
+    Scale, Ethereal Staff, Rod of Asclepius, Chronos'' Pendant, Leviathan''s Hide,
+    Jade Scepter, Midgardian Mail, Screeching Gargoyle, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
       total: 0.53

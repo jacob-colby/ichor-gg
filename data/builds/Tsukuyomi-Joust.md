@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Silverbranch Bow
   - Tekko-Kagi
   - The Crusher
+  - Heartseeker
   - Soul Gem
   flex_slots:
+  - Heartseeker
   - Tekko-Kagi
-  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -305,12 +305,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Silverbranch Bow:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Tekko-Kagi:
       total: 0.55
       efficiency: 0.44
@@ -323,6 +317,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Heartseeker:
+      total: 0.59
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Soul Gem:
       total: 0.78
       efficiency: 0.57

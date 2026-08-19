@@ -7,24 +7,24 @@ builds:
   archetype: core
   slot_order:
   - Tyrfing
+  - Dominance
   - The Reaper
   - Riptalon
   - Damaru
   - Demon Blade
-  - Pharaoh's Curse
   flex_slots:
+  - The Reaper
   - Tyrfing
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -34,6 +34,12 @@ builds:
     Tyrfing:
       total: 0.55
       efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Dominance:
+      total: 0.56
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -61,12 +67,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Pharaoh's Curse:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -117,11 +117,11 @@ builds:
       pick: 0.0
       fit: 0.42
     Dominance:
-      total: 0.44
+      total: 0.49
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.5
     The Reaper:
       total: 0.56
       efficiency: 0.52
@@ -139,13 +139,13 @@ builds:
   archetype: crit
   slot_order:
   - Tyrfing
+  - Dominance
   - Riptalon
   - Damaru
   - Demon Blade
   - Deathbringer
-  - Pharaoh's Curse
   flex_slots:
-  - Pharaoh's Curse
+  - Tyrfing
   - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -166,6 +166,12 @@ builds:
     Tyrfing:
       total: 0.53
       efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Dominance:
+      total: 0.54
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -193,12 +199,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Pharaoh's Curse:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
   - Riptalon
   - Silverbranch Bow
   - The Crusher
+  - Heartseeker
   flex_slots:
+  - Heartseeker
   - Silverbranch Bow
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -285,8 +285,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -305,12 +305,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Void Shield:
-      total: 0.53
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Riptalon:
       total: 0.71
       efficiency: 0.53
@@ -329,26 +323,32 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Heartseeker:
+      total: 0.54
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Toxic Blade
   - Tyrfing
+  - Qin's Blade
   - Riptalon
   - Demon Blade
   - Amanita Charm
-  - Pharaoh's Curse
   flex_slots:
   - Demon Blade
-  - Pharaoh's Curse
+  - Qin's Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -370,6 +370,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Qin's Blade:
+      total: 0.52
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Riptalon:
       total: 0.69
       efficiency: 0.53
@@ -388,12 +394,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Pharaoh's Curse:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -594,24 +594,24 @@ builds:
   archetype: model
   slot_order:
   - Tyrfing
+  - Dominance
   - The Reaper
   - Riptalon
   - Damaru
   - Demon Blade
-  - Pharaoh's Curse
   flex_slots:
+  - The Reaper
   - Tyrfing
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -621,6 +621,12 @@ builds:
     Tyrfing:
       total: 0.55
       efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Dominance:
+      total: 0.56
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -648,11 +654,5 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Pharaoh's Curse:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
   starter: *id001
 ---

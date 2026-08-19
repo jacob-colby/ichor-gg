@@ -13,8 +13,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
+  - Pendulum Blade
   - Hydra's Lament
-  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -62,11 +62,11 @@ builds:
       pick: 0.0
       fit: 0.77
     Heartseeker:
-      total: 0.59
+      total: 0.64
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.87
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -129,24 +129,24 @@ builds:
       pick: 0.0
       fit: 0.53
     Heartseeker:
-      total: 0.52
+      total: 0.57
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.72
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
+  - Heartseeker
   flex_slots:
+  - Pendulum Blade
   - Toxic Blade
-  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -175,12 +175,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Hydra's Lament:
-      total: 0.53
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     The Reaper:
       total: 0.64
       efficiency: 0.52
@@ -199,6 +193,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Heartseeker:
+      total: 0.56
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - Pendulum Blade
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
-  - Toxic Blade
-  - Heartseeker
+  - Titan's Bane
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -288,17 +288,11 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.65
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.86
     Jotunn's Revenge:
       total: 0.76
       efficiency: 0.64
@@ -324,8 +318,14 @@ builds:
       pick: 0.0
       fit: 0.87
     Heartseeker:
-      total: 0.64
+      total: 0.69
       efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.97
+    Titan's Bane:
+      total: 0.66
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -470,8 +470,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
+  - Pendulum Blade
   - Hydra's Lament
-  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -519,10 +519,10 @@ builds:
       pick: 0.0
       fit: 0.77
     Heartseeker:
-      total: 0.59
+      total: 0.64
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.87
   starter: *id001
 ---
