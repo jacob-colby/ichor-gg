@@ -9,6 +9,33 @@ const TANK = ["Tank"];
 const hasSpec = (g: God | undefined, list: string[]) =>
   !!g && (g.specializations ?? []).some((s) => list.includes(s));
 
+/* The role label and the measured kit are two independent, complementary
+ * pieces of evidence, so a threat is the UNION of them rather than a choice
+ * between them.
+ *
+ * Neither alone works. The label is precise and badly incomplete: `Healing` is
+ * on 9 of 89 gods, while Chaac, Kali, Sun Wukong, Hercules and Thanatos all
+ * heal off their kit without it — exactly the gap STATE.md §5 recorded as "a
+ * god who is situationally a healer without the Healing label is not counted".
+ * The measurement alone is worse in the other direction: counting any god with
+ * one healing ability catches all 9 labelled healers and adds 33 more, most of
+ * them incidental (a small heal on a leap is not a healing comp).
+ *
+ * At a threshold of two healing abilities the count catches only 4 of the 9 —
+ * it misses Aphrodite, whose single heal is her entire identity. So: label OR
+ * two-plus abilities. 18 of 89 gods, against 9 before.
+ *
+ * Same shape for lockdown, where the labels were already broad (40 gods) and
+ * three-plus hard-CC abilities adds 8 more the labels missed. */
+const HEAL_ABILITIES = 2;
+const CC_ABILITIES = 3;
+
+const healsHard = (g: God | undefined) =>
+  hasSpec(g, HEAL) || (g?.threat_kit?.heal ?? 0) >= HEAL_ABILITIES;
+const locksDown = (g: God | undefined) =>
+  hasSpec(g, LOCK) || (g?.threat_kit?.hard_cc ?? 0) >= CC_ABILITIES;
+const makesWalls = (g: God | undefined) => (g?.threat_kit?.wall ?? 0) > 0;
+
 /** Comps -> a graded threat model. `allyCores` maps an ally god name to the
  *  effect_tags its own suggested core brings (what that teammate likely covers). */
 export function deriveThreats(
@@ -25,8 +52,9 @@ export function deriveThreats(
   return {
     magical: enemies.filter((g) => g.damage_type === "magical").length,
     physical: enemies.filter((g) => g.damage_type === "physical").length,
-    healers: enemies.filter((g) => hasSpec(g, HEAL)).length,
-    lockdown: enemies.filter((g) => hasSpec(g, LOCK)).length,
+    healers: enemies.filter(healsHard).length,
+    lockdown: enemies.filter(locksDown).length,
+    walls: enemies.filter(makesWalls).length,
     crit: enemies.filter((g) => hasSpec(g, CRIT)).length,
     tanks: enemies.filter((g) => hasSpec(g, TANK)).length,
     enemyCount: enemies.length,
@@ -43,7 +71,7 @@ export function deriveThreats(
   };
 }
 
-export type ThreatKey = "magical" | "physical" | "healers" | "lockdown" | "crit" | "tanks";
+export type ThreatKey = "magical" | "physical" | "healers" | "lockdown" | "crit" | "tanks" | "walls";
 
 /** Which enemies actually triggered each threat. A chip reading "2/5 healers"
  * says nothing actionable; "healers 2/5 · Aphrodite, Hel" names the reason the
@@ -57,8 +85,9 @@ export function threatCulprits(
   return {
     magical: named((g) => g.damage_type === "magical"),
     physical: named((g) => g.damage_type === "physical"),
-    healers: named((g) => hasSpec(g, HEAL)),
-    lockdown: named((g) => hasSpec(g, LOCK)),
+    healers: named(healsHard),
+    lockdown: named(locksDown),
+    walls: named(makesWalls),
     crit: named((g) => hasSpec(g, CRIT)),
     tanks: named((g) => hasSpec(g, TANK)),
   };
@@ -71,7 +100,7 @@ export function threatOverlay(t: ThreatModel, cfg: DraftConfig): Overlay {
   const stats: Record<string, number> = {};
   const counts: Record<string, number> = {
     healers: t.healers, lockdown: t.lockdown, crit: t.crit, tanks: t.tanks,
-    magical: t.magical, physical: t.physical,
+    magical: t.magical, physical: t.physical, walls: t.walls,
   };
 
   // Share of the enemy *roster*, not of the enemies entered so far — 2 of 3

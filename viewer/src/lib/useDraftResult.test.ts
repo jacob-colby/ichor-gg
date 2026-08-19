@@ -287,3 +287,37 @@ describe("useDraftResult — openers fall back to Conquest, and say so", () => {
     expect(r.startersAreConquest).toBe(false);
   });
 });
+
+/* A comp can call for an item the build itself can never contain. Walls forced
+ * this: four gods create one, no role label describes it, and the only counter
+ * (Shell of Rebuke's passthrough field) is a RELIC — which `is_buildable`
+ * excludes from the six core slots because the game gives relics their own. A
+ * tag bonus aimed at it could never have done anything. */
+describe("useDraftResult — relics answer threats the six slots cannot", () => {
+  const waller = god("Waller", {
+    threat_kit: { hard_cc: 3, slow: 3, heal: 0, shield: 0, wall: 1 },
+  } as never);
+  const CFG = { ...DRAFT_CFG, relics: { walls: { item: "Shell of Rebuke", because: "walls" } } };
+  const at = (enemies: string[], cfg = CFG) => renderHook(() => useDraftResult(
+    comp(["TestGod", "", "", "", ""], enemies),
+    "conquest", [...GODS, waller], ITEMS, [], GOD_ITEM_SCORES, cfg,
+  )).result.current;
+
+  it("suggests the relic once a wall-maker is on the board", () => {
+    const r = at(["Waller", "", "", "", ""]);
+    expect(r.relicPicks.map((p) => p.item)).toEqual(["Shell of Rebuke"]);
+    expect(r.relicPicks[0].count).toBe(1);
+  });
+
+  it("suggests nothing when the threat is absent", () => {
+    expect(at(["", "", "", "", ""]).relicPicks).toEqual([]);
+  });
+
+  it("keeps the relic out of the six", () => {
+    expect(at(["Waller", "", "", "", ""]).result?.adapted.core).not.toContain("Shell of Rebuke");
+  });
+
+  it("suggests nothing on an index whose config has no relic table", () => {
+    expect(at(["Waller", "", "", "", ""], DRAFT_CFG).relicPicks).toEqual([]);
+  });
+});

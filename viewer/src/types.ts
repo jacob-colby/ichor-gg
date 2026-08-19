@@ -39,6 +39,10 @@ export interface God {
   source_url: string;
   last_verified: string;
   ability_order?: AbilityOrder;
+  /** Counts of what this god's kit does TO you, read off the ability text by
+   *  pipeline/smite/threat_kit.py. Optional: an index built before it shipped
+   *  simply falls back to the role labels. */
+  threat_kit?: { hard_cc: number; slow: number; heal: number; shield: number; wall: number };
 }
 
 export interface Item {
@@ -257,6 +261,11 @@ export interface ThreatModel {
   lockdown: number;
   crit: number;
   tanks: number;
+  /** Enemies whose kit CREATES a wall (Cabrakan, Odin, Thor, Ymir). No wiki
+   *  label describes this, so it exists only because `threat_kit` reads the
+   *  ability text; and it is answered by one specific relic rather than by a
+   *  stat, so it does not drive the core overlay. */
+  walls: number;
   enemyCount: number; // enemies actually entered so far
   /** Slots on the enemy team for this mode (Conquest 5, Joust 3) — the honest
    * denominator. Dividing by `enemyCount` made one known healer a 100% threat
@@ -284,6 +293,10 @@ export interface DraftConfig {
   per_share: number;
   tag_bonus: Record<string, Record<string, number>>;
   stat_bonus: Record<string, Record<string, number>>;
+  /** Threat -> the relic that answers it. Separate from `tag_bonus` because a
+   *  relic does not compete for one of the six core slots — the game gives it
+   *  its own — so there is no displacement to compute and no bonus to clamp. */
+  relics?: Record<string, { item: string; because: string }>;
   ally_covered: number;
   ally_gap: number;
   /** Fraction of a draft bonus that survives when the core already covers the

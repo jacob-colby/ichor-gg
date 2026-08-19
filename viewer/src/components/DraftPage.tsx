@@ -29,6 +29,7 @@ const THREAT_DEFS: { key: ThreatKey; label: string; answer: string }[] = [
   { key: "lockdown", label: "crowd control", answer: "cc-immunity, peel" },
   { key: "crit", label: "crit", answer: "anti-crit" },
   { key: "tanks", label: "tanks", answer: "penetration, shred" },
+  { key: "walls", label: "player-made walls", answer: "Shell of Rebuke" },
 ];
 
 const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust" };
@@ -109,7 +110,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
   const {
     meName, itemsByName, taken, takenFor, enemiesKnown, roster, threatCulprits: culprits,
     allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, coreSize, starters,
-    startersAreConquest,
+    startersAreConquest, relicPicks,
   } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
   const copyLink = () => {
@@ -307,6 +308,31 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                 })}
               </ul>
             </div>
+
+            {/* A relic does not take one of the six, so it cannot be a row in
+                the build and cannot be reached by the tag overlay — it needs
+                its own line or it cannot be recommended at all. */}
+            {relicPicks.length > 0 && (
+              <div data-testid="draft-relics" className="mt-3 border-t border-line pt-3">
+                <div className="flex flex-wrap items-baseline gap-x-2">
+                  <span className="text-label text-faint">Relic</span>
+                  <span className="text-label text-muted">· its own slot, not one of the six</span>
+                </div>
+                <ul className="mt-1.5 flex flex-col gap-1">
+                  {relicPicks.map((r) => (
+                    <li key={r.item}>
+                      <a href={toHash.item(r.item)}
+                        aria-label={`${r.item} — ${r.because}, against ${r.count} enemies`}
+                        className="press flex items-center gap-2 rounded-md border border-line bg-bg2 py-1 pl-1 pr-2.5 transition-colors duration-150 ease-standard hover:border-line-strong">
+                        <Icon name={r.item} item className="h-7 w-7" />
+                        <span className="min-w-0 flex-1 truncate text-small text-ink">{r.item}</span>
+                        <span className="truncate text-label text-faint">{r.because}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="mt-5" data-testid="draft-changed">
               <h3 className={eyebrow}>What changed</h3>

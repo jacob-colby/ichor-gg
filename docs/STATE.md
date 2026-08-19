@@ -94,6 +94,8 @@ Each of these has its evidence in the named module.
 | Stance gods' abilities live in a **tab wrapper** | `wiki_parser._section_tables` | Ullr, Artio and Merlin reported `n_scaling_abilities: 0` — 28 ability tables the parser walked straight past |
 | Eye of Providence carries a **`ward-economy`** penalty | `data/_tags.yaml` | Its stat discount is the ward engine's price tag; 16 Support/Solo cores against 1 community sighting |
 | `god_item_scores` ships **one table per mode** | `build_index._god_item_scores` | A mode toggle that changes the label and not the model is worse than none; Eye of Providence sat in Joust cores because the draft was Conquest-scored |
+| A threat is the **union** of role label and measured kit | `threats.ts`, `threat_kit.py` | Label alone: `Healing` on 9 of 89 gods. Measurement alone at 1 ability: 42, mostly incidental. Label OR 2+ abilities: 18 |
+| Relics are recommended on **their own line**, never in the core | `draft.relics` in `_weights.yaml` | `is_buildable` excludes relics from the six because the game gives them their own slot — a tag bonus aimed at one could never fire |
 
 ### The combat model is exact and should stay that way
 
@@ -246,8 +248,13 @@ is the largest single unexamined number in the model.
   gold model reads them as poor value — Transcendence ranks 25th of 40 for
   Ullr while being his community build's first item. The mirror of the
   `ward-economy` case and the one open expert claim with a clear cause.
-- **Threat detection reads wiki ability tags.** A god who is situationally a
-  healer without the `Healing` label is not counted.
+- ~~**Threat detection reads wiki ability tags.**~~ — fixed 2026-08-19.
+  `threat_kit.py` classifies the scraped ability text instead, and the draft
+  now grades a comp on the union of label and measurement: healers 9 → 18 gods,
+  lockdown 40 → 48, and **player-made walls** exist as a threat class at all
+  (Cabrakan, Odin, Thor, Ymir — no wiki label describes it). The counts say a
+  kit *contains* an effect, not how often it lands or how long it lasts; that
+  is the honest ceiling on text classification.
 
 ---
 
@@ -331,7 +338,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (596) ·
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
-| Tests | 600 pipeline · 619 viewer |
+| Tests | 609 pipeline · 628 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

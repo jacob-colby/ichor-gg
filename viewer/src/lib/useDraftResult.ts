@@ -69,6 +69,10 @@ export interface DraftResult {
   /** True when `starters` came from Conquest because the selected mode has no
    *  community data of its own. The row has to say so — see `starters`. */
   startersAreConquest: boolean;
+  /** Relics this comp calls for. Not part of the core: `is_buildable` excludes
+   *  relics from the six slots because the game gives them their own, so the
+   *  tag overlay could never have recommended one. */
+  relicPicks: { item: string; because: string; threat: string; count: number }[];
   /** Gods a given slot may not take: the ones already on THAT team, minus
    *  whoever currently occupies the slot being edited.
    *
@@ -147,6 +151,19 @@ export function useDraftResult(
   }, [draft.allies, builds, itemsByName, mode]);
 
   const threats = useMemo(() => deriveThreats(draft, godsByName, allyCores), [draft, godsByName, allyCores]);
+
+  /** A comp can call for a relic the build itself can never contain. Walls are
+   *  the case that forced this: four gods create one, no role label describes
+   *  it, and the only counter (Shell of Rebuke's passthrough field) is a relic.
+   *  Keyed off the same threat counts the core overlay uses, so the two can
+   *  never disagree about what the enemy is. */
+  const relicPicks = useMemo(() => {
+    const counts = threats as unknown as Record<string, number>;
+    return Object.entries(draftConfig?.relics ?? {})
+      .map(([threat, rec]) => ({ ...rec, threat, count: counts[threat] ?? 0 }))
+      .filter((r) => r.count > 0)
+      .sort((a, b) => b.count - a.count || a.item.localeCompare(b.item));
+  }, [draftConfig, threats]);
   const culprits = useMemo(() => threatCulprits(draft, godsByName), [draft, godsByName]);
 
   // Scored items for THIS mode. Conquest's table used to be the only one, so
@@ -187,6 +204,7 @@ export function useDraftResult(
 
   return {
     meName, meGod, godsByName, itemsByName, taken, takenFor, starters, startersAreConquest,
+    relicPicks,
     enemiesKnown: threats.enemyCount, roster: threats.rosterSize,
     threatCulprits: culprits,
     allyAllPhysical: threats.allyAllPhysical, allyCount: threats.allyCount, allyPhysical: threats.allyPhysical,

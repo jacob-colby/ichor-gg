@@ -8,7 +8,7 @@ from pathlib import Path
 
 import yaml
 
-from smite import (abilities, damage_value, efficiency, notes, recommend,
+from smite import (abilities, damage_value, efficiency, notes, recommend, threat_kit,
                    scoring, snapshots, tierlist)
 
 
@@ -34,6 +34,12 @@ def _enrich_gods(gods, weights):
         if order:
             god["ability_order"] = {"order": order,
                                     "summary": abilities.summary(order, weights)}
+        # What this god's kit does TO you, counted off the ability text. The
+        # draft used to grade a comp by `specializations` alone, which is a
+        # three-word summary of a whole kit: `Healing` is on 9 gods and 42
+        # actually heal, `Crowd Control` on 8 and 80 land hard CC, and nothing
+        # labels player-made walls at all. See threat_kit.py.
+        god["threat_kit"] = threat_kit.god_threat_kit(god)
     return gods
 
 

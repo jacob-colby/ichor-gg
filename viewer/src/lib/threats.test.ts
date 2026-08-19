@@ -12,7 +12,7 @@ const CFG = { max_bonus: 0.12, per_share: 0.1,
   ally_covered: -0.5, ally_gap: 0.5 };
 
 const EMPTY: import("../types").ThreatModel = {
-  magical: 0, physical: 0, healers: 0, lockdown: 0, crit: 0, tanks: 0,
+  magical: 0, physical: 0, healers: 0, lockdown: 0, crit: 0, tanks: 0, walls: 0,
   enemyCount: 0, rosterSize: 0, allyCovers: {}, allyAllPhysical: false,
   allyCount: 0, allyPhysical: 0,
 };
@@ -201,5 +201,50 @@ describe("damageOverlay", () => {
 
   it("is inert for a god with no shipped table", () => {
     expect(damageOverlay(model(3), undefined, cfg)).toEqual({});
+  });
+});
+
+/* The threat model graded a comp by `specializations` alone — a two-or-three
+ * word summary of a whole kit — so the draft was counter-building against the
+ * summary. STATE.md §5 carried the consequence as a known gap: "a god who is
+ * situationally a healer without the Healing label is not counted." */
+describe("deriveThreats — the measured kit, not just the role label", () => {
+  const withKit = (name: string, specs: string[], kit: Partial<God["threat_kit"]>): God =>
+    ({ ...god(name, "magical", specs),
+       threat_kit: { hard_cc: 0, slow: 0, heal: 0, shield: 0, wall: 0, ...kit } }) as God;
+
+  it("counts an unlabelled god who actually heals twice", () => {
+    // Chaac's real shape: heals off his kit, carries no Healing label.
+    const gods = { Chaac: withKit("Chaac", ["Warrior"], { heal: 2 }) };
+    expect(deriveThreats({ allies: [], enemies: ["Chaac"] }, gods, {}).healers).toBe(1);
+  });
+
+  it("does not count an incidental single heal", () => {
+    // At a threshold of one, all 9 labelled healers are caught and 33 more
+    // gods come with them — a small heal on a leap is not a healing comp.
+    const gods = { Kali: withKit("Kali", ["Assassin"], { heal: 1 }) };
+    expect(deriveThreats({ allies: [], enemies: ["Kali"] }, gods, {}).healers).toBe(0);
+  });
+
+  it("keeps a labelled healer whose kit shows only one heal", () => {
+    // Aphrodite: one healing ability, and it is her entire identity. The
+    // measurement alone misses her, which is why this is a union.
+    const gods = { Aphrodite: withKit("Aphrodite", ["Healing"], { heal: 1 }) };
+    expect(deriveThreats({ allies: [], enemies: ["Aphrodite"] }, gods, {}).healers).toBe(1);
+  });
+
+  it("counts wall-makers, which no role label describes at all", () => {
+    const gods = {
+      Ymir: withKit("Ymir", ["Tank"], { wall: 1 }),
+      Anubis: withKit("Anubis", ["Nuker"], { wall: 0 }),
+    };
+    const t = deriveThreats({ allies: [], enemies: ["Ymir", "Anubis"] }, gods, {});
+    expect(t.walls).toBe(1);
+  });
+
+  it("falls back to labels for an index built before threat_kit shipped", () => {
+    const gods = { Ra: god("Ra", "magical", ["Healing"]) };   // no threat_kit
+    expect(deriveThreats({ allies: [], enemies: ["Ra"] }, gods, {}).healers).toBe(1);
+    expect(deriveThreats({ allies: [], enemies: ["Ra"] }, gods, {}).walls).toBe(0);
   });
 });

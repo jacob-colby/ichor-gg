@@ -376,6 +376,22 @@ draft:
     lockdown: {cc-immunity: 1.0, peel: 0.4}
     crit: {anti-crit: 1.0}
     tanks: {protection-shred: 1.0}
+    # NOTE there is deliberately no `walls` entry here. A player-made wall is
+    # answered by Shell of Rebuke, which is a RELIC — `scoring.is_buildable`
+    # excludes relics from the six core slots because the game gives them
+    # their own slot, so a tag bonus aimed at it could never do anything. It
+    # is recommended through `draft.relics` instead.
+  # Threat -> relic, for answers that live in the relic slot rather than in
+  # the build. Separate from tag_bonus for a structural reason, not a
+  # stylistic one: nothing here competes with the six core items, so there is
+  # no displacement to compute and no bonus to clamp — it is a straight
+  # "this comp calls for this relic" lookup.
+  relics:
+    walls:
+      item: Shell of Rebuke
+      # Its field grants player and player-made wall passthrough for its
+      # duration, which is the only counter in the game to being boxed in.
+      because: walks your team out of their walls
   stat_bonus:            # threat -> item stat
     magical: {Magical Protection: 1.0}
     physical: {Physical Protection: 1.0}

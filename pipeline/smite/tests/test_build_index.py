@@ -24,7 +24,14 @@ def test_build_index_collects_gods_items_builds(tmp_path):
     # Gods gain a derived ability_order (see abilities.py) only when their kit
     # has levelable abilities. This note has no `abilities` key at all, so the
     # key is absent rather than a fabricated order of empty slots.
-    assert index["gods"] == [{"type": "smite-god", "name": "Chiron"}]
+    #
+    # `threat_kit` IS always present, including for a god with no abilities:
+    # all-zero counts are a measurement ("this kit does none of these") and a
+    # missing key would read as "not measured". See threat_kit.py.
+    assert index["gods"] == [{
+        "type": "smite-god", "name": "Chiron",
+        "threat_kit": {"hard_cc": 0, "slow": 0, "heal": 0, "shield": 0, "wall": 0},
+    }]
     # Items are enriched with god-agnostic effect_tags + the efficiency verdict;
     # this note has no cost so it can't be scored (tier None, efficiency None —
     # never a fabricated zero) and has no tags entry ([]).
