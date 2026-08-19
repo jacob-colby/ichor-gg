@@ -2,11 +2,11 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Titan's Bane | 0.62 | 0.59 | 0.45 | 0.69 | 0.32 | 0.91 | fair |  |  |
-| Jotunn's Revenge | 0.60 | 0.75 | 0.64 | 0.44 | 0.61 | 1.00 | undervalued |  |  |
-| The Crusher | 0.60 | 0.75 | 0.64 | 0.48 | 0.20 | 1.00 | undervalued | burst |  |
-| Heartseeker | 0.55 | 0.59 | 0.41 | 0.51 | 0.57 | 1.00 | premium | burst |  |
-| The Reaper | 0.55 | 0.64 | 0.52 | 0.48 | 0.22 | 0.91 | fair | sustain |  |
+| Jotunn's Revenge | 0.61 | 0.75 | 0.64 | 0.45 | 0.60 | 1.00 | undervalued |  |  |
+| Titan's Bane | 0.60 | 0.59 | 0.45 | 0.65 | 0.37 | 0.91 | fair |  |  |
+| The Crusher | 0.60 | 0.75 | 0.64 | 0.48 | 0.22 | 1.00 | undervalued | burst |  |
+| Heartseeker | 0.55 | 0.59 | 0.41 | 0.49 | 0.60 | 1.00 | premium | burst |  |
+| The Reaper | 0.54 | 0.64 | 0.52 | 0.48 | 0.20 | 0.91 | fair | sustain |  |
 | Hydra's Lament | 0.54 | 0.60 | 0.56 | 0.46 | 0.61 | 0.71 | fair | burst |  |
 | Pendulum Blade | 0.51 | 0.59 | 0.41 | 0.48 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Tekko-Kagi | 0.51 | 0.58 | 0.44 | 0.48 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
@@ -14,7 +14,7 @@
 | Damaru | 0.49 | 0.55 | 0.57 | 0.48 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Lernaean Bow | 0.48 | 0.54 | 0.50 | 0.48 | 0.00 | 0.62 | fair | wave-clear, burst | **UNDERRATED** |
 | Avatar's Parashu | 0.48 | 0.53 | 0.37 | 0.48 | 0.00 | 0.91 | premium | cc-immunity | **UNDERRATED** |
-| Transcendence | 0.48 | 0.52 | 0.52 | 0.47 | 0.19 | 0.52 | fair |  |  |
+| Transcendence | 0.48 | 0.52 | 0.52 | 0.47 | 0.18 | 0.52 | fair |  |  |
 | Golden Blade | 0.48 | 0.53 | 0.53 | 0.48 | 0.00 | 0.52 | fair | wave-clear | **UNDERRATED** |
 | Avenging Blade | 0.48 | 0.52 | 0.48 | 0.48 | 0.00 | 0.62 | fair | protection-shred | **UNDERRATED** |
 | Arondight | 0.47 | 0.51 | 0.47 | 0.48 | 0.00 | 0.61 | fair | mobility | **UNDERRATED** |

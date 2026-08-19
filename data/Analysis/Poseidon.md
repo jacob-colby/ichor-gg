@@ -2,40 +2,40 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Rod of Tahuti | 0.63 | 0.77 | 0.77 | 0.49 | 0.50 | 0.79 | undervalued |  |  |
-| Spear of Desolation | 0.61 | 0.67 | 0.52 | 0.56 | 0.58 | 1.00 | fair |  |  |
-| Gluttonous Grimoire | 0.60 | 0.71 | 0.63 | 0.54 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
+| Rod of Tahuti | 0.63 | 0.77 | 0.77 | 0.49 | 0.52 | 0.79 | undervalued |  |  |
+| Spear of Desolation | 0.61 | 0.67 | 0.52 | 0.56 | 0.59 | 1.00 | fair |  |  |
+| Gluttonous Grimoire | 0.59 | 0.71 | 0.63 | 0.54 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
 | Soul Gem | 0.59 | 0.70 | 0.57 | 0.54 | 0.00 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
-| Obsidian Shard | 0.57 | 0.60 | 0.52 | 0.56 | 0.41 | 0.79 | fair |  |  |
-| The Cosmic Horror | 0.57 | 0.64 | 0.58 | 0.54 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
+| Obsidian Shard | 0.59 | 0.60 | 0.52 | 0.59 | 0.41 | 0.79 | fair |  |  |
+| The Cosmic Horror | 0.56 | 0.64 | 0.58 | 0.54 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.56 | 0.64 | 0.57 | 0.54 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Nimble Ring | 0.56 | 0.60 | 0.68 | 0.53 | 0.34 | 0.42 | undervalued |  |  |
-| The World Stone | 0.54 | 0.56 | 0.46 | 0.55 | 0.35 | 0.79 | fair |  |  |
+| The World Stone | 0.55 | 0.56 | 0.46 | 0.56 | 0.35 | 0.79 | fair |  |  |
+| Nimble Ring | 0.55 | 0.60 | 0.68 | 0.51 | 0.34 | 0.42 | undervalued |  |  |
 | Doom Orb | 0.52 | 0.56 | 0.46 | 0.54 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
-| Genji's Guard | 0.52 | 0.55 | 0.69 | 0.54 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
-| Dreamer's Idol | 0.52 | 0.54 | 0.44 | 0.54 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
-| Chronos' Pendant | 0.51 | 0.57 | 0.55 | 0.50 | 0.07 | 0.63 | fair |  | **UNDERRATED** |
+| Genji's Guard | 0.51 | 0.55 | 0.69 | 0.54 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
+| Dreamer's Idol | 0.51 | 0.54 | 0.44 | 0.54 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
 | Gem of Focus | 0.51 | 0.53 | 0.49 | 0.54 | 0.00 | 0.63 | fair | mobility | **UNDERRATED** |
 | Totem of Death | 0.50 | 0.52 | 0.47 | 0.54 | 0.00 | 0.63 | fair |  | **UNDERRATED** |
+| Chronos' Pendant | 0.50 | 0.57 | 0.55 | 0.47 | 0.07 | 0.63 | fair |  | **UNDERRATED** |
 | Death Metal | 0.50 | 0.52 | 0.56 | 0.54 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Helm of Radiance | 0.50 | 0.51 | 0.55 | 0.54 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Blood-Bound Book | 0.50 | 0.51 | 0.55 | 0.54 | 0.00 | 0.42 | fair | sustain | **UNDERRATED** |
 | Rod of Asclepius | 0.50 | 0.51 | 0.55 | 0.54 | 0.00 | 0.42 | fair | sustain, aura | **UNDERRATED** |
-| Breastplate of Valor | 0.50 | 0.51 | 0.64 | 0.54 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
+| Breastplate of Valor | 0.49 | 0.51 | 0.64 | 0.54 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
 | Bancroft's Talon | 0.49 | 0.50 | 0.53 | 0.54 | 0.00 | 0.42 | fair | sustain | **UNDERRATED** |
 | Jade Scepter | 0.49 | 0.50 | 0.53 | 0.54 | 0.00 | 0.42 | fair | peel | **UNDERRATED** |
 | Bracer of The Abyss | 0.48 | 0.48 | 0.51 | 0.54 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Ethereal Staff | 0.48 | 0.48 | 0.51 | 0.54 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Alchemist Coat | 0.48 | 0.47 | 0.50 | 0.54 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.48 | 0.47 | 0.59 | 0.54 | 0.00 | 0.21 | fair |  | **UNDERRATED** |
-| Polynomicon | 0.48 | 0.47 | 0.44 | 0.54 | 0.00 | 0.52 | fair | burst |  |
+| Book of Thoth | 0.47 | 0.47 | 0.49 | 0.51 | 0.19 | 0.42 | fair |  |  |
+| Polynomicon | 0.47 | 0.47 | 0.44 | 0.54 | 0.00 | 0.52 | fair | burst |  |
 | Ancient Signet | 0.47 | 0.46 | 0.43 | 0.54 | 0.00 | 0.52 | fair | burst |  |
 | Shield of the Phoenix | 0.47 | 0.46 | 0.57 | 0.54 | 0.00 | 0.21 | fair | sustain |  |
-| Book of Thoth | 0.47 | 0.47 | 0.49 | 0.50 | 0.19 | 0.42 | fair |  |  |
 | Wish-Granting Pearl | 0.47 | 0.45 | 0.47 | 0.54 | 0.00 | 0.42 | fair |  |  |
 | Typhon’s Heart | 0.47 | 0.45 | 0.46 | 0.54 | 0.00 | 0.42 | fair |  |  |
-| Bragi's Harp | 0.47 | 0.45 | 0.42 | 0.54 | 0.00 | 0.52 | premium | burst |  |
-| Kinetic Cuirass | 0.47 | 0.44 | 0.59 | 0.54 | 0.00 | 0.10 | fair | burst |  |
+| Bragi's Harp | 0.46 | 0.45 | 0.42 | 0.54 | 0.00 | 0.52 | premium | burst |  |
+| Kinetic Cuirass | 0.46 | 0.44 | 0.59 | 0.54 | 0.00 | 0.10 | fair | burst |  |
 | Lifebinder | 0.46 | 0.44 | 0.45 | 0.54 | 0.00 | 0.42 | fair | sustain, aura |  |
 | Amanita Charm | 0.46 | 0.44 | 0.63 | 0.54 | 0.00 | 0.00 | undervalued | sustain, aura |  |
 | Divine Ruin | 0.46 | 0.44 | 0.40 | 0.54 | 0.00 | 0.52 | premium | anti-heal, burst |  |
@@ -46,13 +46,13 @@
 | Triton's Conch | 0.46 | 0.43 | 0.44 | 0.54 | 0.00 | 0.42 | fair | aura |  |
 | Oni Hunter's Garb | 0.46 | 0.43 | 0.61 | 0.54 | 0.00 | 0.00 | undervalued |  |  |
 | Helm of Darkness | 0.45 | 0.41 | 0.41 | 0.54 | 0.00 | 0.42 | premium | mobility |  |
-| Sphere of Negation | 0.45 | 0.41 | 0.40 | 0.54 | 0.00 | 0.42 | premium | sustain |  |
-| Spectral Armor | 0.45 | 0.41 | 0.58 | 0.54 | 0.00 | 0.00 | fair | anti-crit, aura |  |
+| Sphere of Negation | 0.44 | 0.41 | 0.40 | 0.54 | 0.00 | 0.42 | premium | sustain |  |
+| Spectral Armor | 0.44 | 0.41 | 0.58 | 0.54 | 0.00 | 0.00 | fair | anti-crit, aura |  |
 | Staff of Myrddin | 0.44 | 0.40 | 0.31 | 0.54 | 0.00 | 0.63 | premium |  |  |
 | Yogi's Necklace | 0.44 | 0.40 | 0.57 | 0.54 | 0.00 | 0.00 | fair |  |  |
 | Necronomicon | 0.44 | 0.40 | 0.39 | 0.54 | 0.00 | 0.42 | premium |  |  |
 | Gem of Isolation | 0.44 | 0.39 | 0.38 | 0.54 | 0.00 | 0.42 | premium | peel |  |
-| Scepter of Dominion | 0.44 | 0.39 | 0.37 | 0.54 | 0.00 | 0.42 | premium | peel |  |
+| Scepter of Dominion | 0.43 | 0.39 | 0.37 | 0.54 | 0.00 | 0.42 | premium | peel |  |
 | Gladiator's Shield | 0.43 | 0.38 | 0.41 | 0.54 | 0.00 | 0.31 | premium | burst |  |
 | Leviathan's Hide | 0.43 | 0.38 | 0.54 | 0.54 | 0.00 | 0.00 | fair |  |  |
 | Midgardian Mail | 0.43 | 0.38 | 0.54 | 0.54 | 0.00 | 0.00 | fair |  |  |
@@ -64,9 +64,9 @@
 | Ancile | 0.42 | 0.36 | 0.51 | 0.54 | 0.00 | 0.00 | fair |  |  |
 | Hide of the Nemean Lion | 0.42 | 0.35 | 0.50 | 0.54 | 0.00 | 0.00 | fair |  |  |
 | Void Shield | 0.42 | 0.35 | 0.46 | 0.54 | 0.00 | 0.10 | fair | protection-shred, aura |  |
-| Doublet of Binding | 0.42 | 0.35 | 0.50 | 0.54 | 0.00 | 0.00 | fair | aura |  |
-| Magi's Cloak | 0.42 | 0.35 | 0.50 | 0.54 | 0.00 | 0.00 | fair | cc-immunity |  |
-| Draconic Scale | 0.42 | 0.35 | 0.50 | 0.54 | 0.00 | 0.00 | fair |  |  |
+| Doublet of Binding | 0.41 | 0.35 | 0.50 | 0.54 | 0.00 | 0.00 | fair | aura |  |
+| Magi's Cloak | 0.41 | 0.35 | 0.50 | 0.54 | 0.00 | 0.00 | fair | cc-immunity |  |
+| Draconic Scale | 0.41 | 0.35 | 0.50 | 0.54 | 0.00 | 0.00 | fair |  |  |
 | Regrowth Striders | 0.41 | 0.34 | 0.40 | 0.54 | 0.00 | 0.21 | premium | mobility, sustain |  |
 | Stampede | 0.41 | 0.34 | 0.48 | 0.54 | 0.00 | 0.00 | fair | mobility, aura, cc-immunity |  |
 | Void Stone | 0.41 | 0.33 | 0.43 | 0.54 | 0.00 | 0.10 | fair | protection-shred, aura |  |
@@ -78,17 +78,17 @@
 | Mystical Mail | 0.40 | 0.31 | 0.44 | 0.54 | 0.00 | 0.00 | fair | aura, wave-clear |  |
 | Contagion | 0.39 | 0.30 | 0.39 | 0.54 | 0.00 | 0.10 | premium | anti-heal, burst |  |
 | Heartwood Charm | 0.39 | 0.29 | 0.33 | 0.54 | 0.00 | 0.21 | premium |  |  |
-| Stygian Anchor | 0.39 | 0.29 | 0.41 | 0.54 | 0.00 | 0.00 | premium | anti-heal |  |
-| Eye of Erebus | 0.39 | 0.29 | 0.32 | 0.54 | 0.00 | 0.21 | premium | ward-economy |  |
+| Stygian Anchor | 0.38 | 0.29 | 0.41 | 0.54 | 0.00 | 0.00 | premium | anti-heal |  |
+| Eye of Erebus | 0.38 | 0.29 | 0.32 | 0.54 | 0.00 | 0.21 | premium | ward-economy |  |
 | Shroud of Vengeance | 0.38 | 0.28 | 0.36 | 0.54 | 0.00 | 0.10 | premium | burst |  |
-| Hussar's Wings | 0.38 | 0.27 | 0.38 | 0.54 | 0.00 | 0.00 | premium | cc-immunity |  |
+| Hussar's Wings | 0.37 | 0.27 | 0.38 | 0.54 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Spirit Robe | 0.37 | 0.25 | 0.36 | 0.54 | 0.00 | 0.00 | premium | sustain |  |
 | Dwarven Plate | 0.36 | 0.24 | 0.35 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Radiant Bulwark | 0.35 | 0.22 | 0.32 | 0.54 | 0.00 | 0.00 | premium | aura |  |
 | Circe's Hexstone | 0.35 | 0.22 | 0.22 | 0.54 | 0.00 | 0.21 | premium | mobility, cc-immunity |  |
-| Resolute Mantle | 0.35 | 0.21 | 0.30 | 0.54 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
-| Omen Drum | 0.34 | 0.19 | 0.27 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Resolute Mantle | 0.34 | 0.21 | 0.30 | 0.54 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
+| Omen Drum | 0.33 | 0.19 | 0.27 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Gauntlet of Thebes | 0.33 | 0.18 | 0.26 | 0.54 | 0.00 | 0.00 | premium |  |  |
-| Brawler’s Beat Stick | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium | anti-heal |  |
-| Daybreak Gavel | 0.31 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Brawler’s Beat Stick | 0.30 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium | anti-heal |  |
+| Daybreak Gavel | 0.30 | 0.12 | 0.18 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Mercury's Talaria | 0.29 | 0.09 | 0.13 | 0.54 | 0.00 | 0.00 | premium |  |  |

@@ -5,45 +5,45 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Wild
-  aspect_pick_rate: 0.22
-  aspect_win_rate: 0.46
+  aspect_pick_rate: 0.2
+  aspect_win_rate: 0.45
   slot_order:
   - name: Tyrfing
     pick_rate: 0.65
-    win_rate: 0.62
+    win_rate: 0.61
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.08
-      win_rate: 0.5
+      win_rate: 0.52
     - name: Daybreak Gavel
       pick_rate: 0.08
-      win_rate: 0.42
+      win_rate: 0.4
   - name: Odysseus' Bow
-    pick_rate: 0.39
-    win_rate: 0.6
+    pick_rate: 0.38
+    win_rate: 0.59
     alternates:
     - name: Toxic Blade
       pick_rate: 0.11
       win_rate: 0.73
     - name: Dagger of Frenzy
       pick_rate: 0.08
-      win_rate: 0.5
+      win_rate: 0.55
   - name: Silverbranch Bow
     pick_rate: 0.19
     win_rate: 0.59
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.2
-      win_rate: 0.67
+      win_rate: 0.66
     - name: Hastened Fatalis
-      pick_rate: 0.12
+      pick_rate: 0.13
       win_rate: 0.6
   - name: Hastened Fatalis
     pick_rate: 0.17
-    win_rate: 0.61
+    win_rate: 0.6
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.24
+      pick_rate: 0.25
       win_rate: 0.6
     - name: The Executioner
       pick_rate: 0.14
@@ -53,40 +53,40 @@ builds:
     win_rate: 0.64
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.19
+      pick_rate: 0.18
       win_rate: 0.68
     - name: Riptalon
       pick_rate: 0.13
-      win_rate: 0.58
+      win_rate: 0.61
   - name: Manchu Bow
     pick_rate: 0.12
-    win_rate: 0.56
+    win_rate: 0.57
     alternates:
+    - name: Hunter's Bow
+      pick_rate: 0.09
+      win_rate: 0.63
     - name: The Executioner
       pick_rate: 0.08
-      win_rate: 0.62
-    - name: Hunter's Bow
-      pick_rate: 0.08
-      win_rate: 0.6
+      win_rate: 0.63
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.35
+    pick_rate: 0.34
     win_rate: 0.69
   - name: Leather Cowl
-    pick_rate: 0.18
+    pick_rate: 0.19
     win_rate: 0.49
   - name: Death's Embrace
     pick_rate: 0.17
     win_rate: 0.56
   source_url: https://smitebrain.com/gods/artemis/
-  last_verified: '2026-08-18'
-  god_win_rate: 0.5708333333333333
-  god_matches_won: 548
-  god_matches_played: 960
+  last_verified: '2026-08-19'
+  god_win_rate: 0.5679785330948122
+  god_matches_won: 635
+  god_matches_played: 1118
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-18'
-  god_matches_analyzed: 8839
+  god_window_end: '2026-08-19'
+  god_matches_analyzed: 10108
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
-  - Jotunn's Revenge
   - Tyrfing
+  - Riptalon
   - Damaru
   - The Crusher
   flex_slots:
+  - Berserker's Shield
   - Toxic Blade
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -135,18 +135,18 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.29
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.64
-      win: 0.59
-      pick: 0.0
-      fit: 0.3
     Tyrfing:
       total: 0.56
       efficiency: 0.46
-      win: 0.62
+      win: 0.61
       pick: 0.65
       fit: 0.6
+    Riptalon:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.61
+      pick: 0.28
+      fit: 0.46
     Damaru:
       total: 0.54
       efficiency: 0.57
@@ -213,9 +213,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Tyrfing:
-      total: 0.54
+      total: 0.53
       efficiency: 0.46
-      win: 0.62
+      win: 0.61
       pick: 0.65
       fit: 0.44
     Hydra's Lament:
@@ -234,8 +234,8 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Berserker's Shield
   - Tyrfing
+  - Riptalon
   - Damaru
   - Demon Blade
   - The Crusher
@@ -251,8 +251,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -264,18 +264,18 @@ builds:
     Eye of Providence, Rage, Oni Hunter''s Garb, Freya''s Tears, Transcendence, Avenging
     Blade.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.54
-      efficiency: 0.66
-      win: 0.59
-      pick: 0.0
-      fit: 0.27
     Tyrfing:
       total: 0.55
       efficiency: 0.46
-      win: 0.62
+      win: 0.61
       pick: 0.65
       fit: 0.55
+    Riptalon:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.61
+      pick: 0.28
+      fit: 0.44
     Damaru:
       total: 0.54
       efficiency: 0.57
@@ -307,12 +307,12 @@ builds:
   - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
-  - Shield of the Phoenix
-  - Tyrfing
+  - Riptalon
+  - The Crusher
   - Amanita Charm
   flex_slots:
   - Toxic Blade
-  - Tyrfing
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -321,8 +321,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -352,18 +352,18 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.47
-    Shield of the Phoenix:
-      total: 0.55
-      efficiency: 0.57
+    Riptalon:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.61
+      pick: 0.28
+      fit: 0.59
+    The Crusher:
+      total: 0.53
+      efficiency: 0.64
       win: 0.59
       pick: 0.0
-      fit: 0.58
-    Tyrfing:
-      total: 0.53
-      efficiency: 0.46
-      win: 0.62
-      pick: 0.65
-      fit: 0.42
+      fit: 0.26
     Amanita Charm:
       total: 0.59
       efficiency: 0.63
@@ -419,13 +419,13 @@ builds:
     Tyrfing:
       total: 0.54
       efficiency: 0.46
-      win: 0.62
+      win: 0.61
       pick: 0.65
       fit: 0.46
     Riptalon:
-      total: 0.55
+      total: 0.57
       efficiency: 0.53
-      win: 0.58
+      win: 0.61
       pick: 0.28
       fit: 0.61
     Silverbranch Bow:
@@ -492,15 +492,15 @@ builds:
       pick: 0.0
       fit: 0.27
     Tyrfing:
-      total: 0.58
+      total: 0.57
       efficiency: 0.46
-      win: 0.62
+      win: 0.61
       pick: 0.65
       fit: 0.7
     Riptalon:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
-      win: 0.58
+      win: 0.61
       pick: 0.28
       fit: 0.59
     Silverbranch Bow:
@@ -520,8 +520,8 @@ builds:
   - Tyrfing
   - Hydra's Lament
   flex_slots:
-  - Tyrfing
   - Berserker's Shield
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -570,7 +570,7 @@ builds:
     Tyrfing:
       total: 0.53
       efficiency: 0.46
-      win: 0.62
+      win: 0.61
       pick: 0.65
       fit: 0.39
     Hydra's Lament:
@@ -704,7 +704,7 @@ builds:
     Tyrfing:
       total: 0.56
       efficiency: 0.46
-      win: 0.62
+      win: 0.61
       pick: 0.65
       fit: 0.6
     Damaru:
@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Tyrfing
     removed: Golden Blade
-    reason: community 62% win over 624 matches (vs 57% on this god), taking the model's
+    reason: community 61% win over 727 matches (vs 57% on this god), taking the model's
       weakest slot from Golden Blade
   starter: *id001
 ---

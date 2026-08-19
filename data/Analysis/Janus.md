@@ -2,10 +2,10 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Rod of Tahuti | 0.66 | 0.77 | 0.77 | 0.55 | 0.63 | 0.78 | undervalued |  |  |
-| Soul Gem | 0.62 | 0.70 | 0.57 | 0.54 | 0.59 | 1.00 | fair | burst, sustain, aura |  |
-| Obsidian Shard | 0.62 | 0.60 | 0.52 | 0.64 | 0.67 | 0.78 | fair |  |  |
-| Dreamer's Idol | 0.60 | 0.54 | 0.44 | 0.71 | 0.28 | 0.78 | fair | cc-immunity |  |
+| Rod of Tahuti | 0.67 | 0.77 | 0.77 | 0.56 | 0.65 | 0.78 | undervalued |  |  |
+| Obsidian Shard | 0.62 | 0.60 | 0.52 | 0.65 | 0.67 | 0.78 | fair |  |  |
+| Soul Gem | 0.61 | 0.70 | 0.57 | 0.52 | 0.62 | 1.00 | fair | burst, sustain, aura |  |
+| Dreamer's Idol | 0.61 | 0.54 | 0.44 | 0.72 | 0.25 | 0.78 | fair | cc-immunity |  |
 | Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.54 | 0.47 | 1.00 | fair |  |  |
 | Gluttonous Grimoire | 0.60 | 0.70 | 0.63 | 0.54 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
 | The Cosmic Horror | 0.56 | 0.64 | 0.58 | 0.54 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
@@ -20,13 +20,13 @@
 | Helm of Radiance | 0.50 | 0.52 | 0.55 | 0.54 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Blood-Bound Book | 0.50 | 0.52 | 0.55 | 0.54 | 0.00 | 0.44 | fair | sustain | **UNDERRATED** |
 | Rod of Asclepius | 0.50 | 0.52 | 0.55 | 0.54 | 0.00 | 0.44 | fair | sustain, aura | **UNDERRATED** |
-| The World Stone | 0.50 | 0.55 | 0.46 | 0.48 | 0.14 | 0.78 | fair |  | **UNDERRATED** |
 | Breastplate of Valor | 0.50 | 0.51 | 0.64 | 0.54 | 0.00 | 0.22 | undervalued |  | **UNDERRATED** |
 | Bancroft's Talon | 0.50 | 0.50 | 0.53 | 0.54 | 0.00 | 0.44 | fair | sustain | **UNDERRATED** |
 | Jade Scepter | 0.49 | 0.50 | 0.53 | 0.54 | 0.00 | 0.44 | fair | peel | **UNDERRATED** |
-| Doom Orb | 0.49 | 0.56 | 0.46 | 0.46 | 0.07 | 0.78 | fair |  | **UNDERRATED** |
+| The World Stone | 0.49 | 0.55 | 0.46 | 0.46 | 0.15 | 0.78 | fair |  |  |
 | Bracer of The Abyss | 0.49 | 0.49 | 0.51 | 0.54 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Ethereal Staff | 0.49 | 0.49 | 0.51 | 0.54 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
+| Doom Orb | 0.48 | 0.56 | 0.46 | 0.45 | 0.07 | 0.78 | fair |  | **UNDERRATED** |
 | Alchemist Coat | 0.48 | 0.48 | 0.50 | 0.54 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.48 | 0.48 | 0.59 | 0.54 | 0.00 | 0.22 | fair |  | **UNDERRATED** |
 | Polynomicon | 0.48 | 0.47 | 0.44 | 0.54 | 0.00 | 0.54 | fair | burst |  |

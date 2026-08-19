@@ -2,31 +2,31 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.60 | 0.59 | 0.64 | 0.63 | 0.39 | 0.49 | undervalued |  |  |
+| Jotunn's Revenge | 0.59 | 0.59 | 0.64 | 0.61 | 0.38 | 0.49 | undervalued |  |  |
 | Rod of Tahuti | 0.57 | 0.62 | 0.77 | 0.58 | 0.00 | 0.27 | undervalued |  | **UNDERRATED** |
 | The Crusher | 0.57 | 0.61 | 0.64 | 0.58 | 0.00 | 0.54 | undervalued | burst | **UNDERRATED** |
 | Nimble Ring | 0.55 | 0.57 | 0.68 | 0.58 | 0.00 | 0.31 | undervalued |  | **UNDERRATED** |
-| The Reaper | 0.54 | 0.50 | 0.52 | 0.64 | 0.14 | 0.44 | fair | sustain | **UNDERRATED** |
 | Gluttonous Grimoire | 0.54 | 0.55 | 0.63 | 0.58 | 0.00 | 0.37 | undervalued | burst | **UNDERRATED** |
 | Death Metal | 0.53 | 0.54 | 0.56 | 0.58 | 0.00 | 0.51 | fair |  | **UNDERRATED** |
+| The Reaper | 0.53 | 0.50 | 0.52 | 0.62 | 0.12 | 0.44 | fair | sustain | **UNDERRATED** |
 | Berserker's Shield | 0.53 | 0.53 | 0.66 | 0.58 | 0.00 | 0.25 | undervalued |  | **UNDERRATED** |
-| Hydra's Lament | 0.53 | 0.51 | 0.56 | 0.58 | 0.26 | 0.39 | fair | burst |  |
 | Damaru | 0.53 | 0.53 | 0.57 | 0.58 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Lernaean Bow | 0.53 | 0.53 | 0.50 | 0.58 | 0.00 | 0.59 | fair | wave-clear, burst | **UNDERRATED** |
 | Soul Gem | 0.52 | 0.52 | 0.57 | 0.58 | 0.00 | 0.41 | fair | burst, sustain, aura | **UNDERRATED** |
 | Golden Blade | 0.52 | 0.52 | 0.53 | 0.58 | 0.00 | 0.49 | fair | wave-clear | **UNDERRATED** |
 | Tekko-Kagi | 0.52 | 0.52 | 0.44 | 0.58 | 0.00 | 0.69 | fair | mobility | **UNDERRATED** |
+| Hydra's Lament | 0.52 | 0.51 | 0.56 | 0.56 | 0.26 | 0.39 | fair | burst |  |
 | Riptalon | 0.51 | 0.51 | 0.53 | 0.58 | 0.00 | 0.45 | fair | sustain | **UNDERRATED** |
 | Silverbranch Bow | 0.51 | 0.50 | 0.52 | 0.58 | 0.00 | 0.45 | fair |  | **UNDERRATED** |
 | Tyrfing | 0.51 | 0.50 | 0.46 | 0.58 | 0.00 | 0.59 | fair | burst | **UNDERRATED** |
 | Genji's Guard | 0.51 | 0.50 | 0.69 | 0.58 | 0.00 | 0.04 | undervalued |  | **UNDERRATED** |
+| Heartseeker | 0.51 | 0.45 | 0.41 | 0.58 | 0.42 | 0.54 | premium | burst |  |
 | Bragi's Harp | 0.51 | 0.49 | 0.42 | 0.58 | 0.00 | 0.66 | premium | burst | **UNDERRATED** |
 | Runeforged Hammer | 0.50 | 0.49 | 0.55 | 0.58 | 0.00 | 0.34 | fair | burst | **UNDERRATED** |
-| Transcendence | 0.50 | 0.44 | 0.52 | 0.60 | 0.31 | 0.24 | fair |  |  |
 | The Cosmic Horror | 0.50 | 0.49 | 0.58 | 0.58 | 0.00 | 0.27 | fair |  | **UNDERRATED** |
-| Heartseeker | 0.50 | 0.45 | 0.41 | 0.57 | 0.43 | 0.54 | premium | burst |  |
 | Spear of the Magus | 0.50 | 0.48 | 0.57 | 0.58 | 0.00 | 0.27 | fair |  | **UNDERRATED** |
 | Dominance | 0.50 | 0.48 | 0.47 | 0.58 | 0.00 | 0.49 | fair |  | **UNDERRATED** |
+| Transcendence | 0.50 | 0.44 | 0.52 | 0.59 | 0.30 | 0.24 | fair |  |  |
 | Titan's Bane | 0.50 | 0.44 | 0.45 | 0.58 | 0.26 | 0.44 | fair |  |  |
 | Breastplate of Valor | 0.49 | 0.46 | 0.64 | 0.58 | 0.00 | 0.04 | undervalued |  | **UNDERRATED** |
 | Spear of Desolation | 0.49 | 0.46 | 0.52 | 0.58 | 0.00 | 0.31 | fair |  | **UNDERRATED** |
@@ -79,8 +79,8 @@
 | Shifter's Shield | 0.44 | 0.36 | 0.52 | 0.58 | 0.00 | 0.00 | fair |  |  |
 | Stone of Binding | 0.44 | 0.36 | 0.47 | 0.58 | 0.00 | 0.10 | fair | protection-shred |  |
 | Polynomicon | 0.44 | 0.36 | 0.44 | 0.58 | 0.00 | 0.17 | fair | burst |  |
+| Book of Thoth | 0.44 | 0.36 | 0.49 | 0.55 | 0.22 | 0.07 | fair |  |  |
 | Ancile | 0.44 | 0.36 | 0.51 | 0.58 | 0.00 | 0.00 | fair |  |  |
-| Book of Thoth | 0.44 | 0.36 | 0.49 | 0.55 | 0.20 | 0.07 | fair |  |  |
 | Qin's Blade | 0.44 | 0.36 | 0.36 | 0.58 | 0.00 | 0.35 | premium | burst |  |
 | Odysseus' Bow | 0.44 | 0.35 | 0.36 | 0.58 | 0.00 | 0.35 | premium | burst, wave-clear |  |
 | Ancient Signet | 0.44 | 0.35 | 0.43 | 0.58 | 0.00 | 0.17 | fair | burst |  |

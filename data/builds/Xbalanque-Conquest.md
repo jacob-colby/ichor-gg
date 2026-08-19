@@ -6,21 +6,21 @@ builds:
 - source: community
   aspect: Aspect of the Nightstalker
   aspect_pick_rate: 0.14
-  aspect_win_rate: 0.57
+  aspect_win_rate: 0.59
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.62
+    pick_rate: 0.64
     win_rate: 0.56
     alternates:
     - name: Dominance
       pick_rate: 0.05
-      win_rate: 0.7
+      win_rate: 0.71
     - name: The Cosmic Horror
       pick_rate: 0.05
-      win_rate: 0.73
+      win_rate: 0.77
   - name: Odysseus' Bow
     pick_rate: 0.49
-    win_rate: 0.57
+    win_rate: 0.56
     alternates:
     - name: Dominance
       pick_rate: 0.07
@@ -29,64 +29,64 @@ builds:
       pick_rate: 0.06
       win_rate: 0.53
   - name: Hastened Fatalis
-    pick_rate: 0.18
+    pick_rate: 0.19
     win_rate: 0.56
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.16
-      win_rate: 0.63
-    - name: The Executioner
+      pick_rate: 0.18
+      win_rate: 0.64
+    - name: Silverbranch Bow
       pick_rate: 0.11
-      win_rate: 0.57
-  - name: Riptalon
-    pick_rate: 0.2
-    win_rate: 0.6
+      win_rate: 0.46
+  - name: The Executioner
+    pick_rate: 0.19
+    win_rate: 0.54
     alternates:
+    - name: Riptalon
+      pick_rate: 0.18
+      win_rate: 0.6
     - name: Silverbranch Bow
       pick_rate: 0.17
-      win_rate: 0.6
-    - name: The Executioner
-      pick_rate: 0.17
-      win_rate: 0.57
+      win_rate: 0.61
   - name: Silverbranch Bow
     pick_rate: 0.19
-    win_rate: 0.69
+    win_rate: 0.7
     alternates:
     - name: The Executioner
       pick_rate: 0.16
-      win_rate: 0.62
+      win_rate: 0.57
     - name: Riptalon
       pick_rate: 0.12
       win_rate: 0.6
   - name: Qin's Blade
-    pick_rate: 0.09
+    pick_rate: 0.1
     win_rate: 0.62
     alternates:
     - name: Bow
       pick_rate: 0.08
-      win_rate: 0.74
+      win_rate: 0.72
     - name: Hunter's Bow
       pick_rate: 0.08
-      win_rate: 0.58
+      win_rate: 0.6
   community_starters:
   - name: Death's Embrace
     pick_rate: 0.54
-    win_rate: 0.64
+    win_rate: 0.63
   - name: Death's Toll
     pick_rate: 0.22
     win_rate: 0.44
   - name: War Flag
-    pick_rate: 0.06
+    pick_rate: 0.05
     win_rate: 1.0
   source_url: https://smitebrain.com/gods/xbalanque/
-  last_verified: '2026-08-18'
-  god_win_rate: 0.5841035120147874
-  god_matches_won: 316
-  god_matches_played: 541
+  last_verified: '2026-08-19'
+  god_win_rate: 0.5799373040752351
+  god_matches_won: 370
+  god_matches_played: 638
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-18'
-  god_matches_analyzed: 8839
+  god_window_end: '2026-08-19'
+  god_matches_analyzed: 10108
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Berserker's Shield
+  - Tyrfing
   - Riptalon
   - Silverbranch Bow
   - Damaru
-  - The Crusher
   flex_slots:
-  - Lernaean Bow
-  - The Crusher
+  - Riptalon
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -134,16 +134,22 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.33
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.46
+      win: 0.56
+      pick: 0.64
+      fit: 0.64
     Riptalon:
       total: 0.54
       efficiency: 0.53
       win: 0.6
-      pick: 0.33
+      pick: 0.3
       fit: 0.46
     Silverbranch Bow:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.33
     Damaru:
@@ -152,12 +158,6 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.54
-    The Crusher:
-      total: 0.54
-      efficiency: 0.64
-      win: 0.6
-      pick: 0.0
-      fit: 0.31
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -165,14 +165,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
+  - Berserker's Shield
   - Jotunn's Revenge
   - Hydra's Lament
-  - Riptalon
   - Silverbranch Bow
   - The Crusher
   flex_slots:
   - Hydra's Lament
-  - Riptalon
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -181,8 +181,8 @@ builds:
     swap: Oni Hunter's Garb — magical protection
     swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -199,6 +199,12 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.15
+    Berserker's Shield:
+      total: 0.52
+      efficiency: 0.66
+      win: 0.6
+      pick: 0.0
+      fit: 0.16
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.64
@@ -211,16 +217,10 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.42
-    Riptalon:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.33
-      fit: 0.34
     Silverbranch Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.28
     The Crusher:
@@ -272,7 +272,7 @@ builds:
     Silverbranch Bow:
       total: 0.56
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.3
     Damaru:
@@ -349,12 +349,12 @@ builds:
       total: 0.56
       efficiency: 0.53
       win: 0.6
-      pick: 0.33
+      pick: 0.3
       fit: 0.58
     Silverbranch Bow:
-      total: 0.54
+      total: 0.55
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.2
     Amanita Charm:
@@ -419,12 +419,12 @@ builds:
       total: 0.57
       efficiency: 0.53
       win: 0.6
-      pick: 0.33
+      pick: 0.3
       fit: 0.64
     Silverbranch Bow:
       total: 0.6
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.56
     Tekko-Kagi:
@@ -488,18 +488,18 @@ builds:
       total: 0.56
       efficiency: 0.46
       win: 0.56
-      pick: 0.62
+      pick: 0.64
       fit: 0.75
     Riptalon:
       total: 0.56
       efficiency: 0.53
       win: 0.6
-      pick: 0.33
+      pick: 0.3
       fit: 0.59
     Silverbranch Bow:
       total: 0.59
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.49
     The Crusher:
@@ -573,9 +573,9 @@ builds:
       pick: 0.0
       fit: 0.51
     Silverbranch Bow:
-      total: 0.54
+      total: 0.55
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.21
   starter: *id001
@@ -605,7 +605,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Off-type Intelligence build — this kit scales on it (efficiency + fit
-    + win/pick). Underrated for this god: Rod of Tahuti, The Cosmic Horror, Nimble
+    + win/pick). Underrated for this god: The Cosmic Horror, Rod of Tahuti, Nimble
     Ring, Gluttonous Grimoire, Soul Gem, Jotunn''s Revenge, The Crusher, Death Metal,
     Genji''s Guard, Berserker''s Shield, Spear of the Magus, Spear of Desolation,
     Hydra''s Lament, Damaru, Breastplate of Valor, Chronos'' Pendant, Bracer of The
@@ -628,15 +628,15 @@ builds:
       pick: 0.0
       fit: 0.46
     The Cosmic Horror:
-      total: 0.59
+      total: 0.6
       efficiency: 0.58
-      win: 0.73
+      win: 0.77
       pick: 0.05
       fit: 0.35
     Silverbranch Bow:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.32
     The Crusher:
@@ -678,7 +678,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
-    + fit + win/pick). Underrated for this god: Rod of Tahuti, The Cosmic Horror,
+    + fit + win/pick). Underrated for this god: The Cosmic Horror, Rod of Tahuti,
     Nimble Ring, Gluttonous Grimoire, The Crusher, Death Metal, Soul Gem, Jotunn''s
     Revenge, Berserker''s Shield, Damaru, Spear of the Magus, Lernaean Bow, Bragi''s
     Harp, The Reaper, Golden Blade, Genji''s Guard, Hydra''s Lament, Bracer of The
@@ -700,15 +700,15 @@ builds:
       pick: 0.0
       fit: 0.57
     The Cosmic Horror:
-      total: 0.59
+      total: 0.6
       efficiency: 0.58
-      win: 0.73
+      win: 0.77
       pick: 0.05
       fit: 0.34
     Silverbranch Bow:
       total: 0.57
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.35
     The Crusher:
@@ -779,7 +779,7 @@ builds:
       total: 0.54
       efficiency: 0.46
       win: 0.56
-      pick: 0.62
+      pick: 0.64
       fit: 0.64
     Damaru:
       total: 0.55
@@ -846,9 +846,9 @@ builds:
       pick: 0.0
       fit: 0.33
     Silverbranch Bow:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.69
+      win: 0.7
       pick: 0.41
       fit: 0.33
     Damaru:
@@ -866,7 +866,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Tyrfing
-    reason: community 69% win over 103 matches (vs 58% on this god), taking the model's
+    reason: community 70% win over 121 matches (vs 58% on this god), taking the model's
       weakest slot from Tyrfing
   starter: *id001
 ---

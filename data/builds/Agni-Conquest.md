@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of Combustion
   aspect_pick_rate: 0.04
-  aspect_win_rate: 0.53
+  aspect_win_rate: 0.5
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.36
-    win_rate: 0.58
+    pick_rate: 0.37
+    win_rate: 0.59
     alternates:
     - name: Chronos' Pendant
-      pick_rate: 0.31
-      win_rate: 0.57
+      pick_rate: 0.3
+      win_rate: 0.58
     - name: Book of Thoth
       pick_rate: 0.12
-      win_rate: 0.53
+      win_rate: 0.52
   - name: The World Stone
     pick_rate: 0.25
-    win_rate: 0.59
+    win_rate: 0.6
     alternates:
     - name: Soul Reaver
       pick_rate: 0.13
-      win_rate: 0.57
+      win_rate: 0.58
     - name: Spear of Desolation
       pick_rate: 0.13
-      win_rate: 0.66
+      win_rate: 0.64
   - name: Soul Reaver
     pick_rate: 0.17
     win_rate: 0.59
     alternates:
-    - name: Soul Gem
+    - name: The World Stone
       pick_rate: 0.14
       win_rate: 0.62
-    - name: The World Stone
-      pick_rate: 0.13
-      win_rate: 0.6
+    - name: Soul Gem
+      pick_rate: 0.14
+      win_rate: 0.63
   - name: Rod of Tahuti
     pick_rate: 0.22
     win_rate: 0.61
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.22
-      win_rate: 0.6
+      win_rate: 0.61
     - name: Soul Reaver
       pick_rate: 0.08
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Obsidian Shard
-    pick_rate: 0.22
-    win_rate: 0.69
+    pick_rate: 0.21
+    win_rate: 0.67
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.15
-      win_rate: 0.72
+      win_rate: 0.71
     - name: Evil Eye
-      pick_rate: 0.1
-      win_rate: 0.56
+      pick_rate: 0.11
+      win_rate: 0.59
   - name: Evil Eye
-    pick_rate: 0.12
-    win_rate: 0.53
+    pick_rate: 0.11
+    win_rate: 0.54
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.11
       win_rate: 0.7
     - name: Obsidian Shard
       pick_rate: 0.07
-      win_rate: 0.6
+      win_rate: 0.59
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.39
-    win_rate: 0.64
+    pick_rate: 0.38
+    win_rate: 0.63
   - name: Bluestone Pendant
-    pick_rate: 0.25
-    win_rate: 0.42
+    pick_rate: 0.24
+    win_rate: 0.43
   - name: Archmage's Gem
     pick_rate: 0.12
-    win_rate: 0.65
+    win_rate: 0.68
   source_url: https://smitebrain.com/gods/agni/
-  last_verified: '2026-08-18'
-  god_win_rate: 0.5673603504928806
-  god_matches_won: 518
-  god_matches_played: 913
+  last_verified: '2026-08-19'
+  god_win_rate: 0.5678537054860443
+  god_matches_won: 590
+  god_matches_played: 1039
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-18'
-  god_matches_analyzed: 8839
+  god_window_end: '2026-08-19'
+  god_matches_analyzed: 10108
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -123,10 +123,10 @@ builds:
     Coat, Freya''s Tears, Book of Thoth.'
   slot_scores:
     Spear of Desolation:
-      total: 0.61
+      total: 0.62
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 1.0
     The Cosmic Horror:
       total: 0.59
@@ -147,15 +147,15 @@ builds:
       pick: 0.37
       fit: 0.79
     Obsidian Shard:
-      total: 0.63
+      total: 0.62
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.79
     Soul Gem:
       total: 0.64
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 1.0
   starter: &id001
@@ -200,15 +200,15 @@ builds:
       pick: 0.0
       fit: 0.24
     Spear of Desolation:
-      total: 0.55
+      total: 0.56
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.61
     The World Stone:
       total: 0.53
       efficiency: 0.46
-      win: 0.59
+      win: 0.6
       pick: 0.34
       fit: 0.57
     Rod of Tahuti:
@@ -218,15 +218,15 @@ builds:
       pick: 0.37
       fit: 0.57
     Obsidian Shard:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.47
     Soul Gem:
       total: 0.6
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.71
   starter: *id001
@@ -265,8 +265,8 @@ builds:
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.78
     The Cosmic Horror:
       total: 0.55
@@ -287,15 +287,15 @@ builds:
       pick: 0.37
       fit: 0.56
     Obsidian Shard:
-      total: 0.6
+      total: 0.59
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.56
     Soul Gem:
       total: 0.62
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.88
   starter: *id001
@@ -351,10 +351,10 @@ builds:
       pick: 0.37
       fit: 0.39
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.39
     Amanita Charm:
       total: 0.61
@@ -363,9 +363,9 @@ builds:
       pick: 0.0
       fit: 0.81
     Soul Gem:
-      total: 0.62
+      total: 0.63
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.89
   starter: *id001
@@ -402,10 +402,10 @@ builds:
     of Binding, Bracer of The Abyss, Ethereal Staff.'
   slot_scores:
     Spear of Desolation:
-      total: 0.61
+      total: 0.62
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 1.0
     The Cosmic Horror:
       total: 0.6
@@ -426,15 +426,15 @@ builds:
       pick: 0.37
       fit: 0.85
     Obsidian Shard:
-      total: 0.64
+      total: 0.63
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.85
     Soul Gem:
       total: 0.64
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 1.0
   starter: *id001
@@ -495,15 +495,15 @@ builds:
       pick: 0.37
       fit: 0.32
     Obsidian Shard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.32
     Soul Gem:
       total: 0.58
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.58
   starter: *id001
@@ -511,14 +511,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
+  - Chronos' Pendant
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Breastplate of Valor
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -527,8 +527,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -546,17 +546,17 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.48
-    Breastplate of Valor:
+    Chronos' Pendant:
       total: 0.56
-      efficiency: 0.64
-      win: 0.59
-      pick: 0.0
-      fit: 0.48
-    Spear of Desolation:
-      total: 0.59
-      efficiency: 0.52
+      efficiency: 0.55
       win: 0.58
-      pick: 0.36
+      pick: 0.3
+      fit: 0.63
+    Spear of Desolation:
+      total: 0.6
+      efficiency: 0.52
+      win: 0.59
+      pick: 0.37
       fit: 0.86
     Rod of Tahuti:
       total: 0.62
@@ -565,15 +565,15 @@ builds:
       pick: 0.37
       fit: 0.37
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.37
     Soul Gem:
-      total: 0.63
+      total: 0.64
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.96
   starter: *id001
@@ -636,15 +636,15 @@ builds:
       pick: 0.37
       fit: 0.44
     Obsidian Shard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.44
     Soul Gem:
       total: 0.59
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.65
   starter: *id001
@@ -692,8 +692,8 @@ builds:
     Spear of Desolation:
       total: 0.57
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.69
     The Crusher:
       total: 0.59
@@ -708,15 +708,15 @@ builds:
       pick: 0.37
       fit: 0.56
     Obsidian Shard:
-      total: 0.6
+      total: 0.59
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.56
     Soul Gem:
       total: 0.61
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.79
   starter: *id001
@@ -759,10 +759,10 @@ builds:
       pick: 0.0
       fit: 0.89
     Spear of Desolation:
-      total: 0.61
+      total: 0.62
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 1.0
     The Cosmic Horror:
       total: 0.59
@@ -783,10 +783,10 @@ builds:
       pick: 0.37
       fit: 0.79
     Obsidian Shard:
-      total: 0.63
+      total: 0.62
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.79
   starter: *id001
 - source: suggested
@@ -822,10 +822,10 @@ builds:
     Staff, Freya''s Tears, Alchemist Coat.'
   slot_scores:
     Spear of Desolation:
-      total: 0.59
+      total: 0.6
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.86
     The Cosmic Horror:
       total: 0.57
@@ -846,15 +846,15 @@ builds:
       pick: 0.37
       fit: 0.68
     Obsidian Shard:
-      total: 0.62
+      total: 0.61
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.68
     Soul Gem:
-      total: 0.63
+      total: 0.64
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.96
   starter: *id001
@@ -863,14 +863,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Spear of Desolation
+  - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Genji's Guard
-  - Breastplate of Valor
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -879,8 +879,8 @@ builds:
     swap: Oni Hunter's Garb — magical protection
     swap_item: Oni Hunter's Garb
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -897,18 +897,18 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.23
-    Breastplate of Valor:
-      total: 0.52
-      efficiency: 0.64
-      win: 0.59
-      pick: 0.0
-      fit: 0.23
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.57
+    The World Stone:
+      total: 0.53
+      efficiency: 0.46
+      win: 0.6
+      pick: 0.34
+      fit: 0.53
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.77
@@ -916,15 +916,15 @@ builds:
       pick: 0.37
       fit: 0.53
     Obsidian Shard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.43
     Soul Gem:
       total: 0.59
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.67
   starter: *id001
@@ -964,8 +964,8 @@ builds:
     Spear of Desolation:
       total: 0.57
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.71
     The Cosmic Horror:
       total: 0.55
@@ -986,15 +986,15 @@ builds:
       pick: 0.37
       fit: 0.51
     Obsidian Shard:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.51
     Soul Gem:
-      total: 0.61
+      total: 0.62
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.81
   starter: *id001
@@ -1051,10 +1051,10 @@ builds:
       pick: 0.37
       fit: 0.36
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.36
     Amanita Charm:
       total: 0.6
@@ -1065,7 +1065,7 @@ builds:
     Soul Gem:
       total: 0.62
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.86
   starter: *id001
@@ -1105,8 +1105,8 @@ builds:
     Spear of Desolation:
       total: 0.6
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.9
     The Cosmic Horror:
       total: 0.58
@@ -1127,15 +1127,15 @@ builds:
       pick: 0.37
       fit: 0.77
     Obsidian Shard:
-      total: 0.63
+      total: 0.62
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.77
     Soul Gem:
       total: 0.64
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 1.0
   starter: *id001
@@ -1197,15 +1197,15 @@ builds:
       pick: 0.37
       fit: 0.32
     Obsidian Shard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.32
     Soul Gem:
       total: 0.58
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.58
   starter: *id001
@@ -1258,8 +1258,8 @@ builds:
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.78
     Rod of Tahuti:
       total: 0.61
@@ -1268,15 +1268,15 @@ builds:
       pick: 0.37
       fit: 0.34
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.34
     Soul Gem:
-      total: 0.62
+      total: 0.63
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.88
   starter: *id001
@@ -1340,15 +1340,15 @@ builds:
       pick: 0.37
       fit: 0.44
     Obsidian Shard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.44
     Soul Gem:
       total: 0.59
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.65
   starter: *id001
@@ -1397,8 +1397,8 @@ builds:
     Spear of Desolation:
       total: 0.56
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.63
     The Crusher:
       total: 0.58
@@ -1413,15 +1413,15 @@ builds:
       pick: 0.37
       fit: 0.51
     Obsidian Shard:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.51
     Soul Gem:
       total: 0.6
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.73
   starter: *id001
@@ -1459,10 +1459,10 @@ builds:
     Harp, Ethereal Staff, Freya''s Tears, Alchemist Coat.'
   slot_scores:
     Spear of Desolation:
-      total: 0.59
+      total: 0.6
       efficiency: 0.52
-      win: 0.58
-      pick: 0.36
+      win: 0.59
+      pick: 0.37
       fit: 0.86
     The Cosmic Horror:
       total: 0.57
@@ -1483,15 +1483,15 @@ builds:
       pick: 0.37
       fit: 0.68
     Obsidian Shard:
-      total: 0.62
+      total: 0.61
       efficiency: 0.52
-      win: 0.69
-      pick: 0.48
+      win: 0.67
+      pick: 0.45
       fit: 0.68
     Soul Gem:
-      total: 0.63
+      total: 0.64
       efficiency: 0.57
-      win: 0.62
+      win: 0.63
       pick: 0.22
       fit: 0.96
   starter: *id001

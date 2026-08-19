@@ -3,15 +3,15 @@
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | Rod of Tahuti | 0.68 | 0.77 | 0.77 | 0.61 | 0.37 | 0.79 | undervalued |  |  |
-| Soul Gem | 0.64 | 0.70 | 0.57 | 0.62 | 0.22 | 1.00 | fair | burst, sustain, aura |  |
-| Obsidian Shard | 0.63 | 0.60 | 0.52 | 0.69 | 0.48 | 0.79 | fair |  |  |
+| Soul Gem | 0.64 | 0.70 | 0.57 | 0.63 | 0.22 | 1.00 | fair | burst, sustain, aura |  |
+| Obsidian Shard | 0.62 | 0.60 | 0.52 | 0.67 | 0.45 | 0.79 | fair |  |  |
 | Gluttonous Grimoire | 0.62 | 0.71 | 0.63 | 0.59 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.61 | 0.67 | 0.52 | 0.58 | 0.36 | 1.00 | fair |  |  |
+| Spear of Desolation | 0.62 | 0.67 | 0.52 | 0.59 | 0.37 | 1.00 | fair |  |  |
 | The Cosmic Horror | 0.59 | 0.64 | 0.58 | 0.59 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.58 | 0.64 | 0.57 | 0.59 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Nimble Ring | 0.57 | 0.60 | 0.68 | 0.59 | 0.00 | 0.42 | undervalued |  | **UNDERRATED** |
-| The World Stone | 0.56 | 0.56 | 0.46 | 0.59 | 0.34 | 0.79 | fair |  |  |
-| Chronos' Pendant | 0.56 | 0.57 | 0.55 | 0.57 | 0.31 | 0.63 | fair |  |  |
+| The World Stone | 0.57 | 0.56 | 0.46 | 0.60 | 0.34 | 0.79 | fair |  |  |
+| Chronos' Pendant | 0.56 | 0.57 | 0.55 | 0.58 | 0.30 | 0.63 | fair |  |  |
 | Doom Orb | 0.55 | 0.56 | 0.46 | 0.59 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.54 | 0.55 | 0.69 | 0.59 | 0.00 | 0.21 | undervalued |  | **UNDERRATED** |
 | Dreamer's Idol | 0.54 | 0.54 | 0.44 | 0.59 | 0.00 | 0.79 | fair | cc-immunity | **UNDERRATED** |
@@ -44,7 +44,7 @@
 | Eye of Providence | 0.48 | 0.43 | 0.62 | 0.59 | 0.00 | 0.00 | undervalued | ward-economy |  |
 | Triton's Conch | 0.48 | 0.43 | 0.44 | 0.59 | 0.00 | 0.42 | fair | aura |  |
 | Oni Hunter's Garb | 0.48 | 0.43 | 0.61 | 0.59 | 0.00 | 0.00 | undervalued |  |  |
-| Book of Thoth | 0.48 | 0.47 | 0.49 | 0.53 | 0.12 | 0.42 | fair |  | **UNDERRATED** |
+| Book of Thoth | 0.47 | 0.47 | 0.49 | 0.52 | 0.12 | 0.42 | fair |  | **UNDERRATED** |
 | Helm of Darkness | 0.47 | 0.41 | 0.41 | 0.59 | 0.00 | 0.42 | premium | mobility |  |
 | Sphere of Negation | 0.47 | 0.41 | 0.40 | 0.59 | 0.00 | 0.42 | premium | sustain |  |
 | Spectral Armor | 0.47 | 0.41 | 0.58 | 0.59 | 0.00 | 0.00 | fair | anti-crit, aura |  |

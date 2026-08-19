@@ -2,20 +2,20 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Freya's Tears | 0.64 | 0.60 | 0.59 | 0.74 | 0.13 | 0.64 | fair |  | **UNDERRATED** |
-| Genji's Guard | 0.58 | 0.61 | 0.69 | 0.57 | 0.34 | 0.42 | undervalued |  |  |
+| Freya's Tears | 0.62 | 0.60 | 0.59 | 0.70 | 0.15 | 0.64 | fair |  |  |
 | Kinetic Cuirass | 0.58 | 0.64 | 0.59 | 0.57 | 0.00 | 0.76 | fair | burst | **UNDERRATED** |
 | Amanita Charm | 0.58 | 0.64 | 0.63 | 0.57 | 0.00 | 0.66 | undervalued | sustain, aura | **UNDERRATED** |
+| Genji's Guard | 0.57 | 0.61 | 0.69 | 0.56 | 0.34 | 0.42 | undervalued |  |  |
 | Eye of Providence | 0.57 | 0.63 | 0.62 | 0.57 | 0.00 | 0.66 | undervalued | ward-economy | **UNDERRATED** |
+| Draconic Scale | 0.57 | 0.55 | 0.50 | 0.64 | 0.13 | 0.66 | fair |  | **UNDERRATED** |
 | Berserker's Shield | 0.55 | 0.59 | 0.66 | 0.57 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
 | Shield of the Phoenix | 0.55 | 0.58 | 0.57 | 0.57 | 0.00 | 0.62 | fair | sustain | **UNDERRATED** |
-| Draconic Scale | 0.54 | 0.55 | 0.50 | 0.59 | 0.13 | 0.66 | fair |  | **UNDERRATED** |
-| Shifter's Shield | 0.54 | 0.56 | 0.52 | 0.56 | 0.21 | 0.66 | fair |  |  |
+| Shifter's Shield | 0.54 | 0.56 | 0.52 | 0.55 | 0.22 | 0.66 | fair |  |  |
+| Runeforged Hammer | 0.54 | 0.50 | 0.55 | 0.62 | 0.15 | 0.39 | fair | burst | **UNDERRATED** |
 | Erosion | 0.54 | 0.56 | 0.52 | 0.57 | 0.00 | 0.66 | fair | aura | **UNDERRATED** |
 | Oni Hunter's Garb | 0.54 | 0.56 | 0.61 | 0.57 | 0.00 | 0.43 | undervalued |  | **UNDERRATED** |
 | Jotunn's Revenge | 0.53 | 0.55 | 0.64 | 0.57 | 0.00 | 0.34 | undervalued |  | **UNDERRATED** |
-| Breastplate of Valor | 0.53 | 0.57 | 0.64 | 0.52 | 0.20 | 0.42 | undervalued |  |  |
-| Runeforged Hammer | 0.53 | 0.50 | 0.55 | 0.60 | 0.14 | 0.39 | fair | burst | **UNDERRATED** |
+| Breastplate of Valor | 0.52 | 0.57 | 0.64 | 0.51 | 0.19 | 0.42 | undervalued |  |  |
 | Spectral Armor | 0.52 | 0.53 | 0.58 | 0.57 | 0.00 | 0.43 | fair | anti-crit, aura | **UNDERRATED** |
 | The Crusher | 0.52 | 0.52 | 0.64 | 0.57 | 0.00 | 0.25 | undervalued | burst | **UNDERRATED** |
 | Shield Splitter | 0.52 | 0.52 | 0.51 | 0.57 | 0.00 | 0.55 | fair |  | **UNDERRATED** |
@@ -93,7 +93,7 @@
 | Hastened Fatalis | 0.36 | 0.21 | 0.31 | 0.57 | 0.00 | 0.00 | premium | mobility |  |
 | Omen Drum | 0.35 | 0.19 | 0.27 | 0.57 | 0.00 | 0.00 | premium |  |  |
 | Daybreak Gavel | 0.35 | 0.19 | 0.18 | 0.57 | 0.00 | 0.20 | premium |  |  |
-| Gauntlet of Thebes | 0.35 | 0.24 | 0.26 | 0.48 | 0.17 | 0.20 | premium |  |  |
+| Gauntlet of Thebes | 0.34 | 0.24 | 0.26 | 0.48 | 0.16 | 0.20 | premium |  |  |
 | Sun Beam Bow | 0.34 | 0.18 | 0.25 | 0.57 | 0.00 | 0.00 | premium |  |  |
 | The Executioner | 0.32 | 0.12 | 0.13 | 0.57 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.30 | 0.09 | 0.13 | 0.57 | 0.00 | 0.00 | premium |  |  |

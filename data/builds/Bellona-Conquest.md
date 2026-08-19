@@ -5,113 +5,113 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Vindication
-  aspect_pick_rate: 0.18
-  aspect_win_rate: 0.3
+  aspect_pick_rate: 0.16
+  aspect_win_rate: 0.29
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.33
-    win_rate: 0.52
+    pick_rate: 0.31
+    win_rate: 0.51
     alternates:
     - name: Berserker's Shield
-      pick_rate: 0.21
-      win_rate: 0.55
+      pick_rate: 0.22
+      win_rate: 0.57
     - name: Golden Blade
       pick_rate: 0.2
-      win_rate: 0.46
+      win_rate: 0.48
   - name: Berserker's Shield
-    pick_rate: 0.34
-    win_rate: 0.56
+    pick_rate: 0.32
+    win_rate: 0.52
     alternates:
     - name: Golden Blade
       pick_rate: 0.16
-      win_rate: 0.59
+      win_rate: 0.62
     - name: Shogun's Ofuda
-      pick_rate: 0.13
-      win_rate: 0.32
+      pick_rate: 0.14
+      win_rate: 0.35
   - name: Shogun's Ofuda
-    pick_rate: 0.19
-    win_rate: 0.67
+    pick_rate: 0.18
+    win_rate: 0.65
     alternates:
     - name: Kinetic Cuirass
-      pick_rate: 0.19
-      win_rate: 0.45
+      pick_rate: 0.17
+      win_rate: 0.46
     - name: Berserker's Shield
-      pick_rate: 0.15
-      win_rate: 0.32
+      pick_rate: 0.16
+      win_rate: 0.38
   - name: Kinetic Cuirass
-    pick_rate: 0.16
-    win_rate: 0.42
+    pick_rate: 0.14
+    win_rate: 0.41
     alternates:
     - name: Shogun's Ofuda
       pick_rate: 0.13
-      win_rate: 0.58
+      win_rate: 0.6
     - name: Berserker's Shield
       pick_rate: 0.07
-      win_rate: 0.64
+      win_rate: 0.67
   - name: Dwarven Plate
     pick_rate: 0.08
-    win_rate: 0.6
+    win_rate: 0.63
     alternates:
     - name: Kinetic Cuirass
       pick_rate: 0.09
-      win_rate: 0.65
+      win_rate: 0.68
     - name: Hide of the Nemean Lion
-      pick_rate: 0.08
-      win_rate: 0.57
-  - name: Shell of Rebuke
-    pick_rate: 0.06
-    win_rate: 0.33
-    alternates:
-    - name: Manchu Bow
-      pick_rate: 0.06
-      win_rate: 0.67
-    - name: Veve Charm
-      pick_rate: 0.05
-      win_rate: 0.2
-  community_starters:
-  - name: Death's Embrace
-    pick_rate: 0.47
-    win_rate: 0.58
-  - name: Death's Toll
-    pick_rate: 0.35
-    win_rate: 0.42
-  - name: Hunter's Cowl
+      pick_rate: 0.07
+      win_rate: 0.6
+  - name: Manchu Bow
     pick_rate: 0.06
     win_rate: 0.75
+    alternates:
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.06
+      win_rate: 0.43
+    - name: Shell of Rebuke
+      pick_rate: 0.05
+      win_rate: 0.33
+  community_starters:
+  - name: Death's Embrace
+    pick_rate: 0.46
+    win_rate: 0.59
+  - name: Death's Toll
+    pick_rate: 0.37
+    win_rate: 0.43
+  - name: Hunter's Cowl
+    pick_rate: 0.05
+    win_rate: 0.75
   source_url: https://smitebrain.com/gods/bellona/
-  last_verified: '2026-08-18'
-  god_win_rate: 0.5048076923076923
-  god_matches_won: 105
-  god_matches_played: 208
+  last_verified: '2026-08-19'
+  god_win_rate: 0.5063291139240507
+  god_matches_won: 120
+  god_matches_played: 237
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-18'
-  god_matches_analyzed: 8839
+  god_window_end: '2026-08-19'
+  god_matches_analyzed: 10108
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
   - Genji's Guard
   - Berserker's Shield
-  - Jotunn's Revenge
   - Freya's Tears
   - Amanita Charm
   - Shogun's Ofuda
   flex_slots:
+  - Genji's Guard
   - Freya's Tears
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -123,41 +123,41 @@ builds:
     Mail, Mantle Of Discord, Stone of Binding, Avenging Blade, Magi''s Cloak, Ancile,
     Screeching Gargoyle.'
   slot_scores:
-    Genji's Guard:
+    Golden Blade:
       total: 0.54
+      efficiency: 0.53
+      win: 0.62
+      pick: 0.22
+      fit: 0.41
+    Genji's Guard:
+      total: 0.52
       efficiency: 0.69
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.33
     Berserker's Shield:
-      total: 0.56
+      total: 0.54
       efficiency: 0.66
-      win: 0.56
-      pick: 0.46
+      win: 0.52
+      pick: 0.44
       fit: 0.38
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.64
-      win: 0.56
-      pick: 0.0
-      fit: 0.4
     Freya's Tears:
-      total: 0.54
+      total: 0.52
       efficiency: 0.59
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.54
     Amanita Charm:
-      total: 0.56
+      total: 0.54
       efficiency: 0.63
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.6
     Shogun's Ofuda:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
-      win: 0.67
-      pick: 0.3
+      win: 0.65
+      pick: 0.28
       fit: 0.38
   starter: &id001
     base: Warrior's Axe
@@ -165,25 +165,25 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Golden Blade
   - Genji's Guard
   - Berserker's Shield
-  - Jotunn's Revenge
   - Shield of the Phoenix
   - Amanita Charm
   - Shogun's Ofuda
   flex_slots:
+  - Shogun's Ofuda
   - Genji's Guard
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -195,65 +195,65 @@ builds:
     Scale, Avenging Blade, Pharaoh''s Curse, Leviathan''s Hide, Midgardian Mail, Glorious
     Pridwen, Riptalon.'
   slot_scores:
+    Golden Blade:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.62
+      pick: 0.22
+      fit: 0.47
     Genji's Guard:
-      total: 0.54
+      total: 0.52
       efficiency: 0.69
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.3
     Berserker's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.66
-      win: 0.56
-      pick: 0.46
+      win: 0.52
+      pick: 0.44
       fit: 0.4
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.64
-      win: 0.56
-      pick: 0.0
-      fit: 0.42
     Shield of the Phoenix:
-      total: 0.57
+      total: 0.55
       efficiency: 0.57
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.82
     Amanita Charm:
-      total: 0.61
+      total: 0.59
       efficiency: 0.63
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.88
     Shogun's Ofuda:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
-      win: 0.67
-      pick: 0.3
+      win: 0.65
+      pick: 0.28
       fit: 0.4
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Genji's Guard
+  - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
   - The Crusher
   - Amanita Charm
   - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
-  - Genji's Guard
+  - Golden Blade
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -265,41 +265,41 @@ builds:
     of the Storm, Eye of Providence, Draconic Scale, Pharaoh''s Curse, Riptalon, Heartseeker,
     Leviathan''s Hide.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.56
-      pick: 0.0
-      fit: 0.24
+    Golden Blade:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.62
+      pick: 0.22
+      fit: 0.3
     Berserker's Shield:
-      total: 0.55
+      total: 0.53
       efficiency: 0.66
-      win: 0.56
-      pick: 0.46
+      win: 0.52
+      pick: 0.44
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.54
       efficiency: 0.64
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.57
     The Crusher:
-      total: 0.57
+      total: 0.55
       efficiency: 0.64
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.58
     Amanita Charm:
-      total: 0.54
+      total: 0.52
       efficiency: 0.63
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.43
     Shogun's Ofuda:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
-      win: 0.67
-      pick: 0.3
+      win: 0.65
+      pick: 0.28
       fit: 0.28
   starter: *id001
 - source: suggested
@@ -335,40 +335,40 @@ builds:
     Scale, Eye of the Storm, Leviathan''s Hide, Midgardian Mail, Toxic Blade.'
   slot_scores:
     Golden Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
-      win: 0.59
+      win: 0.62
       pick: 0.22
       fit: 0.56
     Genji's Guard:
-      total: 0.53
+      total: 0.51
       efficiency: 0.69
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.21
     Berserker's Shield:
-      total: 0.57
+      total: 0.55
       efficiency: 0.66
-      win: 0.56
-      pick: 0.46
+      win: 0.52
+      pick: 0.44
       fit: 0.45
     The Crusher:
-      total: 0.51
+      total: 0.49
       efficiency: 0.64
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.24
     Amanita Charm:
-      total: 0.53
+      total: 0.51
       efficiency: 0.63
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.38
     Shogun's Ofuda:
-      total: 0.56
+      total: 0.55
       efficiency: 0.51
-      win: 0.67
-      pick: 0.3
+      win: 0.65
+      pick: 0.28
       fit: 0.45
   starter: *id001
 - source: suggested
@@ -378,11 +378,11 @@ builds:
   - Berserker's Shield
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Shield of the Phoenix
   - Freya's Tears
+  - Shogun's Ofuda
   flex_slots:
+  - Shogun's Ofuda
   - Jotunn's Revenge
-  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -391,8 +391,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Gladiator's Shield — physical protection
-    swap_item: Gladiator's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -405,41 +405,41 @@ builds:
     Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding, Arondight.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.55
       efficiency: 0.69
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.48
     Berserker's Shield:
-      total: 0.55
+      total: 0.53
       efficiency: 0.66
-      win: 0.56
-      pick: 0.46
+      win: 0.52
+      pick: 0.44
       fit: 0.29
     Breastplate of Valor:
-      total: 0.55
+      total: 0.53
       efficiency: 0.64
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.52
       efficiency: 0.64
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.46
-    Shield of the Phoenix:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.0
-      fit: 0.61
     Freya's Tears:
-      total: 0.56
+      total: 0.54
       efficiency: 0.59
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.64
+    Shogun's Ofuda:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.65
+      pick: 0.28
+      fit: 0.29
   starter: *id001
 - source: suggested
   archetype: model
@@ -475,115 +475,40 @@ builds:
     Cloak, Ancile, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.52
       efficiency: 0.69
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.33
     Berserker's Shield:
-      total: 0.56
+      total: 0.54
       efficiency: 0.66
-      win: 0.56
-      pick: 0.46
+      win: 0.52
+      pick: 0.44
       fit: 0.38
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.52
       efficiency: 0.64
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.59
-      win: 0.42
-      pick: 0.27
+      win: 0.41
+      pick: 0.23
       fit: 0.7
     Freya's Tears:
-      total: 0.54
+      total: 0.52
       efficiency: 0.59
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.54
     Amanita Charm:
-      total: 0.56
+      total: 0.54
       efficiency: 0.63
-      win: 0.56
+      win: 0.52
       pick: 0.0
       fit: 0.6
-  starter: *id001
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Genji's Guard
-  - Berserker's Shield
-  - Kinetic Cuirass
-  - Freya's Tears
-  - Amanita Charm
-  - Shogun's Ofuda
-  flex_slots:
-  - Freya's Tears
-  - Shogun's Ofuda
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
-  - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
-  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
-    + fit + win/pick). Underrated for this god: Amanita Charm, Genji''s Guard, Freya''s
-    Tears, Jotunn''s Revenge, The Crusher, Shield Splitter, Shield of the Phoenix,
-    Oni Hunter''s Garb, Breastplate of Valor, Erosion, Eye of the Storm, Runeforged
-    Hammer, Eye of Providence, Draconic Scale, Hydra''s Lament, Spectral Armor, Pharaoh''s
-    Curse, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord, Stone of Binding,
-    Avenging Blade, Magi''s Cloak, Ancile, Screeching Gargoyle.'
-  slot_scores:
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.69
-      win: 0.56
-      pick: 0.0
-      fit: 0.33
-    Berserker's Shield:
-      total: 0.56
-      efficiency: 0.66
-      win: 0.56
-      pick: 0.46
-      fit: 0.38
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.59
-      win: 0.42
-      pick: 0.27
-      fit: 0.7
-    Freya's Tears:
-      total: 0.54
-      efficiency: 0.59
-      win: 0.56
-      pick: 0.0
-      fit: 0.54
-    Amanita Charm:
-      total: 0.56
-      efficiency: 0.63
-      win: 0.56
-      pick: 0.0
-      fit: 0.6
-    Shogun's Ofuda:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.67
-      pick: 0.3
-      fit: 0.38
-  swaps:
-  - added: Shogun's Ofuda
-    removed: Jotunn's Revenge
-    reason: community 67% win over 40 matches (vs 50% on this god), taking the model's
-      weakest slot from Jotunn's Revenge
   starter: *id001
 ---

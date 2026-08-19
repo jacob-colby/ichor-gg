@@ -4,13 +4,13 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Jotunn's Revenge | 0.65 | 0.75 | 0.64 | 0.54 | 0.64 | 1.00 | undervalued |  |  |
 | The Crusher | 0.62 | 0.75 | 0.64 | 0.54 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
-| The Reaper | 0.60 | 0.64 | 0.52 | 0.57 | 0.51 | 0.91 | fair | sustain |  |
-| Hydra's Lament | 0.57 | 0.60 | 0.56 | 0.54 | 0.53 | 0.71 | fair | burst |  |
-| Heartseeker | 0.57 | 0.59 | 0.41 | 0.56 | 0.38 | 1.00 | premium | burst |  |
+| The Reaper | 0.59 | 0.64 | 0.52 | 0.55 | 0.51 | 0.91 | fair | sustain |  |
+| Hydra's Lament | 0.56 | 0.60 | 0.56 | 0.52 | 0.53 | 0.71 | fair | burst |  |
+| Heartseeker | 0.56 | 0.59 | 0.41 | 0.54 | 0.38 | 1.00 | premium | burst |  |
 | Pendulum Blade | 0.54 | 0.59 | 0.41 | 0.54 | 0.00 | 1.00 | premium |  | **UNDERRATED** |
 | Tekko-Kagi | 0.53 | 0.58 | 0.44 | 0.54 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
 | Runeforged Hammer | 0.53 | 0.57 | 0.55 | 0.54 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
-| Titan's Bane | 0.53 | 0.59 | 0.45 | 0.49 | 0.26 | 0.91 | fair |  |  |
+| Titan's Bane | 0.52 | 0.59 | 0.45 | 0.48 | 0.28 | 0.91 | fair |  |  |
 | Damaru | 0.52 | 0.55 | 0.57 | 0.54 | 0.00 | 0.52 | fair |  | **UNDERRATED** |
 | Lernaean Bow | 0.51 | 0.54 | 0.50 | 0.54 | 0.00 | 0.62 | fair | wave-clear, burst | **UNDERRATED** |
 | Avatar's Parashu | 0.51 | 0.53 | 0.37 | 0.54 | 0.00 | 0.91 | premium | cc-immunity | **UNDERRATED** |
@@ -85,9 +85,9 @@
 | Spirit Robe | 0.37 | 0.25 | 0.36 | 0.54 | 0.00 | 0.00 | premium | sustain |  |
 | Eye of Erebus | 0.37 | 0.25 | 0.32 | 0.54 | 0.00 | 0.09 | premium | ward-economy |  |
 | Dwarven Plate | 0.36 | 0.24 | 0.35 | 0.54 | 0.00 | 0.00 | premium |  |  |
+| Daybreak Gavel | 0.36 | 0.12 | 0.18 | 0.64 | 0.13 | 0.00 | premium |  |  |
 | Radiant Bulwark | 0.35 | 0.22 | 0.32 | 0.54 | 0.00 | 0.00 | premium | aura |  |
 | Hastened Fatalis | 0.35 | 0.21 | 0.31 | 0.54 | 0.00 | 0.00 | premium | mobility |  |
-| Daybreak Gavel | 0.35 | 0.12 | 0.18 | 0.62 | 0.13 | 0.00 | premium |  |  |
 | Resolute Mantle | 0.35 | 0.21 | 0.30 | 0.54 | 0.00 | 0.00 | premium | cc-immunity, sustain |  |
 | Omen Drum | 0.34 | 0.19 | 0.27 | 0.54 | 0.00 | 0.00 | premium |  |  |
 | Circe's Hexstone | 0.33 | 0.18 | 0.22 | 0.54 | 0.00 | 0.09 | premium | mobility, cc-immunity |  |

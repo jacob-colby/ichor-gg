@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: 0.44
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.54
-    win_rate: 0.59
+    pick_rate: 0.55
+    win_rate: 0.6
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.17
-      win_rate: 0.65
-    - name: Daybreak Gavel
+      win_rate: 0.64
+    - name: Dominance
       pick_rate: 0.05
-      win_rate: 0.62
+      win_rate: 0.52
   - name: Odysseus' Bow
-    pick_rate: 0.35
+    pick_rate: 0.36
     win_rate: 0.61
     alternates:
-    - name: Toxic Blade
+    - name: Dagger of Frenzy
       pick_rate: 0.09
       win_rate: 0.61
-    - name: Dagger of Frenzy
-      pick_rate: 0.08
-      win_rate: 0.62
+    - name: Toxic Blade
+      pick_rate: 0.09
+      win_rate: 0.6
   - name: The Executioner
     pick_rate: 0.15
-    win_rate: 0.67
+    win_rate: 0.66
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.15
-      win_rate: 0.67
+      win_rate: 0.61
     - name: Silverbranch Bow
       pick_rate: 0.14
-      win_rate: 0.68
+      win_rate: 0.69
   - name: Silverbranch Bow
-    pick_rate: 0.28
+    pick_rate: 0.27
     win_rate: 0.58
     alternates:
     - name: The Executioner
       pick_rate: 0.17
-      win_rate: 0.67
+      win_rate: 0.69
     - name: Riptalon
-      pick_rate: 0.13
-      win_rate: 0.66
+      pick_rate: 0.12
+      win_rate: 0.65
   - name: Riptalon
     pick_rate: 0.15
     win_rate: 0.66
     alternates:
     - name: The Executioner
       pick_rate: 0.14
-      win_rate: 0.61
+      win_rate: 0.64
     - name: Silverbranch Bow
       pick_rate: 0.12
-      win_rate: 0.59
+      win_rate: 0.56
   - name: Hunter's Bow
     pick_rate: 0.14
-    win_rate: 0.38
+    win_rate: 0.42
     alternates:
     - name: Manchu Bow
       pick_rate: 0.12
-      win_rate: 0.59
+      win_rate: 0.62
     - name: Riptalon
-      pick_rate: 0.07
-      win_rate: 0.72
+      pick_rate: 0.08
+      win_rate: 0.67
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.32
     win_rate: 0.66
-  - name: Sharpshooter's Arrow
-    pick_rate: 0.17
-    win_rate: 0.64
+  - name: Death's Embrace
+    pick_rate: 0.16
+    win_rate: 0.63
   - name: Leather Cowl
     pick_rate: 0.16
-    win_rate: 0.51
+    win_rate: 0.52
   source_url: https://smitebrain.com/gods/cupid/
-  last_verified: '2026-08-18'
-  god_win_rate: 0.6014760147601476
-  god_matches_won: 326
-  god_matches_played: 542
+  last_verified: '2026-08-19'
+  god_win_rate: 0.6048780487804878
+  god_matches_won: 372
+  god_matches_played: 615
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-18'
-  god_matches_analyzed: 8839
+  god_window_end: '2026-08-19'
+  god_matches_analyzed: 10108
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -123,7 +123,7 @@ builds:
     The Abyss, Chronos'' Pendant, Runeforged Hammer, Tekko-Kagi, Obsidian Shard, Blood-Bound
     Book, Kinetic Cuirass, Freya''s Tears, Pharaoh''s Curse, Amanita Charm, Bancroft''s
     Talon, Helm of Radiance, Eye of Providence, Shield of the Phoenix, Oni Hunter''s
-    Garb, Dominance, Rod of Asclepius, Gem of Focus, Jade Scepter.'
+    Garb, Rod of Asclepius, Gem of Focus, Jade Scepter, Dominance.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -194,10 +194,10 @@ builds:
     Gem, Death Metal, Genji''s Guard, Hydra''s Lament, Berserker''s Shield, Damaru,
     The Cosmic Horror, Breastplate of Valor, Spear of the Magus, Lernaean Bow, Spear
     of Desolation, Bragi''s Harp, Golden Blade, The Reaper, Runeforged Hammer, Bancroft''s
-    Talon, Chronos'' Pendant, Bracer of The Abyss, Blood-Bound Book, Dominance, Obsidian
-    Shard, Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Helm of Radiance, Amanita
-    Charm, Freya''s Tears, Transcendence, Rod of Asclepius, Pharaoh''s Curse, Eye
-    of Providence, Doom Orb, The World Stone.'
+    Talon, Chronos'' Pendant, Bracer of The Abyss, Blood-Bound Book, Obsidian Shard,
+    Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Helm of Radiance, Amanita Charm,
+    Freya''s Tears, Transcendence, Rod of Asclepius, Pharaoh''s Curse, Eye of Providence,
+    Doom Orb, The World Stone, Dominance.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -269,7 +269,7 @@ builds:
     Harp, Bracer of The Abyss, Runeforged Hammer, Obsidian Shard, Blood-Bound Book,
     Kinetic Cuirass, Freya''s Tears, Tekko-Kagi, Amanita Charm, Pharaoh''s Curse,
     Bancroft''s Talon, Helm of Radiance, Eye of Providence, Shield of the Phoenix,
-    Oni Hunter''s Garb, Rod of Asclepius, Dominance, Gem of Focus, Deathbringer.'
+    Oni Hunter''s Garb, Rod of Asclepius, Gem of Focus, Deathbringer, Dominance.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -484,8 +484,8 @@ builds:
     Guard, Spear of Desolation, Berserker''s Shield, The Reaper, Screeching Gargoyle,
     Avenging Blade, Hydra''s Lament, Damaru, Obsidian Shard, Breastplate of Valor,
     Tekko-Kagi, Lernaean Bow, Golden Blade, Stone of Binding, Chronos'' Pendant, Runeforged
-    Hammer, Bracer of The Abyss, Toxic Blade, Kinetic Cuirass, Bragi''s Harp, Void
-    Shield, Doom Orb, Blood-Bound Book, Amanita Charm, Freya''s Tears, The World Stone,
+    Hammer, Bracer of The Abyss, Kinetic Cuirass, Bragi''s Harp, Void Shield, Doom
+    Orb, Blood-Bound Book, Amanita Charm, Freya''s Tears, The World Stone, Toxic Blade,
     Pharaoh''s Curse, Eye of Providence, Heartseeker.'
   slot_scores:
     Jotunn's Revenge:
@@ -530,12 +530,12 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Tyrfing
   - Nimble Ring
   - Riptalon
-  - Silverbranch Bow
   - The Crusher
   flex_slots:
-  - Silverbranch Bow
+  - Tyrfing
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -555,10 +555,10 @@ builds:
     Jotunn''s Revenge, Berserker''s Shield, Genji''s Guard, Death Metal, Golden Blade,
     The Cosmic Horror, Hydra''s Lament, Damaru, Breastplate of Valor, Spear of the
     Magus, Lernaean Bow, Spear of Desolation, Bracer of The Abyss, The Reaper, Bragi''s
-    Harp, Chronos'' Pendant, Toxic Blade, Runeforged Hammer, Kinetic Cuirass, Pharaoh''s
-    Curse, Amanita Charm, Blood-Bound Book, Freya''s Tears, Obsidian Shard, Tekko-Kagi,
-    Eye of Providence, Oni Hunter''s Garb, Bancroft''s Talon, Helm of Radiance, Shield
-    of the Phoenix, Rod of Asclepius, Dominance, Shogun''s Ofuda.'
+    Harp, Chronos'' Pendant, Runeforged Hammer, Kinetic Cuirass, Pharaoh''s Curse,
+    Amanita Charm, Blood-Bound Book, Toxic Blade, Freya''s Tears, Obsidian Shard,
+    Tekko-Kagi, Eye of Providence, Oni Hunter''s Garb, Bancroft''s Talon, Helm of
+    Radiance, Shield of the Phoenix, Rod of Asclepius, Shogun''s Ofuda, Dominance.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -572,6 +572,12 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.32
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.46
+      win: 0.6
+      pick: 0.55
+      fit: 0.53
     Nimble Ring:
       total: 0.57
       efficiency: 0.68
@@ -584,12 +590,6 @@ builds:
       win: 0.66
       pick: 0.32
       fit: 0.51
-    Silverbranch Bow:
-      total: 0.53
-      efficiency: 0.52
-      win: 0.58
-      pick: 0.47
-      fit: 0.44
     The Crusher:
       total: 0.55
       efficiency: 0.64
