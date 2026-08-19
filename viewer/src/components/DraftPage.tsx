@@ -304,20 +304,48 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                       {startersAreConquest && " · Conquest data, no Joust openers are tracked"}
                     </span>
                   </div>
+                  {/* One chip per PURCHASE PATH, not per item. Leather Cowl and
+                      Hunter's Cowl are the same opener at two moments, and 84
+                      of 89 gods had both halves inside this three-slot row —
+                      so a third of the answer was spent restating one pick.
+                      The two rates are shown, never summed: a player who buys
+                      the base and upgrades it is counted in both, so adding
+                      them would invent a number bigger than the truth. */}
                   <ul className="mt-1.5 flex flex-wrap gap-1.5">
-                    {starters.map((s) => (
-                      <li key={s.name}>
-                        <a href={toHash.item(s.name)}
-                          aria-label={`${s.name} — opened with by ${Math.round(s.pick_rate * 100)}% of ${meName} players, winning ${Math.round(s.win_rate * 100)}%`}
-                          className="press flex items-center gap-1.5 rounded-md border border-line bg-bg2 py-1 pl-1 pr-2 transition-colors duration-150 ease-standard hover:border-line-strong">
-                          <Icon name={s.name} item className="h-6 w-6" />
-                          <span className="max-w-[13ch] truncate text-small text-ink">{s.name}</span>
-                          <span aria-hidden="true" className="font-mono text-label text-gold">
-                            {Math.round(s.pick_rate * 100)}%
-                          </span>
-                        </a>
-                      </li>
-                    ))}
+                    {starters.map((p) => {
+                      const end = p.upgrade ?? p.base!;
+                      const both = !!(p.base && p.upgrade);
+                      return (
+                        <li key={p.rootName}>
+                          <a href={toHash.item(end.name)}
+                            title={both
+                              ? `${Math.round(p.base!.pick_rate * 100)}% open with ${p.base!.name}; ${Math.round(p.upgrade!.pick_rate * 100)}% are holding ${p.upgrade!.name}`
+                              : `${Math.round(end.pick_rate * 100)}% open with ${end.name}, winning ${Math.round(end.win_rate * 100)}%`}
+                            aria-label={both
+                              ? `${p.base!.name} into ${p.upgrade!.name} — ${Math.round(p.base!.pick_rate * 100)}% of ${meName} players open with it, ${Math.round(p.upgrade!.pick_rate * 100)}% are holding the upgrade`
+                              : `${end.name} — opened with by ${Math.round(end.pick_rate * 100)}% of ${meName} players, winning ${Math.round(end.win_rate * 100)}%`}
+                            className="press flex items-center gap-1.5 rounded-md border border-line bg-bg2 py-1 pl-1 pr-2 transition-colors duration-150 ease-standard hover:border-line-strong">
+                            {p.base && <Icon name={p.base.name} item className="h-6 w-6" />}
+                            {both && (
+                              // The path's own arrow, in `faint` — it separates
+                              // two icons rather than labelling either.
+                              <span aria-hidden="true" className="-mx-0.5 text-label text-faint">›</span>
+                            )}
+                            {p.upgrade && <Icon name={p.upgrade.name} item className="h-6 w-6" />}
+                            <span className="max-w-[13ch] truncate text-small text-ink">{end.name}</span>
+                            <span aria-hidden="true" className="font-mono text-label text-gold">
+                              {Math.round(p.lead.pick_rate * 100)}%
+                            </span>
+                            {both && (
+                              // Where along the path people actually end up.
+                              <span aria-hidden="true" className="font-mono text-micro text-faint">
+                                {Math.round(p.base!.pick_rate * 100)}→{Math.round(p.upgrade!.pick_rate * 100)}
+                              </span>
+                            )}
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               )}

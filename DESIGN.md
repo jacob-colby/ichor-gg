@@ -252,6 +252,13 @@ Components should feel **tactile and confident**: presses register physically (a
 - Filter options are **derived from the data**. A hardcoded list shipped a `Glyph` option matching nothing while the one Relic was unreachable.
 - Where the model declines to score something, **say why**: tier-1 starters buy an ability rather than stats and sit out the fit on purpose. That is a finding, not a blank — never an em dash.
 
+### Openers (the "Opens with" row)
+
+- An opener is a **purchase path, not an item**. Leather Cowl and Hunter's Cowl are the same buy at two moments, and the row shows three entries — so listing both spent a third of the answer restating one pick. Measured across the shipped data, **84 of 89 gods** had both halves of one path in that row.
+- Grouping keys on the **item graph** (`builds_from` / `builds_into`), never on the `starters` config in `_weights.yaml`. The config knows five pairs; the graph knows all twelve, and the pair this was reported about is not in the config.
+- **The two rates are shown, never summed.** A player who buys the base and upgrades it is counted in both, so adding them reports an opener held more often than it is. The chip leads with whichever end the community actually holds most (`31%`) and carries the progression beside it (`16→31`) — that pair is the answer to "do people actually upgrade this".
+- Where an opener row is borrowed from another mode, **say so on the row** (`Conquest data, no Joust openers are tracked`), because SmiteBrain publishes Conquest only and a silent fallback would present one mode's habits as another's.
+
 ### Draft diff (draft board)
 - A re-rank is shown as a **displacement**, never as a lone arrival: `Divine Ruin · replaces Rod of Tahuti · +0.12 · answers anti-heal`. Keep both builds — the un-adapted one reduced to a membership set is why rows could say "swap in" with nothing to swap in for.
 - The magnitude is the model's own bonus, drawn as an `under` bar scaled to the configured clamp. Direction colour is `under` (the model promoting something), never focus-blue.

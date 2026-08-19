@@ -28,6 +28,10 @@ const item = (name: string, tags: string[] = []): Item =>
 const ITEMS = [
   item("Alpha"), item("Beta"), item("Gamma"), item("Delta"), item("Epsilon"), item("Zeta"),
   item("AntiHeal", ["anti-heal"]),
+  // A real starter path: the tier-1 root and the tier-2 it becomes. The
+  // opener row groups on this graph, not on the `starters` config.
+  { ...item("Conduit Gem"), tier: 1, builds_into: ["Archmage's Gem"] } as Item,
+  { ...item("Archmage's Gem"), tier: 2, builds_from: ["Conduit Gem"] } as Item,
 ];
 const SCORES = { Alpha: 0.6, Beta: 0.59, Gamma: 0.58, Delta: 0.57, Epsilon: 0.56, Zeta: 0.55, AntiHeal: 0.4 };
 /** The index ships one score table per mode; these fixtures care about the
@@ -206,10 +210,18 @@ describe("useDraftResult — what your god opens with", () => {
     }],
   }] as unknown as BuildNote[];
 
-  it("reports the god's own starters, in pick-rate order", () => {
+  it("groups an opener with its own upgrade instead of listing both", () => {
+    // Conduit Gem and Archmage's Gem are one purchase at two moments. Listed
+    // separately they ate two of the three slots; measured across the shipped
+    // data, 84 of 89 gods had both halves of one path in this row.
     const r = run(["TestGod", "", "", "", ""], ["", "", "", "", ""], { builds: withStarters });
-    expect(r.starters.map((s) => s.name)).toEqual(["Archmage's Gem", "Conduit Gem"]);
-    expect(r.starters[0].pick_rate).toBe(0.25);
+    expect(r.starters).toHaveLength(1);
+    const [path] = r.starters;
+    expect(path.base?.name).toBe("Conduit Gem");
+    expect(path.upgrade?.name).toBe("Archmage's Gem");
+    // The lead is the end the community actually holds most often, never a sum
+    // — a player who buys the base and upgrades is counted in both rates.
+    expect(path.lead.pick_rate).toBe(0.25);
   });
 
   it("is empty when the god has no community starters rather than guessing one", () => {
@@ -277,13 +289,13 @@ describe("useDraftResult — openers fall back to Conquest, and say so", () => {
 
   it("shows Conquest's openers in Joust, flagged as borrowed", () => {
     const r = at("joust");
-    expect(r.starters.map((s) => s.name)).toEqual(["Archmage's Gem"]);
+    expect(r.starters.map((p) => p.lead.name)).toEqual(["Archmage's Gem"]);
     expect(r.startersAreConquest).toBe(true);
   });
 
   it("does not flag Conquest's own openers as borrowed", () => {
     const r = at("conquest");
-    expect(r.starters.map((s) => s.name)).toEqual(["Archmage's Gem"]);
+    expect(r.starters.map((p) => p.lead.name)).toEqual(["Archmage's Gem"]);
     expect(r.startersAreConquest).toBe(false);
   });
 });

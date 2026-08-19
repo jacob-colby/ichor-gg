@@ -12,6 +12,7 @@ import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, God, Item, L
 import { deriveThreats, threatOverlay, damageOverlay, threatCulprits, type ThreatKey } from "./threats";
 import { adaptedCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftBuild";
 import type { DraftMode } from "./draft";
+import { groupStarters, type StarterPath } from "./starters";
 
 const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust" };
 
@@ -65,7 +66,10 @@ export interface DraftResult {
   /** What your god's players open with, top 3 by pick rate. A build starts
    *  before item one and this page began at item one, so the first purchase of
    *  the match was the one thing it never showed. */
-  starters: { name: string; pick_rate: number; win_rate: number }[];
+  /** Openers grouped into purchase paths — Leather Cowl and Hunter's Cowl are
+   *  one opener, not two, and 84 of 89 gods had both halves in a three-slot
+   *  list. See lib/starters.ts. */
+  starters: StarterPath[];
   /** True when `starters` came from Conquest because the selected mode has no
    *  community data of its own. The row has to say so — see `starters`. */
   startersAreConquest: boolean;
@@ -142,11 +146,14 @@ export function useDraftResult(
     };
     const own = openersFor(MODE_LABEL[mode]);
     if (own.length > 0 || MODE_LABEL[mode] === "Conquest") {
-      return { starters: own, startersAreConquest: false };
+      return { starters: groupStarters(own, itemsByName), startersAreConquest: false };
     }
     const fallback = openersFor("Conquest");
-    return { starters: fallback, startersAreConquest: fallback.length > 0 };
-  }, [builds, meName, mode]);
+    return {
+      starters: groupStarters(fallback, itemsByName),
+      startersAreConquest: fallback.length > 0,
+    };
+  }, [builds, meName, mode, itemsByName]);
 
   const allyCores = useMemo(() => {
     const out: Record<string, string[]> = {};
