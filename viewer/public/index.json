@@ -331,7 +331,8 @@
         "heal": 1,
         "shield": 2,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.5
     },
     {
       "type": "smite-god",
@@ -634,7 +635,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -945,7 +947,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -1296,7 +1299,8 @@
         "heal": 0,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -1596,7 +1600,8 @@
         "heal": 1,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -1913,7 +1918,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -2229,7 +2235,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -2543,7 +2550,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.9
     },
     {
       "type": "smite-god",
@@ -2814,7 +2822,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -3164,7 +3173,8 @@
         "heal": 0,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -3442,7 +3452,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -3834,7 +3845,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.9
     },
     {
       "type": "smite-god",
@@ -4168,7 +4180,8 @@
         "heal": 0,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -4518,7 +4531,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -4804,7 +4818,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -5120,7 +5135,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -5488,7 +5504,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.9
     },
     {
       "type": "smite-god",
@@ -5802,7 +5819,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -6159,7 +6177,8 @@
         "heal": 2,
         "shield": 3,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -6491,7 +6510,8 @@
         "heal": 1,
         "shield": 1,
         "wall": 1
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -6799,7 +6819,8 @@
         "heal": 2,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -7109,7 +7130,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -7430,7 +7452,8 @@
         "heal": 2,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -7742,7 +7765,8 @@
         "heal": 0,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -8047,7 +8071,8 @@
         "heal": 2,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -8345,7 +8370,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -8775,7 +8801,8 @@
         "heal": 1,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.5
     },
     {
       "type": "smite-god",
@@ -9110,7 +9137,8 @@
         "heal": 3,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -9410,7 +9438,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -9740,7 +9769,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -10063,7 +10093,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -10400,7 +10431,8 @@
         "heal": 1,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -10706,7 +10738,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -11024,7 +11057,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -11317,7 +11351,8 @@
         "heal": 0,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -11654,7 +11689,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.5
     },
     {
       "type": "smite-god",
@@ -11977,7 +12013,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.9
     },
     {
       "type": "smite-god",
@@ -12293,7 +12330,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.5
     },
     {
       "type": "smite-god",
@@ -12631,7 +12669,8 @@
         "heal": 0,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -12922,7 +12961,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -13238,7 +13278,8 @@
         "heal": 2,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.9
     },
     {
       "type": "smite-god",
@@ -13533,7 +13574,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -13905,7 +13947,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -14195,7 +14238,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -14511,7 +14555,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -14844,7 +14889,8 @@
         "heal": 2,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.9
     },
     {
       "type": "smite-god",
@@ -15169,7 +15215,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -15454,7 +15501,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -15757,7 +15805,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -16119,7 +16168,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -16431,7 +16481,8 @@
         "heal": 2,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -16752,7 +16803,8 @@
         "heal": 0,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -17051,7 +17103,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -17384,7 +17437,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -17691,7 +17745,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -17988,7 +18043,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -18546,7 +18602,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -18967,7 +19024,8 @@
         "heal": 2,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -19326,7 +19384,8 @@
         "heal": 2,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -19659,7 +19718,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -19994,7 +20054,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -20303,7 +20364,8 @@
         "heal": 1,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -20610,7 +20672,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -20931,7 +20994,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -21262,7 +21326,8 @@
         "heal": 0,
         "shield": 2,
         "wall": 1
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -21561,7 +21626,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.5
     },
     {
       "type": "smite-god",
@@ -21874,7 +21940,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -22180,7 +22247,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -22453,7 +22521,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -22769,7 +22838,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -23054,7 +23124,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -23364,7 +23435,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -23661,7 +23733,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -23983,7 +24056,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -24320,7 +24394,8 @@
         "heal": 2,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -24645,7 +24720,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.5
     },
     {
       "type": "smite-god",
@@ -24983,7 +25059,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -25283,7 +25360,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -25568,7 +25646,8 @@
         "heal": 2,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -25857,7 +25936,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -26173,7 +26253,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 1
-      }
+      },
+      "defense_affinity": 0.5
     },
     {
       "type": "smite-god",
@@ -26491,7 +26572,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -26884,7 +26966,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -27180,7 +27263,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -27507,7 +27591,8 @@
         "heal": 1,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     },
     {
       "type": "smite-god",
@@ -27798,7 +27883,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -28135,7 +28221,8 @@
         "heal": 7,
         "shield": 1,
         "wall": 0
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -28440,7 +28527,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 1
-      }
+      },
+      "defense_affinity": 1.0
     },
     {
       "type": "smite-god",
@@ -28739,7 +28827,8 @@
         "heal": 0,
         "shield": 0,
         "wall": 0
-      }
+      },
+      "defense_affinity": 0.0
     }
   ],
   "items": [
@@ -291022,6 +291111,11 @@
         "Penetration": 0.6
       }
     },
+    "archetype_scaled_stats": [
+      "Magical Protection",
+      "Physical Protection",
+      "Max Health"
+    ],
     "ally_covered": -0.5,
     "ally_gap": 0.5,
     "self_covered": 0.35,

@@ -95,7 +95,7 @@ export function threatCulprits(
 
 /** Threat model -> {tags, stats} bonus overlay (pre-clamp; the clamp is applied
  *  per item in draftBuild, since it bounds an item's TOTAL bonus). */
-export function threatOverlay(t: ThreatModel, cfg: DraftConfig): Overlay {
+export function threatOverlay(t: ThreatModel, cfg: DraftConfig, meGod?: God): Overlay {
   const tags: Record<string, number> = {};
   const stats: Record<string, number> = {};
   const counts: Record<string, number> = {
@@ -122,11 +122,28 @@ export function threatOverlay(t: ThreatModel, cfg: DraftConfig): Overlay {
       tags[tag] = (tags[tag] ?? 0) + share(n) * cfg.per_share * w * mult;
     }
   }
+  /* A DEFENSIVE stat bonus is scaled by the god's own archetype. These entries
+   * are keyed on what the ENEMY is, and applied flat they answered "they are
+   * magical" with "so become tankier" — Magical Protection at weight 1.0
+   * against Penetration's 0.6, for a Hunter whose whole build is damage.
+   * Measured across 10 damage gods vs a 4-tank/4-magical comp: protection
+   * items in the core went 12 -> 25, Apollo and Anhur both taking Genji's
+   * Guard. `defense_affinity` comes from the same role map that governs fit,
+   * so this is consistency rather than a new opinion.
+   *
+   * Offensive stats are NOT scaled. Penetration is the response this change
+   * exists to encourage, and the role table happens not to list it for
+   * Carry/Sharpshooter/Hunter — scaling it by the same number would zero it. */
+  const scaled = new Set(cfg.archetype_scaled_stats ?? []);
+  const affinity = meGod?.defense_affinity;
   for (const [threat, map] of Object.entries(cfg.stat_bonus ?? {})) {
     const n = counts[threat] ?? 0;
     if (!n) continue;
     for (const [stat, w] of Object.entries(map)) {
-      stats[stat] = (stats[stat] ?? 0) + share(n) * cfg.per_share * w;
+      // Absent affinity (an older index) leaves the old flat behaviour.
+      const k = scaled.has(stat) && affinity != null ? affinity : 1;
+      if (!k) continue;
+      stats[stat] = (stats[stat] ?? 0) + share(n) * cfg.per_share * w * k;
     }
   }
   // An all-physical team wants penetration — but scaled by how much of the

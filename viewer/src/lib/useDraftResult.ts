@@ -192,7 +192,7 @@ export function useDraftResult(
       selfCovered: draftConfig!.self_covered ?? 1,
     };
     const base = adaptedCore(modeScores!, itemsByName, { tags: {}, stats: {} }, opts);
-    const overlay = threatOverlay(threats, draftConfig!);
+    const overlay = threatOverlay(threats, draftConfig!, meGod);
     overlay.items = damageOverlay(threats, godItemDamage?.[meName], draftConfig!);
     const adapted = adaptedCore(modeScores!, itemsByName, overlay, opts);
     // Both builds survive: the diff is the product's whole claim.

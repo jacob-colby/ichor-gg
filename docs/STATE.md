@@ -95,6 +95,7 @@ Each of these has its evidence in the named module.
 | Eye of Providence carries a **`ward-economy`** penalty | `data/_tags.yaml` | Its stat discount is the ward engine's price tag; 16 Support/Solo cores against 1 community sighting |
 | `god_item_scores` ships **one table per mode** | `build_index._god_item_scores` | A mode toggle that changes the label and not the model is worse than none; Eye of Providence sat in Joust cores because the draft was Conquest-scored |
 | A threat is the **union** of role label and measured kit | `threats.ts`, `threat_kit.py` | Label alone: `Healing` on 9 of 89 gods. Measurement alone at 1 ability: 42, mostly incidental. Label OR 2+ abilities: 18 |
+| A **defensive** draft bonus is scaled by the god's archetype | `defense_affinity`, `threats.threatOverlay` | Flat, it answered "they are magical" with "become tankier" to a Hunter: protections in 40 carry cores went 32 → 70. Scaled, 24 — and penetration 159 → 203 |
 | A relic answer is called out **on its own line** | `draft.relics` in `_weights.yaml` | It does take one of the six, but the model can't price a `+7.5% of all Stats` multiplier, so it never wins a slot on score and has to be named explicitly |
 | The aspect control is an **orange hexagon on the portrait** | `AspectBadge.tsx` | Where SMITE draws it, so it is self-describing; orange rather than gold keeps the Torchlight Rule intact |
 | An aspect with no overlay **falls back** to the base build | `DetailPanel.aspectFamily` | 72 gods have an aspect, 7 have a scoring overlay; filtering strictly blanked the model side for the other 65 |
@@ -340,7 +341,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (596) ·
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
-| Tests | 614 pipeline · 636 viewer |
+| Tests | 616 pipeline · 641 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

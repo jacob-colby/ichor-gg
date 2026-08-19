@@ -40,6 +40,24 @@ def _enrich_gods(gods, weights):
         # actually heal, `Crowd Control` on 8 and 80 land hard CC, and nothing
         # labels player-made walls at all. See threat_kit.py.
         god["threat_kit"] = threat_kit.god_threat_kit(god)
+        # How much this god's own archetype wants PROTECTIONS, 0..1. The draft
+        # applies its defensive stat bonuses in proportion to this.
+        #
+        # `draft.stat_bonus` is keyed on the ENEMY's damage type and was applied
+        # flat, so a Hunter facing a magical comp got Magical Protection at
+        # weight 1.0 against Penetration's 0.6 — the draft was answering "they
+        # are magical" with "so become tankier", for a god whose entire build
+        # is damage. Measured across 10 damage gods vs a 4-tank/4-magical comp:
+        # protection items in the core went 12 -> 25, with Apollo and Anhur
+        # both gaining Genji's Guard.
+        #
+        # The role map already knows the answer and is the same map that governs
+        # fit, so this is consistency rather than a new opinion: Support and
+        # Guardian read 1.0, Solo/Warrior/Brawler 0.5, Carry and Mid 0.0.
+        role_map = scoring._role_stat_map(god, weights)
+        god["defense_affinity"] = round(max(
+            role_map.get("Physical Protection", 0.0),
+            role_map.get("Magical Protection", 0.0)), 3)
     return gods
 
 

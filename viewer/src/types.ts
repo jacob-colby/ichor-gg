@@ -43,6 +43,10 @@ export interface God {
    *  pipeline/smite/threat_kit.py. Optional: an index built before it shipped
    *  simply falls back to the role labels. */
   threat_kit?: { hard_cc: number; slow: number; heal: number; shield: number; wall: number };
+  /** 0..1 — how much this god's own archetype wants protections, from the same
+   *  role map that governs fit. Scales the draft's DEFENSIVE stat bonuses so a
+   *  magical enemy comp does not answer "become tankier" to a Hunter. */
+  defense_affinity?: number;
 }
 
 export interface Item {
@@ -297,6 +301,9 @@ export interface DraftConfig {
    *  relic does not compete for one of the six core slots — the game gives it
    *  its own — so there is no displacement to compute and no bonus to clamp. */
   relics?: Record<string, { item: string; because: string }>;
+  /** Stat-bonus keys scaled by the god's `defense_affinity`. Defensive entries
+   *  only — Penetration is deliberately absent; see _weights.yaml. */
+  archetype_scaled_stats?: string[];
   ally_covered: number;
   ally_gap: number;
   /** Fraction of a draft bonus that survives when the core already covers the

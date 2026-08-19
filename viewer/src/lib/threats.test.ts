@@ -248,3 +248,48 @@ describe("deriveThreats — the measured kit, not just the role label", () => {
     expect(deriveThreats({ allies: [], enemies: ["Ra"] }, gods, {}).walls).toBe(0);
   });
 });
+
+/* `draft.stat_bonus` is keyed on what the ENEMY is, and was applied flat — so
+ * a Hunter facing a magical comp was told "they are magical, so become
+ * tankier": Magical Protection at weight 1.0 against Penetration's 0.6, for a
+ * god whose whole build is damage. Measured across 40 damage gods vs a
+ * 4-tank/4-magical comp, protection items in the core went 32 (no draft) to 70.
+ * Archetype-scaled they land at 24, and penetration items rise 159 -> 203. */
+describe("threatOverlay — a defensive bonus respects the god's archetype", () => {
+  const CFG2: DraftConfig = { ...CFG,
+    stat_bonus: { magical: { "Magical Protection": 1 }, tanks: { Penetration: 0.6 } },
+    archetype_scaled_stats: ["Magical Protection"] } as DraftConfig;
+  const threats = { ...EMPTY, magical: 4, tanks: 4, rosterSize: 5, enemyCount: 5 };
+  const withAff = (a?: number) => ({ ...god("G", "physical"), defense_affinity: a }) as God;
+
+  it("zeroes a protection bonus for a god whose role wants none", () => {
+    const o = threatOverlay(threats, CFG2, withAff(0));
+    expect(o.stats["Magical Protection"] ?? 0).toBe(0);
+  });
+
+  it("keeps it in full for a Support", () => {
+    const o = threatOverlay(threats, CFG2, withAff(1));
+    expect(o.stats["Magical Protection"]).toBeGreaterThan(0);
+  });
+
+  it("halves it for a Solo", () => {
+    const full = threatOverlay(threats, CFG2, withAff(1)).stats["Magical Protection"];
+    const half = threatOverlay(threats, CFG2, withAff(0.5)).stats["Magical Protection"];
+    expect(half).toBeCloseTo(full / 2, 6);
+  });
+
+  it("never scales Penetration, which is the response being encouraged", () => {
+    // The role table happens not to list Penetration for Carry/Sharpshooter/
+    // Hunter, so scaling it by the same affinity would zero out exactly the
+    // buy this change exists to promote.
+    const carry = threatOverlay(threats, CFG2, withAff(0)).stats["Penetration"];
+    const tank = threatOverlay(threats, CFG2, withAff(1)).stats["Penetration"];
+    expect(carry).toBeGreaterThan(0);
+    expect(carry).toBeCloseTo(tank, 6);
+  });
+
+  it("falls back to flat for an index built before defense_affinity shipped", () => {
+    const o = threatOverlay(threats, CFG2, god("G", "physical"));
+    expect(o.stats["Magical Protection"]).toBeGreaterThan(0);
+  });
+});

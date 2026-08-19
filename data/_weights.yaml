@@ -396,6 +396,22 @@ draft:
     magical: {Magical Protection: 1.0}
     physical: {Physical Protection: 1.0}
     tanks: {Penetration: 0.6}
+  # Stat bonuses that must be scaled by the god's OWN archetype before they
+  # apply, using the `defense_affinity` the index ships per god.
+  #
+  # These three lines are keyed on what the ENEMY is, and were applied flat. So
+  # a Hunter facing a magical comp was told "they are magical, become tankier"
+  # — Magical Protection at 1.0 against Penetration's 0.6, for a god whose
+  # whole build is damage. Measured across 10 damage gods vs a 4-tank /
+  # 4-magical comp: protection items in the core went 12 -> 25, with Apollo and
+  # Anhur both gaining Genji's Guard. Against tanks a carry wants penetration.
+  #
+  # Only the DEFENSIVE entries are listed. Penetration deliberately is not:
+  # it is offensive, every damage god wants more of it against tanks, and the
+  # role table happens not to list it for Carry/Sharpshooter/Hunter — so
+  # scaling it by the same affinity would zero out the exact response this
+  # change exists to encourage.
+  archetype_scaled_stats: [Magical Protection, Physical Protection, Max Health]
   ally_covered: -0.5     # multiplier delta when an ally already covers that job
   ally_gap: 0.5          # multiplier delta when NOBODY covers it
   # How much of a draft bonus survives when YOUR OWN CORE already covers the

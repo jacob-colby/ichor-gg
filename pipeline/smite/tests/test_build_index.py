@@ -28,9 +28,14 @@ def test_build_index_collects_gods_items_builds(tmp_path):
     # `threat_kit` IS always present, including for a god with no abilities:
     # all-zero counts are a measurement ("this kit does none of these") and a
     # missing key would read as "not measured". See threat_kit.py.
+    # `threat_kit` and `defense_affinity` are always present, including for a
+    # god with no abilities and no role: all-zero counts are a measurement
+    # ("this kit does none of these") and a missing key would read as "not
+    # measured". See threat_kit.py and _enrich_gods.
     assert index["gods"] == [{
         "type": "smite-god", "name": "Chiron",
         "threat_kit": {"hard_cc": 0, "slow": 0, "heal": 0, "shield": 0, "wall": 0},
+        "defense_affinity": 0.0,
     }]
     # Items are enriched with god-agnostic effect_tags + the efficiency verdict;
     # this note has no cost so it can't be scored (tier None, efficiency None —
@@ -571,3 +576,34 @@ def test_index_ships_the_lifesteal_rule_the_viewer_needs():
     weights = scoring.load_weights(recommend.WEIGHTS_PATH)
     assert r["draft"]["lifesteal_caps"] == weights["lifesteal_caps"]
     assert r["draft"]["lifesteal_caps"], "the rule is empty; the test proves nothing"
+
+
+def test_defense_affinity_follows_the_role_map():
+    """The draft scales its DEFENSIVE stat bonuses by this, so a magical enemy
+    comp stops answering "become tankier" to a Hunter. It comes from the same
+    role map that governs fit, so the two can never disagree about whether a
+    god wants protections."""
+    from smite import build_index, scoring, recommend
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    gods = recommend.load_gods()
+    build_index._enrich_gods(gods, weights)
+    by_name = {g["name"]: g for g in gods}
+    # A Carry wants none; a Support wants them fully.
+    assert by_name["Artemis"]["defense_affinity"] == 0.0
+    assert by_name["Ymir"]["defense_affinity"] == 1.0
+    # Every god carries one, and it is a real 0..1.
+    for g in gods:
+        aff = g["defense_affinity"]
+        assert 0.0 <= aff <= 1.0, (g["name"], aff)
+
+
+def test_penetration_is_not_archetype_scaled():
+    """Deliberate: penetration is offensive, every damage god wants more of it
+    against tanks, and the role table happens not to list it for Carry /
+    Sharpshooter / Hunter — so scaling it by `defense_affinity` would zero out
+    the exact response the scaling exists to encourage."""
+    from smite import scoring, recommend
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    scaled = (weights.get("draft") or {}).get("archetype_scaled_stats") or []
+    assert "Penetration" not in scaled
+    assert "Magical Protection" in scaled and "Physical Protection" in scaled
