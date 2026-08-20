@@ -27,3 +27,20 @@ Thumbs.db
 # Secrets — never commit
 .env
 .env.*
+
+# Generated analysis reports. `recommend --all` rewrites one per god (89 of
+# them) and `validate` / `analysis` / the scheduled refresh rewrite the rest,
+# so any model change lands ~94 files of regenerated prose on top of the few
+# files that actually decided anything. The 2026-08-19 effect-tag pass was 317
+# files, of which ten held the change.
+#
+# NOT the whole directory. `data/Analysis/snapshots/` is an INPUT, not a
+# report — `build_index` reads it for the viewer's patch notes — so it stays
+# tracked, and the `*.md` pattern leaves it alone.
+data/Analysis/*.md
+# `_calibration.md` is the exception that earns its place: it is the
+# leakage-free gate's own output, it is byte-for-byte deterministic (verified
+# 2026-08-19 by running it twice), and it therefore changes ONLY when the model
+# does. That makes its diff the single clearest record of what a commit did to
+# the gate. Drop this line if you would rather regenerate it to find out.
+!data/Analysis/_calibration.md
