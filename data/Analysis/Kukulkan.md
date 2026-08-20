@@ -2,18 +2,17 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Rod of Tahuti | 0.68 | 0.77 | 0.77 | 0.60 | 0.47 | 0.79 | undervalued |  |  |
+| Rod of Tahuti | 0.67 | 0.77 | 0.77 | 0.59 | 0.43 | 0.79 | undervalued |  |  |
 | Gluttonous Grimoire | 0.62 | 0.71 | 0.63 | 0.59 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
 | Soul Gem | 0.61 | 0.70 | 0.57 | 0.59 | 0.00 | 1.00 | fair | burst, sustain, aura | **UNDERRATED** |
-| Obsidian Shard | 0.61 | 0.63 | 0.52 | 0.61 | 0.37 | 0.89 | fair | penetration |  |
-| The Cosmic Horror | 0.60 | 0.64 | 0.58 | 0.60 | 0.23 | 0.79 | fair |  |  |
-| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.55 | 0.40 | 1.00 | fair | ability-uptime |  |
+| Obsidian Shard | 0.61 | 0.63 | 0.52 | 0.62 | 0.37 | 0.89 | fair | penetration |  |
+| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.55 | 0.37 | 1.00 | fair | ability-uptime |  |
+| The Cosmic Horror | 0.60 | 0.64 | 0.58 | 0.59 | 0.22 | 0.79 | fair |  |  |
 | Spear of the Magus | 0.58 | 0.64 | 0.57 | 0.59 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
 | Nimble Ring | 0.57 | 0.60 | 0.68 | 0.59 | 0.00 | 0.42 | undervalued |  | **UNDERRATED** |
-| Doom Orb | 0.55 | 0.56 | 0.46 | 0.60 | 0.02 | 0.79 | fair | ramp | **UNDERRATED** |
-| Chronos' Pendant | 0.55 | 0.57 | 0.55 | 0.59 | 0.00 | 0.63 | fair | ability-uptime | **UNDERRATED** |
+| Totem of Death | 0.56 | 0.55 | 0.47 | 0.62 | 0.15 | 0.73 | fair | percent-health |  |
+| Doom Orb | 0.55 | 0.56 | 0.46 | 0.59 | 0.00 | 0.79 | fair | ramp | **UNDERRATED** |
 | The World Stone | 0.54 | 0.56 | 0.46 | 0.59 | 0.00 | 0.79 | fair | ability-uptime | **UNDERRATED** |
-| Totem of Death | 0.54 | 0.55 | 0.47 | 0.58 | 0.15 | 0.73 | fair | percent-health |  |
 | Genji's Guard | 0.54 | 0.55 | 0.69 | 0.59 | 0.00 | 0.21 | undervalued | ability-uptime | **UNDERRATED** |
 | Dreamer's Idol | 0.54 | 0.54 | 0.44 | 0.59 | 0.00 | 0.79 | fair | cc-immunity, active | **UNDERRATED** |
 | Gem of Focus | 0.53 | 0.53 | 0.49 | 0.59 | 0.00 | 0.63 | fair | mobility | **UNDERRATED** |
@@ -24,9 +23,9 @@
 | Blood-Bound Book | 0.52 | 0.51 | 0.55 | 0.59 | 0.00 | 0.42 | fair | sustain, active | **UNDERRATED** |
 | Rod of Asclepius | 0.52 | 0.51 | 0.55 | 0.59 | 0.00 | 0.42 | fair | sustain, aura, active | **UNDERRATED** |
 | Breastplate of Valor | 0.52 | 0.51 | 0.64 | 0.59 | 0.00 | 0.21 | undervalued | ability-uptime | **UNDERRATED** |
+| Book of Thoth | 0.52 | 0.47 | 0.49 | 0.54 | 0.80 | 0.42 | fair | stacking |  |
 | Bancroft's Talon | 0.51 | 0.50 | 0.53 | 0.59 | 0.00 | 0.42 | fair | sustain, low-health | **UNDERRATED** |
 | Jade Scepter | 0.51 | 0.50 | 0.53 | 0.59 | 0.00 | 0.42 | fair | peel, active | **UNDERRATED** |
-| Book of Thoth | 0.51 | 0.47 | 0.49 | 0.52 | 0.79 | 0.42 | fair | stacking |  |
 | Bracer of The Abyss | 0.51 | 0.48 | 0.51 | 0.59 | 0.00 | 0.42 | fair | ramp | **UNDERRATED** |
 | Alchemist Coat | 0.50 | 0.47 | 0.50 | 0.59 | 0.00 | 0.42 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.50 | 0.47 | 0.59 | 0.59 | 0.00 | 0.21 | fair | low-health, ramp | **UNDERRATED** |
@@ -80,6 +79,7 @@
 | Contagion | 0.42 | 0.30 | 0.39 | 0.59 | 0.00 | 0.10 | premium | anti-heal, burst |  |
 | Heartwood Charm | 0.41 | 0.29 | 0.33 | 0.59 | 0.00 | 0.21 | premium | ability-uptime, heal-scaling, active |  |
 | Stygian Anchor | 0.41 | 0.29 | 0.41 | 0.59 | 0.00 | 0.00 | premium | anti-heal, damage-debuff |  |
+| Chronos' Pendant | 0.41 | 0.57 | 0.55 | 0.27 | 0.02 | 0.63 | fair | ability-uptime | **UNDERRATED** |
 | Shroud of Vengeance | 0.41 | 0.28 | 0.36 | 0.59 | 0.00 | 0.10 | premium | burst |  |
 | Hussar's Wings | 0.40 | 0.27 | 0.38 | 0.59 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Spirit Robe | 0.39 | 0.25 | 0.36 | 0.59 | 0.00 | 0.00 | premium | sustain |  |

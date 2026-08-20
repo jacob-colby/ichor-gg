@@ -2,11 +2,11 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Rod of Tahuti | 0.67 | 0.77 | 0.77 | 0.56 | 0.65 | 0.78 | undervalued |  |  |
-| Obsidian Shard | 0.64 | 0.63 | 0.52 | 0.65 | 0.67 | 0.88 | fair | penetration |  |
+| Rod of Tahuti | 0.66 | 0.77 | 0.77 | 0.54 | 0.65 | 0.78 | undervalued |  |  |
+| Obsidian Shard | 0.63 | 0.63 | 0.52 | 0.64 | 0.67 | 0.88 | fair | penetration |  |
+| Dreamer's Idol | 0.62 | 0.54 | 0.44 | 0.75 | 0.25 | 0.78 | fair | cc-immunity, active |  |
 | Soul Gem | 0.61 | 0.70 | 0.57 | 0.52 | 0.62 | 1.00 | fair | burst, sustain, aura |  |
-| Dreamer's Idol | 0.61 | 0.54 | 0.44 | 0.72 | 0.25 | 0.78 | fair | cc-immunity, active |  |
-| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.54 | 0.47 | 1.00 | fair | ability-uptime |  |
+| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.55 | 0.46 | 1.00 | fair | ability-uptime |  |
 | Gluttonous Grimoire | 0.60 | 0.70 | 0.63 | 0.54 | 0.00 | 0.88 | undervalued | burst | **UNDERRATED** |
 | The Cosmic Horror | 0.56 | 0.64 | 0.58 | 0.54 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.56 | 0.63 | 0.57 | 0.54 | 0.00 | 0.78 | fair |  | **UNDERRATED** |
@@ -26,7 +26,6 @@
 | Jade Scepter | 0.49 | 0.50 | 0.53 | 0.54 | 0.00 | 0.44 | fair | peel, active | **UNDERRATED** |
 | The World Stone | 0.49 | 0.55 | 0.46 | 0.46 | 0.15 | 0.78 | fair | ability-uptime |  |
 | Bracer of The Abyss | 0.49 | 0.49 | 0.51 | 0.54 | 0.00 | 0.44 | fair | ramp | **UNDERRATED** |
-| Doom Orb | 0.48 | 0.56 | 0.46 | 0.45 | 0.07 | 0.78 | fair | ramp | **UNDERRATED** |
 | Alchemist Coat | 0.48 | 0.48 | 0.50 | 0.54 | 0.00 | 0.44 | fair |  | **UNDERRATED** |
 | Freya's Tears | 0.48 | 0.48 | 0.59 | 0.54 | 0.00 | 0.22 | fair | low-health, ramp | **UNDERRATED** |
 | Polynomicon | 0.48 | 0.47 | 0.44 | 0.54 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
@@ -35,6 +34,7 @@
 | Shield of the Phoenix | 0.47 | 0.46 | 0.57 | 0.54 | 0.00 | 0.22 | fair | sustain |  |
 | Wish-Granting Pearl | 0.47 | 0.46 | 0.47 | 0.54 | 0.00 | 0.44 | fair |  |  |
 | Typhon’s Heart | 0.47 | 0.46 | 0.46 | 0.54 | 0.00 | 0.44 | fair | stacking |  |
+| Doom Orb | 0.47 | 0.56 | 0.46 | 0.42 | 0.07 | 0.78 | fair | ramp | **UNDERRATED** |
 | Bragi's Harp | 0.47 | 0.46 | 0.42 | 0.54 | 0.00 | 0.54 | premium | burst |  |
 | Lifebinder | 0.47 | 0.45 | 0.45 | 0.54 | 0.00 | 0.44 | fair | sustain, aura, active |  |
 | Divine Ruin | 0.47 | 0.44 | 0.40 | 0.54 | 0.00 | 0.54 | premium | anti-heal, burst |  |

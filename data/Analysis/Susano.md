@@ -2,19 +2,19 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.65 | 0.75 | 0.64 | 0.57 | 0.36 | 1.00 | undervalued | ability-uptime |  |
+| Jotunn's Revenge | 0.65 | 0.75 | 0.64 | 0.57 | 0.34 | 1.00 | undervalued | ability-uptime |  |
 | The Crusher | 0.64 | 0.75 | 0.64 | 0.59 | 0.00 | 1.00 | undervalued | burst | **UNDERRATED** |
-| Heartseeker | 0.60 | 0.59 | 0.41 | 0.59 | 0.75 | 1.00 | premium | burst, percent-health |  |
-| Hydra's Lament | 0.60 | 0.60 | 0.56 | 0.60 | 0.49 | 0.71 | fair | burst |  |
-| The Reaper | 0.59 | 0.64 | 0.52 | 0.57 | 0.39 | 0.91 | fair | sustain |  |
-| Titan's Bane | 0.57 | 0.61 | 0.45 | 0.54 | 0.39 | 1.00 | fair | penetration |  |
+| Hydra's Lament | 0.61 | 0.60 | 0.56 | 0.62 | 0.50 | 0.71 | fair | burst |  |
+| Heartseeker | 0.60 | 0.59 | 0.41 | 0.60 | 0.75 | 1.00 | premium | burst, percent-health |  |
+| The Reaper | 0.60 | 0.64 | 0.52 | 0.58 | 0.39 | 0.91 | fair | sustain |  |
+| Titan's Bane | 0.57 | 0.61 | 0.45 | 0.55 | 0.39 | 1.00 | fair | penetration |  |
 | Pendulum Blade | 0.56 | 0.59 | 0.41 | 0.59 | 0.00 | 1.00 | premium | ability-uptime, active | **UNDERRATED** |
 | Tekko-Kagi | 0.56 | 0.58 | 0.44 | 0.59 | 0.00 | 0.91 | fair | mobility | **UNDERRATED** |
 | Runeforged Hammer | 0.55 | 0.57 | 0.55 | 0.59 | 0.00 | 0.62 | fair | burst | **UNDERRATED** |
 | Damaru | 0.54 | 0.55 | 0.57 | 0.59 | 0.00 | 0.52 | fair | crit-scaling | **UNDERRATED** |
 | Lernaean Bow | 0.53 | 0.54 | 0.50 | 0.59 | 0.00 | 0.62 | fair | wave-clear, burst, anti-shield, active | **UNDERRATED** |
 | Avatar's Parashu | 0.53 | 0.53 | 0.37 | 0.59 | 0.00 | 0.91 | premium | cc-immunity, active | **UNDERRATED** |
-| Barbed Carver | 0.53 | 0.47 | 0.40 | 0.63 | 0.28 | 0.62 | premium | burst |  |
+| Barbed Carver | 0.53 | 0.47 | 0.40 | 0.63 | 0.30 | 0.62 | premium | burst |  |
 | Golden Blade | 0.53 | 0.53 | 0.53 | 0.59 | 0.00 | 0.52 | fair | wave-clear | **UNDERRATED** |
 | Transcendence | 0.53 | 0.52 | 0.52 | 0.59 | 0.00 | 0.52 | fair | stacking | **UNDERRATED** |
 | Avenging Blade | 0.53 | 0.52 | 0.48 | 0.59 | 0.00 | 0.62 | fair | protection-shred | **UNDERRATED** |
@@ -42,8 +42,8 @@
 | Shield of the Phoenix | 0.48 | 0.42 | 0.57 | 0.59 | 0.00 | 0.09 | fair | sustain |  |
 | Toxic Blade | 0.48 | 0.42 | 0.43 | 0.59 | 0.00 | 0.39 | fair | anti-heal, damage-debuff |  |
 | Oath-Sworn Spear | 0.47 | 0.41 | 0.33 | 0.59 | 0.00 | 0.62 | premium | protection-shred |  |
-| Magi's Cloak | 0.47 | 0.35 | 0.50 | 0.63 | 0.28 | 0.00 | fair | cc-immunity |  |
 | Spectral Armor | 0.47 | 0.41 | 0.58 | 0.59 | 0.00 | 0.00 | fair | anti-crit, aura, mitigation |  |
+| Magi's Cloak | 0.47 | 0.35 | 0.50 | 0.62 | 0.28 | 0.00 | fair | cc-immunity |  |
 | Demon Blade | 0.47 | 0.40 | 0.35 | 0.59 | 0.00 | 0.52 | premium | crit-scaling |  |
 | Screeching Gargoyle | 0.47 | 0.40 | 0.49 | 0.59 | 0.00 | 0.19 | fair | protection-shred, peel, active |  |
 | Yogi's Necklace | 0.46 | 0.40 | 0.57 | 0.59 | 0.00 | 0.00 | fair | sustain |  |

@@ -2,14 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Jotunn's Revenge | 0.67 | 0.75 | 0.64 | 0.63 | 0.34 | 1.00 | undervalued | ability-uptime |  |
-| The Crusher | 0.63 | 0.71 | 0.64 | 0.60 | 0.11 | 0.88 | undervalued | burst | **UNDERRATED** |
-| Avatar's Parashu | 0.63 | 0.49 | 0.37 | 0.83 | 0.11 | 0.78 | premium | cc-immunity, active | **UNDERRATED** |
-| The Reaper | 0.61 | 0.60 | 0.52 | 0.63 | 0.50 | 0.78 | fair | sustain |  |
+| Jotunn's Revenge | 0.68 | 0.75 | 0.64 | 0.64 | 0.34 | 1.00 | undervalued | ability-uptime |  |
+| The Crusher | 0.64 | 0.71 | 0.64 | 0.62 | 0.11 | 0.88 | undervalued | burst | **UNDERRATED** |
+| Avatar's Parashu | 0.63 | 0.49 | 0.37 | 0.84 | 0.15 | 0.78 | premium | cc-immunity, active |  |
+| The Reaper | 0.60 | 0.60 | 0.52 | 0.62 | 0.49 | 0.78 | fair | sustain |  |
 | Hydra's Lament | 0.58 | 0.62 | 0.56 | 0.59 | 0.00 | 0.77 | fair | burst | **UNDERRATED** |
-| Titan's Bane | 0.56 | 0.58 | 0.45 | 0.59 | 0.24 | 0.88 | fair | penetration |  |
+| Titan's Bane | 0.57 | 0.58 | 0.45 | 0.60 | 0.22 | 0.88 | fair | penetration |  |
 | Pendulum Blade | 0.56 | 0.59 | 0.41 | 0.59 | 0.00 | 1.00 | premium | ability-uptime, active | **UNDERRATED** |
-| Heartseeker | 0.56 | 0.58 | 0.41 | 0.54 | 0.43 | 0.98 | premium | burst, percent-health |  |
+| Heartseeker | 0.56 | 0.58 | 0.41 | 0.55 | 0.43 | 0.98 | premium | burst, percent-health |  |
 | Genji's Guard | 0.54 | 0.55 | 0.69 | 0.59 | 0.00 | 0.22 | undervalued | ability-uptime | **UNDERRATED** |
 | Runeforged Hammer | 0.54 | 0.55 | 0.55 | 0.59 | 0.00 | 0.54 | fair | burst | **UNDERRATED** |
 | Tekko-Kagi | 0.54 | 0.54 | 0.44 | 0.59 | 0.00 | 0.78 | fair | mobility | **UNDERRATED** |
@@ -44,7 +44,6 @@
 | Rage | 0.47 | 0.41 | 0.39 | 0.59 | 0.00 | 0.44 | premium | stacking, crit-scaling |  |
 | Spectral Armor | 0.47 | 0.41 | 0.58 | 0.59 | 0.00 | 0.00 | fair | anti-crit, aura, mitigation |  |
 | Toxic Blade | 0.47 | 0.40 | 0.43 | 0.59 | 0.00 | 0.33 | fair | anti-heal, damage-debuff |  |
-| Shifter's Shield | 0.47 | 0.36 | 0.52 | 0.62 | 0.16 | 0.00 | fair | low-health |  |
 | Yogi's Necklace | 0.47 | 0.40 | 0.57 | 0.59 | 0.00 | 0.00 | fair | sustain |  |
 | Oath-Sworn Spear | 0.46 | 0.39 | 0.33 | 0.59 | 0.00 | 0.54 | premium | protection-shred |  |
 | Gladiator's Shield | 0.46 | 0.39 | 0.41 | 0.59 | 0.00 | 0.32 | premium | burst |  |
@@ -52,6 +51,7 @@
 | Leviathan's Hide | 0.46 | 0.38 | 0.54 | 0.59 | 0.00 | 0.00 | fair | ability-uptime, stacking, damage-debuff |  |
 | Demon Blade | 0.46 | 0.38 | 0.35 | 0.59 | 0.00 | 0.44 | premium | crit-scaling |  |
 | Midgardian Mail | 0.46 | 0.38 | 0.54 | 0.59 | 0.00 | 0.00 | fair | damage-debuff |  |
+| Shifter's Shield | 0.45 | 0.36 | 0.52 | 0.59 | 0.16 | 0.00 | fair | low-health |  |
 | Prophetic Cloak | 0.45 | 0.36 | 0.43 | 0.59 | 0.00 | 0.22 | premium | stacking, mitigation |  |
 | Erosion | 0.45 | 0.36 | 0.52 | 0.59 | 0.00 | 0.00 | fair | aura, anti-shield |  |
 | Mantle Of Discord | 0.45 | 0.36 | 0.52 | 0.59 | 0.00 | 0.00 | fair | peel, cc-immunity, low-health |  |

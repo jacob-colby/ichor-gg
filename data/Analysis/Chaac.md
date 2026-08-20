@@ -2,21 +2,22 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Hide of the Nemean Lion | 0.53 | 0.44 | 0.50 | 0.67 | 0.25 | 0.29 | fair | active |  |
-| Ethereal Staff | 0.51 | 0.47 | 0.51 | 0.60 | 0.09 | 0.38 | fair | percent-health, ramp, sustain | **UNDERRATED** |
+| Hide of the Nemean Lion | 0.53 | 0.44 | 0.50 | 0.67 | 0.22 | 0.29 | fair | active |  |
 | Heartseeker | 0.50 | 0.44 | 0.41 | 0.60 | 0.15 | 0.52 | premium | burst, percent-health |  |
+| Ethereal Staff | 0.47 | 0.47 | 0.51 | 0.50 | 0.11 | 0.38 | fair | percent-health, ramp, sustain | **UNDERRATED** |
 | Rod of Tahuti | 0.46 | 0.63 | 0.77 | 0.33 | 0.00 | 0.30 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.45 | 0.60 | 0.63 | 0.33 | 0.00 | 0.53 | undervalued | burst | **UNDERRATED** |
-| Genji's Guard | 0.44 | 0.56 | 0.69 | 0.33 | 0.30 | 0.24 | undervalued | ability-uptime |  |
-| Breastplate of Valor | 0.44 | 0.52 | 0.64 | 0.38 | 0.16 | 0.24 | undervalued | ability-uptime |  |
+| Breastplate of Valor | 0.44 | 0.52 | 0.64 | 0.38 | 0.14 | 0.24 | undervalued | ability-uptime | **UNDERRATED** |
 | Amanita Charm | 0.44 | 0.57 | 0.63 | 0.33 | 0.00 | 0.45 | undervalued | sustain, aura, mitigation, active | **UNDERRATED** |
 | The Crusher | 0.44 | 0.57 | 0.64 | 0.33 | 0.00 | 0.42 | undervalued | burst | **UNDERRATED** |
+| Genji's Guard | 0.43 | 0.56 | 0.69 | 0.31 | 0.30 | 0.24 | undervalued | ability-uptime |  |
 | Jotunn's Revenge | 0.43 | 0.57 | 0.64 | 0.33 | 0.00 | 0.40 | undervalued | ability-uptime | **UNDERRATED** |
 | Eye of Providence | 0.43 | 0.57 | 0.62 | 0.33 | 0.00 | 0.45 | undervalued | ward-economy | **UNDERRATED** |
 | Berserker's Shield | 0.42 | 0.54 | 0.66 | 0.33 | 0.00 | 0.29 | undervalued | low-health | **UNDERRATED** |
 | Soul Gem | 0.42 | 0.54 | 0.57 | 0.33 | 0.00 | 0.49 | fair | burst, sustain, aura | **UNDERRATED** |
+| Shifter's Shield | 0.42 | 0.50 | 0.52 | 0.35 | 0.26 | 0.45 | fair | low-health |  |
 | Nimble Ring | 0.41 | 0.52 | 0.68 | 0.33 | 0.00 | 0.15 | undervalued |  | **UNDERRATED** |
-| Shifter's Shield | 0.41 | 0.50 | 0.52 | 0.33 | 0.26 | 0.45 | fair | low-health |  |
+| Prophetic Cloak | 0.41 | 0.42 | 0.43 | 0.43 | 0.11 | 0.40 | premium | stacking, mitigation |  |
 | Oni Hunter's Garb | 0.41 | 0.51 | 0.61 | 0.33 | 0.00 | 0.29 | undervalued | mitigation, ramp | **UNDERRATED** |
 | Shield Splitter | 0.40 | 0.50 | 0.51 | 0.33 | 0.00 | 0.49 | fair | anti-shield, active | **UNDERRATED** |
 | Runeforged Hammer | 0.40 | 0.50 | 0.55 | 0.33 | 0.00 | 0.40 | fair | burst | **UNDERRATED** |
@@ -27,8 +28,8 @@
 | Spear of the Magus | 0.39 | 0.49 | 0.57 | 0.33 | 0.00 | 0.30 | fair |  | **UNDERRATED** |
 | Eye of the Storm | 0.39 | 0.49 | 0.50 | 0.33 | 0.00 | 0.46 | fair | peel, active | **UNDERRATED** |
 | Death Metal | 0.39 | 0.49 | 0.56 | 0.33 | 0.00 | 0.32 | fair | active | **UNDERRATED** |
-| Shield of the Phoenix | 0.39 | 0.51 | 0.57 | 0.29 | 0.12 | 0.37 | fair | sustain | **UNDERRATED** |
 | Obsidian Shard | 0.39 | 0.48 | 0.52 | 0.33 | 0.00 | 0.40 | fair | penetration | **UNDERRATED** |
+| Shield of the Phoenix | 0.39 | 0.51 | 0.57 | 0.29 | 0.11 | 0.37 | fair | sustain | **UNDERRATED** |
 | Draconic Scale | 0.39 | 0.48 | 0.50 | 0.33 | 0.00 | 0.45 | fair | ramp | **UNDERRATED** |
 | Helm of Radiance | 0.39 | 0.48 | 0.55 | 0.33 | 0.00 | 0.31 | fair | ramp | **UNDERRATED** |
 | Spear of Desolation | 0.39 | 0.48 | 0.52 | 0.33 | 0.00 | 0.39 | fair | ability-uptime | **UNDERRATED** |
@@ -61,7 +62,6 @@
 | Alchemist Coat | 0.36 | 0.43 | 0.50 | 0.33 | 0.00 | 0.28 | fair |  |  |
 | Gladiator's Shield | 0.36 | 0.43 | 0.41 | 0.33 | 0.00 | 0.47 | premium | burst |  |
 | Freya's Tears | 0.36 | 0.53 | 0.59 | 0.20 | 0.15 | 0.40 | fair | low-health, ramp |  |
-| Prophetic Cloak | 0.36 | 0.42 | 0.43 | 0.33 | 0.10 | 0.40 | premium | stacking, mitigation |  |
 | Blood-Bound Book | 0.36 | 0.43 | 0.55 | 0.33 | 0.00 | 0.15 | fair | sustain, active |  |
 | Helm of Darkness | 0.36 | 0.43 | 0.41 | 0.33 | 0.00 | 0.47 | premium | mobility, active |  |
 | Stampede | 0.36 | 0.42 | 0.48 | 0.33 | 0.00 | 0.29 | fair | mobility, aura, cc-immunity, active |  |
@@ -94,7 +94,6 @@
 | Toxic Blade | 0.34 | 0.39 | 0.43 | 0.33 | 0.00 | 0.28 | fair | anti-heal, damage-debuff |  |
 | Polynomicon | 0.34 | 0.38 | 0.44 | 0.33 | 0.00 | 0.25 | fair | burst |  |
 | Stygian Anchor | 0.34 | 0.38 | 0.41 | 0.33 | 0.00 | 0.32 | premium | anti-heal, damage-debuff |  |
-| Soul Reaver | 0.34 | 0.38 | 0.40 | 0.33 | 0.00 | 0.35 | premium | burst, percent-health |  |
 | Ancient Signet | 0.34 | 0.38 | 0.43 | 0.33 | 0.00 | 0.25 | fair | burst |  |
 | Shroud of Vengeance | 0.34 | 0.38 | 0.36 | 0.33 | 0.00 | 0.42 | premium | burst |  |
 | Glorious Pridwen | 0.34 | 0.38 | 0.36 | 0.33 | 0.00 | 0.40 | premium | sustain, active |  |
@@ -125,18 +124,19 @@
 | Odysseus' Bow | 0.29 | 0.28 | 0.36 | 0.33 | 0.00 | 0.10 | premium | burst, wave-clear |  |
 | Shell of Rebuke | 0.29 | 0.28 | 0.26 | 0.33 | 0.00 | 0.32 | premium | peel, mitigation |  |
 | Devourer's Gauntlet | 0.29 | 0.28 | 0.32 | 0.33 | 0.00 | 0.17 | premium | sustain, stacking |  |
+| Soul Reaver | 0.29 | 0.38 | 0.40 | 0.20 | 0.10 | 0.35 | premium | burst, percent-health |  |
 | Dagger of Frenzy | 0.27 | 0.25 | 0.36 | 0.33 | 0.00 | 0.00 | premium | active |  |
 | Resolute Mantle | 0.27 | 0.25 | 0.30 | 0.33 | 0.00 | 0.13 | premium | cc-immunity, sustain, stacking |  |
-| Dwarven Plate | 0.27 | 0.34 | 0.35 | 0.20 | 0.12 | 0.32 | premium | active |  |
 | Time-lock Aegis | 0.27 | 0.23 | 0.20 | 0.33 | 0.00 | 0.32 | premium | cc-immunity, ability-uptime |  |
+| Dwarven Plate | 0.26 | 0.34 | 0.35 | 0.20 | 0.10 | 0.32 | premium | active |  |
 | Brawler’s Beat Stick | 0.26 | 0.22 | 0.18 | 0.33 | 0.00 | 0.32 | premium | anti-heal, ramp |  |
 | Gauntlet of Thebes | 0.26 | 0.22 | 0.26 | 0.33 | 0.00 | 0.13 | premium | stacking |  |
 | Circe's Hexstone | 0.26 | 0.22 | 0.22 | 0.33 | 0.00 | 0.21 | premium | mobility, cc-immunity, active |  |
 | Hastened Fatalis | 0.26 | 0.21 | 0.31 | 0.33 | 0.00 | 0.00 | premium | mobility |  |
 | Vital Amplifier | 0.25 | 0.21 | 0.24 | 0.33 | 0.00 | 0.13 | premium | heal-scaling |  |
+| Omen Drum | 0.24 | 0.19 | 0.27 | 0.33 | 0.00 | 0.00 | premium | active |  |
 | Sun Beam Bow | 0.24 | 0.18 | 0.25 | 0.33 | 0.00 | 0.00 | premium | active, wave-clear |  |
 | Talisman of Purification | 0.23 | 0.16 | 0.20 | 0.33 | 0.00 | 0.08 | premium | cc-immunity |  |
-| Omen Drum | 0.21 | 0.19 | 0.27 | 0.25 | 0.08 | 0.00 | premium | active |  |
 | The Executioner | 0.21 | 0.12 | 0.13 | 0.33 | 0.00 | 0.10 | premium | protection-shred |  |
 | Mercury's Talaria | 0.19 | 0.09 | 0.13 | 0.33 | 0.00 | 0.00 | premium |  |  |
 | Agility Greaves | 0.15 | 0.00 | 0.00 | 0.33 | 0.00 | 0.00 | premium | mobility |  |

@@ -2,18 +2,18 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Dreamer's Idol | 0.67 | 0.42 | 0.44 | 1.00 | 0.25 | 0.36 | fair | cc-immunity, active |  |
-| Rod of Tahuti | 0.59 | 0.65 | 0.77 | 0.55 | 0.40 | 0.36 | undervalued |  |  |
-| Soul Gem | 0.58 | 0.60 | 0.57 | 0.59 | 0.27 | 0.67 | fair | burst, sustain, aura |  |
+| Dreamer's Idol | 0.62 | 0.42 | 0.44 | 0.89 | 0.28 | 0.36 | fair | cc-immunity, active |  |
+| Soul Gem | 0.59 | 0.60 | 0.57 | 0.60 | 0.31 | 0.67 | fair | burst, sustain, aura |  |
+| Rod of Tahuti | 0.58 | 0.65 | 0.77 | 0.52 | 0.44 | 0.36 | undervalued |  |  |
 | Nimble Ring | 0.57 | 0.65 | 0.68 | 0.55 | 0.00 | 0.57 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.55 | 0.61 | 0.63 | 0.55 | 0.00 | 0.56 | undervalued | burst | **UNDERRATED** |
-| Spear of Desolation | 0.54 | 0.51 | 0.52 | 0.57 | 0.65 | 0.47 | fair | ability-uptime |  |
 | The Crusher | 0.54 | 0.58 | 0.64 | 0.55 | 0.00 | 0.43 | undervalued | burst | **UNDERRATED** |
 | Jotunn's Revenge | 0.54 | 0.58 | 0.64 | 0.55 | 0.00 | 0.43 | undervalued | ability-uptime | **UNDERRATED** |
-| The World Stone | 0.53 | 0.43 | 0.46 | 0.68 | 0.28 | 0.36 | fair | ability-uptime |  |
+| Spear of Desolation | 0.53 | 0.51 | 0.52 | 0.55 | 0.68 | 0.47 | fair | ability-uptime |  |
 | Berserker's Shield | 0.52 | 0.54 | 0.66 | 0.55 | 0.00 | 0.26 | undervalued | low-health | **UNDERRATED** |
+| Obsidian Shard | 0.51 | 0.50 | 0.52 | 0.55 | 0.30 | 0.46 | fair | penetration |  |
 | Riptalon | 0.51 | 0.53 | 0.53 | 0.55 | 0.00 | 0.53 | fair | sustain, low-health | **UNDERRATED** |
-| Obsidian Shard | 0.51 | 0.50 | 0.52 | 0.54 | 0.27 | 0.46 | fair | penetration |  |
+| The World Stone | 0.51 | 0.43 | 0.46 | 0.62 | 0.28 | 0.36 | fair | ability-uptime |  |
 | The Cosmic Horror | 0.51 | 0.52 | 0.58 | 0.55 | 0.00 | 0.36 | fair |  | **UNDERRATED** |
 | Genji's Guard | 0.51 | 0.52 | 0.69 | 0.55 | 0.00 | 0.11 | undervalued | ability-uptime | **UNDERRATED** |
 | Bragi's Harp | 0.50 | 0.51 | 0.42 | 0.55 | 0.00 | 0.73 | premium | burst | **UNDERRATED** |
@@ -29,7 +29,6 @@
 | Tekko-Kagi | 0.49 | 0.49 | 0.44 | 0.55 | 0.00 | 0.59 | fair | mobility | **UNDERRATED** |
 | Tyrfing | 0.49 | 0.48 | 0.46 | 0.55 | 0.00 | 0.53 | fair | burst, ramp | **UNDERRATED** |
 | Breastplate of Valor | 0.49 | 0.48 | 0.64 | 0.55 | 0.00 | 0.11 | undervalued | ability-uptime | **UNDERRATED** |
-| Chronos' Pendant | 0.48 | 0.47 | 0.55 | 0.54 | 0.08 | 0.31 | fair | ability-uptime | **UNDERRATED** |
 | Blood-Bound Book | 0.48 | 0.47 | 0.55 | 0.55 | 0.00 | 0.30 | fair | sustain, active | **UNDERRATED** |
 | Runeforged Hammer | 0.48 | 0.46 | 0.55 | 0.55 | 0.00 | 0.27 | fair | burst | **UNDERRATED** |
 | Pharaoh's Curse | 0.48 | 0.46 | 0.55 | 0.55 | 0.00 | 0.26 | fair | aura, damage-debuff, anti-shield, active | **UNDERRATED** |
@@ -44,6 +43,7 @@
 | Freya's Tears | 0.47 | 0.44 | 0.59 | 0.55 | 0.00 | 0.11 | fair | low-health, ramp | **UNDERRATED** |
 | Amanita Charm | 0.47 | 0.44 | 0.63 | 0.55 | 0.00 | 0.00 | undervalued | sustain, aura, mitigation, active | **UNDERRATED** |
 | Titan's Bane | 0.47 | 0.44 | 0.45 | 0.55 | 0.00 | 0.43 | fair | penetration | **UNDERRATED** |
+| Chronos' Pendant | 0.47 | 0.47 | 0.55 | 0.50 | 0.07 | 0.31 | fair | ability-uptime | **UNDERRATED** |
 | Gem of Focus | 0.46 | 0.43 | 0.49 | 0.55 | 0.00 | 0.31 | fair | mobility | **UNDERRATED** |
 | Shogun's Ofuda | 0.46 | 0.43 | 0.51 | 0.55 | 0.00 | 0.26 | fair | aura |  |
 | Eye of Providence | 0.46 | 0.43 | 0.62 | 0.55 | 0.00 | 0.00 | undervalued | ward-economy |  |
@@ -71,7 +71,6 @@
 | Ancient Signet | 0.44 | 0.39 | 0.43 | 0.55 | 0.00 | 0.30 | fair | burst |  |
 | Qin's Blade | 0.44 | 0.39 | 0.36 | 0.55 | 0.00 | 0.46 | premium | burst, percent-health |  |
 | Barbed Carver | 0.44 | 0.39 | 0.40 | 0.55 | 0.00 | 0.37 | premium | burst |  |
-| Doom Orb | 0.44 | 0.43 | 0.46 | 0.48 | 0.16 | 0.36 | fair | ramp |  |
 | Wish-Granting Pearl | 0.44 | 0.39 | 0.47 | 0.55 | 0.00 | 0.20 | fair |  |  |
 | Leviathan's Hide | 0.44 | 0.38 | 0.54 | 0.55 | 0.00 | 0.00 | fair | ability-uptime, stacking, damage-debuff |  |
 | Lifebinder | 0.44 | 0.38 | 0.45 | 0.55 | 0.00 | 0.20 | fair | sustain, aura, active |  |
@@ -88,6 +87,7 @@
 | Odysseus' Bow | 0.43 | 0.36 | 0.36 | 0.55 | 0.00 | 0.36 | premium | burst, wave-clear |  |
 | Avatar's Parashu | 0.43 | 0.36 | 0.37 | 0.55 | 0.00 | 0.33 | premium | cc-immunity, active |  |
 | Ancile | 0.43 | 0.36 | 0.51 | 0.55 | 0.00 | 0.00 | fair | active, peel |  |
+| Doom Orb | 0.43 | 0.43 | 0.46 | 0.45 | 0.15 | 0.36 | fair | ramp |  |
 | Hide of the Nemean Lion | 0.42 | 0.35 | 0.50 | 0.55 | 0.00 | 0.00 | fair | active |  |
 | Gladiator's Shield | 0.42 | 0.35 | 0.41 | 0.55 | 0.00 | 0.21 | premium | burst |  |
 | Void Shield | 0.42 | 0.35 | 0.46 | 0.55 | 0.00 | 0.10 | fair | protection-shred, aura |  |
@@ -129,7 +129,7 @@
 | Radiant Bulwark | 0.36 | 0.22 | 0.32 | 0.55 | 0.00 | 0.00 | premium | aura, mitigation, active |  |
 | Resolute Mantle | 0.35 | 0.21 | 0.30 | 0.55 | 0.00 | 0.00 | premium | cc-immunity, sustain, stacking |  |
 | The Executioner | 0.35 | 0.20 | 0.13 | 0.55 | 0.00 | 0.36 | premium | protection-shred |  |
-| Devourer's Gauntlet | 0.35 | 0.31 | 0.32 | 0.42 | 0.07 | 0.27 | premium | sustain, stacking |  |
+| Devourer's Gauntlet | 0.35 | 0.31 | 0.32 | 0.42 | 0.06 | 0.27 | premium | sustain, stacking |  |
 | Omen Drum | 0.34 | 0.19 | 0.27 | 0.55 | 0.00 | 0.00 | premium | active |  |
 | Circe's Hexstone | 0.34 | 0.19 | 0.22 | 0.55 | 0.00 | 0.11 | premium | mobility, cc-immunity, active |  |
 | Shell of Rebuke | 0.34 | 0.18 | 0.26 | 0.55 | 0.00 | 0.00 | premium | peel, mitigation |  |

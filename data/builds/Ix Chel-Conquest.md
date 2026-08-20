@@ -14,29 +14,29 @@ builds:
     alternates:
     - name: Book of Thoth
       pick_rate: 0.14
-      win_rate: 0.41
+      win_rate: 0.43
     - name: Chronos' Pendant
       pick_rate: 0.09
-      win_rate: 0.44
+      win_rate: 0.42
   - name: The World Stone
     pick_rate: 0.13
-    win_rate: 0.44
+    win_rate: 0.45
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.12
       win_rate: 0.45
     - name: Book of Thoth
       pick_rate: 0.09
-      win_rate: 0.5
+      win_rate: 0.48
   - name: Soul Gem
     pick_rate: 0.13
-    win_rate: 0.5
+    win_rate: 0.48
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.1
-      win_rate: 0.45
+      win_rate: 0.46
     - name: The World Stone
-      pick_rate: 0.08
+      pick_rate: 0.09
       win_rate: 0.44
   - name: Rod of Tahuti
     pick_rate: 0.2
@@ -44,27 +44,27 @@ builds:
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.11
-      win_rate: 0.36
+      win_rate: 0.37
     - name: The World Stone
       pick_rate: 0.06
-      win_rate: 0.44
+      win_rate: 0.43
   - name: Obsidian Shard
     pick_rate: 0.13
-    win_rate: 0.46
+    win_rate: 0.45
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.11
-      win_rate: 0.61
+      win_rate: 0.6
     - name: Evil Eye
-      pick_rate: 0.09
-      win_rate: 0.37
+      pick_rate: 0.1
+      win_rate: 0.38
   - name: Evil Eye
     pick_rate: 0.09
-    win_rate: 0.35
+    win_rate: 0.38
     alternates:
     - name: Void Shard
       pick_rate: 0.06
-      win_rate: 0.59
+      win_rate: 0.61
     - name: Oracle Staff
       pick_rate: 0.05
       win_rate: 0.35
@@ -79,7 +79,14 @@ builds:
     pick_rate: 0.11
     win_rate: 0.51
   source_url: https://smitebrain.com/gods/ix-chel/
-  last_verified: '2026-08-19'
+  last_verified: '2026-08-20'
+  god_win_rate: 0.4256308100929615
+  god_matches_won: 641
+  god_matches_played: 1506
+  god_division: obsidian
+  god_window_start: '2026-08-11'
+  god_window_end: '2026-08-20'
+  god_matches_analyzed: 11556
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -113,8 +120,8 @@ builds:
     Freya''s Tears, Breastplate of Valor, Nimble Ring, Shield of the Phoenix, Oni
     Hunter''s Garb, The Cosmic Horror, Erosion, Shifter''s Shield, Spear of the Magus,
     Eye of Providence, Spectral Armor, Helm of Radiance, Draconic Scale, Ethereal
-    Staff, Rod of Asclepius, Chronos'' Pendant, Leviathan''s Hide, Jade Scepter, Midgardian
-    Mail, Screeching Gargoyle, Mantle Of Discord.'
+    Staff, Rod of Asclepius, Leviathan''s Hide, Jade Scepter, Midgardian Mail, Chronos''
+    Pendant, Screeching Gargoyle, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
       total: 0.49
@@ -147,9 +154,9 @@ builds:
       pick: 0.33
       fit: 0.36
     Soul Gem:
-      total: 0.52
+      total: 0.51
       efficiency: 0.57
-      win: 0.5
+      win: 0.48
       pick: 0.2
       fit: 0.6
   starter: &id001
@@ -161,12 +168,12 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
+  - Gluttonous Grimoire
+  - Spear of Desolation
   - Rod of Tahuti
-  - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Obsidian Shard
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -184,9 +191,9 @@ builds:
     Grimoire, Genji''s Guard, Kinetic Cuirass, Amanita Charm, Nimble Ring, Breastplate
     of Valor, Oni Hunter''s Garb, Freya''s Tears, Death Metal, The Cosmic Horror,
     Spear of the Magus, Shield of the Phoenix, Helm of Radiance, Ethereal Staff, Spectral
-    Armor, Rod of Asclepius, Erosion, Chronos'' Pendant, Shifter''s Shield, Eye of
-    Providence, Jade Scepter, Draconic Scale, Yogi''s Necklace, Triton''s Conch, Leviathan''s
-    Hide.'
+    Armor, Rod of Asclepius, Erosion, Shifter''s Shield, Eye of Providence, Jade Scepter,
+    Draconic Scale, Yogi''s Necklace, Triton''s Conch, Leviathan''s Hide, Chronos''
+    Pendant.'
   slot_scores:
     Genji's Guard:
       total: 0.49
@@ -206,37 +213,37 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.45
+    Gluttonous Grimoire:
+      total: 0.5
+      efficiency: 0.63
+      win: 0.45
+      pick: 0.0
+      fit: 0.51
+    Spear of Desolation:
+      total: 0.46
+      efficiency: 0.52
+      win: 0.46
+      pick: 0.26
+      fit: 0.4
     Rod of Tahuti:
       total: 0.55
       efficiency: 0.77
       win: 0.47
       pick: 0.33
       fit: 0.37
-    Obsidian Shard:
-      total: 0.46
-      efficiency: 0.52
-      win: 0.46
-      pick: 0.28
-      fit: 0.41
-    Soul Gem:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.2
-      fit: 0.5
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Genji's Guard
   - Kinetic Cuirass
+  - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Obsidian Shard
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -245,8 +252,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -254,8 +261,8 @@ builds:
     god: Gluttonous Grimoire, Genji''s Guard, Kinetic Cuirass, Amanita Charm, Freya''s
     Tears, Breastplate of Valor, Nimble Ring, The Cosmic Horror, Shield of the Phoenix,
     Spear of the Magus, Oni Hunter''s Garb, Spectral Armor, Death Metal, Erosion,
-    Shifter''s Shield, Helm of Radiance, Chronos'' Pendant, Eye of Providence, Ethereal
-    Staff, Rod of Asclepius, Draconic Scale, Screeching Gargoyle, Leviathan''s Hide,
+    Shifter''s Shield, Helm of Radiance, Eye of Providence, Ethereal Staff, Rod of
+    Asclepius, Draconic Scale, Screeching Gargoyle, Leviathan''s Hide, Chronos'' Pendant,
     Midgardian Mail, Totem of Death.'
   slot_scores:
     Genji's Guard:
@@ -270,6 +277,12 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.47
+    Freya's Tears:
+      total: 0.47
+      efficiency: 0.59
+      win: 0.45
+      pick: 0.0
+      fit: 0.39
     Spear of Desolation:
       total: 0.48
       efficiency: 0.52
@@ -282,16 +295,10 @@ builds:
       win: 0.47
       pick: 0.33
       fit: 0.35
-    Obsidian Shard:
-      total: 0.47
-      efficiency: 0.52
-      win: 0.46
-      pick: 0.28
-      fit: 0.45
     Soul Gem:
-      total: 0.52
+      total: 0.51
       efficiency: 0.57
-      win: 0.5
+      win: 0.48
       pick: 0.2
       fit: 0.59
   starter: *id001
@@ -359,9 +366,9 @@ builds:
       pick: 0.0
       fit: 0.8
     Soul Gem:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
-      win: 0.5
+      win: 0.48
       pick: 0.2
       fit: 0.9
   starter: *id001
@@ -375,7 +382,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
+  - Obsidian Shard
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -423,15 +430,15 @@ builds:
       pick: 0.33
       fit: 0.48
     Obsidian Shard:
-      total: 0.49
+      total: 0.48
       efficiency: 0.52
-      win: 0.46
+      win: 0.45
       pick: 0.28
       fit: 0.58
     Soul Gem:
-      total: 0.54
+      total: 0.53
       efficiency: 0.57
-      win: 0.5
+      win: 0.48
       pick: 0.2
       fit: 0.69
   starter: *id001
@@ -465,8 +472,8 @@ builds:
     Charm, Breastplate of Valor, Freya''s Tears, Oni Hunter''s Garb, Shield of the
     Phoenix, The Cosmic Horror, Spear of the Magus, Spectral Armor, Death Metal, Helm
     of Radiance, Erosion, Ethereal Staff, Shifter''s Shield, Rod of Asclepius, Eye
-    of Providence, Chronos'' Pendant, Bracer of The Abyss, Leviathan''s Hide, Blood-Bound
-    Book, Draconic Scale, Bragi''s Harp.'
+    of Providence, Bracer of The Abyss, Leviathan''s Hide, Blood-Bound Book, Draconic
+    Scale, Bragi''s Harp, Chronos'' Pendant.'
   slot_scores:
     Genji's Guard:
       total: 0.47
@@ -499,9 +506,9 @@ builds:
       pick: 0.33
       fit: 0.21
     Soul Gem:
-      total: 0.5
+      total: 0.49
       efficiency: 0.57
-      win: 0.5
+      win: 0.48
       pick: 0.2
       fit: 0.44
   starter: *id001
@@ -533,8 +540,8 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Freya''s Tears, Breastplate
     of Valor, Gluttonous Grimoire, Shield of the Phoenix, Kinetic Cuirass, Amanita
-    Charm, Oni Hunter''s Garb, Nimble Ring, Screeching Gargoyle, Chronos'' Pendant,
-    Chandra''s Grace, Gladiator''s Shield, Spectral Armor, Erosion, Totem of Death,
+    Charm, Oni Hunter''s Garb, Nimble Ring, Screeching Gargoyle, Chandra''s Grace,
+    Gladiator''s Shield, Chronos'' Pendant, Spectral Armor, Erosion, Totem of Death,
     Shifter''s Shield, Eye of Providence, Prophetic Cloak, The Cosmic Horror, Draconic
     Scale, Spear of the Magus, Gem of Focus, Leviathan''s Hide, Helm of Radiance.'
   slot_scores:
@@ -569,9 +576,9 @@ builds:
       pick: 0.33
       fit: 0.21
     Soul Gem:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
-      win: 0.5
+      win: 0.48
       pick: 0.2
       fit: 0.62
   starter: *id001

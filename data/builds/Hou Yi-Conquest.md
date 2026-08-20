@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Mark
-  aspect_pick_rate: 0.1
-  aspect_win_rate: 0.57
+  aspect_pick_rate: 0.11
+  aspect_win_rate: 0.61
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.54
-    win_rate: 0.55
+    pick_rate: 0.55
+    win_rate: 0.56
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.22
-      win_rate: 0.52
+      win_rate: 0.51
     - name: Avenging Blade
       pick_rate: 0.09
-      win_rate: 0.5
+      win_rate: 0.51
   - name: Odysseus' Bow
-    pick_rate: 0.31
-    win_rate: 0.55
+    pick_rate: 0.32
+    win_rate: 0.56
     alternates:
     - name: Dagger of Frenzy
-      pick_rate: 0.27
+      pick_rate: 0.26
       win_rate: 0.53
     - name: Toxic Blade
       pick_rate: 0.1
-      win_rate: 0.52
+      win_rate: 0.51
   - name: The Executioner
-    pick_rate: 0.13
+    pick_rate: 0.14
     win_rate: 0.57
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.18
-      win_rate: 0.52
+      win_rate: 0.53
     - name: Silverbranch Bow
       pick_rate: 0.13
-      win_rate: 0.48
+      win_rate: 0.51
   - name: Silverbranch Bow
     pick_rate: 0.22
-    win_rate: 0.53
+    win_rate: 0.54
     alternates:
     - name: The Executioner
       pick_rate: 0.16
-      win_rate: 0.42
+      win_rate: 0.43
     - name: Riptalon
-      pick_rate: 0.12
-      win_rate: 0.51
+      pick_rate: 0.11
+      win_rate: 0.5
   - name: Riptalon
-    pick_rate: 0.16
+    pick_rate: 0.17
     win_rate: 0.59
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.15
-      win_rate: 0.57
+      win_rate: 0.56
     - name: The Executioner
-      pick_rate: 0.11
-      win_rate: 0.48
+      pick_rate: 0.1
+      win_rate: 0.49
   - name: Manchu Bow
     pick_rate: 0.1
-    win_rate: 0.59
+    win_rate: 0.55
     alternates:
     - name: Riptalon
       pick_rate: 0.09
-      win_rate: 0.51
+      win_rate: 0.52
     - name: Dominance
       pick_rate: 0.08
-      win_rate: 0.69
+      win_rate: 0.71
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.33
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Hunter's Cowl
     pick_rate: 0.25
     win_rate: 0.59
   - name: Gilded Arrow
     pick_rate: 0.15
-    win_rate: 0.37
+    win_rate: 0.38
   source_url: https://smitebrain.com/gods/hou-yi/
-  last_verified: '2026-08-19'
-  god_win_rate: 0.523602033405955
-  god_matches_won: 721
-  god_matches_played: 1377
+  last_verified: '2026-08-20'
+  god_win_rate: 0.5282539682539683
+  god_matches_won: 832
+  god_matches_played: 1575
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-19'
-  god_matches_analyzed: 10108
+  god_window_end: '2026-08-20'
+  god_matches_analyzed: 11556
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -100,7 +100,7 @@ builds:
   - Riptalon
   - The Crusher
   flex_slots:
-  - Tyrfing
+  - The Crusher
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -134,8 +134,8 @@ builds:
     Tyrfing:
       total: 0.52
       efficiency: 0.46
-      win: 0.55
-      pick: 0.54
+      win: 0.56
+      pick: 0.55
       fit: 0.56
     Death Metal:
       total: 0.52
@@ -144,16 +144,16 @@ builds:
       pick: 0.0
       fit: 0.52
     Dominance:
-      total: 0.57
+      total: 0.58
       efficiency: 0.47
-      win: 0.69
+      win: 0.71
       pick: 0.25
       fit: 0.56
     Riptalon:
       total: 0.54
       efficiency: 0.53
       win: 0.59
-      pick: 0.35
+      pick: 0.37
       fit: 0.44
     The Crusher:
       total: 0.52
@@ -187,8 +187,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
     of Tahuti, Nimble Ring, Jotunn''s Revenge, Gluttonous Grimoire, The Crusher, Soul
     Gem, Death Metal, Genji''s Guard, Hydra''s Lament, Berserker''s Shield, Damaru,
@@ -212,9 +212,9 @@ builds:
       pick: 0.0
       fit: 0.51
     Dominance:
-      total: 0.56
+      total: 0.57
       efficiency: 0.47
-      win: 0.69
+      win: 0.71
       pick: 0.25
       fit: 0.5
     Gluttonous Grimoire:
@@ -278,16 +278,16 @@ builds:
       pick: 0.0
       fit: 0.55
     Dominance:
-      total: 0.57
+      total: 0.58
       efficiency: 0.47
-      win: 0.69
+      win: 0.71
       pick: 0.25
       fit: 0.53
     Riptalon:
       total: 0.53
       efficiency: 0.53
       win: 0.59
-      pick: 0.35
+      pick: 0.37
       fit: 0.41
     Damaru:
       total: 0.52
@@ -363,16 +363,16 @@ builds:
       pick: 0.0
       fit: 0.46
     Dominance:
-      total: 0.55
+      total: 0.56
       efficiency: 0.47
-      win: 0.69
+      win: 0.71
       pick: 0.25
       fit: 0.4
     Riptalon:
       total: 0.56
       efficiency: 0.53
       win: 0.59
-      pick: 0.35
+      pick: 0.37
       fit: 0.58
     Amanita Charm:
       total: 0.57
@@ -412,8 +412,8 @@ builds:
     of the Magus, Death Metal, Tekko-Kagi, Obsidian Shard, Damaru, Genji''s Guard,
     Heartseeker, Lernaean Bow, Spear of Desolation, Titan''s Bane, Golden Blade, Screeching
     Gargoyle, Hydra''s Lament, Avenging Blade, Runeforged Hammer, Breastplate of Valor,
-    Stone of Binding, Pharaoh''s Curse, Toxic Blade, Kinetic Cuirass, Void Shield,
-    Amanita Charm, Bragi''s Harp, Eye of Providence, Doom Orb, Bracer of The Abyss,
+    Stone of Binding, Pharaoh''s Curse, Kinetic Cuirass, Void Shield, Amanita Charm,
+    Toxic Blade, Bragi''s Harp, Eye of Providence, Doom Orb, Bracer of The Abyss,
     Pendulum Blade, Oni Hunter''s Garb, The World Stone.'
   slot_scores:
     Berserker's Shield:
@@ -429,21 +429,21 @@ builds:
       pick: 0.0
       fit: 0.47
     Dominance:
-      total: 0.55
+      total: 0.56
       efficiency: 0.47
-      win: 0.69
+      win: 0.71
       pick: 0.25
       fit: 0.44
     Riptalon:
       total: 0.56
       efficiency: 0.53
       win: 0.59
-      pick: 0.35
+      pick: 0.37
       fit: 0.6
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.52
-      win: 0.53
+      win: 0.54
       pick: 0.37
       fit: 0.52
     The Crusher:
@@ -484,7 +484,7 @@ builds:
     Guard, Soul Gem, Hydra''s Lament, Pharaoh''s Curse, Runeforged Hammer, Breastplate
     of Valor, Bragi''s Harp, Bracer of The Abyss, Kinetic Cuirass, The Reaper, Tekko-Kagi,
     Qin''s Blade, Amanita Charm, Demon Blade, The Cosmic Horror, Shogun''s Ofuda,
-    Eye of Providence, Toxic Blade, Oni Hunter''s Garb, Spear of the Magus, Blood-Bound
+    Eye of Providence, Oni Hunter''s Garb, Spear of the Magus, Toxic Blade, Blood-Bound
     Book, Deathbringer, Freya''s Tears, Obsidian Shard, Eros'' Bow, Bancroft''s Talon,
     Transcendence, Avenging Blade.'
   slot_scores:
@@ -503,8 +503,8 @@ builds:
     Tyrfing:
       total: 0.54
       efficiency: 0.46
-      win: 0.55
-      pick: 0.54
+      win: 0.56
+      pick: 0.55
       fit: 0.67
     Nimble Ring:
       total: 0.55
@@ -513,16 +513,16 @@ builds:
       pick: 0.0
       fit: 0.39
     Dominance:
-      total: 0.56
+      total: 0.57
       efficiency: 0.47
-      win: 0.69
+      win: 0.71
       pick: 0.25
       fit: 0.5
     Riptalon:
       total: 0.55
       efficiency: 0.53
       win: 0.59
-      pick: 0.35
+      pick: 0.37
       fit: 0.56
   starter: *id001
 - source: suggested
@@ -586,9 +586,9 @@ builds:
       pick: 0.0
       fit: 0.5
     Dominance:
-      total: 0.55
+      total: 0.56
       efficiency: 0.47
-      win: 0.69
+      win: 0.71
       pick: 0.25
       fit: 0.39
     Soul Gem:
@@ -653,9 +653,9 @@ builds:
       pick: 0.0
       fit: 0.5
     Dominance:
-      total: 0.55
+      total: 0.56
       efficiency: 0.47
-      win: 0.69
+      win: 0.71
       pick: 0.25
       fit: 0.4
     Gluttonous Grimoire:
@@ -720,9 +720,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Dominance:
-      total: 0.56
+      total: 0.57
       efficiency: 0.47
-      win: 0.69
+      win: 0.71
       pick: 0.25
       fit: 0.47
     Gluttonous Grimoire:
@@ -874,7 +874,7 @@ builds:
       total: 0.54
       efficiency: 0.53
       win: 0.59
-      pick: 0.35
+      pick: 0.37
       fit: 0.44
     The Crusher:
       total: 0.52
@@ -891,7 +891,7 @@ builds:
   swaps:
   - added: Riptalon
     removed: Damaru
-    reason: community 59% win over 220 matches (vs 52% on this god), taking the model's
+    reason: community 59% win over 268 matches (vs 53% on this god), taking the model's
       weakest slot from Damaru
   starter: *id001
 ---

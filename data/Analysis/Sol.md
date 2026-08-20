@@ -2,13 +2,13 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Soul Gem | 0.61 | 0.64 | 0.57 | 0.64 | 0.12 | 0.80 | fair | burst, sustain, aura | **UNDERRATED** |
-| Rod of Tahuti | 0.55 | 0.67 | 0.77 | 0.46 | 0.14 | 0.46 | undervalued |  | **UNDERRATED** |
+| Soul Gem | 0.61 | 0.64 | 0.57 | 0.63 | 0.14 | 0.80 | fair | burst, sustain, aura | **UNDERRATED** |
+| Rod of Tahuti | 0.56 | 0.67 | 0.77 | 0.47 | 0.14 | 0.46 | undervalued |  | **UNDERRATED** |
 | Nimble Ring | 0.55 | 0.68 | 0.68 | 0.47 | 0.00 | 0.66 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.53 | 0.64 | 0.63 | 0.47 | 0.00 | 0.67 | undervalued | burst | **UNDERRATED** |
 | The Cosmic Horror | 0.48 | 0.54 | 0.58 | 0.47 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
+| Spear of Desolation | 0.48 | 0.54 | 0.52 | 0.45 | 0.18 | 0.58 | fair | ability-uptime |  |
 | Spear of the Magus | 0.48 | 0.54 | 0.57 | 0.47 | 0.00 | 0.46 | fair |  | **UNDERRATED** |
-| Spear of Desolation | 0.47 | 0.54 | 0.52 | 0.43 | 0.18 | 0.58 | fair | ability-uptime |  |
 | Genji's Guard | 0.47 | 0.52 | 0.69 | 0.47 | 0.00 | 0.12 | undervalued | ability-uptime | **UNDERRATED** |
 | Bracer of The Abyss | 0.47 | 0.52 | 0.51 | 0.47 | 0.00 | 0.54 | fair | ramp | **UNDERRATED** |
 | Chronos' Pendant | 0.46 | 0.49 | 0.55 | 0.47 | 0.00 | 0.36 | fair | ability-uptime | **UNDERRATED** |
@@ -17,6 +17,7 @@
 | Breastplate of Valor | 0.45 | 0.48 | 0.64 | 0.47 | 0.00 | 0.12 | undervalued | ability-uptime | **UNDERRATED** |
 | Bancroft's Talon | 0.45 | 0.48 | 0.53 | 0.47 | 0.00 | 0.35 | fair | sustain, low-health | **UNDERRATED** |
 | Totem of Death | 0.45 | 0.47 | 0.47 | 0.47 | 0.00 | 0.46 | fair | percent-health | **UNDERRATED** |
+| Obsidian Shard | 0.45 | 0.53 | 0.52 | 0.38 | 0.18 | 0.56 | fair | penetration |  |
 | Death Metal | 0.44 | 0.46 | 0.56 | 0.47 | 0.00 | 0.24 | fair | active | **UNDERRATED** |
 | Doom Orb | 0.44 | 0.46 | 0.46 | 0.47 | 0.00 | 0.46 | fair | ramp | **UNDERRATED** |
 | Helm of Radiance | 0.44 | 0.46 | 0.55 | 0.47 | 0.00 | 0.24 | fair | ramp | **UNDERRATED** |
@@ -31,7 +32,6 @@
 | Amanita Charm | 0.43 | 0.44 | 0.63 | 0.47 | 0.00 | 0.00 | undervalued | sustain, aura, mitigation, active | **UNDERRATED** |
 | Shield of the Phoenix | 0.43 | 0.43 | 0.57 | 0.47 | 0.00 | 0.12 | fair | sustain | **UNDERRATED** |
 | Eye of Providence | 0.43 | 0.43 | 0.62 | 0.47 | 0.00 | 0.00 | undervalued | ward-economy |  |
-| Obsidian Shard | 0.43 | 0.53 | 0.52 | 0.34 | 0.18 | 0.56 | fair | penetration |  |
 | Typhon’s Heart | 0.43 | 0.43 | 0.46 | 0.47 | 0.00 | 0.35 | fair | stacking |  |
 | Oni Hunter's Garb | 0.43 | 0.43 | 0.61 | 0.47 | 0.00 | 0.00 | undervalued | mitigation, ramp |  |
 | Alchemist Coat | 0.42 | 0.42 | 0.50 | 0.47 | 0.00 | 0.24 | fair |  |  |
@@ -51,6 +51,7 @@
 | Erosion | 0.39 | 0.36 | 0.52 | 0.47 | 0.00 | 0.00 | fair | aura, anti-shield |  |
 | Mantle Of Discord | 0.39 | 0.36 | 0.52 | 0.47 | 0.00 | 0.00 | fair | peel, cc-immunity, low-health |  |
 | Shifter's Shield | 0.39 | 0.36 | 0.52 | 0.47 | 0.00 | 0.00 | fair | low-health |  |
+| Book of Thoth | 0.39 | 0.41 | 0.49 | 0.39 | 0.19 | 0.24 | fair | stacking |  |
 | Stone of Binding | 0.39 | 0.36 | 0.47 | 0.47 | 0.00 | 0.10 | fair | protection-shred |  |
 | Ancile | 0.39 | 0.36 | 0.51 | 0.47 | 0.00 | 0.00 | fair | active, peel |  |
 | Helm of Darkness | 0.39 | 0.36 | 0.41 | 0.47 | 0.00 | 0.24 | premium | mobility, active |  |
@@ -62,7 +63,6 @@
 | Magi's Cloak | 0.39 | 0.35 | 0.50 | 0.47 | 0.00 | 0.00 | fair | cc-immunity |  |
 | Draconic Scale | 0.39 | 0.35 | 0.50 | 0.47 | 0.00 | 0.00 | fair | ramp |  |
 | Umbral Link | 0.38 | 0.35 | 0.45 | 0.47 | 0.00 | 0.12 | fair | sustain, aura |  |
-| Book of Thoth | 0.38 | 0.41 | 0.49 | 0.37 | 0.19 | 0.24 | fair | stacking |  |
 | Necronomicon | 0.38 | 0.34 | 0.39 | 0.47 | 0.00 | 0.24 | premium | stacking |  |
 | Gem of Isolation | 0.38 | 0.34 | 0.38 | 0.47 | 0.00 | 0.24 | premium | peel |  |
 | Stampede | 0.38 | 0.34 | 0.48 | 0.47 | 0.00 | 0.00 | fair | mobility, aura, cc-immunity, active |  |

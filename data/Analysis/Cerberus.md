@@ -5,14 +5,14 @@
 | Kinetic Cuirass | 0.56 | 0.63 | 0.59 | 0.55 | 0.00 | 0.73 | fair | burst | **UNDERRATED** |
 | Amanita Charm | 0.56 | 0.63 | 0.63 | 0.55 | 0.00 | 0.63 | undervalued | sustain, aura, mitigation, active | **UNDERRATED** |
 | Eye of Providence | 0.56 | 0.62 | 0.62 | 0.55 | 0.00 | 0.63 | undervalued | ward-economy | **UNDERRATED** |
-| Shifter's Shield | 0.54 | 0.55 | 0.52 | 0.55 | 0.25 | 0.63 | fair | low-health |  |
-| Breastplate of Valor | 0.53 | 0.55 | 0.64 | 0.56 | 0.16 | 0.35 | undervalued | ability-uptime |  |
+| Shifter's Shield | 0.54 | 0.55 | 0.52 | 0.57 | 0.25 | 0.63 | fair | low-health |  |
+| Genji's Guard | 0.53 | 0.59 | 0.69 | 0.50 | 0.31 | 0.35 | undervalued | ability-uptime |  |
+| Breastplate of Valor | 0.53 | 0.55 | 0.64 | 0.56 | 0.15 | 0.35 | undervalued | ability-uptime |  |
 | Rod of Tahuti | 0.53 | 0.58 | 0.77 | 0.55 | 0.00 | 0.14 | undervalued |  | **UNDERRATED** |
 | Gluttonous Grimoire | 0.53 | 0.57 | 0.63 | 0.55 | 0.00 | 0.42 | undervalued | burst | **UNDERRATED** |
-| Freya's Tears | 0.53 | 0.58 | 0.59 | 0.51 | 0.13 | 0.57 | fair | low-health, ramp | **UNDERRATED** |
+| Freya's Tears | 0.52 | 0.58 | 0.59 | 0.50 | 0.13 | 0.57 | fair | low-health, ramp | **UNDERRATED** |
 | Shield of the Phoenix | 0.52 | 0.55 | 0.57 | 0.55 | 0.00 | 0.53 | fair | sustain | **UNDERRATED** |
 | Erosion | 0.52 | 0.55 | 0.52 | 0.55 | 0.00 | 0.63 | fair | aura, anti-shield | **UNDERRATED** |
-| Genji's Guard | 0.52 | 0.59 | 0.69 | 0.47 | 0.31 | 0.35 | undervalued | ability-uptime |  |
 | Oni Hunter's Garb | 0.52 | 0.55 | 0.61 | 0.55 | 0.00 | 0.41 | undervalued | mitigation, ramp | **UNDERRATED** |
 | Draconic Scale | 0.51 | 0.54 | 0.50 | 0.55 | 0.00 | 0.63 | fair | ramp | **UNDERRATED** |
 | Nimble Ring | 0.51 | 0.54 | 0.68 | 0.55 | 0.00 | 0.19 | undervalued |  | **UNDERRATED** |
@@ -22,6 +22,7 @@
 | Midgardian Mail | 0.49 | 0.50 | 0.54 | 0.55 | 0.00 | 0.41 | fair | damage-debuff | **UNDERRATED** |
 | Mantle Of Discord | 0.49 | 0.50 | 0.52 | 0.55 | 0.00 | 0.45 | fair | peel, cc-immunity, low-health | **UNDERRATED** |
 | Stone of Binding | 0.49 | 0.50 | 0.47 | 0.55 | 0.00 | 0.55 | fair | protection-shred | **UNDERRATED** |
+| Stampede | 0.49 | 0.46 | 0.48 | 0.57 | 0.14 | 0.41 | fair | mobility, aura, cc-immunity, active |  |
 | Magi's Cloak | 0.49 | 0.48 | 0.50 | 0.55 | 0.00 | 0.45 | fair | cc-immunity | **UNDERRATED** |
 | Helm of Radiance | 0.49 | 0.48 | 0.55 | 0.55 | 0.00 | 0.31 | fair | ramp | **UNDERRATED** |
 | Ancile | 0.49 | 0.48 | 0.51 | 0.55 | 0.00 | 0.41 | fair | active, peel | **UNDERRATED** |
@@ -30,7 +31,6 @@
 | Void Shield | 0.48 | 0.47 | 0.46 | 0.55 | 0.00 | 0.51 | fair | protection-shred, aura | **UNDERRATED** |
 | Doublet of Binding | 0.48 | 0.47 | 0.50 | 0.55 | 0.00 | 0.41 | fair | aura, active | **UNDERRATED** |
 | Prophetic Cloak | 0.48 | 0.47 | 0.43 | 0.55 | 0.00 | 0.57 | premium | stacking, mitigation | **UNDERRATED** |
-| Stampede | 0.48 | 0.46 | 0.48 | 0.54 | 0.16 | 0.41 | fair | mobility, aura, cc-immunity, active |  |
 | Ethereal Staff | 0.48 | 0.47 | 0.51 | 0.55 | 0.00 | 0.36 | fair | percent-health, ramp, sustain |  |
 | Rod of Asclepius | 0.48 | 0.46 | 0.55 | 0.55 | 0.00 | 0.26 | fair | sustain, aura, active |  |
 | Chandra's Grace | 0.48 | 0.46 | 0.53 | 0.55 | 0.00 | 0.30 | fair | sustain, ability-uptime |  |
@@ -48,7 +48,7 @@
 | Spear of the Magus | 0.47 | 0.44 | 0.57 | 0.55 | 0.00 | 0.14 | fair |  |  |
 | Obsidian Shard | 0.46 | 0.43 | 0.52 | 0.55 | 0.00 | 0.24 | fair | penetration |  |
 | Mystical Mail | 0.46 | 0.43 | 0.44 | 0.55 | 0.00 | 0.41 | fair | aura, wave-clear, anti-shield |  |
-| Hide of the Nemean Lion | 0.46 | 0.47 | 0.50 | 0.48 | 0.13 | 0.41 | fair | active | **UNDERRATED** |
+| Hide of the Nemean Lion | 0.46 | 0.47 | 0.50 | 0.48 | 0.15 | 0.41 | fair | active |  |
 | Alchemist Coat | 0.46 | 0.43 | 0.50 | 0.55 | 0.00 | 0.26 | fair |  |  |
 | Glorious Pridwen | 0.46 | 0.43 | 0.36 | 0.55 | 0.00 | 0.57 | premium | sustain, active |  |
 | Stygian Anchor | 0.46 | 0.42 | 0.41 | 0.55 | 0.00 | 0.45 | premium | anti-heal, damage-debuff |  |
@@ -82,12 +82,12 @@
 | Eye of Erebus | 0.42 | 0.34 | 0.32 | 0.55 | 0.00 | 0.40 | premium | ward-economy, percent-health, active |  |
 | Scepter of Dominion | 0.42 | 0.34 | 0.37 | 0.55 | 0.00 | 0.26 | premium | peel, active |  |
 | Divine Ruin | 0.41 | 0.34 | 0.40 | 0.55 | 0.00 | 0.18 | premium | anti-heal, burst |  |
+| Shell of Rebuke | 0.41 | 0.32 | 0.26 | 0.53 | 0.22 | 0.45 | premium | peel, mitigation |  |
 | Heartwood Charm | 0.40 | 0.32 | 0.33 | 0.55 | 0.00 | 0.30 | premium | ability-uptime, heal-scaling, active |  |
-| Shell of Rebuke | 0.40 | 0.32 | 0.26 | 0.52 | 0.20 | 0.45 | premium | peel, mitigation |  |
 | Necronomicon | 0.39 | 0.30 | 0.39 | 0.55 | 0.00 | 0.08 | premium | stacking |  |
 | Staff of Myrddin | 0.38 | 0.27 | 0.31 | 0.55 | 0.00 | 0.20 | premium | ability-uptime, active |  |
 | Time-lock Aegis | 0.38 | 0.27 | 0.20 | 0.55 | 0.00 | 0.45 | premium | cc-immunity, ability-uptime |  |
-| Gauntlet of Thebes | 0.38 | 0.23 | 0.26 | 0.55 | 0.23 | 0.18 | premium | stacking |  |
+| Gauntlet of Thebes | 0.38 | 0.23 | 0.26 | 0.56 | 0.23 | 0.18 | premium | stacking |  |
 | Resolute Mantle | 0.38 | 0.26 | 0.30 | 0.55 | 0.00 | 0.18 | premium | cc-immunity, sustain, stacking |  |
 | Brawler’s Beat Stick | 0.38 | 0.26 | 0.18 | 0.55 | 0.00 | 0.45 | premium | anti-heal, ramp |  |
 | Circe's Hexstone | 0.37 | 0.24 | 0.22 | 0.55 | 0.00 | 0.30 | premium | mobility, cc-immunity, active |  |

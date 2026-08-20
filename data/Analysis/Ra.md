@@ -2,16 +2,16 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Rod of Tahuti | 0.63 | 0.75 | 0.77 | 0.53 | 0.31 | 0.72 | undervalued |  |  |
-| Soul Gem | 0.63 | 0.70 | 0.57 | 0.59 | 0.31 | 1.00 | fair | burst, sustain, aura |  |
-| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.54 | 0.51 | 1.00 | fair | ability-uptime |  |
+| Rod of Tahuti | 0.64 | 0.75 | 0.77 | 0.52 | 0.52 | 0.72 | undervalued |  |  |
+| Soul Gem | 0.63 | 0.70 | 0.57 | 0.58 | 0.31 | 1.00 | fair | burst, sustain, aura |  |
+| Spear of Desolation | 0.60 | 0.67 | 0.52 | 0.54 | 0.52 | 1.00 | fair | ability-uptime |  |
 | Gluttonous Grimoire | 0.59 | 0.69 | 0.63 | 0.54 | 0.00 | 0.82 | undervalued | burst | **UNDERRATED** |
-| Nimble Ring | 0.57 | 0.60 | 0.68 | 0.56 | 0.28 | 0.41 | undervalued |  |  |
-| Obsidian Shard | 0.56 | 0.61 | 0.52 | 0.54 | 0.32 | 0.82 | fair | penetration |  |
+| Obsidian Shard | 0.58 | 0.61 | 0.52 | 0.56 | 0.41 | 0.82 | fair | penetration |  |
+| Nimble Ring | 0.56 | 0.60 | 0.68 | 0.54 | 0.28 | 0.41 | undervalued |  |  |
 | The Cosmic Horror | 0.55 | 0.62 | 0.58 | 0.54 | 0.00 | 0.72 | fair |  | **UNDERRATED** |
 | Spear of the Magus | 0.55 | 0.61 | 0.57 | 0.54 | 0.00 | 0.72 | fair |  | **UNDERRATED** |
 | Chronos' Pendant | 0.54 | 0.59 | 0.55 | 0.54 | 0.00 | 0.69 | fair | ability-uptime | **UNDERRATED** |
-| The World Stone | 0.53 | 0.54 | 0.46 | 0.55 | 0.37 | 0.72 | fair | ability-uptime |  |
+| The World Stone | 0.53 | 0.54 | 0.46 | 0.55 | 0.38 | 0.72 | fair | ability-uptime |  |
 | Totem of Death | 0.53 | 0.57 | 0.47 | 0.54 | 0.00 | 0.79 | fair | percent-health | **UNDERRATED** |
 | Genji's Guard | 0.53 | 0.57 | 0.69 | 0.54 | 0.00 | 0.28 | undervalued | ability-uptime | **UNDERRATED** |
 | Gem of Focus | 0.52 | 0.55 | 0.49 | 0.54 | 0.00 | 0.69 | fair | mobility | **UNDERRATED** |
@@ -23,10 +23,10 @@
 | Ethereal Staff | 0.50 | 0.51 | 0.51 | 0.54 | 0.00 | 0.51 | fair | percent-health, ramp, sustain | **UNDERRATED** |
 | Blood-Bound Book | 0.50 | 0.51 | 0.55 | 0.54 | 0.00 | 0.41 | fair | sustain, active | **UNDERRATED** |
 | Rod of Asclepius | 0.50 | 0.51 | 0.55 | 0.54 | 0.00 | 0.41 | fair | sustain, aura, active | **UNDERRATED** |
+| Book of Thoth | 0.49 | 0.47 | 0.49 | 0.55 | 0.23 | 0.41 | fair | stacking |  |
 | Freya's Tears | 0.49 | 0.50 | 0.59 | 0.54 | 0.00 | 0.28 | fair | low-health, ramp | **UNDERRATED** |
 | Bancroft's Talon | 0.49 | 0.49 | 0.53 | 0.54 | 0.00 | 0.41 | fair | sustain, low-health | **UNDERRATED** |
 | Jade Scepter | 0.49 | 0.49 | 0.53 | 0.54 | 0.00 | 0.41 | fair | peel, active | **UNDERRATED** |
-| Book of Thoth | 0.49 | 0.47 | 0.49 | 0.54 | 0.24 | 0.41 | fair | stacking |  |
 | Shield of the Phoenix | 0.48 | 0.48 | 0.57 | 0.54 | 0.00 | 0.28 | fair | sustain | **UNDERRATED** |
 | Bracer of The Abyss | 0.48 | 0.48 | 0.51 | 0.54 | 0.00 | 0.41 | fair | ramp | **UNDERRATED** |
 | Alchemist Coat | 0.48 | 0.47 | 0.50 | 0.54 | 0.00 | 0.41 | fair |  | **UNDERRATED** |
@@ -82,8 +82,8 @@
 | Shroud of Vengeance | 0.38 | 0.28 | 0.36 | 0.54 | 0.00 | 0.10 | premium | burst |  |
 | Hussar's Wings | 0.38 | 0.27 | 0.38 | 0.54 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Spirit Robe | 0.37 | 0.25 | 0.36 | 0.54 | 0.00 | 0.00 | premium | sustain |  |
-| Shifter's Shield | 0.37 | 0.36 | 0.52 | 0.41 | 0.06 | 0.00 | fair | low-health |  |
 | Dwarven Plate | 0.36 | 0.24 | 0.35 | 0.54 | 0.00 | 0.00 | premium | active |  |
+| Shifter's Shield | 0.36 | 0.36 | 0.52 | 0.40 | 0.06 | 0.00 | fair | low-health |  |
 | Circe's Hexstone | 0.36 | 0.24 | 0.22 | 0.54 | 0.00 | 0.28 | premium | mobility, cc-immunity, active |  |
 | Talisman of Purification | 0.36 | 0.22 | 0.20 | 0.54 | 0.00 | 0.28 | premium | cc-immunity |  |
 | Radiant Bulwark | 0.35 | 0.22 | 0.32 | 0.54 | 0.00 | 0.00 | premium | aura, mitigation, active |  |

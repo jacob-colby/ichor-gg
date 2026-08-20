@@ -2,14 +2,14 @@
 
 | Item | Total | Qual | Eff | Win | Pick | Fit | Tier | Tags | Flag |
 |---|---|---|---|---|---|---|---|---|---|
-| Rod of Tahuti | 0.65 | 0.77 | 0.77 | 0.54 | 0.32 | 0.79 | undervalued |  |  |
-| Soul Gem | 0.61 | 0.70 | 0.57 | 0.56 | 0.25 | 1.00 | fair | burst, sustain, aura |  |
+| Rod of Tahuti | 0.64 | 0.77 | 0.77 | 0.53 | 0.32 | 0.79 | undervalued |  |  |
+| Soul Gem | 0.61 | 0.70 | 0.57 | 0.55 | 0.23 | 1.00 | fair | burst, sustain, aura |  |
 | Gluttonous Grimoire | 0.60 | 0.71 | 0.63 | 0.54 | 0.00 | 0.89 | undervalued | burst | **UNDERRATED** |
-| Obsidian Shard | 0.59 | 0.63 | 0.52 | 0.56 | 0.39 | 0.89 | fair | penetration |  |
-| Spear of Desolation | 0.58 | 0.67 | 0.52 | 0.52 | 0.29 | 1.00 | fair | ability-uptime |  |
-| The Cosmic Horror | 0.57 | 0.64 | 0.58 | 0.53 | 0.22 | 0.79 | fair |  |  |
-| Totem of Death | 0.57 | 0.55 | 0.47 | 0.62 | 0.22 | 0.73 | fair | percent-health |  |
+| Obsidian Shard | 0.59 | 0.63 | 0.52 | 0.56 | 0.37 | 0.89 | fair | penetration |  |
+| Spear of Desolation | 0.59 | 0.67 | 0.52 | 0.53 | 0.28 | 1.00 | fair | ability-uptime |  |
+| The Cosmic Horror | 0.57 | 0.64 | 0.58 | 0.52 | 0.22 | 0.79 | fair |  |  |
 | Spear of the Magus | 0.56 | 0.64 | 0.57 | 0.54 | 0.00 | 0.79 | fair |  | **UNDERRATED** |
+| Totem of Death | 0.55 | 0.55 | 0.47 | 0.59 | 0.22 | 0.73 | fair | percent-health |  |
 | Nimble Ring | 0.54 | 0.60 | 0.68 | 0.54 | 0.00 | 0.42 | undervalued |  | **UNDERRATED** |
 | Chronos' Pendant | 0.54 | 0.57 | 0.55 | 0.54 | 0.18 | 0.63 | fair | ability-uptime |  |
 | Doom Orb | 0.52 | 0.56 | 0.46 | 0.54 | 0.00 | 0.79 | fair | ramp | **UNDERRATED** |
@@ -83,7 +83,7 @@
 | Shroud of Vengeance | 0.38 | 0.28 | 0.36 | 0.54 | 0.00 | 0.10 | premium | burst |  |
 | Hussar's Wings | 0.38 | 0.27 | 0.38 | 0.54 | 0.00 | 0.00 | premium | cc-immunity |  |
 | Spirit Robe | 0.37 | 0.25 | 0.36 | 0.54 | 0.00 | 0.00 | premium | sustain |  |
-| Omen Drum | 0.37 | 0.19 | 0.27 | 0.58 | 0.23 | 0.00 | premium | active |  |
+| Omen Drum | 0.37 | 0.19 | 0.27 | 0.58 | 0.25 | 0.00 | premium | active |  |
 | Dwarven Plate | 0.36 | 0.24 | 0.35 | 0.54 | 0.00 | 0.00 | premium | active |  |
 | Radiant Bulwark | 0.35 | 0.22 | 0.32 | 0.54 | 0.00 | 0.00 | premium | aura, mitigation, active |  |
 | Circe's Hexstone | 0.35 | 0.22 | 0.22 | 0.54 | 0.00 | 0.21 | premium | mobility, cc-immunity, active |  |

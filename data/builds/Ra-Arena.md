@@ -375,7 +375,7 @@ builds:
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Rod of Tahuti:
       total: 0.53
       efficiency: 0.77
