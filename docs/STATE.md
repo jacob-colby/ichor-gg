@@ -42,7 +42,8 @@ coverage against a random legal 6-item core:
 cd pipeline && python -m smite.calibrate     # prints the probe, the baseline, and the sweep
 ```
 
-Chance is ~5.7%. Shipped is ~35.5%, i.e. **~6.2× chance**. That is the number to
+Chance is ~5.8%. Shipped is ~35.5% at the probe split and ~36.7% at eff
+0.45, i.e. **~6.2× chance**. That is the number to
 quote and the number to move. Headline coverage moving the other way is
 expected and is not by itself a reason to revert — that judgement is what
 `efficiency.efficiency_pool` and `scoring.lookup_rates` both record.
@@ -100,6 +101,12 @@ Each of these has its evidence in the named module.
 | A relic answer is called out **on its own line** | `draft.relics` in `_weights.yaml` | It does take one of the six, but the model can't price a `+7.5% of all Stats` multiplier, so it never wins a slot on score and has to be named explicitly |
 | The aspect control is an **orange hexagon on the portrait** | `AspectBadge.tsx` | Where SMITE draws it, so it is self-describing; orange rather than gold keeps the Torchlight Rule intact |
 | An aspect with no overlay **falls back** to the base build | `DetailPanel.aspectFamily` | 72 gods have an aspect, 7 have a scoring overlay; filtering strictly blanked the model side for the other 65 |
+| Effect-tags name two things: the **job** and **when the value arrives** | `data/_tags.yaml` | The original 11 were all jobs, and 55 of 138 buildable items went untagged because what they do is conditional, not a role |
+| `penetration` is **its own tag**, not folded into `protection-shred` | `data/_tags.yaml` | Shred debuffs the target and helps the whole team; penetration only helps you. Merging them would make the two permanently indistinguishable |
+| A tag with no bonus is inert to the **gate** and not to the **builds** | `assemble._is_sustain_item` | 11 of 12 new tags moved coverage 0.0pp; the `sustain` ones still moved 3 cores, because the cap reads the tag |
+| `max_lifesteal` is a **sustain** cap and the name is the only thing saying otherwise | `assemble._is_sustain_item` | 13 of 21 buildable `sustain` items carry no Lifesteal stat; narrowing it to the stat would let a core stack three stay-alive items |
+| An item's offense tags **sum** | `offense_tags` in `_weights.yaml` | Flat, an item answering a tank two ways scored what one answering it once did — which is how `penetration` on Titan's Bane displaced Heartseeker |
+| A resolved expert claim is measured against its **own recorded baseline** | `expert_review.regressions` | The old rule only failed on a full reversion, so `clear` → `partial` shipped green |
 
 ### The combat model is exact and should stay that way
 
@@ -170,6 +177,21 @@ shipped **off**. Numbers are in the named module.
    core slot, so even shipped on this would not produce the build the reviewer
    asked for; the `mana-stack` flavor is the supported route to it. Numbers
    under `conversion_fit` in `_weights.yaml`; ships off.
+
+10. **Adaptive-power fit (2026-08-19)** — the fit half of the adaptive-stat
+    problem, and the twin of #5 rather than a repeat of it. Eight buildable
+    items carry their whole power stat in passive text and none of it in
+    `stats`, so `god_fit_score` reads Omen Drum — 2800 gold — off `{Echo: 30}`
+    and returns 0.0000 for Ullr. `adaptive_fit` credits the grant to whichever
+    of Strength/Intelligence the god's map weights higher. **It is an exact
+    no-op at every strength from 0.15 to 1.0**, and stays an exact no-op even
+    with `price_passives` ON. The mechanism is not broken — Omen Drum's fit for
+    Ullr goes 0.0000 → 0.1720 — it moves him from rank 90 to 88 of ~90, which
+    is not a core slot. These items are bottom-ranked on *efficiency* too, and
+    the half that would actually move them is the one that costs −1.4pp on the
+    probe split, alone or paired. **Fixing one half of a two-half problem buys
+    nothing**, which is worth knowing before anyone tries the other half again.
+    Numbers under `adaptive_fit` in `_weights.yaml`; ships off.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -320,7 +342,7 @@ numbers in the file.
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (596) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (630) ·
 `cd viewer && npm test -- --run` (614).
 
 ---
@@ -338,11 +360,12 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (596) ·
 | Items placed | 220 / 220 |
 | Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
 | Headline gate | coverage 48%, win-weighted 49% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior |
-| **Leakage-free** | **35.5% vs 5.7% chance = 6.23×** — down from 37.5% because paid relics entered the denominator (see `is_buildable`) |
+| **Leakage-free** | **35.5% probe · 36.7% at eff 0.45, vs 5.8% chance = 6.2–6.4×** — the eff 0.45 split up from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the earlier 37.5% was paid relics entering the denominator (see `is_buildable`) |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
-| Tests | 616 pipeline · 655 viewer |
+| Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
+| Tests | 630 pipeline · 655 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

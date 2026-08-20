@@ -13,8 +13,8 @@ builds:
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
   - Heartseeker
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -56,11 +56,11 @@ builds:
       pick: 0.0
       fit: 0.79
     Heartseeker:
-      total: 0.6
+      total: 0.65
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -272,11 +272,11 @@ builds:
   - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Rod of Tahuti
+  - Titan's Bane
   - Soul Gem
   flex_slots:
   - Pendulum Blade
-  - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -312,17 +312,17 @@ builds:
       pick: 0.0
       fit: 0.89
     Heartseeker:
-      total: 0.65
+      total: 0.7
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.89
-    Rod of Tahuti:
-      total: 0.68
-      efficiency: 0.77
+      fit: 0.99
+    Titan's Bane:
+      total: 0.67
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Chronos' Pendant
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
   - Pendulum Blade
+  - Totem of Death
   - Soul Gem
   flex_slots:
   - Pendulum Blade
-  - Chronos' Pendant
+  - Totem of Death
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Chronos' Pendant:
-      total: 0.6
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Jotunn's Revenge:
       total: 0.74
       efficiency: 0.64
@@ -453,6 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
+    Totem of Death:
+      total: 0.61
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -470,8 +470,8 @@ builds:
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
   - Heartseeker
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -513,11 +513,11 @@ builds:
       pick: 0.0
       fit: 0.79
     Heartseeker:
-      total: 0.6
+      total: 0.65
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57

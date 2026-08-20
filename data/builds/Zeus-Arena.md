@@ -6,19 +6,19 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Divine Ruin
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
-  - Divine Ruin
+  - Obsidian Shard
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -26,17 +26,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.53
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
@@ -49,18 +43,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Spear of the Magus:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Obsidian Shard:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Dreamer's Idol:
+      total: 0.57
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -140,13 +140,13 @@ builds:
   slot_order:
   - Bragi's Harp
   - Spear of Desolation
-  - The Cosmic Horror
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Obsidian Shard
   - Bragi's Harp
-  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -175,18 +175,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    The Cosmic Horror:
-      total: 0.5
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -268,37 +268,31 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Void Shield
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
-  - Void Shield
+  - Obsidian Shard
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Void Shield:
-      total: 0.58
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Spear of Desolation:
       total: 0.61
       efficiency: 0.52
@@ -311,18 +305,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Spear of the Magus:
-      total: 0.59
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Rod of Tahuti:
       total: 0.68
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Obsidian Shard:
+      total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Dreamer's Idol:
+      total: 0.62
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
+  - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Totem of Death
   - Chronos' Pendant
-  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,12 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
-    Breastplate of Valor:
-      total: 0.5
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Chronos' Pendant:
       total: 0.5
       efficiency: 0.55
@@ -447,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Totem of Death:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Rod of Tahuti:
       total: 0.52
       efficiency: 0.77
@@ -463,19 +463,19 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Divine Ruin
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
-  - Divine Ruin
+  - Obsidian Shard
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -483,17 +483,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.53
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Spear of Desolation:
       total: 0.58
       efficiency: 0.52
@@ -506,18 +500,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Spear of the Magus:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Obsidian Shard:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Dreamer's Idol:
+      total: 0.57
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Soul Gem:
       total: 0.78
       efficiency: 0.57

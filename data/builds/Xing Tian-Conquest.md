@@ -189,11 +189,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Freya''s Tears, Shield of the Phoenix, Kinetic Cuirass,
-    Draconic Scale, Soul Gem, Gluttonous Grimoire, Rod of Tahuti, Chandra''s Grace,
-    Rod of Asclepius, Oni Hunter''s Garb, Erosion, Eye of Providence, Phoenix Feather,
-    Spectral Armor, Leviathan''s Hide, Midgardian Mail, Lifebinder, Glorious Pridwen,
-    Nimble Ring, Gladiator''s Shield, Ancile, Blood-Bound Book, Void Shield, Doublet
-    of Binding.'
+    Draconic Scale, Soul Gem, Gluttonous Grimoire, Yogi''s Necklace, Ethereal Staff,
+    Rod of Tahuti, Chandra''s Grace, Rod of Asclepius, Oni Hunter''s Garb, Erosion,
+    Eye of Providence, Phoenix Feather, Spectral Armor, Leviathan''s Hide, Midgardian
+    Mail, Lifebinder, Glorious Pridwen, Nimble Ring, Gladiator''s Shield, Ancile,
+    Blood-Bound Book.'
   slot_scores:
     Genji's Guard:
       total: 0.6
@@ -261,9 +261,9 @@ builds:
     for this god: Freya''s Tears, Rod of Tahuti, Gluttonous Grimoire, Kinetic Cuirass,
     Amanita Charm, Soul Gem, Draconic Scale, Stone of Binding, Screeching Gargoyle,
     Void Shield, The Cosmic Horror, Spear of the Magus, Oni Hunter''s Garb, Void Stone,
-    Shield of the Phoenix, Spear of Desolation, Erosion, Eye of Providence, Spectral
-    Armor, Nimble Ring, Obsidian Shard, Leviathan''s Hide, Midgardian Mail, Mantle
-    Of Discord, Helm of Radiance, Magi''s Cloak.'
+    Shield of the Phoenix, Spear of Desolation, Obsidian Shard, Erosion, Eye of Providence,
+    Spectral Armor, Nimble Ring, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord,
+    Helm of Radiance, Magi''s Cloak.'
   slot_scores:
     Stone of Binding:
       total: 0.57
@@ -332,8 +332,8 @@ builds:
     Charm, Gluttonous Grimoire, Draconic Scale, Oni Hunter''s Garb, Soul Gem, Shield
     of the Phoenix, Spectral Armor, Erosion, Eye of Providence, Yogi''s Necklace,
     Leviathan''s Hide, Midgardian Mail, Helm of Radiance, Mantle Of Discord, Stone
-    of Binding, Death Metal, Screeching Gargoyle, The Cosmic Horror, Bracer of The
-    Abyss, Ancile, Rod of Asclepius, Magi''s Cloak.'
+    of Binding, Death Metal, Screeching Gargoyle, Ethereal Staff, The Cosmic Horror,
+    Bracer of The Abyss, Ancile, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -402,8 +402,8 @@ builds:
     of the Phoenix, Rod of Tahuti, Amanita Charm, Soul Gem, Draconic Scale, Gluttonous
     Grimoire, Screeching Gargoyle, Oni Hunter''s Garb, Chronos'' Pendant, Nimble Ring,
     Chandra''s Grace, Spear of Desolation, Gladiator''s Shield, Erosion, Spectral
-    Armor, Eye of Providence, Prophetic Cloak, Leviathan''s Hide, Gem of Focus, Helm
-    of Radiance, Midgardian Mail, Mantle Of Discord, Totem of Death, Stone of Binding.'
+    Armor, Eye of Providence, Prophetic Cloak, Totem of Death, Leviathan''s Hide,
+    Gem of Focus, Helm of Radiance, Midgardian Mail, Mantle Of Discord, Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.62
@@ -474,9 +474,9 @@ builds:
     Soul Gem, Hydra''s Lament, Oni Hunter''s Garb, Golden Blade, Shield of the Phoenix,
     Eye of the Storm, Pharaoh''s Curse, Erosion, Spectral Armor, Eye of Providence,
     Death Metal, The Reaper, Lernaean Bow, The Cosmic Horror, Avenging Blade, Damaru,
-    Leviathan''s Hide, Spear of the Magus, Shogun''s Ofuda, Midgardian Mail, Mantle
-    Of Discord, Spear of Desolation, Stone of Binding, Helm of Radiance, Tekko-Kagi,
-    Tyrfing, Riptalon.'
+    Leviathan''s Hide, Spear of the Magus, Shogun''s Ofuda, Heartseeker, Midgardian
+    Mail, Obsidian Shard, Dominance, Titan''s Bane, Mantle Of Discord, Spear of Desolation,
+    Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -545,11 +545,11 @@ builds:
     Grimoire, The Crusher, Kinetic Cuirass, Jotunn''s Revenge, Amanita Charm, Soul
     Gem, Draconic Scale, Berserker''s Shield, Nimble Ring, Oni Hunter''s Garb, The
     Cosmic Horror, Runeforged Hammer, Shield Splitter, Shield of the Phoenix, Death
-    Metal, Spear of the Magus, Hydra''s Lament, Erosion, Spear of Desolation, Eye
-    of the Storm, Helm of Radiance, Spectral Armor, Eye of Providence, Rod of Asclepius,
-    Pharaoh''s Curse, The Reaper, Obsidian Shard, Leviathan''s Hide, Golden Blade,
-    Chronos'' Pendant, Jade Scepter, Midgardian Mail, Avenging Blade, Mantle Of Discord,
-    Damaru, Stone of Binding, Triton''s Conch.'
+    Metal, Spear of the Magus, Hydra''s Lament, Obsidian Shard, Erosion, Spear of
+    Desolation, Eye of the Storm, Helm of Radiance, Spectral Armor, Eye of Providence,
+    Ethereal Staff, Rod of Asclepius, Pharaoh''s Curse, The Reaper, Leviathan''s Hide,
+    Golden Blade, Chronos'' Pendant, Jade Scepter, Midgardian Mail, Avenging Blade,
+    Mantle Of Discord, Damaru, Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.58

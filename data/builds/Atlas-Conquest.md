@@ -93,25 +93,25 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Yogi's Necklace
+  - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
   - Prophetic Cloak
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Prophetic Cloak
   - Breastplate of Valor
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Erosion — physical protection
+    swap: Erosion — magical protection
     swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -123,12 +123,12 @@ builds:
     Ancile, Helm of Radiance, Screeching Gargoyle, Hide of the Nemean Lion, Void Shield,
     Doublet of Binding.'
   slot_scores:
-    Yogi's Necklace:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.77
-      pick: 0.1
-      fit: 0.2
+    Genji's Guard:
+      total: 0.56
+      efficiency: 0.69
+      win: 0.56
+      pick: 0.22
+      fit: 0.39
     Breastplate of Valor:
       total: 0.56
       efficiency: 0.64
@@ -168,39 +168,39 @@ builds:
   - Yogi's Necklace
   - Kinetic Cuirass
   - Prophetic Cloak
-  - Shield of the Phoenix
+  - Oni Hunter's Garb
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Yogi's Necklace
   - Prophetic Cloak
+  - Oni Hunter's Garb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
-  - vs_tag: physical_heavy
-    swap: Erosion — physical protection
+    swap: Erosion — magical protection
     swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Soul Gem, Gluttonous
-    Grimoire, Rod of Tahuti, Chandra''s Grace, Rod of Asclepius, Oni Hunter''s Garb,
-    Erosion, Eye of Providence, Draconic Scale, Phoenix Feather, Spectral Armor, Leviathan''s
-    Hide, Midgardian Mail, Lifebinder, Glorious Pridwen, Nimble Ring, Gladiator''s
-    Shield, Ancile, Blood-Bound Book, Hide of the Nemean Lion, Void Shield, Doublet
-    of Binding.'
+    this god: Amanita Charm, Yogi''s Necklace, Shield of the Phoenix, Kinetic Cuirass,
+    Soul Gem, Gluttonous Grimoire, Rod of Tahuti, Chandra''s Grace, Rod of Asclepius,
+    Oni Hunter''s Garb, Erosion, Ethereal Staff, Eye of Providence, Draconic Scale,
+    Phoenix Feather, Spectral Armor, Leviathan''s Hide, Midgardian Mail, Lifebinder,
+    Glorious Pridwen, Nimble Ring, Gladiator''s Shield, Ancile, Blood-Bound Book,
+    Hide of the Nemean Lion.'
   slot_scores:
     Yogi's Necklace:
-      total: 0.59
+      total: 0.64
       efficiency: 0.57
       win: 0.77
       pick: 0.1
-      fit: 0.27
+      fit: 0.57
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.59
@@ -213,12 +213,12 @@ builds:
       win: 0.72
       pick: 0.1
       fit: 0.57
-    Shield of the Phoenix:
-      total: 0.61
-      efficiency: 0.57
+    Oni Hunter's Garb:
+      total: 0.56
+      efficiency: 0.61
       win: 0.61
       pick: 0.0
-      fit: 0.92
+      fit: 0.48
     Freya's Tears:
       total: 0.61
       efficiency: 0.59
@@ -235,15 +235,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Screeching Gargoyle
   - Stone of Binding
-  - Yogi's Necklace
   - Kinetic Cuirass
   - Freya's Tears
   - Gluttonous Grimoire
   - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
   - Stone of Binding
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -261,22 +261,22 @@ builds:
     for this god: Rod of Tahuti, Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm,
     Soul Gem, Stone of Binding, Screeching Gargoyle, Void Shield, The Cosmic Horror,
     Spear of the Magus, Oni Hunter''s Garb, Void Stone, Shield of the Phoenix, Spear
-    of Desolation, Erosion, Eye of Providence, Spectral Armor, Nimble Ring, Draconic
-    Scale, Obsidian Shard, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord,
-    Helm of Radiance, Magi''s Cloak.'
+    of Desolation, Obsidian Shard, Erosion, Eye of Providence, Spectral Armor, Nimble
+    Ring, Draconic Scale, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord, Helm
+    of Radiance, Magi''s Cloak.'
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.61
+      pick: 0.0
+      fit: 0.67
     Stone of Binding:
       total: 0.55
       efficiency: 0.47
       win: 0.61
       pick: 0.0
       fit: 0.75
-    Yogi's Necklace:
-      total: 0.57
-      efficiency: 0.57
-      win: 0.77
-      pick: 0.1
-      fit: 0.14
     Kinetic Cuirass:
       total: 0.57
       efficiency: 0.59
@@ -333,7 +333,7 @@ builds:
     Spectral Armor, Erosion, Eye of Providence, Draconic Scale, Leviathan''s Hide,
     Midgardian Mail, Helm of Radiance, Mantle Of Discord, Stone of Binding, Death
     Metal, Screeching Gargoyle, The Cosmic Horror, Bracer of The Abyss, Ancile, Rod
-    of Asclepius, Magi''s Cloak.'
+    of Asclepius, Ethereal Staff.'
   slot_scores:
     Yogi's Necklace:
       total: 0.57
@@ -402,8 +402,8 @@ builds:
     Shield of the Phoenix, Rod of Tahuti, Amanita Charm, Soul Gem, Gluttonous Grimoire,
     Screeching Gargoyle, Oni Hunter''s Garb, Chronos'' Pendant, Nimble Ring, Chandra''s
     Grace, Spear of Desolation, Gladiator''s Shield, Erosion, Spectral Armor, Eye
-    of Providence, Draconic Scale, Leviathan''s Hide, Gem of Focus, Helm of Radiance,
-    Midgardian Mail, Mantle Of Discord, Totem of Death, Stone of Binding.'
+    of Providence, Totem of Death, Draconic Scale, Leviathan''s Hide, Gem of Focus,
+    Helm of Radiance, Midgardian Mail, Mantle Of Discord, Stone of Binding.'
   slot_scores:
     Yogi's Necklace:
       total: 0.57

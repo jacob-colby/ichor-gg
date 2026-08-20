@@ -271,12 +271,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
-  - Void Stone
   - The Crusher
+  - Heartseeker
   - Soul Gem
   flex_slots:
+  - Heartseeker
   - Void Shield
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -311,18 +311,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Void Stone:
-      total: 0.52
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     The Crusher:
       total: 0.59
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Heartseeker:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -402,11 +402,11 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
-  - Spear of Desolation
+  - Totem of Death
   - Soul Gem
   flex_slots:
+  - Totem of Death
   - Toxic Blade
-  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -447,12 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Spear of Desolation:
-      total: 0.48
-      efficiency: 0.52
+    Totem of Death:
+      total: 0.49
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.5
     Soul Gem:
       total: 0.78
       efficiency: 0.57

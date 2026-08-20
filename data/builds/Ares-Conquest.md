@@ -193,13 +193,13 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Freya''s Tears, Shield of the Phoenix, Kinetic Cuirass,
     Soul Gem, Berserker''s Shield, Gluttonous Grimoire, Chandra''s Grace, Rod of Tahuti,
-    Rod of Asclepius, Oni Hunter''s Garb, Erosion, Eye of Providence, Breastplate
-    of Valor, Phoenix Feather, Draconic Scale, Spectral Armor, Jotunn''s Revenge,
-    Pharaoh''s Curse, The Crusher, Leviathan''s Hide, Shifter''s Shield, Midgardian
-    Mail, Runeforged Hammer, Glorious Pridwen, Eye of the Storm, Lifebinder, Gladiator''s
-    Shield, Shield Splitter, Nimble Ring, Ancile, The Reaper, Blood-Bound Book, Shogun''s
-    Ofuda, Void Shield, Hydra''s Lament, Doublet of Binding, Mantle Of Discord, Bancroft''s
-    Talon, Stone of Binding.'
+    Ethereal Staff, Rod of Asclepius, Oni Hunter''s Garb, Yogi''s Necklace, Erosion,
+    Eye of Providence, Breastplate of Valor, Phoenix Feather, Draconic Scale, Spectral
+    Armor, Jotunn''s Revenge, Pharaoh''s Curse, The Crusher, Leviathan''s Hide, Shifter''s
+    Shield, Midgardian Mail, Runeforged Hammer, Glorious Pridwen, Eye of the Storm,
+    Lifebinder, Gladiator''s Shield, Shield Splitter, Nimble Ring, Ancile, The Reaper,
+    Blood-Bound Book, Shogun''s Ofuda, Void Shield, Hydra''s Lament, Doublet of Binding,
+    Mantle Of Discord.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -268,11 +268,11 @@ builds:
     Jotunn''s Revenge, Kinetic Cuirass, Amanita Charm, Soul Gem, Stone of Binding,
     Berserker''s Shield, Screeching Gargoyle, Void Shield, Breastplate of Valor, The
     Cosmic Horror, Oni Hunter''s Garb, Shield of the Phoenix, Void Stone, Spear of
-    the Magus, Spear of Desolation, Avenging Blade, Erosion, Eye of Providence, Spectral
-    Armor, Nimble Ring, Draconic Scale, The Reaper, Obsidian Shard, Pharaoh''s Curse,
-    Riptalon, Shield Splitter, Leviathan''s Hide, Runeforged Hammer, Midgardian Mail,
-    Silverbranch Bow, Hydra''s Lament, Mantle Of Discord, Shifter''s Shield, Eye of
-    the Storm, Helm of Radiance, Ancile, Magi''s Cloak.'
+    the Magus, Spear of Desolation, Avenging Blade, Obsidian Shard, Erosion, Eye of
+    Providence, Spectral Armor, Nimble Ring, Draconic Scale, The Reaper, Pharaoh''s
+    Curse, Riptalon, Shield Splitter, Leviathan''s Hide, Runeforged Hammer, Midgardian
+    Mail, Silverbranch Bow, Hydra''s Lament, Mantle Of Discord, Heartseeker, Shifter''s
+    Shield, Eye of the Storm, Titan''s Bane, Helm of Radiance.'
   slot_scores:
     Stone of Binding:
       total: 0.55
@@ -343,9 +343,9 @@ builds:
     Soul Gem, Shield of the Phoenix, Shogun''s Ofuda, Tyrfing, Runeforged Hammer,
     Spectral Armor, Hydra''s Lament, Erosion, Lernaean Bow, Silverbranch Bow, Shield
     Splitter, Eye of Providence, Draconic Scale, Eye of the Storm, Leviathan''s Hide,
-    Midgardian Mail, Mantle Of Discord, Toxic Blade, Stone of Binding, Helm of Radiance,
-    Screeching Gargoyle, Death Metal, Yogi''s Necklace, Damaru, Ancile, The Cosmic
-    Horror, Shifter''s Shield.'
+    Dominance, Midgardian Mail, Mantle Of Discord, Toxic Blade, Stone of Binding,
+    Helm of Radiance, Screeching Gargoyle, Death Metal, Yogi''s Necklace, Damaru,
+    Ancile, Shifter''s Shield.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -415,11 +415,11 @@ builds:
     Charm, Soul Gem, Gluttonous Grimoire, Hydra''s Lament, Berserker''s Shield, The
     Crusher, Screeching Gargoyle, Oni Hunter''s Garb, Prophetic Cloak, Chronos'' Pendant,
     Nimble Ring, Chandra''s Grace, Spear of Desolation, Gladiator''s Shield, Erosion,
-    Spectral Armor, Eye of Providence, Shield Splitter, Draconic Scale, Runeforged
-    Hammer, Pharaoh''s Curse, Eye of the Storm, Leviathan''s Hide, Gem of Focus, Helm
-    of Radiance, Midgardian Mail, Mantle Of Discord, Totem of Death, Stone of Binding,
-    Arondight, Shifter''s Shield, Death Metal, Rod of Asclepius, The Cosmic Horror,
-    Glorious Pridwen.'
+    Spectral Armor, Eye of Providence, Totem of Death, Shield Splitter, Draconic Scale,
+    Runeforged Hammer, Pharaoh''s Curse, Eye of the Storm, Leviathan''s Hide, Gem
+    of Focus, Helm of Radiance, Midgardian Mail, Mantle Of Discord, Stone of Binding,
+    Arondight, Ethereal Staff, Shifter''s Shield, Death Metal, Rod of Asclepius, The
+    Cosmic Horror.'
   slot_scores:
     Breastplate of Valor:
       total: 0.57

@@ -26,6 +26,17 @@
 #   detail       the specifics the checker reads
 #   quote        their own words, verbatim, so a paraphrase can't drift
 #   status       open | resolved | rejected — set by a human, never by a script
+#   last_verdict what the checker said when a human last looked. `--check` fails
+#                when a `resolved` claim scores WORSE than this, so a fix coming
+#                undone one step at a time is caught. Added 2026-08-19, after
+#                the effect-tag pass took Ullr from `clear` to `partial` and the
+#                gate stayed green: it only tested for a claim reverting all the
+#                way to `holds`. Omit it and that older, weaker rule applies.
+#
+#                IT IS A BASELINE, NOT A TARGET. Lowering it to match a build
+#                you just broke turns this gate into a rubber stamp. Raise it
+#                when a fix lands; change it downward only as a recorded
+#                decision, in `notes`, with what was traded for what.
 #
 # CLAIM KINDS the checker understands:
 #   missing-item      detail.items should appear in this god's core and do not
@@ -44,6 +55,7 @@ reviews:
       Ullr's build is almost always Transcendence, Heartseeker, Hydras,
       Jotunn's, etc.
     status: resolved
+    last_verdict: clear
     notes: >-
       Partly addressed. At the time of the review the model's core was
       Lernaean Bow / Berserker's Shield / Jotunn's / Riptalon / Damaru /
@@ -107,6 +119,7 @@ reviews:
       Eye of Providence seems to be overvalued because it's assuming you'll get
       the gold from it.
     status: resolved
+    last_verdict: partial
     notes: >-
       Confirmed and fixed. Cost 2300 against a fitted stat price of 2550, so it
       read as a 250g bargain — the discount is really the ward economy's price

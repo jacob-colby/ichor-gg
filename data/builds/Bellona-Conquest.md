@@ -189,11 +189,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Genji''s Guard, Jotunn''s Revenge,
-    The Crusher, Chandra''s Grace, Runeforged Hammer, Freya''s Tears, Oni Hunter''s
-    Garb, Eye of the Storm, The Reaper, Shield Splitter, Erosion, Breastplate of Valor,
-    Hydra''s Lament, Phoenix Feather, Eye of Providence, Spectral Armor, Draconic
-    Scale, Avenging Blade, Pharaoh''s Curse, Leviathan''s Hide, Midgardian Mail, Glorious
-    Pridwen, Riptalon, Ancile.'
+    The Crusher, Chandra''s Grace, Runeforged Hammer, Yogi''s Necklace, Freya''s Tears,
+    Oni Hunter''s Garb, Eye of the Storm, The Reaper, Shield Splitter, Erosion, Breastplate
+    of Valor, Hydra''s Lament, Phoenix Feather, Eye of Providence, Spectral Armor,
+    Draconic Scale, Avenging Blade, Pharaoh''s Curse, Leviathan''s Hide, Midgardian
+    Mail, Glorious Pridwen, Riptalon.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -261,9 +261,9 @@ builds:
     for this god: The Crusher, Jotunn''s Revenge, Amanita Charm, Genji''s Guard, Avenging
     Blade, Stone of Binding, Screeching Gargoyle, Freya''s Tears, Void Shield, Breastplate
     of Valor, Oni Hunter''s Garb, The Reaper, Void Stone, Runeforged Hammer, Shield
-    of the Phoenix, Shield Splitter, Hydra''s Lament, Erosion, Spectral Armor, Eye
-    of the Storm, Eye of Providence, Draconic Scale, Pharaoh''s Curse, Riptalon, Heartseeker,
-    Leviathan''s Hide.'
+    of the Phoenix, Shield Splitter, Hydra''s Lament, Heartseeker, Erosion, Spectral
+    Armor, Eye of the Storm, Titan''s Bane, Eye of Providence, Draconic Scale, Pharaoh''s
+    Curse, Riptalon, Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
       total: 0.52
@@ -332,8 +332,8 @@ builds:
     Tears, Jotunn''s Revenge, Breastplate of Valor, Riptalon, Oni Hunter''s Garb,
     Shield of the Phoenix, Tyrfing, Runeforged Hammer, Spectral Armor, Erosion, Silverbranch
     Bow, Lernaean Bow, Hydra''s Lament, Shield Splitter, Eye of Providence, Draconic
-    Scale, Eye of the Storm, Leviathan''s Hide, Midgardian Mail, Toxic Blade, Mantle
-    Of Discord.'
+    Scale, Eye of the Storm, Leviathan''s Hide, Dominance, Midgardian Mail, Toxic
+    Blade.'
   slot_scores:
     Golden Blade:
       total: 0.56

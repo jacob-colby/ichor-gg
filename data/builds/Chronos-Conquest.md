@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Book of Thoth
   - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
   flex_slots:
+  - Obsidian Shard
   - Spear of the Magus
-  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -118,17 +118,11 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Gluttonous Grimoire, Soul Gem, The Cosmic Horror, Spear of the Magus,
     Bracer of The Abyss, Genji''s Guard, Blood-Bound Book, Chronos'' Pendant, Bragi''s
-    Harp, Breastplate of Valor, Bancroft''s Talon, Death Metal, Helm of Radiance,
-    Doom Orb, Rod of Asclepius, The World Stone, Gem of Focus, Freya''s Tears, Kinetic
-    Cuirass, Jade Scepter, Totem of Death, Amanita Charm, Dreamer''s Idol, Typhon’s
-    Heart, Shield of the Phoenix.'
+    Harp, Breastplate of Valor, Bancroft''s Talon, Totem of Death, Death Metal, Helm
+    of Radiance, Ethereal Staff, Doom Orb, Rod of Asclepius, The World Stone, Gem
+    of Focus, Freya''s Tears, Kinetic Cuirass, Jade Scepter, Amanita Charm, Dreamer''s
+    Idol, Typhon’s Heart.'
   slot_scores:
-    Book of Thoth:
-      total: 0.44
-      efficiency: 0.49
-      win: 0.47
-      pick: 0.35
-      fit: 0.24
     Nimble Ring:
       total: 0.6
       efficiency: 0.68
@@ -159,6 +153,12 @@ builds:
       win: 0.38
       pick: 0.4
       fit: 0.44
+    Obsidian Shard:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.43
+      pick: 0.3
+      fit: 0.54
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -190,9 +190,9 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Gluttonous
     Grimoire, Soul Gem, Genji''s Guard, Death Metal, The Cosmic Horror, Bragi''s Harp,
     Spear of the Magus, Breastplate of Valor, Bancroft''s Talon, Bracer of The Abyss,
-    Chronos'' Pendant, Blood-Bound Book, Oni Hunter''s Garb, Helm of Radiance, Doom
-    Orb, The World Stone, Rod of Asclepius, Kinetic Cuirass, Freya''s Tears, Amanita
-    Charm, Gem of Focus, Jade Scepter, Eye of Providence, Triton''s Conch.'
+    Chronos'' Pendant, Blood-Bound Book, Totem of Death, Oni Hunter''s Garb, Helm
+    of Radiance, Doom Orb, Ethereal Staff, The World Stone, Rod of Asclepius, Kinetic
+    Cuirass, Freya''s Tears, Amanita Charm, Gem of Focus, Jade Scepter, Eye of Providence.'
   slot_scores:
     Book of Thoth:
       total: 0.44
@@ -259,10 +259,10 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Soul Gem, Gluttonous Grimoire, Genji''s Guard, The Cosmic Horror, Spear of
     the Magus, Breastplate of Valor, Death Metal, Bragi''s Harp, Chronos'' Pendant,
-    Bracer of The Abyss, Freya''s Tears, Blood-Bound Book, Kinetic Cuirass, Shield
-    of the Phoenix, Doom Orb, Bancroft''s Talon, Amanita Charm, The World Stone, Gem
-    of Focus, Helm of Radiance, Eye of Providence, Rod of Asclepius, Oni Hunter''s
-    Garb, Totem of Death, Dreamer''s Idol.'
+    Bracer of The Abyss, Freya''s Tears, Totem of Death, Blood-Bound Book, Kinetic
+    Cuirass, Shield of the Phoenix, Doom Orb, Bancroft''s Talon, Amanita Charm, The
+    World Stone, Gem of Focus, Helm of Radiance, Ethereal Staff, Eye of Providence,
+    Rod of Asclepius, Oni Hunter''s Garb.'
   slot_scores:
     Book of Thoth:
       total: 0.42
@@ -328,11 +328,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Gluttonous Grimoire, Shield of the Phoenix,
-    Rod of Asclepius, Kinetic Cuirass, Genji''s Guard, Blood-Bound Book, Bancroft''s
-    Talon, Chandra''s Grace, Oni Hunter''s Garb, Freya''s Tears, Breastplate of Valor,
-    Lifebinder, Phoenix Feather, The Cosmic Horror, Spectral Armor, Spear of the Magus,
-    Erosion, Shifter''s Shield, Eye of Providence, Helm of Radiance, Draconic Scale,
-    Leviathan''s Hide, Umbral Link, Bracer of The Abyss.'
+    Ethereal Staff, Rod of Asclepius, Kinetic Cuirass, Genji''s Guard, Blood-Bound
+    Book, Yogi''s Necklace, Bancroft''s Talon, Chandra''s Grace, Oni Hunter''s Garb,
+    Freya''s Tears, Breastplate of Valor, Lifebinder, Phoenix Feather, The Cosmic
+    Horror, Spectral Armor, Spear of the Magus, Erosion, Shifter''s Shield, Eye of
+    Providence, Helm of Radiance, Draconic Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.47
@@ -381,8 +381,8 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Spear of the Magus
   - Obsidian Shard
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -400,9 +400,9 @@ builds:
     for this god: Gluttonous Grimoire, Soul Gem, The Cosmic Horror, Spear of the Magus,
     Genji''s Guard, Doom Orb, Screeching Gargoyle, The World Stone, Bracer of The
     Abyss, Dreamer''s Idol, Breastplate of Valor, Blood-Bound Book, Chronos'' Pendant,
-    Bancroft''s Talon, Bragi''s Harp, Stone of Binding, Death Metal, Helm of Radiance,
-    Kinetic Cuirass, Void Shield, Amanita Charm, Rod of Asclepius, Freya''s Tears,
-    Eye of Providence, Oni Hunter''s Garb.'
+    Bancroft''s Talon, Bragi''s Harp, Stone of Binding, Death Metal, Totem of Death,
+    Helm of Radiance, Kinetic Cuirass, Ethereal Staff, Void Shield, Amanita Charm,
+    Rod of Asclepius, Freya''s Tears.'
   slot_scores:
     Nimble Ring:
       total: 0.58
@@ -435,11 +435,11 @@ builds:
       pick: 0.4
       fit: 0.57
     Obsidian Shard:
-      total: 0.48
+      total: 0.49
       efficiency: 0.52
       win: 0.43
       pick: 0.3
-      fit: 0.57
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -470,9 +470,9 @@ builds:
     this god: Gluttonous Grimoire, Soul Gem, Genji''s Guard, The Cosmic Horror, Spear
     of the Magus, Bragi''s Harp, Death Metal, Bracer of The Abyss, Breastplate of
     Valor, Blood-Bound Book, Chronos'' Pendant, Bancroft''s Talon, Kinetic Cuirass,
-    Amanita Charm, Helm of Radiance, Freya''s Tears, Rod of Asclepius, Eye of Providence,
-    Oni Hunter''s Garb, Shield of the Phoenix, Jade Scepter, Gem of Focus, Doom Orb,
-    The World Stone, Ethereal Staff.'
+    Amanita Charm, Helm of Radiance, Ethereal Staff, Totem of Death, Freya''s Tears,
+    Rod of Asclepius, Eye of Providence, Oni Hunter''s Garb, Shield of the Phoenix,
+    Jade Scepter, Gem of Focus, Doom Orb.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.44
@@ -539,11 +539,11 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Soul Gem, Genji''s Guard, Gluttonous
     Grimoire, Breastplate of Valor, Chronos'' Pendant, Freya''s Tears, Shield of the
-    Phoenix, The Cosmic Horror, Screeching Gargoyle, Gem of Focus, Chandra''s Grace,
-    Spear of the Magus, Totem of Death, Bracer of The Abyss, Death Metal, Bragi''s
+    Phoenix, Totem of Death, The Cosmic Horror, Screeching Gargoyle, Gem of Focus,
+    Chandra''s Grace, Spear of the Magus, Bracer of The Abyss, Death Metal, Bragi''s
     Harp, Kinetic Cuirass, Amanita Charm, Blood-Bound Book, Eye of Providence, Oni
-    Hunter''s Garb, Bancroft''s Talon, Gladiator''s Shield, Helm of Radiance, Rod
-    of Asclepius.'
+    Hunter''s Garb, Bancroft''s Talon, Gladiator''s Shield, Helm of Radiance, Ethereal
+    Staff.'
   slot_scores:
     Book of Thoth:
       total: 0.42
@@ -611,11 +611,11 @@ builds:
     win/pick). Underrated for this god: The Crusher, Jotunn''s Revenge, Gluttonous
     Grimoire, Soul Gem, Tyrfing, The Reaper, Death Metal, Hydra''s Lament, The Cosmic
     Horror, Spear of the Magus, Genji''s Guard, Lernaean Bow, Bragi''s Harp, Runeforged
-    Hammer, Riptalon, Golden Blade, Berserker''s Shield, Tekko-Kagi, Damaru, Breastplate
-    of Valor, Blood-Bound Book, Chronos'' Pendant, Heartseeker, Pendulum Blade, Bancroft''s
-    Talon, Titan''s Bane, Silverbranch Bow, Dominance, Transcendence, Avenging Blade,
-    Triton''s Conch, Bracer of The Abyss, Arondight, Helm of Radiance, Shield Splitter,
-    Kinetic Cuirass, Doom Orb, Rod of Asclepius.'
+    Hammer, Riptalon, Heartseeker, Golden Blade, Berserker''s Shield, Tekko-Kagi,
+    Titan''s Bane, Damaru, Dominance, Breastplate of Valor, Blood-Bound Book, Chronos''
+    Pendant, Pendulum Blade, Bancroft''s Talon, Silverbranch Bow, Transcendence, Avenging
+    Blade, Triton''s Conch, Bracer of The Abyss, Totem of Death, Arondight, Helm of
+    Radiance, Shield Splitter, Ethereal Staff, Kinetic Cuirass.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.51
@@ -683,11 +683,11 @@ builds:
     + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Soul Gem, The
     Crusher, Jotunn''s Revenge, Tyrfing, Berserker''s Shield, The Cosmic Horror, Riptalon,
     Death Metal, Bragi''s Harp, Spear of the Magus, Lernaean Bow, Hydra''s Lament,
-    Genji''s Guard, The Reaper, Golden Blade, Tekko-Kagi, Bracer of The Abyss, Silverbranch
-    Bow, Runeforged Hammer, Blood-Bound Book, Chronos'' Pendant, Breastplate of Valor,
-    Dominance, Damaru, Bancroft''s Talon, Pharaoh''s Curse, Helm of Radiance, Rod
-    of Asclepius, Kinetic Cuirass, Doom Orb, Amanita Charm, Freya''s Tears, The World
-    Stone, Heartseeker, Jade Scepter, Eye of Providence, Triton''s Conch.'
+    Genji''s Guard, The Reaper, Golden Blade, Tekko-Kagi, Dominance, Bracer of The
+    Abyss, Silverbranch Bow, Runeforged Hammer, Blood-Bound Book, Chronos'' Pendant,
+    Breastplate of Valor, Heartseeker, Damaru, Bancroft''s Talon, Titan''s Bane, Pharaoh''s
+    Curse, Helm of Radiance, Totem of Death, Ethereal Staff, Rod of Asclepius, Kinetic
+    Cuirass, Doom Orb, Amanita Charm, Freya''s Tears, The World Stone.'
   slot_scores:
     Book of Thoth:
       total: 0.43
@@ -754,10 +754,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Soul Gem, The Cosmic Horror, Spear
     of the Magus, Bracer of The Abyss, Genji''s Guard, Blood-Bound Book, Chronos''
-    Pendant, Bragi''s Harp, Breastplate of Valor, Bancroft''s Talon, Death Metal,
-    Helm of Radiance, Doom Orb, Rod of Asclepius, The World Stone, Gem of Focus, Freya''s
-    Tears, Kinetic Cuirass, Jade Scepter, Totem of Death, Amanita Charm, Dreamer''s
-    Idol, Typhon’s Heart, Shield of the Phoenix.'
+    Pendant, Bragi''s Harp, Breastplate of Valor, Bancroft''s Talon, Totem of Death,
+    Death Metal, Helm of Radiance, Ethereal Staff, Doom Orb, Rod of Asclepius, The
+    World Stone, Gem of Focus, Freya''s Tears, Kinetic Cuirass, Jade Scepter, Amanita
+    Charm, Dreamer''s Idol, Typhon’s Heart.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.47
@@ -826,8 +826,8 @@ builds:
     Asclepius, Spectral Armor, Erosion, Breastplate of Valor, The Cosmic Horror, Kinetic
     Cuirass, Doublet of Binding, Spear of the Magus, Freya''s Tears, Oni Hunter''s
     Garb, Bracer of The Abyss, Void Stone, Shield of the Phoenix, Lifebinder, Chronos''
-    Pendant, Void Shield, Triton''s Conch, Blood-Bound Book, Stampede, Screeching
-    Gargoyle, Chandra''s Grace.'
+    Pendant, Void Shield, Triton''s Conch, Blood-Bound Book, Stampede, Totem of Death,
+    Ethereal Staff.'
   slot_scores:
     Book of Thoth:
       total: 0.42
@@ -897,7 +897,7 @@ builds:
     Conch, Spectral Armor, Death Metal, The Cosmic Horror, Breastplate of Valor, Spear
     of the Magus, Bragi''s Harp, Erosion, Oni Hunter''s Garb, Lifebinder, Kinetic
     Cuirass, Doublet of Binding, Bancroft''s Talon, Chronos'' Pendant, Bracer of The
-    Abyss, Blood-Bound Book, Void Shield, Void Stone, Freya''s Tears, Helm of Radiance.'
+    Abyss, Blood-Bound Book, Ethereal Staff, Void Shield, Void Stone, Freya''s Tears.'
   slot_scores:
     Book of Thoth:
       total: 0.44
@@ -967,8 +967,8 @@ builds:
     The Cosmic Horror, Spectral Armor, Spear of the Magus, Triton''s Conch, Breastplate
     of Valor, Erosion, Kinetic Cuirass, Death Metal, Doublet of Binding, Freya''s
     Tears, Lifebinder, Chronos'' Pendant, Oni Hunter''s Garb, Bragi''s Harp, Void
-    Stone, Void Shield, Shield of the Phoenix, Bracer of The Abyss, Blood-Bound Book,
-    Stampede.'
+    Stone, Void Shield, Shield of the Phoenix, Bracer of The Abyss, Totem of Death,
+    Blood-Bound Book.'
   slot_scores:
     Book of Thoth:
       total: 0.42
@@ -1036,10 +1036,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Rod of Asclepius, Shield of the Phoenix, Gluttonous
     Grimoire, Spectral Armor, Erosion, Lifebinder, Kinetic Cuirass, Genji''s Guard,
-    Umbral Link, Chandra''s Grace, Blood-Bound Book, Void Shield, Doublet of Binding,
-    Freya''s Tears, Breastplate of Valor, Bancroft''s Talon, Oni Hunter''s Garb, Stampede,
-    Void Stone, Phoenix Feather, Mystical Mail, Shifter''s Shield, Eye of Providence,
-    The Cosmic Horror, Triton''s Conch.'
+    Umbral Link, Ethereal Staff, Chandra''s Grace, Yogi''s Necklace, Blood-Bound Book,
+    Void Shield, Doublet of Binding, Freya''s Tears, Breastplate of Valor, Bancroft''s
+    Talon, Oni Hunter''s Garb, Stampede, Void Stone, Phoenix Feather, Mystical Mail,
+    Shifter''s Shield, Eye of Providence.'
   slot_scores:
     Genji's Guard:
       total: 0.48
@@ -1181,7 +1181,7 @@ builds:
     Conch, Doublet of Binding, The Cosmic Horror, Oni Hunter''s Garb, Freya''s Tears,
     Spear of the Magus, Void Stone, Void Shield, Death Metal, Lifebinder, Bragi''s
     Harp, Bracer of The Abyss, Shield of the Phoenix, Chronos'' Pendant, Stampede,
-    Eye of Providence, Blood-Bound Book.'
+    Eye of Providence.'
   slot_scores:
     Genji's Guard:
       total: 0.47
@@ -1250,9 +1250,9 @@ builds:
     + fit + win/pick). Underrated for this god: Soul Gem, Genji''s Guard, Gluttonous
     Grimoire, Amanita Charm, Breastplate of Valor, Freya''s Tears, Rod of Asclepius,
     Spectral Armor, Shield of the Phoenix, Chronos'' Pendant, Erosion, Screeching
-    Gargoyle, Kinetic Cuirass, Chandra''s Grace, Doublet of Binding, The Cosmic Horror,
-    Triton''s Conch, Oni Hunter''s Garb, Spear of the Magus, Void Stone, Gem of Focus,
-    Void Shield, Lifebinder, Totem of Death, Death Metal, Stampede.'
+    Gargoyle, Kinetic Cuirass, Totem of Death, Chandra''s Grace, Doublet of Binding,
+    The Cosmic Horror, Triton''s Conch, Oni Hunter''s Garb, Spear of the Magus, Void
+    Stone, Gem of Focus, Void Shield, Lifebinder, Death Metal.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -1319,13 +1319,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Soul Gem, Jotunn''s Revenge, The Crusher,
-    Gluttonous Grimoire, Amanita Charm, Tyrfing, Pharaoh''s Curse, Genji''s Guard,
-    Hydra''s Lament, Rod of Asclepius, Triton''s Conch, The Reaper, Shogun''s Ofuda,
-    Spectral Armor, Runeforged Hammer, Berserker''s Shield, Death Metal, Golden Blade,
-    Erosion, Lernaean Bow, The Cosmic Horror, Breastplate of Valor, Kinetic Cuirass,
-    Spear of the Magus, Riptalon, Sanguine Lash, Doublet of Binding, Eros'' Bow, Damaru,
-    Freya''s Tears, Eye of the Storm, Oni Hunter''s Garb, Tekko-Kagi, Void Stone,
-    Avenging Blade, Bragi''s Harp, Void Shield, Lifebinder, Shield of the Phoenix.'
+    Gluttonous Grimoire, Amanita Charm, Pharaoh''s Curse, Genji''s Guard, Hydra''s
+    Lament, Rod of Asclepius, Triton''s Conch, The Reaper, Shogun''s Ofuda, Spectral
+    Armor, Runeforged Hammer, Sanguine Lash, Berserker''s Shield, Death Metal, Golden
+    Blade, Erosion, Lernaean Bow, The Cosmic Horror, Breastplate of Valor, Kinetic
+    Cuirass, Spear of the Magus, Riptalon, Doublet of Binding, Heartseeker, Eros''
+    Bow, Damaru, Freya''s Tears, Eye of the Storm, Titan''s Bane, Oni Hunter''s Garb,
+    Tekko-Kagi, Dominance, Void Stone, Avenging Blade, Bragi''s Harp.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.51
@@ -1396,9 +1396,9 @@ builds:
     Shogun''s Ofuda, Genji''s Guard, Berserker''s Shield, Triton''s Conch, Spectral
     Armor, Hydra''s Lament, The Cosmic Horror, Eros'' Bow, Golden Blade, Death Metal,
     Spear of the Magus, Riptalon, Lernaean Bow, Erosion, Runeforged Hammer, Bragi''s
-    Harp, The Reaper, Breastplate of Valor, Kinetic Cuirass, Lifebinder, Doublet of
-    Binding, Chronos'' Pendant, Bracer of The Abyss, Silverbranch Bow, Oni Hunter''s
-    Garb, Tekko-Kagi, Freya''s Tears, Void Stone, Void Shield, Blood-Bound Book.'
+    Harp, The Reaper, Breastplate of Valor, Kinetic Cuirass, Sanguine Lash, Lifebinder,
+    Doublet of Binding, Chronos'' Pendant, Dominance, Bracer of The Abyss, Silverbranch
+    Bow, Oni Hunter''s Garb, Tekko-Kagi, Freya''s Tears, Void Stone.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.49
@@ -1468,8 +1468,8 @@ builds:
     Guard, Rod of Asclepius, Spectral Armor, Erosion, Breastplate of Valor, The Cosmic
     Horror, Kinetic Cuirass, Doublet of Binding, Spear of the Magus, Freya''s Tears,
     Oni Hunter''s Garb, Bracer of The Abyss, Void Stone, Shield of the Phoenix, Lifebinder,
-    Chronos'' Pendant, Void Shield, Triton''s Conch, Blood-Bound Book, Stampede, Screeching
-    Gargoyle, Chandra''s Grace.'
+    Chronos'' Pendant, Void Shield, Triton''s Conch, Blood-Bound Book, Stampede, Totem
+    of Death, Ethereal Staff.'
   slot_scores:
     Genji's Guard:
       total: 0.48

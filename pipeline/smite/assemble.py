@@ -16,7 +16,26 @@ def _is_boots(item):
     return "Movement Speed" in (item.get("stats") or {})
 
 
-def _is_lifesteal(item, tags):
+def _is_sustain_item(item, tags):
+    """Does this item count against the `max_lifesteal` cap?
+
+    IT IS A SUSTAIN CAP, NOT A LIFESTEAL CAP, and the config key's name is the
+    only thing here that says otherwise. Measured 2026-08-19: of 21 buildable
+    items tagged `sustain`, THIRTEEN carry no Lifesteal stat at all — Sphere of
+    Negation is a shield, Spirit Robe a heal-over-time, Chandra's Grace a regen
+    aura. So the cap has always been counting them, on purpose: `assemble_core`
+    documents "at most `max_lifesteal` lifesteal/sustain items" and
+    `_weights.yaml` says "caps sustain items".
+
+    Recorded because the name reads as a bug and is not one. Narrowing this to
+    the Lifesteal stat would let a core stack three overlapping stay-alive
+    items, which is the thing the cap exists to stop. The key itself is left
+    named `max_lifesteal`: renaming it is ~50 mechanical sites across the
+    weights, four modules and two test files, which is churn, not a fix.
+
+    The live consequence is that a `sustain` TAG edit is a build change even
+    when it is not a scoring change — adding the tag to Yogi's Necklace and
+    Ethereal Staff moved 3 of 89 Conquest cores while moving coverage 0.0pp."""
     stats = item.get("stats") or {}
     return "sustain" in (tags or []) or any("Lifesteal" in s for s in stats)
 
@@ -229,7 +248,7 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
         if _is_boots(item):
             if have_boots[0]:
                 return False
-        is_ls = _is_lifesteal(item, _row_tags.get(name))
+        is_ls = _is_sustain_item(item, _row_tags.get(name))
         if is_ls and lifesteal_count[0] >= max_lifesteal:
             return False
         if _capped_out(item):

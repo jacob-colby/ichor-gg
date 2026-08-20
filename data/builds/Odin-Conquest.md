@@ -189,9 +189,9 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: The
     Crusher, Amanita Charm, Berserker''s Shield, Hydra''s Lament, Oni Hunter''s Garb,
     Runeforged Hammer, Shield of the Phoenix, Shield Splitter, Eye of the Storm, Spectral
-    Armor, Erosion, Eye of Providence, Draconic Scale, Golden Blade, The Reaper, Pharaoh''s
-    Curse, Damaru, Leviathan''s Hide, Avenging Blade, Yogi''s Necklace, Midgardian
-    Mail, Mantle Of Discord, Screeching Gargoyle, Transcendence.'
+    Armor, Erosion, Eye of Providence, Heartseeker, Draconic Scale, Golden Blade,
+    The Reaper, Pharaoh''s Curse, Damaru, Leviathan''s Hide, Avenging Blade, Yogi''s
+    Necklace, Midgardian Mail, Mantle Of Discord, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -257,10 +257,10 @@ builds:
     swap_item: Contagion
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, The Crusher, Berserker''s Shield,
-    The Reaper, Chandra''s Grace, Runeforged Hammer, Oni Hunter''s Garb, Eye of the
-    Storm, Phoenix Feather, Erosion, Shield Splitter, Hydra''s Lament, Spectral Armor,
-    Eye of Providence, Riptalon, Draconic Scale, Golden Blade, Pharaoh''s Curse, Avenging
-    Blade, Leviathan''s Hide, Midgardian Mail, Glorious Pridwen, Ancile.'
+    The Reaper, Chandra''s Grace, Yogi''s Necklace, Runeforged Hammer, Oni Hunter''s
+    Garb, Eye of the Storm, Phoenix Feather, Erosion, Shield Splitter, Hydra''s Lament,
+    Spectral Armor, Eye of Providence, Riptalon, Draconic Scale, Golden Blade, Pharaoh''s
+    Curse, Avenging Blade, Leviathan''s Hide, Midgardian Mail, Glorious Pridwen.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.62
@@ -328,9 +328,8 @@ builds:
     for this god: The Crusher, Amanita Charm, Stone of Binding, Berserker''s Shield,
     Avenging Blade, Screeching Gargoyle, Void Shield, Oni Hunter''s Garb, Void Stone,
     The Reaper, Shield of the Phoenix, Runeforged Hammer, Shield Splitter, Hydra''s
-    Lament, Erosion, Spectral Armor, Eye of Providence, Eye of the Storm, Draconic
-    Scale, Pharaoh''s Curse, Riptalon, Leviathan''s Hide, Heartseeker, Midgardian
-    Mail.'
+    Lament, Erosion, Heartseeker, Spectral Armor, Eye of Providence, Eye of the Storm,
+    Titan''s Bane, Draconic Scale, Pharaoh''s Curse, Riptalon, Leviathan''s Hide.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.63
@@ -399,7 +398,7 @@ builds:
     Pharaoh''s Curse, Oni Hunter''s Garb, Silverbranch Bow, Shield of the Phoenix,
     Shogun''s Ofuda, Tyrfing, Runeforged Hammer, Spectral Armor, Hydra''s Lament,
     Erosion, Lernaean Bow, Shield Splitter, Eye of Providence, Toxic Blade, Draconic
-    Scale, Eye of the Storm, Leviathan''s Hide, Midgardian Mail, The Reaper.'
+    Scale, Eye of the Storm, Leviathan''s Hide, Dominance, Midgardian Mail.'
   slot_scores:
     Golden Blade:
       total: 0.57

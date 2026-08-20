@@ -117,11 +117,11 @@ builds:
       pick: 0.0
       fit: 0.42
     Dominance:
-      total: 0.44
+      total: 0.49
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.5
     The Reaper:
       total: 0.56
       efficiency: 0.52
@@ -208,10 +208,10 @@ builds:
   - Hydra's Lament
   - Riptalon
   - The Crusher
-  - Pharaoh's Curse
+  - Heartseeker
   flex_slots:
+  - Heartseeker
   - Hydra's Lament
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -258,12 +258,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Pharaoh's Curse:
-      total: 0.46
-      efficiency: 0.55
+    Heartseeker:
+      total: 0.47
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.53
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -336,12 +336,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
-  - Void Stone
   - Riptalon
   - The Crusher
+  - Heartseeker
   flex_slots:
+  - Heartseeker
   - Void Shield
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -376,12 +376,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Void Stone:
-      total: 0.52
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Riptalon:
       total: 0.68
       efficiency: 0.53
@@ -394,6 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Heartseeker:
+      total: 0.53
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - Riptalon
   - Damaru
   - The Crusher
+  - Heartseeker
   flex_slots:
   - Damaru
-  - Toxic Blade
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -613,17 +613,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.5
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.64
@@ -654,6 +648,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Heartseeker:
+      total: 0.51
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -666,8 +666,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Damaru
   - Heartseeker
+  - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -715,11 +715,11 @@ builds:
       pick: 0.0
       fit: 0.43
     Heartseeker:
-      total: 0.46
+      total: 0.51
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.6
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -795,11 +795,11 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
+  - Heartseeker
   flex_slots:
+  - Heartseeker
   - Hydra's Lament
-  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -840,18 +840,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Pendulum Blade:
-      total: 0.47
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     The Crusher:
       total: 0.56
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Heartseeker:
+      total: 0.5
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -923,15 +923,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
-  - Avenging Blade
   - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -948,12 +948,6 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Avenging Blade:
-      total: 0.52
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Toxic Blade:
       total: 0.57
       efficiency: 0.43
@@ -979,8 +973,14 @@ builds:
       pick: 0.0
       fit: 0.63
     Heartseeker:
-      total: 0.52
+      total: 0.57
       efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Titan's Bane:
+      total: 0.54
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -1121,15 +1121,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - Riptalon
   - Damaru
   - The Crusher
+  - Heartseeker
   flex_slots:
   - Damaru
-  - Toxic Blade
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1141,17 +1141,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.5
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.64
@@ -1182,6 +1176,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Heartseeker:
+      total: 0.51
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 ---

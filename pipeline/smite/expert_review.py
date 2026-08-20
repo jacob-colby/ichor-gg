@@ -145,14 +145,47 @@ def report(reviews, index, out=sys.stdout):
     return rows
 
 
+#: How good a verdict is. Only the ORDER matters — a claim moving DOWN this
+#: scale is a regression, however far it moves.
+VERDICT_RANK = {"holds": 0, "partial": 1, "clear": 2}
+
+
 def regressions(rows):
-    """Claims a human marked `resolved` that the checker now says still hold.
+    """Claims marked `resolved` whose verdict is worse than it was recorded at.
 
     This is the only condition worth failing a build on. An `open` claim that
-    still holds is the normal state of a to-do item; a resolved one coming back
-    means a fix was undone."""
-    return [r for r, verdict, _ in rows
-            if r.get("status") == "resolved" and verdict == "holds"]
+    still holds is the normal state of a to-do item; a resolved one going
+    backwards means a fix was undone.
+
+    IT USED TO TEST `verdict == "holds"` ONLY, and that is not what "went
+    backwards" means. A resolved claim degrading `clear` -> `partial` sailed
+    through, which is not hypothetical: the 2026-08-19 effect-tag pass moved
+    Ullr's Conquest core from "all 4 present" to "still absent
+    ['Heartseeker']" — Titan's Bane displaced it — and `--check` stayed green
+    for the whole change. The one gate in this project that is not made of the
+    community's own data could rot one step at a time and never say so.
+
+    The fix is a per-claim BASELINE rather than a global bar, because those are
+    different things. `last_verdict` in `_expert_reviews.yaml` records what the
+    checker said when a human last looked; anything worse than that fails. A
+    claim recorded as `partial` and still `partial` is stable and passes, which
+    is what lets the register hold a claim someone has accepted as partly
+    answered (`item-overweighted` has been partial at Geb since before this
+    check existed) without either lying about it or blocking every build.
+
+    A claim with no `last_verdict` falls back to the old rule, so adding the
+    field is opt-in and an unannotated register keeps working."""
+    out = []
+    for r, verdict, _ in rows:
+        if r.get("status") != "resolved" or verdict == "unchecked":
+            continue
+        baseline = r.get("last_verdict")
+        if baseline is None:
+            if verdict == "holds":
+                out.append(r)
+        elif VERDICT_RANK.get(verdict, 0) < VERDICT_RANK.get(baseline, 0):
+            out.append(r)
+    return out
 
 
 def main(argv=None):
@@ -171,7 +204,9 @@ def main(argv=None):
         print("")
         for r in back:
             subject = " · ".join(x for x in (r.get("god"), r.get("mode")) if x) or "whole model"
-            print(f"REGRESSED: {subject} — {r.get('claim')} was marked resolved")
+            was = r.get("last_verdict") or "clear"
+            print(f"REGRESSED: {subject} — {r.get('claim')} was marked resolved "
+                  f"at '{was}' and is worse now")
     if args.check and back:
         return 1
     return 0

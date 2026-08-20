@@ -119,9 +119,9 @@ builds:
     this god: The Crusher, Jotunn''s Revenge, Avenging Blade, Amanita Charm, Runeforged
     Hammer, Berserker''s Shield, Eye of the Storm, Kinetic Cuirass, Oni Hunter''s
     Garb, Shield Splitter, Hydra''s Lament, Golden Blade, The Reaper, Shield of the
-    Phoenix, Spectral Armor, Erosion, Freya''s Tears, Breastplate of Valor, Eye of
-    Providence, Draconic Scale, Damaru, Pharaoh''s Curse, Leviathan''s Hide, Midgardian
-    Mail, Lernaean Bow, Wyrmskin Hide, Heartseeker, Titan''s Bane.'
+    Phoenix, Spectral Armor, Erosion, Freya''s Tears, Breastplate of Valor, Heartseeker,
+    Eye of Providence, Titan''s Bane, Draconic Scale, Damaru, Pharaoh''s Curse, Leviathan''s
+    Hide, Midgardian Mail, Lernaean Bow, Wyrmskin Hide.'
   slot_scores:
     Avenging Blade:
       total: 0.5
@@ -190,10 +190,10 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
     Revenge, The Crusher, Avenging Blade, Hydra''s Lament, Breastplate of Valor, Amanita
     Charm, Berserker''s Shield, Runeforged Hammer, Oni Hunter''s Garb, Freya''s Tears,
-    Shield of the Phoenix, Kinetic Cuirass, Eye of the Storm, Golden Blade, The Reaper,
-    Shield Splitter, Spectral Armor, Damaru, Yogi''s Necklace, Transcendence, Lernaean
-    Bow, Heartseeker, Erosion, Pharaoh''s Curse, Leviathan''s Hide, Chandra''s Grace,
-    Eye of Providence, Midgardian Mail.'
+    Shield of the Phoenix, Kinetic Cuirass, Heartseeker, Eye of the Storm, Golden
+    Blade, The Reaper, Shield Splitter, Spectral Armor, Damaru, Yogi''s Necklace,
+    Transcendence, Dominance, Titan''s Bane, Lernaean Bow, Erosion, Pharaoh''s Curse,
+    Leviathan''s Hide, Chandra''s Grace.'
   slot_scores:
     Avenging Blade:
       total: 0.48
@@ -259,11 +259,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, The Crusher, Avenging Blade, Jotunn''s
-    Revenge, The Reaper, Berserker''s Shield, Kinetic Cuirass, Runeforged Hammer,
-    Oni Hunter''s Garb, Eye of the Storm, Chandra''s Grace, Shield Splitter, Erosion,
-    Phoenix Feather, Freya''s Tears, Eye of Providence, Spectral Armor, Riptalon,
+    Revenge, The Reaper, Berserker''s Shield, Kinetic Cuirass, Yogi''s Necklace, Runeforged
+    Hammer, Oni Hunter''s Garb, Eye of the Storm, Chandra''s Grace, Shield Splitter,
+    Erosion, Phoenix Feather, Freya''s Tears, Eye of Providence, Spectral Armor, Riptalon,
     Draconic Scale, Breastplate of Valor, Golden Blade, Hydra''s Lament, Pharaoh''s
-    Curse, Leviathan''s Hide, Midgardian Mail, Ancile, Damaru.'
+    Curse, Leviathan''s Hide, Midgardian Mail, Ancile.'
   slot_scores:
     Avenging Blade:
       total: 0.5
@@ -308,12 +308,12 @@ builds:
   - Avenging Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Runeforged Hammer
   - The Reaper
   - The Crusher
+  - Heartseeker
   flex_slots:
   - Berserker's Shield
-  - Runeforged Hammer
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -329,9 +329,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Avenging Blade, Jotunn''s Revenge, The Reaper, Amanita
-    Charm, Berserker''s Shield, Runeforged Hammer, Void Shield, Stone of Binding,
-    Kinetic Cuirass, Oni Hunter''s Garb, Screeching Gargoyle, Heartseeker, Void Stone,
-    Hydra''s Lament, Titan''s Bane, Eye of the Storm, Tekko-Kagi, Riptalon, Breastplate
+    Charm, Berserker''s Shield, Heartseeker, Runeforged Hammer, Titan''s Bane, Void
+    Shield, Stone of Binding, Kinetic Cuirass, Oni Hunter''s Garb, Screeching Gargoyle,
+    Void Stone, Hydra''s Lament, Eye of the Storm, Tekko-Kagi, Riptalon, Breastplate
     of Valor, Golden Blade, Shield Splitter, Shield of the Phoenix, Silverbranch Bow,
     Spectral Armor, Pendulum Blade, Freya''s Tears, Erosion.'
   slot_scores:
@@ -353,12 +353,6 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.65
-    Runeforged Hammer:
-      total: 0.47
-      efficiency: 0.55
-      win: 0.45
-      pick: 0.0
-      fit: 0.48
     The Reaper:
       total: 0.48
       efficiency: 0.52
@@ -371,6 +365,12 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.71
+    Heartseeker:
+      total: 0.47
+      efficiency: 0.41
+      win: 0.45
+      pick: 0.0
+      fit: 0.81
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -401,9 +401,9 @@ builds:
     this god: Berserker''s Shield, Golden Blade, The Crusher, Riptalon, Jotunn''s
     Revenge, Amanita Charm, Silverbranch Bow, Pharaoh''s Curse, Tyrfing, Toxic Blade,
     Oni Hunter''s Garb, Runeforged Hammer, Lernaean Bow, Kinetic Cuirass, Shogun''s
-    Ofuda, Breastplate of Valor, Hydra''s Lament, Spectral Armor, Freya''s Tears,
-    Shield of the Phoenix, The Reaper, Tekko-Kagi, Eye of the Storm, Erosion, Leviathan''s
-    Hide, Shield Splitter, Eros'' Bow, Eye of Providence.'
+    Ofuda, Breastplate of Valor, Hydra''s Lament, Dominance, Spectral Armor, Freya''s
+    Tears, Shield of the Phoenix, The Reaper, Tekko-Kagi, Eye of the Storm, Erosion,
+    Leviathan''s Hide, Shield Splitter, Eros'' Bow.'
   slot_scores:
     Golden Blade:
       total: 0.48
@@ -543,8 +543,8 @@ builds:
     Charm, Runeforged Hammer, Berserker''s Shield, Eye of the Storm, Oni Hunter''s
     Garb, Shield Splitter, Hydra''s Lament, Golden Blade, Avenging Blade, The Reaper,
     Shield of the Phoenix, Spectral Armor, Erosion, Freya''s Tears, Breastplate of
-    Valor, Eye of Providence, Draconic Scale, Damaru, Pharaoh''s Curse, Leviathan''s
-    Hide, Midgardian Mail, Lernaean Bow, Wyrmskin Hide, Heartseeker, Titan''s Bane.'
+    Valor, Heartseeker, Eye of Providence, Titan''s Bane, Draconic Scale, Damaru,
+    Pharaoh''s Curse, Leviathan''s Hide, Midgardian Mail, Lernaean Bow, Wyrmskin Hide.'
   slot_scores:
     Berserker's Shield:
       total: 0.48

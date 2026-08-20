@@ -87,8 +87,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -117,11 +117,11 @@ builds:
       pick: 0.0
       fit: 0.42
     Dominance:
-      total: 0.44
+      total: 0.49
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.5
     Amanita Charm:
       total: 0.59
       efficiency: 0.63
@@ -666,8 +666,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Lernaean Bow
   - Heartseeker
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -715,11 +715,11 @@ builds:
       pick: 0.0
       fit: 0.43
     Heartseeker:
-      total: 0.46
+      total: 0.51
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.6
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -793,13 +793,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   flex_slots:
   - Hydra's Lament
-  - Pendulum Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -828,6 +828,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
+    Transcendence:
+      total: 0.34
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.15
     Hydra's Lament:
       total: 0.48
       efficiency: 0.56
@@ -840,12 +846,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Pendulum Blade:
-      total: 0.47
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     The Crusher:
       total: 0.56
       efficiency: 0.64
@@ -927,11 +927,11 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
-  - Pendulum Blade
   - The Crusher
+  - Heartseeker
   flex_slots:
+  - Heartseeker
   - Avenging Blade
-  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -972,18 +972,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Pendulum Blade:
-      total: 0.52
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     The Crusher:
       total: 0.63
       efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Heartseeker:
+      total: 0.57
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested

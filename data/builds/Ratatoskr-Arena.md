@@ -129,11 +129,11 @@ builds:
       pick: 0.0
       fit: 0.63
     Heartseeker:
-      total: 0.54
+      total: 0.59
       efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: burst
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Ashwhorl Acorn
   - Jotunn's Revenge
   - The Reaper
   - Pendulum Blade
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   flex_slots:
+  - Heartseeker
   - Pendulum Blade
-  - Ashwhorl Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -293,12 +293,6 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Ashwhorl Acorn:
-      total: 0.64
-      efficiency: 0.94
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
     Jotunn's Revenge:
       total: 0.82
       efficiency: 0.64
@@ -326,6 +320,12 @@ builds:
     Heartseeker:
       total: 0.71
       efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Titan's Bane:
+      total: 0.72
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 1.0

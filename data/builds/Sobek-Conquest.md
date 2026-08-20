@@ -189,10 +189,10 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Soul Gem, Gluttonous
-    Grimoire, Rod of Tahuti, Chandra''s Grace, Rod of Asclepius, Oni Hunter''s Garb,
-    Erosion, Eye of Providence, Phoenix Feather, Breastplate of Valor, Spectral Armor,
-    Leviathan''s Hide, Midgardian Mail, Lifebinder, Glorious Pridwen, Nimble Ring,
-    Gladiator''s Shield, Ancile, Blood-Bound Book, Void Shield, Doublet of Binding.'
+    Grimoire, Ethereal Staff, Rod of Tahuti, Chandra''s Grace, Rod of Asclepius, Oni
+    Hunter''s Garb, Erosion, Yogi''s Necklace, Eye of Providence, Phoenix Feather,
+    Breastplate of Valor, Spectral Armor, Leviathan''s Hide, Midgardian Mail, Lifebinder,
+    Glorious Pridwen, Nimble Ring, Gladiator''s Shield, Ancile, Blood-Bound Book.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -260,8 +260,8 @@ builds:
     for this god: Rod of Tahuti, Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm,
     Soul Gem, Stone of Binding, Screeching Gargoyle, Void Shield, The Cosmic Horror,
     Breastplate of Valor, Spear of the Magus, Oni Hunter''s Garb, Void Stone, Shield
-    of the Phoenix, Spear of Desolation, Erosion, Eye of Providence, Spectral Armor,
-    Nimble Ring, Obsidian Shard, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord,
+    of the Phoenix, Spear of Desolation, Obsidian Shard, Erosion, Eye of Providence,
+    Spectral Armor, Nimble Ring, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord,
     Helm of Radiance, Magi''s Cloak.'
   slot_scores:
     Stone of Binding:
@@ -331,8 +331,8 @@ builds:
     Grimoire, Breastplate of Valor, Oni Hunter''s Garb, Soul Gem, Shield of the Phoenix,
     Spectral Armor, Erosion, Eye of Providence, Leviathan''s Hide, Midgardian Mail,
     Helm of Radiance, Mantle Of Discord, Stone of Binding, Death Metal, Screeching
-    Gargoyle, The Cosmic Horror, Yogi''s Necklace, Bracer of The Abyss, Ancile, Rod
-    of Asclepius, Magi''s Cloak.'
+    Gargoyle, Ethereal Staff, The Cosmic Horror, Yogi''s Necklace, Bracer of The Abyss,
+    Ancile, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -401,8 +401,8 @@ builds:
     Shield of the Phoenix, Rod of Tahuti, Amanita Charm, Soul Gem, Gluttonous Grimoire,
     Screeching Gargoyle, Oni Hunter''s Garb, Chronos'' Pendant, Nimble Ring, Chandra''s
     Grace, Spear of Desolation, Gladiator''s Shield, Erosion, Spectral Armor, Eye
-    of Providence, Prophetic Cloak, Leviathan''s Hide, Gem of Focus, Helm of Radiance,
-    Midgardian Mail, Mantle Of Discord, Totem of Death, Stone of Binding.'
+    of Providence, Prophetic Cloak, Totem of Death, Leviathan''s Hide, Gem of Focus,
+    Helm of Radiance, Midgardian Mail, Mantle Of Discord, Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.56

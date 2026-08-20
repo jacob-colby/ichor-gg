@@ -119,9 +119,8 @@ builds:
     this god: Golden Blade, The Crusher, Amanita Charm, Genji''s Guard, Runeforged
     Hammer, Pharaoh''s Curse, Damaru, Oni Hunter''s Garb, Lernaean Bow, Hydra''s Lament,
     Breastplate of Valor, Eye of the Storm, Shogun''s Ofuda, Spectral Armor, Shield
-    of the Phoenix, Freya''s Tears, Shield Splitter, Riptalon, Avenging Blade, The
-    Reaper, Tekko-Kagi, Tyrfing, Silverbranch Bow, Erosion, Eye of Providence, Leviathan''s
-    Hide.'
+    of the Phoenix, Freya''s Tears, Dominance, Shield Splitter, Riptalon, Avenging
+    Blade, The Reaper, Tekko-Kagi, Tyrfing, Silverbranch Bow, Erosion, Eye of Providence.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -190,9 +189,9 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Golden
     Blade, The Crusher, Genji''s Guard, Hydra''s Lament, Breastplate of Valor, Amanita
     Charm, Runeforged Hammer, Oni Hunter''s Garb, Damaru, Freya''s Tears, Lernaean
-    Bow, Shield of the Phoenix, Pharaoh''s Curse, Spectral Armor, Eye of the Storm,
-    The Reaper, Yogi''s Necklace, Shield Splitter, Avenging Blade, Riptalon, Tyrfing,
-    Shogun''s Ofuda, Dominance, Eye of Providence, Silverbranch Bow, Erosion, Transcendence.'
+    Bow, Shield of the Phoenix, Pharaoh''s Curse, Dominance, Spectral Armor, Eye of
+    the Storm, The Reaper, Yogi''s Necklace, Shield Splitter, Avenging Blade, Riptalon,
+    Tyrfing, Shogun''s Ofuda, Eye of Providence, Silverbranch Bow, Heartseeker, Transcendence.'
   slot_scores:
     Golden Blade:
       total: 0.53
@@ -258,11 +257,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Golden Blade, Shield of the Phoenix, The Crusher, Riptalon,
-    The Reaper, Genji''s Guard, Chandra''s Grace, Runeforged Hammer, Pharaoh''s Curse,
-    Oni Hunter''s Garb, Phoenix Feather, Freya''s Tears, Breastplate of Valor, Spectral
-    Armor, Eye of the Storm, Damaru, Shield Splitter, Shogun''s Ofuda, Erosion, Hydra''s
-    Lament, Lernaean Bow, Eye of Providence, Draconic Scale, Leviathan''s Hide, Avenging
-    Blade.'
+    The Reaper, Yogi''s Necklace, Genji''s Guard, Chandra''s Grace, Runeforged Hammer,
+    Pharaoh''s Curse, Oni Hunter''s Garb, Phoenix Feather, Freya''s Tears, Breastplate
+    of Valor, Spectral Armor, Eye of the Storm, Damaru, Shield Splitter, Shogun''s
+    Ofuda, Erosion, Hydra''s Lament, Lernaean Bow, Eye of Providence, Draconic Scale,
+    Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -330,9 +329,9 @@ builds:
     for this god: The Crusher, Golden Blade, Avenging Blade, Amanita Charm, Genji''s
     Guard, Riptalon, The Reaper, Runeforged Hammer, Void Shield, Silverbranch Bow,
     Stone of Binding, Screeching Gargoyle, Tekko-Kagi, Oni Hunter''s Garb, Pharaoh''s
-    Curse, Damaru, Void Stone, Hydra''s Lament, Breastplate of Valor, Lernaean Bow,
-    Toxic Blade, Spectral Armor, Freya''s Tears, Shield of the Phoenix, Eye of the
-    Storm, Shogun''s Ofuda, Heartseeker.'
+    Curse, Damaru, Void Stone, Titan''s Bane, Hydra''s Lament, Breastplate of Valor,
+    Lernaean Bow, Toxic Blade, Spectral Armor, Freya''s Tears, Shield of the Phoenix,
+    Eye of the Storm, Heartseeker.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -400,9 +399,8 @@ builds:
     this god: Golden Blade, The Crusher, Riptalon, Amanita Charm, Genji''s Guard,
     Silverbranch Bow, Pharaoh''s Curse, Tyrfing, Oni Hunter''s Garb, Runeforged Hammer,
     Lernaean Bow, Breastplate of Valor, Toxic Blade, Shogun''s Ofuda, Damaru, Hydra''s
-    Lament, Freya''s Tears, Spectral Armor, Shield of the Phoenix, The Reaper, Eye
-    of the Storm, Erosion, Tekko-Kagi, Leviathan''s Hide, Eye of Providence, Shield
-    Splitter.'
+    Lament, Freya''s Tears, Spectral Armor, Shield of the Phoenix, Dominance, The
+    Reaper, Eye of the Storm, Erosion, Tekko-Kagi, Leviathan''s Hide, Eye of Providence.'
   slot_scores:
     Golden Blade:
       total: 0.56
@@ -540,9 +538,9 @@ builds:
     Underrated for this god: The Crusher, Amanita Charm, Golden Blade, Genji''s Guard,
     Runeforged Hammer, Pharaoh''s Curse, Damaru, Oni Hunter''s Garb, Lernaean Bow,
     Hydra''s Lament, Breastplate of Valor, Eye of the Storm, Shogun''s Ofuda, Spectral
-    Armor, Shield of the Phoenix, Freya''s Tears, Shield Splitter, Riptalon, Avenging
-    Blade, The Reaper, Tekko-Kagi, Tyrfing, Silverbranch Bow, Erosion, Eye of Providence,
-    Leviathan''s Hide.'
+    Armor, Shield of the Phoenix, Freya''s Tears, Dominance, Shield Splitter, Riptalon,
+    Avenging Blade, The Reaper, Tekko-Kagi, Tyrfing, Silverbranch Bow, Erosion, Eye
+    of Providence.'
   slot_scores:
     Golden Blade:
       total: 0.55

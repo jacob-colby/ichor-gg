@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Divine Ruin
   - Bracer of The Abyss
   - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - Bracer of The Abyss
-  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -26,17 +26,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.52
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Bracer of The Abyss:
       total: 0.52
       efficiency: 0.51
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -141,12 +141,12 @@ builds:
   - Bragi's Harp
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - Obsidian Shard
   - The Cosmic Horror
-  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -181,18 +181,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
-    Spear of the Magus:
-      total: 0.48
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Obsidian Shard:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -275,8 +275,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -318,11 +318,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Obsidian Shard:
-      total: 0.54
+      total: 0.59
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.66
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
+  - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Totem of Death
   - Chronos' Pendant
-  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,12 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.34
-    Breastplate of Valor:
-      total: 0.49
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
     Chronos' Pendant:
       total: 0.49
       efficiency: 0.55
@@ -447,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Totem of Death:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Rod of Tahuti:
       total: 0.51
       efficiency: 0.77
@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Divine Ruin
   - Bracer of The Abyss
   - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - Bracer of The Abyss
-  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -613,17 +613,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.52
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Bracer of The Abyss:
       total: 0.52
       efficiency: 0.51
@@ -648,6 +642,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Soul Gem:
       total: 0.78
       efficiency: 0.57

@@ -9,12 +9,12 @@ builds:
   - Kinetic Cuirass
   - Spear of Desolation
   - Rod of Tahuti
-  - Spectral Armor
+  - Obsidian Shard
   - Erosion
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Spectral Armor
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -49,12 +49,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Spectral Armor:
-      total: 0.53
-      efficiency: 0.58
+    Obsidian Shard:
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.57
     Erosion:
       total: 0.56
       efficiency: 0.52
@@ -139,14 +139,14 @@ builds:
   archetype: burst
   slot_order:
   - Spear of Desolation
-  - The Cosmic Horror
   - Rod of Tahuti
+  - Obsidian Shard
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Obsidian Shard
   - Erosion
-  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -169,18 +169,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    The Cosmic Horror:
-      total: 0.49
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Obsidian Shard:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Erosion:
       total: 0.5
       efficiency: 0.52
@@ -271,12 +271,12 @@ builds:
   - Void Shield
   - Void Stone
   - Spear of Desolation
-  - The Cosmic Horror
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - The Cosmic Horror
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -311,18 +311,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    The Cosmic Horror:
-      total: 0.58
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Obsidian Shard:
+      total: 0.6
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -596,12 +596,12 @@ builds:
   - Kinetic Cuirass
   - Spear of Desolation
   - Rod of Tahuti
-  - Spectral Armor
+  - Obsidian Shard
   - Erosion
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Spectral Armor
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -636,12 +636,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Spectral Armor:
-      total: 0.53
-      efficiency: 0.58
+    Obsidian Shard:
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.57
     Erosion:
       total: 0.56
       efficiency: 0.52

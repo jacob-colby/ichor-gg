@@ -118,6 +118,65 @@ def test_only_a_resolved_claim_coming_back_counts_as_a_regression():
     assert back == [was_fixed]
 
 
+def _resolved(items, last_verdict=None):
+    r = {"god": "Ullr", "mode": "Conquest", "claim": "missing-item",
+         "status": "resolved", "detail": {"items": items}}
+    if last_verdict:
+        r["last_verdict"] = last_verdict
+    return r
+
+
+def _rows(index, *reviews):
+    return [(r, expert_review.check(r, index)[0], "") for r in reviews]
+
+
+def test_a_resolved_claim_degrading_to_partial_is_a_regression():
+    """The case the old rule missed. Ullr's claim went `clear` -> `partial` on
+    2026-08-19 when Titan's Bane displaced Heartseeker, and `--check` stayed
+    green because it only tested for a full reversion to `holds`."""
+    index = _index({("Ullr", "Conquest"): ["Transcendence"]})
+    claim = _resolved(["Transcendence", "Heartseeker"], last_verdict="clear")
+    assert expert_review.check(claim, index)[0] == "partial"
+    assert expert_review.regressions(_rows(index, claim)) == [claim]
+
+
+def test_a_claim_holding_steady_at_its_baseline_is_not_a_regression():
+    """`item-overweighted` has been partial since before the baseline existed.
+    A gate that failed on partial outright would fail every build for a state
+    a human already accepted."""
+    index = _index({("Ullr", "Conquest"): ["Transcendence"]})
+    claim = _resolved(["Transcendence", "Heartseeker"], last_verdict="partial")
+    assert expert_review.regressions(_rows(index, claim)) == []
+
+
+def test_improving_past_the_baseline_is_never_a_regression():
+    index = _index({("Ullr", "Conquest"): ["Transcendence", "Heartseeker"]})
+    claim = _resolved(["Transcendence", "Heartseeker"], last_verdict="partial")
+    assert expert_review.check(claim, index)[0] == "clear"
+    assert expert_review.regressions(_rows(index, claim)) == []
+
+
+def test_a_claim_with_no_baseline_falls_back_to_the_old_rule():
+    """Adding `last_verdict` is opt-in; an unannotated register still works."""
+    index = _index({("Ullr", "Conquest"): ["Transcendence"]})
+    partial = _resolved(["Transcendence", "Heartseeker"])
+    gone = _resolved(["Heartseeker"])
+    assert expert_review.check(gone, index)[0] == "holds"
+    assert expert_review.regressions(_rows(index, partial, gone)) == [gone]
+
+
+def test_the_shipped_register_baselines_match_what_the_checker_says_today():
+    """A baseline is only worth having if it is true when committed. This
+    fails if someone lowers one to paper over a build they just broke, or
+    raises one without the fix landing."""
+    reviews = expert_review.load_reviews()
+    index = expert_review.load_index()
+    for r in reviews:
+        if r.get("last_verdict"):
+            assert expert_review.check(r, index)[0] == r["last_verdict"], (
+                f"{r.get('god') or 'whole model'} · {r.get('claim')}")
+
+
 def test_the_report_refuses_to_present_itself_as_a_score():
     """One reviewer, claims chosen because they looked wrong. A percentage off
     this sample would be meaningless and would get quoted anyway."""

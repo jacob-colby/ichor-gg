@@ -118,10 +118,10 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm, Soul Gem, Freya''s
     Tears, Nimble Ring, Shield of the Phoenix, Spear of Desolation, Oni Hunter''s
-    Garb, The Cosmic Horror, Erosion, Shifter''s Shield, Spear of the Magus, Eye of
-    Providence, Spectral Armor, Helm of Radiance, Draconic Scale, Rod of Asclepius,
-    Obsidian Shard, Leviathan''s Hide, Jade Scepter, Midgardian Mail, Screeching Gargoyle,
-    Mantle Of Discord, Stone of Binding.'
+    Garb, The Cosmic Horror, Obsidian Shard, Erosion, Shifter''s Shield, Spear of
+    the Magus, Eye of Providence, Spectral Armor, Helm of Radiance, Draconic Scale,
+    Ethereal Staff, Rod of Asclepius, Leviathan''s Hide, Jade Scepter, Midgardian
+    Mail, Screeching Gargoyle, Mantle Of Discord.'
   slot_scores:
     Book of Thoth:
       total: 0.51
@@ -189,11 +189,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Gluttonous
     Grimoire, Kinetic Cuirass, Soul Gem, Amanita Charm, Nimble Ring, Oni Hunter''s
-    Garb, Freya''s Tears, The Cosmic Horror, Spear of Desolation, Death Metal, Spear
-    of the Magus, Shield of the Phoenix, Helm of Radiance, Spectral Armor, Obsidian
-    Shard, Rod of Asclepius, Erosion, Shifter''s Shield, Eye of Providence, Jade Scepter,
-    Draconic Scale, Yogi''s Necklace, Triton''s Conch, Leviathan''s Hide, Bancroft''s
-    Talon.'
+    Garb, Freya''s Tears, The Cosmic Horror, Spear of Desolation, Death Metal, Obsidian
+    Shard, Spear of the Magus, Shield of the Phoenix, Helm of Radiance, Ethereal Staff,
+    Spectral Armor, Rod of Asclepius, Erosion, Shifter''s Shield, Eye of Providence,
+    Jade Scepter, Draconic Scale, Yogi''s Necklace, Triton''s Conch, Leviathan''s
+    Hide.'
   slot_scores:
     Book of Thoth:
       total: 0.52
@@ -259,11 +259,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Amanita Charm, Spear of Desolation,
-    Freya''s Tears, Nimble Ring, The Cosmic Horror, Shield of the Phoenix, Spear of
-    the Magus, Oni Hunter''s Garb, Obsidian Shard, Spectral Armor, Death Metal, Erosion,
-    Shifter''s Shield, Helm of Radiance, Eye of Providence, Rod of Asclepius, Draconic
-    Scale, Screeching Gargoyle, Leviathan''s Hide, Midgardian Mail, Chandra''s Grace,
-    Jade Scepter.'
+    Freya''s Tears, Nimble Ring, The Cosmic Horror, Obsidian Shard, Shield of the
+    Phoenix, Spear of the Magus, Oni Hunter''s Garb, Spectral Armor, Death Metal,
+    Erosion, Shifter''s Shield, Helm of Radiance, Eye of Providence, Ethereal Staff,
+    Rod of Asclepius, Draconic Scale, Screeching Gargoyle, Leviathan''s Hide, Midgardian
+    Mail, Totem of Death.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -329,11 +329,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Gluttonous Grimoire, Shield of the Phoenix,
-    Kinetic Cuirass, Rod of Asclepius, Chandra''s Grace, Freya''s Tears, Nimble Ring,
-    Spear of Desolation, Blood-Bound Book, Oni Hunter''s Garb, Lifebinder, Bancroft''s
-    Talon, The Cosmic Horror, Phoenix Feather, Erosion, Shifter''s Shield, Spectral
-    Armor, Spear of the Magus, Eye of Providence, Draconic Scale, Helm of Radiance,
-    Jade Scepter, Leviathan''s Hide.'
+    Ethereal Staff, Kinetic Cuirass, Rod of Asclepius, Chandra''s Grace, Yogi''s Necklace,
+    Freya''s Tears, Nimble Ring, Spear of Desolation, Blood-Bound Book, Oni Hunter''s
+    Garb, Lifebinder, Bancroft''s Talon, The Cosmic Horror, Obsidian Shard, Phoenix
+    Feather, Erosion, Shifter''s Shield, Spectral Armor, Spear of the Magus, Eye of
+    Providence, Draconic Scale, Helm of Radiance.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -399,11 +399,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Soul Gem, Kinetic Cuirass, Spear of Desolation,
-    Amanita Charm, The Cosmic Horror, Spear of the Magus, Screeching Gargoyle, Stone
-    of Binding, Freya''s Tears, Nimble Ring, Obsidian Shard, Void Shield, Shield of
+    Amanita Charm, The Cosmic Horror, Obsidian Shard, Spear of the Magus, Screeching
+    Gargoyle, Stone of Binding, Freya''s Tears, Nimble Ring, Void Shield, Shield of
     the Phoenix, Oni Hunter''s Garb, Void Stone, Spectral Armor, Erosion, Shifter''s
-    Shield, Helm of Radiance, Eye of Providence, Rod of Asclepius, Draconic Scale,
-    Doom Orb.'
+    Shield, Helm of Radiance, Eye of Providence, Ethereal Staff, Rod of Asclepius,
+    Draconic Scale, Doom Orb.'
   slot_scores:
     Book of Thoth:
       total: 0.51
@@ -470,10 +470,10 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Nimble Ring, Gluttonous Grimoire, Kinetic Cuirass, Soul Gem, Amanita
     Charm, Freya''s Tears, Oni Hunter''s Garb, Shield of the Phoenix, The Cosmic Horror,
-    Spear of Desolation, Spear of the Magus, Spectral Armor, Death Metal, Helm of
-    Radiance, Erosion, Shifter''s Shield, Rod of Asclepius, Eye of Providence, Bracer
-    of The Abyss, Leviathan''s Hide, Blood-Bound Book, Draconic Scale, Bragi''s Harp,
-    Midgardian Mail, Jade Scepter.'
+    Obsidian Shard, Spear of Desolation, Spear of the Magus, Spectral Armor, Death
+    Metal, Helm of Radiance, Erosion, Ethereal Staff, Shifter''s Shield, Rod of Asclepius,
+    Eye of Providence, Bracer of The Abyss, Leviathan''s Hide, Blood-Bound Book, Draconic
+    Scale, Bragi''s Harp.'
   slot_scores:
     Breastplate of Valor:
       total: 0.56
@@ -541,9 +541,9 @@ builds:
     + fit + win/pick). Underrated for this god: Freya''s Tears, Soul Gem, Gluttonous
     Grimoire, Shield of the Phoenix, Kinetic Cuirass, Amanita Charm, Spear of Desolation,
     Oni Hunter''s Garb, Nimble Ring, Screeching Gargoyle, Chandra''s Grace, Gladiator''s
-    Shield, Spectral Armor, Erosion, Shifter''s Shield, The Cosmic Horror, Eye of
-    Providence, Prophetic Cloak, Draconic Scale, Spear of the Magus, Gem of Focus,
-    Leviathan''s Hide, Helm of Radiance, Midgardian Mail, Totem of Death.'
+    Shield, Spectral Armor, Erosion, Totem of Death, Shifter''s Shield, The Cosmic
+    Horror, Eye of Providence, Obsidian Shard, Prophetic Cloak, Draconic Scale, Spear
+    of the Magus, Gem of Focus, Leviathan''s Hide, Helm of Radiance.'
   slot_scores:
     Genji's Guard:
       total: 0.59
@@ -611,12 +611,12 @@ builds:
     win/pick). Underrated for this god: Gluttonous Grimoire, The Crusher, Jotunn''s
     Revenge, Berserker''s Shield, Kinetic Cuirass, Nimble Ring, Amanita Charm, Soul
     Gem, Freya''s Tears, Hydra''s Lament, Runeforged Hammer, Spear of Desolation,
-    Oni Hunter''s Garb, The Cosmic Horror, Death Metal, Shield of the Phoenix, Shield
-    Splitter, Golden Blade, Spear of the Magus, Eye of the Storm, Pharaoh''s Curse,
-    Spectral Armor, Erosion, Helm of Radiance, Lernaean Bow, Shifter''s Shield, The
-    Reaper, Obsidian Shard, Eye of Providence, Damaru, Rod of Asclepius, Avenging
-    Blade, Draconic Scale, Leviathan''s Hide, Bragi''s Harp, Shogun''s Ofuda, Midgardian
-    Mail, Jade Scepter.'
+    Oni Hunter''s Garb, The Cosmic Horror, Death Metal, Shield of the Phoenix, Obsidian
+    Shard, Shield Splitter, Golden Blade, Spear of the Magus, Eye of the Storm, Pharaoh''s
+    Curse, Spectral Armor, Erosion, Helm of Radiance, Lernaean Bow, Shifter''s Shield,
+    The Reaper, Ethereal Staff, Eye of Providence, Damaru, Rod of Asclepius, Avenging
+    Blade, Draconic Scale, Heartseeker, Leviathan''s Hide, Bragi''s Harp, Shogun''s
+    Ofuda.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -683,13 +683,13 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge,
     The Crusher, Kinetic Cuirass, Soul Gem, Amanita Charm, Berserker''s Shield, Nimble
-    Ring, Freya''s Tears, Spear of Desolation, The Cosmic Horror, Hydra''s Lament,
-    Oni Hunter''s Garb, Shield of the Phoenix, Runeforged Hammer, Death Metal, Spear
-    of the Magus, Shield Splitter, Helm of Radiance, Eye of the Storm, Spectral Armor,
-    Erosion, Obsidian Shard, Shifter''s Shield, Eye of Providence, Rod of Asclepius,
-    Draconic Scale, The Reaper, Golden Blade, Pharaoh''s Curse, Jade Scepter, Leviathan''s
-    Hide, Avenging Blade, Midgardian Mail, Damaru, Triton''s Conch, Screeching Gargoyle,
-    Ethereal Staff.'
+    Ring, Freya''s Tears, Spear of Desolation, The Cosmic Horror, Obsidian Shard,
+    Hydra''s Lament, Oni Hunter''s Garb, Shield of the Phoenix, Runeforged Hammer,
+    Death Metal, Spear of the Magus, Shield Splitter, Helm of Radiance, Eye of the
+    Storm, Spectral Armor, Erosion, Shifter''s Shield, Ethereal Staff, Eye of Providence,
+    Rod of Asclepius, Draconic Scale, The Reaper, Golden Blade, Pharaoh''s Curse,
+    Jade Scepter, Leviathan''s Hide, Avenging Blade, Midgardian Mail, Damaru, Totem
+    of Death, Triton''s Conch.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -757,9 +757,9 @@ builds:
     Underrated for this god: Gluttonous Grimoire, Kinetic Cuirass, Amanita Charm,
     Soul Gem, Freya''s Tears, Nimble Ring, Shield of the Phoenix, Oni Hunter''s Garb,
     Spear of Desolation, The Cosmic Horror, Erosion, Shifter''s Shield, Spear of the
-    Magus, Eye of Providence, Spectral Armor, Helm of Radiance, Draconic Scale, Rod
-    of Asclepius, Leviathan''s Hide, Jade Scepter, Midgardian Mail, Obsidian Shard,
-    Screeching Gargoyle, Mantle Of Discord, Stone of Binding.'
+    Magus, Eye of Providence, Spectral Armor, Helm of Radiance, Obsidian Shard, Draconic
+    Scale, Ethereal Staff, Rod of Asclepius, Leviathan''s Hide, Jade Scepter, Midgardian
+    Mail, Screeching Gargoyle, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
       total: 0.57

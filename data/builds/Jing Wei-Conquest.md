@@ -135,11 +135,11 @@ builds:
       pick: 0.0
       fit: 0.33
     Dominance:
-      total: 0.51
+      total: 0.52
       efficiency: 0.47
       win: 0.55
       pick: 0.32
-      fit: 0.54
+      fit: 0.64
     Riptalon:
       total: 0.58
       efficiency: 0.53
@@ -166,13 +166,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Dominance
   - Riptalon
   - The Crusher
   flex_slots:
+  - Genji's Guard
   - Hydra's Lament
-  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -189,9 +189,9 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
     Revenge, The Crusher, Genji''s Guard, Hydra''s Lament, Berserker''s Shield, Damaru,
     Breastplate of Valor, Lernaean Bow, Golden Blade, The Reaper, Runeforged Hammer,
-    Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Amanita Charm, Freya''s Tears,
-    Transcendence, Pharaoh''s Curse, Eye of Providence, Heartseeker, Shield of the
-    Phoenix, Yogi''s Necklace, Avenging Blade, Arondight, Shield Splitter, Tyrfing.'
+    Heartseeker, Oni Hunter''s Garb, Tekko-Kagi, Kinetic Cuirass, Amanita Charm, Freya''s
+    Tears, Transcendence, Pharaoh''s Curse, Eye of Providence, Titan''s Bane, Shield
+    of the Phoenix, Yogi''s Necklace, Avenging Blade, Arondight, Tyrfing.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -205,18 +205,18 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.44
-    Transcendence:
-      total: 0.45
-      efficiency: 0.52
-      win: 0.52
-      pick: 0.0
-      fit: 0.24
     Hydra's Lament:
       total: 0.49
       efficiency: 0.56
       win: 0.52
       pick: 0.0
       fit: 0.42
+    Dominance:
+      total: 0.5
+      efficiency: 0.47
+      win: 0.55
+      pick: 0.32
+      fit: 0.5
     Riptalon:
       total: 0.56
       efficiency: 0.53
@@ -269,11 +269,11 @@ builds:
       pick: 0.0
       fit: 0.3
     Dominance:
-      total: 0.5
+      total: 0.52
       efficiency: 0.47
       win: 0.55
       pick: 0.32
-      fit: 0.5
+      fit: 0.6
     Musashi's Dual Swords:
       total: 0.5
       efficiency: 0.42
@@ -326,11 +326,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Shield of the Phoenix, Kinetic Cuirass,
-    Pharaoh''s Curse, Genji''s Guard, The Crusher, The Reaper, Golden Blade, Oni Hunter''s
-    Garb, Chandra''s Grace, Runeforged Hammer, Shogun''s Ofuda, Damaru, Phoenix Feather,
-    Spectral Armor, Freya''s Tears, Erosion, Breastplate of Valor, Jotunn''s Revenge,
-    Shifter''s Shield, Lernaean Bow, Eye of Providence, Eye of the Storm, Shield Splitter,
-    Draconic Scale, Leviathan''s Hide, Umbral Link, Midgardian Mail.'
+    Yogi''s Necklace, Pharaoh''s Curse, Genji''s Guard, The Crusher, The Reaper, Golden
+    Blade, Oni Hunter''s Garb, Chandra''s Grace, Runeforged Hammer, Shogun''s Ofuda,
+    Damaru, Phoenix Feather, Spectral Armor, Freya''s Tears, Erosion, Breastplate
+    of Valor, Jotunn''s Revenge, Shifter''s Shield, Lernaean Bow, Eye of Providence,
+    Eye of the Storm, Shield Splitter, Draconic Scale, Leviathan''s Hide, Umbral Link.'
   slot_scores:
     Genji's Guard:
       total: 0.49
@@ -374,13 +374,13 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Dominance
   - Riptalon
   - Silverbranch Bow
-  - Tekko-Kagi
   - The Crusher
   flex_slots:
+  - Dominance
   - Berserker's Shield
-  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -396,9 +396,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Jotunn''s Revenge, The Reaper, Berserker''s Shield,
-    Tekko-Kagi, Damaru, Avenging Blade, Lernaean Bow, Genji''s Guard, Golden Blade,
-    Toxic Blade, Screeching Gargoyle, Heartseeker, Hydra''s Lament, Runeforged Hammer,
-    Titan''s Bane, Stone of Binding, Pharaoh''s Curse, Breastplate of Valor, Kinetic
+    Tekko-Kagi, Damaru, Avenging Blade, Heartseeker, Lernaean Bow, Titan''s Bane,
+    Genji''s Guard, Golden Blade, Toxic Blade, Screeching Gargoyle, Hydra''s Lament,
+    Runeforged Hammer, Stone of Binding, Pharaoh''s Curse, Breastplate of Valor, Kinetic
     Cuirass, Void Shield, Amanita Charm, Eye of Providence, Pendulum Blade, Oni Hunter''s
     Garb, Void Stone, Tyrfing.'
   slot_scores:
@@ -414,6 +414,12 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.47
+    Dominance:
+      total: 0.5
+      efficiency: 0.47
+      win: 0.55
+      pick: 0.32
+      fit: 0.46
     Riptalon:
       total: 0.61
       efficiency: 0.53
@@ -426,12 +432,6 @@ builds:
       win: 0.54
       pick: 0.28
       fit: 0.56
-    Tekko-Kagi:
-      total: 0.49
-      efficiency: 0.44
-      win: 0.52
-      pick: 0.0
-      fit: 0.69
     The Crusher:
       total: 0.54
       efficiency: 0.64
@@ -449,8 +449,8 @@ builds:
   - Silverbranch Bow
   - The Crusher
   flex_slots:
+  - Berserker's Shield
   - The Crusher
-  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -467,9 +467,9 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Golden Blade, Berserker''s Shield, The Crusher, Damaru, Lernaean Bow,
     Jotunn''s Revenge, Genji''s Guard, Pharaoh''s Curse, Hydra''s Lament, Runeforged
-    Hammer, Toxic Blade, Breastplate of Valor, Tekko-Kagi, Kinetic Cuirass, Shogun''s
-    Ofuda, The Reaper, Amanita Charm, Eye of Providence, Oni Hunter''s Garb, Qin''s
-    Blade, Eros'' Bow, Transcendence, Avenging Blade, Tyrfing.'
+    Hammer, Qin''s Blade, Toxic Blade, Breastplate of Valor, Tekko-Kagi, Kinetic Cuirass,
+    Shogun''s Ofuda, The Reaper, Amanita Charm, Eye of Providence, Oni Hunter''s Garb,
+    Eros'' Bow, Transcendence, Avenging Blade, Tyrfing.'
   slot_scores:
     Golden Blade:
       total: 0.52
@@ -484,11 +484,11 @@ builds:
       pick: 0.0
       fit: 0.29
     Dominance:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
       win: 0.55
       pick: 0.32
-      fit: 0.45
+      fit: 0.55
     Riptalon:
       total: 0.6
       efficiency: 0.53
@@ -584,12 +584,12 @@ builds:
   - Golden Blade
   - Lernaean Bow
   - Berserker's Shield
-  - Tyrfing
+  - Dominance
   - Damaru
   - The Crusher
   flex_slots:
   - Golden Blade
-  - Tyrfing
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -628,11 +628,11 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.33
-    Tyrfing:
-      total: 0.41
-      efficiency: 0.46
-      win: 0.33
-      pick: 0.11
+    Dominance:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.55
+      pick: 0.32
       fit: 0.64
     Damaru:
       total: 0.51
@@ -717,8 +717,8 @@ builds:
       fit: 0.31
   swaps:
   - added: Riptalon
-    removed: Tyrfing
+    removed: Dominance
     reason: community 68% win over 43 matches (vs 48% on this god), taking the model's
-      weakest slot from Tyrfing
+      weakest slot from Dominance
   starter: *id001
 ---

@@ -122,8 +122,8 @@ builds:
     of the Phoenix, Shield Splitter, Runeforged Hammer, Erosion, Hydra''s Lament,
     Eye of Providence, Eye of the Storm, Spectral Armor, Shogun''s Ofuda, Draconic
     Scale, Lernaean Bow, Soul Gem, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord,
-    Stone of Binding, Death Metal, Avenging Blade, Tyrfing, Helm of Radiance, Damaru,
-    Screeching Gargoyle, Ancile, Magi''s Cloak, Void Shield, Bragi''s Harp.'
+    Dominance, Stone of Binding, Death Metal, Avenging Blade, Tyrfing, Helm of Radiance,
+    Damaru, Screeching Gargoyle, Ancile, Magi''s Cloak, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -169,7 +169,7 @@ builds:
   slot_order:
   - Genji's Guard
   - Berserker's Shield
-  - Shield of the Phoenix
+  - Ethereal Staff
   - Hide of the Nemean Lion
   - Dwarven Plate
   - Amanita Charm
@@ -184,20 +184,20 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Berserker''s Shield, Kinetic Cuirass,
-    Soul Gem, Rod of Tahuti, Gluttonous Grimoire, The Crusher, Nimble Ring, Chandra''s
-    Grace, Jotunn''s Revenge, Rod of Asclepius, Golden Blade, Pharaoh''s Curse, Riptalon,
-    Oni Hunter''s Garb, Runeforged Hammer, Freya''s Tears, The Reaper, Breastplate
-    of Valor, Phoenix Feather, Hydra''s Lament, Eye of the Storm, Shogun''s Ofuda,
-    Spectral Armor, Erosion, Shield Splitter, Eye of Providence, Lernaean Bow, Blood-Bound
-    Book, Draconic Scale, Leviathan''s Hide, Bancroft''s Talon, Lifebinder, Avenging
-    Blade, Midgardian Mail, Death Metal, Tyrfing, Ancile, Glorious Pridwen.'
+    Soul Gem, Rod of Tahuti, Gluttonous Grimoire, The Crusher, Nimble Ring, Yogi''s
+    Necklace, Chandra''s Grace, Jotunn''s Revenge, Rod of Asclepius, Golden Blade,
+    Pharaoh''s Curse, Riptalon, Oni Hunter''s Garb, Runeforged Hammer, Freya''s Tears,
+    The Reaper, Breastplate of Valor, Phoenix Feather, Hydra''s Lament, Eye of the
+    Storm, Shogun''s Ofuda, Spectral Armor, Erosion, Shield Splitter, Eye of Providence,
+    Lernaean Bow, Blood-Bound Book, Draconic Scale, Leviathan''s Hide, Bancroft''s
+    Talon, Lifebinder, Avenging Blade, Midgardian Mail, Dominance, Death Metal.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -211,12 +211,12 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.49
-    Shield of the Phoenix:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.54
-      pick: 0.0
-      fit: 0.71
+    Ethereal Staff:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.62
+      pick: 0.23
+      fit: 0.62
     Hide of the Nemean Lion:
       total: 0.63
       efficiency: 0.5
@@ -267,10 +267,10 @@ builds:
     Nimble Ring, Avenging Blade, Screeching Gargoyle, Void Shield, Freya''s Tears,
     Breastplate of Valor, Oni Hunter''s Garb, The Cosmic Horror, Void Stone, Pharaoh''s
     Curse, Riptalon, Spear of the Magus, Runeforged Hammer, Shield of the Phoenix,
-    The Reaper, Golden Blade, Hydra''s Lament, Silverbranch Bow, Shield Splitter,
-    Spectral Armor, Spear of Desolation, Erosion, Tekko-Kagi, Eye of Providence, Eye
-    of the Storm, Shogun''s Ofuda, Lernaean Bow, Draconic Scale, Obsidian Shard, Toxic
-    Blade, Leviathan''s Hide.'
+    The Reaper, Golden Blade, Hydra''s Lament, Silverbranch Bow, Obsidian Shard, Shield
+    Splitter, Spectral Armor, Spear of Desolation, Erosion, Heartseeker, Tekko-Kagi,
+    Eye of Providence, Eye of the Storm, Shogun''s Ofuda, Lernaean Bow, Titan''s Bane,
+    Draconic Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -341,8 +341,9 @@ builds:
     Soul Gem, Shield of the Phoenix, Shogun''s Ofuda, Tyrfing, Runeforged Hammer,
     Spectral Armor, Erosion, Hydra''s Lament, Lernaean Bow, Silverbranch Bow, Shield
     Splitter, Eye of Providence, Draconic Scale, Eye of the Storm, Leviathan''s Hide,
-    Midgardian Mail, Toxic Blade, Mantle Of Discord, Stone of Binding, Helm of Radiance,
-    Death Metal, Screeching Gargoyle, Yogi''s Necklace, Damaru, Ancile, Avenging Blade.'
+    Dominance, Midgardian Mail, Toxic Blade, Mantle Of Discord, Stone of Binding,
+    Helm of Radiance, Death Metal, Screeching Gargoyle, Yogi''s Necklace, Damaru,
+    Ancile.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -412,10 +413,10 @@ builds:
     Charm, Shield of the Phoenix, Soul Gem, Nimble Ring, Gluttonous Grimoire, Hydra''s
     Lament, The Crusher, Oni Hunter''s Garb, Pharaoh''s Curse, Screeching Gargoyle,
     Chronos'' Pendant, Chandra''s Grace, Spear of Desolation, Spectral Armor, Erosion,
-    Runeforged Hammer, Eye of Providence, Golden Blade, Shogun''s Ofuda, Shield Splitter,
-    Draconic Scale, Leviathan''s Hide, Helm of Radiance, Eye of the Storm, Midgardian
-    Mail, Gem of Focus, Lernaean Bow, Mantle Of Discord, Stone of Binding, Death Metal,
-    The Cosmic Horror, Rod of Asclepius, Prophetic Cloak.'
+    Runeforged Hammer, Eye of Providence, Golden Blade, Shogun''s Ofuda, Totem of
+    Death, Shield Splitter, Draconic Scale, Leviathan''s Hide, Helm of Radiance, Eye
+    of the Storm, Midgardian Mail, Gem of Focus, Lernaean Bow, Mantle Of Discord,
+    Stone of Binding, Death Metal, Prophetic Cloak.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -486,9 +487,9 @@ builds:
     Hydra''s Lament, Oni Hunter''s Garb, Soul Gem, Golden Blade, Eye of the Storm,
     Shield of the Phoenix, Pharaoh''s Curse, Erosion, Spectral Armor, Eye of Providence,
     The Reaper, Lernaean Bow, Draconic Scale, Death Metal, Avenging Blade, Damaru,
-    The Cosmic Horror, Shogun''s Ofuda, Leviathan''s Hide, Midgardian Mail, Spear
-    of the Magus, Mantle Of Discord, Stone of Binding, Tekko-Kagi, Spear of Desolation,
-    Tyrfing, Helm of Radiance, Riptalon.'
+    The Cosmic Horror, Shogun''s Ofuda, Leviathan''s Hide, Heartseeker, Midgardian
+    Mail, Spear of the Magus, Dominance, Titan''s Bane, Mantle Of Discord, Stone of
+    Binding, Obsidian Shard, Tekko-Kagi.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -558,10 +559,10 @@ builds:
     Amanita Charm, Soul Gem, Freya''s Tears, Breastplate of Valor, Oni Hunter''s Garb,
     Runeforged Hammer, The Cosmic Horror, Pharaoh''s Curse, Hydra''s Lament, Golden
     Blade, Shield of the Phoenix, Death Metal, Spear of the Magus, Shield Splitter,
-    Spectral Armor, Helm of Radiance, Spear of Desolation, Erosion, Eye of the Storm,
-    Lernaean Bow, Eye of Providence, Shogun''s Ofuda, Rod of Asclepius, Draconic Scale,
-    Bragi''s Harp, Riptalon, Leviathan''s Hide, Chronos'' Pendant, The Reaper, Obsidian
-    Shard, Jade Scepter, Midgardian Mail, Damaru.'
+    Obsidian Shard, Spectral Armor, Helm of Radiance, Spear of Desolation, Erosion,
+    Eye of the Storm, Lernaean Bow, Eye of Providence, Shogun''s Ofuda, Rod of Asclepius,
+    Draconic Scale, Bragi''s Harp, Riptalon, Leviathan''s Hide, Chronos'' Pendant,
+    The Reaper, Jade Scepter, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -632,8 +633,8 @@ builds:
     Shield of the Phoenix, Shield Splitter, Runeforged Hammer, Erosion, Hydra''s Lament,
     Eye of Providence, Eye of the Storm, Spectral Armor, Shogun''s Ofuda, Draconic
     Scale, Lernaean Bow, Soul Gem, Leviathan''s Hide, Midgardian Mail, Mantle Of Discord,
-    Stone of Binding, Death Metal, Avenging Blade, Tyrfing, Helm of Radiance, Damaru,
-    Screeching Gargoyle, Ancile, Magi''s Cloak, Void Shield, Bragi''s Harp.'
+    Dominance, Stone of Binding, Death Metal, Avenging Blade, Tyrfing, Helm of Radiance,
+    Damaru, Screeching Gargoyle, Ancile, Magi''s Cloak, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.54

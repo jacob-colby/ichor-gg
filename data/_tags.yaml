@@ -1,21 +1,36 @@
-# Effect-tags for the build recommender. Seeded 2026-07-16 by reading each
-# item's scraped `passive` text and assigning from the FIXED vocabulary:
-#   burst · execute · anti-heal · protection-shred · peel · wave-clear ·
-#   mobility · sustain · cc-immunity · aura · anti-crit · ward-economy
+# Effect-tags for the build recommender. Seeded 2026-07-16 from each item's
+# scraped `passive` text; extended 2026-08-19 after reading all 226 of them.
 # Sidecar so item refresh never clobbers it. Hand-correctable — edit freely.
 #
-# An item with a purely-statistical passive (crit damage, +power, penetration,
-# cooldown reduction) correctly gets NO tag: its value is raw stats, already
-# captured by the efficiency + god-fit layers. Tags exist only for effects the
-# stat math can't see.
+# THE VOCABULARY, ON TWO AXES
 #
-# `ward-economy` (added 2026-08-09) is the first tag that exists to mark value
-# the stat math WRONGLY SEES AS FREE, rather than value it misses. The game
-# prices these items' stats below curve because part of what you buy is a ward
-# engine; the gold model reads only the discount. Eye of Providence is 30/30
-# protections + 250 health for 2300 gold, which the fit prices at 2550 — a
-# 250g "bargain" that is really the ward economy's price tag, and one you
-# collect only by holding a free consumable slot and hunting enemy wards.
+#   What job the item does in a fight (the original axis):
+#     burst · execute · anti-heal · protection-shred · penetration ·
+#     percent-health · peel · wave-clear · mobility · sustain · cc-immunity ·
+#     aura · anti-crit · damage-debuff · anti-shield · heal-scaling
+#
+#   When the value arrives (the axis `ward-economy` opened, filled out
+#   2026-08-19):
+#     ability-uptime · stacking · ramp · low-health · crit-scaling ·
+#     mitigation · ward-economy · active
+#
+# An item with a purely-statistical passive (+power, a flat Cooldown Rate)
+# correctly gets NO tag: its value is raw stats, already captured by the
+# efficiency + god-fit layers. Tags exist only for effects the stat math
+# can't see.
+#
+# `[]` MEANS REVIEWED AND NO TAG WARRANTED. Absent-from-this-file means nobody
+# has looked. They are different states and `data_audit.audit_tags` reports
+# them separately. Wish-Granting Pearl is the permanent `[]`: it is the one
+# buildable item with no passive text at all.
+#
+# `ward-economy` (added 2026-08-09) was the first tag marking value the stat
+# math WRONGLY SEES AS FREE, rather than value it misses. The game prices these
+# items' stats below curve because part of what you buy is a ward engine; the
+# gold model reads only the discount. Eye of Providence is 30/30 protections +
+# 250 health for 2300 gold, which the fit prices at 2550 — a 250g "bargain"
+# that is really the ward economy's price tag, and one you collect only by
+# holding a free consumable slot and hunting enemy wards.
 #
 # Measured before tagging: across the 34 Support/Solo Conquest gods the model
 # put it in 16 cores; those gods' own players buy it, in any slot or as any
@@ -23,158 +38,355 @@
 # wards at all (see `modes.arena.excluded_items` in _weights.yaml) — this is
 # the same judgement made continuous for the mode where wards do exist.
 #
-# NEEDS MANUAL REVIEW — these items had an EMPTY passive field in the scrape,
-# so they were tagged [] without text to judge. Verify on patch days:
-#   Bloodforge, Dagger of Frenzy, Engraved Guard, Evil Eye, Hunter's Bow,
-#   Obsidian Shard, Skeggox, Titan's Bane
-# (Titan's Bane / Obsidian Shard are % penetration — a stat, so [] is right
-#  even once their text returns. Bloodforge is a shield/lifesteal item and may
-#  warrant [sustain] once its passive text is scraped.)
+# ── THE 2026-08-19 PASS ─────────────────────────────────────────────────────
 #
-# NOTE (updated 2026-08-05): anti-heal now EXISTS in the pool. Toxic Blade
-# ("Hit a God with an Attack: Apply 25% Healing Reduction ... for 5s") is the
-# first, and it arrived with the eight items the item list had never
-# discovered. The "vs sustain" situational row reported "none available" for
-# weeks — accurate about the data we had, wrong about the game. Physical only,
-# so a magical god still has no anti-heal option and that gap is real.
+# Before: of 138 god-agnostic buildable items, 83 carried a tag and 55 carried
+# none — 54 sitting at `[]` and one (Totem of Death) absent from the file
+# outright. Sweeping those 55 against the existing 11 tags found only a
+# handful, so the gap was VOCABULARY, not failed extraction.
+#
+# The diagnosis: the original 11 tags almost all name A JOB IN A TEAM FIGHT.
+# The untagged pool is mostly not jobs — it is HOW THE VALUE ARRIVES: on a
+# health threshold, over the whole match, on a crit, when you heal, on a
+# cooldown tick. `ward-economy` had already opened that second axis with one
+# tag on it; this pass fills it in.
+#
+# WHAT MOVED, AND WHAT DID NOT. Tags reach the score through exactly two
+# doors — `scoring.offense_tags` and a `tag_bonus` map — so a tag with neither
+# is inert to scoring. Only ONE new tag was wired (`penetration`, into
+# `offense_tags`); the other eleven ship with no bonus, because choosing a
+# coefficient without sweeping it is precisely how `ward-economy` was NOT
+# done. Against a 5.7% random-core baseline, `python -m smite.calibrate`:
+#
+#                                eff 0.70:fit 0.30   eff 0.45:fit 0.55
+#     control (HEAD)                   35.5%               34.8%
+#     all 12 tags, nothing wired       35.5%               34.8%   <- identical
+#     + penetration wired              35.9%               36.1%
+#
+# Up on BOTH splits, which is the bar `price_crit_multipliers` set and which
+# `coherence` and `price_stacks` both failed. It is also WELL INSIDE the
+# bootstrap CI (~±5pp), so read it as "costs nothing and points the right
+# way", not as a win. The middle row is the honest part: eleven of the twelve
+# tags demonstrably changed nothing, on purpose.
+#
+# CORE CHURN across the 89 Conquest cores, decomposed because there are two
+# causes and only one of them is the wire:
+#
+#     tags only, no wire       3 gods  (Artio, Atlas, Chaac)
+#     the penetration wire     7 gods  (Chronos, Hecate, Khepri, Ne Zha,
+#                                       Pele, The Morrigan, Ullr)
+#     total                   10 of 89
+#     penetration-item core slots    26 -> 32
+#
+# The first row is A TRAP WORTH RECORDING. "No bonus means inert" is true of
+# the gate and FALSE of the builds: `assemble._is_lifesteal` reads the
+# `sustain` TAG as "this is a lifesteal item" for the `max_lifesteal` cap, so
+# adding `sustain` to Yogi's Necklace and Ethereal Staff moved three cores
+# while moving coverage by 0.0. Any future `sustain` edit is a build change
+# whether or not it is a scoring change. It also means `sustain` carries two
+# meanings — "heals you" and "counts against the lifesteal cap" — which is why
+# Alchemist Coat is `[]`: it hands you a Multi Potion rather than healing you,
+# and tagging it would have spent a cap slot on a consumable.
+#
+# ── PER-TAG PROVENANCE (2026-08-19) ─────────────────────────────────────────
+#
+# `penetration` — the passive grants penetration that IGNORES THE CAP.
+#   Titan's Bane and Obsidian Shard ("Gain the Shattering effect: First Ability
+#   Cast: Gains +20% Penetration This effect ignores the Penetration cap"),
+#   Dominance ("Basic Attacks gain an additional +20% Penetration This effect
+#   ignores the Penetration cap").
+#   This OVERTURNS a rule this file used to state — "penetration is a stat, so
+#   [] is right". That rule was written while all three items had an EMPTY
+#   passive field; they are on the old NEEDS MANUAL REVIEW list. The text has
+#   since scraped and it is not a stat: the cap is a combat constant in
+#   `combat.py`, so a `Penetration` column is capped by construction and
+#   "ignores the cap" cannot be expressed as more of it.
+#   The only tag wired this pass — see the table above.
+#
+# `percent-health` — damage or drain computed from the TARGET's health pool.
+#   Heartseeker ("as a % of the target's Max Health"), Qin's Blade ("+2% Target
+#   Base Health +5% Target Item Health"), Soul Reaver ("+1.2% Target Base
+#   Health & +3% Target Item Health"), Totem of Death ("10% of target's Missing
+#   Health"), Ethereal Staff ("Steal 6% Max Health and Mana from a single
+#   target"), Eye of Erebus ("15% of Enemy Max Health"), Sanguine Lash ("Enemy
+#   gods Within 4m: -0.75% Health ... as Physical Damage").
+#   Three mechanisms answer a tank — strip their protections, pierce them, or
+#   bypass them by scaling off health — and before this pass only
+#   `protection-shred` had a name. `burst` was standing in for this one, and
+#   burst is about TIMING, not about who the item is good against.
+#   Contagion and Circe's Hexstone are deliberately NOT tagged: their text
+#   ("1% Max Health per stack", "10% of Current Health") never says whose.
+#
+# `ability-uptime` — the passive returns cooldown, on top of the Cooldown Rate
+#   stat. Chronos' Pendant ("Every 10s: -1s Ability Cooldowns"), The World
+#   Stone ("-30% Cooldown for your Ultimate Ability"), Staff of Myrddin ("Next
+#   non-Ultimate Ability used will have no cooldown"), Spear of Desolation,
+#   Jotunn's Revenge, Breastplate of Valor, Genji's Guard, Pendulum Blade,
+#   Heartwood Charm, Leviathan's Hide, Chandra's Grace, Time-lock Aegis.
+#   The largest single cluster in the gap, and the project already had the
+#   words for it: the `cooldown` flavor ships the rationale "Ability-uptime
+#   skew — Cooldown Rate is a rate, not a reduction". The flavor named the
+#   concept; no item carried it.
+#   EXCLUDED on purpose — Ancient Signet, Bloodforge, Blood-Bound Book, Circe's
+#   Hexstone and Eye of Erebus reduce the ITEM'S OWN cooldown, a different
+#   claim. A regex cannot tell those apart; this list is hand-checked.
+#
+# `stacking` — value accrues permanently over the match, so the printed stats
+#   are deliberately below curve. Book of Thoth and Transcendence ("At 50
+#   Evolve Stacks, Item evolves"), Gauntlet of Thebes ("At 40 Stacks, Item
+#   evolves"), Leviathan's Hide ("+8 Max Health Permanently"), Resolute Mantle
+#   ("gain 0.5 Health Regen and 1 Tenacity permanently"), Devourer's Gauntlet,
+#   Typhon's Heart, Rage, Prophetic Cloak, Necronomicon (alone in giving stacks
+#   back on death).
+#   READ STATE.md SECTION 4.8 BEFORE TOUCHING THIS. `price_stacks` — pricing
+#   this same item set at full-stack value — was implemented, measured and
+#   shipped OFF. This is not that experiment: that one changed what
+#   `efficiency` PAYS, this one only records what the item IS, and it ships
+#   with no bonus. If it ever gets one, that is a new experiment and needs its
+#   own sweep against both splits.
+#
+# `ramp` — the item's own stats grow during a fight and decay out of it.
+#   Bracer of The Abyss ("+8 Attack Damage for 10s. Stacks up to 8 times"),
+#   Doom Orb ("Stacks last 10s"), Draconic Scale ("Stacks last 1.5s"), Helm of
+#   Radiance, Brawler's Beat Stick ("While in Combat: ... Stacks up to 5
+#   times"), Tyrfing, Freya's Tears, Ethereal Staff, Wyrmskin Hide, Oni
+#   Hunter's Garb.
+#   It exists to keep `stacking` honest — persistent versus transient is the
+#   exact distinction STATE.md 4.8 turns on, and one tag covering both would
+#   erase it. Deliberately excludes items that stack a DEBUFF on the enemy
+#   (Stone of Binding, Toxic Blade, Midgardian Mail, Erosion); those are
+#   protection-shred / damage-debuff / anti-shield, and their stacks are not
+#   the buyer's stats.
+#
+# `low-health` — value that exists only below a health threshold.
+#   Berserker's Shield ("When falling below 60% Health: Become Berserk"),
+#   Shifter's Shield ("Under 75% Health: +20 Physical and Magical Protection"),
+#   Freya's Tears ("On 25% of your Health Lost"), Riptalon, Bancroft's Talon,
+#   Mantle Of Discord.
+#   This names precisely the set `passives.py` REFUSES TO PRICE — its
+#   `CONDITIONAL_MARKERS` block excludes them because "the honest discount
+#   depends on uptime nobody has measured". A tag is the right instrument for
+#   something you can identify but cannot value.
+#   NOT Breastplate of Valor (health lost is a trigger meter, not a threshold)
+#   and NOT Xibalban Effigy ("Cannot drop below 5% Health" is a floor).
+#
+# `heal-scaling` — the passive pays only if YOU heal. Daybreak Gavel ("Each
+#   unique god Healed by a Healing Ability"), Heartwood Charm ("-20% Cooldowns
+#   for your Healing Abilities"), Vital Amplifier ("Heal yourself or an ally
+#   with an Ability"), Regrowth Striders ("Heal yourself with an Ability").
+#   The sharpest pure-FIT tag here: on a god with no heal these are dead weight
+#   and `god_fit_score` has no way to know it. Distinct from `sustain`, which
+#   says the ITEM heals; this says the item needs the GOD to.
+#
+# `mitigation` — a flat % damage reduction, which multiplies AFTER protections
+#   and is not a protection. Oni Hunter's Garb ("+4% Damage Mitigation"),
+#   Prophetic Cloak ("+6% Damage Mitigation (or +12% if total Protections >
+#   300)"), Xibalban Effigy ("Take 50% Damage for 4s"), Radiant Bulwark,
+#   Amanita Charm ("10% Attack and Ability Damage Reduction per Stack"),
+#   Spectral Armor ("You take -30% Damage from Critical Strikes"), Shell of
+#   Rebuke ("mitigates 35% Damage").
+#   Mathematically the cleanest "the stat math cannot see this" case in the
+#   pool: `combat.py` runs protections through a curve, and none of these is
+#   on it.
+#
+# `crit-scaling` — the passive requires or amplifies a critical strike.
+#   Deathbringer ("+35% Critical Strike Damage"), Damaru ("Critically Strike:
+#   +8% Ability Damage"), Demon Blade ("Critically Strike: +30% Attack Speed"),
+#   Musashi's Dual Swords, Rage ("God Kill or Assist: +4% Critical Strike
+#   Chance").
+#   CAVEAT: Deathbringer's multiplier is ALREADY PRICED — `price_crit_multipliers`
+#   ships ON — so this tag partly re-describes a live pricing feature. It says
+#   "this item wants a crit build", which is a fit claim, not a price one.
+#   NOT Lernaean Bow: "Can Critically Strike" is permission, not scaling.
+#
+# `damage-debuff` — the passive reduces the ENEMY'S damage output.
+#   Midgardian Mail ("the enemy has their Attack Speed reduced by 8%"),
+#   Leviathan's Hide ("That God is -10% Strength & Attack Damage"), Pharaoh's
+#   Curse ("-40% Attack Speed"), Toxic Blade, Stygian Anchor.
+#   The family `anti-crit` belongs to — that tag has exactly ONE carrier and is
+#   kept only because `draft.tag_bonus.crit` reads it.
+#
+# `anti-shield` — the mirror of `anti-heal`. Shield Splitter ("If an enemy is
+#   Shielded: -70% Shield"), Erosion ("-30% Shields applied to enemy Gods"),
+#   Pharaoh's Curse ("-50% Shields"), Lernaean Bow ("-50% Shield"), Mystical
+#   Mail ("lose 25% of Health Shield per 1s").
+#
+# `active` — "You can own up to 3 active items at once", quoted verbatim from
+#   37 buildable items. A CONSTRAINT, not an effect, and the only tag here that
+#   a `tag_bonus` could never express: an additive per-item bonus cannot say
+#   "at most three". Enforcing it belongs in `assemble`, not here.
+#   MEASURED BEFORE CLAIMING IT MATTERED, and it does not, yet: across all
+#   2,399 shipped suggested cores, ZERO hold more than three actives — 985 hold
+#   none, 949 one, 406 two, 59 three. So this records a constraint currently
+#   satisfied by accident, and would catch the day it stops being. Not a fix.
+#
+# ── WHAT DELIBERATELY DID NOT GET A TAG ─────────────────────────────────────
+#
+# A category with one member is a note, not a tag. Reflect (Hide of the Nemean
+# Lion), team-wide damage amplification (Spear of the Magus, "Marked Gods take
+# 5% increased damage from all sources"), consumable-slot economy (Alchemist
+# Coat, the only carrier once Eye of Providence is read as `ward-economy`),
+# true damage (2 buildable carriers, no build meaning). Gold generation has no
+# buildable carrier at all — every one of them is a starter.
+#
+# `execute` has sat in the declared vocabulary since 2026-07-16 with ZERO
+# carriers, and after reading all 226 passives it has exactly one true one
+# (Totem of Death, "Missing Health"), which is a note by the same rule. It is
+# left in `scoring.offense_tags` because a name with no items behind it costs
+# nothing; that is not evidence the concept is covered.
+#
+# ── ITEMS WITH NO PASSIVE TEXT TO JUDGE ─────────────────────────────────────
+#
+# The old NEEDS MANUAL REVIEW list is resolved. Of its eight: Dagger of Frenzy,
+# Obsidian Shard and Titan's Bane have since scraped text and are tagged from
+# it above; Bloodforge resolved to [sustain, active]. The remaining four —
+# Engraved Guard, Evil Eye, Hunter's Bow, Skeggox — are tier-2 components that
+# genuinely have no passive, so `[]` is the final answer, not a placeholder.
+#
+# NOTE (2026-08-05): anti-heal EXISTS in the pool. Toxic Blade ("Hit a God with
+# an Attack: Apply 25% Healing Reduction ... for 5s") was the first, and it
+# arrived with the eight items the item list had never discovered. The "vs
+# sustain" situational row reported "none available" for weeks — accurate about
+# the data we had, wrong about the game. Physical only, so a magical god still
+# has no anti-heal option and that gap is real.
 
 Blinking Abyss: [mobility]
-Bloodforge: [sustain]
-Book of Thoth: []
-Chronos' Pendant: []
-Dagger of Frenzy: []
-Deathbringer: []
-Devourer's Gauntlet: [sustain]
-Dwarven Plate: []
+Bloodforge: [sustain, active]
+Book of Thoth: [stacking]
+Chronos' Pendant: [ability-uptime]
+Dagger of Frenzy: [active]
+Deathbringer: [crit-scaling]
+Devourer's Gauntlet: [sustain, stacking]
+Dwarven Plate: [active]
 Engraved Guard: []
 Evil Eye: []
 Gem of Isolation: [peel]
-Genji's Guard: []
+Genji's Guard: [ability-uptime]
 Hastened Fatalis: [mobility]
-Heartseeker: [burst]
+Heartseeker: [burst, percent-health]
 Hunter's Bow: []
 Hydra's Lament: [burst]
-Jotunn's Revenge: []
+Jotunn's Revenge: [ability-uptime]
 Magi's Cloak: [cc-immunity]
 Nimble Ring: []
-Obsidian Shard: []
+Obsidian Shard: [penetration]
 Odysseus' Bow: [burst, wave-clear]
-Rage: []
-Riptalon: [sustain]
+Rage: [stacking, crit-scaling]
+Riptalon: [sustain, low-health]
 Rod of Tahuti: []
-Shifter's Shield: []
+Shifter's Shield: [low-health]
 Skeggox: []
 Soul Gem: [burst, sustain, aura]
-Spear of Desolation: []
+Spear of Desolation: [ability-uptime]
 The Crusher: [burst]
 The Reaper: [sustain]
-The World Stone: []
-Titan's Bane: []
-Transcendence: []
+The World Stone: [ability-uptime]
+Titan's Bane: [penetration]
+Transcendence: [stacking]
 
 # Full Tier III roster — appended 2026-07-18 from newly-scraped passives.
 Alchemist Coat: []
-Amanita Charm: [sustain, aura]
+Amanita Charm: [sustain, aura, mitigation, active]
 Ancient Signet: [burst]
-Ancile: []
-Arondight: [mobility]
-Avatar's Parashu: [cc-immunity]
+Ancile: [active, peel]
+Arondight: [mobility, active]
+Avatar's Parashu: [cc-immunity, active]
 Avenging Blade: [protection-shred]
-Bancroft's Talon: [sustain]
+Bancroft's Talon: [sustain, low-health]
 Barbed Carver: [burst]
-Berserker's Shield: []
-Blood-Bound Book: [sustain]
-Bracer of The Abyss: []
+Berserker's Shield: [low-health]
+Blood-Bound Book: [sustain, active]
+Bracer of The Abyss: [ramp]
 Bragi's Harp: [burst]
-Brawler’s Beat Stick: [anti-heal]
-Breastplate of Valor: []
-Chandra's Grace: [sustain]
-Circe's Hexstone: [mobility, cc-immunity]
+Brawler’s Beat Stick: [anti-heal, ramp]
+Breastplate of Valor: [ability-uptime]
+Chandra's Grace: [sustain, ability-uptime]
+Circe's Hexstone: [mobility, cc-immunity, active]
 Contagion: [anti-heal, burst]
-Damaru: []
-Daybreak Gavel: []
-Death Metal: []
-Demon Blade: []
+Damaru: [crit-scaling]
+Daybreak Gavel: [heal-scaling]
+Death Metal: [active]
+Demon Blade: [crit-scaling]
 Divine Ruin: [anti-heal, burst]
-Doom Orb: []
-Doublet of Binding: [aura]
-Draconic Scale: []
-Dreamer's Idol: [cc-immunity]
-Eros' Bow: [aura]
-Erosion: [aura]
-Ethereal Staff: []
-Eye of Erebus: [ward-economy]
+Doom Orb: [ramp]
+Doublet of Binding: [aura, active]
+Draconic Scale: [ramp]
+Dreamer's Idol: [cc-immunity, active]
+Eros' Bow: [aura, active]
+Erosion: [aura, anti-shield]
+Ethereal Staff: [percent-health, ramp, sustain]
+Eye of Erebus: [ward-economy, percent-health, active]
 Eye of Providence: [ward-economy]
-Eye of the Storm: [peel]
-Freya's Tears: []
-Gauntlet of Thebes: []
+Eye of the Storm: [peel, active]
+Freya's Tears: [low-health, ramp]
+Gauntlet of Thebes: [stacking]
 Gem of Focus: [mobility]
 Gladiator's Shield: [burst]
-Glorious Pridwen: [sustain]
+Glorious Pridwen: [sustain, active]
 Gluttonous Grimoire: [burst]
 Golden Blade: [wave-clear]
-Heartwood Charm: []
-Helm of Darkness: [mobility]
-Helm of Radiance: []
-Hide of the Nemean Lion: []
+Heartwood Charm: [ability-uptime, heal-scaling, active]
+Helm of Darkness: [mobility, active]
+Helm of Radiance: [ramp]
+Hide of the Nemean Lion: [active]
 Hussar's Wings: [cc-immunity]
-Jade Scepter: [peel]
+Jade Scepter: [peel, active]
 Kinetic Cuirass: [burst]
-Lernaean Bow: [wave-clear, burst]
-Leviathan's Hide: []
-Lifebinder: [sustain, aura]
-Mantle Of Discord: [peel, cc-immunity]
+Lernaean Bow: [wave-clear, burst, anti-shield, active]
+Leviathan's Hide: [ability-uptime, stacking, damage-debuff]
+Lifebinder: [sustain, aura, active]
+Mantle Of Discord: [peel, cc-immunity, low-health]
 Mercury's Talaria: []
-Midgardian Mail: []
-Musashi's Dual Swords: [mobility]
-Mystical Mail: [aura, wave-clear]
-Necronomicon: []
+Midgardian Mail: [damage-debuff]
+Musashi's Dual Swords: [mobility, crit-scaling]
+Mystical Mail: [aura, wave-clear, anti-shield]
+Necronomicon: [stacking]
 Oath-Sworn Spear: [protection-shred]
-Omen Drum: []
-Oni Hunter's Garb: []
-Pendulum Blade: []
-Pharaoh's Curse: [aura]
-Phoenix Feather: [sustain]
+Omen Drum: [active]
+Oni Hunter's Garb: [mitigation, ramp]
+Pendulum Blade: [ability-uptime, active]
+Pharaoh's Curse: [aura, damage-debuff, anti-shield, active]
+Phoenix Feather: [sustain, active]
 Polynomicon: [burst]
-Prophetic Cloak: []
-Qin's Blade: [burst]
-Radiant Bulwark: [aura]
-Ragnarok's Wake: [mobility, burst]
-Regrowth Striders: [mobility, sustain]
-Resolute Mantle: [cc-immunity, sustain]
-Rod of Asclepius: [sustain, aura]
+Prophetic Cloak: [stacking, mitigation]
+Qin's Blade: [burst, percent-health]
+Radiant Bulwark: [aura, mitigation, active]
+Ragnarok's Wake: [mobility, burst, active]
+Regrowth Striders: [mobility, sustain, heal-scaling]
+Resolute Mantle: [cc-immunity, sustain, stacking]
+Rod of Asclepius: [sustain, aura, active]
 Runeforged Hammer: [burst]
-Sanguine Lash: [aura]
-Scepter of Dominion: [peel]
-Screeching Gargoyle: [protection-shred, peel]
+Sanguine Lash: [aura, percent-health, active]
+Scepter of Dominion: [peel, active]
+Screeching Gargoyle: [protection-shred, peel, active]
 Shield of the Phoenix: [sustain]
-Shield Splitter: []
+Shield Splitter: [anti-shield, active]
 Shogun's Ofuda: [aura]
 Shroud of Vengeance: [burst]
-Soul Reaver: [burst]
+Soul Reaver: [burst, percent-health]
 Spear of the Magus: []
-Spectral Armor: [anti-crit, aura]
+Spectral Armor: [anti-crit, aura, mitigation]
 Sphere of Negation: [sustain]
 Spirit Robe: [sustain]
-Staff of Myrddin: []
-Stampede: [mobility, aura, cc-immunity]
+Staff of Myrddin: [ability-uptime, active]
+Stampede: [mobility, aura, cc-immunity, active]
 Stone of Binding: [protection-shred]
-Stygian Anchor: [anti-heal]
-Sun Beam Bow: []
+Stygian Anchor: [anti-heal, damage-debuff]
+Sun Beam Bow: [active, wave-clear]
 Tekko-Kagi: [mobility]
 The Cosmic Horror: []
 The Executioner: [protection-shred]
 Triton's Conch: [aura]
-Typhon’s Heart: []
-Tyrfing: [burst]
+Typhon’s Heart: [stacking]
+Tyrfing: [burst, ramp]
 Umbral Link: [sustain, aura]
-Vital Amplifier: []
+Vital Amplifier: [heal-scaling]
 Void Shield: [protection-shred, aura]
 Void Stone: [protection-shred, aura]
 Wish-Granting Pearl: []
-Wyrmskin Hide: []
-Xibalban Effigy: []
-Yogi's Necklace: []
+Wyrmskin Hide: [ramp]
+Xibalban Effigy: [mitigation, active]
+Yogi's Necklace: [sustain]
 
 # Starters (role-selected, not tag-selected)
 Archmage's Gem: []
@@ -203,17 +415,25 @@ War Flag: [aura]
 Warrior's Axe: []
 
 # Added 2026-08-05 with the eight previously-undiscovered items.
-# Dominance is +20% Penetration on basic attacks: a stat effect, so [] per the
-# same rule that leaves Obsidian Shard and Titan's Bane untagged.
+# Dominance was [] here on the reading that +20% Penetration on basic attacks
+# is a stat effect. Its own text overturns that — see `penetration` above.
 # Silverbranch Bow fires an extra homing arrow — single-target sustained
 # basic-attack damage, which is neither burst nor wave-clear.
-Dominance: []
+Dominance: [penetration]
 Silverbranch Bow: []
-Toxic Blade: [anti-heal]
-# Relics. They get their own slot and cannot take one of the six, so these are
-# recorded for completeness rather than read by the recommender.
+Toxic Blade: [anti-heal, damage-debuff]
+
+# Added 2026-08-19. Totem of Death was the ONE buildable item missing from
+# this file outright rather than sitting at `[]`, which is why the standing
+# "[tags] 1 untagged items" warning named it and nothing else.
+Totem of Death: [percent-health]
+
+# Relics. A PAID relic takes one of the six (`scoring.is_buildable`, corrected
+# 2026-08-19), so the four with stats below are scored like any other item;
+# Blinking Abyss and Sundering Echo are excluded for being statless, not for
+# being relics.
 Agility Greaves: [mobility]
-Shell of Rebuke: [peel]
+Shell of Rebuke: [peel, mitigation]
 Talisman of Purification: [cc-immunity]
-Time-lock Aegis: [cc-immunity]
+Time-lock Aegis: [cc-immunity, ability-uptime]
 Sundering Echo: []

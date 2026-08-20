@@ -13,8 +13,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -56,11 +56,11 @@ builds:
       pick: 0.0
       fit: 0.79
     Obsidian Shard:
-      total: 0.65
+      total: 0.7
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -142,11 +142,11 @@ builds:
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
-  - Triton's Conch
   flex_slots:
+  - The Cosmic Horror
   - Spear of the Magus
-  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -187,18 +187,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Obsidian Shard:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Soul Gem:
       total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.54
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -275,8 +275,8 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
+  - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -324,11 +324,11 @@ builds:
       pick: 0.0
       fit: 0.85
     Obsidian Shard:
-      total: 0.69
+      total: 0.74
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.95
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Chronos' Pendant
   - Spear of Desolation
+  - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Genji's Guard
   - Rod of Tahuti
-  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,12 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Breastplate of Valor:
-      total: 0.56
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Chronos' Pendant:
       total: 0.59
       efficiency: 0.55
@@ -447,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
+    Totem of Death:
+      total: 0.6
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Rod of Tahuti:
       total: 0.57
       efficiency: 0.77
@@ -600,8 +600,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - The Cosmic Horror
   - Spear of the Magus
-  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -643,11 +643,11 @@ builds:
       pick: 0.0
       fit: 0.79
     Obsidian Shard:
-      total: 0.65
+      total: 0.7
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -792,13 +792,13 @@ builds:
   slot_order:
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Obsidian Shard
   - The Cosmic Horror
-  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -827,18 +827,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Spear of the Magus:
-      total: 0.5
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -925,12 +925,12 @@ builds:
   - Void Shield
   - Void Stone
   - Spear of Desolation
-  - The Cosmic Horror
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - The Cosmic Horror
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -965,18 +965,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    The Cosmic Horror:
-      total: 0.59
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Rod of Tahuti:
       total: 0.68
       efficiency: 0.77
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Obsidian Shard:
+      total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -1054,15 +1054,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Gladiator's Shield
   - Spear of Desolation
+  - Totem of Death
+  - Rod of Tahuti
   - Soul Gem
-  - Triton's Conch
   flex_slots:
-  - Triton's Conch
-  - Screeching Gargoyle
+  - Rod of Tahuti
+  - Totem of Death
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1079,12 +1079,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.51
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Genji's Guard:
       total: 0.56
       efficiency: 0.69
@@ -1103,18 +1097,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Totem of Death:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Rod of Tahuti:
+      total: 0.52
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Soul Gem:
       total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.52
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested

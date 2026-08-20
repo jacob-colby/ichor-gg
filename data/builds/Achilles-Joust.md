@@ -73,22 +73,22 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
   - The Crusher
+  - Heartseeker
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Heartseeker
   - Erosion
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Genji's Guard:
-      total: 0.47
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.25
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.64
@@ -122,6 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Amanita Charm:
       total: 0.67
       efficiency: 0.63

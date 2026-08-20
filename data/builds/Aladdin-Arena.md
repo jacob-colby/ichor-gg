@@ -10,11 +10,11 @@ builds:
   - Hydra's Lament
   - Pendulum Blade
   - The Crusher
+  - Heartseeker
   - Soul Gem
-  - Triton's Conch
   flex_slots:
+  - Heartseeker
   - Hydra's Lament
-  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -55,18 +55,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Heartseeker:
+      total: 0.65
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.61
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -269,14 +269,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
-  - Spear of Desolation
   - Pendulum Blade
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   - Soul Gem
   flex_slots:
-  - Heartseeker
-  - Spear of Desolation
+  - Pendulum Blade
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -299,12 +299,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.93
-    Spear of Desolation:
-      total: 0.63
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
     Pendulum Blade:
       total: 0.67
       efficiency: 0.41
@@ -318,8 +312,14 @@ builds:
       pick: 0.0
       fit: 0.89
     Heartseeker:
-      total: 0.65
+      total: 0.7
       efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.99
+    Titan's Bane:
+      total: 0.67
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -467,11 +467,11 @@ builds:
   - Hydra's Lament
   - Pendulum Blade
   - The Crusher
+  - Heartseeker
   - Soul Gem
-  - Triton's Conch
   flex_slots:
+  - Heartseeker
   - Hydra's Lament
-  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -512,17 +512,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Heartseeker:
+      total: 0.65
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.61
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
   starter: *id001
 ---
