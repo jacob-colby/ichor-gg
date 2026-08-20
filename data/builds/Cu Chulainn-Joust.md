@@ -395,4 +395,79 @@ builds:
       pick: 0.0
       fit: 0.64
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Kinetic Cuirass
+  - Hide of the Nemean Lion
+  - Amanita Charm
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - Kinetic Cuirass
+  - Hide of the Nemean Lion
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Erosion — magical protection
+    swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Kinetic Cuirass:
+      total: 0.51
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Hide of the Nemean Lion:
+      total: 0.37
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
+    Amanita Charm:
+      total: 0.71
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Pharaoh's Curse:
+      total: 0.59
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Shogun's Ofuda:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+  swaps:
+  - added: Kinetic Cuirass
+    removed: Erosion
+    reason: Conquest community 58% win over 131 matches (vs 49% on this god), taking
+      the model's weakest slot from Erosion
+  - added: Hide of the Nemean Lion
+    removed: Berserker's Shield
+    reason: Conquest community 58% win over 117 matches (vs 49% on this god), taking
+      the model's weakest slot from Berserker's Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

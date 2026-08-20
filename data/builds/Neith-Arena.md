@@ -720,4 +720,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - The Executioner
+  - Toxic Blade
+  - Rod of Tahuti
+  - Rod of Asclepius
+  - Pharaoh's Curse
+  - Soul Gem
+  flex_slots:
+  - Pharaoh's Curse
+  - The Executioner
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    The Executioner:
+      total: 0.22
+      efficiency: 0.13
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Rod of Tahuti:
+      total: 0.53
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Rod of Asclepius:
+      total: 0.63
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Pharaoh's Curse:
+      total: 0.53
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: The Executioner
+    removed: Death Metal
+    reason: Conquest community 69% win over 48 matches (vs 53% on this god), taking
+      the model's weakest slot from Death Metal
+  borrowed_from: Conquest
+  starter: *id001
 ---

@@ -655,4 +655,75 @@ builds:
       pick: 0.0
       fit: 0.63
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Riptalon
+  - Silverbranch Bow
+  - Demon Blade
+  - Amanita Charm
+  - Pharaoh's Curse
+  flex_slots:
+  - Amanita Charm
+  - Silverbranch Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.62
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Riptalon:
+      total: 0.62
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Silverbranch Bow:
+      total: 0.43
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
+    Demon Blade:
+      total: 0.61
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    Amanita Charm:
+      total: 0.59
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Pharaoh's Curse:
+      total: 0.59
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+  swaps:
+  - added: Silverbranch Bow
+    removed: Golden Blade
+    reason: Conquest community 69% win over 131 matches (vs 57% on this god), taking
+      the model's weakest slot from Golden Blade
+  borrowed_from: Conquest
+  starter: *id001
 ---

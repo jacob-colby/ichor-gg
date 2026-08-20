@@ -460,4 +460,75 @@ builds:
       pick: 0.0
       fit: 0.66
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Hide of the Nemean Lion
+  - The Crusher
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Kinetic Cuirass
+  - Hide of the Nemean Lion
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Kinetic Cuirass:
+      total: 0.58
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Hide of the Nemean Lion:
+      total: 0.42
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
+    The Crusher:
+      total: 0.62
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Amanita Charm:
+      total: 0.77
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
+    Erosion:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+  swaps:
+  - added: Hide of the Nemean Lion
+    removed: Runeforged Hammer
+    reason: Conquest community 63% win over 44 matches (vs 47% on this god), taking
+      the model's weakest slot from Runeforged Hammer
+  borrowed_from: Conquest
+  starter: *id001
 ---

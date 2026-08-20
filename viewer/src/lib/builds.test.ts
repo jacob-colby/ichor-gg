@@ -6,8 +6,9 @@ import {
   iconSlug,
   applySwap,
   tabLabel,
+  dedupeCoreAgainstModel,
 } from "./builds";
-import type { CommunityBuildEntry, CuratedBuildEntry } from "../types";
+import type { BuildEntry, CommunityBuildEntry, CuratedBuildEntry } from "../types";
 
 const communityEntry: CommunityBuildEntry = {
   source: "community",
@@ -141,5 +142,51 @@ describe("orderBuilds", () => {
   it("omits community when the god has none — every Joust build", () => {
     const got = orderBuilds([s("model"), s("core")], undefined);
     expect(got.map(tabLabel)).toEqual(["Model", "Balanced"]);
+  });
+});
+
+/* `core` ("Balanced") is the four-signal blend; `model` is that blend with the
+ * meta switched off. In Conquest they diverge on 80 of 89 gods. Joust and
+ * Arena zero the `win` and `pick` weights, so the blend IS the model build and
+ * the two tabs were byte-identical on 89 of 89 gods in each — with the
+ * duplicate being the one labelled "Balanced", claiming a community blend that
+ * had not happened. */
+describe("dedupeCoreAgainstModel", () => {
+  const b = (archetype: string, items: string[]) =>
+    ({ source: "suggested", archetype, slot_order: items } as unknown as BuildEntry);
+
+  it("drops a Balanced tab that is the same six items as Model", () => {
+    const six = ["A", "B", "C", "D", "E", "F"];
+    const out = dedupeCoreAgainstModel([b("model", six), b("core", six), b("crit", six)]);
+    expect(out.map((e) => (e as { archetype: string }).archetype)).toEqual(["model", "crit"]);
+  });
+
+  it("keeps Balanced when it genuinely differs, even by one item", () => {
+    const out = dedupeCoreAgainstModel([
+      b("model", ["A", "B", "C", "D", "E", "F"]),
+      b("core", ["A", "B", "C", "D", "E", "Z"]),
+    ]);
+    expect(out).toHaveLength(2);
+  });
+
+  it("keeps Balanced when the two differ only in ORDER", () => {
+    // Same items bought in a different order is a different build.
+    const out = dedupeCoreAgainstModel([
+      b("model", ["A", "B", "C"]),
+      b("core", ["C", "B", "A"]),
+    ]);
+    expect(out).toHaveLength(2);
+  });
+
+  it("never drops any other archetype", () => {
+    const six = ["A", "B", "C", "D", "E", "F"];
+    const out = dedupeCoreAgainstModel([b("model", six), b("hybrid", six), b("burst", six)]);
+    expect(out).toHaveLength(3);
+  });
+
+  it("is a no-op when there is no model build to compare against", () => {
+    const six = ["A", "B", "C", "D", "E", "F"];
+    const input = [b("core", six), b("crit", six)];
+    expect(dedupeCoreAgainstModel(input)).toEqual(input);
   });
 });

@@ -99,6 +99,8 @@ Each of these has its evidence in the named module.
 | A **defensive** draft bonus is scaled by the god's archetype | `defense_affinity`, `threats.threatOverlay` | Flat, it answered "they are magical" with "become tankier" to a Hunter: protections in 40 carry cores went 32 → 70. Scaled, 24 — and penetration 159 → 203 |
 | The draft clamp bounds the **stack**, not the strongest channel | `draftBuild.adaptedCore` | Clamping the sum made 2 healers and 4 healers produce the identical build; anti-heal adoption 16/31 → 31/31 with every other comp unchanged |
 | A relic answer is called out **on its own line** | `draft.relics` in `_weights.yaml` | It does take one of the six, but the model can't price a `+7.5% of all Stats` multiplier, so it never wins a slot on score and has to be named explicitly |
+| Joust/Arena **borrow** Conquest's community record for the Hybrid | `modes.<mode>.borrow_community` | No record of their own meant no Hybrid at all (89/89 gods returned the model core). Borrowed minus `stacking` and `ward-economy`, and disclosed as borrowed |
+| The **Balanced** tab is hidden when it equals Model | `builds.dedupeCoreAgainstModel` | Joust and Arena zero `win` and `pick`, so the blend IS the model build — byte-identical on 89/89, with the duplicate claiming a blend that never happened |
 | The aspect control is an **orange hexagon on the portrait** | `AspectBadge.tsx` | Where SMITE draws it, so it is self-describing; orange rather than gold keeps the Torchlight Rule intact |
 | An aspect with no overlay **falls back** to the base build | `DetailPanel.aspectFamily` | 72 gods have an aspect, 7 have a scoring overlay; filtering strictly blanked the model side for the other 65 |
 | Effect-tags name two things: the **job** and **when the value arrives** | `data/_tags.yaml` | The original 11 were all jobs, and 55 of 138 buildable items went untagged because what they do is conditional, not a role |
@@ -376,7 +378,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (630) ·
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 634 pipeline · 655 viewer |
+| Tests | 638 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

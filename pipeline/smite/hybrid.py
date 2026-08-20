@@ -75,26 +75,53 @@ def community_records(community_entry):
     return out
 
 
-def _reason(name, record, displaced, baseline):
-    """Why this swap fired, in the evidence's own terms."""
+def _reason(name, record, displaced, baseline, borrowed_from=None):
+    """Why this swap fired, in the evidence's own terms.
+
+    Names the SOURCE MODE when the record was borrowed. A Joust build reading
+    "community 63% win over 44 matches" without saying whose community would
+    present Conquest's 30-minute record as if it were measured in Joust, which
+    is the one thing this project does not do with unmeasured modes."""
+    where = f"{borrowed_from} community" if borrowed_from else "community"
     return (
-        f"community {record['win_rate']:.0%} win over {record['matches']:,} matches "
+        f"{where} {record['win_rate']:.0%} win over {record['matches']:,} matches "
         f"(vs {baseline:.0%} on this god), taking the model's weakest slot "
         f"from {displaced}"
     )
 
 
 def hybrid_core(model_core, rows, community_entry, items_by_name, weights,
-                max_lifesteal=1, n=6):
+                max_lifesteal=1, n=6, reject_tags=None, tags_map=None,
+                borrowed_from=None):
     """`(core, swaps)` — the model's core with community corrections applied.
 
     Returns the model core unchanged (and no swaps) when there is no community
-    record to correct it with, which is every Joust build.
+    record to correct it with.
+
+    `reject_tags` exists for BORROWED evidence. SmiteBrain publishes Conquest
+    only, so Joust and Arena had no record to correct with and this returned
+    the model core untouched for all 89 gods in each — a build the caller then
+    declined to emit, which was right. Conquest's record is still the best
+    evidence that exists about an item, but it is evidence about a 30-minute
+    game with a ward economy, and some of it does not transfer:
+
+      `stacking`      the value arrives too late to collect. Ten items —
+                      Transcendence, Book of Thoth, Devourer's Gauntlet, Rage,
+                      Gauntlet of Thebes among them. Arena is ~17.5 minutes.
+      `ward-economy`  answers a Conquest-only problem. Arena has no wards at
+                      all and both modes already price it at -0.25.
+
+    Both lists come from judgements already measured and recorded elsewhere
+    (`data/_tags.yaml`, `modes.<mode>.tag_bonus`) rather than from a new
+    opinion invented here. A rejected candidate is dropped silently: it is not
+    a swap that failed, it is evidence that does not apply.
     """
     protected, min_edge, max_swaps = _config(weights)
     records = community_records(community_entry)
     if not records:
         return list(model_core), []
+    reject = set(reject_tags or ())
+    tags_map = tags_map or {}
 
     # The bar is THIS GOD'S own win rate, not a fixed number. An item winning
     # 56% on a god who wins 52% overall is evidence; the same 56% on a god who
@@ -119,6 +146,7 @@ def hybrid_core(model_core, rows, community_entry, items_by_name, weights,
     candidates = [
         (name, rec) for name, rec in records.items()
         if name not in model_core and name in scored and rec["confidence"] is not None
+        and not (reject & set(tags_map.get(name) or ()))
     ]
     candidates.sort(key=lambda kv: (-kv[1]["confidence"], kv[0]))
 
@@ -147,7 +175,7 @@ def hybrid_core(model_core, rows, community_entry, items_by_name, weights,
 
     swaps = [
         {"added": name, "removed": weakest,
-         "reason": _reason(name, rec, weakest, baseline)}
+         "reason": _reason(name, rec, weakest, baseline, borrowed_from)}
         for name, rec, weakest in accepted
         if name in core          # a pick the constraints rejected is not a swap
     ]

@@ -1315,4 +1315,76 @@ builds:
       fit: 0.69
   starter: *id001
   aspect: Aspect of the Cursed Crown
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Gluttonous Grimoire
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
+  - Triton's Conch
+  flex_slots:
+  - Triton's Conch
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Gluttonous Grimoire:
+      total: 0.74
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+    Spear of Desolation:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Rod of Tahuti:
+      total: 0.62
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Obsidian Shard:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Triton's Conch:
+      total: 0.56
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+  swaps:
+  - added: Obsidian Shard
+    removed: Void Stone
+    reason: Conquest community 66% win over 116 matches (vs 54% on this god), taking
+      the model's weakest slot from Void Stone
+  borrowed_from: Conquest
+  starter: *id001
+  aspect: Aspect of the Cursed Crown
 ---

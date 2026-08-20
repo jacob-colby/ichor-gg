@@ -1315,4 +1315,76 @@ builds:
       fit: 0.79
   starter: *id001
   aspect: Aspect of the Cursed Crown
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Void Stone
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Rod of Asclepius
+  - Soul Gem
+  - Triton's Conch
+  flex_slots:
+  - Void Stone
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Erosion — physical protection
+    swap_item: Erosion
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Void Stone:
+      total: 0.61
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Rod of Tahuti:
+      total: 0.62
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Obsidian Shard:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Rod of Asclepius:
+      total: 0.77
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.99
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Triton's Conch:
+      total: 0.61
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+  swaps:
+  - added: Obsidian Shard
+    removed: Erosion
+    reason: Conquest community 66% win over 116 matches (vs 54% on this god), taking
+      the model's weakest slot from Erosion
+  borrowed_from: Conquest
+  starter: *id001
+  aspect: Aspect of the Cursed Crown
 ---

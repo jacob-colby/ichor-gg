@@ -720,4 +720,75 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Death Metal
+  - Riptalon
+  - The Crusher
+  - The World Stone
+  - Soul Gem
+  flex_slots:
+  - Death Metal
+  - The World Stone
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Death Metal:
+      total: 0.52
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Riptalon:
+      total: 0.64
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    The Crusher:
+      total: 0.54
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    The World Stone:
+      total: 0.33
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
+    Soul Gem:
+      total: 0.72
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+  swaps:
+  - added: The World Stone
+    removed: Demon Blade
+    reason: Conquest community 75% win over 41 matches (vs 55% on this god), taking
+      the model's weakest slot from Demon Blade
+  borrowed_from: Conquest
+  starter: *id001
 ---

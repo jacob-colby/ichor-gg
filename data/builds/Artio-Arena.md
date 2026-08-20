@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Breastplate of Valor
+  - Kinetic Cuirass
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Spectral Armor
+  - Breastplate of Valor
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Breastplate of Valor:
+      total: 0.47
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Kinetic Cuirass:
+      total: 0.62
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Spectral Armor:
+      total: 0.62
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Amanita Charm:
+      total: 0.81
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.69
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+    Stampede:
+      total: 0.62
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+  swaps:
+  - added: Breastplate of Valor
+    removed: Void Shield
+    reason: Conquest community 76% win over 35 matches (vs 50% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

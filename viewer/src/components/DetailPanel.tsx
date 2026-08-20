@@ -18,7 +18,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type {
   BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
-import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel, orderBuilds } from "../lib/builds";
+import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel, orderBuilds,
+  dedupeCoreAgainstModel } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { tierLabel } from "../lib/itemFilters";
 import { buildLedger, goldText, ordinal, type LedgerRow } from "../lib/ledger";
@@ -500,7 +501,7 @@ export function DetailPanel({
     return useAspect ? !!a : !a;
   });
   const selectable: BuildEntry[] = [
-    ...orderBuilds(suggested, communityEntry), ...mineEntries,
+    ...orderBuilds(dedupeCoreAgainstModel(suggested), communityEntry), ...mineEntries,
   ];
   // Nothing to select at all still has to render something.
   const primaryIsCommunity = selectable.length === 0;
@@ -534,7 +535,7 @@ export function DetailPanel({
     // Index into the ORDERED list, which is what the tab strip renders.
     // Searching the raw filtered list silently pointed at a different build
     // once community joined the strip and the order stopped matching.
-    const nextSelectable = [...orderBuilds(nextSuggested, communityEntry), ...mineEntries];
+    const nextSelectable = [...orderBuilds(dedupeCoreAgainstModel(nextSuggested), communityEntry), ...mineEntries];
     const i = curArch
       ? nextSelectable.findIndex(
           (e) => e.source === "suggested" && (e as CuratedBuildEntry).archetype === curArch)
@@ -595,7 +596,7 @@ export function DetailPanel({
           // Offset by the ordered suggested-plus-community group, not by
           // `suggested.length` — community sits inside that group now.
           const idx = name ? getMine(god, note.mode).findIndex((b) => b.name === name) : -1;
-          const before = orderBuilds(suggested, communityEntry).length;
+          const before = orderBuilds(dedupeCoreAgainstModel(suggested), communityEntry).length;
           setActiveIndex(idx >= 0 ? before + idx : null);
         }}
       />
@@ -888,6 +889,18 @@ export function DetailPanel({
       {!community && !!(active as CuratedBuildEntry).swaps?.length && (
         <div className="mt-4 rounded-md border border-line bg-bg1 p-3">
           <h3 className={eyebrow}>Where the community overruled the model</h3>
+          {/* Joust and Arena have no community record of their own, so this
+              build borrows Conquest's. Saying so is not a footnote — it is the
+              difference between "measured here" and "measured somewhere else
+              and judged to transfer", and this app does not blur that. */}
+          {(active as CuratedBuildEntry).borrowed_from && (
+            <p className="mt-1.5 text-small leading-relaxed text-muted">
+              No {note.mode} record exists, so this uses{" "}
+              <span className="text-ink-soft">{(active as CuratedBuildEntry).borrowed_from}</span>&rsquo;s —
+              minus items whose value arrives too late for {note.mode}, and those
+              that only answer a {(active as CuratedBuildEntry).borrowed_from} problem.
+            </p>
+          )}
           <ul className="mt-2 flex flex-col gap-2">
             {(active as CuratedBuildEntry).swaps!.map((s) => (
               <li key={s.added} className="text-small leading-relaxed">

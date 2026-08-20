@@ -203,18 +203,46 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
 
         # And the hybrid: that same core, corrected only where the model is
         # near-indifferent and the community's record is strong enough to
-        # override it. No community entry (every Joust build) means nothing to
-        # correct with, and `hybrid_core` returns the model core unchanged —
-        # which would be a duplicate build, so it isn't emitted.
+        # override it. `hybrid_core` returns the model core unchanged when
+        # there is nothing to correct with — a duplicate build, so it isn't
+        # emitted.
         community_entry = next(
             (b for b in (god_build or {}).get("builds", []) if b.get("source") == "community"),
             None)
+
+        # A mode with no community data of its own may BORROW another's. Joust
+        # and Arena had none, so this build simply did not exist there — 89 of
+        # 89 gods in each got the model core back and nothing was emitted.
+        # Conquest's record is still the best evidence about an item; it is
+        # just evidence about a different game, so the parts that do not
+        # transfer are rejected by tag (see `borrow_community` in
+        # _weights.yaml) and the result is labelled as borrowed rather than
+        # passed off as this mode's own.
+        borrow = ((weights.get("modes") or {}).get(mode.lower(), {}) or {}).get("borrow_community")
+        borrowed_from = None
+        if not community_entry and borrow:
+            source_mode = borrow.get("from", "Conquest")
+            source = load_build_note(god["name"], source_mode)
+            community_entry = next(
+                (b for b in (source or {}).get("builds", []) if b.get("source") == "community"),
+                None)
+            if community_entry:
+                borrowed_from = source_mode
+            reject_tags = borrow.get("reject_tags") or []
+        else:
+            reject_tags = []
+
         hy_core, swaps = hybrid.hybrid_core(model_core, model_rows, community_entry,
-                                            items_by_name, weights, max_lifesteal=max_ls)
+                                            items_by_name, weights, max_lifesteal=max_ls,
+                                            reject_tags=reject_tags, tags_map=tags_map,
+                                            borrowed_from=borrowed_from)
         if swaps:
+            extra = {"swaps": swaps}
+            if borrowed_from:
+                extra["borrowed_from"] = borrowed_from
             entries.append(_entry("hybrid", hy_core, model_rows, items_by_name,
                                   tags_map, weights, core_profile, flex_count,
-                                  starter, aspect_name, extra={"swaps": swaps}))
+                                  starter, aspect_name, extra=extra))
     return entries
 
 

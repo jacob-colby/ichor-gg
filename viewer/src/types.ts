@@ -163,6 +163,10 @@ export interface CuratedBuildEntry {
    *  the evidence that earned it. A correction that can't say why it fired is
    *  just a third opinion. */
   swaps?: HybridSwap[];
+  /** Set when this build's community evidence came from ANOTHER mode. Joust
+   *  and Arena have no record of their own, so their Hybrid borrows Conquest's
+   *  minus the parts that don't transfer. Disclosed, never passed off. */
+  borrowed_from?: string;
 }
 
 export interface HybridSwap {

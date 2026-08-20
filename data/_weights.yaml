@@ -843,6 +843,18 @@ modes:
     # same way, and predates it.
     tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2, wave-clear: -0.15,
                 mobility: -0.1, ward-economy: -0.25}
+    # Correct the model with CONQUEST's community record, minus the parts of it
+    # that do not transfer. SmiteBrain publishes Conquest only, so without this
+    # the Hybrid build simply did not exist here — `hybrid_core` returned the
+    # model core untouched for all 89 gods and the caller declined to emit a
+    # duplicate. Borrowed evidence is better than none, and is disclosed as
+    # borrowed on the build itself.
+    borrow_community:
+      from: Conquest
+      # `stacking` pays off too late for a 15-30 minute game; `ward-economy`
+      # answers a Conquest-only problem and is already priced at -0.25 above.
+      # Both lists are judgements measured elsewhere, not new opinions.
+      reject_tags: [stacking, ward-economy]
     # Joust is NOT a small Arena, and that is the whole finding. It has a Titan,
     # jungle camps and towers - structurally Conquest, paced faster. Its win
     # still happens at the END, so late items keep most of their value and the
@@ -875,6 +887,11 @@ modes:
       wave-clear: 0.1     # minion denial is the objective, not a lane chore
       ward-economy: -0.25 # no wards at all; excluded_items already drops these
       mobility: -0.1      # no camps or lanes to rotate between
+    # Same borrow as Joust, and the case for rejecting `stacking` is stronger:
+    # Arena's whole scoring window is ~17.5 minutes.
+    borrow_community:
+      from: Conquest
+      reject_tags: [stacking, ward-economy]
     # Arena has no ward game, so the vision items are absent from its shop.
     # This is the list to correct first if a build recommends something the
     # shop does not have — it cannot be derived: "forward" and "toward" both

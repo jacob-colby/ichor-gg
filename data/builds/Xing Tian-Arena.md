@@ -525,4 +525,79 @@ builds:
       pick: 0.0
       fit: 0.86
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Hide of the Nemean Lion
+  - Freya's Tears
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Freya's Tears
+  - Hide of the Nemean Lion
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.7
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Hide of the Nemean Lion:
+      total: 0.48
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Freya's Tears:
+      total: 0.61
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Amanita Charm:
+      total: 0.81
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.76
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Stampede:
+      total: 0.67
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+  swaps:
+  - added: Freya's Tears
+    removed: Void Shield
+    reason: Conquest community 78% win over 84 matches (vs 59% on this god), taking
+      the model's weakest slot from Void Shield
+  - added: Hide of the Nemean Lion
+    removed: Spectral Armor
+    reason: Conquest community 70% win over 84 matches (vs 59% on this god), taking
+      the model's weakest slot from Spectral Armor
+  borrowed_from: Conquest
+  starter: *id001
 ---

@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Pendulum Blade
+  - The Crusher
+  - Heartseeker
+  - Obsidian Shard
+  - Soul Gem
+  flex_slots:
+  - Heartseeker
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.77
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+    Pendulum Blade:
+      total: 0.65
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+    The Crusher:
+      total: 0.71
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Heartseeker:
+      total: 0.65
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Obsidian Shard
+    removed: Hydra's Lament
+    reason: Conquest community 66% win over 89 matches (vs 52% on this god), taking
+      the model's weakest slot from Hydra's Lament
+  borrowed_from: Conquest
+  starter: *id001
 ---

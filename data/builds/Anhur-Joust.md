@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.79
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Dominance
+  - The Reaper
+  - Riptalon
+  - Silverbranch Bow
+  - Demon Blade
+  flex_slots:
+  - Dominance
+  - Silverbranch Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Dominance:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    The Reaper:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Riptalon:
+      total: 0.62
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Silverbranch Bow:
+      total: 0.43
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Demon Blade:
+      total: 0.57
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+  swaps:
+  - added: Silverbranch Bow
+    removed: Tyrfing
+    reason: Conquest community 57% win over 160 matches (vs 49% on this god), taking
+      the model's weakest slot from Tyrfing
+  borrowed_from: Conquest
+  starter: *id001
 ---

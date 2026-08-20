@@ -720,4 +720,75 @@ builds:
       pick: 0.0
       fit: 0.98
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Riptalon
+  - The World Stone
+  - Pharaoh's Curse
+  - Soul Gem
+  flex_slots:
+  - Pharaoh's Curse
+  - The World Stone
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.56
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Riptalon:
+      total: 0.64
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    The World Stone:
+      total: 0.33
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
+    Pharaoh's Curse:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Soul Gem:
+      total: 0.77
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.98
+  swaps:
+  - added: The World Stone
+    removed: Golden Blade
+    reason: Conquest community 75% win over 41 matches (vs 55% on this god), taking
+      the model's weakest slot from Golden Blade
+  borrowed_from: Conquest
+  starter: *id001
 ---

@@ -47,6 +47,31 @@ export function tabLabel(entry: BuildEntry): string {
 /** Model, Hybrid, Community, then everything else in its existing order.
  *  `core` stays available — three other systems read it by name — but it is no
  *  longer the answer a visitor meets first. */
+/** Drop a `core` ("Balanced") entry that is the same six items as `model`.
+ *
+ * `core` is the four-signal blend and `model` is that blend with the meta
+ * switched off — genuinely different builds in Conquest, where they diverge on
+ * 80 of 89 gods. Joust and Arena zero the `win` and `pick` weights, so the
+ * blend IS the model build and the two tabs were byte-identical on 89 of 89
+ * gods in each. Two tabs showing one build is bad enough; the duplicate was
+ * also the one labelled "Balanced", claiming a community blend that had not
+ * happened.
+ *
+ * Dropped from the STRIP only. `core` stays in the data because the tier list,
+ * the draft's baseline and the data audit all read it by name. */
+export function dedupeCoreAgainstModel(suggested: BuildEntry[]): BuildEntry[] {
+  const arche = (e: BuildEntry) => (e.source === "suggested" ? e.archetype : undefined);
+  const names = (e: BuildEntry) => e.slot_order.map(slotItemName);
+  const model = suggested.find((e) => arche(e) === "model");
+  if (!model) return suggested;
+  const m = names(model);
+  const same = (e: BuildEntry) => {
+    const n = names(e);
+    return n.length === m.length && n.every((x, i) => x === m[i]);
+  };
+  return suggested.filter((e) => !(arche(e) === "core" && same(e)));
+}
+
 export function orderBuilds(suggested: BuildEntry[], community?: BuildEntry): BuildEntry[] {
   const rank = (e: BuildEntry) => {
     if (e.source === "community") return 2;

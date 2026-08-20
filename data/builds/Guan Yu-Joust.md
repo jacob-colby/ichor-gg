@@ -395,4 +395,75 @@ builds:
       pick: 0.0
       fit: 0.63
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Breastplate of Valor
+  - Kinetic Cuirass
+  - Amanita Charm
+  - Erosion
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - Shogun's Ofuda
+  - Breastplate of Valor
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Breastplate of Valor:
+      total: 0.48
+      efficiency: 0.64
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Amanita Charm:
+      total: 0.79
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
+    Erosion:
+      total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Pharaoh's Curse:
+      total: 0.59
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Shogun's Ofuda:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+  swaps:
+  - added: Breastplate of Valor
+    removed: Spectral Armor
+    reason: Conquest community 70% win over 112 matches (vs 58% on this god), taking
+      the model's weakest slot from Spectral Armor
+  borrowed_from: Conquest
+  starter: *id001
 ---

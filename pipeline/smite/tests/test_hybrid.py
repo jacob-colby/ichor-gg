@@ -159,3 +159,73 @@ def test_assembly_constraints_survive_the_swaps():
 
     got, _ = hybrid.hybrid_core(core, rows, entry, items, WEIGHTS)
     assert sum(1 for n in got if n.startswith("Boots")) <= 1
+
+
+# ---------------------------------------------------------------------------
+# Borrowed evidence (Joust / Arena have no community record of their own)
+# ---------------------------------------------------------------------------
+
+def _borrow_items():
+    return {n: {"name": n, "stats": {}} for n in ("A", "B", "C", "D", "E", "F", "Late", "Ward", "Fine")}
+
+
+def test_a_rejected_tag_is_never_swapped_in():
+    """Conquest's record is the best evidence about an item, but it is evidence
+    about a 30-minute game. `stacking` pays off too late for Arena's ~17.5
+    minutes and `ward-economy` answers a problem Arena does not have — so those
+    candidates are dropped however good their Conquest record is."""
+    rows = _rows(A=0.9, B=0.8, C=0.7, D=0.6, E=0.5, F=0.4,
+                 Late=0.1, Ward=0.1, Fine=0.1)
+    model = ["A", "B", "C", "D", "E", "F"]
+    community = _community(god_win_rate=0.50,
+                           Late=(0.70, 0.5), Ward=(0.70, 0.5), Fine=(0.70, 0.5))
+    core, swaps = hybrid.hybrid_core(
+        model, rows, community, _borrow_items(), WEIGHTS,
+        reject_tags=["stacking", "ward-economy"],
+        tags_map={"Late": ["stacking"], "Ward": ["ward-economy", "aura"]})
+    added = {s["added"] for s in swaps}
+    assert "Late" not in added and "Ward" not in added
+    assert "Fine" in added, "an untagged candidate with the same record must still fire"
+
+
+def test_no_reject_list_leaves_every_candidate_eligible():
+    """Conquest passes no reject list, so its own behaviour is unchanged."""
+    rows = _rows(A=0.9, B=0.8, C=0.7, D=0.6, E=0.5, F=0.4, Late=0.1)
+    model = ["A", "B", "C", "D", "E", "F"]
+    community = _community(god_win_rate=0.50, Late=(0.70, 0.5))
+    _core, swaps = hybrid.hybrid_core(model, rows, community, _borrow_items(), WEIGHTS,
+                                      tags_map={"Late": ["stacking"]})
+    assert {s["added"] for s in swaps} == {"Late"}
+
+
+def test_a_borrowed_swap_names_the_mode_the_record_came_from():
+    """A Joust build reading "community 63% win over 44 matches" without saying
+    whose community would present Conquest's record as if it were measured in
+    Joust. That is the one thing this project does not do with unmeasured
+    modes."""
+    rows = _rows(A=0.9, B=0.8, C=0.7, D=0.6, E=0.5, F=0.4, Fine=0.1)
+    model = ["A", "B", "C", "D", "E", "F"]
+    community = _community(god_win_rate=0.50, Fine=(0.70, 0.5))
+    _core, swaps = hybrid.hybrid_core(model, rows, community, _borrow_items(), WEIGHTS,
+                                      borrowed_from="Conquest")
+    assert swaps and swaps[0]["reason"].startswith("Conquest community ")
+    # ...and an unborrowed one still reads as it always did.
+    _c2, s2 = hybrid.hybrid_core(model, rows, community, _borrow_items(), WEIGHTS)
+    assert s2[0]["reason"].startswith("community ")
+
+
+def test_every_mode_that_borrows_names_a_source_that_has_data():
+    """`borrow_community.from` pointing at a mode with no community record of
+    its own would be a silent no-op."""
+    from smite import recommend, scoring
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    modes = weights.get("modes") or {}
+    borrowing = {m: cfg["borrow_community"] for m, cfg in modes.items()
+                 if (cfg or {}).get("borrow_community")}
+    assert borrowing, "expected at least one mode to borrow"
+    for mode, cfg in borrowing.items():
+        source = cfg.get("from")
+        assert source and source.lower() != mode, (mode, source)
+        note = recommend.load_build_note("Achilles", source)
+        assert any(b.get("source") == "community" for b in note.get("builds", [])), \
+            f"{mode} borrows from {source}, which has no community entry"
