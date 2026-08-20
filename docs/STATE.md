@@ -193,6 +193,17 @@ shipped **off**. Numbers are in the named module.
     nothing**, which is worth knowing before anyone tries the other half again.
     Numbers under `adaptive_fit` in `_weights.yaml`; ships off.
 
+    _Re-measured 2026-08-20, because the first sweep could not have varied._
+    The strength was applied by injecting the grant into `stats`, and with
+    `magnitude_fit` off `share` is 1.0 whatever the value — so every setting
+    from 0.15 to 1.0 ran the same code path and "no-op at every strength" had
+    measured one behaviour five times. The scale now applies to the stat's
+    WEIGHT (`scoring.god_fit_score`), and Omen Drum's fit for Ullr really does
+    move with it: 0.0258 at 0.15, 0.086 at 0.5, 0.1720 at 1.0. Coverage is
+    still **35.5% / 36.7% at every one of them** — identical to control. The
+    conclusion above was right; only its evidence was. The full-strength figure
+    it was written from is unchanged, so nothing else in this entry moves.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -365,7 +376,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (630) ·
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 630 pipeline · 655 viewer |
+| Tests | 634 pipeline · 655 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

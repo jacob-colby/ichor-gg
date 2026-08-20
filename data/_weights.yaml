@@ -122,6 +122,23 @@ price_passives: false
 # would move them is the half that reproduces 4.5's damage — -1.4pp on the
 # probe split, alone or paired. Fixing one half of a two-half problem buys
 # exactly nothing, and this is the measurement that says so.
+#
+# RE-MEASURED 2026-08-20, because the first sweep could not have varied. The
+# strength was applied by injecting the grant into `stats`, and with
+# `magnitude_fit` off `share` is 1.0 whatever the value — so every setting ran
+# the same code path and the sweep measured one behaviour five times. The scale
+# now applies to the stat's WEIGHT, and Omen Drum's fit for Ullr moves with it
+# (0.15 -> 0.0258, 0.5 -> 0.086, 1.0 -> 0.1720). Coverage, honestly swept:
+#
+#     adaptive_fit   probe 0.70:0.30   best 0.45:0.55
+#     0.00 (control)      35.5%             36.7%
+#     0.15                35.5%             36.7%
+#     0.30                35.5%             36.7%
+#     0.50                35.5%             36.7%
+#     0.75                35.5%             36.7%
+#     1.00                35.5%             36.7%
+#
+# Identical at every strength — the conclusion was right, its evidence was not.
 adaptive_fit: 0.0
 # Persistent stacks at their full-stack value — measured, and shipped OFF.
 # Strictly narrower than price_passives: only stacks that reach a cap and keep

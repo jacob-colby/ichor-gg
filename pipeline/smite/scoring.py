@@ -266,16 +266,38 @@ def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=No
     # higher, because that is what the grant literally is — one good, taken as
     # whichever suits the build. `adaptive_fit` scales how much of the stat's
     # weight it earns, so 0 is a true no-op and 1.0 treats it as the real thing.
-    if adaptive_grant and weights.get("adaptive_fit"):
+    #
+    # THE SCALE APPLIES TO THE WEIGHT, NOT THE INJECTED VALUE, and that is the
+    # whole reason this is written the long way. It first shipped as
+    # `stats = {**stats, power: adaptive_grant}` — but with `magnitude_fit` off
+    # (the default) `stat_reference` is None and `share` is 1.0 whatever the
+    # value is, so the magnitude went nowhere and every strength from 0.15 to
+    # 1.0 produced an IDENTICAL score. The register recorded the resulting
+    # sweep as "an exact no-op at every strength", which measured one behaviour
+    # five times.
+    strength = weights.get("adaptive_fit") or 0.0
+    adaptive_stat = None
+    if adaptive_grant and strength:
         power = max(("Strength", "Intelligence"),
                     key=lambda s: role_map.get(s, 0.0))
-        if role_map.get(power):
-            stats = {**stats, power: stats.get(power) or adaptive_grant}
+        # Only when the god wants that power and the sheet does not already
+        # carry it — the grant substitutes for a missing stat, never tops up
+        # one the item really has.
+        if role_map.get(power) and parse_stat_value(stats.get(power)) is None:
+            adaptive_stat = power
     denom = sum(role_map.values()) or 1.0
     stat_fit = 0.0
     for stat, w in role_map.items():
         value = parse_stat_value(stats.get(stat))
         if value is None:
+            if stat == adaptive_stat:
+                # Synthetic power: real, but not on the stat sheet. Earns a
+                # scaled share of the same weight a carried stat would.
+                share = 1.0
+                if stat_reference:
+                    ref = stat_reference.get(stat)
+                    share = min(adaptive_grant / ref, 1.0) if ref else 1.0
+                stat_fit += w * share * strength
             continue
         if stat_reference:
             # Fraction of a reference magnitude, so 5 Strength is not 80.

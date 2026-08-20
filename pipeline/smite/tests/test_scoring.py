@@ -1015,3 +1015,26 @@ def test_adaptive_fit_credits_the_power_stat_the_god_actually_wants():
     on = scoring.god_fit_score(item, _pow_god(), _w(adaptive_fit=1.0), [],
                                adaptive_grant=72.5)
     assert on > 0.0
+
+
+def test_adaptive_fit_strength_is_a_scale_not_a_switch():
+    """It first shipped injecting the grant into `stats`, which cannot scale:
+    with `magnitude_fit` off `stat_reference` is None and `share` is 1.0
+    whatever the value, so 0.15 and 1.0 produced identical scores. The register
+    recorded the resulting sweep as "an exact no-op at every strength", which
+    had measured one behaviour five times."""
+    item = {"name": "Omen", "cost": 2800, "stats": {"Echo": "30"}}
+    fit = lambda s: scoring.god_fit_score(
+        item, _pow_god(), _w(adaptive_fit=s), [], adaptive_grant=72.5)
+    weak, mid, full = fit(0.15), fit(0.5), fit(1.0)
+    assert 0.0 < weak < mid < full, (weak, mid, full)
+
+
+def test_adaptive_fit_does_not_top_up_a_stat_the_item_really_carries():
+    """The grant substitutes for a missing stat. An item that already lists the
+    power keeps its own value — crediting both would pay twice for one stat."""
+    carries = {"name": "Real", "cost": 2800, "stats": {"Strength": "40"}}
+    with_grant = scoring.god_fit_score(carries, _pow_god(), _w(adaptive_fit=1.0), [],
+                                       adaptive_grant=72.5)
+    without = scoring.god_fit_score(carries, _pow_god(), _w(adaptive_fit=1.0), [])
+    assert with_grant == without

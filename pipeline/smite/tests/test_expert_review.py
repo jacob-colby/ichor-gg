@@ -195,3 +195,28 @@ def test_the_shipped_register_parses_and_every_claim_kind_is_known():
         assert r.get("claim") in known, r.get("claim")
         assert r.get("quote"), "a claim without the reviewer's own words can drift"
         assert r.get("status") in ("open", "resolved", "rejected"), r.get("status")
+
+
+def test_an_unrecognised_baseline_raises_rather_than_disabling_the_check():
+    """Read through `.get(baseline, 0)` a typo landed on rank 0 — the same rank
+    as the worst real verdict — so nothing could sit below it and the claim's
+    check silently never fired again. `last_verdict: cleared` with a current
+    verdict of `holds` reported zero regressions where `clear` reported one.
+
+    That is the silent-typo hole `data_audit.KNOWN_TAGS` exists to close, in
+    the one gate here not made of the community's own data, inside the fix
+    written because that gate could rot without saying so. A gate that fails
+    OPEN on a spelling mistake is worse than the bug it replaced."""
+    import pytest
+    row = ({"status": "resolved", "claim": "x", "god": "Ullr",
+            "last_verdict": "cleared"}, "holds", None)
+    with pytest.raises(ValueError, match="not one of"):
+        expert_review.regressions([row])
+
+
+def test_every_known_verdict_is_accepted_as_a_baseline():
+    """The raise must not fire on a spelling the checker itself can emit."""
+    for verdict in expert_review.VERDICT_RANK:
+        row = ({"status": "resolved", "claim": "x", "last_verdict": verdict},
+               verdict, None)
+        assert expert_review.regressions([row]) == []

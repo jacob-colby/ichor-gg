@@ -174,7 +174,20 @@ def regressions(rows):
     check existed) without either lying about it or blocking every build.
 
     A claim with no `last_verdict` falls back to the old rule, so adding the
-    field is opt-in and an unannotated register keeps working."""
+    field is opt-in and an unannotated register keeps working.
+
+    AN UNRECOGNISED `last_verdict` RAISES rather than being tolerated. Read
+    through `.get(baseline, 0)` a typo landed on rank 0 — the same rank as the
+    worst real verdict — so nothing could sit below it and the check silently
+    never fired for that claim again. `last_verdict: cleared` plus a current
+    verdict of `holds` reported zero regressions; the correctly-spelled
+    `clear` reported one.
+
+    That is the same silent-typo hole `data_audit.KNOWN_TAGS` exists to close,
+    in the one gate here not made of the community's own data, inside the fix
+    written because that gate could rot without saying so. A gate that fails
+    OPEN on a spelling mistake is worse than the bug it replaced, because the
+    green tick is now evidence of nothing. Loud is the only safe direction."""
     out = []
     for r, verdict, _ in rows:
         if r.get("status") != "resolved" or verdict == "unchecked":
@@ -183,7 +196,14 @@ def regressions(rows):
         if baseline is None:
             if verdict == "holds":
                 out.append(r)
-        elif VERDICT_RANK.get(verdict, 0) < VERDICT_RANK.get(baseline, 0):
+            continue
+        if baseline not in VERDICT_RANK:
+            subject = " · ".join(x for x in (r.get("god"), r.get("mode")) if x) or "whole model"
+            raise ValueError(
+                f"{subject} — {r.get('claim')}: last_verdict {baseline!r} is not one of "
+                f"{sorted(VERDICT_RANK)}. Fix the spelling in _expert_reviews.yaml; "
+                "an unrecognised baseline would silently disable this claim's check.")
+        if VERDICT_RANK.get(verdict, 0) < VERDICT_RANK[baseline]:
             out.append(r)
     return out
 
