@@ -851,10 +851,40 @@ modes:
     # borrowed on the build itself.
     borrow_community:
       from: Conquest
-      # `stacking` pays off too late for a 15-30 minute game; `ward-economy`
-      # answers a Conquest-only problem and is already priced at -0.25 above.
-      # Both lists are judgements measured elsewhere, not new opinions.
-      reject_tags: [stacking, ward-economy]
+      # MEASURED, AND INERT TODAY — in both modes, and worth stating before
+      # anyone reads a rejection into a build that changed. Across all 89 gods,
+      # the number of borrowed candidates carrying a rejected tag that ALSO
+      # clear the confidence bar is ZERO: Joust screens 25 tagged candidates
+      # and Arena 30, and every one of them was already going to fail on
+      # evidence. Hybrid fires on 13 Joust and 14 Arena gods either way.
+      #
+      # Kept because it is a guard on the right thing, not because it is doing
+      # work now. The bar is a Wilson lower bound against the god's own win
+      # rate; loosen `hybrid.min_edge`, or let one stacker's Conquest record
+      # strengthen, and Arena would otherwise start borrowing a record for an
+      # item its players never finish building.
+      #
+      # The list is per mode, and it answers ONE question: does Conquest's
+      # record about this item still describe what the item does here? That is
+      # not the same question `tag_bonus` answers — that one prices an item,
+      # continuously, for a mode where the evidence DOES apply.
+      #
+      #   mobility / wave-clear   this mode's own note above: "there is nowhere
+      #                           for mobility or a second wave to matter". A
+      #                           Conquest win rate for a rotation item is a
+      #                           record of rotations Joust does not have.
+      #
+      # NOT rejected, deliberately:
+      #   ward-economy  Joust HAS wards -- see the tag_bonus note above, which
+      #                 says so in as many words. The mechanism is the same one
+      #                 Conquest measured, so the record transfers; it is
+      #                 priced at -0.25 for the same reason it is in Conquest,
+      #                 not because it is foreign here.
+      #   stacking      22.5 minutes is long enough to collect. `economy` and
+      #                 `assemble.time_value_multiplier` already discount a
+      #                 late item continuously, which is the right instrument
+      #                 for "slower" -- rejection is for "does not apply".
+      reject_tags: [mobility, wave-clear]
     # Joust is NOT a small Arena, and that is the whole finding. It has a Titan,
     # jungle camps and towers - structurally Conquest, paced faster. Its win
     # still happens at the END, so late items keep most of their value and the
@@ -887,11 +917,26 @@ modes:
       wave-clear: 0.1     # minion denial is the objective, not a lane chore
       ward-economy: -0.25 # no wards at all; excluded_items already drops these
       mobility: -0.1      # no camps or lanes to rotate between
-    # Same borrow as Joust, and the case for rejecting `stacking` is stronger:
-    # Arena's whole scoring window is ~17.5 minutes.
     borrow_community:
       from: Conquest
-      reject_tags: [stacking, ward-economy]
+      #   stacking   17.5 minutes is the whole scoring window. Conquest's
+      #              record for Transcendence or Book of Thoth is a record of a
+      #              FINISHED stack; what you get here is a part-built one, so
+      #              the number describes an item you will not own. This is the
+      #              mode where that stops being a discount and becomes a
+      #              different item -- Joust deliberately does not reject it.
+      #   mobility   "no camps or lanes to rotate between", per the tag_bonus
+      #              note above.
+      #
+      # NOT rejected, deliberately:
+      #   ward-economy  redundant here. `excluded_items` above is exactly the
+      #                 two ward items, and an excluded item never reaches the
+      #                 scored rows a candidate is drawn from. Listing it again
+      #                 would read as load-bearing when it is not.
+      #   wave-clear    Arena PRICES IT UP (+0.1): minion denial is the
+      #                 objective, not a lane chore. Rejecting evidence about
+      #                 the thing the mode is built around would be backwards.
+      reject_tags: [stacking, mobility]
     # Arena has no ward game, so the vision items are absent from its shop.
     # This is the list to correct first if a build recommends something the
     # shop does not have — it cannot be derived: "forward" and "toward" both
