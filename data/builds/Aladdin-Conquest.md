@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Genie's Lamp
-    pick_rate: 0.76
-    win_rate: 0.49
+    pick_rate: 0.77
+    win_rate: 0.5
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.09
-      win_rate: 0.62
+      win_rate: 0.61
     - name: Jotunn's Revenge
       pick_rate: 0.04
-      win_rate: 0.65
+      win_rate: 0.61
   - name: Spear of Desolation
     pick_rate: 0.4
-    win_rate: 0.54
+    win_rate: 0.55
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.2
-      win_rate: 0.51
+      pick_rate: 0.19
+      win_rate: 0.48
     - name: Book of Thoth
       pick_rate: 0.14
       win_rate: 0.5
   - name: Book of Thoth
-    pick_rate: 0.2
-    win_rate: 0.56
+    pick_rate: 0.21
+    win_rate: 0.58
     alternates:
     - name: Transcendence
       pick_rate: 0.13
-      win_rate: 0.56
+      win_rate: 0.52
     - name: Spear of Desolation
       pick_rate: 0.11
-      win_rate: 0.41
+      win_rate: 0.39
   - name: Polynomicon
     pick_rate: 0.24
-    win_rate: 0.49
+    win_rate: 0.51
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.18
-      win_rate: 0.53
+      pick_rate: 0.17
+      win_rate: 0.54
     - name: Heartseeker
       pick_rate: 0.07
-      win_rate: 0.59
+      win_rate: 0.57
   - name: Rod of Tahuti
     pick_rate: 0.32
-    win_rate: 0.52
+    win_rate: 0.54
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.16
-      win_rate: 0.57
+      win_rate: 0.59
     - name: Heartseeker
-      pick_rate: 0.13
-      win_rate: 0.48
+      pick_rate: 0.14
+      win_rate: 0.49
   - name: Obsidian Shard
     pick_rate: 0.19
     win_rate: 0.66
     alternates:
     - name: Void Shard
       pick_rate: 0.08
-      win_rate: 0.34
+      win_rate: 0.38
     - name: Titan's Bane
-      pick_rate: 0.06
+      pick_rate: 0.07
       win_rate: 0.57
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.45
-    win_rate: 0.57
+    pick_rate: 0.44
+    win_rate: 0.56
   - name: Conduit Gem
-    pick_rate: 0.22
-    win_rate: 0.46
+    pick_rate: 0.21
+    win_rate: 0.45
   - name: Bluestone Brooch
-    pick_rate: 0.1
-    win_rate: 0.64
+    pick_rate: 0.11
+    win_rate: 0.68
   source_url: https://smitebrain.com/gods/aladdin/
-  last_verified: '2026-08-20'
-  god_win_rate: 0.5236051502145923
-  god_matches_won: 244
-  god_matches_played: 466
+  last_verified: '2026-08-21'
+  god_win_rate: 0.5252918287937743
+  god_matches_won: 270
+  god_matches_played: 514
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-20'
-  god_matches_analyzed: 11556
+  god_window_end: '2026-08-21'
+  god_matches_analyzed: 12786
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -98,10 +98,10 @@ builds:
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
+  - Titan's Bane
   flex_slots:
   - Spear of Desolation
-  - Soul Gem
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -125,15 +125,15 @@ builds:
     Totem of Death, Triton''s Conch, Doom Orb, The World Stone.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.64
-      win: 0.51
-      pick: 0.27
+      win: 0.48
+      pick: 0.26
       fit: 0.9
     Spear of Desolation:
       total: 0.55
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.55
       fit: 0.62
     The Crusher:
@@ -143,9 +143,9 @@ builds:
       pick: 0.0
       fit: 0.79
     Rod of Tahuti:
-      total: 0.6
+      total: 0.61
       efficiency: 0.77
-      win: 0.52
+      win: 0.54
       pick: 0.69
       fit: 0.42
     Obsidian Shard:
@@ -154,27 +154,27 @@ builds:
       win: 0.66
       pick: 0.58
       fit: 0.52
-    Soul Gem:
+    Titan's Bane:
       total: 0.54
-      efficiency: 0.57
-      win: 0.52
-      pick: 0.0
-      fit: 0.72
+      efficiency: 0.45
+      win: 0.57
+      pick: 0.22
+      fit: 0.79
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Spear of Desolation
-  - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - The Crusher
-  - Hydra's Lament
+  - Book of Thoth
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -197,34 +197,34 @@ builds:
     of Asclepius, Lernaean Bow, Arondight, Oni Hunter''s Garb, Berserker''s Shield,
     Golden Blade, Jade Scepter.'
   slot_scores:
+    Book of Thoth:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.58
+      pick: 0.33
+      fit: 0.39
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.64
-      win: 0.51
-      pick: 0.27
+      win: 0.48
+      pick: 0.26
       fit: 0.71
+    Transcendence:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.52
+      pick: 0.2
+      fit: 0.39
     Hydra's Lament:
       total: 0.52
       efficiency: 0.56
       win: 0.52
       pick: 0.0
       fit: 0.63
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.55
-      fit: 0.61
-    The Crusher:
-      total: 0.54
-      efficiency: 0.64
-      win: 0.52
-      pick: 0.0
-      fit: 0.57
     Rod of Tahuti:
-      total: 0.62
+      total: 0.63
       efficiency: 0.77
-      win: 0.52
+      win: 0.54
       pick: 0.69
       fit: 0.57
     Obsidian Shard:
@@ -270,15 +270,15 @@ builds:
     Screeching Gargoyle.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.64
-      win: 0.51
-      pick: 0.27
+      win: 0.48
+      pick: 0.26
       fit: 0.78
     Spear of Desolation:
       total: 0.57
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.55
       fit: 0.78
     The Crusher:
@@ -288,9 +288,9 @@ builds:
       pick: 0.0
       fit: 0.66
     Rod of Tahuti:
-      total: 0.62
+      total: 0.63
       efficiency: 0.77
-      win: 0.52
+      win: 0.54
       pick: 0.69
       fit: 0.56
     Obsidian Shard:
@@ -309,15 +309,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - Kinetic Cuirass
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -342,12 +342,6 @@ builds:
     Avenging Blade, Bancroft''s Talon, The Cosmic Horror, Glorious Pridwen, Death
     Metal, Ancile.'
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.64
-      win: 0.51
-      pick: 0.27
-      fit: 0.45
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.59
@@ -360,10 +354,16 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.75
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
+    The Crusher:
+      total: 0.52
+      efficiency: 0.64
       win: 0.52
+      pick: 0.0
+      fit: 0.44
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.54
       pick: 0.69
       fit: 0.21
     Obsidian Shard:
@@ -414,10 +414,10 @@ builds:
     Kinetic Cuirass, Void Shield, Amanita Charm, Shield of the Phoenix.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.59
       efficiency: 0.64
-      win: 0.51
-      pick: 0.27
+      win: 0.48
+      pick: 0.26
       fit: 0.93
     Gluttonous Grimoire:
       total: 0.56
@@ -426,9 +426,9 @@ builds:
       pick: 0.0
       fit: 0.7
     Spear of Desolation:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.55
       fit: 0.74
     The Crusher:
@@ -438,9 +438,9 @@ builds:
       pick: 0.0
       fit: 0.89
     Rod of Tahuti:
-      total: 0.63
+      total: 0.64
       efficiency: 0.77
-      win: 0.52
+      win: 0.54
       pick: 0.69
       fit: 0.6
     Obsidian Shard:
@@ -454,13 +454,13 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Jotunn's Revenge
   - Nimble Ring
   - Riptalon
+  - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Jotunn's Revenge
+  - The Crusher
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -491,12 +491,6 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.61
-    Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.64
-      win: 0.51
-      pick: 0.27
-      fit: 0.39
     Nimble Ring:
       total: 0.54
       efficiency: 0.68
@@ -509,10 +503,16 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.7
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
+    The Crusher:
+      total: 0.52
+      efficiency: 0.64
       win: 0.52
+      pick: 0.0
+      fit: 0.4
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.77
+      win: 0.54
       pick: 0.69
       fit: 0.2
     Obsidian Shard:
@@ -564,21 +564,21 @@ builds:
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.64
-      win: 0.51
-      pick: 0.27
+      win: 0.48
+      pick: 0.26
       fit: 0.85
     Spear of Desolation:
-      total: 0.58
+      total: 0.59
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.55
       fit: 0.85
     Rod of Tahuti:
-      total: 0.59
+      total: 0.6
       efficiency: 0.77
-      win: 0.52
+      win: 0.54
       pick: 0.69
       fit: 0.35
     Obsidian Shard:
@@ -629,15 +629,15 @@ builds:
     of the Phoenix, Totem of Death, Triton''s Conch, Doom Orb, The World Stone.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.64
-      win: 0.51
-      pick: 0.27
+      win: 0.48
+      pick: 0.26
       fit: 0.9
     Transcendence:
-      total: 0.5
+      total: 0.48
       efficiency: 0.52
-      win: 0.56
+      win: 0.52
       pick: 0.2
       fit: 0.38
     Hydra's Lament:
@@ -653,9 +653,9 @@ builds:
       pick: 0.0
       fit: 0.79
     Rod of Tahuti:
-      total: 0.6
+      total: 0.61
       efficiency: 0.77
-      win: 0.52
+      win: 0.54
       pick: 0.69
       fit: 0.42
     Soul Gem:
@@ -701,10 +701,10 @@ builds:
     Orb, The World Stone.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.64
-      win: 0.51
-      pick: 0.27
+      win: 0.48
+      pick: 0.26
       fit: 0.9
     Hydra's Lament:
       total: 0.53
@@ -719,9 +719,9 @@ builds:
       pick: 0.0
       fit: 0.79
     Rod of Tahuti:
-      total: 0.6
+      total: 0.61
       efficiency: 0.77
-      win: 0.52
+      win: 0.54
       pick: 0.69
       fit: 0.42
     Obsidian Shard:
@@ -739,7 +739,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Transcendence
-    reason: community 66% win over 89 matches (vs 52% on this god), taking the model's
+    reason: community 66% win over 98 matches (vs 53% on this god), taking the model's
       weakest slot from Transcendence
   starter: *id001
 ---

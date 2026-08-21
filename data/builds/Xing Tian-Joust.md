@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Shifter's Shield
-    reason: Conquest community 70% win over 84 matches (vs 59% on this god), taking
+    reason: Conquest community 71% win over 78 matches (vs 58% on this god), taking
       the model's weakest slot from Shifter's Shield
   borrowed_from: Conquest
   starter: *id001

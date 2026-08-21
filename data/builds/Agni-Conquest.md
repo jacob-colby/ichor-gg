@@ -6,102 +6,102 @@ builds:
 - source: community
   aspect: Aspect of Combustion
   aspect_pick_rate: 0.04
-  aspect_win_rate: 0.48
+  aspect_win_rate: 0.47
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.36
     win_rate: 0.59
     alternates:
     - name: Chronos' Pendant
-      pick_rate: 0.31
+      pick_rate: 0.3
       win_rate: 0.57
     - name: Book of Thoth
-      pick_rate: 0.12
-      win_rate: 0.48
+      pick_rate: 0.13
+      win_rate: 0.51
   - name: The World Stone
-    pick_rate: 0.25
+    pick_rate: 0.26
     win_rate: 0.6
     alternates:
+    - name: Spear of Desolation
+      pick_rate: 0.13
+      win_rate: 0.62
     - name: Soul Reaver
       pick_rate: 0.13
-      win_rate: 0.58
-    - name: Spear of Desolation
-      pick_rate: 0.12
-      win_rate: 0.61
+      win_rate: 0.56
   - name: Soul Reaver
     pick_rate: 0.17
     win_rate: 0.59
     alternates:
+    - name: Soul Gem
+      pick_rate: 0.15
+      win_rate: 0.61
     - name: The World Stone
       pick_rate: 0.14
-      win_rate: 0.59
-    - name: Soul Gem
-      pick_rate: 0.14
-      win_rate: 0.61
+      win_rate: 0.58
   - name: Rod of Tahuti
-    pick_rate: 0.22
+    pick_rate: 0.23
     win_rate: 0.58
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.22
-      win_rate: 0.61
+      pick_rate: 0.21
+      win_rate: 0.6
     - name: Soul Reaver
       pick_rate: 0.08
       win_rate: 0.55
   - name: Obsidian Shard
-    pick_rate: 0.2
-    win_rate: 0.65
+    pick_rate: 0.22
+    win_rate: 0.66
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.14
-      win_rate: 0.71
+      win_rate: 0.7
     - name: Evil Eye
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.57
   - name: Evil Eye
     pick_rate: 0.12
     win_rate: 0.56
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.11
-      win_rate: 0.69
+      pick_rate: 0.12
+      win_rate: 0.72
     - name: Obsidian Shard
-      pick_rate: 0.07
-      win_rate: 0.58
+      pick_rate: 0.08
+      win_rate: 0.62
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.38
-    win_rate: 0.62
+    win_rate: 0.63
   - name: Bluestone Pendant
-    pick_rate: 0.25
+    pick_rate: 0.24
     win_rate: 0.42
   - name: Archmage's Gem
     pick_rate: 0.12
-    win_rate: 0.67
+    win_rate: 0.66
   source_url: https://smitebrain.com/gods/agni/
-  last_verified: '2026-08-20'
-  god_win_rate: 0.5568965517241379
-  god_matches_won: 646
-  god_matches_played: 1160
+  last_verified: '2026-08-21'
+  god_win_rate: 0.5604053000779423
+  god_matches_won: 719
+  god_matches_played: 1283
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-20'
-  god_matches_analyzed: 11556
+  god_window_end: '2026-08-21'
+  god_matches_analyzed: 12786
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: core
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - The Cosmic Horror
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
-  - The Cosmic Horror
   - Spear of the Magus
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,6 +122,12 @@ builds:
     of Valor, Bancroft''s Talon, Jade Scepter, Bracer of The Abyss, Alchemist Coat,
     Freya''s Tears, Polynomicon, Book of Thoth.'
   slot_scores:
+    Nimble Ring:
+      total: 0.57
+      efficiency: 0.68
+      win: 0.59
+      pick: 0.0
+      fit: 0.42
     Spear of Desolation:
       total: 0.62
       efficiency: 0.52
@@ -144,20 +150,14 @@ builds:
       total: 0.67
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.79
     Obsidian Shard:
-      total: 0.63
+      total: 0.64
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.89
-    Soul Gem:
-      total: 0.63
-      efficiency: 0.57
-      win: 0.61
-      pick: 0.22
-      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -209,25 +209,25 @@ builds:
       total: 0.53
       efficiency: 0.46
       win: 0.6
-      pick: 0.34
+      pick: 0.35
       fit: 0.57
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.57
     Obsidian Shard:
-      total: 0.58
+      total: 0.59
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.57
     Soul Gem:
       total: 0.59
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.71
   starter: *id001
 - source: suggested
@@ -284,19 +284,19 @@ builds:
       total: 0.63
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.56
     Obsidian Shard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.66
     Soul Gem:
       total: 0.62
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.88
   starter: *id001
 - source: suggested
@@ -348,13 +348,13 @@ builds:
       total: 0.61
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.39
     Obsidian Shard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.49
     Amanita Charm:
       total: 0.61
@@ -366,7 +366,7 @@ builds:
       total: 0.62
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.89
   starter: *id001
 - source: suggested
@@ -423,19 +423,19 @@ builds:
       total: 0.68
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.85
     Obsidian Shard:
-      total: 0.64
+      total: 0.65
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.95
     Soul Gem:
       total: 0.63
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 1.0
   starter: *id001
 - source: suggested
@@ -493,19 +493,19 @@ builds:
       total: 0.6
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.32
     Obsidian Shard:
       total: 0.56
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.42
     Soul Gem:
       total: 0.57
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.58
   starter: *id001
 - source: suggested
@@ -563,33 +563,33 @@ builds:
       total: 0.6
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.37
     Obsidian Shard:
       total: 0.57
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.47
     Soul Gem:
       total: 0.63
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.96
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
+  - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
-  - Transcendence
+  - Soul Gem
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -619,12 +619,12 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.65
-    Transcendence:
-      total: 0.5
+    Spear of Desolation:
+      total: 0.55
       efficiency: 0.52
       win: 0.59
-      pick: 0.0
-      fit: 0.32
+      pick: 0.36
+      fit: 0.55
     The Crusher:
       total: 0.58
       efficiency: 0.64
@@ -635,19 +635,19 @@ builds:
       total: 0.61
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.44
     Obsidian Shard:
       total: 0.58
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.54
     Soul Gem:
       total: 0.58
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.65
   starter: *id001
 - source: suggested
@@ -707,19 +707,19 @@ builds:
       total: 0.63
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.56
     Obsidian Shard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.66
     Soul Gem:
       total: 0.6
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.79
   starter: *id001
 - source: suggested
@@ -782,13 +782,13 @@ builds:
       total: 0.67
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.79
     Obsidian Shard:
-      total: 0.63
+      total: 0.64
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.89
   starter: *id001
 - source: suggested
@@ -851,13 +851,13 @@ builds:
       total: 0.65
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.68
     Obsidian Shard:
-      total: 0.61
+      total: 0.62
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.78
   starter: *id001
   aspect: Aspect of Combustion
@@ -909,25 +909,25 @@ builds:
       total: 0.53
       efficiency: 0.46
       win: 0.6
-      pick: 0.34
+      pick: 0.35
       fit: 0.53
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.53
     Obsidian Shard:
       total: 0.58
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.53
     Soul Gem:
       total: 0.58
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.67
   starter: *id001
   aspect: Aspect of Combustion
@@ -982,22 +982,22 @@ builds:
       pick: 0.0
       fit: 0.51
     Rod of Tahuti:
-      total: 0.62
+      total: 0.63
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.51
     Obsidian Shard:
       total: 0.59
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.61
     Soul Gem:
       total: 0.61
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.81
   starter: *id001
   aspect: Aspect of Combustion
@@ -1050,13 +1050,13 @@ builds:
       total: 0.6
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.36
     Obsidian Shard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.46
     Amanita Charm:
       total: 0.6
@@ -1068,7 +1068,7 @@ builds:
       total: 0.61
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.86
   starter: *id001
   aspect: Aspect of Combustion
@@ -1126,19 +1126,19 @@ builds:
       total: 0.66
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.77
     Obsidian Shard:
       total: 0.63
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.87
     Soul Gem:
       total: 0.63
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 1.0
   starter: *id001
   aspect: Aspect of Combustion
@@ -1197,19 +1197,19 @@ builds:
       total: 0.6
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.32
     Obsidian Shard:
       total: 0.56
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.42
     Soul Gem:
       total: 0.57
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.58
   starter: *id001
   aspect: Aspect of Combustion
@@ -1268,19 +1268,19 @@ builds:
       total: 0.6
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.34
     Obsidian Shard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.44
     Soul Gem:
       total: 0.62
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.88
   starter: *id001
   aspect: Aspect of Combustion
@@ -1288,14 +1288,14 @@ builds:
   archetype: strength
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
+  - Spear of Desolation
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
-  - Transcendence
+  - Soul Gem
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1325,12 +1325,12 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.65
-    Transcendence:
-      total: 0.5
+    Spear of Desolation:
+      total: 0.55
       efficiency: 0.52
       win: 0.59
-      pick: 0.0
-      fit: 0.32
+      pick: 0.36
+      fit: 0.55
     The Crusher:
       total: 0.58
       efficiency: 0.64
@@ -1341,19 +1341,19 @@ builds:
       total: 0.61
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.44
     Obsidian Shard:
       total: 0.58
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.54
     Soul Gem:
       total: 0.58
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.65
   starter: *id001
   aspect: Aspect of Combustion
@@ -1414,19 +1414,19 @@ builds:
       total: 0.62
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.51
     Obsidian Shard:
       total: 0.59
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.61
     Soul Gem:
       total: 0.59
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.73
   starter: *id001
   aspect: Aspect of Combustion
@@ -1485,19 +1485,19 @@ builds:
       total: 0.65
       efficiency: 0.77
       win: 0.58
-      pick: 0.37
+      pick: 0.38
       fit: 0.68
     Obsidian Shard:
-      total: 0.61
+      total: 0.62
       efficiency: 0.52
-      win: 0.65
-      pick: 0.43
+      win: 0.66
+      pick: 0.48
       fit: 0.78
     Soul Gem:
       total: 0.63
       efficiency: 0.57
       win: 0.61
-      pick: 0.22
+      pick: 0.23
       fit: 0.96
   starter: *id001
   aspect: Aspect of Combustion

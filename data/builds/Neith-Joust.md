@@ -787,7 +787,7 @@ builds:
   swaps:
   - added: The Executioner
     removed: The Crusher
-    reason: Conquest community 69% win over 48 matches (vs 53% on this god), taking
+    reason: Conquest community 70% win over 54 matches (vs 53% on this god), taking
       the model's weakest slot from The Crusher
   borrowed_from: Conquest
   starter: *id001

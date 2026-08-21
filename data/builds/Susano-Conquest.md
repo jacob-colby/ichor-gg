@@ -9,14 +9,14 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.34
+    pick_rate: 0.33
     win_rate: 0.57
     alternates:
     - name: Barbed Carver
-      pick_rate: 0.3
-      win_rate: 0.63
+      pick_rate: 0.31
+      win_rate: 0.64
     - name: Hydra's Lament
-      pick_rate: 0.24
+      pick_rate: 0.23
       win_rate: 0.57
   - name: Hydra's Lament
     pick_rate: 0.37
@@ -26,67 +26,67 @@ builds:
       pick_rate: 0.2
       win_rate: 0.56
     - name: The Reaper
-      pick_rate: 0.14
-      win_rate: 0.67
+      pick_rate: 0.13
+      win_rate: 0.66
   - name: The Reaper
-    pick_rate: 0.25
+    pick_rate: 0.26
     win_rate: 0.58
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.14
-      win_rate: 0.62
+      pick_rate: 0.13
+      win_rate: 0.63
     - name: Barbed Carver
       pick_rate: 0.11
       win_rate: 0.58
   - name: Heartseeker
-    pick_rate: 0.45
+    pick_rate: 0.43
     win_rate: 0.6
     alternates:
     - name: Blinking Abyss
-      pick_rate: 0.08
-      win_rate: 0.64
+      pick_rate: 0.09
+      win_rate: 0.66
     - name: Titan's Bane
       pick_rate: 0.08
-      win_rate: 0.55
+      win_rate: 0.53
   - name: Titan's Bane
-    pick_rate: 0.18
-    win_rate: 0.55
+    pick_rate: 0.17
+    win_rate: 0.58
     alternates:
     - name: Heartseeker
-      pick_rate: 0.16
-      win_rate: 0.62
+      pick_rate: 0.18
+      win_rate: 0.61
     - name: Blinking Abyss
       pick_rate: 0.11
-      win_rate: 0.65
+      win_rate: 0.63
   - name: Skeggox
     pick_rate: 0.09
     win_rate: 0.55
     alternates:
     - name: Magi's Cloak
-      pick_rate: 0.09
-      win_rate: 0.62
+      pick_rate: 0.08
+      win_rate: 0.65
     - name: Blinking Abyss
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.59
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.53
-    win_rate: 0.62
+    win_rate: 0.61
   - name: Bumba's Cudgel
     pick_rate: 0.27
-    win_rate: 0.54
+    win_rate: 0.55
   - name: Pendulum of the Ages
     pick_rate: 0.09
-    win_rate: 0.63
+    win_rate: 0.56
   source_url: https://smitebrain.com/gods/susano/
-  last_verified: '2026-08-20'
-  god_win_rate: 0.5855263157894737
-  god_matches_won: 534
-  god_matches_played: 912
+  last_verified: '2026-08-21'
+  god_win_rate: 0.5833333333333334
+  god_matches_won: 595
+  god_matches_played: 1020
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-20'
-  god_matches_analyzed: 11556
+  god_window_end: '2026-08-21'
+  god_matches_analyzed: 12786
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -126,7 +126,7 @@ builds:
       total: 0.65
       efficiency: 0.64
       win: 0.57
-      pick: 0.34
+      pick: 0.33
       fit: 1.0
     Transcendence:
       total: 0.53
@@ -144,7 +144,7 @@ builds:
       total: 0.6
       efficiency: 0.52
       win: 0.58
-      pick: 0.39
+      pick: 0.4
       fit: 0.91
     The Crusher:
       total: 0.64
@@ -156,7 +156,7 @@ builds:
       total: 0.6
       efficiency: 0.41
       win: 0.6
-      pick: 0.75
+      pick: 0.72
       fit: 1.0
   starter: &id001
     base: Bumba's Golden Dagger
@@ -203,7 +203,7 @@ builds:
       total: 0.6
       efficiency: 0.64
       win: 0.57
-      pick: 0.34
+      pick: 0.33
       fit: 0.71
     Transcendence:
       total: 0.51
@@ -227,7 +227,7 @@ builds:
       total: 0.57
       efficiency: 0.41
       win: 0.6
-      pick: 0.75
+      pick: 0.72
       fit: 0.77
   starter: *id001
 - source: suggested
@@ -266,7 +266,7 @@ builds:
       total: 0.61
       efficiency: 0.64
       win: 0.57
-      pick: 0.34
+      pick: 0.33
       fit: 0.78
     Transcendence:
       total: 0.48
@@ -284,7 +284,7 @@ builds:
       total: 0.55
       efficiency: 0.52
       win: 0.58
-      pick: 0.39
+      pick: 0.4
       fit: 0.56
     The Crusher:
       total: 0.59
@@ -293,10 +293,10 @@ builds:
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.57
+      total: 0.56
       efficiency: 0.41
       win: 0.6
-      pick: 0.75
+      pick: 0.72
       fit: 0.76
   starter: *id001
 - source: suggested
@@ -336,7 +336,7 @@ builds:
       total: 0.56
       efficiency: 0.64
       win: 0.57
-      pick: 0.34
+      pick: 0.33
       fit: 0.44
     Kinetic Cuirass:
       total: 0.57
@@ -405,7 +405,7 @@ builds:
       total: 0.65
       efficiency: 0.64
       win: 0.57
-      pick: 0.34
+      pick: 0.33
       fit: 1.0
     Hydra's Lament:
       total: 0.57
@@ -417,7 +417,7 @@ builds:
       total: 0.6
       efficiency: 0.52
       win: 0.58
-      pick: 0.39
+      pick: 0.4
       fit: 0.94
     The Crusher:
       total: 0.64
@@ -429,13 +429,13 @@ builds:
       total: 0.6
       efficiency: 0.41
       win: 0.6
-      pick: 0.75
+      pick: 0.72
       fit: 1.0
     Titan's Bane:
-      total: 0.57
+      total: 0.59
       efficiency: 0.45
-      win: 0.55
-      pick: 0.39
+      win: 0.58
+      pick: 0.37
       fit: 1.0
   starter: *id001
 - source: suggested
@@ -480,7 +480,7 @@ builds:
       total: 0.55
       efficiency: 0.64
       win: 0.57
-      pick: 0.34
+      pick: 0.33
       fit: 0.37
     Hydra's Lament:
       total: 0.55
@@ -556,7 +556,7 @@ builds:
       total: 0.62
       efficiency: 0.64
       win: 0.57
-      pick: 0.34
+      pick: 0.33
       fit: 0.85
     Hydra's Lament:
       total: 0.61
@@ -613,7 +613,7 @@ builds:
       total: 0.65
       efficiency: 0.64
       win: 0.57
-      pick: 0.34
+      pick: 0.33
       fit: 1.0
     Hydra's Lament:
       total: 0.61
@@ -625,7 +625,7 @@ builds:
       total: 0.6
       efficiency: 0.52
       win: 0.58
-      pick: 0.39
+      pick: 0.4
       fit: 0.91
     The Crusher:
       total: 0.64
@@ -637,13 +637,13 @@ builds:
       total: 0.6
       efficiency: 0.41
       win: 0.6
-      pick: 0.75
+      pick: 0.72
       fit: 1.0
     Titan's Bane:
-      total: 0.57
+      total: 0.59
       efficiency: 0.45
-      win: 0.55
-      pick: 0.39
+      win: 0.58
+      pick: 0.37
       fit: 1.0
   starter: *id001
 ---

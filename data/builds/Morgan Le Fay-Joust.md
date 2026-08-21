@@ -1382,7 +1382,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Void Stone
-    reason: Conquest community 66% win over 116 matches (vs 54% on this god), taking
+    reason: Conquest community 64% win over 129 matches (vs 54% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

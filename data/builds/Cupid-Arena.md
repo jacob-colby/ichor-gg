@@ -590,4 +590,79 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Riptalon
+  - Silverbranch Bow
+  - Rod of Tahuti
+  - Pharaoh's Curse
+  - Soul Gem
+  flex_slots:
+  - Pharaoh's Curse
+  - Silverbranch Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Riptalon:
+      total: 0.6
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Silverbranch Bow:
+      total: 0.43
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Rod of Tahuti:
+      total: 0.53
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Pharaoh's Curse:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Riptalon
+    removed: Jotunn's Revenge
+    reason: Conquest community 69% win over 108 matches (vs 60% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  - added: Silverbranch Bow
+    removed: Lernaean Bow
+    reason: Conquest community 69% win over 108 matches (vs 60% on this god), taking
+      the model's weakest slot from Lernaean Bow
+  borrowed_from: Conquest
+  starter: *id001
 ---

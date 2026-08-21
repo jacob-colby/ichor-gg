@@ -655,4 +655,75 @@ builds:
       pick: 0.0
       fit: 0.72
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Rod of Tahuti
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  - Triton's Conch
+  flex_slots:
+  - Spectral Armor
+  - Triton's Conch
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Rod of Tahuti:
+      total: 0.62
+      efficiency: 0.77
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Spectral Armor:
+      total: 0.58
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Amanita Charm:
+      total: 0.79
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
+    Erosion:
+      total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Stampede:
+      total: 0.58
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Triton's Conch:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+  swaps:
+  - added: Rod of Tahuti
+    removed: Void Shield
+    reason: Conquest community 69% win over 178 matches (vs 62% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

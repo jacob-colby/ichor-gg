@@ -655,4 +655,75 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Tyrfing
+  - Death Metal
+  - Riptalon
+  - Demon Blade
+  - Soul Gem
+  flex_slots:
+  - Toxic Blade
+  - Tyrfing
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Tyrfing:
+      total: 0.51
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Death Metal:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Riptalon:
+      total: 0.61
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Demon Blade:
+      total: 0.55
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Soul Gem:
+      total: 0.69
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+  swaps:
+  - added: Tyrfing
+    removed: Bragi's Harp
+    reason: Conquest community 57% win over 972 matches (vs 53% on this god), taking
+      the model's weakest slot from Bragi's Harp
+  borrowed_from: Conquest
+  starter: *id001
 ---

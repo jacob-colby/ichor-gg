@@ -399,14 +399,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Golden Blade
-  - Kinetic Cuirass
+  - Shell of Rebuke
   - Hide of the Nemean Lion
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Kinetic Cuirass
   - Hide of the Nemean Lion
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -429,12 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.59
+    Shell of Rebuke:
+      total: 0.23
+      efficiency: 0.26
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.2
     Hide of the Nemean Lion:
       total: 0.37
       efficiency: 0.5
@@ -460,13 +460,13 @@ builds:
       pick: 0.0
       fit: 0.74
   swaps:
-  - added: Kinetic Cuirass
-    removed: Spectral Armor
-    reason: Conquest community 58% win over 131 matches (vs 49% on this god), taking
-      the model's weakest slot from Spectral Armor
   - added: Hide of the Nemean Lion
+    removed: Spectral Armor
+    reason: Conquest community 60% win over 129 matches (vs 49% on this god), taking
+      the model's weakest slot from Spectral Armor
+  - added: Shell of Rebuke
     removed: Erosion
-    reason: Conquest community 58% win over 117 matches (vs 49% on this god), taking
+    reason: Conquest community 59% win over 112 matches (vs 49% on this god), taking
       the model's weakest slot from Erosion
   borrowed_from: Conquest
   starter: *id001

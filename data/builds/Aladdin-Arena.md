@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Hydra's Lament
-    reason: Conquest community 66% win over 89 matches (vs 52% on this god), taking
+    reason: Conquest community 66% win over 98 matches (vs 53% on this god), taking
       the model's weakest slot from Hydra's Lament
   borrowed_from: Conquest
   starter: *id001

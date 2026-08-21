@@ -13,80 +13,80 @@ builds:
     win_rate: 0.61
     alternates:
     - name: Gauntlet of Thebes
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.54
     - name: Yogi's Necklace
-      pick_rate: 0.09
-      win_rate: 0.67
+      pick_rate: 0.08
+      win_rate: 0.66
   - name: Genji's Guard
     pick_rate: 0.18
     win_rate: 0.64
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.14
-      win_rate: 0.58
+      win_rate: 0.57
     - name: Shifter's Shield
       pick_rate: 0.14
-      win_rate: 0.59
+      win_rate: 0.57
   - name: Breastplate of Valor
-    pick_rate: 0.13
+    pick_rate: 0.12
     win_rate: 0.59
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.2
-      win_rate: 0.62
+      pick_rate: 0.21
+      win_rate: 0.64
     - name: Freya's Tears
       pick_rate: 0.07
-      win_rate: 0.52
+      win_rate: 0.5
   - name: Shell of Rebuke
     pick_rate: 0.1
-    win_rate: 0.67
+    win_rate: 0.64
     alternates:
     - name: Genji's Guard
       pick_rate: 0.11
-      win_rate: 0.68
+      win_rate: 0.66
     - name: Freya's Tears
       pick_rate: 0.07
       win_rate: 0.56
   - name: Freya's Tears
     pick_rate: 0.07
-    win_rate: 0.78
+    win_rate: 0.76
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.64
-    - name: Spirit Robe
-      pick_rate: 0.04
-      win_rate: 0.57
+      win_rate: 0.63
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.05
+      win_rate: 0.48
   - name: Hide of the Nemean Lion
-    pick_rate: 0.07
-    win_rate: 0.7
+    pick_rate: 0.06
+    win_rate: 0.71
     alternates:
     - name: Sage's Ring
       pick_rate: 0.06
-      win_rate: 0.65
-    - name: Medal of Defense
+      win_rate: 0.66
+    - name: Engraved Guard
       pick_rate: 0.06
-      win_rate: 0.49
+      win_rate: 0.68
   community_starters:
   - name: Bluestone Pendant
     pick_rate: 0.4
-    win_rate: 0.53
+    win_rate: 0.52
   - name: Bluestone Brooch
     pick_rate: 0.37
-    win_rate: 0.66
+    win_rate: 0.65
   - name: Selflessness
     pick_rate: 0.06
     win_rate: 0.52
   source_url: https://smitebrain.com/gods/xing-tian/
-  last_verified: '2026-08-20'
-  god_win_rate: 0.5895522388059702
-  god_matches_won: 711
-  god_matches_played: 1206
+  last_verified: '2026-08-21'
+  god_win_rate: 0.5838461538461538
+  god_matches_won: 759
+  god_matches_played: 1300
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-20'
-  god_matches_analyzed: 11556
+  god_window_end: '2026-08-21'
+  god_matches_analyzed: 12786
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -100,8 +100,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Shifter's Shield
   - Erosion
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -132,13 +132,13 @@ builds:
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.59
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.81
     Freya's Tears:
-      total: 0.66
+      total: 0.65
       efficiency: 0.59
-      win: 0.78
+      win: 0.76
       pick: 0.15
       fit: 0.64
     Shifter's Shield:
@@ -148,15 +148,15 @@ builds:
       pick: 0.33
       fit: 0.71
     Amanita Charm:
-      total: 0.61
+      total: 0.62
       efficiency: 0.63
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.71
     Erosion:
       total: 0.58
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.71
   starter: &id001
@@ -168,29 +168,29 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Oni Hunter's Garb
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Genji's Guard
-  - Shifter's Shield
+  - Oni Hunter's Garb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
-  - vs_tag: physical_heavy
-    swap: Erosion — physical protection
+    swap: Erosion — magical protection
     swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Hide of the Nemean Lion — physical protection
+    swap_item: Hide of the Nemean Lion
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Soul Gem, Yogi''s
-    Necklace, Gluttonous Grimoire, Ethereal Staff, Rod of Tahuti, Chandra''s Grace,
-    Rod of Asclepius, Oni Hunter''s Garb, Erosion, Eye of Providence, Draconic Scale,
+    this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Soul Gem, Gluttonous
+    Grimoire, Ethereal Staff, Yogi''s Necklace, Rod of Tahuti, Chandra''s Grace, Rod
+    of Asclepius, Oni Hunter''s Garb, Erosion, Eye of Providence, Draconic Scale,
     Phoenix Feather, Spectral Armor, Leviathan''s Hide, Midgardian Mail, Lifebinder,
     Glorious Pridwen, Nimble Ring, Gladiator''s Shield, Ancile, Blood-Bound Book.'
   slot_scores:
@@ -201,33 +201,33 @@ builds:
       pick: 0.25
       fit: 0.36
     Kinetic Cuirass:
-      total: 0.61
+      total: 0.62
       efficiency: 0.59
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.8
     Shield of the Phoenix:
-      total: 0.62
+      total: 0.63
       efficiency: 0.57
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.92
+    Oni Hunter's Garb:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.65
+      pick: 0.0
+      fit: 0.48
     Freya's Tears:
-      total: 0.65
+      total: 0.64
       efficiency: 0.59
-      win: 0.78
+      win: 0.76
       pick: 0.15
       fit: 0.57
-    Shifter's Shield:
-      total: 0.58
-      efficiency: 0.52
-      win: 0.61
-      pick: 0.33
-      fit: 0.7
     Amanita Charm:
       total: 0.66
       efficiency: 0.63
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 1.0
   starter: *id001
@@ -267,7 +267,7 @@ builds:
     Stone of Binding:
       total: 0.57
       efficiency: 0.47
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.75
     Genji's Guard:
@@ -277,27 +277,27 @@ builds:
       pick: 0.25
       fit: 0.27
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.59
       efficiency: 0.59
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.59
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.59
-      win: 0.78
+      win: 0.76
       pick: 0.15
       fit: 0.44
     Gluttonous Grimoire:
       total: 0.61
       efficiency: 0.63
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.66
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.77
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.41
   starter: *id001
@@ -329,8 +329,8 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Nimble Ring, Rod of Tahuti, Kinetic Cuirass, Amanita Charm, Gluttonous
     Grimoire, Oni Hunter''s Garb, Soul Gem, Shield of the Phoenix, Spectral Armor,
-    Erosion, Yogi''s Necklace, Eye of Providence, Draconic Scale, Leviathan''s Hide,
-    Midgardian Mail, Helm of Radiance, Mantle Of Discord, Stone of Binding, Death
+    Erosion, Eye of Providence, Draconic Scale, Leviathan''s Hide, Midgardian Mail,
+    Yogi''s Necklace, Helm of Radiance, Mantle Of Discord, Stone of Binding, Death
     Metal, Screeching Gargoyle, Ethereal Staff, The Cosmic Horror, Bracer of The Abyss,
     Ancile, Rod of Asclepius.'
   slot_scores:
@@ -341,33 +341,33 @@ builds:
       pick: 0.25
       fit: 0.2
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.57
       efficiency: 0.59
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.46
     Bracer of The Abyss:
-      total: 0.5
+      total: 0.51
       efficiency: 0.51
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.24
     Nimble Ring:
-      total: 0.57
+      total: 0.58
       efficiency: 0.68
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.42
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.44
     Freya's Tears:
-      total: 0.61
+      total: 0.6
       efficiency: 0.59
-      win: 0.78
+      win: 0.76
       pick: 0.15
       fit: 0.33
   starter: *id001
@@ -407,7 +407,7 @@ builds:
     Screeching Gargoyle:
       total: 0.55
       efficiency: 0.49
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.58
     Genji's Guard:
@@ -420,24 +420,24 @@ builds:
       total: 0.57
       efficiency: 0.64
       win: 0.59
-      pick: 0.2
+      pick: 0.19
       fit: 0.48
     Kinetic Cuirass:
       total: 0.58
       efficiency: 0.59
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.55
     Shield of the Phoenix:
       total: 0.58
       efficiency: 0.57
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.61
     Freya's Tears:
-      total: 0.66
+      total: 0.65
       efficiency: 0.59
-      win: 0.78
+      win: 0.76
       pick: 0.15
       fit: 0.64
   starter: *id001
@@ -451,8 +451,8 @@ builds:
   - Gluttonous Grimoire
   - The Crusher
   flex_slots:
-  - Kinetic Cuirass
   - Gluttonous Grimoire
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -485,31 +485,31 @@ builds:
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.64
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.58
       efficiency: 0.59
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.51
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
-      win: 0.78
+      win: 0.76
       pick: 0.15
       fit: 0.37
     Gluttonous Grimoire:
-      total: 0.57
+      total: 0.58
       efficiency: 0.63
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.42
     The Crusher:
-      total: 0.58
+      total: 0.59
       efficiency: 0.64
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.47
   starter: *id001
@@ -523,7 +523,7 @@ builds:
   - Gluttonous Grimoire
   - The Crusher
   flex_slots:
-  - Kinetic Cuirass
+  - Genji's Guard
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -556,33 +556,33 @@ builds:
       pick: 0.25
       fit: 0.23
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.64
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.41
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.58
       efficiency: 0.59
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.52
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.59
-      win: 0.78
+      win: 0.76
       pick: 0.15
       fit: 0.38
     Gluttonous Grimoire:
       total: 0.59
       efficiency: 0.63
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.55
     The Crusher:
       total: 0.58
       efficiency: 0.64
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.43
   starter: *id001
@@ -628,13 +628,13 @@ builds:
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.59
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.81
     Freya's Tears:
-      total: 0.66
+      total: 0.65
       efficiency: 0.59
-      win: 0.78
+      win: 0.76
       pick: 0.15
       fit: 0.64
     Shifter's Shield:
@@ -644,15 +644,15 @@ builds:
       pick: 0.33
       fit: 0.71
     Amanita Charm:
-      total: 0.61
+      total: 0.62
       efficiency: 0.63
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.71
     Erosion:
       total: 0.58
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.71
   starter: *id001
@@ -698,37 +698,37 @@ builds:
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.59
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.81
     Hide of the Nemean Lion:
       total: 0.57
       efficiency: 0.5
-      win: 0.7
-      pick: 0.22
+      win: 0.71
+      pick: 0.18
       fit: 0.46
     Freya's Tears:
-      total: 0.66
+      total: 0.65
       efficiency: 0.59
-      win: 0.78
+      win: 0.76
       pick: 0.15
       fit: 0.64
     Amanita Charm:
-      total: 0.61
+      total: 0.62
       efficiency: 0.63
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.71
     Erosion:
       total: 0.58
       efficiency: 0.52
-      win: 0.64
+      win: 0.65
       pick: 0.0
       fit: 0.71
   swaps:
   - added: Hide of the Nemean Lion
     removed: Shifter's Shield
-    reason: community 70% win over 84 matches (vs 59% on this god), taking the model's
+    reason: community 71% win over 78 matches (vs 58% on this god), taking the model's
       weakest slot from Shifter's Shield
   starter: *id001
 ---

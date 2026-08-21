@@ -655,4 +655,75 @@ builds:
       pick: 0.0
       fit: 0.9
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Golden Blade
+  - Lernaean Bow
+  - Tyrfing
+  - Riptalon
+  - Pharaoh's Curse
+  - Soul Gem
+  flex_slots:
+  - Golden Blade
+  - Tyrfing
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Lernaean Bow:
+      total: 0.58
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Tyrfing:
+      total: 0.51
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Riptalon:
+      total: 0.61
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Soul Gem:
+      total: 0.74
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+  swaps:
+  - added: Tyrfing
+    removed: Shogun's Ofuda
+    reason: Conquest community 57% win over 972 matches (vs 53% on this god), taking
+      the model's weakest slot from Shogun's Ofuda
+  borrowed_from: Conquest
+  starter: *id001
 ---

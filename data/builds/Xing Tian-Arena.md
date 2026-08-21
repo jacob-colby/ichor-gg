@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Freya's Tears
     removed: Void Shield
-    reason: Conquest community 78% win over 84 matches (vs 59% on this god), taking
+    reason: Conquest community 76% win over 91 matches (vs 58% on this god), taking
       the model's weakest slot from Void Shield
   - added: Hide of the Nemean Lion
     removed: Spectral Armor
-    reason: Conquest community 70% win over 84 matches (vs 59% on this god), taking
+    reason: Conquest community 71% win over 78 matches (vs 58% on this god), taking
       the model's weakest slot from Spectral Armor
   borrowed_from: Conquest
   starter: *id001

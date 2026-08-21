@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
+  - The Executioner
   - Toxic Blade
   - Jotunn's Revenge
-  - Bragi's Harp
   - Silverbranch Bow
   - The Crusher
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Silverbranch Bow
+  - The Executioner
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,6 +488,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    The Executioner:
+      total: 0.24
+      efficiency: 0.13
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Toxic Blade:
       total: 0.59
       efficiency: 0.43
@@ -500,12 +506,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Bragi's Harp:
-      total: 0.54
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Silverbranch Bow:
       total: 0.48
       efficiency: 0.52
@@ -527,8 +527,12 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Death Metal
-    reason: Conquest community 73% win over 54 matches (vs 53% on this god), taking
+    reason: Conquest community 71% win over 54 matches (vs 52% on this god), taking
       the model's weakest slot from Death Metal
+  - added: The Executioner
+    removed: Bragi's Harp
+    reason: Conquest community 66% win over 62 matches (vs 52% on this god), taking
+      the model's weakest slot from Bragi's Harp
   borrowed_from: Conquest
   starter: *id001
 ---

@@ -787,7 +787,7 @@ builds:
   swaps:
   - added: The World Stone
     removed: Demon Blade
-    reason: Conquest community 75% win over 41 matches (vs 55% on this god), taking
+    reason: Conquest community 73% win over 43 matches (vs 55% on this god), taking
       the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001

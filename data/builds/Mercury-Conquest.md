@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Rage
-    pick_rate: 0.59
+    pick_rate: 0.6
     win_rate: 0.51
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.07
-      win_rate: 0.42
+      win_rate: 0.36
     - name: Tekko-Kagi
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.67
   - name: Dagger of Frenzy
-    pick_rate: 0.26
-    win_rate: 0.57
+    pick_rate: 0.24
+    win_rate: 0.56
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.15
-      win_rate: 0.52
+      pick_rate: 0.14
+      win_rate: 0.5
     - name: Rage
-      pick_rate: 0.13
-      win_rate: 0.52
+      pick_rate: 0.14
+      win_rate: 0.48
   - name: Deathbringer
-    pick_rate: 0.34
+    pick_rate: 0.33
     win_rate: 0.5
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.17
       win_rate: 0.63
     - name: Musashi's Dual Swords
-      pick_rate: 0.14
-      win_rate: 0.6
+      pick_rate: 0.16
+      win_rate: 0.55
   - name: Silverbranch Bow
     pick_rate: 0.13
-    win_rate: 0.68
+    win_rate: 0.64
     alternates:
     - name: Deathbringer
-      pick_rate: 0.23
-      win_rate: 0.53
+      pick_rate: 0.24
+      win_rate: 0.5
     - name: Musashi's Dual Swords
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.41
   - name: Titan's Bane
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.29
     alternates:
     - name: Deathbringer
       pick_rate: 0.13
-      win_rate: 0.67
+      win_rate: 0.64
     - name: Dominance
-      pick_rate: 0.08
-      win_rate: 0.46
-  - name: Riptalon
+      pick_rate: 0.09
+      win_rate: 0.56
+  - name: Infused Axe
     pick_rate: 0.07
-    win_rate: 0.38
+    win_rate: 0.22
     alternates:
     - name: Titan's Bane
       pick_rate: 0.11
-      win_rate: 0.69
-    - name: Magi's Cloak
+      win_rate: 0.64
+    - name: Riptalon
       pick_rate: 0.07
-      win_rate: 0.5
+      win_rate: 0.44
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.28
-    win_rate: 0.76
+    pick_rate: 0.29
+    win_rate: 0.71
   - name: Hunter's Cowl
-    pick_rate: 0.24
-    win_rate: 0.55
+    pick_rate: 0.23
+    win_rate: 0.53
   - name: Bumba's Spear
-    pick_rate: 0.19
+    pick_rate: 0.18
     win_rate: 0.61
   source_url: https://smitebrain.com/gods/mercury/
-  last_verified: '2026-08-20'
-  god_win_rate: 0.5480225988700564
-  god_matches_won: 97
-  god_matches_played: 177
+  last_verified: '2026-08-21'
+  god_win_rate: 0.5408163265306123
+  god_matches_won: 106
+  god_matches_played: 196
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-20'
-  god_matches_analyzed: 11556
+  god_window_end: '2026-08-21'
+  god_matches_analyzed: 12786
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -135,22 +135,22 @@ builds:
       pick: 0.0
       fit: 0.38
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
-      win: 0.52
-      pick: 0.2
+      win: 0.5
+      pick: 0.19
       fit: 0.66
     Silverbranch Bow:
-      total: 0.55
+      total: 0.54
       efficiency: 0.52
-      win: 0.68
+      win: 0.64
       pick: 0.22
       fit: 0.37
     Tekko-Kagi:
       total: 0.57
       efficiency: 0.44
       win: 0.67
-      pick: 0.07
+      pick: 0.06
       fit: 0.75
     The Crusher:
       total: 0.57
@@ -171,7 +171,7 @@ builds:
   - Tekko-Kagi
   - The Crusher
   flex_slots:
-  - Hydra's Lament
+  - Silverbranch Bow
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -206,22 +206,22 @@ builds:
       pick: 0.0
       fit: 0.66
     Hydra's Lament:
-      total: 0.53
+      total: 0.52
       efficiency: 0.56
-      win: 0.52
-      pick: 0.2
+      win: 0.5
+      pick: 0.19
       fit: 0.59
     Silverbranch Bow:
-      total: 0.53
+      total: 0.51
       efficiency: 0.52
-      win: 0.68
+      win: 0.64
       pick: 0.22
       fit: 0.21
     Tekko-Kagi:
       total: 0.53
       efficiency: 0.44
       win: 0.67
-      pick: 0.07
+      pick: 0.06
       fit: 0.47
     The Crusher:
       total: 0.53
@@ -275,22 +275,22 @@ builds:
       pick: 0.0
       fit: 0.2
     Hydra's Lament:
-      total: 0.52
+      total: 0.51
       efficiency: 0.56
-      win: 0.52
-      pick: 0.2
+      win: 0.5
+      pick: 0.19
       fit: 0.51
     Silverbranch Bow:
-      total: 0.55
+      total: 0.53
       efficiency: 0.52
-      win: 0.68
+      win: 0.64
       pick: 0.22
       fit: 0.35
     Tekko-Kagi:
       total: 0.54
       efficiency: 0.44
       win: 0.67
-      pick: 0.07
+      pick: 0.06
       fit: 0.55
     The Crusher:
       total: 0.54
@@ -302,14 +302,14 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Silverbranch Bow
   - Tekko-Kagi
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - The Crusher
+  - Jotunn's Revenge
   - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
@@ -332,6 +332,12 @@ builds:
     Splitter, Spectral Armor, Eye of Providence, Golden Blade, Pharaoh''s Curse, Draconic
     Scale, Leviathan''s Hide, Avenging Blade, Midgardian Mail, Damaru.'
   slot_scores:
+    Jotunn's Revenge:
+      total: 0.52
+      efficiency: 0.64
+      win: 0.51
+      pick: 0.0
+      fit: 0.44
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.59
@@ -344,17 +350,11 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.73
-    Silverbranch Bow:
-      total: 0.53
-      efficiency: 0.52
-      win: 0.68
-      pick: 0.22
-      fit: 0.19
     Tekko-Kagi:
       total: 0.52
       efficiency: 0.44
       win: 0.67
-      pick: 0.07
+      pick: 0.06
       fit: 0.39
     The Crusher:
       total: 0.52
@@ -395,7 +395,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, Tekko-Kagi, The Crusher, The Reaper, Heartseeker,
+    for this god: Jotunn''s Revenge, The Crusher, Tekko-Kagi, The Reaper, Heartseeker,
     Pendulum Blade, Avenging Blade, Genji''s Guard, Screeching Gargoyle, Runeforged
     Hammer, Damaru, Avatar''s Parashu, Breastplate of Valor, Lernaean Bow, Berserker''s
     Shield, Toxic Blade, Golden Blade, Stone of Binding, Arondight, Tyrfing, Freya''s
@@ -414,16 +414,16 @@ builds:
       pick: 0.0
       fit: 0.77
     Silverbranch Bow:
-      total: 0.58
+      total: 0.56
       efficiency: 0.52
-      win: 0.68
+      win: 0.64
       pick: 0.22
       fit: 0.56
     Tekko-Kagi:
       total: 0.58
       efficiency: 0.44
       win: 0.67
-      pick: 0.07
+      pick: 0.06
       fit: 0.82
     The Crusher:
       total: 0.58
@@ -442,14 +442,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Dominance
   - Silverbranch Bow
   - Tekko-Kagi
   - The Crusher
   flex_slots:
   - Golden Blade
-  - Berserker's Shield
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -458,8 +458,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -476,29 +476,29 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.62
-    Berserker's Shield:
-      total: 0.5
-      efficiency: 0.66
-      win: 0.51
-      pick: 0.0
-      fit: 0.28
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.64
       win: 0.51
       pick: 0.0
       fit: 0.4
+    Dominance:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.56
+      pick: 0.19
+      fit: 0.53
     Silverbranch Bow:
-      total: 0.59
+      total: 0.57
       efficiency: 0.52
-      win: 0.68
+      win: 0.64
       pick: 0.22
       fit: 0.62
     Tekko-Kagi:
       total: 0.55
       efficiency: 0.44
       win: 0.67
-      pick: 0.07
+      pick: 0.06
       fit: 0.58
     The Crusher:
       total: 0.51
@@ -517,7 +517,7 @@ builds:
   - Silverbranch Bow
   - The Crusher
   flex_slots:
-  - Breastplate of Valor
+  - Silverbranch Bow
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -559,15 +559,15 @@ builds:
       pick: 0.0
       fit: 0.77
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
-      win: 0.52
-      pick: 0.2
+      win: 0.5
+      pick: 0.19
       fit: 0.69
     Silverbranch Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.52
-      win: 0.68
+      win: 0.64
       pick: 0.22
       fit: 0.23
     The Crusher:
@@ -622,10 +622,10 @@ builds:
       pick: 0.0
       fit: 0.38
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
-      win: 0.52
-      pick: 0.2
+      win: 0.5
+      pick: 0.19
       fit: 0.66
     The Reaper:
       total: 0.51
