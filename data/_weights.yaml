@@ -140,6 +140,79 @@ price_passives: false
 #
 # Identical at every strength — the conclusion was right, its evidence was not.
 adaptive_fit: 0.0
+# The EFFICIENCY half of the same problem, carved out of `price_passives` the
+# way `price_crit_multipliers` and `price_conversions` were - measured
+# 2026-08-21, and the third pricing experiment here to ship ON.
+#
+# `price_passives` prices all 49 unconditional grants and is a ragbag; this
+# prices the eight buildable Adaptive Stat items alone, and they are the least
+# ambiguous members of that class. The grant is not an effect whose uptime
+# someone has to judge - it is a stat, granted unconditionally, written in
+# prose instead of in `stats`. All eight read `premium` with the flag off,
+# four of them off a one-entry stats dict, so the model prices a 2500g item
+# off a single stat and then reports a ~1000g overcharge.
+#
+# BOTH BRANCHES BEAT THE CONTROL ON BOTH SPLITS. Control re-measured on this
+# data first, because the committed `_calibration.md` goes stale on every
+# refresh; the random-core baseline is unmoved at 5.74%, which is how we know
+# it had not.
+#
+#     variant                       probe 0.70:0.30   best 0.45:0.55
+#     control, flag off                   37.7%            38.4%
+#     price_adaptive, Strength            38.7%            39.6%   <- shipped
+#     price_adaptive, Intelligence        38.1%            38.9%
+#
+# Strength is better on both, and it was also the a-priori choice; see
+# `passives.adaptive_grants` for why the branch is chosen from the item text
+# rather than from the fitted prices. Paired per-god bootstrap of the shipped
+# arm against control: +1.01pp [-1.61, +3.78] on the probe split, better on 18
+# gods and worse on 15; +1.20pp [-0.94, +3.30] on the best split, better on 15
+# and worse on 9. BOTH INTERVALS CONTAIN ZERO. This clears the bar the other
+# two pricing flags were held to - positive on both splits - and it is not a
+# significant result at 89 gods. Do not quote +1.2pp as one.
+#
+# CORE CHURN, at the shipped arm against control: 83 of 89 Conquest cores
+# change at the probe split (127 item swaps of 534 slots) and 58 of 89 at the
+# best split (68 swaps). This is a large change for a one-percentage-point
+# gain, and the reason is the next paragraph.
+#
+# IT IS NOT THE EIGHT ITEMS, AND THAT IS THE REAL FINDING. None of the eight
+# enters a model core - not before, not after, on either split - so no part of
+# the gain is those items becoming pickable. What moves is the WHOLE FIT. The
+# 29 items carrying this clause were sitting in the regression with ~1000g of
+# cost apiece that no column explained, and NNLS was parking it in the
+# intercept:
+#
+#     fit                     n    intercept   Strength   Intelligence   sd(resid)
+#     flag off              191         1111      18.56          12.70         468
+#     priced as Strength    191          934      21.81          14.77         423
+#     priced as Intelligence 191         932      22.83          14.27         423
+#     items dropped from fit 174         898      22.95          14.98         427
+#
+# An inflated intercept under-prices every real stat for every item in the
+# game, so correcting it reprices Strength +17% and Intelligence +16% pool-wide
+# - which is what re-cores 83 gods.
+#
+# THE DIAGNOSTIC CONTROL IS IN THAT TABLE'S LAST ROW and it is the reason this
+# entry does not claim more than it should. Simply DELETING the 29 items from
+# the fit lands on almost the same coefficients and scores probe 39.6% / best
+# 38.9% - better than pricing on the probe corner, worse on the split
+# `calibrate` calls the leakage-free optimum. So most of the gain is "get the
+# unexplained cost out of the intercept", and pricing is one of two ways to do
+# that. Pricing is preferred on two counts: it wins on the optimum split, and
+# it keeps the 29 items SCORED. Dropping them would ship 8 buildable tier-3
+# items with no residual at all, which for a statless item is the true
+# statement (see `efficiency.efficiency_pool`) and for these is not - they have
+# stats, they have a price, and the only thing missing was that we were not
+# reading their power.
+price_adaptive: true
+
+# Which side of `+X Strength or +Y Intelligence` the clause is priced as.
+# `strength` or `intelligence`. Strength both measured better (above) and is
+# the conservative branch on 6 of the 8 items at the fitted prices; the
+# per-item gold table and the full argument are in `passives.adaptive_grants`.
+# Read only when `price_adaptive` is on.
+adaptive_branch: strength
 # Persistent stacks at their full-stack value — measured, and shipped OFF.
 # Strictly narrower than price_passives: only stacks that reach a cap and keep
 # it, never a transient one. Four items qualify (Book of Thoth +500 Max Mana,

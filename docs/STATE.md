@@ -43,9 +43,8 @@ cd pipeline && python -m smite.calibrate     # prints the probe, the baseline, a
 cd pipeline && python -m smite.calibrate --control   # the same control, ~7s
 ```
 
-Chance is ~5.7%. Shipped is ~37.7% at the probe split and ~38.4% at eff
-0.45, i.e. **~6.6× chance**. That is the number to
-quote and the number to move.
+Chance is ~5.7%. Shipped is ~38.7% at the probe split and ~39.6% at eff
+0.45, i.e. **~6.8× chance**.
 
 **Do not quote those figures — re-measure them.** They move with the data, not
 just with the model, which is what `--control` exists for: the baseline, the
@@ -56,6 +55,18 @@ same dataset" that a moving baseline was only ever a proxy for. Evidence and
 the choice of splits are in `calibrate.py`'s docstring. Headline coverage moving the other way is
 expected and is not by itself a reason to revert — that judgement is what
 `efficiency.efficiency_pool` and `scoring.lookup_rates` both record.
+
+**The printed baseline wobbles ±0.15pp and it is not a data refresh.** The
+usual tell that the committed `_calibration.md` has gone stale is the
+random-core baseline moving, because chance cannot depend on a model flag —
+and in expectation it does not. But `random_core_baseline` is a 200-draw Monte
+Carlo over `score_god_items`, which returns its rows **sorted by score**, so a
+model change reshuffles which items a fixed seed samples. Measured across
+`price_adaptive` off/Strength/Intelligence (2026-08-21): the printed baseline
+read 5.73% / 5.59% / 5.65% while the *exact* value — mean over gods of
+`min(6, pool)/pool`, which is what the sampler estimates — was **5.7391% in all
+three**, off a byte-identical pool. Compute that closed form before concluding
+the data moved.
 
 **Implemented in:** `pipeline/smite/calibrate.py` (leakage probe,
 `random_core_baseline`, `model_signal_sweep`, bootstrap CIs).
@@ -98,6 +109,8 @@ Each of these has its evidence in the named module.
 | Draft blocks duplicates per **team**, not per board | `useDraftResult.takenFor` | Only ranked Conquest drafts globally-unique picks; Joust and Arena are not draft modes |
 | A draft bonus is damped when the core already covers that **tag** | `draftBuild.adaptedCore` | Same judgement `ally_covered` makes about a teammate; tags only, because a stat is a quantity not a job |
 | Stat conversions are priced against a **typical** build | `passives.conversion_grants` | One pass, no fixed point; prices the deterministic case right and the self-referential one conservatively |
+| An **Adaptive Stat** grant is priced, as **Strength** | `passives.adaptive_grants` | Eight buildable items carry their whole power in passive text and all eight read `premium`; the branch is chosen from the item's own text so there is no fixed point, and it is the conservative one on 6 of the 8 |
+| That flag's gain is a **pool-wide** reprice, not those eight items | `passives.adaptive_grants` | None of the eight reaches a core either way. 29 items were parking ~1000g each in the intercept, which under-priced every stat for every item: 1111 -> 934, Strength +17% |
 | A conversion is priced only into a stat the item **already sells** | `passives.conversion_grants` | Nimble Ring turns Intelligence into a basic-attack channel the god-agnostic fit cannot judge; priced in full it hit 52 cores against 3 community builds |
 | Arena and Joust discount **late** items; Conquest does not | `assemble.time_value_multiplier` | Arena's 500 tickets accrue from 0:00 so value is uniform; both Titan modes are back-loaded. Not about affording items — income scales with match length |
 | Community pick is **conditional on reaching the slot** | `scoring.SLOT_REACH` | Slot mass decays 0.684 → 0.222 from slot 1 to 6; an item bought sixth was divided by matches that never bought a sixth item |
@@ -250,6 +263,16 @@ shipped **off**. Numbers are in the named module.
     conclusion above was right; only its evidence was. The full-strength figure
     it was written from is unchanged, so nothing else in this entry moves.
 
+    _The other half was carved out and shipped ON, 2026-08-21._
+    `price_adaptive` is the efficiency half taken alone rather than as part of
+    `price_passives`, and it beats control on both leakage-free splits (37.7%
+    -> 38.7%, 38.4% -> 39.6%); see §3 and `price_adaptive` in `_weights.yaml`.
+    **It does not rescue this entry.** The finding there is that the gain has
+    nothing to do with the eight items — they still reach zero model cores with
+    the flag on. "Fixing one half of a two-half problem buys nothing" stands;
+    what changed is that the efficiency half turned out to be fixing a
+    different problem, in the intercept, for the whole pool.
+
 11. **Multi-stat items as an efficiency bias (2026-08-21)** — the one entry
     here that was never implemented, because the diagnosis said there was
     nothing to fix. The symptom is real: across the 89 Conquest cores, items
@@ -292,6 +315,13 @@ shipped **off**. Numbers are in the named module.
     of the seven 1-stat tier-3 items carry Adaptive Stat power that is not in
     `stats` at all, which is #10. Anyone returning to this should go after the
     bottom of the table, not the top.
+
+    _That advice was taken, 2026-08-21, and it half worked._ `price_adaptive`
+    (§3) prices the Adaptive Stat power those three 1-stat items were missing
+    and beats control on both splits — but it does not put them in cores, and
+    the recall table above is unchanged in shape. The class they belong to is
+    still the bottom of the distribution; what the flag fixed was the intercept
+    they were inflating for everyone else.
 
     One trap on the way in: an unrestricted community set lifts 1-stat items
     1.90x and invites exactly the wrong conclusion. 41 of those 70 sightings
@@ -442,14 +472,16 @@ missing before those existed, including the pool's first anti-heal item.
 
 **Tuning lives in `data/_weights.yaml`** — signals, role stat maps, kit blend,
 hybrid scaling, flavors, aspects, per-mode overrides, lifesteal/stat caps,
-cap overflow, draft overlay, build order, starters. Every off-by-default
-experiment (`magnitude_fit`, `damage_fit_blend`, `price_passives`) is a §4
-entry with its numbers in the file.
+cap overflow, passive pricing, draft overlay, build order, starters. Every
+off-by-default experiment (`magnitude_fit`, `damage_fit_blend`,
+`price_passives`) is a §4 entry with its numbers in the file, and every
+default-ON one (`price_crit_multipliers`, `price_conversions`,
+`price_adaptive`) carries the sweep that put it there.
 
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (662) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (663) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -466,14 +498,15 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (662) ·
 | Joust / Arena gods placed | 0 / 89 — no outcome data exists |
 | Items placed | 220 / 220 |
 | Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
-| Headline gate | coverage 47.4%, win-weighted 49.3% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior. The 48%/49% this row carried was stale from `chore(data): daily community refresh`; `cap_overflow` moved it +0.2pp/+0.3pp, which is reporting and not a target (§1) |
-| **Leakage-free** | **37.7% probe · 38.4% at eff 0.45, vs 5.7% chance = 6.6–6.7×** — re-run 2026-08-21 on post-refresh data, input fingerprint `c85b909bc2a1`. **Re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row** — if it prints a different fingerprint, this row describes a different dataset. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
+| Headline gate | coverage 49.3%, win-weighted 51.3% — see `unknown_win_per_god`; the gap to a naive reading IS the removed community-agreement prior. `price_adaptive` moved it +1.9pp/+2.0pp off the 47.4%/49.3% this row carried, which is reporting and not a target (§1) |
+| **Leakage-free** | **38.7% probe · 39.6% at eff 0.45, vs 5.7% chance = 6.7–6.9×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs.** `price_adaptive` (§3) moved this +1.0pp/+1.2pp, later on 2026-08-21, off a control re-measured on the same data at 37.7%/38.4% — the same figures this row already carried, which is how we know the data had not moved under it. The sweep's nominal argmax moved with the change, 0.45 → 0.75 at 40.9%, and 17 of 21 splits have a CI overlapping that — noise by `model_signal_sweep`'s own rule, so the shipped split is unchanged and this row still reports eff 0.45. Earlier the same day: re-run on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
+| Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
 | Cap overflow | 47 -> 29 of 2423 builds over the penetration cap, at **no coverage cost on either leakage-free split** — see `cap_overflow` |
 | Combat model | 0.0% worst case over 12 observations |
-| Gods at 0% coverage | 2 — Ares, Sun Wukong. The previous row (Achilles, Chaac, Danzaburou) predates the community refresh; the list is identical with `cap_overflow` on and off |
+| Gods at 0% coverage | 1 — Ares. Sun Wukong left the list with `price_adaptive`; the previous row (Achilles, Chaac, Danzaburou) predates the community refresh |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 662 pipeline · 660 viewer |
+| Tests | 663 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

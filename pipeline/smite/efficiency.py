@@ -130,6 +130,26 @@ PRICE_CONVERSIONS = False
 # re-derives it, and _weights.yaml carries the numbers with that derivation.
 CONVERSION_REFERENCE = {}
 
+# Whether an Adaptive Stat grant counts, credited to ONE of the two stats the
+# clause offers. Strictly narrower than PRICE_PASSIVES and mutually exclusive
+# with it: that flag prices the same grant as its own `Adaptive Power` column
+# among 48 other passive grants, this one prices only the adaptive slice and
+# prices it into a stat the whole pool already values. Eight buildable items
+# qualify. See `passives.adaptive_grants` for which branch and why. Flipped by
+# `price_adaptive` in _weights.yaml.
+PRICE_ADAPTIVE = False
+
+# Which side of `+X Strength or +Y Intelligence` is priced. `strength` or
+# `intelligence`; set by `adaptive_branch` in _weights.yaml.
+ADAPTIVE_BRANCH = "strength"
+
+
+#: Every module global `apply_pricing_flags` owns. The list the save/restore
+#: pair walks, so a new switch is covered by adding it in one place.
+PRICING_FLAGS = ("PRICE_PASSIVES", "PRICE_STACKS", "STACK_FRACTION",
+                 "PRICE_CRIT_MULTIPLIERS", "PRICE_CONVERSIONS",
+                 "CONVERSION_REFERENCE", "PRICE_ADAPTIVE", "ADAPTIVE_BRANCH")
+
 
 def apply_pricing_flags(weights):
     """Set the module's pricing switches from a weights dict.
@@ -142,12 +162,17 @@ def apply_pricing_flags(weights):
     cannot see is worse than no config — it reports the shipped number for an
     unshipped model.
 
-    Returns the previous values so a caller sweeping a flag can restore them.
+    Returns the previous values, as `{global name: value}`, for
+    `restore_pricing_flags`. A DICT rather than a tuple because the restore
+    contract has to cover every switch: adding a global to this function and
+    forgetting it in the return value leaves a sweep silently unable to put the
+    module back, and nothing would fail loudly.
     """
     global PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS
     global PRICE_CONVERSIONS, CONVERSION_REFERENCE, STACK_FRACTION
-    before = (PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS,
-              PRICE_CONVERSIONS, dict(CONVERSION_REFERENCE))
+    global PRICE_ADAPTIVE, ADAPTIVE_BRANCH
+    before = {k: globals()[k] for k in PRICING_FLAGS}
+    before["CONVERSION_REFERENCE"] = dict(CONVERSION_REFERENCE)
     w = weights or {}
     PRICE_PASSIVES = bool(w.get("price_passives"))
     PRICE_STACKS = bool(w.get("price_stacks"))
@@ -155,7 +180,14 @@ def apply_pricing_flags(weights):
     PRICE_CRIT_MULTIPLIERS = bool(w.get("price_crit_multipliers"))
     PRICE_CONVERSIONS = bool(w.get("price_conversions"))
     CONVERSION_REFERENCE = dict(w.get("conversion_reference") or {})
+    PRICE_ADAPTIVE = bool(w.get("price_adaptive"))
+    ADAPTIVE_BRANCH = str(w.get("adaptive_branch") or "strength")
     return before
+
+
+def restore_pricing_flags(before):
+    """Put back what `apply_pricing_flags` returned."""
+    globals().update(before)
 
 
 def item_stat_values(item):
@@ -183,6 +215,15 @@ def item_stat_values(item):
     if PRICE_CONVERSIONS and CONVERSION_REFERENCE:
         from smite import passives
         for key, amount in passives.conversion_grants(item, CONVERSION_REFERENCE).items():
+            out[key] = out.get(key, 0.0) + amount
+    if PRICE_ADAPTIVE and not PRICE_PASSIVES:
+        # `and not PRICE_PASSIVES` because `effective_stats` above prices the
+        # SAME clause, as its own `Adaptive Power` column. Running both counts
+        # the grant twice, at two different prices, on 29 items. The broad flag
+        # wins the tie: it is the one already in the register with numbers, and
+        # silently overriding it would make its measurement unreproducible.
+        from smite import passives
+        for key, amount in passives.adaptive_grants(item, ADAPTIVE_BRANCH).items():
             out[key] = out.get(key, 0.0) + amount
     return out
 

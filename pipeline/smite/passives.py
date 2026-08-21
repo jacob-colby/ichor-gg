@@ -34,6 +34,11 @@ Intelligence. The grant is genuinely one good — you get whichever suits your
 build — and the two stats carry different gold prices, so choosing one would
 mean picking a side of a coin the item never makes you flip.
 
+That reasoning is `price_passives`', and `price_passives` ships off. The
+carve-out at the bottom of this module (`adaptive_grants`, shipped ON as
+`price_adaptive`) makes the opposite choice for the opposite reason, and the
+argument for it is written next to the code.
+
 CONDITIONAL GRANTS ARE EXCLUDED, ON PURPOSE
 
 Thirty-three of the 49 are conditional: `On Use: +25% Strength ... Cooldown:
@@ -580,3 +585,108 @@ def measure_conversion_reference(builds, items):
         if carried:
             out[stat] = statistics.median(carried)
     return out
+
+
+# ── The adaptive grant, on one branch: the narrowest carve-out of them all ──
+#
+# `unconditional_grants` above already reads this clause, and `price_passives`
+# already prices it — as its own `Adaptive Power` column, alongside 48 other
+# passive grants. That whole class was measured and shipped OFF (STATE.md 4.5).
+# This is the same slice of it that the module docstring calls the prize, taken
+# on its own, the way `crit_damage_as_chance` and `conversion_grants` were.
+#
+# It is the least ambiguous member of the class. Every other passive this
+# module can reach needs a judgement — is the trigger frequent, does the stack
+# persist, is the conversion self-referential. An Adaptive Stat grant needs
+# none: it is a stat, granted unconditionally, on an item that carries it
+# nowhere in `stats`. Eight buildable items are affected and ALL EIGHT read
+# `premium`, four of them off a one-entry stats dict, so the gold model prices
+# a 2500g item off a single stat and then reports that you are overpaying for
+# it by ~1000 gold.
+#
+# WHICH BRANCH — THE ONE DESIGN QUESTION, AND THE ANSWER IS STRENGTH
+#
+# The clause reads `+X Strength or +Y Intelligence (based on highest item
+# stat)`, so which stat you get is a property of the BUYER and the gold model
+# is god-agnostic. It cannot be both: a regression column is one good.
+#
+# Three things settled it, in order of weight.
+#
+# 1. NO FIXED POINT. `conversion_grants` prices against a reference build
+#    precisely so there is nothing to converge (see its block above), and the
+#    same discipline applies here. "Whichever branch is cheaper in gold" needs
+#    the fitted prices, which are the output of the fit this feeds — so it
+#    would have to be iterated. A branch chosen from the item's own text does
+#    not.
+#
+# 2. STRENGTH IS THE CONSERVATIVE BRANCH ON 6 OF THE 8. At the control fit
+#    (Strength 18.56 g/pt, Intelligence 12.70 g/pt) the two branches are worth,
+#    in gold:
+#
+#        item                    as Strength   as Intelligence
+#        Mercury's Talaria         40 ->  742    70 ->  889
+#        Daybreak Gavel            60 -> 1114    80 -> 1016   <- Int cheaper
+#        Omen Drum                 55 -> 1021    90 -> 1143
+#        Eye of Erebus             35 ->  650    50 ->  635   <- Int cheaper
+#        Vital Amplifier           30 ->  557    45 ->  572
+#        Sun Beam Bow              20 ->  371    40 ->  508
+#        The Executioner           30 ->  557    55 ->  699
+#        Brawler's Beat Stick      30 ->  557    45 ->  572
+#
+#    Strength is the smaller credit on six, and the two that go the other way
+#    do so by 9% and 2%. Understating is the safe direction — the failure being
+#    fixed is pricing the grant at ZERO, and it is the same call
+#    `crit_damage_as_chance` records as "IT IS A FLOOR".
+#
+# 3. THE CHOICE BARELY MATTERS, WHICH IS ITSELF THE FINDING. The game's
+#    Intelligence:Strength branch ratio runs 1.33x to 2.00x and the fit prices
+#    Strength at 1.46x Intelligence, so the branches cash out within ~10% of
+#    each other on every item above. Both arms were swept anyway; see
+#    `adaptive_branch` in _weights.yaml for the numbers.
+#
+# NOT ITS OWN COLUMN, which is what `price_passives` does and is the "refuse to
+# choose" answer. Eight tier-3 carriers plus nine tier-2 ones is above
+# `efficiency.MIN_STAT_CARRIERS`, but it is the same defect in weaker form:
+# `Adaptive Power` appears on no item that is not in this set, so NNLS can fit
+# one coefficient that eats the class's residual without any other item in the
+# pool disagreeing. Strength and Intelligence have dozens of carriers and a
+# price the whole pool constrains, so pricing INTO one of them values the grant
+# at a rate the rest of the game already agreed to.
+#
+# MEASURED 2026-08-21, AND IT SHIPS ON. Leakage-free coverage against a 5.74%
+# random-core baseline: probe split 37.7% -> 38.7%, best split 38.4% -> 39.6%.
+# Both branches beat control on both splits and Strength beats Intelligence on
+# both. The sweep, the paired bootstrap (both intervals contain zero), the core
+# churn and the diagnostic control live under `price_adaptive` in
+# _weights.yaml, because those are numbers about the CONFIGURATION.
+#
+# ONE OF THEM BELONGS HERE, because it is a fact about this extraction rather
+# than about the setting: NONE OF THE EIGHT ITEMS ENTERS A MODEL CORE, before
+# or after, on either split. The gain is not those items being picked. It is
+# that 29 items sat in the regression with ~1000g apiece that no column
+# explained, and NNLS was parking it in the intercept — 1111 with the flag off,
+# 934 with it on, which reprices Strength 18.56 -> 21.81 and Intelligence
+# 12.70 -> 14.77 for every item in the game. This fixes a misprice of the whole
+# pool BY WAY OF eight items; it does not fix the eight items.
+BRANCHES = ("strength", "intelligence")
+
+
+def adaptive_grants(item, branch="strength"):
+    """`{stat: amount}` for one item's Adaptive Stat clause, on `branch`.
+
+    `{}` for the 197 items that carry no such clause. The amount is the branch
+    as printed, not the mean of the two — `unconditional_grants` records the
+    mean because it prices the grant as its own god-agnostic column, and this
+    function exists to make the other choice.
+    """
+    text = (item.get("passive") or "").strip()
+    if not text:
+        return {}
+    match = _ADAPTIVE.search(text)
+    if not match:
+        return {}
+    key = str(branch or "").strip().lower()
+    if key not in BRANCHES:
+        raise ValueError(f"adaptive_branch must be one of {BRANCHES}, got {branch!r}")
+    return ({"Strength": float(match.group(1))} if key == "strength"
+            else {"Intelligence": float(match.group(2))})

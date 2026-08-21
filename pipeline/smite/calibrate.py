@@ -279,6 +279,43 @@ def random_core_baseline(fx, draws=BASELINE_DRAWS, seed=BASELINE_SEED):
                  for g in fx.gods]) if fx.gods else 0}
 
 
+def exact_random_core_baseline(fx):
+    """`random_core_baseline`'s mean, in closed form — no sampling.
+
+    Each community item is drawn with probability `min(6, N)/N` from a god's
+    pool of N, so the expected covered fraction is that ratio, whatever the
+    community set contains. Averaged over gods, it is exactly what the 200-draw
+    sampler estimates.
+
+    IT EXISTS BECAUSE THE SAMPLER MOVES WHEN THE MODEL DOES, and that reads as
+    the one thing the baseline is supposed to rule out. The printed figure is
+    the tell that the committed `_calibration.md` has gone stale against a data
+    refresh — chance cannot depend on a model flag. But `score_god_items`
+    returns its rows SORTED BY SCORE, so a pricing change reshuffles the list a
+    fixed seed samples from, and the estimate wobbles: 5.73% / 5.59% / 5.65%
+    across `price_adaptive` off/Strength/Intelligence on 2026-08-21, against
+    5.7391% here for all three and a pool that never changed membership. Read
+    this one before concluding the data moved.
+    """
+    eff_scores, _ = efficiency.efficiency_scores(fx.items)
+    profile = scoring.resolve_profile(fx.weights, "Conquest", None)
+    ratios = []
+    for god in fx.gods:
+        note = fx.builds_by_god[god["name"]]
+        slots = validate._community_slots(note)
+        if not slots:
+            continue
+        rows = scoring.score_god_items(god, fx.items, note, eff_scores,
+                                       fx.weights, fx.tags_map, profile)
+        names = {r["item"] for r in rows}
+        community = [c["name"] for c in slots
+                     if c["name"] in names and c.get("win_rate") is not None]
+        if not community or not names:
+            continue
+        ratios.append(min(6, len(names)) / len(names))
+    return _mean(ratios)
+
+
 def within_god_spearman(per_god, min_items=3):
     """Mean/median rank correlation computed INSIDE each god, not pooled.
 
