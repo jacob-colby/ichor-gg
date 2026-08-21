@@ -108,6 +108,11 @@ NUMBER_WORDS = {
 #: names a row that must exist — an entry for a row that has been renamed or
 #: deleted is itself a finding, so this list cannot rot into an alibi.
 UNGATED = {
+    "Adaptive pricing": (
+        "a record of what `price_adaptive` did on the day it shipped — 8 items "
+        "repriced, 83 of 89 cores changed. Re-deriving it needs the flag "
+        "flipped and assembly re-run against a build set that no longer "
+        "exists, so it is history rather than current state."),
     "Cap overflow": (
         "the `47 ->` arm is the count with `cap_overflow` OFF — a counterfactual "
         "that cannot be re-derived without flipping a weight and re-running "
