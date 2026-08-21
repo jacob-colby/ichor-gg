@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
+  - Tyrfing
   - Bragi's Harp
   - The Crusher
-  - Heartseeker
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - The Crusher
-  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -483,17 +483,29 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Joust
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.66
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Tyrfing:
+      total: 0.63
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Bragi's Harp:
       total: 0.61
       efficiency: 0.44
@@ -506,18 +518,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Heartseeker:
-      total: 0.6
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-    Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Spear of Desolation
-  - The Crusher
   - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Spear of Desolation
   - Triton's Conch
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -553,6 +553,12 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.64
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
     Jotunn's Revenge:
       total: 0.71
       efficiency: 0.72
@@ -565,12 +571,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    The Crusher:
-      total: 0.62
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Rod of Tahuti:
       total: 0.71
       efficiency: 0.86

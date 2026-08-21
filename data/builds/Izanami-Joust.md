@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Tyrfing
   - Death Metal
   - Riptalon
-  - Demon Blade
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Demon Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,17 +32,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Death Metal:
       total: 0.52
       efficiency: 0.61
@@ -50,17 +56,11 @@ builds:
       pick: 0.0
       fit: 0.43
     Riptalon:
-      total: 0.61
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Demon Blade:
-      total: 0.5
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
+      fit: 0.78
     Soul Gem:
       total: 0.75
       efficiency: 0.57
@@ -80,8 +80,8 @@ builds:
   - Death Metal
   - Rod of Tahuti
   flex_slots:
+  - Bancroft's Talon
   - Bragi's Harp
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -99,11 +99,11 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.54
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.62
     Bancroft's Talon:
       total: 0.53
       efficiency: 0.51
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
@@ -229,11 +229,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.71
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
@@ -294,11 +294,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.72
     Berserker's Shield:
       total: 0.53
       efficiency: 0.68
@@ -359,11 +359,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.84
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.72
@@ -489,11 +489,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.55
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.64
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Tyrfing
   - Death Metal
   - Riptalon
-  - Demon Blade
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Demon Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -554,17 +554,23 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Death Metal:
       total: 0.52
       efficiency: 0.61
@@ -572,17 +578,11 @@ builds:
       pick: 0.0
       fit: 0.43
     Riptalon:
-      total: 0.61
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Demon Blade:
-      total: 0.5
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
+      fit: 0.78
     Soul Gem:
       total: 0.75
       efficiency: 0.57

@@ -118,12 +118,12 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Berserker''s Shield, Amanita Charm, Kinetic Cuirass,
     Jotunn''s Revenge, Freya''s Tears, Shield Splitter, Breastplate of Valor, Pharaoh''s
-    Curse, Runeforged Hammer, Nimble Ring, Shield of the Phoenix, Gluttonous Grimoire,
-    Shogun''s Ofuda, Mantle Of Discord, Stone of Binding, Golden Blade, Eye of the
-    Storm, Erosion, Eye of Providence, Lernaean Bow, The Crusher, Death Metal, Spectral
-    Armor, Draconic Scale, Hydra''s Lament, Helm of Radiance, Soul Gem, Leviathan''s
-    Hide, Magi''s Cloak, Tyrfing, Avenging Blade, Screeching Gargoyle, Midgardian
-    Mail, Bragi''s Harp, Tekko-Kagi, Daybreak Gavel, Spear of Desolation.'
+    Curse, Golden Blade, Runeforged Hammer, Nimble Ring, Shield of the Phoenix, Gluttonous
+    Grimoire, Shogun''s Ofuda, Mantle Of Discord, Stone of Binding, Eye of the Storm,
+    Erosion, Eye of Providence, Lernaean Bow, The Crusher, Death Metal, Spectral Armor,
+    Draconic Scale, Hydra''s Lament, Tyrfing, Helm of Radiance, Soul Gem, Leviathan''s
+    Hide, Magi''s Cloak, Avenging Blade, Screeching Gargoyle, Midgardian Mail, Bragi''s
+    Harp, Tekko-Kagi, Daybreak Gavel, Spear of Desolation.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -192,12 +192,12 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Rod of Tahuti, Berserker''s Shield, Shield of the Phoenix,
     Jotunn''s Revenge, Kinetic Cuirass, Soul Gem, Rod of Asclepius, Freya''s Tears,
-    The Reaper, Runeforged Hammer, Pharaoh''s Curse, Gluttonous Grimoire, Breastplate
-    of Valor, Golden Blade, Shield Splitter, Nimble Ring, Shogun''s Ofuda, Chandra''s
-    Grace, Phoenix Feather, Riptalon, Eye of the Storm, Yogi''s Necklace, Lernaean
+    The Reaper, Golden Blade, Runeforged Hammer, Pharaoh''s Curse, Gluttonous Grimoire,
+    Breastplate of Valor, Riptalon, Shield Splitter, Nimble Ring, Shogun''s Ofuda,
+    Chandra''s Grace, Phoenix Feather, Eye of the Storm, Yogi''s Necklace, Lernaean
     Bow, The Crusher, Death Metal, Spectral Armor, Erosion, Mantle Of Discord, Stone
-    of Binding, Hydra''s Lament, Eye of Providence, Draconic Scale, Avenging Blade,
-    Leviathan''s Hide, Blood-Bound Book, Lifebinder, Tyrfing, Helm of Radiance.'
+    of Binding, Hydra''s Lament, Eye of Providence, Tyrfing, Draconic Scale, Avenging
+    Blade, Leviathan''s Hide, Blood-Bound Book, Lifebinder, Helm of Radiance.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -267,9 +267,9 @@ builds:
     Blade, Soul Gem, Screeching Gargoyle, Freya''s Tears, Void Shield, Breastplate
     of Valor, Spear of Desolation, Spear of the Magus, Void Stone, Heartseeker, Nimble
     Ring, Shield Splitter, The Reaper, Tekko-Kagi, Obsidian Shard, Runeforged Hammer,
-    Pharaoh''s Curse, Shield of the Phoenix, Mantle Of Discord, Silverbranch Bow,
-    Shogun''s Ofuda, Titan''s Bane, Death Metal, Golden Blade, Riptalon, Eye of the
-    Storm, Spectral Armor, Toxic Blade, Hydra''s Lament, Lernaean Bow, Erosion, Helm
+    Pharaoh''s Curse, Silverbranch Bow, Shield of the Phoenix, Mantle Of Discord,
+    Golden Blade, Riptalon, Shogun''s Ofuda, Toxic Blade, Titan''s Bane, Death Metal,
+    Eye of the Storm, Spectral Armor, Hydra''s Lament, Lernaean Bow, Erosion, Helm
     of Radiance.'
   slot_scores:
     Stone of Binding:
@@ -414,7 +414,7 @@ builds:
     Lament, Gluttonous Grimoire, Screeching Gargoyle, Pharaoh''s Curse, Mantle Of
     Discord, Stone of Binding, Chronos'' Pendant, Shield Splitter, Shogun''s Ofuda,
     Runeforged Hammer, Helm of Radiance, Death Metal, Spectral Armor, Erosion, Prophetic
-    Cloak, Eye of Providence, Draconic Scale, The Crusher, Golden Blade, Leviathan''s
+    Cloak, Golden Blade, Eye of Providence, Draconic Scale, The Crusher, Leviathan''s
     Hide, Eye of the Storm, Chandra''s Grace, Arondight, Gem of Focus, Lernaean Bow,
     Spear of the Magus, Magi''s Cloak.'
   slot_scores:
@@ -484,12 +484,12 @@ builds:
     win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Berserker''s
     Shield, Amanita Charm, Kinetic Cuirass, Freya''s Tears, Gluttonous Grimoire, The
     Crusher, Shield Splitter, Runeforged Hammer, Breastplate of Valor, Eye of the
-    Storm, Soul Gem, Death Metal, Shield of the Phoenix, Hydra''s Lament, Mantle Of
-    Discord, Stone of Binding, Heartseeker, The Reaper, Golden Blade, Nimble Ring,
-    Pharaoh''s Curse, Lernaean Bow, Erosion, Spectral Armor, Spear of Desolation,
-    Tekko-Kagi, Eye of Providence, Shogun''s Ofuda, Spear of the Magus, Avenging Blade,
-    Draconic Scale, Helm of Radiance, Titan''s Bane, Obsidian Shard, Leviathan''s
-    Hide, Magi''s Cloak, Tyrfing, Screeching Gargoyle.'
+    Storm, Soul Gem, Death Metal, Golden Blade, Shield of the Phoenix, Hydra''s Lament,
+    Mantle Of Discord, Stone of Binding, Heartseeker, The Reaper, Nimble Ring, Pharaoh''s
+    Curse, Lernaean Bow, Erosion, Spectral Armor, Spear of Desolation, Tekko-Kagi,
+    Eye of Providence, Shogun''s Ofuda, Spear of the Magus, Avenging Blade, Draconic
+    Scale, Helm of Radiance, Tyrfing, Titan''s Bane, Obsidian Shard, Leviathan''s
+    Hide, Magi''s Cloak, Screeching Gargoyle.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -558,11 +558,11 @@ builds:
     Berserker''s Shield, Amanita Charm, Gluttonous Grimoire, Kinetic Cuirass, Nimble
     Ring, Soul Gem, Freya''s Tears, Death Metal, Breastplate of Valor, The Crusher,
     Shield Splitter, Spear of the Magus, Spear of Desolation, Runeforged Hammer, Helm
-    of Radiance, Obsidian Shard, Pharaoh''s Curse, Shield of the Phoenix, Mantle Of
-    Discord, Stone of Binding, Shogun''s Ofuda, Golden Blade, Eye of the Storm, Hydra''s
+    of Radiance, Obsidian Shard, Pharaoh''s Curse, Golden Blade, Shield of the Phoenix,
+    Mantle Of Discord, Stone of Binding, Shogun''s Ofuda, Eye of the Storm, Hydra''s
     Lament, Lernaean Bow, Rod of Asclepius, Bragi''s Harp, Heartseeker, Spectral Armor,
-    The Reaper, Erosion, Tekko-Kagi, Eye of Providence, Draconic Scale, Leviathan''s
-    Hide, Jade Scepter, Doom Orb.'
+    The Reaper, Erosion, Tekko-Kagi, Eye of Providence, Tyrfing, Draconic Scale, Leviathan''s
+    Hide, Jade Scepter.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -629,11 +629,11 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Rod of Tahuti, Berserker''s Shield, Amanita Charm, Kinetic
     Cuirass, Jotunn''s Revenge, Freya''s Tears, Shield Splitter, Breastplate of Valor,
-    Pharaoh''s Curse, Runeforged Hammer, Nimble Ring, Shield of the Phoenix, Gluttonous
-    Grimoire, Shogun''s Ofuda, Mantle Of Discord, Stone of Binding, Golden Blade,
+    Pharaoh''s Curse, Golden Blade, Runeforged Hammer, Nimble Ring, Shield of the
+    Phoenix, Gluttonous Grimoire, Shogun''s Ofuda, Mantle Of Discord, Stone of Binding,
     Eye of the Storm, Erosion, Eye of Providence, Lernaean Bow, The Crusher, Death
-    Metal, Spectral Armor, Draconic Scale, Hydra''s Lament, Helm of Radiance, Soul
-    Gem, Leviathan''s Hide, Magi''s Cloak, Tyrfing, Avenging Blade, Screeching Gargoyle,
+    Metal, Spectral Armor, Draconic Scale, Hydra''s Lament, Tyrfing, Helm of Radiance,
+    Soul Gem, Leviathan''s Hide, Magi''s Cloak, Avenging Blade, Screeching Gargoyle,
     Midgardian Mail, Bragi''s Harp, Tekko-Kagi, Daybreak Gavel, Spear of Desolation.'
   slot_scores:
     Berserker's Shield:

@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Toxic Blade
-  - Bragi's Harp
+  - Tyrfing
   - Death Metal
   - Riptalon
   - Demon Blade
   - Soul Gem
   flex_slots:
-  - Toxic Blade
-  - Bragi's Harp
+  - Death Metal
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,17 +32,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.63
-    Bragi's Harp:
-      total: 0.53
-      efficiency: 0.44
+      fit: 0.74
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.67
     Death Metal:
       total: 0.57
       efficiency: 0.61
@@ -50,11 +50,11 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.6
+      total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.8
     Demon Blade:
       total: 0.56
       efficiency: 0.38
@@ -80,8 +80,8 @@ builds:
   - Death Metal
   - Rod of Tahuti
   flex_slots:
+  - Bancroft's Talon
   - Bragi's Harp
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -99,11 +99,11 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.55
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.64
     Bancroft's Talon:
       total: 0.53
       efficiency: 0.51
@@ -139,13 +139,13 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
-  - Bragi's Harp
+  - Tyrfing
   - Death Metal
   - Demon Blade
   - Deathbringer
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
+  - Tyrfing
   - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -164,17 +164,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.61
-    Bragi's Harp:
-      total: 0.51
-      efficiency: 0.44
+      fit: 0.72
+    Tyrfing:
+      total: 0.56
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.64
     Death Metal:
       total: 0.58
       efficiency: 0.61
@@ -210,7 +210,7 @@ builds:
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Shogun's Ofuda
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -229,11 +229,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.72
     Berserker's Shield:
       total: 0.55
       efficiency: 0.68
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
+  - Silverbranch Bow
   - The Crusher
   - Heartseeker
   - Soul Gem
   flex_slots:
+  - The Crusher
   - Heartseeker
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -285,8 +285,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -294,20 +294,20 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.9
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Void Shield:
-      total: 0.53
-      efficiency: 0.47
+    Silverbranch Bow:
+      total: 0.56
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -405,7 +405,7 @@ builds:
   - Spear of Desolation
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Spear of Desolation
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
@@ -424,11 +424,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
+      total: 0.54
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
@@ -470,7 +470,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Jotunn's Revenge
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
@@ -489,11 +489,11 @@ builds:
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.69
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
@@ -554,11 +554,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
@@ -594,14 +594,14 @@ builds:
   archetype: model
   slot_order:
   - Toxic Blade
-  - Bragi's Harp
+  - Tyrfing
   - Death Metal
   - Riptalon
   - Demon Blade
   - Soul Gem
   flex_slots:
-  - Toxic Blade
-  - Bragi's Harp
+  - Death Metal
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -619,82 +619,17 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Bragi's Harp:
-      total: 0.53
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
-    Death Metal:
-      total: 0.57
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
-    Riptalon:
       total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-    Demon Blade:
-      total: 0.56
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
-    Soul Gem:
-      total: 0.69
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.8
-  starter: *id001
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Toxic Blade
-  - Tyrfing
-  - Death Metal
-  - Riptalon
-  - Demon Blade
-  - Soul Gem
-  flex_slots:
-  - Toxic Blade
-  - Tyrfing
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
-  - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Toxic Blade:
-      total: 0.55
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.74
     Tyrfing:
-      total: 0.52
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.67
     Death Metal:
       total: 0.57
       efficiency: 0.61
@@ -702,11 +637,11 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.6
+      total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.8
     Demon Blade:
       total: 0.56
       efficiency: 0.38
@@ -719,11 +654,5 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
-  swaps:
-  - added: Tyrfing
-    removed: Bragi's Harp
-    reason: Conquest community 57% win over 972 matches (vs 53% on this god), taking
-      the model's weakest slot from Bragi's Harp
-  borrowed_from: Conquest
   starter: *id001
 ---

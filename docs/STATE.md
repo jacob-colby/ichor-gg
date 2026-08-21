@@ -43,8 +43,8 @@ cd pipeline && python -m smite.calibrate     # prints the probe, the baseline, a
 cd pipeline && python -m smite.calibrate --control   # the same control, ~7s
 ```
 
-Chance is ~5.7%. Shipped is ~38.7% at the probe split and ~39.6% at eff
-0.45, i.e. **~6.8× chance**.
+Chance is ~5.7%. Shipped is ~39.7% at the probe split and ~40.3% at eff
+0.45, i.e. **~7.0× chance**.
 
 **Do not quote those figures — re-measure them.** They move with the data, not
 just with the model, which is what `--control` exists for: the baseline, the
@@ -148,6 +148,8 @@ Each of these has its evidence in the named module.
 | An item's offense tags **sum** | `offense_tags` in `_weights.yaml` | Flat, an item answering a tank two ways scored what one answering it once did — which is how `penetration` on Titan's Bane displaced Heartseeker |
 | A resolved expert claim is measured against its **own recorded baseline** | `expert_review.regressions` | The old rule only failed on a full reversion, so `clear` → `partial` shipped green |
 | `build_quality` is a **diagnostic**, never a scoring input | `build_quality.py` | Register §4.4 is what happens when a damage measure becomes a fit signal; its output is a report a human reads, with the passive blind spot printed above the first number |
+| The fit map gets an **Attack Damage column** from the god's own scaling | `damage_value.attack_damage_fit` | `role_stats` and `kit_stat_overlay` between them never name the stat, so the merged fit map scored it 0.0 on 89 of 89 gods while their basic-attack scaling measures it non-zero on all 78 that parse; probe 38.7% → 39.7%, best 39.6% → 40.3% |
+| That column is **credited but not charged** | `scoring.god_fit_score` | `fit` is normalised by the sum of the map, so charging it shrinks every non-carrier's stat term (−12.5% over 10,065 pairs) and promotes the flat tag bonuses added after normalisation — which pulled 43 anti-heal items into Joust and Arena cores, the two modes with no gate to catch it |
 | The damage model counts the **basic attack**, and its unit is one rotation plus one swing | `damage_value.item_damage_gain` | `ability_damage_components` skips the Basic Attack slot, so Attack Damage — 100% of a basic attack on 84 of 89 gods, and no ability in the roster scales on it — was worth exactly 0.0 in the only damage path that reaches a recommendation. 12 items carried it, 10 more carry Critical Chance. The 1:1 mix is a declaration, not a measurement; the clock that would replace it is register §4.12 |
 
 ### The combat model is exact and should stay that way
@@ -231,6 +233,84 @@ shipped **off**. Numbers are in the named module.
     test is 0.75. Sweep, paired CIs and churn under `damage_fit_blend` in
     `_weights.yaml`. The "halves the gate" claim belongs to the separate
     *damage gain AS the fit signal* row (23.6%), not to this blend.
+
+    _Resolved 2026-08-21, mechanically rather than statistically, and the knob
+    turned out to be two knobs._ The aggregate could not settle this and never
+    will: the paired statistic is the per-god coverage delta, and at the best
+    split it is **exactly zero on 83 of 89 gods** (78 of 89 at the probe
+    split), because a core has to actually change AND the changed item has to
+    be a community pick before a god contributes anything at all. Resampling a
+    vector that is zero on 93% of its entries harder does not make it sharper.
+    So the 20 changed cores at 0.75 were read one at a time instead, and the
+    knob decomposes:
+
+        arm, at blend 0.75         probe 0.70:0.30      paired 95% CI    cores
+        control                          38.7%                     --       --
+        all three stats                  39.8%       [-0.22%, +2.58%]    37/89
+        Strength + Intelligence only     38.6%       [-1.80%, +1.57%]    29/89
+        Attack Damage only               40.4%       [+0.19%, +3.22%]    30/89
+
+    **The Attack Damage column is the whole of it**, and the Strength/
+    Intelligence remainder is a null that actively dilutes it — both halves on
+    together score 40.0% against 40.6% for the Attack Damage half alone. The
+    reason is a hole, not a weighting: `role_stats` never names Attack Damage
+    and neither does `kit_stat_overlay`, so the merged fit map scores it at
+    **exactly 0.0 on 89 of 89 gods** while `damage_value.stat_weights` measures
+    it non-zero on all 78 whose kit parses. That is the fit-side twin of the
+    hole §3 closed on the damage side the same week, and neither was visible
+    while the two halves were measured as one number.
+
+    **Carved out and shipped ON as `attack_damage_fit` at 1.0** — see §3. It is
+    the only thing in this entry whose paired CI excludes zero (probe 38.7% →
+    39.7%, [+0.22%, +1.91%], better on 5 gods and worse on none).
+
+    _Swept on Joust and Arena before merging, and that changed the flag._
+    Those two modes are 178 of 267 build groups, neither has a community block
+    on any of its 89 notes, and both zero `win`/`pick` so the fit map is the
+    whole score. The first cut moved 46 of 89 Joust cores and 39 of 89 Arena
+    ones — and **43 of those arrivals carried no Attack Damage at all**. They
+    were anti-heal items, Divine Ruin and Toxic Blade, and zeroing the mode
+    `tag_bonus` removed every one of them. The cause is that `god_fit_score`
+    normalises by the sum of the map while the tag bonus is added AFTER, so a
+    new column shrinks the stat term (−12.5% over 10,065 god-item pairs) and
+    promotes every tag bonus against it. Conquest's only mode bonus is
+    negative, so the artifact was invisible in the mode that has the gate and
+    decisive in the two that do not. The column now ships excluded from the
+    normaliser; Joust churn 46 → 19, Arena 39 → 20, anti-heal arrivals 43 → 19,
+    Attack Damage arrivals unchanged, and **about a third of the original
+    headline turned out to be the shrink rather than the column** (probe 40.6%
+    → 39.7%). A sweep in a mode with no gate found a bug the gated mode was
+    rewarding. What is left
+    under `damage_fit_blend` is the Strength/Intelligence remainder, re-swept
+    as itself: it peaks at 0.30 on the probe split and then falls BELOW control
+    (37.7% at full strength, worse on 11 gods against better on 7) while the
+    best split sits flat at +0.2pp moving at most two gods. Two splits
+    disagreeing about the direction is entry 9's shape and it ships off for
+    entry 9's reason. **The register's old summary of this entry was wrong in
+    both directions at once** — "halves the gate" was the wrong experiment, and
+    "nothing clears the noise" was two experiments averaged into one null.
+
+    Two things found on the way that are worth more than the ship decision:
+
+    * **`blend_stat_values` scales by the wrong reference.** Its docstring says
+      defensive stats "keep their role weight untouched", which is true of the
+      values and false of the comparison: the measured weights are scaled to
+      `max(role_map.values())`, which for a tank or a support is a PROTECTION,
+      so offence is promoted toward defence while defence stands still. Mean
+      offensive fit mass at 0.75 rises +30% for a damage god and **+71% for a
+      tank or support**, and Health/Protection then leaves the moved cores —
+      net −1535 points at 0.75, −4125 at 1.00, which is exactly where coverage
+      turned back down. Scaling by the largest *offensive* role weight instead
+      removes the turn-down (probe 38.9% → 40.0%, best 39.4% → 40.1% at 1.00).
+      Measured, not shipped — with Attack Damage carved out there is no gain
+      left for it to protect — and recorded so the next attempt starts from
+      fixed arithmetic. Jormungandr losing Shifter's Shield, his 46%-pick
+      slot-1 item, is this bug and not the damage model.
+    * **The gain does NOT concentrate where the damage model measures well.**
+      Spearman between a god's coverage delta and its `n_scaling_abilities` is
+      +0.05 on the probe split and −0.18 on the best one. Whatever this is, it
+      is not "the mechanism working hardest where the kit parsed cleanest", and
+      an attempt that assumes it will should check that first.
 5. **Pricing item passives** — the extraction is right and the prices are
    visibly more sensible; the recommender still got worse.
 6. **The 2026-08-05 weight sweep's own winner** — rejected as leakage (§1).
@@ -577,7 +657,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (748) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (755) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -595,14 +675,14 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (748) ·
 | Items placed | 206 / 226 |
 | Community sample | 12,786 Obsidian+ Conquest matches, 11 Aug – 21 Aug |
 | Headline gate | coverage 49.3%, win-weighted 51.3% — see `unknown_win_per_god`; the gap to a naive reading IS the removed community-agreement prior. `price_adaptive` moved it +1.9pp/+2.0pp off the 47.4%/49.3% this row carried, which is reporting and not a target (§1) |
-| **Leakage-free** | **38.7% probe · 39.6% at eff 0.45, vs 5.6% chance = 6.9–7.1×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs.** `price_adaptive` (§3) moved this +1.0pp/+1.2pp, later on 2026-08-21, off a control re-measured on the same data at 37.7%/38.4% — the same figures this row already carried, which is how we know the data had not moved under it. The sweep's nominal argmax moved with the change, 0.45 → 0.75 at 40.9%, and 17 of 21 splits have a CI overlapping that — noise by `model_signal_sweep`'s own rule, so the shipped split is unchanged and this row still reports eff 0.45. Earlier the same day: re-run on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
+| **Leakage-free** | **39.7% probe · 40.3% at eff 0.45, vs 5.7% chance = 6.9–7.0×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** `attack_damage_fit` (§3) moved this +1.0pp/+0.7pp on 2026-08-21, off a control re-measured on the same data at 38.7%/39.6% minutes earlier. The baseline reading 5.6% before and 5.7% after is the ±0.15pp sampling wobble §1 documents, not a data move — do not read it as one. An earlier cut of the same flag read 40.6%/40.5% here; about a third of that was the fit normaliser shrinking every non-carrier rather than the column itself, which the Joust/Arena sweep caught and §4.4 records. Before it, `price_adaptive` (§3) moved this +1.0pp/+1.2pp, later on 2026-08-21, off a control re-measured on the same data at 37.7%/38.4% — the same figures this row already carried, which is how we know the data had not moved under it. The sweep's nominal argmax moved with the change, 0.45 → 0.75 at 40.9%, and 17 of 21 splits have a CI overlapping that — noise by `model_signal_sweep`'s own rule, so the shipped split is unchanged and this row still reports eff 0.45. Earlier the same day: re-run on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
-| Cap overflow | 47 -> 0 of 2422 builds over the penetration cap. `cap_overflow` took it to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed. See `cap_overflow` |
+| Cap overflow | 47 -> 0 of 2421 builds over the penetration cap. `cap_overflow` took it to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed. See `cap_overflow` |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 1 — Ares. Sun Wukong left the list with `price_adaptive`; the previous row (Achilles, Chaac, Danzaburou) predates the community refresh |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 748 pipeline · 660 viewer |
+| Tests | 755 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

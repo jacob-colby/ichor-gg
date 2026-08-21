@@ -6,40 +6,40 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - The Crusher
   - Heartseeker
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Heartseeker
   - Erosion
-  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Eye of the Storm — magical protection
-    swap_item: Eye of the Storm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -80,8 +80,8 @@ builds:
   - Heartseeker
   - Amanita Charm
   flex_slots:
+  - Hydra's Lament
   - The Crusher
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -99,11 +99,11 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
+      total: 0.53
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.72
@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -220,14 +220,20 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Spectral Armor:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.65
+      total: 0.69
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.93
     Jotunn's Revenge:
       total: 0.69
       efficiency: 0.72
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Toxic Blade
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Hydra's Lament
   - Freya's Tears
   flex_slots:
+  - Hydra's Lament
   - Genji's Guard
-  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -418,20 +418,20 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.55
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Genji's Guard:
       total: 0.55
       efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
-    Breastplate of Valor:
-      total: 0.55
-      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -463,40 +463,40 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - The Crusher
   - Heartseeker
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Heartseeker
   - Erosion
-  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Eye of the Storm — magical protection
-    swap_item: Eye of the Storm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.55

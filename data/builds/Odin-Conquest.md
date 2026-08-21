@@ -113,14 +113,14 @@ builds:
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Shield Splitter, The Crusher, Runeforged
     Hammer, Shield of the Phoenix, Eye of the Storm, Mantle Of Discord, Stone of Binding,
-    Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Hydra''s Lament, Heartseeker,
-    The Reaper, Leviathan''s Hide, Pharaoh''s Curse, Magi''s Cloak, Avenging Blade,
-    Shogun''s Ofuda, Midgardian Mail, Screeching Gargoyle, Golden Blade.'
+    Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Hydra''s Lament, Golden
+    Blade, Heartseeker, The Reaper, Leviathan''s Hide, Pharaoh''s Curse, Magi''s Cloak,
+    Avenging Blade, Shogun''s Ofuda, Midgardian Mail, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -189,9 +189,9 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Amanita
     Charm, Berserker''s Shield, The Crusher, Shield Splitter, Hydra''s Lament, Runeforged
     Hammer, Heartseeker, Shield of the Phoenix, Mantle Of Discord, Stone of Binding,
-    Eye of the Storm, The Reaper, Spectral Armor, Erosion, Eye of Providence, Avenging
-    Blade, Draconic Scale, Leviathan''s Hide, Pharaoh''s Curse, Screeching Gargoyle,
-    Magi''s Cloak, Titan''s Bane, Golden Blade, Lernaean Bow.'
+    Eye of the Storm, The Reaper, Spectral Armor, Erosion, Golden Blade, Eye of Providence,
+    Avenging Blade, Draconic Scale, Leviathan''s Hide, Pharaoh''s Curse, Screeching
+    Gargoyle, Magi''s Cloak, Titan''s Bane, Lernaean Bow.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -253,14 +253,14 @@ builds:
     swap: Shield Splitter — physical protection
     swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, The Reaper, Berserker''s Shield,
     Runeforged Hammer, Shield Splitter, The Crusher, Eye of the Storm, Phoenix Feather,
-    Chandra''s Grace, Erosion, Yogi''s Necklace, Eye of Providence, Spectral Armor,
-    Hydra''s Lament, Mantle Of Discord, Draconic Scale, Stone of Binding, Avenging
-    Blade, Heartseeker, Leviathan''s Hide, Riptalon, Pharaoh''s Curse, Golden Blade.'
+    Chandra''s Grace, Riptalon, Golden Blade, Erosion, Yogi''s Necklace, Eye of Providence,
+    Spectral Armor, Hydra''s Lament, Mantle Of Discord, Draconic Scale, Stone of Binding,
+    Avenging Blade, Heartseeker, Leviathan''s Hide, Pharaoh''s Curse.'
   slot_scores:
     Berserker's Shield:
       total: 0.59
@@ -329,7 +329,7 @@ builds:
     Avenging Blade, Screeching Gargoyle, Void Shield, Heartseeker, Shield Splitter,
     The Reaper, Void Stone, Runeforged Hammer, Shield of the Phoenix, Titan''s Bane,
     Mantle Of Discord, Eye of the Storm, Erosion, Eye of Providence, Spectral Armor,
-    Tekko-Kagi, Hydra''s Lament, Draconic Scale, Leviathan''s Hide, Pharaoh''s Curse.'
+    Tekko-Kagi, Hydra''s Lament, Silverbranch Bow, Draconic Scale, Toxic Blade.'
   slot_scores:
     Stone of Binding:
       total: 0.6
@@ -530,15 +530,15 @@ builds:
     swap: Shifter's Shield — physical protection
     swap_item: Shifter's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Berserker''s Shield, Shield Splitter,
     The Crusher, Runeforged Hammer, Shield of the Phoenix, Eye of the Storm, Mantle
     Of Discord, Stone of Binding, Erosion, Eye of Providence, Draconic Scale, Spectral
-    Armor, Hydra''s Lament, Heartseeker, The Reaper, Leviathan''s Hide, Pharaoh''s
-    Curse, Magi''s Cloak, Avenging Blade, Shogun''s Ofuda, Midgardian Mail, Screeching
-    Gargoyle, Golden Blade.'
+    Armor, Hydra''s Lament, Golden Blade, Heartseeker, The Reaper, Leviathan''s Hide,
+    Pharaoh''s Curse, Magi''s Cloak, Avenging Blade, Shogun''s Ofuda, Midgardian Mail,
+    Screeching Gargoyle.'
   slot_scores:
     Berserker's Shield:
       total: 0.59

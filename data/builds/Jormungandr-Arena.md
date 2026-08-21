@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.63
+      total: 0.64
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.83
     Void Shield:
       total: 0.7
       efficiency: 0.47

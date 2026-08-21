@@ -93,8 +93,8 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -145,7 +145,7 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
+  - Stone of Binding
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.74
     Toxic Blade:
-      total: 0.62
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.87
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
@@ -340,7 +340,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Toxic Blade
+  - Kinetic Cuirass
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,11 +359,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Spectral Armor
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -418,11 +418,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
@@ -435,12 +441,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Spectral Armor:
-      total: 0.52
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Amanita Charm:
       total: 0.76
       efficiency: 0.65

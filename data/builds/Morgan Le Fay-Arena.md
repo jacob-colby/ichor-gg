@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Golden Blade
+  - Toxic Blade
   - Jotunn's Revenge
-  - Bragi's Harp
-  - The Crusher
   - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Bragi's Harp
-  - The Crusher
+  - Toxic Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -483,29 +483,29 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Toxic Blade:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Bragi's Harp:
-      total: 0.61
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
-    The Crusher:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
@@ -548,8 +548,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -1120,15 +1120,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Jotunn's Revenge
   - Pharaoh's Curse
-  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1145,12 +1145,18 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.6
-      efficiency: 0.46
+    Golden Blade:
+      total: 0.63
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Toxic Blade:
+      total: 0.66
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
@@ -1160,12 +1166,6 @@ builds:
     Pharaoh's Curse:
       total: 0.6
       efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-    Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -1186,15 +1186,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Rod of Tahuti
-  - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
-  - Pharaoh's Curse
+  - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1211,12 +1211,18 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Toxic Blade:
-      total: 0.57
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.8
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.72
@@ -1229,12 +1235,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Pharaoh's Curse:
-      total: 0.56
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Soul Gem:
       total: 0.78
       efficiency: 0.57

@@ -333,37 +333,43 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Jotunn's Revenge
+  - Golden Blade
+  - Toxic Blade
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
+  - Golden Blade
   - Stampede
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+    Golden Blade:
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.67
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
     Amanita Charm:
       total: 0.81
       efficiency: 0.65
@@ -388,25 +394,19 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Jotunn's Revenge
+  - Toxic Blade
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   - Triton's Conch
   flex_slots:
+  - Toxic Blade
   - Spectral Armor
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -423,12 +423,12 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.71
     Spectral Armor:
       total: 0.57
       efficiency: 0.57

@@ -470,7 +470,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
+  - Triton's Conch
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -489,11 +489,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
@@ -554,11 +554,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.71
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72

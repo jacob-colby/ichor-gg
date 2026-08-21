@@ -100,7 +100,7 @@ builds:
   - Silverbranch Bow
   - Rod of Tahuti
   flex_slots:
-  - Tyrfing
+  - Death Metal
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -118,12 +118,12 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Jotunn''s Revenge, Nimble Ring, Death Metal, Berserker''s
     Shield, Soul Gem, Gluttonous Grimoire, The Crusher, Lernaean Bow, Tekko-Kagi,
-    The Reaper, Dominance, Genji''s Guard, Spear of Desolation, Breastplate of Valor,
-    Hydra''s Lament, Golden Blade, Spear of the Magus, Heartseeker, Bragi''s Harp,
-    Runeforged Hammer, Deathbringer, Damaru, Obsidian Shard, Freya''s Tears, Amanita
-    Charm, Pharaoh''s Curse, Demon Blade, Kinetic Cuirass, Titan''s Bane, Bracer of
-    The Abyss, Shogun''s Ofuda, Musashi''s Dual Swords, Helm of Radiance, Eye of Providence,
-    Shield Splitter, Shield of the Phoenix, Doom Orb.'
+    The Reaper, Golden Blade, Dominance, Genji''s Guard, Spear of Desolation, Breastplate
+    of Valor, Hydra''s Lament, Spear of the Magus, Heartseeker, Bragi''s Harp, Runeforged
+    Hammer, Deathbringer, Damaru, Obsidian Shard, Freya''s Tears, Amanita Charm, Pharaoh''s
+    Curse, Demon Blade, Kinetic Cuirass, Titan''s Bane, Bracer of The Abyss, Shogun''s
+    Ofuda, Musashi''s Dual Swords, Helm of Radiance, Eye of Providence, Shield Splitter,
+    Shield of the Phoenix, Doom Orb.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -138,11 +138,11 @@ builds:
       pick: 0.0
       fit: 0.39
     Tyrfing:
-      total: 0.55
+      total: 0.56
       efficiency: 0.48
       win: 0.6
       pick: 0.72
-      fit: 0.49
+      fit: 0.55
     Death Metal:
       total: 0.55
       efficiency: 0.61
@@ -150,11 +150,11 @@ builds:
       pick: 0.0
       fit: 0.43
     Silverbranch Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
       win: 0.65
       pick: 0.39
-      fit: 0.38
+      fit: 0.44
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
@@ -193,11 +193,11 @@ builds:
     of Tahuti, Jotunn''s Revenge, Death Metal, Nimble Ring, Soul Gem, Gluttonous Grimoire,
     Berserker''s Shield, The Crusher, Spear of Desolation, Spear of the Magus, Hydra''s
     Lament, Genji''s Guard, Breastplate of Valor, Dominance, Obsidian Shard, Bragi''s
-    Harp, Lernaean Bow, Heartseeker, The Reaper, Runeforged Hammer, Tekko-Kagi, Doom
-    Orb, Ancient Signet, Helm of Radiance, The World Stone, Bracer of The Abyss, Golden
-    Blade, Chronos'' Pendant, Amanita Charm, Freya''s Tears, The Cosmic Horror, Deathbringer,
-    Damaru, Ethereal Staff, Kinetic Cuirass, Rod of Asclepius, Bancroft''s Talon,
-    Wish-Granting Pearl, Titan''s Bane.'
+    Harp, Lernaean Bow, Heartseeker, The Reaper, Runeforged Hammer, Golden Blade,
+    Tekko-Kagi, Doom Orb, Ancient Signet, Helm of Radiance, The World Stone, Bracer
+    of The Abyss, Chronos'' Pendant, Amanita Charm, Freya''s Tears, The Cosmic Horror,
+    Deathbringer, Damaru, Ethereal Staff, Kinetic Cuirass, Rod of Asclepius, Bancroft''s
+    Talon, Wish-Granting Pearl, Titan''s Bane.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -206,11 +206,11 @@ builds:
       pick: 0.0
       fit: 0.44
     Tyrfing:
-      total: 0.54
+      total: 0.55
       efficiency: 0.48
       win: 0.6
       pick: 0.72
-      fit: 0.44
+      fit: 0.48
     Hydra's Lament:
       total: 0.52
       efficiency: 0.54
@@ -264,12 +264,12 @@ builds:
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Jotunn''s Revenge, Death Metal, Nimble Ring, Berserker''s
     Shield, Soul Gem, Gluttonous Grimoire, The Crusher, Lernaean Bow, The Reaper,
-    Tekko-Kagi, Genji''s Guard, Spear of Desolation, Breastplate of Valor, Dominance,
-    Hydra''s Lament, Spear of the Magus, Deathbringer, Damaru, Heartseeker, Golden
-    Blade, Runeforged Hammer, Obsidian Shard, Bragi''s Harp, Amanita Charm, Freya''s
-    Tears, Demon Blade, Kinetic Cuirass, Pharaoh''s Curse, Musashi''s Dual Swords,
-    Titan''s Bane, Bracer of The Abyss, Shogun''s Ofuda, Helm of Radiance, Eye of
-    Providence, Shield of the Phoenix, Shield Splitter, Doom Orb.'
+    Tekko-Kagi, Golden Blade, Genji''s Guard, Spear of Desolation, Breastplate of
+    Valor, Dominance, Hydra''s Lament, Spear of the Magus, Deathbringer, Damaru, Heartseeker,
+    Runeforged Hammer, Obsidian Shard, Bragi''s Harp, Amanita Charm, Freya''s Tears,
+    Demon Blade, Kinetic Cuirass, Pharaoh''s Curse, Musashi''s Dual Swords, Titan''s
+    Bane, Bracer of The Abyss, Shogun''s Ofuda, Helm of Radiance, Eye of Providence,
+    Shield of the Phoenix, Shield Splitter, Doom Orb.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
@@ -278,11 +278,11 @@ builds:
       pick: 0.0
       fit: 0.38
     Tyrfing:
-      total: 0.54
+      total: 0.55
       efficiency: 0.48
       win: 0.6
       pick: 0.72
-      fit: 0.46
+      fit: 0.52
     Death Metal:
       total: 0.55
       efficiency: 0.61
@@ -290,11 +290,11 @@ builds:
       pick: 0.0
       fit: 0.46
     Silverbranch Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
       win: 0.65
       pick: 0.39
-      fit: 0.36
+      fit: 0.42
     Damaru:
       total: 0.51
       efficiency: 0.5
@@ -312,14 +312,14 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Tyrfing
   - Death Metal
-  - Spear of Desolation
   - Silverbranch Bow
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Spear of Desolation
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -338,10 +338,10 @@ builds:
     Death Metal, Spear of Desolation, The Crusher, Berserker''s Shield, Spear of the
     Magus, Obsidian Shard, The Reaper, Genji''s Guard, Breastplate of Valor, Tekko-Kagi,
     Hydra''s Lament, Heartseeker, Lernaean Bow, Bragi''s Harp, Freya''s Tears, Doom
-    Orb, The Cosmic Horror, Runeforged Hammer, Chronos'' Pendant, The World Stone,
-    Titan''s Bane, Amanita Charm, Helm of Radiance, Bracer of The Abyss, Golden Blade,
+    Orb, Golden Blade, The Cosmic Horror, Runeforged Hammer, Chronos'' Pendant, The
+    World Stone, Titan''s Bane, Amanita Charm, Helm of Radiance, Bracer of The Abyss,
     Dreamer''s Idol, Kinetic Cuirass, Deathbringer, Damaru, Ancient Signet, Ethereal
-    Staff, Shield of the Phoenix, Rod of Asclepius, Pharaoh''s Curse.'
+    Staff, Shield of the Phoenix, Rod of Asclepius.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -349,24 +349,24 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.46
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.6
+      pick: 0.72
+      fit: 0.45
     Death Metal:
       total: 0.55
       efficiency: 0.61
       win: 0.6
       pick: 0.0
       fit: 0.43
-    Spear of Desolation:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.6
-      pick: 0.0
-      fit: 0.46
     Silverbranch Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
       win: 0.65
       pick: 0.39
-      fit: 0.37
+      fit: 0.41
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -410,11 +410,11 @@ builds:
     Revenge, Shield of the Phoenix, The Reaper, Kinetic Cuirass, Gluttonous Grimoire,
     Ethereal Staff, Rod of Asclepius, Nimble Ring, Death Metal, Genji''s Guard, Freya''s
     Tears, Breastplate of Valor, Pharaoh''s Curse, Runeforged Hammer, Blood-Bound
-    Book, Chandra''s Grace, The Crusher, Yogi''s Necklace, Phoenix Feather, Shogun''s
-    Ofuda, Shifter''s Shield, Golden Blade, Bancroft''s Talon, Shield Splitter, Lernaean
+    Book, Golden Blade, Chandra''s Grace, The Crusher, Yogi''s Necklace, Phoenix Feather,
+    Shogun''s Ofuda, Shifter''s Shield, Bancroft''s Talon, Shield Splitter, Lernaean
     Bow, Mantle Of Discord, Stone of Binding, Spectral Armor, Spear of the Magus,
     Hydra''s Lament, Spear of Desolation, Eye of the Storm, Lifebinder, Helm of Radiance,
-    Erosion, Leviathan''s Hide, Daybreak Gavel.'
+    Erosion.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -435,11 +435,11 @@ builds:
       pick: 0.0
       fit: 0.42
     Silverbranch Bow:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
       win: 0.65
       pick: 0.39
-      fit: 0.26
+      fit: 0.3
     Amanita Charm:
       total: 0.59
       efficiency: 0.65
@@ -483,8 +483,8 @@ builds:
     The Crusher, Nimble Ring, Death Metal, Berserker''s Shield, The Reaper, Tekko-Kagi,
     Spear of Desolation, Spear of the Magus, Heartseeker, Obsidian Shard, Avenging
     Blade, Screeching Gargoyle, Stone of Binding, Titan''s Bane, Lernaean Bow, Genji''s
-    Guard, Breastplate of Valor, Hydra''s Lament, Doom Orb, The Cosmic Horror, Runeforged
-    Hammer, The World Stone, Golden Blade, Amanita Charm, Dreamer''s Idol, Freya''s
+    Guard, Breastplate of Valor, Golden Blade, Hydra''s Lament, Doom Orb, The Cosmic
+    Horror, Runeforged Hammer, The World Stone, Amanita Charm, Dreamer''s Idol, Freya''s
     Tears, Kinetic Cuirass, Deathbringer, Damaru, Void Shield, Bragi''s Harp, Pendulum
     Blade, Pharaoh''s Curse, Avatar''s Parashu.'
   slot_scores:
@@ -495,17 +495,17 @@ builds:
       pick: 0.0
       fit: 0.5
     Tyrfing:
-      total: 0.54
+      total: 0.55
       efficiency: 0.48
       win: 0.6
       pick: 0.72
-      fit: 0.42
+      fit: 0.47
     Silverbranch Bow:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
       win: 0.65
       pick: 0.39
-      fit: 0.49
+      fit: 0.54
     The Crusher:
       total: 0.55
       efficiency: 0.57
@@ -600,22 +600,22 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Book of Thoth
+  - Genji's Guard
   - Jotunn's Revenge
-  - Transcendence
   - Spear of Desolation
+  - Silverbranch Bow
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Spear of Desolation
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -628,35 +628,35 @@ builds:
     Death Metal, Berserker''s Shield, Gluttonous Grimoire, Hydra''s Lament, Freya''s
     Tears, Chronos'' Pendant, The Crusher, Shield of the Phoenix, Spear of the Magus,
     Lernaean Bow, Screeching Gargoyle, Obsidian Shard, The Reaper, Arondight, Gem
-    of Focus, Amanita Charm, Tekko-Kagi, Kinetic Cuirass, Runeforged Hammer, Bragi''s
-    Harp, Totem of Death, Heartseeker, Bracer of The Abyss, Golden Blade, Helm of
-    Radiance, Pharaoh''s Curse, Pendulum Blade, Deathbringer, Damaru, Eye of Providence,
+    of Focus, Golden Blade, Amanita Charm, Tekko-Kagi, Kinetic Cuirass, Runeforged
+    Hammer, Bragi''s Harp, Totem of Death, Heartseeker, Bracer of The Abyss, Helm
+    of Radiance, Pharaoh''s Curse, Pendulum Blade, Deathbringer, Damaru, Eye of Providence,
     Chandra''s Grace, Doom Orb.'
   slot_scores:
-    Book of Thoth:
-      total: 0.46
-      efficiency: 0.51
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.66
       win: 0.6
       pick: 0.0
-      fit: 0.08
+      fit: 0.28
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
       win: 0.6
       pick: 0.0
       fit: 0.48
-    Transcendence:
-      total: 0.47
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.0
-      fit: 0.08
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
       win: 0.6
       pick: 0.0
       fit: 0.48
+    Silverbranch Bow:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.65
+      pick: 0.39
+      fit: 0.34
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
@@ -698,8 +698,8 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Nimble Ring, Death
     Metal, Berserker''s Shield, Soul Gem, Gluttonous Grimoire, The Crusher, Lernaean
-    Bow, Tekko-Kagi, The Reaper, Genji''s Guard, Spear of Desolation, Breastplate
-    of Valor, Hydra''s Lament, Golden Blade, Spear of the Magus, Heartseeker, Bragi''s
+    Bow, Tekko-Kagi, The Reaper, Golden Blade, Genji''s Guard, Spear of Desolation,
+    Breastplate of Valor, Hydra''s Lament, Spear of the Magus, Heartseeker, Bragi''s
     Harp, Runeforged Hammer, Deathbringer, Damaru, Obsidian Shard, Dominance, Freya''s
     Tears, Amanita Charm, Pharaoh''s Curse, Demon Blade, Kinetic Cuirass, Titan''s
     Bane, Bracer of The Abyss, Shogun''s Ofuda, Musashi''s Dual Swords, Helm of Radiance,

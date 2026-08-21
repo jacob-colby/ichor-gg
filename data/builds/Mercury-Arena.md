@@ -6,19 +6,19 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
+  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Avatar's Parashu
   flex_slots:
-  - Avatar's Parashu
-  - Pendulum Blade
+  - Toxic Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -26,11 +26,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.63
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Toxic Blade:
+      total: 0.65
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
     Jotunn's Revenge:
       total: 0.78
       efficiency: 0.72
@@ -43,12 +55,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.92
-    Pendulum Blade:
-      total: 0.63
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
     The Crusher:
       total: 0.67
       efficiency: 0.57
@@ -58,12 +64,6 @@ builds:
     Heartseeker:
       total: 0.67
       efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.87
-    Avatar's Parashu:
-      total: 0.66
-      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -145,8 +145,8 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
+  - Heartseeker
   - Pendulum Blade
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.71
       efficiency: 0.72
@@ -275,8 +275,8 @@ builds:
   - Heartseeker
   - Avatar's Parashu
   flex_slots:
+  - Heartseeker
   - Avatar's Parashu
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
+      total: 0.72
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.98
     Jotunn's Revenge:
       total: 0.8
       efficiency: 0.72
@@ -463,19 +463,19 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Golden Blade
+  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Avatar's Parashu
   flex_slots:
-  - Avatar's Parashu
-  - Pendulum Blade
+  - Toxic Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -483,11 +483,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.63
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Toxic Blade:
+      total: 0.65
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
     Jotunn's Revenge:
       total: 0.78
       efficiency: 0.72
@@ -500,12 +512,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.92
-    Pendulum Blade:
-      total: 0.63
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
     The Crusher:
       total: 0.67
       efficiency: 0.57
@@ -515,12 +521,6 @@ builds:
     Heartseeker:
       total: 0.67
       efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.87
-    Avatar's Parashu:
-      total: 0.66
-      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.87

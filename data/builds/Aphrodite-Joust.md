@@ -470,7 +470,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
+  - Triton's Conch
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
@@ -489,11 +489,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Rod of Tahuti
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Triton's Conch
   - Erosion
-  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -548,23 +548,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.57
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86

@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Toxic Blade
   - Spectral Armor
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -90,14 +90,20 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Glorious Pridwen — physical protection
-    swap_item: Glorious Pridwen
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
     Kinetic Cuirass:
       total: 0.68
       efficiency: 0.6
@@ -110,12 +116,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
-    Void Shield:
-      total: 0.61
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
     Spectral Armor:
       total: 0.62
       efficiency: 0.57
@@ -145,7 +145,7 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Toxic Blade
+  - Stone of Binding
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.74
     Toxic Blade:
-      total: 0.62
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.9
     Void Shield:
       total: 0.69
       efficiency: 0.47
@@ -340,7 +340,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Toxic Blade
+  - Kinetic Cuirass
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,11 +359,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.76
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Triton's Conch
   flex_slots:
+  - Kinetic Cuirass
   - Triton's Conch
-  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -418,11 +418,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.57
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
@@ -435,12 +441,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Spectral Armor:
-      total: 0.52
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Amanita Charm:
       total: 0.76
       efficiency: 0.65

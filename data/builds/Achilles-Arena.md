@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
+  - Stampede
   - Spectral Armor
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -23,26 +23,26 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Void Shield:
-      total: 0.6
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
     Spectral Armor:
       total: 0.6
       efficiency: 0.57
@@ -210,7 +210,7 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
+  - Jotunn's Revenge
   - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.78
     Toxic Blade:
-      total: 0.65
+      total: 0.69
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.92
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.72
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
+  - Stampede
   - Spectral Armor
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -415,26 +415,26 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Void Shield:
-      total: 0.6
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
     Spectral Armor:
       total: 0.6
       efficiency: 0.57

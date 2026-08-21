@@ -119,8 +119,8 @@ builds:
     this god: Amanita Charm, Kinetic Cuirass, Jotunn''s Revenge, Freya''s Tears, Berserker''s
     Shield, Shield Splitter, Runeforged Hammer, Eye of the Storm, Shield of the Phoenix,
     Mantle Of Discord, Erosion, Stone of Binding, Eye of Providence, Draconic Scale,
-    The Crusher, Spectral Armor, Hydra''s Lament, Leviathan''s Hide, Magi''s Cloak,
-    Pharaoh''s Curse, Avenging Blade, Golden Blade, Shogun''s Ofuda, Midgardian Mail,
+    The Crusher, Spectral Armor, Hydra''s Lament, Golden Blade, Leviathan''s Hide,
+    Magi''s Cloak, Pharaoh''s Curse, Avenging Blade, Shogun''s Ofuda, Midgardian Mail,
     Screeching Gargoyle, Wyrmskin Hide.'
   slot_scores:
     Genji's Guard:
@@ -185,15 +185,15 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Glorious Pridwen, Shield of the Phoenix, Jotunn''s Revenge,
     Kinetic Cuirass, Berserker''s Shield, Freya''s Tears, Runeforged Hammer, Shield
     Splitter, The Reaper, Eye of the Storm, Phoenix Feather, Chandra''s Grace, Erosion,
-    Eye of Providence, Draconic Scale, Spectral Armor, Hydra''s Lament, The Crusher,
-    Yogi''s Necklace, Avenging Blade, Mantle Of Discord, Stone of Binding, Leviathan''s
-    Hide, Golden Blade, Pharaoh''s Curse, Shogun''s Ofuda.'
+    Golden Blade, Eye of Providence, Draconic Scale, Spectral Armor, Hydra''s Lament,
+    The Crusher, Yogi''s Necklace, Avenging Blade, Mantle Of Discord, Stone of Binding,
+    Leviathan''s Hide, Pharaoh''s Curse, Shogun''s Ofuda.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -263,7 +263,7 @@ builds:
     Heartseeker, Void Shield, Shield Splitter, The Reaper, Void Stone, Runeforged
     Hammer, Shield of the Phoenix, Titan''s Bane, Mantle Of Discord, Eye of the Storm,
     Erosion, Hydra''s Lament, Tekko-Kagi, Spectral Armor, Eye of Providence, Draconic
-    Scale, Leviathan''s Hide, Pharaoh''s Curse.'
+    Scale, Silverbranch Bow, Leviathan''s Hide.'
   slot_scores:
     Stone of Binding:
       total: 0.53
@@ -472,9 +472,9 @@ builds:
     Underrated for this god: Amanita Charm, Kinetic Cuirass, Jotunn''s Revenge, Berserker''s
     Shield, Freya''s Tears, Shield Splitter, Runeforged Hammer, Eye of the Storm,
     Shield of the Phoenix, Mantle Of Discord, Erosion, Stone of Binding, Eye of Providence,
-    Draconic Scale, The Crusher, Spectral Armor, Hydra''s Lament, Leviathan''s Hide,
-    Magi''s Cloak, Pharaoh''s Curse, Avenging Blade, Golden Blade, Shogun''s Ofuda,
-    Midgardian Mail, Screeching Gargoyle, Wyrmskin Hide.'
+    Draconic Scale, The Crusher, Spectral Armor, Hydra''s Lament, Golden Blade, Leviathan''s
+    Hide, Magi''s Cloak, Pharaoh''s Curse, Avenging Blade, Shogun''s Ofuda, Midgardian
+    Mail, Screeching Gargoyle, Wyrmskin Hide.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -536,15 +536,15 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Erosion, Spectral Armor, Shield of the
     Phoenix, Jotunn''s Revenge, Berserker''s Shield, Pharaoh''s Curse, Shogun''s Ofuda,
     Doublet of Binding, Void Shield, Stampede, Freya''s Tears, Runeforged Hammer,
     Void Stone, Shield Splitter, Eye of the Storm, Eye of Providence, Draconic Scale,
-    The Reaper, Sanguine Lash, Mantle Of Discord, Stone of Binding, Phoenix Feather,
-    Avenging Blade, Mystical Mail, Leviathan''s Hide.'
+    Golden Blade, The Reaper, Sanguine Lash, Mantle Of Discord, Stone of Binding,
+    Phoenix Feather, Avenging Blade, Mystical Mail.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -607,15 +607,15 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Jotunn''s Revenge, Kinetic Cuirass,
     Erosion, Spectral Armor, Berserker''s Shield, Pharaoh''s Curse, Shogun''s Ofuda,
     Freya''s Tears, Doublet of Binding, Void Shield, Runeforged Hammer, Stampede,
     Shield Splitter, The Reaper, Void Stone, Eye of the Storm, Phoenix Feather, Chandra''s
-    Grace, Umbral Link, Eye of Providence, Sanguine Lash, Draconic Scale, Hydra''s
-    Lament, The Crusher, Yogi''s Necklace.'
+    Grace, Umbral Link, Golden Blade, Eye of Providence, Sanguine Lash, Draconic Scale,
+    Hydra''s Lament, The Crusher.'
   slot_scores:
     Breastplate of Valor:
       total: 0.55
@@ -685,7 +685,7 @@ builds:
     Cuirass, Spectral Armor, The Reaper, Erosion, Stone of Binding, Shield of the
     Phoenix, Berserker''s Shield, The Crusher, Avenging Blade, Pharaoh''s Curse, Shogun''s
     Ofuda, Doublet of Binding, Stampede, Screeching Gargoyle, Freya''s Tears, Runeforged
-    Hammer, Heartseeker, Shield Splitter, Eye of the Storm, Riptalon, Titan''s Bane,
+    Hammer, Heartseeker, Riptalon, Shield Splitter, Eye of the Storm, Titan''s Bane,
     Mantle Of Discord, Sanguine Lash.'
   slot_scores:
     Breastplate of Valor:
@@ -820,8 +820,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Amanita Charm, Glorious Pridwen, Shield
     of the Phoenix, Jotunn''s Revenge, Freya''s Tears, Kinetic Cuirass, Spectral Armor,
@@ -891,15 +891,15 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Kinetic Cuirass, Erosion, Spectral Armor,
     Shield of the Phoenix, Jotunn''s Revenge, Berserker''s Shield, Pharaoh''s Curse,
     Shogun''s Ofuda, Doublet of Binding, Void Shield, Stampede, Freya''s Tears, Runeforged
     Hammer, Void Stone, Shield Splitter, Eye of the Storm, Eye of Providence, Draconic
-    Scale, The Reaper, Sanguine Lash, Mantle Of Discord, Stone of Binding, Phoenix
-    Feather, Avenging Blade, Mystical Mail, Leviathan''s Hide.'
+    Scale, Golden Blade, The Reaper, Sanguine Lash, Mantle Of Discord, Stone of Binding,
+    Phoenix Feather, Avenging Blade, Mystical Mail.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55

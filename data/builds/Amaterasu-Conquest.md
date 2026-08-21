@@ -93,25 +93,25 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
+  - Golden Blade
   - Berserker's Shield
-  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -125,6 +125,12 @@ builds:
     Ring, Doublet of Binding, Spear of Desolation, Void Shield, Stampede, Prophetic
     Cloak, Ancile, Ethereal Staff.'
   slot_scores:
+    Golden Blade:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.64
+      pick: 0.38
+      fit: 0.46
     Berserker's Shield:
       total: 0.55
       efficiency: 0.68
@@ -143,12 +149,6 @@ builds:
       win: 0.67
       pick: 0.19
       fit: 0.67
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.56
-      pick: 0.0
-      fit: 0.53
     Shifter's Shield:
       total: 0.59
       efficiency: 0.55
@@ -174,8 +174,8 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - Golden Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -187,8 +187,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Rod of Tahuti, Jotunn''s Revenge,
     Soul Gem, Ethereal Staff, Freya''s Tears, Rod of Asclepius, Runeforged Hammer,
@@ -196,15 +196,15 @@ builds:
     Grimoire, Eye of the Storm, Chandra''s Grace, Phoenix Feather, Erosion, Eye of
     Providence, Yogi''s Necklace, Spectral Armor, Draconic Scale, Hydra''s Lament,
     Mantle Of Discord, Stone of Binding, Death Metal, The Crusher, Avenging Blade,
-    Leviathan''s Hide, Pharaoh''s Curse, Glorious Pridwen, Lifebinder, Midgardian
+    Leviathan''s Hide, Pharaoh''s Curse, Glorious Pridwen, Lifebinder, Riptalon, Midgardian
     Mail, Helm of Radiance, Blood-Bound Book, Daybreak Gavel.'
   slot_scores:
     Golden Blade:
-      total: 0.55
+      total: 0.57
       efficiency: 0.52
       win: 0.64
       pick: 0.38
-      fit: 0.43
+      fit: 0.52
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
@@ -268,8 +268,8 @@ builds:
     Spear of the Magus, Heartseeker, Shield Splitter, The Reaper, Void Stone, Obsidian
     Shard, Runeforged Hammer, Shield of the Phoenix, Mantle Of Discord, Titan''s Bane,
     Eye of the Storm, Death Metal, Erosion, Hydra''s Lament, Spectral Armor, Eye of
-    Providence, Tekko-Kagi, Draconic Scale, Helm of Radiance, Doom Orb, The Cosmic
-    Horror, Nimble Ring, Leviathan''s Hide, Pharaoh''s Curse, The World Stone.'
+    Providence, Silverbranch Bow, Tekko-Kagi, Draconic Scale, Helm of Radiance, Doom
+    Orb, The Cosmic Horror, Toxic Blade, Nimble Ring, Leviathan''s Hide.'
   slot_scores:
     Stone of Binding:
       total: 0.55
@@ -463,8 +463,8 @@ builds:
   - Gluttonous Grimoire
   - Shifter's Shield
   flex_slots:
-  - Berserker's Shield
   - Golden Blade
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -490,11 +490,11 @@ builds:
     Helm of Darkness, Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.52
       win: 0.64
       pick: 0.38
-      fit: 0.26
+      fit: 0.32
     Berserker's Shield:
       total: 0.53
       efficiency: 0.68
@@ -536,8 +536,8 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
+  - Amanita Charm
   - Berserker's Shield
-  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -560,14 +560,14 @@ builds:
     Hydra''s Lament, Ethereal Staff, Rod of Asclepius, Heartseeker, Erosion, Spectral
     Armor, The Reaper, Eye of Providence, Draconic Scale, Doom Orb, Jade Scepter,
     The Cosmic Horror, Leviathan''s Hide, Pharaoh''s Curse, Wish-Granting Pearl, Avenging
-    Blade, Chronos'' Pendant, Magi''s Cloak.'
+    Blade, Chronos'' Pendant.'
   slot_scores:
     Golden Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.52
       win: 0.64
       pick: 0.38
-      fit: 0.29
+      fit: 0.36
     Berserker's Shield:
       total: 0.54
       efficiency: 0.68

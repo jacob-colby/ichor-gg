@@ -463,19 +463,19 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Golden Blade
+  - Toxic Blade
   - Jotunn's Revenge
-  - Stampede
   - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Shogun's Ofuda
-  - Stampede
+  - Golden Blade
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -483,32 +483,32 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Toxic Blade:
+      total: 0.61
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Stampede:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Pharaoh's Curse:
       total: 0.57
       efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
-    Shogun's Ofuda:
-      total: 0.56
-      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Rod of Tahuti
-  - Erosion
   - Stampede
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Toxic Blade
   - Stampede
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -548,11 +548,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
@@ -565,12 +571,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Erosion:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Stampede:
       total: 0.56
       efficiency: 0.51

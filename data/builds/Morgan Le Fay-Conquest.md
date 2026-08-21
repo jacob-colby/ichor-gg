@@ -607,12 +607,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Death Metal,
     The Crusher, Gluttonous Grimoire, Nimble Ring, Spear of the Magus, Heartseeker,
-    Bragi''s Harp, The Reaper, Hydra''s Lament, Tekko-Kagi, Lernaean Bow, Runeforged
-    Hammer, Titan''s Bane, Berserker''s Shield, Tyrfing, Doom Orb, The Cosmic Horror,
-    Golden Blade, Ethereal Staff, The World Stone, Breastplate of Valor, Pendulum
-    Blade, Dreamer''s Idol, Chronos'' Pendant, Helm of Radiance, Arondight, Shield
-    Splitter, Dominance, Avatar''s Parashu, Triton''s Conch, Avenging Blade, Bracer
-    of The Abyss, Ancient Signet, Silverbranch Bow, Rod of Asclepius, Transcendence.'
+    Tyrfing, Bragi''s Harp, The Reaper, Golden Blade, Hydra''s Lament, Tekko-Kagi,
+    Lernaean Bow, Runeforged Hammer, Titan''s Bane, Berserker''s Shield, Silverbranch
+    Bow, Riptalon, Doom Orb, The Cosmic Horror, Ethereal Staff, The World Stone, Breastplate
+    of Valor, Pendulum Blade, Dreamer''s Idol, Chronos'' Pendant, Helm of Radiance,
+    Arondight, Shield Splitter, Dominance, Avatar''s Parashu, Triton''s Conch, Avenging
+    Blade, Bracer of The Abyss, Ancient Signet, Toxic Blade.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -674,17 +674,17 @@ builds:
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Soul Gem, Jotunn''s Revenge, Gluttonous
     Grimoire, Death Metal, The Crusher, Spear of the Magus, Heartseeker, The Reaper,
     Nimble Ring, Hydra''s Lament, Doom Orb, The Cosmic Horror, The World Stone, Titan''s
     Bane, Bragi''s Harp, Dreamer''s Idol, Ethereal Staff, Runeforged Hammer, Chronos''
-    Pendant, Tekko-Kagi, Helm of Radiance, Pendulum Blade, Breastplate of Valor, Ancient
-    Signet, Triton''s Conch, Rod of Asclepius, Avatar''s Parashu, Arondight, Lernaean
-    Bow, Gem of Focus, Berserker''s Shield, Shield Splitter, Jade Scepter, Freya''s
-    Tears, Wish-Granting Pearl, Avenging Blade, Blood-Bound Book.'
+    Pendant, Tyrfing, Tekko-Kagi, Helm of Radiance, Golden Blade, Pendulum Blade,
+    Breastplate of Valor, Silverbranch Bow, Ancient Signet, Triton''s Conch, Rod of
+    Asclepius, Riptalon, Avatar''s Parashu, Arondight, Lernaean Bow, Gem of Focus,
+    Berserker''s Shield, Shield Splitter, Jade Scepter, Freya''s Tears.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -1313,12 +1313,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Soul Gem, Jotunn''s Revenge, Shield of the
     Phoenix, Gluttonous Grimoire, Amanita Charm, Ethereal Staff, The Reaper, Berserker''s
-    Shield, The Crusher, Runeforged Hammer, Rod of Asclepius, Death Metal, Nimble
-    Ring, Kinetic Cuirass, Golden Blade, Heartseeker, Spear of the Magus, Hydra''s
-    Lament, Eye of the Storm, Avenging Blade, Tekko-Kagi, Lernaean Bow, Riptalon,
-    Bragi''s Harp, Titan''s Bane, Pharaoh''s Curse, Breastplate of Valor, Chandra''s
-    Grace, Shield Splitter, Triton''s Conch, Freya''s Tears, Tyrfing, Blood-Bound
-    Book, Shogun''s Ofuda, Yogi''s Necklace, Jade Scepter, Wish-Granting Pearl.'
+    Shield, Golden Blade, The Crusher, Runeforged Hammer, Rod of Asclepius, Death
+    Metal, Riptalon, Nimble Ring, Kinetic Cuirass, Heartseeker, Spear of the Magus,
+    Hydra''s Lament, Tyrfing, Eye of the Storm, Avenging Blade, Tekko-Kagi, Lernaean
+    Bow, Toxic Blade, Bragi''s Harp, Titan''s Bane, Pharaoh''s Curse, Silverbranch
+    Bow, Breastplate of Valor, Chandra''s Grace, Shield Splitter, Triton''s Conch,
+    Freya''s Tears, Blood-Bound Book, Shogun''s Ofuda, Yogi''s Necklace.'
   slot_scores:
     Book of Thoth:
       total: 0.45
@@ -1387,12 +1387,11 @@ builds:
     + fit + win/pick). Underrated for this god: Soul Gem, Jotunn''s Revenge, Gluttonous
     Grimoire, Ethereal Staff, Shield of the Phoenix, Amanita Charm, Rod of Asclepius,
     The Reaper, Death Metal, The Crusher, Runeforged Hammer, Spear of the Magus, Berserker''s
-    Shield, Kinetic Cuirass, Nimble Ring, Heartseeker, Hydra''s Lament, Eye of the
-    Storm, Blood-Bound Book, Jade Scepter, Triton''s Conch, Wish-Granting Pearl, Avenging
-    Blade, Doom Orb, The Cosmic Horror, Chandra''s Grace, Golden Blade, Breastplate
+    Shield, Kinetic Cuirass, Golden Blade, Nimble Ring, Riptalon, Heartseeker, Hydra''s
+    Lament, Eye of the Storm, Blood-Bound Book, Jade Scepter, Triton''s Conch, Wish-Granting
+    Pearl, Avenging Blade, Doom Orb, The Cosmic Horror, Chandra''s Grace, Breastplate
     of Valor, The World Stone, Bancroft''s Talon, Titan''s Bane, Helm of Radiance,
-    Freya''s Tears, Alchemist Coat, Chronos'' Pendant, Yogi''s Necklace, Dreamer''s
-    Idol.'
+    Freya''s Tears, Alchemist Coat, Chronos'' Pendant, Yogi''s Necklace.'
   slot_scores:
     Book of Thoth:
       total: 0.46

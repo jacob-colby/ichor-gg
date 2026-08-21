@@ -120,8 +120,8 @@ builds:
     Shield, Shield Splitter, Runeforged Hammer, Shield of the Phoenix, Eye of the
     Storm, Gluttonous Grimoire, Mantle Of Discord, Erosion, Stone of Binding, Eye
     of Providence, The Crusher, Death Metal, Hydra''s Lament, Spectral Armor, Freya''s
-    Tears, Leviathan''s Hide, Pharaoh''s Curse, Avenging Blade, Soul Gem, Helm of
-    Radiance, Magi''s Cloak, Golden Blade, Shogun''s Ofuda, Midgardian Mail, Screeching
+    Tears, Golden Blade, Leviathan''s Hide, Pharaoh''s Curse, Avenging Blade, Soul
+    Gem, Helm of Radiance, Magi''s Cloak, Shogun''s Ofuda, Midgardian Mail, Screeching
     Gargoyle, Nimble Ring, Doublet of Binding, Heartseeker, Wyrmskin Hide, Ethereal
     Staff, Spear of Desolation, Void Shield, Stampede, Hide of the Nemean Lion.'
   slot_scores:
@@ -187,17 +187,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Yogi''s Necklace, Shield of the Phoenix, Rod of Tahuti,
     Kinetic Cuirass, Jotunn''s Revenge, Berserker''s Shield, Soul Gem, Ethereal Staff,
     Rod of Asclepius, Runeforged Hammer, The Reaper, Shield Splitter, Gluttonous Grimoire,
     Eye of the Storm, Phoenix Feather, Chandra''s Grace, Erosion, Eye of Providence,
-    Spectral Armor, Mantle Of Discord, Stone of Binding, The Crusher, Death Metal,
-    Hydra''s Lament, Avenging Blade, Leviathan''s Hide, Pharaoh''s Curse, Freya''s
-    Tears, Golden Blade, Glorious Pridwen, Lifebinder, Shogun''s Ofuda, Midgardian
-    Mail, Helm of Radiance, Blood-Bound Book, Daybreak Gavel, Hide of the Nemean Lion.'
+    Golden Blade, Spectral Armor, Mantle Of Discord, Stone of Binding, The Crusher,
+    Death Metal, Hydra''s Lament, Avenging Blade, Leviathan''s Hide, Pharaoh''s Curse,
+    Freya''s Tears, Glorious Pridwen, Lifebinder, Shogun''s Ofuda, Midgardian Mail,
+    Helm of Radiance, Riptalon, Blood-Bound Book, Daybreak Gavel.'
   slot_scores:
     Yogi's Necklace:
       total: 0.58
@@ -268,8 +268,8 @@ builds:
     the Magus, Void Shield, The Reaper, Void Stone, Obsidian Shard, Shield Splitter,
     Runeforged Hammer, Shield of the Phoenix, Titan''s Bane, Mantle Of Discord, Eye
     of the Storm, Death Metal, Hydra''s Lament, Tekko-Kagi, Spectral Armor, Erosion,
-    Eye of Providence, Doom Orb, The Cosmic Horror, Helm of Radiance, Freya''s Tears,
-    The World Stone, Nimble Ring, Leviathan''s Hide, Pharaoh''s Curse.'
+    Silverbranch Bow, Eye of Providence, Doom Orb, The Cosmic Horror, Helm of Radiance,
+    Toxic Blade, Freya''s Tears, The World Stone, Nimble Ring.'
   slot_scores:
     Stone of Binding:
       total: 0.53
@@ -481,12 +481,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Berserker''s
     Shield, Amanita Charm, Kinetic Cuirass, The Crusher, Gluttonous Grimoire, Shield
-    Splitter, Runeforged Hammer, Soul Gem, Death Metal, Eye of the Storm, Hydra''s
-    Lament, Heartseeker, Shield of the Phoenix, The Reaper, Golden Blade, Nimble Ring,
+    Splitter, Runeforged Hammer, Golden Blade, Soul Gem, Death Metal, Eye of the Storm,
+    Hydra''s Lament, Heartseeker, Shield of the Phoenix, The Reaper, Nimble Ring,
     Mantle Of Discord, Stone of Binding, Pharaoh''s Curse, Lernaean Bow, Tekko-Kagi,
-    Spear of Desolation, Avenging Blade, Spear of the Magus, Spectral Armor, Erosion,
-    Shogun''s Ofuda, Titan''s Bane, Eye of Providence, Helm of Radiance, Obsidian
-    Shard, Freya''s Tears, Tyrfing, Leviathan''s Hide, Magi''s Cloak, Screeching Gargoyle.'
+    Spear of Desolation, Tyrfing, Avenging Blade, Spear of the Magus, Spectral Armor,
+    Erosion, Shogun''s Ofuda, Titan''s Bane, Eye of Providence, Helm of Radiance,
+    Obsidian Shard, Freya''s Tears, Leviathan''s Hide, Silverbranch Bow, Magi''s Cloak.'
   slot_scores:
     Book of Thoth:
       total: 0.42
@@ -557,9 +557,9 @@ builds:
     Splitter, Runeforged Hammer, Helm of Radiance, Obsidian Shard, Nimble Ring, Shield
     of the Phoenix, Eye of the Storm, Mantle Of Discord, Stone of Binding, Ethereal
     Staff, Hydra''s Lament, Rod of Asclepius, Heartseeker, The Reaper, Spectral Armor,
-    Erosion, Eye of Providence, Doom Orb, Jade Scepter, The Cosmic Horror, Wish-Granting
-    Pearl, Avenging Blade, Freya''s Tears, Leviathan''s Hide, Chronos'' Pendant, Pharaoh''s
-    Curse, The World Stone.'
+    Erosion, Eye of Providence, Golden Blade, Doom Orb, Jade Scepter, The Cosmic Horror,
+    Wish-Granting Pearl, Avenging Blade, Freya''s Tears, Leviathan''s Hide, Chronos''
+    Pendant, Pharaoh''s Curse.'
   slot_scores:
     Book of Thoth:
       total: 0.44
@@ -628,8 +628,8 @@ builds:
     Revenge, Berserker''s Shield, Freya''s Tears, Shield Splitter, Runeforged Hammer,
     Shield of the Phoenix, Eye of the Storm, Gluttonous Grimoire, Mantle Of Discord,
     Erosion, Stone of Binding, Eye of Providence, The Crusher, Death Metal, Hydra''s
-    Lament, Spectral Armor, Leviathan''s Hide, Pharaoh''s Curse, Avenging Blade, Soul
-    Gem, Helm of Radiance, Magi''s Cloak, Golden Blade, Shogun''s Ofuda, Midgardian
+    Lament, Spectral Armor, Golden Blade, Leviathan''s Hide, Pharaoh''s Curse, Avenging
+    Blade, Soul Gem, Helm of Radiance, Magi''s Cloak, Shogun''s Ofuda, Midgardian
     Mail, Screeching Gargoyle, Nimble Ring, Hide of the Nemean Lion, Doublet of Binding,
     Heartseeker, Wyrmskin Hide, Ethereal Staff, Spear of Desolation, Void Shield,
     Stampede.'
@@ -701,8 +701,8 @@ builds:
     Cuirass, Jotunn''s Revenge, Berserker''s Shield, Freya''s Tears, Shield Splitter,
     Runeforged Hammer, Shield of the Phoenix, Eye of the Storm, Gluttonous Grimoire,
     Mantle Of Discord, Erosion, Stone of Binding, Eye of Providence, The Crusher,
-    Death Metal, Hydra''s Lament, Spectral Armor, Leviathan''s Hide, Pharaoh''s Curse,
-    Avenging Blade, Soul Gem, Helm of Radiance, Magi''s Cloak, Golden Blade, Shogun''s
+    Death Metal, Hydra''s Lament, Spectral Armor, Golden Blade, Leviathan''s Hide,
+    Pharaoh''s Curse, Avenging Blade, Soul Gem, Helm of Radiance, Magi''s Cloak, Shogun''s
     Ofuda, Midgardian Mail, Screeching Gargoyle, Nimble Ring, Hide of the Nemean Lion,
     Doublet of Binding, Heartseeker, Wyrmskin Hide, Ethereal Staff, Spear of Desolation,
     Void Shield, Stampede.'

@@ -117,10 +117,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, Runeforged Hammer, Amanita Charm, Kinetic Cuirass, Berserker''s
-    Shield, Shield Splitter, Eye of the Storm, Freya''s Tears, Avenging Blade, Genji''s
-    Guard, Breastplate of Valor, Golden Blade, Shield of the Phoenix, Spectral Armor,
-    Tekko-Kagi, Erosion, Mantle Of Discord, Eye of Providence, Stone of Binding, Draconic
-    Scale, Leviathan''s Hide, Lernaean Bow, Pharaoh''s Curse, Wyrmskin Hide.'
+    Shield, Shield Splitter, Eye of the Storm, Golden Blade, Freya''s Tears, Avenging
+    Blade, Genji''s Guard, Breastplate of Valor, Shield of the Phoenix, Spectral Armor,
+    Tekko-Kagi, Erosion, Tyrfing, Mantle Of Discord, Eye of Providence, Stone of Binding,
+    Draconic Scale, Leviathan''s Hide, Lernaean Bow, Pharaoh''s Curse.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -189,9 +189,9 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: The
     Crusher, Runeforged Hammer, Genji''s Guard, Amanita Charm, Breastplate of Valor,
     Berserker''s Shield, Kinetic Cuirass, Transcendence, Freya''s Tears, Shield Splitter,
-    Shield of the Phoenix, Eye of the Storm, Avenging Blade, Golden Blade, Spectral
-    Armor, Mantle Of Discord, Stone of Binding, Lernaean Bow, Arondight, Daybreak
-    Gavel, Tekko-Kagi, Leviathan''s Hide, Screeching Gargoyle, Pharaoh''s Curse.'
+    Shield of the Phoenix, Eye of the Storm, Golden Blade, Avenging Blade, Spectral
+    Armor, Mantle Of Discord, Stone of Binding, Lernaean Bow, Tyrfing, Arondight,
+    Daybreak Gavel, Tekko-Kagi, Leviathan''s Hide, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -258,9 +258,9 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: The Crusher, Runeforged Hammer, Amanita Charm, Berserker''s Shield, Kinetic
     Cuirass, Genji''s Guard, Breastplate of Valor, Freya''s Tears, Shield of the Phoenix,
-    Shield Splitter, Eye of the Storm, Pendulum Blade, Tekko-Kagi, Spectral Armor,
-    Screeching Gargoyle, Mantle Of Discord, Stone of Binding, Avenging Blade, Daybreak
-    Gavel, Arondight, Golden Blade, Leviathan''s Hide, Pharaoh''s Curse, Erosion.'
+    Shield Splitter, Eye of the Storm, Golden Blade, Pendulum Blade, Tekko-Kagi, Silverbranch
+    Bow, Spectral Armor, Screeching Gargoyle, Mantle Of Discord, Stone of Binding,
+    Avenging Blade, Toxic Blade, Riptalon, Daybreak Gavel, Arondight.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -327,10 +327,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Runeforged Hammer,
     Berserker''s Shield, The Crusher, Shield Splitter, Eye of the Storm, Freya''s
-    Tears, Phoenix Feather, Erosion, Genji''s Guard, Eye of Providence, Breastplate
-    of Valor, Spectral Armor, Yogi''s Necklace, Draconic Scale, Mantle Of Discord,
-    Stone of Binding, Avenging Blade, Chandra''s Grace, Leviathan''s Hide, Pharaoh''s
-    Curse, Golden Blade, Riptalon.'
+    Tears, Phoenix Feather, Golden Blade, Riptalon, Erosion, Genji''s Guard, Eye of
+    Providence, Breastplate of Valor, Spectral Armor, Yogi''s Necklace, Draconic Scale,
+    Mantle Of Discord, Stone of Binding, Avenging Blade, Chandra''s Grace, Leviathan''s
+    Hide, Pharaoh''s Curse.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
@@ -397,9 +397,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Avatar''s Parashu, Avenging Blade, Runeforged Hammer,
     Amanita Charm, Stone of Binding, Kinetic Cuirass, Berserker''s Shield, Tekko-Kagi,
-    Void Shield, Screeching Gargoyle, Shield Splitter, Void Stone, Eye of the Storm,
-    Freya''s Tears, Genji''s Guard, Breastplate of Valor, Pendulum Blade, Silverbranch
-    Bow, Toxic Blade, Shield of the Phoenix, Riptalon, Spectral Armor, Golden Blade.'
+    Void Shield, Screeching Gargoyle, Silverbranch Bow, Shield Splitter, Toxic Blade,
+    Void Stone, Riptalon, Eye of the Storm, Freya''s Tears, Genji''s Guard, Golden
+    Blade, Breastplate of Valor, Pendulum Blade, Shield of the Phoenix, Spectral Armor.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -538,7 +538,7 @@ builds:
     Shield, The Crusher, Runeforged Hammer, Screeching Gargoyle, Arondight, Chandra''s
     Grace, Gladiator''s Shield, Pendulum Blade, Eye of Erebus, Shield Splitter, Prophetic
     Cloak, Spectral Armor, Mantle Of Discord, Stone of Binding, Eye of the Storm,
-    Daybreak Gavel, Leviathan''s Hide, Erosion, Pharaoh''s Curse.'
+    Golden Blade, Daybreak Gavel, Leviathan''s Hide, Erosion.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -604,11 +604,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Kinetic Cuirass, The Crusher, Berserker''s
-    Shield, Runeforged Hammer, Shield Splitter, Eye of the Storm, Freya''s Tears,
-    Avenging Blade, Genji''s Guard, Breastplate of Valor, Golden Blade, Shield of
-    the Phoenix, Spectral Armor, Tekko-Kagi, Erosion, Mantle Of Discord, Eye of Providence,
+    Shield, Runeforged Hammer, Shield Splitter, Eye of the Storm, Golden Blade, Freya''s
+    Tears, Avenging Blade, Genji''s Guard, Breastplate of Valor, Shield of the Phoenix,
+    Spectral Armor, Tekko-Kagi, Erosion, Tyrfing, Mantle Of Discord, Eye of Providence,
     Stone of Binding, Draconic Scale, Leviathan''s Hide, Lernaean Bow, Pharaoh''s
-    Curse, Wyrmskin Hide.'
+    Curse.'
   slot_scores:
     Berserker's Shield:
       total: 0.53

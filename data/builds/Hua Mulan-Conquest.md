@@ -113,15 +113,15 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Freya''s Tears, Amanita Charm, Kinetic Cuirass, Jotunn''s Revenge, Berserker''s
-    Shield, Shield Splitter, Shield of the Phoenix, Eye of the Storm, Mantle Of Discord,
-    Stone of Binding, Erosion, Pharaoh''s Curse, Eye of Providence, The Crusher, Hydra''s
-    Lament, Spectral Armor, Shogun''s Ofuda, Golden Blade, Breastplate of Valor, Leviathan''s
-    Hide, Runeforged Hammer, Magi''s Cloak, Avenging Blade, Lernaean Bow, Midgardian
-    Mail, Screeching Gargoyle.'
+    Shield, Shield Splitter, Golden Blade, Shield of the Phoenix, Eye of the Storm,
+    Mantle Of Discord, Stone of Binding, Erosion, Pharaoh''s Curse, Eye of Providence,
+    The Crusher, Hydra''s Lament, Spectral Armor, Shogun''s Ofuda, Breastplate of
+    Valor, Tyrfing, Leviathan''s Hide, Runeforged Hammer, Magi''s Cloak, Avenging
+    Blade, Lernaean Bow, Midgardian Mail, Screeching Gargoyle.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -189,11 +189,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Jotunn''s Revenge, Berserker''s
-    Shield, Freya''s Tears, Kinetic Cuirass, The Reaper, Shield Splitter, Eye of the
-    Storm, Phoenix Feather, Chandra''s Grace, Pharaoh''s Curse, Golden Blade, Erosion,
-    Yogi''s Necklace, The Crusher, Eye of Providence, Hydra''s Lament, Shogun''s Ofuda,
-    Spectral Armor, Mantle Of Discord, Runeforged Hammer, Stone of Binding, Avenging
-    Blade, Leviathan''s Hide, Riptalon, Breastplate of Valor.'
+    Shield, Freya''s Tears, Kinetic Cuirass, The Reaper, Golden Blade, Shield Splitter,
+    Eye of the Storm, Phoenix Feather, Chandra''s Grace, Riptalon, Pharaoh''s Curse,
+    Erosion, Yogi''s Necklace, The Crusher, Eye of Providence, Hydra''s Lament, Shogun''s
+    Ofuda, Spectral Armor, Mantle Of Discord, Runeforged Hammer, Stone of Binding,
+    Avenging Blade, Tyrfing, Breastplate of Valor.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -261,9 +261,9 @@ builds:
     for this god: Jotunn''s Revenge, Freya''s Tears, Stone of Binding, Amanita Charm,
     Berserker''s Shield, Kinetic Cuirass, The Crusher, Avenging Blade, Screeching
     Gargoyle, Void Shield, Heartseeker, Shield Splitter, The Reaper, Void Stone, Shield
-    of the Phoenix, Tekko-Kagi, Mantle Of Discord, Titan''s Bane, Eye of the Storm,
-    Pharaoh''s Curse, Hydra''s Lament, Erosion, Spectral Armor, Breastplate of Valor,
-    Eye of Providence, Silverbranch Bow, Shogun''s Ofuda, Runeforged Hammer.'
+    of the Phoenix, Silverbranch Bow, Tekko-Kagi, Mantle Of Discord, Titan''s Bane,
+    Golden Blade, Toxic Blade, Riptalon, Eye of the Storm, Pharaoh''s Curse, Hydra''s
+    Lament, Erosion, Breastplate of Valor, Runeforged Hammer.'
   slot_scores:
     Stone of Binding:
       total: 0.53
@@ -395,15 +395,15 @@ builds:
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Freya''s Tears, Jotunn''s Revenge,
     Amanita Charm, Berserker''s Shield, Kinetic Cuirass, Shield of the Phoenix, Breastplate
     of Valor, Hydra''s Lament, Screeching Gargoyle, Shield Splitter, Mantle Of Discord,
     Stone of Binding, Pharaoh''s Curse, Prophetic Cloak, Erosion, Spectral Armor,
-    Eye of Providence, Shogun''s Ofuda, Chandra''s Grace, Eye of the Storm, Arondight,
-    The Crusher, Leviathan''s Hide, Magi''s Cloak, Eye of Erebus, Runeforged Hammer.'
+    Eye of Providence, Shogun''s Ofuda, Golden Blade, Chandra''s Grace, Eye of the
+    Storm, Arondight, The Crusher, Leviathan''s Hide, Magi''s Cloak, Runeforged Hammer.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -465,15 +465,15 @@ builds:
     swap: Shifter's Shield — physical protection
     swap_item: Shifter's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Kinetic Cuirass, Jotunn''s Revenge, Berserker''s
     Shield, Freya''s Tears, Shield Splitter, Breastplate of Valor, Runeforged Hammer,
-    Shield of the Phoenix, Eye of the Storm, Mantle Of Discord, Stone of Binding,
-    Erosion, Pharaoh''s Curse, Eye of Providence, The Crusher, Hydra''s Lament, Spectral
-    Armor, Shogun''s Ofuda, Golden Blade, Leviathan''s Hide, Magi''s Cloak, Avenging
-    Blade, Lernaean Bow, Midgardian Mail, Screeching Gargoyle.'
+    Golden Blade, Shield of the Phoenix, Eye of the Storm, Mantle Of Discord, Stone
+    of Binding, Erosion, Pharaoh''s Curse, Eye of Providence, The Crusher, Hydra''s
+    Lament, Spectral Armor, Shogun''s Ofuda, Tyrfing, Leviathan''s Hide, Magi''s Cloak,
+    Avenging Blade, Lernaean Bow, Midgardian Mail, Screeching Gargoyle.'
   slot_scores:
     Berserker's Shield:
       total: 0.54

@@ -470,13 +470,13 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Berserker''s
     Shield, Amanita Charm, Kinetic Cuirass, Gluttonous Grimoire, The Crusher, Shield
-    Splitter, Runeforged Hammer, Soul Gem, Death Metal, Freya''s Tears, Eye of the
-    Storm, Shield of the Phoenix, Hydra''s Lament, Mantle Of Discord, Stone of Binding,
-    Heartseeker, Nimble Ring, Draconic Scale, The Reaper, Golden Blade, Pharaoh''s
-    Curse, Spear of Desolation, Lernaean Bow, Erosion, Spear of the Magus, Spectral
+    Splitter, Runeforged Hammer, Golden Blade, Soul Gem, Death Metal, Freya''s Tears,
+    Eye of the Storm, Shield of the Phoenix, Hydra''s Lament, Mantle Of Discord, Stone
+    of Binding, Heartseeker, Nimble Ring, Draconic Scale, The Reaper, Pharaoh''s Curse,
+    Tyrfing, Spear of Desolation, Lernaean Bow, Erosion, Spear of the Magus, Spectral
     Armor, Tekko-Kagi, Eye of Providence, Shogun''s Ofuda, Avenging Blade, Helm of
-    Radiance, Obsidian Shard, Titan''s Bane, Leviathan''s Hide, Magi''s Cloak, Tyrfing,
-    Screeching Gargoyle.'
+    Radiance, Obsidian Shard, Titan''s Bane, Leviathan''s Hide, Silverbranch Bow,
+    Magi''s Cloak.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -545,11 +545,11 @@ builds:
     Amanita Charm, Gluttonous Grimoire, Berserker''s Shield, Kinetic Cuirass, Soul
     Gem, Death Metal, Nimble Ring, The Crusher, Shield Splitter, Spear of Desolation,
     Spear of the Magus, Runeforged Hammer, Helm of Radiance, Freya''s Tears, Obsidian
-    Shard, Shield of the Phoenix, Mantle Of Discord, Stone of Binding, Draconic Scale,
-    Eye of the Storm, Ethereal Staff, Hydra''s Lament, Pharaoh''s Curse, Rod of Asclepius,
-    Heartseeker, Spectral Armor, Erosion, The Reaper, Eye of Providence, Golden Blade,
-    Shogun''s Ofuda, Lernaean Bow, Bragi''s Harp, Jade Scepter, Leviathan''s Hide,
-    Doom Orb, The Cosmic Horror.'
+    Shard, Shield of the Phoenix, Mantle Of Discord, Stone of Binding, Golden Blade,
+    Draconic Scale, Eye of the Storm, Ethereal Staff, Hydra''s Lament, Pharaoh''s
+    Curse, Rod of Asclepius, Heartseeker, Spectral Armor, Erosion, The Reaper, Eye
+    of Providence, Shogun''s Ofuda, Tyrfing, Lernaean Bow, Bragi''s Harp, Jade Scepter,
+    Leviathan''s Hide, Doom Orb.'
   slot_scores:
     Berserker's Shield:
       total: 0.54

@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.8
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72
@@ -80,7 +80,7 @@ builds:
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
+  - Hydra's Lament
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,11 +99,11 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.53
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -155,14 +155,20 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.61
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
@@ -181,12 +187,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Spectral Armor:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -229,11 +229,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.65
+      total: 0.69
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.92
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.72
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Toxic Blade
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Hydra's Lament
   - Freya's Tears
   flex_slots:
+  - Hydra's Lament
   - Genji's Guard
-  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -353,20 +353,20 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.55
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Genji's Guard:
       total: 0.54
       efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
-    Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -424,11 +424,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.8
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72

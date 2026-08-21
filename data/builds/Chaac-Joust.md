@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Spectral Armor
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -31,6 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
@@ -43,12 +49,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Spectral Armor:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Amanita Charm:
       total: 0.78
       efficiency: 0.65
@@ -93,8 +93,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
@@ -145,8 +145,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
+  - Erosion
   - Kinetic Cuirass
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.65
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
@@ -269,14 +269,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Stone of Binding
-  - Avenging Blade
+  - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Soul Gem
   flex_slots:
   - Jotunn's Revenge
-  - Avenging Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -288,8 +288,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -299,12 +299,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Avenging Blade:
-      total: 0.57
-      efficiency: 0.49
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
@@ -418,8 +418,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Spectral Armor
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -488,6 +488,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
@@ -500,12 +506,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Spectral Armor:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Amanita Charm:
       total: 0.78
       efficiency: 0.65

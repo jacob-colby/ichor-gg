@@ -100,7 +100,7 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Golden Blade
+  - Shifter's Shield
   - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -117,18 +117,17 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Amanita Charm, Runeforged Hammer, Pharaoh''s Curse,
-    Lernaean Bow, The Crusher, Shield Splitter, Shogun''s Ofuda, Eye of the Storm,
-    Genji''s Guard, Freya''s Tears, Breastplate of Valor, Tyrfing, Avenging Blade,
-    Hydra''s Lament, Shield of the Phoenix, Tekko-Kagi, Spectral Armor, Mantle Of
-    Discord, Stone of Binding, Heartseeker, Dominance, Deathbringer, Damaru, Erosion,
-    The Reaper.'
+    Lernaean Bow, Tyrfing, The Crusher, Shield Splitter, Shogun''s Ofuda, Eye of the
+    Storm, Genji''s Guard, Freya''s Tears, Breastplate of Valor, Avenging Blade, Hydra''s
+    Lament, Shield of the Phoenix, Tekko-Kagi, Spectral Armor, Mantle Of Discord,
+    Stone of Binding, Heartseeker, Dominance, Deathbringer, Damaru, Toxic Blade, Erosion.'
   slot_scores:
     Golden Blade:
-      total: 0.48
+      total: 0.49
       efficiency: 0.52
       win: 0.45
       pick: 0.17
-      fit: 0.57
+      fit: 0.64
     Berserker's Shield:
       total: 0.53
       efficiency: 0.68
@@ -165,15 +164,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
   - Shield of the Phoenix
-  - Runeforged Hammer
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Shifter's Shield
-  - Runeforged Hammer
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -189,12 +188,18 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Jotunn''s Revenge, The Reaper,
-    Runeforged Hammer, Pharaoh''s Curse, Shield Splitter, Freya''s Tears, Shogun''s
-    Ofuda, Phoenix Feather, Eye of the Storm, Riptalon, Genji''s Guard, Breastplate
-    of Valor, Yogi''s Necklace, Lernaean Bow, The Crusher, Chandra''s Grace, Spectral
-    Armor, Mantle Of Discord, Stone of Binding, Erosion, Eye of Providence, Avenging
-    Blade, Draconic Scale, Leviathan''s Hide.'
+    Runeforged Hammer, Riptalon, Pharaoh''s Curse, Shield Splitter, Freya''s Tears,
+    Shogun''s Ofuda, Phoenix Feather, Eye of the Storm, Genji''s Guard, Breastplate
+    of Valor, Yogi''s Necklace, Lernaean Bow, The Crusher, Tyrfing, Chandra''s Grace,
+    Spectral Armor, Mantle Of Discord, Stone of Binding, Erosion, Eye of Providence,
+    Avenging Blade, Draconic Scale.'
   slot_scores:
+    Golden Blade:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.45
+      pick: 0.17
+      fit: 0.59
     Berserker's Shield:
       total: 0.53
       efficiency: 0.68
@@ -213,12 +218,6 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.63
-    Runeforged Hammer:
-      total: 0.47
-      efficiency: 0.57
-      win: 0.46
-      pick: 0.0
-      fit: 0.46
     Shifter's Shield:
       total: 0.5
       efficiency: 0.55
@@ -259,11 +258,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, Avenging Blade, Stone of Binding,
-    Amanita Charm, Heartseeker, Tekko-Kagi, The Reaper, Runeforged Hammer, Screeching
-    Gargoyle, Void Shield, Silverbranch Bow, Titan''s Bane, Void Stone, Genji''s Guard,
-    Toxic Blade, Riptalon, Breastplate of Valor, Pharaoh''s Curse, Lernaean Bow, Freya''s
-    Tears, Shield Splitter, Shogun''s Ofuda, Hydra''s Lament, Eye of the Storm, Shield
-    of the Phoenix.'
+    Amanita Charm, Heartseeker, Tekko-Kagi, The Reaper, Silverbranch Bow, Runeforged
+    Hammer, Screeching Gargoyle, Void Shield, Toxic Blade, Riptalon, Titan''s Bane,
+    Void Stone, Genji''s Guard, Breastplate of Valor, Pharaoh''s Curse, Lernaean Bow,
+    Freya''s Tears, Tyrfing, Shield Splitter, Shogun''s Ofuda, Hydra''s Lament, Eye
+    of the Storm.'
   slot_scores:
     Stone of Binding:
       total: 0.48
@@ -402,8 +401,8 @@ builds:
     Breastplate of Valor, Freya''s Tears, Shield of the Phoenix, Amanita Charm, Hydra''s
     Lament, Screeching Gargoyle, Runeforged Hammer, Prophetic Cloak, Pharaoh''s Curse,
     Gladiator''s Shield, Shogun''s Ofuda, The Crusher, Chandra''s Grace, Arondight,
-    Lernaean Bow, Spectral Armor, Mantle Of Discord, Stone of Binding, Shield Splitter,
-    Daybreak Gavel, Eye of Erebus, Eye of the Storm, Leviathan''s Hide, Tyrfing.'
+    Lernaean Bow, Spectral Armor, Mantle Of Discord, Tyrfing, Stone of Binding, Shield
+    Splitter, Daybreak Gavel, Eye of Erebus, Eye of the Storm, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.49
@@ -452,8 +451,8 @@ builds:
   - Runeforged Hammer
   - Amanita Charm
   flex_slots:
-  - Runeforged Hammer
   - Golden Blade
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -469,18 +468,18 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Jotunn''s Revenge, Amanita Charm, Runeforged Hammer,
-    Pharaoh''s Curse, Lernaean Bow, The Crusher, Shield Splitter, Shogun''s Ofuda,
-    Eye of the Storm, Genji''s Guard, Freya''s Tears, Breastplate of Valor, Tyrfing,
+    Pharaoh''s Curse, Lernaean Bow, Tyrfing, The Crusher, Shield Splitter, Shogun''s
+    Ofuda, Eye of the Storm, Genji''s Guard, Freya''s Tears, Breastplate of Valor,
     Avenging Blade, Hydra''s Lament, Shield of the Phoenix, Tekko-Kagi, Spectral Armor,
     Mantle Of Discord, Stone of Binding, Heartseeker, Dominance, Deathbringer, Damaru,
-    Erosion, The Reaper.'
+    Toxic Blade, Erosion.'
   slot_scores:
     Golden Blade:
-      total: 0.48
+      total: 0.49
       efficiency: 0.52
       win: 0.45
       pick: 0.17
-      fit: 0.57
+      fit: 0.64
     Berserker's Shield:
       total: 0.53
       efficiency: 0.68

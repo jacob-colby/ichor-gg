@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Jotunn's Revenge
+  - Toxic Blade
   - Kinetic Cuirass
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Toxic Blade
   - Shogun's Ofuda
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -31,12 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.71
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.6
@@ -73,31 +73,37 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
+  - Kinetic Cuirass
   - Pharaoh's Curse
-  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.6
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.6
@@ -128,12 +134,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -145,7 +145,7 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
+  - Jotunn's Revenge
   - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.62
+      total: 0.66
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.86
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72
@@ -288,8 +288,8 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Jotunn's Revenge
+  - Toxic Blade
   - Kinetic Cuirass
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Toxic Blade
   - Shogun's Ofuda
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -358,12 +358,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.71
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.6
@@ -398,22 +398,22 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
+  - Toxic Blade
   - Breastplate of Valor
   - Kinetic Cuirass
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
+  - Toxic Blade
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -423,6 +423,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Breastplate of Valor:
       total: 0.49
       efficiency: 0.65
@@ -453,17 +459,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
   swaps:
   - added: Breastplate of Valor
-    removed: Jotunn's Revenge
+    removed: Shogun's Ofuda
     reason: Conquest community 69% win over 119 matches (vs 57% on this god), taking
-      the model's weakest slot from Jotunn's Revenge
+      the model's weakest slot from Shogun's Ofuda
   borrowed_from: Conquest
   starter: *id001
 ---

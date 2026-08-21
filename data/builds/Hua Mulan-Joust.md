@@ -6,43 +6,43 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Toxic Blade
   - Kinetic Cuirass
-  - Shield Splitter
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Shield Splitter
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Stygian Anchor — magical protection
-    swap_item: Stygian Anchor
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Shield Splitter:
-      total: 0.58
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Amanita Charm:
       total: 0.82
       efficiency: 0.65
@@ -73,31 +73,37 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
+  - Toxic Blade
   - Pharaoh's Curse
-  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.61
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.6
@@ -128,12 +134,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -145,7 +145,7 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
+  - Jotunn's Revenge
   - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.62
+      total: 0.66
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.85
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
@@ -288,8 +288,8 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -333,43 +333,43 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Toxic Blade
   - Kinetic Cuirass
-  - Shield Splitter
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Shield Splitter
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Stygian Anchor — magical protection
-    swap_item: Stygian Anchor
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Shield Splitter:
-      total: 0.58
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Amanita Charm:
       total: 0.82
       efficiency: 0.65

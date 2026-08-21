@@ -113,8 +113,8 @@ builds:
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Rod of Tahuti, Ethereal Staff, Amanita Charm, Kinetic
     Cuirass, Gluttonous Grimoire, Breastplate of Valor, Berserker''s Shield, Soul
@@ -122,9 +122,9 @@ builds:
     Hammer, Spear of the Magus, Helm of Radiance, Mantle Of Discord, Stone of Binding,
     Obsidian Shard, Nimble Ring, Eye of the Storm, Erosion, Eye of Providence, Spectral
     Armor, Hydra''s Lament, Draconic Scale, Rod of Asclepius, The Reaper, Leviathan''s
-    Hide, Pharaoh''s Curse, Shield of the Phoenix, Magi''s Cloak, Avenging Blade,
-    Jade Scepter, Doom Orb, Screeching Gargoyle, The Cosmic Horror, Wish-Granting
-    Pearl, Freya''s Tears.'
+    Hide, Pharaoh''s Curse, Shield of the Phoenix, Magi''s Cloak, Golden Blade, Avenging
+    Blade, Jade Scepter, Doom Orb, Screeching Gargoyle, The Cosmic Horror, Freya''s
+    Tears.'
   slot_scores:
     Book of Thoth:
       total: 0.36
@@ -188,8 +188,8 @@ builds:
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
     Revenge, Rod of Tahuti, Ethereal Staff, Breastplate of Valor, Gluttonous Grimoire,
     Amanita Charm, Kinetic Cuirass, Berserker''s Shield, Soul Gem, Death Metal, The
@@ -197,8 +197,8 @@ builds:
     Runeforged Hammer, Helm of Radiance, Nimble Ring, Obsidian Shard, Mantle Of Discord,
     Stone of Binding, Eye of the Storm, Rod of Asclepius, Wish-Granting Pearl, Doom
     Orb, Ancient Signet, The Reaper, Spectral Armor, The World Stone, Erosion, Chronos''
-    Pendant, Jade Scepter, Eye of Providence, Avenging Blade, Draconic Scale, The
-    Cosmic Horror, Leviathan''s Hide, Shield of the Phoenix, Freya''s Tears.'
+    Pendant, Jade Scepter, Eye of Providence, Avenging Blade, Golden Blade, Draconic
+    Scale, The Cosmic Horror, Shield of the Phoenix, Freya''s Tears.'
   slot_scores:
     Breastplate of Valor:
       total: 0.45
@@ -340,11 +340,11 @@ builds:
     Gem, Gluttonous Grimoire, Rod of Asclepius, Kinetic Cuirass, The Reaper, Breastplate
     of Valor, Berserker''s Shield, Shield of the Phoenix, The Crusher, Runeforged
     Hammer, Death Metal, Spear of Desolation, Spear of the Magus, Shield Splitter,
-    Blood-Bound Book, Chandra''s Grace, Phoenix Feather, Lifebinder, Obsidian Shard,
-    Helm of Radiance, Eye of the Storm, Yogi''s Necklace, Nimble Ring, Bancroft''s
-    Talon, Riptalon, Sphere of Negation, Spectral Armor, Mantle Of Discord, Hydra''s
-    Lament, Stone of Binding, Erosion, Eye of Providence, Draconic Scale, Avenging
-    Blade, Freya''s Tears.'
+    Blood-Bound Book, Chandra''s Grace, Phoenix Feather, Lifebinder, Riptalon, Obsidian
+    Shard, Helm of Radiance, Eye of the Storm, Yogi''s Necklace, Nimble Ring, Bancroft''s
+    Talon, Sphere of Negation, Spectral Armor, Mantle Of Discord, Hydra''s Lament,
+    Stone of Binding, Erosion, Eye of Providence, Golden Blade, Draconic Scale, Freya''s
+    Tears.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.62
@@ -551,8 +551,8 @@ builds:
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Rod of Tahuti,
     Breastplate of Valor, Ethereal Staff, Soul Gem, Amanita Charm, Kinetic Cuirass,
@@ -624,8 +624,8 @@ builds:
     swap: Shield Splitter — physical protection
     swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Kinetic
     Cuirass, Gluttonous Grimoire, Berserker''s Shield, Freya''s Tears, Soul Gem, Shield
@@ -634,8 +634,8 @@ builds:
     Mantle Of Discord, Stone of Binding, Obsidian Shard, Nimble Ring, Eye of the Storm,
     Erosion, Eye of Providence, Spectral Armor, Hydra''s Lament, Draconic Scale, Ethereal
     Staff, Rod of Asclepius, The Reaper, Leviathan''s Hide, Pharaoh''s Curse, Magi''s
-    Cloak, Avenging Blade, Jade Scepter, Doom Orb, Screeching Gargoyle, The Cosmic
-    Horror, Wish-Granting Pearl.'
+    Cloak, Golden Blade, Avenging Blade, Jade Scepter, Doom Orb, Screeching Gargoyle,
+    The Cosmic Horror.'
   slot_scores:
     Berserker's Shield:
       total: 0.44

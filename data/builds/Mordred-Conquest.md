@@ -113,17 +113,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Freya''s Tears, Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Berserker''s
     Shield, Shield Splitter, Gluttonous Grimoire, Breastplate of Valor, The Crusher,
     Runeforged Hammer, Mantle Of Discord, Stone of Binding, Eye of the Storm, Soul
     Gem, Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Death Metal,
     Hydra''s Lament, Heartseeker, Spear of Desolation, Leviathan''s Hide, Helm of
-    Radiance, The Reaper, Pharaoh''s Curse, Magi''s Cloak, Spear of the Magus, Avenging
-    Blade, Shogun''s Ofuda, Screeching Gargoyle, Midgardian Mail, Obsidian Shard,
-    Nimble Ring, Golden Blade, Titan''s Bane, Doublet of Binding.'
+    Radiance, The Reaper, Pharaoh''s Curse, Golden Blade, Magi''s Cloak, Spear of
+    the Magus, Avenging Blade, Shogun''s Ofuda, Screeching Gargoyle, Midgardian Mail,
+    Obsidian Shard, Nimble Ring, Titan''s Bane, Doublet of Binding.'
   slot_scores:
     Berserker's Shield:
       total: 0.56
@@ -187,8 +187,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
     of Tahuti, Freya''s Tears, Jotunn''s Revenge, Gluttonous Grimoire, Amanita Charm,
     Berserker''s Shield, Soul Gem, Breastplate of Valor, Death Metal, The Crusher,
@@ -196,8 +196,8 @@ builds:
     Hammer, Helm of Radiance, Nimble Ring, Obsidian Shard, Heartseeker, Mantle Of
     Discord, Stone of Binding, Eye of the Storm, Ethereal Staff, Rod of Asclepius,
     Wish-Granting Pearl, Doom Orb, Ancient Signet, The Reaper, Spectral Armor, The
-    World Stone, Erosion, Chronos'' Pendant, Jade Scepter, Eye of Providence, Avenging
-    Blade, Draconic Scale, The Cosmic Horror, Leviathan''s Hide.'
+    World Stone, Erosion, Chronos'' Pendant, Jade Scepter, Eye of Providence, Golden
+    Blade, Avenging Blade, Draconic Scale, The Cosmic Horror.'
   slot_scores:
     Breastplate of Valor:
       total: 0.54
@@ -337,11 +337,11 @@ builds:
     this god: Amanita Charm, Freya''s Tears, Rod of Tahuti, Jotunn''s Revenge, Soul
     Gem, The Reaper, Berserker''s Shield, Gluttonous Grimoire, Ethereal Staff, Rod
     of Asclepius, Runeforged Hammer, Shield Splitter, The Crusher, Breastplate of
-    Valor, Eye of the Storm, Phoenix Feather, Chandra''s Grace, Yogi''s Necklace,
-    Erosion, Spectral Armor, Eye of Providence, Death Metal, Mantle Of Discord, Stone
-    of Binding, Hydra''s Lament, Draconic Scale, Heartseeker, Avenging Blade, Spear
-    of Desolation, Riptalon, Leviathan''s Hide, Pharaoh''s Curse, Lifebinder, Spear
-    of the Magus, Golden Blade, Blood-Bound Book, Glorious Pridwen, Helm of Radiance.'
+    Valor, Eye of the Storm, Phoenix Feather, Chandra''s Grace, Riptalon, Yogi''s
+    Necklace, Erosion, Spectral Armor, Eye of Providence, Death Metal, Mantle Of Discord,
+    Stone of Binding, Hydra''s Lament, Golden Blade, Draconic Scale, Heartseeker,
+    Avenging Blade, Spear of Desolation, Leviathan''s Hide, Pharaoh''s Curse, Lifebinder,
+    Spear of the Magus, Blood-Bound Book, Glorious Pridwen, Helm of Radiance.'
   slot_scores:
     Berserker's Shield:
       total: 0.56
@@ -412,8 +412,8 @@ builds:
     of Valor, Heartseeker, Spear of the Magus, Shield Splitter, The Reaper, Void Stone,
     Obsidian Shard, Runeforged Hammer, Mantle Of Discord, Titan''s Bane, Eye of the
     Storm, Death Metal, Erosion, Spectral Armor, Hydra''s Lament, Eye of Providence,
-    Tekko-Kagi, Draconic Scale, Helm of Radiance, Doom Orb, The Cosmic Horror, Leviathan''s
-    Hide, Pharaoh''s Curse, Nimble Ring, The World Stone.'
+    Tekko-Kagi, Draconic Scale, Helm of Radiance, Silverbranch Bow, Doom Orb, The
+    Cosmic Horror, Leviathan''s Hide, Pharaoh''s Curse, Nimble Ring.'
   slot_scores:
     Stone of Binding:
       total: 0.57
@@ -547,8 +547,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Freya''s Tears, Rod of Tahuti, Jotunn''s
     Revenge, Breastplate of Valor, Amanita Charm, Soul Gem, Berserker''s Shield, Spear
@@ -702,9 +702,9 @@ builds:
     Spear of the Magus, Runeforged Hammer, Helm of Radiance, Obsidian Shard, Nimble
     Ring, Mantle Of Discord, Stone of Binding, Eye of the Storm, Ethereal Staff, Hydra''s
     Lament, Rod of Asclepius, Heartseeker, Erosion, Spectral Armor, The Reaper, Eye
-    of Providence, Draconic Scale, Doom Orb, Jade Scepter, The Cosmic Horror, Leviathan''s
-    Hide, Pharaoh''s Curse, Wish-Granting Pearl, Avenging Blade, Magi''s Cloak, Chronos''
-    Pendant.'
+    of Providence, Draconic Scale, Doom Orb, Golden Blade, Jade Scepter, The Cosmic
+    Horror, Leviathan''s Hide, Pharaoh''s Curse, Wish-Granting Pearl, Avenging Blade,
+    Magi''s Cloak.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -766,17 +766,17 @@ builds:
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Berserker''s
     Shield, Freya''s Tears, Shield Splitter, Gluttonous Grimoire, Breastplate of Valor,
     The Crusher, Runeforged Hammer, Mantle Of Discord, Stone of Binding, Eye of the
     Storm, Soul Gem, Erosion, Eye of Providence, Draconic Scale, Spectral Armor, Death
     Metal, Hydra''s Lament, Heartseeker, Spear of Desolation, Leviathan''s Hide, Helm
-    of Radiance, The Reaper, Pharaoh''s Curse, Magi''s Cloak, Spear of the Magus,
-    Avenging Blade, Shogun''s Ofuda, Screeching Gargoyle, Midgardian Mail, Obsidian
-    Shard, Nimble Ring, Golden Blade, Titan''s Bane, Doublet of Binding.'
+    of Radiance, The Reaper, Pharaoh''s Curse, Golden Blade, Magi''s Cloak, Spear
+    of the Magus, Avenging Blade, Shogun''s Ofuda, Screeching Gargoyle, Midgardian
+    Mail, Obsidian Shard, Nimble Ring, Titan''s Bane, Doublet of Binding.'
   slot_scores:
     Berserker's Shield:
       total: 0.56

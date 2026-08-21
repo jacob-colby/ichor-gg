@@ -93,8 +93,8 @@ builds:
     swap: Shield Splitter — physical protection
     swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -145,8 +145,8 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Stone of Binding
   - Toxic Blade
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.71
     Toxic Blade:
-      total: 0.6
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.81
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.72

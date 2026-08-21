@@ -27,7 +27,7 @@ Two halves: a Python pipeline (`pipeline/smite/`) that scrapes wiki.smite2.com a
 ## Capabilities and Constraints
 
 - Covers all 89 gods on the roster. Cu Chulainn and Ix Chel had empty wiki pages for months and were scraped on 2026-08-19 once those filled in.
-- The model is a working **filter** and not a working **ranker**: measured against a random-baseline control it finds community-worthy items ~6x better than chance (38.7% against a 5.6% random core), while its ordering skill inside the community's own item set is indistinguishable from zero. "Sensible items" is supported; "right order" is not.
+- The model is a working **filter** and not a working **ranker**: measured against a random-baseline control it finds community-worthy items ~7x better than chance (39.7% against a 5.7% random core), while its ordering skill inside the community's own item set is indistinguishable from zero. "Sensible items" is supported; "right order" is not.
 - Joust and Arena have no outcome data whatsoever. Their gods ship *unranked* rather than given an invented tier — but their builds still ship, resting on the model alone. That is two thirds of the shipped builds.
 - The headline agreement metric cannot be used to tune the model: both its targets are also model inputs, so it is maximised by deleting the model. Use the leakage-free measure in `smite.calibrate`. Twelve correct-looking improvements have been measured and shipped off because of this; see `docs/STATE.md` section 4 before re-attempting any of them.
 - Patch-notes diffs only exist between data refreshes, so that page starts empty and fills in over time.
@@ -47,7 +47,7 @@ Name: **ichor**. Explicitly a fan project — not affiliated with or endorsed by
 - Design specs and implementation plans for prior viewer work: `docs/specs/`, `docs/plans/`.
 - Living engineering doc — current state, design decisions with their evidence, negative-results register, what's left: `docs/STATE.md`. The dated files in `docs/specs/` and `docs/plans/` are point-in-time and never updated.
 - The combat model is calibrated against twelve in-game readings at 0.0% worst-case error (`pipeline/smite/combat.py`, gated by `smite.calibrate_combat`).
-- Test suites back the pipeline and viewer: 748 Python tests (`pipeline/smite/tests`), 660 viewer tests.
+- Test suites back the pipeline and viewer: 755 Python tests (`pipeline/smite/tests`), 660 viewer tests.
 - No invented testimonials, customer logos, or pricing exist and none should be fabricated — this is a free fan tool, not a commercial product.
 
 ## Product Principles

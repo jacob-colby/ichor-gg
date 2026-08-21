@@ -8,20 +8,20 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
+  - Tyrfing
   - Amanita Charm
-  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Berserker's Shield
-  - Erosion
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,29 +32,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.77
     Berserker's Shield:
       total: 0.56
       efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Amanita Charm:
       total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Erosion:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Pharaoh's Curse:
       total: 0.6
       efficiency: 0.55
@@ -73,31 +73,37 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Berserker's Shield
   - Shield of the Phoenix
   - Amanita Charm
-  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Toxic Blade
   - Berserker's Shield
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.6
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Berserker's Shield:
       total: 0.58
       efficiency: 0.68
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.94
-    Erosion:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Pharaoh's Curse:
       total: 0.61
       efficiency: 0.55
@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.68
     Toxic Blade:
-      total: 0.66
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.9
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
@@ -275,7 +275,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
+  - Shogun's Ofuda
   - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
@@ -294,11 +294,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.55
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.64
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
@@ -335,20 +335,20 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
+  - Tyrfing
   - Amanita Charm
-  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Berserker's Shield
-  - Erosion
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -359,29 +359,29 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.77
     Berserker's Shield:
       total: 0.56
       efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Amanita Charm:
       total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Erosion:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Pharaoh's Curse:
       total: 0.6
       efficiency: 0.55

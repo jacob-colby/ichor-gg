@@ -604,12 +604,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Death Metal, The Crusher,
     Gluttonous Grimoire, Nimble Ring, Spear of the Magus, Heartseeker, Hydra''s Lament,
-    The Reaper, Bragi''s Harp, Tekko-Kagi, Lernaean Bow, Runeforged Hammer, Titan''s
-    Bane, Berserker''s Shield, Tyrfing, Doom Orb, The Cosmic Horror, Golden Blade,
-    Breastplate of Valor, The World Stone, Pendulum Blade, Chronos'' Pendant, Dreamer''s
-    Idol, Arondight, Helm of Radiance, Shield Splitter, Dominance, Avatar''s Parashu,
-    Avenging Blade, Triton''s Conch, Bracer of The Abyss, Ancient Signet, Silverbranch
-    Bow, Ethereal Staff, Rod of Asclepius.'
+    Tyrfing, The Reaper, Bragi''s Harp, Tekko-Kagi, Golden Blade, Lernaean Bow, Runeforged
+    Hammer, Titan''s Bane, Berserker''s Shield, Silverbranch Bow, Doom Orb, The Cosmic
+    Horror, Riptalon, Breastplate of Valor, The World Stone, Pendulum Blade, Chronos''
+    Pendant, Dreamer''s Idol, Arondight, Helm of Radiance, Shield Splitter, Dominance,
+    Avatar''s Parashu, Avenging Blade, Triton''s Conch, Bracer of The Abyss, Ancient
+    Signet, Ethereal Staff.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.62
@@ -671,17 +671,17 @@ builds:
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Gluttonous Grimoire,
     Death Metal, The Crusher, Spear of the Magus, Heartseeker, The Reaper, Hydra''s
     Lament, Nimble Ring, Doom Orb, The Cosmic Horror, The World Stone, Titan''s Bane,
     Bragi''s Harp, Dreamer''s Idol, Chronos'' Pendant, Runeforged Hammer, Tekko-Kagi,
-    Helm of Radiance, Pendulum Blade, Breastplate of Valor, Ancient Signet, Ethereal
-    Staff, Triton''s Conch, Rod of Asclepius, Arondight, Gem of Focus, Lernaean Bow,
-    Avatar''s Parashu, Berserker''s Shield, Shield Splitter, Totem of Death, Jade
-    Scepter, Wish-Granting Pearl, Avenging Blade, Blood-Bound Book.'
+    Helm of Radiance, Tyrfing, Pendulum Blade, Breastplate of Valor, Golden Blade,
+    Ancient Signet, Silverbranch Bow, Ethereal Staff, Triton''s Conch, Rod of Asclepius,
+    Arondight, Gem of Focus, Lernaean Bow, Avatar''s Parashu, Riptalon, Berserker''s
+    Shield, Shield Splitter, Totem of Death.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.63

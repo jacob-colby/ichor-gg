@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
   - Heartseeker
-  - Pendulum Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -288,11 +288,17 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.73
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
     Jotunn's Revenge:
       total: 0.86
       efficiency: 0.72
@@ -302,12 +308,6 @@ builds:
     The Reaper:
       total: 0.77
       efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Pendulum Blade:
-      total: 0.71
-      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 1.0

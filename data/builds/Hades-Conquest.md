@@ -610,13 +610,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Gluttonous Grimoire,
     Berserker''s Shield, Death Metal, The Crusher, Obsidian Shard, Amanita Charm,
-    Nimble Ring, Spear of Desolation, Kinetic Cuirass, Runeforged Hammer, Spear of
-    the Magus, Genji''s Guard, Hydra''s Lament, Breastplate of Valor, Heartseeker,
-    Shield Splitter, The Reaper, Golden Blade, Lernaean Bow, Helm of Radiance, Bragi''s
+    Nimble Ring, Spear of Desolation, Kinetic Cuirass, Runeforged Hammer, Golden Blade,
+    Spear of the Magus, Genji''s Guard, Hydra''s Lament, Breastplate of Valor, Heartseeker,
+    Shield Splitter, The Reaper, Tyrfing, Lernaean Bow, Helm of Radiance, Bragi''s
     Harp, Eye of the Storm, Tekko-Kagi, Ethereal Staff, Shield of the Phoenix, Rod
-    of Asclepius, Avenging Blade, Titan''s Bane, Pharaoh''s Curse, Tyrfing, Doom Orb,
-    The Cosmic Horror, Triton''s Conch, Jade Scepter, Chronos'' Pendant, Wish-Granting
-    Pearl.'
+    of Asclepius, Avenging Blade, Titan''s Bane, Silverbranch Bow, Pharaoh''s Curse,
+    Doom Orb, The Cosmic Horror, Triton''s Conch, Jade Scepter, Riptalon.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -686,10 +685,9 @@ builds:
     Crusher, Kinetic Cuirass, Berserker''s Shield, Spear of the Magus, Runeforged
     Hammer, Nimble Ring, Genji''s Guard, Breastplate of Valor, Helm of Radiance, Heartseeker,
     Hydra''s Lament, Shield Splitter, Ethereal Staff, The Reaper, Rod of Asclepius,
-    Shield of the Phoenix, Eye of the Storm, Doom Orb, The Cosmic Horror, Jade Scepter,
-    Titan''s Bane, Wish-Granting Pearl, Avenging Blade, Chronos'' Pendant, Triton''s
-    Conch, Bragi''s Harp, Ancient Signet, Spectral Armor, Golden Blade, Mantle Of
-    Discord.'
+    Golden Blade, Shield of the Phoenix, Eye of the Storm, Doom Orb, The Cosmic Horror,
+    Jade Scepter, Titan''s Bane, Wish-Granting Pearl, Avenging Blade, Chronos'' Pendant,
+    Triton''s Conch, Bragi''s Harp, Ancient Signet, Spectral Armor, Mantle Of Discord.'
   slot_scores:
     Book of Thoth:
       total: 0.51

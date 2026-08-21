@@ -606,13 +606,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Death Metal,
-    The Crusher, Gluttonous Grimoire, Spear of the Magus, Heartseeker, Bragi''s Harp,
-    The Reaper, Hydra''s Lament, Tekko-Kagi, Lernaean Bow, Runeforged Hammer, Titan''s
-    Bane, Berserker''s Shield, Tyrfing, Doom Orb, The Cosmic Horror, Golden Blade,
-    Genji''s Guard, Breastplate of Valor, Pendulum Blade, Dreamer''s Idol, Helm of
-    Radiance, Arondight, Shield Splitter, Dominance, Avatar''s Parashu, Triton''s
-    Conch, Avenging Blade, Bracer of The Abyss, Ancient Signet, Silverbranch Bow,
-    Ethereal Staff, Rod of Asclepius, Transcendence, Chronos'' Pendant.'
+    The Crusher, Gluttonous Grimoire, Spear of the Magus, Tyrfing, Golden Blade, Heartseeker,
+    Bragi''s Harp, The Reaper, Hydra''s Lament, Tekko-Kagi, Lernaean Bow, Runeforged
+    Hammer, Titan''s Bane, Silverbranch Bow, Berserker''s Shield, Riptalon, Doom Orb,
+    The Cosmic Horror, Genji''s Guard, Breastplate of Valor, Pendulum Blade, Dreamer''s
+    Idol, Helm of Radiance, Arondight, Shield Splitter, Dominance, Avatar''s Parashu,
+    Toxic Blade, Triton''s Conch, Avenging Blade, Bracer of The Abyss, Ancient Signet,
+    Ethereal Staff, Chronos'' Pendant.'
   slot_scores:
     Book of Thoth:
       total: 0.48
@@ -674,17 +674,17 @@ builds:
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Gluttonous
     Grimoire, Death Metal, The Crusher, Spear of the Magus, Heartseeker, The Reaper,
     Hydra''s Lament, Doom Orb, The Cosmic Horror, Titan''s Bane, Bragi''s Harp, Dreamer''s
-    Idol, Runeforged Hammer, Tekko-Kagi, Helm of Radiance, Pendulum Blade, Genji''s
-    Guard, Breastplate of Valor, Ancient Signet, Ethereal Staff, Triton''s Conch,
-    Rod of Asclepius, Avatar''s Parashu, Arondight, Lernaean Bow, Gem of Focus, Berserker''s
-    Shield, Shield Splitter, Jade Scepter, Freya''s Tears, Totem of Death, Wish-Granting
-    Pearl, Avenging Blade, Blood-Bound Book, Chronos'' Pendant.'
+    Idol, Tyrfing, Runeforged Hammer, Golden Blade, Tekko-Kagi, Helm of Radiance,
+    Silverbranch Bow, Pendulum Blade, Genji''s Guard, Breastplate of Valor, Ancient
+    Signet, Riptalon, Ethereal Staff, Triton''s Conch, Rod of Asclepius, Avatar''s
+    Parashu, Arondight, Lernaean Bow, Gem of Focus, Berserker''s Shield, Shield Splitter,
+    Jade Scepter, Freya''s Tears, Chronos'' Pendant.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6

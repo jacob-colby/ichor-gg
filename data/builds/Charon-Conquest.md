@@ -471,13 +471,13 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Berserker''s Shield, Amanita
     Charm, Kinetic Cuirass, Shifter''s Shield, Gluttonous Grimoire, Freya''s Tears,
-    The Crusher, Shield Splitter, Runeforged Hammer, Breastplate of Valor, Soul Gem,
-    Death Metal, Eye of the Storm, Shield of the Phoenix, Hydra''s Lament, Mantle
-    Of Discord, Stone of Binding, Heartseeker, Nimble Ring, The Reaper, Golden Blade,
-    Pharaoh''s Curse, Spear of Desolation, Lernaean Bow, Erosion, Spear of the Magus,
-    Spectral Armor, Tekko-Kagi, Eye of Providence, Shogun''s Ofuda, Avenging Blade,
-    Helm of Radiance, Draconic Scale, Obsidian Shard, Titan''s Bane, Leviathan''s
-    Hide, Magi''s Cloak, Tyrfing, Screeching Gargoyle.'
+    The Crusher, Shield Splitter, Runeforged Hammer, Breastplate of Valor, Golden
+    Blade, Soul Gem, Death Metal, Eye of the Storm, Shield of the Phoenix, Hydra''s
+    Lament, Mantle Of Discord, Stone of Binding, Heartseeker, Nimble Ring, The Reaper,
+    Pharaoh''s Curse, Spear of Desolation, Lernaean Bow, Tyrfing, Erosion, Spear of
+    the Magus, Spectral Armor, Tekko-Kagi, Eye of Providence, Shogun''s Ofuda, Avenging
+    Blade, Helm of Radiance, Draconic Scale, Obsidian Shard, Titan''s Bane, Leviathan''s
+    Hide, Magi''s Cloak, Silverbranch Bow.'
   slot_scores:
     Genji's Guard:
       total: 0.48
@@ -548,9 +548,9 @@ builds:
     of Valor, Spear of Desolation, Spear of the Magus, Runeforged Hammer, Helm of
     Radiance, Obsidian Shard, Nimble Ring, Shield of the Phoenix, Mantle Of Discord,
     Stone of Binding, Eye of the Storm, Ethereal Staff, Hydra''s Lament, Rod of Asclepius,
-    Heartseeker, Erosion, Spectral Armor, The Reaper, Eye of Providence, Draconic
-    Scale, Doom Orb, Jade Scepter, Leviathan''s Hide, Pharaoh''s Curse, Wish-Granting
-    Pearl, Avenging Blade, Magi''s Cloak, Chronos'' Pendant.'
+    Heartseeker, Erosion, Spectral Armor, The Reaper, Eye of Providence, Golden Blade,
+    Draconic Scale, Doom Orb, Jade Scepter, Leviathan''s Hide, Pharaoh''s Curse, Wish-Granting
+    Pearl, Avenging Blade, Magi''s Cloak.'
   slot_scores:
     Genji's Guard:
       total: 0.48

@@ -333,19 +333,19 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Jotunn's Revenge
+  - Golden Blade
+  - Toxic Blade
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Stampede
-  - Jotunn's Revenge
+  - Shogun's Ofuda
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -353,17 +353,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+    Golden Blade:
+      total: 0.6
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.68
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
     Amanita Charm:
       total: 0.82
       efficiency: 0.65
@@ -376,12 +382,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Stampede:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Pharaoh's Curse:
       total: 0.61
       efficiency: 0.55
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Void Shield
+  - Toxic Blade
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   - Triton's Conch
   flex_slots:
+  - Toxic Blade
   - Spectral Armor
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -423,12 +423,12 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Void Shield:
-      total: 0.57
-      efficiency: 0.47
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.69
     Spectral Armor:
       total: 0.57
       efficiency: 0.57

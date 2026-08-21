@@ -117,10 +117,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, The Reaper, Tekko-Kagi, Pendulum Blade, Hydra''s Lament,
-    Avatar''s Parashu, Runeforged Hammer, Genji''s Guard, Lernaean Bow, Shield Splitter,
-    Arondight, Avenging Blade, Transcendence, Tyrfing, Golden Blade, Eye of the Storm,
-    Deathbringer, Damaru, Dominance, Silverbranch Bow, Musashi''s Dual Swords, Berserker''s
-    Shield, Riptalon, Sanguine Lash.'
+    Avatar''s Parashu, Runeforged Hammer, Genji''s Guard, Tyrfing, Golden Blade, Lernaean
+    Bow, Shield Splitter, Arondight, Avenging Blade, Silverbranch Bow, Transcendence,
+    Eye of the Storm, Riptalon, Deathbringer, Damaru, Dominance, Toxic Blade, Musashi''s
+    Dual Swords, Berserker''s Shield.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.66
@@ -189,9 +189,9 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Genji''s
     Guard, The Crusher, Hydra''s Lament, The Reaper, Runeforged Hammer, Transcendence,
     Tekko-Kagi, Arondight, Pendulum Blade, Lernaean Bow, Berserker''s Shield, Freya''s
-    Tears, Shield Splitter, Avenging Blade, Dominance, Amanita Charm, Avatar''s Parashu,
-    Tyrfing, Kinetic Cuirass, Golden Blade, Eye of the Storm, Shield of the Phoenix,
-    Deathbringer, Damaru.'
+    Tears, Tyrfing, Shield Splitter, Golden Blade, Avenging Blade, Dominance, Amanita
+    Charm, Avatar''s Parashu, Kinetic Cuirass, Eye of the Storm, Shield of the Phoenix,
+    Deathbringer, Silverbranch Bow.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.63
@@ -257,10 +257,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Genji''s Guard, The Crusher, The Reaper, Hydra''s Lament, Pendulum Blade,
-    Tekko-Kagi, Freya''s Tears, Runeforged Hammer, Arondight, Avatar''s Parashu, Berserker''s
-    Shield, Silverbranch Bow, Shield of the Phoenix, Amanita Charm, Lernaean Bow,
-    Riptalon, Screeching Gargoyle, Kinetic Cuirass, Shield Splitter, Avenging Blade,
-    Transcendence, Tyrfing, Golden Blade, Eye of Providence.'
+    Tekko-Kagi, Freya''s Tears, Runeforged Hammer, Silverbranch Bow, Arondight, Avatar''s
+    Parashu, Berserker''s Shield, Riptalon, Shield of the Phoenix, Amanita Charm,
+    Lernaean Bow, Screeching Gargoyle, Tyrfing, Kinetic Cuirass, Shield Splitter,
+    Golden Blade, Avenging Blade, Toxic Blade, Transcendence.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.62
@@ -328,9 +328,9 @@ builds:
     this god: Amanita Charm, Kinetic Cuirass, Genji''s Guard, Shield of the Phoenix,
     The Reaper, Berserker''s Shield, Runeforged Hammer, Shield Splitter, Shifter''s
     Shield, The Crusher, Eye of the Storm, Freya''s Tears, Phoenix Feather, Erosion,
-    Eye of Providence, Draconic Scale, Spectral Armor, Yogi''s Necklace, Mantle Of
-    Discord, Stone of Binding, Chandra''s Grace, Avenging Blade, Leviathan''s Hide,
-    Pharaoh''s Curse, Riptalon.'
+    Eye of Providence, Draconic Scale, Spectral Armor, Yogi''s Necklace, Riptalon,
+    Golden Blade, Mantle Of Discord, Stone of Binding, Chandra''s Grace, Avenging
+    Blade, Leviathan''s Hide.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.65
@@ -396,10 +396,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, The Reaper, Tekko-Kagi, Avatar''s Parashu, Pendulum
-    Blade, Genji''s Guard, Avenging Blade, Silverbranch Bow, Riptalon, Hydra''s Lament,
-    Runeforged Hammer, Toxic Blade, Stone of Binding, Screeching Gargoyle, Lernaean
-    Bow, Shield Splitter, Berserker''s Shield, Oath-Sworn Spear, Transcendence, Tyrfing,
-    Arondight, Golden Blade, Eye of the Storm, Amanita Charm.'
+    Blade, Silverbranch Bow, Genji''s Guard, Riptalon, Avenging Blade, Toxic Blade,
+    Hydra''s Lament, Runeforged Hammer, Stone of Binding, Screeching Gargoyle, Tyrfing,
+    Lernaean Bow, Golden Blade, Shield Splitter, Berserker''s Shield, Oath-Sworn Spear,
+    Transcendence, Arondight, Eye of the Storm, Amanita Charm.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.63
@@ -537,8 +537,8 @@ builds:
     Tears, Pendulum Blade, Shield of the Phoenix, Arondight, Screeching Gargoyle,
     The Crusher, Chandra''s Grace, The Reaper, Eye of Erebus, Berserker''s Shield,
     Runeforged Hammer, Prophetic Cloak, Amanita Charm, Gladiator''s Shield, Kinetic
-    Cuirass, Tekko-Kagi, Lernaean Bow, Eye of Providence, Shield Splitter, Silverbranch
-    Bow, Avatar''s Parashu, Avenging Blade.'
+    Cuirass, Silverbranch Bow, Tekko-Kagi, Lernaean Bow, Riptalon, Tyrfing, Eye of
+    Providence, Shield Splitter.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.61
@@ -604,10 +604,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, The Reaper, Tekko-Kagi, Pendulum Blade,
-    Hydra''s Lament, Avatar''s Parashu, Runeforged Hammer, Lernaean Bow, Shield Splitter,
-    Arondight, Avenging Blade, Transcendence, Tyrfing, Golden Blade, Eye of the Storm,
-    Deathbringer, Damaru, Dominance, Genji''s Guard, Silverbranch Bow, Musashi''s
-    Dual Swords, Berserker''s Shield, Riptalon, Sanguine Lash.'
+    Hydra''s Lament, Avatar''s Parashu, Runeforged Hammer, Tyrfing, Golden Blade,
+    Lernaean Bow, Shield Splitter, Arondight, Avenging Blade, Silverbranch Bow, Transcendence,
+    Eye of the Storm, Riptalon, Deathbringer, Damaru, Dominance, Genji''s Guard, Toxic
+    Blade, Musashi''s Dual Swords, Berserker''s Shield.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.66

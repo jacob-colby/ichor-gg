@@ -463,14 +463,14 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
+  - Tyrfing
   - Bragi's Harp
   - The Crusher
-  - Heartseeker
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Heartseeker
+  - The Crusher
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
@@ -483,17 +483,29 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Joust
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.64
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
     Jotunn's Revenge:
       total: 0.65
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Bragi's Harp:
       total: 0.57
       efficiency: 0.44
@@ -506,18 +518,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Heartseeker:
-      total: 0.58
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Tyrfing
   - Bragi's Harp
   - Rod of Tahuti
   - Soul Gem
-  - Triton's Conch
   flex_slots:
-  - Toxic Blade
-  - Triton's Conch
+  - Jotunn's Revenge
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -554,17 +554,23 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.88
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     Bragi's Harp:
       total: 0.6
       efficiency: 0.44
@@ -583,12 +589,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.53
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: model

@@ -606,13 +606,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Death Metal, The Crusher,
-    Gluttonous Grimoire, Nimble Ring, Spear of the Magus, Heartseeker, Bragi''s Harp,
-    The Reaper, Hydra''s Lament, Tekko-Kagi, Lernaean Bow, Runeforged Hammer, Titan''s
-    Bane, Berserker''s Shield, Tyrfing, The Cosmic Horror, Golden Blade, The World
-    Stone, Genji''s Guard, Breastplate of Valor, Pendulum Blade, Dreamer''s Idol,
-    Helm of Radiance, Arondight, Shield Splitter, Dominance, Avatar''s Parashu, Triton''s
-    Conch, Avenging Blade, Bracer of The Abyss, Ancient Signet, Silverbranch Bow,
-    Ethereal Staff, Rod of Asclepius, Transcendence.'
+    Gluttonous Grimoire, Nimble Ring, Spear of the Magus, Heartseeker, Tyrfing, Bragi''s
+    Harp, The Reaper, Golden Blade, Hydra''s Lament, Tekko-Kagi, Lernaean Bow, Runeforged
+    Hammer, Titan''s Bane, Berserker''s Shield, Silverbranch Bow, Riptalon, The Cosmic
+    Horror, The World Stone, Genji''s Guard, Breastplate of Valor, Pendulum Blade,
+    Dreamer''s Idol, Helm of Radiance, Arondight, Shield Splitter, Dominance, Avatar''s
+    Parashu, Triton''s Conch, Avenging Blade, Bracer of The Abyss, Ancient Signet,
+    Toxic Blade, Ethereal Staff.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -674,17 +674,17 @@ builds:
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Gluttonous Grimoire,
     Death Metal, The Crusher, Spear of the Magus, Heartseeker, The Reaper, Nimble
     Ring, Hydra''s Lament, The Cosmic Horror, The World Stone, Titan''s Bane, Bragi''s
-    Harp, Dreamer''s Idol, Runeforged Hammer, Tekko-Kagi, Helm of Radiance, Pendulum
-    Blade, Genji''s Guard, Breastplate of Valor, Ancient Signet, Ethereal Staff, Triton''s
-    Conch, Rod of Asclepius, Avatar''s Parashu, Arondight, Lernaean Bow, Gem of Focus,
-    Berserker''s Shield, Shield Splitter, Jade Scepter, Freya''s Tears, Totem of Death,
-    Wish-Granting Pearl, Avenging Blade, Blood-Bound Book.'
+    Harp, Dreamer''s Idol, Runeforged Hammer, Tyrfing, Tekko-Kagi, Helm of Radiance,
+    Golden Blade, Pendulum Blade, Genji''s Guard, Breastplate of Valor, Silverbranch
+    Bow, Ancient Signet, Ethereal Staff, Triton''s Conch, Rod of Asclepius, Riptalon,
+    Avatar''s Parashu, Arondight, Lernaean Bow, Gem of Focus, Berserker''s Shield,
+    Shield Splitter, Jade Scepter, Freya''s Tears.'
   slot_scores:
     Book of Thoth:
       total: 0.51

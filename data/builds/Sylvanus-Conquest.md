@@ -471,13 +471,13 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Freya''s
     Tears, Berserker''s Shield, Amanita Charm, Kinetic Cuirass, Gluttonous Grimoire,
-    The Crusher, Shield Splitter, Soul Gem, Runeforged Hammer, Death Metal, Nimble
-    Ring, Shield of the Phoenix, Hydra''s Lament, Shifter''s Shield, Spear of Desolation,
-    Eye of the Storm, Mantle Of Discord, Stone of Binding, Heartseeker, Spear of the
-    Magus, The Reaper, Pharaoh''s Curse, Helm of Radiance, Golden Blade, Obsidian
-    Shard, Lernaean Bow, Spectral Armor, Erosion, Shogun''s Ofuda, Eye of Providence,
-    Avenging Blade, Tekko-Kagi, Draconic Scale, Titan''s Bane, Leviathan''s Hide,
-    Ethereal Staff, Screeching Gargoyle, Rod of Asclepius.'
+    The Crusher, Shield Splitter, Soul Gem, Golden Blade, Runeforged Hammer, Death
+    Metal, Nimble Ring, Tyrfing, Shield of the Phoenix, Hydra''s Lament, Shifter''s
+    Shield, Spear of Desolation, Eye of the Storm, Mantle Of Discord, Stone of Binding,
+    Heartseeker, Spear of the Magus, The Reaper, Pharaoh''s Curse, Helm of Radiance,
+    Obsidian Shard, Lernaean Bow, Spectral Armor, Erosion, Silverbranch Bow, Shogun''s
+    Ofuda, Eye of Providence, Avenging Blade, Tekko-Kagi, Draconic Scale, Titan''s
+    Bane, Riptalon, Toxic Blade.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -547,10 +547,10 @@ builds:
     Berserker''s Shield, Death Metal, Spear of Desolation, The Crusher, Shield Splitter,
     Spear of the Magus, Runeforged Hammer, Helm of Radiance, Shield of the Phoenix,
     Shifter''s Shield, Nimble Ring, Obsidian Shard, Mantle Of Discord, Stone of Binding,
-    Hydra''s Lament, Eye of the Storm, Ethereal Staff, Rod of Asclepius, Heartseeker,
-    Erosion, Spectral Armor, The Reaper, Eye of Providence, Draconic Scale, Chronos''
-    Pendant, Jade Scepter, Doom Orb, Leviathan''s Hide, The Cosmic Horror, Pharaoh''s
-    Curse, Wish-Granting Pearl, Avenging Blade, Screeching Gargoyle.'
+    Hydra''s Lament, Golden Blade, Eye of the Storm, Ethereal Staff, Rod of Asclepius,
+    Heartseeker, Erosion, Spectral Armor, The Reaper, Eye of Providence, Draconic
+    Scale, Chronos'' Pendant, Jade Scepter, Doom Orb, Leviathan''s Hide, The Cosmic
+    Horror, Pharaoh''s Curse, Wish-Granting Pearl, Avenging Blade.'
   slot_scores:
     Berserker's Shield:
       total: 0.52

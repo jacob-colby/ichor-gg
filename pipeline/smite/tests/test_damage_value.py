@@ -6,7 +6,7 @@ they stay off and that the measurement stays reproducible.
 """
 import pytest
 
-from smite import combat, damage_value as dv, notes, recommend, scoring
+from smite import combat, damage_value as dv, kit, notes, recommend, scoring
 
 
 def _god(name):
@@ -213,10 +213,122 @@ def test_the_clock_ships_off():
 
 def test_both_b4_halves_ship_off():
     """They made the gate worse — 48.4% coverage to 44.9% with magnitude on.
-    If someone turns these on, it should be because they re-measured."""
+    If someone turns these on, it should be because they re-measured.
+
+    `damage_fit_blend` stays at 0.0 for a different reason now: its gain was
+    entirely the Attack Damage column, which `attack_damage_fit` took over.
+    What is left of it peaks at 0.30 on the probe split and then falls BELOW
+    control (37.7% at full strength, worse on 11 gods against better on 7)."""
     weights = scoring.load_weights(recommend.WEIGHTS_PATH)
     assert weights.get("magnitude_fit") is False
     assert weights.get("damage_fit_blend") == 0.0
+
+
+# ── The carve-out, which ships ON ─────────────────────────────────────────
+
+def test_the_fit_map_has_no_attack_damage_column_of_its_own():
+    """The hole `attack_damage_fit` exists to fill, asserted at the source
+    rather than quoted. Neither the role table nor the kit overlay ever names
+    Attack Damage, so every god's merged fit map scores it at exactly 0.0 —
+    while their own basic-attack scaling says it is worth real damage."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    gods = recommend.load_gods()
+    for god in gods:
+        base = scoring._role_stat_map(god, weights)
+        overlay = kit.kit_stat_overlay(kit.scaling_profile(god), god,
+                                       include_off_type=True)
+        assert base.get("Attack Damage", 0.0) == 0.0, god["name"]
+        assert "Attack Damage" not in overlay, god["name"]
+
+    measured = [g for g in gods
+                if dv.stat_weights(g).get("Attack Damage", 0.0) > 0]
+    assert len(measured) == 78, len(measured)
+
+
+def test_attack_damage_fit_credits_the_measured_weight():
+    """A pure scale, because the value it blends against is zero — which is
+    why the shipped strength is 1.0 rather than an argmax off a flat plateau."""
+    medusa = _god("Medusa")
+    role_map = {"Attack Speed": 1.3, "Strength": 0.8}
+    weight = dv.stat_weights(medusa)["Attack Damage"]
+
+    off = dv.attack_damage_fit(medusa, role_map, 0.0)
+    assert off == role_map
+    assert "Attack Damage" not in off
+
+    full = dv.attack_damage_fit(medusa, role_map, 1.0)
+    assert full["Attack Damage"] == pytest.approx(weight * 1.3)
+    half = dv.attack_damage_fit(medusa, role_map, 0.5)
+    assert half["Attack Damage"] == pytest.approx(full["Attack Damage"] / 2)
+    # Everything else is left exactly alone.
+    assert {k: v for k, v in full.items() if k != "Attack Damage"} == role_map
+
+
+def test_attack_damage_fit_is_silent_on_a_god_it_cannot_measure():
+    assert dv.attack_damage_fit({"abilities": []}, {"Strength": 1.0}, 1.0) ==            {"Strength": 1.0}
+
+
+def test_the_two_halves_do_not_double_count_attack_damage():
+    """`blend_stat_values` used to own every offensive stat. Now that the
+    Attack Damage column has its own flag, the blend must not also move it —
+    with both on, that would apply the same measurement twice."""
+    medusa = _god("Medusa")
+    role_map = {"Attack Speed": 1.3, "Strength": 0.8}
+    blended = dv.blend_stat_values(medusa, role_map, 1.0)
+    assert blended.get("Attack Damage", 0.0) == 0.0
+    assert blended["Strength"] != role_map["Strength"]     # still a live knob
+
+
+def test_the_column_is_credited_but_not_charged():
+    """The normaliser rule, and the reason it exists. `stat_fit` divides by the
+    sum of the map, so injecting a column the ordinary way would shrink every
+    NON-carrier's stat term — a pool-wide re-weighting that has nothing to do
+    with the measurement, and which promoted 43 anti-heal items into Joust and
+    Arena cores because the flat tag bonus is added after normalisation."""
+    god = {"name": "T", "damage_type": "physical", "role": "Jungle"}
+    weights = scoring.load_weights_default()
+    role_map = {"Strength": 1.0, "Attack Speed": 1.0}
+    with_ad = {**role_map, "Attack Damage": 1.0}
+    carrier = {"stats": {"Attack Damage": "25"}}
+    other = {"stats": {"Strength": "40"}}
+
+    charged = lambda it: scoring.god_fit_score(it, god, weights, [], base_map=with_ad)
+    credited = lambda it: scoring.god_fit_score(it, god, weights, [], base_map=with_ad,
+                                                denom_exclude=("Attack Damage",))
+    before = scoring.god_fit_score(other, god, weights, [], base_map=role_map)
+
+    # Charged, the item that does not carry the stat is penalised for it.
+    assert charged(other) < before
+    # Credited, it is left exactly where it was, and the carrier still gains.
+    assert credited(other) == pytest.approx(before)
+    assert credited(carrier) > charged(carrier)
+
+
+def test_a_flavour_that_names_attack_damage_keeps_it_in_the_normaliser():
+    """`attack-speed` declares `Attack Damage: 1.0` itself. That is a stated
+    want and is charged like any other; only the injected column is exempt."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    overlay = (weights.get("flavors") or {}).get("attack-speed", {}).get("stats") or {}
+    assert overlay.get("Attack Damage")           # the case this guards
+
+    god = next(g for g in recommend.load_gods()
+               if dv.stat_weights(g).get("Attack Damage", 0.0) > 0)
+    items = recommend.load_items()
+    tags = scoring.load_tags(recommend.TAGS_PATH)
+    eff = {it["name"]: {"score": 0.5} for it in items}
+    profile = scoring.resolve_profile(weights, "Conquest", "attack-speed")
+    note = recommend.load_build_note(god["name"])
+    rows = scoring.score_god_items(god, items, note, eff, weights, tags, profile)
+    assert rows      # it scores, and the flavour's own weight is untouched
+
+
+def test_the_carve_out_ships_on_at_full_strength():
+    """Positive on both leakage-free splits at every strength, and the only
+    thing in register entry 4 whose paired CI excludes zero (probe 38.7% ->
+    40.6%, [+0.34%, +3.52%]; best 39.6% -> 40.5%). Numbers under
+    `attack_damage_fit` in _weights.yaml."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    assert weights.get("attack_damage_fit") == 1.0
 
 
 def test_magnitude_changes_the_fit_when_enabled_at_all():

@@ -183,6 +183,61 @@ def stat_weights(god, min_abilities=2):
     return {s: v / top for s, v in offensive.items()}
 
 
+ATTACK_DAMAGE_KEY = "Attack Damage"
+
+
+def attack_damage_fit(god, role_map, strength=1.0, min_abilities=2):
+    """Give the fit map an Attack Damage column, from the god's own scaling.
+
+    THE FIT MAP HAS NO SUCH COLUMN AT ALL. The `role_stats` table in
+    `_weights.yaml` — read by `scoring._role_stat_map` — names Attack Speed,
+    Critical Chance, Strength, Intelligence, Penetration, Cooldown Rate and the
+    defensive stats, and `kit.kit_stat_overlay` emits those same six offensive
+    keys. Neither ever says "Attack Damage", so the merged role+kit map scores
+    it at exactly 0.0 on **89 of 89 gods**, while `stat_weights` measures it
+    NON-ZERO on all 78 gods whose kit parses. It is not a low weight that could be argued
+    about; it is an absent column, and this is the only thing in the repo that
+    fills it.
+
+    That is the fit-side twin of the hole §3 of docs/STATE.md closed on the
+    damage side (`item_damage_gain` skipped the Basic Attack slot, so Attack
+    Damage bought no modelled damage either). The same stat was missing from
+    both halves of the model for the same reason — every source we scrape
+    describes basic attacks somewhere other than where the code was reading.
+
+    `strength` is a pure scale, because the value it blends against is zero:
+    `(1 - s) * 0 + s * w * ref`. So there is no prior here to trade off against
+    the measurement, and 1.0 means "the measurement, on the fit map's own
+    scale" rather than a tuned argmax — the metric is flat from 0.75 to 2.0.
+
+    THE COLUMN IS CREDITED BUT NOT CHARGED, which is not a detail. `fit` is
+    normalised by the sum of the map, so injecting a column the ordinary way
+    shrinks the stat term of every item that does not carry the stat — -12.5%
+    over 10,065 (god, item) pairs against +48.7% for the 702 that do. That is a
+    pool-wide re-weighting rather than this measurement, it silently promotes
+    the flat tag bonuses that are added after normalisation, and in Joust and
+    Arena — where those bonuses reach +0.30 — it pulled 43 anti-heal items into
+    cores. `scoring.score_god_items` therefore passes this key in
+    `denom_exclude`; see `scoring.god_fit_score` for the full argument.
+
+    Sweep, paired CIs, core churn and the Joust/Arena sweeps under
+    `attack_damage_fit` in `_weights.yaml`.
+    """
+    if strength <= 0:
+        return dict(role_map)
+    weight = stat_weights(god, min_abilities).get(ATTACK_DAMAGE_KEY, 0.0)
+    if weight <= 0:
+        return dict(role_map)
+    # Same commensurability argument as `blend_stat_values`: the measured
+    # weight is normalised to the god's own top stat, so it has to be put on
+    # the fit map's scale before it can compete with one.
+    reference = max(role_map.values()) if role_map else 1.0
+    current = role_map.get(ATTACK_DAMAGE_KEY, 0.0)
+    out = dict(role_map)
+    out[ATTACK_DAMAGE_KEY] = (1 - min(strength, 1.0)) * current + strength * weight * reference
+    return out
+
+
 def blend_stat_values(god, role_map, blend=0.5, min_abilities=2):
     """Role table with the god's measured offensive weights blended over it.
 
@@ -192,8 +247,29 @@ def blend_stat_values(god, role_map, blend=0.5, min_abilities=2):
     adds no damage.
 
     `blend` 0 is the old behaviour exactly, 1 ignores the role table for
-    offensive stats. It is a weights-file knob because the right value is an
-    empirical question, and the answer is whatever `validate.compute` says.
+    offensive stats.
+
+    ATTACK DAMAGE IS EXCLUDED HERE — `attack_damage_fit` owns it. Measured
+    2026-08-21, this knob decomposes into two halves that do opposite things,
+    and reporting them as one number hid both: the Attack-Damage column is the
+    whole of the gain, and the Strength/Intelligence remainder left behind is
+    the null this docstring used to describe. Splitting them also removes the
+    double-count that having both flags on would otherwise produce.
+
+    ITS OWN NORMALISATION IS THE REASON IT LOOKED HARMFUL AT FULL STRENGTH.
+    "Everything else keeps its role weight untouched" is true of the VALUES and
+    false of the COMPARISON: `reference` is the largest weight in the whole
+    role map, which for a tank or a support is a PROTECTION, so blending
+    promotes every offensive stat toward it while defence stands still. Mean
+    offensive fit mass at blend 0.75 goes +30% for a damage god and **+71% for
+    a tank or support**, and defensive stats then walk out of cores — net
+    −1535 points of Health/Protection across the moved cores at 0.75 and −4125
+    at 1.00, which is where coverage turned back down. Scaling by the largest
+    OFFENSIVE role weight instead removes the turn-down entirely (probe 38.9%
+    → 40.0%, best 39.4% → 40.1% at blend 1.00, defensive flow −4125 → −1150).
+    That variant is measured and NOT shipped, because with Attack Damage carved
+    out there is no longer a gain for it to protect; it is recorded so the next
+    attempt starts from the fixed arithmetic rather than rediscovering this.
     """
     measured = stat_weights(god, min_abilities)
     if not measured or blend <= 0:
@@ -201,6 +277,8 @@ def blend_stat_values(god, role_map, blend=0.5, min_abilities=2):
 
     out = dict(role_map)
     for stat, weight in measured.items():
+        if stat == ATTACK_DAMAGE_KEY:
+            continue
         current = role_map.get(stat, 0.0)
         # Scale the measured weight to the role map's own magnitude so the two
         # remain commensurable — this is a re-weighting, not a re-scaling.

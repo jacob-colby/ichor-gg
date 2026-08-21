@@ -7,18 +7,18 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
+  - Toxic Blade
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Toxic Blade
   - Erosion
-  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -26,17 +26,23 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.7
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     Amanita Charm:
       total: 0.77
       efficiency: 0.65
@@ -44,12 +50,6 @@ builds:
       pick: 0.0
       fit: 0.89
     Erosion:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-    Stampede:
       total: 0.57
       efficiency: 0.51
       win: 0.5
@@ -164,11 +164,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.65
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.87
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
@@ -334,18 +334,18 @@ builds:
   archetype: model
   slot_order:
   - Golden Blade
+  - Toxic Blade
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Toxic Blade
   - Erosion
-  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -353,17 +353,23 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.7
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     Amanita Charm:
       total: 0.77
       efficiency: 0.65
@@ -371,12 +377,6 @@ builds:
       pick: 0.0
       fit: 0.89
     Erosion:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-    Stampede:
       total: 0.57
       efficiency: 0.51
       win: 0.5
@@ -424,11 +424,11 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.7
     Shell of Rebuke:
       total: 0.24
       efficiency: 0.28
@@ -461,13 +461,13 @@ builds:
       fit: 0.74
   swaps:
   - added: Hide of the Nemean Lion
-    removed: Stampede
-    reason: Conquest community 60% win over 129 matches (vs 49% on this god), taking
-      the model's weakest slot from Stampede
-  - added: Shell of Rebuke
     removed: Erosion
-    reason: Conquest community 59% win over 112 matches (vs 49% on this god), taking
+    reason: Conquest community 60% win over 129 matches (vs 49% on this god), taking
       the model's weakest slot from Erosion
+  - added: Shell of Rebuke
+    removed: Toxic Blade
+    reason: Conquest community 59% win over 112 matches (vs 49% on this god), taking
+      the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001
 ---

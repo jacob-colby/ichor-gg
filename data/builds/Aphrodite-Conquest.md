@@ -607,12 +607,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Berserker''s Shield, Gluttonous
     Grimoire, Amanita Charm, Kinetic Cuirass, Soul Gem, Obsidian Shard, Freya''s Tears,
-    Death Metal, The Crusher, Nimble Ring, Runeforged Hammer, Shield Splitter, Spear
-    of the Magus, Hydra''s Lament, Shield of the Phoenix, Helm of Radiance, Shifter''s
-    Shield, Eye of the Storm, Heartseeker, The Reaper, Mantle Of Discord, Stone of
-    Binding, Golden Blade, Pharaoh''s Curse, Lernaean Bow, Ethereal Staff, Rod of
-    Asclepius, Spectral Armor, Bragi''s Harp, Avenging Blade, Tekko-Kagi, Shogun''s
-    Ofuda, Erosion, Titan''s Bane, Eye of Providence, Leviathan''s Hide.'
+    Death Metal, The Crusher, Nimble Ring, Runeforged Hammer, Shield Splitter, Golden
+    Blade, Spear of the Magus, Hydra''s Lament, Shield of the Phoenix, Helm of Radiance,
+    Shifter''s Shield, Eye of the Storm, Heartseeker, Tyrfing, The Reaper, Mantle
+    Of Discord, Stone of Binding, Pharaoh''s Curse, Lernaean Bow, Ethereal Staff,
+    Rod of Asclepius, Spectral Armor, Bragi''s Harp, Avenging Blade, Tekko-Kagi, Shogun''s
+    Ofuda, Silverbranch Bow, Erosion, Titan''s Bane, Eye of Providence.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -682,9 +682,10 @@ builds:
     Freya''s Tears, Death Metal, The Crusher, Spear of the Magus, Shield Splitter,
     Runeforged Hammer, Helm of Radiance, Nimble Ring, Shield of the Phoenix, Shifter''s
     Shield, Hydra''s Lament, Mantle Of Discord, Eye of the Storm, Stone of Binding,
-    Ethereal Staff, Rod of Asclepius, The Cosmic Horror, Heartseeker, The Reaper,
-    Spectral Armor, Erosion, Eye of Providence, Doom Orb, Jade Scepter, Draconic Scale,
-    Wish-Granting Pearl, Avenging Blade, Leviathan''s Hide, Pharaoh''s Curse.'
+    Ethereal Staff, Golden Blade, Rod of Asclepius, The Cosmic Horror, Heartseeker,
+    The Reaper, Spectral Armor, Erosion, Eye of Providence, Doom Orb, Jade Scepter,
+    Draconic Scale, Wish-Granting Pearl, Avenging Blade, Leviathan''s Hide, Pharaoh''s
+    Curse.'
   slot_scores:
     Book of Thoth:
       total: 0.51

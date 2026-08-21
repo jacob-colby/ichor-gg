@@ -122,9 +122,8 @@ builds:
     Grimoire, Spectral Armor, Magi''s Cloak, Leviathan''s Hide, Pharaoh''s Curse,
     Eye of the Storm, Helm of Radiance, Soul Gem, Runeforged Hammer, Shogun''s Ofuda,
     Midgardian Mail, Screeching Gargoyle, Doublet of Binding, Void Shield, Ancile,
-    Oni Hunter''s Garb, Helm of Darkness, Xibalban Effigy, Void Stone, Ethereal Staff,
-    Spear of Desolation, Hussar''s Wings, Gladiator''s Shield, Stampede, Prophetic
-    Cloak.'
+    Oni Hunter''s Garb, Golden Blade, Helm of Darkness, Xibalban Effigy, Void Stone,
+    Ethereal Staff, Spear of Desolation, Hussar''s Wings, Stampede, Prophetic Cloak.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -188,8 +187,8 @@ builds:
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Freya''s Tears, Rod of Tahuti,
     Berserker''s Shield, Soul Gem, Ethereal Staff, Rod of Asclepius, Jotunn''s Revenge,
@@ -197,8 +196,8 @@ builds:
     Chandra''s Grace, Draconic Scale, Spectral Armor, Mantle Of Discord, Stone of
     Binding, Yogi''s Necklace, Shield Splitter, Leviathan''s Hide, Pharaoh''s Curse,
     Runeforged Hammer, Eye of the Storm, Glorious Pridwen, The Reaper, Shogun''s Ofuda,
-    Midgardian Mail, Lifebinder, Doublet of Binding, Helm of Radiance, Spirit Robe,
-    Void Shield, Magi''s Cloak, Ancile, Oni Hunter''s Garb, Stampede.'
+    Midgardian Mail, Lifebinder, Riptalon, Golden Blade, Doublet of Binding, Helm
+    of Radiance, Spirit Robe, Void Shield, Magi''s Cloak, Stampede.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -267,11 +266,10 @@ builds:
     Stone of Binding, Amanita Charm, Soul Gem, Berserker''s Shield, Screeching Gargoyle,
     The Crusher, Spear of Desolation, Void Shield, Spear of the Magus, Breastplate
     of Valor, Void Stone, Obsidian Shard, Avenging Blade, Shield of the Phoenix, Mantle
-    Of Discord, Heartseeker, Erosion, Shield Splitter, The Reaper, Eye of Providence,
-    Spectral Armor, Draconic Scale, Doom Orb, The Cosmic Horror, Helm of Radiance,
-    Runeforged Hammer, Leviathan''s Hide, The World Stone, Pharaoh''s Curse, Titan''s
-    Bane, Magi''s Cloak, Dreamer''s Idol, Silverbranch Bow, Nimble Ring, Eye of the
-    Storm.'
+    Of Discord, Heartseeker, Erosion, Shield Splitter, The Reaper, Silverbranch Bow,
+    Eye of Providence, Toxic Blade, Spectral Armor, Draconic Scale, Riptalon, Doom
+    Orb, The Cosmic Horror, Helm of Radiance, Runeforged Hammer, Leviathan''s Hide,
+    The World Stone, Pharaoh''s Curse, Titan''s Bane, Magi''s Cloak, Dreamer''s Idol.'
   slot_scores:
     Stone of Binding:
       total: 0.55
@@ -483,13 +481,13 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Freya''s
     Tears, Berserker''s Shield, Amanita Charm, Gluttonous Grimoire, The Crusher, Shield
-    Splitter, Runeforged Hammer, Breastplate of Valor, Eye of the Storm, Soul Gem,
-    Death Metal, Shield of the Phoenix, Hydra''s Lament, Mantle Of Discord, Stone
-    of Binding, Heartseeker, The Reaper, Nimble Ring, Golden Blade, Pharaoh''s Curse,
+    Splitter, Runeforged Hammer, Breastplate of Valor, Golden Blade, Eye of the Storm,
+    Soul Gem, Death Metal, Shield of the Phoenix, Hydra''s Lament, Mantle Of Discord,
+    Stone of Binding, Heartseeker, The Reaper, Nimble Ring, Pharaoh''s Curse, Tyrfing,
     Lernaean Bow, Erosion, Spear of Desolation, Spectral Armor, Tekko-Kagi, Eye of
     Providence, Spear of the Magus, Shogun''s Ofuda, Avenging Blade, Draconic Scale,
-    Helm of Radiance, Titan''s Bane, Obsidian Shard, Leviathan''s Hide, Magi''s Cloak,
-    Tyrfing, Screeching Gargoyle.'
+    Helm of Radiance, Titan''s Bane, Obsidian Shard, Leviathan''s Hide, Silverbranch
+    Bow, Magi''s Cloak.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -560,9 +558,9 @@ builds:
     Desolation, Spear of the Magus, Runeforged Hammer, Helm of Radiance, Obsidian
     Shard, Nimble Ring, Shield of the Phoenix, Mantle Of Discord, Stone of Binding,
     Eye of the Storm, Ethereal Staff, Hydra''s Lament, Rod of Asclepius, Heartseeker,
-    Erosion, Spectral Armor, The Reaper, Eye of Providence, Draconic Scale, Doom Orb,
-    Jade Scepter, The Cosmic Horror, Leviathan''s Hide, Pharaoh''s Curse, Wish-Granting
-    Pearl, Avenging Blade, Magi''s Cloak, Chronos'' Pendant.'
+    Erosion, Spectral Armor, The Reaper, Eye of Providence, Golden Blade, Draconic
+    Scale, Doom Orb, Jade Scepter, The Cosmic Horror, Leviathan''s Hide, Pharaoh''s
+    Curse, Wish-Granting Pearl, Avenging Blade, Magi''s Cloak.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -633,9 +631,9 @@ builds:
     Splitter, Gluttonous Grimoire, Spectral Armor, Magi''s Cloak, Leviathan''s Hide,
     Pharaoh''s Curse, Eye of the Storm, Helm of Radiance, Soul Gem, Runeforged Hammer,
     Shogun''s Ofuda, Midgardian Mail, Screeching Gargoyle, Prophetic Cloak, Doublet
-    of Binding, Void Shield, Stampede, Ancile, Oni Hunter''s Garb, Helm of Darkness,
-    Xibalban Effigy, Void Stone, Ethereal Staff, Spear of Desolation, Hussar''s Wings,
-    Gladiator''s Shield.'
+    of Binding, Void Shield, Stampede, Ancile, Oni Hunter''s Garb, Golden Blade, Helm
+    of Darkness, Xibalban Effigy, Void Stone, Ethereal Staff, Spear of Desolation,
+    Hussar''s Wings.'
   slot_scores:
     Berserker's Shield:
       total: 0.55

@@ -116,11 +116,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Tekko-Kagi, Pendulum Blade, Avatar''s Parashu, Runeforged
-    Hammer, Lernaean Bow, Shield Splitter, Arondight, Avenging Blade, Transcendence,
-    Tyrfing, Golden Blade, Eye of the Storm, Deathbringer, Damaru, Dominance, Genji''s
-    Guard, Silverbranch Bow, Breastplate of Valor, Musashi''s Dual Swords, Berserker''s
-    Shield, Riptalon, Sanguine Lash, Amanita Charm.'
+    this god: The Reaper, Tyrfing, Golden Blade, Tekko-Kagi, Pendulum Blade, Avatar''s
+    Parashu, Silverbranch Bow, Runeforged Hammer, Riptalon, Lernaean Bow, Toxic Blade,
+    Shield Splitter, Arondight, Avenging Blade, Transcendence, Eye of the Storm, Deathbringer,
+    Damaru, Dominance, Genji''s Guard, Breastplate of Valor, Musashi''s Dual Swords,
+    Berserker''s Shield, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
@@ -187,11 +187,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Genji''s
-    Guard, Breastplate of Valor, The Reaper, Runeforged Hammer, Transcendence, Tekko-Kagi,
-    Arondight, Pendulum Blade, Lernaean Bow, Berserker''s Shield, Freya''s Tears,
-    Shield Splitter, Avenging Blade, Dominance, Amanita Charm, Avatar''s Parashu,
-    Tyrfing, Kinetic Cuirass, Golden Blade, Eye of the Storm, Shield of the Phoenix,
-    Deathbringer, Damaru, Eye of Providence, Screeching Gargoyle.'
+    Guard, Breastplate of Valor, The Reaper, Runeforged Hammer, Tyrfing, Golden Blade,
+    Transcendence, Tekko-Kagi, Arondight, Pendulum Blade, Lernaean Bow, Berserker''s
+    Shield, Freya''s Tears, Shield Splitter, Silverbranch Bow, Avenging Blade, Dominance,
+    Amanita Charm, Avatar''s Parashu, Riptalon, Kinetic Cuirass, Eye of the Storm,
+    Shield of the Phoenix, Deathbringer, Damaru.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -256,12 +256,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: The Reaper, Pendulum Blade, Genji''s Guard, Breastplate of Valor, Tekko-Kagi,
-    Freya''s Tears, Runeforged Hammer, Arondight, Avatar''s Parashu, Berserker''s
-    Shield, Silverbranch Bow, Shield of the Phoenix, Amanita Charm, Lernaean Bow,
-    Riptalon, Screeching Gargoyle, Kinetic Cuirass, Shield Splitter, Avenging Blade,
-    Transcendence, Tyrfing, Golden Blade, Eye of Providence, Eye of the Storm, Toxic
-    Blade.'
+    god: The Reaper, Pendulum Blade, Genji''s Guard, Breastplate of Valor, Silverbranch
+    Bow, Tekko-Kagi, Riptalon, Freya''s Tears, Runeforged Hammer, Arondight, Avatar''s
+    Parashu, Tyrfing, Golden Blade, Berserker''s Shield, Toxic Blade, Shield of the
+    Phoenix, Amanita Charm, Lernaean Bow, Screeching Gargoyle, Kinetic Cuirass, Shield
+    Splitter, Avenging Blade, Transcendence, Eye of Providence, Eye of the Storm.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -328,10 +327,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, The Reaper, Berserker''s
     Shield, Runeforged Hammer, Shield Splitter, Eye of the Storm, Freya''s Tears,
-    Phoenix Feather, Erosion, Eye of Providence, Genji''s Guard, Breastplate of Valor,
-    Draconic Scale, Spectral Armor, Yogi''s Necklace, Mantle Of Discord, Stone of
-    Binding, Chandra''s Grace, Avenging Blade, Leviathan''s Hide, Pharaoh''s Curse,
-    Riptalon, Golden Blade.'
+    Riptalon, Golden Blade, Phoenix Feather, Erosion, Eye of Providence, Genji''s
+    Guard, Breastplate of Valor, Draconic Scale, Spectral Armor, Yogi''s Necklace,
+    Mantle Of Discord, Stone of Binding, Chandra''s Grace, Avenging Blade, Leviathan''s
+    Hide, Pharaoh''s Curse.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
@@ -396,11 +395,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Reaper, Tekko-Kagi, Avatar''s Parashu, Pendulum Blade, Avenging
-    Blade, Silverbranch Bow, Riptalon, Runeforged Hammer, Toxic Blade, Stone of Binding,
-    Screeching Gargoyle, Lernaean Bow, Shield Splitter, Berserker''s Shield, Genji''s
-    Guard, Breastplate of Valor, Oath-Sworn Spear, Transcendence, Tyrfing, Arondight,
-    Golden Blade, Eye of the Storm, Amanita Charm, Kinetic Cuirass, Deathbringer.'
+    for this god: The Reaper, Tekko-Kagi, Silverbranch Bow, Riptalon, Avatar''s Parashu,
+    Pendulum Blade, Toxic Blade, Avenging Blade, Tyrfing, Golden Blade, Runeforged
+    Hammer, Stone of Binding, Screeching Gargoyle, Lernaean Bow, Shield Splitter,
+    Berserker''s Shield, Genji''s Guard, Breastplate of Valor, Oath-Sworn Spear, Transcendence,
+    Arondight, Eye of the Storm, Amanita Charm, Kinetic Cuirass, Deathbringer.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
@@ -536,10 +535,10 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Breastplate of Valor,
     Freya''s Tears, Pendulum Blade, Shield of the Phoenix, Arondight, Screeching Gargoyle,
-    Chandra''s Grace, The Reaper, Eye of Erebus, Berserker''s Shield, Runeforged Hammer,
-    Prophetic Cloak, Amanita Charm, Gladiator''s Shield, Kinetic Cuirass, Tekko-Kagi,
-    Lernaean Bow, Eye of Providence, Shield Splitter, Silverbranch Bow, Avatar''s
-    Parashu, Avenging Blade, Riptalon, Glorious Pridwen.'
+    Chandra''s Grace, The Reaper, Silverbranch Bow, Eye of Erebus, Berserker''s Shield,
+    Runeforged Hammer, Riptalon, Tyrfing, Golden Blade, Prophetic Cloak, Amanita Charm,
+    Gladiator''s Shield, Kinetic Cuirass, Tekko-Kagi, Lernaean Bow, Toxic Blade, Eye
+    of Providence, Shield Splitter.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -582,14 +581,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Tyrfing
   - The Reaper
-  - Tekko-Kagi
   - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
+  - Tyrfing
   - Heartseeker
-  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -604,11 +603,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: The Reaper, Tekko-Kagi, Pendulum Blade, Avatar''s Parashu,
-    Runeforged Hammer, Lernaean Bow, Shield Splitter, Arondight, Avenging Blade, Transcendence,
-    Tyrfing, Golden Blade, Eye of the Storm, Deathbringer, Damaru, Dominance, Genji''s
-    Guard, Silverbranch Bow, Breastplate of Valor, Musashi''s Dual Swords, Berserker''s
-    Shield, Riptalon, Sanguine Lash, Amanita Charm.'
+    Underrated for this god: The Reaper, Tyrfing, Golden Blade, Tekko-Kagi, Pendulum
+    Blade, Avatar''s Parashu, Silverbranch Bow, Runeforged Hammer, Riptalon, Lernaean
+    Bow, Toxic Blade, Shield Splitter, Arondight, Avenging Blade, Transcendence, Eye
+    of the Storm, Deathbringer, Damaru, Dominance, Genji''s Guard, Breastplate of
+    Valor, Musashi''s Dual Swords, Berserker''s Shield, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
@@ -616,15 +615,15 @@ builds:
       win: 0.5
       pick: 0.33
       fit: 1.0
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.51
+      pick: 0.0
+      fit: 0.97
     The Reaper:
       total: 0.56
       efficiency: 0.55
-      win: 0.51
-      pick: 0.0
-      fit: 0.91
-    Tekko-Kagi:
-      total: 0.54
-      efficiency: 0.49
       win: 0.51
       pick: 0.0
       fit: 0.91

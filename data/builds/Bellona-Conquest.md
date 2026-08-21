@@ -184,15 +184,15 @@ builds:
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Jotunn''s Revenge, Freya''s Tears,
     Runeforged Hammer, Shield Splitter, The Reaper, Eye of the Storm, Genji''s Guard,
     Breastplate of Valor, Phoenix Feather, Chandra''s Grace, Erosion, Eye of Providence,
     Draconic Scale, Spectral Armor, Hydra''s Lament, The Crusher, Yogi''s Necklace,
     Avenging Blade, Stone of Binding, Leviathan''s Hide, Pharaoh''s Curse, Glorious
-    Pridwen.'
+    Pridwen, Riptalon.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -261,8 +261,8 @@ builds:
     Avenging Blade, Screeching Gargoyle, Freya''s Tears, Heartseeker, Void Shield,
     Genji''s Guard, Shield Splitter, The Reaper, Breastplate of Valor, Void Stone,
     Runeforged Hammer, Shield of the Phoenix, Titan''s Bane, Eye of the Storm, Erosion,
-    Hydra''s Lament, Tekko-Kagi, Spectral Armor, Eye of Providence, Draconic Scale,
-    Leviathan''s Hide, Pharaoh''s Curse.'
+    Hydra''s Lament, Tekko-Kagi, Spectral Armor, Eye of Providence, Silverbranch Bow,
+    Draconic Scale.'
   slot_scores:
     Stone of Binding:
       total: 0.55

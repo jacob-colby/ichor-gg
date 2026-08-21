@@ -10,11 +10,11 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
+  - Tyrfing
   - Soul Gem
   flex_slots:
-  - Death Metal
   - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.56
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.68
     Lernaean Bow:
       total: 0.61
       efficiency: 0.52
@@ -44,23 +44,23 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.6
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.83
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Death Metal:
-      total: 0.56
-      efficiency: 0.61
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.68
     Soul Gem:
       total: 0.76
       efficiency: 0.57
@@ -138,19 +138,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
+  - Toxic Blade
   - Erosion
-  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -158,11 +158,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
     Amanita Charm:
       total: 0.82
       efficiency: 0.65
@@ -175,12 +181,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Stampede:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Pharaoh's Curse:
       total: 0.64
       efficiency: 0.55
@@ -229,11 +229,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
+      total: 0.7
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.94
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.72
@@ -340,7 +340,7 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Hydra's Lament
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,11 +359,11 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.67
     Jotunn's Revenge:
       total: 0.65
       efficiency: 0.72
@@ -402,11 +402,11 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
+  - Tyrfing
   - Soul Gem
   flex_slots:
-  - Death Metal
   - Golden Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -424,11 +424,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.56
+      total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.68
     Lernaean Bow:
       total: 0.61
       efficiency: 0.52
@@ -436,23 +436,23 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.6
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.83
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Death Metal:
-      total: 0.56
-      efficiency: 0.61
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.68
     Soul Gem:
       total: 0.76
       efficiency: 0.57
@@ -501,11 +501,11 @@ builds:
       pick: 0.0
       fit: 0.35
     Toxic Blade:
-      total: 0.6
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.83
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
@@ -513,11 +513,11 @@ builds:
       pick: 0.0
       fit: 0.49
     Silverbranch Bow:
-      total: 0.49
+      total: 0.53
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.53
     Soul Gem:
       total: 0.76
       efficiency: 0.57
@@ -526,13 +526,13 @@ builds:
       fit: 0.96
   swaps:
   - added: Silverbranch Bow
-    removed: Golden Blade
+    removed: Tyrfing
     reason: Conquest community 71% win over 54 matches (vs 52% on this god), taking
-      the model's weakest slot from Golden Blade
+      the model's weakest slot from Tyrfing
   - added: The Executioner
-    removed: Death Metal
+    removed: Golden Blade
     reason: Conquest community 66% win over 62 matches (vs 52% on this god), taking
-      the model's weakest slot from Death Metal
+      the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001
 ---

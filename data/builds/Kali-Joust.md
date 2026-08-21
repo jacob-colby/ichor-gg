@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Bragi's Harp
+  - Tyrfing
   - Death Metal
   - The Crusher
   - Soul Gem
   flex_slots:
+  - Death Metal
   - The Crusher
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,23 +32,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.83
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Bragi's Harp:
-      total: 0.55
-      efficiency: 0.44
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.68
     Death Metal:
       total: 0.56
       efficiency: 0.61
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.78
     Amanita Charm:
       total: 0.77
       efficiency: 0.65
@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Tekko-Kagi
+  - Silverbranch Bow
   - The Crusher
   - Heartseeker
   - Soul Gem
   flex_slots:
   - Heartseeker
-  - Tekko-Kagi
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -229,23 +229,23 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
+      total: 0.7
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.94
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Tekko-Kagi:
+    Silverbranch Bow:
       total: 0.58
-      efficiency: 0.49
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     The Crusher:
       total: 0.62
       efficiency: 0.57
@@ -340,7 +340,7 @@ builds:
   - Spear of Desolation
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Hydra's Lament
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,11 +359,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.67
     Genji's Guard:
       total: 0.5
       efficiency: 0.66
@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Bragi's Harp
+  - Tyrfing
   - Death Metal
   - The Crusher
   - Soul Gem
   flex_slots:
+  - Death Metal
   - The Crusher
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -424,23 +424,23 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.83
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Bragi's Harp:
-      total: 0.55
-      efficiency: 0.44
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.68
     Death Metal:
       total: 0.56
       efficiency: 0.61
@@ -466,7 +466,7 @@ builds:
   - The Executioner
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
+  - Tyrfing
   - Silverbranch Bow
   - Soul Gem
   flex_slots:
@@ -495,29 +495,29 @@ builds:
       pick: 0.0
       fit: 0.35
     Toxic Blade:
-      total: 0.6
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.83
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Death Metal:
-      total: 0.56
-      efficiency: 0.61
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.68
     Silverbranch Bow:
-      total: 0.49
+      total: 0.53
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.53
     Soul Gem:
       total: 0.71
       efficiency: 0.57
@@ -526,13 +526,13 @@ builds:
       fit: 0.86
   swaps:
   - added: Silverbranch Bow
-    removed: Bragi's Harp
-    reason: Conquest community 71% win over 54 matches (vs 52% on this god), taking
-      the model's weakest slot from Bragi's Harp
-  - added: The Executioner
     removed: The Crusher
-    reason: Conquest community 66% win over 62 matches (vs 52% on this god), taking
+    reason: Conquest community 71% win over 54 matches (vs 52% on this god), taking
       the model's weakest slot from The Crusher
+  - added: The Executioner
+    removed: Death Metal
+    reason: Conquest community 66% win over 62 matches (vs 52% on this god), taking
+      the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001
 ---

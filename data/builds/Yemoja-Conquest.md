@@ -469,12 +469,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Berserker''s
     Shield, Amanita Charm, Kinetic Cuirass, Gluttonous Grimoire, Soul Gem, The Crusher,
-    Shield Splitter, Runeforged Hammer, Death Metal, Nimble Ring, Shield of the Phoenix,
-    Hydra''s Lament, Shifter''s Shield, Eye of the Storm, Mantle Of Discord, Stone
-    of Binding, Heartseeker, Spear of the Magus, The Reaper, Pharaoh''s Curse, Helm
-    of Radiance, Golden Blade, Lernaean Bow, Spectral Armor, Erosion, Shogun''s Ofuda,
-    Eye of Providence, Avenging Blade, Tekko-Kagi, Draconic Scale, Titan''s Bane,
-    Leviathan''s Hide, Ethereal Staff, Screeching Gargoyle, Rod of Asclepius.'
+    Shield Splitter, Runeforged Hammer, Death Metal, Nimble Ring, Golden Blade, Shield
+    of the Phoenix, Hydra''s Lament, Shifter''s Shield, Eye of the Storm, Mantle Of
+    Discord, Stone of Binding, Heartseeker, Spear of the Magus, The Reaper, Pharaoh''s
+    Curse, Helm of Radiance, Lernaean Bow, Tyrfing, Spectral Armor, Erosion, Shogun''s
+    Ofuda, Eye of Providence, Avenging Blade, Tekko-Kagi, Draconic Scale, Titan''s
+    Bane, Leviathan''s Hide, Ethereal Staff, Screeching Gargoyle.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -545,9 +545,8 @@ builds:
     Helm of Radiance, Shield of the Phoenix, Shifter''s Shield, Nimble Ring, Mantle
     Of Discord, Stone of Binding, Hydra''s Lament, Eye of the Storm, Ethereal Staff,
     Rod of Asclepius, Heartseeker, Erosion, Spectral Armor, The Reaper, Eye of Providence,
-    Draconic Scale, Chronos'' Pendant, Jade Scepter, Doom Orb, Leviathan''s Hide,
-    The Cosmic Horror, Pharaoh''s Curse, Wish-Granting Pearl, Avenging Blade, Screeching
-    Gargoyle.'
+    Golden Blade, Draconic Scale, Chronos'' Pendant, Jade Scepter, Doom Orb, Leviathan''s
+    Hide, The Cosmic Horror, Pharaoh''s Curse, Wish-Granting Pearl, Avenging Blade.'
   slot_scores:
     Book of Thoth:
       total: 0.45
