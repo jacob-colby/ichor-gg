@@ -13,7 +13,7 @@ Five things that are easy to get wrong here, all expanded in that file:
    (leakage-free coverage against a random-core baseline). Headline coverage
    moving the *other* way is expected and is not by itself a reason to revert.
 
-2. **Check the negative-results register (§4) first.** Eleven correct-looking
+2. **Check the negative-results register (§4) first.** Twelve correct-looking
    improvements have been implemented, measured, and shipped off. Re-running
    them against the old metric will just reproduce the old answer.
 

@@ -83,9 +83,130 @@ def test_damage_gain_is_zero_for_an_unparsed_kit_not_a_guess():
 
 
 def test_an_item_offering_this_god_nothing_gains_nothing():
-    """Thanatos scales off Strength; a pure-Intelligence item adds no damage."""
-    gain = dv.item_damage_gain(_god("Thanatos"), _item("Book of Thoth"), 100)
-    assert gain == pytest.approx(0.0, abs=1e-9)
+    """An item carrying no stat this god's kit reads adds nothing.
+
+    Book of Thoth used to be the example and no longer is: Thanatos's ABILITIES
+    take nothing from Intelligence, but his scraped basic attack reads
+    "100% Strength + 20% Intelligence + 100% Attack Damage", so 30 Intelligence
+    really is worth 3.25 damage a swing against 100 protection. That number is
+    the mechanic, not a leak — see `item_damage_gain`. A pure-protection item
+    is the honest zero."""
+    thanatos = _god("Thanatos")
+    assert dv.item_damage_gain(thanatos, _item("Breastplate of Valor"),
+                               100) == pytest.approx(0.0, abs=1e-9)
+    assert dv.item_damage_gain(thanatos, _item("Book of Thoth"), 100) > 0.0
+
+
+# ── The basic attack is half of a carry's kit, and it counts ──────────────
+
+def test_attack_damage_items_are_worth_something_at_all():
+    """The gap this closes. `ability_damage_components` skips the Basic Attack
+    slot, so Attack Damage — which 84 of 89 basic attacks take at 100% and no
+    ability in the roster scales on — contributed exactly 0.0 to the only
+    damage path that reaches a recommendation. 12 items carry it."""
+    medusa = _god("Medusa")
+    qins = _item("Qin's Blade")          # 30 Attack Damage, 25% Attack Speed
+    assert dv._item_stats(qins).get("Attack Damage") == 30.0
+    assert dv.item_damage_gain(medusa, qins, 70) > 0.0
+
+
+def test_critical_chance_is_priced_and_scales_with_level():
+    """Crit multiplies the whole swing, base Attack Power included, so it is
+    the one term whose value depends on the attacker's level — which is why
+    `level` now reaches the arithmetic instead of being accepted and ignored."""
+    medusa = _god("Medusa")
+    rage = _item("Rage")                 # 30 Strength, 20% Critical Chance
+    early = dv.item_damage_gain(medusa, rage, 70, level=1)
+    late = dv.item_damage_gain(medusa, rage, 70, level=20)
+    assert late > early > 0.0
+
+
+def test_attack_speed_still_buys_nothing_and_that_is_the_open_half():
+    """The honest state after this change. `combat.attacks_per_second` exists
+    and is calibrated; nothing calls it, so a pure-attack-speed item is still
+    worth exactly zero damage. Odysseus' Bow and The Executioner are both in
+    Medusa's community build and both score 0.0 here."""
+    medusa = _god("Medusa")
+    for name in ("Odysseus' Bow", "The Executioner"):
+        assert dv.item_damage_gain(medusa, _item(name), 70) == pytest.approx(0.0, abs=1e-9)
+
+
+def test_the_swing_is_one_mean_multiplier_hit_not_the_whole_chain():
+    """Counting the chain's SUM would hand Thanatos 3.25x the basic-attack
+    weight of a single-swing god for a chain that also takes 3.25x as long."""
+    thanatos = _god("Thanatos")
+    stats = {"Attack Damage": 100.0}
+    base, gained = dv._basic_attack_pair(thanatos, stats, 1)
+    chain = combat.attack_chain_multipliers(thanatos)
+    assert gained - base == pytest.approx(100.0 * (sum(chain) / len(chain)))
+
+
+# ── The clock, and the negative result it produced ────────────────────────
+
+def test_per_second_is_the_only_setting_that_prices_attack_speed():
+    """Odysseus' Bow is 45% Attack Speed and nothing else, and it is in
+    Medusa's community build. Per rotation it is worth exactly zero damage;
+    per second it is worth something. Same for The Executioner."""
+    medusa = _god("Medusa")
+    for name in ("Odysseus' Bow", "The Executioner"):
+        item = _item(name)
+        assert dv.item_damage_gain(medusa, item, 70) == pytest.approx(0.0, abs=1e-9)
+        assert dv.item_damage_gain(medusa, item, 70, per_second=True) > 0.0
+
+
+def test_per_second_is_the_only_setting_that_prices_cooldown_rate():
+    """34 items carry Cooldown Rate and it buys no modelled damage anywhere in
+    this repo unless the ability channel is on a clock. Held against the same
+    item minus its Cooldown Rate, so nothing else can account for the gap."""
+    god = {"name": "T", "base_stats": {"attack_speed": {"base": 1.0}},
+           "abilities": [{"slot": "1st Ability", "name": "a", "cooldown": [10.0],
+                          "details": ["Damage: 100",
+                                      "Damage Scaling: 100% Strength"]}]}
+    plain = {"stats": {"Strength": "50"}}
+    hasted = {"stats": {"Strength": "50", "Cooldown Rate": "25"}}
+    assert (dv.item_damage_gain(god, hasted, 0.0)
+            == dv.item_damage_gain(god, plain, 0.0))
+    assert (dv.item_damage_gain(god, hasted, 0.0, per_second=True)
+            > dv.item_damage_gain(god, plain, 0.0, per_second=True))
+
+
+def test_an_ability_with_no_scraped_cooldown_is_dropped_from_both_sides():
+    """241 of 253 damage abilities carry a cooldown. The other 12 are dropped
+    rather than imputed — but `before` and `after` must walk the same filtered
+    list, or the delta is taken across two different kits."""
+    god = {"name": "T", "base_stats": {"attack_speed": {"base": 1.0}},
+           "abilities": [
+               {"slot": "1st Ability", "name": "timed", "cooldown": [10.0],
+                "details": ["Damage: 100", "Damage Scaling: 100% Strength"]},
+               {"slot": "2nd Ability", "name": "untimed",
+                "details": ["Damage: 100", "Damage Scaling: 100% Strength"]}]}
+    stats = {"Strength": 50.0}
+    assert len(dv.ability_damage_components(god)) == 2
+    assert dv._base_cooldown(god, {"name": "untimed"}) is None
+    # 50 Strength through one 10s ability + one 1.0/s swing, no mitigation.
+    gain = dv.item_damage_gain(god, {"stats": {"Strength": "50"}}, 0.0,
+                               per_second=True)
+    assert gain == pytest.approx(50.0 / 10.0 + 50.0 * 1.0)
+
+
+def test_attack_speed_per_level_is_not_applied():
+    """`attack_speed.per_level` reads 1.4 for 49 gods, which cannot be a flat
+    rate — 27 swings a second at level 20. "Cannot be anything else" is an
+    inference and not a source, and applying it would scale up the channel
+    already known to be over-weighted."""
+    medusa = _god("Medusa")
+    assert medusa["base_stats"]["attack_speed"]["per_level"] == 1.4
+    assert dv._base_attack_speed(medusa) == 1.0
+
+
+def test_the_clock_ships_off():
+    """Measured 2026-08-21 and it fails its own pre-registered criterion:
+    Carries improve a lot, Mids degrade more, and the roster-wide leakage-free
+    B6 diagnostic gets worse. Numbers under `damage_per_second` in
+    _weights.yaml. If someone turns this on, it should be because they
+    re-measured."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    assert weights.get("damage_per_second") is False
 
 
 # ── The negative result, pinned ───────────────────────────────────────────
