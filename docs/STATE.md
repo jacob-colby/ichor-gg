@@ -481,7 +481,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (663) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (673) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -506,7 +506,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (663) ·
 | Gods at 0% coverage | 1 — Ares. Sun Wukong left the list with `price_adaptive`; the previous row (Achilles, Chaac, Danzaburou) predates the community refresh |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 663 pipeline · 660 viewer |
+| Tests | 673 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
