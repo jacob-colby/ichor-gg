@@ -227,6 +227,11 @@ def _god_item_damage(gods, items, weights) -> dict:
     the overlay simply doesn't fire for them.
     """
     cap = int((weights.get("draft") or {}).get("score_cap", 40))
+    # Per rotation or per second — see `damage_per_second` in _weights.yaml.
+    # This is the only caller of `item_damage_gain`, so the switch is a
+    # parameter rather than a module global: there is no path by which a gate
+    # could measure one setting while the shipped table used the other.
+    per_second = bool(weights.get("damage_per_second"))
     out = {}
     for god in gods:
         if not damage_value.ability_damage_components(god):
@@ -235,8 +240,10 @@ def _god_item_damage(gods, items, weights) -> dict:
         for item in items:
             if not scoring.is_buildable(item, god):
                 continue
-            low = damage_value.item_damage_gain(god, item, SQUISHY_PROTECTION)
-            high = damage_value.item_damage_gain(god, item, TANK_PROTECTION)
+            low = damage_value.item_damage_gain(god, item, SQUISHY_PROTECTION,
+                                                per_second=per_second)
+            high = damage_value.item_damage_gain(god, item, TANK_PROTECTION,
+                                                 per_second=per_second)
             if low > 0 or high > 0:
                 pairs[item["name"]] = (low, high)
         if not pairs:

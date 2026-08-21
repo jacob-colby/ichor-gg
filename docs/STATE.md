@@ -132,6 +132,7 @@ Each of these has its evidence in the named module.
 | Waste past a stat cap is **priced**, not refused | `assemble.cap_overflow_penalty` | A reject rule fires only when an item's WHOLE line is capped, and no penetration item is pure penetration; charging the overflow keeps the Intelligence and drops the dead penetration |
 | An item's offense tags **sum** | `offense_tags` in `_weights.yaml` | Flat, an item answering a tank two ways scored what one answering it once did — which is how `penetration` on Titan's Bane displaced Heartseeker |
 | A resolved expert claim is measured against its **own recorded baseline** | `expert_review.regressions` | The old rule only failed on a full reversion, so `clear` → `partial` shipped green |
+| The damage model counts the **basic attack**, and its unit is one rotation plus one swing | `damage_value.item_damage_gain` | `ability_damage_components` skips the Basic Attack slot, so Attack Damage — 100% of a basic attack on 84 of 89 gods, and no ability in the roster scales on it — was worth exactly 0.0 in the only damage path that reaches a recommendation. 12 items carried it, 10 more carry Critical Chance. The 1:1 mix is a declaration, not a measurement; the clock that would replace it is register §4.12 |
 
 ### The combat model is exact and should stay that way
 
@@ -199,6 +200,21 @@ shipped **off**. Numbers are in the named module.
 3. **Magnitude-aware fit (B4)** — item stat magnitude as a fit term.
 4. **Damage-gain as a fit signal (B5)** — halves the gate; it cannot price
    defence at all.
+
+    _`damage_fit_blend` swept against the leakage-free splits for the first
+    time, 2026-08-21._ The two numbers this entry carries are `validate.compute`
+    figures, and §1 says what that gate is worth. On the honest measure the
+    sign reverses: **every setting from 0.05 to 0.75 beats control on both
+    splits** (probe 38.7% → 39.8% at 0.75, best split 39.6% → 40.0%), and **not
+    one paired CI excludes zero** on either. It is a real knob — core churn
+    rises 3 → 37 of 89 monotonically across the sweep, so unlike `adaptive_fit`
+    this one could have varied and did. It stays at 0.0 because nothing clears
+    the noise, **not because it makes the model worse**, and the difference
+    matters to whoever picks it up next: blends of 0.05–0.30 move exactly one
+    god's coverage on the 0.45:0.55 split, so the only strength worth a real
+    test is 0.75. Sweep, paired CIs and churn under `damage_fit_blend` in
+    `_weights.yaml`. The "halves the gate" claim belongs to the separate
+    *damage gain AS the fit signal* row (23.6%), not to this blend.
 5. **Pricing item passives** — the extraction is right and the prices are
    visibly more sensible; the recommender still got worse.
 6. **The 2026-08-05 weight sweep's own winner** — rejected as leakage (§1).
@@ -328,6 +344,54 @@ shipped **off**. Numbers are in the named module.
     are tier-1/2 COMPONENTS in unfinished late slots — the other half of the
     `ledger.ts` fact under `SLOT_REACH`. Restricted to items the model can
     actually pick, the 1-stat community lift is 0.91x.
+
+12. **A clock for the damage model (2026-08-21)** — `damage_per_second`. The
+    two damage paths both lacked one: `combat` implements `casts_per_second`,
+    `cooldown_multiplier`, `attacks_per_second` and `attack_dps`, all
+    calibrated and tested, and nothing outside `combat.py` called any of them,
+    so Cooldown Rate and Attack Speed bought no modelled damage anywhere in the
+    repo. With the flag on, each channel gets its own scraped clock. It is the
+    only setting under which 34 Attack Speed items and 34 Cooldown Rate items
+    are worth anything.
+
+    **The criterion was set before the measurement and is not moved.** Ships ON
+    only if the Carry figure improves, the roster-wide figure does not get
+    worse, and `calibrate --control` is unchanged. The measure is where the
+    community's own Conquest items land in the B6 damage ordering — and unlike
+    §1's gate this one is not circular, because the B6 table takes **no
+    community input at all**: scraped kit, item stats, combat constants.
+
+        mean normalised rank, 0 = top      false    true
+          Carry   n=108                    0.439   0.351
+          Jungle  n=102                    0.264   0.296
+          Mid     n=135                    0.286   0.473
+          Solo    n=108                    0.720   0.723
+          Support n= 78                    0.702   0.714
+          ALL     n=531                    0.462   0.500
+
+    Criterion 1 passes and by a wide margin; **criterion 2 fails**. Criterion 3
+    holds exactly — 38.7% / 39.6% either way. Items the table scores at all go
+    262 → 168 unscored of 531, which biases the metric *toward* per-second, and
+    it loses anyway; a second metric with a different denominator agrees
+    (Carry 0.650 → 0.469, ALL 0.635 → 0.644).
+
+    **The cause is known, structural, and not a tuning failure.** A per-second
+    model lets a god cast everything off cooldown AND swing at full rate in the
+    same second. Nothing here has cast times, so neither channel is charged for
+    the other's, and the basic attack's share of marginal power goes from a
+    median 34.2% to 89.3% for a Carry — plausible — and from 11.7% to 60.5% for
+    a Mid, which is not. Medusa is the clean win (Tyrfing 56 → 5, Odysseus' Bow
+    and The Executioner scored at all for the first time); Scylla is the clean
+    loss (Avatar's Parashu, a Strength item, becomes her top damage item —
+    arithmetically correct, since SMITE 2 basic attacks scale 100% Strength for
+    everyone, and wrong about a god who does not auto-attack). Fixing it needs
+    a per-god casting/swinging time-share no source here can supply, and
+    inventing one would put an unsourced constant in the module whose whole
+    discipline is that constants carry evidence tiers. Numbers under
+    `damage_per_second` in `_weights.yaml`; ships off.
+
+    **What did ship, unconditionally, is the basic attack itself** — see §3.
+    That half needed no clock and is a hole rather than a modelling choice.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -495,7 +559,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (715) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (724) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -520,7 +584,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (715) ·
 | Gods at 0% coverage | 1 — Ares. Sun Wukong left the list with `price_adaptive`; the previous row (Achilles, Chaac, Danzaburou) predates the community refresh |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 715 pipeline · 660 viewer |
+| Tests | 724 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

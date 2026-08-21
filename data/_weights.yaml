@@ -62,9 +62,81 @@ underrated:
 #   damage_fit_blend   offensive stat weights from the god's own scaling
 #                      coefficients instead of the role table. Neutral to 0.2,
 #                      then falls away: 0.3 -> 47.3%, 0.5 -> 47.1%.
-# Turn either on only with a `validate.compute` run to back it up.
+#
+# THOSE FIGURES ARE THE CIRCULAR GATE AND THEY POINT THE WRONG WAY.
+# `damage_fit_blend` had never been swept against the leakage-free splits.
+# Done 2026-08-21, fixture loaded once so the data cannot move under the sweep,
+# with a PAIRED bootstrap on the per-god delta as well as the marginal CI
+# `model_signal_sweep` uses:
+#
+#   blend  probe 0.70:0.30          paired 95% CI     best 0.45:0.55   cores
+#    0.00     38.7%  (control)                 --        39.6%   (ctl)     --
+#    0.05     38.9%                [-0.67%, +1.12%]      39.8%          3/89
+#    0.10     39.3%                [-0.67%, +1.99%]      39.8%          4/89
+#    0.20     39.6%                [-0.45%, +2.25%]      39.8%          8/89
+#    0.30     39.6%                [-0.45%, +2.25%]      39.8%          8/89
+#    0.50     39.3%                [-0.71%, +2.13%]      40.0%         13/89
+#    0.75     39.8%                [-0.22%, +2.58%]      40.0%         20/89
+#    1.00     38.9%                [-1.57%, +1.84%]      39.4%         37/89
+#
+# So on the honest measure it is mildly POSITIVE at every setting below 1.0,
+# not negative — and NOT ONE paired CI excludes zero, on either split. It is
+# also a real knob, unlike `adaptive_fit`: core churn rises 3 -> 37 of 89
+# monotonically, so this sweep could have varied and did. It stays at 0.0
+# because nothing here clears the noise, NOT because it makes the gate worse.
+# Anyone returning to it should note that blends of 0.05-0.30 move exactly ONE
+# god's coverage on the 0.45:0.55 split; the strength worth testing is 0.75.
+# Turn either on only with a `calibrate` run to back it up.
 magnitude_fit: false
 damage_fit_blend: 0.0
+# ── The clock (B5) ────────────────────────────────────────────────────────
+# What `damage_value.item_damage_gain` RETURNS. False = one ability rotation
+# plus one basic attack, where the 1:1 mix is a declaration and nothing else.
+# True = damage per SECOND, each channel on its own scraped clock: abilities
+# x `casts_per_second` off the ability's cooldown, basics x `attacks_per_second`
+# off the god's base attack speed. It is the only setting under which Attack
+# Speed (34 items) and Cooldown Rate (34 items) buy any modelled damage
+# anywhere in this repo.
+#
+# It reaches `build_index._god_item_damage` -> the draft's B6 overlay and
+# nothing else, so `calibrate` cannot see it either way. The leakage-free
+# measure for this table is where the community's own Conquest items land in
+# the damage ordering, 0 = top; the table takes no community input at all, so
+# that number is not the circular one of STATE.md section 1.
+#
+# CRITERION, SET BEFORE THE MEASUREMENT AND NOT MOVED. Ships ON only if (1)
+# the Carry figure improves, (2) the roster-wide figure does not get worse,
+# and (3) `calibrate --control` is unchanged, since this path must stay
+# invisible to the gate. MEASURED 2026-08-21, mean normalised rank of the
+# community's own Conquest items in the damage ordering, 0 = top:
+#
+#                    false    true
+#     Carry   n=108  0.439   0.351   <- criterion 1 PASSES, and by a lot
+#     Jungle  n=102  0.264   0.296
+#     Mid     n=135  0.286   0.473   <- and this is why it does not ship
+#     Solo    n=108  0.720   0.723
+#     Support n= 78  0.702   0.714
+#     ALL     n=531  0.462   0.500   <- criterion 2 FAILS
+#     unscored  262 -> 168 of 531, so the pool it ranks against got BIGGER,
+#     which biases this metric in its favour. It loses anyway.
+#
+# Criterion 3 holds: control 38.7% / 39.6% either way, byte-identical.
+# The same ordering falls out of a second metric that normalises against items
+# SCORED rather than the fixed buildable pool (Carry 0.650 -> 0.469, ALL
+# 0.635 -> 0.644), so the conclusion does not rest on the denominator.
+#
+# Medusa, the case this was built for, is a clean win: Tyrfing 56 -> 5,
+# Silverbranch Bow 71 -> 22, Riptalon 72 -> 38, and Odysseus' Bow and The
+# Executioner get a damage figure at all for the first time. Scylla is the
+# clean loss: Avatar's Parashu, a Strength item, becomes her top damage item,
+# which is arithmetically CORRECT — SMITE 2 basic attacks scale 100% Strength
+# for everyone — and is wrong about Scylla, who does not auto-attack.
+#
+# Its known bias is in `item_damage_gain`'s docstring with the numbers: full
+# uptime on both channels at once, which puts a median 61% of a Mid's marginal
+# power in their basic attack. Disclosed, not patched — the correction needs a
+# cast-time source this repo does not have.
+damage_per_second: false
 # Fit credit for a stat the god's pool can CONVERT into one they want, scaled
 # by what the god thinks of the target stat (see scoring.converter_stat_weights).
 # In practice this is Max Mana: Transcendence -> Strength, Book of Thoth ->

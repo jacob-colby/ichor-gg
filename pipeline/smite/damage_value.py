@@ -32,6 +32,14 @@ So both halves ship OFF (`magnitude_fit`, `damage_fit_blend`). The code is here
 because the measurement is worth keeping and because the same arithmetic is
 what the draft needs; it is not here because it improved anything.
 
+READ THAT TABLE THROUGH docs/STATE.md SECTION 1. Every row of it is
+`validate.compute`, whose targets are also model inputs. `damage_fit_blend` was
+swept against the leakage-free splits for the first time on 2026-08-21 and the
+SIGN REVERSES: every setting from 0.05 to 0.75 beats control on both splits
+(probe 38.7% -> 39.8% at 0.75), and not one paired CI excludes zero on either.
+It stays at 0.0 because nothing clears the noise, not because it is harmful.
+Sweep, paired CIs and core churn under `damage_fit_blend` in `_weights.yaml`.
+
 Two explanations, both testable, neither confirmed:
 
   * MAGNITUDE DOUBLE-COUNTS. Fit is meant to answer "does this god want this
@@ -53,6 +61,13 @@ worse than admitting it doesn't — those keep the role table, which is what a
 role table is actually good at. `blend_stat_values` is where the two meet.
 
 KNOWN LIMITS, all inherited and all disclosed on the method page:
+  * NEITHER PATH OUT OF THIS MODULE HAS A CLOCK BY DEFAULT.
+    `marginal_damage_per_stat` counts one mean swing against a whole ability
+    rotation and `item_damage_gain` does the same, so both mixes are
+    declarations. `item_damage_gain` can be put on `combat`'s calibrated clock
+    with `per_second`; it was measured on 2026-08-21 and ships off, for reasons
+    that are structural rather than tunable — see the docstring there and
+    register entry 12
   * item passives are prose we extract nothing from, so a passive-heavy item is
     valued at its stat line alone
   * 240 of 513 abilities carry both a rank list and a scaling line; the rest
@@ -194,33 +209,168 @@ def blend_stat_values(god, role_map, blend=0.5, min_abilities=2):
     return out
 
 
-def item_damage_gain(god, item, target_protection, level=1, rank_index=0):
-    """B5: extra damage per ability rotation this item buys against a target.
+def item_damage_gain(god, item, target_protection, level=1, rank_index=0,
+                     per_second=False):
+    """B5: extra damage this item buys against a target, over one ability
+    rotation plus one basic attack — or per SECOND, with `per_second`.
 
     The number a build comparison actually wants. Penetration is valued
     correctly against a high-protection target and barely at all against a
     squishy one; raw power is the other way round. A per-stat weighting cannot
     express that at all, because the answer depends on who you are hitting.
 
+    THE BASIC ATTACK IS PART OF THE ROTATION (2026-08-21). It was not, and the
+    omission was structural rather than incidental: `ability_damage_components`
+    opens by skipping the Basic Attack slot, so every stat that only reaches a
+    basic attack contributed exactly zero to the one damage path that reaches a
+    recommendation. That is 12 Attack Damage items and 10 Critical Chance items
+    scoring 0.0 by construction, on a roster where 84 of 89 basic attacks scale
+    100% off Attack Damage. Medusa is the worked case: a Carry whose community
+    build is Tyrfing / Odysseus' Bow / Silverbranch Bow / Riptalon /
+    The Executioner / Manchu Bow, three of which carry Attack Damage and were
+    unpriced here.
+
+    THE UNIT IS A CHOICE AND `per_second` IS IT. One rotation and one swing are
+    both natural units and neither converts to the other without a clock, so
+    with `per_second` False the ratio below is 1:1 BY DECLARATION and every
+    consequence of the ratio — how an attack-speed item compares to a cooldown
+    item — is unmodelled. With it True each channel gets its own clock:
+    ability damage x `combat.casts_per_second` off the scraped cooldown, basic
+    damage x `combat.attacks_per_second` off the scraped base attack speed.
+    Attack Speed (34 items) and Cooldown Rate (34 items) buy modelled damage
+    for the first time anywhere in this repo, and the mix stops being a
+    declaration.
+
+    Per gold was the third candidate and is refused. `efficiency` IS the
+    per-gold model, and `build_index._god_item_damage` normalises each column
+    against its own best item anyway, so dividing by cost would re-inject the
+    gold model into the one signal whose job is to say something gold cannot.
+
+    PER SECOND HAS A KNOWN BIAS AND IT IS NOT A TUNING PROBLEM. It lets a god
+    cast every ability off cooldown AND swing at full rate in the same second.
+    Nothing here has cast times, so neither channel is charged for the other's,
+    and the share of marginal power landing in the basic attack goes (median,
+    by role, measured 2026-08-21 on the god's own damage stat):
+
+        role      per rotation   per second
+        Carry           34.2%        89.3%
+        Jungle          35.1%        92.5%
+        Solo            32.6%        90.2%
+        Support         19.0%        78.8%
+        Mid             11.7%        60.5%
+
+    89% for a Carry is the thing this was built for. **Ymir at 61% basic
+    attacks and Agni at 71% are the reductio** — the clock is right and the
+    uptime assumption is wrong. Correcting it needs a per-god casting/swinging
+    time-share that no source this repo has can supply, and inventing one would
+    put an unsourced constant in the module whose whole discipline is that
+    constants carry evidence tiers. So the bias is disclosed rather than
+    patched, and it is why the switch is a switch. See `damage_per_second` in
+    `_weights.yaml` for what it measured.
+
+    The swing is taken at the chain's MEAN multiplier, for the reason
+    `marginal_damage_per_stat` takes it there: the multipliers apply to swing
+    time as well as damage, so the mean is the honest per-swing figure and the
+    sum would hand a three-hit-chain god 3x the basic-attack weight of a
+    single-swing god for a chain that also takes 3x as long.
+
+    Critical Chance enters here and only here. It multiplies the whole swing,
+    base Attack Power included, so it is the one term whose value depends on
+    `level` — which is why `level` finally reaches the arithmetic instead of
+    being an accepted-and-ignored argument.
+
     Returns 0.0 for a god whose kit did not parse — never a fabricated figure.
+    The guard is on the ABILITIES still, so exactly the same gods get a figure
+    as before; a basic-attack-only valuation for a god whose kit we could not
+    read would be a new claim, not a better one.
     """
     components = ability_damage_components(god)
     if not components:
         return 0.0
+    if per_second:
+        components = [c for c in components if _base_cooldown(god, c, rank_index)]
+        if not components:
+            return 0.0
 
     stats = _item_stats(item)
     flat_pen = stats.get("Penetration", 0.0)
     pct_pen = stats.get("Penetration %", 0.0) / 100.0
+    cdr = stats.get("Cooldown Rate", 0.0) if per_second else 0.0
 
     before = after = 0.0
     for component in components:
         rank = component["ranks"][min(rank_index, len(component["ranks"]) - 1)]
         base = combat.ability_damage(rank, component["scaling"], {})
         gained = combat.ability_damage(rank, component["scaling"], stats)
-        before += combat.damage_dealt(base, target_protection)
-        after += combat.damage_dealt(gained, target_protection,
-                                     flat_pen=flat_pen, pct_pen=pct_pen)
+        hit_before = combat.damage_dealt(base, target_protection)
+        hit_after = combat.damage_dealt(gained, target_protection,
+                                        flat_pen=flat_pen, pct_pen=pct_pen)
+        if per_second:
+            cooldown = _base_cooldown(god, component, rank_index)
+            hit_before *= combat.casts_per_second(cooldown)
+            hit_after *= combat.casts_per_second(cooldown, cdr)
+        before += hit_before
+        after += hit_after
+
+    base_hit, gained_hit = _basic_attack_pair(god, stats, level)
+    crit = min(stats.get("Critical Chance %", 0.0), 100.0) / 100.0
+    if per_second:
+        rate = _base_attack_speed(god)
+        before += combat.attack_dps(base_hit, target_protection, rate)
+        after += combat.attack_dps(gained_hit, target_protection, rate,
+                                   attack_speed_bonus=stats.get("Attack Speed %", 0.0),
+                                   crit_chance=crit,
+                                   flat_pen=flat_pen, pct_pen=pct_pen)
+    else:
+        before += combat.expected_attack_damage(base_hit, target_protection)
+        after += combat.expected_attack_damage(gained_hit, target_protection,
+                                               crit_chance=crit,
+                                               flat_pen=flat_pen, pct_pen=pct_pen)
     return after - before
+
+
+def _base_cooldown(god, component, rank_index=0):
+    """The scraped cooldown of the ability a component came from, or None.
+
+    241 of the 253 abilities that already carry a damage component also carry
+    a cooldown; the other 12 are dropped from the per-second valuation rather
+    than imputed, which is the same rule `ability_damage_components` applies to
+    an ability missing its scaling line. Nine gods lose an ability that way and
+    none loses all of them. `before` and `after` walk the same filtered list,
+    so the delta is never taken across two different kits.
+    """
+    for ability in god.get("abilities") or []:
+        if ability.get("name") != component["name"]:
+            continue
+        cooldowns = ability.get("cooldown") or []
+        if not cooldowns:
+            return None
+        return float(cooldowns[min(rank_index, len(cooldowns) - 1)]) or None
+    return None
+
+
+def _base_attack_speed(god):
+    """The god's scraped base attack speed, WITHOUT per-level growth.
+
+    The roster's `attack_speed.per_level` reads 1.4 for 49 gods, which cannot
+    be a flat rate — that would be 27 swings a second at level 20 — so it is
+    a percentage. "Cannot be anything else" is an inference and not a source,
+    and applying it would scale the basic channel up against the ability
+    channel by ~27% at level 20. That channel is the one `item_damage_gain`
+    already over-weights (see the uptime note there), so the conservative read
+    is the one taken: base only.
+    """
+    return float((god.get("base_stats") or {}).get("attack_speed", {}).get("base") or 1.0)
+
+
+def _basic_attack_pair(god, stats, level):
+    """One mean-multiplier swing before and after the item, raw."""
+    attack_power = combat.god_attack_power(god, level)
+    scaling = _basic_attack_scaling(god)
+    chain = combat.attack_chain_multipliers(god)
+    mean_swing = sum(chain) / len(chain) if chain else 1.0
+    return (combat.attack_damage(attack_power, scaling, {}, mean_swing),
+            combat.attack_damage(attack_power, scaling, stats, mean_swing))
 
 
 def _item_stats(item):
