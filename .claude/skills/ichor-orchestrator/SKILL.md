@@ -132,10 +132,20 @@ claim is worse than no entry, because §4 is read as settled.
 - **Multiplicative items cannot be priced.** Genie's Lamp, Shell of Rebuke's
   `+7.5% of all Stats`, The Executioner's shred. Needs a value model for
   multiplicative effects; three separate sessions have hit it.
-- **The `model` archetype ranks at eff 0.70 : fit 0.30**, derived from
-  `signals`. The leakage-free sweep's best split is 0.45 : 0.55 — inside the
-  bootstrap CI, so not proof, but the model build is computed at the worse of
-  the two measured points. Medusa is the worked example.
+- **The efficiency:fit split sits on a plateau and the choice within it is not
+  measurable.** Corrected 2026-08-21 — this entry used to read "the `model`
+  archetype ranks at 0.70 : 0.30 when 0.45 : 0.55 measures better", and that
+  argument has dissolved. The sweep's argmax MOVES with the data: it was
+  0.45 : 0.55, and a full run the same week put it at 0.65 : 0.35, which is
+  essentially where the model archetype already sits. Both read 38.4%, and
+  `calibrate.py`'s own docstring says the whole 0.15–0.65 band is one flat
+  plateau with overlapping bootstrap CIs. Do not spend a session moving this
+  ratio; there is no evidence to move it toward.
+  What survives is the observation underneath: for some gods efficiency and fit
+  point at disjoint item sets, and at any split in that band efficiency wins.
+  Medusa is the worked example — her top items by efficiency score 0.10–0.40 on
+  a fit map that wants Attack Speed 1.30 and Critical Chance 1.30. That is a
+  question about the two signals, not about the weight between them.
 - **1-stat items have 0% recall** and 42% of every coverage miss is a 1- or
   2-stat item. Register 4.11 found this while exonerating the multi-stat bias.
 - **The damage model skips basic attacks** (`ability_damage_components` has an
