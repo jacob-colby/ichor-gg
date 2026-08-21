@@ -68,7 +68,8 @@ def god_metrics(god, items, build_note, weights, tags_map, eff_scores, items_by_
         max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
         stat_caps=weights.get("stat_caps"), economy=profile.get("economy"),
         **assemble.coherence_args(items, weights),
-        **assemble.conversion_args(weights, eff_scores, gold_values))
+        **assemble.conversion_args(weights, eff_scores, gold_values),
+        **assemble.overflow_args(weights, eff_scores, gold_values))
     community = [c for c in _community_slots(build_note)
                  if c.get("name") in score and c.get("win_rate") is not None]
     names = [c["name"] for c in community]

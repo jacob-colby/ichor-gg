@@ -271,12 +271,12 @@ builds:
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
+  - Doom Orb
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - The Cosmic Horror
-  - Spear of the Magus
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -311,9 +311,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
-    Spear of the Magus:
-      total: 0.71
-      efficiency: 0.57
+    Doom Orb:
+      total: 0.66
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.86

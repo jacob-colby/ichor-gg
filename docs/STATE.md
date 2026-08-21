@@ -107,6 +107,7 @@ Each of these has its evidence in the named module.
 | `penetration` is **its own tag**, not folded into `protection-shred` | `data/_tags.yaml` | Shred debuffs the target and helps the whole team; penetration only helps you. Merging them would make the two permanently indistinguishable |
 | A tag with no bonus is inert to the **gate** and not to the **builds** | `assemble._is_sustain_item` | 11 of 12 new tags moved coverage 0.0pp; the `sustain` ones still moved 3 cores, because the cap reads the tag |
 | `max_lifesteal` is a **sustain** cap and the name is the only thing saying otherwise | `assemble._is_sustain_item` | 13 of 21 buildable `sustain` items carry no Lifesteal stat; narrowing it to the stat would let a core stack three stay-alive items |
+| Waste past a stat cap is **priced**, not refused | `assemble.cap_overflow_penalty` | A reject rule fires only when an item's WHOLE line is capped, and no penetration item is pure penetration; charging the overflow keeps the Intelligence and drops the dead penetration |
 | An item's offense tags **sum** | `offense_tags` in `_weights.yaml` | Flat, an item answering a tank two ways scored what one answering it once did — which is how `penetration` on Titan's Bane displaced Heartseeker |
 | A resolved expert claim is measured against its **own recorded baseline** | `expert_review.regressions` | The old rule only failed on a full reversion, so `clear` → `partial` shipped green |
 
@@ -155,9 +156,11 @@ shipped **off**. Numbers are in the named module.
     rule cannot act on them because `assemble._capped_out` refuses an item
     only when EVERY stat it carries is capped, and no penetration item in the
     pool is pure penetration. A pure reject rule cannot say "the penetration
-    is wasted, the Intelligence is not"; pricing the overflow could, and that
-    is a separate model change with its own measurement, deliberately not
-    folded in here. Numbers in `assemble.assemble_core`.
+    is wasted, the Intelligence is not"; pricing the overflow could.
+    **It now does** — `cap_overflow` (2026-08-21) ships at 1.0 and is the one
+    thing in this entry that is not a null; see §3. The reject rule stays
+    underneath it for the fully-dead-weight case a charge can only make
+    expensive. Numbers in `assemble.assemble_core`.
 
     Two things the survey settled, both in `combat.py`'s penetration block.
     That a penetration cap EXISTS is no longer inferred — it is MEASURED off
@@ -237,6 +240,55 @@ shipped **off**. Numbers are in the named module.
     still **35.5% / 36.7% at every one of them** — identical to control. The
     conclusion above was right; only its evidence was. The full-strength figure
     it was written from is unchanged, so nothing else in this entry moves.
+
+11. **Multi-stat items as an efficiency bias (2026-08-21)** — the one entry
+    here that was never implemented, because the diagnosis said there was
+    nothing to fix. The symptom is real: across the 89 Conquest cores, items
+    carrying 4 stats take 50.4% of the core slots off 19.5% of the buildable
+    pool (2.58x) and 1-stat items take **none of 534**. `efficiency` drives
+    3-4x more of it than `god_fit_score` does, on both the shipped blend and
+    the meta-free `quality` one, and the fit half is already #3.
+
+    The accusation was the regression's fixed intercept (~1111g against a
+    tier-3 price that barely moves with stat count). **It is not the
+    intercept, and it is not the fit.** Three measurements, in
+    `efficiency.INTERCEPT_KEY` with the numbers: stat COUNT adds 0.019 of R2
+    over stat MASS and is only a proxy for it; deleting the intercept nearly
+    DOUBLES the residual spread it was blamed for (772g → 1398g); and the
+    fit-free version — typical rolls per 1000 gold, no regression in it at all
+    — is the steepest of the three, at 0.549 / 0.930 / 1.166 / 1.554 by stat
+    count. A 4-stat item carries 67% more raw stat magnitude per gold and this
+    model credits it 24% more. What it buys with the difference is passive:
+    median passive text 259 → 105 characters over the same bands.
+
+    **And the community makes the same trade.** Against the buildable pool the
+    recommender actually picks from — the restriction matters, see below —
+    Obsidian+ builds lift 4-stat items 2.18x against our 2.58x. The
+    over-preference is **+7.7pp of core share, 95% CI [+2.9pp, +12.4pp]**:
+    real, and roughly a fifth of what 2.58x reads as against the pool alone.
+
+        stats/item   % pool   % community   lift   % core slots   lift
+             1        7.0%         6.4%    0.91x         0.0%    0.00x
+             2       34.4%        22.0%    0.64x        10.7%    0.31x
+             3       39.1%        28.8%    0.74x        38.8%    0.99x
+             4       19.5%        42.6%    2.18x        50.4%    2.58x
+
+    So multi-stat items really are better value in SMITE 2 and the model is
+    reading it, slightly loudly. **The over-picking framing points at the wrong
+    end of the distribution.** Recall of community items by stat count is
+    0.0% (0/29) at one stat, 28.0% at two, 54.2% at three, 58.2% at four —
+    **42% of every missed community item is a 1- or 2-stat item**, led by Shell
+    of Rebuke (missed 22x, residual +685), The Executioner (14x, +1035) and
+    Odysseus' Bow (11x, +431). Those are passive items, which is #5, and three
+    of the seven 1-stat tier-3 items carry Adaptive Stat power that is not in
+    `stats` at all, which is #10. Anyone returning to this should go after the
+    bottom of the table, not the top.
+
+    One trap on the way in: an unrestricted community set lifts 1-stat items
+    1.90x and invites exactly the wrong conclusion. 41 of those 70 sightings
+    are tier-1/2 COMPONENTS in unfinished late slots — the other half of the
+    `ledger.ts` fact under `SLOT_REACH`. Restricted to items the model can
+    actually pick, the 1-stat community lift is 0.91x.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -380,14 +432,14 @@ missing before those existed, including the pool's first anti-heal item.
 
 **Tuning lives in `data/_weights.yaml`** — signals, role stat maps, kit blend,
 hybrid scaling, flavors, aspects, per-mode overrides, lifesteal/stat caps,
-draft overlay, build order, starters. Every off-by-default experiment
-(`magnitude_fit`, `damage_fit_blend`, `price_passives`) is a §4 entry with its
-numbers in the file.
+cap overflow, draft overlay, build order, starters. Every off-by-default
+experiment (`magnitude_fit`, `damage_fit_blend`, `price_passives`) is a §4
+entry with its numbers in the file.
 
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (641) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (652) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -404,13 +456,14 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (641) ·
 | Joust / Arena gods placed | 0 / 89 — no outcome data exists |
 | Items placed | 220 / 220 |
 | Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
-| Headline gate | coverage 48%, win-weighted 49% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior |
+| Headline gate | coverage 47.4%, win-weighted 49.3% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior. The 48%/49% this row carried was stale from `chore(data): daily community refresh`; `cap_overflow` moved it +0.2pp/+0.3pp, which is reporting and not a target (§1) |
 | **Leakage-free** | **37.7% probe · 38.4% at eff 0.45, vs 5.7% chance = 6.6–6.7×** — re-run 2026-08-21 on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
+| Cap overflow | 47 -> 29 of 2423 builds over the penetration cap, at **no coverage cost on either leakage-free split** — see `cap_overflow` |
 | Combat model | 0.0% worst case over 12 observations |
-| Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
+| Gods at 0% coverage | 2 — Ares, Sun Wukong. The previous row (Achilles, Chaac, Danzaburou) predates the community refresh; the list is identical with `cap_overflow` on and off |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 641 pipeline · 660 viewer |
+| Tests | 652 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

@@ -186,9 +186,86 @@ def conversion_score_bonus(item, core_totals, reference, gold_values, span):
     return delta_gold / span
 
 
+def cap_overflow_penalty(item, capped_totals, stat_caps, gold_values, span):
+    """Score charged for the part of this item's stat line the cap will eat.
+
+    THE HALF `stat_caps` CANNOT EXPRESS. `_capped_out` is a reject rule, so it
+    can only say "this whole item is dead weight" — and no penetration item in
+    the pool is pure penetration, so it never fires on the one cap real builds
+    actually reach. Measured 2026-08-21 over 2423 suggested build entries:
+    percentage penetration overshoots its cap in 47 of them and sits exactly on
+    it in 59 more, peaking at 45% against a cap of 40, while Tenacity (15 of
+    50), Plating (25 of 35), Dampening (5 of 35) and flat Penetration (40 of
+    50) are nowhere near theirs. Widening the reject rule to fire on partial
+    waste would throw away the Intelligence to save the penetration, which is
+    the worse error; see `assemble_core`.
+
+    So the waste is PRICED instead. For each capped stat the candidate carries,
+    only the points past the remaining headroom are charged, at the same gold
+    the regression already pays for that stat, converted to a score delta by
+    `span` exactly as `conversion_score_bonus` does. Everything else about the
+    item is untouched: an uncapped stat is never read here, so an item whose
+    penetration is dead keeps every gold of its Intelligence.
+
+    IT IS DELIBERATELY NOT PRECISE IN THE CAP VALUE. `stat_caps` records 40%/50
+    as INFERRED and the weakest pair of numbers in _weights.yaml — no SMITE 2
+    source states either, and they trace to pre-2023 SMITE 1 material that
+    SMITE 1 itself superseded (40% -> 32%). The charge is
+    `max(0, amount - headroom) x price`, piecewise-linear and CONTINUOUS in the
+    cap, so a wrong cap moves a kink rather than switching a mechanism on or
+    off. A reject rule is a step function of the same number and would not
+    degrade that way.
+
+    It is also charged only against the STAT LINE. Titan's Bane, Obsidian Shard
+    and Dominance carry "This effect ignores the Penetration cap", but that
+    exempts the +20% their PASSIVE grants on cast or on hit, not the 20% in
+    `stats` — which is cap-bound like any other, and is the only half this
+    model prices at all (`efficiency.PRICE_PASSIVES` is off).
+
+    Keys are `efficiency.stat_key`, so `Penetration %` and `Penetration` hold
+    separate budgets and separate prices — 52.6 and 33.2 gold a point on the
+    shipped fit, which is most of why summing them would be a units error
+    rather than a rounding one.
+
+    WHAT IT ACTUALLY DID, at the shipped strength of 1.0: over-cap builds 47 ->
+    29 of 2423, leakage-free coverage **identical to control on both splits**
+    (37.7% at eff 0.70, 38.4% at eff 0.45, against a 5.7% random-core
+    baseline), and 19 cores changed. Sixteen of the nineteen are `anti-tank`,
+    the flavor that stacks penetration, and the dominant swap is Spear of the
+    Magus -> Doom Orb — trading 10 PERCENTAGE penetration the cap would eat for
+    10 FLAT penetration whose own cap is at 40 of 50. It keeps the penetration
+    and buys the kind that still works, which is the behaviour a reject rule
+    could not have produced. Symptom A's lift is untouched: 4-stat items take
+    53.0% -> 53.2% of all build slots, so the saturation charge does not
+    amplify the multi-stat preference the way a general concave curve would
+    (STATE.md 4.11). The sweep, and what happens if the cap is 32 instead of
+    40, are under `cap_overflow` in _weights.yaml.
+
+    Returns a non-negative score to SUBTRACT, and 0.0 whenever any of the caps,
+    the prices or the span are missing — a charge computed against a guessed
+    span is worse than no charge.
+    """
+    if not stat_caps or not gold_values or not span:
+        return 0.0
+    wasted_gold = 0.0
+    for stat, raw in (item.get("stats") or {}).items():
+        key = stat_key(stat, raw)
+        cap = stat_caps.get(key)
+        if cap is None:
+            continue
+        amount = _amount(raw)
+        if not amount:
+            continue
+        headroom = max(0.0, cap - capped_totals.get(key, 0.0))
+        wasted = max(0.0, amount - headroom)
+        wasted_gold += wasted * gold_values.get(key, 0.0)
+    return wasted_gold / span
+
+
 def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
                   stat_caps=None, coherence=0.0, stat_reference=None, economy=None,
-                  conversion=None, seed_totals=None, score_key="total"):
+                  conversion=None, cap_overflow=None, seed_totals=None,
+                  score_key="total"):
     """Highest-total items filling n slots: at most one boots, at most
     `max_lifesteal` lifesteal/sustain items, no duplicates. rows must be
     pre-sorted by -total (score_god_items already does). When `require`
@@ -232,9 +309,11 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
 
     So a pure reject rule is structurally incapable of expressing the mechanic
     it exists for: "this item's penetration is wasted, its Intelligence is
-    not". Pricing the overflow rather than refusing the item is the shape that
-    could, and it is a model change with its own measurement, not a widening of
-    this one. Kept as a guard; do not read it as load-bearing.
+    not". `cap_overflow` is the shape that can, and it is the one that ships
+    for percentage penetration; see `cap_overflow_penalty` for its numbers.
+    This rule is kept underneath it as the degenerate guard — it still answers
+    the case where an item is ENTIRELY dead weight, which a charge can only
+    make expensive and never refuse. Do not read it as load-bearing.
     """
     core, used = [], set()
     have_boots = [False]
@@ -324,7 +403,7 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
     if seed_totals:
         core_totals.update(seed_totals)
 
-    if not coherence and not economy and not conversion:
+    if not coherence and not economy and not conversion and not cap_overflow:
         # The original path, kept exactly: rows arrive pre-sorted, so walking
         # them once IS picking the best remaining item every time.
         for r in rows:
@@ -333,10 +412,10 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
             _try_add(r["item"])
         return core
 
-    # With coherence or a mode economy on, an item's worth depends on what is
-    # already in the core — its stat overlap, and the gold already committed
-    # ahead of it — so the ranking is no longer fixed and has to be recomputed
-    # each slot. Ties fall back to the row order, which is the score order, so
+    # With coherence, a mode economy or a cap charge on, an item's worth
+    # depends on what is already in the core — its stat overlap, the gold
+    # already committed ahead of it, the cap headroom it has left — so the
+    # ranking is no longer fixed and has to be recomputed each slot. Ties fall back to the row order, which is the score order, so
     # this degrades to the loop above as the multipliers flatten.
     remaining = [r for r in rows if r["item"] not in used]
     while len(core) < n and remaining:
@@ -363,6 +442,14 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
                 score += conversion["weight"] * conversion_score_bonus(
                     item, core_totals, conversion["reference"],
                     conversion["gold_values"], conversion["span"])
+            if cap_overflow:
+                # Subtracted, and read against `capped_totals` rather than
+                # `core_totals`: the budget is per unit-aware cap key, which is
+                # the distinction `Penetration %` and `Penetration` need and
+                # the plain stat totals have already thrown away.
+                score -= cap_overflow["weight"] * cap_overflow_penalty(
+                    item, capped_totals, stat_caps, cap_overflow["gold_values"],
+                    cap_overflow["span"])
             if best_score is None or score > best_score:
                 best_index, best_score = index, score
         r = remaining.pop(best_index)
@@ -513,6 +600,31 @@ def conversion_args(weights, eff_scores, gold_values):
         "gold_values": gold_values,
         "span": span,
         "weight": (w.get("signals") or {}).get("efficiency", 0.35),
+    }}
+
+
+def overflow_args(weights, eff_scores, gold_values):
+    """The `cap_overflow` context for `assemble_core`, or {} when off.
+
+    Mirrors `conversion_args` deliberately, including the weight: this marks an
+    item's EFFICIENCY down for stats it cannot use, so it enters the blended
+    total exactly as efficiency does rather than as a free-floating penalty
+    with its own scale. `cap_overflow` in _weights.yaml is then a 0-1 strength
+    on top of that, and 0 is a true no-op.
+
+    Returns {} when the pool produced no `span`, so the charge is never divided
+    by a guess."""
+    w = weights or {}
+    strength = float(w.get("cap_overflow") or 0.0)
+    if not strength:
+        return {}
+    span = next((v.get("span") for v in (eff_scores or {}).values() if v.get("span")), None)
+    if not span:
+        return {}
+    return {"cap_overflow": {
+        "gold_values": gold_values,
+        "span": span,
+        "weight": strength * (w.get("signals") or {}).get("efficiency", 0.35),
     }}
 
 

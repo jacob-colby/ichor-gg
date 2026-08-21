@@ -314,12 +314,12 @@ builds:
   - Jotunn's Revenge
   - Gluttonous Grimoire
   - Silverbranch Bow
+  - Tekko-Kagi
   - The Crusher
-  - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Rod of Tahuti
   - Obsidian Shard
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -361,18 +361,18 @@ builds:
       win: 0.71
       pick: 0.4
       fit: 0.57
+    Tekko-Kagi:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.56
+      pick: 0.0
+      fit: 0.76
     The Crusher:
       total: 0.58
       efficiency: 0.64
       win: 0.56
       pick: 0.0
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.77
-      win: 0.46
-      pick: 0.17
-      fit: 0.43
     Obsidian Shard:
       total: 0.54
       efficiency: 0.52

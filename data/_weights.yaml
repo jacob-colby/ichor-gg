@@ -630,6 +630,53 @@ stat_caps:
   Penetration %: 40      # INFERRED — see above; guard, not a fact
   Penetration: 50        # INFERRED — flat; its existence is unattested for S2
 
+# ── Cap overflow: what the points past a cap are worth ────────────────────
+# Marks a candidate's EFFICIENCY down by the gold value of the capped stat the
+# core cannot use, at the moment it is considered. `assemble.stat_caps` above
+# is the reject half of the same mechanic and structurally cannot reach this
+# case: it refuses an item only when EVERY stat it carries is capped, and no
+# penetration item in the pool is pure penetration. Charging the overflow says
+# the thing a reject rule cannot — "the penetration is wasted, the Intelligence
+# is not". Mechanics and evidence in `assemble.cap_overflow_penalty`.
+#
+# 1.0 is the PRINCIPLED value, not a tuned one: a gold that buys nothing is
+# worth exactly minus what a gold is worth, so the charge enters `total` at the
+# efficiency signal's own weight and no more. Swept 2026-08-21 over every god x
+# mode x flavor entry, leakage-free coverage at both splits:
+#
+#     strength   cov @eff 0.70   @eff 0.45   builds over cap   cores changed
+#       0.00         37.7%         38.4%          47 of 2423       — control
+#       0.25         37.7%         38.4%          44                 3
+#       0.50         37.7%         38.4%          42                 5
+#       1.00         37.7%         38.4%          29                19
+#       2.00         37.5%         38.4%           5                52
+#
+# So it removes 38% of the waste for NO measurable coverage cost — coverage is
+# identical to control to the digit at the shipped setting. 2.0 removes 89% of
+# it and starts to cost, and it is also the setting that asserts a wasted gold
+# hurts more than an earned gold helps, which nothing supports. Note that it
+# does not drive the overshoot to zero and should not: 29 builds still overflow
+# because their alternative really is worse, which is the difference between
+# pricing the waste and forbidding it.
+#
+# IT DOES NOT REMAIN FREE IF THE CAP IS WRONG, and the cap is the weakest
+# number in this file. Re-swept with `Penetration %` at 32 — SMITE 1's own
+# post-2023 value, the most likely way 40 is wrong:
+#
+#     strength   cov @eff 0.70   @eff 0.45   builds over cap   cores changed
+#       0.25         37.4%         38.1%         257 of 2423        65
+#       0.50         36.7%         37.7%         197                119
+#       1.00         36.7%         37.7%         110                213
+#       2.00         33.3%         37.9%          18                304
+#
+# Every one of those is inside the bootstrap interval (~±5pp), so none is a
+# measured loss — but the direction is consistent and the blast radius is 11x
+# larger. The SHAPE degrades gracefully, which is why it is a charge and not a
+# refusal: `max(0, amount - headroom) x price` is continuous in the cap, so a
+# wrong cap moves a kink instead of switching a rule on. The COST does not, and
+# whoever measures the real cap should re-run this sweep alongside it rather
+# than assume the 1.0 here survives.
+cap_overflow: 1.0
 
 # ── Offense tags ──────────────────────────────────────────────────────────
 # Which effect-tags mark an item as offensive to `god_fit_score`, and what each

@@ -25,6 +25,54 @@ def parse_stat_value(raw):
 import numpy as np
 from scipy.optimize import nnls
 
+# The regression's constant term — the gold every item is charged before a
+# single stat is counted, ~1111 on the current pool.
+#
+# IT IS NOT WHY EFFICIENCY PREFERS MULTI-STAT ITEMS, and that is worth having
+# written down because it is the obvious suspect and it is wrong. The symptom:
+# across the 89 Conquest cores, items carrying 4 stats take 50.4% of the core
+# slots off 19.5% of the buildable pool, a 2.58x lift, while 1-stat items take
+# none at all. The accusation was that a FIXED charge against a roughly fixed
+# tier-3 price (mean cost 2534-2620 whatever the stat count) leaves items with
+# more stat columns accruing more value against the same constant.
+#
+# Measured 2026-08-21, three ways, and all three say the gradient is a real
+# property of SMITE 2's pricing rather than an artifact of this fit:
+#
+# 1. IT IS MASS, NOT COLUMNS. Tier-3 residual regressed on the stat magnitude
+#    an item carries — in units of `scoring.stat_reference`, so Health and
+#    Strength are commensurable — gives R2 0.371. Adding the COLUMN COUNT as a
+#    second regressor raises it to 0.390. Count is a proxy for mass and
+#    contributes almost nothing of its own.
+#
+# 2. DELETING THE INTERCEPT MAKES IT WORSE. Mean tier-3 residual by stat count:
+#
+#                       1 stat    2      3      4     spread
+#        with intercept   +702   +249   +136    -70     772g
+#        no intercept    +1131   +365   +126   -267    1398g
+#
+#    The constant is DAMPING the gradient, not producing it. Refitting without
+#    it nearly doubles the spread the accusation was made about.
+#
+# 3. THE FIT-FREE VERSION IS THE STEEPEST OF ALL. Typical rolls of a stat per
+#    1000 gold — pool-median magnitudes, no regression anywhere in it — over
+#    tier-3 items: 0.549 / 0.930 / 1.166 / 1.554 by stat count. A 4-stat item
+#    carries 67% more raw stat magnitude per gold than a 2-stat one; this fit
+#    credits it 24% more. The model is CONSERVATIVE against the raw stat line.
+#
+# What the multi-stat items give up is passive. Median passive text runs 259 /
+# 154 / 157 / 105 characters over the same four bands, and priced at the rates
+# of the 42 components that carry no passive at all, tier-3 items cash out at
+# 52% / 101% / 103% / 113% of their own cost. The game sells stat mass and
+# passive strength against each other, and this model prices passives at zero
+# (`PRICE_PASSIVES`, STATE.md 4.5), so it reads one side of that trade.
+#
+# THE COMMUNITY MAKES THE SAME TRADE. Against the same buildable pool the
+# recommender picks from, Obsidian+ Conquest builds lift 4-stat items 2.18x;
+# our cores lift them 2.58x. The over-preference is +7.7pp of core share,
+# bootstrap 95% CI [+2.9pp, +12.4pp] — real, and about a fifth of what the
+# 2.58x reads as against the pool alone. STATE.md 4.11 has the full table and
+# the part of this the model does get wrong, which is at the other end.
 INTERCEPT_KEY = "_intercept"
 
 
