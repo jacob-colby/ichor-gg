@@ -1,5 +1,7 @@
 import math
 
+import pytest
+
 from smite import calibrate
 
 
@@ -119,3 +121,145 @@ def test_report_survives_missing_optional_sections(tmp_path):
     out = tmp_path / "bare.md"
     calibrate.write_report(results, {}, current, out)
     assert "Signal-weight calibration" in out.read_text(encoding="utf-8")
+
+
+@pytest.fixture
+def stub_baseline(monkeypatch):
+    """`control` measures the baseline off the real 226-item pool. These tests
+    are about the control's SHAPE — the fixed splits, the fingerprint, the
+    stale-report line — so the measurement is stubbed and the timing stays in
+    milliseconds."""
+    monkeypatch.setattr(calibrate, "random_core_baseline",
+                        lambda fx, **kw: fx.random_core_baseline())
+
+
+class _StubFixture:
+    """Enough of `_Fixture` for the fingerprint and the control.
+
+    `control` is exercised against a stub rather than the real data because the
+    real thing loads 226 item notes and 89 gods, and a control that costs a
+    test-suite-visible five seconds would get marked slow and skipped."""
+
+    def __init__(self, items=None, gods=None, tags_map=None, builds_by_god=None,
+                 weights=None, coverage=0.30):
+        self.items = items if items is not None else [{"name": "Deathbringer",
+                                                       "cost": 3000}]
+        self.gods = gods if gods is not None else [{"name": "Ullr"}]
+        self.tags_map = tags_map if tags_map is not None else {"Deathbringer": ["crit"]}
+        self.builds_by_god = builds_by_god if builds_by_god is not None else {
+            "Ullr": {"builds": [{"source": "community",
+                                 "slot_order": [{"name": "Deathbringer",
+                                                 "win_rate": 0.55}]}]}}
+        self.weights = weights if weights is not None else {
+            "signals": {"efficiency": 0.35, "win": 0.30, "pick": 0.15, "fit": 0.20}}
+        self._coverage = coverage
+        self.seen = []
+
+    def random_core_baseline(self, _fx=None, **_kw):
+        return {"mean": 0.057, "per_god": {}, "pool_median": 99}
+
+    def evaluate(self, signals):
+        self.seen.append(dict(signals))
+        return {}, {"mean_coverage": self._coverage, "mean_win_weighted": 0.0,
+                    "pooled_spearman": None, "pooled_n": 0}
+
+
+def test_fingerprint_is_stable_across_dict_and_file_ordering():
+    """Two loads of the same data must fingerprint identically, or the check
+    cries wolf on every run and gets ignored."""
+    a = _StubFixture()
+    b = _StubFixture(weights={"signals": {"fit": 0.20, "pick": 0.15,
+                                          "win": 0.30, "efficiency": 0.35}})
+    assert calibrate.input_fingerprint(a) == calibrate.input_fingerprint(b)
+
+
+def test_fingerprint_moves_when_any_control_input_moves():
+    base = calibrate.input_fingerprint(_StubFixture())
+    moved = {
+        "items": _StubFixture(items=[{"name": "Deathbringer", "cost": 3100}]),
+        "gods": _StubFixture(gods=[{"name": "Ullr"}, {"name": "Ares"}]),
+        "tags": _StubFixture(tags_map={"Deathbringer": ["crit", "burst"]}),
+        "community": _StubFixture(builds_by_god={
+            "Ullr": {"builds": [{"source": "community",
+                                 "slot_order": [{"name": "Deathbringer",
+                                                 "win_rate": 0.61}]}]}}),
+        "weights": _StubFixture(weights={"signals": {"efficiency": 0.40, "win": 0.30,
+                                                     "pick": 0.15, "fit": 0.15}}),
+    }
+    for label, fx in moved.items():
+        assert calibrate.input_fingerprint(fx) != base, label
+
+
+def test_fingerprint_ignores_our_own_generated_builds():
+    """Only the COMMUNITY half of a build note is data. Hashing the suggested
+    builds too would make `recommend` moving a core read as the dataset
+    changing, which is the exact confusion the fingerprint exists to end."""
+    base = _StubFixture()
+    with_ours = _StubFixture(builds_by_god={
+        "Ullr": {"builds": [{"source": "community",
+                             "slot_order": [{"name": "Deathbringer",
+                                             "win_rate": 0.55}]},
+                            {"source": "model", "flavor": "core",
+                             "items": ["Transcendence"]}]}})
+    assert calibrate.input_fingerprint(base) == calibrate.input_fingerprint(with_ours)
+
+
+def test_control_uses_fixed_splits_not_the_sweep_argmax(stub_baseline):
+    """The whole point is a number two runs can be compared on."""
+    fx = _StubFixture()
+    calibrate.control(fx, report_path=calibrate.recommend.DATA_ROOT / "nope.md")
+    assert [(s["efficiency"], s["fit"]) for s in fx.seen] == list(calibrate.CONTROL_SPLITS)
+    for signals in fx.seen:
+        assert signals["win"] == 0.0 and signals["pick"] == 0.0   # leakage-free
+
+
+def test_control_reports_a_missing_report_rather_than_raising(tmp_path, stub_baseline):
+    c = calibrate.control(_StubFixture(), report_path=tmp_path / "absent.md")
+    assert c["report_fingerprint"] is None
+    assert "carries no fingerprint" in calibrate.format_control(c)
+
+
+def test_control_says_plainly_when_the_report_is_stale(tmp_path, stub_baseline):
+    fx = _StubFixture()
+    report = tmp_path / "_calibration.md"
+    report.write_text("# Signal-weight calibration\n\n"
+                      "_Input fingerprint: `deadbeef1234` — items._\n", encoding="utf-8")
+    text = calibrate.format_control(calibrate.control(fx, report_path=report))
+    assert "DIFFERS" in text
+    assert "deadbeef1234" in text
+    assert calibrate.input_fingerprint(fx) in text
+
+
+def test_control_says_plainly_when_the_report_is_current(tmp_path, stub_baseline):
+    fx = _StubFixture()
+    report = tmp_path / "_calibration.md"
+    report.write_text("_Input fingerprint: `%s` — items._\n"
+                      % calibrate.input_fingerprint(fx), encoding="utf-8")
+    assert "MATCHES" in calibrate.format_control(calibrate.control(fx, report_path=report))
+
+
+def test_control_output_is_ascii(stub_baseline):
+    """This text gets pasted into session prompts and read on a cp1252 console;
+    an em dash there is a crash, not a typo."""
+    c = calibrate.control(_StubFixture(), report_path=calibrate.recommend.DATA_ROOT / "nope.md")
+    calibrate.format_control(c).encode("ascii")
+
+
+def test_control_states_the_baseline_and_both_splits(stub_baseline):
+    c = calibrate.control(_StubFixture(coverage=0.30),
+                          report_path=calibrate.recommend.DATA_ROOT / "nope.md")
+    text = calibrate.format_control(c)
+    assert "random-core baseline" in text
+    assert "eff 0.70 : fit 0.30" in text
+    assert "eff 0.45 : fit 0.55" in text
+    assert "x chance" in text                 # never a bare percentage
+
+
+def test_full_report_stamps_the_fingerprint(tmp_path):
+    current = {"efficiency": 0.35, "win": 0.45, "pick": 0.05, "fit": 0.15}
+    results = [{"signals": dict(current),
+                "agg": {"pooled_spearman": None, "mean_coverage": 0.0},
+                "per_god": {}, "objective": 0.25}]
+    out = tmp_path / "cal.md"
+    calibrate.write_report(results, {}, current, out, fingerprint="c0ffee123456")
+    assert calibrate.report_fingerprint(out) == "c0ffee123456"

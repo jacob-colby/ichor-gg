@@ -65,10 +65,39 @@ at efficiency alone against 26.9% for fit alone. Fit is carrying this model.
 Writes Analysis/_calibration.md. Applying any winner to _weights.yaml stays a
 deliberate human edit — the weights file is the recommender's opinion surface,
 not a cache.
+
+THE CONTROL, AND WHY IT IS A SEPARATE ENTRY POINT
+
+The full run above takes ~7 minutes under `conversion_passes: 3`, so nobody
+runs it merely to re-measure the control they are about to compare against —
+and a control goes stale on every `chore(data): daily community refresh`. That
+has caused or nearly caused a misattribution four times: the delta gets read as
+the change when part of it is the data.
+
+`--control` is the cheap half, ~7s: the random-core baseline and coverage at
+two FIXED splits. Fixed, not the sweep's argmax, because the argmax moves with
+the data and two runs cannot be compared on a number that does.
+
+It also prints an INPUT FINGERPRINT — a short hash over the item set, the god
+notes, the effect tags, the COMMUNITY entries of the build notes and the
+weights. "Did the baseline move" is only a proxy for "is this the same data";
+the fingerprint answers it directly, including in the case where the data moved
+and the baseline happened not to. The same fingerprint is stamped into
+_calibration.md, so a stale report can be identified as stale without rerunning
+anything, and `--control` says so in one line when the two differ.
+
+Only the community half of a build note is hashed. The rest of that file is our
+own generated output, so hashing it would make the fingerprint move whenever
+`recommend` ran — a change in the model masquerading as a change in the data,
+which is exactly the confusion this exists to end.
 """
+import argparse
 import copy
+import hashlib
+import json
 import math
 import random
+import re
 import statistics
 
 from smite import assemble, efficiency, recommend, scoring, validate
@@ -78,6 +107,17 @@ from smite import assemble, efficiency, recommend, scoring, validate
 BASELINE_DRAWS = 200
 BASELINE_SEED = 20260805
 BOOTSTRAP_RESAMPLES = 2000
+
+# The two splits `--control` reports, held FIXED for all time. The first is the
+# leakage probe's `model only` corner; the second is the split §1 of docs/STATE.md
+# quotes alongside it. Deliberately NOT the sweep's argmax — that moves with the
+# data, and a control has to be a number two runs can be compared on.
+CONTROL_SPLITS = ((0.70, 0.30), (0.45, 0.55))
+
+# Hex characters kept from the sha256. 12 is ~2e-14 collision odds over the
+# handful of dataset states anyone compares, and short enough to read aloud.
+FINGERPRINT_LEN = 12
+_REPORT_FINGERPRINT_RE = re.compile(r"^_Input fingerprint:\s*`([0-9a-f]+)`")
 
 
 def weight_grid(step=0.05, min_eff_fit=0.50, max_pick=0.15):
@@ -131,6 +171,59 @@ class _Fixture:
 
 def _mean(values):
     return sum(values) / len(values) if values else 0.0
+
+
+def _canonical(obj):
+    """Order-independent JSON for hashing.
+
+    `sort_keys` is the load-bearing part: a dict that round-trips through YAML
+    in a different order is the same data, and a fingerprint that moved for it
+    would cry wolf. Lists keep their order because every list hashed here is
+    one whose order is data (`slot_order`, a god's abilities). `default=str`
+    covers the dates PyYAML hands back; `str` of a date is stable."""
+    return json.dumps(obj, sort_keys=True, separators=(",", ":"),
+                      ensure_ascii=True, default=str)
+
+
+def input_fingerprint(fx):
+    """Short hash over the inputs a control depends on.
+
+    Contains only things that change when the DATA changes: the item notes, the
+    god notes, the effect tags, the community entries of the build notes, and
+    the weights. No timestamps, no file mtimes, no paths, no dict ordering — so
+    two checkouts of the same data fingerprint identically, and a
+    `chore(data): daily community refresh` moves it whether or not it happened
+    to move the baseline.
+
+    The build notes are reduced to `_community_slots` on purpose: the suggested
+    builds in the same file are our own output, and hashing them would report a
+    model change as a data change."""
+    payload = {
+        "items": fx.items,
+        "gods": fx.gods,
+        "tags": fx.tags_map,
+        "community": {name: validate._community_slots(note)
+                      for name, note in fx.builds_by_god.items()},
+        "weights": fx.weights,
+    }
+    return hashlib.sha256(
+        _canonical(payload).encode("utf-8")).hexdigest()[:FINGERPRINT_LEN]
+
+
+def report_fingerprint(path):
+    """The fingerprint stamped into a written report, or None.
+
+    None means either "no such report" or "written before this existed"; both
+    are the same thing to a reader — the report cannot vouch for its own data."""
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError:
+        return None
+    for line in text.splitlines():
+        m = _REPORT_FINGERPRINT_RE.match(line)
+        if m:
+            return m.group(1)
+    return None
 
 
 def bootstrap_ci(values, resamples=BOOTSTRAP_RESAMPLES, seed=BASELINE_SEED):
@@ -290,12 +383,20 @@ def _fmt(sig):
 
 
 def write_report(results, logo, current, out_path, probe=None, baseline=None,
-                 model_sweep=None, top_n=15):
+                 model_sweep=None, top_n=15, fingerprint=None):
     base = baseline["mean"] if baseline else None
     lines = ["# Signal-weight calibration", "",
              "> **Read the leakage probe before the grid.** Both of this "
              "metric's targets are also model inputs, so the grid's ranking is "
              "partly the metric grading its own input. See `calibrate.py`.", ""]
+    if fingerprint:
+        # Stamped so a stale report can be identified as stale without rerunning
+        # anything: `python -m smite.calibrate --control` prints the fingerprint
+        # of the data on disk now and compares it against this line.
+        lines += [f"_Input fingerprint: `{fingerprint}` — items, gods, tags, "
+                  "community builds, weights. Check it against "
+                  "`python -m smite.calibrate --control` before quoting any "
+                  "number below._", ""]
 
     if probe:
         lines += ["## 1. Leakage probe — what the objective actually maximises", "",
@@ -367,8 +468,67 @@ def write_report(results, logo, current, out_path, probe=None, baseline=None,
     out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def control(fx=None, report_path=None):
+    """The cheap re-measure: baseline, two fixed splits, and the fingerprint.
+
+    Everything the full run does beyond this — the probe, the 21-point sweep,
+    the guardrailed grid, the LOGO folds — costs ~7 minutes and answers a
+    different question. A control has to be cheap or it will not be run."""
+    fx = fx if fx is not None else _Fixture()
+    if report_path is None:
+        report_path = recommend.DATA_ROOT / "Analysis" / "_calibration.md"
+    # Hashed BEFORE anything is evaluated, so the fingerprint describes the
+    # inputs as loaded and cannot pick up a scratch field a scorer left behind.
+    fingerprint = input_fingerprint(fx)
+    baseline = random_core_baseline(fx)
+    splits = []
+    for e, f in CONTROL_SPLITS:
+        _per_god, agg = fx.evaluate({"efficiency": e, "win": 0.0,
+                                     "pick": 0.0, "fit": f})
+        splits.append({"efficiency": e, "fit": f,
+                       "coverage": agg["mean_coverage"]})
+    return {"fingerprint": fingerprint,
+            "report_fingerprint": report_fingerprint(report_path),
+            "report_path": report_path,
+            "baseline": baseline["mean"], "splits": splits}
+
+
+def format_control(c):
+    base = c["baseline"]
+    lines = [f"input fingerprint      {c['fingerprint']}",
+             f"random-core baseline   {base:.1%}"]
+    for row in c["splits"]:
+        mult = f"{row['coverage'] / base:.1f}x chance" if base else "n/a"
+        lines.append(f"eff {row['efficiency']:.2f} : fit {row['fit']:.2f}     "
+                     f"{row['coverage']:.1%}   {mult}")
+    stamped = c["report_fingerprint"]
+    name = c["report_path"].name
+    if stamped is None:
+        lines.append(f"{name} carries no fingerprint - it predates this check; "
+                     "re-run `python -m smite.calibrate` before quoting it")
+    elif stamped == c["fingerprint"]:
+        lines.append(f"{name} fingerprint {stamped} - MATCHES, its numbers "
+                     "describe this data")
+    else:
+        lines.append(f"{name} fingerprint {stamped} - DIFFERS from this data. "
+                     "Its numbers are a control for a different dataset; the "
+                     "figures above are the ones to compare against")
+    return "\n".join(lines)
+
+
 def main(argv=None):
+    parser = argparse.ArgumentParser(prog="smite.calibrate")
+    parser.add_argument(
+        "--control", action="store_true",
+        help="print only the leakage-free control: baseline, two fixed "
+             "splits and the input fingerprint (~7s). Re-measure this before "
+             "comparing anything against a previously quoted control.")
+    args = parser.parse_args(argv)
+    if args.control:
+        print(format_control(control()))
+        return 0
     fx = _Fixture()
+    fingerprint = input_fingerprint(fx)
     probe = leakage_probe(fx)
     baseline = random_core_baseline(fx)
     model_sweep = model_signal_sweep(fx)
@@ -378,9 +538,11 @@ def main(argv=None):
     out = recommend.DATA_ROOT / "Analysis" / "_calibration.md"
     out.parent.mkdir(parents=True, exist_ok=True)
     write_report(results, logo, fx.weights["signals"], out, probe=probe,
-                 baseline=baseline, model_sweep=model_sweep)
+                 baseline=baseline, model_sweep=model_sweep,
+                 fingerprint=fingerprint)
     best_model = max(model_sweep, key=lambda r: r["coverage"])
     print(f"Wrote {out}")
+    print(f"Input fingerprint: {fingerprint}  (compare with `--control`)")
     print(f"Random-core baseline: {baseline['mean']:.1%}")
     for row in probe:
         print(f"  probe  {row['label']:<40} spearman "
