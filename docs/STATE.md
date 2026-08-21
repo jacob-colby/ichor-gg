@@ -40,11 +40,20 @@ coverage against a random legal 6-item core:
 
 ```bash
 cd pipeline && python -m smite.calibrate     # prints the probe, the baseline, and the sweep
+cd pipeline && python -m smite.calibrate --control   # the same control, ~7s
 ```
 
 Chance is ~5.7%. Shipped is ~37.7% at the probe split and ~38.4% at eff
 0.45, i.e. **~6.6× chance**. That is the number to
-quote and the number to move. Headline coverage moving the other way is
+quote and the number to move.
+
+**Do not quote those figures — re-measure them.** They move with the data, not
+just with the model, which is what `--control` exists for: the baseline, the
+same two fixed splits, and an input fingerprint, in ~7s instead of ~7 minutes.
+It says on its own line when the fingerprint differs from the one stamped in
+the committed `_calibration.md`, which is the direct answer to "is this the
+same dataset" that a moving baseline was only ever a proxy for. Evidence and
+the choice of splits are in `calibrate.py`'s docstring. Headline coverage moving the other way is
 expected and is not by itself a reason to revert — that judgement is what
 `efficiency.efficiency_pool` and `scoring.lookup_rates` both record.
 
@@ -391,7 +400,8 @@ python -m smite.recommend --all          # recompute suggested builds
 python -m smite.build_index              # rewrite viewer/public/index.json
 python -m smite.data_audit               # integrity gate, non-zero exit on findings
 python -m smite.validate --check         # regression floor (NOT a tuning target — see §1)
-python -m smite.calibrate                # the leakage-free measure
+python -m smite.calibrate                # the leakage-free measure (~7 min)
+python -m smite.calibrate --control      # just the control (~7s) - run before comparing
 python -m smite.calibrate_combat         # the combat gate
 python -m smite.expert_review            # replay recorded expert judgements
 python -m smite.expert_review --check    # non-zero exit if a resolved claim regressed
@@ -439,7 +449,7 @@ entry with its numbers in the file.
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (652) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (662) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -457,13 +467,13 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (652) ·
 | Items placed | 220 / 220 |
 | Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
 | Headline gate | coverage 47.4%, win-weighted 49.3% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior. The 48%/49% this row carried was stale from `chore(data): daily community refresh`; `cap_overflow` moved it +0.2pp/+0.3pp, which is reporting and not a target (§1) |
-| **Leakage-free** | **37.7% probe · 38.4% at eff 0.45, vs 5.7% chance = 6.6–6.7×** — re-run 2026-08-21 on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
+| **Leakage-free** | **37.7% probe · 38.4% at eff 0.45, vs 5.7% chance = 6.6–6.7×** — re-run 2026-08-21 on post-refresh data, input fingerprint `c85b909bc2a1`. **Re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row** — if it prints a different fingerprint, this row describes a different dataset. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
 | Cap overflow | 47 -> 29 of 2423 builds over the penetration cap, at **no coverage cost on either leakage-free split** — see `cap_overflow` |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 2 — Ares, Sun Wukong. The previous row (Achilles, Chaac, Danzaburou) predates the community refresh; the list is identical with `cap_overflow` on and off |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 652 pipeline · 660 viewer |
+| Tests | 662 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

@@ -27,12 +27,20 @@ Five things that are easy to get wrong here, all expanded in that file:
 
 5. **Re-measure the control before you compare it.** The committed
    `data/Analysis/_calibration.md`, and any control quoted in a prompt or a
-   commit, goes stale on every `chore(data): daily community refresh`. The
-   tell is the **random-core baseline moving** — it cannot depend on any model
-   flag, so if it shifted, your control came from a different dataset and the
-   delta you are about to attribute to your change is partly the data's. This
-   has caused or nearly caused a misattribution four times; twice the session
-   caught it only because it noticed the baseline.
+   commit, goes stale on every `chore(data): daily community refresh`. This has
+   caused or nearly caused a misattribution four times, so it is a command and
+   not a warning — run this first, and again after your change:
+
+   ```bash
+   cd pipeline && python -m smite.calibrate --control
+   ```
+
+   ~7s. It prints the random-core baseline, coverage at two FIXED splits, and
+   an **input fingerprint** over the item set, the community builds and the
+   weights. If the fingerprint differs from the one stamped in
+   `_calibration.md` — it says so on its own line — that report and every
+   number quoted from it describe a different dataset, and the delta you are
+   about to attribute to your change is partly the data's.
 
 Commands, tests and the tuning surface are in
 [`docs/STATE.md` §6](docs/STATE.md). Use `npm run build`, not `tsc --noEmit` —
