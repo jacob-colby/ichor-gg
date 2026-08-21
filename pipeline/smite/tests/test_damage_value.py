@@ -279,6 +279,49 @@ def test_the_two_halves_do_not_double_count_attack_damage():
     assert blended["Strength"] != role_map["Strength"]     # still a live knob
 
 
+def test_the_column_is_credited_but_not_charged():
+    """The normaliser rule, and the reason it exists. `stat_fit` divides by the
+    sum of the map, so injecting a column the ordinary way would shrink every
+    NON-carrier's stat term — a pool-wide re-weighting that has nothing to do
+    with the measurement, and which promoted 43 anti-heal items into Joust and
+    Arena cores because the flat tag bonus is added after normalisation."""
+    god = {"name": "T", "damage_type": "physical", "role": "Jungle"}
+    weights = scoring.load_weights_default()
+    role_map = {"Strength": 1.0, "Attack Speed": 1.0}
+    with_ad = {**role_map, "Attack Damage": 1.0}
+    carrier = {"stats": {"Attack Damage": "25"}}
+    other = {"stats": {"Strength": "40"}}
+
+    charged = lambda it: scoring.god_fit_score(it, god, weights, [], base_map=with_ad)
+    credited = lambda it: scoring.god_fit_score(it, god, weights, [], base_map=with_ad,
+                                                denom_exclude=("Attack Damage",))
+    before = scoring.god_fit_score(other, god, weights, [], base_map=role_map)
+
+    # Charged, the item that does not carry the stat is penalised for it.
+    assert charged(other) < before
+    # Credited, it is left exactly where it was, and the carrier still gains.
+    assert credited(other) == pytest.approx(before)
+    assert credited(carrier) > charged(carrier)
+
+
+def test_a_flavour_that_names_attack_damage_keeps_it_in_the_normaliser():
+    """`attack-speed` declares `Attack Damage: 1.0` itself. That is a stated
+    want and is charged like any other; only the injected column is exempt."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    overlay = (weights.get("flavors") or {}).get("attack-speed", {}).get("stats") or {}
+    assert overlay.get("Attack Damage")           # the case this guards
+
+    god = next(g for g in recommend.load_gods()
+               if dv.stat_weights(g).get("Attack Damage", 0.0) > 0)
+    items = recommend.load_items()
+    tags = scoring.load_tags(recommend.TAGS_PATH)
+    eff = {it["name"]: {"score": 0.5} for it in items}
+    profile = scoring.resolve_profile(weights, "Conquest", "attack-speed")
+    note = recommend.load_build_note(god["name"])
+    rows = scoring.score_god_items(god, items, note, eff, weights, tags, profile)
+    assert rows      # it scores, and the flavour's own weight is untouched
+
+
 def test_the_carve_out_ships_on_at_full_strength():
     """Positive on both leakage-free splits at every strength, and the only
     thing in register entry 4 whose paired CI excludes zero (probe 38.7% ->

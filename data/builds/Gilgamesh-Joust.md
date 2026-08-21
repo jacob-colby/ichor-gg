@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.84
     Berserker's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.4
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.54
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.34
+      fit: 0.37
     Amanita Charm:
-      total: 0.7
+      total: 0.71
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     Pharaoh's Curse:
-      total: 0.56
+      total: 0.58
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.6
     Shogun's Ofuda:
-      total: 0.55
+      total: 0.57
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.6
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -99,41 +99,41 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.68
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.41
     Hydra's Lament:
       total: 0.47
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.41
     Heartseeker:
-      total: 0.49
+      total: 0.5
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.53
     Amanita Charm:
-      total: 0.65
+      total: 0.66
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
     Pharaoh's Curse:
-      total: 0.5
+      total: 0.51
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.47
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -164,41 +164,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.62
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.81
     Shield of the Phoenix:
-      total: 0.58
+      total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.6
     Amanita Charm:
-      total: 0.76
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.9
     Erosion:
-      total: 0.54
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.6
     Pharaoh's Curse:
-      total: 0.58
+      total: 0.59
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.63
     Shogun's Ofuda:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -229,41 +229,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.68
     Toxic Blade:
-      total: 0.67
+      total: 0.69
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.92
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.48
     Void Shield:
-      total: 0.62
+      total: 0.63
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.79
     Void Stone:
       total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.79
     Amanita Charm:
-      total: 0.67
+      total: 0.68
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -359,41 +359,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.71
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.45
     Shield of the Phoenix:
-      total: 0.61
+      total: 0.63
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.68
     Freya's Tears:
-      total: 0.49
+      total: 0.5
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.39
     Pharaoh's Curse:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.5
     Shogun's Ofuda:
-      total: 0.51
+      total: 0.52
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.5
   starter: *id001
 - source: suggested
   archetype: model
@@ -424,40 +424,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.84
     Berserker's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.4
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.54
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.34
+      fit: 0.37
     Amanita Charm:
-      total: 0.7
+      total: 0.71
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     Pharaoh's Curse:
-      total: 0.56
+      total: 0.58
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.6
     Shogun's Ofuda:
-      total: 0.55
+      total: 0.57
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.6
   starter: *id001
 ---

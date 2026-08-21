@@ -9,22 +9,22 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Amanita Charm
-  - Stampede
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Toxic Blade
-  - Stampede
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.7
     Toxic Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Amanita Charm:
-      total: 0.76
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.87
-    Stampede:
+      fit: 0.89
+    Erosion:
       total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.64
     Pharaoh's Curse:
       total: 0.64
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
     Shogun's Ofuda:
       total: 0.63
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -103,7 +103,7 @@ builds:
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -115,25 +115,25 @@ builds:
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
     Stampede:
-      total: 0.6
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.7
     Pharaoh's Curse:
-      total: 0.65
+      total: 0.66
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.77
     Shogun's Ofuda:
-      total: 0.64
+      total: 0.65
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.87
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.49
     Void Shield:
       total: 0.67
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.88
     Void Stone:
-      total: 0.66
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.88
     Amanita Charm:
-      total: 0.72
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.8
     Pharaoh's Curse:
-      total: 0.58
+      total: 0.59
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -285,8 +285,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -298,19 +298,19 @@ builds:
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.41
     Shield of the Phoenix:
-      total: 0.63
+      total: 0.64
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.71
     Freya's Tears:
       total: 0.52
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.43
     Stampede:
       total: 0.54
       efficiency: 0.51
@@ -322,13 +322,13 @@ builds:
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.62
     Shogun's Ofuda:
       total: 0.57
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: model
@@ -336,22 +336,22 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Amanita Charm
-  - Stampede
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Toxic Blade
-  - Stampede
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -359,41 +359,41 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.7
     Toxic Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Amanita Charm:
-      total: 0.76
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.87
-    Stampede:
+      fit: 0.89
+    Erosion:
       total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.64
     Pharaoh's Curse:
       total: 0.64
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
     Shogun's Ofuda:
       total: 0.63
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -415,8 +415,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -424,46 +424,46 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.7
     Shell of Rebuke:
       total: 0.24
       efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.19
+      fit: 0.2
     Hide of the Nemean Lion:
-      total: 0.37
+      total: 0.38
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.23
+      fit: 0.24
     Amanita Charm:
-      total: 0.76
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.89
     Pharaoh's Curse:
       total: 0.64
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
     Shogun's Ofuda:
       total: 0.63
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
   swaps:
   - added: Hide of the Nemean Lion
-    removed: Stampede
+    removed: Erosion
     reason: Conquest community 60% win over 129 matches (vs 49% on this god), taking
-      the model's weakest slot from Stampede
+      the model's weakest slot from Erosion
   - added: Shell of Rebuke
     removed: Toxic Blade
     reason: Conquest community 59% win over 112 matches (vs 49% on this god), taking

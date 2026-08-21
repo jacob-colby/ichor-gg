@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Berserker's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.44
     Amanita Charm:
-      total: 0.71
+      total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.79
     Erosion:
       total: 0.52
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.54
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.64
     Shogun's Ofuda:
       total: 0.58
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.64
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.71
     Berserker's Shield:
-      total: 0.57
+      total: 0.58
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.47
     Shield of the Phoenix:
       total: 0.6
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Amanita Charm:
-      total: 0.79
+      total: 0.8
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.94
     Pharaoh's Curse:
-      total: 0.6
+      total: 0.61
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.67
     Shogun's Ofuda:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -168,37 +168,37 @@ builds:
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.67
     Toxic Blade:
-      total: 0.66
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.87
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.49
     Void Shield:
       total: 0.62
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.78
     Void Stone:
-      total: 0.61
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.78
     Amanita Charm:
-      total: 0.67
+      total: 0.68
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -298,37 +298,37 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.41
     Shield of the Phoenix:
-      total: 0.63
+      total: 0.64
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.71
     Freya's Tears:
       total: 0.52
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.43
     Pharaoh's Curse:
       total: 0.53
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.52
     Shogun's Ofuda:
       total: 0.52
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.52
   starter: *id001
 - source: suggested
   archetype: model
@@ -359,41 +359,41 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Berserker's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.44
     Amanita Charm:
-      total: 0.71
+      total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.79
     Erosion:
       total: 0.52
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.54
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.64
     Shogun's Ofuda:
       total: 0.58
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.64
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -424,41 +424,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Shell of Rebuke:
       total: 0.24
       efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.19
+      fit: 0.2
     Hide of the Nemean Lion:
-      total: 0.37
+      total: 0.38
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.23
+      fit: 0.24
     Amanita Charm:
-      total: 0.71
+      total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.79
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.64
     Shogun's Ofuda:
       total: 0.58
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.64
   swaps:
   - added: Hide of the Nemean Lion
     removed: Erosion

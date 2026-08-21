@@ -232,7 +232,8 @@ def stat_reference(items):
 
 
 def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=None,
-                  base_map=None, stat_reference=None, adaptive_grant=0.0):
+                  base_map=None, stat_reference=None, adaptive_grant=0.0,
+                  denom_exclude=()):
     """Archetype fit in [0,1]: weighted presence of role-relevant stats, plus a
     small bonus for archetype-relevant tags. An optional stat_overlay (flavor
     weights, which win over the god's role map) and tag_bonus (per-tag deltas,
@@ -285,7 +286,25 @@ def god_fit_score(item, god, weights, item_tags, stat_overlay=None, tag_bonus=No
         # one the item really has.
         if role_map.get(power) and parse_stat_value(stats.get(power)) is None:
             adaptive_stat = power
-    denom = sum(role_map.values()) or 1.0
+    # `denom_exclude` names weights that are CREDITED but not CHARGED: they
+    # count for an item that carries the stat and cost nothing to an item that
+    # does not. Everything in the role map is normally both, and has to be —
+    # the map is a statement about how a god divides its wants, so a stat
+    # entering it really does make every other stat a smaller share.
+    #
+    # `attack_damage_fit` is the exception, because it is not re-dividing a
+    # want that was already there; it is repairing a column the table never
+    # had (see `damage_value.attack_damage_fit`). Charged, it multiplied the
+    # stat term of every non-carrier by D/(D+a) — measured 2026-08-21 at
+    # **-12.5% over 10,065 (god, item) pairs**, against +48.7% for the 702 that
+    # carry the stat. That shrink is not the measurement doing its job. Because
+    # `bonus` below is added AFTER this normalisation and is NOT shrunk with
+    # it, charging the column silently re-weights every tag bonus upward
+    # against the stat term — which is invisible in Conquest, whose only mode
+    # tag_bonus is negative, and decisive in Joust and Arena, where the
+    # bonuses run to +0.3 and it pulled 43 anti-heal items into cores that had
+    # nothing to do with Attack Damage.
+    denom = sum(v for k, v in role_map.items() if k not in denom_exclude) or 1.0
     stat_fit = 0.0
     for stat, w in role_map.items():
         value = parse_stat_value(stats.get(stat))
@@ -582,13 +601,13 @@ def measured_win_rates(god_build, weights=None):
 
 def signal_score(item, god, god_build, eff_score, weights, item_tags,
                  stat_overlay=None, tag_bonus=None, base_map=None,
-                 stat_reference=None, adaptive_grant=0.0):
+                 stat_reference=None, adaptive_grant=0.0, denom_exclude=()):
     w = weights["signals"]
     pick, win = lookup_rates(god_build, item["name"], weights)
     win_norm = win if win is not None else god_unknown_win_rate(god_build, weights)
     fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus,
                         base_map=base_map, stat_reference=stat_reference,
-                        adaptive_grant=adaptive_grant)
+                        adaptive_grant=adaptive_grant, denom_exclude=denom_exclude)
     total = (w["efficiency"] * eff_score + w["win"] * win_norm
              + w["pick"] * pick + w["fit"] * fit)
     # Intrinsic merit for this god — efficiency + fit only, renormalized so it
@@ -817,6 +836,9 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     stat_overlay = profile.get("stat_overlay")
     tag_bonus = profile.get("tag_bonus")
 
+    # Set when the Attack Damage column is injected below; see `god_fit_score`.
+    denom_exclude = ()
+
     # Fun flavors set archetype_bypass to ignore the god's archetype entirely.
     if profile.get("archetype_bypass"):
         base_map = {}
@@ -843,6 +865,12 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         ad_fit = eff_weights.get("attack_damage_fit", 0.0)
         if ad_fit:
             base_map = damage_value.attack_damage_fit(god, base_map, ad_fit)
+            # Credited, not charged — see `god_fit_score`. A flavor that names
+            # Attack Damage itself (the `attack-speed` build does) is stating a
+            # real want and keeps its place in the normaliser; only the column
+            # this flag injected is exempt.
+            if not (stat_overlay or {}).get(damage_value.ATTACK_DAMAGE_KEY):
+                denom_exclude = (damage_value.ATTACK_DAMAGE_KEY,)
 
         # A stat the god can CONVERT into power belongs in the map, for that
         # god only. `price_conversions` fixed the efficiency half of this -
@@ -890,7 +918,8 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         row = signal_score(item, god, god_build, eff, eff_weights,
                            tags_map.get(item["name"], []), stat_overlay, tag_bonus,
                            base_map=base_map, stat_reference=reference,
-                           adaptive_grant=adaptive.get(item["name"], 0.0))
+                           adaptive_grant=adaptive.get(item["name"], 0.0),
+                           denom_exclude=denom_exclude)
         row["tier"] = efficiency_scores_map.get(item["name"], {}).get("tier", "fair")
         rows.append(row)
 

@@ -209,8 +209,19 @@ def attack_damage_fit(god, role_map, strength=1.0, min_abilities=2):
     `(1 - s) * 0 + s * w * ref`. So there is no prior here to trade off against
     the measurement, and 1.0 means "the measurement, on the fit map's own
     scale" rather than a tuned argmax — the metric is flat from 0.75 to 2.0.
-    Sweep, paired CIs and core churn under `attack_damage_fit` in
-    `_weights.yaml`.
+
+    THE COLUMN IS CREDITED BUT NOT CHARGED, which is not a detail. `fit` is
+    normalised by the sum of the map, so injecting a column the ordinary way
+    shrinks the stat term of every item that does not carry the stat — -12.5%
+    over 10,065 (god, item) pairs against +48.7% for the 702 that do. That is a
+    pool-wide re-weighting rather than this measurement, it silently promotes
+    the flat tag bonuses that are added after normalisation, and in Joust and
+    Arena — where those bonuses reach +0.30 — it pulled 43 anti-heal items into
+    cores. `scoring.score_god_items` therefore passes this key in
+    `denom_exclude`; see `scoring.god_fit_score` for the full argument.
+
+    Sweep, paired CIs, core churn and the Joust/Arena sweeps under
+    `attack_damage_fit` in `_weights.yaml`.
     """
     if strength <= 0:
         return dict(role_map)

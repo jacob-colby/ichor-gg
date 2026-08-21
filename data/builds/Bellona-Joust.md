@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.57
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.73
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.65
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.7
     Shield Splitter:
-      total: 0.58
+      total: 0.61
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.67
     Spectral Armor:
-      total: 0.56
+      total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.58
     Amanita Charm:
-      total: 0.82
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 1.0
     Erosion:
-      total: 0.63
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.8
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -90,8 +90,8 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Glorious Pridwen — physical protection
-    swap_item: Glorious Pridwen
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -99,29 +99,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.61
+      total: 0.64
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.68
     Shield of the Phoenix:
-      total: 0.67
+      total: 0.69
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.82
     Void Shield:
-      total: 0.57
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.7
     Spectral Armor:
-      total: 0.57
+      total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.6
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -129,11 +129,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.62
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.78
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -152,8 +152,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.62
+      total: 0.63
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.71
     Toxic Blade:
-      total: 0.62
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.81
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.64
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.57
     Void Shield:
-      total: 0.66
+      total: 0.67
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.88
     Void Stone:
-      total: 0.66
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.88
     Amanita Charm:
-      total: 0.75
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -294,41 +294,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.57
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.48
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.59
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.46
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.58
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.55
     Shield of the Phoenix:
-      total: 0.69
+      total: 0.71
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.86
     Freya's Tears:
-      total: 0.6
+      total: 0.63
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.64
     Erosion:
-      total: 0.56
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: model
@@ -359,40 +359,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.57
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.73
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.65
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.7
     Shield Splitter:
-      total: 0.58
+      total: 0.61
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.67
     Spectral Armor:
-      total: 0.56
+      total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.58
     Amanita Charm:
-      total: 0.82
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 1.0
     Erosion:
-      total: 0.63
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.8
   starter: *id001
 ---

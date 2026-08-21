@@ -17,8 +17,8 @@ builds:
   - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Eye of the Storm — magical protection
     swap_item: Eye of the Storm
@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.8
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.63
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.54
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.58
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.56
     Runeforged Hammer:
-      total: 0.56
+      total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.59
     Amanita Charm:
-      total: 0.76
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.91
     Erosion:
-      total: 0.57
+      total: 0.59
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.66
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -103,37 +103,37 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.61
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.62
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.52
     Hydra's Lament:
-      total: 0.51
+      total: 0.52
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.49
     The Crusher:
-      total: 0.5
+      total: 0.51
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.44
     Heartseeker:
-      total: 0.53
+      total: 0.54
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.62
     Amanita Charm:
-      total: 0.68
+      total: 0.69
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -164,29 +164,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.76
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.45
     Kinetic Cuirass:
-      total: 0.61
+      total: 0.63
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.65
     Shield of the Phoenix:
-      total: 0.63
+      total: 0.64
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.72
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -194,24 +194,24 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.61
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.75
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
+  - The Crusher
   - Amanita Charm
   flex_slots:
   - Void Stone
-  - Avenging Blade
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -228,42 +228,42 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Avenging Blade:
-      total: 0.62
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Toxic Blade:
-      total: 0.67
+      total: 0.69
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.92
     Jotunn's Revenge:
-      total: 0.66
+      total: 0.68
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.65
     Void Shield:
-      total: 0.65
+      total: 0.66
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.85
     Void Stone:
       total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.85
+    The Crusher:
+      total: 0.64
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Amanita Charm:
-      total: 0.72
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.8
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -359,41 +359,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.55
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.64
     Genji's Guard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.43
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.65
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.59
     Shield of the Phoenix:
-      total: 0.68
+      total: 0.69
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.82
     Hydra's Lament:
-      total: 0.53
+      total: 0.55
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.55
     Freya's Tears:
-      total: 0.55
+      total: 0.57
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.52
   starter: *id001
 - source: suggested
   archetype: model
@@ -409,8 +409,8 @@ builds:
   - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Eye of the Storm — magical protection
     swap_item: Eye of the Storm
@@ -424,40 +424,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.8
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.63
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.54
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.58
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.56
     Runeforged Hammer:
-      total: 0.56
+      total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.59
     Amanita Charm:
-      total: 0.76
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.91
     Erosion:
-      total: 0.57
+      total: 0.59
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.66
   starter: *id001
 ---

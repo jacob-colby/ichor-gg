@@ -23,8 +23,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -32,48 +32,48 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.61
+      total: 0.63
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.74
     Toxic Blade:
-      total: 0.6
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     Amanita Charm:
-      total: 0.77
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.9
     Stampede:
-      total: 0.57
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.65
     Pharaoh's Curse:
-      total: 0.63
+      total: 0.65
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.75
     Shogun's Ofuda:
-      total: 0.62
+      total: 0.64
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.75
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Shield of the Phoenix
+  - Golden Blade
   - Amanita Charm
   - Erosion
   - Stampede
@@ -81,7 +81,7 @@ builds:
   - Shogun's Ofuda
   flex_slots:
   - Stampede
-  - Shield of the Phoenix
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -90,20 +90,20 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Shield of the Phoenix:
-      total: 0.59
-      efficiency: 0.57
+    Golden Blade:
+      total: 0.6
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.69
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -111,29 +111,29 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
+      total: 0.62
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Stampede:
       total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.71
-    Stampede:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
+      fit: 0.7
     Pharaoh's Curse:
-      total: 0.65
+      total: 0.66
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     Shogun's Ofuda:
-      total: 0.64
+      total: 0.65
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -149,14 +149,14 @@ builds:
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Shogun's Ofuda — magical protection
     swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Stampede — physical protection
+    swap_item: Stampede
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.9
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.48
     Void Shield:
-      total: 0.67
+      total: 0.68
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.89
     Void Stone:
       total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.89
     Amanita Charm:
       total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.81
     Pharaoh's Curse:
-      total: 0.58
+      total: 0.59
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -294,41 +294,41 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.4
     Shield of the Phoenix:
-      total: 0.63
+      total: 0.64
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.72
     Freya's Tears:
-      total: 0.51
+      total: 0.52
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.43
     Stampede:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.58
     Pharaoh's Curse:
-      total: 0.58
+      total: 0.59
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.63
     Shogun's Ofuda:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: model
@@ -350,8 +350,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -359,40 +359,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.61
+      total: 0.63
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.74
     Toxic Blade:
-      total: 0.6
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     Amanita Charm:
-      total: 0.77
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.9
     Stampede:
-      total: 0.57
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.65
     Pharaoh's Curse:
-      total: 0.63
+      total: 0.65
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.75
     Shogun's Ofuda:
-      total: 0.62
+      total: 0.64
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.75
   starter: *id001
 ---

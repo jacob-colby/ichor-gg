@@ -13,18 +13,18 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Toxic Blade
   - Pendulum Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.62
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.9
     Jotunn's Revenge:
-      total: 0.75
+      total: 0.86
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 1.0
     The Reaper:
-      total: 0.71
+      total: 0.77
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 1.0
     Pendulum Blade:
-      total: 0.61
+      total: 0.71
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 1.0
     The Crusher:
-      total: 0.64
+      total: 0.72
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.88
     Heartseeker:
-      total: 0.64
+      total: 0.72
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.98
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -99,41 +99,41 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.54
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.61
     Jotunn's Revenge:
-      total: 0.67
+      total: 0.72
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.71
     Hydra's Lament:
-      total: 0.56
+      total: 0.59
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.63
     The Reaper:
-      total: 0.61
+      total: 0.63
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.72
     The Crusher:
-      total: 0.54
+      total: 0.57
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.57
     Heartseeker:
-      total: 0.59
+      total: 0.62
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: burst
@@ -164,41 +164,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.78
     Jotunn's Revenge:
-      total: 0.7
+      total: 0.75
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.78
     The Reaper:
-      total: 0.64
+      total: 0.68
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.81
     Pendulum Blade:
-      total: 0.55
+      total: 0.6
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.78
     The Crusher:
-      total: 0.58
+      total: 0.61
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.66
     Heartseeker:
-      total: 0.58
+      total: 0.61
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.76
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -229,41 +229,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.79
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.48
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.61
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.62
     Shield of the Phoenix:
-      total: 0.64
+      total: 0.67
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.77
     Amanita Charm:
-      total: 0.81
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.96
+      fit: 1.0
     Erosion:
-      total: 0.59
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.72
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -271,12 +271,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
+  - Pendulum Blade
   - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
   - Toxic Blade
-  - Titan's Bane
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -294,41 +294,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.69
+      total: 0.73
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 1.0
     Jotunn's Revenge:
-      total: 0.78
+      total: 0.86
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 1.0
     The Reaper:
-      total: 0.76
+      total: 0.77
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 1.0
+    Pendulum Blade:
+      total: 0.71
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
     The Crusher:
-      total: 0.7
+      total: 0.76
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.95
     Heartseeker:
-      total: 0.7
+      total: 0.73
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.92
-    Titan's Bane:
-      total: 0.65
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.82
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -412,11 +412,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Glorious Pridwen — physical protection
+    swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -424,41 +424,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.58
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.5
     Breastplate of Valor:
-      total: 0.54
+      total: 0.58
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.5
     Jotunn's Revenge:
-      total: 0.72
+      total: 0.78
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.85
     Shield of the Phoenix:
-      total: 0.63
+      total: 0.66
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.75
     Hydra's Lament:
-      total: 0.6
+      total: 0.65
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.75
     Pendulum Blade:
-      total: 0.58
+      total: 0.64
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: model
@@ -470,18 +470,18 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Toxic Blade
   - Pendulum Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -489,40 +489,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.62
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.9
     Jotunn's Revenge:
-      total: 0.75
+      total: 0.86
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 1.0
     The Reaper:
-      total: 0.71
+      total: 0.77
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 1.0
     Pendulum Blade:
-      total: 0.61
+      total: 0.71
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 1.0
     The Crusher:
-      total: 0.64
+      total: 0.72
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.88
     Heartseeker:
-      total: 0.64
+      total: 0.72
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.98
   starter: *id001
 ---

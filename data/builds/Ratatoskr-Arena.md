@@ -32,23 +32,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.69
+      total: 0.72
       efficiency: 0.93
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.52
     Briskberry Acorn:
-      total: 0.64
+      total: 0.67
       efficiency: 0.83
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.52
     Jotunn's Revenge:
-      total: 0.8
+      total: 0.86
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 1.0
     The Reaper:
       total: 0.77
       efficiency: 0.55
@@ -56,11 +56,11 @@ builds:
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.74
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 1.0
     Heartseeker:
       total: 0.73
       efficiency: 0.47
@@ -99,41 +99,41 @@ builds:
     data).
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.6
+      total: 0.61
       efficiency: 0.93
       win: 0.5
       pick: 0.0
-      fit: 0.27
+      fit: 0.29
     Briskberry Acorn:
-      total: 0.55
+      total: 0.56
       efficiency: 0.83
       win: 0.5
       pick: 0.0
-      fit: 0.27
+      fit: 0.29
     Thistlethorn Acorn:
-      total: 0.63
+      total: 0.64
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.43
     Jotunn's Revenge:
-      total: 0.7
+      total: 0.72
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.71
     Hydra's Lament:
-      total: 0.57
+      total: 0.59
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.63
     Heartseeker:
-      total: 0.6
+      total: 0.62
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: burst
@@ -164,41 +164,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.57
+      total: 0.58
       efficiency: 0.93
       win: 0.5
       pick: 0.0
-      fit: 0.21
+      fit: 0.22
     Jotunn's Revenge:
-      total: 0.72
+      total: 0.75
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.78
     The Reaper:
-      total: 0.66
+      total: 0.68
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.81
     Pendulum Blade:
-      total: 0.58
+      total: 0.6
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.78
     The Crusher:
-      total: 0.6
+      total: 0.61
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.66
     Heartseeker:
-      total: 0.6
+      total: 0.61
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.76
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -229,23 +229,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.67
+      total: 0.69
       efficiency: 0.93
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.44
     Briskberry Acorn:
-      total: 0.62
+      total: 0.64
       efficiency: 0.83
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.44
     Thistlethorn Acorn:
-      total: 0.66
+      total: 0.67
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.48
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -253,17 +253,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.86
     Stampede:
-      total: 0.64
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -275,7 +275,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -294,17 +294,17 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.7
+      total: 0.73
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.95
+      fit: 1.0
     Jotunn's Revenge:
-      total: 0.82
+      total: 0.86
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 1.0
     The Reaper:
       total: 0.77
       efficiency: 0.55
@@ -312,11 +312,11 @@ builds:
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.77
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 1.0
     Heartseeker:
       total: 0.73
       efficiency: 0.47
@@ -324,11 +324,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.72
+      total: 0.74
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -424,41 +424,41 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Thistlethorn Acorn:
-      total: 0.73
+      total: 0.75
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.65
     Genji's Guard:
-      total: 0.56
+      total: 0.58
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.5
     Breastplate of Valor:
-      total: 0.56
+      total: 0.58
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.5
     Jotunn's Revenge:
-      total: 0.76
+      total: 0.78
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.85
     Hydra's Lament:
-      total: 0.63
+      total: 0.65
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.75
     Pendulum Blade:
-      total: 0.61
+      total: 0.64
       efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: model
@@ -489,23 +489,23 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.69
+      total: 0.72
       efficiency: 0.93
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.52
     Briskberry Acorn:
-      total: 0.64
+      total: 0.67
       efficiency: 0.83
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.52
     Jotunn's Revenge:
-      total: 0.8
+      total: 0.86
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 1.0
     The Reaper:
       total: 0.77
       efficiency: 0.55
@@ -513,11 +513,11 @@ builds:
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.74
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 1.0
     Heartseeker:
       total: 0.73
       efficiency: 0.47

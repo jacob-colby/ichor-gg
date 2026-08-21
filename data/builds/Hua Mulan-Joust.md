@@ -20,53 +20,53 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Stygian Anchor — magical protection
-    swap_item: Stygian Anchor
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.7
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.62
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.64
     Amanita Charm:
-      total: 0.8
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.99
     Erosion:
-      total: 0.6
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.74
     Pharaoh's Curse:
-      total: 0.58
+      total: 0.6
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.64
     Shogun's Ofuda:
-      total: 0.57
+      total: 0.59
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.64
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -80,7 +80,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Kinetic Cuirass
+  - Toxic Blade
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -90,8 +90,8 @@ builds:
     swap: Shogun's Ofuda — magical protection
     swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.76
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.61
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.62
     Shield of the Phoenix:
-      total: 0.64
+      total: 0.67
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.77
     Amanita Charm:
-      total: 0.81
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 1.0
     Erosion:
-      total: 0.59
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.72
     Pharaoh's Curse:
-      total: 0.58
+      total: 0.61
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -145,8 +145,8 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Stone of Binding
   - Jotunn's Revenge
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.6
+      total: 0.61
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.69
     Toxic Blade:
-      total: 0.64
+      total: 0.66
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.85
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.62
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.53
     Void Shield:
-      total: 0.65
+      total: 0.66
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.86
     Void Stone:
-      total: 0.65
+      total: 0.66
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.86
     Amanita Charm:
-      total: 0.74
+      total: 0.75
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -294,41 +294,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.53
+      total: 0.55
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.45
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.57
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.42
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.56
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.52
     Shield of the Phoenix:
-      total: 0.67
+      total: 0.69
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.81
     Freya's Tears:
-      total: 0.58
+      total: 0.6
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.59
     Erosion:
-      total: 0.55
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: model
@@ -347,52 +347,52 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Stygian Anchor — magical protection
-    swap_item: Stygian Anchor
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.7
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.62
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.64
     Amanita Charm:
-      total: 0.8
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.99
     Erosion:
-      total: 0.6
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.74
     Pharaoh's Curse:
-      total: 0.58
+      total: 0.6
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.64
     Shogun's Ofuda:
-      total: 0.57
+      total: 0.59
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.64
   starter: *id001
 ---

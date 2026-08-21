@@ -32,23 +32,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.63
+      total: 0.65
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.7
     Void Shield:
-      total: 0.61
+      total: 0.63
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.78
     Spectral Armor:
-      total: 0.61
+      total: 0.63
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.68
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -56,17 +56,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.68
+      total: 0.7
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.9
     Stampede:
-      total: 0.63
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.78
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -80,8 +80,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Kinetic Cuirass
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -99,23 +99,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.64
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.68
     Shield of the Phoenix:
-      total: 0.67
+      total: 0.69
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.82
     Spectral Armor:
-      total: 0.62
+      total: 0.64
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.7
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -123,17 +123,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
+      total: 0.7
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.88
     Stampede:
-      total: 0.64
+      total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.8
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.62
+      total: 0.63
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.71
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.64
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.57
     Void Shield:
       total: 0.72
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.96
+      fit: 0.98
     Void Stone:
-      total: 0.71
+      total: 0.72
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.96
+      fit: 0.98
     Amanita Charm:
-      total: 0.81
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.96
+      fit: 0.98
     Erosion:
-      total: 0.61
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.73
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -275,8 +275,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Jotunn's Revenge
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -294,41 +294,41 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.59
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.46
     Shield of the Phoenix:
-      total: 0.7
+      total: 0.71
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.86
     Freya's Tears:
-      total: 0.61
+      total: 0.63
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.64
     Spectral Armor:
-      total: 0.57
+      total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.59
     Erosion:
-      total: 0.62
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.75
     Stampede:
-      total: 0.59
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: model
@@ -359,23 +359,23 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.63
+      total: 0.65
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.7
     Void Shield:
-      total: 0.61
+      total: 0.63
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.78
     Spectral Armor:
-      total: 0.61
+      total: 0.63
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.68
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -383,17 +383,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.68
+      total: 0.7
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.9
     Stampede:
-      total: 0.63
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.78
   starter: *id001
 - source: suggested
   archetype: core
@@ -405,8 +405,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Shield of the Phoenix
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -424,23 +424,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.64
+      total: 0.66
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.71
     Shield of the Phoenix:
-      total: 0.63
+      total: 0.65
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.74
     Spectral Armor:
-      total: 0.64
+      total: 0.65
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.73
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -448,17 +448,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.69
+      total: 0.71
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.91
     Stampede:
-      total: 0.66
+      total: 0.67
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.83
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -471,8 +471,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Kinetic Cuirass
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -490,23 +490,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.64
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.68
     Shield of the Phoenix:
-      total: 0.67
+      total: 0.69
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.82
     Spectral Armor:
-      total: 0.62
+      total: 0.64
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.7
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -514,17 +514,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
+      total: 0.7
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.88
     Stampede:
-      total: 0.64
+      total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.8
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -537,8 +537,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Erosion
   - Jotunn's Revenge
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -556,17 +556,17 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.83
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.63
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.55
     Void Shield:
       total: 0.73
       efficiency: 0.47
@@ -580,17 +580,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Amanita Charm:
-      total: 0.79
+      total: 0.8
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.93
+      fit: 0.95
     Erosion:
-      total: 0.62
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.75
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -669,7 +669,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Freya's Tears
+  - Spectral Armor
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -688,41 +688,41 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.44
     Shield of the Phoenix:
-      total: 0.69
+      total: 0.7
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.84
     Freya's Tears:
-      total: 0.59
+      total: 0.6
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.59
     Spectral Armor:
-      total: 0.59
+      total: 0.6
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.63
     Erosion:
-      total: 0.63
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     Stampede:
-      total: 0.61
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.73
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -735,8 +735,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Shield of the Phoenix
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -754,23 +754,23 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.64
+      total: 0.66
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.71
     Shield of the Phoenix:
-      total: 0.63
+      total: 0.65
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.74
     Spectral Armor:
-      total: 0.64
+      total: 0.65
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.73
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -778,17 +778,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.69
+      total: 0.71
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.91
     Stampede:
-      total: 0.66
+      total: 0.67
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.83
   starter: *id001
   aspect: Aspect of Preservation
 ---

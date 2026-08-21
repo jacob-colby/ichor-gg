@@ -13,7 +13,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Jotunn's Revenge
+  - Stampede
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.8
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.63
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.54
     Spectral Armor:
-      total: 0.59
+      total: 0.6
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.63
     Amanita Charm:
-      total: 0.81
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 1.0
     Erosion:
+      total: 0.64
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    Stampede:
       total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Stampede:
-      total: 0.61
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
+      fit: 0.73
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -80,7 +80,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Heartseeker
+  - Erosion
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,41 +99,41 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.62
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.52
     Hydra's Lament:
-      total: 0.51
+      total: 0.52
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.49
     Heartseeker:
-      total: 0.53
+      total: 0.54
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.62
     Amanita Charm:
-      total: 0.73
+      total: 0.74
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.82
     Erosion:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.57
     Stampede:
       total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.59
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -164,23 +164,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.61
+      total: 0.63
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.65
     Shield of the Phoenix:
+      total: 0.64
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Spectral Armor:
       total: 0.63
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.69
-    Spectral Armor:
-      total: 0.61
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
+      fit: 0.68
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -188,17 +188,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.66
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.85
     Stampede:
-      total: 0.63
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.78
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -229,41 +229,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.62
+      total: 0.64
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.78
     Toxic Blade:
-      total: 0.67
+      total: 0.69
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.92
     Jotunn's Revenge:
-      total: 0.66
+      total: 0.68
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.65
     Void Shield:
-      total: 0.7
+      total: 0.71
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.95
     Void Stone:
       total: 0.7
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.95
     Amanita Charm:
-      total: 0.77
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.9
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -340,7 +340,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Freya's Tears
+  - Erosion
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,41 +359,41 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.65
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.59
     Shield of the Phoenix:
-      total: 0.68
+      total: 0.69
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.82
     Freya's Tears:
-      total: 0.55
+      total: 0.57
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.52
     Spectral Armor:
-      total: 0.54
+      total: 0.55
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.52
     Erosion:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
-    Stampede:
       total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Stampede:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: model
@@ -405,7 +405,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Jotunn's Revenge
+  - Stampede
   - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -424,40 +424,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.8
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.63
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.54
     Spectral Armor:
-      total: 0.59
+      total: 0.6
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.63
     Amanita Charm:
-      total: 0.81
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 1.0
     Erosion:
+      total: 0.64
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    Stampede:
       total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Stampede:
-      total: 0.61
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
+      fit: 0.73
   starter: *id001
 ---

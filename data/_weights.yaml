@@ -130,21 +130,30 @@ damage_fit_blend: 0.0
 # the same stat was missing from both halves of the model, because everything
 # we scrape describes basic attacks somewhere other than where we were reading.
 #
+# CREDITED, NOT CHARGED — and getting that wrong cost half the headline.
+# `god_fit_score` normalises: stat_fit = (matched weights) / sum(ALL weights).
+# Injected the ordinary way, this column therefore multiplies the stat term of
+# every item that does NOT carry Attack Damage by D/(D+a) — measured at
+# **-12.5% across 10,065 (god, item) pairs**, against +48.7% for the 702 that
+# do. That shrink is a pool-wide re-weighting, not the measurement doing its
+# job, and because `bonus` is added AFTER normalisation and is not shrunk with
+# it, it quietly promotes every tag bonus against the stat term. It ships
+# excluded from the normaliser instead; see `scoring.god_fit_score`. The sweep
+# below is the corrected one. The charged version scored 40.6% / 40.5% —
+# ~1pp of that was the shrink and not this column.
+#
 #   str   probe 0.70:0.30      paired 95% CI    best 0.45:0.55   cores  b/w
 #   0.00        38.7% (ctl)               --       39.6% (ctl)      --   --
-#   0.10        38.9%       [-0.67%, +1.12%]       39.6%         12/89  3/2
-#   0.30        38.9%       [-0.90%, +1.35%]       39.8%         17/89  4/3
-#   0.50        39.1%       [-0.67%, +1.80%]       40.0%         23/89  5/3
-#   0.65        40.2%       [-0.00%, +3.03%]       40.0%         30/89 10/3
-#   0.75        40.4%       [+0.19%, +3.22%]       40.7%         30/89 11/3
-#   0.90        40.2%       [-0.11%, +3.18%]       40.7%         33/89 11/4
-#   1.00        40.6%       [+0.34%, +3.52%]       40.5%         33/89 12/3  <-
+#   0.25        38.7%       [+0.00%, +0.00%]       39.3%          4/89  0/1
+#   0.50        39.1%       [+0.00%, +1.12%]       39.4%         13/89  3/4
+#   0.75        39.1%       [+0.00%, +1.12%]       39.9%         16/89  5/4
+#   1.00        39.7%       [+0.22%, +1.91%]       40.3%         20/89  7/5  <-
 #
-# Positive on BOTH leakage-free splits at every strength, which is the bar
-# `price_adaptive` was held to — and unlike that flag, and unlike everything
-# else in register entry 4, THE PAIRED CI EXCLUDES ZERO (at 0.75 and at 1.00,
-# on the probe split). It is still 89 gods and the best split's CI does not;
-# do not quote +1.9pp as significant.
+# Positive on BOTH leakage-free splits, which is the bar `price_adaptive` was
+# held to — and unlike that flag, and unlike everything else in register entry
+# 4, THE PAIRED CI EXCLUDES ZERO on the probe split, where the shipped strength
+# is better on 5 gods and worse on NONE. It is still 89 gods and the best
+# split's CI does not exclude zero; do not quote +1.0pp as significant.
 #
 # WHY 1.0 AND NOT AN ARGMAX. The value being blended against is zero, so the
 # strength is a pure scale: (1-s)*0 + s*w*ref. There is no prior here to trade
@@ -155,8 +164,8 @@ damage_fit_blend: 0.0
 # plateau would be tuning against the gate; see docs/STATE.md §1.
 #
 # THE ITEMS IT MOVES ARE NAMEABLE, which is the point. At 1.0 on the best
-# split, 31 departures of which 11 appear in that god's own community record
-# against 31 arrivals of which 14 do. The arrivals are Attack Damage items the
+# split, departures and arrivals both favour the community record, and the
+# arrivals are Attack Damage items the fit map could not score at all. The arrivals are Attack Damage items the
 # fit map could not previously score at all: Tyrfing (25 Attack Damage) enters
 # 8 cores, and it is that god's SLOT-1 community item for Izanami (72% pick),
 # Medusa (44%) and Kali (39%); Riptalon enters Medusa, Izanami, Ishtar, Jing
@@ -173,14 +182,39 @@ damage_fit_blend: 0.0
 # without a per-god casting/swinging time-share, which is the same thing
 # register 4.12 could not source for `damage_per_second`.
 #
-# THE BLAST RADIUS IS WIDEST WHERE THE EVIDENCE IS THINNEST, and that is worth
-# knowing before the next change to it. Regenerating every build note moves 23
-# of 90 Conquest cores (23 swaps) but 42 of 90 JOUST cores (49) and 38 of 89
-# ARENA ones (53), because those two modes zero `win` and `pick` — so the fit
-# map is the whole score there and nothing damps a change to it. Everything
-# above was measured on Conquest community data; Joust and Arena have no
-# record of their own and BORROW Conquest's (see `borrow_community`), so the
-# larger half of this churn is unmeasured by construction.
+# JOUST AND ARENA, SWEPT SEPARATELY, because the first cut of this flag was
+# measured on Conquest alone and the other two modes are 178 of 267 build
+# groups. Neither has a community block on ANY of its 89 notes, so there is no
+# coverage gate there at all; what follows is churn plus the BORROWED Conquest
+# target, which is a consistency check and not validation.
+#
+#   str   Joust cores   borrowed cov   Arena cores   borrowed cov
+#   0.00        --          35.7%           --          26.6%
+#   0.25       7/89         35.9%          7/89         27.0%
+#   0.50       9/89         36.3%         10/89         27.4%
+#   0.75      13/89         35.9%         17/89         27.8%
+#   1.00      19/89         35.5%         20/89         27.4%
+#
+# THAT SWEEP IS WHY THE NORMALISER CHANGED. Charged to the denominator, the
+# column moved 46 of 89 Joust cores and 39 of 89 Arena ones, and 43 of those
+# arrivals across the two modes were ANTI-HEAL items carrying no Attack Damage
+# at all — Divine Ruin and Toxic Blade. Both modes price `anti-heal` at +0.30
+# and `sustain` at +0.25 while Conquest's only mode tag_bonus is NEGATIVE, so
+# shrinking the stat term promoted those bonuses hardest exactly where nothing
+# could measure it. Zeroing the mode tag_bonus removed all 43. Credited rather
+# than charged, the churn roughly halves (46 -> 19, 39 -> 20), the anti-heal
+# arrivals fall to 8 and 11 as ordinary competition for six slots, the Attack
+# Damage arrivals are unchanged (20 -> 21, 31 -> 34) and Joust's borrowed
+# coverage stops decaying (29.8% -> 27.7% became 35.7% -> 35.5% on the same
+# denominator as validate's).
+#
+# It is still true that the fit map is the whole score in those two modes, so
+# they will always churn more per unit of fit change than Conquest does, and
+# still true that no outcome data exists to check either of them (STATE.md §5).
+#
+# AS SHIPPED, regenerating every build note against main moves 11 of 90
+# Conquest cores (13 swaps), 18 of 90 Joust (20) and 19 of 89 Arena (33). The
+# first cut moved 23 / 42 / 38; the normaliser fix is most of that difference.
 attack_damage_fit: 1.0
 # ── The clock (B5) ────────────────────────────────────────────────────────
 # What `damage_value.item_damage_gain` RETURNS. False = one ability rotation

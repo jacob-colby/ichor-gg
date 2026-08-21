@@ -13,8 +13,8 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Death Metal
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.88
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.49
     Tyrfing:
-      total: 0.57
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.73
     Death Metal:
-      total: 0.53
+      total: 0.56
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.51
     The Crusher:
-      total: 0.53
+      total: 0.56
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.54
     Soul Gem:
-      total: 0.69
+      total: 0.71
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.86
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -99,41 +99,41 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.66
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.62
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.52
     Death Metal:
-      total: 0.55
+      total: 0.57
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.54
     Heartseeker:
-      total: 0.53
+      total: 0.54
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.62
     Rod of Tahuti:
-      total: 0.62
+      total: 0.64
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.42
     Soul Gem:
-      total: 0.77
+      total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.96
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -164,41 +164,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.8
     Amanita Charm:
-      total: 0.76
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.89
     Erosion:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.59
     Pharaoh's Curse:
-      total: 0.57
+      total: 0.59
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.62
     Shogun's Ofuda:
-      total: 0.56
+      total: 0.58
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.62
     Soul Gem:
-      total: 0.67
+      total: 0.68
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -229,41 +229,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.69
+      total: 0.72
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 0.98
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.66
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.61
     Silverbranch Bow:
-      total: 0.57
+      total: 0.6
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.68
     The Crusher:
-      total: 0.59
+      total: 0.62
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.67
     Heartseeker:
-      total: 0.59
+      total: 0.62
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.77
     Soul Gem:
-      total: 0.77
+      total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -359,35 +359,35 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.7
     Genji's Guard:
-      total: 0.49
+      total: 0.5
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.32
+      fit: 0.34
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.65
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.59
     Hydra's Lament:
-      total: 0.53
+      total: 0.55
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.55
     Spear of Desolation:
-      total: 0.56
+      total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.59
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -405,8 +405,8 @@ builds:
   - The Crusher
   - Soul Gem
   flex_slots:
-  - The Crusher
   - Death Metal
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -424,40 +424,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.88
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.6
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.49
     Tyrfing:
-      total: 0.57
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.73
     Death Metal:
-      total: 0.53
+      total: 0.56
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.51
     The Crusher:
-      total: 0.53
+      total: 0.56
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.54
     Soul Gem:
-      total: 0.69
+      total: 0.71
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.86
   starter: *id001
 ---
