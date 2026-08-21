@@ -37,10 +37,16 @@ Five things that are easy to get wrong here, all expanded in that file:
 
    ~7s. It prints the random-core baseline, coverage at two FIXED splits, and
    an **input fingerprint** over the item set, the community builds and the
-   weights. If the fingerprint differs from the one stamped in
-   `_calibration.md` — it says so on its own line — that report and every
-   number quoted from it describe a different dataset, and the delta you are
-   about to attribute to your change is partly the data's.
+   weights. **The fingerprint is the answer** — if it differs from the one
+   stamped in `_calibration.md`, that report and every number quoted from it
+   describes different inputs, and the delta you are about to attribute to your
+   change is partly theirs.
+
+   Do NOT use a moving baseline as the tell. It was the old proxy for this and
+   it has a false-positive mode: the printed figure is a 200-draw sample over a
+   pool the model reorders, so it wobbles ±0.15pp for reasons that are not the
+   data. `calibrate.exact_random_core_baseline` is the closed form if you need
+   to settle it that way.
 
 Commands, tests and the tuning surface are in
 [`docs/STATE.md` §6](docs/STATE.md). Use `npm run build`, not `tsc --noEmit` —
