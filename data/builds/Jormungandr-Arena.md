@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.59
+      total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.59
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -48,25 +48,25 @@ builds:
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.76
     Stampede:
-      total: 0.61
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Pharaoh's Curse:
-      total: 0.66
+      total: 0.65
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.76
     Shogun's Ofuda:
-      total: 0.65
+      total: 0.64
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.76
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -105,35 +105,35 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.74
     Stampede:
       total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.7
     Pharaoh's Curse:
-      total: 0.67
+      total: 0.66
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.77
     Shogun's Ofuda:
-      total: 0.66
+      total: 0.65
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.77
     Soul Gem:
-      total: 0.73
+      total: 0.72
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.87
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -168,37 +168,37 @@ builds:
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Toxic Blade:
-      total: 0.63
+      total: 0.64
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.81
     Void Shield:
       total: 0.7
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.93
     Void Stone:
-      total: 0.7
+      total: 0.69
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.93
     Amanita Charm:
-      total: 0.79
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.91
     Pharaoh's Curse:
-      total: 0.61
+      total: 0.6
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -298,31 +298,31 @@ builds:
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.38
     Freya's Tears:
-      total: 0.58
+      total: 0.57
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Erosion:
-      total: 0.6
+      total: 0.59
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.67
     Pharaoh's Curse:
-      total: 0.62
+      total: 0.61
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.67
     Shogun's Ofuda:
-      total: 0.61
+      total: 0.6
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.67
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -363,49 +363,49 @@ builds:
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.44
     Amanita Charm:
-      total: 0.81
+      total: 0.8
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 0.95
     Erosion:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.7
     Stampede:
       total: 0.59
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.66
     Pharaoh's Curse:
       total: 0.6
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Shogun's Ofuda:
       total: 0.59
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
-  - Triton's Conch
   flex_slots:
-  - Triton's Conch
+  - Toxic Blade
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
@@ -418,23 +418,29 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.57
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Amanita Charm:
       total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 0.9
     Erosion:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Stampede:
       total: 0.57
       efficiency: 0.51
@@ -442,23 +448,17 @@ builds:
       pick: 0.0
       fit: 0.63
     Pharaoh's Curse:
-      total: 0.61
+      total: 0.6
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Shogun's Ofuda:
-      total: 0.6
+      total: 0.59
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.66
-    Triton's Conch:
-      total: 0.58
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: model
@@ -489,11 +489,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Spectral Armor:
-      total: 0.59
+      total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.59
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -505,24 +505,24 @@ builds:
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.76
     Stampede:
-      total: 0.61
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Pharaoh's Curse:
-      total: 0.66
+      total: 0.65
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.76
     Shogun's Ofuda:
-      total: 0.65
+      total: 0.64
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.76
   starter: *id001
 ---

@@ -829,10 +829,20 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
             base_map[stat] = (1 - blend) * base_map.get(stat, 0.0) + blend * w
         # B4: move the offensive weights toward what this god's own scaling
         # coefficients say. Defensive stats keep their role weight — nothing
-        # here can price a stat that adds no damage.
+        # here can price a stat that adds no damage. Attack Damage is NOT part
+        # of this any more; it is its own flag below.
         dmg_blend = eff_weights.get("damage_fit_blend", 0.0)
         if dmg_blend:
             base_map = damage_value.blend_stat_values(god, base_map, dmg_blend)
+
+        # ATTACK DAMAGE, which the role table and the kit overlay between them
+        # never name — the merged map scores it 0.0 on 89 of 89 gods while the
+        # god's own basic-attack scaling says it is worth 0.24-1.00 of their
+        # top stat. Applied AFTER the blend so the blend's `reference` is the
+        # role map's own maximum and the two flags stay independent.
+        ad_fit = eff_weights.get("attack_damage_fit", 0.0)
+        if ad_fit:
+            base_map = damage_value.attack_damage_fit(god, base_map, ad_fit)
 
         # A stat the god can CONVERT into power belongs in the map, for that
         # god only. `price_conversions` fixed the efficiency half of this -

@@ -13,7 +13,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Death Metal
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.69
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.53
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.35
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.46
     Riptalon:
-      total: 0.59
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.71
     Rod of Tahuti:
-      total: 0.57
+      total: 0.56
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.29
+      fit: 0.27
     Soul Gem:
-      total: 0.78
+      total: 0.77
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.97
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -80,8 +80,8 @@ builds:
   - Death Metal
   - Rod of Tahuti
   flex_slots:
+  - Bancroft's Talon
   - Bragi's Harp
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -99,41 +99,41 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.54
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.62
     Bancroft's Talon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.53
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.56
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.41
     Bragi's Harp:
-      total: 0.53
+      total: 0.51
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.58
     Death Metal:
-      total: 0.56
+      total: 0.55
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.48
     Rod of Tahuti:
-      total: 0.6
+      total: 0.59
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.33
   starter: *id001
 - source: suggested
   archetype: crit
@@ -164,41 +164,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.68
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.33
     Death Metal:
-      total: 0.56
+      total: 0.54
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.47
     Demon Blade:
-      total: 0.46
+      total: 0.44
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.51
     Deathbringer:
-      total: 0.43
+      total: 0.42
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.36
+      fit: 0.33
     Soul Gem:
-      total: 0.78
+      total: 0.77
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: burst
@@ -229,35 +229,35 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.71
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.57
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.43
     Death Metal:
-      total: 0.52
+      total: 0.51
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.41
     Spear of Desolation:
-      total: 0.52
+      total: 0.5
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.43
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.33
+      fit: 0.31
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -294,41 +294,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.69
     Berserker's Shield:
-      total: 0.51
+      total: 0.5
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.34
+      fit: 0.32
     Amanita Charm:
-      total: 0.72
+      total: 0.71
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.77
     Pharaoh's Curse:
-      total: 0.55
+      total: 0.54
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.52
     Shogun's Ofuda:
-      total: 0.54
+      total: 0.53
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.52
     Soul Gem:
       total: 0.74
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.9
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -336,12 +336,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
-  - The Crusher
+  - Void Stone
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Void Shield
-  - The Crusher
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -350,8 +350,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -359,35 +359,35 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.44
     Void Shield:
       total: 0.53
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
-    The Crusher:
+    Void Stone:
       total: 0.53
-      efficiency: 0.57
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.6
     Rod of Tahuti:
-      total: 0.62
+      total: 0.61
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -489,35 +489,35 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.65
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Hydra's Lament:
-      total: 0.5
+      total: 0.49
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.44
     Spear of Desolation:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Rod of Tahuti:
       total: 0.53
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.21
+      fit: 0.2
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -535,7 +535,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Death Metal
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -554,41 +554,41 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.69
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.53
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.35
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.46
     Riptalon:
-      total: 0.59
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.71
     Rod of Tahuti:
-      total: 0.57
+      total: 0.56
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.29
+      fit: 0.27
     Soul Gem:
-      total: 0.78
+      total: 0.77
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: core
@@ -619,41 +619,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.68
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.52
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.36
+      fit: 0.33
     Death Metal:
-      total: 0.54
+      total: 0.52
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.44
     Rod of Tahuti:
-      total: 0.56
+      total: 0.55
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.27
+      fit: 0.25
     Rod of Asclepius:
-      total: 0.6
+      total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Soul Gem:
-      total: 0.77
+      total: 0.75
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 0.93
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -666,7 +666,7 @@ builds:
   - Rod of Tahuti
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
+  - Triton's Conch
   - Bancroft's Talon
   situational_swaps:
   - vs_tag: heavy_cc
@@ -676,8 +676,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -685,41 +685,41 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.54
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.61
     Bancroft's Talon:
-      total: 0.52
+      total: 0.51
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.5
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.55
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.39
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.33
+      fit: 0.31
     Triton's Conch:
-      total: 0.52
+      total: 0.51
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.58
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -751,41 +751,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.71
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.5
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.31
+      fit: 0.29
     Death Metal:
-      total: 0.53
+      total: 0.51
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.42
     Demon Blade:
-      total: 0.43
+      total: 0.41
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.45
     Deathbringer:
-      total: 0.41
+      total: 0.4
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.31
+      fit: 0.29
     Soul Gem:
-      total: 0.75
+      total: 0.74
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.91
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -817,35 +817,35 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.7
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.56
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.41
     Death Metal:
-      total: 0.51
+      total: 0.5
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.39
     Spear of Desolation:
-      total: 0.51
+      total: 0.49
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.41
     Rod of Tahuti:
-      total: 0.58
+      total: 0.57
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.31
+      fit: 0.29
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -883,41 +883,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.55
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.64
     Amanita Charm:
       total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.78
     Erosion:
-      total: 0.5
+      total: 0.49
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.48
     Pharaoh's Curse:
-      total: 0.52
+      total: 0.51
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.48
     Shogun's Ofuda:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.48
     Soul Gem:
-      total: 0.76
+      total: 0.75
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.96
+      fit: 0.94
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -949,35 +949,35 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.59
     Toxic Blade:
-      total: 0.59
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.76
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.42
     Void Shield:
       total: 0.57
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Void Stone:
       total: 0.56
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -1059,11 +1059,11 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
-  - Rod of Tahuti
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
   - Hydra's Lament
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1081,35 +1081,35 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.55
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.65
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.44
     Hydra's Lament:
-      total: 0.49
+      total: 0.48
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.42
     Spear of Desolation:
-      total: 0.52
+      total: 0.5
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.46
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.86
+      fit: 0.44
+    Pharaoh's Curse:
+      total: 0.46
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.2
+      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -1147,41 +1147,41 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.68
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.52
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.36
+      fit: 0.33
     Death Metal:
-      total: 0.54
+      total: 0.52
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.44
     Rod of Tahuti:
-      total: 0.56
+      total: 0.55
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.27
+      fit: 0.25
     Rod of Asclepius:
-      total: 0.6
+      total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Soul Gem:
-      total: 0.77
+      total: 0.75
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 0.93
   starter: *id001
   aspect: Aspect of Strife
 ---

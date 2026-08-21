@@ -32,23 +32,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.67
+      total: 0.61
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.62
     Void Shield:
-      total: 0.64
+      total: 0.6
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.74
     Spectral Armor:
-      total: 0.64
+      total: 0.6
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.64
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -56,17 +56,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.72
+      total: 0.67
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.93
+      fit: 0.82
     Stampede:
-      total: 0.66
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.74
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -80,12 +80,12 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Spectral Armor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -99,17 +99,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.66
+      total: 0.6
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.6
     Spectral Armor:
-      total: 0.65
+      total: 0.61
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.65
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -117,17 +117,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.71
+      total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.8
     Stampede:
-      total: 0.67
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.75
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.63
+      total: 0.61
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.68
     Void Shield:
-      total: 0.73
+      total: 0.71
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.95
     Void Stone:
-      total: 0.72
+      total: 0.7
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.95
     Amanita Charm:
-      total: 0.83
+      total: 0.8
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.94
     Erosion:
-      total: 0.63
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
-    Stampede:
       total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Stampede:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -294,35 +294,35 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.54
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.42
     Freya's Tears:
-      total: 0.63
+      total: 0.58
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.56
     Spectral Armor:
-      total: 0.58
+      total: 0.56
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.55
     Erosion:
-      total: 0.63
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
-    Stampede:
       total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Stampede:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -333,80 +333,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Jotunn's Revenge
+  - Toxic Blade
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Jotunn's Revenge
   - Stampede
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
-  - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
-  rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
-    — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
-    Amanita Charm:
-      total: 0.79
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.93
-    Erosion:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
-    Stampede:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-  starter: *id001
-- source: suggested
-  archetype: str-int
-  slot_order:
-  - Jotunn's Revenge
-  - Spectral Armor
-  - Amanita Charm
-  - Erosion
-  - Stampede
-  - Triton's Conch
-  flex_slots:
-  - Jotunn's Revenge
-  - Spectral Armor
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -420,45 +355,110 @@ builds:
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
+  rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
+    — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Amanita Charm:
+      total: 0.77
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
+    Erosion:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Stampede:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Pharaoh's Curse:
+      total: 0.57
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Shogun's Ofuda:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+  starter: *id001
+- source: suggested
+  archetype: str-int
+  slot_order:
+  - Jotunn's Revenge
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  - Triton's Conch
+  flex_slots:
+  - Spectral Armor
+  - Jotunn's Revenge
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.54
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.37
     Spectral Armor:
-      total: 0.57
+      total: 0.55
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.53
     Amanita Charm:
-      total: 0.8
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.95
+      fit: 0.9
     Erosion:
-      total: 0.61
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.65
     Stampede:
-      total: 0.59
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.63
     Triton's Conch:
-      total: 0.6
+      total: 0.57
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: model
@@ -489,23 +489,23 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.67
+      total: 0.61
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.62
     Void Shield:
-      total: 0.64
+      total: 0.6
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.74
     Spectral Armor:
-      total: 0.64
+      total: 0.6
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.64
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -513,16 +513,16 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.72
+      total: 0.67
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.93
+      fit: 0.82
     Stampede:
-      total: 0.66
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.74
   starter: *id001
 ---

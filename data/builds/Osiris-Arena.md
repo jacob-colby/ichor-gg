@@ -7,66 +7,66 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
+  - Toxic Blade
   - Amanita Charm
-  - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Toxic Blade
   - Stampede
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.7
+    Toxic Blade:
+      total: 0.6
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.9
-    Erosion:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
+      fit: 0.88
     Stampede:
-      total: 0.58
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
     Pharaoh's Curse:
-      total: 0.65
+      total: 0.63
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.72
     Shogun's Ofuda:
-      total: 0.64
+      total: 0.62
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.72
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -99,11 +99,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Shield of the Phoenix:
-      total: 0.6
+      total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -111,29 +111,29 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.62
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
-    Stampede:
       total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.71
+    Stampede:
+      total: 0.6
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Pharaoh's Curse:
-      total: 0.66
+      total: 0.65
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.74
     Shogun's Ofuda:
-      total: 0.65
+      total: 0.64
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.74
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -149,14 +149,14 @@ builds:
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Shogun's Ofuda — magical protection
     swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Stampede — physical protection
-    swap_item: Stampede
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.87
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.45
     Void Shield:
-      total: 0.68
+      total: 0.67
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.88
     Void Stone:
       total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.88
     Amanita Charm:
       total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.8
     Pharaoh's Curse:
-      total: 0.59
+      total: 0.58
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -294,105 +294,105 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.38
     Shield of the Phoenix:
-      total: 0.64
+      total: 0.63
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.69
     Freya's Tears:
-      total: 0.52
+      total: 0.51
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.4
     Stampede:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.58
     Pharaoh's Curse:
-      total: 0.59
+      total: 0.58
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Shogun's Ofuda:
-      total: 0.58
+      total: 0.57
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Golden Blade
+  - Toxic Blade
   - Amanita Charm
-  - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Toxic Blade
   - Stampede
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.61
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.7
+    Toxic Blade:
+      total: 0.6
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.9
-    Erosion:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
+      fit: 0.88
     Stampede:
-      total: 0.58
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
     Pharaoh's Curse:
-      total: 0.65
+      total: 0.63
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.72
     Shogun's Ofuda:
-      total: 0.64
+      total: 0.62
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.72
   starter: *id001
 ---

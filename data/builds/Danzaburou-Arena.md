@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
   - Lernaean Bow
   - Toxic Blade
-  - Jotunn's Revenge
   - Riptalon
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Pharaoh's Curse
-  - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,57 +31,57 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.57
+    Golden Blade:
+      total: 0.54
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.56
+    Lernaean Bow:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Toxic Blade:
-      total: 0.58
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.69
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
+      fit: 0.73
     Riptalon:
-      total: 0.62
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     Pharaoh's Curse:
-      total: 0.55
+      total: 0.54
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.53
     Soul Gem:
-      total: 0.77
+      total: 0.76
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 0.96
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lernaean Bow
+  - Toxic Blade
   - Bancroft's Talon
   - Jotunn's Revenge
   - Death Metal
   - Rod of Tahuti
   - Triton's Conch
   flex_slots:
+  - Toxic Blade
   - Bancroft's Talon
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -93,47 +93,47 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lernaean Bow:
+    Toxic Blade:
       total: 0.53
-      efficiency: 0.52
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.6
     Bancroft's Talon:
       total: 0.53
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.42
     Death Metal:
-      total: 0.56
+      total: 0.55
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.49
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.34
     Triton's Conch:
-      total: 0.55
+      total: 0.54
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
   starter: *id001
 - source: suggested
   archetype: crit
@@ -164,41 +164,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.55
+      total: 0.54
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.56
     Toxic Blade:
-      total: 0.57
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.72
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Demon Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.63
     Deathbringer:
-      total: 0.47
+      total: 0.46
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.41
     Soul Gem:
-      total: 0.78
+      total: 0.77
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: burst
@@ -229,35 +229,35 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.69
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.44
     Death Metal:
-      total: 0.52
+      total: 0.51
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.42
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.33
+      fit: 0.32
     Pharaoh's Curse:
       total: 0.51
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.46
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -268,67 +268,67 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Amanita Charm
-  - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Erosion
+  - Toxic Blade
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Amanita Charm:
       total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.93
-    Erosion:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
+      fit: 0.92
     Stampede:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Pharaoh's Curse:
-      total: 0.62
+      total: 0.61
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.68
     Shogun's Ofuda:
-      total: 0.61
+      total: 0.6
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.68
     Soul Gem:
       total: 0.74
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.91
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -359,17 +359,17 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.83
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.46
     Void Shield:
       total: 0.58
       efficiency: 0.47
@@ -383,11 +383,11 @@ builds:
       pick: 0.0
       fit: 0.7
     The Crusher:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.53
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -489,31 +489,31 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.63
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.46
     Spear of Desolation:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.46
     Pharaoh's Curse:
-      total: 0.52
+      total: 0.51
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.48
     Shogun's Ofuda:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -535,7 +535,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
+  - Triton's Conch
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
@@ -554,29 +554,29 @@ builds:
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.55
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.64
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.36
     Bragi's Harp:
-      total: 0.53
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.59
     Death Metal:
-      total: 0.56
+      total: 0.55
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.49
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -584,11 +584,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.54
+      total: 0.53
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -619,35 +619,35 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.55
+      total: 0.54
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.56
     Toxic Blade:
-      total: 0.55
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.67
     Bragi's Harp:
-      total: 0.55
+      total: 0.54
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.63
     Death Metal:
-      total: 0.58
+      total: 0.57
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.53
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.33
+      fit: 0.31
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -658,15 +658,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Golden Blade
   - Lernaean Bow
   - Toxic Blade
-  - Jotunn's Revenge
   - Riptalon
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Pharaoh's Curse
-  - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -683,42 +683,42 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.57
+    Golden Blade:
+      total: 0.54
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.56
+    Lernaean Bow:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Toxic Blade:
-      total: 0.58
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.69
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
+      fit: 0.73
     Riptalon:
-      total: 0.62
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     Pharaoh's Curse:
-      total: 0.55
+      total: 0.54
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.53
     Soul Gem:
-      total: 0.77
+      total: 0.76
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 0.96
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -749,46 +749,46 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.6
     Toxic Blade:
-      total: 0.58
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.73
     Riptalon:
-      total: 0.62
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.77
     The World Stone:
-      total: 0.36
+      total: 0.35
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.2
+      fit: 0.19
     Pharaoh's Curse:
-      total: 0.55
+      total: 0.54
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.53
     Soul Gem:
-      total: 0.77
+      total: 0.76
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 0.96
   swaps:
   - added: The World Stone
-    removed: Jotunn's Revenge
+    removed: Golden Blade
     reason: Conquest community 73% win over 43 matches (vs 55% on this god), taking
-      the model's weakest slot from Jotunn's Revenge
+      the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001
 ---

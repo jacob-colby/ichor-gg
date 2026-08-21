@@ -6,67 +6,67 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Stygian Anchor
   - Kinetic Cuirass
   - Void Shield
-  - Freya's Tears
   - Spectral Armor
-  - Amanita Charm
   - Erosion
+  - Soul Gem
   flex_slots:
-  - Freya's Tears
   - Void Shield
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Stygian Anchor:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.57
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.55
     Void Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.62
-    Freya's Tears:
-      total: 0.54
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
+      fit: 0.59
     Spectral Armor:
-      total: 0.55
+      total: 0.53
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.52
-    Amanita Charm:
-      total: 0.8
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.94
+      fit: 0.49
     Erosion:
-      total: 0.6
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.65
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -99,41 +99,41 @@ builds:
     data).
   slot_scores:
     Bancroft's Talon:
-      total: 0.51
+      total: 0.5
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.49
     Genji's Guard:
-      total: 0.47
+      total: 0.46
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.28
+      fit: 0.26
     Kinetic Cuirass:
-      total: 0.52
+      total: 0.51
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.43
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.35
     Erosion:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.53
     Triton's Conch:
-      total: 0.56
+      total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: burst
@@ -164,29 +164,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.52
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.44
     Spear of Desolation:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Rod of Tahuti:
-      total: 0.6
+      total: 0.59
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.33
     Erosion:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.54
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -194,11 +194,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.52
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.57
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -229,35 +229,35 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.57
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.55
     Void Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.61
     Spectral Armor:
-      total: 0.56
+      total: 0.54
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.51
     Amanita Charm:
-      total: 0.82
+      total: 0.8
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.95
     Erosion:
-      total: 0.6
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.65
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -294,35 +294,35 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.58
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Stone of Binding:
-      total: 0.61
+      total: 0.6
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.66
     Void Shield:
-      total: 0.67
+      total: 0.66
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.85
     Void Stone:
-      total: 0.66
+      total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.85
     Rod of Tahuti:
-      total: 0.67
+      total: 0.65
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.44
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -424,35 +424,35 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.4
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.53
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Freya's Tears:
-      total: 0.59
+      total: 0.57
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.53
     Spear of Desolation:
-      total: 0.55
+      total: 0.53
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.49
     Erosion:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.56
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -463,66 +463,66 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Stygian Anchor
   - Kinetic Cuirass
   - Void Shield
-  - Freya's Tears
   - Spectral Armor
-  - Amanita Charm
   - Erosion
+  - Soul Gem
   flex_slots:
-  - Freya's Tears
   - Void Shield
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Stygian Anchor:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.57
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.55
     Void Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.62
-    Freya's Tears:
-      total: 0.54
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
+      fit: 0.59
     Spectral Armor:
-      total: 0.55
+      total: 0.53
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.52
-    Amanita Charm:
-      total: 0.8
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.94
+      fit: 0.49
     Erosion:
-      total: 0.6
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.65
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
 ---

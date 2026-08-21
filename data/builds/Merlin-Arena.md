@@ -32,35 +32,35 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.79
+      total: 0.72
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.87
     Doom Orb:
-      total: 0.66
+      total: 0.61
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.69
     Rod of Tahuti:
-      total: 0.82
+      total: 0.77
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.69
     Obsidian Shard:
-      total: 0.72
+      total: 0.67
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.79
     Dreamer's Idol:
-      total: 0.75
+      total: 0.7
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -99,41 +99,41 @@ builds:
     data).
   slot_scores:
     Bancroft's Talon:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.61
     Death Metal:
-      total: 0.59
+      total: 0.57
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.53
     Spear of Desolation:
-      total: 0.59
+      total: 0.57
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.57
     Doom Orb:
-      total: 0.55
+      total: 0.53
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.53
     Rod of Tahuti:
-      total: 0.71
+      total: 0.69
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.53
     Triton's Conch:
-      total: 0.66
+      total: 0.64
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.83
   starter: *id001
 - source: suggested
   archetype: burst
@@ -164,29 +164,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.68
+      total: 0.65
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.72
     Rod of Tahuti:
-      total: 0.71
+      total: 0.68
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.51
     Obsidian Shard:
-      total: 0.6
+      total: 0.58
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.61
     Dreamer's Idol:
-      total: 0.63
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.71
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -194,24 +194,24 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.59
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
-  - Rod of Asclepius
   - Erosion
   - Stampede
+  - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Kinetic Cuirass
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -228,59 +228,59 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
+    Void Shield:
       total: 0.6
-      efficiency: 0.6
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.73
     Spectral Armor:
-      total: 0.61
+      total: 0.6
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.63
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Rod of Asclepius:
+    Erosion:
+      total: 0.64
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Stampede:
+      total: 0.62
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Soul Gem:
       total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Erosion:
-      total: 0.66
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
-    Stampede:
-      total: 0.63
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Spear of Desolation
-  - The Cosmic Horror
-  - Spear of the Magus
+  - Doom Orb
   - Rod of Tahuti
   - Obsidian Shard
+  - Dreamer's Idol
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
-  - The Cosmic Horror
+  - Obsidian Shard
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -294,35 +294,35 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.79
+      total: 0.74
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    The Cosmic Horror:
-      total: 0.69
+      fit: 0.91
+    Doom Orb:
+      total: 0.65
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.85
-    Spear of the Magus:
-      total: 0.73
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.85
+      fit: 0.77
     Rod of Tahuti:
-      total: 0.85
+      total: 0.81
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.77
     Obsidian Shard:
-      total: 0.75
+      total: 0.71
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.95
+      fit: 0.87
+    Dreamer's Idol:
+      total: 0.74
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.97
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -424,35 +424,35 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.55
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.44
     Breastplate of Valor:
-      total: 0.57
+      total: 0.55
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.44
     Chronos' Pendant:
-      total: 0.59
+      total: 0.56
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.58
     Spear of Desolation:
-      total: 0.71
+      total: 0.68
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.79
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.34
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -489,35 +489,35 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.79
+      total: 0.72
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.87
     Doom Orb:
-      total: 0.66
+      total: 0.61
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.69
     Rod of Tahuti:
-      total: 0.82
+      total: 0.77
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.69
     Obsidian Shard:
-      total: 0.72
+      total: 0.67
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.79
     Dreamer's Idol:
-      total: 0.75
+      total: 0.7
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.89
     Soul Gem:
       total: 0.78
       efficiency: 0.57

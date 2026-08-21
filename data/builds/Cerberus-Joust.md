@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
-  - Freya's Tears
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Freya's Tears
   - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -32,29 +32,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.6
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.7
     Kinetic Cuirass:
-      total: 0.67
+      total: 0.63
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Freya's Tears:
-      total: 0.59
-      efficiency: 0.61
+      fit: 0.66
+    Void Shield:
+      total: 0.56
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.66
     Spectral Armor:
-      total: 0.59
+      total: 0.57
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.56
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -62,11 +62,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.76
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -99,23 +99,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.66
+      total: 0.62
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.64
     Void Shield:
-      total: 0.6
+      total: 0.57
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.68
     Spectral Armor:
-      total: 0.6
+      total: 0.57
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.58
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -123,17 +123,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.66
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.74
     Soul Gem:
-      total: 0.72
+      total: 0.7
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.84
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -145,8 +145,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Erosion
   - Screeching Gargoyle
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.58
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.63
     Stone of Binding:
-      total: 0.63
+      total: 0.62
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.7
     Void Shield:
-      total: 0.68
+      total: 0.67
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.87
     Void Stone:
-      total: 0.67
+      total: 0.66
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.87
     Erosion:
-      total: 0.58
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.61
     Soul Gem:
-      total: 0.78
+      total: 0.77
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.98
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -294,41 +294,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.53
       efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.41
     Breastplate of Valor:
-      total: 0.55
+      total: 0.53
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.41
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.54
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.48
     Freya's Tears:
-      total: 0.6
+      total: 0.58
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.55
     Erosion:
-      total: 0.56
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.58
     Soul Gem:
-      total: 0.77
+      total: 0.75
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 0.94
   starter: *id001
 - source: suggested
   archetype: strength
@@ -340,7 +340,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Toxic Blade
+  - Kinetic Cuirass
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,41 +359,41 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.7
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.56
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.41
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.54
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.48
     Amanita Charm:
-      total: 0.76
+      total: 0.74
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.83
     Erosion:
-      total: 0.56
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.58
     Pharaoh's Curse:
-      total: 0.55
+      total: 0.54
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.53
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -403,17 +403,17 @@ builds:
   - Kinetic Cuirass
   - Amanita Charm
   - Erosion
-  - Triton's Conch
+  - Pharaoh's Curse
   flex_slots:
-  - Triton's Conch
-  - Toxic Blade
+  - Kinetic Cuirass
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -424,54 +424,54 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.67
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.53
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.35
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.53
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Amanita Charm:
-      total: 0.75
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.81
     Erosion:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.59
-    Triton's Conch:
-      total: 0.54
-      efficiency: 0.44
+      fit: 0.56
+    Pharaoh's Curse:
+      total: 0.52
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.49
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
-  - Freya's Tears
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Freya's Tears
   - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -489,29 +489,29 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.6
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.7
     Kinetic Cuirass:
-      total: 0.67
+      total: 0.63
       efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Freya's Tears:
-      total: 0.59
-      efficiency: 0.61
+      fit: 0.66
+    Void Shield:
+      total: 0.56
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.66
     Spectral Armor:
-      total: 0.59
+      total: 0.57
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.56
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -519,10 +519,10 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.76
   starter: *id001
 ---

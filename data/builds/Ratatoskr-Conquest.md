@@ -100,8 +100,8 @@ builds:
   - Jotunn's Revenge
   - The Crusher
   flex_slots:
-  - The Crusher
   - Breastplate of Valor
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -116,48 +116,48 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, The Reaper, Tekko-Kagi, Pendulum Blade, Hydra''s Lament,
-    Avatar''s Parashu, Runeforged Hammer, Genji''s Guard, Lernaean Bow, Shield Splitter,
-    Arondight, Avenging Blade, Transcendence, Tyrfing, Golden Blade, Eye of the Storm,
-    Deathbringer, Damaru, Dominance, Silverbranch Bow, Musashi''s Dual Swords, Berserker''s
-    Shield, Riptalon, Sanguine Lash.'
+    this god: The Crusher, The Reaper, Tekko-Kagi, Genji''s Guard, Hydra''s Lament,
+    Runeforged Hammer, Pendulum Blade, Avatar''s Parashu, Tyrfing, Golden Blade, Lernaean
+    Bow, Shield Splitter, Avenging Blade, Arondight, Silverbranch Bow, Transcendence,
+    Eye of the Storm, Riptalon, Deathbringer, Damaru, Dominance, Berserker''s Shield,
+    Toxic Blade, Musashi''s Dual Swords.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.66
+      total: 0.65
       efficiency: 0.93
       win: 0.55
       pick: 0.24
-      fit: 0.52
+      fit: 0.46
     Briskberry Acorn:
-      total: 0.58
+      total: 0.57
       efficiency: 0.83
       win: 0.43
       pick: 0.32
-      fit: 0.52
+      fit: 0.46
     Thistlethorn Acorn:
-      total: 0.63
+      total: 0.62
       efficiency: 0.86
       win: 0.51
       pick: 0.25
-      fit: 0.61
+      fit: 0.54
     Breastplate of Valor:
       total: 0.55
       efficiency: 0.65
       win: 0.67
       pick: 0.17
-      fit: 0.09
+      fit: 0.08
     Jotunn's Revenge:
-      total: 0.65
+      total: 0.64
       efficiency: 0.72
       win: 0.53
       pick: 0.31
-      fit: 1.0
+      fit: 0.88
     The Crusher:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
       win: 0.47
       pick: 0.0
-      fit: 1.0
+      fit: 0.91
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -188,47 +188,47 @@ builds:
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Genji''s
     Guard, The Crusher, Hydra''s Lament, The Reaper, Runeforged Hammer, Transcendence,
-    Tekko-Kagi, Arondight, Pendulum Blade, Lernaean Bow, Berserker''s Shield, Freya''s
-    Tears, Shield Splitter, Avenging Blade, Dominance, Amanita Charm, Avatar''s Parashu,
-    Tyrfing, Kinetic Cuirass, Golden Blade, Eye of the Storm, Shield of the Phoenix,
-    Deathbringer, Damaru.'
+    Berserker''s Shield, Tekko-Kagi, Arondight, Lernaean Bow, Freya''s Tears, Pendulum
+    Blade, Shield Splitter, Tyrfing, Golden Blade, Amanita Charm, Avenging Blade,
+    Dominance, Kinetic Cuirass, Avatar''s Parashu, Eye of the Storm, Shield of the
+    Phoenix, Silverbranch Bow, Deathbringer.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.63
       efficiency: 0.93
       win: 0.55
       pick: 0.24
-      fit: 0.29
+      fit: 0.27
     Briskberry Acorn:
       total: 0.54
       efficiency: 0.83
       win: 0.43
       pick: 0.32
-      fit: 0.29
+      fit: 0.27
     Thistlethorn Acorn:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.51
       pick: 0.25
-      fit: 0.43
+      fit: 0.41
     Genji's Guard:
-      total: 0.53
+      total: 0.52
       efficiency: 0.66
       win: 0.56
       pick: 0.13
-      fit: 0.24
+      fit: 0.23
     Breastplate of Valor:
-      total: 0.58
+      total: 0.57
       efficiency: 0.65
       win: 0.67
       pick: 0.17
-      fit: 0.24
+      fit: 0.23
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.72
       win: 0.53
       pick: 0.31
-      fit: 0.71
+      fit: 0.68
   starter: *id001
 - source: suggested
   archetype: burst
@@ -257,47 +257,47 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Genji''s Guard, The Crusher, The Reaper, Hydra''s Lament, Pendulum Blade,
-    Tekko-Kagi, Freya''s Tears, Runeforged Hammer, Arondight, Avatar''s Parashu, Berserker''s
-    Shield, Silverbranch Bow, Shield of the Phoenix, Amanita Charm, Lernaean Bow,
-    Riptalon, Screeching Gargoyle, Kinetic Cuirass, Shield Splitter, Avenging Blade,
-    Transcendence, Tyrfing, Golden Blade, Eye of Providence.'
+    Tekko-Kagi, Freya''s Tears, Runeforged Hammer, Silverbranch Bow, Arondight, Berserker''s
+    Shield, Avatar''s Parashu, Riptalon, Shield of the Phoenix, Amanita Charm, Lernaean
+    Bow, Kinetic Cuirass, Screeching Gargoyle, Tyrfing, Shield Splitter, Golden Blade,
+    Avenging Blade, Toxic Blade, Transcendence.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.62
       efficiency: 0.93
       win: 0.55
       pick: 0.24
-      fit: 0.22
+      fit: 0.21
     Briskberry Acorn:
       total: 0.53
       efficiency: 0.83
       win: 0.43
       pick: 0.32
-      fit: 0.22
+      fit: 0.21
     Thistlethorn Acorn:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.51
       pick: 0.25
-      fit: 0.44
+      fit: 0.42
     Genji's Guard:
       total: 0.52
       efficiency: 0.66
       win: 0.56
       pick: 0.13
-      fit: 0.22
+      fit: 0.21
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.65
       win: 0.67
       pick: 0.17
-      fit: 0.22
+      fit: 0.21
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
       win: 0.53
       pick: 0.31
-      fit: 0.78
+      fit: 0.73
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -316,58 +316,58 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, Genji''s Guard, Shield of the Phoenix,
+    this god: Amanita Charm, Genji''s Guard, Kinetic Cuirass, Shield of the Phoenix,
     The Reaper, Berserker''s Shield, Runeforged Hammer, Shield Splitter, Shifter''s
-    Shield, The Crusher, Eye of the Storm, Freya''s Tears, Phoenix Feather, Erosion,
-    Eye of Providence, Draconic Scale, Spectral Armor, Yogi''s Necklace, Mantle Of
-    Discord, Stone of Binding, Chandra''s Grace, Avenging Blade, Leviathan''s Hide,
-    Pharaoh''s Curse, Riptalon.'
+    Shield, The Crusher, Freya''s Tears, Eye of the Storm, Phoenix Feather, Erosion,
+    Eye of Providence, Yogi''s Necklace, Spectral Armor, Riptalon, Draconic Scale,
+    Mantle Of Discord, Stone of Binding, Chandra''s Grace, Golden Blade, Avenging
+    Blade, Leviathan''s Hide.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.65
       efficiency: 0.93
       win: 0.55
       pick: 0.24
-      fit: 0.44
+      fit: 0.42
     Briskberry Acorn:
-      total: 0.57
+      total: 0.56
       efficiency: 0.83
       win: 0.43
       pick: 0.32
-      fit: 0.44
+      fit: 0.42
     Thistlethorn Acorn:
       total: 0.61
       efficiency: 0.86
       win: 0.51
       pick: 0.25
-      fit: 0.48
+      fit: 0.46
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.65
       win: 0.67
       pick: 0.17
-      fit: 0.21
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
       win: 0.53
       pick: 0.31
-      fit: 0.44
+      fit: 0.42
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
       win: 0.47
       pick: 0.0
-      fit: 0.86
+      fit: 0.83
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -379,8 +379,8 @@ builds:
   - Jotunn's Revenge
   - The Crusher
   flex_slots:
-  - Briskberry Acorn
   - Breastplate of Valor
+  - Briskberry Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -396,47 +396,47 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, The Reaper, Tekko-Kagi, Avatar''s Parashu, Pendulum
-    Blade, Genji''s Guard, Avenging Blade, Silverbranch Bow, Riptalon, Hydra''s Lament,
-    Runeforged Hammer, Toxic Blade, Stone of Binding, Screeching Gargoyle, Lernaean
-    Bow, Shield Splitter, Berserker''s Shield, Oath-Sworn Spear, Transcendence, Tyrfing,
-    Arondight, Golden Blade, Eye of the Storm, Amanita Charm.'
+    Blade, Genji''s Guard, Silverbranch Bow, Avenging Blade, Riptalon, Toxic Blade,
+    Hydra''s Lament, Runeforged Hammer, Stone of Binding, Screeching Gargoyle, Lernaean
+    Bow, Tyrfing, Golden Blade, Berserker''s Shield, Shield Splitter, Oath-Sworn Spear,
+    Transcendence, Amanita Charm, Arondight, Eye of the Storm.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.63
       efficiency: 0.93
       win: 0.55
       pick: 0.24
-      fit: 0.33
+      fit: 0.3
     Briskberry Acorn:
-      total: 0.55
+      total: 0.54
       efficiency: 0.83
       win: 0.43
       pick: 0.32
-      fit: 0.33
+      fit: 0.3
     Thistlethorn Acorn:
-      total: 0.6
+      total: 0.59
       efficiency: 0.86
       win: 0.51
       pick: 0.25
-      fit: 0.38
+      fit: 0.35
     Breastplate of Valor:
       total: 0.55
       efficiency: 0.65
       win: 0.67
       pick: 0.17
-      fit: 0.06
+      fit: 0.05
     Jotunn's Revenge:
-      total: 0.65
+      total: 0.64
       efficiency: 0.72
       win: 0.53
       pick: 0.31
-      fit: 1.0
+      fit: 0.92
     The Crusher:
       total: 0.56
       efficiency: 0.57
       win: 0.47
       pick: 0.0
-      fit: 1.0
+      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -534,48 +534,48 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Hydra''s Lament, Freya''s
-    Tears, Pendulum Blade, Shield of the Phoenix, Arondight, Screeching Gargoyle,
-    The Crusher, Chandra''s Grace, The Reaper, Eye of Erebus, Berserker''s Shield,
-    Runeforged Hammer, Prophetic Cloak, Amanita Charm, Gladiator''s Shield, Kinetic
-    Cuirass, Tekko-Kagi, Lernaean Bow, Eye of Providence, Shield Splitter, Silverbranch
-    Bow, Avatar''s Parashu, Avenging Blade.'
+    Tears, Shield of the Phoenix, Pendulum Blade, Arondight, The Crusher, Screeching
+    Gargoyle, Chandra''s Grace, The Reaper, Berserker''s Shield, Eye of Erebus, Runeforged
+    Hammer, Amanita Charm, Kinetic Cuirass, Prophetic Cloak, Gladiator''s Shield,
+    Silverbranch Bow, Tekko-Kagi, Lernaean Bow, Riptalon, Eye of Providence, Tyrfing,
+    Shield Splitter.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.61
       efficiency: 0.93
       win: 0.55
       pick: 0.24
-      fit: 0.15
+      fit: 0.14
     Briskberry Acorn:
       total: 0.52
       efficiency: 0.83
       win: 0.43
       pick: 0.32
-      fit: 0.15
+      fit: 0.14
     Thistlethorn Acorn:
-      total: 0.64
+      total: 0.63
       efficiency: 0.86
       win: 0.51
       pick: 0.25
-      fit: 0.65
+      fit: 0.61
     Genji's Guard:
       total: 0.56
       efficiency: 0.66
       win: 0.56
       pick: 0.13
-      fit: 0.5
+      fit: 0.47
     Breastplate of Valor:
       total: 0.61
       efficiency: 0.65
       win: 0.67
       pick: 0.17
-      fit: 0.5
+      fit: 0.47
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.72
       win: 0.53
       pick: 0.31
-      fit: 0.85
+      fit: 0.8
   starter: *id001
 - source: suggested
   archetype: model
@@ -585,10 +585,10 @@ builds:
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - The Crusher
-  - Titan's Bane
+  - Heartseeker
   flex_slots:
   - The Crusher
-  - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -603,47 +603,47 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: The Crusher, The Reaper, Tekko-Kagi, Pendulum Blade,
-    Hydra''s Lament, Avatar''s Parashu, Runeforged Hammer, Lernaean Bow, Shield Splitter,
-    Arondight, Avenging Blade, Transcendence, Tyrfing, Golden Blade, Eye of the Storm,
-    Deathbringer, Damaru, Dominance, Genji''s Guard, Silverbranch Bow, Musashi''s
-    Dual Swords, Berserker''s Shield, Riptalon, Sanguine Lash.'
+    Underrated for this god: The Crusher, The Reaper, Tekko-Kagi, Hydra''s Lament,
+    Runeforged Hammer, Pendulum Blade, Avatar''s Parashu, Tyrfing, Golden Blade, Lernaean
+    Bow, Shield Splitter, Avenging Blade, Arondight, Silverbranch Bow, Transcendence,
+    Eye of the Storm, Riptalon, Deathbringer, Damaru, Genji''s Guard, Dominance, Berserker''s
+    Shield, Toxic Blade, Musashi''s Dual Swords.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.66
+      total: 0.65
       efficiency: 0.93
       win: 0.55
       pick: 0.24
-      fit: 0.52
+      fit: 0.46
     Briskberry Acorn:
-      total: 0.58
+      total: 0.57
       efficiency: 0.83
       win: 0.43
       pick: 0.32
-      fit: 0.52
+      fit: 0.46
     Thistlethorn Acorn:
-      total: 0.63
+      total: 0.62
       efficiency: 0.86
       win: 0.51
       pick: 0.25
-      fit: 0.61
+      fit: 0.54
     Jotunn's Revenge:
-      total: 0.65
+      total: 0.64
       efficiency: 0.72
       win: 0.53
       pick: 0.31
-      fit: 1.0
+      fit: 0.88
     The Crusher:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
       win: 0.47
       pick: 0.0
-      fit: 1.0
-    Titan's Bane:
-      total: 0.47
+      fit: 0.91
+    Heartseeker:
+      total: 0.52
       efficiency: 0.47
-      win: 0.32
-      pick: 0.22
+      win: 0.43
+      pick: 0.23
       fit: 1.0
   starter: *id001
 ---
