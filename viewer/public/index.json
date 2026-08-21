@@ -34360,41 +34360,6 @@
     },
     {
       "type": "smite-item",
-      "name": "Shield Splitter",
-      "tier": 3,
-      "cost": 2400,
-      "stats": {
-        "Strength": "40",
-        "Physical Protection": "15",
-        "Magical Protection": "15"
-      },
-      "passive": "On Use: Fire a projectile 11.2m forward. +40 (+5 per Level) True Damage If an enemy is Shielded: -70% Shield You gain a Shield equal to the amount of Shield reduced Cooldown: 15s You can own up to 3 active items at once",
-      "builds_from": [
-        "Skeggox",
-        "Engraved Guard"
-      ],
-      "builds_into": [],
-      "source_url": "https://wiki.smite2.com/w/Shield_Splitter",
-      "last_verified": "2026-08-01",
-      "effect_tags": [
-        "anti-shield",
-        "active"
-      ],
-      "efficiency_tier": "fair",
-      "efficiency": {
-        "predicted_cost": 2382,
-        "residual": 18,
-        "score": 0.5175,
-        "comparable": true
-      },
-      "meta": {
-        "win_avg": 0.513,
-        "matches": 39,
-        "matches_won": 20
-      }
-    },
-    {
-      "type": "smite-item",
       "name": "Shield of the Phoenix",
       "tier": 3,
       "cost": 2400,
@@ -34426,6 +34391,41 @@
         "win_avg": 0.562,
         "matches": 1780,
         "matches_won": 1000
+      }
+    },
+    {
+      "type": "smite-item",
+      "name": "Shield Splitter",
+      "tier": 3,
+      "cost": 2400,
+      "stats": {
+        "Strength": "40",
+        "Physical Protection": "15",
+        "Magical Protection": "15"
+      },
+      "passive": "On Use: Fire a projectile 11.2m forward. +40 (+5 per Level) True Damage If an enemy is Shielded: -70% Shield You gain a Shield equal to the amount of Shield reduced Cooldown: 15s You can own up to 3 active items at once",
+      "builds_from": [
+        "Skeggox",
+        "Engraved Guard"
+      ],
+      "builds_into": [],
+      "source_url": "https://wiki.smite2.com/w/Shield_Splitter",
+      "last_verified": "2026-08-01",
+      "effect_tags": [
+        "anti-shield",
+        "active"
+      ],
+      "efficiency_tier": "fair",
+      "efficiency": {
+        "predicted_cost": 2382,
+        "residual": 18,
+        "score": 0.5175,
+        "comparable": true
+      },
+      "meta": {
+        "win_avg": 0.513,
+        "matches": 39,
+        "matches_won": 20
       }
     },
     {
@@ -38691,13 +38691,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -38744,9 +38744,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -44149,13 +44149,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -44202,9 +44202,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -47626,11 +47626,11 @@
             "The Crusher",
             "Rod of Tahuti",
             "Obsidian Shard",
-            "Titan's Bane"
+            "Soul Gem"
           ],
           "flex_slots": [
             "Spear of Desolation",
-            "Titan's Bane"
+            "Soul Gem"
           ],
           "situational_swaps": [
             {
@@ -47691,12 +47691,12 @@
               "pick": 0.58,
               "fit": 0.52
             },
-            "Titan's Bane": {
+            "Soul Gem": {
               "total": 0.54,
-              "efficiency": 0.45,
-              "win": 0.57,
-              "pick": 0.22,
-              "fit": 0.79
+              "efficiency": 0.57,
+              "win": 0.52,
+              "pick": 0.0,
+              "fit": 0.72
             }
           },
           "starter": {
@@ -54179,13 +54179,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -54232,9 +54232,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -90589,7 +90589,7 @@
               "efficiency": 0.69,
               "win": 0.6,
               "pick": 0.0,
-              "fit": 0.12
+              "fit": 0.13
             },
             "Jotunn's Revenge": {
               "total": 0.56,
@@ -118693,13 +118693,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -118746,9 +118746,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -121748,7 +121748,7 @@
               "efficiency": 0.42,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.63
             },
             "Rod of Tahuti": {
               "total": 0.54,
@@ -122832,7 +122832,7 @@
               "efficiency": 0.42,
               "win": 0.6,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.63
             },
             "Spear of Desolation": {
               "total": 0.53,
@@ -123716,7 +123716,7 @@
               "efficiency": 0.42,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.63
             },
             "Rod of Tahuti": {
               "total": 0.54,
@@ -129212,14 +129212,14 @@
               "efficiency": 0.55,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.67
+              "fit": 0.68
             },
             "Shogun's Ofuda": {
               "total": 0.59,
               "efficiency": 0.51,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.67
+              "fit": 0.68
             }
           },
           "starter": {
@@ -136640,16 +136640,16 @@
           "source": "suggested",
           "archetype": "anti-tank",
           "slot_order": [
+            "Genji's Guard",
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "Spear of Desolation",
-            "Spear of the Magus"
+            "Genji's Guard"
           ],
           "situational_swaps": [
             {
@@ -136659,13 +136659,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Genji's Guard \u2014 magical protection",
-              "swap_item": "Genji's Guard"
+              "swap": "Freya's Tears \u2014 magical protection",
+              "swap_item": "Freya's Tears"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Freya's Tears \u2014 physical protection",
-              "swap_item": "Freya's Tears"
+              "swap": "Kinetic Cuirass \u2014 physical protection",
+              "swap_item": "Kinetic Cuirass"
             },
             {
               "vs_tag": "sustain",
@@ -136675,6 +136675,13 @@
           ],
           "rationale": "Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Soul Gem, Obsidian Shard, The Cosmic Horror, Spear of Desolation, Spear of the Magus, Genji's Guard, Kinetic Cuirass, Nimble Ring, Amanita Charm, Screeching Gargoyle, Void Shield, Stone of Binding, Breastplate of Valor, Doom Orb, Oni Hunter's Garb, Shield of the Phoenix, Void Stone, Ethereal Staff, Rod of Asclepius, Helm of Radiance, Spectral Armor, Chronos' Pendant, Jade Scepter, Erosion.",
           "slot_scores": {
+            "Genji's Guard": {
+              "total": 0.57,
+              "efficiency": 0.69,
+              "win": 0.67,
+              "pick": 0.0,
+              "fit": 0.19
+            },
             "Gluttonous Grimoire": {
               "total": 0.64,
               "efficiency": 0.63,
@@ -136692,13 +136699,6 @@
             "The Cosmic Horror": {
               "total": 0.59,
               "efficiency": 0.58,
-              "win": 0.67,
-              "pick": 0.0,
-              "fit": 0.58
-            },
-            "Spear of the Magus": {
-              "total": 0.59,
-              "efficiency": 0.57,
               "win": 0.67,
               "pick": 0.0,
               "fit": 0.58
@@ -138535,7 +138535,7 @@
               "efficiency": 0.42,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.63
             },
             "Rod of Tahuti": {
               "total": 0.54,
@@ -139292,13 +139292,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "The World Stone",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "The World Stone"
           ],
           "situational_swaps": [
             {
@@ -139345,11 +139345,11 @@
               "pick": 0.0,
               "fit": 0.84
             },
-            "Spear of the Magus": {
-              "total": 0.6,
-              "efficiency": 0.57,
-              "win": 0.6,
-              "pick": 0.0,
+            "The World Stone": {
+              "total": 0.57,
+              "efficiency": 0.46,
+              "win": 0.61,
+              "pick": 0.25,
               "fit": 0.84
             },
             "Rod of Tahuti": {
@@ -139430,7 +139430,7 @@
               "efficiency": 0.42,
               "win": 0.6,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.63
             },
             "Gluttonous Grimoire": {
               "total": 0.57,
@@ -140140,7 +140140,7 @@
               "efficiency": 0.42,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.63
             },
             "Rod of Tahuti": {
               "total": 0.54,
@@ -160216,13 +160216,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -160269,9 +160269,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -168054,13 +168054,13 @@
             "Jotunn's Revenge",
             "Gluttonous Grimoire",
             "Silverbranch Bow",
+            "Tekko-Kagi",
             "The Crusher",
-            "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
-            "Rod of Tahuti",
-            "Obsidian Shard"
+            "Obsidian Shard",
+            "Tekko-Kagi"
           ],
           "situational_swaps": [
             {
@@ -168107,19 +168107,19 @@
               "pick": 0.4,
               "fit": 0.57
             },
+            "Tekko-Kagi": {
+              "total": 0.52,
+              "efficiency": 0.44,
+              "win": 0.56,
+              "pick": 0.0,
+              "fit": 0.76
+            },
             "The Crusher": {
               "total": 0.58,
               "efficiency": 0.64,
               "win": 0.56,
               "pick": 0.0,
               "fit": 0.67
-            },
-            "Rod of Tahuti": {
-              "total": 0.55,
-              "efficiency": 0.77,
-              "win": 0.46,
-              "pick": 0.17,
-              "fit": 0.43
             },
             "Obsidian Shard": {
               "total": 0.54,
@@ -171863,13 +171863,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -171916,9 +171916,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -172407,16 +172407,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Nimble Ring",
+            "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Totem of Death",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
-            "Spear of the Magus",
-            "Nimble Ring"
+            "The Cosmic Horror",
+            "Totem of Death"
           ],
           "situational_swaps": [
             {
@@ -172442,12 +172442,12 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Soul Gem, Spear of the Magus, Nimble Ring, Totem of Death, Doom Orb, The World Stone, Genji's Guard, Dreamer's Idol, Gem of Focus, Death Metal, Helm of Radiance, Ethereal Staff, Blood-Bound Book, Rod of Asclepius, Breastplate of Valor, Bancroft's Talon, Jade Scepter, Bracer of The Abyss, Alchemist Coat, Freya's Tears, Soul Reaver, Chronos' Pendant.",
           "slot_scores": {
-            "Nimble Ring": {
-              "total": 0.57,
-              "efficiency": 0.68,
+            "Gluttonous Grimoire": {
+              "total": 0.62,
+              "efficiency": 0.63,
               "win": 0.59,
               "pick": 0.0,
-              "fit": 0.42
+              "fit": 0.89
             },
             "Spear of Desolation": {
               "total": 0.61,
@@ -172463,12 +172463,12 @@
               "pick": 0.2,
               "fit": 0.79
             },
-            "Spear of the Magus": {
-              "total": 0.59,
-              "efficiency": 0.57,
-              "win": 0.59,
-              "pick": 0.0,
-              "fit": 0.79
+            "Totem of Death": {
+              "total": 0.57,
+              "efficiency": 0.47,
+              "win": 0.63,
+              "pick": 0.13,
+              "fit": 0.73
             },
             "Rod of Tahuti": {
               "total": 0.67,
@@ -181865,13 +181865,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -181918,9 +181918,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -186989,13 +186989,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -187042,9 +187042,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -200488,13 +200488,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -200541,9 +200541,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -211732,13 +211732,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -211785,9 +211785,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -217506,7 +217506,7 @@
               "efficiency": 0.42,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.63
             },
             "Rod of Tahuti": {
               "total": 0.53,
@@ -219100,7 +219100,7 @@
               "efficiency": 0.42,
               "win": 0.55,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.63
             },
             "Spear of Desolation": {
               "total": 0.51,
@@ -220514,7 +220514,7 @@
               "efficiency": 0.42,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.63
             },
             "Rod of Tahuti": {
               "total": 0.53,
@@ -226644,13 +226644,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -226697,9 +226697,9 @@
               "pick": 0.0,
               "fit": 0.85
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
@@ -242239,13 +242239,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "Doom Orb",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "Doom Orb"
           ],
           "situational_swaps": [
             {
@@ -242292,9 +242292,9 @@
               "pick": 0.0,
               "fit": 0.86
             },
-            "Spear of the Magus": {
-              "total": 0.71,
-              "efficiency": 0.57,
+            "Doom Orb": {
+              "total": 0.66,
+              "efficiency": 0.46,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.86
@@ -242776,13 +242776,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "The World Stone",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "The Cosmic Horror",
-            "Spear of the Magus"
+            "The World Stone"
           ],
           "situational_swaps": [
             {
@@ -242829,11 +242829,11 @@
               "pick": 0.0,
               "fit": 0.8
             },
-            "Spear of the Magus": {
+            "The World Stone": {
               "total": 0.53,
-              "efficiency": 0.57,
-              "win": 0.47,
-              "pick": 0.0,
+              "efficiency": 0.46,
+              "win": 0.49,
+              "pick": 0.52,
               "fit": 0.8
             },
             "Rod of Tahuti": {
@@ -243124,13 +243124,13 @@
             "Gluttonous Grimoire",
             "Spear of Desolation",
             "The Cosmic Horror",
-            "Spear of the Magus",
+            "The World Stone",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "Spear of Desolation",
-            "Spear of the Magus"
+            "The World Stone"
           ],
           "situational_swaps": [
             {
@@ -243177,11 +243177,11 @@
               "pick": 0.0,
               "fit": 0.86
             },
-            "Spear of the Magus": {
+            "The World Stone": {
               "total": 0.54,
-              "efficiency": 0.57,
-              "win": 0.47,
-              "pick": 0.0,
+              "efficiency": 0.46,
+              "win": 0.49,
+              "pick": 0.52,
               "fit": 0.86
             },
             "Rod of Tahuti": {
@@ -294911,7 +294911,7 @@
         "score": 0.627676890545152,
         "win_rate": 0.75,
         "matches": 60,
-        "value": 0.42835275296005226,
+        "value": 0.42835275296005215,
         "tier_score": "S"
       },
       {
@@ -294921,7 +294921,7 @@
         "score": 0.6075624079669637,
         "win_rate": 0.622,
         "matches": 4607,
-        "value": 0.29135895237403603,
+        "value": 0.29135895237403614,
         "tier_score": "S"
       },
       {
@@ -294931,7 +294931,7 @@
         "score": 0.5944713611943473,
         "win_rate": 0.608,
         "matches": 4996,
-        "value": 0.3423734030795642,
+        "value": 0.34237340307956404,
         "tier_score": "S"
       },
       {
@@ -294951,7 +294951,7 @@
         "score": 0.5906332568425112,
         "win_rate": 0.601,
         "matches": 8117,
-        "value": 0.38625629791210986,
+        "value": 0.38625629791210975,
         "tier_score": "S"
       },
       {
@@ -294961,7 +294961,7 @@
         "score": 0.5894676284425309,
         "win_rate": 0.628,
         "matches": 634,
-        "value": 0.48237867057776895,
+        "value": 0.482378670577769,
         "tier_score": "S"
       },
       {
@@ -294971,7 +294971,7 @@
         "score": 0.5879182756128016,
         "win_rate": 0.618,
         "matches": 1059,
-        "value": 0.3843277393061704,
+        "value": 0.3843277393061707,
         "tier_score": "S"
       },
       {
@@ -294981,7 +294981,7 @@
         "score": 0.5732332179284764,
         "win_rate": 0.641,
         "matches": 206,
-        "value": 0.43490890139733424,
+        "value": 0.4349089013973343,
         "tier_score": "S"
       },
       {
@@ -294991,7 +294991,7 @@
         "score": 0.5727436304577318,
         "win_rate": 0.591,
         "matches": 2953,
-        "value": 0.8584389783476634,
+        "value": 0.8584389783476635,
         "tier_score": "S"
       },
       {
@@ -295001,7 +295001,7 @@
         "score": 0.5725792430193152,
         "win_rate": 0.601,
         "matches": 1146,
-        "value": 0.5279033126984808,
+        "value": 0.527903312698481,
         "tier_score": "S"
       },
       {
@@ -295011,7 +295011,7 @@
         "score": 0.5720109878144057,
         "win_rate": 0.583,
         "matches": 7351,
-        "value": 0.5398801889894367,
+        "value": 0.5398801889894369,
         "tier_score": "S"
       },
       {
@@ -295031,7 +295031,7 @@
         "score": 0.5692900395049582,
         "win_rate": 0.625,
         "matches": 299,
-        "value": 0.4466524578760417,
+        "value": 0.44665245787604174,
         "tier_score": "S"
       },
       {
@@ -295041,7 +295041,7 @@
         "score": 0.5682079449229971,
         "win_rate": 0.585,
         "matches": 3439,
-        "value": 0.3195942975932886,
+        "value": 0.31959429759328867,
         "tier_score": "S"
       },
       {
@@ -295051,7 +295051,7 @@
         "score": 0.5656482516553425,
         "win_rate": 0.575,
         "matches": 9750,
-        "value": 0.4381787376586681,
+        "value": 0.4381787376586678,
         "tier_score": "S"
       },
       {
@@ -295061,7 +295061,7 @@
         "score": 0.5644681838865596,
         "win_rate": 0.584,
         "matches": 2483,
-        "value": 0.3061865642372383,
+        "value": 0.3061865642372382,
         "tier_score": "S"
       },
       {
@@ -295071,7 +295071,7 @@
         "score": 0.5644229771795292,
         "win_rate": 0.619,
         "matches": 320,
-        "value": 0.3510489484666438,
+        "value": 0.3510489484666437,
         "tier_score": "S"
       },
       {
@@ -295081,7 +295081,7 @@
         "score": 0.5643749130312062,
         "win_rate": 0.577,
         "matches": 5738,
-        "value": 0.5576035928115833,
+        "value": 0.5576035928115838,
         "tier_score": "S"
       },
       {
@@ -295101,7 +295101,7 @@
         "score": 0.5597432779446877,
         "win_rate": 0.574,
         "matches": 4715,
-        "value": 0.26557207315166365,
+        "value": 0.2655720731516638,
         "tier_score": "S"
       },
       {
@@ -295111,7 +295111,7 @@
         "score": 0.5590618311766973,
         "win_rate": 0.57,
         "matches": 7829,
-        "value": 0.40713291505016025,
+        "value": 0.40713291505016036,
         "tier_score": "S"
       },
       {
@@ -295131,7 +295131,7 @@
         "score": 0.5580695429024831,
         "win_rate": 0.572,
         "matches": 5005,
-        "value": 0.5882216994369404,
+        "value": 0.5882216994369408,
         "tier_score": "A"
       },
       {
@@ -295141,7 +295141,7 @@
         "score": 0.5579829293329567,
         "win_rate": 0.572,
         "matches": 4873,
-        "value": 0.5881594107311736,
+        "value": 0.5881594107311737,
         "tier_score": "A"
       },
       {
@@ -295151,7 +295151,7 @@
         "score": 0.5537593120358879,
         "win_rate": 0.624,
         "matches": 194,
-        "value": 0.5232525663196745,
+        "value": 0.5232525663196743,
         "tier_score": "A"
       },
       {
@@ -295171,7 +295171,7 @@
         "score": 0.5533951638301595,
         "win_rate": 0.607,
         "matches": 326,
-        "value": 0.4937617075296594,
+        "value": 0.49376170752965937,
         "tier_score": "A"
       },
       {
@@ -295181,7 +295181,7 @@
         "score": 0.5513389576101263,
         "win_rate": 0.563,
         "matches": 6460,
-        "value": 0.44817628860647546,
+        "value": 0.44817628860647557,
         "tier_score": "A"
       },
       {
@@ -295201,7 +295201,7 @@
         "score": 0.5502294095056117,
         "win_rate": 0.562,
         "matches": 6365,
-        "value": 0.5413655630141447,
+        "value": 0.5413655630141452,
         "tier_score": "A"
       },
       {
@@ -295221,7 +295221,7 @@
         "score": 0.5496110123874567,
         "win_rate": 0.575,
         "matches": 1489,
-        "value": 0.5906391137549722,
+        "value": 0.5906391137549724,
         "tier_score": "A"
       },
       {
@@ -295231,7 +295231,7 @@
         "score": 0.5492452477235924,
         "win_rate": 0.568,
         "matches": 2570,
-        "value": 0.417094977679103,
+        "value": 0.41709497767910286,
         "tier_score": "A"
       },
       {
@@ -295241,7 +295241,7 @@
         "score": 0.5485489791021828,
         "win_rate": 0.564,
         "matches": 4189,
-        "value": 0.5171883683370072,
+        "value": 0.5171883683370074,
         "tier_score": "A"
       },
       {
@@ -295251,7 +295251,7 @@
         "score": 0.5476723947906886,
         "win_rate": 0.569,
         "matches": 2086,
-        "value": 0.3625545682635717,
+        "value": 0.36255456826357163,
         "tier_score": "A"
       },
       {
@@ -295261,7 +295261,7 @@
         "score": 0.5460379673252933,
         "win_rate": 0.588,
         "matches": 532,
-        "value": 0.3932902504667953,
+        "value": 0.3932902504667955,
         "tier_score": "A"
       },
       {
@@ -295271,7 +295271,7 @@
         "score": 0.5459991949957902,
         "win_rate": 0.562,
         "matches": 3838,
-        "value": 0.45042181188132857,
+        "value": 0.45042181188132896,
         "tier_score": "A"
       },
       {
@@ -295281,7 +295281,7 @@
         "score": 0.5458022861688699,
         "win_rate": 0.598,
         "matches": 346,
-        "value": 0.5175114707814241,
+        "value": 0.5175114707814242,
         "tier_score": "A"
       },
       {
@@ -295291,7 +295291,7 @@
         "score": 0.5438812298100528,
         "win_rate": 0.555,
         "matches": 8236,
-        "value": 0.45838195778420426,
+        "value": 0.4583819577842043,
         "tier_score": "A"
       },
       {
@@ -295311,7 +295311,7 @@
         "score": 0.5437198121775311,
         "win_rate": 0.562,
         "matches": 2742,
-        "value": 0.6316349872066335,
+        "value": 0.6316349872066337,
         "tier_score": "A"
       },
       {
@@ -295321,7 +295321,7 @@
         "score": 0.5429971883613661,
         "win_rate": 0.562,
         "matches": 2570,
-        "value": 0.410219790246881,
+        "value": 0.41021979024688104,
         "tier_score": "A"
       },
       {
@@ -295331,7 +295331,7 @@
         "score": 0.5418944286372392,
         "win_rate": 0.68,
         "matches": 50,
-        "value": 0.4242841394125821,
+        "value": 0.42428413941258214,
         "tier_score": "A"
       },
       {
@@ -295341,7 +295341,7 @@
         "score": 0.5404984328501082,
         "win_rate": 0.56,
         "matches": 2578,
-        "value": 0.496379194818504,
+        "value": 0.4963791948185041,
         "tier_score": "A"
       },
       {
@@ -295351,7 +295351,7 @@
         "score": 0.5392067669107327,
         "win_rate": 0.57,
         "matches": 989,
-        "value": 0.36482192342656017,
+        "value": 0.3648219234265603,
         "tier_score": "A"
       },
       {
@@ -295361,7 +295361,7 @@
         "score": 0.5386389871310455,
         "win_rate": 0.562,
         "matches": 1780,
-        "value": 0.5668623655159903,
+        "value": 0.5668623655159902,
         "tier_score": "A"
       },
       {
@@ -295371,7 +295371,7 @@
         "score": 0.5383105034844307,
         "win_rate": 0.554,
         "matches": 3934,
-        "value": 0.4464746486086973,
+        "value": 0.44647464860869734,
         "tier_score": "A"
       },
       {
@@ -295381,7 +295381,7 @@
         "score": 0.537458511990388,
         "win_rate": 0.557,
         "matches": 2521,
-        "value": 0.5250313241459214,
+        "value": 0.5250313241459209,
         "tier_score": "A"
       },
       {
@@ -295391,7 +295391,7 @@
         "score": 0.537219706844916,
         "win_rate": 0.589,
         "matches": 353,
-        "value": 0.2541723577327434,
+        "value": 0.2541723577327433,
         "tier_score": "A"
       },
       {
@@ -295401,7 +295401,7 @@
         "score": 0.5365062301533012,
         "win_rate": 0.549,
         "matches": 6275,
-        "value": 0.6606519194215593,
+        "value": 0.6606519194215595,
         "tier_score": "A"
       },
       {
@@ -295411,7 +295411,7 @@
         "score": 0.5359110688502293,
         "win_rate": 0.545,
         "matches": 11036,
-        "value": 0.7081031855037712,
+        "value": 0.7081031855037714,
         "tier_score": "A"
       },
       {
@@ -295421,7 +295421,7 @@
         "score": 0.5359089117841311,
         "win_rate": 0.551,
         "matches": 4450,
-        "value": 0.49289910851377994,
+        "value": 0.49289910851378005,
         "tier_score": "A"
       },
       {
@@ -295431,7 +295431,7 @@
         "score": 0.5356318008836605,
         "win_rate": 0.566,
         "matches": 1068,
-        "value": 0.38697200355434297,
+        "value": 0.3869720035543428,
         "tier_score": "A"
       },
       {
@@ -295441,7 +295441,7 @@
         "score": 0.5344243489640382,
         "win_rate": 0.55,
         "matches": 3940,
-        "value": 0.4172028951373356,
+        "value": 0.41720289513733566,
         "tier_score": "A"
       },
       {
@@ -295451,7 +295451,7 @@
         "score": 0.5341783173855387,
         "win_rate": 0.552,
         "matches": 2998,
-        "value": 0.5932697436610296,
+        "value": 0.5932697436610295,
         "tier_score": "A"
       },
       {
@@ -295461,7 +295461,7 @@
         "score": 0.5339242339185283,
         "win_rate": 0.557,
         "matches": 1810,
-        "value": 0.3537123826117097,
+        "value": 0.3537123826117098,
         "tier_score": "A"
       },
       {
@@ -295471,7 +295471,7 @@
         "score": 0.5334222422974781,
         "win_rate": 0.553,
         "matches": 2455,
-        "value": 0.48109263050867335,
+        "value": 0.48109263050867324,
         "tier_score": "A"
       },
       {
@@ -295481,7 +295481,7 @@
         "score": 0.5328816091082943,
         "win_rate": 0.545,
         "matches": 6794,
-        "value": 0.5806090220187823,
+        "value": 0.5806090220187822,
         "tier_score": "A"
       },
       {
@@ -295491,7 +295491,7 @@
         "score": 0.5328181670174403,
         "win_rate": 0.555,
         "matches": 2003,
-        "value": 0.336734438374487,
+        "value": 0.33673443837448713,
         "tier_score": "A"
       },
       {
@@ -295501,7 +295501,7 @@
         "score": 0.5326515425855324,
         "win_rate": 0.543,
         "matches": 8350,
-        "value": 0.6584167104294756,
+        "value": 0.6584167104294758,
         "tier_score": "A"
       },
       {
@@ -295511,7 +295511,7 @@
         "score": 0.5325617490189145,
         "win_rate": 0.555,
         "matches": 1923,
-        "value": 0.34289853639625256,
+        "value": 0.34289853639625234,
         "tier_score": "A"
       },
       {
@@ -295521,7 +295521,7 @@
         "score": 0.5319011763756946,
         "win_rate": 0.604,
         "matches": 182,
-        "value": 0.8980263630907668,
+        "value": 0.8980263630907673,
         "tier_score": "A"
       },
       {
@@ -295531,7 +295531,7 @@
         "score": 0.5310876253145177,
         "win_rate": 0.551,
         "matches": 2375,
-        "value": 0.2782404200179374,
+        "value": 0.278240420017938,
         "tier_score": "B"
       },
       {
@@ -295541,7 +295541,7 @@
         "score": 0.5302739958520112,
         "win_rate": 0.572,
         "matches": 558,
-        "value": 0.39459200637539343,
+        "value": 0.39459200637539366,
         "tier_score": "B"
       },
       {
@@ -295551,7 +295551,7 @@
         "score": 0.5299662415525638,
         "win_rate": 0.542,
         "matches": 6482,
-        "value": 0.48678291467036533,
+        "value": 0.4867829146703654,
         "tier_score": "B"
       },
       {
@@ -295561,7 +295561,7 @@
         "score": 0.5294576334237145,
         "win_rate": 0.544,
         "matches": 4332,
-        "value": 0.5055336048090181,
+        "value": 0.505533604809018,
         "tier_score": "B"
       },
       {
@@ -295571,7 +295571,7 @@
         "score": 0.5294380516788747,
         "win_rate": 0.576,
         "matches": 450,
-        "value": 0.5462849757147163,
+        "value": 0.5462849757147161,
         "tier_score": "B"
       },
       {
@@ -295581,7 +295581,7 @@
         "score": 0.5292861460375375,
         "win_rate": 0.545,
         "matches": 4013,
-        "value": 0.4835691356251085,
+        "value": 0.4835691356251084,
         "tier_score": "B"
       },
       {
@@ -295591,7 +295591,7 @@
         "score": 0.5291966667004471,
         "win_rate": 0.574,
         "matches": 481,
-        "value": 0.49680354805368643,
+        "value": 0.4968035480536863,
         "tier_score": "B"
       },
       {
@@ -295601,7 +295601,7 @@
         "score": 0.5285760418547213,
         "win_rate": 0.57,
         "matches": 567,
-        "value": 0.4338626828292211,
+        "value": 0.43386268282922097,
         "tier_score": "B"
       },
       {
@@ -295611,7 +295611,7 @@
         "score": 0.5282586042103156,
         "win_rate": 0.537,
         "matches": 13233,
-        "value": 0.5193099396486984,
+        "value": 0.5193099396486983,
         "tier_score": "B"
       },
       {
@@ -295621,7 +295621,7 @@
         "score": 0.5280925566117357,
         "win_rate": 0.547,
         "matches": 2775,
-        "value": 0.42727245213654724,
+        "value": 0.4272724521365475,
         "tier_score": "B"
       },
       {
@@ -295631,7 +295631,7 @@
         "score": 0.5274922448020886,
         "win_rate": 0.558,
         "matches": 1060,
-        "value": 0.5237259109513462,
+        "value": 0.5237259109513464,
         "tier_score": "B"
       },
       {
@@ -295651,7 +295651,7 @@
         "score": 0.5273225154890899,
         "win_rate": 0.542,
         "matches": 4613,
-        "value": 0.5837565733170245,
+        "value": 0.5837565733170249,
         "tier_score": "B"
       },
       {
@@ -295661,7 +295661,7 @@
         "score": 0.5272737374079495,
         "win_rate": 0.587,
         "matches": 271,
-        "value": 0.3813668356033108,
+        "value": 0.3813668356033106,
         "tier_score": "B"
       },
       {
@@ -295671,7 +295671,7 @@
         "score": 0.5259582538955491,
         "win_rate": 0.564,
         "matches": 665,
-        "value": 0.19917905486374773,
+        "value": 0.19917905486374782,
         "tier_score": "B"
       },
       {
@@ -295681,7 +295681,7 @@
         "score": 0.525534641278554,
         "win_rate": 0.535,
         "matches": 10999,
-        "value": 0.5234283386159191,
+        "value": 0.5234283386159188,
         "tier_score": "B"
       },
       {
@@ -295691,7 +295691,7 @@
         "score": 0.5232228846285965,
         "win_rate": 0.555,
         "matches": 944,
-        "value": 0.5017640431499787,
+        "value": 0.5017640431499788,
         "tier_score": "B"
       },
       {
@@ -295701,7 +295701,7 @@
         "score": 0.5227468680241646,
         "win_rate": 0.563,
         "matches": 597,
-        "value": 0.4903682176744143,
+        "value": 0.4903682176744146,
         "tier_score": "B"
       },
       {
@@ -295711,7 +295711,7 @@
         "score": 0.5226939659492492,
         "win_rate": 0.552,
         "matches": 1142,
-        "value": 0.6303486850524002,
+        "value": 0.6303486850524,
         "tier_score": "B"
       },
       {
@@ -295731,7 +295731,7 @@
         "score": 0.5213909157029398,
         "win_rate": 0.545,
         "matches": 1708,
-        "value": 0.4397566699064893,
+        "value": 0.4397566699064892,
         "tier_score": "B"
       },
       {
@@ -295741,7 +295741,7 @@
         "score": 0.5205651995915506,
         "win_rate": 0.541,
         "matches": 2373,
-        "value": 0.3699427717215028,
+        "value": 0.36994277172150286,
         "tier_score": "B"
       },
       {
@@ -295751,7 +295751,7 @@
         "score": 0.5203703682995114,
         "win_rate": 0.549,
         "matches": 1175,
-        "value": 0.5517634675771581,
+        "value": 0.5517634675771577,
         "tier_score": "B"
       },
       {
@@ -295761,7 +295761,7 @@
         "score": 0.5193818091228568,
         "win_rate": 0.542,
         "matches": 1916,
-        "value": 0.17204691536014313,
+        "value": 0.17204691536014297,
         "tier_score": "B"
       },
       {
@@ -295771,7 +295771,7 @@
         "score": 0.5188075218426758,
         "win_rate": 0.537,
         "matches": 2890,
-        "value": 0.3751136702951395,
+        "value": 0.3751136702951396,
         "tier_score": "B"
       },
       {
@@ -295781,7 +295781,7 @@
         "score": 0.5184253015651249,
         "win_rate": 0.589,
         "matches": 190,
-        "value": 0.4343753128610982,
+        "value": 0.43437531286109826,
         "tier_score": "B"
       },
       {
@@ -295791,7 +295791,7 @@
         "score": 0.5169666758026794,
         "win_rate": 0.534,
         "matches": 3408,
-        "value": 0.44737188348733004,
+        "value": 0.4473718834873298,
         "tier_score": "B"
       },
       {
@@ -295801,7 +295801,7 @@
         "score": 0.5160348359470608,
         "win_rate": 0.536,
         "matches": 2382,
-        "value": 0.5876183427730135,
+        "value": 0.587618342773014,
         "tier_score": "B"
       },
       {
@@ -295811,7 +295811,7 @@
         "score": 0.5155933010649452,
         "win_rate": 0.544,
         "matches": 1212,
-        "value": 0.48550639203345974,
+        "value": 0.48550639203345985,
         "tier_score": "B"
       },
       {
@@ -295821,7 +295821,7 @@
         "score": 0.5148137046105057,
         "win_rate": 0.533,
         "matches": 2954,
-        "value": 0.2731619954690228,
+        "value": 0.27316199546902264,
         "tier_score": "B"
       },
       {
@@ -295831,7 +295831,7 @@
         "score": 0.5145525257091631,
         "win_rate": 0.527,
         "matches": 6255,
-        "value": 0.4205793285168091,
+        "value": 0.4205793285168092,
         "tier_score": "B"
       },
       {
@@ -295841,7 +295841,7 @@
         "score": 0.5140403878760497,
         "win_rate": 0.548,
         "matches": 834,
-        "value": 0.5774471217799357,
+        "value": 0.5774471217799358,
         "tier_score": "B"
       },
       {
@@ -295851,7 +295851,7 @@
         "score": 0.5138078205110361,
         "win_rate": 0.551,
         "matches": 682,
-        "value": 0.287542053731783,
+        "value": 0.28754205373178254,
         "tier_score": "B"
       },
       {
@@ -295861,7 +295861,7 @@
         "score": 0.5123871762340143,
         "win_rate": 0.544,
         "matches": 969,
-        "value": 0.412166629982614,
+        "value": 0.4121666299826141,
         "tier_score": "B"
       },
       {
@@ -295871,7 +295871,7 @@
         "score": 0.5116836822431863,
         "win_rate": 0.548,
         "matches": 730,
-        "value": 0.4157495346570444,
+        "value": 0.4157495346570447,
         "tier_score": "B"
       },
       {
@@ -295891,7 +295891,7 @@
         "score": 0.5090749947406449,
         "win_rate": 0.546,
         "matches": 690,
-        "value": 0.21978770371634426,
+        "value": 0.21978770371634418,
         "tier_score": "B"
       },
       {
@@ -295921,7 +295921,7 @@
         "score": 0.5035354672507041,
         "win_rate": 0.587,
         "matches": 138,
-        "value": 0.5705425293954718,
+        "value": 0.5705425293954719,
         "tier_score": "B"
       },
       {
@@ -295931,7 +295931,7 @@
         "score": 0.5024243692386572,
         "win_rate": 0.539,
         "matches": 718,
-        "value": 0.5387738522860978,
+        "value": 0.5387738522860979,
         "tier_score": "B"
       },
       {
@@ -295941,7 +295941,7 @@
         "score": 0.5000018611445395,
         "win_rate": 0.521,
         "matches": 2251,
-        "value": 0.5034714348364692,
+        "value": 0.503471434836469,
         "tier_score": "B"
       },
       {
@@ -295961,7 +295961,7 @@
         "score": 0.4999188778213167,
         "win_rate": 0.591,
         "matches": 115,
-        "value": 0.4472660288027819,
+        "value": 0.4472660288027816,
         "tier_score": "B"
       },
       {
@@ -295971,7 +295971,7 @@
         "score": 0.4989661611300804,
         "win_rate": 0.536,
         "matches": 717,
-        "value": 0.42950904760722397,
+        "value": 0.42950904760722386,
         "tier_score": "B"
       },
       {
@@ -295981,7 +295981,7 @@
         "score": 0.49850022043569253,
         "win_rate": 0.547,
         "matches": 400,
-        "value": 0.5381556097433905,
+        "value": 0.5381556097433904,
         "tier_score": "B"
       },
       {
@@ -295991,7 +295991,7 @@
         "score": 0.496318484556742,
         "win_rate": 0.549,
         "matches": 348,
-        "value": 0.5088228248709773,
+        "value": 0.5088228248709772,
         "tier_score": "B"
       },
       {
@@ -296001,7 +296001,7 @@
         "score": 0.4958179968885849,
         "win_rate": 0.553,
         "matches": 291,
-        "value": 0.48080255114205567,
+        "value": 0.4808025511420558,
         "tier_score": "B"
       },
       {
@@ -296011,7 +296011,7 @@
         "score": 0.4955320145370419,
         "win_rate": 0.559,
         "matches": 236,
-        "value": 0.46106429176902886,
+        "value": 0.46106429176902874,
         "tier_score": "B"
       },
       {
@@ -296031,7 +296031,7 @@
         "score": 0.49419310534999833,
         "win_rate": 0.608,
         "matches": 74,
-        "value": 0.5246969774387917,
+        "value": 0.5246969774387913,
         "tier_score": "B"
       },
       {
@@ -296051,7 +296051,7 @@
         "score": 0.49360306959319283,
         "win_rate": 0.528,
         "matches": 791,
-        "value": 0.250742416374484,
+        "value": 0.2507424163744841,
         "tier_score": "B"
       },
       {
@@ -296061,7 +296061,7 @@
         "score": 0.49273271654462253,
         "win_rate": 0.548,
         "matches": 310,
-        "value": 0.5821724765392863,
+        "value": 0.5821724765392864,
         "tier_score": "B"
       },
       {
@@ -296091,7 +296091,7 @@
         "score": 0.4900669003687678,
         "win_rate": 0.53,
         "matches": 596,
-        "value": 0.5796939528196433,
+        "value": 0.5796939528196429,
         "tier_score": "B"
       },
       {
@@ -296101,7 +296101,7 @@
         "score": 0.48981478047547694,
         "win_rate": 0.525,
         "matches": 791,
-        "value": 0.6240231598050575,
+        "value": 0.6240231598050576,
         "tier_score": "B"
       },
       {
@@ -296121,7 +296121,7 @@
         "score": 0.4894978828813306,
         "win_rate": 0.525,
         "matches": 756,
-        "value": 0.3788528836314468,
+        "value": 0.3788528836314467,
         "tier_score": "B"
       },
       {
@@ -296141,7 +296141,7 @@
         "score": 0.4888986851373076,
         "win_rate": 0.534,
         "matches": 468,
-        "value": 0.32905716741501995,
+        "value": 0.32905716741501967,
         "tier_score": "B"
       },
       {
@@ -296161,7 +296161,7 @@
         "score": 0.48508494480773395,
         "win_rate": 0.574,
         "matches": 122,
-        "value": 0.49608785530877275,
+        "value": 0.49608785530877264,
         "tier_score": "B"
       },
       {
@@ -296171,7 +296171,7 @@
         "score": 0.48460463819212235,
         "win_rate": 0.53,
         "matches": 470,
-        "value": 0.4156286786744155,
+        "value": 0.4156286786744158,
         "tier_score": "B"
       },
       {
@@ -296181,7 +296181,7 @@
         "score": 0.4833420949380607,
         "win_rate": 0.506,
         "matches": 1908,
-        "value": 0.4869116390078008,
+        "value": 0.48691163900780093,
         "tier_score": "B"
       },
       {
@@ -296211,7 +296211,7 @@
         "score": 0.47957527323975147,
         "win_rate": 0.515,
         "matches": 749,
-        "value": 0.4402977026899298,
+        "value": 0.44029770268992974,
         "tier_score": "B"
       },
       {
@@ -296251,7 +296251,7 @@
         "score": 0.47685921447723106,
         "win_rate": 0.516,
         "matches": 628,
-        "value": 0.19626051307030012,
+        "value": 0.1962605130703002,
         "tier_score": "B"
       },
       {
@@ -296261,7 +296261,7 @@
         "score": 0.4754293000577386,
         "win_rate": 0.503,
         "matches": 1240,
-        "value": 0.8008281940797025,
+        "value": 0.8008281940797027,
         "tier_score": "B"
       },
       {
@@ -296271,7 +296271,7 @@
         "score": 0.4752288049830781,
         "win_rate": 0.542,
         "matches": 212,
-        "value": 0.5033274515329986,
+        "value": 0.5033274515329985,
         "tier_score": "B"
       },
       {
@@ -296281,7 +296281,7 @@
         "score": 0.473853643549359,
         "win_rate": 0.5,
         "matches": 1439,
-        "value": 0.4869331217395479,
+        "value": 0.48693312173954767,
         "tier_score": "B"
       },
       {
@@ -296301,7 +296301,7 @@
         "score": 0.4698369712299657,
         "win_rate": 0.575,
         "matches": 87,
-        "value": 0.43385594253980997,
+        "value": 0.4338559425398101,
         "tier_score": "B"
       },
       {
@@ -296311,7 +296311,7 @@
         "score": 0.46893991720237704,
         "win_rate": 0.517,
         "matches": 420,
-        "value": 0.5403603447466482,
+        "value": 0.5403603447466481,
         "tier_score": "B"
       },
       {
@@ -296321,7 +296321,7 @@
         "score": 0.4658618105319294,
         "win_rate": 0.535,
         "matches": 202,
-        "value": 0.45792965360462357,
+        "value": 0.4579296536046235,
         "tier_score": "B"
       },
       {
@@ -296331,7 +296331,7 @@
         "score": 0.46559199885698926,
         "win_rate": 0.511,
         "matches": 472,
-        "value": 0.40397813959253137,
+        "value": 0.40397813959253115,
         "tier_score": "B"
       },
       {
@@ -296341,7 +296341,7 @@
         "score": 0.4655637230155586,
         "win_rate": 0.493,
         "matches": 1251,
-        "value": 0.6032994590611224,
+        "value": 0.6032994590611225,
         "tier_score": "B"
       },
       {
@@ -296371,7 +296371,7 @@
         "score": 0.4616837240930954,
         "win_rate": 0.48,
         "matches": 2780,
-        "value": 0.7085550396002576,
+        "value": 0.7085550396002575,
         "tier_score": "C"
       },
       {
@@ -296381,7 +296381,7 @@
         "score": 0.4612972854109612,
         "win_rate": 0.528,
         "matches": 216,
-        "value": 0.31090387092165817,
+        "value": 0.310903870921658,
         "tier_score": "C"
       },
       {
@@ -296411,7 +296411,7 @@
         "score": 0.4571748150724593,
         "win_rate": 0.522,
         "matches": 226,
-        "value": 0.39602481041221177,
+        "value": 0.39602481041221155,
         "tier_score": "C"
       },
       {
@@ -296451,7 +296451,7 @@
         "score": 0.44954701057317437,
         "win_rate": 0.533,
         "matches": 137,
-        "value": 0.5051570506178621,
+        "value": 0.505157050617862,
         "tier_score": "C"
       },
       {
@@ -296501,7 +296501,7 @@
         "score": 0.4462705347308041,
         "win_rate": 0.47,
         "matches": 1696,
-        "value": 0.762005593863475,
+        "value": 0.7620055938634752,
         "tier_score": "C"
       },
       {
@@ -296521,7 +296521,7 @@
         "score": 0.44171146415789586,
         "win_rate": 0.514,
         "matches": 183,
-        "value": 0.4784305667682118,
+        "value": 0.47843056676821166,
         "tier_score": "C"
       },
       {
@@ -296531,7 +296531,7 @@
         "score": 0.4412015042102698,
         "win_rate": 0.528,
         "matches": 127,
-        "value": 0.5068462610672616,
+        "value": 0.5068462610672614,
         "tier_score": "C"
       },
       {
@@ -296561,7 +296561,7 @@
         "score": 0.440226532209132,
         "win_rate": 0.485,
         "matches": 470,
-        "value": 0.4642947144141709,
+        "value": 0.46429471441417064,
         "tier_score": "C"
       },
       {
@@ -296581,7 +296581,7 @@
         "score": 0.4393705874219214,
         "win_rate": 0.494,
         "matches": 320,
-        "value": 0.7573753468452198,
+        "value": 0.7573753468452196,
         "tier_score": "C"
       },
       {
@@ -296591,7 +296591,7 @@
         "score": 0.4389285012637603,
         "win_rate": 0.502,
         "matches": 237,
-        "value": 0.6157563694634158,
+        "value": 0.6157563694634159,
         "tier_score": "C"
       },
       {
@@ -296601,7 +296601,7 @@
         "score": 0.43842316135757814,
         "win_rate": 0.533,
         "matches": 105,
-        "value": 0.46745201928599234,
+        "value": 0.4674520192859927,
         "tier_score": "C"
       },
       {
@@ -296611,7 +296611,7 @@
         "score": 0.4372357143975481,
         "win_rate": 0.483,
         "matches": 447,
-        "value": 0.7466399550996317,
+        "value": 0.7466399550996318,
         "tier_score": "C"
       },
       {
@@ -296621,7 +296621,7 @@
         "score": 0.43677341176197304,
         "win_rate": 0.471,
         "matches": 809,
-        "value": 0.7989038668512007,
+        "value": 0.7989038668512009,
         "tier_score": "C"
       },
       {
@@ -296631,7 +296631,7 @@
         "score": 0.4363425581426945,
         "win_rate": 0.508,
         "matches": 183,
-        "value": 0.6239812295578352,
+        "value": 0.6239812295578353,
         "tier_score": "C"
       },
       {
@@ -296641,7 +296641,7 @@
         "score": 0.4332459840604423,
         "win_rate": 0.529,
         "matches": 102,
-        "value": 0.9574206551537155,
+        "value": 0.9574206551537151,
         "tier_score": "C"
       },
       {
@@ -296661,7 +296661,7 @@
         "score": 0.4310200470971506,
         "win_rate": 0.533,
         "matches": 90,
-        "value": 0.40207787611967205,
+        "value": 0.402077876119672,
         "tier_score": "C"
       },
       {
@@ -296701,7 +296701,7 @@
         "score": 0.4248617443382648,
         "win_rate": 0.529,
         "matches": 87,
-        "value": 0.7236429934931747,
+        "value": 0.7236429934931748,
         "tier_score": "C"
       },
       {
@@ -296711,7 +296711,7 @@
         "score": 0.42132983292803394,
         "win_rate": 0.46,
         "matches": 617,
-        "value": 0.7765233103060603,
+        "value": 0.7765233103060604,
         "tier_score": "C"
       },
       {
@@ -296721,7 +296721,7 @@
         "score": 0.4198448277515705,
         "win_rate": 0.458,
         "matches": 651,
-        "value": 0.8614519907775007,
+        "value": 0.8614519907775008,
         "tier_score": "C"
       },
       {
@@ -296741,7 +296741,7 @@
         "score": 0.4149904646555562,
         "win_rate": 0.436,
         "matches": 2197,
-        "value": 0.7878182736184104,
+        "value": 0.7878182736184105,
         "tier_score": "C"
       },
       {
@@ -296751,7 +296751,7 @@
         "score": 0.4133257730247514,
         "win_rate": 0.5,
         "matches": 124,
-        "value": 0.4849794560741991,
+        "value": 0.48497945607419934,
         "tier_score": "C"
       },
       {
@@ -296761,7 +296761,7 @@
         "score": 0.4118751476055555,
         "win_rate": 0.482,
         "matches": 191,
-        "value": 0.9375626254720233,
+        "value": 0.9375626254720232,
         "tier_score": "C"
       },
       {
@@ -296831,7 +296831,7 @@
         "score": 0.3945475322871552,
         "win_rate": 0.451,
         "matches": 293,
-        "value": 0.7774857366621399,
+        "value": 0.77748573666214,
         "tier_score": "C"
       },
       {
@@ -296851,7 +296851,7 @@
         "score": 0.3831983862733474,
         "win_rate": 0.476,
         "matches": 105,
-        "value": 0.7550341288490643,
+        "value": 0.7550341288490642,
         "tier_score": "C"
       },
       {
@@ -296861,7 +296861,7 @@
         "score": 0.38170665864691183,
         "win_rate": 0.493,
         "matches": 73,
-        "value": 0.401088809270587,
+        "value": 0.4010888092705869,
         "tier_score": "C"
       },
       {
@@ -296881,7 +296881,7 @@
         "score": 0.3785889928639148,
         "win_rate": 0.451,
         "matches": 173,
-        "value": 0.6202377752249566,
+        "value": 0.6202377752249565,
         "tier_score": "C"
       },
       {
@@ -296901,7 +296901,7 @@
         "score": 0.3619910864569657,
         "win_rate": 0.513,
         "matches": 39,
-        "value": 0.5174680097563785,
+        "value": 0.5174680097563786,
         "tier_score": "C"
       },
       {
@@ -296911,7 +296911,7 @@
         "score": 0.3574781238878701,
         "win_rate": 0.463,
         "matches": 80,
-        "value": 0.6862473212612074,
+        "value": 0.6862473212612072,
         "tier_score": "C"
       },
       {
@@ -296921,7 +296921,7 @@
         "score": 0.34810028273121946,
         "win_rate": 0.433,
         "matches": 120,
-        "value": 0.5048074108382039,
+        "value": 0.5048074108382038,
         "tier_score": "C"
       },
       {
@@ -296941,7 +296941,7 @@
         "score": 0.3238651625129941,
         "win_rate": 0.446,
         "matches": 56,
-        "value": 0.7483310785129286,
+        "value": 0.7483310785129285,
         "tier_score": "C"
       },
       {
@@ -296981,7 +296981,7 @@
         "score": null,
         "win_rate": null,
         "matches": null,
-        "value": 0.18067259729646412,
+        "value": 0.1806725972964642,
         "tier_score": null
       },
       {
@@ -297001,7 +297001,7 @@
         "score": null,
         "win_rate": 0.571,
         "matches": 7,
-        "value": 0.585740176616779,
+        "value": 0.5857401766167791,
         "tier_score": null
       },
       {
@@ -297041,7 +297041,7 @@
         "score": null,
         "win_rate": 0.448,
         "matches": 29,
-        "value": 0.5561449035212194,
+        "value": 0.5561449035212193,
         "tier_score": null
       },
       {
@@ -297051,7 +297051,7 @@
         "score": null,
         "win_rate": null,
         "matches": null,
-        "value": 0.5247207079927522,
+        "value": 0.5247207079927521,
         "tier_score": null
       },
       {
@@ -297071,7 +297071,7 @@
         "score": null,
         "win_rate": null,
         "matches": null,
-        "value": 0.4101087372406227,
+        "value": 0.41010873724062274,
         "tier_score": null
       },
       {
@@ -297081,7 +297081,7 @@
         "score": null,
         "win_rate": 0.6,
         "matches": 10,
-        "value": 0.3297742504954643,
+        "value": 0.32977425049546444,
         "tier_score": null
       },
       {
@@ -297091,7 +297091,7 @@
         "score": null,
         "win_rate": 0.875,
         "matches": 16,
-        "value": 0.5661156336141316,
+        "value": 0.5661156336141314,
         "tier_score": null
       },
       {
@@ -297101,7 +297101,7 @@
         "score": null,
         "win_rate": 0.667,
         "matches": 6,
-        "value": 0.6798288611082155,
+        "value": 0.6798288611082154,
         "tier_score": null
       },
       {
@@ -297121,7 +297121,7 @@
         "score": null,
         "win_rate": null,
         "matches": null,
-        "value": 0.3625545682635717,
+        "value": 0.36255456826357163,
         "tier_score": null
       },
       {
@@ -297141,7 +297141,7 @@
         "score": null,
         "win_rate": null,
         "matches": null,
-        "value": 0.6988534091804056,
+        "value": 0.6988534091804057,
         "tier_score": null
       },
       {
@@ -297151,7 +297151,7 @@
         "score": null,
         "win_rate": null,
         "matches": null,
-        "value": 0.5031577497573861,
+        "value": 0.503157749757386,
         "tier_score": null
       },
       {
@@ -298066,7 +298066,7 @@
           "score": 0.627676890545152,
           "win_rate": 0.75,
           "matches": 60,
-          "value": 0.42835275296005226,
+          "value": 0.42835275296005215,
           "tier_score": "S"
         },
         {
@@ -298076,7 +298076,7 @@
           "score": 0.6075624079669637,
           "win_rate": 0.622,
           "matches": 4607,
-          "value": 0.29135895237403603,
+          "value": 0.29135895237403614,
           "tier_score": "S"
         },
         {
@@ -298086,7 +298086,7 @@
           "score": 0.5944713611943473,
           "win_rate": 0.608,
           "matches": 4996,
-          "value": 0.3423734030795642,
+          "value": 0.34237340307956404,
           "tier_score": "S"
         },
         {
@@ -298106,7 +298106,7 @@
           "score": 0.5906332568425112,
           "win_rate": 0.601,
           "matches": 8117,
-          "value": 0.38625629791210986,
+          "value": 0.38625629791210975,
           "tier_score": "S"
         },
         {
@@ -298116,7 +298116,7 @@
           "score": 0.5894676284425309,
           "win_rate": 0.628,
           "matches": 634,
-          "value": 0.48237867057776895,
+          "value": 0.482378670577769,
           "tier_score": "S"
         },
         {
@@ -298126,7 +298126,7 @@
           "score": 0.5879182756128016,
           "win_rate": 0.618,
           "matches": 1059,
-          "value": 0.3843277393061704,
+          "value": 0.3843277393061707,
           "tier_score": "S"
         },
         {
@@ -298136,7 +298136,7 @@
           "score": 0.5732332179284764,
           "win_rate": 0.641,
           "matches": 206,
-          "value": 0.43490890139733424,
+          "value": 0.4349089013973343,
           "tier_score": "S"
         },
         {
@@ -298146,7 +298146,7 @@
           "score": 0.5727436304577318,
           "win_rate": 0.591,
           "matches": 2953,
-          "value": 0.8584389783476634,
+          "value": 0.8584389783476635,
           "tier_score": "S"
         },
         {
@@ -298156,7 +298156,7 @@
           "score": 0.5725792430193152,
           "win_rate": 0.601,
           "matches": 1146,
-          "value": 0.5279033126984808,
+          "value": 0.527903312698481,
           "tier_score": "S"
         },
         {
@@ -298166,7 +298166,7 @@
           "score": 0.5720109878144057,
           "win_rate": 0.583,
           "matches": 7351,
-          "value": 0.5398801889894367,
+          "value": 0.5398801889894369,
           "tier_score": "S"
         },
         {
@@ -298186,7 +298186,7 @@
           "score": 0.5692900395049582,
           "win_rate": 0.625,
           "matches": 299,
-          "value": 0.4466524578760417,
+          "value": 0.44665245787604174,
           "tier_score": "S"
         },
         {
@@ -298196,7 +298196,7 @@
           "score": 0.5682079449229971,
           "win_rate": 0.585,
           "matches": 3439,
-          "value": 0.3195942975932886,
+          "value": 0.31959429759328867,
           "tier_score": "S"
         },
         {
@@ -298206,7 +298206,7 @@
           "score": 0.5656482516553425,
           "win_rate": 0.575,
           "matches": 9750,
-          "value": 0.4381787376586681,
+          "value": 0.4381787376586678,
           "tier_score": "S"
         },
         {
@@ -298216,7 +298216,7 @@
           "score": 0.5644681838865596,
           "win_rate": 0.584,
           "matches": 2483,
-          "value": 0.3061865642372383,
+          "value": 0.3061865642372382,
           "tier_score": "S"
         },
         {
@@ -298226,7 +298226,7 @@
           "score": 0.5644229771795292,
           "win_rate": 0.619,
           "matches": 320,
-          "value": 0.3510489484666438,
+          "value": 0.3510489484666437,
           "tier_score": "S"
         },
         {
@@ -298236,7 +298236,7 @@
           "score": 0.5643749130312062,
           "win_rate": 0.577,
           "matches": 5738,
-          "value": 0.5576035928115833,
+          "value": 0.5576035928115838,
           "tier_score": "S"
         },
         {
@@ -298256,7 +298256,7 @@
           "score": 0.5597432779446877,
           "win_rate": 0.574,
           "matches": 4715,
-          "value": 0.26557207315166365,
+          "value": 0.2655720731516638,
           "tier_score": "S"
         },
         {
@@ -298266,7 +298266,7 @@
           "score": 0.5590618311766973,
           "win_rate": 0.57,
           "matches": 7829,
-          "value": 0.40713291505016025,
+          "value": 0.40713291505016036,
           "tier_score": "S"
         },
         {
@@ -298286,7 +298286,7 @@
           "score": 0.5580695429024831,
           "win_rate": 0.572,
           "matches": 5005,
-          "value": 0.5882216994369404,
+          "value": 0.5882216994369408,
           "tier_score": "A"
         },
         {
@@ -298296,7 +298296,7 @@
           "score": 0.5579829293329567,
           "win_rate": 0.572,
           "matches": 4873,
-          "value": 0.5881594107311736,
+          "value": 0.5881594107311737,
           "tier_score": "A"
         },
         {
@@ -298306,7 +298306,7 @@
           "score": 0.5537593120358879,
           "win_rate": 0.624,
           "matches": 194,
-          "value": 0.5232525663196745,
+          "value": 0.5232525663196743,
           "tier_score": "A"
         },
         {
@@ -298326,7 +298326,7 @@
           "score": 0.5533951638301595,
           "win_rate": 0.607,
           "matches": 326,
-          "value": 0.4937617075296594,
+          "value": 0.49376170752965937,
           "tier_score": "A"
         },
         {
@@ -298336,7 +298336,7 @@
           "score": 0.5513389576101263,
           "win_rate": 0.563,
           "matches": 6460,
-          "value": 0.44817628860647546,
+          "value": 0.44817628860647557,
           "tier_score": "A"
         },
         {
@@ -298356,7 +298356,7 @@
           "score": 0.5502294095056117,
           "win_rate": 0.562,
           "matches": 6365,
-          "value": 0.5413655630141447,
+          "value": 0.5413655630141452,
           "tier_score": "A"
         },
         {
@@ -298376,7 +298376,7 @@
           "score": 0.5496110123874567,
           "win_rate": 0.575,
           "matches": 1489,
-          "value": 0.5906391137549722,
+          "value": 0.5906391137549724,
           "tier_score": "A"
         },
         {
@@ -298386,7 +298386,7 @@
           "score": 0.5492452477235924,
           "win_rate": 0.568,
           "matches": 2570,
-          "value": 0.417094977679103,
+          "value": 0.41709497767910286,
           "tier_score": "A"
         },
         {
@@ -298396,7 +298396,7 @@
           "score": 0.5485489791021828,
           "win_rate": 0.564,
           "matches": 4189,
-          "value": 0.5171883683370072,
+          "value": 0.5171883683370074,
           "tier_score": "A"
         },
         {
@@ -298406,7 +298406,7 @@
           "score": 0.5476723947906886,
           "win_rate": 0.569,
           "matches": 2086,
-          "value": 0.3625545682635717,
+          "value": 0.36255456826357163,
           "tier_score": "A"
         },
         {
@@ -298416,7 +298416,7 @@
           "score": 0.5460379673252933,
           "win_rate": 0.588,
           "matches": 532,
-          "value": 0.3932902504667953,
+          "value": 0.3932902504667955,
           "tier_score": "A"
         },
         {
@@ -298426,7 +298426,7 @@
           "score": 0.5459991949957902,
           "win_rate": 0.562,
           "matches": 3838,
-          "value": 0.45042181188132857,
+          "value": 0.45042181188132896,
           "tier_score": "A"
         },
         {
@@ -298436,7 +298436,7 @@
           "score": 0.5458022861688699,
           "win_rate": 0.598,
           "matches": 346,
-          "value": 0.5175114707814241,
+          "value": 0.5175114707814242,
           "tier_score": "A"
         },
         {
@@ -298446,7 +298446,7 @@
           "score": 0.5438812298100528,
           "win_rate": 0.555,
           "matches": 8236,
-          "value": 0.45838195778420426,
+          "value": 0.4583819577842043,
           "tier_score": "A"
         },
         {
@@ -298466,7 +298466,7 @@
           "score": 0.5437198121775311,
           "win_rate": 0.562,
           "matches": 2742,
-          "value": 0.6316349872066335,
+          "value": 0.6316349872066337,
           "tier_score": "A"
         },
         {
@@ -298476,7 +298476,7 @@
           "score": 0.5429971883613661,
           "win_rate": 0.562,
           "matches": 2570,
-          "value": 0.410219790246881,
+          "value": 0.41021979024688104,
           "tier_score": "A"
         },
         {
@@ -298486,7 +298486,7 @@
           "score": 0.5418944286372392,
           "win_rate": 0.68,
           "matches": 50,
-          "value": 0.4242841394125821,
+          "value": 0.42428413941258214,
           "tier_score": "A"
         },
         {
@@ -298496,7 +298496,7 @@
           "score": 0.5404984328501082,
           "win_rate": 0.56,
           "matches": 2578,
-          "value": 0.496379194818504,
+          "value": 0.4963791948185041,
           "tier_score": "A"
         },
         {
@@ -298506,7 +298506,7 @@
           "score": 0.5392067669107327,
           "win_rate": 0.57,
           "matches": 989,
-          "value": 0.36482192342656017,
+          "value": 0.3648219234265603,
           "tier_score": "A"
         },
         {
@@ -298516,7 +298516,7 @@
           "score": 0.5386389871310455,
           "win_rate": 0.562,
           "matches": 1780,
-          "value": 0.5668623655159903,
+          "value": 0.5668623655159902,
           "tier_score": "A"
         },
         {
@@ -298526,7 +298526,7 @@
           "score": 0.5383105034844307,
           "win_rate": 0.554,
           "matches": 3934,
-          "value": 0.4464746486086973,
+          "value": 0.44647464860869734,
           "tier_score": "A"
         },
         {
@@ -298536,7 +298536,7 @@
           "score": 0.537458511990388,
           "win_rate": 0.557,
           "matches": 2521,
-          "value": 0.5250313241459214,
+          "value": 0.5250313241459209,
           "tier_score": "A"
         },
         {
@@ -298546,7 +298546,7 @@
           "score": 0.537219706844916,
           "win_rate": 0.589,
           "matches": 353,
-          "value": 0.2541723577327434,
+          "value": 0.2541723577327433,
           "tier_score": "A"
         },
         {
@@ -298556,7 +298556,7 @@
           "score": 0.5365062301533012,
           "win_rate": 0.549,
           "matches": 6275,
-          "value": 0.6606519194215593,
+          "value": 0.6606519194215595,
           "tier_score": "A"
         },
         {
@@ -298566,7 +298566,7 @@
           "score": 0.5359110688502293,
           "win_rate": 0.545,
           "matches": 11036,
-          "value": 0.7081031855037712,
+          "value": 0.7081031855037714,
           "tier_score": "A"
         },
         {
@@ -298576,7 +298576,7 @@
           "score": 0.5359089117841311,
           "win_rate": 0.551,
           "matches": 4450,
-          "value": 0.49289910851377994,
+          "value": 0.49289910851378005,
           "tier_score": "A"
         },
         {
@@ -298586,7 +298586,7 @@
           "score": 0.5356318008836605,
           "win_rate": 0.566,
           "matches": 1068,
-          "value": 0.38697200355434297,
+          "value": 0.3869720035543428,
           "tier_score": "A"
         },
         {
@@ -298596,7 +298596,7 @@
           "score": 0.5344243489640382,
           "win_rate": 0.55,
           "matches": 3940,
-          "value": 0.4172028951373356,
+          "value": 0.41720289513733566,
           "tier_score": "A"
         },
         {
@@ -298606,7 +298606,7 @@
           "score": 0.5341783173855387,
           "win_rate": 0.552,
           "matches": 2998,
-          "value": 0.5932697436610296,
+          "value": 0.5932697436610295,
           "tier_score": "A"
         },
         {
@@ -298616,7 +298616,7 @@
           "score": 0.5339242339185283,
           "win_rate": 0.557,
           "matches": 1810,
-          "value": 0.3537123826117097,
+          "value": 0.3537123826117098,
           "tier_score": "A"
         },
         {
@@ -298626,7 +298626,7 @@
           "score": 0.5334222422974781,
           "win_rate": 0.553,
           "matches": 2455,
-          "value": 0.48109263050867335,
+          "value": 0.48109263050867324,
           "tier_score": "A"
         },
         {
@@ -298636,7 +298636,7 @@
           "score": 0.5328816091082943,
           "win_rate": 0.545,
           "matches": 6794,
-          "value": 0.5806090220187823,
+          "value": 0.5806090220187822,
           "tier_score": "A"
         },
         {
@@ -298646,7 +298646,7 @@
           "score": 0.5328181670174403,
           "win_rate": 0.555,
           "matches": 2003,
-          "value": 0.336734438374487,
+          "value": 0.33673443837448713,
           "tier_score": "A"
         },
         {
@@ -298656,7 +298656,7 @@
           "score": 0.5326515425855324,
           "win_rate": 0.543,
           "matches": 8350,
-          "value": 0.6584167104294756,
+          "value": 0.6584167104294758,
           "tier_score": "A"
         },
         {
@@ -298666,7 +298666,7 @@
           "score": 0.5325617490189145,
           "win_rate": 0.555,
           "matches": 1923,
-          "value": 0.34289853639625256,
+          "value": 0.34289853639625234,
           "tier_score": "A"
         },
         {
@@ -298676,7 +298676,7 @@
           "score": 0.5319011763756946,
           "win_rate": 0.604,
           "matches": 182,
-          "value": 0.8980263630907668,
+          "value": 0.8980263630907673,
           "tier_score": "A"
         },
         {
@@ -298686,7 +298686,7 @@
           "score": 0.5310876253145177,
           "win_rate": 0.551,
           "matches": 2375,
-          "value": 0.2782404200179374,
+          "value": 0.278240420017938,
           "tier_score": "B"
         },
         {
@@ -298696,7 +298696,7 @@
           "score": 0.5302739958520112,
           "win_rate": 0.572,
           "matches": 558,
-          "value": 0.39459200637539343,
+          "value": 0.39459200637539366,
           "tier_score": "B"
         },
         {
@@ -298706,7 +298706,7 @@
           "score": 0.5299662415525638,
           "win_rate": 0.542,
           "matches": 6482,
-          "value": 0.48678291467036533,
+          "value": 0.4867829146703654,
           "tier_score": "B"
         },
         {
@@ -298716,7 +298716,7 @@
           "score": 0.5294576334237145,
           "win_rate": 0.544,
           "matches": 4332,
-          "value": 0.5055336048090181,
+          "value": 0.505533604809018,
           "tier_score": "B"
         },
         {
@@ -298726,7 +298726,7 @@
           "score": 0.5294380516788747,
           "win_rate": 0.576,
           "matches": 450,
-          "value": 0.5462849757147163,
+          "value": 0.5462849757147161,
           "tier_score": "B"
         },
         {
@@ -298736,7 +298736,7 @@
           "score": 0.5292861460375375,
           "win_rate": 0.545,
           "matches": 4013,
-          "value": 0.4835691356251085,
+          "value": 0.4835691356251084,
           "tier_score": "B"
         },
         {
@@ -298746,7 +298746,7 @@
           "score": 0.5291966667004471,
           "win_rate": 0.574,
           "matches": 481,
-          "value": 0.49680354805368643,
+          "value": 0.4968035480536863,
           "tier_score": "B"
         },
         {
@@ -298756,7 +298756,7 @@
           "score": 0.5285760418547213,
           "win_rate": 0.57,
           "matches": 567,
-          "value": 0.4338626828292211,
+          "value": 0.43386268282922097,
           "tier_score": "B"
         },
         {
@@ -298766,7 +298766,7 @@
           "score": 0.5282586042103156,
           "win_rate": 0.537,
           "matches": 13233,
-          "value": 0.5193099396486984,
+          "value": 0.5193099396486983,
           "tier_score": "B"
         },
         {
@@ -298776,7 +298776,7 @@
           "score": 0.5280925566117357,
           "win_rate": 0.547,
           "matches": 2775,
-          "value": 0.42727245213654724,
+          "value": 0.4272724521365475,
           "tier_score": "B"
         },
         {
@@ -298786,7 +298786,7 @@
           "score": 0.5274922448020886,
           "win_rate": 0.558,
           "matches": 1060,
-          "value": 0.5237259109513462,
+          "value": 0.5237259109513464,
           "tier_score": "B"
         },
         {
@@ -298806,7 +298806,7 @@
           "score": 0.5273225154890899,
           "win_rate": 0.542,
           "matches": 4613,
-          "value": 0.5837565733170245,
+          "value": 0.5837565733170249,
           "tier_score": "B"
         },
         {
@@ -298816,7 +298816,7 @@
           "score": 0.5272737374079495,
           "win_rate": 0.587,
           "matches": 271,
-          "value": 0.3813668356033108,
+          "value": 0.3813668356033106,
           "tier_score": "B"
         },
         {
@@ -298826,7 +298826,7 @@
           "score": 0.5259582538955491,
           "win_rate": 0.564,
           "matches": 665,
-          "value": 0.19917905486374773,
+          "value": 0.19917905486374782,
           "tier_score": "B"
         },
         {
@@ -298836,7 +298836,7 @@
           "score": 0.525534641278554,
           "win_rate": 0.535,
           "matches": 10999,
-          "value": 0.5234283386159191,
+          "value": 0.5234283386159188,
           "tier_score": "B"
         },
         {
@@ -298846,7 +298846,7 @@
           "score": 0.5232228846285965,
           "win_rate": 0.555,
           "matches": 944,
-          "value": 0.5017640431499787,
+          "value": 0.5017640431499788,
           "tier_score": "B"
         },
         {
@@ -298856,7 +298856,7 @@
           "score": 0.5227468680241646,
           "win_rate": 0.563,
           "matches": 597,
-          "value": 0.4903682176744143,
+          "value": 0.4903682176744146,
           "tier_score": "B"
         },
         {
@@ -298866,7 +298866,7 @@
           "score": 0.5226939659492492,
           "win_rate": 0.552,
           "matches": 1142,
-          "value": 0.6303486850524002,
+          "value": 0.6303486850524,
           "tier_score": "B"
         },
         {
@@ -298886,7 +298886,7 @@
           "score": 0.5213909157029398,
           "win_rate": 0.545,
           "matches": 1708,
-          "value": 0.4397566699064893,
+          "value": 0.4397566699064892,
           "tier_score": "B"
         },
         {
@@ -298896,7 +298896,7 @@
           "score": 0.5205651995915506,
           "win_rate": 0.541,
           "matches": 2373,
-          "value": 0.3699427717215028,
+          "value": 0.36994277172150286,
           "tier_score": "B"
         },
         {
@@ -298906,7 +298906,7 @@
           "score": 0.5203703682995114,
           "win_rate": 0.549,
           "matches": 1175,
-          "value": 0.5517634675771581,
+          "value": 0.5517634675771577,
           "tier_score": "B"
         },
         {
@@ -298916,7 +298916,7 @@
           "score": 0.5193818091228568,
           "win_rate": 0.542,
           "matches": 1916,
-          "value": 0.17204691536014313,
+          "value": 0.17204691536014297,
           "tier_score": "B"
         },
         {
@@ -298926,7 +298926,7 @@
           "score": 0.5188075218426758,
           "win_rate": 0.537,
           "matches": 2890,
-          "value": 0.3751136702951395,
+          "value": 0.3751136702951396,
           "tier_score": "B"
         },
         {
@@ -298936,7 +298936,7 @@
           "score": 0.5184253015651249,
           "win_rate": 0.589,
           "matches": 190,
-          "value": 0.4343753128610982,
+          "value": 0.43437531286109826,
           "tier_score": "B"
         },
         {
@@ -298946,7 +298946,7 @@
           "score": 0.5169666758026794,
           "win_rate": 0.534,
           "matches": 3408,
-          "value": 0.44737188348733004,
+          "value": 0.4473718834873298,
           "tier_score": "B"
         },
         {
@@ -298956,7 +298956,7 @@
           "score": 0.5160348359470608,
           "win_rate": 0.536,
           "matches": 2382,
-          "value": 0.5876183427730135,
+          "value": 0.587618342773014,
           "tier_score": "B"
         },
         {
@@ -298966,7 +298966,7 @@
           "score": 0.5155933010649452,
           "win_rate": 0.544,
           "matches": 1212,
-          "value": 0.48550639203345974,
+          "value": 0.48550639203345985,
           "tier_score": "B"
         },
         {
@@ -298976,7 +298976,7 @@
           "score": 0.5148137046105057,
           "win_rate": 0.533,
           "matches": 2954,
-          "value": 0.2731619954690228,
+          "value": 0.27316199546902264,
           "tier_score": "B"
         },
         {
@@ -298986,7 +298986,7 @@
           "score": 0.5145525257091631,
           "win_rate": 0.527,
           "matches": 6255,
-          "value": 0.4205793285168091,
+          "value": 0.4205793285168092,
           "tier_score": "B"
         },
         {
@@ -298996,7 +298996,7 @@
           "score": 0.5140403878760497,
           "win_rate": 0.548,
           "matches": 834,
-          "value": 0.5774471217799357,
+          "value": 0.5774471217799358,
           "tier_score": "B"
         },
         {
@@ -299006,7 +299006,7 @@
           "score": 0.5138078205110361,
           "win_rate": 0.551,
           "matches": 682,
-          "value": 0.287542053731783,
+          "value": 0.28754205373178254,
           "tier_score": "B"
         },
         {
@@ -299016,7 +299016,7 @@
           "score": 0.5123871762340143,
           "win_rate": 0.544,
           "matches": 969,
-          "value": 0.412166629982614,
+          "value": 0.4121666299826141,
           "tier_score": "B"
         },
         {
@@ -299026,7 +299026,7 @@
           "score": 0.5116836822431863,
           "win_rate": 0.548,
           "matches": 730,
-          "value": 0.4157495346570444,
+          "value": 0.4157495346570447,
           "tier_score": "B"
         },
         {
@@ -299046,7 +299046,7 @@
           "score": 0.5090749947406449,
           "win_rate": 0.546,
           "matches": 690,
-          "value": 0.21978770371634426,
+          "value": 0.21978770371634418,
           "tier_score": "B"
         },
         {
@@ -299076,7 +299076,7 @@
           "score": 0.5035354672507041,
           "win_rate": 0.587,
           "matches": 138,
-          "value": 0.5705425293954718,
+          "value": 0.5705425293954719,
           "tier_score": "B"
         },
         {
@@ -299086,7 +299086,7 @@
           "score": 0.5024243692386572,
           "win_rate": 0.539,
           "matches": 718,
-          "value": 0.5387738522860978,
+          "value": 0.5387738522860979,
           "tier_score": "B"
         },
         {
@@ -299096,7 +299096,7 @@
           "score": 0.5000018611445395,
           "win_rate": 0.521,
           "matches": 2251,
-          "value": 0.5034714348364692,
+          "value": 0.503471434836469,
           "tier_score": "B"
         },
         {
@@ -299116,7 +299116,7 @@
           "score": 0.4999188778213167,
           "win_rate": 0.591,
           "matches": 115,
-          "value": 0.4472660288027819,
+          "value": 0.4472660288027816,
           "tier_score": "B"
         },
         {
@@ -299126,7 +299126,7 @@
           "score": 0.4989661611300804,
           "win_rate": 0.536,
           "matches": 717,
-          "value": 0.42950904760722397,
+          "value": 0.42950904760722386,
           "tier_score": "B"
         },
         {
@@ -299136,7 +299136,7 @@
           "score": 0.49850022043569253,
           "win_rate": 0.547,
           "matches": 400,
-          "value": 0.5381556097433905,
+          "value": 0.5381556097433904,
           "tier_score": "B"
         },
         {
@@ -299146,7 +299146,7 @@
           "score": 0.496318484556742,
           "win_rate": 0.549,
           "matches": 348,
-          "value": 0.5088228248709773,
+          "value": 0.5088228248709772,
           "tier_score": "B"
         },
         {
@@ -299156,7 +299156,7 @@
           "score": 0.4958179968885849,
           "win_rate": 0.553,
           "matches": 291,
-          "value": 0.48080255114205567,
+          "value": 0.4808025511420558,
           "tier_score": "B"
         },
         {
@@ -299166,7 +299166,7 @@
           "score": 0.4955320145370419,
           "win_rate": 0.559,
           "matches": 236,
-          "value": 0.46106429176902886,
+          "value": 0.46106429176902874,
           "tier_score": "B"
         },
         {
@@ -299186,7 +299186,7 @@
           "score": 0.49419310534999833,
           "win_rate": 0.608,
           "matches": 74,
-          "value": 0.5246969774387917,
+          "value": 0.5246969774387913,
           "tier_score": "B"
         },
         {
@@ -299206,7 +299206,7 @@
           "score": 0.49360306959319283,
           "win_rate": 0.528,
           "matches": 791,
-          "value": 0.250742416374484,
+          "value": 0.2507424163744841,
           "tier_score": "B"
         },
         {
@@ -299216,7 +299216,7 @@
           "score": 0.49273271654462253,
           "win_rate": 0.548,
           "matches": 310,
-          "value": 0.5821724765392863,
+          "value": 0.5821724765392864,
           "tier_score": "B"
         },
         {
@@ -299246,7 +299246,7 @@
           "score": 0.4900669003687678,
           "win_rate": 0.53,
           "matches": 596,
-          "value": 0.5796939528196433,
+          "value": 0.5796939528196429,
           "tier_score": "B"
         },
         {
@@ -299256,7 +299256,7 @@
           "score": 0.48981478047547694,
           "win_rate": 0.525,
           "matches": 791,
-          "value": 0.6240231598050575,
+          "value": 0.6240231598050576,
           "tier_score": "B"
         },
         {
@@ -299276,7 +299276,7 @@
           "score": 0.4894978828813306,
           "win_rate": 0.525,
           "matches": 756,
-          "value": 0.3788528836314468,
+          "value": 0.3788528836314467,
           "tier_score": "B"
         },
         {
@@ -299296,7 +299296,7 @@
           "score": 0.4888986851373076,
           "win_rate": 0.534,
           "matches": 468,
-          "value": 0.32905716741501995,
+          "value": 0.32905716741501967,
           "tier_score": "B"
         },
         {
@@ -299316,7 +299316,7 @@
           "score": 0.48508494480773395,
           "win_rate": 0.574,
           "matches": 122,
-          "value": 0.49608785530877275,
+          "value": 0.49608785530877264,
           "tier_score": "B"
         },
         {
@@ -299326,7 +299326,7 @@
           "score": 0.48460463819212235,
           "win_rate": 0.53,
           "matches": 470,
-          "value": 0.4156286786744155,
+          "value": 0.4156286786744158,
           "tier_score": "B"
         },
         {
@@ -299336,7 +299336,7 @@
           "score": 0.4833420949380607,
           "win_rate": 0.506,
           "matches": 1908,
-          "value": 0.4869116390078008,
+          "value": 0.48691163900780093,
           "tier_score": "B"
         },
         {
@@ -299366,7 +299366,7 @@
           "score": 0.47957527323975147,
           "win_rate": 0.515,
           "matches": 749,
-          "value": 0.4402977026899298,
+          "value": 0.44029770268992974,
           "tier_score": "B"
         },
         {
@@ -299406,7 +299406,7 @@
           "score": 0.47685921447723106,
           "win_rate": 0.516,
           "matches": 628,
-          "value": 0.19626051307030012,
+          "value": 0.1962605130703002,
           "tier_score": "B"
         },
         {
@@ -299416,7 +299416,7 @@
           "score": 0.4754293000577386,
           "win_rate": 0.503,
           "matches": 1240,
-          "value": 0.8008281940797025,
+          "value": 0.8008281940797027,
           "tier_score": "B"
         },
         {
@@ -299426,7 +299426,7 @@
           "score": 0.4752288049830781,
           "win_rate": 0.542,
           "matches": 212,
-          "value": 0.5033274515329986,
+          "value": 0.5033274515329985,
           "tier_score": "B"
         },
         {
@@ -299436,7 +299436,7 @@
           "score": 0.473853643549359,
           "win_rate": 0.5,
           "matches": 1439,
-          "value": 0.4869331217395479,
+          "value": 0.48693312173954767,
           "tier_score": "B"
         },
         {
@@ -299456,7 +299456,7 @@
           "score": 0.4698369712299657,
           "win_rate": 0.575,
           "matches": 87,
-          "value": 0.43385594253980997,
+          "value": 0.4338559425398101,
           "tier_score": "B"
         },
         {
@@ -299466,7 +299466,7 @@
           "score": 0.46893991720237704,
           "win_rate": 0.517,
           "matches": 420,
-          "value": 0.5403603447466482,
+          "value": 0.5403603447466481,
           "tier_score": "B"
         },
         {
@@ -299476,7 +299476,7 @@
           "score": 0.4658618105319294,
           "win_rate": 0.535,
           "matches": 202,
-          "value": 0.45792965360462357,
+          "value": 0.4579296536046235,
           "tier_score": "B"
         },
         {
@@ -299486,7 +299486,7 @@
           "score": 0.46559199885698926,
           "win_rate": 0.511,
           "matches": 472,
-          "value": 0.40397813959253137,
+          "value": 0.40397813959253115,
           "tier_score": "B"
         },
         {
@@ -299496,7 +299496,7 @@
           "score": 0.4655637230155586,
           "win_rate": 0.493,
           "matches": 1251,
-          "value": 0.6032994590611224,
+          "value": 0.6032994590611225,
           "tier_score": "B"
         },
         {
@@ -299526,7 +299526,7 @@
           "score": 0.4616837240930954,
           "win_rate": 0.48,
           "matches": 2780,
-          "value": 0.7085550396002576,
+          "value": 0.7085550396002575,
           "tier_score": "C"
         },
         {
@@ -299536,7 +299536,7 @@
           "score": 0.4612972854109612,
           "win_rate": 0.528,
           "matches": 216,
-          "value": 0.31090387092165817,
+          "value": 0.310903870921658,
           "tier_score": "C"
         },
         {
@@ -299566,7 +299566,7 @@
           "score": 0.4571748150724593,
           "win_rate": 0.522,
           "matches": 226,
-          "value": 0.39602481041221177,
+          "value": 0.39602481041221155,
           "tier_score": "C"
         },
         {
@@ -299606,7 +299606,7 @@
           "score": 0.44954701057317437,
           "win_rate": 0.533,
           "matches": 137,
-          "value": 0.5051570506178621,
+          "value": 0.505157050617862,
           "tier_score": "C"
         },
         {
@@ -299656,7 +299656,7 @@
           "score": 0.4462705347308041,
           "win_rate": 0.47,
           "matches": 1696,
-          "value": 0.762005593863475,
+          "value": 0.7620055938634752,
           "tier_score": "C"
         },
         {
@@ -299676,7 +299676,7 @@
           "score": 0.44171146415789586,
           "win_rate": 0.514,
           "matches": 183,
-          "value": 0.4784305667682118,
+          "value": 0.47843056676821166,
           "tier_score": "C"
         },
         {
@@ -299686,7 +299686,7 @@
           "score": 0.4412015042102698,
           "win_rate": 0.528,
           "matches": 127,
-          "value": 0.5068462610672616,
+          "value": 0.5068462610672614,
           "tier_score": "C"
         },
         {
@@ -299716,7 +299716,7 @@
           "score": 0.440226532209132,
           "win_rate": 0.485,
           "matches": 470,
-          "value": 0.4642947144141709,
+          "value": 0.46429471441417064,
           "tier_score": "C"
         },
         {
@@ -299736,7 +299736,7 @@
           "score": 0.4393705874219214,
           "win_rate": 0.494,
           "matches": 320,
-          "value": 0.7573753468452198,
+          "value": 0.7573753468452196,
           "tier_score": "C"
         },
         {
@@ -299746,7 +299746,7 @@
           "score": 0.4389285012637603,
           "win_rate": 0.502,
           "matches": 237,
-          "value": 0.6157563694634158,
+          "value": 0.6157563694634159,
           "tier_score": "C"
         },
         {
@@ -299756,7 +299756,7 @@
           "score": 0.43842316135757814,
           "win_rate": 0.533,
           "matches": 105,
-          "value": 0.46745201928599234,
+          "value": 0.4674520192859927,
           "tier_score": "C"
         },
         {
@@ -299766,7 +299766,7 @@
           "score": 0.4372357143975481,
           "win_rate": 0.483,
           "matches": 447,
-          "value": 0.7466399550996317,
+          "value": 0.7466399550996318,
           "tier_score": "C"
         },
         {
@@ -299776,7 +299776,7 @@
           "score": 0.43677341176197304,
           "win_rate": 0.471,
           "matches": 809,
-          "value": 0.7989038668512007,
+          "value": 0.7989038668512009,
           "tier_score": "C"
         },
         {
@@ -299786,7 +299786,7 @@
           "score": 0.4363425581426945,
           "win_rate": 0.508,
           "matches": 183,
-          "value": 0.6239812295578352,
+          "value": 0.6239812295578353,
           "tier_score": "C"
         },
         {
@@ -299796,7 +299796,7 @@
           "score": 0.4332459840604423,
           "win_rate": 0.529,
           "matches": 102,
-          "value": 0.9574206551537155,
+          "value": 0.9574206551537151,
           "tier_score": "C"
         },
         {
@@ -299816,7 +299816,7 @@
           "score": 0.4310200470971506,
           "win_rate": 0.533,
           "matches": 90,
-          "value": 0.40207787611967205,
+          "value": 0.402077876119672,
           "tier_score": "C"
         },
         {
@@ -299856,7 +299856,7 @@
           "score": 0.4248617443382648,
           "win_rate": 0.529,
           "matches": 87,
-          "value": 0.7236429934931747,
+          "value": 0.7236429934931748,
           "tier_score": "C"
         },
         {
@@ -299866,7 +299866,7 @@
           "score": 0.42132983292803394,
           "win_rate": 0.46,
           "matches": 617,
-          "value": 0.7765233103060603,
+          "value": 0.7765233103060604,
           "tier_score": "C"
         },
         {
@@ -299876,7 +299876,7 @@
           "score": 0.4198448277515705,
           "win_rate": 0.458,
           "matches": 651,
-          "value": 0.8614519907775007,
+          "value": 0.8614519907775008,
           "tier_score": "C"
         },
         {
@@ -299896,7 +299896,7 @@
           "score": 0.4149904646555562,
           "win_rate": 0.436,
           "matches": 2197,
-          "value": 0.7878182736184104,
+          "value": 0.7878182736184105,
           "tier_score": "C"
         },
         {
@@ -299906,7 +299906,7 @@
           "score": 0.4133257730247514,
           "win_rate": 0.5,
           "matches": 124,
-          "value": 0.4849794560741991,
+          "value": 0.48497945607419934,
           "tier_score": "C"
         },
         {
@@ -299916,7 +299916,7 @@
           "score": 0.4118751476055555,
           "win_rate": 0.482,
           "matches": 191,
-          "value": 0.9375626254720233,
+          "value": 0.9375626254720232,
           "tier_score": "C"
         },
         {
@@ -299986,7 +299986,7 @@
           "score": 0.3945475322871552,
           "win_rate": 0.451,
           "matches": 293,
-          "value": 0.7774857366621399,
+          "value": 0.77748573666214,
           "tier_score": "C"
         },
         {
@@ -300006,7 +300006,7 @@
           "score": 0.3831983862733474,
           "win_rate": 0.476,
           "matches": 105,
-          "value": 0.7550341288490643,
+          "value": 0.7550341288490642,
           "tier_score": "C"
         },
         {
@@ -300016,7 +300016,7 @@
           "score": 0.38170665864691183,
           "win_rate": 0.493,
           "matches": 73,
-          "value": 0.401088809270587,
+          "value": 0.4010888092705869,
           "tier_score": "C"
         },
         {
@@ -300036,7 +300036,7 @@
           "score": 0.3785889928639148,
           "win_rate": 0.451,
           "matches": 173,
-          "value": 0.6202377752249566,
+          "value": 0.6202377752249565,
           "tier_score": "C"
         },
         {
@@ -300056,7 +300056,7 @@
           "score": 0.3619910864569657,
           "win_rate": 0.513,
           "matches": 39,
-          "value": 0.5174680097563785,
+          "value": 0.5174680097563786,
           "tier_score": "C"
         },
         {
@@ -300066,7 +300066,7 @@
           "score": 0.3574781238878701,
           "win_rate": 0.463,
           "matches": 80,
-          "value": 0.6862473212612074,
+          "value": 0.6862473212612072,
           "tier_score": "C"
         },
         {
@@ -300076,7 +300076,7 @@
           "score": 0.34810028273121946,
           "win_rate": 0.433,
           "matches": 120,
-          "value": 0.5048074108382039,
+          "value": 0.5048074108382038,
           "tier_score": "C"
         },
         {
@@ -300096,7 +300096,7 @@
           "score": 0.3238651625129941,
           "win_rate": 0.446,
           "matches": 56,
-          "value": 0.7483310785129286,
+          "value": 0.7483310785129285,
           "tier_score": "C"
         },
         {
@@ -300136,7 +300136,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.18067259729646412,
+          "value": 0.1806725972964642,
           "tier_score": null
         },
         {
@@ -300156,7 +300156,7 @@
           "score": null,
           "win_rate": 0.571,
           "matches": 7,
-          "value": 0.585740176616779,
+          "value": 0.5857401766167791,
           "tier_score": null
         },
         {
@@ -300196,7 +300196,7 @@
           "score": null,
           "win_rate": 0.448,
           "matches": 29,
-          "value": 0.5561449035212194,
+          "value": 0.5561449035212193,
           "tier_score": null
         },
         {
@@ -300206,7 +300206,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.5247207079927522,
+          "value": 0.5247207079927521,
           "tier_score": null
         },
         {
@@ -300226,7 +300226,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.4101087372406227,
+          "value": 0.41010873724062274,
           "tier_score": null
         },
         {
@@ -300236,7 +300236,7 @@
           "score": null,
           "win_rate": 0.6,
           "matches": 10,
-          "value": 0.3297742504954643,
+          "value": 0.32977425049546444,
           "tier_score": null
         },
         {
@@ -300246,7 +300246,7 @@
           "score": null,
           "win_rate": 0.875,
           "matches": 16,
-          "value": 0.5661156336141316,
+          "value": 0.5661156336141314,
           "tier_score": null
         },
         {
@@ -300256,7 +300256,7 @@
           "score": null,
           "win_rate": 0.667,
           "matches": 6,
-          "value": 0.6798288611082155,
+          "value": 0.6798288611082154,
           "tier_score": null
         },
         {
@@ -300276,7 +300276,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.3625545682635717,
+          "value": 0.36255456826357163,
           "tier_score": null
         },
         {
@@ -300296,7 +300296,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.6988534091804056,
+          "value": 0.6988534091804057,
           "tier_score": null
         },
         {
@@ -300306,7 +300306,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.5031577497573861,
+          "value": 0.503157749757386,
           "tier_score": null
         },
         {
@@ -302076,7 +302076,7 @@
           "score": 0.627676890545152,
           "win_rate": 0.75,
           "matches": 60,
-          "value": 0.42835275296005226,
+          "value": 0.42835275296005215,
           "tier_score": "S"
         },
         {
@@ -302086,7 +302086,7 @@
           "score": 0.6075624079669637,
           "win_rate": 0.622,
           "matches": 4607,
-          "value": 0.29135895237403603,
+          "value": 0.29135895237403614,
           "tier_score": "S"
         },
         {
@@ -302096,7 +302096,7 @@
           "score": 0.5944713611943473,
           "win_rate": 0.608,
           "matches": 4996,
-          "value": 0.3423734030795642,
+          "value": 0.34237340307956404,
           "tier_score": "S"
         },
         {
@@ -302116,7 +302116,7 @@
           "score": 0.5906332568425112,
           "win_rate": 0.601,
           "matches": 8117,
-          "value": 0.38625629791210986,
+          "value": 0.38625629791210975,
           "tier_score": "S"
         },
         {
@@ -302126,7 +302126,7 @@
           "score": 0.5894676284425309,
           "win_rate": 0.628,
           "matches": 634,
-          "value": 0.48237867057776895,
+          "value": 0.482378670577769,
           "tier_score": "S"
         },
         {
@@ -302136,7 +302136,7 @@
           "score": 0.5879182756128016,
           "win_rate": 0.618,
           "matches": 1059,
-          "value": 0.3843277393061704,
+          "value": 0.3843277393061707,
           "tier_score": "S"
         },
         {
@@ -302146,7 +302146,7 @@
           "score": 0.5732332179284764,
           "win_rate": 0.641,
           "matches": 206,
-          "value": 0.43490890139733424,
+          "value": 0.4349089013973343,
           "tier_score": "S"
         },
         {
@@ -302156,7 +302156,7 @@
           "score": 0.5727436304577318,
           "win_rate": 0.591,
           "matches": 2953,
-          "value": 0.8584389783476634,
+          "value": 0.8584389783476635,
           "tier_score": "S"
         },
         {
@@ -302166,7 +302166,7 @@
           "score": 0.5725792430193152,
           "win_rate": 0.601,
           "matches": 1146,
-          "value": 0.5279033126984808,
+          "value": 0.527903312698481,
           "tier_score": "S"
         },
         {
@@ -302176,7 +302176,7 @@
           "score": 0.5720109878144057,
           "win_rate": 0.583,
           "matches": 7351,
-          "value": 0.5398801889894367,
+          "value": 0.5398801889894369,
           "tier_score": "S"
         },
         {
@@ -302196,7 +302196,7 @@
           "score": 0.5692900395049582,
           "win_rate": 0.625,
           "matches": 299,
-          "value": 0.4466524578760417,
+          "value": 0.44665245787604174,
           "tier_score": "S"
         },
         {
@@ -302206,7 +302206,7 @@
           "score": 0.5682079449229971,
           "win_rate": 0.585,
           "matches": 3439,
-          "value": 0.3195942975932886,
+          "value": 0.31959429759328867,
           "tier_score": "S"
         },
         {
@@ -302216,7 +302216,7 @@
           "score": 0.5656482516553425,
           "win_rate": 0.575,
           "matches": 9750,
-          "value": 0.4381787376586681,
+          "value": 0.4381787376586678,
           "tier_score": "S"
         },
         {
@@ -302226,7 +302226,7 @@
           "score": 0.5644681838865596,
           "win_rate": 0.584,
           "matches": 2483,
-          "value": 0.3061865642372383,
+          "value": 0.3061865642372382,
           "tier_score": "S"
         },
         {
@@ -302236,7 +302236,7 @@
           "score": 0.5644229771795292,
           "win_rate": 0.619,
           "matches": 320,
-          "value": 0.3510489484666438,
+          "value": 0.3510489484666437,
           "tier_score": "S"
         },
         {
@@ -302246,7 +302246,7 @@
           "score": 0.5643749130312062,
           "win_rate": 0.577,
           "matches": 5738,
-          "value": 0.5576035928115833,
+          "value": 0.5576035928115838,
           "tier_score": "S"
         },
         {
@@ -302266,7 +302266,7 @@
           "score": 0.5597432779446877,
           "win_rate": 0.574,
           "matches": 4715,
-          "value": 0.26557207315166365,
+          "value": 0.2655720731516638,
           "tier_score": "S"
         },
         {
@@ -302276,7 +302276,7 @@
           "score": 0.5590618311766973,
           "win_rate": 0.57,
           "matches": 7829,
-          "value": 0.40713291505016025,
+          "value": 0.40713291505016036,
           "tier_score": "S"
         },
         {
@@ -302296,7 +302296,7 @@
           "score": 0.5580695429024831,
           "win_rate": 0.572,
           "matches": 5005,
-          "value": 0.5882216994369404,
+          "value": 0.5882216994369408,
           "tier_score": "A"
         },
         {
@@ -302306,7 +302306,7 @@
           "score": 0.5579829293329567,
           "win_rate": 0.572,
           "matches": 4873,
-          "value": 0.5881594107311736,
+          "value": 0.5881594107311737,
           "tier_score": "A"
         },
         {
@@ -302316,7 +302316,7 @@
           "score": 0.5537593120358879,
           "win_rate": 0.624,
           "matches": 194,
-          "value": 0.5232525663196745,
+          "value": 0.5232525663196743,
           "tier_score": "A"
         },
         {
@@ -302336,7 +302336,7 @@
           "score": 0.5533951638301595,
           "win_rate": 0.607,
           "matches": 326,
-          "value": 0.4937617075296594,
+          "value": 0.49376170752965937,
           "tier_score": "A"
         },
         {
@@ -302346,7 +302346,7 @@
           "score": 0.5513389576101263,
           "win_rate": 0.563,
           "matches": 6460,
-          "value": 0.44817628860647546,
+          "value": 0.44817628860647557,
           "tier_score": "A"
         },
         {
@@ -302366,7 +302366,7 @@
           "score": 0.5502294095056117,
           "win_rate": 0.562,
           "matches": 6365,
-          "value": 0.5413655630141447,
+          "value": 0.5413655630141452,
           "tier_score": "A"
         },
         {
@@ -302386,7 +302386,7 @@
           "score": 0.5496110123874567,
           "win_rate": 0.575,
           "matches": 1489,
-          "value": 0.5906391137549722,
+          "value": 0.5906391137549724,
           "tier_score": "A"
         },
         {
@@ -302396,7 +302396,7 @@
           "score": 0.5492452477235924,
           "win_rate": 0.568,
           "matches": 2570,
-          "value": 0.417094977679103,
+          "value": 0.41709497767910286,
           "tier_score": "A"
         },
         {
@@ -302406,7 +302406,7 @@
           "score": 0.5485489791021828,
           "win_rate": 0.564,
           "matches": 4189,
-          "value": 0.5171883683370072,
+          "value": 0.5171883683370074,
           "tier_score": "A"
         },
         {
@@ -302416,7 +302416,7 @@
           "score": 0.5476723947906886,
           "win_rate": 0.569,
           "matches": 2086,
-          "value": 0.3625545682635717,
+          "value": 0.36255456826357163,
           "tier_score": "A"
         },
         {
@@ -302426,7 +302426,7 @@
           "score": 0.5460379673252933,
           "win_rate": 0.588,
           "matches": 532,
-          "value": 0.3932902504667953,
+          "value": 0.3932902504667955,
           "tier_score": "A"
         },
         {
@@ -302436,7 +302436,7 @@
           "score": 0.5459991949957902,
           "win_rate": 0.562,
           "matches": 3838,
-          "value": 0.45042181188132857,
+          "value": 0.45042181188132896,
           "tier_score": "A"
         },
         {
@@ -302446,7 +302446,7 @@
           "score": 0.5458022861688699,
           "win_rate": 0.598,
           "matches": 346,
-          "value": 0.5175114707814241,
+          "value": 0.5175114707814242,
           "tier_score": "A"
         },
         {
@@ -302456,7 +302456,7 @@
           "score": 0.5438812298100528,
           "win_rate": 0.555,
           "matches": 8236,
-          "value": 0.45838195778420426,
+          "value": 0.4583819577842043,
           "tier_score": "A"
         },
         {
@@ -302476,7 +302476,7 @@
           "score": 0.5437198121775311,
           "win_rate": 0.562,
           "matches": 2742,
-          "value": 0.6316349872066335,
+          "value": 0.6316349872066337,
           "tier_score": "A"
         },
         {
@@ -302486,7 +302486,7 @@
           "score": 0.5429971883613661,
           "win_rate": 0.562,
           "matches": 2570,
-          "value": 0.410219790246881,
+          "value": 0.41021979024688104,
           "tier_score": "A"
         },
         {
@@ -302496,7 +302496,7 @@
           "score": 0.5418944286372392,
           "win_rate": 0.68,
           "matches": 50,
-          "value": 0.4242841394125821,
+          "value": 0.42428413941258214,
           "tier_score": "A"
         },
         {
@@ -302506,7 +302506,7 @@
           "score": 0.5404984328501082,
           "win_rate": 0.56,
           "matches": 2578,
-          "value": 0.496379194818504,
+          "value": 0.4963791948185041,
           "tier_score": "A"
         },
         {
@@ -302516,7 +302516,7 @@
           "score": 0.5392067669107327,
           "win_rate": 0.57,
           "matches": 989,
-          "value": 0.36482192342656017,
+          "value": 0.3648219234265603,
           "tier_score": "A"
         },
         {
@@ -302526,7 +302526,7 @@
           "score": 0.5386389871310455,
           "win_rate": 0.562,
           "matches": 1780,
-          "value": 0.5668623655159903,
+          "value": 0.5668623655159902,
           "tier_score": "A"
         },
         {
@@ -302536,7 +302536,7 @@
           "score": 0.5383105034844307,
           "win_rate": 0.554,
           "matches": 3934,
-          "value": 0.4464746486086973,
+          "value": 0.44647464860869734,
           "tier_score": "A"
         },
         {
@@ -302546,7 +302546,7 @@
           "score": 0.537458511990388,
           "win_rate": 0.557,
           "matches": 2521,
-          "value": 0.5250313241459214,
+          "value": 0.5250313241459209,
           "tier_score": "A"
         },
         {
@@ -302556,7 +302556,7 @@
           "score": 0.537219706844916,
           "win_rate": 0.589,
           "matches": 353,
-          "value": 0.2541723577327434,
+          "value": 0.2541723577327433,
           "tier_score": "A"
         },
         {
@@ -302566,7 +302566,7 @@
           "score": 0.5365062301533012,
           "win_rate": 0.549,
           "matches": 6275,
-          "value": 0.6606519194215593,
+          "value": 0.6606519194215595,
           "tier_score": "A"
         },
         {
@@ -302576,7 +302576,7 @@
           "score": 0.5359110688502293,
           "win_rate": 0.545,
           "matches": 11036,
-          "value": 0.7081031855037712,
+          "value": 0.7081031855037714,
           "tier_score": "A"
         },
         {
@@ -302586,7 +302586,7 @@
           "score": 0.5359089117841311,
           "win_rate": 0.551,
           "matches": 4450,
-          "value": 0.49289910851377994,
+          "value": 0.49289910851378005,
           "tier_score": "A"
         },
         {
@@ -302596,7 +302596,7 @@
           "score": 0.5356318008836605,
           "win_rate": 0.566,
           "matches": 1068,
-          "value": 0.38697200355434297,
+          "value": 0.3869720035543428,
           "tier_score": "A"
         },
         {
@@ -302606,7 +302606,7 @@
           "score": 0.5344243489640382,
           "win_rate": 0.55,
           "matches": 3940,
-          "value": 0.4172028951373356,
+          "value": 0.41720289513733566,
           "tier_score": "A"
         },
         {
@@ -302616,7 +302616,7 @@
           "score": 0.5341783173855387,
           "win_rate": 0.552,
           "matches": 2998,
-          "value": 0.5932697436610296,
+          "value": 0.5932697436610295,
           "tier_score": "A"
         },
         {
@@ -302626,7 +302626,7 @@
           "score": 0.5339242339185283,
           "win_rate": 0.557,
           "matches": 1810,
-          "value": 0.3537123826117097,
+          "value": 0.3537123826117098,
           "tier_score": "A"
         },
         {
@@ -302636,7 +302636,7 @@
           "score": 0.5334222422974781,
           "win_rate": 0.553,
           "matches": 2455,
-          "value": 0.48109263050867335,
+          "value": 0.48109263050867324,
           "tier_score": "A"
         },
         {
@@ -302646,7 +302646,7 @@
           "score": 0.5328816091082943,
           "win_rate": 0.545,
           "matches": 6794,
-          "value": 0.5806090220187823,
+          "value": 0.5806090220187822,
           "tier_score": "A"
         },
         {
@@ -302656,7 +302656,7 @@
           "score": 0.5328181670174403,
           "win_rate": 0.555,
           "matches": 2003,
-          "value": 0.336734438374487,
+          "value": 0.33673443837448713,
           "tier_score": "A"
         },
         {
@@ -302666,7 +302666,7 @@
           "score": 0.5326515425855324,
           "win_rate": 0.543,
           "matches": 8350,
-          "value": 0.6584167104294756,
+          "value": 0.6584167104294758,
           "tier_score": "A"
         },
         {
@@ -302676,7 +302676,7 @@
           "score": 0.5325617490189145,
           "win_rate": 0.555,
           "matches": 1923,
-          "value": 0.34289853639625256,
+          "value": 0.34289853639625234,
           "tier_score": "A"
         },
         {
@@ -302686,7 +302686,7 @@
           "score": 0.5319011763756946,
           "win_rate": 0.604,
           "matches": 182,
-          "value": 0.8980263630907668,
+          "value": 0.8980263630907673,
           "tier_score": "A"
         },
         {
@@ -302696,7 +302696,7 @@
           "score": 0.5310876253145177,
           "win_rate": 0.551,
           "matches": 2375,
-          "value": 0.2782404200179374,
+          "value": 0.278240420017938,
           "tier_score": "B"
         },
         {
@@ -302706,7 +302706,7 @@
           "score": 0.5302739958520112,
           "win_rate": 0.572,
           "matches": 558,
-          "value": 0.39459200637539343,
+          "value": 0.39459200637539366,
           "tier_score": "B"
         },
         {
@@ -302716,7 +302716,7 @@
           "score": 0.5299662415525638,
           "win_rate": 0.542,
           "matches": 6482,
-          "value": 0.48678291467036533,
+          "value": 0.4867829146703654,
           "tier_score": "B"
         },
         {
@@ -302726,7 +302726,7 @@
           "score": 0.5294576334237145,
           "win_rate": 0.544,
           "matches": 4332,
-          "value": 0.5055336048090181,
+          "value": 0.505533604809018,
           "tier_score": "B"
         },
         {
@@ -302736,7 +302736,7 @@
           "score": 0.5294380516788747,
           "win_rate": 0.576,
           "matches": 450,
-          "value": 0.5462849757147163,
+          "value": 0.5462849757147161,
           "tier_score": "B"
         },
         {
@@ -302746,7 +302746,7 @@
           "score": 0.5292861460375375,
           "win_rate": 0.545,
           "matches": 4013,
-          "value": 0.4835691356251085,
+          "value": 0.4835691356251084,
           "tier_score": "B"
         },
         {
@@ -302756,7 +302756,7 @@
           "score": 0.5291966667004471,
           "win_rate": 0.574,
           "matches": 481,
-          "value": 0.49680354805368643,
+          "value": 0.4968035480536863,
           "tier_score": "B"
         },
         {
@@ -302766,7 +302766,7 @@
           "score": 0.5285760418547213,
           "win_rate": 0.57,
           "matches": 567,
-          "value": 0.4338626828292211,
+          "value": 0.43386268282922097,
           "tier_score": "B"
         },
         {
@@ -302776,7 +302776,7 @@
           "score": 0.5282586042103156,
           "win_rate": 0.537,
           "matches": 13233,
-          "value": 0.5193099396486984,
+          "value": 0.5193099396486983,
           "tier_score": "B"
         },
         {
@@ -302786,7 +302786,7 @@
           "score": 0.5280925566117357,
           "win_rate": 0.547,
           "matches": 2775,
-          "value": 0.42727245213654724,
+          "value": 0.4272724521365475,
           "tier_score": "B"
         },
         {
@@ -302796,7 +302796,7 @@
           "score": 0.5274922448020886,
           "win_rate": 0.558,
           "matches": 1060,
-          "value": 0.5237259109513462,
+          "value": 0.5237259109513464,
           "tier_score": "B"
         },
         {
@@ -302816,7 +302816,7 @@
           "score": 0.5273225154890899,
           "win_rate": 0.542,
           "matches": 4613,
-          "value": 0.5837565733170245,
+          "value": 0.5837565733170249,
           "tier_score": "B"
         },
         {
@@ -302826,7 +302826,7 @@
           "score": 0.5272737374079495,
           "win_rate": 0.587,
           "matches": 271,
-          "value": 0.3813668356033108,
+          "value": 0.3813668356033106,
           "tier_score": "B"
         },
         {
@@ -302836,7 +302836,7 @@
           "score": 0.5259582538955491,
           "win_rate": 0.564,
           "matches": 665,
-          "value": 0.19917905486374773,
+          "value": 0.19917905486374782,
           "tier_score": "B"
         },
         {
@@ -302846,7 +302846,7 @@
           "score": 0.525534641278554,
           "win_rate": 0.535,
           "matches": 10999,
-          "value": 0.5234283386159191,
+          "value": 0.5234283386159188,
           "tier_score": "B"
         },
         {
@@ -302856,7 +302856,7 @@
           "score": 0.5232228846285965,
           "win_rate": 0.555,
           "matches": 944,
-          "value": 0.5017640431499787,
+          "value": 0.5017640431499788,
           "tier_score": "B"
         },
         {
@@ -302866,7 +302866,7 @@
           "score": 0.5227468680241646,
           "win_rate": 0.563,
           "matches": 597,
-          "value": 0.4903682176744143,
+          "value": 0.4903682176744146,
           "tier_score": "B"
         },
         {
@@ -302876,7 +302876,7 @@
           "score": 0.5226939659492492,
           "win_rate": 0.552,
           "matches": 1142,
-          "value": 0.6303486850524002,
+          "value": 0.6303486850524,
           "tier_score": "B"
         },
         {
@@ -302896,7 +302896,7 @@
           "score": 0.5213909157029398,
           "win_rate": 0.545,
           "matches": 1708,
-          "value": 0.4397566699064893,
+          "value": 0.4397566699064892,
           "tier_score": "B"
         },
         {
@@ -302906,7 +302906,7 @@
           "score": 0.5205651995915506,
           "win_rate": 0.541,
           "matches": 2373,
-          "value": 0.3699427717215028,
+          "value": 0.36994277172150286,
           "tier_score": "B"
         },
         {
@@ -302916,7 +302916,7 @@
           "score": 0.5203703682995114,
           "win_rate": 0.549,
           "matches": 1175,
-          "value": 0.5517634675771581,
+          "value": 0.5517634675771577,
           "tier_score": "B"
         },
         {
@@ -302926,7 +302926,7 @@
           "score": 0.5193818091228568,
           "win_rate": 0.542,
           "matches": 1916,
-          "value": 0.17204691536014313,
+          "value": 0.17204691536014297,
           "tier_score": "B"
         },
         {
@@ -302936,7 +302936,7 @@
           "score": 0.5188075218426758,
           "win_rate": 0.537,
           "matches": 2890,
-          "value": 0.3751136702951395,
+          "value": 0.3751136702951396,
           "tier_score": "B"
         },
         {
@@ -302946,7 +302946,7 @@
           "score": 0.5184253015651249,
           "win_rate": 0.589,
           "matches": 190,
-          "value": 0.4343753128610982,
+          "value": 0.43437531286109826,
           "tier_score": "B"
         },
         {
@@ -302956,7 +302956,7 @@
           "score": 0.5169666758026794,
           "win_rate": 0.534,
           "matches": 3408,
-          "value": 0.44737188348733004,
+          "value": 0.4473718834873298,
           "tier_score": "B"
         },
         {
@@ -302966,7 +302966,7 @@
           "score": 0.5160348359470608,
           "win_rate": 0.536,
           "matches": 2382,
-          "value": 0.5876183427730135,
+          "value": 0.587618342773014,
           "tier_score": "B"
         },
         {
@@ -302976,7 +302976,7 @@
           "score": 0.5155933010649452,
           "win_rate": 0.544,
           "matches": 1212,
-          "value": 0.48550639203345974,
+          "value": 0.48550639203345985,
           "tier_score": "B"
         },
         {
@@ -302986,7 +302986,7 @@
           "score": 0.5148137046105057,
           "win_rate": 0.533,
           "matches": 2954,
-          "value": 0.2731619954690228,
+          "value": 0.27316199546902264,
           "tier_score": "B"
         },
         {
@@ -302996,7 +302996,7 @@
           "score": 0.5145525257091631,
           "win_rate": 0.527,
           "matches": 6255,
-          "value": 0.4205793285168091,
+          "value": 0.4205793285168092,
           "tier_score": "B"
         },
         {
@@ -303006,7 +303006,7 @@
           "score": 0.5140403878760497,
           "win_rate": 0.548,
           "matches": 834,
-          "value": 0.5774471217799357,
+          "value": 0.5774471217799358,
           "tier_score": "B"
         },
         {
@@ -303016,7 +303016,7 @@
           "score": 0.5138078205110361,
           "win_rate": 0.551,
           "matches": 682,
-          "value": 0.287542053731783,
+          "value": 0.28754205373178254,
           "tier_score": "B"
         },
         {
@@ -303026,7 +303026,7 @@
           "score": 0.5123871762340143,
           "win_rate": 0.544,
           "matches": 969,
-          "value": 0.412166629982614,
+          "value": 0.4121666299826141,
           "tier_score": "B"
         },
         {
@@ -303036,7 +303036,7 @@
           "score": 0.5116836822431863,
           "win_rate": 0.548,
           "matches": 730,
-          "value": 0.4157495346570444,
+          "value": 0.4157495346570447,
           "tier_score": "B"
         },
         {
@@ -303056,7 +303056,7 @@
           "score": 0.5090749947406449,
           "win_rate": 0.546,
           "matches": 690,
-          "value": 0.21978770371634426,
+          "value": 0.21978770371634418,
           "tier_score": "B"
         },
         {
@@ -303086,7 +303086,7 @@
           "score": 0.5035354672507041,
           "win_rate": 0.587,
           "matches": 138,
-          "value": 0.5705425293954718,
+          "value": 0.5705425293954719,
           "tier_score": "B"
         },
         {
@@ -303096,7 +303096,7 @@
           "score": 0.5024243692386572,
           "win_rate": 0.539,
           "matches": 718,
-          "value": 0.5387738522860978,
+          "value": 0.5387738522860979,
           "tier_score": "B"
         },
         {
@@ -303106,7 +303106,7 @@
           "score": 0.5000018611445395,
           "win_rate": 0.521,
           "matches": 2251,
-          "value": 0.5034714348364692,
+          "value": 0.503471434836469,
           "tier_score": "B"
         },
         {
@@ -303126,7 +303126,7 @@
           "score": 0.4999188778213167,
           "win_rate": 0.591,
           "matches": 115,
-          "value": 0.4472660288027819,
+          "value": 0.4472660288027816,
           "tier_score": "B"
         },
         {
@@ -303136,7 +303136,7 @@
           "score": 0.4989661611300804,
           "win_rate": 0.536,
           "matches": 717,
-          "value": 0.42950904760722397,
+          "value": 0.42950904760722386,
           "tier_score": "B"
         },
         {
@@ -303146,7 +303146,7 @@
           "score": 0.49850022043569253,
           "win_rate": 0.547,
           "matches": 400,
-          "value": 0.5381556097433905,
+          "value": 0.5381556097433904,
           "tier_score": "B"
         },
         {
@@ -303156,7 +303156,7 @@
           "score": 0.496318484556742,
           "win_rate": 0.549,
           "matches": 348,
-          "value": 0.5088228248709773,
+          "value": 0.5088228248709772,
           "tier_score": "B"
         },
         {
@@ -303166,7 +303166,7 @@
           "score": 0.4958179968885849,
           "win_rate": 0.553,
           "matches": 291,
-          "value": 0.48080255114205567,
+          "value": 0.4808025511420558,
           "tier_score": "B"
         },
         {
@@ -303176,7 +303176,7 @@
           "score": 0.4955320145370419,
           "win_rate": 0.559,
           "matches": 236,
-          "value": 0.46106429176902886,
+          "value": 0.46106429176902874,
           "tier_score": "B"
         },
         {
@@ -303196,7 +303196,7 @@
           "score": 0.49419310534999833,
           "win_rate": 0.608,
           "matches": 74,
-          "value": 0.5246969774387917,
+          "value": 0.5246969774387913,
           "tier_score": "B"
         },
         {
@@ -303216,7 +303216,7 @@
           "score": 0.49360306959319283,
           "win_rate": 0.528,
           "matches": 791,
-          "value": 0.250742416374484,
+          "value": 0.2507424163744841,
           "tier_score": "B"
         },
         {
@@ -303226,7 +303226,7 @@
           "score": 0.49273271654462253,
           "win_rate": 0.548,
           "matches": 310,
-          "value": 0.5821724765392863,
+          "value": 0.5821724765392864,
           "tier_score": "B"
         },
         {
@@ -303256,7 +303256,7 @@
           "score": 0.4900669003687678,
           "win_rate": 0.53,
           "matches": 596,
-          "value": 0.5796939528196433,
+          "value": 0.5796939528196429,
           "tier_score": "B"
         },
         {
@@ -303266,7 +303266,7 @@
           "score": 0.48981478047547694,
           "win_rate": 0.525,
           "matches": 791,
-          "value": 0.6240231598050575,
+          "value": 0.6240231598050576,
           "tier_score": "B"
         },
         {
@@ -303286,7 +303286,7 @@
           "score": 0.4894978828813306,
           "win_rate": 0.525,
           "matches": 756,
-          "value": 0.3788528836314468,
+          "value": 0.3788528836314467,
           "tier_score": "B"
         },
         {
@@ -303306,7 +303306,7 @@
           "score": 0.4888986851373076,
           "win_rate": 0.534,
           "matches": 468,
-          "value": 0.32905716741501995,
+          "value": 0.32905716741501967,
           "tier_score": "B"
         },
         {
@@ -303326,7 +303326,7 @@
           "score": 0.48508494480773395,
           "win_rate": 0.574,
           "matches": 122,
-          "value": 0.49608785530877275,
+          "value": 0.49608785530877264,
           "tier_score": "B"
         },
         {
@@ -303336,7 +303336,7 @@
           "score": 0.48460463819212235,
           "win_rate": 0.53,
           "matches": 470,
-          "value": 0.4156286786744155,
+          "value": 0.4156286786744158,
           "tier_score": "B"
         },
         {
@@ -303346,7 +303346,7 @@
           "score": 0.4833420949380607,
           "win_rate": 0.506,
           "matches": 1908,
-          "value": 0.4869116390078008,
+          "value": 0.48691163900780093,
           "tier_score": "B"
         },
         {
@@ -303376,7 +303376,7 @@
           "score": 0.47957527323975147,
           "win_rate": 0.515,
           "matches": 749,
-          "value": 0.4402977026899298,
+          "value": 0.44029770268992974,
           "tier_score": "B"
         },
         {
@@ -303416,7 +303416,7 @@
           "score": 0.47685921447723106,
           "win_rate": 0.516,
           "matches": 628,
-          "value": 0.19626051307030012,
+          "value": 0.1962605130703002,
           "tier_score": "B"
         },
         {
@@ -303426,7 +303426,7 @@
           "score": 0.4754293000577386,
           "win_rate": 0.503,
           "matches": 1240,
-          "value": 0.8008281940797025,
+          "value": 0.8008281940797027,
           "tier_score": "B"
         },
         {
@@ -303436,7 +303436,7 @@
           "score": 0.4752288049830781,
           "win_rate": 0.542,
           "matches": 212,
-          "value": 0.5033274515329986,
+          "value": 0.5033274515329985,
           "tier_score": "B"
         },
         {
@@ -303446,7 +303446,7 @@
           "score": 0.473853643549359,
           "win_rate": 0.5,
           "matches": 1439,
-          "value": 0.4869331217395479,
+          "value": 0.48693312173954767,
           "tier_score": "B"
         },
         {
@@ -303466,7 +303466,7 @@
           "score": 0.4698369712299657,
           "win_rate": 0.575,
           "matches": 87,
-          "value": 0.43385594253980997,
+          "value": 0.4338559425398101,
           "tier_score": "B"
         },
         {
@@ -303476,7 +303476,7 @@
           "score": 0.46893991720237704,
           "win_rate": 0.517,
           "matches": 420,
-          "value": 0.5403603447466482,
+          "value": 0.5403603447466481,
           "tier_score": "B"
         },
         {
@@ -303486,7 +303486,7 @@
           "score": 0.4658618105319294,
           "win_rate": 0.535,
           "matches": 202,
-          "value": 0.45792965360462357,
+          "value": 0.4579296536046235,
           "tier_score": "B"
         },
         {
@@ -303496,7 +303496,7 @@
           "score": 0.46559199885698926,
           "win_rate": 0.511,
           "matches": 472,
-          "value": 0.40397813959253137,
+          "value": 0.40397813959253115,
           "tier_score": "B"
         },
         {
@@ -303506,7 +303506,7 @@
           "score": 0.4655637230155586,
           "win_rate": 0.493,
           "matches": 1251,
-          "value": 0.6032994590611224,
+          "value": 0.6032994590611225,
           "tier_score": "B"
         },
         {
@@ -303536,7 +303536,7 @@
           "score": 0.4616837240930954,
           "win_rate": 0.48,
           "matches": 2780,
-          "value": 0.7085550396002576,
+          "value": 0.7085550396002575,
           "tier_score": "C"
         },
         {
@@ -303546,7 +303546,7 @@
           "score": 0.4612972854109612,
           "win_rate": 0.528,
           "matches": 216,
-          "value": 0.31090387092165817,
+          "value": 0.310903870921658,
           "tier_score": "C"
         },
         {
@@ -303576,7 +303576,7 @@
           "score": 0.4571748150724593,
           "win_rate": 0.522,
           "matches": 226,
-          "value": 0.39602481041221177,
+          "value": 0.39602481041221155,
           "tier_score": "C"
         },
         {
@@ -303616,7 +303616,7 @@
           "score": 0.44954701057317437,
           "win_rate": 0.533,
           "matches": 137,
-          "value": 0.5051570506178621,
+          "value": 0.505157050617862,
           "tier_score": "C"
         },
         {
@@ -303666,7 +303666,7 @@
           "score": 0.4462705347308041,
           "win_rate": 0.47,
           "matches": 1696,
-          "value": 0.762005593863475,
+          "value": 0.7620055938634752,
           "tier_score": "C"
         },
         {
@@ -303686,7 +303686,7 @@
           "score": 0.44171146415789586,
           "win_rate": 0.514,
           "matches": 183,
-          "value": 0.4784305667682118,
+          "value": 0.47843056676821166,
           "tier_score": "C"
         },
         {
@@ -303696,7 +303696,7 @@
           "score": 0.4412015042102698,
           "win_rate": 0.528,
           "matches": 127,
-          "value": 0.5068462610672616,
+          "value": 0.5068462610672614,
           "tier_score": "C"
         },
         {
@@ -303726,7 +303726,7 @@
           "score": 0.440226532209132,
           "win_rate": 0.485,
           "matches": 470,
-          "value": 0.4642947144141709,
+          "value": 0.46429471441417064,
           "tier_score": "C"
         },
         {
@@ -303746,7 +303746,7 @@
           "score": 0.4393705874219214,
           "win_rate": 0.494,
           "matches": 320,
-          "value": 0.7573753468452198,
+          "value": 0.7573753468452196,
           "tier_score": "C"
         },
         {
@@ -303756,7 +303756,7 @@
           "score": 0.4389285012637603,
           "win_rate": 0.502,
           "matches": 237,
-          "value": 0.6157563694634158,
+          "value": 0.6157563694634159,
           "tier_score": "C"
         },
         {
@@ -303766,7 +303766,7 @@
           "score": 0.43842316135757814,
           "win_rate": 0.533,
           "matches": 105,
-          "value": 0.46745201928599234,
+          "value": 0.4674520192859927,
           "tier_score": "C"
         },
         {
@@ -303776,7 +303776,7 @@
           "score": 0.4372357143975481,
           "win_rate": 0.483,
           "matches": 447,
-          "value": 0.7466399550996317,
+          "value": 0.7466399550996318,
           "tier_score": "C"
         },
         {
@@ -303786,7 +303786,7 @@
           "score": 0.43677341176197304,
           "win_rate": 0.471,
           "matches": 809,
-          "value": 0.7989038668512007,
+          "value": 0.7989038668512009,
           "tier_score": "C"
         },
         {
@@ -303796,7 +303796,7 @@
           "score": 0.4363425581426945,
           "win_rate": 0.508,
           "matches": 183,
-          "value": 0.6239812295578352,
+          "value": 0.6239812295578353,
           "tier_score": "C"
         },
         {
@@ -303806,7 +303806,7 @@
           "score": 0.4332459840604423,
           "win_rate": 0.529,
           "matches": 102,
-          "value": 0.9574206551537155,
+          "value": 0.9574206551537151,
           "tier_score": "C"
         },
         {
@@ -303826,7 +303826,7 @@
           "score": 0.4310200470971506,
           "win_rate": 0.533,
           "matches": 90,
-          "value": 0.40207787611967205,
+          "value": 0.402077876119672,
           "tier_score": "C"
         },
         {
@@ -303866,7 +303866,7 @@
           "score": 0.4248617443382648,
           "win_rate": 0.529,
           "matches": 87,
-          "value": 0.7236429934931747,
+          "value": 0.7236429934931748,
           "tier_score": "C"
         },
         {
@@ -303876,7 +303876,7 @@
           "score": 0.42132983292803394,
           "win_rate": 0.46,
           "matches": 617,
-          "value": 0.7765233103060603,
+          "value": 0.7765233103060604,
           "tier_score": "C"
         },
         {
@@ -303886,7 +303886,7 @@
           "score": 0.4198448277515705,
           "win_rate": 0.458,
           "matches": 651,
-          "value": 0.8614519907775007,
+          "value": 0.8614519907775008,
           "tier_score": "C"
         },
         {
@@ -303906,7 +303906,7 @@
           "score": 0.4149904646555562,
           "win_rate": 0.436,
           "matches": 2197,
-          "value": 0.7878182736184104,
+          "value": 0.7878182736184105,
           "tier_score": "C"
         },
         {
@@ -303916,7 +303916,7 @@
           "score": 0.4133257730247514,
           "win_rate": 0.5,
           "matches": 124,
-          "value": 0.4849794560741991,
+          "value": 0.48497945607419934,
           "tier_score": "C"
         },
         {
@@ -303926,7 +303926,7 @@
           "score": 0.4118751476055555,
           "win_rate": 0.482,
           "matches": 191,
-          "value": 0.9375626254720233,
+          "value": 0.9375626254720232,
           "tier_score": "C"
         },
         {
@@ -303996,7 +303996,7 @@
           "score": 0.3945475322871552,
           "win_rate": 0.451,
           "matches": 293,
-          "value": 0.7774857366621399,
+          "value": 0.77748573666214,
           "tier_score": "C"
         },
         {
@@ -304016,7 +304016,7 @@
           "score": 0.3831983862733474,
           "win_rate": 0.476,
           "matches": 105,
-          "value": 0.7550341288490643,
+          "value": 0.7550341288490642,
           "tier_score": "C"
         },
         {
@@ -304026,7 +304026,7 @@
           "score": 0.38170665864691183,
           "win_rate": 0.493,
           "matches": 73,
-          "value": 0.401088809270587,
+          "value": 0.4010888092705869,
           "tier_score": "C"
         },
         {
@@ -304046,7 +304046,7 @@
           "score": 0.3785889928639148,
           "win_rate": 0.451,
           "matches": 173,
-          "value": 0.6202377752249566,
+          "value": 0.6202377752249565,
           "tier_score": "C"
         },
         {
@@ -304066,7 +304066,7 @@
           "score": 0.3619910864569657,
           "win_rate": 0.513,
           "matches": 39,
-          "value": 0.5174680097563785,
+          "value": 0.5174680097563786,
           "tier_score": "C"
         },
         {
@@ -304076,7 +304076,7 @@
           "score": 0.3574781238878701,
           "win_rate": 0.463,
           "matches": 80,
-          "value": 0.6862473212612074,
+          "value": 0.6862473212612072,
           "tier_score": "C"
         },
         {
@@ -304086,7 +304086,7 @@
           "score": 0.34810028273121946,
           "win_rate": 0.433,
           "matches": 120,
-          "value": 0.5048074108382039,
+          "value": 0.5048074108382038,
           "tier_score": "C"
         },
         {
@@ -304106,7 +304106,7 @@
           "score": 0.3238651625129941,
           "win_rate": 0.446,
           "matches": 56,
-          "value": 0.7483310785129286,
+          "value": 0.7483310785129285,
           "tier_score": "C"
         },
         {
@@ -304146,7 +304146,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.18067259729646412,
+          "value": 0.1806725972964642,
           "tier_score": null
         },
         {
@@ -304166,7 +304166,7 @@
           "score": null,
           "win_rate": 0.571,
           "matches": 7,
-          "value": 0.585740176616779,
+          "value": 0.5857401766167791,
           "tier_score": null
         },
         {
@@ -304206,7 +304206,7 @@
           "score": null,
           "win_rate": 0.448,
           "matches": 29,
-          "value": 0.5561449035212194,
+          "value": 0.5561449035212193,
           "tier_score": null
         },
         {
@@ -304216,7 +304216,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.5247207079927522,
+          "value": 0.5247207079927521,
           "tier_score": null
         },
         {
@@ -304236,7 +304236,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.4101087372406227,
+          "value": 0.41010873724062274,
           "tier_score": null
         },
         {
@@ -304246,7 +304246,7 @@
           "score": null,
           "win_rate": 0.6,
           "matches": 10,
-          "value": 0.3297742504954643,
+          "value": 0.32977425049546444,
           "tier_score": null
         },
         {
@@ -304256,7 +304256,7 @@
           "score": null,
           "win_rate": 0.875,
           "matches": 16,
-          "value": 0.5661156336141316,
+          "value": 0.5661156336141314,
           "tier_score": null
         },
         {
@@ -304266,7 +304266,7 @@
           "score": null,
           "win_rate": 0.667,
           "matches": 6,
-          "value": 0.6798288611082155,
+          "value": 0.6798288611082154,
           "tier_score": null
         },
         {
@@ -304286,7 +304286,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.3625545682635717,
+          "value": 0.36255456826357163,
           "tier_score": null
         },
         {
@@ -304306,7 +304306,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.6988534091804056,
+          "value": 0.6988534091804057,
           "tier_score": null
         },
         {
@@ -304316,7 +304316,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.5031577497573861,
+          "value": 0.503157749757386,
           "tier_score": null
         },
         {
@@ -305233,7 +305233,7 @@
           "score": 0.627676890545152,
           "win_rate": 0.75,
           "matches": 60,
-          "value": 0.42835275296005226,
+          "value": 0.42835275296005215,
           "tier_score": "S"
         },
         {
@@ -305243,7 +305243,7 @@
           "score": 0.6075624079669637,
           "win_rate": 0.622,
           "matches": 4607,
-          "value": 0.29135895237403603,
+          "value": 0.29135895237403614,
           "tier_score": "S"
         },
         {
@@ -305253,7 +305253,7 @@
           "score": 0.5944713611943473,
           "win_rate": 0.608,
           "matches": 4996,
-          "value": 0.3423734030795642,
+          "value": 0.34237340307956404,
           "tier_score": "S"
         },
         {
@@ -305273,7 +305273,7 @@
           "score": 0.5906332568425112,
           "win_rate": 0.601,
           "matches": 8117,
-          "value": 0.38625629791210986,
+          "value": 0.38625629791210975,
           "tier_score": "S"
         },
         {
@@ -305283,7 +305283,7 @@
           "score": 0.5894676284425309,
           "win_rate": 0.628,
           "matches": 634,
-          "value": 0.48237867057776895,
+          "value": 0.482378670577769,
           "tier_score": "S"
         },
         {
@@ -305293,7 +305293,7 @@
           "score": 0.5879182756128016,
           "win_rate": 0.618,
           "matches": 1059,
-          "value": 0.3843277393061704,
+          "value": 0.3843277393061707,
           "tier_score": "S"
         },
         {
@@ -305303,7 +305303,7 @@
           "score": 0.5732332179284764,
           "win_rate": 0.641,
           "matches": 206,
-          "value": 0.43490890139733424,
+          "value": 0.4349089013973343,
           "tier_score": "S"
         },
         {
@@ -305313,7 +305313,7 @@
           "score": 0.5727436304577318,
           "win_rate": 0.591,
           "matches": 2953,
-          "value": 0.8584389783476634,
+          "value": 0.8584389783476635,
           "tier_score": "S"
         },
         {
@@ -305323,7 +305323,7 @@
           "score": 0.5725792430193152,
           "win_rate": 0.601,
           "matches": 1146,
-          "value": 0.5279033126984808,
+          "value": 0.527903312698481,
           "tier_score": "S"
         },
         {
@@ -305333,7 +305333,7 @@
           "score": 0.5720109878144057,
           "win_rate": 0.583,
           "matches": 7351,
-          "value": 0.5398801889894367,
+          "value": 0.5398801889894369,
           "tier_score": "S"
         },
         {
@@ -305353,7 +305353,7 @@
           "score": 0.5692900395049582,
           "win_rate": 0.625,
           "matches": 299,
-          "value": 0.4466524578760417,
+          "value": 0.44665245787604174,
           "tier_score": "S"
         },
         {
@@ -305363,7 +305363,7 @@
           "score": 0.5682079449229971,
           "win_rate": 0.585,
           "matches": 3439,
-          "value": 0.3195942975932886,
+          "value": 0.31959429759328867,
           "tier_score": "S"
         },
         {
@@ -305373,7 +305373,7 @@
           "score": 0.5656482516553425,
           "win_rate": 0.575,
           "matches": 9750,
-          "value": 0.4381787376586681,
+          "value": 0.4381787376586678,
           "tier_score": "S"
         },
         {
@@ -305383,7 +305383,7 @@
           "score": 0.5644681838865596,
           "win_rate": 0.584,
           "matches": 2483,
-          "value": 0.3061865642372383,
+          "value": 0.3061865642372382,
           "tier_score": "S"
         },
         {
@@ -305393,7 +305393,7 @@
           "score": 0.5644229771795292,
           "win_rate": 0.619,
           "matches": 320,
-          "value": 0.3510489484666438,
+          "value": 0.3510489484666437,
           "tier_score": "S"
         },
         {
@@ -305403,7 +305403,7 @@
           "score": 0.5643749130312062,
           "win_rate": 0.577,
           "matches": 5738,
-          "value": 0.5576035928115833,
+          "value": 0.5576035928115838,
           "tier_score": "S"
         },
         {
@@ -305423,7 +305423,7 @@
           "score": 0.5597432779446877,
           "win_rate": 0.574,
           "matches": 4715,
-          "value": 0.26557207315166365,
+          "value": 0.2655720731516638,
           "tier_score": "S"
         },
         {
@@ -305433,7 +305433,7 @@
           "score": 0.5590618311766973,
           "win_rate": 0.57,
           "matches": 7829,
-          "value": 0.40713291505016025,
+          "value": 0.40713291505016036,
           "tier_score": "S"
         },
         {
@@ -305453,7 +305453,7 @@
           "score": 0.5580695429024831,
           "win_rate": 0.572,
           "matches": 5005,
-          "value": 0.5882216994369404,
+          "value": 0.5882216994369408,
           "tier_score": "A"
         },
         {
@@ -305463,7 +305463,7 @@
           "score": 0.5579829293329567,
           "win_rate": 0.572,
           "matches": 4873,
-          "value": 0.5881594107311736,
+          "value": 0.5881594107311737,
           "tier_score": "A"
         },
         {
@@ -305473,7 +305473,7 @@
           "score": 0.5537593120358879,
           "win_rate": 0.624,
           "matches": 194,
-          "value": 0.5232525663196745,
+          "value": 0.5232525663196743,
           "tier_score": "A"
         },
         {
@@ -305493,7 +305493,7 @@
           "score": 0.5533951638301595,
           "win_rate": 0.607,
           "matches": 326,
-          "value": 0.4937617075296594,
+          "value": 0.49376170752965937,
           "tier_score": "A"
         },
         {
@@ -305503,7 +305503,7 @@
           "score": 0.5513389576101263,
           "win_rate": 0.563,
           "matches": 6460,
-          "value": 0.44817628860647546,
+          "value": 0.44817628860647557,
           "tier_score": "A"
         },
         {
@@ -305523,7 +305523,7 @@
           "score": 0.5502294095056117,
           "win_rate": 0.562,
           "matches": 6365,
-          "value": 0.5413655630141447,
+          "value": 0.5413655630141452,
           "tier_score": "A"
         },
         {
@@ -305543,7 +305543,7 @@
           "score": 0.5496110123874567,
           "win_rate": 0.575,
           "matches": 1489,
-          "value": 0.5906391137549722,
+          "value": 0.5906391137549724,
           "tier_score": "A"
         },
         {
@@ -305553,7 +305553,7 @@
           "score": 0.5492452477235924,
           "win_rate": 0.568,
           "matches": 2570,
-          "value": 0.417094977679103,
+          "value": 0.41709497767910286,
           "tier_score": "A"
         },
         {
@@ -305563,7 +305563,7 @@
           "score": 0.5485489791021828,
           "win_rate": 0.564,
           "matches": 4189,
-          "value": 0.5171883683370072,
+          "value": 0.5171883683370074,
           "tier_score": "A"
         },
         {
@@ -305573,7 +305573,7 @@
           "score": 0.5476723947906886,
           "win_rate": 0.569,
           "matches": 2086,
-          "value": 0.3625545682635717,
+          "value": 0.36255456826357163,
           "tier_score": "A"
         },
         {
@@ -305583,7 +305583,7 @@
           "score": 0.5460379673252933,
           "win_rate": 0.588,
           "matches": 532,
-          "value": 0.3932902504667953,
+          "value": 0.3932902504667955,
           "tier_score": "A"
         },
         {
@@ -305593,7 +305593,7 @@
           "score": 0.5459991949957902,
           "win_rate": 0.562,
           "matches": 3838,
-          "value": 0.45042181188132857,
+          "value": 0.45042181188132896,
           "tier_score": "A"
         },
         {
@@ -305603,7 +305603,7 @@
           "score": 0.5458022861688699,
           "win_rate": 0.598,
           "matches": 346,
-          "value": 0.5175114707814241,
+          "value": 0.5175114707814242,
           "tier_score": "A"
         },
         {
@@ -305613,7 +305613,7 @@
           "score": 0.5438812298100528,
           "win_rate": 0.555,
           "matches": 8236,
-          "value": 0.45838195778420426,
+          "value": 0.4583819577842043,
           "tier_score": "A"
         },
         {
@@ -305633,7 +305633,7 @@
           "score": 0.5437198121775311,
           "win_rate": 0.562,
           "matches": 2742,
-          "value": 0.6316349872066335,
+          "value": 0.6316349872066337,
           "tier_score": "A"
         },
         {
@@ -305643,7 +305643,7 @@
           "score": 0.5429971883613661,
           "win_rate": 0.562,
           "matches": 2570,
-          "value": 0.410219790246881,
+          "value": 0.41021979024688104,
           "tier_score": "A"
         },
         {
@@ -305653,7 +305653,7 @@
           "score": 0.5418944286372392,
           "win_rate": 0.68,
           "matches": 50,
-          "value": 0.4242841394125821,
+          "value": 0.42428413941258214,
           "tier_score": "A"
         },
         {
@@ -305663,7 +305663,7 @@
           "score": 0.5404984328501082,
           "win_rate": 0.56,
           "matches": 2578,
-          "value": 0.496379194818504,
+          "value": 0.4963791948185041,
           "tier_score": "A"
         },
         {
@@ -305673,7 +305673,7 @@
           "score": 0.5392067669107327,
           "win_rate": 0.57,
           "matches": 989,
-          "value": 0.36482192342656017,
+          "value": 0.3648219234265603,
           "tier_score": "A"
         },
         {
@@ -305683,7 +305683,7 @@
           "score": 0.5386389871310455,
           "win_rate": 0.562,
           "matches": 1780,
-          "value": 0.5668623655159903,
+          "value": 0.5668623655159902,
           "tier_score": "A"
         },
         {
@@ -305693,7 +305693,7 @@
           "score": 0.5383105034844307,
           "win_rate": 0.554,
           "matches": 3934,
-          "value": 0.4464746486086973,
+          "value": 0.44647464860869734,
           "tier_score": "A"
         },
         {
@@ -305703,7 +305703,7 @@
           "score": 0.537458511990388,
           "win_rate": 0.557,
           "matches": 2521,
-          "value": 0.5250313241459214,
+          "value": 0.5250313241459209,
           "tier_score": "A"
         },
         {
@@ -305713,7 +305713,7 @@
           "score": 0.537219706844916,
           "win_rate": 0.589,
           "matches": 353,
-          "value": 0.2541723577327434,
+          "value": 0.2541723577327433,
           "tier_score": "A"
         },
         {
@@ -305723,7 +305723,7 @@
           "score": 0.5365062301533012,
           "win_rate": 0.549,
           "matches": 6275,
-          "value": 0.6606519194215593,
+          "value": 0.6606519194215595,
           "tier_score": "A"
         },
         {
@@ -305733,7 +305733,7 @@
           "score": 0.5359110688502293,
           "win_rate": 0.545,
           "matches": 11036,
-          "value": 0.7081031855037712,
+          "value": 0.7081031855037714,
           "tier_score": "A"
         },
         {
@@ -305743,7 +305743,7 @@
           "score": 0.5359089117841311,
           "win_rate": 0.551,
           "matches": 4450,
-          "value": 0.49289910851377994,
+          "value": 0.49289910851378005,
           "tier_score": "A"
         },
         {
@@ -305753,7 +305753,7 @@
           "score": 0.5356318008836605,
           "win_rate": 0.566,
           "matches": 1068,
-          "value": 0.38697200355434297,
+          "value": 0.3869720035543428,
           "tier_score": "A"
         },
         {
@@ -305763,7 +305763,7 @@
           "score": 0.5344243489640382,
           "win_rate": 0.55,
           "matches": 3940,
-          "value": 0.4172028951373356,
+          "value": 0.41720289513733566,
           "tier_score": "A"
         },
         {
@@ -305773,7 +305773,7 @@
           "score": 0.5341783173855387,
           "win_rate": 0.552,
           "matches": 2998,
-          "value": 0.5932697436610296,
+          "value": 0.5932697436610295,
           "tier_score": "A"
         },
         {
@@ -305783,7 +305783,7 @@
           "score": 0.5339242339185283,
           "win_rate": 0.557,
           "matches": 1810,
-          "value": 0.3537123826117097,
+          "value": 0.3537123826117098,
           "tier_score": "A"
         },
         {
@@ -305793,7 +305793,7 @@
           "score": 0.5334222422974781,
           "win_rate": 0.553,
           "matches": 2455,
-          "value": 0.48109263050867335,
+          "value": 0.48109263050867324,
           "tier_score": "A"
         },
         {
@@ -305803,7 +305803,7 @@
           "score": 0.5328816091082943,
           "win_rate": 0.545,
           "matches": 6794,
-          "value": 0.5806090220187823,
+          "value": 0.5806090220187822,
           "tier_score": "A"
         },
         {
@@ -305813,7 +305813,7 @@
           "score": 0.5328181670174403,
           "win_rate": 0.555,
           "matches": 2003,
-          "value": 0.336734438374487,
+          "value": 0.33673443837448713,
           "tier_score": "A"
         },
         {
@@ -305823,7 +305823,7 @@
           "score": 0.5326515425855324,
           "win_rate": 0.543,
           "matches": 8350,
-          "value": 0.6584167104294756,
+          "value": 0.6584167104294758,
           "tier_score": "A"
         },
         {
@@ -305833,7 +305833,7 @@
           "score": 0.5325617490189145,
           "win_rate": 0.555,
           "matches": 1923,
-          "value": 0.34289853639625256,
+          "value": 0.34289853639625234,
           "tier_score": "A"
         },
         {
@@ -305843,7 +305843,7 @@
           "score": 0.5319011763756946,
           "win_rate": 0.604,
           "matches": 182,
-          "value": 0.8980263630907668,
+          "value": 0.8980263630907673,
           "tier_score": "A"
         },
         {
@@ -305853,7 +305853,7 @@
           "score": 0.5310876253145177,
           "win_rate": 0.551,
           "matches": 2375,
-          "value": 0.2782404200179374,
+          "value": 0.278240420017938,
           "tier_score": "B"
         },
         {
@@ -305863,7 +305863,7 @@
           "score": 0.5302739958520112,
           "win_rate": 0.572,
           "matches": 558,
-          "value": 0.39459200637539343,
+          "value": 0.39459200637539366,
           "tier_score": "B"
         },
         {
@@ -305873,7 +305873,7 @@
           "score": 0.5299662415525638,
           "win_rate": 0.542,
           "matches": 6482,
-          "value": 0.48678291467036533,
+          "value": 0.4867829146703654,
           "tier_score": "B"
         },
         {
@@ -305883,7 +305883,7 @@
           "score": 0.5294576334237145,
           "win_rate": 0.544,
           "matches": 4332,
-          "value": 0.5055336048090181,
+          "value": 0.505533604809018,
           "tier_score": "B"
         },
         {
@@ -305893,7 +305893,7 @@
           "score": 0.5294380516788747,
           "win_rate": 0.576,
           "matches": 450,
-          "value": 0.5462849757147163,
+          "value": 0.5462849757147161,
           "tier_score": "B"
         },
         {
@@ -305903,7 +305903,7 @@
           "score": 0.5292861460375375,
           "win_rate": 0.545,
           "matches": 4013,
-          "value": 0.4835691356251085,
+          "value": 0.4835691356251084,
           "tier_score": "B"
         },
         {
@@ -305913,7 +305913,7 @@
           "score": 0.5291966667004471,
           "win_rate": 0.574,
           "matches": 481,
-          "value": 0.49680354805368643,
+          "value": 0.4968035480536863,
           "tier_score": "B"
         },
         {
@@ -305923,7 +305923,7 @@
           "score": 0.5285760418547213,
           "win_rate": 0.57,
           "matches": 567,
-          "value": 0.4338626828292211,
+          "value": 0.43386268282922097,
           "tier_score": "B"
         },
         {
@@ -305933,7 +305933,7 @@
           "score": 0.5282586042103156,
           "win_rate": 0.537,
           "matches": 13233,
-          "value": 0.5193099396486984,
+          "value": 0.5193099396486983,
           "tier_score": "B"
         },
         {
@@ -305943,7 +305943,7 @@
           "score": 0.5280925566117357,
           "win_rate": 0.547,
           "matches": 2775,
-          "value": 0.42727245213654724,
+          "value": 0.4272724521365475,
           "tier_score": "B"
         },
         {
@@ -305953,7 +305953,7 @@
           "score": 0.5274922448020886,
           "win_rate": 0.558,
           "matches": 1060,
-          "value": 0.5237259109513462,
+          "value": 0.5237259109513464,
           "tier_score": "B"
         },
         {
@@ -305973,7 +305973,7 @@
           "score": 0.5273225154890899,
           "win_rate": 0.542,
           "matches": 4613,
-          "value": 0.5837565733170245,
+          "value": 0.5837565733170249,
           "tier_score": "B"
         },
         {
@@ -305983,7 +305983,7 @@
           "score": 0.5272737374079495,
           "win_rate": 0.587,
           "matches": 271,
-          "value": 0.3813668356033108,
+          "value": 0.3813668356033106,
           "tier_score": "B"
         },
         {
@@ -305993,7 +305993,7 @@
           "score": 0.5259582538955491,
           "win_rate": 0.564,
           "matches": 665,
-          "value": 0.19917905486374773,
+          "value": 0.19917905486374782,
           "tier_score": "B"
         },
         {
@@ -306003,7 +306003,7 @@
           "score": 0.525534641278554,
           "win_rate": 0.535,
           "matches": 10999,
-          "value": 0.5234283386159191,
+          "value": 0.5234283386159188,
           "tier_score": "B"
         },
         {
@@ -306013,7 +306013,7 @@
           "score": 0.5232228846285965,
           "win_rate": 0.555,
           "matches": 944,
-          "value": 0.5017640431499787,
+          "value": 0.5017640431499788,
           "tier_score": "B"
         },
         {
@@ -306023,7 +306023,7 @@
           "score": 0.5227468680241646,
           "win_rate": 0.563,
           "matches": 597,
-          "value": 0.4903682176744143,
+          "value": 0.4903682176744146,
           "tier_score": "B"
         },
         {
@@ -306033,7 +306033,7 @@
           "score": 0.5226939659492492,
           "win_rate": 0.552,
           "matches": 1142,
-          "value": 0.6303486850524002,
+          "value": 0.6303486850524,
           "tier_score": "B"
         },
         {
@@ -306053,7 +306053,7 @@
           "score": 0.5213909157029398,
           "win_rate": 0.545,
           "matches": 1708,
-          "value": 0.4397566699064893,
+          "value": 0.4397566699064892,
           "tier_score": "B"
         },
         {
@@ -306063,7 +306063,7 @@
           "score": 0.5205651995915506,
           "win_rate": 0.541,
           "matches": 2373,
-          "value": 0.3699427717215028,
+          "value": 0.36994277172150286,
           "tier_score": "B"
         },
         {
@@ -306073,7 +306073,7 @@
           "score": 0.5203703682995114,
           "win_rate": 0.549,
           "matches": 1175,
-          "value": 0.5517634675771581,
+          "value": 0.5517634675771577,
           "tier_score": "B"
         },
         {
@@ -306083,7 +306083,7 @@
           "score": 0.5193818091228568,
           "win_rate": 0.542,
           "matches": 1916,
-          "value": 0.17204691536014313,
+          "value": 0.17204691536014297,
           "tier_score": "B"
         },
         {
@@ -306093,7 +306093,7 @@
           "score": 0.5188075218426758,
           "win_rate": 0.537,
           "matches": 2890,
-          "value": 0.3751136702951395,
+          "value": 0.3751136702951396,
           "tier_score": "B"
         },
         {
@@ -306103,7 +306103,7 @@
           "score": 0.5184253015651249,
           "win_rate": 0.589,
           "matches": 190,
-          "value": 0.4343753128610982,
+          "value": 0.43437531286109826,
           "tier_score": "B"
         },
         {
@@ -306113,7 +306113,7 @@
           "score": 0.5169666758026794,
           "win_rate": 0.534,
           "matches": 3408,
-          "value": 0.44737188348733004,
+          "value": 0.4473718834873298,
           "tier_score": "B"
         },
         {
@@ -306123,7 +306123,7 @@
           "score": 0.5160348359470608,
           "win_rate": 0.536,
           "matches": 2382,
-          "value": 0.5876183427730135,
+          "value": 0.587618342773014,
           "tier_score": "B"
         },
         {
@@ -306133,7 +306133,7 @@
           "score": 0.5155933010649452,
           "win_rate": 0.544,
           "matches": 1212,
-          "value": 0.48550639203345974,
+          "value": 0.48550639203345985,
           "tier_score": "B"
         },
         {
@@ -306143,7 +306143,7 @@
           "score": 0.5148137046105057,
           "win_rate": 0.533,
           "matches": 2954,
-          "value": 0.2731619954690228,
+          "value": 0.27316199546902264,
           "tier_score": "B"
         },
         {
@@ -306153,7 +306153,7 @@
           "score": 0.5145525257091631,
           "win_rate": 0.527,
           "matches": 6255,
-          "value": 0.4205793285168091,
+          "value": 0.4205793285168092,
           "tier_score": "B"
         },
         {
@@ -306163,7 +306163,7 @@
           "score": 0.5140403878760497,
           "win_rate": 0.548,
           "matches": 834,
-          "value": 0.5774471217799357,
+          "value": 0.5774471217799358,
           "tier_score": "B"
         },
         {
@@ -306173,7 +306173,7 @@
           "score": 0.5138078205110361,
           "win_rate": 0.551,
           "matches": 682,
-          "value": 0.287542053731783,
+          "value": 0.28754205373178254,
           "tier_score": "B"
         },
         {
@@ -306183,7 +306183,7 @@
           "score": 0.5123871762340143,
           "win_rate": 0.544,
           "matches": 969,
-          "value": 0.412166629982614,
+          "value": 0.4121666299826141,
           "tier_score": "B"
         },
         {
@@ -306193,7 +306193,7 @@
           "score": 0.5116836822431863,
           "win_rate": 0.548,
           "matches": 730,
-          "value": 0.4157495346570444,
+          "value": 0.4157495346570447,
           "tier_score": "B"
         },
         {
@@ -306213,7 +306213,7 @@
           "score": 0.5090749947406449,
           "win_rate": 0.546,
           "matches": 690,
-          "value": 0.21978770371634426,
+          "value": 0.21978770371634418,
           "tier_score": "B"
         },
         {
@@ -306243,7 +306243,7 @@
           "score": 0.5035354672507041,
           "win_rate": 0.587,
           "matches": 138,
-          "value": 0.5705425293954718,
+          "value": 0.5705425293954719,
           "tier_score": "B"
         },
         {
@@ -306253,7 +306253,7 @@
           "score": 0.5024243692386572,
           "win_rate": 0.539,
           "matches": 718,
-          "value": 0.5387738522860978,
+          "value": 0.5387738522860979,
           "tier_score": "B"
         },
         {
@@ -306263,7 +306263,7 @@
           "score": 0.5000018611445395,
           "win_rate": 0.521,
           "matches": 2251,
-          "value": 0.5034714348364692,
+          "value": 0.503471434836469,
           "tier_score": "B"
         },
         {
@@ -306283,7 +306283,7 @@
           "score": 0.4999188778213167,
           "win_rate": 0.591,
           "matches": 115,
-          "value": 0.4472660288027819,
+          "value": 0.4472660288027816,
           "tier_score": "B"
         },
         {
@@ -306293,7 +306293,7 @@
           "score": 0.4989661611300804,
           "win_rate": 0.536,
           "matches": 717,
-          "value": 0.42950904760722397,
+          "value": 0.42950904760722386,
           "tier_score": "B"
         },
         {
@@ -306303,7 +306303,7 @@
           "score": 0.49850022043569253,
           "win_rate": 0.547,
           "matches": 400,
-          "value": 0.5381556097433905,
+          "value": 0.5381556097433904,
           "tier_score": "B"
         },
         {
@@ -306313,7 +306313,7 @@
           "score": 0.496318484556742,
           "win_rate": 0.549,
           "matches": 348,
-          "value": 0.5088228248709773,
+          "value": 0.5088228248709772,
           "tier_score": "B"
         },
         {
@@ -306323,7 +306323,7 @@
           "score": 0.4958179968885849,
           "win_rate": 0.553,
           "matches": 291,
-          "value": 0.48080255114205567,
+          "value": 0.4808025511420558,
           "tier_score": "B"
         },
         {
@@ -306333,7 +306333,7 @@
           "score": 0.4955320145370419,
           "win_rate": 0.559,
           "matches": 236,
-          "value": 0.46106429176902886,
+          "value": 0.46106429176902874,
           "tier_score": "B"
         },
         {
@@ -306353,7 +306353,7 @@
           "score": 0.49419310534999833,
           "win_rate": 0.608,
           "matches": 74,
-          "value": 0.5246969774387917,
+          "value": 0.5246969774387913,
           "tier_score": "B"
         },
         {
@@ -306373,7 +306373,7 @@
           "score": 0.49360306959319283,
           "win_rate": 0.528,
           "matches": 791,
-          "value": 0.250742416374484,
+          "value": 0.2507424163744841,
           "tier_score": "B"
         },
         {
@@ -306383,7 +306383,7 @@
           "score": 0.49273271654462253,
           "win_rate": 0.548,
           "matches": 310,
-          "value": 0.5821724765392863,
+          "value": 0.5821724765392864,
           "tier_score": "B"
         },
         {
@@ -306413,7 +306413,7 @@
           "score": 0.4900669003687678,
           "win_rate": 0.53,
           "matches": 596,
-          "value": 0.5796939528196433,
+          "value": 0.5796939528196429,
           "tier_score": "B"
         },
         {
@@ -306423,7 +306423,7 @@
           "score": 0.48981478047547694,
           "win_rate": 0.525,
           "matches": 791,
-          "value": 0.6240231598050575,
+          "value": 0.6240231598050576,
           "tier_score": "B"
         },
         {
@@ -306443,7 +306443,7 @@
           "score": 0.4894978828813306,
           "win_rate": 0.525,
           "matches": 756,
-          "value": 0.3788528836314468,
+          "value": 0.3788528836314467,
           "tier_score": "B"
         },
         {
@@ -306463,7 +306463,7 @@
           "score": 0.4888986851373076,
           "win_rate": 0.534,
           "matches": 468,
-          "value": 0.32905716741501995,
+          "value": 0.32905716741501967,
           "tier_score": "B"
         },
         {
@@ -306483,7 +306483,7 @@
           "score": 0.48508494480773395,
           "win_rate": 0.574,
           "matches": 122,
-          "value": 0.49608785530877275,
+          "value": 0.49608785530877264,
           "tier_score": "B"
         },
         {
@@ -306493,7 +306493,7 @@
           "score": 0.48460463819212235,
           "win_rate": 0.53,
           "matches": 470,
-          "value": 0.4156286786744155,
+          "value": 0.4156286786744158,
           "tier_score": "B"
         },
         {
@@ -306503,7 +306503,7 @@
           "score": 0.4833420949380607,
           "win_rate": 0.506,
           "matches": 1908,
-          "value": 0.4869116390078008,
+          "value": 0.48691163900780093,
           "tier_score": "B"
         },
         {
@@ -306533,7 +306533,7 @@
           "score": 0.47957527323975147,
           "win_rate": 0.515,
           "matches": 749,
-          "value": 0.4402977026899298,
+          "value": 0.44029770268992974,
           "tier_score": "B"
         },
         {
@@ -306573,7 +306573,7 @@
           "score": 0.47685921447723106,
           "win_rate": 0.516,
           "matches": 628,
-          "value": 0.19626051307030012,
+          "value": 0.1962605130703002,
           "tier_score": "B"
         },
         {
@@ -306583,7 +306583,7 @@
           "score": 0.4754293000577386,
           "win_rate": 0.503,
           "matches": 1240,
-          "value": 0.8008281940797025,
+          "value": 0.8008281940797027,
           "tier_score": "B"
         },
         {
@@ -306593,7 +306593,7 @@
           "score": 0.4752288049830781,
           "win_rate": 0.542,
           "matches": 212,
-          "value": 0.5033274515329986,
+          "value": 0.5033274515329985,
           "tier_score": "B"
         },
         {
@@ -306603,7 +306603,7 @@
           "score": 0.473853643549359,
           "win_rate": 0.5,
           "matches": 1439,
-          "value": 0.4869331217395479,
+          "value": 0.48693312173954767,
           "tier_score": "B"
         },
         {
@@ -306623,7 +306623,7 @@
           "score": 0.4698369712299657,
           "win_rate": 0.575,
           "matches": 87,
-          "value": 0.43385594253980997,
+          "value": 0.4338559425398101,
           "tier_score": "B"
         },
         {
@@ -306633,7 +306633,7 @@
           "score": 0.46893991720237704,
           "win_rate": 0.517,
           "matches": 420,
-          "value": 0.5403603447466482,
+          "value": 0.5403603447466481,
           "tier_score": "B"
         },
         {
@@ -306643,7 +306643,7 @@
           "score": 0.4658618105319294,
           "win_rate": 0.535,
           "matches": 202,
-          "value": 0.45792965360462357,
+          "value": 0.4579296536046235,
           "tier_score": "B"
         },
         {
@@ -306653,7 +306653,7 @@
           "score": 0.46559199885698926,
           "win_rate": 0.511,
           "matches": 472,
-          "value": 0.40397813959253137,
+          "value": 0.40397813959253115,
           "tier_score": "B"
         },
         {
@@ -306663,7 +306663,7 @@
           "score": 0.4655637230155586,
           "win_rate": 0.493,
           "matches": 1251,
-          "value": 0.6032994590611224,
+          "value": 0.6032994590611225,
           "tier_score": "B"
         },
         {
@@ -306693,7 +306693,7 @@
           "score": 0.4616837240930954,
           "win_rate": 0.48,
           "matches": 2780,
-          "value": 0.7085550396002576,
+          "value": 0.7085550396002575,
           "tier_score": "C"
         },
         {
@@ -306703,7 +306703,7 @@
           "score": 0.4612972854109612,
           "win_rate": 0.528,
           "matches": 216,
-          "value": 0.31090387092165817,
+          "value": 0.310903870921658,
           "tier_score": "C"
         },
         {
@@ -306733,7 +306733,7 @@
           "score": 0.4571748150724593,
           "win_rate": 0.522,
           "matches": 226,
-          "value": 0.39602481041221177,
+          "value": 0.39602481041221155,
           "tier_score": "C"
         },
         {
@@ -306773,7 +306773,7 @@
           "score": 0.44954701057317437,
           "win_rate": 0.533,
           "matches": 137,
-          "value": 0.5051570506178621,
+          "value": 0.505157050617862,
           "tier_score": "C"
         },
         {
@@ -306823,7 +306823,7 @@
           "score": 0.4462705347308041,
           "win_rate": 0.47,
           "matches": 1696,
-          "value": 0.762005593863475,
+          "value": 0.7620055938634752,
           "tier_score": "C"
         },
         {
@@ -306843,7 +306843,7 @@
           "score": 0.44171146415789586,
           "win_rate": 0.514,
           "matches": 183,
-          "value": 0.4784305667682118,
+          "value": 0.47843056676821166,
           "tier_score": "C"
         },
         {
@@ -306853,7 +306853,7 @@
           "score": 0.4412015042102698,
           "win_rate": 0.528,
           "matches": 127,
-          "value": 0.5068462610672616,
+          "value": 0.5068462610672614,
           "tier_score": "C"
         },
         {
@@ -306883,7 +306883,7 @@
           "score": 0.440226532209132,
           "win_rate": 0.485,
           "matches": 470,
-          "value": 0.4642947144141709,
+          "value": 0.46429471441417064,
           "tier_score": "C"
         },
         {
@@ -306903,7 +306903,7 @@
           "score": 0.4393705874219214,
           "win_rate": 0.494,
           "matches": 320,
-          "value": 0.7573753468452198,
+          "value": 0.7573753468452196,
           "tier_score": "C"
         },
         {
@@ -306913,7 +306913,7 @@
           "score": 0.4389285012637603,
           "win_rate": 0.502,
           "matches": 237,
-          "value": 0.6157563694634158,
+          "value": 0.6157563694634159,
           "tier_score": "C"
         },
         {
@@ -306923,7 +306923,7 @@
           "score": 0.43842316135757814,
           "win_rate": 0.533,
           "matches": 105,
-          "value": 0.46745201928599234,
+          "value": 0.4674520192859927,
           "tier_score": "C"
         },
         {
@@ -306933,7 +306933,7 @@
           "score": 0.4372357143975481,
           "win_rate": 0.483,
           "matches": 447,
-          "value": 0.7466399550996317,
+          "value": 0.7466399550996318,
           "tier_score": "C"
         },
         {
@@ -306943,7 +306943,7 @@
           "score": 0.43677341176197304,
           "win_rate": 0.471,
           "matches": 809,
-          "value": 0.7989038668512007,
+          "value": 0.7989038668512009,
           "tier_score": "C"
         },
         {
@@ -306953,7 +306953,7 @@
           "score": 0.4363425581426945,
           "win_rate": 0.508,
           "matches": 183,
-          "value": 0.6239812295578352,
+          "value": 0.6239812295578353,
           "tier_score": "C"
         },
         {
@@ -306963,7 +306963,7 @@
           "score": 0.4332459840604423,
           "win_rate": 0.529,
           "matches": 102,
-          "value": 0.9574206551537155,
+          "value": 0.9574206551537151,
           "tier_score": "C"
         },
         {
@@ -306983,7 +306983,7 @@
           "score": 0.4310200470971506,
           "win_rate": 0.533,
           "matches": 90,
-          "value": 0.40207787611967205,
+          "value": 0.402077876119672,
           "tier_score": "C"
         },
         {
@@ -307023,7 +307023,7 @@
           "score": 0.4248617443382648,
           "win_rate": 0.529,
           "matches": 87,
-          "value": 0.7236429934931747,
+          "value": 0.7236429934931748,
           "tier_score": "C"
         },
         {
@@ -307033,7 +307033,7 @@
           "score": 0.42132983292803394,
           "win_rate": 0.46,
           "matches": 617,
-          "value": 0.7765233103060603,
+          "value": 0.7765233103060604,
           "tier_score": "C"
         },
         {
@@ -307043,7 +307043,7 @@
           "score": 0.4198448277515705,
           "win_rate": 0.458,
           "matches": 651,
-          "value": 0.8614519907775007,
+          "value": 0.8614519907775008,
           "tier_score": "C"
         },
         {
@@ -307063,7 +307063,7 @@
           "score": 0.4149904646555562,
           "win_rate": 0.436,
           "matches": 2197,
-          "value": 0.7878182736184104,
+          "value": 0.7878182736184105,
           "tier_score": "C"
         },
         {
@@ -307073,7 +307073,7 @@
           "score": 0.4133257730247514,
           "win_rate": 0.5,
           "matches": 124,
-          "value": 0.4849794560741991,
+          "value": 0.48497945607419934,
           "tier_score": "C"
         },
         {
@@ -307083,7 +307083,7 @@
           "score": 0.4118751476055555,
           "win_rate": 0.482,
           "matches": 191,
-          "value": 0.9375626254720233,
+          "value": 0.9375626254720232,
           "tier_score": "C"
         },
         {
@@ -307153,7 +307153,7 @@
           "score": 0.3945475322871552,
           "win_rate": 0.451,
           "matches": 293,
-          "value": 0.7774857366621399,
+          "value": 0.77748573666214,
           "tier_score": "C"
         },
         {
@@ -307173,7 +307173,7 @@
           "score": 0.3831983862733474,
           "win_rate": 0.476,
           "matches": 105,
-          "value": 0.7550341288490643,
+          "value": 0.7550341288490642,
           "tier_score": "C"
         },
         {
@@ -307183,7 +307183,7 @@
           "score": 0.38170665864691183,
           "win_rate": 0.493,
           "matches": 73,
-          "value": 0.401088809270587,
+          "value": 0.4010888092705869,
           "tier_score": "C"
         },
         {
@@ -307203,7 +307203,7 @@
           "score": 0.3785889928639148,
           "win_rate": 0.451,
           "matches": 173,
-          "value": 0.6202377752249566,
+          "value": 0.6202377752249565,
           "tier_score": "C"
         },
         {
@@ -307223,7 +307223,7 @@
           "score": 0.3619910864569657,
           "win_rate": 0.513,
           "matches": 39,
-          "value": 0.5174680097563785,
+          "value": 0.5174680097563786,
           "tier_score": "C"
         },
         {
@@ -307233,7 +307233,7 @@
           "score": 0.3574781238878701,
           "win_rate": 0.463,
           "matches": 80,
-          "value": 0.6862473212612074,
+          "value": 0.6862473212612072,
           "tier_score": "C"
         },
         {
@@ -307243,7 +307243,7 @@
           "score": 0.34810028273121946,
           "win_rate": 0.433,
           "matches": 120,
-          "value": 0.5048074108382039,
+          "value": 0.5048074108382038,
           "tier_score": "C"
         },
         {
@@ -307263,7 +307263,7 @@
           "score": 0.3238651625129941,
           "win_rate": 0.446,
           "matches": 56,
-          "value": 0.7483310785129286,
+          "value": 0.7483310785129285,
           "tier_score": "C"
         },
         {
@@ -307303,7 +307303,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.18067259729646412,
+          "value": 0.1806725972964642,
           "tier_score": null
         },
         {
@@ -307323,7 +307323,7 @@
           "score": null,
           "win_rate": 0.571,
           "matches": 7,
-          "value": 0.585740176616779,
+          "value": 0.5857401766167791,
           "tier_score": null
         },
         {
@@ -307363,7 +307363,7 @@
           "score": null,
           "win_rate": 0.448,
           "matches": 29,
-          "value": 0.5561449035212194,
+          "value": 0.5561449035212193,
           "tier_score": null
         },
         {
@@ -307373,7 +307373,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.5247207079927522,
+          "value": 0.5247207079927521,
           "tier_score": null
         },
         {
@@ -307393,7 +307393,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.4101087372406227,
+          "value": 0.41010873724062274,
           "tier_score": null
         },
         {
@@ -307403,7 +307403,7 @@
           "score": null,
           "win_rate": 0.6,
           "matches": 10,
-          "value": 0.3297742504954643,
+          "value": 0.32977425049546444,
           "tier_score": null
         },
         {
@@ -307413,7 +307413,7 @@
           "score": null,
           "win_rate": 0.875,
           "matches": 16,
-          "value": 0.5661156336141316,
+          "value": 0.5661156336141314,
           "tier_score": null
         },
         {
@@ -307423,7 +307423,7 @@
           "score": null,
           "win_rate": 0.667,
           "matches": 6,
-          "value": 0.6798288611082155,
+          "value": 0.6798288611082154,
           "tier_score": null
         },
         {
@@ -307443,7 +307443,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.3625545682635717,
+          "value": 0.36255456826357163,
           "tier_score": null
         },
         {
@@ -307463,7 +307463,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.6988534091804056,
+          "value": 0.6988534091804057,
           "tier_score": null
         },
         {
@@ -307473,7 +307473,7 @@
           "score": null,
           "win_rate": null,
           "matches": null,
-          "value": 0.5031577497573861,
+          "value": 0.503157749757386,
           "tier_score": null
         },
         {

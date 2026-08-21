@@ -554,3 +554,155 @@ def test_an_unknown_ranking_key_falls_back_to_total():
             "match_minutes": 17.5, "uniformity": 0.6}
     assert assemble.assemble_core(rows, items, n=1, economy=econ,
                                   score_key="quality") == ["A"]
+
+
+# ── Cap overflow pricing ──────────────────────────────────────────────────
+#
+# The half `stat_caps` structurally cannot express: "this item's penetration is
+# wasted, its Intelligence is not". See `assemble.cap_overflow_penalty`.
+
+_PEN_CAPS = {"Penetration %": 40, "Penetration": 50}
+_PEN_GOLD = {"Penetration %": 50.0, "Penetration": 30.0, "Intelligence": 12.0}
+
+
+def _pen(name, pct=None, flat=None, **extra):
+    stats = {}
+    if pct is not None:
+        stats["Penetration"] = f"{pct}%"
+    if flat is not None:
+        stats["Penetration"] = str(flat)
+    stats.update({k: str(v) for k, v in extra.items()})
+    return {"name": name, "tier": 3, "cost": 2500, "stats": stats}
+
+
+def test_overflow_is_free_below_the_cap():
+    item = _pen("A", pct=10, Intelligence=70)
+    assert assemble.cap_overflow_penalty(item, {"Penetration %": 20}, _PEN_CAPS,
+                                         _PEN_GOLD, 2000.0) == 0.0
+
+
+def test_overflow_charges_only_the_wasted_points():
+    """Held 35 of 40, item brings 10: 5 fit and 5 are waste. 5 x 50g = 250g."""
+    item = _pen("A", pct=10, Intelligence=70)
+    penalty = assemble.cap_overflow_penalty(item, {"Penetration %": 35}, _PEN_CAPS,
+                                            _PEN_GOLD, 2000.0)
+    assert penalty == pytest.approx(250.0 / 2000.0)
+
+
+def test_a_fully_wasted_stat_charges_all_of_it_and_no_more():
+    """At the cap already, so all 10 points are waste — but the item is still
+    worth its Intelligence, which is why this is a charge and not a refusal."""
+    item = _pen("A", pct=10, Intelligence=70)
+    penalty = assemble.cap_overflow_penalty(item, {"Penetration %": 40}, _PEN_CAPS,
+                                            _PEN_GOLD, 2000.0)
+    assert penalty == pytest.approx(500.0 / 2000.0)
+
+
+def test_uncapped_stats_are_never_charged():
+    """Requirement: an item's non-capped stats stay fully valued. Two items
+    with the same wasted penetration and wildly different Intelligence must
+    pay exactly the same charge."""
+    held = {"Penetration %": 40}
+    lean = assemble.cap_overflow_penalty(_pen("A", pct=10, Intelligence=20),
+                                         held, _PEN_CAPS, _PEN_GOLD, 2000.0)
+    rich = assemble.cap_overflow_penalty(_pen("B", pct=10, Intelligence=160),
+                                         held, _PEN_CAPS, _PEN_GOLD, 2000.0)
+    assert lean == rich > 0.0
+
+
+def test_percent_and_flat_overflow_on_separate_budgets():
+    """`Penetration: 20%` and `Penetration: 10` are different goods under one
+    key — the same units rule `_capped_out` and `efficiency.stat_key` keep."""
+    flat = _pen("F", flat=10)
+    # 40 percentage points held fills the PERCENTAGE cap and says nothing about
+    # the flat one, which is at 0 of 50.
+    assert assemble.cap_overflow_penalty(flat, {"Penetration %": 40}, _PEN_CAPS,
+                                         _PEN_GOLD, 2000.0) == 0.0
+
+
+def test_overflow_is_inert_without_caps_prices_or_span():
+    item = _pen("A", pct=10)
+    held = {"Penetration %": 40}
+    assert assemble.cap_overflow_penalty(item, held, None, _PEN_GOLD, 2000.0) == 0.0
+    assert assemble.cap_overflow_penalty(item, held, _PEN_CAPS, {}, 2000.0) == 0.0
+    assert assemble.cap_overflow_penalty(item, held, _PEN_CAPS, _PEN_GOLD, 0) == 0.0
+
+
+def test_overflow_is_continuous_in_the_cap_value():
+    """The cap is INFERRED and is the weakest number in _weights.yaml, so the
+    mechanism must not be precise in it. Halving the headroom must move the
+    charge smoothly rather than switching anything on."""
+    item = _pen("A", pct=20)
+    held = {"Penetration %": 30}
+    at40 = assemble.cap_overflow_penalty(item, held, {"Penetration %": 40},
+                                         _PEN_GOLD, 2000.0)
+    at32 = assemble.cap_overflow_penalty(item, held, {"Penetration %": 32},
+                                         _PEN_GOLD, 2000.0)
+    at45 = assemble.cap_overflow_penalty(item, held, {"Penetration %": 45},
+                                         _PEN_GOLD, 2000.0)
+    assert at45 < at40 < at32
+    assert at32 - at40 == pytest.approx(8 * 50.0 / 2000.0)   # linear in the cap
+
+
+def _ov(weight=1.0, gold=None, span=2000.0):
+    return {"cap_overflow": {"weight": weight, "gold_values": gold or _PEN_GOLD,
+                             "span": span}}
+
+
+def test_overflow_can_lose_a_slot_to_an_item_bringing_something_new():
+    """Two 20% items fill the cap. The third 20% item outscores the newcomer
+    on raw total, and the charge is what flips it.
+
+    Every P item carries Strength as well, which is not decoration — it is the
+    whole case. `_capped_out` refuses an item only when EVERY stat it carries
+    is capped, so a pure-penetration item is already handled and no such item
+    exists in the real pool. This is the shape that gets through."""
+    items = [_pen("P0", pct=20, Strength=40), _pen("P1", pct=20, Strength=40),
+             _pen("P2", pct=20, Strength=40),
+             {"name": "New", "tier": 3, "cost": 2500, "stats": {"Intelligence": "80"}}]
+    rows = [{"item": "P0", "total": 1.00, "tags": []},
+            {"item": "P1", "total": 0.99, "tags": []},
+            {"item": "P2", "total": 0.98, "tags": []},
+            {"item": "New", "total": 0.90, "tags": []}]
+    by_name = {i["name"]: i for i in items}
+    plain = assemble.assemble_core(rows, by_name, n=3, stat_caps=_PEN_CAPS)
+    assert plain == ["P0", "P1", "P2"]         # `_capped_out` cannot see this
+    priced = assemble.assemble_core(rows, by_name, n=3, stat_caps=_PEN_CAPS, **_ov())
+    assert priced == ["P0", "P1", "New"]
+
+
+def test_overflow_never_empties_a_slot():
+    """A charge, not a refusal: when every candidate overflows, the core still
+    fills. This is the whole reason it is priced rather than rejected."""
+    items = [_pen(f"P{i}", pct=20, Strength=40) for i in range(4)]
+    rows = [{"item": f"P{i}", "total": 1.0 - i * 0.01, "tags": []} for i in range(4)]
+    core = assemble.assemble_core(rows, {i["name"]: i for i in items}, n=4,
+                                  stat_caps=_PEN_CAPS, **_ov())
+    assert len(core) == 4
+
+
+def test_overflow_at_zero_weight_is_a_no_op():
+    items = [_pen(f"P{i}", pct=20, Strength=40) for i in range(3)] + [
+        {"name": "New", "tier": 3, "cost": 2500, "stats": {"Intelligence": "80"}}]
+    rows = [{"item": "P0", "total": 1.00, "tags": []},
+            {"item": "P1", "total": 0.99, "tags": []},
+            {"item": "P2", "total": 0.98, "tags": []},
+            {"item": "New", "total": 0.90, "tags": []}]
+    by_name = {i["name"]: i for i in items}
+    assert assemble.assemble_core(rows, by_name, n=3, stat_caps=_PEN_CAPS,
+                                  **_ov(weight=0.0)) == ["P0", "P1", "P2"]
+
+
+def test_overflow_args_is_off_by_default_and_scales_like_efficiency():
+    from smite import scoring, recommend
+    eff = {"X": {"span": 2500.0}}
+    gold = {"Penetration %": 50.0}
+    assert assemble.overflow_args({}, eff, gold) == {}
+    assert assemble.overflow_args({"cap_overflow": 0.0}, eff, gold) == {}
+    args = assemble.overflow_args(
+        {"cap_overflow": 1.0, "signals": {"efficiency": 0.35}}, eff, gold)
+    assert args["cap_overflow"]["weight"] == pytest.approx(0.35)
+    assert args["cap_overflow"]["span"] == 2500.0
+    # A span the pool never produced leaves the mechanism off rather than
+    # dividing by a guess.
+    assert assemble.overflow_args({"cap_overflow": 1.0}, {"X": {}}, gold) == {}

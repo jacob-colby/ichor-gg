@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Nimble Ring
+  - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
+  - Totem of Death
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Spear of the Magus
-  - Nimble Ring
+  - The Cosmic Horror
+  - Totem of Death
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,12 +122,12 @@ builds:
     Breastplate of Valor, Bancroft''s Talon, Jade Scepter, Bracer of The Abyss, Alchemist
     Coat, Freya''s Tears, Soul Reaver, Chronos'' Pendant.'
   slot_scores:
-    Nimble Ring:
-      total: 0.57
-      efficiency: 0.68
+    Gluttonous Grimoire:
+      total: 0.62
+      efficiency: 0.63
       win: 0.59
       pick: 0.0
-      fit: 0.42
+      fit: 0.89
     Spear of Desolation:
       total: 0.61
       efficiency: 0.52
@@ -140,12 +140,12 @@ builds:
       win: 0.6
       pick: 0.2
       fit: 0.79
-    Spear of the Magus:
-      total: 0.59
-      efficiency: 0.57
-      win: 0.59
-      pick: 0.0
-      fit: 0.79
+    Totem of Death:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.63
+      pick: 0.13
+      fit: 0.73
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.77

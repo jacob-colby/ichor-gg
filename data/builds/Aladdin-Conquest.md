@@ -98,10 +98,10 @@ builds:
   - The Crusher
   - Rod of Tahuti
   - Obsidian Shard
-  - Titan's Bane
+  - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Titan's Bane
+  - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -154,12 +154,12 @@ builds:
       win: 0.66
       pick: 0.58
       fit: 0.52
-    Titan's Bane:
+    Soul Gem:
       total: 0.54
-      efficiency: 0.45
-      win: 0.57
-      pick: 0.22
-      fit: 0.79
+      efficiency: 0.57
+      win: 0.52
+      pick: 0.0
+      fit: 0.72
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem

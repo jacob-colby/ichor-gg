@@ -96,12 +96,12 @@ builds:
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
+  - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - The Cosmic Horror
-  - Spear of the Magus
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -140,11 +140,11 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.8
-    Spear of the Magus:
+    The World Stone:
       total: 0.53
-      efficiency: 0.57
-      win: 0.47
-      pick: 0.0
+      efficiency: 0.46
+      win: 0.49
+      pick: 0.52
       fit: 0.8
     Rod of Tahuti:
       total: 0.57
@@ -375,12 +375,12 @@ builds:
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
+  - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - Spear of Desolation
-  - Spear of the Magus
+  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -419,11 +419,11 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.86
-    Spear of the Magus:
+    The World Stone:
       total: 0.54
-      efficiency: 0.57
-      win: 0.47
-      pick: 0.0
+      efficiency: 0.46
+      win: 0.49
+      pick: 0.52
       fit: 0.86
     Rod of Tahuti:
       total: 0.58

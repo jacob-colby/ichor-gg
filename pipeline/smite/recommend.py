@@ -170,7 +170,8 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
             stat_caps=weights.get("stat_caps"),
             economy=profile.get("economy"),
             **assemble.coherence_args(items, weights),
-            **assemble.conversion_args(weights, eff_scores, gold_values))
+            **assemble.conversion_args(weights, eff_scores, gold_values),
+            **assemble.overflow_args(weights, eff_scores, gold_values))
         archetype = flavor or "core"
         if flavor is None:
             core_rows, core_profile = rows, profile
@@ -196,7 +197,8 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
             stat_caps=weights.get("stat_caps"),
             economy=core_profile.get("economy"),
             **assemble.coherence_args(items, weights),
-            **assemble.conversion_args(weights, eff_scores, gold_values))
+            **assemble.conversion_args(weights, eff_scores, gold_values),
+            **assemble.overflow_args(weights, eff_scores, gold_values))
         entries.append(_entry("model", model_core, model_rows, items_by_name,
                               tags_map, weights, core_profile, flex_count,
                               starter, aspect_name))

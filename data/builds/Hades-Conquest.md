@@ -375,25 +375,25 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Genji's Guard
   - Gluttonous Grimoire
   - Spear of Desolation
   - The Cosmic Horror
-  - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - Spear of Desolation
-  - Spear of the Magus
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -405,6 +405,12 @@ builds:
     Staff, Rod of Asclepius, Helm of Radiance, Spectral Armor, Chronos'' Pendant,
     Jade Scepter, Erosion.'
   slot_scores:
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.69
+      win: 0.67
+      pick: 0.0
+      fit: 0.19
     Gluttonous Grimoire:
       total: 0.64
       efficiency: 0.63
@@ -420,12 +426,6 @@ builds:
     The Cosmic Horror:
       total: 0.59
       efficiency: 0.58
-      win: 0.67
-      pick: 0.0
-      fit: 0.58
-    Spear of the Magus:
-      total: 0.59
-      efficiency: 0.57
       win: 0.67
       pick: 0.0
       fit: 0.58
