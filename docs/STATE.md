@@ -435,7 +435,21 @@ python -m smite.calibrate --control      # just the control (~7s) - run before c
 python -m smite.calibrate_combat         # the combat gate
 python -m smite.expert_review            # replay recorded expert judgements
 python -m smite.expert_review --check    # non-zero exit if a resolved claim regressed
+python -m smite.doc_audit                # §7's numbers, doc value beside computed
+python -m smite.doc_audit --check        # non-zero exit if a §7 figure has drifted
 ```
+
+`doc_audit` gates the derivable figures in §7 below, and the few `PRODUCT.md`
+and `CLAUDE.md` repeat. It **only reads.** The prose in those rows is worth
+more than the numbers in them, and deciding whether a number moving is
+expected is a human's job, so it prints the row, the doc's value and the
+computed value, and stops. Rows it deliberately leaves alone —
+counterfactuals, judgements, history — are in its `UNGATED` map with a reason
+each, and a §7 row that no check claims is itself a finding, so a new row
+cannot arrive unchecked. `--skip-model` drops the three rows needing a model
+run, taking it from ~23s to ~4s, and names them as unchecked rather than
+passing quietly. The Tests row counts tests, so a commit that adds tests must
+move that row in the same commit.
 
 Scraping needs Playwright (`python -m playwright install chromium`).
 
@@ -496,15 +510,15 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (673) ·
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int, mana-stack |
 | Conquest gods placed | 89 / 89 |
 | Joust / Arena gods placed | 0 / 89 — no outcome data exists |
-| Items placed | 220 / 220 |
-| Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
+| Items placed | 206 / 226 |
+| Community sample | 12,786 Obsidian+ Conquest matches, 11 Aug – 21 Aug |
 | Headline gate | coverage 49.3%, win-weighted 51.3% — see `unknown_win_per_god`; the gap to a naive reading IS the removed community-agreement prior. `price_adaptive` moved it +1.9pp/+2.0pp off the 47.4%/49.3% this row carried, which is reporting and not a target (§1) |
 | **Leakage-free** | **38.7% probe · 39.6% at eff 0.45, vs 5.7% chance = 6.7–6.9×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs.** `price_adaptive` (§3) moved this +1.0pp/+1.2pp, later on 2026-08-21, off a control re-measured on the same data at 37.7%/38.4% — the same figures this row already carried, which is how we know the data had not moved under it. The sweep's nominal argmax moved with the change, 0.45 → 0.75 at 40.9%, and 17 of 21 splits have a CI overlapping that — noise by `model_signal_sweep`'s own rule, so the shipped split is unchanged and this row still reports eff 0.45. Earlier the same day: re-run on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
 | Cap overflow | 47 -> 29 of 2423 builds over the penetration cap, at **no coverage cost on either leakage-free split** — see `cap_overflow` |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 1 — Ares. Sun Wukong left the list with `price_adaptive`; the previous row (Achilles, Chaac, Danzaburou) predates the community refresh |
-| Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
+| Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
 | Tests | 673 pipeline · 660 viewer |
 
