@@ -206,6 +206,65 @@ def test_an_item_carrying_an_uncapped_stat_too_is_still_taken():
     assert core == ["A", "B"]
 
 
+def test_percent_and_flat_of_the_same_stat_do_not_share_a_cap():
+    """`Penetration: 20%` and `Penetration: 10` are different goods under one
+    key, and `_amount` strips the sign that told them apart. Against a
+    300-protection target 10% and 10 flat are worth 30 and 10, so summing them
+    into one budget is a units error. `efficiency.stat_key` already separates
+    them for the gold regression; the cap machinery has to agree.
+
+    Two 20% items fill the 40% percentage cap. The two flat-10 items that
+    follow total 20 against a flat cap of 50 and are nowhere near it — but on
+    a shared budget the 40 already spent would push the second flat item to
+    50 and refuse it, losing 10 real penetration to a cap it never reached."""
+    pct = [{"name": f"P{i}", "tier": 3, "cost": 2500,
+            "stats": {"Penetration": "20%"}} for i in range(2)]
+    flat = [{"name": f"F{i}", "tier": 3, "cost": 2500,
+             "stats": {"Penetration": "10"}} for i in range(2)]
+    items = pct + flat
+    rows = [{"item": it["name"], "total": 1.0 - i * 0.01, "tags": []}
+            for i, it in enumerate(items)]
+    core = assemble.assemble_core(rows, {i["name"]: i for i in items}, n=4,
+                                  stat_caps={"Penetration": 50,
+                                             "Penetration %": 40})
+    assert core == ["P0", "P1", "F0", "F1"]
+
+
+def test_percentage_penetration_caps_on_its_own_budget():
+    """Two 20% items reach the 40% cap exactly, so a third buys nothing."""
+    items = [{"name": f"P{i}", "tier": 3, "cost": 2500,
+              "stats": {"Penetration": "20%"}} for i in range(3)]
+    rows = [{"item": it["name"], "total": 1.0 - i * 0.01, "tags": []}
+            for i, it in enumerate(items)]
+    core = assemble.assemble_core(rows, {i["name"]: i for i in items}, n=3,
+                                  stat_caps={"Penetration": 50,
+                                             "Penetration %": 40})
+    assert core == ["P0", "P1"]
+
+
+def test_every_stat_cap_key_matches_a_real_item():
+    """A cap key is matched against `stat_key(name, value)`, so the UNIT is
+    half its identity — `Tenacity: 50` stops matching the moment the wiki
+    starts writing the stat as `15%`, and it fails silently by simply never
+    applying. That drift is invisible to every other gate: cores stay legal,
+    tests stay green, and the cap is just gone.
+
+    So assert each key is reachable from the real pool. This is a canary on
+    the data, not on the code."""
+    from smite import recommend, scoring
+    from smite.efficiency import stat_key
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    caps = weights.get("stat_caps") or {}
+    assert caps, "stat_caps went missing from _weights.yaml"
+    reachable = {stat_key(s, raw)
+                 for it in recommend.load_items()
+                 for s, raw in (it.get("stats") or {}).items()}
+    unmatched = sorted(set(caps) - reachable)
+    assert not unmatched, (
+        f"stat_caps keys no item can satisfy: {unmatched}. Either the stat was "
+        f"renamed, or its unit changed and the cap is silently inert.")
+
+
 def test_no_stat_caps_means_no_filtering():
     items = [_capped(f"T{i}", 25) for i in range(3)]
     rows = [{"item": it["name"], "total": 1.0, "tags": []} for it in items]

@@ -196,22 +196,45 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
     that stat (up to `min`, honoring the same rules) before filling by score.
 
     `stat_caps` {stat: cap} refuses an item whose only contribution is a stat
-    the core has already capped out. Tenacity caps at 50 and the four items
-    carrying it give 15 each, so a fourth was buying nothing; Plating and
-    Dampening cap at 35 with the same shape. The gold model can't see this —
-    no single item comes close to a cap, so pricing a point linearly is right
-    at the item level and only wrong once they stack.
+    the core has already capped out. Keys carry the same unit-aware identity as
+    `efficiency.stat_key`, so `Penetration %` and `Penetration` hold separate
+    budgets — see `_capped_out`. The gold model can't see any of this: no
+    single item comes close to a cap, so pricing a point linearly is right at
+    the item level and only wrong once they stack.
 
     Deliberately narrow: it fires only when the whole contribution is wasted.
     An item that would take Tenacity from 45 to 60 still buys the 5 points
     that fit, and refusing it would be a worse error than allowing the overflow.
 
-    It currently changes nothing — measured across all 261 build notes, zero
-    cores differ with it on. Four Tenacity items would have to out-score
-    everything else in the pool, and none do. It is kept as a guard rather than
-    deleted because the rule is real and cheap: a patch that buffs those items,
-    or a defensive flavor that weights them up, would start stacking dead
-    stats silently. Do not read it as load-bearing.
+    IT STILL CHANGES NOTHING, AND THE REASON IS NOT THE ONE PREVIOUSLY RECORDED
+    HERE. Re-measured 2026-08-21 with the full cap list from the SMITE 2 wiki
+    (`stat_caps` in _weights.yaml carries the sources and tiers), rebuilding
+    every god x mode x flavor entry with the caps on and off: **0 of 2237
+    cores differ**, the same answer the three-stat list gave. But the two
+    halves of that null are different facts and only one of them was true
+    before:
+
+      stat            cap   peak reached   cores over cap   (of 2423)
+      Tenacity         50            15                 0
+      Plating          35            25                 0
+      Dampening        35             5                 0
+      Penetration      50            40                 0
+      Penetration %    40            45                47
+
+    For the first four the original conclusion holds — real cores are nowhere
+    near those caps, and the rule is a guard against a future patch. For
+    PERCENTAGE PENETRATION it does not: 47 cores overshoot the cap today and
+    59 more sit exactly on it, so the waste is real and present. The rule
+    cannot touch it, because `_capped_out` requires that EVERY stat an item
+    carries be capped, and no penetration item in the pool is pure penetration
+    — the worst case (Agni, arena, anti-tank, 45%) is four items each carrying
+    Intelligence, Health, Mana or Lifesteal alongside their penetration.
+
+    So a pure reject rule is structurally incapable of expressing the mechanic
+    it exists for: "this item's penetration is wasted, its Intelligence is
+    not". Pricing the overflow rather than refusing the item is the shape that
+    could, and it is a model change with its own measurement, not a widening of
+    this one. Kept as a guard; do not read it as load-bearing.
     """
     core, used = [], set()
     have_boots = [False]
@@ -233,13 +256,24 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
 
         The "every stat" half matters. An item bringing maxed Tenacity *and*
         40 Strength is not dead weight — the Tenacity is wasted but the item
-        is not, and rejecting it would lose the Strength to save nothing."""
+        is not, and rejecting it would lose the Strength to save nothing. It is
+        also the reason this guard never fires on penetration; see
+        `assemble_core` for that measurement.
+
+        Stats are keyed by `stat_key`, not by name. `Penetration: 20%` and
+        `Penetration: 10` arrive under one key and `_amount` strips the sign
+        that told them apart, so a shared budget would mix a percentage with a
+        flat amount — against a 300-protection target those are worth 30 and
+        10. The gold regression already separates them for exactly this
+        reason; the caps have to agree or the two halves of the model disagree
+        about what an item sells."""
         stats = item.get("stats") or {}
         if not stats or not stat_caps:
             return False
-        if any(s not in stat_caps for s in stats):
+        keys = [stat_key(s, raw) for s, raw in stats.items()]
+        if any(k not in stat_caps for k in keys):
             return False                      # carries something uncapped
-        return all(capped_totals.get(s, 0.0) >= stat_caps[s] for s in stats)
+        return all(capped_totals.get(k, 0.0) >= stat_caps[k] for k in keys)
 
     def _try_add(name):
         if name in used or len(core) >= n:
@@ -259,10 +293,14 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
             have_boots[0] = True
         if is_ls:
             lifesteal_count[0] += 1
-        for stat in (stat_caps or {}):
-            raw = (item.get("stats") or {}).get(stat)
-            if raw:
-                capped_totals[stat] = capped_totals.get(stat, 0.0) + _amount(raw)
+        # Walk the ITEM's stats rather than the cap keys: a cap on
+        # `Penetration %` is never found by `stats.get("Penetration %")`,
+        # because the unit lives in the value, not the name.
+        if stat_caps:
+            for stat, raw in (item.get("stats") or {}).items():
+                key = stat_key(stat, raw)
+                if key in stat_caps and raw:
+                    capped_totals[key] = capped_totals.get(key, 0.0) + _amount(raw)
         for stat, raw in (item.get("stats") or {}).items():
             core_totals[stat] = core_totals.get(stat, 0.0) + _amount(raw)
         spent[0] += item.get("cost") or 0

@@ -566,10 +566,69 @@ lifesteal_caps:
 # an assembly rule: four Tenacity items give 60 and ten of that buys nothing.
 # The assembler refuses an item only when its whole contribution is already
 # capped out, never when part of it still fits.
+#
+# SMITE 2's CAP SYSTEM IS NOT SMITE 1'S, and the differences are the reason
+# this list is short. Surveyed 2026-08-21 against the SMITE 2 wiki's Stats
+# page (wiki.smite2.com/w/Stats), read as raw wikitext so the quotes are the
+# source's own words. Keys carry the same unit-aware identity as
+# `efficiency.stat_key`, so `Penetration %` and `Penetration` are separate
+# budgets — see `assemble._capped_out`.
+#
+# DOCUMENTED — the wiki states the cap outright:
+#   Tenacity   "capped at 50% Tenacity acquired from items"
+#   Plating    "This stat is capped at 35 total Plating"
+#   Dampening  "This stat is capped at 35 total Dampening"
+#
+# INFERRED — the cap EXISTS but no SMITE 2 source states its value:
+#   Penetration %  40    Penetration (flat)  50
+# That the cap exists is MEASURED, from data this repo already scrapes: three
+# item notes — Titan's Bane, Obsidian Shard and Dominance — carry the sentence
+# "This effect ignores the Penetration cap", and `insource:/Penetration cap/`
+# on the wiki returns those three pages and nothing else. The wiki references
+# a cap it never defines; its Penetration section says only that the stat
+# "allows you to ignore a percentage of a target's ... Protections".
+#
+# The VALUES are the weakest numbers in this file. Every source quoting 40/50
+# traces to SMITE 1 material (smite.fandom.com, a Dignitas SMITE 1 guide, the
+# dead smitegame forums), and SMITE 1 itself cut its percentage cap by 20%
+# relative in Update 10.4 (April 2023), 40% -> 32%. So 40 matches neither
+# current SMITE 1 nor any stated SMITE 2 figure — it is a pre-2023 SMITE 1
+# value, and it is here as a GUARD, not as a fact. `combat.PCT_PEN_CAP` and
+# `FLAT_PEN_CAP` hold the same pair on the same tier; if either is ever
+# measured in game, both move together.
+#
+# Both would bind if the guard could reach them — the pool's top six
+# percentage items total 80% against 40, and its top six flat items total 60
+# against 50. It cannot reach them today; see `assemble._capped_out` for the
+# structural reason and the measurement.
+#
+# DELIBERATELY ABSENT, because SMITE 2 does not cap them:
+#   Cooldown Rate  — renamed and re-mechanised from SMITE 1's capped CDR. The
+#     wiki: "every 1 Cooldown Rate allowing you to use abilities 1% more
+#     often", i.e. a haste stat, CD = base x 100/(100+CDR). It diminishes
+#     itself, so there is nothing to cap. SMITE 1's 40% does not carry across.
+#   Attack Speed   — no stated cap. SMITE 1's 2.5 attacks/sec was a cap on the
+#     EFFECT, a function of the god's base rate and level, never on an item's
+#     "+45%"; it is not expressible as a sum over item stats at all.
+#   Critical Chance, Echo — no stated cap. 100% is a natural bound on a
+#     probability, which is again the effect and not the stat.
+#   Lifesteal, Pathfinding — "33% effectiveness" against minions and in combat
+#     respectively. Those are SCALES, not caps, and `combat.py` already holds
+#     both (LIFESTEAL_MINION_SCALE, PATHFINDING_COMBAT_SCALE).
+#   Healing Reduction — DOCUMENTED at "25% from items and it does not stack
+#     with itself", but it is not a `stats` key on any of the 226 items: all
+#     four anti-heal items apply exactly 25% from passive text, so ONE of them
+#     is already the cap and a second adds nothing. That is a non-stacking
+#     rule rather than an additive budget, so it cannot be expressed here.
+#     The `anti-heal` tag and `draft.self_covered` are where it would live.
+#   Protections, Strength, Intelligence, Health, Mana, Movement Speed — no cap
+#     stated for any of them.
 stat_caps:
   Tenacity: 50
   Plating: 35
   Dampening: 35
+  Penetration %: 40      # INFERRED — see above; guard, not a fact
+  Penetration: 50        # INFERRED — flat; its existence is unattested for S2
 
 
 # ── Offense tags ──────────────────────────────────────────────────────────
