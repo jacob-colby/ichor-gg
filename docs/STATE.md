@@ -88,6 +88,21 @@ Both are true at once, and the headline coverage number conflates them. Treat
 "these builds contain sensible items" as supported and "these builds are in the
 right order" as unproven.
 
+**Neither measure can say a build is BETTER, only more conventional** — both go
+down when a build is genuinely better and unconventional. The one instrument
+that can is `build_quality.py` (2026-08-21): `combat.py`, which has never seen
+a community build and is exact against the game, pointed at our meta-free
+`model` core and the community's six items for every god at level 20 —
+basic-attack and ability DPS against 70 and 170 protection, effective health,
+and each per 1000 gold. Its output is `data/Analysis/_build_quality.md`, the
+distribution rather than an average, broken out by role. **Read its caveat
+first:** it re-measures on every run that ~90% of the buildable pool and ~76%
+of the community's slots carry passive value the arithmetic cannot see, and
+that the community pays more per slot above its stat line than we do, so a
+verdict in our favour is the one to distrust. It is a diagnostic and feeds
+nothing (a test pins the import boundary); it is also the cheap way to re-test
+a model change such as `damage_fit_blend` moving off 0.0.
+
 ---
 
 ## 3. Design decisions worth not re-litigating
@@ -132,6 +147,7 @@ Each of these has its evidence in the named module.
 | Waste past a stat cap is **priced**, not refused | `assemble.cap_overflow_penalty` | A reject rule fires only when an item's WHOLE line is capped, and no penetration item is pure penetration; charging the overflow keeps the Intelligence and drops the dead penetration |
 | An item's offense tags **sum** | `offense_tags` in `_weights.yaml` | Flat, an item answering a tank two ways scored what one answering it once did — which is how `penetration` on Titan's Bane displaced Heartseeker |
 | A resolved expert claim is measured against its **own recorded baseline** | `expert_review.regressions` | The old rule only failed on a full reversion, so `clear` → `partial` shipped green |
+| `build_quality` is a **diagnostic**, never a scoring input | `build_quality.py` | Register §4.4 is what happens when a damage measure becomes a fit signal; its output is a report a human reads, with the passive blind spot printed above the first number |
 | The damage model counts the **basic attack**, and its unit is one rotation plus one swing | `damage_value.item_damage_gain` | `ability_damage_components` skips the Basic Attack slot, so Attack Damage — 100% of a basic attack on 84 of 89 gods, and no ability in the roster scales on it — was worth exactly 0.0 in the only damage path that reaches a recommendation. 12 items carried it, 10 more carry Critical Chance. The 1:1 mix is a declaration, not a measurement; the clock that would replace it is register §4.12 |
 
 ### The combat model is exact and should stay that way
@@ -501,6 +517,8 @@ python -m smite.expert_review            # replay recorded expert judgements
 python -m smite.expert_review --check    # non-zero exit if a resolved claim regressed
 python -m smite.doc_audit                # §7's numbers, doc value beside computed
 python -m smite.doc_audit --check        # non-zero exit if a §7 figure has drifted
+python -m smite.build_quality            # combat.py pointed at whole builds, ours vs community (~4s)
+python -m smite.build_quality --god Medusa   # one god, to stdout
 ```
 
 `doc_audit` gates the derivable figures in §7 below, and the few `PRODUCT.md`
@@ -559,7 +577,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (724) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (748) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -584,7 +602,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (724) ·
 | Gods at 0% coverage | 1 — Ares. Sun Wukong left the list with `price_adaptive`; the previous row (Achilles, Chaac, Danzaburou) predates the community refresh |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 724 pipeline · 660 viewer |
+| Tests | 748 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

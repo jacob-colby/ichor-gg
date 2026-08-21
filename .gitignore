@@ -44,3 +44,9 @@ data/Analysis/*.md
 # does. That makes its diff the single clearest record of what a commit did to
 # the gate. Drop this line if you would rather regenerate it to find out.
 !data/Analysis/_calibration.md
+# `_build_quality.md` earns its place the same way: it is the only report here
+# that compares our builds to the community's on damage and effective health
+# rather than on agreement (`smite.build_quality`), it is deterministic on the
+# same inputs, and its diff is the instrument for re-testing a model change
+# such as `damage_fit_blend` moving off 0.0.
+!data/Analysis/_build_quality.md
