@@ -334,3 +334,105 @@ def test_stack_fraction_defaults_to_the_cap_and_clamps():
     assert passives.persistent_stack_grants(item)["Strength"] == pytest.approx(10)
     assert passives.persistent_stack_grants(item, 2.0)["Strength"] == pytest.approx(10)
     assert passives.persistent_stack_grants(item, -1)["Strength"] == pytest.approx(0)
+
+
+# ── The adaptive carve-out (shipped ON — `price_adaptive`) ─────────────────
+
+def test_the_branch_is_taken_as_printed_not_as_the_mean():
+    """`unconditional_grants` records the mean of the two branches because it
+    prices the grant as its own god-agnostic column. This function exists to
+    make the other choice, so it must take a side."""
+    item = _p("Adaptive Stat: +55 Strength or +90 Intelligence "
+              "(based on highest item stat).")
+    assert passives.adaptive_grants(item, "strength") == {"Strength": 55.0}
+    assert passives.adaptive_grants(item, "intelligence") == {"Intelligence": 90.0}
+    assert passives.unconditional_grants(item)[passives.ADAPTIVE_KEY] == pytest.approx(72.5)
+
+
+def test_an_item_with_no_adaptive_clause_gets_nothing():
+    assert passives.adaptive_grants(_p("+20% Attack Speed")) == {}
+    assert passives.adaptive_grants(_p("")) == {}
+    assert passives.adaptive_grants({}) == {}
+
+
+def test_an_unknown_branch_is_an_error_not_a_silent_default():
+    """A typo in `adaptive_branch` must not quietly price the other stat for
+    every gate that reads the file."""
+    item = _p("Adaptive Stat: +55 Strength or +90 Intelligence.")
+    with pytest.raises(ValueError):
+        passives.adaptive_grants(item, "power")
+
+
+def test_the_flag_prices_the_branch_into_a_real_regression_column():
+    """Into Strength/Intelligence, which the whole pool constrains — not into
+    a column only these items carry. See MIN_STAT_CARRIERS for the defect that
+    rules out."""
+    item = {"name": "Omen Drum", "cost": 2800, "tier": 3, "stats": {"Echo": "30"},
+            "passive": "Adaptive Stat: +55 Strength or +90 Intelligence "
+                       "(based on highest item stat)."}
+    before = efficiency.apply_pricing_flags(
+        {"price_adaptive": True, "adaptive_branch": "strength"})
+    try:
+        assert efficiency.item_stat_values(item) == {"Echo": 30.0, "Strength": 55.0}
+        efficiency.apply_pricing_flags(
+            {"price_adaptive": True, "adaptive_branch": "intelligence"})
+        assert efficiency.item_stat_values(item) == {"Echo": 30.0, "Intelligence": 90.0}
+        efficiency.apply_pricing_flags({})
+        assert efficiency.item_stat_values(item) == {"Echo": 30.0}
+    finally:
+        efficiency.restore_pricing_flags(before)
+
+
+def test_price_passives_supersedes_it_rather_than_double_counting():
+    """Both flags read the SAME clause. `price_passives` prices it as an
+    `Adaptive Power` column; running both would count the grant twice, at two
+    different prices, on 29 items."""
+    item = {"name": "Omen Drum", "cost": 2800, "tier": 3, "stats": {"Echo": "30"},
+            "passive": "Adaptive Stat: +55 Strength or +90 Intelligence "
+                       "(based on highest item stat)."}
+    before = efficiency.apply_pricing_flags(
+        {"price_passives": True, "price_adaptive": True})
+    try:
+        values = efficiency.item_stat_values(item)
+        assert values == {"Echo": 30.0, passives.ADAPTIVE_KEY: pytest.approx(72.5)}
+        assert "Strength" not in values
+    finally:
+        efficiency.restore_pricing_flags(before)
+
+
+def test_the_flag_ships_on_and_the_gates_can_see_it():
+    """A flag only `recommend.main` applies is a flag that measures nothing —
+    `apply_pricing_flags` exists because that bug has happened here before."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    assert weights.get("price_adaptive") is True
+    assert weights.get("adaptive_branch") == "strength"
+    before = efficiency.apply_pricing_flags(weights)
+    try:
+        assert efficiency.PRICE_ADAPTIVE is True
+        assert efficiency.ADAPTIVE_BRANCH == "strength"
+    finally:
+        efficiency.restore_pricing_flags(before)
+
+
+def test_every_adaptive_item_is_priced_not_just_the_buildable_eight():
+    """The regression pool keeps components on purpose (`efficiency_pool`), and
+    17 of the 29 clause-carriers are in it. Pricing only the tier-3 eight would
+    leave the same unexplained cost in the intercept for the other nine."""
+    items = [i for i in (notes.read_note(p)[0]
+                         for p in (recommend.DATA_ROOT / "Items").glob("*.md"))
+             if i.get("name")]
+    carriers = [i for i in items if passives.adaptive_grants(i)]
+    assert len(carriers) == 29
+    priced = [i for i in efficiency.efficiency_pool(items) if passives.adaptive_grants(i)]
+    assert len(priced) == 17
+    assert sum(1 for i in priced if i.get("tier") == 3) == 8
+
+
+def test_only_the_standing_clause_counts_when_an_item_has_two():
+    """Daybreak Gavel grants +60/+80 outright AND another +13/+16 "for 8s per
+    Stack". Both are written in the adaptive grammar; only the first is a
+    standing grant, and the `Adaptive Stat:` cue is what separates them."""
+    gavel = _item("Daybreak Gavel")
+    assert "+13 Strength or +16 Intelligence" in gavel["passive"]
+    assert passives.adaptive_grants(gavel, "strength") == {"Strength": 60.0}
+    assert passives.adaptive_grants(gavel, "intelligence") == {"Intelligence": 80.0}

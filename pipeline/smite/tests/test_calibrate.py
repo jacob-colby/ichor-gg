@@ -263,3 +263,31 @@ def test_full_report_stamps_the_fingerprint(tmp_path):
     out = tmp_path / "cal.md"
     calibrate.write_report(results, {}, current, out, fingerprint="c0ffee123456")
     assert calibrate.report_fingerprint(out) == "c0ffee123456"
+def test_the_exact_baseline_is_what_the_sampler_estimates():
+    """A fixed seed and a pool the model reorders means the printed baseline
+    moves when nothing about chance did. The closed form must agree with the
+    sampler in the limit — same pools, same answer, no draws."""
+    import random
+
+    # Two gods, pools of 10 and 20, four community items each. The closed form
+    # is min(6, N)/N averaged over gods: (0.6 + 0.3)/2 = 0.45.
+    exact = calibrate._mean([min(6, n) / n for n in (10, 20)])
+    assert exact == pytest.approx(0.45)
+
+    rng = random.Random(1)
+    community = set(range(4))
+    est = [calibrate._mean(
+        [len(set(rng.sample(range(n), 6)) & community) / len(community)
+         for _ in range(20000)]) for n in (10, 20)]
+    assert calibrate._mean(est) == pytest.approx(exact, abs=0.01)
+
+
+def test_the_exact_baseline_walks_the_same_pool_the_sampler_does():
+    """Both read `score_god_items` under the Conquest profile and skip the same
+    gods, so a divergence would mean they are baselining different things."""
+    import inspect
+    exact = inspect.getsource(calibrate.exact_random_core_baseline)
+    sampled = inspect.getsource(calibrate.random_core_baseline)
+    for shared in ("score_god_items", "_community_slots",
+                   'c.get("win_rate") is not None', "resolve_profile"):
+        assert shared in exact and shared in sampled

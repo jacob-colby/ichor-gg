@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.82
-      efficiency: 0.64
+      total: 0.86
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.76
-      efficiency: 0.52
+      total: 0.77
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 1.0
     Pendulum Blade:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.71
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.82
-      efficiency: 0.64
+      total: 0.79
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.71
-      efficiency: 0.41
+      total: 0.73
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.72
-      efficiency: 0.45
+      total: 0.74
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -80,7 +80,7 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Heartseeker
+  - The Crusher
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,38 +99,38 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.68
-      efficiency: 0.64
+      total: 0.72
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.71
     Transcendence:
-      total: 0.45
-      efficiency: 0.52
+      total: 0.46
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.39
     Hydra's Lament:
       total: 0.59
-      efficiency: 0.56
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.63
     The Reaper:
-      total: 0.62
-      efficiency: 0.52
+      total: 0.63
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.72
     The Crusher:
-      total: 0.6
-      efficiency: 0.64
+      total: 0.57
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.57
     Heartseeker:
-      total: 0.59
-      efficiency: 0.41
+      total: 0.62
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -139,18 +139,18 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
-  - Hydra's Lament
   - The Reaper
   - Pendulum Blade
   - The Crusher
   - Heartseeker
+  - Avatar's Parashu
   flex_slots:
-  - Heartseeker
-  - Hydra's Lament
+  - Avatar's Parashu
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -164,38 +164,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.71
-      efficiency: 0.64
+      total: 0.75
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Hydra's Lament:
-      total: 0.55
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     The Reaper:
-      total: 0.66
-      efficiency: 0.52
+      total: 0.68
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.81
     Pendulum Blade:
-      total: 0.59
-      efficiency: 0.41
+      total: 0.6
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.78
     The Crusher:
-      total: 0.65
-      efficiency: 0.64
+      total: 0.61
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.58
-      efficiency: 0.41
+      total: 0.61
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    Avatar's Parashu:
+      total: 0.6
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -210,15 +210,15 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Kinetic Cuirass
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.63
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -242,25 +242,25 @@ builds:
       fit: 0.73
     Spectral Armor:
       total: 0.63
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.81
-      efficiency: 0.63
+      total: 0.83
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
       total: 0.69
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.86
     Stampede:
-      total: 0.63
-      efficiency: 0.48
+      total: 0.65
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -294,38 +294,38 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.82
-      efficiency: 0.64
+      total: 0.86
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.76
-      efficiency: 0.52
+      total: 0.77
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 1.0
     Pendulum Blade:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.71
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.82
-      efficiency: 0.64
+      total: 0.79
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.71
-      efficiency: 0.41
+      total: 0.73
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.72
-      efficiency: 0.45
+      total: 0.74
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -334,14 +334,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
   - The Reaper
   - Riptalon
-  - Silverbranch Bow
   flex_slots:
-  - Silverbranch Bow
   - The Reaper
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -359,41 +359,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.66
-      efficiency: 0.53
+      total: 0.65
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Toxic Blade:
-      total: 0.71
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.99
-    Tyrfing:
-      total: 0.62
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    The Reaper:
+    Lernaean Bow:
       total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
+      fit: 0.68
+    Toxic Blade:
+      total: 0.73
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.99
+    Tyrfing:
+      total: 0.64
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    The Reaper:
+      total: 0.62
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.77
-      efficiency: 0.53
+      total: 0.75
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Silverbranch Bow:
-      total: 0.61
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -424,20 +424,20 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.5
     Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.64
+      total: 0.58
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.74
-      efficiency: 0.64
+      total: 0.78
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -449,13 +449,13 @@ builds:
       fit: 0.75
     Hydra's Lament:
       total: 0.65
-      efficiency: 0.56
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.75
     Pendulum Blade:
-      total: 0.63
-      efficiency: 0.41
+      total: 0.64
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -489,38 +489,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.82
-      efficiency: 0.64
+      total: 0.86
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.76
-      efficiency: 0.52
+      total: 0.77
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 1.0
     Pendulum Blade:
-      total: 0.7
-      efficiency: 0.41
+      total: 0.71
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Crusher:
-      total: 0.82
-      efficiency: 0.64
+      total: 0.79
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.71
-      efficiency: 0.41
+      total: 0.73
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.72
-      efficiency: 0.45
+      total: 0.74
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 1.0

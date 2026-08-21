@@ -7,24 +7,24 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
-  - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Stampede
   - Erosion
-  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -32,26 +32,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Spectral Armor:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Amanita Charm:
-      total: 0.76
-      efficiency: 0.63
+      total: 0.78
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Stampede:
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -62,8 +62,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.63
-      efficiency: 0.51
+      total: 0.64
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -74,24 +74,24 @@ builds:
   archetype: bruiser
   slot_order:
   - Shield of the Phoenix
-  - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Stampede
   - Shield of the Phoenix
-  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Spectral Armor — physical protection
+    swap_item: Spectral Armor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -104,24 +104,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Spectral Armor:
-      total: 0.59
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Amanita Charm:
-      total: 0.81
-      efficiency: 0.63
+      total: 0.83
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.63
-      efficiency: 0.52
+      total: 0.62
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Stampede:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Pharaoh's Curse:
       total: 0.66
       efficiency: 0.55
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.51
+      total: 0.65
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -139,24 +139,24 @@ builds:
   archetype: anti-tank
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Crusher
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
-  - The Crusher
+  - Jotunn's Revenge
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Shogun's Ofuda — magical protection
     swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Stampede — physical protection
+    swap_item: Stampede
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -164,32 +164,32 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
-      efficiency: 0.43
+      total: 0.66
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.85
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Void Shield:
-      total: 0.67
-      efficiency: 0.46
+      total: 0.68
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.89
     Void Stone:
-      total: 0.66
-      efficiency: 0.43
+      total: 0.67
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.89
-    The Crusher:
-      total: 0.6
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Amanita Charm:
-      total: 0.72
-      efficiency: 0.63
+      total: 0.73
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -210,8 +210,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Riptalon
   - Golden Blade
-  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -229,26 +229,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.62
-      efficiency: 0.53
+      total: 0.61
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.7
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.43
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.82
     Riptalon:
-      total: 0.63
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.73
     Amanita Charm:
-      total: 0.72
-      efficiency: 0.63
+      total: 0.73
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Shogun's Ofuda:
-      total: 0.61
-      efficiency: 0.51
+      total: 0.62
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -268,40 +268,34 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
   - Shield of the Phoenix
-  - Erosion
+  - Freya's Tears
+  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Genji's Guard
-  - Jotunn's Revenge
+  - Stampede
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.52
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.64
+      total: 0.56
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -311,12 +305,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Erosion:
-      total: 0.54
-      efficiency: 0.52
+    Freya's Tears:
+      total: 0.52
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.43
+    Stampede:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.55
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.51
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -334,24 +334,24 @@ builds:
   archetype: model
   slot_order:
   - Golden Blade
-  - Spectral Armor
   - Amanita Charm
   - Erosion
+  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Stampede
   - Erosion
-  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -359,26 +359,26 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Spectral Armor:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Amanita Charm:
-      total: 0.76
-      efficiency: 0.63
+      total: 0.78
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Stampede:
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.63
-      efficiency: 0.51
+      total: 0.64
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.75

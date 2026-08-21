@@ -13,15 +13,15 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Kinetic Cuirass
+  - Spectral Armor
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.59
+      total: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.61
     Void Shield:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.6
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.73
     Spectral Armor:
       total: 0.6
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.81
-      efficiency: 0.63
+      total: 0.83
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
-      efficiency: 0.52
+      total: 0.66
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.81
     Stampede:
-      total: 0.61
-      efficiency: 0.48
+      total: 0.62
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -73,22 +73,22 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Bancroft's Talon
   - Jotunn's Revenge
+  - Heartseeker
   - Rod of Tahuti
-  - Spectral Armor
+  - Amanita Charm
   - Erosion
   - Triton's Conch
   flex_slots:
   - Jotunn's Revenge
-  - Bancroft's Talon
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -98,33 +98,33 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Bancroft's Talon:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.64
+      total: 0.59
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.77
+      total: 0.61
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
-    Spectral Armor:
-      total: 0.56
-      efficiency: 0.58
+    Amanita Charm:
+      total: 0.78
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.91
     Erosion:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -139,21 +139,21 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Void Shield
   - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
-  - Triton's Conch
   flex_slots:
-  - Triton's Conch
-  - Jotunn's Revenge
+  - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -164,46 +164,46 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.64
+      total: 0.6
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Void Shield:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Spectral Armor:
       total: 0.56
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.55
     Amanita Charm:
-      total: 0.78
-      efficiency: 0.63
+      total: 0.79
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.93
     Erosion:
       total: 0.6
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.68
     Stampede:
-      total: 0.56
-      efficiency: 0.48
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Triton's Conch:
-      total: 0.56
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Void Shield
+  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
@@ -211,14 +211,14 @@ builds:
   - Soul Gem
   flex_slots:
   - Spectral Armor
-  - Void Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -228,33 +228,33 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Shield:
+    Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.46
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.6
     Spectral Armor:
       total: 0.61
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.81
-      efficiency: 0.63
+      total: 0.83
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.66
-      efficiency: 0.52
+      total: 0.65
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.61
-      efficiency: 0.48
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -268,22 +268,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Crusher
   - Amanita Charm
   - Erosion
   flex_slots:
-  - The Crusher
-  - Jotunn's Revenge
+  - Stone of Binding
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -293,39 +293,39 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Stone of Binding:
+      total: 0.62
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.64
+      total: 0.63
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.54
     Void Shield:
-      total: 0.71
-      efficiency: 0.46
+      total: 0.72
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.97
     Void Stone:
-      total: 0.7
-      efficiency: 0.43
+      total: 0.71
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.97
-    The Crusher:
-      total: 0.6
-      efficiency: 0.64
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Amanita Charm:
-      total: 0.8
-      efficiency: 0.63
+      total: 0.81
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.97
     Erosion:
       total: 0.62
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -334,11 +334,11 @@ builds:
   archetype: attack-speed
   slot_order:
   - Toxic Blade
-  - Riptalon
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
+  - Soul Gem
   flex_slots:
   - Shogun's Ofuda
   - Erosion
@@ -359,26 +359,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.62
-      efficiency: 0.43
+      total: 0.63
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Riptalon:
-      total: 0.62
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     Amanita Charm:
-      total: 0.76
-      efficiency: 0.63
+      total: 0.77
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.89
     Erosion:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -389,11 +383,17 @@ builds:
       pick: 0.0
       fit: 0.7
     Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.51
+      total: 0.62
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Soul Gem:
+      total: 0.74
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -405,8 +405,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
+  - Stampede
   - Spectral Armor
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -424,32 +424,32 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.64
+      total: 0.61
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.5
     Freya's Tears:
-      total: 0.59
-      efficiency: 0.59
+      total: 0.6
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.59
     Spectral Armor:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.56
     Erosion:
-      total: 0.62
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.71
     Stampede:
-      total: 0.57
-      efficiency: 0.48
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -463,7 +463,7 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Void Shield
+  - Jotunn's Revenge
   - Spectral Armor
   - Amanita Charm
   - Erosion
@@ -471,14 +471,14 @@ builds:
   - Triton's Conch
   flex_slots:
   - Spectral Armor
-  - Void Shield
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -488,33 +488,33 @@ builds:
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Void Shield:
-      total: 0.55
-      efficiency: 0.46
+    Jotunn's Revenge:
+      total: 0.56
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.4
     Spectral Armor:
-      total: 0.57
-      efficiency: 0.58
+      total: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.55
     Amanita Charm:
-      total: 0.78
-      efficiency: 0.63
+      total: 0.8
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.94
     Erosion:
       total: 0.6
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.69
     Stampede:
-      total: 0.57
-      efficiency: 0.48
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -542,8 +542,8 @@ builds:
     swap: Mantle Of Discord — CC-immunity / cleanse
     swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -554,32 +554,32 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Void Shield:
-      total: 0.56
-      efficiency: 0.46
+      total: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.67
     Spectral Armor:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.57
     Amanita Charm:
-      total: 0.8
-      efficiency: 0.63
+      total: 0.81
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.97
     Erosion:
-      total: 0.62
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.72
     Stampede:
-      total: 0.57
-      efficiency: 0.48
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -600,15 +600,15 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Kinetic Cuirass
+  - Spectral Armor
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -619,38 +619,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.59
+      total: 0.61
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.61
     Void Shield:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.6
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.73
     Spectral Armor:
       total: 0.6
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.81
-      efficiency: 0.63
+      total: 0.83
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
-      efficiency: 0.52
+      total: 0.66
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.81
     Stampede:
-      total: 0.61
-      efficiency: 0.48
+      total: 0.62
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.73

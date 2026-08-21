@@ -238,23 +238,39 @@ def test_pricing_flags_come_from_the_weights_the_gate_is_measuring():
     def snapshot():
         return (efficiency.PRICE_PASSIVES, efficiency.PRICE_STACKS,
                 efficiency.PRICE_CRIT_MULTIPLIERS, efficiency.PRICE_CONVERSIONS,
+                efficiency.PRICE_ADAPTIVE, efficiency.ADAPTIVE_BRANCH,
                 dict(efficiency.CONVERSION_REFERENCE))
 
     before = efficiency.apply_pricing_flags(
         {"price_passives": True, "price_stacks": True,
          "price_crit_multipliers": True, "price_conversions": True,
+         "price_adaptive": True, "adaptive_branch": "intelligence",
          "conversion_reference": {"Max Mana": 500}})
     try:
-        assert snapshot() == (True, True, True, True, {"Max Mana": 500})
+        assert snapshot() == (True, True, True, True, True, "intelligence",
+                              {"Max Mana": 500})
         efficiency.apply_pricing_flags({})
-        assert snapshot() == (False, False, False, False, {})
+        assert snapshot() == (False, False, False, False, False, "strength", {})
         # It returns the prior values so a sweep can restore them.
         prior = efficiency.apply_pricing_flags({"price_stacks": True})
-        assert prior == (False, False, False, False, {})
+        assert prior == {"PRICE_PASSIVES": False, "PRICE_STACKS": False,
+                         "STACK_FRACTION": 1.0, "PRICE_CRIT_MULTIPLIERS": False,
+                         "PRICE_CONVERSIONS": False, "CONVERSION_REFERENCE": {},
+                         "PRICE_ADAPTIVE": False, "ADAPTIVE_BRANCH": "strength"}
     finally:
-        (efficiency.PRICE_PASSIVES, efficiency.PRICE_STACKS,
-         efficiency.PRICE_CRIT_MULTIPLIERS, efficiency.PRICE_CONVERSIONS,
-         efficiency.CONVERSION_REFERENCE) = before
+        efficiency.restore_pricing_flags(before)
+
+
+def test_the_restore_contract_covers_every_switch():
+    """`before` is a dict keyed by global name precisely so a switch added to
+    `apply_pricing_flags` and forgotten in the return value fails here rather
+    than leaving some sweep silently unable to put the module back."""
+    import re
+    import inspect
+    src = inspect.getsource(efficiency.apply_pricing_flags)
+    assigned = set(re.findall(r"^    ([A-Z_]+) = ", src, re.M))
+    assert assigned == set(efficiency.PRICING_FLAGS)
+    assert set(efficiency.apply_pricing_flags({})) == set(efficiency.PRICING_FLAGS)
 
 
 def test_validate_applies_the_flags_before_fitting():
