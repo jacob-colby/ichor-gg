@@ -31,9 +31,12 @@ overturned the crit multiplier: two sources agreed on 1.65 and the game says
 Nine readings, every one reproduced exactly: mitigation, both penetration
 terms, crit, and basic attacks across melee/ranged and physical/magical.
 
-Still unverified: the penetration CAPS (40% / 50), which need a build stacking
-five or six penetration items to exercise, and Deathbringer's crit bonus, which
-should reach 2.02x if it multiplies and 1.85x if it adds. And see
+Still unverified: the penetration cap VALUES (40% / 50), which need a build
+stacking five or six penetration items to exercise. That a cap exists at all
+is now settled — three item notes say so in our own scrape — but no SMITE 2
+source states its magnitude, and the 40/50 pair is pre-2023 SMITE 1 lineage.
+See the penetration block below. Also Deathbringer's crit bonus, which should
+reach 2.02x if it multiplies and 1.85x if it adds. And see
 `ATTACK_POWER_SCALE` — it is fitted rather than derived, and a level-1 reading
 cannot tell a constant ratio from a wrong per-level slope.
 """
@@ -71,6 +74,26 @@ _CHAIN = re.compile(r"[Aa]ttacks in order of\s+([\d.,\s]+?)x\s+damage")
 # item pool — six flat-penetration items total 60, and three percentage items
 # total 40% — so if the caps are real they bind in ordinary builds, and if
 # they are wrong the error lands on exactly the builds that stack penetration.
+#
+# THAT A CAP EXISTS IS NO LONGER INFERRED (2026-08-21). It is MEASURED, off
+# data this repo already scrapes: Titan's Bane, Obsidian Shard and Dominance
+# all carry the sentence "This effect ignores the Penetration cap", and
+# `insource:/Penetration cap/` on the SMITE 2 wiki returns those three pages
+# and nothing else. An item that announces it ignores a cap is evidence the
+# cap is there.
+#
+# THE VALUES BELOW ARE STILL INFERRED, and the survey weakened them rather
+# than confirming them. No SMITE 2 source states a number: the wiki's Stats
+# page gives caps for Plating, Dampening, Tenacity and Healing Reduction and
+# says nothing about penetration, so it references a cap it never defines.
+# Every source quoting 40/50 traces to SMITE 1 material — and SMITE 1 cut its
+# own percentage cap by 20% relative in Update 10.4 (April 2023), 40% -> 32%.
+# So 40 matches neither current SMITE 1 nor any stated SMITE 2 figure; it is a
+# pre-2023 SMITE 1 value. Treat it as the working assumption it has always
+# been, and note that the twelve calibration observations do not exercise
+# either cap — the largest is 10 flat + 10%, a quarter of the way there.
+# `stat_caps` in _weights.yaml holds the same pair for the assembler and cites
+# the same evidence; if either is ever measured in game, both move together.
 PCT_PEN_CAP = 0.40
 FLAT_PEN_CAP = 50.0
 

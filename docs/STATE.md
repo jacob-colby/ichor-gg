@@ -42,8 +42,8 @@ coverage against a random legal 6-item core:
 cd pipeline && python -m smite.calibrate     # prints the probe, the baseline, and the sweep
 ```
 
-Chance is ~5.8%. Shipped is ~35.5% at the probe split and ~36.7% at eff
-0.45, i.e. **~6.2× chance**. That is the number to
+Chance is ~5.7%. Shipped is ~37.7% at the probe split and ~38.4% at eff
+0.45, i.e. **~6.6× chance**. That is the number to
 quote and the number to move. Headline coverage moving the other way is
 expected and is not by itself a reason to revert — that judgement is what
 `efficiency.efficiency_pool` and `scoring.lookup_rates` both record.
@@ -139,6 +139,38 @@ shipped **off**. Numbers are in the named module.
 1. **Excluding components from the gold fit** — cross-validation said yes, the
    gate said no; the CV was measuring prediction error, which nothing needs.
 2. **Stat caps in build assembly** — correct, but changes 0 of 261 cores.
+
+    _Re-measured 2026-08-21, because the first measurement could not have
+    fired._ The original ran with three exotic stats in `stat_caps`
+    (Tenacity/Plating/Dampening), so "0 cores" was never evidence that caps
+    don't matter. The list is now the full SMITE 2 one, surveyed against the
+    wiki's Stats page with sources and tiers in `stat_caps` (`_weights.yaml`),
+    and penetration is split by unit — `Penetration %` and `Penetration` are
+    different goods under one key, which `efficiency.stat_key` already knew
+    and the cap machinery did not. **The answer is still 0, now of 2237
+    cores** — and the reason has changed. Three of the five caps are genuinely
+    unreachable (peak Tenacity 15 of 50, Plating 25 of 35, Dampening 5 of 35),
+    as is flat penetration (40 of 50). **Percentage penetration is not: 47 of
+    2423 cores overshoot its cap today and 59 more sit exactly on it.** The
+    rule cannot act on them because `assemble._capped_out` refuses an item
+    only when EVERY stat it carries is capped, and no penetration item in the
+    pool is pure penetration. A pure reject rule cannot say "the penetration
+    is wasted, the Intelligence is not"; pricing the overflow could, and that
+    is a separate model change with its own measurement, deliberately not
+    folded in here. Numbers in `assemble.assemble_core`.
+
+    Two things the survey settled, both in `combat.py`'s penetration block.
+    That a penetration cap EXISTS is no longer inferred — it is MEASURED off
+    our own scrape, since Titan's Bane, Obsidian Shard and Dominance all carry
+    "This effect ignores the Penetration cap". Its VALUE got weaker, not
+    stronger: no SMITE 2 source states one, and 40%/50 traces to SMITE 1
+    material that SMITE 1 itself superseded in April 2023 (40% → 32%).
+    **SMITE 2's cap system is not SMITE 1's** — Cooldown Rate is a haste stat
+    with no cap (`CD = base×100/(100+CDR)` diminishes itself, so SMITE 1's 40%
+    CDR cap must not be carried across), Attack Speed's SMITE 1 cap was on the
+    effect and not on the item stat, and Healing Reduction caps at 25% but
+    *does not stack with itself*, which is a non-stacking rule rather than an
+    additive budget and cannot live in `stat_caps` at all.
 3. **Magnitude-aware fit (B4)** — item stat magnitude as a fit term.
 4. **Damage-gain as a fit signal (B5)** — halves the gate; it cannot price
    defence at all.
@@ -355,8 +387,8 @@ numbers in the file.
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (630) ·
-`cd viewer && npm test -- --run` (614).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (641) ·
+`cd viewer && npm test -- --run` (660).
 
 ---
 
@@ -373,12 +405,12 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (630) ·
 | Items placed | 220 / 220 |
 | Community sample | 17,490 Obsidian+ Conquest matches, 28 Jul – 10 Aug |
 | Headline gate | coverage 48%, win-weighted 49% — see `unknown_win_per_god`; the drop IS the removed community-agreement prior |
-| **Leakage-free** | **35.5% probe · 36.7% at eff 0.45, vs 5.8% chance = 6.2–6.4×** — the eff 0.45 split up from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the earlier 37.5% was paid relics entering the denominator (see `is_buildable`) |
+| **Leakage-free** | **37.7% probe · 38.4% at eff 0.45, vs 5.7% chance = 6.6–6.7×** — re-run 2026-08-21 on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Achilles, Chaac, Danzaburou |
 | Expert claims | 4 recorded · 2 resolved · 2 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 638 pipeline · 660 viewer |
+| Tests | 641 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
