@@ -5,7 +5,9 @@ Most of these pin the worked example: Medusa was computed by hand on
 places the arithmetic is easy to get wrong, the caveat the report must print
 before any verdict, and the import boundary that keeps this a diagnostic.
 """
+import ast
 import inspect
+import re
 
 import pytest
 
@@ -339,6 +341,99 @@ def test_cli_prints_one_god(capsys):
     out = capsys.readouterr().out
     assert "352.8" in out and "314.8" in out
     assert bq.main(["--god", "Nobody"]) == 1
+
+
+# A figure, as a reader meets one: a decimal, a percentage, a gold amount, or
+# an ahead/behind count. The fingerprint (bare hex) and the title carry none.
+_FIGURE = re.compile(r"\d+\.\d|\d+%|\d[\d,]*g|DPS|ahead|behind")
+_CAVEAT = "READ THIS BEFORE ANY NUMBER BELOW"
+
+
+def _caveat_precedes_every_figure(text, where):
+    figure = _FIGURE.search(text)
+    if figure is None:
+        return
+    caveat = text.find(_CAVEAT)
+    assert caveat != -1, f"{where}: prints a figure and never states the blind spot"
+    assert caveat < figure.start(), (
+        f"{where}: first figure {figure.group()!r} at {figure.start()} precedes the caveat at {caveat}")
+
+
+def _cli_invocations(parser, tmp_path):
+    """One invocation per option the parser knows, discovered from the parser
+    itself so a flag added tomorrow is exercised without anyone remembering
+    to list it here. An option this cannot drive fails the test rather than
+    going quietly untested."""
+    base = ["--out", str(tmp_path / "report.md")]
+    yield "(no flags)", base
+    for action in parser._actions:
+        if not action.option_strings or action.dest in ("help", "out"):
+            continue
+        flag = action.option_strings[-1]
+        if action.nargs == 0:
+            yield flag, base + [flag]
+        elif action.choices:
+            for choice in action.choices:
+                yield f"{flag} {choice}", base + [flag, str(choice)]
+        elif action.dest == "god":
+            yield f"{flag} Medusa", base + [flag, "Medusa"]
+        elif action.dest == "archetype":
+            for archetype in ("model", "core"):
+                yield f"{flag} {archetype}", base + [flag, archetype]
+        else:
+            pytest.fail(f"{flag}: this test does not know a value to drive it with — "
+                        "teach it one, so the new path is checked for the caveat")
+
+
+def test_every_cli_path_states_the_caveat_before_its_first_figure(tmp_path, capsys):
+    """`--god Medusa` is the invocation STATE.md §6 recommends and it once
+    printed a DPS table with no caveat at all (2026-08-21) — `main` returned
+    before the blind spot was measured. The full run's stdout had the same
+    fault in a softer form: the ahead/behind counts came first and the blind
+    spot after. This drives every path the parser exposes, reads everything
+    each one printed or wrote, and requires the caveat before the first
+    figure in each."""
+    parser = bq.build_parser()
+    for where, argv in _cli_invocations(parser, tmp_path):
+        for stale in tmp_path.iterdir():
+            stale.unlink()
+        assert bq.main(argv) == 0, where
+        _caveat_precedes_every_figure(capsys.readouterr().out, f"{where} stdout")
+        for written in tmp_path.iterdir():
+            _caveat_precedes_every_figure(written.read_text(encoding="utf-8"),
+                                          f"{where} -> {written.name}")
+
+
+def test_the_only_way_out_of_the_module_is_the_caveated_sink():
+    """Every print and every file write in `build_quality.py` lives inside
+    `emit`, which puts the caveat first. A new `--flag` that prints its own
+    table cannot bypass the caveat, because it has no way to print."""
+    tree = ast.parse(inspect.getsource(bq))
+    parents = {}
+    for node in ast.walk(tree):
+        for child in ast.iter_child_nodes(node):
+            parents[child] = node
+
+    def enclosing_function(node):
+        while node in parents:
+            node = parents[node]
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                return node.name
+        return None
+
+    offenders = []
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.Call):
+            continue
+        f = node.func
+        name = f.id if isinstance(f, ast.Name) else f.attr if isinstance(f, ast.Attribute) else None
+        if name not in ("print", "write", "write_text", "write_bytes", "open", "writelines"):
+            continue
+        if name == "print" and any(k.arg == "file" for k in node.keywords):
+            continue   # stderr diagnostics ("Nobody: not compared") carry no figure
+        if enclosing_function(node) != "emit":
+            offenders.append(f"{name} at line {node.lineno} in {enclosing_function(node)}")
+    assert not offenders, offenders
 
 
 # ── The boundary ──────────────────────────────────────────────────────────
