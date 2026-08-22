@@ -72,8 +72,14 @@ slots do. `combat.py` itself reads exactly ONE passive — Deathbringer's +35%
 crit damage, measured in game. The bias is not even: by the gold model's own
 residual the community pays ~135g more per slot above its stat line than we
 do — that premium IS the passive — so a verdict in OUR favour is the one to
-distrust. The report says so at the top, and a test refuses a report that
-states a distribution without it.
+distrust. The report says so at the top, and so does every other way out of
+this module: `emit` is its only print and its only file write, it puts the
+caveat before the body, and `main` measures the blind spot before it can
+branch. That is structural because it has to be — the `--god` path, the one
+STATE.md §6 recommends, once returned before the blind spot was measured and
+printed a DPS table with no caveat at all (2026-08-21). Two tests hold it:
+one refuses a print or write anywhere but `emit`, the other drives every
+flag the parser knows and refuses a figure before the caveat on any of them.
 
 THE OTHER ASSUMPTIONS, also printed on the report: full ability uptime with no
 cast times (register §4.12 — nothing in the scrape has one, so a god casts
@@ -645,13 +651,11 @@ def write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_ski
                  blind, fingerprint, out_path=REPORT_PATH, example="Medusa"):
     """Byte-for-byte deterministic, like `_calibration.md`, so its diff is a
     record of what a commit did to the builds rather than of when it ran."""
-    lines = ["# Build quality — `combat.py` pointed at whole builds", ""]
-    lines.append(f"_Input fingerprint: `{fingerprint}` — items, gods, tags, community builds, "
-                 "weights. Regenerate with `python -m smite.build_quality`; a different fingerprint "
-                 "means different inputs._")
-    lines.append("")
-    lines += caveat_lines(blind)
-    lines.append("")
+    head = ["# Build quality — `combat.py` pointed at whole builds", "",
+            f"_Input fingerprint: `{fingerprint}` — items, gods, tags, community builds, "
+            "weights. Regenerate with `python -m smite.build_quality`; a different fingerprint "
+            "means different inputs._", ""]
+    lines = []
     lines.append("This is the only instrument in the repo that can say a build is BETTER rather "
                  "than more conventional: `validate.compute` is circular (STATE.md §1) and the "
                  "leakage-free gate is coverage of the community's items, and both go down when a "
@@ -716,8 +720,27 @@ def write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_ski
               "C = community, O = ours. DPS vs 70 is shown as total (basic + ability).", ""]
     lines += _god_table(rows)
     lines.append("")
+    return emit(blind, lines, head=head, out_path=out_path)
+
+
+def emit(blind, body, head=(), out_path=None):
+    """THE ONLY WAY OUT OF THIS MODULE. Every print and every file write is
+    here — a test refuses one anywhere else — and what leaves is the caveat
+    first, then the body. A path that wants to show a number has no way to
+    show it without the blind spot above it, which is the property the
+    `--god` path lacked when it returned before `passive_blind_spot` ran
+    (2026-08-21).
+
+    `head` is identification, never a figure: the report's title and its
+    input fingerprint. The CLI test reads every path's output and refuses a
+    figure before the caveat, so a figure in `head` fails there.
+    """
+    text = "\n".join(list(head) + caveat_lines(blind) + [""] + list(body))
+    if out_path is None:
+        print(text)
+        return None
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text("\n".join(lines), encoding="utf-8")
+    out_path.write_text(text, encoding="utf-8")
     return out_path
 
 
@@ -731,50 +754,53 @@ def _fingerprint(items, weights, tags_map, gods, builds_by_god):
     return calibrate.input_fingerprint(fx)
 
 
-def print_god(row):
-    print("\n".join(worked_example(row)))
-
-
-def main(argv=None):
+def build_parser():
     ap = argparse.ArgumentParser(description="combat.py pointed at whole builds, ours vs community")
     ap.add_argument("--god", help="print one god's comparison and stop")
     ap.add_argument("--archetype", default=DEFAULT_ARCHETYPE,
                     help="our build to compare (default: model)")
     ap.add_argument("--out", type=Path, default=REPORT_PATH)
-    args = ap.parse_args(argv)
+    return ap
+
+
+def main(argv=None):
+    args = build_parser().parse_args(argv)
 
     items = recommend.load_items()
     gods = recommend.load_gods()
     weights = scoring.load_weights(recommend.WEIGHTS_PATH)
     tags_map = scoring.load_tags(recommend.TAGS_PATH)
     builds_by_god = {g["name"]: recommend.load_build_note(g["name"]) for g in gods}
+    # Measured before any path can print: the roster-wide blind spot is the
+    # caveat on a single god's table as much as on the distribution.
+    blind = passive_blind_spot(items, gods, builds_by_god, weights, args.archetype)
 
     if args.god:
         rows, skipped = run([g for g in gods if g["name"] == args.god], items, builds_by_god,
                             weights, args.archetype)
         if not rows:
-            print(f"{args.god}: not compared ({', '.join(skipped) or 'unknown god'})")
+            print(f"{args.god}: not compared ({', '.join(skipped) or 'unknown god'})",
+                  file=sys.stderr)
             return 1
-        print_god(rows[0])
+        emit(blind, worked_example(rows[0]))
         return 0
 
     rows, skipped = run(gods, items, builds_by_god, weights, args.archetype)
     core_rows, core_skipped = run(gods, items, builds_by_god, weights, "core")
     priced_rows, priced_skipped = run(gods, items, builds_by_god, weights, args.archetype, priced=True)
-    blind = passive_blind_spot(items, gods, builds_by_god, weights, args.archetype)
     fingerprint = _fingerprint(items, weights, tags_map, gods, builds_by_god)
     path = write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_skipped,
                         blind, fingerprint, args.out)
 
     d70, d170 = distribution(rows, "dps_70"), distribution(rows, "dps_170")
-    print(f"{len(rows)} gods compared, {len(skipped)} skipped")
-    print(f"  DPS vs 70:  ahead {d70['ahead']}, behind {d70['behind']}, "
-          f"median {_pct(d70['quantiles'][50])}")
-    print(f"  DPS vs 170: ahead {d170['ahead']}, behind {d170['behind']}, "
-          f"median {_pct(d170['quantiles'][50])}")
-    print(f"  blind: {blind['blind_share']:.0%} of the pool, "
-          f"{blind['community']['share']:.0%} of community slots — read the caveat")
-    print(f"  wrote {path}")
+    emit(blind, [
+        f"{len(rows)} gods compared, {len(skipped)} skipped",
+        f"  DPS vs 70:  ahead {d70['ahead']}, behind {d70['behind']}, "
+        f"median {_pct(d70['quantiles'][50])}",
+        f"  DPS vs 170: ahead {d170['ahead']}, behind {d170['behind']}, "
+        f"median {_pct(d170['quantiles'][50])}",
+        f"  wrote {path}",
+    ])
     return 0
 
 

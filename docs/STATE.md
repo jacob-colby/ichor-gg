@@ -147,7 +147,7 @@ Each of these has its evidence in the named module.
 | Waste past a stat cap is **priced**, not refused | `assemble.cap_overflow_penalty` | A reject rule fires only when an item's WHOLE line is capped, and no penetration item is pure penetration; charging the overflow keeps the Intelligence and drops the dead penetration |
 | An item's offense tags **sum** | `offense_tags` in `_weights.yaml` | Flat, an item answering a tank two ways scored what one answering it once did — which is how `penetration` on Titan's Bane displaced Heartseeker |
 | A resolved expert claim is measured against its **own recorded baseline** | `expert_review.regressions` | The old rule only failed on a full reversion, so `clear` → `partial` shipped green |
-| `build_quality` is a **diagnostic**, never a scoring input | `build_quality.py` | Register §4.4 is what happens when a damage measure becomes a fit signal; its output is a report a human reads, with the passive blind spot printed above the first number |
+| `build_quality` is a **diagnostic**, never a scoring input | `build_quality.py` | Register §4.4 is what happens when a damage measure becomes a fit signal; its output is a report a human reads, with the passive blind spot printed above the first number on every path out — `emit` is the module's only print and only file write (the `--god` path once returned before the blind spot was measured, 2026-08-21) |
 | The fit map gets an **Attack Damage column** from the god's own scaling | `damage_value.attack_damage_fit` | `role_stats` and `kit_stat_overlay` between them never name the stat, so the merged fit map scored it 0.0 on 89 of 89 gods while their basic-attack scaling measures it non-zero on all 78 that parse; probe 38.7% → 39.7%, best 39.6% → 40.3% |
 | That column is **credited but not charged** | `scoring.god_fit_score` | `fit` is normalised by the sum of the map, so charging it shrinks every non-carrier's stat term (−12.5% over 10,065 pairs) and promotes the flat tag bonuses added after normalisation — which pulled 43 anti-heal items into Joust and Arena cores, the two modes with no gate to catch it |
 | The damage model counts the **basic attack**, and its unit is one rotation plus one swing | `damage_value.item_damage_gain` | `ability_damage_components` skips the Basic Attack slot, so Attack Damage — 100% of a basic attack on 84 of 89 gods, and no ability in the roster scales on it — was worth exactly 0.0 in the only damage path that reaches a recommendation. 12 items carried it, 10 more carry Critical Chance. The 1:1 mix is a declaration, not a measurement; the clock that would replace it is register §4.12 |
@@ -657,7 +657,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (755) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (757) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -682,7 +682,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (755) ·
 | Gods at 0% coverage | 1 — Ares. Sun Wukong left the list with `price_adaptive`; the previous row (Achilles, Chaac, Danzaburou) predates the community refresh |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 755 pipeline · 660 viewer |
+| Tests | 757 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
