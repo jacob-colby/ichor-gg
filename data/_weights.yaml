@@ -216,6 +216,85 @@ damage_fit_blend: 0.0
 # Conquest cores (13 swaps), 18 of 90 Joust (20) and 19 of 89 Arena (33). The
 # first cut moved 23 / 42 / 38; the normaliser fix is most of that difference.
 attack_damage_fit: 1.0
+# ── Charging an item for stat mass the god cannot use ─────────────────────
+# How much of the gold an item spent on stats the god's fit map does NOT name
+# is charged back to its efficiency score. 0.0 is the exact control; 1.0
+# prices the item as if it were sold carrying only the stats this god wants.
+#
+# THE HOLE IT ADDRESSES. `efficiency` is god-agnostic and prices every stat an
+# item carries; `scoring.god_fit_score` normalises over the role map alone, so
+# a stat the map does not name is in neither its numerator nor its
+# denominator. Off-map stats are therefore credited by one half of `quality`
+# and invisible to the other. Full derivation, tables and the case against are
+# in `efficiency.offmap_adjusted_score`; the headline is that the fit stat
+# term is provably constant across items sharing a god's on-map stat set
+# (1174 of 1174 groups) while efficiency inside those classes correlates
+# +0.441 with off-map mass.
+#
+# IT IS A KNOB AND NOT A STRUCTURAL FIX BECAUSE THE BIAS IS NOT ROSTER-WIDE.
+# Off-map share correlates -0.175 with core membership across all 9,541 (god,
+# item) pairs, and our cores carry 0.235 mean off-map share against the
+# community's 0.242. The gap is on Carry alone (0.254 vs 0.127) and the reason
+# is structural: 0 of 18 Carry gods' maps name any of Physical Protection,
+# Magical Protection, Max Health or Health Regen, against 18 of 18 Solo and
+# 14 of 14 Support.
+#
+# SWEEP (2026-08-22, control re-measured on the same data minutes before at
+# baseline 5.6% / probe 39.1% / best 40.0%). Measured at input fingerprint
+# `33d6031bd9de`, which is this data with this key ABSENT; adding the key at
+# 0.0 moves the fingerprint to `c73b6ea6bdde` because the hash covers this
+# file. It moves nothing else, and that is checked rather than assumed — the
+# control at the new fingerprint reads 5.6% / 39.1% / 40.0%, identical to the
+# digit, and `viewer/public/index.json` regenerates byte-identical with the
+# key present and absent.
+#
+#     alpha   probe 0.70   paired 95% CI      best 0.45   paired 95% CI    churn C/J/A
+#      0.00        39.1%              --          40.0%              --         0/ 0/ 0
+#      0.10        38.8%  [-1.69%, +0.97%]        39.4%  [-1.50%, +0.00%]      22/36/20
+#      0.15        38.8%  [-2.36%, +1.57%]        38.9%  [-2.13%, -0.22%]      29/42/25
+#      0.25        38.8%  [-2.85%, +2.02%]        38.5%  [-2.62%, -0.56%]      51/49/32
+#      0.50        35.8%  [-6.61%, -0.21%]        37.4%  [-4.53%, -0.86%]      71/61/62
+#      0.75        34.9%  [-7.66%, -0.97%]        37.2%  [-4.91%, -1.01%]      83/70/80
+#      1.00        34.0%  [-8.56%, -1.87%]        37.0%  [-5.47%, -0.82%]      86/80/86
+#
+# Worse than control at every strength on both splits, monotonically, and the
+# best split's paired CI excludes zero from 0.15 up. It ships OFF.
+#
+# WHAT IT DOES MOVE, and why the entry is worth reading rather than filing:
+# `build_quality`, the non-circular instrument, says the Carry defect is real
+# and that this is the lever for it. Carry on its own objective, DPS per
+# 1000g, against effective health per 1000g:
+#
+#     alpha    Carry DPS/1000g          Carry EHP phys/1000g
+#      0.00    10 ahead  8 behind  +7.8%     17 /  1  +26.8%
+#      0.15    11 ahead  6 behind +12.5%      8 /  9   -0.5%
+#      0.25    12 ahead  5 behind +27.3%      2 / 16   -7.7%
+#      1.00    13 ahead  5 behind +32.8%      2 / 16  -10.5%
+#
+# At 0.15 our Carry defensive profile lands level with the community's and we
+# win damage. Berserker's Shield leaves every Carry core. Read the caveat at
+# the top of `_build_quality.md` before weighing that: a verdict in our favour
+# is the one to distrust, the Carry survival threshold does not bind (STATE.md
+# §4.13), and a metric that cannot charge us for buying no defence will always
+# reward buying no defence.
+#
+# WHY IT CANNOT BE CARVED DOWN TO THE ROLE THAT NEEDS IT — the finding that
+# outlasts the flag. Off-map mass is not one thing. The community's OWN cores
+# are full of it, in every role, and it is the same two stats everywhere:
+#
+#     role      our cores' off-map mass          community's off-map mass
+#     Carry     MaxMana 25 PhysProt 21 MaxHP 18  MaxMana 38 ManaRegen 24 AtkDmg 22
+#     Mid       MaxMana 44 ManaRegen 31 LS 20    MaxMana 43 ManaRegen 35 LS 7
+#     Support   HPRegen 36 ManaRegen 22 MM 21    ManaRegen 33 MaxMana 29 HPRegen 20
+#
+# Mana, regen and Plating are ride-along the community buys too and no role
+# map names — there the map is INCOMPLETE and the charge punishes a real want,
+# which is why Support loses up to 21.4pp and Solo 9.4pp. Protections on a
+# Carry are the actual defect. Nothing available here separates those two
+# cases: doing it by naming which stats a role "really" wants is the invented
+# constant §4.12 and §4.13 both turned on refusing, and doing it from the
+# community's own composition is the leakage §1 is about.
+offmap_efficiency: 0.0
 # ── The clock (B5) ────────────────────────────────────────────────────────
 # What `damage_value.item_damage_gain` RETURNS. False = one ability rotation
 # plus one basic attack, where the 1:1 mix is a declaration and nothing else.

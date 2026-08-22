@@ -280,3 +280,66 @@ def test_validate_applies_the_flags_before_fitting():
     src = inspect.getsource(validate.compute)
     assert "apply_pricing_flags" in src
     assert src.index("apply_pricing_flags") < src.index("efficiency_scores(items)")
+
+
+# ── offmap_efficiency (STATE.md §4.15) ────────────────────────────────────
+
+def test_stat_base_strips_the_unit_the_regression_added():
+    """The fit map is keyed on the plain name and the regression on the name
+    with its unit. Anything comparing the two goes through `stat_base`, or it
+    reads every percentage stat as absent from every role map."""
+    assert efficiency.stat_base("Attack Speed %") == "Attack Speed"
+    assert efficiency.stat_base("Penetration %") == "Penetration"
+    assert efficiency.stat_base("Strength") == "Strength"
+
+
+def test_efficiency_scores_carry_a_stat_gold_decomposition():
+    """`stat_gold` has to reconstruct the item's own predicted cost, or the
+    charge `offmap_adjusted_score` computes is not the one the residual used."""
+    items = [_item("A", 2000, Strength=100), _item("B", 3000, Intelligence=100),
+             _item("C", 2500, Strength=50, Intelligence=50)]
+    for it in items:
+        it["tier"] = 3
+    scores, gold = efficiency.efficiency_scores(items)
+    for it in items:
+        row = scores[it["name"]]
+        assert sum(row["stat_gold"].values()) + gold[efficiency.INTERCEPT_KEY] == \
+            pytest.approx(efficiency.predicted_cost(it, gold))
+
+
+def test_offmap_gold_counts_only_columns_the_map_does_not_name():
+    row = {"stat_gold": {"Strength": 700.0, "Attack Speed %": 400.0,
+                         "Physical Protection": 800.0}}
+    assert efficiency.offmap_gold(row, {"Strength": 1.0, "Attack Speed": 1.3}) == 800.0
+    # And the percentage column is matched through its base name, not skipped.
+    assert efficiency.offmap_gold(row, {"Strength": 1.0}) == 1200.0
+    assert efficiency.offmap_gold(row, {}) == 1900.0
+
+
+def test_offmap_adjusted_score_is_an_exact_no_op_at_zero():
+    row = {"score": 0.681, "span": 4000.0,
+           "stat_gold": {"Physical Protection": 800.0}}
+    assert efficiency.offmap_adjusted_score(row, {"Strength": 1.0}, 0.0) == 0.681
+
+
+def test_offmap_adjusted_score_moves_with_its_strength():
+    """Register §4.10's failure mode: a strength that is applied where nothing
+    reads it measures one behaviour n times. This pins that it varies."""
+    row = {"score": 0.8, "span": 1000.0, "stat_gold": {"Max Health": 200.0}}
+    m = {"Strength": 1.0}
+    assert efficiency.offmap_adjusted_score(row, m, 0.5) == pytest.approx(0.7)
+    assert efficiency.offmap_adjusted_score(row, m, 1.0) == pytest.approx(0.6)
+
+
+def test_offmap_adjusted_score_clamps_into_the_unit_range():
+    row = {"score": 0.2, "span": 100.0, "stat_gold": {"Max Health": 900.0}}
+    assert efficiency.offmap_adjusted_score(row, {"Strength": 1.0}, 1.0) == 0.0
+
+
+def test_offmap_adjusted_score_leaves_an_empty_map_alone():
+    """An empty map means "no information about what this god wants", never
+    "this god wants nothing" — `archetype_bypass` flavors set one deliberately
+    and `_role_stat_map` returns one for unseen role vocabulary. Charging it
+    would collapse every item at once, on the gods the model knows least."""
+    row = {"score": 0.7, "span": 1000.0, "stat_gold": {"Max Health": 400.0}}
+    assert efficiency.offmap_adjusted_score(row, {}, 1.0) == 0.7
