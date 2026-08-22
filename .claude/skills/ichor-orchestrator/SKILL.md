@@ -41,7 +41,7 @@ something you already measured has wasted most of its value.
 its date. The single highest-value line in any prompt so far has been a table
 of figures the session would otherwise have spent an hour reproducing.
 
-**Say why it is not a re-run.** `docs/STATE.md` §4 holds twelve refuted
+**Say why it is not a re-run.** `docs/STATE.md` §4 holds fourteen refuted
 improvements. If the work is adjacent to one, name the entry and say what is
 different — otherwise the session either re-runs it or, worse, does not notice.
 The strongest form of this argument is precedent: `price_crit_multipliers` and
@@ -128,7 +128,7 @@ dangerous, because the reasoning outlives the change.
 
 ## Keeping the backlog honest
 
-The register is the crown jewel: twelve measured negatives that stop the same
+The register is the crown jewel: fourteen measured negatives that stop the same
 work being redone. Protect it. An entry whose evidence does not support its
 claim is worse than no entry, because §4 is read as settled.
 
