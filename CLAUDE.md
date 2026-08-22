@@ -13,9 +13,11 @@ Five things that are easy to get wrong here, all expanded in that file:
    (leakage-free coverage against a random-core baseline). Headline coverage
    moving the *other* way is expected and is not by itself a reason to revert.
 
-2. **Check the negative-results register (§4) first.** Twelve correct-looking
+2. **Check the negative-results register (§4) first.** Fourteen correct-looking
    improvements have been implemented, measured, and shipped off. Re-running
-   them against the old metric will just reproduce the old answer.
+   them against the old metric will just reproduce the old answer. Two of the
+   fourteen are *not* "we measured this and it is false" — §4.13 and §4.14 —
+   and each says on its own line what it is instead.
 
 3. **The combat model is exact — keep it that way.** `smite.calibrate_combat`
    must stay at 0.0%. Constants carry evidence tiers, and several deliberately

@@ -240,6 +240,137 @@ def test_flips_names_gods_whose_sign_changes_between_runs():
     assert [g for g, _, _ in bq.flips(a, b)] == ["x"]
 
 
+# ── Judged by role ────────────────────────────────────────────────────────
+
+def _profile(dps, ehp, cost=1000.0, burst=None):
+    """A profile complete enough for every objective's maximand."""
+    burst = dps if burst is None else burst
+    t = cost / 1000.0
+    return {
+        "items": [], "cost": cost, "stats": {},
+        "total_dps": {70: dps, 170: dps}, "burst": {0: burst, 70: burst, 170: burst},
+        "ehp_physical": ehp, "ehp_magical": ehp,
+        "duel": {70: ehp * dps, 170: ehp * dps},
+        "per_1000g": {"total_dps": {70: dps / t, 170: dps / t},
+                      "burst": {0: burst / t, 70: burst / t, 170: burst / t},
+                      "ehp_physical": ehp / t, "ehp_magical": ehp / t},
+    }
+
+
+def _full_row(god, role, theirs, mine):
+    return {"god": god, "role": role, "primary_role": role.split()[0],
+            "community": theirs, "ours": mine}
+
+
+def test_a_duel_score_has_no_per_1000g_twin():
+    """EHP x DPS already carries the build's gold in both factors; dividing it
+    again is not a quantity, so asking raises rather than returning a number
+    nobody could interpret."""
+    p = _profile(100.0, 3000.0)
+    assert bq.metric(p, "duel_70") == pytest.approx(300_000.0)
+    with pytest.raises(KeyError, match="no per-1000g twin"):
+        bq.metric(p, "duel_70/1000g")
+
+
+def test_the_duel_score_is_neutral_when_a_build_trades_ehp_for_damage():
+    """The Solo objective's whole point, and the case neither scalar
+    describes: double the effective health, halve the damage, score 1.00. The
+    reference opponent cancels in ours-over-theirs, so no constant chooses
+    this — the algebra does."""
+    theirs, mine = _profile(100.0, 3000.0), _profile(50.0, 6000.0)
+    assert bq.metric(mine, "duel_70") == pytest.approx(bq.metric(theirs, "duel_70"))
+    d = bq.distribution([_full_row("g", "Solo", theirs, mine)], "duel_70")
+    assert (d["ahead"], d["behind"], d["level"]) == (0, 0, 1)
+
+
+def test_every_role_objective_names_a_threshold_and_a_maximand():
+    """The section exists so a reader can disagree with the CHOICE rather than
+    only with the number, which requires every verdict to state both."""
+    rows = [_full_row(f"g{i}", role, _profile(100.0, 3000.0), _profile(110.0, 3000.0))
+            for i, role in enumerate(bq.ROLE_ORDER)]
+    verdicts = bq.role_verdicts(rows)
+    assert [v["role"] for v in verdicts] == list(bq.ROLE_ORDER)
+    for v in verdicts:
+        assert v["maximise"], v["role"]
+        assert v["because"], v["role"]
+        assert "threshold" in v
+    assert bq.ROLE_OBJECTIVES["Solo"]["maximise"][0] == "duel_70"
+    # Support scores no damage at all — excluded, not down-weighted.
+    assert "ehp" in bq.ROLE_OBJECTIVES["Support"]["maximise"][0]
+    assert all("dps" not in key and "burst" not in key
+               for key, _ in [bq.ROLE_OBJECTIVES["Support"]["maximise"]])
+
+
+def test_the_duel_score_is_not_applied_outside_solo():
+    """It pays full price for effective health, which is correct for a duel
+    and is exactly the defect the role split exists to expose on a Carry. A
+    metric that hides what it was built to find is worse than the pooled one."""
+    assert bq.ROLE_OBJECTIVES["Solo"]["maximise"][0] == "duel_70"
+    for role, objective in bq.ROLE_OBJECTIVES.items():
+        if role != "Solo":
+            assert not objective["maximise"][0].startswith("duel"), role
+
+
+def test_a_role_with_no_recorded_objective_is_named_not_given_someone_elses():
+    rows = [_full_row("g", "Adjacent", _profile(100.0, 3000.0), _profile(110.0, 3000.0))]
+    verdict = next(v for v in bq.role_verdicts(rows) if v["role"] == "Adjacent")
+    assert verdict["maximise"] is None and verdict["n"] == 1
+
+
+def test_threshold_probe_reports_a_threshold_that_separates_nobody():
+    """Both proposed thresholds are one-sided under this arithmetic, and the
+    probe has to say WHICH way and by how much — a threshold nobody fails and
+    one everybody fails are equally useless, and only `nearest` distinguishes
+    a near miss from an order of magnitude."""
+    rows = [_full_row("c", "Carry", _profile(100.0, 3000.0, burst=10.0),
+                      _profile(100.0, 3000.0, burst=10.0)),
+            _full_row("m", "Mid", _profile(100.0, 3000.0, burst=10.0),
+                      _profile(100.0, 3000.0, burst=10.0))]
+    probe = bq.threshold_probe(rows)
+    carry, kill = probe["carry_survival"], probe["kill_threshold"]
+    # One god per population, both sides of each: the Carry floor is measured
+    # over Carries, the kill threshold over Mid and Jungle.
+    assert (carry["n"], carry["failed"]) == (2, 0)       # 3000 EHP vs a 10 burst
+    assert (kill["n"], kill["failed"]) == (2, 2)         # a 10 burst vs 3000 EHP
+    assert carry["nearest"] == pytest.approx(300.0)
+    assert kill["nearest"] == pytest.approx(10.0 / 3000.0)
+
+
+def test_threshold_probe_would_report_a_threshold_that_does_bind():
+    """It is a measurement, not a constant — on data where the burst reaches
+    the health bar it prints a binding threshold instead of the standing one.
+    Without this the report's "separates 0 of n" could never change."""
+    rows = [_full_row("weak", "Carry", _profile(100.0, 500.0, burst=1000.0),
+                      _profile(100.0, 4000.0, burst=1000.0))]
+    carry = bq.threshold_probe(rows)["carry_survival"]
+    assert (carry["n"], carry["failed"]) == (2, 1)
+    assert carry["reference"] == pytest.approx(1000.0)
+
+
+def test_the_report_says_the_role_split_does_not_escape_the_blind_spot(
+        tmp_path, items_by_name):
+    """Per-role numbers must not read as though slicing the data got out from
+    under the ~90% of the pool this arithmetic cannot price."""
+    god = _god("Medusa")
+    note = recommend.load_build_note("Medusa")
+    row = bq.compare(god, note, items_by_name)
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    blind = bq.passive_blind_spot(recommend.load_items(), [god], {"Medusa": note}, weights)
+    out = tmp_path / "report.md"
+    bq.write_report([row], [], [row], [], [row], [], blind, "abc123", out,
+                    items_by_name=items_by_name)
+    text = out.read_text(encoding="utf-8")
+    section = text[text.index("## 3. Judged by role"):text.index("## 4.")]
+    assert "slicing by role does not escape it" in section
+    assert "we cannot currently evaluate a threshold" in section
+    # What is unmeasurable is named, not implied.
+    for phrase in bq.UNMEASURABLE:
+        assert phrase in text, phrase
+    # The Carry mechanism is recorded and explicitly not acted on.
+    assert "recorded, not acted on" in section
+    assert "Berserker's Shield" in section
+
+
 # ── The blind spot ────────────────────────────────────────────────────────
 
 def test_blind_means_passive_text_the_pricing_flags_do_not_read():
@@ -377,6 +508,11 @@ def _cli_invocations(parser, tmp_path):
                 yield f"{flag} {choice}", base + [flag, str(choice)]
         elif action.dest == "god":
             yield f"{flag} Medusa", base + [flag, "Medusa"]
+        elif action.dest == "role":
+            # Both shapes: a role whose objective names a threshold and one
+            # whose objective is a ratio, because they render different tables.
+            for role in ("Carry", "Solo"):
+                yield f"{flag} {role}", base + [flag, role]
         elif action.dest == "archetype":
             for archetype in ("model", "core"):
                 yield f"{flag} {archetype}", base + [flag, archetype]
