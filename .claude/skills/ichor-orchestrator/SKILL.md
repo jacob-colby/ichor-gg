@@ -23,6 +23,11 @@ The letter is **per day**, resetting at midnight: the first session on 08-21 is
 `A`, the second `B`. Two sessions with the same letter on different days is
 fine and expected. Use the date the session **starts**.
 
+Midnight is **local**, not UTC. `list_sessions` stamps `lastActivityAt` in UTC,
+so an evening session reads as the next day there — go by the working day, not
+the stamp. Settled 2026-08-21: `G` and `H` stamped `2026-08-22T00:15Z` and
+stayed `08-21`, keeping the A–H run on one day.
+
 Name the session for the change it makes, not the symptom it chases —
 `Price Adaptive Stats`, not `Fix The Executioner`. The symptom belongs in the
 prompt body, where the evidence is.
