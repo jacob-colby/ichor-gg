@@ -41,7 +41,7 @@ something you already measured has wasted most of its value.
 its date. The single highest-value line in any prompt so far has been a table
 of figures the session would otherwise have spent an hour reproducing.
 
-**Say why it is not a re-run.** `docs/STATE.md` §4 holds eleven refuted
+**Say why it is not a re-run.** `docs/STATE.md` §4 holds twelve refuted
 improvements. If the work is adjacent to one, name the entry and say what is
 different — otherwise the session either re-runs it or, worse, does not notice.
 The strongest form of this argument is precedent: `price_crit_multipliers` and
@@ -128,11 +128,29 @@ dangerous, because the reasoning outlives the change.
 
 ## Keeping the backlog honest
 
-The register is the crown jewel: eleven measured negatives that stop the same
+The register is the crown jewel: twelve measured negatives that stop the same
 work being redone. Protect it. An entry whose evidence does not support its
 claim is worse than no entry, because §4 is read as settled.
 
+**Re-check a backlog entry before you put it in a prompt.** Two of these went
+stale inside a week and would have sent a session to fix something already
+fixed. The check is cheap — grep for the symbol the entry names.
+
 **Standing backlog** — carried here because sessions lose it:
+
+- **Our Carry builds buy defence the community never buys, on 18 of 18 gods.**
+  Measured 2026-08-21 by `08-21 H`: the community buys *exactly zero*
+  protections across all 18 Carries; we buy a mean 37.8, and it is Berserker's
+  Shield (2400g) in **17 of our 18 Carry cores and 0 of 18 community ones**.
+  Carry is our weakest damage record of any role (12 ahead / 6 behind) and our
+  strongest EHP record (18 / 0, +34.5% median). The protection is physical
+  only, so against the magical burst that actually kills a Carry it buys just
+  the 200 health (+9.0%, not +34.5%). NOT yet diagnosed — `defense_affinity`
+  and `archetype_scaled_stats` are mechanically excluded (viewer-side only,
+  never imported by `scoring`/`assemble`/`recommend`, and `defense_affinity`
+  reads 0.0 for Carry regardless). The item wins its slot on efficiency + fit;
+  *why* is the open question. Diagnose it with a session other than the one
+  that found it.
 
 - **Multiplicative items cannot be priced.** Genie's Lamp, Shell of Rebuke's
   `+7.5% of all Stats`, The Executioner's shred. Needs a value model for
@@ -153,10 +171,20 @@ claim is worse than no entry, because §4 is read as settled.
   question about the two signals, not about the weight between them.
 - **1-stat items have 0% recall** and 42% of every coverage miss is a 1- or
   2-stat item. Register 4.11 found this while exonerating the multi-stat bias.
-- **The damage model skips basic attacks** (`ability_damage_components` has an
-  explicit `continue`) and has no clock — `casts_per_second`,
-  `attacks_per_second`, `attack_dps` and `cooldown_multiplier` are calibrated
-  and called nowhere. So Attack Speed and Cooldown Rate buy no modelled damage.
+- **The damage model has no clock, and burst is understated by roughly 8×.**
+  Corrected 2026-08-21 — this entry used to read "skips basic attacks and
+  `casts_per_second`/`attacks_per_second`/`attack_dps`/`cooldown_multiplier`
+  are called nowhere", and most of that is now false. `#34` made the basic
+  attack count, and `build_quality` and `damage_value` between them call all
+  but `cooldown_multiplier`. What survives: a rotation counts one cast of each
+  ability with no basic attacks in the window, no item passives, no follow-up
+  and one target, so burst measures a **median 0.12 of the target's own EHP**
+  (max 0.72). That is why every kill-or-survival threshold `08-21 H` tested
+  came back inert — 0 of 18 on Carry floors, 89 of 89 on Mid/Jungle kills.
+  Read that as *this arithmetic cannot evaluate a threshold*, NOT as
+  *thresholds do not matter in SMITE*. What would change the answer is the
+  §4.12 clock or the passives, and a burst-window constant is §4.12 wearing a
+  different name — it would silently become the whole metric.
 - **Joust's economy constants are INFERRED**; its wiki page is a stub.
 - **The penetration cap value (40) is the weakest number in `_weights.yaml`** —
   pre-2023 SMITE 1 lineage, and SMITE 1 itself moved to 32%.
