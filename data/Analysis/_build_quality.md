@@ -15,6 +15,9 @@ Assumptions, all of them on every figure:
 - printed stat lines only, with penetration kept as two goods and capped (40% / 50); Deathbringer at the measured 1.85x
 - a chain god's basic attack at the chain's mean multiplier; an ability without a scraped cooldown dropped, never imputed; a DoT counted as its listed damage once
 - dual-role labels (`Solo Jungle`) collapse to their first word in the role tables
+- a burst is one cast of every counted ability, summed; it charges no basic attacks, because a burst window in seconds does not exist in this repo (register §4.12)
+
+**What none of this measures, at any level of slicing:** CC chain duration, peel, aura coverage, wave clear, objective damage, map tempo. Much of what a Support contributes is on that list, which is why Support's objective excludes damage rather than weighting it small — scoring a quantity badly is worse than declining to score it, and on 3 of 14 Supports the damage column is identical on both sides because neither build buys any.
 
 Nothing here feeds `scoring`, `assemble` or a weight. It is a report a human reads.
 
@@ -79,7 +82,60 @@ Per 1000 gold, by role:
 | Solo | 18 | 17 / 1 / +69.5% | 17 / 1 / +67.6% | 8 / 10 / -4.0% | 4 / 13 / -9.9% |
 | Support | 14 | 5 / 9 / -8.8% | 5 / 9 / -8.8% | 14 / 0 / +22.8% | 12 / 2 / +18.3% |
 
-## 3. The same, for the blended `core` (what the Balanced tab ships)
+## 3. Judged by role, on each role's own objective
+
+Most roles clear a THRESHOLD and then maximise something else, and one pooled metric cannot represent five roles that do not share an objective. Each row below names both quantities. **The passive blind spot at the top of this report applies to every row here exactly as it applies to the pooled figures** — slicing by role does not escape it, and the bias still runs in our favour.
+
+| Role | n | Threshold | Binds? | Maximised | ahead | behind | tie | median |
+|---|---|---|---|---|---|---|---|---|
+| Carry | 18 | survive one enemy burst rotation | **no** — 0 of 36 builds fail it | sustained DPS per 1000g | **11** | **7** | 0 | **+7.8%** |
+| Jungle | 17 | rotation burst >= a reference squishy's EHP | **no** — all 78 builds fail it | rotation burst per 1000g | **14** | **2** | 1 | **+15.0%** |
+| Mid | 22 | rotation burst >= a reference squishy's EHP | **no** — all 78 builds fail it | sustained DPS per 1000g | **18** | **4** | 0 | **+8.5%** |
+| Solo | 18 | **none** | – | duel score, EHP x DPS | **18** | **0** | 0 | **+73.8%** |
+| Support | 14 | **none** | – | effective health per 1000g | **14** | **0** | 0 | **+22.8%** |
+
+Why each objective is what it is:
+
+- **Carry** — a Carry needs enough effective health to live through one burst — a floor, not a maximand. Buying more than the floor is gold not spent on damage, which is what the pooled metric scored as a win.
+- **Jungle** — same kill threshold as Mid, and past it a gank is priced on burst rather than on sustained damage — a Jungler is not standing in the fight for the seconds a DPS figure assumes.
+- **Mid** — a Mid's rotation either kills the squishy or it does not; past that the question is how often it comes back.
+- **Solo** — not a threshold at all — a RATIO. Their time-to-kill on you over yours on them is (EHP / ref DPS) / (ref EHP / DPS), so the reference opponent CANCELS in ours-over-theirs and what is left is EHP x DPS. A build that doubles effective health and halves damage scores exactly 1.00 — neutral, which is the case neither scalar describes, and it is a property of the algebra rather than of a constant anyone chose.
+- **Support** — damage is EXCLUDED, not down-weighted. Most of what a Support is for is in `UNMEASURABLE`, and its damage column is provably empty on 3 of 14 gods.
+
+### Neither threshold binds, and that is a statement about this arithmetic
+
+Both thresholds were defined, measured and left in the table with their measurement, rather than dropped quietly. Re-measured on every run by `threshold_probe`:
+
+| Threshold | population | reference | separates | nearest build |
+|---|---|---|---|---|
+| Carry: survive one enemy burst rotation | 36 builds | largest burst in the roster at 0 protection — Scylla, ours, 2,952 | **0 of 36** | 1.14x the threshold |
+| Mid / Jungle: rotation burst >= a reference squishy's EHP | 78 builds | median effective health of the community's own Carry and Mid builds, magical — 3,399 | **78 of 78** | 0.72x the threshold |
+
+A threshold that separates none of the population and a threshold that separates all of it are equally useless, and one of each is what these are. **Read this as "we cannot currently evaluate a threshold", not as "thresholds do not matter in SMITE"** — the cause is on our side of the arithmetic. A burst here is one cast of every ability with no basic attacks, no item passive, no follow-up and one target, while effective health is full level-20 health plus every protection the six items carry; the two are about an order of magnitude apart. Two things would change the answer and neither is a tuning choice: **a clock** (register §4.12 — a burst window in seconds would let basic attacks into the burst, and it is refused because no source supplies one), or **priced passives** (register §4.5 — ~90% of the pool carries value neither side of this comparison can see). Until one of those exists, Carry, Mid and Jungle are judged on their maximand alone.
+
+### Where the Carry surplus comes from — recorded, not acted on
+
+The row above is the finding this section was built for, so its mechanism is written down. **Nothing here has been changed in response to it**; the diagnosis is deliberately left to a session other than the one that found it.
+
+Mean defensive stats bought at level 20, community (C) against our `model` core (O):
+
+| Role | n | Physical Protection C / O | Magical Protection C / O | Max Health C / O |
+|---|---|---|---|---|
+| Carry | 18 | 0.0 / 37.8 | 0.0 / 0.0 | 27.8 / 275.0 |
+| Jungle | 17 | 8.5 / 10.0 | 8.5 / 2.9 | 117.6 / 173.5 |
+| Mid | 22 | 7.3 / 9.8 | 13.0 / 18.0 | 13.6 / 75.0 |
+| Solo | 18 | 120.7 / 117.2 | 114.6 / 88.9 | 809.7 / 908.3 |
+| Support | 14 | 92.9 / 146.8 | 113.9 / 152.5 | 441.1 / 989.3 |
+
+The community buys **exactly 0.0 Physical Protection** across all 18 Carries; we buy 37.8. It is not spread across the pool — the items carrying it, with how many of our Carry cores hold each against how many of the community's:
+
+- **Berserker's Shield** — ours 17 of 18, community 0 of 18 (Max Health 200 · Physical Protection 40)
+- **Golden Blade** — ours 7 of 18, community 0 of 18 (Max Health 200)
+- **Gluttonous Grimoire** — ours 1 of 18, community 0 of 18 (Max Health 150)
+
+Two things a later session should not have to rediscover. The protection is **physical only**, so against the magical burst a Carry most often dies to it buys health and nothing else — which is why the same builds read +34.5% on effective health physical and +9.0% magical. And `defense_affinity` and `draft.archetype_scaled_stats` are **excluded as causes**: both are read only by the viewer's draft overlay (`viewer/src/lib/threats.ts`), which is applied on top of a finished core and never reaches the builds measured here, and `defense_affinity` is 0.0 for Carry in any case because it is derived from the same role map that names no protection for the role. See docs/STATE.md §4.
+
+## 4. The same, for the blended `core` (what the Balanced tab ships)
 
 `core` carries `win` and `pick`, so it is part community build already; the gap between this block and §2 is what the meta signal buys in this arithmetic.
 
@@ -118,7 +174,7 @@ Per 1000 gold, by role:
 | Solo | 18 | 17 / 1 / +40.1% | 17 / 1 / +38.5% | 8 / 10 / -3.9% | 3 / 15 / -10.5% |
 | Support | 14 | 4 / 10 / -12.4% | 4 / 10 / -12.4% | 14 / 0 / +26.8% | 12 / 2 / +27.6% |
 
-## 4. Sensitivity — the passives the gold model CAN price
+## 5. Sensitivity — the passives the gold model CAN price
 
 Same as §2 with the shipped pricing flags applied to every stat line: the Adaptive Stat grants (`price_adaptive`) and the mana conversions (`price_conversions`). This is the one slice of the blind spot that can be put on the table; the other 124 items stay invisible here too.
 
@@ -157,9 +213,9 @@ Per 1000 gold, by role:
 | Solo | 18 | 16 / 2 / +69.5% | 16 / 1 / +67.6% | 8 / 10 / -4.0% | 4 / 13 / -9.9% |
 | Support | 14 | 5 / 9 / -8.8% | 5 / 9 / -8.8% | 14 / 0 / +22.8% | 12 / 2 / +18.3% |
 
-Verdict on DPS vs 70 flips for 7 god(s) between §2 and §4: Hades (+23.6 → -23.1), Hou Yi (-30.8 → +9.2), Ishtar (+3.8 → -58.7), Kali (+13.9 → -33.3), Poseidon (+20.9 → -33.5), Ra (+36.7 → -11.5), Xbalanque (+6.0 → -56.3).
+Verdict on DPS vs 70 flips for 7 god(s) between §2 and §5: Hades (+23.6 → -23.1), Hou Yi (-30.8 → +9.2), Ishtar (+3.8 → -58.7), Kali (+13.9 → -33.3), Poseidon (+20.9 → -33.5), Ra (+36.7 → -11.5), Xbalanque (+6.0 → -56.3).
 
-## 5. The blind spot, measured
+## 6. The blind spot, measured
 
 | | buildable pool | community slots | our `model` slots |
 |---|---|---|---|
@@ -172,7 +228,7 @@ Passives the shipped flags price (13): Book of Thoth, Brawler’s Beat Stick, Da
 
 Most-bought blind items — community: Genji's Guard (29), Shifter's Shield (28), Obsidian Shard (25), Spear of Desolation (24), Shell of Rebuke (22). Ours: Jotunn's Revenge (55), Berserker's Shield (40), Kinetic Cuirass (36), Amanita Charm (34), Freya's Tears (30).
 
-## 6. Every god — `model` core, printed stat lines
+## 7. Every god — `model` core, printed stat lines
 
 C = community, O = ours. DPS vs 70 is shown as total (basic + ability).
 

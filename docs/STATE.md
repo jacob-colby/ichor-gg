@@ -103,6 +103,16 @@ verdict in our favour is the one to distrust. It is a diagnostic and feeds
 nothing (a test pins the import boundary); it is also the cheap way to re-test
 a model change such as `damage_fit_blend` moving off 0.0.
 
+**Its pooled figure is not a verdict either, and since 2026-08-21 it does not
+stand alone.** One metric applied to 89 gods averages five roles that do not
+share an objective, and that hid a real defect: our Carries are tankier than
+the community's on 18 of 18 while winning damage on the fewest of any role,
+which is the *same* behaviour that is correct for Support. `ROLE_OBJECTIVES`
+judges each role on its own — naming, per role, the quantity maximised and the
+quantity treated as a threshold — and §4.13 records that neither threshold can
+be evaluated at all under the current damage model. The role split does **not**
+escape the passive blind spot; the report says so on the section.
+
 ---
 
 ## 3. Design decisions worth not re-litigating
@@ -148,6 +158,10 @@ Each of these has its evidence in the named module.
 | An item's offense tags **sum** | `offense_tags` in `_weights.yaml` | Flat, an item answering a tank two ways scored what one answering it once did — which is how `penetration` on Titan's Bane displaced Heartseeker |
 | A resolved expert claim is measured against its **own recorded baseline** | `expert_review.regressions` | The old rule only failed on a full reversion, so `clear` → `partial` shipped green |
 | `build_quality` is a **diagnostic**, never a scoring input | `build_quality.py` | Register §4.4 is what happens when a damage measure becomes a fit signal; its output is a report a human reads, with the passive blind spot printed above the first number on every path out — `emit` is the module's only print and only file write (the `--god` path once returned before the blind spot was measured, 2026-08-21) |
+| Each role is judged on **its own objective**, not on one pooled metric | `build_quality.ROLE_OBJECTIVES` | Ours is tankier than the community on 18 of 18 Carries while winning damage on 12 — the same behaviour that is CORRECT for Support (EHP 14 of 14, DPS a coin flip with 3 exact ties). A scalar scoring "more EHP is better" cannot tell those apart, so the pooled count was partly an artifact of averaging |
+| Every role's verdict names **which quantity was a threshold and which was maximised** | `build_quality.role_verdict_lines` | So a reader can disagree with the choice rather than only with the number — and so an inert threshold stays visible next to its measurement instead of being dropped quietly (§4.13) |
+| The **duel score** (EHP × DPS) is Solo's objective and **nowhere else's** | `build_quality.ROLE_OBJECTIVES` | Their TTK on you over yours on them, with the reference opponent cancelling exactly, so doubling EHP and halving damage scores 1.00 — no constant chooses it. Applied to Carry it turns 12/6 into 17/1 by paying full price for Berserker's Shield, i.e. it hides the defect the split exists to find |
+| Support is scored with damage **excluded**, not down-weighted | `build_quality.ROLE_OBJECTIVES` | Most of what a Support does is in `UNMEASURABLE` (CC chain duration, peel, aura coverage, wave clear, objective damage, map tempo), and on 3 of 14 Supports the DPS column is identical on both sides to 0.00% because neither build buys any. Scoring a quantity badly is worse than declining to score it |
 | The fit map gets an **Attack Damage column** from the god's own scaling | `damage_value.attack_damage_fit` | `role_stats` and `kit_stat_overlay` between them never name the stat, so the merged fit map scored it 0.0 on 89 of 89 gods while their basic-attack scaling measures it non-zero on all 78 that parse; probe 38.7% → 39.7%, best 39.6% → 40.3% |
 | That column is **credited but not charged** | `scoring.god_fit_score` | `fit` is normalised by the sum of the map, so charging it shrinks every non-carrier's stat term (−12.5% over 10,065 pairs) and promotes the flat tag bonuses added after normalisation — which pulled 43 anti-heal items into Joust and Arena cores, the two modes with no gate to catch it |
 | The damage model counts the **basic attack**, and its unit is one rotation plus one swing | `damage_value.item_damage_gain` | `ability_damage_components` skips the Basic Attack slot, so Attack Damage — 100% of a basic attack on 84 of 89 gods, and no ability in the roster scales on it — was worth exactly 0.0 in the only damage path that reaches a recommendation. 12 items carried it, 10 more carry Critical Chance. The 1:1 mix is a declaration, not a measurement; the clock that would replace it is register §4.12 |
@@ -489,6 +503,76 @@ shipped **off**. Numbers are in the named module.
     **What did ship, unconditionally, is the basic attack itself** — see §3.
     That half needed no clock and is a hole rather than a modelling choice.
 
+13. **Threshold-and-maximand scoring in `build_quality` (2026-08-21)** — the
+    THRESHOLD half only. The maximand half shipped and is in §3; this entry is
+    about the two thresholds that came with it and why they carry no verdict.
+
+    Most roles clear a threshold and then maximise something else, so a Carry
+    survival floor ("survive one enemy burst rotation") and a Mid/Jungle kill
+    threshold ("rotation burst >= a reference squishy's EHP") were defined,
+    given references derived from the roster rather than invented, and
+    measured. **Neither separates anything.** Taken at its most generous — the
+    single largest burst anywhere in the roster, read at ZERO protection — the
+    Carry floor is failed by **0 of 36** builds; the kill threshold is failed
+    by **78 of 78**. One threshold nobody fails and one everybody fails are
+    equally useless.
+
+    **This is a statement about our damage model's completeness, not about
+    SMITE.** Read it as *we cannot currently evaluate a threshold*, never as
+    *we measured this and thresholds do not matter*. The two quantities are
+    not on the same scale and the reason is entirely on our side: a burst here
+    is one cast of every ability at its last rank, with **no basic attacks**,
+    **no item passive**, no follow-up and one target, while effective health
+    is full level-20 health plus every protection six items carry. Median
+    burst over own EHP across the 178 builds is 0.12.
+
+    **What would change the answer, both already on this list.** Entry 12's
+    clock: a burst window in seconds would let basic attacks into the burst,
+    and it is refused for entry 12's reason — no source supplies one, and
+    inventing it would make that single unsourced number the whole metric
+    (~1,058 damage on a 3-second window for Medusa, more than doubling her
+    burst). Or entry 5: ~90% of the pool carries passive value neither side of
+    this comparison can see, and burst is where that hurts most, since
+    execute, multi-hit and on-hit passives are burst and not sustain.
+
+    So Carry, Mid and Jungle ship judged on their **maximand alone**, with the
+    inert threshold left visible in the report next to its measurement rather
+    than quietly dropped. `threshold_probe` re-runs it on every report and
+    prints a binding threshold the moment one binds; a test drives it on data
+    where the burst does reach the health bar, so "separates 0 of n" is a
+    measurement that can change and not a constant. Numbers and the probe in
+    `build_quality.threshold_probe`.
+
+14. **`defense_affinity` / `archetype_scaled_stats` as the cause of Carry
+    over-defence (2026-08-21)** — excluded mechanically, so nobody re-derives
+    it. The symptom is real and is §3's row: our `model` core is tankier than
+    the community's on 18 of 18 Carries while winning damage on only 12, and
+    the community buys **exactly 0.0 protections on all 18**. The natural
+    suspects are the two draft knobs, and neither can be it.
+
+    **Neither reaches these builds.** `defense_affinity` is written in
+    `build_index._enrich_gods` and `draft.archetype_scaled_stats` lives under
+    `draft:` in `_weights.yaml`; the only reader of either is
+    `viewer/src/lib/threats.ts` (`threatOverlay`). Nothing in `scoring`,
+    `assemble`, `recommend` or `efficiency` imports them. The draft overlay is
+    applied viewer-side **on top of a finished core**, and `build_quality`
+    measures the base `model` core, so the overlay is not in the builds where
+    the symptom appears. **And it would be zero anyway**: `defense_affinity`
+    is `max(Physical Protection, Magical Protection)` off
+    `scoring._role_stat_map`, and the Carry map names no protection — the role
+    reads **0.0**, which is the value `test_defense_affinity_follows_the_role_map`
+    already pins.
+
+    **What it actually is, recorded and deliberately not acted on**:
+    Berserker's Shield (2400g, 40 Physical Protection · 200 Max Health · 20%
+    Attack Speed) is in **17 of our 18 Carry cores and 0 of 18 community
+    ones**, with Golden Blade (200 Health) in 7 more. It is one item winning a
+    slot on efficiency + fit, not a diffuse defensive tilt — and the
+    protection is *physical only*, so against a magical burst it buys health
+    and nothing else. Diagnosing why it wins is open work (§5) and was left to
+    a session other than the one that found it. The stat table and the item
+    counts re-measure on every run in `build_quality.carry_mechanism_lines`.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -550,6 +634,22 @@ constant for 92% of the pool cannot be justified or refuted by anything here:
 `calibrate` zeroes `win`, and the headline gate uses it as its own target. It
 is the largest single unexamined number in the model.
 
+### Our Carries over-buy defence, and one item is why
+The role split (§2, §3) found it and deliberately did not fix it: the
+community buys **exactly 0.0 protections on all 18 Carries** and we buy 37.8,
+which is Berserker's Shield in **17 of our 18 Carry cores against 0 of theirs**
+plus Golden Blade in 7. It is one item winning a slot on efficiency + fit, not
+a diffuse defensive tilt, and it costs damage — Carry is the weakest damage
+record of any role while being 18 of 18 ahead on effective health.
+
+**The two obvious causes are already excluded** and re-deriving them is wasted
+work: register §4.14 has the import-path evidence that neither
+`defense_affinity` nor `draft.archetype_scaled_stats` can reach these builds,
+and that the former is 0.0 for Carry regardless. What is left to diagnose is
+why efficiency + fit rank a 2400g defensive item into a Carry core — the
+Attack Speed line, the health, or the gold model's residual on it. The stat
+table and the item counts re-measure on every `build_quality` run.
+
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
   a leveled practice target; `calibrate_combat --plan` will generate the setup.
@@ -599,6 +699,7 @@ python -m smite.doc_audit                # §7's numbers, doc value beside compu
 python -m smite.doc_audit --check        # non-zero exit if a §7 figure has drifted
 python -m smite.build_quality            # combat.py pointed at whole builds, ours vs community (~4s)
 python -m smite.build_quality --god Medusa   # one god, to stdout
+python -m smite.build_quality --role Carry    # one role's verdict on its own objective
 ```
 
 `doc_audit` gates the derivable figures in §7 below, and the few `PRODUCT.md`
@@ -657,7 +758,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (757) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (765) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -682,7 +783,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (757) ·
 | Gods at 0% coverage | 1 — Ares. Sun Wukong left the list with `price_adaptive`; the previous row (Achilles, Chaac, Danzaburou) predates the community refresh |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 757 pipeline · 660 viewer |
+| Tests | 765 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

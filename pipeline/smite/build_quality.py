@@ -21,8 +21,31 @@ WHAT IT COMPUTES, per god, for the community Conquest core and our meta-free
 
   * sustained basic-attack DPS against 70 and 170 protection
   * ability DPS with every ability cast off cooldown, against the same two
+  * the same rotation charged ONCE each — the burst — against 0, 70 and 170
   * effective health, physical and magical (`combat.effective_health`)
   * total gold, and each figure per 1000 gold
+
+AND IT JUDGES EACH ROLE ON THAT ROLE'S OWN OBJECTIVE, because one pooled
+metric applied to 89 gods hides a defect. Measured 2026-08-21: our `model`
+core is tankier than the community's on 18 of 18 Carries while winning damage
+on only 12 — the weakest damage record of any role. The identical behaviour is
+CORRECT for Support (EHP ahead on 14 of 14, DPS a coin flip with 3 exact
+ties), so a single scalar that scores "more EHP is better" cannot tell the two
+apart, and the pooled "71 of 89 ahead" is partly an artifact of averaging
+roles that do not share a job. `ROLE_OBJECTIVES` names, per role, the quantity
+MAXIMISED and the quantity treated as a THRESHOLD, so a reader can disagree
+with the choice rather than only with the number.
+
+THE THRESHOLDS DO NOT BIND, AND THAT IS ABOUT US, NOT ABOUT SMITE. A Carry
+survival floor and a Mid/Jungle kill threshold were both defined, measured and
+kept in the table with their measurement (`threshold_probe`, re-run on every
+report): the first separates 0 of 36 builds even against the roster's single
+largest burst read at zero protection, the second separates 78 of 78. A burst
+here is one cast of every ability with no basic attacks, no item passive, no
+follow-up and one target, while effective health is full level-20 health plus
+every protection six items carry — an order of magnitude apart. Read it as
+"we cannot currently evaluate a threshold". What would change the answer is
+named and is not a tuning knob: the register §4.12 clock, or priced passives.
 
 "Ours" is the `model` archetype — efficiency + fit with `win` and `pick`
 switched off — because that is the build the model would pick if it had never
@@ -91,6 +114,7 @@ imputed (the rule `damage_value._base_cooldown` already applies).
 
     python -m smite.build_quality                 # write data/Analysis/_build_quality.md
     python -m smite.build_quality --god Medusa    # one god's profile, to stdout
+    python -m smite.build_quality --role Carry    # one role's verdict, to stdout
 """
 import argparse
 import re
@@ -114,6 +138,12 @@ LEVEL = 20
 #: god's own damage type, with no Plating or Dampening.
 TARGETS = (70, 170)
 
+#: Protections the BURST is taken against. 0 is not a target anyone meets — it
+#: is there so `threshold_probe` can read a burst at its arithmetic maximum,
+#: which is what makes "the threshold does not bind" a statement about the
+#: whole range rather than about one choice of target.
+BURST_TARGETS = (0,) + TARGETS
+
 #: Our build's archetype. `model` is efficiency + fit with the meta off; `core`
 #: is the blended build that ships as the viewer's Balanced tab.
 DEFAULT_ARCHETYPE = "model"
@@ -129,6 +159,81 @@ METRICS = (
     ("dps_170", "total DPS vs 170 prot"),
     ("ehp_physical", "effective health, physical"),
     ("ehp_magical", "effective health, magical"),
+)
+
+#: Role order for every by-role table, then anything unrecognised, sorted.
+ROLE_ORDER = ("Carry", "Jungle", "Mid", "Solo", "Support")
+
+#: WHAT EACH ROLE'S BUILD IS FOR. One pooled metric cannot judge five roles
+#: that do not share an objective — measured 2026-08-21, our `model` core is
+#: tankier than the community's on 18 of 18 Carries while winning damage on 12,
+#: which is the same behaviour that is CORRECT for Support (EHP ahead 14 of 14,
+#: DPS a coin flip with 3 exact ties). Scoring EHP as "more is better" for a
+#: Carry cannot tell those apart, so the pooled "71 of 89 ahead" is partly an
+#: artifact of averaging roles with different jobs.
+#:
+#: Each entry names the quantity that was MAXIMISED and the quantity that was
+#: treated as a THRESHOLD, so a reader can disagree with the choice rather than
+#: only with the number. `threshold` is None on every role, and that is a
+#: measurement rather than a design preference — see `threshold_probe`, which
+#: re-runs it on every report.
+#:
+#: `Support` scores no damage at all. Down-weighting it would still be scoring
+#: it, and on 3 of 14 Supports (Ymir, Sylvanus, Xing Tian) the DPS column is
+#: identical on both sides to 0.00% because neither build buys damage — the
+#: column carries literally zero information there. A wave-clear threshold
+#: would need a minion health pool and a clear-time window, neither of which
+#: exists in this repo; excluding damage is the honest form of "we cannot
+#: price what Support is for". See `UNMEASURABLE`.
+ROLE_OBJECTIVES = {
+    "Carry": {
+        "maximise": ("dps_70/1000g", "sustained DPS per 1000g"),
+        "threshold": ("survive one enemy burst rotation", "carry_survival"),
+        "because": "a Carry needs enough effective health to live through one "
+                   "burst — a floor, not a maximand. Buying more than the floor "
+                   "is gold not spent on damage, which is what the pooled metric "
+                   "scored as a win.",
+    },
+    "Mid": {
+        "maximise": ("dps_70/1000g", "sustained DPS per 1000g"),
+        "threshold": ("rotation burst >= a reference squishy's EHP", "kill_threshold"),
+        "because": "a Mid's rotation either kills the squishy or it does not; "
+                   "past that the question is how often it comes back.",
+    },
+    "Jungle": {
+        "maximise": ("burst_70/1000g", "rotation burst per 1000g"),
+        "threshold": ("rotation burst >= a reference squishy's EHP", "kill_threshold"),
+        "because": "same kill threshold as Mid, and past it a gank is priced on "
+                   "burst rather than on sustained damage — a Jungler is not "
+                   "standing in the fight for the seconds a DPS figure assumes.",
+    },
+    "Solo": {
+        "maximise": ("duel_70", "duel score, EHP x DPS"),
+        "threshold": None,
+        "because": "not a threshold at all — a RATIO. Their time-to-kill on you "
+                   "over yours on them is (EHP / ref DPS) / (ref EHP / DPS), so "
+                   "the reference opponent CANCELS in ours-over-theirs and what "
+                   "is left is EHP x DPS. A build that doubles effective health "
+                   "and halves damage scores exactly 1.00 — neutral, which is "
+                   "the case neither scalar describes, and it is a property of "
+                   "the algebra rather than of a constant anyone chose.",
+    },
+    "Support": {
+        "maximise": ("ehp_physical/1000g", "effective health per 1000g"),
+        "threshold": None,
+        "because": "damage is EXCLUDED, not down-weighted. Most of what a "
+                   "Support is for is in `UNMEASURABLE`, and its damage column "
+                   "is provably empty on 3 of 14 gods.",
+    },
+}
+
+#: What no arithmetic here reaches, named so a per-role verdict cannot read as
+#: though slicing the roster escaped it. Support's real contribution is mostly
+#: on this list, which is why its objective excludes damage rather than
+#: weighting it small.
+UNMEASURABLE = (
+    "CC chain duration", "peel", "aura coverage", "wave clear",
+    "objective damage", "map tempo",
 )
 
 
@@ -228,6 +333,15 @@ def profile(god, names, items_by_name, level=LEVEL, targets=TARGETS):
     `per_1000g` carries the same figures divided by the build's gold in
     thousands, which is the only way a 13,750g build and a 15,400g one can be
     put on the same line.
+
+    `burst` is the same rotation charged ONCE each instead of off cooldown —
+    every ability in `ability_rotation` at its last rank, summed, keyed by
+    target protection over `BURST_TARGETS`. It is the Jungle objective's
+    maximand and the quantity both proposed thresholds are made of, and it
+    counts NO basic attacks: adding them needs a burst-window duration in
+    seconds, which nothing in the scrape supplies and which register §4.12
+    already refused to invent for `damage_per_second`. That omission is why
+    `threshold_probe` reads the way it does, and naming it here is the point.
     """
     stats, cost = build_totals(names, items_by_name)
     base = god.get("base_stats") or {}
@@ -260,6 +374,14 @@ def profile(god, names, items_by_name, level=LEVEL, targets=TARGETS):
         ability_dps[prot] = per_second
         total_dps[prot] = basic_dps[prot] + per_second
 
+    burst = {}
+    for prot in BURST_TARGETS:
+        burst[prot] = sum(
+            combat.expected_ability_damage(
+                combat.ability_damage(a["base"], a["scaling"], stats),
+                prot, echo, a["is_ultimate"], flat_pen=flat_pen, pct_pen=pct_pen)
+            for a in rotation)
+
     health = level_value(base.get("health"), level) + stats.get("Max Health", 0.0)
     phys = level_value(base.get("physical_prot"), level) + stats.get("Physical Protection", 0.0)
     mag = level_value(base.get("magical_prot"), level) + stats.get("Magical Protection", 0.0)
@@ -268,6 +390,7 @@ def profile(god, names, items_by_name, level=LEVEL, targets=TARGETS):
         "attack_power": attack_power, "attack_speed": swing_rate,
         "raw_basic": raw_basic, "mean_swing": mean_swing,
         "basic_dps": basic_dps, "ability_dps": ability_dps, "total_dps": total_dps,
+        "burst": burst,
         "health": health, "physical_prot": phys, "magical_prot": mag,
         "ehp_physical": combat.effective_health(health, phys),
         "ehp_magical": combat.effective_health(health, mag),
@@ -276,19 +399,42 @@ def profile(god, names, items_by_name, level=LEVEL, targets=TARGETS):
     thousands = cost / 1000.0 if cost else float("nan")
     out["per_1000g"] = {
         "total_dps": {p: v / thousands for p, v in total_dps.items()},
+        "burst": {p: v / thousands for p, v in burst.items()},
         "ehp_physical": out["ehp_physical"] / thousands,
         "ehp_magical": out["ehp_magical"] / thousands,
     }
+    # The Solo objective. EHP x DPS is what "their TTK on you over yours on
+    # them" reduces to once the reference opponent cancels, so it is stored
+    # raw and has no per-1000g twin: dividing a product of two per-gold
+    # figures would charge the build's gold twice.
+    out["duel"] = {p: out["ehp_physical"] * total_dps[p] for p in targets}
     return out
 
 
+#: `metric` key prefix -> the profile field it reads, for the three that are
+#: keyed by target protection. `duel` is absent deliberately: it has no
+#: per-1000g twin, so it cannot go through the same branch.
+_KEYED_BY_TARGET = {"dps_": "total_dps", "burst_": "burst"}
+
+
 def metric(prof, key):
-    """One of `METRICS` off a profile; `key` may carry a `/1000g` suffix."""
+    """One of `METRICS` or a role objective's maximand off a profile.
+
+    `key` may carry a `/1000g` suffix, except `duel_*` — asking for a duel
+    score per 1000 gold raises, because the product already contains the
+    build's gold twice and dividing it again is not a quantity.
+    """
     per_gold = key.endswith("/1000g")
     base = key[:-len("/1000g")] if per_gold else key
-    if base.startswith("dps_"):
-        prot = int(base[len("dps_"):])
-        return (prof["per_1000g"]["total_dps"] if per_gold else prof["total_dps"])[prot]
+    if base.startswith("duel_"):
+        if per_gold:
+            raise KeyError(f"{key}: a duel score has no per-1000g twin — it is a "
+                           "product of two figures that each already carry the gold")
+        return prof["duel"][int(base[len("duel_"):])]
+    for prefix, field in _KEYED_BY_TARGET.items():
+        if base.startswith(prefix):
+            prot = int(base[len(prefix):])
+            return (prof["per_1000g"][field] if per_gold else prof[field])[prot]
     return prof["per_1000g"][base] if per_gold else prof[base]
 
 
@@ -363,14 +509,105 @@ def distribution(rows, key):
     }
 
 
-def by_role(rows, key):
-    """`{primary role: distribution}` in a fixed role order, then any other."""
-    order = ["Carry", "Jungle", "Mid", "Solo", "Support"]
+def group_by_role(rows):
+    """`{primary role: rows}` in `ROLE_ORDER`, then anything else, sorted."""
     groups = {}
     for row in rows:
         groups.setdefault(row["primary_role"], []).append(row)
-    keys = [r for r in order if r in groups] + sorted(k for k in groups if k not in order)
-    return {role: distribution(groups[role], key) for role in keys}
+    keys = ([r for r in ROLE_ORDER if r in groups]
+            + sorted(k for k in groups if k not in ROLE_ORDER))
+    return {role: groups[role] for role in keys}
+
+
+def by_role(rows, key):
+    """`{primary role: distribution}` in a fixed role order, then any other."""
+    return {role: distribution(group, key) for role, group in group_by_role(rows).items()}
+
+
+# ── Can either threshold bind? ────────────────────────────────────────────
+
+def threshold_probe(rows):
+    """Whether the two proposed thresholds can separate any build from any
+    other, re-measured on every run rather than asserted once.
+
+    `ROLE_OBJECTIVES` names a threshold for Carry, Mid and Jungle and then
+    carries None for all three. This is why, and it is a fact about what this
+    module can compute rather than about SMITE:
+
+      * the CARRY floor is "survive one enemy burst rotation". Taken at its
+        most generous — the single largest burst anywhere in the roster, read
+        at ZERO protection, against each Carry's own effective health — and
+        it still separates nobody.
+      * the MID/JUNGLE kill threshold is "rotation burst >= a reference
+        squishy's EHP", the reference being the median EHP of the community's
+        own Carry and Mid builds. Every Mid and Jungle build in the roster
+        fails it, on both sides.
+
+    Both come out one-sided for one shared reason, and it is a hole in the
+    damage model rather than a verdict on thresholds: a burst here is one cast
+    of every ability with NO basic attacks (register §4.12 — there is no cast
+    time in the scrape, so there is no window to swing in), no item passive
+    (~90% of the pool, see `passive_blind_spot`), no follow-up and one target,
+    while EHP is full level-20 health plus every protection the six items
+    carry. The two are roughly an order of magnitude apart in scale and the
+    constant that would close the gap is a burst-window duration in seconds,
+    which no source here supplies.
+
+    Returns the counts and the HEADROOM — how far the tightest build sits from
+    the threshold, as a ratio — so a future run on different data, or with a
+    clock or priced passives in the model, prints a threshold that binds
+    instead of this.
+    """
+    groups = group_by_role(rows)
+    sides = ("community", "ours")
+
+    bursts = [(metric(row[side], "burst_0"), row["god"], side)
+              for row in rows for side in sides]
+    reference_burst, burst_god, burst_side = max(bursts)
+
+    squishy = [row[side]["ehp_magical"]
+               for role in ("Carry", "Mid") for row in groups.get(role, []) for side in ("community",)]
+    reference_ehp = float(np.median(squishy)) if squishy else float("nan")
+
+    def probe(name, population, value, passes, reference):
+        """`passes(value_of_build, reference)` is the threshold as a reader
+        would state it; `failed` counts the builds it separates out.
+
+        `nearest` is the margin of the build that came CLOSEST to the
+        threshold, as `value / reference` — the ratio nearest 1.0, whichever
+        side it falls. A threshold that separates nobody and a threshold that
+        separates everybody are both useless, and this is the one number that
+        says how far either is from doing something.
+        """
+        out = {"name": name, "reference": reference, "n": 0, "failed": 0,
+               "nearest": float("nan")}
+        margins = []
+        for row in population:
+            for side in sides:
+                v = value(row[side])
+                out["n"] += 1
+                out["failed"] += 0 if passes(v, reference) else 1
+                margins.append(v / reference if reference else float("nan"))
+        if margins:
+            out["nearest"] = float(min(margins, key=lambda m: abs(m - 1.0)))
+        return out
+
+    carry = probe(
+        "Carry: survive one enemy burst rotation",
+        groups.get("Carry", []), lambda p: p["ehp_magical"],
+        lambda v, ref: v >= ref, reference_burst)
+    carry["detail"] = (f"largest burst in the roster at 0 protection — {burst_god}, "
+                       f"{burst_side}, {reference_burst:,.0f}")
+
+    kill = probe(
+        "Mid / Jungle: rotation burst >= a reference squishy's EHP",
+        groups.get("Mid", []) + groups.get("Jungle", []),
+        lambda p: metric(p, "burst_70"), lambda v, ref: v >= ref, reference_ehp)
+    kill["detail"] = ("median effective health of the community's own Carry and Mid "
+                      f"builds, magical — {reference_ehp:,.0f}")
+
+    return {"carry_survival": carry, "kill_threshold": kill,
+            "reference_burst": reference_burst, "reference_squishy_ehp": reference_ehp}
 
 
 # ── The blind spot ────────────────────────────────────────────────────────
@@ -517,6 +754,220 @@ def _role_table(rows, keys, labels):
     return lines
 
 
+#: The stat keys a "defence" claim is made of, in report order.
+DEFENSIVE_STATS = ("Physical Protection", "Magical Protection", "Max Health")
+
+
+def defence_by_role(rows):
+    """Mean defensive stats bought, per role, community against ours.
+
+    The role split's headline finding is that our Carries are tankier than the
+    community's on 18 of 18 while losing damage on 6, and this is where that
+    comes from as a stat line rather than as a verdict.
+    """
+    out = {}
+    for role, group in group_by_role(rows).items():
+        out[role] = {"n": len(group)}
+        for side in ("community", "ours"):
+            out[role][side] = {
+                stat: sum(row[side]["stats"].get(stat, 0.0) for row in group) / len(group)
+                for stat in DEFENSIVE_STATS}
+    return out
+
+
+def defence_drivers(rows, role, items_by_name, top=3):
+    """The items carrying the role's defensive surplus: most common in OUR
+    cores for that role, carrying a defensive stat, ranked by how much of the
+    gap they account for. `(name, ours_count, community_count, stats)`."""
+    group = group_by_role(rows).get(role, [])
+    ours, theirs = Counter(), Counter()
+    for row in group:
+        ours.update(row["ours"]["items"])
+        theirs.update(row["community"]["items"])
+    scored = []
+    for name, count in ours.items():
+        item = items_by_name.get(name)
+        if item is None:
+            continue
+        stats = {k: v for k, v in efficiency.item_stat_values(item).items()
+                 if k in DEFENSIVE_STATS}
+        if stats:
+            scored.append((count, name, theirs.get(name, 0), stats))
+    scored.sort(key=lambda s: (-s[0], s[1]))
+    return [(name, count, seen, stats) for count, name, seen, stats in scored[:top]]
+
+
+def carry_mechanism_lines(rows, items_by_name):
+    """WHERE THE CARRY SURPLUS COMES FROM — recorded, not acted on.
+
+    This is a diagnosis handed to a later session on purpose: the session that
+    found it should not also be the one that fixes it. Nothing here changes a
+    weight, a build or an item, and the numbers re-measure on every run so a
+    refresh that moves them says so instead of leaving this paragraph stale.
+
+    One hypothesis is already excluded, mechanically rather than statistically,
+    and is recorded in docs/STATE.md §4 so it is not re-derived: neither
+    `defense_affinity` (`build_index`) nor `draft.archetype_scaled_stats` can
+    reach these builds — both are read only by `viewer/src/lib/threats.ts`, the
+    draft overlay, which is applied on top of a finished core — and
+    `defense_affinity` is 0.0 for Carry anyway, because it is derived from
+    `scoring._role_stat_map` and the Carry map names no protection.
+    """
+    defence = defence_by_role(rows)
+    carry = defence.get("Carry")
+    if not carry:
+        return []
+    lines = [
+        "### Where the Carry surplus comes from — recorded, not acted on", "",
+        "The row above is the finding this section was built for, so its mechanism is written "
+        "down. **Nothing here has been changed in response to it**; the diagnosis is deliberately "
+        "left to a session other than the one that found it.", "",
+        "Mean defensive stats bought at level 20, community (C) against our `model` core (O):", "",
+        "| Role | n | " + " | ".join(f"{s} C / O" for s in DEFENSIVE_STATS) + " |",
+        "|---|---|" + "---|" * len(DEFENSIVE_STATS),
+    ]
+    for role, d in defence.items():
+        cells = " | ".join(f"{d['community'][s]:,.1f} / {d['ours'][s]:,.1f}" for s in DEFENSIVE_STATS)
+        lines.append(f"| {role} | {d['n']} | {cells} |")
+    drivers = defence_drivers(rows, "Carry", items_by_name)
+    lines += [
+        "",
+        f"The community buys **exactly {carry['community']['Physical Protection']:,.1f} Physical "
+        f"Protection** across all {carry['n']} Carries; we buy "
+        f"{carry['ours']['Physical Protection']:,.1f}. It is not spread across the pool — the "
+        "items carrying it, with how many of our Carry cores hold each against how many of the "
+        "community's:", "",
+    ]
+    for name, mine, seen, stats in drivers:
+        line = " · ".join(f"{k} {v:g}" for k, v in sorted(stats.items()))
+        lines.append(f"- **{name}** — ours {mine} of {carry['n']}, community {seen} of "
+                     f"{carry['n']} ({line})")
+    phys = by_role(rows, "ehp_physical")["Carry"]["quantiles"].get(50, float("nan"))
+    mag = by_role(rows, "ehp_magical")["Carry"]["quantiles"].get(50, float("nan"))
+    lines += [
+        "",
+        "Two things a later session should not have to rediscover. The protection is **physical "
+        "only**, so against the magical burst a Carry most often dies to it buys health and "
+        f"nothing else — which is why the same builds read {_pct(phys)} on effective health "
+        f"physical and {_pct(mag)} magical. And `defense_affinity` and "
+        "`draft.archetype_scaled_stats` are "
+        "**excluded as causes**: both are read only by the viewer's draft overlay "
+        "(`viewer/src/lib/threats.ts`), which is applied on top of a finished core and never "
+        "reaches the builds measured here, and `defense_affinity` is 0.0 for Carry in any case "
+        "because it is derived from the same role map that names no protection for the role. "
+        "See docs/STATE.md §4.",
+    ]
+    return lines
+
+
+def role_verdict(rows, role, objective):
+    """One role's verdict on its OWN objective: `{role, n, maximise, threshold,
+    ahead, behind, level, median}`. Never on the pooled metric — a Carry and a
+    Support do not share one."""
+    group = group_by_role(rows).get(role, [])
+    key, label = objective["maximise"]
+    d = distribution(group, key)
+    return {
+        "role": role, "n": d["n"], "key": key, "maximise": label,
+        "threshold": objective["threshold"], "because": objective["because"],
+        "ahead": d["ahead"], "behind": d["behind"], "level": d["level"],
+        "median": d["quantiles"].get(50, float("nan")),
+    }
+
+
+def role_verdicts(rows, objectives=None):
+    """Every role in `ROLE_ORDER` that has rows, judged on its own objective.
+    A role with no entry in `ROLE_OBJECTIVES` is returned with `maximise` None
+    rather than silently dropped or silently given someone else's metric."""
+    objectives = ROLE_OBJECTIVES if objectives is None else objectives
+    out = []
+    for role in group_by_role(rows):
+        objective = objectives.get(role)
+        if objective is None:
+            out.append({"role": role, "n": len(group_by_role(rows)[role]), "key": None,
+                        "maximise": None, "threshold": None,
+                        "because": "no objective is recorded for this role label",
+                        "ahead": 0, "behind": 0, "level": 0, "median": float("nan")})
+            continue
+        out.append(role_verdict(rows, role, objective))
+    return out
+
+
+def _verdict_table(verdicts, probe):
+    lines = ["| Role | n | Threshold | Binds? | Maximised | ahead | behind | tie | median |",
+             "|---|---|---|---|---|---|---|---|---|"]
+    for v in verdicts:
+        if v["threshold"] is None:
+            threshold, binds = "**none**", "–"
+        else:
+            name, probe_key = v["threshold"]
+            p = probe[probe_key]
+            threshold = name
+            if p["failed"] == 0:
+                binds = f"**no** — 0 of {p['n']} builds fail it"
+            elif p["failed"] == p["n"]:
+                binds = f"**no** — all {p['n']} builds fail it"
+            else:
+                binds = f"yes — {p['failed']} of {p['n']} fail"
+        maximise = v["maximise"] or "_no objective recorded_"
+        median = "–" if v["median"] != v["median"] else f"**{_pct(v['median'])}**"
+        lines.append(f"| {v['role']} | {v['n']} | {threshold} | {binds} | {maximise} | "
+                     f"**{v['ahead']}** | **{v['behind']}** | {v['level']} | {median} |")
+    return lines
+
+
+def role_verdict_lines(rows, probe, verdicts=None, items_by_name=None):
+    """The per-role section: what each role's build is FOR, whether its
+    threshold binds, and where we stand on its own maximand.
+
+    Every verdict states which quantity was a threshold and which was
+    maximised, so a reader can disagree with the choice rather than only with
+    the number — that is the point of the section and a test holds it.
+    """
+    verdicts = role_verdicts(rows) if verdicts is None else verdicts
+    lines = [
+        "Most roles clear a THRESHOLD and then maximise something else, and one pooled metric "
+        "cannot represent five roles that do not share an objective. Each row below names both "
+        "quantities. **The passive blind spot at the top of this report applies to every row "
+        "here exactly as it applies to the pooled figures** — slicing by role does not escape "
+        "it, and the bias still runs in our favour.",
+        "",
+    ]
+    lines += _verdict_table(verdicts, probe)
+    lines += ["", "Why each objective is what it is:", ""]
+    for v in verdicts:
+        lines.append(f"- **{v['role']}** — {v['because']}")
+    lines += ["", "### Neither threshold binds, and that is a statement about this arithmetic", ""]
+    lines += [
+        "Both thresholds were defined, measured and left in the table with their measurement, "
+        "rather than dropped quietly. Re-measured on every run by `threshold_probe`:",
+        "",
+        "| Threshold | population | reference | separates | nearest build |",
+        "|---|---|---|---|---|",
+    ]
+    for key in ("carry_survival", "kill_threshold"):
+        p = probe[key]
+        lines.append(f"| {p['name']} | {p['n']} builds | {p['detail']} | "
+                     f"**{p['failed']} of {p['n']}** | {p['nearest']:.2f}x the threshold |")
+    lines += [
+        "",
+        "A threshold that separates none of the population and a threshold that separates all of "
+        "it are equally useless, and one of each is what these are. **Read this as \"we cannot "
+        "currently evaluate a threshold\", not as \"thresholds do not matter in SMITE\"** — the "
+        "cause is on our side of the arithmetic. A burst here is one cast of every ability with "
+        "no basic attacks, no item passive, no follow-up and one target, while effective health "
+        "is full level-20 health plus every protection the six items carry; the two are about an "
+        "order of magnitude apart. Two things would change the answer and neither is a tuning "
+        "choice: **a clock** (register §4.12 — a burst window in seconds would let basic attacks "
+        "into the burst, and it is refused because no source supplies one), or **priced passives** "
+        "(register §4.5 — ~90% of the pool carries value neither side of this comparison can see). "
+        "Until one of those exists, Carry, Mid and Jungle are judged on their maximand alone.",
+    ]
+    if items_by_name is not None:
+        lines += [""] + carry_mechanism_lines(rows, items_by_name)
+    return lines
+
+
 def _god_table(rows):
     lines = ["| God | Role | Gold C / O | DPS vs 70 — C (basic+ability) | O (basic+ability) | Δ | "
              "DPS vs 170 — C | O | Δ | EHP phys — C | O | Δ | EHP mag — C | O | Δ |",
@@ -604,6 +1055,14 @@ def assumption_lines():
         "- a chain god's basic attack at the chain's mean multiplier; an ability without a scraped "
         "cooldown dropped, never imputed; a DoT counted as its listed damage once",
         "- dual-role labels (`Solo Jungle`) collapse to their first word in the role tables",
+        "- a burst is one cast of every counted ability, summed; it charges no basic attacks, "
+        "because a burst window in seconds does not exist in this repo (register §4.12)",
+        "",
+        "**What none of this measures, at any level of slicing:** "
+        + ", ".join(UNMEASURABLE) + ". Much of what a Support contributes is on that list, which "
+        "is why Support's objective excludes damage rather than weighting it small — scoring a "
+        "quantity badly is worse than declining to score it, and on 3 of 14 Supports the damage "
+        "column is identical on both sides because neither build buys any.",
         "",
         "Nothing here feeds `scoring`, `assemble` or a weight. It is a report a human reads.",
     ]
@@ -648,7 +1107,8 @@ def flips(rows_a, rows_b, key="dps_70"):
 
 
 def write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_skipped,
-                 blind, fingerprint, out_path=REPORT_PATH, example="Medusa"):
+                 blind, fingerprint, out_path=REPORT_PATH, example="Medusa",
+                 items_by_name=None):
     """Byte-for-byte deterministic, like `_calibration.md`, so its diff is a
     record of what a commit did to the builds rather than of when it ran."""
     head = ["# Build quality — `combat.py` pointed at whole builds", "",
@@ -676,14 +1136,19 @@ def write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_ski
 
     lines += _dist_section(rows, skipped, "2. The roster — our `model` core, printed stat lines")
     lines.append("")
+
+    lines += ["## 3. Judged by role, on each role's own objective", ""]
+    lines += role_verdict_lines(rows, threshold_probe(rows), items_by_name=items_by_name)
+    lines.append("")
+
     lines += _dist_section(core_rows, core_skipped,
-                           "3. The same, for the blended `core` (what the Balanced tab ships)",
+                           "4. The same, for the blended `core` (what the Balanced tab ships)",
                            "`core` carries `win` and `pick`, so it is part community build already; "
                            "the gap between this block and §2 is what the meta signal buys in "
                            "this arithmetic.")
     lines.append("")
     lines += _dist_section(priced_rows, priced_skipped,
-                           "4. Sensitivity — the passives the gold model CAN price",
+                           "5. Sensitivity — the passives the gold model CAN price",
                            "Same as §2 with the shipped pricing flags applied to every stat line: the "
                            "Adaptive Stat grants (`price_adaptive`) and the mana conversions "
                            "(`price_conversions`). This is the one slice of the blind spot that can "
@@ -692,14 +1157,14 @@ def write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_ski
     changed = flips(rows, priced_rows)
     lines.append("")
     if changed:
-        lines.append(f"Verdict on DPS vs 70 flips for {len(changed)} god(s) between §2 and §4: "
+        lines.append(f"Verdict on DPS vs 70 flips for {len(changed)} god(s) between §2 and §5: "
                      + ", ".join(f"{g} ({a:+.1f} → {b:+.1f})" for g, a, b in changed) + ".")
     else:
-        lines.append("No god's verdict on DPS vs 70 flips between §2 and §4.")
+        lines.append("No god's verdict on DPS vs 70 flips between §2 and §5.")
     lines.append("")
 
     c, o = blind["community"], blind["ours"]
-    lines += ["## 5. The blind spot, measured", "",
+    lines += ["## 6. The blind spot, measured", "",
               "| | buildable pool | community slots | our `model` slots |", "|---|---|---|---|",
               f"| items / slots | {blind['buildable']} | {c['slots']} | {o['slots']} |",
               f"| carrying unpriced passive text | {blind['blind']} ({blind['blind_share']:.1%}) | "
@@ -716,7 +1181,7 @@ def write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_ski
               + ", ".join(f"{n} ({k})" for n, k in o["top_blind"]) + ".",
               ""]
 
-    lines += ["## 6. Every god — `model` core, printed stat lines", "",
+    lines += ["## 7. Every god — `model` core, printed stat lines", "",
               "C = community, O = ours. DPS vs 70 is shown as total (basic + ability).", ""]
     lines += _god_table(rows)
     lines.append("")
@@ -757,6 +1222,10 @@ def _fingerprint(items, weights, tags_map, gods, builds_by_god):
 def build_parser():
     ap = argparse.ArgumentParser(description="combat.py pointed at whole builds, ours vs community")
     ap.add_argument("--god", help="print one god's comparison and stop")
+    # Not `choices=ROLE_ORDER`: a role label comes from the scraped roster, so
+    # an unknown one is a data question and belongs in the same stderr message
+    # as an unknown god rather than in an argparse usage error.
+    ap.add_argument("--role", help="print one role's verdict on its own objective and stop")
     ap.add_argument("--archetype", default=DEFAULT_ARCHETYPE,
                     help="our build to compare (default: model)")
     ap.add_argument("--out", type=Path, default=REPORT_PATH)
@@ -785,20 +1254,45 @@ def main(argv=None):
         emit(blind, worked_example(rows[0]))
         return 0
 
+    if args.role:
+        # The whole roster, even for one role: the thresholds are referenced
+        # against builds outside the role being judged, so a single-role run
+        # would silently change what they are measured against.
+        rows, _ = run(gods, items, builds_by_god, weights, args.archetype)
+        if args.role not in group_by_role(rows):
+            print(f"{args.role}: no gods with that primary role "
+                  f"({', '.join(group_by_role(rows))})", file=sys.stderr)
+            return 1
+        verdicts = [v for v in role_verdicts(rows) if v["role"] == args.role]
+        emit(blind, role_verdict_lines(rows, threshold_probe(rows), verdicts,
+                                       items_by_name={it["name"]: it for it in items}))
+        return 0
+
     rows, skipped = run(gods, items, builds_by_god, weights, args.archetype)
     core_rows, core_skipped = run(gods, items, builds_by_god, weights, "core")
     priced_rows, priced_skipped = run(gods, items, builds_by_god, weights, args.archetype, priced=True)
     fingerprint = _fingerprint(items, weights, tags_map, gods, builds_by_god)
     path = write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_skipped,
-                        blind, fingerprint, args.out)
+                        blind, fingerprint, args.out,
+                        items_by_name={it["name"]: it for it in items})
 
     d70, d170 = distribution(rows, "dps_70"), distribution(rows, "dps_170")
+    probe = threshold_probe(rows)
     emit(blind, [
         f"{len(rows)} gods compared, {len(skipped)} skipped",
         f"  DPS vs 70:  ahead {d70['ahead']}, behind {d70['behind']}, "
         f"median {_pct(d70['quantiles'][50])}",
         f"  DPS vs 170: ahead {d170['ahead']}, behind {d170['behind']}, "
         f"median {_pct(d170['quantiles'][50])}",
+        "  each role on its OWN objective (pooled figures above average roles that do not share one):",
+    ] + [
+        f"    {v['role']:<8} {v['ahead']:>2} ahead, {v['behind']:>2} behind, "
+        f"median {_pct(v['median'])}  — maximised: {v['maximise']}"
+        + ("" if v["threshold"] is None else
+           f"; threshold ({v['threshold'][0]}) separates "
+           f"{probe[v['threshold'][1]]['failed']} of {probe[v['threshold'][1]]['n']}")
+        for v in role_verdicts(rows)
+    ] + [
         f"  wrote {path}",
     ])
     return 0
