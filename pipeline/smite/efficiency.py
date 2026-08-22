@@ -94,6 +94,18 @@ def stat_key(name, raw):
     return f"{name} %" if str(raw).strip().endswith("%") else name
 
 
+def stat_base(key):
+    """The plain stat name behind a regression column — `Attack Speed %` ->
+    `Attack Speed`.
+
+    The fit map is keyed on the stat's plain name, because `god_fit_score`
+    reads the item's own `stats` dict; the regression is keyed on the name
+    WITH its unit, because `stat_key` made the unit part of the column's
+    identity. Anything comparing the two has to come back through here or it
+    will read every percentage stat as absent from every role map."""
+    return key[:-2] if key.endswith(" %") else key
+
+
 # Whether unconditional passive grants count as stats. OFF: it prices items
 # more sensibly and ranks them worse — see `passives.py` for the numbers and
 # the explanation. Flipped by `price_passives` in _weights.yaml.
@@ -399,6 +411,17 @@ def efficiency_scores(items):
     gold, _ = fit_gold_values(items)
     scored_items = efficiency_pool(items)
     residuals = {it["name"]: it["cost"] - predicted_cost(it, gold) for it in scored_items}
+    # What each COLUMN of the item contributed to that prediction, carried on
+    # the row so a caller holding one score can charge part of the stat line
+    # back without refitting or being handed the gold table separately.
+    # `offmap_adjusted_score` is what needs it, and the reason it lives here is
+    # that every consumer of this module already calls `efficiency_scores` and
+    # not one of them threads `gold` through to `scoring` — a flag that needed
+    # threading would have been a silent no-op in `calibrate`, `validate` and
+    # `build_index`, which is register §4.10's failure mode exactly.
+    stat_gold = {it["name"]: {k: v * gold.get(k, 0.0)
+                              for k, v in item_stat_values(it).items()}
+                 for it in scored_items}
     vals = np.array(list(residuals.values()), dtype=float)
     mean = float(vals.mean())
     std = float(vals.std()) or 1.0
@@ -415,5 +438,107 @@ def efficiency_scores(items):
         # refitting: score = (hi - residual) / span, so d(score) = d(gold)/span.
         # `assemble.conversion_score_bonus` is what needs it.
         scores[name] = {"residual": resid, "z": z, "score": score, "tier": tier,
-                        "span": span}
+                        "span": span, "stat_gold": stat_gold[name]}
     return scores, gold
+
+
+# ── Charging an item for stat mass the god cannot use (`offmap_efficiency`) ──
+#
+# THE HOLE. `efficiency` is god-agnostic: an item's residual is its price
+# against the gold value of EVERY stat it carries, whoever is buying. The
+# god-specific half is `scoring.god_fit_score`, and that normalises over the
+# role map ALONE — numerator and denominator both range over the map, so a
+# stat the map does not name appears in neither. It is neither credited nor
+# charged. With `magnitude_fit` off the stat term reads only WHICH map stats
+# an item carries, so two items with the same on-map stats score the identical
+# fit however much else rides along, and the extra mass shows up only in
+# `efficiency`, as value.
+#
+# VERIFIED, not asserted (2026-08-22). Grouping all 9,541 (god, item) pairs by
+# god and by identical on-map stat SET, the fit stat term is constant inside
+# the group in **1174 of 1174 groups** — fit varies within a class only
+# through the effect-tag bonus, which is not a stat charge. Inside those
+# classes, mean r(off-map stat mass share, efficiency score) = **+0.441**,
+# positive in **856 of 1110** groups and positive in all five roles.
+#
+# THE ITEM IT WAS FOUND ON. Berserker's Shield (2400g: Physical Protection 40
+# · Attack Speed 20% · Max Health 200 · Health Regen 4) is in 17 of 18 model
+# Carry cores and 0 of 18 community ones. A Carry's map names exactly one of
+# its four stats. Repriced against that one stat at the same 2400g:
+#
+#     residual  -425g -> +849g      efficiency 0.681 -> 0.210
+#     `quality` rank 1-9 of 99-138  ->  84-126 of 99-138
+#
+# and it leaves all 18 Carry cores. The off-map stats are the whole of what
+# buys the slot.
+#
+# WHY IT IS NOT A BLANKET CHARGE, AND WHY THIS SHIPS OFF UNTIL SWEPT. Off-map
+# share correlates NEGATIVELY with core membership roster-wide (-0.175), and
+# our cores' mean off-map share (0.235) is within noise of the community's own
+# (0.242). The gap lives on ONE role:
+#
+#     role      pool   our core   community        role      names a defensive stat
+#     Carry    0.579      0.254       0.127        Carry      0 of 18 gods
+#     Jungle   0.666      0.296       0.315        Jungle     1 of 17
+#     Mid      0.656      0.183       0.296        Mid        3 of 22
+#     Solo     0.276      0.215       0.221        Solo      18 of 18
+#     Support  0.310      0.242       0.252        Support   14 of 14
+#
+# The right-hand column is the reason: Carry is the only role whose fit map
+# names no protection and no health at all, and defensive mass is the cheapest
+# mass in the pool. 55% of the off-map mass in our Carry cores is Physical
+# Protection, Max Health and Health Regen; in Support cores it is 0%, because
+# there those stats are ON the map. So the mechanism is general and the HARM
+# is Carry-shaped, which is why the strength is a swept knob rather than a
+# structural change to the residual.
+#
+# IT IS NOT REGISTER §4.11. Off-map share and stat COUNT are near-orthogonal
+# (r = +0.129) and neither absorbs the other — partial r(share, core | count)
+# -0.210 against a simple -0.175; partial r(count, core | share) +0.248
+# against a simple +0.219. The signs are OPPOSITE: count is positively
+# associated with core membership (§4.11's effect), share negatively.
+#
+# IT IS NOT REGISTER §4.3 EITHER. Magnitude-aware fit does not reorder the
+# class that decides the Carry core: Berserker's Shield's 20% Attack Speed IS
+# the reference magnitude, so its fit is unchanged and it stays first.
+#
+# THE HONEST CASE AGAINST IT. In that same class the two items the community
+# actually buys — Odysseus' Bow (10 of 18) and The Executioner (13 of 18) —
+# are the two carrying ZERO off-map mass, and they read +316g and +999g
+# OVERPRICED. That premium is passive value `PRICE_PASSIVES` sets to zero
+# (STATE.md §4.5). There is an unpriced quantity on both sides of the
+# comparison this flag adjusts: our item's off-map mass is free credit,
+# theirs is a free debit. Charging one without pricing the other reaches the
+# right answer for half the right reason, and that is a real limitation on
+# whatever this measures.
+
+
+def offmap_gold(eff_row, role_map):
+    """Gold this item spent on stats the god's fit map does not name.
+
+    Read off `stat_gold`, so it is exactly the contribution those columns made
+    to the item's own predicted cost — the same arithmetic, not a second one
+    that could drift from it."""
+    return sum(g for key, g in (eff_row.get("stat_gold") or {}).items()
+               if not role_map.get(stat_base(key)))
+
+
+def offmap_adjusted_score(eff_row, role_map, strength):
+    """`eff_row`'s efficiency score with `strength` of its off-map gold charged
+    back to it. 0.0 is the exact control and 1.0 prices the item as if it were
+    sold carrying only the stats this god wants.
+
+    The conversion is the one `efficiency_scores` documents on `span`:
+    score = (hi - residual) / span, so charging `c` gold moves the score by
+    exactly c / span and no refit is needed.
+
+    An EMPTY role map is left alone rather than charged in full. A map can be
+    empty legitimately — `archetype_bypass` fun flavors set one deliberately,
+    and `_role_stat_map` returns one for unseen role vocabulary — and an empty
+    map means "no information about what this god wants", never "this god
+    wants nothing". Charging it would collapse every item at once, on the
+    gods where the model already knows least."""
+    score = eff_row.get("score", 0.5)
+    if not strength or not role_map:
+        return score
+    return max(0.0, min(score - strength * offmap_gold(eff_row, role_map) / (eff_row.get("span") or 1.0), 1.0))

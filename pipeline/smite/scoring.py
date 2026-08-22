@@ -7,7 +7,7 @@ import statistics
 
 import yaml
 
-from smite import damage_value, kit
+from smite import damage_value, efficiency, kit
 from smite.efficiency import parse_stat_value
 
 DEFAULT_WEIGHTS = {
@@ -899,6 +899,12 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
             if amount:
                 adaptive[it["name"]] = amount
 
+    # Off-map charging reads the SAME map fit does, which is base_map with the
+    # flavor overlay applied on top (`god_fit_score` merges it there). Built
+    # once per god rather than per item.
+    offmap = eff_weights.get("offmap_efficiency") or 0.0
+    offmap_map = {**base_map, **(stat_overlay or {})} if offmap else {}
+
     # Filtering here, at the single point every archetype's rows come from,
     # keeps an excluded item out of the core, the flex slots, the situational
     # swaps and the underrated list at once — none of those can reintroduce a
@@ -914,7 +920,17 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         if (not profile.get("bypass_damage_filter")
                 and not passes_damage_filter(item, god, eff_weights)):
             continue
-        eff = efficiency_scores_map.get(item["name"], {}).get("score", 0.5)
+        eff_row = efficiency_scores_map.get(item["name"], {})
+        eff = eff_row.get("score", 0.5)
+        # Charge back the gold spent on stats this god's map does not name.
+        # `efficiency` is god-agnostic and `god_fit_score` normalises over the
+        # map alone, so an off-map stat is credited by the first and invisible
+        # to the second — see `efficiency.offmap_adjusted_score` for the
+        # measurement and for why this is a knob and not a structural change.
+        # The effective map is the one fit will actually use, flavor overlay
+        # included, so the two halves cannot disagree about what a god wants.
+        if offmap:
+            eff = efficiency.offmap_adjusted_score(eff_row, offmap_map, offmap)
         row = signal_score(item, god, god_build, eff, eff_weights,
                            tags_map.get(item["name"], []), stat_overlay, tag_bonus,
                            base_map=base_map, stat_reference=reference,

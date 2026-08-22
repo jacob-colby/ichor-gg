@@ -1038,3 +1038,78 @@ def test_adaptive_fit_does_not_top_up_a_stat_the_item_really_carries():
                                        adaptive_grant=72.5)
     without = scoring.god_fit_score(carries, _pow_god(), _w(adaptive_fit=1.0), [])
     assert with_grant == without
+
+
+# ── offmap_efficiency reaching score_god_items (STATE.md §4.15) ───────────
+
+def _offmap_fixture():
+    """A Carry, and two items with the SAME on-map stat and different amounts
+    of stat mass the Carry map does not name. Fit is identical between them by
+    construction (`magnitude_fit` is off, so the stat term reads which map
+    stats are present); efficiency is where they differ."""
+    god = {"name": "C", "damage_type": "physical", "role": "Carry",
+           "specializations": [], "abilities": []}
+    lean = {"name": "Lean", "tier": 3, "cost": 2500, "stats": {"Attack Speed": "20%"}}
+    laden = {"name": "Laden", "tier": 3, "cost": 2400,
+             "stats": {"Attack Speed": "20%", "Physical Protection": "40",
+                       "Max Health": "200"}}
+    eff = {"Lean": {"score": 0.5, "tier": "fair", "span": 1000.0,
+                    "stat_gold": {"Attack Speed %": 400.0}},
+           "Laden": {"score": 0.9, "tier": "fair", "span": 1000.0,
+                     "stat_gold": {"Attack Speed %": 400.0,
+                                   "Physical Protection": 700.0,
+                                   "Max Health": 300.0}}}
+    return god, [lean, laden], eff
+
+
+def test_offmap_efficiency_is_an_exact_no_op_at_zero():
+    god, items, eff = _offmap_fixture()
+    w = scoring.load_weights_default()
+    w["offmap_efficiency"] = 0.0
+    rows = {r["item"]: r for r in scoring.score_god_items(god, items, {"builds": []},
+                                                          eff, w, {})}
+    assert rows["Laden"]["efficiency"] == 0.9
+    assert rows["Lean"]["efficiency"] == 0.5
+
+
+def test_offmap_efficiency_charges_only_the_stats_the_map_does_not_name():
+    """The Carry map names Attack Speed and neither Physical Protection nor
+    Max Health, so the lean item is untouched at any strength and the laden
+    one is charged its 1000g of off-map gold against a 1000g span."""
+    god, items, eff = _offmap_fixture()
+    w = scoring.load_weights_default()
+    w["offmap_efficiency"] = 0.5
+    rows = {r["item"]: r for r in scoring.score_god_items(god, items, {"builds": []},
+                                                          eff, w, {})}
+    assert rows["Lean"]["efficiency"] == 0.5
+    assert rows["Laden"]["efficiency"] == pytest.approx(0.4)
+    # Same fit, so `quality` moves with efficiency alone — which is the whole
+    # mechanism: off-map mass is free in fit and paid for in efficiency.
+    assert rows["Laden"]["fit"] == rows["Lean"]["fit"]
+
+
+def test_offmap_efficiency_flips_which_item_wins_on_quality():
+    god, items, eff = _offmap_fixture()
+    w = scoring.load_weights_default()
+    best = lambda a: max(scoring.score_god_items(
+        god, items, {"builds": []}, eff, {**w, "offmap_efficiency": a}, {}),
+        key=lambda r: r["quality"])["item"]
+    assert best(0.0) == "Laden"
+    assert best(1.0) == "Lean"
+
+
+def test_offmap_efficiency_reads_the_flavor_overlay_fit_will_use():
+    """The charge and the fit term have to agree about what the god wants. A
+    flavor that names Max Health makes it an on-map stat for fit, so it must
+    stop being charged here too."""
+    god, items, eff = _offmap_fixture()
+    w = scoring.load_weights_default()
+    w["offmap_efficiency"] = 1.0
+    plain = {r["item"]: r for r in scoring.score_god_items(
+        god, items, {"builds": []}, eff, w, {})}
+    overlaid = {r["item"]: r for r in scoring.score_god_items(
+        god, items, {"builds": []}, eff, w, {}, {"stat_overlay": {"Max Health": 1.0}})}
+    # 1000g charged against a 1000g span takes 0.9 below zero, where it clamps.
+    assert plain["Laden"]["efficiency"] == 0.0
+    # With Max Health on the map only the 700g protection column is charged.
+    assert overlaid["Laden"]["efficiency"] == pytest.approx(0.9 - 0.7)
