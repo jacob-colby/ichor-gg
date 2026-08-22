@@ -343,3 +343,53 @@ def test_offmap_adjusted_score_leaves_an_empty_map_alone():
     would collapse every item at once, on the gods the model knows least."""
     row = {"score": 0.7, "span": 1000.0, "stat_gold": {"Max Health": 400.0}}
     assert efficiency.offmap_adjusted_score(row, {}, 1.0) == 0.7
+
+
+# ── offmap_exempt: the universal ride-along (STATE.md §4.16) ──────────────
+
+def test_offmap_gold_skips_an_exempted_stat():
+    """A stat on the exempt list is charged to nobody, whatever the map says.
+    It is not a fit weight — an exemption states that the stat is a roster
+    constant rather than a per-role want, which is what the kit measurement
+    found and what a fit weight would have to invent a magnitude for."""
+    row = {"stat_gold": {"Strength": 700.0, "Max Mana": 300.0,
+                         "Mana Regen": 100.0, "Physical Protection": 800.0}}
+    m = {"Strength": 1.0}
+    assert efficiency.offmap_gold(row, m) == 1200.0
+    assert efficiency.offmap_gold(row, m, exempt=("Max Mana",)) == 900.0
+    assert efficiency.offmap_gold(row, m, exempt=("Max Mana", "Mana Regen")) == 800.0
+
+
+def test_offmap_exempt_matches_through_the_unit_suffix():
+    """`stat_base` again: the regression's column is `Penetration %` and the
+    exempt list is written in the fit map's plain vocabulary."""
+    row = {"stat_gold": {"Penetration %": 500.0, "Max Health": 200.0}}
+    assert efficiency.offmap_gold(row, {}, exempt=("Penetration",)) == 200.0
+
+
+def test_offmap_exempt_does_not_credit_an_on_map_stat_twice():
+    """Exempting a stat the map already names changes nothing — the stat was
+    never in the charge to begin with."""
+    row = {"stat_gold": {"Strength": 700.0, "Max Health": 300.0}}
+    m = {"Strength": 1.0}
+    assert efficiency.offmap_gold(row, m, exempt=("Strength",)) == \
+        efficiency.offmap_gold(row, m)
+
+
+def test_offmap_adjusted_score_threads_its_exempt_list():
+    row = {"score": 0.8, "span": 1000.0,
+           "stat_gold": {"Max Health": 200.0, "Max Mana": 300.0}}
+    m = {"Strength": 1.0}
+    assert efficiency.offmap_adjusted_score(row, m, 1.0) == pytest.approx(0.3)
+    assert efficiency.offmap_adjusted_score(
+        row, m, 1.0, exempt=("Max Mana",)) == pytest.approx(0.6)
+
+
+def test_offmap_exempt_is_inert_while_the_charge_is_off():
+    """The exemption only subtracts from a charge. With `offmap_efficiency` at
+    its shipped 0.0 there is no charge, so the list cannot move anything —
+    register §4.10 is what happens when that is assumed instead of checked."""
+    row = {"score": 0.681, "span": 4000.0,
+           "stat_gold": {"Max Mana": 800.0}}
+    assert efficiency.offmap_adjusted_score(row, {"Strength": 1.0}, 0.0,
+                                            exempt=("Max Mana",)) == 0.681

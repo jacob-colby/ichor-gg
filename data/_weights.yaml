@@ -288,13 +288,112 @@ attack_damage_fit: 1.0
 #     Support   HPRegen 36 ManaRegen 22 MM 21    ManaRegen 33 MaxMana 29 HPRegen 20
 #
 # Mana, regen and Plating are ride-along the community buys too and no role
-# map names — there the map is INCOMPLETE and the charge punishes a real want,
-# which is why Support loses up to 21.4pp and Solo 9.4pp. Protections on a
-# Carry are the actual defect. Nothing available here separates those two
-# cases: doing it by naming which stats a role "really" wants is the invented
-# constant §4.12 and §4.13 both turned on refusing, and doing it from the
-# community's own composition is the leakage §1 is about.
+# map names — there the map is INCOMPLETE and the charge punishes a real want.
+# Protections on a Carry are the actual defect.
+#
+# THE ATTRIBUTION IN THE LINE ABOVE WAS HALF WRONG AND IS CORRECTED HERE
+# (2026-08-22, by `offmap_exempt` below). It used to read "which is why
+# Support loses up to 21.4pp and Solo 9.4pp", naming mana as the cause of
+# both. Measured by sparing mana and re-running this identical sweep:
+# Support's -21.4pp is mana almost entirely (-21.4pp -> -1.4pp), and Solo's
+# -9.4pp is NOT MANA AT ALL (-9.4pp -> -9.4pp, unmoved). Solo's is Health
+# Regen — 33% of the off-map gold this charge removes from a Solo core, at
+# 76.40 g/pt the dearest stat in the regression — and Plating. Two roles
+# losing coverage to an off-map charge were read as one mechanism.
+#
+# A SECOND CORRECTION, because it is the trap: off-map GOLD SHARE does not
+# predict coverage impact. Mana is only 24% of the gold this charge takes off
+# a Support core and it turned out to be ~93% of Support's coverage loss.
+# Do not reason from the composition table above to what a carve-out will do —
+# measure the carve-out.
+#
+# The "nothing separates the two cases" conclusion below still stands for a
+# FIT WEIGHT, and `offmap_exempt` is why an exemption is not one.
 offmap_efficiency: 0.0
+# ── The universal ride-along (`offmap_exempt`) ────────────────────────────
+# Stats that are off EVERY role map and charged to nobody by the flag above.
+#
+# NOT A FIT WEIGHT, and the difference is the design. A weight says "this role
+# wants this stat, this much" and needs a magnitude; an exemption says "this
+# stat is a roster constant, so its absence from the 21 `role_stats` entries
+# is not evidence the gods do not want it". Mana can be argued for the second
+# and NOT the first — the full derivation, with the kit table, is in
+# `efficiency.offmap_gold`. In one line: the god's own ability costs and mana
+# pool separate the five roles by 3pp on a quantity whose roster range is
+# 16pp, so there is no per-role number to read off them; no ability in the
+# roster scales on Max Mana and `combat.py` never mentions mana, so neither
+# the damage model nor `build_quality` can price it; and the one game-stated
+# mana->power exchange rate is `conversion_fit`, STATE.md §4.9, refuted.
+#
+# THE 67.7% THAT MOTIVATED THIS IS THE WRONG UNIT. `god_fit_score` reads
+# PRESENCE (`magnitude_fit` is off) and `offmap_efficiency` charges GOLD.
+# Neither reads mass. The community's own cores, three units:
+#
+#     role     off-map MASS mana   as GOLD   core SLOTS carrying any mana
+#     Carry               67.7%      15.4%     15 of 108 = 13.9%
+#     Jungle              74.2%      29.7%     42 of 102 = 41.2%
+#     Mid                 94.1%      65.3%     48 of 132 = 36.4%
+#     Solo                90.2%      29.6%     24 of 108 = 22.2%
+#     Support             84.9%      24.2%     24 of  84 = 28.6%
+#
+# Median non-zero roll is 250 Max Mana against 35 Strength, and the regression
+# prices mana at 1.26 g/pt against Strength's 21.81. Mana is voluminous and
+# cheap, so a mass share flatters it ~5x on Carry.
+#
+# WHAT IT IS WORTH. `offmap_efficiency` re-swept on SS4.15's own grid, at
+# fingerprint `c68c33d49845` (this file with this key present; the control
+# reads 5.6% / 39.1% / 40.0% at it, identical to the digit to the c73b6ea6bdde
+# it replaced). The `exempt OFF` column reproduces SS4.15's sweep and its
+# per-mode churn EXACTLY, to the digit, which is what says the two are
+# comparable.
+#
+#            ---------- exempt OFF ----------   --------- exempt MANA ---------
+#   alpha     probe 0.70   best 0.45   C/J/A      probe 0.70   best 0.45   C/J/A
+#    0.00        39.1%       40.0%     0/ 0/ 0       39.1%       40.0%    0/ 0/ 0
+#    0.10        38.8%       39.4%    22/36/20       39.9%       39.6%   14/36/16
+#    0.15        38.8%       38.9%    29/42/25       40.7%       39.6%   20/43/21
+#    0.25        38.8%       38.5%    51/49/32       42.3%       39.2%   42/49/27
+#    0.50        35.8%       37.4%    71/61/62       41.5%       38.5%   63/59/57
+#    0.75        34.9%       37.2%    83/70/80       42.7%       38.1%   67/69/60
+#    1.00        34.0%       37.0%    86/80/86       43.1%       37.9%   71/70/62
+#
+# THE PROBE SPLIT REVERSES SIGN. Charging off-map mass went monotonically down
+# on both splits; with mana spared it goes monotonically UP on the probe split,
+# and the paired 95% CI EXCLUDES ZERO at 0.25 [+0.86%, +5.32%], 0.75
+# [+0.97%, +6.10%] and 1.00 [+1.27%, +6.70%]. So most of what the charge was
+# losing on that split really was the mana, and the hypothesis that motivated
+# this was right about the mechanism.
+#
+# THE BEST SPLIT DOES NOT. It stays below control at every strength and its CI
+# excludes zero at 0.75 and 1.00. Two splits disagreeing about the DIRECTION
+# is register entry 9's shape and `offmap_efficiency` stays at 0.0 for entry
+# 9's reason. This key ships POPULATED and therefore INERT — it is the state
+# the next attempt starts from, not a change to the build.
+#
+# WHERE THE REMAINING HARM IS, since that is the useful half. Per-role
+# coverage delta against control, alpha 1.00:
+#
+#                probe 0.70:0.30            best 0.45:0.55
+#   role       charge   +exempt          charge   +exempt
+#   Carry       +5.6%     +6.7%           -2.2%     -2.2%
+#   Jungle      -8.2%     +5.9%           -3.5%     +1.2%
+#   Mid         +0.7%     +4.5%           +0.9%     +0.9%
+#   Solo        -7.4%     +3.0%           -9.4%     -9.4%
+#   Support    -21.4%     -1.4%           -1.4%     -1.4%
+#
+# Support's -21.4pp is SS4.15's own figure and mana is nearly all of it
+# (-21.4 -> -1.4). Solo's -9.4pp is SS4.15's other figure and mana is NONE of
+# it (-9.4 -> -9.4): that is Health Regen, 33% of the gold this charge removes
+# from a Solo core, and Plating. Carry's -2.2pp on the best split is also not
+# mana, and Carry is the role the charge exists to fix. Whoever picks this up
+# should go after Health Regen next; it is the dearest stat in the regression
+# at 76.40 g/pt and no role map names it either.
+#
+# THE CARRY CORRECTION SURVIVES THE EXEMPTION INTACT, which is the thing the
+# exemption had to not break: Berserker's Shield is in 17 of 18 Carry model
+# cores at control and 0 of 18 at alpha 0.25 with the exemption ON or OFF.
+# Medusa's core is byte-identical under the two at every strength.
+offmap_exempt: [Max Mana, Mana Regen]
 # ── The clock (B5) ────────────────────────────────────────────────────────
 # What `damage_value.item_damage_gain` RETURNS. False = one ability rotation
 # plus one basic attack, where the 1:1 mix is a declaration and nothing else.

@@ -2,7 +2,7 @@
 
 > **Read the leakage probe before the grid.** Both of this metric's targets are also model inputs, so the grid's ranking is partly the metric grading its own input. See `calibrate.py`.
 
-_Input fingerprint: `c73b6ea6bdde` — items, gods, tags, community builds, weights. Check it against `python -m smite.calibrate --control` before quoting any number below._
+_Input fingerprint: `c68c33d49845` — items, gods, tags, community builds, weights. Check it against `python -m smite.calibrate --control` before quoting any number below._
 
 ## 1. Leakage probe — what the objective actually maximises
 

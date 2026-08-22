@@ -13,13 +13,17 @@ Five things that are easy to get wrong here, all expanded in that file:
    (leakage-free coverage against a random-core baseline). Headline coverage
    moving the *other* way is expected and is not by itself a reason to revert.
 
-2. **Check the negative-results register (§4) first.** Fifteen correct-looking
+2. **Check the negative-results register (§4) first.** Sixteen correct-looking
    improvements have been implemented, measured, and shipped off. Re-running
    them against the old metric will just reproduce the old answer. Two of the
-   fifteen are *not* "we measured this and it is false" — §4.13 and §4.14 —
+   sixteen are *not* "we measured this and it is false" — §4.13 and §4.14 —
    and each says on its own line what it is instead. A third, §4.15, is a
    two-gate DISAGREEMENT: the leakage-free gate refuses it and
-   `build_quality` says it fixes the defect it was built for.
+   `build_quality` says it fixes the defect it was built for. A fourth,
+   §4.16, is a REFUSAL to write a constant: it says why mana cannot be given
+   a fit weight on any evidence available here, and measures the exemption
+   that needs none. §4.16 also amends §4.15 on two points — read them
+   together, not §4.15 alone.
 
 3. **The combat model is exact — keep it that way.** `smite.calibrate_combat`
    must stay at 0.0%. Constants carry evidence tiers, and several deliberately

@@ -513,17 +513,112 @@ def efficiency_scores(items):
 # whatever this measures.
 
 
-def offmap_gold(eff_row, role_map):
+# ── The universal ride-along (`offmap_exempt`) ───────────────────────────────
+#
+# WHAT IT IS. A stat named here is off EVERY role map and charged to nobody by
+# `offmap_efficiency`. It is deliberately NOT a fit weight, and the difference
+# is the whole design: a weight says "this role wants this stat, this much",
+# which needs a magnitude; an exemption says "this stat is a roster constant,
+# so its absence from the maps is not evidence the gods do not want it".
+#
+# WHY MANA COULD NOT BE A WEIGHT (measured 2026-08-22, at control fingerprint
+# `c73b6ea6bdde` — baseline 5.6%, probe 39.1%, best 40.0%). Zero of the 21
+# `role_stats` entries names Max Mana or Mana Regen, and the obvious repair is
+# to name it. Every route to a NUMBER is closed:
+#
+#   * THE KIT — the `attack_damage_fit` shape, and the one that should have
+#     worked. Ability mana costs and base stats are scraped, game-side and
+#     community-free. Over the 78 gods with a full kit and a mana pool:
+#
+#         role     n  pool@20   MP5  rotation  rot/pool  drain/s  sustain_s
+#         Carry   15     1094  3.42       285     0.261    18.49        61s
+#         Jungle  15     1094  3.93       320     0.293    18.19        63s
+#         Mid     21     1114  3.84       315     0.283    22.73        54s
+#         Solo    15     1094  3.73       295     0.270    18.20        68s
+#         Support 12     1128  3.73       320     0.284    19.18        62s
+#
+#     THERE IS NO PER-ROLE SIGNAL IN IT. `rot/pool` spans 0.261-0.293 across
+#     five roles on a quantity whose roster range is 0.181-0.338 — a 3pp band
+#     inside a 16pp one — and base mana is near-constant (1006-1240, stdev 53).
+#     The between-role `sustain_s` range (54-68s) is NARROWER than Solo's own
+#     within-role IQR (53-70s). The kit says every role has the same mana
+#     economy, which argues for a roster constant and against a role column.
+#     The one measure that does single Mid out is `drain/s`, and it assumes
+#     100% ability uptime — the clock STATE.md §4.12 turned on refusing. On the
+#     clock-free measure Mid is third of five, behind Jungle and Support.
+#
+#   * THE DAMAGE MODEL cannot price it. Exactly 0 of 89 gods have an ability
+#     that scales on Max Mana (the only regex hit in the roster is Apollo's
+#     ult COST). `combat.py` contains the string "mana" zero times, so
+#     `build_quality` — the non-circular instrument — is blind to mana and
+#     cannot adjudicate this either way.
+#
+#   * THE ONE GAME-STATED EXCHANGE RATE is already refuted. Transcendence
+#     (3% -> Strength) and Book of Thoth (5% -> Intelligence) are the only
+#     things that turn mana into a stat a map names; that is `conversion_fit`,
+#     swept 0.05-1.0, STATE.md §4.9, the two splits moving in OPPOSITE
+#     directions.
+#
+#   * AND THE INTERVENTION HAS ALREADY BEEN MEASURED ONCE, informally. The
+#     `mana-stack` flavor comment in _weights.yaml records that Max Mana on a
+#     fit overlay at 1.2 selected Genji's Guard and Breastplate of Valor —
+#     tank items — because mana in this pool lives on tank items. "Mana is the
+#     fuel, not the goal."
+#
+#   To put mana on the fit map needs an exchange rate between a point of mana
+#   and a point of Strength. `attack_damage_fit` had one: both are damage and
+#   `stat_weights` measures them in the same unit. Mana has none that is not
+#   leakage or already refuted, so any weight written here would be invented.
+#
+# THE SHARE THAT MOTIVATED THIS IS THE WRONG UNIT, AND BY A FACTOR OF ~5.
+# `god_fit_score` runs with `magnitude_fit` off, so its stat term reads
+# PRESENCE — `share` is 1.0 whatever the value — and `offmap_efficiency`
+# charges GOLD, off `stat_gold`. Neither reads mass. Same community cores,
+# same off-map definition, three units:
+#
+#     role     off-map MASS that is mana   as GOLD   core SLOTS carrying any
+#     Carry                        67.7%     15.4%     15 of 108 = 13.9%
+#     Jungle                       74.2%     29.7%     42 of 102 = 41.2%
+#     Mid                          94.1%     65.3%     48 of 132 = 36.4%
+#     Solo                         90.2%     29.6%     24 of 108 = 22.2%
+#     Support                      84.9%     24.2%     24 of  84 = 28.6%
+#
+# The arithmetic is visible in the pool: the median non-zero roll is 250 Max
+# Mana against 35 Strength, and the regression prices Max Mana at 1.26 g/pt
+# against Strength's 21.81. A median mana roll is 316 gold. Mana is voluminous
+# and cheap, so a mass share flatters it and a gold or presence share does not.
+#
+# WHAT AN EXEMPTION IS WORTH ANYWAY, given all that. The hole §4.15 names is
+# real and it is one-sided: `efficiency` prices mana as value and
+# `god_fit_score` cannot see it, so charging off-map mass charges an item for
+# a stat every build in the game carries. An exemption removes that one-sided
+# charge without asserting a magnitude — it needs only the binary the kit
+# measurement supports, that mana is a roster constant. The sweep under
+# `offmap_exempt` in _weights.yaml is what it is worth.
+#
+# IT IS INERT WHILE `offmap_efficiency` IS 0.0 — an exemption only subtracts
+# from a charge, and with no charge there is nothing to subtract. That is
+# pinned by a test rather than assumed; register §4.10 is what happens when a
+# setting is applied where nothing reads it.
+
+
+def offmap_gold(eff_row, role_map, exempt=()):
     """Gold this item spent on stats the god's fit map does not name.
 
     Read off `stat_gold`, so it is exactly the contribution those columns made
     to the item's own predicted cost — the same arithmetic, not a second one
-    that could drift from it."""
+    that could drift from it.
+
+    `exempt` names stats that are off EVERY map and charged to nobody. See
+    `OFFMAP_EXEMPT` below for what earns a place on that list and why it is an
+    exemption rather than a fit weight.
+    """
+    exempt = frozenset(exempt or ())
     return sum(g for key, g in (eff_row.get("stat_gold") or {}).items()
-               if not role_map.get(stat_base(key)))
+               if not role_map.get(stat_base(key)) and stat_base(key) not in exempt)
 
 
-def offmap_adjusted_score(eff_row, role_map, strength):
+def offmap_adjusted_score(eff_row, role_map, strength, exempt=()):
     """`eff_row`'s efficiency score with `strength` of its off-map gold charged
     back to it. 0.0 is the exact control and 1.0 prices the item as if it were
     sold carrying only the stats this god wants.
@@ -541,4 +636,5 @@ def offmap_adjusted_score(eff_row, role_map, strength):
     score = eff_row.get("score", 0.5)
     if not strength or not role_map:
         return score
-    return max(0.0, min(score - strength * offmap_gold(eff_row, role_map) / (eff_row.get("span") or 1.0), 1.0))
+    return max(0.0, min(score - strength * offmap_gold(eff_row, role_map, exempt)
+                        / (eff_row.get("span") or 1.0), 1.0))
