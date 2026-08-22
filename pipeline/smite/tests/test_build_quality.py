@@ -12,7 +12,7 @@ import re
 import pytest
 
 from smite import (assemble, build_index, build_quality as bq, combat, efficiency,
-                   notes, recommend, scoring)
+                   notes, passives, recommend, scoring)
 
 
 @pytest.fixture(scope="module")
@@ -419,10 +419,18 @@ def test_the_real_pool_is_mostly_blind():
 
 def test_the_report_states_the_caveat_before_any_verdict(tmp_path, items_by_name):
     """A report that states a winner without the blind spot is worse than no
-    report. The caveat and every assumption have to precede the first table."""
+    report. The caveat and every assumption have to precede the first table.
+
+    The worked-example DPS row and the gold-cost row are read off `row`
+    itself rather than hand-copied, because the community build note is live
+    data the daily refresh can and does change (it moved Medusa's community
+    core between Riptalon and Deathbringer under this exact test) — the
+    invariant under test is the ORDERING of caveat before figures, not what
+    Medusa's build happens to be today."""
     god = _god("Medusa")
     note = recommend.load_build_note("Medusa")
     row = bq.compare(god, note, items_by_name)
+    assert row is not None, "fixture drifted: Medusa no longer has a full community + suggested core"
     weights = scoring.load_weights(recommend.WEIGHTS_PATH)
     blind = bq.passive_blind_spot(recommend.load_items(), [god], {"Medusa": note}, weights)
     out = tmp_path / "report.md"
@@ -436,8 +444,15 @@ def test_the_report_states_the_caveat_before_any_verdict(tmp_path, items_by_name
                    "no lifesteal sustain", "no crowd control", "no wave clear"):
         assert phrase in text[:first_table], phrase
     assert "Input fingerprint: `abc123`" in text
-    assert "| COMMUNITY vs squishy (70) | 352.8 | 35.9 | **388.6** |" in text
-    assert "| Medusa | Carry | 13,750 / 15,400 |" in text
+
+    c = row["community"]
+    community_line = (f"| COMMUNITY vs squishy (70) | {c['basic_dps'][70]:.1f} | "
+                      f"{c['ability_dps'][70]:.1f} | **{c['total_dps'][70]:.1f}** | "
+                      f"{c['ehp_physical']:,.0f} | {c['ehp_magical']:,.0f} |")
+    cost_line = (f"| {row['god']} | {row['role']} | "
+                f"{row['community']['cost']:,.0f} / {row['ours']['cost']:,.0f} |")
+    assert community_line in text
+    assert cost_line in text
 
 
 def test_the_report_is_deterministic(tmp_path, items_by_name):
@@ -456,21 +471,77 @@ def test_the_report_is_deterministic(tmp_path, items_by_name):
 
 def test_priced_run_restores_the_pricing_flags(items_by_name):
     """The sensitivity run flips the module globals and must put them back —
-    and must never price the crit multiplier twice."""
+    and must never price the crit multiplier twice.
+
+    Uses a fixed six-item core rather than Medusa's live build note, because
+    the daily community refresh owns that note's contents and this test
+    doesn't need it — it needs one item with an Adaptive Stat passive (The
+    Executioner) and one with a crit-damage passive (Deathbringer), both
+    stable item-data facts. The expected Strength gain is derived from
+    `passives.adaptive_grants` itself, the same function `efficiency`
+    calls, so a change to the item's passive text moves both sides together
+    instead of silently going stale here."""
     weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    assert weights.get("price_adaptive") and weights.get("price_crit_multipliers"), (
+        "this test needs both flags ON in the shipped weights to prove anything")
     god = _god("Medusa")
-    builds = {"Medusa": recommend.load_build_note("Medusa")}
-    rows, _ = bq.run([god], recommend.load_items(), builds, weights, priced=True)
-    # The Executioner's Adaptive Stat lands as Strength under the shipped flags.
-    assert rows[0]["community"]["stats"]["Strength"] == pytest.approx(25 + 30)
-    assert efficiency.PRICE_ADAPTIVE is False
-    assert efficiency.PRICE_CRIT_MULTIPLIERS is False
+    community = ["Tyrfing", "Odysseus' Bow", "Silverbranch Bow",
+                 "The Executioner", "Deathbringer", "Manchu Bow"]
+    note = {"builds": [
+        {"source": "community", "slot_order": community},
+        {"source": "suggested", "archetype": bq.DEFAULT_ARCHETYPE, "slot_order": MEDUSA_OURS},
+    ]}
+    builds = {"Medusa": note}
+    items = recommend.load_items()
+
+    before_adaptive = efficiency.PRICE_ADAPTIVE
+    before_crit = efficiency.PRICE_CRIT_MULTIPLIERS
+    unpriced_rows, unpriced_skipped = bq.run([god], items, builds, weights, priced=False)
+    priced_rows, priced_skipped = bq.run([god], items, builds, weights, priced=True)
+    assert not unpriced_skipped and not priced_skipped
+
+    # PRICE_ADAPTIVE actually took effect: the priced run's Strength gain over
+    # the unpriced run equals what `passives.adaptive_grants` prices for this
+    # core's own items on the shipped branch.
+    branch = str(weights.get("adaptive_branch") or "strength")
+    expected_gain = sum(
+        passives.adaptive_grants(items_by_name[n], branch).get("Strength", 0.0)
+        for n in community)
+    assert expected_gain > 0, "fixture drifted: no adaptive-priced item left in this core"
+    got_gain = (priced_rows[0]["community"]["stats"]["Strength"]
+                - unpriced_rows[0]["community"]["stats"]["Strength"])
+    assert got_gain == pytest.approx(expected_gain)
+
+    # Never priced twice: PRICE_CRIT_MULTIPLIERS is forced off for the priced
+    # run, so Deathbringer's Critical Chance % must read exactly its raw stat
+    # — no `crit_damage_as_chance` top-up stacked on top of `combat`'s own
+    # measured 1.85x multiplier.
+    assert (priced_rows[0]["community"]["stats"]["Critical Chance %"]
+            == unpriced_rows[0]["community"]["stats"]["Critical Chance %"])
+
+    assert efficiency.PRICE_ADAPTIVE == before_adaptive
+    assert efficiency.PRICE_CRIT_MULTIPLIERS == before_crit
 
 
-def test_cli_prints_one_god(capsys):
+def test_cli_prints_one_god(capsys, items_by_name):
+    """`main --god` exits 0 and prints that god's own worked example, exits 1
+    for a god that isn't compared. The DPS figures are read off `bq.compare`
+    in the test rather than hand-copied, since the community build (and so
+    the DPS) is live data the daily refresh moves independently of this CLI
+    contract."""
+    god = _god("Medusa")
+    note = recommend.load_build_note("Medusa")
+    row = bq.compare(god, note, items_by_name)
+    assert row is not None, "fixture drifted: Medusa no longer has a full community + suggested core"
+    c = row["community"]
+    community_line = (f"| COMMUNITY vs squishy (70) | {c['basic_dps'][70]:.1f} | "
+                      f"{c['ability_dps'][70]:.1f} | **{c['total_dps'][70]:.1f}** | "
+                      f"{c['ehp_physical']:,.0f} | {c['ehp_magical']:,.0f} |")
+
     assert bq.main(["--god", "Medusa"]) == 0
     out = capsys.readouterr().out
-    assert "352.8" in out and "314.8" in out
+    assert f"### {row['god']} ({row['role']})" in out
+    assert community_line in out
     assert bq.main(["--god", "Nobody"]) == 1
 
 
