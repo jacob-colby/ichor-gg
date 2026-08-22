@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { DraftComp } from "../types";
 
-export type DraftMode = "conquest" | "joust";
+export type DraftMode = "conquest" | "joust" | "arena";
 
-/** Team size per mode — Conquest 5v5, Joust 3v3. Switching mode resizes both
- *  rows; see `resize` below for the truncate-don't-clear rule. */
+/** Team size per mode — Conquest 5v5, Joust 3v3, Arena 5v5. Switching mode
+ *  resizes both rows; see `resize` below for the truncate-don't-clear rule. */
 export const MODE_TEAM_SIZE: Record<DraftMode, number> = {
   conquest: 5,
   joust: 3,
+  arena: 5,
 };
 
 const KEY = "smite:draft";
@@ -20,7 +21,7 @@ interface StoredDraft {
 }
 
 function normalizeMode(m: unknown): DraftMode {
-  return m === "joust" ? "joust" : "conquest";
+  return m === "joust" ? "joust" : m === "arena" ? "arena" : "conquest";
 }
 
 /** Fixed-length slots ("" = empty) exactly like a lineup — resizing keeps the

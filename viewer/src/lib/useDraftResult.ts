@@ -14,7 +14,7 @@ import { adaptedCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftB
 import type { DraftMode } from "./draft";
 import { groupStarters, type StarterPath } from "./starters";
 
-const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust" };
+const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust", arena: "Arena" };
 
 /** Applies the shipped `lifesteal_caps` rules — the same data `god_max_lifesteal`
  *  reads, in the same first-match-wins order.
