@@ -166,7 +166,16 @@ claim is worse than no entry, because §4 is read as settled.
 ## Process
 
 Sessions should **open a PR and stop**, not self-merge — review before merge is
-cheaper than review after. Ask each session to close with:
+cheaper than review after.
+
+**Say that in the prompt, in words.** It is a rule in this file, which the
+session never reads. `08-21 G` finished its work, ran every gate, and left four
+files uncommitted with no branch history and no PR, closing with "did not
+commit — per the commit-only-when-asked rule." It was right to; nothing had
+asked it to. A worktree cleanup would have destroyed the session. End every
+prompt with an explicit *"commit to your branch and open a PR; do not merge"*.
+
+Ask each session to close with:
 
 ```
 WHAT CHANGED · MEASURED (both splits + baseline, control re-run) ·
