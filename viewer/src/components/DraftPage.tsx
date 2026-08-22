@@ -32,8 +32,8 @@ const THREAT_DEFS: { key: ThreatKey; label: string; answer: string }[] = [
   { key: "walls", label: "player-made walls", answer: "Shell of Rebuke" },
 ];
 
-const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust" };
-const MODES: DraftMode[] = ["conquest", "joust"];
+const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust", arena: "Arena" };
+const MODES: DraftMode[] = ["conquest", "joust", "arena"];
 const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
 const segBtn = (active: boolean) =>
@@ -280,6 +280,17 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
               </span>
             )}
           </h2>
+          {/* No community data exists for this mode's own build note — see §1
+              of STATE.md — so the score behind this core is efficiency and
+              kit-fit alone, same as `DetailPanel`'s "No outcome data exists"
+              line on the god page. Without this the tab looks identical to
+              Conquest's and reads as equally meta-backed, which it isn't. */}
+          {mode !== "conquest" && (
+            <p className="mt-1 max-w-[64ch] text-label leading-relaxed text-muted">
+              <span className="text-premium">No outcome data exists for {MODE_LABEL[mode]}.</span>{" "}
+              This core is ranked by efficiency and kit-fit alone — not by what {MODE_LABEL[mode]} players buy.
+            </p>
+          )}
           {!draftEnabled || !result ? (
             <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
               {meName} has no scored items in this index yet, so there&rsquo;s nothing to adapt.
@@ -301,7 +312,8 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                     <span className="text-label text-faint">Opens with</span>
                     <span className="text-label text-muted">
                       · by pick rate, not adapted by your draft
-                      {startersAreConquest && " · Conquest data, no Joust openers are tracked"}
+                      {startersAreConquest &&
+                        ` · ${MODE_LABEL.conquest} data, no ${MODE_LABEL[mode]} openers are tracked`}
                     </span>
                   </div>
                   {/* One chip per PURCHASE PATH, not per item. Leather Cowl and

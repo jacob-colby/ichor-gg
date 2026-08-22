@@ -440,7 +440,7 @@ function DraftSeam() {
   const enemies = draft.enemies.filter(Boolean);
   const started = allies.length + enemies.length > 0;
   const size = MODE_TEAM_SIZE[mode];
-  const modeLabel = mode === "joust" ? "Joust" : "Conquest";
+  const modeLabel = mode === "joust" ? "Joust" : mode === "arena" ? "Arena" : "Conquest";
   // Only the first ally slot has a build behind it — that god's core is the
   // one thing the draft page adapts. With the slot empty there is nothing to
   // adapt, however many enemies are entered, so the two cases read differently.

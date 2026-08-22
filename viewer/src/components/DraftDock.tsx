@@ -19,8 +19,8 @@ import { useDraft, type DraftMode } from "../lib/draft";
 import { useDraftResult } from "../lib/useDraftResult";
 import { Icon, Slot, GodPickerModal } from "./DraftControls";
 
-const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust" };
-const MODES: DraftMode[] = ["conquest", "joust"];
+const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust", arena: "Arena" };
+const MODES: DraftMode[] = ["conquest", "joust", "arena"];
 const label = "font-mono text-micro uppercase tracking-[0.08em] text-faint";
 
 /** Small, non-interactive portraits for the collapsed header — the slots
@@ -218,7 +218,7 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
             {starters.length > 0 && (
               <div data-testid="dock-starters" className="mt-2 border-t border-line pt-2">
                 <div className={label}>
-                  Opens with{startersAreConquest && " · Conquest"}
+                  Opens with{startersAreConquest && ` · ${MODE_LABEL.conquest} data`}
                 </div>
                 {/* One chip per purchase PATH — see lib/starters.ts. The dock
                     is 420px, so it shows the path's end and its lead rate and
@@ -249,6 +249,16 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
             {result && (
               <div className="mt-2 border-t border-line pt-2">
                 <div className={label}>{changeCount > 0 ? "Your adapted core" : "The default core"}</div>
+                {/* No community record backs this mode's score at all (§1 of
+                    STATE.md) — efficiency + kit-fit only. Same fact DetailPanel
+                    states on the god page; the dock repeats it here rather than
+                    letting the build read as meta-backed just because the tab
+                    looks the same as Conquest's. */}
+                {mode !== "conquest" && (
+                  <p className="mt-0.5 text-micro leading-snug text-faint">
+                    No outcome data for {MODE_LABEL[mode]} — ranked by efficiency and kit-fit alone.
+                  </p>
+                )}
                 <ul className="mt-1 flex flex-col">
                   {result.adapted.core.map((name, i) => {
                     const changed = result.diff.changes.some((c) => c.added === name);

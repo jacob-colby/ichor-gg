@@ -156,7 +156,8 @@ export function SubjectFrame({
 
   const draftHref = (subject: string) => {
     const started = draft.allies.some(Boolean) || draft.enemies.some(Boolean);
-    const m: DraftMode = started ? savedMode : (modeLabel.toLowerCase() === "joust" ? "joust" : "conquest");
+    const lower = modeLabel.toLowerCase();
+    const m: DraftMode = started ? savedMode : lower === "joust" ? "joust" : lower === "arena" ? "arena" : "conquest";
     const allies = draft.allies.filter((n) => n && n !== subject).slice(0, MODE_TEAM_SIZE[m] - 1);
     return encodeDraftHash(m, { allies: [subject, ...allies], enemies: draft.enemies.filter((n) => n && n !== subject) });
   };
