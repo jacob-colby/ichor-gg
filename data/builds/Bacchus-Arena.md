@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.84
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Shell of Rebuke
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Spectral Armor
+  - Shell of Rebuke
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.69
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Shell of Rebuke:
+      total: 0.39
+      efficiency: 0.28
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Spectral Armor:
+      total: 0.66
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.75
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.98
+    Stampede:
+      total: 0.67
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+  swaps:
+  - added: Shell of Rebuke
+    removed: Void Shield
+    reason: Conquest community 70% win over 38 matches (vs 55% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

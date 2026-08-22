@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Breastplate of Valor
     removed: Spectral Armor
-    reason: Conquest community 69% win over 119 matches (vs 57% on this god), taking
+    reason: Conquest community 66% win over 133 matches (vs 57% on this god), taking
       the model's weakest slot from Spectral Armor
   borrowed_from: Conquest
   starter: *id001

@@ -10,83 +10,83 @@ builds:
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.38
-    win_rate: 0.65
+    win_rate: 0.64
     alternates:
     - name: Golden Blade
       pick_rate: 0.28
-      win_rate: 0.47
+      win_rate: 0.52
     - name: Berserker's Shield
-      pick_rate: 0.06
-      win_rate: 0.46
+      pick_rate: 0.07
+      win_rate: 0.47
   - name: Golden Blade
     pick_rate: 0.28
-    win_rate: 0.64
+    win_rate: 0.62
     alternates:
     - name: Berserker's Shield
-      pick_rate: 0.2
+      pick_rate: 0.18
       win_rate: 0.6
     - name: Shifter's Shield
-      pick_rate: 0.09
-      win_rate: 0.32
+      pick_rate: 0.1
+      win_rate: 0.43
   - name: Berserker's Shield
-    pick_rate: 0.24
+    pick_rate: 0.23
+    win_rate: 0.54
+    alternates:
+    - name: Kinetic Cuirass
+      pick_rate: 0.2
+      win_rate: 0.56
+    - name: Shogun's Ofuda
+      pick_rate: 0.1
+      win_rate: 0.74
+  - name: Kinetic Cuirass
+    pick_rate: 0.14
+    win_rate: 0.57
+    alternates:
+    - name: Shogun's Ofuda
+      pick_rate: 0.12
+      win_rate: 0.52
+    - name: Dwarven Plate
+      pick_rate: 0.11
+      win_rate: 0.52
+  - name: Hide of the Nemean Lion
+    pick_rate: 0.08
     win_rate: 0.53
     alternates:
-    - name: Kinetic Cuirass
-      pick_rate: 0.21
-      win_rate: 0.56
-    - name: Shogun's Ofuda
-      pick_rate: 0.1
-      win_rate: 0.7
-  - name: Dwarven Plate
-    pick_rate: 0.13
-    win_rate: 0.52
-    alternates:
-    - name: Shogun's Ofuda
-      pick_rate: 0.12
-      win_rate: 0.54
-    - name: Kinetic Cuirass
-      pick_rate: 0.12
-      win_rate: 0.57
-  - name: Kinetic Cuirass
-    pick_rate: 0.09
-    win_rate: 0.67
-    alternates:
     - name: Berserker's Shield
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.56
-    - name: Hide of the Nemean Lion
-      pick_rate: 0.08
-      win_rate: 0.54
+    - name: Kinetic Cuirass
+      pick_rate: 0.09
+      win_rate: 0.71
   - name: Medallion
-    pick_rate: 0.12
+    pick_rate: 0.1
     win_rate: 0.58
     alternates:
     - name: Veve Charm
-      pick_rate: 0.08
+      pick_rate: 0.09
       win_rate: 0.5
     - name: Hunter's Bow
-      pick_rate: 0.06
-      win_rate: 0.83
+      pick_rate: 0.07
+      win_rate: 0.75
   community_starters:
   - name: Death's Embrace
     pick_rate: 0.36
-    win_rate: 0.68
+    win_rate: 0.67
   - name: Death's Toll
     pick_rate: 0.28
-    win_rate: 0.41
-  - name: Warrior's Axe
-    pick_rate: 0.08
-    win_rate: 0.63
+    win_rate: 0.44
+  - name: Bluestone Brooch
+    pick_rate: 0.09
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/amaterasu/
-  last_verified: '2026-08-21'
-  god_win_rate: 0.5756097560975609
-  god_matches_won: 118
-  god_matches_played: 205
+  last_verified: '2026-08-22'
+  god_win_rate: 0.5793991416309013
+  god_matches_won: 135
+  god_matches_played: 233
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-21'
-  god_matches_analyzed: 12786
+  god_window_end: '2026-08-22'
+  god_matches_analyzed: 14126
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -100,8 +100,8 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Golden Blade
   - Berserker's Shield
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -126,39 +126,39 @@ builds:
     Cloak, Ancile, Ethereal Staff.'
   slot_scores:
     Golden Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
-      win: 0.64
+      win: 0.62
       pick: 0.38
       fit: 0.46
     Berserker's Shield:
       total: 0.55
       efficiency: 0.68
-      win: 0.53
-      pick: 0.37
+      win: 0.54
+      pick: 0.36
       fit: 0.36
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.38
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.58
       efficiency: 0.6
-      win: 0.67
-      pick: 0.19
+      win: 0.57
+      pick: 0.23
       fit: 0.67
     Shifter's Shield:
-      total: 0.59
+      total: 0.58
       efficiency: 0.55
-      win: 0.65
+      win: 0.64
       pick: 0.38
       fit: 0.57
     Amanita Charm:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.57
   starter: &id001
@@ -174,8 +174,8 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Golden Blade
   - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -200,39 +200,39 @@ builds:
     Mail, Helm of Radiance, Blood-Bound Book, Daybreak Gavel.'
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
-      win: 0.64
+      win: 0.62
       pick: 0.38
       fit: 0.52
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.39
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.58
       efficiency: 0.6
-      win: 0.67
-      pick: 0.19
+      win: 0.57
+      pick: 0.23
       fit: 0.65
     Shield of the Phoenix:
       total: 0.57
       efficiency: 0.57
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.81
     Shifter's Shield:
-      total: 0.59
+      total: 0.58
       efficiency: 0.55
-      win: 0.65
+      win: 0.64
       pick: 0.38
       fit: 0.55
     Amanita Charm:
       total: 0.61
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.85
   starter: *id001
@@ -272,39 +272,39 @@ builds:
     Orb, The Cosmic Horror, Toxic Blade, Nimble Ring, Leviathan''s Hide.'
   slot_scores:
     Stone of Binding:
-      total: 0.55
+      total: 0.54
       efficiency: 0.54
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.54
     Kinetic Cuirass:
-      total: 0.6
+      total: 0.56
       efficiency: 0.6
-      win: 0.67
-      pick: 0.19
+      win: 0.57
+      pick: 0.23
       fit: 0.52
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.54
       efficiency: 0.6
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.56
     Shifter's Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.55
-      win: 0.65
+      win: 0.64
       pick: 0.38
       fit: 0.42
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.34
   starter: *id001
@@ -344,39 +344,39 @@ builds:
     The Reaper, Spear of the Magus, Ethereal Staff.'
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
-      win: 0.64
+      win: 0.62
       pick: 0.38
       fit: 0.53
     Berserker's Shield:
       total: 0.56
       efficiency: 0.68
-      win: 0.53
-      pick: 0.37
+      win: 0.54
+      pick: 0.36
       fit: 0.43
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.55
       efficiency: 0.6
-      win: 0.67
-      pick: 0.19
+      win: 0.57
+      pick: 0.23
       fit: 0.46
     Nimble Ring:
       total: 0.52
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.3
     Shifter's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
-      win: 0.65
+      win: 0.64
       pick: 0.38
       fit: 0.36
     Amanita Charm:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.36
   starter: *id001
@@ -400,8 +400,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -419,51 +419,51 @@ builds:
     Genji's Guard:
       total: 0.55
       efficiency: 0.66
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
       total: 0.55
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.46
     Kinetic Cuirass:
-      total: 0.6
+      total: 0.56
       efficiency: 0.6
-      win: 0.67
-      pick: 0.19
+      win: 0.57
+      pick: 0.23
       fit: 0.55
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.64
     Shifter's Shield:
       total: 0.57
       efficiency: 0.55
-      win: 0.65
+      win: 0.64
       pick: 0.38
       fit: 0.45
   starter: *id001
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Gluttonous Grimoire
   - Shifter's Shield
+  - Rod of Tahuti
   flex_slots:
-  - Golden Blade
+  - Gluttonous Grimoire
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -489,42 +489,42 @@ builds:
     Wish-Granting Pearl, The Reaper, Draconic Scale, The World Stone, Ancient Signet,
     Helm of Darkness, Leviathan''s Hide.'
   slot_scores:
-    Golden Blade:
-      total: 0.54
-      efficiency: 0.52
-      win: 0.64
-      pick: 0.38
-      fit: 0.32
     Berserker's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.68
-      win: 0.53
-      pick: 0.37
+      win: 0.54
+      pick: 0.36
       fit: 0.25
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
-      win: 0.67
-      pick: 0.19
-      fit: 0.49
-    Gluttonous Grimoire:
       total: 0.55
       efficiency: 0.6
-      win: 0.56
+      win: 0.57
+      pick: 0.23
+      fit: 0.49
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.6
+      win: 0.55
       pick: 0.0
       fit: 0.56
     Shifter's Shield:
       total: 0.56
       efficiency: 0.55
-      win: 0.65
+      win: 0.64
       pick: 0.38
       fit: 0.39
+    Rod of Tahuti:
+      total: 0.6
+      efficiency: 0.86
+      win: 0.55
+      pick: 0.0
+      fit: 0.35
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -536,8 +536,8 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
   - Berserker's Shield
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -563,39 +563,39 @@ builds:
     Blade, Chronos'' Pendant.'
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.52
-      win: 0.64
+      win: 0.62
       pick: 0.38
       fit: 0.36
     Berserker's Shield:
       total: 0.54
       efficiency: 0.68
-      win: 0.53
-      pick: 0.37
+      win: 0.54
+      pick: 0.36
       fit: 0.26
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.41
     Kinetic Cuirass:
-      total: 0.6
+      total: 0.56
       efficiency: 0.6
-      win: 0.67
-      pick: 0.19
+      win: 0.57
+      pick: 0.23
       fit: 0.51
     Shifter's Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.55
-      win: 0.65
+      win: 0.64
       pick: 0.38
       fit: 0.41
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.41
   starter: *id001
@@ -637,37 +637,37 @@ builds:
     Berserker's Shield:
       total: 0.55
       efficiency: 0.68
-      win: 0.53
-      pick: 0.37
+      win: 0.54
+      pick: 0.36
       fit: 0.36
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.38
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.58
       efficiency: 0.6
-      win: 0.67
-      pick: 0.19
+      win: 0.57
+      pick: 0.23
       fit: 0.67
     Shield Splitter:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.61
     Freya's Tears:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.53
     Amanita Charm:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.57
   starter: *id001

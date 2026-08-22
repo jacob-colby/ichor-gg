@@ -527,11 +527,11 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Tyrfing
-    reason: Conquest community 71% win over 54 matches (vs 52% on this god), taking
+    reason: Conquest community 68% win over 60 matches (vs 53% on this god), taking
       the model's weakest slot from Tyrfing
   - added: The Executioner
     removed: Golden Blade
-    reason: Conquest community 66% win over 62 matches (vs 52% on this god), taking
+    reason: Conquest community 66% win over 64 matches (vs 53% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

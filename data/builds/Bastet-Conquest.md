@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of the Watchful Pride
   aspect_pick_rate: 0.16
-  aspect_win_rate: 0.5
+  aspect_win_rate: 0.49
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.63
-    win_rate: 0.54
-    alternates:
-    - name: Transcendence
-      pick_rate: 0.1
-      win_rate: 0.53
-    - name: Shifter's Shield
-      pick_rate: 0.09
-      win_rate: 0.51
-  - name: Transcendence
-    pick_rate: 0.23
+    pick_rate: 0.64
     win_rate: 0.55
     alternates:
-    - name: Barbed Carver
-      pick_rate: 0.21
-      win_rate: 0.56
+    - name: Transcendence
+      pick_rate: 0.09
+      win_rate: 0.54
+    - name: Shifter's Shield
+      pick_rate: 0.09
+      win_rate: 0.53
+  - name: Barbed Carver
+    pick_rate: 0.22
+    win_rate: 0.56
+    alternates:
+    - name: Transcendence
+      pick_rate: 0.22
+      win_rate: 0.54
     - name: Jotunn's Revenge
       pick_rate: 0.12
       win_rate: 0.53
-  - name: Barbed Carver
-    pick_rate: 0.16
-    win_rate: 0.56
+  - name: The Crusher
+    pick_rate: 0.15
+    win_rate: 0.53
     alternates:
-    - name: The Crusher
-      pick_rate: 0.15
-      win_rate: 0.55
+    - name: Barbed Carver
+      pick_rate: 0.16
+      win_rate: 0.56
     - name: Pendulum Blade
-      pick_rate: 0.11
-      win_rate: 0.47
+      pick_rate: 0.12
+      win_rate: 0.48
   - name: Heartseeker
     pick_rate: 0.32
     win_rate: 0.59
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.11
-      win_rate: 0.57
+      pick_rate: 0.1
+      win_rate: 0.56
     - name: The Crusher
       pick_rate: 0.07
-      win_rate: 0.61
+      win_rate: 0.62
   - name: Titan's Bane
     pick_rate: 0.15
-    win_rate: 0.58
+    win_rate: 0.59
     alternates:
     - name: Heartseeker
       pick_rate: 0.17
-      win_rate: 0.56
+      win_rate: 0.57
     - name: The Crusher
       pick_rate: 0.08
-      win_rate: 0.6
+      win_rate: 0.61
   - name: Lucerne Hammer
     pick_rate: 0.1
-    win_rate: 0.56
+    win_rate: 0.52
     alternates:
     - name: Titan's Bane
       pick_rate: 0.09
-      win_rate: 0.63
+      win_rate: 0.67
     - name: Skeggox
       pick_rate: 0.08
-      win_rate: 0.61
+      win_rate: 0.63
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.38
-    win_rate: 0.61
+    win_rate: 0.62
   - name: Bluestone Pendant
     pick_rate: 0.29
     win_rate: 0.44
-  - name: Bumba's Hammer
+  - name: Sundering Axe
     pick_rate: 0.07
-    win_rate: 0.66
+    win_rate: 0.83
   source_url: https://smitebrain.com/gods/bastet/
-  last_verified: '2026-08-21'
-  god_win_rate: 0.5320987654320988
-  god_matches_won: 431
-  god_matches_played: 810
+  last_verified: '2026-08-22'
+  god_win_rate: 0.530933633295838
+  god_matches_won: 472
+  god_matches_played: 889
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-21'
-  god_matches_analyzed: 12786
+  god_window_end: '2026-08-22'
+  god_matches_analyzed: 14126
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -125,25 +125,25 @@ builds:
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.72
-      win: 0.54
-      pick: 0.63
+      win: 0.55
+      pick: 0.64
       fit: 1.0
     Transcendence:
       total: 0.52
       efficiency: 0.53
-      win: 0.55
-      pick: 0.31
+      win: 0.54
+      pick: 0.3
       fit: 0.52
     The Reaper:
-      total: 0.58
+      total: 0.57
       efficiency: 0.55
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.91
     The Crusher:
-      total: 0.61
+      total: 0.6
       efficiency: 0.57
-      win: 0.55
+      win: 0.53
       pick: 0.23
       fit: 1.0
     Heartseeker:
@@ -153,9 +153,9 @@ builds:
       pick: 0.53
       fit: 1.0
     Titan's Bane:
-      total: 0.59
+      total: 0.6
       efficiency: 0.47
-      win: 0.58
+      win: 0.59
       pick: 0.32
       fit: 1.0
   starter: &id001
@@ -171,7 +171,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Titan's Bane
+  - Hydra's Lament
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -194,27 +194,27 @@ builds:
     Damaru, Riptalon.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.64
       efficiency: 0.72
-      win: 0.54
-      pick: 0.63
+      win: 0.55
+      pick: 0.64
       fit: 0.71
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
-      win: 0.55
-      pick: 0.31
+      win: 0.54
+      pick: 0.3
       fit: 0.39
     Hydra's Lament:
       total: 0.53
       efficiency: 0.54
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.63
     The Crusher:
       total: 0.54
       efficiency: 0.57
-      win: 0.55
+      win: 0.53
       pick: 0.23
       fit: 0.57
     Heartseeker:
@@ -226,7 +226,7 @@ builds:
     Titan's Bane:
       total: 0.53
       efficiency: 0.47
-      win: 0.58
+      win: 0.59
       pick: 0.32
       fit: 0.57
   starter: *id001
@@ -263,27 +263,27 @@ builds:
     Avenging Blade, Eye of Providence, Eye of the Storm.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.64
+      total: 0.65
       efficiency: 0.72
-      win: 0.54
-      pick: 0.63
+      win: 0.55
+      pick: 0.64
       fit: 0.78
     Transcendence:
       total: 0.48
       efficiency: 0.53
-      win: 0.55
-      pick: 0.31
+      win: 0.54
+      pick: 0.3
       fit: 0.22
     The Reaper:
       total: 0.52
       efficiency: 0.55
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.56
     The Crusher:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
-      win: 0.55
+      win: 0.53
       pick: 0.23
       fit: 0.66
     Heartseeker:
@@ -293,9 +293,9 @@ builds:
       pick: 0.53
       fit: 0.76
     Titan's Bane:
-      total: 0.54
+      total: 0.55
       efficiency: 0.47
-      win: 0.58
+      win: 0.59
       pick: 0.32
       fit: 0.66
   starter: *id001
@@ -309,8 +309,8 @@ builds:
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
   - Heartseeker
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -319,41 +319,41 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Berserker''s
-    Shield, The Reaper, Runeforged Hammer, Shield Splitter, Eye of the Storm, Freya''s
-    Tears, Phoenix Feather, Erosion, Riptalon, Eye of Providence, Golden Blade, Shifter''s
-    Shield, Genji''s Guard, Breastplate of Valor, Draconic Scale, Spectral Armor,
+    Shield, The Reaper, Runeforged Hammer, Shield Splitter, Shifter''s Shield, Eye
+    of the Storm, Freya''s Tears, Phoenix Feather, Erosion, Riptalon, Eye of Providence,
+    Golden Blade, Genji''s Guard, Breastplate of Valor, Draconic Scale, Spectral Armor,
     Yogi''s Necklace, Mantle Of Discord, Stone of Binding, Chandra''s Grace, Avenging
     Blade, Leviathan''s Hide, Pharaoh''s Curse, Hydra''s Lament.'
   slot_scores:
     Berserker's Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.68
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.39
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
-      win: 0.54
-      pick: 0.63
+      win: 0.55
+      pick: 0.64
       fit: 0.44
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.6
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.66
     Shield of the Phoenix:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.73
     Heartseeker:
@@ -363,9 +363,9 @@ builds:
       pick: 0.53
       fit: 0.6
     Amanita Charm:
-      total: 0.61
+      total: 0.6
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.86
   starter: *id001
@@ -404,25 +404,25 @@ builds:
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.72
-      win: 0.54
-      pick: 0.63
+      win: 0.55
+      pick: 0.64
       fit: 1.0
     The Reaper:
       total: 0.58
       efficiency: 0.55
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.94
     Tekko-Kagi:
       total: 0.56
       efficiency: 0.49
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.94
     The Crusher:
-      total: 0.61
+      total: 0.6
       efficiency: 0.57
-      win: 0.55
+      win: 0.53
       pick: 0.23
       fit: 1.0
     Heartseeker:
@@ -432,9 +432,9 @@ builds:
       pick: 0.53
       fit: 1.0
     Titan's Bane:
-      total: 0.59
+      total: 0.6
       efficiency: 0.47
-      win: 0.58
+      win: 0.59
       pick: 0.32
       fit: 1.0
   starter: *id001
@@ -448,7 +448,7 @@ builds:
   - Silverbranch Bow
   - Heartseeker
   flex_slots:
-  - Heartseeker
+  - Silverbranch Bow
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -471,33 +471,33 @@ builds:
     Tears, Shield Splitter, Eye of Providence, Avenging Blade, Vital Amplifier.'
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.54
-      pick: 0.63
+      win: 0.55
+      pick: 0.64
       fit: 0.37
     Tyrfing:
-      total: 0.54
+      total: 0.53
       efficiency: 0.48
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.79
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.79
     Silverbranch Bow:
-      total: 0.54
+      total: 0.53
       efficiency: 0.53
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.69
     Heartseeker:
@@ -515,17 +515,17 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Freya's Tears
+  - Heartseeker
   flex_slots:
-  - Freya's Tears
+  - Heartseeker
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -543,39 +543,39 @@ builds:
     Genji's Guard:
       total: 0.55
       efficiency: 0.66
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.5
     Breastplate of Valor:
       total: 0.55
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.65
+      total: 0.66
       efficiency: 0.72
-      win: 0.54
-      pick: 0.63
+      win: 0.55
+      pick: 0.64
       fit: 0.85
     Transcendence:
-      total: 0.47
+      total: 0.46
       efficiency: 0.53
-      win: 0.55
-      pick: 0.31
+      win: 0.54
+      pick: 0.3
       fit: 0.15
     Hydra's Lament:
       total: 0.55
       efficiency: 0.54
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.75
-    Freya's Tears:
+    Heartseeker:
       total: 0.54
-      efficiency: 0.61
-      win: 0.56
-      pick: 0.0
-      fit: 0.5
+      efficiency: 0.47
+      win: 0.59
+      pick: 0.53
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: model
@@ -612,25 +612,25 @@ builds:
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.72
-      win: 0.54
-      pick: 0.63
+      win: 0.55
+      pick: 0.64
       fit: 1.0
     The Reaper:
-      total: 0.58
+      total: 0.57
       efficiency: 0.55
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.91
     Tekko-Kagi:
-      total: 0.56
+      total: 0.55
       efficiency: 0.49
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.91
     The Crusher:
-      total: 0.61
+      total: 0.6
       efficiency: 0.57
-      win: 0.55
+      win: 0.53
       pick: 0.23
       fit: 1.0
     Heartseeker:
@@ -640,9 +640,9 @@ builds:
       pick: 0.53
       fit: 1.0
     Titan's Bane:
-      total: 0.59
+      total: 0.6
       efficiency: 0.47
-      win: 0.58
+      win: 0.59
       pick: 0.32
       fit: 1.0
   starter: *id001

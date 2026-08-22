@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of Ferocity
   aspect_pick_rate: 0.02
-  aspect_win_rate: 0.27
+  aspect_win_rate: 0.31
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.66
@@ -14,37 +14,37 @@ builds:
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.16
-      win_rate: 0.51
+      win_rate: 0.5
     - name: Barbed Carver
       pick_rate: 0.12
-      win_rate: 0.5
+      win_rate: 0.52
   - name: Hydra's Lament
     pick_rate: 0.42
     win_rate: 0.53
     alternates:
     - name: Barbed Carver
       pick_rate: 0.18
-      win_rate: 0.44
+      win_rate: 0.45
     - name: Jotunn's Revenge
       pick_rate: 0.12
-      win_rate: 0.49
+      win_rate: 0.48
   - name: Barbed Carver
     pick_rate: 0.25
-    win_rate: 0.58
+    win_rate: 0.57
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.21
-      win_rate: 0.51
+      pick_rate: 0.22
+      win_rate: 0.52
     - name: The Reaper
       pick_rate: 0.15
-      win_rate: 0.49
+      win_rate: 0.47
   - name: Heartseeker
-    pick_rate: 0.42
+    pick_rate: 0.41
     win_rate: 0.53
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.08
-      win_rate: 0.49
+      pick_rate: 0.09
+      win_rate: 0.5
     - name: Barbed Carver
       pick_rate: 0.08
       win_rate: 0.57
@@ -53,40 +53,40 @@ builds:
     win_rate: 0.56
     alternates:
     - name: Heartseeker
-      pick_rate: 0.26
-      win_rate: 0.65
+      pick_rate: 0.27
+      win_rate: 0.63
     - name: Lucerne Hammer
       pick_rate: 0.07
-      win_rate: 0.49
+      win_rate: 0.47
   - name: Skeggox
-    pick_rate: 0.1
-    win_rate: 0.38
+    pick_rate: 0.09
+    win_rate: 0.42
     alternates:
+    - name: Titan's Bane
+      pick_rate: 0.09
+      win_rate: 0.6
     - name: The Crusher
       pick_rate: 0.09
-      win_rate: 0.7
-    - name: Titan's Bane
-      pick_rate: 0.08
-      win_rate: 0.63
+      win_rate: 0.71
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.48
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Bumba's Cudgel
-    pick_rate: 0.32
+    pick_rate: 0.31
     win_rate: 0.43
-  - name: Archmage's Gem
-    pick_rate: 0.07
-    win_rate: 0.4
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.08
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/da-ji/
-  last_verified: '2026-08-21'
-  god_win_rate: 0.5178571428571429
-  god_matches_won: 348
-  god_matches_played: 672
+  last_verified: '2026-08-22'
+  god_win_rate: 0.5185694635488308
+  god_matches_won: 377
+  god_matches_played: 727
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-21'
-  god_matches_analyzed: 12786
+  god_window_end: '2026-08-22'
+  god_matches_analyzed: 14126
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -143,14 +143,14 @@ builds:
     The Crusher:
       total: 0.66
       efficiency: 0.57
-      win: 0.7
+      win: 0.71
       pick: 0.28
       fit: 0.88
     Heartseeker:
       total: 0.58
       efficiency: 0.47
       win: 0.53
-      pick: 0.7
+      pick: 0.68
       fit: 0.98
     Titan's Bane:
       total: 0.56
@@ -212,16 +212,16 @@ builds:
       pick: 0.57
       fit: 0.63
     The Crusher:
-      total: 0.61
+      total: 0.62
       efficiency: 0.57
-      win: 0.7
+      win: 0.71
       pick: 0.28
       fit: 0.57
     Heartseeker:
       total: 0.55
       efficiency: 0.47
       win: 0.53
-      pick: 0.7
+      pick: 0.68
       fit: 0.77
     Titan's Bane:
       total: 0.52
@@ -283,14 +283,14 @@ builds:
     The Crusher:
       total: 0.63
       efficiency: 0.57
-      win: 0.7
+      win: 0.71
       pick: 0.28
       fit: 0.66
     Heartseeker:
       total: 0.55
       efficiency: 0.47
       win: 0.53
-      pick: 0.7
+      pick: 0.68
       fit: 0.76
     Titan's Bane:
       total: 0.53
@@ -359,7 +359,7 @@ builds:
     The Crusher:
       total: 0.6
       efficiency: 0.57
-      win: 0.7
+      win: 0.71
       pick: 0.28
       fit: 0.47
     Amanita Charm:
@@ -414,22 +414,22 @@ builds:
       pick: 0.0
       fit: 0.3
     The Reaper:
-      total: 0.55
+      total: 0.54
       efficiency: 0.55
-      win: 0.49
+      win: 0.47
       pick: 0.23
       fit: 0.85
     The Crusher:
-      total: 0.67
+      total: 0.68
       efficiency: 0.57
-      win: 0.7
+      win: 0.71
       pick: 0.28
       fit: 0.95
     Heartseeker:
       total: 0.59
       efficiency: 0.47
       win: 0.53
-      pick: 0.7
+      pick: 0.68
       fit: 1.0
     Titan's Bane:
       total: 0.57
@@ -503,7 +503,7 @@ builds:
     The Crusher:
       total: 0.59
       efficiency: 0.57
-      win: 0.7
+      win: 0.71
       pick: 0.28
       fit: 0.41
   starter: *id001
@@ -573,7 +573,7 @@ builds:
     The Crusher:
       total: 0.6
       efficiency: 0.57
-      win: 0.7
+      win: 0.71
       pick: 0.28
       fit: 0.45
   starter: *id001
@@ -622,9 +622,9 @@ builds:
       pick: 0.57
       fit: 0.77
     The Reaper:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.49
+      win: 0.47
       pick: 0.23
       fit: 0.78
     Pendulum Blade:
@@ -636,14 +636,14 @@ builds:
     The Crusher:
       total: 0.66
       efficiency: 0.57
-      win: 0.7
+      win: 0.71
       pick: 0.28
       fit: 0.88
     Heartseeker:
       total: 0.58
       efficiency: 0.47
       win: 0.53
-      pick: 0.7
+      pick: 0.68
       fit: 0.98
   starter: *id001
 ---

@@ -5,31 +5,31 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Unbound Destruction
-  aspect_pick_rate: 0.39
-  aspect_win_rate: 0.54
+  aspect_pick_rate: 0.4
+  aspect_win_rate: 0.56
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.39
-    win_rate: 0.54
+    pick_rate: 0.4
+    win_rate: 0.56
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.17
-      win_rate: 0.41
+      pick_rate: 0.16
+      win_rate: 0.39
     - name: Book of Thoth
       pick_rate: 0.11
       win_rate: 0.53
   - name: Hastened Fatalis
     pick_rate: 0.21
-    win_rate: 0.61
+    win_rate: 0.63
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.13
-      win_rate: 0.46
+      win_rate: 0.49
     - name: The Cosmic Horror
       pick_rate: 0.07
-      win_rate: 0.52
+      win_rate: 0.48
   - name: Sun Beam Bow
-    pick_rate: 0.15
+    pick_rate: 0.14
     win_rate: 0.57
     alternates:
     - name: Polynomicon
@@ -37,56 +37,56 @@ builds:
       win_rate: 0.43
     - name: Hastened Fatalis
       pick_rate: 0.11
-      win_rate: 0.58
+      win_rate: 0.57
   - name: Odysseus' Bow
-    pick_rate: 0.14
+    pick_rate: 0.13
     win_rate: 0.56
     alternates:
+    - name: Rod of Tahuti
+      pick_rate: 0.1
+      win_rate: 0.33
     - name: Totem of Death
       pick_rate: 0.1
-      win_rate: 0.56
-    - name: Rod of Tahuti
-      pick_rate: 0.1
-      win_rate: 0.34
+      win_rate: 0.55
   - name: The Executioner
-    pick_rate: 0.15
+    pick_rate: 0.14
     win_rate: 0.66
     alternates:
-    - name: Obsidian Shard
-      pick_rate: 0.08
-      win_rate: 0.59
     - name: Rod of Tahuti
       pick_rate: 0.08
-      win_rate: 0.46
+      win_rate: 0.42
+    - name: Obsidian Shard
+      pick_rate: 0.08
+      win_rate: 0.55
   - name: Silverbranch Bow
     pick_rate: 0.13
-    win_rate: 0.71
+    win_rate: 0.68
     alternates:
     - name: Blinking Abyss
       pick_rate: 0.09
-      win_rate: 0.58
+      win_rate: 0.6
     - name: Manchu Bow
-      pick_rate: 0.07
-      win_rate: 0.53
+      pick_rate: 0.06
+      win_rate: 0.56
   community_starters:
-  - name: Archmage's Gem
-    pick_rate: 0.23
-    win_rate: 0.63
   - name: Death's Embrace
-    pick_rate: 0.2
-    win_rate: 0.61
+    pick_rate: 0.22
+    win_rate: 0.62
+  - name: Archmage's Gem
+    pick_rate: 0.21
+    win_rate: 0.62
   - name: Conduit Gem
     pick_rate: 0.13
-    win_rate: 0.28
+    win_rate: 0.3
   source_url: https://smitebrain.com/gods/kali/
-  last_verified: '2026-08-21'
-  god_win_rate: 0.5204819277108433
-  god_matches_won: 216
-  god_matches_played: 415
+  last_verified: '2026-08-22'
+  god_win_rate: 0.5282608695652173
+  god_matches_won: 243
+  god_matches_played: 460
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-21'
-  god_matches_analyzed: 12786
+  god_window_end: '2026-08-22'
+  god_matches_analyzed: 14126
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -138,10 +138,10 @@ builds:
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.53
+      total: 0.54
       efficiency: 0.48
-      win: 0.54
-      pick: 0.39
+      win: 0.56
+      pick: 0.4
       fit: 0.68
     Death Metal:
       total: 0.54
@@ -150,9 +150,9 @@ builds:
       pick: 0.0
       fit: 0.51
     Silverbranch Bow:
-      total: 0.6
+      total: 0.59
       efficiency: 0.53
-      win: 0.71
+      win: 0.68
       pick: 0.4
       fit: 0.53
     The Crusher:
@@ -217,15 +217,15 @@ builds:
       pick: 0.0
       fit: 0.54
     Silverbranch Bow:
-      total: 0.57
+      total: 0.56
       efficiency: 0.53
-      win: 0.71
+      win: 0.68
       pick: 0.4
       fit: 0.34
     Rod of Tahuti:
-      total: 0.58
+      total: 0.56
       efficiency: 0.86
-      win: 0.46
+      win: 0.42
       pick: 0.17
       fit: 0.42
     Soul Gem:
@@ -296,9 +296,9 @@ builds:
       pick: 0.0
       fit: 0.6
     Silverbranch Bow:
-      total: 0.57
+      total: 0.56
       efficiency: 0.53
-      win: 0.71
+      win: 0.68
       pick: 0.4
       fit: 0.32
     Amanita Charm:
@@ -312,14 +312,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
+  - Gluttonous Grimoire
   - Silverbranch Bow
   - Tekko-Kagi
   - The Crusher
-  - Rod of Tahuti
-  - Obsidian Shard
+  - Heartseeker
   flex_slots:
-  - Obsidian Shard
   - Tekko-Kagi
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -339,9 +339,9 @@ builds:
     Berserker''s Shield, Titan''s Bane, Nimble Ring, Avenging Blade, Toxic Blade,
     Lernaean Bow, Stone of Binding, Doom Orb, Golden Blade, The World Stone, Avatar''s
     Parashu, Screeching Gargoyle, Dreamer''s Idol, Runeforged Hammer, Hydra''s Lament,
-    Pendulum Blade, The Cosmic Horror, Bragi''s Harp, Genji''s Guard, Breastplate
-    of Valor, Amanita Charm, Dominance, Deathbringer, Damaru, Kinetic Cuirass, Void
-    Shield, Pharaoh''s Curse.'
+    Pendulum Blade, Bragi''s Harp, Genji''s Guard, Breastplate of Valor, Amanita Charm,
+    Dominance, Deathbringer, Damaru, Kinetic Cuirass, Void Shield, Pharaoh''s Curse,
+    The Cosmic Horror.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -349,10 +349,16 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.61
+    Gluttonous Grimoire:
+      total: 0.54
+      efficiency: 0.6
+      win: 0.56
+      pick: 0.0
+      fit: 0.53
     Silverbranch Bow:
-      total: 0.62
+      total: 0.61
       efficiency: 0.53
-      win: 0.71
+      win: 0.68
       pick: 0.4
       fit: 0.64
     Tekko-Kagi:
@@ -367,18 +373,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
-      win: 0.46
-      pick: 0.17
-      fit: 0.43
-    Obsidian Shard:
-      total: 0.54
-      efficiency: 0.54
-      win: 0.59
-      pick: 0.17
-      fit: 0.53
+    Heartseeker:
+      total: 0.53
+      efficiency: 0.47
+      win: 0.56
+      pick: 0.0
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -427,10 +427,10 @@ builds:
       pick: 0.0
       fit: 0.31
     Tyrfing:
-      total: 0.53
+      total: 0.54
       efficiency: 0.48
-      win: 0.54
-      pick: 0.39
+      win: 0.56
+      pick: 0.4
       fit: 0.67
     Nimble Ring:
       total: 0.54
@@ -445,9 +445,9 @@ builds:
       pick: 0.0
       fit: 0.65
     Silverbranch Bow:
-      total: 0.61
+      total: 0.59
       efficiency: 0.53
-      win: 0.71
+      win: 0.68
       pick: 0.4
       fit: 0.57
   starter: *id001
@@ -511,9 +511,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Silverbranch Bow:
-      total: 0.58
+      total: 0.57
       efficiency: 0.53
-      win: 0.71
+      win: 0.68
       pick: 0.4
       fit: 0.37
     Soul Gem:
@@ -589,9 +589,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Rod of Tahuti:
-      total: 0.55
+      total: 0.54
       efficiency: 0.86
-      win: 0.46
+      win: 0.42
       pick: 0.17
       fit: 0.26
   starter: *id001
@@ -601,12 +601,12 @@ builds:
   - The Executioner
   - Jotunn's Revenge
   - Death Metal
+  - Hastened Fatalis
   - Silverbranch Bow
-  - The Crusher
   - Rod of Tahuti
   flex_slots:
-  - Silverbranch Bow
   - The Executioner
+  - Hastened Fatalis
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -634,7 +634,7 @@ builds:
       total: 0.49
       efficiency: 0.35
       win: 0.66
-      pick: 0.32
+      pick: 0.3
       fit: 0.35
     Jotunn's Revenge:
       total: 0.58
@@ -648,32 +648,36 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.51
+    Hastened Fatalis:
+      total: 0.46
+      efficiency: 0.32
+      win: 0.63
+      pick: 0.29
+      fit: 0.34
     Silverbranch Bow:
-      total: 0.6
+      total: 0.59
       efficiency: 0.53
-      win: 0.71
+      win: 0.68
       pick: 0.4
       fit: 0.53
-    The Crusher:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.0
-      fit: 0.55
     Rod of Tahuti:
-      total: 0.55
+      total: 0.54
       efficiency: 0.86
-      win: 0.46
+      win: 0.42
       pick: 0.17
       fit: 0.26
   swaps:
   - added: Silverbranch Bow
     removed: Tekko-Kagi
-    reason: community 71% win over 54 matches (vs 52% on this god), taking the model's
+    reason: community 68% win over 60 matches (vs 53% on this god), taking the model's
       weakest slot from Tekko-Kagi
   - added: The Executioner
     removed: Berserker's Shield
-    reason: community 66% win over 62 matches (vs 52% on this god), taking the model's
+    reason: community 66% win over 64 matches (vs 53% on this god), taking the model's
       weakest slot from Berserker's Shield
+  - added: Hastened Fatalis
+    removed: The Crusher
+    reason: community 63% win over 97 matches (vs 53% on this god), taking the model's
+      weakest slot from The Crusher
   starter: *id001
 ---

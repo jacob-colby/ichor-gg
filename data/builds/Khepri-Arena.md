@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.85
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Rod of Tahuti
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Spectral Armor
+  - Rod of Tahuti
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.7
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Rod of Tahuti:
+      total: 0.5
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.15
+    Spectral Armor:
+      total: 0.66
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.76
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Stampede:
+      total: 0.68
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
+  swaps:
+  - added: Rod of Tahuti
+    removed: Void Shield
+    reason: Conquest community 64% win over 181 matches (vs 57% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

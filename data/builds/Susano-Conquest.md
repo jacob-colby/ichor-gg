@@ -9,7 +9,7 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.33
+    pick_rate: 0.32
     win_rate: 0.57
     alternates:
     - name: Barbed Carver
@@ -19,7 +19,7 @@ builds:
       pick_rate: 0.23
       win_rate: 0.57
   - name: Hydra's Lament
-    pick_rate: 0.37
+    pick_rate: 0.38
     win_rate: 0.62
     alternates:
     - name: Barbed Carver
@@ -27,17 +27,17 @@ builds:
       win_rate: 0.56
     - name: The Reaper
       pick_rate: 0.13
-      win_rate: 0.66
+      win_rate: 0.65
   - name: The Reaper
     pick_rate: 0.26
     win_rate: 0.58
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.13
-      win_rate: 0.63
+      win_rate: 0.62
     - name: Barbed Carver
       pick_rate: 0.11
-      win_rate: 0.58
+      win_rate: 0.59
   - name: Heartseeker
     pick_rate: 0.43
     win_rate: 0.6
@@ -47,27 +47,27 @@ builds:
       win_rate: 0.66
     - name: Titan's Bane
       pick_rate: 0.08
-      win_rate: 0.53
+      win_rate: 0.55
   - name: Titan's Bane
     pick_rate: 0.17
-    win_rate: 0.58
+    win_rate: 0.56
     alternates:
     - name: Heartseeker
       pick_rate: 0.18
       win_rate: 0.61
     - name: Blinking Abyss
-      pick_rate: 0.11
-      win_rate: 0.63
+      pick_rate: 0.1
+      win_rate: 0.64
   - name: Skeggox
     pick_rate: 0.09
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Magi's Cloak
       pick_rate: 0.08
-      win_rate: 0.65
-    - name: Blinking Abyss
+      win_rate: 0.67
+    - name: Lucerne Hammer
       pick_rate: 0.08
-      win_rate: 0.59
+      win_rate: 0.49
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.53
@@ -76,17 +76,17 @@ builds:
     pick_rate: 0.27
     win_rate: 0.55
   - name: Pendulum of the Ages
-    pick_rate: 0.09
+    pick_rate: 0.08
     win_rate: 0.56
   source_url: https://smitebrain.com/gods/susano/
-  last_verified: '2026-08-21'
-  god_win_rate: 0.5833333333333334
-  god_matches_won: 595
-  god_matches_played: 1020
+  last_verified: '2026-08-22'
+  god_win_rate: 0.5813333333333334
+  god_matches_won: 654
+  god_matches_played: 1125
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-21'
-  god_matches_analyzed: 12786
+  god_window_end: '2026-08-22'
+  god_matches_analyzed: 14126
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -126,7 +126,7 @@ builds:
       total: 0.67
       efficiency: 0.72
       win: 0.57
-      pick: 0.33
+      pick: 0.32
       fit: 1.0
     Transcendence:
       total: 0.53
@@ -138,7 +138,7 @@ builds:
       total: 0.6
       efficiency: 0.54
       win: 0.62
-      pick: 0.5
+      pick: 0.52
       fit: 0.71
     The Reaper:
       total: 0.61
@@ -175,8 +175,8 @@ builds:
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -197,7 +197,7 @@ builds:
       total: 0.63
       efficiency: 0.72
       win: 0.57
-      pick: 0.33
+      pick: 0.32
       fit: 0.71
     Transcendence:
       total: 0.51
@@ -209,7 +209,7 @@ builds:
       total: 0.59
       efficiency: 0.54
       win: 0.62
-      pick: 0.5
+      pick: 0.52
       fit: 0.63
     The Reaper:
       total: 0.54
@@ -266,7 +266,7 @@ builds:
       total: 0.64
       efficiency: 0.72
       win: 0.57
-      pick: 0.33
+      pick: 0.32
       fit: 0.78
     Transcendence:
       total: 0.48
@@ -278,7 +278,7 @@ builds:
       total: 0.58
       efficiency: 0.54
       win: 0.62
-      pick: 0.5
+      pick: 0.52
       fit: 0.54
     The Reaper:
       total: 0.56
@@ -342,7 +342,7 @@ builds:
       total: 0.59
       efficiency: 0.72
       win: 0.57
-      pick: 0.33
+      pick: 0.32
       fit: 0.44
     Kinetic Cuirass:
       total: 0.58
@@ -405,7 +405,7 @@ builds:
       total: 0.67
       efficiency: 0.72
       win: 0.57
-      pick: 0.33
+      pick: 0.32
       fit: 1.0
     The Reaper:
       total: 0.61
@@ -434,7 +434,7 @@ builds:
     Titan's Bane:
       total: 0.59
       efficiency: 0.47
-      win: 0.58
+      win: 0.56
       pick: 0.37
       fit: 1.0
   starter: *id001
@@ -486,7 +486,7 @@ builds:
       total: 0.58
       efficiency: 0.72
       win: 0.57
-      pick: 0.33
+      pick: 0.32
       fit: 0.37
     Tyrfing:
       total: 0.55
@@ -556,7 +556,7 @@ builds:
       total: 0.65
       efficiency: 0.72
       win: 0.57
-      pick: 0.33
+      pick: 0.32
       fit: 0.85
     Transcendence:
       total: 0.47
@@ -568,7 +568,7 @@ builds:
       total: 0.61
       efficiency: 0.54
       win: 0.62
-      pick: 0.5
+      pick: 0.52
       fit: 0.75
     Freya's Tears:
       total: 0.56
@@ -613,7 +613,7 @@ builds:
       total: 0.67
       efficiency: 0.72
       win: 0.57
-      pick: 0.33
+      pick: 0.32
       fit: 1.0
     The Reaper:
       total: 0.61
@@ -642,7 +642,7 @@ builds:
     Titan's Bane:
       total: 0.59
       efficiency: 0.47
-      win: 0.58
+      win: 0.56
       pick: 0.37
       fit: 1.0
   starter: *id001

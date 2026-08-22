@@ -460,4 +460,75 @@ builds:
       pick: 0.0
       fit: 0.75
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Spectral Armor
+  - Jotunn's Revenge
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Kinetic Cuirass:
+      total: 0.62
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Spectral Armor:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.68
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Stampede:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+  swaps:
+  - added: Jotunn's Revenge
+    removed: Void Shield
+    reason: Conquest community 67% win over 116 matches (vs 58% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

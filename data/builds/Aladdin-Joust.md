@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Titan's Bane
-    reason: Conquest community 66% win over 98 matches (vs 53% on this god), taking
+    reason: Conquest community 65% win over 107 matches (vs 53% on this god), taking
       the model's weakest slot from Titan's Bane
   borrowed_from: Conquest
   starter: *id001

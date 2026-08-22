@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of the Falcon
   aspect_pick_rate: 0.01
-  aspect_win_rate: 0.69
+  aspect_win_rate: 0.56
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.21
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Gauntlet of Thebes
       pick_rate: 0.16
-      win_rate: 0.53
+      win_rate: 0.54
     - name: Runeforged Hammer
       pick_rate: 0.15
-      win_rate: 0.61
+      win_rate: 0.62
   - name: Genji's Guard
-    pick_rate: 0.24
+    pick_rate: 0.25
     win_rate: 0.57
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.14
-      win_rate: 0.54
+      win_rate: 0.55
     - name: Breastplate of Valor
-      pick_rate: 0.09
-      win_rate: 0.65
+      pick_rate: 0.1
+      win_rate: 0.66
   - name: Breastplate of Valor
     pick_rate: 0.12
-    win_rate: 0.51
+    win_rate: 0.48
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.21
-      win_rate: 0.59
+      pick_rate: 0.2
+      win_rate: 0.6
     - name: Shell of Rebuke
       pick_rate: 0.11
-      win_rate: 0.63
+      win_rate: 0.64
   - name: Shell of Rebuke
     pick_rate: 0.09
-    win_rate: 0.68
+    win_rate: 0.67
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.11
+      pick_rate: 0.12
       win_rate: 0.62
-    - name: Breastplate of Valor
+    - name: Freya's Tears
       pick_rate: 0.06
-      win_rate: 0.59
+      win_rate: 0.62
   - name: Freya's Tears
     pick_rate: 0.07
-    win_rate: 0.69
+    win_rate: 0.66
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.08
-      win_rate: 0.53
+      win_rate: 0.54
     - name: Spirit Robe
       pick_rate: 0.05
-      win_rate: 0.64
+      win_rate: 0.61
   - name: Engraved Guard
     pick_rate: 0.07
     win_rate: 0.62
     alternates:
     - name: Veve Charm
       pick_rate: 0.06
-      win_rate: 0.52
+      win_rate: 0.59
     - name: Shield
       pick_rate: 0.05
-      win_rate: 0.82
+      win_rate: 0.79
   community_starters:
   - name: Warrior's Axe
     pick_rate: 0.25
     win_rate: 0.55
   - name: Selflessness
-    pick_rate: 0.19
+    pick_rate: 0.2
     win_rate: 0.57
   - name: Bluestone Pendant
     pick_rate: 0.13
-    win_rate: 0.57
+    win_rate: 0.59
   source_url: https://smitebrain.com/gods/horus/
-  last_verified: '2026-08-21'
-  god_win_rate: 0.5733610822060354
-  god_matches_won: 551
-  god_matches_played: 961
+  last_verified: '2026-08-22'
+  god_win_rate: 0.5795348837209302
+  god_matches_won: 623
+  god_matches_played: 1075
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-21'
-  god_matches_analyzed: 12786
+  god_window_end: '2026-08-22'
+  god_matches_analyzed: 14126
   starter:
     base: Death's Toll
     upgrade: Death's Embrace
@@ -118,16 +118,16 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Berserker''s Shield, Jotunn''s Revenge,
     Shield of the Phoenix, Erosion, Eye of Providence, Shield Splitter, Draconic Scale,
-    Mantle Of Discord, Stone of Binding, Spectral Armor, Runeforged Hammer, Eye of
+    Mantle Of Discord, Stone of Binding, Runeforged Hammer, Spectral Armor, Eye of
     the Storm, Leviathan''s Hide, Pharaoh''s Curse, Screeching Gargoyle, Magi''s Cloak,
     Prophetic Cloak, Shogun''s Ofuda, Midgardian Mail, Hydra''s Lament, Hide of the
     Nemean Lion, Gladiator''s Shield, Doublet of Binding, Void Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
       win: 0.57
-      pick: 0.33
+      pick: 0.34
       fit: 0.42
     Berserker's Shield:
       total: 0.58
@@ -148,9 +148,9 @@ builds:
       pick: 0.0
       fit: 0.76
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
-      win: 0.69
+      win: 0.66
       pick: 0.15
       fit: 0.64
     Amanita Charm:
@@ -189,11 +189,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Berserker''s
-    Shield, Jotunn''s Revenge, Chandra''s Grace, Phoenix Feather, Erosion, Eye of
-    Providence, Draconic Scale, Runeforged Hammer, Spectral Armor, Glorious Pridwen,
-    Shield Splitter, Mantle Of Discord, Stone of Binding, Yogi''s Necklace, Eye of
-    the Storm, Leviathan''s Hide, Pharaoh''s Curse, The Reaper, Shogun''s Ofuda, Midgardian
-    Mail, Screeching Gargoyle, Hide of the Nemean Lion, Gladiator''s Shield.'
+    Shield, Jotunn''s Revenge, Chandra''s Grace, Phoenix Feather, Erosion, Runeforged
+    Hammer, Eye of Providence, Draconic Scale, Spectral Armor, Glorious Pridwen, Shield
+    Splitter, Mantle Of Discord, Stone of Binding, Yogi''s Necklace, Eye of the Storm,
+    Leviathan''s Hide, Pharaoh''s Curse, The Reaper, Shogun''s Ofuda, Midgardian Mail,
+    Screeching Gargoyle, Hide of the Nemean Lion, Gladiator''s Shield.'
   slot_scores:
     Berserker's Shield:
       total: 0.58
@@ -220,9 +220,9 @@ builds:
       pick: 0.0
       fit: 0.94
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.61
-      win: 0.69
+      win: 0.66
       pick: 0.15
       fit: 0.59
     Amanita Charm:
@@ -260,8 +260,8 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, Amanita Charm, Stone of Binding, Kinetic Cuirass,
     Berserker''s Shield, Screeching Gargoyle, The Crusher, Void Shield, Void Stone,
-    Shield of the Phoenix, Avenging Blade, Heartseeker, The Reaper, Mantle Of Discord,
-    Runeforged Hammer, Shield Splitter, Erosion, Eye of Providence, Spectral Armor,
+    Shield of the Phoenix, Avenging Blade, Heartseeker, Runeforged Hammer, The Reaper,
+    Mantle Of Discord, Shield Splitter, Erosion, Eye of Providence, Spectral Armor,
     Draconic Scale, Titan''s Bane, Leviathan''s Hide, Pharaoh''s Curse, Silverbranch
     Bow, Toxic Blade, Eye of the Storm.'
   slot_scores:
@@ -290,9 +290,9 @@ builds:
       pick: 0.0
       fit: 0.56
     Freya's Tears:
-      total: 0.6
+      total: 0.59
       efficiency: 0.61
-      win: 0.69
+      win: 0.66
       pick: 0.15
       fit: 0.45
     Amanita Charm:
@@ -354,9 +354,9 @@ builds:
       pick: 0.0
       fit: 0.24
     Freya's Tears:
-      total: 0.58
+      total: 0.57
       efficiency: 0.61
-      win: 0.69
+      win: 0.66
       pick: 0.15
       fit: 0.34
     Amanita Charm:
@@ -407,10 +407,10 @@ builds:
     Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.66
       win: 0.57
-      pick: 0.33
+      pick: 0.34
       fit: 0.48
     Berserker's Shield:
       total: 0.55
@@ -431,9 +431,9 @@ builds:
       pick: 0.0
       fit: 0.53
     Freya's Tears:
-      total: 0.63
+      total: 0.61
       efficiency: 0.61
-      win: 0.69
+      win: 0.66
       pick: 0.15
       fit: 0.63
     Amanita Charm:
@@ -477,10 +477,10 @@ builds:
     Hide of the Nemean Lion, Gladiator''s Shield, Doublet of Binding, Void Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
       win: 0.57
-      pick: 0.33
+      pick: 0.34
       fit: 0.42
     Berserker's Shield:
       total: 0.58
@@ -501,9 +501,9 @@ builds:
       pick: 0.0
       fit: 0.76
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
-      win: 0.69
+      win: 0.66
       pick: 0.15
       fit: 0.64
     Amanita Charm:

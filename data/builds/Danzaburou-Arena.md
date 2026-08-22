@@ -723,14 +723,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Golden Blade
   - Lernaean Bow
   - Toxic Blade
+  - Jotunn's Revenge
   - Riptalon
   - The World Stone
   - Soul Gem
   flex_slots:
-  - Golden Blade
+  - Jotunn's Revenge
   - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -748,12 +748,6 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Lernaean Bow:
       total: 0.57
       efficiency: 0.52
@@ -766,6 +760,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     Riptalon:
       total: 0.65
       efficiency: 0.51
@@ -787,8 +787,12 @@ builds:
   swaps:
   - added: The World Stone
     removed: Pharaoh's Curse
-    reason: Conquest community 73% win over 43 matches (vs 55% on this god), taking
+    reason: Conquest community 73% win over 45 matches (vs 55% on this god), taking
       the model's weakest slot from Pharaoh's Curse
+  - added: Jotunn's Revenge
+    removed: Golden Blade
+    reason: Conquest community 68% win over 56 matches (vs 55% on this god), taking
+      the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001
 ---

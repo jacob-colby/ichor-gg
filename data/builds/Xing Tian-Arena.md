@@ -529,14 +529,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
-  - Hide of the Nemean Lion
   - Freya's Tears
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
+  - Spectral Armor
   - Freya's Tears
-  - Hide of the Nemean Lion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -559,18 +559,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Hide of the Nemean Lion:
-      total: 0.49
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Freya's Tears:
       total: 0.63
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Spectral Armor:
+      total: 0.67
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -592,12 +592,8 @@ builds:
   swaps:
   - added: Freya's Tears
     removed: Void Shield
-    reason: Conquest community 76% win over 91 matches (vs 58% on this god), taking
+    reason: Conquest community 75% win over 116 matches (vs 58% on this god), taking
       the model's weakest slot from Void Shield
-  - added: Hide of the Nemean Lion
-    removed: Spectral Armor
-    reason: Conquest community 71% win over 78 matches (vs 58% on this god), taking
-      the model's weakest slot from Spectral Armor
   borrowed_from: Conquest
   starter: *id001
 ---

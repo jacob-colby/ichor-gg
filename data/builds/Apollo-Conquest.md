@@ -6,18 +6,18 @@ builds:
 - source: community
   aspect: Aspect of Harmony
   aspect_pick_rate: 0.03
-  aspect_win_rate: 0.54
+  aspect_win_rate: 0.53
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.58
+    pick_rate: 0.59
     win_rate: 0.54
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.13
       win_rate: 0.52
     - name: Avenging Blade
-      pick_rate: 0.1
-      win_rate: 0.56
+      pick_rate: 0.09
+      win_rate: 0.55
   - name: Odysseus' Bow
     pick_rate: 0.35
     win_rate: 0.57
@@ -37,37 +37,37 @@ builds:
       win_rate: 0.56
     - name: Riptalon
       pick_rate: 0.11
-      win_rate: 0.57
+      win_rate: 0.59
   - name: The Executioner
     pick_rate: 0.23
     win_rate: 0.53
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.22
-      win_rate: 0.56
+      win_rate: 0.55
     - name: Riptalon
       pick_rate: 0.12
       win_rate: 0.56
   - name: Riptalon
     pick_rate: 0.14
-    win_rate: 0.57
+    win_rate: 0.56
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.16
       win_rate: 0.58
     - name: The Executioner
       pick_rate: 0.12
-      win_rate: 0.64
+      win_rate: 0.62
   - name: Manchu Bow
     pick_rate: 0.12
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Hunter's Bow
-      pick_rate: 0.11
+      pick_rate: 0.12
       win_rate: 0.51
     - name: Riptalon
       pick_rate: 0.08
-      win_rate: 0.7
+      win_rate: 0.68
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.3
@@ -75,18 +75,18 @@ builds:
   - name: Sharpshooter's Arrow
     pick_rate: 0.19
     win_rate: 0.58
-  - name: Death's Embrace
-    pick_rate: 0.15
-    win_rate: 0.57
+  - name: Leather Cowl
+    pick_rate: 0.16
+    win_rate: 0.41
   source_url: https://smitebrain.com/gods/apollo/
-  last_verified: '2026-08-21'
-  god_win_rate: 0.540519877675841
-  god_matches_won: 707
-  god_matches_played: 1308
+  last_verified: '2026-08-22'
+  god_win_rate: 0.5387323943661971
+  god_matches_won: 765
+  god_matches_played: 1420
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-21'
-  god_matches_analyzed: 12786
+  god_window_end: '2026-08-22'
+  god_matches_analyzed: 14126
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -145,12 +145,12 @@ builds:
       total: 0.55
       efficiency: 0.48
       win: 0.54
-      pick: 0.58
+      pick: 0.59
       fit: 0.7
     Riptalon:
       total: 0.53
       efficiency: 0.51
-      win: 0.57
+      win: 0.56
       pick: 0.3
       fit: 0.56
     Silverbranch Bow:
@@ -190,8 +190,8 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
     Revenge, Berserker''s Shield, The Crusher, Hydra''s Lament, Genji''s Guard, Breastplate
     of Valor, Lernaean Bow, Heartseeker, The Reaper, Golden Blade, Runeforged Hammer,
-    Tekko-Kagi, Dominance, Amanita Charm, Avenging Blade, Freya''s Tears, Deathbringer,
-    Damaru, Kinetic Cuirass, Titan''s Bane, Transcendence, Shield Splitter, Pharaoh''s
+    Tekko-Kagi, Dominance, Amanita Charm, Freya''s Tears, Deathbringer, Damaru, Kinetic
+    Cuirass, Titan''s Bane, Avenging Blade, Transcendence, Shield Splitter, Pharaoh''s
     Curse, Arondight, Eye of Providence, Musashi''s Dual Swords, Shield of the Phoenix.'
   slot_scores:
     Genji's Guard:
@@ -216,7 +216,7 @@ builds:
       total: 0.52
       efficiency: 0.48
       win: 0.54
-      pick: 0.58
+      pick: 0.59
       fit: 0.49
     Hydra's Lament:
       total: 0.5
@@ -225,9 +225,9 @@ builds:
       pick: 0.0
       fit: 0.42
     Riptalon:
-      total: 0.51
+      total: 0.5
       efficiency: 0.51
-      win: 0.57
+      win: 0.56
       pick: 0.3
       fit: 0.39
   starter: *id001
@@ -274,12 +274,12 @@ builds:
       total: 0.54
       efficiency: 0.48
       win: 0.54
-      pick: 0.58
+      pick: 0.59
       fit: 0.66
     Riptalon:
       total: 0.53
       efficiency: 0.51
-      win: 0.57
+      win: 0.56
       pick: 0.3
       fit: 0.54
     Damaru:
@@ -356,12 +356,12 @@ builds:
       total: 0.51
       efficiency: 0.48
       win: 0.54
-      pick: 0.58
+      pick: 0.59
       fit: 0.48
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
-      win: 0.57
+      win: 0.56
       pick: 0.3
       fit: 0.65
     Amanita Charm:
@@ -398,7 +398,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Crusher, The Reaper, Tekko-Kagi, Toxic Blade,
-    Berserker''s Shield, Avenging Blade, Heartseeker, Titan''s Bane, Stone of Binding,
+    Berserker''s Shield, Heartseeker, Avenging Blade, Titan''s Bane, Stone of Binding,
     Lernaean Bow, Golden Blade, Screeching Gargoyle, Runeforged Hammer, Genji''s Guard,
     Breastplate of Valor, Hydra''s Lament, Deathbringer, Damaru, Amanita Charm, Avatar''s
     Parashu, Kinetic Cuirass, Dominance, Void Shield, Pharaoh''s Curse, Pendulum Blade,
@@ -414,12 +414,12 @@ builds:
       total: 0.52
       efficiency: 0.48
       win: 0.54
-      pick: 0.58
+      pick: 0.59
       fit: 0.53
     Riptalon:
       total: 0.55
       efficiency: 0.51
-      win: 0.57
+      win: 0.56
       pick: 0.3
       fit: 0.69
     Silverbranch Bow:
@@ -496,12 +496,12 @@ builds:
       total: 0.55
       efficiency: 0.48
       win: 0.54
-      pick: 0.58
+      pick: 0.59
       fit: 0.7
     Riptalon:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
-      win: 0.57
+      win: 0.56
       pick: 0.3
       fit: 0.59
     Silverbranch Bow:
@@ -572,7 +572,7 @@ builds:
       total: 0.51
       efficiency: 0.48
       win: 0.54
-      pick: 0.58
+      pick: 0.59
       fit: 0.46
     Hydra's Lament:
       total: 0.51
@@ -642,12 +642,12 @@ builds:
       total: 0.55
       efficiency: 0.48
       win: 0.54
-      pick: 0.58
+      pick: 0.59
       fit: 0.7
     Riptalon:
       total: 0.53
       efficiency: 0.51
-      win: 0.57
+      win: 0.56
       pick: 0.3
       fit: 0.56
   starter: *id001

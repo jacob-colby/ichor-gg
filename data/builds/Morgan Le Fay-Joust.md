@@ -1382,7 +1382,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Triton's Conch
-    reason: Conquest community 64% win over 129 matches (vs 54% on this god), taking
+    reason: Conquest community 62% win over 142 matches (vs 53% on this god), taking
       the model's weakest slot from Triton's Conch
   borrowed_from: Conquest
   starter: *id001

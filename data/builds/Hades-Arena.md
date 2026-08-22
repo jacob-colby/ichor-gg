@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Rod of Tahuti
     removed: Void Shield
-    reason: Conquest community 69% win over 178 matches (vs 62% on this god), taking
+    reason: Conquest community 70% win over 198 matches (vs 61% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

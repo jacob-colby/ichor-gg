@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.73
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Obsidian Shard
+  - Spectral Armor
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Spectral Armor
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Obsidian Shard:
+      total: 0.5
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Spectral Armor:
+      total: 0.6
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.66
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Stampede:
+      total: 0.62
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+  swaps:
+  - added: Obsidian Shard
+    removed: Void Shield
+    reason: Conquest community 51% win over 251 matches (vs 44% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

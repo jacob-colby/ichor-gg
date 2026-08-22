@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Tyrfing
-    reason: Conquest community 60% win over 196 matches (vs 53% on this god), taking
+    reason: Conquest community 61% win over 216 matches (vs 53% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001

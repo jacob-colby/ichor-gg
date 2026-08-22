@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Breastplate of Valor
     removed: Void Shield
-    reason: Conquest community 78% win over 37 matches (vs 51% on this god), taking
+    reason: Conquest community 73% win over 40 matches (vs 52% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

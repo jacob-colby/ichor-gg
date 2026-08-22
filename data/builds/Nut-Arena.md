@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Bragi's Harp
+  - Riptalon
+  - Rod of Tahuti
+  flex_slots:
+  - Bragi's Harp
+  - Lernaean Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Toxic Blade:
+      total: 0.6
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Jotunn's Revenge:
+      total: 0.58
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Bragi's Harp:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Riptalon:
+      total: 0.65
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Rod of Tahuti:
+      total: 0.62
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+  swaps:
+  - added: Riptalon
+    removed: Pharaoh's Curse
+    reason: Conquest community 68% win over 35 matches (vs 50% on this god), taking
+      the model's weakest slot from Pharaoh's Curse
+  borrowed_from: Conquest
+  starter: *id001
 ---
