@@ -1113,3 +1113,51 @@ def test_offmap_efficiency_reads_the_flavor_overlay_fit_will_use():
     assert plain["Laden"]["efficiency"] == 0.0
     # With Max Health on the map only the 700g protection column is charged.
     assert overlaid["Laden"]["efficiency"] == pytest.approx(0.9 - 0.7)
+
+
+# ── offmap_exempt reaching score_god_items (STATE.md §4.16) ───────────────
+
+def _mana_fixture():
+    """The `_offmap_fixture` Carry plus an item whose off-map mass is MANA.
+    `Manaful` and `Lean` carry the same on-map stat, so fit is identical by
+    construction and the exemption is the only thing that can separate them."""
+    god, items, eff = _offmap_fixture()
+    items = items + [{"name": "Manaful", "tier": 3, "cost": 2400,
+                      "stats": {"Attack Speed": "20%", "Max Mana": "250",
+                                "Mana Regen": "5"}}]
+    eff = {**eff, "Manaful": {"score": 0.9, "tier": "fair", "span": 1000.0,
+                              "stat_gold": {"Attack Speed %": 400.0,
+                                            "Max Mana": 315.0,
+                                            "Mana Regen": 27.0}}}
+    return god, items, eff
+
+
+def test_offmap_exempt_reaches_the_charge_through_score_god_items():
+    """The exempt list has to arrive at `offmap_adjusted_score`, or it is a
+    setting nothing reads — register §4.10's failure mode."""
+    god, items, eff = _mana_fixture()
+    w = scoring.load_weights_default()
+    w["offmap_efficiency"] = 1.0
+    charged = {r["item"]: r["efficiency"] for r in scoring.score_god_items(
+        god, items, {"builds": []}, eff, {**w, "offmap_exempt": []}, {})}
+    spared = {r["item"]: r["efficiency"] for r in scoring.score_god_items(
+        god, items, {"builds": []}, eff, {**w, "offmap_exempt": ["Max Mana", "Mana Regen"]}, {})}
+    assert charged["Manaful"] == pytest.approx(0.9 - 0.342)
+    assert spared["Manaful"] == pytest.approx(0.9)
+    # And it is the mana that was spared, not the charge that was turned off:
+    # the defensive item is charged identically either way (both clamp to 0.0,
+    # since 1000g of off-map gold is the whole of its span).
+    assert spared["Laden"] == charged["Laden"] == 0.0
+
+
+def test_offmap_exempt_is_inert_at_the_shipped_charge():
+    """`offmap_efficiency` ships at 0.0, so the exempt list must move nothing
+    in the build the model actually produces. Checked, not assumed."""
+    god, items, eff = _mana_fixture()
+    w = scoring.load_weights_default()
+    w["offmap_efficiency"] = 0.0
+    without = scoring.score_god_items(
+        god, items, {"builds": []}, eff, {**w, "offmap_exempt": []}, {})
+    with_list = scoring.score_god_items(
+        god, items, {"builds": []}, eff, {**w, "offmap_exempt": ["Max Mana"]}, {})
+    assert without == with_list

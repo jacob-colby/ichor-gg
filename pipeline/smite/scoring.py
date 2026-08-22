@@ -59,6 +59,9 @@ DEFAULT_WEIGHTS = {
     # false = an item scores the bonus ONCE however many offense tags it
     # carries; true = they sum. Measured — see `offense_tags` in _weights.yaml.
     "offense_tags_additive": False,
+    # Stats `offmap_efficiency` charges to nobody. See `efficiency.offmap_gold`
+    # for why mana is exempted rather than given a fit weight.
+    "offmap_exempt": ["Max Mana", "Mana Regen"],
 }
 
 
@@ -904,6 +907,9 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     # once per god rather than per item.
     offmap = eff_weights.get("offmap_efficiency") or 0.0
     offmap_map = {**base_map, **(stat_overlay or {})} if offmap else {}
+    # Stats that are off every map and charged to nobody — see `OFFMAP_EXEMPT`
+    # in `efficiency` for why mana is an exemption and not a fit weight.
+    offmap_exempt = tuple(eff_weights.get("offmap_exempt") or ())
 
     # Filtering here, at the single point every archetype's rows come from,
     # keeps an excluded item out of the core, the flex slots, the situational
@@ -930,7 +936,8 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
         # The effective map is the one fit will actually use, flavor overlay
         # included, so the two halves cannot disagree about what a god wants.
         if offmap:
-            eff = efficiency.offmap_adjusted_score(eff_row, offmap_map, offmap)
+            eff = efficiency.offmap_adjusted_score(eff_row, offmap_map, offmap,
+                                                   offmap_exempt)
         row = signal_score(item, god, god_build, eff, eff_weights,
                            tags_map.get(item["name"], []), stat_overlay, tag_bonus,
                            base_map=base_map, stat_reference=reference,

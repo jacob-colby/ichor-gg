@@ -645,8 +645,42 @@ def test_the_only_way_out_of_the_module_is_the_caveated_sink():
 
 # ── The boundary ──────────────────────────────────────────────────────────
 
+#: An actual import of this module, as opposed to a mention of its name in
+#: prose. Tightened 2026-08-22: the check was a bare substring search over the
+#: whole source, so a COMMENT naming the diagnostic failed it — which is a
+#: false positive, and one that pushes evidence written next to the code it
+#: constrains (the rule in CLAUDE.md) into naming the module obliquely instead.
+#: `test_the_import_guard_still_catches_a_real_import` pins that the guard did
+#: not get weaker in the process.
+_IMPORTS_BUILD_QUALITY = re.compile(
+    # `from <anything> import ... build_quality ...`, or either form of
+    # naming it in the dotted module path itself.
+    r"^[ \t]*(?:from[ \t]+[\w.]+[ \t]+import[ \t]+[^#]*\bbuild_quality\b"
+    r"|(?:from|import)[ \t]+[\w.]*\bbuild_quality\b)", re.M)
+
+
 def test_nothing_in_the_model_imports_this():
     """A diagnostic, not a scoring input. Register §4.4 is what happens when a
-    damage measure becomes a fit signal; this pins the import boundary."""
+    damage measure becomes a fit signal; this pins the import boundary.
+
+    An import, not a mention: `efficiency.offmap_gold` cites this module by
+    name to record that it is blind to mana (§4.16), which is prose and not a
+    dependency."""
     for mod in (scoring, assemble, recommend, build_index, efficiency):
-        assert "build_quality" not in inspect.getsource(mod), mod.__name__
+        assert not _IMPORTS_BUILD_QUALITY.search(inspect.getsource(mod)), mod.__name__
+
+
+def test_the_import_guard_still_catches_a_real_import():
+    """The guard above was loosened from a substring search to an import
+    match, so pin that every shape of the real thing still trips it — and
+    that the prose which motivated the change still does not."""
+    for src in ("from smite import build_quality",
+                "from smite import scoring, build_quality",
+                "import smite.build_quality",
+                "    from smite import build_quality",
+                "from smite.build_quality import compare"):
+        assert _IMPORTS_BUILD_QUALITY.search(src), src
+    for src in ("# `build_quality` is blind to mana",
+                '"""build_quality cannot adjudicate this."""',
+                "# see build_quality.ROLE_OBJECTIVES"):
+        assert not _IMPORTS_BUILD_QUALITY.search(src), src

@@ -620,8 +620,7 @@ shipped **off**. Numbers are in the named module.
     The community's own cores carry it in every role, and mostly the same two
     stats — Max Mana and Mana Regen, 62% of the community's Carry off-map mass
     and 78% of their Mid. No role map names either. There the map is
-    INCOMPLETE and the charge punishes a real want, which is why Support loses
-    up to 21.4pp of coverage and Solo 9.4pp. Protections on a Carry are the
+    INCOMPLETE and the charge punishes a real want. Protections on a Carry are the
     actual defect: 55% of our Carry cores' off-map mass is Physical
     Protection, Max Health and Health Regen against **0% of the community's**,
     and Carry is the only role whose map names none of those stats (0 of 18
@@ -630,6 +629,21 @@ shipped **off**. Numbers are in the named module.
     is the invented constant §4.12 and §4.13 both turned on refusing, and
     reading it off the community's composition is the leakage §1 is about.
     That is why there is no carve-out here of the kind `price_adaptive` was.
+
+    _Amended 2026-08-22 by §4.16, which carved one out anyway — as an
+    exemption rather than a weight._ Two claims in this entry were wrong and
+    are corrected there rather than here. **The Support/Solo attribution was
+    half right:** this entry read "Support loses up to 21.4pp of coverage and
+    Solo 9.4pp" as one mechanism, mana. Sparing mana and re-running the
+    identical sweep moves Support's −21.4pp to −1.4pp and leaves Solo's
+    −9.4pp **exactly where it was** — Solo's is Health Regen and Plating, not
+    mana. **And off-map gold share does not predict coverage impact:** mana is
+    24% of the gold this charge takes off a Support core and ~93% of Support's
+    coverage loss, so the composition table above cannot be reasoned from to
+    what a carve-out will do. The sweep itself reproduces here to the digit,
+    on both splits and on all three modes' churn, which is what makes the two
+    comparable. The entry's conclusion is otherwise unchanged: it still ships
+    off, now for a sharper reason — see §4.16.
 
     Two things ruled out on the way, so nobody re-derives them. It is **not
     §4.11**: off-map share and stat count are near-orthogonal (r = +0.129),
@@ -649,6 +663,90 @@ shipped **off**. Numbers are in the named module.
     off-map mass is free credit, theirs is a free debit. Charging one without
     pricing the other reaches the right answer for half the right reason.
 
+
+16. **Naming Max Mana in the role maps (2026-08-22)** — `offmap_exempt`, and
+    the entry is a REFUSAL to write a weight followed by a measurement of the
+    thing that did not need one. §4.15's own finding was that the maps are
+    incomplete: zero of the 21 `role_stats` entries names Max Mana or Mana
+    Regen, while mana is the largest off-map stat by mass in the community's
+    cores in every role. The obvious repair is to name it. **There is no
+    number to name it with**, and that is the finding.
+
+    **The share that motivates it is the wrong unit, by ~5× on Carry.**
+    `god_fit_score` runs with `magnitude_fit` off, so its stat term reads
+    PRESENCE; `offmap_efficiency` charges GOLD, off `stat_gold`. Neither
+    reads mass. The community's own cores, same off-map definition, three
+    units:
+
+        role     off-map MASS mana   as GOLD   core SLOTS carrying any mana
+        Carry               67.7%      15.4%     15 of 108 = 13.9%
+        Jungle              74.2%      29.7%     42 of 102 = 41.2%
+        Mid                 94.1%      65.3%     48 of 132 = 36.4%
+        Solo                90.2%      29.6%     24 of 108 = 22.2%
+        Support             84.9%      24.2%     24 of  84 = 28.6%
+
+    The median non-zero roll is 250 Max Mana against 35 Strength, and the
+    regression prices mana at 1.26 g/pt against Strength's 21.81. Mana is
+    voluminous and cheap, so a mass share flatters it and neither unit the
+    model actually reads agrees that it dominates anything but Mid.
+
+    **Every leakage-free route to a weight is closed**, and they were tried in
+    this order. THE KIT, which is `attack_damage_fit`'s shape and should have
+    worked: ability mana costs and base stats are scraped and community-free,
+    and over the 78 gods with a full kit and a mana pool they separate the
+    five roles by **3pp of rotation-cost-over-pool on a quantity whose roster
+    range is 16pp**, with base mana a near-constant (1006–1240, stdev 53) and
+    the between-role spread narrower than Solo's own within-role IQR. The kit
+    says every role has the same mana economy — an argument for a roster
+    constant, against a role column. THE DAMAGE MODEL: **0 of 89 gods** have
+    an ability that scales on Max Mana, and `combat.py` contains the string
+    "mana" **zero times**, so `build_quality` is blind to mana and cannot
+    adjudicate this either. THE ONE GAME-STATED EXCHANGE RATE, Transcendence
+    and Book of Thoth, is `conversion_fit`, §4.9, refuted. And the
+    intervention already had an informal measurement: the `mana-stack` flavor
+    records that Max Mana at 1.2 on a fit overlay selected Genji's Guard and
+    Breastplate of Valor, tank items, because mana in this pool lives on tank
+    items.
+
+    **So it shipped as an exemption instead, which needs no magnitude.**
+    `offmap_exempt` names stats that are off every map and charged to nobody.
+    A weight asserts "this role wants this stat, this much"; an exemption
+    asserts only "this stat is a roster constant, so its absence from the maps
+    is not evidence against it" — which is exactly what the kit measured.
+
+    **Re-swept on §4.15's grid, and the two splits split.** The control column
+    reproduces §4.15 to the digit on both splits and on all three modes'
+    churn, which is what makes them comparable. Sparing mana, the probe split
+    **reverses sign** — 39.1% → 42.3% at 0.25 and 43.1% at 1.00, monotone up,
+    with the paired 95% CI EXCLUDING ZERO at 0.25, 0.75 and 1.00 — while the
+    best split stays below control at every strength (40.0% → 37.9%) and its
+    CI excludes zero at 0.75 and 1.00. **Two splits disagreeing about the
+    direction is entry 9's shape**, so `offmap_efficiency` stays at 0.0 and
+    `offmap_exempt` ships populated and therefore inert. Its inertness is
+    pinned by a test and checked against a regenerated `index.json` rather
+    than assumed (§4.10).
+
+    **What the exemption bought, and what is left.** It corrects §4.15's
+    Support/Solo attribution — Support's −21.4pp is mana (→ −1.4pp), Solo's
+    −9.4pp is not (→ −9.4pp, unmoved) — and it does **not** cost the Carry
+    correction anything: Berserker's Shield is in 17 of 18 Carry cores at
+    control and **0 of 18 at alpha 0.25 with the exemption on or off**, with
+    Medusa's core identical under the two at every strength. What still blocks
+    the charge on the best split is Carry (−2.2pp, the role it exists to fix)
+    and Solo (−9.4pp), and Solo's is **Health Regen** — 33% of the gold the
+    charge removes from a Solo core, 39% from a Support one, 76.40 g/pt and
+    named by no role map either. That is the next stat to examine, and this
+    entry is the method for it.
+
+    **One trap worth more than the ship decision: off-map GOLD SHARE does not
+    predict coverage impact.** Mana is 24% of the gold the charge takes off a
+    Support core and ~93% of Support's coverage loss. The composition table in
+    §4.15 cannot be reasoned from to what a carve-out will do — measure the
+    carve-out. This prediction was made from the gold share before the sweep
+    and was wrong about Support.
+
+    Numbers, the full sweep, the per-role table and the kit measurement under
+    `offmap_exempt` in `_weights.yaml` and in `efficiency.offmap_gold`.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -856,7 +954,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (776) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (784) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -874,14 +972,14 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (776) ·
 | Items placed | 209 / 226 |
 | Community sample | 14,126 Obsidian+ Conquest matches, 11 Aug – 22 Aug |
 | Headline gate | coverage 48.2%, win-weighted 50.0% — see `unknown_win_per_god`; the gap to a naive reading IS the removed community-agreement prior. `price_adaptive` moved it +1.9pp/+2.0pp off the 47.4%/49.3% this row carried, which is reporting and not a target (§1) |
-| **Leakage-free** | **39.1% probe · 40.0% at eff 0.45, vs 5.6% chance = 6.9–7.1×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-08-22 at input fingerprint `c73b6ea6bdde` (`33d6031bd9de` before `offmap_efficiency: 0.0` was added to `_weights.yaml`, which the hash covers — same figures to the digit at both, see §4.15): the 39.7/40.3/5.7 this row carried was fingerprint `ea30ca4c0735` and describes PRE-refresh inputs, so the −0.6pp/−0.3pp is the `chore(data): daily community refresh` and not a model change — nothing shipped between the two readings. `attack_damage_fit` (§3) moved this +1.0pp/+0.7pp on 2026-08-21, off a control re-measured on the same data at 38.7%/39.6% minutes earlier. The baseline reading 5.6% before and 5.7% after is the ±0.15pp sampling wobble §1 documents, not a data move — do not read it as one. An earlier cut of the same flag read 40.6%/40.5% here; about a third of that was the fit normaliser shrinking every non-carrier rather than the column itself, which the Joust/Arena sweep caught and §4.4 records. Before it, `price_adaptive` (§3) moved this +1.0pp/+1.2pp, later on 2026-08-21, off a control re-measured on the same data at 37.7%/38.4% — the same figures this row already carried, which is how we know the data had not moved under it. The sweep's nominal argmax moved with the change, 0.45 → 0.75 at 40.9%, and 17 of 21 splits have a CI overlapping that — noise by `model_signal_sweep`'s own rule, so the shipped split is unchanged and this row still reports eff 0.45. Earlier the same day: re-run on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
+| **Leakage-free** | **39.1% probe · 40.0% at eff 0.45, vs 5.6% chance = 6.9–7.1×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-08-22 at input fingerprint `c68c33d49845` (`33d6031bd9de` before `offmap_efficiency: 0.0` was added to `_weights.yaml`, then `c73b6ea6bdde` before `offmap_exempt` joined it — the hash covers that file, and the figures are identical to the digit at all three, see §4.15 and §4.16): the 39.7/40.3/5.7 this row carried was fingerprint `ea30ca4c0735` and describes PRE-refresh inputs, so the −0.6pp/−0.3pp is the `chore(data): daily community refresh` and not a model change — nothing shipped between the two readings. `attack_damage_fit` (§3) moved this +1.0pp/+0.7pp on 2026-08-21, off a control re-measured on the same data at 38.7%/39.6% minutes earlier. The baseline reading 5.6% before and 5.7% after is the ±0.15pp sampling wobble §1 documents, not a data move — do not read it as one. An earlier cut of the same flag read 40.6%/40.5% here; about a third of that was the fit normaliser shrinking every non-carrier rather than the column itself, which the Joust/Arena sweep caught and §4.4 records. Before it, `price_adaptive` (§3) moved this +1.0pp/+1.2pp, later on 2026-08-21, off a control re-measured on the same data at 37.7%/38.4% — the same figures this row already carried, which is how we know the data had not moved under it. The sweep's nominal argmax moved with the change, 0.45 → 0.75 at 40.9%, and 17 of 21 splits have a CI overlapping that — noise by `model_signal_sweep`'s own rule, so the shipped split is unchanged and this row still reports eff 0.45. Earlier the same day: re-run on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
 | Cap overflow | 47 -> 0 of 2427 builds over the penetration cap. `cap_overflow` took it to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed. See `cap_overflow` |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Ares, Sun Wukong, Yemoja. Sun Wukong left the list with `price_adaptive` and came back on the 22 Aug refresh, with Yemoja; the row before that (Achilles, Chaac, Danzaburou) predates an earlier refresh. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 776 pipeline · 660 viewer |
+| Tests | 784 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
