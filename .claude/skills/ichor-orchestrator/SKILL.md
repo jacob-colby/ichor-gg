@@ -145,12 +145,31 @@ fixed. The check is cheap — grep for the symbol the entry names.
   Carry is our weakest damage record of any role (12 ahead / 6 behind) and our
   strongest EHP record (18 / 0, +34.5% median). The protection is physical
   only, so against the magical burst that actually kills a Carry it buys just
-  the 200 health (+9.0%, not +34.5%). NOT yet diagnosed — `defense_affinity`
-  and `archetype_scaled_stats` are mechanically excluded (viewer-side only,
-  never imported by `scoring`/`assemble`/`recommend`, and `defense_affinity`
-  reads 0.0 for Carry regardless). The item wins its slot on efficiency + fit;
-  *why* is the open question. Diagnose it with a session other than the one
-  that found it.
+  the 200 health (+9.0%, not +34.5%). `defense_affinity` and
+  `archetype_scaled_stats` are mechanically excluded (viewer-side only, never
+  imported by `scoring`/`assemble`/`recommend`, and `defense_affinity` reads
+  0.0 for Carry regardless) — there is no defensive-preference knob to find.
+
+  **Mechanism, verified 2026-08-22: an accounting asymmetry, not an over-valued
+  defence.** `efficiency` reads Berserker's Shield at **0.681, residual −425g,
+  tier `undervalued`**, while reading the community's own Carry picks as
+  premium — The Executioner **+999g** (0.154), Odysseus' Bow **+316g** (0.407).
+  That premium is §4.5, the passive nothing prices. Meanwhile `fit` sees only
+  **one** of the item's four stats: `item["stats"]` is Attack Speed / Physical
+  Protection / Max Health / Health Regen, and a Carry's merged map is Attack
+  Speed 1.3 · Critical Chance 1.3 · Strength 0.92 · Lifesteal 0.5 · Penetration
+  0.24 · Cooldown Rate 0.18. Physical Protection, Max Health and Health Regen
+  are **neither credited nor charged**. So efficiency pays full price for stat
+  mass the god cannot use, and fit does not take it back.
+
+  Two cautions when prompting on this. **`efficiency_scores(items)` takes no
+  god argument**, so "the same efficiency on all 18 Carries" is true by
+  construction — the finding is that a structurally god-agnostic signal
+  dominates the blend while the god-specific one is blind to three quarters of
+  the item, not that the numbers happened to coincide. And **note the two stat
+  key-spaces**: `efficiency.item_stat_values()` returns `Attack Speed %`,
+  `item["stats"]` returns `Attack Speed`. Checking fit coverage against the
+  pricing keys reports zero overlap and is wrong.
 
 - **Multiplicative items cannot be priced.** Genie's Lamp, Shell of Rebuke's
   `+7.5% of all Stats`, The Executioner's shred. Needs a value model for
