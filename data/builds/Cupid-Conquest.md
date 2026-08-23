@@ -210,7 +210,7 @@ builds:
       efficiency: 0.54
       win: 0.62
       pick: 0.0
-      fit: 0.42
+      fit: 0.43
     Death Metal:
       total: 0.57
       efficiency: 0.61
