@@ -575,6 +575,16 @@ offmap_efficiency: 0.55
 # data. (Both baselines are regenerated ones: the committed index.json was
 # itself stale against the 22 Aug refresh, and a byte comparison against it
 # would have reported the refresh as this key's effect.)
+# PLATING WAS TESTED FOR THIS LIST ON 2026-08-23 AND REFUSED (register SS4.19).
+# It passes test (i) - 0 of 21 role_stats entries, 0 of 89 merged maps - and
+# is 39.9% of the bill on a Solo core and 63.2% on a Support one, so it looked
+# like the next Health Regen. It is not: `flat_reduction_multiplier` applies
+# Plating to the TARGET and nothing reads it off the build being judged, so
+# test (ii) cannot be run either way. Exempting it anyway is a 0-of-89 no-op
+# on Conquest - coverage 43.61% / 39.42% to the digit, every role verdict
+# unchanged - while moving 17 Joust and 31 Arena cores, all arrivals Plating
+# items and no departures, in the two modes with no gate. Numbers and the
+# knife-edge margin in `efficiency.offmap_gold`.
 offmap_exempt: [Max Mana, Mana Regen, Health Regen]
 # ── The clock (B5) ────────────────────────────────────────────────────────
 # What `damage_value.item_damage_gain` RETURNS. False = one ability rotation

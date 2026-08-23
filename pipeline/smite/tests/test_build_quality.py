@@ -7,6 +7,7 @@ before any verdict, and the import boundary that keeps this a diagnostic.
 """
 import ast
 import inspect
+import pathlib
 import re
 
 import pytest
@@ -1017,3 +1018,52 @@ def test_stat_standing_reads_the_shipped_role_table():
     assert named == [] and priced is None and exempt is True
     named, _, _ = bq.stat_standing("Physical Protection", weights)
     assert len(named) == 6, "the defect stats have a contrast; they are not exemptible"
+
+
+# ── Plating: priced on the target, unreadable on the build (STATE.md §4.19) ─
+
+def test_plating_and_dampening_are_target_side_only():
+    """`combat.py` names both, so `COMBAT_PRICED` lists them — but neither
+    reaches the build being judged, which is what test (ii) actually asks
+    about. Pinned as a pair so the report's third answer cannot be lost."""
+    for stat in bq.TARGET_SIDE_ONLY:
+        assert stat in bq.COMBAT_PRICED
+    assert set(bq.TARGET_SIDE_ONLY) == {"Plating", "Dampening"}
+    _named, priced, _exempt = bq.stat_standing(
+        "Plating", scoring.load_weights(recommend.WEIGHTS_PATH))
+    assert "on the target only" in priced
+
+
+def test_nothing_in_the_pipeline_ever_supplies_a_plating_value():
+    """The claim `TARGET_SIDE_ONLY` rests on, driven off the modules instead of
+    asserted. `damage_dealt` takes `plating=`/`dampening=` and every caller
+    leaves them at the signature default, and `effective_health` has no term
+    for either — so a build's own Plating is worth 0.0 to this report.
+
+    If someone wires either into the buyer's side, this fails, and §4.19 has
+    to be re-argued against an instrument that can finally check it."""
+    import smite
+
+    pkg = pathlib.Path(smite.__file__).parent
+    callers = []
+    for path in sorted(pkg.glob("*.py")):
+        if path.name == "combat.py":
+            continue
+        for node in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
+            if not isinstance(node, ast.Call):
+                continue
+            for kw in node.keywords:
+                if kw.arg in ("plating", "dampening"):
+                    callers.append(f"{path.name}:{node.lineno} {kw.arg}=")
+    assert not callers, f"a caller now supplies a flat reduction: {callers}"
+    sig = inspect.signature(combat.effective_health)
+    assert list(sig.parameters) == ["health", "protection"]
+
+
+def test_the_charge_section_marks_a_target_side_row():
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    charge = {"Solo": {"n": 1, "gold": 900.0,
+                       "stats": {"Plating": 600.0, "Attack Speed": 300.0}}}
+    text = "\n".join(bq.offmap_charge_lines(charge, weights))
+    assert "on the target only" in text
+    assert "§4.19" in text

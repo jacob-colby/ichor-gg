@@ -1030,10 +1030,12 @@ shipped **off**. Numbers are in the named module.
     region is what would have to be re-swept, and that is a different change
     with a different argument. Second, **Plating is the largest untested
     column left** — 39.9% of the bill on a Solo core and 63.2% on a Support
-    one, named by no role map and priced by `combat.flat_reduction_multiplier`,
-    so it is eligible for exactly the check Echo just failed. It was not run
-    here because the two roles that pay it were mid-repair when this started;
-    §4.17 has landed and they are readable again.
+    one, named by no role map and apparently priced by
+    `combat.flat_reduction_multiplier`, so it looked eligible for exactly the
+    check Echo just failed. _Run 2026-08-23, and it is §4.19: the check cannot
+    be run at all — `flat_reduction_multiplier` applies to the TARGET and
+    nothing reads Plating off the build being judged — and sparing it moves 0
+    of 89 Conquest cores while moving 48 Joust and Arena ones._
 
     **So nothing shipped, and the composition now re-measures.**
     `build_quality`'s "Where the off-map charge lands" section prints the bill
@@ -1065,6 +1067,83 @@ shipped **off**. Numbers are in the named module.
     two combine, and both terms are scraped. That is §4.16's third outcome —
     price it, weight it, or exempt it — and this is the first stat since
     Attack Damage with a real claim on the second.
+
+19. **Exempting Plating on Solo and Support (2026-08-23)** — §4.18 named it as
+    the largest untested column and this is the test. It is a null, and it is
+    the first entry where **the check test (ii) demands cannot be run at all**.
+    Measured at control fingerprint `527eb8f0a586` (baseline 5.8%).
+
+    **Test (i) passes, and it is the strongest fact here.** Plating is named by
+    **0 of 21** `role_stats` entries and **0 of 89** merged god maps — the same
+    standing as mana and Health Regen, and unlike the defensive stats §4.15
+    named. Seven buildable items carry it, 41.02 g/pt, and it is **39.9% of the
+    bill on a control Solo core and 63.2% on a Support one**; on the cores the
+    charge actually ships it is 93.1% and 100% of what is left.
+
+    **Test (ii) was recorded wrong in §4.16, and the correction is the point.**
+    That entry's table reads "Plating / Dampening — priced by
+    `plating_multiplier`", which is reading a function signature rather than an
+    instrument. `combat.damage_dealt` does take `plating=` and `dampening=` and
+    apply them — **to the target**. Nothing in the package ever supplies either
+    (an AST walk over every module now pins that), `build_quality`'s own
+    assumption line has always said its reference targets carry "no Plating or
+    Dampening", and on the buyer's side there is no expression for it at all:
+    `effective_health` is `health × (1 + protection/100)` and has no term for a
+    flat damage-type reduction. **A build's own Plating is worth exactly 0.0 to
+    every number this report prints**, so charging it is not a hypothesis
+    `build_quality` can check in either direction. `TARGET_SIDE_ONLY` names the
+    pair and two tests hold it.
+
+    **Run indirectly anyway — through the items it moves — and the answer is a
+    Conquest no-op.** Sparing Plating at the shipped 0.55 moves **0 of 89**
+    Conquest cores. Coverage is identical to the digit on both leakage-free
+    splits (43.61% probe, 39.42% best, against the shipped flag's own 43.61%
+    and 39.42%), every role's verdict is unchanged including Solo's
+    17a/0b/1mix and Support's 11a/1b/1mix, and the Carry guard is untouched
+    (Berserker's Shield 0 of 18, Golden Blade 5 of 18).
+
+    **The whole of its effect is in the two modes with no gate.** Joust 17 of
+    89 cores and Arena 31 of 89 — and **every arrival is a Plating item**,
+    Spectral Armor 13 + 31 and Kinetic Cuirass 4 + 1, with **zero Plating
+    departures**. What leaves is Void Stone (28 Arena cores), Stygian Anchor,
+    Void Shield and Shifter's Shield. The borrowed Conquest record, which is a
+    consistency check and not validation, is unchanged to the item: Joust 153
+    of 537 both ways, Arena 129 of 537 both ways. So this is a monotone "buy
+    more Plating" push across **178 of 267 build groups**, argued for by
+    nothing and refuted by nothing, which is the worst shape a change can have
+    here — §5 already says those two modes rest on nothing measurable.
+
+    **And the Conquest zero is knife-edge rather than structural**, which is
+    why it must not be quoted as "this costs nothing". The exemption's push is
+    a constant per item — +0.039, +0.078 or +0.117 of `efficiency` for a 5-,
+    10- or 15-point roll, at most **+0.082 of `quality`** — while the smallest
+    gap between the worst item in a Solo/Support core and the best Plating item
+    outside it is **0.0244** (median 0.0375 over 32 gods). The push already
+    exceeds the gap. It does not bind only because the 10- and 15-point items
+    sit at ranks 35–104: Kinetic Cuirass is rank 3–4 and already **in** those
+    cores with the charge ON, Spectral Armor is rank 35–40 and stays out. At
+    alpha 1.00 seven Conquest cores do move. A refresh that reorders the middle
+    of the pool could make this non-zero without anything else changing.
+
+    **It corrects §4.16, and by the same mechanism §4.16 itself warned about.**
+    That entry attributed Solo's −9.4pp to "Health Regen and Plating", read off
+    the gold share. Health Regen was right — sparing it moved Solo to +2.4pp on
+    the probe split. Plating is worth **exactly zero** coverage on either
+    split. That is the second time off-map gold share has mispredicted a
+    carve-out (Support's mana was the first), and §4.16's own line — *the
+    composition table cannot be reasoned from to what a carve-out will do,
+    measure the carve-out* — is now carrying two confirmations and no
+    counter-example.
+
+    **What would make this answerable, and it is a `EHP_CHANNELS` change.**
+    `effective_health` needs a buyer-side flat-reduction term before any
+    instrument here can weigh Plating or Dampening. Plating reduces Attacks and
+    Dampening reduces Abilities, so that is an attack-vs-ability split of the
+    same shape as the physical-vs-magical one §4.17 just made — and composing
+    the two makes the durability figure a two-dimensional interval rather than
+    a pair. Whoever does it should read §4.17 first: the argument for reporting
+    the interval instead of collapsing it is the same argument, and it gets
+    harder, not easier, with four corners.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -1206,6 +1285,23 @@ precedent (§3, priced against a typical build) — and the column has to ship
 `denom_exclude`d for the reason `attack_damage_fit` does, or about a third of
 whatever it reads will be the normaliser shrinking every non-carrier (§4.4).
 
+### `effective_health` has no term for Plating or Dampening
+Found the same way, 2026-08-23 (§4.19). `combat.damage_dealt` applies both —
+Plating against Attacks, Dampening against Abilities — but only to the TARGET,
+and no caller in the package ever supplies a value. On the buyer's side there
+is no expression at all: `effective_health` is `health × (1 + protection/100)`.
+So **a build's own Plating and Dampening are worth exactly 0.0 to the only
+non-circular instrument in the repo**, on 13 items carrying ~38 g/pt, and no
+charge or credit on either can be checked in either direction. `TARGET_SIDE_ONLY`
+names them and two tests hold the claim.
+
+The fix belongs with `EHP_CHANNELS` and not beside it: attack-vs-ability is the
+same shape as the physical-vs-magical split §4.17 made, and composing the two
+turns the durability figure into a **two-dimensional interval** rather than a
+pair. Read §4.17 before starting — the case for reporting the interval instead
+of collapsing it is the same case, and it is harder with four corners than with
+two.
+
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
   a leveled practice target; `calibrate_combat --plan` will generate the setup.
@@ -1314,7 +1410,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (808) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (811) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -1339,7 +1435,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (808) ·
 | Gods at 0% coverage | 4 — Ares, Nut, Sun Wukong, Yemoja. Sun Wukong left the list with `price_adaptive` and came back on the 22 Aug refresh, with Yemoja; the row before that (Achilles, Chaac, Danzaburou) predates an earlier refresh. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 808 pipeline · 660 viewer |
+| Tests | 811 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

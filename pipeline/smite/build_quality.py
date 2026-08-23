@@ -1128,6 +1128,24 @@ COMBAT_PRICED = {
     "Lifesteal": "LIFESTEAL_MINION_SCALE",
 }
 
+#: Stats `combat.py` can price on the OPPONENT and that nothing reads off the
+#: build being judged. The distinction is not pedantry: test (ii) asks whether
+#: charging a stat is a hypothesis THIS report can check, and for these two the
+#: answer is no in the only direction that matters.
+#:
+#: `damage_dealt` takes `plating=` and `dampening=` and applies them, but the
+#: only value any caller in this repo ever passes is the signature default —
+#: §2's assumption line says so on every run ("targets at exactly 70 and 170
+#: protection of the god's own damage type, no Plating or Dampening"). On the
+#: buyer's side there is no expression for either at all: `effective_health`
+#: is `health x (1 + protection/100)` and has no term for a flat damage-type
+#: reduction. So a build's own Plating is worth exactly 0.0 to every number
+#: this module prints, and a charge on it can be neither confirmed nor refuted
+#: here. STATE.md §4.19 is the measurement; `EHP_CHANNELS` is where the fix
+#: would go, because attack-vs-ability is the same shape as the
+#: physical-vs-magical split §4.17 already made.
+TARGET_SIDE_ONLY = ("Plating", "Dampening")
+
 
 def offmap_charge(rows, gods, items, weights, mode="Conquest"):
     """WHERE THE OFF-MAP CHARGE LANDS — per role, per stat, re-measured.
@@ -1183,10 +1201,17 @@ def stat_standing(stat, weights):
     The two mechanical tests of STATE.md §4.16 as a lookup: a stat named by
     SOME role map has a contrast, so another role's silence about it is a
     positive statement and charging it is legitimate; a stat named NOWHERE has
-    no contrast to read. The second column is test (ii)."""
+    no contrast to read. The second column is test (ii), and it says
+    `on the target only` for the two stats `combat.py` can price on an
+    opponent and nothing reads off the build being judged (`TARGET_SIDE_ONLY`)
+    — for those the check test (ii) demands cannot be run at all, which is a
+    third answer and not a quieter version of either."""
     named = sorted(label for label, entry in (weights.get("role_stats") or {}).items()
                    if stat in entry)
-    return named, COMBAT_PRICED.get(stat), stat in set(weights.get("offmap_exempt") or ())
+    priced = COMBAT_PRICED.get(stat)
+    if stat in TARGET_SIDE_ONLY:
+        priced = "%s — **on the target only**" % priced
+    return named, priced, stat in set(weights.get("offmap_exempt") or ())
 
 
 def offmap_charge_lines(charge, weights, top=5):
@@ -1237,8 +1262,14 @@ def offmap_charge_lines(charge, weights, top=5):
         "first table is a defect needs the community's own record and the leakage-free coverage "
         "gate as well, and both live outside this module. The verdicts reached so far are "
         "register §4.15 (the defect stats — charge them), §4.16 (mana and the regens — exempt "
-        "them) and §4.18 (Echo — charge it, and why the role that pays most for it is not being "
-        "wronged).",
+        "them), §4.18 (Echo — charge it, and why the role that pays most for it is not being "
+        "wronged) and §4.19 (Plating — charge it, because the check cannot be run and sparing "
+        "it changes nothing here).",
+        "",
+        "A row reading **on the target only** is the one case this report cannot adjudicate at "
+        "all: `combat.py` prices the stat on an OPPONENT and nothing reads it off the build "
+        "being judged, so a charge on it is neither confirmed nor refuted by anything above. "
+        "See `TARGET_SIDE_ONLY`.",
     ]
     return lines
 

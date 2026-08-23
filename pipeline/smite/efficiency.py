@@ -627,13 +627,24 @@ def efficiency_scores(items):
 #     Physical Protection         39  21.93   YES (6 of 21)         mitigation
 #     Magical Protection          37  19.40   YES (5 of 21)         mitigation
 #     Intelligence/Strength/...    -      -   YES                   damage
-#     Plating / Dampening         13  ~38     no                    plating_multiplier
+#     Plating / Dampening         13  ~38     no                    on the TARGET only (2026-08-23)
 #     Tenacity                     5  23.70   no                    TENACITY_CAP
 #     Echo                         5  21.59   no                    echo_multiplier
 #     Attack Damage                9  21.95   no                    basic attack
 #     Max Mana                    23   1.26   NO                    NOTHING  <- exempt
 #     Mana Regen                  20   5.37   NO                    NOTHING  <- exempt
 #     Health Regen                12  76.40   NO                    NOTHING  <- exempt
+#
+# THE PLATING ROW WAS WRONG WHEN IT WAS WRITTEN, corrected 2026-08-23. It read
+# `plating_multiplier`, which is a function in `combat.py` and not an
+# instrument reading a build: `damage_dealt` applies Plating and Dampening to
+# the TARGET, no caller in the package ever supplies either, and
+# `effective_health(health, protection)` has no term for a flat damage-type
+# reduction at all. So a build's own Plating is worth exactly 0.0 to every
+# number `build_quality` prints and test (ii) cannot be run on it in either
+# direction. See `build_quality.TARGET_SIDE_ONLY` and STATE.md SS4.19 - which
+# also records that exempting it anyway is a 0-of-89 no-op on Conquest and a
+# 48-core change in Joust and Arena, the two modes with no gate.
 #
 # ATTACK DAMAGE IS THE INSTRUCTIVE ROW. It fails (ii) — the basic attack is
 # modelled — and it is the one stat named by no role map that got a WEIGHT
@@ -757,6 +768,50 @@ def efficiency_scores(items):
 # SO ECHO STAYS OFF THE LIST, and `test_no_exempted_stat_may_be_one_combat_can_price`
 # now enforces test (ii) mechanically against `build_quality.COMBAT_PRICED`
 # rather than leaving it as a sentence in this comment.
+#
+#
+# ── PLATING: REFUSED, AND THE CHECK COULD NOT BE RUN (2026-08-23, at the ────
+#    same control fingerprint `527eb8f0a586`)
+#
+# The stat SS4.18 named as the largest untested column: 39.9% of the off-map
+# gold this charge removes from a Solo core and 63.2% from a Support one, and
+# 93.1% / 100% of what is still billed once the charge has reshaped them.
+# Seven buildable carriers at 41.02 g/pt.
+#
+# TEST (i) PASSES: named by 0 of the 21 `role_stats` entries and 0 of the 89
+# merged god maps, the same standing as mana and Health Regen.
+#
+# TEST (ii) CANNOT BE RUN, which is a third answer and not a quiet yes. See
+# the corrected rule row above: Plating is priced on the TARGET and read off
+# no build. The check was therefore run the only way left - through the items
+# the exemption moves - and on Conquest it moves NONE:
+#
+#   arm (alpha 0.55)      probe 0.70   best 0.45   C/J/A cores moved vs SHIPPED
+#   shipped, Plating billed    43.61%      39.42%     --
+#   Plating exempt             43.61%      39.42%     0 / 17 / 31
+#
+# Coverage identical to the digit on both splits, every role's `build_quality`
+# verdict unchanged, Berserker's Shield still 0 of 18 Carry cores. The whole
+# effect is in the two modes with no gate, and it is one-directional: every
+# arrival is a Plating item (Spectral Armor 13+31, Kinetic Cuirass 4+1) and
+# there are ZERO Plating departures. Borrowed Conquest coverage is unchanged
+# to the item there too, Joust 153 of 537 and Arena 129 of 537 both ways.
+#
+# AND THE CONQUEST ZERO IS KNIFE-EDGE, so do not quote it as "free". The push
+# is a constant per item - +0.039 / +0.078 / +0.117 of `efficiency` for a 5-,
+# 10- or 15-point roll, at most +0.082 of `quality` - against a smallest gap
+# of 0.0244 between the worst item in a Solo/Support core and the best Plating
+# item outside it (median 0.0375 over 32 gods). The push already exceeds the
+# gap; it does not bind only because the 10- and 15-point items sit at ranks
+# 35-104 while Kinetic Cuirass, the one the community actually buys (6
+# Conquest slots), is rank 3-4 and already IN those cores with the charge on.
+# At alpha 1.00, seven Conquest cores do move.
+#
+# IT ALSO CORRECTS SS4.16's ATTRIBUTION. That entry read Solo's -9.4pp as
+# "Health Regen and Plating" off the gold share. Health Regen was right;
+# Plating is worth exactly zero coverage on either split. That is the second
+# time gold share has mispredicted a carve-out, and the trap SS4.16 recorded
+# now has two confirmations and no counter-example.
 
 
 def offmap_gold(eff_row, role_map, exempt=()):
