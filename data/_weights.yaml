@@ -393,7 +393,33 @@ offmap_efficiency: 0.0
 # exemption had to not break: Berserker's Shield is in 17 of 18 Carry model
 # cores at control and 0 of 18 at alpha 0.25 with the exemption ON or OFF.
 # Medusa's core is byte-identical under the two at every strength.
-offmap_exempt: [Max Mana, Mana Regen]
+#
+# ── HEALTH REGEN JOINED THE LIST, 2026-08-22 ──────────────────────────────
+# The stat the entry above named as the next one to examine. Adding a second
+# kind of stat forced the general rule, and it is two mechanical tests with no
+# judgement about SMITE in either: (i) NO `role_stats` entry names it at all,
+# so there is no contrast that could make its absence from one map informative
+# — Health Regen is named by 0 of the 21 entries and 0 of the 89 merged god
+# maps, against Max Health and Physical Protection at 6 of 21 and 36 of 89;
+# and (ii) NO instrument here can price it — `combat.py` contains the string
+# "regen" ZERO times, and it is a per-5-seconds RATE in a repo that refused to
+# invent a clock (register §4.12), so `build_quality` can never adjudicate the
+# charge either way. Run over every stat the pool carries, the two tests
+# select exactly three columns — Max Mana, Mana Regen, Health Regen — and
+# reject every defensive stat §4.15 named. The full table, the scraped base
+# HP5 constant (5.50-6.22 across 88 gods, 44 of them on exactly 5.50), and the
+# place this case is WEAKER than mana's are in `efficiency.offmap_gold`.
+#
+# INERT AT `offmap_efficiency: 0.0`, CHECKED RATHER THAN ASSUMED (§4.10):
+# `viewer/public/index.json` regenerates BYTE-IDENTICAL with Health Regen on
+# the list and off it, sha256 `c9a2bd6847081cdb` both ways, and no build note
+# moves. It does move the `calibrate` input fingerprint, `c68c33d49845` ->
+# `e9c995b14743`, because the hash covers THIS FILE — the control reads
+# 5.6% / 39.1% / 40.0% at both, to the digit, so that is the file and not the
+# data. (Both baselines are regenerated ones: the committed index.json was
+# itself stale against the 22 Aug refresh, and a byte comparison against it
+# would have reported the refresh as this key's effect.)
+offmap_exempt: [Max Mana, Mana Regen, Health Regen]
 # ── The clock (B5) ────────────────────────────────────────────────────────
 # What `damage_value.item_damage_gain` RETURNS. False = one ability rotation
 # plus one basic attack, where the 1:1 mix is a declaration and nothing else.

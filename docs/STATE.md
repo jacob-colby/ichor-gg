@@ -748,6 +748,57 @@ shipped **off**. Numbers are in the named module.
     Numbers, the full sweep, the per-role table and the kit measurement under
     `offmap_exempt` in `_weights.yaml` and in `efficiency.offmap_gold`.
 
+    _Health Regen joined the list, 2026-08-22, and adding a second stat forced
+    the general rule._ This entry argued mana case by case; a list of one
+    cannot say what a list is FOR. The rule is two mechanical tests, neither
+    of which is a judgement about SMITE: **(i) no `role_stats` entry names the
+    stat at all** — not "the role that wants it has no entry", none anywhere,
+    because a stat named for some role and not another has a contrast, and the
+    silence on the second role is then a positive statement by the same table;
+    and **(ii) no instrument in this repo can price it**, since if `combat.py`
+    can see it then charging it is a hypothesis `build_quality` can check and
+    the honest move is to check it.
+
+    Run over every stat the buildable pool carries, the two tests select
+    **exactly three columns** — Max Mana, Mana Regen, Health Regen — and
+    reject every defensive stat §4.15 named. Health Regen is named by **0 of
+    the 21 `role_stats` entries and 0 of the 89 merged god maps**, against Max
+    Health and Physical Protection at 6 of 21 and 36 of 89, so its absence is
+    a global silence and theirs is a per-role statement. `combat.py` contains
+    the string "regen" **zero times**, and Health Regen is a per-5-seconds
+    RATE in a repo that refused to invent a clock (§4.12) — and the clock §4.12
+    refused was a COMBAT clock, while regeneration is mostly what happens
+    between fights. The scrape adds a supply-side constant: base HP5 at level
+    20 spans 5.50–6.22 over 88 gods with 44 of them on exactly 5.50, and as a
+    share of the health pool the five role means span 0.020pp inside a roster
+    range of 0.069pp.
+
+    **Attack Damage is the instructive row and it is why this is a last
+    resort.** It is the one stat named by no role map that got a WEIGHT
+    instead (§3, `attack_damage_fit`), because `damage_value.stat_weights`
+    supplied a leakage-free exchange rate. So there are three outcomes, not
+    two: price it if an instrument can, weight it if an exchange rate exists,
+    exempt it only when neither is available.
+
+    **Where Health Regen's case is thinner than mana's, said plainly.** Mana
+    had a DEMAND measurement — ability costs are scraped, so `rot/pool` said
+    what each role spends. Health regen's demand is incoming damage, which is
+    positional and is not a property of any kit; reading it off a role would
+    be the invented constant §4.12 and §4.13 turned on refusing. This case
+    rests on the two tests and a supply-side constant, with no demand side.
+
+    **Inert at `offmap_efficiency: 0.0`, checked and not assumed (§4.10):**
+    `index.json` regenerates BYTE-IDENTICAL with the stat on the list and off
+    it (sha256 `c9a2bd6847081cdb` both ways) and no build note moves. The
+    `calibrate` fingerprint moves `c68c33d49845` → `e9c995b14743` because the
+    hash covers `_weights.yaml`; the control reads 5.6% / 39.1% / 40.0% at
+    both, to the digit. Both baselines are REGENERATED ones — the committed
+    `index.json` was itself stale against the 22 Aug refresh, and comparing
+    bytes against it would have reported that refresh as this key's effect.
+    The membership is pinned by a test, including that no defensive stat may
+    join. What the exemption is worth once a charge exists is §4.15's sweep,
+    re-run: see the ship decision recorded there.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -954,7 +1005,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (784) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (787) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -979,7 +1030,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (784) ·
 | Gods at 0% coverage | 3 — Ares, Sun Wukong, Yemoja. Sun Wukong left the list with `price_adaptive` and came back on the 22 Aug refresh, with Yemoja; the row before that (Achilles, Chaac, Danzaburou) predates an earlier refresh. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 784 pipeline · 660 viewer |
+| Tests | 787 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

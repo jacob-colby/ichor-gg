@@ -61,7 +61,7 @@ DEFAULT_WEIGHTS = {
     "offense_tags_additive": False,
     # Stats `offmap_efficiency` charges to nobody. See `efficiency.offmap_gold`
     # for why mana is exempted rather than given a fit weight.
-    "offmap_exempt": ["Max Mana", "Mana Regen"],
+    "offmap_exempt": ["Max Mana", "Mana Regen", "Health Regen"],
 }
 
 

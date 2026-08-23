@@ -1,6 +1,6 @@
 # Build quality — `combat.py` pointed at whole builds
 
-_Input fingerprint: `c73b6ea6bdde` — items, gods, tags, community builds, weights. Regenerate with `python -m smite.build_quality`; a different fingerprint means different inputs._
+_Input fingerprint: `e9c995b14743` — items, gods, tags, community builds, weights. Regenerate with `python -m smite.build_quality`; a different fingerprint means different inputs._
 
 > **READ THIS BEFORE ANY NUMBER BELOW.** Of the 138 buildable items, 137 carry passive text and the shipped pricing flags read 13 of them — so **90% of the pool carries passive value this arithmetic cannot see**, and **75% of the community's item slots do** (405 of 537; 91% of ours, 484 of 534). `combat.py` reads exactly one passive — Deathbringer's +35% crit damage. The bias is not even: by the gold model's own residual the community pays **+129g more per slot above its stat line than we do** (mean residual -7g against -136g) and buys fewer stat columns per item (2.80 against 3.49) — that premium IS the passive. **A verdict in our favour is the one to distrust.** The most-bought blind community items are Genji's Guard (29), Shifter's Shield (28), Obsidian Shard (26), Spear of Desolation (23), Shell of Rebuke (21).
 
