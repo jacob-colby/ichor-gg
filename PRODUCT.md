@@ -27,7 +27,7 @@ Two halves: a Python pipeline (`pipeline/smite/`) that scrapes wiki.smite2.com a
 ## Capabilities and Constraints
 
 - Covers all 89 gods on the roster. Cu Chulainn and Ix Chel had empty wiki pages for months and were scraped on 2026-08-19 once those filled in.
-- The model is a working **filter** and not a working **ranker**: measured against a random-baseline control it finds community-worthy items ~7x better than chance (44.0% against a 5.7% random core), while its ordering skill inside the community's own item set is indistinguishable from zero. "Sensible items" is supported; "right order" is not.
+- The model is a working **filter** and not a working **ranker**: measured against a random-baseline control it finds community-worthy items ~7x better than chance (43.6% against a 5.8% random core), while its ordering skill inside the community's own item set is indistinguishable from zero. "Sensible items" is supported; "right order" is not.
 - Joust and Arena have no outcome data whatsoever. Their gods ship *unranked* rather than given an invented tier — but their builds still ship, resting on the model alone. That is two thirds of the shipped builds.
 - The headline agreement metric cannot be used to tune the model: both its targets are also model inputs, so it is maximised by deleting the model. Use the leakage-free measure in `smite.calibrate`. Seventeen correct-looking improvements have been measured and shipped off because of this; see `docs/STATE.md` section 4 before re-attempting any of them.
 - Patch-notes diffs only exist between data refreshes, so that page starts empty and fills in over time.
