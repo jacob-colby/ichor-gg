@@ -13,12 +13,12 @@ Five things that are easy to get wrong here, all expanded in that file:
    (leakage-free coverage against a random-core baseline). Headline coverage
    moving the *other* way is expected and is not by itself a reason to revert.
 
-2. **Check the negative-results register (§4) first.** Sixteen correct-looking
-   improvements have been implemented and measured, and all but one shipped
-   off. Re-running them against the old metric will just reproduce the old
-   answer. Four of the sixteen are *not* "we measured this and it is false",
-   and each says on its own line what it is instead. §4.13 and §4.14 are the
-   first two. **§4.15 is no longer a null at all — `offmap_efficiency` SHIPS
+2. **Check the negative-results register (§4) first.** Seventeen
+   correct-looking improvements have been implemented and measured, and all
+   but one shipped off. Re-running them against the old metric will just
+   reproduce the old answer. Five of the seventeen are *not* "we measured this
+   and it is false", and each says on its own line what it is instead. §4.13
+   and §4.14 are the first two. **§4.15 is no longer a null at all — `offmap_efficiency` SHIPS
    ON at 0.55 as of 2026-08-22**, and the entry is kept in place as the
    history of how a two-gate disagreement got resolved rather than as a
    reason not to try it. §4.16 is a REFUSAL to write a constant: it says why
@@ -26,7 +26,11 @@ Five things that are easy to get wrong here, all expanded in that file:
    measures the exemption that needs none. The three are one story and must
    be read together — §4.16 amends §4.15 on two points, then a third stat
    (Health Regen, on §4.16's two mechanical tests) removed the disagreement
-   and let §4.15 ship.
+   and let §4.15 ship. **§4.17 is the fifth**, and is §4.16's shape applied to
+   the diagnostic rather than to the model: it refuses to collapse
+   `build_quality`'s two effective-health channels into one number, and says
+   what the pair bounds instead. Read it before "improving" that report by
+   averaging them.
 
 3. **The combat model is exact — keep it that way.** `smite.calibrate_combat`
    must stay at 0.0%. Constants carry evidence tiers, and several deliberately

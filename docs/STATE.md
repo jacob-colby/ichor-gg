@@ -161,6 +161,8 @@ Each of these has its evidence in the named module.
 | Each role is judged on **its own objective**, not on one pooled metric | `build_quality.ROLE_OBJECTIVES` | Ours is tankier than the community on 18 of 18 Carries while winning damage on 12 — the same behaviour that is CORRECT for Support (EHP 14 of 14, DPS a coin flip with 3 exact ties). A scalar scoring "more EHP is better" cannot tell those apart, so the pooled count was partly an artifact of averaging |
 | Every role's verdict names **which quantity was a threshold and which was maximised** | `build_quality.role_verdict_lines` | So a reader can disagree with the choice rather than only with the number — and so an inert threshold stays visible next to its measurement instead of being dropped quietly (§4.13) |
 | The **duel score** (EHP × DPS) is Solo's objective and **nowhere else's** | `build_quality.ROLE_OBJECTIVES` | Their TTK on you over yours on them, with the reference opponent cancelling exactly, so doubling EHP and halving damage scores 1.00 — no constant chooses it. Applied to Carry it turns 12/6 into 17/1 by paying full price for Berserker's Shield, i.e. it hides the defect the split exists to find |
+| An objective with an **effective-health term** is scored on BOTH damage channels | `build_quality.EHP_CHANNELS` | A build has one damage output and TWO effective healths, and which one its survival is read on is a property of the ATTACKER — of which this comparison contains none. Mixed-stream EHP is a weighted HARMONIC mean of the two and the ours-over-theirs ratio is monotone in the mix, so every mix lands between the channels and the pair is the whole range rather than a hedge. Solo and Support read `ehp_physical` alone until 2026-08-23 — the two roles whose job is durability, scored on half the damage in the game (§4.17) |
+| A **threshold** reads the one channel its named attacker deals | `build_quality.ehp_against` | The maximands report a pair because no attacker appears in them; a threshold names one — the roster's largest burst, or the Mid/Jungle whose burst is measured — so the channel follows from that attacker's `damage_type` and needs no mix. Both were hard-coded to `ehp_magical`: right by coincidence for the Carry floor, whose reference burster is Scylla, and wrong for the 16 physical Junglers in the kill threshold's population. Neither correction moves either count, which is §4.13 and not a licence |
 | Support is scored with damage **excluded**, not down-weighted | `build_quality.ROLE_OBJECTIVES` | Most of what a Support does is in `UNMEASURABLE` (CC chain duration, peel, aura coverage, wave clear, objective damage, map tempo), and on 3 of 14 Supports the DPS column is identical on both sides to 0.00% because neither build buys any. Scoring a quantity badly is worse than declining to score it |
 | The fit map gets an **Attack Damage column** from the god's own scaling | `damage_value.attack_damage_fit` | `role_stats` and `kit_stat_overlay` between them never name the stat, so the merged fit map scored it 0.0 on 89 of 89 gods while their basic-attack scaling measures it non-zero on all 78 that parse; probe 38.7% → 39.7%, best 39.6% → 40.3% |
 | That column is **credited but not charged** | `scoring.god_fit_score` | `fit` is normalised by the sum of the map, so charging it shrinks every non-carrier's stat term (−12.5% over 10,065 pairs) and promotes the flat tag bonuses added after normalisation — which pulled 43 anti-heal items into Joust and Arena cores, the two modes with no gate to catch it |
@@ -825,6 +827,84 @@ shipped **off**. Numbers are in the named module.
     trap it recorded still stands, though — gold share did not predict the
     SIZE of any of it, only the direction.
 
+17. **Collapsing `build_quality`'s two effective-health channels into one
+    number (2026-08-23)** — a REFUSAL, in §4.16's shape, and the entry exists
+    because averaging them is the obvious next "improvement" and is wrong.
+
+    The defect it came from was real and is fixed: `build_quality`'s two
+    EHP-bearing objectives — Solo's duel score and Support's effective health
+    per 1000 gold — both read `ehp_physical` alone, so **the two roles whose
+    job is durability were scored on half the damage in the game**, with
+    `ehp_magical` computed on the same line and printed in the same tables.
+    A build trading physical protection for magical read as a large loss with
+    durability flat.
+
+    **What was refused is the collapse, not the fix.** Three forms were
+    considered and all three are a constant this repo cannot source:
+
+      * the MEAN asserts equal exposure to the two damage types. It is also
+        not the answer to its own question — against a stream that is a share
+        `f` physical, effective health is `1 / (f/EHP_p + (1-f)/EHP_m)`, a
+        weighted HARMONIC mean, because what averages over a mixed stream is
+        the damage-taken multiplier and not its reciprocal. Amaterasu reads
+        -9.7% arithmetic against -6.7% at the 50/50 it claims to describe.
+      * the MIN asserts the mix is chosen adversarially per build, which no
+        game state produces, and being no kind of mean it is not guaranteed
+        to land inside the range at all.
+      * a STATED MIX is the only honest scalar and nothing here supplies one.
+        The roster is 46 physical gods to 43 magical, but a head count is not
+        a damage share; reading the share off what the community buys against
+        is the leakage §1 is about. This is §4.16's situation exactly — a
+        quantity with no leakage-free exchange rate — and it takes §4.16's
+        answer, which is to write no constant.
+
+    **What made "report both" an answer rather than a punt.** The ratio
+    ours-over-theirs at mix `f` is a Mobius function of `f` with no pole in
+    [0, 1] and is therefore MONOTONE in it, so the interval between the two
+    channels is exactly the set of values every possible damage mix can
+    produce. The two channels are not two samples — they are the bounds.
+    A verdict that holds at both endpoints holds at every mix; one that does
+    not is not available at any price payable here. So the report counts
+    ahead / behind / level / **mix-dependent**, names every mix-dependent
+    build, and prints the median as an interval. Checked in a test rather
+    than argued.
+
+    **Measured on the shipped builds, and the direction is not what a reader
+    of the old table would guess.** Solo goes 17 ahead / 1 behind to 17 / 0
+    with Amaterasu mix-dependent (-23.5% against a physical opponent, +28.3%
+    against a magical one); Support 11 / 3 to 11 / 1 with Ares and Athena
+    mix-dependent (-10.4% / +15.3% and -14.3% / +11.1%). Bacchus is behind on
+    both channels and stays behind. Three of 32 builds, every one of them a
+    build the single channel scored as a loss — the artifact ran in exactly
+    one direction, because the flag that moved these builds moved them from
+    physical protection to magical.
+
+    **How much of 08-22 E was this.** Re-run against E's own pre-change build
+    notes, the single-channel column reproduces the shipped commit message to
+    the digit (Solo 18/0 +69.0% -> 17/1 +53.4%, Support 14/0 +22.8% ->
+    11/3 +22.8%), which is what makes the pair comparable. Per build, E's cost
+    to our own maximand is worse than -10% on **10 of 18 Solos on the physical
+    channel and 1 of 18 on the magical**, and on **3 of 14 Supports against 0
+    of 14**; six of those 32 builds change SIGN between the channels. Solo's
+    median cost is -15.6pp read on physical and -4.4pp read on magical, and
+    Support's is 0.0pp against +2.0pp. **E's reported cost to Solo and Support
+    was measured on the channel it moved away from and not on the channel it
+    moved toward**, and every judgement made from that table since is wrong in
+    that direction. **It does not reverse E**, and the register should not be
+    read as saying so: under the pair, E moves no Solo or Support build from
+    ahead-at-every-mix to behind-at-every-mix. Ares goes ahead to
+    mix-dependent, Bacchus mix-dependent to behind — and Bacchus was already
+    mix-dependent BEFORE E, which the single channel could not show.
+
+    **What would collapse the interval to a point**: a measured damage-type
+    share, per match or per role, from a source outside this repo — the
+    harmonic form above is then the whole of the change and both endpoints are
+    already computed. **What would falsify the bracket**: effective health
+    against a mixed stream not being a weighted harmonic mean of the two
+    channels, i.e. mitigation ceasing to be linear in protection per damage
+    instance, which is `combat.effective_health` and is calibrated to 0.0%.
+    Numbers and the derivation in `build_quality.EHP_CHANNELS`.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -1052,7 +1132,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (790) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (799) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -1077,7 +1157,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (790) ·
 | Gods at 0% coverage | 3 — Ares, Sun Wukong, Yemoja. Sun Wukong left the list with `price_adaptive` and came back on the 22 Aug refresh, with Yemoja; the row before that (Achilles, Chaac, Danzaburou) predates an earlier refresh. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 790 pipeline · 660 viewer |
+| Tests | 799 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

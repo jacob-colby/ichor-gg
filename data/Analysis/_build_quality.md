@@ -86,21 +86,29 @@ Per 1000 gold, by role:
 
 Most roles clear a THRESHOLD and then maximise something else, and one pooled metric cannot represent five roles that do not share an objective. Each row below names both quantities. **The passive blind spot at the top of this report applies to every row here exactly as it applies to the pooled figures** — slicing by role does not escape it, and the bias still runs in our favour.
 
-| Role | n | Threshold | Binds? | Maximised | ahead | behind | tie | median |
-|---|---|---|---|---|---|---|---|---|
-| Carry | 18 | survive one enemy burst rotation | **no** — 0 of 36 builds fail it | sustained DPS per 1000g | **12** | **5** | 1 | **+25.2%** |
-| Jungle | 17 | rotation burst >= a reference squishy's EHP | **no** — all 78 builds fail it | rotation burst per 1000g | **12** | **5** | 0 | **+10.3%** |
-| Mid | 22 | rotation burst >= a reference squishy's EHP | **no** — all 78 builds fail it | sustained DPS per 1000g | **17** | **5** | 0 | **+9.8%** |
-| Solo | 18 | **none** | – | duel score, EHP x DPS | **17** | **1** | 0 | **+53.4%** |
-| Support | 14 | **none** | – | effective health per 1000g | **11** | **3** | 0 | **+22.8%** |
+**An objective containing effective health is scored on BOTH damage channels and read as the interval between them.** A build has one damage output and two effective healths; which one its survival is read on is a property of the ATTACKER, and there is no attacker in this comparison. Against a stream that is a share `f` physical, effective health is `1 / (f/EHP_p + (1-f)/EHP_m)` — a weighted harmonic mean, because what averages over a mixed stream is the damage-taken multiplier and not its reciprocal — and the ours-over-theirs ratio is monotone in `f`, so **every possible damage mix lands between the two channels and the pair is the whole range**. `ahead` below therefore means ahead at every mix, `behind` means behind at every mix, and `mix-dependent` means the answer is a fact about the enemy team that this comparison does not contain. Averaging the two channels would assert equal exposure, which is a constant no source here supplies — and would not even be the answer to its own question, since the correct collapse at 50/50 is harmonic and not arithmetic. Until 2026-08-23 both roles read `ehp_physical` alone, i.e. the two roles whose job is durability were scored on half the damage in the game.
+
+| Role | n | Threshold | Binds? | Maximised | ahead | behind | level | mix-dependent | median |
+|---|---|---|---|---|---|---|---|---|---|
+| Carry | 18 | survive one enemy burst rotation | **no** — 0 of 36 builds fail it | sustained DPS per 1000g | **12** | **5** | 1 | – (no EHP term) | **+25.2%** |
+| Jungle | 17 | rotation burst >= a reference squishy's EHP | **no** — all 78 builds fail it | rotation burst per 1000g | **12** | **5** | 0 | – (no EHP term) | **+10.3%** |
+| Mid | 22 | rotation burst >= a reference squishy's EHP | **no** — all 78 builds fail it | sustained DPS per 1000g | **17** | **5** | 0 | – (no EHP term) | **+9.8%** |
+| Solo | 18 | **none** | – | duel score, EHP x DPS | **17** | **0** | 0 | **1** | **+52.5% … +53.4%** |
+| Support | 14 | **none** | – | effective health per 1000g | **11** | **1** | 0 | **2** | **+16.6% … +22.8%** |
+
+Builds whose verdict the damage mix decides — the interval spans both answers, so neither is available here:
+
+- **Amaterasu** (Solo) — vs a physical opponent -23.5% · vs a magical opponent +28.3%
+- **Ares** (Support) — vs a physical opponent -10.4% · vs a magical opponent +15.3%
+- **Athena** (Support) — vs a physical opponent -14.3% · vs a magical opponent +11.1%
 
 Why each objective is what it is:
 
 - **Carry** — a Carry needs enough effective health to live through one burst — a floor, not a maximand. Buying more than the floor is gold not spent on damage, which is what the pooled metric scored as a win.
 - **Jungle** — same kill threshold as Mid, and past it a gank is priced on burst rather than on sustained damage — a Jungler is not standing in the fight for the seconds a DPS figure assumes.
 - **Mid** — a Mid's rotation either kills the squishy or it does not; past that the question is how often it comes back.
-- **Solo** — not a threshold at all — a RATIO. Their time-to-kill on you over yours on them is (EHP / ref DPS) / (ref EHP / DPS), so the reference opponent CANCELS in ours-over-theirs and what is left is EHP x DPS. A build that doubles effective health and halves damage scores exactly 1.00 — neutral, which is the case neither scalar describes, and it is a property of the algebra rather than of a constant anyone chose.
-- **Support** — damage is EXCLUDED, not down-weighted. Most of what a Support is for is in `UNMEASURABLE`, and its damage column is provably empty on 3 of 14 gods.
+- **Solo** — not a threshold at all — a RATIO. Their time-to-kill on you over yours on them is (EHP / ref DPS) / (ref EHP / DPS), so the reference opponent CANCELS in ours-over-theirs and what is left is EHP x DPS. A build that doubles effective health and halves damage scores exactly 1.00 — neutral, which is the case neither scalar describes, and it is a property of the algebra rather than of a constant anyone chose. The EHP factor is effective health against THAT reference opponent, so it is scored on both channels and read as the interval between them — a duel against a physical opponent and a duel against a magical one, with every mixed opponent in between.
+- **Support** — damage is EXCLUDED, not down-weighted. Most of what a Support is for is in `UNMEASURABLE`, and its damage column is provably empty on 3 of 14 gods. Effective health is scored on BOTH channels and read as the interval between them: a Support that survives physical damage and one that survives magical damage are different builds, and which matters is a property of the enemy team, which is not in this comparison.
 
 ### Neither threshold binds, and that is a statement about this arithmetic
 
@@ -108,8 +116,8 @@ Both thresholds were defined, measured and left in the table with their measurem
 
 | Threshold | population | reference | separates | nearest build |
 |---|---|---|---|---|
-| Carry: survive one enemy burst rotation | 36 builds | largest burst in the roster at 0 protection — Scylla, ours, 2,952 | **0 of 36** | 1.14x the threshold |
-| Mid / Jungle: rotation burst >= a reference squishy's EHP | 78 builds | median effective health of the community's own Carry and Mid builds, magical — 3,399 | **78 of 78** | 0.72x the threshold |
+| Carry: survive one enemy burst rotation | 36 builds | largest burst in the roster at 0 protection — Scylla, ours, 2,952, magical damage, so effective health is read on that channel | **0 of 36** | 1.14x the threshold |
+| Mid / Jungle: rotation burst >= a reference squishy's EHP | 78 builds | median effective health of the community's own Carry and Mid builds, on the channel each attacker's own damage type reads — physical 3,788 / magical 3,399 | **78 of 78** | 0.72x the threshold |
 
 A threshold that separates none of the population and a threshold that separates all of it are equally useless, and one of each is what these are. **Read this as "we cannot currently evaluate a threshold", not as "thresholds do not matter in SMITE"** — the cause is on our side of the arithmetic. A burst here is one cast of every ability with no basic attacks, no item passive, no follow-up and one target, while effective health is full level-20 health plus every protection the six items carry; the two are about an order of magnitude apart. Two things would change the answer and neither is a tuning choice: **a clock** (register §4.12 — a burst window in seconds would let basic attacks into the burst, and it is refused because no source supplies one), or **priced passives** (register §4.5 — ~90% of the pool carries value neither side of this comparison can see). Until one of those exists, Carry, Mid and Jungle are judged on their maximand alone.
 
