@@ -13,10 +13,10 @@ Five things that are easy to get wrong here, all expanded in that file:
    (leakage-free coverage against a random-core baseline). Headline coverage
    moving the *other* way is expected and is not by itself a reason to revert.
 
-2. **Check the negative-results register (§4) first.** Seventeen
+2. **Check the negative-results register (§4) first.** Eighteen
    correct-looking improvements have been implemented and measured, and all
    but one shipped off. Re-running them against the old metric will just
-   reproduce the old answer. Five of the seventeen are *not* "we measured this
+   reproduce the old answer. Six of the eighteen are *not* "we measured this
    and it is false", and each says on its own line what it is instead. §4.13
    and §4.14 are the first two. **§4.15 is no longer a null at all — `offmap_efficiency` SHIPS
    ON at 0.55 as of 2026-08-22**, and the entry is kept in place as the
@@ -30,7 +30,12 @@ Five things that are easy to get wrong here, all expanded in that file:
    the diagnostic rather than to the model: it refuses to collapse
    `build_quality`'s two effective-health channels into one number, and says
    what the pair bounds instead. Read it before "improving" that report by
-   averaging them.
+   averaging them. **§4.18 is the sixth**, and closes the §4.15–§4.16 story:
+   it is §4.16's rule running the other way — the first stat the two tests
+   REJECTED (Echo) — wrapped around a hypothesis that is right about which
+   gods regress and wrong about why. It also says why the role that pays most
+   for the off-map charge is not being wronged, so read it before turning that
+   charge down for a role.
 
 3. **The combat model is exact — keep it that way.** `smite.calibrate_combat`
    must stay at 0.0%. Constants carry evidence tiers, and several deliberately

@@ -677,6 +677,16 @@ shipped **off**. Numbers are in the named module.
     off-map mass is free credit, theirs is a free debit. Charging one without
     pricing the other reaches the right answer for half the right reason.
 
+    _The cost this flag imposes on Jungle was examined 2026-08-23 and is
+    §4.18._ Two arms were built to pay it down and both ship off. The short
+    version is that the Jungle regression is not what it looks like: across
+    the 15 Jungle cores the charge moves, departures carry 42 Jungle community
+    slot sightings and arrivals carry 74, and two of the three gods behind the
+    14-ahead-to-12 move are swapping The Crusher and The Reaper for Titan's
+    Bane.
+    **On the community record the charge is already right for Jungle**, which
+    is also where five of the probe split's gained gods come from.
+
 
 16. **Naming Max Mana in the role maps (2026-08-22)** — `offmap_exempt`, and
     the entry is a REFUSAL to write a weight followed by a measurement of the
@@ -827,6 +837,16 @@ shipped **off**. Numbers are in the named module.
     trap it recorded still stands, though — gold share did not predict the
     SIZE of any of it, only the direction.
 
+    _Test (ii) refused its first stat on 2026-08-23, which is §4.18._ Echo
+    passes test (i) — named by 0 of 21 entries and 0 of 89 merged maps, the
+    same standing as mana — and is the largest single line in the charge on a
+    Jungle core at 43.9%. `combat.echo_multiplier` prices it, so the rule
+    demanded a check instead of an exemption; the check came back against the
+    exemption. Until then the rule had only ever selected, so read §4.16 and
+    §4.18 together for what test (ii) is actually for. The membership is now
+    enforced against `build_quality.COMBAT_PRICED` by a test rather than by
+    this paragraph.
+
 17. **Collapsing `build_quality`'s two effective-health channels into one
     number (2026-08-23)** — a REFUSAL, in §4.16's shape, and the entry exists
     because averaging them is the obvious next "improvement" and is wrong.
@@ -904,6 +924,147 @@ shipped **off**. Numbers are in the named module.
     channels, i.e. mitigation ceasing to be linear in protection per damage
     instance, which is `combat.effective_health` and is calibrated to 0.0%.
     Numbers and the derivation in `build_quality.EHP_CHANNELS`.
+
+18. **Charging Jungle for stats its map does not name (2026-08-23)** — the
+    hypothesis was "the charge is safe exactly where a role's map covers its
+    damage stats". It is **confirmed as a per-god predictor and refuted as a
+    mechanism**, and both arms built to act on it ship off. Measured at control
+    fingerprint `527eb8f0a586` (baseline 5.8%; the shipped flag reads probe
+    43.6% and best 39.4% there, against 38.7% and 39.5% at `offmap_efficiency`
+    0.0).
+
+    **Confirmed, at god level rather than role level, which is the test that
+    matters.** Predictor: the share of the gold the charge bills in a god's
+    control core that sits on a stat `combat.py` prices as damage. Outcome:
+    that god's own role maximand measured on OUR core alone, so no community
+    build enters — and where §4.17 made that maximand an interval, the scalar
+    is the WORST channel, the same reduction `threshold_probe` uses, so no
+    interval is averaged into a point. Over the 50 cores the charge moves,
+    Spearman **−0.333**; by tercile of damage-share the median delta is
+    **+8.6% / −0.5% / −3.6%** and the worse-count is **6 of 16 → 9 of 17 →
+    13 of 17**. Restricted to the three roles whose objective §4.17 did not
+    touch (Carry, Mid, Jungle, 35 moved cores) it is **−0.396**, with medians
+    **+17.5% / +11.8% / −4.8%** and the top tercile worse on **12 of 12**.
+
+    _First measured 2026-08-23 at fingerprint `c454186bff12` and re-measured
+    at `527eb8f0a586` after the day's refresh landed; the correlation was
+    −0.529 on the earlier data. It is a tendency across 89 gods, not a
+    constant, and quoting either figure without its fingerprint is the
+    mistake §1 warns about._
+
+    **Refuted on all three cases the hypothesis was built from.**
+
+    * *Mid is not spared by map coverage.* Its off-map bill is **88.3%
+      Lifesteal**, which no Mid map names either. Mid is spared because only 2
+      of 22 Mid cores move at all — its cores carry the least off-map gold of
+      any role, 5,239g over 22 gods against Jungle's 20,906g over 17.
+    * *Jungle's bill is not the five stats named.* It is **43.9% Echo** — a
+      stat named by 0 of 21 `role_stats` entries and 0 of 89 merged god maps,
+      the same standing as mana. Attack Speed is 16.5%, Lifesteal 16.5%, Max
+      Health 11.8%, Physical Protection 8.4%; **Critical Chance and Cooldown
+      Rate are billed nothing at all.**
+    * *Susano's swap is not the off-map stat.* Tekko-Kagi leaves because its
+      Attack Speed is billed 418g of 2700g, dropping it 0.488 → 0.409 under
+      Pendulum Blade's 0.422. Jungle's maximand is `burst_70/1000g` and a
+      burst here counts **no basic attacks** (§4.13), so that Attack Speed was
+      worth **exactly 0.0** to the number that reports the loss. What he lost
+      is 5 Strength, flat penetration for percentage, and +50g of denominator.
+
+    **And the finding that reverses the premise: on Jungle the charge moves
+    cores TOWARD the community record.** Across the 15 Jungle cores it moves,
+    departures carry **42** Jungle community slot sightings and arrivals carry
+    **74** — The Crusher (2 of 102 Jungle slots) and The Reaper (6) out,
+    Titan's Bane (14) and Hydra's Lament (9) in. The `build_quality` drop 14
+    ahead/2 behind → 12/5 is **three gods**: Da Ji and Tsukuyomi leave
+    `ahead` and Pele goes from level to behind, and **two of the three are
+    that exact swap** (8 sightings out, 15 in, each). That is also why the
+    probe split rises 38.7% → 43.6%, with five of the gained gods Jungle.
+
+    **Arm 1, `offmap_exempt` gains Echo — refused, and it is the first time
+    §4.16's test (ii) has done work.** Echo passes test (i) outright. It fails
+    (ii): `combat.echo_multiplier` prices it off a DOCUMENTED share, so the
+    rule says check the charge rather than exempt it. Checked:
+
+        arm (alpha 0.55)     probe 0.70   best 0.45   C/J/A churn   Jungle
+        control 0.00              38.7%       39.5%     0/ 0/ 0   14a/2b +14.9%
+        shipped, Echo billed      43.6%       39.4%    50/48/54   12a/5b +10.3%
+        Echo exempt               42.3%       39.2%    50/29/53   14a/2b +15.0%
+
+    It restores Jungle exactly and holds the Carry guard (Berserker's Shield 0
+    of 18), and it comes back **against** the exemption for a nameable reason:
+    every one of the 7 gods whose coverage moves loses a **community** item to
+    an Echo item — The Crusher into six of them, taking Titan's Bane out three
+    times, and Damaru into the seventh. The community is not blind to Echo —
+    16 of its 537 slots take an Echo item — it buys them for Mid (7) and
+    Support (6) and essentially never for Jungle (2 of 102) or Carry (0).
+    There **is** information about who wants Echo; it is simply not in
+    `role_stats`, and reading it off the
+    community's composition is the leakage §1 is about. The methodological
+    half is worth as much: Echo's only effect anywhere in the model is the
+    multiplier on exactly the ability damage Jungle's maximand sums, so
+    sparing its charge **cannot fail** to raise that number. Test (ii) exists
+    so the check happens anyway, and the check is worth something only because
+    a second, non-circular measure can disagree with it. Here it did.
+
+    **Arm 2, per-role `offmap_efficiency` — the best-performing arm, and
+    refused anyway.** Jungle at 0.0 with every other role at 0.55 reads probe
+    **42.8%**, best split **39.5%** — the only arm that leaves that split
+    exactly at control — Jungle back to 14a/2b +14.9%, Carry untouched at
+    12a/5b +28.2%. Three reasons, in order of weight.
+    (1) **What it buys is Da Ji and Pele losing Titan's Bane** and getting The
+    Crusher and The Reaper back — it is better by an arithmetic that cannot
+    count basic attacks and worse by the community's own record. (2) A
+    per-role strength is five constants with no source, chosen from the gate
+    they improve; §4.12 and §4.13 both turned on refusing exactly that, and it
+    costs 0.8pp of the 4.9pp the leakage-free measure gained. (3) **The
+    mechanism is not per-role.** Each role's bill is a different stat, and
+    inside Jungle the damage share of the bill spans 0.21 to 1.00 across gods;
+    one number per role cannot express a per-stat fact.
+
+    **Two things seen in passing and deliberately not acted on.** First, on
+    this data the shipped flag reads **39.4% against control's 39.5%** on the
+    best split — the "at or above control on both splits" property that chose
+    0.55 (§4.15) is now 0.1pp negative there. That is less than one item on
+    one god (0.19pp at 89 gods) and it moved with the refresh rather than with
+    anything here, so it is reported and not treated as a change; §4.15's
+    region is what would have to be re-swept, and that is a different change
+    with a different argument. Second, **Plating is the largest untested
+    column left** — 39.9% of the bill on a Solo core and 63.2% on a Support
+    one, named by no role map and priced by `combat.flat_reduction_multiplier`,
+    so it is eligible for exactly the check Echo just failed. It was not run
+    here because the two roles that pay it were mid-repair when this started;
+    §4.17 has landed and they are readable again.
+
+    **So nothing shipped, and the composition now re-measures.**
+    `build_quality`'s "Where the off-map charge lands" section prints the bill
+    per role and per stat with each stat's standing under the two tests beside
+    it, because every attempt on this charge so far — §4.15 for the defect
+    stats, §4.16 for mana and Health Regen, this one for Echo — has rebuilt
+    that table by hand against a dataset that had moved under the last one.
+    `scoring.fit_map` is now the single place the merged map is built, so the
+    diagnostic asks the same map `score_god_items` scores with rather than
+    keeping a second opinion, and `test_no_exempted_stat_may_be_one_combat_can_price`
+    enforces test (ii) against `build_quality.COMBAT_PRICED` instead of
+    leaving it as a sentence in a comment.
+
+    **The extraction is an exact no-op, checked the way §4.16 says to.**
+    `viewer/public/index.json` REGENERATED under the parent commit's code and
+    under this one's is byte-identical, sha256 `fed0820b5545`. A diff against
+    the *committed* `index.json` is not that check and would have failed:
+    the committed file is itself stale against the same day's refresh, which
+    is the trap §4.16 recorded and the second time it has been walked into.
+
+    **What this leaves for the next session, and it is a WEIGHT rather than an
+    exemption.** `attack_damage_fit` gives 78 of 89 merged maps an Attack
+    Damage column, measured from the god's own basic-attack scaling, while
+    Attack Speed reaches only 35 of 89 — and the two are the multiplicands of
+    the same basic attack. The model therefore credits a god for one half of
+    its basic attack and charges it for the other, which is what removed
+    Tekko-Kagi from six Jungle cores. An exchange rate for it is available and
+    leakage-free the way mana's never was: `combat.attack_dps` states how the
+    two combine, and both terms are scraped. That is §4.16's third outcome —
+    price it, weight it, or exempt it — and this is the first stat since
+    Attack Damage with a real claim on the second.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -1024,6 +1185,27 @@ honest target and below it would be invisible.** The role maps are still
 incomplete; what changed is that one class of stat now has a rule for being
 left alone, and the rest of the incompleteness is untouched.
 
+### The fit map credits half a basic attack and charges the other half
+The clearest piece of that remaining incompleteness, found 2026-08-23 while
+looking for the Jungle cost (§4.18) and deliberately not acted on in the same
+session. `attack_damage_fit` gives **78 of 89** merged god maps an Attack
+Damage column, measured from the god's own basic-attack scaling; **Attack
+Speed reaches only 35 of 89**, because `role_stats` names it for five labels
+and `kit_stat_overlay` emits it only when an ability scales on it. The two are
+the multiplicands of the same basic attack, so the model credits a god for one
+and bills it for the other — that is what took Tekko-Kagi out of six Jungle
+cores, for 418g of a stat those six are credited nothing for and charged in
+full.
+
+**It wants a WEIGHT, not an exemption**, and unlike mana the exchange rate
+exists and is leakage-free: `combat.attack_dps` states how Attack Damage and
+Attack Speed combine, and both terms are scraped. Two things to check first.
+The rate is **build-dependent** in a way `damage_value.stat_weights` is not —
+it needs a reference build, for which `passives.conversion_grants` is the
+precedent (§3, priced against a typical build) — and the column has to ship
+`denom_exclude`d for the reason `attack_damage_fit` does, or about a third of
+whatever it reads will be the normaliser shrinking every non-carrier (§4.4).
+
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
   a leveled practice target; `calibrate_combat --plan` will generate the setup.
@@ -1132,7 +1314,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (799) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (808) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -1157,7 +1339,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (799) ·
 | Gods at 0% coverage | 4 — Ares, Nut, Sun Wukong, Yemoja. Sun Wukong left the list with `price_adaptive` and came back on the 22 Aug refresh, with Yemoja; the row before that (Achilles, Chaac, Danzaburou) predates an earlier refresh. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 799 pipeline · 660 viewer |
+| Tests | 808 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

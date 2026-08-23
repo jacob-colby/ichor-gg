@@ -29,7 +29,7 @@ Two halves: a Python pipeline (`pipeline/smite/`) that scrapes wiki.smite2.com a
 - Covers all 89 gods on the roster. Cu Chulainn and Ix Chel had empty wiki pages for months and were scraped on 2026-08-19 once those filled in.
 - The model is a working **filter** and not a working **ranker**: measured against a random-baseline control it finds community-worthy items ~7x better than chance (43.6% against a 5.8% random core), while its ordering skill inside the community's own item set is indistinguishable from zero. "Sensible items" is supported; "right order" is not.
 - Joust and Arena have no outcome data whatsoever. Their gods ship *unranked* rather than given an invented tier — but their builds still ship, resting on the model alone. That is two thirds of the shipped builds.
-- The headline agreement metric cannot be used to tune the model: both its targets are also model inputs, so it is maximised by deleting the model. Use the leakage-free measure in `smite.calibrate`. Seventeen correct-looking improvements have been measured and shipped off because of this; see `docs/STATE.md` section 4 before re-attempting any of them.
+- The headline agreement metric cannot be used to tune the model: both its targets are also model inputs, so it is maximised by deleting the model. Use the leakage-free measure in `smite.calibrate`. Eighteen correct-looking improvements have been measured and shipped off because of this; see `docs/STATE.md` section 4 before re-attempting any of them.
 - Patch-notes diffs only exist between data refreshes, so that page starts empty and fills in over time.
 - 72 of the 89 gods have an aspect, and only the 7 with a hand-tuned scoring overlay in `data/_weights.yaml` have a build behind it. The aspect control shows for all 72 — the kit text and the community's pick rate are real information — and states plainly when it will not move the build.
 - Threat detection reads the scraped **ability text**, not just the wiki's role labels, and takes the union of the two — `Healing` is on 9 of 89 gods while 42 actually heal, and player-made walls (Cabrakan, Odin, Thor, Ymir) have no label at all. The counts say a kit *contains* an effect, not how often it lands or how long it lasts; that is the honest ceiling on text classification.
@@ -47,7 +47,7 @@ Name: **ichor**. Explicitly a fan project — not affiliated with or endorsed by
 - Design specs and implementation plans for prior viewer work: `docs/specs/`, `docs/plans/`.
 - Living engineering doc — current state, design decisions with their evidence, negative-results register, what's left: `docs/STATE.md`. The dated files in `docs/specs/` and `docs/plans/` are point-in-time and never updated.
 - The combat model is calibrated against twelve in-game readings at 0.0% worst-case error (`pipeline/smite/combat.py`, gated by `smite.calibrate_combat`).
-- Test suites back the pipeline and viewer: 799 Python tests (`pipeline/smite/tests`), 660 viewer tests.
+- Test suites back the pipeline and viewer: 808 Python tests (`pipeline/smite/tests`), 660 viewer tests.
 - No invented testimonials, customer logos, or pricing exist and none should be fabricated — this is a free fan tool, not a commercial product.
 
 ## Product Principles

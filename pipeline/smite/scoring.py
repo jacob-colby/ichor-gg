@@ -828,6 +828,79 @@ def converter_stat_weights(god, items, base_map, weights=None):
     return {stat: w for stat, w in out.items() if w > 0.0}
 
 
+def fit_map(god, items, weights, profile=None):
+    """`(base_map, denom_exclude)` — the merged fit map for one god, and the
+    columns that are credited without being charged to the normaliser.
+
+    THE ONE PLACE THE MAP IS BUILT. `score_god_items` uses it to score, and
+    `offmap_efficiency` charges an item for the gold it spent on stats this
+    map does not name — so anything that wants to ask what a god's map says
+    has to ask THIS, not rebuild it. `efficiency.offmap_gold` makes the same
+    argument about `stat_gold`: a second arithmetic that agrees today is a
+    second arithmetic that can drift tomorrow, and the two halves of `quality`
+    disagreeing about what a god wants is exactly the hole §4.15 records.
+
+    The flavor `stat_overlay` is NOT applied here — `god_fit_score` merges it
+    over the top, and `score_god_items` merges it again for the off-map map,
+    so both halves see the same thing. What is here is the role table, the kit
+    overlay, `damage_fit_blend`, `attack_damage_fit` and `conversion_fit`.
+    """
+    profile = profile or {}
+    eff_weights = weights
+    if profile.get("signals"):
+        eff_weights = _deep_merge(weights, {"signals": profile["signals"]})
+    stat_overlay = profile.get("stat_overlay")
+
+    # Set when the Attack Damage column is injected below; see `god_fit_score`.
+    denom_exclude = ()
+
+    # Fun flavors set archetype_bypass to ignore the god's archetype entirely.
+    if profile.get("archetype_bypass"):
+        return {}, denom_exclude
+
+    base_map = _role_stat_map(god, weights)
+    blend = eff_weights.get("kit_blend", 0.5)
+    hybrid = is_hybrid_scaler(god, eff_weights)
+    for stat, w in kit.kit_stat_overlay(kit.scaling_profile(god), god,
+                                        include_off_type=hybrid).items():
+        base_map[stat] = (1 - blend) * base_map.get(stat, 0.0) + blend * w
+    # B4: move the offensive weights toward what this god's own scaling
+    # coefficients say. Defensive stats keep their role weight — nothing
+    # here can price a stat that adds no damage. Attack Damage is NOT part
+    # of this any more; it is its own flag below.
+    dmg_blend = eff_weights.get("damage_fit_blend", 0.0)
+    if dmg_blend:
+        base_map = damage_value.blend_stat_values(god, base_map, dmg_blend)
+
+    # ATTACK DAMAGE, which the role table and the kit overlay between them
+    # never name — the merged map scores it 0.0 on 89 of 89 gods while the
+    # god's own basic-attack scaling says it is worth 0.24-1.00 of their
+    # top stat. Applied AFTER the blend so the blend's `reference` is the
+    # role map's own maximum and the two flags stay independent.
+    ad_fit = eff_weights.get("attack_damage_fit", 0.0)
+    if ad_fit:
+        base_map = damage_value.attack_damage_fit(god, base_map, ad_fit)
+        # Credited, not charged — see `god_fit_score`. A flavor that names
+        # Attack Damage itself (the `attack-speed` build does) is stating a
+        # real want and keeps its place in the normaliser; only the column
+        # this flag injected is exempt.
+        if not (stat_overlay or {}).get(damage_value.ATTACK_DAMAGE_KEY):
+            denom_exclude = (damage_value.ATTACK_DAMAGE_KEY,)
+
+    # A stat the god can CONVERT into power belongs in the map, for that
+    # god only. `price_conversions` fixed the efficiency half of this -
+    # Transcendence's residual went +216 to -8 - and left the fit half
+    # untouched, so the item still scored fit 0.17 for Ullr and sat 48th of
+    # 95 in Joust, where there is no win rate to carry it. Efficiency
+    # knowing an item is a bargain does not help if fit still says the god
+    # does not want that kind of item.
+    conv_fit = eff_weights.get("conversion_fit", 0.0)
+    if conv_fit:
+        for stat, w in converter_stat_weights(god, items, base_map, eff_weights).items():
+            base_map[stat] = max(base_map.get(stat, 0.0), conv_fit * w)
+    return base_map, denom_exclude
+
+
 def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_map, profile=None):
     """Score every buildable, damage-filter-passing item for one god, ranked by
     total descending. An optional profile (from resolve_profile) applies mode
@@ -839,53 +912,7 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     stat_overlay = profile.get("stat_overlay")
     tag_bonus = profile.get("tag_bonus")
 
-    # Set when the Attack Damage column is injected below; see `god_fit_score`.
-    denom_exclude = ()
-
-    # Fun flavors set archetype_bypass to ignore the god's archetype entirely.
-    if profile.get("archetype_bypass"):
-        base_map = {}
-    else:
-        base_map = _role_stat_map(god, weights)
-        blend = eff_weights.get("kit_blend", 0.5)
-        hybrid = is_hybrid_scaler(god, eff_weights)
-        for stat, w in kit.kit_stat_overlay(kit.scaling_profile(god), god,
-                                            include_off_type=hybrid).items():
-            base_map[stat] = (1 - blend) * base_map.get(stat, 0.0) + blend * w
-        # B4: move the offensive weights toward what this god's own scaling
-        # coefficients say. Defensive stats keep their role weight — nothing
-        # here can price a stat that adds no damage. Attack Damage is NOT part
-        # of this any more; it is its own flag below.
-        dmg_blend = eff_weights.get("damage_fit_blend", 0.0)
-        if dmg_blend:
-            base_map = damage_value.blend_stat_values(god, base_map, dmg_blend)
-
-        # ATTACK DAMAGE, which the role table and the kit overlay between them
-        # never name — the merged map scores it 0.0 on 89 of 89 gods while the
-        # god's own basic-attack scaling says it is worth 0.24-1.00 of their
-        # top stat. Applied AFTER the blend so the blend's `reference` is the
-        # role map's own maximum and the two flags stay independent.
-        ad_fit = eff_weights.get("attack_damage_fit", 0.0)
-        if ad_fit:
-            base_map = damage_value.attack_damage_fit(god, base_map, ad_fit)
-            # Credited, not charged — see `god_fit_score`. A flavor that names
-            # Attack Damage itself (the `attack-speed` build does) is stating a
-            # real want and keeps its place in the normaliser; only the column
-            # this flag injected is exempt.
-            if not (stat_overlay or {}).get(damage_value.ATTACK_DAMAGE_KEY):
-                denom_exclude = (damage_value.ATTACK_DAMAGE_KEY,)
-
-        # A stat the god can CONVERT into power belongs in the map, for that
-        # god only. `price_conversions` fixed the efficiency half of this -
-        # Transcendence's residual went +216 to -8 - and left the fit half
-        # untouched, so the item still scored fit 0.17 for Ullr and sat 48th of
-        # 95 in Joust, where there is no win rate to carry it. Efficiency
-        # knowing an item is a bargain does not help if fit still says the god
-        # does not want that kind of item.
-        conv_fit = eff_weights.get("conversion_fit", 0.0)
-        if conv_fit:
-            for stat, w in converter_stat_weights(god, items, base_map, eff_weights).items():
-                base_map[stat] = max(base_map.get(stat, 0.0), conv_fit * w)
+    base_map, denom_exclude = fit_map(god, items, weights, profile)
 
     # Magnitude reference for the fit term, computed once over the whole pool.
     reference = stat_reference(items) if eff_weights.get("magnitude_fit", False) else None

@@ -1103,6 +1103,146 @@ def channel_verdict(deltas):
     return "level"
 
 
+#: Every stat `combat.py` reads off a build's stat totals, and what it does
+#: with it. A stat ABSENT from this map is one the non-circular instrument
+#: cannot see at all, which is half of what decides whether `offmap_exempt`
+#: may take it (STATE.md §4.16 test (ii)) — and a test refuses any overlap
+#: between this map and the shipped exempt list, so the rule is enforced here
+#: rather than restated in a comment.
+COMBAT_PRICED = {
+    "Strength": "ability + basic-attack damage",
+    "Intelligence": "ability damage",
+    "Attack Damage": "basic attack",
+    "Attack Speed": "attack_dps",
+    "Critical Chance": "crit branch",
+    "Penetration": "damage_dealt",
+    "Cooldown Rate": "casts_per_second",
+    "Echo": "echo_multiplier",
+    "Max Health": "effective_health",
+    "Physical Protection": "mitigation",
+    "Magical Protection": "mitigation",
+    "Plating": "flat_reduction_multiplier",
+    "Dampening": "flat_reduction_multiplier",
+    "Tenacity": "TENACITY_CAP",
+    "Pathfinding": "PATHFINDING_COMBAT_SCALE",
+    "Lifesteal": "LIFESTEAL_MINION_SCALE",
+}
+
+
+def offmap_charge(rows, gods, items, weights, mode="Conquest"):
+    """WHERE THE OFF-MAP CHARGE LANDS — per role, per stat, re-measured.
+
+    `{role: {n, gold, stats: {stat: gold}}}`: the gold `offmap_efficiency`
+    bills in OUR cores, decomposed by the stat it is billed on. Alpha is not
+    applied — the charge is linear in it, so this is the composition at full
+    strength and the shipped strength scales all of it equally.
+
+    The map it charges against is `scoring.fit_map`, the same call
+    `score_god_items` makes, and the gold is `eff_row["stat_gold"]`, the same
+    column `efficiency.offmap_gold` reads. Nothing here recomputes either: a
+    diagnostic that agreed with the model today and drifted tomorrow would be
+    worse than none, and §4.15's whole finding is the two halves of `quality`
+    disagreeing about what a god wants.
+
+    NOTHING HERE CHANGES A BUILD. It exists because the composition is the
+    thing every attempt on this charge has had to rebuild by hand — §4.15 did
+    it for the defect stats, §4.16 for mana and Health Regen, §4.18 for Echo —
+    and each time the number was recomputed from scratch against a dataset
+    that had moved underneath the last one.
+    """
+    gods_by_name = {g["name"]: g for g in gods}
+    profile = scoring.resolve_profile(weights, mode, None)
+    exempt = frozenset(weights.get("offmap_exempt") or ())
+    before = efficiency.apply_pricing_flags(weights)
+    try:
+        eff_scores, _gold = efficiency.efficiency_scores(items)
+    finally:
+        efficiency.restore_pricing_flags(before)
+
+    out = {}
+    for role, group in group_by_role(rows).items():
+        stats = Counter()
+        for row in group:
+            god = gods_by_name.get(row["god"])
+            if god is None:
+                continue
+            role_map, _denom = scoring.fit_map(god, items, weights, profile)
+            for name in row["ours"]["items"]:
+                for key, g in (eff_scores.get(name, {}).get("stat_gold") or {}).items():
+                    base = efficiency.stat_base(key)
+                    if role_map.get(base) or base in exempt:
+                        continue
+                    stats[base] += g
+        out[role] = {"n": len(group), "gold": sum(stats.values()), "stats": dict(stats)}
+    return out
+
+
+def stat_standing(stat, weights):
+    """`(role_stats entries naming it, what combat.py does with it, exempt?)`.
+
+    The two mechanical tests of STATE.md §4.16 as a lookup: a stat named by
+    SOME role map has a contrast, so another role's silence about it is a
+    positive statement and charging it is legitimate; a stat named NOWHERE has
+    no contrast to read. The second column is test (ii)."""
+    named = sorted(label for label, entry in (weights.get("role_stats") or {}).items()
+                   if stat in entry)
+    return named, COMBAT_PRICED.get(stat), stat in set(weights.get("offmap_exempt") or ())
+
+
+def offmap_charge_lines(charge, weights, top=5):
+    """The report section. Composition only — no verdict is drawn here, because
+    the verdict needs the community record and the coverage gate as well, and
+    both of those live outside this module (STATE.md §4.18)."""
+    alpha = weights.get("offmap_efficiency") or 0.0
+    lines = [
+        "### Where the off-map charge lands — measured on every run", "",
+        f"`offmap_efficiency` ships at **{alpha:.2f}** and charges an item for the gold it spent "
+        "on stats the god's fit map does not name (STATE.md §3, §4.15). This is what that bill is "
+        "made of in our own cores, at full strength — the charge is linear in the strength, so "
+        "the shipped value scales every row equally. **Nothing here changes a build**; it is here "
+        "because every attempt on this charge so far has had to rebuild the composition by hand "
+        "against a dataset that had moved under the previous one.", "",
+        "| Role | n | off-map gold in our cores | largest lines |",
+        "|---|---|---|---|",
+    ]
+    for role in ([r for r in ROLE_ORDER if r in charge]
+                 + sorted(r for r in charge if r not in ROLE_ORDER)):
+        c = charge[role]
+        total = c["gold"] or 1.0
+        cells = ", ".join(
+            f"{stat} {g / total:.1%}"
+            for stat, g in sorted(c["stats"].items(), key=lambda kv: -kv[1])[:top])
+        lines.append(f"| {role} | {c['n']} | {c['gold']:,.0f}g | {cells or '–'} |")
+
+    seen = {stat for c in charge.values() for stat in c["stats"]}
+    lines += [
+        "",
+        "And what the two mechanical tests of §4.16 say about each stat being billed. A stat "
+        "named by SOME role map has a CONTRAST, so another role's silence about it is a positive "
+        "statement by the same table and charging it is legitimate; a stat named NOWHERE has no "
+        "contrast to read. The second column is test (ii) — if `combat.py` can see the stat then "
+        "charging it is a hypothesis this report can check, which is why it may not simply be "
+        "exempted.", "",
+        "| Stat | named by `role_stats` | `combat.py` | on `offmap_exempt` |",
+        "|---|---|---|---|",
+    ]
+    for stat in sorted(seen, key=lambda s: -sum(c["stats"].get(s, 0.0) for c in charge.values())):
+        named, priced, exempt = stat_standing(stat, weights)
+        lines.append(f"| {stat} | {len(named)} of {len(weights.get('role_stats') or {})}"
+                     + (f" ({', '.join(named)})" if named else " — **nowhere**")
+                     + f" | {priced or '**nothing**'} | {'yes' if exempt else 'no'} |")
+    lines += [
+        "",
+        "**No verdict is drawn here**, and that is deliberate: deciding whether a line in the "
+        "first table is a defect needs the community's own record and the leakage-free coverage "
+        "gate as well, and both live outside this module. The verdicts reached so far are "
+        "register §4.15 (the defect stats — charge them), §4.16 (mana and the regens — exempt "
+        "them) and §4.18 (Echo — charge it, and why the role that pays most for it is not being "
+        "wronged).",
+    ]
+    return lines
+
+
 def role_verdict(rows, role, objective):
     """One role's verdict on its OWN objective: `{role, n, maximise, threshold,
     ahead, behind, level, mix, medians}`. Never on the pooled metric — a Carry
@@ -1219,7 +1359,8 @@ def _verdict_table(verdicts, probe):
     return lines
 
 
-def role_verdict_lines(rows, probe, verdicts=None, items_by_name=None):
+def role_verdict_lines(rows, probe, verdicts=None, items_by_name=None, charge=None,
+                       weights=None):
     """The per-role section: what each role's build is FOR, whether its
     threshold binds, and where we stand on its own maximand.
 
@@ -1293,6 +1434,8 @@ def role_verdict_lines(rows, probe, verdicts=None, items_by_name=None):
     ]
     if items_by_name is not None:
         lines += [""] + carry_mechanism_lines(rows, items_by_name)
+    if charge is not None and weights is not None:
+        lines += [""] + offmap_charge_lines(charge, weights)
     return lines
 
 
@@ -1436,7 +1579,7 @@ def flips(rows_a, rows_b, key="dps_70"):
 
 def write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_skipped,
                  blind, fingerprint, out_path=REPORT_PATH, example="Medusa",
-                 items_by_name=None):
+                 items_by_name=None, charge=None, weights=None):
     """Byte-for-byte deterministic, like `_calibration.md`, so its diff is a
     record of what a commit did to the builds rather than of when it ran."""
     head = ["# Build quality — `combat.py` pointed at whole builds", "",
@@ -1466,7 +1609,8 @@ def write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_ski
     lines.append("")
 
     lines += ["## 3. Judged by role, on each role's own objective", ""]
-    lines += role_verdict_lines(rows, threshold_probe(rows), items_by_name=items_by_name)
+    lines += role_verdict_lines(rows, threshold_probe(rows), items_by_name=items_by_name,
+                                charge=charge, weights=weights)
     lines.append("")
 
     lines += _dist_section(core_rows, core_skipped,
@@ -1592,8 +1736,10 @@ def main(argv=None):
                   f"({', '.join(group_by_role(rows))})", file=sys.stderr)
             return 1
         verdicts = [v for v in role_verdicts(rows) if v["role"] == args.role]
-        emit(blind, role_verdict_lines(rows, threshold_probe(rows), verdicts,
-                                       items_by_name={it["name"]: it for it in items}))
+        emit(blind, role_verdict_lines(
+            rows, threshold_probe(rows), verdicts,
+            items_by_name={it["name"]: it for it in items},
+            charge=offmap_charge(rows, gods, items, weights), weights=weights))
         return 0
 
     rows, skipped = run(gods, items, builds_by_god, weights, args.archetype)
@@ -1602,7 +1748,8 @@ def main(argv=None):
     fingerprint = _fingerprint(items, weights, tags_map, gods, builds_by_god)
     path = write_report(rows, skipped, core_rows, core_skipped, priced_rows, priced_skipped,
                         blind, fingerprint, args.out,
-                        items_by_name={it["name"]: it for it in items})
+                        items_by_name={it["name"]: it for it in items},
+                        charge=offmap_charge(rows, gods, items, weights), weights=weights)
 
     d70, d170 = distribution(rows, "dps_70"), distribution(rows, "dps_170")
     probe = threshold_probe(rows)

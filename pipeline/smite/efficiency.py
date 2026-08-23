@@ -711,6 +711,52 @@ def efficiency_scores(items):
 # 1457 -> 1151. It is still repriced out of the Carry core; see the sweep
 # under `offmap_efficiency` in _weights.yaml. The 12 buildable carriers hold
 # 3-6 points each, 9-20% of the item's price.
+#
+#
+# ── ECHO: REFUSED, AND IT IS WHAT TEST (ii) IS FOR (2026-08-23, at control ──
+#    fingerprint `527eb8f0a586` - baseline 5.8%, control 38.7% / 39.5%)
+#
+# The first stat to pass test (i) and fail test (ii), so it is the first time
+# the rule has had to do the work it was written for. Echo is named by ZERO of
+# the 21 `role_stats` entries and 0 of the 89 merged god maps - the same
+# standing as mana - and it is the LARGEST single line in the charge on a
+# Jungle core: 43.9% of the off-map gold billed in our 17 control Jungle
+# cores, against Attack Speed 16.5%, Lifesteal 16.5%, Max Health 11.8% and
+# Physical Protection 8.4%. Neither Critical Chance nor Cooldown Rate is
+# billed a single gold piece there.
+#
+# TEST (ii) FAILS: `combat.echo_multiplier` prices it exactly, off a
+# DOCUMENTED share (30% of an ability, 15% on an ultimate). So the rule says
+# check the charge rather than exempt it, and the check ran.
+#
+#   arm (alpha 0.55)      probe 0.70   best 0.45   Jungle on its objective
+#   control 0.00               38.7%       39.5%   14 ahead /  2 behind  +14.9%
+#   shipped, Echo billed       43.6%       39.4%   12 ahead /  5 behind  +10.3%
+#   Echo exempt                42.3%       39.2%   14 ahead /  2 behind  +15.0%
+#
+# IT COMES BACK AGAINST THE EXEMPTION, and the reason is nameable rather than
+# statistical. Every one of the 7 gods whose coverage moves loses a COMMUNITY
+# item to an Echo item: The Crusher enters six of them and takes Titan's Bane
+# out three times, Damaru enters the seventh, and the community buys The
+# Crusher for a Jungler TWICE in 102 Jungle slots. The community is not blind
+# to Echo either - it takes an Echo item in 16 of its 537 slots - it just buys
+# them for Mid (7) and Support (6) and essentially never for Jungle (2) or
+# Carry (0). There IS information
+# about who wants Echo; it is simply not in `role_stats`, and reading it off
+# the community's own composition is the leakage docs/STATE.md §1 is about.
+#
+# AND THE GAIN IS NEAR-DEFINITIONAL, which is the methodological half of this.
+# Echo's only effect anywhere in the model is `echo_multiplier`, which
+# multiplies exactly the ability damage that Jungle's maximand (`burst_70`)
+# sums. Sparing the charge on it CANNOT fail to raise that number. A stat that
+# an instrument prices is a stat that instrument will always reward you for
+# keeping; test (ii) exists so the check happens anyway, and the check is only
+# worth something because a second, non-circular measure - coverage - can
+# disagree with it. Here it did.
+#
+# SO ECHO STAYS OFF THE LIST, and `test_no_exempted_stat_may_be_one_combat_can_price`
+# now enforces test (ii) mechanically against `build_quality.COMBAT_PRICED`
+# rather than leaving it as a sentence in this comment.
 
 
 def offmap_gold(eff_row, role_map, exempt=()):

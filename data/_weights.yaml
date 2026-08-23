@@ -415,6 +415,56 @@ attack_damage_fit: 1.0
 # off-map mass and read +316g and +999g OVERPRICED, which is the passive value
 # register §4.5 sets to zero. Our item's off-map mass is free credit and
 # theirs is a free debit; this charges one without pricing the other.
+#
+# ── THE JUNGLE COST, EXAMINED AND NOT PAID DOWN (2026-08-23, at control ───
+#    fingerprint `527eb8f0a586` — baseline 5.8%)
+#
+# `build_quality` reads Jungle 14 ahead / 2 behind +14.9% at control and 12 /
+# 5 +10.3% at 0.55, on its own objective. Two arms were built to give it back
+# and BOTH ARE REFUSED; the register entry is §4.18 and the case is that the
+# regression is not what it looks like.
+#
+#   arm                   probe 0.70   best 0.45   C/J/A churn   Jungle       Carry
+#   control 0.00               38.7%       39.5%     0/ 0/ 0   14a/2b +14.9  11a/7b  +9.9
+#   shipped 0.55               43.6%       39.4%    50/48/54   12a/5b +10.3  12a/5b +28.2
+#   + Echo exempt              42.3%       39.2%    50/29/53   14a/2b +15.0  12a/5b +23.9
+#   per-role, Jungle 0.0       42.8%       39.5%    35/41/48   14a/2b +14.9  12a/5b +28.2
+#
+# (Solo and Support are omitted from that table on purpose: their objectives
+# became INTERVALS on 2026-08-23, §4.17, and neither arm moves either role's
+# cores at all — Echo and the Jungle switch reach neither.)
+#
+# WHAT THE JUNGLE COST BUYS, item by item, which is the whole argument. Across
+# the 15 Jungle cores the charge moves, departures carry **42** Jungle
+# community slot sightings and arrivals carry **74**: The Crusher (2 of 102
+# Jungle slots) and The Reaper (6) leave, Titan's Bane (14) and Hydra's
+# Lament (9) arrive. The 14->12 is THREE gods — Da Ji and Tsukuyomi out of
+# `ahead`, Pele from level to behind — and TWO of the three are that exact
+# swap, 8 sightings out and 15 in each, so the arm that "fixes" them puts The
+# Crusher back and takes Titan's Bane out. On the community record the charge
+# is already right for Jungle, which is also why the probe split rises
+# 38.7% -> 43.6% with five Jungle gods contributing.
+#
+# THE SIX-GOD REMAINDER IS REAL AND SMALL. Susano, Bastet, Thanatos, Fenrir,
+# Hun Batz and Awilix each swap Tekko-Kagi for Pendulum Blade, and NEITHER
+# item has a community sighting on any god, so coverage cannot judge it. The
+# stat that decides it is Attack Speed, 418g of Tekko-Kagi's 2700g, which
+# drops it 0.488 -> 0.409 under Pendulum Blade's 0.422. But Jungle's maximand
+# is `burst_70/1000g` and a burst here counts NO basic attacks (§4.13), so the
+# Attack Speed was worth exactly 0.0 to the number that reports the loss:
+# what those six actually lost is 5 Strength, flat penetration for percentage,
+# and +50g of denominator.
+#
+# AND THE PER-ROLE ARM IS THE FORBIDDEN MOVE. It is the best-performing arm in
+# the table and it is still refused: a per-role strength is five constants
+# with no source, chosen from the gate they improve, which is register §4.12
+# and §4.13's invented constant — and the mechanism it would encode is not
+# per-role at all. Each role's bill is a DIFFERENT stat (Carry protections and
+# health, Jungle 43.9% Echo, Mid 88.3% Lifesteal, Solo and Support Plating and
+# Attack Speed) and inside Jungle the damage share of the bill spans 0.21 to
+# 1.00 across gods. `build_quality`'s "Where the off-map charge lands" section
+# re-measures that composition on every run so the next attempt starts from a
+# current table instead of this one.
 offmap_efficiency: 0.55
 # ── The universal ride-along (`offmap_exempt`) ────────────────────────────
 # Stats that are off EVERY role map and charged to nobody by the flag above.
