@@ -8,12 +8,12 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Runeforged Hammer
+  - Heartseeker
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
+  - Heartseeker
   - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -43,18 +43,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Runeforged Hammer:
       total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Heartseeker:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Amanita Charm:
       total: 0.78
       efficiency: 0.65
@@ -73,37 +73,31 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
-  - The Crusher
+  - Runeforged Hammer
   - Heartseeker
   - Amanita Charm
+  - Erosion
   flex_slots:
-  - Hydra's Lament
-  - The Crusher
+  - Runeforged Hammer
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Toxic Blade:
-      total: 0.53
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
@@ -116,12 +110,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    The Crusher:
-      total: 0.51
+    Runeforged Hammer:
+      total: 0.5
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.43
     Heartseeker:
       total: 0.54
       efficiency: 0.47
@@ -134,41 +128,41 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Erosion:
+      total: 0.49
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Void Shield
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.61
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
@@ -176,17 +170,23 @@ builds:
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.63
-      efficiency: 0.6
+      total: 0.61
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shield of the Phoenix:
-      total: 0.64
-      efficiency: 0.57
+      total: 0.63
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Void Shield:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
-  - The Crusher
   - Amanita Charm
   flex_slots:
-  - Void Stone
-  - The Crusher
+  - Toxic Blade
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -228,9 +228,15 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Avenging Blade:
+      total: 0.64
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
     Toxic Blade:
-      total: 0.69
-      efficiency: 0.46
+      total: 0.65
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -252,12 +258,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
-    The Crusher:
-      total: 0.64
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     Amanita Charm:
       total: 0.73
       efficiency: 0.65
@@ -285,8 +285,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.72
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.53
+      total: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Toxic Blade
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Hydra's Lament
   - Freya's Tears
   flex_slots:
-  - Hydra's Lament
   - Genji's Guard
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -353,20 +353,20 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.55
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Genji's Guard:
       total: 0.54
       efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Breastplate of Valor:
+      total: 0.54
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -377,8 +377,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Shield of the Phoenix:
-      total: 0.69
-      efficiency: 0.57
+      total: 0.67
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -400,12 +400,12 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Runeforged Hammer
+  - Heartseeker
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
+  - Heartseeker
   - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -424,8 +424,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -435,18 +435,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Runeforged Hammer:
       total: 0.58
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Heartseeker:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Amanita Charm:
       total: 0.78
       efficiency: 0.65

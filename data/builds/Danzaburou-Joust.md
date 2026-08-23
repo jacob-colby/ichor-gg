@@ -20,11 +20,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -80,8 +80,8 @@ builds:
   - Death Metal
   - Rod of Tahuti
   flex_slots:
-  - Bancroft's Talon
   - Bragi's Harp
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
-      efficiency: 0.46
+      total: 0.52
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -152,11 +152,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -164,8 +164,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -220,8 +220,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -285,8 +285,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -312,14 +312,14 @@ builds:
       pick: 0.0
       fit: 0.83
     Pharaoh's Curse:
-      total: 0.57
-      efficiency: 0.55
+      total: 0.55
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.59
     Shogun's Ofuda:
-      total: 0.56
-      efficiency: 0.53
+      total: 0.54
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -336,12 +336,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Silverbranch Bow
-  - The Crusher
+  - Tekko-Kagi
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Heartseeker
   - Silverbranch Bow
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -359,8 +359,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
-      efficiency: 0.46
+      total: 0.64
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -376,9 +376,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    The Crusher:
-      total: 0.56
-      efficiency: 0.57
+    Tekko-Kagi:
+      total: 0.52
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -424,8 +424,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
-      efficiency: 0.46
+      total: 0.63
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -489,8 +489,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.46
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -535,7 +535,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
+  - Toxic Blade
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
@@ -554,8 +554,8 @@ builds:
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
-      efficiency: 0.46
+      total: 0.55
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -607,11 +607,11 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -619,8 +619,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.46
+      total: 0.56
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -672,11 +672,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -684,8 +684,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -737,11 +737,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -749,8 +749,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75

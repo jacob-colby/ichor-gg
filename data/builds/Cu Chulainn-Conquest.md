@@ -100,12 +100,12 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
   - Golden Blade
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Draconic Scale — magical protection
     swap_item: Draconic Scale
@@ -117,10 +117,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Jotunn''s Revenge, Amanita Charm, Golden Blade,
-    Runeforged Hammer, Lernaean Bow, Pharaoh''s Curse, The Crusher, Shield Splitter,
-    Tyrfing, Shogun''s Ofuda, Eye of the Storm, Breastplate of Valor, Hydra''s Lament,
-    Avenging Blade, Tekko-Kagi, Shield of the Phoenix, Spectral Armor, Mantle Of Discord,
-    Dominance, Stone of Binding, Heartseeker, Deathbringer, Damaru, The Reaper, Erosion.'
+    Runeforged Hammer, Lernaean Bow, Shield Splitter, Tyrfing, Eye of the Storm, Breastplate
+    of Valor, Pharaoh''s Curse, Hydra''s Lament, Avenging Blade, Tekko-Kagi, Shogun''s
+    Ofuda, Dominance, Heartseeker, Deathbringer, Erosion, Daybreak Gavel, Eye of Providence,
+    Shield of the Phoenix, Silverbranch Bow, Toxic Blade, Stone of Binding.'
   slot_scores:
     Golden Blade:
       total: 0.49
@@ -141,8 +141,8 @@ builds:
       pick: 0.0
       fit: 0.31
     Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.6
+      total: 0.49
+      efficiency: 0.56
       win: 0.49
       pick: 0.16
       fit: 0.44
@@ -167,32 +167,32 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield of the Phoenix
   - Freya's Tears
+  - Draconic Scale
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
-  - Freya's Tears
+  - Kinetic Cuirass
+  - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Draconic Scale — magical protection
-    swap_item: Draconic Scale
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Berserker''s Shield, Shield of the Phoenix, Jotunn''s
-    Revenge, The Reaper, Runeforged Hammer, Golden Blade, Pharaoh''s Curse, Shield
-    Splitter, Riptalon, Shogun''s Ofuda, Phoenix Feather, Eye of the Storm, Breastplate
-    of Valor, Yogi''s Necklace, Lernaean Bow, The Crusher, Chandra''s Grace, Spectral
-    Armor, Mantle Of Discord, Stone of Binding, Erosion, Eye of Providence, Tyrfing,
-    Avenging Blade.'
+    this god: Amanita Charm, Berserker''s Shield, Jotunn''s Revenge, Shield of the
+    Phoenix, Runeforged Hammer, Golden Blade, Shield Splitter, Eye of the Storm, Breastplate
+    of Valor, The Reaper, Yogi''s Necklace, Pharaoh''s Curse, Lernaean Bow, Erosion,
+    Shogun''s Ofuda, Phoenix Feather, Eye of Providence, Tyrfing, Avenging Blade,
+    Riptalon, Hydra''s Lament, Chandra''s Grace, Stone of Binding, Daybreak Gavel,
+    Midgardian Mail.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -207,23 +207,23 @@ builds:
       pick: 0.0
       fit: 0.26
     Kinetic Cuirass:
-      total: 0.52
-      efficiency: 0.6
+      total: 0.51
+      efficiency: 0.56
       win: 0.49
       pick: 0.16
       fit: 0.54
-    Shield of the Phoenix:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.49
-      pick: 0.0
-      fit: 0.63
     Freya's Tears:
       total: 0.51
       efficiency: 0.61
       win: 0.53
       pick: 0.17
       fit: 0.3
+    Draconic Scale:
+      total: 0.5
+      efficiency: 0.5
+      win: 0.56
+      pick: 0.17
+      fit: 0.44
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
@@ -234,42 +234,36 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Stone of Binding
   - Avenging Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
-  - The Crusher
+  - Freya's Tears
+  - Heartseeker
+  - Amanita Charm
   flex_slots:
-  - Stone of Binding
-  - Kinetic Cuirass
+  - Amanita Charm
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Stone of Binding — magical protection
+    swap_item: Stone of Binding
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, Berserker''s Shield, The Crusher, Avenging Blade,
-    Stone of Binding, Amanita Charm, Heartseeker, Tekko-Kagi, The Reaper, Silverbranch
-    Bow, Screeching Gargoyle, Runeforged Hammer, Void Shield, Titan''s Bane, Riptalon,
-    Golden Blade, Toxic Blade, Void Stone, Breastplate of Valor, Lernaean Bow, Pharaoh''s
-    Curse, Shield Splitter, Tyrfing, Shogun''s Ofuda, Hydra''s Lament, Eye of the
-    Storm.'
+    for this god: Jotunn''s Revenge, Berserker''s Shield, Avenging Blade, Amanita
+    Charm, Heartseeker, Tekko-Kagi, Stone of Binding, Silverbranch Bow, Screeching
+    Gargoyle, Runeforged Hammer, Void Shield, Titan''s Bane, Golden Blade, The Crusher,
+    Toxic Blade, Void Stone, Breastplate of Valor, Lernaean Bow, The Reaper, Shield
+    Splitter, Tyrfing, Hydra''s Lament, Eye of the Storm, Riptalon, Pharaoh''s Curse,
+    Avatar''s Parashu.'
   slot_scores:
-    Stone of Binding:
-      total: 0.49
-      efficiency: 0.54
-      win: 0.49
-      pick: 0.0
-      fit: 0.55
     Avenging Blade:
       total: 0.49
       efficiency: 0.49
@@ -288,18 +282,24 @@ builds:
       win: 0.49
       pick: 0.0
       fit: 0.49
-    Kinetic Cuirass:
+    Freya's Tears:
       total: 0.49
-      efficiency: 0.6
-      win: 0.49
-      pick: 0.16
-      fit: 0.35
-    The Crusher:
-      total: 0.5
-      efficiency: 0.57
+      efficiency: 0.61
+      win: 0.53
+      pick: 0.17
+      fit: 0.17
+    Heartseeker:
+      total: 0.48
+      efficiency: 0.47
       win: 0.49
       pick: 0.0
-      fit: 0.56
+      fit: 0.66
+    Amanita Charm:
+      total: 0.49
+      efficiency: 0.65
+      win: 0.49
+      pick: 0.0
+      fit: 0.25
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -307,19 +307,19 @@ builds:
   - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Tyrfing
   - Freya's Tears
+  - Amanita Charm
   flex_slots:
-  - Freya's Tears
+  - Amanita Charm
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Draconic Scale — physical protection
     swap_item: Draconic Scale
@@ -328,11 +328,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Jotunn''s Revenge, Golden Blade, Amanita Charm,
-    Tyrfing, Pharaoh''s Curse, Riptalon, Lernaean Bow, Runeforged Hammer, Shogun''s
-    Ofuda, Silverbranch Bow, Breastplate of Valor, Toxic Blade, The Crusher, Shield
-    Splitter, Shield of the Phoenix, Spectral Armor, Tekko-Kagi, Mantle Of Discord,
-    Stone of Binding, Hydra''s Lament, The Reaper, Eye of the Storm, Daybreak Gavel,
-    Dominance, Avenging Blade.'
+    Tyrfing, Riptalon, Lernaean Bow, Runeforged Hammer, Silverbranch Bow, Breastplate
+    of Valor, Pharaoh''s Curse, Toxic Blade, Shogun''s Ofuda, Shield Splitter, Tekko-Kagi,
+    Hydra''s Lament, The Reaper, Eye of the Storm, Daybreak Gavel, Dominance, Avenging
+    Blade, Erosion, Heartseeker, Shield of the Phoenix, Qin''s Blade, Stone of Binding.'
   slot_scores:
     Golden Blade:
       total: 0.49
@@ -352,12 +351,6 @@ builds:
       win: 0.49
       pick: 0.0
       fit: 0.18
-    Kinetic Cuirass:
-      total: 0.49
-      efficiency: 0.6
-      win: 0.49
-      pick: 0.16
-      fit: 0.35
     Tyrfing:
       total: 0.48
       efficiency: 0.48
@@ -370,6 +363,12 @@ builds:
       win: 0.53
       pick: 0.17
       fit: 0.18
+    Amanita Charm:
+      total: 0.49
+      efficiency: 0.65
+      win: 0.49
+      pick: 0.0
+      fit: 0.25
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -378,18 +377,18 @@ builds:
   - Berserker's Shield
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Freya's Tears
+  - Amanita Charm
   flex_slots:
   - Breastplate of Valor
-  - Kinetic Cuirass
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -398,11 +397,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Berserker''s Shield,
-    Breastplate of Valor, Shield of the Phoenix, Amanita Charm, Hydra''s Lament, Screeching
-    Gargoyle, Runeforged Hammer, Pharaoh''s Curse, Golden Blade, Shogun''s Ofuda,
-    The Crusher, Arondight, Chandra''s Grace, Lernaean Bow, Mantle Of Discord, Spectral
-    Armor, Shield Splitter, Stone of Binding, Eye of Erebus, Tyrfing, Daybreak Gavel,
-    Eye of the Storm, Prophetic Cloak, Leviathan''s Hide.'
+    Breastplate of Valor, Amanita Charm, Hydra''s Lament, Shield of the Phoenix, Screeching
+    Gargoyle, Runeforged Hammer, Golden Blade, Arondight, Lernaean Bow, Pharaoh''s
+    Curse, Shield Splitter, Eye of Erebus, Tyrfing, Daybreak Gavel, Shogun''s Ofuda,
+    Eye of the Storm, Prophetic Cloak, Chandra''s Grace, Erosion, Avenging Blade,
+    Eye of Providence, Silverbranch Bow, Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -428,18 +427,18 @@ builds:
       win: 0.49
       pick: 0.0
       fit: 0.41
-    Kinetic Cuirass:
-      total: 0.49
-      efficiency: 0.6
-      win: 0.49
-      pick: 0.16
-      fit: 0.34
     Freya's Tears:
       total: 0.53
       efficiency: 0.61
       win: 0.53
       pick: 0.17
       fit: 0.43
+    Amanita Charm:
+      total: 0.49
+      efficiency: 0.65
+      win: 0.49
+      pick: 0.0
+      fit: 0.24
   starter: *id001
 - source: suggested
   archetype: model
@@ -451,28 +450,28 @@ builds:
   - Runeforged Hammer
   - Amanita Charm
   flex_slots:
-  - Golden Blade
   - Runeforged Hammer
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Berserker''s Shield, Jotunn''s Revenge, Amanita Charm,
-    Golden Blade, Runeforged Hammer, Lernaean Bow, Pharaoh''s Curse, The Crusher,
-    Shield Splitter, Tyrfing, Shogun''s Ofuda, Eye of the Storm, Breastplate of Valor,
-    Hydra''s Lament, Avenging Blade, Tekko-Kagi, Shield of the Phoenix, Spectral Armor,
-    Mantle Of Discord, Dominance, Stone of Binding, Heartseeker, Deathbringer, Damaru,
-    The Reaper, Erosion.'
+    Golden Blade, Runeforged Hammer, Lernaean Bow, Shield Splitter, Tyrfing, Eye of
+    the Storm, Breastplate of Valor, Pharaoh''s Curse, Hydra''s Lament, Avenging Blade,
+    Tekko-Kagi, Shogun''s Ofuda, Dominance, Heartseeker, Deathbringer, Erosion, Daybreak
+    Gavel, Eye of Providence, Shield of the Phoenix, Silverbranch Bow, Toxic Blade,
+    Stone of Binding.'
   slot_scores:
     Golden Blade:
       total: 0.49
@@ -493,8 +492,8 @@ builds:
       pick: 0.0
       fit: 0.31
     Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.6
+      total: 0.49
+      efficiency: 0.56
       win: 0.49
       pick: 0.16
       fit: 0.44

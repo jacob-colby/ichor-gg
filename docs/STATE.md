@@ -164,6 +164,8 @@ Each of these has its evidence in the named module.
 | Support is scored with damage **excluded**, not down-weighted | `build_quality.ROLE_OBJECTIVES` | Most of what a Support does is in `UNMEASURABLE` (CC chain duration, peel, aura coverage, wave clear, objective damage, map tempo), and on 3 of 14 Supports the DPS column is identical on both sides to 0.00% because neither build buys any. Scoring a quantity badly is worse than declining to score it |
 | The fit map gets an **Attack Damage column** from the god's own scaling | `damage_value.attack_damage_fit` | `role_stats` and `kit_stat_overlay` between them never name the stat, so the merged fit map scored it 0.0 on 89 of 89 gods while their basic-attack scaling measures it non-zero on all 78 that parse; probe 38.7% → 39.7%, best 39.6% → 40.3% |
 | That column is **credited but not charged** | `scoring.god_fit_score` | `fit` is normalised by the sum of the map, so charging it shrinks every non-carrier's stat term (−12.5% over 10,065 pairs) and promotes the flat tag bonuses added after normalisation — which pulled 43 anti-heal items into Joust and Arena cores, the two modes with no gate to catch it |
+| An item is **charged** for the gold it spent on stats the god's map does not name | `efficiency.offmap_adjusted_score` | `efficiency` prices every stat whoever is buying and `god_fit_score` normalises over the map alone, so an off-map stat was credited by one half of `quality` and invisible to the other. Shipped at 0.55 once `offmap_exempt` covered the three stats no map names and no instrument prices; Berserker's Shield leaves 17 of 18 Carry cores and their effective health lands LEVEL with the community's |
+| The strength is the **midpoint of a region**, never the argmax | `offmap_efficiency` in `_weights.yaml` | Both leakage-free splits are at or above control across 0.45–0.65; 0.60/0.65 being joint-highest on the probe split is not a reason to pick them (§4.4's plateau). The best split reads 40.0% at five consecutive settings because every core that changes inside the region swaps an item in NEITHER side's community record — checked item by item, not assumed |
 | The damage model counts the **basic attack**, and its unit is one rotation plus one swing | `damage_value.item_damage_gain` | `ability_damage_components` skips the Basic Attack slot, so Attack Damage — 100% of a basic attack on 84 of 89 gods, and no ability in the roster scales on it — was worth exactly 0.0 in the only damage path that reaches a recommendation. 12 items carried it, 10 more carry Critical Chance. The 1:1 mix is a declaration, not a measurement; the clock that would replace it is register §4.12 |
 
 ### The combat model is exact and should stay that way
@@ -574,7 +576,17 @@ shipped **off**. Numbers are in the named module.
     counts re-measure on every run in `build_quality.carry_mechanism_lines`.
 
 15. **Charging an item for stat mass the god cannot use (2026-08-22)** —
-    `offmap_efficiency`. The hole is real and mechanical: `efficiency` is
+    `offmap_efficiency`. **THIS ENTRY IS NO LONGER A NULL. It ships ON at
+    0.55 as of 2026-08-22** — see §3, and read the whole entry as the history
+    of how it got there rather than as a reason not to try it. What unblocked
+    it was §4.16's exemption growing a third stat, Health Regen; the sweep,
+    the region, the alpha choice and the shipped effect are under
+    `offmap_efficiency` in `_weights.yaml`, and the short version is that both
+    leakage-free splits sit at or above control across 0.45–0.65 (probe
+    39.1% → 44.0% at 0.55, best 40.0% → 40.0%), the Carry defect closes, and
+    the other four roles give up some margin on `build_quality`'s own
+    counts. Everything below was true when the flag shipped off and the
+    diagnosis is unchanged. The hole is real and mechanical: `efficiency` is
     god-agnostic and prices every stat an item carries, while
     `scoring.god_fit_score` normalises over the role map alone, so a stat the
     map does not name is in neither its numerator nor its denominator. An
@@ -590,9 +602,9 @@ shipped **off**. Numbers are in the named module.
     residual **−425g → +849g**, efficiency **0.681 → 0.210**, `quality` rank
     **1–9 → 84–126** of the pool, and it leaves all 18 Carry cores.
 
-    **It ships off because it is worse on both leakage-free splits at every
-    strength**, monotonically, with the best split's paired CI excluding zero
-    from 0.15 up (probe 39.1% → 34.0%, best 40.0% → 37.0% at full strength;
+    **It shipped off at first because it was worse on both leakage-free splits
+    at every strength**, monotonically, with the best split's paired CI
+    excluding zero from 0.15 up (probe 39.1% → 34.0%, best 40.0% → 37.0% at full strength;
     churn 22 → 86 of 89 Conquest cores, 36 → 80 Joust, 20 → 86 Arena). Sweep,
     paired CIs and per-mode churn under `offmap_efficiency` in
     `_weights.yaml`.
@@ -796,8 +808,22 @@ shipped **off**. Numbers are in the named module.
     `index.json` was itself stale against the 22 Aug refresh, and comparing
     bytes against it would have reported that refresh as this key's effect.
     The membership is pinned by a test, including that no defensive stat may
-    join. What the exemption is worth once a charge exists is §4.15's sweep,
-    re-run: see the ship decision recorded there.
+    join.
+
+    **And what it was worth: it unblocked the charge.** Re-running §4.15's own
+    sweep with Health Regen spared removes the two-split disagreement that
+    kept `offmap_efficiency` at 0.0 — both splits sit at or above control
+    across **0.45–0.65**, a region rather than a point, and the flag shipped
+    at the midpoint. §4.15 is therefore no longer a null; the sweep, the
+    region, the alpha choice and the shipped effect are under
+    `offmap_efficiency` in `_weights.yaml`.
+
+    **§4.16's own prediction was right about the mechanism and this is the
+    first time that has happened in this pair of entries.** It named Health
+    Regen as the next stat and Solo's unmoved −9.4pp as the reason; sparing it
+    moves Solo to +2.4pp on the probe split and to zero on the best one. The
+    trap it recorded still stands, though — gold share did not predict the
+    SIZE of any of it, only the direction.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -860,7 +886,7 @@ constant for 92% of the pool cannot be justified or refuted by anything here:
 `calibrate` zeroes `win`, and the headline gate uses it as its own target. It
 is the largest single unexamined number in the model.
 
-### Our Carries over-buy defence, and one item is why
+### ~~Our Carries over-buy defence, and one item is why~~ — fixed 2026-08-22
 The role split (§2, §3) found it and deliberately did not fix it: the
 community buys **exactly 0.0 protections on all 18 Carries** and we buy 37.8,
 which is Berserker's Shield in **17 of our 18 Carry cores against 0 of theirs**
@@ -896,6 +922,27 @@ incomplete in a way that is invisible until something charges against them.**
 Anything that reads the map as a complete statement of a god's wants inherits
 that. The stat table and the item counts re-measure on every `build_quality`
 run; the decomposition is in `efficiency.offmap_adjusted_score`.
+
+_Fixed 2026-08-22, and the incompleteness above is what had to be handled
+first._ `offmap_exempt` grew its third stat — Health Regen, on the two
+mechanical tests §4.16 records — and with the three ride-along columns spared,
+`offmap_efficiency` beats or matches control on both leakage-free splits
+across 0.45–0.65 and ships at 0.55. **Berserker's Shield is in 0 of 18 Carry
+model cores, from 17**, Golden Blade 7 → 5, Gluttonous Grimoire 2 → 0; mean
+Physical Protection in a Carry core 37.8 → 0.0 against the community's 0.0,
+and raw effective health lands **LEVEL** (+0.0% median, within ±0.5% on 12 of
+18) rather than below. Medusa goes 314.8 → 389.5 total DPS, 87% of the
+community's against 70%, with identical effective health on both sides.
+
+**What is left of it, and it is not nothing.** Per 1000 gold our Carry
+effective health is now *behind* (−7.5%, 2 ahead / 15 behind) — arithmetic
+rather than a finding, since level EHP on a costlier build divides worse — and
+the other four roles each give up ground on `build_quality`'s ahead/behind
+counts while staying clearly ahead. §4.13 is why that cost is hard to see: no
+threshold here can charge us for buying too LITTLE defence, so **level is the
+honest target and below it would be invisible.** The role maps are still
+incomplete; what changed is that one class of stat now has a rule for being
+left alone, and the rest of the incompleteness is untouched.
 
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
@@ -1005,7 +1052,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (787) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (790) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -1022,15 +1069,15 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (787) ·
 | Joust / Arena gods placed | 0 / 89 — no outcome data exists |
 | Items placed | 209 / 226 |
 | Community sample | 14,126 Obsidian+ Conquest matches, 11 Aug – 22 Aug |
-| Headline gate | coverage 48.2%, win-weighted 50.0% — see `unknown_win_per_god`; the gap to a naive reading IS the removed community-agreement prior. `price_adaptive` moved it +1.9pp/+2.0pp off the 47.4%/49.3% this row carried, which is reporting and not a target (§1) |
-| **Leakage-free** | **39.1% probe · 40.0% at eff 0.45, vs 5.6% chance = 6.9–7.1×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-08-22 at input fingerprint `c68c33d49845` (`33d6031bd9de` before `offmap_efficiency: 0.0` was added to `_weights.yaml`, then `c73b6ea6bdde` before `offmap_exempt` joined it — the hash covers that file, and the figures are identical to the digit at all three, see §4.15 and §4.16): the 39.7/40.3/5.7 this row carried was fingerprint `ea30ca4c0735` and describes PRE-refresh inputs, so the −0.6pp/−0.3pp is the `chore(data): daily community refresh` and not a model change — nothing shipped between the two readings. `attack_damage_fit` (§3) moved this +1.0pp/+0.7pp on 2026-08-21, off a control re-measured on the same data at 38.7%/39.6% minutes earlier. The baseline reading 5.6% before and 5.7% after is the ±0.15pp sampling wobble §1 documents, not a data move — do not read it as one. An earlier cut of the same flag read 40.6%/40.5% here; about a third of that was the fit normaliser shrinking every non-carrier rather than the column itself, which the Joust/Arena sweep caught and §4.4 records. Before it, `price_adaptive` (§3) moved this +1.0pp/+1.2pp, later on 2026-08-21, off a control re-measured on the same data at 37.7%/38.4% — the same figures this row already carried, which is how we know the data had not moved under it. The sweep's nominal argmax moved with the change, 0.45 → 0.75 at 40.9%, and 17 of 21 splits have a CI overlapping that — noise by `model_signal_sweep`'s own rule, so the shipped split is unchanged and this row still reports eff 0.45. Earlier the same day: re-run on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
+| Headline gate | coverage 49.6%, win-weighted 51.2% — see `unknown_win_per_god`; `offmap_efficiency` at 0.55 moved this +1.4pp/+1.2pp off the 48.2%/50.0% this row carried, which is REPORTING and not a target (§1) — the flag was chosen on the leakage-free row below and this gate has both of its targets as model inputs; the gap to a naive reading IS the removed community-agreement prior. `price_adaptive` moved it +1.9pp/+2.0pp off the 47.4%/49.3% this row carried, which is reporting and not a target (§1) |
+| **Leakage-free** | **44.0% probe · 40.0% at eff 0.45, vs 5.7% chance = 7.0–7.7×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** `offmap_efficiency` shipping at 0.55 (§3, §4.15) moved this **+4.9pp on the probe split and 0.0pp on the best one**, off a control re-measured on the same data at 39.1%/40.0% minutes earlier, at fingerprint `e9c995b14743`; the flag was chosen from the MIDDLE of the 0.45–0.65 region where both splits are at or above control, not from the argmax. The best split is 40.0% at five consecutive settings because the cores that change inside the region swap items in neither side's community record — verified item by item under `offmap_efficiency`. The sweep's nominal argmax moved with it, 0.45 → **0.70** at 44.0%, and **19 of 21 splits have a CI overlapping that** — noise by `model_signal_sweep`'s own rule, so the shipped split is unchanged and this row still reports eff 0.45; that the argmax landed exactly on the probe corner the flag was measured against is the reason to distrust it, not to follow it. The baseline printing 5.6% before and 5.7% after is the ±0.15pp sampling wobble §1 documents and NOT a data move: `exact_random_core_baseline` is **5.7391% at both**, settled the closed-form way. Before that, re-measured 2026-08-22 at input fingerprint `c68c33d49845` (`33d6031bd9de` before `offmap_efficiency: 0.0` was added to `_weights.yaml`, then `c73b6ea6bdde` before `offmap_exempt` joined it — the hash covers that file, and the figures are identical to the digit at all three, see §4.15 and §4.16): the 39.7/40.3/5.7 this row carried was fingerprint `ea30ca4c0735` and describes PRE-refresh inputs, so the −0.6pp/−0.3pp is the `chore(data): daily community refresh` and not a model change — nothing shipped between the two readings. `attack_damage_fit` (§3) moved this +1.0pp/+0.7pp on 2026-08-21, off a control re-measured on the same data at 38.7%/39.6% minutes earlier. The baseline reading 5.6% before and 5.7% after is the ±0.15pp sampling wobble §1 documents, not a data move — do not read it as one. An earlier cut of the same flag read 40.6%/40.5% here; about a third of that was the fit normaliser shrinking every non-carrier rather than the column itself, which the Joust/Arena sweep caught and §4.4 records. Before it, `price_adaptive` (§3) moved this +1.0pp/+1.2pp, later on 2026-08-21, off a control re-measured on the same data at 37.7%/38.4% — the same figures this row already carried, which is how we know the data had not moved under it. The sweep's nominal argmax moved with the change, 0.45 → 0.75 at 40.9%, and 17 of 21 splits have a CI overlapping that — noise by `model_signal_sweep`'s own rule, so the shipped split is unchanged and this row still reports eff 0.45. Earlier the same day: re-run on post-refresh data. The previous row (35.5 · 36.7 vs 5.8) was generated before `chore(data): daily community refresh` and the committed `_calibration.md` had gone stale with it; the shift is the DATA, measured by re-running the old weights against it and getting the new numbers exactly. Earlier history: the eff 0.45 split rose from 34.8% on the effect-tag pass (see `offense_tags` in `_weights.yaml`); the 37.5% before that was paid relics entering the denominator (see `is_buildable`) |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
-| Cap overflow | 47 -> 0 of 2427 builds over the penetration cap. `cap_overflow` took it to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed. See `cap_overflow` |
+| Cap overflow | 47 -> 0, and back -> 3 of 2428 builds over the penetration cap. `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — and `offmap_efficiency` at 0.55 put three back, which is the same mechanism in reverse: it reshapes cores toward penetration items, and `assemble._capped_out` still cannot refuse an item whose penetration alone is dead (register §4.2). Three of 2,428 is the smallest this figure has been apart from zero; it is reported, not tuned against. See `cap_overflow` |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 3 — Ares, Sun Wukong, Yemoja. Sun Wukong left the list with `price_adaptive` and came back on the 22 Aug refresh, with Yemoja; the row before that (Achilles, Chaac, Danzaburou) predates an earlier refresh. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 787 pipeline · 660 viewer |
+| Tests | 790 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

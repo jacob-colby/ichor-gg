@@ -8,20 +8,20 @@ builds:
   slot_order:
   - Toxic Blade
   - Kinetic Cuirass
+  - Shield Splitter
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
-  - Toxic Blade
+  - Pharaoh's Curse
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -38,11 +38,17 @@ builds:
       pick: 0.0
       fit: 0.7
     Kinetic Cuirass:
-      total: 0.62
-      efficiency: 0.6
+      total: 0.6
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Shield Splitter:
+      total: 0.58
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Amanita Charm:
       total: 0.82
       efficiency: 0.65
@@ -56,14 +62,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-    Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.53
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -80,7 +80,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Toxic Blade
+  - Kinetic Cuirass
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -105,14 +105,14 @@ builds:
       pick: 0.0
       fit: 0.76
     Kinetic Cuirass:
-      total: 0.61
-      efficiency: 0.6
+      total: 0.59
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.62
     Shield of the Phoenix:
-      total: 0.67
-      efficiency: 0.57
+      total: 0.65
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.72
     Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -164,8 +164,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.61
-      efficiency: 0.54
+      total: 0.6
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -214,8 +214,8 @@ builds:
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Erosion — magical protection
     swap_item: Erosion
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.83
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -269,18 +269,18 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
   - Genji's Guard
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -299,21 +299,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Breastplate of Valor:
+      total: 0.55
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Shield of the Phoenix:
-      total: 0.69
-      efficiency: 0.57
+      total: 0.67
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -335,20 +335,20 @@ builds:
   slot_order:
   - Toxic Blade
   - Kinetic Cuirass
+  - Shield Splitter
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
-  - Toxic Blade
+  - Pharaoh's Curse
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -365,11 +365,17 @@ builds:
       pick: 0.0
       fit: 0.7
     Kinetic Cuirass:
-      total: 0.62
-      efficiency: 0.6
+      total: 0.6
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Shield Splitter:
+      total: 0.58
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Amanita Charm:
       total: 0.82
       efficiency: 0.65
@@ -383,14 +389,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-    Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.53
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.64

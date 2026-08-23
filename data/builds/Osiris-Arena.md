@@ -17,8 +17,8 @@ builds:
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Erosion — magical protection
     swap_item: Erosion
@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.65
     Pharaoh's Curse:
-      total: 0.65
-      efficiency: 0.55
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -84,14 +84,14 @@ builds:
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -123,14 +123,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Pharaoh's Curse:
-      total: 0.66
-      efficiency: 0.55
+      total: 0.64
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.77
     Shogun's Ofuda:
-      total: 0.65
-      efficiency: 0.53
+      total: 0.63
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Amanita Charm
-  - Pharaoh's Curse
   flex_slots:
   - Jotunn's Revenge
-  - Pharaoh's Curse
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Stampede — physical protection
     swap_item: Stampede
@@ -163,6 +163,12 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Avenging Blade:
+      total: 0.59
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Toxic Blade:
       total: 0.68
       efficiency: 0.46
@@ -193,12 +199,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -210,8 +210,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Riptalon
   - Golden Blade
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.81
     Pharaoh's Curse:
-      total: 0.63
-      efficiency: 0.55
+      total: 0.61
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.71
     Shogun's Ofuda:
-      total: 0.62
-      efficiency: 0.53
+      total: 0.6
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -279,8 +279,8 @@ builds:
   - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.4
     Shield of the Phoenix:
-      total: 0.64
-      efficiency: 0.57
+      total: 0.62
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.58
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.53
+      total: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -344,8 +344,8 @@ builds:
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Erosion — magical protection
     swap_item: Erosion
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.65
     Pharaoh's Curse:
-      total: 0.65
-      efficiency: 0.55
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75

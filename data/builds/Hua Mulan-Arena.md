@@ -13,15 +13,15 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Stampede
+  - Shogun's Ofuda
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.62
-      efficiency: 0.6
+      total: 0.6
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.75
     Pharaoh's Curse:
-      total: 0.65
-      efficiency: 0.55
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.74
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -73,34 +73,40 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Golden Blade
   - Shield of the Phoenix
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
   - Stampede
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.63
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Shield of the Phoenix:
-      total: 0.67
-      efficiency: 0.57
+      total: 0.65
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -123,14 +129,8 @@ builds:
       pick: 0.0
       fit: 0.76
     Pharaoh's Curse:
-      total: 0.66
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
-    Shogun's Ofuda:
-      total: 0.65
-      efficiency: 0.53
+      total: 0.64
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Stone of Binding
   - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Amanita Charm
+  - Erosion
   flex_slots:
   - Jotunn's Revenge
-  - Stone of Binding
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Stone of Binding — magical protection
+    swap_item: Stone of Binding
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,12 +163,6 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Stone of Binding:
-      total: 0.61
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Toxic Blade:
       total: 0.66
       efficiency: 0.46
@@ -199,6 +193,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.95
+    Erosion:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -220,8 +220,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -247,14 +247,14 @@ builds:
       pick: 0.0
       fit: 0.68
     Pharaoh's Curse:
-      total: 0.65
-      efficiency: 0.55
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.75
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -275,12 +275,12 @@ builds:
   - Stampede
   - Pharaoh's Curse
   flex_slots:
-  - Stampede
+  - Pharaoh's Curse
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Shield of the Phoenix:
-      total: 0.69
-      efficiency: 0.57
+      total: 0.67
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.67
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -340,15 +340,15 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Stampede
+  - Shogun's Ofuda
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -359,8 +359,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.62
-      efficiency: 0.6
+      total: 0.6
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.75
     Pharaoh's Curse:
-      total: 0.65
-      efficiency: 0.55
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.74
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.74

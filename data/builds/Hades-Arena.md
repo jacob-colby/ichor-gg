@@ -7,21 +7,21 @@ builds:
   archetype: core
   slot_order:
   - Void Shield
+  - Void Stone
   - Spear of Desolation
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -37,18 +37,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Void Stone:
+      total: 0.57
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Spear of Desolation:
       total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Spectral Armor:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Bancroft's Talon:
-      total: 0.52
-      efficiency: 0.51
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -188,8 +188,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
-  - Spectral Armor
+  - Void Shield
+  - Void Stone
   - Amanita Charm
   - Rod of Asclepius
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
-  - Kinetic Cuirass
+  - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -228,18 +228,18 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Spectral Armor:
+    Void Shield:
       total: 0.61
-      efficiency: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.75
+    Void Stone:
+      total: 0.6
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -273,7 +273,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   - Dreamer's Idol
-  - Soul Gem
+  - Amanita Charm
   flex_slots:
   - Dreamer's Idol
   - Spear of Desolation
@@ -282,8 +282,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -323,12 +323,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+    Amanita Charm:
+      total: 0.76
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.87
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -466,22 +466,22 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
-  - Pharaoh's Curse
+  - Stampede
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Golden Blade
-  - Pharaoh's Curse
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -506,15 +506,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Pharaoh's Curse:
-      total: 0.57
-      efficiency: 0.55
+    Stampede:
+      total: 0.55
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.59
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Rod of Tahuti
+  - Erosion
   - Stampede
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
   - Stampede
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -548,17 +548,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.58
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
@@ -571,6 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Erosion:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Stampede:
       total: 0.56
       efficiency: 0.51
@@ -578,8 +578,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -594,21 +594,21 @@ builds:
   archetype: model
   slot_order:
   - Void Shield
+  - Void Stone
   - Spear of Desolation
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -624,18 +624,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Void Stone:
+      total: 0.57
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Spear of Desolation:
       total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Spectral Armor:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -658,15 +658,15 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
+  - Void Shield
   - Spear of Desolation
   - Rod of Tahuti
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
   - Spear of Desolation
-  - Spectral Armor
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -683,6 +683,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Void Shield:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Spear of Desolation:
       total: 0.59
       efficiency: 0.57
@@ -695,12 +701,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Spectral Armor:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -721,9 +721,9 @@ builds:
       fit: 0.68
   swaps:
   - added: Rod of Tahuti
-    removed: Void Shield
+    removed: Void Stone
     reason: Conquest community 70% win over 198 matches (vs 61% on this god), taking
-      the model's weakest slot from Void Shield
+      the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
 ---

@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Stygian Anchor
   - Kinetic Cuirass
   - Void Shield
   - Freya's Tears
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -26,14 +26,20 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Stygian Anchor:
+      total: 0.55
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -49,12 +55,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Spectral Armor:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -73,9 +73,9 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Divine Ruin
   - Bancroft's Talon
   - Genji's Guard
-  - Kinetic Cuirass
   - Rod of Tahuti
   - Erosion
   - Triton's Conch
@@ -93,14 +93,20 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Bancroft's Talon:
+    Divine Ruin:
       total: 0.51
-      efficiency: 0.51
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Bancroft's Talon:
+      total: 0.48
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -110,12 +116,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.28
-    Kinetic Cuirass:
-      total: 0.52
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
@@ -145,8 +145,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Spear of Desolation
   - Triton's Conch
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -164,8 +164,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.6
+      total: 0.52
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -188,8 +188,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Void Shield
-  - Spectral Armor
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -240,12 +240,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Spectral Armor:
-      total: 0.56
-      efficiency: 0.57
+    Void Stone:
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.65
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Stone of Binding:
-      total: 0.61
-      efficiency: 0.54
+      total: 0.6
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.48
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
-  - Kinetic Cuirass
   - Freya's Tears
+  - Spear of Desolation
   - Erosion
   - Soul Gem
   flex_slots:
-  - Genji's Guard
   - Breastplate of Valor
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -435,18 +435,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Freya's Tears:
       total: 0.59
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Erosion:
       total: 0.55
       efficiency: 0.51
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Stygian Anchor
   - Kinetic Cuirass
   - Void Shield
   - Freya's Tears
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -483,14 +483,20 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Stygian Anchor:
+      total: 0.55
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -506,12 +512,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Spectral Armor:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -529,13 +529,13 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
+  - Void Shield
   - Freya's Tears
   - Obsidian Shard
-  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Spectral Armor
+  - Void Shield
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -554,11 +554,17 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Void Shield:
+      total: 0.55
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
@@ -571,12 +577,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Spectral Armor:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -591,9 +591,9 @@ builds:
       fit: 0.7
   swaps:
   - added: Obsidian Shard
-    removed: Void Shield
+    removed: Stygian Anchor
     reason: Conquest community 51% win over 251 matches (vs 44% on this god), taking
-      the model's weakest slot from Void Shield
+      the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001
 ---

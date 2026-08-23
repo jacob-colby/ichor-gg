@@ -309,7 +309,113 @@ attack_damage_fit: 1.0
 #
 # The "nothing separates the two cases" conclusion below still stands for a
 # FIT WEIGHT, and `offmap_exempt` is why an exemption is not one.
-offmap_efficiency: 0.0
+#
+# ══ SHIPPED ON AT 0.55, 2026-08-22, once Health Regen joined the exemption ══
+#
+# Everything above this line was measured with Health Regen still charged. It
+# is the third stat the `offmap_exempt` rule selects, and adding it removes
+# the two-split disagreement that kept this flag at 0.0. Control re-measured
+# first, at fingerprint `e9c995b14743` (this file with the exemption and the
+# charge still off): baseline 5.6%, probe 39.1%, best 40.0% — identical to the
+# digit to `c68c33d49845`, which is what makes the columns comparable.
+#
+#   alpha    probe 0.70:0.30    best 0.45:0.55    paired CI (probe)    C/J/A
+#    0.00      39.1% (ctl)        40.0% (ctl)                    --   0/ 0/ 0
+#    0.25      41.0% (+1.9)       39.6% (-0.4)    [+0.07%, +3.71%]  42/49/27
+#    0.40      42.9% (+3.8)       39.6% (-0.4)    [+1.50%, +5.96%]     region
+#    0.45      43.1% (+4.0)       40.0% (+0.0)    [+1.72%, +6.22%]   <- starts
+#    0.50      43.1% (+4.0)       40.0% (+0.0)    [+1.72%, +6.22%]
+#    0.55      44.0% (+4.9)       40.0% (+0.0)    [+2.66%, +7.08%]   <- SHIPPED
+#    0.60      44.2% (+5.1)       40.0% (+0.0)    [+2.85%, +7.38%]
+#    0.65      44.2% (+5.1)       40.0% (+0.0)    [+2.85%, +7.38%]   <- ends
+#    0.70      44.2% (+5.1)       39.8% (-0.2)    [+2.85%, +7.38%]
+#    1.00      43.6% (+4.5)       39.6% (-0.4)    [+2.02%, +7.08%]
+#
+# BOTH SPLITS AT OR ABOVE CONTROL ACROSS A REGION, 0.45-0.65, not at a point.
+# The probe split's paired 95% CI excludes zero throughout it. The best split
+# is NEUTRAL and not a gain: paired mean exactly +0.00pp, CI [-1.35%, +1.12%],
+# 84 of 89 gods unchanged.
+#
+# WHY 0.55 AND NOT THE ARGMAX. 0.60 and 0.65 are joint-highest on the probe
+# split and that is not a reason — picking the top of a noisy surface is how
+# the `damage_fit_blend` plateau went wrong (register §4.4). 0.55 is the
+# MIDPOINT of the region, so the shipped value is the furthest any setting
+# gets from both edges, and both edges are real transitions rather than noise
+# (see the next paragraph). It is also inside the sub-plateau where the best
+# split's cores do not move at all: 0.50 -> 0.55 -> 0.60 changes ZERO cores
+# there, so the choice is robust to a step in either direction.
+#
+# THE BEST SPLIT READS 40.0% AT FIVE CONSECUTIVE SETTINGS AND THAT IS REAL,
+# CHECKED RATHER THAN ASSUMED. It is 40.0187% to four decimals at every one of
+# them — the same number, not a rounding coincidence — and it decomposes:
+#
+#   * The BUILDS keep moving. Cores changed against control go 18/20/20/20/21
+#     of 89 across 0.45-0.65, and three cores change INSIDE the region.
+#   * Every one of those swaps is invisible to this metric, item by item:
+#     Chaac Gluttonous Grimoire -> Amanita Charm, Nemesis Golden Blade ->
+#     Lernaean Bow (both at 0.50), Cu Chulainn Kinetic Cuirass -> Jotunn's
+#     Revenge (at 0.65). NONE of those six items is in that god's community
+#     record, and coverage counts only community-record hits. So the split
+#     cannot respond to them — genuine insensitivity, not a frozen model.
+#   * The five gods whose coverage DOES move are the same five throughout,
+#     with the same deltas: Chronos +1/5, Da Ji +1/5, Hou Yi +1/5, Pele -1/5,
+#     Rama -2/5. They sum to exactly zero over 89 gods, which is why the
+#     reading is not merely close to control but identical to it. That exact
+#     zero is a CANCELLATION and not a guarantee — read the best split as
+#     neutral, never as evidence the charge is free.
+#   * The region's upper edge is mechanical, not noise: at 0.70 a swap finally
+#     touches a scored item — Artemis loses Tyrfing, which IS in her community
+#     record — and the split drops to 39.8%.
+#
+# SHIPPED CORE CHURN, which is large and is named here rather than discovered
+# later. Against the regenerated control, all archetypes, community excluded:
+# Conquest 467 of 747, Joust 412 of 744, Arena 515 of 750. On the `model`
+# archetype alone: Conquest 53 of 89, Joust 50 of 89, Arena 55 of 89.
+#
+# WHAT IT DOES TO THE DEFECT IT WAS BUILT FOR. `build_quality` re-run on the
+# shipped builds, Carry on its own objective (DPS per 1000g) and its defensive
+# profile beside it:
+#
+#                              before            after
+#   Carry DPS per 1000g     10 / 8  +7.8%    12 / 5  +25.2%
+#   Carry EHP physical      18 / 0 +34.5%     5 / 1   +0.0%   <- LEVEL
+#   Carry EHP magical       17 / 1  +9.0%     5 / 1   +0.0%   <- LEVEL
+#   mean Physical Prot      C 0.0 / O 37.8   C 0.0 / O 0.0
+#   mean Max Health         C 27.8 / O 275   C 27.8 / O 55.6
+#   Berserker's Shield      17 of 18 cores   0 of 18
+#
+# LEVEL IS THE HONEST TARGET AND LEVEL IS WHAT IT HIT — raw effective health
+# lands within +-0.5% of the community's on 12 of 18 Carries, not below it.
+# Per 1000 GOLD our Carry effective health is now BEHIND (-7.5%, 2 ahead / 15
+# behind) and that is arithmetic rather than a second finding: level EHP on a
+# more expensive build divides worse. Medusa is the worked case — 314.8 ->
+# 389.5 total DPS, 87% of the community's against 70% before, with EHP now
+# EXACTLY equal on both sides (3,788 / 3,353).
+#
+# WHAT IT COSTS THE OTHER FOUR ROLES, on their own objectives, and this is the
+# real price of the change:
+#
+#     role      objective                  before          after
+#     Jungle    rotation burst / 1000g   14 / 2 +14.2%   12 / 5 +10.3%
+#     Mid       DPS / 1000g              19 / 3  +9.8%   17 / 5  +9.8%
+#     Solo      duel score EHP x DPS     18 / 0 +69.0%   17 / 1 +53.4%
+#     Support   EHP / 1000g              14 / 0 +22.8%   11 / 3 +22.8%
+#
+# All four stay clearly ahead and all four lose ground on the ahead/behind
+# count while their medians move less. Weigh it the way that report says to:
+# a verdict in OUR favour is the one to distrust, so a change that shrinks our
+# margin is the direction its bias makes hardest to see, and §4.13 means no
+# threshold can charge us for buying too LITTLE defence. The leakage-free gate
+# is the one that says this is not a Carry-only trade: at 0.55 the probe split
+# is up on every role (Carry +6.0, Jungle +5.6, Mid +4.0, Solo +2.4, Support
+# +6.2) and the best split moves no role at all.
+#
+# THE HONEST CASE AGAINST IT IS UNCHANGED and is in `efficiency.offmap_gold`:
+# the two items the community actually buys in the deciding class carry ZERO
+# off-map mass and read +316g and +999g OVERPRICED, which is the passive value
+# register §4.5 sets to zero. Our item's off-map mass is free credit and
+# theirs is a free debit; this charges one without pricing the other.
+offmap_efficiency: 0.55
 # ── The universal ride-along (`offmap_exempt`) ────────────────────────────
 # Stats that are off EVERY role map and charged to nobody by the flag above.
 #

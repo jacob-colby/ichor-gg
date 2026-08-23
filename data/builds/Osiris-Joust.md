@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.8
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -80,7 +80,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
+  - Shield of the Phoenix
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.47
     Shield of the Phoenix:
-      total: 0.6
-      efficiency: 0.57
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -123,14 +123,14 @@ builds:
       pick: 0.0
       fit: 0.94
     Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.67
     Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.53
+      total: 0.58
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -155,8 +155,8 @@ builds:
     swap: Stone of Binding — magical protection
     swap_item: Stone of Binding
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -220,8 +220,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.71
     Pharaoh's Curse:
-      total: 0.58
-      efficiency: 0.55
+      total: 0.56
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.61
     Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.53
+      total: 0.55
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -275,8 +275,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Pharaoh's Curse
   - Shogun's Ofuda
-  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.4
     Shield of the Phoenix:
-      total: 0.64
-      efficiency: 0.57
+      total: 0.62
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.43
     Pharaoh's Curse:
-      total: 0.54
-      efficiency: 0.55
+      total: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.53
     Shogun's Ofuda:
-      total: 0.53
-      efficiency: 0.53
+      total: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.8
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
