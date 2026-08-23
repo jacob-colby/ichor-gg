@@ -36,9 +36,11 @@ Five things that are easy to get wrong here, all expanded in that file:
    gods regress and wrong about why. It also says why the role that pays most
    for the off-map charge is not being wronged, so read it before turning that
    charge down for a role. §4.19 is its sequel and a plain null, but it
-   corrects one row of §4.16's rule table: a stat `combat.py` prices on the
-   TARGET is not a stat any instrument here reads off a build, and Plating is
-   the case that separates those.
+   corrects one row of §4.16's rule table — a stat `combat.py` prices on the
+   TARGET is not a stat any instrument here reads off a build, which is what
+   Plating and Dampening turn out to be — and it carries a warning worth more
+   than either verdict: **`quality` rank does not decide core membership**, so
+   a score-gap argument cannot show a change is safe. Rebuild the cores.
 
 3. **The combat model is exact — keep it that way.** `smite.calibrate_combat`
    must stay at 0.0%. Constants carry evidence tiers, and several deliberately

@@ -797,15 +797,28 @@ def efficiency_scores(items):
 # there are ZERO Plating departures. Borrowed Conquest coverage is unchanged
 # to the item there too, Joust 153 of 537 and Arena 129 of 537 both ways.
 #
-# AND THE CONQUEST ZERO IS KNIFE-EDGE, so do not quote it as "free". The push
-# is a constant per item - +0.039 / +0.078 / +0.117 of `efficiency` for a 5-,
-# 10- or 15-point roll, at most +0.082 of `quality` - against a smallest gap
-# of 0.0244 between the worst item in a Solo/Support core and the best Plating
-# item outside it (median 0.0375 over 32 gods). The push already exceeds the
-# gap; it does not bind only because the 10- and 15-point items sit at ranks
-# 35-104 while Kinetic Cuirass, the one the community actually buys (6
-# Conquest slots), is rank 3-4 and already IN those cores with the charge on.
-# At alpha 1.00, seven Conquest cores do move.
+# AND THE CONQUEST ZERO RESTS ON THE ASSEMBLER, NOT ON THE MARGIN. The push is
+# a constant per item - +0.039 / +0.078 / +0.117 of `efficiency` for a 5-, 10-
+# or 15-point roll, at most +0.082 of `quality` - and against each god's own
+# gap (worst item in the core minus best Plating item outside it) the slack is
+# NEGATIVE on 8 Support gods, yet no core moves. On Atlas the exemption lifts
+# Shield of the Phoenix from rank 11 to rank 6, above two items that ARE in
+# the core, and it still does not enter: it carries the `sustain` tag, Atlas's
+# `max_lifesteal` is 1, and Amanita Charm spent it at rank 1. So `quality`
+# rank does not decide core membership and a score-gap argument cannot show a
+# change is safe - rebuild the cores. At alpha 1.00, seven Conquest cores move.
+#
+# DAMPENING IS THE TWIN AND ANSWERS HARDER. Same standing on test (i) (0 of 21,
+# 0 of 89) and the same target-side-only failure on test (ii), six carriers at
+# 35.67 g/pt and ONE community slot in 537. The charge on it is already vacuous
+# where it can be measured: no Dampening item reaches a Conquest core on any of
+# the 89 gods, in either archetype, at either strength, so it is billed 0 gold
+# in every Conquest core. Exempting it moves 0 Conquest, 0 Arena and 1 Joust
+# core (Hua Mulan, Shield Splitter -> Shogun's Ofuda), with coverage identical
+# to the digit on both splits and borrowed Joust coverage 153 of 537 both ways.
+# Its margin IS clean, unlike Plating's: smallest slack +0.0109, median +0.1577,
+# 0 of 89 gods at or below zero. Two stats identical on both tests, held out by
+# two different things.
 #
 # IT ALSO CORRECTS SS4.16's ATTRIBUTION. That entry read Solo's -9.4pp as
 # "Health Regen and Plating" off the gold share. Health Regen was right;

@@ -1068,10 +1068,12 @@ shipped **off**. Numbers are in the named module.
     price it, weight it, or exempt it — and this is the first stat since
     Attack Damage with a real claim on the second.
 
-19. **Exempting Plating on Solo and Support (2026-08-23)** — §4.18 named it as
-    the largest untested column and this is the test. It is a null, and it is
-    the first entry where **the check test (ii) demands cannot be run at all**.
-    Measured at control fingerprint `527eb8f0a586` (baseline 5.8%).
+19. **Exempting Plating and Dampening (2026-08-23)** — §4.18 named Plating as
+    the largest untested column; this is that test and its twin, run one after
+    the other and kept as one entry because they are one finding with two
+    instances. Both are nulls, and this is the first entry where **the check
+    test (ii) demands cannot be run at all**. Measured at control fingerprint
+    `527eb8f0a586` (baseline 5.8%).
 
     **Test (i) passes, and it is the strongest fact here.** Plating is named by
     **0 of 21** `role_stats` entries and **0 of 89** merged god maps — the same
@@ -1113,17 +1115,27 @@ shipped **off**. Numbers are in the named module.
     nothing and refuted by nothing, which is the worst shape a change can have
     here — §5 already says those two modes rest on nothing measurable.
 
-    **And the Conquest zero is knife-edge rather than structural**, which is
-    why it must not be quoted as "this costs nothing". The exemption's push is
-    a constant per item — +0.039, +0.078 or +0.117 of `efficiency` for a 5-,
-    10- or 15-point roll, at most **+0.082 of `quality`** — while the smallest
-    gap between the worst item in a Solo/Support core and the best Plating item
-    outside it is **0.0244** (median 0.0375 over 32 gods). The push already
-    exceeds the gap. It does not bind only because the 10- and 15-point items
-    sit at ranks 35–104: Kinetic Cuirass is rank 3–4 and already **in** those
-    cores with the charge ON, Spectral Armor is rank 35–40 and stays out. At
-    alpha 1.00 seven Conquest cores do move. A refresh that reorders the middle
-    of the pool could make this non-zero without anything else changing.
+    **And the Conquest zero does not rest on the margin — it rests on the
+    assembler**, which is the correction the Dampening pass forced and the most
+    reusable thing in this entry. The exemption's push is a constant per item
+    (+0.039, +0.078 or +0.117 of `efficiency` for a 5-, 10- or 15-point roll,
+    at most **+0.082 of `quality`**), and comparing it against each god's own
+    gap — the worst item in the core minus the best Plating item outside it —
+    the slack is **NEGATIVE on 8 Support gods** and the cores still do not
+    move. Read all the way down on Atlas: the exemption lifts Shield of the
+    Phoenix from **rank 11 to rank 6**, above Genji's Guard and Breastplate of
+    Valor, both of which ARE in the core, and it still does not enter. The
+    guard is `max_lifesteal`: Shield of the Phoenix carries the `sustain` tag,
+    Atlas's cap is 1, and Amanita Charm spent it at rank 1 (§3, "`max_lifesteal`
+    is a sustain cap and the name is the only thing saying otherwise").
+
+    **So `quality` rank does not decide core membership, and a margin argument
+    on it cannot show that a change is safe.** That is worth more than either
+    stat's verdict: the obvious way to check "would this move anything" is to
+    compare a score delta against a score gap, and on 8 of 89 gods here that
+    comparison says yes while the assembler says no. Rebuild the cores. At
+    alpha 1.00 seven Conquest cores do move, so the zero is a fact about this
+    strength and this pool, not a property of the charge.
 
     **It corrects §4.16, and by the same mechanism §4.16 itself warned about.**
     That entry attributed Solo's −9.4pp to "Health Regen and Plating", read off
@@ -1134,6 +1146,38 @@ shipped **off**. Numbers are in the named module.
     composition table cannot be reasoned from to what a carve-out will do,
     measure the carve-out* — is now carrying two confirmations and no
     counter-example.
+
+    **DAMPENING, the twin, run the same way and answered harder.** Test (i)
+    passes identically — 0 of 21 `role_stats` entries, 0 of 89 merged maps —
+    and test (ii) fails the same way, `DAMPENING_CAP` and
+    `flat_reduction_multiplier` applying to the target and to nothing else.
+    Six buildable carriers at 35.67 g/pt, and **one community slot in 537**
+    (Shogun's Ofuda, on a Solo). What separates it from Plating is that the
+    charge on it is already vacuous where it can be measured: **no Dampening
+    item reaches a Conquest core on any of the 89 gods, in either archetype,
+    at either strength**, so the stat is billed **0 gold** in every Conquest
+    core at control and at 0.55 alike. Exempting it moves **0 of 89 Conquest
+    cores, 0 of 89 Arena, and 1 of 89 Joust** — Hua Mulan swapping Shield
+    Splitter for Shogun's Ofuda, and her overlap with her own borrowed record
+    is 0 of 6 either way. Coverage is identical to the digit on both splits,
+    every role verdict is unchanged, and borrowed Joust coverage is 153 of 537
+    both ways.
+
+    **And its margin is clean where Plating's was not**, which is the contrast
+    that makes the pair worth keeping together. The push is +0.0338 or +0.1014
+    of `efficiency` (5 or 15 points) against a smallest slack of **+0.0109**
+    (Ymir), median +0.1577, and **0 gods of 89 with slack ≤ 0**. Dampening's
+    Conquest zero really is a margin fact; Plating's is the assembler's. Two
+    stats that look identical on both mechanical tests are held out of the
+    cores by two different things, and only one of them would survive a
+    reordering of the pool.
+
+    **Where they do reach a build is the two ungated modes**, and the entry
+    should not be read as "these stats never matter": Dampening items hold 7
+    core slots in Joust and Arena at control, the charge takes Joust to 6, and
+    the exemption puts that one back. Plating's exemption moves 48 cores
+    there. Everything either exemption would buy is in the 178 of 267 build
+    groups with no gate.
 
     **What would make this answerable, and it is a `EHP_CHANNELS` change.**
     `effective_health` needs a buyer-side flat-reduction term before any
@@ -1410,7 +1454,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (811) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (812) ·
 `cd viewer && npm test -- --run` (660).
 
 ---
@@ -1435,7 +1479,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (811) ·
 | Gods at 0% coverage | 4 — Ares, Nut, Sun Wukong, Yemoja. Sun Wukong left the list with `price_adaptive` and came back on the 22 Aug refresh, with Yemoja; the row before that (Achilles, Chaac, Danzaburou) predates an earlier refresh. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 811 pipeline · 660 viewer |
+| Tests | 812 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

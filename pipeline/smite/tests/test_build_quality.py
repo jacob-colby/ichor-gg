@@ -1067,3 +1067,14 @@ def test_the_charge_section_marks_a_target_side_row():
     text = "\n".join(bq.offmap_charge_lines(charge, weights))
     assert "on the target only" in text
     assert "§4.19" in text
+
+
+def test_target_side_only_stats_are_named_by_no_role_map_either():
+    """Both halves of `TARGET_SIDE_ONLY` pass §4.16's test (i) as well, which
+    is why they got as far as being measured (§4.19). If a role map ever names
+    Plating or Dampening the silence acquires a contrast and that entry has to
+    be re-argued, so pin it here rather than in the prose."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    named = {stat for entry in weights["role_stats"].values() for stat in entry}
+    for stat in bq.TARGET_SIDE_ONLY:
+        assert stat not in named, f"{stat} is now named by a role map; §4.19 needs re-running"

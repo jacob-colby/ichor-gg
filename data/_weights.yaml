@@ -583,8 +583,12 @@ offmap_efficiency: 0.55
 # test (ii) cannot be run either way. Exempting it anyway is a 0-of-89 no-op
 # on Conquest - coverage 43.61% / 39.42% to the digit, every role verdict
 # unchanged - while moving 17 Joust and 31 Arena cores, all arrivals Plating
-# items and no departures, in the two modes with no gate. Numbers and the
-# knife-edge margin in `efficiency.offmap_gold`.
+# items and no departures, in the two modes with no gate. DAMPENING was run the
+# same way and refused for a stronger version of the same reason: no Dampening
+# item reaches a Conquest core at all, so the charge on it is already billing
+# nobody, and exempting it moves 0 Conquest, 0 Arena and 1 Joust core. Numbers,
+# and why Plating's Conquest zero is the ASSEMBLER's and Dampening's is the
+# margin's, in `efficiency.offmap_gold`.
 offmap_exempt: [Max Mana, Mana Regen, Health Regen]
 # ── The clock (B5) ────────────────────────────────────────────────────────
 # What `damage_value.item_damage_gain` RETURNS. False = one ability rotation
