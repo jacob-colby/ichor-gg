@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Riptalon
     removed: Toxic Blade
-    reason: Conquest community 68% win over 35 matches (vs 50% on this god), taking
+    reason: Conquest community 68% win over 39 matches (vs 51% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

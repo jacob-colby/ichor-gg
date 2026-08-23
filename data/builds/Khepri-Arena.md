@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Rod of Tahuti
     removed: Void Stone
-    reason: Conquest community 64% win over 181 matches (vs 57% on this god), taking
+    reason: Conquest community 65% win over 199 matches (vs 57% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

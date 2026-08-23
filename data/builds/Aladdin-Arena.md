@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Transcendence
-    reason: Conquest community 65% win over 107 matches (vs 53% on this god), taking
+    reason: Conquest community 66% win over 116 matches (vs 53% on this god), taking
       the model's weakest slot from Transcendence
   borrowed_from: Conquest
   starter: *id001

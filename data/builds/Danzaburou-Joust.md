@@ -724,14 +724,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Toxic Blade
-  - Transcendence
+  - Jotunn's Revenge
   - Death Metal
   - Riptalon
   - The World Stone
   - Soul Gem
   flex_slots:
+  - Jotunn's Revenge
   - The World Stone
-  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -754,12 +754,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Transcendence:
-      total: 0.35
-      efficiency: 0.53
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.18
+      fit: 0.37
     Death Metal:
       total: 0.54
       efficiency: 0.61
@@ -787,12 +787,8 @@ builds:
   swaps:
   - added: The World Stone
     removed: Tyrfing
-    reason: Conquest community 73% win over 45 matches (vs 55% on this god), taking
+    reason: Conquest community 76% win over 52 matches (vs 56% on this god), taking
       the model's weakest slot from Tyrfing
-  - added: Transcendence
-    removed: Jotunn's Revenge
-    reason: Conquest community 65% win over 104 matches (vs 55% on this god), taking
-      the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001
 ---

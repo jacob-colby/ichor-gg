@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Rage
-    pick_rate: 0.58
+    pick_rate: 0.6
     win_rate: 0.51
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.33
     - name: Tekko-Kagi
       pick_rate: 0.06
       win_rate: 0.57
   - name: Dagger of Frenzy
-    pick_rate: 0.23
-    win_rate: 0.54
+    pick_rate: 0.25
+    win_rate: 0.57
     alternates:
-    - name: Rage
-      pick_rate: 0.15
-      win_rate: 0.44
     - name: Hydra's Lament
+      pick_rate: 0.15
+      win_rate: 0.51
+    - name: Rage
       pick_rate: 0.14
-      win_rate: 0.53
+      win_rate: 0.42
   - name: Deathbringer
     pick_rate: 0.32
-    win_rate: 0.51
+    win_rate: 0.49
     alternates:
-    - name: Musashi's Dual Swords
-      pick_rate: 0.16
-      win_rate: 0.53
     - name: Silverbranch Bow
       pick_rate: 0.16
-      win_rate: 0.59
+      win_rate: 0.62
+    - name: Musashi's Dual Swords
+      pick_rate: 0.15
+      win_rate: 0.53
   - name: Silverbranch Bow
-    pick_rate: 0.13
-    win_rate: 0.63
+    pick_rate: 0.14
+    win_rate: 0.58
     alternates:
     - name: Deathbringer
-      pick_rate: 0.23
-      win_rate: 0.49
+      pick_rate: 0.24
+      win_rate: 0.51
     - name: Musashi's Dual Swords
-      pick_rate: 0.09
-      win_rate: 0.47
+      pick_rate: 0.1
+      win_rate: 0.45
   - name: Titan's Bane
     pick_rate: 0.11
-    win_rate: 0.35
+    win_rate: 0.36
     alternates:
     - name: Deathbringer
       pick_rate: 0.13
-      win_rate: 0.56
+      win_rate: 0.58
     - name: Dominance
       pick_rate: 0.1
-      win_rate: 0.58
+      win_rate: 0.57
   - name: Infused Axe
-    pick_rate: 0.07
+    pick_rate: 0.06
     win_rate: 0.2
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.67
     - name: Riptalon
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.4
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.27
-    win_rate: 0.71
+    win_rate: 0.68
   - name: Hunter's Cowl
-    pick_rate: 0.24
-    win_rate: 0.53
+    pick_rate: 0.25
+    win_rate: 0.55
   - name: Bumba's Spear
-    pick_rate: 0.17
+    pick_rate: 0.16
     win_rate: 0.62
   source_url: https://smitebrain.com/gods/mercury/
-  last_verified: '2026-08-22'
-  god_win_rate: 0.5231481481481481
-  god_matches_won: 113
-  god_matches_played: 216
+  last_verified: '2026-08-23'
+  god_win_rate: 0.5188284518828452
+  god_matches_won: 124
+  god_matches_played: 239
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-22'
-  god_matches_analyzed: 14126
+  god_window_end: '2026-08-23'
+  god_matches_analyzed: 15677
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -122,28 +122,28 @@ builds:
     Qin''s Blade, Oath-Sworn Spear, Barbed Carver, Breastplate of Valor.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.84
     Transcendence:
-      total: 0.48
+      total: 0.47
       efficiency: 0.53
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.38
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.54
-      win: 0.53
-      pick: 0.19
+      win: 0.51
+      pick: 0.2
       fit: 0.66
     Silverbranch Bow:
-      total: 0.56
+      total: 0.54
       efficiency: 0.53
-      win: 0.63
-      pick: 0.22
+      win: 0.58
+      pick: 0.23
       fit: 0.54
     Tekko-Kagi:
       total: 0.54
@@ -152,9 +152,9 @@ builds:
       pick: 0.06
       fit: 0.75
     Heartseeker:
-      total: 0.53
+      total: 0.52
       efficiency: 0.47
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.87
   starter: &id001
@@ -166,11 +166,11 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Dominance
   - Silverbranch Bow
+  - Tekko-Kagi
   - Heartseeker
   flex_slots:
-  - Dominance
+  - Tekko-Kagi
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -192,39 +192,39 @@ builds:
     Shield Splitter, Demon Blade, Qin''s Blade, Daybreak Gavel.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.66
     Transcendence:
-      total: 0.48
+      total: 0.47
       efficiency: 0.53
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.36
     Hydra's Lament:
-      total: 0.53
-      efficiency: 0.54
-      win: 0.53
-      pick: 0.19
-      fit: 0.59
-    Dominance:
-      total: 0.5
-      efficiency: 0.45
-      win: 0.58
-      pick: 0.22
-      fit: 0.5
-    Silverbranch Bow:
       total: 0.52
+      efficiency: 0.54
+      win: 0.51
+      pick: 0.2
+      fit: 0.59
+    Silverbranch Bow:
+      total: 0.5
       efficiency: 0.53
-      win: 0.63
-      pick: 0.22
+      win: 0.58
+      pick: 0.23
       fit: 0.3
+    Tekko-Kagi:
+      total: 0.5
+      efficiency: 0.49
+      win: 0.57
+      pick: 0.06
+      fit: 0.47
     Heartseeker:
-      total: 0.51
+      total: 0.5
       efficiency: 0.47
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.72
   starter: *id001
@@ -261,28 +261,28 @@ builds:
     Demon Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.71
     Transcendence:
-      total: 0.45
+      total: 0.44
       efficiency: 0.53
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.2
     Hydra's Lament:
       total: 0.51
       efficiency: 0.54
-      win: 0.53
-      pick: 0.19
+      win: 0.51
+      pick: 0.2
       fit: 0.51
     Silverbranch Bow:
-      total: 0.55
+      total: 0.52
       efficiency: 0.53
-      win: 0.63
-      pick: 0.22
+      win: 0.58
+      pick: 0.23
       fit: 0.45
     Tekko-Kagi:
       total: 0.51
@@ -291,9 +291,9 @@ builds:
       pick: 0.06
       fit: 0.55
     Heartseeker:
-      total: 0.51
+      total: 0.5
       efficiency: 0.47
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.71
   starter: *id001
@@ -304,21 +304,21 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Silverbranch Bow
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Silverbranch Bow
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -331,39 +331,39 @@ builds:
     Glorious Pridwen, Midgardian Mail, Pharaoh''s Curse, Daybreak Gavel, Tyrfing.'
   slot_scores:
     Berserker's Shield:
-      total: 0.53
+      total: 0.52
       efficiency: 0.68
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.38
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.52
+      total: 0.51
       efficiency: 0.56
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.58
     Shield of the Phoenix:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.53
-      pick: 0.0
-      fit: 0.73
-    Silverbranch Bow:
       total: 0.52
       efficiency: 0.53
-      win: 0.63
-      pick: 0.22
-      fit: 0.28
+      win: 0.51
+      pick: 0.0
+      fit: 0.73
+    Freya's Tears:
+      total: 0.5
+      efficiency: 0.61
+      win: 0.51
+      pick: 0.0
+      fit: 0.39
     Amanita Charm:
       total: 0.58
       efficiency: 0.65
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.78
   starter: *id001
@@ -400,22 +400,22 @@ builds:
     Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.89
     The Reaper:
-      total: 0.53
+      total: 0.52
       efficiency: 0.5
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.77
     Silverbranch Bow:
-      total: 0.58
+      total: 0.56
       efficiency: 0.53
-      win: 0.63
-      pick: 0.22
+      win: 0.58
+      pick: 0.23
       fit: 0.68
     Tekko-Kagi:
       total: 0.55
@@ -424,15 +424,15 @@ builds:
       pick: 0.06
       fit: 0.82
     The Crusher:
-      total: 0.53
+      total: 0.52
       efficiency: 0.47
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.87
     Heartseeker:
-      total: 0.55
+      total: 0.54
       efficiency: 0.47
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.97
   starter: *id001
@@ -468,34 +468,34 @@ builds:
     Hammer, Avatar''s Parashu, Avenging Blade, Barbed Carver, Vital Amplifier, Bloodforge.'
   slot_scores:
     Lernaean Bow:
-      total: 0.5
+      total: 0.49
       efficiency: 0.52
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.53
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.72
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.4
     Tyrfing:
-      total: 0.52
+      total: 0.51
       efficiency: 0.48
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.72
     Dominance:
-      total: 0.51
+      total: 0.5
       efficiency: 0.45
-      win: 0.58
+      win: 0.57
       pick: 0.22
       fit: 0.53
     Silverbranch Bow:
-      total: 0.57
+      total: 0.55
       efficiency: 0.53
-      win: 0.63
-      pick: 0.22
+      win: 0.58
+      pick: 0.23
       fit: 0.62
     Tekko-Kagi:
       total: 0.52
@@ -537,28 +537,28 @@ builds:
     Grace, Freya''s Tears, Avenging Blade, Qin''s Blade, Shield of the Phoenix.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.77
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.54
-      win: 0.53
-      pick: 0.19
+      win: 0.51
+      pick: 0.2
       fit: 0.69
     Arondight:
-      total: 0.5
+      total: 0.49
       efficiency: 0.5
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.59
     Silverbranch Bow:
-      total: 0.53
+      total: 0.51
       efficiency: 0.53
-      win: 0.63
-      pick: 0.22
+      win: 0.58
+      pick: 0.23
       fit: 0.34
     Tekko-Kagi:
       total: 0.49
@@ -567,9 +567,9 @@ builds:
       pick: 0.06
       fit: 0.37
     Pendulum Blade:
-      total: 0.5
+      total: 0.49
       efficiency: 0.42
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.77
   starter: *id001
@@ -606,22 +606,22 @@ builds:
     Breastplate of Valor.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.84
     Transcendence:
-      total: 0.48
+      total: 0.47
       efficiency: 0.53
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.38
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.54
-      win: 0.53
-      pick: 0.19
+      win: 0.51
+      pick: 0.2
       fit: 0.66
     Tekko-Kagi:
       total: 0.54
@@ -630,15 +630,15 @@ builds:
       pick: 0.06
       fit: 0.75
     Heartseeker:
-      total: 0.53
+      total: 0.52
       efficiency: 0.47
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.87
     Titan's Bane:
       total: 0.45
       efficiency: 0.47
-      win: 0.35
+      win: 0.36
       pick: 0.24
       fit: 0.77
   starter: *id001

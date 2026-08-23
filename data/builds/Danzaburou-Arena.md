@@ -787,7 +787,7 @@ builds:
   swaps:
   - added: The World Stone
     removed: Jotunn's Revenge
-    reason: Conquest community 73% win over 45 matches (vs 55% on this god), taking
+    reason: Conquest community 76% win over 52 matches (vs 56% on this god), taking
       the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001

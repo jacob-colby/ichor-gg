@@ -463,7 +463,7 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Void Shield
   - Amanita Charm
@@ -471,7 +471,7 @@ builds:
   - Stampede
   flex_slots:
   - Kinetic Cuirass
-  - Jotunn's Revenge
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -488,12 +488,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+    Genji's Guard:
+      total: 0.48
+      efficiency: 0.66
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.29
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.56
@@ -525,9 +525,9 @@ builds:
       pick: 0.0
       fit: 0.75
   swaps:
-  - added: Jotunn's Revenge
+  - added: Genji's Guard
     removed: Void Stone
-    reason: Conquest community 67% win over 116 matches (vs 58% on this god), taking
+    reason: Conquest community 70% win over 94 matches (vs 60% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
