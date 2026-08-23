@@ -397,7 +397,7 @@ def test_offmap_exempt_is_inert_while_the_charge_is_off():
                                             exempt=("Max Mana",)) == 0.681
 
 
-# ── the exempt list's membership rule (STATE.md §4.17) ────────────────────
+# ── the exempt list's membership rule (STATE.md §4.16, §4.18) ─────────────
 
 def test_the_shipped_exempt_list_is_the_three_stats_the_rule_selects():
     """A stat earns a place only if NO `role_stats` entry names it AND no
@@ -418,7 +418,12 @@ def test_the_shipped_exempt_list_is_the_three_stats_the_rule_selects():
 def test_combat_cannot_see_any_exempted_stat():
     """Test (ii), driven off the module itself rather than restated. If
     `combat.py` ever learns to price mana or regeneration, this fails and the
-    exemption has to be re-argued against an instrument that can check it."""
+    exemption has to be re-argued against an instrument that can check it.
+
+    Its twin is `test_no_exempted_stat_may_be_one_combat_can_price`, which runs
+    the same test the other way round — over the stats `build_quality` names as
+    priced rather than over this module's source. Echo passes test (i) and
+    fails both, which is the case that made the pair worth having (§4.18)."""
     src = (pathlib.Path(combat.__file__).read_text(encoding="utf-8")).lower()
     assert "regen" not in src
     assert "mana" not in src

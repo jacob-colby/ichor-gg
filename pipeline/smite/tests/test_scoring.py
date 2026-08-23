@@ -1161,3 +1161,28 @@ def test_offmap_exempt_is_inert_at_the_shipped_charge():
     with_list = scoring.score_god_items(
         god, items, {"builds": []}, eff, {**w, "offmap_exempt": ["Max Mana"]}, {})
     assert without == with_list
+
+
+# ── fit_map: one place the merged map is built (STATE.md §4.18) ────────────
+
+def test_fit_map_is_the_map_score_god_items_scores_with():
+    """`score_god_items` must not rebuild the map, and neither may anything
+    else. `offmap_efficiency` charges against this map while `god_fit_score`
+    credits against it, and §4.15 is what happens when the two halves of
+    `quality` disagree about what a god wants."""
+    import inspect
+    src = inspect.getsource(scoring.score_god_items)
+    assert "fit_map(god, items, weights, profile)" in src
+    assert "_role_stat_map(" not in src, "the map is built in fit_map, not here"
+    assert "attack_damage_fit(" not in src
+
+
+def test_fit_map_returns_an_empty_map_for_an_archetype_bypass_flavor():
+    """A fun flavor ignores the god's archetype outright — and an empty map is
+    the one case `offmap_adjusted_score` refuses to charge, because "no
+    information about what this god wants" is not "this god wants nothing"."""
+    god = {"name": "X", "role": "Jungle", "damage_type": "physical"}
+    weights = scoring.load_weights_default()
+    assert scoring.fit_map(god, [], weights, {"archetype_bypass": True}) == ({}, ())
+    base, _ = scoring.fit_map(god, [], weights, {})
+    assert base.get("Strength")

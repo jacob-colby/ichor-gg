@@ -627,13 +627,24 @@ def efficiency_scores(items):
 #     Physical Protection         39  21.93   YES (6 of 21)         mitigation
 #     Magical Protection          37  19.40   YES (5 of 21)         mitigation
 #     Intelligence/Strength/...    -      -   YES                   damage
-#     Plating / Dampening         13  ~38     no                    plating_multiplier
+#     Plating / Dampening         13  ~38     no                    on the TARGET only (2026-08-23)
 #     Tenacity                     5  23.70   no                    TENACITY_CAP
 #     Echo                         5  21.59   no                    echo_multiplier
 #     Attack Damage                9  21.95   no                    basic attack
 #     Max Mana                    23   1.26   NO                    NOTHING  <- exempt
 #     Mana Regen                  20   5.37   NO                    NOTHING  <- exempt
 #     Health Regen                12  76.40   NO                    NOTHING  <- exempt
+#
+# THE PLATING ROW WAS WRONG WHEN IT WAS WRITTEN, corrected 2026-08-23. It read
+# `plating_multiplier`, which is a function in `combat.py` and not an
+# instrument reading a build: `damage_dealt` applies Plating and Dampening to
+# the TARGET, no caller in the package ever supplies either, and
+# `effective_health(health, protection)` has no term for a flat damage-type
+# reduction at all. So a build's own Plating is worth exactly 0.0 to every
+# number `build_quality` prints and test (ii) cannot be run on it in either
+# direction. See `build_quality.TARGET_SIDE_ONLY` and STATE.md SS4.19 - which
+# also records that exempting it anyway is a 0-of-89 no-op on Conquest and a
+# 48-core change in Joust and Arena, the two modes with no gate.
 #
 # ATTACK DAMAGE IS THE INSTRUCTIVE ROW. It fails (ii) — the basic attack is
 # modelled — and it is the one stat named by no role map that got a WEIGHT
@@ -711,6 +722,109 @@ def efficiency_scores(items):
 # 1457 -> 1151. It is still repriced out of the Carry core; see the sweep
 # under `offmap_efficiency` in _weights.yaml. The 12 buildable carriers hold
 # 3-6 points each, 9-20% of the item's price.
+#
+#
+# ── ECHO: REFUSED, AND IT IS WHAT TEST (ii) IS FOR (2026-08-23, at control ──
+#    fingerprint `527eb8f0a586` - baseline 5.8%, control 38.7% / 39.5%)
+#
+# The first stat to pass test (i) and fail test (ii), so it is the first time
+# the rule has had to do the work it was written for. Echo is named by ZERO of
+# the 21 `role_stats` entries and 0 of the 89 merged god maps - the same
+# standing as mana - and it is the LARGEST single line in the charge on a
+# Jungle core: 43.9% of the off-map gold billed in our 17 control Jungle
+# cores, against Attack Speed 16.5%, Lifesteal 16.5%, Max Health 11.8% and
+# Physical Protection 8.4%. Neither Critical Chance nor Cooldown Rate is
+# billed a single gold piece there.
+#
+# TEST (ii) FAILS: `combat.echo_multiplier` prices it exactly, off a
+# DOCUMENTED share (30% of an ability, 15% on an ultimate). So the rule says
+# check the charge rather than exempt it, and the check ran.
+#
+#   arm (alpha 0.55)      probe 0.70   best 0.45   Jungle on its objective
+#   control 0.00               38.7%       39.5%   14 ahead /  2 behind  +14.9%
+#   shipped, Echo billed       43.6%       39.4%   12 ahead /  5 behind  +10.3%
+#   Echo exempt                42.3%       39.2%   14 ahead /  2 behind  +15.0%
+#
+# IT COMES BACK AGAINST THE EXEMPTION, and the reason is nameable rather than
+# statistical. Every one of the 7 gods whose coverage moves loses a COMMUNITY
+# item to an Echo item: The Crusher enters six of them and takes Titan's Bane
+# out three times, Damaru enters the seventh, and the community buys The
+# Crusher for a Jungler TWICE in 102 Jungle slots. The community is not blind
+# to Echo either - it takes an Echo item in 16 of its 537 slots - it just buys
+# them for Mid (7) and Support (6) and essentially never for Jungle (2) or
+# Carry (0). There IS information
+# about who wants Echo; it is simply not in `role_stats`, and reading it off
+# the community's own composition is the leakage docs/STATE.md §1 is about.
+#
+# AND THE GAIN IS NEAR-DEFINITIONAL, which is the methodological half of this.
+# Echo's only effect anywhere in the model is `echo_multiplier`, which
+# multiplies exactly the ability damage that Jungle's maximand (`burst_70`)
+# sums. Sparing the charge on it CANNOT fail to raise that number. A stat that
+# an instrument prices is a stat that instrument will always reward you for
+# keeping; test (ii) exists so the check happens anyway, and the check is only
+# worth something because a second, non-circular measure - coverage - can
+# disagree with it. Here it did.
+#
+# SO ECHO STAYS OFF THE LIST, and `test_no_exempted_stat_may_be_one_combat_can_price`
+# now enforces test (ii) mechanically against `build_quality.COMBAT_PRICED`
+# rather than leaving it as a sentence in this comment.
+#
+#
+# ── PLATING: REFUSED, AND THE CHECK COULD NOT BE RUN (2026-08-23, at the ────
+#    same control fingerprint `527eb8f0a586`)
+#
+# The stat SS4.18 named as the largest untested column: 39.9% of the off-map
+# gold this charge removes from a Solo core and 63.2% from a Support one, and
+# 93.1% / 100% of what is still billed once the charge has reshaped them.
+# Seven buildable carriers at 41.02 g/pt.
+#
+# TEST (i) PASSES: named by 0 of the 21 `role_stats` entries and 0 of the 89
+# merged god maps, the same standing as mana and Health Regen.
+#
+# TEST (ii) CANNOT BE RUN, which is a third answer and not a quiet yes. See
+# the corrected rule row above: Plating is priced on the TARGET and read off
+# no build. The check was therefore run the only way left - through the items
+# the exemption moves - and on Conquest it moves NONE:
+#
+#   arm (alpha 0.55)      probe 0.70   best 0.45   C/J/A cores moved vs SHIPPED
+#   shipped, Plating billed    43.61%      39.42%     --
+#   Plating exempt             43.61%      39.42%     0 / 17 / 31
+#
+# Coverage identical to the digit on both splits, every role's `build_quality`
+# verdict unchanged, Berserker's Shield still 0 of 18 Carry cores. The whole
+# effect is in the two modes with no gate, and it is one-directional: every
+# arrival is a Plating item (Spectral Armor 13+31, Kinetic Cuirass 4+1) and
+# there are ZERO Plating departures. Borrowed Conquest coverage is unchanged
+# to the item there too, Joust 153 of 537 and Arena 129 of 537 both ways.
+#
+# AND THE CONQUEST ZERO RESTS ON THE ASSEMBLER, NOT ON THE MARGIN. The push is
+# a constant per item - +0.039 / +0.078 / +0.117 of `efficiency` for a 5-, 10-
+# or 15-point roll, at most +0.082 of `quality` - and against each god's own
+# gap (worst item in the core minus best Plating item outside it) the slack is
+# NEGATIVE on 8 Support gods, yet no core moves. On Atlas the exemption lifts
+# Shield of the Phoenix from rank 11 to rank 6, above two items that ARE in
+# the core, and it still does not enter: it carries the `sustain` tag, Atlas's
+# `max_lifesteal` is 1, and Amanita Charm spent it at rank 1. So `quality`
+# rank does not decide core membership and a score-gap argument cannot show a
+# change is safe - rebuild the cores. At alpha 1.00, seven Conquest cores move.
+#
+# DAMPENING IS THE TWIN AND ANSWERS HARDER. Same standing on test (i) (0 of 21,
+# 0 of 89) and the same target-side-only failure on test (ii), six carriers at
+# 35.67 g/pt and ONE community slot in 537. The charge on it is already vacuous
+# where it can be measured: no Dampening item reaches a Conquest core on any of
+# the 89 gods, in either archetype, at either strength, so it is billed 0 gold
+# in every Conquest core. Exempting it moves 0 Conquest, 0 Arena and 1 Joust
+# core (Hua Mulan, Shield Splitter -> Shogun's Ofuda), with coverage identical
+# to the digit on both splits and borrowed Joust coverage 153 of 537 both ways.
+# Its margin IS clean, unlike Plating's: smallest slack +0.0109, median +0.1577,
+# 0 of 89 gods at or below zero. Two stats identical on both tests, held out by
+# two different things.
+#
+# IT ALSO CORRECTS SS4.16's ATTRIBUTION. That entry read Solo's -9.4pp as
+# "Health Regen and Plating" off the gold share. Health Regen was right;
+# Plating is worth exactly zero coverage on either split. That is the second
+# time gold share has mispredicted a carve-out, and the trap SS4.16 recorded
+# now has two confirmations and no counter-example.
 
 
 def offmap_gold(eff_row, role_map, exempt=()):

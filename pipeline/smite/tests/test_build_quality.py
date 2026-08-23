@@ -7,6 +7,7 @@ before any verdict, and the import boundary that keeps this a diagnostic.
 """
 import ast
 import inspect
+import pathlib
 import re
 
 import pytest
@@ -929,3 +930,151 @@ def test_the_import_guard_still_catches_a_real_import():
                 '"""build_quality cannot adjudicate this."""',
                 "# see build_quality.ROLE_OBJECTIVES"):
         assert not _IMPORTS_BUILD_QUALITY.search(src), src
+
+
+# ── Where the off-map charge lands (STATE.md §4.18) ────────────────────────
+
+def test_offmap_charge_reads_the_map_scoring_itself_built():
+    """The composition has to be measured against `scoring.fit_map`, not
+    against a private rebuild of it. §4.15's whole finding is the two halves of
+    `quality` disagreeing about what a god wants; a diagnostic with a third
+    opinion would be the same defect with a bigger surface."""
+    src = inspect.getsource(bq.offmap_charge)
+    assert "scoring.fit_map(" in src
+    assert '"stat_gold"' in src, "the gold must be efficiency's own column"
+
+
+def test_offmap_charge_bills_only_what_the_map_does_not_name():
+    god = _god("Susano")
+    items = recommend.load_items()
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    role_map, _ = scoring.fit_map(god, items, weights,
+                                  scoring.resolve_profile(weights, "Conquest", None))
+    row = {"god": god["name"], "primary_role": "Jungle",
+           "ours": {"items": ["Tekko-Kagi"]}}
+    charge = bq.offmap_charge([row], [god], items, weights)
+    billed = charge["Jungle"]["stats"]
+    # Tekko-Kagi is Strength 35 / Attack Speed 20% / Penetration 10, and a
+    # Jungle map names Strength and Penetration but not Attack Speed.
+    assert set(billed) == {"Attack Speed"}
+    assert role_map.get("Strength") and role_map.get("Penetration")
+    assert not role_map.get("Attack Speed")
+    assert billed["Attack Speed"] == pytest.approx(charge["Jungle"]["gold"])
+
+
+def test_offmap_charge_bills_nothing_for_an_exempted_stat():
+    """The exemption is subtracted here too, so the section never reports gold
+    that no god is actually charged."""
+    god = _god("Susano")
+    items = recommend.load_items()
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    spared = {**weights, "offmap_exempt": list(weights["offmap_exempt"]) + ["Attack Speed"]}
+    row = {"god": god["name"], "primary_role": "Jungle", "ours": {"items": ["Tekko-Kagi"]}}
+    assert bq.offmap_charge([row], [god], items, spared)["Jungle"]["gold"] == 0.0
+
+
+def test_no_exempted_stat_may_be_one_combat_can_price():
+    """§4.16 test (ii), enforced instead of restated. An exemption says only
+    "do not charge"; if `combat.py` reads the stat then charging it is a
+    hypothesis THIS report can check, and the honest move is to check it. Echo
+    is why this test exists — it passes test (i) (named by no role map) and
+    fails here, and the check it demanded came back against the exemption
+    (STATE.md §4.18)."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    for stat in weights.get("offmap_exempt") or ():
+        assert stat not in bq.COMBAT_PRICED, (
+            f"{stat} is priced by combat.py; check the charge with this report "
+            "rather than exempting it")
+    assert "Echo" in bq.COMBAT_PRICED and "Echo" not in weights["offmap_exempt"]
+
+
+def test_combat_priced_names_are_stats_the_pool_actually_carries():
+    """A typo in `COMBAT_PRICED` would silently make a stat look unpriced,
+    which is half of what admits it to the exempt list."""
+    carried = {efficiency.stat_base(k)
+               for it in recommend.load_items() if scoring.is_buildable(it)
+               for k in efficiency.item_stat_values(it)}
+    assert set(bq.COMBAT_PRICED) <= carried
+
+
+def test_the_charge_section_states_the_standing_of_every_stat_it_bills():
+    """A stat cannot appear in the composition table without the two tests'
+    answer for it beside it — that is the whole point of the section."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    charge = {"Jungle": {"n": 1, "gold": 900.0,
+                         "stats": {"Echo": 500.0, "Attack Speed": 400.0}}}
+    text = "\n".join(bq.offmap_charge_lines(charge, weights))
+    for stat in charge["Jungle"]["stats"]:
+        assert text.count(stat) >= 2, stat
+    assert "nowhere" in text, "a stat named by no role map must be marked as such"
+    assert "Carry, Constant, Hunter, Pressure, Sharpshooter" in text
+
+
+def test_stat_standing_reads_the_shipped_role_table():
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    named, priced, exempt = bq.stat_standing("Echo", weights)
+    assert named == [] and priced == "echo_multiplier" and exempt is False
+    named, priced, exempt = bq.stat_standing("Max Mana", weights)
+    assert named == [] and priced is None and exempt is True
+    named, _, _ = bq.stat_standing("Physical Protection", weights)
+    assert len(named) == 6, "the defect stats have a contrast; they are not exemptible"
+
+
+# ── Plating: priced on the target, unreadable on the build (STATE.md §4.19) ─
+
+def test_plating_and_dampening_are_target_side_only():
+    """`combat.py` names both, so `COMBAT_PRICED` lists them — but neither
+    reaches the build being judged, which is what test (ii) actually asks
+    about. Pinned as a pair so the report's third answer cannot be lost."""
+    for stat in bq.TARGET_SIDE_ONLY:
+        assert stat in bq.COMBAT_PRICED
+    assert set(bq.TARGET_SIDE_ONLY) == {"Plating", "Dampening"}
+    _named, priced, _exempt = bq.stat_standing(
+        "Plating", scoring.load_weights(recommend.WEIGHTS_PATH))
+    assert "on the target only" in priced
+
+
+def test_nothing_in_the_pipeline_ever_supplies_a_plating_value():
+    """The claim `TARGET_SIDE_ONLY` rests on, driven off the modules instead of
+    asserted. `damage_dealt` takes `plating=`/`dampening=` and every caller
+    leaves them at the signature default, and `effective_health` has no term
+    for either — so a build's own Plating is worth 0.0 to this report.
+
+    If someone wires either into the buyer's side, this fails, and §4.19 has
+    to be re-argued against an instrument that can finally check it."""
+    import smite
+
+    pkg = pathlib.Path(smite.__file__).parent
+    callers = []
+    for path in sorted(pkg.glob("*.py")):
+        if path.name == "combat.py":
+            continue
+        for node in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
+            if not isinstance(node, ast.Call):
+                continue
+            for kw in node.keywords:
+                if kw.arg in ("plating", "dampening"):
+                    callers.append(f"{path.name}:{node.lineno} {kw.arg}=")
+    assert not callers, f"a caller now supplies a flat reduction: {callers}"
+    sig = inspect.signature(combat.effective_health)
+    assert list(sig.parameters) == ["health", "protection"]
+
+
+def test_the_charge_section_marks_a_target_side_row():
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    charge = {"Solo": {"n": 1, "gold": 900.0,
+                       "stats": {"Plating": 600.0, "Attack Speed": 300.0}}}
+    text = "\n".join(bq.offmap_charge_lines(charge, weights))
+    assert "on the target only" in text
+    assert "§4.19" in text
+
+
+def test_target_side_only_stats_are_named_by_no_role_map_either():
+    """Both halves of `TARGET_SIDE_ONLY` pass §4.16's test (i) as well, which
+    is why they got as far as being measured (§4.19). If a role map ever names
+    Plating or Dampening the silence acquires a contrast and that entry has to
+    be re-argued, so pin it here rather than in the prose."""
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    named = {stat for entry in weights["role_stats"].values() for stat in entry}
+    for stat in bq.TARGET_SIDE_ONLY:
+        assert stat not in named, f"{stat} is now named by a role map; §4.19 needs re-running"

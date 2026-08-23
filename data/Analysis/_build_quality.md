@@ -140,6 +140,34 @@ The community buys 0.0 Physical Protection across all 18 Carries and we buy 0.0,
 
 Two things worth keeping now that the surplus is gone. Effective health is the quantity to read it on, and it is +0.0% physical and +0.0% magical against the community's — LEVEL is the honest target here, not zero, because §4.13 means no threshold in this report can charge us for buying too LITTLE defence, so a figure BELOW the community's would not be visible as a cost. And `defense_affinity` and `draft.archetype_scaled_stats` are **excluded as causes**: both are read only by the viewer's draft overlay (`viewer/src/lib/threats.ts`), which is applied on top of a finished core and never reaches the builds measured here, and `defense_affinity` is 0.0 for Carry in any case because it is derived from the same role map that names no protection for the role. See docs/STATE.md §4.
 
+### Where the off-map charge lands — measured on every run
+
+`offmap_efficiency` ships at **0.55** and charges an item for the gold it spent on stats the god's fit map does not name (STATE.md §3, §4.15). This is what that bill is made of in our own cores, at full strength — the charge is linear in the strength, so the shipped value scales every row equally. **Nothing here changes a build**; it is here because every attempt on this charge so far has had to rebuild the composition by hand against a dataset that had moved under the previous one.
+
+| Role | n | off-map gold in our cores | largest lines |
+|---|---|---|---|
+| Carry | 18 | 1,371g | Max Health 100.0% |
+| Jungle | 17 | 9,185g | Echo 47.0%, Lifesteal 22.7%, Max Health 17.9%, Attack Speed 5.7%, Tenacity 3.9% |
+| Mid | 22 | 4,967g | Lifesteal 87.6%, Plating 12.4% |
+| Solo | 18 | 3,964g | Plating 93.1%, Lifesteal 6.9% |
+| Support | 14 | 2,871g | Plating 100.0% |
+
+And what the two mechanical tests of §4.16 say about each stat being billed. A stat named by SOME role map has a CONTRAST, so another role's silence about it is a positive statement by the same table and charging it is legitimate; a stat named NOWHERE has no contrast to read. The second column is test (ii) — if `combat.py` can see the stat then charging it is a hypothesis this report can check, which is why it may not simply be exempted.
+
+| Stat | named by `role_stats` | `combat.py` | on `offmap_exempt` |
+|---|---|---|---|
+| Plating | 0 of 21 — **nowhere** | flat_reduction_multiplier — **on the target only** | no |
+| Lifesteal | 3 of 21 (Carry, Hunter, Sharpshooter) | LIFESTEAL_MINION_SCALE | no |
+| Echo | 0 of 21 — **nowhere** | echo_multiplier | no |
+| Max Health | 6 of 21 (Brawler, Guardian, Solo, Support, Tank, Warrior) | effective_health | no |
+| Attack Speed | 5 of 21 (Carry, Constant, Hunter, Pressure, Sharpshooter) | attack_dps | no |
+| Tenacity | 0 of 21 — **nowhere** | TENACITY_CAP | no |
+| Pathfinding | 0 of 21 — **nowhere** | PATHFINDING_COMBAT_SCALE | no |
+
+**No verdict is drawn here**, and that is deliberate: deciding whether a line in the first table is a defect needs the community's own record and the leakage-free coverage gate as well, and both live outside this module. The verdicts reached so far are register §4.15 (the defect stats — charge them), §4.16 (mana and the regens — exempt them), §4.18 (Echo — charge it, and why the role that pays most for it is not being wronged) and §4.19 (Plating and Dampening — charge them, because the check cannot be run and sparing either changes nothing in the mode that has a gate).
+
+A row reading **on the target only** is the one case this report cannot adjudicate at all: `combat.py` prices the stat on an OPPONENT and nothing reads it off the build being judged, so a charge on it is neither confirmed nor refuted by anything above. See `TARGET_SIDE_ONLY`.
+
 ## 4. The same, for the blended `core` (what the Balanced tab ships)
 
 `core` carries `win` and `pick`, so it is part community build already; the gap between this block and §2 is what the meta signal buys in this arithmetic.
