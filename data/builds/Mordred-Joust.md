@@ -655,4 +655,75 @@ builds:
       pick: 0.0
       fit: 0.71
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Stygian Anchor
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Freya's Tears
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Stygian Anchor
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Stygian Anchor:
+      total: 0.56
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Jotunn's Revenge:
+      total: 0.58
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Kinetic Cuirass:
+      total: 0.59
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Amanita Charm:
+      total: 0.81
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.96
+    Erosion:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+  swaps:
+  - added: Freya's Tears
+    removed: Shield Splitter
+    reason: Conquest community 70% win over 64 matches (vs 56% on this god), taking
+      the model's weakest slot from Shield Splitter
+  borrowed_from: Conquest
+  starter: *id001
 ---

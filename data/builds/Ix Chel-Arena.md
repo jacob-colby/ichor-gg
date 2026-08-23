@@ -528,22 +528,22 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Void Shield
-  - Void Stone
+  - Spear of Desolation
+  - Rod of Tahuti
   - Obsidian Shard
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Void Stone
+  - Spear of Desolation
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -553,18 +553,18 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Void Shield:
-      total: 0.6
-      efficiency: 0.47
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Void Stone:
-      total: 0.59
-      efficiency: 0.45
+      fit: 0.5
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.36
     Obsidian Shard:
       total: 0.5
       efficiency: 0.54
@@ -592,8 +592,16 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Kinetic Cuirass
-    reason: Conquest community 51% win over 251 matches (vs 44% on this god), taking
+    reason: Conquest community 51% win over 268 matches (vs 44% on this god), taking
       the model's weakest slot from Kinetic Cuirass
+  - added: Spear of Desolation
+    removed: Void Stone
+    reason: Conquest community 49% win over 498 matches (vs 44% on this god), taking
+      the model's weakest slot from Void Stone
+  - added: Rod of Tahuti
+    removed: Void Shield
+    reason: Conquest community 49% win over 402 matches (vs 44% on this god), taking
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

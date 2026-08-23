@@ -13,61 +13,61 @@ builds:
     win_rate: 0.55
     alternates:
     - name: Damaru
-      pick_rate: 0.14
-      win_rate: 0.67
+      pick_rate: 0.13
+      win_rate: 0.69
     - name: Gauntlet of Thebes
       pick_rate: 0.12
       win_rate: 0.51
   - name: Totem of Death
-    pick_rate: 0.22
-    win_rate: 0.56
+    pick_rate: 0.21
+    win_rate: 0.57
     alternates:
     - name: The Cosmic Horror
       pick_rate: 0.21
-      win_rate: 0.6
+      win_rate: 0.61
     - name: Damaru
       pick_rate: 0.12
-      win_rate: 0.58
+      win_rate: 0.57
   - name: Damaru
-    pick_rate: 0.16
-    win_rate: 0.55
+    pick_rate: 0.15
+    win_rate: 0.56
     alternates:
     - name: Totem of Death
-      pick_rate: 0.22
+      pick_rate: 0.21
       win_rate: 0.6
     - name: Omen Drum
       pick_rate: 0.12
       win_rate: 0.67
   - name: Omen Drum
     pick_rate: 0.27
-    win_rate: 0.6
+    win_rate: 0.61
     alternates:
     - name: Totem of Death
       pick_rate: 0.12
-      win_rate: 0.66
+      win_rate: 0.65
     - name: Damaru
       pick_rate: 0.09
-      win_rate: 0.51
+      win_rate: 0.52
   - name: Rod of Tahuti
     pick_rate: 0.16
-    win_rate: 0.64
+    win_rate: 0.65
     alternates:
     - name: Omen Drum
       pick_rate: 0.07
       win_rate: 0.69
     - name: Evil Eye
-      pick_rate: 0.07
-      win_rate: 0.66
+      pick_rate: 0.06
+      win_rate: 0.65
   - name: Evil Eye
     pick_rate: 0.11
-    win_rate: 0.58
+    win_rate: 0.6
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.09
       win_rate: 0.76
     - name: Obsidian Shard
-      pick_rate: 0.07
-      win_rate: 0.73
+      pick_rate: 0.06
+      win_rate: 0.74
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.3
@@ -79,14 +79,14 @@ builds:
     pick_rate: 0.13
     win_rate: 0.52
   source_url: https://smitebrain.com/gods/khepri/
-  last_verified: '2026-08-22'
-  god_win_rate: 0.5679012345679012
-  god_matches_won: 644
-  god_matches_played: 1134
+  last_verified: '2026-08-23'
+  god_win_rate: 0.5710843373493976
+  god_matches_won: 711
+  god_matches_played: 1245
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-22'
-  god_matches_analyzed: 14126
+  god_window_end: '2026-08-23'
+  god_matches_analyzed: 15677
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -125,39 +125,39 @@ builds:
     Effigy.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.58
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.8
     Freya's Tears:
-      total: 0.57
+      total: 0.58
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.65
     Shifter's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.7
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
-      win: 0.64
+      win: 0.65
       pick: 0.35
       fit: 0.15
     Obsidian Shard:
       total: 0.57
       efficiency: 0.54
-      win: 0.73
-      pick: 0.22
+      win: 0.74
+      pick: 0.18
       fit: 0.25
     Amanita Charm:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.7
   starter: &id001
@@ -197,39 +197,39 @@ builds:
     Lion, Leviathan''s Hide, Void Shield, Stampede, Magi''s Cloak, Ancile.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.58
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.78
     Shield of the Phoenix:
-      total: 0.58
+      total: 0.59
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.93
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.58
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
-      win: 0.64
+      win: 0.65
       pick: 0.35
       fit: 0.16
     Obsidian Shard:
       total: 0.57
       efficiency: 0.54
-      win: 0.73
-      pick: 0.22
+      win: 0.74
+      pick: 0.18
       fit: 0.26
     Amanita Charm:
-      total: 0.63
+      total: 0.64
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.98
   starter: *id001
@@ -269,37 +269,37 @@ builds:
     Stone of Binding:
       total: 0.55
       efficiency: 0.51
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.75
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.55
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.59
     Freya's Tears:
-      total: 0.54
+      total: 0.55
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.45
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.86
-      win: 0.64
+      win: 0.65
       pick: 0.35
       fit: 0.41
     Obsidian Shard:
       total: 0.61
       efficiency: 0.54
-      win: 0.73
-      pick: 0.22
+      win: 0.74
+      pick: 0.18
       fit: 0.51
     Amanita Charm:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.49
   starter: *id001
@@ -338,39 +338,39 @@ builds:
     Hide.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.47
+      total: 0.48
       efficiency: 0.52
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.24
     Nimble Ring:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.3
     Bragi's Harp:
-      total: 0.48
+      total: 0.49
       efficiency: 0.44
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
-      win: 0.64
+      win: 0.65
       pick: 0.35
       fit: 0.08
     Obsidian Shard:
       total: 0.56
       efficiency: 0.54
-      win: 0.73
-      pick: 0.22
+      win: 0.74
+      pick: 0.18
       fit: 0.18
     Amanita Charm:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.36
   starter: *id001
@@ -409,39 +409,39 @@ builds:
     Midgardian Mail, Daybreak Gavel.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
       total: 0.56
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.48
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.64
     Rod of Tahuti:
-      total: 0.62
+      total: 0.63
       efficiency: 0.86
-      win: 0.64
+      win: 0.65
       pick: 0.35
       fit: 0.13
     Obsidian Shard:
       total: 0.57
       efficiency: 0.54
-      win: 0.73
-      pick: 0.22
+      win: 0.74
+      pick: 0.18
       fit: 0.23
     Amanita Charm:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.45
   starter: *id001
@@ -484,37 +484,37 @@ builds:
     Berserker's Shield:
       total: 0.55
       efficiency: 0.68
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.35
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.54
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.51
     Rod of Tahuti:
-      total: 0.63
+      total: 0.64
       efficiency: 0.86
-      win: 0.64
+      win: 0.65
       pick: 0.35
       fit: 0.2
     Obsidian Shard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.54
-      win: 0.73
-      pick: 0.22
+      win: 0.74
+      pick: 0.18
       fit: 0.3
     Amanita Charm:
       total: 0.55
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.41
   starter: *id001
@@ -555,39 +555,39 @@ builds:
     Ancient Signet, The Crusher, Mantle Of Discord, Dreamer''s Idol, Midgardian Mail.'
   slot_scores:
     Book of Thoth:
-      total: 0.46
+      total: 0.47
       efficiency: 0.51
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.18
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.41
     Transcendence:
       total: 0.47
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.18
     Rod of Tahuti:
-      total: 0.65
+      total: 0.66
       efficiency: 0.86
-      win: 0.64
+      win: 0.65
       pick: 0.35
       fit: 0.32
     Obsidian Shard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.54
-      win: 0.73
-      pick: 0.22
+      win: 0.74
+      pick: 0.18
       fit: 0.42
     Amanita Charm:
       total: 0.55
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.41
   starter: *id001
@@ -628,37 +628,37 @@ builds:
     Genji's Guard:
       total: 0.55
       efficiency: 0.66
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.4
     Breastplate of Valor:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.58
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.8
     Freya's Tears:
-      total: 0.57
+      total: 0.58
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.65
     Shifter's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.7
     Amanita Charm:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.7
   starter: *id001
@@ -699,43 +699,43 @@ builds:
     Genji's Guard:
       total: 0.55
       efficiency: 0.66
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.58
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.8
     Freya's Tears:
-      total: 0.57
+      total: 0.58
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.65
     Shifter's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.7
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
-      win: 0.64
+      win: 0.65
       pick: 0.35
       fit: 0.15
     Amanita Charm:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.7
   swaps:
   - added: Rod of Tahuti
     removed: Breastplate of Valor
-    reason: community 64% win over 181 matches (vs 57% on this god), taking the model's
+    reason: community 65% win over 199 matches (vs 57% on this god), taking the model's
       weakest slot from Breastplate of Valor
   starter: *id001
 ---
