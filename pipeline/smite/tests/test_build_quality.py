@@ -257,18 +257,25 @@ def test_flips_names_gods_whose_sign_changes_between_runs():
 
 # ── Judged by role ────────────────────────────────────────────────────────
 
-def _profile(dps, ehp, cost=1000.0, burst=None):
-    """A profile complete enough for every objective's maximand."""
+def _profile(dps, ehp, cost=1000.0, burst=None, ehp_magical=None):
+    """A profile complete enough for every objective's maximand.
+
+    `ehp_magical` defaults to `ehp` — the two channels equal — so a test that
+    is not about the damage mix reads as it did before the pair existed. A
+    test that IS about it passes them apart.
+    """
     burst = dps if burst is None else burst
+    mag = ehp if ehp_magical is None else ehp_magical
     t = cost / 1000.0
     return {
         "items": [], "cost": cost, "stats": {},
         "total_dps": {70: dps, 170: dps}, "burst": {0: burst, 70: burst, 170: burst},
-        "ehp_physical": ehp, "ehp_magical": ehp,
-        "duel": {70: ehp * dps, 170: ehp * dps},
+        "ehp_physical": ehp, "ehp_magical": mag,
+        "duel": {"physical": {70: ehp * dps, 170: ehp * dps},
+                 "magical": {70: mag * dps, 170: mag * dps}},
         "per_1000g": {"total_dps": {70: dps / t, 170: dps / t},
                       "burst": {0: burst / t, 70: burst / t, 170: burst / t},
-                      "ehp_physical": ehp / t, "ehp_magical": ehp / t},
+                      "ehp_physical": ehp / t, "ehp_magical": mag / t},
     }
 
 
@@ -282,9 +289,21 @@ def test_a_duel_score_has_no_per_1000g_twin():
     again is not a quantity, so asking raises rather than returning a number
     nobody could interpret."""
     p = _profile(100.0, 3000.0)
-    assert bq.metric(p, "duel_70") == pytest.approx(300_000.0)
+    assert bq.metric(p, "duel_physical_70") == pytest.approx(300_000.0)
     with pytest.raises(KeyError, match="no per-1000g twin"):
-        bq.metric(p, "duel_70/1000g")
+        bq.metric(p, "duel_physical_70/1000g")
+
+
+def test_a_duel_score_has_to_name_the_opponents_damage_channel():
+    """Its EHP factor is effective health against the reference opponent, so
+    an unqualified `duel_70` is a question with two answers. It raises rather
+    than quietly returning the physical one, which is what it did until
+    2026-08-23."""
+    p = _profile(100.0, 3000.0, ehp_magical=1500.0)
+    assert bq.metric(p, "duel_physical_70") == pytest.approx(300_000.0)
+    assert bq.metric(p, "duel_magical_70") == pytest.approx(150_000.0)
+    with pytest.raises(KeyError, match="name the opponent's damage"):
+        bq.metric(p, "duel_70")
 
 
 def test_the_duel_score_is_neutral_when_a_build_trades_ehp_for_damage():
@@ -293,8 +312,9 @@ def test_the_duel_score_is_neutral_when_a_build_trades_ehp_for_damage():
     reference opponent cancels in ours-over-theirs, so no constant chooses
     this — the algebra does."""
     theirs, mine = _profile(100.0, 3000.0), _profile(50.0, 6000.0)
-    assert bq.metric(mine, "duel_70") == pytest.approx(bq.metric(theirs, "duel_70"))
-    d = bq.distribution([_full_row("g", "Solo", theirs, mine)], "duel_70")
+    assert bq.metric(mine, "duel_physical_70") == pytest.approx(
+        bq.metric(theirs, "duel_physical_70"))
+    d = bq.distribution([_full_row("g", "Solo", theirs, mine)], "duel_physical_70")
     assert (d["ahead"], d["behind"], d["level"]) == (0, 0, 1)
 
 
@@ -309,21 +329,175 @@ def test_every_role_objective_names_a_threshold_and_a_maximand():
         assert v["maximise"], v["role"]
         assert v["because"], v["role"]
         assert "threshold" in v
-    assert bq.ROLE_OBJECTIVES["Solo"]["maximise"][0] == "duel_70"
+    assert bq.ROLE_OBJECTIVES["Solo"]["maximise"][0] == ("duel_physical_70",
+                                                         "duel_magical_70")
     # Support scores no damage at all — excluded, not down-weighted.
-    assert "ehp" in bq.ROLE_OBJECTIVES["Support"]["maximise"][0]
-    assert all("dps" not in key and "burst" not in key
-               for key, _ in [bq.ROLE_OBJECTIVES["Support"]["maximise"]])
+    assert all("ehp" in key and "dps" not in key and "burst" not in key
+               for key in bq.ROLE_OBJECTIVES["Support"]["maximise"][0])
 
 
 def test_the_duel_score_is_not_applied_outside_solo():
     """It pays full price for effective health, which is correct for a duel
     and is exactly the defect the role split exists to expose on a Carry. A
     metric that hides what it was built to find is worse than the pooled one."""
-    assert bq.ROLE_OBJECTIVES["Solo"]["maximise"][0] == "duel_70"
+    assert all(k.startswith("duel_") for k in bq.ROLE_OBJECTIVES["Solo"]["maximise"][0])
     for role, objective in bq.ROLE_OBJECTIVES.items():
         if role != "Solo":
-            assert not objective["maximise"][0].startswith("duel"), role
+            assert not any(k.startswith("duel") for k in objective["maximise"][0]), role
+
+
+# ── Both effective-health channels ────────────────────────────────────────
+
+def test_every_objective_with_an_ehp_term_names_both_channels():
+    """The defect this pair exists to fix: Solo's duel score and Support's
+    effective health per 1000g both read `ehp_physical` alone until
+    2026-08-23, so the two roles whose job is durability were scored on half
+    the damage in the game. A future objective that grows an EHP term has to
+    carry both channels too, which is what this asserts rather than the two
+    names."""
+    for role, objective in bq.ROLE_OBJECTIVES.items():
+        keys = objective["maximise"][0]
+        assert isinstance(keys, tuple) and keys, role
+        if any("ehp" in k or k.startswith("duel") for k in keys):
+            channels = [c for _, c in bq.EHP_CHANNELS]
+            assert len(keys) == len(channels), role
+            for key, channel in zip(keys, channels):
+                assert channel in key, (role, key)
+        else:
+            assert len(keys) == 1, role
+
+
+def test_a_mixed_stream_lands_between_the_two_channels():
+    """The whole reason the pair is an ANSWER and not a hedge. Effective health
+    against a stream that is a share f physical is the weighted HARMONIC mean
+    of the two channels, and the ours-over-theirs ratio of two such is monotone
+    in f — so no damage mix can score outside the interval the report prints,
+    and checking the endpoints is checking everything."""
+    def mixed(phys, mag, f):
+        return 1.0 / (f / phys + (1 - f) / mag)
+
+    ours, theirs = (4000.0, 2500.0), (3000.0, 3600.0)
+    ends = [mixed(*ours, f) / mixed(*theirs, f) for f in (0.0, 1.0)]
+    lo, hi = min(ends), max(ends)
+    rising = ends[1] >= ends[0]
+    previous = None
+    for f in (0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0):
+        r = mixed(*ours, f) / mixed(*theirs, f)
+        assert lo - 1e-9 <= r <= hi + 1e-9, f
+        if previous is not None:
+            assert (r >= previous - 1e-9) if rising else (r <= previous + 1e-9), f
+        previous = r
+    # And the arithmetic mean is not the f=0.5 answer it is mistaken for.
+    arithmetic = sum(ours) / sum(theirs)
+    assert arithmetic != pytest.approx(mixed(*ours, 0.5) / mixed(*theirs, 0.5))
+    assert lo <= arithmetic <= hi
+
+
+def test_channel_verdict_is_a_property_of_the_whole_interval():
+    """`ahead` means ahead at EVERY mix, so one endpoint inside the dead band
+    is not ahead. `mix` is not a tie — it is the report having no answer."""
+    assert bq.channel_verdict([+5.0, +5.0]) == "ahead"
+    assert bq.channel_verdict([-5.0, -5.0]) == "behind"
+    assert bq.channel_verdict([+30.0, -30.0]) == "mix"
+    assert bq.channel_verdict([-30.0, +30.0]) == "mix"
+    assert bq.channel_verdict([+5.0, +0.1]) == "level"     # interval meets the band
+    assert bq.channel_verdict([-5.0, -0.1]) == "level"
+    assert bq.channel_verdict([+0.1, -0.1]) == "level"
+    assert bq.channel_verdict([+5.0]) == "ahead"           # a single-channel objective
+    assert bq.channel_verdict([float("nan"), +5.0]) == "ahead"
+    assert bq.channel_verdict([float("nan")]) == "level"
+
+
+def test_a_build_ahead_on_one_channel_and_behind_on_the_other_is_neither():
+    """The counted case. Ours buys physical protection, theirs magical: it is
+    a large win against one enemy team and a large loss against the other, and
+    the honest verdict is that this comparison does not name the enemy team."""
+    theirs = _profile(100.0, 3000.0, ehp_magical=6000.0)
+    mine = _profile(100.0, 6000.0, ehp_magical=3000.0)
+    rows = [_full_row("g", "Support", theirs, mine)]
+    v = bq.role_verdict(rows, "Support", bq.ROLE_OBJECTIVES["Support"])
+    assert (v["ahead"], v["behind"], v["level"], v["mix"]) == (0, 0, 0, 1)
+    assert v["n"] == 1
+    assert [g for _, g, _ in bq.mix_dependent_builds(rows, [v])] == ["g"]
+    # Both ends are printed and neither is averaged away.
+    assert bq.median_span(v) == "-50.0% … +100.0%"
+
+
+def test_the_report_names_every_mix_dependent_build():
+    """A count alone reads as a rounding error; these are the builds where the
+    report has no answer at all, so it names them. An empty list is the
+    measurement, which the other branch asserts."""
+    theirs = _profile(100.0, 3000.0, ehp_magical=6000.0)
+    mine = _profile(100.0, 6000.0, ehp_magical=3000.0)
+    rows = [_full_row("Disputed", "Support", theirs, mine)]
+    text = "\n".join(bq.role_verdict_lines(rows, bq.threshold_probe(rows)))
+    assert "mix-dependent" in text
+    assert "**Disputed** (Support)" in text
+    assert "vs a physical opponent +100.0%" in text
+    assert "vs a magical opponent -50.0%" in text
+
+    agreed = [_full_row("Agreed", "Support", _profile(100.0, 3000.0),
+                        _profile(100.0, 3300.0))]
+    text = "\n".join(bq.role_verdict_lines(agreed, bq.threshold_probe(agreed)))
+    assert "every build's verdict holds at every damage mix" in text
+
+
+def test_a_role_with_no_ehp_term_cannot_be_mix_dependent():
+    """Printing a 0 there would read as a measurement rather than as 'not
+    applicable' — three of the five roles maximise a pure damage quantity,
+    whose channel is determined by the god doing the damage."""
+    rows = [_full_row("m", "Mid", _profile(100.0, 3000.0), _profile(110.0, 3000.0))]
+    verdicts = bq.role_verdicts(rows)
+    text = "\n".join(bq._verdict_table(verdicts, bq.threshold_probe(rows)))
+    assert "– (no EHP term)" in text
+    assert len(next(v for v in verdicts if v["role"] == "Mid")["keys"]) == 1
+
+
+def test_a_threshold_reads_the_channel_its_named_attacker_deals():
+    """The other half of the rule and the reason the thresholds keep ONE
+    channel: a threshold names its attacker, so the channel is derived from
+    that attacker's `damage_type` instead of picked. Hard-coded to
+    `ehp_magical` until 2026-08-23 — right by coincidence for the Carry floor
+    and wrong for a physical burster."""
+    assert bq.ehp_against("physical")({"ehp_physical": 1.0, "ehp_magical": 9.0}) == 1.0
+    assert bq.ehp_against("magical")({"ehp_physical": 1.0, "ehp_magical": 9.0}) == 9.0
+    # An unlabelled attacker reads the SMALLER channel: a floor on the worse
+    # case is still a floor, and inventing a damage type would not be.
+    assert bq.ehp_against(None)({"ehp_physical": 1.0, "ehp_magical": 9.0}) == 1.0
+
+    def carry(name, damage_type, phys, mag, burst):
+        row = _full_row(name, "Carry", _profile(100.0, phys, ehp_magical=mag, burst=burst),
+                        _profile(100.0, phys, ehp_magical=mag, burst=burst))
+        row["damage_type"] = damage_type
+        return row
+
+    # The roster's largest burst belongs to the physical god, so the floor is
+    # read on physical effective health and separates the build that is thin
+    # there — which the magical reading would have missed entirely.
+    rows = [carry("burster", "physical", 5000.0, 5000.0, 4000.0),
+            carry("thin", "magical", 1000.0, 9000.0, 10.0)]
+    probe = bq.threshold_probe(rows)["carry_survival"]
+    assert probe["channel"] == "physical"
+    assert (probe["n"], probe["failed"]) == (4, 2)
+
+
+def test_the_kill_thresholds_reference_follows_each_attacker():
+    """Its reference is a squishy's effective health, and which channel that
+    squishy is read on is decided by the attacker's damage type — one
+    reference per channel, never one averaged reference nobody is measured
+    against."""
+    def mid(name, damage_type, burst):
+        row = _full_row(name, "Mid", _profile(100.0, 2000.0, ehp_magical=8000.0, burst=burst),
+                        _profile(100.0, 2000.0, ehp_magical=8000.0, burst=burst))
+        row["damage_type"] = damage_type
+        return row
+
+    rows = [mid("phys", "physical", 3000.0), mid("mag", "magical", 3000.0)]
+    kill = bq.threshold_probe(rows)["kill_threshold"]
+    # Reference is the median community EHP on each channel: 2000 physical,
+    # 8000 magical. A 3000 burst clears the first and fails the second.
+    assert kill["reference"] == (2000.0, 8000.0)
+    assert (kill["n"], kill["failed"]) == (4, 2)
 
 
 def test_a_role_with_no_recorded_objective_is_named_not_given_someone_elses():

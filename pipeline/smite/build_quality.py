@@ -36,6 +36,37 @@ roles that do not share a job. `ROLE_OBJECTIVES` names, per role, the quantity
 MAXIMISED and the quantity treated as a THRESHOLD, so a reader can disagree
 with the choice rather than only with the number.
 
+AN OBJECTIVE WITH AN EFFECTIVE-HEALTH TERM IS SCORED ON BOTH DAMAGE CHANNELS
+AND READ AS THE INTERVAL BETWEEN THEM. A build has one damage output and TWO
+effective healths, and which one its survival is read on is a property of the
+attacker — of which this comparison contains none. Until 2026-08-23 the two
+objectives that contain an EHP term, Solo's duel score and Support's effective
+health per 1000 gold, both read `ehp_physical` alone, so the two roles whose
+job is durability were scored on half the damage in the game. `EHP_CHANNELS`
+carries the derivation; the short form is that effective health against a
+stream which is a share `f` physical is `1 / (f/EHP_p + (1-f)/EHP_m)`, a
+weighted HARMONIC mean, and the ours-over-theirs ratio of two such is monotone
+in `f` — so every damage mix lands between the two channels and the pair is
+the complete answer rather than a refusal to pick one. Averaging them asserts
+equal exposure (an unsourced constant, §4.16's refusal exactly) and is not
+even the harmonic answer to its own question: Amaterasu reads -9.7% arithmetic
+against -6.7% at the 50/50 it claims to describe, inside a range that runs
++18.8% to -29.1% end to end.
+
+Measured 2026-08-23, on the shipped builds. The pair changes no role's
+direction and three builds' verdicts: Solo goes 17 ahead / 1 behind on
+physical alone to 17 / 0 with **Amaterasu mix-dependent** (-23.5% against a
+physical opponent, +28.3% against a magical one), and Support 11 / 3 to 11 / 1
+with **Ares and Athena mix-dependent** (-10.4% / +15.3% and -14.3% / +11.1%).
+The other three roles maximise a pure damage quantity, carry no EHP term and
+cannot be mix-dependent at all — the table prints that rather than a 0.
+
+THE THRESHOLDS ARE THE OTHER CASE AND THEY KEEP ONE CHANNEL, because a
+threshold NAMES its attacker: the roster's largest burst, or the Mid/Jungle
+whose burst is measured. An attacker has a `damage_type`, so `ehp_against`
+derives the channel from the data instead of picking one. Neither correction
+moves either count (§4.13 — one separates 0 of 36 and the other 78 of 78).
+
 THE THRESHOLDS DO NOT BIND, AND THAT IS ABOUT US, NOT ABOUT SMITE. A Carry
 survival floor and a Mid/Jungle kill threshold were both defined, measured and
 kept in the table with their measurement (`threshold_probe`, re-run on every
@@ -161,6 +192,54 @@ METRICS = (
     ("ehp_magical", "effective health, magical"),
 )
 
+#: THE TWO EFFECTIVE-HEALTH CHANNELS, as `(profile field, the damage type that
+#: reads it)`, and the reason no objective here collapses them into one number.
+#:
+#: A build has ONE damage output and TWO effective healths. The damage side's
+#: channel is determined — `TARGETS` is protection of the god's own damage type
+#: — because the god whose damage it is, is in the comparison. The EHP side's
+#: is not: which of the two a build's survival is read on is a property of the
+#: ATTACKER, and this comparison has no attacker in it. Picking one is picking
+#: an enemy team, which is a constant nobody here can source (§4.12, §4.13 and
+#: §4.16 all turn on refusing exactly that).
+#:
+#: THE PAIR IS NOT TWO SAMPLES, IT IS THE BOUNDS. Against a stream that is a
+#: share `f` physical, effective health is `1 / (f/EHP_p + (1-f)/EHP_m)` — a
+#: weighted HARMONIC mean, because what averages over a mixed stream is the
+#: damage-taken multiplier and not its reciprocal. The ours-over-theirs ratio
+#: is then `(f*c_p + (1-f)*c_m) / (f*o_p + (1-f)*o_m)` with `x = 1/EHP`, a
+#: Mobius function of `f` with no pole in [0, 1] and therefore MONOTONE in it.
+#: So every mix lands between the two channels, and the two channels are the
+#: whole range. Measured on the roster's widest case, Amaterasu, ours over the
+#: community's: +18.8% at f=0, +5.6%, -6.7%, -18.3%, -29.1% at f=1.
+#:
+#: That is what makes reporting both an ANSWER rather than a refusal to
+#: choose: a verdict that holds at both endpoints holds at every mix, and one
+#: that does not hold at both is not available at any price this repo can pay.
+#: `channel_verdict` is the rule, and it checks endpoints only because
+#: monotonicity says that suffices.
+#:
+#: THREE COLLAPSES CONSIDERED AND WHY EACH IS REFUSED. The MEAN asserts equal
+#: exposure, which is the unsourced constant — and it is not even the f=0.5
+#: answer it looks like, since the correct one is harmonic: Amaterasu reads
+#: -9.7% arithmetic against -6.7% at the mix it claims to describe, so it is a
+#: constant AND the wrong function of it. The MIN asserts an adversary picks
+#: the mix per build, which no game state produces, and being no kind of mean
+#: it is not guaranteed to land inside the interval at all. A STATED MIX is
+#: the only form that returns one number honestly, and nothing here supplies
+#: one: the roster is 46 physical gods to 43 magical, but a head count is not
+#: a damage share, and reading the share off what the community buys against
+#: is the leakage docs/STATE.md §1 is about.
+#:
+#: WHAT WOULD COLLAPSE IT TO A POINT: a measured damage-type share, per match
+#: or per role, from a source outside this repo. The harmonic form above is
+#: then the whole of the change and both endpoints are already computed. What
+#: would FALSIFY the bracket: effective health against a mixed stream not
+#: being a weighted harmonic mean of the two channels — i.e. mitigation
+#: ceasing to be linear in protection per damage instance, which is
+#: `combat.effective_health` and is calibrated to 0.0%.
+EHP_CHANNELS = (("ehp_physical", "physical"), ("ehp_magical", "magical"))
+
 #: Role order for every by-role table, then anything unrecognised, sorted.
 ROLE_ORDER = ("Carry", "Jungle", "Mid", "Solo", "Support")
 
@@ -178,6 +257,15 @@ ROLE_ORDER = ("Carry", "Jungle", "Mid", "Solo", "Support")
 #: measurement rather than a design preference — see `threshold_probe`, which
 #: re-runs it on every report.
 #:
+#: `maximise` is a TUPLE of metric keys, one per effective-health channel.
+#: Three roles maximise a pure damage quantity and carry one key, because
+#: damage has a determined channel and needs no pair. The two whose objective
+#: contains an EHP term — Solo's duel score and Support's effective health per
+#: 1000g — carry two, and are read as the interval between them: see
+#: `EHP_CHANNELS` for why that pair is the complete answer and not a hedge.
+#: Both read `ehp_physical` alone until 2026-08-23, which scored the two roles
+#: whose job is durability on half the damage in the game.
+#:
 #: `Support` scores no damage at all. Down-weighting it would still be scoring
 #: it, and on 3 of 14 Supports (Ymir, Sylvanus, Xing Tian) the DPS column is
 #: identical on both sides to 0.00% because neither build buys damage — the
@@ -187,7 +275,7 @@ ROLE_ORDER = ("Carry", "Jungle", "Mid", "Solo", "Support")
 #: price what Support is for". See `UNMEASURABLE`.
 ROLE_OBJECTIVES = {
     "Carry": {
-        "maximise": ("dps_70/1000g", "sustained DPS per 1000g"),
+        "maximise": (("dps_70/1000g",), "sustained DPS per 1000g"),
         "threshold": ("survive one enemy burst rotation", "carry_survival"),
         "because": "a Carry needs enough effective health to live through one "
                    "burst — a floor, not a maximand. Buying more than the floor "
@@ -195,20 +283,20 @@ ROLE_OBJECTIVES = {
                    "scored as a win.",
     },
     "Mid": {
-        "maximise": ("dps_70/1000g", "sustained DPS per 1000g"),
+        "maximise": (("dps_70/1000g",), "sustained DPS per 1000g"),
         "threshold": ("rotation burst >= a reference squishy's EHP", "kill_threshold"),
         "because": "a Mid's rotation either kills the squishy or it does not; "
                    "past that the question is how often it comes back.",
     },
     "Jungle": {
-        "maximise": ("burst_70/1000g", "rotation burst per 1000g"),
+        "maximise": (("burst_70/1000g",), "rotation burst per 1000g"),
         "threshold": ("rotation burst >= a reference squishy's EHP", "kill_threshold"),
         "because": "same kill threshold as Mid, and past it a gank is priced on "
                    "burst rather than on sustained damage — a Jungler is not "
                    "standing in the fight for the seconds a DPS figure assumes.",
     },
     "Solo": {
-        "maximise": ("duel_70", "duel score, EHP x DPS"),
+        "maximise": (("duel_physical_70", "duel_magical_70"), "duel score, EHP x DPS"),
         "threshold": None,
         "because": "not a threshold at all — a RATIO. Their time-to-kill on you "
                    "over yours on them is (EHP / ref DPS) / (ref EHP / DPS), so "
@@ -216,14 +304,23 @@ ROLE_OBJECTIVES = {
                    "is left is EHP x DPS. A build that doubles effective health "
                    "and halves damage scores exactly 1.00 — neutral, which is "
                    "the case neither scalar describes, and it is a property of "
-                   "the algebra rather than of a constant anyone chose.",
+                   "the algebra rather than of a constant anyone chose. The EHP "
+                   "factor is effective health against THAT reference opponent, "
+                   "so it is scored on both channels and read as the interval "
+                   "between them — a duel against a physical opponent and a duel "
+                   "against a magical one, with every mixed opponent in between.",
     },
     "Support": {
-        "maximise": ("ehp_physical/1000g", "effective health per 1000g"),
+        "maximise": (("ehp_physical/1000g", "ehp_magical/1000g"), "effective health per 1000g"),
         "threshold": None,
         "because": "damage is EXCLUDED, not down-weighted. Most of what a "
                    "Support is for is in `UNMEASURABLE`, and its damage column "
-                   "is provably empty on 3 of 14 gods.",
+                   "is provably empty on 3 of 14 gods. Effective health is "
+                   "scored on BOTH channels and read as the interval between "
+                   "them: a Support that survives physical damage and one that "
+                   "survives magical damage are different builds, and which "
+                   "matters is a property of the enemy team, which is not in "
+                   "this comparison.",
     },
 }
 
@@ -403,11 +500,17 @@ def profile(god, names, items_by_name, level=LEVEL, targets=TARGETS):
         "ehp_physical": out["ehp_physical"] / thousands,
         "ehp_magical": out["ehp_magical"] / thousands,
     }
-    # The Solo objective. EHP x DPS is what "their TTK on you over yours on
-    # them" reduces to once the reference opponent cancels, so it is stored
-    # raw and has no per-1000g twin: dividing a product of two per-gold
-    # figures would charge the build's gold twice.
-    out["duel"] = {p: out["ehp_physical"] * total_dps[p] for p in targets}
+    # The Solo objective, ON BOTH CHANNELS. EHP x DPS is what "their TTK on
+    # you over yours on them" reduces to once the reference opponent cancels,
+    # so it is stored raw and has no per-1000g twin: dividing a product of two
+    # per-gold figures would charge the build's gold twice. The EHP factor is
+    # effective health AGAINST THE REFERENCE OPPONENT, so the channel is that
+    # opponent's damage type and nothing in this comparison names one — see
+    # `EHP_CHANNELS`. Both are stored; neither is collapsed.
+    out["duel"] = {
+        channel: {p: out[field] * total_dps[p] for p in targets}
+        for field, channel in EHP_CHANNELS
+    }
     return out
 
 
@@ -430,7 +533,13 @@ def metric(prof, key):
         if per_gold:
             raise KeyError(f"{key}: a duel score has no per-1000g twin — it is a "
                            "product of two figures that each already carry the gold")
-        return prof["duel"][int(base[len("duel_"):])]
+        channel, _, prot = base[len("duel_"):].partition("_")
+        if channel not in prof["duel"]:
+            raise KeyError(f"{key}: a duel score has to name the opponent's damage "
+                           "channel, because its EHP factor is effective health "
+                           "against that opponent — duel_physical_<prot> or "
+                           "duel_magical_<prot>, never duel_<prot>")
+        return prof["duel"][channel][int(prot)]
     for prefix, field in _KEYED_BY_TARGET.items():
         if base.startswith(prefix):
             prot = int(base[len(prefix):])
@@ -480,6 +589,10 @@ def compare(god, build_note, items_by_name, archetype=DEFAULT_ARCHETYPE,
         return None
     return {
         "god": god["name"], "role": god.get("role"), "primary_role": primary_role(god),
+        # Carried for `threshold_probe` alone: a threshold names an ATTACKER,
+        # so the effective-health channel it reads is determined by that
+        # attacker's damage type rather than chosen (see `EHP_CHANNELS`).
+        "damage_type": god.get("damage_type"),
         "community": profile(god, community[:6], items_by_name, level, targets),
         "ours": profile(god, ours[:6], items_by_name, level, targets),
     }
@@ -526,6 +639,34 @@ def by_role(rows, key):
 
 # ── Can either threshold bind? ────────────────────────────────────────────
 
+def ehp_against(damage_type):
+    """The effective-health reader for an attacker of this damage type.
+
+    DETERMINED, not chosen, and that is the whole difference between here and
+    `ROLE_OBJECTIVES`. The two maximands report both channels because no
+    attacker appears in them (`EHP_CHANNELS`); a threshold names its attacker,
+    so its channel follows from that attacker's own `damage_type` and needs no
+    mix and no constant. An unlabelled attacker falls back to the SMALLER of
+    the two channels rather than to a channel — a floor read on the worse case
+    is still a floor, and inventing a damage type for it would not be.
+    """
+    for field, channel in EHP_CHANNELS:
+        if channel == damage_type:
+            return lambda p: p[field]
+    return lambda p: min(p[field] for field, _ in EHP_CHANNELS)
+
+
+def _reference_for(by_channel, damage_type):
+    """A per-channel reference, picked by the attacker's damage type. Falls
+    back to the LARGER — the harder target — for the same reason
+    `ehp_against` falls back to the smaller: an unlabelled attacker must not
+    make a threshold easier to pass than a labelled one."""
+    if damage_type in by_channel:
+        return by_channel[damage_type]
+    live = [v for v in by_channel.values() if v == v]
+    return max(live) if live else float("nan")
+
+
 def threshold_probe(rows):
     """Whether the two proposed thresholds can separate any build from any
     other, re-measured on every run rather than asserted once.
@@ -553,6 +694,18 @@ def threshold_probe(rows):
     constant that would close the gap is a burst-window duration in seconds,
     which no source here supplies.
 
+    BOTH READ ONE EFFECTIVE-HEALTH CHANNEL AND THAT IS CORRECT HERE, unlike
+    the two maximands, which report a pair. A threshold NAMES ITS ATTACKER —
+    the roster's largest burst for the Carry floor, the Mid or Jungle whose
+    burst is being measured for the kill threshold — and an attacker has a
+    `damage_type`, so the channel follows from the data rather than from a
+    damage mix nobody can source (`EHP_CHANNELS`). `ehp_against` applies it.
+    Before 2026-08-23 both were hard-coded to `ehp_magical`: right by
+    coincidence for the Carry floor, whose reference burster is magical, and
+    wrong for the 16 physical Junglers in the kill threshold's population.
+    Neither correction moves either count, which is the §4.13 finding and not
+    a reason the channel may be picked freely.
+
     Returns the counts and the HEADROOM — how far the tightest build sits from
     the threshold, as a ratio — so a future run on different data, or with a
     clock or priced passives in the model, prints a threshold that binds
@@ -564,10 +717,13 @@ def threshold_probe(rows):
     bursts = [(metric(row[side], "burst_0"), row["god"], side)
               for row in rows for side in sides]
     reference_burst, burst_god, burst_side = max(bursts)
+    burst_channel = next((r.get("damage_type") for r in rows if r["god"] == burst_god), None)
 
-    squishy = [row[side]["ehp_magical"]
-               for role in ("Carry", "Mid") for row in groups.get(role, []) for side in ("community",)]
-    reference_ehp = float(np.median(squishy)) if squishy else float("nan")
+    reference_ehp = {}
+    for field, channel in EHP_CHANNELS:
+        squishy = [row["community"][field]
+                   for role in ("Carry", "Mid") for row in groups.get(role, [])]
+        reference_ehp[channel] = float(np.median(squishy)) if squishy else float("nan")
 
     def probe(name, population, value, passes, reference):
         """`passes(value_of_build, reference)` is the threshold as a reader
@@ -579,32 +735,48 @@ def threshold_probe(rows):
         separates everybody are both useless, and this is the one number that
         says how far either is from doing something.
         """
-        out = {"name": name, "reference": reference, "n": 0, "failed": 0,
+        out = {"name": name, "reference": float("nan"), "n": 0, "failed": 0,
                "nearest": float("nan")}
-        margins = []
+        margins, seen = [], []
         for row in population:
+            ref = reference(row) if callable(reference) else reference
+            seen.append(ref)
             for side in sides:
-                v = value(row[side])
+                v = value(row)(row[side])
                 out["n"] += 1
-                out["failed"] += 0 if passes(v, reference) else 1
-                margins.append(v / reference if reference else float("nan"))
+                out["failed"] += 0 if passes(v, ref) else 1
+                margins.append(v / ref if ref else float("nan"))
+        # One number for a threshold that has one, and the SPAN when the
+        # reference is derived per attacker — never their average, which
+        # would be a made-up reference nobody is measured against.
+        if seen:
+            out["reference"] = seen[0] if len(set(seen)) == 1 else (min(seen), max(seen))
         if margins:
             out["nearest"] = float(min(margins, key=lambda m: abs(m - 1.0)))
         return out
 
     carry = probe(
         "Carry: survive one enemy burst rotation",
-        groups.get("Carry", []), lambda p: p["ehp_magical"],
+        groups.get("Carry", []), lambda row: ehp_against(burst_channel),
         lambda v, ref: v >= ref, reference_burst)
+    carry["channel"] = burst_channel
     carry["detail"] = (f"largest burst in the roster at 0 protection — {burst_god}, "
-                       f"{burst_side}, {reference_burst:,.0f}")
+                       f"{burst_side}, {reference_burst:,.0f}, "
+                       + (f"{burst_channel} damage, so effective health is read on that channel"
+                          if burst_channel else
+                          "no damage type on the roster, so effective health is read on "
+                          "whichever channel is smaller"))
 
     kill = probe(
         "Mid / Jungle: rotation burst >= a reference squishy's EHP",
         groups.get("Mid", []) + groups.get("Jungle", []),
-        lambda p: metric(p, "burst_70"), lambda v, ref: v >= ref, reference_ehp)
-    kill["detail"] = ("median effective health of the community's own Carry and Mid "
-                      f"builds, magical — {reference_ehp:,.0f}")
+        lambda row: (lambda p: metric(p, "burst_70")),
+        lambda v, ref: v >= ref,
+        lambda row: _reference_for(reference_ehp, row.get("damage_type")))
+    kill["detail"] = ("median effective health of the community's own Carry and Mid builds, "
+                      "on the channel each attacker's own damage type reads — "
+                      + " / ".join(f"{channel} {reference_ehp[channel]:,.0f}"
+                                   for _, channel in EHP_CHANNELS))
 
     return {"carry_survival": carry, "kill_threshold": kill,
             "reference_burst": reference_burst, "reference_squishy_ehp": reference_ehp}
@@ -894,18 +1066,69 @@ def carry_mechanism_lines(rows, items_by_name):
     return lines
 
 
+#: The dead band `distribution` already uses: a delta inside it is level.
+BAND = 0.5
+
+
+def channel_verdict(deltas):
+    """One build's verdict from its per-channel deltas: `ahead`, `behind`,
+    `level` or `mix`.
+
+    The verdict is a property of the WHOLE interval of damage mixes, not of
+    either endpoint: ahead means ahead at every mix. Reading the endpoints is
+    enough because the ratio is monotone in the mix (`EHP_CHANNELS`), so the
+    interval is exactly `[min, max]` of what is passed in.
+
+      * `ahead` — the whole interval is above the band
+      * `behind` — the whole interval is below it
+      * `mix` — the interval contains both an ahead and a behind mix, so which
+        one is true is a fact about the enemy team and this comparison does
+        not have one. It is NOT a tie: the two ends can be far apart.
+      * `level` — everything else, i.e. the interval meets the band and never
+        crosses to the other verdict
+
+    A single-channel objective (any of the three that maximise damage) passes
+    one delta and this reduces to the three-way `distribution` already used.
+    """
+    live = [d for d in deltas if d == d]
+    if not live:
+        return "level"
+    lo, hi = min(live), max(live)
+    if lo > BAND:
+        return "ahead"
+    if hi < -BAND:
+        return "behind"
+    if lo < -BAND and hi > BAND:
+        return "mix"
+    return "level"
+
+
 def role_verdict(rows, role, objective):
     """One role's verdict on its OWN objective: `{role, n, maximise, threshold,
-    ahead, behind, level, median}`. Never on the pooled metric — a Carry and a
-    Support do not share one."""
+    ahead, behind, level, mix, medians}`. Never on the pooled metric — a Carry
+    and a Support do not share one.
+
+    An objective naming two keys is one per effective-health channel and the
+    counts are over the INTERVAL between them (`channel_verdict`), so a build
+    counts as ahead only if it is ahead against a physical opponent and
+    against a magical one. `medians` is the median delta on each key, in the
+    same order — an interval, never averaged into a point.
+    """
     group = group_by_role(rows).get(role, [])
-    key, label = objective["maximise"]
-    d = distribution(group, key)
+    keys, label = objective["maximise"]
+    dists = [distribution(group, key) for key in keys]
+    # One tuple of per-channel deltas per build. A build with no live delta on
+    # any channel is dropped rather than counted level, which is what
+    # `distribution`'s own `n` already does.
+    per_build = [ds for ds in zip(*[d.get("deltas", []) for d in dists])
+                 if any(x == x for x in ds)]
+    counts = Counter(channel_verdict(ds) for ds in per_build)
     return {
-        "role": role, "n": d["n"], "key": key, "maximise": label,
+        "role": role, "n": len(per_build), "keys": tuple(keys), "maximise": label,
         "threshold": objective["threshold"], "because": objective["because"],
-        "ahead": d["ahead"], "behind": d["behind"], "level": d["level"],
-        "median": d["quantiles"].get(50, float("nan")),
+        "ahead": counts["ahead"], "behind": counts["behind"],
+        "level": counts["level"], "mix": counts["mix"],
+        "medians": tuple(d["quantiles"].get(50, float("nan")) for d in dists),
     }
 
 
@@ -918,18 +1141,61 @@ def role_verdicts(rows, objectives=None):
     for role in group_by_role(rows):
         objective = objectives.get(role)
         if objective is None:
-            out.append({"role": role, "n": len(group_by_role(rows)[role]), "key": None,
+            out.append({"role": role, "n": len(group_by_role(rows)[role]), "keys": (),
                         "maximise": None, "threshold": None,
                         "because": "no objective is recorded for this role label",
-                        "ahead": 0, "behind": 0, "level": 0, "median": float("nan")})
+                        "ahead": 0, "behind": 0, "level": 0, "mix": 0,
+                        "medians": (float("nan"),)})
             continue
         out.append(role_verdict(rows, role, objective))
     return out
 
 
+def mix_dependent_builds(rows, verdicts):
+    """`[(role, god, deltas)]` for every build whose verdict on its role's own
+    maximand depends on the damage mix — ahead against one kind of opponent
+    and behind against the other.
+
+    Named rather than counted, because the count alone reads as a rounding
+    error and these are the builds where the report has no answer at all. An
+    EMPTY list is the measurement, not a missing section.
+    """
+    groups = group_by_role(rows)
+    out = []
+    for v in verdicts:
+        if len(v["keys"]) < 2:
+            continue
+        for row in groups.get(v["role"], []):
+            deltas = []
+            for key in v["keys"]:
+                theirs, mine = metric(row["community"], key), metric(row["ours"], key)
+                deltas.append((mine / theirs - 1.0) * 100.0 if theirs else float("nan"))
+            if channel_verdict(deltas) == "mix":
+                out.append((v["role"], row["god"], tuple(deltas)))
+    return out
+
+
+def median_span(v):
+    """The maximand's median delta: one figure, or the INTERVAL between the
+    two effective-health channels, low end first. Never their average — see
+    `EHP_CHANNELS`. Empty when no build in the role produced one."""
+    medians = sorted(m for m in v["medians"] if m == m)
+    if not medians:
+        return ""
+    if len(medians) == 1:
+        return _pct(medians[0])
+    return f"{_pct(medians[0])} … {_pct(medians[-1])}"
+
+
+def _median_cell(v):
+    span = median_span(v)
+    return f"**{span}**" if span else "–"
+
+
 def _verdict_table(verdicts, probe):
-    lines = ["| Role | n | Threshold | Binds? | Maximised | ahead | behind | tie | median |",
-             "|---|---|---|---|---|---|---|---|---|"]
+    lines = ["| Role | n | Threshold | Binds? | Maximised | ahead | behind | level | "
+             "mix-dependent | median |",
+             "|---|---|---|---|---|---|---|---|---|---|"]
     for v in verdicts:
         if v["threshold"] is None:
             threshold, binds = "**none**", "–"
@@ -944,9 +1210,12 @@ def _verdict_table(verdicts, probe):
             else:
                 binds = f"yes — {p['failed']} of {p['n']} fail"
         maximise = v["maximise"] or "_no objective recorded_"
-        median = "–" if v["median"] != v["median"] else f"**{_pct(v['median'])}**"
+        # An objective with no EHP term cannot be mix-dependent, and printing 0
+        # there would read as a measurement rather than as "not applicable".
+        mix = f"**{v['mix']}**" if len(v["keys"]) > 1 else "– (no EHP term)"
         lines.append(f"| {v['role']} | {v['n']} | {threshold} | {binds} | {maximise} | "
-                     f"**{v['ahead']}** | **{v['behind']}** | {v['level']} | {median} |")
+                     f"**{v['ahead']}** | **{v['behind']}** | {v['level']} | {mix} | "
+                     f"{_median_cell(v)} |")
     return lines
 
 
@@ -966,8 +1235,33 @@ def role_verdict_lines(rows, probe, verdicts=None, items_by_name=None):
         "here exactly as it applies to the pooled figures** — slicing by role does not escape "
         "it, and the bias still runs in our favour.",
         "",
+        "**An objective containing effective health is scored on BOTH damage channels and read "
+        "as the interval between them.** A build has one damage output and two effective "
+        "healths; which one its survival is read on is a property of the ATTACKER, and there is "
+        "no attacker in this comparison. Against a stream that is a share `f` physical, "
+        "effective health is `1 / (f/EHP_p + (1-f)/EHP_m)` — a weighted harmonic mean, because "
+        "what averages over a mixed stream is the damage-taken multiplier and not its "
+        "reciprocal — and the ours-over-theirs ratio is monotone in `f`, so **every possible "
+        "damage mix lands between the two channels and the pair is the whole range**. `ahead` "
+        "below therefore means ahead at every mix, `behind` means behind at every mix, and "
+        "`mix-dependent` means the answer is a fact about the enemy team that this comparison "
+        "does not contain. Averaging the two channels would assert equal exposure, which is a "
+        "constant no source here supplies — and would not even be the answer to its own "
+        "question, since the correct collapse at 50/50 is harmonic and not arithmetic. Until "
+        "2026-08-23 both roles read `ehp_physical` alone, i.e. the two roles whose job is "
+        "durability were scored on half the damage in the game.",
+        "",
     ]
     lines += _verdict_table(verdicts, probe)
+    lines += ["", "Builds whose verdict the damage mix decides — the interval spans both "
+              "answers, so neither is available here:", ""]
+    disputed = mix_dependent_builds(rows, verdicts)
+    for role, god, deltas in disputed:
+        span = " · ".join(f"vs a {channel} opponent {_pct(d)}"
+                          for (_, channel), d in zip(EHP_CHANNELS, deltas))
+        lines.append(f"- **{god}** ({role}) — {span}")
+    if not disputed:
+        lines.append("- _(none — every build's verdict holds at every damage mix)_")
     lines += ["", "Why each objective is what it is:", ""]
     for v in verdicts:
         lines.append(f"- **{v['role']}** — {v['because']}")
@@ -1321,7 +1615,9 @@ def main(argv=None):
         "  each role on its OWN objective (pooled figures above average roles that do not share one):",
     ] + [
         f"    {v['role']:<8} {v['ahead']:>2} ahead, {v['behind']:>2} behind, "
-        f"median {_pct(v['median'])}  — maximised: {v['maximise']}"
+        + (f"{v['mix']:>2} mix-dependent, " if len(v["keys"]) > 1 else "")
+        + f"median {median_span(v)}"
+        f"  — maximised: {v['maximise']}"
         + ("" if v["threshold"] is None else
            f"; threshold ({v['threshold'][0]}) separates "
            f"{probe[v['threshold'][1]]['failed']} of {probe[v['threshold'][1]]['n']}")
